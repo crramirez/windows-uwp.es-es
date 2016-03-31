@@ -6,15 +6,15 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/e18345554673eada3e2cbde8442d7976882118cf/windows-apps-src/devices-sensors/3d-print-from-app.md) | HandedOffSuccess | [Details](#cff85c5a2446c6c16faba670ad43135a8be6afc71927)
- [windows-apps-src\publish\app-screenshots-and-images.md](https://github.com/Microsoft/windows-apps/blob/e18345554673eada3e2cbde8442d7976882118cf/windows-apps-src/publish/app-screenshots-and-images.md) | HandedOffSuccess | [Details](#d76a2b222a9b3541e2cfdb3a0e2871a24d7a640a3344)
+ [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md) | HandedOffSuccess | [Details](#10985dec69a38e1ec7452de069768b572e2f5aca1928)
+ [windows-apps-src\xbox-apps\devkit-deactivation.md](https://github.com/Microsoft/windows-apps/blob/e4a0c366326ec7b4d2bd7e3e538c45954ee9e094/windows-apps-src/xbox-apps/devkit-deactivation.md) | HandedOffSuccess | [Details](#fe856eed79151ce9f5fce10640fbe23215d9a3223652)
 
 ## Item Details
-##### <a name='cff85c5a2446c6c16faba670ad43135a8be6afc71927'></a> Source: [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/e18345554673eada3e2cbde8442d7976882118cf/windows-apps-src/devices-sensors/3d-print-from-app.md)
+##### <a name='10985dec69a38e1ec7452de069768b572e2f5aca1928'></a> Source: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/486a8e520b8f1807b0754ec188f69dab545276de/ol-handoff/Microsoft/windows-apps.es-es/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.es-es.xlf)
-* Handoff Datetime: 2016-03-31 17:21:45
+* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/c8d029054a53e48682b4ea5994096f6d17324127/ol-handoff/Microsoft/windows-apps.es-es/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.es-es.xlf)
+* Handoff Datetime: 2016-03-31 18:20:23
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -22,11 +22,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d76a2b222a9b3541e2cfdb3a0e2871a24d7a640a3344'></a> Source: [windows-apps-src\publish\app-screenshots-and-images.md](https://github.com/Microsoft/windows-apps/blob/e18345554673eada3e2cbde8442d7976882118cf/windows-apps-src/publish/app-screenshots-and-images.md)
+##### <a name='fe856eed79151ce9f5fce10640fbe23215d9a3223652'></a> Source: [windows-apps-src\xbox-apps\devkit-deactivation.md](https://github.com/Microsoft/windows-apps/blob/e4a0c366326ec7b4d2bd7e3e538c45954ee9e094/windows-apps-src/xbox-apps/devkit-deactivation.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [app-screenshots-and-images.c7fc56a8ad97c50e5d147b844b499b01e8366e0e.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/486a8e520b8f1807b0754ec188f69dab545276de/ol-handoff/Microsoft/windows-apps.es-es/master/app-screenshots-and-images.c7fc56a8ad97c50e5d147b844b499b01e8366e0e.es-es.xlf)
-* Handoff Datetime: 2016-03-31 17:21:45
+* Handoff File: [devkit-deactivation.803081fa0e1b79fb529f2a31e9460932158677ef.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/c8d029054a53e48682b4ea5994096f6d17324127/ol-handoff/Microsoft/windows-apps.es-es/master/devkit-deactivation.803081fa0e1b79fb529f2a31e9460932158677ef.es-es.xlf)
+* Handoff Datetime: 2016-03-31 18:20:23
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
