@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\graphics\composition-effects.md](https://github.com/Microsoft/windows-apps/blob/f5c6bac498de9d93f2513b532b0ecc2c6fa7a7a9/windows-apps-src/graphics/composition-effects.md) | HandedOffSuccess | [Details](#ab30691583a785a05deff8021ef479bb47e193df2548)
+ [windows-apps-src\controls-and-patterns\nav-pane.md](https://github.com/Microsoft/windows-apps/blob/45443f2b42b8eab1febc70ef2fe370a2b04c15e9/windows-apps-src/controls-and-patterns/nav-pane.md) | HandedOffSuccess | [Details](#89639014a69a23b8ebf0a30bf518601c48f09b671823)
 
 ## Item Details
-##### <a name='ab30691583a785a05deff8021ef479bb47e193df2548'></a> Source: [windows-apps-src\graphics\composition-effects.md](https://github.com/Microsoft/windows-apps/blob/f5c6bac498de9d93f2513b532b0ecc2c6fa7a7a9/windows-apps-src/graphics/composition-effects.md)
+##### <a name='89639014a69a23b8ebf0a30bf518601c48f09b671823'></a> Source: [windows-apps-src\controls-and-patterns\nav-pane.md](https://github.com/Microsoft/windows-apps/blob/45443f2b42b8eab1febc70ef2fe370a2b04c15e9/windows-apps-src/controls-and-patterns/nav-pane.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [composition-effects.edede44d930f977b680649c1d498ceca2c092923.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/47943eefa5089d0768236e49292babec61bda08e/ol-handoff/Microsoft/windows-apps.es-es/master/composition-effects.edede44d930f977b680649c1d498ceca2c092923.es-es.xlf)
-* Handoff Datetime: 2016-04-06 17:36:26
+* Handoff File: [nav-pane.d6c3b77138be76c3243ad01a275a61809f6018b6.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/e01925b8478e079e0bb005486e28cba222cb334a/ol-handoff/Microsoft/windows-apps.es-es/master/nav-pane.d6c3b77138be76c3243ad01a275a61809f6018b6.es-es.xlf)
+* Handoff Datetime: 2016-04-06 18:01:54
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
