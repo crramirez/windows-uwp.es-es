@@ -1,0 +1,55 @@
+---
+Description: Cuando envías un IAP, las opciones de la página Precios y disponibilidad determinan lo que se cobrará por tu IAP y cómo se debe ofrecer a los clientes.
+title: Establecer precios y disponibilidad de IAP
+ms.assetid: B3D4B753-716B-460B-A3B1-ED5712ECD694
+---
+
+# Establecer precios y disponibilidad de IAP
+
+
+Cuando envías un IAP, las opciones de la página **Precios y disponibilidad** determinan lo que se cobrará por tu IAP y cómo se debe ofrecer a los clientes.
+
+## Precio base
+
+
+Debes seleccionar un precio base para tu IAP. Estas franjas de precios son las mismas que las franjas de precios para las aplicaciones, que comienzan a partir de 0,99 USD. También tienes la opción de ofrecer tu IAP de forma gratuita.
+
+## Mercados y precios personalizados
+
+
+De manera predeterminada, tu IAP figurará en todos los mercados posibles, incluidos los mercados futuros que podamos agregar posteriormente, al precio base.
+
+Sin embargo, al igual que con una aplicación, tienes la opción de elegir los mercados en los que quieres ofrecer el IAP. En la mayoría de los casos, querrás elegir el mismo conjunto de mercados que la aplicación, pero tienes la flexibilidad para realizar los cambios necesarios. También puedes establecer precios personalizados, de modo que puedas cobrar precios diferentes para el IAP en distintos mercados.
+
+Para obtener información y una lista completa de los mercados disponibles, consulta [Definir la selección de precios y mercados](define-pricing-and-market-selection.md).
+
+## Precio de oferta
+
+
+Si quieres ofrecer tu IAP a un precio reducido durante un período de tiempo limitado, puedes crear y programar una oferta. Para obtener más información, consulta [Poner aplicaciones e IAP en oferta](put-apps-and-iaps-on-sale.md).
+
+## Distribución y visibilidad
+
+
+Puedes determinar si debes ofrecer el IAP para su compra a los clientes. Elija una de las siguientes opciones:
+
+-   **Disponible para la compra. Se puede mostrar en la descripción de tu aplicación:** este es el valor predeterminado y se recomienda a menos que quieras restringir el acceso al IAP. Deja esta opción activada para los IAP que estarán disponibles para cualquier cliente.
+-   **Disponible para la compra. No se muestra en la descripción de tu aplicación:** elegir esta opción permite a los clientes comprar el IAP desde tu aplicación, pero el IAP no se mostrará en la descripción de la aplicación en la Tienda. Úsalo solo cuando la oferta no esté ampliamente disponible, por ejemplo durante los períodos iniciales de pruebas internas.
+-   **Ya no está disponible para la compra. No se muestra en la descripción de la aplicación.** Si se selecciona esta opción, significa que el IAP no se mostrará en la descripción de la aplicación y no lo podrán comprar clientes nuevos. Sin embargo, **esta opción no se admite para los clientes en Windows 8.1 o versiones anteriores**. Si la aplicación está disponible en Windows 8.1 o versiones anteriores, el IAP seguirá estando disponible para su compra para estos clientes. Para dejar de ofrecer el IAP a los clientes en Windows 8.1 o versiones anteriores, debes actualizar la aplicación para quitar el código que ofrece el IAP y publicar un nuevo envío de la aplicación. Esto se recomienda incluso si la aplicación no está destinada a Windows 8.1 o una versión anterior; es una experiencia mejor para tus clientes si nunca les ofreces un IAP respecto al cual has optado por que no esté disponible.
+    
+    > **Nota**  Elegir esta configuración o enviar una actualización de aplicaciones que quita el IAP del código de la aplicación no afecta a los clientes que ya hayan comprado el IAP, independientemente de su sistema operativo.
+
+     
+
+ 
+
+ 
+
+
+
+
+
+
+<!--HONumber=Mar16_HO1-->
+
+

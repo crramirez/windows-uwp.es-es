@@ -1,0 +1,151 @@
+---
+title: Visual Studio tools para programación de juegos
+description: Información general acerca de las herramientas específicas de DirectX disponibles en Visual Studio.
+ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
+---
+
+# Herramientas de Visual Studio para programación de juegos
+
+
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
+**Resumen**
+
+-   [Crear un proyecto de juego DirectX con una plantilla](user-interface.md)
+-   Visual Studio tools para programación de juegos DirectX
+
+
+Si usas Visual Studio Ultimate para desarrollar aplicaciones de DirectX, hay herramientas adicionales disponibles para crear, editar, obtener una vista previa y exportar una imagen, modelo y recursos de sombreador. También puedes usar herramientas para convertir recursos durante la compilación y depurar el código de gráficos de DirectX.
+
+En este tema encontrarás una introducción a estas herramientas de gráficos.
+
+## Editor de imágenes
+
+
+Usa el Editor de imágenes para trabajar con los tipos de textura enriquecida y formatos de imagen que DirectX usa. El Editor de imágenes admite los siguientes formatos:
+
+-   .png
+-   .jpg, .jpeg, .jpe, .jfif
+-   .dds
+-   .gif
+-   .bmp
+-   .dib
+-   .tif, .tiff
+-   .tga
+
+Crea [archivos de personalizaciones de compilación](#custom) para convertir estos formatos en archivos .dds durante la compilación.
+
+Para obtener más información, consulta [Trabajar con texturas e imágenes](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
+
+> **Nota** El Editor de imágenes no está pensado para reemplazar a una aplicación completa de edición de imágenes, pero es apropiado para varios escenarios simples de edición y visualización.
+
+ 
+
+## Editor de modelos
+
+
+Puedes usar el Editor de modelos para crear modelos básicos 3D desde cero, o para ver y modificar modelos 3D más complejos en herramientas de modelos 3D completas. El Editor de modelos admite varios formatos de modelos 3D que se usan en el desarrollo de aplicaciones DirectX. Puedes crear [archivos de personalizaciones de compilación](#custom) para convertir estos formatos en archivos .cmo durante la compilación.
+
+-   .fbx
+-   .dae
+-   .obj
+
+Esta es la captura de pantalla de un modelo en el editor con iluminación aplicada.
+
+![tetera](images/modeleditor.png)
+
+Para obtener más información, consulta [Trabajar con modelos 3D](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx).
+
+> **Nota** El Editor de modelos no está pensado para reemplazar a una aplicación completa de edición de modelos, pero es apropiado para varios escenarios simples de edición y visualización.
+
+ 
+
+## Diseñador de sombras
+
+
+Usa el Diseñador de sombras para crear efectos visuales personalizados para tu juego o aplicación, aun cuando no sepas programar en HLSL.
+
+Creas un sombreador visualmente como un gráfico. Cada nodo muestra una vista previa del resultado de esa operación. Este es un ejemplo que aplica la iluminación Lambert con una vista previa de esfera.
+
+![gráfico de sombreador visual](images/shaderdesigner.png)
+
+Usa el Editor de sombras para diseñar, editar y guardar sombreadores en el formato .dgsl. También exporta los siguientes formatos.
+
+-   .hlsl (código fuente)
+-   .cso (código de bytes)
+-   .h (matriz de código de bytes HLSL)
+
+Crea [archivos de personalizaciones de compilación](#custom) para convertir estos formatos en archivos .cso durante la compilación.
+
+Esta es una parte del código HLSL que el Editor de sombras exporta. Este solo es el código para el nodo de iluminación Lambert.
+
+```hlsl
+//
+// Lambert lighting function
+//
+float3 LambertLighting(
+    float3 lightNormal,
+    float3 surfaceNormal,
+    float3 materialAmbient,
+    float3 lightAmbient,
+    float3 lightColor,
+    float3 pixelColor
+    )
+{
+    // Compute the amount of contribution per light.
+    float diffuseAmount = saturate(dot(lightNormal, surfaceNormal));
+    float3 diffuse = diffuseAmount * lightColor * pixelColor;
+
+    // Combine ambient with diffuse.
+    return saturate((materialAmbient * lightAmbient) + diffuse);
+}
+```
+
+Para obtener más información, consulta [Trabajar con sombreadores](https://msdn.microsoft.com/library/windows/apps/hh873117.aspx).
+
+## Personalizaciones de compilación para activos 3D
+
+
+Puedes agregar personalizaciones de compilación a tu proyecto para que Visual Studio convierta recursos en formatos utilizables. A continuación, puedes cargar los activos en tu aplicación y usarlos al crear y llenar recursos de DirectX tal como lo harías en cualquier otra aplicación de DirectX.
+
+Para agregar una personalización de compilación, haz clic con el botón secundario en el proyecto del **Explorador de soluciones** y selecciona **Personalizaciones de compilación...**. Puedes agregar los siguientes tipos de personalizaciones de compilación a tu proyecto.
+
+-   La canalización de contenido de imagen toma archivos de imagen como entrada y muestra archivos de DirectDraw Surface (.dds) como salida.
+-   La canalización de contenido de malla toma archivos de malla (como .fbx) y muestra archivos de malla .cmo como salida.
+-   La canalización de contenido de sombreador toma un gráfico de sombreador visual (.dgsl) del Editor de sombras de Visual Studio y muestra un archivo de Compiled Shader Output (.cso).
+
+Para obtener más información, consulta [Usar activos 3D en el juego o aplicación](https://msdn.microsoft.com/library/windows/apps/hh972446.aspx).
+
+## Depurar gráficos DirectX
+
+
+Visual Studio proporciona herramientas de depuración específicas para gráficos. Usa estas herramientas para depurar cosas como estas:
+
+-   La canalización de gráficos.
+-   La pila de llamadas de eventos.
+-   La tabla de objetos.
+-   El estado del dispositivo.
+-   Errores de sombreador.
+-   Parámetros y búferes de constantes incorrectos o no inicializados.
+-   Compatibilidad de la versión de DirectX.
+-   Compatibilidad limitada con Direct2D.
+-   Requisitos de SDK y sistema operativo
+
+Para obtener más información, consulta [Depurar gráficos DirectX](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx).
+
+> **Nota:** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+ 
+
+ 
+
+ 
+
+
+
+
+
+
+<!--HONumber=Mar16_HO1-->
+
+

@@ -1,0 +1,291 @@
+---
+title: Configuración de recursos de DirectX y visualización de una imagen
+description: Aquí te mostramos cómo crear un dispositivo Direct3D, una cadena de intercambio y una vista de destino de representación, y cómo mostrar la imagen representada en la pantalla.
+ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
+---
+
+# Configuración de recursos de DirectX y visualización de una imagen
+
+
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
+Aquí te mostramos cómo crear un dispositivo Direct3D, una cadena de intercambio y una vista de destino de representación, y cómo mostrar la imagen representada en la pantalla.
+
+**Objetivo:** Configurar recursos de DirectX en una aplicación para la Plataforma universal de Windows (UWP) con C++ y mostrar un color sólido.
+
+## Requisitos previos
+
+
+Suponemos que estás familiarizado con C++. También necesitas tener experiencia básica en los conceptos de programación de gráficos.
+
+**Tiempo en completarse:** 20 minutos.
+
+## Instrucciones
+
+### 1. Declarar variables de interfaz de Direct3D con ComPtr
+
+Declaramos variables de interfaz de Direct3D con la [plantilla de puntero inteligente](https://msdn.microsoft.com/library/windows/apps/hh279674.aspx) ComPtr de la Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL), para poder administrar la vigencia de esas variables de manera segura. Podemos usar esas variables para acceder a la [**clase ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) y a sus miembros. Por ejemplo:
+
+```cpp
+    ComPtr<ID3D11RenderTargetView> m_renderTargetView;
+    m_d3dDeviceContext->OMSetRenderTargets(
+        1,
+        m_renderTargetView.GetAddressOf(),
+        nullptr // Use no depth stencil.
+        );
+```
+
+Si declaras [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) con ComPtr, luego puedes usar el método **GetAddressOf** de ComPtr para obtener la dirección del puntero a **ID3D11RenderTargetView** (\*\*ID3D11RenderTargetView) y pasar a [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464). **OMSetRenderTargets** enlaza el destino de representación a la [fase de combinación de salida](https://msdn.microsoft.com/library/windows/desktop/bb205120) para especificar el destino de representación como el destino de salida.
+
+La aplicación de muestra primero se inicia, luego se inicializa y se carga, y luego está lista para ejecutarse.
+
+### 2. Crear el dispositivo Direct3D
+
+Para usar la API de Direct3D para representar una escena, primero debemos crear un dispositivo Direct3D que represente el adaptador de pantalla. Para crear el dispositivo Direct3D, llamamos a la función [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082). Especificamos los niveles del 9.1 al 11.1 de la matriz de valores [**D3D\_FEATURE\_LEVEL**](https://msdn.microsoft.com/library/windows/desktop/ff476329). Direct3D recorre la matriz en orden y devuelve el nivel de características más alto compatible. Entonces, para obtener el nivel de características más alto, enumeramos las entradas de la matriz **D3D\_FEATURE\_LEVEL** en orden descendente. Pasamos la marca [**D3D11\_CREATE\_DEVICE\_BGRA\_SUPPORT**](https://msdn.microsoft.com/library/windows/desktop/ff476107#D3D11_CREATE_DEVICE_BGRA_SUPPORT) al parámetro *Flags* para que los recursos de Direct3D interoperen con Direct2D. Si usamos la versión de depuración, también pasamos la marca [**D3D11\_CREATE\_DEVICE\_DEBUG**](https://msdn.microsoft.com/library/windows/desktop/ff476107#D3D11_CREATE_DEVICE_DEBUG). Para obtener más información acerca de la depuración de aplicaciones, consulta el tema sobre cómo [usar la capa de depuración para depurar aplicaciones](https://msdn.microsoft.com/library/windows/desktop/jj200584).
+
+Obtenemos el dispositivo Direct3D 11.1 ([**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575)) y el contexto de dispositivo ([**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)) consultando el dispositivo Direct3D 11 y su contexto devueltos en [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082).
+
+```cpp
+        // First, create the Direct3D device.
+
+        // This flag is required in order to enable compatibility with Direct2D.
+        UINT creationFlags = D3D11_CREATE_DEVICE_BGRA_SUPPORT;
+
+#if defined(_DEBUG)
+        // If the project is in a debug build, enable debugging via SDK Layers with this flag.
+        creationFlags |= D3D11_CREATE_DEVICE_DEBUG;
+#endif
+
+        // This array defines the ordering of feature levels that D3D should attempt to create.
+        D3D_FEATURE_LEVEL featureLevels[] =
+        {
+            D3D_FEATURE_LEVEL_11_1,
+            D3D_FEATURE_LEVEL_11_0,
+            D3D_FEATURE_LEVEL_10_1,
+            D3D_FEATURE_LEVEL_10_0,
+            D3D_FEATURE_LEVEL_9_3,
+            D3D_FEATURE_LEVEL_9_1
+        };
+
+        ComPtr<ID3D11Device> d3dDevice;
+        ComPtr<ID3D11DeviceContext> d3dDeviceContext;
+        DX::ThrowIfFailed(
+            D3D11CreateDevice(
+                nullptr,                    // Specify nullptr to use the default adapter.
+                D3D_DRIVER_TYPE_HARDWARE,
+                nullptr,                    // leave as nullptr if hardware is used
+                creationFlags,              // optionally set debug and Direct2D compatibility flags
+                featureLevels,
+                ARRAYSIZE(featureLevels),
+                D3D11_SDK_VERSION,          // always set this to D3D11_SDK_VERSION
+                &d3dDevice,
+                nullptr,
+                &d3dDeviceContext
+                )
+            );
+
+        // Retrieve the Direct3D 11.1 interfaces.
+        DX::ThrowIfFailed(
+            d3dDevice.As(&m_d3dDevice)
+            );
+
+        DX::ThrowIfFailed(
+            d3dDeviceContext.As(&m_d3dDeviceContext)
+            );
+```
+
+### 3. Crear la cadena de intercambio
+
+A continuación, creamos una cadena de intercambio que el dispositivo usa para representar y mostrar en pantalla. Declaramos e inicializamos una estructura [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528) para describir la cadena de intercambio. A continuación, configuramos la cadena de intercambio como modelo flip (es decir, una cadena de intercambio con el valor [**DXGI\_SWAP\_EFFECT\_FLIP\_SEQUENTIAL**](https://msdn.microsoft.com/library/windows/desktop/bb173077#DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL) establecido en el miembro **SwapEffect**) y establecemos el miembro **Format** en [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059#DXGI_FORMAT_B8G8R8A8_UNORM). Establecemos el miembro **Count** de la estructura [**DXGI\_SAMPLE\_DESC**](https://msdn.microsoft.com/library/windows/desktop/bb173072) que el miembro **SampleDesc** especifica en 1 y el miembro **Quality** de **DXGI\_SAMPLE\_DESC** en cero, porque el modelo flip no es compatible con el suavizado de contorno de varias muestras (MSAA). Establecemos el miembro **BufferCount** en 2, de modo tal que la cadena de intercambio pueda usar un búfer frontal para presentar el dispositivo de pantalla y un búfer de reserva como el destino de representación.
+
+Obtenemos el dispositivo DXGI subyacente consultando el dispositivo Direct3D 11.1. Para reducir el consumo de energía; lo cual es muy importante en el caso de dispositivos a batería, como equipos portátiles y tabletas, llamamos al método [**IDXGIDevice1::SetMaximumFrameLatency**](https://msdn.microsoft.com/library/windows/desktop/ff471334) con 1 como el número máximo de fotogramas del búfer de reserva que DXGI puede consultar. Esto asegura que la aplicación se represente solo después del espacio en blanco vertical.
+
+Para crear finalmente la cadena de intercambio, necesitamos obtener la fábrica primaria del dispositivo DXGI. Llamamos a [**IDXGIDevice::GetAdapter**](https://msdn.microsoft.com/library/windows/desktop/bb174531) para obtener el adaptador del dispositivo y, a continuación, llamamos a [**IDXGIObject::GetParent**](https://msdn.microsoft.com/library/windows/desktop/bb174542) en el adaptador para obtener la fábrica primaria ([**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404556)). Para crear la cadena de intercambio, llamamos a [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559) con el descriptor de cadena de intercambio y la ventana principal de la aplicación.
+
+```cpp
+            // If the swap chain does not exist, create it.
+            DXGI_SWAP_CHAIN_DESC1 swapChainDesc = {0};
+
+            swapChainDesc.Stereo = false;
+            swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
+            swapChainDesc.Scaling = DXGI_SCALING_NONE;
+            swapChainDesc.Flags = 0;
+
+            // Use automatic sizing.
+            swapChainDesc.Width = 0;
+            swapChainDesc.Height = 0;
+
+            // This is the most common swap chain format.
+            swapChainDesc.Format = DXGI_FORMAT_B8G8R8A8_UNORM;
+
+            // Don't use multi-sampling.
+            swapChainDesc.SampleDesc.Count = 1;
+            swapChainDesc.SampleDesc.Quality = 0;
+
+            // Use two buffers to enable the flip effect.
+            swapChainDesc.BufferCount = 2;
+
+            // We recommend using this swap effect for all applications.
+            swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL;
+
+
+            // Once the swap chain description is configured, it must be
+            // created on the same adapter as the existing D3D Device.
+
+            // First, retrieve the underlying DXGI Device from the D3D Device.
+            ComPtr<IDXGIDevice2> dxgiDevice;
+            DX::ThrowIfFailed(
+                m_d3dDevice.As(&dxgiDevice)
+                );
+
+            // Ensure that DXGI does not queue more than one frame at a time. This both reduces
+            // latency and ensures that the application will only render after each VSync, minimizing
+            // power consumption.
+            DX::ThrowIfFailed(
+                dxgiDevice->SetMaximumFrameLatency(1)
+                );
+
+            // Next, get the parent factory from the DXGI Device.
+            ComPtr<IDXGIAdapter> dxgiAdapter;
+            DX::ThrowIfFailed(
+                dxgiDevice->GetAdapter(&dxgiAdapter)
+                );
+
+            ComPtr<IDXGIFactory2> dxgiFactory;
+            DX::ThrowIfFailed(
+                dxgiAdapter->GetParent(IID_PPV_ARGS(&dxgiFactory))
+                );
+
+            // Finally, create the swap chain.
+            CoreWindow^ window = m_window.Get();
+            DX::ThrowIfFailed(
+                dxgiFactory->CreateSwapChainForCoreWindow(
+                    m_d3dDevice.Get(),
+                    reinterpret_cast<IUnknown*>(window),
+                    &swapChainDesc,
+                    nullptr, // Allow on all displays.
+                    &m_swapChain
+                    )
+                );
+```
+
+### 4. Crear la vista del destino de representación
+
+Para representar gráficos en la ventana, necesitamos crear una vista del destino de representación. Llamamos a [**IDXGISwapChain::GetBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb174570) para obtener el búfer de reserva de la cadena de intercambio, al cual necesitaremos usar cuando creemos la vista del destino de representación. Especificamos el búfer de reserva como una textura 2D ([**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)). Para crear la vista del destino de representación, llamamos a [**ID3D11Device::CreateRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476517) con el búfer de reserva de la cadena de intercambio. Debemos especificar dibujar en toda la ventana principal determinando la ventanilla ([**D3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/ff476260)) como el tamaño completo del búfer de reserva de la cadena de intercambio. Usamos la ventanilla en una llamada a [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) para enlazar la ventanilla a la [fase de rasterización](https://msdn.microsoft.com/library/windows/desktop/bb205125) de la canalización. La fase de rasterización convierte la información de vector en una imagen rasterizada. En este caso, no necesitamos la conversión porque solo estamos mostrando color sólido.
+
+```cpp
+        // Once the swap chain is created, create a render target view.  This will
+        // allow Direct3D to render graphics to the window.
+
+        ComPtr<ID3D11Texture2D> backBuffer;
+        DX::ThrowIfFailed(
+            m_swapChain->GetBuffer(0, IID_PPV_ARGS(&backBuffer))
+            );
+
+        DX::ThrowIfFailed(
+            m_d3dDevice->CreateRenderTargetView(
+                backBuffer.Get(),
+                nullptr,
+                &m_renderTargetView
+                )
+            );
+
+
+        // After the render target view is created, specify that the viewport,
+        // which describes what portion of the window to draw to, should cover
+        // the entire window.
+
+        D3D11_TEXTURE2D_DESC backBufferDesc = {0};
+        backBuffer->GetDesc(&backBufferDesc);
+
+        D3D11_VIEWPORT viewport;
+        viewport.TopLeftX = 0.0f;
+        viewport.TopLeftY = 0.0f;
+        viewport.Width = static_cast<float>(backBufferDesc.Width);
+        viewport.Height = static_cast<float>(backBufferDesc.Height);
+        viewport.MinDepth = D3D11_MIN_DEPTH;
+        viewport.MaxDepth = D3D11_MAX_DEPTH;
+
+        m_d3dDeviceContext->RSSetViewports(1, &viewport);
+```
+
+### 5. Mostrar la imagen representada
+
+Entramos en un bucle sin fin para representar y mostrar continuamente la escena.
+
+En este bucle, llamamos a:
+
+1.  [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar el destino de representación como el destino de salida.
+2.  [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) para borrar el destino representado en un color sólido.
+3.  [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) para mostrar la imagen representada en la ventana.
+
+Como antes habíamos establecido la latencia de fotogramas en 1, Windows, por lo general, disminuye la velocidad del bucle de representación a la velocidad de actualización de pantalla, que es normalmente alrededor de 60 Hz. Windows disminuye el bucle sin fin poniendo a la aplicación en modo de suspensión cuando llama a [**Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576). Windows pone a la aplicación en modo de suspensión hasta que se actualiza la pantalla.
+
+```cpp
+        // Enter the render loop.  Note that Windows Store apps should never exit.
+        while (true)
+        {
+            // Process events incoming to the window.
+            m_window->Dispatcher->ProcessEvents(CoreProcessEventsOption::ProcessAllIfPresent);
+
+            // Specify the render target we created as the output target.
+            m_d3dDeviceContext->OMSetRenderTargets(
+                1,
+                m_renderTargetView.GetAddressOf(),
+                nullptr // Use no depth stencil.
+                );
+
+            // Clear the render target to a solid color.
+            const float clearColor[4] = { 0.071f, 0.04f, 0.561f, 1.0f };
+            m_d3dDeviceContext->ClearRenderTargetView(
+                m_renderTargetView.Get(),
+                clearColor
+                );
+
+            // Present the rendered image to the window.  Because the maximum frame latency is set to 1,
+            // the render loop will generally be throttled to the screen refresh rate, typically around
+            // 60 Hz, by sleeping the application on Present until the screen is refreshed.
+            DX::ThrowIfFailed(
+                m_swapChain->Present(1, 0)
+                );
+        }
+```
+
+### 6. Cambiar el tamaño de la ventana de la aplicación y el búfer de la cadena de intercambio
+
+Si el tamaño de la ventana de la aplicación cambia, la aplicación debe cambiar el tamaño de los búferes de la cadena de intercambio, recrear la vista del destino de representación y luego mostrar la imagen representada en el nuevo tamaño. Para cambiar el tamaño de los búferes de la cadena de intercambio, llamamos a [**IDXGISwapChain::ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577). En esta llamada, dejamos la cantidad y el formato de los búferes sin modificar (el parámetro *BufferCount* en dos y el parámetro *NewFormat* en [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059#DXGI_FORMAT_B8G8R8A8_UNORM)). Hacemos que el tamaño del búfer de reserva de la cadena de intercambio sea el mismo que el de la ventana modificada. Después de cambiar el tamaño de los búferes de la cadena de intercambio, creamos el nuevo destino de representación y mostramos la nueva imagen representada de forma similar a cuando inicializamos la aplicación.
+
+```cpp
+            // If the swap chain already exists, resize it.
+            DX::ThrowIfFailed(
+                m_swapChain->ResizeBuffers(
+                    2,
+                    0,
+                    0,
+                    DXGI_FORMAT_B8G8R8A8_UNORM,
+                    0
+                    )
+                );
+```
+
+## Resumen y pasos siguientes
+
+
+Hemos creado un dispositivo Direct3D, una cadena de intercambio y una vista de destino de representación, y mostramos la imagen representada en la pantalla.
+
+A continuación, también dibujaremos un triángulo en la pantalla.
+
+[Crear sombreadores y dibujar primitivos](creating-shaders-and-drawing-primitives.md)
+
+ 
+
+ 
+
+
+
+
+
+
+<!--HONumber=Mar16_HO1-->
+
+
