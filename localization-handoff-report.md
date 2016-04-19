@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\xbox-apps\devkit-activation.md](https://github.com/Microsoft/windows-apps/blob/7d832fee5bcd3a15cee1e7d8f4c66da9b0afa5e1/windows-apps-src/xbox-apps/devkit-activation.md) | OutofSyncHandedBackSuccess | [Details](#9ad9904150acb00982c96eebeaf010f7023d33203681)
+ [windows-apps-src\devices-sensors\out-of-band-pairing.md](https://github.com/Microsoft/windows-apps/blob/34089c2943c5f639bf969753d82e36c36b1ac07f/windows-apps-src/devices-sensors/out-of-band-pairing.md) | OutofSyncHandedBackSuccess | [Details](#10630ccf572cabf7d1b70dfee60b0af74a7eba212022)
 
 ## Item Details
-##### <a name='9ad9904150acb00982c96eebeaf010f7023d33203681'></a> Source: [windows-apps-src\xbox-apps\devkit-activation.md](https://github.com/Microsoft/windows-apps/blob/7d832fee5bcd3a15cee1e7d8f4c66da9b0afa5e1/windows-apps-src/xbox-apps/devkit-activation.md)
+##### <a name='10630ccf572cabf7d1b70dfee60b0af74a7eba212022'></a> Source: [windows-apps-src\devices-sensors\out-of-band-pairing.md](https://github.com/Microsoft/windows-apps/blob/34089c2943c5f639bf969753d82e36c36b1ac07f/windows-apps-src/devices-sensors/out-of-band-pairing.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [devkit-activation.22024c3019b2f91b62bafe755f4aefb6138eab84.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/390089f667ef91bc2f99cabc25b339450a4d9d8f/ol-handoff/Microsoft/windows-apps.es-es/master/devkit-activation.22024c3019b2f91b62bafe755f4aefb6138eab84.es-es.xlf)
-* Handoff Datetime: 2016-04-19 18:44:04
+* Handoff File: [out-of-band-pairing.cfc62289b905dcdab61b435e55cffcd598972abd.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/02ca10b8eea5841fa61d073662abac8588b28df3/ol-handoff/Microsoft/windows-apps.es-es/master/out-of-band-pairing.cfc62289b905dcdab61b435e55cffcd598972abd.es-es.xlf)
+* Handoff Datetime: 2016-04-19 23:15:28
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\xbox-apps\devkit-activation.md](https://github.com/Microsoft/windows-apps.es-es/blob/2fc4e3dd77794ecd0126027e25d1bd8f0b53f10f/windows-apps-src/xbox-apps/devkit-activation.md)
-* Current Handback File: [devkit-activation.22024c3019b2f91b62bafe755f4aefb6138eab84.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/85886dfea9b9dfc1a03c6b2f970443bc94a0f2b1/ol-handback/Microsoft/windows-apps.es-es/master/devkit-activation.22024c3019b2f91b62bafe755f4aefb6138eab84.es-es.xlf)
+* Current Target File: [windows-apps-src\devices-sensors\out-of-band-pairing.md](https://github.com/Microsoft/windows-apps.es-es/blob/2fc4e3dd77794ecd0126027e25d1bd8f0b53f10f/windows-apps-src/devices-sensors/out-of-band-pairing.md)
+* Current Handback File: [out-of-band-pairing.cfc62289b905dcdab61b435e55cffcd598972abd.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/85886dfea9b9dfc1a03c6b2f970443bc94a0f2b1/ol-handback/Microsoft/windows-apps.es-es/master/out-of-band-pairing.cfc62289b905dcdab61b435e55cffcd598972abd.es-es.xlf)
 * Current Handback Datetime: 2016-04-15 13:51:26
 * [Back to Top](#report-top)
 
