@@ -6,37 +6,37 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\create-your-app-by-reserving-a-name.md](https://github.com/Microsoft/windows-apps/blob/3b65bbaf2498dde7484c055ff86ed09e89bf3405/windows-apps-src/publish/create-your-app-by-reserving-a-name.md) | OutofSyncHandedBackSuccess | [Details](#5e4933be456bc76eb5923f5c081e8376c43c118b3451)
- [windows-apps-src\publish\manage-app-names.md](https://github.com/Microsoft/windows-apps/blob/48952b5d4f2565d06ec79475f88fbabf93fd0f70/windows-apps-src/publish/manage-app-names.md) | OutofSyncHandedBackSuccess | [Details](#e03e99b5de2142c2bcf46ee2aad4a76bb87ee4e53473)
+ [windows-apps-src\monetize\display-ads-in-your-app.md](https://github.com/Microsoft/windows-apps/blob/289ea2b9e04fbf77a602fcd0c36ced9d5e790375/windows-apps-src/monetize/display-ads-in-your-app.md) | OutofSyncHandedBackSuccess | [Details](#d0d0c300c46f8c01ec148a3272d8c1bced2fd92e3228)
+ [windows-apps-src\porting\android-ios-uwp-map.md](https://github.com/Microsoft/windows-apps/blob/e8fa8bde8cbb8c57770b2e8bfc2e1a3eea321fb4/windows-apps-src/porting/android-ios-uwp-map.md) | OutofSyncHandedBackSuccess | [Details](#fa448bc9f44011c11b42462a628edf3fcf7654fb3332)
 
 ## Item Details
-##### <a name='5e4933be456bc76eb5923f5c081e8376c43c118b3451'></a> Source: [windows-apps-src\publish\create-your-app-by-reserving-a-name.md](https://github.com/Microsoft/windows-apps/blob/3b65bbaf2498dde7484c055ff86ed09e89bf3405/windows-apps-src/publish/create-your-app-by-reserving-a-name.md)
+##### <a name='d0d0c300c46f8c01ec148a3272d8c1bced2fd92e3228'></a> Source: [windows-apps-src\monetize\display-ads-in-your-app.md](https://github.com/Microsoft/windows-apps/blob/289ea2b9e04fbf77a602fcd0c36ced9d5e790375/windows-apps-src/monetize/display-ads-in-your-app.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [create-your-app-by-reserving-a-name.7e01dc9d2c9ba68a62c4962ef74bc447ce075b6e.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/32603850370929a51ffecd341045b4894972dfb4/ol-handoff/Microsoft/windows-apps.es-es/master/create-your-app-by-reserving-a-name.7e01dc9d2c9ba68a62c4962ef74bc447ce075b6e.es-es.xlf)
-* Handoff Datetime: 2016-04-21 21:44:21
+* Handoff File: [display-ads-in-your-app.7a65d6ad9fcc9b8be3d959f4d47f1d74ae47975c.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/693700a545e0056e3b7a87189b30c4dcffba6166/ol-handoff/Microsoft/windows-apps.es-es/master/display-ads-in-your-app.7a65d6ad9fcc9b8be3d959f4d47f1d74ae47975c.es-es.xlf)
+* Handoff Datetime: 2016-04-21 22:46:46
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\create-your-app-by-reserving-a-name.md](https://github.com/Microsoft/windows-apps.es-es/blob/2fc4e3dd77794ecd0126027e25d1bd8f0b53f10f/windows-apps-src/publish/create-your-app-by-reserving-a-name.md)
-* Current Handback File: [create-your-app-by-reserving-a-name.7e01dc9d2c9ba68a62c4962ef74bc447ce075b6e.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/85886dfea9b9dfc1a03c6b2f970443bc94a0f2b1/ol-handback/Microsoft/windows-apps.es-es/master/create-your-app-by-reserving-a-name.7e01dc9d2c9ba68a62c4962ef74bc447ce075b6e.es-es.xlf)
+* Current Target File: [windows-apps-src\monetize\display-ads-in-your-app.md](https://github.com/Microsoft/windows-apps.es-es/blob/2fc4e3dd77794ecd0126027e25d1bd8f0b53f10f/windows-apps-src/monetize/display-ads-in-your-app.md)
+* Current Handback File: [display-ads-in-your-app.7a65d6ad9fcc9b8be3d959f4d47f1d74ae47975c.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/85886dfea9b9dfc1a03c6b2f970443bc94a0f2b1/ol-handback/Microsoft/windows-apps.es-es/master/display-ads-in-your-app.7a65d6ad9fcc9b8be3d959f4d47f1d74ae47975c.es-es.xlf)
 * Current Handback Datetime: 2016-04-15 13:51:26
 * [Back to Top](#report-top)
 
-##### <a name='e03e99b5de2142c2bcf46ee2aad4a76bb87ee4e53473'></a> Source: [windows-apps-src\publish\manage-app-names.md](https://github.com/Microsoft/windows-apps/blob/48952b5d4f2565d06ec79475f88fbabf93fd0f70/windows-apps-src/publish/manage-app-names.md)
+##### <a name='fa448bc9f44011c11b42462a628edf3fcf7654fb3332'></a> Source: [windows-apps-src\porting\android-ios-uwp-map.md](https://github.com/Microsoft/windows-apps/blob/e8fa8bde8cbb8c57770b2e8bfc2e1a3eea321fb4/windows-apps-src/porting/android-ios-uwp-map.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [manage-app-names.0f3b592f24bb2975cdbb3aad17495d9d6e942b93.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/32603850370929a51ffecd341045b4894972dfb4/ol-handoff/Microsoft/windows-apps.es-es/master/manage-app-names.0f3b592f24bb2975cdbb3aad17495d9d6e942b93.es-es.xlf)
-* Handoff Datetime: 2016-04-21 21:44:21
+* Handoff File: [android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/693700a545e0056e3b7a87189b30c4dcffba6166/ol-handoff/Microsoft/windows-apps.es-es/master/android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.es-es.xlf)
+* Handoff Datetime: 2016-04-21 22:46:46
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\manage-app-names.md](https://github.com/Microsoft/windows-apps.es-es/blob/2fc4e3dd77794ecd0126027e25d1bd8f0b53f10f/windows-apps-src/publish/manage-app-names.md)
-* Current Handback File: [manage-app-names.0f3b592f24bb2975cdbb3aad17495d9d6e942b93.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/85886dfea9b9dfc1a03c6b2f970443bc94a0f2b1/ol-handback/Microsoft/windows-apps.es-es/master/manage-app-names.0f3b592f24bb2975cdbb3aad17495d9d6e942b93.es-es.xlf)
+* Current Target File: [windows-apps-src\porting\android-ios-uwp-map.md](https://github.com/Microsoft/windows-apps.es-es/blob/2fc4e3dd77794ecd0126027e25d1bd8f0b53f10f/windows-apps-src/porting/android-ios-uwp-map.md)
+* Current Handback File: [android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/85886dfea9b9dfc1a03c6b2f970443bc94a0f2b1/ol-handback/Microsoft/windows-apps.es-es/master/android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.es-es.xlf)
 * Current Handback Datetime: 2016-04-15 13:51:26
 * [Back to Top](#report-top)
 
