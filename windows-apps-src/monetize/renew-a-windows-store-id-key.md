@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description. Usa este método para renovar una clave de la Tienda Windows.
 title: Renovar una clave de id. de la Tienda Windows
