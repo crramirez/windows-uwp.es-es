@@ -286,7 +286,7 @@ Si decides proporcionar tu propia navegación de pila de retroceso, la experienc
 <tr class="odd">
 <td align="left"><strong>Enumerar elementos</strong>
           <p>La aplicación muestra el contenido de un elemento en pantalla, como los detalles del elemento seleccionado en la lista maestro y detalles.</p></td>
-<td align="left"><strong>No.</strong>
+<td align="left"><strong>No</strong>
           <p>Enumerar elementos es similar a navegar dentro de un grupo del mismo nivel. Cuando el usuario presiona o pulsa Atrás, va a la página que precede a la página actual que contiene la enumeración de elementos.</p>
 <img src="images/nav/nav-enumerate.png" alt="Iterm enumeration" /></td>
 </tr>

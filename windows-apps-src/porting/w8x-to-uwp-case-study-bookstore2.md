@@ -1,7 +1,7 @@
 ---
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: Este caso práctico, que se basa en la información proporcionada en Bookstore1, comienza con una aplicación Universal 8.1 que muestra datos agrupados en un control SemanticZoom.
-title: Caso práctico de Windows Runtime 8.x a UWP: Bookstore2
+title: Caso práctico de Windows Runtime 8.x a UWP Bookstore2
 ---
 
 # Caso práctico de Windows Runtime 8.x a UWP: Bookstore2

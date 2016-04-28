@@ -128,13 +128,13 @@ Cada **MediaClip** en una composición tiene una lista de los efectos de audio y
 
 ## Guardar una composición en un archivo
 
-Serializar composiciones multimedia en un archivo modificarás más adelante. Seleccionar un archivo de resultados y, a continuación, llamar al método de [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/dn640554) para guardar la composición.
+Serializar composiciones multimedia en un archivo modificarás más adelante. Seleccionar un archivo de resultados y, a continuación, llamar al método de [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/dn640554) para guardar la composición.
 
 [!code-cs[SaveComposition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetSaveComposition)]
 
 ## Cargar una composición desde un archivo
 
-Se pueden deserializar composiciones multimedia desde un archivo para que el usuario pueda ver y modificar la composición. Seleccionar un archivo de composición y, a continuación, llamar al método de [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/dn652684) para cargar la composición.
+Se pueden deserializar composiciones multimedia desde un archivo para que el usuario pueda ver y modificar la composición. Seleccionar un archivo de composición y, a continuación, llamar al método de [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/dn652684) para cargar la composición.
 
 [!code-cs[OpenComposition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetOpenComposition)]
 

@@ -166,7 +166,7 @@ TileUpdateManager.CreateTileUpdaterForApplication().Update(notification);
 
 **Icono secundario**
 
-Para enviar una notificación a un icono secundario, asegúrate primero de que el icono secundario existe. Si intentas crear un actualizador de iconos para un icono secundario que no existe (por ejemplo, si el usuario ha desanclado el icono secundario), se generará una excepción. Puedes usar [**SecondaryTile.Exists**](https://msdn.microsoft.com/library/windows/apps/br242205)(tileId) para averiguar si tu icono secundario está anclado después crear un actualizador para el icono secundario y enviar la notificación.
+Para enviar una notificación a un icono secundario, asegúrate primero de que el icono secundario existe. Si intentas crear un actualizador de iconos para un icono secundario que no existe (por ejemplo, si el usuario ha desanclado el icono secundario), se generará una excepción. Puedes usar [**SecondaryTile.Exists**](https://msdn.microsoft.com/library/windows/apps/br242205) (tileId) para averiguar si tu icono secundario está anclado después crear un actualizador para el icono secundario y enviar la notificación.
 
 Este ejemplo de código envía una notificación a un icono secundario.
 
