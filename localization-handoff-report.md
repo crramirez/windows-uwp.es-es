@@ -1,32 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://github.com/Microsoft/windows-apps/blob/9321e975c455ff61f7977e9972aee7c5d92a7add/windows-apps-src/debug-test-perf/device-portal-desktop.md) | HandedOffSuccess | [Details](#9021ca85f188d8f41fd297a873915709c9b2708c1912)
- [windows-apps-src\debug-test-perf\device-portal-mobile.md](https://github.com/Microsoft/windows-apps/blob/df6d42d6a91b8721e905fe9bc3a339dc33408459/windows-apps-src/debug-test-perf/device-portal-mobile.md) | HandedOffSuccess | [Details](#eeeb8f98d97468544cc30e3d9884cce15cb913a91914)
+ [windows-apps-src\porting\android-ios-uwp-map.md](https://github.com/Microsoft/windows-apps/blob/a869ae056d29f45fb60597cf8ce49cc150e1af01/windows-apps-src/porting/android-ios-uwp-map.md) | HandedOffSuccess | [Details](#8e10b13f87a6b4b04b0bc8a8bbf221b08ad009113364)
 
 ## Item Details
-##### <a name='9021ca85f188d8f41fd297a873915709c9b2708c1912'></a> Source: [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://github.com/Microsoft/windows-apps/blob/9321e975c455ff61f7977e9972aee7c5d92a7add/windows-apps-src/debug-test-perf/device-portal-desktop.md)
+##### <a name='8e10b13f87a6b4b04b0bc8a8bbf221b08ad009113364'></a> Source: [windows-apps-src\porting\android-ios-uwp-map.md](https://github.com/Microsoft/windows-apps/blob/a869ae056d29f45fb60597cf8ce49cc150e1af01/windows-apps-src/porting/android-ios-uwp-map.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/21dd4cf7bca07c747849e66dc646c2753d67336b/ol-handoff/Microsoft/windows-apps.es-es/master/device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.es-es.xlf)
-* Handoff Datetime: 2016-05-06 14:51:54
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='eeeb8f98d97468544cc30e3d9884cce15cb913a91914'></a> Source: [windows-apps-src\debug-test-perf\device-portal-mobile.md](https://github.com/Microsoft/windows-apps/blob/df6d42d6a91b8721e905fe9bc3a339dc33408459/windows-apps-src/debug-test-perf/device-portal-mobile.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [device-portal-mobile.76f623a0ea272ed3257cb79b0212a5e2e1bcefa1.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/21dd4cf7bca07c747849e66dc646c2753d67336b/ol-handoff/Microsoft/windows-apps.es-es/master/device-portal-mobile.76f623a0ea272ed3257cb79b0212a5e2e1bcefa1.es-es.xlf)
-* Handoff Datetime: 2016-05-06 14:51:54
+* Handoff File: [android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/f6512fabc823916bb579d543ddebfc0c1ac028e2/ol-handoff/Microsoft/windows-apps.es-es/master/android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.es-es.xlf)
+* Handoff Datetime: 2016-05-06 21:21:12
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
