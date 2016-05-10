@@ -1,6 +1,7 @@
 ---
-Description: Como representación visual del lenguaje, la tarea principal de la tipografía es ser clara. Su estilo nunca debe obstaculizar ese objetivo. No obstante, la tipografía también tiene un rol importante como componente de diseño, con un gran efecto en la densidad y la complejidad del diseño, y en la experiencia de usuario de ese diseño. 
-title: Tipografía
+author: mijacobs
+Description: As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design.
+title: Typography
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
 label: Typography
 template: detail.hbs
@@ -8,33 +9,33 @@ extraBodyClass: style-typography
 brief: As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design.
 ---
 
-# Tipografía para aplicaciones UWP
+# Typography for UWP apps
 
-Del mismo modo que la representación visual del lenguaje, la tarea principal de la tipografía es ser clara. Su estilo nunca debe obstaculizar ese objetivo. No obstante, la tipografía también tiene un rol importante como componente de diseño, con un gran efecto en la densidad y la complejidad del diseño, y en la experiencia de usuario de ese diseño.
+As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design.
 
-## Tipo de letra
+## Typeface
 
-Hemos seleccionado Segoe UI para su uso en todos los diseños digitales de Microsoft. Segoe UI proporciona una amplia gama de caracteres y está diseñada para mantener la legibilidad óptima en distintos tamaños y densidades de píxeles. Ofrece una estética limpia, ligera y abierta que complementa el contenido del sistema.
+We’ve selected Segoe UI for use on all Microsoft digital designs. Segoe UI provides a wide range of characters and is designed to maintain optimal legibility across sizes and pixel densities. It offers a clean, light, and open aesthetic that complements the content of the system.
 
-![Texto de muestra de la fuente Segoe UI](images/segoe-sample.png)
+![Sample text of Segoe UI font](images/segoe-sample.png)
 
-## Espesores
+## Weights
 
-Nuestra visión de la tipografía tiene en cuenta la simplicidad y la eficiencia. Elegimos usar un tipo de letra, una cantidad mínima de espesores y tamaños y una jerarquía clara. El posicionamiento y la alineación siguen el estilo predeterminado para el idioma especificado. En inglés el texto va de izquierda a derecha y de arriba a abajo. Las relaciones entre el texto y las imágenes son claras y directas.
+We approach typography with an eye to simplicity and efficiency. We choose to use one typeface, a minimum of weights and sizes, and a clear hierarchy. Positioning and alignment follow the default style for the given language. In English the sequence runs left to right, top to bottom. Relationships between text and images are clear and straightforward.
 
-![Muestra los espesores de fuente admitidos. Delgado, semidelgado, normal, seminegrita y negrita](images/weights.png)
+![Shows supported font weights. Light, semilight, regular, semibold, and bold](images/weights.png)
 
-## Interlineado
+## Line spacing
 
-![Ejemplo de interlineado de 125%](images/line-spacing.png)
+![Example of line spacing at 125%](images/line-spacing.png)
 
-El interlineado debe calcularse en relación al 125% del tamaño de la fuente, con redondeo al múltiplo más cercano de cuatro cuando sea necesario. Por ejemplo, con 15px Segoe UI, 125% de 15 píxeles es 18,75 píxeles. Recomendamos redondear por arriba y establecer la alto de línea en 20 píxeles para permanecer en la cuadrícula de 4 píxeles. Esto garantiza una buena experiencia de lectura y suficiente espacio para los signos diacríticos. Consulta la sección de rampa de tipo a continuación para ver ejemplos específicos.
+Line spacing should be calculated at 125% of the font size, rounding to the closest multiple of four when necessary. For example with 15px Segoe UI, 125% of 15px is 18.75px. We recommend rounding up and setting line height to 20px to stay on the 4px grid. This ensures a good reading experience and adequate space for diacritical marks. See the Type ramp section below for specific examples.
 
-Cuando se apila un tipo de mayor tamaño encima de otro de menor tamaño, la distancia desde la última línea base del tipo mayor respecto a la primera línea de base del tipo menor debe ser igual que el alto de línea del tipo mayor.
+When stacking larger type on top of smaller type, the distance from the last baseline of the larger type to the first baseline of the smaller type should be equal to the larger type's line height.
 
-![Muestra cómo se apila un tipo de mayor tamaño encima de otro de menor tamaño](images/line-height-stacking.png)
+![Shows how large type stacks on small type](images/line-height-stacking.png)
 
-En XAML, esto se logra apilando dos [TextBlocks](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) y estableciendo el margen adecuado.
+In XAML, this is accomplished by stacking two [TextBlocks](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) and setting the appropriate margin.
 
 ```xaml
 <StackPanel Width="200">
@@ -56,25 +57,23 @@ En XAML, esto se logra apilando dos [TextBlocks](https://msdn.microsoft.com/en-u
 </StackPanel>
 ```
 
-
 <!-- OP version -->
 
-## Interletraje y tracking
+## Kerning and tracking
 
-Segoe es un tipo de letra humanist con un aspecto nítido y legible, con formas orgánicas y abiertas inspiradas en el texto escrito a mano. Para garantizar la legibilidad óptima y mantener la integridad humanist, la configuración del interletraje y del tracking debe tener valores específicos.
+Segoe is a humanist typeface, with a soft, friendly appearance, it has organic, open forms based on handwritten text. To ensure optimum legibility and maintain it’s humanist integrity, the kerning and tracking settings must have specific values.
 
-Interletraje se debe establecer en "métrica" y tracking debe establecerse en "0".
+Kerning should be set to “metrics” and tracking should be set to “0”.
 
 <img src="images/kerning-tracking.png" alt="Shows the difference between kerning and tracking" />
 
-## Espacio entre palabras y entre letras
+## Word and letter spacing
 
-De forma parecida al interletraje y al tracking, en el espacio entre palabras y entre letras se usa una configuración específica para garantizar la legibilidad óptima y la integridad humanist.
+Similar to kerning and tracking, word spacing and letter spacing use specific settings to ensure optimum legibility and humanist integrity.
 
-Espacio entre palabras de forma predeterminada siempre es 100% y espaciado debe establecerse en "0".
+Word spacing by default is always 100% and letter spacing should be set to “0”.
 
 <img src="images/word-letter.png" alt="Shows the difference between word and letter spacing" />
-
 
 <aside class="aside-dev">
     <div class="aside-dev-title">
@@ -85,43 +84,42 @@ Espacio entre palabras de forma predeterminada siempre es 100% y espaciado debe 
 </aside>
 
 
-
 <!-- OP version -->
-## Alineación
+## Alignment
 
-Por lo general, recomendamos que los elementos visuales y las columnas de tipo se alinea a la izquierda. En la mayoría de los casos, la alineación del texto a la izquierda con un margen irregular a la derecha proporciona un anclaje coherente del contenido y un diseño uniforme.
+Generally, we recommend that visual elements and columns of type be left-aligned. In most instances, this flush-left and ragged-right approach provides consistent anchoring of the content and a uniform layout.
 
 <img src="images/alignment.png" alt="Shows flush-left text" />
 
-## Finales de línea
+## Line endings
 
-Cuando la tipografía no deba estar alineada a la izquierda con un margen irregular a la derecha, intenta que los finales de línea queden alineados y evita la división de palabras.
+When typography is not positioned as flush left and ragged right, try to ensure even line endings and avoid hyphenation.
 
 <img src="images/line-endings.png" alt="Shows even line endings" />
 
-## Párrafos
+## Paragraphs
 
-Para alinear los bordes de las columnas, los párrafos deben indicarse omitiendo una línea sin aplicar sangría.
+To provide aligned column edges, paragraphs should be indicated by skipping a line without indentation.
 
-![Muestra una línea completa de espacio entre párrafos](images/paragraphs.png)
+![Shows a full line of space between paragraphs](images/paragraphs.png)
 
-## Número de caracteres
+## Character count
 
-Si una línea es demasiado corta, el ojo tendrá que desplazarse de izquierda a derecha con demasiada frecuencia, interrumpiendo el ritmo de lectura. Si es posible, 50 a 60 letras por línea es lo ideal para facilitar la lectura.
+If a line is too short, the eye will have to travel left and right too often, breaking the reader’s rhythm. If possible, 50–60 letters per line is best for ease of reading.
 
-Segoe proporciona una amplia gama de caracteres y está diseñada para mantener la legibilidad óptima en tamaños pequeños y grandes, así como en píxeles con densidades altas y ajas. Usar el número óptimo de letras en las líneas de una columna de texto garantiza una buena legibilidad en una aplicación.
+Segoe provides a wide range of characters and is designed to maintain optimal legibility in both small and large sizes as well as low and high pixel densities. Using the optimal number of letters in a text column line ensures good legibility in an application.
 
-Las líneas demasiado largas provocan un mayor esfuerzo fisual y pueden desorientar al usuario. Las líneas demasiado cortas hacen que los ojos se tengan que desplazar mucho y se puede causar fatiga.
+Lines that are too long will strain the eye and may disorient the user. Lines that are too short force the reader’s eye to travel too much and can cause fatigue.
 
-![Muestra los 3 párrafos con longitudes de línea diferente](images/character-count.png)
+![Shows 3 paragraphs with different line lengths](images/character-count.png)
 
-## Alineación de sangría francesa
+## Hanging text alignment
 
-La alineación horizontal de los iconos con texto se puede controlar de distintas formas según el tamaño del icono y la cantidad de texto. Cuando el texto tiene una o varias líneas y cabe en la alto del icono, el texto se debe centrar verticalmente.
+The horizontal alignment of icons with text can be handled in a number of ways depending on the size of the icon and the amount of text. When the text, either single or multiple lines, fits within the height of the icon, the text should be vertically centered.
 
-Cuando el texto se extiende más allá de la alto del icono, la primera línea del texto debe alinearse verticalmente y el texto adicional debe fluir debajo de forma natural. Al usar caracteres con astas acendentes y descendentes de mayor altura, se debe tener cuidado para seguir la misma guía de alineación.
+Once the height of the text extends beyond the height of the icon, the first line of text should align vertically and the additional text should flow on naturally below. When using characters with larger cap, ascender and descender heights, care should be taken to observe the same alignment guidance.
 
-![Muestra varios pares de iconos y texto](images/hanging-text-alignment.png)
+![Shows several icon and text pairings](images/hanging-text-alignment.png)
 
 <aside class="aside-dev">
     <div class="aside-dev-title">
@@ -131,21 +129,21 @@ Cuando el texto se extiende más allá de la alto del icono, la primera línea d
     </div>
 </aside>
 
-## Recortes y puntos suspensivos
+## Clipping and ellipses
 
-Recorta de manera predeterminada; se supone que el texto pasará a la siguiente línea a menos que la redline especifique lo contrario. Cuando el texto no pasa a la siguiente línea, recomendamos recortar en lugar de usar puntos suspensivos. El recorte puede producirse en el borde del contenedor, en el borde del dispositivo, en el borde de una barra de desplazamiento, etc.
+Clip by default—assume that text will wrap unless the redline specifies otherwise. When using non-wrapping text, we recommend clipping rather than using ellipses. Clipping can occur at the edge of the container, at the edge of the device, at the edge of a scrollbar, etc.
 
-Excepciones: en contenedores que no están bien definido (por ejemplo, no hay ningún color de fondo diferenciador), el texto que no se ajusta puede marcarse con puntos suspensivos "...".
+Exceptions—for containers which are not well-defined (e.g. no differentiating background color), then non-wrapping text can be redlined to use the ellipse ”…”.
 
-![Muestra el marco de un dispositivo con texto recortado](images/clipping.png)
+![Shows a device frame with some text clipping](images/clipping.png)
 
-# Rampa de tipografías
+# Type ramp
 
-Para crear la jerarquía de una rampa de tipografías se deben utilizar fuentes Segoe UI de distintos tamaños. Esta jerarquía crea una estructura que permite a los usuarios navegar fácilmente en la comunicación escrita.
+Different sizes of Segoe UI should be used to create hierarchy in a type ramp. This hierarchy builds a structure which enables users to easily navigate through written communication.
 
 <figure class="figure-img" >
     <img src="images/type-ramp.png" alt="Shows the type ramp"  />
-        <figcaption>Todos los tamaños están en píxeles efectivos. Para obtener más información, consulta TODO el vínculo TODO:</figcaption>
+        <figcaption>All sizes are in effective pixels. For more details, see the TODO: link</figcaption>
 </figure>
 
 <aside class="aside-dev">
@@ -157,30 +155,26 @@ Para crear la jerarquía de una rampa de tipografías se deben utilizar fuentes 
 </aside>
 
 
-## Texto principal y secundario
+## Primary and secondary text
 
-Para crear otras jerarquías adicionales no incluidas en la rampa de tipografías, establece el texto secundario en el 60% de opacidad. En la [paleta de colores de temas](color.md#color-themes), se usaría BaseMedium. El texto principal siempre debe tener un 100% de opacidad, o BaseHigh.
-
-## Títulos completamente en mayúsculas
-
-Determinados títulos de página deben estar totalmente en mayúsculas para agregar otra dimensión de jerarquía. Estos títulos deben usar BaseAlt con el espaciado establecido en 75 milésimas de un espacio largo. Este tratamiento también puede usarse para facilitar la navegación por la aplicación.
-
-Sin embargo, en algunos idiomas los nombres propios pueden cambiar su significado cuando se escriben en mayúsculas y, por lo tanto, los títulos de páginas creados con nombres propios o con información procedente del usuario *no* deben escribirse solo con totalmente en mayúsculas.
+To create additional hierarchy beyond the type ramp, set secondary text to 60% opacity. In the [theming color palette](color.md#color-themes), you would use BaseMedium. Primary text should always be at 100% opacity, or BaseHigh.
 
 
-## Cosas que hacer y cosas que evitar
-* Usa Cuerpo para la mayor parte del texto
-* Usa Base para los títulos cuando el espacio es limitado
-* Incluye SubtítuloAlt para crear contraste y jerarquía al enfatizar el contenido de nivel superior
-* No uses Título para cadenas largas o cualquier acción principal
-* No uses Encabezado o Subencabezado si hay que ajustar texto
-* No combines Subtítulo y SubtítuloAlt en la misma página
+## All caps titles
 
-## Artículos relacionados
+Certain page titles should be in ALL CAPS to add yet another dimension of hierarchy. These titles should use BaseAlt with the character spacing set to 75 thousandths of an em. This treatment may also be used to help with app navigation.
 
-* [Controles de texto](../controls-and-patterns/text-controls.md)
+However, proper names change their meaning when capitalized in certain languages, so any page titles based on names or user input should *not* be converted to all caps.
 
 
-<!--HONumber=Mar16_HO5-->
+## Do's and don'ts
+* Use Body for most text
+* Use Base for titles when space is constrained
+* Incorporate SubtitleAlt to create contrast and hierarchy by emphasizing top level content
+* Don't use Caption for long strings or any primary action
+* Don't use Header or Subheader if text needs to wrap
+* Don't combine Subtitle and SubtitleAlt on the same page
 
+## Related articles
 
+* [Text controls](../controls-and-patterns/text-controls.md)

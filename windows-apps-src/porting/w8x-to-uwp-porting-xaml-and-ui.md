@@ -1,30 +1,31 @@
 ---
-description: La práctica de definir la interfaz de usuario en forma de marcado XAML declarativo se traduce muy bien desde aplicaciones Universal 8.1 a aplicaciones de la Plataforma universal de Windows (UWP).
-title: Migración de XAML y la interfaz de usuario de Windows Runtime 8.x a UWP
+author: mcleblanc
+description: The practice of defining UI in the form of declarative XAML markup translates extremely well from Universal 8.1 apps to Universal Windows Platform (UWP) apps.
+title: Porting Windows Runtime 8.x XAML and UI to UWP'
 ms.assetid: 78b86762-7359-474f-b1e3-c2d7cf9aa907
 ---
 
-# Migración de XAML y la interfaz de usuario de Windows Runtime 8.x a UWP
+# Porting Windows Runtime 8.x XAML and UI to UWP
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-El tema anterior era [Solución de problemas](w8x-to-uwp-troubleshooting.md).
+The previous topic was [Troubleshooting](w8x-to-uwp-troubleshooting.md).
 
-La práctica para definir la interfaz de usuario en forma de marcado XAML declarativo se traduce muy bien desde aplicaciones Universal 8.1 a aplicaciones de la Plataforma universal de Windows (UWP). Verás que la mayor parte del código de marcado es compatible, aunque es posible que necesites realizar algunos ajustes en las claves de recurso del sistema o plantillas personalizadas que estás usando. El código imperativo de los modelos de vista requerirá pocos o ningún cambio. Gran parte o la mayoría del código de la capa de presentación que manipula elementos de la IU debe ser también sencillo de migrar.
+The practice of defining UI in the form of declarative XAML markup translates extremely well from Universal 8.1 apps to Universal Windows Platform (UWP) apps. You'll find that most of your markup is compatible, although you may need to make some adjustments to the system Resource keys or custom templates that you're using. The imperative code in your view models will require little or no change. Even much, or most, of the code in your presentation layer that manipulates UI elements should also be straightforward to port.
 
-## Código imperativo
+## Imperative code
 
-Si solo quieres llegar a la etapa donde se crea el proyecto, puedes establecer como comentario o código auxiliar cualquier código que no sea esencial. Después itera, un problema cada vez, y consulta los siguientes temas de esta sección (y el tema anterior: [Solución de problemas](w8x-to-uwp-troubleshooting.md)), hasta que se zanjen todos los problemas de compilación y de tiempo de ejecución y la migración se complete.
+If you just want to get to the stage where your project builds, you can comment or stub out any non-essential code. Then iterate, one issue at a time, and refer to the following topics in this section (and the previous topic: [Troubleshooting](w8x-to-uwp-troubleshooting.md)), until any build and runtime issues are ironed-out and your port is complete.
 
-## Interfaz de usuario adaptativa y dinámica
+## Adaptive/responsive UI
 
-Dado que la aplicación se puede usar en una amplia gama de dispositivos (cada uno con su propio tamaño de pantalla y resolución), es aconsejable ir más allá de los pasos mínimos para migrar la aplicación y adaptar la interfaz de usuario para que tenga el mejor aspecto en esos dispositivos. Puedes usar la funcion adaptativa Visual State Manager para detectar dinámicamente el tamaño de ventana y cambiar el diseño en respuesta. Se muestra un ejemplo de cómo hacerlo en la sección [Interfaz de usuario adaptativa](w8x-to-uwp-case-study-bookstore2.md#adaptive-ui) en el tema de caso práctico Bookstore2.
+Because your app can run on a potentially wide range of devices—each with its own screen size and resolution—you'll want to go beyond the minimal steps to port your app and you'll want to tailor your UI to look its best on those devices. You can use the adaptive Visual State Manager feature to dynamically detect window size and to change layout in response, and an example of how to do that is shown in the section [Adaptive UI](w8x-to-uwp-case-study-bookstore2.md#adaptive-ui) in the Bookstore2 case study topic.
 
-## Control del botón Atrás
+## Back button handling
 
-Las aplicaciones de Universal 8.1, las aplicaciones de la Tienda Windows y las aplicaciones de la Tienda de Windows Phone tienen diferentes enfoques para la interfaz de usuario que se muestra y los eventos que se controlan para el botón Atrás. No obstante, para las aplicaciones de Windows 10, puedes usar un enfoque único en la aplicación. En los dispositivos móviles, el botón se proporciona automáticamente como un botón capacitivo en el dispositivo o como un botón en el shell. En un dispositivo de escritorio, se agrega un botón al cromo de la aplicación siempre que la navegación hacia atrás es posible dentro de la aplicación; esto aparece en la barra de título para aplicaciones en ventana o en la barra de tareas para el modo de tableta. El evento de botón Atrás es un concepto universal en todas las familias de dispositivos y los botones implementados en el hardware o el software originan el mismo evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596).
+For Universal 8.1 apps, Windows Store apps and Windows Phone Store apps have different approaches to the UI you show and the events you handle for the back button. But, for Windows 10 apps, you can use a single approach in your app. On mobile devices, the button is provided for you as a capacitive button on the device, or as a button in the shell. On a desktop device, you add a button to your app's chrome whenever back-navigation is possible within the app, and this appears in the title bar for windowed apps or in the task bar for Tablet mode. The back button event is a universal concept across all device families, and buttons implemented in hardware or in software raise the same [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) event.
 
-El siguiente ejemplo funciona para todas las familias de dispositivos y resulta útil para los casos donde el mismo procesamiento se aplica a todas las páginas y cuando no es necesario confirmar la navegación (por ejemplo, para advertir sobre cambios sin guardar).
+The example below works for all device families and it is good for cases where the same processing applies to all pages, and where you do not need to confirm navigation (for example, to warn about unsaved changes).
 
 ```csharp
    // app.xaml.cs
@@ -66,98 +67,95 @@ El siguiente ejemplo funciona para todas las familias de dispositivos y resulta 
     }
 ```
 
-También es un método único para todas las familias de dispositivos para salir de la aplicación mediante programación.
+There's also a single approach for all device families for programmatically exiting the app.
 
 ```csharp
-   Windows.UI.Xaml.Application.Current.Exit();</code></pre></td>
-</tr>
-</tbody>
-</table>
+   Windows.UI.Xaml.Application.Current.Exit();
 ```
 
-## Accesos
+## Charms
 
-No es necesario cambiar el código que se integra con los accesos, pero es necesario agregar algo de interfaz de usuario a la aplicación para que ocupe el lugar de la barra de accesos, que no forma parte del shell de Windows 10. Una aplicación Universal 8.1 que se ejecuta en Windows 10 tiene su propia interfaz de usuario de sustitución proporcionada por el contenedor visual representado por el sistema en la barra de título de la aplicación.
+You don't need to change any of your code that integrates with charms, but you do need to add some UI to your app to take the place of the Charms bar, which is not a part of the Windows 10 shell. A Universal 8.1 app running on Windows 10 has its own replacement UI provided by system-rendered chrome in the app's title bar.
 
-## Controles y estilos y plantillas de control
+## Controls, and control styles/templates
 
-Una aplicación Universal 8.1 que se ejecuta en Windows 10 conservará la apariencia y comportamiento de 8.1 con respecto a los controles. No obstante, al portar la aplicación a una aplicación de Windows 10, es necesario tener en cuenta algunas diferencias en la apariencia y el comportamiento. La arquitectura y el diseño de controles permanece básicamente sin modificaciones en el caso de las aplicaciones de Windows 10, por lo que los cambios se realizan principalmente en torno al [lenguaje de diseño](#design-language), la simplificación y las mejoras de facilidad de uso.
+A Universal 8.1 app running on Windows 10 will retain the 8.1 appearance and behavior with respect to controls. But, when you port that app to a Windows 10 app, there are some differences in appearance and behavior to be aware of. The architecture and design of controls is essentially unchanged for Windows 10 apps, so the changes are mostly around [design language](#design-language), simplification, and usability improvements.
 
-**Note**   El estado visual PointerOver es relevante en estilos o plantillas personalizados en las aplicaciones de Windows 10 y en las aplicaciones de la Tienda Windows, pero no en aplicaciones de la Tienda de Windows Phone. Por este motivo (y por las claves de recurso del sistema compatibles con las aplicaciones de Windows 10), se recomienda volver a usar las plantillas o los estilos personalizados de las aplicaciones de la Tienda Windows cuando se migre la aplicación a Windows 10.
-Si quieres estar seguro de que tus estilos o plantillas personalizados usan el conjunto de estados visuales más reciente y disfrutan de las mejoras de rendimiento realizadas en los estilos y plantillas predeterminados, edita una copia de la nueva plantilla predeterminada de Windows 10 y vuelve a aplicar la personalización. Un ejemplo de mejora del rendimiento es que se han quitado los **Border** que anteriormente encerraban un **ContentPresenter** o un panel. Ahora, un elemento secundario representa el borde.
+**Note**   The PointerOver visual state is relevant in custom styles/templates in Windows 10 apps and in Windows Store apps, but not in Windows Phone Store apps. For this reason (and because of the system resource keys that are supported for Windows 10 apps), we recommend that you re-use the custom styles/templates from your Windows Store apps when you're porting your app to Windows 10.
+If you want to be certain that your custom styles/templates are using the latest set of visual states, and are benefitting from performance improvements made to the default styles/templates, then edit a copy of the new Windows 10 default template and re-apply your customization to that. One example of a performance improvement is that any **Border** that formerly enclosed a **ContentPresenter** or a Panel has been removed and a child element now renders the border.
 
-Estos son algunos ejemplos más específicos de los cambios en los controles.
+Here are some more specific examples of changes to controls.
 
-| Nombre del control | Cambiar |
+| Control name | Change |
 |--------------|--------|
-| **AppBar**   | Si usas el control **AppBar** (se recomienda [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) en su lugar), no está oculto de manera predeterminada en una aplicación de Windows 10. Puedes controlarlo con la propiedad [**AppBar.ClosedDisplayMode**](https://msdn.microsoft.com/library/windows/apps/dn633872). |
-| **AppBar**, [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | En una aplicación de Windows 10, **AppBar** y [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) tienen un botón **Ver más** (los puntos suspensivos). |
-| [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | En una aplicación de la Tienda Windows, los comandos secundarios de [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) están siempre visibles. En una aplicación de la Tienda de Windows Phone y en una aplicación de Windows 10, no aparecen hasta que se abre la barra de comandos. |
-| [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | Para una aplicación de la Tienda de Windows Phone, el valor de [**CommandBar.IsSticky**](https://msdn.microsoft.com/library/windows/apps/hh701944) no afecta al hecho de que la barra sea o no descartable por cambio de foco. Para una aplicación de Windows 10, si **IsSticky** se establece en true, **CommandBar** descarta un gesto de cierre del elemento por cambio de foco. |
-| [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | En una aplicación de Windows 10, [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) no controla los eventos [**EdgeGesture.Completed**](https://msdn.microsoft.com/library/windows/apps/hh701622) o [**UIElement.RightTapped**](https://msdn.microsoft.com/library/windows/apps/br208984). Tampoco responde a una pulsación ni a deslizar rápidamente el dedo hacia arriba. Sigues teniendo la opción de controlar estos eventos y establecer [**IsOpen**](https://msdn.microsoft.com/library/windows/apps/hh701939). |
-| [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | Revisa el aspecto de la aplicación con los cambios visuales de [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) y [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280). Para una aplicación de Windows 10 que se ejecuta en un dispositivo móvil, estos controles ya no navegan a una página de selección, pero usan una ventana emergente por cambio de foco. |
-| [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | En una aplicación de Windows 10, no puedes poner [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) o [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) dentro de un elemento emergente. Si quieres que estos controles se muestren en un control de tipo emergente, puedes usar [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) y [**TimePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn608313). |
-| **GridView**, **ListView** | Para **GridView**/**ListView**, consulta [Cambios en GridView/ListView](#gridview). |
-| [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) | En una aplicación de la Tienda de Windows Phone, un control [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) encapsula automáticamente desde la última sección a la primera. En una aplicación de la Tienda Windows y en una aplicación de Windows 10, las secciones de concentrador no se encapsulan automáticamente. |
-| [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) | En una aplicación de la Tienda de Windows Phone, la imagen de fondo de un control [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) se mueve en paralaje respecto a las secciones del hub. En una aplicación de la Tienda Windows y en una aplicación de Windows 10, no se usa paralaje. |
-| [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)  | En una aplicación Universal 8.1, la propiedad [**HubSection.IsHeaderInteractive**](https://msdn.microsoft.com/library/windows/apps/dn251917) hace que el encabezado de sección (y un glifo de botón de contenido adicional representado junto a él) sea interactivo. En una aplicación de Windows 10, hay una prestación interactiva "Ver más" al lado del encabezado, pero el propio encabezado no es interactivo. **IsHeaderInteractive** sigue determinando si la interacción genera el evento [**Hub.SectionHeaderClick**](https://msdn.microsoft.com/library/windows/apps/dn251953). |
-| **MessageDialog** | Si usas **MessageDialog**, considera la posibilidad de usar [**ContentDialog**](https://msdn.microsoft.com/library/windows/apps/dn633972), más flexible. Consulta también la muestra de [conceptos básicos de la interfaz de usuario XAML](http://go.microsoft.com/fwlink/p/?linkid=619992) . |
-| **ListPickerFlyout**, **PickerFlyout**  | **ListPickerFlyout** y **PickerFlyout** están en desuso para una aplicación de Windows 10. Para una única selección emergente, usa [**MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/dn299030); para experiencias más complejas, usa [**Flyout**](https://msdn.microsoft.com/library/windows/apps/dn279496). |
-| [**PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519) | La propiedad [**PasswordBox.IsPasswordRevealButtonEnabled**](https://msdn.microsoft.com/library/windows/apps/hh702579) está en desuso en una aplicación de Windows 10 y establecerla no produce ningún efecto. Usa [**PasswordBox.PasswordRevealMode**](https://msdn.microsoft.com/library/windows/apps/dn890867) en su lugar, cuyo valor predeterminado es **Peek** (con el que aparece un glifo de ojo, como en una aplicación de la Tienda Windows). Consulta también [Directrices para cuadros de contraseña](https://msdn.microsoft.com/library/windows/apps/dn596103). |
-| [**Pivot**](https://msdn.microsoft.com/library/windows/apps/dn608241) | El control [**Pivot**](https://msdn.microsoft.com/library/windows/apps/dn608241) es ahora universal, ya no está limitado a su uso en dispositivos móviles. |
-| [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252771) | Aunque [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803) se implementa en la familia de dispositivos universales, no es totalmente funcional en dispositivos móviles. Consulta [SearchBox en desuso en favor de AutoSuggestBox](#searchbox). |
-| **SemanticZoom** | Para **SemanticZoom**, consulta [Cambios en SemanticZoom](#semantic-zoom). |
-| [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)  | Algunas propiedades predeterminadas de [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527) han cambiado. [**HorizontalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209549) es **Auto**, [**VerticalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209589) es **Auto** y [**ZoomMode**](https://msdn.microsoft.com/library/windows/apps/br209601) es **Disabled**. Si los nuevos valores predeterminados no son adecuados para la aplicación, puedes convertirlos en un estilo o en valores locales en el propio control.  |
-| [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | En una aplicación de la Tienda Windows, la revisión ortográfica está desactivada de forma predeterminada para [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683). En una aplicación de la Tienda de Windows Phone y en una aplicación de Windows 10, está activada siempre. |
-| [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | El tamaño de fuente predeterminado para [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) ha cambiado de 11 a 15. |
-| [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | El valor predeterminado de [**TextBox.TextReadingOrder**](https://msdn.microsoft.com/library/windows/apps/dn252859) ha cambiado de **Default** a **DetectFromContent**. Si no es lo que quieres, usa **UseFlowDirection**. **Default** está en desuso. |
-| Diversos | El color de énfasis se aplica a las aplicaciones de la Tienda de Windows Phone y de Windows 10, pero no a las aplicaciones de la Tienda Windows.  |
+| **AppBar**   | If you are using the **AppBar** control ([**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) is recommended instead), then it is not hidden by default in a Windows 10 app. You can control this with the [**AppBar.ClosedDisplayMode**](https://msdn.microsoft.com/library/windows/apps/dn633872) property. |
+| **AppBar**, [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | In a Windows 10 app, **AppBar** and [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) have a **See more** button (the ellipsis). |
+| [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | In a Windows Store app, the secondary commands of a [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) are always visible. In a Windows Phone Store app, and in a Windows 10 app, the don't appear until the command bar opens. |
+| [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | For a Windows Phone Store app, the value of [**CommandBar.IsSticky**](https://msdn.microsoft.com/library/windows/apps/hh701944) does not affect whether or not the bar is light-dismissible. For a Windows 10 app, if **IsSticky** is set to true, then the **CommandBar** disregards a light dismiss gesture. |
+| [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | In a Windows 10 app, [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) does not handle the [**EdgeGesture.Completed**](https://msdn.microsoft.com/library/windows/apps/hh701622) nor [**UIElement.RightTapped**](https://msdn.microsoft.com/library/windows/apps/br208984) events. Nor does it respond to a tap nor a swipe up. You still have the option to handle these events and set [**IsOpen**](https://msdn.microsoft.com/library/windows/apps/hh701939). |
+| [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | Review how your app looks with the visual changes to [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) and [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280). For a Windows 10 app running on a mobile device, these controls no longer navigate to a selection page but instead use a light-dismissible popup. |
+| [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | In a Windows 10 app, you can't put [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) or [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) inside a fly-out. If you want those controls to be displayed in a popup-type control, then you can use [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) and [**TimePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn608313). |
+| **GridView**, **ListView** | For **GridView**/**ListView**, see [GridView/ListView changes](#gridview). |
+| [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) | In a Windows Phone Store app, a [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) control wraps around from the last section to the first. In a Windows Store app, and in a Windows 10 app, hub sections do not wrap around. |
+| [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) | In a Windows Phone Store app, a [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) control's background image moves in parallax relative to the hub sections. In a Windows Store app, and in a Windows 10 app, parallax is not used. |
+| [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)  | In a Universal 8.1 app, the [**HubSection.IsHeaderInteractive**](https://msdn.microsoft.com/library/windows/apps/dn251917) property causes the section header—and a chevron glyph rendered next to it—to become interactive. In a Windows 10 app, there is an interactive "See more" affordance beside the header, but the header itself is not interactive. **IsHeaderInteractive** still determines whether interaction raises the [**Hub.SectionHeaderClick**](https://msdn.microsoft.com/library/windows/apps/dn251953) event. |
+| **MessageDialog** | If you're using **MessageDialog**, then consider instead using the more flexible [**ContentDialog**](https://msdn.microsoft.com/library/windows/apps/dn633972). Also, see the [XAML UI Basics](http://go.microsoft.com/fwlink/p/?linkid=619992) sample. |
+| **ListPickerFlyout**, **PickerFlyout**  | **ListPickerFlyout** and **PickerFlyout** are deprecated for a Windows 10 app. For a single selection fly-out, use [**MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/dn299030); for more complex experiences, use [**Flyout**](https://msdn.microsoft.com/library/windows/apps/dn279496). |
+| [**PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519) | The [**PasswordBox.IsPasswordRevealButtonEnabled**](https://msdn.microsoft.com/library/windows/apps/hh702579) property is deprecated in a Windows 10 app, and setting it has no effect. Use [**PasswordBox.PasswordRevealMode**](https://msdn.microsoft.com/library/windows/apps/dn890867) instead, which defaults to **Peek** (in which an eye glyph is displayed, like in a Windows Store app). Also, see [Guidelines for password boxes](https://msdn.microsoft.com/library/windows/apps/dn596103). |
+| [**Pivot**](https://msdn.microsoft.com/library/windows/apps/dn608241) | The [**Pivot**](https://msdn.microsoft.com/library/windows/apps/dn608241) control is now universal, it is no longer limited to use on mobile devices. |
+| [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252771) | Although [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803) is implemented in the Universal device family, it is not fully functional on mobile devices. See [SearchBox deprecated in favor of AutoSuggestBox](#searchbox). |
+| **SemanticZoom** | For **SemanticZoom**, see [SemanticZoom changes](#semantic-zoom). |
+| [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)  | Some default properties of [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527) have changed. [**HorizontalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209549) is **Auto**, [**VerticalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209589) is **Auto**, and [**ZoomMode**](https://msdn.microsoft.com/library/windows/apps/br209601) is **Disabled**. If the new default values are not appropriate for your app, then you can change them either in a style or as local values on the control itself.  |
+| [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | In a Windows Store app, spell-checking is off by default for a [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683). In a Windows Phone Store app, and in a Windows 10 app, it is on by default. |
+| [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | The default font size for a [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) has changed from 11 to 15. |
+| [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | The default value of [**TextBox.TextReadingOrder**](https://msdn.microsoft.com/library/windows/apps/dn252859) has changed from **Default** to **DetectFromContent**. If that's undesirable, then use **UseFlowDirection**. **Default** is deprecated. |
+| Various | Accent color applies to a Windows Phone Store apps, and to Windows 10 apps, but not to Windows Store apps.  |
 
-Para obtener más información sobre los controles de aplicaciones para UWP, consulta [Controles por función](https://msdn.microsoft.com/library/windows/apps/mt185405), [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406) y [Directrices sobre controles](https://msdn.microsoft.com/library/windows/apps/dn611856).
+For more info on UWP app controls, see [Controls by function](https://msdn.microsoft.com/library/windows/apps/mt185405), [Controls list](https://msdn.microsoft.com/library/windows/apps/mt185406), and [Guidelines for controls](https://msdn.microsoft.com/library/windows/apps/dn611856).
 
-##  Lenguaje de diseño en Windows 10
+##  Design language in Windows 10
 
-Existen algunas diferencias pequeñas pero importantes en el lenguaje de diseño entre las aplicaciones Universal 8.1 y las aplicaciones de Windows 10. Para obtener detalles, consulta [Diseño](http://dev.windows.com/design). A pesar de los cambios del lenguaje de diseño, nuestros principios de diseño siguen siendo coherentes: prestar atención a los detalles, pero siempre lograr la simplicidad centrándonos en el contenido y no en el embellecimiento, reducir drásticamente los elementos visuales y mantenernos auténticos al dominio digital; usar jerarquía visual especialmente con tipografía; diseño en cuadrícula; y hacer que tus experiencias cobren vida con animaciones fluidas.
+There are some small but important differences in design language between Universal 8.1 apps and Windows 10 apps. For all the details, see [Design](http://dev.windows.com/design). Despite the design language changes, our design principles remain consistent: be attentive to detail but always strive for simplicity through focusing on content not chrome, fiercely reducing visual elements, and remaining authentic to the digital domain; use visual hierarchy especially with typography; design on a grid; and bring your experiences to life with fluid animations.
 
-## Píxeles efectivos, distancia de visualización y factores de escala
+## Effective pixels, viewing distance, and scale factors
 
-Antes, los píxeles de visualización eran la manera de abstraer el tamaño y el diseño de los elementos de la interfaz de usuario con respecto al tamaño y la resolución físicas reales de los dispositivos. Ahora, los píxeles de visualización han evolucionado a los píxeles efectivos y, a continuación, se ofrece una explicación de ese término, lo que significa y el valor adicional que aporta.
+Previously, view pixels were the way to abstract the size and layout of UI elements away from the actual physical size and resolution of devices. View pixels have now evolved into effective pixels, and here's an explanation of that term, what it means, and the extra value it offers.
 
-El término "resolución" se refiere a una medida de densidad de píxeles y no, como se suele considerar, al número de píxeles. La "resolución eficaz" es la forma en que los píxeles físicos que componen una imagen o un glifo se resuelve a la vista, dadas las diferencias en la distancia de visualización y el tamaño de los píxeles físicos del dispositivo (la densidad de píxeles es recíproca del tamaño de píxeles físicos). La resolución eficiente es una buena métrica para crear una experiencia porque se centra en el usuario. Mediante la comprensión de todos los factores y el control del tamaño de los elementos de la interfaz de usuario, puedes hacer que la experiencia del usuario sea positiva.
+The term "resolution" refers to a measure of pixel density and not, as is commonly thought, pixel count. "Effective resolution" is the way the physical pixels that compose an image or glyph resolve to the eye given differences in viewing distance and the physical pixel size of the device (pixel density being the reciprocal of physical pixel size). Effective resolution is a good metric to build an experience around because it is user-centric. By understanding all the factors, and controlling the size of UI elements, you can make the user's experience a good one.
 
-Los dispositivos distintos tienen un número diferente de píxeles efectivos de ancho, que van desde los 320 epx en los dispositivos más pequeños hasta los 1024 epx en un monitor de tamaño reducido, y mucho más allá hasta anchos muy superiores. Lo único que tienes que hacer es continuar usando elementos de tamaño automático y paneles de diseño dinámico como siempre. También habrá algunos casos en loa que establecerás las propiedades de tus elementos de interfaz de usuario en un tamaño fijo en el marcado XAML. Un factor de escala se aplica automáticamente a la aplicación en función del dispositivo en que se ejecuta y de la configuración de visualización que tenga el usuario. Ese factor de escala sirve para mantener cualquier elemento de la interfaz de usuario con un tamaño fijo con un destino táctil (y de lectura) de tamaño más o menos constante para el usuario, a través de una amplia variedad de tamaños de pantalla. Junto con un diseño dinámico, la interfaz de usuario no solo escalará ópticamente en diferentes dispositivos. En cambio, hará lo necesario para ajustar la cantidad adecuada de contenido en el espacio disponible.
+Different devices are a different number of effective pixels wide, ranging from 320 epx for the smallest devices, to 1024 epx for a modest-sized monitor, and far beyond to much higher widths. All you have to do is continue to use auto-sized elements and dynamic layout panels as you always have. There will also be some cases where you'll set the properties of your UI elements to a fixed size in XAML markup. A scale factor is automatically applied to your app depending on what device it runs on and the display settings made by the user. And that scale factor serves to keep any UI element with a fixed size presenting a more-or-less constant-sized touch (and reading) target to the user across a wide variety of screen sizes. And together with dynamic layout, your UI won't merely optically scale on different devices. It will instead do what's necessary to fit the appropriate amount of content into the available space.
 
-Para que la aplicación ofrezca la mejor experiencia en todas las pantallas, te recomendamos que crees cada recurso de mapa de bits en una variedad de tamaños, cada uno adecuado para un factor de escala particular. Ofrecer recursos con una escala del 100 %, 200 % y 400 % (en este orden de prioridad), te dará excelentes resultados en la mayoría de los casos en todos los factores de escala intermedios.
+So that your app has the best experience across all displays, we recommend that you create each bitmap asset in a range of sizes, each suitable for a particular scale factor. Providing assets at 100%-scale, 200%-scale, and 400%-scale (in that priority order) will give you excellent results in most cases at all the intermediate scale factors.
 
-**Note**  Si por cualquier motivo no puedes crear recursos en más de un tamaño, crea recursos con una escala del 100 %. En Microsoft Visual Studio, la plantilla de proyecto predeterminada para aplicaciones para UWP proporciona recursos de personalización de marca (imágenes de icono y logotipos) en un solo tamaño, pero no tiene la escala del 100 %. Al crear recursos para tu propia aplicación, sigue las instrucciones de esta sección y ofrece tamaños del 100 %, 200 % y 400 %, además de usar paquetes de recursos.
+**Note**  If, for whatever reason, you cannot create assets in more than one size, then create 100%-scale assets. In Microsoft Visual Studio, the default project template for UWP apps provides branding assets (tile images and logos) in only one size, but they are not 100%-scale. When authoring assets for your own app, follow the guidance in this section and provide 100%, 200%, and 400% sizes, and use asset packs.
 
-Si tienes ilustraciones intrincadas, puede que quieras ofrecer tus recursos en más tamaños aún. Si estás empezando con el arte vectorial, es relativamente fácil generar recursos de alta calidad con cualquier factor de escala.
+If you have intricate artwork, then you may want to provide your assets in even more sizes. If you're starting with vector art, then it's relatively easy to generate high-quality assets at any scale factor.
 
-No te recomendamos que intentes admitir todos los factores de escala, pero la lista completa de factores de escala para las aplicaciones de Windows 10 es 100 %, 125 %, 150 %, 200 %, 250 %, 300 % y 400 %. Si los proporcionas, la Tienda elegirá los recursos de tamaño correcto para cada dispositivo y solo se descargarán estos recursos. La Tienda selecciona los recursos para descargar en función de los valores de PPP del dispositivo. Puedes volver a usar activos de la aplicación de la Tienda Windows con factores de escala como 140 % y 220 %, pero la aplicación se ejecutará en uno de los nuevos factores de escala, por lo que no se podrá evitar cierto escalado del mapa de bits. Prueba la aplicación en una variedad de dispositivos para ver si estás satisfecho con los resultados en tu caso.
+We don't recommend that you try to support all of the scale factors, but the full list of scale factors for Windows 10 apps is 100%, 125%, 150%, 200%, 250%, 300%, and 400%. If you provide them, the Store will pick the correct-sized asset(s) for each device, and only those assets will be downloaded. The Store selects the assets to download based on the DPI of the device. You can re-use assets from your Windows Store app at scale factors such as 140% and 220%, but your app will run at one of the new scale factors and so some bitmap scaling will be unavoidable. Test your app on a range of devices to see whether you're happy with the results in your case.
 
-Se puede reutilizar el marcado XAML de una aplicación de la Tienda Windows en cuyo marcado se empleen valores de dimensiones literales (tal vez para el tamaño de las formas u otros elementos, tal vez para la tipografía). No obstante, en algunos casos se usa un factor de escala mayor en un dispositivo para una aplicación de Windows 10 que para una aplicación Universal 8.1 (por ejemplo, se usa un 150 % en vez del 140 % anterior y un 200 % donde se usaba el 180 %). Por tanto, si encuentras que estos valores literales son demasiado altos en Windows 10, prueba a multiplicarlos por 0,8. Para obtener más información, consulta [Diseño con capacidad de respuesta 101 para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn958435).
+You may be re-using XAML markup from a Windows Store app where literal dimension values are used in the markup (perhaps to size shapes or other elements, perhaps for typography). But, in some cases, a larger scale factor is used on a device for a Windows 10 app than for a Universal 8.1 app (for example, 150% is used where 140% was before, and 200% is used where 180% was). So, if you find that these literal values are now too big on Windows 10, then try multiplying them by 0.8. For more info, see [Responsive design 101 for UWP apps](https://msdn.microsoft.com/library/windows/apps/dn958435).
 
-## Cambios de GridView/ListView
+## GridView/ListView changes
 
-Se han realizado varios cambios en los establecedores de estilo predeterminado de [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) para que el control de desplazamiento sea vertical (en lugar de horizontal, como era antes de forma predeterminada). Si editaste una copia del estilo predeterminado en el proyecto, la copia no tendrá estos cambios, por lo que tendrás que realizarlos manualmente. A continuación te indicamos una lista de cambios:
+Several changes have been made to the default style setters for [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) to make the control scroll vertically (instead of horizontally, as it did previously by default). If you edited a copy of the default style in your project, then your copy won't have these changes, so you'll need to make them manually. Here is a list of the changes.
 
--   El establecedor de [**ScrollViewer.HorizontalScrollBarVisibility**](https://msdn.microsoft.com/library/windows/apps/br209547) ha cambiado de **Auto** a **Disabled**.
--   El establecedor de [**ScrollViewer.VerticalScrollBarVisibility**](https://msdn.microsoft.com/library/windows/apps/br209587) ha cambiado de **Disabled** a **Auto**.
--   El establecedor de [**ScrollViewer.HorizontalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209549) ha cambiado de **Enabled** a **Disabled**.
--   El establecedor de [**ScrollViewer.VerticalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209589) ha cambiado de **Disabled** a **Enabled**.
--   En el establecedor de [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/br242826), el valor de [**ItemsWrapGrid.Orientation**](https://msdn.microsoft.com/library/windows/apps/dn298907) ha cambiado de **Vertical** a **Horizontal**.
+-   The setter for [**ScrollViewer.HorizontalScrollBarVisibility**](https://msdn.microsoft.com/library/windows/apps/br209547) has changed from **Auto** to **Disabled**.
+-   The setter for [**ScrollViewer.VerticalScrollBarVisibility**](https://msdn.microsoft.com/library/windows/apps/br209587) has changed from **Disabled** to **Auto**.
+-   The setter for [**ScrollViewer.HorizontalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209549) has changed from **Enabled** to **Disabled**.
+-   The setter for [**ScrollViewer.VerticalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209589) has changed from **Disabled** to **Enabled**.
+-   In the setter for [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/br242826), the value of [**ItemsWrapGrid.Orientation**](https://msdn.microsoft.com/library/windows/apps/dn298907) has changed from **Vertical** to **Horizontal**.
 
-Si el último cambio (el cambio de **Orientation**) parece contradictorio, no olvides que estamos hablando de una cuadrícula de encapsulado. Una cuadrícula de ajuste orientada de forma horizontal (el nuevo valor) es similar a un sistema de escritura donde el texto fluye horizontalmente y se divide en la siguiente línea al final de una página. Una página de texto como esa se desplaza verticalmente. Por el contrario, una cuadrícula de encapsulado orientada en vertical (el valor anterior) es similar a un sistema de escritura donde el texto fluye en vertical y, por tanto, se desplaza horizontalmente.
+If that last change (the change to **Orientation**) seems contradictory, then remember that we're talking about a wrap grid. A horizontally-oriented wrap grid (the new value) is similar to a writing system where text flows horizontally and breaks to the next line down at the end of a page. A page of text like that scrolls vertically. Conversely, a vertically-oriented wrap grid (the previous value) is similar to a writing system where text flows vertically and therefore scrolls horizontally.
 
-Estos son los aspectos de [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) y [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) que han cambiado y no son compatibles con Windows 10.
+Here are the aspects of [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) and [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) that have change or are not supported in Windows 10.
 
--   La propiedad [**IsSwipeEnabled**](https://msdn.microsoft.com/library/windows/apps/hh702518) (solo aplicaciones de la Tienda Windows) no se admite para aplicaciones de Windows 10. La API aún está presente, pero establecerla no tiene ningún efecto. Todos los gestos de selección anteriores se admiten excepto deslizar hacia abajo (que no es compatible porque los datos muestran que no es reconocible) y hacer clic con el botón secundario (que está reservado para mostrar un menú contextual).
--   La propiedad [**ReorderMode**](https://msdn.microsoft.com/library/windows/apps/dn625099) (solo aplicaciones de la Tienda de Windows Phone) no se admite para aplicaciones de Windows 10. La API aún está presente, pero establecerla no tiene ningún efecto. En lugar de ello, establece [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/br208912) y [**CanReorderItems**](https://msdn.microsoft.com/library/windows/apps/br242882) en true en **GridView** o **ListView** y, después, el usuario podrá reorganizar mediante un gesto de presionar y sostener (o hacer clic y arrastrar).
--   Al desarrollar para Windows 10, usa [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/dn298500) en lugar de [**GridViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/dn279298) en el estilo del contenedor de elementos, tanto para [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) como para [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). Si editas una copia de los estilos del contenedor de elementos predeterminados, obtendrás el tipo correcto.
--   Los elementos visuales de selección han cambiado para una aplicación de Windows 10. Si estableces [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/br242915) en **Multiple**, se representa una casilla para cada elemento de manera predeterminada. La configuración predeterminada para los elementos **ListView** significa que la casilla está dispuesta en línea junto al elemento y, como resultado, el espacio ocupado por el resto del elemento se reduce y desplaza ligeramente. Para los elementos **GridView**, la casilla se superpone al elemento de forma predeterminada. En cualquier caso, se puede controlar el diseño (en línea o superpuesto) de las casillas (con la propiedad [**CheckMode**](https://msdn.microsoft.com/library/windows/apps/dn913923)) y si se muestran totalmente (con la propiedad [**SelectionCheckMarkVisualEnabled**](https://msdn.microsoft.com/library/windows/apps/dn298541)) en el elemento [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.aspx) dentro del estilo del contenedor de elementos, como en el ejemplo siguiente.
--   En Windows 10, el evento [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) se genera dos veces por elemento durante la virtualización de la interfaz de usuario: una vez para la reclamación y otra vez para su nuevo uso. Si el valor de [**InRecycleQueue**](https://msdn.microsoft.com/library/windows/apps/dn279443) es **true** y no tienes que realizar ningún trabajo de reclamación especial, puedes salir del controlador de eventos inmediatamente con la garantía de que se volverá a obtener acceso a él cuando se vuelva a usar ese mismo elemento (en cuyo momento **InRecycleQueue** será **false**).
+-   The [**IsSwipeEnabled**](https://msdn.microsoft.com/library/windows/apps/hh702518) property (Windows Store apps only) is not supported for Windows 10 apps. The API is still present, but setting it has no effect. All previous selection gestures are supported except downward swipe (which is unsupported because data shows that it is not discoverable) and right-click (which is reserved for showing a context menu).
+-   The [**ReorderMode**](https://msdn.microsoft.com/library/windows/apps/dn625099) property (Windows Phone Store apps only) is not supported for Windows 10 apps. The API is still present, but setting it has no effect. Instead, set [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/br208912) and [**CanReorderItems**](https://msdn.microsoft.com/library/windows/apps/br242882) to true on your **GridView** or **ListView** and then the user will be able to reorder using a press-and-hold (or click-and-drag) gesture.
+-   When developing for Windows 10, use [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/dn298500) instead of [**GridViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/dn279298) in your item container style, both for [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) and for [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). If you edit a copy of the default item container styles, then you will get the correct type.
+-   The selection visuals have changed for a Windows 10 app. If you set [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/br242915) to **Multiple**, then by default, a check box is rendered for each item. The default setting for **ListView** items means that the check box is laid out inline beside the item, and as a result, the space occupied by the rest of the item will be slightly reduced and shifted. For **GridView** items, the check box is overlaid on top of the item by default. But, in either case, you can control the layout (Inline or Overlay) of the check boxes (with the [**CheckMode**](https://msdn.microsoft.com/library/windows/apps/dn913923) property) and whether they are shown at all (with the [**SelectionCheckMarkVisualEnabled**](https://msdn.microsoft.com/library/windows/apps/dn298541) property) on the [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.aspx) element inside your item container style as in the example below.
+-   In Windows 10, the [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) event is raised twice per item during UI virtualization: once for the reclaim, and once for the re-use. If the value of [**InRecycleQueue**](https://msdn.microsoft.com/library/windows/apps/dn279443) is **true** and you have no special reclaim work to do, then you can exit your event handler immediately with the assurance that it will be re-entered when that same item is re-used (at which time **InRecycleQueue** will be **false**).
 
-```xaml
+```xml
 <Style x:Key="CustomItemContainerStyle" TargetType="ListViewItem|GridViewItem">
     ...
     <Setter.Value>
@@ -169,82 +167,82 @@ Estos son los aspectos de [**GridView**](https://msdn.microsoft.com/library/wind
 </Style>
 ```
 
-![Un listviewitempresenter con casilla en línea](images/w8x-to-uwp-case-studies/ui-listviewbase-cb-inline.jpg)
+![a listviewitempresenter with inline check box](images/w8x-to-uwp-case-studies/ui-listviewbase-cb-inline.jpg)
 
-Un ListViewItemPresenter con casilla en línea
+A ListViewItemPresenter with inline check box
 
-![Un listviewitempresenter con casilla superpuesta](images/w8x-to-uwp-case-studies/ui-listviewbase-cb-overlay.jpg)
+![a listviewitempresenter with overlaid check box](images/w8x-to-uwp-case-studies/ui-listviewbase-cb-overlay.jpg)
 
-Un ListViewItemPresenter con una casilla superpuesta
+A ListViewItemPresenter with an overlaid check box
 
--   Con la eliminación de los gestos deslizar hacia abajo y haz clic con el botón derecho (por los motivos anteriores), el modelo de interacción ha cambiado, una consecuencia de lo cual es que los eventos [**ItemClick**](https://msdn.microsoft.com/library/windows/apps/br242904) y [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/br209776) ya no son mutuamente excluyentes. Para la aplicación de Windows 10, revisa los escenarios y decide si deseas adoptar el modelo de interacción "selección" o "invocar". Si quieres obtener más información, consulta [Cómo cambiar el modo de interacción](https://msdn.microsoft.com/library/windows/apps/xaml/hh780625).
--   Hay algunos cambios en las propiedades que se usan para aplicar estilo a [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.aspx). Las propiedades nuevas son [**CheckBoxBrush**](https://msdn.microsoft.com/library/windows/apps/dn913905), [**PressedBackground**](https://msdn.microsoft.com/library/windows/apps/dn913931), [**SelectedPressedBackground**](https://msdn.microsoft.com/library/windows/apps/dn913937) y [**FocusSecondaryBorderBrush**](https://msdn.microsoft.com/library/windows/apps/dn898370). Las propiedades que se omiten para una aplicación de Windows 10 son [**Padding**](https://msdn.microsoft.com/library/windows/apps/dn424775) (usa [**ContentMargin**](https://msdn.microsoft.com/library/windows/apps/dn424773) en su lugar), [**CheckHintBrush**](https://msdn.microsoft.com/library/windows/apps/dn298504), [**CheckSelectingBrush**](https://msdn.microsoft.com/library/windows/apps/dn298506), [**PointerOverBackgroundMargin**](https://msdn.microsoft.com/library/windows/apps/dn424778), [**ReorderHintOffset**](https://msdn.microsoft.com/library/windows/apps/dn298528), [**SelectedBorderThickness**](https://msdn.microsoft.com/library/windows/apps/dn298533) y [**SelectedPointerOverBorderBrush**](https://msdn.microsoft.com/library/windows/apps/dn298539).
+-   With the removal of downward swipe and right-click gestures for selection (for the reasons given above), the interaction model has changed, one consequence of which is that the [**ItemClick**](https://msdn.microsoft.com/library/windows/apps/br242904) and [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/br209776) events are no longer mutually exclusive. For your Windows 10 app, review your scenarios and decide whether to adopt the "selection" or the "invoke" interaction model. For details, see [How to change the interaction mode](https://msdn.microsoft.com/library/windows/apps/xaml/hh780625).
+-   There are some changes to the properties that you use to style [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.aspx). Properties that are new are [**CheckBoxBrush**](https://msdn.microsoft.com/library/windows/apps/dn913905), [**PressedBackground**](https://msdn.microsoft.com/library/windows/apps/dn913931), [**SelectedPressedBackground**](https://msdn.microsoft.com/library/windows/apps/dn913937), and [**FocusSecondaryBorderBrush**](https://msdn.microsoft.com/library/windows/apps/dn898370). Properties that are ignored for a Windows 10 app are [**Padding**](https://msdn.microsoft.com/library/windows/apps/dn424775) (use [**ContentMargin**](https://msdn.microsoft.com/library/windows/apps/dn424773) instead), [**CheckHintBrush**](https://msdn.microsoft.com/library/windows/apps/dn298504), [**CheckSelectingBrush**](https://msdn.microsoft.com/library/windows/apps/dn298506), [**PointerOverBackgroundMargin**](https://msdn.microsoft.com/library/windows/apps/dn424778), [**ReorderHintOffset**](https://msdn.microsoft.com/library/windows/apps/dn298528), [**SelectedBorderThickness**](https://msdn.microsoft.com/library/windows/apps/dn298533), and [**SelectedPointerOverBorderBrush**](https://msdn.microsoft.com/library/windows/apps/dn298539).
 
-En esta tabla se describen los cambios en los estados visuales y los grupos de estado visual de las plantillas de control [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/br242919) y [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/hh738501).
+This table describes the changes to the visual states and visual state groups in the [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/br242919) and [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/hh738501) control templates.
 
-| 8.1                 |                         | Windows 10        |                     |
+| 8.1                 |                         | Windows 10        |                     |
 |---------------------|-------------------------|-------------------|---------------------|
 | CommonStates        |                         | CommonStates      |                     |
 |                     | Normal                  |                   | Normal              |
 |                     | PointerOver             |                   | PointerOver         |
 |                     | Pressed                 |                   | Pressed             |
-|                     | PointerOverPressed      |                   | [no disponible]       |
-|                     | Disabled                |                   | [no disponible]       |
-|                     | [no disponible]           |                   | PointerOverSelected |
-|                     | [no disponible]           |                   | Selected            |
-|                     | [no disponible]           |                   | PressedSelected     |
-| [no disponible]       |                         | DisabledStates    |                     |
-|                     | [no disponible]           |                   | Deshabilitada            |
-|                     | [no disponible]           |                   | Habilitada             |
-| SelectionHintStates |                         | [no disponible]     |                     |
-|                     | VerticalSelectionHint   |                   | [no disponible]       |
-|                     | HorizontalSelectionHint |                   | [no disponible]       |
-|                     | NoSelectionHint         |                   | [no disponible]       |
-| [no disponible]       |                         | MultiSelectStates |                     |
-|                     | [no disponible]           |                   | MultiSelectDisabled |
-|                     | [no disponible]           |                   | MultiSelectEnabled  |
-| SelectionStates     |                         | [no disponible]     |                     |
-|                     | Unselecting             |                   | [no disponible]       |
-|                     | Unselected              |                   | [no disponible]       |
-|                     | UnselectedPointerOver   |                   | [no disponible]       |
-|                     | UnselectedSwiping       |                   | [no disponible]       |
-|                     | Selecting               |                   | [no disponible]       |
-|                     | Selected                |                   | [no disponible]       |
-|                     | SelectedSwiping         |                   | [no disponible]       |
-|                     | SelectedUnfocused       |                   | [no disponible]       |
+|                     | PointerOverPressed      |                   | [unavailable]       |
+|                     | Disabled                |                   | [unavailable]       |
+|                     | [unavailable]           |                   | PointerOverSelected |
+|                     | [unavailable]           |                   | Selected            |
+|                     | [unavailable]           |                   | PressedSelected     |
+| [unavailable]       |                         | DisabledStates    |                     |
+|                     | [unavailable]           |                   | Disabled            |
+|                     | [unavailable]           |                   | Enabled             |
+| SelectionHintStates |                         | [unavailable]     |                     |
+|                     | VerticalSelectionHint   |                   | [unavailable]       |
+|                     | HorizontalSelectionHint |                   | [unavailable]       |
+|                     | NoSelectionHint         |                   | [unavailable]       |
+| [unavailable]       |                         | MultiSelectStates |                     |
+|                     | [unavailable]           |                   | MultiSelectDisabled |
+|                     | [unavailable]           |                   | MultiSelectEnabled  |
+| SelectionStates     |                         | [unavailable]     |                     |
+|                     | Unselecting             |                   | [unavailable]       |
+|                     | Unselected              |                   | [unavailable]       |
+|                     | UnselectedPointerOver   |                   | [unavailable]       |
+|                     | UnselectedSwiping       |                   | [unavailable]       |
+|                     | Selecting               |                   | [unavailable]       |
+|                     | Selected                |                   | [unavailable]       |
+|                     | SelectedSwiping         |                   | [unavailable]       |
+|                     | SelectedUnfocused       |                   | [unavailable]       |
 
-Si tienes una plantilla de control [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/br242919) o [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/hh738501) personalizada, revísala teniendo en cuenta los cambios mencionados. Se recomienda empezar editando una copia de la plantilla predeterminada nueva y volver a aplicar la personalización sobre esta. Si por cualquier motivo no puedes hacerlo y necesitas modificar la plantilla existente, aquí se ofrecen algunas indicaciones generales sobre cómo hacerlo.
+If you have a custom [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/br242919) or [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/hh738501) control template, then review it in light of the above changes. We recommend that you start over by editing a copy of the new default template and re-applying your customization to that. If, for whatever reason, you can't do that and you need to edit your existing template, then here is some general guidance around how you might go about doing that.
 
--   Agrega el nuevo grupo de estados visuales MultiSelectStates.
--   Agrega el nuevo estado visual MultiSelectDisabled.
--   Agrega el nuevo estado visual MultiSelectEnabled.
--   Agrega el nuevo grupo de estado visual DisabledStates.
--   Agrega el nuevo estado visual Enabled.
--   En el grupo de estados visuales CommonStates, quita el estado visual PointerOverPressed.
--   Mueve el estado visual Disabled al grupo de estados visuales DisabledStates.
--   Agrega el nuevo estado visual PointerOverSelected.
--   Agrega el nuevo estado visual PressedSelected.
--   Quitar el grupo de estados visuales SelectedHintStates.
--   En el grupo de estados visuales SelectionStates, mueve el estado visual Selected al grupo de estados visuales CommonStates.
--   Quita todo el grupo de estados visuales SelectionStates.
+-   Add the new MultiSelectStates visual state group.
+-   Add the new MultiSelectDisabled visual state.
+-   Add the new MultiSelectEnabled visual state.
+-   Add the new DisabledStates visual state group.
+-   Add the new Enabled visual state.
+-   In the CommonStates visual state group, remove the PointerOverPressed visual state.
+-   Move the Disabled visual state to the DisabledStates visual state group.
+-   Add the new PointerOverSelected visual state.
+-   Add the new PressedSelected visual state.
+-   Remove the SelectedHintStates visual state group.
+-   In the SelectionStates visual state group, move the Selected visual state to the CommonStates visual state group.
+-   Remove the entire SelectionStates visual state group.
 
-## Localización y globalización
+## Localization and globalization
 
-Puedes volver a usar los archivos Resources.resw del proyecto Universal 8.1 en tu proyecto de aplicación para UWP. Después de copiar el archivo, agrégalo al proyecto y ajusta **Acción de compilación** en **PRIResource** y **Copiar en el directorio de salida** en **No copiar**. El tema [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/br206071) describe cómo cargar recursos específicos de la familia de dispositivos según el factor de selección de recurso de la familia de dispositivos.
+You can re-use the Resources.resw files from your Universal 8.1 project in your UWP app project. After copying the file over, add it to the project and set **Build Action** to **PRIResource** and **Copy to Output Directory** to **Do not copy**. The [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/br206071) topic describes how to load device family-specific resources based on the device family resource selection factor.
 
-## Reproducir en
+## Play To
 
-Las API del espacio de nombres [**Windows.Media.PlayTo**](https://msdn.microsoft.com/library/windows/apps/br207025) están en desuso para las aplicaciones de Windows 10 en favor de la API [**Windows.Media.Casting**](https://msdn.microsoft.com/library/windows/apps/dn972568).
+The APIs in the [**Windows.Media.PlayTo**](https://msdn.microsoft.com/library/windows/apps/br207025) namespace are deprecated for Windows 10 apps in favor of the [**Windows.Media.Casting**](https://msdn.microsoft.com/library/windows/apps/dn972568) APIs.
 
-## Claves de recursos y tamaños de estilos de TextBlock
+## Resource keys, and TextBlock style sizes
 
-El lenguaje de diseño ha evolucionado para Windows 10 y, por consiguiente, han cambiado ciertos estilos del sistema. En algunos casos podrás volver a visitar los diseños visuales de tus vistas para que estén en consonancia con las propiedades de estilo que han cambiado.
+The design language has evolved for Windows 10 and consequently certain system styles have changed. In some cases, you will want to revisit the visual designs of your views so that they are in harmony with the style properties that have changed.
 
-En otros casos, las claves de recurso ya no son compatibles. El editor de marcado XAML en Visual Studio resalta las referencias a las claves de recursos que no se pueden resolver. Por ejemplo, el editor de marcado XAML subrayará una referencia a la clave de estilo `ListViewItemTextBlockStyle` con una línea ondulada roja. Si no se corrige, la aplicación finalizará inmediatamente cuando intentes implementarla en el emulador o el dispositivo. Por tanto, es importante prestar atención a la corrección del marcado XAML. Encontrarás que Visual Studio es una herramienta excelente para detectar esos problemas.
+In other cases, resource keys are no longer supported. The XAML markup editor in Visual Studio highlights references to resource keys that can't be resolved. For example, the XAML markup editor will underline a reference to the style key `ListViewItemTextBlockStyle` with a red squiggle. If that isn't corrected, then the app will immediately terminate when you try to deploy it to the emulator or device. So, it's important to attend to XAML markup correctness. And you will find Visual Studio to be a great tool for catching such issues.
 
-Para las claves que aún se admiten, los cambios en el lenguaje de diseño significan que han cambiado las propiedades establecidas por algunos estilos. Por ejemplo, `TitleTextBlockStyle` establece **FontSize** en 14,667 px en una aplicación de la Tienda Windows y en 18,14 px en una aplicación de la Tienda de Windows Phone. No obstante, el mismo estilo establece **FontSize** en un tamaño mucho más grande, 24 px, en una aplicación de Windows 10. Revisa los diseños y usa los estilos apropiados en los lugares adecuados. Si quieres obtener más información, consulta [Directrices para fuentes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) y [Diseñar aplicaciones para UWP](http://dev.windows.com/design).
+For keys that are still supported, changes in design language mean that properties set by some styles have changed. For example, `TitleTextBlockStyle` sets **FontSize** to 14.667px in a Windows Store app and 18.14px in a Windows Phone Store app. But, the same style sets **FontSize** to a much larger 24px in a Windows 10 app. Review your designs and layouts and use the appropriate styles in the right places. For more info, see [Guidelines for fonts](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) and [Design UWP apps](http://dev.windows.com/design).
 
-Se trata de una lista completa de claves que ya no son compatibles.
+This is a full list of the keys that are no longer supported.
 
 -   CheckBoxAndRadioButtonMinWidthSize
 -   CheckBoxAndRadioButtonTextPaddingThickness
@@ -403,15 +401,15 @@ Se trata de una lista completa de claves que ya no son compatibles.
 -   TextStyleSmallFontSize
 -   TimeRemainingElementMargin
 
-## SearchBox en desuso en favor de AutoSuggestBox
+## SearchBox deprecated in favor of AutoSuggestBox
 
-Aunque [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803) se implementa en la familia de dispositivos universales, no es totalmente funcional en dispositivos móviles. Usa [**AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/dn633874) para tu experiencia de búsqueda universal. Así es como suele implementarse una experiencia de búsqueda con **AutoSuggestBox**.
+Although [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803) is implemented in the Universal device family, it is not fully functional on mobile devices. Use [**AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/dn633874) for your universal search experience. Here's how you typically implement a search experience with **AutoSuggestBox**.
 
-Cuando el usuario empieza a escribir, se genera el evento **TextChanged** con un motivo de **UserInput**. Después, rellena la lista de sugerencias y establece el **ItemsSource** de [**AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/dn633874). Conforme el usuario navega por la lista, se genera el evento **SuggestionChosen** (y si has establecido **TextMemberDisplayPath**, el cuadro de texto se rellena automáticamente con la propiedad especificada). Cuando el usuario envíe una opción con la tecla Entrar, se generará el evento **QuerySubmitted**, en cuyo punto se puede actuar sobre esa sugerencia (en este caso, probablemente navegando a otra página con detalles sobre el contenido especificado). Ten en cuenta que ya no se admiten las propiedades **LinguisticDetails** y **Language** de **SearchBoxQuerySubmittedEventArgs** (hay API equivalentes para esa funcionalidad). Ya no se admite **KeyModifiers**.
+Once the user starts typing, the **TextChanged** event is raised, with a reason of **UserInput**. You then populate the list of suggestions and set the **ItemsSource** of the [**AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/dn633874). As the user navigates the list, the **SuggestionChosen** event is raised (and if you have set **TextMemberDisplayPath**, the text box is auto-filled with the property specified). When the user submits a choice with the Enter key, the **QuerySubmitted** event is raised, at which point you can take action on that suggestion (in this case, most likely navigating to another page with more details on the specified content). Note that the **LinguisticDetails** and **Language** properties of **SearchBoxQuerySubmittedEventArgs** are no longer supported (there are equivalent APIs to support that functionality). And **KeyModifiers** is no longer supported.
 
-[**AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/dn633874) también es compatible con editores de métodos de entrada (IME). Si quieres mostrar un icono "buscar", puedes hacerlo también (la interacción con el icono hará que se genere el evento **QuerySubmitted**).
+[**AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/dn633874) also has support for input method editors (IMEs). And, if you want to show a "find" icon, then you can do that too (interacting with the icon will cause the **QuerySubmitted** event to be raised).
 
-```xaml
+```xml
    <AutoSuggestBox ... >
         <AutoSuggestBox.QueryIcon>
             <SymbolIcon Symbol="Find"/>
@@ -419,69 +417,64 @@ Cuando el usuario empieza a escribir, se genera el evento **TextChanged** con un
     </AutoSuggestBox>
 ```
 
-Consulta también la [muestra de migración AutoSuggestBox](http://go.microsoft.com/fwlink/p/?linkid=619996).
+Also, see [AutoSuggestBox porting sample](http://go.microsoft.com/fwlink/p/?linkid=619996).
 
-## Cambios de SemanticZoom
+## SemanticZoom changes
 
-El gesto de alejar un elemento [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) ha convergido en el modelo de Windows Phone, que consiste en pulsar o hacer clic en un encabezado de grupo (por tanto, en equipos de escritorio, la función del botón del signo menos para alejar ya no aparece). Ahora se obtiene el mismo comportamiento coherente de forma gratuita en todos los dispositivos. Una diferencia estética del modelo de Windows Phone es que la vista alejada (la lista de accesos directos) reemplaza la vista ampliada en lugar de superponerse a ella. Por este motivo, puedes quitar los fondos semiopacos de las vistas alejadas.
+The zooming-out gesture for a [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) has converged on the Windows Phone model, which is to tap or click a group header (so, on desktop computers, the minus button affordance to zoom out is no longer displayed). Now, we get the same, consistent, behavior for free on all devices. One cosmetic difference from the Windows Phone model is that the zoomed-out view (the jump list) replaces the zoomed-in view rather than overlaying it. For this reason, you can remove any semi-opaque backgrounds from zoomed-out views.
 
-En una aplicación de la Tienda de Windows Phone, la vista alejada amplía hasta el tamaño de la pantalla. En una aplicación de la Tienda Windows y en una aplicación de Windows 10, el tamaño de la vista alejada está limitado a los límites del control **SemanticZoom**.
+In a Windows Phone Store app, the zoomed-out view expands to the size of the screen. In a Windows Store app, and in a Windows 10 app, the size of the zoomed-out view is constrained to the bounds of the **SemanticZoom** control.
 
-En una aplicación de la Tienda de Windows Phone, el contenido de detrás de la vista alejada (en orden z) aparece a través suyo si la vista alejada tiene alguna transparencia en su fondo. En una aplicación de la Tienda Windows y en una aplicación de Windows 10, nada de detrás de la vista alejada está visible.
+In a Windows Phone Store app, content behind the zoomed-out view (in z-order) shows through if the zoomed-out view has any transparency in its background. In a Windows Store app, and in a Windows 10 app, nothing is visible behind the zoomed out view.
 
-En una aplicación de la Tienda Windows, cuando la aplicación se desactiva y se reactiva, se descarta la vista alejada (si se estaba mostrando) y la vista acercada se muestra en su lugar. En una aplicación de la Tienda de Windows Phone y en una aplicación de Windows 10, la vista alejada permanecerá visible, si se estaba mostrando.
+In a Windows Store app, when the app is deactivated and reactivated, the zoomed-out view is dismissed (if it was being shown) and the zoomed-in view is shown instead. In a Windows Phone Store app, and in a Windows 10 app, the zoomed-out view will remain showing if it was being shown.
 
-En una aplicación de la Tienda de Windows Phone y en una aplicación de Windows 10, la vista alejada se descarta cuando se presiona el botón Atrás. Para una aplicación de la Tienda Windows, no hay ningún procesamiento del botón Atrás integrado, por lo que no se aplica este caso.
+In a Windows Phone Store app, and in a Windows 10 app, the zoomed-out view is dismissed when the back button is pressed. For a Windows Store app, there is no built-in back button processing, so the question doesn't apply.
 
-## Configuración
+## Settings
 
-La clase **SettingsPane** de Windows Runtime 8.x no es adecuada para Windows 10. En su lugar, además de crear una página de configuración, debes ofrecer a los usuarios una manera de obtener acceso a ella desde la aplicación. Se recomienda exponer esta página de configuración de la aplicación en el nivel superior, como el último elemento anclado en el panel de navegación, pero aquí con el conjunto completo de tus opciones.
+The Windows Runtime 8.x **SettingsPane** class is not appropriate for Windows 10. Instead, in addition to building a Settings page, you should give your users a way to access it from within your app. We recommend that you expose this app Settings page at the top level, as the last pinned item on your navigation pane, but here are the full set of your options.
 
--   Panel de navegación. El elemento Configuración debe ser el último de la lista de navegación de opciones y estar anclado en la parte inferior.
--   Barra de la aplicación/barra de herramientas (en una vista con pestañas o un diseño de tabla dinámica). El elemento Configuración debe ser el último de la barra de la aplicación o el menú flotante de la barra de herramientas. No se recomienda que Configuración sea uno de los elementos de nivel superior en la navegación.
--   Hub. El elemento Configuración debe estar situado dentro del menú flotante (puede ser desde el menú de la barra de la aplicación o el menú de la barra de herramientas en el diseño del hub).
+-   Navigation pane. Settings should be the last item in the navigational list of choices, and pinned to the bottom.
+-   Appbar/toolbar (within a tabs view or pivot layout). Settings should be the last item in the appbar or toolbar menu flyout. It is not recommended for Settings to be one of the top-level items within the navigation.
+-   Hub. Settings should be located inside of the menu flyout (could be from the app bar menu or the toolbar menu within the Hub layout).
 
-Tampoco se recomienda ocultar el elemento Configuración en un panel de maestro y detalles.
+It's also not recommended to bury Settings within a master-detail pane.
 
-La página de configuración debe llenar toda la ventana de la aplicación y es donde deben encontrarse las opciones Acerca de y Comentarios. Para obtener instrucciones sobre el diseño de la página de configuración, consulta [Directrices para la configuración de la aplicación](https://msdn.microsoft.com/library/windows/apps/hh770544).
+Your Settings page should fill the whole of your app's window, and your Settings page is also where About and Feedback should be. For guidance on the design of your Settings page, see [Guidelines for app settings](https://msdn.microsoft.com/library/windows/apps/hh770544).
 
-## Texto
+## Text
 
-El texto (o tipografía) es un aspecto importante de una aplicación para UWP y, durante la migración, es aconsejable que vuelvas a visitar los diseños de elementos visuales de las vistas para que estén en consonancia con el nuevo lenguaje de diseño. Usa estas ilustraciones para encontrar los estilos del sistema de **TextBlock** para la Plataforma universal de Windows (UWP) que están disponibles. Encuentra los que corresponden a los estilos de Windows Phone Silverlight usados. Como alternativa, puedes crear tus propios estilos universales y copiar las propiedades de los estilos del sistema de Windows Phone Silverlight en ellos.
+Text (or typography) is an important aspect of a UWP app and, while porting, you may want to revisit the visual designs of your views so that they are in harmony with the new design language. Use these illustrations to find the Universal Windows Platform (UWP) **TextBlock** system styles that are available. Find the ones that correspond to the Windows Phone Silverlight styles you used. Alternatively, you can create your own universal styles and copy the properties from the Windows Phone Silverlight system styles into those.
 
-![estilos de textblock del sistema para aplicaciones de Windows 10](images/label-uwp10stylegallery.png) <br/>Estilos de TextBlock del sistema para aplicaciones de Windows 10
+![system textblock styles for windows 10 apps](images/label-uwp10stylegallery.png) <br/>System TextBlock styles for Windows 10 apps
 
-En aplicaciones de la Tienda Windows y aplicaciones de la Tienda de Windows Phone, la familia de fuentes predeterminada es la interfaz de usuario global. En una aplicación de Windows 10, la familia de fuentes predeterminada es Segoe UI. Como resultado, las métricas de fuente en tu aplicación pueden parecer diferentes. Si deseas reproducir el aspecto de tu texto 8.1, puedes establecer tus propias métricas con propiedades como [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) y [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362).
+In Windows Store apps and Windows Phone Store apps, the default font family is Global User Interface. In a Windows 10 app, the default font family is Segoe UI. As a result, font metrics in your app may look different. If you want to reproduce the look of your 8.1 text, you can set your own metrics using properties such as [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) and [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362).
 
-En aplicaciones de la Tienda Windows y las aplicaciones de la Tienda de Windows Phone, se establece el idioma predeterminado para el texto en el idioma de la compilación, o en en-us. En una aplicación de Windows 10, se establece el idioma predeterminado en el idioma de la aplicación superior (reserva de fuente). Puedes establecer [**FrameworkElement.Language**](https://msdn.microsoft.com/library/windows/apps/hh702066) explícitamente, pero disfrutarás de un mejor comportamiento de la reserva de fuente si no estableces un valor para esa propiedad.
+In Windows Store apps and Windows Phone Store apps, the default language for text is set to the language of the build, or to en-us. In a Windows 10 app, the default language is set to the top app language (font fallback). You can set [**FrameworkElement.Language**](https://msdn.microsoft.com/library/windows/apps/hh702066) explicitly, but you will enjoy better font fallback behavior if you do not set a value for that property.
 
-Si quieres obtener más información, consulta [Directrices para fuentes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) y [Diseñar aplicaciones para UWP](http://go.microsoft.com/fwlink/p/?LinkID=533896). Consulta también la sección [Controles](#controls) más arriba para obtener información sobre los cambios realizados en los controles de texto.
+For more info, see [Guidelines for fonts](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) and [Design UWP apps](http://go.microsoft.com/fwlink/p/?LinkID=533896). Also, see the [Controls](#controls) section above for changes to text controls.
 
-## Cambios de tema
+## Theme changes
 
-Para una aplicación Universal 8.1, el tema predeterminado es oscuro de manera predeterminada. Para los dispositivos Windows 10, ha cambiado el tema predeterminado, pero se puede controlar el tema usado declarando un tema solicitado en App.xaml. Por ejemplo, para usar un tema oscuro en todos los dispositivos, agrega `RequestedTheme="Dark"` al elemento Application de raíz.
+For a Universal 8.1 app, the default theme is dark by default. For Windows 10 devices, the default theme has changed, but you can control the theme used by declaring a requested theme in App.xaml. For example, to use a dark theme on all devices, add `RequestedTheme="Dark"` to the root Application element.
 
-## Iconos y notificaciones del sistema
+## Tiles and toasts
 
-Para los iconos y las notificaciones del sistema, las plantillas que usas actualmente seguirán funcionando en la aplicación de Windows 10. Sin embargo, hay nuevas plantillas adaptativas que puedes usar. Se describen en [Notificaciones, iconos, notificaciones del sistema y credenciales](https://msdn.microsoft.com/library/windows/apps/mt185606).
+For tiles and toasts, the templates you're currently using will continue to work in your Windows 10 app. But, there are new, adaptive templates available for you to use, and these are described in [Notifications, tiles, toasts, and badges](https://msdn.microsoft.com/library/windows/apps/mt185606).
 
-Anteriormente, en los equipos de escritorio, una notificación del sistema era un mensaje transitorio. Si se perdía o se hacía caso omiso de él, desaparecía y no se podía recuperar. En Windows Phone, si se hace caso omiso o se descarta temporalmente una notificación del sistema, esta si colocaba en el Centro de actividades. Ahora, el Centro de actividades ya no está limitado a la familia de dispositivos móviles.
+Previously, on desktop computers, a toast notification was a transitory message. It would disappear, and no longer be retrievable, once it was missed or ignored. On Windows Phone, if a toast notification is ignored or temporarily dismissed, it would go into the Action Center. Now, Action Center is no longer limited to the Mobile device family.
 
-Para enviar una notificación del sistema, ya no es necesario declarar una funcionalidad.
+To send a toast notification, there is no longer any need to declare a capability.
 
-## Tamaño de la ventana
+## Window size
 
-Para una aplicación Universal 8.1, el manifiesto de la aplicación [**ApplicationView**](https://msdn.microsoft.com/library/windows/apps/dn391667) se usa para declarar un ancho de ventana mínimo. En la aplicación para UWP, puedes especificar un tamaño mínimo (ancho y alto) con código imperativo. El tamaño mínimo predeterminado es 500 x 320epx, que también es el tamaño mínimo más pequeño aceptado. El tamaño mínimo más grande aceptado es 500 x 500epx.
+For a Universal 8.1 app, the [**ApplicationView**](https://msdn.microsoft.com/library/windows/apps/dn391667) app manifest element is used to declare a minimum window width. In your UWP app, you can specify a minimum size (both width and height) with imperative code. The default minimum size is 500x320epx, and that's also the smallest minimum size accepted. The largest minimum size accepted is 500x500epx.
 
 ```csharp
    Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetPreferredMinSize
         (new Size { Width = 500, Height = 500 });
 ```
 
-El siguiente tema es [Migración de modelo de E/S, dispositivos y aplicaciones](w8x-to-uwp-input-and-sensors.md).
-
-
-
-<!--HONumber=Mar16_HO1-->
-
+The next topic is [Porting for I/O, device, and app model](w8x-to-uwp-input-and-sensors.md).
 

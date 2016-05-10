@@ -1,40 +1,41 @@
 ---
-title: Realizar geocodificación y geocodificación inversa
-description: Puedes convertir direcciones en ubicaciones geográficas (geocodificación), y ubicaciones geográficas en direcciones (geocodificación inversa), si llamas a los métodos de la clase MapLocationFinder del espacio de nombres Windows.Services.Maps.
+author: PatrickFarley
+title: Perform geocoding and reverse geocoding
+description: Convert addresses to geographic locations (geocoding) and convert geographic locations to addresses (reverse geocoding) by calling the methods of the MapLocationFinder class in the Windows.Services.Maps namespace.
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
 ---
 
-# Realizar geocodificación y geocodificación inversa
+# Perform geocoding and reverse geocoding
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Puedes convertir direcciones en ubicaciones geográficas (geocodificación), y ubicaciones geográficas en direcciones (geocodificación inversa), si llamas a los métodos de la clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) del espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979).
+Convert addresses to geographic locations (geocoding) and convert geographic locations to addresses (reverse geocoding) by calling the methods of the [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) class in the [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) namespace.
 
-**Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga la muestra [Windows-universal-samples repo (Repositorio de muestras universales de Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub.
+**Tip** To learn more about using maps in your app, download the following sample from the [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) on GitHub.
 
--   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Universal Windows Platform (UWP) map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-Aquí se explica la relación entre las clases de geocodificación y geocodificación inversa:
+Here's how the classes for geocoding and reverse geocoding are related:
 
--   La clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) tiene métodos que llevan a cabo procedimientos de geocodificación ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)) y geocodificación inversa ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)).
--   Estos métodos devuelven la clase [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551).
--   A su vez, la clase [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) contiene una colección de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549). Puedes obtener acceso a esta colección a través de la propiedad [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) de **MapLocationFinderResult**.
--   Igualmente, cada objeto [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) contiene un objeto [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533). Puedes obtener acceso a este objeto a través de la propiedad [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) de cada objeto **MapLocation**.
+-   The [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) class has methods that do geocoding ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)) and reverse geocoding ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)).
+-   These methods return a [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551).
+-   The [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) contains a collection of [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) objects. Access this collection through the [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) property of the **MapLocationFinderResult**.
+-   Each [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) object contains a [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) object. Access this object through the [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) property of each **MapLocation**.
 
-**Importante** Debes especificar una clave de autenticación de mapas para poder usar los servicios de mapa. Para obtener más información, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
+**Important**  You must specify a maps authentication key before you can use map services. For more info, see [Request a maps authentication key](authentication-key.md).
 
- 
+ 
 
-## Obtener una ubicación (geocodificación)
+## Get a location (Geocode)
 
 
-Convierte una dirección o el nombre de un lugar en una ubicación geográfica (geocodificación) mediante el siguiente procedimiento.
+Convert an address or a place name to a geographic location (geocoding) by performing the following steps.
 
-1.  Llama a una de las sobrecargas del método [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) de la clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550).
-2.  El método [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) devuelve un objeto [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) que contiene una colección de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) coincidentes.
-3.  Accede a esta colección a través de la propiedad [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) de la clase [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551).
+1.  Call one of the overloads of the [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) method of the [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) class.
+2.  The [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) method returns a [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) object that contains a collection of matching [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) objects.
+3.  Access this collection through the [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) property of the [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551).
 
 ```csharp
 using Windows.Services.Maps;
@@ -70,21 +71,21 @@ private async void geocodeButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Este código muestra los siguientes resultados en el cuadro de texto `tbOutputText`.
+This code displays the following results to the `tbOutputText` textbox.
 
 ``` syntax
 result = (47.6406099647284,-122.129339994863)
 ```
 
-## Obtener una dirección (geocodificación inversa)
+## Get an address (reverse geocode)
 
 
-Convierte una ubicación geográfica en una dirección (geocodificación inversa) mediante el siguiente procedimiento.
+Convert a geographic location to an address (reverse geocoding) by performing the following steps.
 
-1.  Llama al método [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) de la clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550).
-2.  El método [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) devuelve un objeto [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) que contiene una colección de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) coincidentes.
-3.  Accede a esta colección a través de la propiedad [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) de la clase [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551).
-4.  Accede al objeto [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) a través de la propiedad [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) de cada clase [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549).
+1.  Call the [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) method of the [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) class.
+2.  The [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) method returns a [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) object that contains a collection of matching [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) objects.
+3.  Access this collection through the [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) property of the [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551).
+4.  Access the [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) object through the [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) property of each [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549).
 
 ```csharp
 using Windows.Services.Maps;
@@ -112,26 +113,21 @@ private async void reverseGeocodeButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Este código muestra los siguientes resultados en el cuadro de texto `tbOutputText`.
+This code displays the following results to the `tbOutputText` textbox.
 
 ``` syntax
 town = Redmond
 ```
 
-## Temas relacionados
+## Related topics
 
-* [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
-* [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP traffic app sample (Ejemplo de aplicación de tráfico de UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Bing Maps Developer Center](https://www.bingmapsportal.com/)
+* [UWP map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Design guidelines for maps](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Build 2015 video: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP traffic app sample](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550)
 * [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)
 * [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)
-
-
-
-
-<!--HONumber=Mar16_HO1-->
 
 

@@ -1,43 +1,44 @@
 ---
-title: Portar un representador simple de OpenGL ES 2.0 a Direct3D 11
-description: Para el primer ejercicio de migración, empezaremos con lo más básico: traer un representador simple de OpenGL ES 2.0 a Direct3D para un cubo giratorio con vértices sombreados, de modo tal que coincida con la plantilla DirectX 11 App (Universal Windows) de Visual Studio 2015.
+author: mtoepke
+title: How to-- port a simple OpenGL ES 2.0 renderer to Direct3D 11
+description: For the first porting exercise, we'll start with the basics-- bringing a simple renderer for a spinning, vertex-shaded cube from OpenGL ES 2.0 into Direct3D, such that it matches the DirectX 11 App (Universal Windows) template from Visual Studio 2015.
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
 ---
 
-# Portar un representador simple de OpenGL ES 2.0 a Direct3D 11
+# How to: port a simple OpenGL ES 2.0 renderer to Direct3D 11
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Para el primer ejercicio de migración, empezaremos con lo más básico: traer un representador simple de OpenGL ES 2.0 a Direct3D para un cubo giratorio con vértices sombreados, de modo tal que coincida con la plantilla DirectX 11 App (Universal Windows) de Visual Studio 2015. A medida que avancemos en este proceso de migración, aprenderás a hacer lo siguiente:
+For the first porting exercise, we'll start with the basics: bringing a simple renderer for a spinning, vertex-shaded cube from OpenGL ES 2.0 into Direct3D, such that it matches the DirectX 11 App (Universal Windows) template from Visual Studio 2015. As we walk through this port process, you will learn the following:
 
--   Migrar un conjunto simple de búferes de vértices a búferes de entrada de Direct3D
--   Migrar uniformes y atributos a búferes de constantes
--   Configurar objetos de sombreador de Direct3D
--   Usar la semántica básica de HLSL en el desarrollo de sombreador de Direct3D
--   Migrar GLSL simple a HLSL
+-   How to port a simple set of vertex buffers to Direct3D input buffers
+-   How to port uniforms and attributes to constant buffers
+-   How to configure Direct3D shader objects
+-   How basic HLSL semantics are used in Direct3D shader development
+-   How to port very simple GLSL to HLSL
 
-Este tema empieza tras la creación de un nuevo proyecto en DirectX 11. Para aprender a crear un nuevo proyecto en DirectX 11, lee [Create a new DirectX 11 project for Universal Windows Platform (UWP) (Crear un nuevo proyecto de DirectX 11 para la Plataforma universal de Windows [UWP])](user-interface.md).
+This topic starts after you have created a new DirectX 11 project. To learn how to create a new DirectX 11 project, read [Create a new DirectX 11 project for Universal Windows Platform (UWP)](user-interface.md).
 
-El proyecto creado a partir de alguno de estos vínculos tiene todo el código preparado para la infraestructura de [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476345). Puedes empezar a migrar el representador de Open GL ES 2.0 a Direct3D 11 inmediatamente.
+The project created from either of these links has all the code for the [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476345) infrastructure prepared, and you can immediately start into the process of porting your renderer from Open GL ES 2.0 to Direct3D 11.
 
-En este tema se analizan dos rutas de código que realizan las mismas tareas gráficas básicas: mostrar un cubo de vértice sombreado giratorio en una ventana. En ambos casos, el código cubre el siguiente proceso:
+This topic walks two code paths that perform the same basic graphics task: display a rotating vertex-shaded cube in a window. In both cases, the code covers the following process:
 
-1.  Crear una malla del cubo a partir de datos codificados de forma rígida. Esta malla se representa como una lista de vértices, cada uno de ellos con una posición, un vector normal y un color de vector. La malla se coloca en un búfer de vértices para que la canalización de sombreado la procese.
-2.  Crear objetos de sombreador para procesar la malla del cubo. Hay dos sombreadores: uno de vértices que procesa los vértices para la rasterización y otro de fragmentos (píxeles) que da color a los píxeles individuales del cubo tras la rasterización. Estos píxeles se graban en un destino de representación para que se puedan mostrar en pantalla.
-3.  Formar el lenguaje de sombreado que se usa para el procesamiento de píxeles y vértices en los respectivos sombreadores.
-4.  Mostrar el cubo representado en pantalla.
+1.  Creating a cube mesh from hardcoded data. This mesh is represented as a list of vertices, with each vertex possessing a position, a normal vector, and a color vector. This mesh is put into a vertex buffer for the shading pipeline to process.
+2.  Creating shader objects to process the cube mesh. There are two shaders: a vertex shader that processes the vertices for rasterization, and a fragment (pixel) shader that colors the individual pixels of the cube after rasterization. These pixels are written into a render target for display.
+3.  Forming the shading language that is used for vertex and pixel processing in the vertex and fragment shaders, respectively.
+4.  Displaying the rendered cube on the screen.
 
-![cubo opengl simple](images/simple-opengl-cube.png)
+![simple opengl cube](images/simple-opengl-cube.png)
 
-Cuando termines de leer este tutorial, sabrás las diferencias básicas que existen entre Open GL ES 2.0 y Direct3D 11:
+Upon completing this walkthrough, you should be familiar with the following basic differences between Open GL ES 2.0 and Direct3D 11:
 
--   La representación de los búferes de vértices y datos de vértice.
--   El proceso de crear y configurar sombreadores.
--   Los lenguajes de sombreado, y las entradas y salidas en objetos de sombreador.
--   Los comportamientos de dibujos en pantalla.
+-   The representation of vertex buffers and vertex data.
+-   The process of creating and configuring shaders.
+-   Shading languages, and the inputs and outputs to shader objects.
+-   Screen drawing behaviors.
 
-En este tutorial hacemos referencia a una estructura simple y genérica del representador de OpenGL, que se define de esta forma:
+In this walkthrough, we refer to an simple and generic OpenGL renderer structure, which is defined like this:
 
 ``` syntax
 typedef struct 
@@ -70,25 +71,25 @@ typedef struct
 } Renderer;
 ```
 
-Esta estructura tiene una sola instancia y contiene todos los componentes necesarios para representar una malla muy simple de vértices sombreados.
+This structure has one instance and contains all the necessary components for rendering a very simple vertex-shaded mesh.
 
-> **Nota** Todo el código de OpenGL ES 2.0 en este tema se basa en la implementación de la API de Windows proporcionada por Khronos Group y usa la sintaxis de programación C de Windows.
+> **Note**  Any OpenGL ES 2.0 code in this topic is based on the Windows API implementation provided by the Khronos Group, and uses Windows C programming syntax.
 
- 
+ 
 
-## Lo que debes saber
+## What you need to know
 
 
-### Tecnologías
+### Technologies
 
 -   [Microsoft Visual C++](http://msdn.microsoft.com/library/vstudio/60k1461a.aspx)
 -   OpenGL ES 2.0
 
-### Requisitos previos
+### Prerequisites
 
--   Opcional. Revisa [Port EGL code to DXGI and Direct3D (Portar código EGL a DXGI y Direct3D)](moving-from-egl-to-dxgi.md). Lee este tema para comprender mejor la interfaz de gráficos proporcionada por DirectX.
+-   Optional. Review [Port EGL code to DXGI and Direct3D](moving-from-egl-to-dxgi.md). Read this topic to better understand the graphics interface provided by DirectX.
 
-## <span id="keylinks_steps_heading"></span>Pasos
+## <span id="keylinks_steps_heading"></span>Steps
 
 
 <table>
@@ -98,48 +99,43 @@ Esta estructura tiene una sola instancia y contiene todos los componentes necesa
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Tema</th>
-<th align="left">Descripción</th>
+<th align="left">Topic</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Port the shader objects](port-the-shader-config.md)</p></td>
-<td align="left"><p>Cuando portes el representador simple de OpenGL ES 2.0, el primer paso es configurar los objetos equivalentes del sombreador de fragmentos y vértices en Direct3D 11 y asegurarte de que el programa principal pueda comunicarse con los objetos del sombreador después de su compilación.</p></td>
+<td align="left"><p>When porting the simple renderer from OpenGL ES 2.0, the first step is to set up the equivalent vertex and fragment shader objects in Direct3D 11, and to make sure that the main program can communicate with the shader objects after they are compiled.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Port the vertex buffers and data](port-the-vertex-buffers-and-data-config.md)</p></td>
-<td align="left"><p>En este paso, definirás los búferes de vértices, que contendrán las mallas, y los búferes de índices, que permitirán a los sombreadores recorrer los vértices en un orden especificado.</p></td>
+<td align="left"><p>In this step, you'll define the vertex buffers that will contain your meshes and the index buffers that allow the shaders to traverse the vertices in a specified order.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Port the GLSL](port-the-glsl.md)</p></td>
-<td align="left"><p>Una vez que traslades el código que crea y configura los búferes y objetos de sombreador, tienes que portar el código de esos sombreadores, del lenguaje GL Shader Language (GLSL) de OpenGL ES 2.0 al lenguaje High-level Shader Language (HLSL) de Direct3D 11.</p></td>
+<td align="left"><p>Once you've moved over the code that creates and configures your buffers and shader objects, it's time to port the code inside those shaders from OpenGL ES 2.0's GL Shader Language (GLSL) to Direct3D 11's High-level Shader Language (HLSL).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Draw to the screen](draw-to-the-screen.md)</p></td>
-<td align="left"><p>Por fin hemos portado el código que dibuja un cubo giratorio en la pantalla.</p></td>
+<td align="left"><p>Finally, we port the code that draws the spinning cube to the screen.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
-## <span id="additional_resources"></span>Recursos adicionales
-
-
--   [Preparar el entorno para el desarrollo de un juego DirectX de UWP](prepare-your-dev-environment-for-windows-store-directx-game-development.md)
--   [Crear un nuevo proyecto de DirectX 11 para UWP](user-interface.md)
--   [Asignar conceptos e infraestructura de OpenGL ES 2.0 a Direct3D 11](map-concepts-and-infrastructure.md)
-
- 
-
- 
+## <span id="additional_resources"></span>Additional resources
 
 
+-   [Prepare your dev environment for UWP DirectX game development](prepare-your-dev-environment-for-windows-store-directx-game-development.md)
+-   [Create a new DirectX 11 project for UWP](user-interface.md)
+-   [Map OpenGL ES 2.0 concepts and infrastructure to Direct3D 11](map-concepts-and-infrastructure.md)
+
+ 
+
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

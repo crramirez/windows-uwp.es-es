@@ -1,202 +1,198 @@
 ---
-title: Ciclo de vida de la aplicación
-description: En este tema se describe el ciclo de vida de una aplicación para la Plataforma universal de Windows (UWP), desde el momento en que se activa hasta que se cierra.
+author: mcleblanc
+title: App lifecycle
+description: This topic describes the lifecycle of a Universal Windows Platform (UWP) app, from the time it is activated until it is closed.
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 ---
 
-# Ciclo de vida de la aplicación
+# App lifecycle
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-**API importantes**
+**Important APIs**
 
--   [**Clase Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324)
--   [**Espacio de nombres Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766)
+-   [**Windows.UI.Xaml.Application class**](https://msdn.microsoft.com/library/windows/apps/br242324)
+-   [**Windows.ApplicationModel.Activation namespace**](https://msdn.microsoft.com/library/windows/apps/br224766)
 
-En este tema se describe el ciclo de vida de una aplicación para la Plataforma universal de Windows (UWP), desde el momento en que se activa hasta que se cierra. Muchos usuarios usan múltiples dispositivos y aplicaciones mientras trabajan. Hoy en día, los usuarios esperan que las aplicaciones recuerden sus estados al realizar múltiples tareas con sus dispositivos. Por ejemplo, los usuarios esperan que la página se encuentre en la misma posición en que la dejaron y que todos los controles se encuentren en el mismo estado que antes. Al comprender el ciclo de vida de inicio, suspensión y reanudación de la aplicación, podrás ofrecer este tipo de comportamiento sin problema alguno para el usuario.
+This topic describes the lifecycle of a Universal Windows Platform (UWP) app, from the time it is activated until it is closed. Many users spread their work and play across multiple devices and apps. Users now expect your app to remember its state as they multitask on their device. For example, they expect the page to be scrolled to the same position and all of the controls to be in the same state as before. By understanding the application lifecycle of launching, suspending, and resuming, you can provide this kind of seamless behavior.
 
-## Estado de ejecución de la aplicación
-
-
-Esta ilustración representa las transiciones entre los estados de ejecución de la aplicación. En las siguientes secciones se describen estos estados y eventos. Para más información sobre cada transición de estado y cómo debe reaccionar la aplicación, consulta la referencia relativa a la enumeración [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694).
-
-![Diagrama de estados en el que se muestran las transiciones entre los estados de ejecución de la aplicación](images/state-diagram.png)
-
-## Implementación
+## App execution state
 
 
-Para poder activar una aplicación, primero se debe implementar. La aplicación se implementa cuando un usuario instala la aplicación o cuando se usa Visual Studio para compilar y ejecutar la aplicación durante el desarrollo y las pruebas. Para más información sobre este tema y los escenarios de implementación avanzada, consulta [Implementación y paquetes de la aplicación](https://msdn.microsoft.com/library/windows/apps/hh464929).
+This illustration represents the transitions between app execution states. We describe these states and events in the next several sections. For more info about each state transition and what your app should do in response, see the reference for the [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) enumeration.
 
-## Inicio de la aplicación
+![state diagram showing transitions between app execution states](images/state-diagram.png)
 
-
-Una aplicación se inicia cuando se encuentra en estado **NotRunning** y el usuario pulsa el icono de la aplicación en la pantalla Inicio o en la lista de aplicaciones. Las aplicaciones que se usan con frecuencia también se pueden iniciar previamente para optimizar la capacidad de respuesta (consulta [Controlar el inicio previo de aplicaciones](handle-app-prelaunch.md)). Una aplicación puede estar en el estado **NotRunning** porque no se ha iniciado nunca, porque se estaba ejecutando y se bloqueó, o porque se suspendió pero no se pudo conservar en la memoria y el sistema la finalizó. El inicio de la aplicación es distinto de la activación. La activación es cuando la aplicación se activa mediante un contrato o una extensión como, por ejemplo, el contrato de Buscar.
-
-El método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) se llama cuando se inicia una aplicación, por ejemplo, cuando la aplicación está actualmente en suspensión en la memoria. El parámetro [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) contiene el estado anterior de la aplicación y los argumentos de activación.
-
-Cuando el usuario cambia a la aplicación finalizada, el sistema envía el argumento [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) con el objeto [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) establecido en **Launch** y el objeto [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) establecido en **Terminated** o **ClosedByUser**. La aplicación debe cargar sus datos de aplicación guardados y actualizar el contenido que muestra.
-
-Si el valor del objeto [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) es **NotRunning**, la aplicación debe iniciarse desde cero como si se fuera la primera vez que se iniciara.
-
-Cuando se inicia una aplicación, Windows muestra una pantalla de presentación. Para configurar dicha pantalla de presentación, consulta [Agregar una pantalla de presentación](https://msdn.microsoft.com/library/windows/apps/xaml/hh465331).
-
-Mientras se muestra la pantalla de presentación, la aplicación deberá preparar la interfaz de usuario. Las tareas principales de una aplicación son registrar controladores de eventos y configurar las opciones de interfaz de usuario personalizadas necesarias para cargar la página inicial. Estas tareas solo deberían tardar unos pocos segundos. Otras actividades que la aplicación necesite, como pedir datos de la red o recuperar grandes cantidades de datos del disco, se deberán llevar a cabo aparte de la activación. Una aplicación puede usar su propia interfaz de usuario de carga personalizada o una pantalla de presentación ampliada mientras espera a que finalicen estas operaciones cuya ejecución requiere mucho tiempo. Consulta [Mostrar una pantalla de presentación durante más tiempo](create-a-customized-splash-screen.md) y la [muestra de pantalla de presentación](http://go.microsoft.com/fwlink/p/?linkid=234889) para obtener más información. Cuando la aplicación completa la activación, entra en el estado **Running** y desaparece la pantalla de presentación (se desactivan todos sus recursos y objetos).
-
-## Activación de la aplicación
+## Deployment
 
 
-Los usuarios pueden activar una aplicación mediante varias extensiones y contratos como, por ejemplo, el contrato de Buscar. Para obtener una lista con las distintas formas en que se puede activar una aplicación, consulta [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693).
+In order for an app to be activated it must first be deployed. You app is deployed when a user installs your app or when you use Visual Studio to build and run your app during development and testing. For more info on this and on advanced deployment scenarios, see [App packages and deployment](https://msdn.microsoft.com/library/windows/apps/hh464929).
 
-La clase [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) define los métodos que puedes invalidar para controlar los distintos tipos de activación. Varios tipos de activación tienen un método específico que puedes invalidar como, por ejemplo, [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336), etc. Para los demás tipos de activación, invalida el método [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330).
+## App launch
 
-El código de activación de la aplicación puede comprobar por qué se activó y si ya se encontraba en estado **Running**.
 
-La aplicación puede restaurar los datos guardados anteriormente durante la activación en caso de que el sistema operativo haya finalizado la aplicación y el usuario la haya vuelto vuelva a iniciar. Windows puede finalizar la aplicación después de que se haya suspendido por diversos motivos. Puede que el usuario la haya cerrado manualmente o haya cerrado la sesión, o bien que el sistema no disponga de suficientes recursos. En caso de que el usuario inicie la aplicación después de que Windows la haya finalizado, la aplicación recibirá la devolución de llamada [**Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) y se mostrará al usuario la pantalla de presentación hasta que esta se active. Puedes usar este evento para determinar si la aplicación necesita restaurar los datos que guardados cuando se suspendió por última vez, o bien si se deben cargar los datos predeterminados de la aplicación. Dado que la pantalla de presentación se encuentra visible, el código de la aplicación puede tardar algún tiempo en procesar esta tarea sin necesidad de que el usuario experimente ningún retraso aparente; aunque las cuestiones mencionadas anteriormente acerca de las operaciones de larga ejecución también se aplican si se reinicia o se reanuda la aplicación.
+An app is launched when it is in the **NotRunning** state and the user taps the app tile on the start screen or on the application list. Frequently used apps may also be prelaunched to optimize responsiveness (see [Handle app prelaunch](handle-app-prelaunch.md)). An app could be in the **NotRunning** state because it has never been launched, because it was running but then crashed, or because it was suspended but then couldn't be kept in memory and was terminated by the system. Launching is different then activation. Activation is when your app is activated via a contract or extension such as the Search contract.
 
-El evento [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) incluye una propiedad [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) que indica el estado en el que se encontraba la aplicación antes de su activación. Esta propiedad es uno de los valores de la enumeración [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694):
+The [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) method is called when an app is launched— including when the app is currently suspended in memory. The [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) parameter contains the previous state of your app and the activation arguments.
 
-| Motivo de finalización                                                        | Valor de la propiedad [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) | Medida necesaria          |
+When the user switches to your terminated app, the system sends the [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) args with [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) set to **Launch** and [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) set to **Terminated** or **ClosedByUser**. The app should load its saved application data and refresh its displayed content.
+
+If the value of [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) is **NotRunning**, the app should start over as if it were being initially launched.
+
+When an app is launched, Windows displays a splash screen for the app. To configure the splash screen, see [Adding a splash screen](https://msdn.microsoft.com/library/windows/apps/xaml/hh465331).
+
+While the splash screen is displayed, your app should ready its user interface. The primary tasks for the app are to register event handlers and set up any custom UI it needs for loading the initial page. These tasks should only take a few seconds. If an app needs to request data from the network or needs to retrieve large amounts of data from disk, these activities should be completed outside of activation. An app can use its own custom loading UI or an extended splash screen while it waits for these long running operations to finish. See [Display a splash screen for more time](create-a-customized-splash-screen.md) and the [Splash screen sample](http://go.microsoft.com/fwlink/p/?linkid=234889) for more info. After the app completes activation, it enters the **Running** state and the splash screen disappears (and all its resources and objects are cleared).
+
+## App activation
+
+
+An app can be activated by the user through a variety of extensions and contracts such as the Share contract. For a list of ways your app can be activated, see [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693).
+
+The [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) class defines methods you can override to handle the various activation types. Several of the activation types have a specific method that you can override such as such as [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336), etc. For the other activation types, override the [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) method.
+
+Your app's activation code can test to see why it was activated and whether it was already in the **Running** state.
+
+Your app can restore previously saved data during activation in the event that the operating system terminated your app, and the user subsequently re-launched it. Windows may terminate your app after it has been suspended for a number of reasons. The user may manually close your app, or sign out, or the system may be running low on resources. If the user launches your app after Windows has terminated it, the app receives an [**Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) callback and the user sees your app's splash screen until the app is activated. You can use this event to determine whether your app needs to restore the data which it had saved when it was last suspended, or whether you must load your app’s default data. Because the splash screen is up, your app code can invest some processing time to get this done without there being any apparent delay to the user although previously-mentioned concerns about long-running operations also apply if you're restarting or continuing.
+
+The [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) event data includes a [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) property that tells you which state your app was in before it was activated. This property is one of the values from the [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) enumeration:
+
+| Reason for termination                                                        | Value of [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) property | Action to take          |
 |-------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|-------------------------|
-| Finalizada por el sistema (por ejemplo, debido a restricciones de recursos).       | **Terminated**                                                                                          | Restaurar los datos del sistema    |
-| Cerrado por el usuario o proceso finalizado por el usuario.                             | **ClosedByUser**                                                                                        | Iniciar la aplicación con los datos predeterminados |
-| La aplicación finalizó de forma inesperada o no se ejecutó durante la *sesión del usuario actual*. | **NotRunning**                                                                                          | Iniciar la aplicación con los datos predeterminados |
+| Terminated by the system (for example, because of resource constraints)       | **Terminated**                                                                                          | Restore session data    |
+| Closed by the user, or process-terminated by user                             | **ClosedByUser**                                                                                        | Start with default data |
+| Unexpectedly terminated, or app has not run during the *current user session* | **NotRunning**                                                                                          | Start with default data |
 
- 
+ 
 
-**Nota**  La *sesión del usuario actual* se basa en el inicio de sesión de Windows. Siempre y cuando el usuario actual no haya cerrado la sesión explícitamente o apagado el equipo, o bien Windows no se haya reiniciado por otros motivos, la sesión del usuario actual persiste durante los eventos como la autenticación de pantalla de bloqueo y el cambio de usuario, entre otros.
+**Note**  *Current user session* is based on Windows logon. So long as the current user hasn't explicitly logged off, shut down, or Windows hasn't restarted for other reasons, the current user session persists across events such as lock screen authentication, switch-user and so on.
 
- 
+ 
 
-[**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) también puede tener los valores **Running** o **Suspended**, aunque en estos casos la aplicación no ha finalizado previamente, por lo que no será necesario restaurar ningún dato, ya que todo está en la memoria.
+[**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) could also have a value of **Running** or **Suspended**, but in these cases your app was not previously terminated and therefore you don’t have to restore any data because everything is already in memory.
 
-**Nota**  
+**Note**  
 
-Si inicias sesión en el equipo con la cuenta de Administrador, no podrás activar ninguna de las aplicaciones para UWP.
+If you log on using the computer's Administrator account, you can't activate any UWP apps.
 
-Para más información, consulta [Contratos y extensiones de aplicaciones (aplicaciones de la Tienda Windows)](https://msdn.microsoft.com/library/windows/apps/hh464906).
+For more info, see [App extensions](https://msdn.microsoft.com/library/windows/apps/hh464906).
 
-### **OnActivated** frente a las activaciones específicas
+### **OnActivated** versus specific activations
 
-El método [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) permite controlar todos los tipos de activación posibles. Sin embargo, es más habitual usar distintos métodos para controlar los tipos de activación más comunes y usar **OnActivated** solo como método de reserva para los tipos de activación menos comunes. Por ejemplo, el objeto [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) tiene un método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) que se invoca como una devolución de llamada siempre que el objeto [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693) sea **Launch**, y esta es la activación típica de la mayoría de las aplicaciones. Hay más de 6 métodos **On\*** para las activaciones específicas: [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336), [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/hh701806). Las plantillas de inicio de las aplicaciones XAML tienen una implementación para **OnLaunched** y un controlador para [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341).
+The [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) method is the means to handle all possible activation types. However, it's more common to use different methods to handle the most common activation types, and use **OnActivated** only as the fallback method for the less common activation types. For example, [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) has an [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) method that's invoked as a callback whenever [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693) is **Launch**, and this is the typical activation for most apps. There are 6 more **On\*** methods for specific activations: [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336), [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/hh701806). Starting templates for a XAML app have an implementation for **OnLaunched** and a handler for [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341).
 
-## Suspensión de aplicaciones
+## App suspend
 
 
-El sistema suspende la aplicación cuando el usuario cambia a otra aplicación, al escritorio o a la pantalla Inicio. La aplicación también puede suspenderse cuando el dispositivo entra en estado de bajo consumo. El sistema reanuda la aplicación cuando el usuario vuelve a cambiar a ella. Cuando el sistema reanuda la aplicación, el contenido de las variables y las estructuras de datos es el mismo que antes de que el sistema la suspendiera. El sistema restaura la aplicación en el punto exacto en el que estaba, para que parezca al usuario que se estaba ejecutando en segundo plano.
+The system suspends your app whenever the user switches to another app or to the desktop or Start screen. You app may also be suspended when the device enters a low power state. The system resumes your app whenever the user switches back to it. When the system resumes your app, the content of your variables and data structures is the same as it was before the system suspended the app. The system restores the app exactly where it left off, so that it appears to the user as if it's been running in the background.
 
-Cuando el usuario pasa una aplicación al segundo plano, Windows espera unos segundos para ver si el usuario vuelve inmediatamente a la aplicación. De ser así, la transición se realizará rápidamente. Si el usuario no vuelve durante este intervalo de tiempo, Windows suspende la aplicación.
+When the user moves an app to the background, Windows waits a few seconds to see whether the user will immediately switch back to the app so that the transition will be fast if they do. If the user does not switch back within this time window, Windows suspends the app.
 
-Si necesitas realizar algún trabajo asincrónico durante la suspensión de la aplicación, deberás aplazar la suspensión hasta que haya finalizado ese trabajo. Puedes usar el método [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/br224690) en el objeto [**SuspendingOperation**](https://msdn.microsoft.com/library/windows/apps/br224688) (disponible a través de los argumentos de evento) para retrasar la suspensión hasta después de haber llamado al método [**Complete**](https://msdn.microsoft.com/library/windows/apps/br224685) en el objeto [**SuspendingDeferral**](https://msdn.microsoft.com/library/windows/apps/br224684) devuelto.
+If you need to do asynchronous work when your app is being suspended you will need to defer completion of suspend until after your work completes. You can use the [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/br224690) method on the [**SuspendingOperation**](https://msdn.microsoft.com/library/windows/apps/br224688) object (available via the event args) to delay completion of suspend until after you call the [**Complete**](https://msdn.microsoft.com/library/windows/apps/br224685) method on the returned [**SuspendingDeferral**](https://msdn.microsoft.com/library/windows/apps/br224684) object.
 
-El sistema intentará mantener la aplicación y sus datos en memoria mientras está suspendida. No obstante, si el sistema no tiene los recursos necesarios para mantener la aplicación en memoria, finalizará su ejecución. Las aplicaciones no reciben notificaciones cuando se cierran, por lo que la única oportunidad de guardar los datos de la aplicación es durante la suspensión. Cuando una aplicación determina que se ha activado tras cerrarse, debe cargar los datos de aplicación que se guardaron durante la suspensión para que la aplicación se encuentre en el mismo estado que antes de suspenderse. Cuando el usuario vuelve a una aplicación suspendida que finalizó, la aplicación restaurará los datos de la aplicación en el método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335). El sistema no notifica a una aplicación cuando finaliza su ejecución, con lo cual la aplicación deberá guardar sus datos de aplicación y liberar los recursos exclusivos y los identificadores de archivos cuando se suspenda, y restaurarlos cuando vuelva a activarse.
+The system attempts to keep your app and its data in memory while it's suspended. However, if the system does not have the resources to keep your app in memory, the system will terminate your app. Apps don't receive a notification that they are being terminated, so the only opportunity you have to save your app's data is during suspension. When an app determines that it has been activated after being terminated, it should load the application data that it saved during suspend so that the app is in the same state as if was before it was suspended. When the user switches back to a suspended app that has been terminated, the app should restore its application data in its [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) method. The system doesn't notify an app when it's terminated, so your app must save its application data and release exclusive resources and file handles when it's suspended, and restore them when the app is activated after termination.
 
-Si una aplicación registró un controlador de eventos para el evento [**Application.Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341), se llamará a este código de inmediato antes de que se suspenda la aplicación. Puedes usar el controlador de eventos para guardar datos de aplicación y de usuario. Te recomendamos que uses las API de datos de aplicación para este fin, ya que así te aseguras de que completen el trabajo antes de que la aplicación entre en estado **Suspended**. Para más información, consulta [Almacenar y recuperar la configuración y otros datos de aplicación](https://msdn.microsoft.com/library/windows/apps/mt299098).
+If an app has registered an event handler for the [**Application.Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) event, this code is called immediately before the app is suspended. You can use the event handler to save app and user data. We recommended that you use the application data APIs for this purpose because they are guaranteed to complete before the app enters the **Suspended** state. For more info, see [Store and retrieve settings and other app data](https://msdn.microsoft.com/library/windows/apps/mt299098).
 
-Conviene que liberes los recursos exclusivos y los identificadores de archivos para que otras aplicaciones puedan tener acceso a ellos cuando la aplicación no los esté usando. Algunos ejemplos de recursos exclusivos son las cámaras, los dispositivos de E/S, los dispositivos externos y los recursos de red. Liberar recursos exclusivos e identificadores de archivos sirve para que otras aplicaciones puedan tener acceso a ellos cuando la aplicación no los esté usando. Cuando la aplicación se active después de haberla finalizado, deberá volver a abrir sus recursos exclusivos e identificadores de archivos.
+You should also release exclusive resources and file handles so that other apps can access them while your app isn't using them. Examples of exclusive resources include cameras, I/O devices, external devices, and network resources. Explicitly releasing exclusive resources and file handles helps to ensure that other apps can access them while your app isn't using them. When the app is activated after termination, it should reopen its exclusive resources and file handles.
 
-En general, la aplicación debe guardar su estado y liberar sus recursos e identificadores de archivos inmediatamente cuando se controle el evento de suspensión, y el código no debería tardar más de un segundo en completarse. Si una aplicación no regresa del evento de suspensión en unos segundos, Windows da por sentado que la aplicación dejó de responder y la finaliza.
+Generally, your app should save its state and release its resources and file handles immediately when handling the suspending event, and the code should not take more than a second to complete. If an app does not return from the suspending event within a few seconds, Windows assumes that the app has stopped responding and terminates it.
 
-Hay algunos escenarios de aplicación donde la aplicación debe seguir ejecutándose para completar tareas en segundo plano. Por ejemplo, la aplicación puede seguir reproduciendo audio en segundo plano; para más información, consulta [Audio en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140)). Además, las operaciones de transferencia en segundo plano continúan incluso cuando la aplicación se haya suspendido o finalizado; para más información, consulta [Cómo descargar un archivo](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer)).
+There are some app scenarios where the app must continue to run to complete background tasks. For example, your app can continue to play audio in the background; for more info, see [Background Audio](https://msdn.microsoft.com/library/windows/apps/mt282140)). Also, background transfer operations continue even if your app is suspended or even terminated; for more info, see [How to download a file](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer)).
 
-Para obtener instrucciones, consulta [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088).
+For guidelines, see [Guidelines for app suspend and resume](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
-**Una nota sobre la depuración con Visual Studio: ** Visual Studio impide que Windows suspenda una aplicación que está conectada al depurador. Esto permite que el usuario vea la interfaz de usuario de depuración de Visual Studio mientras se ejecuta la aplicación. Mientras depuras una aplicación, puedes enviarle un evento de suspensión mediante Visual Studio. Asegúrate de que se muestra la barra de herramientas **Ubicación de depuración** y luego haz clic en el botón **Suspender**.
+**A note about debugging using Visual Studio:  **Visual Studio prevents Windows from suspending an app that is attached to the debugger. This is to allow the user to view the Visual Studio debug UI while the app is running. When you're debugging an app, you can send it a suspend event using Visual Studio. Make sure the **Debug Location** toolbar is being shown, then click the **Suspend** icon.
 
-## Visibilidad de la aplicación
+## App visibility
 
 
-Tu aplicación dejará de estar visible cuando el usuario cambie a otra aplicación, aunque permanecerá en estado **Running** hasta que Windows la suspenda. Si el usuario cambia a otra aplicación pero vuelve a la tuya y la activa antes de que se pueda suspender, permanecerá en estado **Running**.
+When the user switches from your app to another app, your app is no longer visible but remains in the **Running** state until Windows suspends it. If the user switches away from your app but activates or switches back to it before it can suspended, the app remains in the **Running** state.
 
-La aplicación no recibe un evento de activación cuando su visibilidad cambia, puesto que sigue en ejecución. Windows cambia entre esta y otras aplicaciones según sea necesario. Si la aplicación tiene que realizar alguna acción cuando un usuario cambia de aplicación y vuelve, puede controlar el evento [**Window.VisibilityChanged**](https://msdn.microsoft.com/library/windows/apps/hh702458).
+Your app doesn't receive an activation event when its visibility changes because the app is still running. Windows simply switches to and from the app as necessary. If your app needs to do something when the user switches away and back, handle the [**Window.VisibilityChanged**](https://msdn.microsoft.com/library/windows/apps/hh702458) event.
 
-No confíes en un orden específico de estos eventos.
+Do not rely on a specific ordering of these events.
 
-## Reanudación de la aplicación
+## App resume
 
 
-Una aplicación suspendida se reanuda cuando el usuario vuelve a ella o cuando es la aplicación activa cuando el dispositivo sale de un estado de bajo consumo.
+A suspended app is resumed when the user switches to it or when it is the active app when the device comes out of a low power state.
 
-Consulta [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) para ver los estados en los que la aplicación puede estar cuando se reanuda. Cuando una aplicación se reanuda desde el estado **Suspended**, entra en el estado **Running** y continúa desde donde estaba en el momento de la suspensión. No se pierde ningún dato de la aplicación almacenado en la memoria. Por ello, con la mayor parte de las aplicaciones no es necesario hacer nada cuando se reanudan. No obstante, la aplicación podría haber estado suspendida durante horas o incluso días. Por lo tanto, si la aplicación tiene contenido o conexiones de red que puedan haber quedado obsoletos, se deberán actualizar al reanudar. Si una aplicación registró un controlador de eventos para el evento [**Application.Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339), se llama a este controlador de eventos cuando la aplicación se reanude desde el estado **Suspended**. Puedes actualizar el contenido y los datos de la aplicación con este controlador de eventos.
+For an enumeration of the states that your app can be in when your app is resumed, see [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694). When an app is resumed from the **Suspended** state, it enters the **Running** state and continues from where it was when it was suspended. No app data stored in memory is lost. Therefore, most apps don't need to do anything when they are resumed. However, the app could have been suspended for hours or even days. If your app has content or network connections that may have gone stale, these should be refreshed when the app resumes. If an app registered an event handler for the [**Application.Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) event, it is called when the app is resumed from the **Suspended** state. You can refresh your app content and data using this event handler.
 
-Si se activa una aplicación suspendida para que participe en un contrato entre aplicaciones o una extensión, recibirá primero el evento **Resuming** y después el evento **Activated**.
+If a suspended app is activated to participate in an app contract or extension, it receives the **Resuming** event first, then the **Activated** event.
 
-Mientras la aplicación está suspendida, no recibirá ninguno de los eventos de red que registró para recibir. Dichos eventos no se colocarán en la cola; simplemente se perderán. Por ello, la aplicación debe comprobar el estado de red cuando se reanude.
+While en an app is suspended, it does not receive any of the network events that it registered to receive. These network events are not queued, they are simply missed. Therefore, your app should test the network status when it is resumed.
 
-**Nota**  Dado que el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) no se genera a partir del subproceso de interfaz de usuario, es necesario usar un distribuidor si el código del controlador de reanudación se comunica con la interfaz de usuario.
+**Note**  Because the [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) event is not raised from the UI thread, a dispatcher must be used if the code in your resume handler communicates with your UI.
 
- 
+ 
 
-Para obtener instrucciones, consulta el tema de [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088).
+For guidelines, see [Guidelines for app suspend and resume](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
-## Cierre de la aplicación
+## App close
 
 
-Por lo general, no es necesario que los usuarios cierren las aplicaciones, sino que pueden dejar que Windows se encargue de ello. No obstante, los usuarios pueden decidir cerrar una aplicación mediante el gesto de cerrar, presionando Alt y F4 en Windows o mediante el conmutador de tareas en Windows Phone.
+Generally, users don't need to close apps, they can let Windows manage them. However, users can choose to close an app using the close gesture or by pressing Alt+F4 on Windows or by using the task switcher on Windows Phone.
 
-No hay ningún evento especial que indique que el usuario ha cerrado una aplicación.
+There's no special event to indicate that the user closed the app.
 
-Después de que el usuario haya cerrado una aplicación, primero se suspende y luego se finaliza. A continuación, pasa al estado **NotRunning**.
+After an app has been closed by the user, it's first suspended and then terminated, and enters the **NotRunning** state.
 
-En Windows 8.1 y en versiones posteriores, una vez que el usuario cierra la aplicación, esta se quita de la pantalla y de la lista de cambio, pero no finaliza explícitamente.
+In Windows 8.1 and later, after an app has been closed by the user, the app is removed from the screen and switch list but not explicitly terminated.
 
-Si una aplicación registró un controlador de eventos para el evento **Suspending**, se llamará a este controlador cuando se suspenda la aplicación. Puedes usar este controlador de eventos para guardar datos relevantes de la aplicación y del usuario en un almacenamiento persistente.
+If an app has registered an event handler for the **Suspending** event, it is called when the app is suspended. You can use this event handler to save relevant application and user data to persistent storage.
 
-**Comportamiento de cierre por parte del usuario: **si la aplicación debe hacer algo distinto cuando la cierra el usuario que cuando la cierra Windows, puedes usar el controlador de eventos de activación para determinar si la finalizó Windows o el usuario. Consulta las descripciones de los estados **ClosedByUser** y **Terminated** en la referencia relativa a la enumeración [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694).
+**Closed-by-user behavior:  **If your app needs to do something different when it is closed by the user than when it is closed by Windows, you can use the activation event handler to determine whether the app was terminated by the user or by Windows. See the descriptions of **ClosedByUser** and **Terminated** states in the reference for the [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) enumeration.
 
-Te recomendamos que las aplicaciones no se cierren automáticamente mediante programación a menos que sea absolutamente necesario. Por ejemplo, si una aplicación detecta una pérdida de memoria, se puede cerrar para preservar la seguridad de los datos personales del usuario. Cuando una aplicación se cierra mediante programación, el sistema considera que se ha bloqueado.
+We recommend that apps not close themselves programmatically unless absolutely necessary. For example, if an app detects a memory leak, it can close itself to ensure the security of the user's personal data. When you close an app programmatically, the system treats it as an app crash.
 
-## Bloqueo de la aplicación
+## App crash
 
 
-La experiencia de bloqueo del sistema está diseñada para que los usuarios puedan volver a lo que estaban haciendo lo antes posible. No se debe proporcionar ningún cuadro de diálogo de advertencia o notificación, ya que retrasaría más al usuario.
+The system crash experience is designed to get users back to what they were doing as quickly as possible. You shouldn't provide a warning dialog or other notification because that will delay the user.
 
-Si la aplicación se bloquea, deja de responder o genera una excepción, se enviará un informe del problema a Microsoft según la [configuración de comentarios y diagnósticos](http://go.microsoft.com/fwlink/p/?LinkID=614828) del usuario. Microsoft te proporciona un subconjunto de datos de error en el informe del problema, para que puedas usarlo para mejorar la aplicación. Puedes consultar estos datos en la página Calidad de la aplicación en el panel.
+If your app crashes, stops responding, or generates an exception, a problem report is sent to Microsoft per the user's [feedback and diagnostics settings](http://go.microsoft.com/fwlink/p/?LinkID=614828). Microsoft provides a subset of the error data in the problem report to you so that you can use it to improve your app. You'll be able to see this data in your app's Quality page in your Dashboard.
 
-Cuando el usuario activa una aplicación tras un bloqueo, su controlador de eventos de activación recibe un valor [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) de **NotRunning** y debe mostrar simplemente su interfaz de usuario y datos iniciales. Después de un bloqueo, no uses de forma habitual la aplicación que usarías para **Resuming** con **Suspended** porque los datos pueden estar dañados; consulta [Directrices para suspender y reanudar una aplicación (aplicaciones de la Tienda Windows)](https://msdn.microsoft.com/library/windows/apps/hh465088).
+When the user activates an app after it crashes, its activation event handler receives an [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) value of **NotRunning**, and should display its initial UI and data. After a crash, don't routinely use the app data you would have used for **Resuming** with **Suspended** because that data could be corrupt; see [Guidelines for app suspend and resume](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
-## Eliminación de la aplicación
+## App removal
 
 
-Cuando un usuario elimina la aplicación, esta se quita, junto con todos los datos locales. La eliminación de una aplicación no afecta a los datos del usuario almacenados en ubicaciones comunes como, por ejemplo, las bibliotecas de imágenes o documentos.
+When a user deletes your app, the app is removed, along with all its local data. Removing an app doesn't affect the user's data that was stored in common locations such as the Documents or Pictures libraries.
 
-## Ciclo de vida de aplicación y plantillas de proyecto de Visual Studio
+## App lifecycle and the Visual Studio project templates
 
 
-En las plantillas de proyecto iniciales de Visual Studio se proporciona el código básico relevante para el ciclo de vida de la aplicación. La aplicación básica controla la activación del inicio, ofrece un lugar para restaurar los datos de aplicación y muestra la interfaz de usuario principal, incluso antes de agregar el propio código. Para obtener más información, consulte [Plantillas de proyecto C#, VB y C++ para aplicaciones de la Tienda](https://msdn.microsoft.com/library/windows/apps/hh768232).
+The basic code that is relevant to the app lifecycle is provided in the starting Visual Studio project templates. The basic app handles launch activation, provides a place for you to restore your app data, and displays the primary UI even before you've added any of your own code. For more info, see [C#, VB, and C++ project templates for apps](https://msdn.microsoft.com/library/windows/apps/hh768232).
 
-## Principales API del ciclo de vida de la aplicación
+## Application lifecycle key APIs
 
 
--   Espacio de nombres [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691)
--   Espacio de nombres [**Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766)
--   Espacio de nombres [**Windows.ApplicationModel.Core**](https://msdn.microsoft.com/library/windows/apps/br205865)
--   Clase [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) (XAML)
--   Clase [**Windows.UI.Xaml.Window**](https://msdn.microsoft.com/library/windows/apps/br209041) (XAML)
+-   [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) namespace
+-   [**Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766) namespace
+-   [**Windows.ApplicationModel.Core**](https://msdn.microsoft.com/library/windows/apps/br205865) namespace
+-   [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) class (XAML)
+-   [**Windows.UI.Xaml.Window**](https://msdn.microsoft.com/library/windows/apps/br209041) class (XAML)
 
-**Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+**Note**  
+This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps. If you’re developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
+ 
 
-## Temas relacionados
+## Related topics
 
 
-* [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [Controlar el inicio previo de aplicaciones](handle-app-prelaunch.md)
-* [Controlar la activación de aplicaciones](activate-an-app.md)
-* [Controlar la suspensión de la aplicación](suspend-an-app.md)
-* [Controlar la reanudación de la aplicación](resume-an-app.md)
+* [Guidelines for app suspend and resume](https://msdn.microsoft.com/library/windows/apps/hh465088)
+* [Handle app prelaunch](handle-app-prelaunch.md)
+* [Handle app activation](activate-an-app.md)
+* [Handle app suspend](suspend-an-app.md)
+* [Handle app resume](resume-an-app.md)
 
- 
+ 
 
- 
+ 
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
 
 

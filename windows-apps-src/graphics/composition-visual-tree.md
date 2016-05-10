@@ -1,66 +1,67 @@
 ---
+author: scottmill
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
-title: Árbol visual de composición
-description: Los elementos visuales de composición conforman la estructura del árbol visual que todas las demás funciones de la API de composición usarán y ampliarán. La API permite a los desarrolladores definir y crear uno o varios objetos visuales que representan un nodo único en un árbol visual.
+title: Composition visual tree
+description: Composition Visuals make up the visual tree structure which all other features of the composition API use and build on. The API allows developers to define and create one or many visual objects each representing a single node in a visual tree.
 ---
-# Árbol visual de composición
+# Composition visual tree
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Los elementos visuales de composición conforman la estructura del árbol visual que todas las demás funciones de la API de composición usarán y ampliarán. La API permite a los desarrolladores definir y crear uno o varios objetos visuales que representan un nodo único en un árbol visual.
+Composition Visuals make up the visual tree structure which all other features of the composition API use and build on. The API allows developers to define and create one or many visual objects each representing a single node in a visual tree.
 
-## Elementos visuales
+## Visuals
 
-Existen tres tipos de elementos visuales que conforman la estructura del árbol visual, además de una clase de pincel base con varias subclases que afectan al contenido de un elemento visual:
+There are three visual types that make up the visual tree structure plus a base brush class with multiple subclasses that affect the content of a visual:
 
--   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858): objeto base, la mayoría de las propiedades están aquí y las heredan los otros objetos visuales.
--   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810): se deriva del objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) y agrega la capacidad para crear los elementos secundarios.
--   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433): se deriva del objeto [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) y agrega la capacidad de asociar un pincel de modo que el elemento visual pueda representar píxeles, como por ejemplo, imágenes, efectos o un color sólido.
--   [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398): permite la aplicación de un efecto en el contenido de un elemento visual. Existe una serie de subclases de CompositionBrush.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – base object, the majority of the properties are here, and inherited by the other Visual objects.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – derives from [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858), and adds the ability to create children.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – Derives from [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) and adds the ability to associate a brush so that the Visual can render pixels including images, effects or a solid color.
+-   [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398) – Allows the application of an effect on the content of a Visual. There are a number of subclasses of CompositionBrush.
 
-## Muestra de CompositionVisual
+## The CompositionVisual Sample
 
-En la muestra, hay un número de cuadrados de color sólido en los que se puede hacer clic y que se pueden arrastrar sobre la pantalla. Cuando se hace clic en un cuadrado, este se trae al frente, se gira 45 grados y se vuelve opaco cuando se arrastra.
+In the sample there are a number of solid color squares that can be clicked on and dragged about the screen. When a square is clicked on, it will come to the front, rotate 45 degrees, and become opaque when dragged about.
 
-Esto muestra varios de los conceptos básicos para trabajar con la API, entre los que se incluye lo siguiente:
+This shows a number of basic concepts for working with the API including:
 
--   Crear un compositor
--   Crear un objeto SpriteVisual con un objeto ColorBrush
--   Recortar un elemento visual
--   Girar un elemento visual
--   Configurar la opacidad
--   Cambiar la posición del elemento visual en la colección
+-   Creating a compositor
+-   Creating a SpriteVisual with a ColorBrush
+-   Clipping a Visual
+-   Rotating a Visual
+-   Setting Opacity
+-   Changing the Visual’s position in the collection.
 
-En la muestra, también hay tres elementos visuales diferentes:
+In the sample there are also three different Visuals at work:
 
--   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858): objeto base, la mayoría de las propiedades están aquí y las heredan los otros objetos visuales.
--   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810): se deriva del objeto Visual y agrega la capacidad para crear los elementos secundarios.
--   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433): se deriva del objeto visual y agrega la capacidad de asociar un pincel de modo que el elemento visual pueda representar píxeles, como por ejemplo, imágenes, efectos o un color sólido.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – base object, the majority of the properties are here, and inherited by the other Visual objects.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – derives from Visual, and adds the ability to create children.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – Derives from Visual and adds the ability to associate a brush so that the Visual can render pixels including images, effects or a solid color.
 
-Si bien en esta muestra no se abarcan conceptos como, por ejemplo, animaciones o efectos más complejos, se incluyen los elementos esenciales que todos los sistemas usan.
+While this sample doesn’t cover concepts like Animations or more complex effects, it contains the building blocks that all of those systems use.
 
-## Crear un compositor
+## Creating a Compositor
 
-Crear un objeto [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) y almacenarlo para usarlo como una fábrica en una variable es una tarea sencilla. En el siguiente fragmento se muestra la creación de un nuevo objeto **Compositor**:
+Creating a [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) and storing it for use as a factory in a variable is a simple task. The following snippet shows creating a new **Compositor**:
 
 ```cs
 _compositor = new Compositor();
 ```
 
-## Crear un objeto SpriteVisual y un objeto ColorBrush
+## Creating a SpriteVisual and ColorBrush
 
-Con el objeto [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789), es fácil crear objetos cuando los necesites, tales como un objeto [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) y un objeto [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399):
+Using the [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) it's easy to create objects whenever you need them, such as a [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) and a [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399):
 
 ```cs
 var visual = _compositor.CreateSpriteVisual();
 visual.Brush = _compositor.CreateColorBrush(Color.FromArgb(0xFF, 0xFF, 0xFF, 0xFF));
 ```
 
-Si bien solo hay unas pocas líneas de código, se muestra un concepto muy eficaz, los objetos [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) son el corazón del sistema de efectos. El objeto **SpriteVisual** permite mucha flexibilidad e interacción en cuanto a la creación de colores, imágenes y efectos. El objeto **SpriteVisual** es un tipo visual único que puede rellenar un rectángulo 2D con un pincel; en este caso, un color sólido.
+While this is only a few lines of code it demonstrates a powerful concept, [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) objects are the heart of the effects system. The **SpriteVisual** allows for great flexibility and interplay in color, image and effect creation. The **SpriteVisual** is a single visual type that can fill a 2D rectangle with a brush, in this case a solid color.
 
-## Recortar un elemento visual
+## Clipping a Visual
 
-El objeto [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) también se puede usar para crear recortes en un objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858). A continuación te mostramos un ejemplo de la muestra en la que se usa el objeto [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825) para recortar cada lado del elemento visual:
+The [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) can also be used to create clips to a [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858). Below is an example from the sample of using the [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825) to trim each side of the visual:
 
 ```cs
 var clip = _compositor.CreateInsetClip();
@@ -71,41 +72,41 @@ clip.BottomInset = 1.0f;
 _currentVisual.Clip = clip;
 ```
 
-Nota: como otros objetos de la API, se pueden aplicar animaciones a las propiedades del objeto [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825).
+Note: Like other objects in the API [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825) can have animations applied to its properties.
 
-## <span id="Rotating_a_Clip"></span><span id="rotating_a_clip"></span><span id="ROTATING_A_CLIP"></span>Girar un recorte
+## <span id="Rotating_a_Clip"></span><span id="rotating_a_clip"></span><span id="ROTATING_A_CLIP"></span>Rotating a Clip
 
-Un objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) se puede transformar con una rotación. Ten en cuenta que el objeto [**RotationAngle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.rotationangle) admite tanto radianes como grados. El valor predeterminado es radianes, pero es fácil especificar grados, tal como se muestra en el siguiente fragmento de código:
+A [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) can be transformed with a rotation. Note that [**RotationAngle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.rotationangle) supports both radians and degrees. It defaults to radians, but it’s easy to specify degrees as shown in the following snippet:
 
 ```cs
 child.RotationAngleInDegrees = 45.0f;
 ```
 
-La rotación es tan solo un ejemplo de un conjunto de componentes de transformación que la API proporciona para facilitar estas tareas. Entre otras se incluye Offset, Scale, Orientation, RotationAxis y 4x4 TransformMatrix.
+Rotation is just one example of a set of transform components provided by the API to make these tasks easier. Others include Offset, Scale, Orientation, RotationAxis and a 4x4 TransformMatrix.
 
-## Configurar la opacidad
+## Setting Opacity
 
-Configurar la opacidad de un elemento visual es una operación sencilla que usa un valor flotante. Por ejemplo, en la muestra, todos los cuadrados empiezan con una opacidad de 0,8:
+Setting the opacity of a visual is a simple operation using a float value. For example, in the sample all the squares start at .8 opacity:
 
 ```cs
 visual.Opacity = 0.8f;
 ```
 
-Como la rotación, la propiedad [**Opacity**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.opacity) se puede animar.
+Like rotation, the [**Opacity**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.opacity) property can be animated.
 
-## Cambiar la posición del elemento visual en la colección
+## Changing the Visual's position in the collection
 
-La API de composición permite establecer la posición de un elemento visual en un objeto [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection) que se puede cambiar de varias maneras, se puede colocar encima de otro elemento visual con el objeto [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertabove), colocar por debajo con el objeto [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertbelow), mover al primer plano con el objeto [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertattop) o mover al fondo con el objeto [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertatbottom).
+The Composition API allows for a Visual's position in a [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection) to be changed in a number of ways, it can be placed above another Visual with [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertabove), placed below with [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertbelow), move to the top with [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertattop) or the bottom with [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertatbottom).
 
-En la muestra, un objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) en el que se hizo clic se pone en primer plano:
+In the sample a [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) that has been clicked on is sorted to the top:
 
 ```cs
 parent.Children.InsertAtTop(_currentVisual);
 ```
 
-## Ejemplo completo
+## Full Example
 
-En la muestra completa, todos los conceptos anteriores se usan en conjunto para construir y recorrer un árbol simple de objetos [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) y cambiar la opacidad sin tener que usar XAML, WWA o DirectX. En esta muestra se indica cómo se crean y se agregan los objetos secundarios **Visual**, y cómo se cambian las propiedades.
+In the full sample, all of the concepts above are used together to construct and walk a simple tree of [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) objects to change opacity without using XAML, WWA, or DirectX. This sample shows how child **Visual** objects are created and added and how properties are changed.
 
 ```cs
 using System;
@@ -493,15 +494,10 @@ namespace compositionvisual
 }
 ```
 
- 
+ 
 
- 
-
-
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

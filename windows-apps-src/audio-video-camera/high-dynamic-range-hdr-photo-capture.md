@@ -1,100 +1,97 @@
 ---
+author: drewbatgit
 ms.assetid: 0186EA01-8446-45BA-A109-C5EB4B80F368
-description: La clase AdvancedPhotoCapture permite capturar fotos de alto rango dinámico (HDR).
-title: Captura de fotos de alto rango dinámico (HDR)
+description: The AdvancedPhotoCapture class allows you to capture High Dynamic Range (HDR) photos.
+title: High Dynamic Range (HDR) photo capture
 ---
 
-# Captura de fotos de alto rango dinámico (HDR)
+# High Dynamic Range (HDR) photo capture
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-La clase [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) permite capturar fotos de alto rango dinámico (HDR). Esta API también te permite obtener un marco de referencia de la captura HDR antes de que finalice el procesamiento de la imagen final.
+The [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) class allows you to capture High Dynamic Range (HDR) photos. This API also allows you to obtain a reference frame from the HDR capture before the processing of the final image is complete.
 
-Otros artículos relacionados con la captura HDR incluyen:
+Other articles related to HDR capture include:
 
--   Puedes usar la clase [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) para permitir que el sistema evalúe el contenido del flujo de vista previa de la captura multimedia para determinar si el procesamiento HDR mejoraría el resultado de la captura. Para más información, consulta [Análisis de la escena para la captura multimedia](scene-analysis-for-media-capture.md).
+-   You can use the [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) to allow the system to evaluate the content of the media capture preview stream to determine if HDR processing would improve the capture result. For more information, see [Scene Analysis for Media Capture](scene-analysis-for-media-capture.md).
 
--   Usa la clase [**HdrVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926680) para capturar vídeo con el algoritmo de procesamiento HDR integrado de Windows. Para más información, consulta [Capturar controles del dispositivo de captura de vídeo](capture-device-controls-for-video-capture.md).
+-   Use the [**HdrVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926680) to capture video using the Windows built-in HDR processing algorithm. For more information, see [Capture device controls for video capture](capture-device-controls-for-video-capture.md).
 
--   Puedes usar la clase [**VariablePhotoSequenceCapture**](https://msdn.microsoft.com/library/windows/apps/dn652564) para capturar una secuencia de fotos, cada una con configuraciones de captura diferentes, e implementar un tipo de HDR propio u otro algoritmo de procesamiento. Para más información, consulta [Secuencia de fotos variable](variable-photo-sequence.md).
+-   You can use the [**VariablePhotoSequenceCapture**](https://msdn.microsoft.com/library/windows/apps/dn652564) to capture a sequence of photos, each with different capture settings, and implement your own HDR or other processing algorithm. For more information, see [Variable photo sequence](variable-photo-sequence.md).
 
-**Nota**
--   No se admite la grabación de vídeo y la captura de fotos simultánea con **AdvancedPhotoCapture**.
+**Note**
+-   Concurrently recording video and photo capture using **AdvancedPhotoCapture** is not supported.
 
--   No se puede usar el flash de la cámara durante la captura de fotos avanzada.
+-   Using the camera flash during advanced photo capture is not supported.
 
-**Nota:** Este artículo se basa en los conceptos y el código planteados en [Capturar fotos y vídeo con MediaCapture](capture-photos-and-video-with-mediacapture.md), donde se describen los pasos para la implementación básica de fotos y la captura de vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios más avanzados de captura. El código de este artículo supone que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
+**Note** This article builds on concepts and code discussed in [Capture Photos and Video with MediaCapture](capture-photos-and-video-with-mediacapture.md), which describes the steps for implementing basic photo and video capture. It is recommended that you familiarize yourself with the basic media capture pattern in that article before moving on to more advanced capture scenarios. The code in this article assumes that your app already has an instance of MediaCapture that has been properly initialized.
 
-## Espacios de nombres de captura de fotos HDR
+## HDR photo capture namespaces
 
-Para usar la captura de fotos HDR, la aplicación debe incluir los siguientes espacios de nombres además de los espacios de nombres necesarios para la captura multimedia básica.
+To use HDR photo capture, your app must include the following namespaces in addition to the namespaces required for basic media capture.
 
 [!code-cs[HDRPhotoUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetHDRPhotoUsing)]
 
 
-## Determinar si se admite la captura de fotos HDR en el dispositivo actual
+## Determine if HDR photo capture is supported on the current device
 
-La técnica de captura HDR descrita en este artículo se realiza mediante el objeto [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386). No todos los dispositivos admiten la captura HDR con **AdvancedPhotoCapture**. Determina si el dispositivo en el que se está ejecutando la aplicación admite la técnica mediante la obtención del elemento [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) del objeto **MediaCapture** y luego la obtención de la propiedad [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840). Compruebe la colección [**SupportedModes**](https://msdn.microsoft.com/library/windows/apps/mt147844) del controlador del dispositivo de vídeo para ver si incluye [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845). Si es así, se admite la captura HDR con **AdvancedPhotoCapture**.
+The HDR capture technique described in this article is performed using the [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) object. Not all devices support HDR capture with **AdvancedPhotoCapture**. Determine if the device on which your app is currently running supports the technique by getting the **MediaCapture** object's [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) and then getting the [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840) property. Check the video device controller's [**SupportedModes**](https://msdn.microsoft.com/library/windows/apps/mt147844) collection to see if it includes [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845). If it does, HDR capture using **AdvancedPhotoCapture** is supported.
 
 [!code-cs[HdrSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetHdrSupported)]
 
-## Configurar y preparar el objeto AdvancedPhotoCapture
+## Configure and prepare the AdvancedPhotoCapture object
 
-Como es necesario acceder a la instancia de [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) desde varias ubicaciones dentro del código, se debe declarar una variable de miembro que contenga el objeto.
+Since you will need to access the [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) instance from multiple places within your code, you should declare a member variable to hold the object.
 
 [!code-cs[DeclareAdvancedCapture](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareAdvancedCapture)]
 
-En la aplicación, después de inicializar el objeto **MediaCapture**, crea un objeto [**AdvancedPhotoCaptureSettings**](https://msdn.microsoft.com/library/windows/apps/mt147837) y establece el modo en [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845). Llama al método [**Configure**](https://msdn.microsoft.com/library/windows/apps/mt147841) del objeto [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840) y pasa el objeto **AdvancedPhotoCaptureSettings** que creaste.
+In your app, after you have initialized the **MediaCapture** object, create an [**AdvancedPhotoCaptureSettings**](https://msdn.microsoft.com/library/windows/apps/mt147837) object and set the mode to [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845). Call the [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840) object's [**Configure**](https://msdn.microsoft.com/library/windows/apps/mt147841) method, passing in the **AdvancedPhotoCaptureSettings** object you created.
 
-Llama al método [**PrepareAdvancedPhotoCaptureAsync**](https://msdn.microsoft.com/library/windows/apps/mt181403) del objeto **MediaCapture** y pasa un objeto [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) que especifique el tipo de codificación que debe usar la captura. La clase **ImageEncodingProperties** proporciona métodos estáticos para crear las codificaciones de imagen que son compatibles con **MediaCapture**.
+Call the **MediaCapture** object's [**PrepareAdvancedPhotoCaptureAsync**](https://msdn.microsoft.com/library/windows/apps/mt181403), passing in an [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) object specifying the type of encoding the capture should use. The **ImageEncodingProperties** class provides static methods for creating the image encodings that are supported by **MediaCapture**.
 
-**PrepareAdvancedPhotoCaptureAsync** devuelve el objeto [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) que se usará para iniciar la captura de fotos. Puedes usar este objeto para registrar los controladores para los elementos [**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392) y [**AllPhotosCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181387) que se describen más adelante en este artículo.
+**PrepareAdvancedPhotoCaptureAsync** returns the [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) object you will use to initiate photo capture. You can use this object to register handlers for the [**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392) and [**AllPhotosCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181387) which are discussed later in this article.
 
 [!code-cs[CreateAdvancedCaptureAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateAdvancedCaptureAsync)]
 
-## Capturar una foto HDR
+## Capture an HDR photo
 
-Captura una foto HDR mediante una llamada al método [**CaptureAsync**](https://msdn.microsoft.com/library/windows/apps/mt181388) del objeto [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386). Este método devuelve un objeto [**AdvancedCapturedPhoto**](https://msdn.microsoft.com/library/windows/apps/mt181378) que proporciona la foto capturada en su propiedad [**Frame**](https://msdn.microsoft.com/library/windows/apps/mt181382).
+Capture an HDR photo by calling the [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) object's [**CaptureAsync**](https://msdn.microsoft.com/library/windows/apps/mt181388) method. This method returns a [**AdvancedCapturedPhoto**](https://msdn.microsoft.com/library/windows/apps/mt181378) object that provides the captured photo in its [**Frame**](https://msdn.microsoft.com/library/windows/apps/mt181382) property.
 
 [!code-cs[CaptureHdrPhotoAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCaptureHdrPhotoAsync)]
 
-**ConvertOrientationToPhotoOrientation** y **ReencodeAndSavePhotoAsync** son métodos auxiliares que se tratan como parte del escenario de captura de multimedia básico del artículo [Capturar fotos y vídeo con MediaCapture](capture-photos-and-video-with-mediacapture.md).
+**ConvertOrientationToPhotoOrientation** and **ReencodeAndSavePhotoAsync** are helper methods that are discussed as part of the basic media capture scenario in the article [Capture Photos and Video with MediaCapture](capture-photos-and-video-with-mediacapture.md).
 
-## Obtener el marco de referencia opcional
+## Get optional reference frame
 
-El proceso HDR captura distintos marcos y después los compone en una sola imagen una vez que todos de los marcos se han capturado. Puedes obtener acceso a un fotograma después de se capture, pero antes que todo el proceso HDR se complete mediante el control del evento [**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392). No es necesario hacerlo si solamente estás interesado en el resultado final de la foto HDR.
+The HDR process captures multiple frames and then composites them into a single image after all of the frames have been captured. You can get access to a frame after it is captured but before the entire HDR process is complete by handling the [**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392) event. You don't need to do this if you are only interested in the final HDR photo result.
 
-**Importante:** [**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392) no se genera en dispositivos que admitan hardware HDR y, por tanto, no se generan los fotogramas de referencia. La aplicación debe controlar el caso donde no se genera este evento.
+**Important** [**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392) is not raised on devices that support hardware HDR and therefore do not generate reference frames. Your app should handle the case where this event is not raised.
 
-Como el fotograma de referencia llega fuera del contexto de la llamada a **CaptureAsync**, se ofrece un mecanismo para pasar información del contexto al controlador **OptionalReferencePhotoCaptured**. Primero debes un objeto que contenga la información de contexto. El nombre y el contenido de este objeto depende de TI. Este ejemplo define un objeto que tiene miembros para realizar un seguimiento del nombre de archivo y de la orientación de cámara de la captura.
+Because the reference frame arrives out of context of the call to **CaptureAsync**, a mechanism is provided to pass context information to the **OptionalReferencePhotoCaptured** handler. First you should an object that will contain your context information. The name and contents of this object is up to you. This example defines an object that has members to track the file name and camera orientation of the capture.
 
 [!code-cs[AdvancedCaptureContext](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetAdvancedCaptureContext)]
 
-Crea una nueva instancia del objeto de contexto, rellena sus miembros y luego pásala a la sobrecarga de [**CaptureAsync**](https://msdn.microsoft.com/library/windows/apps/mt181388) que acepta un objeto como un parámetro.
+Create a new instance of your context object, populate its members, and then pass it into the overload of [**CaptureAsync**](https://msdn.microsoft.com/library/windows/apps/mt181388) that accepts an object as a parameter.
 
 [!code-cs[CaptureWithContext](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCaptureWithContext)]
 
-En el controlador de eventos [**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392), convierte la propiedad [**Context**](https://msdn.microsoft.com/library/windows/apps/mt181405) del objeto [**OptionalReferencePhotoCapturedEventArgs**](https://msdn.microsoft.com/library/windows/apps/mt181404) a la clase del objeto de contexto. En este ejemplo se modifica el nombre de archivo para distinguir la imagen del fotograma de referencia de la imagen HDR final y después se llama al método auxiliar **ReencodeAndSavePhotoAsync** para guardar la imagen.
+In the [**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392) event handler, cast the [**Context**](https://msdn.microsoft.com/library/windows/apps/mt181405) property of the [**OptionalReferencePhotoCapturedEventArgs**](https://msdn.microsoft.com/library/windows/apps/mt181404) object to your context object class. This example modifies the file name to distinguish the reference frame image from the final HDR image and then calls the **ReencodeAndSavePhotoAsync** helper method to save the image.
 
 [!code-cs[OptionalReferencePhotoCaptured](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetOptionalReferencePhotoCaptured)]
 
-## Recibir una notificación cuando se han capturado todos los fotogramas
+## Receive a notification when all frames have been captured
 
-La captura de fotos HDR tiene dos pasos. En primer lugar, se capturan varios marcos y, a continuación, se procesan los marcos en la imagen HDR final. No puedes iniciar otra captura mientras se sigan capturando los fotogramas HDR de origen, pero puedes iniciar una captura después de que se han capturado todos los fotogramas, si bien antes de que finalice el posprocesamiento HDR. El evento [**AllPhotosCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181387) se genera cuando las capturas HDR se completan, lo que te permite saber que puedes iniciar otra captura. Un escenario típico consiste en deshabilitar el botón de captura de la interfaz de usuario cuando comienza la captura HDR para después volver a habilitarlo cuando se genera **AllPhotosCaptured**.
+The HDR photo capture has two steps. First, multiple frames are captured, and then the frames are processed into the final HDR image. You can't initiate another capture while the source HDR frames are still being captured, but you can initiate a capture after all of the frames have been captured but before the HDR post-processing is complete. The [**AllPhotosCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181387) event is raised when the HDR captures are complete, letting you know that you can initiate another capture. A typical scenario is to disable your UI's capture button when HDR capture begins and then reenable it when **AllPhotosCaptured** is raised.
 
 [!code-cs[AllPhotosCaptured](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetAllPhotosCaptured)]
 
-## Limpiar el objeto AdvancedPhotoCapture
+## Clean up the AdvancedPhotoCapture object
 
-Cuando la aplicación haya terminado de capturar, antes de eliminar el objeto **MediaCapture**, debes apagar el objeto [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) con una llamada a [**FinishAsync**](https://msdn.microsoft.com/library/windows/apps/mt181391) y establecer la variable de miembro en null.
+When your app is done capturing, before disposing of the **MediaCapture** object, you should shut down the [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) object by calling [**FinishAsync**](https://msdn.microsoft.com/library/windows/apps/mt181391) and setting your member variable to null.
 
 [!code-cs[CleanUpAdvancedPhotoCapture](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpAdvancedPhotoCapture)]
 
-## Temas relacionados
+## Related topics
 
-* [Capturar fotografías y vídeos con MediaCapture](capture-photos-and-video-with-mediacapture.md)
-
-<!--HONumber=Mar16_HO1-->
-
-
+* [Capture photos and video with MediaCapture](capture-photos-and-video-with-mediacapture.md)

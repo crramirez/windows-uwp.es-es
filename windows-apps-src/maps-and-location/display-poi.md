@@ -1,42 +1,43 @@
 ---
-title: "Mostrar puntos de interés en un mapa"
-description: Agrega puntos de interés a un mapa mediante marcadores, imágenes, formas y elementos de interfaz de usuario XAML.
+author: PatrickFarley
+title: 'Display points of interest (POI) on a map'
+description: Add points of interest (POI) to a map using pushpins, images, shapes, and XAML UI elements.
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
 ---
 
-# Mostrar puntos de interés en un mapa
+# Display points of interest (POI) on a map
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Agrega puntos de interés a un mapa con marcadores, imágenes, formas y elementos de la interfaz de usuario de XAML. Un punto de interés es un punto concreto del mapa que representa algo de interés. Por ejemplo, la ubicación de un negocio, ciudad o amigo.
+Add points of interest (POI) to a map using pushpins, images, shapes, and XAML UI elements. A POI is a specific point on the map that represents something of interest. For example, the location of a business, city, or friend.
 
-**Sugerencia** Para saber cómo puedes indicar puntos de interés en tu aplicación, descarga la muestra siguiente de [Windows-universal-samples repo (Repositorio de muestras universales de Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub.
+**Tip** To learn more about displaying POI on your app, download the following sample from the [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) on GitHub.
 
--   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Universal Windows Platform (UWP) map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-Para mostrar marcadores, imágenes y formas en el mapa, agrega los objetos [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077), [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) y [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) a la colección [**MapElements**](https://msdn.microsoft.com/library/windows/apps/dn637033) del control de mapa. Puedes usar el enlace de datos o agregar elementos mediante programación, pero no es posible realizar el enlace a la colección **MapElements** mediante declaración en el marcado XAML.
+Display pushpins, images, and shapes on the map by adding [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077), [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103), and [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) objects to the [**MapElements**](https://msdn.microsoft.com/library/windows/apps/dn637033) collection of the map control. Use data binding or add items programmatically; you can't bind to the **MapElements** collection declaratively in your XAML markup.
 
-Muestra elementos de la interfaz de usuario de XAML en el mapa como, por ejemplo, [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265), [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) o [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) y agrégalos como una propiedad [**Children**](https://msdn.microsoft.com/library/windows/apps/dn637008) de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). Asimismo, también los puedes agregar a la clase [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094) o puedes enlazar **MapItemsControl** a una colección de elementos.
+Display XAML user interface elements such as a [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265), a [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739), or a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) on the map by adding them as [**Children**](https://msdn.microsoft.com/library/windows/apps/dn637008) of the [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). You can also add them to the [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094), or bind the **MapItemsControl** to a collection of items.
 
-En resumen:
+In summary:
 
--   [Agrega un elemento MapIcon al mapa](#mapicon) para mostrar una imagen como, por ejemplo, un marcador con texto opcional.
--   [Agrega un elemento MapPolygon al mapa](#mappolygon) para mostrar una forma multipunto.
--   [Agrega un elemento MapPolyline al mapa](#mappolyline) para mostrar las líneas en el mapa.
--   [Agrega XAML al mapa](#mapxaml) para mostrar elementos de la interfaz de usuario personalizados.
+-   [Add a MapIcon to the map](#mapicon) to display an image such as a pushpin with optional text.
+-   [Add a MapPolygon to the map](#mappolygon) to display a multi-point shape.
+-   [Add a MapPolyline to the map](#mappolyline) to display lines on the map.
+-   [Add XAML to the map](#mapxaml) to display custom UI elements.
 
-Si quieres colocar en el mapa un elevado número de elementos, considera la posibilidad de [superponer imágenes en mosaico en el mapa](overlay-tiled-images.md). Para mostrar carreteras en el mapa, consulta [Mostrar rutas e indicaciones](routes-and-directions.md).
+If you have a large number of elements to place on the map, consider [overlaying tiled images on the map](overlay-tiled-images.md). To display roads on the map, see [Display routes and directions](routes-and-directions.md).
 
-## Agregar un MapIcon
+## Add a MapIcon
 
 
-Para mostrar una imagen (como, por ejemplo, un marcador) con texto opcional en el mapa, usa la clase [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077). Igualmente, para aceptar la imagen predeterminada o proporcionar una imagen personalizada, puedes usar la propiedad [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078). En la siguiente imagen se muestra la imagen predeterminada de un elemento **MapIcon** que consta de la propiedad [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088), la cual muestra ningún valor especificado, un título corto, un título largo y un título muy largo.
+Display an image such a pushpin, with optional text, on the map by using the [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) class. You can accept the default image or provide a custom image by using the [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078) property. The following image displays the default image for a **MapIcon** with no value specified for the [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088) property, with a short title, with a long title, and with a very long title.
 
-![ejemplo de un elemento MapIcon con títulos de diferentes longitudes.](images/mapctrl-mapicons.png)
+![sample mapicon with titles of different lengths.](images/mapctrl-mapicons.png)
 
-En el ejemplo siguiente se muestra un mapa de la ciudad de Seattle, el cual contiene un elemento [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) en la imagen predeterminada y un título opcional para indicar la ubicación de la torre Space Needle. También se centra el mapa en el icono y se acerca el zoom. Para obtener información general sobre cómo usar el control de mapa, consulta [Mostrar mapas con vistas 2D, 3D y Streetside](display-maps.md).
+The following example shows a map of the city of Seattle and adds a [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) with the default image and an optional title to indicate the location of the Space Needle. It also centers the map over the icon and zooms in. For general info about using the map control, see [Display maps with 2D, 3D, and Streetside views](display-maps.md).
 
 ```csharp
       private void displayPOIButton_Click(object sender, RoutedEventArgs e)
@@ -61,30 +62,30 @@ En el ejemplo siguiente se muestra un mapa de la ciudad de Seattle, el cual cont
       }
 ```
 
-Este ejemplo muestra el siguiente punto de interés en el mapa (la imagen predeterminada en el centro).
+This example displays the following POI on the map (the default image in the center).
 
-![mapa con MapIcon](images/displaypoidefault.png)
+![map with mapicon](images/displaypoidefault.png)
 
-La línea de código siguiente te permite mostrar el elemento [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) con una imagen personalizada guardada en la carpeta Assets del proyecto. La propiedad [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078) del elemento **MapIcon** espera un valor de tipo [**RandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701813). Para este tipo es necesaria una declaración **using** para el espacio de nombres [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/br241791).
+The following line of code displays the [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) with a custom image saved in the Assets folder of the project. The [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078) property of the **MapIcon** expects a value of type [**RandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701813). This type requires a **using** statement for the [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/br241791) namespace.
 
-**Sugerencia** Si usas la misma imagen para varios iconos del mapa, declara la clase [**RandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701813) en el nivel de página o aplicación para mejorar el rendimiento.
+**Tip** If you use the same image for multiple map icons, declare the [**RandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701813) at the page or app level for the best performance.
 
 ```csharp
     MapIcon1.Image =
         RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/customicon.png"));
 ```
 
-Ten en cuenta lo siguiente si quieres trabajar con la clase [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077):
+Keep these considerations in mind when working with the [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) class:
 
--   La propiedad [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078) admite un tamaño máximo de imagen de 2048×2048 píxeles.
--   De manera predeterminada, no se garantiza que se muestre la imagen del icono del mapa. Esto es debido a que se ocultará si bloquea otros elementos o etiquetas del mapa. Para mantener la imagen siempre visible, establece la propiedad [**CollisionBehaviorDesired**](https://msdn.microsoft.com/library/windows/apps/dn974327) del icono de mapa en [**MapElementCollisionBehavior.RemainVisible**](https://msdn.microsoft.com/library/windows/apps/dn974314).
--   Asimismo, tampoco se garantiza que se muestre el elemento [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088) de la clase [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077). Si no ves el texto, disminuye su tamaño; para ello tienes que reducir el valor de la propiedad [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
--   Si muestras la imagen de un elemento [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) que señala a una ubicación específica del mapa (por ejemplo, un marcador o una flecha), puedes establecer el valor de la propiedad [**NormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637082) en la ubicación aproximada del puntero de la imagen. Si dejas el valor de **NormalizedAnchorPoint** como el valor predeterminado (0, 0), que representa la esquina superior izquierda de la imagen, puede que los cambios realizados en la propiedad [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) del mapa hagan que la imagen apunte a otra ubicación.
+-   The [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078) property supports a maximum image size of 2048×2048 pixels.
+-   By default, the map icon's image is not guaranteed to be shown. It may be hidden when it obscures other elements or labels on the map. To keep it visible, set the map icon's [**CollisionBehaviorDesired**](https://msdn.microsoft.com/library/windows/apps/dn974327) property to [**MapElementCollisionBehavior.RemainVisible**](https://msdn.microsoft.com/library/windows/apps/dn974314).
+-   The optional [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088) of the [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) is not guaranteed to be shown. If you don't see the text, zoom out by decreasing the value of the [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) property of the [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
+-   When you display a [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) image that points to a specific location on the map - for example, a pushpin or an arrow - consider setting the value of the [**NormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637082) property to the approximate location of the pointer on the image. If you leave the value of **NormalizedAnchorPoint** at its default value of (0, 0), which represents the upper left corner of the image, changes in the [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) of the map may leave the image pointing to a different location.
 
-## Agregar un elemento MapPolygon
+## Add a MapPolygon
 
 
-Usa la clase [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) para mostrar una forma multipunto en el mapa. En el siguiente ejemplo, obtenido de una [muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977), se muestra en el mapa un cuadro rojo con el borde azul.
+Display a multi-point shape on the map by using the [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) class. The following example, from the [UWP map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977), displays a red box with blue border on the map.
 
 ```csharp
 private void mapPolygonAddButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
@@ -109,10 +110,10 @@ private void mapPolygonAddButton_Click(object sender, Windows.UI.Xaml.RoutedEven
 }
 ```
 
-## Agregar un elemento MapPolyline
+## Add a MapPolyline
 
 
-Usa la clase [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) para mostrar una línea en el mapa. En el siguiente ejemplo, obtenido de una [muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977), se muestra una línea discontinua en el mapa.
+Display a line on the map by using the [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) class. The following example, from the [UWP map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977), displays a dashed line on the map.
 
 ```csharp
 private void mapPolylineAddButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
@@ -132,15 +133,15 @@ private void mapPolylineAddButton_Click(object sender, Windows.UI.Xaml.RoutedEve
 }
 ```
 
-## Agregar XAML
+## Add XAML
 
 
-Visualiza elementos de la interfaz de usuario personalizados en el mapa mediante XAML. Coloca XAML en el mapa especificando la ubicación y el punto de anclaje normalizado del XAML.
+Display custom UI elements on the map using XAML. Position XAML on the map by specifying the location and normalized anchor point of the XAML.
 
--   Llama a [**SetLocation**](https://msdn.microsoft.com/library/windows/desktop/ms704369) para establecer la ubicación del mapa donde debe colocarse el código XAML.
--   Llama a [**SetNormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637050) para establecer la ubicación relativa en el código XAML que corresponde a la ubicación especificada.
+-   Set the location on the map where the XAML is placed by calling [**SetLocation**](https://msdn.microsoft.com/library/windows/desktop/ms704369).
+-   Set the relative location on the XAML that corresponds to the specified location by calling [**SetNormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637050).
 
-En el ejemplo siguiente se muestra un mapa de la ciudad de Seattle y se agrega un control [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) de XAML para indicar la ubicación de la torre Space Needle. También se centra el mapa en el área y se acerca el zoom. Para obtener información general sobre cómo usar el control de mapa, consulta [Mostrar mapas con vistas 2D, 3D y Streetside](display-maps.md).
+The following example shows a map of the city of Seattle and adds a XAML [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) control to indicate the location of the Space Needle. It also centers the map over the area and zooms in. For general info about using the map control, see [Display maps with 2D, 3D, and Streetside views](display-maps.md).
 
 ```csharp
 private void displayXAMLButton_Click(object sender, RoutedEventArgs e)
@@ -169,24 +170,24 @@ private void displayXAMLButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Este ejemplo muestra un borde azul en el mapa.
+This example displays a blue border on the map.
 
 ![](images/displaypoixaml.png)
 
-Los siguientes ejemplos muestran cómo agregar elementos de interfaz de usuario de XAML directamente en el marcado XAML de la página mediante el enlace de datos. Igual que sucede con otros elementos XAML que muestran contenido, [**Children**](https://msdn.microsoft.com/library/windows/apps/dn637008) es la propiedad de contenido predeterminada de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004), y no es necesario especificarla expresamente en el marcado XAML.
+The next examples show how to add XAML UI elements directly in the XAML markup of the page using data binding. As with other XAML elements that display content, [**Children**](https://msdn.microsoft.com/library/windows/apps/dn637008) is the default content property of the [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) and does not have to be specified explicitly in XAML markup.
 
-En este ejemplo se indica cómo puedes mostrar dos controles XAML como objetos secundarios implícitos de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
+This example shows how to display two XAML controls as implicit children of the [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
-```xaml
+```xml
 <maps:MapControl>
     <TextBox Text="Seattle" maps:MapControl.Location="{Binding SeattleLocation}"/>
     <TextBox Text="Bellevue" maps:MapControl.Location="{Binding BellevueLocation}"/>
 </maps:MapControl>
 ```
 
-En este ejemplo se indica cómo puedes mostrar dos controles XAML incluidos dentro de la clase [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094).
+This example shows how to display two XAML controls contained within a [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094).
 
-```xaml
+```xml
 <maps:MapControl>
   <maps:MapItemsControl>
     <TextBox Text="Seattle" maps:MapControl.Location="{Binding SeattleLocation}"/>
@@ -195,9 +196,9 @@ En este ejemplo se indica cómo puedes mostrar dos controles XAML incluidos dent
 </maps:MapControl>
 ```
 
-En este ejemplo se muestra una colección de elementos XAML enlazados a la clase [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094).
+This example displays a collection of XAML elements bound to a [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094).
 
-```xaml
+```xml
 <maps:MapControl x:Name="MapControl" MapTapped="MapTapped" MapDoubleTapped="MapTapped" MapHolding="MapTapped">
   <maps:MapItemsControl ItemsSource="{Binding StateOverlays}">
     <maps:MapItemsControl.ItemTemplate>
@@ -211,20 +212,15 @@ En este ejemplo se muestra una colección de elementos XAML enlazados a la clase
 </maps:MapControl>
 ```
 
-## Temas relacionados
+## Related topics
 
-* [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
-* [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP traffic app sample (Ejemplo de aplicación de tráfico de UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Bing Maps Developer Center](https://www.bingmapsportal.com/)
+* [UWP map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Design guidelines for maps](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Build 2015 video: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP traffic app sample](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)
 * [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103)
 * [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114)
-
-
-
-
-<!--HONumber=Mar16_HO1-->
 
 

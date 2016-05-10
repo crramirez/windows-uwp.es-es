@@ -1,139 +1,135 @@
 ---
+author: drewbatgit
 ms.assetid: B5E3A66D-0453-4D95-A3DB-8E650540A300
-description: En este artículo se muestra cómo usar la clase MediaProcessingTrigger y una tarea en segundo plano para procesar los archivos multimedia en segundo plano.
-title: Procesar archivos multimedia en segundo plano
+description: This article shows you how to use the MediaProcessingTrigger and a background task to process media files in the background.
+title: Process media files in the background
 ---
 
-# Procesar archivos multimedia en segundo plano
+# Process media files in the background
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este artículo se muestra cómo usar la clase [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) y una tarea en segundo plano para procesar los archivos multimedia en segundo plano.
+This article shows you how to use the [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) and a background task to process media files in the background.
 
-La aplicación de ejemplo descrita en este artículo permite al usuario seleccionar un archivo multimedia de entrada para transcodificar y especificar un archivo de salida para el resultado de la transcodificación. A continuación, se inicia una tarea en segundo plano para realizar la operación de transcodificación. La clase [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) se usa para admitir abundantes y diversos escenarios de procesamiento de medios entre los que se incluyen, además de la transcodificación, la representación de composiciones multimedia en el disco y la carga de archivos multimedia procesados una vez finalizado el procesamiento.
+The example app described in this article allows the user to select an input media file to transcode and specify an output file for the transcoding result. Then, a background task is launched to perform the transcoding operation. The [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) is intended to support many different media processing scenarios besides transcoding, including rendering media compositions to disk and uploading processed media files after processing is complete.
 
-Para obtener información más detallada sobre las diferentes características de la aplicación universal de Windows que se usa en esta muestra, consulta:
+For more detailed information on the different Universal Windows app features utilized in this sample, see:
 
--   [Transcodificar archivos multimedia](transcode-media-files.md)
--   [Iniciar, reanudar y tareas en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt227652)
--   [Distintivos de mosaico y notificaciones](https://msdn.microsoft.com/library/windows/apps/mt185606)
+-   [Transcode media files](transcode-media-files.md)
+-   [Launching resuming and background tasks](https://msdn.microsoft.com/library/windows/apps/mt227652)
+-   [Tiles badges and notifications](https://msdn.microsoft.com/library/windows/apps/mt185606)
 
-## Crear una tarea en segundo plano de procesamiento de multimedia
+## Create a media processing background task
 
-Para agregar una tarea en segundo plano a la solución existente en Microsoft Visual Studio, escribe un nombre para la composición.
+To add a background task to your existing solution in Microsoft Visual Studio, Enter a name for your comp
 
-1.  En el menú **Archivo**, selecciona **Agregar** y luego **Nuevo proyecto...**.
-2.  Selecciona el tipo de proyecto **Componente de Windows Runtime (Windows Universal)**.
-3.  Escribe un nombre para el nuevo proyecto de componente. En este ejemplo usaremos el nombre de proyecto **MediaProcessingBackgroundTask**.
-4.  Haz clic en Aceptar.
+1.  From the **File** menu, select **Add** and then **New Project...**.
+2.  Select the project type **Windows Runtime Component (Universal Windows)**.
+3.  Enter a name for your new component project. This example uses the project name **MediaProcessingBackgroundTask**.
+4.  Click OK.
 
-En el **Explorador de soluciones**, haz clic con el botón derecho en el icono del archivo "Class1.cs", que se crea de forma predeterminada, y selecciona **Cambiar nombre**. Cambia el nombre del archivo a "MediaProcessingTask.cs". Cuando Visual Studio te pregunte si deseas cambiar el nombre de todas las referencias a esta clase, haz clic en **Sí**.
+In **Solution Explorer**, right-click the icon for the "Class1.cs" file that is created by default and select **Rename**. Rename the file to "MediaProcessingTask.cs". When Visual Studio asks if you want to rename all of the references to this class, click **Yes**.
 
-En el archivo de clase que ha cambiado de nombre, agrega las siguientes directivas de tipo **using** para incluir estos espacios de nombres en el proyecto.
+In the renamed class file, add the following **using** directives to include these namespaces in your project.
                                   
 [!code-cs[BackgroundUsing](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundUsing)]
 
-Actualiza la declaración de clase para que su clase herede de la interfaz [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794).
+Update your class declaration to make your class inherit from [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794).
 
 [!code-cs[BackgroundClass](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundClass)]
 
-Agrega las siguientes variables de miembro a tu clase:
+Add the following member variables to your class:
 
--   Una interfaz [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797) que se usará para actualizar la aplicación en primer plano mediante el progreso de la tarea en segundo plano.
--   Una clase [**BackgroundTaskDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700499) que evitará que el sistema cierre la tarea en segundo plano mientras se realiza la transcodificación de archivos multimedia de forma asincrónica.
--   Un objeto **CancellationTokenSource** que se puede usar para cancelar la operación de transcodificación asincrónica.
--   El objeto [**MediaTranscoder**](https://msdn.microsoft.com/library/windows/apps/br207080), que se usará para transcodificar archivos multimedia.
+-   An [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797) that will be used to update the foreground app with the progress of the background task.
+-   A [**BackgroundTaskDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700499) that keeps the system from shutting down your background task while media transcoding is being performed asynchronously.
+-   A **CancellationTokenSource** object that can be used to cancel the asynchronous transcoding operation.
+-   The [**MediaTranscoder**](https://msdn.microsoft.com/library/windows/apps/br207080) object that will be used to transcode media files.
 
 [!code-cs[BackgroundMembers](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundMembers)]
 
-Una vez hecho esto, el sistema llamará al método [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) de una tarea en segundo plano cuando se inicie la tarea. Debes establecer el objeto [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) que se pasó al método de la variable de miembro correspondiente. A continuación, registra un controlador para el evento [**Canceled**](https://msdn.microsoft.com/library/windows/apps/br224798), que se producirá si el sistema lo necesita para cerrar la tarea en segundo plano. Seguidamente, establece la propiedad [**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800) en cero.
+The system calls [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) method of a background task when the task is launched. Set the [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) object passed into the method to the corresponding member variable. Register a handler for the [**Canceled**](https://msdn.microsoft.com/library/windows/apps/br224798) event, which will be raised if the system needs to shut down the background task. Then, set the [**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800) property to zero.
 
-Deberás llamar al método [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700507) del objeto de la tarea en segundo plano para obtener un aplazamiento. Esta acción le dice al sistema que no cierre la tarea porque estás realizando operaciones asincrónicas.
+Next, call the background task object's [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700507) method to obtain a deferral. This tells the system not to shut down your task because you are performing asynchronous operations.
 
-El siguiente paso es llamar al método auxiliar **TranscodeFileAsync**, que se define en la siguiente sección. Si esto se completa correctamente, se llama a un método auxiliar para que inicie una notificación del sistema que avisará al usuario de que se ha completado la transcodificación.
+Next, call the helper method **TranscodeFileAsync**, which is defined in the next section. If that completes successfully, a helper method is called to launch a toast notification to alert the user that transcoding is complete.
 
-Al final del método **Run**, llama al método [**Complete**](https://msdn.microsoft.com/library/windows/apps/hh700504) del objeto de aplazamiento para que el sistema sepa que la tarea en segundo plano se ha completado y que se puede finalizar.
+At the end of the **Run** method, call [**Complete**](https://msdn.microsoft.com/library/windows/apps/hh700504) on the deferral object to let the system know that your background task is complete and can be terminated.
 
 [!code-cs[Run](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetRun)]
 
-En el método auxiliar **TranscodeFileAsync**, los nombres de los archivos de entrada y salida de las operaciones de transcodificación se recuperan de la propiedad [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) de la aplicación. La aplicación en primer plano se encargará de establecer estos valores. Crea un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) para los archivos de entrada y salida y, a continuación, crea un perfil de codificación para usar en la transcodificación.
+In the **TranscodeFileAsync** helper method, the file names for the input and output files for the transcoding operations are retrieved from the [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) for your app. These values will be set by your foreground app. Create a [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) object for the input and output files and then create an encoding profile to use for transcoding.
 
-Llama a [**PrepareFileTranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700936) y pasa el archivo de entrada, el archivo de salida y el perfil de codificación. Recuerda que el objeto [**PrepareTranscodeResult**](https://msdn.microsoft.com/library/windows/apps/hh700941) que devuelve esta llamada te permite saber si se puede realizar la transcodificación. Si resulta que la propiedad [**CanTranscode**](https://msdn.microsoft.com/library/windows/apps/hh700942) es "true", llama a [**TranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700946) para realizar la operación de transcodificación.
+Call [**PrepareFileTranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700936), passing in the input file, output file, and encoding profile. The [**PrepareTranscodeResult**](https://msdn.microsoft.com/library/windows/apps/hh700941) object returned from this call lets you know if transcoding can be performed. If the [**CanTranscode**](https://msdn.microsoft.com/library/windows/apps/hh700942) property is true, call [**TranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700946) to perform the transcoding operation.
 
-El método **AsTask** te permite realizar un seguimiento del progreso de la operación asincrónica o cancelarla. Puedes crear un objeto **Progress** y especificar las unidades de progreso que quieras y el nombre del método al que se llamará para notificarte el progreso actual de la tarea. A continuación, pasa el objeto **Progress** al método **AsTask** junto con el token de cancelación que te permitirá cancelar la tarea.
+The **AsTask** method enables you to track the progress the asynchronous operation or cancel it. Create a new **Progress** object, specifying the units of progress you desire and the name of the method that will be called to notify you of the current progress of the task. Pass the **Progress** object into the **AsTask** method along with the cancellation token that allows you to cancel the task.
 
 [!code-cs[TranscodeFileAsync](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetTranscodeFileAsync)]
 
-En el método que usaste para crear el objeto **Progress** en el paso anterior, establece el progreso de la instancia de la tarea en segundo plano. Esta acción te permitirá pasar el progreso a la aplicación en primer plano si se está ejecutando.
+In the method you used to create the Progress object in the previous step, **Progress**, set the progress of the background task instance. This will pass the progress to the foreground app, if it is running.
 
 [!code-cs[Progress](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetProgress)]
 
-El método auxiliar **SendToastNotification** crea una nueva notificación del sistema mediante la obtención de un documento XML de plantilla de una notificación del sistema que solo tiene contenido de texto. De esta manera se establecerá el elemento de texto de la notificación del sistema XML y se creará un nuevo objeto [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) a partir del documento XML. Por último, puedes mostrar la notificación del sistema al usuario mediante una llamada a [**ToastNotifier.Show**](https://msdn.microsoft.com/library/windows/apps/br208659).
+The **SendToastNotification** helper method creates a new toast notification by getting a template XML document for a toast that only has text content. The text element of the toast XML is set and then a new [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) object is created from the XML document. Finally, the toast is shown to the user by calling [**ToastNotifier.Show**](https://msdn.microsoft.com/library/windows/apps/br208659).
 
 [!code-cs[SendToastNotification](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetSendToastNotification)]
 
-## Registrar y cargar la tarea en segundo plano
+## Register and launch the background task
 
-Para poder iniciar la tarea en segundo plano desde la aplicación en primer plano, debes actualizar el archivo Package.appmanifest de la aplicación en primer plano para que el sistema sepa que la aplicación usa una tarea en segundo plano.
+Before you can launch the background task from your foreground app, you must update your foreground app's Package.appmanifest file to let the system know that your app uses a background task.
 
-1.  En el **Explorador de soluciones**, haz doble clic en el icono del archivo Package.appmanifest para abrir el editor del manifiesto.
-2.  Selecciona la pestaña **Declaraciones**.
-3.  En **Declaraciones disponibles**, selecciona **Tareas en segundo plano** y haz clic en **Agregar**.
-4.  En **Declaraciones admitidas**, asegúrate de que esté seleccionado el elemento **Tareas en segundo plano**. En **Propiedades**, selecciona la casilla de verificación **Procesamiento multimedia**.
-5.  En el cuadro de texto **Punto de entrada**, especifica el espacio de nombres y el nombre de clase para la prueba en segundo plano, separados por un punto. Para este ejemplo, la entrada es:
+1.  In **Solution Explorer**, double-click the Package.appmanifest file icon to open the manifest editor.
+2.  Select the **Declarations** tab.
+3.  From **Available Declarations**, select **Background Tasks** and click **Add**.
+4.  Under **Supported Declarations** make sure that the **Background Tasks** item is selected. Under **Properties**, select the checkbox for **Media processing**.
+5.  In the **Entry Point** text box, specify the namespace and class name for your background test, separated by a period. For this example, the entry is:
    ```csharp
    MediaProcessingBackgroundTask.MediaProcessingTask
    ```
-A continuación, debes agregar una referencia a la tarea en segundo plano a tu aplicación en primer plano.
-1.  En el **Explorador de soluciones**, en el proyecto de la aplicación en primer plano, haz clic con el botón secundario en la carpeta **Referencias** y selecciona **Agregar referencia...**.
-2.  Expande el nodo **Proyectos** y selecciona **Solución**.
-3.  Activa la casilla situada junto a tu proyecto de tarea en segundo plano y haz clic en **Aceptar**.
+Next, you need to add a reference to your background task to your foreground app.
+1.  In **Solution Explorer**, under your foreground app project, right-click the **References** folder and select **Add Reference...**.
+2.  Expand the **Projects** node and select **Solution**.
+3.  Check the box next to your background task project and click **OK**.
 
-El resto del código de este ejemplo debe agregarse a la aplicación en primer plano. En primer lugar, debes agregar los siguientes espacios de nombres al proyecto.
+The rest of the code in this example should be added to your foreground app. First, you will need to add the following namespaces to your project.
 
 [!code-cs[ForegroundUsing](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetForegroundUsing)]
 
-A continuación, agrega las siguientes variables de miembro que son necesarias para registrar la tarea en segundo plano.
+Next, add the following member variables that are needed to register the background task.
 
 [!code-cs[ForegroundMembers](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetForegroundMembers)]
 
-El método auxiliar **PickFilesToTranscode** usa las clases [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) y [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para abrir los archivos de entrada y salida de la transcodificación. Gracias a esto, el usuario puede seleccionar archivos en una ubicación a la que tu aplicación no tiene acceso. Para asegurarte de que tu tarea en segundo plano pueda abrir los archivos, agrégalos a la propiedad [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) de la aplicación.
+The **PickFilesToTranscode** helper method uses a [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) and a [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) to open the input and output files for transcoding. The user may select files in a location that your app does not have access to. To make sure your background task can open the files, add them to the [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) for your app.
 
-Finalmente, establece los nombres de archivo de entrada y de salida en la propiedad [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) de la aplicación. La tarea en segundo plano recupera los nombres de archivo de esta ubicación.
+Finally, set entries for the input and output file names in the [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) for your app. The background task retrieves the file names from this location.
 
 [!code-cs[PickFilesToTranscode](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetPickFilesToTranscode)]
 
-Para registrar la tarea en segundo plano, crea las clases [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) y [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). A continuación, establece el nombre del generador de la tarea en segundo plano para poder identificarla más tarde. Establece la propiedad [**TaskEntryPoint**](https://msdn.microsoft.com/library/windows/apps/br224774) en la misma cadena de nombres de clase y espacio de nombres que usaste en el archivo de manifiesto. Una vez hecho esto, establece la propiedad [**Trigger**](https://msdn.microsoft.com/library/windows/apps/dn641725) en la instancia **MediaProcessingTrigger**.
+To register the background task, create a new [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) and a new [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Set the name of the background task builder so that you can identify it later. Set the [**TaskEntryPoint**](https://msdn.microsoft.com/library/windows/apps/br224774) to the same namespace and class name string you used in the manifest file. Set the [**Trigger**](https://msdn.microsoft.com/library/windows/apps/dn641725) property to the **MediaProcessingTrigger** instance.
 
-Antes de registrar la tarea, asegúrate de anular el registro de cualquier tarea registrada previamente; para ello, revisa la colección [**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) y llama al método [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br229870) de las tareas que tengan el nombre que especificaste en la propiedad [**BackgroundTaskBuilder.Name**](https://msdn.microsoft.com/library/windows/apps/br224771).
+Before registering the task, make sure you unregister any previously registered tasks by looping through the [**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) collection and calling [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br229870) on any tasks that have the name you specified in the [**BackgroundTaskBuilder.Name**](https://msdn.microsoft.com/library/windows/apps/br224771) property.
 
-Registra la tarea en segundo plano llamando al método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772). Seguidamente, registra los controladores de los eventos [**Completed**](https://msdn.microsoft.com/library/windows/apps/br224788) y [**Progress**](https://msdn.microsoft.com/library/windows/apps/br224808).
+Register the background task by calling [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772). Register handlers for the [**Completed**](https://msdn.microsoft.com/library/windows/apps/br224788) and [**Progress**](https://msdn.microsoft.com/library/windows/apps/br224808) events.
 
 [!code-cs[RegisterBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetRegisterBackgroundTask)]
 
-Inicia la tarea en segundo plano llamando al método [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071) del objeto **MediaProcessingTrigger**. El objeto [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007) que devuelve este método te permitirá saber si la tarea en segundo plano se inició correctamente y, si no es así, te permitirá saber el por qué.
+Launch the background task by calling the **MediaProcessingTrigger** object's [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071) method. The [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007) object returned by this method lets you know whether the background task was started successfully, and if not, lets you know why the background task wasn't launched.
 
 [!code-cs[LaunchBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetLaunchBackgroundTask)]
 
-Se llama al controlador de eventos **OnProgress** cuando la tarea en segundo plano actualiza el progreso de la operación. Puedes usar esta oportunidad para actualizar la interfaz de usuario con la información de progreso.
+The **OnProgress** event handler is called when the background task updates the progress of the operation. You can use this opportunity to update your UI with progress information.
 
 [!code-cs[OnProgress](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetOnProgress)]
 
-Se llama al controlador de eventos **OnCompleted** cuando la tarea en segundo plano termina de ejecutarse. Esta es otra oportunidad para actualizar la interfaz de usuario y proporcionar información de estado al usuario.
+The **OnCompleted** event handler is called when the background task has finished running. This is another opportunity to update your UI to give status information to the user.
 
 [!code-cs[OnCompleted](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetOnCompleted)]
 
 
- 
+ 
 
- 
-
-
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

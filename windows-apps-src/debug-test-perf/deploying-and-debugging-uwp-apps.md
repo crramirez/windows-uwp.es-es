@@ -1,89 +1,85 @@
 ---
+author: mcleblanc
 ms.assetid: 9322B3A3-8F06-4329-AFCB-BE0C260C332C
-description: Este artículo te guiará en el procedimiento para dirigirte a distintos destinos de implementación y de depuración.
-title: Implementación y depuración de aplicaciones para la Plataforma universal de Windows (UWP)
+description: This article guides you through the steps to target various deployment and debugging targets.
+title: Deploying and debugging Universal Windows Platform (UWP) apps
 ---
 
-# Implementación y depuración de aplicaciones para la Plataforma universal de Windows (UWP)
+# Deploying and debugging Universal Windows Platform (UWP) apps
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este artículo te guiará en el procedimiento para dirigirte a distintos destinos de implementación y de depuración.
+This article guides you through the steps to target various deployment and debugging targets.
 
-Microsoft Visual Studio permite implementar y depurar aplicaciones para la Plataforma universal de Windows (UWP) en una variedad de dispositivos de Windows 10. Visual Studio puede controlar el proceso de creación y registro de la aplicación en el dispositivo de destino.
+Microsoft Visual Studio allows you to deploy and debug your Universal Windows Platform (UWP) apps on a variety of Windows 10 devices. Visual Studio will handle the process of building and registering the application on the target device.
 
-## Elección de un destino de implementación
+## Picking a deployment target
 
-Para elegir un destino, navega hasta la lista desplegable de destino de depuración junto al botón **Iniciar depuración** y selecciona el destino en el que quieres implementar la aplicación. Después de seleccionar el destino, elige **Iniciar depuración (F5)** para realizar la implementación y la depuración en ese destino o presiona **CTRL+F5** para realizar solo la implementación en ese destino.
+To pick a target, navigate to the debug target dropdown next to the **Start Debugging** button and select which target you want to deploy your application to. After the target is selected, choose **Start Debugging (F5)** to deploy and debug on that target, or press **Ctrl+F5** to just deploy to that target.
 
 ![](images/debug-device-target-list.png)
 
--   **Equipo local** implementa la aplicación en el equipo de desarrollo actual. Esta opción solo está disponible si la **Versión mínima de la plataforma de destino** de la aplicación es menor o igual que el sistema operativo del equipo de desarrollo.
--   **Simulador** va a implementar la aplicación en un entorno simulado en el equipo de desarrollo actual. Esta opción solo está disponible si la **Versión mínima de la plataforma de destino** de la aplicación es menor o igual que el sistema operativo del equipo de desarrollo.
--   **Dispositivo** implementará la aplicación en un dispositivo conectado mediante USB. El dispositivo debe haberlo desbloqueado el desarrollador y debe tener la pantalla desbloqueada.
--   Un destino **Emulador** arrancará e implementará la aplicación en un emulador con la configuración especificada en el nombre. Los emuladores solo están disponibles en equipos compatibles con Hyper-V que ejecutan Windows 8.1 o posterior.
--   **Equipo remoto** te permitirá especificar un destino remoto para implementar la aplicación. Puedes encontrar más información acerca de la implementación en un equipo remoto en [Especificación de un dispositivo remoto](#specifying-a-remote-device).
+-   **Local Machine** will deploy the application to your current development machine. This option is only available if your application's **Target Platform Min. Version** is less than or equal to the operating system on your development machine.
+-   **Simulator** will deploy the application to a simulated environment on your current development machine. This option is only available if your application's **Target Platform Min. Version** is less than or equal to the operating system on your development machine.
+-   **Device** will deploy the application to a USB connected device. The device must be developer unlocked and have the screen unlocked.
+-   An **Emulator** target will boot up and deploy the application to an emulator with the configuration specified in the name. Emulators are only available on Hyper-V enabled machines running Windows 8.1 or beyond.
+-   **Remote Machine** will let you specify a remote target to deploy the application. More information about deploying to a remote machine can be found in [Specifying a remote device](#specifying-a-remote-device).
 
-## Especificación de un dispositivo remoto
+## Specifying a remote device
 
-### C# y Microsoft Visual Basic
+### C# and Microsoft Visual Basic
 
-Para especificar un equipo remoto para aplicaciones de C# o Microsoft Visual Basic, selecciona **Equipo remoto** en la lista desplegable de destino de depuración. El cuadro de diálogo **Conexiones remotas** aparecerá y te permitirá especificar una dirección IP o seleccionar un dispositivo detectado. De manera predeterminada, el modo de autenticación **Universal** está seleccionado. Para determinar el modo de autenticación que se usará, consulta [Modos de autenticación](#authentication-modes).
+To specify a remote machine for C# or Microsoft Visual Basic apps, select **Remote Machine** in the debug target dropdown. The **Remote Connections** dialog will appear which will let you specify an IP Address or select a discovered device. By default, the **Universal** authentication mode is selected. To determine which authentication mode to use, see [Authentication modes](#authentication-modes).
 
 ![](images/debug-remote-connections.png)
 
-Para volver a este cuadro de diálogo, puedes abrir las propiedades del proyecto y navegar hasta la pestaña **Depurar**. Desde esta, selecciona **Buscar...** junto a **Equipo remoto:**
+To return to this dialog, you can open project properties and navigate to the **Debug** tab. From there, select **Find…** next to **Remote machine:**
 
 ![](images/debug-remote-machine-config.png)
 
-Para implementar una aplicación en un equipo remoto, también deberás descargar e instalar Herramientas remotas para Visual Studio en el equipo de destino. Consulta [Instrucciones del equipo remoto](#remote-pc-instructions) para obtener instrucciones completas.
+To deploy an application to a remote PC, you will also need to download and install the Visual Studio Remote Tools on the target PC. See [Remote PC instructions](#remote-pc-instructions) for full instructions.
 
-### C++ y JavaScript
+### C++ and JavaScript
 
-Para especificar el destino de un equipo remoto de una aplicación para UWP de C++ o JavaScript, ve a las propiedades del proyecto. Para ello, haz clic con el botón secundario en el **Explorador de soluciones** y haz clic en **Propiedades**. Navegar hasta la configuración de **Depuración** y cambia el valor de **Depurador para iniciar** a **Equipo remoto**. A continuación, rellena **Nombre del equipo** (o haz clic en **Buscar...** para encontrar uno) y establece la propiedad **Tipo de autenticación**.
+To specify a remote machine target for a C++ or JavaScript UWP app, go to project properties by right clicking on the project in the **Solution Explorer**, and clicking **Properties**. Navigate to **Debugging** settings and change **Debugger to launch** to **Remote Machine**. Then fill in the **Machine Name** (or click **Locate…** to find one) and set the **Authentication Type** property.
 
 ![](images/debug-property-pages.png)
-Después de especificar el equipo, puedes seleccionar **Equipo remoto** en la lista desplegable de destino de depuración para volver a ese equipo especificado. Solo se puede seleccionar un equipo remoto a la vez.
+After the machine is specified, you can select **Remote Machine** in the debug target dropdown to return to that specified machine. Only one remote machine can be selected at a time.
 
-### Instrucciones del equipo remoto
+### Remote PC instructions
 
-Para implementar en un equipo remoto, el equipo de destino debe tener instalado Visual Studio Remote Tools. El equipo remoto también deben ejecutar una versión de Windows que sea mayor o igual a la propiedad **Versión mínima de la plataforma de destino** de tus aplicaciones. Una vez que has instalado las herramientas remotas, debes iniciar al depurador remoto en el equipo de destino. Para ello, busca **Depurador remoto** en el menú **Inicio** para iniciarlo, y si te lo pide, permite que el depurador configure las opciones del firewall. De manera predeterminada, el depurador se inicia con la autenticación de Windows. Esto requiere credenciales de usuario si el usuario que inició sesión no es el mismo en ambos equipos. Para cambiar a **Sin autenticación**, ve a **Herramientas** -&gt; **Opciones** en el **Depurador remoto** y establécelo en **Sin autenticación**. Una vez que el depurador remoto esté configurado, puedes implementar desde el equipo de desarrollo.
+To deploy to a remote PC, the target PC must have the Visual Studio Remote Tools installed. The remote PC must also be running a version of Windows that is greater than or equal to your apps **Target Platform Min. Version** property. Once you have installed the remote tools, you must launch the remote debugger on the target PC. To do this, search for **Remote Debugger** in the **Start** menu launch it, and if prompted allow the debugger to configure your firewall settings. By default, the debugger launches with Windows authentication. This will require user credentials if the logged in user is not the same on both PCs. To change it to **No authentication**, go to **Tools** -&gt; **Options** in the **Remote Debugger** and set it to **No Authentication**. Once the remote debugger is setup, you can deploy from your development machine.
 
-Para obtener más información, consulta la página de descarga de [Herramientas remotas para Visual Studio]( http://go.microsoft.com/fwlink/?LinkId=717039).
+For more information see the [Remote Tools for Visual Studio]( http://go.microsoft.com/fwlink/?LinkId=717039) download page.
 
-## Modos de autenticación
+## Authentication modes
 
-Existen tres modos de autenticación para la implementación del equipo remoto:
+There are three authentication modes for remote machine deployment:
 
-- **Universal (protocolo sin cifrar)**: usa este modo de autenticación siempre que realices una implementación en un dispositivo remoto que no sea un PC Windows (de escritorio o portátil). Actualmente, solo son los dispositivos IoT. Universal (protocolo sin cifrar) solo se debería usar en redes de confianza. La conexión de depuración es vulnerable para los usuarios malintencionados que podrían interceptar y cambiar los datos que se pasan entre el desarrollo y el equipo remoto.
-- **Windows**: este modo de autenticación solo está destinado al uso en la implementación de equipos remotos (de escritorio o portátil). Usa este modo de autenticación si tienes acceso a las credenciales del usuario que inició la sesión del equipo de destino. Este es el canal más seguro para la implementación remota.
-- **Ninguno**: este modo de autenticación solo está destinado al uso en la implementación de equipos remotos (de escritorio o portátil). Usa este modo de autenticación si tienes una instalación de equipo de prueba en un entorno en el que se inició sesión con una cuenta de prueba y no se pueden escribir credenciales. Asegúrate de que la configuración del depurador remoto esté establecida para no aceptar ninguna autenticación.
+- **Universal (Unencrypted Protocol)**: Use this authentication mode whenever you are deploying to a remote device that is not a Windows PC (desktop or laptop). Currently, this is only IoT devices. Universal (Unencrypted Protocol) should only be used on trusted networks. The debugging connection is vulnerable to malicious users who could intercept and change data being passed between the development and remote machine.
+- **Windows**: This authentication mode is only intended to be used for remote PC deployment (desktop or laptop). Use this authentication mode when you have access to the credentials of the logged in user of the target machine. This is the most secure channel for remote deployment.
+- **None**: This authentication mode is only intended to be used for remote PC deployment (desktop or laptop). Use this authentication mode when you have a test machine setup in an environment that has a test account logged in and you cannot enter the credentials. Make sure the remote debugger settings are set to accept no authentication.
 
-## Opciones de depuración
+## Debugging options
 
-Windows 10 presenta una mejora del rendimiento de inicio de las aplicaciones para UWP gracias al inicio y la posterior suspensión de aplicaciones de forma proactiva mediante una técnica denominada [inicio previo](https://msdn.microsoft.com/library/windows/apps/Mt593297). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero algunas aplicaciones pueden necesitar ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de código puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo. La depuración se admite tanto desde un proyecto de Visual Studio (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar el inicio previo de la Aplicación Windows universal**) como para las aplicaciones ya instaladas en el equipo (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar paquete de aplicaciones instalado** y activa la casilla de **Activar aplicación con inicio previo**). Para obtener más información, lee la entrada de blog sobre el [inicio previo de depuración de UWP]( http://go.microsoft.com/fwlink/?LinkId=717245).
+On Windows 10, the startup performance of UWP apps is improved by proactively launching and then suspending apps in a technique called [prelaunch](https://msdn.microsoft.com/library/windows/apps/Mt593297). Many applications will not need to do anything special to work in this mode, but some applications may need to adjust their behavior. To help debug any issues in these code paths you can start debugging the app from Visual Studio in prelaunch mode. Debugging is supported both from a Visual Studio project (**Debug** -&gt; **Other Debug Targets** -&gt; **Debug Universal Windows App Prelaunch**), and for apps already installed on the machine (**Debug** -&gt; **Other Debug Targets** -&gt; **Debug Installed App Package**, and check the box for **Activate app with Prelaunch**). For more information read about how to [Debug UWP Prelaunch]( http://go.microsoft.com/fwlink/?LinkId=717245).
 
-Puedes establecer las siguientes opciones de implementación en la página de propiedades de **Depurar** del proyecto de inicio.
+You can set the following deployment options on the **Debug** property page of the startup project.
 
-**Permitir bucle invertido de red**
+**Allow Network Loopback**
 
-Por motivos de seguridad, no se permite que una aplicación para UWP instalada del modo estándar realice llamadas de red al dispositivo en el que está instalada. De manera predeterminada, la implementación de Visual Studio crea una exención de esta regla para la aplicación implementada. Esta exención te permite probar los procedimientos de comunicación en un solo equipo. Antes de enviar la aplicación a la Tienda Windows, debes probarla sin la exención.
+For security reasons, a UWP app that is installed in the standard manner is not allowed to make network calls to the device it is installed on. By default, Visual Studio deployment creates an exemption from this rule for the deployed app. This exemption allows you to test communication procedures on a single machine. Before submitting your app to the Windows Store, you should test your app without the exemption.
 
-Para quitar la exención de bucle invertido de red de la aplicación:
+To remove the network loopback exemption from the app:
 
--   En la página de propiedades de **Depurar** de C# y Visual Basic, desactiva la casilla **Permitir bucle invertido de red**.
--   En la página de propiedades de **Depuración** de JavaScript y C++, establece el valor de **Permitir bucle invertido de red** en **No**.
+-   On the C# and Visual Basic **Debug** property page, clear the **Allow Network Loopback** check box.
+-   On the JavaScript and C++ **Debugging** property page, set the **Allow Network Loopback** value to **No**.
 
-**No iniciar, pero depurar mi código al empezar (C# y Visual Basic)/Iniciar aplicación (JavaScript y C++)**
+**Do not launch, but debug my code when it starts (C# and Visual Basic) / Launch App (JavaScript and C++)**
 
-Para configurar la implementación para iniciar automáticamente una sesión de depuración cuando se inicie la aplicación:
+To configure the deployment to automatically start a debugging session when the app is launched:
 
--   En la página de propiedades de **Depurar** de C# y Visual Basic, activa la casilla **No iniciar, pero depurar mi código al empezar**.
--   En la página de propiedades de **Depuración** de JavaScript y C++, establece el valor de **Iniciar aplicación** en **Sí**.
-
-
-
-
-<!--HONumber=Mar16_HO1-->
+-   On the C# and Visual Basic **Debug** property page, check the **Do not launch, but debug my code when it starts** check box.
+-   On the JavaScript and C++ **Debugging** property page, set the **Launch Application** value to **Yes**.
 
 
