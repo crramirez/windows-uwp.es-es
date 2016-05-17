@@ -1,51 +1,57 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Build Universal Windows Platform (UWP) apps that support custom interactions from pen and stylus devices, including digital ink for natural writing and drawing experiences.
-title: Pen and stylus interactions in UWP apps
+Description: Crea aplicaciones para la Plataforma universal de Windows (UWP) que admitan interacciones personalizadas con los dispositivos de lápiz y pluma, incluida la entrada de lápiz digital, para ofrecer experiencias de escritura y dibujo naturales.
+title: Interacciones de pluma y lápiz en aplicaciones para UWP
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen and stylus interactions in UWP apps
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
 ---
 
-# Pen and stylus interactions in UWP apps
+# Interacciones de pluma y lápiz en aplicaciones para UWP
 
-Optimize your Universal Windows Platform (UWP) app for pen input to provide both standard [**pointer device**](https://msdn.microsoft.com/library/windows/apps/br225633) functionality and the best Windows Ink experience for your users.
+Optimiza tu aplicación para la Plataforma universal de Windows (UWP) para que las entradas realizadas con la pluma proporcionen tanto la funcionalidad del [**dispositivo señalador**](https://msdn.microsoft.com/library/windows/apps/br225633) como la mejor experiencia de Windows Ink para tus usuarios.
 
-> Note: This topic focuses on the Windows Ink platform. See [Handle pointer input](handle-pointer-input.md) for general pointer input handling (similar to mouse, touch, and touchpad).
+> Nota: este tema se centra en la plataforma de Windows Ink. Consulta el artículo [Handle pointer input (Controlar las entradas del puntero)](handle-pointer-input.md) para poder controlar las entradas generales del puntero (es algo similar al mouse, a la función táctil y al panel táctil).
 
-![touchpad](images/input-patterns/input-pen.jpg)
+![panel táctil](images/input-patterns/input-pen.jpg)
 
-**Important APIs**
+**API importantes**
 
 -   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
 -   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 -   [**Windows.UI.Input.Inking.Core**](https://msdn.microsoft.com/library/windows/apps/dn958452)
 
-The Windows Ink platform, together with a pen device, provides a natural way to create digital handwritten notes, drawings, and annotations. The platform supports capturing digitizer input as ink data, generating ink data, managing ink data, rendering ink data as ink strokes on the output device, and converting ink to text through handwriting recognition.
+La plataforma de Windows Ink, junto con un dispositivo de lápiz, te ofrece una forma natural de crear notas, dibujos y anotaciones manuscritas, todo ello de forma digital. Asimismo, la plataforma te permite capturar los datos de entrada del digitalizador a modo de datos de entrada de lápiz, generar datos de entrada de lápiz, administrarlos, representarlos como trazos de lápiz en el dispositivo de salida y convertirlos en texto a través del reconocimiento de escritura a mano.
 
-In addition to capturing the basic position and movement of the pen as the user writes or draws, your app can also track and collect the varying amounts of pressure used throughout a stroke. This information, along with settings for pen tip shape, size, and rotation, ink color, and purpose (plain ink, erasing, highlighting, and selecting), enables you to provide user experiences that closely resemble writing or drawing on paper with a pen, pencil, or brush.
+Además de capturar la posición básica y el movimiento del lápiz a medida que el usuario escribe o dibuja, la aplicación también puede realizar un seguimiento y recopilar los distintos niveles de presión que se usan en un trazo. Esta información, junto con la configuración de la forma de la punta del lápiz, el tamaño y la rotación, el color de la entrada de lápiz y el propósito (como la entrada de lápiz sin formato y las acciones de borrar, resaltar y seleccionar), te permite proporcionar experiencias de usuario que se asemejan mucho a escribir o dibujar sobre papel con un lápiz, un bolígrafo o un pincel.
 
-**Note**  Your app can also support ink input from other pointer-based devices, including touch digitizers and mouse devices. 
+**Nota** La aplicación también puede ser compatible con la entrada de lápiz de otros dispositivos señaladores tales como digitalizadores táctiles y dispositivos de mouse. 
 
-The ink platform is very flexible. It is designed to support various levels of functionality, depending on your requirements.
+La plataforma de entrada de lápiz es muy flexible. Está diseñada para admitir varios niveles de funcionalidad, dependiendo de los requisitos.
 
-There are three components to the ink platform:
+Existen tres componentes para la plataforma de entrada de lápiz:
 
--   [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) - A XAML UI platform control that, by default, receives and displays all input from a pen as either an ink stroke or an erase stroke.
+-   [
+              **InkCanvas**
+            ](https://msdn.microsoft.com/library/windows/apps/dn858535): es un control de plataforma de interfaz de usuario XAML que, de manera predeterminada, recibe y muestra todas las entradas de lápiz como un trazo de lápiz o un trazo de borrado.
 
--   [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) - A code-behind object, instantiated along with an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control (exposed through the [**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) property). This object provides all default inking functionality exposed by the **InkCanvas**, along with a comprehensive set of APIs for additional customization and personalization.
+-   [
+              **InkPresenter**
+            ](https://msdn.microsoft.com/library/windows/apps/dn922011): es un objeto de código subyacente, cuya instancia se ha creado con un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (expuesto a través de la propiedad [**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)). Este objeto proporciona todas las funcionalidades de entrada manuscrita predeterminadas y que expuso **InkCanvas**, junto con un completo conjunto de API para la personalización adicional.
 
--   [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) - Enables the rendering of ink strokes onto the designated Direct2D device context of a Universal Windows app, instead of the default [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control. This enables full customization of the inking experience.
+-   [
+              **IInkD2DRenderer**
+            ](https://msdn.microsoft.com/library/mt147263): habilita la representación de trazos de lápiz en el contexto de dispositivo de Direct2D designado de una aplicación universal de Windows, en lugar del control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535). Esto permite la personalización completa de la experiencia de entrada manuscrita.
 
-## <span id="inkcanvas"></span><span id="INKCANVAS"></span>Basic inking with InkCanvas
+## <span id="inkcanvas"></span><span id="INKCANVAS"></span>Entrada manuscrita básica con InkCanvas
 
 
-For basic inking functionality, just place an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) anywhere on a page.
+Para la funcionalidad básica de entrada manuscrita, solo debes colocar un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) en cualquier parte de una página.
 
-The [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) supports ink input only from a pen. The input is either rendered as an ink stroke using default settings for color and thickness, or treated as a stroke eraser (when input is from an eraser tip or the pen tip modified with an erase button).
+El control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) solo admite la entrada de lápiz que se haya realizado con un lápiz. La entrada se representa como un trazo de lápiz mediante la configuración predeterminada de color y espesor, o se trata como si fuera un borrador de trazos (cuando la entrada se realiza desde un extremo del borrador o cuando la punta del lápiz se modifica con un botón de borrador).
 
-In this example, an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) overlays a background image.
+En este ejemplo, un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) se superpone a una imagen de fondo.
 
 ```XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -66,29 +72,29 @@ In this example, an [**InkCanvas**](https://msdn.microsoft.com/library/windows/a
 </Grid>
 ```
 
-This series of images shows how pen input is rendered by this [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control.
+Esta serie de imágenes muestra cómo se representa la entrada manuscrita mediante el control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
-| ![The blank InkCanvas with a background image](images/ink_basic_1_small.png) | ![The InkCanvas with ink strokes](images/ink_basic_2_small.png) | ![The InkCanvas with one stroke erased](images/ink_basic_3_small.png) |
+| ![Control InkCanvas en blanco con una imagen de fondo](images/ink_basic_1_small.png) | ![Control InkCanvas con trazos de lápiz](images/ink_basic_2_small.png) | ![Control InkCanvas con un trazo borrado](images/ink_basic_3_small.png) |
 | --- | --- | ---|
-| The blank [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) with a background image. | The [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) with ink strokes. | The [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) with one stroke erased (note how erase operates on an entire stroke, not a portion). |
+| Control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) en blanco con una imagen de fondo. | Control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) con trazos de lápiz. | Control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) con un trazo borrado (ten en cuenta que la opción de borrado actúa en todo el trazo, no en una parte). |
 
-The inking functionality supported by the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control is provided by a code-behind object called the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011).
+La funcionalidad de entrada manuscrita compatible con el control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) la proporciona un objeto de código subyacente denominado [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011).
 
-For basic inking, you don't have to concern yourself with the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011). However, to customize and configure inking behavior on the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), you must access its corresponding **InkPresenter** object.
+Para realizar entradas manuscritas básicas, no es necesario preocuparse por [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011). Sin embargo, para personalizar y configurar el comportamiento de la entrada manuscrita en la clase [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), debe acceder al objeto correspondiente **InkPresenter**.
 
-## <span id="inkpresenter"></span><span id="INKPRESENTER"></span>Basic customization with InkPresenter
+## <span id="inkpresenter"></span><span id="INKPRESENTER"></span>Personalización básica con InkPresenter
 
 
-An [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) object is instantiated with each [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control.
+Se crea una instancia de un objeto [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) con cada control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
-Along with providing all default inking behaviors of its corresponding [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control, the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) provides a comprehensive set of APIs for additional stroke customization. This includes stroke properties, supported input device types, and whether input is processed by the object or passed to the app.
+Junto con el suministro de todos los comportamientos de entrada manuscrita predeterminados del control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) correspondiente, la propiedad [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) te ofrece un completo conjunto de API para la personalización del trazo adicional. Se incluyen las propiedades de trazo, los tipos de dispositivo de entrada admitidos y si el objeto procesa la entrada o esta se pasa a la aplicación.
 
-**Note**  
-The [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) cannot be instantiated directly. Instead, it is accessed through the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) property of the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+**Nota**  
+No se pueden crear instancias de la propiedad [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) directamente. En su lugar, debes acceder a ellas a través de la propiedad [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) de la clase [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
- 
+ 
 
-Here, we configure the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) to interpret input data from both pen and mouse as ink strokes. We also set some initial ink stroke attributes used for rendering strokes to the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+En este apartado, configuraremos [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para que interprete los datos de entrada del lápiz y el mouse como trazos de lápiz. Asimismo, también estableceremos algunos atributos de trazo de lápiz iniciales que se usarán en la representación de trazos del control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
 ```CSharp
 public MainPage()
@@ -109,9 +115,9 @@ public MainPage()
 }
 ```
 
-Ink stroke attributes can be set dynamically to accommodate user preferences or app requirements.
+Los atributos de trazo de lápiz se pueden establecer de forma dinámica para así ajustarlos a las preferencias del usuario o a los requisitos de la aplicación.
 
-Here, we let a user choose from a list of ink colors.
+Aquí dejamos que un usuario elija en una lista de colores de entrada de lápiz.
 
 ```XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -144,7 +150,7 @@ Here, we let a user choose from a list of ink colors.
 </Grid>
 ```
 
-We then handle changes to the selected color and update the ink stroke attributes accordingly.
+A continuación, controlamos los cambios en el color seleccionado y actualizamos los atributos de trazo de lápiz en consecuencia.
 
 ```CSharp
 // Update ink stroke color for new strokes.
@@ -175,36 +181,38 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 }
 ```
 
-These images shows how pen input is processed and customized by the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081).
+Estas imágenes muestran cómo se procesa y personaliza la entrada manuscrita mediante la propiedad [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081).
 
-| ![the inkcanvas with default black ink strokes](images/ink-basic-custom-1-small.png) | ![the inkcanvas with user selected red ink strokes](images/ink-basic-custom-2-small.png) |
+| ![control inkcanvas con trazos de lápiz negro predeterminados](images/ink-basic-custom-1-small.png) | ![control inkcanvas con trazos de lápiz rojo seleccionados por el usuario](images/ink-basic-custom-2-small.png) |
 | --- | -- |
-| The [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) with default black ink strokes. | The [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) with user selected red ink strokes. |
+| [
+            **InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) con trazos de lápiz negro predeterminados. | [
+            **InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) con trazos de lápiz rojo seleccionados por el usuario. |
 
- 
+ 
 
-To provide functionality beyond inking and erasing, such as stroke selection, your app must identify specific input for the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) to pass through unprocessed for handling by your app.
+Para proporcionar funcionalidades que vayan más allá de la entrada manuscrita y el borrado (como la selección de trazo), la aplicación debe identificar la entrada específica de [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081), la cual debe pasarse sin procesar para que la aplicación la controle.
 
-## <span id="passthrough"></span><span id="PASSTHROUGH"></span>Pass-through input for advanced processing
+## <span id="passthrough"></span><span id="PASSTHROUGH"></span>Entrada de paso a través para el procesamiento avanzado
 
 
-By default, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) processes all input as either an ink stroke or an erase stroke. This includes input modified by a secondary hardware affordance such as a pen barrel button, a right mouse button, or similar.
+De manera predeterminada, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) procesa todas las entradas como trazos de lápiz o trazos de borrado. Esto incluye la entrada que modificó una prestación de hardware secundaria, como el botón de menú contextual del lápiz, el botón secundario del mouse o similares.
 
-When using these secondary affordances, users typically expect some additional functionality or a modified behavior.
+Al usar estas prestaciones secundarias, los usuarios suelen esperar algunas funciones adicionales o un comportamiento modificado.
 
-In some cases, you might need to expose basic ink functionality for pens without secondary affordances (functionality not usually associated with the pen tip), other input device types, or additional functionality, or modified behavior, based on a user selection in your app's UI.
+En algunos casos, es posible que necesites exponer la funcionalidad básica de la entrada manuscrita para lápices sin prestaciones secundarias (esta funcionalidad generalmente no está asociada con la punta del lápiz), otros tipos de dispositivos de entrada, o bien una funcionalidad adicional o un comportamiento modificado; todo ello según la selección que el usuario haga en la interfaz de usuario de la aplicación.
 
-To support this, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) can be configured to leave specific input unprocessed. This unprocessed input is then passed through to your app for processing.
+Para que esta acción sea compatible, puedes configurar [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para que deje una entrada específica sin procesar. A continuación, esta entrada sin procesar se pasa a través de la aplicación para su procesamiento.
 
-The following code example steps through how to enable stroke selection when input is modified with a pen barrel button (or right mouse button).
+El código de ejemplo siguiente indica cómo habilitar la selección de trazo cuando la entrada se modifica con el botón de menú contextual del lápiz (o el botón secundario del mouse).
 
-For this example, we use the MainPage.xaml and MainPage.xaml.cs files to host all code.
+En este ejemplo usaremos los archivos MainPage.xaml y MainPage.xaml.cs para hospedar todo el código.
 
-1.  First, we set up the UI in MainPage.xaml.
+1.  En primer lugar, debemos configurar la interfaz de usuario en MainPage.xaml.
 
-    Here, we add a canvas (below the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)) to draw the selection stroke. Using a separate layer to draw the selection stroke leaves the **InkCanvas** and its content untouched.
+    Una vez hecho esto, agregamos un lienzo (debajo de [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)) para dibujar el trazo de selección. Si usas una capa independiente para dibujar el trazo de selección, **InkCanvas** y su contenido no se modifican.
 
-    ![the blank inkcanvas with an underlying selection canvas](images/ink-unprocessed-1-small.png)
+    ![inkcanvas en blanco con un lienzo de selección subyacente](images/ink-unprocessed-1-small.png)
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -227,7 +235,7 @@ For this example, we use the MainPage.xaml and MainPage.xaml.cs files to host al
     </Grid>
 ```
 
-2.  In MainPage.xaml.cs, we declare a couple of global variables for keeping references to aspects of the selection UI. Specifically, the selection lasso stroke and the bounding rectangle that highlights the selected strokes.
+2.  En MainPage.xaml.cs, declaramos un par de variables globales para mantener las referencias a los aspectos de la interfaz de usuario de selección. Usaremos específicamente el trazo de lazo de selección y el rectángulo delimitador que resalta los trazos seleccionados.
 ```    CSharp
 // Stroke selection tool.
     private Polyline lasso;
@@ -235,15 +243,15 @@ For this example, we use the MainPage.xaml and MainPage.xaml.cs files to host al
     private Rect boundingRect;
 ```
 
-3.  Next, we configure the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) to interpret input data from both pen and mouse as ink strokes, and set some initial ink stroke attributes used for rendering strokes to the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+3.  A continuación, configuramos [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para que interprete los datos de entrada del lápiz y el mouse como trazos de lápiz, y establecemos algunos atributos de trazo de lápiz iniciales que se usan para la representación de trazos en el control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
-    Most importantly, we use the [**InputProcessingConfiguration**](https://msdn.microsoft.com/library/windows/apps/dn948764) property of the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) to indicate that any modified input should be processed by the app. Modified input is specified by assigning **InputProcessingConfiguration.RightDragAction** a value of [**InkInputRightDragAction.LeaveUnprocessed**](https://msdn.microsoft.com/library/windows/apps/dn948760).
+    Recuerda usar la propiedad [**InputProcessingConfiguration**](https://msdn.microsoft.com/library/windows/apps/dn948764) de [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para indicar que la aplicación debe procesar cualquier entrada modificada. La entrada modificada se especifica asignando a **InputProcessingConfiguration.RightDragAction** un valor de la enumeración [**InkInputRightDragAction.LeaveUnprocessed**](https://msdn.microsoft.com/library/windows/apps/dn948760).
 
-    We then assign listeners for the unprocessed [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711), and [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) events passed through by the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081). All selection functionality is implemented in the handlers for these events.
+    A continuación, asignamos agentes de escucha para los eventos sin procesar [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) y [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) que la propiedad [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) ha pasado. Todas las funcionalidades de selección se implementan en los controladores de estos eventos.
 
-    Finally, we assign listeners for the [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702) and [**StrokesErased**](https://msdn.microsoft.com/library/windows/apps/dn948767) events of the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081). We use the handlers for these events to clean up the selection UI if a new stroke is started or an existing stroke is erased.
+    Por último, asignamos agentes de escucha para los eventos [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702) y [**StrokesErased**](https://msdn.microsoft.com/library/windows/apps/dn948767) de la propiedad [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081). Los controladores de estos eventos se usan para limpiar la interfaz de usuario de selección si se inicia un nuevo trazo o se borra un trazo existente.
 
-    ![the inkcanvas with default black ink strokes](images/ink-unprocessed-2-small.png)
+    ![inkcanvas con trazos de lápiz negro predeterminados](images/ink-unprocessed-2-small.png)
 ```    CSharp
 public MainPage()
     {
@@ -287,11 +295,11 @@ public MainPage()
     }
 ```
 
-4.  We then define handlers for the unprocessed [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711), and [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) events passed through by the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081).
+4.  Una vez hecho todo esto, definimos los controladores de los eventos sin procesar [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) y [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) que la propiedad [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) ha pasado.
 
-    All selection functionality is implemented in these handlers, including the lasso stroke and the bounding rectangle.
+    Todas las funcionalidades de selección se implementan en estos controladores, incluido el trazo de lazo y el rectángulo delimitador.
 
-    ![the selection lasso](images/ink-unprocessed-3-small.png)
+    ![lazo de selección](images/ink-unprocessed-3-small.png)
 ```    CSharp
 // Handle unprocessed pointer events from modifed input.
     // The input is used to provide selection functionality.
@@ -336,9 +344,9 @@ public MainPage()
     }
 ```
 
-5.  To conclude the PointerReleased event handler, we clear the selection layer of all content (the lasso stroke) and then draw a single bounding rectangle around the ink strokes encompassed by the lasso area.
+5.  Para concluir el controlador de eventos PointerReleased, borramos la capa de selección de todo el contenido (trazo de lazo) y, a continuación, dibujamos un único rectángulo delimitador alrededor de los trazos de lápiz incluidos en el área del lazo.
 
-    ![the selection bounding rect](images/ink-unprocessed-4-small.png)
+    ![rectángulo delimitador de selección](images/ink-unprocessed-4-small.png)
 ```    CSharp
 // Draw a bounding rectangle, on the selection canvas, encompassing 
     // all ink strokes within the lasso area.
@@ -370,9 +378,9 @@ public MainPage()
     }
 ```
 
-6.  Finally, we define handlers for the [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702) and [**StrokesErased**](https://msdn.microsoft.com/library/windows/apps/dn948767) InkPresenter events.
+6.  Por último, definimos los controladores de los eventos [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702) y [**StrokesErased**](https://msdn.microsoft.com/library/windows/apps/dn948767) de la propiedad InkPresenter.
 
-    These both just call the same cleanup function to clear the current selection whenever a new stroke is detected.
+    Ambos llaman a la misma función de limpieza para borrar la selección actual siempre que se detecta un nuevo trazo.
 ```    CSharp
 // Handle new ink or erase strokes to clean up selection UI.
     private void StrokeInput_StrokeStarted(
@@ -388,7 +396,7 @@ public MainPage()
     }
 ```
 
-7.  Here's the function to remove all selection UI from the selection canvas when a new stroke is started or an existing stroke is erased.
+7.  Esta es la función para quitar toda la interfaz de usuario de selección del lienzo de selección cuando se inicia un nuevo trazo o se borra un trazo existente.
 ```    CSharp
 // Clean up selection UI.
     private void ClearSelection()
@@ -411,21 +419,21 @@ public MainPage()
     }
 ```
 
-## <span id="iinkd2drenderer"></span><span id="IINKD2DRENDERER"></span>Custom ink rendering
+## <span id="iinkd2drenderer"></span><span id="IINKD2DRENDERER"></span>Representación de entrada de lápiz personalizada
 
 
-By default, ink input is processed on a low-latency background thread and rendered "wet" as it is drawn. When the stroke is completed (pen or finger lifted, or mouse button released), the stroke is processed on the UI thread and rendered "dry" to the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) layer (above the application content and replacing the wet ink).
+De manera predeterminada, la entrada de lápiz se procesa en un subproceso en segundo plano de baja latencia y se representa como "húmeda" mientras se dibuja. Cuando se completa el trazo (se levanta el lápiz o el dedo o se libera el botón del mouse), el trazo se procesa en el subproceso de la interfaz de usuario y se representa como "seco" en la capa de [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (lo verás sobre el contenido de la aplicación y reemplazando la entrada de lápiz húmeda).
 
-The ink platform enables you to override this behavior and completely customize the inking experience by custom drying the ink input.
+La plataforma de entrada de lápiz te permite invalidar este comportamiento y personalizar totalmente la experiencia de entrada de lápiz mediante el secado personalizado de la entrada de lápiz.
 
-Custom drying requires an [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) object to manage the ink input and render it to the Direct2D device context of your Universal Windows app, instead of the default [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control.
+El secado personalizado requiere un objeto [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) para administrar la entrada de lápiz y representarla en el contexto de dispositivo Direct2D de la aplicación universal de Windows, en lugar del control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) predeterminado.
 
-By calling [**ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/apps/dn922012) (before the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) is loaded), an app creates an [**InkSynchronizer**](https://msdn.microsoft.com/library/windows/apps/dn903979) object to customize how an ink stroke is rendered dry to a [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) or [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). For example, an ink stroke could be rasterized and integrated into application content instead of as a separate **InkCanvas** layer.
+Al llamar a [**ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/apps/dn922012) (antes de cargar [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)), una aplicación crea un objeto [**InkSynchronizer**](https://msdn.microsoft.com/library/windows/apps/dn903979) para personalizar la representación de un trazo de lápiz seco en la clase [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) o [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). Por ejemplo, un trazo de lápiz se puede rasterizar e integrar en el contenido de la aplicación, en lugar de hacerlo como una capa de **InkCanvas** diferente.
 
-For a full example of this functionality, see the [Complex ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620314) .
+Consulta [Complex ink sample (Muestra de entrada de lápiz compleja)](http://go.microsoft.com/fwlink/p/?LinkID=620314) para obtener un ejemplo completo de esta funcionalidad.
 
 
-## Other articles in this section 
+## Otros artículos de esta sección 
 <table>
 <colgroup>
 <col width="50%" />
@@ -433,49 +441,54 @@ For a full example of this functionality, see the [Complex ink sample](http://go
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Topic</th>
-<th align="left">Description</th>
+<th align="left">Tema</th>
+<th align="left">Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Recognize ink strokes](convert-ink-to-text.md)</p></td>
-<td align="left"><p>Convert ink strokes to text using handwriting recognition, or to shapes using custom recognition.</p></td>
+<td align="left"><p>[Reconocer trazos de lápiz](convert-ink-to-text.md)</p></td>
+<td align="left"><p>Convertir trazos de lápiz en texto mediante el reconocimiento de escritura a mano, o en formas mediante el reconocimiento personalizado.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Store and retrieve ink strokes](save-and-load-ink.md)</p></td>
-<td align="left"><p>Store ink stroke data in a Graphics Interchange Format (GIF) file using embedded Ink Serialized Format (ISF) metadata.</p></td>
+<td align="left"><p>[Almacenar y recuperar trazos de lápiz](save-and-load-ink.md)</p></td>
+<td align="left"><p>Almacena los datos de trazo de lápiz en un archivo de formato de intercambio de elementos gráficos (GIF) mediante los metadatos de Ink Serialized Format (ISF) insertados.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 
-## <span id="related_topics"></span>Related articles
+## <span id="related_topics"></span>Artículos relacionados
 
 
-* [Handle pointer input](handle-pointer-input.md)
-* [Identify input devices](identify-input-devices.md)
+* [Controlar la entrada de puntero](handle-pointer-input.md)
+* [Identificar dispositivos de entrada](identify-input-devices.md)
 
-**Samples**
-* [Ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Simple ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Complex ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [Basic input sample](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Low latency input sample](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [User interaction mode sample](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Focus visuals sample](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+**Muestras**
+* [Ink sample (Muestra de entrada de lápiz)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Muestra de entrada de lápiz simple](http://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Muestra de entrada de lápiz compleja](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Muestra de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Archive Samples**
-* [Input: Device capabilities sample](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Input: XAML user input events sample](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [XAML scrolling, panning, and zooming sample](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Input: Gestures and manipulations with GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
- 
+**Muestras de archivo**
+* [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: gestos y manipulaciones con GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+ 
 
- 
+ 
 
 
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

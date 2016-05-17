@@ -1,167 +1,171 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: The core text APIs in the Windows.UI.Text.Core namespace enable a Universal Windows Platform (UWP) app to receive text input from any text service supported on Windows devices.
-title: Custom text input overview
+Description: Las API de texto principales en el espacio de nombres Windows.UI.Text.Core habilitan una aplicación de la Plataforma universal de Windows (UWP) para recibir una entrada de texto desde cualquier servicio de texto compatible con dispositivos Windows.
+title: Introducción a la entrada de texto personalizado
 ms.assetid: 58F5F7AC-6A4B-45FC-8C2A-942730FD7B74
 label: Custom text input
 template: detail.hbs
 ---
 
-# Custom text input
+# Entrada de texto personalizado
 
-The core text APIs in the [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) namespace enable a Universal Windows Platform (UWP) app to receive text input from any text service supported on Windows devices. The APIs are similar to the [Text Services Framework](https://msdn.microsoft.com/library/windows/desktop/ms629032) APIs in that the app is not required to have detailed knowledge of the text services. This enables the app to receive text in any language and from any input type, like keyboard, speech, or pen.
+Las API de texto principales en el espacio de nombres [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) habilitan una aplicación de la Plataforma universal de Windows (UWP) para recibir una entrada de texto desde cualquier servicio de texto compatible con dispositivos Windows. Las API son similares a las API del [Text Services Framework](https://msdn.microsoft.com/library/windows/desktop/ms629032) en que no es necesario que la aplicación tenga información detallada sobre los servicios de texto. Esto permite que la aplicación reciba texto en cualquier idioma y de cualquier tipo de entrada, como el teclado, voz o lápiz.
 
 
-**Important APIs**
+**API importantes**
 
 -   [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238)
 -   [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158)
 
 
-## <span id="Why_use_core_text_APIs_"></span><span id="why_use_core_text_apis_"></span><span id="WHY_USE_CORE_TEXT_APIS_"></span>Why use core text APIs?
+## <span id="Why_use_core_text_APIs_"></span><span id="why_use_core_text_apis_"></span><span id="WHY_USE_CORE_TEXT_APIS_"></span>¿Por qué usar API de texto principales?
 
 
-For many apps, the XAML or HTML text box controls are sufficient for text input and editing. However, if your app handles complex text scenarios, like a word processing app, you might need the flexibility of a custom text edit control. You could use the [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) keyboard APIs to create your text edit control, but these don't provide a way to receive composition-based text input, which is required to support East Asian languages.
+Para muchas aplicaciones, basta con los controles de cuadro de texto XAML o HTML para la entrada y edición de texto. Sin embargo, si la aplicación controla escenarios de texto complejos, como una aplicación de procesamiento de texto, es posible que necesites la flexibilidad de un control de edición de texto personalizado. Puedes usar las API de teclado de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para crear tus controles de edición de texto, pero estas no proporcionan una forma de recibir una entrada de texto basado en la composición, necesaria para admitir los idiomas de Asia oriental.
 
-Instead, use the [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) APIs when you need to create a custom text edit control. These APIs are designed to give you a lot of flexibility in processing text input, in any language, and let you provide the text experience best suited to your app. Text input and edit controls built with the core text APIs can receive text input from all existing text input methods on Windows devices, from [Text Services Framework](https://msdn.microsoft.com/library/windows/desktop/ms629032) based Input Method Editors (IMEs) and handwriting on PCs to the WordFlow keyboard (which provides auto-correction, prediction, and dictation) on mobile devices.
+En su lugar, usa las API [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) cuando necesites crear un control de edición de texto personalizado. Estas API están diseñadas para ofrecerte mucha flexibilidad al procesar la entrada de texto en cualquier idioma y dejar que proporciones la experiencia de texto que mejor se adapte a tu aplicación. La entrada de texto y los controles de edición integrados con las API de texto principales pueden recibir entrada de texto de todos los métodos de entrada existentes en los dispositivos de Windows, desde los editores de métodos de entrada (IME) y escritura a mano en PC basados en [Text Services Framework](https://msdn.microsoft.com/library/windows/desktop/ms629032) hasta el teclado Word Flow en dispositivos móviles, que proporciona corrección automática, predicción y dictado.
 
-## <span id="Architecture"></span><span id="architecture"></span><span id="ARCHITECTURE"></span>Architecture
-
-
-The following is a simple representation of the text input system.
-
--   "Application" represents a UWP app hosting a custom edit control built using the core text APIs.
--   The [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) APIs facilitate the communication with text services through Windows. Communication between the text edit control and the text services is handled primarily through a [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158) object that provides the methods and events to facilitate the communication.
-
-![core text architecture diagram](images/coretext/architecture.png)
-
-## <span id="Text_ranges_and_selection"></span><span id="text_ranges_and_selection"></span><span id="TEXT_RANGES_AND_SELECTION"></span>Text ranges and selection
+## <span id="Architecture"></span><span id="architecture"></span><span id="ARCHITECTURE"></span>Arquitectura
 
 
-Edit controls provide space for text entry and users expect to edit text anywhere in this space. Here, we explain the text positioning system used by the core text APIs and how ranges and selections are represented in this system.
+A continuación te mostramos una representación sencilla del sistema de entrada de texto.
 
-### <span id="Application_caret_position"></span><span id="application_caret_position"></span><span id="APPLICATION_CARET_POSITION"></span>Application caret position
+-   "Application" representa una aplicación para UWP creada con las API de texto principales y que hospeda un control de edición personalizado.
+-   La API [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238) facilitan la comunicación con los servicios de texto a través de Windows. La comunicación entre el control de edición de texto y los servicios de texto se controla principalmente mediante un objeto [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158) que proporciona los métodos y eventos para facilitar dicha comunicación.
 
-Text ranges used with the core text APIs are expressed in terms of caret positions. An "Application Caret Position (ACP)" is a zero-based number that indicates the count of characters from the start of the text stream immediately before the caret, as shown here.
+![diagrama de arquitectura de texto principal](images/coretext/architecture.png)
 
-![example text stream diagram](images/coretext/stream-1.png)
-### <span id="Text_ranges_and_selection"></span><span id="text_ranges_and_selection"></span><span id="TEXT_RANGES_AND_SELECTION"></span>Text ranges and selection
+## <span id="Text_ranges_and_selection"></span><span id="text_ranges_and_selection"></span><span id="TEXT_RANGES_AND_SELECTION"></span>Intervalos y selección de texto
 
-Text ranges and selections are represented by the [**CoreTextRange**](https://msdn.microsoft.com/library/windows/apps/dn958201) structure which contains two fields:
 
-| Field                  | Data type                                                                 | Description                                                                      |
+Los controles de edición proporcionan espacio para la entrada de texto y los usuarios esperan poder editar texto en cualquier parte de dicho espacio. Aquí explicamos el sistema de posicionamiento de texto usado por las API de texto principales y cómo se representan los intervalos y selecciones de texto en este sistema.
+
+### <span id="Application_caret_position"></span><span id="application_caret_position"></span><span id="APPLICATION_CARET_POSITION"></span>Posición del cursor de inserción de la aplicación
+
+Los intervalos de texto usados con las API de texto principales se expresan en posiciones del cursor de inserción. Una "Application Caret Position (ACP)" es un número de base cero que indica el número de caracteres desde el inicio del flujo de texto justo antes del cursor de inserción, tal y como se muestra aquí.
+
+![diagrama de flujo de texto de ejemplo](images/coretext/stream-1.png)
+### <span id="Text_ranges_and_selection"></span><span id="text_ranges_and_selection"></span><span id="TEXT_RANGES_AND_SELECTION"></span>Intervalos y selección de texto
+
+Los intervalos y selecciones de texto se representan mediante la estructura [**CoreTextRange**](https://msdn.microsoft.com/library/windows/apps/dn958201) que contiene dos campos:
+
+| Campo                  | Tipo de datos                                                                 | Descripción                                                                      |
 |------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| **StartCaretPosition** | **Number** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | The start position of a range is the ACP immediately before the first character. |
-| **EndCaretPosition**   | **Number** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | The end position of a range is the ACP immediately after the last character.     |
+| **StartCaretPosition** | **Número** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | La posición de inicio de un intervalo es la ACP inmediatamente anterior al primer carácter. |
+| **EndCaretPosition**   | **Número** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | La posición final del intervalo es la ACP inmediatamente posterior al último carácter.     |
 
- 
+ 
 
-For example, in the text range shown previously, the range \[0, 5\] specifies the word "Hello". **StartCaretPosition** must always be less than or equal to the **EndCaretPosition**. The range \[5, 0\] is invalid.
+Por ejemplo, en el intervalo de texto que se mostró anteriormente, el intervalo \[0, 5\] especifica la palabra "Hello". **StartCaretPosition** debe ser siempre menor o igual que **EndCaretPosition**. El intervalo \[5, 0\] no es válido.
 
-### <span id="Insertion_point"></span><span id="insertion_point"></span><span id="INSERTION_POINT"></span>Insertion point
+### <span id="Insertion_point"></span><span id="insertion_point"></span><span id="INSERTION_POINT"></span>Punto de inserción
 
-The current caret position, frequently referred to as the insertion point, is represented by setting the **StartCaretPosition** to be equal to the **EndCaretPosition**.
+La posición del cursor de inserción, normalmente denominada punto de inserción, se representa estableciendo **StartCaretPosition** igual a **EndCaretPosition**.
 
-### <span id="Noncontiguous_selection"></span><span id="noncontiguous_selection"></span><span id="NONCONTIGUOUS_SELECTION"></span>Noncontiguous selection
+### <span id="Noncontiguous_selection"></span><span id="noncontiguous_selection"></span><span id="NONCONTIGUOUS_SELECTION"></span>Selección no contigua
 
-Some edit controls support noncontiguous selections. For example, Microsoft Office apps support multiple arbitrary selections, and many source code editors support column selection. However, the core text APIs do not support noncontiguous selections. Edit controls must report only a single contiguous selection, most often the active sub-range of the noncontiguous selections.
+Algunos controles de edición admiten selecciones no contiguas. Por ejemplo, las aplicaciones de Microsoft Office admiten varias selecciones arbitrarias y muchos editores de código fuente admiten la selección de columna. Sin embargo, las API de texto principales no admiten las selecciones no contiguas. Los controles de edición deben notificar una única selección contigua, principalmente el subintervalo activo de las selecciones no contiguas.
 
-For example, consider this text stream:
+Por ejemplo, observa este flujo de texto:
 
-![example text stream diagram](images/coretext/stream-2.png)
-There are two selections: \[0, 1\] and \[6, 11\]. The edit control must report only one of them; either \[0, 1\] or \[6, 11\].
+![diagrama de flujo de texto de ejemplo Existen dos selecciones: \[0, 1\] y \[6, 11\].
 
-## <span id="Working_with_text"></span><span id="working_with_text"></span><span id="WORKING_WITH_TEXT"></span>Working with text
-
-
-The [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158) class enables text flow between Windows and edit controls through the [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) event, the [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) event, and the [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) method.
-
-Your edit control receives text through [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) events that are generated when users interact with text input methods like keyboards, speech, or IMEs.
-
-When you change text in your edit control, for example, by pasting text into the control, you need to notify Windows by calling [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172).
-
-If the text service requires the new text, then a [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) event is raised. You must provide the new text in the **TextRequested** event handler.
-
-### <span id="Accepting_text_updates"></span><span id="accepting_text_updates"></span><span id="ACCEPTING_TEXT_UPDATES"></span>Accepting text updates
-
-Your edit control should typically accept text update requests because they represent the text the user wants to enter. In the [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) event handler, these actions are expected of your edit control:
-
-1.  Insert the text specified in [**CoreTextTextUpdatingEventArgs.Text**](https://msdn.microsoft.com/library/windows/apps/dn958236) in the position specified in [**CoreTextTextUpdatingEventArgs.Range**](https://msdn.microsoft.com/library/windows/apps/dn958234).
-2.  Place selection at the position specified in [**CoreTextTextUpdatingEventArgs.NewSelection**](https://msdn.microsoft.com/library/windows/apps/dn958233).
-3.  Notify the system that the update succeeded by setting [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) to [**CoreTextTextUpdatingResult.Succeeded**](https://msdn.microsoft.com/library/windows/apps/dn958237).
-
-For example, this is the state of an edit control before the user types "d". The insertion point is at \[10, 10\].
-
-![example text stream diagram](images/coretext/stream-3.png)
-When the user types "d", a [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) event is raised with the following [**CoreTextTextUpdatingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn958229) data:
-
--   [**Range**](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
--   [**Text**](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
--   [**NewSelection**](https://msdn.microsoft.com/library/windows/apps/dn958233) = \[11, 11\]
-
-In your edit control, apply the specified changes and set [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) to **Succeeded**. Here's the state of the control after the changes are applied.
-
-![example text stream diagram](images/coretext/stream-4.png)
-### <span id="Rejecting_text_updates"></span><span id="rejecting_text_updates"></span><span id="REJECTING_TEXT_UPDATES"></span>Rejecting text updates
-
-Sometimes, you cannot apply text updates because the requested range is in an area of the edit control that should not be changed. In this case, you should not apply any changes. Instead, notify the system that the update failed by setting [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) to [**CoreTextTextUpdatingResult.Failed**](https://msdn.microsoft.com/library/windows/apps/dn958237).
-
-For example, consider an edit control that accepts only an e-mail address. Spaces should be rejected because e-mail addresses cannot contain spaces, so when [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) events are raised for the space key, you should simply set [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) to **Failed** in your edit control.
-
-### <span id="Notifying_text_changes"></span><span id="notifying_text_changes"></span><span id="NOTIFYING_TEXT_CHANGES"></span>Notifying text changes
-
-Sometimes, your edit control makes changes to text such as when text is pasted or auto-corrected. In these cases, you must notify the text services of these changes by calling the [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) method.
-
-For example, this is the state of an edit control before the user pastes "World". The insertion point is at \[6, 6\].
-
-![example text stream diagram](images/coretext/stream-5.png)
-The user performs the paste action and the edit control ends up with the following text:
-
-![example text stream diagram](images/coretext/stream-4.png)
-When this happens, you should call [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) with these arguments:
-
--   *modifiedRange* = \[6, 6\]
--   *newLength* = 5
--   *newSelection* = \[11, 11\]
-
-One or more [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) events will follow, which you handle to update the text that the text services are working with.
-
-### <span id="Overriding_text_updates"></span><span id="overriding_text_updates"></span><span id="OVERRIDING_TEXT_UPDATES"></span>Overriding text updates
-
-In your edit control, you might want to override a text update to provide auto-correction features.
-
-For example, consider an edit control that provides a correction feature that formalizes contractions. This is the state of the edit control before the user types the space key to trigger the correction. The insertion point is at \[3, 3\].
-
-![example text stream diagram](images/coretext/stream-6.png)
-The user presses the space key and a corresponding [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) event is raised. The edit control accepts the text update. This is the state of the edit control for a brief moment before the correction is completed. The insertion point is at \[4, 4\].
-
-![example text stream diagram](images/coretext/stream-7.png)
-Outside of the [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) event handler, the edit control makes the following correction. This is the state of the edit control after the correction is complete. The insertion point is at \[5, 5\].
-
-![example text stream diagram](images/coretext/stream-8.png)
-When this happens, you should call [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) with these arguments:
-
--   *modifiedRange* = \[1, 2\]
--   *newLength* = 2
--   *newSelection* = \[5, 5\]
-
-One or more [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) events will follow, which you handle to update the text that the text services are working with.
-
-### <span id="Providing_requested_text"></span><span id="providing_requested_text"></span><span id="PROVIDING_REQUESTED_TEXT"></span>Providing requested text
-
-It's important for text services to have the correct text to provide features like auto-correction or prediction, especially for text that already existed in the edit control, from loading a document, for example, or text that is inserted by the edit control as explained in previous sections. Therefore, whenever a [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) event is raised, you must provide the text currently in your edit control for the specified range.
-
-There will be times the [**Range**](https://msdn.microsoft.com/library/windows/apps/dn958227) in [**CoreTextTextRequest**](https://msdn.microsoft.com/library/windows/apps/dn958221) specifies a range that your edit control cannot accommodate as-is. For example, the **Range** is larger than the size of the edit control at the time of the [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) event, or the end of the **Range** is out of bounds. In these cases, you should return whatever range makes sense, which is typically a subset of the requested range.
-
-## <span id="related_topics"></span>Related articles
+## <span id="Working_with_text"></span><span id="working_with_text"></span><span id="WORKING_WITH_TEXT"></span>El control de edición debe notificar solo uno de ellos; ya sea \[0, 1\] o \[6, 11\].
 
 
-**Archive samples**
-* [XAML text editing sample](http://go.microsoft.com/fwlink/p/?LinkID=251417)
- 
+Trabajar con texto
 
- 
+La clase [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158) habilita el flujo de texto entre Windows y los controles de edición a través del evento [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176), el evento [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175) y el método [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172).
+
+El control de edición recibe texto mediante los eventos [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) que se generan cuando los usuarios interactúan con métodos de entrada de texto, como los teclados, la voz o el IME.
+
+Cuando modificas el texto en el control de edición, por ejemplo, al pegar texto en el control, tienes que notificar a Windows mediante una llamada a [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172). Si el servicio de texto requiere el texto nuevo, se genera un evento [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175).
+
+### <span id="Accepting_text_updates"></span><span id="accepting_text_updates"></span><span id="ACCEPTING_TEXT_UPDATES"></span>Debes proporcionar el texto nuevo en el controlador de eventos **TextRequested**.
+
+Aceptar actualizaciones de texto El control de edición normalmente debe aceptar solicitudes de actualización de texto ya que representan el texto que el usuario quiere escribir.
+
+1.  En el controlador de eventos [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) se espera que el control de edición realice las siguientes acciones:
+2.  Insertar el texto especificado en [**CoreTextTextUpdatingEventArgs.Text**](https://msdn.microsoft.com/library/windows/apps/dn958236) en la posición especificada en [**CoreTextTextUpdatingEventArgs.Range**](https://msdn.microsoft.com/library/windows/apps/dn958234).
+3.  Colocar la selección en la posición especificada en [**CoreTextTextUpdatingEventArgs.NewSelection**](https://msdn.microsoft.com/library/windows/apps/dn958233).
+
+Notificar al sistema que la actualización se realizó correctamente estableciendo [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) en [**CoreTextTextUpdatingResult.Succeeded**](https://msdn.microsoft.com/library/windows/apps/dn958237). Por ejemplo, este es el estado de un control de edición antes que el usuario escriba "d".
+
+![El punto de inserción es en \[10, 10\].
+
+-   diagrama de flujo de texto de ejemplo
+-   Cuando el usuario escribe "d", se genera un evento [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) con los siguientes datos [**CoreTextTextUpdatingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn958229):
+-   [
+              **Range**
+            ](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
+
+[
+              **Text**
+            ](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d" [
+              **NewSelection**
+            ](https://msdn.microsoft.com/library/windows/apps/dn958233) = \[11, 11\]
+
+![En el control de edición, aplica los cambios especificados y establece [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) en **Succeeded**.](images/coretext/stream-4.png)
+### <span id="Rejecting_text_updates"></span><span id="rejecting_text_updates"></span><span id="REJECTING_TEXT_UPDATES"></span>A continuación te mostramos el estado del control después de que se apliquen los cambios.
+
+diagrama de flujo de texto de ejemplo Rechazar actualizaciones de texto A veces no es posible aplicar actualizaciones de texto porque el intervalo solicitado está en un área del control de edición que no se debe modificar.
+
+En este caso, no debes aplicar ningún cambio. En su lugar, notifica al sistema que la actualización no se pudo realizar estableciendo [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) en [**CoreTextTextUpdatingResult.Failed**](https://msdn.microsoft.com/library/windows/apps/dn958237).
+
+### <span id="Notifying_text_changes"></span><span id="notifying_text_changes"></span><span id="NOTIFYING_TEXT_CHANGES"></span>Por ejemplo, imagina que un control de edición solo acepta una dirección de correo electrónico.
+
+Se deben rechazar los espacios porque las direcciones de correo electrónico no pueden contener espacios, por tanto, cuando la barra espaciadora genera los eventos [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176), simplemente debes establecer [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) en **Failed** en el control de edición. Notificar los cambios de texto
+
+A veces el control de edición realiza cambios en el texto, como cuando el texto se pega o se corrige de forma automática. En estos casos, debes notificar a los servicios de texto estos cambios mediante una llamada al método [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172).
+
+![Por ejemplo, este es el estado de un control de edición antes de que el usuario pegue "World".
+
+![El punto de inserción es en \[6, 6\].
+
+-   diagrama de flujo de texto de ejemplo
+-   El usuario realiza la acción pegar y el control de edición quedaría con el texto siguiente:
+-   diagrama de flujo de texto de ejemplo
+
+Cuando esto sucede, debes llamar a [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) con estos argumentos:
+
+### <span id="Overriding_text_updates"></span><span id="overriding_text_updates"></span><span id="OVERRIDING_TEXT_UPDATES"></span>*modifiedRange* = \[6, 6\]
+
+*newLength* = 5
+
+*newSelection* = \[11, 11\] Aparecerán uno o más eventos [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175), que administrarás para actualizar el texto con el que trabajan los servicios de texto. Reemplazar las actualizaciones de texto
+
+![Es posible que quieras reemplazar una actualización de texto en el control de edición para proporcionar funciones de corrección automática. Por ejemplo, imagina un control de edición que proporciona una función de corrección que formaliza las contracciones. A continuación te mostramos el estado del control de edición antes de que el usuario presione la barra espaciadora para desencadenar la corrección. El punto de inserción es en \[3, 3\].
+
+![diagrama de flujo de texto de ejemplo El usuario presiona la barra espaciadora y se genera el correspondiente evento [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176). El control de edición acepta la actualización de texto.
+
+![Este es el estado del control de edición un instante antes de que finalice la corrección.
+
+-   El punto de inserción es en \[4, 4\].
+-   diagrama de flujo de texto de ejemplo
+-   Fuera del controlador de eventos [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176), el control de edición realiza la siguiente corrección.
+
+Este es el estado del control de edición una vez completada la corrección.
+
+### <span id="Providing_requested_text"></span><span id="providing_requested_text"></span><span id="PROVIDING_REQUESTED_TEXT"></span>El punto de inserción es en \[5, 5\].
+
+diagrama de flujo de texto de ejemplo Cuando esto sucede, debes llamar a [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) con estos argumentos:
+
+*modifiedRange* = \[1, 2\] *newLength* = 2 *newSelection* = \[5, 5\]
+
+## <span id="related_topics"></span>Aparecerán uno o más eventos [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175), que administrarás para actualizar el texto con el que trabajan los servicios de texto.
 
 
+**Proporcionar el texto solicitado**
+* [Es importante que los servicios de texto tengan el texto correcto para proporcionar funciones tales como autocorrección o predicción, especialmente para texto existente en el control de edición, por ejemplo, al cargar un documento, o el texto que inserta el control de edición como se explica en las secciones anteriores.](http://go.microsoft.com/fwlink/p/?LinkID=251417)
+ 
+
+ 
+
+
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

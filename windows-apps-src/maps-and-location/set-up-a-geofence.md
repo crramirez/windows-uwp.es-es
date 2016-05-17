@@ -1,27 +1,27 @@
 ---
 author: PatrickFarley
-title: Set up a geofence
-description: Set up a Geofence in your app, and learn how to handle notifications in the foreground and background.
+title: Configurar una geovalla
+description: Configura una geovalla en tu aplicación y aprende a administrar las notificaciones en primer y segundo plano.
 ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
 ---
 
-# Set up a geofence
+# Configurar una geovalla
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Set up a [**Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587) in your app, and learn how to handle notifications in the foreground and background.
+Configura una [**Geovalla**](https://msdn.microsoft.com/library/windows/apps/dn263587) en tu aplicación y aprende a administrar las notificaciones en primer y segundo plano.
 
-**Tip** To learn more about accessing location in your app, download the following sample from the [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) on GitHub.
+**Sugerencia** Para obtener más información sobre el acceso a la ubicación en tu aplicación, descarga la muestra siguiente del [repositorio de muestras universales de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub.
 
--   [Universal Windows Platform (UWP) map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-## Enable the location capability
+## Habilitar la funcionalidad de ubicación
 
 
-1.  In **Solution Explorer**, double-click on **package.appxmanifest** and select the **Capabilities** tab.
-2.  In the **Capabilities** list, check **Location**. This adds the `Location` device capability to the package manifest file.
+1.  En el **Explorador de soluciones**, haz doble clic en **package.appxmanifest** y selecciona la pestaña **Funcionalidades**.
+2.  En la lista **Funcionalidades**, activa **Ubicación**. De esta forma, se agrega la funcionalidad de dispositivo `Location` al archivo de manifiesto del paquete.
 
 ```xml
   <Capabilities>
@@ -30,12 +30,12 @@ Set up a [**Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587
   </Capabilities>
 ```
 
-## Set up a geofence
+## Configurar una geovalla
 
 
-### Step 1: Request access to the user's location
+### Paso 1: Solicitar acceso a la ubicación del usuario
 
-**Important** You must request access to the user's location by using the [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) method before attempting to access the user's location. You must call the **RequestAccessAsync** method from the UI thread and your app must be in the foreground. Your app will not be able to access the user's location information until after the user grants permission to your app.
+**Importante** Debes solicitar permiso para obtener acceso a la ubicación del usuario mediante el método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) antes de intentar acceder a esta. Debes llamar al método **RequestAccessAsync** desde el subproceso de la interfaz de usuario, y la aplicación debe estar en primer plano. Hasta que el usuario no conceda permiso a la aplicación, esta no podrá acceder a la información de ubicación del usuario.
 
 ```csharp
 using Windows.Devices.Geolocation;
@@ -43,13 +43,13 @@ using Windows.Devices.Geolocation;
 var accessStatus = await Geolocator.RequestAccessAsync();
 ```
 
-The [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) method prompts the user for permission to access their location. The user is only prompted once (per app). After the first time they grant or deny permission, this method no longer prompts the user for permission. To help the user change location permissions after they've been prompted, we recommend that you provide a link to the location settings as demonstrated later in this topic.
+El método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) pide permiso al usuario para acceder a su ubicación. Solo se pide confirmación al usuario una vez (por aplicación). Cuando el usuario concede o deniega el permiso por primera vez, este método ya no vuelve a solicitarlo. Para ayudar al usuario a cambiar los permisos de ubicación una vez se han solicitado, se recomienda proporcionar un vínculo a la configuración de ubicación, tal como se muestra más adelante en este tema.
 
-### Step 2: Register for changes in geofence state and location permissions
+### Paso 2: Registrar cambios en los permisos de estado y ubicación de una geovalla
 
-In this example, a **switch** statement is used with **accessStatus** (from the previous example) to act only when access to the user's location is allowed. If access to the user's location is allowed, the code accesses the current geofences, registers for geofence state changes, and registers for changes in location permissions.
+En este ejemplo, se usa una instrucción **switch** con **accessStatus** (del ejemplo anterior) para que actúe solamente cuando se permita el acceso a la ubicación del usuario. Si se permite el acceso a la ubicación del usuario, el código accede a las geovallas actuales, y registra los cambios de estado de las geovallas y los cambios en los permisos de ubicación.
 
-**Tip** When using a geofence, monitor changes in location permissions using the [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) event from the GeofenceMonitor class instead of the StatusChanged event from the Geolocator class. A [**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599) of **Disabled** is equivalent to a disabled [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599) - both indicate that the app does not have permission to access the user's location.
+**Sugerencia** Si usas una geovalla, supervisa los cambios en los permisos de ubicación mediante el evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) de la clase GeofenceMonitor, en lugar del evento StatusChanged de la clase Geolocator. Un [**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599) de **Deshabilitado** es equivalente a un [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599) deshabilitado (ambos indican que la aplicación no tiene permiso para acceder a la ubicación del usuario).
 
 ```csharp
 switch (accessStatus)
@@ -75,7 +75,7 @@ switch (accessStatus)
 }
 ```
 
-Then, when navigating away from your foreground app, unregister the event listeners.
+Luego, cuando navegues fuera de la aplicación en primer plano, anula el registro de las escuchas de eventos.
 
 ```csharp
 protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
@@ -87,9 +87,9 @@ protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
 }
 ```
 
-### Step 3: Create the geofence
+### Paso 3: Crear la geovalla
 
-Now, you are ready to define and set up a [**Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587) object. There are several different constructor overloads to choose from, depending on your needs. In the most basic geofence constructor, specify only the [**Id**](https://msdn.microsoft.com/library/windows/apps/dn263724) and the [**Geoshape**](https://msdn.microsoft.com/library/windows/apps/dn263718) as shown here.
+Ahora ya estás listo para definir y configurar un objeto [**Geovalla**](https://msdn.microsoft.com/library/windows/apps/dn263587). Puedes elegir entre diferentes sobrecargas de constructor según tus necesidades. En el constructor de geovalla más básico, especifica únicamente [**Id**](https://msdn.microsoft.com/library/windows/apps/dn263724) y [**Geoshape**](https://msdn.microsoft.com/library/windows/apps/dn263718) como se muestra aquí.
 
 ```csharp
 // Set the fence ID.
@@ -109,13 +109,23 @@ Geocircle geocircle = new Geocircle(position, radius);
 Geofence geofence = new Geofence(fenceId, geocircle);
 ```
 
-You can fine-tune your geofence further by using one of the other constructors. In the next example, the geofence constructor specifies these additional parameters:
+Puedes ajustar aún más la geovalla mediante uno de los otros constructores. En el siguiente ejemplo, el constructor de geovalla especifica estos parámetros adicionales:
 
--   [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) - Indicates what geofence events you want to receive notifications for entering the defined region, leaving the defined region, or removal of the geofence.
--   [**SingleUse**](https://msdn.microsoft.com/library/windows/apps/dn263732) - Removes the geofence once all the states the geofence is being monitored for have been met.
--   [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) - Indicates how long the user must be in or out of the defined area before the enter/exit events are triggered.
--   [**StartTime**](https://msdn.microsoft.com/library/windows/apps/dn263735) - Indicates when to start monitoring the geofence.
--   [**Duration**](https://msdn.microsoft.com/library/windows/apps/dn263697) - Indicates the period for which to monitor the geofence.
+-   [
+              **MonitoredStates**
+            ](https://msdn.microsoft.com/library/windows/apps/dn263728): indica de qué eventos de geovalla quieres recibir notificaciones para entrar en la región definida, salir de la región definida o eliminar la geovalla.
+-   [
+              **SingleUse**
+            ](https://msdn.microsoft.com/library/windows/apps/dn263732): quita la geovalla cuando se alcanzan todos los estados de la geovalla que se está supervisando.
+-   [
+              **DwellTime**
+            ](https://msdn.microsoft.com/library/windows/apps/dn263703): indica cuánto tiempo debe estar el usuario dentro o fuera del área definida antes de desencadenar eventos de entrada o salida.
+-   [
+              **StartTime**
+            ](https://msdn.microsoft.com/library/windows/apps/dn263735): indica cuándo comenzar a supervisar la geovalla.
+-   [
+              **Duration**
+            ](https://msdn.microsoft.com/library/windows/apps/dn263697): indica el período durante el cual se va a supervisar la geovalla.
 
 ```csharp
 // Set the fence ID.
@@ -153,9 +163,9 @@ DateTimeOffset startTime = DateTime.Now;
 Geofence geofence = new Geofence(fenceId, geocircle, monitoredStates, singleUse, dwellTime, startTime, duration);
 ```
 
-### Step 4: Handle changes in location permissions
+### Paso 4: Controlar cambios en los permisos de ubicación
 
-The [**GeofenceMonitor**](https://msdn.microsoft.com/library/windows/apps/dn263595) object triggers the [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) event to indicate that the user's location settings changed. That event passes the corresponding status via the argument's **sender.Status** property (of type [**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599)). Note that this method is not called from the UI thread and the [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) object invokes the UI changes.
+El objeto [**GeofenceMonitor**](https://msdn.microsoft.com/library/windows/apps/dn263595) desencadena el evento [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) para indicar que se ha modificado la configuración de ubicación del usuario. Ese evento pasa el estado correspondiente mediante la propiedad **sender.Status** del argumento (de tipo [**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599)). Ten en cuenta que no se llama a este método desde el subproceso de interfaz de usuario, y que el objeto [**Distribuidor**](https://msdn.microsoft.com/library/windows/apps/br208211) invoca los cambios de la interfaz de usuario.
 
 ```csharp
 using Windows.UI.Core;
@@ -205,20 +215,20 @@ public async void OnGeofenceStatusChanged(GeofenceMonitor sender, object e)
 }
 ```
 
-## Set up foreground notifications
+## Configurar notificaciones en primer plano
 
 
-After your geofences are created, you must add the logic to handle what happens when a geofence event occurs. Depending on the [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) that you have set up, you may receive an event when:
+Una vez creadas las geovallas, tendrás que agregar la lógica para controlar lo que sucede cuando se produce un evento de geovalla. Dependiendo de los [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) que hayas configurado, es posible que recibas un evento cuando:
 
--   The user enters a region of interest.
--   The user leaves a region of interest.
--   The geofence has expired or been removed. Note that a background app is not activated for a removal event.
+-   El usuario entre en una región de interés.
+-   El usuario salga de una región de interés.
+-   La geovalla expire o se elimine. Ten en cuenta que una aplicación en segundo plano no se activa en caso de evento de eliminación.
 
-You can listen for events directly from your app when it is running or register for a background task so that you receive a background notification when an event occurs.
+Puedes escuchar los eventos directamente desde tu aplicación cuando se está ejecutando, o bien registrarte en una tarea en segundo plano para recibir notificaciones en segundo plano cuando se produzca un evento.
 
-### Step 1: Register for geofence state change events
+### Paso 1: Registrarse para eventos de cambio de estado de geovalla
 
-For your app to receive a foreground notification of a geofence state change, you must register an event handler. This is typically set up when you create the geofence.
+Para que tu aplicación reciba una notificación en primer plano del cambio en el estado de una geovalla, debes registrar un controlador de eventos. Normalmente esto se configura al crear la geovalla.
 
 ```csharp
 private void Initialize()
@@ -230,9 +240,9 @@ private void Initialize()
 
 ```
 
-### Step 2: Implement the geofence event handler
+### Paso 2: Implementar el controlador de eventos de geovalla
 
-The next step is to implement the event handlers. The action taken here depends on what your app is using the geofence for.
+El paso siguiente es implementar los controladores de eventos. La acción que se siga aquí dependerá de la finalidad para la que tu aplicación use la geovalla.
 
 ```csharp
 public async void OnGeofenceStateChanged(GeofenceMonitor sender, object e)
@@ -276,32 +286,32 @@ public async void OnGeofenceStateChanged(GeofenceMonitor sender, object e)
 
 ```
 
-## Set up background notifications
+## Configurar notificaciones en segundo plano
 
 
-After your geofences are created, you must add the logic to handle what happens when a geofence event occurs. Depending on the [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) that you have set up, you may receive an event when:
+Una vez creadas las geovallas, tendrás que agregar la lógica para controlar lo que sucede cuando se produce un evento de geovalla. Dependiendo de los [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) que hayas configurado, es posible que recibas un evento cuando:
 
--   The user enters a region of interest.
--   The user leaves a region of interest.
--   The geofence has expired or been removed. Note that a background app is not activated for a removal event.
+-   El usuario entre en una región de interés.
+-   El usuario salga de una región de interés.
+-   La geovalla expire o se elimine. Ten en cuenta que una aplicación en segundo plano no se activa en caso de evento de eliminación.
 
-To listen for a geofence event in the background
+Para escuchar un evento de geovalla en segundo plano
 
--   Declare the background task in your app’s manifest.
--   Register the background task in your app. If your app needs internet access, say for accessing a cloud service, you can set a flag for that when the event is triggered. You can also set a flag to make sure that the user is present when the event is triggered so that you are sure that the user gets notified.
--   While your app is running in the foreground, prompt the user to grant your app location permissions.
+-   Declara la tarea en segundo plano en el manifiesto de la aplicación.
+-   Registra la tarea en segundo plano en tu aplicación. Si la aplicación necesita acceso a Internet, por ejemplo, para acceder a un servicio de nube, puedes establecer una marca para ello cuando se desencadene el evento. También puedes establecer una marca para asegurarte de que el usuario está presente cuando el evento se desencadena con el fin de garantizar que el usuario recibirá la notificación.
+-   Mientras tu aplicación se ejecuta en primer plano, pide al usuario que conceda permisos de ubicación a tu aplicación.
 
-### Step 1: Register for geofence state change events
+### Paso 1: Registrarse para eventos de cambio de estado de geovalla
 
-In your app's manifest, under the **Declarations** tab, add a declaration for a location background task. To do this:
+En el manifiesto de la aplicación, en la pestaña **Declaraciones**, agrega una declaración para una tarea de ubicación en segundo plano. Para ello haz lo siguiente:
 
--   Add a declaration of type **Background Tasks**.
--   Set a property task type of **Location**.
--   Set an entry point into your app to call when the event is triggered.
+-   Agrega una declaración del tipo **Tareas en segundo plano**.
+-   Establece un tipo de tarea de propiedad **Ubicación**.
+-   Establece un punto de entrada en tu aplicación al que se llamará cuando se genere el evento.
 
-### Step 2: Register the background task
+### Paso 2: Registrar la tarea en segundo plano
 
-The code in this step registers the geofencing background task. Remember that when the geofence was created, we checked for location permissions. For more info, see [Set up a geofence](#setup).
+El código de este paso registra la tarea de geovalla en segundo plano. Recuerda que cuando se creó la geovalla, comprobamos los permisos de ubicación. Para más información, consulta [Configurar una geovalla](#setup).
 
 ```csharp
 async private void RegisterBackgroundTask(object sender, RoutedEventArgs e)
@@ -351,9 +361,9 @@ async private void RegisterBackgroundTask(object sender, RoutedEventArgs e)
 
 ```
 
-### Step 3: Handling the background notification
+### Paso 3: Administrar la notificación en segundo plano
 
-The action that you take to notify the user depends on what your app does, but you can display a toast notification, play an audio sound, or update a live tile. The code in this step handles the notification.
+La acción que realices para notificar al usuario dependerá de lo que haga tu aplicación, pero puedes mostrar una notificación del sistema, reproducir un sonido o actualizar un icono dinámico. El código de este paso administra la notificación.
 
 ```csharp
 async private void OnCompleted(IBackgroundTaskRegistration sender, BackgroundTaskCompletedEventArgs e)
@@ -394,10 +404,10 @@ async private void OnCompleted(IBackgroundTaskRegistration sender, BackgroundTas
 
 ```
 
-## Change the privacy settings
+## Cambiar la configuración de privacidad
 
 
-If the location privacy settings don't allow your app to access the user's location, we recommend that you provide a convenient link to the **location privacy settings** in the **Settings** app. In this example, a Hyperlink control is used navigate to the `ms-settings:privacy-location` URI.
+Si la configuración de privacidad de la ubicación no permite que la aplicación acceda a la ubicación del usuario, se recomienda proporcionar un vínculo práctico a la **configuración de privacidad de la ubicación** en la aplicación **Configuración**. En este ejemplo, se usa un control de hipervínculo para navegar al URI `ms-settings:privacy-location`.
 
 ```xml
 <!--Set Visibility to Visible when access to the user's location is denied. -->  
@@ -411,7 +421,7 @@ If the location privacy settings don't allow your app to access the user's locat
 </TextBlock>
 ```
 
-Alternatively, your app can call the [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) method to launch the **Settings** app from code. For more info, see [Launch the Windows Settings app](https://msdn.microsoft.com/library/windows/apps/mt228342).
+Como alternativa, la aplicación puede llamar al método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar la aplicación **Configuración** desde el código. Para más información, consulta [Iniciar la aplicación Configuración de Windows](https://msdn.microsoft.com/library/windows/apps/mt228342).
 
 ```csharp
 using Windows.System;
@@ -419,50 +429,55 @@ using Windows.System;
 bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-location"));
 ```
 
-## Test and debug your app
+## Probar y depurar la aplicación
 
 
-Testing and debugging geofencing apps can be a challenge because they depend on a device's location. Here, we outline several methods for testing both foreground and background geofences.
+Las tareas para probar y depurar aplicaciones de geovalla pueden resultar todo un desafío porque dependen de la ubicación del dispositivo. Aquí describimos varios métodos para probar geovallas en primer y en segundo plano.
 
-**To debug a geofencing app**
+**Para depurar una aplicación de geovalla**
 
-1.  Physically move the device to new locations.
-2.  Test entering a geofence by creating a geofence region that includes your current physical location, so you're already inside the geofence and the "geofence entered" event is triggered immediately.
-3.  Use the Microsoft Visual Studio emulator to simulate locations for the device.
+1.  Mueve físicamente el dispositivo a nuevas ubicaciones.
+2.  Intenta acceder a una geovalla creando una región de geovalla que incluya tu ubicación física actual, de modo que ya estés dentro de la geovalla. El evento "geofenced entered" (ingreso en geovalla) se desencadenará inmediatamente.
+3.  Usa el emulador de Microsoft Visual Studio para simular ubicaciones del dispositivo.
 
-### Test and debug a geofencing app that is running in the foreground
+### Probar y depurar una aplicación de geovalla que se ejecuta en primer plano
 
-**To test your geofencing app that is running the foreground**
+**Para probar la aplicación de geovalla que se ejecuta en primer plano**
 
-1.  Build your app in Visual Studio.
-2.  Launch your app in the Visual Studio emulator.
-3.  Use these tools to simulate various locations inside and outside of your geofence region. Be sure to wait long enough past the time specified by the [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) property to trigger the event. Note that you must accept the prompt to enable location permissions for the app. For more info about simulating locations, see [Set the simulated geolocation of the device](http://go.microsoft.com/fwlink/p/?LinkID=325245).
-4.  You can also use the emulator to estimate the size of fences and dwell times approximately needed to be detected at different speeds.
+1.  Compila tu aplicación en Visual Studio.
+2.  Inicia la aplicación en el emulador de Visual Studio.
+3.  Usa estas herramientas para simular varias ubicaciones dentro y fuera de tu región de geovalla. Asegúrate de esperar lo suficiente una vez transcurrido el tiempo que especifica la propiedad [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para desencadenar el evento. Ten en cuenta que debes aceptar la solicitud para habilitar permisos de ubicación para la aplicación. Para obtener más información sobre la simulación de ubicaciones, consulta el tema [Set the simulated geolocation of the device (Establecer la geolocalización simulada del dispositivo)](http://go.microsoft.com/fwlink/p/?LinkID=325245).
+4.  También puedes usar el emulador para calcular el tamaño de las vallas y los tiempos de permanencia aproximados que deben detectarse a velocidades diferentes.
 
-### Test and debug a geofencing app that is running in the background
+### Probar y depurar una aplicación de geovalla que se ejecuta en segundo plano
 
-**To test your geofencing app that is running the background**
+**Para probar la aplicación de geovalla que se ejecuta en segundo plano**
 
-1.  Build your app in Visual Studio. Note that your app should set the **Location** background task type.
-2.  Deploy the app locally first.
-3.  Close your app that is running locally.
-4.  Launch your app in the Visual Studio emulator. Note that background geofencing simulation is supported on only one app at a time within the emulator. Do not launch multiple geofencing apps within the emulator.
-5.  From the emulator, simulate various locations inside and outside of your geofence region. Be sure to wait long enough past the [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) to trigger the event. Note that you must accept the prompt to enable location permissions for the app.
-6.  Use Visual Studio to trigger the location background task. For more info about triggering background tasks in Visual Studio, see [How to trigger background tasks](http://go.microsoft.com/fwlink/p/?LinkID=325378).
+1.  Compila tu aplicación en Visual Studio. Ten en cuenta que la aplicación debe establecer el tipo de tarea en segundo plano de **Ubicación**.
+2.  Primero, implementa la aplicación localmente.
+3.  Cierra la aplicación que se está ejecutando localmente.
+4.  Inicia la aplicación en el emulador de Visual Studio. Ten en cuenta que la simulación de geovallas en segundo plano solo puede hacerse en una aplicación a la vez en el emulador. No inicies varias aplicaciones de geovalla en el emulador.
+5.  En el emulador, simula varias ubicaciones dentro y fuera de tu región de geovalla. Asegúrate de esperar lo suficiente una vez transcurrido el [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para desencadenar el evento. Ten en cuenta que debes aceptar la solicitud para habilitar permisos de ubicación para la aplicación.
+6.  Usa Visual Studio para desencadenar la tarea de ubicación en segundo plano. Para obtener más información sobre cómo desencadenar tareas en segundo plano en Visual Studio, consulta [How to trigger background tasks (Cómo desencadenar tareas en segundo plano)](http://go.microsoft.com/fwlink/p/?LinkID=325378).
 
-## Troubleshoot your app
+## Solucionar problemas de tu aplicación
 
 
-Before your app can access location, **Location** must be enabled on the device. In the **Settings** app, check that the following **location privacy settings** are turned on:
+Antes de que la aplicación pueda acceder a la ubicación, la opción **Ubicación** debe estar habilitada en el dispositivo. En la aplicación **Configuración**, comprueba que la siguiente **configuración de privacidad de ubicación** esté activada:
 
--   **Location for this device...** is turned **on** (not applicable in Windows 10 Mobile)
--   The location services setting, **Location**, is turned **on**
--   Under **Choose apps that can use your location**, your app is set to **on**
+-   **La ubicación de este dispositivo...** está **activada** (no es aplicable en Windows 10 Mobile)
+-   La configuración de servicios de ubicación, **"Ubicación"**, está **activada**
+-   En **Elige las aplicaciones que pueden usar tu ubicación**, la aplicación está establecida como **activada**
 
-## Related topics
+## Temas relacionados
 
-* [UWP geolocation sample](http://go.microsoft.com/fwlink/p/?linkid=533278)
-* [Design guidelines for geofencing](https://msdn.microsoft.com/library/windows/apps/dn631756)
-* [Design guidelines for location-aware apps](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [Muestra de ubicación geográfica para UWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Directrices de diseño para geovallas](https://msdn.microsoft.com/library/windows/apps/dn631756)
+* [Directrices de diseño para aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

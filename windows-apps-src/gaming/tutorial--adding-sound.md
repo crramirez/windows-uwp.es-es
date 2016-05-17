@@ -1,32 +1,32 @@
 ---
 author: mtoepke
-title: Add sound
-description: In this step, we examine how the shooting game sample creates an object for sound playback using the XAudio2 APIs.
+title: Agregar sonido
+description: En este paso, examinaremos el modo en que la muestra del juego de disparos crea un objeto para la reproducción de sonido usando las API de XAudio2.
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
 ---
 
-# Add sound
+# Agregar sonido
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-In this step, we examine how the shooting game sample creates an object for sound playback using the [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) APIs.
+En este paso, examinaremos el modo en que la muestra de juego de disparos crea un objeto para la reproducción de sonido usando las API de [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
 
-## Objective
-
-
--   To add sound output using [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
-
-In the game sample, the audio objects and behaviors are defined in three files:
-
--   **Audio.h/.cpp**. This code file defines the **Audio** object, which contains the XAudio2 resources for sound playback. It also defines the method for suspending and resuming audio playback if the game is paused or deactivated.
--   **MediaReader.h/.cpp**. This code defines the methods for reading audio .wav files from local storage.
--   **SoundEffect.h/.cpp**. This code defines an object for in-game sound playback.
-
-## Defining the audio engine
+## Objetivo
 
 
-When the game sample starts, it creates an **Audio** object that allocates the audio resources for the game. The code that declares this object looks like this:
+-   Agregar salida de sonido mediante [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
+
+En la muestra del juego, los comportamientos y objetos de audio se definen en tres archivos:
+
+-   **Audio.h/.cpp**. Este archivo de código define el objeto **Audio**, que contiene los recursos XAudio2 para la reproducción de sonido. También define el método para suspender y reanudar la reproducción de audio si el juego se pausa o desactiva.
+-   **MediaReader.h/.cpp**. Este código define los métodos para leer archivos de audio .wav desde el almacenamiento local.
+-   **SoundEffect.h/.cpp**. Este código define un objeto para la reproducción de sonido en el juego.
+
+## Definición del motor de audio
+
+
+Cuando la muestra de juego se inicia, crea un objeto **Audio** que asigna los recursos de audio para el juego. El código que declara este objeto tiene el siguiente aspecto:
 
 ```cpp
 public:
@@ -48,12 +48,12 @@ protected:
 };
 ```
 
-The **Audio::MusicEngine** and **Audio::SoundEffectEngine** methods return references to [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) objects that define the mastering voice for each audio type. A mastering voice is the audio device used for playback. Sound data buffers cannot be submitted directly to mastering voices, but data submitted to other types of voices must be directed to a mastering voice to be heard.
+Los métodos **Audio::MusicEngine** y **Audio::SoundEffectEngine** devuelven referencias a objetos [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) que definen la voz de procesamiento para cada tipo de audio. Una voz de procesamiento es el dispositivo de audio usado para la reproducción. Los búferes de datos de sonido no se pueden enviar directamente a las voces de procesamiento, pero los datos enviados a otros tipos de voces deben dirigirse a una voz de procesamiento para que se escuchen.
 
-## Initializing the audio resources
+## Inicialización de los recursos de audio
 
 
-The sample initializes the [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) objects for the music and sound effect engines with calls to [**XAudio2Create**](https://msdn.microsoft.com/library/windows/desktop/ee419212). After the engines have been instantiated, it creates a mastering voice for each with calls to [**IXAudio2::CreateMasteringVoice**](https://msdn.microsoft.com/library/windows/desktop/hh405048), as here:
+La muestra inicializa los objetos [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) para los motores de música y efectos sonoros que llaman a [**XAudio2Create**](https://msdn.microsoft.com/library/windows/desktop/ee419212). Una vez inicializados los motores, crea una voz de procesamiento para cada uno con llamadas a [**IXAudio2::CreateMasteringVoice**](https://msdn.microsoft.com/library/windows/desktop/hh405048), como se muestra a continuación:
 
 ```cpp
 
@@ -85,12 +85,12 @@ void Audio::CreateDeviceIndependentResources()
 }
 ```
 
-As a music or sound effect audio file is loaded, this method calls [**IXAudio2::CreateSourceVoice**](https://msdn.microsoft.com/library/windows/desktop/ee418607) on the mastering voice, which creates an instance of a source voice for playback. We look at the code for this as soon as we finish reviewing how the game sample loads audio files.
+Cuando un archivo de audio de música o efectos sonoros se carga, este método llama a [**IXAudio2::CreateSourceVoice**](https://msdn.microsoft.com/library/windows/desktop/ee418607) en la voz de procesamiento, lo que crea una instancia de una voz de origen para reproducción. Echaremos un vistazo a este código tan pronto como terminemos de revisar cómo carga la muestra de juego los archivos de audio.
 
-## Reading an audio file
+## Lectura de un archivo de audio
 
 
-In the game sample, the code for reading audio format files is defined in **MediaReader.cpp**. The specific method that reads in an encoded .wav audio file, **MediaReader::LoadMedia**, looks like this:
+En la muestra de juego, el código para leer archivos con formato de audio está definido en **MediaReader.cpp**. El método específico que lee en un archivo de audio .wav codificado, **MediaReader::LoadMedia**, tiene el siguiente aspecto:
 
 ```cpp
 Platform::Array<byte>^  MediaReader::LoadMedia(_In_ Platform::String^ filename)
@@ -201,19 +201,19 @@ Platform::Array<byte>^  MediaReader::LoadMedia(_In_ Platform::String^ filename)
 }
 ```
 
-This method uses the [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) APIs to read in the .wav audio file as a Pulse Code Modulation (PCM) buffer.
+Este método usa las API de [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) para leer en los archivos de audio .wav como un búfer de modulación por impulsos codificados (PCM, del inglés Pulse Code Modulation).
 
-1.  Creates a media source reader ([**IMFSourceReader**](https://msdn.microsoft.com/library/windows/desktop/dd374655)) object by calling [**MFCreateSourceReaderFromURL**](https://msdn.microsoft.com/library/windows/desktop/dd388110).
-2.  Creates a media type ([**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850)) for the decoding of the audio file by calling [**MFCreateMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms693861). This method specifies that the decoded output is PCM audio, which is an audio type that XAudio2 can use.
-3.  Sets the decoded output media type for the reader by calling [**IMFSourceReader::SetCurrentMediaType**](https://msdn.microsoft.com/library/windows/desktop/bb970432).
-4.  Creates a [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799) buffer and copies the results of a call to [**IMFMediaType::MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177) on the [**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850) object. This formats the buffer that holds the audio file after it is loaded.
-5.  Gets the duration, in seconds, of the audio stream by calling [**IMFSourceReader::GetPresentationAttribute**](https://msdn.microsoft.com/library/windows/desktop/dd374662) and then converts the duration to bytes.
-6.  Reads the audio file in as a stream by calling [**IMFSourceReader::ReadSample**](https://msdn.microsoft.com/library/windows/desktop/dd374665).
-7.  Copies the contents of the audio sample buffer into an array returned by the method.
+1.  Crea un objeto lector de orígenes multimedia ([**IMFSourceReader**](https://msdn.microsoft.com/library/windows/desktop/dd374655)) llamando a [**MFCreateSourceReaderFromURL**](https://msdn.microsoft.com/library/windows/desktop/dd388110).
+2.  Crea un tipo de elemento multimedia ([**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850)) para descodificar el archivo de audio llamando a [**MFCreateMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms693861). Este método especifica que la salida descodificada es audio PCM, un tipo de audio que puede usar XAudio2.
+3.  Establece el tipo de elemento multimedia de salida descodificado para el lector llamando a [**IMFSourceReader::SetCurrentMediaType**](https://msdn.microsoft.com/library/windows/desktop/bb970432).
+4.  Crea un búfer [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799) y copia los resultados de una llamada a [**IMFMediaType::MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177) en el objeto [**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850). Esto formatea el búfer que contiene el archivo de audio después de cargarse.
+5.  Obtiene la duración, en segundos, de la secuencia de audio llamando a [**IMFSourceReader::GetPresentationAttribute**](https://msdn.microsoft.com/library/windows/desktop/dd374662) y, a continuación, convierte la duración en bytes.
+6.  Lee el archivo de audio como un flujo llamando a [**IMFSourceReader::ReadSample**](https://msdn.microsoft.com/library/windows/desktop/dd374665).
+7.  Copia el contenido del búfer de la muestra de audio en una matriz que devuelve el método.
 
-The most important thing in **SoundEffect::Initialize** is the creation of the source voice object, **m\_sourceVoice**, from the mastering voice. We use the source voice for the actual play back of the sound data buffer obtained from **MediaReader::LoadMedia**.
+Lo más importante en **SoundEffect::Initialize** es la creación del objeto voz de origen, **m\_sourceVoice**, a partir de la voz de procesamiento. Usamos la voz de origen para la reproducción real del búfer de datos de sonido obtenido de **MediaReader::LoadMedia**.
 
-The sample game calls this method when it initializes the **SoundEffect** object, like this:
+El juego de muestra llama a este método cuando inicializa el objeto **SoundEffect**, de esta forma:
 
 ```cpp
 void SoundEffect::Initialize(
@@ -241,7 +241,7 @@ void SoundEffect::Initialize(
 }
 ```
 
-This method is passed the results of calls to **Audio::SoundEffectEngine** (or **Audio::MusicEngine**), **MediaReader::GetOutputWaveFormatEx**, and the buffer returned by a call to **MediaReader::LoadMedia**, as seen here.
+Los resultados de las llamadas a **Audio::SoundEffectEngine** (o **Audio::MusicEngine**), **MediaReader::GetOutputWaveFormatEx** y el búfer devuelto por una llamada a **MediaReader::LoadMedia** se pasan a este método tal como se muestra aquí.
 
 ```cpp
 MediaReader^ mediaReader = ref new MediaReader;
@@ -256,11 +256,11 @@ myTarget->HitSound()->Initialize(
                 targetHitSound);
 ```
 
-**SoundEffect::Initialize** is called from the **Simple3DGame:Initialize** method that initializes the main game object.
+Se llama a **SoundEffect::Initialize** desde el método **Simple3DGame:Initialize** que inicializa el objeto principal del juego.
 
-Now that the sample game has an audio file in memory, let's see how it plays it back during game play!
+Ahora que el juego de muestra tiene un archivo de audio en la memoria, veamos cómo se reproduce durante el juego.
 
-## Playing back an audio file
+## Reproducción de un archivo de audio
 
 
 ```cpp
@@ -298,18 +298,18 @@ void SoundEffect::PlaySound(_In_ float volume)
 }
 ```
 
-To play the sound, this method uses the source voice object **m\_sourceVoice** to start the playback of the sound data buffer **m\_soundData**. It creates an [**XAUDIO2\_BUFFER**](https://msdn.microsoft.com/library/windows/desktop/ee419228), to which it provides a reference to the sound data buffer, and then submits it with a call to [**IXAudio2SourceVoice::SubmitSourceBuffer**](https://msdn.microsoft.com/library/windows/desktop/ee418473). With the sound data queued up, **SoundEffect::PlaySound** starts play back by calling [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471).
+Para reproducir el sonido, este método usa el objeto voz de origen **m\_sourceVoice** para iniciar la reproducción del búfer de datos de sonido **m\_soundData**. Crea un [**XAUDIO2\_BUFFER**](https://msdn.microsoft.com/library/windows/desktop/ee419228), al que proporciona una referencia al búfer de datos de sonido y, a continuación, lo envía con una llamada a [**IXAudio2SourceVoice::SubmitSourceBuffer**](https://msdn.microsoft.com/library/windows/desktop/ee418473). Con los datos de sonido en cola, **SoundEffect::PlaySound** empieza la reproducción llamando a [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471).
 
-Now, whenever a collision between the ammo and a target occurs, a call to **SoundEffect::PlaySound** causes a noise to play.
+Ahora, cada vez que la munición y un objetivo colisionan, una llamada a **SoundEffect::PlaySound** hace que se reproduzca un ruido.
 
-## Next steps
+## Pasos siguientes
 
 
-That was a whirlwind tour of Universal Windows Platform (UWP) DirectX game development! At this point, you have an idea of what you need to do to make your own game for Windows 8 a great experience. Remember, your game can be played on a wide variety of Windows 8 devices and platforms, so design your components: your graphics, your controls, your user interface, and your audio for as wide a set of configurations as you can!
+Con esto terminamos este rápido repaso del desarrollo de juegos DirectX para la Plataforma universal de Windows (UWP). Llegados a este punto, ya tienes una idea de qué necesitas hacer para que tu propio juego para Windows 8 sea una gran experiencia. Recuerda que tu juego se puede jugar en una amplia variedad de dispositivos y plataformas de Windows 8, así que diseña los componentes (gráficos, controles, interfaz de usuario y audio) para tantas configuraciones diferentes como puedas.
 
-For more info about ways to modify the game sample provided in these documents, see [Extending the game sample](tutorial-resources.md).
+Para obtener más información sobre formas de modificar la muestra de juego proporcionada en estos documentos, consulta el tema sobre [Extending the game sample (Cómo extender la muestra de juego)](tutorial-resources.md).
 
-## Complete sample code for this section
+## Código de muestra completo para esta sección
 
 
 Audio.h
@@ -550,10 +550,15 @@ void SoundEffect::PlaySound(_In_ float volume)
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

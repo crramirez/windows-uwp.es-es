@@ -1,58 +1,62 @@
 ---
 author: mijacobs
-Description: Learn how to store and retrieve local, roaming, and temporary app data.
-title: Store and retrieve settings and other app data
+Description: Obtén información sobre cómo almacenar y recuperar datos locales, de itinerancia y temporales de la aplicación.
+title: Almacenar y recuperar la configuración y otros datos de aplicación
 ms.assetid: 41676A02-325A-455E-8565-C9EC0BC3A8FE
 label: App settings and data
 template: detail.hbs
 ---
 
-# Store and retrieve settings and other app data
+# Almacenar y recuperar la configuración y otros datos de aplicación
 
 
 
 
 
-*App data* is mutable data that is specific to a particular app. It includes runtime state, user preferences, and other settings. App data is different from *user data*, data that the user creates and manages when using an app. User data includes document or media files, email or communication transcripts, or database records holding content created by the user. User data may be useful or meaningful to more than one app. Often, this is data that the user wants to manipulate or transmit as an entity independent of the app itself, such as a document.
+Los *datos de aplicación* son datos mutables específicos de una aplicación concreta. Incluyen el estado de tiempo de ejecución, las preferencias del usuario y otras opciones de configuración. Los datos de la aplicación son diferentes de los *datos de usuario*, los datos que el usuario crea y administra al usar una aplicación. Entre los datos de usuario se incluyen archivos multimedia o documentos, correos electrónicos o transcripciones de comunicaciones, o registros de bases de datos que contienen contenido creado por el usuario. Los datos de usuario pueden ser útiles o significativos a más de una aplicación. Con frecuencia, se trata de datos que el usuario quiere manipular o transmitir como entidad independiente de la propia aplicación (como, por ejemplo, un documento).
 
-**Important note about app data:  **The lifetime of the app data is tied to the lifetime of the app. If the app is removed, all of the app data will be lost as a consequence. Don't use app data to store user data or anything that users might perceive as valuable and irreplaceable. We recommend that the user's libraries and Microsoft OneDrive be used to store this sort of information. App data is ideal for storing app-specific user preferences, settings, and favorites.
+**Nota importante sobre los datos de la aplicación: **La duración de los datos de la aplicación está vinculada a la duración de la aplicación. Si una aplicación se quita, todos sus datos se perderán en consecuencia. No uses datos de la aplicación para almacenar datos del usuario o cualquier elemento que se considere valioso o irreemplazable. Recomendamos almacenar este tipo de información en las bibliotecas del usuario o en Microsoft OneDrive. Los datos de la aplicación son perfectos para almacenar la configuración, las preferencias de usuario específicas de la aplicación y los favoritos.
 
-## <span id="Types_of_app_data"></span><span id="types_of_app_data"></span><span id="TYPES_OF_APP_DATA"></span>Types of app data
+## <span id="Types_of_app_data"></span><span id="types_of_app_data"></span><span id="TYPES_OF_APP_DATA"></span>Tipos de datos de aplicación
 
 
-There are two types of app data: settings and files.
+Hay dos tipos de datos de aplicación: configuración y archivos.
 
--   **Settings**
+-   **Configuración**
 
-    Use settings to store user preferences and application state info. The app data API enables you to easily create and retrieve settings (we'll show you some examples later in this article).
+    Configura para almacenar las preferencias del usuario y la información del estado de la aplicación. La API de datos de la aplicación te permite crear fácilmente y recuperar la configuración (te mostramos algunos ejemplos más adelante en este artículo).
 
-    Here are data types you can use for app settings:
+    Estos son los tipos de datos que puedes usar para la configuración de la aplicación:
 
     -   **UInt8**, **Int16**, **UInt16**, **Int32**, **UInt32**, **Int64**, **UInt64**, **Single**, **Double**
-    -   **Boolean**
+    -   **Booleano**
     -   **Char16**, **String**
-    -   [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576), [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/br225996)
+    -   [
+              **DateTime**
+            ](https://msdn.microsoft.com/library/windows/apps/br206576), [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/br225996)
     -   **GUID**, [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994)
-    -   [**ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588): A set of related app settings that must be serialized and deserialized atomically. Use composite settings to easily handle atomic updates of interdependent settings. The system ensures the integrity of composite settings during concurrent access and roaming. Composite settings are optimized for small amounts of data, and performance can be poor if you use them for large data sets.
--   **Files**
+    -   [
+              **ApplicationDataCompositeValue**
+            ](https://msdn.microsoft.com/library/windows/apps/br241588): es una configuración de un conjunto aplicaciones relacionadas que se debe serializar y deserializar de forma atómica. Usa configuraciones compuestas para procesar fácilmente las actualizaciones atómicas de configuraciones interdependientes. El sistema se encarga de garantizar la integridad de las configuraciones compuestas durante el acceso simultáneo y la itinerancia. Las configuraciones compuestas se optimizan para pequeñas cantidades de datos, y el rendimiento puede ser deficiente si se usan para grandes conjuntos de datos.
+-   **Archivos**
 
-    Use files to store binary data or to enable your own, customized serialized types.
+    Usa archivos para almacenar datos binarios o para permitir tus propios tipos serializados personalizados.
 
-## <span id="Storing_app_data_in_the_app_data_stores"></span><span id="storing_app_data_in_the_app_data_stores"></span><span id="STORING_APP_DATA_IN_THE_APP_DATA_STORES"></span>Storing app data in the app data stores
-
-
-When an app is installed, the system gives it its own per-user data stores for settings and files. You don't need to know where or how this data exists, because the system is responsible for managing the physical storage, ensuring that the data is kept isolated from other apps and other users. The system also preserves the contents of these data stores when the user installs an update to your app and removes the contents of these data stores completely and cleanly when your app is uninstalled.
-
-Within its app data store, each app has system-defined root directories: one for local files, one for roaming files, and one for temporary files. Your app can add new files and new containers to each of these root directories.
-
-## <span id="Local_app_data"></span><span id="local_app_data"></span><span id="LOCAL_APP_DATA"></span>Local app data
+## <span id="Storing_app_data_in_the_app_data_stores"></span><span id="storing_app_data_in_the_app_data_stores"></span><span id="STORING_APP_DATA_IN_THE_APP_DATA_STORES"></span>Almacenar datos de aplicación en los almacenes de datos de la aplicación
 
 
-Local app data should be used for any information that needs to be preserved between app sessions and is not suitable for roaming app data. Data that is not applicable on other devices should be stored here as well. There is no general size restriction on local data stored. Use the local app data store for data that it does not make sense to roam and for large data sets.
+Cuando se instala una aplicación, el sistema le ofrece sus propios almacenes de datos por usuario para configuración y archivos. No tiene que saber dónde y cómo existen estos datos, porque el sistema es responsable de administrar el almacenamiento físico, garantizando que los datos se mantienen aislados de otras aplicaciones y otros usuarios. También conserva el contenido de estos almacenes de datos cuando el usuario instala una actualización de la aplicación y quita el contenido de estos almacenes de datos de forma total y limpia al desinstalar la aplicación.
 
-### <span id="Retrieve_the_local_app_data_store"></span><span id="retrieve_the_local_app_data_store"></span><span id="RETRIEVE_THE_LOCAL_APP_DATA_STORE"></span>Retrieve the local app data store
+En su almacén de datos de aplicación, cada aplicación tiene directorios raíz definidos por el sistema: uno para archivos locales, uno para archivos móviles y otro para archivos temporales. La aplicación puede agregar nuevos archivos y contenedores a cada uno de estos directorios raíz.
 
-Before you can read or write local app data, you must retrieve the local app data store. To retrieve the local app data store, use the [**ApplicationData.LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) property to get the app's local settings as an [**ApplicationDataContainer**](https://msdn.microsoft.com/library/windows/apps/br241599) object. Use the [**ApplicationData.LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621) property to get the files in a [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) object. Use the [**ApplicationData.LocalCacheFolder**](https://msdn.microsoft.com/library/windows/apps/dn633825) property to get the folder in the local app data store where you can save files that are not included in backup and restore.
+## <span id="Local_app_data"></span><span id="local_app_data"></span><span id="LOCAL_APP_DATA"></span>Datos de aplicaciones locales
+
+
+Los datos de aplicaciones locales deben usarse para la información que deba conservarse de una sesión de la aplicación a otra y que no sea apropiada, para datos de la aplicación móviles. Aquí también deben almacenarse los datos que no sean aplicables a otros dispositivos. No hay restricciones generales en cuanto al tamaño de los datos locales almacenados. Usa el almacén de datos de aplicación locales para los datos que no tenga sentido mover y para grandes conjuntos de datos.
+
+### <span id="Retrieve_the_local_app_data_store"></span><span id="retrieve_the_local_app_data_store"></span><span id="RETRIEVE_THE_LOCAL_APP_DATA_STORE"></span>Recuperar el almacén de datos de la aplicación local
+
+Para poder leer o escribir datos de aplicaciones locales, debes recuperar el almacén de datos de la aplicación local. Para recuperar el almacén de datos locales de la aplicación, usa la propiedad [**ApplicationData.LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para conseguir la configuración local de la aplicación como objeto [**ApplicationDataContainer**](https://msdn.microsoft.com/library/windows/apps/br241599). Usa la propiedad [**ApplicationData.LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621) para obtener los archivos en un objeto [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230). Usa la propiedad [**ApplicationData.LocalCacheFolder**](https://msdn.microsoft.com/library/windows/apps/dn633825) para obtener la carpeta del almacén de datos locales de la aplicación en la que puedes guardar los archivos que non se incluyen en la copia de seguridad ni en la restauración.
 
 ```CSharp
 Windows.Storage.ApplicationDataContainer localSettings = 
@@ -61,9 +65,9 @@ Windows.Storage.StorageFolder localFolder =
     Windows.Storage.ApplicationData.Current.LocalFolder;
 ```
 
-### <span id="Create_and_retrieve_a_simple_local_setting"></span><span id="create_and_retrieve_a_simple_local_setting"></span><span id="CREATE_AND_RETRIEVE_A_SIMPLE_LOCAL_SETTING"></span>Create and retrieve a simple local setting
+### <span id="Create_and_retrieve_a_simple_local_setting"></span><span id="create_and_retrieve_a_simple_local_setting"></span><span id="CREATE_AND_RETRIEVE_A_SIMPLE_LOCAL_SETTING"></span>Crear y recuperar una configuración local simple
 
-To create or write a setting, use the [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) property to access the settings in the `localSettings` container we got in the previous step. This example creates a setting named `exampleSetting`.
+Para crear o escribir una configuración, usa la propiedad [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) para obtener acceso a la configuración en el contenedor `localSettings` que obtuvimos en el paso anterior. En este ejemplo se crea una configuración denominada
 
 ```CSharp
 // Simple setting
@@ -71,16 +75,16 @@ To create or write a setting, use the [**ApplicationDataContainer.Values**](http
 localSettings.Values["exampleSetting"] = "Hello Windows";
 ```
 
-To retrieve the setting, you use the same [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) property that you used to create the setting. This example shows how to retrieve the setting we just created.
+Para recuperar la configuración, usa la misma propiedad [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) que usaste para crear la configuración. En este ejemplo se muestra cómo recuperar la configuración que acabamos de crear.
 
 ```CSharp
 // Simple setting
 Object value = localSettings.Values["exampleSetting"];
 ```
 
-### <span id="Create_and_retrieve_a_local_composite_value"></span><span id="create_and_retrieve_a_local_composite_value"></span><span id="CREATE_AND_RETRIEVE_A_LOCAL_COMPOSITE_VALUE"></span>Create and retrieve a local composite value
+### <span id="Create_and_retrieve_a_local_composite_value"></span><span id="create_and_retrieve_a_local_composite_value"></span><span id="CREATE_AND_RETRIEVE_A_LOCAL_COMPOSITE_VALUE"></span>Crear y recuperar un valor compuesto local
 
-To create or write a composite value, create an [**ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588) object. This example creates a composite setting named `exampleCompositeSetting` and adds it to the `localSettings` container.
+Para crear o escribir un valor compuesto, crea un objeto [**ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588). En este ejemplo se crea una configuración compuesta llamada `exampleCompositeSetting` y se la agrega al contenedor `localSettings`.
 
 ```CSharp
 // Composite setting
@@ -93,7 +97,7 @@ composite["strVal"] = "string";
 localSettings.Values["exampleCompositeSetting"] = composite;
 ```
 
-This example shows how to retrieve the composite value we just created.
+En este ejemplo se muestra cómo recuperar el valor compuesto que acabamos de crear.
 
 ```CSharp
 // Composite setting
@@ -111,9 +115,9 @@ else
 }
 ```
 
-### <span id="Create_and_read_a_local_file"></span><span id="create_and_read_a_local_file"></span><span id="CREATE_AND_READ_A_LOCAL_FILE"></span>Create and read a local file
+### <span id="Create_and_read_a_local_file"></span><span id="create_and_read_a_local_file"></span><span id="CREATE_AND_READ_A_LOCAL_FILE"></span>Crear y leer un archivo local
 
-To create and update a file in the local app data store, use the file APIs, such as [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) and [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505). This example creates a file named `dataFile.txt` in the `localFolder` container and writes the current date and time to the file. The **ReplaceExisting** value from the [**CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) enumeration indicates to replace the file if it already exists.
+Para crear y actualizar un archivo en el almacén de datos locales de la aplicación, usa las API de archivo, como [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) y [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505). En este ejemplo se crea un archivo llamado `dataFile.txt` en el contenedor `localFolder` y se escriben la fecha y la hora actuales en el archivo. El valor **ReplaceExisting** de la enumeración [**CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) indica que se reemplace el archivo si ya existe.
 
 ```CSharp
 async void WriteTimestamp()
@@ -127,7 +131,7 @@ async void WriteTimestamp()
 }
 ```
 
-To open and read a file in the local app data store, use the file APIs, such as [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272), [**Windows.Storage.StorageFile.GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741), and [**Windows.Storage.FileIO.ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482). This example opens the `dataFile.txt` file created in the previous step and reads the date from the file. For details on loading file resources from various locations, see [How to load file resources](https://msdn.microsoft.com/library/windows/apps/xaml/hh965322).
+Para abrir y leer un archivo en el almacén de datos locales de la aplicación, usa las API de archivo, como [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272), [**Windows.Storage.StorageFile.GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) y [**Windows.Storage.FileIO.ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482). En este ejemplo se abre el archivo `dataFile.txt` creado en el paso anterior y se lee la fecha que aparece en él. Para obtener información detallada sobre la carga de recursos de archivos de varias ubicaciones, consulta [Cómo cargar recursos de archivos](https://msdn.microsoft.com/library/windows/apps/xaml/hh965322).
 
 ```CSharp
 async void ReadTimestamp()
@@ -145,67 +149,67 @@ async void ReadTimestamp()
 }
 ```
 
-## <span id="Roaming_data"></span><span id="roaming_data"></span><span id="ROAMING_DATA"></span>Roaming data
+## <span id="Roaming_data"></span><span id="roaming_data"></span><span id="ROAMING_DATA"></span>Datos de movilidad
 
 
-If you use roaming data in your app, your users can easily keep your app's app data in sync across multiple devices. If a user installs your app on multiple devices, the OS keeps the app data in sync, reducing the amount of setup work that the user needs to do for your app on their second device. Roaming also enables your users to continue a task, such as composing a list, right where they left off even on a different device. The OS replicates roaming data to the cloud when it is updated, and synchronizes the data to the other devices on which the app is installed.
+Si usas datos móviles en la aplicación, los usuarios pueden mantener los datos de aplicación sincronizados en varios dispositivos fácilmente. Si un usuario instala la aplicación en varios dispositivos, el sistema operativo mantiene los datos de aplicación sincronizados, lo que reduce el trabajo de configuración que el usuario debe realizar para la aplicación en el segundo dispositivo. El uso de datos móviles también permite a los usuarios continuar con una tarea, como crear una lista, justo donde la dejaron, incluso en otro dispositivo. El sistema operativo replica los datos móviles en la nube cuando se actualizan y sincroniza los datos con los otros dispositivos en los que la aplicación está instalada.
 
-The OS limits the size of the app data that each app may roam. See [**ApplicationData.RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625). If the app hits this limit, none of the app's app data will be replicated to the cloud until the app's total roamed app data is less than the limit again. For this reason, it is a best practice to use roaming data only for user preferences, links, and small data files.
+El sistema operativo limita el tamaño de los datos de itinerancia de cada aplicación. Consulta [**ApplicationData.RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625). Si la aplicación alcanza el límite, no se replicará ningún dato de la aplicación en la nube hasta que la cantidad total de datos de itinerancia de la aplicación vuelva a ser inferior a ese límite. Por esta razón, es recomendable usar datos móviles únicamente para preferencias de usuario, vínculos y archivos de datos pequeños.
 
-Roaming data for an app is available in the cloud as long as it is accessed by the user from some device within the required time interval. If the user does not run an app for longer than this time interval, its roaming data is removed from the cloud. If a user uninstalls an app, its roaming data isn't automatically removed from the cloud, it's preserved. If the user reinstalls the app within the time interval, the roaming data is synchronized from the cloud.
+Los datos móviles de una aplicación están disponibles en la nube siempre que el usuario obtenga acceso a los mismos desde algún dispositivo en el intervalo de tiempo requerido. Si transcurre más tiempo sin que el usuario ejecute la aplicación, se quitarán estos datos móviles de la nube. Si un usuario desinstala una aplicación, sus datos móviles no se quitarán automáticamente de la nube, sino que se conservarán. Si el usuario reinstala la aplicación en este intervalo de tiempo, se sincronizarán los datos de itinerancia desde la nube.
 
-### Roaming data do's and don'ts
+### Qué hacer y qué no con los datos de itinerancia
 
--   Use roaming for user preferences and customizations, links, and small data files. For example, use roaming to preserve a user's background color preference across all devices.
--   Use roaming to let users continue a task across devices. For example, roam app data like the contents of an drafted email or the most recently viewed page in a reader app.
--   Handle the [**DataChanged**](https://msdn.microsoft.com/library/windows/apps/br241620) event by updating app data. This event occurs when app data has just finished syncing from the cloud.
--   Roam references to content rather than raw data. For example, roam a URL rather than the content of an online article.
--   For important, time critical settings, use the *HighPriority* setting associated with [**RoamingSettings**](https://msdn.microsoft.com/library/windows/apps/br241624).
--   Don't roam app data that is specific to a device. Some info is only pertinent locally, such as a path name to a local file resource. If you do decide to roam local information, make sure that the app can recover if the info isn't valid on the secondary device.
--   Don't roam large sets of app data. There's a limit to the amount of app data an app may roam; use [**RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625) property to get this maximum. If an app hits this limit, no data can roam until the size of the app data store no longer exceeds the limit. When you design your app, consider how to put a bound on larger data so as to not exceed the limit. For example, if saving a game state requires 10KB each, the app might only allow the user store up to 10 games.
--   Don't use roaming for data that relies on instant syncing. Windows doesn't guarantee an instant sync; roaming could be significantly delayed if a user is offline or on a high latency network. Ensure that your UI doesn't depend on instant syncing.
--   Don't use roam frequently changing data. For example, if your app tracks frequently changing info, such as the position in a song by second, don't store this as roaming app data. Instead, pick a less frequent representation that still provides a good user experience, like the currently playing song.
+-   Usaa la itinerancia para las preferencias y personalizaciones, vínculos y pequeños archivos de datos. Por ejemplo, usa los datos móviles para mantener la preferencia de color de fondo de un usuario en todos sus dispositivos.
+-   Usa los datos móviles para que los usuarios puedan continuar con una tarea en diferentes dispositivos. Por ejemplo, incluye en los datos móviles de la aplicación información del tipo del contenido del borrador de un correo electrónico o de la última página vista en una aplicación de lectura.
+-   Controla el evento [**DataChanged**](https://msdn.microsoft.com/library/windows/apps/br241620) actualizando los datos de la aplicación. Este evento se produce cuando los datos de la aplicación acaban de terminar de sincronizarse desde la nube.
+-   La movilidad hace referencia al contenido más que a los datos sin procesar. Por ejemplo, incluye en los datos de itinerancia una URL en lugar del contenido de un artículo en línea.
+-   Para las configuraciones importantes en las que el tiempo es fundamental, usa el parámetro *HighPriority* asociado a [**RoamingSettings**](https://msdn.microsoft.com/library/windows/apps/br241624).
+-   No incluyas como datos móviles aquellos datos de la aplicación que sean específicos de un dispositivo. Alguna información solo es relevante de forma local como, por ejemplo, el nombre de una ruta de acceso a un recurso de archivos locales. Si decides incluir información local como datos móviles, asegúrate de que la aplicación puede recuperarse si la información no es válida en el dispositivo secundario.
+-   No incluyas como datos móviles grandes conjuntos de datos de la aplicación. La cantidad de datos de la aplicación que se pueden definir como datos de itinerancia es limitada. Usa la propiedad [**RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625) para obtener la cantidad máxima. Si una aplicación alcanza este límite, no se podrán transferir datos móviles hasta que el tamaño del almacén de datos de la aplicación deje de superar el límite. Al diseñar la aplicación, busca la forma de restringir los datos de mayor tamaño de manera que no se exceda el límite. Por ejemplo, si se necesitan 10 KB para guardar cada estado de un juego, la aplicación podría permitir que el usuario almacene solo 10 juegos.
+-   No definas datos que usan sincronización instantánea como datos móviles. Windows no garantiza una sincronización instantánea; la itinerancia podría verse demorada de forma significativa si el usuario no dispone de conexión o está conectado a una red con una latencia elevada. Asegúrate de que tu UI no depende de la sincronización instantánea.
+-   No definas datos que cambian frecuentemente como datos de itinerancia. Por ejemplo, si tu aplicación realiza el seguimiento de información que cambia con frecuencia, como la posición en segundos de una canción, no almacenes esto como datos móviles de la aplicación. En su lugar, elige una representación menos frecuente que siga proporcionando al usuario una buena experiencia, como la canción que se está reproduciendo en ese momento.
 
-### <span id="Roaming_pre-requisites"></span><span id="roaming_pre-requisites"></span><span id="ROAMING_PRE-REQUISITES"></span>Roaming pre-requisites
+### <span id="Roaming_pre-requisites"></span><span id="roaming_pre-requisites"></span><span id="ROAMING_PRE-REQUISITES"></span>Requisitos previos para el uso de los datos móviles
 
-Any user can benefit from roaming app data if they use a Microsoft account to log on to their device. However, users and group policy administrators can switch off roaming app data on a device at any time. If a user chooses not to use a Microsoft account or disables roaming data capabilities, she will still be able to use your app, but app data be local to each device.
+Todos los usuarios pueden beneficiarse de los datos de las aplicaciones de itinerancia si usan una cuenta Microsoft para iniciar sesión en su dispositivo. Sin embargo, tanto los usuarios como los administradores de directivas de grupo pueden desactivar los datos móviles de aplicaciones de un dispositivo en cualquier momento. Si un usuario decide no usar una cuenta Microsoft o deshabilita la funcionalidad de datos de itinerancia, seguirá pudiendo usar la aplicación, pero los datos de la aplicación serán locales para cada dispositivo.
 
-Data stored in the [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) will only transition if a user has made a device “trusted”. If a device isn't trusted, data secured in this vault will not roam.
+Los datos almacenados en [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) solo se transferirán si un usuario ha marcado el dispositivo como "de confianza". Si un dispositivo no es de confianza, los datos guardados en este almacén no se transferirán.
 
-### <span id="Conflict_resolution"></span><span id="conflict_resolution"></span><span id="CONFLICT_RESOLUTION"></span>Conflict resolution
+### <span id="Conflict_resolution"></span><span id="conflict_resolution"></span><span id="CONFLICT_RESOLUTION"></span>Resolución de conflictos
 
-Roaming app data is not intended for simultaneous use on more than one device at a time. If a conflict arises during synchronization because a particular data unit was changed on two devices, the system will always favor the value that was written last. This ensures that the app utilizes the most up-to-date information. If the data unit is a setting composite, conflict resolution will still occur on the level of the setting unit, which means that the composite with the latest change will be synchronized.
+Los datos móviles de una aplicación no están diseñados para ser usados en más de un dispositivo al mismo tiempo. Si surge un conflicto durante la sincronización porque se modificó algún dato en los dos dispositivos, el sistema siempre dará validez al último valor introducido. De este modo se garantiza que la aplicación usará la información más actualizada. Si la unidad de datos es una opción de configuración compuesta, la resolución de conflictos se seguirá realizando en el nivel de la opción de configuración unitaria, lo que significa que se realizará la sincronización del compuesto con el cambio más reciente.
 
-### <span id="When_to_write_data"></span><span id="when_to_write_data"></span><span id="WHEN_TO_WRITE_DATA"></span>When to write data
+### <span id="When_to_write_data"></span><span id="when_to_write_data"></span><span id="WHEN_TO_WRITE_DATA"></span>Cuándo escribir los datos
 
-Depending on the expected lifetime of the setting, data should be written at different times. Infrequently or slowly changing app data should be written immediately. However, app data that changes frequently should only be written periodically at regular intervals (such as once every 5 minutes), as well as when the app is suspended. For example, a music app might write the “current song” settings whenever a new song starts to play, however, the actual position in the song should only be written on suspend.
+En función de la vida útil prevista de la opción de configuración, los datos deben escribirse en diferentes momentos. Los datos de la aplicación que cambian con poca frecuencia o lentamente deben escribirse inmediatamente. Sin embargo, los datos de la aplicación que cambian con frecuencia solo deben escribirse periódicamente a intervalos regulares (por ejemplo, cada cinco minutos), y cuando se suspende la aplicación. Por ejemplo, una aplicación de música podría escribir la opción de configuración "canción actual" siempre que se empiece a reproducir una canción nueva; sin embargo, la posición real de la canción solo debe escribirse durante el estado de suspensión.
 
-### <span id="Excessive_usage_protection"></span><span id="excessive_usage_protection"></span><span id="EXCESSIVE_USAGE_PROTECTION"></span>Excessive usage protection
+### <span id="Excessive_usage_protection"></span><span id="excessive_usage_protection"></span><span id="EXCESSIVE_USAGE_PROTECTION"></span>Protección contra uso excesivo
 
-The system has various protection mechanisms in place to avoid inappropriate use of resources. If app data does not transition as expected, it is likely that the device has been temporarily restricted. Waiting for some time will usually resolve this situation automatically and no action is required.
+El sistema dispone de varios mecanismos de protección para evitar el uso inapropiado de los recursos. Si los datos de la aplicación no se transfieren como es de esperar, es probable que el dispositivo esté temporalmente restringido. Normalmente, esperar un tiempo resuelve esta situación automáticamente y no es necesario realizar ninguna acción.
 
-### <span id="Versioning"></span><span id="versioning"></span><span id="VERSIONING"></span>Versioning
+### <span id="Versioning"></span><span id="versioning"></span><span id="VERSIONING"></span>Control de versiones
 
-App data can utilize versioning to upgrade from one data structure to another. The version number is different from the app version and can be set at will. Although not enforced, it is highly recommended that you use increasing version numbers, since undesirable complications (including data loss)could occur if you try to transition to a lower data version number that represents newer data.
+Los datos de la aplicación pueden usar el control de versiones para actualizar de una estructura de datos a otra. El número de versión es diferente de la versión de la aplicación y se puede establecer a voluntad. Aunque no es obligatorio, es muy recomendable usar solo números de versión incrementales, porque se podría producir una situación no deseada (incluida la pérdida de datos) al transferir a un número de versión de los datos inferior que represente datos más recientes.
 
-App data only roams between installed apps with the same version number. For example, devices on version 2 will transition data between each other and devices on version 3 will do the same, but no roaming will occur between a device running version 2 and a device running version 3. If you install a new app that utilized various version numbers on other devices, the newly installed app will sync the app data associated with the highest version number.
+Los datos de la aplicación solo se transfieren entre aplicaciones que tengan el mismo número de versión. Por ejemplo, los dispositivos con la versión 2 transferirán los datos entre sí, y los dispositivos con la versión 3 harán lo mismo, pero no se realizará una transferencia entre los dispositivos de la versión 2 y los de la versión 3. Si instalas una aplicación que usó varios números de versión en otros dispositivos, la aplicación instalada recientemente sincronizará los datos de la aplicación asociados al número de versión más alto.
 
-### <span id="Testing_and_tools"></span><span id="testing_and_tools"></span><span id="TESTING_AND_TOOLS"></span>Testing and tools
+### <span id="Testing_and_tools"></span><span id="testing_and_tools"></span><span id="TESTING_AND_TOOLS"></span>Pruebas y herramientas
 
-Developers can lock their device in order to trigger a synchronization of roaming app data. If it seems that the app data does not transition within a certain time frame, please check the following items and make sure that:
+Los desarrolladores pueden bloquear su dispositivo para desencadenar una sincronización del perfil móvil de datos de la aplicación. Si parece que los datos de la aplicación no se transfieren en un determinado plazo de tiempo, comprueba los siguientes elementos y asegúrate de lo siguiente:
 
--   Your roaming data does not exceed the maximum size (see [**RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625) for details).
--   Your files are closed and released properly.
--   There are at least two devices running the same version of the app.
+-   Los datos de itinerancia no superan el tamaño máximo (consulta [**RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625) para obtener más información).
+-   Tus archivos están cerrados y correctamente publicados.
+-   Hay al menos dos dispositivos que están ejecutando la misma versión de la aplicación.
 
 
-### <span id="Register_to_receive_notification_when_roaming_data_changes"></span><span id="register_to_receive_notification_when_roaming_data_changes"></span><span id="REGISTER_TO_RECEIVE_NOTIFICATION_WHEN_ROAMING_DATA_CHANGES"></span>Register to receive notification when roaming data changes
+### <span id="Register_to_receive_notification_when_roaming_data_changes"></span><span id="register_to_receive_notification_when_roaming_data_changes"></span><span id="REGISTER_TO_RECEIVE_NOTIFICATION_WHEN_ROAMING_DATA_CHANGES"></span>Registrarse para recibir notificaciones cuando cambian los datos de itinerancia
 
-To use roaming app data, you need to register for roaming data changes and retrieve the roaming data containers so you can read and write settings.
+Para usar datos móviles de aplicaciones, debes registrarte para los cambios de datos móviles y recuperar los contenedores de datos móviles, para que puedas leer y crear configuración.
 
-1.  Register to receive notification when roaming data changes.
+1.  Regístrate para recibir notificaciones cuando cambian los datos de itinerancia.
 
-    The [**DataChanged**](https://msdn.microsoft.com/library/windows/apps/br241620) event notifies you when roaming data changes. This example sets `DataChangeHandler` as the handler for roaming data changes.
+    El evento [**DataChanged**](https://msdn.microsoft.com/library/windows/apps/br241620) te notifica cuándo cambian los datos de itinerancia. En este ejemplo se establece `DataChangeHandler` como el controlador para cambios de datos de itinerancia.
 
 ```    CSharp
 void InitHandlers()
@@ -220,9 +224,9 @@ void InitHandlers()
     }
 ```
 
-2.  Get the containers for the app's settings and files.
+2.  Obtén los contenedores para los archivos y la configuración de la aplicación.
 
-    Use the [**ApplicationData.RoamingSettings**](https://msdn.microsoft.com/library/windows/apps/br241624) property to get the settings and the [**ApplicationData.RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623) property to get the files.
+    Usa la propiedad [**ApplicationData.RoamingSettings**](https://msdn.microsoft.com/library/windows/apps/br241624) para obtener la configuración y la propiedad [**ApplicationData.RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623) para obtener los archivos.
 
 ```    CSharp
 Windows.Storage.ApplicationDataContainer roamingSettings = 
@@ -231,9 +235,9 @@ Windows.Storage.ApplicationDataContainer roamingSettings =
         Windows.Storage.ApplicationData.Current.RoamingFolder;
 ```
 
-### <span id="Create_and_retrieve_roaming_settings"></span><span id="create_and_retrieve_roaming_settings"></span><span id="CREATE_AND_RETRIEVE_ROAMING_SETTINGS"></span>Create and retrieve roaming settings
+### <span id="Create_and_retrieve_roaming_settings"></span><span id="create_and_retrieve_roaming_settings"></span><span id="CREATE_AND_RETRIEVE_ROAMING_SETTINGS"></span>Crear y recuperar la configuración de itinerancia
 
-Use the [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) property to access the settings in the `roamingSettings` container we got in the previous section. This example creates a simple setting named `exampleSetting` and a composite value named `composite`.
+Usa la propiedad [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) para obtener acceso a la configuración en el contenedor `roamingSettings` que obtuvimos en la sección anterior. En este ejemplo se crea una configuración sencilla denominada `exampleSetting` y un valor compuesto denominado
 
 ```CSharp
 // Simple setting
@@ -253,7 +257,7 @@ roamingSettings.Values["exampleCompositeSetting"] = composite;
 
 ```
 
-This example retrieves the settings we just created.
+En este ejemplo se recupera la configuración que acabamos de crear.
 
 ```CSharp
 // Simple setting
@@ -275,9 +279,9 @@ else
 }
 ```
 
-### <span id="Create_and_retrieve_roaming_files"></span><span id="create_and_retrieve_roaming_files"></span><span id="CREATE_AND_RETRIEVE_ROAMING_FILES"></span>Create and retrieve roaming files
+### <span id="Create_and_retrieve_roaming_files"></span><span id="create_and_retrieve_roaming_files"></span><span id="CREATE_AND_RETRIEVE_ROAMING_FILES"></span>Crear y recuperar archivos móviles
 
-To create and update a file in the roaming app data store, use the file APIs, such as [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) and [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505). This example creates a file named `dataFile.txt` in the `roamingFolder` container and writes the current date and time to the file. The **ReplaceExisting** value from the [**CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) enumeration indicates to replace the file if it already exists.
+Para crear y actualizar un archivo en el almacén de datos de itinerancia de la aplicación, usa las API de archivo, como [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) y [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505). En este ejemplo se crea un archivo llamado `dataFile.txt` en el contenedor `roamingFolder` y se escriben la fecha y la hora actuales en el archivo. El valor **ReplaceExisting** de la enumeración [**CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) indica que se reemplace el archivo si ya existe.
 
 ```CSharp
 async void WriteTimestamp()
@@ -291,7 +295,7 @@ async void WriteTimestamp()
 }
 ```
 
-To open and read a file in the roaming app data store, use the file APIs, such as [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272), [**Windows.Storage.StorageFile.GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741), and [**Windows.Storage.FileIO.ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482). This example opens the `dataFile.txt` file created in the previous section and reads the date from the file. For details on loading file resources from various locations, see [How to load file resources](https://msdn.microsoft.com/library/windows/apps/xaml/hh965322).
+Para abrir y leer un archivo en el almacén de datos de itinerancia de la aplicación, usa las API de archivo, como [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272), [**Windows.Storage.StorageFile.GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) y [**Windows.Storage.FileIO.ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482). En este ejemplo se abre el archivo `dataFile.txt` creado en la sección anterior y se lee la fecha que aparece en él. Para obtener información detallada sobre la carga de recursos de archivos de varias ubicaciones, consulta [Cómo cargar recursos de archivos](https://msdn.microsoft.com/library/windows/apps/xaml/hh965322).
 
 ```CSharp
 async void ReadTimestamp()
@@ -310,14 +314,14 @@ async void ReadTimestamp()
 ```
 
 
-## <span id="Temporary_app_data"></span><span id="temporary_app_data"></span><span id="TEMPORARY_APP_DATA"></span>Temporary app data
+## <span id="Temporary_app_data"></span><span id="temporary_app_data"></span><span id="TEMPORARY_APP_DATA"></span>Datos de aplicaciones temporales
 
 
-The temporary app data store works like a cache. Its files do not roam and could be removed at any time. The System Maintenance task can automatically delete data stored at this location at any time. The user can also clear files from the temporary data store using Disk Cleanup. Temporary app data can be used for storing temporary information during an app session. There is no guarantee that this data will persist beyond the end of the app session as the system might reclaim the used space if needed. The location is available via the [**temporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629) property.
+El almacén de datos de aplicaciones temporales funciona como una memoria caché. Sus archivos no son móviles y se pueden quitar en cualquier momento. La tarea Mantenimiento del sistema puede eliminar automáticamente los datos almacenados en esta ubicación en cualquier momento. El usuario también puede borrar archivos del almacén de datos temporales con el Liberador de espacio en disco. Los datos de aplicaciones temporales se pueden usar para almacenar información temporal durante una sesión de la aplicación. No hay garantía de que estos datos persistan más allá del final de una sesión de la aplicación, porque el sistema podría reclamar el espacio usado si fuera necesario. La ubicación está disponible mediante la propiedad [**temporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629).
 
-### <span id="Retrieve_the_temporary_data_container"></span><span id="retrieve_the_temporary_data_container"></span><span id="RETRIEVE_THE_TEMPORARY_DATA_CONTAINER"></span>Retrieve the temporary data container
+### <span id="Retrieve_the_temporary_data_container"></span><span id="retrieve_the_temporary_data_container"></span><span id="RETRIEVE_THE_TEMPORARY_DATA_CONTAINER"></span>Recuperar el contenedor de datos temporales
 
-Use the [**ApplicationData.TemporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629) property to get the files. The next steps use the `temporaryFolder` variable from this step.
+Usa la propiedad [**ApplicationData.TemporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629) para obtener los archivos. En los siguientes pasos se usa la variable `temporaryFolder` de este paso.
 
 ```CSharp
 Windows.Storage.StorageFolder temporaryFolder = ApplicationData.Current.TemporaryFolder;</code></pre></td>
@@ -326,9 +330,9 @@ Windows.Storage.StorageFolder temporaryFolder = ApplicationData.Current.Temporar
 </table>
 ```
 
-### <span id="Create_and_read_temporary_files"></span><span id="create_and_read_temporary_files"></span><span id="CREATE_AND_READ_TEMPORARY_FILES"></span>Create and read temporary files
+### <span id="Create_and_read_temporary_files"></span><span id="create_and_read_temporary_files"></span><span id="CREATE_AND_READ_TEMPORARY_FILES"></span>Crear y leer archivos temporales
 
-To create and update a file in the temporary app data store, use the file APIs, such as [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) and [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505). This example creates a file named `dataFile.txt` in the `temporaryFolder` container and writes the current date and time to the file. The **ReplaceExisting** value from the [**CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) enumeration indicates to replace the file if it already exists.
+Para crear y actualizar un archivo en el almacén de datos temporales de la aplicación, usa las API de archivo, como [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) y [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505). En este ejemplo se crea un archivo llamado `dataFile.txt` en el contenedor `temporaryFolder` y se escriben la fecha y la hora actuales en el archivo. El valor **ReplaceExisting** de la enumeración [**CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) indica que se reemplace el archivo si ya existe.
 
 <span codelanguage="CSharp"></span>
 ```CSharp
@@ -353,7 +357,7 @@ async void WriteTimestamp()
 }
 ```
 
-To open and read a file in the temporary app data store, use the file APIs, such as [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272), [**Windows.Storage.StorageFile.GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741), and [**Windows.Storage.FileIO.ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482). This example opens the `dataFile.txt` file created in the previous step and reads the date from the file. For details on loading file resources from various locations, see [How to load file resources](https://msdn.microsoft.com/library/windows/apps/xaml/hh965322).
+Para abrir y leer un archivo en el almacén de datos temporales de la aplicación, usa las API de archivo, como [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272), [**Windows.Storage.StorageFile.GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) y [**Windows.Storage.FileIO.ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482). En este ejemplo se abre el archivo `dataFile.txt` creado en el paso anterior y se lee la fecha que aparece en él. Para obtener información detallada sobre la carga de recursos de archivos de varias ubicaciones, consulta [Cómo cargar recursos de archivos](https://msdn.microsoft.com/library/windows/apps/xaml/hh965322).
 
 ```CSharp
 async void ReadTimestamp()
@@ -371,12 +375,12 @@ async void ReadTimestamp()
 }
 ```
 
-## <span id="Organize_app_data_with_containers"></span><span id="organize_app_data_with_containers"></span><span id="ORGANIZE_APP_DATA_WITH_CONTAINERS"></span>Organize app data with containers
+## <span id="Organize_app_data_with_containers"></span><span id="organize_app_data_with_containers"></span><span id="ORGANIZE_APP_DATA_WITH_CONTAINERS"></span>Organizar los datos de aplicación con contenedores
 
 
-To help you organize your app data settings and files, you create containers (represented by [**ApplicationDataContainer**](https://msdn.microsoft.com/library/windows/apps/br241599) objects) instead of working directly with directories. You can add containers to the local, roaming, and temporary app data stores. Containers can be nested up to 32 levels deep.
+Para que tengas tus archivos y la configuración de datos de la aplicación organizados, crea contenedores (representados por objetos [**ApplicationDataContainer**](https://msdn.microsoft.com/library/windows/apps/br241599)) en lugar de trabajar directamente con directorios. Puedes agregar contenedores a los almacenes de datos de aplicaciones locales, de itinerancia y temporales. Los contenedores se pueden anidar hasta en 32 niveles de profundidad.
 
-To create a settings container, call the [**ApplicationDataContainer.CreateContainer**](https://msdn.microsoft.com/library/windows/apps/br241611) method. This example creates a local settings container named `exampleContainer` and adds a setting named `exampleSetting`. The **Always** value from the [**ApplicationDataCreateDisposition**](https://msdn.microsoft.com/library/windows/apps/br241616) enumeration indicates that the container is created if it doesn't already exist.
+Para crear un contenedor de configuraciones, llama al método [**ApplicationDataContainer.CreateContainer**](https://msdn.microsoft.com/library/windows/apps/br241611). En este ejemplo se crea un contenedor de configuraciones local denominado `exampleContainer` y se agrega una configuración llamada `exampleSetting`. El valor **Siempre** de la enumeración [**ApplicationDataCreateDisposition**](https://msdn.microsoft.com/library/windows/apps/br241616) indica que el contenedor se crea si no existe ya.
 
 ```CSharp
 Windows.Storage.ApplicationDataContainer localSettings = 
@@ -394,10 +398,10 @@ if (localSettings.Containers.ContainsKey("exampleContainer"))
 }
 ```
 
-## <span id="Delete_app_settings_and_containers"></span><span id="delete_app_settings_and_containers"></span><span id="DELETE_APP_SETTINGS_AND_CONTAINERS"></span>Delete app settings and containers
+## <span id="Delete_app_settings_and_containers"></span><span id="delete_app_settings_and_containers"></span><span id="DELETE_APP_SETTINGS_AND_CONTAINERS"></span>Eliminar los contenedores y la configuración de aplicación
 
 
-To delete a simple setting that your app no longer needs, use the [**ApplicationDataContainerSettings.Remove**](https://msdn.microsoft.com/library/windows/apps/br241608) method. This example deletesthe `exampleSetting` local setting that we created earlier.
+Para eliminar una configuración sencilla que tu aplicación ya no necesita, usa el método [**ApplicationDataContainerSettings.Remove**](https://msdn.microsoft.com/library/windows/apps/br241608). En este ejemplo se elimina la configuración local `exampleSetting` que hemos creado anteriormente.
 
 ```CSharp
 Windows.Storage.ApplicationDataContainer localSettings = 
@@ -410,7 +414,7 @@ Windows.Storage.StorageFolder localFolder =
 localSettings.Values.Remove("exampleSetting");
 ```
 
-To delete a composite setting, use the [**ApplicationDataCompositeValue.Remove**](https://msdn.microsoft.com/library/windows/apps/br241597) method. This example deletes the local `exampleCompositeSetting` composite setting we created in an earlier example.
+Para eliminar una configuración compuesta, usa el método [**ApplicationDataCompositeValue.Remove**](https://msdn.microsoft.com/library/windows/apps/br241597). En este ejemplo se elimina la configuración compuesta local `exampleCompositeSetting` que creamos en el ejemplo anterior.
 
 ```CSharp
 Windows.Storage.ApplicationDataContainer localSettings = 
@@ -423,7 +427,7 @@ Windows.Storage.StorageFolder localFolder =
 localSettings.Values.Remove("exampleCompositeSetting");
 ```
 
-To delete a container, call the [**ApplicationDataContainer.DeleteContainer**](https://msdn.microsoft.com/library/windows/apps/br241612) method. This example deletes the local `exampleContainer` settings container we created earlier.
+Para eliminar un contenedor, llama al método [**ApplicationDataContainer.DeleteContainer**](https://msdn.microsoft.com/library/windows/apps/br241612). Este ejemplo elimina el contenedor de configuraciones `exampleContainer` local que creamos anteriormente.
 
 ```CSharp
 Windows.Storage.ApplicationDataContainer localSettings = 
@@ -436,17 +440,22 @@ Windows.Storage.StorageFolder localFolder =
 localSettings.DeleteContainer("exampleContainer");
 ```
 
-## <span id="Versioning_your_app_data"></span><span id="versioning_your_app_data"></span><span id="VERSIONING_YOUR_APP_DATA"></span>Versioning your app data
+## <span id="Versioning_your_app_data"></span><span id="versioning_your_app_data"></span><span id="VERSIONING_YOUR_APP_DATA"></span>Control de versiones de los datos de aplicación
 
 
-You can optionally version the app data for your app. This would enable you to create a future version of your app that changes the format of its app data without causing compatibility problems with the previous version of your app. The app checks the version of the app data in the data store, and if the version is less than the version the app expects, the app should update the app data to the new format and update the version. For more info, see the[**Application.Version**](https://msdn.microsoft.com/library/windows/apps/br241630) property and the [**ApplicationData.SetVersionAsync**](https://msdn.microsoft.com/library/windows/apps/hh701429) method.
+Opcionalmente, puedes crear versiones de los datos de aplicación para la aplicación. Esto te permitiría crear una versión futura de la aplicación que cambie el formato de sus datos de aplicación sin provocar problemas de compatibilidad con la versión anterior de la aplicación. La aplicación comprueba la versión de los datos de la aplicación en el almacén de datos y, si la versión es anterior a la que la aplicación espera, la aplicación debe actualizar los datos de la aplicación al nuevo formato y actualizar la versión. Para más información, consulta la propiedad [**Application.Version**](https://msdn.microsoft.com/library/windows/apps/br241630) y el método [**ApplicationData.SetVersionAsync**](https://msdn.microsoft.com/library/windows/apps/hh701429).
 
-## Related articles
+## Artículos relacionados
 
 * [**Windows.Storage.ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587)
 * [**Windows.Storage.ApplicationData.RoamingSettings**](https://msdn.microsoft.com/library/windows/apps/br241624)
 * [**Windows.Storage.ApplicationData.RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623)
 * [**Windows.Storage.ApplicationData.RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625)
 * [**Windows.Storage.ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588)
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

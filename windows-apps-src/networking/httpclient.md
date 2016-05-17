@@ -1,57 +1,71 @@
 ---
 author: DelfCo
-description: Use HttpClient and the rest of the Windows.Web.Http namespace API to send and receive information using the HTTP 2.0 and HTTP 1.1 protocols.
+description: Usa HttpClient y el resto de la API del espacio de nombres Windows.Web.Http para enviar y recibir información mediante los protocolos HTTP 2.0 y HTTP 1.1.
 title: HttpClient
 ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
 ---
 
 # HttpClient
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Important APIs**
+**API importantes**
 
 -   [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)
 -   [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)
 -   [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631)
 
-Use [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) and the rest of the [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) namespace API to send and receive information using the HTTP 2.0 and HTTP 1.1 protocols.
+Usa [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) y el resto de la API del espacio de nombres [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) para enviar y recibir información mediante los protocolos HTTP 2.0 y HTTP 1.1.
 
-## Overview of HttpClient and the Windows.Web.Http namespace
+## Información general de HttpClient y el espacio de nombres Windows.Web.Http
 
-The classes in the [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) namespace and the related [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/windows/apps/dn252713) and [**Windows.Web.Http.Filters**](https://msdn.microsoft.com/library/windows/apps/dn298623) namespaces provide a programming interface for Universal Windows Platform (UWP) apps that act as an HTTP client to perform basic GET requests or implement more advanced HTTP functionality listed below.
+Las clases del espacio de nombres [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) y los espacios de nombres [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/windows/apps/dn252713) y [**Windows.Web.Http.Filters**](https://msdn.microsoft.com/library/windows/apps/dn298623) relacionados proporcionan una interfaz de programación para aplicaciones para la Plataforma universal de Windows (UWP) que actúan como un cliente HTTP para realizar solicitudes GET básicas o implementar funcionalidades más avanzadas de HTTP que se indican a continuación.
 
--   Methods for common verbs (**DELETE**, **GET**, **PUT**, and **POST**). Each of these requests are sent as an asynchronous operation.
+-   Métodos para verbos comunes (**DELETE**, **GET**, **PUT** y **POST**). Cada una de estas solicitudes se envía como una operación asincrónica.
 
--   Support for common authentication settings and patterns.
+-   Compatibilidad con diseños y configuraciones de autenticación comunes.
 
--   Access to Secure Sockets Layer (SSL) details on the transport.
+-   Acceso a detalles de la Capa de sockets seguros (SSL) en el transporte.
 
--   Ability to include customized filters in advanced apps.
+-   Capacidad de incluir filtros personalizados en aplicaciones avanzadas.
 
--   Ability to get, set, and delete cookies.
+-   Capacidad de obtener, establecer y eliminar cookies.
 
--   HTTP Request progress info available on asynchronous methods.
+-   Información de progreso de solicitudes HTTP disponible en métodos asincrónicos.
 
-The [**Windows.Web.Http.HttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/dn279617) class represents an HTTP request message sent by [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639). The [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) class represents an HTTP response message received from an HTTP request. HTTP messages are defined in [RFC 2616](http://go.microsoft.com/fwlink/p/?linkid=241642) by the IETF.
+La clase [**Windows.Web.Http.HttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/dn279617) representa un mensaje de solicitud HTTP enviado por [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639). La clase [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) representa un mensaje de respuesta HTTP recibido de una solicitud HTTP. IETF define los mensajes HTTP en la especificación [RFC 2616](http://go.microsoft.com/fwlink/p/?linkid=241642).
 
-The [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) namespace represents HTTP content as the HTTP entity body and headers including cookies. HTTP content can be associated with an HTTP request or an HTTP response. The **Windows.Web.Http** namespace provides a number of different classes to represent HTTP content.
+El espacio de nombres [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) representa el contenido HTTP como el cuerpo de entidad HTTP y los encabezados con cookies. El contenido HTTP puede asociarse a una solicitud HTTP o a una respuesta HTTP. El espacio de nombres **Windows.Web.Http** proporciona distintas clases para representar el contenido HTTP.
 
--   [**HttpBufferContent**](https://msdn.microsoft.com/library/windows/apps/dn298625). Content as a buffer
--   [**HttpFormUrlEncodedContent**](https://msdn.microsoft.com/library/windows/apps/dn298685). Content as name and value tuples encoded with the **application/x-www-form-urlencoded** MIME type
--   [**HttpMultipartContent**](https://msdn.microsoft.com/library/windows/apps/dn298708). Content in the form of the **multipart/\*** MIME type.
--   [**HttpMultipartFormDataContent**](https://msdn.microsoft.com/library/windows/apps/dn279596). Content that is encoded as the **multipart/form-data** MIME type.
--   [**HttpStreamContent**](https://msdn.microsoft.com/library/windows/apps/dn279649). Content as a stream (the internal type is used by the HTTP GET method to receive data and the HTTP POST method to upload data)
--   [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661). Content as a string.
--   [**IHttpContent**](https://msdn.microsoft.com/library/windows/apps/dn279684) - A base interface for developers to create their own content objects
+-   [
+              **HttpBufferContent**
+            ](https://msdn.microsoft.com/library/windows/apps/dn298625). Contenido como un búfer
+-   [
+              **HttpFormUrlEncodedContent**
+            ](https://msdn.microsoft.com/library/windows/apps/dn298685). Contenido como tuplas de nombre y valor codificadas con el tipo MIME **application/x-www-form-urlencoded**.
+-   [
+              **HttpMultipartContent**
+            ](https://msdn.microsoft.com/library/windows/apps/dn298708). Contenido con el formato del tipo MIME **multipart/\***.
+-   [
+              **HttpMultipartFormDataContent**
+            ](https://msdn.microsoft.com/library/windows/apps/dn279596). Contenido que se codifica como el tipo MIME **multipart/form-data**.
+-   [
+              **HttpStreamContent**
+            ](https://msdn.microsoft.com/library/windows/apps/dn279649). Contenido como un flujo (el tipo interno lo usan el método HTTP GET para recibir datos y el método HTTP POST para cargar datos).
+-   [
+              **HttpStringContent**
+            ](https://msdn.microsoft.com/library/windows/apps/dn279661). Contenido como una cadena.
+-   [
+              **IHttpContent**
+            ](https://msdn.microsoft.com/library/windows/apps/dn279684): una interfaz base para que los desarrolladores creen sus propios objetos de contenido.
 
-The code snippet in the "Send a simple GET request over HTTP" section uses the [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661) class to represent the HTTP response from an HTTP GET request as a string.
+El fragmento de código de la sección "Enviar una solicitud GET sencilla a través de HTTP" usa la clase [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661) para representar la respuesta HTTP de una solicitud HTTP GET como una cadena.
 
-The [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/windows/apps/dn252713) namespace supports creation of HTTP headers and cookies, which are then associated as properties with [**HttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/dn279617) and [**HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) objects.
+El espacio de nombres [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/windows/apps/dn252713) admite la creación de cookies y encabezados HTTP, que se asocian como propiedades a objetos [**HttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/dn279617) y [**HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631).
 
-## Send a simple GET request over HTTP
+## Enviar una solicitud GET sencilla a través de HTTP
 
-As mentioned earlier in this article, the [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) namespace allows UWP apps to send GET requests. The following code snippet demonstrates how to send a GET request to http://www.contoso.com using the [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) class and the [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) class to read the response from the GET request.
+Como se mencionó anteriormente en este artículo, el espacio de nombres [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) permite que las aplicaciones para UWP envíen solicitudes GET. En el siguiente fragmento de código se muestra cómo enviar una solicitud GET a http://www.contoso.com mediante la clase [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) y la clase [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) para leer la respuesta de la solicitud GET.
 
 ```csharp
 //Create an HTTP client object
@@ -93,21 +107,27 @@ catch (Exception ex)
 }
 ```
 
-## Exceptions in Windows.Web.Http
+## Excepciones en Windows.Web.Http
 
-An exception is thrown when an invalid string for a the Uniform Resource Identifier (URI) is passed to the constructor for the [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) object.
+Se inicia una excepción cuando se pasa una cadena no válida del identificador uniforme de recursos (URI) al constructor del objeto [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998).
 
-**.NET:  **The [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) type appears as [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) in C# and VB.
+**.NET: **El tipo [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) aparece como [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) en C# y VB.
 
-In C# and Visual Basic, this error can be avoided by using the [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) class in the .NET 4.5 and one of the [**System.Uri.TryCreate**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx) methods to test the string received from a user before the URI is constructed.
+En C# y Visual Basic, este error puede evitarse si se usa la clase [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) en .NET 4.5 y uno de los métodos [**System.Uri.TryCreate**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx) para probar la cadena recibida del usuario antes de que se cree el URI.
 
-In C++, there is no method to try and parse a string to a URI. If an app gets input from the user for the [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998), the constructor should be in a try/catch block. If an exception is thrown, the app can notify the user and request a new hostname.
+En C++, no hay ningún método para probar y analizar una cadena en un URI. Si una aplicación recibe información del usuario relativa a [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998), el constructor debe estar en un bloque Try/Catch. Si se genera una excepción, la aplicación podrá notificar al usuario y solicitar otro nombre de host.
 
-The [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) lacks a convenience function. So an app using [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) and other classes in this namespace needs to use the **HRESULT** value.
+[
+            **Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) no tiene una función conveniente. Por este motivo, una aplicación que use [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) y otras clases de este espacio de nombres debe usar el valor **HRESULT**.
 
-In apps using the .NET Framework 4.5 in C#, VB.NET, the [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) represents an error during app execution when an exception occurs. The [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx) property returns the **HRESULT** assigned to the specific exception. The [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx) property returns the message that describes the exception. Possible **HRESULT** values are listed in the *Winerror.h* header file. An app can filter on specific **HRESULT** values to modify app behavior depending on the cause of the exception.
+En las aplicaciones que usan .NET Framework 4.5 en C#, VB.NET, [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx) devuelve el valor **HRESULT** asignado a la excepción específica. La propiedad [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx) devuelve el mensaje que describe la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
-In apps using managed C++, the [Platform::Exception](http://msdn.microsoft.com/library/windows/apps/hh755825.aspx) represents an error during app execution when an exception occurs. The [Platform::Exception::HResult](http://msdn.microsoft.com/library/windows/apps/hh763371.aspx) property returns the **HRESULT** assigned to the specific exception. The [Platform::Exception::Message](http://msdn.microsoft.com/library/windows/apps/hh763375.aspx) property returns the system-provided string that is associated with the **HRESULT** value. Possible **HRESULT** values are listed in the *Winerror.h* header file. An app can filter on specific **HRESULT** values to modify app behavior depending on the cause of the exception.
+En las aplicaciones que usan C++ administrado, [Platform::Exception](http://msdn.microsoft.com/library/windows/apps/hh755825.aspx) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [Platform::Exception::HResult](http://msdn.microsoft.com/library/windows/apps/hh763371.aspx) devuelve el valor **HRESULT** asignado a la excepción concreta. La propiedad [Platform::Exception::Message](http://msdn.microsoft.com/library/windows/apps/hh763375.aspx) devuelve la cadena proporcionada por el sistema asociada con el valor **HRESULT**. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
-For most parameter validation errors, the **HRESULT** returned is **E\_INVALIDARG**. For some illegal method calls, the **HRESULT** returned is **E\_ILLEGAL\_METHOD\_CALL**.
+Para la mayoría de los errores de validación de parámetros, el valor de **HRESULT** devuelto es **E\_INVALIDARG**. Para algunas llamadas a métodos no válidas, el valor de **HRESULT** devuelto es **E\_ILLEGAL\_METHOD\_CALL**.
+
+
+
+<!--HONumber=May16_HO2-->
+
 

@@ -1,43 +1,53 @@
 ---
 author: mtoepke
-title: Add controls
-description: Now, we take a look at how the game sample implements move-look controls in a 3-D game, and how to develop basic touch, mouse, and game controller controls.
+title: Agregar controles
+description: Echemos un vistazo ahora al modo en que la muestra de juego implementa los controles de movimiento y vista en un juego 3-D, y cómo va a desarrollar controles básicos para mandos, función táctil y mouse.
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
 ---
 
-# Add controls
+# Agregar controles
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Now, we take a look at how the game sample implements move-look controls in a 3-D game, and how to develop basic touch, mouse, and game controller controls.
+Echemos un vistazo ahora al modo en que la muestra de juego implementa los controles de movimiento y vista en un juego 3-D, y cómo va a desarrollar controles básicos para mandos, función táctil y mouse.
 
-## Objective
-
-
--   To implement mouse/keyboard, touch, and Xbox controller controls in a Universal Windows Platform (UWP) game with DirectX.
-
-## UWP game apps and controls
+## Objetivo
 
 
-A good UWP game supports a broad variety of interfaces. A potential player might have Windows 10 on a tablet with no physical buttons, or a media PC with an Xbox controller attached, or the latest desktop gaming rig with a high-performance mouse and gaming keyboard. Your game should support all of these devices if the game design allows it.
+-   Implementar controles de mouse/teclado, táctiles y de mandos de la Xbox en un juego de la Plataforma universal de Windows (UWP) con DirectX.
 
-This sample supports all three. It's a simple first-person shooting game, and the move-look controls that are standard for this genre are easily implemented for all three types of input.
-
-For more info about controls, and move-look controls specifically, see [Move-look controls for games](tutorial--adding-move-look-controls-to-your-directx-game.md) and [Touch controls for games](tutorial--adding-touch-controls-to-your-directx-game.md).
-
-## Common control behaviors
+## Aplicaciones y controles de juegos de UWP
 
 
-Touch controls and mouse/keyboard controls have a very similar core implementation. In a UWP app, a pointer is simply a point on the screen. You can move it by sliding the mouse or sliding your finger on the touch screen. As a result, you can register for a single set of events, and not worry about whether the player is using a mouse or a touch screen to move and press the pointer.
+Un buen juego de la UWP admite una amplia variedad de interfaces. Un jugador potencial puede tener Windows 10 en una tableta sin botones físicos o un PC multimedia con un mando de la Xbox conectado, o la última plataforma de juego de escritorio con un ratón y un teclado de juego de alto rendimiento. Tu juego debería ser compatible con todos esos dispositivos si su diseño lo permite.
 
-When the **MoveLookController** class in the game sample is initialized, it registers for four pointer-specific events and one mouse-specific event:
+Esta muestra admite los tres. Es un sencillo juego de disparos en primera persona, y los controles de movimiento y vista que son estándar en este género se pueden implementar fácilmente para todas esas tres formas de entrada.
 
--   [**CoreWindow::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278). The left or right mouse button was pressed (and held), or the touch surface was touched.
--   [**CoreWindow::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276). The mouse moved, or a drag action was made on the touch surface.
--   [**CoreWindow::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279). The left mouse button was released, or the object contacting the touch surface was lifted.
--   [**CoreWindow::PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208275). The pointer moved out of the main window.
--   [**Windows::Devices::Input::MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356). The mouse moved a certain distance. Be aware that we are only interested in mouse movement delta values, and not the current x-y position.
+Si quieres obtener más información acerca de los controles y, en concreto acerca de los controles de movimiento y vista, consulta [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) y [Controles táctiles para juegos](tutorial--adding-touch-controls-to-your-directx-game.md).
+
+## Comportamientos de controles comunes
+
+
+Los controles táctiles y los controles de mouse o teclado tienen una implementación principal muy parecida. En una aplicación para UWP, un puntero es simplemente un punto en la pantalla. Puedes moverlo desplazando el ratón o deslizando un dedo por la pantalla táctil. Como resultado, puedes registrar un único conjunto de eventos y despreocuparte de si el jugador usa un mouse o una pantalla táctil para mover y presionar el puntero.
+
+Cuando la clase **MoveLookController** en la muestra de juego se inicializa, registra cuatro eventos específicos de puntero y uno específico de ratón:
+
+-   [
+              **CoreWindow::PointerPressed**
+            ](https://msdn.microsoft.com/library/windows/apps/br208278). Se presionó (o se mantuvo presionado) el botón izquierdo o derecho del mouse o se tocó la superficie táctil.
+-   [
+              **CoreWindow::PointerMoved**
+            ](https://msdn.microsoft.com/library/windows/apps/br208276). El mouse se movió, o se realizó una acción de arrastrar en la superficie táctil.
+-   [
+              **CoreWindow::PointerReleased**
+            ](https://msdn.microsoft.com/library/windows/apps/br208279). Se soltó el botón izquierdo del mouse, o se retiró el objeto que estaba en contacto con la superficie táctil.
+-   [
+              **CoreWindow::PointerExited**
+            ](https://msdn.microsoft.com/library/windows/apps/br208275). El puntero se movió fuera de la ventana principal.
+-   [
+              **Windows::Devices::Input::MouseMoved**
+            ](https://msdn.microsoft.com/library/windows/apps/hh758356). El mouse se desplazó una distancia determinada. Ten en cuenta que solo nos interesan los valores delta del movimiento de ratón, no la posición actual en las coordenadas x-y.
 
 ```cpp
 void MoveLookController::Initialize(
@@ -74,25 +84,25 @@ void MoveLookController::Initialize(
 }
 ```
 
-The Xbox controller is handled separately, using the [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053) APIs. We talk about the implementation of game controller controls in a bit.
+El mando de la Xbox se controla de forma independiente mediante las API de [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053). Hablaremos de la implementación de controles de mandos de juego en unos instantes.
 
-In the game sample, the **MoveLookController** class has three controller-specific states, regardless of the control type:
+En la muestra de juego, la clase **MoveLookController** tiene tres estados específicos de mando, independientemente del tipo de control:
 
--   **None**. This is the initialized state for the controller. The game is not anticipating any controller input.
--   **WaitForInput**. The game is paused and is waiting for the player to continue.
--   **Active**. The game is running, processing player input.
+-   **Ninguna**. Es el estado inicializado para el mando. El juego no espera la entrada de ningún mando.
+-   **WaitForInput**. El juego está en pausa y permanece a la espera de que el jugador continúe.
+-   **Active**. El juego está en ejecución, procesando la entrada del jugador.
 
-The **Active** state is the state when the player is actively playing the game. During this state, the **MoveLookController** instance is processing input events from all enabled input devices and interpreting the player's intentions based on the aggregated event data. As a result, it updates the velocity and look direction (the view plane normal) of the player's view and shares the updated data with the game after Update is called from the game loop.
+El estado **Active** es el estado cuando el jugador está jugando activamente al juego. Durante este estado, la instancia **MoveLookController** está procesando los eventos de entrada de todos los dispositivos de entrada habilitados e interpretando las intenciones del jugador basándose en los datos de eventos agregados. El resultado es que actualiza la velocidad y la dirección de vista (el plano de vista normal) de la vista del jugador y comparte los datos actualizados con el juego después de que se llame a Update desde el bucle del juego.
 
-Be aware that the player can take more than one action at the same time. For example, he or she could be firing spheres while moving the camera. All of these inputs are tracked in the **Active** state, with different pointer IDs corresponding to different pointer actions. This is necessary because from a player's perspective, a pointer event in the firing rectangle is different from one in the move rectangle or in the rest of the screen.
+Ten en cuenta que un jugador puede llevar a cabo más de una acción al mismo tiempo. Por ejemplo, podría disparar esferas mientras mueve la cámara. Todas estas entradas se registran en el estado **Active**, con diferentes id. de puntero correspondientes a los distintas acciones de puntero. Esto es necesario porque, desde la perspectiva de un jugador, un evento de puntero en el rectángulo de disparo es distinto de uno en el rectángulo de movimiento o en el resto de la pantalla.
 
-When a [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) event is received, the **MoveLookController** obtains the pointer ID value created by the window. The pointer ID represents a specific type of input. For example, on a multi-touch device, there may be several different active inputs at the same time. The IDs are used to keep track of which input the player is using. If one event is in the move rectangle of the touch screen, a pointer ID is assigned to track any pointer events in move rectangle. Other pointer events in the fire rectangle are tracked separately, with a separate pointer ID. (We talk about this some more in the section on touch controls.)
+Cuando se recibe un evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278), **MoveLookController** obtiene el valor del identificador del puntero creado por la ventana. El id. de puntero represente un tipo específico de entrada. Por ejemplo, en un dispositivo multitoque, puede que haya varias entradas activas diferentes al mismo tiempo. Los identificadores se usan para llevar un seguimiento de la entrada que está usando el jugador. Si un evento se encuentra en el rectángulo de movimiento de la pantalla táctil, se asigna un id. de puntero para realizar un seguimiento de cualquier evento de puntero en el rectángulo de movimiento. Otros eventos de puntero en el rectángulo de disparo se siguen por separado, con id. de puntero diferentes. (Hablaremos más sobre esto en la sección sobre controles táctiles).
 
-Input from the mouse has yet another ID and is also handled separately.
+La entrada del mouse tiene otro id. diferente y también se controla por separado.
 
-After the pointer events have been mapped to a specific game action, it's time to update the data the **MoveLookController** object shares with the main game loop.
+Una vez que los eventos de puntero se han asignado a una acción específica del juego, es hora de actualizar los datos que el objeto **MoveLookController** comparte con el bucle de juego principal.
 
-When called, the **Update** method in the game sample processes the input and updates the velocity and look direction variables (**m\_velocity** and **m\_lookdirection**), which the game loop then retrieves by calling the public **Velocity** and **LookDirection** methods on the **MoveLookController** instance.
+Cuando es llamado, el método **Update** de la muestra de juego procesa la entrada y actualiza las variables de velocidad y dirección de la vista (**m\_velocity** y **m\_lookdirection**), que luego el bucle de juego recupera llamando a los métodos públicos **Velocity** y **LookDirection** en la instancia **MoveLookController**.
 
 ```cpp
 void MoveLookController::Update()
@@ -167,7 +177,7 @@ void MoveLookController::Update()
 }
 ```
 
-The game loop can test to see if the player is firing by calling the **IsFiring** method on the **MoveLookController** instance. The **MoveLookController** checks to see if the player has pressed the fire button on one of the three input types.
+El bucle de juego puede probar si el jugador está disparando llamando al método **IsFiring** en la instancia **MoveLookController**. El **MoveLookController** comprueba para ver si el jugador ha presionado el botón de disparo en uno de los tres tipos de entrada.
 
 ```cpp
 bool MoveLookController::IsFiring()
@@ -191,18 +201,18 @@ bool MoveLookController::IsFiring()
 }
 ```
 
-If the player moves the pointer outside the main window of the game, or presses the pause button (the P key or the Xbox controller start button), the game must be paused. The **MoveLookController** registered the press, and informs the game loop when it calls the **IsPauseRequested** method. At that point, if **IsPauseRequested** returns **true**, the game loop then calls **WaitForPress** on the **MoveLookController** to move the controller into the **WaitForInput** state. Then, the **MoveLookController** waits for the player to select one of the menu items to load, continue, or exit the game, and stop processing gameplay input events until it returns to the **Active** state.
+Si el jugador mueve el puntero fuera de la ventana principal del juego o presiona el botón de pausa (la tecla K o el botón de inicio del mando de la Xbox), el juego debe pausarse. **MoveLookController** registra dicha presión e informa al bucle de juego cuando llama al método **IsPauseRequested**. En ese punto, si **IsPauseRequested** devuelve **true**, el bucle de juego llama a **WaitForPress** en **MoveLookController** para mover el mando al estado **WaitForInput**. A continuación, el elemento **MoveLookController** espera a que el jugador seleccione uno de los elementos de menú para cargar, continuar o salir del juego, y así poder detener el procesamiento de eventos de entrada de juego hasta que regrese al estado **Active**.
 
-See the [complete code sample for this section](#code_sample).
+Consulta el [código de muestra completo de esta sección](#code_sample).
 
-Now, let's look at the implementation of each of the three control types in a little more detail.
+Ahora, echemos un vistazo a la implementación de cada uno de los tres tipos de control con un poco más de detalle.
 
-## Implementing relative mouse controls
+## Implementar controles de mouse relativos
 
 
-If mouse movement is detected, we want use that movement to determine the new pitch and yaw of the camera. We do that by implementing relative mouse controls, where we handle the relative distance the mouse has moved—the delta between the start of the movement and the stop—as opposed to recording the absolute x-y pixel coordinates of the motion.
+Si se detecta un movimiento de mouse, queremos usarlo para averiguar la nueva rotación alrededor del eje 'x' y del eje 'y' de la cámara. Esto se logra implementando controles de ratón relativos, con los que controlamos la distancia que el ratón ha recorrido (el delta entre el inicio del movimiento hasta que el ratón se detiene ) en contraposición a grabar las coordenadas de píxel x-y absolutas del movimiento.
 
-To do that, we obtain the changes in the X (the horizontal motion) and the Y (the vertical motion) coordinates by examining the [**MouseDelta::X**](https://msdn.microsoft.com/library/windows/apps/hh758353) and **MouseDelta::Y** fields on the [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://msdn.microsoft.com/library/windows/apps/hh758358) argument object returned by the [**MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356) event.
+Para ello, obtenemos los cambios en las coordenadas X (movimiento horizontal) e Y (movimiento vertical) examinando los campos [**MouseDelta::X**](https://msdn.microsoft.com/library/windows/apps/hh758353) y **MouseDelta::Y** del objeto de argumento [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://msdn.microsoft.com/library/windows/apps/hh758358) que el evento [**MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356) devuelve.
 
 ```cpp
 void MoveLookController::OnMouseMoved(
@@ -246,12 +256,12 @@ void MoveLookController::OnMouseMoved(
 }
 ```
 
-## Implementing touch controls
+## Implementación de controles táctiles
 
 
-Touch controls are the trickiest to develop, because they are the most complex and require the most fine-tuning to be effective. In the game sample, a rectangle in the lower left quadrant of the screen is used as a directional pad, where sliding your thumb left and right in this space slides the camera left and right, and sliding your thumb up and down moves the camera forward and backward. A rectangle in the lower right quadrant of the screen can be pressed to fire the spheres. Aiming (pitch and yaw) are controlled by sliding your finger on the parts of the screen not reserved for moving and firing; as your finger moves, the camera (with fixed cross hairs) moves similarly.
+Los controles táctiles son los más complicados de desarrollar, porque son los más complejos y requieren el mayor grado de ajuste para ser eficaces. En la muestra de juego, se usa un rectángulo en el cuadrante inferior izquierdo como control de dirección: deslizar el pulgar a la izquierda o a la derecha en este espacio mueve la cámara hacia la izquierda o hacia la derecha, y deslizar el pulgar hacia arriba o hacia abajo mueve la cámara hacia delante o hacia atrás. Un rectángulo en el cuadrante inferior derecho de la pantalla se puede presionar para disparar las esferas. La puntería (rotación alrededor del eje 'x' y rotación alrededor del eje 'y') se controla deslizando el dedo en las partes de la pantalla que no están reservadas al movimiento y el disparo; a medida que el dedo se mueve, la cámara (con un punto de mira fijo) se mueve en consonancia.
 
-The move and fire rectangles are created by two methods in the sample code:
+Los rectángulos de movimiento y disparo son creados por dos métodos en el código de muestra:
 
 ```cpp
 void SetMoveRect(
@@ -264,9 +274,9 @@ void SetMoveRect(
         );
 ```
 
-We treat touch device pointer events for the other regions of the screen as look commands. If the screen is resized, these rectangles must be computed again (and redrawn).
+Tratamos los eventos de puntero del dispositivo táctil para otras regiones de la pantalla como comandos de vista. Si la pantalla cambia de tamaño, los rectángulos se deben volver a calcular (y dibujar).
 
-If a touch device pointer event is raised in one of these regions and the game state is set to **Active**, it's assigned a pointer ID, as we discussed earlier.
+Si un evento de puntero del dispositivo táctil se produce en una de estas regiones y el estado del juego está establecido en **Active**, se le asigna un identificador de puntero, como hemos visto anteriormente.
 
 ```cpp
 void MoveLookController::OnPointerPressed(
@@ -346,9 +356,9 @@ void MoveLookController::OnPointerPressed(
 }
 ```
 
-If a [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) event has occurred in one of the three control regions, the move rectangle, the fire rectangle, or the rest of the screen (the look control), the **MoveLookController** assigns the pointer ID for the pointer that fired the event to a specific variable that corresponds to the region of the screen the event was fired in. For example, if the event occurred in the move rectangle, the **m\_movePointerID** variable is set to the pointer ID that fired the event. A Boolean "in use" variable (**m\_lookInUse**, in the example) is also set to indicate that the control has not been released yet.
+Si se produce un evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) en una de las tres regiones de control (el rectángulo de movimiento, el rectángulo de disparo o el resto de la pantalla o control de vista), **MoveLookController** asigna el identificador de puntero al puntero que provocó el evento con una variable que corresponde a la región de la pantalla donde se provocó el evento. Por ejemplo, si el evento se produjo en el rectángulo de movimiento, la variable **m\_movePointerID** se establece en el id. de puntero que provocó el evento. También se establece una variable "en uso" booleana (**m\_lookInUse** en el ejemplo) para indicar que el control aún no se ha liberado.
 
-Now, let's look at how the game sample handles the [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) touch screen event.
+Veamos ahora cómo la muestra de juego controla el evento de pantalla táctil [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276).
 
 ```cpp
 void MoveLookController::OnPointerMoved(
@@ -406,12 +416,12 @@ void MoveLookController::OnPointerMoved(
 }
 ```
 
-The **MoveLookController** checks the pointer ID to determine where the event occurred, and takes one of the following actions:
+El **MoveLookController** comprueba el id. del puntero para determinar dónde se produjo el evento y realiza una de las siguientes acciones:
 
--   If the [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) event occurred in the move or fire rectangle, update the pointer position for the controller.
--   If the [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) event occurred somewhere in the rest of the screen (defined as the look controls), calculate the change in pitch and yaw of the look direction vector.
+-   Si se produjo el evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) en el rectángulo de disparo o movimiento, actualiza la posición de puntero para el controlador.
+-   Si el evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) se produjo en alguna otra parte de la pantalla (definida como los controles de apariencia), calcula el cambio en la rotación alrededor del eje x y del eje y del vector de dirección que corresponde a la vista.
 
-Lastly, let's look at how the game sample handles the [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) touch screen event.
+Por último, veamos cómo la muestra de juego controla el evento de pantalla táctil [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279).
 
 ```cpp
 void MoveLookController::OnPointerReleased(
@@ -461,23 +471,23 @@ void MoveLookController::OnPointerReleased(
 }
 ```
 
-If the ID of the pointer that fired the [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) event is the ID of the previously recorded move pointer, the **MoveLookController** sets the velocity to 0 because the player has stopped touching the move rectangle. If it didn't set the velocity to 0, the player would keep moving! If you want to implement some form of inertia, this is where you add the method that begins returning the velocity to 0 over future calls to **Update** from the game loop.
+Si el id. del puntero que desencadenó el evento [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) es el id. del puntero de movimiento registrado anteriormente, el **MoveLookController** establece la velocidad en 0 porque el jugador ha dejado de tocar el rectángulo de movimiento. Si no estableciera la velocidad en 0, el jugador seguiría moviéndose. Si quieres implementar algún tipo de inercia, aquí es donde agregarías el método que comienza a establecer la velocidad en 0 en llamadas futuras a **Update** desde el bucle del juego.
 
-Otherwise, if the [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) event fired in the fire rectangle or the look region, the **MoveLookController** resets the specific pointer IDs.
+De lo contrario, si el evento [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) se produjo en el rectángulo de disparo o en la región de vista, **MoveLookController** restablece los identificadores de puntero específicos.
 
-That's the basics of how touch screen controls are implemented in the game sample. Let's move on to mouse and keyboard controls.
+Estos son los conceptos básicos de cómo se implementan los controles de pantalla táctil en la muestra de juego. Pasemos a los controles de mouse y de teclado
 
-## Implementing mouse and keyboard controls
+## Implementación de controles de mouse y de teclado
 
 
-The game sample implements these mouse and keyboard controls:
+La muestra de juego implementa estos controles de mouse y de teclado:
 
--   The W, S, A, and D keys move the player view forward, backward, left, and right, respectively. Pressing X and the space bar move the view up and down, respectively.
--   Pressing the P key pauses the game.
--   Moving the mouse puts the player in control of the rotation (the pitch and yaw) of the camera view.
--   Clicking the left button fires a sphere.
+-   Las teclas W, S, A y D mueven la vista del jugador hacia delante, atrás, izquierda y derecha, respectivamente. Presionar la tecla X y la barra espaciadora mueve la vista hacia arriba y hacia abajo, respectivamente.
+-   Presionar la tecla P pausa el juego.
+-   Mover el mouse otorga al jugador el control de la rotación (el cabeceo y la guiñada) de la vista de la cámara.
+-   Hacer clic con el botón izquierdo dispara una esfera.
 
-To use the keyboard, the game sample registers for two extra events: [**CoreWindow::KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208271) and [**CoreWindow::KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208270), which handle the press and the release of a key, respectively.
+Para usar el teclado, la muestra de juego registra dos eventos adicionales: [**CoreWindow::KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208271) y [**CoreWindow::KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208270), que se encargan de registrar cuándo se presiona y cuándo se suelta una tecla, respectivamente.
 
 ```cpp
 window->KeyDown +=
@@ -487,7 +497,7 @@ window->KeyUp +=
         ref new TypedEventHandler<CoreWindow^, KeyEventArgs^>(this, &MoveLookController::OnKeyUp);
 ```
 
-The mouse is treated a little differently from the touch controls, even though it uses a pointer. Obviously, it doesn't use the move and fire rectangles, as that would be very cumbersome for the player: how could they press the move and fire controls at the same time? As noted earlier, the **MoveLookController** controller engages the look controls whenever the mouse is moved, and engages the fire controls when the left mouse button is pressed, as shown here.
+El mouse se trata de una forma ligeramente distinta a los controles táctiles, a pesar de que usa un puntero. Obviamente, no usa los rectángulos de movimiento y disparo, lo que resultaría muy engorroso para el jugador: ¿cómo podrían presionar los controles de movimiento y disparo al mismo tiempo? Como señalamos anteriormente, el mando **MoveLookController** se ocupa de los controles de vista siempre que se mueve el ratón, y de los controles de disparo cuando se pulsa el botón izquierdo del ratón, como se aprecia aquí.
 
 ```cpp
 void MoveLookController::OnPointerPressed(
@@ -598,7 +608,7 @@ void MoveLookController::OnPointerPressed(
 }
 ```
 
-Now, let's look at how the game sample handles the [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) mouse event.
+Veamos ahora cómo la muestra de juego controla el evento de mouse [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279).
 
 ```cpp
 void MoveLookController::OnPointerReleased(
@@ -656,16 +666,16 @@ void MoveLookController::OnPointerReleased(
 }
 ```
 
-When the player stops pressing one of the mouse buttons, the input is complete: the spheres stop firing. But, because look is always enabled, the game continues to use the same mouse pointer to track the ongoing look events.
+Cuando el jugador deja de presionar uno de los botones del mouse, la entrada está completa: las esferas dejan de disparar. Sin embargo, puesto que la vista siempre está habilitada, el juego continúa usando el mismo puntero del ratón para realizar un seguimiento de los eventos de vista en curso.
 
-Now, let's look at the last of control types: the Xbox controller. It's handled separately from the touch and mouse controls, because it doesn't use the pointer object.
+Veamos ahora el último de los tipos de control: el mando de la Xbox. Se controla de forma independiente a los controles táctiles y de ratón, porque no usa el objeto de puntero.
 
-## Implementing Xbox controller controls
+## Implementación de controles del mando de la Xbox
 
 
-In the game sample, Xbox controller support is added by calls to the [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053) APIs, which are set of APIs designed to simplify programming for game controllers. In the game sample, we use the Xbox controller's left analog stick for player movement, the right analog stick for the look controls, and the right trigger to fire. We use the start button to pause and resume the game.
+En la muestra de juego, la compatibilidad con el mando de la Xbox se agrega mediante llamadas a las API de [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053), que son un conjunto de API diseñadas para simplificar la programación para mandos de juego. En la muestra de juego, usamos el stick analógico izquierdo del mando de la Xbox para el movimiento del jugador, el stick analógico derecho para los controles de vista y el disparador derecho para disparar. Usamos el botón de inicio para pausar y reanudar el juego.
 
-The **Update** method on the **MoveLookController** instance immediately checks to see if a game controller is connected, and then checks the controller state.
+El método **Update** en la instancia **MoveLookController** comprueba inmediatamente si hay un mando de juego conectado y, a continuación, comprueba el estado del mando.
 
 ```cpp
 void MoveLookController::UpdateGameController()
@@ -793,20 +803,20 @@ void MoveLookController::UpdateGameController()
 }
 ```
 
-If the game controller is in the **Active** state, this method checks to see if a user moved the left analog stick in a specific direction. But the movement on the stick in a specific direction must register as larger than the radius of the dead zone; otherwise, nothing will happen. This dead zone radius is necessary to present "drifting," which is when the controller picks up minute movements from the player's thumb as it rests on the stick. If we don't have this dead zone, the player can get annoyed very quickly, as the controls feel very fidgety.
+Si el mando de juego se encuentra en el estado **Active**, este método comprueba si un usuario movió el stick analógico izquierdo en una dirección específica. Pero el movimiento del stick en una dirección específica debe registrarse como mayor que el radio de la zona muerta; de lo contrario, no ocurrirá nada. Este radio de la zona muerta es necesario para presentar "deriva", es decir, cuando el mando capta minúsculos movimientos del pulgar del jugador cuando éste descansa sobre el stick. Si no tenemos esta zona muerta, el jugador se irritará rápidamente, ya que los controles no pararán quietos.
 
-The **Update** method then performs the same check on the right stick, to see if the player has changed the direction the camera is looking, as long as the movement on the stick is longer than another dead zone radius.
+A continuación, el método **Update** realiza la misma comprobación con el stick derecho para ver si el jugador ha cambiado la dirección a la que mira la cámara, siempre y cuando el movimiento con el stick sea mayor que otro radio de zona muerta.
 
-**Update** computes the new pitch and yaw, and then checks to see if the user pressed the right analog trigger, our fire button.
+**Update** calcula la nueva rotación alrededor del eje x (pitch) y la rotación alrededor del eje y (yaw), y comprueba si el usuario presionó el disparador analógico derecho, nuestro botón de disparo.
 
-And that's how this sample implements a full set of control options. Again, remember that a good UWP app supports a range of control options, so players with different form factors and devices can play in the way they prefer!
+Y así es como esta muestra implementa un conjunto completo de opciones de control. Una vez más, recuerda que una buena aplicación para UWP admite un amplio abanico de opciones de control, de modo que jugadores con diferentes factores de forma y dispositivos puedan jugar del modo que prefieran.
 
-## Next steps
+## Pasos siguientes
 
 
-We've reviewed every major component of a UWP DirectX game except one: audio! Music and sound effects are important to any game, so let's discuss [adding sound](tutorial--adding-sound.md)!
+Hemos revisado todos los componentes principales de un juego DirectX de UWP excepto uno: ¡el audio! La música y los efectos de sonido son importantes en cualquier juego. Hablemos, por tanto, de cómo [agregar sonido](tutorial--adding-sound.md).
 
-## Complete sample code for this section
+## Código de muestra completo para esta sección
 
 
 MoveLookController.h
@@ -1896,20 +1906,25 @@ void MoveLookController::UpdateGameController()
 }
 ```
 
-> **Note**  
-This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps. If you’re developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Nota**  
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si desarrollas para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
+ 
 
-## Related topics
-
-
-[Create a simple UWP game with DirectX](tutorial--create-your-first-metro-style-directx-game.md)
-
- 
-
- 
+## Temas relacionados
 
 
+[Crear un juego para UWP sencillo con DirectX](tutorial--create-your-first-metro-style-directx-game.md)
+
+ 
+
+ 
+
+
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

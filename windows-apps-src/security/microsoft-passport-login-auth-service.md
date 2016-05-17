@@ -1,36 +1,36 @@
 ---
-title: Create a Microsoft Passport login service
-description: This is Part 2 of a complete walkthrough on how to use Microsoft Passport as an alternative to traditional username and password authentication systems in Windows 10 UWP (Universal Windows platform) apps.
+title: Crear un servicio de inicio de sesión de Microsoft Passport
+description: Esta es la segunda parte de un tutorial completo acerca de cómo usar Microsoft Passport como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña en aplicaciones para UWP (Plataforma universal de Windows) de Windows 10.
 ms.assetid: ECC9EF3D-E0A1-4BC4-94FA-3215E6CFF0E4
 author: awkoren
 ---
 
-# Create a Microsoft Passport login service
+# Crear un servicio de inicio de sesión de Microsoft Passport
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-\[Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.\]
+\[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
 
-This is Part 2 of a complete walkthrough on how to use Microsoft Passport as an alternative to traditional username and password authentication systems in Windows 10 UWP (Universal Windows platform) apps. This article picks up where Part 1, [Microsoft Passport login app](microsoft-passport-login.md), left off and extends the functionality to demonstrate how you can integrate Microsoft Passport into your existing application.
+Esta es la segunda parte de un tutorial completo acerca de cómo usar Microsoft Passport como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña en aplicaciones para UWP (Plataforma universal de Windows) de Windows 10. Este artículo comienza donde terminó la primera parte, [Aplicación de inicio de sesión de Microsoft Passport](microsoft-passport-login.md), y amplía la funcionalidad para demostrar cómo se puede integrar Microsoft Passport en tu aplicación existente.
 
-In order to build this project, you'll need some experience with C#, and XAML. You'll also need to be using Visual Studio 2015 (Community Edition or greater) on a Windows 10 machine.
+Para crear este proyecto, necesitarás algo de experiencia con C# y XAML. También tendrás que usar Visual Studio de 2015 (Community Edition o superior) en una máquina de Windows 10.
 
-## Exercise 1: Server Side Logic
+## Ejercicio 1: Lógica del lado servidor
 
 
-In this exercise you will be starting with the Passport application built in the first lab and creating a local mock server and database. This hands on lab is designed to teach how Microsoft Passport could be integrated into an existing system. By using a mock server and mock database a lot of unrelated setup is eliminated. In your own applications you will need to replace the mock objects with the real services and databases.
+En este ejercicio comenzará con la aplicación Passport integrada en la primera práctica y creará un servidor y una base de datos ficticios locales. Esta práctica de laboratorio está diseñada para enseñar cómo Microsoft Passport podría integrarse en un sistema existente. Al usar un servidor y una base de datos ficticios se elimina gran parte de la configuración no relacionada. En tus propias aplicaciones deberás reemplazar los objetos ficticios por servicios y bases de datos reales.
 
--   To begin, open up the PassportLogin solution from the first Passport Hands On Lab.
--   You will start by implementing the mock server and mock database. Create a new folder called "AuthService". In solution explorer right click on the solution "PassportLogin (Universal Windows)" and select Add > New Folder.
--   Create UserAccount and PassportDevices classes that will act as models for data to be saved in the mock database. The UserAccount will be similar to the user model implemented on a traditional authentication server. Right click on the AuthService folder and add a new class called "UserAccount.cs."
+-   Para comenzar, abre la solución PassportLogin de la primera práctica de laboratorio de Passport.
+-   Para comenzar deberás implementar el servidor y la base de datos ficticios. Crea una nueva carpeta denominada "AuthService". En el Explorador de soluciones, haz clic con el botón secundario en la solución "PassportLogin (Universal Windows)" y selecciona Agregar -> Nueva carpeta.
+-   Crea las clases UserAccount y PassportDevices que actuarán como modelos para los datos que se guardarán en la base de datos ficticia. La clase UserAccount será similar al modelo de usuario implementado en un servidor de autenticación tradicional. Haz clic con el botón secundario en la carpeta AuthService y agrega una nueva clase denominada "UserAccount.cs".
 
     ![](images/passport-auth-1.png)
 
     ![](images/passport-auth-2.png)
 
--   Change the class definition to be public and then add the following public properties. You will need the following reference.
+-   Cambia la definición de clase a pública y, después, agrega las siguientes propiedades públicas. Necesitarás la referencia siguiente.
 
     ```cs
     using System.ComponentModel.DataAnnotations;
@@ -49,9 +49,9 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
-    You may have noticed the commented out list of PassportDevices. This is a modification you will need to make to an existing user model in your current implementation. The list of PassportDevices will contain a deviceID, the public key made from Microsoft Passport, and a [**KeyCredentialAttestationResult**](https://msdn.microsoft.com/library/windows/apps/dn973034). For this hands on lab you will need to implement the keyAttestationResult as they are only provided by Microsoft Passport on devices that have a TPM (Trusted Platform Modules) chip. The **KeyCredentialAttestationResult** is a combination of multiple properties and would need to be split in order to save and load them with a database.
+    Habrás observado la lista comentada de PassportDevices. Esta es una modificación que deberá realizar en un modelo de usuario existente de tu implementación actual. La lista de PassportDevices contendrá un deviceID, la clave convertida en pública desde Microsoft Passport y un [**KeyCredentialAttestationResult**](https://msdn.microsoft.com/library/windows/apps/dn973034). Para esta práctica de laboratorio deberás implementar el keyAttestationResult, que solo proporciona Microsoft Passport en dispositivos que tienen un chip TPM (Módulos de plataforma segura). El **KeyCredentialAttestationResult** es una combinación de varias propiedades que deberían dividirse para poderse guardar y cargar con una base de datos.
 
--   Create a new class in the AuthService folder called "PassportDevice.cs". This is the model for the passport devices as discussed above. Change the class definition to be public and add the following properties.
+-   Crea una nueva clase en la carpeta AuthService denominada "PassportDevice.cs". Este es el modelo para los dispositivos de Passport que se explicó anteriormente. Cambia la definición de clase a pública y agrega las siguientes propiedades.
 
     ```cs
     namespace PassportLogin.AuthService
@@ -70,7 +70,7 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
--   Return to in UserAccount.cs and uncomment the list of Passport devices.
+-   Vuelve a UserAccount.cs y quita la marca de comentario de la lista de dispositivos de Passport.
 
     ```cs
     using System.Collections.Generic;
@@ -89,8 +89,8 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
--   With the model for the UserAccount and the PassportDevice created, you need to create another new class in the AuthService that will act as the mock database. As this is a mock database from where you will be saving and loading a list of user accounts locally. In the real world this would be your database implementation. Create a new class in AuthService called "MockStore.cs". Change the class definition to public.
--   As the mock store will save and load a list of user accounts locally you can implement the logic to save and load that list using an XmlSerializer. You will also need to remember the filename and save location. In MockStore.cs implement the following:
+-   Con el modelo de UserAccount y PassportDevice creado, debes crear otra nueva clase en AuthService que actuará como la base de datos ficticia. Dado que se trata de una base de datos ficticia, desde ella guardarás y cargarás una lista de cuentas de usuario localmente. En el mundo real, sería tu implementación de base de datos. Crea una nueva clase en AuthService denominada "MockStore.cs". Cambia la definición de clase a pública.
+-   Dado que el almacén ficticio guardará y cargará una lista de las cuentas de usuario localmente, puedes implementar la lógica para guardar y cargar esa lista mediante un XmlSerializer. También deberás recordar el nombre de archivo y la ubicación de almacenamiento. En MockStore.cs implementa lo siguiente:
 -   
 
     ```cs
@@ -181,7 +181,7 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
--   In the load method you may have noticed that an InitializeSampleUserAccounts method was commented out. You will need to create this method in the MockStore.cs. This method will populate the user accounts list so that a login can take place. In the real world the user database would already be populated. In this step you will also be creating a constructor that will initialise the user list and call load.
+-   En el método de carga habrás observado que se quitó la marca de comentario de un método InitializeSampleUserAccounts. Deberás crear este método en MockStore.cs. Este método rellenará la lista de cuentas de usuario para que se pueda realizar un inicio de sesión. En el mundo real, la base de datos de usuario ya estará rellenada. En este paso también crearás un constructor que inicializará la lista de usuarios y llamará a load.
 
     ```cs
     namespace PassportLogin.AuthService
@@ -220,7 +220,7 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
--   Now that the InitalizeSampleUserAccounts method exists uncomment the method call in the LoadAccountListAsync method.
+-   Ahora que el método InitalizeSampleUserAccounts existe, quita la marca de comentario de la llamada al método en el método LoadAccountListAsync.
 
     ```cs
     private async void LoadAccountListAsync()
@@ -244,7 +244,7 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
--   The user accounts list in mock store can now be saved and loaded. Other parts of the application will need to have access to this list so there will need to be some methods to retrieve this data. Underneath the InitializeSampleUserAccounts method, add the following get methods. They will allow you to get a userid, a single user, a list of users for a specific Passport device, and also get the public key for the user on a specific device.
+-   La lista de cuentas de usuario del almacén ficticio ya se puede guardar y cargar. Otras partes de la aplicación deberán acceder a esta lista, por lo que deberán existir algunos métodos para recuperar estos datos. Debajo del método InitializeSampleUserAccounts, agrega los siguientes métodos get. Te permitirán obtener un identificador de usuario, un usuario único, una lista de usuarios para un dispositivo específico de Passport, así como la clave pública para el usuario en un dispositivo específico.
 
     ```cs
     public Guid GetUserId(string username)
@@ -294,7 +294,7 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
--   The next methods to implement will handle simple operations to add account, remove account, and also remove device. Remove device is needed as Microsoft Passport is device specific. For each device to which you log in, a new public and private key pair will be created by Microsoft Passport. It is like having a different password for each device you sign in on, the only thing is you don’t need to remember all those passwords the server does. Add the following methods into the MockStore.cs
+-   Los siguientes métodos que se van a implementar controlarán operaciones simples para agregar o quitar la cuenta, así como para quitar el dispositivo. Es necesario quitar el dispositivo porque Microsoft Passport es una solución específica del dispositivo. Para cada dispositivo en el que inicies sesión, Microsoft Passport creará un nuevo par de claves pública y privada. Es como tener una contraseña distinta para cada dispositivo en el que inicies sesión, pero no tienes que recordar todas las contraseñas que recuerda el servidor. Agrega los siguientes métodos a MockStore.cs
 
     ```cs
     public UserAccount AddAccount(string username)
@@ -357,7 +357,7 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
--   In the MockStore class add a method that will add Passport related information to an existing UserAccount. This method will be called PassportUpdateDetails and will take parameters to identify the user, and the Passport details. The KeyAttestationResult has been commented out when creating a PassportDevice, in a real world application you would require this.
+-   En la clase MockStore agrega un método que agregará información relacionada con Passport a una clase UserAccount existente. Este método se llamará PassportUpdateDetails y usará parámetros para identificar al usuario y los detalles de Passport. Se quitó la marca de comentario de KeyAttestationResult al crear un PassportDevice, que en una aplicación real sería necesaria.
 
    ```cs
    using Windows.Security.Credentials;
@@ -382,7 +382,7 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
--   The MockStore class is now complete, as this represents the database it should be considered private. In order to access the MockStore an AuthService class is needed to manipulate the database data. In the AuthService folder create a new class called "AuthService.cs". Change the class definition to public and add a singleton instance pattern to make sure only one instance is ever created.
+-   La clase MockStore ahora está completa, ya que representa la base de datos que debería considerarse privada. Para acceder a MockStore se necesita una clase AuthService para manipular los datos de la base de datos. En la carpeta AuthService crea una nueva clase denominada "AuthService.cs". Cambia la definición de clase a pública y agrega un patrón de la instancia singleton para garantizar que siempre se cree una sola instancia.
 
     ```cs
     namespace PassportLogin.AuthService
@@ -410,7 +410,7 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
--   The AuthService class will need to create an instance of the MockStore class and provide access to the properties of the MockStore object.
+-   La clase AuthService deberá crear una instancia de la clase MockStore y proporcionar acceso a las propiedades del objeto MockStore.
 
     ```cs
     namespace PassportLogin.AuthService
@@ -452,7 +452,7 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
--   You need methods in the AuthService class to access add, remove, and update passport details methods in the MockStore object. At the end of the AuthService class file add the following methods.
+-   Necesitas tener métodos en la clase AuthService para acceder, agregar, quitar y actualizar los métodos de los detalles de Passport en el objeto MockStore. Al final del archivo de clase AuthService agrega los siguientes métodos.
 
     ```cs
     using Windows.Security.Credentials;
@@ -479,7 +479,7 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
--   The AuthService class will need to provide a method to validate credentials. This method will take a username and password and make sure that account exists and the password is valid. An existing system would have an equivalent method to this that checks the user is authorized. Add the following ValidateCredentials to the AuthService.cs file.
+-   La clase AuthService deberá proporcionar un método para validar las credenciales. Este método usará un nombre de usuario y una contraseña, y se asegurará de que la cuenta existe y la contraseña es válida. Un sistema existente tendría un método equivalente a este para comprobar si el usuario está autorizado. Agrega el siguiente método ValidateCredentials al archivo AuthService.cs.
 
     ```cs
     public bool ValidateCredentials(string username, string password)
@@ -504,7 +504,7 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
--   The AuthService class needs a request challenge method that will return a challenge to the client to validate the user is who they claim to be. Then a method is needed in the AuthService class to receive the signed challenge back from the client. For this hands on lab the method of how you determine if the signed challenge has been completed has been left incomplete. Every implementation of Microsoft Passport into an existing authentication system will be slightly different. The public key stored on the server needs to match with the result the client returned to the server. Add these two methods to AuthService.cs.
+-   La clase AuthService necesita un método de desafío de solicitud que devolverá un desafío al cliente para comprobar si el usuario es quien dice ser. Posteriormente, se necesitará un método en la clase AuthService para recibir el desafío firmado del cliente. Para esta práctica de laboratorio, el método para determinar si el desafío firmado se completó ha quedado incompleto. Todas las implementaciones de Microsoft Passport en un sistema de autenticación existente serán ligeramente diferente. La clave pública almacenada en el servidor debe coincidir con el resultado que devuelto el cliente al servidor. Agrega estos dos métodos a AuthService.cs.
 
     ```cs
     using Windows.Security.Cryptography;
@@ -534,12 +534,12 @@ In this exercise you will be starting with the Passport application built in the
     }
     ```
 
-## Exercise 2: Client Side Logic
+## Ejercicio 2: Lógica del lado cliente
 
 
-In this exercise you will be changing the client side views and helper classes from the first lab to use the AuthService class. In the real world the AuthService would be the authentication server and you would need to use Web API’s to send and receive data from the server. For this hands on lab client and server are all local to keep things simple. The objective is to learn how to use the Microsoft Passport APIs.
+En este ejercicio cambiarás las vistas del lado cliente y las clases auxiliares de la primera práctica para usar la clase AuthService. En el mundo real, la clase AuthService sería el servidor de autenticación y necesitaría usar la API web para enviar y recibir datos del servidor. En este caso, el cliente y el servidor son locales para simplificar la práctica de laboratorio. El objetivo es aprender a usar las API de Microsoft Passport.
 
--   In the MainPage.xaml.cs you can remove the AccountHelper.LoadAccountListAsync method call in the loaded method as the AuthService class creates an instance of the MockStore which loads the accounts list. The loaded method should now look like below. Note the async method definition is removed as nothing is being awaiting.
+-   En MainPage.xaml.cs puedes quitar la llamada al método AccountHelper.LoadAccountListAsync en el método cargado, ya que la clase AuthService crea una instancia de MockStore que carga la lista de cuentas. El método cargado debería ser similar al siguiente. Observa que la definición de método asincrónico se elimina, ya que no existe nada en espera.
 
     ```cs
     private void MainPage_Loaded(object sender, RoutedEventArgs e)
@@ -548,7 +548,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   Update the Login page interface to require a passport be entered. This hands on lab demonstrates how an existing system could be migrated to use Microsoft Passport and existing accounts will have a username and a password. Also update the explanation at the bottom of the XAML to include the default password. Update the following XAML in Login.xaml
+-   Actualiza la interfaz de la página Login para que sea necesario introducir una cuenta de Passport. Esta práctica de laboratorio demuestra cómo se puede migrar un sistema existente para usar Microsoft Passport y que las cuentas existentes tendrán un nombre de usuario y una contraseña. Actualiza también la explicación de la parte inferior del XAML para incluir la contraseña predeterminada. Actualiza el siguiente XAML en Login.xaml.
 
     ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -599,7 +599,7 @@ In this exercise you will be changing the client side views and helper classes f
     </Grid>
     ```
 
--   In the Login class code behind you will need to change the Account private variable at the top of the class to be a UserAccount. Change the OnNavigateTo event to cast the type to be a UserAccount. You will need the following reference.
+-   En el código subyacente de la clase Login deberás cambiar la variable privada Account en la parte superior de la clase a UserAccount. Cambia el evento OnNavigateTo para convertir el tipo a UserAccount. Necesitarás la referencia siguiente.
 
     ```cs
     using PassportLogin.AuthService;
@@ -635,7 +635,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   As the Login page is using a UserAccount object instead of the previous Account object the MicrosoftPassportHelper.cs will need to be updated to use a UserAccount as a parameter for some methods. You will need to change the following parameters for the CreatePassportKeyAsync, RemovePassportAccountAsync and GetPassportAuthenticationMessageAsync methods. As the UserAccount class has a Guid for a UserId you will start using the Id in more places to be more specific.
+-   Dado que la página Login usa un objeto UserAccount en lugar del objeto Account anterior, la clase MicrosoftPassportHelper.cs tendrá que actualizarse para usar UserAccount como un parámetro para algunos métodos. Deberás cambiar los siguientes parámetros para los métodos CreatePassportKeyAsync, RemovePassportAccountAsync y GetPassportAuthenticationMessageAsync. Dado que la clase UserAccount tiene un Guid para un UserId, comenzarás usando el identificador en más lugares para ser más específico.
 
     ```cs
     public static async Task<bool> CreatePassportKeyAsync(Guid userId, string username)
@@ -687,7 +687,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   The SignInPassport method in Login.xaml.cs file will need to be updated to use the AuthService instead of the AccountHelper. Validation of credentials will happen through the AuthService. For this hands on lab the only configured account is "sampleUsername". This account is created in the InitializeSampleUserAccounts method in MockStore.cs. Update the SignInPassport method in Login.xaml.cs now to reflect the code snippet below.
+-   El método SignInPassport del archivo Login.xaml.cs deberá actualizarse para usar AuthService en lugar de AccountHelper. La validación de credenciales se realizará a través de AuthService. Para esta práctica de laboratorio la única cuenta configurada es "sampleUsername". Esta cuenta se crea en el método InitializeSampleUserAccounts en MockStore.cs. Actualiza el método SignInPassport en Login.xaml.cs ahora para reflejar el fragmento de código siguiente.
 
     ```cs
     private async void SignInPassportAsync()
@@ -731,7 +731,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   As Microsoft Passport will create a different public and private key pair for each account on each device the Welcome page will need to display a list of registered devices for the logged in account, and allow each one to be forgotten. In Welcome.xaml add in the following XAML underneath the ForgetButton. This will implement a forget device button, an error text area and a list to display all devices.
+-   Dado que Microsoft Passport creará un par de claves pública y privada diferente para cada cuenta en cada dispositivo, la página Welcome deberá mostrar una lista de los dispositivos registrados para la cuenta que inició sesión y permitir que cada uno de ellos se olvide. En Welcome.xaml agrega el siguiente XAML debajo de ForgetButton. Esta acción implementará un control de botón de olvido de dispositivo, un área de texto de error y una lista para mostrar todos los dispositivos.
 
     ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -771,7 +771,7 @@ In this exercise you will be changing the client side views and helper classes f
     </Grid>
     ```
 
--   In the Welcome.xaml.cs file you will need to change the private Account variable at the top of the class to be a private UserAccount variable. Then update the OnNavigatedTo method to use the AuthService and retrieve information for the current account. When you have the account information you can set the itemsource of the list to display the devices. You will need to add a reference to the AuthService namespace.
+-   En el archivo Welcome.xaml.cs deberás cambiar la variable privada Account privada en la parte superior de la clase a una variable privada UserAccount. Luego, actualiza el método OnNavigatedTo para usar la clase AuthService y recupera la información de la cuenta actual. Cuando tengas la información de la cuenta, puedes establecer el origen de los elementos de la lista para mostrar los dispositivos. Deberás agregar una referencia al espacio de nombres AuthService.
 
    ```cs
    using PassportLogin.AuthService;
@@ -804,7 +804,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   As you will be using the AuthService when removing an account the reference to the AccountHelper in the Button\_Forget\_User\_Click method can be removed. The method should now look as below.
+-   Dado que usarás la clase AuthService al quitar una cuenta, la referencia a la clase AccountHelper en el método Button\_Forget\_User\_Click se puede quitar. El método debería ser ahora similar al siguiente.
 
     ```cs
     private void Button_Forget_User_Click(object sender, RoutedEventArgs e)
@@ -819,7 +819,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   The MicrosoftPassportHelper method is not using the AuthService to remove the account. You need to make a call to the AuthService and pass the userId.
+-   El método MicrosoftPassportHelper no usa la clase AuthService para quitar la cuenta. Debes realizar una llamada a AuthService y pasar el identificador de usuario.
 
     ```cs
     public static async void RemovePassportAccountAsync(UserAccount account)
@@ -838,7 +838,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   Before you can finish implementing the Welcome page class, you need to create a method in MicrosoftPassportHelper.cs that will allow a device to be removed. Create a new method that will call PassportRemoveDevice in AuthService.
+-   Para poder completar la implementación de la clase de la página Welcome, debes crear un método en MicrosoftPassportHelper.cs que permita quitar un dispositivo. Crea un nuevo método que llame a PassportRemoveDevice en AuthService.
 
    ```cs
    public static void RemovePassportDevice(UserAccount account, Guid deviceId)
@@ -847,7 +847,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   In Welcome.xaml.cs implement the Forget Device click event. This will use the selected device from the list of devices and use the passport helper to call remove device.
+-   En Welcome.xaml.cs implementa el evento de clic Forget Device. Este usará el dispositivo seleccionado de la lista de dispositivos y usará la función auxiliar de Passport para llamar a la función para quitar el dispositivo.
 
     ```cs
     private void Button_Forget_Device_Click(object sender, RoutedEventArgs e)
@@ -873,7 +873,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   The next page you will update is the UserSelection page. The UserSelection page will need to use the AuthService to retrieve all user accounts for the current device. Currently there is no way for you get a device id to pass to the AuthService so it can return user accounts for that device. In the Utils folder create a new class called "Helpers.cs". Change the class definition to be public static and then add the following method that will allow you to retrieve the current device id.
+-   La siguiente página que actualizarás es la página UserSelection. La página UserSelection deberá usar la clase AuthService para recuperar todas las cuentas de usuario para el dispositivo actual. Actualmente no hay ninguna manera de obtener un identificador de dispositivo para pasar a la clase AuthService para que pueda devolver cuentas de usuario para ese dispositivo. En la carpeta Utils crea una nueva clase denominada "Helpers.cs". Cambia la definición de clase a estática pública y, después, agrega el siguiente método, que te permitirá recuperar el identificador del dispositivo actual.
 
     ```cs
     using Windows.Security.ExchangeActiveSyncProvisioning;
@@ -892,7 +892,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   In the UserSelection page class only the code behind needs to change, not the user interface. In UserSelection.xaml.cs update the loaded method and the user selection method to use the UserAccount class instead of the Account class. You will also need to get all users for this device through the AuthService.
+-   En la clase de la página UserSelection solo se debe cambiar el código subyacente, no la interfaz de usuario. En UserSelection.xaml.cs actualiza el método cargado y el método de selección del usuario para usar la clase UserAccount en lugar de la clase Account. También deberás obtener todos los usuarios de este dispositivo a través de la clase AuthService.
 
     ```cs
     using System.Linq;
@@ -944,7 +944,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   The PassportRegister page needs to update the code behind, the user interface does not need changing. In PassportRegister.xaml.cs remove the private Account variable at the top of the class as it is no longer needed. Update the RegisterButton click event to use the AuthService. This method will create a new UserAccount and then try and update its passport details. If passport fails to create a passport key the account will be removed as the registration process failed.
+-   La página PassportRegister debe actualizar el código subyacente. No es necesario modificar la interfaz de usuario. En PassportRegister.xaml.cs quita la variable privada Account en la parte superior de la clase, porque ya no es necesaria. Actualiza el evento de clic RegisterButton para usar la clase AuthService. Este método creará una nueva variable UserAccount y, después, probará y actualizará sus detalles de Passport. Si Passport no puede crear una clave de Passport, la cuenta se quitará debido a un error en el proceso de registro.
 
     ```cs
     private async void RegisterButton_Click_Async(object sender, RoutedEventArgs e)
@@ -984,13 +984,13 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   Build and run the application (F5). Sign into the sample user account, with the credentials "sampleUsername" and "samplePassword". On the welcome screen you may notice the Forget devices button is displayed but there are no devices. When you are creating or migrating a user to work with Microsoft Passport the Passport information is not being pushed to the AuthService.
+-   Compila y ejecuta la aplicación (F5). Inicia sesión en la cuenta de usuario de muestra, con las credenciales "sampleUsername" y "samplePassword". En la página de bienvenida, puedes observar que aparece el botón de olvidar dispositivo aunque no se muestra ningún dispositivo. Al crear o migrar un usuario para trabajar con Microsoft Passport la información de Passport no se inserta en la clase AuthService.
 
     ![](images/passport-auth-3.png)
 
     ![](images/passport-auth-4.png)
 
--   To get the Passport information to the AuthService the MicrosoftPassportHelper.cs will need to be updated. In the CreatePassportKeyAsync method, instead of only returning true in the case that it is successful, you will need to call a new method which will try to get the KeyAttestation. While this hands on lab is not recording this information in the AuthService you will learn how you would get it this information on the client side. Update the CreatePassportKeyAsync method.
+-   Para obtener la información de Passport en la clase AuthService, MicrosoftPassportHelper.cs deberá actualizarse. En el método CreatePassportKeyAsync, en lugar de devolver solo true en el caso de que sea correcto, deberás llamar a un nuevo método que intentará obtener la clave KeyAttestation. Aunque en esta práctica de laboratorio no se registra esta información en la clase AuthService, aprenderás cómo se puede obtener esta información en el lado cliente. Actualiza el método CreatePassportKeyAsync.
 
     ```cs
     public static async Task<bool> CreatePassportKeyAsync(Guid userId, string username)
@@ -1018,7 +1018,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   Create this GetKeyAttestationAsync method in MicrosoftPassportHelper.cs. This method will demonstrate how to obtain all the necessary information that can be provided by Microsoft Passport for each account on a specific device.
+-   Crea este método GetKeyAttestationAsync en MicrosoftPassportHelper.cs. Este método mostrará cómo obtener toda la información necesaria que Microsoft Passport puede proporcionar para cada cuenta en un dispositivo específico.
 
     ```cs
     using Windows.Storage.Streams;
@@ -1060,7 +1060,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   You may have noticed in the GetKeyAttestationAsync method that you just added the last line was commented out. This last line will be a new method you create that will send all the Microsoft Passport information to the AuthService. In the real world you would need to send this to an actual server with a Web API.
+-   Habrás observado que, en el método GetKeyAttestationAsync que acabas de agregar, la última línea estaba comentada. La última línea será un nuevo método que crees, que enviará toda la información de Microsoft Passport a la clase AuthService. En el mundo real, deberías enviar esta información a un servidor real con una API web.
 
     ```cs
     using System.Runtime.InteropServices.WindowsRuntime;
@@ -1077,12 +1077,12 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   Uncomment the last line in the GetKeyAttestationAsync method so that the Microsoft Passport information is being sent to the AuthService.
--   Build and run the application and sign in with the default credentials as before. On the welcome screen you will now see that the device Id is displayed. If you signed in on another device that would also be displayed here (if you had a cloud hosted auth service). For this hands on lab the actual device Id is being displayed. In a real implementation you would want to display a friendly name that a person could understand and use to determine each device.
+-   Quita la marca de comentario de la última línea en el método GetKeyAttestationAsync para que la información de Microsoft Passport se envíe a la clase AuthService.
+-   Compila y ejecuta la aplicación e inicia sesión con las credenciales predeterminadas como antes. En la pantalla de bienvenida verás ahora que se muestra el identificador de dispositivo. Si iniciaste sesión en otro dispositivo, este también se mostraría aquí (si hubiera un servicio de autenticación hospedado en la nube). Para esta práctica de laboratorio, se muestra el identificador de dispositivo real. En una implementación real, seguramente quieras mostrar un nombre descriptivo que cualquiera pueda comprender y usarlo para determinar cada dispositivo.
 
     ![](images/passport-auth-5.png)
 
--   21. To complete this hands on lab you need a request and challenge for the user when they select from the user selection page and sign back in. The AuthService has two methods that you created to request a challenge, one that uses a signed challenge. In MicrosoftPassportHelper.cs create a new method called "RequestSignAsync" This will request a challenge from the AuthService, locally sign that challenge using a Passport API and send the signed challenge to the AuthService. In this hands on lab the AuthService will receive the signed challenge and return true. In an actual implementation you would need to implement a verification mechanism to determine is the challenge was signed by the correct user on the correct device. Add the method below to the MicrosoftPassportHelper.cs
+-   21. Para completar esta práctica de laboratorio, necesitas una solicitud de comprobación, para cuando el usuario seleccione elementos en la página selección del usuario y vuelva a iniciar sesión. La clase AuthService tiene dos métodos que creaste para solicitar un desafío, uno de los cuales usa un desafío firmado. En MicrosoftPassportHelper.cs crea un nuevo método denominado "RequestSignAsync". Este solicitará un desafío desde la clase AuthService, lo firmará localmente mediante una API de Passport y lo enviará firmado a la clase AuthService. En esta práctica de laboratorio, la clase AuthService recibirá el desafío firmado y devolverá true. En una implementación real, deberías implementar un mecanismo de comprobación para determinar si esta comprobación la firmó el usuario correcto en el dispositivo correcto. Agrega el método siguiente a MicrosoftPassportHelper.cs
 
     ```cs
     private static async Task<bool> RequestSignAsync(Guid userId, KeyCredentialRetrievalResult openKeyResult)
@@ -1122,7 +1122,7 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   22. In the MicrosoftPassportHelper class call the RequestSignAsync method from the GetPassportAuthenticationMessageAsync method.
+-   22. En la clase MicrosoftPassportHelper, llama al método RequestSignAsync desde el método GetPassportAuthenticationMessageAsync.
 
     ```cs
     public static async Task<bool> GetPassportAuthenticationMessageAsync(UserAccount account)
@@ -1164,14 +1164,18 @@ In this exercise you will be changing the client side views and helper classes f
     }
     ```
 
--   Throughout this exercise, you have updated the client side application to use the AuthService. By doing this you have been able to eliminate the need for the Account class and the AccountHelper class. Delete the Account class, the Models folder, and the AccountHelper class in the Utils folder. You will need to remove all reference to the Models namespace throughout the application before the solution will successfully build.
--   Build and run the application and enjoy using Microsoft Passport with the mock service and database.
+-   En este ejercicio, actualizaste la aplicación del lado cliente para usar la clase AuthService. Al hacerlo, pudiste eliminar la necesidad de la clase Account y la clase AccountHelper. Elimina la clase Account, la carpeta Modeles y la clase AccountHelper de la carpeta Utils. Deberás quitar todas las referencias al espacio de nombres Models en toda la aplicación para que la solución pueda compilarse correctamente.
+-   Compila y ejecuta la aplicación, y disfruta usando Microsoft Passport con el servicio y la base de datos ficticios.
 
-In this hands on lab you have learned how to use the Passport APIs to replace the need for passwords when using authenticate from a Windows 10 machine. When you consider how much energy is expended by people maintaining passwords and supporting lost passwords in existing systems, you should see the benefit of moving to this new Microsoft Passport system of authentication.
+En esta práctica de laboratorio has aprendido a usar las API de Passport para reemplazar la necesidad de contraseñas al usar la autenticación desde una máquina de Windows 10. Si consideras la cantidad de energía que la gente invierte en mantener contraseñas y ofrecer soporte para contraseñas perdidas en los sistemas existentes, verás la ventaja de cambiar al nuevo sistema de autenticación Microsoft Passport.
 
-We have left as an exercise for you the details of how you will implement the authentication on the service and server side. It is expected that most of you will have existing systems that will need to be migrated to start working with Microsoft Passport and the details of each system will differ.
+A modo de ejercicio, te dejamos los detalles sobre cómo implementar la autenticación en el servicio y el servidor. La mayoría de los usuarios deben tener sistemas que deberán migrarse para comenzar a trabajar con Microsoft Passport y los detalles de cada sistema serán diferentes.
 
-## Related topics
+## Temas relacionados
 
-* [Microsoft Passport and Windows Hello](microsoft-passport.md)
-* [Microsoft Passport login app](microsoft-passport-login.md)
+* [Microsoft Passport y Windows Hello](microsoft-passport.md)
+* [Aplicación de inicio de sesión de Microsoft Passport](microsoft-passport-login.md)
+
+<!--HONumber=May16_HO2-->
+
+
