@@ -32,12 +32,12 @@
 ### [Sonido](style/sound.md)
 ### [Tipografía](style/typography.md)
 ### [Controles de estilo](controls-and-patterns/styling-controls.md)
-## [Controles y patrones](https://dev.windows.com/design/controls-patterns)
-### [Introducción](controls-and-patterns/controls-and-events-intro.md)
-### [Índice de controles por función](controls-and-patterns/controls-by-function.md)
 #### [Plantillas de control XAML](controls-and-patterns/control-templates.md)
 #### [Referencias a ResourceDictionary y a recursos XAML](controls-and-patterns/resourcedictionary-and-xaml-resource-references.md)
 #### [Recursos de temas en XAML](controls-and-patterns/xaml-theme-resources.md)
+## [Controles y patrones](https://dev.windows.com/design/controls-patterns)
+### [Introducción](controls-and-patterns/controls-and-events-intro.md)
+### [Índice de controles por función](controls-and-patterns/controls-by-function.md)
 ### [Lienzo activo](controls-and-patterns/active-canvas.md)
 ### [Barra de la aplicación y barra de comandos](controls-and-patterns/app-bars.md)
 ### [Cuadro de sugerencias automáticas](controls-and-patterns/auto-suggest-box.md)
@@ -685,8 +685,3 @@
 ### [Directivas de la Tienda Windows](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx)
 #### [Historial de cambios](https://msdn.microsoft.com/en-us/library/windows/apps/dn764945.aspx)
 ### [Código de conducta del desarrollador](https://msdn.microsoft.com/en-us/library/windows/apps/dn764941.aspx)
-
-
-<!--HONumber=Mar16_HO5-->
-
-
