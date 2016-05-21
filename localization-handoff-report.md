@@ -1,32 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\audio-video-camera\background-audio.md](https://github.com/Microsoft/windows-apps/blob/99d1ffa637fd8beca5d1e829cc7cacc18a9c21e9/windows-apps-src/audio-video-camera/background-audio.md) | HandedOffSuccess | [Details](#9275a194017f08692adee6de1c4d1f6deb680613138)
- [windows-apps-src\graphics\animations-overview.md](https://github.com/Microsoft/windows-apps/blob/c8ba7f6303a05b8de03aa29199aaa444abf75827/windows-apps-src/graphics/animations-overview.md) | HandedOffSuccess | [Details](#2a70d73a5e714aaf1096fed5d08ec4844edd66a62576)
+ [windows-apps-src\xbox-apps\cpusets-games.md](https://github.com/Microsoft/windows-apps/blob/d8e73b0e1ef1d2cce623cb3db95bbc420906ee1a/windows-apps-src/xbox-apps/cpusets-games.md) | HandedOffSuccess | [Details](#8bbc426a626200f70150869166673a4a409a3cfd3815)
 
 ## Item Details
-##### <a name='9275a194017f08692adee6de1c4d1f6deb680613138'></a> Source: [windows-apps-src\audio-video-camera\background-audio.md](https://github.com/Microsoft/windows-apps/blob/99d1ffa637fd8beca5d1e829cc7cacc18a9c21e9/windows-apps-src/audio-video-camera/background-audio.md)
+##### <a name='8bbc426a626200f70150869166673a4a409a3cfd3815'></a> Source: [windows-apps-src\xbox-apps\cpusets-games.md](https://github.com/Microsoft/windows-apps/blob/d8e73b0e1ef1d2cce623cb3db95bbc420906ee1a/windows-apps-src/xbox-apps/cpusets-games.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [background-audio.7b1349a8c74aa8ba5aae5f29abd931f1752577ec.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/28235f3652594f6e0aa3497df11652e9217cddd3/ol-handoff/Microsoft/windows-apps.es-es/master/background-audio.7b1349a8c74aa8ba5aae5f29abd931f1752577ec.es-es.xlf)
-* Handoff Datetime: 2016-05-20 19:37:01
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='2a70d73a5e714aaf1096fed5d08ec4844edd66a62576'></a> Source: [windows-apps-src\graphics\animations-overview.md](https://github.com/Microsoft/windows-apps/blob/c8ba7f6303a05b8de03aa29199aaa444abf75827/windows-apps-src/graphics/animations-overview.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [animations-overview.8197a9a05a89d0ee53785570dab956f1fd01116a.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/28235f3652594f6e0aa3497df11652e9217cddd3/ol-handoff/Microsoft/windows-apps.es-es/master/animations-overview.8197a9a05a89d0ee53785570dab956f1fd01116a.es-es.xlf)
-* Handoff Datetime: 2016-05-20 19:37:01
+* Handoff File: [cpusets-games.de1f770e7a453fa82efd07e80f4f4380b7d5530a.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/34b1bb977cffae9486944fcf4f9fb528806a58c4/ol-handoff/Microsoft/windows-apps.es-es/master/cpusets-games.de1f770e7a453fa82efd07e80f4f4380b7d5530a.es-es.xlf)
+* Handoff Datetime: 2016-05-21 23:09:46
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
