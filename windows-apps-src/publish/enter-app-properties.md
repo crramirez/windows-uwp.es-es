@@ -1,14 +1,15 @@
 ---
+author: jnHs
 Description: La página Propiedades de la aplicación del proceso de envío de aplicaciones te permite definir la categoría de la aplicación e indicar las preferencias de hardware u otras declaraciones.
-title: Especificar las propiedades de la aplicación
+title: Introducir las propiedades de la aplicación
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 ---
 
-# Especificar las propiedades de la aplicación
+# Introducir las propiedades de la aplicación
 
 La página **Propiedades de la aplicación** del [proceso de envío de aplicaciones](app-submissions.md) te permite definir la categoría de la aplicación e indicar las preferencias de hardware u otras declaraciones. A continuación, te guiaremos a través de las opciones de esta página y todo lo que debes tener en cuenta al escribir la información.
 
-> **Nota** Las clasificaciones por edades son ahora una página independiente del proceso de envío. Para más información, consulta [Clasificaciones por edades](age-ratings.md).
+> **Nota**  Las clasificaciones por edades son ahora una página independiente del proceso de envío. Para más información, consulta [Clasificaciones por edades](age-ratings.md).
 
 ## Categoría y subcategoría
 
@@ -25,11 +26,11 @@ Si es así, la Tienda Windows intentará detectar si el dispositivo de un client
 
 Esto no impedirá que los usuarios descarguen tu aplicación en dispositivos que no tienen el hardware apropiado, pero no podrán evaluarla ni opinar sobre ella en esos dispositivos.
 
-> **Importante** Excepto en el caso de la **pantalla táctil**, estas advertencias solo se muestran a los clientes con dispositivos Windows 10 que no tengan las características seleccionadas.
+> **Importante**  Excepto en el caso de la **pantalla táctil**, estas advertencias solo se muestran a los clientes con dispositivos Windows 10 que no tengan las características seleccionadas.
 
 Además de la selección que realizamos aquí, te recomendamos agregar a la aplicación comprobaciones en tiempo de ejecución para el hardware especificado, dado que la Tienda no siempre puede detectar si al dispositivo de un cliente le falta la característica seleccionada. De todos modos, el cliente podrá descargar la aplicación, aunque le muestre una advertencia.
 
-> **Sugerencia** Si quieres evitar que tu aplicación para UWP se descargue en un dispositivo que no cumple con los requisitos mínimos de memoria o nivel de DirectX, puedes designar los requisitos mínimos en un archivo XML de StoreManifest. Para obtener más información, consulta [Esquema StoreManifest (Windows 10)](https://msdn.microsoft.com/library/windows/apps/mt617335).
+> **Sugerencia**  Si quieres evitar que tu aplicación para UWP se descargue en un dispositivo que no cumpla con los requisitos mínimos de memoria o nivel de DirectX, puedes designar los requisitos mínimos en un archivo XML de StoreManifest. Para obtener más información, consulta [Esquema StoreManifest (Windows 10)](https://msdn.microsoft.com/library/windows/apps/mt617335).
 
 ## Declaraciones de la aplicación
 
@@ -39,6 +40,6 @@ Puedes agregar casillas en esta sección para indicar si alguna de las declaraci
 Para más información, consulta el tema sobre las [Declaraciones de la aplicación](app-declarations.md).
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

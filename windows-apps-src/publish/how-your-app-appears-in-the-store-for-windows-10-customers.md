@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Si has publicado anteriormente aplicaciones en la Tienda Windows o en la de Windows Phone, dichas aplicaciones también estarán disponibles para los clientes con dispositivos Windows 10.
 title: Cómo aparece una aplicación en la Tienda para los clientes de Windows 10
 ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
@@ -9,7 +10,7 @@ ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
 
 Si has publicado anteriormente aplicaciones en la Tienda Windows o en la de Windows Phone, dichas aplicaciones también estarán disponibles para los clientes con dispositivos Windows 10. Como hay algunos cambios en la forma en que la Tienda presenta y clasifica las aplicaciones para los clientes que ejecutan Windows 10, este tema te ayudará a comprender lo que puede haber cambiado.
 
-**Nota:** Si quieres cambiar cualquiera de estos detalles, [crea un nuevo envío](app-submissions.md), realiza los cambios y luego envía la actualización a la Tienda.
+**Nota**  Si quieres cambiar cualquiera de estos detalles, [crea un nuevo envío](app-submissions.md), realiza los cambios y luego envía la actualización a la Tienda.
 
  
 
@@ -23,7 +24,7 @@ La mayoría de los desarrolladores habían establecido en todas las Tiendas el m
 ### Precios
 Si habías elegido precios base distintos para tu aplicación (o IAP) en cada Tienda, se usará el precio base de la Tienda Windows.
 
-**Nota:** Si habías establecido un precio por mercado en la Tienda de Windows Phone, estos precios personalizados también se mostrarán a los clientes de Windows 10.
+**Nota**  Si habías establecido un precio por mercado en la Tienda de Windows Phone, estos precios personalizados también se mostrarán a los clientes de Windows 10.
 
 ### Pruebas gratuitas
 Las opciones de prueba de las dos Tiendas anteriores eran diferentes, por lo que si las usaste, es posible que eligieras opciones distintas para cada Tienda. La opción de prueba disponible para los clientes de Windows 10 se determina en función de la siguiente tabla.
@@ -62,7 +63,7 @@ Si quieres actualizar la descripción que ven los clientes de Windows 10 para qu
 
 En muchos casos, las [categorías y subcategorías](category-and-subcategory-table.md) nuevas de los juegos y aplicaciones son las mismas que había en la Tienda para versiones anteriores del sistema operativo. Sin embargo, ha habido algunos cambios. Revisa la tabla siguiente para comprender cómo se clasifica la aplicación en la Tienda para clientes de Windows 10, en función de su categoría anterior.
 
-**Nota:** Verás que la nueva categoría aparece en el panel cuando se visualiza la [categoría de la aplicación](category-and-subcategory-table.md) en la página [Propiedades de la aplicación](enter-app-properties.md) de un envío, y los clientes que visualicen la Tienda en dispositivos de Windows 10 verán tu aplicación en la nueva categoría. Sin embargo, los clientes que visualicen la Tienda desde un sistema operativo anterior seguirán viendo la aplicación en su categoría original.
+**Nota**  Verás que la nueva categoría aparece en el panel cuando se visualiza la [categoría de la aplicación](category-and-subcategory-table.md) en la página [Propiedades de la aplicación](enter-app-properties.md) de un envío, y los clientes que visualicen la Tienda en dispositivos con Windows 10 verán tu aplicación en la nueva categoría. Sin embargo, los clientes que visualicen la Tienda desde un sistema operativo anterior seguirán viendo la aplicación en su categoría original.
 
 
 **Cambios de categorías de las aplicaciones de Windows Phone:**
@@ -84,7 +85,7 @@ En muchos casos, las [categorías y subcategorías](category-and-subcategory-tab
 | Noticias y tiempo &gt; local y nacional    | Noticias y tiempo                |
 | Utilidades y productividad                | Utilidades y herramientas             |
 | Viajes y navegación                     | Viajes                        |
-| Viajes y navegación &gt; planificación       | Viajes                        |
+| Viajes y navegación &gt; planeación       | Viajes                        |
 | Viajes y navegación &gt; herramientas          | Viajes                        |
 | Viajes y navegación &gt; con niños      | Niños y familia &gt; viajes     |
 | Viajes y navegación &gt; idioma       | Educación &gt; Idioma       |
@@ -109,13 +110,13 @@ En muchos casos, las [categorías y subcategorías](category-and-subcategory-tab
 | Juegos &gt; Acción           | Juegos &gt; Acción y aventura        |
 | Juegos &gt; Aventura        | Juegos &gt; Acción y aventura        |
 | Juego &gt; Arcade           | Juegos &gt; Acción y aventura        |
-| Juegos &gt; Juegos de mesa             | Juegos &gt; Juegos de mesa              |
+| Juegos &gt; Cartas             | Juegos &gt; Juegos de mesa              |
 | Juegos &gt; Niños             | Juegos &gt; Familia y niños             |
 | Juegos &gt; Familia           | Juegos &gt; Familia y niños             |
-| Juegos &gt; Puzle           | Juegos &gt; Puzles y curiosidades           |
+| Juegos &gt; Puzzle           | Juegos &gt; Puzles y curiosidades           |
 | Juegos &gt; Carreras           | Juegos &gt; Carreras y vuelo           |
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

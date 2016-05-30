@@ -1,6 +1,7 @@
 ---
+author: martinekuan
 title: Crear componentes de Windows Runtime en C++
-description: En este artículo se muestra cómo usar C++ para crear un componente de Windows Runtime, que es un archivo DLL al que se puede llamar desde una aplicación universal de Windows compilada con el uso de JavaScript, o C#, Visual Basic o C++.
+description: En este artículo se muestra cómo usar C++ para crear un componente de Windows Runtime, es decir, un archivo DLL al que se puede llamar desde una aplicación universal de Windows compilada con JavaScript, o C#, Visual Basic o C++.
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 ---
 
@@ -596,6 +597,6 @@ Si quitas un proyecto de componente de Windows Runtime de C++ de una solución, 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

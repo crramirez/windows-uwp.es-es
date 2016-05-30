@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: El selector de fecha del calendario es un control desplegable que está optimizado para seleccionar una fecha determinada desde una vista de calendario en la que la información contextual es importante, por ejemplo, el día de la semana o lo que se haya completado del calendario.
 title: Selector de fecha del calendario
 ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
@@ -63,7 +64,8 @@ Al configurar la fecha en el código, el valor está restringido por las propied
 
 Puedes controlar el evento [**DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx) para obtener una notificación cuando el valor Date haya cambiado.
 
-> **Nota**&nbsp;&nbsp;Para obtener información importante acerca de los valores de fecha, consulta [Valores de DateTime y Calendar](date-and-time.md#datetime-and-calendar-values) en el artículo Controles de fecha y hora.
+> **Nota**
+            &nbsp;&nbsp;Para obtener información importante acerca de los valores de fecha, consulta [Valores de DateTime y Calendar](date-and-time.md#datetime-and-calendar-values) en el artículo Controles de fecha y hora.
 
 ### Establecer un encabezado y un texto de marcador de posición
 
@@ -84,6 +86,6 @@ El texto de marcador de posición predeterminado es "seleccionar una fecha". Pue
 - [Selector de hora](time-picker.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

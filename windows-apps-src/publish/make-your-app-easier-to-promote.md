@@ -1,5 +1,6 @@
 ---
-Description: Hacer que tu aplicación destaque. Además de lograr la mejor versión posible de tu aplicación, hay cosas que se pueden hacer para facilitar que la Tienda Windows y otros sitios la presenten y capten la atención hacia la aplicación.
+author: jnHs
+Description: ¡Haz que tu aplicación se note! Además de lograr la mejor versión posible de tu aplicación, hay cosas que se pueden hacer para facilitar que la Tienda Windows y otros sitios la presenten y capten la atención hacia la aplicación.
 title: Facilitar la promoción de la aplicación
 ms.assetid: 375A73EB-A010-4319-AEFF-3DC3E3691220
 ---
@@ -43,6 +44,6 @@ Si sigues estas instrucciones, también será más fácil para terceros promocio
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

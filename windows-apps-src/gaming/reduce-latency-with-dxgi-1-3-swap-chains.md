@@ -1,10 +1,11 @@
 ---
-title: Reducir la latencia con cadenas de intercambio de DXGI 1.3
+author: mtoepke
+title: Reducir la latencia con cadenas de intercambio de DXGI 1.3
 description: Usa DXGI 1.3 para reducir la latencia de fotogramas eficaz esperando a que la cadena de intercambio señale el momento adecuado para empezar a representar un nuevo fotograma.
 ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
 ---
 
-# Reducir la latencia con cadenas de intercambio de DXGI 1.3
+# Reducir la latencia con cadenas de intercambio de DXGI 1.3
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -27,7 +28,7 @@ Especifica la marca [**DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().
 ```
 
-> **Nota**  Al contrario que otras marcas, esta no se puede agregar ni quitar usando [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577). DXGI devuelve un código de error si esta marca se configura de otro modo distinto de cuando se creó la cadena de intercambio.
+> **Nota** Al contrario que otras marcas, esta no se puede agregar ni quitar usando [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577). DXGI devuelve un código de error si esta marca se configura de otro modo distinto de cuando se creó la cadena de intercambio.
 
  
 
@@ -157,6 +158,6 @@ Consulta los siguientes temas relacionados para obtener más información sobre 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,7 +1,8 @@
 ---
+author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: Este caso práctico, que se basa en la información proporcionada en Bookstore, comienza con una aplicación Windows Phone Silverlight que muestra datos agrupados en un LongListSelector.
-title: Caso práctico de Windows Phone Silverlight a UWP: Bookstore2
+title: Caso práctico de Windows Phone Silverlight a UWP, Bookstore2
 ---
 
 # Caso práctico de Windows Phone Silverlight a UWP: Bookstore2
@@ -10,7 +11,7 @@ title: Caso práctico de Windows Phone Silverlight a UWP: Bookstore2
 
 Este caso práctico, que se basa en la información proporcionada en [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), comienza con una aplicación Windows Phone Silverlight que muestra datos agrupados en un **LongListSelector**. En el modelo de vista, cada instancia de la clase **Author** representa el grupo de los libros que ha escrito ese autor y, en **LongListSelector**, podemos ver la lista de libros agrupados por autor, o bien podemos alejar la vista para ver una lista de accesos directos a autores. La lista de accesos directos ofrece una navegación mucho más rápida que un desplazamiento por la lista de libros. Repasaremos los pasos de migración de la aplicación a la Plataforma universal de Windows (UWP) de Windows 10.
 
-**Note**   Cuando abras Bookstore2Universal\_10 en Visual Studio, si aparece el mensaje "Se requiere una actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+**Nota** Cuando abras Bookstore2Universal\_10 en Visual Studio, si aparece el mensaje "Se requiere una actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
 
 ## Descargas
 
@@ -61,7 +62,7 @@ En MainPage.xaml, debes realizar los siguientes cambios iniciales de migración.
 
 El reemplazo de **LongListSelector** por un control [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) requiere varios pasos, así que vamos a empezar. Un **LongListSelector** se enlaza directamente al origen de datos agrupados, pero un **SemanticZoom** contiene controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) o [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705), que se enlazan indirectamente a los datos a través de un adaptador [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833). **CollectionViewSource** debe estar presente en el marcado como un recurso, así que vamos a comenzar agregando eso en el marcado de MainPage.xaml, dentro de `<Page.Resources>`.
 
-```xaml
+```xml
     <CollectionViewSource
         x:Name="AuthorHasACollectionOfBookSku"
         Source="{Binding Authors}"
@@ -72,7 +73,7 @@ Ten en cuenta que el enlace en **LongListSelector.ItemsSource** se convierte en 
 
 A continuación, reemplaza `phone:LongListSelector` con este marcado, lo que nos proporcionará un **SemanticZoom** preliminar con el que trabajar.
 
-```xaml
+```xml
     <SemanticZoom>
         <SemanticZoom.ZoomedInView>
             <ListView
@@ -97,7 +98,7 @@ La noción **LongListSelector** de los modos de lista plana y lista de accesos d
 
 Ahora ya no necesitamos `AuthorNameJumpListStyle`, al menos no en su totalidad. Solo necesitamos la plantilla de datos para los grupos (que son los autores de esta aplicación) en la vista alejada. Por lo tanto, se debe eliminar el estilo `AuthorNameJumpListStyle` y reemplazarlo por esta plantilla de datos.
 
-```xaml
+```xml
    <DataTemplate x:Key="ZoomedOutAuthorTemplate">
         <Border Margin="9.6,0.8" Background="{Binding Converter={StaticResource JumpListItemBackgroundConverter}}">
             <TextBlock Margin="9.6,0,9.6,4.8" Text="{Binding Group.Name}" Style="{StaticResource SubtitleTextBlockStyle}"
@@ -140,7 +141,7 @@ Antes de fijar el elemento Visual State Manager adaptativo, primero tenemos que 
 -   Reemplaza el contenido de `AuthorGroupHeaderTemplateWide` por `<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Text="{Binding Name}"/>`.
 -   Reemplaza el contenido de `ZoomedOutAuthorTemplateWide` por:
 
-```xaml
+```xml
     <Grid HorizontalAlignment="Left" Width="250" Height="250" >
         <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}"/>
         <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
@@ -153,7 +154,7 @@ Antes de fijar el elemento Visual State Manager adaptativo, primero tenemos que 
 
 -   Reemplaza el contenido de `BookTemplateWide` por:
 
-```xaml
+```xml
     <Grid HorizontalAlignment="Left" Width="250" Height="250">
         <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}"/>
         <Image Source="{Binding CoverImage}" Stretch="UniformToFill"/>
@@ -171,7 +172,7 @@ Antes de fijar el elemento Visual State Manager adaptativo, primero tenemos que 
 
 -   Para el estado ancho, los grupos en la vista acercada necesitarán más espacio vertical alrededor de ellos. Si creamos y hacemos referencia a una plantilla del panel de elementos, obtendremos los resultados que queremos. Este es el aspecto del marcado.
 
-```xaml
+```xml
    <ItemsPanelTemplate x:Key="ZoomedInItemsPanelTemplate">
         <ItemsWrapGrid Orientation="Horizontal" GroupPadding="0,0,0,20"/>
     </ItemsPanelTemplate>
@@ -187,7 +188,7 @@ Antes de fijar el elemento Visual State Manager adaptativo, primero tenemos que 
 
 -   Por último, agrega el marcado de Visual State Manager adecuado como primer elemento secundario de `LayoutRoot`.
 
-```xaml
+```xml
     <Grid x:Name="LayoutRoot" ... >
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -214,7 +215,7 @@ Solo quedan algunos retoques finales de estilo.
 -   Agrega `FontWeight="SemiBold"` a **TextBlock**, tanto en `AuthorGroupHeaderTemplate` como en `ZoomedOutAuthorTemplate`.
 -   En `narrowSeZo`, los encabezados de grupo y los autores en la vista alejada se alinean a la izquierda en lugar de aparecer estirados, así que vamos a trabajar en eso. Crearemos un [**HeaderContainerStyle**](https://msdn.microsoft.com/library/windows/apps/dn251841) para la vista acercada, con [**HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/br209417) establecido en `Stretch`. Asimismo, crearemos un [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/br242817) para la vista alejada que contenga ese mismo [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817). Este es el aspecto que tiene.
 
-```xaml
+```xml
    <Style x:Key="AuthorGroupHeaderContainerStyle" TargetType="ListViewHeaderItem">
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
     </Style>
@@ -245,9 +246,8 @@ La última secuencia de operaciones de estilo deja la aplicación con la aparien
 
 ![la aplicación de Windows 10 portada ejecutándose en un dispositivo de escritorio, con vista ampliada y dos tamaños de ventana](images/w8x-to-uwp-case-studies/c02-07-desk10-zi-ported.png)
 
-La aplicación de Windows 10 portada ejecutándose en un dispositivo de escritorio, con vista ampliada y dos tamaños de ventana
- 
-![la aplicación de Windows 10 portada ejecutándose en un dispositivo de escritorio, con vista alejada y dos tamaños de ventana](images/w8x-to-uwp-case-studies/c02-08-desk10-zo-ported.png)
+La aplicación de Windows 10 migrada que se estaba ejecutando en un dispositivo de escritorio, con vista ampliada y dos tamaños de ventana  
+![la aplicación de Windows 10 migrada ejecutándose en un dispositivo de escritorio, con vista ampliada y dos tamaños de ventana](images/w8x-to-uwp-case-studies/c02-08-desk10-zo-ported.png)
 
 La aplicación de Windows 10 portada ejecutándose en un dispositivo de escritorio, con vista alejada y dos tamaños de ventana
 
@@ -261,7 +261,7 @@ La aplicación de Windows 10 portada ejecutándose en un dispositivo móvil, con
 
 ## Hacer que el modelo de vista sea más flexible
 
-Esta sección contiene un ejemplo de las instalaciones que se nos abren después de haber movido nuestra aplicación para usar UWP. A continuación, describimos pasos opcionales que puedes seguir para que el modelo de vista sea más flexible cuando se tenga acceso a través de un **CollectionViewSource**. El modelo de vista (el archivo de origen se encuentra en ViewModel\BookstoreViewModel.cs) que hemos portado desde la aplicación Windows Phone Silverlight Bookstore2WPSL8 contiene una clase denominada Author, que se deriva de **List&lt;T&gt;**, donde **T** es BookSku. Esto significa que la clase Author *es un* grupo de BookSku.
+Esta sección contiene un ejemplo de las instalaciones que se nos abren después de haber movido nuestra aplicación para usar UWP. A continuación, describimos pasos opcionales que puedes seguir para que el modelo de vista sea más flexible cuando se tenga acceso a través de un **CollectionViewSource**. El modelo de vista (el archivo de origen se encuentra en ViewModel\BookstoreViewModel.cs) que hemos portado de la aplicación Windows Phone Silverlight Bookstore2WPSL8 contiene una clase denominada Author, que se deriva de **List&lt;T&gt;**, donde **T** es BookSku. Esto significa que la clase Author *es un* grupo de BookSku.
 
 Cuando enlazamos **CollectionViewSource.Source** a Authors, lo único que comunicamos es que cada autor de Authors es un grupo de *algo*. Dejamos a **CollectionViewSource** la determinación de que Author es, en este caso, un grupo de BookSku. Eso funciona, pero no es flexible. ¿Qué ocurre si queremos que Author sea *tanto* un grupo de BookSku *como* un grupo de las direcciones en las que ha vivido el autor? El Autor no puede *ser* ambos grupos. No obstante, el Autor puede *tener* cualquier número de grupos. Y esta es la solución: usa el patrón *has-a-group* en lugar del patrón *is-a-group* que estamos usando actualmente (o usa ambos). Se hace así:
 
@@ -297,6 +297,6 @@ Ahora podemos optar por quitar `ItemsPath="BookSkus"` y la aplicación seguirá 
 En este caso práctico se ha observado una interfaz de usuario más ambiciosa que la anterior. Todas las funciones y conceptos del **LongListSelector** de Windows Phone Silverlight (y más) han resultado estar disponibles para una aplicación para UWP mediante **SemanticZoom**, **ListView**, **GridView** y **CollectionViewSource**. Hemos mostrado cómo volver a usar o copiar y editar marcado y código imperativos en una aplicación para UWP para lograr funcionalidad, una interfaz de usuario e interacciones adaptadas para que se ajusten a los factores de forma de dispositivos Windows más anchos y más estrechos, así como a todos los tamaños intermedios.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

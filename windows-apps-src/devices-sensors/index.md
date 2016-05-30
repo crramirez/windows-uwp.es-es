@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 0b891f63-02fa-4c30-b307-9fbcccac5caa
 title: Dispositivos, sensores y energía
 description: Para proporcionar a los usuarios una experiencia enriquecida, puede que sea necesario integrar sensores o dispositivos externos en la aplicación.
@@ -16,6 +17,7 @@ Para proporcionar a los usuarios una experiencia enriquecida, puede que sea nece
 | Tema | Descripción |
 |-------|-------------|
 | [Habilitar funcionalidades de dispositivos](enable-device-capabilities.md) | Este tutorial describe cómo declarar funcionalidades del dispositivo en Microsoft Visual Studio. Esta opción permite que la aplicación use cámaras, micrófonos, sensores de ubicación y otros dispositivos. | 
+| [Habilitar el acceso de modo de usuario para Windows IoT](enable-usermode-access.md) | En este tutorial se describe cómo habilitar el acceso de modo de usuario a GPIO, I2C, SPI y UART con Windows 10 IoT Core. |
 | [Enumerar dispositivos](enumerate-devices.md) | El espacio de nombres de enumeración te permite buscar dispositivos que están conectados en el sistema de forma interna o externa o que se pueden detectar mediante protocolos de redes o de redes inalámbricas. |
 | [Emparejar dispositivos](pair-devices.md) | Algunos dispositivos deben estar emparejados antes de que puedan usarse. El espacio de nombres [<strong>Windows.Devices.Enumeration</strong>](https://msdn.microsoft.com/library/windows/apps/BR225459) admite tres modos de emparejar dispositivos. |
 | [Emparejamientos fuera de banda](out-of-band-pairing.md) | En esta sección se describe cómo el emparejamiento fuera de banda permite que las aplicaciones puedan conectarse a determinados dispositivos sin necesidad de detección. | 
@@ -28,6 +30,6 @@ Para proporcionar a los usuarios una experiencia enriquecida, puede que sea nece
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

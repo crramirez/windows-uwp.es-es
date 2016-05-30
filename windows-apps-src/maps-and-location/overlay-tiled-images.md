@@ -1,6 +1,7 @@
 ---
+author: PatrickFarley
 title: Superponer imágenes en mosaico en un mapa
-description: Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante los orígenes de icono. Usa la opción de orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
+description: Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
 ---
 
@@ -12,7 +13,7 @@ ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
 
 Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante los orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
 
-**Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga la muestra [Windows-universal-samples repo (Repositorio de muestras universales de Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub.
+**Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga la muestra siguiente de [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) (repositorio de muestras universales de Windows) que encontrarás en GitHub.
 
 -   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -52,7 +53,7 @@ Superpón imágenes en mosaico desde un origen de iconos en un mapa mediante [**
 
     ```cs
         HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
-          "http://www.<web service name>.com/z={zoomlevel}&amp;x={x}&amp;y={y}");
+          "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
     ```
 
 2.  Crea una instancia y configura una clase [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144). Especifica la clase [**MapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn637141) que has configurado en el paso anterior, como una propiedad [**DataSource**](https://msdn.microsoft.com/library/windows/apps/dn637149) de **MapTileSource**.
@@ -109,7 +110,7 @@ El siguiente ejemplo, se superponen los iconos de un servicio web ficticio en un
             // Create an HTTP data source.
             // This example retrieves tiles from a fictitious web service.
             HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
-                "http://www.<web service name>.com/z={zoomlevel}&amp;x={x}&amp;y={y}");
+                "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
 
             // Optionally, add custom HTTP headers if the web service requires them.
             dataSource.AdditionalRequestHeaders.Add("header name", "header value");
@@ -128,7 +129,7 @@ void MainPage::AddHttpMapTileSource()
        GeoboundingBox^ boundingBox = ref new GeoboundingBox(northWest, southEast);
 
        auto dataSource = ref new Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource(
-             "http://www.<web service name>.com/z={zoomlevel}&amp;x={x}&amp;y={y}");
+             "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
 
        dataSource->AdditionalRequestHeaders->Insert("header name", "header value");
 
@@ -215,7 +216,7 @@ using System.Threading.Tasks;
             MapTileUriRequestedEventArgs args)
         {
             // Get a deferral to do something asynchronously.
-            // Omit this line if you don&#39;t have to do something asynchronously.
+            // Omit this line if you don't have to do something asynchronously.
             var deferral = args.Request.GetDeferral();
 
             // Get the custom Uri.
@@ -225,7 +226,7 @@ using System.Threading.Tasks;
             args.Request.Uri = uri;
 
             // Notify the app that the custom Uri is ready.
-            // Omit this line also if you don&#39;t have to do something asynchronously.
+            // Omit this line also if you don't have to do something asynchronously.
             deferral.Complete();
         }
 
@@ -306,7 +307,7 @@ using System.Threading.Tasks;
         }
 ```
 
-```ManagedCPlusPlus
+```cpp
 InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
 {
        int pixelHeight = 256;
@@ -363,6 +364,6 @@ Reemplazar todo el mapa con iconos personalizados o de terceros:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: Este caso práctico, que se basa en la información proporcionada en Bookstore1, comienza con una aplicación Universal 8.1 que muestra datos agrupados en un control SemanticZoom.
 title: Caso práctico de Windows Runtime 8.x a UWP Bookstore2
@@ -10,13 +11,13 @@ title: Caso práctico de Windows Runtime 8.x a UWP Bookstore2
 
 Este caso práctico, que se basa en la información proporcionada en [Bookstore1](w8x-to-uwp-case-study-bookstore1.md), comienza con una aplicación Universal 8.1 que muestra datos agrupados en un control [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601). En el modelo de vista, cada instancia de la clase **Author** representa el grupo de los libros que ha escrito ese autor y en **SemanticZoom** podemos ver la lista de libros agrupados por autor, o bien podemos alejar la vista para ver una lista de accesos directos a autores. La lista de accesos directos ofrece una navegación mucho más rápida que un desplazamiento por la lista de libros. Repasaremos los pasos de migración de la aplicación a la Plataforma universal de Windows (UWP) de Windows 10.
 
-**Note**   Cuando abras Bookstore2Universal\_10 en Visual Studio, si aparece el mensaje "Se requiere una actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+**Nota** Cuando abras Bookstore2Universal\_10 en Visual Studio, si aparece el mensaje "Se requiere una actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
 
 ## Descargas
 
-[Descargar la aplicación Bookstore2\_81 Universal 8.1](http://go.microsoft.com/fwlink/?linkid=532951).
+[Descarga la aplicación Bookstore2\_81 Universal 8.1](http://go.microsoft.com/fwlink/?linkid=532951).
 
-[Descargar la aplicación para Windows 10 Bookstore2Universal\_10](http://go.microsoft.com/fwlink/?linkid=532952).
+[Descarga la aplicación para Windows 10 Bookstore2Universal\_10](http://go.microsoft.com/fwlink/?linkid=532952).
 
 ## Aplicación Universal 8.1
 
@@ -106,7 +107,7 @@ En este caso práctico, aplicaremos la primera alternativa. Pero si lo prefieres
 -   En el proyecto Bookstore2\_81.WindowsPhone, abre BookstoreStyles.xaml. En este archivo, copia los mismos tres recursos (mencionados anteriormente), los dos convertidores de elementos de listas de accesos directos y la declaración de prefijo del espacio de nombres Windows\_UI\_Xaml\_Controls\_Primitives, y pégalos todos en el archivo BookstoreStyles.xaml del nuevo proyecto.
 -   Por último, en el archivo SeZoUC.xaml del nuevo proyecto, agrega el marcado de Visual State Manager adecuado para el **Grid** que agregaste anteriormente.
 
-```xaml
+```xml
     <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -168,6 +169,6 @@ En este caso práctico se ha observado una interfaz de usuario más ambiciosa qu
 El siguiente caso práctico es [QuizGame](w8x-to-uwp-case-study-quizgame.md), en el que vamos a ver cómo mostrar datos agrupados y obtener acceso a ellos.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

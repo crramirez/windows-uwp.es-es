@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: La página Precios y disponibilidad del proceso de envío de la aplicación permite determinar cuánto costará tu aplicación, independientemente de si ofreces una prueba gratuita y cómo, cuándo y dónde estará disponible para los clientes.
 title: Establecer los precios y la disponibilidad de las aplicaciones
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
@@ -25,7 +26,7 @@ Elige **La versión de prueba no expira nunca** para permitir a los clientes el 
 
 También tienes la opción de seleccionar una versión de prueba con límite de tiempo de **1 día**, **7 días**, **15 días** o **30 días**. Puedes seguir limitando funciones durante el período de prueba o puedes permitir a los clientes acceder a toda la funcionalidad durante ese período de tiempo.
 
-> **Nota**  Las pruebas de tiempo limitado no se muestran a los clientes en Windows Phone 8.1 y versiones anteriores.
+> **Nota** Las pruebas de tiempo limitado no se muestran a los clientes en Windows Phone 8.1 y versiones anteriores.
 
 ## Mercados y precios personalizados
 
@@ -47,16 +48,16 @@ El valor predeterminado es **Make this app available in the Store**. Esto signif
 Si quieres ocultar la aplicación en la Tienda pero aún ponerla a disposición de determinadas personas, selecciona una de las siguientes opciones para limitar la disponibilidad de tu aplicación. Ten en cuenta que los clientes de Windows 8 y Windows 8.1 no podrán obtener la aplicación si eliges cualquiera de estas opciones.
 
 -   **Ocultar esta aplicación y evitar la adquisición. Los clientes con un código promocional aún pueden descargarla en dispositivos Windows 10**: ningún cliente puede encontrar la aplicación en la Tienda a través de la búsqueda o exploración, pero puedes [generar códigos promocionales](generate-promotional-codes.md) para distribuirla entre personas concretas en Windows 10. Estas personas pueden usar el vínculo y el código para obtener la aplicación de forma gratuita, aunque ya no se la ofrezcas a ningún otro cliente.
--   **Ocultar la aplicación en la Tienda. Los clientes que dispongan de un vínculo directo a la descripción de la aplicación podrán continuar descargándola, salvo en Windows 8 y Windows 8.1**: ningún cliente puede encontrar la aplicación en la Tienda a través de la búsqueda o exploración, pero los clientes con el vínculo directo a la descripción de la aplicación pueden descargar esta en dispositivos que ejecutan Windows 10 o Windows Phone 8.1 y versiones anteriores.
+-   **Ocultar la aplicación en la Tienda. Los clientes que dispongan de un vínculo directo a la descripción de la aplicación podrán continuar descargándola, salvo en Windows 8 y Windows 8.1**: ningún cliente puede encontrar la aplicación en la Tienda a través de la búsqueda o exploración, pero los clientes con el vínculo directo a la descripción de la aplicación pueden descargarla en dispositivos que ejecuten Windows 10 o Windows Phone 8.1 y versiones anteriores.
 -   **Ocultar esta aplicación y ponerla a la disposición de solo las personas que especifiques abajo, quienes podrán descargar esta aplicación en dispositivos Windows Phone 8.x. Se puede usar un código de promoción para descargar esta aplicación en dispositivos Windows 10**: ningún cliente puede encontrar la aplicación en la Tienda a través de la búsqueda o la exploración, y únicamente los clientes de Windows Phone 8.x cuyas direcciones de correo electrónico (asociadas a sus cuentas de Microsoft) hayas especificado en el cuadro (separadas por punto y coma) pueden descargar la aplicación mediante el vínculo directo a su descripción. También puedes [generar códigos promocionales](generate-promotional-codes.md) para distribuirla entre personas concretas en Windows 10. A menudo se usa esta opción para las [pruebas beta](beta-testing-and-targeted-distribution.md) en Windows Phone 8.1 y versiones anteriores. Ten en cuenta que esta opción solo se puede seleccionar si nunca antes has publicado la aplicación con la opción **Distribución y visibilidad** establecida en **Todo el mundo puede encontrar tu aplicación en la Tienda**.
 
-> **Nota**  Para dejar de ofrecer completamente una aplicación a los clientes nuevos, haz clic en **Make app unavailable** desde la página Información general de la aplicación. Después de confirmar que quieres que la aplicación deje de estar disponible, en el plazo de unas horas dejará de estar visible en la Tienda y ningún cliente nuevo podrá acceder a ella de ninguna manera. Esta acción invalidará cualquiera de las opciones aquí seleccionadas: no estará disponible para los clientes nuevos de ninguna manera. Para que vuelva a estar disponible para los nuevos clientes, puedes hacer clic en **Make app available** desde la página Información general de la aplicación en cualquier momento. Para más información, consulta [Quitar una aplicación de la Tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+> **Nota** Para dejar de ofrecer completamente una aplicación a los clientes nuevos, haz clic en **Make app unavailable** desde la página Información general de la aplicación. Después de confirmar que quieres que la aplicación deje de estar disponible, en el plazo de unas horas dejará de estar visible en la Tienda y ningún cliente nuevo podrá acceder a ella de ninguna manera. Esta acción invalidará cualquiera de las opciones aquí seleccionadas: no estará disponible para los clientes nuevos de ninguna manera. Para que vuelva a estar disponible para los nuevos clientes, puedes hacer clic en **Make app available** desde la página Información general de la aplicación en cualquier momento. Para más información, consulta [Quitar una aplicación de la Tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store).
 
 ## Familias de dispositivos Windows 10
 
 Esta sección te permite indicar qué tipos de clientes de dispositivos Windows 10 pueden usarse para adquirir tu aplicación. (Si el paquete no se ejecuta en un determinado tipo de dispositivo, no se ofrece para su descarga en ese tipo de dispositivo).
 
-> **Importante**  Para impedir por completo que una determinada familia de dispositivos Windows 10 obtenga tu aplicación, debes actualizar el elemento [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) del manifiesto de la appx para especificar como destino únicamente la familia de dispositivos compatible (es decir, **Windows.Mobile** o **Windows.Desktop**), en lugar de dejar el valor **Windows.Universal** (de la familia de dispositivos universal) que Microsoft Visual Studio incluye de manera predeterminada en el manifiesto de appx.
+> **Importante** Para impedir por completo que una determinada familia de dispositivos Windows 10 obtenga tu aplicación, debes actualizar el elemento [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) del manifiesto APPX para especificar como destino únicamente la familia de dispositivos compatible (es decir, **Windows.Mobile** o **Windows.Desktop**), en lugar de dejar el valor **Windows.Universal** (de la familia de dispositivos universal) que Microsoft Visual Studio incluye de manera predeterminada en el manifiesto APPX.
 
 De manera predeterminada, los cuadros **Móvil** y **Escritorio** estarán marcados. Se recomienda dejar estas casillas marcadas salvo que tengas un motivo específico para limitar el tipo de dispositivos Windows 10 que pueden comprar tu aplicación. Por ejemplo, puedes haber creado paquetes universales de Windows, pero sabes que todavía tienes que resolver algunos problemas de la aplicación en dispositivos móviles. Para evitar que los nuevos clientes descarguen la aplicación en dispositivos móviles Windows 10, puedes desmarcar la casilla **Móvil**. Si más adelante decides que la aplicación está lista para dispositivos móviles Windows 10, puedes crear un nuevo envío con la casilla **Móvil** marcada.
 
@@ -68,7 +69,7 @@ También es importante tener en cuenta que las selecciones aquí realizadas se a
 
 Para obtener más información acerca de las familias de dispositivos, consulta [Guía de aplicaciones de la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn894631) y [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903).
 
-> **Nota**  También verás una casilla para indicar si quieres permitir que Microsoft ponga la aplicación a disposición de futuras familias de dispositivos Windows 10. Se recomienda dejar esta casilla marcada, de modo que la aplicación esté disponible para más clientes potenciales al incorporarse nuevas familias de dispositivos.
+> **Nota** También verás una casilla para indicar si quieres permitir que Microsoft ponga la aplicación a disposición de futuras familias de dispositivos Windows 10. Se recomienda dejar esta casilla marcada, de modo que la aplicación esté disponible para más clientes potenciales al incorporarse nuevas familias de dispositivos.
 
 ## Licencias organizativas
 
@@ -85,7 +86,7 @@ Puedes indicar cuándo se publicará la aplicación (o la actualización) selecc
 -   Elige **Publish this submission as soon as it passes certification** para que este envío esté disponible en la Tienda tan pronto como sea posible.
 -   Elige **Publicar este envío manualmente** si no quieres que tu envío se publique hasta que lo indiques. Puedes hacerlo desde la página de estado de certificación haciendo clic en **Publicar ahora** o seleccionando una fecha específica, como se describe a continuación.
 -   Elige **No antes del \[fecha\]** para garantizar que el envío no se publique hasta una fecha determinada. Con esta opción, el envío se lanzará lo antes posible en la fecha que especifiques o después de ella. La fecha debe ser al menos 24 horas después del momento actual. Junto con la fecha, también puedes especificar la hora en que el envío debe comenzar a publicarse.
-    > **Nota**  Los retrasos durante la certificación o la publicación podrían hacer que la fecha de lanzamiento real sea posterior a la que solicites. La Tienda Windows no puede garantizar que la aplicación (o la actualización) esté disponible en una fecha específica.
+    > **Nota** Los retrasos durante la certificación o la publicación podrían hacer que la fecha de lanzamiento real sea posterior a la que solicites. La Tienda Windows no puede garantizar que la aplicación (o la actualización) esté disponible en una fecha específica.
 
 También puedes cambiar la fecha de lanzamiento después de enviar la aplicación, siempre y cuando aún no haya entrado en el paso **Publicar**.
  
@@ -97,6 +98,6 @@ También puedes cambiar la fecha de lanzamiento después de enviar la aplicació
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

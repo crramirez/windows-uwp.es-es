@@ -1,15 +1,16 @@
 ---
+author: DelfCo
 Description: Desarrolla una aplicación lista para todo el mundo mediante la aplicación del formato adecuado a las fechas, las horas, los números y las divisas.
-title: Usar formatos globalizados
+title: Usar formatos globales
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
-label: Usar formatos globalizados
+label: Use global-ready formats
 template: detail.hbs
 ---
 
-# <span id="dev_globalizing.use_global-ready_formats"></span>Usar formatos globalizados
+# <span id="dev_globalizing.use_global-ready_formats"></span>Usar formatos globales
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **API importantes**
@@ -117,7 +118,7 @@ Este proceso de adaptación a nuevos mercados se puede simplificar teniendo en c
 
     // Results for display.
     var results = "Fixed number (" + fractionalNumber + ")\n" +
-                  "With user&#39;s default currency: " + currencyDefault + "\n" +
+                  "With user's default currency: " + currencyDefault + "\n" +
                   "Formatted US Dollar: " + currencyUSD + "\n" +
                   "Formatted Euro (fr-FR defaults): " + currencyEuroFR;
     ```
@@ -149,7 +150,7 @@ Este proceso de adaptación a nuevos mercados se puede simplificar teniendo en c
 
     // Results for display.
     var results = "Fixed number (" + fractionalNumber + ")\n" +
-                  "With user&#39;s default currency: " + currencyDefault + "\n" +
+                  "With user's default currency: " + currencyDefault + "\n" +
                   "Formatted US Dollar: " + currencyUSD + "\n" +
                   "Formatted Euro (fr-FR defaults): " + currencyEuroFR;
     ```
@@ -189,6 +190,6 @@ Este proceso de adaptación a nuevos mercados se puede simplificar teniendo en c
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

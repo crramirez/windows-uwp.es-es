@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 64F7FC51-E8AC-4098-9C5F-0172E4724B5C
 title: Rendimiento
 description: Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería.
@@ -17,8 +18,8 @@ Si aún no lo has hecho, un paso que ya hemos visto y que permite realizar mejor
 | [Optimización de la interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md) | Mejora el rendimiento y el tiempo de inicio de [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de esos elementos. |
 | [Virtualización de datos de ListView y GridView](listview-and-gridview-data-optimization.md) | Mejora el rendimiento y el tiempo de inicio de [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) mediante la virtualización de datos. |
 | [Mejorar el rendimiento de la recolección de elementos no usados](improve-garbage-collection-performance.md) | La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática mediante el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no usados de .NET para las aplicaciones para UWP. |
-| [Mantener la capacidad de respuesta del subproceso de la interfaz de usuario](keep-the-ui-thread-responsive.md) | Los usuarios esperan que las aplicaciones sigan respondiendo mientras realizan cálculos, independientemente del tipo de equipo. Esto significa cosas distintas en función de la aplicación. En el caso de algunas aplicaciones, esto se traduce en la necesidad de proporcionar una física más realista, cargar los datos desde el disco o desde la Web con mayor rapidez, presentar escenas complejas y navegar entre páginas velozmente, encontrar direcciones al instante o procesar datos con rapidez. Independientemente del tipo de cálculo, los usuarios quieren que las aplicaciones respondan a sus entradas y que no haya casos en que estas parezcan que dejen de responder mientras &quot;están pensando&quot;. |
-| [Optimizar el marcado XAML](optimize-xaml-loading.md) | El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo en una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis del marcado XAML, el tiempo de carga y la eficiencia de la memoria de tu aplicación. | 
+| [Mantener la capacidad de respuesta del subproceso de la interfaz de usuario](keep-the-ui-thread-responsive.md) | Los usuarios esperan que las aplicaciones sigan respondiendo mientras realizan cálculos, independientemente del tipo de equipo. Esto significa cosas distintas en función de la aplicación. En el caso de algunas aplicaciones, esto se traduce en la necesidad de proporcionar una física más realista, cargar los datos desde el disco o desde la Web con mayor rapidez, presentar escenas complejas y navegar entre páginas velozmente, encontrar direcciones al instante o procesar datos con rapidez. Independientemente del tipo de cálculo, los usuarios quieren que las aplicaciones respondan a su entrada y que nunca parezca que dejan de responder mientras &quot;están pensando&quot;. |
+| [Optimizar el marcado XAML](optimize-xaml-loading.md) | El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo para una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis del marcado XAML, el tiempo de carga y la eficiencia de la memoria de tu aplicación. | 
 | [Optimiza tu diseño XAML](optimize-your-xaml-layout.md) | El diseño puede ser una parte costosa de una aplicación XAML; tanto en la sobrecarga de memoria como en el uso de la CPU. A continuación te mostramos algunos sencillos pasos para mejorar el rendimiento de diseño de la aplicación XAML. | 
 | [Sugerencias de rendimiento de MVVM y lenguaje](mvvm-performance-tips.md) | En este tema se describen algunos aspectos a tener en cuenta acerca del rendimiento y que están relacionados con la elección de patrones de diseño del software y del lenguaje de programación. |
 | [Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación](best-practices-for-your-app-s-startup-performance.md) | Mejora la manera de controlar el inicio y la activación de la aplicación para crear aplicaciones para UWP con el tiempo de inicio optimizado. |
@@ -30,6 +31,6 @@ Si aún no lo has hecho, un paso que ya hemos visto y que permite realizar mejor
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

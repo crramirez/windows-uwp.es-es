@@ -1,16 +1,13 @@
 ---
+author: mijacobs
 Description: Estos son los elementos y atributos que usas para crear iconos adaptables.
-title: Plantillas y esquemas de iconos adaptables
+title: Plantillas y esquema de iconos adaptables
 ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
-label: Plantillas y esquemas de iconos adaptables
+label: Adaptive tile schema and templates
 template: detail.hbs
 ---
 
 # Plantillas de iconos adaptables: esquema e instrucciones
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Estos son los elementos y atributos que usas para crear iconos adaptables. Para obtener instrucciones y ejemplos, consulta [Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md).
 
@@ -131,11 +128,6 @@ Valores de textStyle: caption captionSubtle body bodySubtle base baseSubtle subt
 </subgroup>
 ```
 
-**Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
 ## <span id="related_topics"></span>Temas relacionados
 
 
@@ -149,6 +141,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

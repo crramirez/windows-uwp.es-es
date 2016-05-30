@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: En este tema se explica el sistema de propiedades de dependencia de que dispones cuando escribes una aplicación de Windows Runtime con C++, C#, o Visual Basic junto con definiciones XAML para la interfaz de usuario.
 title: Introducción a las propiedades de dependencia
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
@@ -36,7 +37,7 @@ Una propiedad de dependencia representa o admite una característica específica
 
 Las propiedades de dependencia extienden la funcionalidad de propiedades básica de Windows Runtime. Para ello, ofrecen un almacén de propiedades global e interno que incluye todas las propiedades de dependencia de una aplicación en tiempo de ejecución. Es una alternativa al patrón estándar de respaldo de una propiedad con un campo privado que es privado en la clase de definición de la propiedad. Este almacén de propiedades interno es un conjunto de identificadores y valores de propiedades que existen para cualquier objeto en particular (siempre que sea un [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)). En lugar de identificarse por el nombre, cada propiedad del almacén se identifica mediante una instancia de [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362). Pero el sistema de propiedades oculta en su mayoría los detalles de esta implementación: las propiedades de dependencia suelen ser accesibles mediante el uso de un nombre simple: el nombre de la propiedad en el lenguaje de código que uses o el nombre de un atributo mientras escribes XAML.
 
-El tipo base que ofrece la base del sistema de propiedades de dependencia es [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). **DependencyObject** define métodos que pueden acceder a la propiedad de dependencia, e instancias de una clase derivada de **DependencyObject** admiten internamente el concepto de almacén de propiedades que hemos mencionado anteriormente.
+El tipo base que ofrece la base del sistema de propiedades de dependencia es [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). **DependencyObject** define métodos que pueden acceder a la propiedad de dependencia, y las instancias de una clase derivada de **DependencyObject** admiten internamente el concepto de almacén de propiedades que mencionamos anteriormente.
 
 Este es un resumen de la terminología que usamos en esta documentación cuando se tratan las propiedades de dependencia:
 
@@ -132,7 +133,7 @@ Se puede establecer el valor de una propiedad de dependencia mediante la aplicac
 
 En el siguiente ejemplo se establece el valor [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676) de un elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) mediante un enlace en XAML. El enlace usa un contexto de datos heredados y un origen de datos de objeto. (Ninguno de ellos se muestra en el ejemplo abreviado; para obtener una muestra más completa que muestre el contexto y el código fuente, consulta [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946)).
 
-```XAML
+```XML
 <Canvas>
   <TextBlock Text="{Binding Team.TeamName}"/>
 </Canvas>
@@ -195,12 +196,14 @@ Los aspectos de subprocesos de [**DependencyObject**](https://msdn.microsoft.com
 * [Animaciones con guion gráfico](https://msdn.microsoft.com/library/windows/apps/mt187354)
 * [Creación de componentes de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [Muestra de controles de usuario y personalizados de XAML](http://go.microsoft.com/fwlink/p/?linkid=238581)
-**API relacionadas con propiedades de dependencia**
+            
+          
+            **API relacionadas con propiedades de dependencia**
 * [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
 * [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

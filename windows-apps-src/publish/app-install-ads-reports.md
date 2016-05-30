@@ -1,4 +1,5 @@
 ---
+author: jnHs
 title: Informe de anuncios de instalación de aplicaciones
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
 description: 
@@ -8,8 +9,8 @@ description:
 
 Hay dos formas de acceder a la página **Informes de anuncios de instalación de aplicaciones** en el Centro de desarrollo:
 
--   En el menú de navegación izquierdo de la página de la aplicación, haz clic en **Análisis** &gt; **Anuncios de instalación de aplicaciones**.
--   En el menú de navegación izquierdo de la página de la aplicación, haz clic en **Rentabilidad** &gt; **Promocionar tu aplicación** y luego haz clic en el vínculo **Informe** de una campaña.
+-   En el menú de navegación izquierdo de la página de la aplicación, haz clic en **Análisis**&gt;**Anuncios de instalación de aplicaciones**.
+-   En el menú de navegación izquierdo de la página de la aplicación, haz clic en **Monetización**&gt;**Promocionar la aplicación** y, a continuación, haz clic en el vínculo **Informe** de una campaña.
 
 Aquí verás dos secciones: **Rendimiento de los anuncios** e **Historial de facturación de la cuenta**.
 
@@ -64,6 +65,6 @@ Aquí puedes ver todas las transacciones asociadas a tu cuenta. Para cada transa
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

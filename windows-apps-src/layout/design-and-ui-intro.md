@@ -1,16 +1,13 @@
 ---
+author: mijacobs
 Description: En este artículo se describen las funciones, las ventajas y los requisitos de la Plataforma universal de Windows (UWP) desde una perspectiva de diseño. Averigua lo que te ofrece la plataforma de forma gratuita y las herramientas que pone a tu disposición.
 title: Introducción al diseño de aplicaciones para la Plataforma universal de Windows (UWP)
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
-label: Introducción al diseño de aplicaciones para UWP
+label: Intro to UWP app design
 template: detail.hbs
 ---
 
 #  Introducción al diseño de aplicaciones para UWP 
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Una aplicación de la Plataforma universal de Windows (UWP) puede ejecutarse en cualquier dispositivo de Windows, desde el teléfono o la tableta hasta el equipo.
 
@@ -103,14 +100,14 @@ Para que las cosas sean más sencillas, vamos a definir la anatomía de una apli
 <td align="left"><p><img src="images/1895065-hig-anatomyofanapp-02.png" alt="Navigation, command, and content areas of an address book app" /></p>
 <p></p></td>
 <td align="left"><strong>Elementos de navegación</strong>
-          <p>Los elementos de navegación ayudan a los usuarios a elegir el contenido que quieren mostrar. Entre los ejemplos de elementos de navegación se incluyen [tabs and pivots](../controls-and-patterns/tabs-pivot.md), [hyperlinks](../controls-and-patterns/hyperlinks.md) y [nav panes](../controls-and-patterns/nav-pane.md).</p>
-<p>Los elementos de navegación se tratan en detalle en el artículo [Navigation design basics](navigation-basics.md).</p>
+<p>Los elementos de navegación ayudan a los usuarios a elegir el contenido que quieren mostrar. Entre algunos ejemplos de elementos de navegación se incluyen [pestañas y tablas dinámicas](../controls-and-patterns/tabs-pivot.md), [hipervínculos](../controls-and-patterns/hyperlinks.md) y [paneles de navegación](../controls-and-patterns/nav-pane.md).</p>
+<p>Los elementos de navegación se tratan en detalle en el artículo [Conceptos básicos del diseño de navegación](navigation-basics.md).</p>
 <strong>Elementos de comandos</strong>
-          <p>Los elementos de comandos inician acciones como manipular, guardar o compartir contenido. Entre los ejemplos de elementos de comando se incluyen [button](../controls-and-patterns/buttons.md) y [command bar](../controls-and-patterns/app-bars.md). Los elementos de comandos también pueden incluir métodos abreviados de teclado que no están visibles en la pantalla.</p>
-<p>Los elementos de comandos se tratan en detalle en el artículo [Command design basics](commanding-basics.md).</p>
+<p>Los elementos de comandos inician acciones como manipular, guardar o compartir contenido. Entre algunos ejemplos de elementos de comandos se incluyen el [botón](../controls-and-patterns/buttons.md) y la [barra de comandos](../controls-and-patterns/app-bars.md). Los elementos de comandos también pueden incluir métodos abreviados de teclado que no están visibles en la pantalla.</p>
+<p>Los elementos de comando se tratan en detalle en el artículo [Conceptos básicos del diseño de comandos](commanding-basics.md).</p>
 <strong>Elementos de contenido</strong>
-          <p>Los elementos de contenido muestran el contenido de la aplicación. Para una aplicación de pintura, el contenido puede ser un dibujo; para una aplicación de noticias, el contenido puede ser un artículo.</p>
-<p>Los elementos de contenido se tratan en detalle en el artículo [Content design basics](content-basics.md).</p></td>
+<p>Los elementos de contenido muestran el contenido de la aplicación. Para una aplicación de pintura, el contenido puede ser un dibujo; para una aplicación de noticias, el contenido puede ser un artículo.</p>
+<p>Los elementos de contenido se tratan en detalle en el artículo [Conceptos básicos del diseño de contenido](content-basics.md).</p></td>
 </tr>
 </tbody>
 </table>
@@ -121,7 +118,7 @@ Como mínimo, una aplicación tiene una pantalla de presentación y una página 
 
 Al decidir los elementos de la interfaz de usuario adecuados para la aplicación, también puedes considerar los dispositivos y los tamaños de pantalla en los que se ejecutará la aplicación.
 
-## <span id="Why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="WHY_TAILOR_YOUR_APP_FOR_SPECIFIC_DEVICE_FAMILIES_AND_SCREEN_SIZES_"></span>Adaptación de la aplicación a dispositivos y tamaños de pantalla específicos
+## <span id="Why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="WHY_TAILOR_YOUR_APP_FOR_SPECIFIC_DEVICE_FAMILIES_AND_SCREEN_SIZES_"></span>Adaptación de la aplicación a dispositivos y tamaños de pantalla específicos.
 
 
 Las aplicaciones para UWP usan píxeles efectivos para garantizar que los elementos de diseño sean legibles y se puedan usar en todos los dispositivos con sistema operativo Windows. Por lo tanto, ¿por qué querría personalizar la interfaz de usuario de la aplicación para una familia de dispositivos específicos?
@@ -218,6 +215,6 @@ A continuación se muestra un ejemplo de esta técnica aplicado al diseño de un
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

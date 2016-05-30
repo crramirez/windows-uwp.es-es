@@ -1,15 +1,13 @@
 ---
+author: Jwmsft
 Description: Obtén información sobre cómo navegar en una aplicación básica para la Plataforma universal de Windows (UWP) de punto a punto entre dos páginas.
 title: Navegación de punto a punto entre dos páginas
 ms.assetid: 0A364C8B-715F-4407-9426-92267E8FB525
-label: Navegación de punto a punto entre dos páginas
+label: Peer-to-peer navigation between two pages
 template: detail.hbs
 ---
 
 # <span id="dev_navigation.peer-to-peer_navigation_between_two_pages"></span>Navegación de punto a punto entre dos páginas
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Obtén información sobre cómo navegar en una aplicación básica para la Plataforma universal de Windows (UWP) de punto a punto entre dos páginas.
 
@@ -29,7 +27,7 @@ Obtén información sobre cómo navegar en una aplicación básica para la Plata
 1.  En el menú de Microsoft Visual Studio, elige **Archivo &gt; Nuevo proyecto**.
 2.  En el panel izquierdo del cuadro de diálogo **Nuevo proyecto**, elige el nodo **Visual C# -&gt; Windows -&gt; Universal** o **Visual C++ -&gt; Windows -&gt; Universal**.
 3.  En el panel central, elige **Aplicación vacía**.
-4.  En el cuadro **Nombre**, escribe **NavApp1** y, a continuación, elige el botón **Aceptar**.
+4.  En el cuadro **Nombre**, escribe **NavApp1** y, después, elige el botón **Aceptar**.
 
     La solución se crea y los archivos del proyecto aparecen en el **Explorador de soluciones**.
 
@@ -37,7 +35,7 @@ Obtén información sobre cómo navegar en una aplicación básica para la Plata
 
      
 
-5.  Para ejecutar el programa, elige **Depurar** &gt; **Iniciar depuración** o presiona F5 en el menú.
+5.  Para ejecutar el programa, elige **Depurar**&gt;**Iniciar depuración** en el menú o presiona F5.
 
     Aparecerá una página vacía.
 
@@ -50,9 +48,9 @@ A continuación, agrega dos páginas de contenido al proyecto.
 
 Realiza los siguientes pasos dos veces para agregar dos páginas y navegar entre ellas.
 
-1.  En el **Explorador de soluciones**, haz clic con el botón secundario en el nodo de proyecto **BlankApp** para abrir el menú contextual.
-2.  Elige **Agregar** &gt; **Nuevo elemento** en el menú contextual.
-3.  En el cuadro de diálogo **Agregar nuevo elemento**, elige **Página en blanco** en el panel del medio.
+1.  En el **Explorador de soluciones**, haz clic con el botón derecho en el nodo de proyecto **BlankApp** para abrir el menú contextual.
+2.  Elige **Agregar**&gt;**Nuevo elemento** en el menú contextual.
+3.  En el cuadro de diálogo **Agregar nuevo elemento**, elige **Página en blanco** en el panel central.
 4.  En el cuadro **Nombre**, escribe **Page1** (o **Page2**) y presiona el botón **Agregar**.
 
 Estos archivos deben aparecer ahora como parte del proyecto NavApp1.
@@ -84,8 +82,8 @@ Estos archivos deben aparecer ahora como parte del proyecto NavApp1.
 <li>Page2.xaml.cpp</li>
 <li>Page2.xaml.h
 <div class="alert">
-<strong>Nota</strong>
-          <p>Las funciones se declaran en el archivo de encabezado (.h) y se implementan en el archivo de código subyacente (.cpp).</p>
+<strong>Nota</strong>  
+<p>Las funciones se declaran en el archivo de encabezado (.h) y se implementan en el archivo de código subyacente (.cpp).</p>
 </div>
 <div>
  
@@ -108,7 +106,7 @@ Agrega el siguiente contenido a la interfaz de usuario de Page1.xaml.
     </table>
 ```
 
--   Agrega el siguiente elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la raíz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) y después el elemento `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
+-   Agrega el siguiente elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la raíz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) y después el elemento `pageTitle`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
 
     <span codelanguage="XAML"></span>
 ```    XAML
@@ -166,7 +164,7 @@ Realiza los siguientes cambios a la interfaz de usuario de Page2.xaml.
     </table>
 ```
 
--   Agrega el siguiente elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la raíz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) y después el elemento `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
+-   Agrega el siguiente elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la raíz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) y después el elemento `pageTitle`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
 
     <span codelanguage="XAML"></span>
 ```    XAML
@@ -332,7 +330,7 @@ La clase [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) a
 
 En nuestro ejemplo, `Page1` se pasa al método [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694). Este método establece el contenido de la ventana actual de la aplicación en la clase [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) y carga el contenido de la página especificada en **Frame** (que es Page1.xaml en nuestro ejemplo o MainPage.xaml de forma predeterminada).
 
-El elemento `Page1` es una subclase de la clase [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503). La clase **Page** tiene la propiedad de solo lectura [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504) que a su vez obtiene la clase [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) que contiene **Page**. Cuando el controlador de eventos [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) de la clase [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) llama a` Frame.Navigate(typeof(Page2))`, la clase **Frame** de la ventana de la aplicación muestra el contenido de Page2.xaml.
+`Page1` es una subclase de la clase [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503). La clase **Page** tiene la propiedad de solo lectura [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504) que a su vez obtiene la clase [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) que contiene **Page**. Cuando el controlador de eventos [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) de la clase [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) llama a` Frame.Navigate(typeof(Page2))`, la clase **Frame** de la ventana de la aplicación muestra el contenido de Page2.xaml.
 
 Siempre que se cargue una página en el marco, esa página se agregará como una clase [**PageStackEntry**](https://msdn.microsoft.com/library/windows/apps/dn298572) a la propiedad [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543) o [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547) de [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504).
 
@@ -353,7 +351,7 @@ Una vez hecho esto, agregamos una etiqueta [**TextBlock**](https://msdn.microsof
 </StackPanel>
 ```
 
-En el controlador de eventos `HyperlinkButton_Click` del archivo de código subyacente Page1.xaml, code-behind file, agrega un parámetro que haga referencia a la propiedad `Text` del elemento `name` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) y al método `Navigate`.
+En el controlador de eventos `HyperlinkButton_Click` del archivo de código subyacente Page1.xaml, agrega al método `Navigate` un parámetro que haga referencia a la propiedad `Text` del elemento `name`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683).
 
 ```ManagedCPlusPlus
 void Page1::HyperlinkButton_Click(Platform::Object^ sender, RoutedEventArgs^ e)
@@ -448,6 +446,6 @@ public Page1()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

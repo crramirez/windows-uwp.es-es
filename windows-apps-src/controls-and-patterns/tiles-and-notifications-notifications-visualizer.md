@@ -1,5 +1,6 @@
 ---
-Description: Notifications Visualizer es una nueva aplicación de la Plataforma universal de Windows (UWP) en la Tienda que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables para Windows 10.
+author: mijacobs
+Description: Notifications Visualizer es una nueva aplicación para la Plataforma universal de Windows (UWP) en la Tienda que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables para Windows 10.
 title: Notifications Visualizer
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
@@ -9,10 +10,10 @@ template: detail.hbs
 # Notifications Visualizer
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Notifications Visualizer es una nueva aplicación de la Plataforma universal de Windows (UWP) en [la Tienda](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables para Windows 10.
+
+Notifications Visualizer es una nueva aplicación para la Plataforma universal de Windows (UWP) en [la Tienda](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables para Windows 10.
 
 ## <span id="Overview"></span><span id="overview"></span><span id="OVERVIEW"></span>Información general
 
@@ -27,7 +28,7 @@ Esta captura de pantalla de la aplicación muestra la carga de XML y cómo apare
 
 Con Notifications Visualizer, puedes crear y probar cargas de iconos adaptables sin tener que editar e implementar la aplicación en sí. Una vez creada una carga con resultados visuales ideales puedes integrarla en tu aplicación. Consulta [Enviar una notificación de icono local](tiles-and-notifications-sending-a-local-tile-notification.md) para obtener más información.
 
-**Nota**   La simulación de Notifications Visualizer del menú Inicio de Windows no siempre es totalmente precisa y no es compatible con algunas propiedades de carga como [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712). Cuando tengas el diseño de icono que desees, pruébalo anclando el icono al menú Inicio real para comprobar que aparece como deseas.
+**Nota** La simulación de Notifications Visualizer del menú Inicio de Windows no siempre es totalmente precisa y no es compatible con algunas propiedades de carga como [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712). Cuando tengas el diseño de icono que desees, pruébalo anclando el icono al menú Inicio real para comprobar que aparece como deseas.
 
  
 
@@ -63,6 +64,6 @@ Esta captura de pantalla de la aplicación muestra el editor de iconos:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

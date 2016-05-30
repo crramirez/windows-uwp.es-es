@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Preguntas más frecuentes
 description: Preguntas más frecuentes sobre UWP en Xbox.
 area: Xbox
@@ -43,7 +44,8 @@ Si estás en el modo comercial, verás el contenido Gold o Live habitual.
 Sí, puedes alternar entre el modo de desarrollador y el modo comercial, en el que puedes jugar a juegos. 
 Para obtener más información, consulta la página [Xbox One Developer Mode Activation (Activación del modo de desarrollador de Xbox)](devkit-activation.md). 
 
-> **PRECAUCIÓN**&nbsp;&nbsp; La actualización del sistema de Xbox Developer Preview incluye software tanto experimental como de versiones preliminares. 
+> **PRECAUCIÓN**
+            &nbsp;&nbsp;La actualización del sistema de Xbox Developer Preview incluye software tanto experimental como de versiones preliminares. 
 Esto significa que algunos juegos y aplicaciones conocidos no funcionan según lo esperado y es posible que experimentes bloqueos y pérdidas de datos ocasionales.
 
 ### ¿Perderé mis juegos y aplicaciones o los cambios guardados?
@@ -75,8 +77,7 @@ Las aplicaciones para UWP creadas y probadas en una consola Xbox One comercial p
 
 Puedes usar UWP y Xbox One en el modo de desarrollador para crear y probar los juegos de Xbox One. 
 Para publicar juegos para UWP, debes registrarte en [ID@XBOX](http://www.xbox.com/en-us/Developers/id). 
-[ID@XBOX](http://www.xbox.com/en-us/Developers/id) proporciona a los desarrolladores acceso completo a las API de Xbox Live para sus juegos, incluidas las puntuaciones de jugador y los logros, 
-así como la capacidad de aprovechar el modo multijugador entre dispositivos, almacenamientos en la nube y todas las características de Xbox Live en Xbox One. 
+[ID@Xbox](http://www.xbox.com/en-us/Developers/id) proporciona a los desarrolladores acceso completo a las API de Xbox Live para sus juegos, incluidas las puntuaciones de jugador y los logros, así como la capacidad de aprovechar el modo multijugador entre dispositivos, almacenamientos en la nube y todas las características de Xbox Live en Xbox One. 
 [ID@XBOX](http://www.xbox.com/en-us/Developers/id) también puede proporcionar acceso a kits de desarrollo de Xbox One para juegos que requieren acceso al máximo potencial del hardware de Xbox One.
 
 ### ¿Los motores de juego estándar funcionarán?
@@ -119,7 +120,8 @@ Si Visual Studio puede conectarse, pero se producen errores de implementación (
 
 1. asegúrate de que la aplicación no se instale al desinstalarla de la aplicación Colecciones en el shell de Xbox One. 
 
-> **Nota**&nbsp;&nbsp;Desinstalar la aplicación de Windows Device Portal (WDP) no resolverá el problema.
+> **Nota**
+            &nbsp;&nbsp;Desinstalar la aplicación Windows Device Portal (WDP) no resolverá el problema.
 
 2. Si los problemas persisten, desinstala la aplicación o el juego de la aplicación Colecciones, sal del modo de desarrollador, reinicia el modo comercial y vuelve al modo de desarrollador. 
 De este modo, se borrará el almacenamiento de desarrollo.
@@ -127,10 +129,12 @@ De este modo, se borrará el almacenamiento de desarrollo.
 3. Si los problemas persisten, sigue los pasos anteriores y, a continuación, usa la opción **Reset and keep my games & apps** para eliminar cualquier estado almacenado en tu Xbox One. 
 Ve a Configuración > Sistema > Console info & updates > Reset console y, a continuación, selecciona el botón **Reset and keep my games & apps**.
 
-> **Precaución**&nbsp;&nbsp;Esto eliminará toda la configuración guardada en Xbox One, incluida la configuración inalámbrica, las cuentas de usuario y cualquier progreso de los juegos que no se hayan guardado en el almacenamiento de la nube.
+> **Precaución**
+            &nbsp;&nbsp;Esto eliminará toda la configuración guardada en Xbox One, incluidas la configuración inalámbrica, las cuentas de usuario y cualquier progreso de los juegos que no se haya guardado en la nube.
 
-> **Precaución**&nbsp;&nbsp;NO selecciones el botón **Reset and remove everything**.
-De esta forma, se eliminarán todos los juegos, las aplicaciones, la configuración y el contenido; se desactivará el modo de desarrollador y se quitará la consola del grupo de Developer Preview.
+> **Precaución**
+            &nbsp;&nbsp;NO seleccione el botón **Restablecer y quitar todo**.
+Esto eliminará todos los juegos, las aplicaciones, la configuración y el contenido; desactivará el modo de desarrollador y quitará la consola del grupo de la versión preliminar para desarrolladores.
 
 ### Si creo una aplicación con HTML o JavaScript, cómo puedo permitir la navegación del controlador para juegos?
 
@@ -145,6 +149,6 @@ Para obtener más información, consulta el proyecto [TVHelpers](https://github.
 - [UWP on Xbox One (UWP en Xbox One)](index.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

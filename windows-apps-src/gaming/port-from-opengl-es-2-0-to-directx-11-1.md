@@ -1,5 +1,6 @@
 ---
-title: Portar de OpenGL ES 2.0 a Direct3D 11
+author: mtoepke
+title: Migrar de OpenGL ES 2.0 a Direct3D 11
 description: Incluye artículos, información general y tutoriales para portar una canalización de gráficos de OpenGL ES 2.0 a Direct3D 11 y Windows Runtime.
 ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
 ---
@@ -28,16 +29,16 @@ Incluye artículos, información general y tutoriales para portar una canalizaci
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Map OpenGL ES 2.0 to Direct3D 11.1](map-concepts-and-infrastructure.md)</p></td>
-<td align="left"><p>Cuando comiences el proceso para portar la arquitectura de gráficos desde OpenGL ES 2.0 a Direct3D por primera vez, familiarízate con las diferencias clave entre las API. Los temas de esta sección te ayudarán a planear tu estrategia de migración y los cambios de API que debes realizar cuando traslades el procesamiento de gráficos a Direct3D.</p></td>
+<td align="left"><p>[Asignar de OpenGL ES 2.0 a Direct3D 11.1](map-concepts-and-infrastructure.md)</p></td>
+<td align="left"><p>Cuando comiences el proceso para portar la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D por primera vez, familiarízate con las principales diferencias entre las API. Los temas de esta sección te ayudarán a planear tu estrategia de migración y los cambios de API que debes realizar cuando traslades el procesamiento de gráficos a Direct3D.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Walkthrough sample ports from OpenGL ES 2.0](walkthrough-sample-ports-from-opengl-es-2-0.md)</p></td>
-<td align="left"><p>En este conjunto de temas se analizan diversos escenarios para portar canalizaciones de gráficos de OpenGL ES 2.0 de diversas complejidades.</p></td>
+<td align="left"><p>[Portar muestras de tutoriales de OpenGL ES 2.0](walkthrough-sample-ports-from-opengl-es-2-0.md)</p></td>
+<td align="left"><p>En este conjunto de temas se analizan diversos escenarios de migración de canalizaciones de gráficos de OpenGL ES 2.0 de diversas complejidades.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[OpenGL ES 2.0 to Direct3D 11.1 reference](opengl-es-2-0-to-directx-11-1-reference.md)</p></td>
-<td align="left"><p>Usa estos temas de referencia para buscar muestras de código corto y asignación de API cuando se porta desde OpenGL ES 2.0 a Direct3D 11.</p></td>
+<td align="left"><p>[Referencia de OpenGL ES 2.0 a Direct3D 11.1](opengl-es-2-0-to-directx-11-1-reference.md)</p></td>
+<td align="left"><p>Usa estos temas de referencia para buscar muestras de código corto y asignación de API al realizar la migración de OpenGL ES 2.0 a Direct3D 11.</p></td>
 </tr>
 </tbody>
 </table>
@@ -58,6 +59,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

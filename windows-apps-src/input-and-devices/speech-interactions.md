@@ -1,30 +1,30 @@
 ---
-Description: Incorporar la voz en las aplicaciones con síntesis de voz, reconocimiento de voz y los comandos de voz de Cortana.
+author: Karl-Bridge-Microsoft
+description: Incorpora la voz en las aplicaciones con síntesis de voz, reconocimiento de voz y los comandos de voz de Cortana.
 title: Interacciones de voz
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
-label: Interacciones de voz
+label: Speech interactions
 template: detail.hbs
 ---
 
 # Interacciones de voz
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Integra el reconocimiento de voz y texto a voz (también denominado TTS o síntesis de voz) directamente en la experiencia del usuario de la aplicación.
 
 
 **Otros componentes de voz**
 
--   Consulta las [Directrices para el diseño de Cortana](cortana-interactions.md) si expones funcionalidad de la aplicación en la interfaz de usuario de **Cortana**.
+-   Consulta las [Directrices para el diseño de Cortana](cortana-interactions.md) si expones la funcionalidad de la aplicación en la interfaz de usuario de **Cortana**.
 
 
-**Reconocimiento de voz: **convierte las palabras habladas por el usuario en texto para entrada de formulario, dictado de texto, para especificar una acción o comando y para llevar a cabo tareas. Las gramáticas predefinidas para el dictado de texto libre y la búsqueda web, y las gramáticas personalizadas creadas con la versión 1.0 de la Especificación de gramática de reconocimiento de voz (SRGS) son compatibles.
+**Reconocimiento de voz: **convierte las palabras que pronuncia el usuario en texto para entrada de formulario, para dictado de texto, para especificar una acción o un comando y para llevar a cabo tareas. Las gramáticas predefinidas para el dictado de texto libre y la búsqueda web, y las gramáticas personalizadas creadas con la versión 1.0 de la Especificación de gramática de reconocimiento de voz (SRGS) son compatibles.
 
 **TTS: **usa un motor de síntesis de voz (voz) para convertir una cadena de texto en palabras habladas. La cadena de entrada puede ser texto básico y sin adornos o Lenguaje de marcado de síntesis de voz (SSML) más complejo. SSML proporciona una forma estándar de controlar características de la salida de voz, como la pronunciación, el volumen, el tono, la velocidad o el énfasis.
 
-**Nota** Con **Cortana** y comandos de voz personalizados, la aplicación puede iniciarse en primer plano (la aplicación toma el foco, como si se iniciara desde el menú Inicio) o activarse como un servicio en segundo plano (**Cortana** conserva el foco, pero proporciona los resultados de la aplicación). Los comandos que requieren contexto o entrada de usuario adicionales (por ejemplo, enviar un mensaje a un determinado contacto) se administran mejor en una aplicación en primer plano, mientras que los comandos básicos pueden controlarse en **Cortana** a través de una aplicación en segundo plano.
-Si expones funcionalidad como un servicio en segundo plano mediante comandos de voz en la interfaz de usuario de **Cortana**, consulta las [Directrices para el diseño de Cortana](cortana-design-guidelines.md).
-
- 
+> [!NOTE] Con **Cortana** y los comandos de voz personalizados, la aplicación puede iniciarse en primer plano (la aplicación toma el foco, como si se iniciara desde el menú Inicio) o activarse como un servicio en segundo plano (**Cortana** conserva el foco, pero proporciona los resultados de la aplicación). 
+> Los comandos que requieren contexto o entrada de usuario adicionales (por ejemplo, enviar un mensaje a un determinado contacto) se administran mejor en una aplicación en primer plano, mientras que los comandos básicos pueden controlarse en **Cortana** a través de una aplicación en segundo plano.
+> Si expones funcionalidad como un servicio en segundo plano mediante comandos de voz en la interfaz de usuario de **Cortana**, consulta las [Directrices para el diseño de Cortana](cortana-design-guidelines.md).
 
 Si se diseña y se implementa con cuidado, la voz puede ser una forma eficaz y divertida de que la gente interactúe con tu aplicación, que además complementa (llegando incluso a sustituir) al teclado, el mouse, la interacción táctil o los gestos.
 
@@ -154,9 +154,7 @@ Las gramáticas predefinidas de dictado y búsqueda en Internet proporcionan a t
 -   La gramática predeterminada de dictado de texto libre tiene la capacidad de reconocer la mayoría de las palabras y frases que un usuario puede decir en un idioma en particular y está optimizada para reconocer frases cortas. El dictado de texto libre es útil si no quieres limitar los tipos de términos que puede decir un usuario. Entre los usos típicos se incluyen la creación de notas o el dictado del contenido de un mensaje.
 -   La gramática de búsqueda web, como una gramática de dictado, contiene un gran número de palabras y frases que puede decir un usuario. Sin embargo, está optimizada para reconocer los términos que suelen usar las personas cuando buscan en la web.
 
-**Nota** Debido a que las gramáticas predefinidas de dictado y búsqueda en Internet pueden ser grandes y se accede a ellas a través de Internet (no se encuentran en el dispositivo), su rendimiento puede no ser tan rápido como el de una gramática personalizada instalada en el dispositivo.
-
- 
+> [!NOTE] Debido a que las gramáticas predefinidas de dictado y búsqueda en Internet pueden ser grandes y se accede a ellas a través de Internet (no se encuentran en el dispositivo), su rendimiento puede no ser tan rápido como el de una gramática personalizada instalada en el dispositivo.
 
 Estas gramáticas predefinidas pueden usarse para reconocer hasta 10 segundos de entrada de voz y no requieren ningún esfuerzo de edición por su parte. Sin embargo, sí requieren una conexión a una red.
 
@@ -176,9 +174,8 @@ Una gramática personalizada se ha diseñado y creado por el usuario y se instal
     -   Intenta no definir frases en la gramática que contengan una sola sílaba. El reconocimiento tiende a ser más exacto con frases con dos o más sílabas.
     -   Evita usar frases que suenen parecido. Por ejemplo, frases como "hola", "cola" y "bola" pueden confundir al motor de reconocimiento y la precisión del reconocimiento puede no ser buena.
 
-**Nota** El tipo de restricción que uses depende de la complejidad de la funcionalidad de reconocimiento que desees crear. Cualquier enfoque puede ser la mejor opción para una tarea de reconocimiento determinada y puedes encontrar usos para todos los tipos de restricción en tu aplicación.
-
- 
+> [!NOTE]
+> El tipo de restricción que uses depende de la complejidad de la funcionalidad de reconocimiento que desees crear. Cualquier enfoque puede ser la mejor opción para una tarea de reconocimiento determinada y puedes encontrar usos para todos los tipos de restricción en tu aplicación.
 
 ### <span id="Custom_pronunciations"></span><span id="custom_pronunciations"></span><span id="CUSTOM_PRONUNCIATIONS"></span>Pronunciaciones personalizadas
 
@@ -213,55 +210,23 @@ Debes escuchar todas las cadenas de TTS para garantizar que son inteligibles y s
 
 Estos dos tipos de problema se pueden abordar usando SSML en lugar de texto sin formato como entrada en el sintetizador de voz. Para obtener más información sobre SSML, consulta [Usar SSML para controlar la voz sintetizada](http://msdn.microsoft.com/library/windowsphone/design/hh378454.aspx) y [Referencia de Lenguaje de marcado de síntesis de voz](http://msdn.microsoft.com/library/windowsphone/design/hh378377.aspx).
 
-## Otros artículos de esta sección 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Tema</th>
-<th align="left">Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>[Speech recognition](speech-recognition.md)</p></td>
-<td align="left"><p>Usa el reconocimiento de voz para proporcionar datos de entrada, especificar una acción o comando y realizar tareas.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Specify the speech recognizer language](specify-the-speech-recognizer-language.md)</p></td>
-<td align="left"><p>Obtén información sobre cómo seleccionar un idioma instalado para usarlo para el reconocimiento de voz.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>[Define custom recognition constraints](define-custom-recognition-constraints.md)</p></td>
-<td align="left"><p>Aprende a definir y usar restricciones personalizadas para el reconocimiento de voz.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Enable continuous dictation](enable-continuous-dictation.md)</p></td>
-<td align="left"><p>Aprende a capturar y reconocer la entrada de voz del dictado continuo de larga duración.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>[Manage issues with audio input](manage-issues-with-audio-input.md)</p></td>
-<td align="left"><p>Aprende a administrar los problemas con la precisión del reconocimiento de voz causados por la calidad de la entrada de audio.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Set speech recognition timeouts](set-speech-recognition-timeouts.md)</p></td>
-<td align="left"><p>Establece durante cuánto tiempo un reconocedor de voz pasa por alto el silencio o los sonidos irreconocibles (balbuceo) y continúa escuchando la entrada de voz.</p></td>
-</tr>
-</tbody>
-</table>
-
- 
-
+## <span id="Other_articles"></span><span id="other_articles"></span><span id="OTHER_ARTICLES"></span>Otros artículos de esta sección 
+| Tema | Descripción |
+| --- | --- |
+| [Reconocimiento de voz](speech-recognition.md) | Usa el reconocimiento de voz para proporcionar datos de entrada, especificar una acción o un comando y realizar tareas. |
+| [Especificar el idioma del reconocedor de voz](specify-the-speech-recognizer-language.md) | Obtén información sobre cómo seleccionar un idioma instalado para usarlo en el reconocimiento de voz. |
+| [Definir restricciones de reconocimiento personalizadas](define-custom-recognition-constraints.md) | Aprende a definir y usar restricciones personalizadas para el reconocimiento de voz. |
+| [Habilitar el dictado continuo](enable-continuous-dictation.md) |Obtén información sobre cómo capturar y reconocer la entrada de voz de dictado continuo de larga duración. |
+| [Administrar los problemas con la entrada de audio](manage-issues-with-audio-input.md) | Aprende a administrar los problemas con la precisión del reconocimiento de voz causados por la calidad de la entrada de audio. |
+| [Establecer tiempos de espera de reconocimiento de voz](set-speech-recognition-timeouts.md) | Establece durante cuánto tiempo un reconocedor de voz pasa por alto el silencio o los sonidos irreconocibles (balbuceo) y continúa escuchando la entrada de voz. |
 
 ## <span id="related_topics"></span>Artículos relacionados
 
-
 * [Interacciones de voz](https://msdn.microsoft.com/library/windows/apps/mt185614)
 * [Interacciones de Cortana](https://msdn.microsoft.com/library/windows/apps/mt185598)
- **Muestras**
+             
+          
+            **Muestras**
 * [Muestra de reconocimiento de voz y síntesis de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -271,6 +236,6 @@ Estos dos tipos de problema se pueden abordar usando SSML en lugar de texto sin 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

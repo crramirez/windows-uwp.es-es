@@ -1,6 +1,7 @@
 ---
+author: mtoepke
 title: Convertir el marco de representación
-description: Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como migrar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11.
+description: Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11.
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
 ---
 
@@ -98,7 +99,7 @@ Es posible que tus archivos HLSL usen la sintaxis anterior para la semántica de
 
 Este es nuestro sombreador de vértices para la transformación de hardware, esta vez definido en su propio archivo.
 
-> **Nota** Los sombreadores de vértices son necesarios para producir la salida de la semántica de valor del sistema SV\_POSITION. Esta semántica resuelve los datos de posición de vértice para coordinar valores donde: el valor de X está entre -1 y 1; el de Y está entre -1 y 1; el de Z se divide por el valor W de la coordenada homogénea original (Z/W) y el de W es 1 dividido por el valor W original (1/W).
+> **Nota** Los sombreadores de vértices son necesarios para producir la salida de la semántica del valor del sistema SV\_POSITION. Esta semántica resuelve los datos de posición de vértice para coordinar valores donde: el valor de X está entre -1 y 1; el de Y está entre -1 y 1; el de Z se divide por el valor W de la coordenada homogénea original (Z/W) y el de W es 1 dividido por el valor W original (1/W).
 
  
 
@@ -229,7 +230,7 @@ m_d3dDevice->CreateVertexShader(
 
 Para incluir el código de bytes del sombreador en el paquete de la aplicación compilado, solo agrega el archivo HLSL al proyecto de Visual Studio. Visual Studio usará la [herramienta compiladora de efectos](https://msdn.microsoft.com/library/windows/desktop/bb232919) (FXC) para compilar archivos HLSL en objetos de sombreador compilado (archivos .CSO) e incluirlos en el paquete de la aplicación.
 
-> **Nota** Asegúrate de establecer el nivel de característica de destino correcto para el compilador HLSL. Haz clic con el botón secundario en el archivo de origen HLSL en Visual Studio, selecciona Propiedades y cambia la configuración del **Modelo de sombreador** en **Compilador HLSL > General**. Direct3D compara esta propiedad con las capacidades de hardware cuando la aplicación crea el recurso de sombreador de Direct3D.
+> **Nota** Asegúrate de establecer el nivel de característica de destino correcto para el compilador HLSL. Haz clic con el botón derecho en el archivo de origen HLSL en Visual Studio, selecciona Propiedades y cambia la configuración de **Modelo de sombreador** en **Compilador HLSL -&gt; General**. Direct3D compara esta propiedad con las capacidades de hardware cuando la aplicación crea el recurso de sombreador de Direct3D.
 
  
 
@@ -239,7 +240,9 @@ Este es un buen lugar para crear el diseño de entrada, que corresponde a la dec
 
 Los datos de vértice se deben almacenar en tipos compatibles en la memoria del sistema. Los tipos de datos DirectXMath pueden ser útiles, por ejemplo, DXGI\_FORMAT\_R32G32B32\_FLOAT corresponde a [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475).
 
-> **Nota** Los búferes de constantes usan un diseño de entrada fijo que se alinea a cuatro números de punto flotante por vez. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) (y sus derivados) se recomiendan para datos de búferes de constantes.
+> **Nota** Los búferes de constantes usan un diseño de entrada fijo que se alinea a cuatro números de punto flotante a la vez. [
+              **XMFLOAT4**
+            ](https://msdn.microsoft.com/library/windows/desktop/ee419608) (y sus derivados) se recomiendan para datos de búferes de constantes.
 
  
 
@@ -487,6 +490,6 @@ La cadena de representación que acabamos de crear recibirá una llamada proveni
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

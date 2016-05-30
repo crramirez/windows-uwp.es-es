@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Enumerar y consultar archivos y carpetas
 description: Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas.
@@ -11,7 +12,7 @@ description: Permite tener acceso a los archivos que se encuentran en carpetas, 
 
 Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas.
 
-**Nota**  Consulta también [Muestra de enumeración de carpetas](http://go.microsoft.com/fwlink/p/?linkid=619993).
+**Nota** Consulta también [Muestra de enumeración de carpetas](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
  
 ## Requisitos previos
@@ -26,7 +27,7 @@ Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, 
 
 ## Enumerar archivos y carpetas en una ubicación
 
-> **Nota**  Recuerda declarar la funcionalidad **picturesLibrary**.
+> **Nota** Recuerda declarar la funcionalidad **picturesLibrary**.
 
 En este ejemplo, se usa primero el método [**StorageFolder.GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276) para obtener todos los archivos en la carpeta raíz de la propiedad [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) (no en las subcarpetas) y se muestra el nombre de cada archivo. Después, se usa el método [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227280) para obtener todas las subcarpetas en **PicturesLibrary** y se muestra el nombre de cada subcarpeta.
 
@@ -52,36 +53,36 @@ En este ejemplo, se usa primero el método [**StorageFolder.GetFilesAsync**](htt
 > // Get a read-only vector of the file objects
 > // and pass it to the continuation. 
 > create_task(picturesFolder->GetFilesAsync())        
->     // outputString is captured by value, which creates a copy 
->     // of the shared_ptr and increments its reference count.
->     .then ([outputString] (IVectorView\<StorageFile^>^ files)
-> {        
->     for ( unsigned int i = 0 ; i < files->Size; i++)
->     {
->         *outputString += files->GetAt(i)->Name->Data();
->         *outputString += L"\n";
->     }
-> })
->     // We need to explicitly state the return type 
->     // here: -> IAsyncOperation<...>
->     .then([picturesFolder]() -> IAsyncOperation\<IVectorView\<StorageFolder^>^>^ 
-> {
->     return picturesFolder->GetFoldersAsync();
-> })
->     // Capture "this" to access m_OutputTextBlock from within the lambda.
->     .then([this, outputString](IVectorView\<StorageFolder^>^ folders)
-> {        
->     *outputString += L"Folders:\n";
+>    // outputString is captured by value, which creates a copy 
+>    // of the shared_ptr and increments its reference count.
+>    .then ([outputString] (IVectorView\<StorageFile^>^ files)
+>    {        
+>        for ( unsigned int i = 0 ; i < files->Size; i++)
+>        {
+>            *outputString += files->GetAt(i)->Name->Data();
+>            *outputString += L"\n";
+>       }
+>    })
+>    // We need to explicitly state the return type 
+>    // here: -> IAsyncOperation<...>
+>    .then([picturesFolder]() -> IAsyncOperation\<IVectorView\<StorageFolder^>^>^ 
+>    {
+>        return picturesFolder->GetFoldersAsync();
+>    })
+>    // Capture "this" to access m_OutputTextBlock from within the lambda.
+>    .then([this, outputString](IVectorView\<StorageFolder^>^ folders)
+>    {        
+>        *outputString += L"Folders:\n";
 > 
->     for ( unsigned int i = 0; i < folders->Size; i++)
->     {
->         *outputString += folders->GetAt(i)->Name->Data();
->         *outputString += L"\n";
->     }
+>        for ( unsigned int i = 0; i < folders->Size; i++)
+>        {
+>           *outputString += folders->GetAt(i)->Name->Data();
+>           *outputString += L"\n";
+>        }
 > 
->     // Assume m_OutputTextBlock is a TextBlock defined in the XAML.
->     m_OutputTextBlock->Text = ref new String((*outputString).c_str());
-> });
+>        // Assume m_OutputTextBlock is a TextBlock defined in the XAML.
+>        m_OutputTextBlock->Text = ref new String((*outputString).c_str());
+>     });
 > ```
 > ```cs
 > StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
@@ -131,7 +132,7 @@ En este ejemplo, se usa primero el método [**StorageFolder.GetFilesAsync**](htt
 > ```
 
 
-> **Nota**  En C# o Visual Basic, recuerda poner la palabra clave **async** en la declaración del método de cualquier método en el que uses el operador **await**.
+> **Nota** En C# o Visual Basic, recuerda poner la palabra clave **async** en la declaración del método de cualquier método en el que uses el operador **await**.
  
 
 Como alternativa, puedes usar el método [**GetItemsAsync**](https://msdn.microsoft.com/library/windows/apps/br227286) para obtener todos los elementos (archivos y subcarpetas) en una ubicación en particular. En el siguiente ejemplo se usa el método **GetItemsAsync** para obtener todos los archivos y subcarpetas en la carpeta raíz de [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) (no en las subcarpetas). Después, en el ejemplo se muestra el nombre de cada archivo y subcarpeta. Si el elemento es una subcarpeta, el ejemplo anexa `"folder"` al nombre.
@@ -203,9 +204,9 @@ Como alternativa, puedes usar el método [**GetItemsAsync**](https://msdn.micros
 > Next item
 > ```
 
-## Query files in a location and enumerate matching files
+## Consultar archivos en una ubicación y enumerar archivos coincidentes
 
-In this example we query for all the files in the [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) grouped by the month, and this time the example recurses into subfolders. En primer lugar, se llama a [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) y se pasa el valor [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957) al método. Esto nos da un objeto [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066).
+En este ejemplo, se consultan todos los archivos en [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) agrupados por mes y esta vez el ejemplo recorre las subcarpetas. En primer lugar, se llama a [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) y se pasa el valor [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957) al método. Esto nos da un objeto [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066).
 
 Después, llamamos a [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br208074), que devuelve objetos [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representan carpetas virtuales. En este caso, la agrupación se realiza por mes, por lo que cada carpeta virtual representa un grupo de archivos del mismo mes.
 
@@ -306,7 +307,7 @@ Después, llamamos a [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn
 > Next folder
 > ```
 
-The output of the example looks similar to the following.
+El resultado del ejemplo tiene un aspecto similar al siguiente.
 
 ``` syntax
 July ‎2015 (2)
@@ -319,6 +320,6 @@ July ‎2015 (2)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

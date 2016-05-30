@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 69E05E56-B5F0-4D4C-A1FF-B6EAFF5D0E28
 description: Durante el proceso de envío, puedes configurar el comportamiento de la mediación de anuncios que desees ver. Podrás ajustar esto más adelante sin necesidad de realizar cambios en el código ni enviar paquetes nuevos.
 title: Enviar la aplicación y configurar la mediación de anuncios
@@ -24,7 +25,8 @@ En los siguientes pasos se describe cómo crear una configuración de línea bas
 1.  En **Configurar mediación para**, asegúrate de que el paquete de la aplicación que deseas configurar está seleccionado.
 2.  En **Destino**, asegúrate de que **Línea base** está seleccionado.
 3.  En **Frecuencia de actualización**, establece la frecuencia de actualización para determinar la duración del ciclo de mediación (frecuencia de presentación de los anuncios). La duración debe ser entre 30 y 120 segundos.
-    **Nota** Si ya configuraste una frecuencia de actualización en cualquiera de los portales de redes de anuncios, procura establecer la misma frecuencia de actualización aquí.
+  > **Nota** Si ya configuraste una frecuencia de actualización en cualquiera de los portales de redes de anuncios, procura establecer la misma frecuencia de actualización aquí.
+
 4.  A continuación, en la sección **Mediación de anuncios de Windows** se enumeran todas las redes de anuncios usadas por la aplicación y se proporcionan dos maneras diferentes de especificar la frecuencia en que la aplicación debe usar cada red de anuncios. Elige una de estas opciones en la lista desplegable **Tipo de mediación**:
 
     -   **Orden por peso**. Elige esta opción para aplicar valores de porcentaje a cada red de anuncios que especifiquen la frecuencia con que la aplicación los debe usar. La suma total de los porcentajes que definas para todas las redes de anuncios debe ser del 100 % exactamente. Para obtener más información, consulta [Ordenar redes de anuncios por peso](#order-ad-networks-by-weight).
@@ -98,7 +100,7 @@ Cuando envías una actualización de aplicación, se aplica automáticamente la 
 
 Si no se cumple alguna de estas condiciones, deberás volver a crear la configuración de línea base y cualquier otra configuración objetivo específica del mercado de la aplicación.
 
-**Nota** El Id. de un **AdMediatorControl** se genera cuando arrastras el control a una superficie de diseño de la aplicación. Este identificador no cambiará a menos que elimines el control y los reemplace arrastrando un nuevo control a la misma superficie de diseño.
+> **Nota** El Id. de un objeto **AdMediatorControl** se genera cuando arrastras el control a una superficie de diseño de la aplicación. Este identificador no cambiará a menos que elimines el control y los reemplace arrastrando un nuevo control a la misma superficie de diseño.
 
  
 
@@ -162,6 +164,6 @@ Quieres usar Microsoft Advertising e Inneractive por igual, de modo que haya una
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

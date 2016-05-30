@@ -1,16 +1,13 @@
 ---
-Description: Puedes ayudar a tus usuarios a ser más productivos si les permites ver varias partes independientes de la aplicación en ventanas distintas.
+author: Jwmsft
+Description: Ayuda a tus usuarios a ser más productivos al permitirles ver varias partes independientes de la aplicación en ventanas distintas.
 title: Mostrar varias vistas de una aplicación
 ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
-label: Mostrar varias vistas de una aplicación
+label: Show multiple views for an app
 template: detail.hbs
 ---
 
 # Mostrar varias vistas de una aplicación
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Puedes ayudar a tus usuarios a ser más productivos si les permites ver varias partes independientes de la aplicación en ventanas distintas. Un ejemplo típico es una aplicación de correo electrónico donde la interfaz de usuario principal muestra la lista de mensajes de correo electrónico y una vista previa del correo electrónico seleccionado. No obstante, los usuarios también pueden abrir mensajes en distintas ventanas y verlas en paralelo.
 
@@ -184,6 +181,6 @@ Cuando uses [**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

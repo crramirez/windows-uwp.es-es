@@ -1,6 +1,7 @@
 ---
+author: mcleblanc
 title: Iniciar la aplicación de la Tienda Windows
-description: En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema de URI para iniciar la aplicación de la Tienda Windows en páginas específicas en la tienda.
+description: En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema de URI para iniciar la aplicación de la Tienda Windows en páginas específicas en la Tienda.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 ---
 
@@ -26,11 +27,11 @@ En este tema se describe el esquema de URI **ms-windows-store:**. La aplicación
 </td>
 </tr>
 <tr>
-<td rowspan="4">Inicia la página de detalles del producto (PDP) de un producto. <p>Se recomienda el id. del producto para los clientes en Windows 10, aunque las formas anteriores de hacerlo (como PFN) siguen funcionando.</p>
+<td rowspan="4">Inicia la página de detalles del producto (PDP) de un producto. <p>El Id. de la Tienda se recomienda para los clientes de Windows 10 y funcionará en todas las versiones del sistema operativo, pero aún se admiten las formas anteriores de hacerlo anteriores (por ejemplo, PFN).</p>
 <p>Estos valores se pueden encontrar en el panel del Centro de desarrollo de Windows en la página <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">Identidad de la aplicación</a> en la sección de administración de cada aplicación.</p>
 </td>
 <td>
-Id. del producto <p>(recomendado)</p>
+Id. de la Tienda <p>(recomendado)</p>
 </td>
 <td>
 <p>ms-windows-store://pdp/?ProductId=9WZDNCRFHVJL</p>
@@ -38,7 +39,7 @@ Id. del producto <p>(recomendado)</p>
 </tr>
 <tr>
 <td>Nombre de familia de paquete (PFN)</td>
-<td>ms-windows-store://pdp/?PFN= Microsoft.Office.OneNote_8wekyb3d8bbwe 
+<td>ms-windows-store://pdp/?PFN= Microsoft.Office.OneNote_8wekyb3d8bbwe
 </td>
 </tr>
 <tr>
@@ -47,17 +48,17 @@ Id. del producto <p>(recomendado)</p>
 </tr>
 <tr>
 <td>Id. de producto (Windows 8.x)</td>
-<td>ms-windows-store://pdp/?AppId=f022389f-f3a6-417e-ad23-704fbdf57117 
+<td>ms-windows-store://pdp/?AppId=f022389f-f3a6-417e-ad23-704fbdf57117
 </td>
 </tr>
 <tr>
 <td rowspan="4">Inicia la escritura de una experiencia de revisión de un producto.</td>
-<td>Id. del producto <p>(recomendado)</p></td>
+<td>Id. de la Tienda <p>(recomendado)</p></td>
 <td>ms-windows-store://review/?ProductId=9WZDNCRFHVJL </td>
 </tr>
 <tr>
 <td>Nombre de familia de paquete (PFN)</td>
-<td>ms-windows-store://review/?PFN= Microsoft.Office.OneNote_8wekyb3d8bbwe 
+<td>ms-windows-store://review/?PFN= Microsoft.Office.OneNote_8wekyb3d8bbwe
 </td>
 </tr>
 <tr>
@@ -71,7 +72,7 @@ Id. del producto <p>(recomendado)</p>
 <tr>
 <td>Inicia una búsqueda de productos asociados a una extensión de archivo. </td>
 <td />
-<td>ms-windows-store://assoc/?FileExt=pdf 
+<td>ms-windows-store://assoc/?FileExt=pdf
 </td>
 </tr>
 <tr>
@@ -107,7 +108,7 @@ Inicia una búsqueda de la consulta especificada. Se permiten los espacios en la
 <td>Inicia una búsqueda de productos del publicador especificado. Se permiten los espacios en el nombre. 
 </td>
 <td />
-<td>ms-windows-store://publisher/?name=Microsoft Corporation 
+<td>ms-windows-store://publisher/?name=Microsoft Corporation
 </td>
 </tr>
 <tr><td>Inicia las páginas de descargas y actualizaciones.</td>
@@ -129,6 +130,6 @@ Inicia una búsqueda de la consulta especificada. Se permiten los espacios en la
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

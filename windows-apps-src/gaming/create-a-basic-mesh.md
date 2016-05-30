@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Crear y mostrar una malla básica
 description: En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies.
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
@@ -11,7 +12,7 @@ ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
 
 En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies. Las listas de vértices que comprimen la estructura de estos objetos poligonales y superficies se denominan mallas. A continuación crearemos una malla básica para un objeto de cubo y haremos que se represente y muestre a través de la canalización de sombreador.
 
-> **Importante**   El código de ejemplo incluido aquí usa tipos (como DirectX::XMFLOAT3 y DirectX::XMFLOAT4X4) y métodos insertados declarados en DirectXMath.h. Si vas a cortar y pegar este código, incluye \#include &lt;DirectXMath.h&gt; en el proyecto.
+> **Importante**   El código de ejemplo incluido aquí usa tipos (como DirectX::XMFLOAT3 y DirectX::XMFLOAT4X4) y métodos insertados declarados en DirectXMath.h. Si vas a cortar y pegar este código, usa \#include &lt;DirectXMath.h&gt; en el proyecto.
 
  
 
@@ -83,7 +84,7 @@ m_d3dDevice->CreateInputLayout(
 
 En este código, especificas un diseño para los vértices, o sea qué datos contiene cada elemento de la lista de vértices. Aquí, en **basicVertexLayoutDesc**, especificas dos componentes de datos:
 
--   **POSICIÓN**: semántica HLSL para los datos de posición proporcionados a un sombreador. En este código, es un valor DirectX::XMFLOAT3 o, más específicamente, una estructura con 3 valores de punto flotante de 32 bits que corresponden a una coordenada 3D (x, y, z). También podrías usar un valor float4, si estás dando la coordenada homogénea "w". En ese caso, especificas DXGI\_FORMAT\_R32G32B32A32\_FLOAT. Usar un valor DirectX::XMFLOAT3 o un valor float4 depende de las necesidades específicas del juego. Tan solo asegúrate de que los datos de vértices para la malla sean los que corresponden al formato que usas.
+-   **POSITION**: semántica HLSL para los datos de posición proporcionados a un sombreador. En este código, es un valor DirectX::XMFLOAT3 o, más específicamente, una estructura con 3 valores de punto flotante de 32 bits que corresponden a una coordenada 3D (x, y, z). También podrías usar un valor float4, si estás dando la coordenada homogénea "w". En ese caso, especificas DXGI\_FORMAT\_R32G32B32A32\_FLOAT. Usar un valor DirectX::XMFLOAT3 o un valor float4 depende de las necesidades específicas del juego. Tan solo asegúrate de que los datos de vértices para la malla sean los que corresponden al formato que usas.
 
     Cada valor de coordenada se expresa como un valor de punto flotante entre -1 y 1, en el espacio de coordenadas del objeto. Cuando el sombreador de vértices se completa, el vértice transformado se encuentra en el espacio de proyección de vista homogénea (perspectiva corregida).
 
@@ -240,7 +241,7 @@ m_constantBufferData.view = DirectX::XMFLOAT4X4(
              0.00000000f, 0.00000000f,  0.00000000f,  1.00000000f);
 ```
 
-> **Nota**  Normalmente declaras la matriz de proyección cuando configuras recursos específicos del dispositivo, porque los resultados de la multiplicación deben coincidir con los parámetros de tamaño de la ventanilla 2D (que a menudo corresponde con el alto y ancho del píxel en pantalla). Si cambian, debes aumentar los valores de la coordenada x y la coordenada y, en consecuencia.
+> **Nota**  Normalmente, se declara la matriz de proyección al configurar recursos específicos del dispositivo, porque los resultados de la multiplicación deben coincidir con los parámetros de tamaño de la ventanilla 2D (que a menudo corresponde con el alto y ancho del píxel en pantalla). Si cambian, debes aumentar los valores de la coordenada x y la coordenada y, en consecuencia.
 
  
 
@@ -444,6 +445,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

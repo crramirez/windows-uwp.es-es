@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Muestra una a una las imágenes de una colección, como las fotos de un álbum o los elementos de una página de detalles de un producto.
 title: Directrices para controles de vista invertida
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
@@ -101,7 +102,8 @@ En este ejemplo, ItemsSource está enlazado a una clase [**CollectionViewSource*
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->**Nota**&nbsp;&nbsp;Puedes rellenar una vista invertida agregando elementos a su colección Items o estableciendo su propiedad ItemsSource, pero recuerda que no puedes usar ambos métodos al mismo tiempo. Si estableces la propiedad ItemsSource y agregas un elemento en XAML, el elemento agregado se omite. Si estableciste la propiedad ItemsSource y decides agregar un elemento a la colección Items en código, se inicia una excepción.
+>**Nota**
+            &nbsp;&nbsp;Puedes rellenar una vista invertida agregando elementos a su colección Items o estableciendo su propiedad ItemsSource, pero recuerda que no puedes usar ambos métodos al mismo tiempo. Si estableces la propiedad ItemsSource y agregas un elemento en XAML, el elemento agregado se omite. Si estableciste la propiedad ItemsSource y decides agregar un elemento a la colección Items en código, se inicia una excepción.
 
 ### Especificar el aspecto de los elementos
 
@@ -201,11 +203,11 @@ En el caso de colecciones más grandes (de 10 a 25 elementos), considera la posi
 
 ## Artículos relacionados
 
-[Directrices sobre listas](https://msdn.microsoft.com/library/windows/apps/mt186889)
+- [Directrices sobre listas](https://msdn.microsoft.com/library/windows/apps/mt186889)
 - [**Clase FlipView (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242678)
 - [**Clase CarouselPanel (XAML)**](https://msdn.microsoft.com/library/windows/apps/hh967950)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

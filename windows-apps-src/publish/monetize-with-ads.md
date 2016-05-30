@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Si la aplicación usa la mediación de anuncios o muestra banners o anuncios intersticiales en vídeo de Microsoft Advertising, usa la página Rentabilidad &gt; Rentabilizar con anuncios para administrar el uso que haces de los anuncios.
 title: Rentabilizar con anuncios
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
@@ -7,7 +8,7 @@ ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 # Rentabilizar con anuncios
 
 
-Si la aplicación usa un control **AdMediatorControl**, **AdControl**, o **InterstitialAd** para mostrar banners o anuncios intersticiales en vídeo, usa la página **Rentabilidad** &gt; **Rentabilizar con anuncios** para administrar el uso de anuncios.
+Si la aplicación usa un control **AdMediatorControl**, **AdControl**, o **InterstitialAd** para mostrar banners o anuncios intersticiales en vídeo, usa la página **Rentabilidad**&gt;**Rentabilizar con anuncios** para administrar el uso de anuncios.
 
 ## Mediación de anuncios de Windows
 
@@ -55,7 +56,7 @@ Las unidades de anuncio aparecen en una tabla en la parte inferior de esta secci
 -   Si la aplicación muestra pancartas, asigna estos valores a las propiedades [ApplicationId](https://msdn.microsoft.com/library/mt313174.aspx) y [AdUnitId](https://msdn.microsoft.com/library/mt313171.aspx) del objeto [AdControl](https://msdn.microsoft.com/library/mt313154.aspx).
 -   Si la aplicación muestra anuncios intersticiales en vídeos, pasa estos valores para el método [RequestAd](https://msdn.microsoft.com/library/mt313192.aspx) del objeto [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx).
 
-> **Nota**  Si la aplicación usa la mediación de anuncios para mostrar anuncios en banners de Microsoft Advertising (es decir, usa un objeto **AdMediatorControl** ), no tienes que solicitar unidades de anuncios. En este escenario, las unidades de anuncios de Microsoft Advertising se generan automáticamente.
+> **Nota**  Si la aplicación usa la mediación de anuncios para mostrar anuncios en banners de Microsoft Advertising (es decir, usa un objeto **AdMediatorControl**), no tienes que solicitar unidades de anuncios. En este escenario, las unidades de anuncios de Microsoft Advertising se generan automáticamente.
 
  
 
@@ -64,6 +65,6 @@ Las unidades de anuncio aparecen en una tabla en la parte inferior de esta secci
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 5E722AFF-539D-456E-8C4A-ADE90CF7674A
 description: Si tu aplicación ofrece un catálogo de productos de gran tamaño en la aplicación, también puedes seguir el proceso descrito en este tema para ayudar a administrar el catálogo.
 title: Administrar un catálogo extenso de productos desde la aplicación
@@ -20,7 +21,7 @@ La Tienda usará únicamente el *offerId* de la solicitud de compra en el [**Pur
 ## Requisitos previos
 
 -   En este tema se aborda el soporte técnico de la Tienda para la representación de varias ofertas desde la aplicación usando un solo producto desde la aplicación incluido en la Tienda. Si no estás familiarizado con las compras desde la aplicación, consulta [Habilitar compras de productos desde la aplicación](enable-in-app-product-purchases.md) para ver información sobre la licencia y cómo incluir de la forma adecuada tu compra desde la aplicación en la Tienda.
--   Cuando codificas y pruebas nuevas ofertas desde la aplicación por primera vez, debes usar el objeto [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) en lugar del objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765). De esta manera, puedes comprobar la lógica de la licencia con llamadas simuladas al servidor de licencias, en lugar de llamar al servidor activo. Para ello, debes personalizar el archivo llamado "WindowsStoreProxy.xml" en %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. El simulador de Microsoft Visual Studio crea este archivo la primera vez que ejecutas la aplicación, aunque también puedes cargar un archivo personalizado en tiempo de ejecución. Para obtener más información, consulta **CurrentAppSimulator**.
+-   Cuando codificas y pruebas nuevas ofertas desde la aplicación por primera vez, debes usar el objeto [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) en lugar del objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765). De esta manera, puedes comprobar la lógica de la licencia con llamadas simuladas al servidor de licencias, en lugar de llamar al servidor activo. Para ello, debes personalizar el archivo llamado "WindowsStoreProxy.xml" in %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. El simulador de Microsoft Visual Studio crea este archivo la primera vez que ejecutas la aplicación, aunque también puedes cargar un archivo personalizado en tiempo de ejecución. Para obtener más información, consulta **CurrentAppSimulator**.
 -   Este tema también hace referencia a los ejemplos de código que se proporcionan en la [muestra de la Tienda](http://go.microsoft.com/fwlink/p/?LinkID=627610). Esta muestra es ideal para conseguir experiencia práctica con las diferentes opciones de monetización que se proporcionan para las aplicaciones para la Plataforma universal de Windows (UWP).
 
 ## Realizar la solicitud de compra del producto desde la aplicación
@@ -112,6 +113,6 @@ switch (result)
 * [**ProductPurchaseDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/dn263384)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: E0B9532F-1195-4927-99BE-F41565D891AD
 title: Enumerar dispositivos a través de una red
 description: Además de la detección de dispositivos conectados localmente, puedes usar las API Windows.Devices.Enumeration para enumerar dispositivos a través de protocolos de red e inalámbricos.
@@ -35,8 +36,8 @@ Cuando crees tu selector, te recomendamos que limites el ámbito de la enumeraci
 | Windows connect now (WNC)                    | **{4c1b1ef8-2f62-4b9f-9bc5-b21ab636138f}** |
 | Bases WiGig                                  | **{a277f3a5-8764-4f88-8045-4c5e962640b1}** |
 | Aprovisionamiento Wi-Fi para impresoras HP           | **{c85ef710-f344-4792-bb6d-85a4346f1e69}** |
-| Bluetooth                                    | Actualmente no disponible                     |
-| Bluetooth LE                                 | Actualmente no disponible                     |
+| Bluetooth                                    | **{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}** |
+| Bluetooth LE                                 | **{bb7bb05e-5972-42b5-94fc-76eaa7084d49}** |
 
  
 
@@ -78,6 +79,6 @@ System.Devices.AepContainer.ProtocolIds:~~"{0e261de4-12f0-46e6-91ba-428607ccef64
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

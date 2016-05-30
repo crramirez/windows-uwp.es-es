@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Aquí encontrarás información importante que necesitarás para asegurarte de que recibes tanto los pagos de tus aplicaciones y productos desde la aplicación (IAP), como las ganancias de Microsoft Advertising.
 title: Recibir pagos
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
@@ -7,7 +8,7 @@ ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
 # Recibir pagos
 Aquí encontrarás información importante que necesitarás para asegurarte de que recibes tanto los pagos de tus aplicaciones y productos desde la aplicación (IAP), como las ganancias de Microsoft Advertising.
 
-> **Importante** Antes de que recibas dinero por las ventas de aplicaciones en la Tienda Windows, debes [configurar tu cuenta de pago y rellenar los formularios fiscales necesarios](setting-up-your-payout-account-and-tax-forms.md).
+> **Importante**  Antes de que recibas dinero por las ventas de aplicaciones en la Tienda Windows, debes [configurar tu cuenta de pago y rellenar los formularios fiscales necesarios](setting-up-your-payout-account-and-tax-forms.md).
 
 ## Comisión de la Tienda
 
@@ -21,7 +22,7 @@ La comisión de la Tienda Windows se aplica a todas las ventas de aplicaciones r
 
 La franja de precios establece el precio de venta en todos los países donde eliges distribuir tu aplicación. Puedes ofrecer tu aplicación de forma gratuita o elegir un precio que los clientes deben pagar para adquirir tu aplicación. Las franjas de precios empiezan por 0,99 USD, con incrementos adicionales (1,29 USD, 1,49 USD, 1,99 USD, etc.). Estos incrementos entre franjas de precios aumentan a medida que el precio sube.
 
-> **Nota** Estas franjas de precios también se aplican a cualquier IAP que ofrezcas desde la aplicación.
+> **Nota**  Estas franjas de precios también se aplican a cualquier IAP que ofrezcas desde la aplicación.
 
 Cada franja de precios tiene un valor correspondiente en cada una de las más de 60 monedas ofrecidas por la Tienda. Usamos estos valores para ayudarte a vender tus aplicaciones a un punto de precio comparable mundial. No obstante, debido a cambios en las tasas de cambio extranjeras, el importe de ventas exacto puede variar levemente de una moneda a otra.
 
@@ -55,6 +56,6 @@ Una vez hayas establecido el estado de suspensión de pago en **Activado**, todo
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -42,8 +42,6 @@ Para establecer los formatos de datos:
 
 Cuando un usuario selecciona tu aplicación (por lo general, la selecciona desde la lista de aplicaciones de destino disponibles en la interfaz de usuario de recursos compartidos), se activa un evento [**Application.OnShareTargetActivated**][OnShareTargetActivated]. Tu aplicación debe controlar este evento para procesar los datos que el usuario quiere compartir.
 
-Toma en cuenta que si tu aplicación se ejecuta cuando se activa como destino compartido, la instancia existente de dicha aplicación finaliza y se inicia una nueva instancia de tu aplicación para controlar el contrato.
-
 <!-- For some reason, the snippets in this file are all inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
 protected override async void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
@@ -61,8 +59,8 @@ if (shareOperation.Data.Contains(StandardDataFormats.Text))
     string text = await shareOperation.Data.GetTextAsync();
 
     // To output the text from this example, you need a TextBlock control
-    // with a name of &quot;sharedContent&quot;.
-    sharedContent.Text = &quot;Text: &quot; + text;
+    // with a name of "sharedContent".
+    sharedContent.Text = "Text: " + text;
 } 
 ```
 
@@ -85,7 +83,7 @@ shareOperation.ReportSubmittedBackgroundTask();
 En caso de que algo falle, llama a [**ReportError**][ReportError] para enviar un mensaje de error al sistema. El usuario verá el mensaje al comprobar el estado del recurso compartido. En ese momento, se cierra la aplicación y finaliza el recurso compartido. El usuario tendrá que iniciar de nuevo para compartir el contenido de la aplicación. Según el escenario, es posible que decidas que un error en particular no es lo suficientemente grave como para terminar la operación de compartir. En ese caso, puedes optar por no llamar a **ReportError** y continuar con la acción de compartir.
 
 ```cs
-shareOperation.ReportError(&quot;Could not reach the server! Try again later.&quot;); 
+shareOperation.ReportError("Could not reach the server! Try again later."); 
 ```
 
 Por último, una vez que tu aplicación haya procesado correctamente el contenido compartido, debes llamar a [**ReportCompleted**][ReportCompleted] para informar al sistema.
@@ -114,13 +112,13 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 
         // For quicklinks, the supported FileTypes and DataFormats are set 
         // independently from the manifest
-        SupportedFileTypes = { &quot;*&quot; },
+        SupportedFileTypes = { "*" },
         SupportedDataFormats = { StandardDataFormats.Text, StandardDataFormats.Uri, 
                 StandardDataFormats.Bitmap, StandardDataFormats.StorageItems }
     };
 
     StorageFile iconFile = await Windows.ApplicationModel.Package.Current.InstalledLocation.CreateFileAsync(
-            &quot;assets\\user.png&quot;, CreationCollisionOption.OpenIfExists);
+            "assets\\user.png", CreationCollisionOption.OpenIfExists);
     quickLinkInfo.Thumbnail = RandomAccessStreamReference.CreateFromFile(iconFile);
     shareOperation.ReportCompleted(quickLinkInfo);
 }
@@ -142,6 +140,6 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

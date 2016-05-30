@@ -1,11 +1,6 @@
 ---
-ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
-title: Habilitar el dispositivo para el desarrollo
-description: Existe un enfoque diferente para el desarrollo en dispositivos de Windows 10.
-keywords: Introducción
-keywords: Licencia de desarrollador
-keywords: Visual Studio, licencia de desarrollador
-keywords: habilitar dispositivo
+author: martinekuan ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD title: Habilitar el dispositivo para el desarrollo description: Existe un enfoque diferente para el desarrollo en dispositivos de Windows 10.
+keywords: Introducción keywords: Licencia de desarrollador keywords: Visual Studio, licencia de desarrollador keywords: habilitar dispositivo
 ---
 # Habilitar el dispositivo para el desarrollo
 
@@ -30,7 +25,7 @@ Para Windows 10, elige las funciones de desarrollador que quieras habilitar en e
 -   Una vez instalada la *instalación de prueba*, esta ejecuta o prueba una aplicación que la Tienda Windows no ha certificado. Por ejemplo, una aplicación interna de tu empresa solamente.
 -   El *Modo de desarrollador* te permite realizar la instalación de prueba de aplicaciones y también ejecutar aplicaciones desde Visual Studio en modo de depuración.
 
-**Nota** Aunque realices la instalación de prueba de aplicaciones, solo debes instalarlas desde orígenes de confianza. Cuando realizas la instalación de prueba de una aplicación que la Tienda Windows no ha certificado, admites que has obtenido todos los derechos necesarios para este fin y que eres el único responsable de los perjuicios que la instalación y la ejecución de esta aplicación puedan causar. Consulta la sección Windows &gt; Tienda Windows de esta [declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=521839).
+**Nota**  Aunque realices la instalación de prueba de aplicaciones, solo debes instalarlas desde orígenes de confianza. Cuando realizas la instalación de prueba de una aplicación que la Tienda Windows no ha certificado, admites que has obtenido todos los derechos necesarios para este fin y que eres el único responsable de los perjuicios que la instalación y la ejecución de esta aplicación puedan causar. Consulta la sección Windows &gt; Tienda Windows de esta [declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=521839).
 
 **Usar las funciones para desarrollador**
 
@@ -177,6 +172,6 @@ Error : DEP0700 : Error en el registro de la operación.
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

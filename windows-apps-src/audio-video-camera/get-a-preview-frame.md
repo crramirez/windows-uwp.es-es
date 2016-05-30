@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
 description: En este tema se muestra cómo obtener un marco de vista previa de la secuencia de vista previa de captura multimedia.
 title: Obtener un marco de vista previa
@@ -58,6 +59,6 @@ Cuando hayas terminado con el marco de vista previa, asegúrate de llamar a su m
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

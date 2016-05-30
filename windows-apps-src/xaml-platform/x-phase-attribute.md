@@ -1,12 +1,13 @@
 ---
+author: jwmsft
 title: Atributo xPhase
 description: Usa xPhase con la extensión de marcado xBind para representar los elementos ListView y GridView de forma incremental y mejorar la experiencia de movimiento panorámica.
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
 ---
 
-# atributo x:Phase
+# Atributo x:Phase
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Usa **x:Phase** con la [extensión de marcado {x:Bind}](x-bind-markup-extension.md) para representar los elementos [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) de forma incremental y mejorar la experiencia de movimiento panorámica. **x:Phase** proporciona una manera declarativa de lograr el mismo efecto que si se usase el evento [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) para controlar manualmente la representación de los elementos de lista. Consulta también [Actualizar los elementos ListView and GridView de forma incremental](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
 
@@ -32,7 +33,7 @@ El escalonamiento habilita la representación incremental de la plantilla de dat
 
 ## Ejemplo
 
-```xaml
+```xml
 <DataTemplate x:Key="PhasedFileTemplate" x:DataType="model:FileItem">
     <Grid Width="200" Height="80">
         <Grid.ColumnDefinitions>
@@ -75,6 +76,6 @@ El escalonamiento solo se aplica cuando la plantilla de elementos se representa 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

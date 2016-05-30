@@ -1,6 +1,7 @@
 ---
+author: TylerMSFT
 ms.assetid: 23FE28F1-89C5-4A17-A732-A722648F9C5E
-title: Programación asincrónica en C++
+title: Programación asincrónica
 description: En este tema se describe la programación asincrónica en la Plataforma universal de Windows (UWP) y su representación en C#, Microsoft Visual Basic .NET, las extensiones de componentes de Visual C\+\+ (C\+\+/CX) y JavaScript.
 ---
 # Programación asincrónica
@@ -75,6 +76,6 @@ En muchos casos, llamar a una función asincrónica es casi tan sencillo como ll
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

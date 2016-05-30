@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: El reproductor multimedia tiene controles de transporte en XAML personalizados para administrar el control de contenido de audio y vídeo
 title: Crear controles de transporte personalizados
 ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
-label: Crear controles de transporte de multimedia personalizados
+label: Create custom media transport controls
 template: detail.hbs
 ---
 # Crear controles de transporte personalizados
@@ -11,7 +12,8 @@ MediaElement tiene controles de transporte en XAML personalizados para administr
 
 Antes de empezar, debes estar familiarizado con las clases MediaElement y MediaTransportControls. Para obtener más información, consulta la guía de control de MediaElement. 
 
-> **Tip**&nbsp;&nbsp;Los ejemplos de este tema se basan en la [muestra de controles de transporte de contenido multimedia](http://go.microsoft.com/fwlink/p/?LinkId=620023). Puedes descargar la muestra para ver y ejecutar el código completo.
+> **Sugerencia**
+            &nbsp;&nbsp;Los ejemplos de este tema se basan en la [muestra de controles de transporte de contenido multimedia](http://go.microsoft.com/fwlink/p/?LinkId=620023). Puedes descargar la muestra para ver y ejecutar el código completo.
 
 <span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
 
@@ -31,7 +33,8 @@ Sin embargo, puede haber escenarios donde tendrás que personalizar aún más pe
 
 Puedes personalizar el aspecto del control al modificar la plantilla predeterminada. Para modificar el comportamiento del control o agregar comandos nuevos, puedes crear un control personalizado derivado de MediaTransportControls.
 
->**Tip**&nbsp;&nbsp;Las plantillas de control personalizables son una característica eficaz de la plataforma XAML, pero también hay consecuencias que deberías tener en cuenta. Al personalizar una plantilla, esta se convierte en un elemento estático de la aplicación y, por tanto, no recibirá ninguna actualización de plataforma que Microsoft realice en la plantilla. Si Microsoft realiza alguna actualización de la plantilla, se debería tomar la nueva plantilla y volver a modificarla para obtener las ventajas de la plantilla actualizada.
+>**Sugerencia**
+            &nbsp;&nbsp;Las plantillas de control personalizables son una característica eficaz de la plataforma XAML, pero también hay consecuencias que deberías tener en cuenta. Al personalizar una plantilla, esta se convierte en un elemento estático de la aplicación y, por tanto, no recibirá ninguna actualización de plataforma que Microsoft realice en la plantilla. Si Microsoft realiza alguna actualización de la plantilla, se debería tomar la nueva plantilla y volver a modificarla para obtener las ventajas de la plantilla actualizada.
 
 ## Estructura de la plantilla
 
@@ -41,11 +44,16 @@ Puedes personalizar el aspecto del control al modificar la plantilla predetermin
 - La segunda define los diversos estados visuales que usa MediaTransportControls.
 - En la tercera sección se incluye [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), que contiene los distintos elementos MediaTransportControls juntos y define la distribución de los componentes.
 
-> **Nota**&nbsp;&nbsp;Para obtener más información sobre cómo modificar las plantillas de control, consulta [Plantillas de control](). Puedes usar un editor de texto o un editor similar en el IDE para abrir los archivos XAML en \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic. El estilo predeterminado y la plantilla para cada control se definen en el archivo **generic.xaml**. Puedes encontrar la plantilla MediaTransportControls en generic.xaml si buscas "MediaTransportControls".
+> **Nota**
+            &nbsp;&nbsp;Para más información sobre cómo modificar las plantillas de control, consulta [Plantillas de control](). Puedes usar un editor de texto o un editor similar en el IDE para abrir los archivos XAML en \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic. El estilo predeterminado y la plantilla para cada control se definen en el archivo **generic.xaml**. Puedes encontrar la plantilla MediaTransportControls en generic.xaml si buscas "MediaTransportControls".
 
 En las siguientes secciones se muestra cómo personalizar muchos de los elementos principales de los controles de transporte: 
-- [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): permite que un usuario arrastre a través de sus elementos multimedia y también muestra el progreso
-- [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx): contiene todos los botones.
+- [
+              **Slider**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): permite que un usuario arrastre a través de sus elementos multimedia y también muestra el progreso
+- [
+              **CommandBar**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx): contiene todos los botones.
 Para obtener más información, consulta la sección de anatomía del tema de referencia MediaTransportControls. 
 
 ## Personalizar los controles de transporte
@@ -167,7 +175,8 @@ Dado que el menú de desbordamiento se compone de botones de texto, tienes que a
 </CommandBar.SecondaryCommands>
 ```
 
-> **Importante**&nbsp;&nbsp;Aún puedes hacer que el botón sea visible y se pueda habilitar para poder usarlo en el menú de desbordamiento. En este ejemplo, el elemento PlaybackRateButton no está visible en el menú de desbordamiento, a menos que la propiedad IsPlaybackRateButtonVisible sea true. No se habilita, a menos que la propiedad IsPlaybackRateEnabled sea true. El establecimiento de estas propiedades se muestra en la sección anterior.
+> **Importante**
+            &nbsp;&nbsp;Aún puedes hacer que el botón sea visible y se pueda habilitar para poder usarlo en el menú de desbordamiento. En este ejemplo, el elemento PlaybackRateButton no está visible en el menú de desbordamiento, a menos que la propiedad IsPlaybackRateButtonVisible sea true. No se habilita, a menos que la propiedad IsPlaybackRateEnabled sea true. El establecimiento de estas propiedades se muestra en la sección anterior.
 
 ### Agregar un botón personalizado
 
@@ -255,13 +264,13 @@ private void MediaElement_MediaOpened(object sender, RoutedEventArgs e)
 }
 ```
 
-\[Este artículo contiene información específica de las aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
 ## Artículos relacionados
 
 - [Reproducción multimedia](media-playback.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

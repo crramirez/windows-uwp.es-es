@@ -1,5 +1,6 @@
 ---
-title: Elementos gráficos 2D básicos para juegos DirectX
+author: mtoepke
+title: Elementos gráficos 2D para juegos DirectX
 description: Se analiza el uso de efectos y elementos gráficos de mapas de bits 2D y cómo usarlos en un juego.
 ms.assetid: ad69e680-d709-83d7-4a4c-7bbfe0766bc7
 ---
@@ -52,7 +53,7 @@ Unas buenas ilustraciones serán tu activo más importante cuando se trate de ef
 -   [Inicio rápido de Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd535473)
 -   [Introducción a la interoperabilidad de Direct2D y Direct3D](https://msdn.microsoft.com/library/windows/desktop/dd370966)
 
-> **Note**  
+> **Nota**  
 Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
@@ -66,6 +67,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

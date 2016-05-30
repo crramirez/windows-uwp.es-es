@@ -1,11 +1,12 @@
 ---
+author: TylerMSFT
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: Acceso a contenido de Grupo Hogar
 description: Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye imágenes, música y vídeos.
 ---
 # Acceso a contenido de Grupo Hogar
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** API importantes **
@@ -24,7 +25,7 @@ Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye im�
 
     Para acceder al contenido del Grupo Hogar, el equipo del usuario debe tener un Grupo Hogar configurado y la aplicación debe contar con al menos una de las siguientes funcionalidades: **picturesLibrary**, **musicLibrary** o **videosLibrary**. Cuando la aplicación obtiene acceso a la carpeta Grupo Hogar, podrá ver solamente las bibliotecas que corresponden a las funcionalidades declaradas en el manifiesto de la aplicación. Para más información, consulta [Permisos de acceso de archivos](file-access-permissions.md).
 
-    **Nota**  El contenido de la biblioteca de documentos de un Grupo Hogar no está visible para la aplicación independientemente de las funcionalidades declaradas en el manifiesto de la aplicación y de la configuración de uso compartido del usuario.
+    **Nota** El contenido de la biblioteca de documentos de un Grupo Hogar no está visible para la aplicación independientemente de las funcionalidades declaradas en el manifiesto de la aplicación y de la configuración de uso compartido del usuario.
 
      
 
@@ -186,7 +187,10 @@ Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **Abre la selección de archivos del usuario para obtener acceso de lectura y establece la secuencia de archivos como origen de** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) y luego reproduce el archivo.
+3.  **Abre la selección de archivos del usuario para obtener acceso de lectura y establece la secuencia de archivos como origen de**
+            [
+              **MediaElement**
+            ](https://msdn.microsoft.com/library/windows/apps/br242926) y luego reproduce el archivo.
     ```csharp
     if (file != null)
     {
@@ -210,6 +214,6 @@ Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

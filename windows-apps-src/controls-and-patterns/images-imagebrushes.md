@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Aprende a integrar imágenes en la aplicación, así como a usar las API de las dos clases principales de XAML, Image e ImageBrush.
 title: Imágenes y pinceles de imagen
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
-label: Imágenes y pinceles de imagen
+label: Images and image brushes
 template: detail.hbs
 ---
 # Imágenes y pinceles de imagen
@@ -64,7 +65,7 @@ Este es el elemento Ellipse que ha pintado ImageBrush.
 Si no se establecen los valores [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx) o [**Height**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) de un elemento **Image**, se representa con las dimensiones que especifique la propiedad **Source**. Cuando se establecen los valores **Width** y **Height**, se crea un área rectangular contenedora donde se muestra la imagen. Es posible especificar la forma en que la imagen rellena esta área contenedora mediante el uso de la propiedad [**Stretch**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.stretch.aspx). La propiedad Stretch acepta estos valores, que define la enumeración [**Stretch**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.stretch.aspx):
 
 -   **None**: la imagen no se ajusta para rellenar las dimensiones de salida. Ten cuidado con esta configuración de Stretch; si la imagen de origen es más grande que el área contenedora, la imagen se recortará, lo cual no es deseable, ya que no tendrás control sobre la ventanilla, que sí tendrías con un elemento [**Clip**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.clip.aspx) intencionado.
--   **Uniform**: la imagen se escala para ajustarse a las dimensiones de salida, aunque la relación de aspecto del contenido se mantiene. Este es el valor predeterminado.
+-   **Uniform**: la imagen se escala para ajustarse a las dimensiones de salida. aunque la relación de aspecto del contenido se mantiene. Este es el valor predeterminado.
 -   **UniformToFill**: la imagen se escala para rellenar completamente el área de salida, pero mantiene su relación de aspecto original.
 -   **Fill**: la imagen se escala para ajustarse a las dimensiones de salida. Como el alto y el ancho del contenido se escalan de forma independiente, la relación de aspecto original de la imagen quizás no se mantenga. En otras palabras, la imagen podría distorsionarse para rellenar completamente el área de salida.
 
@@ -136,20 +137,11 @@ Es habitual especificar elementos Image e ImageBrush con XAML en lugar de códig
 
 Si defines un elemento Image o ImageBrush mediante código, usa los constructores predeterminados, establece la propiedad Source relevante ([**Image.Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) o [**ImageBrush.ImageSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)). Las propiedades Source requieren un elemento [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx) (no un URI) cuando se establecen con código. Si el origen es una secuencia, usa el método [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx) para inicializar el valor. Si el origen es un URI, que incluye contenido en la aplicación que usa los esquemas **ms-appx** o **ms-resource**, utiliza el constructor [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx) que toma un URI. También podrías considerar la posibilidad de controlar el evento [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx) si hay problemas de temporización con la recuperación o la descodificación del origen de la imagen, ya que puede que tengas que alternar contenido que se mostrará hasta que el origen de la imagen esté disponible. Para obtener código de ejemplo, consulta [Ejemplo de imágenes XAML](http://go.microsoft.com/fwlink/p/?linkid=238575).
 
-> **Nota:**&nbsp;Si estableces imágenes mediante código, puedes usar el control automático para acceder a recursos sin calificar con calificadores de referencia cultural y de escala actuales, o bien puedes usar [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) y [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) con calificadores de escala y referencia cultural para obtener los recursos directamente. Para más información, consulta [Sistema de administración de recursos](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).
-
-## Recomendaciones
-
-
-\[Este artículo contiene información específica para aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
-
-## Artículos relacionados
-
-**Para diseñadores**
-
-**Para desarrolladores (XAML)**
+> **Nota**
+            &nbsp;&nbsp;Si estableces imágenes mediante código, puedes usar el control automático para acceder a recursos sin calificar con calificadores de referencia cultural y de escala actuales, o bien puedes usar [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) y [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) con calificadores de escala y referencia cultural para obtener los recursos directamente. Para obtener más información, consulta [Sistema de administración de recursos](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).
 
 
-<!--HONumber=Mar16_HO1-->
+
+<!--HONumber=May16_HO2-->
 
 

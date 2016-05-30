@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: EAC34672-5C12-402D-920B-6F2835EA5ACE
 title: Herramientas de creación de perfiles y rendimiento
 description: Microsoft proporciona varias herramientas que te ayudarán a mejorar el rendimiento de tu aplicación para la Plataforma universal de Windows (UWP).
@@ -15,15 +16,15 @@ Consulta también:
 
 |           |             |
 |-----------|-------------|
-| [Analizar el rendimiento de aplicaciones de la Tienda Windows con herramientas de diagnóstico de Visual Studio](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh696636.aspx) | Al mostrar en qué punto invierte el tiempo el código tu aplicación durante la ejecución del programa, los perfiles de Visual Studio pueden ayudarte a encontrar los cuellos de botella de rendimiento en tus aplicaciones, funciones y algoritmos. |
+| [Analizar el rendimiento de aplicaciones de la Tienda Windows con herramientas de diagnóstico de Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh696636.aspx) | Al mostrar en qué punto invierte el tiempo el código tu aplicación durante la ejecución del programa, los perfiles de Visual Studio pueden ayudarte a encontrar los cuellos de botella de rendimiento en tus aplicaciones, funciones y algoritmos. |
 | [Rendimiento de XAML: Técnicas para maximizar experiencias de aplicaciones universales de Windows creadas con XAML](https://channel9.msdn.com/Events/Build/2015/3-698) | En esta sesión //build, aprenderás sobre las características de la nueva plataforma, sobre las nuevas características de herramientas y técnicas para aumentar significativamente el rendimiento de tu aplicación universal de Windows basada en XAML. |
 | [Nuevas herramientas XAML de Visual Studio 2015](https://channel9.msdn.com/Events/Build/2015/2-697) | En esta sesión //build, aprenderás sobre algunas de las nuevas capacidades de Visual Studio 2015, incluida la experiencia de Blend rediseñada, las herramientas de depuración de la interfaz de usuario y las mejoras del editor de XAML. |
-| [Windows Performance Analyzer](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh448170.aspx) | Se incluye en Windows Assessment and Deployment Kit (Windows ADK), Windows Performance Analyzer (WPA) es una herramienta que permite crear gráficos y tablas de datos de Seguimiento de eventos para Windows (ETW) que registra el Windows Performance Recorder (WPR), Xperf o una evaluación que se ejecuta en la plataforma de evaluación. WPA puede abrir cualquier archivo de registro de seguimiento de eventos (ETL) para el análisis. |
+| [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/apps/xaml/hh448170.aspx) | Se incluye en Windows Assessment and Deployment Kit (Windows ADK), Windows Performance Analyzer (WPA) es una herramienta que permite crear gráficos y tablas de datos de Seguimiento de eventos para Windows (ETW) que registra el Windows Performance Recorder (WPR), Xperf o una evaluación que se ejecuta en la plataforma de evaluación. WPA puede abrir cualquier archivo de registro de seguimiento de eventos (ETL) para el análisis. |
 
  
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,6 +1,7 @@
 ---
-title: Portar objetos de sombreador
-description: Al portar el representador simple de OpenGL ES 2.0, el primer paso es configurar los objetos equivalentes del sombreador de fragmentos y vértices en Direct3D11 y asegurarte de que el programa principal pueda comunicarse con los objetos de sombreador después de su compilación.
+author: mtoepke
+title: Migrar objetos de sombreador
+description: Cuando portes el representador simple de OpenGL ES 2.0, el primer paso es configurar los objetos equivalentes del sombreador de fragmentos y vértices en Direct3D 11, y asegurarte de que el programa principal pueda comunicarse con los objetos del sombreador después de su compilación.
 ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
 ---
 
@@ -70,7 +71,7 @@ GLuint __cdecl CompileShader (GLenum shaderType, const char *shaderSrcStr)
 
 En Direct3D, los sombreadores no se compilan en tiempo de ejecución; siempre se compilan en archivos CSO cuando se compila el resto del programa. Cuando compilas tu aplicación con Microsoft Visual Studio, los archivos HLSL se compilan en archivos CSO (.cso) que la aplicación debe cargar. Asegúrate de incluir estos archivos CSO con la aplicación cuando la empaquetes.
 
-> **Nota** En el siguiente ejemplo se realiza la carga y compilación del sombreador de manera asincrónica, mediante la sintaxis lambda y el teclado **automático**. ReadDataAsync() es un método implementado en la plantilla que se lee en un archivo CSO como una matriz de datos de bytes (fileData).
+> **Nota** En el siguiente ejemplo se realiza la carga y compilación del sombreador de manera asincrónica, mediante la sintaxis lambda y la palabra clave **automático**. ReadDataAsync() es un método implementado en la plantilla que se lee en un archivo CSO como una matriz de datos de bytes (fileData).
 
  
 
@@ -180,12 +181,12 @@ m_d3dContext->PSSetShader(
 
 En nuestro ejemplo de OpenGL ES 2.0, tenemos que declarar un elemento **uniform** para la canalización del sombreador:
 
--   **u\_mvpMatrix**: es una matriz 4x4 de elementos flotantes que representa la matriz de transformación de la proyección de vista de modelo, que toma las coordenadas del modelo para el cubo y las transforma en coordenadas de proyección 2D para la conversión de digitalización.
+-   **u\_mvpMatrix**: matriz 4x4 de elementos flotantes que representa la matriz de transformación de la proyección de vista de modelo final, que toma las coordenadas del modelo para el cubo y las transforma en coordenadas de proyección 2D para la conversión de digitalización.
 
 y dos valores **attribute** para los datos de vértice:
 
--   **a\_position**: es un vector de 4 elementos flotantes para las coordenadas del modelo de un vértice.
--   **a\_color**: es un vector de 4 elementos flotantes para el valor de color RGBA asociado con el vértice.
+-   **a\_position**: vector de 4 elementos flotantes para las coordenadas del modelo de un vértice.
+-   **a\_color**: vector de 4 elementos flotantes para el valor de color RGBA asociado con el vértice.
 
 Open GL ES 2.0: definiciones de GLSL para los uniformes y atributos
 
@@ -317,6 +318,6 @@ Paso siguiente
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

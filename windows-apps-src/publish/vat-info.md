@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Si es necesario que proporciones un número de identificación a efectos de IVA durante el proceso de registro del Centro de desarrollo, a continuación encontrarás información que te ayudará a ponerte en marcha.
 title: Información sobre el IVA
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
@@ -245,6 +246,6 @@ Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente ta
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referencia de API principal de Device Portal
 description: Obtén información sobre las API de REST principales de Windows Device Portal que puedes usar para acceder a los datos y controlar el dispositivo mediante programación.
@@ -19,8 +20,8 @@ Puede instalar una aplicación mediante el siguiente formato de solicitud.
 
 Método      | URI de solicitud
 :------     | :-----
-POST | /api/appx/packagemanager/package
-
+POST | /api/app/packagemanager/package
+<br />
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
@@ -28,7 +29,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de solicitud
 Parámetro de URI | Descripción
 :---          | :---
 paquete   | (**obligatorio**) Nombre de archivo del paquete que debe instalarse.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -39,12 +40,16 @@ paquete   | (**obligatorio**) Nombre de archivo del paquete que debe instalarse.
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Implementar la solicitud aceptada y que se está procesando
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -61,8 +66,8 @@ Puedes obtener el estado de la instalación de una aplicación que está en curs
  
 Método      | URI de solicitud
 :------     | :-----
-GET | /api/appx/packagemanager/state
-
+GET | /api/app/packagemanager/state
+<br />
 **Parámetros de URI**
 
 - Ninguno
@@ -77,12 +82,16 @@ GET | /api/appx/packagemanager/state
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | El resultado de la última implementación
+204 | La instalación se está ejecutando
+404 | No se encontró ninguna acción de instalación
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -99,8 +108,8 @@ Puedes desinstalar una aplicación mediante el siguiente formato de solicitud.
  
 Método      | URI de solicitud
 :------     | :-----
-DELETE | /api/appx/packagemanager/package
-
+DELETE | /api/app/packagemanager/package
+<br />
 
 **Parámetros de URI**
 
@@ -116,12 +125,16 @@ DELETE | /api/appx/packagemanager/package
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -139,8 +152,8 @@ Puedes obtener una lista de aplicaciones instaladas en el sistema mediante el si
  
 Método      | URI de solicitud
 :------     | :-----
-GET | /api/appx/packagemanager/packages
-
+GET | /api/app/packagemanager/packages
+<br />
 
 **Parámetros de URI**
 
@@ -156,12 +169,41 @@ GET | /api/appx/packagemanager/packages
 
 **Respuesta**
 
-La respuesta incluye una lista de los paquetes instalados con detalles asociados.
-
+La respuesta incluye una lista de los paquetes instalados con detalles asociados. La plantilla para esta respuesta es la siguiente.
+```
+{"InstalledPackages": [
+    {
+        "Name": string,
+        "PackageFamilyName": string,
+        "PackageFullName": string,
+        "PackageOrigin": int, (https://msdn.microsoft.com/en-us/library/windows/desktop/dn313167(v=vs.85).aspx)
+        "PackageRelativeId": string,
+        "Publisher": string,
+        "Version": {
+            "Build": int,
+            "Major": int,
+            "Minor": int,
+            "Revision": int
+     },
+     "RegisteredUsers": [
+     {
+        "UserDisplayName": string,
+        "UserSID": string
+     },...
+     ]
+    },...
+]}
+```
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -182,7 +224,7 @@ Puedes obtener una lista de dispositivos que están instalados en la máquina me
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/devicemanager/devices
-
+<br />
 
 **Parámetros de URI**
 
@@ -198,12 +240,31 @@ GET | /api/devicemanager/devices
 
 **Respuesta**
 
-- La respuesta incluye una estructura JSON que contiene un árbol de dispositivos jerárquico.
+La respuesta incluye una matriz JSON de los dispositivos conectados al dispositivo.
+``` 
+{"DeviceList": [
+    {
+        "Class": string,
+        "Description": string,
+        "ID": string,
+        "Manufacturer": string,
+        "ParentID": string,
+        "ProblemCode": int,
+        "StatusCode": int
+    },...
+]}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -222,7 +283,7 @@ Puedes obtener la lista de todos los volcados de memoria disponibles para todas 
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/debug/dump/usermode/dumps
-
+<br />
 
 **Parámetros de URI**
 
@@ -238,12 +299,18 @@ GET | /api/debug/dump/usermode/dumps
 
 **Respuesta**
 
-- La respuesta incluye una lista de volcados de memoria de cada aplicación transferida localmente.
+La respuesta incluye una lista de volcados de memoria de cada aplicación transferida localmente.
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -260,7 +327,7 @@ Puedes obtener la configuración de colección de volcado de memoria de una apli
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/debug/dump/usermode/crashcontrol
-
+<br />
 
 **Parámetros de URI**
 
@@ -269,7 +336,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de solicitud
 Parámetro de URI | Descripción
 :---          | :---
 packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -280,12 +347,21 @@ packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicaci
 
 **Respuesta**
 
-- Ninguno
+La respuesta tiene el siguiente formato.
+```
+{"CrashDumpEnabled": bool}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -302,7 +378,7 @@ Puedes eliminar un volcado de memoria de una aplicación transferida localmente 
 Método      | URI de solicitud
 :------     | :-----
 DELETE | /api/debug/dump/usermode/crashdump
-
+<br />
 
 **Parámetros de URI**
 
@@ -312,7 +388,7 @@ Parámetro de URI | Descripción
 :---          | :---
 packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente.
 fileName   | (**obligatorio**) Nombre del archivo de volcado de memoria que se debe eliminar.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -323,12 +399,16 @@ fileName   | (**obligatorio**) Nombre del archivo de volcado de memoria que se d
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -346,7 +426,7 @@ Método      | URI de solicitud
 :------     | :-----
 DELETE | /api/debug/dump/usermode/crashcontrol
 
-
+<br />
 **Parámetros de URI**
 
 Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
@@ -354,7 +434,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de solicitud
 Parámetro de URI | Descripción
 :---          | :---
 packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -365,12 +445,16 @@ packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicaci
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -387,7 +471,7 @@ Puedes descargar un volcado de memoria de una aplicación transferida localmente
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/debug/dump/usermode/crashdump
-
+<br />
 
 **Parámetros de URI**
 
@@ -397,7 +481,7 @@ Parámetro de URI | Descripción
 :---          | :---
 packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente.
 fileName   | (**obligatorio**) Nombre del archivo de volcado de memoria que quieres descargar.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -408,12 +492,18 @@ fileName   | (**obligatorio**) Nombre del archivo de volcado de memoria que quie
 
 **Respuesta**
 
-- La respuesta incluye un archivo de volcado de memoria. Puedes usar WinDbg o Visual Studio para examinar el archivo de volcado de memoria.
+La respuesta incluye un archivo de volcado de memoria. Puedes usar WinDbg o Visual Studio para examinar el archivo de volcado de memoria.
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -430,7 +520,7 @@ Puedes habilitar los volcados de memoria de una aplicación transferida localmen
 Método      | URI de solicitud
 :------     | :-----
 POST | /api/debug/dump/usermode/crashcontrol
-
+<br />
 
 **Parámetros de URI**
 
@@ -439,7 +529,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de solicitud
 Parámetro de URI | Descripción
 :---          | :---
 packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicación transferida localmente.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -450,12 +540,14 @@ packageFullname   | (**obligatorio**) Nombre completo del paquete de la aplicaci
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -472,7 +564,7 @@ Puedes obtener la lista de archivos de minivolcado de comprobación de errores m
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/debug/dump/kernel/dumplist
-
+<br />
 
 **Parámetros de URI**
 
@@ -488,12 +580,24 @@ GET | /api/debug/dump/kernel/dumplist
 
 **Respuesta**
 
-- La respuesta incluye una lista de nombres de archivo de volcado de memoria y los tamaños de estos archivos.
+La respuesta incluye una lista de nombres de archivo de volcado de memoria y los tamaños de estos archivos. Esta lista estará en el siguiente formato. El segundo parámetro *FileName* es el tamaño del archivo. Este es un error conocido.
+```
+{"DumpFiles": [
+    {
+        "FileName": string,
+        "FileName": string
+    },...
+]}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -509,7 +613,7 @@ Puedes descargar un archivo de volcado de memoria de comprobación de errores me
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/debug/dump/kernel/dump
-
+<br />
 
 **Parámetros de URI**
 
@@ -518,7 +622,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de solicitud
 Parámetro de URI | Descripción
 :---          | :---
 filename   | (**obligatorio**) Nombre del archivo de volcado de memoria. Puedes encontrarlo mediante la API para obtener la lista de volcado de memoria.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -529,12 +633,18 @@ filename   | (**obligatorio**) Nombre del archivo de volcado de memoria. Puedes 
 
 **Respuesta**
 
-- La respuesta incluye el archivo de volcado de memoria. Puedes inspeccionar este archivo con WinDbg.
+La respuesta incluye el archivo de volcado de memoria. Puedes inspeccionar este archivo con WinDbg.
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -551,7 +661,7 @@ Método      | URI de solicitud
 :------     | :-----
 GET | /api/debug/dump/kernel/crashcontrol
 
-
+<br />
 **Parámetros de URI**
 
 - Ninguno
@@ -566,12 +676,26 @@ GET | /api/debug/dump/kernel/crashcontrol
 
 **Respuesta**
 
-- La respuesta incluye la configuración de control de bloqueo. Para obtener más información sobre CrashControl, consulta el artículo [CrashControl](https://technet.microsoft.com/library/cc951703.aspx).
+La respuesta incluye la configuración de control de bloqueo. Para obtener más información sobre CrashControl, consulta el artículo [CrashControl](https://technet.microsoft.com/library/cc951703.aspx). La plantilla para la respuesta es la siguiente.
+```
+{
+    "autoreboot": int,
+    "dumptype": int,
+    "maxdumpcount": int,
+    "overwrite": int
+}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -587,7 +711,7 @@ Puedes obtener un volcado de memoria de kernel dinámico mediante el siguiente f
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/debug/dump/livekernel
-
+<br />
 
 **Parámetros de URI**
 
@@ -603,12 +727,18 @@ GET | /api/debug/dump/livekernel
 
 **Respuesta**
 
-- La respuesta incluye el volcado de memoria de modo kernel completo. Puedes inspeccionar este archivo con WinDbg.
+La respuesta incluye el volcado de memoria de modo kernel completo. Puedes inspeccionar este archivo con WinDbg.
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -624,7 +754,7 @@ Puedes obtener el volcado de memoria del proceso de usuario dinámico mediante e
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/debug/dump/usermode/live
-
+<br />
 
 **Parámetros de URI**
 
@@ -633,7 +763,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de solicitud
 Parámetro de URI | Descripción
 :---          | :---
 pid   | (**obligatorio**) Identificador de proceso único para el proceso que te interesa.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -644,12 +774,18 @@ pid   | (**obligatorio**) Identificador de proceso único para el proceso que te
 
 **Respuesta**
 
-- La respuesta incluye del volcado de memoria del proceso. Puedes inspeccionar este archivo con WinDbg o Visual Studio.
+La respuesta incluye del volcado de memoria del proceso. Puedes inspeccionar este archivo con WinDbg o Visual Studio.
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -665,7 +801,7 @@ Puedes establecer la configuración para recopilar datos de comprobación de err
 Método      | URI de solicitud
 :------     | :-----
 POST | /api/debug/dump/kernel/crashcontrol
-
+<br />
 
 **Parámetros de URI**
 
@@ -677,7 +813,7 @@ autoreboot   | (**opcional**) True o false. Esto indica si el sistema se reinici
 dumptype   | (**opcional**) Tipo de volcado de memoria. Para obtener los valores admitidos, consulta [CrashDumpType Enumeration](https://msdn.microsoft.com/library/azure/microsoft.azure.management.insights.models.crashdumptype.aspx).
 maxdumpcount   | (**opcional**) Número máximo de volcados de memoria que se deben guardar.
 sobrescribir   | (**opcional**) True o false. Indica si se deben sobrescribir o no los volcados de memoria antiguos cuando se alcanza el límite del contador de volcado de memoria especificado por *maxdumpcount*.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -688,12 +824,16 @@ sobrescribir   | (**opcional**) True o false. Indica si se deben sobrescribir o 
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -706,12 +846,12 @@ sobrescribir   | (**opcional**) True o false. Indica si se deben sobrescribir o 
 
 **Solicitud**
 
-Puedes crear una sesión ETW en tiempo real mediante el siguiente formato de solicitud. Se administrará a través de un websocket.
+Puedes crear una sesión ETW en tiempo real mediante el siguiente formato de solicitud. Se administrará a través de un websocket.  Los eventos ETW se procesan por lotes en el servidor y se envían al cliente una vez por segundo. 
  
 Método      | URI de solicitud
 :------     | :-----
 GET/WebSocket | /api/etw/session/realtime
-
+<br />
 
 **Parámetros de URI**
 
@@ -727,18 +867,73 @@ GET/WebSocket | /api/etw/session/realtime
 
 **Respuesta**
 
-- La respuesta incluye los eventos ETW de los proveedores habilitados.
+La respuesta incluye los eventos ETW de los proveedores habilitados.  Ver los comandos de ETW WebSocket a continuación. 
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
 * Escritorio de Windows
 * HoloLens
 * IoT
+
+### Comandos de ETW WebSocket
+Estos comandos se envían desde el cliente al servidor.
+
+Comando | Descripción
+:----- | :-----
+el proveedor *{guid}* habilita *{level}* | Habilita el proveedor marcado con *{guid}* (sin corchetes) en el nivel especificado. *{level}* es un **int** de 1 (mínimo detalle) a 5 (detallado).
+el proveedor *{guid}* deshabilita | Deshabilitar el proveedor con la marca *{guid}* (sin corchetes).
+
+Esta respuesta se envía desde el servidor al cliente. Esto se envía como texto y tú obtienes el siguiente formato analizando el JSON.
+```
+{
+    "Events":[
+        {
+            "Timestamp": int,
+            "Provider": string,
+            "ID": int, 
+            "TaskName": string,
+            "Keyword": int,
+            "Level": int,
+            payload objects...
+        },...
+    ],
+    "Frequency": int
+}
+```
+
+Los objetos de carga son pares de clave-valor adicionales (string:string) que se proporcionan en el evento ETW original.
+
+Ejemplo:
+```
+{
+    "ID" : 42, 
+    "Keyword" : 9223372036854775824, 
+    "Level" : 4, 
+    "Message" : "UDPv4: 412 bytes transmitted from 10.81.128.148:510 to 132.215.243.34:510. ",
+    "PID" : "1218", 
+    "ProviderName" : "Microsoft-Windows-Kernel-Network", 
+    "TaskName" : "KERNEL_NETWORK_TASK_UDPIP", 
+    "Timestamp" : 131039401761757686, 
+    "connid" : "0", 
+    "daddr" : "132.245.243.34", 
+    "dport" : "500", 
+    "saddr" : "10.82.128.118", 
+    "seqnum" : "0", 
+    "size" : "412", 
+    "sport" : "500"
+}
+```
 
 ---
 ### Enumerar los proveedores de ETW registrados
@@ -750,7 +945,7 @@ Puedes enumerar los proveedores registrados con el siguiente formato de solicitu
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/etw/providers
-
+<br />
 
 **Parámetros de URI**
 
@@ -766,12 +961,24 @@ GET | /api/etw/providers
 
 **Respuesta**
 
-- La respuesta incluye la lista de proveedores de ETW. La lista incluirá el nombre descriptivo y el GUID de cada proveedor.
+La respuesta incluye la lista de proveedores de ETW. La lista incluye el nombre descriptivo y el GUID para cada proveedor en el siguiente formato.
+```
+{"Providers": [
+    {
+        "GUID": string, (GUID)
+        "Name": string
+    },...
+]}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -780,18 +987,16 @@ GET | /api/etw/providers
 * IoT
 
 ---
-## Redes
----
-### Obtener la configuración IP actual
+### Enumerar los proveedores de ETW personalizados expuestos por la plataforma.
 
 **Solicitud**
 
-Puedes obtener la configuración IP actual mediante el siguiente formato de solicitud.
+Puedes enumerar los proveedores registrados con el siguiente formato de solicitud.
  
 Método      | URI de solicitud
 :------     | :-----
-GET | /api/networking/ipconfig
-
+GET | /api/etw/customproviders
+<br />
 
 **Parámetros de URI**
 
@@ -807,22 +1012,25 @@ GET | /api/networking/ipconfig
 
 **Respuesta**
 
-- La respuesta incluye la configuración IP
+200 Correcto. La respuesta incluye la lista de proveedores de ETW. La lista incluirá el nombre descriptivo y el GUID de cada proveedor.
+
+```
+{"Providers": [
+    {
+        "GUID": string, (GUID)
+        "Name": string
+    },...
+]}
+```
 
 **Código de estado**
 
-En la siguiente tabla se muestran los códigos de estado posibles adicionales que pueden devolverse como resultado de esta operación.
-
-Código de estado HTTP      | Descripción
-:------     | :-----
-200 | La operación se completó correctamente.
-500 | Se produjo un error interno del servidor
-
+- Códigos de estado estándar.
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
 * Escritorio de Windows
-* Xbox
 * HoloLens
 * IoT
 
@@ -838,7 +1046,7 @@ Puedes obtener el nombre de una máquina mediante el siguiente formato de solici
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/os/machinename
-
+<br />
 
 **Parámetros de URI**
 
@@ -854,12 +1062,22 @@ GET | /api/os/machinename
 
 **Respuesta**
 
-- Ninguno
+La respuesta incluye el nombre del equipo en el siguiente formato. 
+
+```
+{"ComputerName": string}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -878,7 +1096,7 @@ Puedes obtener la información del sistema operativo de una máquina mediante el
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/os/info
-
+<br />
 
 **Parámetros de URI**
 
@@ -894,12 +1112,28 @@ GET | /api/os/info
 
 **Respuesta**
 
-- Ninguno
+La respuesta incluye la información del sistema operativo en el siguiente formato.
+
+```
+{
+    "ComputerName": string,
+    "OsEdition": string,
+    "OsEditionId": int,
+    "OsVersion": string,
+    "Platform": string
+}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -918,7 +1152,7 @@ Puedes establecer el nombre de una máquina mediante el siguiente formato de sol
 Método      | URI de solicitud
 :------     | :-----
 POST | /api/os/machinename
-
+<br />
 
 **Parámetros de URI**
 
@@ -927,7 +1161,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de solicitud
 Parámetro de URI | Descripción
 :---          | :---
 nombre | (**obligatorio**) Nuevo nombre de la máquina.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -938,12 +1172,14 @@ nombre | (**obligatorio**) Nuevo nombre de la máquina.
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -959,12 +1195,13 @@ nombre | (**obligatorio**) Nuevo nombre de la máquina.
 
 **Solicitud**
 
-Puedes obtener la lista de procesos que se encuentran en ejecución actualmente mediante el siguiente formato de solicitud.
+Puedes obtener la lista de procesos que se encuentran en ejecución actualmente mediante el siguiente formato de solicitud.  esto puede actualizarse a una conexión WebSocket también, con los mismos datos de JSON que se envían al cliente una vez por segundo. 
  
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/resourcemanager/processes
-
+GET/WebSocket | /api/resourcemanager/processes
+<br />
 
 **Parámetros de URI**
 
@@ -980,12 +1217,33 @@ GET | /api/resourcemanager/processes
 
 **Respuesta**
 
-- La respuesta incluye una lista de procesos con detalles de cada proceso. La información está en formato JSON.
+La respuesta incluye una lista de procesos con detalles de cada proceso. La información está en formato JSON y tiene la siguiente plantilla.
+```
+{"Processes": [
+    {
+        "CPUUsage": int,
+        "ImageName": string,
+        "PageFileUsage": int,
+        "PrivateWorkingSet": int,
+        "ProcessId": int,
+        "SessionId": int,
+        "UserName": string,
+        "VirtualSize": int,
+        "WorkingSetSize": int
+    },...
+]}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1003,7 +1261,9 @@ Puedes obtener las estadísticas de rendimiento del sistema mediante el siguient
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/resourcemanager/systemperf
-
+GET/WebSocket | /api/resourcemanager/systemperf
+<br />
+Esto también se pueden actualizar a una conexión WebSocket.  Proporciona los mismos datos de JSON a continuación una vez por segundo. 
 
 **Parámetros de URI**
 
@@ -1019,12 +1279,49 @@ GET | /api/resourcemanager/systemperf
 
 **Respuesta**
 
-- La respuesta incluye las estadísticas de rendimiento del sistema, como el uso de la CPU y GPU, el acceso a la memoria y el acceso a la red. Esta información está en formato JSON.
+La respuesta incluye las estadísticas de rendimiento del sistema, como el uso de la CPU y GPU, el acceso a la memoria y el acceso a la red. Esta información está en formato JSON y tiene la siguiente plantilla.
+```
+{
+    "AvailablePages": int,
+    "CommitLimit": int,
+    "CommittedPages": int,
+    "CpuLoad": int,
+    "IOOtherSpeed": int,
+    "IOReadSpeed": int,
+    "IOWriteSpeed": int,
+    "NonPagedPoolPages": int,
+    "PageSize": int,
+    "PagedPoolPages": int,
+    "TotalInstalledInKb": int,
+    "TotalPages": int,
+    "GPUData": 
+    {
+        "AvailableAdapters": [{ (One per detected adapter)
+            "DedicatedMemory": int,
+            "DedicatedMemoryUsed": int,
+            "Description": string,
+            "SystemMemory": int,
+            "SystemMemoryUsed": int,
+            "EnginesUtilization": [ float,... (One per detected engine)]
+        },...
+    ]},
+    "NetworkingData": {
+        "NetworkInBytes": int,
+        "NetworkOutBytes": int
+    }
+}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1045,7 +1342,7 @@ Puedes obtener el estado actual de la batería mediante el siguiente formato de 
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/power/battery
-
+<br />
 
 **Parámetros de URI**
 
@@ -1061,17 +1358,36 @@ GET | /api/power/battery
 
 **Respuesta**
 
-- Ninguno
+La información del estado actual de la batería se devuelve mediante el siguiente formato.
+```
+{
+    "AcOnline": int (0 | 1),
+    "BatteryPresent": int (0 | 1),
+    "Charging": int (0 | 1),
+    "DefaultAlert1": int,
+    "DefaultAlert2": int,
+    "EstimatedTime": int,
+    "MaximumCapacity": int,
+    "RemainingCapacity": int
+}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * HoloLens
 * IoT
+* Móvil
 
 ---
 ### Obtener el plan de energía activo
@@ -1083,7 +1399,7 @@ Puedes obtener el plan de energía activo mediante el siguiente formato de solic
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/power/activecfg
-
+<br />
 
 **Parámetros de URI**
 
@@ -1099,12 +1415,21 @@ GET | /api/power/activecfg
 
 **Respuesta**
 
-- Ninguno
+El plan de energía activo tiene el siguiente formato.
+```
+{"ActivePowerScheme": string (guid of scheme)}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -1120,7 +1445,9 @@ Puedes obtener el subvalor de un plan de energía mediante el siguiente formato 
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/power/cfg/*<power scheme path>*
-
+<br />
+Opciones:
+- SCHEME_CURRENT
 
 **Parámetros de URI**
 
@@ -1132,16 +1459,20 @@ GET | /api/power/cfg/*<power scheme path>*
 
 **Cuerpo de la solicitud**
 
-- Ninguno
+Hay una lista completa de estados de energía disponible por aplicación y la configuración para marcar varios estados de energía, como bajo y crítico. 
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -1157,7 +1488,7 @@ Puedes comprobar el estado de energía del sistema mediante el siguiente formato
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/power/state
-
+<br />
 
 **Parámetros de URI**
 
@@ -1173,57 +1504,25 @@ GET | /api/power/state
 
 **Respuesta**
 
-- Ninguno
+La información de estado de energía tiene la siguiente plantilla.
+```
+{"LowPowerStateAvailable": bool}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
 * HoloLens
-* IoT
-
----
-### Obtener un informe de estudio de suspensión
-
-**Solicitud**
-
-Puedes obtener un informe de estudio de suspensión mediante el siguiente formato de solicitud.
- 
-Método      | URI de solicitud
-:------     | :-----
-GET | /api/power/sleepstudy/reports
-
-
-**Parámetros de URI**
-
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
-
-Parámetro de URI | Descripción
-:---          | :---
-FileName | (**obligatorio**) Nombre de archivo del informe de estudio de suspensión que quieres descargar.
-
-**Encabezados de solicitud**
-
-- Ninguno
-
-**Cuerpo de la solicitud**
-
-- Ninguno
-
-**Respuesta**
-
-- Ninguno
-
-**Código de estado**
-
-- Códigos de estado estándar.
-
-**Familias de dispositivos disponibles**
-
-* Escritorio de Windows
 * IoT
 
 ---
@@ -1236,7 +1535,7 @@ Puedes establecer el plan de energía activo mediante el siguiente formato de so
 Método      | URI de solicitud
 :------     | :-----
 POST | /api/power/activecfg
-
+<br />
 
 **Parámetros de URI**
 
@@ -1245,7 +1544,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de solicitud
 Parámetro de URI | Descripción
 :---          | :---
 scheme | (**obligatorio**) GUID del esquema que quiere establecer como plan de energía activo para el sistema.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -1256,12 +1555,16 @@ scheme | (**obligatorio**) GUID del esquema que quiere establecer como plan de e
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -1277,7 +1580,7 @@ Puedes establecer el subvalor de un plan de energía mediante el siguiente forma
 Método      | URI de solicitud
 :------     | :-----
 POST | /api/power/cfg/*<power scheme path>*
-
+<br />
 
 **Parámetros de URI**
 
@@ -1287,7 +1590,7 @@ Parámetro de URI | Descripción
 :---          | :---
 valueAC | (**obligatorio**) Valor que se usará para alimentación CA.
 valueDC | (**obligatorio**) Valor que se usará para la energía de la batería.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -1298,12 +1601,57 @@ valueDC | (**obligatorio**) Valor que se usará para la energía de la batería.
 
 **Respuesta**
 
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+<br />
+**Familias de dispositivos disponibles**
+
+* Escritorio de Windows
+* IoT
+
+---
+### Obtener un informe de estudio de suspensión
+
+**Solicitud**
+
+Método      | URI de solicitud
+:------     | :-----
+GET | /api/power/sleepstudy/report
+<br />
+Puedes obtener un informe de estudio de suspensión mediante el siguiente formato de solicitud.
+
+**Parámetros de URI**
+Parámetro de URI | Descripción
+:---          | :---
+FileName | (**obligatorio**) Nombre completo del archivo que quieres descargar. Este valor debe estar codificado mediante hex64.
+<br />
+**Encabezados de solicitud**
+
 - Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+La respuesta es un archivo que contiene el estudio de suspensión. 
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -1319,7 +1667,7 @@ Puedes enumerar los informes de estudio de suspensión disponibles mediante el s
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/power/sleepstudy/reports
-
+<br />
 
 **Parámetros de URI**
 
@@ -1335,12 +1683,26 @@ GET | /api/power/sleepstudy/reports
 
 **Respuesta**
 
-- Ninguno
+La lista de los informes disponibles tiene la siguiente plantilla.
+
+```
+{"Reports": [
+    {
+        "FileName": string
+    },...
+]}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -1355,8 +1717,8 @@ Puedes obtener la transformación de estudio de suspensión mediante el siguient
  
 Método      | URI de solicitud
 :------     | :-----
-GET | /api/power/sleepstudy/reports
-
+GET | /api/power/sleepstudy/transform
+<br />
 
 **Parámetros de URI**
 
@@ -1372,12 +1734,18 @@ GET | /api/power/sleepstudy/reports
 
 **Respuesta**
 
-- Ninguno
+La respuesta contiene la transformación de estudio de suspensión.
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -1395,7 +1763,7 @@ Puedes reiniciar el equipo de destino mediante el siguiente formato de solicitud
 Método      | URI de solicitud
 :------     | :-----
 POST | /api/control/restart
-
+<br />
 
 **Parámetros de URI**
 
@@ -1411,12 +1779,14 @@ POST | /api/control/restart
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1435,7 +1805,7 @@ Puedes apagar el equipo de destino mediante el siguiente formato de solicitud.
 Método      | URI de solicitud
 :------     | :-----
 POST | /api/control/shutdown
-
+<br />
 
 **Parámetros de URI**
 
@@ -1451,12 +1821,16 @@ POST | /api/control/shutdown
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1477,7 +1851,7 @@ Puedes iniciar una aplicación moderna mediante el siguiente formato de solicitu
 Método      | URI de solicitud
 :------     | :-----
 POST | /api/taskmanager/app
-
+<br />
 
 **Parámetros de URI**
 
@@ -1487,7 +1861,7 @@ Parámetro de URI | Descripción
 :---          | :---
 appid   | (**obligatorio**) PRAID de la aplicación que quieres iniciar. Este valor debe estar codificado mediante hex64.
 package   | (**obligatorio**) Nombre completo del paquete de la aplicación que quiere iniciar. Este valor debe estar codificado mediante hex64.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -1498,12 +1872,16 @@ package   | (**obligatorio**) Nombre completo del paquete de la aplicación que 
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1522,7 +1900,7 @@ Puedes detener una aplicación moderna mediante el siguiente formato de solicitu
 Método      | URI de solicitud
 :------     | :-----
 DELETE | /api/taskmanager/app
-
+<br />
 
 **Parámetros de URI**
 
@@ -1532,7 +1910,7 @@ Parámetro de URI | Descripción
 :---          | :---
 package   | (**obligatorio**) Nombre completo de los paquetes de la aplicación que quiere detener. Este valor debe estar codificado mediante hex64.
 forcestop   | (**opcional**) Un valor de **yes** indica que el sistema debe forzar la detención de todos los procesos.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -1543,12 +1921,16 @@ forcestop   | (**opcional**) Un valor de **yes** indica que el sistema debe forz
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1558,18 +1940,18 @@ forcestop   | (**opcional**) Un valor de **yes** indica que el sistema debe forz
 * IoT
 
 ---
-## Wi-Fi
+## Redes
 ---
-### Enumerar las interfaces de red inalámbrica
+### Obtener la configuración IP actual
 
 **Solicitud**
 
-Puedes enumerar las interfaces de red inalámbrica disponibles mediante el siguiente formato de solicitud.
+Puedes obtener la configuración IP actual mediante el siguiente formato de solicitud.
  
 Método      | URI de solicitud
 :------     | :-----
-GET | /api/wifi/interfaces
-
+GET | /api/networking/ipconfig
+<br />
 
 **Parámetros de URI**
 
@@ -1585,12 +1967,120 @@ GET | /api/wifi/interfaces
 
 **Respuesta**
 
-- Lista de las interfaces inalámbricas disponibles con detalles. Los detalles incluirán elementos como un GUID, una descripción y un nombre descriptivo, entre otros.
+La respuesta incluye la configuración IP en la siguiente plantilla.
+
+```
+{"Adapters": [
+    {
+        "Description": string,
+        "HardwareAddress": string,
+        "Index": int,
+        "Name": string,
+        "Type": string,
+        "DHCP": {
+            "LeaseExpires": int, (timestamp)
+            "LeaseObtained": int, (timestamp)
+            "Address": {
+                "IpAddress": string,
+                "Mask": string
+            }
+        },
+        "WINS": {(WINS is optional)
+            "Primary": {
+                "IpAddress": string,
+                "Mask": string
+            },
+            "Secondary": {
+                "IpAddress": string,
+                "Mask": string
+            }
+        },
+        "Gateways": [{ (always 1+)
+            "IpAddress": "10.82.128.1",
+            "Mask": "255.255.255.255"
+            },...
+        ],
+        "IpAddresses": [{ (always 1+)
+            "IpAddress": "10.82.128.148",
+            "Mask": "255.255.255.0"
+            },...
+        ]
+    },...
+]}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+
+--
+### Enumerar las interfaces de red inalámbrica
+
+**Solicitud**
+
+Puedes enumerar las interfaces de red inalámbrica disponibles mediante el siguiente formato de solicitud.
+ 
+Método      | URI de solicitud
+:------     | :-----
+GET | /api/wifi/interfaces
+<br />
+
+**Parámetros de URI**
+
+- Ninguno
+
+**Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+Una lista de las interfaces inalámbricas disponibles con detalles en el siguiente formato.
+
+``` 
+{"Interfaces": [{
+    "Description": string,
+    "GUID": string (guid with curly brackets),
+    "Index": int,
+    "ProfilesList": [
+        {
+            "GroupPolicyProfile": bool,
+            "Name": string, (Network currently connected to)
+            "PerUserProfile": bool
+        },...
+    ]
+    }
+]}
+```
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1609,7 +2099,7 @@ Puedes enumerar la lista de redes inalámbricas en la interfaz especificada medi
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/wifi/networks
-
+<br />
 
 **Parámetros de URI**
 
@@ -1617,8 +2107,8 @@ Puedes especificar los siguientes parámetros adicionales en el URI de solicitud
 
 Parámetro de URI | Descripción
 :---          | :---
-interfaz   | (**obligatorio**) GUID de la interfaz de red que se usa para buscar redes inalámbricas.
-
+interfaz   | (**obligatorio**) GUID de la interfaz de red que se usa para buscar redes inalámbricas, sin corchetes. 
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -1629,12 +2119,38 @@ interfaz   | (**obligatorio**) GUID de la interfaz de red que se usa para buscar
 
 **Respuesta**
 
-- Lista de redes inalámbricas encontradas en la *interfaz* proporcionada. Incluye los detalles de las redes.
+Lista de redes inalámbricas encontradas en la *interfaz* proporcionada. Esto incluye detalles para las redes en el siguiente formato.
+
+```
+{"AvailableNetworks": [
+    {
+        "AlreadyConnected": bool,
+        "AuthenticationAlgorithm": string, (WPA2, etc)
+        "Channel": int,
+        "CipherAlgorithm": string, (e.g. AES)
+        "Connectable": int, (0 | 1)
+        "InfrastructureType": string,
+        "ProfileAvailable": bool,
+        "ProfileName": string,
+        "SSID": string,
+        "SecurityEnabled": int, (0 | 1)
+        "SignalQuality": int,
+        "BSSID": [int,...],
+        "PhysicalTypes": [string,...]
+    },...
+]}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1653,7 +2169,7 @@ Puedes conectarte a una red Wi-Fi o desconectarte de ella mediante el siguiente 
 Método      | URI de solicitud
 :------     | :-----
 POST | /api/wifi/network
-
+<br />
 
 **Parámetros de URI**
 
@@ -1663,8 +2179,9 @@ Parámetro de URI | Descripción
 :---          | :---
 interfaz   | (**obligatorio**) GUID de la interfaz de red que se usa para conectarse a la red.
 op   | (**obligatorio**) Indica la acción que se debe realizar. Los valores posibles son connect o disconnect.
-ssid   | (**obligatorio si *op* == conectar**) SSID al que se debe conectar.
-key   | (**obligatorio si *op* == conectar**) Clave compartida.
+ssid   | (**obligatorio si *op* == connect**) SSID al que se debe conectar.
+clave   | (**necesario si *op* == connect and network requires authentication**) La clave compartida.
+createprofile | (**obligatorio**) Crea un perfil de la red en el dispositivo.  Esto hará que el dispositivo se conecte a la red automáticamente en el futuro. Esto puede ser **sí** o **no**. 
 
 **Encabezados de solicitud**
 
@@ -1676,12 +2193,14 @@ key   | (**obligatorio si *op* == conectar**) Clave compartida.
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1700,7 +2219,7 @@ Puedes eliminar un perfil asociado con una red en una interfaz específica media
 Método      | URI de solicitud
 :------     | :-----
 DELETE | /api/wifi/network
-
+<br />
 
 **Parámetros de URI**
 
@@ -1710,7 +2229,7 @@ Parámetro de URI | Descripción
 :---          | :---
 interface   | (**obligatorio**) GUID de la interfaz de red asociado con el perfil que se debe eliminar.
 profile   | (**obligatorio**) Nombre del perfil que se debe eliminar.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -1721,12 +2240,14 @@ profile   | (**obligatorio**) Nombre del perfil que se debe eliminar.
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1742,12 +2263,12 @@ profile   | (**obligatorio**) Nombre del perfil que se debe eliminar.
 
 **Solicitud**
 
-Puedes descargar un archivo WER mediante el siguiente formato de solicitud.
+Puedes descargar un archivo relacionado con WER mediante el siguiente formato de solicitud.
  
 Método      | URI de solicitud
 :------     | :-----
-GET | /api/wer/reports/file
-
+GET | /api/wer/report/file
+<br />
 
 **Parámetros de URI**
 
@@ -1757,9 +2278,9 @@ Parámetro de URI | Descripción
 :---          | :---
 user   | (**obligatorio**) Nombre de usuario asociado con el informe.
 type   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**.
-name   | (**obligatorio**) Nombre del informe.
-file   | (**obligatorio**) Nombre del archivo que se debe descargar del informe.
-
+nombre   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. 
+file   | (**obligatorio**) Nombre del archivo que se debe descargar del informe. Esto debe estar codificado en Base64. 
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -1770,12 +2291,18 @@ file   | (**obligatorio**) Nombre del archivo que se debe descargar del informe.
 
 **Respuesta**
 
-- Ninguno
+- La respuesta contiene el archivo solicitado. 
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -1791,8 +2318,8 @@ Puedes enumerar los archivos en un informe WER mediante el siguiente formato de 
  
 Método      | URI de solicitud
 :------     | :-----
-GET | /api/wer/reports/files
-
+GET | /api/wer/report/files
+<br />
 
 **Parámetros de URI**
 
@@ -1802,24 +2329,35 @@ Parámetro de URI | Descripción
 :---          | :---
 user   | (**obligatorio**) Usuario asociado con el informe.
 type   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**.
-name   | (**obligatorio**) Nombre del informe.
-
+nombre   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. 
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguno
+```
+{"Files": [
+    {
+        "Name": string, (Filename, not base64 encoded)
+        "Size": int (bytes)
+    },...
+]}
+```
 
 **Respuesta**
 
-- Ninguno
-
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -1836,7 +2374,7 @@ Puedes obtener los informes WER mediante el siguiente formato de solicitud.
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/wer/reports
-
+<br />
 
 **Parámetros de URI**
 
@@ -1852,12 +2390,32 @@ GET | /api/wer/reports
 
 **Respuesta**
 
-- Ninguno
+Los informes WER en el siguiente formato.
+
+```
+{"WerReports": [
+    {
+        "User": string,
+        "Reports": [
+            {
+                "CreationTime": int,
+                "Name": string, (not base64 encoded)
+                "Type": string ("Queue" or "Archive")
+            },
+    },...
+]}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Escritorio de Windows
@@ -1871,12 +2429,12 @@ GET | /api/wer/reports
 
 **Solicitud**
 
-Puedes cargar un perfil WPR e iniciar un seguimiento con dicho perfil mediante el siguiente formato de solicitud.
+Puedes cargar un perfil WPR e iniciar un seguimiento con dicho perfil mediante el siguiente formato de solicitud.  Solo se puede ejecutar un seguimiento cada vez. El perfil no permanecerá en el dispositivo. 
  
 Método      | URI de solicitud
 :------     | :-----
 POST | /api/wpr/customtrace
-
+<br />
 
 **Parámetros de URI**
 
@@ -1892,12 +2450,25 @@ POST | /api/wpr/customtrace
 
 **Respuesta**
 
-- Devuelve el estado de sesión WPR.
+El estado de sesión WPR en el siguiente formato.
+
+```
+{
+    "SessionType": string, (Running or Idle) 
+    "State": string (normal or boot)
+}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1915,7 +2486,7 @@ Puedes iniciar una sesión de seguimiento de WPR de arranque mediante el siguien
 Método      | URI de solicitud
 :------     | :-----
 POST | /api/wpr/boottrace
-
+<br />
 
 **Parámetros de URI**
 
@@ -1924,7 +2495,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de solicitud
 Parámetro de URI | Descripción
 :---          | :---
 profile   | (**obligatorio**) Este parámetro es necesario en el inicio. Nombre del perfil que debe iniciar una sesión de seguimiento del rendimiento. Los perfiles posibles se almacenan en perfprofiles/profiles.json.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -1935,12 +2506,25 @@ profile   | (**obligatorio**) Este parámetro es necesario en el inicio. Nombre 
 
 **Respuesta**
 
-- En el inicio, esta API devuelve el estado de sesión de WPR.
+En Inicio, esta API devuelve el estado de sesión WPR en el siguiente formato.
+
+```
+{
+    "SessionType": string, (Running or Idle) 
+    "State": string (boot)
+}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1958,7 +2542,7 @@ Puedes detener una sesión de seguimiento de WPR de arranque mediante el siguien
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/wpr/boottrace
-
+<br />
 
 **Parámetros de URI**
 
@@ -1978,8 +2562,14 @@ GET | /api/wpr/boottrace
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -1992,12 +2582,12 @@ GET | /api/wpr/boottrace
 
 **Solicitud**
 
-Puedes iniciar una sesión de seguimiento de WPR mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.
+Puedes iniciar una sesión de seguimiento de WPR mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.  Solo se puede ejecutar un seguimiento cada vez. 
  
 Método      | URI de solicitud
 :------     | :-----
 POST | /api/wpr/trace
-
+<br />
 
 **Parámetros de URI**
 
@@ -2006,7 +2596,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de solicitud
 Parámetro de URI | Descripción
 :---          | :---
 profile   | (**obligatorio**) Nombre del perfil que debe iniciar una sesión de seguimiento del rendimiento. Los perfiles posibles se almacenan en perfprofiles/profiles.json.
-
+<br />
 **Encabezados de solicitud**
 
 - Ninguno
@@ -2017,12 +2607,25 @@ profile   | (**obligatorio**) Nombre del perfil que debe iniciar una sesión de 
 
 **Respuesta**
 
-- En el inicio, esta API devuelve el estado de sesión de WPR.
+En Inicio, esta API devuelve el estado de sesión WPR en el siguiente formato.
+
+```
+{
+    "SessionType": string, (Running or Idle) 
+    "State": string (normal)
+}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2040,7 +2643,7 @@ Puedes detener una sesión de seguimiento de WPR mediante el siguiente formato d
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/wpr/trace
-
+<br />
 
 **Parámetros de URI**
 
@@ -2060,8 +2663,14 @@ GET | /api/wpr/trace
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2079,7 +2688,7 @@ Puedes recuperar el estado de la sesión actual de WPR mediante el siguiente for
 Método      | URI de solicitud
 :------     | :-----
 GET | /api/wpr/status
-
+<br />
 
 **Parámetros de URI**
 
@@ -2095,12 +2704,25 @@ GET | /api/wpr/status
 
 **Respuesta**
 
-- Estado de la sesión de seguimiento de WPR.
+El estado de la sesión de seguimiento de WPR en el siguiente formato.
+
+```
+{
+    "SessionType": string, (Running or Idle) 
+    "State": string (normal or boot)
+}
+```
 
 **Código de estado**
 
-- Códigos de estado estándar.
+Esta API tiene los siguientes códigos de estado esperado.
 
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
 **Familias de dispositivos disponibles**
 
 * Windows Mobile
@@ -2109,6 +2731,6 @@ GET | /api/wpr/status
 * IoT
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

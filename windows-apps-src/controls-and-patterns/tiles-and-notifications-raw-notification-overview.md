@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Las notificaciones sin procesar son breves notificaciones de inserción de carácter general.
 title: Introducción a las notificaciones sin procesar
 ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
@@ -9,14 +10,14 @@ template: detail.hbs
 # Introducción a las notificaciones sin procesar
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Las notificaciones sin procesar son breves notificaciones de inserción de carácter general. Guardan un propósito estrictamente instructivo y no incluyen ningún componente de interfaz de usuario. Al igual que sucede con el resto de los tipos de notificaciones de inserción, la característica Servicios de notificaciones de inserción de Windows (WNS) entrega notificaciones sin procesar desde el servicio de nube a tu aplicación.
 
 Puedes usar las notificaciones sin procesar con diversos fines, como activar la aplicación para que ejecute una tarea en segundo plano (si el usuario permite que la aplicación lleve esto a cabo). Si usas WNS para comunicarte con tu aplicación, evitarás la carga de procesamiento que se produce cuando se generan conexiones de socket persistentes, se envían mensajes HTTP GET y se establecen otras conexiones de servicio a aplicación.
 
-**Importante**   Para adquirir un mayor conocimiento sobre las notificaciones sin procesar, recomendamos que te familiarices con los conceptos que se abordan en el tema [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md).
+**Importante** Para adquirir un mayor conocimiento sobre las notificaciones sin procesar, se recomienda que te familiarices con los conceptos que se abordan en el tema [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md).
 
  
 
@@ -71,7 +72,7 @@ Tu aplicación puede usar un evento de entrega de notificaciones ([**PushNotific
 WNS eliminará cualquier notificación sin procesar enviada a la aplicación si esta no se está ejecutando y no usa [tareas en segundo plano](#bg_tasks). Si no quieres desperdiciar los recursos de tu servicio de nube, considera la posibilidad de implementar lógica en el servicio para saber si la aplicación está activa. Hay dos maneras de obtener esta información: una aplicación puede informar al servicio expresamente de que está lista para recibir notificaciones, o bien WNS puede indicar al servicio cuándo detenerse.
 
 -   **La aplicación notifica al servicio de nube**: la aplicación puede ponerse en contacto con su servicio para avisarle de que se está ejecutando en primer plano. El inconveniente de este método reside en que la aplicación puede terminar poniéndose en contacto con el servicio con demasiada frecuencia, si bien reporta la ventaja de que el servicio siempre sabrá cuándo estará lista para recibir notificaciones sin procesar entrantes. Otra ventaja consiste en que, cuando la aplicación se pone en contacto con su servicio, este sabrá que puede enviar notificaciones sin procesar a la instancia específica de dicha aplicación, en lugar de difundirlas.
--   **El servicio de nube responde a los mensajes de respuesta de WNS** : el servicio de tu aplicación puede usar la información de [X-WNS-NotificationStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_notification) y [X-WNS-DeviceConnectionStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_dcs) que WNS devuelve para saber cuándo dejar de enviar notificaciones sin procesar a la aplicación. Cuando el servicio envía una notificación a un canal a modo de HTTP POST, recibirá uno de los siguientes mensajes en la respuesta:
+-   **El servicio de nube responde a los mensajes de respuesta de WNS**: el servicio de tu aplicación puede usar la información de [X-WNS-NotificationStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_notification) y [X-WNS-DeviceConnectionStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_dcs) que WNS devuelve para saber cuándo dejar de enviar notificaciones sin procesar a la aplicación. Cuando el servicio envía una notificación a un canal a modo de HTTP POST, recibirá uno de los siguientes mensajes en la respuesta:
 
     -   **X-WNS-NotificationStatus: dropped**: indica que el cliente no recibió la notificación. Se puede decir con certeza que la respuesta **dropped** viene provocada por el hecho de que la aplicación ya no se ejecuta en primer plano en el dispositivo del usuario.
     -   **X-WNS-DeviceConnectionStatus: disconnected** o **X-WNS-DeviceConnectionStatus: tempconnected**: indica que el cliente de Windows ya no está conectado a WNS. Observa que, para recibir este mensaje de WNS, tienes que solicitarlo expresamente definiendo el encabezado [X-WNS-RequestForStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_request) en el HTTP POST de la notificación.
@@ -84,7 +85,7 @@ WNS eliminará cualquier notificación sin procesar enviada a la aplicación si 
 
 ### <span id="bg_tasks"></span><span id="BG_TASKS"></span>Tareas en segundo plano desencadenadas por las notificaciones sin procesar
 
-**Importante**   Antes de usar tareas en segundo plano de notificación sin procesar, una aplicación debe tener acceso en segundo plano a través de [**BackgroundExecutionManager.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485).
+**Importante** Antes de usar tareas en segundo plano de notificación sin procesar, una aplicación debe tener acceso en segundo plano a través de [**BackgroundExecutionManager.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485).
 
  
 
@@ -125,6 +126,6 @@ Para obtener más información, descarga el [Ejemplo de notificaciones sin proce
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

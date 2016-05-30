@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Escalado y superposiciones de cadenas de intercambio
 description: Aprende a crear cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas, y a usar cadenas de intercambio de superposición (si las hay) para mejorar la calidad visual.
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
@@ -140,7 +141,7 @@ Realiza los siguientes pasos para crear una cadena de intercambio en primer plan
     m_overlaySupportExists = dxgiOutput2->SupportsOverlays() ? true : false;
     ```
     
-    > **Nota** Ve al siguiente paso si el adaptador DXGI admite las superposiciones. Si no es así, la representación con varias cadenas de intercambio no tendrá un resultado eficaz. En lugar de ello, representa la interfaz de usuario en una resolución reducida en la misma cadena de intercambio que el contenido del juego en tiempo real.
+    > **Nota**  Ve al siguiente paso si el adaptador DXGI admite las superposiciones. Si no es así, la representación con varias cadenas de intercambio no tendrá un resultado eficaz. En lugar de ello, representa la interfaz de usuario en una resolución reducida en la misma cadena de intercambio que el contenido del juego en tiempo real.
 
      
 
@@ -156,9 +157,9 @@ Realiza los siguientes pasos para crear una cadena de intercambio en primer plan
      foregroundSwapChainDesc.AlphaMode = DXGI_ALPHA_MODE_PREMULTIPLIED; // Foreground swap chain alpha values must be premultiplied.
     ```
 
-    > **Nota** Debes establecer la marca [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) de nuevo cada vez que la cadena de intercambio cambie de tamaño.
+    > **Nota**  Debes establecer la marca [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) de nuevo cada vez que la cadena de intercambio cambie de tamaño.
 
-     ```cpp
+    ```cpp
     HRESULT hr = m_foregroundSwapChain->ResizeBuffers(
         2, // Double-buffered swap chain.
         static_cast<UINT>(m_d3dRenderTargetSize.Width),
@@ -323,6 +324,6 @@ Realiza los siguientes pasos para crear una cadena de intercambio en primer plan
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

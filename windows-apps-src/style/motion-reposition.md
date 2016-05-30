@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Usa la animación de reposición para mover uno o varios elementos a otra posición.
 title: Animaciones de reposición en aplicaciones para UWP
 ms.assetid: 25D1EE31-5C25-4F21-B34C-FBD8FB1C8FFF
@@ -9,7 +10,7 @@ template: detail.hbs
 # Animaciones de reposición
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Usa la animación de reposición para mover uno o varios elementos a otra posición.
 
@@ -43,6 +44,6 @@ Usa la animación de reposición para mover uno o varios elementos a otra posici
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

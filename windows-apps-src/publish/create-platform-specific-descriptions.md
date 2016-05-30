@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Si has proporcionado paquetes destinados a diferentes sistemas operativos, tienes la opción de personalizar partes de la descripción para cada sistema operativo de destino.
 title: Crear descripciones específicas de plataforma
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
@@ -13,7 +14,7 @@ Si has proporcionado paquetes destinados a diferentes sistemas operativos, tiene
 
 Las descripciones específicas de la plataforma son útiles si quieres mencionar las características que solo aparecen en una versión de SO o si quieres proporcionar capturas de pantalla que son específicas de un SO particular (independientemente del tipo de dispositivo), en lugar de que todos los clientes vean la misma descripción.
 
-> **Nota**  Al crear una descripción específica de la plataforma en un idioma no se crea una descripción específica de la plataforma en otros idiomas que admita la aplicación, aunque hayas [especificado información de descripción](create-app-descriptions.md) para esos idiomas. Deberás crear la descripción específica de la plataforma por separado para cada idioma.
+> **Nota**  Al crear una descripción específica de la plataforma en un idioma, no se crea una descripción específica de la plataforma en otros idiomas que admita la aplicación, aunque hayas [especificado información de descripción](create-app-descriptions.md) para esos idiomas. Deberás crear la descripción específica de la plataforma por separado para cada idioma.
 
 ## Crear una descripción específica de la plataforma
 
@@ -44,6 +45,6 @@ Si creas una descripción específica de la plataforma y más adelante decides m
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

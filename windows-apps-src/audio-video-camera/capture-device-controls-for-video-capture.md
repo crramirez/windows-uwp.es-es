@@ -1,6 +1,7 @@
 ---
+author: drewbatgit
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
-description: Este artículo muestra cómo los controles de dispositivo de vídeo permiten escenarios de captura de vídeo mejorados, como vídeo HDR y prioridad de exposición.
+description: En este artículo se muestra cómo los controles de dispositivo de vídeo permiten escenarios de captura de vídeo mejorados, como vídeo HDR y prioridad de exposición.
 title: Controles de dispositivo de captura para captura de vídeos
 ---
 
@@ -18,7 +19,7 @@ Todas las API de control de dispositivo mencionadas en este artículo son miembr
 [!code-cs[VideoControllersUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoControllersUsing)]
 
 **Nota**  
-Este artículo se basa en los conceptos y el código analizados en [Capturar fotos y vídeo con MediaCapture](capture-photos-and-video-with-mediacapture.md), donde se describen los pasos para la implementación de la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios más avanzados de captura. El código de este artículo supone que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
+Este artículo se basa en los conceptos y el código analizados en [Capturar fotografías y vídeos con MediaCapture](capture-photos-and-video-with-mediacapture.md), donde se describen los pasos para la implementación de la captura básica de fotografías y vídeos. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios más avanzados de captura. El código de este artículo supone que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
 
 ## Vídeo HDR
 
@@ -53,6 +54,6 @@ Habilitar o deshabilitar el control de la prioridad de exposición estableciendo
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

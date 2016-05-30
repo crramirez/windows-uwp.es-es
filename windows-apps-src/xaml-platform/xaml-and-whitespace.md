@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Obtén información sobre las reglas de procesamiento de espacios en blanco que usa XAML.
 title: XAML y espacio en blanco
 ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
@@ -6,7 +7,7 @@ ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
 
 # XAML y espacio en blanco
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Obtén información sobre las reglas de procesamiento de espacios en blanco que usa XAML.
 
@@ -19,7 +20,7 @@ Al igual que en XML, los espacios en blanco en XAML son espacios, saltos de lín
 -   Se eliminan todos los espacios consecutivos y se reemplazan por un espacio.
 -   Se elimina el espacio que sigue inmediatamente a la etiqueta de inicio.
 -   Se elimina el espacio que precede a la etiqueta de cierre.
--   Los *caracteres de Asia Oriental* Este subconjunto también se denomina *ideogramas CJK* Para obtener más información, consulta http://www.unicode.org.
+-   Los *caracteres de Asia Oriental* se definen como un conjunto de intervalos de caracteres Unicode, U+20000 a U+2FFFD y U+30000 a U+3FFFD. Este subconjunto también se denomina *ideogramas CJK* Para obtener más información, consulta http://www.unicode.org.
 
 "Predeterminado" corresponde al estado que indica el valor predeterminado del atributo **xml:space**.
 
@@ -48,6 +49,6 @@ Entidades y los espacios de no separación: XAML admite la colocación de cualqu
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

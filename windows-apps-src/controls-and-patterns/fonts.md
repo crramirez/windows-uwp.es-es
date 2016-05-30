@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Sigue estas directrices cuando selecciones fuentes y especifiques tamaños y colores de fuente.
 title: Fuentes
 ms.assetid: 1B8B90AD-CDC4-4997-ACDE-871C1E94A929
@@ -8,10 +9,6 @@ template: detail.hbs
 
 # Directrices sobre fuentes
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
 **API importantes**
 
 -   [**Propiedad FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209655)
@@ -20,7 +17,7 @@ El uso correcto del tamaño, espesor, color, interlineado y espaciado de las fue
 
 Si buscas una lista de iconos Segoe UI Symbol, consulta [**Directrices para iconos de Segoe UI Symbol**](segoe-ui-symbol-font.md).
 
-## <span id="The_Windows_10_type_ramp"></span><span id="the_windows_10_type_ramp"></span><span id="THE_WINDOWS_10_TYPE_RAMP"></span>Rampa de tipos de Windows 10
+## <span id="The_Windows_10_type_ramp"></span><span id="the_windows_10_type_ramp"></span><span id="THE_WINDOWS_10_TYPE_RAMP"></span>La rampa de tipos de Windows 10
 
 
 La rampa de tipos establece una relación de diseño crucial entre los títulos y el texto del cuerpo, y garantiza una jerarquía comprensible y clara entre los diferentes niveles. Los usuarios comprenden de inmediato dónde pueden encontrar la información y cómo analizar la página.
@@ -46,7 +43,7 @@ No tienes que usar la fuente Segoe UI para todo. Puedes usar otras fuentes para 
 
 Esta es la lista de fuentes que se garantiza que estarán disponibles en todas las ediciones de Windows 10 que admitan aplicaciones para UWP.
 
-**Nota** Si usas una fuente que no está en esta lista, es posible que la aplicación descargue automáticamente los datos de fuente de un servicio Microsoft. Esto puede tener influencia en el rendimiento y en otros aspectos que pueden ser un problema, especialmente para dispositivos móviles. En particular, ten en cuenta que esto podría consumir parte del plan de datos móviles de un usuario o provocar la aplicación de costos de uso de datos móviles. Las aplicaciones para UWP que estarán disponibles en los dispositivos móviles nunca deben usar fuentes para el contenido de la interfaz de usuario que no aparezcan en esta lista.
+**Nota**  Si usas una fuente que no está en esta lista, es posible que la aplicación descargue automáticamente los datos de fuente de un servicio Microsoft. Esto puede tener influencia en el rendimiento y en otros aspectos que pueden ser un problema, especialmente para dispositivos móviles. En particular, ten en cuenta que esto podría consumir parte del plan de datos móviles de un usuario o provocar la aplicación de costos de uso de datos móviles. Las aplicaciones para UWP que estarán disponibles en los dispositivos móviles nunca deben usar fuentes para el contenido de la interfaz de usuario que no aparezcan en esta lista.
 
  
 
@@ -271,11 +268,12 @@ Esta es la lista de fuentes que se garantiza que estarán disponibles en todas l
 
 ## <span id="related_topics"></span>Temas relacionados
 
-
 **Para diseñadores**
 * [Etiqueta (o bloque de texto)](labels.md)
 * [Iconos de Segoe UI Symbol](segoe-ui-symbol-font.md)
-**Para desarrolladores (XAML)**
+            
+          
+            **Para desarrolladores (XAML)**
 * [Recursos de temas en XAML](https://msdn.microsoft.com/library/windows/apps/mt187274)
 * [Diseñar una página de la aplicación](https://msdn.microsoft.com/library/windows/apps/hh872191)
 * [Iconos de Segoe UI Symbol](segoe-ui-symbol-font.md)
@@ -294,6 +292,6 @@ Esta es la lista de fuentes que se garantiza que estarán disponibles en todas l
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

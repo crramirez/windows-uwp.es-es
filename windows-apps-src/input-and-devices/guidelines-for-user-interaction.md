@@ -1,15 +1,16 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción del usuario intuitivas y distintivas que estén optimizadas para entrada táctil, pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada.
 title: Directrices para el diseño de la función táctil
 ms.assetid: 3250F729-4FDD-4AD4-B856-B8BA575C3375
-label: Directrices para el diseño de la función táctil
+label: Touch design guidelines
 template: detail.hbs
 ---
 
 # Directrices para el diseño de la función táctil
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción del usuario intuitivas y distintivas que estén optimizadas para entrada táctil, pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada.
@@ -38,12 +39,7 @@ Al leer estas directrices, descubrirás que la entrada táctil hace necesario un
 
 En la tabla siguiente, se muestran algunas de las diferencias entre los dispositivos de entrada que debes tener en cuenta al diseñar aplicaciones de la Tienda Windows optimizadas para entrada táctil.
 
-Factor
-Interacciones táctiles
-Interacciones con mouse, teclado, pluma/lápiz
-Panel táctil
-Precisión
-El área de contacto de la punta de un dedo es mayor que la de una sola coordenada x-y, lo que aumenta las probabilidades de activación no intencional de comandos.
+Factor Interacciones táctiles Interacciones con mouse, teclado, pluma/lápiz Panel táctil Precisión El área de contacto de la punta de un dedo es mayor que la de una sola coordenada x-y, lo que aumenta las probabilidades de activación no intencional de comandos.
 El mouse y la pluma/lápiz suministran una coordenada x-y precisa.
 Es igual al mouse.
 La forma del área de contacto cambia durante el movimiento.
@@ -52,8 +48,7 @@ Es igual al mouse.
 No hay cursor de mouse para ayudar con la selección del destino.
 El cursor del mouse, el cursor de la pluma/lápiz y el foco del teclado ayudan a seleccionar el destino.
 Es igual al mouse.
-Anatomía humana
-Los movimientos de los dedos no son precisos, ya que es difícil realizar un movimiento en línea recta con uno o más dedos. Esto se debe a la curvatura de las articulaciones de la mano y a la cantidad de articulaciones involucradas en el movimiento.
+Anatomía humana Los movimientos de los dedos no son precisos, ya que es difícil realizar un movimiento en línea recta con uno o más dedos. Esto se debe a la curvatura de las articulaciones de la mano y a la cantidad de articulaciones involucradas en el movimiento.
 Es más fácil ejecutar un movimiento en línea recta con mouse o pluma/lápiz porque la mano que los controla recorre una distancia física menor que el cursor en la pantalla.
 Es igual al mouse.
 Puede ser difícil llegar a algunas áreas de la superficie táctil de un dispositivo de pantalla debido a la posición de los dedos y la sujeción del dispositivo por parte del usuario.
@@ -62,15 +57,13 @@ La posición de los dedos y la empuñadura pueden ser un problema.
 Puede ocurrir que los objetos queden ocultos por la punta de uno o más dedos o la mano del usuario. Esto se conoce como oclusión.
 Los dispositivos de entrada indirecta no provocan oclusión.
 Es igual al mouse.
-Estado del objeto
-La interacción táctil emplea un modelo de dos estados: la superficie táctil de un dispositivo de pantalla se toca (activado) o no se toca (desactivado). No existe un estado de movimiento que pueda desencadenar una respuesta visual adicional.
+Estado del objeto La interacción táctil emplea un modelo de dos estados: la superficie táctil de un dispositivo de pantalla se toca (activado) o no se toca (desactivado). No existe un estado de movimiento que pueda desencadenar una respuesta visual adicional.
 El mouse, la pluma/lápiz y el teclado exponen un modelo de tres estados: arriba (desactivado), abajo (activado) y movimiento (foco).
 
 Al mantener el puntero sobre un elemento, permite que el usuario explore y aprenda mediante informaciones sobre herramientas asociadas con elementos de la interfaz de usuario. Los efectos de foco y mantener el puntero pueden transmitir qué objetos son interactivos y también ayudar a seleccionar el destino.
 
 Es igual al mouse.
-Interacción enriquecida
-Admite multitoque: múltiples puntos de entrada (puntas de los dedos) en una superficie táctil.
+Interacción enriquecida Admite multitoque: múltiples puntos de entrada (puntas de los dedos) en una superficie táctil.
 Admite un punto único de entrada.
 Es igual a la entrada táctil.
 Admite manipulación directa de objetos por medio de gestos como pulsar, arrastrar, deslizar, reducir y girar.
@@ -138,7 +131,7 @@ La oclusión de dedos y manos se evita mediante:
 
 -   Controladores para mayor precisión
 
-    Cuando necesites una mayor precisión (por ejemplo, para la selección de texto), ofrece controladores de selección que se desplacen para mejorar la precisión. Para obtener más información, consulta las [directrices para seleccionar texto e imágenes (aplicaciones de Windows en tiempo de ejecución)](guidelines-for-textselection.md).
+    Cuando necesites una mayor precisión (por ejemplo, para la selección de texto), ofrece controladores de selección que se desplacen para mejorar la precisión. Para obtener más información, consulta las [directrices para seleccionar texto e imágenes (aplicaciones de Windows Runtime)](guidelines-for-textselection.md).
 
 **Intervalos**
 
@@ -159,7 +152,7 @@ Además, te recomendamos lo siguiente:
 -   Las interacciones deben admitir manipulaciones compuestas. Por ejemplo, alejar para ampliar mientras se arrastran los dedos para el movimiento panorámico.
 -   Las interacciones no deben distinguirse temporalmente. La misma interacción debe tener el mismo resultado, independientemente del tiempo que se haya tardado en realizarla. Las activaciones temporales introducen retrasos obligatorios para los usuarios y reducen la naturaleza envolvente de la manipulación directa, así como la percepción de la respuesta del sistema.
 
-    **Nota:** Una excepción a esto se produce cuando se usan interacciones temporales específicas para ayudar en el aprendizaje y la exploración (por ejemplo, pulsar y sostener).
+    **Nota**  Una excepción a esto se produce cuando se usan interacciones temporales específicas para ayudar en el aprendizaje y la exploración (por ejemplo, mantener presionado).
 
      
 
@@ -179,6 +172,6 @@ Además, te recomendamos lo siguiente:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

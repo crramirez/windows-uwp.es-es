@@ -1,24 +1,23 @@
 ---
+author: Jwmsft
 Description: En este artículo se enumeran y se proporcionan instrucciones de uso de los glifos que vienen con la fuente Segoe MDL2 Assets.
 Search.Refinement.TopicID: 184
-title: Directrices de iconos de Segoe MDL2
+title: Directrices para iconos de Segoe MDL2
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
-label: iconos de Segoe MDL2
+label: Segoe MDL2 icons
 template: detail.hbs
 ---
 
 # Directrices para iconos de Segoe MDL2
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+En este artículo se enumeran y se proporcionan instrucciones de uso de los glifos que vienen con la fuente Segoe MDL2 Assets. Para obtener la fuente, debes instalar Windows 10.
 
 **API importantes**
 
 -   [**Enumeración Symbol (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn252842)
 -   [**Enumeración AppBarIcon (HTML)**](https://msdn.microsoft.com/library/windows/apps/hh770557)
 
-En este artículo se enumeran y se proporcionan instrucciones de uso de los glifos que vienen con la fuente Segoe MDL2 Assets. Para obtener la fuente, debes instalar Windows 10.
+
 
 ## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>Recomendaciones
 
@@ -30,7 +29,7 @@ En este artículo se enumeran y se proporcionan instrucciones de uso de los glif
 
 La fuente de iconos **Segoe UI Symbol** de Windows 8/8.1 se ha reemplazado por la fuente **Segoe MDL2 Assets** a partir del lanzamiento de Windows 10. Se puede usar de forma muy parecida a la antigua, pero muchos glifos se han redibujado con el estilo de iconos de Windows 10 y con las medidas establecidas de modo que los iconos queden alineados dentro del cuadrado em de la fuente, y no con la línea base tipográfica.
 
-**Nota**  Un **em** es una unidad de medida de la fuente. En la fuente, 1 em es igual al 100 % del valor de punto especificado a 72 ppp. Por ejemplo 16 puntos es igual a 16 píxeles a 72 ppp (lo que también se conoce como meseta 100 %). Las nuevas fuentes MDL2 están diseñadas para que la superficie del icono sea un cuadrado em. Por lo tanto, si pones 16 píxeles de ancho y alto en el código, obtienes una superficie de icono de 16x16 píxeles. Eso no significa que el icono ocupe siempre esta superficie completa.
+**Nota** Un **em** es una unidad de medida de la fuente. En la fuente, 1 em es igual al 100 % del valor de punto especificado a 72 ppp. Por ejemplo 16 puntos es igual a 16 píxeles a 72 ppp (lo que también se conoce como meseta 100 %). Las nuevas fuentes MDL2 están diseñadas para que la superficie del icono sea un cuadrado em. Por lo tanto, si pones 16 píxeles de ancho y alto en el código, obtienes una superficie de icono de 16x16 píxeles. Eso no significa que el icono ocupe siempre esta superficie completa.
 
  
 
@@ -385,7 +384,7 @@ Agrega más código para crear círculos alrededor de estos glifos.
 
  
 
-## <span id="AppBar_glyphs"></span><span id="appbar_glyphs"></span><span id="APPBAR_GLYPHS"></span>Glifos de la barra de la aplicación
+## <span id="AppBar_glyphs"></span><span id="appbar_glyphs"></span><span id="APPBAR_GLYPHS"></span>Glifos de AppBar
 
 
 Usa glifos de la siguiente lista para una [**AppBar**](https://msdn.microsoft.com/library/windows/apps/br229670). Por convención, las referencias a estos glifos se realizan por su nombre de enumeración. Están diseñados como iconos de 20 x 20 píxeles sin círculo.
@@ -1598,8 +1597,10 @@ Usa glifos de la siguiente lista para una [**AppBar**](https://msdn.microsoft.co
 
 **Para diseñadores**
 * [Directrices sobre fuentes](fonts.md)
-* [W3C: ¿En qué idiomas se escribe de derecha a izquierda?](http://www.i18nguy.com/temp/rtl.mdl)
-**Para desarrolladores (XAML)**
+* [W3C: ¿En qué idiomas se escribe de derecha a izquierda (RTL)?](http://www.i18nguy.com/temp/rtl.mdl)
+            
+          
+            **Para desarrolladores (XAML)**
 * [**Enumeración Symbol**](https://msdn.microsoft.com/library/windows/apps/dn252842)
 
 
@@ -1610,6 +1611,6 @@ Usa glifos de la siguiente lista para una [**AppBar**](https://msdn.microsoft.co
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

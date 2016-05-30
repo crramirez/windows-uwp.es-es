@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: Archivos, carpetas y bibliotecas
 description: Obtén información sobre la lectura y escritura de la configuración de la aplicación, los selectores de archivos y carpetas y las ubicaciones de espacios aislados como, por ejemplo, la biblioteca de vídeos y música.
@@ -40,6 +41,6 @@ Usa las API de los espacios de nombres [Windows.Storage](https://msdn.microsoft.
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

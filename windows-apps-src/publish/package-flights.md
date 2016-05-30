@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Si la aplicación usa los elementos AdMediatorControl o AdControl para mostrar anuncios en banner, puedes aumentar la velocidad de relleno de los anuncios y tus ingresos mostrando anuncios de filiales de Microsoft en la aplicación.
 title: Paquetes piloto
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
@@ -43,9 +44,9 @@ Después de guardar los detalles del paquete piloto, verás la página de inform
 
 Tienes la opción de seleccionar paquetes que estaban asociados con un envío publicado anterior (un envío de versión final, o uno de tus otros paquetes piloto si tienes más de uno). Si necesitas [cargar nuevos paquetes](upload-app-packages.md) para usarlos en este paquete piloto, puedes cargarlos aquí (puedes recurrir al mismo proceso que al cargar paquetes de aplicaciones en un envío de versión final normal). Haz clic en **Guardar** cuando termines de especificar los paquetes que se incluirán en este paquete piloto.
 
-Ten en cuenta que las personas del grupo piloto solo podrán obtener los paquetes que incluyas en el envío de un paquete piloto disponible para ese grupo. No podrán acceder a los paquetes de tu envío de versión final. Asegúrate de proporcionar paquetes para admitir todos los tipos de dispositivo que usen los clientes que obtengan este paquete piloto. En la mayoría de los casos, querrás incluir paquetes que admitan el mismo conjunto de familias de dispositivos compatibles con tu envío de versión final.
+Si la aplicación admite varias familias de dispositivos, asegúrate de que incluir paquetes para admitir el mismo conjunto de familias de dispositivos en tu piloto. Las personas en los grupos piloto **solo** podrán obtener paquetes de ese piloto. No podrán acceder a los paquetes de otros pilotos ni del envío de versión final. 
 
-Recuerda también que tu información de listado de versión final de la Tienda se usa para los clientes de un grupo piloto, incluida la disponibilidad de la familia de dispositivos. Esto significa que si tu envío de versión final no incluye paquetes que admitan una familia de dispositivos determinada, los clientes de tu grupo piloto no podrán descargar la aplicación en ese tipo de dispositivo, aunque incluyas paquetes que admitan esa familia de dispositivos en tu paquete piloto.
+Además, recuerda que la información de la descripción de la Tienda procede de tu envío de versión final, incluidas las familias de dispositivos son compatibles con la aplicación. Los clientes de los grupos piloto solo podrán descargar la aplicación en una familia de dispositivos que sea compatible con el envío de versión final. Para obtener más información, consulta [Compatibilidad con familias de dispositivos](#device-family-support). 
 
 ## Configurar las opciones de paquete piloto adicionales
 
@@ -58,6 +59,16 @@ Cuando hayas especificado los paquetes y hayas configurado las opciones necesari
 Las personas de los grupos piloto asociados con ese paquete piloto que ya tengan tu aplicación, obtendrán ahora una actualización con los paquetes que has incluido en el paquete piloto. Si esas personas todavía no tienen la aplicación, obtendrán los paquetes del paquete piloto cuando la instalen. 
 
 > Nota: aquellas personas que tengan un paquete que solo esté disponible en un paquete piloto, pueden asignar a la aplicación una clasificación de estrellas y dejar opiniones, aunque estas no se mostrarán a otros clientes. (Esto no incluye los paquetes 7.x o 8.0 XAP heredados; otros clientes podrán ver las calificaciones y opiniones que hayan escrito los miembros de tus grupos piloto mediante esos paquetes). Puedes ver los comentarios de todos los clientes, incluyendo aquellos que pertenecen a los grupos piloto, en los informes que encontrarás en la sección Calificaciones y opiniones de la aplicación.
+
+## Compatibilidad con familias de dispositivos
+
+En la mayoría de los casos, querrás incluir paquetes que admitan el mismo conjunto de familias de dispositivos compatibles con tu envío de versión final. La disponibilidad de familias de dispositivos para una aplicación siempre se basará en el envío de versión final, así un cliente esté en un grupo piloto o no.
+
+**Si el envío de versión final admite una familia de dispositivos que no es compatible con tu paquete piloto**, las personas del grupo piloto no podrán descargar la aplicación en esa familia de dispositivos. Por ejemplo, si tu envío de versión final incluye paquetes Mobile y Desktop y luego creas un paquete piloto que solo incluye un paquete Mobile, las personas del grupo piloto solo podrán descargar la aplicación en dispositivos móviles, aunque tengas un paquete de escritorio disponible para los clientes que no están en el piloto. Incluso si solo usas el paquete piloto para probar los cambios en el paquete Mobile, debes incluir el paquete Desktop de tu envío de versión final en el paquete piloto para que los clientes en el grupo piloto puedan descargar la aplicación en dispositivos de escritorio.
+
+**Si el paquete piloto es compatible con una familia de dispositivos que el envío de versión final no admite**, nadie podrá descargar la aplicación en esa familia de dispositivos, así estén en el grupo piloto o no. Por ejemplo, si tu envío de versión final solo incluye un paquete Mobile y luego creas un paquete piloto que incluye paquetes Mobile y Desktop, las personas del grupo piloto aún solo podrán descargar la aplicación en dispositivos móviles. El paquete de escritorio no puede ofrecerse a nadie, incluso a personas del grupo piloto. Si quieres que un paquete de escritorio esté a disposición de las personas del grupo piloto, primero debes actualizar el envío de versión final para que incluya un paquete de escritorio. Para una mejor experiencia para todos los clientes de la aplicación, tu envío de versión final debe admitir las mismas familias de dispositivos que el paquete piloto. 
+
+**Nota**  Los paquetes agregados a los paquetes piloto pueden admitir cualquier versión de sistema operativo (o cualquier compilación de Windows 10), pero, como se indicó anteriormente, las personas en los grupos piloto debe usar un dispositivo con una versión de Windows 10 que admita los paquete piloto (Windows.Desktop compilación 10586 o posterior; Windows.Mobile compilación 10586.63 o posterior) con el fin de obtener paquetes del paquete piloto.
 
 ## Actualizar o modificar el paquete piloto
 
@@ -87,11 +98,11 @@ Ten en cuenta que se aplicarán todas las mismas reglas de validación del paque
 
 ## Eliminar un paquete piloto
 
-Para eliminar un paquete piloto que ya no quieras admitir, haz clic en su nombre desde la página Información general de la aplicación. En la página de información general del grupo piloto, haz clic en **Eliminar paquete piloto**. (Si tienes en curso un envío sin publicar del paquete piloto, tendrás que eliminarlo primero). Para que se complete esta operación, pueden pasar hasta 30 minutos.
+Para eliminar un paquete piloto que ya no quieras admitir, haz clic en su nombre desde la página Información general de la aplicación. En la página de información general del piloto, haz clic en **Modificar** y luego haz clic en el vínculo **Eliminar** para eliminar el paquete piloto. (Si tienes en curso un envío sin publicar del paquete piloto, primero tendrás que eliminar ese envío). Para que se complete esta operación, pueden pasar hasta 30 minutos.
 
-Ten en cuenta que, si eliminas un grupo piloto, los clientes que pertenecían a este obtendrán una actualización de aplicaciones si existe una versión más reciente del paquete que recibieron a través del paquete piloto (o tan pronto como esté disponible un paquete de este tipo). Si desinstalan la aplicación y vuelven a instalarla más tarde, esta se tratará como una nueva adquisición y obtendrán la versión más reciente que esté disponible. 
+Cuando eliminas un paquete piloto, los clientes que tenían paquetes que distribuiste en ese paquete piloto obtendrán una actualización de la aplicación si existe una versión más reciente del paquete (o tan pronto como esté disponible un paquete de este tipo). Si desinstalan la aplicación y vuelven a instalarla más tarde, esta se tratará como una nueva adquisición y obtendrán la versión más reciente que esté disponible. 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

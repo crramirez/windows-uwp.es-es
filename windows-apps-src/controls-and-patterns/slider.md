@@ -1,13 +1,14 @@
 ---
+author: Jwmsft
 Description: Permite al usuario establecer un valor en un intervalo determinado.
 title: Controles deslizantes
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
-label: Controles deslizantes
+label: Sliders
 template: detail.hbs
 ---
 # Controles deslizantes
 
-Un control deslizante es un control que permite que el usuario seleccione entre un intervalo de valores moviendo un control Thumb por una pista.
+Un control deslizante es un control que permite que el usuario seleccione entre un intervalo de valores moviendo un control de posición por una pista.
 
 ![Control deslizante](images/controls/slider.png)
 
@@ -28,10 +29,10 @@ No uses un control deslizante para una configuración binaria. En lugar de ello,
 A continuación encontrarás algunos factores adicionales que deberás tener en cuenta a la hora de decidirte a usar un control deslizante:
 
 -   **¿Parece que el valor de configuración es una cantidad relativa?** Si no es así, usa [botones de radio](radio-button.md) o un [cuadro de lista](lists.md).
--   **¿Es el valor de configuración un valor numérico y conocido?** Si es así, usa un [cuadro de texto](text-box.md) numérico.
--   **¿Sería bueno que el usuario obtuviera una respuesta inmediata sobre el efecto de los cambios realizados a la configuración?** Si es así, usa un control deslizante. Por ejemplo, los usuarios pueden elegir un color más fácilmente si ven de forma inmediata el efecto de los cambios en los valores de matiz, saturación o luminosidad.
+-   **¿Es el valor de configuración un valor numérico exacto y conocido?** Si es así, usa un [cuadro de texto](text-box.md).
+-   **¿Sería bueno que el usuario obtuviera una respuesta inmediata sobre el efecto de los cambios realizados en la configuración?** Si es así, usa un control deslizante. Por ejemplo, los usuarios pueden elegir un color más fácilmente si ven de forma inmediata el efecto de los cambios en los valores de matiz, saturación o luminosidad.
 -   **¿Tiene la configuración un intervalo de cuatro o más valores?** Si no es así, usa [botones de radio](radio-button.md).
--   **¿El usuario puede cambiar el valor?** Los controles deslizantes son para la interacción del usuario. Si un usuario no puede cambiar el valor, usa texto de solo lectura.
+-   **¿Puede el usuario cambiar el valor?** Los controles deslizantes están destinados a la interacción del usuario. Si un usuario no puede cambiar el valor, usa texto de solo lectura.
 
 Si intentas decidir entre un control deslizante y un cuadro de texto numérico, usa el cuadro de texto numérico si:
 
@@ -163,10 +164,12 @@ Al diseñar un control deslizante personalizado, piensa en la manera de presenta
 
 **Para diseñadores**
 - [Directrices sobre modificadores para alternar](toggles.md)
-**Para desarrolladores (XAML)**
+            
+          
+            **Para desarrolladores (XAML)**
 - [**Clase de control deslizante**](https://msdn.microsoft.com/library/windows/apps/br209614)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

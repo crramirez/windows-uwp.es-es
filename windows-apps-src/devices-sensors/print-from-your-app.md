@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: 9A0F1852-A76B-4F43-ACFC-2CC56AAD1C03
-title: Imprimir desde la aplicación
+title: Imprimir desde tu aplicación
 description: Aprende a imprimir documentos desde aplicaciones universales de Windows. En este tema también se muestra cómo imprimir páginas específicas.
 ---
 # Imprimir desde la aplicación
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** API importantes **
@@ -171,7 +172,7 @@ protected virtual void CreatePrintPreviewPages(object sender, PaginateEventArgs 
 
    // We know there are more pages to be added as long as the last RichTextBoxOverflow added to a print preview
    // page has extra content
-   while (lastRTBOOnPage.HasOverflowContent &amp;&amp; lastRTBOOnPage.Visibility == Windows.UI.Xaml.Visibility.Visible)
+   while (lastRTBOOnPage.HasOverflowContent && lastRTBOOnPage.Visibility == Windows.UI.Xaml.Visibility.Visible)
    {
          lastRTBOOnPage = AddOnePrintPreviewPage(lastRTBOOnPage, pageDescription);
    }
@@ -377,6 +378,6 @@ Al imprimir un subconjunto de las páginas, existen varias formas de mostrar el 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

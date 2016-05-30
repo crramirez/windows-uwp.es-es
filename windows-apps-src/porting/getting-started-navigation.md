@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Introducción a la navegación
 description: Introducción a la navegación
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
@@ -73,7 +74,7 @@ También puedes obtener o establecer la propiedad [**CacheSize**](https://msdn.m
 
 Para más información sobre la navegación, consulta [Navegación](https://msdn.microsoft.com/library/windows/apps/mt187344) y [Ejemplo de animaciones de personalidad XAML](http://go.microsoft.com/fwlink/p/?LinkID=242401).
 
-**Nota:** Para obtener información sobre la navegación para aplicaciones de la Tienda Windows con JavaScript y HTML, consulta [Inicio rápido: usar la navegación de una página](https://msdn.microsoft.com/library/windows/apps/hh452768).
+**Nota:**  Para obtener información sobre la navegación para aplicaciones de la Tienda Windows con JavaScript y HTML, consulta [Inicio rápido: usar la navegación de una página](https://msdn.microsoft.com/library/windows/apps/hh452768).
  
 ### Paso siguiente
 
@@ -81,6 +82,6 @@ Para más información sobre la navegación, consulta [Navegación](https://msdn
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

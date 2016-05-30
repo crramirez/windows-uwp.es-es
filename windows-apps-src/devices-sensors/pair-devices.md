@@ -1,18 +1,19 @@
 ---
+author: DBirtolo
 ms.assetid: F8A741B4-7A6A-4160-8C5D-6B92E267E6EA
 title: Emparejar dispositivos
-description: Algunos dispositivos deben estar emparejados antes de poder usarlos. El espacio de nombres Windows.Devices.Enumeration admite tres modos de emparejar dispositivos.
+description: Algunos dispositivos deben estar emparejados para que puedan usarse. El espacio de nombres Windows.Devices.Enumeration admite tres modos de emparejar dispositivos.
 ---
 # Emparejar dispositivos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** API importantes **
 
 -   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
 
-Algunos dispositivos deben estar emparejados antes de que puedan usarse. El espacio de nombres [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) admite tres modos de emparejar dispositivos.
+Algunos dispositivos deben estar emparejados para que puedan usarse. El espacio de nombres [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) admite tres modos de emparejar dispositivos.
 
 -   Emparejamiento automático
 -   Emparejamiento básico
@@ -70,6 +71,6 @@ Para descargar una muestra que te indique cómo usar las API [**Windows.Devices.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

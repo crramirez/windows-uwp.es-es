@@ -1,6 +1,7 @@
 ---
-description: Recupera o crea el contenido web más reciente o popular usando fuentes sindicadas generadas a partir de los estándares de RSS y Atom mediante características del espacio de nombres Windows.Web.Syndication.
-title: Fuentes RSS/Atom
+author: DelfCo
+description: Recupera o crea el contenido web más reciente y popular usando fuentes sindicadas generadas a partir de los estándares de RSS y Atom mediante características del espacio de nombres Windows.Web.Syndication.
+title: Fuentes RSS y Atom
 ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
 ---
 
@@ -85,7 +86,7 @@ var uri = null;
 try {
     uri = new Windows.Foundation.Uri(uriString);
 } catch (error) {
-    WinJS.log &amp;&amp; WinJS.log("Error: Invalid URI");
+    WinJS.log && WinJS.log("Error: Invalid URI");
     return;
 }
 ```
@@ -125,7 +126,7 @@ catch (Exception ex)
 ```
 ```javascript
 function onError(err) {
-    WinJS.log &amp;&amp; WinJS.log(err, "sample", "error");
+    WinJS.log && WinJS.log(err, "sample", "error");
 
     // Match error number with a ErrorStatus value.
     // Use Windows.Web.WebErrorStatus.getStatus() to retrieve HTTP error status codes.
@@ -146,7 +147,7 @@ function retreiveFeed(uri) {
     client.retrieveFeedAsync(uri).done(function (feed) {
         currentFeed = feed;
 
-        WinJS.log &amp;&amp; WinJS.log("Feed download complete.", "sample", "status");
+        WinJS.log && WinJS.log("Feed download complete.", "sample", "status");
 
         var title = "(no title)";
         if (currentFeed.title) {
@@ -255,6 +256,6 @@ Como se sugirió anteriormente, el tipo de contenido representado por un objeto 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,12 +1,13 @@
 ---
+author: jwmsft
 description: Identifica exclusivamente los elementos que se crean y a los cuales se hace referencia como recursos, y que existen dentro de un ResourceDictionary.
 title: Atributo xKey
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
 ---
 
-# atributo x:Key
+# Atributo x:Key
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Identifica exclusivamente los elementos que se crean y a los cuales se hace referencia como recursos, y que existen dentro de un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794).
 
@@ -41,7 +42,7 @@ A continuación se muestra la gramática normativa de una cadena que se usa como
 XamlName ::= NameStartChar (NameChar)*
 NameStartChar ::= LetterCharacter | '_'
 NameChar ::= NameStartChar | DecimalDigit
-LetterCharacter ::= ('a'-'z') | ('A'–'Z')
+LetterCharacter ::= ('a'-'z') | ('A'-'Z')
 DecimalDigit ::= '0'-'9'
 CombiningCharacter::= none
 ```
@@ -64,6 +65,6 @@ Un elemento de un diccionario de recursos puede pasar por alto un valor de **x:K
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

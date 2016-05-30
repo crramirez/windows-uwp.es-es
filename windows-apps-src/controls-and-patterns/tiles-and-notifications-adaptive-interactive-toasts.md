@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: Las notificaciones del sistema adaptables e interactivas permiten crear notificaciones emergentes flexibles con más contenido, imágenes en línea opcionales e interacción del usuario opcional.
 title: Notificaciones del sistema interactivas y adaptables
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
-label: Notificaciones del sistema interactivas y adaptables
+label: Adaptive and interactive toast notifications
 template: detail.hbs
 ---
 
 # Notificaciones del sistema interactivas y adaptables
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Las notificaciones del sistema adaptables e interactivas permiten crear notificaciones emergentes flexibles con más contenido, imágenes en línea opcionales e interacción del usuario opcional.
@@ -20,7 +21,7 @@ El modelo de notificaciones del sistema adaptables e interactivas tiene estas ac
 -   Tres tipos de activación diferentes para la notificación del sistema principal y para cada acción.
 -   La opción de crear una notificación para determinados escenarios, como las llamadas entrantes, avisos y alarmas.
 
-**Nota**   Para ver las plantillas heredadas de Windows 8.1 y Windows Phone 8.1, consulta el [catálogo de plantillas de notificación del sistema heredado](https://msdn.microsoft.com/library/windows/apps/hh761494).
+**Nota** Para ver las plantillas heredadas de Windows 8.1 y Windows Phone 8.1, consulta el [catálogo de plantillas de notificaciones del sistema heredado](https://msdn.microsoft.com/library/windows/apps/hh761494).
 
  
 
@@ -29,9 +30,9 @@ El modelo de notificaciones del sistema adaptables e interactivas tiene estas ac
 
 Las notificaciones del sistema se construyen mediante XML, que normalmente contendría los siguientes elementos clave:
 
--   &lt;visual&gt; cubre el contenido disponible para que los usuarios perciban de forma visual, como texto e imágenes
--   &lt;actions&gt; contiene botones o entradas, que el desarrollador quiere agregar dentro de la notificación
--   &lt;audio&gt; especifica el sonido que se reproduce al aparecer la notificación
+-   &lt;visual&gt; cubre el contenido disponible para que los usuarios perciban de forma visual, como texto e imágenes;
+-   &lt;actions&gt; contiene botones o entradas, que el desarrollador quiere agregar dentro de la notificación;
+-   &lt;audio&gt; especifica el sonido que se reproduce al aparecer la notificación.
 
 Aquí tienes un ejemplo de código:
 
@@ -74,9 +75,9 @@ En las aplicaciones para UWP, puedes agregar botones y otros métodos de entrada
 -   &lt;action&gt; Aparece como un botón en dispositivos móviles y de escritorio. Puedes especificar hasta cinco acciones personalizadas o del sistema dentro de una notificación del sistema.
 -   &lt;input&gt; Esto permite a los usuarios proporcionar datos de entrada, como responder a un mensaje rápidamente o seleccionar una opción en un menú desplegable.
 
-Ambas &lt;action&gt; e &lt;input&gt; adaptables dentro de la familia de dispositivos de Windows. Por ejemplo, en los dispositivos móviles o de escritorio, &lt;action&gt; para un usuario es un botón que se presiona o en el que se hace clic. El texto &lt;input&gt; es un cuadro en el que los usuarios pueden escribir texto mediante un teclado físico o un teclado en pantalla. Estos elementos también se adaptarán a futuros escenarios de interacción, como una acción anunciada por voz o una entrada de texto recogida mediante dictado.
+Ambos elementos &lt;action&gt; e &lt;input&gt; son adaptables dentro de la familia de dispositivos Windows. Por ejemplo, en los dispositivos móviles o de escritorio, &lt;action&gt; para un usuario es un botón que se pulsa o en el que se hace clic. El texto &lt;input&gt; es un cuadro en el que los usuarios pueden escribir texto mediante un teclado físico o un teclado en pantalla. Estos elementos también se adaptarán a futuros escenarios de interacción, como una acción anunciada por voz o una entrada de texto recogida mediante dictado.
 
-Cuando el usuario realiza una acción, puedes realizar una de las siguientes acciones especificando el atributo [**ActivationType**](https://msdn.microsoft.com/library/windows/desktop/dn408447) dentro del elemento &lt;action&gt;:
+Cuando el usuario realiza una acción, puedes realizar una de las siguientes operaciones especificando el atributo [**ActivationType**](https://msdn.microsoft.com/library/windows/desktop/dn408447) dentro del elemento &lt;action&gt;:
 
 -   Activar la aplicación en primer plano con un argumento de acción específica que se puede usar para navegar a un página o un contexto específico.
 -   Activar la tarea en segundo plano de la aplicación sin que ello afecte al usuario.
@@ -101,13 +102,12 @@ Puedes usar las notificaciones del sistema para las alarmas, los recordatorios y
 
 -   Permanecerá en pantalla una notificación del sistema de recordatorio hasta que el usuario la descarte o realice una acción. En Windows Mobile, las notificaciones del sistema de recordatorio también aparecerán previamente expandidas.
 -   Además de compartir los comportamientos anteriores con las notificaciones de recordatorio, las notificaciones de alarma también reproducirán audio en bucle automáticamente.
--   Las notificaciones de llamadas entrantes se muestran en pantalla completa en los dispositivos Windows Mobile. Esto se hace especificando el atributo scenario dentro del elemento raíz de una notificación del sistema (&lt;toast&gt;):
-    &lt;toast scenario=" { default | alarm | reminder | incomingCall } " &gt;
+-   Las notificaciones de llamadas entrantes se muestran en pantalla completa en los dispositivos Windows Mobile. Para hacerlo especifica el atributo de escenario dentro del elemento raíz de una notificación del sistema (&lt;toast&gt;: &lt;toast scenario=" { default | alarm | reminder | incomingCall } ") &gt;
 
 ## <span id="xml_examples"></span><span id="XML_EXAMPLES"></span>Ejemplos de XML
 
 
-**Nota**  Las capturas de pantalla de notificación del sistema de estos ejemplos se tomaron desde una aplicación de escritorio. En los dispositivos móviles, es posible que las notificaciones del sistema aparezcan de forma contraída, con un capturador en la parte inferior de la notificación del sistema para expandirlas.
+**Nota** Las capturas de pantalla de notificación del sistema de estos ejemplos se tomaron desde una aplicación de escritorio. En los dispositivos móviles, es posible que las notificaciones del sistema aparezcan de forma contraída, con un capturador en la parte inferior de la notificación del sistema para expandirlas.
 
  
 
@@ -630,7 +630,7 @@ Para crear acciones individuales para posponer y descartar, haz lo siguiente:
         -   Especifica hint-inputId en la acción de posponer
         -   Haz coincidir el identificador de la entrada con el hint-inputId de la acción de posponer: &lt;input id="snoozeTime"&gt;&lt;/input&gt;&lt;action hint-inputId="snoozeTime"/&gt;
         -   Especifica el identificador de selección para que sea un nonNegativeInteger que represente el intervalo de aplazamiento en minutos: &lt;selection id="240" /&gt; significa pospuesto 4 horas
-        -   Asegúrate de que el valor de defaultInput en &lt;input&gt; coincida con uno de los identificadores de los elementos secundarios de &lt;selection&gt;
+        -   Asegúrate de que el valor de defaultInput en &lt;input&gt; coincida con uno de los identificadores de los elementos secundarios de &lt;selection&gt;.
         -   Proporciona hasta (pero no más de) 5 valores &lt;selection&gt;
 
  
@@ -642,6 +642,6 @@ Para crear acciones individuales para posponer y descartar, haz lo siguiente:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Obtén información sobre cómo puede interactuar un usuario con una aplicación en segundo plano mediante el lienzo y la voz de Cortana durante la ejecución de un comando de voz.
 title: Interactuar con una aplicación en segundo plano
 ms.assetid: 6C60F03C-A242-435D-96BB-736892CC1CA6
@@ -8,8 +9,8 @@ template: detail.hbs
 
 # Interactuar con una aplicación en segundo plano en Cortana
 
+Habilita la interacción del usuario con una aplicación en segundo plano, a través de voz y entrada de texto en el lienzo de **Cortana**, mientras se ejecuta un comando de voz.
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -17,7 +18,6 @@ template: detail.hbs
 -   [**Windows.ApplicationModel.VoiceCommands**](https://msdn.microsoft.com/library/windows/apps/dn706594)
 -   [**Elementos y atributos de Definición de comando de voz (VCD) v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593)
 
-Habilitar la interacción del usuario con una aplicación en segundo plano, a través de voz y entrada de texto en el lienzo de **Cortana**, mientras se ejecuta un comando de voz.
 
 Cortana es compatible con un flujo de trabajo completo paso a paso de la aplicación. Este flujo de trabajo está definido por la aplicación y puede admitir la funcionalidad, como: 
 
@@ -34,12 +34,12 @@ Este tema se basa en [Iniciar una aplicación en segundo plano con los comandos 
 
 Si acabas de empezar a desarrollar aplicaciones de la Plataforma Universal Windows (UWP), consulta estos temas para familiarizarte con las tecnologías presentadas aquí.
 
--   [Crea tu primera aplicación](https://msdn.microsoft.com/library/windows/apps/bg124288)
+-   [Crear tu primera aplicación](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   Encontrarás más información acerca de los eventos, en [Introducción a eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
 **Directrices sobre la experiencia del usuario:  **
 
-Consulta [Directrices para el diseño de Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233) para obtener información sobre cómo integrar tu aplicación con **Cortana** y [Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121) para obtener sugerencias prácticas y diseñar una aplicación habilitada para la voz que sea útil y atractiva.
+Consulta [Directrices para el diseño de Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233) para obtener información sobre cómo combinar tu aplicación con **Cortana** y [Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121) para obtener sugerencias prácticas y diseñar una aplicación habilitada para la voz que sea útil y atractiva.
 
 ## <span id="Feedback_strings"></span><span id="feedback_strings"></span><span id="FEEDBACK_STRINGS"></span>Cadenas de comentarios
 
@@ -472,6 +472,6 @@ var userMessage = new VoiceCommandUserMessage();
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

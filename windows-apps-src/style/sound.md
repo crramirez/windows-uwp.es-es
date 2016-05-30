@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: El sonido ayuda a completar la experiencia de usuario de una aplicación y ofrece el toque de audio extra que se ajusta a la percepción de Windows en todas las plataformas.
 label: Sound
 title: Sonido
@@ -20,12 +21,14 @@ La **ElementSoundPlayer** es un sistema de sonido integrado dentro de XAML y, cu
 ```C#
 ElementSoundPlayer.State = ElementSoundPlayerState.On;
 ```
-La **ElementSoundPlayer** tiene tres estados distintos: **Activado** **Desactivado** y **Automático**.
+**ElementSoundPlayer** tiene tres estados distintos: **Activado** **Desactivado** y **Automático**.
 
 Si se establece en **Desactivado**, independientemente de dónde se ejecute la aplicación, el sonido no se reproducirá nunca. Si se establece en **Activado**, los sonidos de tu aplicación se reproducirán en todas las plataformas.
+
 ### Sonido para televisión y Xbox
-El sonido es una parte fundamental de la experiencia de 10 pies y, de manera predeterminada, el estado de la **ElementSoundPlayer** es **Automático**, lo que significa que solo obtendrás sonido cuando la aplicación se ejecute en Xbox.
-Para obtener más información sobre cómo funcionan los sonidos para la televisión o para Xbox, consulta el artículo [Diseño para Xbox y televisión](http://go.microsoft.com/fwlink/?LinkId=760736).
+
+El sonido es una parte fundamental de la experiencia de 10 pies y, de manera predeterminada, el estado de **ElementSoundPlayer** es **Automático**, lo que significa que solo obtendrás sonido cuando la aplicación se ejecute en Xbox.
+Para obtener más información sobre el diseño para televisión o Xbox, consulta el artículo [Diseño para Xbox y televisión](http://go.microsoft.com/fwlink/?LinkId=760736).
 
 ## Reemplazo del volumen del sonido
 Todos los sonidos de la aplicación se pueden atenuar con el control **Volumen**. Sin embargo, los sonidos de la aplicación no se pueden reproducir a un volumen *más alto que el volumen del sistema*.
@@ -131,6 +134,6 @@ La finalidad de esta característica de recorrido consiste en evitar que los son
 * [Diseño para Xbox y televisión](http://go.microsoft.com/fwlink/?LinkId=760736)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

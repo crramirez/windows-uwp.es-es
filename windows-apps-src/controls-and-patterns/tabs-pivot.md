@@ -1,69 +1,53 @@
 ---
-Description: Las pestañas y las tablas dinámicas permiten a los usuarios navegar entre contenido al que se accede con frecuencia.
-title: Pestañas y tablas dinámicas
+author: Jwmsft
+Description: Las pestañas y los controles dinámicos permiten a los usuarios navegar entre contenido al que se accede con frecuencia.
+title: Pestañas y controles dinámicos
 ms.assetid: 556BC70D-CF5D-4295-A655-D58163CC1824
-label: Pestañas y tablas dinámicas
+label: Tabs and pivots
 template: detail.hbs
 ---
-# Pestañas y tablas dinámicas
+# Control dinámico y pestañas
 
-Las pestañas y los controles dinámicos se usan para navegar por categorías de contenidos distintas y a las que se accede con frecuencia. El patrón de la pestaña/tabla dinámica se compone de dos o más paneles de contenido que tienen los encabezados de categoría correspondientes. Los encabezados se mantienen en pantalla y tienen un estado de selección que se muestra con claridad, para que los usuarios conozcan siempre en qué categoría están.
+Los controles dinámicos y el patrón de pestañas se usan para navegar por categorías de contenido distintas a las que se accede con frecuencia. Los controles dinámicos y las pestañas se componen de dos o más paneles de contenido con encabezados de categoría correspondientes. Los encabezados se mantienen en pantalla y tienen un estado de selección que se muestra con claridad, para que los usuarios conozcan siempre en qué categoría están.
 ![Ejemplos de pestañas](images/HIGSecOne_Tabs.png)
 
-Las pestañas y las tablas dinámicas son efectivamente el mismo patrón y ambos se crean usando el control [**dinámico**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx). La funcionalidad básica del control dinámico se describe más adelante en este artículo.
+Las pestañas son una variante visual de control dinámico y se crean mediante el control [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx). [
+              Una **Muestra de código**
+            ](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlPivot), que indica cómo personalizar el control dinámico está disponible en GitHub.
 
 <span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
 
--   [**Clase Tabla dinámica**](https://msdn.microsoft.com/library/windows/apps/dn608241)
+-   [**Clase Pivot**](https://msdn.microsoft.com/library/windows/apps/dn608241)
 
-## Patrón de pestañas/tablas dinámicas
+## Patrón de pestañas/controles dinámicos
 
-Al crear una aplicación con el patrón de pestañas/tablas dinámicas, hay algunas variables de diseño clave a tener en cuenta en función del conjunto de funciones configurables del patrón.
+Al crear una aplicación con el patrón de pestañas/controles dinámicos, hay algunas variables de diseño importantes a tener en cuenta.
 
-- **Colocación del encabezado.**   Los encabezados pueden colocarse en la parte superior o inferior de la pantalla.
-    
-    **Nota**&nbsp;&nbsp;La colocación de los encabezados en la parte inferior de la pantalla requiere nuevas plantillas del control dinámico.
-- **Etiquetas de encabezado.**  Los encabezados pueden tener un icono con texto, solo texto o solo un icono.
+- **Etiquetas de encabezado.**  Los encabezados pueden tener un icono con texto o solo texto.
 - **Alineación de encabezados.**  Los encabezados pueden dejarse centrados o alineados a la izquierda.
-- **Navegación de nivel inferior o de nivel superior.**  Las pestañas/controles dinámicos pueden usarse para cualquier nivel de navegación y se pueden apilar en un patrón de nivel superior/inferior. Cuando hay dos niveles de las pestañas o tablas dinámicas, los encabezados de nivel superior y de nivel secundario deben tener suficiente diferenciación visual para que los usuarios puedan separar claramente los dos.
+- **Navegación de nivel inferior o de nivel superior.**  Las pestañas o los controles dinámicos se pueden usar para cualquier nivel de navegación. Opcionalmente, el [panel de navegación](nav-pane.md) puede servir como nivel principal con pestañas o controles dinámicos que actúen como secundarios.
 - **Compatibilidad con gestos táctiles.**  En los dispositivos que admiten los gestos táctiles, puedes usar uno de los dos conjuntos de interacción para navegar entre las categorías de contenido:
-    1. Toca un encabezado de pestaña/tabla dinámica para navegar a esa categoría o pasa el dedo por el área de contenido para navegar a la categoría adyacente.
-    2. Toca un encabezado de pestaña/tabla dinámica para navegar a esa categoría (sin pasar el dedo).
-
-### Configuraciones de patrón
-
-La disposición óptima del patrón de pestaña/tabla dinámica depende del escenario de interacción y los dispositivos en los que aparecerá la aplicación. En esta tabla se describen algunos de los escenarios y configuraciones de patrón principales.
-
-Escenario de interacción|Configuración recomendada
---------------------|-------------------------
-Desplazarse lateralmente entre 2 y 5 categorías de contenido de la vista de cuadrícula o de lista de nivel superior en un teléfono o en un tabléfono|Pestaña/tablas dinámicas: se colocan en la parte superior de la pantalla, centradas
-|Etiquetas de encabezado: iconos y texto
-|Pasa el dedo por el área de contenido: habilitado
-Desplazamiento entre una variedad de categorías de contenido en un teléfono o un tabléfono en el que pasar el dedo por un área de contenido no es práctico para la navegación|Pestaña/tablas dinámicas: se colocan en la parte inferior de la pantalla, centradas
-|Etiquetas de encabezado: iconos y texto
-|Pasa el dedo por el área de contenido: deshabilitado
-Navegación de nivel superior con un mouse y un teclado|Pestaña/tablas dinámicas: se colocan en la parte superior de la pantalla, alineadas a la izquierda
- *o bien*|Etiquetas de encabezado: solo texto
- Navegación de nivel de página en un dispositivo táctil|Pasa el dedo por el área de contenido: deshabilitado
+    1. Toca un encabezado de pestaña/control dinámico para navegar a esa categoría.
+    2. Desplázate hacia la izquierda o la derecha en el área de contenido para navegar a la categoría adyacente.
 
 ## Ejemplos
 
-Este diseño de una aplicación de camiones de venta de alimentos muestra el aspecto que puede tener el colocar encabezados de pestañas/tablas dinámicas en la parte superior o inferior. En los dispositivos móviles, colocarlos en la parte inferior funciona bien para la accesibilidad.
+Control dinámico predeterminado en los recordatorios de Cortana.
 
-![Ejemplo de pestañas en un dispositivo móvil](images/uap_foodtruck_phone_320_tabsboth.png)
+![Ejemplo de control dinámico en los recordatorios de Cortana](images/pivot_cortana-reminders.png)
 
-Diseño de aplicación de camiones de venta de alimentos en encabezados de solo texto de funciones de portátiles o equipos de escritorio. El uso de iconos con texto para los encabezados ayuda con la selección táctil del destino, pero para el mouse y el teclado, los encabezados de solo texto funcionan correctamente.
+Patrón de pestañas en la aplicación Alarmas y reloj.
 
-![Ejemplo de pestañas en el escritorio](images/uap_foodtruck_desktop_home_700.png)
+![Ejemplo de pestañas en Alarmas y reloj](images/tabs_alarms-and-clock.png)
 
 ## Crear un control dinámico
 
-El patrón de navegación de la pestaña/tabla dinámica se crea mediante el control [**dinámico**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx). El control incluye la funcionalidad básica que se describe en esta sección.
+El control [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) incluye la funcionalidad básica que se describe en esta sección.
 
 Este XAML crea un control dinámico básico con 3 secciones de contenido.
 
 ```xaml
-<Pivot x:Name="rootPivot" Title="PIVOT TITLE">
+<Pivot x:Name="rootPivot" Title="Pivot Title">
     <PivotItem Header="Pivot Item 1">
         <!--Pivot content goes here-->
         <TextBlock Text="Content of pivot item 1."/>
@@ -79,54 +63,51 @@ Este XAML crea un control dinámico básico con 3 secciones de contenido.
 </Pivot>
 ```
 
-**Elementos de tabla dinámica**
+### Elementos de tabla dinámica
 
 La tabla dinámica es un [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx), de modo que puede contener una colección de elementos de cualquier tipo. Cualquier elemento que agregues a la tabla dinámica que no sea explícitamente un [**PivotItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivotitem.aspx) se encapsula implícitamente en un PivotItem. Dado que una tabla dinámica a menudo se usa para navegar entre páginas de contenido, es común para rellenar la colección [**Elementos**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.items.aspx) directamente con los elementos de la interfaz de usuario de XAML. O puedes establecer la propiedad [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) en un origen de datos. Los elementos enlazados en ItemsSource pueden ser de cualquier tipo, pero si no son explícitamente PivotItems, debes definir una [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) y [**HeaderTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.headertemplate.aspx) para especificar cómo se muestran los elementos.
 
-Puedes usar la propiedad [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.selecteditem.aspx) para obtener o configurar el elemento activo de la tabla dinámica. Usa la propiedad [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.selectedindex.aspx) para obtener o configurar el índice del elemento activo. 
+Puedes usar la propiedad [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.selecteditem.aspx) para obtener o configurar el elemento activo de la tabla dinámica. Usa la propiedad [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.selectedindex.aspx) para obtener o configurar el índice del elemento activo.
 
-**Encabezados dinámicos**
+### Encabezados dinámicos
 
-Puedes usar las propiedades [**LeftHeader**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.leftheader.aspx) y [**RightHeader**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.rightheader.aspx) para agregar otros controles al encabezado dinámico. 
+Puedes usar las propiedades [**LeftHeader**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.leftheader.aspx) y [**RightHeader**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.rightheader.aspx) para agregar otros controles al encabezado dinámico.
 
 ### Interacción dinámica
 
 El control ofrece estas interacciones de gestos táctiles:
 
--   Tocar un encabezado permite navegar al contenido de la sección de dicho encabezado.
--   Pasar el dedo a la izquierda o la derecha en un encabezado permite navegar a la sección/encabezado adyacente.
--   Pasar el dedo a la izquierda o la derecha en el contenido de una sección permite navegar a la sección/encabezado adyacente.
+-   Tocar un encabezado de elemento de control dinámico permite navegar al contenido de la sección de dicho encabezado.
+-   Pasar el dedo a la izquierda o la derecha en un encabezado de elemento de control dinámico permite navegar a la sección adyacente.
+-   Pasar el dedo a la izquierda o la derecha en el contenido de una sección permite navegar a la sección adyacente.
 
 El control tiene dos modos:
 
 **Inmóvil**
 
--   Las tablas dinámicas están inmóviles cuando todos los encabezados de tablas dinámicas caben en el espacio permitido.
+-   Los controles dinámicos están inmóviles cuando todos los encabezados de control dinámico caben en el espacio permitido.
 -   Al tocar una etiqueta de tabla dinámica se navega a la página correspondiente, aunque no se moverá la propia tabla dinámica. La tabla dinámica activa se destacará.
 
 **Carrusel**
 
 -   Las tablas dinámicas giran cuando no caben todos los encabezados de tabla dinámica dentro del espacio permitido.
--   Al tocar una etiqueta de tabla dinámica se navega a la página correspondiente y, a continuación, la etiqueta de la tabla dinámica girará a la primera posición.
-
-El control tiene funcionalidad integrada de punto de interrupción, que se basa en el número de encabezados y la longitud de cadena de las etiquetas.
+-   Al tocar una etiqueta de control dinámico se navega a la página correspondiente y, después, la etiqueta de control dinámico activa gira a la primera posición.
+-   Gira elementos en un bucle de carrusel de la última a la primera sección de control dinámico.
 
 ## Recomendaciones
 
--   Basar la alineación de los encabezados de la pestaña/tabla dinámica en el tamaño de la pantalla. Para tamaños de pantalla inferiores a 720 epx, normalmente funciona mejor la alineación al centro, mientras que en la mayoría de casos se recomienda la alineación a la izquierda para anchos de pantalla superiores a 720 epx.
--   Durante el escalado de una ventana, una vez que el número de encabezados de pestañas/tablas dinámicas supere el espacio disponible, empieza a insertar encabezados en el área de desbordamiento.
--   Las pestañas/tablas dinámicas se pueden usar en cualquier orientación de la pantalla, pero asegúrate de mantener el mismo número total de encabezados (visibles y ocultos) en las orientaciones horizontal y vertical.
--   Evita usar más de 5 encabezados cuando uses el modo de carrusel (ida y vuelta), ya que tener más de 5 puede provocar que el usuario pierda la orientación.
--   En los dispositivos móviles, colocar pestañas/tablas dinámicas en la parte inferior es adecuado para la accesibilidad, si se usa la acción de pasar el dedo en otra parte de la interfaz de usuario y para evitar una interfaz de usuario pesada.
--   Cuando se implementa el teclado en pantalla, los encabezados pueden salir de la pantalla para conservar espacio.
+-   Basa la alineación de los encabezados de pestaña/control dinámico en el tamaño de la pantalla. Para tamaños de pantalla inferiores a 720 epx, normalmente funciona mejor la alineación al centro, mientras que en la mayoría de casos se recomienda la alineación a la izquierda para anchos de pantalla superiores a 720 epx.
+-   Evita usar más de 5 encabezados cuando uses el modo de carrusel (ida y vuelta), ya que un bucle de más de 5 puede resultar confuso.
+-   Usa el patrón de pestañas solo si los elementos de control dinámico tienen iconos diferentes.
+-   Incluye texto en los encabezados de elementos de control dinámico para ayudar a los usuarios a comprender el significado de cada sección de control dinámico. Los iconos no son necesariamente descriptivos para todos los usuarios.
 
-\[Este artículo contiene información específica de las aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## Temas relacionados
 
 [Conceptos básicos de diseño de la navegación](https://msdn.microsoft.com/library/windows/apps/dn958438)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

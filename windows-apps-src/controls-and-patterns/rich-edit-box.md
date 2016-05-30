@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Puedes usar un control RichEditBox para escribir y editar documentos de texto enriquecido que contengan texto con formato, hipervínculos e imágenes. Puedes hacer que RichEditBox sea de solo lectura si estableces la propiedad IsReadOnly en true.
 title: RichEditBox
 ms.assetid: 4AFC0DFA-3B89-434D-9F86-4309CCFF7839
-label: Cuadro de texto enriquecido
+label: Rich edit box
 template: detail.hbs
 ---
 # Cuadro de texto enriquecido
@@ -193,7 +194,7 @@ Para más información sobre cómo usar los ámbitos de entrada, consulta [Usar 
 
 
 
-\[Este artículo contiene información específica para aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
 ## Artículos relacionados
 
@@ -209,10 +210,7 @@ Para más información sobre cómo usar los ámbitos de entrada, consulta [Usar 
 - [**Clase Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 
 
-**Para desarrolladores (otros)**
-- [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

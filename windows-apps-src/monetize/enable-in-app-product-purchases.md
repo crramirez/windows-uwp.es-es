@@ -1,13 +1,6 @@
 ---
-Description: Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación.
-title: Habilitar compras de productos desde la aplicación
-ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
-keywords: oferta desde la aplicación
-keywords: compra desde la aplicación
-keywords: producto desde la aplicación
-keywords: cómo ofrecer soporte técnico en la aplicación
-keywords: muestra de código de compra desde la aplicación
-keywords: muestra de código de oferta desde la aplicación
+author: mcleanbyron Description: Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación.
+title: Habilita las compras de productos desde la aplicación ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B keywords: oferta desde la aplicación keywords: compra desde la aplicación keywords: producto desde la aplicación keywords: cómo ofrecer soporte técnico en la aplicación keywords: muestra de código de compra desde la aplicación keywords: muestra de código de oferta desde la aplicación
 ---
 
 # Habilitar compras de productos desde la aplicación
@@ -16,12 +9,12 @@ keywords: muestra de código de oferta desde la aplicación
 
 Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación.
 
-**Nota** Los productos desde la aplicación no pueden ofrecerse durante la versión de prueba de una aplicación. Los clientes que usan una versión de prueba de la aplicación solamente pueden comprar un producto desde la aplicación si compran una versión completa de la misma.
+**Nota**  Los productos desde la aplicación no pueden ofrecerse durante la versión de prueba de una aplicación. Los clientes que usan una versión de prueba de la aplicación solamente pueden comprar un producto desde la aplicación si compran una versión completa de la misma.
 
 ## Requisitos previos
 
 -   Una aplicación de Windows en la que se puedan agregar características que los clientes pueden comprar.
--   Cuando codificas y pruebas nuevos productos desde la aplicación por primera vez, debes usar el objeto [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) en lugar del objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765). De esta manera, puedes comprobar la lógica de la licencia con llamadas simuladas al servidor de licencias, en lugar de llamar al servidor activo. Para ello, debes personalizar el archivo llamado "WindowsStoreProxy.xml" en %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. El simulador de Microsoft Visual Studio crea este archivo la primera vez que ejecutas la aplicación, aunque también puedes cargar un archivo personalizado en tiempo de ejecución. Para obtener más información, consulta [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766).
+-   Cuando codificas y pruebas nuevos productos desde la aplicación por primera vez, debes usar el objeto [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) en lugar del objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765). De esta manera, puedes comprobar la lógica de la licencia con llamadas simuladas al servidor de licencias, en lugar de llamar al servidor activo. Para ello, debes personalizar el archivo llamado "WindowsStoreProxy.xml" in %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. El simulador de Microsoft Visual Studio crea este archivo la primera vez que ejecutas la aplicación, aunque también puedes cargar un archivo personalizado en tiempo de ejecución. Para obtener más información, consulta [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766).
 -   Este tema también hace referencia a los ejemplos de código que se proporcionan en la [muestra de la Tienda](http://go.microsoft.com/fwlink/p/?LinkID=627610). Esta muestra es ideal para conseguir experiencia práctica con las diferentes opciones de monetización que se proporcionan para las aplicaciones para la Plataforma universal de Windows (UWP).
 
 ## Paso 1: Inicializa la información de licencia para la aplicación
@@ -48,7 +41,7 @@ void AppInit()
 
 Para cada función que quieras tener disponible a través de un producto desde la aplicación, crea una oferta y agrégala a la aplicación.
 
-**Importante** Debes agregar todos los productos desde la aplicación que quieras presentar a tus clientes antes de enviarlos a la Tienda. Si deseas agregar nuevos productos en la aplicación más adelante, tendrás que actualizar la aplicación y enviar una nueva versión.
+**Importante**  Debes agregar todos los productos desde la aplicación que quieras presentar a tus clientes antes de enviarlos a la Tienda. Si deseas agregar nuevos productos en la aplicación más adelante, tendrás que actualizar la aplicación y enviar una nueva versión.
 
 1.  **Crea un token de oferta desde la aplicación**
 
@@ -136,6 +129,6 @@ Si necesitas usar recibos para comprobar que el usuario ha realizado una compra 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

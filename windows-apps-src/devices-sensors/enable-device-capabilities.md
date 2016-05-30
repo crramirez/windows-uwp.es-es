@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 949D1CE0-DD7D-420E-904D-758FADEBE85A
 title: Habilitar funcionalidades de dispositivos
 description: Este tutorial describe cómo declarar funcionalidades del dispositivo en Microsoft Visual Studio. Esta opción permite que la aplicación use cámaras, micrófonos, sensores de ubicación y otros dispositivos.
@@ -24,7 +25,7 @@ Algunos tipos de dispositivos como, por ejemplo, las impresoras, los escáneres 
 
 | Funcionalidad del dispositivo | Diseñador de manifiestos | Descripción |
 |-------------------|-------------------|-------------|    
-| All Joyn | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Permite que los dispositivos y las aplicaciones habilitadas para AllJoyn se detecten e interactúen entre sí. Todas las aplicaciones que tienen acceso a las API del espacio de nombres [**Windows.Devices.AllJoyn**](https://msdn.microsoft.com/library/windows/apps/Dn894971) deben usar esta funcionalidad. |
+| AllJoyn | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Permite que los dispositivos y las aplicaciones habilitadas para AllJoyn se detecten e interactúen entre sí. Todas las aplicaciones que tienen acceso a las API del espacio de nombres [**Windows.Devices.AllJoyn**](https://msdn.microsoft.com/library/windows/apps/Dn894971) deben usar esta funcionalidad. |
 | Mensajes de chat bloqueados | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Permite que las aplicaciones lean mensajes SMS y MMS bloqueados por la aplicación de filtro de correo no deseado. |
 | Acceso a mensajes de chat | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Permite que las aplicaciones lean y eliminen mensajes de texto. Esta funcionalidad también permite a las aplicaciones almacenar los mensajes de chat en el almacén de datos del sistema. |
 | Generación de código | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Permite que las aplicaciones generen código de forma dinámica. |
@@ -57,7 +58,7 @@ La siguiente tabla conecta algunas de las funcionalidades a las API de Windows R
 
 | Funcionalidad del dispositivo        | API             | 
 |--------------------------|-----------------|
-| All Joyn                 | [**Windows.Devices.AllJoyn**](https://msdn.microsoft.com/library/windows/apps/Dn894971) | 
+| AllJoyn                  | [**Windows.Devices.AllJoyn**](https://msdn.microsoft.com/library/windows/apps/Dn894971) | 
 | Mensajes de chat bloqueados    | [**Windows.ApplicationModel.CommunicationBlocking**](https://msdn.microsoft.com/library/windows/apps/Dn974207) | 
 | Ubicación                 | Consulta [Introducción a ubicación y mapas](https://msdn.microsoft.com/library/windows/apps/Mt219699) para obtener más información. | 
 | Llamada de teléfono               | [**Windows.ApplicationModel.Calls**](https://msdn.microsoft.com/library/windows/apps/Dn297266) | 
@@ -71,6 +72,6 @@ La siguiente tabla conecta algunas de las funcionalidades a las API de Windows R
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

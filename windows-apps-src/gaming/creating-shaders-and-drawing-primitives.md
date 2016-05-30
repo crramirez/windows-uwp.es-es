@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Crear sombreadores y dibujar primitivos
 description: Aquí te mostramos cómo usar archivos de origen HLSL para compilar y crear sombreadores que luego podrás usar para dibujar primitivos en la pantalla.
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
@@ -22,7 +23,7 @@ Suponemos que estás familiarizado con C++. También necesitas tener experiencia
 
 Suponemos además que has consultado [Inicio rápido: configurar recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md).
 
-**Tiempo en completarse:** 20 minutos.
+**Tiempo para completarlo:** 20 minutos.
 
 ## Instrucciones
 
@@ -290,6 +291,6 @@ A continuación, crearemos un cubo 3D en órbita y le aplicaremos efectos de ilu
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

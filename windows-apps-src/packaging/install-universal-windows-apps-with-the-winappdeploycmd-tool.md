@@ -1,7 +1,8 @@
 ---
+author: msatranjr
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: Instalar aplicaciones con la herramienta WinAppDeployCmd.exe
-description: Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para la Plataforma universal de Windows (UWP) de un equipo con Windows 10 en cualquier dispositivo con Windows 10 Mobile.
+description: Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para la Plataforma universal de Windows (UWP) de un equipo con Windows 10 en cualquier dispositivo con Windows 10 Mobile.
 ---
 # Instalar aplicaciones con la herramienta WinAppDeployCmd.exe
 
@@ -107,6 +108,6 @@ WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Depurar una tarea en segundo plano
 description: Aprende a depurar una tarea en segundo plano, incluida la activación y el seguimiento de depuración de la tarea en segundo plano en el registro de eventos de Windows.
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
@@ -68,8 +69,8 @@ La activación de la tarea en segundo plano depende de que tres elementos coinci
     Si sigues este procedimiento y el registro de eventos muestra un punto de entrada o un desencadenador incorrecto para la tarea en segundo plano, la aplicación no está registrando la tarea en segundo plano correctamente. Para obtener ayuda con esta tarea, consulta [Registrar una tarea en segundo plano](register-a-background-task.md).
 
     1.  Abre el visor de eventos; para ello, ve a la pantalla Inicio y busca eventvwr.exe.
-    2.  Ve a **Registros de aplicaciones y servicios** -&gt; **Microsoft** -&gt; **Windows** -&gt; **BackgroundTaskInfrastructure** en el visor de eventos.
-    3.  En el panel de acciones, selecciona **Vista** -&gt; **Mostrar registros analíticos y de depuración** para habilitar el inicio de sesión.
+    2.  Ve a **Registros de aplicaciones y servicios** -&gt;**Microsoft** -&gt;**Windows** -&gt;**BackgroundTaskInfrastructure** en el visor de eventos.
+    3.  En el panel de acciones, selecciona **Vista** -&gt;**Mostrar registros analíticos y de depuración** para habilitar el inicio de sesión.
     4.  Selecciona el **Registro de diagnóstico** y haz clic en **Habilitar registro**.
     5.  Ahora, intenta usar tu aplicación para registrar y activar de nuevo la tarea en segundo plano.
     6.  Consulta los registros de diagnóstico para obtener información detallada del error. Esto incluirá el punto de entrada registrado para la tarea en segundo plano.
@@ -112,6 +113,6 @@ Para obtener más información acerca de cómo usar VS para depurar una tarea en
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

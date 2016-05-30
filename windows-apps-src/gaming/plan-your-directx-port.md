@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Planear la migración de DirectX
 description: Planea un proyecto para migrar un juego de DirectX 9 a DirectX 11 y a la Plataforma universal de Windows (UWP): actualiza el código de gráficos y coloca el juego en el entorno de Windows Runtime.
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
@@ -62,6 +63,6 @@ Hay dos conceptos que usarás con frecuencia:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

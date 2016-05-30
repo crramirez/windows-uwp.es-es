@@ -1,10 +1,11 @@
 ---
+author: jnHs
 Description: El informe Clasificaciones del panel del Centro de desarrollo de Windows te permite ver la distribución de cómo los clientes clasifican la aplicación en la Tienda Windows.
-title: Informe de clasificaciones
+title: Informe Clasificaciones
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
 ---
 
-# Informe de clasificaciones
+# Informe Clasificaciones
 
 
 El informe **Clasificaciones** del panel del Centro de desarrollo de Windows te permite ver la distribución de cómo los clientes clasifican la aplicación en la Tienda Windows. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
@@ -40,7 +41,7 @@ El gráfico **Clasificaciones nuevas y revisadas** muestra el número de clasifi
 -   **Clasificaciones nuevas** son clasificaciones que los clientes han enviado y que no han cambiado.
 -   **Clasificaciones revisadas** son clasificaciones que el cliente ha cambiado.
 
->**Nota**  Una clasificación aparecerá aquí como revisada incluso si el cliente solo cambió o agregó el texto o título de la crítica y dejó igual la clasificación.
+>**Nota** Una clasificación aparecerá aquí como revisada incluso si el cliente solo cambió o agregó el texto o el título de la crítica y dejó igual la clasificación.
 
 ## Clasificación promedio con el tiempo
 
@@ -56,17 +57,17 @@ Si has filtrado la información por **Últimos 30 días** o **Últimos 3 meses**
 
 El gráfico **Mercados** muestra la clasificación promedio y el número de clasificaciones durante el período de tiempo seleccionado por mercado.
 
-> **Nota**  Si has usado **Filtros de página** para especificar un mercado concreto, no verás este gráfico en el informe **Clasificaciones**. Para ver el gráfico, cambia **Filtros de página** para mostrar todos los mercados.
+> **Nota** Si usaste **Filtros de página** para especificar un mercado concreto, no verás este gráfico en el informe **Clasificaciones**. Para ver el gráfico, cambia **Filtros de página** para mostrar todos los mercados.
 
 De manera predeterminada, mostramos el mercado que tenía más críticas y se sigue en orden descendente, pero puede invertir el orden alternando la flecha situada en la columna **Número de clasificaciones** del gráfico. También puedes ordenar los datos por **Clasificación promedio** o **Mercado** haciendo clic en las columnas.
 
-> **Nota**  Es probable que veas un número diferente de clasificaciones al comparar el informe **Clasificaciones** del Centro de desarrollo de Windows con el informe Opiniones de la aplicación móvil más antigua del Centro de desarrollo. Esto se debe a que la aplicación solo muestra los datos de las opiniones que dejaron los clientes en Windows Phone 8.1 y versiones anteriores. También puede ser que Microsoft haya eliminado opiniones de la Tienda Windows que se identificaron como spam, inadecuadas, ofensivas o que infringían las directivas de otra forma. Esperamos que esta acción dé como resultado una mejor experiencia del cliente.
+> **Nota** Es probable que veas un número diferente de clasificaciones al comparar el informe **Clasificaciones** del Centro de desarrollo de Windows con el informe Críticas de la aplicación móvil más antigua del Centro de desarrollo. Esto se debe a que la aplicación solo muestra los datos de las opiniones que dejaron los clientes en Windows Phone 8.1 y versiones anteriores. También puede ser que Microsoft haya eliminado opiniones de la Tienda Windows que se identificaron como spam, inadecuadas, ofensivas o que infringían las directivas de otra forma. Esperamos que esta acción dé como resultado una mejor experiencia del cliente.
 
  
 
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

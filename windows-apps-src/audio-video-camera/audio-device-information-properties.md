@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 3b75d881-bdcf-402b-a330-23cd29d68e53
 description: En este artículo se enumeran las propiedades DeviceInformation relacionadas con dispositivos de audio.
 title: Propiedades de información de dispositivo de audio
@@ -26,6 +27,6 @@ Para obtener información general sobre la enumeración de dispositivos en Windo
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

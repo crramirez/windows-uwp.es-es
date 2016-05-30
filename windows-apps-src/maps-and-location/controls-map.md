@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 Description: En el control de mapa se pueden mostrar mapas y vistas aéreas, indicaciones, resultados de búsqueda y el estado del tráfico.
 title: Directrices para mapas
 ms.assetid: 7B5B6BC9-D1EC-4978-8876-20B78EF44797
@@ -7,7 +8,7 @@ ms.assetid: 7B5B6BC9-D1EC-4978-8876-20B78EF44797
 # Directrices para mapas
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En el control de mapa se pueden mostrar mapas de carreteras, vistas aéreas en 3D, indicaciones, resultados de la búsqueda y el estado del tráfico. En un mapa se pueden mostrar indicaciones, puntos de interés y la ubicación del usuario. También se pueden mostrar vistas aéreas en 3D, vistas Streetside, el estado del tráfico y del transporte público y negocios locales.
@@ -68,6 +69,6 @@ En este ejemplo se muestra una aplicación con una vista aérea 3D y una vista S
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,22 +1,18 @@
 ---
-Description: Amplía las cualidades de Cortana con las funciones proporcionadas por la aplicación mediante comandos de voz.
+author: Karl-Bridge-Microsoft
+Description: Amplía las cualidades de Cortana con las funciones proporcionadas por la aplicación, mediante comandos de voz.
 title: Directrices para el diseño de Cortana
 ms.assetid: A92C084B-9913-4718-9A04-569D51ACE55D
-label: Instrucciones
+label: Guidelines
 template: detail.hbs
 ---
 
 # Directrices para el diseño de Cortana
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-
-
 Estas directrices y recomendaciones describen cómo la aplicación puede usar mejor **Cortana** para interactuar con el usuario, ayudarle a realizar una tarea y comunicar claramente lo que está sucediendo.
 
-**Cortana** permite que las aplicaciones que se ejecutan en segundo plano pidan al usuario desambiguación o confirmación y, a cambio, proporcionan comentarios al usuario sobre el estado del comando de voz. El proceso es ligero, rápido y no obliga al usuario a dejar la experiencia de **Cortana** o cambiar el contexto a la aplicación.
+**Cortana** permite que las aplicaciones se ejecuten en segundo plano para pedir al usuario desambiguación o confirmación y proporcionarle a cambio comentarios sobre el estado del comando de voz. El proceso es ligero, rápido y no obliga al usuario a dejar la experiencia de **Cortana** o cambiar el contexto a la aplicación.
 
 Aunque el usuario debe sentir que **Cortana** le ayuda a que el proceso sea lo más ligero y fácil posible, es probable que quieras que **Cortana** también deje claro que es tu aplicación la que lleva a cabo la tarea.
 
@@ -109,7 +105,7 @@ Usa alguna variación en las respuestas, dándoles la vuelta o seleccionándolas
 ## <span id="Localization_"></span><span id="localization_"></span><span id="LOCALIZATION_"></span>Localización
 
 
-Para iniciar una acción mediante un comando de voz, la aplicación debe registrar los comandos de voz en el idioma que el usuario seleccionó en su dispositivo (Configuración &gt; Sistema &gt; Speech &gt; Idioma de voz).
+Para iniciar una acción mediante un comando de voz, la aplicación debe registrar los comandos de voz en el idioma que el usuario seleccionó en su dispositivo (Configuración &gt; &gt; Voz &gt; Idioma de voz).
 
 Se deben localizar los comandos de voz a los que la aplicación responde y todas las cadenas de TTS y de la interfaz gráfica de usuario.
 
@@ -133,25 +129,43 @@ Se recomienda que marques el idioma predeterminado en los archivos de recursos d
 **Importante**  
 El icono de la aplicación usado en el área de título del lienzo de Cortana es el icono Square44x44Logo especificado en el archivo "Package.appxmanifest". 
 
-También puedes especificar un icono para cada resultado de una consulta que se muestra en el área de contenido del lienzo de Cortana. Los tamaños de imagen válidos para los iconos de resultados son:
+También puedes especificar un icono para cada icono de resultado de una consulta del usuario. Los tamaños de imagen válidos para los iconos de resultados son:
 
 -   68 (ancho) x 68 (alto)
 -   68 (ancho) x 92 (alto)
 -   280 (ancho) x 140 (alto)
 
+## <span id="Result_tile_templates"></span><span id="result_tile_templates"></span><span id="RESULT_TILE_TEMPLATES"></span>Plantillas de icono de resultado
+
+Se proporciona un conjunto de plantillas para los iconos de resultado que se muestra en el lienzo de Cortana. Usa estas plantillas para especificar el título del icono y si el icono incluye texto y una imagen de icono de resultado. Cada icono puede incluir un máximo de tres líneas de texto y una imagen, dependiendo de la plantilla especificada.
+
+Estas son las plantillas compatibles (con ejemplos):
+
+| Nombre | Ejemplo |
+| --- | --- |
+| Solo el título  | ![Solo el título](images/cortana/voicecommandcontenttiletype_titleonly_small.png) |
+| Título con texto   | ![Título con texto](images/cortana/voicecommandcontenttiletype_titlewithtext_small.png) |
+| Título con icono 68 x 68   | sin imagen |
+| Título con icono 68 x 68 y texto   | ![Título con icono 68 x 68 y texto](images/cortana/voicecommandcontenttiletype_titlewith68x68iconandtext_small.png) |
+| Título con icono 68 x 92   | sin imagen |
+| Título con icono 68 x 92 y texto    | ![Título con icono 68 x 92 y texto](images/cortana/voicecommandcontenttiletype_titlewith68x92iconandtext_small.png) |
+| Título con icono 280 x 140   | sin imagen |
+| Título con icono 280 x 140 y texto    | ![Título con icono 280 x 140 y texto](images/cortana/voicecommandcontenttiletype_titlewith280x140iconandtext_small.png) |
+
+Para obtener más información sobre las plantillas de Cortana, consulta [VoiceCommandContentTileType](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandcontenttiletype.aspx).
 
 ## <span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Ejemplo
 
 
-Este ejemplo muestra un flujo de tareas integral para una aplicación en segundo plano en **Cortana**. Estamos usando la aplicación **Adventure Works** para cancelar un viaje a Las Vegas.
+Este ejemplo muestra un flujo de tareas integral para una aplicación en segundo plano en **Cortana**. Estamos usando la aplicación **Adventure Works** para cancelar un viaje a Las Vegas. En este ejemplo se usa la plantilla "Título con icono 68 x 68 y texto".
 
-![flujo de aplicaciones en segundo plano integral de Cortana](images/speech/e2e-canceltrip.png)
+![flujo de aplicaciones en segundo plano integral de cortana](images/speech/e2e-canceltrip.png)
 
 A continuación se describen los pasos destacados en esta imagen:
 
 1.  El usuario toca el micrófono para iniciar **Cortana**.
 2.  El usuario dice "Cancelar el viaje de Adventure Works a las Vegas" para iniciar la aplicación **Adventure Works** en segundo plano. La aplicación usa tanto la voz como el lienzo de **Cortana** para interactuar con el usuario.
-3.  Las transacciones de **Cortana** a una pantalla de entrega que ofrece información de confirmación al usuario ("Obtendré Adventure Works ahí".), una barra de estado y un botón Cancelar.
+3.  **Cortana** hace la transición a una pantalla de entrega que proporciona información de confirmación al usuario ("Obtendré Adventure Works".), una barra de estado y un botón Cancelar.
 4.  En este caso, el usuario tiene varios viajes que coinciden con la consulta, por lo que la aplicación proporciona una pantalla de desambiguación que enumera todos los resultados y tareas coincidentes, "¿cuál deseas cancelar?"
 5.  El usuario especifica el elemento "Conferencia tecnológica de Las Vegas".
 6.  Como la cancelación no se puede deshacer, la aplicación proporciona una pantalla de confirmación que pide al usuario que confirme su propósito.
@@ -162,14 +176,13 @@ A continuación exploraremos estos pasos con más detalle.
 
 ### <span id="Handoff"></span><span id="handoff"></span><span id="HANDOFF"></span>Entrega
 
-|                                                                                                          |
-|----------------------------------------------------------------------------------------------------------|
-| ![de un extremo a otro: encontrar viaje sin pantalla de entrega ](images/speech/cortana-backgroundapp-result.png)              |
-| Encontrar viaje sin pantalla de entrega                                                                              |
-| ![de un extremo a otro: cancelar viaje con pantalla de entrega ](images/speech/cortana-backgroundapp-progress-result.png) |
-| Cancelar viaje con pantalla de entrega                                                                          |
+| ![de un extremo a otro: encontrar viaje sin pantalla de entrega ](images/speech/cortana-backgroundapp-result.png) |
+|--- |
+| Encontrar viaje sin pantalla de entrega |
 
- 
+| ![de un extremo a otro: cancelar viaje con pantalla de entrega ](images/speech/cortana-backgroundapp-progress-result.png) |
+|--- |
+| Cancelar viaje con pantalla de entrega | 
 
 Se pueden realizar tareas que tardan menos de 500 ms en hacer que tu aplicación responda que no requieran información adicional del usuario sin más participación por parte de **Cortana**, aparte de mostrar la pantalla de finalización.
 
@@ -198,12 +211,9 @@ Las cadenas de la interfaz gráfica de usuario y TTS pueden coincidir, pero no n
 
 ### <span id="Progress"></span><span id="progress"></span><span id="PROGRESS"></span>Progreso
 
-|                                                                                             |
-|---------------------------------------------------------------------------------------------|
 | ![de un extremo a otro: cancelar viaje con pantalla de progreso ](images/speech/e2e-canceltrip-progress.png) |
-| Cancelar viaje con pantalla de progreso                                                            |
-
- 
+| --- |
+| Cancelar viaje con pantalla de progreso |  
 
 Cuando una tarea tarda unos instantes entre los pasos, la aplicación debe entrar e informar al usuario de lo que sucede en una pantalla de progreso. A continuación se muestra el icono de la aplicación y debes proporcionar cadenas de progreso de la interfaz gráfica de usuario y TTS para indicar que la tarea está en curso.
 
@@ -224,7 +234,7 @@ Usar el tiempo presente.
 
 Usar un verbo de acción que confirme que la tarea está en curso.
 
-**Interfaz gráfica de usuario**: si se muestra la entidad, usa una referencia a esta ("Cancelando este viaje..."); si no se muestra ninguna entidad, llama explícitamente a la entidad ("Cancelando 'Conferencia tecnológica de Las Vegas'").
+**Interfaz gráfica de usuario**: si se muestra la entidad, usa una referencia a esta ("Cancelando este viaje..."). Si no se muestra ninguna entidad, llama explícitamente a la entidad ("Cancelando 'Conferencia tecnológica de Las Vegas'").
 
 **TTS**: solo debes incluir una cadena TTS en la primera pantalla de progreso. Si se requieren más pantallas de progreso, envía una cadena vacía, {}, como la cadena TTS y proporcionar una cadena de interfaz gráfica de usuario solamente.
 
@@ -238,12 +248,9 @@ Usar un verbo de acción que confirme que la tarea está en curso.
 
 ### <span id="Confirmation"></span><span id="confirmation"></span><span id="CONFIRMATION"></span>Confirmación
 
-|                                                                                                     |
-|-----------------------------------------------------------------------------------------------------|
 | ![de un extremo a otro: cancelar viaje con pantalla de confirmación ](images/speech/e2e-canceltrip-confirmation.png) |
-| Cancelar viaje con pantalla de confirmación                                                                |
-
- 
+| --- |
+| Cancelar viaje con pantalla de confirmación | 
 
 Algunas tareas pueden confirmarse implícitamente mediante la naturaleza de los comandos del usuario; otras son más confidenciales y requieren confirmación explícita. Estas son algunas directrices sobre cuándo usar una confirmación explícita o implícita.
 
@@ -265,7 +272,7 @@ Usar la confirmación implícita cuando...
 -   La tarea debe ser rápida (por ejemplo, capturar rápidamente una idea antes de olvidarla)
 -   La precisión es alta (por ejemplo, un menú sencillo)
 
-### <span id="GUI_and_TTS_guidelines_for_confirmation_screens"></span><span id="gui_and_tts_guidelines_for_confirmation_screens"></span><span id="GUI_AND_TTS_GUIDELINES_FOR_CONFIRMATION_SCREENS"></span>Directrices de la interfaz gráfica de usuario y TTS para pantallas de confirmación
+### <span id="GUI_and_TTS_guidelines_for_confirmation_screens"></span><span id="gui_and_tts_guidelines_for_confirmation_screens"></span><span id="GUI_AND_TTS_GUIDELINES_FOR_CONFIRMATION_SCREENS"></span>Directrices de la interfaz gráfica de usuario y para pantallas de confirmación
 
 Usar el tiempo presente.
 
@@ -275,7 +282,7 @@ Proporciona una variación de la pregunta para volver a formularla en caso de qu
 
 **Interfaz gráfica de usuario**: si se muestra la entidad, usa una referencia a ella. Si no se muestra ninguna entidad, llama explícitamente a esta.
 
-**TTS**: para mayor claridad, haz siempre referencia al elemento o entidad específico, a menos que la haya leído el sistema en el turno anterior.
+**TTS**: para mayor claridad, haz siempre referencia al elemento o entidad específico, a menos que lo haya leído el sistema en el turno anterior.
 
 | Condiciones                                              | TTS                                        | INTERFAZ GRÁFICA DE USUARIO                                           |
 |---------------------------------------------------------|--------------------------------------------|-----------------------------------------------|
@@ -289,12 +296,9 @@ Proporciona una variación de la pregunta para volver a formularla en caso de qu
 
 ### <span id="Disambiguation"></span><span id="disambiguation"></span><span id="DISAMBIGUATION"></span>Desambiguación
 
-|                                                                                                        |
-|--------------------------------------------------------------------------------------------------------|
 | ![de un extremo a otro: cancelar viaje con pantalla de desambiguación](images/speech/cortana-disambiguation-screen.png) |
-| Cancelar viaje con pantalla de desambiguación                                                                 |
-
- 
+| --- |
+| Cancelar viaje con pantalla de desambiguación | 
 
 Es posible que algunas tareas requieran al usuario seleccionar de una lista de entidades para completar la tarea.
 
@@ -316,7 +320,7 @@ Proporciona una variación de la pregunta para volver a formularla en caso de qu
 
 **TTS**: para mayor claridad, haz siempre referencia al elemento o entidad específico, a menos que se haya dicho en el paso anterior.
 
-**TTS**: no leas la lista de entidades, a menos que haya tres o menos y sean cortas.
+**TTS**: no leer la lista de entidades, a menos que haya tres o menos y sean cortas.
 
 | Condiciones                 | TTS                                                                            | INTERFAZ GRÁFICA DE USUARIO                              |
 |----------------------------|--------------------------------------------------------------------------------|----------------------------------|
@@ -328,10 +332,9 @@ Proporciona una variación de la pregunta para volver a formularla en caso de qu
 
 ### <span id="Completion"></span><span id="completion"></span><span id="COMPLETION"></span>Finalización
 
-|                                                                                                 |
-|-------------------------------------------------------------------------------------------------|
 | ![de un extremo a otro: cancelar viaje con pantalla de finalización ](images/speech/e2e-canceltrip-completion.png) |
-| Cancelar viaje con la pantalla de finalización                                                              |
+| --- |
+| Cancelar viaje con la pantalla de finalización |
 
  
 
@@ -358,10 +361,9 @@ Si se muestra la entidad o se ha hecho referencia a ella en el paso anterior, so
 
 ### <span id="Error"></span><span id="error"></span><span id="ERROR"></span>Error
 
-|                                                                                      |
-|--------------------------------------------------------------------------------------|
 | ![de un extremo a otro: cancelar viaje con pantalla de error](images/speech/e2e-canceltrip-error.png) |
-| Cancelar viaje con pantalla de error                                                        |
+| --- |
+| Cancelar viaje con pantalla de error |
 
  
 
@@ -374,7 +376,8 @@ Cuando se produce uno de los siguientes errores, **Cortana** muestra el mismo me
 ## <span id="related_topics"></span>Artículos relacionados
 
 
-* [Interacciones de voz](speech-interactions.md)
+* [Interacciones de voz](speech-interactions.md)  
+
 **Desarrolladores**
 * [Interacciones de Cortana](https://msdn.microsoft.com/library/windows/apps/mt185598)
 * [Interacciones de voz](https://msdn.microsoft.com/library/windows/apps/mt185614)
@@ -387,6 +390,6 @@ Cuando se produce uno de los siguientes errores, **Cortana** muestra el mismo me
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

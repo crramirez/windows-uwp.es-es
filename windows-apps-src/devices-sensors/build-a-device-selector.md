@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: D06AA3F5-CED6-446E-94E8-713D98B13CAA
 title: Crear un selector de dispositivos
 description: La creación de un selector de dispositivos permite limitar los dispositivos en los que se realizan búsquedas al enumerar los dispositivos.
 ---
 # Crear un selector de dispositivos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** API importantes **
@@ -61,32 +62,41 @@ Si no se puedes crear una única cadena de filtro AQS que defina el ámbito de l
 
 En los siguientes ejemplos se muestra cómo se puede usar la sintaxis AQS para limitar los dispositivos que deseas enumerar. Todas estas cadenas de filtro se emparejan con [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) para crear un filtro completo. Si no se especifica ningún tipo, recuerda que el tipo predeterminado es **DeviceInterface**.
 
-Cuando este filtro está emparejado con una enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **DeviceInterface**, se enumeran todos los objetos que contienen la clase de interfaz de captura de audio y que están actualmente habilitados. **=** se traduce en **COP\_EQUALS**.
+Cuando este filtro está emparejado con una enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **DeviceInterface**, se enumeran todos los objetos que contienen la clase de interfaz de captura de audio y que están actualmente habilitados. **
+              =
+            ** se traduce en **COP\_EQUALS**.
 
 ``` syntax
 System.Devices.InterfaceClassGuid:="{2eef81be-33fa-4800-9670-1cd474972c3f}" AND 
 System.Devices.InterfaceEnabled:=System.StructuredQueryType.Boolean#True
 ```
 
-Cuando este filtro está emparejado con una enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **Device**, se enumeran todos los objetos que tienen al menos un identificador de hardware de GenCdRom. **~ ~** se traduce en **COP\_VALUE\_CONTAINS**.
+Cuando este filtro está emparejado con una enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **Device**, se enumeran todos los objetos que tienen al menos un identificador de hardware de GenCdRom. **
+              ~~
+            ** se traduce en **COP\_VALUE\_CONTAINS**.
 
 ``` syntax
 System.Devices.HardwareIds:~~"GenCdRom"
 ```
 
-Cuando este filtro está emparejado con una enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **DeviceContainer**, se enumeran todos los objetos que tienen un nombre de modelo que contiene la subcadena Microsoft. **~ ~** se traduce en **COP\_VALUE\_CONTAINS**.
+Cuando este filtro está emparejado con una enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **DeviceContainer**, se enumeran todos los objetos que tienen un nombre de modelo que contiene la subcadena Microsoft. **
+              ~~
+            ** se traduce en **COP\_VALUE\_CONTAINS**.
 
 ``` syntax
 System.Devices.ModelName:~~"Microsoft"
 ```
 
-Cuando este filtro está emparejado con una enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **DeviceInterface**, se enumeran todos los objetos que tienen un nombre que comienza por la subcadena Microsoft. **~&lt;** se traduce en **COP\_STARTSWITH**.
+Cuando este filtro está emparejado con una enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **DeviceInterface**, se enumeran todos los objetos que tienen un nombre que comienza por la subcadena Microsoft. **
+              ~&lt;
+            ** se traduce en **COP\_STARTSWITH**.
 
 ``` syntax
 System.ItemNameDisplay:~<"Microsoft"
 ```
 
-Cuando este filtro está emparejado con una enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **Device**, se enumeran todos los objetos que tienen un conjunto de propiedades **System.Devices.IpAddress**. **&lt;&gt;\[\]** se traduce en **COP\_NOTEQUALS** combinada con un valor **NULL**.
+Cuando este filtro está emparejado con una enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) de **Device**, se enumeran todos los objetos que tienen un conjunto de propiedades **System.Devices.IpAddress**. **
+              &lt;&gt;\[\]** se traduce en **COP\_NOTEQUALS** combinado con un valor **NULL**.
 
 ``` syntax
 System.Devices.IpAddress:<>[]
@@ -107,6 +117,6 @@ System.Devices.IpAddress:=[]
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

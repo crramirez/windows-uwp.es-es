@@ -1,5 +1,6 @@
 ---
-title: Preguntas más frecuentes sobre la migración a DirectX 11
+author: mtoepke
+title: Preguntas más frecuentes sobre la migración a DirectX 11
 description: Respuestas a las preguntas más frecuentes sobre la migración de juegos a la Plataforma universal de Windows (UWP).
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
 ---
@@ -25,7 +26,9 @@ El dispositivo Direct3D ahora se usa para crear recursos en memoria de vídeo, m
 ##  ¿Tengo que actualizar el temporizador del juego para UWP?
 
 
-[**QueryPerformanceCounter**](https://msdn.microsoft.com/library/windows/desktop/ms644904), junto con [**QueryPerformanceFrequency**](https://msdn.microsoft.com/library/windows/desktop/ms644905), sigue siendo la mejor manera de implementar un temporizador para las aplicaciones para UWP.
+[
+              **QueryPerformanceCounter**
+            ](https://msdn.microsoft.com/library/windows/desktop/ms644904), junto con [**QueryPerformanceFrequency**](https://msdn.microsoft.com/library/windows/desktop/ms644905), sigue siendo la mejor manera de implementar un temporizador para las aplicaciones para UWP.
 
 Debes tener en cuenta un aspecto de los temporizadores y el ciclo de vida de una aplicación para UWP. La acción de suspensión y reanudación es diferente a cuando un jugador reinicia un juego de escritorio, ya que tu juego reanudará una instantánea de la última vez que estuvo activo. Si transcurre mucho tiempo, por ejemplo, algunas semanas, algunas implementaciones del temporizador del juego podrían tener errores leves. Puedes usar eventos de ciclo de vida de la aplicación para restablecer el temporizador cuando se reanuda el juego.
 
@@ -134,6 +137,6 @@ Consulta la información acerca de la [asignación de formatos de superficie](fe
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

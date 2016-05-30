@@ -1,10 +1,11 @@
 ---
+author: martinekuan
 title: Crear un componente básico de Windows Runtime en C++ y llamarlo desde JavaScript o C#
 description: En este tutorial se muestra cómo crear un archivo DLL básico del componente de Windows Runtime que se pueda llamar desde JavaScript, C# o Visual Basic.
 ms.assetid: 764CD9C6-3565-4DFF-88D7-D92185C7E452
 ---
 
-# Tutorial: Crear en C++ un componente básico de Windows Runtime y llamarlo desde JavaScript o C#
+# Tutorial: Crear un componente básico de Windows Runtime en C++ y llamarlo desde JavaScript o C#
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -115,6 +116,6 @@ Si quitas un proyecto de componente de Windows Runtime de C++ de una solución, 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
 description: Cada transacción de la Tienda Windows que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción.
 title: Usar recibos para comprobar compras de productos
@@ -154,7 +155,7 @@ namespace ReceiptVerificationSample
                 // We are attempting to retrieve the following url. The getAppReceiptAsync website at 
                 // http://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.getappreceiptasync.aspx
                 // lists the following format for the certificate url.
-                String certificateUrl = String.Format("https://go.microsoft.com/fwlink/?LinkId=246509&amp;cid={0}", certificateId);
+                String certificateUrl = String.Format("https://go.microsoft.com/fwlink/?LinkId=246509&cid={0}", certificateId);
 
                 // Make an HTTP GET request for the certificate
                 HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(certificateUrl);
@@ -238,6 +239,6 @@ namespace ReceiptVerificationSample
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

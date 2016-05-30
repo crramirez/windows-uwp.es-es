@@ -1,6 +1,7 @@
 ---
+author: mtoepke
 title: Referencia de OpenGL ES 2.0 a Direct3D 11
-description: Usa estos temas de referencia para buscar muestras de código corto y asignación de API cuando se porta desde OpenGL ES 2.0 a Direct3D 11.
+description: Usa estos temas de referencia para buscar muestras de código corto y asignación de API al migrar de OpenGL ES 2.0 a Direct3D 11.
 ms.assetid: fe18c8a9-b113-8f5d-9c31-c294dede8560
 ---
 
@@ -9,7 +10,7 @@ ms.assetid: fe18c8a9-b113-8f5d-9c31-c294dede8560
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Usa estos temas de referencia para buscar muestras de código corto y asignación de API cuando se migra desde OpenGL ES 2.0 a Direct3D 11.
+Usa estos temas de referencia para buscar muestras de código corto y asignación de API al migrar de OpenGL ES 2.0 a Direct3D 11.
 ## 
 <table>
 <colgroup>
@@ -24,8 +25,8 @@ Usa estos temas de referencia para buscar muestras de código corto y asignació
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[GLSL-to-HLSL reference](glsl-to-hlsl-reference.md)</p></td>
-<td align="left"><p>Cuando migras la arquitectura de gráficos de OpenGL a Direct3D 11 ([port your graphics architecture from OpenGL ES 2.0 to Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md)) para crear un juego para la Plataforma universal de Windows (UWP), debes portar el código del lenguaje OpenGL Shader Language (GLSL) al código del lenguaje High Level Shader Language (HLSL) de Microsoft.</p></td>
+<td align="left"><p>[Referencia de GLSL a HLSL](glsl-to-hlsl-reference.md)</p></td>
+<td align="left"><p>El código de lenguaje de sombreado de OpenGL (GLSL) se migra al código de lenguaje de sombreado de alto nivel de Microsoft (HLSL) cuando [migras la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md) para crear un juego para la Plataforma universal de Windows (UWP).</p></td>
 </tr>
 </tbody>
 </table>
@@ -41,6 +42,6 @@ Usa estos temas de referencia para buscar muestras de código corto y asignació
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,7 +1,8 @@
 ---
+author: mcleanbyron
 ms.assetid: 9FCBAF2E-5419-4169-A17C-9C4058DCF909
-description: La Tienda Windows muestra varios servicios a los que se puede llamar a través de las API de REST para obtener acceso mediante programación a determinados tipos de datos de aplicaciones registradas en una cuenta del Centro de desarrollo de Windows, ya sea tuya o de tu organización.
-título: Usar los servicios de la Tienda Windows
+description: La Tienda Windows muestra varios servicios a los que se puede llamar a través de las API de REST para acceder mediante programación a determinados tipos de datos de aplicaciones registradas en una cuenta del Centro de desarrollo de Windows, ya sea tuya o de tu organización.
+title: Usar los servicios de la Tienda Windows
 ---
 
 # Usar los servicios de la Tienda Windows
@@ -28,6 +29,6 @@ La Tienda Windows muestra varios servicios a los que se puede llamar a través d
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

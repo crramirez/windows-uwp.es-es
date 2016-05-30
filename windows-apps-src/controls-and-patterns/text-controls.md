@@ -1,8 +1,9 @@
 ---
-Description: Analiza con qué frecuencia leemos el texto en nuestras vidas diarias, en correo electrónico, un libro, una señal de tránsito, los precios en una carta, la presión, un letrero en un poste de la calle.
-título: Controles de texto
+author: Jwmsft
+Description: Analiza con qué frecuencia leemos el texto en nuestras vidas diarias, en correo electrónico, un libro, una señal de tráfico, los precios en una carta, la presión de los neumáticos, un letrero en un poste de la calle.
+title: Controles de texto
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
-etiqueta: Controles de texto
+label: Text controls
 template: detail.hbs
 ---
 # Controles de texto
@@ -55,13 +56,13 @@ Usa un **RichEditBox** para mostrar y editar los archivos de texto. No uses un R
 
 Hay muchas maneras de obtener la entrada del usuario en la aplicación. Estas preguntas ayudarán a responder si uno de los cuadros de texto de entrada estándar u otro control es la mejor opción para obtener la entrada del usuario.
 
--   **¿Es práctico enumerar eficientemente todos los valores válidos?** De ser así, deberías usar uno de los controles de selección, como una [casilla](checkbox.md), [lista desplegable](lists.md), [botón de radio](radio-button.md), [control deslizante](slider.md), [modificador para alternar](toggles.md), [selector de fecha](date-and-time.md) o selector de hora.
--   **¿Existe un conjunto reducido de valores válidos?** En ese caso, deberías usar una [lista desplegable](lists.md) o un cuadro de lista, en especial si la longitud de los valores supera los pocos caracteres.
+-   **¿Es práctico enumerar eficientemente todos los valores válidos?** De ser así, deberías usar uno de los controles de selección, como una [casilla](checkbox.md), una [lista desplegable](lists.md), un [botón de radio](radio-button.md), un [control deslizante](slider.md), un [modificador para alternar](toggles.md), un [selector de fecha](date-and-time.md) o un selector de hora.
+-   **¿Existe un conjunto reducido de valores válidos?** Si es así, considera la posibilidad de usar una [lista desplegable](lists.md) o un cuadro de lista, especialmente si la longitud de los valores supera los pocos caracteres.
 -   **¿Los datos válidos no tienen absolutamente ninguna restricción? ¿O están los datos válidos restringidos solo por el formato (restricción de longitud o tipos de caracteres)?** Si es así, usa un control de entrada de texto. Puedes limitar el número de caracteres que se pueden especificar y puedes validar el formato en el código de la aplicación.
 -   **¿El valor representa un tipo de datos que tiene un control común especializado?** Si es así, usa el control adecuado en lugar de un control de entrada de texto. Por ejemplo, usa un [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/br211681) en lugar de un control de entrada de texto para aceptar una entrada de fecha.
 -   Si los datos son estrictamente numéricos:
     -   **¿El valor introducido es aproximado y/o relativo a otra cantidad mostrada en la misma página?** De ser así, usa un [control deslizante](slider.md).
-    -   **¿Sería bueno que el usuario recibiera una respuesta instantánea del efecto de los cambios en la configuración?** Si es así, usa un [control deslizante](slider.md), posiblemente con un control adjunto.
+    -   **¿Sería bueno que el usuario recibiera una respuesta instantánea del efecto de los cambios en la configuración?** De ser así, usa un [control deslizante](slider.md), posiblemente con un control adjunto.
     -   **¿Es probable que el valor introducido se ajuste tras observar el resultado (como, por ejemplo, el volumen o el brillo de pantalla)?** De ser así, usa un [control deslizante](slider.md).
     
 ## Ejemplos
@@ -102,8 +103,7 @@ Consulta estos artículos para obtener directrices de fuentes:
 
 Para que los usuarios escriban datos con facilidad mediante el teclado táctil o con el panel de entrada suave (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que el usuario escriba.
 
->Sugerencia 
->Esta información se aplica únicamente al SIP. No se aplica a teclados de hardware o al teclado en pantalla disponible en las opciones de accesibilidad de Windows.
+>Sugerencia Esta información se aplica únicamente al SIP. No se aplica a teclados de hardware o al teclado en pantalla disponible en las opciones de accesibilidad de Windows.
 
 El teclado táctil se puede usar para escribir texto cuando la aplicación se ejecuta en un dispositivo con pantalla táctil. El teclado táctil se invoca cuando el usuario pulsa en un campo de entrada editable, como un TextBox o RichEditBox. Es posible conseguir que los usuarios escriban datos en la aplicación de forma mucho más rápida y sencilla, si estableces el ámbito de entrada del control de texto para que coincida con el tipo de datos que esperas que el usuario escriba. El ámbito de entrada proporciona una sugerencia al sistema sobre el tipo de entrada de texto que espera el control para que el sistema pueda proporcionar una distribución del teclado táctil especializada para el tipo de entrada.
 
@@ -116,7 +116,7 @@ Para obtener más información, consulta [Usar el ámbito de entrada para cambia
 
 ## Colores de fuentes
 
-**Applies to:** TextBlock, RichTextBlock, TextBox, RichEditBox
+**Se aplica a:** TextBlock, RichTextBlock, TextBox, RichEditBox
 
 Windows tiene la posibilidad de que las fuentes incluyan varias capas de colores para cada glifo. Por ejemplo, la fuente Segoe UI Emoji define las versiones de color de los emoticonos y otros caracteres Emoji. 
 
@@ -144,7 +144,7 @@ Tu aplicación puede usar el separador de línea para indicar un final de línea
 
 La aplicación puede insertar un separador de párrafo entre párrafos de texto. El uso de este separador permite la creación de archivos de texto sin formato que se pueden formatear con anchos de línea diferentes en diferentes sistemas operativos. El sistema de destino puede ignorar los separadores de línea y realizar saltos entre párrafos solo en los separadores de párrafo.
 
-\[Este artículo contiene información específica de las aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
 ## Artículos relacionados
 
@@ -160,6 +160,6 @@ La aplicación puede insertar un separador de párrafo entre párrafos de texto.
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length.aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

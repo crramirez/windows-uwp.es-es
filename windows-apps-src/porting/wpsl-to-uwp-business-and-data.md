@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: Detrás de la interfaz de usuario se encuentran las capas de negocio y de datos.
 title: Migración de capas de negocio y de datos de Windows Phone Silverlight a UWP
 ms.assetid: 27c66759-2b35-41f5-9f7a-ceb97f4a0e3f
@@ -136,6 +137,6 @@ El siguiente tema es [Migración para factor de forma y experiencia de usuario](
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

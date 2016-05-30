@@ -1,46 +1,62 @@
 ---
+author: mijacobs
 Description: El color proporciona una forma intuitiva de buscar a través de los distintos niveles de información de una aplicación y sirve de herramienta crucial para reforzar el modelo de interacción.
 title: Color
 ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
+
 label: Color
 template: detail.hbs
 extraBodyClass: style-color
-brief: Color provides intuitive wayfinding through an app's various levels of information and serves as a crucial tool for reinforcing the interaction model.<br /><br />In Windows, color is also personal. Users can choose a color and a light or dark theme to be reflected throughout their experience.
 ---
 
-# Color de las aplicaciones para UWP
+# Color
+
 El color proporciona una forma intuitiva de buscar a través de los distintos niveles de información de una aplicación y sirve de herramienta crucial para reforzar el modelo de interacción.
+
+En Windows, el color también es personal. Los usuarios pueden elegir un color y un tema claro u oscuro que se reflejen a lo largo de su experiencia.
 
 ## Color de énfasis
 
-El usuario puede seleccionar un único color denominado énfasis. Se puede elegir d'entre un conjunto de muestras de 48 colores protegido.
-
+El usuario puede seleccionar un único color, llamado de énfasis, desde *Configuración > Personalización > Colores*. Tienen su selección de un conjunto ajustado de 48 muestras de color, excepto en Xbox, que tiene una paleta 21 colores compatibles con TV.
 
 <!-- Alternate version for the dev center. Need to add hex values. -->
-<figure>
-![Accent colors](images/accentcolorswatch.png)
-<figcaption>Como regla general, cuando uses el color de énfasis original como fondo, coloca siempre el texto de encima en blanco.</figcaption>
-</figure>
+![Colores de énfasis predeterminados](images/accentcolorswatch.png) Colores de énfasis predeterminados
+
+![Colores de énfasis de Xbox](images/accentcolorswatch_xbox.png) Colores de énfasis de Xbox
+
+
 
 Cuando se elige un color de énfasis, este aparece como parte del tema del sistema. Las áreas en las que influye son Inicio, barra de tareas, la ventana de cromo, los estados de interacción seleccionados y los hipervínculos dentro de los [controles comunes](https://dev.windows.com/design/controls-patterns). Cada aplicación puede incorporar aún más el color de énfasis con su tipografía, fondos e interacciones, o bien reemplazarlo todo para conservar la imagen de marca.
 
-## Selección de colores
+## Color sobre color
 
-Una vez que se ha seleccionado un color de énfasis, los tonos claros y oscuros del color de énfasis se crean basándose en los valores del HCL de luminosidad de color. Las aplicaciones pueden usar las variaciones de tono para crear una jerarquía visual y para proporcionar una indicación de interacción.
+Una vez que se ha seleccionado un color de énfasis, los tonos claros y oscuros del color de énfasis se crean basándose en los valores de HSB de luminosidad de color. Las aplicaciones pueden usar las variaciones de tono para crear una jerarquía visual y para proporcionar una indicación de interacción.
 
-![Un solo color de énfasis con sus 6 tonos](images/shades.png)
+De manera predeterminada, los hipervínculos usarán el color de énfasis del usuario. Si el fondo de página es de un color similar, puedes asignar un tono más claro (o más oscuro) de énfasis para los hipervínculos a fin de mejorar el contraste.
+
+<figure class="figure-img" >
+    <img src="images/shades.png" alt="A single accent color with its 6 shades"  />
+        <figcaption><p>Distintos tonos claros y oscuros del color de énfasis predeterminado.</p>
+</figcaption>
+</figure>
+
+<figure class="figure-img" >
+    <img src="images/action_center_redline_zoom.png" alt="Redlines for Colored Action Center"  />
+        <figcaption><p>Un ejemplo de cómo se aplica la lógica de color a una especificación de diseño.</p>
+</figcaption>
+</figure>
 
 <aside class="aside-dev">
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            In XAML, the accent color is exposed as a [theme resource](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx) named `SystemAccentColor`. It's also available programmatically from [UISettings.GetColorValue](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx). You can programmatically access the different shades from [UISettings.GetColorValue](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx), see the [UIColorType](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx) enum.
+            En XAML, el color de énfasis principal se expone como un [recurso de tema](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx) denominado `SystemAccentColor`. Los tonos están disponibles como `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2` y `SystemAccentColorDark3`. También está disponible mediante programación a través de [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) y la enumeración [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx).
     </div>
 </aside>
 
 ## Temas de color
 
-El usuario también puede elegir entre un tema claro u oscuro para el sistema (opción para el teléfono, ya que aún no se dispone de esa opción en tableta y escritorio; estos ofrecen configuraciones desde la aplicación). Algunas aplicaciones optan por cambiar su tema según las preferencias del usuario, mientras que otras no ofrecen esa opción.
+El usuario también puede elegir entre un tema claro u oscuro para el sistema. Algunas aplicaciones optan por cambiar su tema según las preferencias del usuario, mientras que otras no ofrecen esa opción.
 
 Las aplicaciones que usan un tema claro son para escenarios relacionados con las aplicaciones de productividad. Un ejemplo sería el conjunto de aplicaciones disponibles con Microsoft Office. Los temas claros facilitan la lectura de textos largos en combinación con períodos prolongados de tiempo dedicado a largas tareas.
 
@@ -49,7 +65,6 @@ El tema oscuro ofrece un contraste de contenido más visible para las aplicacion
 Si la aplicación no se ajusta mucho a cualquiera de estas descripciones, considera seguir el tema del sistema para permitir al usuario decidir cuál es el mejor.
 
 Para facilitar el diseño de temas, Windows proporciona una paleta de colores adicional que se adapta automáticamente al tema.
-
 
 <!-- OP version -->
 ### Tema claro
@@ -65,26 +80,25 @@ Para facilitar el diseño de temas, Windows proporciona una paleta de colores ad
 #### Base
 ![El tema oscuro Base](images/themes-dark-base.png)
 #### Alt
-![El tema oscuro Alt](images/themes-dark-alt.png)
-#### List
-![El tema oscuro List](images/themes-dark-list.png)
-#### Chrome
-![El tema oscuro Chrome](images/themes-dark-chrome.png)
-
+![El tema oscuro alternativo](images/themes-dark-alt.png)
+#### Lista
+![El tema oscuro de lista](images/themes-dark-list.png)
+#### Cromo
+![El tema oscuro cromo](images/themes-dark-chrome.png)
 
 <aside class="aside-dev">
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            Each color is available as a XAML [theme resource](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_color_ramp_and_theme-dependent_brushes) that follows the `System*Color` naming convention (ex: `SystemChromeHighColor`). You can control your app's theme through either [Application.RequestedTheme](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.application.requestedtheme.aspx) or [FrameworkElement.RequestedTheme](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.frameworkelement.requestedtheme.aspx).
+            Cada color está disponible como XAML [recurso de tema](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_color_ramp_and_theme-dependent_brushes) que sigue la convención de nomenclatura `System*Color` (ej.: `SystemChromeHighColor`). Puedes controlar el tema de la aplicación a través de [Application.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme.aspx) o [FrameworkElement.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.requestedtheme.aspx).
     </div>
 </aside>
 
 ## Accesibilidad
 
-La paleta está optimizada para el uso de la pantalla. Se recomienda mantener una relación de contraste mínimo para el texto de 4,5:1 para mejorar una legibilidad óptima.
+La paleta está optimizada para el uso de la pantalla. Se recomienda mantener una relación de contraste para el texto de 4,5:1 respecto al fondo para mejorar la legibilidad. Hay muchas herramientas gratuitas para probar si los colores la cumplen, como [Contrast Ratio](http://leaverou.github.io/contrast-ratio/).
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

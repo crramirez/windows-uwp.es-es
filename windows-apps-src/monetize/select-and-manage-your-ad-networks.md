@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 86D9D3CF-8FDC-4B67-881B-DF33A1BEE8BF
 description: Antes de usar mediación de anuncios, tienes que configurar cuentas con cada red de anuncios que quieras usar en tus aplicaciones.
 title: Seleccionar y administrar redes de anuncios
@@ -101,7 +102,7 @@ Ten en cuenta que al [agregar el control de Ad Mediator](add-and-use-the-ad-medi
 
 Además de los parámetros necesarios, cada red de anuncios también tiene parámetros opcionales adicionales que se puede establecer a través del código de la aplicación. Para obtener la lista completa de los parámetros opcionales, consulta la documentación que se incluye con cada red de anuncios. Para establecer estos parámetros opcionales en el código, usa la propiedad **AdSdkOptionalParameters** de tu objeto **AdMediatorControl**.
 
-En el siguiente ejemplo se muestra cómo establecer el parámetro **CountryOrRegion** para Microsoft Advertising.
+El siguiente ejemplo muestra cómo establecer la propiedad [CountryOrRegion](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.countryorregion.aspx) de Microsoft Advertising en el código de país o región de dos letras del usuario.
 
 ```CSharp
 myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.MicrosoftAdvertising]["CountryOrRegion"] = "IN";
@@ -125,6 +126,6 @@ myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.Smaato]["Height"] = 250;
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

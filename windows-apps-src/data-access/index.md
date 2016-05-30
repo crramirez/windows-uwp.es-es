@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 76776b0f-3163-48c9-835b-3f4213968079
 title: Acceso a datos
 description: En esta sección se explica cómo almacenar los datos del dispositivo en una base de datos privada mediante la asignación relacional de objetos en aplicaciones para la Plataforma universal de Windows (UWP).
@@ -18,6 +19,6 @@ SQLite se incluye en el SDK de la UWP. Entity Framework 7 funciona con SQLite en
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

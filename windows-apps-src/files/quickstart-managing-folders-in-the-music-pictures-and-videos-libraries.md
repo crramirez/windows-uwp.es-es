@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: Archivos y carpetas de las bibliotecas de música, imágenes y vídeos
 description: Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados.
@@ -34,7 +35,7 @@ Una biblioteca es una colección virtual de carpetas que incluye una carpeta con
 ## Obtener una referencia a una biblioteca
 
 
-**Nota**  Recuerda que debes declarar la funcionalidad apropiada.
+**Nota** Recuerda que debes declarar la funcionalidad apropiada.
  
 
 Para obtener una referencia a la biblioteca de música, imágenes o vídeos del usuario, llama al método [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725). Proporciona el valor correspondiente de la enumeración [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399).
@@ -199,7 +200,7 @@ Estos son algunos ejemplos de consultas con los resultados que devuelven.
 
 A continuación, indicamos las funcionalidades que puedes especificar en el archivo de manifiesto de la aplicación para tener acceso a los archivos multimedia de esta.
 
--   **Música** Especifica la capacidad de **Biblioteca de música** en el archivo de manifiesto de la aplicación, para dejar que esta vea archivos de los tipos siguientes y tenga acceso a ellos:
+-   **Música**. Especifica la capacidad de **Biblioteca de música** en el archivo de manifiesto de la aplicación, para dejar que esta vea archivos de los tipos siguientes y tenga acceso a ellos:
 
     -   .qcp
     -   .wav
@@ -220,7 +221,7 @@ A continuación, indicamos las funcionalidades que puedes especificar en el arch
     -   .adt
     -   .adts
     -   .pya
--   **Fotos** Especifica la capacidad de **Biblioteca de imágenes** en el archivo de manifiesto de la aplicación, para dejar que esta vea archivos de los tipos siguientes y tenga acceso a ellos:
+-   **Fotos**. Especifica la capacidad de **Biblioteca de imágenes** en el archivo de manifiesto de la aplicación, para dejar que esta vea archivos de los tipos siguientes y tenga acceso a ellos:
 
     -   .jpeg
     -   .jpe
@@ -233,7 +234,7 @@ A continuación, indicamos las funcionalidades que puedes especificar en el arch
     -   .wdp
     -   .jxr
     -   .hdp
--   **Vídeos** Especifica la capacidad de **Video Library** en el archivo de manifiesto de la aplicación, para dejar que esta vea archivos de los tipos siguientes y tenga acceso a ellos:
+-   **Vídeos**. Especifica la capacidad de **Video Library** en el archivo de manifiesto de la aplicación, para dejar que esta vea archivos de los tipos siguientes y tenga acceso a ellos:
 
     -   .wm
     -   .m4v
@@ -321,6 +322,6 @@ using (var sourceStream = await sourceFile.OpenReadAsync())
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

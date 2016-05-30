@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 Description: En este tutorial, puedes crear y ejecutar el primer experimento con pruebas A/B.
 title: Crea y ejecuta tu primer experimento con pruebas A/B
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
@@ -38,7 +39,7 @@ Para seguir con este tutorial, debes tener una cuenta del Centro de desarrollo d
 9. Confirma que la casilla de **Distribuir de forma equitativa** está activada para que las variaciones se distribuyan por igual en la aplicación.
 10. Haz clic en **Guardar** y luego en **Activar**.
 
-> **Importante** Después de activar un experimento, ya no se pueden modificar sus parámetros a menos de que sea un experimento de prueba (hiciste clic en la casilla** Experimento de prueba** cuando lo creaste). Normalmente, recomendamos que escribas el código del experimento en tu aplicación antes de activar el experimento. Para simplificar, en este tutorial se puede activar el experimento ahora.
+> **Importante**  Después de activar un experimento, ya no se pueden modificar sus parámetros a menos que sea un experimento de prueba (si hiciste clic en la casilla **Experimento de prueba** cuando lo creaste). Normalmente, recomendamos que escribas el código del experimento en tu aplicación antes de activar el experimento. Para simplificar, en este tutorial se puede activar el experimento ahora.
 
 ## Codifica el experimento en la aplicación.
 
@@ -153,7 +154,7 @@ private string apiKey = "F48AC670-4472-4387-AB7D-D65B095153FB";
 
 Espera al menos varias horas después de completar la sección anterior y, a continuación, sigue estos pasos para revisar los resultados del experimento y completarlo.
 
-> **Nota** Tan pronto como actives un experimento, el Centro de desarrollo inicia inmediatamente la recopilación de datos de las aplicaciones que están pensadas para registrar los datos del experimento. Sin embargo, pueden pasar varias horas antes de que los datos del experimento aparezcan en el panel.
+> **Nota** En cuanto activas un experimento, el Centro de desarrollo inicia inmediatamente la recopilación de datos de las aplicaciones que están diseñadas para registrar los datos del experimento. Sin embargo, pueden pasar varias horas antes de que los datos del experimento aparezcan en el panel.
 
 1. En el Centro de desarrollo, vuelve a la página de la aplicación **Experimentación**.
 2. En la sección **Experimentos**, haz clic en el filtro **Activo** y, a continuación, haz clic en **Optimizar clics de botón** para ir a la página de este experimento.
@@ -174,6 +175,6 @@ Espera al menos varias horas después de completar la sección anterior y, a con
   * [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

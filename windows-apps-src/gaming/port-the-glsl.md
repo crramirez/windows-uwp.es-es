@@ -1,5 +1,6 @@
 ---
-title: Portar GLSL
+author: mtoepke
+title: Migrar GLSL
 description: Una vez que traslades el código que crea y configura los búferes y objetos de sombreador, tienes que portar el código de esos sombreadores, del lenguaje GL Shader Language (GLSL) de OpenGL ES 2.0 al lenguaje High-level Shader Language (HLSL) de Direct3D 11.
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
 ---
@@ -7,7 +8,7 @@ ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
 # Portar GLSL
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -148,12 +149,10 @@ El color para el píxel en posición se escribe en el destino de representación
 ## Paso anterior
 
 
-[Portar datos y búferes de vértices](port-the-vertex-buffers-and-data-config.md)
-Paso siguiente
+[Portar datos y búferes de vértices](port-the-vertex-buffers-and-data-config.md) Paso siguiente
 ---------
 
-[Dibujar en la pantalla](draw-to-the-screen.md)
-Observaciones
+[Dibujar en la pantalla](draw-to-the-screen.md) Observaciones
 -------
 
 Comprender la semántica de HLSL y el empaquetado de los búferes de constantes puede ahorrarte un buen dolor de cabeza por culpa de la depuración, además de ofrecerte oportunidades de optimización. Si tienes la opción de hacerlo, lee [Sintaxis de variables (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Introducción a los búferes en Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898) y [Cómo: crear un búfer de constantes](https://msdn.microsoft.com/library/windows/desktop/ff476896). De lo contrario, estas son algunas sugerencias iniciales para que tengas en cuenta sobre semántica y búferes de constantes.
@@ -185,6 +184,6 @@ Comprender la semántica de HLSL y el empaquetado de los búferes de constantes 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

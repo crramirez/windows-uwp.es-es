@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 ms.assetid: b632a6cc-3503-4ab8-bfd1-dde731bd89ab
 description: En esta sección se incluyen temas donde se explican los conceptos de programación que generalmente se aplican a cualquier aplicación que escribas.
 title: Plataforma XAML
@@ -22,6 +23,6 @@ En esta sección se incluyen temas donde se explican los conceptos de programaci
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

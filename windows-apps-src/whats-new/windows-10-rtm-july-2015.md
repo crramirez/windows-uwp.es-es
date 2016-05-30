@@ -1,4 +1,5 @@
 ---
+author: QuinnRadich
 Description: Windows 10 y las nuevas herramientas de desarrollador proporcionan las herramientas, características y experiencias con tecnología de la nueva Plataforma universal de Windows (UWP).
 title: Novedades para desarrolladores en Windows 10, RTM, julio de 2015
 ---
@@ -65,7 +66,7 @@ Este es un vistazo característica por característica de las novedades de Windo
 </tr>
 <tr class="even">
 <td align="left">SplitView</td>
-<td align="left">El nuevo control [<strong>SplitView</strong>](https://msdn.microsoft.com/library/windows/apps/dn864360) proporciona una forma de mostrar y ocultar fácilmente contenido transitorio. Normalmente se usa para escenarios de navegación de nivel superior como el &quot;menú hamburguesa&quot;, donde el contenido de la navegación se oculta y se desliza cuando sea necesario como resultado de una acción del usuario.</td>
+<td align="left">El nuevo control [<strong>SplitView</strong>](https://msdn.microsoft.com/library/windows/apps/dn864360) proporciona una forma de mostrar y ocultar fácilmente contenido transitorio. Normalmente se usa para escenarios de navegación de nivel superior como el &quot;menú hamburguesa&quot;, donde el contenido de la navegación se oculta y se desliza cuando es necesario como resultado de una acción del usuario.</td>
 </tr>
 <tr class="odd">
 <td align="left">RelativePanel</td>
@@ -73,7 +74,7 @@ Este es un vistazo característica por característica de las novedades de Windo
 </tr>
 <tr class="even">
 <td align="left">CalendarView</td>
-<td align="left">El control [<strong>CalendarView</strong>](https://msdn.microsoft.com/library/windows/apps/dn890052) facilita el proceso de ver y seleccionar fechas e intervalos de fechas mediante una vista mensual personalizable. <strong>CalendarView</strong> admite funciones como las fechas mínima, máxima y sin disponibilidad para limitar qué fechas se pueden seleccionar. También puedes configurar barras de densidad personalizadas que se pueden usar para mostrar lo que se ha completado de manera general de la programación en un día concreto.</td>
+<td align="left">El control [<strong>CalendarView</strong>](https://msdn.microsoft.com/library/windows/apps/dn890052) facilita el proceso de ver y seleccionar fechas e intervalos de fechas mediante una vista mensual personalizable. <strong>CalendarView</strong> admite funciones como las fechas mínima, máxima y sin disponibilidad para limitar qué fechas se pueden seleccionar. También puedes configurar barras de densidad personalizadas que se pueden usar para mostrar lo que se ha &quot;completado&quot; de manera general de la programación en un día concreto.</td>
 </tr>
 <tr class="odd">
 <td align="left">CalendarDatePicker</td>
@@ -95,7 +96,7 @@ Este es un vistazo característica por característica de las novedades de Windo
 <li>Espacio de nombres [<strong>Windows.UI.Xaml.Controls.Maps</strong>](https://msdn.microsoft.com/library/windows/apps/dn610751): mostrar mapas.</li>
 <li>Espacio de nombres [<strong>Windows.Services.Maps</strong>](https://msdn.microsoft.com/library/windows/apps/dn636979): buscar ubicaciones y rutas.</li>
 </ul>
-<p>Para empezar a usar ya estas API en una aplicación universal de Windows, solicita una clave desde el [Bing Maps Developer Center](https://www.bingmapsportal.com/). Para obtener más información, consulta [How to authenticate a Maps app](https://msdn.microsoft.com/library/windows/apps/xaml/dn741528). Otra novedad de Windows 10 es que los usuarios de PC y teléfonos pueden descargar mapas sin conexión desde la aplicación Configuración. Cuando están disponibles, [<strong>MapControl</strong>](https://msdn.microsoft.com/library/windows/apps/dn637004) usa los mapas sin conexión para mostrarlos cuando no hay disponible acceso a Internet.</p></td>
+<p>Para empezar a usar ya estas API en una aplicación universal de Windows, solicita una clave desde el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/). Para obtener más información, consulta [Cómo autenticar una aplicación de Mapas](https://msdn.microsoft.com/library/windows/apps/xaml/dn741528). Otra novedad de Windows 10 es que los usuarios de PC y teléfonos pueden descargar mapas sin conexión desde la aplicación Configuración. Cuando están disponibles, [<strong>MapControl</strong>](https://msdn.microsoft.com/library/windows/apps/dn637004) usa los mapas sin conexión para mostrarlos cuando no hay disponible acceso a Internet.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Asignación de botón de entrada</td>
@@ -107,7 +108,7 @@ Este es un vistazo característica por característica de las novedades de Windo
 <p>El control [<strong>InkCanvas</strong>](https://msdn.microsoft.com/library/windows/apps/dn858535) define un área de superposición para dibujar y representar los trazos de lápiz. La funcionalidad de este control (entrada, procesamiento y representación) proviene de las clases [<strong>InkPresenter</strong>](https://msdn.microsoft.com/library/windows/apps/dn922011), [<strong>InkStroke</strong>](https://msdn.microsoft.com/library/windows/apps/br208485), [<strong>InkRecognizer</strong>](https://msdn.microsoft.com/library/windows/apps/br208478) y [<strong>InkSynchronizer</strong>](https://msdn.microsoft.com/library/windows/apps/dn903979).</p>
 <p></p>
 <div class="alert">
-<strong>Important</strong> Estas clases no se admiten en aplicaciones de Windows que usan JavaScript.
+<strong>Importante</strong> Estas clases no se admiten en aplicaciones de Windows que usan JavaScript.
 </div>
 <div>
  
@@ -204,7 +205,7 @@ Este es un vistazo característica por característica de las novedades de Windo
 <td align="left"><p>En las aplicaciones universales de Windows, la propiedad [<strong>PasswordRevealMode</strong>](https://msdn.microsoft.com/library/windows/apps/dn890867) reemplaza a [<strong>IsPasswordRevealButtonEnabled</strong>](https://msdn.microsoft.com/library/windows/apps/hh702579) para proporcionar un comportamiento coherente en todas las familias de dispositivos.</p>
 <p></p>
 <div class="alert">
-<strong>Precaución</strong>  Antes de Windows 10, el botón para mostrar la contraseña no se mostraba de forma predeterminada; en cambio, en las aplicaciones universales de Windows se muestra de forma predeterminada. Si la seguridad de la aplicación requiere que la contraseña se oculte siempre, asegúrate de establecer [<strong>PasswordRevealMode</strong>](https://msdn.microsoft.com/library/windows/apps/dn890867) en Oculto.
+<strong>Precaución</strong> Antes de Windows 10, el botón para mostrar la contraseña no se mostraba de forma predeterminada; en cambio, en las aplicaciones universales de Windows se muestra de forma predeterminada. Si la seguridad de la aplicación requiere que la contraseña se oculte siempre, asegúrate de establecer [<strong>PasswordRevealMode</strong>](https://msdn.microsoft.com/library/windows/apps/dn890867) en Oculto.
 </div>
 <div>
  
@@ -285,7 +286,7 @@ Este es un vistazo característica por característica de las novedades de Windo
 <td align="left">Cortana</td>
 <td align="left"><p>Amplía la funcionalidad básica de <strong>Cortana</strong> con comandos de voz que inician y ejecutan una acción única en una aplicación externa.</p>
 <p>Al integrar la funcionalidad básica de tu aplicación y ofrecer un punto de entrada central para que el usuario realice la mayoría de las tareas sin tener que abrir la aplicación directamente, <strong>Cortana</strong> puede ser un enlace entre tu aplicación y el usuario. En muchos casos, esto puede ahorrarle al usuario un tiempo y esfuerzo considerables.</p>
-<p>Aprende a [integrate your app into the Cortana canvas](https://msdn.microsoft.com/library/windows/apps/xaml/dn974230). Si necesitas ideas, puedes hacer referencia a las recomendaciones de diseño y las directrices de experiencia de usuario específicas de <strong>Cortana</strong> que aparecen en [Design basics for Universal Windows apps](https://dev.windows.com/design/design-basics).</p></td>
+<p>Aprende cómo [integrar tu aplicación en el lienzo de Cortana](https://msdn.microsoft.com/library/windows/apps/xaml/dn974230). Si necesitas ideas, puedes consultar las recomendaciones de diseño y las directrices de experiencia del usuario específicas para <strong>Cortana</strong> en [Conceptos básicos de diseño de aplicaciones universales de Windows](https://dev.windows.com/design/design-basics).</p></td>
 </tr>
 <tr class="even">
 <td align="left">Explorador de archivos</td>
@@ -299,11 +300,11 @@ Este es un vistazo característica por característica de las novedades de Windo
 <td align="left">Configuración</td>
 <td align="left"><p>Muestra páginas de configuración integradas mediante el protocolo ms-settings con el método [<strong>LaunchUriAsync</strong>](https://msdn.microsoft.com/library/windows/apps/hh701476). El siguiente código, por ejemplo, muestra la página de configuración de Wi-Fi.</p>
 <p><code>bool result = await Launcher.LaunchUriAsync(new Uri(&quot;ms-settings://network/wifi&quot;));</code></p>
-<p>Para obtener una lista de las páginas de configuración que se pueden mostrar, consulta [How to display built-in settings pages by using the ms-settings protocol](https://msdn.microsoft.com/library/windows/apps/jj207014.aspx).</p></td>
+<p>Para obtener una lista de las páginas de configuración que puedes mostrar, consulta [Cómo mostrar páginas de configuración integradas con el protocolo ms-settings](https://msdn.microsoft.com/library/windows/apps/jj207014.aspx).</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Comunicación de una aplicación a otra</td>
-<td align="left"><p>Las nuevas API de [app-to-app communication](https://msdn.microsoft.com/library/windows/apps/xaml/dn997827) en Windows 10 permiten que las aplicaciones Windows (así como las aplicaciones web de Windows) se inicien entre sí e intercambien archivos y datos.</p>
+<td align="left"><p>Las nuevas API de [comunicación de una aplicación a otra](https://msdn.microsoft.com/library/windows/apps/xaml/dn997827) en Windows 10 permiten que las aplicaciones Windows (así como las aplicaciones web de Windows) se inicien entre sí e intercambien archivos y datos.</p>
 <p>Con estas nuevas API, las tareas complejas que hubieran requerido que el usuario usara varias aplicaciones se pueden controlar ahora sin problemas. Por ejemplo, la aplicación podría iniciar una aplicación de redes sociales para elegir un contacto o iniciar una aplicación de confirmación de compra para completar un proceso de pago.</p></td>
 </tr>
 <tr class="even">
@@ -312,8 +313,8 @@ Este es un vistazo característica por característica de las novedades de Windo
 </tr>
 <tr class="odd">
 <td align="left">Manifiesto del paquete de la aplicación</td>
-<td align="left"><p>Las actualizaciones de la referencia de [package manifest schema](https://msdn.microsoft.com/library/windows/apps/br211474) para Windows 10 incluyen elementos que se han agregado, quitado y cambiado.</p>
-<p>Consulta [Element Hierarchy](https://msdn.microsoft.com/library/windows/apps/dn934819) para obtener información de referencia sobre todos los elementos, atributos y tipos del esquema.</p></td>
+<td align="left"><p>Las actualizaciones de la referencia del [esquema de manifiesto del paquete](https://msdn.microsoft.com/library/windows/apps/br211474) para Windows 10 incluyen elementos que se han agregado, quitado y cambiado.</p>
+<p>Consulta [Jerarquía de elemento](https://msdn.microsoft.com/library/windows/apps/dn934819) para obtener información de referencia sobre todos los elementos, atributos y tipos del esquema.</p></td>
 </tr>
 </tbody>
 </table>
@@ -333,10 +334,10 @@ Este es un vistazo característica por característica de las novedades de Windo
 <td align="left">Microsoft Surface Hub</td>
 <td align="left"><p>Microsoft Surface Hub es un dispositivo de colaboración de equipo potente y una plataforma de pantalla grande para Universal Windows apps que se ejecutan de forma nativa desde Surface Hub o el dispositivo conectado.</p>
 <p>Crea tus propias aplicaciones, diseñadas específicamente para tu negocio, que aprovechen las ventajas de la pantalla grande, la entrada táctil y manuscrita, y una gran cantidad de hardware incorporado como cámaras y sensores.</p>
-<p>Echa un vistazo a las recomendaciones de diseño y las directrices de experiencia de usuario específicas de Surface Hub en [Design basics for Universal Windows apps](https://dev.windows.com/design/design-basics). Estos documentos explican técnicas de diseño con capacidad de respuesta para aplicaciones universales de Windows.</p>
+<p>Echa un vistazo a las recomendaciones de diseño y las directrices de experiencia del usuario específicas de Surface Hub en [Conceptos básicos de diseño de aplicaciones universales de Windows](https://dev.windows.com/design/design-basics). Estos documentos explican técnicas de diseño con capacidad de respuesta para aplicaciones universales de Windows.</p>
 <p>Para obtener información sobre cómo admitir aplicaciones compartidas comunes, consulta [<strong>SharedModeSettings</strong>](https://msdn.microsoft.com/library/windows/apps/dn949019).</p>
 <p>Para obtener información sobre la entrada de lápiz y detalles sobre la entrada de lápiz multipunto en el nuevo control [<strong>InkCanvas</strong>](https://msdn.microsoft.com/library/windows/apps/dn858535), consulta [<strong>Windows.UI.Input.Inking</strong>](https://msdn.microsoft.com/library/windows/apps/br208524) y [<strong>Windows.UI.Input.Inking.Core</strong>](https://msdn.microsoft.com/library/windows/apps/dn958452).</p>
-<p>Para controlar la entrada del sensor, consulta [Integrating devices, printers, and sensors](https://msdn.microsoft.com/library/windows/apps/br229563).</p></td>
+<p>Para controlar la entrada del sensor, consulta [Integración de dispositivos, impresoras y sensores](https://msdn.microsoft.com/library/windows/apps/br229563).</p></td>
 </tr>
 <tr class="even">
 <td align="left">Ubicación</td>
@@ -352,9 +353,9 @@ Este es un vistazo característica por característica de las novedades de Windo
 <tr class="odd">
 <td align="left">AllJoyn</td>
 <td align="left"><p>El espacio de nombres [<strong>Windows.Devices.AllJoyn</strong>](https://msdn.microsoft.com/library/windows/apps/dn894971) de Windows Runtime incorpora la implementación de los servicios y el marco de software de código abierto de AllJoyn de Microsoft. Estas API permiten que tu aplicación universal para dispositivos de Windows participe con otros dispositivos de escenarios de Internet de las cosas (IoT) controlados por AllJoyn. Para obtener más detalles sobre las API C de AllJoyn, descarga la documentación en [The AllSeen Alliance](https://allseenalliance.org/).</p>
-<p>Usa la herramienta [AllJoynCodeGen tool](https://msdn.microsoft.com/library/windows/apps/dn913809) que se incluye en este lanzamiento para generar un componente de Windows que puedas usar para habilitar escenarios de AllJoyn en tu aplicación de dispositivo.</p>
+<p>Usa la [herramienta AllJoynCodeGen](https://msdn.microsoft.com/library/windows/apps/dn913809) que se incluye en esta versión para generar un componente de Windows que puedas usar para habilitar escenarios de AllJoyn en tu aplicación de dispositivo.</p>
 <div class="alert">
-<strong>Note</strong>  Windows 10 IoT Core está ahora disponible para una nueva clase de dispositivos pequeños, lo que te permite crear dispositivos del "Internet de las cosas" (IoT) con Windows y Visual Studio. Obtén más información sobre Windows IoT en [WindowsOnDevices.com](http://www.windowsondevices.com/).
+<strong>Nota</strong> Windows 10 IoT Core está ahora disponible para una nueva clase de dispositivos pequeños, lo que te permite crear dispositivos del "Internet de las cosas" (IoT) con Windows y Visual Studio. Obtén más información sobre Windows IoT en [WindowsOnDevices.com](http://www.windowsondevices.com/).
 </div>
 <div>
  
@@ -399,7 +400,7 @@ Este es un vistazo característica por característica de las novedades de Windo
 
 |                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DirectX              | DirectX 12 en Windows 10 incorpora la nueva versión de Microsoft Direct3D, la API de gráficos 3D en el corazón de DirectX. [Direct3D 12 Graphics](https://msdn.microsoft.com/library/windows/desktop/dn903821) ofrece la eficacia y el rendimiento de una API de tipo consola de bajo nivel. Direct3D 12 es más rápido y más eficiente que nunca. Permite crear escenas más vivaces, más objetos, efectos más complejos, así como mejorar el uso del hardware gráfico moderno.                                                                                                                                                                                                                                                                                     |
+| DirectX              | DirectX 12 en Windows 10 incorpora la nueva versión de Microsoft Direct3D, la API de gráficos 3D en el corazón de DirectX. [Direct3D 12 Graphics (Gráficos de Direct3D 12)](https://msdn.microsoft.com/library/windows/desktop/dn903821) ofrece la eficacia y el rendimiento de una API de tipo consola de bajo nivel. Direct3D 12 es más rápido y más eficiente que nunca. Permite crear escenas más vivaces, más objetos, efectos más complejos, así como mejorar el uso del hardware gráfico moderno.                                                                                                                                                                                                                                                                                     |
 | SoftwareBitmapSource | En las aplicaciones universales de Windows, puedes usar el nuevo tipo [**SoftwareBitmapSource**](https://msdn.microsoft.com/library/windows/apps/dn997854) como origen de imagen XAML. Esto te permite pasar imágenes sin codificación al marco XAML para que se muestren inmediatamente en pantalla, omitiendo la descodificación de imágenes por el marco XAML. Puedes lograr una representación de imágenes mucho más rápida, como la representación de fotos de retardo bajo directamente desde la cámara, usando descodificadores de imagen personalizados, capturando fotogramas desde superficies de DirectX, o incluso creando imágenes en memoria desde cero y representándolas todas directamente en XAML con latencia baja y baja sobrecarga de memoria.                                                                                                     |
 | Cámara perspectiva   | En aplicaciones universales de Windows, XAML tiene una nueva API de Transform3D que te permite aplicar transformaciones de perspectiva a un árbol XAML (o escena), que transforma todos los elementos secundarios XAML en función de esa transformación única de toda la escena (o cámara). Podrías hacer esto anteriormente con MatrixTransform y matemáticas complejas, pero Transform3D simplifica en gran medida este efecto y también permite la animación del efecto. Para obtener más información, consulta la propiedad [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/dn906919), [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/dn914748), [**CompositeTransform3D**](https://msdn.microsoft.com/library/windows/apps/dn914714) y [**PerspectiveTransform3D**](https://msdn.microsoft.com/library/windows/apps/dn914740). |
 
@@ -490,7 +491,7 @@ Este es un vistazo característica por característica de las novedades de Windo
 <td align="left">Actualización de la API de Wi-Fi Direct</td>
 <td align="left"><p>El agente del dispositivo se actualiza para permitir el emparejamiento con dispositivos sin tener que dejar la aplicación. Las adiciones al espacio de nombres [<strong>Windows.Devices.WiFiDirect</strong>](https://msdn.microsoft.com/library/windows/apps/dn297687) también permiten que otros dispositivos puedan detectar un dispositivo y que este escuche las notificaciones de conexión entrante.</p>
 <div class="alert">
-<strong>Note</strong>  En esta versión, las mejoras de la función Wi-Fi Direct no se integran en la experiencia del usuario y solo admiten el emparejamiento con el botón de comando. Asimismo, esta versión solo admite una conexión activa.
+<strong>Nota</strong> En esta versión, las mejoras de la función Wi-Fi Direct no se integran en la experiencia del usuario y solo admiten el emparejamiento con el botón de comando. Asimismo, esta versión solo admite una conexión activa.
 </div>
 <div>
  
@@ -534,9 +535,9 @@ Este es un vistazo característica por característica de las novedades de Windo
 </tr>
 <tr class="even">
 <td align="left">Versión</td>
-<td align="left"><p>Puedes usar [Version Helper functions](https://msdn.microsoft.com/library/windows/desktop/dn424972) para determinar la versión del sistema operativo. Para Windows 10, estas funciones auxiliares incluyen una nueva función, [<strong>IsWindows10OrGreater</strong>](https://msdn.microsoft.com/library/windows/desktop/dn905474). Debes usar las funciones auxiliares en lugar de las funciones en desuso [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) y [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) para determinar la versión del sistema. Para obtener más información sobre cómo determinar la versión del sistema, consulta [Getting the System Version](https://msdn.microsoft.com/library/windows/desktop/ms724429).</p>
-<p>Si usas las funciones en desuso [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) o [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) para obtener información de la versión en una estructura [<strong>OSVERSIONINFOEX</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724833) o [<strong>OSVERSIONINFO</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724834), ten en cuenta que el número de versión que estas estructuras contienen aumenta de 6.3 para Windows 8.1 y Windows Server 2012 R2 a 10.0 para Windows 10. Para obtener más información acerca de los números de versión del sistema operativo, consulta [Operating System Version](https://msdn.microsoft.com/library/windows/desktop/ms724832).</p>
-<p>También debes seleccionar específicamente Windows 8.1 o Windows 10 como destino de la aplicación para obtener la información de versión correcta de estas versiones con las funciones [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) o [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439). Para obtener información sobre cómo seleccionar como destino de la aplicación estas versiones de Windows, consulta [Targeting your application for Windows](https://msdn.microsoft.com/library/windows/desktop/dn481241).</p></td>
+<td align="left"><p>Puedes usar las [funciones de la aplicación auxiliar de versiones](https://msdn.microsoft.com/library/windows/desktop/dn424972) para determinar la versión del sistema operativo. Para Windows 10, estas funciones auxiliares incluyen una nueva función, [<strong>IsWindows10OrGreater</strong>](https://msdn.microsoft.com/library/windows/desktop/dn905474). Debes usar las funciones auxiliares en lugar de las funciones en desuso [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) y [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) para determinar la versión del sistema. Para obtener más información acerca de cómo obtener la versión del sistema, consulta [Obtener la versión del sistema](https://msdn.microsoft.com/library/windows/desktop/ms724429).</p>
+<p>Si usas las funciones en desuso [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) o [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) para obtener información de la versión en una estructura [<strong>OSVERSIONINFOEX</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724833) o [<strong>OSVERSIONINFO</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724834), ten en cuenta que el número de versión que estas estructuras contienen aumenta de 6.3 para Windows 8.1 y Windows Server 2012 R2 a 10.0 para Windows 10. Para obtener más información sobre los números de versión del sistema operativo, consulta [Versión del sistema operativo](https://msdn.microsoft.com/library/windows/desktop/ms724832).</p>
+<p>También debes seleccionar específicamente Windows 8.1 o Windows 10 como destino de la aplicación para obtener la información de versión correcta de estas versiones con las funciones [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) o [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439). Para obtener información acerca de cómo seleccionar tu aplicación como destino para estas versiones de Windows, consulta [Targeting your application for Windows (Orientar tu aplicación a Windows)](https://msdn.microsoft.com/library/windows/desktop/dn481241).</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Información de usuario</td>
@@ -585,7 +586,7 @@ Este es un vistazo característica por característica de las novedades de Windo
 </tr>
 <tr class="even">
 <td align="left">Registro de seguimiento</td>
-<td align="left"><p>[TraceLogging](https://msdn.microsoft.com/library/windows/desktop/dn904636) es una nueva API de seguimiento de eventos para las aplicaciones de modo usuario y los controladores de modo kernel; se basa en [Event Tracing for Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW). Esta API ofrece una manera simplificada de instrumentar código e incluir datos estructurados con eventos sin necesitar un archivo XML de manifiesto de instrumentación independiente.</p>
+<td align="left"><p>[TraceLogging](https://msdn.microsoft.com/library/windows/desktop/dn904636) es una nueva API de seguimiento de eventos para las aplicaciones de modo usuario y los controladores de modo kernel; se basa en el [Seguimiento de eventos para Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW). Esta API ofrece una manera simplificada de instrumentar código e incluir datos estructurados con eventos sin necesitar un archivo XML de manifiesto de instrumentación independiente.</p>
 <p>Las API TraceLogging de WinRT, .NET y C/C++ están disponibles para los distintos tipos de desarrolladores.</p></td>
 </tr>
 </tbody>
@@ -620,7 +621,7 @@ Este es un vistazo característica por característica de las novedades de Windo
 </tr>
 <tr class="odd">
 <td align="left">Barras de título de ventanas personalizadas</td>
-<td align="left">En las aplicaciones para UWP para la familia de dispositivos de escritorio, ahora puedes usar la clase [<strong>ApplicationViewTitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn906115) con la propiedad [<strong>ApplicationView.TitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn906131) y el método [<strong>Window.SetTitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn965560) para reemplazar el contenido predeterminado de la barra de título de Windows con tu propio contenido XAML personalizado. El código XAML se trata como &quot;cromo del sistema&quot;, por lo que Windows administrará los eventos de entrada en lugar de la aplicación. Esto significa que el usuario puede seguir arrastrando y cambiando el tamaño de la ventana, incluso al hacer clic en el contenido de la barra de título personalizado.</td>
+<td align="left">En las aplicaciones para UWP para la familia de dispositivos de escritorio, ahora puedes usar la clase [<strong>ApplicationViewTitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn906115) con la propiedad [<strong>ApplicationView.TitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn906131) y el método [<strong>Window.SetTitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn965560) para reemplazar el contenido predeterminado de la barra de título de Windows por tu propio contenido XAML personalizado. El código XAML se trata como &quot;cromo del sistema&quot;, por lo que Windows administrará los eventos de entrada en lugar de la aplicación. Esto significa que el usuario puede seguir arrastrando y cambiando el tamaño de la ventana, incluso al hacer clic en el contenido de la barra de título personalizado.</td>
 </tr>
 </tbody>
 </table>
@@ -638,10 +639,10 @@ Este es un vistazo característica por característica de las novedades de Windo
 <tbody>
 <tr class="odd">
 <td align="left">Internet Explorer</td>
-<td align="left"><p>Internet Explorer presenta el modo Edge: un nuevo modo de documento &quot;vivo&quot;, diseñado para lograr una máxima interoperabilidad con otros exploradores modernos y contenidos web contemporáneos. Este modo experimental se está distribuyendo de forma progresiva a un conjunto de usuarios de Windows 10 elegido de forma aleatoria. Puedes habilitar o inhabilitar manualmente el modo Edge mediante el nuevo mecanismo <strong>about:flags</strong> de IE. Para obtener más información, consulta:</p>
+<td align="left"><p>Internet Explorer presenta el modo Edge: un nuevo modo de documento &quot;vivo&quot; diseñado para lograr una máxima interoperabilidad con otros exploradores modernos y contenidos web contemporáneos. Este modo experimental se está distribuyendo de forma progresiva a un conjunto de usuarios de Windows 10 elegido de forma aleatoria. Puedes habilitar o inhabilitar manualmente el modo de borde mediante el nuevo mecanismo <strong>about:flags</strong> de IE. Para obtener más información, consulta:</p>
 <ul>
-<li>[Living on the Edge – our next step in helping the web just work](http://blogs.msdn.com/b/ie/archive/2014/11/11/living-on-the-edge-our-next-step-in-interoperability.aspx).</li>
-<li>[The Internet Explorer for Windows 10 Developer Guide](https://dev.windows.com/microsoft-edge/).</li>
+<li>[Living on the Edge – our next step in helping the web just work (Vivir al límite: nuestro próximo paso para contribuir al funcionamiento de la Web)](http://blogs.msdn.com/b/ie/archive/2014/11/11/living-on-the-edge-our-next-step-in-interoperability.aspx)</li>
+<li>[Guía para desarrolladores de Internet Explorer para Windows 10](https://dev.windows.com/microsoft-edge/)</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -686,6 +687,6 @@ Este es un vistazo característica por característica de las novedades de Windo
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

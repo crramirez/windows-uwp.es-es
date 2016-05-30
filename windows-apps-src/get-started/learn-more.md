@@ -1,9 +1,6 @@
 ---
-ms.assetid: 4288E511-581C-49DC-A2F2-1CB832C4A676
-title: A continuación
-description: Ahora que ya creaste tu primera aplicación, visita el resto del Centro de desarrollo. Esta es una introducción a las diferentes secciones que contiene.'
-keywords: Centro de desarrollo, visita
-keywords: Centro de desarrollo, introducción
+author: martinekuan ms.assetid: 4288E511-581C-49DC-A2F2-1CB832C4A676 title: A continuación description: Ahora que ya creaste tu primera aplicación, visita el resto del Centro de desarrollo. Esta es una introducción a las diferentes secciones que contiene.'
+palabras clave: Centro de desarrollo, visita palabras clave: Centro de desarrollo, Introducción
 ---
 # A continuación
 
@@ -67,6 +64,6 @@ Ve a [Desarrollar aplicaciones de IoT](http://go.microsoft.com/fwlink/p/?LinkId=
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

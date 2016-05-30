@@ -1,6 +1,7 @@
 ---
+author: mtoepke
 title: Programación asincrónica (DirectX y C++)
-description: En este tema se cubren diversos puntos que deben tener en cuenta al usar la programación asincrónica y los subprocesos con DirectX.
+description: En este tema se tratan diversos aspectos que deben considerarse cuando se usa la programación asincrónica y los subprocesos con DirectX.
 ms.assetid: 17613cd3-1d9d-8d2f-1b8d-9f8d31faaa6b
 ---
 
@@ -62,6 +63,6 @@ Crea un contexto diferido usando [**ID3D11Device::CreateDeferredContext**](https
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

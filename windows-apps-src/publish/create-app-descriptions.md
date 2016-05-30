@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: La sección Descripciones del proceso de envío de la aplicación es donde proporcionas el texto y las imágenes que los clientes verán en la información de la aplicación en la Tienda.
 title: Crear descripciones de la aplicación
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
@@ -24,6 +25,8 @@ Para agregar o quitar idiomas para las descripciones, haz clic en **Administrar 
 En la sección **Idiomas de descripción adicionales**, puedes hacer clic en **Administrar idiomas adicionales** para agregar o quitar idiomas que no están incluidos en los paquetes. Activa las casillas para los idiomas que deseas agregar i, a continuación, haz clic en **Actualizar**. Los idiomas que has seleccionado se mostrarán en la sección **Idiomas adicionales descripción**. Para quitar uno o más de estos idiomas, haz clic en **Quitar** (o haz clic en **Administrar idiomas adicionales** y desactiva la casilla para los idiomas que deseas quitar).
 
 Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío.
+
+> **Nota** Al crear una descripción en un idioma que no sea compatible con los paquetes, debes indicar qué nombre de aplicación reservado debe mostrarse en esa descripción, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre. El nombre que elijas aquí solo se aplica a la descripción de la Tienda para este idioma y no afecta al nombre que se muestra cuando un usuario instala la aplicación.
 
 Para editar una descripción, haz clic en su nombre en la visión general del envío. Las secciones de la página **Descripción** están descritas a continuación.
 
@@ -77,7 +80,7 @@ Los campos de la sección **Campos compartidos** no se pueden personalizar para 
 
 ### Palabras clave
 
-Las palabras clave son palabras simples o frases cortas que no se muestran al cliente, pero que ayudan a que tu aplicación aparezca en los resultados de búsqueda relacionados con la palabra clave. Puedes incluir hasta 8 palabras clave con un máximo de 45 caracteres cada una.
+Las palabras clave son palabras simples o frases cortas que no se muestran al cliente, pero que ayudan a que tu aplicación aparezca en los resultados de búsqueda relacionados con la palabra clave. Puedes incluir hasta 7 palabras clave con un máximo de 30 caracteres cada una.
 
 Si quieres agregar palabras clave, piensa en las palabras que los clientes podrían usar al buscar aplicaciones como la tuya, especialmente si no forman parte del nombre de la aplicación. Asegúrate de no usar cualquier palabra clave que no sea relevante para tu aplicación.
 
@@ -114,6 +117,6 @@ Si tienes una directiva de privacidad de la aplicación, escribe la dirección U
 **Importante**  Microsoft no proporciona una directiva de privacidad predeterminada para tu aplicación. De igual modo, tu aplicación no está cubierta por ninguna directiva de privacidad de Microsoft. Para determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) y las [Directivas de la Tienda Windows](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_5_1).
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

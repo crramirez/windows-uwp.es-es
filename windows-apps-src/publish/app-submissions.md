@@ -1,12 +1,6 @@
 ---
-Description: Una vez que hayas creado tu aplicación reservando un nombre, puedes empezar a trabajar para publicarla. El primer paso es crear un envío.
-title: Envíos de aplicaciones
-ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
-keywords: enviar una aplicación
-keywords: información obligatoria
-keywords: campos obligatorios
-keywords: datos obligatorios
-keywords: lista de comprobación
+author: jnHs Description: Una vez que hayas creado la aplicación reservando un nombre, puedes empezar a trabajar para publicarla. El primer paso es crear un envío.
+title: Envíos de aplicaciones ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4 keywords: enviar una aplicación keywords: información necesaria keywords: campos obligatorios keywords: datos obligatorios keywords: lista de comprobación
 ---
 
 # Envíos de aplicaciones
@@ -98,6 +92,6 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 **Note**  Para obtener información sobre cómo publicar aplicaciones de línea de negocio (LOB) directamente en las empresas, consulta [Distribuir aplicaciones de LOB en las empresas](distribute-lob-apps-to-enterprises.md).
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

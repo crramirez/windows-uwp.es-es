@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Amplía la funcionalidad básica de Cortana con comandos de voz que inician y ejecutan una acción única en una aplicación externa.
 title: Interacciones de Cortana
 ms.assetid: 4C11A7CF-DA26-4CA1-A9B9-FE52670101F5
@@ -9,7 +10,7 @@ template: detail.hbs
 # Interacciones de Cortana en las aplicaciones para UWP
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Amplía la funcionalidad básica de **Cortana** con comandos de voz que inician y ejecutan una única acción en una aplicación externa. 
 
@@ -30,7 +31,7 @@ Se puede iniciar la aplicación de destino en primer plano (la aplicación toma 
 
  
 
-Al integrar la funcionalidad básica de tu aplicación y ofrecer un punto de entrada central para que el usuario realice la mayoría de las tareas sin tener que abrir la aplicación directamente, se permite que **Cortana** actúe como enlace entre tu aplicación y el usuario. Proporcionar este acceso directo a la funcionalidad de la aplicación y reducir la necesidad de cambiar las aplicaciones permiten que el usuario ahorre tiempo y esfuerzo significativos.
+Al integrar la funcionalidad básica de tu aplicación y ofrecer un punto de entrada central para que el usuario realice la mayoría de las tareas sin tener que abrir la aplicación directamente, se permite que **Cortana** actúe como enlace entre tu aplicación y el usuario. Proporcionar este acceso directo a la funcionalidad de la aplicación y reducir la necesidad de cambiar las aplicaciones permite que el usuario ahorre tiempo y esfuerzo significativos.
 
 
 <table>
@@ -46,32 +47,32 @@ Al integrar la funcionalidad básica de tu aplicación y ofrecer un punto de ent
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Design guidelines](cortana-design-guidelines.md)</p></td>
+<td align="left"><p>[Directrices de diseño](cortana-design-guidelines.md)</p></td>
 <td align="left"><p>Estas directrices y recomendaciones describen cómo la aplicación puede usar mejor **Cortana** para interactuar con el usuario, ayudarle a realizar una tarea y comunicar claramente lo que está sucediendo.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Launch a foreground app with voice commands](launch-a-foreground-app-with-voice-commands-in-cortana.md)</p></td>
+<td align="left"><p>[Iniciar una aplicación en primer plano con comandos de voz](launch-a-foreground-app-with-voice-commands-in-cortana.md)</p></td>
 <td align="left"><p>Además de usar los comandos de voz en <strong>Cortana</strong> para acceder a las funciones del sistema, también puedes usar los comandos de voz a través de <strong>Cortana</strong> para iniciar una aplicación en primer plano y especificar una acción o un comando para que se ejecute dentro de la aplicación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Dynamically modify VCD phrase lists](dynamically-modify-voice-command-definition--vcd--phrase-lists.md)</p></td>
+<td align="left"><p>[Modificar listas de frases de VCD de forma dinámica](dynamically-modify-voice-command-definition--vcd--phrase-lists.md)</p></td>
 <td align="left"><p>Aprende a obtener acceso y actualizar la lista de frases admitidas (elementos <strong>PhraseList</strong>) en un archivo VCD mediante el resultado de reconocimiento de voz en tiempo de ejecución.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Launch a background app with voice commands](launch-a-background-app-with-voice-commands-in-cortana.md)</p></td>
+<td align="left"><p>[Iniciar una aplicación en segundo plano con comandos de voz](launch-a-background-app-with-voice-commands-in-cortana.md)</p></td>
 <td align="left"><p>Además de usar los comandos de voz en <strong>Cortana</strong> para tener acceso a las características del sistema, también puedes ampliar <strong>Cortana</strong> con características y funcionalidades desde una aplicación en segundo plano con comandos de voz que especifiquen una acción o un comando que se debe ejecutar dentro de la aplicación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Interact with a background app](interact-with-a-background-app-in-cortana.md)</p></td>
+<td align="left"><p>[Interactuar con una aplicación en segundo plano](interact-with-a-background-app-in-cortana.md)</p></td>
 <td align="left"><p>Obtén información sobre cómo puede interactuar un usuario con una aplicación en segundo plano mediante el lienzo y la voz de <strong>Cortana</strong> durante la ejecución de un comando de voz.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Deep link to a background app](deep-link-into-your-app-from-cortana.md)</p></td>
+<td align="left"><p>[Vínculo profundo para una aplicación en segundo plano](deep-link-into-your-app-from-cortana.md)</p></td>
 <td align="left"><p>Proporciona vínculos profundos desde el servicio de la aplicación en segundo plano en <strong>Cortana</strong> para iniciar la aplicación en primer plano en un contexto o un estado determinado.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Support natural language voice commands](support-natural-language-voice-commands-in-cortana.md)</p></td>
-<td align="left"><p>Aprende cómo ampliar <strong>Cortana</strong> con comandos de voz más flexibles y naturales, de modo que el usuario pueda decir el nombre de tu aplicación en cualquier lugar del comando.</p></td>
+<td align="left"><p>[Admitir comandos de voz en lenguaje natural](support-natural-language-voice-commands-in-cortana.md)</p></td>
+<td align="left"><p>Aprende cómo ampliar <strong>Cortana</strong> con comandos de voz más flexibles y naturales, de modo que el usuario pueda decir el nombre de la aplicación en cualquier lugar del comando.</p></td>
 </tr>
 </tbody>
 </table>
@@ -98,6 +99,6 @@ Al integrar la funcionalidad básica de tu aplicación y ofrecer un punto de ent
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

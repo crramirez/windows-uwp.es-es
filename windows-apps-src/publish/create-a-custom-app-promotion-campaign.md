@@ -1,10 +1,11 @@
 ---
+author: jnHs
 Description: Además de crear una campaña publicitaria para tu aplicación que se ejecutará en aplicaciones de Windows, también puedes promocionar tu aplicación en otros canales.
-title: Crea una campaña de promoción de la aplicación personalizada
+title: Crear una campaña de promoción de aplicaciones personalizada
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
 ---
 
-# Crear una campaña de promoción de aplicaciones personalizadas
+# Crear una campaña de promoción de aplicaciones personalizada
 
 
 
@@ -44,7 +45,7 @@ Para que exista conversión según el [informe sobre canales y conversiones](cha
 
 -   Un cliente con una cuenta de Microsoft reconocida hace clic en la dirección URL de una aplicación, dirección que contiene el identificador de una campaña personalizada, y se le redirige a la página de la aplicación en la Tienda Windows.
 -   El mismo cliente (identificado por usar la misma cuenta de Microsoft) instala la aplicación no más de 24 horas después de haber hecho clic en la dirección URL de la Tienda Windows con el identificador de campaña personalizada. Esto se considera una conversión incluso si el cliente instala la aplicación en otro equipo o dispositivo diferente de aquel desde el que hizo clic en la dirección URL de la Tienda Windows con el identificador de campaña personalizada.
-    > **Nota**  Para las instalaciones de aplicaciones que se cuentan como conversiones para una campaña personalizada, cualquier compra de IAP en esa aplicación también se cuentan como conversiones de la misma campaña personalizada.
+    > **Nota**  Para las instalaciones de aplicaciones que se cuentan como conversiones para una campaña personalizada, cualquier compra de IAP en esa aplicación también se cuenta como conversión de la misma campaña personalizada.
 
      
 
@@ -82,7 +83,7 @@ El siguiente ejemplo muestra cómo usar el método [**GetAppPurchaseCampaignIdAs
 string campaignId = await CurrentApp.GetAppPurchaseCampaignIdAsync();
 ```
 
-``` ManagedCPlusPlus
+``` cpp
 HString campaignId;
 HRESULT hr = CurrentApp::GetAppPurchaseCampaignIdAsync(campaignId.GetAddressOf());
 ```
@@ -129,6 +130,6 @@ Antes de que promociones la dirección URL de una campaña personalizada, te rec
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

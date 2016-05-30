@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Proporciona un valor para cualquier atributo XAML mediante la evaluación de una referencia a un recurso ya definido. Los recursos se definen en un ResourceDictionary, y el uso de StaticResource hace referencia a la clave de ese recurso en el ResourceDictionary.
 title: Extensión de marcado StaticResource
 ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
@@ -24,7 +25,7 @@ Proporciona un valor para cualquier atributo XAML mediante la evaluación de una
 
 ## Observaciones
 
-Un **StaticResource** es una técnica para obtener valores para un atributo XAML que se definen en otra parte de un diccionario de recursos XAML. Los valores podrían colocarse en un diccionario de recursos porque están destinados a ser compartidos por varios valores de propiedad, o porque se usa un diccionario de recursos XAML como técnica de empaquetado o factorización de XAML. Un ejemplo de una técnica de empaquetado de XAML es el diccionario de temas de un control. Otro ejemplo son los diccionarios de recursos combinados que se usan para la reserva de recursos.
+**StaticResource** es una técnica para obtener valores para un atributo XAML que se definen en otra parte de un diccionario de recursos XAML. Los valores podrían colocarse en un diccionario de recursos porque están destinados a ser compartidos por varios valores de propiedad, o porque se usa un diccionario de recursos XAML como técnica de empaquetado o factorización de XAML. Un ejemplo de una técnica de empaquetado de XAML es el diccionario de temas de un control. Otro ejemplo son los diccionarios de recursos combinados que se usan para la reserva de recursos.
 
 **StaticResource** toma un argumento, que especifica la clave del recurso solicitado. Una clave de recursos es siempre una cadena en XAML de Windows Runtime. Para obtener más información acerca de cómo especificar inicialmente la clave de recurso, consulta [Atributo x:Key](x-key-attribute.md).
 
@@ -35,7 +36,7 @@ Un **StaticResource** no debe intentar hacer referencia adelantada a un recurso 
 
 Intentar especificar un **StaticResource** en una clave que no puede resolverse inicia una excepción de análisis XAML en tiempo de ejecución. Las herramientas de diseño también pueden ofrecer advertencias o errores.
 
-En la implementación del procesador XAML de Windows Runtime no hay una representación de clase de respaldo para la funcionalidad de **StaticResource**. **StaticResource** se usa exclusivamente en marcado XAML. El equivalente más parecido en el código consiste en usar la API de colección de un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), por ejemplo, una llamada a [**Contains**](https://msdn.microsoft.com/library/windows/apps/jj635925) o [**TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj603139).
+En la implementación del procesador XAML de Windows Runtime no hay una representación de clase de respaldo para la funcionalidad de **StaticResource**. **StaticResource** se usa exclusivamente en XAML. El equivalente más parecido en el código consiste en usar la API de colección de un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), por ejemplo, una llamada a [**Contains**](https://msdn.microsoft.com/library/windows/apps/jj635925) o [**TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj603139).
 
 La [extensión de marcado {ThemeResource}](themeresource-markup-extension.md) es una extensión de marcado similar que hace referencia a recursos con nombre en otra ubicación. La diferencia es que la extensión de marcado {ThemeResource} puede devolver diferentes recursos según el tema del sistema que esté activo. Para obtener más información, consulta [Extensión de marcado {ThemeResource}](themeresource-markup-extension.md).
 
@@ -45,7 +46,7 @@ La [extensión de marcado {ThemeResource}](themeresource-markup-extension.md) es
 
 Este ejemplo de XAML se ha extraído de la [Muestra de enlace de datos XAML](http://go.microsoft.com/fwlink/p/?linkid=226854).
 
-```xaml
+```xml
 <StackPanel Margin="5">
     <!-- Add converter as a resource to reference it from a Binding. --> 
     <StackPanel.Resources>
@@ -81,6 +82,6 @@ Cuando exista una clave de recurso como parte del uso de cualquier **{StaticReso
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

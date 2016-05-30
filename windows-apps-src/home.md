@@ -43,6 +43,6 @@ Si quieres una introducción a la Plataforma universal de Windows (UWP) y de có
 | [Plataforma XAML](xaml-platform/index.md) | Aprende los conceptos básicos del lenguaje de programación XAML. O bien, si ya estás familiarizado con XAML, sigue adelante y aprende a implementar características de Windows Runtime en XAML con Visual Studio para crear una excelente aplicación universal de Windows. |
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

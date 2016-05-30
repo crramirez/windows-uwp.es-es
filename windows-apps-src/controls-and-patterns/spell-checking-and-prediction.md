@@ -1,14 +1,13 @@
 ---
-Description: Durante la edición y entrada de texto, la revisión ortográfica informa al usuario que una palabra está escrita erróneamente resaltándola con una línea en zigzag roja y brindando una forma en la que el usuario puede corregir el error.
+author: Jwmsft
+Description: Durante la edición y entrada de texto, la corrección ortográfica informa al usuario que una palabra está escrita erróneamente resaltándola con una línea en zigzag roja y brindando una forma en la que el usuario puede corregir el error.
 title: Revisión ortográfica y predicción de texto
 ms.assetid: B867C956-5AB2-4207-A8DE-179CE7871180
-label: Revisión ortográfica y predicción de texto
+label: Spell checking and text prediction
 template: detail.hbs
 ---
 
 # Directrices sobre revisión ortográfica
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Durante la edición y entrada de texto, la revisión ortográfica informa al usuario de que una palabra está escrita de forma errónea resaltándola con una línea en zigzag roja y permite que el usuario pueda corregir el error.
 
@@ -47,14 +46,16 @@ Para los controles de JavaScript, la revisión ortográfica está activada de fo
 
 Para los controles TextBox de XAML, la revisión ortográfica está desactivada de forma predeterminada. Para activarla, establece la propiedad **IsSpellCheckEnabled** en **true**.
 
-\[Este artículo contiene información específica de las aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
 ## <span id="related_topics"></span>Artículos relacionados
 
 * [Texto y controles de texto](text-controls.md)
 * [Directrices para la entrada de texto](https://msdn.microsoft.com/library/windows/apps/hh750315)
 * [Directrices sobre texto y tipografía](https://msdn.microsoft.com/library/windows/apps/hh700394)
-**Para desarrolladores (XAML)**
+            
+          
+            **Para desarrolladores (XAML)**
 * [**Propiedad TextBox.IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/br209688)
 * [**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 
@@ -65,6 +66,6 @@ Para los controles TextBox de XAML, la revisión ortográfica está desactivada 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

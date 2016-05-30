@@ -1,5 +1,5 @@
 ---
-Description: Windows 10 versión 1511 y las actualizaciones de las herramientas de desarrollo siguen proporcionando acceso a las características más recientes y a experiencias con tecnología de la Plataforma universal de Windows.
+author: QuinnRadich Description: Windows 10 versión 1511 y las actualizaciones de las herramientas de desarrollo siguen proporcionando acceso a las características más recientes y a experiencias con tecnología de la Plataforma universal de Windows.
 title: Novedades para desarrolladores de Windows 10, versión 1511: noviembre de 2015
 ---
 
@@ -7,7 +7,7 @@ title: Novedades para desarrolladores de Windows 10, versión 1511: noviembre de
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-La versión 1511 de Windows 10 y las actualizaciones de herramientas de desarrollo siguen proporcionando herramientas, características y experiencias con la tecnología de la Plataforma universal de Windows. [Instala las herramientas y el SDK](https://dev.windows.com/downloads) en la versión 1511 de Windows 10, estarás listo para [crear una nueva aplicación universal de Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
+La versión 1511 de Windows 10 y las actualizaciones de herramientas de desarrollo siguen proporcionando herramientas, características y experiencias con la tecnología de la Plataforma universal de Windows. [Instala las herramientas y el SDK](https://dev.windows.com/downloads) en la versión 1511 de Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
 
 ## Experiencia del usuario
 
@@ -83,6 +83,6 @@ Echa un vistazo a nuestras nuevas plantillas de diseño de aplicaciones para UWP
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

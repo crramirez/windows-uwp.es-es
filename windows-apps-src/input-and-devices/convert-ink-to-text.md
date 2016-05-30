@@ -1,23 +1,22 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Convertir trazos de lápiz en texto mediante el reconocimiento de escritura a mano, o en formas mediante el reconocimiento personalizado.
-title: Reconocer trazos de lápiz
+title: Reconocer trazos de Windows Ink como texto
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
-label: Reconocer trazos de lápiz
+label: Recognize Windows Ink strokes as text
 template: detail.hbs
+keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, handwriting recognition
 ---
 
-# Reconocer trazos de lápiz
+# Reconocer trazos de Windows Ink como texto
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+Convertir trazos de lápiz en texto mediante el reconocimiento de escritura a mano, o en formas mediante el reconocimiento personalizado.
 
 **API importantes**
 
 -   [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)
 -   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
-Convertir trazos de lápiz en texto mediante el reconocimiento de escritura a mano, o en formas mediante el reconocimiento personalizado.
 
 El reconocimiento de escritura a mano está integrado en la plataforma de entrada de lápiz de Windows, y admite un amplio conjunto de configuraciones regionales e idiomas.
 
@@ -32,8 +31,7 @@ Para iniciar el reconocimiento, el usuario debe hacer clic en un botón cuando t
 
 1.  En primer lugar, debemos configurar la interfaz de usuario.
 
-    La interfaz de usuario incluye un botón "Reconocer", el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) y un área de visualización de los resultados del reconocimiento.
-
+    La interfaz de usuario incluye un botón "Reconocer", el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) y un área de visualización de los resultados del reconocimiento.    
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -68,7 +66,6 @@ Para iniciar el reconocimiento, el usuario debe hacer clic en un botón cuando t
 2.  A continuación, definimos algunos comportamientos de entrada de lápiz básicos.
 
     El [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar los datos de entrada de lápiz y mouse como trazos de lápiz ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). Los trazos de lápiz se representan en el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) con los [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050) especificados. También se declara un agente de escucha para el evento clic en el botón "Reconocer".
-
 ```    CSharp
 public MainPage()
     {
@@ -94,14 +91,12 @@ public MainPage()
 3.  Por último, realizamos el reconocimiento de escritura a mano básico. Para este ejemplo, usamos el controlador de eventos de clic del botón "Reconocer" para llevar a cabo el reconocimiento de escritura a mano.
 
     Un [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) almacena todos los trazos de lápiz en un objeto [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492). Los trazos se exponen a través de la propiedad [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) del **InkPresenter** y se recuperan mediante el método [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499).
-
 ```    CSharp
 // Get all strokes on the InkCanvas.
     IReadOnlyList<InkStroke> currentStrokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
 ```
 
     An [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) is created to manage the handwriting recognition process.
-
 ```    CSharp
 // Create a manager for the InkRecognizer object 
     // used in handwriting recognition.
@@ -112,7 +107,6 @@ public MainPage()
     [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/br208446) is called to retrieve a set of [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) objects.
 
     Recognition results are produced for each word that is detected by an [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478).
-
 ```    CSharp
 // Recognize all ink strokes on the ink canvas.
     IReadOnlyList<InkRecognitionResult> recognitionResults = 
@@ -124,7 +118,6 @@ public MainPage()
     Each [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) object contains a set of text candidates. The topmost item in this list is considered by the recognition engine to be the best match, followed by the remaining candidates in order of decreasing confidence.
 
     We iterate through each [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) and compile the list of candidates. The candidates are then displayed and the [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) is cleared (which also clears the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)).
-
 ```    CSharp
 string str = "Recognition result\n";
     // Iterate through the recognition results.
@@ -145,7 +138,6 @@ string str = "Recognition result\n";
 ```
 
     Here's the click handler example, in full.
-
 ```    CSharp
 // Handle button click to initiate recognition.
     private async void Recognize_Click(object sender, RoutedEventArgs e)
@@ -254,13 +246,13 @@ En la tabla siguiente se enumeran los idiomas que admite el [**InkRecognizer**](
 La aplicación puede consultar el conjunto de los motores de reconocimiento de escritura a mano instalados y usar uno de estos o permitir que un usuario seleccione su idioma preferido.
 
 **Nota**  
-Los usuarios pueden ver una lista de los idiomas instalados a través de Configuración -&gt; Hora e idioma. Los idiomas instalados se enumeran en Idiomas.
+Los usuarios pueden ver una lista de los idiomas instalados desde Configuración -&gt; Hora e idioma. Los idiomas instalados se enumeran en Idiomas.
 
 Para instalar nuevos paquetes de idioma y habilitar el reconocimiento de escritura a mano para ese idioma:
 
 1.  Ve a **Configuración &gt; Hora e idioma &gt; Región e idioma**.
 2.  Selecciona **Agregar un idioma**.
-3.  Selecciona un idioma de la lista y después elige la versión de la región. El idioma aparece ahora en la página **Región e idioma**.
+3.  Selecciona un idioma de la lista y, después, elige la versión de la región. El idioma aparece ahora en la página **Región e idioma**.
 4.  Haz clic en el idioma y selecciona **Opciones**.
 5.  En la página **Opciones de idioma**, descarga el **motor de reconocimiento de escritura a mano** (aquí también se pueden descargar el paquete de idioma completo, el motor de reconocimiento de voz y la distribución del teclado).
 
@@ -273,7 +265,6 @@ Para iniciar el reconocimiento, el usuario debe hacer clic en un botón cuando t
 1.  En primer lugar, debemos configurar la interfaz de usuario.
 
     La interfaz de usuario incluye un botón "Reconocer", un cuadro combinado que enumera todos los reconocedores de escritura a mano instalados, el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) y un área para visualizar los resultados del reconocimiento.
-
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -323,7 +314,6 @@ Para iniciar el reconocimiento, el usuario debe hacer clic en un botón cuando t
     Llamamos a una función `InitializeRecognizerList` para rellenar el cuadro combinado del reconocedor con una lista de reconocedores de escritura a mano instalados.
 
     También declaramos agentes de escucha para el evento de clic en el botón "Reconocer" y el evento cambiado por la selección en el cuadro combinado del reconocedor.
-
 ```    CSharp
  public MainPage()
      {
@@ -356,7 +346,6 @@ Para iniciar el reconocimiento, el usuario debe hacer clic en un botón cuando t
 3.  Rellenamos el cuadro combinado del reconocedor con una lista de los reconocedores de escritura a mano instalados.
 
     Se crea un [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) para administrar el proceso de reconocimiento de escritura a mano. Usa este objeto para llamar a [**GetRecognizers**](https://msdn.microsoft.com/library/windows/apps/br208480) y recuperar la lista de reconocedores instalados a fin de rellenar el cuadro combinado del reconocedor.
-
 ```    CSharp
 // Populate the recognizer combo box with installed recognizers.
     private void InitializeRecognizerList()
@@ -378,7 +367,6 @@ Para iniciar el reconocimiento, el usuario debe hacer clic en un botón cuando t
 4.  Actualiza el reconocedor de escritura a mano si la selección del cuadro combinado del reconocedor cambia.
 
     Usa el [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) para llamar a [**SetDefaultRecognizer**](https://msdn.microsoft.com/library/windows/apps/hh920328) según el reconocedor seleccionado en el cuadro combinado del reconocedor.
-
 ```    CSharp
 // Handle recognizer change.
     private void comboInstalledRecognizers_SelectionChanged(
@@ -392,7 +380,6 @@ Para iniciar el reconocimiento, el usuario debe hacer clic en un botón cuando t
 5.  Por último, realizamos el reconocimiento de escritura a mano según el reconocedor de escritura a mano seleccionado. Para este ejemplo, usamos el controlador de eventos de clic del botón "Reconocer" para llevar a cabo el reconocimiento de escritura a mano.
 
     Un [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) almacena todos los trazos de lápiz en un objeto [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492). Los trazos se exponen a través de la propiedad [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) del **InkPresenter** y se recuperan mediante el método [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499).
-
 ```    CSharp
 // Get all strokes on the InkCanvas.
     IReadOnlyList<InkStroke> currentStrokes = 
@@ -402,7 +389,6 @@ Para iniciar el reconocimiento, el usuario debe hacer clic en un botón cuando t
     [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/br208446) is called to retrieve a set of [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) objects.
 
     Recognition results are produced for each word that is detected by an [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478).
-
 ```    CSharp
 // Recognize all ink strokes on the ink canvas.
     IReadOnlyList<InkRecognitionResult> recognitionResults =
@@ -414,7 +400,6 @@ Para iniciar el reconocimiento, el usuario debe hacer clic en un botón cuando t
     Each [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) object contains a set of text candidates. The topmost item in this list is considered by the recognition engine to be the best match, followed by the remaining candidates in order of decreasing confidence.
 
     We iterate through each [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) and compile the list of candidates. The candidates are then displayed and the [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) is cleared (which also clears the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)).
-
 ```    CSharp
 string str = "Recognition result\n";
     // Iterate through the recognition results.
@@ -436,7 +421,6 @@ string str = "Recognition result\n";
 ```
 
     Here's the click handler example, in full.
-
 ```    CSharp
 // Handle button click to initiate recognition.
     private async void Recognize_Click(object sender, RoutedEventArgs e)
@@ -506,8 +490,7 @@ Para este ejemplo, usaremos la misma interfaz de usuario y la misma configuraci�
 
 1.  Como en los ejemplos anteriores, el [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar los datos de entrada de lápiz y mouse como trazos de lápiz ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), y los trazos de lápiz se representan en el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) con los [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050) especificados.
 
-    En lugar de un botón para iniciar el reconocimiento, agregamos agentes de escucha para dos eventos de trazo de lápiz del [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) ([**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024) y [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)) y configuramos un temporizador básico ([**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250)) con un segundo intervalo de [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256).
-
+    En lugar de un botón para iniciar el reconocimiento, agregamos agentes de escucha para dos eventos de trazo de lápiz del [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) ([**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024) y [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)) y configuramos un temporizador básico ([**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250)) con un segundo intervalo de [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256).    
 ```    CSharp
 public MainPage()
     {
@@ -570,8 +553,7 @@ public MainPage()
     private void inkCanvas_StrokesCollected(InkPresenter sender, InkStrokesCollectedEventArgs args)
     {
         recoTimer.Start();
-    }
-    
+    }    
 ```
 
 2.  Estos son los controladores de los tres eventos que hemos agregado en el primer paso.
@@ -582,9 +564,8 @@ public MainPage()
     <span id="StrokeStarted"></span><span id="strokestarted"></span><span id="STROKESTARTED"></span>[**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
     Si se inicia un nuevo trazo antes del siguiente evento de graduación del temporizador, detén el temporizador, ya que el nuevo trazo es probablemente la continuación de una sola entrada de escritura a mano.
 
-    <span id="Tick"></span><span id="tick"></span><span id="TICK"></span>[**Graduación**](https://msdn.microsoft.com/library/windows/apps/br244256)  
+    <span id="Tick"></span><span id="tick"></span><span id="TICK"></span>[**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)  
     Llama a la función de reconocimiento después de un segundo sin entrada de lápiz.
-
 ```    CSharp
 // Handler for the timer tick event calls the recognition function.
     private void recoTimer_Tick(object sender, object e)
@@ -614,7 +595,6 @@ public MainPage()
 3.  Por último, realizamos el reconocimiento de escritura a mano según el reconocedor de escritura a mano seleccionado. Para este ejemplo, usamos el controlador de eventos de [**Graduación**](https://msdn.microsoft.com/library/windows/apps/br244256) de un [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250) para iniciar el reconocimiento de escritura a mano.
 
     Un [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) almacena todos los trazos de lápiz en un objeto [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492). Los trazos se exponen a través de la propiedad [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) del **InkPresenter** y se recuperan mediante el método [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499).
-
 ```    CSharp
 // Get all strokes on the InkCanvas.
     IReadOnlyList<InkStroke> currentStrokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
@@ -623,7 +603,6 @@ public MainPage()
     [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/br208446) is called to retrieve a set of [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) objects.
 
     Recognition results are produced for each word that is detected by an [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478).
-
 ```    CSharp
 // Recognize all ink strokes on the ink canvas.
     IReadOnlyList<InkRecognitionResult> recognitionResults =
@@ -635,7 +614,6 @@ public MainPage()
     Each [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) object contains a set of text candidates. The topmost item in this list is considered by the recognition engine to be the best match, followed by the remaining candidates in order of decreasing confidence.
 
     We iterate through each [**InkRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/br208464) and compile the list of candidates. The candidates are then displayed and the [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) is cleared (which also clears the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)).
-
 ```    CSharp
 string str = "Recognition result\n";
     // Iterate through the recognition results.
@@ -656,7 +634,6 @@ string str = "Recognition result\n";
 ```
 
     Here's the recognition function, in full.
-
 ```    CSharp
 // Respond to timer Tick and initiate recognition.
     private async void Recognize_Tick()
@@ -718,9 +695,9 @@ string str = "Recognition result\n";
 
 ## <span id="related_topics"></span>Artículos relacionados
 
-
 * [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md)
-**Muestras**
+
+**Ejemplos**
 * [Muestra de entrada de lápiz](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Muestra de entrada de lápiz simple](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [Muestra de entrada de lápiz compleja](http://go.microsoft.com/fwlink/p/?LinkID=620314)
@@ -733,6 +710,6 @@ string str = "Recognition result\n";
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

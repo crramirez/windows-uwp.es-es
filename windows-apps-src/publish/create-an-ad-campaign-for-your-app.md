@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Puedes crear una campaña publicitaria con el panel del Centro de desarrollo para ayudar a promover tu aplicación y cultivar tu base de usuarios.
 title: Crear una campaña publicitaria para tu aplicación
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
@@ -13,7 +14,7 @@ Puedes crear una campaña publicitaria con el panel del Centro de desarrollo par
 
 Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocionar tu aplicación.
 
-1.  En el menú de navegación izquierdo de la página de la aplicación, en el panel del Centro de desarrollo, haz clic en **Monetización** &gt; **Promocionar la aplicación**.
+1.  En el menú de navegación izquierdo de la página de la aplicación, en el panel del Centro de desarrollo, haz clic en **Monetización**&gt;**Promocionar la aplicación**.
 2.  Realiza una de las acciones siguientes:
 
     -   Si aún no creaste ninguna campaña publicitaria para esta aplicación, la página **Promocionar la aplicación** mostrará información sobre las ventajas de las campañas publicitarias. Haz clic en **Introducción** o **Crear campañas publicitarias**.
@@ -24,10 +25,9 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
     -   En **Tipo de campaña**, elige una de estas opciones:
         -   **Publicidad de pago**: esta publicidad se ejecutará en cualquier aplicación que coincida con el dispositivo y la categoría de la aplicación.
         -   **Publicidad interna gratuita**: esta publicidad solo se ejecutará en tus aplicaciones (que coincidan con el dispositivo de la aplicación anunciada). La publicidad interna es gratuita. Para obtener más información, consulta [Acerca de los anuncios internos](about-house-ads.md).
-        -   **Comunidad de publicidad gratuita**: esta publicidad se ejecutará en aplicaciones publicadas por otros desarrolladores que también creación campañas publicitarias de la comunidad. Para poder seleccionar esta opción, primero debes activar la casilla **Mostrar publicidad de la Comunidad en mi aplicación** en la página del panel **Rentabilizar con anuncios**. Para obtener más información, consulta [Acerca de la publicidad de la comunidad](about-community-ads.md).
-    - En **Fecha de inicio de la campaña** y **Fecha de finalización de la campaña**, elige la fecha de inicio y de finalización de la nueva campaña.
+        -   **Comunidad de publicidad gratuita**: esta publicidad se ejecutará en aplicaciones publicadas por otros desarrolladores que también crean campañas publicitarias de la comunidad. Para poder seleccionar esta opción, primero debes activar la casilla **Mostrar publicidad de la comunidad en mi aplicación** en la página del panel **Rentabilizar con anuncios**. Para obtener más información, consulta [Acerca de la publicidad de la comunidad](about-community-ads.md).
 
-    > **Nota** Si la aplicación no se ha publicado aún, recibirás un mensaje de error en la página **Nueva campaña**. Debes esperar a que tu aplicación se publique antes de poder crear una campaña publicitaria para ella.
+    > **Nota**  Si la aplicación no se ha publicado aún, recibirás un mensaje de error en la página **Nueva campaña**. Debes esperar a que tu aplicación se publique antes de poder crear una campaña publicitaria para ella.
 
 4.  De manera predeterminada, elegiremos el público para tus anuncios, en función de la configuración seleccionada al crear la aplicación en el panel del Centro de desarrollo. Si prefieres elegir tú mismo el público de tus anuncios, selecciona **Cambiar a segmentación manual** para expandir la sección **Público**. Si quieres volver a la segmentación predeterminada, selecciona **Cambiar a segmentación automática**.
 
@@ -55,15 +55,15 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
         -   Para elegir un color de fondo y una imagen para tus anuncios, expande **Personalizar el diseño del anuncio/ver los tamaños de los anuncios**. Las imágenes disponibles son las imágenes que has asociado a la aplicación en la Tienda.
 
 6.  Ahora elige tu anuncio configuración financiera de la campaña publicitaria en la sección **Presupuesto y pago**.
-   > **Nota** Si vas a crear una campaña interna o de la comunidad, no aparecerá la sección **Presupuesto y pago**, ya que estas campañas son gratis.
+   > **Nota**  Si vas a crear una campaña interna o de la comunidad, no aparecerá la sección **Presupuesto y pago**, ya que estas campañas son gratis.
 
-    -   Under **Budget**, use the slider to set the amount of money you want to spend each month to run this ad.
+    -   En **Presupuesto**, usa el control deslizante para establecer la cantidad de dinero que quieres gastar cada mes para mostrar el anuncio.
 
-        The monthly budget is prorated for the month in which the ad campaign is created. In other words, if you create an ad campaign halfway through a calendar month, you will be charged for half of your monthly budget for that month.
+        El presupuesto mensual se prorratea el mes en el que se crea la campaña publicitaria. En otras palabras, si creas una campaña publicitaria a mitad de un mes natural, se te cobrará la mitad del presupuesto mensual para ese mes.
 
-    -   Set a payment instrument for your ad campaign by clicking **Add new payment instrument** and fill in your account details.
-        > **Important**  The country/region of your payment instrument's billing address must match the country/region associated with your Dev Center account.
-    -   If you have received a coupon from a Microsoft representative to pay for an ad campaign, click **Use a coupon**, enter the coupon code, and click **Apply** to apply the coupon to the campaign.
+    -   Establece un instrumento de pago de la campaña publicitaria haciendo clic en **Agregar nuevo instrumento de pago** y rellena los detalles de la cuenta.
+        > **Importante**  El país o la región de la dirección de facturación de tu instrumento de pago debe coincidir con el país o la región asociado con tu cuenta del Centro de desarrollo.
+    - Si has recibido un cupón de un representante de Microsoft para pagar una campaña publicitaria, haz clic en **Utilizar un cupón**, escribe el código del cupón y haz clic en **Aplicar** para aplicar el cupón a la campaña.
 
 7.  Por último, haz clic en **Revisar** para confirmar la configuración de la campaña publicitaria y, si es una campaña publicitaria de pago, la información de presupuesto y pago. Haz clic en **Confirmar** y tus anuncios empezarán a aparecer en dispositivos Windows o Windows Phone en pocas horas.
 
@@ -78,6 +78,6 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

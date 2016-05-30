@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que las empresas las compren por volumen a través de la Tienda Windows para empresas, sin necesidad de que las aplicaciones estén disponibles en la Tienda de forma general.
 title: Distribuir aplicaciones de LOB a empresas
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
@@ -9,14 +10,14 @@ ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 
 Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que las empresas las compren por volumen a través de la Tienda Windows para empresas, sin necesidad de que las aplicaciones estén disponibles en la Tienda de forma general.
 
-> **Importante** Por ahora, solo las aplicaciones gratuitas pueden distribuirse de forma exclusiva a las empresas a través de la Tienda para empresas. Si envías una aplicación de pago como LOB, estará disponible para la empresa más adelante, cuando se agregue el soporte para la compra de aplicaciones de pago por volumen. 
+> **Importante**  Por ahora, solo las aplicaciones gratuitas pueden distribuirse de forma exclusiva a las empresas a través de la Tienda Windows para empresas. Si envías una aplicación de pago como LOB, esta no estará disponible para la empresa en este momento. 
 
 ## Configurar la asociación de empresa
 
 
 El primer paso para publicar aplicaciones LOB exclusivamente para una empresa es establecer la asociación entre tu cuenta y la tienda privada de la empresa.
 
-> **Importante** Este proceso de asociación debe comenzarlo la empresa. Para obtener más información, consulta el artículo [Working with line-of-business apps (Trabajar con aplicaciones de línea de negocio)](http://go.microsoft.com/fwlink/p/?LinkId=698846).
+> **Importante**  Este proceso de asociación debe iniciarlo la empresa y debe enviarse a la dirección de correo electrónico de la **Información de contacto** de tu cuenta. Para obtener más información, consulta el artículo [Working with line-of-business apps (Trabajar con aplicaciones de línea de negocio)](http://go.microsoft.com/fwlink/p/?LinkId=698846).
 
 Si una empresa decide invitarte para que publiques aplicaciones para su uso exclusivo, recibirás un correo electrónico con un vínculo para confirmar la asociación. También puedes confirmar estas asociaciones en la sección **Asociaciones de empresa** de tu **Configuración de la cuenta**.
 
@@ -35,7 +36,7 @@ Cuando se selecciona la opción **Line-of-business (LOB) distribution**, las opc
 
 Selecciona las empresas que deben obtener la aplicación. Nadie más podrá acceder a ella.
 
-> **Nota** Tienes que seleccionar una empresa, como mínimo, para publicar una aplicación como línea de negocio.
+> **Nota**  Tienes que seleccionar una empresa, como mínimo, para publicar una aplicación como línea de negocio.
 
 ### Licencias organizativas
 
@@ -74,6 +75,6 @@ Para obtener más información, consulta [Transferir localmente aplicaciones de 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

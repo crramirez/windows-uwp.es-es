@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 description: Desplazamiento por Visual Studio
 title: Desplazamiento por Visual Studio
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
 ---
 
-# Introducción: Desplazamiento por Visual Studio
+# Introducción: desplazamiento por Visual Studio
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -86,7 +87,7 @@ En Visual Studio, no necesitas asociar el control, ya que esto se hace automáti
 1.  Pulsa en la pestaña del archivo MainPage.xaml.
 2.  En el panel **Diseño**, pulsa en el control **TextBlock**.
 3.  En el panel **Propiedades**, pulsa en el botón de llave inglesa para mostrar sus propiedades.
-4.  En el cuadro **Nombre**, cambia "&lt;Sin nombre&gt;" a "myLabel".
+4.  En el cuadro **Nombre**, cambia "&lt;Sin nombre&gt;" a "miEtiqueta".
 
 ![ventana de propiedades de la etiqueta en visual studio](images/ios-to-uwp/vs-label-properties.png)
 
@@ -120,6 +121,6 @@ Para salir de la aplicación, vuelve a Visual Studio, pulsa el menú **Depurar*
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

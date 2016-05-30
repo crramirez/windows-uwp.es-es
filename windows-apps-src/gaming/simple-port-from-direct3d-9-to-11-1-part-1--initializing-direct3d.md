@@ -1,10 +1,11 @@
 ---
+author: mtoepke
 title: Inicializar Direct3D 11
 description: Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a obtener identificadores para el dispositivo Direct3D y el contexto de dispositivo, y a usar DXGI para configurar una cadena de intercambio.
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
 ---
 
-# Inicializar Direct3D 11
+# Inicializar Direct3D 11
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -225,6 +226,6 @@ Ahora que tenemos un identificador de dispositivo y un destino de representació
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

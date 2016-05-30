@@ -1,5 +1,6 @@
 ---
-title: Crear componentes de Windows Runtime en C\# y Visual Basic
+author: martinekuan
+title: Crear componentes de Windows Runtime en C# y Visual Basic
 description: A partir de .NET Framework 4.5, puedes usar código administrado para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime.
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
 ---
@@ -25,9 +26,9 @@ Internamente, los tipos de Windows Runtime en tu componente pueden usar cualquie
 
 -   Los campos, los parámetros y los valores devueltos de todos los tipos públicos y miembros en tu componente deben ser tipos de Windows Runtime.
 
-    Esta restricción incluye los tipos de Windows Runtime que creas, así como los tipos proporcionados por el propio Windows Runtime. También incluye varios tipos de .NET Framework. La inclusión de estos tipos forma parte de la compatibilidad que .NET Framework proporciona para habilitar el uso natural de Windows Runtime en código administrado: tu código aparentemente usa los tipos de .NET Framework familiares en lugar de los tipos de Windows Runtime subyacentes. Por ejemplo, puedes usar tipos primitivos de .NET Framework como Int32 y Double, ciertos tipos fundamentales como DateTimeOffset y Uri, y algunos tipos de interfaz genéricos usados habitualmente como IEnumerable&lt;T&gt; (IEnumerable(Of T) en Visual Basic) e IDictionary&lt;TKey,TValue&gt;. (Ten en cuenta que los argumentos de tipo de estos tipos genéricos deben ser tipos de Windows Runtime). Esto se explica en las secciones Pasar los tipos de Windows Runtime a código administrado y Pasar los tipos administrados a Windows Runtime, más adelante en este artículo.
+    Esta restricción incluye los tipos de Windows Runtime que creas, así como los tipos proporcionados por el propio Windows Runtime. También incluye varios tipos de .NET Framework. La inclusión de estos tipos forma parte de la compatibilidad que .NET Framework proporciona para habilitar el uso natural de Windows Runtime en código administrado: tu código aparentemente usa los tipos de .NET Framework familiares en lugar de los tipos de Windows Runtime subyacentes. Por ejemplo, puedes usar tipos primitivos de .NET Framework como Int32 y Double, ciertos tipos fundamentales como DateTimeOffset y Uri, y algunos tipos de interfaz genéricos utilizados habitualmente como IEnumerable&lt;T&gt; (IEnumerable(Of T) en Visual Basic) e IDictionary&lt;, TValue&gt;. (Ten en cuenta que los argumentos de tipo de estos tipos genéricos deben ser tipos de Windows Runtime). Esto se explica en las secciones Pasar los tipos de Windows Runtime a código administrado y Pasar los tipos administrados a Windows Runtime, más adelante en este artículo.
 
--   Las interfaces y clases públicas pueden contener métodos, propiedades y eventos. Puedes declarar delegados para tus eventos o usar el delegado EventHandler&lt;T&gt;. Una clase o interfaz pública no puede:
+-   Las interfaces y clases públicas pueden contener métodos, propiedades y eventos. Puedes declarar a delegados para tus eventos o usar el delegado EventHandler&lt;T&gt;. Una clase o interfaz pública no puede:
 
     -   Ser genérica.
     -   Implementar una interfaz que no sea una interfaz de Windows Runtime. (Sin embargo, puedes crear tus propias interfaces de Windows Runtime e implementarlas).
@@ -96,13 +97,13 @@ Para algunos tipos de colección usados con frecuencia, la asignación es entre 
 
  
 
-Cuando un tipo implementa más de una interfaz, puedes usar cualquiera de las interfaces que implementa como un tipo de parámetro o tipo devuelto de un miembro. Por ejemplo, puedes pasar o devolver Dictionary&lt;int, string&gt; (Dictionary(Of Integer, String) en Visual Basic) como IDictionary&lt;int, string&gt;, IReadOnlyDictionary&lt;int, string&gt; o IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;.
+Cuando un tipo implementa más de una interfaz, puedes usar cualquiera de las interfaces que implementa como un tipo de parámetro o tipo devuelto de un miembro. Por ejemplo, puedes pasar o devolver un diccionario&lt;int, string&gt; (Dictionary(Of Integer, String) en Visual Basic) como IDictionary&lt;int, string&gt;, IReadOnlyDictionary&lt;int, string&gt; o IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;.
 
-**Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt;, independientemente de qué interfaz especificas como tipo devuelto. Esto significa que si la primera interfaz no incluye a un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
+**Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt;, independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
 
-En Windows Runtime, IMap&lt;K, V&gt; e IMapView&lt;K, V&gt; se iteran con IKeyValuePair. Cuando los pasas a código administrado, aparecen como IDictionary&lt;TKey, TValue&gt; e IReadOnlyDictionary&lt;TKey, TValue&gt;, por lo tanto, naturalmente usas System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt; para enumerarlos.
+En Windows Runtime, se recorren en iteración IMap&lt;K, V&gt; e IMapView&lt;K, V&gt; con el uso de IKeyValuePair. Cuando los pasas a código administrado, aparecen como IDictionary&lt;TKey, TValue&gt; e IReadOnlyDictionary&lt;TKey, TValue&gt;. Por lo tanto, naturalmente, utilizas System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt; para enumerarlos.
 
-La forma en la que las interfaces aparecen en código administrado afecta a la forma en que aparecen los tipos que implementan estas interfaces. Por ejemplo, la clase PropertySet implementa IMap&lt;K, V&gt;, que aparece en código administrado como IDictionary&lt;TKey, TValue&gt;. PropertySet aparece como si implementara IDictionary&lt;TKey, TValue&gt; en lugar de IMap&lt;K, V&gt;, por lo tanto, en código administrado parece tener un método Add, que se comporta como el método Add en los diccionarios de .NET Framework. No parece tener un método Insert. Puedes ver este ejemplo en el artículo [Tutorial: crear un componente simple en C# o Visual Basic y llamarlo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
+La forma en la que las interfaces aparecen en código administrado afecta a la forma en que aparecen los tipos que implementan estas interfaces. Por ejemplo, la clase PropertySet implementa IMap&lt;K, V&gt;, que aparece en código administrado como IDictionary&lt;TKey, TValue&gt;. PropertySet aparece como si implementara IDictionary&lt;TKey, TValue&gt; en lugar de IMap&lt;K, V&gt;. Por lo tanto, en código administrado, parece tener un método Add, que se comporta como el método Add en los diccionarios de .NET Framework. No parece tener un método Insert. Puedes ver este ejemplo en el artículo [Tutorial: crear un componente simple en C# o Visual Basic y llamarlo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
 
 ## Pasar los tipos administrados a Windows Runtime
 
@@ -224,7 +225,7 @@ function asyncExample(id) {
 
 Para realizar acciones y operaciones asincrónicas compatibles con la cancelación o los informes de progreso, usa la clase [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para generar una tarea iniciada y para enlazar las funciones de cancelación e informes de progreso de la tarea con las funciones de cancelación e informes de progreso de la interfaz de Windows Runtime adecuada. Para obtener un ejemplo compatible tanto con la cancelación como con los informes de progreso, consulta [Tutorial: crear un componente simple en C# o Visual Basic y llamarlo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
 
-Ten en cuenta que puedes usar los métodos de la clase AsyncInfo incluso si tu método asincrónico no es compatible con la cancelación o los informes de progreso. Si usas una función lambda de Visual Basic o un método anónimo de C#, no proporciones parámetros para el token y la interfaz [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx) . Si usas una función lambda de C#, facilita un parámetro de token pero omítelo. El ejemplo anterior, en el que se usó el método AsAsyncOperation&lt;TResult&gt;, tiene este aspecto cuando usas la sobrecarga de método [AsyncInfo.Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;](https://msdn.microsoft.com/library/hh779740.aspx)) en su lugar:
+Ten en cuenta que puedes usar los métodos de la clase AsyncInfo incluso si tu método asincrónico no es compatible con la cancelación o los informes de progreso. Si usas una función lambda de Visual Basic o un método anónimo de C#, no proporciones parámetros para el token y la interfaz [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx). Si usas una función lambda de C#, facilita un parámetro de token, pero omítelo. El ejemplo anterior, en el que se usó el método AsAsyncOperation&lt;TResult&gt;, tiene este aspecto cuando usas la sobrecarga de método [AsyncInfo.Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;](https://msdn.microsoft.com/library/hh779740.aspx)):
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -249,7 +250,7 @@ Ten en cuenta que puedes usar los métodos de la clase AsyncInfo incluso si tu m
 > End Function
 > ```
 
-Si creas un método asincrónico que, opcionalmente, es compatible con la cancelación o los informes de progreso, considera la posibilidad de agregar sobrecargas que no tengan parámetros para un token de cancelación o la interfaz IProgress&lt;T&gt;.
+Si creas un método asincrónico que, opcionalmente, es compatible con la cancelación o los informes de progreso, considera la posibilidad de agregar sobrecargas que no tengan parámetros para un token de cancelación o la interfaz IProgress&lt;T&gt; .
 
 ## Iniciar excepciones
 
@@ -293,6 +294,6 @@ Para obtener más información acerca de las características de los lenguajes C
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

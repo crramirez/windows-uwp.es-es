@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Recursos del sistema de aplicaciones para UWP y juegos en Xbox One
 description: UWP en recursos del sistema de Xbox
 area: Xbox
@@ -21,12 +22,10 @@ Por lo tanto, los juegos y aplicaciones para UWP tendrán acceso a los siguiente
 
 Para el **desarrollo de aplicaciones**, es importante tener en cuenta que los recursos disponibles pueden ser limitados en comparación con un equipo estándar.
 
-Para el **desarrollo de juegos**, es importante tener en cuenta que Xbox One, al igual que otras videoconsolas, 
-es una parte especializada de hardware que requiere un kit de desarrollo específico basado en hardware para tener acceso al potencial completo. 
-Si estás trabajando en un juego que requiere acceso al máximo potencial del hardware de Xbox One, 
-puedes registrarte con el programa [ID@Xbox](http://www.xbox.com/en-us/Developers/id) para obtener acceso a kits de desarrollo de Xbox One, que incluyen compatibilidad con DirectX 12.
+Para el **desarrollo de juegos**, es importante tener en cuenta que Xbox One, al igual que otras videoconsolas, es una parte especializada de hardware que requiere un kit de desarrollo específico basado en hardware para tener acceso al potencial completo. 
+Si estás trabajando en un juego que requiere acceso al máximo potencial del hardware Xbox One, puedes registrarte con el programa [ID@XBOX](http://www.xbox.com/en-us/Developers/id) para obtener acceso a los kits de desarrollo de Xbox One, que incluye compatibilidad con DirectX 12.
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

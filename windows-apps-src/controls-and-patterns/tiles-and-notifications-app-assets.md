@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: Los activos de icono de la aplicación, que aparecen en una amplia variedad de formas en todo el sistema operativo Windows 10, son las tarjetas de llamada de la aplicación para la Plataforma universal de Windows (UWP).
 title: Activos de mosaico y de icono
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
-label: Activos de mosaico y de icono
+label: Tile and icon assets
 template: detail.hbs
 ---
 
 # Directrices sobre los activos de icono y de mosaicos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Los activos de icono de la aplicación, que aparecen en una amplia variedad de formas en todo el sistema operativo Windows 10, son las tarjetas de llamada de la aplicación para la Plataforma universal de Windows (UWP). Estas directrices detallan el lugar donde aparecen los recursos de icono de la aplicación en el sistema y proporcionan sugerencias de diseño detalladas sobre cómo crear los iconos más sofisticados.
@@ -191,7 +192,7 @@ Para activos no cuadrados, se produce el centrado horizontal o vertical automát
 
 ![tamaño del recurso no cuadrado, con y sin distintivo](images/assetguidance26b.png)
 
-## <span id="Splash_screen_assets"></span><span id="splash_screen_assets"></span><span id="SPLASH_SCREEN_ASSETS"></span>Recursos de pantalla de presentación
+## <span id="Splash_screen_assets"></span><span id="splash_screen_assets"></span><span id="SPLASH_SCREEN_ASSETS"></span>Activos de pantalla de presentación
 
 
 La imagen de pantalla de presentación puede proporcionarse como una ruta de acceso directa a un archivo de imagen o como un recurso. Si usas una referencia a recursos, puedes proporcionar imágenes de diferentes escalas para que Windows pueda elegir el tamaño óptimo según la resolución de pantalla y el dispositivo. También puedes proporcionar imágenes de contraste alto para accesibilidad e imágenes localizadas para que coincidan con diferentes idiomas de interfaz de usuario.
@@ -367,7 +368,7 @@ A continuación se enumeran todos los tipos de activos, sus usos y nombres de ar
 -   Usos:
     -   Mosaico icónico
 
-\[Este artículo contiene información específica de las aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743).\]
+
 
 ## <span id="related_topics"></span>Temas relacionados
 
@@ -383,6 +384,6 @@ A continuación se enumeran todos los tipos de activos, sus usos y nombres de ar
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

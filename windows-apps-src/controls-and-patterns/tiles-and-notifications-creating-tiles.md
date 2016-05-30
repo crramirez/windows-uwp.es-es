@@ -1,15 +1,16 @@
 ---
-Description: Un icono es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación de Plataforma universal de Windows (UWP) en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación.
+author: mijacobs
+Description: Un icono es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación para la Plataforma universal de Windows (UWP) en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación.
 title: Iconos
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
-label: Iconos
+label: Tiles
 template: detail.hbs
 ---
 
 # Iconos de aplicaciones para UWP
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Un *icono* es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación de Plataforma universal de Windows (UWP) en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación. Windows muestra este icono cuando se instala la aplicación por primera vez. Cuando se instala la aplicación, puedes cambiar el contenido del icono a través de notificaciones; por ejemplo, puedes cambiar el icono para comunicar nueva información al usuario, como titulares de noticias o el asunto del mensaje sin leer más reciente.
@@ -46,14 +47,15 @@ Hay algunos elementos que deberías actualizar:
 
     Las imágenes a escala siguen esta convención de nomenclatura:
     
-    *&lt;nombre de la imagen&gt;*.scale-*&lt;factor de escala&gt;*.*&lt;extensión de archivo de imagen&gt;* 
+    *
+              &lt;nombre de imagen&gt;*.scale-*&lt;factor de escala&gt;*.*&lt;extensión de archivo de imagen&gt;* 
 
 
      
 
-    For example: SmallLogo.scale-100.png
+    Por ejemplo: SmallLogo.scale-100.png
 
-    When you refer to the image, you refer to it as *&lt;image name&gt;*.*&lt;image file extension&gt;* ("SmallLogo.png" in this example). The system will automatically select the appropriate scaled image for the device from the images you've provided.
+    Cuando hace referencia a la imagen, se refiere a ella como *&lt;nombre de imagen&gt;*.*&lt;extensión de archivo de imagen&gt;* ("SmallLogo.png" en este ejemplo). El sistema seleccionará automáticamente la imagen a escala adecuada para el dispositivo desde las imágenes que hayas proporcionado.
 
 -   No es necesario, pero sí muy recomendable, ofrecer logotipos para tamaños de iconos grandes y anchos para que el usuario pueda cambiar el tamaño del icono de la aplicación a esos tamaños. Para ofrecer estas imágenes adicionales, crea un elemento `DefaultTile` y usa los atributos `Wide310x150Logo` y `Square310x310Logo` para especificar las imágenes adicionales:
 ```    XML
@@ -104,6 +106,6 @@ Cuando se instale la aplicación, puedes usar las notificaciones para personaliz
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

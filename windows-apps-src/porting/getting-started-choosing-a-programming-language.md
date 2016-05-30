@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Elección de un lenguaje de programación
 ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
 description: Elección de un lenguaje de programación
@@ -22,7 +23,7 @@ Aunque en este artículo nos centramos en C#, los otros lenguajes ofrecen ventaj
 -   [Crear la primera aplicación de la Tienda de Windows Phone con C# o Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=397877)
 -   [WinJS en Windows Phone 8.1](http://go.microsoft.com/fwlink/p/?LinkID=397879)
 
-**Nota:** Para las aplicaciones que usen gráficos 3D, los estándares OpenGL y OpenGL ES no están disponibles de forma nativa para las aplicaciones para UWP. Si no quieres reescribir el código OpenGL ES en Microsoft DirectX, tal vez te interese informarte sobre **Angle**. Angle es un proyecto actualmente en curso diseñado para convertir OpenGL a DirectX mediante la traducción de llamadas de la API de OpenGL a llamadas de la API de DirectX. Para conocer más, consulta lo siguiente:
+**Nota:**  Para las aplicaciones que usen gráficos 3D, los estándares OpenGL y OpenGL ES no están disponibles de forma nativa para las aplicaciones para UWP. Si no quieres reescribir el código OpenGL ES en Microsoft DirectX, tal vez te interese informarte sobre **Angle**. Angle es un proyecto actualmente en curso diseñado para convertir OpenGL a DirectX mediante la traducción de llamadas de la API de OpenGL a llamadas de la API de DirectX. Para conocer más, consulta lo siguiente:
 -   [Ángulo](https://code.google.com/p/angleproject/)
 -   [Crear tu primera aplicación de la Tienda Windows con DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
 -   [Ejemplos de aplicaciones de la Tienda Windows con DirectX](http://go.microsoft.com/fwlink/p/?LinkId=263603)
@@ -139,6 +140,6 @@ C# es un lenguaje sencillo de entender e incluye muchos marcos y clases de sopor
 [Introducción: desplazamiento por Visual Studio](getting-started-getting-around-in-visual-studio.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

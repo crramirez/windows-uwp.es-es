@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: Usa la API de análisis de la Tienda Windows para recuperar datos de análisis mediante programación para las aplicaciones que se registran en tu cuenta del Centro de desarrollo de Windows o la de tu organización.
 title: Acceder a los datos de análisis mediante los servicios de la Tienda Windows
@@ -25,16 +26,16 @@ Para poder usar la API de análisis de la Tienda Windows, debes asociar una apli
 
 Los siguientes pasos describen el proceso de principio a fin:
 
-1.  [Asocia una aplicación de Azure AD a tu cuenta del Centro de desarrollo de Windows](#associate-an-azure-ad-application-with-your-windows-dev-center-account).
+1.  [Asocia una aplicación de Azure AD con la cuenta del Centro de desarrollo de Windows](#associate-an-azure-ad-application-with-your-windows-dev-center-account).
 2.  [Obtén un token de acceso de Azure AD](#obtain-an-azure-ad-access-token).
-3.  [Usa la API de análisis de la Tienda Windows](#call-the-windows-store-analytics-api).
+3.  [Invoca la API de análisis de la Tienda Windows](#call-the-windows-store-analytics-api).
 
 
 ### Asociar una aplicación de Azure AD a la cuenta del Centro de desarrollo de Windows
 
 1.  En el Centro de desarrollo, ve a **Configuración de la cuenta**, haz clic en **Administrar usuarios** y asocia la cuenta del Centro de desarrollo de tu organización al directorio de Azure AD de tu organización. Para obtener instrucciones detalladas, consulta [Administrar usuarios de la cuenta](https://msdn.microsoft.com/library/windows/apps/mt489008). Opcionalmente, puedes agregar otros usuarios del directorio de Azure AD de la organización para que también puedan acceder a la cuenta del Centro de desarrollo.
 
-    **Nota**: Se puede asociar una sola cuenta del Centro de desarrollo a un directorio de Azure Active Directory. Del mismo modo, solo un directorio de Azure Active Directory puede asociarse con una cuenta del Centro de desarrollo. Una vez establecida esta asociación, no podrás quitarla sin ponerte en contacto con soporte técnico.
+    **Nota**: Solo se puede asociar una cuenta del Centro de desarrollo con un directorio de Azure Active Directory. Del mismo modo, solo un directorio de Azure Active Directory puede asociarse con una cuenta del Centro de desarrollo. Una vez establecida esta asociación, no podrás quitarla sin ponerte en contacto con soporte técnico.
 
      
 
@@ -49,13 +50,13 @@ Después de asociar una aplicación de Azure AD a tu cuenta del Centro de desarr
 
 Para obtener el token de acceso, sigue las instrucciones de [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://msdn.microsoft.com/library/azure/dn645543.aspx) para enviar un HTTP POST al punto de conexión de Azure AD.
 
-```
+```syntax
 https://login.microsoftonline.com/<tenant id>/oauth2/token
 ```
 
 -   Para obtener el identificador del inquilino, inicia sesión en el [Portal de administración de Azure](http://manage.windowsazure.com/), ve a **Active Directory** y haz clic en el directorio que vinculaste a tu cuenta del Centro de desarrollo. El id. de inquilino de este directorio está insertado en la dirección URL de esta página, como se muestra en la cadena *your\_tenant\_ID* del siguiente ejemplo.
 
-  ```
+  ```syntax
   https://manage.windowsazure.com/@<your_tenant_name>#Workspaces/ActiveDirectoryExtension/Directory/<your_tenant_ID>/directoryQuickStart
   ```
 
@@ -236,6 +237,6 @@ La API análisis de Tienda Windows devuelve respuestas de error en un objeto JSO
  
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

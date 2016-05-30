@@ -1,10 +1,11 @@
 ---
+author: mcleanbyron
 Description: El SDK de Microsoft Store Engagement and Monetization proporciona bibliotecas y herramientas que puedes usar para agregar características a las aplicaciones que te ayudarán a obtener más dinero y a ganar clientes.
-title: Rentabilizar la aplicación y atraer clientes con el SDK de Microsoft Store Engagement and Monetization.
+title: SDK de Microsoft Store Engagement and Monetization
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
 ---
 
-# Rentabilizar la aplicación y atraer clientes con el SDK de Microsoft Store Engagement and Monetization.
+# SDK de Microsoft Store Engagement and Monetization
 
 El SDK de Microsoft Store Engagement and Monetization proporciona bibliotecas y herramientas que te ayudarán a obtener más dinero y a ganar clientes, por ejemplo, mostrando anuncios en tus aplicaciones y ejecutando experimentos mediante pruebas A/B. Este SDK reemplaza el SDK de cliente de anuncios universal de Microsoft y evolucionará con el tiempo para incluir nuevas características de participación y rentabilidad.
 
@@ -15,7 +16,7 @@ El SDK de Microsoft Store Engagement and Monetization proporciona bibliotecas y 
 
 ### Ejecutar experimentos con pruebas A/B para aplicaciones para UWP
 
-Ejecuta pruebas A/B en las aplicaciones para la Plataforma universal de Windows (UWP) para medir la eficacia de las características en algunos clientes antes de lanzar las características para todo el mundo. Después de definir un experimento en el panel del Centro de desarrollo, usa la clase [ExperimentClient](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.engagementclient.aspx) para obtener las variaciones del experimento en tu aplicación, usa estos datos para modificar el comportamiento de la característica de prueba y, a continuación, usa el método [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.log.aspx) para enviar eventos de vista y eventos de conversión al Centro de desarrollo. Por último, usa el panel para ver los resultados y administrar el experimento.
+Ejecuta pruebas A/B en las aplicaciones para la Plataforma universal de Windows (UWP) para medir la eficacia de las características en algunos clientes antes de lanzar las características para todo el mundo. Después de definir un experimento en el panel del Centro de desarrollo, usa la clase [ExperimentClient](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentclient.aspx) para obtener las variaciones del experimento en tu aplicación, usa estos datos para modificar el comportamiento de la característica de prueba y, a continuación, usa el método [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.log.aspx) para enviar eventos de vista y eventos de conversión al Centro de desarrollo. Por último, usa el panel para ver los resultados y administrar el experimento.
 
 Para obtener más información, consulta [Ejecutar experimentos con pruebas A/B](run-app-experiments-with-a-b-testing.md).
 
@@ -24,6 +25,8 @@ Para obtener más información, consulta [Ejecutar experimentos con pruebas A/B]
 Usa la clase [Feedback](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.feedback.aspx) en tus aplicaciones para UWP para dirigir a los clientes de Windows 10 al Centro de opiniones, donde pueden enviar sus problemas, sugerencias y votos a favor. A continuación, administra esta información en el [Informe de comentarios](../publish/feedback-report.md) en el panel del Centro de desarrollo.
 
 Para obtener más información, consulta [Iniciar el Centro de opiniones desde la aplicación](launch-feedback-hub-from-your-app.md).
+
+>**Nota** El informe **Comentarios** actualmente solo está disponible para las cuentas de desarrollador que se hayan unido al [Programa Insider del Centro de desarrollo](../publish/dev-center-insider-program.md).
 
 ### Mostrar anuncios en tus aplicaciones
 
@@ -72,6 +75,6 @@ Otras bibliotecas en el SDK, como Microsoft.Advertising.dll para otras plataform
 * [Iniciar el Centro de opiniones desde la aplicación](launch-feedback-hub-from-your-app.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

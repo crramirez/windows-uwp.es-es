@@ -1,10 +1,11 @@
 ---
-title: Creación de un componente simple de Windows Runtime y llamada a él desde JavaScript
-description: En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o C# para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime, y cómo llamar al componente de tu aplicación universal de Windows creada para Windows usando JavaScript.
+author: martinekuan
+title: Creación de un componente simple de Windows Runtime y llamada a este desde JavaScript
+description: En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o C# para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime, y cómo llamar al componente de tu aplicación universal de Windows creada para Windows mediante JavaScript.
 ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
 ---
 
-# Tutorial: Creación de un componente simple de Windows Runtime y llamada al mismo desde JavaScript
+# Tutorial: Creación de un componente simple de Windows Runtime y llamada a este desde JavaScript
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -16,7 +17,7 @@ En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o 
 
 Visual Studio facilita el proceso de agregar un componente de Windows Runtime escrito con C# o Visual Basic a tu aplicación y crear tipos de Windows Runtime que puedas llamar desde JavaScript. Internamente, los tipos de Windows Runtime pueden usar cualquier funcionalidad de .NET Framework permitida en una aplicación universal de Windows. (Para obtener más información, consulta [Creación de componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [Información general de .NET para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)). Externamente, los miembros del tipo solo pueden exponer tipos de Windows Runtime para obtener sus parámetros y devolver valores. Al compilar la solución, Visual Studio crea un proyecto de componente de Windows Runtime en .NET Framework y, a continuación, ejecuta un paso de compilación que crea un archivo de metadatos (.winmd) de Windows. Este es el componente de Windows Runtime que Visual Studio incluye en tu aplicación.
 
-> **Note**  .NET Framework asigna automáticamente algunos tipos de .NET Framework usados habitualmente, como tipos de datos primitivos y tipos de colección, a sus equivalentes de Windows Runtime. Estos tipos de .NET Framework pueden usarse en la interfaz pública de un componente de Windows Runtime y se mostrarán a los usuarios del componente como los tipos correspondientes de Windows Runtime. Consulta [Creación de componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
+> **Nota** .NET Framework asigna automáticamente algunos tipos de .NET Framework usados habitualmente, como tipos de datos primitivos y tipos de colección, a sus equivalentes de Windows Runtime. Estos tipos de .NET Framework pueden usarse en la interfaz pública de un componente de Windows Runtime y se mostrarán a los usuarios del componente como los tipos correspondientes de Windows Runtime. Consulta [Creación de componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
 En este tutorial se explican las tareas siguientes. Una vez completada la primera sección, que configura la aplicación de Windows con JavaScript, puedes completar el resto de las secciones en cualquier orden.
 
@@ -36,16 +37,16 @@ En esta sección se crea una aplicación universal de Windows compilada para Win
 4.  Agrega dos miembros simples a la clase, un método **static** (método **Shared** en Visual Basic) y una propiedad de instancia:
 
     > [!div class="tabbedCodeSnippets"]
-    > ```cpp 
+    > ```cpp
     > namespace SampleComponent
     > {
     >     public sealed class Example
     >     {
-    >         public static string GetAnswer() 
-    >         { 
-    >             return "The answer is 42."; 
+    >         public static string GetAnswer()
+    >         {
+    >             return "The answer is 42.";
     >         }
-    > 
+    >
     >         public int SampleProperty { get; set; }
     >     }
     > }
@@ -55,7 +56,7 @@ En esta sección se crea una aplicación universal de Windows compilada para Win
     >     Public Shared Function GetAnswer() As String
     >         Return "The answer is 42."
     >     End Function
-    > 
+    >
     >     Public Property SampleProperty As Integer
     > End Class
     > ```
@@ -77,7 +78,7 @@ function basics1() {
 
     ex = new SampleComponent.Example();
 
-   document.getElementById('output').innerHTML += "<br/>" + 
+   document.getElementById('output').innerHTML += "<br/>" +
        ex.sampleProperty;
 
 }
@@ -98,7 +99,7 @@ De forma similar, .NET Framework proporciona compatibilidad para habilitar el us
 
 En el proyecto de JavaScript, abre el archivo default.html y actualiza el cuerpo tal como se muestra en el código siguiente. Este código incluye el conjunto completo de controles de la aplicación de ejemplo y especifica los nombres de función de los eventos de clic.
 
-> **Note**  Al ejecutar la aplicación por primera vez, solo se admiten los botones Basics 1 y Basics 2.
+> **Nota** Al ejecutar la aplicación por primera vez, solo se admiten los botones Basics 1 y Basics 2.
 
 ```html
 <body>
@@ -175,7 +176,7 @@ Selecciona el botón Basics 1 para asignar el valor de devolución desde el mét
 
 Selecciona el botón Basics 2 para aumentar el valor de la propiedad SampleProperty y mostrar el nuevo valor en el área de salida. Pueden utilizarse tipos primitivos, como cadenas y números, como tipos de parámetros y tipos devueltos y se pueden pasar entre código administrado y JavaScript. Como los números en JavaScript se almacenan en formato de punto flotante de precisión doble, se convierten en tipos numéricos de .NET Framework.
 
-> **Note**  De forma predeterminada, puedes establecer puntos de interrupción solo en el código de JavaScript. Para depurar el código de Visual Basic o C#, consulta Creación de componentes de Windows Runtime en C# y Visual Basic.
+> **Nota** De forma predeterminada, puedes establecer puntos de interrupción solo en el código de JavaScript. Para depurar el código de Visual Basic o C#, consulta Creación de componentes de Windows Runtime en C# y Visual Basic.
 
  
 
@@ -186,7 +187,7 @@ Para detener la depuración y cerrar la aplicación, pasa de la aplicación a Vi
 
 Windows Runtime se puede llamar desde JavaScript o código administrado. Los objetos de Windows Runtime se pueden pasar del uno al otro, y los eventos se pueden controlar desde cualquier lado. Sin embargo, las formas de utilizar tipos de Windows Runtime en ambos entornos difieren en algunos detalles, ya que JavaScript y .NET Framework admiten Windows Runtime de manera diferente. En el ejemplo siguiente se muestran estas diferencias mediante la clase [Windows.Foundation.Collections.PropertySet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.propertyset.aspx). En este ejemplo, puedes crear una instancia de la colección PropertySet en código administrado y registrar un controlador de eventos para controlar los cambios en la colección. A continuación, puedes agregar el código de JavaScript que obtiene la colección, registra su propio controlador de eventos y utiliza la colección. Por último, puedes agregar un método que realiza cambios en la colección desde el código administrado y muestra cómo JavaScript controla una excepción administrada.
 
-> **Important**  En este ejemplo, el evento se desencadena en el subproceso de la interfaz de usuario. Si desencadenas el evento desde un subproceso en segundo plano, por ejemplo en una llamada asincrónica, deberás realizar algún proceso adicional para que JavaScript controle el evento. Para obtener más información, consulta [Generar eventos de componentes de Windows Runtime](raising-events-in-windows-runtime-components.md).
+> **Importante** En este ejemplo, el evento se desencadena en el subproceso de la interfaz de usuario. Si desencadenas el evento desde un subproceso en segundo plano, por ejemplo en una llamada asincrónica, deberás realizar algún proceso adicional para que JavaScript controle el evento. Para obtener más información, consulta [Generar eventos de componentes de Windows Runtime](raising-events-in-windows-runtime-components.md).
 
  
 
@@ -195,7 +196,7 @@ En el proyecto SampleComponent, agrega una nueva clase **public sealed** (clase 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
 > using Windows.Foundation.Collections;
-> 
+>
 > namespace SampleComponent
 > {
 >     public sealed class PropertySetStats
@@ -206,16 +207,16 @@ En el proyecto SampleComponent, agrega una nueva clase **public sealed** (clase 
 >             _ps = new PropertySet();
 >             _ps.MapChanged += this.MapChangedHandler;
 >         }
-> 
+>
 >         public PropertySet PropertySet { get { return _ps; } }
-> 
+>
 >         int[] counts = { 0, 0, 0, 0 };
 >         private void MapChangedHandler(IObservableMap<string, object> sender,
 >             IMapChangedEventArgs<string> args)
 >         {
 >             counts[(int)args.CollectionChange] += 1;
 >         }
-> 
+>
 >         public string DisplayStats()
 >         {
 >             StringBuilder report = new StringBuilder("<br/>Number of changes:<ul>");
@@ -230,39 +231,39 @@ En el proyecto SampleComponent, agrega una nueva clase **public sealed** (clase 
 > ```
 > ```vb
 > Imports System.Text
-> 
+>
 > Public NotInheritable Class PropertySetStats
 >     Private _ps As PropertySet
 >     Public Sub New()
 >         _ps = New PropertySet()
 >         AddHandler _ps.MapChanged, AddressOf Me.MapChangedHandler
 >     End Sub
-> 
+>
 >     Public ReadOnly Property PropertySet As PropertySet
 >         Get
 >             Return _ps
 >         End Get
 >     End Property
-> 
+>
 >     Dim counts() As Integer = {0, 0, 0, 0}
 >     Private Sub MapChangedHandler(ByVal sender As IObservableMap(Of String, Object),
 >         ByVal args As IMapChangedEventArgs(Of String))
-> 
+>
 >         counts(CInt(args.CollectionChange)) += 1
 >     End Sub
-> 
+>
 >     Public Function DisplayStats() As String
 >         Dim report As New StringBuilder("<br/>Number of changes:<ul>")
 >         For i As Integer = 0 To counts.Length - 1
->             report.Append("<li>" &amp; CType(i, CollectionChange).ToString() &amp;
->                           ": " &amp; counts(i) &amp; "</li>")
+>             report.Append("<li>" & CType(i, CollectionChange).ToString() &
+>                           ": " & counts(i) & "</li>")
 >         Next
->         Return report.ToString() &amp; "</ul>"
+>         Return report.ToString() & "</ul>"
 >     End Function
 > End Class
 > ```
 
-El controlador de eventos realiza un seguimiento del patrón de eventos habitual de .NET Framework, salvo que el remitente del evento (en este caso, el objeto PropertySet) se convierta en la interfaz IObservableMap&lt;string, object&gt; (IObservableMap (Of String, Object) en Visual Basic), que es una instancia de la interfaz de Windows Runtime [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx). (Puedes convertir el remitente a su tipo si es necesario). Además, los argumentos del evento se presentan como una interfaz en lugar de como un objeto.
+El controlador de eventos sigue el conocido patrón de eventos de .NET Framework, salvo que el remitente del evento (en este caso, el objeto PropertySet) se convierte a la interfaz IObservableMap&lt;string, object&gt; [IObservableMap(Of String, Object) en Visual Basic], que es una creación de instancias de la interfaz de Windows Runtime [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx). (Puedes convertir el remitente a su tipo si es necesario). Además, los argumentos del evento se presentan como una interfaz en lugar de como un objeto.
 
 En el archivo default.js, agrega la función Runtime1 tal como se muestra. Este código crea un objeto PropertySetStats, obtiene su colección PropertySet y agrega su propio controlador de eventos, la función onMapChanged, para controlar el evento MapChanged. Después de realizar cambios en la colección, runtime1 llama al método DisplayStats para mostrar un resumen de los tipos de cambio.
 
@@ -295,7 +296,7 @@ function onMapChanged(change) {
             result = "All properties cleared";
             break;
         case Windows.Foundation.Collections.CollectionChange.itemInserted:
-            result = "Inserted " + change.key + ": '" + 
+            result = "Inserted " + change.key + ": '" +
                 change.target.lookup(change.key) + "'";
             break;
         case Windows.Foundation.Collections.CollectionChange.itemRemoved:
@@ -367,7 +368,7 @@ runtimeButton2.addEventListener("click", runtime2, false);
 
 Para ejecutar la aplicación, presiona la tecla F5. Elige **Runtime 1** y después **Runtime 2**. El controlador de eventos de JavaScript notifica el primer cambio en la colección. El segundo cambio, sin embargo, tiene una clave duplicada. Los usuarios de los diccionarios de .NET Framework esperan que el método Add produzca una excepción, y esto es lo que sucede. JavaScript controla la excepción de .NET Framework.
 
-> **Note**  No puedes mostrar el mensaje de la excepción desde el código de JavaScript. El texto del mensaje se reemplaza por un seguimiento de la pila. Para obtener más información, consulta "Producir excepciones" en Creación de componentes de Windows Runtime en C# y Visual Basic.
+> **Nota** No puedes mostrar el mensaje de la excepción desde el código de JavaScript. El texto del mensaje se reemplaza por un seguimiento de la pila. Para obtener más información, consulta "Producir excepciones" en Creación de componentes de Windows Runtime en C# y Visual Basic.
 
 Por el contrario, cuando JavaScript llama al método "insert" con una clave duplicada, se cambia el valor del elemento. Esta diferencia de comportamiento se debe a las distintas formas en que JavaScript y .NET Framework admiten Windows Runtime, tal como se explica en [Creación de componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
@@ -403,9 +404,9 @@ Además de devolver los tipos de Windows Runtime que creaste en tu componente o 
 > End Function
 > ```
 
-Ten en cuenta que el diccionario se debe devolver como una interfaz que se implementa mediante [Dictionary&lt;TKey, TValue&gt;](https://msdn.microsoft.com/library/xfhwa508.aspx) y que se asigna a una interfaz de Windows Runtime. En este caso, la interfaz es IDictionary&lt;int, string&gt; (IDictionary(Of Integer, String) en Visual Basic). Cuando se pasa el tipo de Windows Runtime IMap&lt;int, string&gt; a código administrado, aparece como IDictionary&lt;int, string&gt;, y sucede justo lo contrario cuando el tipo administrado se pasa a JavaScript.
+Ten en cuenta que el diccionario se debe devolver como una interfaz que se implementa mediante [Dictionary&lt;TKey, TValue&gt;](https://msdn.microsoft.com/library/xfhwa508.aspx) y que se asigna a una interfaz de Windows Runtime. En este caso, la interfaz es IDictionary&lt;int, string&gt; [IDictionary(Of Integer, String) en Visual Basic]. Cuando se pasa el tipo de Windows Runtime IMap&lt;int, string&gt; a código administrado, aparece como IDictionary&lt;int, string&gt;, y sucede justo lo contrario cuando el tipo administrado se pasa a JavaScript.
 
-**Important**  Cuando un tipo administrado implementa varias interfaces, JavaScript usa la que aparece en primer lugar en la lista. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt;, independientemente de qué interfaz especificas como tipo devuelto. Esto significa que si la primera interfaz no incluye a un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
+**Importante** Cuando un tipo administrado implementa varias interfaces, JavaScript usa la que aparece en primer lugar en la lista. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt; independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye a un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
 
  
 
@@ -454,17 +455,17 @@ var returnsButton2 = document.getElementById("returnsButton2");
 returnsButton2.addEventListener("click", returns2, false);
 ```
 
-Se deben tener en cuenta algunos aspectos interesantes sobre este código de JavaScript. En primer lugar, incluye una función showMap para mostrar el contenido del diccionario en HTML. En el código de showMap, observa el patrón de iteración. En .NET Framework, no hay ningún método First en la interfaz IDictionary genérica, y el tamaño lo devuelve una propiedad Count en lugar de un método Size. En JavaScript, IDictionary&lt;int, string&gt; parece el tipo de Windows Runtime IMap&lt;int, string&gt;. (Consulta la interfaz [IMap&lt;K,V&gt;](https://msdn.microsoft.com/library/windows/apps/br226042.aspx)).
+Se deben tener en cuenta algunos aspectos interesantes sobre este código de JavaScript. En primer lugar, incluye una función showMap para mostrar el contenido del diccionario en HTML. En el código de showMap, observa el patrón de iteración. En .NET Framework, no hay ningún método First en la interfaz IDictionary genérica, y el tamaño lo devuelve una propiedad Count en lugar de un método Size. En JavaScript, IDictionary&lt;int, string&gt; parece que es el tipo de Windows Runtime IMap&lt;int, string&gt;. (Consulta la interfaz [IMap&lt;K,V&gt;](https://msdn.microsoft.com/library/windows/apps/br226042.aspx)).
 
 En la función returns2, al igual que en ejemplos anteriores, JavaScript llama al método Insert ("insert" en JavaScript) para agregar elementos al diccionario.
 
-Para ejecutar la aplicación, presiona la tecla F5. Para crear y mostrar el contenido inicial del diccionario, selecciona el botón **Returns 1**. Para agregar dos entradas más al diccionario, selecciona el botón **Returns 2**. Ten en cuenta que las entradas se muestran en orden de inserción, como cabría esperar de Dictionary&lt;TKey, TValue&gt;. Si deseas ordenarlas, puedes devolver un SortedDictionary&lt;int, string&gt; desde GetMapOfNames. (La clase PropertySet usada en ejemplos anteriores presenta una organización interna distinta de Dictionary&lt;TKey, TValue&gt;).
+Para ejecutar la aplicación, presiona la tecla F5. Para crear y mostrar el contenido inicial del diccionario, selecciona el botón **Returns 1**. Para agregar dos entradas más al diccionario, selecciona el botón **Returns 2**. Ten en cuenta que las entradas se muestran en orden de inserción, como cabría esperar de Dictionary&lt;TKey, TValue&gt;. Si deseas ordenarlas, puedes devolver un SortedDictionary&lt;int, string&gt; desde GetMapOfNames. (La clase PropertySet que se usa en ejemplos anteriores presenta una organización interna distinta de Dictionary&lt;TKey, TValue&gt;).
 
 Por supuesto, JavaScript no es un lenguaje fuertemente tipado, por lo que el uso de colecciones genéricas fuertemente tipadas puede provocar resultados incoherentes. Vuelve a seleccionar el botón **Returns 2**. JavaScript convierte el número "7" en un 7 numérico, y el 7 numérico que se almacena en ct, en una cadena. Y convierte la cadena "cuarenta" en cero. Pero eso es solo el principio. Selecciona el botón **Returns 2** unas cuantas veces más. En código administrado, el método Add generaría excepciones de clave duplicada, incluso aunque los valores se convirtieran a los tipos correctos. En cambio, el método Insert actualiza el valor asociado a una clave existente y devuelve un valor booleano que indica si se ha agregado una nueva clave al diccionario. Es por eso que el valor asociado a la clave de 7 va cambiando.
 
 Otro comportamiento inesperado: si pasas una variable sin asignar de JavaScript como un argumento de cadena, lo que obtienes es la cadena "undefined". En resumen, ten cuidado cuando pases tipos de la colección de .NET Framework a código JavaScript.
 
-> **Note**  Si quieres concatenar grandes cantidades de texto, puedes hacerlo con más eficacia si mueves el código a un método de .NET Framework y usas la clase StringBuilder tal como se muestra en la función showMap.
+> **Nota** Si quieres concatenar grandes cantidades de texto, puedes hacerlo con más eficacia si mueves el código a un método de .NET Framework y usas la clase StringBuilder tal como se muestra en la función showMap.
 
 Aunque no puedas exponer tus propios tipos genéricos desde un componente de Windows Runtime, puedes devolver colecciones genéricas de .NET Framework para las clases de Windows Runtime usando código como el siguiente:
 
@@ -510,7 +511,7 @@ Puedes declarar eventos con el patrón de eventos estándar de .NET Framework u 
 >             }
 >         }
 >     }
-> 
+>
 >     public sealed class TestEventArgs
 >     {
 >         public string Value1 { get; set; }
@@ -528,7 +529,7 @@ Puedes declarar eventos con el patrón de eventos estándar de .NET Framework u 
 >                             })
 >     End Sub
 > End Class
-> 
+>
 > Public NotInheritable Class TestEventArgs
 >     Public Property Value1 As String
 >     Public Property Value2 As Long
@@ -566,34 +567,27 @@ events1Button.addEventListener("click", events1, false);
 
 .NET Framework cuenta con un amplio conjunto de herramientas para el procesamiento asincrónico y el procesamiento en paralelo, basado en la clase Task y la clase [Task&lt;TResult&gt;](https://msdn.microsoft.com/library/dd321424.aspx) genérica. Para exponer el procesamiento asincrónico basado en tareas en un componente de Windows Runtime, usa las interfaces de Windows Runtime [IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/br205802.aspx) e [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/br205807.aspx). (En Windows Runtime, las operaciones devuelven resultados, pero no las acciones).
 
-En esta sección se muestra una operación asincrónica cancelable que notifica el progreso y devuelve resultados. El método GetPrimesInRangeAsync usa la clase [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para generar una tarea y conectar sus características de cancelación y notificación del progreso con un objeto WinJS.Promise. Empieza agregando las instrucciones **using** siguientes (**Imports** en Visual Basic) a la clase Example:
+En esta sección se muestra una operación asincrónica cancelable que notifica el progreso y devuelve resultados. El método GetPrimesInRangeAsync usa la clase [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para generar una tarea y conectar sus características de cancelación y notificación del progreso con un objeto WinJS.Promise. Comienza agregando el método GetPrimesInRangeAsync a la clase de ejemplo:
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
 > using System.Runtime.InteropServices.WindowsRuntime;
 > using Windows.Foundation;
-> ```
-> ```vb
-> Imports System.Runtime.InteropServices.WindowsRuntime
-> ```
-> 
-> Ahora, agrega el método GetPrimesInRangeAsync a la clase Example:
-> 
-> > [!div class="tabbedCodeSnippets"]
-> ```csharp
-> public static IAsyncOperationWithProgress<IList<long>, double> GetPrimesInRangeAsync(long start, long count)
+>
+> public static IAsyncOperationWithProgress<IList<long>, double>
+> GetPrimesInRangeAsync(long start, long count)
 > {
 >     if (start < 2 || count < 1) throw new ArgumentException();
-> 
+>
 >     return AsyncInfo.Run<IList<long>, double>((token, progress) =>
-> 
+>
 >         Task.Run<IList<long>>(() =>
 >         {
 >             List<long> primes = new List<long>();
 >             double onePercent = count / 100;
 >             long ctProgress = 0;
 >             double nextProgress = onePercent;
-> 
+>
 >             for (long candidate = start; candidate < start + count; candidate++)
 >             {
 >                 ctProgress += 1;
@@ -612,7 +606,7 @@ En esta sección se muestra una operación asincrónica cancelable que notifica 
 >                     }
 >                 }
 >                 if (isPrime) primes.Add(candidate);
-> 
+>
 >                 token.ThrowIfCancellationRequested();
 >             }
 >             progress.Report(100.0);
@@ -622,10 +616,13 @@ En esta sección se muestra una operación asincrónica cancelable que notifica 
 > }
 > ```
 > ```vb
-> Public Shared Function GetPrimesInRangeAsync(ByVal start As Long, ByVal count As Long) As IAsyncOperationWithProgress(Of IList(Of Long), Double)
-> 
+> Imports System.Runtime.InteropServices.WindowsRuntime
+>
+> Public Shared Function GetPrimesInRangeAsync(ByVal start As Long, ByVal count As Long)
+> As IAsyncOperationWithProgress(Of IList(Of Long), Double)
+>
 >     If (start < 2 Or count < 1) Then Throw New ArgumentException()
-> 
+>
 >     Return AsyncInfo.Run(Of IList(Of Long), Double)( _
 >         Function(token, prog)
 >             Return Task.Run(Of IList(Of Long))( _
@@ -634,15 +631,15 @@ En esta sección se muestra una operación asincrónica cancelable que notifica 
 >                     Dim onePercent As Long = count / 100
 >                     Dim ctProgress As Long = 0
 >                     Dim nextProgress As Long = onePercent
-> 
+>
 >                     For candidate As Long = start To start + count - 1
 >                         ctProgress += 1
-> 
+>
 >                         If ctProgress >= nextProgress Then
 >                             prog.Report(ctProgress / onePercent)
 >                             nextProgress += onePercent
 >                         End If
-> 
+>
 >                         Dim isPrime As Boolean = True
 >                         For i As Long = 2 To CLng(Math.Sqrt(candidate))
 >                             If (candidate Mod i) = 0 Then
@@ -650,9 +647,9 @@ En esta sección se muestra una operación asincrónica cancelable que notifica 
 >                                 Exit For
 >                             End If
 >                         Next
-> 
+>
 >                         If isPrime Then primes.Add(candidate)
-> 
+>
 >                         token.ThrowIfCancellationRequested()
 >                     Next
 >                     prog.Report(100.0)
@@ -668,17 +665,17 @@ GetPrimesInRangeAsync es un buscador de números primos muy sencillo gracias a s
 -   La clave de esta implementación es el método [AsyncInfo.Run&lt;TResult, TProgress&gt;(Func&lt;CancellationToken, IProgress&lt;TProgress&gt;, Task&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779740.aspx)&gt;) y el delegado que es el único parámetro del método. El delegado debe aceptar un token de cancelación y una interfaz para informar del progreso y debe devolver una tarea iniciada que emplee esos parámetros. Cuando JavaScript llama al método GetPrimesInRangeAsync, se producen los pasos siguientes (no necesariamente en el orden indicado aquí):
 
     -   El objeto [WinJS.Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx) proporciona funciones para procesar los resultados devueltos, reaccionar a la cancelación y controlar informes de progreso.
-    -   El método AsyncInfo.Run crea un origen de cancelación y un objeto que implementa la interfaz IProgress&lt;T&gt;. Para delegarlo, pasa un token [CancellationToken](https://msdn.microsoft.com/library/system.threading.cancellationtoken.aspx) desde el origen de la cancelación y desde la interfaz [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx).
+    -   El método AsyncInfo.Run crea un origen de cancelación y un objeto que implementa la interfaz IProgress&lt;T&gt;. Para el delegado, pasa un token [CancellationToken](https://msdn.microsoft.com/library/system.threading.cancellationtoken.aspx) desde el origen de la cancelación y la interfaz [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx).
 
-        > **Note**  Si el objeto Promise no proporciona una función para reaccionar a la cancelación, AsyncInfo.Run sigue pasando un token cancelable y la cancelación puede producirse igualmente. Si el objeto Promise no proporciona una función para controlar las actualizaciones del progreso, AsyncInfo.Run sigue proporcionando un objeto que implementa IProgress&lt;T&gt;, pero se omiten sus informes.
+        > **Nota** Si el objeto Promise no proporciona una función para reaccionar a la cancelación, AsyncInfo.Run sigue pasando un token cancelable y la cancelación puede producirse igualmente. Si el objeto Promise no proporciona una función para controlar las actualizaciones del progreso, AsyncInfo.Run sigue proporcionando un objeto que implementa IProgress&lt;T&gt;, pero se omiten sus informes.
 
-    -   El delegado usa el método [Task.Run&lt;TResult&gt;(Func&lt;TResult&gt;, CancellationToken](https://msdn.microsoft.com/library/hh160376.aspx)) para crear una tarea iniciada que usa el token y la interfaz de progreso. Una función lambda proporciona el delegado de la tarea iniciada, que calcula el resultado deseado. Más información al respecto en un momento.
+    -   El delegado usa el método [Task.Run&lt;TResult&gt;(Func&lt;TResult&gt;, CancellationToken](https://msdn.microsoft.com/library/hh160376.aspx)) para crear una tarea iniciada que use el token y la interfaz de progreso. Una función lambda proporciona el delegado de la tarea iniciada, que calcula el resultado deseado. Más información al respecto en un momento.
     -   El método AsyncInfo.Run crea un objeto que implementa la interfaz [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx), conecta el mecanismo de cancelación de Windows Runtime con el origen del token y conecta la función de información del progreso del objeto Promise con la interfaz IProgress&lt;T&gt;.
     -   La interfaz IAsyncOperationWithProgress&lt;TResult, TProgress&gt; se devuelve a JavaScript.
 
 -   La función lambda que se representa mediante la tarea iniciada no acepta ningún argumento. Dado que es una función lambda, tiene acceso al token y a la interfaz IProgress. Cada vez que se evalúa un número candidato, la función lambda:
 
-    -   Comprueba si se ha llegado al siguiente punto de porcentaje del progreso. Si lo ha hecho, la función lambda llama al método IProgress&lt;T&gt;.Report, y el porcentaje se pasa a la función que el objeto Promise especificó para informar del progreso.
+    -   Comprueba si se ha llegado al siguiente punto de porcentaje del progreso. Si lo ha hecho, la función lambda llama al método IProgress&lt;T&gt;.Report y el porcentaje se pasa a la función que el objeto Promise especificó para informar del progreso.
     -   Utiliza el token de cancelación para producir una excepción si se ha cancelado la operación. Si se ha llamado al método [IAsyncInfo.Cancel](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx) (que hereda la interfaz IAsyncOperationWithProgress&lt;TResult, TProgress&gt;), la conexión que configura el método AsyncInfo.Run garantiza que se notificará el token de cancelación.
 -   Cuando la función lambda devuelve la lista de números primos, la lista se pasa a la función que especificó el objeto WinJS.Promise para procesar los resultados.
 
@@ -738,7 +735,6 @@ Para ejecutar la aplicación, presiona la tecla F5. Para iniciar la operación a
 * [Tutorial: Creación de un componente simple de Windows Runtime y llamada al mismo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
 
 
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

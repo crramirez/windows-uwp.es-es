@@ -1,5 +1,6 @@
 ---
-description: Explica cómo implementar una propiedad adjunta de XAML como una propiedad de dependencia y cómo definir la convención de descriptor de acceso necesaria para que la propiedad adjunta se pueda usar en XAML.
+author: jwmsft
+description: Se explica cómo implementar una propiedad adjunta de XAML como una propiedad de dependencia y cómo definir la convención de descriptor de acceso necesaria para que la propiedad adjunta se pueda usar en XAML.
 title: Propiedades adjuntas personalizadas
 ms.assetid: E9C0C57E-6098-4875-AA3E-9D7B36E160E0
 ---
@@ -24,7 +25,7 @@ Puedes crear una propiedad adjunta cuando haya motivos para que las clases que n
 
 Si vas a definir la propiedad adjunta para usarla exclusivamente en otros tipos, la clase donde se registra la propiedad no tiene que derivar de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). No obstante, si sigues el modelo típico para hacer que tu propiedad adjunta sea también una propiedad de dependencia, debes hacer que el parámetro de destino de los descriptores de acceso use **DependencyObject** con el fin de poder usar la memoria auxiliar de propiedades.
 
-Para definir tu propiedad adjunta como una propiedad de dependencia, declara una propiedad **public** **static** **readonly** del tipo [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362). Esta propiedad se define usando el valor de retorno del método [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833). El nombre de la propiedad debe coincidir con el nombre de la propiedad adjunta que especificaste como parámetro *name* de **RegisterAttached**, con la cadena "Property" anexada al final. Esta es la convención establecida para asignar nombre a los identificadores de las propiedades de dependencia en relación con las propiedades que representan.
+Para definir tu propiedad adjunta como una propiedad de dependencia, declara una propiedad **public****static****readonly** del tipo [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362). Esta propiedad se define usando el valor de retorno del método [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833). El nombre de la propiedad debe coincidir con el nombre de la propiedad adjunta que especificaste como parámetro *name* de **RegisterAttached**, con la cadena "Property" anexada al final. Esta es la convención establecida para asignar nombre a los identificadores de las propiedades de dependencia en relación con las propiedades que representan.
 
 La principal diferencia entre una propiedad adjunta personalizada y una propiedad de dependencia personalizada es la manera de definir los descriptores de acceso o contenedores. En lugar de usar la técnica de contenedor descrita en [Propiedades de dependencia personalizadas](custom-dependency-properties.md), también debes proporcionar los métodos **Get***PropertyName* y **Set***PropertyName* estáticos como descriptores de acceso para la propiedad adjunta. Los descriptores de acceso son usados principalmente por el analizador XAML, aunque algunos otros llamadores pueden usarlos para establecer valores en escenarios que no sean de XAML.
 
@@ -34,25 +35,35 @@ La principal diferencia entre una propiedad adjunta personalizada y una propieda
 
 La firma del descriptor de acceso **Get**_PropertyName_ debe ser esta:
 
-`public static` _valueType_ **Get**_PropertyName_ `(DependencyObject target)`
+`public static` _valueType_
+            **Get**
+            _PropertyName_ `(DependencyObject target)`
 
 En Microsoft Visual Basic, es esta:
 
-` Public Shared Function Get`_PropertyName_`(ByVal target As DependencyObject) As `_valueType_`)`
+` Public Shared Function Get`_PropertyName_
+            `(ByVal target As DependencyObject) As `
+            _valueType_`)`
 
 El objeto *target* puede ser de un tipo más específico en tu implementación, pero debe derivar de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). El valor de retorno de *valueType* también puede ser de un tipo más específico en tu implementación. El tipo **Object** básico es aceptable, pero con frecuencia querrás que la propiedad adjunta exija seguridad de tipos. El uso de establecimiento de tipos en las firmas getter y setter es una técnica de seguridad de tipos recomendada.
 
 La firma del descriptor de acceso **Set***PropertyName* debe ser esta:
 
-`  public static void Set`_PropertyName_` (DependencyObject target , `_valueType_` value)`
+`  public static void Set`_PropertyName_
+            ` (DependencyObject target , `
+            _valueType_` value)`
 
 En Visual Basic, es esta:
 
-`Public Shared Sub Set`_PropertyName_` (ByVal target As DependencyObject, ByVal value As `_valueType_`)`
+`Public Shared Sub Set`_PropertyName_
+            ` (ByVal target As DependencyObject, ByVal value As `
+            _valueType_`)`
 
 El objeto *target* puede ser de un tipo más específico en tu implementación, pero debe derivar de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). El objeto *value* y su *valueType* pueden ser de un tipo más específico en tu implementación. Recuerda que el valor de este método es la entrada que procede del procesador XAML cuando encuentra tu propiedad adjunta en el marcado. Debe haber conversión de tipos o compatibilidad existente para extensión de marcado para el tipo que uses, de manera que se pueda crear el tipo apropiado a partir del valor de un atributo (que al final es tan solo una cadena). El tipo **Object** básico es aceptable, pero con frecuencia te interesará una mayor seguridad de tipos. Para ello, pon la aplicación de tipos en los accesorios.
 
-**Nota**  También es posible definir una propiedad adjunta en la que el uso previsto sea mediante sintaxis de elemento de propiedad. En tal caso, no necesita la conversión de tipos para los valores, pero sí que debe asegurarse de que los valores que tiene previstos se puedan construir en XAML. [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) es un ejemplo de una propiedad adjunta existente que solo admite el uso de elementos de propiedad.
+**Nota**  También es posible definir una propiedad adjunta en la que el uso previsto sea mediante sintaxis de elemento de propiedad. En tal caso, no necesita la conversión de tipos para los valores, pero sí que debe asegurarse de que los valores que tiene previstos se puedan construir en XAML. [
+              **VisualStateManager.VisualStateGroups**
+            ](https://msdn.microsoft.com/library/windows/apps/hh738505) es un ejemplo de una propiedad adjunta existente que solo admite el uso de elementos de propiedad.
 
 ## Ejemplo de código
 
@@ -174,7 +185,7 @@ Después de definir la propiedad adjunta e incluir sus miembros de soporte como 
 
 Normalmente, la asignación de un espacio de nombres XML para XAML se coloca en el elemento raíz de una página XAML. Por ejemplo, para la clase `GameService` en el espacio de nombres `UserAndCustomControls`, que contiene las definiciones de propiedad adjunta que se muestran en los fragmentos anteriores, la asignación podría tener el siguiente aspecto.
 
-```XAML
+```XML
 <UserControl
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:uc="using:UserAndCustomControls"
@@ -184,30 +195,14 @@ Normalmente, la asignación de un espacio de nombres XML para XAML se coloca en 
 
 Mediante la asignación puedes establecer la propiedad adjunta `GameService.IsMovable` en cualquier elemento que coincida con tu definición de destino, incluido un tipo existente definido por Windows Runtime.
 
-```XAML
-<Image uc:GameService.IsMovable="true" .../></code></pre></td>
-</tr>
-</tbody>
-</table>
+```XML
+<Image uc:GameService.IsMovable="true" .../>
 ```
 
 Si estableces la propiedad en un elemento que también está en el mismo espacio de nombres XML asignado, también debes incluir el prefijo en el nombre de la propiedad adjunta. El motivo es que el prefijo cualifica el tipo de propietario. Aunque, según las reglas normales de XML, los atributos pueden heredar de los elementos el espacio de nombres, no se puede dar por sentado que el atributo de la propiedad adjunta está en el mismo espacio de nombres XML que el elemento donde se incluye el atributo. Por ejemplo, si estableces `GameService.IsMovable` en un tipo personalizado de `ImageWithLabelControl` (no se muestra la definición) y aunque ambos se definieran en el mismo espacio de nombres de código asignado al mismo prefijo, el XAML seguiría siendo este.
 
-```XAML
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">XAML</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<uc:ImageWithLabelControl uc:GameService.IsMovable="true" .../></code></pre></td>
-</tr>
-</tbody>
-</table>
+```XML
+<uc:ImageWithLabelControl uc:GameService.IsMovable="true" .../>
 ```
 
 **Nota**  Si estás escribiendo una interfaz de usuario de XAML con C++, debes incluir el encabezado para el tipo personalizado que define la propiedad adjunta cada vez que una página XAML use ese tipo. Todas las páginas XAML tienen asociado un encabezado .xaml.h de código subyacente. Aquí es donde debes incluir (mediante **\#include**) el encabezado para la definición del tipo de propietario de la propiedad adjunta.
@@ -256,6 +251,6 @@ El código tiene un aspecto similar a este seudocódigo:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

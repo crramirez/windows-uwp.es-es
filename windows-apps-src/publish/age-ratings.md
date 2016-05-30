@@ -1,18 +1,19 @@
 ---
+author: jnHs
 Description: La página Clasificaciones por edades del proceso de envío de la aplicación permite proporcionar información acerca de la aplicación para recibir las clasificaciones por edades apropiadas de la International Age Rating Coalition (IARC).
-título: Clasificación por edades
+title: Clasificaciones por edades
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
 ---
 
 # Clasificaciones por edades
 
-La página **Clasificaciones por edades** del [proceso de envío de la aplicación](app-submissions.md) permite proporcionar información acerca de la aplicación para recibir las clasificaciones por edades apropiadas de la [International Age Rating Coalition (IARC)](http://go.microsoft.com/fwlink/p/?LinkId=716854). Estas clasificaciones tienen que ver con la idoneidad del contenido de la aplicación y sus metadatos, en lugar de con la edad del público objetivo de tu aplicación.
+La página **Clasificaciones por edades** del [Proceso de envío de la aplicación](app-submissions.md) permite proporcionar información acerca de la aplicación para recibir las clasificaciones por edades apropiadas de la [International Age Rating Coalition (IARC)](http://go.microsoft.com/fwlink/p/?LinkId=716854). Estas clasificaciones tienen que ver con la idoneidad del contenido de la aplicación y sus metadatos, en lugar de con la edad del público objetivo de tu aplicación.
 
 ## Responder al cuestionario de clasificaciones por edades
 
 La primera vez que envíes una aplicación (o la primera vez que actualices una aplicación publicada con el proceso anterior de clasificación por edades), se te solicitará que respondas un cuestionario de varias opciones para determinar la clasificación por edades de tu aplicación.
 
-> **Importante**  Si ya lo realizaste para tu aplicación en otro escaparate y tienes un identificador de clasificación IARC, puedes seleccionar la opción para proporcionarnos tu identificador de clasificación Usaremos tu identificador para asociar las clasificaciones existentes con tu aplicación en la Tienda Windows.
+> **Importante**  Si ya lo realizaste para la aplicación en otro escaparate y tienes un identificador de clasificación de IARC, puedes seleccionar la opción para proporcionarnos tu identificador de clasificación. Usaremos tu identificador para asociar las clasificaciones existentes con tu aplicación en la Tienda Windows.
 
 Tienes que responder a las preguntas con precisión. Como parte de este proceso, compartimos con IARC tu dirección de correo y el nombre para mostrar del publicador. Después de completar el cuestionario, IARC asignará clasificaciones por edades basadas en tus respuestas. Usaremos estas clasificaciones a la hora de mostrar tu aplicación a los clientes en diferentes mercados. También recibirás un correo electrónico de IARC con información sobre las clasificaciones de la aplicación.
 
@@ -22,7 +23,7 @@ Cuando termines de responder a las preguntas, haz clic en **Save and generate**.
 
 La próxima vez que actualices la aplicación, verás todas las clasificaciones asignadas de la aplicación en esta página. También puede hacer clic **Editar** si deseas repetir el cuestionario. Asegúrate de repetirlo si el contenido de tu aplicación cambia de manera que debas ajustar alguna respuesta. IARC también puede actualizar las preguntas ocasionalmente. En este caso, es posible que se te pida que repitas el cuestionario cuando envíes una actualización.
 
-> **Nota**  La legislación de Corea del Sur exige que los juegos disponibles en Corea del Sur se clasifiquen a través del [Panel de clasificación de juegos](http://go.microsoft.com/fwlink/p/?LinkId=228256) de Corea del Sur. Si la aplicación es un juego y quieres ofrecerlo en Corea del Sur, debes rellenar esta sección adicional y cargar el certificado de clasificación. Ten en cuenta que si la aplicación no es un juego o si no quieres ofrecerla en Corea del Sur, puedes dejar esta sección en blanco.
+> **Nota**  La legislación de Corea del Sur exige que los juegos disponibles en Corea del Sur se clasifiquen a través del [panel de clasificación de juegos](http://go.microsoft.com/fwlink/p/?LinkId=228256) de Corea del Sur. Si la aplicación es un juego y quieres ofrecerlo en Corea del Sur, debes rellenar esta sección adicional y cargar el certificado de clasificación. Ten en cuenta que si la aplicación no es un juego o si no quieres ofrecerla en Corea del Sur, puedes dejar esta sección en blanco.
 
 ## Apelar clasificaciones o clasificaciones rechazadas
 
@@ -44,6 +45,6 @@ Anteriormente, los desarrolladores especificaban la clasificación por edades de
 | 18+ (Apto para adultos)            | Los juegos con esta clasificación por edades pueden contener escenas de sangre y violencia extrema, desagradable o explicita, solo adecuada para un público adulto. Todo el contenido debe cumplir con los criterios de las [directivas de contenido](https://msdn.microsoft.com/library/windows/apps/dn764944).                                                                                                                                                            |
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

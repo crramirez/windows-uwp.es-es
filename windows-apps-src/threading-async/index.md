@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: beac6333-655a-4bcf-9caf-bba15f715ea5
 title: Subprocesamiento y programación asincrónica
 description: El subprocesamiento y la programación asincrónica permiten a tu aplicación realizar el trabajo de forma asincrónica en subprocesos paralelos.
@@ -24,7 +25,7 @@ El grupo de subprocesos es más eficaz en la administración de subprocesos porq
 | Tema                                                                                                          | Descripción                         |
 |----------------------------------------------------------------------------------------------------------------|-------------------------------------|
 | [Programación asincrónica (aplicaciones para UWP)](asynchronous-programming-universal-windows-platform-apps.md)              | En este tema se describe la programación asincrónica en la Plataforma universal de Windows (UWP) y su representación en C#, Microsoft Visual Basic .NET, las extensiones de componentes de Visual C++ (C++/CX) y JavaScript. |
-| [Programación asincrónica en C++ (aplicaciones para UWP)](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)| En este artículo se describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de Visual C++ (C++/CX) usando la clase <code>task</code> que se define en el espacio de nombres <code>concurrency</code> en ppltasks.h. |
+| [Programación asincrónica en C++ (aplicaciones para UWP)](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)| En este artículo se describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de Visual C++ (C++/CX) usando la clase <code>task</code><code>concurrency</code> que se define en el espacio de nombres  en ppltasks.h. |
 | [Procedimientos recomendados para usar el grupo de subprocesos](best-practices-for-using-the-thread-pool.md)                         | En este tema se describen los procedimientos recomendados para trabajar con el grupo de subprocesos. |
 | [Llamar a API asincrónicas en C# o Visual Basic](call-asynchronous-apis-in-csharp-or-visual-basic.md)             | La Plataforma universal de Windows (UWP) incluye muchas API asincrónicas para que tu aplicación tenga capacidad de respuesta mientras realiza trabajos que pudieran llevar algún tiempo. En este tema se describe cómo usar métodos asincrónicos desde la UWP en C# o Microsoft Visual Basic. |
 | [Crear un elemento de trabajo periódico](create-a-periodic-work-item.md)                                                   | Obtén información sobre cómo crear un elemento de trabajo que se repita periódicamente. |
@@ -36,6 +37,6 @@ El grupo de subprocesos es más eficaz en la administración de subprocesos porq
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

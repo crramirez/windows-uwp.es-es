@@ -1,7 +1,8 @@
 ---
+author: martinekuan
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: Crear una aplicación Hello, world (XAML)
-description: En este tutorial se enseña a usar lenguaje XAML (XAML) con C# para crear una sencilla aplicación Hello, World para la Plataforma universal de Windows (UWP) de Windows 10.
+description: En este tutorial se enseña a usar el lenguaje XAML con C# para crear una sencilla aplicación Hello, world para la Plataforma universal de Windows (UWP) de Windows 10.
 ---
 
 # Crear una aplicación "Hello, world" (XAML)
@@ -138,7 +139,7 @@ Ahora vamos a agregar algo de contenido a la aplicación.
         <TextBlock Text="What' s your name?"/>
         <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
             <TextBox x:Name="nameInput" Width="280" HorizontalAlignment="Left"/>
-            <Button x:Name="inputButton" Content="Say &amp;quot;Hello&amp;quot;"/>
+            <Button x:Name="inputButton" Content="Say &quot;Hello&quot;"/>
         </StackPanel>
         <TextBlock x:Name="greetingOutput"/>
     </StackPanel>
@@ -234,7 +235,7 @@ También puedes observar que puedes escribir en [**TextBox**](https://msdn.micro
 
 Los elementos XAML pueden enviar mensajes cuando se producen ciertos eventos. Estos mensajes de eventos te dan la oportunidad de realizar alguna acción como respuesta al evento. El código para responder al evento lo pones en un método de controlador de eventos. Uno de los eventos más comunes en muchas aplicaciones es que un usuario haga clic en un [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265).
 
-Crearemos un controlador de eventos para el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) del botón. El controlador de eventos obtendrá el nombre del usuario del control `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) y lo usará para enviar un saludo a `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652).
+Crearemos un controlador de eventos para el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) del botón. El controlador de eventos obtendrá el nombre del usuario del control `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) y lo usará para enviar un saludo a `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652).
 
 ### Uso de eventos que funcionan para entradas táctiles, de mouse y de lápiz
 
@@ -253,10 +254,10 @@ Crearemos un controlador de eventos para el evento [**Click**](https://msdn.micr
     En el editor de XAML, el XAML para [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) se actualiza para declarar el controlador de eventos de [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) del modo siguiente.
 
 ```xml   
-   <Button x:Name="inputButton" Content="Say &amp;quot;Hello&amp;quot;" Click="Button_Click"/>
+   <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
 ```    
 
-5.  Agrega código al controlador de eventos que creaste en la página de código subyacente. En el controlador de eventos, recupera el nombre del usuario del control `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) y úsalo para crear un saludo. Usa `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) para mostrar el resultado.
+5.  Agrega código al controlador de eventos que creaste en la página de código subyacente. En el controlador de eventos, recupera el nombre del usuario del control `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) y úsalo para crear un saludo. Usa `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) para mostrar el resultado.
     
 ```csharp    
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -317,6 +318,6 @@ El segundo [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR2
 Enhorabuena, has creado tu primera aplicación para Windows 10 y UWP.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

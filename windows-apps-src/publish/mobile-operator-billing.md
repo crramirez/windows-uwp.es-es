@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: En la Tienda Windows se ofrece la facturación de operador de telefonía móvil como método de pago para operadores de telefonía móviles que admiten esta funcionalidad.
 title: Facturación de operadores de telefonía móvil
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
@@ -43,7 +44,7 @@ Los siguientes operadores de telefonía móvil admiten la implementación hereda
 | Australia            | Telstra                                                            |
 | Austria              | A1 Telekom, T-Mobile                                               |
 | Baréin              | Zain, VIVA                                                         |
-| Bélgica              | BASE, Mobistar                                                     |
+| Bélgica              | BASE, Mobistar, Proximus                                                     |
 | Brasil               | Claro                                                              |
 | Bulgaria             | Telenor                                                            |
 | Canadá               | Fido, Rogers, Telus                                                |
@@ -64,7 +65,7 @@ Los siguientes operadores de telefonía móvil admiten la implementación hereda
 | Hungría              | Telenor, T-Mobile                                                  |
 | India                | Idea                                                               |
 | Indonesia            | Indosat, Telkomsel, XL Axiata, AXIS                                |
-| Irlanda              | O2, Vodafone                                                       |
+| Irlanda              | O2, Vodafone, Three                                                      |
 | Italia                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
 | Jordania               | Zain, Umniah                                                       |
 | Kenia                | Safaricom                                                          |
@@ -81,8 +82,8 @@ Los siguientes operadores de telefonía móvil admiten la implementación hereda
 | Filipinas          | Globe, Sun                                                         |
 | Polonia               | T-Mobile, Orange, Polkomtel (Plus)                                 |
 | Puerto Rico          | Claro                                                              |
-| Rumanía              | Orange, Vodafone                                                   |
-| Rusia               | Beeline                                                            |
+| Rumania              | Orange, Vodafone                                                   |
+| Rusia               | Beeline, MTS                                                          |
 | Arabia Saudí         | Zain                                                               |
 | Singapur            | M1, SingTel, StarHub                                               |
 | Eslovaquia             | T-Mobile                                                           |
@@ -110,6 +111,6 @@ Esta lista se actualizará periódicamente a medida que ampliemos nuestro soport
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

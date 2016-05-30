@@ -1,6 +1,7 @@
 ---
+author: drewbatgit
 ms.assetid: 7DBEE5E2-C3EC-4305-823D-9095C761A1CD
-description: En este artículo se muestra cómo capturar una secuencia de fotos variable, que permite capturar varios fotogramas de imágenes en sucesión rápida y configurar cada fotograma para que use una configuración de foco, flash, ISO, exposición y compensación de la exposición diferente.
+description: En este artículo se muestra cómo capturar una secuencia de fotos variable, que permite capturar varios fotogramas de imágenes en sucesión rápida y configurar cada uno para que use una configuración de foco, flash, ISO, exposición y compensación de la exposición diferente.
 title: Secuencia de fotos variable
 ---
 
@@ -13,7 +14,7 @@ En este artículo se muestra cómo capturar una secuencia de fotos variable, que
 
 Si deseas capturar imágenes HDR pero no quieres implementar tu propio algoritmo de procesamiento, puedes usar la API [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) para usar las funcionalidades HDR integradas en Windows. Para obtener más información, consulta [captura de fotos de alto rango dinámico (HDR)](high-dynamic-range-hdr-photo-capture.md).
 
-**Note**  
+**Nota**  
 Este artículo se basa en los conceptos y el código analizados en [Capturar fotografías y vídeos con MediaCapture](capture-photos-and-video-with-mediacapture.md), donde se describen los pasos para la implementación de la captura básica de fotografías y vídeos. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios más avanzados de captura. El código que encontrarás en este artículo se ha agregado suponiendo que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
 
 ## Configurar la aplicación para usar la captura de secuencia de fotos variable
@@ -26,9 +27,9 @@ Declara una variable de miembro para almacenar el objeto [**VariablePhotoSequenc
 
 [!code-cs[VPSMemberVariables](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVPSMemberVariables)]
 
-## Prepara la captura de secuencia de fotos variable
+## Preparar la captura de secuencia de fotos variable
 
-Después de inicializar tu [MediaCapture](capture-photos-and-video-with-mediacapture.md), asegúrate de que las secuencias de fotos variable son compatibles con el dispositivo actual obteniendo una instancia del [**VariablePhotoSequenceController**](https://msdn.microsoft.com/library/windows/apps/dn640573) de la captura multimedia [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) y comprueba la propiedad [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn640580) .
+Después de inicializar tu objeto [MediaCapture](capture-photos-and-video-with-mediacapture.md), asegúrate de que las secuencias de fotos variables son compatibles con el dispositivo actual. Para ello, obtén una instancia del objeto [**VariablePhotoSequenceController**](https://msdn.microsoft.com/library/windows/apps/dn640573) de la captura multimedia [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) y comprueba la propiedad [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn640580).
 
 [!code-cs[IsVPSSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetIsVPSSupported)]
 
@@ -41,7 +42,7 @@ Obtén un objeto [**FrameControlCapabilities**](https://msdn.microsoft.com/libra
 -   [**IsoSpeed**](https://msdn.microsoft.com/library/windows/apps/dn652574)
 -   [**PhotoConfirmation**](https://msdn.microsoft.com/library/windows/apps/dn652578)
 
-En este ejemplo se establece un valor de compensación de la exposición diferente para cada fotograma. Para comprobar que la compensación de la exposición es compatible con secuencias de fotos en el dispositivo actual, comprueba la propiedad [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn278905) del objeto [**FrameExposureCompensationCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652628) al que se obtiene acceso a través de la propiedad **ExposureCompensation**.
+En este ejemplo se establece un valor de compensación de la exposición diferente para cada fotograma. Para comprobar que la compensación de la exposición es compatible con secuencias de fotos en el dispositivo actual, comprueba la propiedad [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn278905) del objeto [**FrameExposureCompensationCapabilities**](https://msdn.microsoft.com/library/windows/apps/dn652628) al que se accede a través de la propiedad **ExposureCompensation**.
 
 [!code-cs[IsExposureCompensationSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetIsExposureCompensationSupported)]
 
@@ -49,7 +50,7 @@ Crea un nuevo objeto [**FrameController**](https://msdn.microsoft.com/library/wi
 
 [!code-cs[InitFrameControllers](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitFrameControllers)]
 
-Crea un objeto [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) para establecer la codificación que desees usar para las imágenes capturadas. Llama al método estático [**MediaCapture.PrepareVariablePhotoSequenceCaptureAsync**](https://msdn.microsoft.com/library/windows/apps/dn608097) y pasa las propiedades de codificación. Este método devuelve un objeto [**VariablePhotoSequenceCapture**](https://msdn.microsoft.com/library/windows/apps/dn652564). Por último, registra controladores de eventos para los eventos [**PhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/dn652573) y [**Stopped**](https://msdn.microsoft.com/library/windows/apps/dn652585) .
+Crea un objeto [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) para establecer la codificación que desees usar para las imágenes capturadas. Llama al método estático [**MediaCapture.PrepareVariablePhotoSequenceCaptureAsync**](https://msdn.microsoft.com/library/windows/apps/dn608097) y pasa las propiedades de codificación. Este método devuelve un objeto [**VariablePhotoSequenceCapture**](https://msdn.microsoft.com/library/windows/apps/dn652564). Por último, registra controladores de eventos para los eventos [**PhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/dn652573) y [**Stopped**](https://msdn.microsoft.com/library/windows/apps/dn652585).
 
 [!code-cs[PrepareVPS](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPrepareVPS)]
 
@@ -95,6 +96,6 @@ Cuando hayas terminado de capturar secuencias de fotos variables o la aplicació
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: Usa este método en la API de análisis de la Tienda Windows para obtener los datos de revisión de un intervalo de fechas proporcionado y otros filtros opcionales.
 title: Obtener opiniones de la aplicación
@@ -37,7 +38,7 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD del formulario **Bearer** &lt;*token*&gt;. |
+| Autorización | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;. |
 
  
 
@@ -62,7 +63,7 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">cadena</td>
-<td align="left">Identificador de producto de la aplicación de la cual quieres recuperar los datos de revisión. El identificador del producto está incrustado en el vínculo descriptivo que tienes disponible en [App identity page](https://msdn.microsoft.com/library/windows/apps/mt148561) del panel del Centro de desarrollo. Un identificador de producto de ejemplo es 9WZDNCRFJ3Q8.</td>
+<td align="left">Identificador de producto de la aplicación de la cual quieres recuperar los datos de revisión. El identificador del producto está incrustado en el vínculo descriptivo que tienes disponible en la [página Identidad de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt148561) del panel del Centro de desarrollo. Un identificador de producto de ejemplo es 9WZDNCRFJ3Q8.</td>
 <td align="left">Sí</td>
 </tr>
 <tr class="even">
@@ -92,7 +93,7 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
 <tr class="even">
 <td align="left">filter</td>
 <td align="left">cadena</td>
-<td align="left">Una o más instrucciones que filtran las filas en la respuesta. Si quieres obtener más información, consulta la sección [filter fields](#filter-fields) que tienes a continuación.</td>
+<td align="left">Una o más instrucciones que filtran las filas en la respuesta. Para obtener más información, consulta la sección [filtrar campos](#filter-fields) a continuación.</td>
 <td align="left">No</td>
 </tr>
 <tr class="odd">
@@ -218,7 +219,7 @@ Para obtener una lista de los campos y operadores compatibles de cada campo, con
 <tr class="even">
 <td align="left">deviceScreenResolution</td>
 <td align="left">eq, ne</td>
-<td align="left">Resolución de la pantalla del dispositivo con formato &quot;<em>ancho</em> x <em>alto</em>&quot;.</td>
+<td align="left">Resolución de la pantalla del dispositivo en el formato &quot;<em>ancho</em> x <em>alto</em>&quot;.</td>
 </tr>
 <tr class="odd">
 <td align="left">isTouchEnabled</td>
@@ -284,7 +285,7 @@ Para obtener una lista de los campos y operadores compatibles de cada campo, con
 
 Los ejemplos siguientes muestran varias solicitudes para obtener datos de revisión. Reemplaza el valor *applicationId* por el identificador de producto de la aplicación.
 
-```
+```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/reviews?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
 Authorization: Bearer <your access token>
 
@@ -382,6 +383,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 
 
 
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

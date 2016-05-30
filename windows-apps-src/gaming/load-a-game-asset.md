@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Cargar recursos en tu juego DirectX
 description: La mayoría de los juegos, en algún momento, cargan recursos y activos (como sombreadores, texturas, mallas predefinidas y otros datos de gráficos) del almacenamiento local u otro flujo de datos.
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
@@ -47,15 +48,15 @@ Puedes encontrar el código completo de estas muestras en los siguientes víncul
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Complete code for BasicLoader](complete-code-for-basicloader.md)</p></td>
+<td align="left"><p>[Código completo para BasicLoader](complete-code-for-basicloader.md)</p></td>
 <td align="left"><p>Código completo de una clase y sus métodos para convertir y cargar objetos de mallas para gráficos en la memoria.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Complete code for BasicReaderWriter](complete-code-for-basicreaderwriter.md)</p></td>
+<td align="left"><p>[Código completo para BasicReaderWriter](complete-code-for-basicreaderwriter.md)</p></td>
 <td align="left"><p>Código completo de una clase y sus métodos para leer y escribir archivos de datos binarios en general. Usado por la clase [BasicLoader](complete-code-for-basicloader.md).</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Complete code for DDSTextureLoader](complete-code-for-ddstextureloader.md)</p></td>
+<td align="left"><p>[Código completo para DDSTextureLoader](complete-code-for-ddstextureloader.md)</p></td>
 <td align="left"><p>Código completo de una clase y método para cargar una textura DDS de la memoria.</p></td>
 </tr>
 </tbody>
@@ -704,6 +705,6 @@ Llegados a este punto, deberías comprender y poder crear o modificar métodos p
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

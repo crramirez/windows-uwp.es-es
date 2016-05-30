@@ -1,7 +1,8 @@
 ---
+author: martinekuan
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
-title: Crea tu primera aplicación
-description: Crear una aplicación de la Plataforma universal de Windows (UWP) para Windows 10 es mucho más sencillo de lo que piensas.
+title: Crear tu primera aplicación
+description: Crear una aplicación para la Plataforma universal de Windows (UWP) para Windows 10 es mucho más sencillo de lo que piensas.
 ---
 # Crea tu primera aplicación
 
@@ -68,6 +69,6 @@ Si quieres desarrollar juegos con C++ y Microsoft DirectX, consulta [Desarrollar
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

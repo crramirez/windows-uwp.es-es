@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Iniciar una aplicación para obtener resultados
 description: Aprende a iniciar una aplicación desde otra aplicación e intercambiar datos entre las dos. Esto se denomina iniciar una aplicación para obtener resultados.
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
@@ -34,7 +35,7 @@ El atributo **ReturnResults** de la extensión de protocolo acepta uno de estos 
 
 En este ejemplo de extensión de protocolo, la aplicación solo puede iniciarse para obtener resultados. Esto simplifica la lógica dentro del método **OnActivated**, que se explica a continuación, ya que solo hay que controlar el caso "iniciado para obtener resultados" y no el resto de maneras mediante las que se pudo activar la aplicación.
 
-```xaml
+```xml
 <Applications>
    <Application ...>
 
@@ -154,8 +155,8 @@ async Task<string> LaunchAppForResults()
 
     string theResult = "";
     LaunchUriResult result = await Windows.System.Launcher.LaunchUriForResultsAsync(testAppUri, options, inputData);
-    if (result.Status == LaunchUriStatus.Success &amp;&amp;
-        result.Result != null &amp;&amp;
+    if (result.Status == LaunchUriStatus.Success &&
+        result.Result != null &&
         result.Result.ContainsKey("ReturnedData"))
     {
         ValueSet theValues = result.Result;
@@ -201,6 +202,6 @@ Después, pásalo a la aplicación iniciada mediante **LaunchUriForResultsAsync*
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

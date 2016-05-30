@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
 description: En este artículo se explica cómo cargar y guardar archivos de imagen mediante BitmapDecoder y BitmapEncoder, y cómo usar el objeto SoftwareBitmap para representar imágenes de mapa de bits.
 title: Creación de imágenes
@@ -13,19 +14,25 @@ En este artículo se explica cómo cargar y guardar archivos de imagen mediante 
 
 La clase **SoftwareBitmap** es una API versátil que se puede crear desde varios orígenes, entre los que se incluyen archivos de imagen, objetos [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/br243259), superficies de Direct3D y código. **SoftwareBitmap** permite convertir fácilmente entre los modos alfa y formatos de píxel diferentes, y también permite el acceso de bajo nivel a datos de píxel. Además, **SoftwareBitmap** es una interfaz común que utilizan varias características de Windows, entre las que se incluyen:
 
--   [**CapturedFrame**](https://msdn.microsoft.com/library/windows/apps/dn278725) permite tener fotogramas capturados por la cámara como un elemento **SoftwareBitmap**.
+-   [
+              **CapturedFrame**
+            ](https://msdn.microsoft.com/library/windows/apps/dn278725) permite tener fotogramas capturados por la cámara como un elemento **SoftwareBitmap**.
 
--   [**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) permite tener una representación **SoftwareBitmap** de un elemento **VideoFrame**.
+-   [
+              **VideoFrame**
+            ](https://msdn.microsoft.com/library/windows/apps/dn930917) permite tener una representación **SoftwareBitmap** de un elemento **VideoFrame**.
 
--   [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) permite detectar caras de un elemento **SoftwareBitmap**.
+-   [
+              **FaceDetector**
+            ](https://msdn.microsoft.com/library/windows/apps/dn974129) permite detectar caras de un elemento **SoftwareBitmap**.
 
 El código de ejemplo de este artículo usa las API de los siguientes espacios de nombres.
 
-[!code-cs[Namespaces](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetNamespaces)]
+[!code-cs[Espacios de nombres](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetNamespaces)]
 
 ## Crear un objeto SoftwareBitmap desde un archivo de imagen con BitmapDecoder
 
-Para crear un elemento [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) desde un archivo, obtén una instancia de [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que contenga los datos de la imagen. Este ejemplo usa un elemento [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para permitir al usuario seleccionar un archivo de imagen.
+Para crear un elemento [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) desde un archivo, obtén una instancia de [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que contenga los datos de la imagen. En este ejemplo se usa un elemento [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para permitir al usuario seleccionar un archivo de imagen.
 
 [!code-cs[PickInputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickInputFile)]
 
@@ -101,7 +108,7 @@ Llama a [**CreateCopyFromSurfaceAsync**](https://msdn.microsoft.com/library/wind
 
 ## Convertir un objeto SoftwareBitmap a un formato de píxel diferente
 
-La clase **SoftwareBitmap** proporciona el método estático [**Convert**](https://msdn.microsoft.com/library/windows/apps/dn887362) que permite crear fácilmente un nuevo objeto **SoftwareBitmap** que utilice el modo alfa y el formato de píxel que se especifique desde un objeto **SoftwareBitmap** existente. Ten en cuenta que el mapa de bits recién creado tiene una copia de los datos de imagen. Las modificaciones en el nuevo mapa de bits no afectarán al mapa de bits de origen.
+La clase **SoftwareBitmap** proporciona el método estático [**Convert**](https://msdn.microsoft.com/library/windows/apps/dn887362) que permite crear fácilmente un nuevo objeto **SoftwareBitmap** que use el modo alfa y el formato de píxel que se especifique desde un objeto **SoftwareBitmap** existente. Ten en cuenta que el mapa de bits recién creado tiene una copia de los datos de imagen. Las modificaciones en el nuevo mapa de bits no afectarán al mapa de bits de origen.
 
 [!code-cs[Convert](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetConvert)]
 
@@ -124,6 +131,6 @@ Puedes transcodificar un archivo de imagen directamente desde un elemento [**Bit
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

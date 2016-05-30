@@ -28,6 +28,6 @@ Además del contrato para compartir contenido, las aplicaciones también pueden 
 | [Usar EDP para proteger los datos empresariales que se transfieren entre aplicaciones](use-edp-to-protect-enterprise-data-transferred-between-apps.md) | En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con la transferencia de datos. |
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

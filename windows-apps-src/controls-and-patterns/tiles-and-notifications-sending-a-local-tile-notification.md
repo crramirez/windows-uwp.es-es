@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: En este artículo se describe cómo enviar una notificación de icono local a un icono principal y un icono secundario con el uso de plantillas de iconos adaptables.
 title: Enviar una notificación de icono local
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
@@ -9,14 +10,14 @@ template: detail.hbs
 # Enviar una notificación de icono local
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Los iconos de la aplicación principal de Windows 10 se definen en el manifiesto de la aplicación, mientras que los iconos secundarios se crean mediante programación y se definen mediante el código de la aplicación. En este artículo se describe cómo enviar una notificación de icono local a un icono principal y un icono secundario con el uso de plantillas de iconos adaptables. (Una notificación local es aquella que se envía desde el código de la aplicación frente a la que se envía o extrae de un servidor web).
 
 ![icono predeterminado e icono con notificación](images/sending-local-tile-01.png)
 
-**Nota**   Obtén información sobre cómo [crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md) y [esquema de plantillas de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
+**Nota** Obtén información sobre cómo [crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md) y sobre el [esquema de plantillas de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
 
  
 
@@ -128,7 +129,7 @@ Este ejemplo de código crea una notificación para un icono nuevo.
 var notification = new TileNotification(content.GetXml());
 ```
 
-## <span id="Set_an_expiration_time_for_the_notification__optional_"></span><span id="set_an_expiration_time_for_the_notification__optional_"></span><span id="SET_AN_EXPIRATION_TIME_FOR_THE_NOTIFICATION__OPTIONAL_"></span>Establecer una fecha de caducidad para la notificación (opcional)
+## <span id="Set_an_expiration_time_for_the_notification__optional_"></span><span id="set_an_expiration_time_for_the_notification__optional_"></span><span id="SET_AN_EXPIRATION_TIME_FOR_THE_NOTIFICATION__OPTIONAL_"></span>Establecer una fecha de expiración para la notificación (opcional)
 
 
 De manera predeterminada, las notificaciones de iconos y distintivos locales no expiran, mientras que las notificaciones programadas, periódicas y de inserción expiran al cabo de de tres días. El contenido de los iconos no debe persistir más de lo necesario, por lo que se considera una buena práctica establecer una fecha de caducidad apropiada para la aplicación, especialmente en las notificaciones de iconos y distintivos locales.
@@ -314,6 +315,6 @@ var notification = new TileNotification(doc);
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

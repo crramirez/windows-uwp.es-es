@@ -1,6 +1,7 @@
 ---
+author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
-description: Este tema describe los efectos diseñados para su uso en escenarios de captura de vídeo. Esto incluye el efecto de estabilización de vídeo.
+description: Este tema describe los efectos diseñados para usarse en escenarios de captura de vídeo. Esto incluye el efecto de estabilización de vídeo.
 title: Efectos para captura de vídeos
 ---
 
@@ -83,6 +84,6 @@ Para limpiar el efecto de estabilización de vídeo, llama al método [**ClearEf
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

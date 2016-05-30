@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP)
 description: Aprende a usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D.
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
@@ -74,7 +75,7 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
     }
     ```
 
-    > **Nota** Usa [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) si necesitas comprobar la compatibilidad de muestras múltiples con búferes de recursos en mosaico.
+    > **Nota**  Usa [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) si necesitas comprobar la compatibilidad de muestras múltiples con búferes de recursos en mosaico.
 
      
 
@@ -204,6 +205,6 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

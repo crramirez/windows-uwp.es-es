@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Para administrar las campañas publicitarias de la aplicación, haz clic en Monetización &gt; Promocionar la aplicación desde la página de la aplicación en el panel del Centro de desarrollo de Windows.
 title: Administrar campañas publicitarias
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
@@ -7,7 +8,7 @@ ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
 # Administrar campañas publicitarias
 
 
-Para administrar las campañas publicitarias de la aplicación, haz clic en **Monetización** &gt; **Promocionar la aplicación** desde la página de la aplicación en el panel del Centro de desarrollo de Windows. En la página **Promocionar la aplicación** se muestran todas las campañas publicitarias asociadas a la aplicación, así como las impresiones, los clics y las instalaciones de cada una de ellas. Para obtener más información acerca de las impresiones, los clics y las instalaciones, consulta las definiciones de estos términos en [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md).
+Para administrar las campañas publicitarias de la aplicación, haz clic en **Monetización**&gt;**Promocionar la aplicación** desde la página de la aplicación en el panel del Centro de desarrollo de Windows. En la página **Promocionar la aplicación** se muestran todas las campañas publicitarias asociadas a la aplicación, así como las impresiones, los clics y las instalaciones de cada una de ellas. Para obtener más información acerca de las impresiones, los clics y las instalaciones, consulta las definiciones de estos términos en [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md).
 
 Para filtrar la lista de campañas publicitarias, haz clic en el menú desplegable **Filtros de sección** desplegable y elige entre los siguientes filtros:
 
@@ -22,7 +23,7 @@ Para filtrar la lista de campañas publicitarias, haz clic en el menú desplegab
 ## Informe
 
 
-Para ver el rendimiento de tus campañas publicitarias, haz clic en **Análisis** &gt; **Anuncios de instalación de aplicaciones** en el panel de navegación del panel. Para obtener más información sobre este informe, consulta [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md).
+Para ver el rendimiento de tus campañas publicitarias, haz clic en **Análisis**&gt;**Anuncios de instalación de aplicaciones** en el panel de navegación del panel. Para obtener más información sobre este informe, consulta [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md).
 
 ## Editar una campaña publicitaria
 
@@ -45,6 +46,6 @@ Para realizar cambios en una campaña publicitaria, haz clic en su nombre para i
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

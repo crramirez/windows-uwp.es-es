@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Proporciona un medio para especificar el origen de un enlace en términos de una relación relativa en el gráfico de objetos en tiempo de ejecución.
 title: Extensión de marcado RelativeSource
 ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
@@ -28,9 +29,7 @@ Proporciona un medio para especificar el origen de un enlace en términos de una
 
 ## Valores de XAML
 
-| Término | Descripción |
-| {RelativeSource Self} | Produce un valor [<strong>Mode</strong>](https://msdn.microsoft.com/library/windows/apps/br209915) igual a <strong>Self</strong>. El elemento de destino debe usarse como origen para este enlace. Esto resulta útil para vincular una propiedad de un elemento a otra propiedad del mismo elemento. |
-| {RelativeSource TemplatedParent} | Produce una [<strong>ControlTemplate</strong>](https://msdn.microsoft.com/library/windows/apps/br209391) que se aplica como el origen de este enlace. Esto resulta útil para aplicar la información en tiempo de ejecución a enlaces en el nivel de plantilla. | 
+| Término | Descripción | | {RelativeSource Self} | Produce un valor [<strong>Mode</strong>](https://msdn.microsoft.com/library/windows/apps/br209915) igual a <strong>Self</strong>. El elemento de destino debe usarse como origen para este enlace. Esto resulta útil para vincular una propiedad de un elemento a otra propiedad del mismo elemento. | | {RelativeSource TemplatedParent} | Produce una [<strong>ControlTemplate</strong>](https://msdn.microsoft.com/library/windows/apps/br209391) que se aplica como el origen de este enlace. Esto resulta útil para aplicar la información en tiempo de ejecución a enlaces en el nivel de plantilla. | 
 
 ## Observaciones
 
@@ -42,7 +41,7 @@ El modo **Self** resulta útil para casos en los que se debe usar el mismo eleme
 
 A continuación te mostramos un ejemplo. Este [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371) usa una [extensión de marcado {Binding}](binding-markup-extension.md) para que su [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) y [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) siempre sean iguales y se represente como un cuadrado. Solo Height se establece como un valor fijo. Para este **Rectangle**, su valor predeterminado [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) es **null**, no **this**. Por eso, para establecer que el origen del contexto de datos sea el propio objeto (y permitir el enlace a sus otras propiedades), usamos el argumento `RelativeSource={RelativeSource Self}` en el uso de la extensión de marcado {Binding}.
 
-```XAML
+```XML
 <Rectangle
   Fill="Orange" Width="200"
   Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}"
@@ -51,7 +50,7 @@ A continuación te mostramos un ejemplo. Este [**Rectangle**](https://msdn.micro
 
 Otra técnica que puede resultar útil es usar `RelativeSource={RelativeSource Self}` como una manera de establecer el [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) de un objeto en sí mismo; la clase [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) se ha extendido con una propiedad personalizada que ya proporciona un modelo de vista listo para el enlace a sus propios datos. Esta técnica se ve en algunos ejemplos del SDK: `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
 
-**Nota**  El uso de XAML para **RelativeSource** solo muestra el uso para el cual fue creado: configurar un valor para [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) en XAML como parte de una expresión de enlace. Teóricamente, otros usos son posibles si se configura una propiedad donde el valor sea [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913).
+**Nota** El uso de XAML para **RelativeSource** solo muestra el uso para el cual fue creado: configurar un valor para [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) en XAML como parte de una expresión de enlace. Teóricamente, otros usos son posibles si se configura una propiedad donde el valor sea [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913).
 
 ## Temas relacionados
 
@@ -63,6 +62,6 @@ Otra técnica que puede resultar útil es usar `RelativeSource={RelativeSource S
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

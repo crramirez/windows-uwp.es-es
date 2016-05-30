@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Las animaciones en el borde muestran u ocultan una interfaz de usuario que se origina en el borde de la pantalla.
 title: Animaciones de UI en el borde en aplicaciones para UWP
 ms.assetid: 5A8F73B1-F4F6-424b-9EDF-A9766C5DEAE8
@@ -9,7 +10,7 @@ template: detail.hbs
 # Animaciones de UI en el borde
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Las animaciones en el borde muestran u ocultan una interfaz de usuario que se origina en el borde de la pantalla. Tanto el usuario como la aplicación pueden comenzar las acciones de mostrar u ocultar. La interfaz de usuario puede superponerse a la aplicación o formar parte de la superficie de la aplicación principal. Si la interfaz de usuario forma parte de la superficie de la aplicación, puede que sea necesario cambiar el tamaño del resto de la aplicación para que quepa.
 
@@ -54,6 +55,6 @@ Las animaciones en el borde muestran u ocultan una interfaz de usuario que se or
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,10 +1,11 @@
 ---
-title: Comparar búferes, elementos uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D
+author: mtoepke
+title: Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D
 description: Durante el proceso de migración de OpenGL ES 2.0 a Direct3D 11, debes cambiar la sintaxis y el comportamiento de API para pasar datos entre la aplicación y los programas sombreadores.
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
 ---
 
-# Comparar búferes, elementos uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D
+# Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -296,6 +297,6 @@ struct VertexShaderInput
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

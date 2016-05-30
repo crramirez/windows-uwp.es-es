@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 3C03FDD8-FA61-4E7B-BDCA-3C29DFEA20E4
 description: Después de instalar el SDK de Microsoft Store Engagement and Monetization, sigue las instrucciones de este tema para usar el control de Ad Mediator en tu aplicación.
 title: Agregar y usar el control de Ad Mediator
@@ -28,19 +29,19 @@ Para agregar una instancia del control de Ad Mediator al proyecto:
     -   En un proyecto de Windows 8.1 o Windows Phone 8.1 con C# o Visual Basic con XAML, usa el control **AdMediatorControl** de la sección **AdMediator**.
     -   En un proyecto de Windows Phone Silverlight, usa el control **AdMediatorControl** de la sección **Todos los controles de Windows Phone**.
 
-    **Nota**: Cuando se arrastra el control **AdMediatorControl** al diseñador por primera vez en un proyecto de UWP, Windows 8.1 o Windows Phone 8.1 con C# o Visual Basic con XAML, Visual Studio agrega la referencia de ensamblado de Ad Mediator necesaria al proyecto, pero el control aún no se agrega al diseñador. Para agregarlo, haz clic en Aceptar en el mensaje que se muestra en Visual Studio, espera varios segundos a que se actualice el diseñador y luego arrastra de nuevo el control al diseñador. Si aún no puedes agregar correctamente el control al diseñador, asegúrate de que el proyecto se dirija a la arquitectura de procesador aplicable para la aplicación (por ejemplo, **x 86**) en lugar de **Cualquier CPU**. El control no se puede agregar al diseñador si el proyecto se dirige a **Cualquier CPU** para la plataforma de compilación.
+    > **Nota**: Cuando se arrastra el control **AdMediatorControl** al diseñador por primera vez en un proyecto de UWP, Windows 8.1 o Windows Phone 8.1 con C# o Visual Basic con XAML, Visual Studio agrega la referencia de ensamblado de Ad Mediator necesaria al proyecto, pero el control aún no se agrega al diseñador. Para agregarlo, haz clic en Aceptar en el mensaje que se muestra en Visual Studio, espera varios segundos a que se actualice el diseñador y luego arrastra de nuevo el control al diseñador. Si aún no puedes agregar correctamente el control al diseñador, asegúrate de que el proyecto se dirija a la arquitectura de procesador aplicable para la aplicación (por ejemplo, **x 86**) en lugar de **Cualquier CPU**. El control no se puede agregar al diseñador si el proyecto se dirige a **Cualquier CPU** para la plataforma de compilación.
 
 5.  Visual Studio agrega una referencia de ensamblado de Ad Mediator a tu proyecto e inserta el código XAML del control de Ad Mediator en la página actual, incluido un identificador único y un nombre para el control. La referencia de ensamblado y el código XAML varían según la plataforma de destino. Por ejemplo, en el caso de una aplicación para Plataforma universal de Windows (UWP) de Windows 8.1, el nombre del ensamblado es **Microsoft.AdMediator.Universal** y el código XAML generado es similar al del siguiente ejemplo.
 
     ```xml
     // Code that gets added to the XAML page header
-        xmlns:Universal="using:Microsoft.AdMediator.Universal"
+    xmlns:Universal="using:Microsoft.AdMediator.Universal"
 
-        // Code that gets added for the ad mediator control
-        <Universal:AdMediatorControl x:Name="AdMediator_3D4884"
-         Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="250"
-         Id="AdMediator-Id-D1FDFDA7-EABB-474C-940C-ECA7FBCFF143" Margin="121,175,0,0"
-         VerticalAlignment="Top" Width="300"/>
+    // Code that gets added for the ad mediator control
+    <Universal:AdMediatorControl x:Name="AdMediator_3D4884"
+      Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="250"
+      Id="AdMediator-Id-D1FDFDA7-EABB-474C-940C-ECA7FBCFF143" Margin="121,175,0,0"
+      VerticalAlignment="Top" Width="300"/>
     ```
 
     El elemento **Name** te ayuda a identificar el control específico de la aplicación cuando configuras la mediación de anuncios. Puedes cambiar esta opción a gusto, pero asegúrate de no cambiar ni duplicar el elemento **Id**. Este elemento **Id** debe ser único para cada control dentro de la aplicación.
@@ -51,7 +52,7 @@ Para agregar una instancia del control de Ad Mediator al proyecto:
 
 Cuando hayas agregado todos los controles que quieras, podrás configurar las redes de anuncios a través de Servicios conectados.
 
-**Importante**: Si más adelante agregas un control AdMediatorControl adicional, también tendrás que configurarlo a través de Servicios conectados. De lo contrario, el nuevo control no podrá usar la mediación de anuncios.
+> **Importante**: Si, más adelante, agregas un control AdMediatorControl adicional, también tendrás que configurarlo a través de Servicios conectados. De lo contrario, el nuevo control no podrá usar la mediación de anuncios.
 
 Para configurar las redes de anuncios:
 
@@ -62,16 +63,16 @@ Para configurar las redes de anuncios:
 
 3.  En la ventana de **Ad Mediator** (Visual Studio 2015) o **Administrador de servicios** (Visual Studio 2013), haz clic en **Seleccionar redes de anuncios**, selecciona las redes de anuncios que quieras usar y haz clic en **Aceptar** en la ventana **Seleccionar redes de anuncios**.
 
-    **Sugerencia**: Es conveniente agregar todas las redes en las que tienes una cuenta, incluso aunque no tengas previsto usarlas todas inmediatamente en tu aplicación. Después de publicar la aplicación, podrás configurar la frecuencia con la que se usa cada red en el Centro de desarrollo (o empezar a usar una red que no habías usado antes), sin tener que realizar cambios en el código y volver a enviar la aplicación.
+    > **Sugerencia**: Es conveniente agregar todas las redes en las que tienes una cuenta, incluso aunque no tengas previsto usarlas todas inmediatamente en la aplicación. Después de publicar la aplicación, podrás configurar la frecuencia con la que se usa cada red en el Centro de desarrollo (o empezar a usar una red que no habías usado antes), sin tener que realizar cambios en el código y volver a enviar la aplicación.
 
     Visual Studio captura los ensamblados necesarios para las redes de anuncios seleccionadas y agrega las referencias de ensamblado al proyecto. Una vez completado este proceso, haz clic en **Aceptar** en el cuadro de diálogo **Capturando estado**.
 
 4.  También puedes seleccionar cada red en la ventana **Mediador de anuncios** (Visual Studio 2015) o **Administrador de servicios** (Visual Studio 2013), y hacer clic en **Configurar** para especificar la información de configuración de cada red que se usará mientras pruebas la aplicación. Esta información se guarda en el archivo AdMediator.config del proyecto. Podrás modificar esta información al configurar el comportamiento de la red de anuncios en el panel del Centro de desarrollo de Windows. Para obtener más información, consulta [Enviar la aplicación y configurar la mediación de anuncios](submit-your-app-and-configure-ad-mediation.md).
-    **Nota**: Si no se especifican los datos de configuración en este paso, la mediación de anuncios usará automáticamente los valores de configuración de prueba al ejecutar la aplicación en el equipo de desarrollo (aplicaciones XAML para Windows 8.1 y UWP) o en el emulador o el dispositivo (aplicaciones para Windows Phone).
+    > **Nota**: Si no se especifican los datos de configuración en este paso, la mediación de anuncios usará automáticamente los valores de configuración de prueba al ejecutar la aplicación en el equipo de desarrollo (aplicaciones XAML para Windows 8.1 y UWP) o en el emulador o dispositivo (aplicaciones para Windows Phone).
 
 5.  En la ventana **Ad Mediator** (Visual Studio 2015) o **Administrador de servicios** (Visual Studio 2013), confirma que todas las redes de anuncios que hayas seleccionado muestren el estado **Recuperado**. Haz clic en **Aceptar** para enviar los cambios al proyecto.
 
-**Nota**: Si más adelante actualizas a una versión más reciente del SDK de Microsoft Store Engagement and Monetization, tendrás que iniciar de nuevo **Servicios conectados** para asegurarte de que los archivos DLL de las redes de anuncios recuperados automáticamente se actualicen correctamente.
+> **Nota**: Si, más adelante, actualizas a una versión más reciente del SDK de Microsoft Store Engagement and Monetization, tendrás que iniciar de nuevo **Servicios conectados** para asegurarte de que los archivos DLL de las redes de anuncios recuperados automáticamente se actualicen correctamente.
 
 ### Declarar las funcionalidades necesarias
 
@@ -88,7 +89,7 @@ En la siguiente captura de pantalla se muestran las funcionalidades necesarias d
 
 En algunos casos, puedes ver que algunos archivos DLL no se han capturado. En este caso, deberás agregarlos manualmente. Para obtener vínculos para descargar ensamblados individuales, consulta [Seleccionar y administrar redes de anuncios](select-and-manage-your-ad-networks.md).
 
-**Nota**: Al agregar archivos DLL manualmente, es posible que recibas un mensaje de error que indique "No se puede agregar al proyecto una referencia a una versión posterior o a un ensamblado que no es compatible". Para resolver este error, haz clic en el archivo DLL en el explorador y selecciona **Propiedades**. En la sección Seguridad, haz clic en **Desbloquear**.
+> **Nota**: Al agregar archivos DLL manualmente, es posible que recibas un mensaje de error que indique que "No se puede agregar al proyecto una referencia a una versión posterior o a un ensamblado que no es compatible". Para resolver este error, haz clic en el archivo DLL en el explorador y selecciona **Propiedades**. En la sección Seguridad, haz clic en **Desbloquear**.
 
 ![botón de desbloqueo para solucionar el mensaje de error](images/ad-med-4.png)
 ## Ajustar el tamaño y la posición
@@ -121,17 +122,16 @@ Microsoft Advertising solo admite los anuncios que tengan los siguientes tamaño
 
 -   Windows 10 y Windows 8.1:
     -   160 x 600
-    -   250 x 250 (ten en cuenta que muy pocos anuncios están disponibles en este tamaño. Se recomienda usar otros tamaños para maximizar la velocidad de relleno y el eCPM).
     -   300 x 250
     -   300 x 600
     -   728 x 90
 -   Windows 10 Mobile, Windows Phone 8.1 y Windows Phone 8:
     -   300 x 50
     -   320 x 50
-    -   480 x 80
+    -   480 x 80 (Este tamaño solo es compatible con Windows Phone Silverlight)
     -   640 x 100
 
-Tal vez quieras especificar un tamaño de control de Ad Mediator que no coincida con los tamaños de anuncios que admite Microsoft Advertising (por ejemplo, si un tamaño diferente se adapta mejor a la interfaz de usuario de tu aplicación o si también está dirigido a otras redes de anuncios que admiten otros tamaños). Para ello, especifica el tamaño exacto del control en el diseñador o en el código XAML y, a continuación, asigna los parámetros opcionales **Ancho** y **Alto** para Microsoft Advertising al tamaño compatible más parecido que quepa dentro de los límites del control. El control se mostrará en el tamaño exacto que especifiques en el diseñador, pero Microsoft Advertising servirá anuncios que coincidan con el tamaño que especifiques mediante los parámetros opcionales **Ancho** y **Alto**.
+Tal vez quieras especificar un tamaño de control de Ad Mediator que no coincida con los tamaños de anuncios que admite Microsoft Advertising (por ejemplo, si un tamaño diferente se adapta mejor a la interfaz de usuario de la aplicación o si también está dirigido a otras redes de anuncios que admiten otros tamaños). Para ello, especifica el tamaño exacto del control en el diseñador o en el código XAML y, a continuación, asigna los parámetros opcionales **Ancho** y **Alto** para Microsoft Advertising al tamaño compatible más parecido que quepa dentro de los límites del control. El control se mostrará en el tamaño exacto que especifiques en el diseñador, pero Microsoft Advertising servirá anuncios que coincidan con el tamaño que especifiques mediante los parámetros opcionales **Ancho** y **Alto**.
 
 Por ejemplo, si tienes una aplicación para UWP y quieres que el control de Ad Mediator se muestre a 300 x 300, establece el control a 300 x 300 en el diseñador o en el código XAML. A continuación, asigna los parámetros opcionales para Microsoft Advertising **Ancho** a 300 y **Alto** a 250, como se muestra en el siguiente código.
 
@@ -158,7 +158,7 @@ En el siguiente código se muestra cómo especificar una duración de tiempo de 
 myAdMediatorControl.AdSdkTimeouts[AdSdkNames.MicrosoftAdvertising] = TimeSpan.FromSeconds(10);
 ```
 
-**Nota**: Como alternativa, se puede establecer el valor de tiempo de espera en la página **Rentabilizar con anuncios** del panel del Centro de desarrollo. Si estableces el tiempo de espera en el código y en el panel, el valor que establezcas en el código reemplazará el valor del panel.
+> **Nota**: Como alternativa, se puede establecer el valor de tiempo de espera en la página **Rentabilizar con anuncios** del panel del Centro de desarrollo. Si estableces el tiempo de espera en el código y en el panel, el valor que establezcas en el código reemplazará el valor del panel.
 
 ## Control de eventos
 
@@ -198,7 +198,7 @@ void AdMediator_Bottom_AdError(object sender, Microsoft.AdMediator.Core.Events.A
 
 ## Controlar las excepciones no controladas de las redes de anuncios
 
-**Nota**: Como parte de nuestra prueba, hemos identificado varias excepciones no controladas de redes de anuncios concretas que deben controlarse dentro de la aplicación para evitar bloqueos de las aplicaciones relacionados con estas excepciones. Es muy recomendable que copies y pegues el siguiente ejemplo de código en el archivo App.xaml.cs.
+> **Nota**: Como parte de nuestras pruebas, hemos identificado varias excepciones no controladas de redes de anuncios concretas que deben controlarse dentro de la aplicación para evitar bloqueos de la aplicación relacionados con estas excepciones. Es muy recomendable que copies y pegues el siguiente ejemplo de código en el archivo App.xaml.cs.
 
 Código que puedes usar con una aplicación para UWP, Windows 8.1 o Windows Phone que use C# y XAML
 
@@ -211,7 +211,7 @@ void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)
       if (e != null)
       {
          Exception exception = e.Exception;
-         if (exception is NullReferenceException &amp;&amp; exception.ToString().ToUpper().Contains("SOMA"))
+         if (exception is NullReferenceException && exception.ToString().ToUpper().Contains("SOMA"))
          {
             Debug.WriteLine("Handled Smaato null reference exception {0}", exception);
             e.Handled = true;
@@ -240,25 +240,25 @@ private void Application_UnhandledException(object sender, ApplicationUnhandledE
     if (e != null)
    {
        Exception exception = e.ExceptionObject;
-       if ((exception is XmlException || exception is NullReferenceException) &amp;&amp; exception.ToString().ToUpper().Contains("INNERACTIVE"))
+       if ((exception is XmlException || exception is NullReferenceException) && exception.ToString().ToUpper().Contains("INNERACTIVE"))
        {
            Debug.WriteLine("Handled Inneractive exception {0}", exception);
            e.Handled = true;
            return;
        }
-       else if (exception is NullReferenceException &amp;&amp; exception.ToString().ToUpper().Contains("SOMA"))
+       else if (exception is NullReferenceException && exception.ToString().ToUpper().Contains("SOMA"))
        {
            Debug.WriteLine("Handled Smaato null reference exception {0}", exception);
            e.Handled = true;
            return;
        }
-       else if ((exception is System.IO.IOException || exception is NullReferenceException) &amp;&amp; exception.ToString().ToUpper().Contains("GOOGLE"))
+       else if ((exception is System.IO.IOException || exception is NullReferenceException) && exception.ToString().ToUpper().Contains("GOOGLE"))
       {
           Debug.WriteLine("Handled Google exception {0}", exception);
           e.Handled = true;
           return;
        }
-       else if ((exception is NullReferenceException || exception is XamlParseException) &amp;&amp; exception.ToString().ToUpper().Contains("MICROSOFT.ADVERTISING"))
+       else if ((exception is NullReferenceException || exception is XamlParseException) && exception.ToString().ToUpper().Contains("MICROSOFT.ADVERTISING"))
        {
            Debug.WriteLine("Handled Microsoft.Advertising exception {0}", exception);
            e.Handled = true;
@@ -288,6 +288,6 @@ if (Debugger.IsAttached)
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

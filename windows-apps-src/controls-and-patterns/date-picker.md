@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: El selector de fecha te ofrece una forma estandarizada de permitir a los usuarios seleccionar un valor de fecha localizada usando entrada táctil, de mouse o de teclado. 
 title: Selector de fecha
 ms.assetid: d4a01425-4dee-4de3-9a05-3e85c3fc03cb
@@ -44,7 +45,8 @@ El selector de fecha resultante tiene este aspecto:
 
 ![Ejemplo de selector de fecha](images/date-picker-closed.png)
 
-> **Nota**&nbsp;&nbsp;Para obtener información importante acerca de los valores de fecha, consulta [Valores de DateTime y Calendar](date-and-time.md#datetime-and-calendar-values) en el artículo Controles de fecha y hora.
+> **Nota**
+            &nbsp;&nbsp;Para obtener información importante acerca de los valores de fecha, consulta [Valores de DateTime y Calendar](date-and-time.md#datetime-and-calendar-values) en el artículo Controles de fecha y hora.
 
 
 
@@ -56,6 +58,6 @@ El selector de fecha resultante tiene este aspecto:
 - [Selector de hora](time-picker.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

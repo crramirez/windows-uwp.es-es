@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Usa animaciones de arrastrar y colocar cuando los usuarios muevan objetos, por ejemplo, cuando muevan un elemento dentro de una lista o coloquen un elemento encima de otro.
 title: Animaciones de arrastre en aplicaciones para UWP
 ms.assetid: 6064755F-6E24-4901-A4FF-263F05F0DFD6
@@ -9,7 +10,7 @@ template: detail.hbs
 # Animaciones de arrastre
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Usa animaciones de arrastrar y colocar cuando los usuarios muevan objetos, por ejemplo, cuando muevan un elemento dentro de una lista o coloquen un elemento encima de otro.
 
@@ -65,6 +66,6 @@ Usa animaciones de arrastrar y colocar cuando los usuarios muevan objetos, por e
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,16 +1,14 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Establece durante cuánto tiempo un reconocedor de voz pasa por alto el silencio o los sonidos irreconocibles (balbuceo) y continúa escuchando la entrada de voz.
 title: Establecer tiempos de espera de reconocimiento de voz
 ms.assetid: 58F446AC-4A56-454D-8125-62A2C4DBFCC8
-label: Tiempos de espera de reconocimiento de voz
+label: Speech recognition timeouts
 template: detail.hbs
 ---
 
 # Establecer tiempos de espera de reconocimiento de voz
 Establece durante cuánto tiempo un reconocedor de voz pasa por alto el silencio o los sonidos irreconocibles (balbuceo) y continúa escuchando la entrada de voz.
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 **API importantes**
 
@@ -27,7 +25,7 @@ Aquí especificamos diversos valores de [**Timeouts**](https://msdn.microsoft.co
 -   BabbleTimeout: el período de tiempo que un SpeechRecognizer continúa escuchando sonidos no reconocibles (hablante) antes de que se suponga que la entrada de voz ha finalizado y finaliza la operación de reconocimiento.
 -   EndSilenceTimeout: el período de tiempo en que un objeto SpeechRecognizer detecta silencio (después de que se hayan generado los resultados de reconocimiento) y da por hecho que ha finalizado la entrada de voz.
 
-**Nota**  Los tiempos de espera se pueden establecer por reconocedor.
+**Nota** Los tiempos de espera se pueden establecer por reconocedor.
 
  
 
@@ -42,7 +40,9 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 
 
 * [Interacciones de voz](speech-interactions.md)
-**Muestras**
+            
+          
+            **Muestras**
 * [Muestra de reconocimiento de voz y síntesis de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -53,6 +53,6 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

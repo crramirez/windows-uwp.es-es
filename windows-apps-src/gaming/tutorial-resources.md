@@ -1,5 +1,6 @@
 ---
-title: Ampliar la muestra de juego
+author: mtoepke
+title: Extender la muestra de juego
 description: ¡Enhorabuena! Llegados a este punto, comprendes los componentes clave de un juego 3D DirectX de la Plataforma universal de Windows (UWP).
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
 keywords: ["DirectX, XAML"]
@@ -30,7 +31,7 @@ Entonces, ¿qué diferencia hay entre implementar una interfaz de usuario con Di
 
 Así se declara XAML para **SwapChainBackgroundPanel** en el archivo **Main.app.xaml**:
 
-```xaml
+```xml
 <Page
     x:Name="DXMainPage"
     x:Class="Simple3DGameXaml.MainPage"
@@ -863,7 +864,7 @@ void App::ResetGame()
 
 MainPage.xaml
 
-```xaml
+```xml
 <SwapChainBackgroundPanel
     x:Name="DXSwapChainPanel"
     x:Class="Simple3DGameXaml.MainPage"
@@ -1514,6 +1515,6 @@ Para descargar una versión del juego de muestra que usa XAML para la superposic
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

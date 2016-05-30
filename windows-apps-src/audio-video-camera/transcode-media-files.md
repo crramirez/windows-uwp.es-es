@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: A1A0D99A-DCBF-4A14-80B9-7106BEF045EC
 description: Puedes usar las API Windows.Media.Transcoding para transcodificar archivos de vídeo de un formato a otro.
 title: Transcodificar archivos multimedia
@@ -17,11 +18,11 @@ La *transcodificación* es la conversión de un archivo multimedia digital, como
 
 Además de los espacios de nombres que hacen referencia a la plantilla de proyecto de manera predeterminada, debes hacer referencia a estos espacios de nombres para transcodificar los archivos multimedia con el código de este artículo.
 
-[!code-cs[Usar](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetUsing)]
+[!code-cs[Uso](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetUsing)]
 
-## Selecciona los archivos de origen y de destino
+## Seleccionar los archivos de origen y de destino
 
-La forma en que la aplicación determina los archivos de origen y destino de la transcodificación depende de la implementación. Este ejemplo usa un [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) y un [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir al usuario seleccionar un origen y un archivo de destino.
+La forma en que la aplicación determina los archivos de origen y destino de la transcodificación depende de la implementación. En este ejemplo se usa una clase [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) y una clase [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir al usuario seleccionar un origen y un archivo de destino.
 
 [!code-cs[TranscodeGetFile](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetTranscodeGetFile)]
 
@@ -57,7 +58,7 @@ Para transcodificar el archivo, crea un nuevo objeto [**MediaTranscoder**](https
 
 ## Responder al progreso de la transcodificación
 
-Puedes registrar eventos para responder cuando el progreso de la transcodificación asincrónica [**TranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700946) cambie. Estos eventos forman parte del marco de programación asincrónica para aplicaciones de la plataforma universal de Windows (UWP) y no son específicos para la API de transcodificación.
+Puedes registrar eventos para responder cuando el progreso de la transcodificación asincrónica [**TranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700946) cambie. Estos eventos forman parte del marco de programación asincrónica para aplicaciones para la Plataforma universal de Windows (UWP) y no son específicos para la API de transcodificación.
 
 [!code-cs[TranscodeCallbacks](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetTranscodeCallbacks)]
 
@@ -70,6 +71,6 @@ Puedes registrar eventos para responder cuando el progreso de la transcodificaci
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

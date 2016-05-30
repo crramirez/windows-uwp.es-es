@@ -1,4 +1,5 @@
 ---
+author: QuinnRadich
 Description: Diseñar una interfaz de usuario informativa que enseñe a los usuarios cómo funciona la aplicación de la Tienda Windows.
 title: Directrices para diseñar una interfaz de usuario informativa
 label: Instructional UI
@@ -66,6 +67,6 @@ Aquí te mostramos algunos ejemplos en los que la interfaz de usuario informativ
 * [Directrices para la ayuda de la aplicación](guidelines-for-app-help.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

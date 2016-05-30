@@ -1,6 +1,7 @@
 ---
+author: drewbatgit
 ms.assetid: 09BA9250-A476-4803-910E-52F0A51704B1
-description: En este artículo se muestra cómo usar la interfaz IMediaEncodingProperties para establecer la resolución y la velocidad de fotogramas de la secuencia de vista previa de la cámara, así como de las fotos y los vídeos capturados.
+description: En este artículo se muestra cómo usar la interfaz IMediaEncodingProperties para establecer la resolución y la velocidad de fotogramas de la captura de vista previa de la cámara, así como de las fotos y los vídeos capturados.
 title: Establecer las propiedades de codificación multimedia
 ---
 
@@ -71,7 +72,7 @@ Una aplicación de cámara típica proporcionará la interfaz de usuario para el
 Es posible, en algunos dispositivos, establecer una relación de aspecto diferente para la secuencia de vista previa y la secuencia de captura de la cámara. El recorte de fotogramas que provoca este error de coincidencia puede dar como resultado contenido presente en los archivos multimedia capturados que no eran visibles en la vista previa, lo que puede provocar una experiencia de usuario negativa. Se recomienda encarecidamente usar la misma relación de aspecto, con un período de tolerancia reducido, para las secuencias de vista previa y captura. Se pueden tener resoluciones totalmente diferentes habilitadas para la captura y la vista previa, siempre que la relación de aspecto sea muy aproximada.
 
 
-Para garantizar que las secuencias de captura de foto o vídeo coincidan con la relación de aspecto de la secuencia de vista previa, este ejemplo llama a [**VideoDeviceController.GetMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211995) y pasa el valor de enumeración **VideoPreview** para solicitar las propiedades de secuencia actuales de la secuencia de vista previa. A continuación, se define un período de tolerancia de relación de aspecto reducido para que se puedan incluir relaciones de aspecto que no sean exactamente iguales que las de la secuencia de vista previa, siempre que sean aproximadas. A continuación, se usa un método de extensión Linq para seleccionar solo los objetos **StreamPropertiesHelper** donde la relación de aspecto se encuentra dentro del rango de tolerancia definido de la secuencia de vista previa.
+Para garantizar que las secuencias de captura de foto o vídeo coincidan con la relación de aspecto de la secuencia de vista previa, este ejemplo llama a [**VideoDeviceController.GetMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211995) y pasa el valor de enumeración **VideoPreview** para solicitar las propiedades de secuencia actuales de la secuencia de vista previa. A continuación, se define un período de tolerancia de relación de aspecto reducido para que se puedan incluir relaciones de aspecto que no sean exactamente iguales que las de la secuencia de vista previa, siempre que sean aproximadas. A continuación, se usa un método de extensión Linq para seleccionar solo los objetos **StreamPropertiesHelper** donde la relación de aspecto se encuentra dentro del intervalo de tolerancia definido de la secuencia de vista previa.
 
 [!code-cs[MatchPreviewAspectRatio](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetMatchPreviewAspectRatio)]
 
@@ -84,6 +85,6 @@ Para garantizar que las secuencias de captura de foto o vídeo coincidan con la 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

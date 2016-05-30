@@ -1,18 +1,15 @@
 ---
-Description: El propósito principal de cualquier aplicación es proporcionar acceso a contenido. En una aplicación de edición de fotos, la fotografía es el contenido; en una aplicación de viajes, los mapas y la información sobre los destinos de viajes son el contenido, y así sucesivamente.
+author: mijacobs
+Description: El propósito principal de cualquier aplicación es proporcionar acceso a contenido. En una aplicación de edición de fotos, la fotografía es el contenido; en una aplicación de viajes, los mapas y la información sobre los destinos de viaje son el contenido, y así sucesivamente.
 title: Conceptos básicos del diseño de contenido para aplicaciones para la Plataforma universal de Windows (UWP)
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
-label: Conceptos básicos del diseño de contenido
+label: Content design basics
 template: detail.hbs
 ---
 
 #  Conceptos básicos del diseño de contenido para las aplicaciones para UWP
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-El propósito principal de cualquier aplicación es proporcionar acceso a contenido: en una aplicación de edición de fotos, la foto es el contenido; en una aplicación de viajes, mapas e información acerca de los destinos de viajes es el contenido; y así sucesivamente. Los elementos de navegación proporcionan acceso a contenido; los elementos de comando permiten al usuario interactuar con el contenido; los elementos de contenido muestran el contenido real.
+El propósito principal de cualquier aplicación es proporcionar acceso a contenido: en una aplicación de edición de fotos, la fotografía es el contenido; en una aplicación de viajes, los mapas y la información acerca de los destinos de viaje son el contenido; y así sucesivamente. Los elementos de navegación proporcionan acceso a contenido; los elementos de comando permiten al usuario interactuar con el contenido; los elementos de contenido muestran el contenido real.
 
 Este artículo proporciona recomendaciones de diseño del contenido para los tres escenarios de contenido.
 
@@ -21,8 +18,8 @@ Este artículo proporciona recomendaciones de diseño del contenido para los tre
 
 Hay tres escenarios principales de contenido:
 
--   **Consumo**: una experiencia principalmente unidireccional donde se consume contenido. Incluye tareas como la lectura, escuchar música, ver vídeos y ver fotos e imágenes.
--   **Creación**: una experiencia principalmente unidireccional donde el foco está creando contenido nuevo. Puede dividirse en hacer las cosas desde cero, como tomar una foto o un vídeo, crear una nueva imagen en una aplicación de dibujo o abrir un documento nuevo.
+-   **Consumo**: una experiencia principalmente unidireccional en que se consume contenido. Incluye tareas como la lectura, escuchar música, ver vídeos y ver fotos e imágenes.
+-   **Creación**: una experiencia principalmente unidireccional en que el foco está en la creación de contenido. Puede dividirse en hacer las cosas desde cero, como tomar una foto o un vídeo, crear una nueva imagen en una aplicación de dibujo o abrir un documento nuevo.
 -   **Interactivo**: una experiencia de contenido bidireccional que incluye consumir, crear y revisar el contenido.
 
 ## <span id="Consumption-focused_apps"></span><span id="consumption-focused_apps"></span><span id="CONSUMPTION-FOCUSED_APPS"></span>Aplicaciones centradas en el consumo
@@ -49,7 +46,7 @@ Como ejemplo, se muestra un diseño para una aplicación de fotos que usa las ba
 Recomendaciones generales para las aplicaciones centradas en la creación:
 
 -   Minimizar el uso de elementos de [navegación](navigation-basics.md).
--   Los elementos [Comando](commanding-basics.md) son especialmente importantes en las aplicaciones centradas en la creación de elementos. Dado que los usuarios van a ejecutar una gran cantidad de comandos, te recomendamos que proporciones una funcionalidad de historial y de deshacer comandos.
+-   Los elementos de [comando](commanding-basics.md) son especialmente importantes en las aplicaciones centradas en la creación de elementos. Dado que los usuarios van a ejecutar una gran cantidad de comandos, te recomendamos que proporciones una funcionalidad de historial y de deshacer comandos.
 
 ## <span id="Apps_with_interactive_content"></span><span id="apps_with_interactive_content"></span><span id="APPS_WITH_INTERACTIVE_CONTENT"></span>Aplicaciones con contenido interactivo
 
@@ -60,8 +57,8 @@ En una aplicación con contenido interactivo, los usuarios crean, muestran y edi
 
 Ese tipo de aplicaciones deben equilibrar los tres elementos de interfaz de usuario:
 
--   Los elementos [Navegación](navigation-basics.md) ayudan a los usuarios a buscar y ver contenido. Si ver y buscar contenido es el escenario más importante, da prioridad a los elementos de navegación, filtrado, ordenación y búsqueda.
--   Los elementos [Comando](commanding-basics.md) permiten al usuario crear, editar y manipular el contenido.
+-   Los elementos de [navegación](navigation-basics.md) ayudan a los usuarios a buscar y ver contenido. Si ver y buscar contenido es el escenario más importante, da prioridad a los elementos de navegación, filtrado, ordenación y búsqueda.
+-   [Los elementos de comando](commanding-basics.md) permiten al usuario crear, editar y manipular el contenido.
 
 Recomendaciones generales para las aplicaciones con contenido interactivo:
 
@@ -88,41 +85,39 @@ A continuación se facilitan algunos elementos de interfaz de usuario usados fre
 <tbody>
 <tr class="odd">
 <td align="left">Audio y vídeo</td>
-<td align="left">[Media playback and transport controls](../controls-and-patterns/media-playback.md)</td>
+<td align="left">[Controles de transporte y reproducción de contenido multimedia](../controls-and-patterns/media-playback.md)</td>
 <td align="left">Reproduce audio y vídeo.</td>
 </tr>
 <tr class="even">
 <td align="left">Visores de imágenes</td>
-<td align="left">[Flip view](../controls-and-patterns/flipview.md), [image](../controls-and-patterns/images-imagebrushes.md)</td>
-<td align="left">Muestra imágenes. El control de invertir vista muestra una a una las imágenes de una colección, como las fotos de un álbum o los elementos de una página de detalles de un producto.</td>
+<td align="left">[Vista de volteo](../controls-and-patterns/flipview.md), [imagen](../controls-and-patterns/images-imagebrushes.md)</td>
+<td align="left">Muestra imágenes. El control de vista de volteo muestra una a una las imágenes de una colección, como las fotos de un álbum o los elementos de una página de detalles de un producto.</td>
 </tr>
 <tr class="odd">
 <td align="left">Listas</td>
-<td align="left">[drop-down list, list box, list view and grid view](../controls-and-patterns/lists.md)</td>
-<td align="left">Presenta los elementos en una lista interactiva o una cuadrícula. Usa estos elementos para permitir a los usuarios seleccionar una película de una lista de nuevas versiones o administrar un inventario.</td>
+<td align="left">[lista desplegable, cuadro de lista, vista de lista y vista de cuadrícula](../controls-and-patterns/lists.md)</td>
+<td align="left">Presenta los elementos en una lista interactiva o una cuadrícula. Usa estos elementos para permitir a los usuarios seleccionar una película de una lista de nuevos lanzamientos o administrar un inventario.</td>
 </tr>
 <tr class="even">
 <td align="left">Texto y entrada de texto</td>
-<td align="left"><p>[Text block](../controls-and-patterns/text-block.md), [text box](../controls-and-patterns/text-box.md), [rich edit box](../controls-and-patterns/rich-edit-box.md)</p>
+<td align="left"><p>[Bloque de texto](../controls-and-patterns/text-block.md), [cuadro de texto](../controls-and-patterns/text-box.md), [cuadro de edición enriquecido](../controls-and-patterns/rich-edit-box.md)</p>
 </td>
-<td align="left">Muestra texto. Algunos elementos permiten al usuario editar texto. Para obtener más información, consulta [Text controls](../controls-and-patterns/text-controls.md)</td>
+<td align="left">Muestra texto. Algunos elementos permiten al usuario editar texto. Para obtener más información, consulta [Controles de texto](../controls-and-patterns/text-controls.md)</td>
 </tr>
 </tbody>
 </table>
 
- 
 
-\[En este artículo se incluye información específica para aplicaciones de la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
-
- 
 
  
 
+ 
 
 
 
 
 
-<!--HONumber=Mar16_HO1-->
+
+<!--HONumber=May16_HO2-->
 
 

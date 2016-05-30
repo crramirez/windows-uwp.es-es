@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Puedes promocionar tu aplicación de manera cruzada con las aplicaciones publicadas por otros desarrolladores. Esta función se denomina anuncios de la comunidad.
 title: Acerca de los anuncios de la comunidad
 ms.assetid: F55CE478-99AF-4B70-90D1-D16419562136
@@ -21,11 +22,11 @@ Así es cómo funciona este programa:
 
 Para participar en anuncios de la comunidad:
 
-1. Ve a la página **Monetización** & gt; **Monetizar con anuncios** en el panel del Centro de desarrollo de Windows.
+1. Ve a la página **Monetización**&gt;**Monetizar con anuncios** del panel del Centro de desarrollo de Windows.
 2. En la sección **Community ads**, activa la casilla **Show community ads in my app**.
-   > **Nota**: Después de activar o desactivar esta casilla, no es necesario volver a publicar tu aplicación para que los cambios surtan efecto.
+   > **Nota**: Después de activar o desactivar esta casilla, no es necesario volver a publicar tu aplicación para que se apliquen los cambios.
 
-3. [Crear una campaña publicitaria](create-an-ad-campaign-for-your-app.md) para tu aplicación. Para el tipo de campaña, selecciona **Free community ads**.
+3. [Crear una campaña publicitaria](create-an-ad-campaign-for-your-app.md) para la aplicación. Para el tipo de campaña, selecciona **Free community ads**.
 
 
 ## Temas relacionados
@@ -34,6 +35,6 @@ Para participar en anuncios de la comunidad:
 * [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

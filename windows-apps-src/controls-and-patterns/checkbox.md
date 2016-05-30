@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Se usa para seleccionar o anular la selección de elementos de acción. Se puede usar para un solo elemento de lista o varios elementos de lista.
 title: Casillas
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
@@ -70,7 +71,7 @@ Usa la propiedad [**IsChecked**](https://msdn.microsoft.com/library/windows/apps
 
 En este ejemplo, la propiedad de la casilla **IsChecked** para aceptar los términos de servicio está enlazada a la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isenabled.aspx) de un botón Enviar. El botón Enviar se habilita únicamente si se han aceptado los términos del servicio.
 
-> Nota&nbsp;&nbsp;Solo aquí se muestra el código relevante. Para obtener más información sobre los convertidores de valores y de enlaces de datos, consulta el tema [Introducción al enlace de datos](../data-binding/data-binding-quickstart.md).
+> Nota&nbsp;&nbsp;Aquí solo mostramos el código relevante. Para obtener más información sobre los convertidores de valores y de enlaces de datos, consulta el tema [Introducción al enlace de datos](../data-binding/data-binding-quickstart.md).
 
 ```xaml
 ...
@@ -287,6 +288,6 @@ private void SetCheckedState()
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

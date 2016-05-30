@@ -1,6 +1,7 @@
 ---
+author: mtoepke
 title: Gráficos 3D básicos para juegos DirectX
-description: Te vamos a enseñar cómo usar la programación DirectX para implementar los conceptos fundamentales de los gráficos 3D.
+description: Se muestra cómo usar la programación DirectX para implementar los conceptos fundamentales de los gráficos 3D.
 ms.assetid: 2989c91f-7b45-7377-4e83-9daa0325e92e
 ---
 
@@ -25,7 +26,7 @@ Suponemos que estás familiarizado con C++. También necesitas tener experiencia
 
 Vamos a explicar cómo desarrollar gráficos 3D con DirectX y C++\\Cx. En este tutorial compuesto por cinco partes se presenta la API de [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466), además de conceptos y códigos que también se usan en muchas otras muestras de DirectX. Estas partes se estructuran entre sí, desde la configuración de DirectX de una aplicación para UWP con C++ hasta las texturas de primitivos y adición de efectos.
 
-> **Nota**  En este tutorial se usa un sistema de coordenadas a la derecha con vectores de columna. Muchas aplicaciones y muestras de DirectX usan un sistema de coordenadas a la izquierda con vectores de fila. Si quieres una solución matemática de gráficos completa que admita un sistema de coordenadas a la izquierda con vectores de fila, piensa en usar [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833). Para más información, consulta [Usar DirectXMath con Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).
+> **Nota**  En este tutorial se usa un sistema de coordenadas de mano derecha con vectores de columna. Muchas aplicaciones y muestras de DirectX usan un sistema de coordenadas a la izquierda con vectores de fila. Si quieres una solución matemática de gráficos completa que admita un sistema de coordenadas a la izquierda con vectores de fila, piensa en usar [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833). Para más información, consulta [Usar DirectXMath con Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).
 
  
 
@@ -62,6 +63,6 @@ A continuación, creamos un dispositivo Direct3D, una cadena de intercambio y un
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

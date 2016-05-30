@@ -1,6 +1,7 @@
 ---
-title: Tutorial: Portar una aplicación de Direct3D 9 sencilla a DirectX 11 y la Plataforma universal de Windows (UWP)
-description: Este ejercicio de migración muestra cómo traer un marco de representación sencillo desde Direct3D 9 a Direct3D 11 y la Plataforma universal de Windows (UWP).
+author: mtoepke
+title: Tutorial: Portar una aplicación de Direct3D 9 sencilla a DirectX 11 y la Plataforma universal de Windows (UWP)
+description: Este ejercicio de migración muestra cómo traer un marco de representación sencillo de Direct3D 9 a Direct3D 11 y la Plataforma universal de Windows (UWP).
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 ---
 
@@ -9,7 +10,7 @@ ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este ejercicio de migración muestra cómo traer un marco de representación sencillo desde Direct3D 9 a Direct3D 11 y la Plataforma universal de Windows (UWP).
+Este ejercicio de migración muestra cómo traer un marco de representación sencillo de Direct3D 9 a Direct3D 11 y la Plataforma universal de Windows (UWP).
 ## 
 <table>
 <colgroup>
@@ -19,21 +20,21 @@ Este ejercicio de migración muestra cómo traer un marco de representación sen
 <thead>
 <tr class="header">
 <th align="left">Tema</th>
-<th align="left">Description</th>
+<th align="left">Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Initialize Direct3D 11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)</p></td>
+<td align="left"><p>[Inicializar Direct3D 11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)</p></td>
 <td align="left"><p>Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a obtener identificadores para el dispositivo Direct3D y el contexto de dispositivo, y a usar DXGI para configurar una cadena de intercambio.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Convert the rendering framework](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)</p></td>
-<td align="left"><p>Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11.</p></td>
+<td align="left"><p>[Convertir el marco de representación](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)</p></td>
+<td align="left"><p>Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones, como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Port the game loop](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)</p></td>
-<td align="left"><p>Muestra cómo implementar una ventana para un juego UWP y cómo traer el bucle del juego, lo que incluye cómo crear un [<strong>IFrameworkView</strong>](https://msdn.microsoft.com/library/windows/apps/hh700478) para controlar una pantalla completa [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/apps/br208225).</p></td>
+<td align="left"><p>[Migrar el bucle del juego](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)</p></td>
+<td align="left"><p>Muestra cómo implementar una ventana para un juego de UWP y cómo traer el bucle del juego, lo que incluye cómo crear una interfaz [<strong>IFrameworkView</strong>](https://msdn.microsoft.com/library/windows/apps/hh700478) para controlar una clase [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/apps/br208225) de pantalla completa.</p></td>
 </tr>
 </tbody>
 </table>
@@ -68,12 +69,18 @@ Consulta [Conceptos y consideraciones de migración](porting-considerations.md) 
 
 
 **Direct3D**
-[Escribir sombreadores HLSL in Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+            
+          
+            [Escribir sombreadores HLSL en Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
 
 [Crear un nuevo proyecto de DirectX 11 para UWP](user-interface.md)
 
 **Tienda Windows**
-[**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
+            
+          
+            [
+              **Microsoft::WRL::ComPtr**
+            ](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
 
 [**Identificador de objeto operador (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx
 
@@ -86,6 +93,6 @@ Consulta [Conceptos y consideraciones de migración](porting-considerations.md) 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

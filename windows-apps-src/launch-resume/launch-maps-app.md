@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Iniciar la aplicación Mapas de Windows
 description: Aprende a iniciar la aplicación Mapas de Windows desde la aplicación.
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
@@ -12,7 +13,7 @@ ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
 
 Aprende a iniciar la aplicación Mapas de Windows desde la aplicación. En este tema se describen los esquemas de identificador uniforme de recursos (URI) **bingmaps:**, **ms-drive-to:**, **ms-walk-to:** y *ms-settings:*. Usa estos esquemas de URI para iniciar la aplicación Mapas de Windows para especificar mapas, indicaciones y resultados de búsqueda o para descargar mapas sin conexión de Mapas de Windows desde la aplicación Configuración.
 
-**Sugerencia** Para obtener más información sobre cómo iniciar la aplicación Mapas de Windows desde tu aplicación, descarga la [muestra de mapas de la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) desde el [Windows-universal-samples repo (Repositorio de muestras universales de Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub.
+**Sugerencia** Para obtener más información sobre cómo iniciar la aplicación Mapas de Windows desde tu aplicación, descarga la [muestra de mapas de la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) de [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) (Repositorio de muestras universales de Windows) en GitHub.
 
 ## Introducción a los URI
 
@@ -285,7 +286,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <td align="left"><p>ss = "ss=" BIT</p>
 <p>Ejemplo:</p>
 <p>ss=1</p></td>
-<td align="left"><p>Indica que se muestran las imágenes de nivel de calle cuando <code>ss=1</code>. Si se omite el parámetro **ss**, se obtiene el mismo resultado que <code>ss=0</code>. Usar conjuntamente con el parámetro **cp** para especificar la ubicación de la vista de nivel de calle.</p>
+<td align="left"><p>Indica que se muestran las imágenes de nivel de calle cuando <code>ss=1</code>. Si se omite el parámetro **ss**, se obtiene el mismo resultado que <code>ss=0</code>. Se usa conjuntamente con el parámetro **cp** para especificar la ubicación de la vista de nivel de calle.</p>
 <div class="alert">
 > **Nota**  Las imágenes en el nivel de calle no están disponibles en todas las regiones.
 </div>
@@ -368,7 +369,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <p>collection=name.My%20Trip%20Stops~point.36.116584_-115.176753_Las%20Vegas~point.37.8268_-122.4798_Golden%20Gate%20Bridge</p></td>
 <td align="left"><p>Colección de puntos que se deben agregar a la lista y al mapa. La colección de puntos se puede denominar con el parámetro de nombre. Un punto se especifica mediante una latitud, una longitud y un título opcional.</p>
 <p>Separa el nombre y los diferentes puntos con tildes (**~**).</p>
-<p>Si el elemento especificado contiene una tilde de la ñ, asegúrate de que se codifica como <code>%7E</code>. Si no va acompañada de los parámetros de punto central y de nivel de Zoom, la colección proporcionará la mejor vista de mapa.</p>
+<p>Si el elemento especificado contiene una tilde de la ñ, asegúrate de que se codifique como <code>%7E</code>. Si no va acompañada de los parámetros de punto central y de nivel de Zoom, la colección proporcionará la mejor vista de mapa.</p>
 
 <p>**Importante** Si el elemento especificado contiene un carácter de subrayado, asegúrate de que el carácter de subrayado presente una codificación doble como %255F.</p>
 
@@ -415,7 +416,7 @@ El Uri para iniciar una solicitud de indicaciones para ir a pie paso a paso no n
 ## ms-settings: referencia del parámetro
 
 
-La sintaxis de los parámetros específicos de la aplicación Mapas para el esquema de URI **ms-settings:** se define a continuación. **maps-downloadmaps** se especifica junto con el URI **ms-settings:** en forma de **ms-settings:maps-downloadmaps?** para indicar la página Configuración de mapas sin conexión.
+La sintaxis de los parámetros específicos de la aplicación Mapas para el esquema de URI **ms-settings:** se define a continuación. **maps-downloadmaps** se especifica junto con el URI **ms-settings:** en forma de **ms-settings:maps-downloadmaps?** para indicar la página de configuración de mapas sin conexión.
 
  
 
@@ -427,6 +428,6 @@ La sintaxis de los parámetros específicos de la aplicación Mapas para el esqu
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

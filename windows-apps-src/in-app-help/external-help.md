@@ -1,4 +1,5 @@
 ---
+author: QuinnRadich
 Description: Diseña páginas de ayuda externa para ofrecer instrucciones detalladas y asesoramiento sobre la aplicación.
 title: Directrices para diseñar páginas de ayuda externa
 label: External help
@@ -25,7 +26,7 @@ Cuando un usuario se dirige a una página de ayuda externa, sigue uno de los dos
 
 Proporcionar a los usuarios una manera de buscar la ayuda puede ser útil, pero no hagas que esta búsqueda sea la única manera de navegar por la ayuda. A veces, puede resultar difícil para los usuarios describir sus problemas, lo que puede dificultar la búsqueda. Los usuarios deben poder encontrar rápidamente páginas adecuadas para sus problemas sin necesidad de buscar.
 
-## <span id="tutorials_and_detailed_walkthroughs"></span><span id="TUTORIALS_AND_DETAILED_WALKTHROUGHS"></span>Tutoriales y guías muy detalladas
+## <span id="tutorials_and_detailed_walkthroughs"></span><span id="TUTORIALS_AND_DETAILED_WALKTHROUGHS"></span>Tutoriales y guías detalladas
 
 Las páginas de ayuda externa son el lugar ideal para proporcionar a los usuarios tutoriales y guías, tanto de vídeo o como de texto.
 -   Los tutoriales deberían centrarse en las ideas más complicadas y las funciones avanzadas. Los usuarios no deberían necesitar un tutorial para usar la aplicación.
@@ -37,6 +38,6 @@ Las páginas de ayuda externa son el lugar ideal para proporcionar a los usuario
 * [Directrices para la ayuda de la aplicación](guidelines-for-app-help.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

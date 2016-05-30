@@ -1,10 +1,11 @@
 ---
-Description: Descubre cómo se ponen los paquetes de la aplicación a disposición de los clientes y cómo se administran escenarios específicos de paquetes.
-title: Instrucciones para administrar paquetes de la aplicación
+author: jnHs
+Description: Descubre cómo se ponen los paquetes de la aplicación a disposición de los clientes y cómo se administran escenarios de paquetes específicos.
+title: Orientación para administrar paquetes de la aplicación
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
 ---
 
-# Instrucciones para administrar paquetes de la aplicación
+# Orientación para administrar paquetes de la aplicación
 
 
 Descubre cómo se ponen los paquetes de la aplicación a disposición de los clientes y cómo se administran escenarios de paquetes específicos.
@@ -72,17 +73,17 @@ En el ejemplo de aplicación 4, cualquier dispositivo que ejecute Windows 10 pue
 
 Si tienes una aplicación en la Tienda y quieres actualizarla para Windows 10, crea un nuevo envío y agrega los paquetes .appxupload para UWP en el paso [Paquetes](upload-app-packages.md). Después de que la aplicación pase por el proceso de certificación, los clientes que ya tenían tu aplicación antes de actualizar a Windows 10 podrán obtener el paquete para UWP como una actualización de la Tienda. El paquete para UWP también estará disponible en las adquisiciones nuevas para los clientes de Windows 10.
 
-> **Importante:** Cuando un cliente de Windows 10 obtenga el paquete para UWP, no podrás revertirlo para que use un paquete para una versión anterior del sistema operativo. Asegúrate de que has probado exhaustivamente los paquetes para UWP en Windows 10 antes de agregarlos para su envío.
+> **Importante**  Cuando un cliente de Windows 10 obtenga el paquete para UWP, no podrás revertirlo para que use un paquete para una versión de un sistema operativo anterior. Asegúrate de que has probado exhaustivamente los paquetes para UWP en Windows 10 antes de agregarlos para su envío.
 
 Puedes actualizar cualquiera de los demás paquetes al mismo tiempo o realizar otros cambios en el envío (por ejemplo, tal vez quieras [crear descripciones específicas para plataformas](create-platform-specific-descriptions.md) que se mostrarán a los clientes con versiones anteriores del sistema operativo). También puedes dejar todo lo demás exactamente igual, si lo prefieres.
 
-> **Nota:** El número de versión de los paquetes de Windows 10 siempre debe ser mayor que los números de versión de los paquetes de Windows 8, Windows 8.1 o Windows Phone 8.1 que publiques (o paquetes que hayas publicado) para la misma aplicación. Para más información sobre los números de versión en Windows 10, consulta [Numeración de la versión del paquete](package-version-numbering.md).
+> **Nota**  El número de versión de los paquetes de Windows 10 siempre debe ser mayor que los números de versión de los paquetes de Windows 8, Windows 8.1 o Windows Phone 8.1 que publiques (o paquetes para versiones de esos sistemas operativos que hayas publicado anteriormente) para la misma aplicación. Para más información sobre los números de versión en Windows 10, consulta [Numeración de la versión del paquete](package-version-numbering.md).
 
 Cuando el nuevo envío complete el proceso de certificación, los paquetes para UWP estarán disponibles, junto con cualquier otro paquete que hayas puesto a disposición de los clientes que aún no cuentan con Windows 10.
 
 Para más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar aplicaciones universales de Windows para Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=620193 ).
 
-> **Importante:** Ten en cuenta que si proporcionas paquetes destinados a la familia de dispositivos universal, todos los clientes que ya tuvieran tu aplicación en un sistema operativo anterior (Windows Phone 8, Windows 8.1, etc.) y que luego se actualicen a Windows 10 se actualizarán al paquete universal de Windows 10.
+> **Importante**  Ten en cuenta que si proporcionas paquetes destinados a la familia de dispositivos universal, todos los clientes que ya tuvieran tu aplicación en un sistema operativo anterior (Windows Phone 8, Windows 8.1, etc.) y que luego se actualicen a Windows 10 se actualizarán al paquete universal de Windows 10.
 > 
 > Esto sucederá aunque hayas excluido una familia de dispositivos específica en el paso [Precios y disponibilidad](set-app-pricing-and-availability.md#windows-10-device-families) del envío, dado que la selección **Familias de dispositivos** solo se aplica a las nuevas adquisiciones. Si no quieres que todos los clientes anteriores obtengan el nuevo paquete de Windows 10, asegúrate de actualizar el elemento [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) del manifiesto appx para incluir solo la familia de dispositivos concreta que quieras admitir.
 > 
@@ -107,13 +108,13 @@ Si no se siguen estas reglas se producirán errores al cargar el paquete, lo que
 
 En ocasiones, es posible que quieras dejar de ofrecer definitivamente una aplicación a los clientes, es decir, "cancelar su publicación". Para ello, haz clic en **Make app unavailable** en la página de información general de la aplicación. Después de confirmar que quieres que la aplicación deje de estar disponible, en el plazo de unas horas dejará de estar visible en la Tienda y ningún cliente nuevo podrá acceder a ella de ninguna manera, ni siquiera con códigos promocionales.
 
-> **Importante:** Esta acción reemplazará cualquier configuración de [distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility) que tengas seleccionada en los envíos.
+> **Importante**  Esta acción reemplazará cualquier configuración de [distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility) que tengas seleccionada en los envíos.
 
 Ten en cuenta que los clientes que ya tengan la aplicación podrán seguir usándola (y podrían incluso recibir actualizaciones si envías nuevos paquetes más adelante).
 
 Después de hacer que la aplicación deje de estar disponible, la seguirás viendo en el panel. Si decides volver a ofrecer la aplicación a los clientes, puedes hacer clic en **Make app available** en la página de información general de la aplicación. Después de confirmar la acción, la aplicación estará disponible para los nuevos clientes (a menos que la configuración de tu último envío lo impida) en cuestión de horas.
 
-> **Nota:** Si quieres que tu aplicación siga estando disponible, pero no quieres seguir ofreciéndola a los clientes con una versión de sistema operativo determinada, puedes crear un nuevo envío y quitar todos los paquetes de la versión de sistema operativo para la que quieres impedir nuevas compras. Por ejemplo, si anteriormente tenías paquetes para Windows Phone 8, Windows Phone 8.1 y Windows 10, y no quieres seguir ofreciendo la aplicación a los clientes nuevos de Windows Phone 8, quita los paquetes de Windows Phone 8 del envío. Después de que se publique la actualización, los clientes nuevos de Windows Phone 8 no podrán comprar la aplicación (aunque los clientes que ya la tengan podrán seguir usándola). La aplicación seguirá disponible para los clientes nuevos de Windows Phone 8.1 y Windows 10.
+> **Nota**  Si quieres que tu aplicación siga estando disponible, pero no quieres seguir ofreciéndola a los clientes con una versión de sistema operativo determinada, puedes crear un nuevo envío y quitar todos los paquetes de la versión de sistema operativo para la que quieres impedir nuevas compras. Por ejemplo, si anteriormente tenías paquetes para Windows Phone 8, Windows Phone 8.1 y Windows 10, y no quieres seguir ofreciendo la aplicación a los clientes nuevos de Windows Phone 8, quita los paquetes de Windows Phone 8 del envío. Después de que se publique la actualización, los clientes nuevos de Windows Phone 8 no podrán comprar la aplicación (aunque los clientes que ya la tengan podrán seguir usándola). La aplicación seguirá disponible para los clientes nuevos de Windows Phone 8.1 y Windows 10.
 
 ## Quitar paquetes de una familia de dispositivos anteriormente compatibles
 
@@ -133,6 +134,6 @@ Ten en cuenta que aunque quites todos los paquetes que admitan una determinada f
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

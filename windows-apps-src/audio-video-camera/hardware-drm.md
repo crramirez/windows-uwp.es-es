@@ -1,4 +1,5 @@
 ---
+author: eliotcowley
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
 description: En este tema se ofrece una descripción general sobre cómo agregar la administración de derechos digitales (DRM) basada en hardware de PlayReady a una aplicación para la Plataforma universal de Windows (UWP).
 title: DRM de hardware
@@ -11,7 +12,7 @@ title: DRM de hardware
 
 En este tema se ofrece una descripción general sobre cómo agregar la administración de derechos digitales (DRM) basada en hardware de PlayReady a una aplicación para la Plataforma universal de Windows (UWP).
 
-**Nota:** DRM basado en hardware solo es compatible con hardware determinado con una versión de firmware de Windows 10. Consulta las [reglas de solidez y cumplimiento de PlayReady](http://www.microsoft.com/playready/licensing/compliance/) para obtener más información sobre las garantías proporcionadas.
+**Nota**  DRM basado en hardware solo es compatible con hardware determinado con una versión de firmware de Windows 10. Consulta las [reglas de solidez y cumplimiento de PlayReady](http://www.microsoft.com/playready/licensing/compliance/) para obtener más información sobre las garantías proporcionadas.
 
 Cada vez más proveedores de contenido están avanzando hacia protecciones basadas en hardware para conceder permiso para reproducir contenido completo de alto valor en las aplicaciones. Para cubrir esta necesidad, se ha agregado a PlayReady una compatibilidad sólida con la implementación de hardware del cifrado principal. Esta compatibilidad permite la reproducción segura de alta definición (1080p) y altísima definición (UHD) de contenido en varias plataformas de dispositivos. Se protege el material de clave (incluyendo claves privadas, claves de contenido y cualquier otro material de clave que se use para derivar o desbloquear dichas claves), así como muestras de vídeo descifradas comprimidas y descomprimidas mediante el aprovechamiento de la seguridad de hardware.
 
@@ -53,21 +54,21 @@ De manera predeterminada, se usa DRM de hardware si el sistema lo admite. Sin em
 
 El siguiente ejemplo muestra cómo desactivar DRM de hardware. Solo necesitas hacer esto antes de cambiar. Además, asegúrate de no disponer de ningún objeto PlayReady en la memoria; de lo contrario, el comportamiento será indefinido.
 
-``` syntax
+```js
 var applicationData = Windows.Storage.ApplicationData.current;
-var localSettings = applicationData.localSettings.createContainer(“PlayReady”, Windows.Storage.ApplicationDataCreateDisposition.always);
-localSettings.values[“SoftwareOverride”] = 1;
+var localSettings = applicationData.localSettings.createContainer("PlayReady", Windows.Storage.ApplicationDataCreateDisposition.always);
+localSettings.values["SoftwareOverride"] = 1;
 ```
 
 Para volver a DRM de hardware, establece el valor **SoftwareOverride** en **0**.
 
 Para cada reproducción multimedia, debes establecer **MediaProtectionManager** en:
 
-``` syntax
-mediaProtectionManager.properties[“Windows.Media.Protection.UseSoftwareProtectionLayer”] = true;
+```js
+mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectionLayer"] = true;
 ```
 
-La mejor manera de saber si estás en DRM de hardware o de software es echar un vistazo a C:\\Usuarios\\&lt;nombreusuario&gt;\\AppData\\Local\\Packages\\&lt;nombre de la aplicación&gt;\\LocalState\\PlayReady\\\*
+La mejor manera de saber si estás en DRM de hardware o de software es echar un vistazo a C:\\Users\\&lt;nombre de usuario&gt;\\AppData\\Local\\Packages\\&lt;nombre de la aplicación&gt;\\LocalState\\PlayReady\\\*
 
 -   Si hay un archivo mspr.hds, significa que te encuentras en DRM de software.
 -   Si tienes otro archivo \*.hds, significa que te encuentras en DRM de hardware.
@@ -79,7 +80,7 @@ En esta sección se describe cómo detectar qué tipo de DRM de hardware se admi
 
 Puedes usar el método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441) para determinar si el sistema admite una característica específica de administración de derechos digitales (DRM) de hardware. Por ejemplo:
 
-``` syntax
+```cpp
 boolean PlayReadyStatics->CheckSupportedHardware(PlayReadyHardwareDRMFeatures enum);
 ```
 
@@ -89,6 +90,6 @@ También puedes usar la propiedad [**PlayReadyStatics.PlayReadyCertificateSecuri
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

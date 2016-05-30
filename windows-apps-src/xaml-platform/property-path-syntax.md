@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Puedes usar la clase PropertyPath y la sintaxis de cadena para crear una instancia de un valor PropertyPath en XAML o en código.
 title: Sintaxis de Property-path
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
@@ -46,7 +47,7 @@ Una ruta de acceso de propiedades para el enlace de datos puede incluir referenc
 
 Por ejemplo, imagina que tienes un objeto empresarial en el que hay una lista denominada "Teams" (lista ordenada) en la cual, cada equipo consta de un diccionario denominado "Players" donde se puede encontrar a cada integrante según su apellido. Un ejemplo de ruta de acceso de propiedades a un integrante específico del segundo equipo sería: "Teams\[1\].Players\[Smith\]". (Debes usar 1 para indicar el segundo elemento en "Teams" porque la lista tiene un índice de cero).
 
-**Nota** La compatibilidad con la indexación de los orígenes de datos de C++ es limitada; para obtener más información, consulta [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Nota** La compatibilidad con la indexación de los orígenes de datos de C++ es limitada; consulta [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 ### Propiedades adjuntas
 
@@ -99,7 +100,9 @@ La clase [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br24
 
 La mayor parte de las veces, puedes aplicar una clase [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) en XAML sin tener usar ningún código en absoluto. Pero en algunos casos, deberás definir un objeto **PropertyPath** mediante código y asignarlo a una propiedad en tiempo de ejecución.
 
-[**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) tiene un constructor [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261), pero no tiene un constructor predeterminado. La cadena que pases a ese constructor deberá ser una cadena definida mediante la sintaxis de ruta de acceso de propiedades, tal como ya hemos explicado. Además, es también la misma cadena que usarías para asignar [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) como atributo XAML. Ten en cuenta que la única API de la clase **PropertyPath** es la propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260), la cual es de solo lectura. Puedes usar esta propiedad como la cadena de construcción de otra instancia **PropertyPath**.
+[
+              **PropertyPath**
+            ](https://msdn.microsoft.com/library/windows/apps/br244259) tiene un constructor [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261), pero no tiene un constructor predeterminado. La cadena que pases a ese constructor deberá ser una cadena definida mediante la sintaxis de ruta de acceso de propiedades, tal como ya hemos explicado. Además, es también la misma cadena que usarías para asignar [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) como atributo XAML. Ten en cuenta que la única API de la clase **PropertyPath** es la propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260), la cual es de solo lectura. Puedes usar esta propiedad como la cadena de construcción de otra instancia **PropertyPath**.
 
 ## Temas relacionados
 
@@ -113,6 +116,6 @@ La mayor parte de las veces, puedes aplicar una clase [**PropertyPath**](https:/
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

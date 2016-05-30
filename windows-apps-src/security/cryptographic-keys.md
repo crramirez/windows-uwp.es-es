@@ -71,6 +71,6 @@ Suele ser necesario derivar claves adicionales de un secreto compartido. Para de
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

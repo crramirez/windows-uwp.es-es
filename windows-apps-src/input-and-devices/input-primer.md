@@ -1,15 +1,13 @@
 ---
-Description: Las interacciones del usuario en la Plataforma universal de Windows (UWP) son una combinación de orígenes de entrada y salida (tales como mouse, teclado, lápiz, función táctil, panel táctil, voz, Cortana, controlador, gestos, miradas, etc.), junto con diversos modos o modificadores que permiten experiencias ampliadas (incluidos la rueda y los botones del mouse, los botones de borrador de lápiz y de menú contextual, el teclado táctil y los servicios de aplicaciones de segundo plano).
+author: Karl-Bridge-Microsoft
+Description: Las interacciones del usuario en la Plataforma universal de Windows (UWP) son una combinación de orígenes de entrada y salida (tales como mouse, teclado, lápiz, función táctil, panel táctil, voz, Cortana, controlador, gestos, miradas, etc.), junto con diversos modos o modificadores, que permiten experiencias ampliadas (incluidos la rueda y los botones del mouse, los botones de borrador de lápiz y de menú contextual, el teclado táctil y los servicios de aplicaciones de segundo plano).
 title: Información básica sobre interacción
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
-label: Información básica sobre interacción
+label: Interaction primer
 template: detail.hbs
 ---
 
 # Información básica sobre interacción
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ![Tipos de entrada de Windows](images/input-interactions/icons-inputdevices03.png)
@@ -36,13 +34,11 @@ Compatibilidad con dispositivos
 
 ![Cortana](images/input-interactions/icons-cortana01.png)
 
-Uso típico
-Un comando de voz es una expresión única, definida en un archivo de definición de comando de voz (VCD), dirigida a una aplicación instalada a través de **Cortana**. Se puede iniciar la aplicación en primer o en segundo plano, según el nivel y la complejidad de la interacción. Por ejemplo, los comandos de voz que requieren más contexto o la entrada del usuario se administran mejor en primer plano, mientras que los comandos básicos se pueden controlar en segundo plano.
+Uso típico Un comando de voz es una expresión única, definida en un archivo de definición de comando de voz (VCD), dirigida a una aplicación instalada a través de **Cortana**. Se puede iniciar la aplicación en primer o en segundo plano, según el nivel y la complejidad de la interacción. Por ejemplo, los comandos de voz que requieren más contexto o la entrada del usuario se administran mejor en primer plano, mientras que los comandos básicos se pueden controlar en segundo plano.
 
 Al integrar la funcionalidad básica de tu aplicación y ofrecer un punto de entrada central para que el usuario realice la mayoría de las tareas sin tener que abrir la aplicación directamente, se permite que **Cortana** se convierta en un enlace entre tu aplicación y el usuario. En muchos casos, esto puede ahorrarle al usuario mucho tiempo y esfuerzo. Para obtener más información, consulta las [Directrices para el diseño de Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233).
 
-Más información
-[Directrices para el diseño de Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233)
+Más información en las [Directrices para el diseño de Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233).
  
 
 ## <span id="Speech"></span><span id="speech"></span><span id="SPEECH"></span>Voz
@@ -86,8 +82,7 @@ El método de entrada de voz más básico. Cada expresión se convierte en texto
 
 La función de dictado normalmente se usa cuando una aplicación no necesita comprender el significado o la intención.
 
-Más información
-[Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+Más información sobre [Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121).
  
 
 ## <span id="Pen"></span><span id="pen"></span><span id="PEN"></span>Lápiz
@@ -112,15 +107,13 @@ Compatibilidad con dispositivos
 
 ![Lápiz](images/input-interactions/icons-pen01.png)
 
-Uso típico
-La plataforma de entrada de lápiz de Windows, junto con un lápiz, ofrece una forma natural de crear notas, dibujos y anotaciones manuscritas. La plataforma admite la captura de datos de entrada de lápiz desde la entrada del digitalizador, la generación de datos de entrada de lápiz, la representación de los datos como trazos de lápiz en el dispositivo de salida, la administración de los datos de entrada de lápiz y la ejecución del reconocimiento de escritura a mano. Además de capturar movimientos espaciales del lápiz a medida que el usuario escribe o dibuja, la aplicación también puede recopilar información como la presión, la forma, el color y la opacidad para ofrecer experiencias de usuario que se asemejan mucho a dibujar sobre papel con un lápiz o un pincel.
+Uso típico La plataforma de entrada de lápiz de Windows, junto con un lápiz, ofrece una forma natural de crear notas, dibujos y anotaciones manuscritas. La plataforma admite la captura de datos de entrada de lápiz desde la entrada del digitalizador, la generación de datos de entrada de lápiz, la representación de los datos como trazos de lápiz en el dispositivo de salida, la administración de los datos de entrada de lápiz y la ejecución del reconocimiento de escritura a mano. Además de capturar movimientos espaciales del lápiz a medida que el usuario escribe o dibuja, la aplicación también puede recopilar información como la presión, la forma, el color y la opacidad para ofrecer experiencias de usuario que se asemejan mucho a dibujar sobre papel con un lápiz o un pincel.
 
 La entrada de lápiz y la entrada táctil difieren en la posibilidad de esta última de simular la manipulación directa de los elementos de la interfaz de usuario en la pantalla a través de gestos físicos realizados sobre esos objetos (como deslizar rápidamente, deslizar, arrastrar, girar, etc.).
 
 Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de lápiz. Por ejemplo, usa los botones anterior y siguiente (o + y -) para permitir a los usuarios pasar páginas de contenido o girar, cambiar de tamaño y aplicar zoom sobre objetos.
 
-Más información
-[Directrices para el diseño de lápiz](https://msdn.microsoft.com/library/windows/apps/dn456352)
+Más información en las [Directrices para el diseño de lápiz](https://msdn.microsoft.com/library/windows/apps/dn456352).
  
 
 ## <span id="Touch"></span><span id="touch"></span><span id="TOUCH"></span>Función táctil
@@ -137,8 +130,7 @@ Compatibilidad con dispositivos
 
 ![Función táctil](images/input-interactions/icons-touch01.png)
 
-Uso típico
-La compatibilidad con la entrada táctil puede variar considerablemente en función del dispositivo.
+Uso típico La compatibilidad con la entrada táctil puede variar considerablemente en función del dispositivo.
 
 Algunos dispositivos no admiten la función táctil en absoluto, otros admiten entrada de un solo toque (un solo contacto), mientras que otros admiten entrada multitáctil (dos o más contactos).
 
@@ -152,8 +144,7 @@ En general, la función táctil:
 -   No se limita a la orientación del dispositivo.
 -   Se usa en todas las interacciones, incluida la entrada de texto (teclado táctil) y la entrada manuscrita (configurada por la aplicación).
 
-Más información
-[Directrices para el diseño de la función táctil](https://msdn.microsoft.com/library/windows/apps/hh465370)
+Más información en las [Directrices para el diseño de la función táctil](https://msdn.microsoft.com/library/windows/apps/hh465370).
  
 
 ## <span id="Touchpad"></span><span id="touchpad"></span><span id="TOUCHPAD"></span>Panel táctil
@@ -167,15 +158,13 @@ Compatibilidad con dispositivos
 
 ![Panel táctil](images/input-interactions/icons-touchpad01.png)
 
-Uso típico
-Normalmente, los paneles táctiles admiten un conjunto de gestos táctiles que proporcionan soporte similar a la entrada táctil para la manipulación directa de objetos y la interfaz de usuario.
+Uso típico Normalmente, los paneles táctiles admiten un conjunto de gestos táctiles que proporcionan soporte similar a la entrada táctil para la manipulación directa de objetos y la interfaz de usuario.
 
 Debido a esta convergencia de experiencias de interacción admitidas por paneles táctiles, también es recomendable que proporciones comandos de interfaz de usuario de estilo ratón o prestaciones en lugar de confiar únicamente en la compatibilidad con la entrada táctil. Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de panel táctil.
 
 Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de mouse. Por ejemplo, usa los botones anterior y siguiente (o + y -) para permitir a los usuarios pasar páginas de contenido o girar, cambiar de tamaño y aplicar zoom sobre objetos.
 
-Más información
-[Directrices para el diseño de panel táctil](https://msdn.microsoft.com/library/windows/apps/dn456353)
+Más información en las [Directrices para el diseño del panel táctil](https://msdn.microsoft.com/library/windows/apps/dn456353).
  
 
 ## <span id="Keyboard"></span><span id="keyboard"></span><span id="KEYBOARD"></span>Teclado
@@ -196,8 +185,7 @@ Compatibilidad con dispositivos
 
 ![Teclado](images/input-interactions/icons-keyboard01.png)
 
-Uso típico
-Los usuarios pueden interactuar con aplicaciones universales de Windows a través de un teclado de hardware y dos teclados de software: el teclado en pantalla y el teclado táctil.
+Uso típico Los usuarios pueden interactuar con aplicaciones universales de Windows a través de un teclado de hardware y dos teclados de software: el teclado en pantalla y el teclado táctil.
 
 El teclado en pantalla es un teclado de software visual que puedes usar en lugar del teclado físico para escribir datos mediante la entrada táctil, el ratón, el lápiz o la pluma, u otro dispositivo señalador (no es necesaria una pantalla táctil). El teclado en pantalla se proporciona para sistemas que no incluyen un teclado físico o para usuarios cuyos problemas de movilidad les impidan usar los dispositivos de entrada físicos tradicionales. El teclado en pantalla simula la mayoría de las funciones, si no todas, de un teclado de hardware.
 
@@ -214,8 +202,7 @@ En general, un teclado:
 -   Se usa para entrada de texto, navegación, juegos y accesibilidad.
 -   Siempre está disponible, ya sea de forma proactiva o reactiva.
 
-Más información
-[Directrices para el diseño de teclado](https://msdn.microsoft.com/library/windows/apps/hh972345)
+Más información en las [Directrices para el diseño de teclado](https://msdn.microsoft.com/library/windows/apps/hh972345).
  
 
 ## <span id="Mouse"></span><span id="mouse"></span><span id="MOUSE"></span>Mouse
@@ -232,15 +219,13 @@ Compatibilidad con dispositivos
 
 ![Mouse](images/input-interactions/icons-mouse01.png)
 
-Uso típico
-Se puede modificar la entrada de mouse con la adición de diversas teclas del teclado (Ctrl, Mayús, Alt, etc.). Estas teclas pueden combinarse con el botón primario del mouse, el botón secundario del mouse, el botón de rueda y los botones X para obtener un conjunto de comandos optimizado para el mouse ampliado. (Algunos dispositivos de mouse de Microsoft tienen dos botones adicionales, denominados botones X, que normalmente se usan para navegar hacia atrás y hacia adelante en exploradores web).
+Uso típico Se puede modificar la entrada de mouse con la adición de diversas teclas del teclado (Ctrl, Mayús, Alt, etc.). Estas teclas pueden combinarse con el botón primario del mouse, el botón secundario del mouse, el botón de rueda y los botones X para obtener un conjunto de comandos optimizado para el mouse ampliado. (Algunos dispositivos de mouse de Microsoft tienen dos botones adicionales, denominados botones X, que normalmente se usan para navegar hacia atrás y hacia adelante en exploradores web).
 
 De modo similar al lápiz, la entrada de mouse y la entrada táctil difieren en la posibilidad de esta última de emular la manipulación directa de los elementos de la interfaz de usuario en la pantalla a través de gestos físicos realizados sobre esos objetos (como deslizar rápidamente, deslizar, arrastrar, girar, etc.).
 
 Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de mouse. Por ejemplo, usa los botones anterior y siguiente (o + y -) para permitir a los usuarios pasar páginas de contenido o girar, cambiar de tamaño y aplicar zoom sobre objetos.
 
-Más información
-[Directrices para el diseño de mouse](https://msdn.microsoft.com/library/windows/apps/dn456351)
+Más información en las [Directrices para el diseño de mouse](https://msdn.microsoft.com/library/windows/apps/dn456351).
  
 
 ## <span id="Gesture"></span><span id="gesture"></span><span id="GESTURE"></span>Gesto
@@ -256,8 +241,7 @@ Compatibilidad con dispositivos
 
 ![Gesto](images/input-interactions/icons-gesture01.png)
 
-Uso típico
-Normalmente, los paneles táctiles admiten un conjunto de gestos táctiles que proporcionan soporte similar a la entrada táctil para la manipulación directa de objetos y la interfaz de usuario.
+Uso típico Normalmente, los paneles táctiles admiten un conjunto de gestos táctiles que proporcionan soporte similar a la entrada táctil para la manipulación directa de objetos y la interfaz de usuario.
 
 Debido a esta convergencia de experiencias de interacción admitidas por paneles táctiles, también es recomendable que proporciones comandos de interfaz de usuario de estilo ratón o prestaciones en lugar de confiar únicamente en la compatibilidad con la entrada táctil. Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de panel táctil.
 
@@ -277,8 +261,7 @@ Compatibilidad con dispositivos
 
 ![Controlador](images/input-interactions/icons-controller01.png)
 
-Uso típico
-Normalmente, los paneles táctiles admiten un conjunto de gestos táctiles que proporcionan soporte similar a la entrada táctil para la manipulación directa de objetos y la interfaz de usuario.
+Uso típico Normalmente, los paneles táctiles admiten un conjunto de gestos táctiles que proporcionan soporte similar a la entrada táctil para la manipulación directa de objetos y la interfaz de usuario.
 
 Debido a esta convergencia de experiencias de interacción admitidas por paneles táctiles, también es recomendable que proporciones comandos de interfaz de usuario de estilo ratón o prestaciones en lugar de confiar únicamente en la compatibilidad con la entrada táctil. Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de panel táctil.
 
@@ -302,12 +285,11 @@ Compatibilidad con dispositivos
 
 ![Varias entradas](images/input-interactions/icons-inputdevices03-vertical.png)
 
-Uso típico
-Al igual que las personas usan una combinación de voz y gestos para comunicarse entre sí, cuando interactúes con una aplicación pueden resultarte útiles varios tipos y modos de entrada. Sin embargo, estas interacciones combinadas deben ser lo más intuitivas y naturales posible, ya que también pueden crear una experiencia muy confusa.
+Uso típico Al igual que las personas usan una combinación de voz y gestos para comunicarse entre sí, cuando interactúes con una aplicación pueden resultarte útiles varios tipos y modos de entrada. Sin embargo, estas interacciones combinadas deben ser lo más intuitivas y naturales posible, ya que también pueden crear una experiencia muy confusa.
 
 
 
-\[Este artículo contiene información específica de las aplicaciones para UWP y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
  
 
@@ -318,6 +300,6 @@ Al igual que las personas usan una combinación de voz y gestos para comunicarse
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: En este artículo se abordan las cuatro opciones de notificación (local, programada, periódica y de inserción) que proporcionan actualizaciones de iconos y distintivos, así como contenido de notificaciones del sistema.
 title: Elegir un método de entrega de notificaciones
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
-label: Elegir un método de entrega de notificaciones
+label: Choose a notification delivery method
 template: detail.hbs
 ---
 
 # Elegir un método de entrega de notificaciones
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 En este artículo se abordan las cuatro opciones de notificación (local, programada, periódica y de inserción) que proporcionan actualizaciones de iconos y distintivos, así como contenido de notificaciones del sistema. Un icono o una notificación del sistema pueden proporcionar información a tu usuario, incluso mientras el usuario no esté interactuando de forma directa con la aplicación. La naturaleza y el contenido de la aplicación y la información que quieras transmitir pueden ayudar a determinar qué métodos de notificación resultan más adecuados para tu escenario.
@@ -146,10 +147,6 @@ Para obtener más información, consulta lo siguiente:
 -   [Directrices para notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462)
 -   [Muestras de código de notificaciones de la Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-**Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
 
 ## <span id="related_topics"></span>Temas relacionados
 
@@ -170,6 +167,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

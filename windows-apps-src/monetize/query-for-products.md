@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: Usa este método en la API de colecciones de la Tienda Windows para obtener todos los productos que posee un cliente para las aplicaciones asociadas a tu identificador de cliente de Azure AD. Puedes definir el ámbito de la consulta para un producto concreto, o bien usar otros filtros.
 title: Consultar productos
@@ -36,7 +37,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 | Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Authorization  | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer** &lt;*token*&gt;.                           |
+| Authorization  | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;.                           |
 | Host           | cadena | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | cadena | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
@@ -72,14 +73,14 @@ El objeto ProductSkuId contiene los parámetros siguientes.
 
 | Parámetro | Tipo   | Descripción                                                                                                                                                                                                                                                                                                            | Obligatorio |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| productId | Cadena | Identificador del producto del catálogo de la Tienda Windows. Para obtener el identificador del producto, navega hasta la aplicación en el panel del Centro de desarrollo de Windows, ve a la página **Administración de aplicaciones** &gt; **Identidad de aplicación** y recupera el sufijo de la cadena que se muestra en el campo **URL para Windows 10**. Un identificador de producto de ejemplo es "9WZDNCRFJ3Q8". | Sí      |
+| productId | Cadena | Identificador del producto del catálogo de la Tienda Windows. Para obtener el identificador del producto, navega hasta tu aplicación en el panel del Centro de desarrollo de Windows, ve a la página **Administración de aplicaciones**&gt;**Identidad de aplicación** y recupera el sufijo de la cadena que se muestra en el campo **URL para Windows 10**. Un identificador de producto de ejemplo es "9WZDNCRFJ3Q8". | Sí      |
 | skuID     | Cadena | Identificador de SKU del catálogo de la Tienda Windows. Un ejemplo de identificador de SKU es "0010".                                                                                                                                                                                                                                                | Sí      |
 
  
 
 ### Ejemplo de solicitud
 
-```
+```syntax
 POST https://collections.mp.microsoft.com/v6.0/collections/query HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJKV1Q…….
 Host: collections.mp.microsoft.com
@@ -162,7 +163,7 @@ El objeto IdentityContractV6 contiene los parámetros siguientes.
 
 ### Ejemplo de respuesta
 
-```
+```syntax
 HTTP/1.1 200 OK
 Content-Length: 7241
 Content-Type: application/json
@@ -210,6 +211,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 * [Renovar una clave de id. de la Tienda Windows](renew-a-windows-store-id-key.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

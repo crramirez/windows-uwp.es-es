@@ -1,6 +1,7 @@
 ---
+author: martinekuan
 title: Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
-description: La compatibilidad de .NET Framework con los componentes de Windows Runtime facilita la tarea de declarar componentes de eventos al ocultar las diferencias entre el patrón de eventos de la Plataforma universal de Windows (UWP) y el patrón de eventos de .NET Framework.
+description: La compatibilidad de .NET Framework con los componentes de Windows Runtime facilita la tarea de declarar componentes de eventos al ocultar las diferencias entre el patrón de eventos de la plataforma universal de Windows (UWP) y el patrón de eventos de .NET Framework.
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
 ---
 
@@ -22,7 +23,7 @@ Al registrar para controlar un evento en la UWP, el descriptor de acceso "add" d
 Por suerte, los compiladores de Visual Basic y C# simplifican este proceso: cuando declaras un evento con descriptores de acceso personalizados en un componente de Windows Runtime, los compiladores utilizan automáticamente el patrón de la UWP. Por ejemplo, aparecerá un error del compilador si tu descriptor de acceso "add" no devuelve un token. .NET Framework proporciona dos tipos para facilitar la implementación:
 
 -   La estructura [EventRegistrationToken](https://msdn.microsoft.com/library/windows/apps/windows.foundation.eventregistrationtoken.aspx) representa el token.
--   La clase [EventRegistrationTokenTable &lt;T&gt;](https://msdn.microsoft.com/library/hh138412.aspx) crea tokens y mantiene una correlación entre los tokens y los controladores de eventos. El argumento de tipo genérico es el tipo de argumento de evento. Creas una instancia de esta clase para cada evento la primera vez que se registra un controlador de eventos para ese evento.
+-   La clase [EventRegistrationTokenTable&lt;T&gt;](https://msdn.microsoft.com/library/hh138412.aspx) crea tokens y mantiene una correlación entre los tokens y los controladores de eventos. El argumento de tipo genérico es el tipo de argumento de evento. Creas una instancia de esta clase para cada evento la primera vez que se registra un controlador de eventos para ese evento.
 
 El siguiente código para el evento NumberChanged muestra el patrón básico para eventos de la UWP. En este ejemplo, el constructor para el objeto "event argument", NumberChangedEventArgs, usa un solo parámetro de número entero que representa el valor numérico modificado.
 
@@ -92,13 +93,13 @@ El siguiente código para el evento NumberChanged muestra el patrón básico par
 > End Event
 > ```
 
-El método GetOrCreateEventRegistrationTokenTable estático ("Shared" en Visual Basic) crea la instancia del evento del objeto EventRegistrationTokenTable&lt;T&gt; de forma diferida. Pasa el campo de nivel de clase que contendrá la instancia de la tabla de tokens a este método. Si el campo está vacío, el método crea la tabla, almacena una referencia en la tabla del campo y devuelve una referencia a la tabla. Si el campo ya contiene una referencia a la tabla de tokens, el método devuelve solo esa referencia.
+El método ("Shared" en Visual Basic) GetOrCreateEventRegistrationTokenTable estático crea la instancia del evento del objeto EventRegistrationTokenTable&lt;T&gt; de forma diferida. Pasa el campo de nivel de clase que contendrá la instancia de la tabla de tokens a este método. Si el campo está vacío, el método crea la tabla, almacena una referencia en la tabla del campo y devuelve una referencia a la tabla. Si el campo ya contiene una referencia a la tabla de tokens, el método devuelve solo esa referencia.
 
 > **Importante**  Para garantizar la seguridad de los subprocesos, el campo que contiene la instancia del evento de EventRegistrationTokenTable&lt;T&gt; debe ser un campo de nivel de clase. Si se trata de un campo de nivel de clase, el método GetOrCreateEventRegistrationTokenTable garantiza que cuando varios subprocesos intentan crear la tabla de tokens, todos los subprocesos obtienen la misma instancia de la tabla. En el caso de un evento determinado, todas las llamadas al método GetOrCreateEventRegistrationTokenTable deben utilizar el mismo campo de nivel de clase.
 
 Llamar al método GetOrCreateEventRegistrationTokenTable en el descriptor de acceso "remove" y en el método [RaiseEvent](https://msdn.microsoft.com/library/fwd3bwed.aspx) (método OnRaiseEvent en C#) garantiza que no se produce ninguna excepción si estos métodos se llaman antes de que se hayan agregado los delegados del controlador de eventos.
 
-Los otros miembros de la clase EventRegistrationTokenTable&lt;T&gt; que se usan en el patrón de eventos de la UWP incluyen lo siguiente:
+Los otros miembros de la clase EventRegistrationTokenTable&lt;T&gt; que se utilizan en el patrón de eventos de la UWP incluyen lo siguiente:
 
 -   El método [AddEventHandler](https://msdn.microsoft.com/library/hh138458.aspx) genera un token para el delegado del controlador de eventos, almacena el delegado en la tabla, lo agrega a la lista de invocación y devuelve el token.
 -   La sobrecarga del método [RemoveEventHandler(EventRegistrationToken)](https://msdn.microsoft.com/library/hh138425.aspx) elimina el delegado de la tabla y de la lista de invocación.
@@ -125,6 +126,6 @@ Usuarios de Visual Basic: en .NET Framework, un evento es simplemente un delegad
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

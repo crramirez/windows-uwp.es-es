@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Declarar tareas en segundo plano en el manifiesto de la aplicación
 description: Habilita el uso de tareas en segundo plano declarándolas como extensiones en el manifiesto de la aplicación.
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
@@ -91,16 +92,16 @@ Copia este código al elemento Extensions (agregarás atributos en los siguiente
                     <Task Type="pushNotification" />
                   </BackgroundTasks>
                 </Extension>
-                ```
+    ```
 
-    > **Note**  Normally, an app will run in a special process called "BackgroundTaskHost.exe". It is possible to add an Executable element to the Extension element, allowing the background task to run in the context of the app. Only use the Executable element with background tasks that require it, such as the [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).    
+    > **Nota**  Normalmente, una aplicación se ejecutará en un proceso especial llamado "BackgroundTaskHost.exe". Se puede agregar un elemento Executable al elemento Extension, lo cual permite a la tarea en segundo plano ejecutarse en el contexto de la aplicación. Usa el elemento Executable únicamente con tareas en segundo plano que lo requieran, como por ejemplo [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).    
 
-## Add Additional Background Task Extensions
+## Agregar extensiones adicionales de tareas en segundo plano
 
 
-Repeat step 2 for each additional background task class registered by your app.
+Repite el paso 2 para todas las clases de tareas en segundo plano que haya registrado tu aplicación.
 
-The following example is the complete Application element from the [background task sample]( http://go.microsoft.com/fwlink/p/?linkid=227509). This shows the use of 2 background task classes with a total of 3 trigger types. Copy the Extensions section of this example, and modify it as needed, to declare background tasks in your application manifest.
+El siguiente ejemplo es el elemento Application completo de la [muestra de tarea en segundo plano]( http://go.microsoft.com/fwlink/p/?linkid=227509). Este muestra el uso de 2 clases de tareas en segundo plano con un total de 3 tipos de desencadenadores. Copia la sección Extensions de este ejemplo y modifícala conforme sea necesario para declarar tareas en segundo plano en el manifiesto de la aplicación.
 
 ```xml
 <Applications>
@@ -112,7 +113,7 @@ The following example is the complete Application element from the [background t
           Square150x150Logo="Assets\StoreLogo-sdk.png"
           Square44x44Logo="Assets\SmallTile-sdk.png"
           Description="BackgroundTask"
-          
+
           BackgroundColor="#00b2f0">
           <uap:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\smalltile-Windows-sdk.png" />
             <uap:SplashScreen Image="Assets\Splash-sdk.png" />
@@ -147,14 +148,7 @@ The following example is the complete Application element from the [background t
 * [Registrar una tarea en segundo plano](register-a-background-task.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 
- 
 
- 
-
-
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

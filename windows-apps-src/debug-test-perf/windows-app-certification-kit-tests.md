@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Pruebas del Kit para la certificación de aplicaciones en Windows
 description: El Kit para la certificación de aplicaciones en Windows contiene diversas pruebas que pueden ayudarte a garantizar que tu aplicación esté lista para publicarse en la Tienda Windows.
@@ -83,7 +84,7 @@ Esta prueba se ha implementado según la directiva de la Tienda.
 
 ### Detalles de la prueba
 
-Para las aplicaciones de Windows Phone 8.1, se comprueba que el número total de paquetes appx del lote es menor que 512, que hay un solo paquete principal en el lote y que la arquitectura del paquete principal del lote se ha marcado como ARM o neutro.
+Para las aplicaciones de Windows Phone 8.1, se comprueba que el número total de paquetes appx del lote es &lt; 512, que hay un solo paquete principal en el lote y que la arquitectura del paquete principal del lote se ha marcado como ARM o neutro.
 
 Para las aplicaciones de Windows 10, la prueba comprueba que el número de revisión de la versión del lote se establece en 0.
 
@@ -155,7 +156,7 @@ Las pruebas del analizador binario BinScope comprueban el uso correcto de estas 
 
 ### <span id="binscope-1"></span>AllowPartiallyTrustedCallersAttribute
 
-**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba APTCACheck
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba APTCACheck.
 
 El atributo AllowPartiallyTrustedCallersAttribute (APTCA) habilita el acceso a los códigos de plena confianza desde los códigos de confianza parcial en los ensamblados con signo. Cuando apliques el atributo APTCA en un ensamblado, los llamadores de confianza parcial pueden obtener acceso a ese ensamblado durante su vigencia, lo que puede comprometer la seguridad.
 
@@ -169,7 +170,7 @@ Esta prueba solo se realiza en código administrado (C#, .NET, etc.).
 
 ### <span id="binscope-2"></span>Protección de control de excepciones de /SafeSEH
 
-**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba SafeSEHCheck
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba SafeSEHCheck.
 
 Un controlador de excepciones se ejecuta cuando la aplicación encuentra una condición de excepción, como un error de división entre cero. Dado que la dirección del controlador de excepciones se almacena en la pila cuando se llama una función, podría quedar expuesta a un atacante de desbordamiento de búfer si algún software malintencionado quisiera sobrescribir la pila.
 
@@ -183,7 +184,7 @@ La prueba no se realiza en binarios de 64 bits ni en binarios de conjunto de ch
 
 ### <span id="binscope-3"></span>Prevención de ejecución de datos
 
-**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba NXCheck
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba NXCheck.
 
 Esta prueba comprueba que la aplicación no ejecute el código que se almacena en el segmento de datos.
 
@@ -197,7 +198,7 @@ Te recomendamos que pruebes tus aplicaciones en una CPU con funcionalidad DEP y 
 
 ### <span id="binscope-4"></span>Selección aleatoria del diseño del espacio de direcciones
 
-**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba DBCheck
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba DBCheck.
 
 La selección aleatoria del diseño del espacio de direcciones (ASLR) carga imágenes ejecutables en ubicaciones impredecibles de la memoria, lo que dificulta la tarea del software malintencionado La aplicación y todos los componentes que usa la aplicación deben admitir ASLR.
 
@@ -306,11 +307,11 @@ Para lograr la certificación de la Tienda Windows, las aplicaciones deben usar
 
 Asegúrate de que la aplicación se haya compilado como una versión de lanzamiento y no con una versión de depuración.
 
-> **Note**  La versión de depuración de una aplicación no pasará esta prueba ni siquiera si la aplicación usa solamente [API para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/bg124285.aspx).
+> **Nota** La versión de depuración de una aplicación no pasará esta prueba aunque la aplicación use solamente [API para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-Revisa los mensajes de error para identificar la API que usa la aplicación y que no es una [API para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/bg124285.aspx).
+Revisa los mensajes de error para identificar la API que usa la aplicación y que no es una [API para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-> **Note**  Las aplicaciones C++ creadas en una configuración de depuración no pasarán esta prueba, aun cuando la configuración use solo las API de Windows SDK para aplicaciones de la Tienda Windows. Consulta el tema sobre [alternativas a las API de Windows en aplicaciones de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obtener más información.
+> **Nota** Las aplicaciones C++ creadas en una configuración de depuración no pasarán esta prueba, aun cuando la configuración use solo las API de Windows SDK para aplicaciones de la Tienda Windows. Consulta el tema sobre [alternativas a las API de Windows en aplicaciones de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkID=244022) para obtener más información.
 
 ## Pruebas de rendimiento
 
@@ -403,7 +404,7 @@ Usa esta tabla como guía.
 <tr><td>
 <p>La imagen debe definir al menos una variante sin un calificador TargetSize. Debe definir un calificador Scale o dejar Scale y TargetSize sin especificar, para que de manera predeterminada se establezca Scale-100.</p>
 </td><td>
-<p>Para más información, consulta <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn958435.aspx">Diseño con capacidad de respuesta 101 para aplicaciones de la Plataforma universal de Windows (UWP)</a> y <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh465241.aspx">Directrices sobre recursos de la aplicación</a>.</p>
+<p>Para más información, consulta <a href="https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx">Diseño con capacidad de respuesta 101 para aplicaciones de la Plataforma universal de Windows (UWP)</a> y <a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465241.aspx">Directrices sobre recursos de la aplicación</a>.</p>
 </td></tr>
 <tr><td>
 <p>Al paquete le falta un archivo "resources.pri".</p>
@@ -425,7 +426,7 @@ Usa esta tabla como guía.
 <tr><td>
 <p>La cadena {string} no cumple la restricción de longitud máxima de {number} caracteres.</p>
 </td><td>
-<p>Consulta los <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/mt148525.aspx">requisitos de metadatos del paquete</a>.</p>
+<p>Consulta los <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt148525.aspx">requisitos de metadatos del paquete</a>.</p>
 <p>En el mensaje en sí, {string} se reemplaza por la cadena que tiene el error y {number} contiene la longitud máxima.</p>
 </td></tr>
 <tr><td>
@@ -438,12 +439,12 @@ Usa esta tabla como guía.
 <tr><td>
 <p>La cadena debe ser no vacía (mayor que cero en longitud).</p>
 </td><td>
-<p>Consulta el tema sobre los <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/mt148525.aspx">requisitos del paquete de la aplicación</a> para más información.</p>
+<p>Consulta el tema sobre los <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt148525.aspx">requisitos del paquete de la aplicación</a> para más información.</p>
 </td></tr>
 <tr><td>
 <p>No hay un recurso predeterminado especificado en el archivo "resources.pri".</p>
 </td><td>
-<p>Para más información, consulta <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh465241.aspx">Directrices sobre recursos de la aplicación</a>.</p>
+<p>Para más información, consulta <a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465241.aspx">Directrices sobre recursos de la aplicación</a>.</p>
 <p>En la configuración de compilación predeterminada, Visual Studio solo incluye los recursos de imagen con una escala de 200 en el paquete de la aplicación al generar paquetes y coloca otros recursos en el paquete de recursos. Asegúrate de incluir recursos de imagen con una escala de 200 o de configurar el proyecto para incluir los recursos que tienes.</p>
 </td></tr>
 <tr><td>
@@ -538,7 +539,7 @@ Asegúrate de que la aplicación se represente correctamente en el nivel de func
 
 ### Recorte Direct3D tras suspensión
 
-> **Note**  Esta prueba solo se aplica a aplicaciones de la Tienda Windows desarrolladas para Windows 8.1 y versiones posteriores.
+> **Nota** Esta prueba solo se aplica a aplicaciones de la Tienda Windows desarrolladas para Windows 8.1 y versiones posteriores.
 
 ### Antecedentes
 
@@ -577,9 +578,9 @@ Piensa en la posibilidad de quitar la función de uso especial si la aplicación
 
 ## Validación de metadatos de Windows Runtime
 
-### Background
+### Antecedentes
 
-Se asegura de que los componentes incluidos en una aplicación son conformes al sistema de tipo UWP.
+Comprueba que los componentes suministrados en una aplicación corresponden al sistema de tipo de UWP.
 
 ### Detalles de la prueba
 
@@ -587,52 +588,52 @@ Comprueba que los archivos **.winmd** del paquete cumplen las reglas de UWP.
 
 ### Acciones correctivas
 
--   **Prueba del atributo ExclusiveTo:** se asegura de que las clases de UWP no implementen interfaces marcadas como exclusivas (ExclusiveTo) respecto a otra clase.
--   **Prueba de ubicación de tipo:** comprueba que los metadatos de todos los tipos de UWP estén ubicados en el archivo winmd cuyo nombre en longitud presente la mayor coincidencia con el espacio de nombres en el paquete de la aplicación.
+-   **Prueba del atributo ExclusiveTo:** comprueba que las clases de UWP no implementen interfaces marcadas como exclusivas (ExclusiveTo) de otra clase.
+-   **Prueba de ubicación de tipo:** comprueba que los metadatos de todos los tipos de UWP estén ubicados en el archivo .winmd cuyo nombre en longitud presente la mayor coincidencia con el espacio de nombres en el paquete de la aplicación.
 -   **Prueba de distinción entre mayúsculas y minúsculas del nombre de tipo:** comprueba que todos los tipos de UWP tengan nombres únicos sin distinción de mayúsculas y minúsculas en el paquete de la aplicación. Asegúrate también de que ningún nombre de tipo UWP se use además como espacio de nombres de tu paquete de la aplicación.
 -   **Prueba de exactitud del nombre de tipo:** comprueba que no haya tipos de UWP en el espacio de nombres global ni en el espacio de nombres de nivel superior de Windows.
--   **Prueba de exactitud de metadatos general:** comprueba que el compilador que usas para generar los tipos de UWP cumpla con las especificaciones actuales de Windows Runtime.
+-   **Prueba de exactitud de metadatos general:** comprueba que el compilador que usas para generar los tipos esté actualizado con las especificaciones de UWP.
 -   **Prueba de propiedades:** comprueba que las propiedades de una clase de UWP tengan un método get (los métodos set son opcionales). Asegúrate de que el método get devuelva un tipo de valor que coincida con el tipo del parámetro de entrada del método set, para todas las propiedades de los tipos de UWP.
 
-## Pruebas de comprobación del paquete
+## Pruebas de integridad del paquete
 
 ### Prueba de archivos apropiados para la plataforma
 
-Las aplicaciones que instalan binarios mixtos pueden bloquearse o no ejecutarse correctamente, en función de la arquitectura del procesador del usuario.
+Las aplicaciones que instalan binarios mixtos pueden bloquearse o no ejecutarse correctamente según la arquitectura del procesador que tenga el usuario.
 
-### Background
+### Antecedentes
 
 Esta prueba valida los binarios de un paquete de la aplicación para evitar conflictos de arquitectura. Un paquete de la aplicación no debe contener binarios que no se puedan usar en la arquitectura de procesador especificada en el manifiesto. De haberlos, existe la posibilidad de que la aplicación se bloquee o de que el tamaño del paquete de la aplicación se incremente sin necesidad.
 
 ### Detalles de la prueba
 
-Comprueba que el "valor de bits" de cada archivo en el encabezado PE sea el apropiado al compararse con la declaración de arquitectura de procesador del paquete de aplicación
+Examina que el "valor de bits" de cada archivo en el encabezado PE sea el apropiado al hacer referencia cruzada con la declaración de arquitectura de procesador en el paquete de la aplicación.
 
 ### Acción correctiva
 
-Sigue estas directrices para asegurarse de que el paquete de la aplicación contenga únicamente archivos admitidos por la arquitectura especificada en el manifiesto de la aplicación:
+Sigue estas directrices para que el paquete de la aplicación contenga únicamente archivos admitidos por la arquitectura especificada en el manifiesto de la aplicación:
 
--   Si la arquitectura de procesador de destino de la aplicación es del tipo Neutral, el paquete de la aplicación no puede contener archivos binarios o de imagen de x86, x64 o ARM.
+-   Si la arquitectura de procesador de destino de la aplicación es de tipo neutral, el paquete de la aplicación no puede contener archivos de imagen o binarios de x86, x64 o ARM.
 
--   Si la arquitectura de procesador de destino de la aplicación es del tipo x86, el paquete de la aplicación solo debe contener archivos de imagen o binarios de x86. Si el paquete contiene archivos de imagen o binarios de x64 o ARM, la prueba no se superará.
+-   Si la arquitectura de procesador de destino de la aplicación es de tipo x86, el paquete de la aplicación solo debe contener archivos de imagen o binarios de x86. Si el paquete contiene archivos de imagen o binarios de x64 o ARM, la prueba no se superará.
 
--   Si la arquitectura de procesador de destino de la aplicación es del tipo x64, el paquete de la aplicación debe contener archivos de imagen o binarios de x64. Ten en cuenta que, en este caso, también puede contener archivos de x86, pero la experiencia de aplicación principal debe usar el binario de x64.
+-   Si la arquitectura de procesador de destino de la aplicación es de tipo x64, el paquete de la aplicación debe contener archivos de imagen o binarios de x64. Ten en cuenta que, en este caso, también puede contener archivos de x86, pero la experiencia de aplicación principal debe usar el binario de x64.
 
     La prueba no se superará, sin embargo, si el paquete contiene archivos de imagen o binarios de ARM o si solo contiene archivos de imagen o binarios de x86.
 
--   Si la arquitectura de procesador de destino de la aplicación es del tipo ARM, el paquete de la aplicación solo debe contener archivos de imagen o binarios de ARM. Si el paquete contiene archivos de imagen o binarios de x64 o x86, la prueba no se superará.
+-   Si la arquitectura de procesador de destino de la aplicación es de tipo ARM, el paquete de la aplicación solo debe contener archivos de imagen o binarios de ARM. Si el paquete contiene archivos de imagen o binarios de x64 o x86, la prueba no se superará.
 
-### Prueba de la estructura del directorio admitida
+### Prueba de estructura de directorios admitida
 
 Controla que las aplicaciones no creen subdirectorios más largos que MAX\-PATH como parte de la instalación.
 
-### Background
+### Antecedentes
 
-Las rutas de acceso al sistema de archivos están limitadas internamente a MAX\-PATH para los componentes de sistema operativo (incluidos Trident y WWAHost, entre otros). Estos no funcionarán correctamente con rutas de acceso más largas.
+Las rutas de acceso al sistema de archivos están limitadas internamente a MAX\-PATH para los componentes de sistema operativo (incluidos Trident y WWAHost, entre otros). Estos no tendrán un buen funcionamiento con rutas de acceso más largas.
 
 ### Detalles de la prueba
 
-Examina que ninguna ruta de acceso supere en longitud MAX\-PATH en el interior del directorio de instalación de la aplicación.
+Examina que ninguna ruta de acceso supere en longitud a MAX\-PATH en el interior del directorio de instalación de la aplicación.
 
 ### Acción correctiva
 
@@ -640,11 +641,11 @@ Usa una estructura de directorio o nombre de archivo más cortos.
 
 ## Prueba de uso de recursos
 
-### Prueba de tarea en segundo plano de WinJS
+### Prueba de tareas en segundo plano de WinJS
 
-Prueba de tarea en segundo plano de WinJS garantiza que las aplicaciones de JavaScript tengan las declaraciones de cierre adecuadas, de modo que las aplicaciones no consuman batería.
+Esta prueba garantiza que las aplicaciones de JavaScript tengan las instrucciones de cierre adecuadas para que no consuman batería.
 
-### Background
+### Antecedentes
 
 Las aplicaciones que tienen tareas en segundo plano de JavaScript necesitan llamar a Close() en la última declaración de la tarea. De lo contrario, podrían impedir que el sistema vuelva al modo de espera conectado y agoten la batería.
 
@@ -654,21 +655,17 @@ Si la aplicación no cuenta con un archivo de tareas en segundo plano especifica
 
 ### Acción correctiva
 
-Actualiza el código JavaScript en segundo plano para que realice la llamada a Close() correctamente.
+Actualiza el código JavaScript en segundo plano para que llame a Close() correctamente.
 
-> **Note**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para UWP. Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
+> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para UWP. Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
  
 
+ 
 
 
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

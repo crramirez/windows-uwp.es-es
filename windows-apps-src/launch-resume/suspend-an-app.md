@@ -1,13 +1,14 @@
 ---
-title: Controlar la suspensión de la aplicación
+author: mcleblanc
+title: Administrar la suspensión de la aplicación
 description: Aprende a guardar datos importantes de la aplicación cuando el sistema la suspende.
 ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
 ---
 
-# Controlar la suspensión de la aplicación
+# Administrar la suspensión de la aplicación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -58,7 +59,7 @@ MainPage::MainPage()
 {
    InitializeComponent();
    Application::Current->Suspending += 
-       ref new SuspendingEventHandler(this, &amp;MainPage::App_Suspending);
+       ref new SuspendingEventHandler(this, &MainPage::App_Suspending);
 }
 ```
 
@@ -129,6 +130,6 @@ El sistema no notifica a una aplicación cuando se cierra, con lo cual la aplica
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

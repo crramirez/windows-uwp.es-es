@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Proporciona una lista por función de algunos de los controles que puedes usar en tus aplicaciones.
 title: Controles por función
 ms.assetid: 8DB4347B-91D6-4659-91F2-80ECF7BBB596
-label: Controles por función
+label: Controls by function
 template: detail.hbs
 ---
 # Controles por función
@@ -843,6 +844,6 @@ Referencia: [ToggleSwitch](https://msdn.microsoft.com/library/windows/apps/xaml/
 Diseño y procedimientos: [Guía de control de alternancia](toggles.md) 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

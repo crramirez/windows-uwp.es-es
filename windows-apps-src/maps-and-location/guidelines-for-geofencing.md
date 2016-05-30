@@ -1,10 +1,11 @@
 ---
-Description: Sigue estos procedimientos recomendados para el uso de geovallas en una aplicación.
-title: Directrices para usar geovallas con aplicaciones
+author: PatrickFarley
+Description: Sigue estos procedimientos recomendados para el uso de geovallas en tu aplicación.
+title: Directrices para usar geovallas en aplicaciones
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
 ---
 
-# Directrices para usar geovallas con aplicaciones
+# Directrices para usar geovallas en aplicaciones
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -121,7 +122,7 @@ Si tu aplicación debe usar una geovalla con un radio pequeño, aconseja a los u
 * [Configurar una geovalla](https://msdn.microsoft.com/library/windows/apps/mt219702)
 * [Obtener la ubicación actual](https://msdn.microsoft.com/library/windows/apps/mt219698)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
-* [UWP location sample (geolocation)](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [Ejemplo de ubicación de UWP (geolocation)](http://go.microsoft.com/fwlink/p/?linkid=533278)
  
 
  
@@ -131,6 +132,6 @@ Si tu aplicación debe usar una geovalla con un radio pequeño, aconseja a los u
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

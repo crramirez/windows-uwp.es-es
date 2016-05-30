@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables.
 title: Plantillas de iconos especiales
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
@@ -9,7 +10,7 @@ template: detail.hbs
 # Plantillas de iconos especiales
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables. Cada plantilla de iconos especial fue compilada específicamente para Windows 10, excepto la plantilla de iconos icónica, una plantilla especial clásica que ha sido actualizada para Windows 10. En este artículo se abordan tres plantillas de iconos especiales: icónicas, de fotos y de contactos.
@@ -82,11 +83,11 @@ El distintivo del icono se actualizará acordemente.
 
 **Paso 5: implementación**
 
-La siguiente imagen ilustra cómo se asocian las distintas API y cargas con cada uno de los aspectos de la plantilla de iconos icónica. Una [notificación de icono](https://msdn.microsoft.com/library/windows/apps/hh779724) (que contenga esos elementos &lt;binding&gt;) se usa para especificar la plantilla icónica y el activo de imagen; una [notificación](https://msdn.microsoft.com/library/windows/apps/hh779719) especifica el valor numérico; las propiedades del icono controlan el nombre para mostrar, el color y otros datos de tu icono.
+La siguiente imagen ilustra cómo se asocian las distintas API y cargas con cada uno de los aspectos de la plantilla de iconos icónica. Una [notificación de icono](https://msdn.microsoft.com/library/windows/apps/hh779724) (que contenga esos elementos &lt;binding&gt;) se usa para especificar la plantilla icónica y el activo de imagen; una [notificación de distintivo](https://msdn.microsoft.com/library/windows/apps/hh779719) especifica el valor numérico; las propiedades del icono controlan el nombre para mostrar, el color y otros datos de tu icono.
 
 ![API y cargas asociadas con la plantilla de iconos icónica](images/iconic-template-properties-info.png)
 
-## <span id="Photos_tile_template"></span><span id="photos_tile_template"></span><span id="PHOTOS_TILE_TEMPLATE"></span>Plantilla de iconos de Fotos
+## <span id="Photos_tile_template"></span><span id="photos_tile_template"></span><span id="PHOTOS_TILE_TEMPLATE"></span>Plantilla de iconos de fotos
 
 
 La plantilla de iconos de Fotos te permite mostrar una presentación de fotos en tu icono dinámico. La plantilla es compatible con todos los tamaños de icono, incluido el pequeño, y se comporta del mismo modo en cada tamaño de icono. En el ejemplo siguiente se muestran cinco fotogramas de un icono mediano que usa la plantilla de fotos. La plantilla tiene un zoom y una animación de fundido que recorre las fotos seleccionadas y se repite indefinidamente.
@@ -177,7 +178,7 @@ TileContent content = new TileContent()
 };
 ```
 
-## <span id="People_tile_template"></span><span id="people_tile_template"></span><span id="PEOPLE_TILE_TEMPLATE"></span>Plantilla de iconos de Contactos
+## <span id="People_tile_template"></span><span id="people_tile_template"></span><span id="PEOPLE_TILE_TEMPLATE"></span>Plantilla de iconos de contactos
 
 
 La aplicación de contactos en Windows 10 usa una plantilla de iconos especial que muestra una colección de imágenes en círculos que se deslizan vertical u horizontalmente en el icono. Esta plantilla de iconos está disponible desde Windows 10 Compilación 10572 y cualquier persona es bienvenida a usarla en su aplicación.
@@ -282,6 +283,6 @@ Para enviar la notificación, consulta [Elegir un método de entrega de notifica
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,10 +1,11 @@
 ---
+author: jnHs
 Description: Puedes generar códigos promocionales para una aplicación o un producto desde la aplicación (IAP) que hayas publicado en la Tienda Windows.
-title: Generar códigos promocionales
+title: Genera códigos promocionales
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 ---
 
-# Generar códigos promocionales
+# Genera códigos promocionales
 
 
 Puedes generar códigos promocionales para una aplicación o un producto desde la aplicación (IAP) que hayas publicado en la Tienda Windows. Los códigos promocionales son una forma sencilla de ofrecer a usuarios influyentes acceso gratuito a tu aplicación o IAP. También puedes usarlos en situaciones de atención al cliente y ofrecer a los usuarios acceso gratuito a tu aplicación o IAP, o para [realizar pruebas beta](beta-testing-and-targeted-distribution.md) con Windows 10.
@@ -19,7 +20,7 @@ En el panel del Centro de desarrollo de Windows, puedes:
     -   Resúmenes de pedidos de códigos promocionales de todas las aplicaciones en general (en la página **Información general del panel**) y de cada aplicación en particular (en la página **Información general de la aplicación** de cada aplicación).
     -   Un resumen detallado de los pedidos de códigos promocionales de cada aplicación (en la página **Códigos promocionales** de cada aplicación).
 
-> **Nota** Puedes generar códigos de promoción incluso si seleccionaste la opción **Ocultar esta aplicación en la tienda e impedir la compra. Los clientes con un código promocional aún pueden descargarla en dispositivos con Windows 10** en la página del panel [Precios y disponibilidad](set-app-pricing-and-availability.md) de tu aplicación. La aplicación debe pasar a la fase final de publicación del [proceso de certificación de aplicaciones](the-app-certification-process.md) antes de que los usuarios puedan canjear un código promocional para instalarla.
+> **Nota**  Puedes generar códigos de promoción incluso si seleccionaste la opción **Ocultar esta aplicación en la tienda e impedir la compra. Los clientes con un código promocional aún pueden descargarla en dispositivos con Windows 10** en la página del panel [Precios y disponibilidad](set-app-pricing-and-availability.md) de tu aplicación. La aplicación debe pasar a la fase final de publicación del [proceso de certificación de aplicaciones](the-app-certification-process.md) antes de que los usuarios puedan canjear un código promocional para instalarla.
 
 ## Directivas de códigos promocionales
 
@@ -70,7 +71,7 @@ Para descargar un pedido completado y distribuir los códigos promocionales a lo
 
         https://account.microsoft.com/billing/redeem?mstoken=&lt;promotional_code>
 
-    -   **Fecha del pedido**: es la fecha en que se hizo el pedido de este código.
+    -   **Fecha del pedido**: es la fecha en la que se hizo el pedido de este código.
     -   **Fecha de expiración**: es la fecha de expiración de este código.
     -   **Id. de código**: es un identificador único de este código.
     -   **Id. de pedido**: es un identificador único del pedido en el que se suministró este código.
@@ -88,21 +89,21 @@ Ya has distribuido a un usuario una dirección URL canjeable; los siguientes pas
 
 1.  El usuario hace clic en la dirección URL canjeable.
 
-    El explorador se abre en una página autenticada que indica **Canjea tu código** en <https://account.microsoft.com/billing/redeem>. Esta página incluye una descripción de la aplicación que el usuario va a canjear.
+    El explorador se abre en una página autenticada de **Canjea tu código** en <https://account.microsoft.com/billing/redeem>. Esta página incluye una descripción de la aplicación que el usuario va a canjear.
 
 2.  El usuario hace clic en **Canjear.**
 
-    El explorador abre una página de **agradecimiento** con un vínculo denominado **Obtén** ***&lt;nombre de la aplicación&gt;***.
+    El explorador abre una página de **agradecimiento** con un vínculo denominado **Obtén*****&lt;nombre de la aplicación&gt;***.
 
-    > **Nota** Los usuarios recibirán un error en este paso si la aplicación no está publicada aún.
+    > **Nota**  Los usuarios recibirán un error en este paso si la aplicación no está publicada aún.
 
-3.  El usuario debe hacer clic en **Obtén** ***&lt;nombre de la aplicación&gt;***.
+3.  El usuario debe hacer clic en **Obtén*****&lt;nombre de la aplicación&gt;***.
 
 4.  Si el usuario está usando un equipo que tiene instalada la Tienda Windows para Windows 10 o para Windows 8.1, se abrirá la Tienda Windows en la página de información general de la aplicación. El usuario puede hacer clic en **Instalar** para instalar la aplicación de forma gratuita.
 
     Si, por el contrario, el usuario está usando un equipo o dispositivo que no tiene la Tienda de Windows instalada, el explorador se abre en la página web de la Tienda Windows de la aplicación. El usuario puede hacer clic en **Instalar** para instalar la aplicación de forma gratuita.
 
-    > **Nota** En algunos casos la página de la aplicación podría mostrar un botón **Comprar** en lugar de **Instalar**, incluso si aplicación se ha canjeado correctamente mediante el código promocional. El usuario puede hacer clic en **Comprar** para instalar la aplicación de forma gratuita.
+    > **Nota**  En algunos casos la página de la aplicación podría mostrar un botón **Comprar** en lugar de **Instalar**, incluso si la aplicación se canjeó correctamente mediante el código promocional. El usuario puede hacer clic en **Comprar** para instalar la aplicación de forma gratuita.
 
 ## Revisar los códigos promocionales
 
@@ -129,6 +130,6 @@ También puedes descargar un pedido activo desde esta tabla.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

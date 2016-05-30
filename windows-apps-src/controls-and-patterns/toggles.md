@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: El modificador para alternar representa un conmutador físico que permite a los usuarios activar o desactivar opciones.
 title: Directrices para controles de modificadores para alternar
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
-label: Modificadores para alternar
+label: Toggle switches
 template: detail.hbs
 ---
 # Modificadores para alternar
@@ -156,6 +157,6 @@ También puedes usar contenido más complejo si configuras las propiedades [**On
 - [**Clase ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/br209712)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

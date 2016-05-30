@@ -119,7 +119,7 @@ En las siguientes líneas de código se muestra una manera simple de comprobar s
 var keyCredentialAvailable = await KeyCredentialManager.IsSupportedAsync();
 if (!keyCredentialAvailable)
 {
-   // User didn&#39;t set up PIN yet
+   // User didn't set up PIN yet
    return;
 }
 ```
@@ -165,7 +165,7 @@ static async void RegisterUser(string AccountId)
     var keyCredentialAvailable = await KeyCredentialManager.IsSupportedAsync();
     if (!keyCredentialAvailable)
     {
-        // The user didn&#39;t set up a PIN yet
+        // The user didn't set up a PIN yet
         return;
     }
 
@@ -449,6 +449,6 @@ Las opciones de implementación flexibles permiten que Microsoft Passport y Wind
 * [Aplicación de inicio de sesión de Microsoft Passport](microsoft-passport-login.md)
 * [Servicio de inicio de sesión de Microsoft Passport](microsoft-passport-login-auth-service.md)
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

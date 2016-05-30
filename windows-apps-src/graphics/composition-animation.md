@@ -1,4 +1,5 @@
 ---
+author: scottmill
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: Animaciones de composición
 description: Muchas de las propiedades de objetos y efectos de composición se pueden animar con animaciones de fotogramas y expresión clave, lo que permite a las propiedades de un elemento de la interfaz de usuario cambiar con el tiempo o según un cálculo concreto.
@@ -122,7 +123,7 @@ Después de definir la animación, los fotogramas clave y las propiedades, está
 A continuación ofrecemos la sintaxis general y un ejemplo:
 
 ```cs
-targetVisual.StartAnimation(“Offset”, animation);
+targetVisual.StartAnimation("Offset", animation);
 ```
 
 Después de iniciar la animación, también puedes detenerla y desasociarla. Para ello, usa el método [**StopAnimation**](https://msdn.microsoft.com/library/windows/apps/Mt590841) y especifica la propiedad cuya animación quieres detener.
@@ -130,7 +131,7 @@ Después de iniciar la animación, también puedes detenerla y desasociarla. Par
 Por ejemplo:
 
 ```cs
-targetVisual.StopAnimation(“Offset”);
+targetVisual.StopAnimation("Offset");
 ```
 
 ### Eventos de finalización de la animación
@@ -167,7 +168,7 @@ Por ejemplo:
 
 ```cs
 myScopedBatch = _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
-Visual.StartAnimation(“Opacity”, myAnimation);
+Visual.StartAnimation("Opacity", myAnimation);
 myScopedBatch.End();
 ```
 
@@ -192,7 +193,7 @@ Las animaciones de expresión son animaciones que usan una expresión matemátic
 Para crear una expresión, llama a [**CreateExpressionAnimation**](https://msdn.microsoft.com/library/windows/apps/Mt187002) en el objeto Compositor y especifica la expresión que quieres usar:
 
 ```cs
-var expression = _compositor.CreateExpressionAnimation(“INSERT_EXPRESSION_STRING”)
+var expression = _compositor.CreateExpressionAnimation("INSERT_EXPRESSION_STRING")
 ```
 
 ### Operadores, prioridad y asociatividad
@@ -229,8 +230,8 @@ En este ejemplo, ChildOffset y ParentOffset son parámetros que representan la p
 En la cadena de expresión anterior, tendríamos que crear dos parámetros para definir los dos elementos visuales:
 
 ```cs
-Expression.SetReferenceParameter(“ChildVisual”, childVisual);
-Expression.SetReferenceParameter(“ParentVisual”, parentVisual);
+Expression.SetReferenceParameter("ChildVisual", childVisual);
+Expression.SetReferenceParameter("ParentVisual", parentVisual);
 ```
 
 ### Funciones auxiliares de expresión
@@ -244,7 +245,7 @@ Además de tener acceso a los operadores y parámetros de propiedad, también ti
 Aquí se ofrece un ejemplo más complejo de una cadena de expresión que usa la función auxiliar Clamp:
 
 ```cs
-Clamp((scroller.Offset.y * -1.0) – container.Offset.y, 0, container.Size.y – header.Size.y)
+Clamp((scroller.Offset.y * -1.0) - container.Offset.y, 0, container.Size.y - header.Size.y)
 ```
 
 ### Iniciar y detener la animación de expresión
@@ -264,14 +265,14 @@ _sharedProperties = _compositor.CreatePropertySet();
 Cuando hayas creado el conjunto de propiedades, puedes agregarle una propiedad y valor mediante uno de los métodos **Insert\*** del objeto [**CompositionPropertySet**](https://msdn.microsoft.com/library/windows/apps/Dn706772). Por ejemplo:
 
 ```cs
-_sharedProperties.InsertVector3(“NewOffset”, offset);
+_sharedProperties.InsertVector3("NewOffset", offset);
 ```
 
 Después de crear la animación de expresión, puedes hacer referencia a las propiedades del conjunto de propiedades establecido en la cadena de expresión mediante un parámetro de referencia. Por ejemplo:
 
 ```cs
-var expression = _compositor.CreateExpressionAnimation(“sharedProperties.NewOffset”);
-expression.SetReferenceParameter(“sharedProperties”, _sharedProperties);
+var expression = _compositor.CreateExpressionAnimation("sharedProperties.NewOffset");
+expression.SetReferenceParameter("sharedProperties", _sharedProperties);
 ```
 
 ### Fotogramas clave de expresión
@@ -291,7 +292,7 @@ Por ejemplo, en el siguiente fragmento de código se usa una combinación de fot
 
 ```cs
 var animation = _compositor.CreateScalarKeyFrameAnimation();
-animation.InsertExpressionKeyFrame(0.25, “VisualBOffset.X / VisualAOffset.Y”);
+animation.InsertExpressionKeyFrame(0.25, "VisualBOffset.X / VisualAOffset.Y");
 animation.InsertKeyFrame(1.00f, 0.8f);
 ```
 
@@ -305,7 +306,7 @@ En el lenguaje de expresión, es posible hacer referencia tanto al valor actual 
 Ejemplo del uso de un fotograma clave de expresión:
 
 ```cs
-animation.InsertExpressionKeyFrame(0.0f, “this.CurrentValue + delta”);
+animation.InsertExpressionKeyFrame(0.0f, "this.CurrentValue + delta");
 ```
 
 ### Expresiones condicionales
@@ -334,7 +335,7 @@ Por último, en la instrucción condicional se admiten las siguientes conjuncion
 En el siguiente fragmento de código se muestra un ejemplo del uso de instrucciones condicionales en una expresión:
 
 ```cs
-var expression = _compositor.CreateExpressionAnimation(“target.Offset.x > 50 ? 0.0f +   (target.Offset.x / parent.Offset.x) : 1.0f”);
+var expression = _compositor.CreateExpressionAnimation("target.Offset.x > 50 ? 0.0f +   (target.Offset.x / parent.Offset.x) : 1.0f");
 ```
 
  
@@ -346,6 +347,6 @@ var expression = _compositor.CreateExpressionAnimation(“target.Offset.x > 50 ?
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

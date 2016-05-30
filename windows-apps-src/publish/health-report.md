@@ -1,6 +1,7 @@
 ---
+author: jnHs
 Description: El informe Estado del panel del Centro de desarrollo de Windows te permite obtener los datos relacionados con el rendimiento y la calidad de la aplicación, incluidos los bloqueos y los eventos que no responden.
-title: informe Estado
+title: Informe Estado
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
 ---
 
@@ -9,7 +10,7 @@ ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
 
 El informe **Estado** del panel del Centro de desarrollo de Windows te permite obtener los datos relacionados con el rendimiento y la calidad de la aplicación, incluidos los bloqueos y los eventos que no responden. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Si corresponde, puedes ver seguimientos de la pila para una mayor depuración. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
-> **Nota:** Si ya habías publicado aplicaciones y habías visto datos de rendimiento anteriormente en los paneles previos, es posible que observes que se notifica un mayor número de bloqueos y eventos aquí. Esto se debe a que podemos incluir más datos en este informe para ofrecerle una perspectiva más completa.
+> **Nota**  Si ya habías publicado aplicaciones y habías visto datos de rendimiento anteriormente en los paneles previos, es posible que observes que se notifica un mayor número de bloqueos y eventos aquí. Esto se debe a que podemos incluir más datos en este informe para ofrecerle una perspectiva más completa.
 
 ## Aplicar filtros
 
@@ -58,6 +59,6 @@ Esta información se basa en un porcentaje de los eventos totales. En la parte s
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

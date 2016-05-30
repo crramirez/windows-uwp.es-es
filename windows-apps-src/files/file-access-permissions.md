@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: Permisos de acceso de archivos
 description: Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, las aplicaciones también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades.
@@ -14,7 +15,7 @@ Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de
 
 Al crear una aplicación nueva, puedes obtener acceso a las siguientes ubicaciones del sistema de archivos de manera predeterminada:
 
--   **Directorio de instalación de la aplicación**. Carpeta donde está instalada la aplicación en el sistema del usuario.
+-   **Directorio de instalación de la aplicación** Carpeta donde está instalada la aplicación en el sistema del usuario.
 
     Principalmente, existen dos formas de acceder a los archivos y carpetas del directorio de instalación de la aplicación:
 
@@ -97,7 +98,7 @@ Al crear una aplicación nueva, puedes obtener acceso a las siguientes ubicacion
 
     Sobra decir que también puedes tener acceso a los archivos y carpetas de un dispositivo extraíble llamando al selector de archivos (mediante [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) y [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881)), y permitiendo que el usuario escoja los archivos y carpetas a los que la aplicación puede tener acceso. En [Abrir archivos y carpetas con un selector](quickstart-using-file-and-folder-pickers.md) encontrarás más información sobre el uso del selector de archivos.
 
-    **Nota** Para obtener más información sobre el acceso a una tarjeta SD desde una aplicación de móvil, consulta [Acceso a la tarjeta SD](access-the-sd-card.md).
+    **Nota**  Para obtener más información sobre el acceso a una tarjeta SD desde una aplicación de móvil, consulta [Acceso a la tarjeta SD](access-the-sd-card.md).
 
      
 
@@ -121,7 +122,9 @@ Al crear una aplicación nueva, puedes obtener acceso a las siguientes ubicacion
         );
         ```
  
-        [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) se sobrecarga para que puedas especificar qué debe hacer el sistema en caso de que ya haya un archivo con el mismo nombre en la carpeta Descargas. Cuando estos métodos se completen, devuelven una clase [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa el archivo que se ha creado. Este archivo se llama `newFile` en el ejemplo.
+        [
+              **DownloadsFolder**
+            ](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) se sobrecarga para que puedas especificar qué debe hacer el sistema en caso de que ya haya un archivo con el mismo nombre en la carpeta Descargas. Cuando estos métodos se completen, devuelven una clase [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que representa el archivo que se ha creado. Este archivo se llama `newFile` en el ejemplo.
 
     -   Puedes crear una subcarpeta en la carpeta Descargas del usuario del siguiente modo:
         > [!div class="tabbedCodeSnippets"]
@@ -137,7 +140,9 @@ Al crear una aplicación nueva, puedes obtener acceso a las siguientes ubicacion
         );
         ```
  
-        [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) se sobrecarga para que puedas especificar qué debe hacer el sistema en caso de que ya haya una subcarpeta con el mismo nombre en la carpeta Descargas. Cuando estos métodos se completen, devuelven una clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representa la subcarpeta que se ha creado. Este archivo se llama `newFolder` en el ejemplo.
+        [
+              **DownloadsFolder**
+            ](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) se sobrecarga para que puedas especificar qué debe hacer el sistema en caso de que ya haya una subcarpeta con el mismo nombre en la carpeta Descargas. Cuando estos métodos se completen, devuelven una clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) que representa la subcarpeta que se ha creado. Este archivo se llama `newFolder` en el ejemplo.
 
     Si creas un archivo o carpeta en la carpeta Descargas, te recomendamos que agregues dicho elemento a la propiedad [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457), para que así la aplicación pueda acceder a él sin problemas.
 
@@ -160,6 +165,6 @@ En la siguiente tabla se incluyen otras ubicaciones a las que puedes tener acces
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

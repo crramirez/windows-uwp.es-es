@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Definir el objeto principal del juego
 description: Vamos a ver los detalles del objeto principal de la muestra de juego y cómo las reglas que implementa se traducen en interacciones con el mundo del juego.
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
@@ -92,7 +93,7 @@ Primero, revisemos los métodos internos definidos en **Simple3DGame**.
 
 Y los métodos privados:
 
--   **LoadSavedState** and **SaveState**. Carga y guarda el estado actual del juego, respectivamente.
+-   **LoadSavedState** y **SaveState**. Carga y guarda el estado actual del juego, respectivamente.
 -   **SaveHighScore** y **LoadHighScore**. Guarda y carga la puntuación más alta entre partidas, respectivamente.
 -   **InitializeAmmo**. Restablece el estado de cada objeto de esfera usado como munición a su estado original al inicio de cada ronda.
 -   **UpdateDynamics**. Se trata de un método importante, ya que actualiza todos los objetos del juego basándose en entrada de controles, física y rutinas de animación preestablecidas. Es el corazón de la interactividad que define el juego. Lo analizamos con más detalle en la sección sobre cómo [actualizar el juego](#update_game).
@@ -3619,6 +3620,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

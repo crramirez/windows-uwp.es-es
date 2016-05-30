@@ -1,7 +1,8 @@
 ---
+author: mcleblanc
 ms.assetid: 83b4be37-6613-4d00-a48a-0451a24a30fb
 title: Enlace de datos
-description: El enlace de datos es una forma de que la interfaz de usuario de la aplicación muestre los datos y, opcionalmente, se mantenga sincronizada con dichos datos.
+description: El enlace de datos es una forma para que la interfaz de usuario de la aplicación muestre los datos y, opcionalmente, se mantenga sincronizada con dichos datos.
 ---
 
 # Enlace de datos
@@ -19,6 +20,6 @@ El enlace de datos es una forma para que la interfaz de usuario de la aplicació
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

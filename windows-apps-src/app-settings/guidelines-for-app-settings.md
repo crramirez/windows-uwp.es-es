@@ -1,23 +1,24 @@
 ---
+author: mijacobs
 Description: En este artículo se describen los procedimientos recomendados para crear y mostrar la configuración de aplicaciones.
-title: Directrices para la configuración de la aplicación
+title: Directrices para la configuración de una aplicación
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
 template: detail.hbs
 ---
 
 
-# Directrices para la configuración de la aplicación
+# Directrices para la configuración de una aplicación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-La configuración es la parte personalizable por el usuario de la aplicación y se encuentra en la página de configuración de la aplicación. Por ejemplo, la configuración de la aplicación en una aplicación del lector de noticias puede permitir al usuario especificar qué fuentes de noticias mostrar o cuántas columnas mostrar en la pantalla, mientras que la configuración de la aplicación meteorológica podría permitir al usuario elegir entre Celsius y Fahrenheit como unidad predeterminada de medida. En este artículo se describen los procedimientos recomendados para crear y mostrar la configuración de aplicaciones.
+
+La configuración es la parte de la aplicación que el usuario puede personalizar y se encuentra en la página de configuración de la aplicación. Por ejemplo, la configuración de la aplicación en una aplicación del lector de noticias puede permitir al usuario especificar qué fuentes de noticias mostrar o cuántas columnas mostrar en la pantalla, mientras que la configuración de la aplicación meteorológica podría permitir al usuario elegir entre Celsius y Fahrenheit como unidad predeterminada de medida. En este artículo se describen los procedimientos recomendados para crear y mostrar la configuración de aplicaciones.
 
 ![ejemplo de un panel de configuración](images/app-settings.png)
 
-## <span id="Should_I_include_a_settings_page_in_my_app_"></span><span id="should_i_include_a_settings_page_in_my_app_"></span><span id="SHOULD_I_INCLUDE_A_SETTINGS_PAGE_IN_MY_APP_"></span>¿Debería incluir un página de configuración en mi aplicación?
+## <span id="Should_I_include_a_settings_page_in_my_app_"></span><span id="should_i_include_a_settings_page_in_my_app_"></span><span id="SHOULD_I_INCLUDE_A_SETTINGS_PAGE_IN_MY_APP_"></span>¿Debo incluir una página de configuración en mi aplicación?
 
 Estos son ejemplos de opciones de la aplicación que pertenecen a una página de configuración de la aplicación: 
 
@@ -79,7 +80,7 @@ Móvil:
 
 ![diseño de la página de configuración de la aplicación en el teléfono](images/appsettings-layout-navpane-mobile.png)
 
-## <span id="_About__section_and__Give_feedback__button"></span><span id="_about__section_and__give_feedback__button"></span><span id="_ABOUT__SECTION_AND__GIVE_FEEDBACK__BUTTON"></span>"Sección "Acerca de" y botón "Enviar comentarios"
+## <span id="_About__section_and__Give_feedback__button"></span><span id="_about__section_and__give_feedback__button"></span><span id="_ABOUT__SECTION_AND__GIVE_FEEDBACK__BUTTON"></span>Sección "Acerca de" y botón "Enviar comentarios"
 
 
 Si necesitas una sección de "Acerca de esta aplicación" en la aplicación, crea una página de configuración de la aplicación específica. Si quieres usar un botón "Enviar comentarios", colócalo en la parte inferior de la página "Acerca de esta aplicación".
@@ -104,7 +105,7 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
 -   Combina las opciones menos usadas en una sola entrada para que las opciones más habituales puedan tener su propia entrada. Coloca el contenido o los vínculos que solo contienen información en la opción de configuración "Acerca de".
 -   No dupliques la funcionalidad en el panel "Permisos". Windows proporciona este panel de forma predeterminada y no puedes modificarlo.
 
-## <span id="add_settings_to_flyouts"></span><span id="ADD_SETTINGS_TO_FLYOUTS"></span> Agregar contenido de configuración a los controles flotantes de configuración
+## <span id="add_settings_to_flyouts"></span><span id="ADD_SETTINGS_TO_FLYOUTS"></span> Agregar contenido de configuración a los controles flotantes Configuración
 
 
 -   Presenta el contenido de arriba a abajo en una sola columna, desplazable si fuera necesario. Limita el desplazamiento a un máximo del doble del alto de pantalla.
@@ -113,8 +114,8 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
     -   [Modificadores para alternar](../controls-and-patterns/toggles.md): para permitir que los usuarios activen o desactiven valores.
     -   [Botones de radio](../controls-and-patterns/radio-button.md): para permitir a los usuarios elegir un elemento de un conjunto de hasta 5 opciones relacionadas que sean mutuamente excluyentes.
     -   [Cuadro de entrada de texto](../controls-and-patterns/text-block.md): para permitir que los usuarios escriban texto. Usa el tipo de cuadro de texto que corresponda al tipo de texto que obtienes del usuario, como correo electrónico o contraseña.
-    -   [Hipervínculos](../controls-and-patterns/hyperlinks.md): para llevar al usuario a otra página dentro de la aplicación o a un sitio web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
-    -   [Botones](../controls-and-patterns/buttons.md): para permitir que los usuarios inicien una acción inmediata sin descartar el control flotante de configuración actual.
+    -   [Hipervínculos](../controls-and-patterns/hyperlinks.md): para llevar a los usuarios a otra página dentro de la aplicación o a un sitio web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
+    -   [Botones](../controls-and-patterns/buttons.md): para permitir que los usuarios inicien una acción inmediata sin descartar el control flotante Configuración actual.
 -   Agrega un mensaje descriptivo si se desactiva uno de los controles. Coloca este mensaje por encima del control deshabilitado.
 -   Anima controles y contenido como un solo bloque después de que se hayan animado el control flotante de configuración y el encabezado. Anima el contenido mediante las animaciones [**enterPage**](https://msdn.microsoft.com/library/windows/apps/br212672) o [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288), con un desplazamiento izquierdo de 100 píxeles.
 -   Usa encabezados de sección, párrafos y etiquetas para ayudar a organizar y aclarar el contenido, si fuera necesario.
@@ -127,15 +128,18 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
 ## <span id="related_topics"></span>Temas relacionados
 
 * [Conceptos básicos del diseño de comandos](https://msdn.microsoft.com/library/windows/apps/dn958433)
-* [Directrices sobre los controles de progreso](https://msdn.microsoft.com/library/windows/apps/hh465469)
-**Para desarrolladores (XAML)**
+* [Directrices para controles de progreso](https://msdn.microsoft.com/library/windows/apps/hh465469)
+            
+          
+            **Para desarrolladores (XAML)**
 * [Almacenar y recuperar datos de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt299098)
-* [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
-�
+* [
+              **EntranceThemeTransition**
+            ](https://msdn.microsoft.com/library/windows/apps/br210288) �
 
 �
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,5 +1,6 @@
 ---
-description: Conoce los comandos de movimiento y dibujo (un minilenguaje) que podrás usar para especificar geometrías de ruta de acceso como un valor de atributo XAML.
+author: jwmsft
+description: Conoce los comandos de movimiento y dibujo (un minilenguaje) que podrás usar para especificar geometrías de rutas de acceso como un valor de atributo XAML.
 title: Sintaxis de comandos de movimiento y dibujo
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
 ---
@@ -16,12 +17,14 @@ La sintaxis de comandos de movimiento y dibujo es compatible con un convertidor 
 
 Hay dos propiedades en Windows Runtime que pueden usar una cadena que represente comandos de movimiento y dibujo: [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356) y [**PathIcon.Data**](https://msdn.microsoft.com/library/windows/apps/dn252723). Si especificas comandos de movimiento y dibujo para establecer una de estas propiedades, normalmente la especificarás como un valor de atributo XAML junto con otros atributos obligatorios de ese elemento. Sin entrar en más detalles, este es el aspecto que tiene:
 
-```xaml
+```xml
 <Path x:Name="Arrow" Fill="White" Height="11" Width="9.67"
   Data="M4.12,0 L9.67,5.47 L4.12,10.94 L0,10.88 L5.56,5.47 L0,0.06" />
 ```
 
-[**PathGeometry.Figures**](https://msdn.microsoft.com/library/windows/apps/br210169) también puede usar comandos de movimiento y dibujo. Asimismo, puedes combinar un objeto [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) que use comandos de movimiento y dibujo con otros tipos de [**Geometry**](https://msdn.microsoft.com/library/windows/apps/br210041) en un objeto [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/br210057), que luego puedes usar como valor de [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). De todos modos, esto no es tan común como usar comandos de movimiento y dibujo para los datos definidos del atributo.
+[
+              **PathGeometry.Figures**
+            ](https://msdn.microsoft.com/library/windows/apps/br210169) también puede usar comandos de movimiento y dibujo. Asimismo, puedes combinar un objeto [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) que use comandos de movimiento y dibujo con otros tipos de [**Geometry**](https://msdn.microsoft.com/library/windows/apps/br210041) en un objeto [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/br210057), que luego puedes usar como valor de [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). De todos modos, esto no es tan común como usar comandos de movimiento y dibujo para los datos definidos del atributo.
 
 ## Usar comandos de movimiento y dibujo y usar la clase **PathGeometry**
 
@@ -43,7 +46,17 @@ Estas son las reglas generales de esta sintaxis:
 -   Cada comando, excepto el de cierre, suele ir seguido de uno o varios números.
 -   Si un comando tiene varios números, sepáralos con comas o espacios.
 
-**\[**_fillRule_**\]** _moveCommand_ _drawCommand_ **\[**_drawCommand_**\*\]** **\[**_closeCommand_**\]**
+**\[**
+            _fillRule_
+            **\]**
+            _moveCommand_
+            _drawCommand_
+            **\[**
+            _drawCommand_
+            **\*\]**
+            **\[**
+            _closeCommand_
+            **\]**
 
 Muchos de los comandos de dibujo usan puntos en los que puedes proporcionar un valor _x,y_. Cuando veas un marcador de posición \*_points_, puedes dar por supuesto que el valor _x,y_ de un punto tendrá dos valores decimales.
 
@@ -71,7 +84,7 @@ Especifica el punto de inicio de una nueva figura.
 
 Una **M** mayúscula indica que *startPoint* es una coordenada absoluta; en cambio, una **m** minúscula indica que *startPoint* es el desplazamiento de un punto anterior o (0,0) si no había punto anterior.
 
-**Nota** Se pueden especificar varios puntos después del comando de movimiento. Se dibuja una línea por esos puntos como si especificaras el comando de línea. Pero no te recomendamos seguir este estilo, mejor usa el comando de línea específico para ello.
+**Nota**  Se pueden especificar varios puntos después del comando de movimiento. Se dibuja una línea por esos puntos como si especificaras el comando de línea. Pero no te recomendamos seguir este estilo, mejor usa el comando de línea específico para ello.
 
 **Comandos de dibujo**
 
@@ -123,7 +136,11 @@ Crea una curva Bézier cúbica entre el punto actual y el extremo especificado, 
 
 | Sintaxis |
 |--------|
-| `C ` *controlPoint1* *controlPoint2* *endPoint* <br/> - o bien - <br/> `c ` *controlPoint1* *controlPoint2* *endPoint* |
+| `C ` *controlPoint1*
+            *controlPoint2*
+            *endPoint* <br/> - o bien - <br/> `c ` *controlPoint1*
+            *controlPoint2*
+            *endPoint* |
 
 | Término | Descripción |
 |------|-------------|
@@ -150,7 +167,8 @@ Crea una curva Bézier cúbica entre el punto actual y el extremo especificado. 
 
 | Sintaxis |
 |--------|
-| `S` *controlPoint2* *endPoint* <br/> - o bien - <br/>`s` *controlPoint2 endPoint* |
+| `S` *controlPoint2*
+            *endPoint* <br/> - o bien - <br/>`s` *controlPoint2 endPoint* |
 
 | Término | Descripción |
 |------|-------------|
@@ -163,7 +181,9 @@ Crea una curva Bézier cuadrática entre el punto actual y el extremo especifica
 
 | Sintaxis |
 |--------|
-| `T` *controlPoint* *endPoint* <br/> - o bien - <br/> `t` *controlPoint* *endPoint* |
+| `T` *controlPoint*
+            *endPoint* <br/> - o bien - <br/> `t` *controlPoint*
+            *endPoint* |
 
 | Término | Descripción |
 |------|-------------|
@@ -176,11 +196,15 @@ Crea un arco elíptico entre el punto actual y el extremo especificado. Define e
 
 | Sintaxis |
 |--------|
-| `A ` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* <br/> - o bien - <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
+| `A ` *size*
+            *rotationAngle*
+            *isLargeArcFlag*
+            *sweepDirectionFlag*
+            *endPoint* <br/> - o bien - <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
 
 | Término | Descripción |
 |------|-------------|
-| *size* | [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)<br/>Es el radio x y el radio y del arco. |
+| *size* | [**Tamaño**](https://msdn.microsoft.com/library/windows/apps/br225995)<br/>Es el radio x y el radio y del arco. |
 | *rotationAngle* | [**Double**](T:System.Double) <br/> Es la rotación de la elipse, en grados. |
 | *isLargeArcFlag* | Se establece en 1 si el arco debe ser de 180 grados o mayor; de lo contrario, se establece en 0. |
 | *sweepDirectionFlag* | Se establece en 1 si el arco se dibuja en una dirección de ángulo positivo; de lo contrario, se establece en 0. |
@@ -200,7 +224,8 @@ Describe las coordenadas x e y de un punto. Consulta también [**Point**](https:
 
 | Sintaxis |
 |--------|
-| *x*,*y*<br/> - o bien - <br/>*x* *y* |
+| *x*,*y*<br/> - o bien - <br/>*x*
+            *y* |
 
 | Término | Descripción |
 |------|-------------|
@@ -234,6 +259,6 @@ Asimismo, hay disponibles complementos o exportadores de otras herramientas que 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

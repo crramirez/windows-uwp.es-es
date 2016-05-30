@@ -1,6 +1,7 @@
 ---
+author: jnHs
 Description: Puedes proporcionar información adicional sobre la aplicación en la sección Declaraciones de la aplicación de la página Propiedades de la aplicación durante el proceso de envío.
-título: Declaraciones de la aplicación
+title: Declaraciones de la aplicación
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 ---
 
@@ -61,6 +62,6 @@ Si quieres impedir que los datos de la aplicación se incluyan en copias de segu
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

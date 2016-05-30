@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
 description: En este artículo se muestra cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows.
 title: Transmitir contenido multimedia
@@ -19,7 +20,7 @@ Para permitir al usuario que abra un archivo para reproducir con el control de *
 
 [!code-cs[BuiltInCastingUsing](./code/MediaCastingWin10/cs/MainPage.xaml.cs#SnippetBuiltInCastingUsing)]
 
-En el archivo XAML de la aplicación, agrega una clase **MediaElement** y configura [**AreTransportControlsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn298977) como verdadero.
+En el archivo XAML de la aplicación, agrega una clase **MediaElement** y configura [**AreTransportControlsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn298977) como true.
 
 [!code-xml[MediaElement](./code/MediaCastingWin10/cs/MainPage.xaml#SnippetMediaElement)]
 
@@ -116,7 +117,7 @@ Cuando el observador de dispositivo acaba de detenerse, se genera el evento Stop
 
 [!code-cs[WatcherStopped](./code/MediaCastingWin10/cs/MainPage.xaml.cs#SnippetWatcherStopped)]
 
-Cuando el usuario selecciona uno de los dispositivos de conversión en el cuadro de lista, el evento [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/br209776) se genera. Es dentro de este controlador que se creará la conexión de conversión y se iniciará la conversión.
+Cuando el usuario selecciona uno de los dispositivos de conversión en el cuadro de lista, se genera el evento [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/br209776). Es dentro de este controlador que se creará la conexión de conversión y se iniciará la conversión.
 
 Primero, asegúrate de que el observador de dispositivo se detenga para que la enumeración de dispositivos no interfiera con la conversión de multimedia. Crea una conexión de conversión llamando a [**CreateCastingConnection**](https://msdn.microsoft.com/library/windows/apps/dn972547) en el objeto **CastingDevice** seleccionado por el usuario. Añade los controladores de eventos para los eventos [**StateChanged**](https://msdn.microsoft.com/library/windows/apps/dn972523) y [**ErrorOccurred**](https://msdn.microsoft.com/library/windows/apps/dn972519) .
 
@@ -150,6 +151,6 @@ Por último, implementa el controlador para el botón Desconectar. Detén la con
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

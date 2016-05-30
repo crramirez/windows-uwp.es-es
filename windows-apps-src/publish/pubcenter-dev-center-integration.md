@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Se ha integrado Microsoft Advertising con pubCenter en el Centro de desarrollo de Windows.
 title: Integración del Centro de desarrollo y pubCenter
 ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
@@ -9,7 +10,7 @@ ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
 
 **Importante**
 
--   A partir del 1 de abril de 2016, las ganancias de Microsoft Advertising se abonarán en la cuenta de pago que configuraste en el Centro de desarrollo. Ahora debes administrar las actualizaciones o los cambios de tu cuenta de pago y tu perfil fiscal solo en el Centro de desarrollo. Asegúrate de realizar las actualizaciones necesarias antes del 31 de marzo de 2016. Para más información, consulta [Consolidación del perfil fiscal y la cuenta de pago del Centro de desarrollo y pubCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
+-   A partir del 1 de abril de 2016, las ganancias de Microsoft Advertising se abonarán en la cuenta de pago que configuraste en el Centro de desarrollo. Ahora debes administrar las actualizaciones o los cambios de tu cuenta de pago y tu perfil fiscal solo en el Centro de desarrollo. Para obtener más información, consulta [Consolidación del perfil fiscal y la cuenta de pago del Centro de desarrollo y pubCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
 -   Para seguir recibiendo los pagos después del 1 de diciembre de 2015, [tu cuenta de pubCenter debe estar vinculada a tu cuenta del Centro de desarrollo](#scenario-3-you-have-dev-center-and-pubcenter-accounts-registered-with-different-microsoft-accounts).
 -   El historial de pagos ya no se actualizará en pubCenter. Para revisar el historial de pagos de ahora en adelante, [vincula tu cuenta de pubCenter a tu cuenta del Centro de desarrollo](#scenario-3-you-have-dev-center-and-pubcenter-accounts-registered-with-different-microsoft-accounts) y visita la página [Resumen de pago](payout-summary.md) del panel del Centro de desarrollo.
 
@@ -34,7 +35,7 @@ Puede que tengas varias cuentas en el Centro de desarrollo y pubCenter y tu expe
 -   Los informes de pago ahora están disponibles en tu cuenta del Centro de desarrollo. Para obtener más información sobre los informes de pago en el Centro de desarrollo, consulta el tema [Resumen de pagos](payout-summary.md).
 -   Todas las campañas de promoción de la aplicación ahora están asociadas con la cuenta del Centro de desarrollo y puedes administrarlas directamente desde el Centro de desarrollo.
 
-> **Nota**  Ya no podrás crear unidades de anuncio ni campañas de promoción de la aplicación nuevas en pubCenter. Para obtener información sobre cómo crear unidades de anuncios en el Centro de desarrollo, consulta [Rentabilizar con anuncios](monetize-with-ads.md). Para obtener información sobre cómo crear campañas de promoción de la aplicación en el Centro de desarrollo, consulta el tema [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md).
+> **Nota** Ya no podrás crear unidades de anuncios ni campañas de promoción de la aplicación nuevas en pubCenter. Para obtener información sobre cómo crear unidades de anuncios en el Centro de desarrollo, consulta [Rentabilizar con anuncios](monetize-with-ads.md). Para obtener información sobre cómo crear campañas de promoción de la aplicación en el Centro de desarrollo, consulta el tema [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md).
 
 ## Escenario n.º 2: Tienes una cuenta del Centro de desarrollo y una cuenta de pubCenter con la misma cuenta de Microsoft pero registradas en distintos países o regiones
 
@@ -52,7 +53,7 @@ Puede que tengas varias cuentas en el Centro de desarrollo y pubCenter y tu expe
 -   Los informes de pago ahora están disponibles en tu cuenta del Centro de desarrollo. Para obtener más información sobre los informes de pago en el Centro de desarrollo, consulta el tema [Resumen de pagos](payout-summary.md).
 -   Todas las campañas de promoción de la aplicación ahora están asociadas con la cuenta del Centro de desarrollo y puedes administrarlas directamente desde el Centro de desarrollo.
 
-> **Nota**  Ya no podrás crear unidades de anuncio ni campañas de promoción de la aplicación nuevas en pubCenter. Para obtener información sobre cómo crear unidades de anuncios en el Centro de desarrollo, consulta [Rentabilizar con anuncios](monetize-with-ads.md). Para obtener información sobre cómo crear campañas de promoción de la aplicación en el Centro de desarrollo, consulta el tema [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md).
+> **Nota** Ya no podrás crear unidades de anuncios ni campañas de promoción de la aplicación nuevas en pubCenter. Para obtener información sobre cómo crear unidades de anuncios en el Centro de desarrollo, consulta [Rentabilizar con anuncios](monetize-with-ads.md). Para obtener información sobre cómo crear campañas de promoción de la aplicación en el Centro de desarrollo, consulta el tema [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md).
 
 ## Escenario n.º 3: Tienes cuentas de pubCenter y el Centro de desarrollo registradas con diferentes cuentas de Microsoft
 
@@ -64,7 +65,7 @@ Puede que tengas varias cuentas en el Centro de desarrollo y pubCenter y tu expe
 1.  Inicia sesión en la cuenta de pubCenter que quieres vincular.
 2.  En la página **Mi información** de esta cuenta, encontrarás un **código de vinculación de cuenta de pubCenter**. Ten este código disponible.
 
-    > **Nota**  Se genera un código de vinculación de cuenta nuevo cada 60 minutos.
+    > **Nota** Se genera un código de vinculación de cuenta nuevo cada 60 minutos.
 
 3.  Cierra la sesión en tu cuenta de pubCenter.
 4.  Inicia sesión en tu [cuenta del Centro de desarrollo](https://dev.windows.com/).
@@ -72,7 +73,7 @@ Puede que tengas varias cuentas en el Centro de desarrollo y pubCenter y tu expe
 6.  Escribe la dirección de correo electrónico asociada a la cuenta de pubCenter y el código de vinculación de cuenta.
 7.  Haz clic en **Vincular cuenta** y la cuenta de pubCenter se vinculará a tu cuenta del Centro de desarrollo.
 
-    > **Nota**  Puedes vincular una o varias cuentas de pubCenter a tu cuenta del Centro de desarrollo. Sin embargo, cada una de tus cuentas de pubCenter pueden vincularse solo a una cuenta del Centro de desarrollo.
+    > **Nota** Puedes vincular una o varias cuentas de pubCenter a tu cuenta del Centro de desarrollo. Sin embargo, cada una de tus cuentas de pubCenter pueden vincularse solo a una cuenta del Centro de desarrollo.
 
 Después de vincular la cuenta de pubCenter a una cuenta del Centro de desarrollo:
 
@@ -85,7 +86,7 @@ Después de vincular la cuenta de pubCenter a una cuenta del Centro de desarroll
 -   Los informes de pago de pubCenter ahora están disponibles en tu cuenta del Centro de desarrollo. Para obtener más información sobre los informes de pago en el Centro de desarrollo, consulta el tema [Resumen de pagos](payout-summary.md).
 -   Todas las campañas de promoción de la aplicación definidas en pubCenter se pausarán automáticamente. De ahora en adelante, crea las campañas nuevas en el Centro de desarrollo.
 
-> **Nota**  Ya no podrás crear unidades de anuncio ni campañas de promoción de la aplicación nuevas en pubCenter. Para obtener información sobre cómo crear unidades de anuncios en el Centro de desarrollo, consulta [Rentabilizar con anuncios](monetize-with-ads.md). Para obtener información sobre cómo crear campañas de promoción de la aplicación en el Centro de desarrollo, consulta el tema [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md).
+> **Nota** Ya no podrás crear unidades de anuncios ni campañas de promoción de la aplicación nuevas en pubCenter. Para obtener información sobre cómo crear unidades de anuncios en el Centro de desarrollo, consulta [Rentabilizar con anuncios](monetize-with-ads.md). Para obtener información sobre cómo crear campañas de promoción de la aplicación en el Centro de desarrollo, consulta el tema [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md).
 
 ## Notas y recomendaciones adicionales
 
@@ -113,7 +114,7 @@ Ya no se admite la creación de nuevas unidades de anuncios en pubCenter. Si has
 
 ### ¿Cómo puedo crear unidades de anuncios en el Centro de desarrollo?
 
-En la página de la aplicación en el Centro de desarrollo, haz clic en **Monetización** &gt; **Monetizar con anuncios**. Para obtener más información sobre la creación de unidades de anuncios en el Centro de desarrollo, consulta [Rentabilizar con anuncios](monetize-with-ads.md).
+En la página de la aplicación en el Centro de desarrollo, haz clic en **Monetización**&gt;**Monetizar con anuncios**. Para obtener más información sobre la creación de unidades de anuncios en el Centro de desarrollo, consulta [Rentabilizar con anuncios](monetize-with-ads.md).
 
 ### He instalado la versión más reciente de la extensión del mediador de anuncios y he agregado el control de mediador de anuncios con mi aplicación. ¿Necesito ir a pubCenter también y crear una nueva unidad de anuncio?
 
@@ -121,7 +122,7 @@ Si estás usando la versión más reciente de la [extensión de mediador de anun
 
 ### Sigo usando una versión anterior del control de Ad Mediator en mi aplicación y necesito obtener un nuevo identificador de la unidad de anuncio. ¿Cómo puedo crear unidades de anuncios?
 
-Puedes crear una nueva unidad de anuncio para la aplicación en el panel del Centro de desarrollo. En la página de la aplicación en el Centro de desarrollo, haz clic en **Monetización** &gt; **Monetizar con anuncios**. Para obtener más información sobre la creación de unidades de anuncios en el Centro de desarrollo, consulta [Rentabilizar con anuncios](monetize-with-ads.md).
+Puedes crear una nueva unidad de anuncio para la aplicación en el panel del Centro de desarrollo. En la página de la aplicación en el Centro de desarrollo, haz clic en **Monetización**&gt;**Monetizar con anuncios**. Para obtener más información sobre la creación de unidades de anuncios en el Centro de desarrollo, consulta [Rentabilizar con anuncios](monetize-with-ads.md).
 
 ### Mis unidades de anuncios se han creado automáticamente porque he usado el control de Ad Mediator y he confirmado que se sirvan anuncios. También he creado manualmente algunas otras unidades de anuncios desde el Centro de desarrollo. ¿Tengo que hacer algo más para recibir el pago de las ganancias por estas unidades de anuncios?
 
@@ -133,11 +134,11 @@ Solo podrás crear campañas de promoción de aplicaciones en el Centro de desar
 
 ### ¿Cómo creo campañas de promoción de aplicaciones en el Centro de desarrollo?
 
-En la página de la aplicación del Centro de desarrollo, haz clic en **Monetización** &gt; **Promocionar la aplicación**. Para obtener más información sobre la creación de campañas de anuncios para tus aplicaciones en el Centro de desarrollo, consulta el tema [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md).
+En la página de la aplicación del Centro de desarrollo, haz clic en **Monetización**&gt;**Promocionar la aplicación**. Para obtener más información sobre la creación de campañas de anuncios para tus aplicaciones en el Centro de desarrollo, consulta el tema [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md).
 
 ### ¿Dónde puedo ver los datos de rendimiento en el Centro de desarrollo?
 
-En la página de la aplicación del Centro de desarrollo, haz clic en **Análisis** &gt; **Rendimiento de la publicidad de Microsoft**. Para obtener más información, consulte [Informe de rendimiento de publicidad](advertising-performance-report.md).
+En la página de la aplicación del Centro de desarrollo, haz clic en **Análisis**&gt;**Rendimiento de la publicidad de Microsoft**. Para obtener más información, consulta [Informe de rendimiento de la publicidad](advertising-performance-report.md).
 
 ### ¿Cómo administro mi método de pago y los detalles de impuestos en el Centro de desarrollo?
 
@@ -180,6 +181,6 @@ Sí, podría haber una ligera diferencia en los datos mostrados en los informes 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

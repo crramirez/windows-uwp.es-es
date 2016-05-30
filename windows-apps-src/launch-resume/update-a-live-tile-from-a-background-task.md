@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Actualizar un icono dinámico desde una tarea en segundo plano
 description: Usa una tarea en segundo plano para actualizar el icono dinámico de tu aplicación con contenido actualizado.
 Search.SourceType: Video
@@ -29,8 +30,8 @@ Este vídeo te muestra cómo agregar iconos dinámicos a tus aplicaciones.
 Para habilitar un icono dinámico para tu aplicación, agrega un nuevo proyecto de componente de Windows en tiempo de ejecución a tu solución. Este es un ensamblado independiente que el sistema operativo carga y ejecuta en segundo plano cuando un usuario instala tu aplicación.
 
 1.  En el Explorador de soluciones, haz clic con el botón secundario en la solución, elige **Agregar** y haz clic o pulsa en **Nuevo proyecto**.
-2.  En el diálogo **Agregar nuevo proyecto** , selecciona la plantilla **Componente de Windows en tiempo de ejecución** en la sección **Visual C# &gt; Tienda Windows** .
-3.  Asigna el nombre BackgroundTasks al proyecto y haz clic o presiona en **Aceptar**. Microsoft Visual Studio agrega el nuevo proyecto a la solución.
+2.  En el cuadro de diálogo **Agregar nuevo proyecto**, selecciona la plantilla **Componente de Windows en tiempo de ejecución** en la sección **Visual C# &gt; Tienda Windows**.
+3.  Asigna el nombre BackgroundTasks al proyecto y haz clic o pulsa **Aceptar**. Microsoft Visual Studio agrega el nuevo proyecto a la solución.
 4.  En el proyecto principal, agrega una referencia al proyecto BackgroundTasks.
 
 ## Implementar la tarea en segundo plano
@@ -149,7 +150,7 @@ Para configurar el manifiesto del paquete, ábrelo y agrégale una nueva declara
 6.  Haz clic o pulsa en la pestaña **IU de la aplicación**.
 7.  Establece **Notificaciones de pantallas de bloqueo** en **Distintivo y texto de imagen**.
 8.  Establece una ruta de acceso en un icono de 24 x 24 píxeles en el campo **Logotipo del distintivo** .
-    **Importante**  Este icono debe usar píxeles transparentes y monocromáticos únicamente.
+    **Importante** Este icono debe usar píxeles transparentes y monocromáticos únicamente.
 9.  En el campo **Logotipo pequeño**, establece una ruta de acceso en un icono de 30 x 30 píxeles.
 10. En el campo **Logotipo ancho** , establece una ruta de acceso a un icono de 310 x 150 píxeles.
 
@@ -158,7 +159,7 @@ Para configurar el manifiesto del paquete, ábrelo y agrégale una nueva declara
 
 Crea un [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) para registrar tu tarea.
 
-> **Nota**  A partir de Windows 8.1, los parámetros de registro de tareas en segundo plano se validan en el momento de realizar el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. La aplicación debe poder enfrentarse a los escenarios en que se produce un error en el registro de tareas en segundo plano. Por ejemplo, usa una instrucción condicional para comprobar si hay errores de registro y después vuelve a probar el registro con errores con valores de parámetros diferentes.
+> **Nota** A partir de Windows 8.1, los parámetros de registro de tareas en segundo plano se validan en el momento de realizar el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. La aplicación debe poder enfrentarse a los escenarios en que se produce un error en el registro de tareas en segundo plano. Por ejemplo, usa una instrucción condicional para comprobar si hay errores de registro y después vuelve a probar el registro con errores con valores de parámetros diferentes.
  
 
 En la página principal de tu aplicación, agrega el método **RegisterBackgroundTask** y llámalo en el controlador de eventos **OnNavigatedTo**.
@@ -241,13 +242,13 @@ namespace ContosoApp
 Para depurar la tarea en segundo plano, establece un punto de interrupción en el método Run de la tarea. En la barra de herramientas **Ubicación de depuración**, selecciona tu tarea en segundo plano. Esto hace que el sistema llame al método Run inmediatamente.
 
 1.  Establece un punto de interrupción en el método Run de la tarea.
-2.  Presiona F5 o pulsa en **Depurar &gt; Iniciar depuración** para implementar y ejecutar la aplicación.
+2.  Presiona F5 o pulsa **Depurar &gt; Iniciar depuración** para implementar y ejecutar la aplicación.
 3.  Una vez iniciada la aplicación, vuelve a Visual Studio.
-4.  Asegúrate de que la barra de herramientas **Ubicación de depuración** aparezca visible. Se encuentra en el menú **Ver &gt; barras de herramientas** .
+4.  Asegúrate de que la barra de herramientas **Ubicación de depuración** aparezca visible. Se encuentra en el menú **Ver &gt; Barras de herramientas**.
 5.  En la barra de herramientas **Ubicación de depuración** , haz clic en la lista desplegable **Suspender** y selecciona **BlogFeedBackgroundTask**.
 6.  Visual Studio suspende la ejecución en el punto de interrupción.
-7.  Presiona F5 o pulsa en **Depurar &gt; Continuar** para continuar con la ejecución de la aplicación.
-8.  Presiona Mayús+F5 o pulsa en **Depurar &gt; Detener depuración** para detener la depuración.
+7.  Presiona F5 o pulsa **Depurar &gt; Continuar** para continuar con la ejecución de la aplicación.
+8.  Presiona Mayús+F5 o pulsa **Depurar &gt; Detener depuración** para detener la depuración.
 9.  Regresa al icono de la aplicación en la pantalla Inicio. Tras unos pocos segundos, aparecerán notificaciones de icono en el icono de tu aplicación.
 
 ## Temas relacionados
@@ -267,6 +268,6 @@ Para depurar la tarea en segundo plano, establece un punto de interrupción en e
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

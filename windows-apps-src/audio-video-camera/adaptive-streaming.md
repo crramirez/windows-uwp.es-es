@@ -1,6 +1,7 @@
 ---
+author: drewbatgit
 ms.assetid: AE98C22B-A071-4206-ABBB-C0F0FB7EF33C
-description: En este artículo se describe el proceso para agregar la reproducción de contenido multimedia de streaming adaptable a las aplicaciones para Plataforma universal de Windows (UWP). Esta característica admite actualmente la reproducción de contenido de HTTP Live Streaming (HLS) y Dynamic Adaptive Streaming over HTTP (DASH).
+description: En este artículo se describe cómo agregar la reproducción de contenido multimedia de streaming adaptable a las aplicaciones para la Plataforma universal de Windows (UWP). Actualmente, esta característica admite la reproducción de contenido HTTP Live Streaming (HLS) y Dynamic Adaptive Streaming over HTTP (DASH).
 title: Streaming adaptable
 ---
 
@@ -12,11 +13,11 @@ Este artículo describe cómo agregar la reproducción de contenido multimedia d
 
 ## Streaming adaptable simple con MediaElement
 
-Para mostrar streaming adaptable multimedia en una aplicación basada en XAML, agrega un control [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) a la página.
+Para mostrar contenido multimedia de streaming adaptable en una aplicación basada en XAML, agrega un control [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) a la página.
 
 [!code-xml[MediaElementXAML](./code/AdaptiveStreaming_Win10/cs/MainPage.xaml#SnippetMediaElementXAML)]
 
-Establece la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br227420) del control **MediaElement** en el URI de un archivo de manifiesto de DASH o HLS.
+Define la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br227420) del control **MediaElement** en el URI de un archivo de manifiesto DASH o HLS.
 
 [!code-cs[ManifestSource](./code/AdaptiveStreaming_Win10/cs/MainPage.xaml.cs#SnippetManifestSource)]
 
@@ -32,15 +33,15 @@ Inicializa el objeto **AdaptiveMediaSource** con el URI de un archivo de manifie
 
 [!code-cs[InitializeAMS](./code/AdaptiveStreaming_Win10/cs/MainPage.xaml.cs#SnippetInitializeAMS)]
 
-Si necesitas establecer encabezados HTTP personalizados para obtener el archivo de manifiesto, puedes crear un objeto [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639), establecer los encabezados deseados y luego pasar el objeto a la sobrecarga de **CreateFromUriAsync**.
+Si necesitas definir encabezados HTTP personalizados para obtener el archivo de manifiesto, puedes crear un objeto [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639), definir los encabezados deseados y, a continuación, pasar el objeto a la sobrecarga de **CreateFromUriAsync**.
 
 [!code-cs[InitializeAMSWithHttpClient](./code/AdaptiveStreaming_Win10/cs/MainPage.xaml.cs#SnippetInitializeAMSWithHttpClient)]
 
-El evento [**DownloadRequested**](https://msdn.microsoft.com/library/windows/apps/dn931272) se genera cuando el sistema está a punto de recuperar un recurso desde el servidor. El [**AdaptiveMediaSourceDownloadRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn946935) que se pasa al controlador de eventos expone las propiedades que proporcionan información sobre el recurso solicitado, como el tipo y el identificador URI del recurso.
+El evento [**DownloadRequested**](https://msdn.microsoft.com/library/windows/apps/dn931272) se genera cuando el sistema está a punto de recuperar un recurso del servidor. El [**AdaptiveMediaSourceDownloadRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn946935) que se pasa al controlador de eventos expone las propiedades que proporcionan información sobre el recurso solicitado, como el tipo y el identificador URI del recurso.
 
 Puedes usar el controlador de eventos **DownloadRequested** para modificar la solicitud de recursos mediante la actualización de las propiedades del objeto [**AdaptiveMediaSourceDownloadResult**](https://msdn.microsoft.com/library/windows/apps/dn946942) proporcionado por los argumentos de evento. En el ejemplo siguiente, se modifica el URI desde el que se recuperará el recurso actualizando las propiedades [**ResourceUri**](https://msdn.microsoft.com/library/windows/apps/dn931250) del objeto de resultado.
 
-Puedes reemplazar el contenido del recurso solicitado estableciendo las propiedades [**Buffer**](https://msdn.microsoft.com/library/windows/apps/dn946943) o [**InputStream**](https://msdn.microsoft.com/library/windows/apps/dn931249) del objeto de resultado. En el ejemplo siguiente, se reemplaza el contenido del recurso de manifiesto estableciendo la propiedad **Buffer**. Ten en cuenta que si vas a actualizar la solicitud de recursos con los datos que se obtienen de forma asincrónica (por ejemplo, la recuperación de datos de un servidor remoto o la autenticación de usuario asincrónica), debes llamar a [**AdaptiveMediaSourceDownloadRequestedEventArgs.GetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn946936) para obtener un aplazamiento y luego llamar a [**Complete**](https://msdn.microsoft.com/library/windows/apps/dn946934) cuando la operación se complete para indicar al sistema que la operación de solicitud de descarga puede continuar.
+Puedes reemplazar el contenido del recurso solicitado estableciendo las propiedades [**Buffer**](https://msdn.microsoft.com/library/windows/apps/dn946943) o [**InputStream**](https://msdn.microsoft.com/library/windows/apps/dn931249) del objeto de resultado. En el ejemplo siguiente, se reemplaza el contenido del recurso de manifiesto estableciendo la propiedad **Buffer**. Ten en cuenta que, si actualizas la solicitud de recursos con los datos que se obtienen de forma asincrónica (por ejemplo, la recuperación de datos de un servidor remoto o la autenticación de usuario asincrónica), debes llamar a [**AdaptiveMediaSourceDownloadRequestedEventArgs.GetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn946936) para obtener un aplazamiento y, después, llamar a [**Complete**](https://msdn.microsoft.com/library/windows/apps/dn946934) cuando la operación se complete para indicar al sistema que la operación de solicitud de descarga puede continuar.
 
 [!code-cs[AMSDownloadRequested](./code/AdaptiveStreaming_Win10/cs/MainPage.xaml.cs#SnippetAMSDownloadRequested)]
 
@@ -57,6 +58,6 @@ El objeto **AdaptiveMediaSource** proporciona eventos que te permiten reaccionar
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

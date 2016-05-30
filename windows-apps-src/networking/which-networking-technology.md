@@ -1,11 +1,12 @@
 ---
+author: DelfCo
 ms.assetid: 2CC2E526-DACB-4008-9539-DA3D0C190290
-description: Una introducción rápida de las tecnologías de redes disponibles para un desarrollador UWP, con sugerencias sobre cómo elegir las tecnologías adecuadas para la aplicación.
-title: ¿Qué tecnología de red?'
+description: Una introducción rápida de las tecnologías de redes disponibles para un desarrollador UWP, con sugerencias sobre cómo elegir las tecnologías que son adecuadas para la aplicación.
+title: ¿Qué tecnología de redes?
 
 ---
 
-# ¿Qué tecnología de red?
+# ¿Qué tecnología de redes?
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -132,6 +133,6 @@ El espacio de nombres [**Windows.Devices.Sms**](https://msdn.microsoft.com/libra
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

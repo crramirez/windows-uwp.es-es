@@ -1,4 +1,5 @@
 ---
+author: Xansky
 description: Cómo usar la información de contactos y calendario en la aplicación para UWP.
 title: Contactos y calendario
 ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
@@ -32,6 +33,6 @@ Para conocer los distintos modos en que tu aplicación puede obtener acceso a lo
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

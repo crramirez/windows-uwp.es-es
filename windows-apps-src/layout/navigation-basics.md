@@ -1,16 +1,13 @@
 ---
+author: mijacobs
 Description: La navegación en las aplicaciones para la Plataforma universal de Windows (UWP) se basa en un modelo flexible de estructuras de navegación, elementos de navegación y características de nivel del sistema.
 title: Conceptos básicos del diseño de navegación para aplicaciones para la Plataforma universal de Windows (UWP)
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
-label: Conceptos básicos del diseño de navegación
+label: Navigation design basics
 template: detail.hbs
 ---
 
 #  Conceptos básicos del diseño de navegación para las aplicaciones para UWP
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 La navegación en las aplicaciones para la Plataforma universal de Windows (UWP) se basa en un modelo flexible de estructuras de navegación, elementos de navegación y características de nivel del sistema. Juntas, te permiten habilitar diversas experiencias de usuario intuitivas para desplazarse entre las aplicaciones, las páginas y el contenido.
 
@@ -30,7 +27,7 @@ Para que la experiencia de navegación con varias páginas de las aplicaciones p
 
     Para proporcionar una experiencia coherente que te resulte más intuitiva, responde a las funciones de navegación de nivel del sistema de manera previsible.
 
-## <span id="Build_the_right_navigation_structure"></span><span id="build_the_right_navigation_structure"></span><span id="BUILD_THE_RIGHT_NAVIGATION_STRUCTURE"></span>Crear la estructura de navegación adecuada
+## <span id="Build_the_right_navigation_structure"></span><span id="build_the_right_navigation_structure"></span><span id="BUILD_THE_RIGHT_NAVIGATION_STRUCTURE"></span>Crea la estructura de navegación adecuada
 
 
 Echemos un vistazo a una aplicación que resulta ser una colección de grupos de páginas, en la que cada página contiene un conjunto único de contenidos o funcionalidades. Por ejemplo, una aplicación de fotos podría tener una página para tomar fotos, una página de edición de imágenes y otra página de administración de la biblioteca de imágenes. La manera de organizar estas páginas en grupos define la estructura de navegación de la aplicación. Hay dos formas habituales de organizar un grupo de páginas:
@@ -119,7 +116,7 @@ Para la navegación punto a punto, te recomendamos usar las pestañas o un panel
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Tabs and pivot](../controls-and-patterns/tabs-pivot.md)</p>
+<td align="left"><p>[Pestañas y controles dinámicos](../controls-and-patterns/tabs-pivot.md)</p>
 <p><img src="images/nav/nav-tabs-sm-300.png" alt="Tab-based navigation" /></p></td>
 <td align="left">Muestra una lista persistente de vínculos a páginas del mismo nivel.
 <p>Usa las pestañas o controles dinámicos cuando:</p>
@@ -132,7 +129,7 @@ Para la navegación punto a punto, te recomendamos usar las pestañas o un panel
 <p><img src="images/food-truck-finder/uap-foodtruck-tabletphone-sbs-sm-400.png" alt="Example of an app using tabs/pivots pattern" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Nav pane](../controls-and-patterns/nav-pane.md)</p>
+<td align="left"><p>[Panel de navegación](../controls-and-patterns/nav-pane.md)</p>
 <p><img src="images/nav/nav-navpane-4page-thumb.png" alt="A navigation pane" /></p></td>
 <td align="left">Muestra una lista de vínculos a páginas de nivel superior.
 <p>Usa un panel de navegación cuando:</p>
@@ -177,7 +174,7 @@ Los elementos de navegación jerárquica proporcionan navegación entre una pág
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Hub](../controls-and-patterns/hub.md)</p>
+<td align="left"><p>[Concentrador](../controls-and-patterns/hub.md)</p>
 <p><img src="images/higsecone-hub-thumb.png" alt="Hub" /></p></td>
 <td align="left">Un concentrador es un tipo especial de control de navegación que proporciona vistas previas y resúmenes de sus páginas secundarias. A diferencia del panel de navegación o las pestañas, proporciona navegación a estas páginas secundarias a través de vínculos y encabezados de sección incrustados en la propia página.
 <p>Usa un concentrador cuando:</p>
@@ -188,7 +185,7 @@ Los elementos de navegación jerárquica proporcionan navegación entre una pág
 <p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Master/details](../controls-and-patterns/master-details.md)</p>
+<td align="left"><p>[Patrón de maestro y detalles](../controls-and-patterns/master-details.md)</p>
 <p><img src="images/higsecone-masterdetail-thumb.png" alt="Master/details" /></p></td>
 <td align="left">Muestra una lista (vista maestro) de resúmenes de elementos. Al seleccionar un elemento se muestra su página de elementos correspondiente en la sección de detalles.
 <p>Usa el elemento de maestro y detalles cuando:</p>
@@ -221,7 +218,7 @@ Los elementos de navegación jerárquica proporcionan navegación entre una pág
 <tbody>
 <tr class="odd">
 <td align="left">Atrás</td>
-<td align="left"><p>Permite al usuario recorrer el historial de navegación dentro de una aplicación y, según el dispositivo, ir de una aplicación a otra. Para obtener más información, consulta la sección [Make your app work well with system-level navigation features](#backnavigation) que aparece más adelante en este artículo.</p></td>
+<td align="left"><p>Permite al usuario recorrer el historial de navegación dentro de una aplicación y, según el dispositivo, ir de una aplicación a otra. Para obtener más información, consulta la sección [Haz que tu aplicación funcione bien con las funciones de navegación de nivel del sistema](#backnavigation) que aparece más adelante en este artículo.</p></td>
 </tr>
 </tbody>
 </table>
@@ -256,7 +253,7 @@ Los elementos de navegación jerárquica proporcionan navegación entre una pág
 Puedes combinar los elementos de navegación para crear una experiencia de navegación adecuada para tu aplicación. Por ejemplo, la aplicación puede usar un panel de navegación para proporcionar acceso a las páginas de nivel superior, y pestañas para proporcionar acceso a las páginas de segundo nivel.
 
 
-\[Este artículo contiene información específica de las aplicaciones para UWP y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
 
 
@@ -267,6 +264,6 @@ Puedes combinar los elementos de navegación para crear una experiencia de naveg
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

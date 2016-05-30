@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Proporciona un valor para cualquier atributo XAML mediante la evaluación de una referencia a un recurso, con lógica del sistema adicional que recupera diferentes recursos en función del tema activo en ese momento.
 title: Extensión de marcado ThemeResource
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
@@ -20,7 +21,7 @@ Proporciona un valor para cualquier atributo XAML mediante la evaluación de una
 
 | Término | Descripción |
 |------|-------------|
-| key | La clave del recurso solicitado. Esta clave se asigna inicialmente por [**ResourceDictionary**>](https://msdn.microsoft.com/library/windows/apps/br208794). Una clave de recurso puede ser cualquier cadena que se defina con la gramática XamlName. |
+| key | La clave del recurso solicitado. Esta clave se asigna inicialmente por [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794). Una clave de recurso puede ser cualquier cadena que se defina con la gramática XamlName. |
  
 ## Observaciones
 
@@ -61,7 +62,8 @@ Las definiciones XAML de los estados visuales en una plantilla de control deben 
 
 Los usos de **ThemeResource** se podrían ver en una serie de valores dependientes. Por ejemplo, un valor de [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) usado por un [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) que también es un recurso con clave podría usar una referencia a **ThemeResource**. Sin embargo, las propiedades de la interfaz de usuario que usan el recurso **SolidColorBrush** con clave también usarían una referencia a **ThemeResource**, por lo que es cada propiedad del tipo [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) la que habilita específicamente un cambio de valor dinámico cuando el tema cambia.
 
-**Nota**  XAML de Windows 8.1 admite `{ThemeResource}` y la evaluación de recursos en tiempo de ejecución en la conmutación de temas, pero XAML para aplicaciones destinadas a Windows 8 no lo admite.
+**Nota**
+             XAML de Windows 8.1 admite `{ThemeResource}` y la evaluación de recursos en tiempo de ejecución en la conmutación de temas, pero XAML para aplicaciones destinadas a Windows 8 no lo admite.
 
 ### Recursos del sistema
 
@@ -73,7 +75,7 @@ Con frecuencia, los recursos del sistema son los valores subyacentes de un tema 
 
 Este es un ejemplo de XAML tomado de los archivos generic.xaml y themeresources.xaml predeterminados para mostrar cómo usar **ThemeResource**. Solo veremos una plantilla (la predeterminada [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)) y cómo se declaran dos propiedades ([**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) y [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414)) para que respondan a los cambios de tema.
 
-```xaml
+```xml
     <!-- Default style for Windows.UI.Xaml.Controls.Button -->
     <Style TargetType="Button">
         <Setter Property="Background" Value="{ThemeResource ButtonBackgroundThemeBrush}" />
@@ -85,7 +87,7 @@ Aquí, las propiedades toman un valor [**Brush**](https://msdn.microsoft.com/lib
 
 Algunos de los estados visuales de un [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) también ajustan estas mismas propiedades. Lo más destacable es que el color de fondo cambia cuando se hace clic en un botón. Y aquí, las animaciones [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) y [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) en el guión gráfico del estado visual usan objetos [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) y referencias a pinceles con **ThemeResource** como valor de marco con clave.
 
-```xaml
+```xml
 <VisualState x:Name="Pressed">
   <Storyboard>
     <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Border"
@@ -102,7 +104,7 @@ Algunos de los estados visuales de un [**Button**](https://msdn.microsoft.com/li
 
 Cada uno de estos pinceles se define antes en generic.xaml: deben estar definidos antes de que ninguna plantilla pueda usarlos para evitar referencias adelantadas a XAML. Estas son las definiciones para el diccionario de temas "Default".
 
-```xaml
+```xml
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Default">
 ... 
@@ -116,7 +118,7 @@ Cada uno de estos pinceles se define antes en generic.xaml: deben estar definido
 
 Después, cada uno de los demás diccionarios de temas tiene definidos también estos pinceles, por ejemplo:
 
-```xaml
+```xml
         <ResourceDictionary x:Key="HighContrast">
             <!-- High Contrast theme resources -->
 ...
@@ -150,6 +152,6 @@ Cuando exista una clave de recurso como parte del uso de cualquier **{ThemeResou
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

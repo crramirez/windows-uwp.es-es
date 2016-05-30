@@ -1,24 +1,20 @@
 ---
-Description: En este tema se describen los elementos de zoom y cambio de tamaño de Windows. y se ofrecen instrucciones de experiencia de usuario para que uses estos nuevos mecanismos de interacción en las aplicaciones.
+author: Karl-Bridge-Microsoft
+Description: En este tema se describen las características de zoom y cambio de tamaño de elementos en Windows. También se ofrecen instrucciones de experiencia de usuario para que uses estos nuevos mecanismos de interacción en tus aplicaciones.
 title: Instrucciones de zoom óptico y cambio de tamaño
 ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
-label: Zoom óptico y cambio de tamaño
+label: Optical zoom and resizing
 template: detail.hbs
 ---
 
 # Zoom óptico y cambio de tamaño
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+En este artículo se describen los elementos de zoom y cambio de tamaño de Windows. También se ofrecen instrucciones de experiencia de usuario para que uses estos nuevos mecanismos de interacción en las aplicaciones.
 
 **API importantes**
 
 -   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 -   [**Input (XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)
-
-En este artículo se describen los elementos de zoom y cambio de tamaño de Windows. y se ofrecen instrucciones de experiencia de usuario para que uses estos nuevos mecanismos de interacción en las aplicaciones.
-
 
 
 El zoom óptico permite a los usuarios ampliar la vista del contenido dentro de un área de contenido (se ejecuta sobre la propia área de contenido), mientras que el cambio de tamaño permite cambiar el tamaño relativo de uno o varios objetos sin cambiar la vista del área de contenido (se ejecuta sobre los objetos que están dentro del área de contenido).
@@ -76,8 +72,9 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
 * [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Ejemplo de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Ejemplo de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Ejemplo de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Ejemplos de archivo**
+* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
+**Muestras de archivo**
 * [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: muestra de prueba de acceso táctil](http://go.microsoft.com/fwlink/p/?linkid=231590)
@@ -95,6 +92,6 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

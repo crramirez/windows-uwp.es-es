@@ -1,11 +1,12 @@
 ---
+author: Jwmsft
 Description: El patrón de maestro y detalles muestra una lista maestra y los detalles del elemento seleccionado actual. Este patrón se usa con frecuencia en listas de correo electrónico y de contactos y con libretas de direcciones.
-title: Maestro/detalles
+title: Patrón de maestro y detalles
 ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
-label: Maestro/detalles
+label: Master/details
 template: detail.hbs
 ---
-# Patrón maestro y detalles
+# Patrón de maestro y detalles
 
 El patrón de maestro y detalles tiene un panel maestro (normalmente con una [vista de lista](lists.md)) y un panel de detalles para el contenido. Cuando se selecciona un elemento en la lista maestra, se actualiza el panel de detalles. Este patrón se usa con frecuencia para libretas de direcciones y de correos electrónicos.
 
@@ -71,16 +72,16 @@ Este diseño de una aplicación que realiza un seguimiento de la bolsa usa un pa
 
 ![Ejemplo de una aplicación con el patrón de maestro y detalles, en el escritorio](images/uap-finance-desktop700.png)
 
-\[Este artículo contiene información específica de las aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
 ## Artículos relacionados
 
 - [Listas](lists.md)
-- [Búsqueda](search.md)
+- [Buscar](search.md)
 - [Barras de la aplicación y de comandos](app-bars.md)
 - [**Clase ListView (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

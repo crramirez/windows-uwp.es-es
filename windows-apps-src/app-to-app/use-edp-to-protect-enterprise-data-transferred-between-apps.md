@@ -1,4 +1,5 @@
 ---
+author: awkoren
 Description: 'En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con la transferencia de datos.'
 MS-HAID: 'dev\_app\_to\_app.use\_edp\_to\_protect\_enterprise\_data\_transferred\_between\_apps'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -12,7 +13,7 @@ __Nota__ La directiva de Protección de datos de empresa (EDP) no se puede aplic
 
 En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con la transferencia de datos. Para obtener una perspectiva de desarrollador completa sobre cómo se relaciona EDP con los archivos, las secuencias, el portapapeles, las redes, las tareas en segundo plano y la protección de datos con la pantalla bloqueada, consulta [Enterprise Data Protection (EDP) (Protección de datos de empresa [EDP])](../enterprise/edp-hub.md).
 
-**Nota**  La [muestra de Protección de datos de empresa (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) abarca muchos de los escenarios que se muestran en este tema.
+**Nota** La [muestra de Protección de datos de empresa (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) abarca muchos de los escenarios que se muestran en este tema.
 
 ## Requisitos previos
 
@@ -51,7 +52,7 @@ private void OnFileLoaded(FileProtectionInfo fileProtectionInfo, string contents
         }
         else
         {
-            // Enterprise policy is not in effect, because the file&#39;s identity
+            // Enterprise policy is not in effect, because the file's identity
             // is not managed. In this case, we have a file protected to an
             // unmanaged identity, which is not a valid situation.
             // We still have to call ClearProcessUIPolicy if we want to clear the policy.
@@ -123,7 +124,7 @@ private async void OnPasteWithApplyPolicy()
         {
             ProtectionPolicyEvaluationResult policyResult =
                 await dataPackageView.RequestAccessAsync(dataPackageView.Properties.EnterpriseId);
-            if (this.isNewEmptyDocument &amp;&amp;
+            if (this.isNewEmptyDocument &&
                 policyResult == ProtectionPolicyEvaluationResult.Allowed)
             {
                 // If this is a new and empty document, and we're allowed to access
@@ -207,7 +208,7 @@ La aplicación tiene abierto un documento nuevo y vacío, que se supone que es n
 
 Al admite el contrato para contenido compartido en la aplicación, para configurar un origen de contenido compartido, establece el contexto de identidad de la empresa el objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/br205873), tal como se muestra en este ejemplo de código.
 
-**Nota**  Este ejemplo de código depende de que ya configuraste la identidad del objeto de administrador de directivas de protección para la vista actual (consulta [Etiquetar una ventana específica con la identidad de la empresa](#tag_window_with_id)); de lo contrario, la propiedad [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) contendrá la cadena vacía.
+**Nota** Este ejemplo de código depende de si ya configuraste la identidad del objeto de administrador de directivas de protección para la vista actual (consulta [Etiquetar una ventana específica con la identidad de la empresa](#tag_window_with_id)); de lo contrario, la propiedad [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) contendrá la cadena vacía.
 
 
 
@@ -264,7 +265,7 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
             if (this.isNewEmptyDocument && protectionPolicyEvaluationResult ==
                 ProtectionPolicyEvaluationResult.Allowed)
             {
-                // If this is a new and empty document, and we&#39;re allowed to access
+                // If this is a new and empty document, and we're allowed to access
                 // the data, then we can avoid popping the consent dialog.
                 bool isIdentityManaged = ProtectionPolicyManager.TryApplyProcessUIPolicy
                     (shareOperation.Data.Properties.EnterpriseId);
@@ -300,7 +301,7 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 
 En este escenario, la aplicación habilita la interfaz de usuario de pegar solo cuando hay datos en el Portapapeles. Para esta función, puedes usar el método [**ProtectionPolicyManager.CheckAccess**](https://msdn.microsoft.com/library/windows/apps/dn705783), que permite una comprobación pasiva de la directiva.
 
-**Nota**  Este ejemplo de código depende de que ya configuraste la identidad del objeto de administrador de directivas de protección para la vista actual (consulta [Etiquetar una ventana específica con la identidad de la empresa](#tag_window_with_id)); de lo contrario, la propiedad [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) contendrá la cadena vacía.
+**Nota** Este ejemplo de código depende de si ya configuraste la identidad del objeto de administrador de directivas de protección para la vista actual (consulta [Etiquetar una ventana específica con la identidad de la empresa](#tag_window_with_id)); de lo contrario, la propiedad [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) contendrá la cadena vacía.
 
 
 
@@ -333,7 +334,7 @@ private bool IsClipboardPeekAllowedAsync()
 
 En este escenario se muestra cómo comprobar el acceso para una operación de pegar.
 
-**Nota**  Este ejemplo de código depende de que ya configuraste la identidad del objeto de administrador de directivas de protección para la vista actual (consulta [Etiquetar una ventana específica con la identidad de la empresa](#tag_window_with_id)); de lo contrario, la propiedad [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) contendrá la cadena vacía.
+**Nota** Este ejemplo de código depende de si ya configuraste la identidad del objeto de administrador de directivas de protección para la vista actual (consulta [Etiquetar una ventana específica con la identidad de la empresa](#tag_window_with_id)); de lo contrario, la propiedad [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) contendrá la cadena vacía.
 
 
 
@@ -377,7 +378,7 @@ private async void OnPasteWithRequestAccess()
 }
 ```
 
-**Nota:**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+**Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
 
@@ -394,6 +395,6 @@ private async void OnPasteWithRequestAccess()
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

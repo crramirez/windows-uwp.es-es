@@ -1,6 +1,7 @@
 ---
+author: drewbatgit
 ms.assetid: D20C8E01-4E78-4115-A2E8-07BB3E67DDDC
-description: Este artículo muestra cómo acceder y usar la luz de un dispositivo, si está presente. La funcionalidad de luz se administra por separado de la funcionalidad de cámara y flash de cámara del dispositivo.
+description: En este artículo se muestra cómo acceder a la luz de un dispositivo y cómo usarla, si la hay. La funcionalidad de luz se administra por separado de la cámara del dispositivo y la funcionalidad de flash de la cámara.
 title: Linterna independiente de la cámara
 ---
 
@@ -45,13 +46,13 @@ Desactiva la lámpara estableciendo la propiedad [**IsEnabled**](https://msdn.mi
 
 [!code-cs[LampSettingsOff](./code/Lamp/cs/MainPage.xaml.cs#SnippetLampSettingsOff)]
 
-Algunos dispositivos tienen luces que admiten los valores de color. Comprueba si una luz admite color comprobando la propiedad [**IsColorSettable**](https://msdn.microsoft.com/library/windows/apps/dn894329). Si este valor es **true**, puedes establecer el color de la luz con la propiedad [**Color**](https://msdn.microsoft.com/library/windows/apps/dn894322).
+Algunos dispositivos tienen luces que admiten valores de color. Comprueba si una luz admite color comprobando la propiedad [**IsColorSettable**](https://msdn.microsoft.com/library/windows/apps/dn894329). Si este valor es **true**, puedes definir el color de la luz con la propiedad [**Color**](https://msdn.microsoft.com/library/windows/apps/dn894322).
 
 [!code-cs[LampSettingsColor](./code/Lamp/cs/MainPage.xaml.cs#SnippetLampSettingsColor)]
 
 ## Registrarse para recibir notificaciones cuando cambie la disponibilidad de luz
 
-El acceso a la luz se concede a la aplicación más reciente que solicita acceso. Por lo tanto, si otra aplicación se inicia y solicita un recurso de luz que tu aplicación está usando actualmente, la aplicación ya no podrá controlar la luz hasta que la otra aplicación haya liberado el recurso. Para recibir una notificación cuando cambie la disponibilidad de la luz, registra un controlador para el evento [**Lamp.AvailabilityChanged**](https://msdn.microsoft.com/library/windows/apps/dn894317).
+El acceso a la luz se concede a la aplicación que solicitó acceso más recientemente. Por lo tanto, si otra aplicación se inicia y solicita un recurso de luz que tu aplicación está usando actualmente, la aplicación ya no podrá controlar la luz hasta que la otra aplicación haya liberado el recurso. Para recibir una notificación cuando cambie la disponibilidad de la luz, registra un controlador para el evento [**Lamp.AvailabilityChanged**](https://msdn.microsoft.com/library/windows/apps/dn894317).
 
 [!code-cs[AvailabilityChanged](./code/Lamp/cs/MainPage.xaml.cs#SnippetAvailabilityChanged)]
 
@@ -74,6 +75,6 @@ Cuando ya no uses la luz, debes deshabilitarla y llamar a [**Lamp.Close**](https
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

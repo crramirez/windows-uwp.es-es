@@ -1,5 +1,6 @@
 ---
-description: El informe Adquisiciones del panel del Centro de desarrollo de Windows te permite ver quién ha adquirido la aplicación, junto con datos demográficos y de la plataforma.
+author: jnHs
+Description: El informe de adquisiciones del panel del Centro de desarrollo de Windows te permite ver quién ha adquirido la aplicación, junto con datos demográficos y de plataforma.
 title: Informe de adquisiciones
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 ---
@@ -7,11 +8,11 @@ ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 # Informe de adquisiciones
 
 
-El informe **Adquisiciones** del panel del Centro de desarrollo de Windows te permite ver quién ha adquirido la aplicación, junto con datos demográficos y de la plataforma. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+El informe de **adquisiciones** del panel del Centro de desarrollo de Windows te permite ver quién ha adquirido la aplicación, junto con datos demográficos y de plataforma. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
 En este informe, una adquisición significa que un cliente nuevo ha obtenido una licencia para tu aplicación (tanto si cobras dinero como si la ofreces gratis).
 
-> **Importante**: El informe **Adquisiciones** no incluye datos sobre reembolsos, devoluciones, anulaciones, etc. Para calcular las ganancias por la aplicación, visita [Resumen de pago](payout-summary.md). En la sección **Reservado**, haz clic en el vínculo **Descargar transacciones reservadas**.
+> **Importante**: El informe de **adquisiciones** no incluye datos sobre reembolsos, devoluciones, anulaciones, etc. Para calcular las ganancias por la aplicación, visita [Resumen de pago](payout-summary.md). En la sección **Reservado**, haz clic en el vínculo **Descargar transacciones reservadas**.
 
 
 
@@ -41,7 +42,7 @@ También puedes filtrar los resultados por mercado o por la versión del SO.
 
 El gráfico **Grupo demográfico de clientes** muestra información demográfica sobre las personas que adquirieron la aplicación. Puedes ver cuántas adquisiciones (durante el período de tiempo seleccionado) realizaron las personas de un determinado grupo de edad divididas por sexo.
 
-> **Nota**: Algunos clientes han optado por no compartir esta información. Si no podemos determinar el grupo etario o el sexo, la adquisición se clasifica como **Desconocida**.
+> **Nota**  Algunos clientes han optado por no compartir esta información. Si no podemos determinar el grupo etario o el sexo, la adquisición se clasifica como **Desconocida**.
 
  
 
@@ -62,6 +63,6 @@ El gráfico **Versión de SO** muestra el número total de adquisiciones según 
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

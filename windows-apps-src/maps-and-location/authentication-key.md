@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 title: Solicitar una clave de autenticación de mapas
 description: La aplicación universal de Windows debe autenticarse para poder usar MapControl y los servicios de mapa en el espacio de nombres Windows.Services.Maps.
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
@@ -12,7 +13,7 @@ ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
 
 La [aplicación universal de Windows](https://msdn.microsoft.com/library/windows/apps/dn894631) debe autenticarse para poder usar [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este tema se describe cómo solicitar una clave de autenticación de mapas desde el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/) y agregarla a la aplicación.
 
-**Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga la muestra siguiente del [Repositorio de muestras universales de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub:
+**Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga el ejemplo siguiente del [repositorio de ejemplos de la plataforma universal de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub:
 
 -   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -65,7 +66,7 @@ Para autenticar servicios en el espacio de nombres [**MapControl**](https://msdn
 
 -   Este ejemplo establece **MapServiceToken** en el valor de la clave de autenticación del marcado XAML.
 
-    ```xaml
+    ```xml
     <Maps:MapControl x:Name="MapControl1" MapServiceToken="abcdef-abcdefghijklmno"/>
     ```
 
@@ -90,6 +91,6 @@ Para usar servicios en el espacio de nombres [**Windows.Services.Maps**](https:/
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

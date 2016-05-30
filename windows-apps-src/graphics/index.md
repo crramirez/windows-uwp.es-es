@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 ms.assetid: ad7a739c-fd70-4068-9007-da28028abea3
 title: Elementos gráficos y animación
 description: Los temas de esta sección te permiten comenzar a usar elementos gráficos y animaciones en tus aplicaciones de la tienda.
@@ -33,6 +34,6 @@ Los elementos gráficos y las animaciones están orientados a los desarrolladore
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

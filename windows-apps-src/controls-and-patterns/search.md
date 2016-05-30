@@ -1,22 +1,21 @@
 ---
-Descripción: Buscar es una de las formas principales mediante las que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto.
+author: Jwmsft
+Description: Buscar es una de las formas principales en que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto.
 title: Búsqueda y buscar en la página
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
-label: Búsqueda
+label: Search
 template: detail.hbs
 ---
 
 # Búsqueda y buscar en la página
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+Buscar es una de las formas principales en que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto.
 
 **API importantes**
 
 -   [**Clase AutoSuggestBox (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn633874)
 
-Buscar es una de las formas principales mediante las que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto.
+
 
 ## <span id="Elements_of_the_search_experience"></span><span id="elements_of_the_search_experience"></span><span id="ELEMENTS_OF_THE_SEARCH_EXPERIENCE"></span>Elementos de la experiencia de búsqueda
 
@@ -48,7 +47,7 @@ La búsqueda es una función común y los usuarios encontrarán la interfaz de u
 
 Entre algunos ámbitos comunes de la búsqueda se incluyen:
 
-**Global** y **contextual o refinar.** Búsqueda en varias fuentes de contenido en la nube y local. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
+**Global** y **contextual o refinar.**  Búsqueda en varias fuentes de contenido en la nube y local. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
 
 **Web.**  Buscar en un índice web. Los resultados incluyen páginas, entidades y respuestas.
 
@@ -97,7 +96,7 @@ A medida que el ámbito de búsqueda se vuelve más estrecho o contextual, la co
 
 En el caso de las listas de desplazamiento, es útil tener siempre la entrada de búsqueda visible. Te recomendamos establecer la entrada de como permanente y desplazar el contenido detrás de ella.
 
-La funcionalidad de entrada cero y de formulación de consulta es opcional para búsquedas contextuales o refinadas en las que se filtrará la lista en tiempo real mediante la entrada del usuario. Entre las excepciones se incluyen casos en las que es posible que haya disponibles sugerencias de formatos de consultas, como las opciones de filtrado de la bandeja de entrada (para: &lt;cadena de entrada&gt;, de: &lt;cadena de entrada&gt;, asunto: &lt;cadena de entrada&gt;, etc.).
+La funcionalidad de entrada cero y de formulación de consulta es opcional para búsquedas contextuales o refinadas en las que se filtrará la lista en tiempo real mediante la entrada del usuario. Entre las excepciones se incluyen casos en los que puede haber sugerencias de formatos de consultas disponibles, como las opciones de filtrado de la bandeja de entrada (para: &lt;cadena de entrada&gt;, de: &lt;cadena de entrada&gt;, asunto: &lt;cadena de entrada&gt;, etc.).
 
 ## <span id="examples"></span><span id="EXAMPLES"></span>Ejemplo
 
@@ -161,7 +160,7 @@ Buscar en la página permite que los usuarios encuentren coincidencias de texto 
 ## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>Ejemplos
 
 
-Proporciona una manera sencilla de acceder a la función de búsqueda en la página. En este ejemplo de una interfaz de usuario móvil, "Buscar en la página" aparece después de dos comandos "Agregar a...", en un menú desplegable:
+Proporciona una manera sencilla de acceder a la función de búsqueda en la página. En este ejemplo de una interfaz de usuario móvil, "Buscar en la página" aparece después de dos comandos "Agregar a", en un menú desplegable:
 
 ![Ejemplo de Buscar en la página 1](images/findinpage-01.png)
 
@@ -217,6 +216,6 @@ Para obtener más información sobre cómo agregar comandos a la barra de comand
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

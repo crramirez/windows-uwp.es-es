@@ -1,15 +1,15 @@
 ---
-Description: Obtén información sobre cómo adaptar la interfaz de usuario de la aplicación al mostrar u ocultar el teclado táctil.
+author: Karl-Bridge-Microsoft
+Description: Aprende a adaptar la interfaz de usuario de la aplicación al mostrar u ocultar el teclado táctil.
 title: Responder a la presencia del teclado táctil
 ms.assetid: 70C6130E-23A2-4F9D-88E7-7060062DA988
-label: Responder a la presencia del teclado táctil
+label: Respond to the presence of the touch keyboard
 template: detail.hbs
 ---
 
 # Responder a la presencia del teclado táctil
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+Aprende a adaptar la interfaz de usuario de la aplicación al mostrar u ocultar el teclado táctil.
 
 
 **API importantes**
@@ -17,32 +17,32 @@ template: detail.hbs
 -   [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/br209185)
 -   [**InputPane**](https://msdn.microsoft.com/library/windows/apps/br242255)
 
-Obtén información sobre cómo adaptar la interfaz de usuario de la aplicación al mostrar u ocultar el teclado táctil.
+
 
 ![El teclado táctil en el modo de diseño predeterminado](images/touchkeyboard-standard.png)
 
-<sup>El teclado táctil en el modo de diseño predeterminado</sup>
+<sup>El\\ teclado\\ táctil\\ en\\ el\\ modo\\ de\\ diseño\\ predeterminado</sup>
 
 El teclado táctil permite la entrada de texto para dispositivos que admiten la entrada táctil. Controles de entrada de texto de plataforma de Windows (UWP) universal invocan al teclado táctil de manera predeterminada cuando un usuario pulsa en un campo de entrada editable. El teclado táctil normalmente permanece visible mientras el usuario navega por los controles en cierta forma, pero este comportamiento puede variar en función de los otros tipos de control dentro de la forma.
 
 Para admitir el comportamiento del teclado táctil correspondiente en un control de entrada de texto personalizado que no se deriva de un control de entrada de texto estándar, debes usar la clase [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/br209185) para exponer los controles a la automatización de la interfaz de usuario de Microsoft e implementar los patrones de control de automatización de la interfaz de usuario correctos. Consulta [accesibilidad de teclado](https://msdn.microsoft.com/library/windows/apps/mt244347) y [automatización del mismo nivel personalizado](https://msdn.microsoft.com/library/windows/apps/mt297667).
 
-Una vez que esta compatibilidad se ha agregado a tu control personalizado, puedes responder adecuadamente a la presencia del teclado táctil.
+Una vez que esta compatibilidad esté agregada a tu control personalizado, puedes responder adecuadamente a la presencia del teclado táctil.
 
 **Requisitos previos:  **
 
-En este tema se basa en [interacciones de teclado](keyboard-interactions.md).
+Este tema se basa en [interacciones de teclado](keyboard-interactions.md).
 
-Debes tener un conocimiento básico de las interacciones de teclado estándar, controlar la entrada de teclado y los eventos y automatización de la interfaz de usuario.
+Debes tener un conocimiento básico de las interacciones de teclado estándar, el control de la entrada de teclado y los eventos, y la automatización de la interfaz de usuario.
 
 Si acabas de empezar a desarrollar aplicaciones de la Plataforma Universal Windows (UWP), consulta estos temas para familiarizarte con las tecnologías presentadas aquí.
 
--   [Crea tu primera aplicación](https://msdn.microsoft.com/library/windows/apps/bg124288)
+-   [Crear tu primera aplicación](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   Encontrarás más información acerca de los eventos, en [Introducción a eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
 **Directrices sobre la experiencia del usuario:  **
 
-Para obtener sugerencias prácticas sobre el diseño de una aplicación optimizada para entrada de teclado que sea útil y atractiva, consulta [Directrices para el diseño de teclado](https://msdn.microsoft.com/library/windows/apps/hh972345).
+Para obtener sugerencias prácticas sobre el diseño de una aplicación optimizada para entrada de teclado que sea útil y atractiva, consulta las [directrices para el diseño de teclado](https://msdn.microsoft.com/library/windows/apps/hh972345).
 
 ## <span id="Touch_keyboard_and_a_custom_UI"></span><span id="touch_keyboard_and_a_custom_ui"></span><span id="TOUCH_KEYBOARD_AND_A_CUSTOM_UI"></span>Teclado táctil y una interfaz de usuario personalizada
 
@@ -67,7 +67,7 @@ Estas son algunas recomendaciones básicas para los controles de entrada de text
 
     ![Un formulario que contiene áreas que deben permanecer siempre visibles](images/touch-keyboard-pan2.png)
 
-## <span id="handling_events"></span><span id="HANDLING_EVENTS"></span>Control de los eventos Showing y Hiding
+## <span id="handling_events"></span><span id="HANDLING_EVENTS"></span>Control de eventos Showing y Hiding
 
 
 Este es un ejemplo de cómo incluir controladores de eventos para los eventos [**showing**](https://msdn.microsoft.com/library/windows/apps/br242262) y [**hiding**](https://msdn.microsoft.com/library/windows/apps/br242260) del teclado táctil.
@@ -122,8 +122,6 @@ public class MyApplication
 
 ## <span id="related_topics"></span>Artículos relacionados
 
-
-
 * [Interacciones de teclado](keyboard-interactions.md)
 * [Accesibilidad de teclado](https://msdn.microsoft.com/library/windows/apps/mt244347)
 * [Personalizar sistemas de automatización del mismo nivel](https://msdn.microsoft.com/library/windows/apps/mt297667)
@@ -143,6 +141,6 @@ public class MyApplication
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

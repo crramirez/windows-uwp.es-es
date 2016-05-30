@@ -1,16 +1,13 @@
 ---
+author: mijacobs
 Description: En una aplicación de la Plataforma universal de Windows (UWP), los elementos de comandos son los elementos interactivos de la interfaz de usuario que permiten al usuario realizar acciones como enviar un correo electrónico, eliminar un elemento o enviar un formulario.
-title: Conceptos básicos sobre el diseño de comandos de aplicaciones de Plataforma universal de Windows (UWP)
+title: Conceptos básicos sobre el diseño de comandos de aplicaciones de la Plataforma universal de Windows (UWP)
 ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
-label: Conceptos básicos del diseño de comandos
+label: Command design basics
 template: detail.hbs
 ---
 
 #  Conceptos básicos de diseño de los comandos para las aplicaciones para UWP
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 En una aplicación de la Plataforma universal de Windows (UWP), los *elementos de comandos* son los elementos interactivos de la interfaz de usuario que permiten al usuario realizar acciones como enviar un correo electrónico, eliminar un elemento o enviar un formulario. En este artículo se describen los elementos de comandos (como los botones y las casillas), las interacciones que admiten y las superficies de comandos (como las barras de comandos y los menús contextuales) para hospedarlos.
 
@@ -32,11 +29,11 @@ Si se usan los elementos adecuados para las interacciones apropiadas, se puede m
 | Selectores de fecha y hora | [selector de fecha del calendario, vista de calendario, selector de fecha, selector de hora](https://msdn.microsoft.com/library/windows/apps/hh465466)                                                                                                                 | Permite al usuario ver y modificar la información de fecha y hora, como al escribir la fecha de expiración de una tarjeta de crédito o al establecer una alarma.                   |
 | Listas                 | [lista desplegable, cuadro de lista, vista de lista y vista de cuadrícula](https://msdn.microsoft.com/library/windows/apps/mt186889)                                                                                                                                              | Presenta los elementos en una lista interactiva o una cuadrícula. Usa estos elementos para permitir a los usuarios seleccionar una película de una lista de nuevas versiones o administrar un inventario. |
 | Entrada de texto predictivo | [Cuadro de sugerencias automáticas](https://msdn.microsoft.com/library/windows/apps/dn997762)                                                                                                                                                                    | Ahorra tiempo a los usuarios cuando escriben datos o realizan consultas, al proporcionar sugerencias a medida que escriben.                                                   |
-| Controles de selección    | [casilla](https://msdn.microsoft.com/library/windows/apps/hh700393), [botón de radio](https://msdn.microsoft.com/library/windows/apps/hh700395), [modificador para alternar](https://msdn.microsoft.com/library/windows/apps/hh465475) | Permite al usuario elegir entre diferentes opciones, como al completar una encuesta o al configurar la configuración de la aplicación.                                      |
+| Controles de selección    | [casilla](https://msdn.microsoft.com/library/windows/apps/hh700393), [botón de radio](https://msdn.microsoft.com/library/windows/apps/hh700395), [modificador para alternar](https://msdn.microsoft.com/library/windows/apps/hh465475) | Permite al usuario elegir entre diferentes opciones, como al completar una encuesta o al configurar los parámetros de la aplicación.                                      |
 
  
 
-(Para obtener una lista completa, consulta [Elementos de los controles y la interfaz de usuario](https://dev.windows.com/design/controls-patterns)
+Para obtener una lista completa, consulta [Controles y elementos de la interfaz de usuario](https://dev.windows.com/design/controls-patterns)
 
 ## <span id="_________Place_commands_on_the_right_surface_______"></span><span id="_________place_commands_on_the_right_surface_______"></span><span id="_________PLACE_COMMANDS_ON_THE_RIGHT_SURFACE_______"></span> Colocar los comandos en la superficie correcta
 
@@ -71,15 +68,15 @@ Esta es una lista de las superficies de comandos que proporciona Windows y de re
 <p>Sin embargo, elige los comandos que colocas en el lienzo con cuidado. Si se colocan demasiados comandos en el lienzo de la aplicación, se ocupa valioso espacio en pantalla y puede saturar al usuario. Si el comando no se usará con frecuencia, considera la posibilidad de colocarlo en otra superficie de comandos, como un menú o el área &quot;Más&quot; de la barra de comandos.</p></td>
 </tr>
 <tr class="even">
-<td align="left">[Command bar](https://msdn.microsoft.com/library/windows/apps/hh465302)
+<td align="left">[Barra de comandos](https://msdn.microsoft.com/library/windows/apps/hh465302)
 <p><img src="images/controls-appbar-icons-200.png" alt="Example of a command bar with icons" /></p></td>
 <td align="left"><p>Las barras de comandos proporcionan a los usuarios un acceso sencillo a las acciones. Puedes usar una barra de comandos para mostrar comandos u opciones que sean específicos del contexto del usuario, como un modo de dibujo o selección de fotos.</p>
 <p>Las barras de comandos pueden colocarse en la parte superior de la pantalla, en la parte inferior o en ambas partes a la vez. Este diseño de una aplicación de edición de fotos muestra el área de contenido y la barra de comandos:</p>
 <p><img src="images/commands-appcanvas-example.png" alt="A photo app" /></p>
-<p>Para obtener más información sobre las barras de comandos, consulta el artículo [Guidelines for command bar](https://msdn.microsoft.com/library/windows/apps/hh465302).</p></td>
+<p>Para obtener más información sobre las barras de comandos, consulta el artículo [Directrices para la barra de comandos](https://msdn.microsoft.com/library/windows/apps/hh465302).</p></td>
 </tr>
 <tr class="odd">
-<td align="left">[Menus and context menus](../controls-and-patterns/dialogs-popups-menus.md)
+<td align="left">[Menús y menús contextuales](../controls-and-patterns/dialogs-popups-menus.md)
 <p><img src="images/controls-contextmenu-singlepane.png" alt="Example of a single-pane context menu" /></p></td>
 <td align="left"><p>A veces resulta más eficaz agrupar varios comandos en un menú de comandos. Los menús permiten presentar más opciones en menos espacio. Los menús pueden incluir controles interactivos.</p>
 <p>Los menús contextuales pueden proporcionar accesos directos a las acciones más comunes y ofrecer acceso a los comandos secundarios que solo son relevantes en contextos determinados.</p>
@@ -90,18 +87,18 @@ Esta es una lista de las superficies de comandos que proporciona Windows y de re
 <li>Mostrar comandos del portapapeles.</li>
 <li>Comandos personalizados.</li>
 </ul>
-<p>En este ejemplo se muestra el diseño de una aplicación de metro que usa un menú contextual para modificar la ruta, añadir una ruta a marcadores o seleccionar otro tren.</p>
+<p>En este ejemplo se muestra el diseño de una aplicación de metro que usa un menú contextual para modificar la ruta, agregar una ruta a marcadores o seleccionar otro tren.</p>
 <p><img src="images/subway/uap-subway-ak-8in-dashboard-200.png" alt="A context menu in an subway app" /></p>
-<p>Para obtener más información sobre los menús contextuales, consulta el artículo [ Guidelines for context menu](https://msdn.microsoft.com/library/windows/apps/hh465308).</p></td>
+<p>Para obtener más información sobre los menús contextuales, consulta el artículo de [Directrices para el menú contextual](https://msdn.microsoft.com/library/windows/apps/hh465308).</p></td>
 </tr>
 <tr class="even">
-<td align="left">[Dialog controls](../controls-and-patterns/dialogs-popups-menus.md)
+<td align="left">[Controles de cuadro de diálogo](../controls-and-patterns/dialogs-popups-menus.md)
 <p><img src="images/controls-dialog-twobutton-200.png" alt="Example of a simple two-button dialog" /></p></td>
 <td align="left"><p>Los cuadros de diálogo son superposiciones modales en la interfaz de usuario que proporcionan información contextual sobre la aplicación. En la mayoría de casos, los cuadros de diálogo bloquean las interacciones con la ventana de la aplicación hasta que se descartan de forma explícita y a menudo solicitan algún tipo de acción por parte del usuario.</p>
-<p>Los cuadros de diálogo pueden ser molestos y solo deben usarse en ciertas situaciones. Consulta la sección [When to confirm or undo actions](#whentoconfirm) para obtener más información.</p></td>
+<p>Los cuadros de diálogo pueden ser molestos y solo deben usarse en ciertas situaciones. Para obtener más información, consulta la sección [Cuándo se deben confirmar o deshacer acciones](#whentoconfirm).</p></td>
 </tr>
 <tr class="odd">
-<td align="left">[Flyout](../controls-and-patterns/dialogs-popups-menus.md)
+<td align="left">[Control flotante](../controls-and-patterns/dialogs-popups-menus.md)
 <p><img src="images/controls-flyout-default-200.png" alt="Image of default flyout" /></p></td>
 <td align="left"><p>Un elemento emergente contextual ligero que muestra la interfaz de usuario relacionada con lo que está haciendo el usuario. Usa un control flotante para:</p>
 <p></p>
@@ -110,7 +107,7 @@ Esta es una lista de las superficies de comandos que proporciona Windows y de re
 <li>Mostrar más detalles sobre un elemento.</li>
 <li>Pedir al usuario que confirme una acción sin bloquear la interacción con la aplicación.</li>
 </ul>
-<p>Los controles flotantes se pueden descartar tocando o haciendo clic en algún lugar fuera del control flotante. Para obtener más información sobre controles flotantes, consulta el artículo [ Dialogs, menus, and popups](../controls-and-patterns/dialogs-popups-menus.md).</p></td>
+<p>Los controles flotantes se pueden descartar tocando o haciendo clic en algún lugar fuera del control flotante. Para obtener más información sobre los controles flotantes, consulta el artículo [Cuadros de diálogo, elementos emergentes y menús](../controls-and-patterns/dialogs-popups-menus.md).</p></td>
 </tr>
 </tbody>
 </table>
@@ -144,7 +141,7 @@ Independientemente de lo bien diseñada que esté la interfaz de usuario y de lo
 Consulta la [Información básica de interacción](../input-and-devices/input-primer.md) para obtener más información sobre la optimización de las experiencias de usuario en torno a un dispositivo o tipo de entrada.
 
 
-\[En este artículo se incluye información específica de las aplicaciones para UWP y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
  
 
@@ -155,6 +152,6 @@ Consulta la [Información básica de interacción](../input-and-devices/input-pr
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: La página Paquetes es donde se cargan todos los archivos del paquete (xap, AppX, .appxupload o .appxbundle) de la aplicación que vas a enviar. En este paso puedes cargar paquetes para cualquier sistema operativo de destino de la aplicación.
 title: Cargar paquetes de aplicación
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
@@ -18,7 +19,7 @@ Para cargar paquetes, arrástralos en el campo de carga o haz clic para examinar
 
 Si has creado algún [paquete piloto](package-flights.md) para tu aplicación, verás una lista desplegable con la opción para copiar los paquetes de uno de los paquetes piloto. Selecciona el paquete piloto que tiene los paquetes que quieres extraer. A continuación, podrás seleccionar varios o todos los paquetes, para incluirlos en este envío.
 
-> **Importante**  Para Windows 10, siempre debes cargar aquí el archivo .appxupload, no .appx ni .appxbundle. Para más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar aplicaciones universales de Windows para Windows 10](../packaging/packaging-uwp-apps.md).
+> **Importante** Para Windows 10, siempre debes cargar aquí el archivo .appxupload, no .appx ni .appxbundle. Para más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar aplicaciones universales de Windows para Windows 10](../packaging/packaging-uwp-apps.md).
 
 Si se detectan problemas con los paquetes durante su validación, deberás quitar el paquete, corregir el problema y, a continuación, intenta cargarlo de nuevo. Para obtener más información, consulta [Resolver errores de carga de paquetes](resolve-package-upload-errors.md).
 
@@ -54,6 +55,6 @@ Te recomendamos que uses [Applications Insights de Visual Studio](http://go.micr
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,8 +1,9 @@
 ---
-Description: Los botones de radio permiten a los usuarios seleccionar una opción entre dos o más opciones.
+author: Jwmsft
+Description: Los botones de radio permiten a los usuarios seleccionar una opción entre dos o más opciones
 title: Directrices para botones de radio
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
-label: botones de radio
+label: Radio buttons
 template: detail.hbs
 ---
 # Botones de radio
@@ -53,7 +54,8 @@ Los botones de radio funcionan en grupos. Hay dos formas de agrupar los controle
 - Colocarlos dentro del mismo contenedor principal.
 - Establece la propiedad [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) en cada botón de radio en el mismo valor.
 
-> **Nota**&nbsp;&nbsp;Un grupo de botones de radio se comporta como un control único cuando se accede a él con el teclado. Solo se puede acceder a la opción seleccionada mediante la tecla TAB, pero los usuarios pueden desplazarse por el grupo con las teclas de flecha.
+> **Nota**
+            &nbsp;&nbsp;Un grupo de botones de radio se comporta como un control único cuando se accede a él con el teclado. Solo se puede acceder a la opción seleccionada mediante la tecla TAB, pero los usuarios pueden desplazarse por el grupo con las teclas de flecha.
 
 En este ejemplo, el primer grupo de botones de radio se agrupará implícitamente al estar en el mismo panel de pila. El segundo grupo se divide entre dos paneles de pila, por lo que explícitamente están agrupados por GroupName.
 
@@ -179,6 +181,6 @@ En esta ilustración, se muestra el modo correcto de colocar y espaciar botones 
 - [**Clase RadioButton Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227544)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

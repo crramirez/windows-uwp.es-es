@@ -186,6 +186,6 @@ La firma solo garantiza que no se manipuló el mensaje original y, mediante la c
 
 Puedes usar un objeto [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) para enumerar los algoritmos de firma disponibles y generar o importar un par de claves. Puedes usar métodos estáticos en la clase [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) para firmar un mensaje o comprobar una firma.
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

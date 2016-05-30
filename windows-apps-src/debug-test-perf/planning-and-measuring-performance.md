@@ -1,6 +1,7 @@
 ---
+author: mcleblanc
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
-title: Planificación del rendimiento
+title: Planeación del rendimiento
 description: Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería.
 ---
 # Planificación del rendimiento
@@ -52,126 +53,125 @@ Con tus objetivos especificados, ahora tienes una mayor capacidad para probar, a
 
 ## Fluidez
 
-Los objetivos mensurables de fluidez de la aplicación pueden incluir:
+Los objetivos de fluidez apreciables específicos de la aplicación pueden incluir:
 
--   Ningún dibujo de pantalla que se haya vuelto a hacer se detiene ni comienza (problemas).
+-   Ningún redibujo de pantalla se detiene ni comienza (problemas).
 -   Las animaciones se representan a 60 fotogramas por segundo (FPS).
--   Cuando un usuario realiza un movimiento panorámico o de desplazamiento, la aplicación presenta de 3 a 6 páginas de contenido por segundo.
+-   Cuando un usuario realiza un movimiento panorámico/desplazamiento, la aplicación presenta de 3 a 6 páginas de contenido por segundo.
 
 ## Eficiencia
 
-Los objetivos mensurables de eficiencia de la aplicación pueden incluir:
+Los objetivos de eficiencia apreciables específicos de la aplicación pueden incluir:
 
--   Para el proceso de tu aplicación, el porcentaje de CPU es igual o inferior a *N*, y el uso de la memoria (en MB) es igual o inferior a *M* en todo momento.
+-   Para el proceso de la aplicación, el porcentaje de CPU es igual o inferior a *N* y el uso de memoria en MB es igual o inferior a *M* en todo momento.
 -   Cuando la aplicación está inactiva, *N* y *M* son igual a cero en el proceso de la aplicación.
--   La aplicación puede usarse activamente durante *X* horas con batería; cuando la aplicación está inactiva, el dispositivo retiene su carga durante *Y* horas.
+-   La aplicación puede usarse activamente durante *X* horas con batería; cuando la aplicación está inactiva, el dispositivo conserva la carga durante *Y* horas.
 
 ## Diseñar la aplicación para el rendimiento
 
-Ahora puedes usar tus objetivos de rendimiento para diseñar la aplicación. Si usas la aplicación de comida que usamos como ejemplo, una vez que el usuario navegue a la página de recetas, puedes elegir actualizar los elementos de forma incremental ([update items incrementally](optimize-gridview-and-listview.md#update-items-incrementally)), para que el nombre de la receta se represente en primer lugar, y que así se aplace la visualización de los ingredientes y que la visualización de imágenes se aplace aún más. Esto mantiene la capacidad de respuesta y una interfaz de usuario fluida en el movimiento panorámico y el desplazamiento, con una representación de fidelidad total una vez que la interacción se reduce a un ritmo que pueda seguir el subproceso de interfaz de usuario. A continuación se enumeran algunos otros aspectos que se deben tener en cuenta.
+Ahora puedes usar tus objetivos de rendimiento para diseñar la aplicación. Usando la aplicación de ejemplo de comidas, una vez que el usuario navega a la página de recetas, puedes elegir [actualizar elementos de forma incremental](optimize-gridview-and-listview.md#update-items-incrementally) para que el nombre de la receta se represente en primer lugar, la visualización de ingredientes se aplace y la visualización de imágenes se aplace aún más. Esto mantiene la capacidad de respuesta y una interfaz de usuario fluida en el movimiento panorámico y el desplazamiento, con una representación de fidelidad total una vez que la interacción se reduce a un ritmo que pueda seguir el subproceso de interfaz de usuario. A continuación se enumeran algunos otros aspectos que se deben tener en cuenta.
 
 **Interfaz de usuario**
 
--   Maximiza el tiempo de análisis y carga y la eficacia de la memoria de cada página de la interfaz de usuario de la aplicación (sobre todo en la página inicial), optimizando el marcado XAML ([optimizing your XAML markup](optimize-xaml-loading.md)). En pocas palabras, aplaza la carga de la interfaz de usuario y el código hasta que estos sean necesarios.
--   Para [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705), haz que todos los elementos tengan el mismo tamaño y usen tantas técnicas de optimización de ListView y GridView ([ListView and GridView optimization techniques](optimize-gridview-and-listview.md)) como te sea posible.
--   Declara la interfaz de usuario en forma de marcado, de manera que puedas cargar y reutilizar el marco en fragmentos, en lugar de crearlo de forma imperativa en el código.
+-   Maximiza el tiempo de análisis y carga y la eficacia de la memoria para cada página de la interfaz de usuario de tu aplicación (sobre todo en la página inicial) al [optimizar el marcado XAML](optimize-xaml-loading.md). En pocas palabras, aplaza la carga de la interfaz de usuario y el código hasta que estos sean necesarios.
+-   Para [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705), haz que todos los elementos tengan el mismo tamaño y usen tantas [técnicas de optimización de ListView y GridView](optimize-gridview-and-listview.md) como sea posible.
+-   Declara la interfaz de usuario en forma de marcado, que el marco pueda cargar y reutilizar en fragmentos, en lugar de crearlo de forma imperativa en el código.
 -   Contrae los elementos de interfaz de usuario hasta que el usuario los necesite. Consulta la propiedad [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992).
--   Opta por las transiciones de tema y las animaciones en lugar de las animaciones de guion gráfico. Para obtener más información, consulta [Animations overview](https://msdn.microsoft.com/library/windows/apps/Mt187350) (Información general sobre animaciones). Recuerda que las animaciones de guion gráfico requieren actualizaciones constantes en la pantalla, y mantienen la CPU y la canalización de gráficos activas. Para conservar la batería, te recomendamos que no tengas animaciones en funcionamiento si el usuario no está interactuando con la aplicación.
--   Las imágenes deben cargarse en el tamaño apropiado para la vista en que la presentas, mediante el método [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210).
+-   Opta por las transiciones de tema y las animaciones en lugar de las animaciones de guion gráfico. Para más información, consulta [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/Mt187350). Recuerda que las animaciones de guion gráfico requieren actualizaciones constantes en la pantalla, y mantienen la CPU y la canalización de gráficos activas. Para conservar la batería, no tengas animaciones en funcionamiento si el usuario no está interactuando con la aplicación.
+-   Las imágenes deben cargarse en el tamaño apropiado para la vista en que las presentas, con el método [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210).
 
 **CPU, memoria y energía**
 
--   Programa trabajos de menor prioridad para que se ejecuten en subprocesos o núcleos de menor prioridad. Consulta [Asynchronous programming](https://msdn.microsoft.com/library/windows/apps/Mt187335) (Programación asincrónica), la propiedad [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/BR209054) y la clase [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/BR208211).
--   Minimiza la superficie de memoria de la aplicación liberando los recursos que más usen la memoria (como los recursos multimedia), poniéndolos en suspensión.
+-   Programa trabajos de menor prioridad para que se ejecuten en subprocesos o núcleos de menor prioridad. Consulta [Programación asincrónica](https://msdn.microsoft.com/library/windows/apps/Mt187335), la propiedad [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/BR209054) y la clase [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/BR208211).
+-   Para minimiza la superficie de memoria de la aplicación libera los recursos que consumen más memoria (como los recursos multimedia) en el estado de suspensión.
 -   Minimiza el espacio de trabajo del código.
--   Evita las pérdidas de memoria. Para ello, elimina el registro de los controladores de eventos y la referencia de elementos de la interfaz de usuario, siempre que te sea posible.
--   Para ahorrar batería, recuerda que debes ser controlar la frecuencia con la que se sondean los datos, se consultan los sensores o se programa el trabajo en la CPU cuando está inactiva.
+-   Evita las pérdidas de memoria. Para ello, elimina el registro de los controladores de eventos y la referencia de elementos de la interfaz de usuario, siempre que sea posible.
+-   Por razones de ahorro de la batería, debes ser conservador con la frecuencia de sondeo de los datos, de consulta de sensores o de programación del trabajo en la CPU cuando está inactiva.
 
-**Acceso a los datos**
+**Acceso a datos**
 
--   Si es posible, captura con antelación el contenido. Para realizar la captura previa automática, consulta la clase [**ContentPrefetcher**](https://msdn.microsoft.com/library/windows/apps/Dn279042). Para realizar la captura previa manual, consulta el espacio de nombres [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/BR224847) y la clase [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Hh700517).
--   Si te es posible, almacena en la memoria caché el contenido cuyo acceso sea difícil. Consulta las propiedades [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/BR241621) y [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/BR241622).
--   Para los errores de caché, muestra una interfaz de usuario de marcador de posición lo más rápido posible y que indique que la aplicación aún está cargando contenido. Haz que la transición de contenido de marcador de posición a dinámico se realice de una forma sencilla que no moleste al usuario. Por ejemplo, no cambie la posición del contenido debajo del dedo del usuario o el puntero del mouse mientras se carga el contenido dinámico.
+-   Si es posible, realiza una captura previa de contenido. Para realizar la captura previa automática, consulta la clase [**ContentPrefetcher**](https://msdn.microsoft.com/library/windows/apps/Dn279042). Para realizar la captura previa manual, consulta el espacio de nombres [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/BR224847) y la clase [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Hh700517).
+-   Si es posible, almacena en caché el contenido cuyo acceso sea difícil. Consulta las propiedades [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/BR241621) y [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/BR241622).
+-   Para los errores de caché, muestra una interfaz de usuario de marcador de posición lo más rápido posible que indique que la aplicación aún está cargando contenido. Haz que la transición de contenido de marcador de posición a dinámico se realice de una forma sencilla que no moleste al usuario. Por ejemplo, no cambie la posición del contenido debajo del dedo del usuario o el puntero del mouse mientras se carga el contenido dinámico.
 
 **Iniciar y reanudar aplicaciones**
 
--   Aplaza la página de presentación de la aplicación y no la extiendas a menos que sea necesario. Para obtener más detalles, consulta [Creating a fast and fluid app launch experience](http://go.microsoft.com/fwlink/p/?LinkId=317595) (Crear una experiencia de inicio de la aplicación rápida y fluida) y [Display a splash screen for more time](https://msdn.microsoft.com/library/windows/apps/Mt187309) (Mostrar una pantalla de presentación durante más tiempo).
--   Deshabilita las animaciones que se produzcan inmediatamente después de descartar la página de presentación, ya que estas solo causan una sensación de demora en el inicio de la aplicación.
+-   Aplaza la página de presentación de la aplicación y no la extiendas a menos que sea necesario. Para más información, consulta [Crear una experiencia de inicio de la aplicación rápida y fluida](http://go.microsoft.com/fwlink/p/?LinkId=317595) y [Mostrar una pantalla de presentación durante más tiempo](https://msdn.microsoft.com/library/windows/apps/Mt187309).
+-   Deshabilita las animaciones que se produzcan inmediatamente después de descartarse la página de presentación, ya que estas solo causan una sensación de demora en el inicio de la aplicación.
 
 **Interfaz de usuario adaptable y orientación**
 
 -   Usa la clase [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021).
--   Completa solo el trabajo requerido de manera inmediata y aplaza el trabajo intensivo para más adelante: la aplicación tiene entre 200 y 800 milisegundos para terminar el trabajo, antes de que el usuario vea la interfaz en estado recortado.
+-   Completa solo el trabajo necesario de manera inmediata y aplaza el trabajo intensivo para más adelante: la aplicación tiene entre 200 y 800 milisegundos para terminar el trabajo, antes de que el usuario vea la interfaz en estado recortado.
 
 Con todo listo en materia de diseño de rendimiento, puedes empezar a codificar la aplicación.
 
-## Instrumento de rendimiento
+## Equipar la aplicación para lograr rendimiento
 
-Durante la codificación, puedes agregar código que registre mensajes y eventos en determinados puntos mientras la aplicación se ejecuta. Una vez hayas probado la aplicación, puedes usar herramientas de generación de perfiles como Windows Performance Recorder y Windows Performance Analyzer (ambas incluidas en [Windows Performance Toolkit](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh162945.aspx)) para crear y ver un informe sobre el rendimiento de la aplicación. En este informe, puedes buscar los mensajes y eventos para que te resulte más fácil analizar los resultados.
+Durante la codificación, agrega código que registre mensajes y eventos en determinados puntos mientras la aplicación se ejecuta. Luego, cuando pruebes la aplicación, puedes usar herramientas de generación de perfiles como Windows Performance Recorder y Windows Performance Analyzer (ambas incluidas en [Windows Performance Toolkit](https://msdn.microsoft.com/library/windows/apps/xaml/hh162945.aspx)) para crear y ver un informe sobre el rendimiento de la aplicación. En este informe, puedes buscar los mensajes y eventos para que te resulte más fácil analizar los resultados.
 
-La Plataforma universal de Windows (UWP) proporciona varias API de registro, respaldadas por la característica [Event Tracing for Windows (ETW)](https://msdn.microsoft.com/library/windows/desktop/Bb968803) (Seguimiento de eventos para Windows), que en conjunto ofrecen una solución enriquecida de registro y seguimiento de eventos para aplicaciones de la Tienda Windows. Las API, que son parte del espacio de nombres [**Windows.Foundation.Diagnostics**](https://msdn.microsoft.com/library/windows/apps/BR206677), incluyen las clases [**FileLoggingSession**](https://msdn.microsoft.com/library/windows/apps/Dn264138), [**LoggingActivity**](https://msdn.microsoft.com/library/windows/apps/Dn264195), [**LoggingChannel**](https://msdn.microsoft.com/library/windows/apps/Dn264202) y [**LoggingSession**](https://msdn.microsoft.com/library/windows/apps/Dn264217).
+La Plataforma universal de Windows (UWP) proporciona varias API de registro, respaldadas por el [Seguimiento de eventos para Windows (ETW)](https://msdn.microsoft.com/library/windows/desktop/Bb968803), que en conjunto ofrecen una solución enriquecida de registro y seguimiento de eventos. Las API, que son parte del espacio de nombres [**Windows.Foundation.Diagnostics**](https://msdn.microsoft.com/library/windows/apps/BR206677), incluyen las clases [**FileLoggingSession**](https://msdn.microsoft.com/library/windows/apps/Dn264138), [**LoggingActivity**](https://msdn.microsoft.com/library/windows/apps/Dn264195), [**LoggingChannel**](https://msdn.microsoft.com/library/windows/apps/Dn264202) y [**LoggingSession**](https://msdn.microsoft.com/library/windows/apps/Dn264217).
 
-Para registrar un mensaje en un punto específico del informe mientras la aplicación se ejecuta, crea un objeto **LoggingChannel** y, a continuación, llama al método [**LogMessage**](https://msdn.microsoft.com/library/windows/apps/Dn264202-logmessage) del objeto.
+Para registrar un mensaje en un punto específico del informe mientras la aplicación se ejecuta, crea un objeto **LoggingChannel** y, después, llama al método [**LogMessage**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.loggingchannel.logmessage.aspx) del objeto, como se indica a continuación.
 
 ```csharp
-// mediante Windows.Foundation.Diagnostics;
+// using Windows.Foundation.Diagnostics;
 // ...
 
-LoggingChannel myLoggingChannel = new LoggingChannel(&quot;MyLoggingChannel&quot;);
+LoggingChannel myLoggingChannel = new LoggingChannel("MyLoggingChannel");
 
-myLoggingChannel.LogMessage(LoggingLevel.Information, &quot;Aquí aparece el mensaje registrado&quot;);
+myLoggingChannel.LogMessage(LoggingLevel.Information, "Here' s my logged message.");
 
 // ...
 ```
 
-Para registrar eventos de inicio y finalización en el informe durante un periodo de tiempo mientras la aplicación se ejecuta, crea un objeto **LoggingActivity** y, a continuación, llama al constructor [**LoggingActivity**](https://msdn.microsoft.com/library/windows/apps/Dn264195-loggingactivity) de esta forma.
+Para registrar eventos de inicio y finalización en el informe durante un período de tiempo mientras la aplicación se ejecuta, crea un objeto **LoggingActivity** y, después, llama al constructor [**LoggingActivity**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.loggingactivity.loggingactivity.aspx) del objeto, como se indica a continuación.
 
 ```csharp
-// mediante Windows.Foundation.Diagnostics;
+// using Windows.Foundation.Diagnostics;
 // ...
 
 LoggingActivity myLoggingActivity;
 
-// myLoggingChannel ya se definió e inicializó en el ejemplo de código anterior.
-mediante (myLoggingActivity = new LoggingActivity(&quot;MyLoggingActivity&quot;), myLoggingChannel))
-{   // Una vez haya comenzado la actividad de registro, se registrará un evento de inicio.
+// myLoggingChannel is defined and initialized in the previous code example.
+using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingChannel))
+{   // After this logging activity starts, a start event is logged.
     
-    // Agrega código aquí para hacer algo interesante.
+    // Add code here to do something of interest.
     
-}   // Cuando finalice el registro de la actividad, se registrará un evento final.
+}   // After this logging activity ends, an end event is logged.
 
 // ...
 ```
 
-Puedes consultar también la muestra de registro: [Logging sample](http://go.microsoft.com/fwlink/p/?LinkId=529576).
+Consulta también la [muestra de registro](http://go.microsoft.com/fwlink/p/?LinkId=529576).
 
-Con la aplicación instrumentada, ya puedes probar y medir el rendimiento.
+Con la aplicación instrumentada, ya puedes probar y medir su rendimiento.
 
-## Probar y medir según los objetivos de rendimiento
+## Probar y medir con objetivos de rendimiento
 
-Parte del plan de rendimiento es definir durante el desarrollo todos los puntos según los cuales se medirá el rendimiento. Esto sirve para diferentes fines en función de si mides durante la fase de creación del prototipo, la de desarrollo o la de implementación. Medir el rendimiento durante las primeras etapas de un prototipo puede resultar muy valioso, por lo que te recomendamos hacerlo tan pronto como tengas un código que realice algún trabajo significativo. Las mediciones en las primeras etapas te proporcionan una idea clara de los lugares donde se consumen más recursos en la aplicación y te proporcionan información para que puedas tomar las decisiones de diseño correctas. Esto da como resultado aplicaciones de alto rendimiento y escalado. Por lo general, resulta costeso cambiar los diseños más tarde. Si el rendimiento se mide tarde en el ciclo del producto, es posible que debas realizar modificaciones de última hora y que el rendimiento no sea bueno.
+Parte del plan de rendimiento es definir durante el desarrollo todos los puntos en los que se medirá el rendimiento. Esto sirve para diferentes fines en función de si mides durante la fase de creación del prototipo, la de desarrollo o la de implementación. Medir el rendimiento durante las primeras etapas de un prototipo puede resultar muy valioso, por lo que te recomendamos hacerlo tan pronto como tengas un código que realice algún trabajo significativo. Las mediciones en las primeras etapas te proporcionan una idea clara de los lugares donde se consumen más recursos en la aplicación y te proporcionan información para que puedas tomar las decisiones de diseño correctas. Esto da como resultado aplicaciones de alto rendimiento y escalado. Por lo general, resulta costeso cambiar los diseños más tarde. Si el rendimiento se mide tarde en el ciclo del producto, es posible que debas realizar modificaciones de última hora y que el rendimiento no sea bueno.
 
 Usa estas técnicas y herramientas para probar la aplicación con respecto a los objetivos de rendimiento originales.
 
--   Realiza pruebas en distintas configuraciones de hardware, incluyendo equipos de escritorio y todo en uno, equipos portátiles, ultrabooks, tabletas y otros dispositivos móviles.
--   Realiza pruebas en distintos tamaños de pantalla. Si bien cuanto mayor sea la pantalla más se puede mostrar, presentar todo ese contenido adicional puede tener un impacto negativo en el rendimiento.
+-   Prueba en distintas configuraciones de hardware, incluidos los equipos de escritorio y todo en uno, equipos portátiles, ultrabooks, tabletas y otros dispositivos móviles.
+-   Prueba en distintos tamaños de pantalla. Si bien cuanto más grande sea la pantalla más se puede mostrar, presentar todo ese contenido adicional puede tener un impacto negativo en el rendimiento.
 -   Elimina todas las variables de prueba que puedas.
-    -   Cierra aplicaciones en segundo plano en el dispositivo de prueba. Para ello, en Windows, selecciona **Configuración** desde el menú Inicio &gt; **Personalización** &gt; **Pantalla de bloqueo**. Selecciona cada aplicación activa y selecciona **Ninguno**.
-    -   Compila la aplicación en código nativo. Para ello, compílala en una configuración de lanzamiento antes de implementarla en el dispositivo de prueba.
-    -   Para garantizar que el mantenimiento automático no afecta al rendimiento del dispositivo de prueba, desencadénalo manualmente y espera a que finalice. En Windows, en el menú Inicio, busca **Seguridad y mantenimiento**. En el área **Mantenimiento**, en **Mantenimiento automático**, selecciona **Iniciar mantenimiento** y espera a que el estado cambie de **Mantenimiento en curso**.
+    -   Cierra las aplicaciones en segundo plano en el dispositivo de prueba. Para ello, en Windows, selecciona **Configuración** en el menú Inicio &gt;**Personalización**&gt;**Pantalla de bloqueo**. Selecciona cada aplicación activa y selecciona **Ninguno**.
+    -   Compila la aplicación en código nativo. Para ello, compílala en la configuración de lanzamiento antes de implementarla en el dispositivo de prueba.
+    -   Para garantizar que el mantenimiento automático no afecta el rendimiento del dispositivo de prueba, desencadénalo manualmente y espera a que finalice. En Windows, en el menú Inicio, busca **Seguridad y mantenimiento**. En el área **Mantenimiento**, en **Mantenimiento automático**, selecciona **Iniciar mantenimiento** y espera a que el estado cambie de **Mantenimiento en curso**.
     -   Ejecuta la aplicación varias veces para eliminar las variables aleatorias de prueba y garantizar medidas coherentes.
--   Realiza pruebas para comprobar si se ha reducido la disponibilidad de consumo de energía. Ten en cuenta que los dispositivos de los usuarios podrían tener mucha menos energía que el equipo de desarrollo. Windows se ha diseñado teniendo en cuenta los dispositivos de baja energía, como los dispositivos móviles. Debes asegurarte de que las aplicaciones que se ejecutan en la plataforma funcionan correctamente en estos dispositivos. Como heurístico, cuenta con que un dispositivo de baja energía funciona a, aproximadamente, un cuarto de la velocidad de un equipo de escritorio, y define tus objetivos en consecuencia.
--   Combina herramientas, como Microsoft Visual Studio y Windows Performance Analyzer, para medir el rendimiento de la aplicación. Visual Studio está diseñado para proporcionar un análisis centrado en la aplicación, como la vinculación del código de origen. Windows Performance Analyzer está diseñado para proporcionar un análisis centrado en el sistema, como la información del sistema, información sobre los eventos de manipulación táctil e información sobre la entrada y salida en disco y el coste de la unidad de procesamiento gráfico (GPU). Ambas herramientas proporcionan capturas y exportación de seguimiento y pueden reabrir seguimientos compartidos y finales.
--   Antes de enviar la aplicación a la Tienda para su certificación, asegúrate de incorporar en los planes de prueba los casos relacionados con el rendimiento, tal como se describe en la sección "Pruebas de rendimiento" de [Windows App Certification Kit tests](windows-app-certification-kit-tests.md) (Pruebas del Kit para la certificación de aplicaciones en Windows) y en la sección "Rendimiento y estabilidad" de [Windows Store app test cases](https://msdn.microsoft.com/library/windows/apps/Dn275879) (Casos de pruebas de aplicaciones de la Tienda Windows).
+-   Prueba si se ha reducido la disponibilidad de consumo de energía. El dispositivo de tus usuarios podría tener mucha menos energía que el equipo de desarrollo. Windows se ha diseñado teniendo en cuenta los dispositivos de baja energía, como los dispositivos móviles. Debes asegurarte de que las aplicaciones que se ejecutan en la plataforma funcionan correctamente en estos dispositivos. Como heurístico, cuenta con que un dispositivo de bajo consumo funciona, aproximadamente, a un cuarto de la velocidad de un equipo de escritorio, y define tus objetivos en consecuencia.
+-   Combina herramientas, como Microsoft Visual Studio y el Windows Performance Analyzer, para medir el rendimiento de la aplicación. Visual Studio está diseñado para proporcionar un análisis centrado en la aplicación, como la vinculación del código de origen. Windows Performance Analyzer está diseñado para proporcionar un análisis centrado en el sistema, como la información del sistema, información sobre los eventos de manipulación táctil e información sobre la entrada y salida en disco y el coste de la unidad de procesamiento gráfico (GPU). Ambas herramientas proporcionan captura y exportación de seguimiento y pueden reabrir seguimientos compartidos y finales.
+-   Antes de enviar la aplicación a la Tienda para su certificación, asegúrate de incorporar en los planes de prueba los casos relacionados con el rendimiento, como se describe en la sección "Pruebas de rendimiento" de las [Pruebas del Kit para la certificación de aplicaciones en Windows](windows-app-certification-kit-tests.md) y en la sección "Rendimiento y estabilidad" de los [casos de pruebas de aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/Dn275879).
 
-Para obtener más información, consulta estos recursos y herramientas de generación de perfiles.
+Para más información, consulta estos recursos y herramientas de generación de perfiles.
 
--   [Windows Performance Analyzer](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh448170.aspx)
--   [Windows Performance Toolkit](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh162945.aspx)
--   [Analyze performance using Visual Studio diagnostic tools](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh696636.aspx) (Analizar el rendimiento con herramientas de diagnóstico de Visual Studio)
-						
--   Sesión //build/ [XAML Performance](https://channel9.msdn.com/Events/Build/2015/3-698) (Rendimiento de XAML)
--   Sesión //build/ [New XAML Tools in Visual Studio 2015](https://channel9.msdn.com/Events/Build/2015/2-697) (Nuevas herramientas XAML de Visual Studio 2015)
+-   [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/apps/xaml/hh448170.aspx)
+-   [Windows Performance Toolkit](https://msdn.microsoft.com/library/windows/apps/xaml/hh162945.aspx)
+-   [Analizar el rendimiento con herramientas de diagnóstico de Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh696636.aspx)
+-   La sesión //build/ [Rendimiento de XAML](https://channel9.msdn.com/Events/Build/2015/3-698)
+-   La sesión //build/ [Nuevas herramientas XAML de Visual Studio 2015](https://channel9.msdn.com/Events/Build/2015/2-697)
 
 ## Responder a los resultados de la prueba de rendimiento
 
@@ -183,12 +183,12 @@ Después de analizar los resultados de las pruebas de rendimiento, determina si 
 
 Si es necesario hacer cambios, hazlos y vuelve a instrumentar o probar y repite la operación.
 
-## Optimizar
+## Optimización
 
 Optimizar las rutas de código crítico para el rendimiento de la aplicación es lo que más tiempo conlleva. La creación de perfiles te lo indicará. A menudo, existe un equilibrio entre la creación de software que cumpla con buenas prácticas de diseño y la escritura de código que funcione en la optimización más elevada. Suele ser mejor dar prioridad a la productividad del desarrollador y a un buen diseño del software en las áreas donde no importa tanto el rendimiento.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

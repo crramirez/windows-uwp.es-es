@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 Description: Después de definir el experimento en el panel del Centro de desarrollo y codificar el experimento en la aplicación, estás listo para activar el experimento y usar el panel del Centro de desarrollo para revisar los resultados del experimento.
 title: Administra tu experimento en el panel del Centro de desarrollo
 ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
@@ -8,7 +9,7 @@ ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
 
 Después de [definir el experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md) y [codificar la aplicación para el experimento](code-your-experiment-in-your-app.md), estás listo para activar el experimento y usar el panel del Centro de desarrollo para revisar los resultados del experimento. Después de haber obtenido todos los datos que necesitas, puedes terminar el experimento y elegir si quieres seguir usando la configuración del control de variación en todas las aplicaciones o cambiar a la configuración de una de sus variaciones.
 
-> **Nota** Cuando actives un experimento, el Centro de desarrollo inicia inmediatamente la recopilación de datos de las aplicaciones que están pensadas para registrar los datos del experimento. Sin embargo, pueden pasar varias horas antes de que los datos del experimento aparezcan en el panel.
+> **Nota** Cuando activas un experimento, el Centro de desarrollo inicia inmediatamente la recopilación de datos de las aplicaciones que están pensadas para registrar los datos del experimento. Sin embargo, pueden pasar varias horas antes de que los datos del experimento aparezcan en el panel.
 
 Para ver un tutorial que muestra de principio a fin el proceso de crear y ejecutar un experimento, consulta [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
@@ -21,7 +22,7 @@ Cuando estés satisfecho con los parámetros del experimento en el panel y hayas
 3. En el panel de navegación, selecciona **Servicios** y, a continuación, selecciona **Experimentación**.
 4. La sección **Experimentos** enumera los experimentos de borrador, activos y finalizados para la aplicación actual. Haz clic en el filtro **Borrador** y, a continuación, haz clic en **Activar** para el experimento que quieras activar.
 
-> **Importante**  Después de activar un experimento, ya no se pueden modificar sus parámetros a menos de que sea un experimento de prueba (hiciste clic en la casilla **Experimento de prueba** cuando lo creaste). Te recomendamos que escribas el código del experimento en tu aplicación antes de activar el experimento.
+> **Importante**  Después de activar un experimento, ya no se pueden modificar sus parámetros a menos que sea un experimento de prueba (hiciste clic en la casilla **Experimento de prueba** cuando lo creaste). Te recomendamos que escribas el código del experimento en tu aplicación antes de activar el experimento.
 
 
 ## Revisar los resultados del experimento
@@ -52,6 +53,6 @@ Cuando estés satisfecho con los parámetros del experimento en el panel y hayas
   * [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,15 +1,14 @@
 ---
-Description: Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción del usuario intuitivas y distintivas que estén optimizadas para entrada táctil, pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada.
+author: Karl-Bridge-Microsoft
+Description: Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción del usuario intuitivas y distintivas que estén optimizadas para el panel táctil pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada.
 title: Interacciones del panel táctil
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
-label: Interacciones del panel táctil
+label: Touchpad interactions
 template: detail.hbs
 ---
 
 # Directrices para el diseño de panel táctil
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Diseña tu aplicación de modo que los usuarios puedan interactuar con ella a través de un panel táctil. Un panel táctil combina la entrada multitáctil indirecta con la entrada precisa de un dispositivo señalador, como un mouse. Esta combinación hace que el panel táctil sea ideal tanto para una interfaz de usuario optimizada para entrada táctil como para los destinos menores de las aplicaciones de productividad.
 
@@ -48,11 +47,11 @@ Los usuarios pueden establecer muchos más comportamientos de interacción y ges
 
 ![configuración del panel táctil estándar](images/mouse-touchpad-settings-standard.png)
 
-<sup>Configuración del panel táctil estándar</sup>
+<sup>Configuración\\ del panel táctil\\ estándar</sup>
 
 ![configuración del panel táctil de precisión de Windows](images/mouse-touchpad-settings-ptp.png)
 
-<sup>Configuración del panel táctil de precisión de Windows</sup>
+<sup>Configuración\\ del panel táctil\\ de precisión\\ de Windows</sup>
 
 Estos son algunos ejemplos de gestos optimizados para panel táctil para realizar tareas comunes.
 
@@ -116,7 +115,7 @@ Consulta las funciones del dispositivo de mouse ([**MouseCapabilities**](https:/
 
 Para obtener más información sobre cómo consultar las funciones de dispositivos, consulta [Identificar los dispositivos de entrada](identify-input-devices.md).
 
-## <span id="Visual_feedback"></span><span id="visual_feedback"></span><span id="VISUAL_FEEDBACK"></span>Comentarios visuales
+## <span id="Visual_feedback"></span><span id="visual_feedback"></span><span id="VISUAL_FEEDBACK"></span>Información visual
 
 
 -   Cuando se detecte un cursor del panel táctil (a través de eventos de movimiento o mantenimiento del mouse), muestra la interfaz de usuario específica del mouse para indicar las funciones expuestas por el elemento. Si el cursor del panel táctil no se mueve por un determinado período o el usuario inicia una interacción táctil, haz que la interfaz de usuario del panel táctil vaya desapareciendo gradualmente. Esto mantiene la interfaz de usuario ordenada y organizada.
@@ -146,13 +145,17 @@ Si necesitas personalizar el cursor del mouse:
 
 
 * [Controlar la entrada de puntero](handle-pointer-input.md)
-* [Identificación de dispositivos de entrada](identify-input-devices.md)
-**Ejemplos**
+* [Identificar dispositivos de entrada](identify-input-devices.md)
+            
+          
+            **Muestras**
 * [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Ejemplo de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Ejemplos de archivo**
+* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+            
+          
+            **Muestras de archivo**
 * [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Muestra de desplazamiento, movimiento panorámico y zoom XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
@@ -163,6 +166,6 @@ Si necesitas personalizar el cursor del mouse:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

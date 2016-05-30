@@ -1,17 +1,14 @@
 ---
+author: mijacobs
 Description: La navegación en las aplicaciones para la Plataforma universal de Windows (UWP) se basa en un modelo flexible de estructuras de navegación, elementos de navegación y características de nivel del sistema.
 title: Conceptos básicos del diseño de navegación para aplicaciones para la Plataforma universal de Windows (UWP)
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
-label: Historial y navegación hacia atrás
+label: History and backwards navigation
 template: detail.hbs
 ---
 
 #  Historial de navegación y navegación hacia atrás
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 En Internet, hay sitios web individuales que proporcionan sus propios sistemas de navegación, como tablas de contenido, botones, menús, listas sencillas de vínculos, etc. La experiencia de navegación puede variar considerablemente de un sitio web a otro. Sin embargo, existe una experiencia de navegación coherente: el botón Atrás. La mayoría de los exploradores proporcionan un botón Atrás que tiene el mismo comportamiento, independientemente del sitio web.
 
@@ -165,7 +162,7 @@ En el modo de escritorio, cada aplicación se ejecuta en una ventana con una bar
 
 El botón Atrás de la barra de título solo está disponible en aplicaciones que se ejecuten en dispositivos en modo de escritorio, y solo admite el historial de navegación en la aplicación; no admite el historial de navegación entre aplicaciones.
 
-**Importante** El botón Atrás de la barra de título no se muestra de forma predeterminada. Debes habilitarlo tú mismo.
+**Importante**  El botón Atrás de la barra de título no se muestra de forma predeterminada. Debes habilitarlo tú mismo.
 
  
 
@@ -257,7 +254,7 @@ Si decides proporcionar tu propia navegación de pila de retroceso, la experienc
 <tr class="odd">
 <td align="left"><p><strong>Página a página, grupos diferentes del mismo nivel</strong></p></td>
 <td align="left"><strong>Sí</strong>
-          <p>En esta ilustración, el usuario va del nivel 1 de la aplicación al nivel 2, cruzando grupos del mismo nivel, de forma que la navegación se agrega al historial de navegación.</p>
+<p>En esta ilustración, el usuario va del nivel 1 de la aplicación al nivel 2, cruzando grupos del mismo nivel, de forma que la navegación se agrega al historial de navegación.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly1.png" alt="Navigation across peer groups" /></p>
 <p>En la siguiente ilustración, el usuario navega entre dos grupos del mismo nivel, cruzando nuevamente grupos del mismo nivel, de modo que la navegación se agrega al historial de navegación.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly2.png" alt="Navigation across peer groups" /></p></td>
@@ -266,28 +263,28 @@ Si decides proporcionar tu propia navegación de pila de retroceso, la experienc
 <td align="left"><p><strong>Página a página; mismo grupo del mismo nivel; sin elemento de navegación en pantalla</strong></p>
 <p>El usuario navega de una página a otra con el mismo grupo del mismo nivel. No hay ningún elemento de navegación que siempre esté presente (como pestañas o controles dinámicos o un panel de navegación acoplado) y que proporcione navegación directa a las dos páginas.</p></td>
 <td align="left"><strong>Sí</strong>
-          <p>En la siguiente ilustración, el usuario navega entre dos páginas en el mismo grupo del mismo nivel. Las páginas no usan pestañas o un panel de navegación acoplado, por lo que la navegación se agrega al historial de navegación.</p>
+<p>En la siguiente ilustración, el usuario navega entre dos páginas en el mismo grupo del mismo nivel. Las páginas no usan pestañas o un panel de navegación acoplado, por lo que la navegación se agrega al historial de navegación.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>Página a página; mismo grupo del mismo nivel; con un elemento de navegación en pantalla</strong></p>
 <p>El usuario navega de una página a otra en el mismo grupo del mismo nivel. Ambas páginas se muestran en el mismo elemento de navegación. Por ejemplo, ambas páginas usan el mismo elemento de pestañas o controles dinámicos, o ambas páginas aparecen en un panel de navegación acoplado.</p></td>
 <td align="left"><strong>No</strong>
-          <p>Cuando el usuario presiona o pulsa Atrás, volverá a la página previa antes de navegar al grupo actual del mismo nivel.</p>
+<p>Cuando el usuario presiona o pulsa Atrás, volverá a la página previa antes de navegar al grupo actual del mismo nivel.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Mostrar una interfaz de usuario transitoria</strong>
-          <p>La aplicación muestra una ventana emergente o secundaria (como un cuadro de diálogo, pantalla de presentación o teclado en pantalla), o bien la aplicación entra en un modo especial, como el modo de selección múltiple.</p></td>
+<p>La aplicación muestra una ventana emergente o secundaria (como un cuadro de diálogo, pantalla de presentación o teclado en pantalla), o bien la aplicación entra en un modo especial, como el modo de selección múltiple.</p></td>
 <td align="left"><strong>No</strong>
-          <p>Cuando el usuario presiona el botón Atrás, se descarta la interfaz de usuario transitoria (oculta el teclado en pantalla, cancela el cuadro de diálogo, etc.) y vuelve a la página que genera la interfaz de usuario transitoria.</p>
+<p>Cuando el usuario presiona el botón Atrás, se descarta la interfaz de usuario transitoria (oculta el teclado en pantalla, cancela el cuadro de diálogo, etc.) y vuelve a la página que genera la interfaz de usuario transitoria.</p>
 <p><img src="images/back-transui.png" alt="Showing a transient UI" /></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><strong>Enumerar elementos</strong>
-          <p>La aplicación muestra el contenido de un elemento en pantalla, como los detalles del elemento seleccionado en la lista maestro y detalles.</p></td>
+<p>La aplicación muestra el contenido de un elemento en pantalla, como los detalles del elemento seleccionado en la lista maestro y detalles.</p></td>
 <td align="left"><strong>No</strong>
-          <p>Enumerar elementos es similar a navegar dentro de un grupo del mismo nivel. Cuando el usuario presiona o pulsa Atrás, va a la página que precede a la página actual que contiene la enumeración de elementos.</p>
+<p>Enumerar elementos es similar a navegar dentro de un grupo del mismo nivel. Cuando el usuario presiona o pulsa Atrás, va a la página que precede a la página actual que contiene la enumeración de elementos.</p>
 <img src="images/nav/nav-enumerate.png" alt="Iterm enumeration" /></td>
 </tr>
 </tbody>
@@ -299,7 +296,7 @@ Si decides proporcionar tu propia navegación de pila de retroceso, la experienc
 Cuando el usuario cambia a otra aplicación y vuelve a tu aplicación, te recomendamos que este vuelva a la última página del historial de navegación.
 
 
-\[Este artículo contiene información específica de las aplicaciones para UWP y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
 
 
@@ -310,6 +307,6 @@ Cuando el usuario cambia a otra aplicación y vuelve a tu aplicación, te recome
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Activación del modo de desarrollador de Xbox One
 description: Cómo activar el modo de desarrollador para poder alternar entre el modo comercial y el modo de desarrollador.
 area: Xbox
@@ -14,9 +15,11 @@ area: Xbox
 Xbox One tiene dos modos, el modo *comercial* (1) y el modo de *desarrollador* (2). En el modo comercial, la consola está en el estado que cualquier cliente o usuario de una consola Xbox One usaría: puedes jugar a juegos y ejecutar aplicaciones como un usuario. En el modo de desarrollador, puedes desarrollar software para la consola, pero no puedes jugar a juegos comerciales ni ejecutar aplicaciones comerciales.
 El modo de desarrollador se puede habilitar en cualquier consola Xbox One comercial. Después de habilitar el modo de desarrollador, puedes alternar rápidamente entre los modos comercial (2a) y de desarrollador (2b).
 
-> **Importante**&nbsp;&nbsp;Cuando activas el modo de desarrollador en la consola Xbox One, participas en las actualizaciones del sistema de Xbox para una versión preliminar de desarrollador que incluye software experimental y de versión preliminar. Esto significa que algunos juegos y aplicaciones conocidos no funcionan según lo esperado y es posible que experimentes bloqueos y pérdidas de datos ocasionales. Si sales de la versión preliminar para desarrolladores, la consola restablecerá la configuración de fábrica y tendrás que volver a instalar todos los juegos, las aplicaciones y el contenido. 
+> **Importante**
+            &nbsp;&nbsp;Cuando activas el modo de desarrollador en la consola Xbox One, participas en las actualizaciones del sistema de Xbox para una versión preliminar de desarrollador que incluye software experimental y de versión preliminar. Esto significa que algunos juegos y aplicaciones conocidos no funcionan según lo esperado y es posible que experimentes bloqueos y pérdidas de datos ocasionales. Si sales de la versión preliminar para desarrolladores, la consola restablecerá la configuración de fábrica y tendrás que volver a instalar todos los juegos, las aplicaciones y el contenido. 
 
-> **Nota**&nbsp;&nbsp;No puedes activar el modo de desarrollador en la Xbox One si formas parte de un programa de versión preliminar existente como el programa Xbox One Beta. Puedes salir de un programa de versión preliminar existente mediante la aplicación Xbox Preview Dashboard. 
+> **Nota**
+            &nbsp;&nbsp;No puedes activar el modo de desarrollador en la Xbox One si formas parte de un programa de versión preliminar existente como el programa Xbox One Beta. Puedes salir de un programa de versión preliminar existente mediante la aplicación Xbox Preview Dashboard. 
 
 ![Modos de Xbox One](images/dev-mode-flow.png)
 
@@ -32,7 +35,8 @@ El modo de desarrollador se puede habilitar en cualquier consola Xbox One comerc
     ![Aplicación Dev Mode Activation](images/activation-step-3.png)
 4. Abre la aplicación Dev Mode Activation.    
     
-    > **Nota**& nbsp; & nbsp;Asegúrate de leer atentamente la declinación de responsabilidades. Como parte de la activación de Xbox para el desarrollo, obtendrás compilaciones de versión preliminar. Para jugar juegos y ejecutar aplicaciones, deberás cambiar al modo comercial. Las aplicaciones transferidas localmente solo funcionarán en el modo de desarrollador.
+    > **Nota**
+            &nbsp;&nbsp;Asegúrate de leer atentamente la declinación de responsabilidades. Como parte de la activación de Xbox para el desarrollo, obtendrás compilaciones de versión preliminar. Para jugar juegos y ejecutar aplicaciones, deberás cambiar al modo comercial. Las aplicaciones transferidas localmente solo funcionarán en el modo de desarrollador.
 
 5.  Ten en cuenta el código que se muestra en la aplicación Dev Mode Activation.  
 
@@ -42,11 +46,16 @@ El modo de desarrollador se puede habilitar en cualquier consola Xbox One comerc
 7.  Inicia sesión con tu cuenta del Centro de desarrollo en el Centro de desarrollo.  
 8.  Escribe el código de activación que se muestra en la aplicación Dev Mode Activation.   
    
-     > **Nota**& nbsp; & nbsp;Tienes un número limitado de activaciones asociadas con tu cuenta. Una vez que hayas activado el modo de desarrollador, el Centro de desarrollo te indicará que has usado una de las activaciones asociadas con tu cuenta. 
+     > **Nota**
+            &nbsp;&nbsp;Tienes un número limitado de activaciones asociadas con tu cuenta. Una vez que hayas activado el modo de desarrollador, el Centro de desarrollo te indicará que has usado una de las activaciones asociadas con tu cuenta. 
     
     ![Paso de activación 8](images/activation-step-8.png)    
     
-9.  Haz clic en **Agree and activate**. De esta manera, volverá a cargarse la página y verás que el dispositivo introduce datos en la tabla.  
+9.  Haz clic en **Agree and activate**. De esta manera, volverá a cargarse la página y verás que el dispositivo introduce datos en la tabla.
+    
+    > **Nota**
+            &nbsp;&nbsp;Puedes encontrar los términos del contrato del Programa de activación del modo de desarrollador de Xbox One [aquí](http://go.microsoft.com/fwlink/?LinkId=760399).
+
 10. Después de escribir el código de activación, la consola mostrará una pantalla de progreso para el proceso de activación.  
 11. Una vez finalizada la activación, tendrás que esperar a que la consola se actualice a la compilación de vista previa necesaria. Esto puede tardar varias horas; ten paciencia.  
 
@@ -74,6 +83,6 @@ Una vez que se haya habilitado el modo de desarrollador en la consola, usa **Dev
 - [UWP on Xbox One (UWP en Xbox One)](index.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

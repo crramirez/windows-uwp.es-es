@@ -1,7 +1,8 @@
 ---
-title: Caso práctico de Windows Runtime 8.x a UWP: Bookstore1
+author: mcleblanc
+title: Caso práctico de Windows Runtime 8.x a UWP, Bookstore1
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
-description: En este tema se presenta un caso práctico de portar una aplicación Universal 8.1 a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10.
+description: En este tema se presenta un caso práctico de migración de una aplicación Universal 8.1 a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10.
 ---
 
 # Caso práctico de Windows Runtime 8.x a UWP: Bookstore1
@@ -14,13 +15,13 @@ La aplicación que portaremos consta de un enlace **ListBox** enlazado con un mo
 
 En los temas anteriores de esta sección se describen las diferencias entre las plataformas y se proporcionan detalles y pautas sobre el proceso de migración de diversos aspectos de una aplicación, entre ellos el marcado XAML, el enlace a un modelo de vista y el acceso a los datos. El objetivo de un caso práctico consiste en complementar esa orientación mostrando un ejemplo real en la práctica. En el caso práctico se supone que has leído las directrices, ya que no se repiten.
 
-**Note**   Cuando abras Bookstore1Universal\_10 en Visual Studio, si aparece el mensaje "Se requiere una actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+**Nota** Cuando abras Bookstore1Universal\_10 en Visual Studio, si aparece el mensaje "Se requiere una actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
 
 ## Descargas
 
-[Descargar la aplicación Bookstore1\_81 Universal 8.1](http://go.microsoft.com/fwlink/?linkid=532946).
+[Descarga la aplicación Bookstore1\_81 Universal 8.1](http://go.microsoft.com/fwlink/?linkid=532946).
 
-[Descargar la aplicación para Windows 10 Bookstore1Universal\_10](http://go.microsoft.com/fwlink/?linkid=532950).
+[Descarga la aplicación para Windows 10 Bookstore1Universal\_10](http://go.microsoft.com/fwlink/?linkid=532950).
 
 ## Aplicación Universal 8.1
 
@@ -123,6 +124,6 @@ También observamos que la migración de modelos de vista es, por lo general, un
 El siguiente caso práctico es [Bookstore2](w8x-to-uwp-case-study-bookstore2.md), en el que vamos a ver cómo mostrar datos agrupados y obtener acceso a ellos.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

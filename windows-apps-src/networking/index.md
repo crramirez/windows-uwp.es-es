@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
 description: Tecnologías para tener acceso a la red y servicios web.
 title: Redes y servicios web
@@ -22,6 +23,7 @@ Las siguientes tecnologías de red y servicios web están disponibles para los d
 | [Transferencias en segundo plano](background-transfers.md)                                         | Usa la API de transferencia en segundo plano para copiar archivos de forma confiable en la red.           |
 | [Etiquetado de conexiones de red con identidad EDP](tagging_network_connections_with_edp_identity.md) | En este tema se muestra cómo crear un contexto de subproceso protegido antes de crear conexiones de red en un escenario de Enterprise Data Protection (EDP). |
 
-<!--HONumber=Mar16_HO5-->
+
+<!--HONumber=May16_HO2-->
 
 

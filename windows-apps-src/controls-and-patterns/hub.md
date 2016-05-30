@@ -1,8 +1,9 @@
 ---
-Description: El control de navegación centralizada usa un patrón de navegación jerárquico para admitir las aplicaciones con una arquitectura de información relacional.
+author: Jwmsft
+Description: El control de navegación centralizada usa un patrón de navegación jerárquico para ser compatible con aplicaciones con una arquitectura de información relacional.
 title: Controles de navegación centralizada
 ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
-label: Navegación centralizada
+label: Hub
 template: detail.hbs
 ---
 # Patrón o control de navegación centralizada
@@ -61,13 +62,13 @@ Hay varias maneras de diseñar y navegar por el contenido en un control de naveg
 
 **Movimiento panorámico horizontal**
 
-![Ejemplo de navegación centralizada con movimiento panorámico horizontal](images/controls_hub_horizontal_pan.png)
+![Ejemplo de un control con movimiento panorámico horizontal](images/controls_hub_horizontal_pan.png)
 **Movimiento panorámico vertical**
 
-![Ejemplo de navegación centralizada con movimiento panorámico vertical](images/controls_hub_vertical_pan.png)
+![Ejemplo de un control con movimiento panorámico vertical](images/controls_hub_vertical_pan.png)
 **Movimiento panorámico horizontal con lista/cuadrícula de desplazamiento vertical**
 
-![Ejemplo de navegación centralizada con movimiento panorámico horizontal con una lista de desplazamiento vertical](images/controls_hub_horizontal_vertical_scroll.png)
+![Ejemplo de un control con movimiento panorámico horizontal con una lista de desplazamiento vertical](images/controls_hub_horizontal_vertical_scroll.png)
 **Movimiento panorámico vertical con lista/cuadrícula de desplazamiento horizontal**
 
 ![Ejemplo de navegación centralizada con movimiento panorámico horizontal](images/controls_hub_vertical_horizontal_scroll.png)
@@ -99,21 +100,16 @@ En los dispositivos móviles, las secciones de navegación centralizada están v
     -   Tamaño y estilo de texto en encabezados y contenido
     -   Color de fondo, secciones, encabezados de secciones y contenido de secciones
 
-\[Este artículo contiene información específica de las aplicaciones para UWP y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
 ## Artículos relacionados
------------------------------------------------
 
-**Para diseñadores**
 - [Conceptos básicos de navegación](https://msdn.microsoft.com/library/windows/apps/dn958438)
-
-**Para desarrolladores (XAML)**
-- [Navegación jerárquica, de principio a fin](https://msdn.microsoft.com/library/windows/apps/xaml/dn440585)
 - [**Clase Hub del espacio de nombres Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/dn251843)
-- [Ejemplo del control Hub XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
+- [Ejemplo del control de navegación centralizada XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
 - [Usar un control de navegación centralizada](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

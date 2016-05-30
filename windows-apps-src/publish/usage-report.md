@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: El informe de uso del panel del Centro de desarrollo de Windows te permite ver cómo usan la aplicación los clientes.
 title: Informe de uso
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
@@ -7,7 +8,7 @@ ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 # Informe de uso
 
 
-> **Importante**  El informe **Uso** solo proporciona datos si has activado el [SDK Visual Studio Application Insights](http://go.microsoft.com/fwlink/?LinkId=615086) en la aplicación (o habilitarlo activando la casilla "Mostrar telemetría en el centro de desarrollo de Windows" al crear el paquete). También debes enviar la aplicación al panel unificado del Centro de desarrollo antes de que se muestren los datos en el informe, y debes tener la telemetría de uso de la aplicación habilitada en la configuración Cuenta.
+> **Importante** El informe **Uso** solo proporciona datos si has activado el [SDK de Visual Studio Application Insights](http://go.microsoft.com/fwlink/?LinkId=615086) en la aplicación (también puedes habilitarlo activando la casilla "Mostrar telemetría en el Centro de desarrollo de Windows" al crear el paquete). También debes enviar la aplicación al panel unificado del Centro de desarrollo antes de que se muestren los datos en el informe, y debes tener la telemetría de uso de la aplicación habilitada en la configuración Cuenta.
 
 El informe de **uso** del panel del Centro de desarrollo de Windows te permite ver cómo usan la aplicación los clientes. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
 
@@ -65,6 +66,6 @@ El gráfico **Vistas de página en los últimos 30 días** muestra el número to
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jnHs
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
 title: Administrar la configuración de la cuenta y la información del perfil
 description: Puedes ver y actualizar la configuración de tu cuenta de desarrollador y la información del perfil en la sección Configuración de la cuenta del panel del Centro de desarrollo de Windows unificado.
@@ -31,6 +32,6 @@ Algunos programas pueden proporcionar un código que te permita ampliar las capa
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

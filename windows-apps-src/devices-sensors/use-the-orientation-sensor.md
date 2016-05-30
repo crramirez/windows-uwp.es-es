@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
 title: Usar el sensor de orientación
 description: Aprende a usar los sensores de orientación para determinar la orientación del dispositivo.
@@ -11,7 +12,7 @@ description: Aprende a usar los sensores de orientación para determinar la orie
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371)
--   [**Orientación simple**](https://msdn.microsoft.com/library/windows/apps/BR206399)
+-   [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399)
 
 Aprende a usar los sensores de orientación para determinar la orientación del dispositivo.
 
@@ -167,7 +168,7 @@ Deberás reemplazar la primera parte del nombre de la clase en el fragmento ante
 
 Con la aplicación en ejecución, puedes cambiar la orientación moviendo el dispositivo o usando las herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
 
 ###  Explicación
 
@@ -313,7 +314,7 @@ Deberás reemplazar la primera parte del nombre de la clase en el fragmento ante
 
 Con la aplicación en ejecución, puedes cambiar la orientación moviendo el dispositivo o usando las herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
 
 ### Explicación
 
@@ -347,6 +348,6 @@ Estos nuevos valores se escriben en un bloque de texto que se encuentra en el c�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

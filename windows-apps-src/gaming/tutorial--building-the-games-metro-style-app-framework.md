@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Definir el marco de la aplicación para la Plataforma universal de Windows (UWP) del juego
 description: La primera parte de codificar un juego de Plataforma universal de Windows (UWP) con DirectX es crear el marco que permite al objeto de juego interactuar con Windows.
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
@@ -214,7 +215,9 @@ En la muestra de juego, iniciamos un bucle que finaliza cuando el jugador cierra
 
 Cuando el juego tiene el foco, debes controlar cada evento en la cola de mensajes tan pronto como llegue, y por tanto debes llamar a [**CoreWindowDispatch.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) con la opción **ProcessAllIfPresent**. Otras opciones pueden causar retrasos en el procesamiento de eventos de mensaje, lo que puede provocar que el juego no responda bien o que los comportamientos táctiles parezcan lentos e imprecisos.
 
-No hace falta decir que, cuando la aplicación no está visible o está suspendida o acoplada, no conviene que consuma ningún recurso en ciclos de envío de mensajes que nunca llegarán a su destino. Por lo tanto, el juego debe usar **ProcessOneAndAllPending**, que lo bloquea hasta que recibe un evento y, a continuación, procesa dicho evento y cualquier otro que llegue a la cola de procesos durante el procesamiento del primer evento. A continuación, [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) regresa inmediatamente una vez procesada la cola.
+No hace falta decir que, cuando la aplicación no está visible o está suspendida o acoplada, no conviene que consuma ningún recurso en ciclos de envío de mensajes que nunca llegarán a su destino. Por lo tanto, el juego debe usar **ProcessOneAndAllPending**, que lo bloquea hasta que recibe un evento y, a continuación, procesa dicho evento y cualquier otro que llegue a la cola de procesos durante el procesamiento del primer evento. A continuación, [
+              **ProcessEvents**
+            ](https://msdn.microsoft.com/library/windows/apps/br208215) regresa inmediatamente una vez procesada la cola.
 
 El juego está en ejecución. Los eventos que usa para realizar la transición entre estados de juego se despachan y procesan. Los gráficos se actualizan mientras el bucle del juego cicla. Esperamos que el jugador se divierta. Sin embargo, antes o después la diversión debe acabar...
 
@@ -311,7 +314,7 @@ A continuación tienes una lista de los controladores de eventos de la muestra y
 <td align="left">OnLogicalDpiChanged</td>
 <td align="left">Controla [<strong>DisplayProperties::LogicalDpiChanged</strong>] (https://msdn.microsoft.com/library/windows/apps/br226150). Los PPP de la ventana de juego principal han cambiado, por lo que la aplicación del juego ajusta sus recursos en consonancia.
 <div class="alert">
-<strong>Nota</strong>  Las coordenadas de [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404559) están en PPP (píxeles independientes del dispositivo), como en [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987). Como resultado, se debe notificar a Direct2D el cambio en PPP para mostrar cualquier primitivo o activo 2D correctamente.
+<strong>Nota</strong> Las coordenadas de [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404559) están en PPP (píxeles independientes del dispositivo), como en [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987). Como resultado, se debe notificar a Direct2D el cambio en PPP para mostrar cualquier primitivo o activo 2D correctamente.
 </div>
 <div>
  
@@ -1421,6 +1424,6 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

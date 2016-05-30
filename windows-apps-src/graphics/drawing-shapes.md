@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: Dibujar formas
 description: Aprende a dibujar formas como elipses, rectángulos, polígonos y trayectorias. La clase Path te permite visualizar un lenguaje de dibujo basado en vectores, relativamente complejo, en una interfaz de usuario XAML; por ejemplo, lo puedes visualizar para dibujar curvas Bézier.
@@ -93,7 +94,7 @@ Y aquí tienes el [**polígono**](https://msdn.microsoft.com/library/windows/app
 
 ![Polígono representado.](images/shapes-polygon.jpg)
 
-**Sugerencia** El valor [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) se usa a menudo como tipo en XAML para escenarios en los que no se declaran los vértices de las formas. Por ejemplo, un valor **Point** forma parte de los datos del evento referentes a los eventos de entrada táctil; de esta manera, podrás saber con exactitud en qué punto de un espacio de coordenadas se produjo la acción táctil. Para obtener más información sobre el valor **Point** y cómo usarlo en XAML o en código, consulta el tema de referencia de la API para [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870).
+**Sugerencia**  El valor [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) se usa a menudo como tipo en XAML para escenarios en los que no se declaran los vértices de las formas. Por ejemplo, un valor **Point** forma parte de los datos del evento referentes a los eventos de entrada táctil; de esta manera, podrás saber con exactitud en qué punto de un espacio de coordenadas se produjo la acción táctil. Para obtener más información sobre el valor **Point** y cómo usarlo en XAML o en código, consulta el tema de referencia de la API para [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870).
 
  
 
@@ -107,7 +108,7 @@ No uses valores de la estructura [**Point**](https://msdn.microsoft.com/library/
 
 Una [**Polilínea**](https://msdn.microsoft.com/library/windows/apps/BR243365) es similar a un [**polígono**](https://msdn.microsoft.com/library/windows/apps/BR243359) ya que el límite de la forma está definido por un conjunto de puntos, pero hay que tener en cuenta que el último punto de la **polilínea** no está conectado al primero.
 
-**Nota** Puedes tener un punto inicial y un punto final explícitamente idénticos en la propiedad [**Points**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) establecida para la [**polilínea**](https://msdn.microsoft.com/library/windows/apps/BR243365), pero en ese caso te recomendamos que uses un [**polígono**](https://msdn.microsoft.com/library/windows/apps/BR243359).
+**Nota**   Puedes tener un punto inicial y un punto final explícitamente idénticos en la propiedad [**Points**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) establecida para la [**polilínea**](https://msdn.microsoft.com/library/windows/apps/BR243365), pero en ese caso te recomendamos que uses un [**polígono**](https://msdn.microsoft.com/library/windows/apps/BR243359).
 
  
 
@@ -194,6 +195,6 @@ Una de las razones por las que querrías usar la clase [**PathGeometry**](https:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

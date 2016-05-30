@@ -1,11 +1,12 @@
 ---
+author: mcleblanc
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: Introducción a Windows Device Portal
 description: Obtén información sobre cómo Windows Device Portal te permite configurar y administrar de forma remota el dispositivo mediante una red o una conexión USB.
 ---
 # Introducción a Windows Device Portal
 
-Windows Device Portal te permite configurar y administrar de forma remota el dispositivo mediante una red o una conexión USB. También proporciona herramientas de diagnóstico para ayudarte a solucionar problemas y ver el rendimiento en tiempo real de tu dispositivo Windows. 
+Windows Device Portal te permite configurar y administrar de forma remota el dispositivo mediante una red o una conexión USB. También proporciona herramientas de diagnóstico para ayudarte a solucionar problemas y ver el rendimiento en tiempo real de tu dispositivo Windows.
 
 Device Portal es un servidor web del dispositivo al que te puedes conectar desde un explorador web en el equipo. Si el dispositivo tiene un explorador web, también puedes conectarte localmente con el explorador en el dispositivo.
 
@@ -13,9 +14,9 @@ Windows Device Portal está disponible en cada familia de dispositivos, pero las
 
 Todo lo que contiene Windows Device Portal se basa en las [API de REST](device-portal-api-core.md) que puedes usar para acceder a los datos y controlar el dispositivo mediante programación.
 
-## Configuración
+## Programa de instalación
 
-Cada dispositivo tiene instrucciones específicas para la conexión a Device Portal, pero todos requieren estos pasos generales.
+Cada dispositivo tiene instrucciones específicas para la conexión a Device Portal, pero todos requieren estos pasos generales:
 1. Habilita el modo de desarrollador y Device Portal en el dispositivo.
 2. Conecta el dispositivo y el equipo a través de la red local o USB.
 3. Navega a la página Device Portal en tu explorador. En esta tabla se muestran los puertos y los protocolos que usa cada familia de dispositivos.
@@ -30,9 +31,10 @@ Teléfono | Habilitar dentro del modo de desarrollador | 80| 443 | Host local:10
 
 Para obtener instrucciones específicas sobre la configuración del dispositivo, consulta:
 - [Device Portal para HoloLens](https://dev.windows.com/holographic/using_the_windows_device_portal)
-- [Device Portal para IoT](http://ms-iot.github.io/content/en-US/win10/tools/DevicePortal.htm)
-- [Device Portal para dispositivos móviles](device-portal-mobile.md#setup)
+- [Device Portal para IoT](http://ms-iot.github.io/content/win10/tools/DevicePortal.htm)
+- [Device Portal para dispositivos móviles](device-portal-mobile.md#set-up-device-portal-on-window-phone)
 - [Device Portal para Xbox](device-portal-xbox.md)
+- [Device Portal para escritorio](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
 
 ## Funciones
 
@@ -65,27 +67,27 @@ Proporciona la funcionalidad de administración y de instalación o desinstalaci
 
 **Para instalar una aplicación**
 
-1.  Cuando hayas [creado un paquete de la aplicación](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), podrás instalarlo remotamente en el dispositivo. Después de compilarlo en Visual Studio, se genera una carpeta de salida. 
+1.  Cuando hayas [creado un paquete de la aplicación](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), podrás instalarlo remotamente en el dispositivo. Después de compilarlo en Visual Studio, se genera una carpeta de salida.
 
-    ![Instalación de aplicaciones](images/device-portal/iot-installapp0.png)    
+    ![Instalación de aplicaciones](images/device-portal/iot-installapp0.png)
 2.  Haz clic en Examinar y busca el paquete de la aplicación (.appx).
 3.  Haz clic en Examinar y busca el archivo de certificado (.cer). (No es necesario en todos los dispositivos).
 4.  Agrega dependencias. Si tienes más de una, agrega cada una de ellas individualmente.     
-5.  En Implementar, haz clic en Ir. 
-6.  Para instalar otra aplicación, haz clic en el botón Restablecer para borrar los campos.
+5.  En **Implementar**, haz clic en **Ir**. 
+6.  Para instalar otra aplicación, haz clic en el botón **Restablecer** para borrar los campos.
 
 
 **Para desinstalar una aplicación**
 
 1.  Asegúrate de que la aplicación no se esté ejecutando. 
 2.  Si es así, ve a "aplicaciones en ejecución" y ciérrala. Si intentas desinstalar la aplicación mientras se ejecuta, tendrás problemas cuando la vuelvas a instalar. 
-3.  Cuando estés listo, haz clic en Desinstalar.
+3.  Cuando estés listo, haz clic en **Desinstalar**.
 
 ### Procesos
 
 Muestra detalles acerca de los procesos que se ejecutan actualmente. Esto incluye aplicaciones y procesos del sistema.
 
-De forma muy parecida al Administrador de tareas del equipo, esta página te permite ver los procesos que se están ejecutando actualmente, así como su uso de memoria.  En algunas plataformas (escritorio, IoT y HoloLens), puedes finalizar los procesos. 
+De forma muy parecida al Administrador de tareas del equipo, esta página te permite ver los procesos que se están ejecutando actualmente, así como su uso de memoria.  En algunas plataformas (escritorio, IoT y HoloLens), puedes finalizar los procesos.
 
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-processes.png)
 
@@ -108,7 +110,7 @@ Administra el seguimiento de eventos para Windows (ETW) en tiempo real en el dis
 
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-etw.png)
 
-Activa Ocultar proveedores para mostrar solamente la lista de eventos.
+Activa **Ocultar proveedores** para mostrar solamente la lista de eventos.
 - **Registered providers**: selecciona el proveedor ETW y el nivel de seguimiento. El nivel de seguimiento es uno de estos valores:
     1. Terminación o salida anómala
     2. Errores graves
@@ -116,11 +118,11 @@ Activa Ocultar proveedores para mostrar solamente la lista de eventos.
     4. Advertencias sin errores
     5. Seguimiento detallado (*)
 
-Haz clic o pulsa en Activar para iniciar el seguimiento. El proveedor se agrega a la lista desplegable de Proveedores habilitados.
+Haz clic o pulsa en **Activar** para iniciar el seguimiento. El proveedor se agrega a la lista desplegable de **Proveedores habilitados**.
 - **Proveedores personalizados**: selecciona un proveedor ETW personalizado y el nivel de seguimiento. Identifica el proveedor por su GUID. No incluyas corchetes en el GUID.
-- **Enabled providers**: enumera los proveedores habilitados. Selecciona un proveedor de la lista desplegable y haz clic o pulsa en Desactivar para detener el seguimiento. Haz clic o pulsa en Detener todo para suspender todos los seguimientos.
-- **Providers history**: muestra los proveedores ETW que estaban habilitados durante la sesión actual. Haz clic o pulsa en Activar para activar un proveedor deshabilitado. Haz clic o pulsa en Borrar para borrar el historial.
-- **Eventos**: enumera los eventos ETW de los proveedores seleccionados en formato de tabla. Esta tabla se actualiza en tiempo real. Debajo de la tabla, haz clic en el botón Borrar para eliminar todos los eventos ETW de la tabla. Esta acción no deshabilita ningún proveedor. Puedes hacer clic en Guardar en archivo para exportar los eventos ETW recopilados actualmente en un archivo CSV de forma local.
+- **Enabled providers**: enumera los proveedores habilitados. Selecciona un proveedor de la lista desplegable y haz clic o pulsa en **Desactivar** para detener el seguimiento. Haz clic o pulsa en **Detener todo** para suspender todos los seguimientos.
+- **Providers history**: muestra los proveedores ETW que estaban habilitados durante la sesión actual. Haz clic o pulsa en **Activar** para activar un proveedor deshabilitado. Haz clic o pulsa en **Borrar** para borrar el historial.
+- **Eventos**: enumera los eventos ETW de los proveedores seleccionados en formato de tabla. Esta tabla se actualiza en tiempo real. Debajo de la tabla, haz clic en el botón **Borrar** para eliminar todos los eventos ETW de la tabla. Esta acción no deshabilita ningún proveedor. Puedes hacer clic en **Guardar en archivo** para exportar los eventos ETW recopilados actualmente en un archivo CSV de forma local.
 
 ### Seguimiento del rendimiento
 
@@ -128,10 +130,10 @@ Captura los seguimientos de [Windows Performance Recorder](https://msdn.microsof
 
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-perf-tracing.png)
 
-- **Available profiles**: selecciona el perfil de WPR en la lista desplegable y pulsa o haz clic en Inicio para iniciar el seguimiento.
-- **Custom profiles**: haz clic o pulsa en Examinar para elegir un perfil de WPR desde tu equipo. Haz clic o pulsa en Cargar e inicia el seguimiento.
+- **Available profiles**: selecciona el perfil de WPR en la lista desplegable y pulsa o haz clic en **Inicio** para iniciar el seguimiento.
+- **Custom profiles**: haz clic o pulsa en **Examinar** para elegir un perfil de WPR desde tu equipo. Haz clic o pulsa en **Cargar e iniciar** para iniciar el seguimiento.
 
-Para detener el seguimiento, haz clic en el vínculo de detención. Permanece en esta página hasta que el archivo de seguimiento (. ETL) se haya terminado de descargar.
+Para detener el seguimiento, haz clic en **Detener**. Permanece en esta página hasta que el archivo de seguimiento (. ETL) se haya terminado de descargar.
 
 Los archivos ETL se pueden abrir para realizar análisis en [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx).
 
@@ -143,14 +145,13 @@ Enumera todos los periféricos conectados al dispositivo.
 
 ### Redes
 
-Administra las conexiones de red en el dispositivo.  A menos que estés conectado a Device Portal a través de USB, al cambiar esta configuración, es probable que te desconectes de Device Portal. 
+Administra las conexiones de red en el dispositivo.  A menos que estés conectado a Device Portal a través de USB, al cambiar esta configuración, es probable que te desconectes de Device Portal.
 - **Perfiles**: selecciona un perfil de Wi-Fi diferente para usar.  
-- **Redes disponibles**: redes Wi-Fi disponibles para el dispositivo.  Al pulsar o hacer clic en una red, podrás conectarte a ella y proporcionar una clave de paso si es necesario.  Nota: Device Portal aún no admite la autenticación empresarial. 
+- **Redes disponibles**: redes Wi-Fi disponibles para el dispositivo. Al pulsar o hacer clic en una red, podrás conectarte a ella y proporcionar una clave de paso si es necesario. Nota: Device Portal aún no admite la autenticación empresarial. 
 
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-network.png)
 
 
-
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Los controles de fecha y hora permiten ver y establecer la fecha y la hora. Este artículo ofrece directrices de diseño y ayuda a elegir el control correcto.
 title: Directrices para los controles de fecha y hora
 ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
@@ -19,7 +20,7 @@ Los controles de fecha y hora ofrecen maneras estándar y localizadas para que e
 
 ## ¿Qué control fecha u hora debería usar?
 
-Hay cuatro controles de fecha y hora para elegir; el control que uses dependerá de la situación. Usa esta información para seleccionar el control adecuado para usar en tu aplicación.
+Hay cuatro controles de fecha y hora para elegir; el control que uses dependerá de la situación. Usa esta información para seleccionar el control adecuado para tu aplicación.
 
 &nbsp;|&nbsp;|&nbsp;                                                                                                                      
 --------------------|-------|-------------------------------------------------------------------------------------------------------------------------------
@@ -43,7 +44,7 @@ La vista del calendario se compone de 3 vistas separadas: la vista de mes, la vi
 
 ### Selector de fecha del calendario
 
-**CalendarDatePicker** es un control desplegable que está optimizado para seleccionar una fecha determinada de una vista de calendario en el que la información contextual es importante, por ejemplo, el día de la semana o lo que se ha completado del calendario. Puedes modificar el calendario para que proporcione contexto adicional o limite las fechas disponibles.
+**CalendarDatePicker** es un control desplegable que está optimizado para seleccionar una fecha determinada de una vista de calendario en que la información contextual es importante, por ejemplo, el día de la semana o lo que se ha completado del calendario. Puedes modificar el calendario para que proporcione contexto adicional o limite las fechas disponibles.
 
 El punto de entrada muestra texto del marcador de posición si no se ha establecido una fecha; de lo contrario, muestra la fecha elegida. Cuando el usuario selecciona el punto de entrada, se expande una vista de calendario para que el usuario realice una selección de fecha. La vista de calendario se superpone a otra interfaz de usuario; no hace que la otra interfaz desaparezca.
 
@@ -97,7 +98,8 @@ Un concepto relacionado es la clase Calendar, que influye en la interpretación 
 
 .NET admite también un tipo denominado [ **DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx), que es implícitamente convertible a un [ **DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx). Por lo tanto, es posible que veas un tipo de "DateTime" que se usa en el código .NET que se usa para establecer valores que son realmente DateTimeOffset. Para obtener más información sobre la diferencia entre DateTime y DateTimeOffset, consulta las observaciones de la clase [**DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx).
 
-> **Nota**&nbsp;&nbsp;No se pueden establecer propiedades que toman objetos de fecha como una cadena de atributos XAML, porque el analizador XAML de Windows Runtime no tiene una lógica de conversión para convertir cadenas en fechas como objetos DateTime o DateTimeOffset. En general, estableces estos valores en el código. Otra técnica posible es definir una fecha que está disponible como un objeto de datos o en el contexto de datos, luego establece la propiedad como un atributo XAML que haga referencia a una expresión [\Extensión de marcado {Binding}](../xaml-platform/binding-markup-extension.md) que pueda obtener acceso a la fecha como datos.
+> **Nota**
+            &nbsp;&nbsp;No se pueden establecer propiedades que toman objetos de fecha como una cadena de atributos XAML, porque el analizador XAML de Windows Runtime no tiene una lógica de conversión para convertir cadenas en fechas como objetos DateTime o DateTimeOffset. En general, estableces estos valores en el código. Otra técnica posible es definir una fecha que está disponible como un objeto de datos o en el contexto de datos, luego establece la propiedad como un atributo XAML que haga referencia a una expresión [\Extensión de marcado {Binding}](../xaml-platform/binding-markup-extension.md) que pueda obtener acceso a la fecha como datos.
 
 
 ## Temas relacionados
@@ -109,6 +111,6 @@ Un concepto relacionado es la clase Calendar, que influye en la interpretación 
 - [**Clase TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

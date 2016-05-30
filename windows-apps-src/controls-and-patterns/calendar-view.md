@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Una vista de calendario permite al usuario ver e interactuar con un calendario por el que se puede navegar por mes, año o década.
 title: Vista de calendario
 ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
@@ -57,7 +58,8 @@ Un usuario puede anular la selección de una determinada fecha haciendo clic o p
 
 Puedes controlar el evento [**SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx) para que se notifique cuando la colección [**SelectedDates**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx) haya cambiado.
 
-> **Nota**&nbsp;&nbsp;Para obtener información importante acerca de los valores de fecha, consulta [Valores de DateTime y Calendar](date-and-time.md#datetime-and-calendar-values) en el artículo Controles de fecha y hora.
+> **Nota**
+            &nbsp;&nbsp;Para obtener información importante acerca de los valores de fecha, consulta [Valores de DateTime y Calendar](date-and-time.md#datetime-and-calendar-values) en el artículo Controles de fecha y hora.
 
 ### Personalizar la apariencia de la vista de calendario
 
@@ -190,6 +192,6 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 - [Selector de hora](time-picker.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

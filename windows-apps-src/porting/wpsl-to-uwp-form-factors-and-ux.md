@@ -1,5 +1,6 @@
 ---
-description: Las aplicaciones de Windows comparten una apariencia común entre equipos, dispositivos móviles y muchos otros tipos de dispositivos. La interfaz de usuario, las entradas y los patrones de interacción son muy similares, y un usuario que se mueve entre dispositivos agradecerá la experiencia familiar.
+author: mcleblanc
+description: Las aplicaciones de Windows comparten una apariencia común entre PC, dispositivos móviles y muchos otros tipos de dispositivos. La interfaz de usuario, las entradas y los patrones de interacción son muy similares, y un usuario que se mueve entre dispositivos agradecerá la experiencia familiar.
 title: Migración de Windows Phone Silverlight a UWP para factor de forma y experiencia del usuario
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
 ---
@@ -66,6 +67,6 @@ Vuelve a consultar la lista [Maximización de la reutilización de código y mar
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

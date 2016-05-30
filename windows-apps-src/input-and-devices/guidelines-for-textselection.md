@@ -1,8 +1,9 @@
 ---
-Description: En este tema se describe la nueva interfaz de usuario de Windows para seleccionar y manipular texto, imágenes y controles. También se ofrecen directrices sobre la experiencia del usuario que debes tener en cuenta al usar estos nuevos mecanismos de selección y manipulación en una aplicación de la Tienda Windows.
+author: Karl-Bridge-Microsoft
+Description: En este tema se describe la nueva interfaz de usuario de Windows para seleccionar y manipular texto, imágenes y controles. También se ofrecen directrices sobre la experiencia del usuario que debes tener en cuenta al usar estos nuevos mecanismos de selección y manipulación en tu aplicación de la Tienda Windows.
 title: Selección de texto e imágenes
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
-label: Selección de texto e imágenes
+label: Selecting text and images
 template: detail.hbs
 ---
 
@@ -10,7 +11,7 @@ template: detail.hbs
 
 En este artículo se describe la selección y manipulación de texto, imágenes y controles, y se ofrecen instrucciones de experiencia del usuario que se deben tener en cuenta al usar estos mecanismos en las aplicaciones.
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **API importantes**
@@ -73,7 +74,7 @@ En las imágenes siguientes se muestra cómo invocar el menú contextual pulsand
 
 ![pulsa (o pulsa y sostén) dentro de la selección o en una barra de redimensionamiento para invocar el menú contextual.](images/textselection-show-context.png)
 
-**Nota:** Estas interacciones tienen cierta variación en el caso de una palabra con errores ortográficos. Si pulsas una palabra marcada por tener errores ortográficos, la palabra se resalta y se invoca el menú contextual con la ortografía sugerida.
+**Nota**  Estas interacciones tienen cierta variación en el caso de una palabra con errores ortográficos. Si pulsas una palabra marcada por tener errores ortográficos, la palabra se resalta y se invoca el menú contextual con la ortografía sugerida.
 
  
 
@@ -105,12 +106,14 @@ Por ejemplo, las barras de redimensionamiento también se pueden usar en aplicac
 
 **Para desarrolladores**
 * [Interacciones del usuario personalizadas](https://msdn.microsoft.com/library/windows/apps/mt185599)
+
 **Ejemplos**
 * [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Ejemplo de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Ejemplos de archivo**
+* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
+**Muestras de archivo**
 * [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: muestra de prueba de acceso táctil](http://go.microsoft.com/fwlink/p/?linkid=231590)
@@ -128,6 +131,6 @@ Por ejemplo, las barras de redimensionamiento también se pueden usar en aplicac
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

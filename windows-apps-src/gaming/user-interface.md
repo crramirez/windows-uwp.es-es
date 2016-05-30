@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Plantillas de proyecto de juegos DirectX
 description: Obtén información acerca de las plantillas para crear un juego de DirectX y la Plataforma universal de Windows (UWP).
 ms.assetid: 41b6cd76-5c9a-e2b7-ef6f-bfbf6ef7331d
@@ -84,6 +85,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

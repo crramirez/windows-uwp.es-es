@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Usa las animaciones de puntero para proporcionar comentarios visuales a los usuarios cuando presionen un elemento.
 title: Animaciones para clic de puntero en aplicaciones para UWP
 ms.assetid: EEB10A2C-629A-4705-8468-4D019D74DDFF
@@ -10,7 +11,7 @@ template: detail.hbs
 
 Usa las animaciones de puntero para proporcionar comentarios visuales a los usuarios cuando presionen un elemento. La animación de puntero abajo reduce e inclina ligeramente el elemento presionado y se reproduce cuando se pulsa un elemento por primera vez. La animación de puntero arriba, que restablece el elemento a su posición original, se reproduce cuando el usuario suelta el puntero.
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **API importantes**
@@ -43,6 +44,6 @@ Usa las animaciones de puntero para proporcionar comentarios visuales a los usua
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

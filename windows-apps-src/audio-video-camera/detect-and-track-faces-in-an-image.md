@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 84729E44-10E9-4D7D-8575-6A9D97467ECD
 description: Este tema muestra cómo usar el FaceDetector para detectar los rostros de una imagen El FaceTracker está optimizado para realizar el seguimiento facial durante una secuencia de fotogramas de vídeo.
 title: Detectar rostros en imágenes o vídeos
@@ -31,19 +32,19 @@ Declara una variable de miembro de clase para el objeto [**FaceDetector**](https
 
 La detección de rostro funciona en un objeto [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) que se puede crear de distintas maneras. En este ejemplo, se usa un [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para permitir al usuario seleccionar un archivo de imagen en el que se detectarán rostros. Para obtener información sobre cómo trabajar con mapas de bits de software, consulta [Imágenes](imaging.md).
 
-[!code-cs[Picker](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetPicker)]
+[!code-cs[Selector](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetPicker)]
 
 Usa la clase [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) para descodificar el archivo de imagen en un **SoftwareBitmap**. El proceso de detección de rostro es más rápido con una imagen más pequeña, por lo que quizás desees escalar la imagen de origen a un tamaño menor. Esto puede realizarse durante la descodificación mediante la creación de un objeto [**BitmapTransform**](https://msdn.microsoft.com/library/windows/apps/br226254), la definición de las propiedades [**ScaledWidth**](https://msdn.microsoft.com/library/windows/apps/br226261) y [**ScaledHeight**](https://msdn.microsoft.com/library/windows/apps/br226260), y su paso a la llamada a [**GetSoftwareBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn887332), que devuelve el **SoftwareBitmap** descodificado y escalado.
 
-[!code-cs[Decode](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDecode)]
+[!code-cs[Descodificar](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDecode)]
 
 En la versión actual, la clase **FaceDetector** solo admite imágenes en Gray8 o Nv12. La clase **SoftwareBitmap** proporciona el método [**Convert**](https://msdn.microsoft.com/library/windows/apps/dn887362), que convierte un mapa de bits de un formato a otro. En este ejemplo se convierte la imagen de origen en el formato de píxel Gray8 si aún no está en ese formato. Si quieres, puedes usar los métodos [**GetSupportedBitmapPixelFormats**](https://msdn.microsoft.com/library/windows/apps/dn974140) y [**IsBitmapPixelFormatSupported**](https://msdn.microsoft.com/library/windows/apps/dn974142) para determinar en tiempo de ejecución si se admite un formato de píxel, en caso de que el conjunto de formatos compatibles se expanda en futuras versiones.
 
-[!code-cs[Format](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetFormat)]
+[!code-cs[Formato](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetFormat)]
 
 Crea una instancia del objeto **FaceDetector** mediante una llamada a [**CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn974132) y, luego, llama a [**DetectFacesAsync**](https://msdn.microsoft.com/library/windows/apps/dn974134) y pasa el mapa de bits que se ha escalado a un tamaño razonable y convertido a un formato de píxel admitido. Este método devuelve una lista de objetos [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123). A continuación se muestra el método auxiliar **ShowDetectedFaces**, que dibuja cuadrados alrededor de los rostros de la imagen.
 
-[!code-cs[Detect](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDetect)]
+[!code-cs[Detectar](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDetect)]
 
 Asegúrate de eliminar los objetos que se crearon durante el proceso de detección de rostro.
 
@@ -51,7 +52,7 @@ Asegúrate de eliminar los objetos que se crearon durante el proceso de detecci�
 
 Para mostrar la imagen y dibujar cuadros alrededor de los rostros detectados, agrega un elemento [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) a la página XAML.
 
-[!code-xml[Canvas](./code/FaceDetection_Win10/cs/MainPage.xaml#SnippetCanvas)]
+[!code-xml[Lienzo](./code/FaceDetection_Win10/cs/MainPage.xaml#SnippetCanvas)]
 
 Define algunas variables de miembro para aplicar estilo a los cuadrados que se dibujarán.
 
@@ -95,6 +96,6 @@ Llama a [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/a
 * [Capturar fotografías y vídeos con MediaCapture](capture-photos-and-video-with-mediacapture.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

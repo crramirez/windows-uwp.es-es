@@ -1,11 +1,12 @@
 ---
+author: TylerMSFT
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Obtener las propiedades de archivos
-description: Obtiene las propiedades &\#8212;de nivel superior, básicas y extendidas&\#8212; de un archivo representado mediante un objeto StorageFile.
+description: Obtén las propiedades &\#8212;de nivel superior, básicas y extendidas&\#8212; de un archivo representado mediante un objeto StorageFile.
 ---
 # Obtener las propiedades de archivos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** API importantes **
@@ -16,7 +17,7 @@ description: Obtiene las propiedades &\#8212;de nivel superior, básicas y exten
 
 Obtiene las propiedades —de nivel superior, básicas y extendidas— de un archivo representado mediante un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
-**Nota**  Consulta también la [Muestra de acceso de archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
+**Nota** Consulta también [File access sample (Muestra de acceso de archivos)](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
  
 
@@ -35,7 +36,7 @@ Obtiene las propiedades —de nivel superior, básicas y extendidas— de un arc
 
 Muchas de las propiedades de archivo de nivel superior son accesibles como miembros de la clase [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171). Estas propiedades incluyen los atributos del archivo, el tipo de contenido, la fecha de creación, el nombre para mostrar, el tipo de archivo, etc.
 
-**Nota**  Recuerda declarar la funcionalidad **picturesLibrary**.
+**Nota** Recuerda declarar la funcionalidad **picturesLibrary**.
 
  
 
@@ -135,6 +136,6 @@ foreach (Windows.Storage.StorageFile file in files)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

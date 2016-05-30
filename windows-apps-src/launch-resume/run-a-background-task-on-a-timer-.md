@@ -1,6 +1,7 @@
 ---
+author: mcleblanc
 title: Ejecutar una tarea en segundo plano en un temporizador
-description: Aprende a programar una tarea en segundo plano única o ejecutar una tarea en segundo plano periódica.
+description: Aprende a programar una tarea en segundo plano única o a ejecutar una tarea en segundo plano periódica.
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
 ---
 
@@ -32,11 +33,11 @@ Aprende a programar una tarea en segundo plano única o ejecutar una tarea en se
 
     -   Si *FreshnessTime* se establece en 15 minutos y *OneShot* tiene el valor false, la tarea se ejecutará cada 15 minutos comenzando entre el minuto 0 y el 15 desde el momento en que se registre.
 
-    **Nota**  Si *FreshnessTime* se establece en menos de 15 minutos, se iniciará una excepción cuando se intente registrar la tarea en segundo plano.
+    **Nota** Si *FreshnessTime* se establece en menos de 15 minutos, se iniciará una excepción cuando se intente registrar la tarea en segundo plano.
 
      
 
-    For example, this trigger will cause a background task to run once an hour:
+    Por ejemplo, este desencadenador hará que una tarea en segundo plano se ejecute una vez cada hora:
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -83,26 +84,26 @@ Aprende a programar una tarea en segundo plano única o ejecutar una tarea en se
 
     > > [!div class="tabbedCodeSnippets"]
     > ```cs
-    > string entryPoint = “Tasks.ExampleBackgroundTaskClass”;
-    > string taskName   = “Example hourly background task”;
+    > string entryPoint = "Tasks.ExampleBackgroundTaskClass";
+    > string taskName   = "Example hourly background task";
     > 
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
     > ```cpp
-    > String ^ entryPoint = “Tasks.ExampleBackgroundTaskClass”;
-    > String ^ taskName   = “Example hourly background task”;
+    > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
+    > String ^ taskName   = "Example hourly background task";
     > 
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
     
-    > **Nota**  Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
+    > **Nota** Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
 
    
 ## Observaciones
 
-> **Nota**  A partir de Windows 10, ya no es necesario que el usuario agregue tu aplicación a la pantalla de bloqueo para poder usar las tareas en segundo plano. Para obtener una guía sobre los tipos de desencadenadores de tarea en segundo plano, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
+> **Nota** A partir de Windows 10, ya no es necesario que el usuario agregue tu aplicación a la pantalla de bloqueo para poder usar las tareas en segundo plano. Para obtener una guía sobre los tipos de desencadenadores de tarea en segundo plano, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
 
-> **Nota**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
 ## Temas relacionados
@@ -130,6 +131,6 @@ Aprende a programar una tarea en segundo plano única o ejecutar una tarea en se
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

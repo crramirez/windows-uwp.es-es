@@ -1,15 +1,14 @@
 ---
+author: Jwmsft
 title: Vista en dos paneles
 ms.assetid: E9E4537F-1160-4183-9A83-26602FCFDC9A
 description: Un control de vista en dos paneles tiene un panel expandible y contraíble y un área de contenido.
-label: Vista en dos paneles
+label: Split view
 template: detail.hbs
 ---
 
-# Directrices para el control de vista en dos paneles
+# Directrices para el control SplitView
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -17,7 +16,7 @@ template: detail.hbs
 -   [**Clase SplitView (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn864360)
 -   [**Objeto SplitView (HTML)**](https://msdn.microsoft.com/library/windows/apps/dn919970)
 
-Un control de vista en dos paneles tiene un panel expandible y contraíble y un área de contenido. El área de contenido siempre está visible. El panel puede expandirse y contraerse, o permanecer en un estado abierto, y puede presentarse desde el lado izquierdo o desde el lado derecho de una ventana de la aplicación. El panel tiene tres modos:
+Un control de vista en dos paneles tiene un panel expandible y contraíble y un área de contenido. El área de contenido siempre está visible. El panel puede expandirse y contraerse, o permanecer en un estado abierto, y puede presentarse desde el lado izquierdo o desde el lado derecho de una ventana de la aplicación. El panel tiene cuatro modos:
 
 -   **Superposición**
 
@@ -27,27 +26,27 @@ Un control de vista en dos paneles tiene un panel expandible y contraíble y un 
 
     El panel siempre está visible y no se superpone al área de contenido. Las áreas del panel y el contenido dividen la superficie disponible de la pantalla.
 
--   **Compacto**
+-   **CompactOverlay**
 
-    El panel siempre está visible en este modo, que es lo suficientemente ancho como para mostrar iconos (normalmente de 48 epx de ancho). Las áreas del panel y el contenido dividen la superficie disponible de la pantalla. Aunque el modo compacto estándar no se superpone el área de contenido, puede transformarse en un panel más amplio para mostrar más contenido que se superponga al área de contenido.
+    Una parte estrecha del panel siempre está visible en este modo, que es lo suficientemente ancho como para mostrar iconos. El ancho del panel cerrado predeterminado es de 48 px, que se puede modificar con `CompactPaneLength`. Si el panel se abre, se superpondrá al área de contenido.
+
+-   **CompactInline**
+
+    Una parte estrecha del panel siempre está visible en este modo, que es lo suficientemente ancho como para mostrar iconos. El ancho del panel cerrado predeterminado es de 48 px, que se puede modificar con `CompactPaneLength`. Si el panel se abre, reducirá el espacio disponible para el contenido para apartarlo de su camino.
 
 ## <span id="Is_this_the_right_control_"></span><span id="is_this_the_right_control_"></span><span id="IS_THIS_THE_RIGHT_CONTROL_"></span>¿Es este el control adecuado?
 
+El control de vista en dos paneles puede usarse para crear un [panel de navegación](nav-pane.md). Para crear este patrón, agrega un botón de expandir/contraer (botón de "hamburguesa") y una vista de lista que represente los elementos de navegación.
 
-El control de vista en dos paneles puede usarse para crear un [patrón de panel de navegación](nav-pane.md). Para crear este patrón, agregar un botón de expandir y contraer (el botón de "hamburguesa") y una vista de lista al control de vista en dos paneles.
+El control de vista en dos paneles también puede usarse para crear cualquier experiencia de "cajón" donde los usuarios puedan abrir y cerrar el panel complementario.
 
 ## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>Ejemplos
 
+El control de vista en dos paneles en su forma predeterminada es un contenedor básico. Este es un ejemplo de la aplicación Microsoft Edge con SplitView para mostrar su hub.
 
-El control de vista en dos paneles en su forma predeterminada es un contenedor básico. Con un botón y una vista de lista agregados, el control de vista en dos paneles está listo como un menú de navegación. Estos son ejemplos de la vista en dos paneles como un menú de navegación, en los modos expandido y compacto.
-
-![ejemplo de un menú de vista en dos paneles en modo de superposición y en modo compacto](images/controls-splitview-menu01.png)
-## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>Recomendaciones
+![Ejemplo de vista en dos paneles de Microsoft Edge](images/split_view_Edge.png)
 
 
--   Al usar la vista en dos paneles para un menú de navegación, recomendamos colocar en el panel controles de navegación que permitan el acceso a otras áreas de la aplicación. El uso del panel de navegación ofrece una experiencia de usuario coherente. Además, esta implementación de menú permite a los usuarios familiarizarse con todas las partes de una aplicación, proporciona acceso rápido a la página principal de la aplicación y puede animar a los usuarios a explorar más áreas de la aplicación.
-
-\[Este artículo contiene información específica de las aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
 
 ## <span id="related_topics"></span>Temas relacionados
 
@@ -59,10 +58,6 @@ El control de vista en dos paneles en su forma predeterminada es un contenedor b
  
 
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

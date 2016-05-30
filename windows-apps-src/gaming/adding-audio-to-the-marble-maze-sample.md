@@ -1,10 +1,11 @@
 ---
+author: mtoepke
 title: Agregar audio a la muestra de Marble Maze
 description: En este documento se describen las prácticas clave que se deben tener en cuenta al trabajar con audio y se muestra la aplicación de dichas prácticas en Marble Maze.
 ms.assetid: 77c23d0a-af6d-17b5-d69e-51d9885b0d44
 ---
 
-# Agregar audio a la muestra de Marble Maze
+# Agregar audio al ejemplo de Marble Maze
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -14,7 +15,7 @@ En este documento se describen las prácticas clave que se deben tener en cuenta
 
 Marble Maze reproduce música en segundo plano, y también utiliza sonidos de juego para indicar los eventos del juego, como el momento en que una canica toca la pared. Una parte importante de la implementación es que Marble Maze utiliza un efecto de reverberación, o eco, para simular el sonido de una canica al rebotar. La implementación del efecto de reverberación provoca ecos para que te lleguen con mayor rapidez y más volumen en espacios pequeños; los ecos son más silenciosos y te llegan más lentamente en espacios más grandes.
 
-> **Nota**: El código de ejemplo correspondiente a este documento se encuentra en la [muestra de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Nota**   El código de ejemplo correspondiente a este documento se encuentra en el [ejemplo de juego de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
 
 A continuación se indican algunos de los puntos principales que se tratan en este documento para trabajar con audio en el juego:
 
@@ -100,7 +101,7 @@ El método **Audio::CreateResources** realiza un paso similar para crear la voz 
 
 ###  Crear el efecto de reverberación
 
-Para cada voz, puedes usar XAudio2 para crear secuencias de efectos que procesen audio. Una secuencia de este tipo se conoce como cadena de efectos. Utiliza las cadenas de efectos cuando quieras aplicar uno o más efectos a una voz. Las cadenas de efectos pueden ser destructivas; es decir, cada uno de los efectos de la cadena puede sobrescribir el búfer de audio. Esta propiedad es importante porque XAudio2 no garantiza que los búferes de salida se inicialicen con silencio. Los objetos de efectos se representan en XAudio2 mediante objetos de procesamiento de audio multi-plataforma (XAPO). Para más información sobre XAPO, consulta [Introducción a XAPO](o:microsoft.directx_sdk.xapo.audio_overview_xapo).
+Para cada voz, puedes usar XAudio2 para crear secuencias de efectos que procesen audio. Una secuencia de este tipo se conoce como cadena de efectos. Utiliza las cadenas de efectos cuando quieras aplicar uno o más efectos a una voz. Las cadenas de efectos pueden ser destructivas; es decir, cada uno de los efectos de la cadena puede sobrescribir el búfer de audio. Esta propiedad es importante porque XAudio2 no garantiza que los búferes de salida se inicialicen con silencio. Los objetos de efectos se representan en XAudio2 mediante objetos de procesamiento de audio multi-plataforma (XAPO). Para obtener más información sobre XAPO, consulta la [introducción a XAPO](https://msdn.microsoft.com/library/windows/desktop/ee415735).
 
 Para crear una cadena de efectos, sigue estos pasos:
 
@@ -142,7 +143,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-> **Sugerencia**: si quieres adjuntar una cadena de efectos existente a una voz de submezcla existente, o quieres sustituir la cadena de efectos actual, usa el método [**IXAudio2Voice::SetEffectChain**](https://msdn.microsoft.com/library/windows/desktop/ee418594).
+> **Sugerencia**: Si quieres adjuntar una cadena de efectos existente a una voz de submezcla existente, o quieres sustituir la cadena de efectos actual, usa el método [**IXAudio2Voice::SetEffectChain**](https://msdn.microsoft.com/library/windows/desktop/ee418594).
 
  
 
@@ -295,7 +296,7 @@ CopyMemory(&m_waveFormat, waveFormat, sizeof(m_waveFormat));
 CoTaskMemFree(waveFormat);
 ```
 
-> **Importante**: La función [**MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177) usa **CoTaskMemAlloc** para asignar el objeto [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799). Por consiguiente, asegúrate de llamar a **CoTaskMemFree** cuando termines de usar este objeto.
+> **Importante**   La función [**MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177) usa **CoTaskMemAlloc** para asignar el objeto [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799). Por consiguiente, asegúrate de llamar a **CoTaskMemFree** cuando termines de usar este objeto.
 
  
 
@@ -424,13 +425,13 @@ void Audio::Start()
 
 La voz de origen pasa dichos datos de audio a la siguiente etapa del gráfico de audio. En el caso de Marble Maze, la siguiente etapa contiene dos voces de submezcla que aplican al audio los dos efectos de reverberación. Una voz de submezcla aplica una reverberación cercana de campo lejano; la segunda aplica una reverberación lejana de campo lejano. La cantidad en que cada voz de submezcla contribuye a la mezcla final se determina a partir del tamaño y la forma de la sala. La reverberación de campo cercano contribuye más cuando la bola está cerca de una pared o en una sala pequeña, y la reverberación de campo lejano contribuye más cuando la bola se encuentra en un espacio grande. Esta técnica produce un efecto de eco más real a medida que la canica se desplaza por el laberinto. Para obtener más información sobre cómo Marble Maze implementa este efecto, consulta **Audio::SetRoomSize** y **Physics::CalculateCurrentRoomSize** en el código fuente de Marble Maze.
 
-> **Nota**: En un juego en el que la mayor parte de las salas tienen más o menos el mismo tamaño, puedes usar un modelo de reverberación más básico. Por ejemplo, puedes usar una configuración de reverberación para todas las salas, o bien puedes crear una configuración de reverberación predefinida para cada sala.
+> **Nota**  En un juego en el que la mayor parte de espacios tienen más o menos el mismo tamaño, puedes usar un modelo de reverberación más básico. Por ejemplo, puedes usar una configuración de reverberación para todas las salas, o bien puedes crear una configuración de reverberación predefinida para cada sala.
 
  
 
 El método **Audio::CreateResources** usa Media Foundation para cargar la música de fondo. Sin embargo, en este punto la voz de origen no tiene datos de audio con los que trabajar. Además, dado que la música de fondo entra en un bucle, la voz de origen debe actualizarse periódicamente con datos para que la música siga reproduciéndose. Para que la voz de origen vaya teniendo datos, el bucle del juego actualiza los búferes de audio cada fotograma. El método **MarbleMaze::Render** llama a **Audio::Render** para procesar el búfer de audio de música de fondo. **Audio::Render** define una matriz de tres búferes de audio, **m\_audioBuffers**. Cada búfer contiene 64 KB (65536 bytes) de datos. El bucle lee datos del objeto de Media Foundation y escribe dichos datos en la voz de origen hasta que esta tiene tres búferes en cola.
 
-> **Precaución**: Si bien Marble Maze usa un búfer de 64 KB para los datos de música, es posible que tengas que usar un búfer de mayor o menor tamaño. El tamaño depende de los requisitos del juego.
+> **Precaución**  Si bien Marble Maze usa un búfer de 64 KB para los datos de música, es posible que tengas que usar un búfer de mayor o menor tamaño. El tamaño depende de los requisitos del juego.
 
  
 
@@ -528,7 +529,7 @@ if(sound == RollingEvent)
 
 No obstante, para la música de fondo, Marble Maze administra los búferes directamente a fin de tener mayor control sobre la cantidad de memoria utilizada. Si los archivos de música son grandes, puedes secuenciar los datos de música en búferes más pequeños. Si haces esto te ayudará a equilibrar el tamaño de la memoria con la frecuencia de la capacidad del juego para procesar y hacer streaming de datos de audio.
 
-> **Sugerencia**: Si el juego tiene una frecuencia de fotogramas baja o variable, procesar el audio en el subproceso principal puede generar pausas o reproducciones inesperadas en el audio porque el motor de audio no tiene suficientes datos de audio en el búfer con los que trabajar. Si el juego es sensible a este problema, considera la posibilidad de procesar audio en un subproceso independiente que no realice representación. Este enfoque es especialmente útil en equipos con varios procesadores, porque el juego puede usar procesadores inactivos.
+> **Sugerencia**  Si el juego tiene una velocidad de fotogramas baja o variable, procesar el audio en el subproceso principal puede generar pausas o cortes inesperados en el audio porque el motor de audio no tiene suficientes datos de audio en el búfer con los que trabajar. Si el juego es sensible a este problema, considera la posibilidad de procesar audio en un subproceso independiente que no realice representación. Este enfoque es especialmente útil en equipos con varios procesadores, porque el juego puede usar procesadores inactivos.
 
  
 
@@ -541,7 +542,7 @@ La clase **MarbleMaze** proporciona métodos como **PlaySoundEffect**, **IsSound
 m_audio.PlaySoundEffect(FallingEvent);
 ```
 
-El método **Audio::PlaySoundEffect** llama al método [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471) para comenzar la reproducción del sonido. Si ya se ha llamado al método **IXAudio2SourceVoice::Start**, la reproducción no se inicia de nuevo. De este modo, **Audio::PlaySoundEffect** ejecuta una lógica personalizada para determinados sonidos.
+El método **Audio::PlaySoundEffect** llama al método [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471) para comenzar la reproducción del sonido. Si ya se ha llamado al método **IXAudio2SourceVoice::Start**, la reproducción no se inicia de nuevo. De este modo, **Audio::PlaySoundEffect** utiliza una lógica personalizada para determinados sonidos.
 
 ```cpp
 void Audio::PlaySoundEffect(SoundEvent sound)
@@ -760,7 +761,7 @@ if (m_engineExperiencedCriticalError)
 
 Marble Maze también usa la marca **m\_engineExperiencedCriticalError** para protegerse frente a llamadas a XAudio2 si no hay ningún dispositivo disponible. Por ejemplo, el método **MarbleMaze::Update** no procesa el audio para los eventos de rodadura o colisión si está establecida esta marca. La aplicación intenta reparar el motor de audio en cada fotograma si es necesario. No obstante, la marca **m\_engineExperiencedCriticalError** puede estar siempre establecida si el equipo no tiene ningún dispositivo de audio o si se han desconectado los auriculares y no hay ningún otro dispositivo de audio disponible.
 
-> **Precaución**: Como regla, no ejecutes operaciones de bloqueo en el cuerpo de una devolución de llamada del motor. Si lo haces, generarás problemas de rendimiento. Marble Maze establece una marca en la devolución de llamada **OnCriticalError** y luego controla el error durante la fase de procesamiento normal de audio. Para obtener más información sobre las devoluciones de llamada de XAudio2, consulta [XAudio2 Callbacks](https://msdn.microsoft.com/library/windows/desktop/ee415745) (Devoluciones de llamada de XAudio2).
+> **Precaución**   Como regla, no ejecutes operaciones de bloqueo en el cuerpo de una devolución de llamada del motor. Si lo haces, generarás problemas de rendimiento. Marble Maze establece una marca en la devolución de llamada **OnCriticalError** y luego controla el error durante la fase de procesamiento normal de audio. Para obtener más información sobre las devoluciones de llamada de XAudio2, consulta [XAudio2 Callbacks](https://msdn.microsoft.com/library/windows/desktop/ee415745) (Devoluciones de llamada de XAudio2).
 
  
 
@@ -779,6 +780,6 @@ Marble Maze también usa la marca **m\_engineExperiencedCriticalError** para pro
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

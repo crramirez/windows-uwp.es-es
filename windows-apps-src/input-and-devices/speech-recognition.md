@@ -1,5 +1,6 @@
 ---
-Description: Usa el reconocimiento de voz para proporcionar datos de entrada, especificar una acción o comando y realizar tareas.
+author: Karl-Bridge-Microsoft
+Description: Usa el reconocimiento de voz para proporcionar datos de entrada, especificar una acción o un comando y realizar tareas.
 title: Reconocimiento de voz
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
@@ -9,9 +10,7 @@ template: detail.hbs
 # Reconocimiento de voz
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-Usa el reconocimiento de voz para proporcionar datos de entrada, especificar una acción o comando y realizar tareas.
+Usa el reconocimiento de voz para proporcionar datos de entrada, especificar una acción o un comando y realizar tareas.
 
 **API importantes**
 
@@ -50,13 +49,13 @@ Puedes usar varios tipos de restricciones para el reconocimiento de voz:
 
      
 
-    These predefined grammars can be used to recognize up to 10 seconds of speech input and require no authoring effort on your part. However, they do require a connection to a network.
+    Estas gramáticas predefinidas pueden usarse para reconocer hasta 10 segundos de entrada de voz y no requieren ningún esfuerzo de edición por su parte. Sin embargo, sí requieren una conexión a una red.
 
-    To use web-service constraints, speech input and dictation support must be enabled in **Settings** by turning on the "Get to know me" option in the Settings -&gt; Privacy -&gt; Speech, inking, and typing page.
+    Para usar las restricciones de servicios web, la compatibilidad del dictado y la entrada de voz debe estar habilitada en **Configuración**. Para ello, activa la opción "Conóceme" en la página Configuración -&gt; Privacidad -&gt; Voz, entrada manuscrita y escritura.
 
-    Here, we show how to test whether speech input is enabled and open the Settings -&gt; Privacy -&gt; Speech, inking, and typing page, if not.
+    Aquí se muestra cómo comprobar si la entrada de voz está habilitada y, si no lo está, cómo abrir la página Configuración -&gt; Privacidad -&gt; Voz, entrada manuscrita y escritura.
 
-    First, we initialize a global variable (HResultPrivacyStatementDeclined) to the HResult value of 0x80045509. See [Exception handling for in C\# or Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
+    En primer lugar, inicializamos una variable global (HResultPrivacyStatementDeclined) en el valor de HResult de 0x80045509. Consulta [Control de excepciones para aplicaciones de Windows en tiempo de ejecución con C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
 
 ```    CSharp
 private static uint HResultPrivacyStatementDeclined = 0x80045509;</code></pre></td>
@@ -113,7 +112,7 @@ catch (Exception exception)
 
     Usa un archivo XML de definición de comando de voz (VCD) para definir los comandos que el usuario puede decir para iniciar acciones al activar tu aplicación. Para obtener más detalles, consulta [Iniciar una aplicación en primer plano con comandos de voz en Cortana (XAML)](launch-a-foreground-app-with-voice-commands-in-cortana.md).
 
-**Nota** El tipo de restricción que uses depende de la complejidad de la funcionalidad de reconocimiento que desees crear. Cualquier enfoque puede ser la mejor opción para una tarea de reconocimiento determinada y puedes encontrar usos para todos los tipos de restricción en tu aplicación.
+**Nota** El tipo de restricción que uses dependerá de la complejidad de la funcionalidad de reconocimiento que quieras crear. Cualquier enfoque puede ser la mejor opción para una tarea de reconocimiento determinada y puedes encontrar usos para todos los tipos de restricción en tu aplicación.
 Para comenzar con las restricciones, consulta [Definir restricciones de reconocimiento personalizadas](define-custom-recognition-constraints.md).
 
  
@@ -206,9 +205,13 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 **Desarrolladores**
 * [Interacciones de voz](speech-interactions.md)
-**Diseñadores**
-* [Directrices para el diseño de Voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
-**Muestras**
+            
+          
+            **Diseñadores**
+* [Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+            
+          
+            **Muestras**
 * [Muestra de reconocimiento de voz y síntesis de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -219,6 +222,6 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,8 +1,9 @@
 ---
-Description: Usa un RichTextBlock con elementos RichTextBlockOverflow para crear diseños de texto avanzados.
+author: Jwmsft
+Description: Usa un control RichTextBlock con elementos RichTextBlockOverflow para crear diseños de texto avanzados.
 title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
-label: Bloque de texto enriquecido
+label: Rich text block
 template: detail.hbs
 ---
 # Bloque de texto enriquecido
@@ -126,7 +127,7 @@ Las propiedades adjuntas de la clase [Typography](https://msdn.microsoft.com/lib
 
 Consulta las directrices para texto y tipografía.
 
-\[Este artículo contiene información específica para aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
 ## Artículos relacionados
 
@@ -146,6 +147,6 @@ Consulta las directrices para texto y tipografía.
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

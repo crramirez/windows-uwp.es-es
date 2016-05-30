@@ -1,20 +1,21 @@
 ---
-Description: Al crear una nueva aplicación en el panel del Centro de desarrollo de Windows, el nombre de la aplicación debe ser único en toda la Tienda. En este tema se explica cómo reservar los nombres y se incluyen algunas sugerencias para elegir un buen nombre de aplicación.
+author: jnHs
+Description: El primer paso para crear una nueva aplicación en el panel del Centro de desarrollo de Windows es reservar un nombre de aplicación. Aprende a reservar nombres de aplicación y busca sugerencias para elegir un buen nombre de aplicación.
 title: Crear la aplicación reservando un nombre
+keywords:
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
 ---
 
 # Crear la aplicación reservando un nombre
 
 
-Al crear una nueva aplicación en el panel del Centro de desarrollo de Windows, el nombre de la aplicación debe ser único en toda la Tienda. En este tema se explica cómo reservar los nombres y se incluyen algunas sugerencias para [elegir un buen nombre de aplicación](#choosing-your-app-s-name).
+El primer paso para crear una nueva aplicación en el panel del Centro de desarrollo de Windows es reservar un nombre de aplicación. Aprende a reservar nombres de aplicación y busca sugerencias para [elegir un buen nombre de aplicación](#choosing-your-app-s-name). Cada nombre reservado debe ser único en toda la Tienda.
 
 > **Nota**  Si tienes una aplicación de Windows Phone que creaste anteriormente, puedes administrarla y enviarla aunque no reservaras su nombre. Sin embargo, para cargar paquetes .appx para la aplicación, o para [ver los detalles de identidad de la aplicación](view-app-identity-details.md) específicos para crear paquetes .appx, tendrás que reservar un nombre único siguiendo los pasos que se indican a continuación. Esto también evita que cualquier otra persona reserve ese nombre.
 
 Cuando [cargas los paquetes de la aplicación](upload-app-packages.md), el valor de [**Paquete/Propiedades/DisplayName**](https://msdn.microsoft.com/library/windows/apps/dn423240) debe coincidir con el nombre que reservaste para la aplicación en el **Panel**. Si usas Microsoft Visual Studio para crear el paquete de la aplicación, este atributo se rellenará automáticamente.
 
 ## Crear la aplicación reservando un nuevo nombre
-
 
 Reservar un nombre es el primer paso para crear una aplicación en el panel. Puedes hacerlo incluso si aún no has empezado a compilar la aplicación. Recomendamos hacerlo lo antes posible para que nadie más pueda usar el nombre.
 
@@ -30,7 +31,6 @@ Después de reservar un nombre, tendrás un año para enviar la aplicación. Si 
 
 ## Elegir el nombre de la aplicación
 
-
 Elegir el nombre correcto para la aplicación es una tarea importante. Elige un nombre que capte la atención de los clientes y los haga leer más sobre la aplicación. Estas son algunas sugerencias para que elijas un buen nombre de aplicación.
 
 -   **Elige un nombre corto.** El espacio dedicado para mostrar el nombre de tu aplicación es limitado en la mayoría de los casos, por lo que sugerimos que uses el nombre más corto posible. Aunque el nombre de tu aplicación puede tener hasta 256 caracteres, puede suceder que el final de un nombre muy largo no siempre esté visible para los clientes.
@@ -42,7 +42,6 @@ Elegir el nombre correcto para la aplicación es una tarea importante. Elige un 
 -   **No uses nombres registrados por otros.** Asegúrate de tener los derechos de usar el nombre que reservas. Si alguien más tiene los derechos de marca comercial de ese nombre, puede denunciar una infracción y no podrás seguir usándolo. Si esto sucede después de publicada la aplicación, se quitará de la Tienda. Deberás cambiar el nombre de tu aplicación, incluyendo todas las instancias del nombre que aparecen en la aplicación y el contenido, antes de que puedas [enviar la aplicación](app-submissions.md) nuevamente para su certificación.
 
 ## Administrar nombres de aplicación adicionales
-
 
 Puedes administrar los nombres de tus aplicaciones en la página **Administrar nombres de aplicaciones**, en la sección **Administración de la aplicación** de cada una de las aplicaciones que tienes en el panel del Centro de desarrollo de Windows.
 
@@ -61,6 +60,6 @@ Para obtener más información, consulta [Administrar nombres de aplicación](ma
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

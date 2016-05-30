@@ -1,17 +1,15 @@
 ---
-Description: En este tema se describe la nueva interfaz de usuario de Windows para realizar una rotación. También se ofrecen directrices sobre la experiencia del usuario que debes tener presente cuando uses estos nuevos mecanismos de interacción en una aplicación de la Tienda Windows.
+author: Karl-Bridge-Microsoft
+Description: En este tema se describe la nueva interfaz de usuario de Windows para realizar una rotación. También se ofrecen directrices sobre la experiencia del usuario que te conviene tener en cuenta al usar este nuevo mecanismo de interacción en tu aplicación de la Tienda Windows.
 title: Rotación
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
-label: Rotación
+label: Rotation
 template: detail.hbs
 ---
 
 # Rotación
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-En este artículo se describe la nueva interfaz de usuario de Windows para realizar una rotación. También se ofrecen directrices sobre la experiencia del usuario que debes tener presente cuando uses estos nuevos mecanismos de interacción en una aplicación para UWP.
+En este artículo se describe la nueva interfaz de usuario de Windows para realizar una rotación. También se ofrecen directrices sobre la experiencia del usuario que debes tener presente cuando uses este nuevo mecanismo de interacción en una aplicación para UWP.
 
 **API importantes**
 
@@ -85,9 +83,9 @@ Windows 8 admite tres tipos de rotación: libre, restringida y combinada.
 </tr>
 <tr class="odd">
 <td align="left">Rotación combinada</td>
-<td align="left"><p>La rotación combinada admite la rotación libre con zonas (similares a las guías en [Guidelines for panning](guidelines-for-panning.md)) en cada uno de los puntos de acoplamiento situados cada 90 grados impuestos en la rotación restringida. Si el usuario libera el objeto fuera de una de las zonas de 90 grados, el objeto permanece en esa posición; de otro modo, el objeto gira de manera automática hasta un punto de acoplamiento.</p>
+<td align="left"><p>La rotación combinada admite la rotación libre pero con zonas (similares a las guías de las [Instrucciones del movimiento panorámico](guidelines-for-panning.md)) en cada uno de los puntos de acoplamiento situados cada 90 grados impuestos en la rotación restringida. Si el usuario libera el objeto fuera de una de las zonas de 90 grados, el objeto permanece en esa posición; de otro modo, el objeto gira de manera automática hasta un punto de acoplamiento.</p>
 <div class="alert">
-<strong>Nota:</strong> Una guía de interfaz de usuario es una función en la que un área que rodea un destino restringe el movimiento a algún valor específico o ubicación para influir en su selección.
+<strong>Nota</strong>  Una guía de interfaz de usuario es una función en la que un área que rodea un destino restringe el movimiento a algún valor específico o ubicación para influir en su selección.
 </div>
 <div>
  
@@ -105,8 +103,9 @@ Windows 8 admite tres tipos de rotación: libre, restringida y combinada.
 * [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Ejemplo de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Ejemplo de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Ejemplo de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Ejemplos de archivo**
+* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
+**Muestras de archivo**
 * [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: muestra de prueba de acceso táctil](http://go.microsoft.com/fwlink/p/?linkid=231590)
@@ -124,6 +123,6 @@ Windows 8 admite tres tipos de rotación: libre, restringida y combinada.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

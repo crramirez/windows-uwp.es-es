@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Un patrón con un área de contenido y un área de comando para aplicaciones de vista única o experiencias modales, como visores o editores de fotos, visores de documentos, mapas, dibujo u otras aplicaciones que usan una vista de desplazamiento libre.
 title: Directrices para el patrón del lienzo activo
 ms.assetid: 4D768472-64D6-406C-9E87-F750F6B981A0
@@ -26,15 +27,15 @@ El patrón de lienzo activo consta de un área de contenido y un área de comand
 
 **Área de contenido.**  El área de contenido suele ser un lienzo de desplazamiento libre. Es posible que existan varias áreas de contenido dentro de una aplicación.
 
-**Área de comandos.**  Si colocas muchos comandos, entonces la solución podría ser una barra de comandos que responda según el tamaño de la pantalla. Si no vas a colocar tantos comandos y no te preocupa demasiado disponer de una interfaz de usuario con capacidad de respuesta, puedes usar botones de dimensiones reducidas.
+**Área de comandos.**  Si colocas muchos comandos, entonces la solución podría ser una barra de comandos que responda según el tamaño de la pantalla. Si no vas a colocar tantos comandos y no te preocupa la capacidad de respuesta de la interfaz de usuario, puedes usar botones para ahorrar espacio.
 
-\[En este artículo se incluye información específica de aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el archivo [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
 ## Artículos relacionados
 
--   [**Barras de la aplicación y barras de comandos**](app-bars.md)
+-   [**Barra de la aplicación y barra de comandos**](app-bars.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

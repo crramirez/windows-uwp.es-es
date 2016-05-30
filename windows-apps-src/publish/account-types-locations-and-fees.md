@@ -1,18 +1,19 @@
 ---
+author: jnHs
 ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: Tipos de cuenta, ubicaciones y precios
-description: Microsoft ofrece cuentas de desarrollador individuales y cuentas de desarrollador corporativas en muchos países y regiones.
+description: Microsoft ofrece cuentas de desarrollador individuales y corporativas en muchos países y regiones.
 ---
 
 # Tipos de cuenta, ubicaciones y precios
 
 Microsoft ofrece dos tipos de cuentas de desarrollador: cuentas individuales y cuentas de empresa. Las cuentas de desarrollador se ofrecen en [varios países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta proporciona acceso para publicar aplicaciones en la Tienda y participar en otros programas de Microsoft para desarrolladores.
 
-> **Nota**: Si creas una cuenta individual o corporativa, puedes asociar una sola cuenta de Microsoft a la cuenta de desarrollador. Al suscribirte a una cuenta, asegúrate de que inicias sesión con la cuenta Microsoft que quieres usar para tu cuenta de desarrollador.
+> **Nota**: Al crear una cuenta individual o corporativa, puedes asociar una sola cuenta de Microsoft con la cuenta de desarrollador. Al suscribirte a una cuenta, asegúrate de que inicias sesión con la cuenta Microsoft que quieres usar para tu cuenta de desarrollador.
 
-Cuando [comiences con el proceso de suscripción](http://go.microsoft.com/fwlink/p/?LinkId=615100), deberás elegir si quieres crear una cuenta individual o una cuenta de empresa.
+Cuando [comiences el proceso de suscripción](http://go.microsoft.com/fwlink/p/?LinkId=615100), deberás elegir si quieres crear una cuenta individual o de empresa. Las cuentas individuales están pensadas para un único desarrollador que trabaja por su cuenta. Las cuentas de empresa están pensadas para empresas y organizaciones. Las cuentas de empresa dan acceso a algunas funcionalidades adicionales de la aplicación. También debemos comprobar con más atención las cuentas de empresa después de que te registres, para así confirmar que tienes autorización para configurar la cuenta de tu empresa. Esta comprobación puede tardar entre unos días y un par de semanas y suele incluir una llamada de teléfono a tu empresa. Ambos tipos de cuenta te permitirán enviar aplicaciones, complementos y servicios.
 
-> **Importante**: No puedes cambiar el tipo de cuenta después haberla seleccionado, así que asegúrate de elegir el tipo adecuado.
+> **Importante**: No puedes cambiar el tipo de cuenta después haberlo seleccionado, así que asegúrate de elegir el tipo adecuado.
 
 Estas son las diferencias fundamentales entre los dos tipos de cuentas.
 
@@ -26,11 +27,11 @@ Las cuentas de empresa son un poco más caras, principalmente porque es necesari
 
 Concretamente, debes tener una cuenta de empresa para poder publicar aplicaciones que usen estas tres funcionalidades:
 
--   **enterpriseAuthentication**: usa tus credenciales de Windows para acceder a una intranet corporativa. Normalmente se utiliza en aplicaciones de línea de negocio que se conectan a los servidores de una empresa. (No necesitas esta funcionalidad para la comunicación genérica a través de Internet).
--   **sharedUserCertificates**: permite el acceso de una aplicación a certificados de software y hardware, por ejemplo, los certificados almacenados en una tarjeta inteligente. Suele usarse para aplicaciones empresariales o financieras que requieren una tarjeta inteligente para la autenticación.
--   **documentsLibrary**: proporciona acceso mediante programación a la biblioteca de documentos del usuario, filtrado para las asociaciones de tipo de archivo declaradas en el manifiesto del paquete. (No necesitas declarar esta funcionalidad para acceder a los Documentos de un usuario con el [selector de archivos](https://msdn.microsoft.com/library/windows/apps/Hh465174)). Ten en cuenta que las aplicaciones destinadas a Windows Phone 8.1 o versiones anteriores no pueden usar la funcionalidad documentsLibrary.
+-   **enterpriseAuthentication**: usa las credenciales de Windows para acceder a una intranet corporativa. Normalmente se utiliza en aplicaciones de línea de negocio que se conectan a los servidores de una empresa. (No necesitas esta funcionalidad para la comunicación genérica a través de Internet).
+-   **sharedUserCertificates**: permite el acceso de una aplicación a certificados de software y hardware como, por ejemplo, los certificados almacenados en una tarjeta inteligente. Suele usarse para aplicaciones empresariales o financieras que requieren una tarjeta inteligente para la autenticación.
+-   **documentsLibrary**: proporciona acceso mediante programación a los documentos del usuario, filtrados por las asociaciones de tipo de archivo declaradas en el manifiesto del paquete. (No necesitas declarar esta funcionalidad para acceder a los Documentos de un usuario con el [selector de archivos](https://msdn.microsoft.com/library/windows/apps/Hh465174)). Ten en cuenta que las aplicaciones destinadas a Windows Phone 8.1 o versiones anteriores no pueden usar la funcionalidad documentsLibrary.
 
-> **Note**: Además, debes ponerte en contacto con soporte técnico y obtener su aprobación para poder enviar aplicaciones que declaren la funcionalidad **documentsLibrary**.
+> **Nota**: Además, debes ponerte en contacto con el soporte técnico y obtener su aprobación para poder enviar aplicaciones que declaren la funcionalidad de **documentsLibrary**.
 
 Tener una cuenta de la empresa no garantiza que las aplicaciones que usan estas funcionalidades aprobarán la certificación. Estas funcionalidades están destinadas a escenarios muy específicos, y la mayoría de las aplicaciones no deberían declararlas. Para obtener más información, consulta [Declaraciones de funcionalidad de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/Mt270968).
 
@@ -42,11 +43,11 @@ Puedes registrarte con una cuenta de desarrollador y enviar aplicaciones si resi
 
 En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el registro de la cuenta de desarrollador. Los precios están sujetos a cambios.
 
-> **Nota**: Aplicaremos cualquier impuesto o tasa aplicables a la tarifa de registro cuando te registres. Además, cuando te paguemos, es posible que el banco te cobre un cargo por recibir el pago.
+> **Nota**: Aplicaremos cualquier impuesto o tasa aplicables a la tarifa de registro cuando te suscribas. Además, cuando te paguemos, es posible que el banco te cobre un cargo por recibir el pago.
 
 La columna **Pago** describe cómo te pagaremos el dinero que ganes con tus aplicaciones. Podrás elegir la [cuenta de pago](setting-up-your-payout-account-and-tax-forms.md) en la que te depositaremos este dinero.
 
-> **Nota**: Algunos mercados no admiten aplicaciones de pago****. En esos mercados, solo se pueden enviar aplicaciones gratuitas.
+> **Nota**: Algunos mercados no admiten aplicaciones de **pago**. En esos mercados, solo se pueden enviar aplicaciones gratuitas.
 
 La columna **PayPal** indica si PayPal es un método de pago admitido que puede usarse para tu [cuenta de pago](https://msdn.microsoft.com/library/windows/apps/Bg124529) (y, salvo que se indique lo contrario, para la tarifa de registro de la cuenta de desarrollador).
 
@@ -118,11 +119,11 @@ La columna **PayPal** indica si PayPal es un método de pago admitido que puede 
 |  Alemania | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
 |  Ghana | 19 USD | 99 USD | GHS pagados al banco | No | 
 |  Grecia | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
-|  Groenlandia | 19 USD | 99 USD | No pago | No | 
-|  Granada | 19 USD | 99 USD | No pago | No | 
-|  Guatemala | 19 USD | 99 USD | GTQ pagados al banco | No | 
+|  Groenlandia | 19 USD | 99 USD | Sin pago | No | 
+|  Granada | 19 USD | 99 USD | Sin pago | No | 
+|  Guatemala | 145 GTQ | 750 GTQ | GTQ pagados al banco | No | 
 |  Guinea | 19 USD | 99 USD | USD pagados al banco | No | 
-|  Guinea-Bissau | 19 USD | 99 USD | No pago | No | 
+|  Guinea-Bisáu | 19 USD | 99 USD | No pago | No | 
 |  Guyana | 19 USD | 99 USD | No pago | No | 
 |  Haití | 19 USD | 99 USD | USD pagados al banco | No | 
 |  Honduras | 19 USD | 99 USD | USD pagados al banco | No | 
@@ -139,8 +140,8 @@ La columna **PayPal** indica si PayPal es un método de pago admitido que puede 
 |  Japón | 1847 JPY | 9800 JPY | JPY pagados al banco | Sí | 
 |  Jordania | 13 JOD | 70 JOD | JOD pagados al banco | No | 
 |  Kazajistán | 2897 KZT | 15038 KZT | KZT pagados al banco | No | 
-|  Kenia | 19 USD | 99 USD | KES pagados al banco | No | 
-|  Kiribati | 19 USD | 99 USD | No pago | No | 
+|  Kenia | 1900 KES | 9999 KES | KES pagados al banco | No | 
+|  Kiribati | 19 USD | 99 USD | Sin pago | No | 
 |  Corea del Sur | 21216 KRW | 108000 KRW | USD pagados al banco | No | 
 |  Kuwait | 5 KWD | 28 KWD | KWD pagados al banco | No | 
 |  Kirguistán | 19 USD | 99 USD | No pago | No | 
@@ -179,7 +180,7 @@ La columna **PayPal** indica si PayPal es un método de pago admitido que puede 
 |  Nueva Zelanda | 24 NZD | 140 NZD | NZD pagados al banco | Sí | 
 |  Nicaragua | 19 USD | 99 USD | USD pagados al banco | No | 
 |  Níger | 19 USD | 99 USD | XOF pagados al banco | No | 
-|  Nigeria | 19 USD | 99 USD | NGN pagados al banco | No | 
+|  Nigeria | 3700 NGN | 19500 NGN | NGN pagados al banco | No | 
 |  Noruega | 113 NOK | 580 NOK | NOK pagadas al banco | Sí | 
 |  Omán | 7 OMR | 40 OMR | OMR pagados al banco | No | 
 |  Pakistán | 1959 PKR | 9000 PKR | PKR pagados al banco | No | 
@@ -191,8 +192,8 @@ La columna **PayPal** indica si PayPal es un método de pago admitido que puede 
 |  Filipinas | 832 PHP | 4400 PHP | PHP pagados al banco | Sí | 
 |  Polonia | 59 PLN | 280 PLN | PLN pagados al banco | Sí | 
 |  Portugal | 14 EUR | 75 EUR | EUR pagados al banco | Sí | 
-|  Qatar | 69 QAR | 360 QAR | QAR pagados al banco | No | 
-|  Rumania | 63 RON | 360 RON | USD pagados al banco | No | 
+|  Catar | 69 QAR | 360 QAR | QAR pagados al banco | No | 
+|  Rumania | 14 EUR | 75 EUR | USD pagados al banco | No | 
 |  Rusia | 626 RUB | 3000 RUB | RUB pagados al banco | Sí* | 
 |  Ruanda | 19 USD | 99 USD | RWF pagados al banco | No | 
 |  San Cristóbal y Nieves | 19 USD | 99 USD | No pago | No | 
@@ -254,6 +255,6 @@ La columna **PayPal** indica si PayPal es un método de pago admitido que puede 
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

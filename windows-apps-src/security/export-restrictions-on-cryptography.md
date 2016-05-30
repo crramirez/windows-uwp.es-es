@@ -14,11 +14,11 @@ Usa esta información para determinar si la aplicación usa algún tipo de cript
 
 La Oficina de Industria y Seguridad del Departamento de Comercio de Estados Unidos regula las exportaciones de tecnología que usan determinados tipos de cifrado. Todas las aplicaciones que se muestran en la Tienda Windows deben cumplir con estas leyes y reglamentos porque los archivos de la aplicación podrían almacenarse en Estados Unidos. Incluso las aplicaciones cargadas por desarrolladores de otros países para su distribución fuera de Estados Unidos deben cumplir con estas normas. Por lo tanto, cuando cualquier desarrollador de aplicaciones envíe una aplicación a la Tienda Windows, deberá asegurarse de que sus aplicaciones no contienen ninguna tecnología restringida según estas normas.
 
-> **Nota** La información que aquí se proporciona te ofrece varias instrucciones, pero es tu responsabilidad como desarrollador que publica sus aplicaciones en la Tienda Windows, procurar que la aplicación cumpla todas las leyes y normativas aplicables.
+> **Nota**  La información que aquí se proporciona te ofrece varias instrucciones, pero es tu responsabilidad como desarrollador que publica sus aplicaciones en la Tienda Windows procurar que la aplicación cumpla todas las leyes y normativas aplicables.
 
  
 
-Para obtener más información acerca de la Oficina de Industria y Seguridad y el Departamento de Comercio de Estados Unidos, consulta la página [About the Bureau of Industry and Security (Acerca de la Oficina de Industria y Seguridad)](http://go.microsoft.com/fwlink/p/?LinkID=245644).
+Para obtener más información sobre la Oficina de Industria y Seguridad y el Departamento de Comercio de Estados Unidos, consulta la página [acerca de la Oficina de Industria y Seguridad](http://go.microsoft.com/fwlink/p/?LinkID=245644).
 
 Para obtener información sobre la Normativa de la Administración de Exportaciones (EAR) que regula la exportación de tecnología que incluya cifrado, consulta la página [EAR Controls for Items That Use Encryption (Controles de la EAR para productos que usen cifrado)](http://go.microsoft.com/fwlink/p/?LinkID=245645).
 
@@ -26,7 +26,7 @@ Para obtener información sobre la Normativa de la Administración de Exportacio
 
 En primer lugar, determina si tu aplicación usa un tipo de criptografía que esté regulada por la Normativa de la Administración de Exportaciones. La pregunta incluye los ejemplos que se muestran en esta lista, pero recuerda que esta lista no incluye cada aplicación de criptografía posible.
 
-> **Importante** No solo debes tener en cuenta el código que has escrito para la aplicación, sino también todas las bibliotecas de software, las utilidades y los componentes del sistema operativo que incluye la aplicación o los vínculos que tiene.
+> **Importante**  No solo debes tener en cuenta el código que has escrito para la aplicación, sino también todas las bibliotecas de software, las utilidades y los componentes del sistema operativo que incluye la aplicación o los vínculos que tiene.
 
 -   Todo uso de firmas digitales, como autenticaciones o controles de integridad
 -   Cifrado de cualquier dato o archivos que la aplicación usa o a los que accede
@@ -55,6 +55,6 @@ Si la aplicación llama, admite, tiene o usa criptografía o cifrado para cualqu
 Si no tienes un número ECCN, consulta el tema sobre [ECCN Questions and Answers (Preguntas y respuestas sobre ECCN)](http://go.microsoft.com/fwlink/p/?LinkID=245646).
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

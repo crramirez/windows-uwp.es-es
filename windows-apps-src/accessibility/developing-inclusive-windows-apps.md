@@ -1,13 +1,16 @@
 ---
-Description: Una guía básica para desarrollar aplicaciones accesibles para la Plataforma universal de Windows (UWP).
-title: Desarrollo de aplicaciones inclusivas de Windows
+author: Xansky
+Description: Aprende a desarrollar aplicaciones para UWP de Windows 10 accesibles que incluyan navegación por teclado, configuración de color y contraste y compatibilidad con tecnologías de asistencia.
 ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
-label: Developing inclusive Windows apps
+title: Desarrollo de aplicaciones inclusivas de Windows 10
+label: Developing inclusive Windows 10 apps
 template: detail.hbs
 ---
 
-Desarrollo de aplicaciones inclusivas de Windows
-=================================
+# Desarrollo de aplicaciones inclusivas de Windows  
+
+Aprende a desarrollar aplicaciones para UWP de Windows 10 accesibles que incluyan navegación por teclado, configuración de color y contraste y compatibilidad con tecnologías de asistencia.
+
 En este artículo se describe cómo desarrollar aplicaciones accesibles para la Plataforma universal de Windows (UWP). En concreto, supone que conoces cómo diseñar la jerarquía lógica de la aplicación para tu aplicación.  
 
 Si no lo has hecho aún, empieza por leer [Diseño de software inclusivo](designing-inclusive-software.md).
@@ -42,7 +45,8 @@ Además, el libro electrónico [Software de ingeniería de accesibilidad](https:
 ## Color y contraste  
 Una de las características de accesibilidad integradas en Windows es el modo de contraste alto, lo que aumenta el contraste de color del texto y las imágenes en la pantalla del equipo. Para algunas personas, aumentar el contraste de los colores reduce la fatiga ocular y facilita la lectura. Cuando compruebas tu interfaz de usuario en contraste alto, es buena idea comprobar que los controles se hayan codificado de forma coherente y con los colores del sistema (no con colores codificados de forma rígida) para garantizar que podrán ver todos los controles de la pantalla que vería un usuario que no está usando contraste alto.  
 
-```XAML
+XAML
+```xml
 <Button Background="{ThemeResource ButtonBackgroundThemeBrush}">OK</Button>
 ```
 Para obtener más información sobre el uso de recursos y colores del sistema, consulte [Recursos de temas de XAML](https://msdn.microsoft.com/en-us/windows/uwp/controls-and-patterns/xaml-theme-resources).
@@ -57,7 +61,7 @@ Si decides usar tu propio tema de color en lugar de los colores del sistema, ten
 
 **Combinaciones de colores** – aproximadamente el 7 por ciento de los hombres (y menos del 1 por ciento de las mujeres) tienen alguna forma de daltonismo. Los usuarios con daltonismo tienen problemas para distinguir entre algunos colores, así que es importante que nunca se use el color por sí solo para transmitir el estado o el significado en una aplicación. Para obtener imágenes decorativas (tales como iconos o fondos), las combinaciones de colores se deberían elegirse de manera que se maximice la percepción de la imagen por parte de los usuarios daltónicos.  
 
-## Lista de comprobación de accesibilidad ##
+## Lista de comprobación de accesibilidad  
 La siguiente es una versión abreviada de la lista de comprobación de accesibilidad:  
 1. Establece el nombre accesible (obligatorio) y la descripción accesible (opcional) para los elementos de la interfaz de usuario interactivos y de contenido de la aplicación.
 2. Implementa la accesibilidad de teclado.
@@ -68,13 +72,14 @@ La siguiente es una versión abreviada de la lista de comprobación de accesibil
 
 Para obtener más información, consulta el tema completo [Lista de comprobación de accesibilidad](accessibility-checklist.md).
 
-## Consulta también ##
+## Temas relacionados  
 * [Diseño de software inclusivo](designing-inclusive-software.md)  
 * [Diseño inclusivo](http://design.microsoft.com/inclusive)
+* [Procedimientos de accesibilidad que deben evitarse](practices-to-avoid.md)
 * [Software de ingeniería de accesibilidad](https://www.microsoft.com/en-us/download/details.aspx?id=19262)
 * [Concentrador del desarrollador de accesibilidad de Microsoft](https://msdn.microsoft.com/enable)
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

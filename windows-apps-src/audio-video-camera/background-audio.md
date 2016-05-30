@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 923D8156-81D3-4A1E-9D02-DB219F600FDB
 description: Este artículo describe cómo crear aplicaciones para la Plataforma universal de Windows (UWP) que reproduzcan audio en segundo plano.
 title: Audio en segundo plano
@@ -13,9 +14,9 @@ Este artículo describe cómo crear aplicaciones para la Plataforma universal de
 
 Entre los escenarios para reproducir audio en segundo plano encontramos:
 
--   **Listas de reproducción de larga duración:** El usuario selecciona brevemente una aplicación en primer plano para elegir e iniciar una lista de reproducción. Con ello, el usuario espera que dicha lista de reproducción siga sonando en segundo plano.
+-   **Listas de reproducción de larga duración** El usuario selecciona brevemente una aplicación en primer plano para elegir e iniciar una lista de reproducción. Con ello, el usuario espera que dicha lista de reproducción siga sonando en segundo plano.
 
--   **Uso del conmutador de tareas:** el usuario abre rápidamente una aplicación en primer plano para iniciar la reproducción de audio y, después, cambia a otra aplicación que ya estaba abierta mediante el conmutador de tareas. El usuario espera que el audio siga reproduciéndose en segundo plano.
+-   **Uso del conmutador de tareas** El usuario abre rápidamente una aplicación en primer plano para iniciar la reproducción de audio y, después, cambia a otra aplicación que ya estaba abierta mediante el conmutador de tareas. El usuario espera que el audio siga reproduciéndose en segundo plano.
 
 La implementación de audio de fondo que se describe en este artículo te permitirá que la aplicación se ejecute universalmente en todos los dispositivos de Windows, incluidos los dispositivos móviles, dispositivos de escritorio y Xbox.
 
@@ -134,6 +135,6 @@ La siguiente tabla enumera qué políticas se aplican en los diferentes tipos de
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

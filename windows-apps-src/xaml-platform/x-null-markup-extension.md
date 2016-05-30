@@ -1,5 +1,6 @@
 ---
-description: En el marcado XAML, especifica un valor nulo para una propiedad.
+author: jwmsft
+description: En el marcado XAML, especifica un valor null para una propiedad.
 title: Extensión de marcado xNull
 ms.assetid: E6A4038E-4ADA-4E82-9824-582FC16AB037
 ---
@@ -32,6 +33,6 @@ Algunos tipos de Windows Runtime aceptan valores NULL. En los casos en los que u
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

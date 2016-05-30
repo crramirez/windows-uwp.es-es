@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: ¿Cuáles son las opciones al desarrollar aplicaciones multiplataforma?
 title: Selección de un enfoque para iOS y desarrollo de aplicaciones para UWP
 ms.assetid: 5CDAB313-07B7-4A32-A49B-026361DCC853
@@ -90,6 +91,6 @@ Con una aplicación de iOS existente, las opciones son un poco más limitadas. S
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

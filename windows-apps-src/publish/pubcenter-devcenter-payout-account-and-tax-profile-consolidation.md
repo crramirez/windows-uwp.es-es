@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Si habías configurado anteriormente una cuenta de pago de pubCenter para tus ganancias de Microsoft Advertising, dicha cuenta ya no se usará para los pagos a partir del 1 de abril de 2016. Los pagos se realizarán ahora a través de tu cuenta de pago del Centro de desarrollo.
 title: Consolidación del perfil fiscal y la cuenta de pago del Centro de desarrollo y pubCenter
 ms.assetid: 1EC55E2F-2BC5-4982-A569-A59082A808EC
@@ -9,20 +10,15 @@ ms.assetid: 1EC55E2F-2BC5-4982-A569-A59082A808EC
 
 Si habías configurado anteriormente una cuenta de pago de pubCenter para tus ganancias de Microsoft Advertising, dicha cuenta ya no se usará para los pagos a partir del 1 de abril de 2016. Los pagos se realizarán ahora a través de tu cuenta de pago del Centro de desarrollo.
 
-Para garantizar que los pagos vencidos se envíen puntualmente, inicia sesión en el panel del Centro de desarrollo antes del 31 de marzo de 2016 y comprueba que tu [perfil fiscal y cuenta de pago](setting-up-your-payout-account-and-tax-forms.md) estén configurados correctamente y que estén actualizados.
+Para garantizar que los pagos vencidos se envíen puntualmente, inicia sesión en el panel del Centro de desarrollo y comprueba que tu [perfil fiscal y cuenta de pago](setting-up-your-payout-account-and-tax-forms.md) estén configurados correctamente y que estén actualizados.
 
-> **Importante**  Si nunca has configurado tu cuenta de pago ni tu perfil fiscal en el Centro de desarrollo, deberás hacerlo antes del 31 de marzo de 2016. Para más información, consulta [Configurar formularios fiscales y cuenta de pago](setting-up-your-payout-account-and-tax-forms.md).
+> **Importante** Si nunca has configurado tu cuenta de pago ni tu perfil fiscal en el Centro de desarrollo, deberás hacerlo ahora. Para más información, consulta [Configurar formularios fiscales y cuenta de pago](setting-up-your-payout-account-and-tax-forms.md).
 
 Para más información acerca de los pagos en el Centro de desarrollo, consulta [Resumen de pago](payout-summary.md). Para obtener información sobre las monedas usadas para los pagos en diferentes países y regiones, consulta [Cuenta de desarrollador y mercados de envío de aplicaciones](account-types-locations-and-fees.md#account_markets).
 
 También se recomienda revisar las preguntas más frecuentes a continuación para más información acerca de escenarios específicos.
 
 ## Preguntas más frecuentes
-
-
-### ¿Qué cuenta se usará para el pago de marzo de 2016?
-
-En marzo de 2016, aún se usarán la cuenta de pago y el perfil fiscal configurados en pubCenter. Esta será la última vez que usamos esta información. A partir del 1 de abril de 2016, tus ganancias de Microsoft Advertising se abonarán en la cuenta de PayPal o bancaria configurada en el Centro de desarrollo.
 
 ### Tengo mis cuentas de pubCenter y el Centro de desarrollo registradas con la misma cuenta de Microsoft en el mismo país o región. ¿Cómo recibiré mi dinero?
 
@@ -84,6 +80,6 @@ Para cualquier consulta o pregunta, abre una [incidencia de soporte técnico](ht
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

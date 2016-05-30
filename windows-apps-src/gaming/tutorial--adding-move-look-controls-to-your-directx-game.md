@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Controles de movimiento y vista para juegos
 description: Aprende a agregar controles de movimiento y vista tradicionales de mouse y teclado (también conocidos como controles mouselook) a un juego DirectX.
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
@@ -138,13 +139,13 @@ Nuestro código contiene 4 grupos de campos privados. Revisemos la finalidad de 
 En primer lugar, definimos algunos campos útiles que almacenan la información actualizada acerca da la vista de la cámara.
 
 -   **m\_position** es la posición de la cámara (y por tanto del plano de visión) en la escena en 3D, usando coordenadas de escena.
--   **m\_pitch** es la rotación alrededor del eje X de la cámara, o su rotación arriba-abajo sobre el eje X del plano de visión, en radianes.
--   **m\_yaw** es la rotación alrededor del eje Y de la cámara, o su rotación izquierda-derecha sobre el eje Y del plano de visión, en radianes.
+-   **m\_pitch** es la rotación alrededor del eje X (pitch) de la cámara, o su rotación arriba-abajo sobre el eje X del plano de visión, en radianes.
+-   **m\_yaw** es la rotación alrededor del eje Y (yaw) de la cámara, o su rotación izquierda-derecha sobre el eje Y del plano de visión, en radianes.
 
 Ahora, vamos a definir los campos que usamos para almacenar información sobre el estado y la posición de nuestros controladores. Primero definiremos los campos que necesitamos para el controlador de movimiento táctil. (No se necesita nada especial para la implementación para teclado del controlador de movimiento. Los eventos de teclado simplemente se leen con controladores específicos).
 
 -   **m\_moveInUse** indica si el controlador de movimiento está en uso.
--   **m\_movePointerID** es el id. único para el puntero de movimiento actual. Lo usamos para diferenciar entre el puntero de vista y el puntero de movimiento cuando comprobamos el valor del id. de puntero.
+-   **m\_movePointerID** es el identificador único del puntero de movimiento actual. Lo usamos para diferenciar entre el puntero de vista y el puntero de movimiento cuando comprobamos el valor del id. de puntero.
 -   **m\_moveFirstDown** es el punto de la pantalla donde el jugador tocó por primera vez el área del puntero de controlador de movimiento. Usaremos este valor más adelante para establecer una zona muerte y evitar que movimientos minúsculos hagan vibrar la vista.
 -   **m\_movePointerPosition** es el punto de la pantalla al que el jugador acaba de mover el puntero. Lo usamos para determinar la dirección a la que quería moverse el jugador examinándolo con relación a **m\_moveFirstDown**.
 -   **m\_moveCommand** es el comando calculado final para el controlador de movimiento: arriba (adelante), abajo (atrás), izquierda o derecha.
@@ -152,7 +153,7 @@ Ahora, vamos a definir los campos que usamos para almacenar información sobre e
 Ahora vamos a definir los campos que usaremos para el controlador de vista, tanto las implementaciones táctiles como las de mouse.
 
 -   **m\_lookInUse** indica si el control de vista está en uso.
--   **m\_lookPointerID** es el indicador único para el puntero de vista actual. Lo usamos para diferenciar entre el puntero de vista y el puntero de movimiento cuando comprobamos el valor del id. de puntero.
+-   **m\_lookPointerID** es el identificador único del puntero de vista actual. Lo usamos para diferenciar entre el puntero de vista y el puntero de movimiento cuando comprobamos el valor del id. de puntero.
 -   **m\_lookLastPoint** es el último punto, en coordenadas de escena, que se capturó en el fotograma anterior.
 -   **m\_lookLastDelta** es la diferencia calculada entre los valores actuales **m\_position** y **m\_lookLastPoint**.
 
@@ -583,6 +584,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

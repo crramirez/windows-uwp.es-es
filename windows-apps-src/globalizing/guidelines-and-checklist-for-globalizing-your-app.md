@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 Description: Sigue estos procedimientos recomendados cuando globalices las aplicaciones para un público más amplio o cuando localices las aplicaciones para un mercado específico.
 Search.Refinement.TopicID: 180
 title: Directrices para globalización y localización
@@ -10,12 +11,12 @@ template: detail.hbs
 # Directrices para globalización y localización: qué hacer y qué no hacer
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **API importantes**
 
--   [**Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813)
+-   [**Globalización**](https://msdn.microsoft.com/library/windows/apps/br206813)
 -   [**Globalization.NumberFormatting**](https://msdn.microsoft.com/library/windows/apps/br226136)
 -   [**Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)
 -   [**Resources**](https://msdn.microsoft.com/library/windows/apps/br206022)
@@ -73,7 +74,7 @@ Prepara la aplicación para que se adapte fácilmente a los diversos mercados el
 </tr>
 <tr class="even">
 <td align="left"><p>No uses coloquialismos ni metáforas.</p></td>
-<td align="left"><p>El lenguaje que es específico de un grupo demográfico, como una referencia cultural o una edad, puede ser difícil de entender o traducir porque solamente lo usan las personas de ese grupo demográfico. Del mismo modo, las metáforas pueden tener sentido para una persona, pero no significar nada para otra. Por ejemplo &quot;rizo&quot; tiene un significado concreto para quienes pertenecen al ámbito de la aviación, pero aquellos que no pertenecen a este ámbito no comprenden la referencia. Si planeas localizar tu aplicación y usas un tono de voz informal, asegúrate de explicar correctamente a los localizadores el significado y el tono en el que debe traducirse.</p></td>
+<td align="left"><p>El lenguaje que es específico de un grupo demográfico, como una referencia cultural o una edad, puede ser difícil de entender o traducir porque solamente lo usan las personas de ese grupo demográfico. Del mismo modo, las metáforas pueden tener sentido para una persona, pero no significar nada para otra. Por ejemplo &quot;rizo&quot; significa algo para quienes pertenecen al ámbito de la aviación, pero aquellos que no pertenecen a este ámbito no comprenden la referencia. Si planeas localizar tu aplicación y usas un tono de voz informal, asegúrate de explicar correctamente a los localizadores el significado y el tono en el que debe traducirse.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>No uses una jerga técnica, abreviaturas ni acrónimos.</p></td>
@@ -85,7 +86,7 @@ Prepara la aplicación para que se adapte fácilmente a los diversos mercados el
 </tr>
 <tr class="odd">
 <td align="left"><p>Evita agresiones políticas en mapas o cuando hagas referencia a regiones.</p></td>
-<td align="left"><p>Los mapas pueden incluir fronteras nacionales e internacionales controvertidas, lo que frecuentemente es un origen de ofensa política. Ten cuidado y asegúrate de que cualquier interfaz de usuario que se use para seleccionar una nación haga referencia a ella como &quot;país o región&quot;. Si colocas un territorio en disputa en una lista llamada &quot;Países&quot;, como en un formulario de direcciones, puede generarte problemas.</p></td>
+<td align="left"><p>Los mapas pueden incluir fronteras nacionales e internacionales controvertidas, lo que frecuentemente es un origen de ofensa política. Ten cuidado de hacer que cualquier UI usada para seleccionar una nación haga referencia a ella como &quot;país o región&quot;. Si colocas un territorio en disputa en una lista llamada &quot;Países&quot;, como en un formulario de direcciones, puede generarte problemas.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>No uses la comparación de cadenas por sí sola para comparar etiquetas de idioma.</p></td>
@@ -166,7 +167,7 @@ Prepara la aplicación para que se adapte fácilmente a los diversos mercados el
 </tr>
 <tr class="even">
 <td align="left"><p>No vuelvas a usar cadenas en contextos diferentes.</p></td>
-<td align="left"><p>No reutilices cadenas en contextos diferentes, porque hasta las palabras más simples, como &quot;on&quot; y &quot;off&quot; pueden traducirse de manera diferente según el contexto.</p></td>
+<td align="left"><p>No vuelvas a usar cadenas en contextos diferentes, porque hasta las palabras más simples, como &quot;on&quot; y &quot;off&quot; pueden traducirse de manera diferente según el contexto.</p></td>
 </tr>
 </tbody>
 </table>
@@ -187,6 +188,6 @@ Prepara la aplicación para que se adapte fácilmente a los diversos mercados el
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

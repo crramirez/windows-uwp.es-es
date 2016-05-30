@@ -1,10 +1,11 @@
 ---
-title: Iniciar la aplicación Personas
-description: Este tema describe el esquema de URI ms-people. La aplicación puede usar este esquema de URI para iniciar la aplicación Personas para acciones específicas.
+author: mcleblanc
+title: Iniciar la aplicación Contactos
+description: En este tema se describe el esquema de URI ms-people. La aplicación puede usar este esquema de URI para iniciar la aplicación Contactos para acciones específicas.
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
 ---
 
-# Iniciar la aplicación Personas
+# Iniciar la aplicación Contactos
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -38,8 +39,8 @@ En este tema se describe el esquema de URI **ms-people:**. La aplicación puede 
 <tr class="odd">
 <td align="left">Permite que otras aplicaciones proporcionen una cadena de búsqueda que iniciará la aplicación Personas con la página de resultados de la búsqueda.
 <div class="alert">
-**Nota**
-          <p>Los parámetros distinguen mayúsculas de minúsculas.</p>
+**Nota**  
+<p>Los parámetros distinguen mayúsculas de minúsculas.</p>
 <p>Si no especificas la sintaxis correctamente o falta el valor de cadena de búsqueda, el comportamiento predeterminado es devolver una lista completa de los contactos sin ningún filtro.</p>
 </div>
 <div>
@@ -50,8 +51,8 @@ En este tema se describe el esquema de URI **ms-people:**. La aplicación puede 
 <tr class="even">
 <td align="left">Se inicia en una tarjeta de contacto existente, si se encuentra el contacto. O bien, se inicia en una tarjeta de contacto temporal, si no se encuentra ningún contacto. Si no se proporciona ningún parámetro de entrada, se iniciará la aplicación Personas con una lista de contactos.
 <div class="alert">
-**Nota**
-          <p>Los parámetros distinguen mayúsculas de minúsculas.</p>
+**Nota**  
+<p>Los parámetros distinguen mayúsculas de minúsculas.</p>
 <p>No importa el orden de los parámetros.</p>
 <p>Si hay más de una coincidencia, se devolverá la primera coincidencia del contacto.</p>
 </div>
@@ -61,10 +62,10 @@ En este tema se describe el esquema de URI **ms-people:**. La aplicación puede 
 <td align="left">ms-people:viewcontact:?ContactId=&lt;contactid&gt;&amp;AggregatedId=&lt;aggid&gt;&amp;PhoneNumber= &lt;phonenum&gt;&amp;Email=&lt;email&gt;&amp;ContactName=&lt;name&gt;&amp;Contact=&lt;contactobj&gt;</td>
 </tr>
 <tr class="odd">
-<td align="left">Se inicia en una página de guardado de contactos en la aplicación Personas para guardar el contacto determinado con la dirección de correo electrónico o el número de teléfono proporcionados.
+<td align="left">Se inicia en una página de guardado de contactos en la aplicación Contactos para guardar el contacto determinado con la dirección de correo electrónico o el número de teléfono proporcionados.
 <div class="alert">
-**Nota**
-          <p>Los parámetros distinguen mayúsculas de minúsculas.</p>
+**Nota**  
+<p>Los parámetros distinguen mayúsculas de minúsculas.</p>
 <p>No importa el orden de los parámetros.</p>
 </div>
 <div>
@@ -206,6 +207,6 @@ En este tema se describe el esquema de URI **ms-people:**. La aplicación puede 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

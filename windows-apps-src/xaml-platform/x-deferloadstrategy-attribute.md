@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 title: Atributo xDeferLoadStrategy
 description: El atributo xDeferLoadStrategy retrasa la creación de un elemento y sus elementos secundarios, lo que disminuye el tiempo de inicio aunque incrementa ligeramente el uso de memoria. Cada elemento afectado agrega alrededor de 600 bytes de uso de memoria.
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
@@ -54,7 +55,7 @@ Como regla general, se recomienda evaluar la aplicación antes y después para a
 
 ## Ejemplo
 
-```xaml
+```xml
 <Grid x:Name="DeferredGrid" x:DeferLoadStrategy="Lazy">
     <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />
@@ -82,6 +83,6 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

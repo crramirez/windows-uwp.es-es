@@ -1,5 +1,6 @@
 ---
-Description: El informe Mediación de anuncios te permite ver la velocidad de relleno efectiva y las velocidades de relleno respectivas para las redes de anuncios que estás usando.
+author: jnHs
+Description: El informe de mediación de anuncios te permite ver la velocidad de relleno efectiva y las velocidades de relleno respectivas para las redes de anuncios que estás usando.
 title: Informe de mediación de anuncios
 ms.assetid: 18A33928-B9F2-4F76-9A9C-F01FEE42FEA1
 ---
@@ -7,9 +8,9 @@ ms.assetid: 18A33928-B9F2-4F76-9A9C-F01FEE42FEA1
 # Informe de mediación de anuncios
 
 
-El informe **Mediación de anuncios** te permite ver la velocidad de relleno efectiva y las velocidades de relleno respectivas para las redes de anuncios que estás usando. También muestra las velocidades de adopción de las configuraciones de mediación y proporciona visibilidad de los errores notificados por las redes de anuncios y el mediador. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
+El informe de **mediación de anuncios** te permite ver la velocidad de relleno efectiva y las velocidades de relleno respectivas para las redes de anuncios que estás usando. También muestra las velocidades de adopción de las configuraciones de mediación y proporciona visibilidad de los errores notificados por las redes de anuncios y el mediador. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
 
-**Importante**  El informe**Mediación de anuncios** solo proporciona datos si usas [Mediación de anuncios de Windows en la aplicación](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359) en tu aplicación.
+**Importante**  El informe de **mediación de anuncios** solo proporciona datos si usas la [mediación de anuncios de Windows](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359) en la aplicación.
 
  
 
@@ -62,6 +63,6 @@ El gráfico **Errores por tipo** muestra los errores específicos que experiment
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

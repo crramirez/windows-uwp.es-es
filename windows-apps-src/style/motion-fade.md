@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Usa animaciones de atenuación para hacer aparecer o desaparecer elementos en la vista. Las dos animaciones de atenuación comunes son el fundido de entrada y de salida.
 title: Animaciones de atenuación en aplicaciones para UWP
 ms.assetid: 975E5EE3-EFBE-4159-8D10-3C94143DD07F
@@ -7,9 +8,6 @@ template: detail.hbs
 ---
 
 # Animaciones de atenuación
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Usa animaciones de atenuación para hacer aparecer o desaparecer elementos en la vista. Las dos animaciones de atenuación comunes son el fundido de entrada y de salida.
 
@@ -45,6 +43,6 @@ Usa animaciones de atenuación para hacer aparecer o desaparecer elementos en la
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

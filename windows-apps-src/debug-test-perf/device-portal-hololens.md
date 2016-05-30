@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Device Portal para HoloLens
 description: Obtén información sobre cómo Windows Device Portal para HoloLens te permite configurar y administrar de forma remota tu dispositivo HoloLens.
@@ -36,7 +37,7 @@ description: Obtén información sobre cómo Windows Device Portal para HoloLens
 
 1. Instala las herramientas para asegurarte de que tienes Visual Studio Update 1 con las Herramientas de desarrollo de Windows 10 instaladas en el equipo. Esto permite la conectividad USB.
 2. Conecta HoloLens en el equipo con un cable micro-USB.
-3. Desde un explorador web de tu equipo, ve a `http://127.0.0.1:10080`.
+3. Desde un explorador web de tu equipo, ve a`http://127.0.0.1:10080`.
 
 ### Conectarse a un emulador 
 
@@ -79,9 +80,9 @@ Cada HoloLens genera un certificado autofirmado único para su conexión de SSL.
 La sesión de Device Portal se inicia en la página principal. Accede a otras páginas desde la barra de navegación en el lado izquierdo de la página principal.
 
 La barra de herramientas de la parte superior de la página proporciona acceso al estado usado frecuentemente y a las características.
-- **En línea**: indica si el dispositivo está conectado a la Wi-Fi.
+- **En línea**: indica si el dispositivo está conectado a Wi-Fi.
 - **Apagar**: apaga el dispositivo.
-- **Reiniciar**: vuelve a iniciar el dispositivo
+- **Reiniciar**: vuelve a iniciar el dispositivo.
 - **Seguridad**: abre la página Seguridad del dispositivo.
 - **Frío**: indica la temperatura del dispositivo.
 - **CA**: indica si el dispositivo está enchufado y cargándose.
@@ -93,13 +94,13 @@ En la página principal se muestra la siguiente información:
 - La sección **Preferencias** contiene las siguientes configuraciones:
     - **IPD**: establece la distancia interpupilar (IPD), que es la distancia, en milímetros, entre el centro de las pupilas del usuario cuando mira al frente. La configuración surte efecto inmediatamente. El valor predeterminado se calculó automáticamente al configurar el dispositivo.
     - **Nombre del dispositivo**: asigna un nombre a HoloLens. Debes reiniciar el dispositivo después de cambiar este valor para que surta efecto. Después de hacer clic en Guardar, en un cuadro de diálogo se te preguntará si quieres reiniciar el dispositivo inmediatamente o más tarde.
-    - **Configuración de suspensión**: establece el período de tiempo de espera antes de que el dispositivo entré en el modo de suspensión cuando está conectado y cuando funciona con batería.
+    - **Configuración de suspensión**: establece el período de tiempo de espera antes de que el dispositivo entre en el modo de suspensión cuando está conectado y cuando funciona con batería.
 
 ### Vista 3D 
 
 Usa la página Vista 3D para ver cómo HoloLens interpreta el entorno. Navega por la vista con el mouse:
-- **Girar**: haz clic con el botón izquierdo + mouse;
-- **Panorámica**: haz clic con el botón derecho + mouse;
+- **Girar**: haz clic con el botón primario + mouse;
+- **Panorámica**: haz clic con el botón secundario + mouse;
 - **Zoom**: desplazamiento del mouse.
 - **Opciones de seguimiento**: activa el seguimiento visual continuo al activar la opción Force visual tracking. Pausa detiene el seguimiento visual.
 - **Ver opciones**: establece las opciones de la vista 3D: -Seguimiento: indica si el seguimiento visual está activo.
@@ -165,6 +166,6 @@ Envía la entrada de teclado desde la máquina remota a HoloLens.
 Haz clic o pulsa en la región de debajo del teclado virtual para habilitar el envío de pulsaciones de teclas a HoloLens. Escribe texto de entrada en el cuadro de texto y haz clic o pulsa en Enviar para enviar las pulsaciones de teclas a la aplicación activa.
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

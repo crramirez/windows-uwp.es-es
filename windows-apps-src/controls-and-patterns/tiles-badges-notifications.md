@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios.
 title: Iconos, distintivos y notificaciones
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
-label: Iconos, distintivos y notificaciones
+label: Tiles, badges, and notifications
 template: detail.hbs
 ---
 
 # Iconos, distintivos y notificaciones para las aplicaciones para UWP
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios.
 
@@ -43,23 +44,23 @@ Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Create tiles](tiles-and-notifications-creating-tiles.md)</p></td>
+<td align="left"><p>[Crear iconos](tiles-and-notifications-creating-tiles.md)</p></td>
 <td align="left"><p>Personaliza el icono predeterminado de la aplicación y proporciona activos para diferentes tamaños de pantalla.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Create adaptive tiles](tiles-and-notifications-create-adaptive-tiles.md)</p></td>
+<td align="left"><p>[Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md)</p></td>
 <td align="left"><p>Las plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP).</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Adaptive tiles schema](tiles-and-notifications-adaptive-tiles-schema.md)</p></td>
+<td align="left"><p>[Esquema de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md)</p></td>
 <td align="left"><p>Estos son los elementos y atributos que usas para crear iconos adaptables.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Special tile templates](tiles-and-notifications-special-tile-templates-catalog.md)</p></td>
+<td align="left"><p>[Plantillas de iconos especiales](tiles-and-notifications-special-tile-templates-catalog.md)</p></td>
 <td align="left"><p>Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[App icon assets](tiles-and-notifications-app-assets.md)</p></td>
+<td align="left"><p>[Activos de icono de la aplicación](tiles-and-notifications-app-assets.md)</p></td>
 <td align="left"><p>Los activos de icono de la aplicación, que aparecen en una amplia variedad de formas en todo el sistema operativo Windows 10, son las tarjetas de llamada de la aplicación para la Plataforma universal de Windows (UWP). Estas directrices detallan el lugar donde aparecen los recursos de icono de la aplicación en el sistema y proporcionan sugerencias de diseño detalladas sobre cómo crear los iconos más sofisticados.</p></td>
 </tr>
 </tbody>
@@ -81,35 +82,35 @@ Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Adaptive and interactive toast notifications](tiles-and-notifications-adaptive-interactive-toasts.md)</p></td>
+<td align="left"><p>[Notificaciones del sistema interactivas y adaptables](tiles-and-notifications-adaptive-interactive-toasts.md)</p></td>
 <td align="left"><p>Las notificaciones del sistema adaptables e interactivas permiten crear notificaciones emergentes flexibles con más contenido, imágenes en línea opcionales e interacción del usuario opcional.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Notifications Visualizer](tiles-and-notifications-notifications-visualizer.md)</p></td>
-<td align="left"><p>Notifications Visualizer es una nueva aplicación de la Plataforma universal de Windows (UWP) en [the Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables para Windows 10.</p></td>
+<td align="left"><p>Notifications Visualizer es una nueva aplicación para la Plataforma universal de Windows (UWP) en [la Tienda](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables para Windows 10.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Choose a notification delivery method](tiles-and-notifications-choosing-a-notification-delivery-method.md)</p></td>
+<td align="left"><p>[Elegir un método de entrega de notificaciones](tiles-and-notifications-choosing-a-notification-delivery-method.md)</p></td>
 <td align="left"><p>En este artículo se abordan las cuatro opciones de notificación (local, programada, periódica y de inserción) que proporcionan actualizaciones de iconos y distintivos, así como contenido de notificaciones del sistema.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Send a local tile notification](tiles-and-notifications-sending-a-local-tile-notification.md)</p></td>
+<td align="left"><p>[Enviar una notificación de icono local](tiles-and-notifications-sending-a-local-tile-notification.md)</p></td>
 <td align="left"><p>En este artículo se describe cómo enviar una notificación de icono local a un icono principal y un icono secundario con el uso de plantillas de iconos adaptables.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Periodic notification overview](tiles-and-notifications-periodic-notification-overview.md)</p></td>
-<td align="left"><p>Las notificaciones periódicas, también denominadas notificaciones sondeadas, actualizan los iconos y los distintivos a intervalos fijos mediante la descarga de contenido directamente desde un servicio de nube.</p></td>
+<td align="left"><p>[Introducción a las notificaciones periódicas](tiles-and-notifications-periodic-notification-overview.md)</p></td>
+<td align="left"><p>Las notificaciones periódicas, también denominadas notificaciones de sondeo, actualizan los iconos y los distintivos a intervalos fijos mediante la descarga de contenido desde un servicio de nube.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Windows Push Notification Services (WNS) overview](tiles-and-notifications-windows-push-notification-services--wns--overview.md)</p></td>
+<td align="left"><p>[Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md)</p></td>
 <td align="left"><p>Con los Servicios de notificaciones de inserción de Windows (WNS), los desarrolladores de terceros pueden enviar actualizaciones de notificaciones del sistema, de icono, de distintivo y sin procesar desde su propio servicio de nube. Esto proporciona un mecanismo para enviar nuevas actualizaciones a los usuarios de una manera segura y de bajo consumo.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Code generated by the push notification wizard](tiles-and-notifications-the-code-generated-by-the-push-notification-wizard.md)</p></td>
-<td align="left"><p>Usar un asistente en Visual Studio te permite generar notificaciones de inserción desde un servicio móvil creado con los Servicios móviles de Azure. El Asistente de Visual Studio genera código para ayudarte a empezar. En este tema se explica cómo el asistente modifica el proyecto, qué hace el código generado, cómo se usa este código y qué puedes hacer después para sacarle todo el partido a las notificaciones de inserción. Consulta [Windows Push Notification Services (WNS) overview](tiles-and-notifications-windows-push-notification-services--wns--overview.md).</p></td>
+<td align="left"><p>[Código generado por el Asistente para notificaciones de inserción](tiles-and-notifications-the-code-generated-by-the-push-notification-wizard.md)</p></td>
+<td align="left"><p>Usar un asistente en Visual Studio te permite generar notificaciones de inserción desde un servicio móvil creado con los Servicios móviles de Azure. El Asistente de Visual Studio genera código para ayudarte a empezar. En este tema se explica cómo el asistente modifica el proyecto, qué hace el código generado, cómo se usa este código y qué puedes hacer después para sacarle todo el partido a las notificaciones de inserción. Consulta [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Raw notification overview](tiles-and-notifications-raw-notification-overview.md)</p></td>
+<td align="left"><p>[Introducción a las notificaciones sin procesar](tiles-and-notifications-raw-notification-overview.md)</p></td>
 <td align="left"><p>Las notificaciones sin procesar son breves notificaciones de inserción de carácter general. Guardan un propósito estrictamente instructivo y no incluyen ningún componente de interfaz de usuario. Al igual que sucede con el resto de los tipos de notificaciones de inserción, la característica WNS entrega notificaciones sin procesar desde el servicio de nube a tu aplicación.</p></td>
 </tr>
 </tbody>
@@ -126,6 +127,6 @@ Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

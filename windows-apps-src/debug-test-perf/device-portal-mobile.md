@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Device Portal para dispositivos móviles
 description: Obtén información sobre cómo Windows Device Portal te permite configurar y administrar el dispositivo móvil de forma remota.
@@ -31,7 +32,7 @@ Puedes elegir entre tres formas de conectarte a Device Portal: USB, host local y
 
     Usa esta dirección cuando el teléfono esté conectado a un equipo a través de una conexión USB. Ambos dispositivos deben tener Windows 10, versión 1511 o posterior.
     
-    - Host local:`http://127.0.0.1`
+    - Host local: `http://127.0.0.1`
 
     Usa esta dirección para ver Device Portal localmente en el teléfono, mediante Microsoft Edge para Windows 10 Mobile.
     
@@ -71,6 +72,6 @@ Device Portal en dispositivos móviles proporciona el conjunto estándar de pág
 - Redes
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

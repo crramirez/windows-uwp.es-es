@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Aquí describimos el concepto de programación de eventos en una aplicación de Windows Runtime cuando se usa C#, Visual Basic o extensiones de componentes de Visual C++ (C++/CX), como lenguaje de programación y XAML, para la definición de la interfaz de usuario.
 title: Introducción a eventos y eventos enrutados
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
@@ -20,23 +21,24 @@ En general, los conceptos de eventos para programar una aplicación de Windows R
 
 Cuando usas C#, Visual Basic o C++/CX como lenguaje de programación, la interfaz de usuario se define en el marcado (XAML). En la sintaxis del marcado XAML, algunos de los principios para conectar eventos entre los elementos de marcado y las entidades de código en tiempo de ejecución, son similares a otras tecnologías web como ASP.NET o HTML5.
 
-**Nota** El código que proporciona la lógica en tiempo de ejecución de una interfaz de usuario definida por XAML se suele denominar *código subyacente* o archivo de código subyacente. En las vistas de la solución de Microsoft Visual Studio, esta relación se muestra gráficamente, con el archivo de código subyacente como archivo dependiente y anidado frente a la página XAML a la que hace referencia.
+**Nota**  El código que proporciona la lógica en tiempo de ejecución de una interfaz de usuario definida por XAML se suele denominar *código subyacente* o archivo de código subyacente. En las vistas de la solución de Microsoft Visual Studio, esta relación se muestra gráficamente, con el archivo de código subyacente como archivo dependiente y anidado frente a la página XAML a la que hace referencia.
 
 ## Button.Click: introducción a los eventos y a XAML
 
-Una de las tareas de programación más comunes de una aplicación de Windows en tiempo de ejecución es capturar la entrada del usuario en la interfaz de usuario. Por ejemplo, la interfaz de usuario podría tener un botón en el que el usuario deba hacer clic para enviar información o cambiar el estado.
+Una de las tareas de programación más comunes de una aplicación de Windows Runtime es capturar la entrada del usuario en la interfaz de usuario. Por ejemplo, la interfaz de usuario podría tener un botón en el que el usuario deba hacer clic para enviar información o cambiar el estado.
 
 La interfaz de usuario de la aplicación de Windows Runtime se define al generar el código XAML. Este XAML suele ser el resultado de una superficie de diseño en Visual Studio. Asimismo, el código XAML también se puede escribir en un editor de texto sin formato o en un editor XAML de terceros. Mientras generas ese código XAML, puedes conectar controladores de eventos para elementos individuales de la interfaz de usuario y, al mismo tiempo, definir todos los demás atributos XAML que establecen los valores de propiedad de ese elemento de la interfaz de usuario.
 
 Para conectar eventos en XAML, tienes que especificar el nombre en cadena del método del controlador que ya has definido o que vas a definir más tarde en el código subyacente. Por ejemplo, este XAML define un objeto [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) con otras propiedades ([x:Name attribute](x-name-attribute.md), [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366)) asignadas como atributos, y conecta un controlador para el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) del botón, mediante una referencia al método `showUpdatesButton_Click`:
 
-```XAML
+```XML
 <Button x:Name="showUpdatesButton"
   Content="{Binding ShowUpdatesText}"
   Click="showUpdatesButton_Click"/>
 ```
 
-**Sugerencia** La *conexión de eventos* es un término de programación. Hace referencia al proceso o al código que se usa para indicar que las instancias de un evento deben invocar a un método de controlador con nombre. En la mayoría de modelos de código de procedimiento, la conexión de eventos es el código "AddHandler", implícito o explícito, que da nombre tanto al evento como al método y que normalmente implica una instancia de objeto de destino. En XAML, el código "AddHandler" está implícito y la conexión de eventos consiste en su totalidad en utilizar el nombre de atributo de un elemento de objeto como nombre del evento y el valor de ese atributo como nombre del controlador.
+**Sugerencia**
+            La *conexión de eventos* es un término de programación. Hace referencia al proceso o al código que se usa para indicar que las instancias de un evento deben invocar a un método de controlador con nombre. En la mayoría de modelos de código de procedimiento, la conexión de eventos es el código "AddHandler", implícito o explícito, que da nombre tanto al evento como al método y que normalmente implica una instancia de objeto de destino. En XAML, el código "AddHandler" está implícito y la conexión de eventos consiste en su totalidad en utilizar el nombre de atributo de un elemento de objeto como nombre del evento y el valor de ese atributo como nombre del controlador.
 
 Escribe el controlador real en el lenguaje de programación que estés usando para todo el código de la aplicación y el código subyacente. Con el atributo `Click="showUpdatesButton_Click"`, creaste un contrato por el cual cuando se compila y se analiza el código XAML para marcado, tanto el proceso de compilación del marcado XAML de la acción de compilación del IDE como el proceso de análisis del XAML final cuando se carga la aplicación, pueden encontrar un método `showUpdatesButton_Click` dentro del código de la aplicación. `showUpdatesButton_Click` debe ser un método que implemente una firma de método compatible (basada en un delegado) para cualquier controlador del evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737). Por ejemplo, este código define el controlador `showUpdatesButton_Click`.
 
@@ -62,25 +64,25 @@ void MyNamespace::BlankPage::showUpdatesButton_Click(Platform::Object^ sender, W
 
 En este ejemplo, el método `showUpdatesButton_Click` se basa en el delegado [**RoutedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br208812). Sabrás que este es el delegado que hay que usar, porque verás su nombre en la sintaxis del método [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) en la página de referencia de MSDN.
 
-**Sugerencia** Visual Studio ofrece una manera cómoda de asignar un nombre al controlador de eventos y definir el método del controlador mientras editas código XAML. Cuando proporciones el nombre de atributo del evento en el editor de texto XAML, espera un momento hasta que se muestre una lista de Microsoft IntelliSense. Si haces clic en **&lt;Nuevo controlador de eventos&gt;** en la lista, Microsoft Visual Studio sugerirá un nombre de método basado en **x:Name** (o nombre de tipo) del elemento, el nombre del evento y un sufijo numérico. Es entonces cuando puedes hacer clic en el nombre del controlador de eventos seleccionado y hacer clic en **Navegar al controlador de eventos**. De esta manera, irás directamente a la definición del controlador de eventos recién insertada, tal como se ve en la vista del editor de código del archivo de código subyacente de la página XAML. El controlador de eventos ya tiene la firma correcta, incluido el parámetro *sender* y la clase de datos de evento que el evento usa. Además, si ya existe un método de controlador con la firma correcta en el código subyacente, aparecerá ese nombre de método en la lista desplegable con autocompletar, junto con la opción **&lt;Nuevo controlador de eventos&gt;**. Asimismo, también puedes presionar la tecla Tab como método abreviado, en lugar de hacer clic en los elementos de la lista de IntelliSense.
+**Sugerencia**  Visual Studio ofrece una manera cómoda de asignar un nombre al controlador de eventos y definir el método del controlador mientras editas código XAML. Cuando proporciones el nombre de atributo del evento en el editor de texto XAML, espera un momento hasta que se muestre una lista de Microsoft IntelliSense. Si haces clic en **&lt;Nuevo controlador de eventos&gt;** en la lista, Microsoft Visual Studio sugerirá un nombre de método basado en el **x:Name** (o nombre de tipo) del elemento, el nombre del evento y un sufijo numérico. Es entonces cuando puedes hacer clic en el nombre del controlador de eventos seleccionado y hacer clic en **Navegar al controlador de eventos**. De esta manera, irás directamente a la definición del controlador de eventos recién insertada, tal como se ve en la vista del editor de código del archivo de código subyacente de la página XAML. El controlador de eventos ya tiene la firma correcta, incluido el parámetro *sender* y la clase de datos de evento que el evento usa. Además, si ya existe un método de controlador con la firma correcta en tu código subyacente, aparecerá ese nombre de método en la lista desplegable con autocompletar, junto con la opción **&lt;Nuevo controlador de eventos&gt;**. Asimismo, también puedes presionar la tecla Tab como método abreviado, en lugar de hacer clic en los elementos de la lista de IntelliSense.
 
 ## Definición de un controlador de evento
 
 En el caso de los objetos que son elementos de la interfaz de usuario y están declarados en XAML, el código de controlador de evento se define en la clase parcial que funciona como código subyacente de una página XAML. Los controladores de eventos son métodos que escribes como parte de la clase parcial que está asociada a tu código XAML. Estos controladores de eventos se basan en los delegados que un evento determinado usa. Los métodos de tu controlador de eventos pueden ser públicos o privados. El acceso privado funciona porque el controlador y la instancia que creó el código XAML se unen finalmente con la generación del código. La recomendación general es hacer que los métodos del controlador de eventos sean privados en la clase.
 
-**Nota** Los controladores de eventos de C++ no se definen en clases parciales; se declaran en el encabezado como miembro de clase privada. Las acciones de compilación de un proyecto C++ se encargan de generar el código que admita el sistema de tipo XAML y el modelo de código subyacente para C++.
+**Nota**  Los controladores de eventos de C++ no se definen en clases parciales; se declaran en el encabezado como miembro de clase privada. Las acciones de compilación de un proyecto C++ se encargan de generar el código que admita el sistema de tipo XAML y el modelo de código subyacente para C++.
 
 ### Parámetro *sender* y datos del evento
 
 El controlador que escribas para el evento podrá obtener acceso a los dos valores que están disponibles como entrada de cada caso en el que se invoca el controlador. El primero de estos valores es *sender*, que es una referencia al objeto donde se adjunta el controlador. El parámetro *sender* se escribe como el tipo base **Object**. Una técnica común es convertir *sender* a un tipo más preciso. Esta técnica resulta útil si esperas comprobar o cambiar el estado del mismo objeto *sender*. En función del diseño de la aplicación, ya sabes a qué tipo puedes convertir *sender* con seguridad, según la ubicación donde se adjuntó el controlador u otros aspectos específicos del diseño.
 
-El segundo valor son los datos del evento, los cuales generalmente aparecen en las definiciones de sintaxis como el parámetro *e*. Puedes descubrir qué propiedades de los datos del evento se encuentran disponibles, examinando el parámetro *e* del delegado que está asignado al evento específico que estás controlando y, a continuación, mediante el uso de IntelliSense o el examinador de objetos de Visual Studio. También puedes usar la documentación de referencia de Windows en tiempo de ejecución.
+El segundo valor son los datos del evento, los cuales generalmente aparecen en las definiciones de sintaxis como el parámetro *e*. Puedes descubrir qué propiedades de los datos del evento se encuentran disponibles, examinando el parámetro *e* del delegado que está asignado al evento específico que estás controlando y, a continuación, mediante el uso de IntelliSense o el examinador de objetos de Visual Studio. También puedes usar la documentación de referencia de Windows Runtime.
 
 Para algunos eventos, los valores de propiedad específicos de los datos del evento son tan importantes como saber que el evento ocurrió. Esto es especialmente cierto en los eventos de entrada. En cuanto a los eventos de puntero, podría ser importante la posición del puntero al producirse el evento. En el caso de los eventos de teclado, todas las posibles pulsaciones de tecla generan los eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) y [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Para determinar qué tecla presionó el usuario, debes obtener acceso a la clase [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072), que está disponible en el controlador de eventos. Para obtener más información sobre el control de eventos de entrada, consulta [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/mt185607) y [Controlar la entrada de puntero](https://msdn.microsoft.com/library/windows/apps/mt404610). Los eventos y escenarios de entrada suelen contar con otros elementos a tener en cuenta que no se tratan en este tema como, por ejemplo, la captura del puntero de los eventos de puntero, las teclas modificadoras y los códigos de teclas de la plataforma para los eventos de teclado.
 
 ### Controladores de eventos que usan el patrón **async**
 
-En ocasiones, querrás usar las API que usan un patrón **async** en un controlador de eventos. Por ejemplo, podrías usar una clase [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) en una clase [**AppBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) para mostrar un selector de archivos e interactuar con él. Pero recuerda que muchas de las API del selector de archivos son asincrónicas. Por ello, es necesario llamarlas en un ámbito que admita **async**/await; además, el compilador aplicará esta acción. Así pues, lo que puedes hacer es agregar la palabra clave **async** al controlador de eventos, de modo que este pase a ser **async** **void**. Gracias a ello, el controlador de eventos podrá realizar llamadas a las que se puede aplicar **async**/await.
+En ocasiones, querrás usar las API que usan un patrón **async** en un controlador de eventos. Por ejemplo, podrías usar una clase [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) en una clase [**AppBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) para mostrar un selector de archivos e interactuar con él. Pero recuerda que muchas de las API del selector de archivos son asincrónicas. Por ello, es necesario llamarlas en un ámbito que admita **async**/await; además, el compilador aplicará esta acción. Así pues, lo que puedes hacer es agregar la palabra clave **async** al controlador de eventos, de modo que este pase a ser **async****void**. Gracias a ello, el controlador de eventos podrá realizar llamadas a las que se puede aplicar **async**/await.
 
 Para obtener un ejemplo de controladores de eventos que requieren la interacción del usuario mediante el patrón **async**, consulta el tema [Acceso a los archivos y selectores de archivos](https://msdn.microsoft.com/library/windows/apps/jj655411) (que forma parte de la serie [Crear la primera aplicación de Windows Runtime con C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)). Te recomendamos que también leas [Llamar a API asincrónicas en C).
 
@@ -92,7 +94,7 @@ En C#, la sintaxis es usar el operador `+=`. El controlador se registra haciendo
 
 Si usas un código para agregar controladores de eventos a los objetos que aparecen en la interfaz de usuario en tiempo de ejecución, se recomienda agregar esos controladores en respuesta a una devolución de llamada o evento de duración del objeto, como [**Loaded**](https://msdn.microsoft.com/library/windows/apps/br208723) o [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737), de manera que los controladores de eventos del objeto correspondiente estén listos para los eventos que inicie el usuario en tiempo de ejecución. En este ejemplo se muestra un esquema XAML de la estructura de página y se proporciona la sintaxis del lenguaje C# para agregar un controlador de eventos a un objeto.
 
-```xaml
+```xml
 <Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded">
   <StackPanel>
     <TextBlock Name="textBlock1">Put the pointer over this text</TextBlock>
@@ -109,7 +111,7 @@ void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
 }
 ```
 
-**Nota** Existe una sintaxis más detallada. En 2005, C# incorporó una característica llamada inferencia de delegado, que permite a un compilador inferir una nueva instancia de delegado y, además, habilita la sintaxis anterior que es más simple. La sintaxis detallada es funcionalmente idéntica al ejemplo anterior, pero crea explícitamente una nueva instancia de delegado antes de registrarla y, por lo tanto, no aprovecha la inferencia de delegado. Esta sintaxis explícita es menos común, pero podrías verla en algunos ejemplos de código.
+**Nota**  Existe una sintaxis más detallada. En 2005, C# incorporó una característica llamada inferencia de delegado, que permite a un compilador inferir una nueva instancia de delegado y, además, habilita la sintaxis anterior que es más simple. La sintaxis detallada es funcionalmente idéntica al ejemplo anterior, pero crea explícitamente una nueva instancia de delegado antes de registrarla y, por lo tanto, no aprovecha la inferencia de delegado. Esta sintaxis explícita es menos común, pero podrías verla en algunos ejemplos de código.
 
 ```csharp
 void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
@@ -129,22 +131,22 @@ Private Sub textBlock1_PointerEntered(ByVal sender As Object, ByVal e As Pointer
 End Sub
 ```
 
-**Nota** Visual Studio y su superficie de diseño XAML generalmente promueven la técnica de control de instancias en lugar de la palabra clave **Handles**. Esto se debe a que establecer la conexión del controlador de eventos en XAML forma parte del flujo de trabajo del desarrollador y diseñador, y la técnica de la palabra clave **Handles** es incompatible con la conexión de los controladores de eventos en XAML.
+**Nota**  Visual Studio y su superficie de diseño XAML generalmente promueven la técnica de control de instancias en lugar de la palabra clave **Handles**. Esto se debe a que establecer la conexión del controlador de eventos en XAML forma parte del flujo de trabajo del desarrollador y diseñador, y la técnica de la palabra clave **Handles** es incompatible con la conexión de los controladores de eventos en XAML.
 
 En C++, también se usa la sintaxis **+=**, pero ten en cuenta las siguientes diferencias respecto al formato C# básico:
 
 -   No existe inferencia de delegado, por lo que debes usar **ref new** en la instancia de delegado.
 -   El constructor delegado tiene dos parámetros y debe tener el objeto de destino como primer parámetro. Como norma general, especificas **this**.
--   El constructor delegado requiere la dirección del método como segundo parámetro, para que el operador que anula la referencia **&** preceda al nombre del método.
+-   El constructor delegado requiere la dirección del método como segundo parámetro para que el operador de referencia de **&** preceda al nombre del método.
 
 ```cpp
 textBlock1->PointerEntered += 
-ref new PointerEventHandler(this,&amp;BlankPage::textBlock1_PointerExited);
+ref new PointerEventHandler(this,&BlankPage::textBlock1_PointerExited);
 ```
 
 ### Quitar controladores de eventos del código
 
-Normalmente, no es necesario quitar controladores de eventos del código aunque se hayan agregado a él. El comportamiento de la duración del objeto en la mayoría de los objetos de Windows Runtime, como páginas y controles, destruirá los objetos cuando se desconecten de la clase [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) principal y su árbol visual; igualmente, también se destruirán las referencias delegadas. Para ello, .NET usa la recolección de elementos no utilizados y Windows en tiempo de ejecución con C++/CX usa referencias débiles de manera predeterminada.
+Normalmente, no es necesario quitar controladores de eventos del código aunque se hayan agregado a él. El comportamiento de la duración del objeto en la mayoría de los objetos de Windows Runtime, como páginas y controles, destruirá los objetos cuando se desconecten de la clase [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) principal y su árbol visual; igualmente, también se destruirán las referencias delegadas. Para ello, .NET usa la recolección de elementos no utilizados y Windows Runtime con C++/CX usa referencias débiles de manera predeterminada.
 
 En ocasiones excepcionales, querrás quitar los controladores de eventos de forma explícita. Estas son:
 
@@ -154,7 +156,9 @@ En ocasiones excepcionales, querrás quitar los controladores de eventos de form
 -   Eventos estáticos personalizados.
 -   Controladores para las navegaciones de la página.
 
-[**FrameworkElement.Unloaded**](https://msdn.microsoft.com/library/windows/apps/br208748) o [**Page.NavigatedFrom**](https://msdn.microsoft.com/library/windows/apps/br227507) son los posibles desencadenadores de eventos que tienen las posiciones adecuadas en la administración del estado y la duración del objeto, de tal forma que puedes usarlos para quitar controladores de otros eventos.
+[
+              **FrameworkElement.Unloaded**
+            ](https://msdn.microsoft.com/library/windows/apps/br208748) o [**Page.NavigatedFrom**](https://msdn.microsoft.com/library/windows/apps/br227507) son los posibles desencadenadores de eventos que tienen las posiciones adecuadas en la administración del estado y la duración del objeto, de tal forma que puedes usarlos para quitar controladores de otros eventos.
 
 Por ejemplo, puedes quitar un controlador de eventos denominado **textBlock1\_PointerEntered** del objeto de destino **textBlock1** mediante este código.
 
@@ -212,7 +216,7 @@ Cuando un evento propaga una ruta de evento, el objeto *sender* ya no es el mism
 
 En algunos casos, *sender* ya no será el objeto que te interesa, sino que querrás obtener otro tipo de información como, por ejemplo, sobre cuál de los posibles objetos secundarios se encontraba el puntero al desencadenarse un evento de puntero o qué objeto de una interfaz de usuario más amplia tenía el foco cuando un usuario presionó una tecla. En estos casos, puedes usar el valor de la propiedad [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810). En todos los puntos de la ruta, **OriginalSource** notifica el objeto original que generó el evento y no el objeto al que se adjuntó el controlador. Sin embargo, para los eventos de entrada [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911), ese objeto original suele ser uno que no es inmediatamente visible en el XAML de definición de la interfaz de usuario de la página. En cambio, podría ser una parte con plantilla de un control. Por ejemplo, si el usuario mantiene el puntero sobre el borde de una clase [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265), para la mayoría de los eventos de puntero la propiedad **OriginalSource** forma parte de la plantilla [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) de la propiedad [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465), no de la misma clase **Button**.
 
-**Sugerencia** La propagación de eventos de entrada es especialmente útil al crear un control basado en modelo. En todos los controles que tienen una plantilla, su consumidor puede aplicar una nueva plantilla. Un consumidor que intenta recrear una plantilla de trabajo podría eliminar por accidente cierto código de control de eventos declarado en la plantilla predeterminada. Aún puedes proporcionar código de control de eventos en el nivel del control, adjuntando controladores como parte de la invalidación [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737) en la definición de la clase. A continuación, puedes capturar los eventos de entrada que se propagan en la raíz del control durante la creación de instancias.
+**Sugerencia**  La propagación de eventos de entrada es especialmente útil al crear un control basado en modelo. En todos los controles que tienen una plantilla, su consumidor puede aplicar una nueva plantilla. Un consumidor que intenta recrear una plantilla de trabajo podría eliminar por accidente cierto código de control de eventos declarado en la plantilla predeterminada. Aún puedes proporcionar código de control de eventos en el nivel del control, adjuntando controladores como parte de la invalidación [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737) en la definición de la clase. A continuación, puedes capturar los eventos de entrada que se propagan en la raíz del control durante la creación de instancias.
 
 ### Propiedad **Handled**
 
@@ -243,14 +247,17 @@ La determinación de si un elemento es visible para la entrada táctil, la entra
 -   El valor de la propiedad [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) del elemento es [**Visible**](https://msdn.microsoft.com/library/windows/apps/br209006).
 -   El valor de la propiedad **Background** o **Fill** del elemento no es **null**. Un valor **null** de la clase [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) provoca transparencia e invisibilidad en la prueba de posicionamiento. (Para que un elemento sea transparente pero se pueda someter a la prueba de posicionamiento, usa un pincel cuya propiedad sea [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061) en lugar de **null**).
 
-**Nota** La clase [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) no define las propiedades **Background** y **Fill**; estas las definen diferentes clases derivadas como [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) y [**Shape**](https://msdn.microsoft.com/library/windows/apps/br243377). Sin embargo, las implicaciones de los pinceles que uses en las propiedades de primer plano y segundo plano, son las mismas tanto para la prueba de posicionamiento como para los eventos de entrada, independientemente de qué subclase implemente las propiedades.
+**Nota**
+            La clase [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) no define las propiedades **Background** y **Fill**; estas las definen diferentes clases derivadas como [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) y [**Shape**](https://msdn.microsoft.com/library/windows/apps/br243377). Sin embargo, las implicaciones de los pinceles que uses en las propiedades de primer plano y segundo plano, son las mismas tanto para la prueba de posicionamiento como para los eventos de entrada, independientemente de qué subclase implemente las propiedades.
 
 -   Si el elemento es un control, el valor de la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) debe ser **true**.
 -   El elemento debe tener dimensiones reales en el diseño. Un elemento cuyas propiedades [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) y [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) tengan un valor 0, no generarán eventos de entrada.
 
 Algunos controles tienen reglas especiales para la prueba de posicionamiento. Por ejemplo, [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) no tiene ninguna propiedad **Background**, pero se puede someter a la prueba de posicionamiento en toda la región de sus dimensiones. [
-							Los controles **Image**](https://msdn.microsoft.com/library/windows/apps/br242752) y [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) se pueden someter a la prueba de posicionamiento según las dimensiones definidas de su rectángulo e independientemente del contenido transparente, como el canal alfa del archivo de origen multimedia que se esté mostrando. [
-							Los controles **WebView**](https://msdn.microsoft.com/library/windows/apps/br227702) tienen un comportamiento especial en la prueba de posicionamiento, porque el HTML hospedado puede controlar la entrada y generar eventos de script.
+              **Image**
+            ](https://msdn.microsoft.com/library/windows/apps/br242752) y [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) se pueden someter a la prueba de posicionamiento según las dimensiones definidas de su rectángulo e independientemente del contenido transparente, como el canal alfa del archivo de origen multimedia que se esté mostrando. Los controles            [
+              **WebView**
+            ](https://msdn.microsoft.com/library/windows/apps/br227702) tienen un comportamiento especial en la prueba de posicionamiento, porque el HTML hospedado puede controlar la entrada y generar eventos de script.
 
 La mayoría de las clases [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) y [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) no se pueden someter a la prueba de posicionamiento en su propio segundo plano, aunque pueden controlar los eventos de entrada de usuario que se enrutan desde los elementos que contienen.
 
@@ -267,12 +274,12 @@ A la hora de definir eventos personalizados, el modo en que se agrega el evento 
 -   En C# y Visual Basic, defines un evento CLR. Puedes usar el patrón de eventos .NET estándar, siempre y cuando no uses descriptores de acceso personalizado (**add**/**remove**). Sugerencias adicionales:
     -   Es buena idea usar [**System.EventHandler<TEventArgs>**](https://msdn.microsoft.com/library/windows/apps/xaml/db0etb8x.aspx) para el controlador de eventos, porque incorpora la conversión al delegado de eventos genéricos [**EventHandler<T>**](https://msdn.microsoft.com/library/windows/apps/br206577) de Windows Runtime.
     -   No bases la clase de datos de evento en [**System.EventArgs**](https://msdn.microsoft.com/library/windows/apps/xaml/system.eventargs.aspx), porque no se convierte en un elemento compatible con Windows Runtime. Usa una clase de datos de evento existente o no uses ninguna clase base.
-    -   Si estás usando descriptores de acceso personalizados, consulta el tema sobre [descriptores de acceso de eventos y eventos personalizados en componentes de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/xaml/hh972883.aspx).
+    -   Si estás usando descriptores de acceso personalizados, consulta el tema sobre [descriptores de acceso de eventos y eventos personalizados en componentes de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/hh972883.aspx).
     -   Si no conoces bien el patrón de eventos de .NET estándar, consulta el tema sobre la [definición de eventos para clases de Silverlight personalizadas](http://msdn.microsoft.com/library/dd833067.aspx). Aunque se trata de documentación para Microsoft Silverlight, ofrece un buen resumen del código y de los conceptos relativos al patrón de eventos de .NET estándar.
 -   Para C++/CX, consulta [Eventos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh755799.aspx).
     -   Usa referencias con nombre incluso en tus propios usos de eventos personalizados. No utilices lambda para eventos personalizados, ya que puede crear una referencia circular.
 
-No puedes declarar un evento enrutado personalizado para Windows en tiempo de ejecución; los eventos enrutados se limitan al conjunto procedente de Windows en tiempo de ejecución.
+No puedes declarar un evento enrutado personalizado para Windows Runtime; los eventos enrutados se limitan al conjunto procedente de Windows Runtime.
 
 La definición de un evento personalizado suele realizarse como parte del ejercicio de definir un control personalizado. Un patrón común consiste en tener una propiedad de dependencia con una devolución de llamada modificada por propiedades y definir un evento personalizado generado por la devolución de llamada modificada por propiedades en algunos casos o siempre. Los usuarios del control no tienen acceso a la devolución de llamada modificada por propiedades que hayas definido, pero sí disponen de un evento de notificación. Para obtener más información, consulta [Propiedades de dependencia personalizadas](custom-dependency-properties.md).
 
@@ -288,6 +295,6 @@ La definición de un evento personalizado suele realizarse como parte del ejerci
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

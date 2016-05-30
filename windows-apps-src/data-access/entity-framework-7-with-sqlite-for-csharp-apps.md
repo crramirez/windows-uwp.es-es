@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: BC7E8130-A28A-443C-8D7E-353E7DA33AE3
 description: Entity Framework (EF) es un asignador relacional de objetos que te permite trabajar con datos relacionales mediante objetos específicos del dominio.
 title: Entity Framework 7 con SQLite para aplicaciones de C#
@@ -23,6 +24,6 @@ Actualmente, EF solo admite SQLite en la UWP. En la página [Getting Started on 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

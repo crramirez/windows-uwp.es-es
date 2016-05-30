@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: El informe Comentarios del panel del Centro de desarrollo de Windows te permite ver los problemas, las sugerencias y los votos a favor que los clientes de Windows 10 han enviado a través del Centro de opiniones.
 title: Informe de comentarios
 ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
@@ -7,6 +8,8 @@ ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
 # Informe de comentarios
 
 Animar a los clientes a que te envíen comentarios sobre la aplicación es una excelente manera de obtener información sobre los problemas y las características que son más importantes para ellos. Cuando los clientes saben que pueden enviar comentarios directamente, es menos probable que dejen comentarios con una revisión negativa. 
+
+> **Nota** El informe Comentarios que se describe en este artículo no está disponible todavía para todas las cuentas de desarrollador.
 
 Puedes usar la API de comentarios en el [SDK de Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk) para permitir que los clientes [inicien directamente el Centro de opiniones de tu aplicación](../monetize/launch-feedback-hub-from-your-app.md). Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella mediante la aplicación Centro de opiniones. Por este motivo, es posible que veas comentarios de los clientes en este informe, aunque no hayas solicitado específicamente que te envíen comentarios desde dentro de tu aplicación.
 
@@ -49,6 +52,6 @@ Ten en cuenta que los comentarios los traduce un sistema de traducción automát
 Como se mencionó anteriormente, te recomendamos que incorpores un vínculo al Centro de opiniones directamente en tu aplicación para animar a los clientes a que envíen comentarios. Para obtener más información, consulta [Launch Feedback Hub from your app (Iniciar el Centro de opiniones desde la aplicación)](../monetize/launch-feedback-hub-from-your-app.md).
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Si se producen errores mientras cargas paquetes de la aplicación durante el proceso de envío de la aplicación, debes resolverlos antes de enviar la aplicación a la Tienda.
 title: Resolver errores de carga de paquetes
 ms.assetid: 0D01E43C-F3A7-4FA2-B479-1B5579FF531A
@@ -23,7 +24,7 @@ Para obtener información sobre cómo resolver los errores relacionados con núm
 
 Además, ten en cuenta que si tu envío tiene más de un XAP de Windows Phone 8.1, todos deben tener el mismo número de versión.
 
-**Nota**  Para ver más preguntas relacionadas con otros mensajes de error y obtener ayuda para resolverlos, visita nuestros [foros](http://go.microsoft.com/fwlink/p/?LinkId=224196).
+**Nota** Para ver más preguntas relacionadas con otros mensajes de error y obtener ayuda para resolverlos, visita nuestros [foros](http://go.microsoft.com/fwlink/p/?LinkId=224196).
 
  
 
@@ -36,6 +37,6 @@ Además, ten en cuenta que si tu envío tiene más de un XAP de Windows Phone 8.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

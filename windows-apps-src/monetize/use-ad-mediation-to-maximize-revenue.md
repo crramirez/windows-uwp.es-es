@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 772DEBF2-1578-4330-9C14-70BCC6F55005
 description: Microsoft proporciona compatibilidad con la mediación de anuncios, lo que permite optimizar los ingresos generados por la publicidad desde la aplicación al arbitrar solicitudes de anuncios de banner de varias redes de anuncios.
 title: Usar la mediación de anuncios para maximizar los ingresos
@@ -49,6 +50,6 @@ Si no deseas usar la mediación de anuncios o si el tipo de proyecto no es compa
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

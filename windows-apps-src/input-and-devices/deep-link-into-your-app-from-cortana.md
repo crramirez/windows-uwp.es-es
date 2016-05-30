@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Proporciona vínculos profundos desde el servicio de la aplicación en segundo plano en Cortana para iniciar la aplicación en primer plano en un contexto o un estado determinado.
 title: Vínculo profundo desde Cortana para una aplicación en segundo plano
 ms.assetid: BE811A87-8821-476A-90E4-2E20D37E4043
@@ -7,9 +8,6 @@ template: detail.hbs
 ---
 
 # Vínculo profundo desde Cortana para una aplicación en segundo plano
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -32,7 +30,7 @@ Este tema se basa en [Interactuar con una aplicación en segundo plano en Cortan
 
 Si acabas de empezar a desarrollar aplicaciones de la Plataforma universal de Windows (UWP), consulta estos temas para familiarizarte con las tecnologías presentadas aquí.
 
--   [Crea tu primera aplicación](https://msdn.microsoft.com/library/windows/apps/bg124288)
+-   [Crear tu primera aplicación](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   Encontrarás más información acerca de los eventos, en [Introducción a eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
 **Directrices sobre la experiencia del usuario:  **
@@ -58,10 +56,10 @@ Hay tres formas de ofrecer vínculos profundos:
 -   Un vínculo incrustado en un icono de contenido en diversas pantallas de **Cortana**.
 -   Inicio mediante programación de la aplicación en primer plano desde el servicio de la aplicación en segundo plano.
 
-## <span id="Go_to__app__deep_link"></span><span id="go_to__app__deep_link"></span><span id="GO_TO__APP__DEEP_LINK"></span>Vínculo profundo a "Ir a &lt;aplicación&gt;"
+## <span id="Go_to__app__deep_link"></span><span id="go_to__app__deep_link"></span><span id="GO_TO__APP__DEEP_LINK"></span>Vínculo profundo "Ir a &lt;aplicación&gt;"
 
 
-**Cortana** muestra el vínculo profundo "Ir a &lt;aplicación&gt;" debajo de la tarjeta de contenido en la mayoría de las pantallas.
+**Cortana** muestra el vínculo profundo "Ir a &lt;aplicación&gt;" bajo de la tarjeta de contenido en la mayoría de las pantallas.
 
 ![pantalla de finalización de la aplicación en segundo plano de Cortana](images/cortana-completion-screen.png)
 
@@ -69,9 +67,9 @@ Puedes proporcionar un argumento de inicio para este vínculo que abra tu aplica
 
 En este ejemplo de AdventureWorksVoiceCommandService.cs de la muestra **AdventureWorks**, pasamos el destino especificado en el método SendCompletionMessageForDestination, que recupera todos los viajes coincidentes y proporciona un vínculo profundo a la aplicación.
 
-Primero, creamos un [ **VoiceCommandUserMessage** ](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandusermessage.aspx) (```userMessage```) que es dicho por **Cortana** y que se muestran en lienzo de **Cortana**. Luego se crea un objeto lista [**VoiceCommandContentTile**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandcontenttile.aspx) para mostrar la colección de tarjetas de resultado en el lienzo. 
+Primero, creamos un [ **VoiceCommandUserMessage** ](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandusermessage.aspx) (```userMessage```) que es dicho por **Cortana** y que se muestran en lienzo de **Cortana**. Luego se crea un objeto lista [**VoiceCommandContentTile**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandcontenttile.aspx) para mostrar la colección de tarjetas de resultado en el lienzo. 
 
-Estos dos objetos luego se pasan al método [CreateResponse](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandresponse.createresponse.aspx) del objeto [ **VoiceCommandResponse** ](https://msdn.microsoft.com/library/windows/apps/dn974182)(```response```). A continuación, establecemos el valor de propiedad [ **AppLaunchArgument** ](https://msdn.microsoft.com/library/windows/apps/dn974183) al valor de destino en el comando de voz.
+Estos dos objetos luego se pasan al método [CreateResponse](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandresponse.createresponse.aspx) del objeto [ **VoiceCommandResponse** ](https://msdn.microsoft.com/library/windows/apps/dn974182)(```response```). A continuación, establecemos el valor de propiedad [ **AppLaunchArgument** ](https://msdn.microsoft.com/library/windows/apps/dn974183) al valor de destino en el comando de voz.
 
 Por último, llamamos al método [ **ReportSuccessAsync** ](https://msdn.microsoft.com/library/windows/apps/dn706580) de la [ **VoiceCommandServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn974204).
 
@@ -104,7 +102,7 @@ private async Task SendCompletionMessageForDestination(string destination)
 ## <span id="Content_tile_deep_link"></span><span id="content_tile_deep_link"></span><span id="CONTENT_TILE_DEEP_LINK"></span>Vínculo profundo de icono de contenido
 
 
-Puedes añadir vínculos profundos a las tarjetas de contenido en varias de las pantallas de **Cortana**.
+Puedes agregar vínculos profundos a las tarjetas de contenido en varias de las pantallas de **Cortana**.
 
 ![pantalla de entrega de la aplicación en segundo plano de Cortana ](images/cortana-backgroundapp-progress-result.png)
 
@@ -112,9 +110,9 @@ Al igual que los vínculos "Ir a &lt;aplicación&gt;", puedes proporcionar un ar
 
 En este ejemplo de AdventureWorksVoiceCommandService.cs de la muestra **AdventureWorks**, pasamos el destino especificado en el método SendCompletionMessageForDestination, que recupera todos los viajes coincidentes y proporciona tarjetas de contenido con vínculos profundos a la aplicación.
 
-Primero, creamos un [ **VoiceCommandUserMessage** ](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandusermessage.aspx) (```userMessage```) que es dicho por **Cortana** y que se muestran en lienzo de **Cortana**. Luego se crea un objeto lista [**VoiceCommandContentTile**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandcontenttile.aspx) para mostrar la colección de tarjetas de resultado en el lienzo. 
+Primero, creamos un [ **VoiceCommandUserMessage** ](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandusermessage.aspx) (```userMessage```) que es dicho por **Cortana** y que se muestran en lienzo de **Cortana**. Luego se crea un objeto lista [**VoiceCommandContentTile**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandcontenttile.aspx) para mostrar la colección de tarjetas de resultado en el lienzo. 
 
-Estos dos objetos luego se pasan al método [CreateResponse](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandresponse.createresponse.aspx) del objeto [ **VoiceCommandResponse** ](https://msdn.microsoft.com/library/windows/apps/dn974182)(```response```). A continuación, establecemos el valor de propiedad [ **AppLaunchArgument** ](https://msdn.microsoft.com/library/windows/apps/dn974183) al valor de destino en el comando de voz.
+Estos dos objetos luego se pasan al método [CreateResponse](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandresponse.createresponse.aspx) del objeto [ **VoiceCommandResponse** ](https://msdn.microsoft.com/library/windows/apps/dn974182)(```response```). A continuación, establecemos el valor de propiedad [ **AppLaunchArgument** ](https://msdn.microsoft.com/library/windows/apps/dn974183) al valor de destino en el comando de voz.
 
 Por último, llamamos al método [ **ReportSuccessAsync** ](https://msdn.microsoft.com/library/windows/apps/dn706580) de la [ **VoiceCommandServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn974204).
 Aquí, agregamos dos iconos de contenido con diferentes valores de parámetro [**AppLaunchArgument**](https://msdn.microsoft.com/library/windows/apps/dn974183) para una lista [**VoiceCommandContentTile**](https://msdn.microsoft.com/library/windows/apps/dn974168) usada en la llamada [**ReportSuccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn706580) del objeto [**VoiceCommandServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn974204).
@@ -290,6 +288,6 @@ if (args.Kind == ActivationKind.Protocol)
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

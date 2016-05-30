@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 Description: 'En este tema del centro se describe un panorama completo de desarrollador sobre cómo Protección de datos de empresa (EDP) se relaciona con los archivos, los búferes, el Portapapeles, las redes, las tareas en segundo plano y la protección de datos con la pantalla bloqueada.'
 MS-HAID: 'dev\_enterprise.edp\_hub'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -8,7 +9,7 @@ title: 'Protección de datos de empresa (EDP)'
 
 # Protección de datos de empresa (EDP)
 
-__Nota__ La directiva de Protección de datos de empresa (EDP) no se puede aplicar en la versión 1511 de Windows 10 (compilación 10586) o una versión anterior.
+__Nota__ La directiva de Protección de datos de empresa (EDP) no se puede aplicar en la versión 1511 de Windows 10 (compilación 10586) o en una versión anterior.
 
 En este tema del centro se describe un panorama completo de desarrollador sobre cómo Protección de datos de empresa (EDP) se relaciona con los archivos, los búferes, el Portapapeles, las redes, las tareas en segundo plano y la protección de datos con la pantalla bloqueada.
 
@@ -173,7 +174,11 @@ private void SwitchMailbox(Mailbox targetMailbox)
 
 En este escenario, tomaremos el ejemplo de una aplicación de correo habilitada diseñada para administrar el correo personal y empresarial. Cuando la aplicación se ejecuta en una organización que ha optado por administrar una directiva de "protección de datos con la pantalla bloqueada" (DPL) segura, la aplicación debe asegurarse de que quita todos los datos confidenciales de la memoria mientras el dispositivo está bloqueado. Para ello, se registra en los eventos [**ProtectionPolicyManager.ProtectedAccessSuspending**](https://msdn.microsoft.com/library/windows/apps/dn705787) y [**ProtectionPolicyManager.ProtectedAccessResumed**](https://msdn.microsoft.com/library/windows/apps/dn705786) para recibir una notificación siempre que el dispositivo se bloquee o desbloquee (en caso de que la DPL esté activada).
 
-[**ProtectedAccessSuspending**](https://msdn.microsoft.com/library/windows/apps/dn705787) se genera antes de que se quiten temporalmente las claves de protección de datos aprovisionadas en el dispositivo. Estas claves se quitan cuando el dispositivo se bloquea con el fin de garantizar que no puede haber ningún acceso no autorizado a los datos cifrados mientras el dispositivo está bloqueado y posiblemente no lo posee su propietario. [**ProtectedAccessResumed**](https://msdn.microsoft.com/library/windows/apps/dn705786) se genera una vez las claves vuelven a estar disponibles en el momento del desbloqueo del dispositivo.
+[
+              **ProtectedAccessSuspending**
+            ](https://msdn.microsoft.com/library/windows/apps/dn705787) se genera antes de que se quiten temporalmente las claves de protección de datos aprovisionadas en el dispositivo. Estas claves se quitan cuando el dispositivo se bloquea con el fin de garantizar que no puede haber ningún acceso no autorizado a los datos cifrados mientras el dispositivo está bloqueado y posiblemente no lo posee su propietario. [
+              **ProtectedAccessResumed**
+            ](https://msdn.microsoft.com/library/windows/apps/dn705786) se genera una vez que las claves vuelven a estar disponibles en el momento del desbloqueo del dispositivo.
 
 Al administrar estos dos eventos, la aplicación puede garantizar que protege cualquier contenido confidencial en la memoria con [**DataProtectionManager**](https://msdn.microsoft.com/library/windows/apps/dn706017). También debe cerrar cualquier flujo de archivo abierto en sus archivos protegidos para garantizar que el sistema no almacene en caché ningún dato confidencial de la memoria. Puedes hacerlo de maneras distintas. Para cerrar un flujo de archivos devuelto desde un método Open de **StorageFile**, puedes llamar al método **Dispose** en el flujo. Puedes definir el ámbito del uso del flujo con una instrucción using (C\# o VB). O bien, puedes encapsular un objeto **DataReader** o **DataWriter** alrededor del flujo y usar el método **Dispose** o usar una instrucción con ese objeto.
 
@@ -207,7 +212,7 @@ private DisplayedMail currentlyDisplayedMail = new DisplayedMail()
 // Gets the app's protected mail database file, then opens and stores a stream on it.
 private async void OpenMailDatabase()
 {
-    // Only attempt to open the database file stream if we know it&#39;s closed.
+    // Only attempt to open the database file stream if we know it's closed.
     if (this.mailDatabaseStream == null)
     {
         StorageFolder appDataStorageFolder = ApplicationData.Current.LocalFolder;
@@ -233,7 +238,7 @@ private void AppSetup()
 // Background work called when the app receives an email.
 private async void AppMailReceived(string fauxEmail)
 {
-    // Only attempt to write to the database file stream if we know it&#39;s open.
+    // Only attempt to write to the database file stream if we know it's open.
     if (this.mailDatabaseStream != null)
     {
         IBuffer emailAsBuffer = CryptographicBuffer.ConvertStringToBinary
@@ -339,7 +344,7 @@ private string mailIdentity = "contoso.com";
 void MailAppSetup()
 {
     ProtectionPolicyManager.ProtectedContentRevoked += ProtectionPolicyManager_ProtectedContentRevoked;
-    // Code goes here to set up mailbox for &#39;mailIdentity&#39;.
+    // Code goes here to set up mailbox for 'mailIdentity'.
 }
 
 private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, ProtectedContentRevokedEventArgs e)
@@ -351,7 +356,7 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
         return;
     }
 
-    // Code goes here to delete any metadata associated with &#39;mailIdentity&#39;.
+    // Code goes here to delete any metadata associated with 'mailIdentity'.
 }
 ```
 
@@ -372,6 +377,6 @@ Windows.Security.EnterpriseData.ProtectionPolicyManager.RevokeContent("contoso.c
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

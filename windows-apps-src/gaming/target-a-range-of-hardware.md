@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Compatibilidad con mapas de sombras en una variedad de hardware
 description: Representa sombras de alta fidelidad en dispositivos más rápidos, y sombras más rápidas en dispositivos menos eficaces.
 ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
@@ -114,7 +115,7 @@ Las aplicaciones para la Plataforma universal de Windows (UWP) pueden usar compi
 
 La entrada del archivo del proyecto para la versión de filtro lineal del sombreador se define LINEAR:
 
-```
+```xml
 <FxCompile Include="Content\ShadowPixelShader.hlsl">
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
@@ -143,7 +144,7 @@ La entrada del archivo del proyecto para la versión de filtro lineal del sombre
 
 La entrada del archivo del proyecto para la versión de filtro lineal del sombreador no incluye definiciones de preprocesador:
 
-```
+```xml
 <FxCompile Include="Content\ShadowPixelShader.hlsl">
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
@@ -173,6 +174,6 @@ La entrada del archivo del proyecto para la versión de filtro lineal del sombre
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

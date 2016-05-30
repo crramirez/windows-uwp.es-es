@@ -1,11 +1,11 @@
 ---
+author: Jwmsft
 Description: El reproductor multimedia se usa para ver y escuchar vídeo, audio e imágenes.
 title: Reproductor multimedia
 ms.assetid: 9AABB5DE-1D81-4791-AB47-7F058F64C491
 dev.assetid: AF2F2008-9B53-430C-BBC3-8888F631B0B0
 label: Media player
 template: detail.hbs
-author: mijacobs
 ---
 # Reproductor multimedia
 
@@ -264,7 +264,9 @@ private void MediaElement_CurrentStateChanged(object sender, RoutedEventArgs e)
     ```
 
 ### Controlar el reproductor multimedia mediante programación
-[**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) proporciona varias propiedades, métodos y eventos para controlar la reproducción de audio y vídeo. Para obtener una lista completa de las propiedades, los métodos y los eventos, consulta la página de referencia de [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926).
+[
+              **MediaElement**
+            ](https://msdn.microsoft.com/library/windows/apps/br242926) proporciona varias propiedades, métodos y eventos para controlar la reproducción de audio y vídeo. Para obtener una lista completa de las propiedades, los métodos y los eventos, consulta la página de referencia de [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926).
     
 
 ### Seleccionar pistas de audio en diferentes idiomas
@@ -333,13 +335,20 @@ private void FullWindow_Click(object sender, object e)
 
 Usa la propiedad [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) para cambiar la forma en que el contenido de vídeo rellena el contenedor en el que se encuentra. Esto amplía el vídeo y cambia su tamaño según el valor de [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968). Los estados de **Stretch** son similares a la configuración de tamaño de imagen en muchos televisores. Puedes enlazarlo con un botón y dejar que el usuario elija qué configuración prefiere.
 
--   [**None**](https://msdn.microsoft.com/library/windows/apps/br242968) muestra la resolución nativa del contenido en su tamaño original.
--   [**Uniform**](https://msdn.microsoft.com/library/windows/apps/br242968) rellena la mayor cantidad de espacio posible, a la vez que conserva la relación de aspecto y el contenido de la imagen. Esto puede hacer que aparezcan barras negras horizontales o verticales en los bordes del vídeo. Esto es similar a los modos de pantalla panorámica.
--   [**UniformToFill**](https://msdn.microsoft.com/library/windows/apps/br242968) rellena todo el espacio, pero conserva la relación de aspecto. Esto puede hacer que se recorte parte de la imagen. Esto es similar a los modos de pantalla completa.
--   [**Fill**](https://msdn.microsoft.com/library/windows/apps/br242968) rellena todo el espacio, pero no conserva la relación de aspecto. La imagen no se recorta, pero se podría estirar. Esto es similar a los modos con ajuste.
+-   [
+              **None**
+            ](https://msdn.microsoft.com/library/windows/apps/br242968) muestra la resolución nativa del contenido en su tamaño original.
+-   [
+              **Uniform**
+            ](https://msdn.microsoft.com/library/windows/apps/br242968) rellena la mayor cantidad de espacio posible, a la vez que conserva la relación de aspecto y el contenido de la imagen. Esto puede hacer que aparezcan barras negras horizontales o verticales en los bordes del vídeo. Esto es similar a los modos de pantalla panorámica.
+-   [
+              **UniformToFill**
+            ](https://msdn.microsoft.com/library/windows/apps/br242968) rellena todo el espacio, pero conserva la relación de aspecto. Esto puede hacer que se recorte parte de la imagen. Esto es similar a los modos de pantalla completa.
+-   [
+              **Fill**
+            ](https://msdn.microsoft.com/library/windows/apps/br242968) rellena todo el espacio, pero no conserva la relación de aspecto. La imagen no se recorta, pero se podría estirar. Esto es similar a los modos con ajuste.
 
-![Ampliar los valores de enumeración](images/Image_Stretch.jpg)
-Aquí, un [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244) se usa para recorrer las opciones [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968). Una instrucción **switch** comprueba el estado actual de la propiedad [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) y la establece en el siguiente valor en la enumeración **Stretch**. Esto permite que el usuario recorra los distintos estados de imagen ampliada.
+![Ampliar los valores de enumeración](images/Image_Stretch.jpg) Aquí, un [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244) se usa para recorrer las opciones [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968). Una instrucción **switch** comprueba el estado actual de la propiedad [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) y la establece en el siguiente valor en la enumeración **Stretch**. Esto permite que el usuario recorra los distintos estados de imagen ampliada.
 
 ```xaml
 <AppBarButton Icon="Switch" 
@@ -400,14 +409,12 @@ Agrega las opciones personalizadas que necesites al reproductor multimedia para 
 -   No intentes sobrecargar la barra de control con demasiadas opciones.
 -   No reduzcas la escala de tiempo multimedia por debajo de su tamaño mínimo predeterminado, lo cual limita gravemente su efectividad.
 
-\[Este artículo contiene información específica de las aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
-
 ## Artículos relacionados
 
 - [Conceptos básicos de diseño de los comandos para las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn958433)
 - [Conceptos básicos del diseño de contenido para las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn958434)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

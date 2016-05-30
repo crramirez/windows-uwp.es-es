@@ -1,5 +1,6 @@
 ---
-Description: Describir la aplicación en la categoría y subcategoría correctas ayuda a los clientes a encontrarla y a entender más de qué se trata.
+author: jnHs
+Description: Describir la aplicación en la categoría y subcategoría correctas ayuda a los clientes a encontrarla y a entender mejor de qué se trata.
 title: Tabla de categoría y subcategoría
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 ---
@@ -7,11 +8,11 @@ ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 # Tabla de categoría y subcategoría
 
 
-Describir la aplicación en la categoría y subcategoría correctas ayuda a los clientes a encontrarla y a entender más de qué se trata.
+Describir la aplicación en la categoría y subcategoría correctas ayuda a los clientes a encontrarla y a entender mejor de qué se trata.
 
 Elige la categoría que mejor describa la aplicación. Después elige una subcategoría, si está disponible.
 
-> **Nota**  Si eliges **Juegos** para la categoría, es necesaria una subcategoría.
+> **Nota**  Si eliges **Juegos** para la categoría, se necesita una subcategoría.
 
  
 
@@ -54,10 +55,10 @@ No todas las categorías tienen subcategorías. Ten en cuenta que solo puedes us
 | Utilidades y herramientas           | Copias de seguridad y administración <br> Administradores de archivos                |
  
 
-> **Nota**  Para obtener información sobre las categorías que se usan en la Tienda Windows para Windows 8.1 y versiones anteriores y en la Tienda de Windows Phone y sobre cuál es su relación con la lista de categorías anterior, consulta el tema [Cómo aparece tu aplicación en la Tienda para clientes con Windows 10](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
+> **Nota**  Para obtener información sobre las categorías que se usan en la Tienda Windows para Windows 8.1 y versiones anteriores y en la Tienda de Windows Phone, y sobre cuál es su relación con la lista de categorías anterior, consulta el tema [Cómo aparece una aplicación en la Tienda para los clientes de Windows 10](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

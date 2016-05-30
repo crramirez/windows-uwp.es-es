@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
 title: Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
 description: Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows 10 Mobile.
@@ -33,7 +34,7 @@ Sistema operativo
 -   64 bits
 -   Edición Pro o superior
 
-Para comprobar los requisitos de BIOS, consulta [Cómo habilitar Hyper-V para el emulador de Windows Phone 8](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj863509.aspx).
+Para comprobar los requisitos de BIOS, consulta [Cómo habilitar Hyper-V para el emulador de Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/xaml/jj863509.aspx).
 
 Para comprobar los requisitos de RAM y sistema operativo, en el Panel de control, haz clic en **Sistema y seguridad**y, a continuación, haz clic en **Sistema**.
 
@@ -63,13 +64,9 @@ Además de proporcionar soporte para la Plataforma universal de Windows (UWP), e
 -   Compatibilidad con NFC. El emulador permite simular NFC y hace que sea posible probar y desarrollar aplicaciones universales compatibles con NFC/proximidad.
 -   La aceleración de hardware nativo mejora el rendimiento de los elementos gráficos en el emulador mediante el uso de la tarjeta gráfica local. Para poder usar la aceleración, debes tener instalada una tarjeta gráfica compatible y habilitar la aceleración en la pestaña **Sensores** de la configuración **Herramientas adicionales** de la interfaz de usuario del emulador.
 
-> **Nota**  Se ha realizado un cambio de interfaz de usuario importante. En esta versión del emulador, el método abreviado de teclado para mostrar u ocultar el teclado de hardware es ahora F4, el cual actúa como un botón de alternancia, en lugar del par de teclas Retroceder página / Avanzar página usado en emuladores anteriores.
-
- 
-
 ## Funciones que se pueden probar en el emulador
 
-Además de las nuevas funciones que se mencionan en la sección anterior, puedes probar las siguientes funciones que se usan de forma común en el emulador de Microsoft para Windows 10 Mobile.
+Además de las nuevas funciones que se mencionan en la sección anterior, puedes probar las siguientes funciones que se usan de forma común en el Emulador de Microsoft para Windows 10 Mobile.
 
 -   **Resolución de pantalla, tamaño de pantalla y memoria**. Haz que tu aplicación tenga un mercado potencial amplio probándola en varias imágenes de emulador para simular diversas resoluciones de pantalla, tamaños físicos y restricciones de memoria.
 
@@ -77,7 +74,7 @@ Además de las nuevas funciones que se mencionan en la sección anterior, puedes
 
 -   **Configuración de la pantalla**. Cambia el emulador del modo vertical al modo horizontal. Cambia la configuración del zoom para ajustar el emulador a tu pantalla de escritorio.
 
--   **Funciones de red**. Windows Phone Emulator incorpora compatibilidad para funciones de red. Las funciones de red están habilitadas de forma predeterminada. No es necesario instalar controladores de red para Windows Phone Emulator ni configurar las opciones de red manualmente en la mayoría de los entornos.
+-   **Redes**. Windows Phone Emulator incorpora compatibilidad para funciones de red. Las funciones de red están habilitadas de forma predeterminada. No es necesario instalar controladores de red para Windows Phone Emulator ni configurar las opciones de red manualmente en la mayoría de los entornos.
 
     El emulador usa la conexión de red del equipo host. No aparece como dispositivo independiente en la red. Esto elimina algunos de los problemas de configuración que los usuarios se encontraban con el emulador del SDK de Windows Phone 8.0.
 
@@ -90,6 +87,8 @@ Además de las nuevas funciones que se mencionan en la sección anterior, puedes
 -   **Almacenamiento de la carpeta local (anteriormente conocido como almacenamiento aislado)**. Los datos en el almacenamiento aislado persisten mientras el emulador se ejecuta, pero se pierden cuando el emulador se cierra.
 
 -   **Micrófono**. Requiere y usa el micrófono en el equipo host.
+
+-   **Teclado del teléfono**. El emulador admite la asignación del teclado de hardware del equipo de desarrollo al teclado de un Windows Phone. El comportamiento de las teclas es el mismo que en un dispositivo Windows Phone.
 
 -   **Pantalla de bloqueo**. Con el emulador abierto, presiona dos veces F12 en el teclado del equipo. La tecla F12 emula el botón de inicio/apagado en el teléfono. Al presionar la tecla por primera vez, se apaga la pantalla. Al presionar la tecla por segunda vez, la pantalla se enciende de nuevo, con la pantalla de bloqueo activada. Desbloquea la pantalla usando el mouse para deslizar la pantalla de bloqueo hacia arriba.
 
@@ -117,6 +116,37 @@ La pantalla del emulador con la entrada del mouse habilitada.
 
 El botón de la entrada del mouse en la barra de herramientas del emulador.
 
+## Entrada de teclado
+
+El emulador admite la asignación del teclado de hardware del equipo de desarrollo al teclado de un Windows Phone. El comportamiento de las teclas es el mismo que en un dispositivo Windows Phone. 
+
+De manera predeterminada, el teclado de hardware no está habilitado. Esta implementación es equivalente a un teclado deslizante que debe implementarse para poder usarlo. Antes de habilitar el teclado de hardware, el emulador acepta entrada de teclado solo desde las teclas de control.
+
+El emulador no admite los caracteres especiales del teclado de una versión localizada de un equipo de desarrollo de Windows. Para escribir caracteres especiales que están presentes en un teclado localizado, usa el panel de entrada de software (SIP). 
+
+Para usar el teclado del equipo en el emulador, presiona F4.
+
+Para dejar de usar el teclado del equipo en el emulador, presiona F4.
+
+En la tabla siguiente se enumeran las teclas de un teclado de hardware que puedes usar para emular los botones y otros controles en un Windows Phone.
+
+Ten en cuenta que en la compilación 10.0.14332 del emulador, la asignación de teclas de hardware del equipo ha cambiado. Los valores de la segunda columna de la tabla siguiente representan estas nuevas teclas. 
+
+Teclas de hardware del equipo (compilación 10.0.14295 del emulador y versiones anteriores) | Teclas de hardware del equipo (compilación 10.0.14332 del emulador y versiones más recientes) | Botón de hardware del Windows Phone | Notas
+--------------------- | ------------------------- | ----------------------------- | -----
+F1 | WIN + ESC | ATRÁS | Las pulsaciones prolongadas funcionan según lo previsto.
+F2 | WIN + F2 | INICIO | Las pulsaciones prolongadas funcionan según lo previsto.
+F3 | WIN + F3 | BUSCAR |  
+F4 | F4 (sin cambios) | Alterna entre usar el teclado del equipo local y no usarlo. | 
+F6 | WIN + F6 | CÁMARA HASTA LA MITAD | Botón de cámara dedicado que se presiona hasta la mitad.
+F7 | WIN + F7 | CÁMARA COMPLETO | Botón de cámara dedicado.
+F9 | WIN + F9 | SUBIR VOLUMEN | 
+F10 | WIN + F10 | BAJAR VOLUMEN | 
+F12 | WIN + F12 | INICIO/APAGADO | Presiona la tecla F12 dos veces para activar la pantalla de bloqueo. Las pulsaciones prolongadas funcionan según lo previsto.
+ESC | WIN + ESC | ATRÁS | Las pulsaciones prolongadas funcionan según lo previsto.
+ 
+
+
 ## Near Field Communications (NFC)
 
 Crea y prueba aplicaciones que usen funciones compatibles con Near Field Communication (NFC) en Windows 10 Mobile mediante la pestaña **NFC** del menú **Herramientas adicionales** del emulador. NFC es útil para diversas situaciones, desde los escenarios de proximidad (por ejemplo, tocar para compartir) hasta la emulación de tarjetas (por ejemplo, tocar para pagar).
@@ -135,7 +165,7 @@ En todos los modos, la ventana del emulador tiene tres áreas de interés.
 -   En la sección superior derecha se enumeran los registros. Al tocar un par de dispositivos entre sí (o al tocar el terminal POS) se registra el evento de toque y cuando los dispositivos dejan de tocarse, dicho evento queda registrado. En esta sección también se registra si la aplicación respondió antes de que la conexión se interrumpiese o cualquier otra acción que hayas realizado en la interfaz de usuario del emulador mediante marcas de tiempo. Los registros son persistentes entre los cambios de modo y puedes borrar los registros en cualquier momento presionando el botón **Borrar** situado encima de la pantalla **Registros**.
 -   La parte inferior de la pantalla es el registro de mensajes y muestra la transcripción de todos los mensajes enviados o recibidos a través de la conexión seleccionada actualmente, según el modo seleccionado.
 
-> **Importante**  Cuando se inicie por primera vez la herramienta tapper, se mostrará un aviso del Firewall de Windows. DEBES seleccionar las 3 casillas y permitir que la herramienta atraviese el firewall o que deje de funcionar de forma silenciosa.
+> **Importante** Cuando inicies por primera vez la herramienta tapper, se mostrará un aviso del Firewall de Windows. DEBES seleccionar las 3 casillas y permitir que la herramienta atraviese el firewall o que deje de funcionar de forma silenciosa.
 
 Después de iniciar el instalador de inicio rápido, asegúrate de seguir las instrucciones anteriores para seleccionar las 3 casillas del aviso del firewall. Asimismo, la herramienta tapper debe estar instalada y usarse en el mismo equipo host físico que el emulador de Microsoft.
 
@@ -410,7 +440,7 @@ La pestaña **SD Card** usa una carpeta en el equipo de desarrollo para simular 
         -   Al hacer clic en **Cancel sync** mientras la operación de sincronización está en curso, la tarjeta se expulsa y los resultados de la operación de sincronización quedan incompletos.
     -   El botón **Eject SD card** cambia de nuevo a **Insert SD card**.
 
-> **Nota**  Dado que la tarjeta SD usada por el teléfono tiene formato de sistema de archivos FAT32, su tamaño máximo es de 32 GB.
+> **Nota** Dado que la tarjeta SD que se usa en el teléfono tiene formato de sistema de archivos FAT32, su tamaño máximo es de 32 GB.
 
 La velocidad de lectura y escritura en relación con la tarjeta SD simulada está limitada, para imitar las velocidades del mundo real. La obtención de acceso una tarjeta SD es más lenta que la obtención de acceso a la unidad de disco duro del equipo.
 
@@ -583,13 +613,13 @@ En algunos casos, incluso después de actualizar a un nuevo paquete piloto de Wi
 
 Para recuperar de esta situación, ejecuta "netcfg -d" desde un símbolo del sistema de administrador: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. Cuando finalice la ejecución del comando, reinicia tu PC para completar el proceso de recuperación.
 
-**Nota**  Este comando eliminará todos los dispositivos de red, no solo los asociados con el emulador. Cuando se vuelva a inicia tu PC, se detectarán automáticamente todos los dispositivos de red de hardware.
+**Nota** Este comando eliminará todos los dispositivos de red, no solo los asociados con el emulador. Cuando se vuelva a inicia tu PC, se detectarán automáticamente todos los dispositivos de red de hardware.
  
 ### No se pueden iniciar los emuladores
 
 El emulador de Microsoft incluye XDECleanup.exe, una herramienta que elimina todas las máquinas virtuales, discos de diferenciación y conmutadores de red específicos del emulador, y se entrega con los archivos binarios de emulador (XDE) preparados. Debes usar esta herramienta para limpiar las máquinas virtuales del emulador si entran en un estado incorrecto. Ejecuta la herramienta un símbolo del sistema con privilegios de administrador:`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
-> **Nota**  XDECleanup.exe elimina todas las máquinas virtuales Hyper-V específicas del emulador y también elimina los puntos de control o estados guardados de las máquinas virtuales.
+> **Nota** XDECleanup.exe elimina todas las máquinas virtuales Hyper-V específicas del emulador y también elimina los puntos de control o estados guardados de las máquinas virtuales.
 
 ### Desinstalar la imagen de Windows 10 Mobile
 
@@ -604,8 +634,7 @@ De forma predeterminada, el emulador de Windows 10 Mobile usa gráficos acelerad
 Para deshabilitar la aceleración de hardware:
 
 1. Inicia el Editor del registro.
-2. Crea la siguiente subclave del Registro si no existe:
-   HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
+2. Crea la siguiente subclave del Registro si no existe: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
 3. Haz clic con el botón secundario en la carpeta 10.0, apunta a **Nuevo** y luego haz clic en **Valor DWORD**.
 4. Escribe **DisableRemoteFx** y luego presiona Entrar.
 5. Haz doble clic en **DisableRemoteFx**, escribe 1 en el cuadro de datos **Valor**, selecciona la opción **Decimal** y luego haz clic en **Aceptar**.
@@ -619,12 +648,12 @@ Para encontrar respuestas y solucionar problemas al empezar a trabajar con las h
 
 ## Temas relacionados
 
-* [Ejecutar aplicaciones de Windows Phone en el emulador](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn632391.aspx)
+* [Ejecutar aplicaciones de Windows Phone en el emulador](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
 * [Archivo del SDK de Windows y Windows Phone](https://dev.windows.com/downloads/sdk-archive)
  
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,7 +1,8 @@
 ---
+author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
-description: Introducción a los controles habituales
-title: Introducción a los controles habituales
+description: Tareas iniciales con controles habituales
+title: Tareas iniciales con controles habituales
 ---
 
 # Introducción: controles habituales
@@ -18,9 +19,9 @@ Los controles de UWP son inteligentes en el sentido de que pueden detectar el ti
 |------------------------------|--------------------------------------|
 | Indicador de actividad (**UIActivityIndicatorView**) | [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) <br/> Consulta también [Inicio rápido: agregar controles de progreso](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651) |
 | Vista de banner de publicidad (**ADBannerView**) y delegado de vista de banner de publicidad (**ADBannerViewDelegate**) | Consulta [SDK de Microsoft Advertising](http://go.microsoft.com/fwlink/p/?LinkId=263494) |
-| Botón (UIButton) | [Button](https://msdn.microsoft.com/library/windows/apps/br209265) <br/> Consulta también [Inicio rápido: agregar controles de botón](https://msdn.microsoft.com/library/windows/apps/xaml/jj153346) |
+| Botón (UIButton) | [Botón](https://msdn.microsoft.com/library/windows/apps/br209265) <br/> Consulta también [Inicio rápido: agregar controles de botón](https://msdn.microsoft.com/library/windows/apps/xaml/jj153346) |
 | Selector de fecha (UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
-| Vista de imagen (UIImageView) | [Image](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> Consulta también [Image e ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) |
+| Vista de imagen (UIImageView) | [Imagen](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> Consulta también [Image e ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) |
 | Etiqueta (UILabel) | [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) <br/> Consulta también [Inicio rápido: mostrar texto](https://msdn.microsoft.com/library/windows/apps/xaml/hh700392) |
 | Vista de mapa (MKMapView) y delegado de vista de mapa (MKMapViewDelegate) | Consulta [Mapas de Bing para aplicaciones de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkId=263496) |
 | Controlador de navegación (UINavigationController) y delegado de controlador de navegación (UINavigationControllerDelegate) | [Frame](https://msdn.microsoft.com/library/windows/apps/br242682) <br/> Consulta también [Navegación](https://msdn.microsoft.com/library/windows/apps/mt187344). |
@@ -30,7 +31,7 @@ Los controles de UWP son inteligentes en el sentido de que pueden detectar el ti
 | Vista de desplazamiento (UIScrollView) y delegado de vista de desplazamiento (UIScrollViewDelegate) | [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/br209527) <br/>  Consulta también [Ejemplo de desplazamiento, movimiento panorámico y zoom con lenguaje XAML](http://go.microsoft.com/fwlink/p/?LinkId=238577) |
 | Barra de búsqueda (UISearchBar) y delegado de barra de búsqueda (UISearchBarDelegate) | Consulta [Agregar búsqueda a una aplicación](https://msdn.microsoft.com/library/windows/apps/xaml/jj130767) <br/>  Consulta también [Inicio rápido: agregar búsqueda a una aplicación](https://msdn.microsoft.com/library/windows/apps/xaml/hh868180) |
 | Control segmentado (UISegmentedControl) | Ninguno |
-| Control deslizante (UISlider) | [Slider](https://msdn.microsoft.com/library/windows/apps/br209614) <br/>  Consulta también [Cómo agregar un control deslizante](https://msdn.microsoft.com/library/windows/apps/xaml/hh868197) |
+| Control deslizante (UISlider) | [Control deslizante](https://msdn.microsoft.com/library/windows/apps/br209614) <br/>  Consulta también [Cómo agregar un control deslizante](https://msdn.microsoft.com/library/windows/apps/xaml/hh868197) |
 | Controlador de vista dividida (UISplitViewController) y delegado de controlador de vista dividida (UISplitViewControllerDelegate) | Ninguno |
 | Modificador (UISwitch) | [ToggleSwitch](https://msdn.microsoft.com/library/windows/apps/br209712) <br/>  Consulta también [Cómo agregar un modificador de alternancia](https://msdn.microsoft.com/library/windows/apps/xaml/hh868198) |
 | Controlador de barra de pestañas (UITabBarController) y delegado de controlador de barra de pestañas (UITabBarControllerDelegate) | Ninguno |
@@ -43,7 +44,7 @@ Los controles de UWP son inteligentes en el sentido de que pueden detectar el ti
 
 Para ver aún más controles, consulta [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406).
 
-**Nota:** Para ver la lista de controles para aplicaciones de la Tienda Windows con JavaScript y HTML, consulta [Lista de controles](https://msdn.microsoft.com/library/windows/apps/hh465453).
+**Nota:**  Para ver la lista de controles para aplicaciones de la Tienda Windows con JavaScript y HTML, consulta [Lista de controles](https://msdn.microsoft.com/library/windows/apps/hh465453).
 
 ### Paso siguiente
 
@@ -56,6 +57,6 @@ Para ver aún más controles, consulta [Lista de controles](https://msdn.microso
 * [Build 2014: Usar Visual Studio para crear aplicaciones XAML convergidas](http://go.microsoft.com/fwlink/p/?LinkID=397876)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

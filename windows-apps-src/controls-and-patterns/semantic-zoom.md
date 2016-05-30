@@ -1,14 +1,15 @@
 ---
+author: Jwmsft
 Description: Un control de zoom semántico permite que el usuario haga zoom entre dos vistas semánticas distintas del mismo conjunto de datos.
 title: Zoom semántico
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
-label: Zoom semántico
+label: Semantic zoom
 template: detail.hbs
 ---
 
 # Zoom semántico
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 El control de zoom semántico permite que el usuario haga zoom entre dos vistas distintas del mismo contenido para que se pueda navegar rápidamente a través de un gran conjunto de datos. La vista ampliada es la vista principal del contenido. En esta vista, muestras el conjunto de datos completo. La vista alejada es un nivel superior del mismo contenido. Por lo general, en esta vista se muestran los encabezados de grupo para un conjunto de datos agrupados. Por ejemplo, al visualizar una libreta de direcciones, el usuario puede acercar una letra y ver los nombres asociados a dicha letra. 
 
@@ -16,7 +17,7 @@ El control de zoom semántico permite que el usuario haga zoom entre dos vistas 
 
 -   [**Clase SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)
 
-**Funciones**:
+**Características**:
 
 -   El tamaño de la vista alejada está restringido por los límites del control del zoom semántico.
 -   Al pulsar en un encabezado de grupo, se alterna entre las vistas. Se puede habilitar el gesto de reducir como una forma de alternar entre las vistas.
@@ -41,7 +42,7 @@ Una libreta de direcciones es un ejemplo de un conjunto de datos por el que pued
 -   Usa los nombres de los grupos para elementos en una colección agrupada.
 -   Usa criterios de ordenación de una colección que esté sin agrupar, pero ordenada, como orden cronológico de fechas u orden alfabético de una lista de nombres.
 
-\[Este artículo contiene información específica para aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
 ## Artículos relacionados
 
@@ -64,6 +65,6 @@ Una libreta de direcciones es un ejemplo de un conjunto de datos por el que pued
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

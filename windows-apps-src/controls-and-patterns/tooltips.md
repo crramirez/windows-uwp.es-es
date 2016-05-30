@@ -1,15 +1,16 @@
 ---
-Description: Usa información sobre herramientas para ofrecer más información sobre un control antes de pedirle al usuario que realice una acción.
-title: Información de herramientas
+author: Jwmsft
+Description: Usa información sobre herramientas para ofrecer más información sobre un control antes de pedir al usuario que realice una acción.
+title: Información sobre herramientas
 ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
 label: Tooltips
 template: detail.hbs
 
 ---
 
-# Información de herramientas
+# Información sobre herramientas
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 La información sobre herramientas es una breve descripción que está vinculada con otro control u objeto. Dicha información sobre herramientas ayuda a los usuarios a comprender objetos que no les son familiares y que no están directamente descritos en la UI. Aparece de forma automática cuando el usuario mueve el foco al control, lo mantiene presionado o cuando pasa sobre él con el puntero del mouse. La información sobre herramientas desaparece tras unos segundos o cuando el usuario mueve el dedo, el puntero o el foco del teclado o del controlador para juegos.
 
@@ -69,6 +70,6 @@ Una información sobre herramientas de la aplicación Mapas de Bing.
 * [**Clase ToolTip**](https://msdn.microsoft.com/library/windows/apps/br227608)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

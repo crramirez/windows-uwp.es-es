@@ -9,17 +9,17 @@ author: awkoren
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este artículo explica cómo admitir el contrato para contenido compartido en una aplicación para la Plataforma universal de Windows (UWP). El contrato para contenido compartido es una manera sencilla de compartir rápidamente los datos, como texto, vínculos, fotos y vídeos, entre aplicaciones. Por ejemplo, es posible que un usuario quiera compartir una página web con sus amigos mediante una aplicación de red social o guardar un vínculo en una aplicación de bloc de notas para consultarlo más adelante.
+Este artículo explica cómo admitir el contrato para contenido compartido en una aplicación para la Plataforma universal de Windows (UWP). El contrato para contenido compartido es una manera sencilla de compartir rápidamente los datos, como texto, vínculos, fotos y vídeos, entre aplicaciones. Por ejemplo, es posible que un usuario quiera compartir una página web con sus amigos mediante una aplicación de red social, o guardar un vínculo en una aplicación de notas para consultarlo más adelante.
 
 ## Configurar un controlador de eventos
 
-Agrega un controlador de eventos [**DataRequested**][DataRequested] para que se llame siempre que un usuario invoque el recurso compartido. Esto puede producirse cuando el usuario presiona un control de la aplicación (por ejemplo, un botón o un comando de la barra de la aplicación) o automáticamente en un escenario específico (si el usuario finaliza un nivel y obtiene una puntuación alta, por ejemplo).
+Agrega un controlador de eventos [**DataRequested**][DataRequested] para que se llame siempre que un usuario invoque el recurso compartido. Esto puede producirse cuando el usuario pulsa un control de la aplicación (por ejemplo, un botón o un comando de la barra de la aplicación) o automáticamente en un escenario específico (si el usuario finaliza un nivel y obtiene una puntuación alta, por ejemplo).
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
 
-Cuando se produce un evento [**DataRequested**][DataRequested], tu aplicación recibe un objeto [**DataRequest**][DataRequest]. Este objeto contiene un [**DataPackage**][DataPackage] que puedes usar para proporcionar el contenido que el usuario quiere compartir. Debes proporcionar un título y datos para compartir. La descripción es opcional, pero se recomienda.
+Cuando se produce un evento [**DataRequested**][DataRequested], tu aplicación recibe un objeto [**DataRequest**][DataRequested]. Este objeto contiene un [**DataPackage**][DataPackage] que puedes usar para proporcionar el contenido que el usuario quiere compartir. Debes proporcionar un título y datos para compartir. La descripción es opcional, pero se recomienda.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
 
 ## Elige los datos
 
@@ -36,7 +36,7 @@ Puedes compartir varios tipos de datos, incluidos:
 
 El objeto [**DataPackage**][DataPackage] puede contener uno o más de estos formatos, en cualquier combinación. En el ejemplo a continuación se muestra el uso compartido de un texto.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
 
 ## Establecer las propiedades
 
@@ -44,13 +44,13 @@ Cuando empaquetas datos para compartirlos, puedes suministrar diversas propiedad
 
 Todas las propiedades excepto el título son opcionales. La propiedad de título es obligatoria y debe establecerse.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
 
 ## Iniciar la interfaz de usuario de uso compartido
 
 El sistema proporciona una interfaz de usuario para uso compartido. Para iniciarla, llama al método [**ShowShareUI**][ShowShareUi].
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
+[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
 
 ## Controlar errores
 
@@ -102,6 +102,6 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

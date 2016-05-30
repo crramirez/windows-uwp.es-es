@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Tecnologías de juegos para las aplicaciones para la Plataforma universal de Windows (UWP)
 description: En esta guía, encontrarás información sobre las tecnologías disponibles para desarrollar juegos para la Plataforma universal de Windows (UWP).
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
@@ -69,7 +70,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>Direct3D 12 presenta la siguiente versión de Direct3D, la API de elementos gráficos 3D en el corazón de DirectX. Esta versión de Direct3D se ha diseñado para ser más rápida y eficiente que las versiones anteriores de Direct3D. La mayor velocidad de Direct3D 12 se ha conseguido gracias a que es de menor nivel y requiere que tú mismo administres los recursos de elementos gráficos, por lo que deberás tener una mayor experiencia en la programación de elementos gráficos para aprovechar esta velocidad.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa Direct3D 12 cuando necesites maximizar el rendimiento de tu juego y el juego esté limitado por la CPU.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta la documentación de [Direct3d 12](https://msdn.microsoft.com/library/windows/desktop/dn899121).</p></td>
     </tr>
     <tr class="even">
@@ -77,7 +78,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>Direct3D 11 es la versión anterior de Direct3D y te permite crear elementos gráficos 3D mediante un mayor nivel de abstracción de hardware que D3D 12.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa Direct3D 11 si ya tienes código de Direct3D 11 existente, tu juego no está limitado por la CPU o quieres disfrutar de las ventajas de que recursos se administren automáticamente.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta la documentación de [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080).</p></td>
     </tr>
     </tbody>
@@ -104,7 +105,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>Direct2D es una API de elementos gráficos 2D con aceleración por hardware y modo inmediato que ofrece alto rendimiento y representación de alta calidad de geometría 2D, mapas de bits y texto. La API de Direct2D se integra en Direct3D y se ha diseñado para interactuar correctamente con GDI, GDI+ y Direct3D.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>Puedes usar Direct2D en lugar de Direct3D para ofrecer elementos gráficos para juegos que sean estrictamente en 2D, como los juegos de desplazamiento lateral o juegos de mesa; además, puedes usarlo con Direct3D para simplificar la creación de elementos gráficos 2D en un juego 3D, como una interfaz de usuario o una pantalla de visualización frontal.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta la documentación de [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990).</p></td>
     </tr>
     <tr class="even">
@@ -112,7 +113,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>DirectWrite ofrece funciones adicionales para trabajar con texto, y se puede usar con Direct3D o Direct2D para proporcionar salida de texto en interfaces de usuario o en otras áreas donde se requiere texto. DirectWrite admite medición, dibujos y pruebas de aciertos de texto multiformato. DirectWrite controla el texto en todos los idiomas admitidos para las aplicaciones localizadas y globales. DirectWrite también ofrece una API de representación de glifos de bajo nivel para los desarrolladores que quieren realizar su propio diseño y procesamiento de Unicode a glifo.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p></p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta la documentación de [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038).</p></td>
     </tr>
     <tr class="odd">
@@ -120,7 +121,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>DirectComposition es un componente de Windows que habilita la composición de mapa de bits de alto rendimiento con transformaciones, efectos y animaciones. Los desarrolladores de aplicaciones pueden usar la API DirectComposition para crear interfaces de usuario visualmente atractivas y que ofrezcan transiciones animadas fluidas y enriquecidas, de un objeto visual a otro.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>DirectComposition está diseñada para simplificar el proceso de crear objetos visuales y transiciones animadas. Si tu juego requiere interfaces de usuario complejas, puedes usar DirectComposition para simplificar la creación y administración de la interfaz de usuario.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta la documentación de [DirectComposition](https://msdn.microsoft.com/library/windows/desktop/hh437371).</p></td>
     </tr>
     </tbody>
@@ -147,7 +148,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>XAudio2 es una API de audio de bajo nivel que ofrece funciones básicas de procesamiento de señal y mezcla. XAudio se ha diseñado para ofrecer una excelente capacidad de respuesta a los motores de audio de juegos, a la vez que se mantienen las funciones necesarias para crear efectos de audio personalizados y cadenas complejas de filtros y efectos de audio.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa XAudio2 cuando tu juego necesite reproducir sonidos con una mínima sobrecarga y retardo.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta la documentación de [XAudio2](https://msdn.microsoft.com/library/windows/desktop/hh405049).</p></td>
     </tr>
     <tr class="even">
@@ -155,7 +156,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>Microsoft Media Foundation se ha diseñado para la reproducción de archivos multimedia y de secuencias tanto de audio como de vídeo, pero también se puede usar en juegos cuando se requiere una funcionalidad de nivel superior a la de XAudio2 y, además, es aceptable tener una sobrecarga adicional.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>Media Foundation es especialmente útil para escenas cinematográficas o componentes no interactivos de tu juego. Media Foundation también es útil para la descodificación de archivos de audio para su reproducción con XAudio2.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta la [Introducción a Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197).</p></td>
     </tr>
     </tbody>
@@ -182,7 +183,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>La API de controlador de juego XInput permite que las aplicaciones reciban entradas de dispositivos de juegos.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>Si tu juego debe admitir la entrada de controladores de juegos y ya tienes código XInput, puedes seguir usando XInput. Se ha reemplazado XInput por Windows.Gaming.Input para UWP, y si estás escribiendo el nuevo código de entrada, debes usar Windows.Gaming.Input en lugar de XInput.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta la documentación de [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053).</p></td>
     </tr>
     <tr class="even">
@@ -198,7 +199,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     </ul>
     <p><strong>Cuándo usarla</strong></p>
     <p>Si el juego debe ser compatible con mandos de juegos y no usa el código existente de XInput, o si necesitas usar alguna de las ventajas enumeradas anteriormente, debes usar Windows.Gaming.Input.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta la documentación de [<strong>Windows.Gaming.Input</strong>](https://msdn.microsoft.com/library/windows/apps/dn707817).</p></td>
     </tr>
     <tr class="odd">
@@ -206,7 +207,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>La clase Windows.UI.Core.CoreWindow te ofrece eventos para realizar el seguimiento de las pulsaciones de puntero y el movimiento, así como de cuándo se pulsa y se suelta una tecla.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa los eventos de Windows.UI.Core.CoreWindows cuando necesites realizar un seguimiento del mouse o las pulsaciones de las teclas en el juego.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) para obtener más información sobre cómo usar el mouse o el teclado en tu juego.</p></td>
     </tr>
     </tbody>
@@ -233,7 +234,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>La API de DirectXMath ofrece tipos y funciones de C++ compatibles con SIMD para operaciones matemáticas comunes de elementos gráficos y álgebra lineal que son frecuentes en los juegos.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>El uso de DirectXMath es opcional y simplifica las operaciones matemáticas comunes.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta la documentación de [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833).</p></td>
     </tr>
     </tbody>
@@ -260,7 +261,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>El espacio de nombres Windows.Networking.Sockets ofrece sockets TCP y UDP que permiten la comunicación de red confiable o no.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa Windows.Networking.Sockets si tu juego necesita comunicarse con otros equipos o dispositivos a través de la red.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta [Trabajar con funciones de red en tu juego](work-with-networking-in-your-directx-game.md).</p></td>
     </tr>
     <tr class="even">
@@ -268,7 +269,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>El espacio de nombres Windows.Web.HTTP ofrece una conexión confiable con los servidores HTTP que se pueden usar para obtener acceso a un sitio web.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa Windows.Web.HTTP cuando tu juego necesite obtener acceso a un sitio web para recuperar o almacenar información.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta [Trabajar con funciones de red en tu juego](work-with-networking-in-your-directx-game.md).</p></td>
     </tr>
     </tbody>
@@ -295,7 +296,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>El kit de herramientas de DirectX (DirectXTK) es una colección de clases auxiliares para escribir código de DirectX 11.x en C++.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa el kit de herramientas de DirectX si eres un desarrollador de C++ que busca un sustituto moderno del código de utilidades de D3DX heredado o eres un desarrollador de XNA Game Studio que quiere migrar al C++ nativo.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta la página del proyecto del kit de herramientas de DirectX, [https://github.com/Microsoft/DirectXTK](https://github.com/Microsoft/DirectXTK).</p></td>
     </tr>
     <tr class="even">
@@ -303,7 +304,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
     <td align="left"><p>Win2D es una API de Windows Runtime de fácil uso para la representación inmediata de elementos gráficos 2D.</p>
     <p><strong>Cuándo usarla</strong></p>
     <p>Usa Win2D si eres un desarrollador de C++ y quieres un contenedor de WinRT más fácil de usar para Direct2D y DirectWrite, o si eres un desarrollador de C# y quieres usar Direct2D y DirectWrite.</p>
-    <p><strong>Para obtener más información</strong></p>
+    <p><strong>Para más información</strong></p>
     <p>Consulta la página del proyecto Win2D, [https://github.com/Microsoft/Win2D](https://github.com/Microsoft/Win2D).</p></td>
     </tr>
     </tbody>
@@ -339,7 +340,7 @@ Como alternativa a escribir tu propio motor de juego mediante las API de desarro
 
 Cuando estés listo para publicar tu juego, tendrás que crear una cuenta de desarrollador y enviar tu juego a la Tienda Windows.
 
-Para obtener información acerca de cómo enviar en juego a la Tienda Windows, consulta <https://dev.windows.com/publish>.
+Para obtener información sobre el envío de tu juego a la Tienda Windows, consulta <https://dev.windows.com/publish>.
 
  
 
@@ -350,6 +351,6 @@ Para obtener información acerca de cómo enviar en juego a la Tienda Windows, c
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

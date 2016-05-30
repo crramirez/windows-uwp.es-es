@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Supervisar el progreso y la finalización de tareas en segundo plano
 description: Aprende el modo en que la aplicación puede reconocer el progreso y finalización notificados por una tarea en segundo plano.
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
@@ -45,8 +46,7 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
 
     Por ejemplo, la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) actualiza la interfaz de usuario.
 
-    > [!div class="tabbedCodeSnippets"]
-    >     ```cs
+    > [!div class="tabbedCodeSnippets"] ```cs
     >     private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
     >     {
     >         UpdateUI();
@@ -66,8 +66,7 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
 
     Usa la siguiente superficie para el método OnProgress del controlador de eventos de la tarea en segundo plano:
 
-    > [!div class="tabbedCodeSnippets"]
-    >     ```cs
+    > [!div class="tabbedCodeSnippets"] ```cs
     >     private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)
     >     {
     >         // TODO: Add code that deals with background task progress.
@@ -84,12 +83,7 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
 
     Por ejemplo, la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) actualiza la interfaz de usuario con el estado de progreso pasado a través del parámetro *args*:
 
-    > [!div class="tabbedCodeSnippets"]
-    >     ```cs
-    >     private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)
-    >     {
-    >         var progress = "Progress: " + args.Progress + "%";
-    >         BackgroundTaskSample.SampleBackgroundTaskProgress = progress;
+    > [!div class="tabbedCodeSnippets"]     ```cs     private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)     {         var progress = "Progress: " + args.Progress + "%";         BackgroundTaskSample.SampleBackgroundTaskProgress = progress;
     > 
     >         UpdateUI();
     >     }
@@ -111,23 +105,15 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
 
     Por ejemplo, la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) llama a la siguiente función en todas las tareas en segundo plano que registra:
 
-    > [!div class="tabbedCodeSnippets"]
-    >     ```cs
+    > [!div class="tabbedCodeSnippets"] ```cs
     >     private void AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration task)
     >     {
     >         task.Progress += new BackgroundTaskProgressEventHandler(OnProgress);
     >         task.Completed += new BackgroundTaskCompletedEventHandler(OnCompleted);
     >     }
     >     ```
-    >     ```cpp
-    >     void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration^ task)
-    >     {
-    >         auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressEventArgs^ args)
-    >         {
-    >             auto progress = "Progress: " + args->Progress + "%";
-    >             BackgroundTaskSample::SampleBackgroundTaskProgress = progress;
-    >             UpdateUI();
-    >         };
+    >     ```cpp     void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration^ task)     {         auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressEventArgs^ args)
+    >                   {             auto progress = "Progress: " + args->Progress + "%";             BackgroundTaskSample::SampleBackgroundTaskProgress = progress;             UpdateUI();         };
     > 
     >         task->Progress += ref new BackgroundTaskProgressEventHandler(progress);
     >         
@@ -145,18 +131,7 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
 
     Por ejemplo, la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) usa el siguiente código para adjuntar controladores de eventos cuando se navega por la página SampleBackgroundTask para:
 
-    > [!div class="tabbedCodeSnippets"]
-    >     ```cs
-    >     protected override void OnNavigatedTo(NavigationEventArgs e)
-    >     {
-    >         foreach (var task in BackgroundTaskRegistration.AllTasks)
-    >         {
-    >             if (task.Value.Name == BackgroundTaskSample.SampleBackgroundTaskName)
-    >             {
-    >                 AttachProgressAndCompletedHandlers(task.Value);
-    >                 BackgroundTaskSample.UpdateBackgroundTaskStatus(BackgroundTaskSample.SampleBackgroundTaskName, true);
-    >             }
-    >         }
+    > [!div class="tabbedCodeSnippets"]     ```cs     protected override void OnNavigatedTo(NavigationEventArgs e)     {         foreach (var task in BackgroundTaskRegistration.AllTasks)         {             if (task.Value.Name == BackgroundTaskSample.SampleBackgroundTaskName)             {                 AttachProgressAndCompletedHandlers(task.Value);                 BackgroundTaskSample.UpdateBackgroundTaskStatus(BackgroundTaskSample.SampleBackgroundTaskName, true);             }         }
     > 
     >         UpdateUI();
     >     }
@@ -219,6 +194,6 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
 description: Usa este método en la API de colecciones de la Tienda Windows para notificar un producto consumible como completado para un cliente determinado. Para que un usuario pueda volver a comprar un producto consumible, la aplicación o el servicio debe notificar el producto consumible como completado para dicho usuario.
 title: Notificar productos consumibles como completados
@@ -41,7 +42,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 | Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorización  | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer** &lt;*token*&gt;.                           |
+| Autorización  | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;.                           |
 | Host           | cadena | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | cadena | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
@@ -77,7 +78,7 @@ El objeto UserIdentity contiene los parámetros siguientes.
 
 El siguiente ejemplo usa *itemId* y *trackingId*.
 
-```
+```syntax
 POST https://collections.mp.microsoft.com/v6.0/collections/consume HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJKV1…..
 Host: collections.mp.microsoft.com
@@ -97,7 +98,7 @@ Content-Type: application/json
 
 El siguiente ejemplo usa *productId* y *transactionId*.
 
-```
+```syntax
 POST https://collections.mp.microsoft.com/v6.0/collections/consume HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJKV1……
 Content-Length: 1880
@@ -122,7 +123,7 @@ Si el consumo se ejecutó correctamente, no se devolverá ningún contenido.
 
 ### Ejemplo de respuesta
 
-```
+```syntax
 HTTP/1.1 204 No Content
 Content-Length: 0
 MS-CorrelationId: 386f733d-bc66-4bf9-9b6f-a1ad417f97f0
@@ -157,6 +158,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

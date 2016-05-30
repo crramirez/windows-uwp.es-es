@@ -1,10 +1,11 @@
 ---
-title: Crear recursos de dispositivo para búferes de profundidad
-description: Aprende cómo crear los recursos de dispositivo de Direct3D necesarios para admitir la realización de pruebas de profundidad para instantáneas de volumen.
+author: mtoepke
+title: Crea recursos de dispositivo de búfer de profundidad
+description: Aprende cómo crear los recursos de dispositivo Direct3D necesarios para admitir la realización de pruebas de profundidad para volúmenes de sombra.
 ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
 ---
 
-# Crear recursos de dispositivo para búferes de profundidad
+# Crea recursos de dispositivo de búfer de profundidad
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -259,6 +260,6 @@ En la parte siguiente de este tutorial, aprenderás a crear la asignación de in
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

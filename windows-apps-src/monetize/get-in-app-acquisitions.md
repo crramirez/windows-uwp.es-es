@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
 description: Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de un producto desde la aplicación (IAP), durante un intervalo de fechas especificado y otros filtros opcionales.
 title: Obtener adquisiciones de IAP
@@ -37,7 +38,7 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD del formulario **Bearer** &lt;*token*&gt;. |
+| Autorización | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;. |
 
  
 
@@ -64,7 +65,7 @@ El parámetro *applicationId* o *inAppProductId* es obligatorio. Para recuperar 
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">cadena</td>
-<td align="left">Identificador de producto de la aplicación de la cual quieres recuperar los datos de compra del IAP. El identificador del producto está incrustado en el vínculo descriptivo que tienes disponible en [App identity page](https://msdn.microsoft.com/library/windows/apps/mt148561) del panel del Centro de desarrollo. Un identificador de producto de ejemplo es 9WZDNCRFJ3Q8.</td>
+<td align="left">Identificador de producto de la aplicación de la cual quieres recuperar los datos de compra del IAP. El identificador del producto está incrustado en el vínculo descriptivo que tienes disponible en la [página Identidad de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt148561) del panel del Centro de desarrollo. Un identificador de producto de ejemplo es 9WZDNCRFJ3Q8.</td>
 <td align="left">Sí</td>
 </tr>
 <tr class="even">
@@ -100,7 +101,7 @@ El parámetro *applicationId* o *inAppProductId* es obligatorio. Para recuperar 
 <tr class="odd">
 <td align="left">filter</td>
 <td align="left">cadena</td>
-<td align="left">Una o más instrucciones que filtran las filas en la respuesta. Si quieres obtener más información, consulta la sección [filter fields](#filter-fields) que tienes a continuación.</td>
+<td align="left">Una o más instrucciones que filtran las filas en la respuesta. Para obtener más información, consulta la sección [filtrar campos](#filter-fields) a continuación.</td>
 <td align="left">No</td>
 </tr>
 <tr class="even">
@@ -244,7 +245,7 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 
 En los siguientes ejemplos se muestran varias solicitudes para obtener los datos de compra del IAP. Reemplaza los valores *inAppProductId* o *applicationId* con los id. de producto adecuados de la aplicación o IAP.
 
-```
+```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions?inAppProductId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
 Authorization: Bearer <your access token>
 
@@ -332,6 +333,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
  
 
 
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,6 +1,7 @@
 ---
+author: drewbatgit
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
-description: Este artículo describe cómo usar la clase CameraCaptureUI para capturar fotos o vídeos con la interfaz de usuario de cámara integrada en Windows.
+description: En este artículo se describe cómo usar la clase CameraCaptureUI para capturar fotos o vídeos con la interfaz de usuario de cámara integrada en Windows.
 title: Capturar fotografías y vídeos con CameraCaptureUI
 ---
 
@@ -21,13 +22,13 @@ Para usar la interfaz de usuario de captura de cámara, incluye el espacio de no
 
 Para capturar una foto, crea un objeto [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) nuevo. El uso de la propiedad [**PhotoSettings**](https://msdn.microsoft.com/library/windows/apps/br241058) del objeto puede especificar las propiedades de la foto devuelta, como el formato de imagen de la foto. De manera predeterminada, la interfaz de usuario de captura de cámara permite al usuario recortar la foto antes de que se devuelva, aunque esto se puede deshabilitar con la propiedad [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042). Este ejemplo establece [**CroppedSizeInPixels**](https://msdn.microsoft.com/library/windows/apps/br241044) para solicitar que la imagen devuelta sea de 200 x 200 píxeles.
 
-**Nota**  No se admite el recorte de imágenes en la CameraCaptureUI en dispositivos de la familia de dispositivos móviles. El valor de la propiedad [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) se omite cuando se ejecuta la aplicación en estos dispositivos.
+**Nota**  No se admite el recorte de imágenes en CameraCaptureUI en dispositivos de la familia de dispositivos móviles. El valor de la propiedad [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) se omite cuando se ejecuta la aplicación en estos dispositivos.
 
 Realiza una llamada a [**CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057) y especifica [**CameraCaptureUIMode.Photo**](https://msdn.microsoft.com/library/windows/apps/br241040) para especificar que se debe capturar una foto. El método devuelve una instancia [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que contiene la imagen si la captura se realiza correctamente. Si el usuario cancela la captura, el objeto devuelto es null.
 
 [!code-cs[CapturePhoto](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCapturePhoto)]
 
-Una vez tienes la clase **StorageFile** que contiene la foto, puedes crear un objeto [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) que se puede usar con varias características de aplicaciones universales de Windows diferentes.
+Una vez tienes la clase **StorageFile** que contiene la foto, puedes crear un objeto [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358), que se puede usar con varias características de aplicaciones universales de Windows diferentes.
 
 Primero, debes incluir el espacio de nombres [**Windows.Graphics.Imaging**](https://msdn.microsoft.com/library/windows/apps/br226400) en el proyecto.
 
@@ -45,7 +46,7 @@ Para usar el mapa de bits de software en tu página XAML, incluye el espacio de 
 
 [!code-cs[UsingSoftwareBitmapSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingSoftwareBitmapSource)]
 
-El control de **Image** requiere que el origen de imagen sea en formato de BGRA8 con valores alfa premultiplicados o sin alfa, por lo tanto, realiza una llamada al método estático [**SoftwareBitmap.Convert**](https://msdn.microsoft.com/library/windows/apps/dn887362) para crear un nuevo mapa de bits de software con el formato deseado. A continuación, crea un objeto [**SoftwareBitmapSource**](https://msdn.microsoft.com/library/windows/apps/dn997854) nuevo y realiza una llamada a [**SetBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn997856) para asignar el mapa de bits de software al origen. Por último, establece el control de **Image** de la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br242760) del control para mostrar la foto capturada en la interfaz de usuario.
+El control de **Image** requiere que el origen de imagen tenga el formato BGRA8 con valores alfa premultiplicados o sin alfa. Por lo tanto, realiza una llamada al método estático [**SoftwareBitmap.Convert**](https://msdn.microsoft.com/library/windows/apps/dn887362) para crear un nuevo mapa de bits de software con el formato deseado. A continuación, crea un objeto [**SoftwareBitmapSource**](https://msdn.microsoft.com/library/windows/apps/dn997854) nuevo y realiza una llamada a [**SetBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn997856) para asignar el mapa de bits de software al origen. Por último, establece el control de **Image** de la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br242760) del control para mostrar la foto capturada en la interfaz de usuario.
 
 [!code-cs[SetImageSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetSetImageSource)]
 
@@ -57,9 +58,9 @@ Realiza una llamada a [**CaptureFileAsync**](https://msdn.microsoft.com/library/
 
 [!code-cs[CaptureVideo](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCaptureVideo)]
 
-Qué hacer con el archivo de vídeo capturado depende el escenario para tu aplicación. El resto de este artículo muestra cómo crear rápidamente una composición multimedia de uno o más vídeos capturados y mostrarla en la interfaz de usuario.
+Qué hacer con el archivo de vídeo capturado depende del escenario para la aplicación. El resto de este artículo muestra cómo crear rápidamente una composición multimedia de uno o más vídeos capturados y mostrarla en la interfaz de usuario.
 
-Primero, agrega un control [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) en el que se mostrará la composición de vídeo en la página XAML.
+Primero, agrega un control [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926), en el que se mostrará la composición de vídeo en la página XAML.
 
 [!code-xml[MediaElement](./code/CameraCaptureUIWin10/cs/MainPage.xaml#SnippetMediaElement)]
 
@@ -68,7 +69,7 @@ Agrega los espacios de nombres [**Windows.Media.Editing**](https://msdn.microsof
 
 [!code-cs[UsingMediaComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingMediaComposition)]
 
-Declara las variables de miembro para un objeto [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) y un [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn282716) que desea mantener en el ámbito de la duración de la página.
+Declara las variables de miembro para un objeto [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) y una clase [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn282716) que quieras mantener en el ámbito durante la duración de la página.
 
 [!code-cs[DeclareMediaComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetDeclareMediaComposition)]
 
@@ -76,13 +77,13 @@ Una vez, antes de capturar vídeos, debes crear una nueva instancia de la clase 
 
 [!code-cs[InitComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetInitComposition)]
 
-Con el archivo de vídeo devuelto desde la interfaz de usuario de captura de cámara, crea un nuevo [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596) realizando una llamada a [**MediaClip.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652607). Agrega el clip multimedia a la colección [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648) de la composición.
+Con el archivo de vídeo devuelto desde la interfaz de usuario de captura de cámara, crea una clase [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596) nueva llamando a [**MediaClip.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652607). Agrega el clip multimedia a la colección [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648) de la composición.
 
-Realiza una llamada a [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) para crear el objeto **MediaStreamSource** desde la composición.
+Llama a [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) para crear el objeto **MediaStreamSource** desde la composición.
 
 [!code-cs[AddToComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetAddToComposition)]
 
-Finalmente, establece el origen de la secuencia para usar el método [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029) del elemento multimedia para mostrar la composición en la interfaz de usuario.
+Finalmente, define el origen de la secuencia para usar el método [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029) del elemento multimedia para mostrar la composición en la interfaz de usuario.
 
 [!code-cs[SetMediaElementSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetSetMediaElementSource)]
 
@@ -106,6 +107,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

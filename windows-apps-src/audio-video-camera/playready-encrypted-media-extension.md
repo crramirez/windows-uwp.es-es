@@ -1,6 +1,7 @@
 ---
+author: eliotcowley
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: En esta sección se describe cómo modificar una aplicación web de PlayReady para que admita los cambios realizados de la versión anterior de Windows 8.1 a la versión de Windows 10.
+description: En esta sección se describe cómo modificar una aplicación web de PlayReady para admitir los cambios realizados de la versión anterior de Windows 8.1 a la versión de Windows 10.
 title: Encrypted Media Extension (EME) de PlayReady
 ---
 
@@ -97,7 +98,7 @@ Configurar la detención segura para los controles de página personalizados o l
 
 En el siguiente ejemplo se muestra cómo usar la detención segura en la aplicación web:
 
-``` syntax
+```JavaScript
 // JavaScript source code
 
 var g_prkey = null;
@@ -299,6 +300,6 @@ Consulta las [aplicaciones de muestra](https://code.msdn.microsoft.com/windowsap
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

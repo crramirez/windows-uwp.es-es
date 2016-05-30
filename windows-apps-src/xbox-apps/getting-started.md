@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Introducción al desarrollo de aplicaciones para UWP en Xbox One
 description: Cómo configurar el equipo y Xbox One para el desarrollo para UWP.
 area: Xbox
@@ -6,7 +7,7 @@ area: Xbox
 
 #Introducción al desarrollo de aplicaciones para UWP en Xbox One
 
-Sigue estos pasos **atentamente** para configurar correctamente el equipo e Xbox One para el desarrollo para UWP. Una vez lo hayas configurado todo, podrás obtener más información sobre el modo de desarrollador en Xbox One y la compilación de aplicaciones para UWP en la página [UWP para Xbox One](index.md). 
+Sigue estos pasos **atentamente** para configurar correctamente el equipo y Xbox One para el desarrollo para UWP. Una vez lo hayas configurado todo, podrás obtener más información sobre el modo de desarrollador en Xbox One y la compilación de aplicaciones para UWP en la página [UWP para Xbox One](index.md). 
 
 ## Antes de empezar
 Antes de empezar, debes hacer lo siguiente:
@@ -21,7 +22,8 @@ Antes de empezar, debes hacer lo siguiente:
 
 2.  Instala la versión preliminar 14295 del SDK de Windows 10. Puedes obtenerla desde el [Programa Windows Insider](http://go.microsoft.com/fwlink/p/?LinkId=780552).
   
-  > **Importante**&nbsp;&nbsp;Si instalas este SDK de versión preliminar en el equipo, no podrás enviar aplicaciones a la tienda integrada en este equipo, por lo tanto, no lo hagas en el equipo de desarrollo de producción. 
+  > **Importante**
+            &nbsp;&nbsp;Si instalas este SDK de versión preliminar en el equipo, no podrás enviar aplicaciones a la tienda integrada en este equipo, por lo tanto, no lo hagas en el equipo de desarrollo de producción. 
 
 ## Configurar la consola Xbox One
 1.  Activa el modo de desarrollador en tu Xbox One. Descarga la aplicación, obtén el código de activación y escríbelo en la página xboxactivate de tu cuenta del Centro de desarrollo. Consulta [Enabling developer mode on Xbox One (Habilitar el modo de desarrollador en Xbox One)](devkit-activation.md) para obtener más información. 
@@ -30,7 +32,8 @@ Antes de empezar, debes hacer lo siguiente:
 
 3.  Ve a la aplicación Dev Mode Activation y selecciona **Switch and restart**. Enhorabuena, ahora tienes una consola Xbox One en modo de desarrollador.
   
-  > **Nota**&nbsp;&nbsp;Tus aplicaciones y juegos de versión comercial no se ejecutarán en modo de desarrollador, pero sí que lo harán las aplicaciones o juegos que crees. Vuelve al Modo comercial para ejecutar tus aplicaciones y juegos favoritos.
+  > **Nota**
+            &nbsp;&nbsp;Tus aplicaciones y juegos de versión comercial no se ejecutarán en modo de desarrollador, pero sí que lo harán las aplicaciones o juegos que crees. Vuelve al Modo comercial para ejecutar tus aplicaciones y juegos favoritos.
 
 ## Crear tu primer proyecto en Visual Studio 2015
 
@@ -58,6 +61,6 @@ Consulta [Development environment setup (Configuración del entorno de desarroll
 - [UWP on Xbox One (UWP en Xbox One)](index.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

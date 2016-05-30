@@ -1,10 +1,11 @@
 ---
-title: Controlar el inicio previo de las aplicaciones
+author: mcleblanc
+title: Controlar el inicio previo de aplicaciones
 description: Obtén información sobre cómo controlar el inicio previo de las aplicaciones mediante el reemplazo del método OnLaunched.
 ms.assetid: A4838AC2-22D7-46BA-9EB2-F3C248E22F52
 ---
 
-# Controlar el inicio previo de las aplicaciones
+# Controlar el inicio previo de aplicaciones
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -58,7 +59,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
             // TODO: This is not a prelaunch activation. Perform operations which
             // assume that the user explicitly launched the app such as updating
             // the online presence of the user on a social network, updating a 
-            // what&#39;s new feed, etc.
+            // what's new feed, etc.
         }
 
         // Place the frame in the current Window
@@ -67,7 +68,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
     if (rootFrame.Content == null)
     {
-        // When the navigation stack isn&#39;t restored navigate to the first page,
+        // When the navigation stack isn't restored navigate to the first page,
         // configuring the new page by passing required information as a navigation parameter
         rootFrame.Navigate(typeof(MainPage), e.Arguments);
     }
@@ -76,7 +77,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 }
 ```
 
-**Sugerencia:** Si prefieres no utilizar el inicio previo, activa la marca [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740). Si se activa, vuelve de OnLaunched() antes de hacer cualquier trabajo para crear un marco o activar la ventana.
+**Sugerencia**  Si prefieres no usar el inicio previo, activa la marca [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740). Si se activa, vuelve de OnLaunched() antes de hacer cualquier trabajo para crear un marco o activar la ventana.
 
  
 
@@ -98,7 +99,7 @@ public sealed partial class MainPage : Page
     void WindowVisibilityChangedEventHandler(System.Object sender, Windows.UI.Core.VisibilityChangedEventArgs e)
     {
         // Perform operations that should take place when the application becomes visible rather than 
-        // when it is prelaunched, such as building a what&#39;s new feed 
+        // when it is prelaunched, such as building a what's new feed 
     }
 }
 ```
@@ -114,7 +115,7 @@ public sealed partial class MainPage : Page
     -   Un ejemplo de implicación de rendimiento es que podrías esperar a que el usuario cambie a la aplicación para recuperar la información meteorológica actual, en lugar de cargarla con el inicio previo de la aplicación y tener que volver a cargarla cuando la aplicación sea visible para garantizar que la información esté actualizada.
 -   Si la aplicación borra su icono dinámico al iniciarse, aplázala hasta el evento de cambio de visibilidad.
 -   La telemetría de la aplicación deberá distinguir entre las activaciones de icono normales y las de inicio previo para que puedas identificar el escenario donde ocurren los problemas.
--   Si tienes Microsoft Visual Studio 2015 Update 1 y Windows 10, versión 1511, puedes simular el inicio previo de la aplicación en Visual Studio 2015. Para ello, elige **Depurar** &gt; **Otros destinos de depuración** &gt; **Depurar inicio previo de la aplicación universal de Windows**.
+-   Si tienes Microsoft Visual Studio 2015 Update 1 y Windows 10, versión 1511, puedes simular el inicio previo de tu aplicación en Visual Studio 2015. Para ello, elige **Depurar**&gt;**Otros destinos de depuración**&gt;**Depurar inicio previo de la aplicación universal de Windows**.
 
 ## Temas relacionados
 
@@ -128,6 +129,6 @@ public sealed partial class MainPage : Page
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 95481C7E-E905-4477-955B-90D292634E2E
 title: Impresión y digitalización
 description: En esta sección se describe cómo imprimir y digitalizar desde la aplicación universal de Windows.
@@ -25,6 +26,6 @@ En esta sección se describe cómo imprimir y digitalizar desde la aplicación u
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

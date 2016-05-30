@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: Las plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla.
 title: Crear iconos adaptables
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
-label: Crear iconos adaptables
+label: Create adaptive tiles
 template: detail.hbs
 ---
 
 # Crear iconos adaptables
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Las plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). Para obtener la lista completa de atributos y elementos adaptables, consulta el [Esquema de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
@@ -197,7 +198,7 @@ TileContent content = new TileContent()
 
 Puedes controlar la personalización de marca en la parte inferior de un icono dinámico (el nombre para mostrar y el logotipo de esquina) mediante el atributo de personalización de marca de la carga de notificación. Puedes elegir mostrar "none", solo "name", solo "logo" o ambos con "nameAndLogo".
 
-**Nota**  Windows Phone no admite el logotipo de esquina, por lo tanto, "logo" y "nameAndLogo" se definen de manera predeterminada en "name" en el teléfono.
+**Nota** Windows Phone no admite el logotipo de esquina, por lo que "logo" y "nameAndLogo" se definen de manera predeterminada en "name" en el teléfono.
 
  
 
@@ -227,9 +228,8 @@ new TileVisual()
 
 La personalización de marca se puede aplicar para determinados tamaños de iconos. Puedes hacerlo de dos formas:
 
-1. Mediante la aplicación del atributo en el elemento [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)
-2. Mediante la aplicación del atributo en el elemento [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que afecta a toda la carga de notificaciones
-Si no especificas la personalización de marca de un enlace, se usará la personalización de marca que se proporciona en el elemento visual.
+1. Mediante la aplicación del atributo en el elemento [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md).
+2. Mediante la aplicación del atributo en el elemento [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que afecta a toda la carga de notificaciones. Si no especificas la personalización de marca de un enlace, se usará la personalización de marca que se proporciona en el elemento visual.
 
 ```XML
 <tile>
@@ -276,14 +276,14 @@ TileContent content = new TileContent()
 
 Si no especificas la personalización de marca en la carga de notificaciones, las propiedades del icono base determinarán la personalización de marca. Si en el icono base se muestra el nombre para mostrar, a continuación, la personalización de marca se definirá de manera predeterminada en "name". De lo contrario, la personalización de marca se definirá de manera predeterminada en "none" si no se muestra el nombre para mostrar.
 
-**Nota**   Este es un cambio de Windows 8.x, en el que la personalización de marca predeterminada era "logo".
+**Nota** Este es un cambio de Windows 8.x, en el que la personalización de marca predeterminada era "logo".
 
  
 
 ## <span id="Display_name"></span><span id="display_name"></span><span id="DISPLAY_NAME"></span>Nombre para mostrar
 
 
-Puedes invalidar el nombre para mostrar de una notificación escribiendo la cadena de texto que quieras con el atributo **displayName**. Al igual que con la personalización de marca, puedes especificar esto en el elemento [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que afecta a toda la carga de notificaciones, o en el elemento [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que solo afecta a los iconos individuales.
+Puedes invalidar el nombre para mostrar de una notificación escribiendo la cadena de texto que quieras con el atributo **displayName**. Al igual que con la personalización de marca, puedes especificar esto en el elemento [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que afecta a toda la carga de notificaciones, o en el elemento [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que solo afecta a iconos individuales.
 
 ```XML
 <tile>
@@ -426,7 +426,7 @@ new TileText()
 
 ![estilos de texto de iconos adaptables](images/adaptive-tiles-textstyles.png)
 
-**Nota**  El estilo se define de manera predeterminada en subtítulo si no se especifica ninguna sugerencia de estilo.
+**Nota** El estilo se define de manera predeterminada en subtítulo si no se especifica ninguna sugerencia de estilo.
 
  
 
@@ -518,7 +518,7 @@ Los grupos permiten declarar semánticamente que el contenido dentro del grupo e
 
 Con el fin de obtener la mejor experiencia en los dispositivos y las pantallas, proporciona varios grupos. El hecho de tener varios grupos permite que el icono se adapte a las pantallas más grandes.
 
-**Nota**  El único elemento secundario válido de un grupo es un subgrupo.
+**Nota** El único elemento secundario válido de un grupo es un subgrupo.
 
  
 
@@ -719,7 +719,7 @@ Si quieres que la primera columna ocupe un 20 % del ancho total y que la segund
 
 ![subgrupos, con espesores que suman 100](images/adaptive-tiles-subgroups03.png)
 
-**Nota**  Automáticamente se agrega un margen de 8 píxeles entre las columnas.
+**Nota** Un margen de 8 píxeles se agrega automáticamente entre las columnas.
 
  
 
@@ -843,7 +843,7 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 El elemento &lt;image&gt; se usa para mostrar imágenes en la notificación de icono. Las imágenes pueden colocarse alineadas dentro del contenido del icono (valor predeterminado), como una imagen de fondo detrás del contenido o como una animación de imagen que aparezca desde la parte superior de la notificación.
 
-**Nota**   Hay [restricciones en el tamaño del archivo y en las dimensiones de las imágenes](https://msdn.microsoft.com/library/windows/apps/hh781198).
+**Nota** Hay [restricciones en el tamaño del archivo y en las dimensiones de las imágenes](https://msdn.microsoft.com/library/windows/apps/hh781198).
 
  
 
@@ -1265,7 +1265,7 @@ TileWide = new TileBinding()
 
 ### <span id="Peek_image"></span><span id="peek_image"></span><span id="PEEK_IMAGE"></span>Imagen que aparece
 
-Puedes especificar una imagen que "aparezca" desde la parte superior del icono. La imagen que aparece usa una animación para bajar y subir desde la parte superior del icono, detenerse para que se pueda leer y, a continuación, volver a deslizarse para desaparecer y así mostrar el contenido principal del icono. Para establecer una imagen que aparece, coloca un elemento de imagen en la raíz del elemento &lt;binding&gt;, y establece el atributo de ubicación en "peek".
+Puedes especificar una imagen que "aparezca" desde la parte superior del icono. La imagen que aparece usa una animación para bajar y subir desde la parte superior del icono, detenerse para que se pueda leer y, a continuación, volver a deslizarse para desaparecer y así mostrar el contenido principal del icono. Para establecer una imagen que aparece, coloca un elemento de imagen en la raíz del elemento &lt;binding&gt; y establece el atributo de ubicación en "peek".
 
 ```XML
 ...
@@ -1488,6 +1488,6 @@ TileWide = new TileBinding()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

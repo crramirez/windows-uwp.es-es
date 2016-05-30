@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 title: Controlar la activación de aplicaciones
-description: Obtén información sobre cómo administrar la activación de aplicaciones al invalidar el método OnLaunched.
+description: Obtén información sobre cómo controlar la activación de aplicaciones mediante la invalidación del método OnLaunched.
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
 ---
 
-# Administrar la activación de aplicaciones
+# Controlar la activación de aplicaciones
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -24,7 +25,7 @@ La clase [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/wi
 
 Define la clase de la aplicación.
 
-```xaml
+```xml
 <Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
              x:Class="AppName.App" >
@@ -32,7 +33,7 @@ Define la clase de la aplicación.
 
 Invalida el método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335). Este método se llama cada vez que el usuario inicia la aplicación. El parámetro [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) contiene el estado anterior de la aplicación y los argumentos de activación.
 
-**Nota**: En las aplicaciones de la Tienda de Windows Phone, se llama a este método cada vez que el usuario inicia la aplicación desde el icono Inicio o la lista de aplicaciones, incluso cuando la aplicación está suspendida en la memoria por el momento. En Windows, al iniciar una aplicación suspendida desde el icono Inicio o la lista de aplicaciones, no se llama a este método.
+**Nota**: En las aplicaciones de la Tienda de Windows Phone, se invoca este método cada vez que el usuario inicia la aplicación desde el icono Inicio o la lista de aplicaciones, incluso si la aplicación está suspendida en la memoria en ese momento. En Windows, al iniciar una aplicación suspendida desde el icono Inicio o la lista de aplicaciones, no se llama a este método.
 
 > [!div class="tabbedCodeSnippets"]
 ```cs
@@ -158,7 +159,7 @@ Si el valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/w
 
 ## Comentarios
 
-> **Nota**: En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida por el momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
+> **Nota**  En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida en ese momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
 
 ## Temas relacionados
 
@@ -180,6 +181,6 @@ Si el valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/w
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

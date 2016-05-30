@@ -1,6 +1,7 @@
 ---
+author: mcleblanc
 title: Acceder a sensores y dispositivos desde una tarea en segundo plano
-description: DeviceUseTrigger permite que tu aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, incluso cuando la aplicación en primer plano esté suspendida.
+description: DeviceUseTrigger permite que aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, incluso cuando la aplicación en primer plano esté suspendida.
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
 ---
 
@@ -10,7 +11,9 @@ ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-[**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que tu aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, incluso cuando la aplicación en primer plano esté suspendida. Por ejemplo, en función de dónde se ejecute la aplicación, podrías usar una tarea en segundo plano para sincronizar datos con dispositivos o sensores de monitores. Para ahorrar batería y garantizar el consentimiento apropiado por parte del usuario, el uso de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) está sujeto a las directivas descritas en este tema.
+[
+              **DeviceUseTrigger**
+            ](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que la aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, incluso cuando la aplicación en primer plano esté suspendida. Por ejemplo, en función de dónde se ejecute la aplicación, podrías usar una tarea en segundo plano para sincronizar datos con dispositivos o sensores de monitores. Para ahorrar batería y garantizar el consentimiento apropiado por parte del usuario, el uso de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) está sujeto a las directivas descritas en este tema.
 
 Para acceder a dispositivos periféricos o sensores en segundo plano, crea una tarea en segundo plano que use [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Para ver un ejemplo de esto en un equipo, consulta la [muestra de dispositivo USB personalizado](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para ver un ejemplo en un teléfono, consulta la [muestra de sensores en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
 
@@ -19,7 +22,7 @@ Para acceder a dispositivos periféricos o sensores en segundo plano, crea una t
 
 Cuando la aplicación deje de ser visible para el usuario, Windows la suspenderá o finalizará para recuperar recursos de CPU y memoria. Esto permite ejecutar otras aplicaciones en primer plano y reduce el consumo de batería. Cuando suceda esto, sin ayuda de una tarea en segundo plano, todos los eventos de datos en curso se perderán. Windows proporciona el desencadenador de tarea en segundo plano, [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337), para que la aplicación pueda realizar operaciones de sincronización y supervisión de larga duración en dispositivos y sensores de manera segura en segundo plano, aunque la aplicación esté suspendida. Para obtener más información sobre el ciclo de vida de la aplicación, consulta [Iniciar, reanudar y tareas en segundo plano](index.md). Para obtener más información sobre las tareas en segundo plano, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
 
-**Nota**: En una aplicación universal de Windows, para sincronizar un dispositivo en segundo plano, el usuario debe haber aprobado la sincronización en segundo plano de tu aplicación. El dispositivo también debe estar conectado o emparejado con el equipo, con E/S activa, y se le permite un máximo de 10 minutos de actividad en segundo plano. Más adelante en este tema se proporcionan más detalles sobre la aplicación de directivas.
+**Nota**: En una aplicación universal de Windows, para sincronizar un dispositivo en segundo plano, el usuario debe haber aprobado la sincronización en segundo plano de la aplicación. El dispositivo también debe estar conectado o emparejado con el equipo, con E/S activa, y se le permite un máximo de 10 minutos de actividad en segundo plano. Más adelante en este tema se proporcionan más detalles sobre la aplicación de directivas.
 
 ### Limitación: operaciones críticas del dispositivo
 
@@ -40,7 +43,7 @@ Las tareas en segundo plano que usan [**DeviceUseTrigger**](https://msdn.microso
 | Red cableada    | ![este protocolo es compatible.](images/ap-tools.png)                                                                                                                                            |
 | Red Wi-Fi    | ![este protocolo es compatible.](images/ap-tools.png)                                                                                                                                            |
 | IDeviceIOControl | ![deviceservicingtrigger es compatible con ideviceiocontrol](images/ap-tools.png)                                                                                                                       |
-| API de sensores      | ![deviceservicingtrigger es compatible con las API de sensores universales](images/ap-tools.png) (se limita a los sensores de la [familia de dispositivos universales](https://msdn.microsoft.com/library/windows/apps/dn894631)) |
+| API de sensores      | ![deviceservicingtrigger admite API de sensores universales](images/ap-tools.png) (limitado a los sensores de la [familia de dispositivos universal](https://msdn.microsoft.com/library/windows/apps/dn894631)) |
 
  
 
@@ -89,7 +92,7 @@ Ten en cuenta estos puntos importantes al usar [**DeviceUseTrigger**](https://ms
 
  
 
-**Sugerencia**: para ver cómo funcionan estas tareas en segundo plano, descarga una muestra. Para ver un ejemplo de esto en un equipo, consulta la [muestra de dispositivo USB personalizado](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para ver un ejemplo en un teléfono, consulta la [muestra de sensores en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
+**Sugerencia**: Para ver cómo funcionan estas tareas en segundo plano, descarga una muestra. Para ver un ejemplo de esto en un equipo, consulta la [muestra de dispositivo USB personalizado](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para ver un ejemplo en un teléfono, consulta la [muestra de sensores en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
 
  
 
@@ -193,6 +196,6 @@ Además del método [**Unregister**](https://msdn.microsoft.com/library/windows/
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,10 +1,11 @@
 ---
-title: Visual Studio tools para programación de juegos
-description: Información general acerca de las herramientas específicas de DirectX disponibles en Visual Studio.
+author: mtoepke
+title: Herramientas de Visual Studio para programación de juegos
+description: Aquí encontrarás información general acerca de las herramientas específicas de DirectX disponibles en Visual Studio.
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
 ---
 
-# Herramientas de Visual Studio para programación de juegos
+# Herramientas de Visual Studio para la programación de juegos
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -37,7 +38,7 @@ Crea [archivos de personalizaciones de compilación](#custom) para convertir est
 
 Para obtener más información, consulta [Trabajar con texturas e imágenes](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
-> **Nota** El Editor de imágenes no está pensado para reemplazar a una aplicación completa de edición de imágenes, pero es apropiado para varios escenarios simples de edición y visualización.
+> **Nota** El Editor de imágenes no está pensado para reemplazar una aplicación completa de edición de imágenes, pero es apropiado para varios escenarios simples de edición y visualización.
 
  
 
@@ -56,7 +57,7 @@ Esta es la captura de pantalla de un modelo en el editor con iluminación aplica
 
 Para obtener más información, consulta [Trabajar con modelos 3D](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx).
 
-> **Nota** El Editor de modelos no está pensado para reemplazar a una aplicación completa de edición de modelos, pero es apropiado para varios escenarios simples de edición y visualización.
+> **Nota** El Editor de modelos no está pensado para reemplazar una aplicación completa de edición de modelos, pero es apropiado para varios escenarios simples de edición y visualización.
 
  
 
@@ -133,7 +134,7 @@ Visual Studio proporciona herramientas de depuración específicas para gráfico
 
 Para obtener más información, consulta [Depurar gráficos DirectX](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx).
 
-> **Nota:** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -146,6 +147,6 @@ Para obtener más información, consulta [Depurar gráficos DirectX](https://msd
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

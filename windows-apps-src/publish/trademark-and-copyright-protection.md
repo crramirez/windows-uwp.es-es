@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Obtén información sobre qué hacer si crees que otra aplicación está infringiendo tus derechos de propiedad intelectual.
 title: Protección de marcas comerciales y derechos de autor
 ms.assetid: 61C4EEC0-AD4D-4828-ADEC-F18E99DD4FFC
@@ -63,6 +64,6 @@ Lee detenidamente el aviso de Microsoft y sigue las instrucciones. El aviso de M
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

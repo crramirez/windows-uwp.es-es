@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 Description: Prepara la aplicación para la localizarla a otros idiomas, mercados o regiones.
 title: Preparar la aplicación para la localización
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
@@ -9,12 +10,12 @@ template: detail.hbs
 # Preparar la aplicación para la localización
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Prepara la aplicación para la localizarla a otros idiomas, mercados o regiones. Antes de comenzar, asegúrate de leer el [conjunto de instrucciones que debes seguir](guidelines-and-checklist-for-globalizing-your-app.md).
 
-## <span id="use_resource_files_and_qualifiers."></span><span id="USE_RESOURCE_FILES_AND_QUALIFIERS."></span>Usar calificadores y archivos de recursos.
+Prepara la aplicación para localizarla a otros idiomas, mercados o regiones. Antes de comenzar, asegúrate de leer el [conjunto de instrucciones que debes seguir](guidelines-and-checklist-for-globalizing-your-app.md).
+
+## <span id="use_resource_files_and_qualifiers."></span><span id="USE_RESOURCE_FILES_AND_QUALIFIERS."></span>Usar calificadores y archivos de recurso.
 
 
 Asegúrate de especificar las cadenas de interfaz de usuario de la aplicación en los archivos de recursos, en lugar de colocarlas en el código. Para obtener más información, consulta [Colocar las cadenas de UI en los recursos](put-ui-strings-into-resources.md).
@@ -28,14 +29,14 @@ Agrega comentarios de localización a los archivos de recursos de tu aplicación
 
 **XAML:** los archivos .resw (recursos creados en Visual Studio para aplicaciones con XAML) tienen un elemento de comentario. Por ejemplo:
 
-```XAML
+```XML
 <data name="String1">
     <value>Hello World</value>
     <comment>A greeting (This is a comment to the localizer)</comment>
 </data>
 ```
 
-**HTML:** los archivos .resjson (recursos creados en Visual Studio para aplicaciones con HTML) permiten metadatos en los campos que comiencen con un guion bajo, igual que sucede con los comentarios:
+**HTML:** los archivos .resjson (recursos creados en Visual Studio para aplicaciones con HTML) permiten metadatos en los campos que comiencen con un guion bajo. Por ejemplo, los comentarios:
 
 ```json
 {
@@ -86,7 +87,7 @@ Localiza cadenas específicas, no etiquetas. Revisa los siguientes ejemplos:
 
  
 
-Si incluyes la etiqueta &lt;link&gt; en los recursos, también se localizará y solo conseguirás que se invalide. Solamente la cadena en sí debe localizarse. Generalmente, debes pensar que las etiquetas son código que debes mantener separado del texto localizable. No obstante, algunas cadenas largas deben incluir marcado para mantener el contexto y garantizar la ordenación.
+Incluir la etiqueta &lt;link&gt; anterior en los recursos significa que también se localizará, y solo conseguirás que se invalide. Solamente la cadena en sí debe localizarse. Generalmente, debes pensar que las etiquetas son código que debes mantener separado del texto localizable. No obstante, algunas cadenas largas deben incluir marcado para mantener el contexto y garantizar la ordenación.
 
 ## <span id="do_not_use_the_same_strings_in_dissimilar_contexts."></span><span id="DO_NOT_USE_THE_SAME_STRINGS_IN_DISSIMILAR_CONTEXTS."></span>No usar las mismas cadenas en contextos diferentes.
 
@@ -186,6 +187,6 @@ El método de ordenación sigue el formato del **panel de control regional**:
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

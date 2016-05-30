@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Asignar características de DirectX 9 a las API de DirectX 11
 description: Aprende a trasladar las características de tu juego Direct3D 9 a Direct3D 11 y a la Plataforma universal de Windows (UWP).
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
@@ -21,7 +22,7 @@ Aprende a trasladar las características de tu juego Direct3D 9 a Direct3D 11 y 
 ## Asignar Direct3D 9 a las API de DirectX 11
 
 
-[Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) sigue siendo la base de los elementos gráficos DirectX, pero la API cambió a partir de DirectX 9:
+[Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) sigue siendo la base de los gráficos DirectX, pero la API cambió a partir de DirectX 9:
 
 -   La Infraestructura de gráficos de Microsoft DirectX (DXGI) se usa para configurar adaptadores de gráficos. Usa [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534) para seleccionar formatos de búfer, crear cadenas de intercambio, presentar marcos y crear recursos compartidos. Consulta [Introducción a DXGI](https://msdn.microsoft.com/library/windows/desktop/bb205075).
 -   El contexto de dispositivo de Direct3D se usa para establecer el estado de canalización y generar comandos de representación. La mayoría de nuestras muestras usan un contexto inmediato para representar directamente en el dispositivo. Direct3D 11 también admite la representación multithreading, en cuyo caso se usan contextos diferidos. Consulta [Introducción a un dispositivo en Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476880).
@@ -32,7 +33,7 @@ Para obtener una lista completa de las características de  Direct3D 11, consult
 ## Pasar de Direct2D 9 a Direct2D 11
 
 
-[Direct2D (Windows)](https://msdn.microsoft.com/library/windows/desktop/dd370990) sigue siendo parte importante de los elementos gráficos de DirectX y Windows. Todavía puedes usar Direct2D para dibujar juegos 2D y dibujar superposiciones (HUD) sobre Direct3D.
+[Direct2D (Windows)](https://msdn.microsoft.com/library/windows/desktop/dd370990) sigue siendo parte importante de los gráficos DirectX y Windows. Todavía puedes usar Direct2D para dibujar juegos 2D y dibujar superposiciones (HUD) sobre Direct3D.
 
 Direct2D se ejecuta encima de Direct3D. Los juegos 2D pueden implementarse en cualquiera de sus API. Por ejemplo, un juego 2D implementado con Direct3D puede usar la proyección ortográfica, establecer valores Z para controlar el orden de dibujo de primitivos y usar sombreadores de píxeles para agregar efectos especiales.
 
@@ -129,7 +130,7 @@ Usa esta tabla cuando tengas que convertir código de Direct3D 9 a Direct3D 11. 
 <td align="left"><p>[<strong>IDirect3DDevice9</strong>](https://msdn.microsoft.com/library/windows/desktop/bb174336)</p></td>
 <td align="left"><p>[<strong>ID3D11Device2</strong>](https://msdn.microsoft.com/library/windows/desktop/dn280493)</p>
 <p>[<strong>ID3D11DeviceContext2</strong>](https://msdn.microsoft.com/library/windows/desktop/dn280498)</p>
-<p>Las fases de la canalización de elementos gráficos se describen en [Graphics Pipeline](https://msdn.microsoft.com/library/windows/desktop/ff476882).</p></td>
+<p>Las fases de la canalización de gráficos se describen en [Canalización de gráficos](https://msdn.microsoft.com/library/windows/desktop/ff476882).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[<strong>IDirect3D9</strong>](https://msdn.microsoft.com/library/windows/desktop/bb174300)</p></td>
@@ -334,7 +335,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8_UNORM</p>
 <div class="alert">
-<strong>Nota</strong> Usa la referencia .r en el sombreador para duplicar el color rojo en otros componentes y obtener el comportamiento de Direct3D 9.
+<strong>Nota</strong>   Usa la referencia .r en el sombreador para duplicar el color rojo en otros componentes y obtener el comportamiento de Direct3D 9.
 </div>
 <div>
  
@@ -344,7 +345,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_A8L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_UNORM</p>
 <div class="alert">
-<strong>Nota</strong> Usa la referencia .r en el sombreador para duplicar el color rojo y mover el color verde a otros componentes alfa, y obtener el comportamiento de Direct3D 9.
+<strong>Nota</strong>   Usa la referencia .r en el sombreador para duplicar el color rojo y mover el color verde a otros componentes alfa, y obtener el comportamiento de Direct3D 9.
 </div>
 <div>
  
@@ -390,7 +391,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_R8G8_B8G8</p></td>
 <td align="left"><p>DXGI_FORMAT_G8R8_G8B8_UNORM</p>
 <div class="alert">
-<strong>Nota</strong> En Direct3D 9 la escala de datos aumentó en 255.0f, pero puede controlarse en el sombreador.
+<strong>Nota</strong>   En Direct3D 9 la escala de datos aumentó en 255.0f, pero puede controlarse en el sombreador.
 </div>
 <div>
  
@@ -404,7 +405,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_G8R8_G8B8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_B8G8_UNORM</p>
 <div class="alert">
-<strong>Nota</strong> En Direct3D 9 la escala de datos aumentó en 255.0f, pero puede controlarse en el sombreador.
+<strong>Nota</strong>   En Direct3D 9 la escala de datos aumentó en 255.0f, pero puede controlarse en el sombreador.
 </div>
 <div>
  
@@ -418,7 +419,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_DXT2</p></td>
 <td align="left"><p>DXGI_FORMAT_BC1_UNORM & DXGI_FORMAT_BC1_UNORM_SRGB</p>
 <div class="alert">
-<strong>Nota</strong> DXT1 y DXT2 son iguales desde una perspectiva de API o hardware. La única diferencia está en el uso de un componente alfa multiplicado previamente, lo que permite a una aplicación realizar su seguimiento sin necesidad de usar otro formato.
+<strong>Nota</strong>   DXT1 y DXT2 son iguales desde una perspectiva de API o hardware. La única diferencia está en el uso de un componente alfa multiplicado previamente, lo que permite a una aplicación realizar su seguimiento sin necesidad de usar otro formato.
 </div>
 <div>
  
@@ -432,7 +433,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_DXT4</p></td>
 <td align="left"><p>DXGI_FORMAT_BC2_UNORM & DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>Nota</strong> DXT3 y DXT4 son iguales desde una perspectiva de API o hardware. La única diferencia está en el uso de un componente alfa multiplicado previamente, lo que permite a una aplicación realizar su seguimiento sin necesidad de usar otro formato.
+<strong>Nota</strong>   DXT3 y DXT4 son iguales desde una perspectiva de API o hardware. La única diferencia está en el uso de un componente alfa multiplicado previamente, lo que permite a una aplicación realizar su seguimiento sin necesidad de usar otro formato.
 </div>
 <div>
  
@@ -498,7 +499,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_L16</p></td>
 <td align="left"><p>DXGI_FORMAT_R16_UNORM</p>
 <div class="alert">
-<strong>Nota</strong> Usa la referencia .r en el sombreador para duplicar el color rojo en otros componentes y obtener el comportamiento de D3D9.
+<strong>Nota</strong>   Usa la referencia .r en el sombreador para duplicar el color rojo en otros componentes y obtener el comportamiento de D3D9.
 </div>
 <div>
  
@@ -572,7 +573,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DDECLTYPE_UBYTE4</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8B8A8_UINT</p>
 <div class="alert">
-<strong>Nota</strong> El sombreador obtiene valores UINT, pero si se necesitan flotantes integrales de estilo de Direct3D 9 (0.0f, 1.0f... 255.f), UINT solo puede convertirse a float32 en el sombreador.
+<strong>Nota</strong>   El sombreador obtiene valores UINT, pero si se necesitan flotantes integrales de estilo de Direct3D 9 (0.0f, 1.0f... 255.f), UINT solo puede convertirse a float32 en el sombreador.
 </div>
 <div>
  
@@ -582,7 +583,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DDECLTYPE_SHORT2</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16_SINT</p>
 <div class="alert">
-<strong>Nota</strong> El sombreador obtiene valores SINT, pero si se necesitan flotantes integrales de estilo de Direct3D 9, SINT solo puede convertirse a float32 en el sombreador.
+<strong>Nota</strong>   El sombreador obtiene valores SINT, pero si se necesitan flotantes integrales de estilo de Direct3D 9, SINT solo puede convertirse a float32 en el sombreador.
 </div>
 <div>
  
@@ -592,7 +593,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DDECLTYPE_SHORT4</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16B16A16_SINT</p>
 <div class="alert">
-<strong>Nota</strong> El sombreador obtiene valores SINT, pero si se necesitan flotantes integrales de estilo de Direct3D 9, SINT solo puede convertirse a float32 en el sombreador.
+<strong>Nota</strong>   El sombreador obtiene valores SINT, pero si se necesitan flotantes integrales de estilo de Direct3D 9, SINT solo puede convertirse a float32 en el sombreador.
 </div>
 <div>
  
@@ -638,7 +639,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>FourCC 'ATI1'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC4_UNORM</p>
 <div class="alert">
-<strong>Nota</strong> Requiere el nivel de característica 10.0 o posterior
+<strong>Nota</strong>   Requiere el nivel de característica 10.0 o posterior
 </div>
 <div>
  
@@ -648,7 +649,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>FourCC 'ATI2'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC5_UNORM</p>
 <div class="alert">
-<strong>Nota</strong> Requiere el nivel de característica 10.0 o posterior
+<strong>Nota</strong>   Requiere el nivel de característica 10.0 o posterior
 </div>
 <div>
  
@@ -668,6 +669,6 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

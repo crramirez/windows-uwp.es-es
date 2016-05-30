@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: Introducción a UWP para desarrolladores de iOS
 title: Introducción a UWP para desarrolladores de iOS
 ms.assetid: 9F67068B-E578-4C70-B3E0-DFF150FA9BDD
@@ -27,6 +28,7 @@ Para empezar con estos tutoriales, necesitarás un equipo con Windows 10 y Micr
 | [Introducción: navegación](getting-started-navigation.md) | Una de las formas de administrar esta navegación en una aplicación de Windows 10 es usar la clase [Frame](https://msdn.microsoft.com/library/windows/apps/br242682). En el tutorial siguiente se muestra cómo puedes probarlo. |
 | [Introducción: animación](getting-started-animation.md) | Las animaciones de las aplicaciones de Windows se pueden crear mediante programación, pero también pueden definirse mediante declaración con lenguaje XAML. |
 | [Introducción: ¿y después?](getting-started-what-next.md) | Con esta información básica, ya puedes empezar a crear aplicaciones para la Plataforma universal de Windows (UWP) más interesantes. Para los próximos pasos, lee los siguientes temas y después abre Visual Studio y empieza a escribir código. |
+| [Asignación del concepto de la aplicación de Windows](https://msdn.microsoft.com//windows/uwp/porting/android-ios-uwp-map) | Qué hay que tener en cuenta de los conceptos de iOS en lo que respecta a las características de Windows (y Android) |
 
  
 
@@ -35,10 +37,6 @@ Para empezar con estos tutoriales, necesitarás un equipo con Windows 10 y Micr
  
 
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,6 +1,7 @@
 ---
+author: Jwmsft
 ms.assetid: DA562509-D893-425A-AAE6-B2AE9E9F8A19
-label: Bloque de texto
+label: Text block
 template: detail.hbs
 ---
 # Bloque de texto
@@ -60,16 +61,29 @@ Los elementos que se derivan de la clase Inline, como Bold, Italic, Run, Span y 
 Siempre que sea posible, XAML usa una ruta de acceso de código más eficiente para el diseño del texto. Esta ruta de acceso rápido tanto disminuye el uso de memoria general como reduce en gran medida el tiempo de CPU para realizar una medición de texto y organización. Esta ruta de acceso rápido se aplica solo a TextBlock, por lo que es preferible cuando sea posible sobre RichTextBlock.
 
 Ciertas condiciones requieren TextBlock para volver a una ruta de acceso más enriquecida de código intensivo de CPU para la representación de texto. Para mantener la representación de texto en la ruta de acceso rápido, asegúrate de seguir estas directrices al establecer las propiedades enumeradas aquí.
-- [**Text**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx): La condición más importante es que la ruta de acceso rápido solo se use cuando se establece texto estableciendo explícitamente la propiedad Text en XAML o en el código (como se muestra en los ejemplos anteriores). Establecer el texto a través de la colección de Inlines de TextBlock (como `<TextBlock>Inline text</TextBlock>`), deshabilitará la ruta de acceso rápido, debido a la potencial complejidad de varios formatos.
-- [**CharacterSpacing**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.characterspacing.aspx): Solo el valor predeterminado de 0 es la ruta de acceso rápido.
-- [**Typography**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): Solo los valores predeterminados para las diversas propiedades Typography son la ruta de acceso rápido.
-- [**TextTrimming**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.texttrimming.aspx): Solo los valores **None**, **CharacterEllipsis** y **WordEllipsis** son la ruta de acceso rápido. El valor **Clip** deshabilita la ruta de acceso rápido.
-- [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.linestackingstrategy.aspx): Si [LineHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.lineheight.aspx) no es 0, los valores **BaselineToBaseline** y **MaxHeight** deshabilitan la ruta de acceso rápido.
-- [**IsTextSelectionEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.istextselectionenabled.aspx): Solo **false** es la ruta de acceso rápido. Establecer esta propiedad en **true** deshabilita la ruta de acceso rápido.
+- [
+              **Text**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx): la condición más importante es que la ruta de acceso rápido solo se use cuando se establece texto estableciendo explícitamente la propiedad Text en XAML o en el código (como se muestra en los ejemplos anteriores). Establecer el texto a través de la colección de Inlines de TextBlock (como `<TextBlock>Inline text</TextBlock>`), deshabilitará la ruta de acceso rápido, debido a la potencial complejidad de varios formatos.
+- [
+              **CharacterSpacing**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.characterspacing.aspx): solo el valor predeterminado de 0 es la ruta de acceso rápido.
+- [
+              **Typography**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): solo los valores predeterminados para las diversas propiedades Typography son la ruta de acceso rápido.
+- [
+              **TextTrimming**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.texttrimming.aspx): solo los valores **None**, **CharacterEllipsis** y **WordEllipsis** son la ruta de acceso rápido. El valor **Clip** deshabilita la ruta de acceso rápido.
+- [
+              **LineStackingStrategy**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.linestackingstrategy.aspx): si [LineHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.lineheight.aspx) no es 0, los valores **BaselineToBaseline** y **MaxHeight** deshabilitan la ruta de acceso rápido.
+- [
+              **IsTextSelectionEnabled**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.istextselectionenabled.aspx): solo **false** es la ruta de acceso rápido. Establecer esta propiedad en **true** deshabilita la ruta de acceso rápido.
 
 Puedes establecer la propiedad [DebugSettings.IsTextPerformanceVisualizationEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.debugsettings.istextperformancevisualizationenabled.aspx) en **true** durante la depuración para determinar si el texto usa representación de la ruta de acceso rápido. Cuando se establece esta propiedad en true, el texto que se encuentra en la ruta de acceso rápido se muestra en un color verde claro. 
 
->**Sugerencia**&nbsp;&nbsp;Esta característica se explica a profundidad en esta sesión de la compilación 2015- [Rendimiento XAML: técnicas para maximizar experiencias de aplicación universal de Windows creada con XAML](https://channel9.msdn.com/Events/Build/2015/3-698).
+>**Sugerencia**
+            &nbsp;&nbsp;Esta característica se explica a profundidad en esta sesión de Build 2015: [Techniques for Maximizing Universal Windows App Experiences Built with XAML (Rendimiento XAML: técnicas para maximizar experiencias de aplicación de Windows Universal creada con XAML.)](https://channel9.msdn.com/Events/Build/2015/3-698).
 
  
 
@@ -97,17 +111,19 @@ En este ejemplo, el primer TextBlock se representa con la ruta de acceso rápido
 <StackPanel/>
 ```
 
-Al ejecutar este XAML en modo de depuración con la IsTextPerformanceVisualizationEnabled establecida en true, el resultado tiene este aspecto.
+Al ejecutar este XAML en modo de depuración con la propiedad IsTextPerformanceVisualizationEnabled establecida en true, el resultado tiene este aspecto.
 
 ![Texto representado en modo de depuración](images/text-block-rendering-performance.png)
 
->**Precaución**&nbsp;&nbsp;El color del texto que no está en la ruta de acceso rápido no cambia. Si hay texto en la aplicación con el color especificado como verde claro, se sigue mostrando en verde claro cuando con una ruta de acceso de representación más lenta. Ten cuidado de no confundir el texto establecido en verde en la aplicación con el texto que se encuentra en la ruta de acceso rápido y está establecido en verde debido a la configuración de depuración.
+>**Precaución**
+            &nbsp;&nbsp;El color del texto que no está en la ruta de acceso rápido no cambia. Si hay texto en la aplicación con el color especificado como verde claro, se sigue mostrando en verde claro cuando se encuentra en la ruta de acceso de representación más lenta. Ten cuidado de no confundir el texto establecido en verde en la aplicación con el texto que se encuentra en la ruta de acceso rápido y está establecido en verde debido a la configuración de depuración.
 
 ## Formato de texto
 
-Aunque la propiedad Text almacena texto sin formato, puedes aplicar diversas opciones de formato al control TextBlock para personalizar la representación del texto en la aplicación. Puedes establecer las propiedades de control estándar, como FontFamily, FontSize, FontStyle, Foreground y CharacterSpacing, para cambiar el aspecto del texto. También puedes usar elementos de texto en línea y propiedades adjuntas a Typography para dar formato al texto. Estas opciones solo afectan al modo en que el TextBlock muestra el texto localmente, por lo que si copias y pegas el texto en un control de texto enriquecido, por ejemplo, no se aplica ningún formato.
+Aunque la propiedad Text almacena texto sin formato, puedes aplicar diversas opciones de formato al control TextBlock para personalizar la representación del texto en la aplicación. Puedes establecer las propiedades de control estándar, como FontFamily, FontSize, FontStyle, Foreground y CharacterSpacing, para cambiar el aspecto del texto. También puedes usar elementos de texto en línea y propiedades adjuntas a Typography para dar formato al texto. Estas opciones solo afectan al modo en que el objeto TextBlock muestra el texto localmente, por lo que si copias y pegas el texto en un control de texto enriquecido, por ejemplo, no se aplica ningún formato.
 
->**Nota**&nbsp;&nbsp;Recuerda que, como hemos explicado en la sección anterior, los elementos de texto en línea y los valores de tipografía que no son predeterminados no se representan en la ruta de acceso rápido.
+>**Nota**
+            &nbsp;&nbsp;Recuerda que, como hemos explicado en la sección anterior, los elementos de texto en línea y los valores de tipografía que no son predeterminados no se representan en la ruta de acceso rápido.
  
 
 ### Elementos en línea
@@ -158,11 +174,6 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 <TextBlock>12 x <Run Typography.Fraction="Slashed">1/3</Run> = 4.</TextBlock>
 ```
 
-## Recomendaciones
-
-
-
-\[Este artículo contiene información específica de las aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
 
 ## Artículos relacionados
 
@@ -182,6 +193,6 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

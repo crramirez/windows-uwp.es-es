@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
 title: Mantener la capacidad de respuesta del subproceso de la interfaz de usuario
 description: Los usuarios esperan que las aplicaciones sigan respondiendo mientras realizan cálculos, independientemente del tipo de equipo.
@@ -22,7 +23,9 @@ Entre las fases más lentas de una aplicación se incluyen el inicio y el cambio
 -   Usa [x: DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785) para retrasar la creación de instancias de elementos.
 -   Inserta mediante programación los elementos en el árbol a petición.
 
-[**CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918) pone el trabajo en cola para que el subproceso de la interfaz de usuario lo procese cuando no esté ocupado.
+[
+              **CoreDispatcher.RunIdleAsync**
+            ](https://msdn.microsoft.com/library/windows/apps/Hh967918) pone el trabajo en cola para que el subproceso de la interfaz de usuario lo procese cuando no esté ocupado.
 
 ## Usar API asincrónicas
 
@@ -32,7 +35,7 @@ Para ayudar a mantener la capacidad de respuesta de la aplicación, la plataform
 
 Programa los controladores de eventos para volver rápidamente. En los casos en los que se deba realizar una cantidad de trabajo no trivial, prográmalo en un subproceso en segundo plano que vuelva.
 
-Puedes programar el trabajo de manera asincrónica mediante el operador **await** en C#, el operador **Await** en Visual Basic o delegados en C++. Pero esto no garantiza que el trabajo que programes se ejecutará en un subproceso en segundo plano. Muchas de las API de la Plataforma universal de Windows (UWP) programan el trabajo en el subproceso en segundo plano automáticamente, pero si llamas al código de tu aplicación usando únicamente **await** o un delegado, ejecutarás dicho método o delegado en el subproceso de interfaz de usuario. Debes indicar de manera explícita cuándo quieres ejecutar el código de tu aplicación en un subproceso en segundo plano. En C# y Visual Basic puedes hacerlo pasando código a [**Task.Run**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.threading.tasks.task.run.aspx).
+Puedes programar el trabajo de manera asincrónica mediante el operador **await** en C#, el operador **Await** en Visual Basic o delegados en C++. Pero esto no garantiza que el trabajo que programes se ejecutará en un subproceso en segundo plano. Muchas de las API de la Plataforma universal de Windows (UWP) programan el trabajo en el subproceso en segundo plano automáticamente, pero si llamas al código de tu aplicación usando únicamente **await** o un delegado, ejecutarás dicho método o delegado en el subproceso de interfaz de usuario. Debes indicar de manera explícita cuándo quieres ejecutar el código de tu aplicación en un subproceso en segundo plano. En C# y Visual Basic puedes hacerlo pasando código a [**Task.Run**](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.task.run.aspx).
 
 Recuerda que solo se puede tener acceso a los elementos de la interfaz de usuario desde el subproceso de interfaz de usuario. Usa el subproceso de interfaz de usuario para tener acceso a los elementos de interfaz de usuario antes de iniciar el trabajo en segundo plano, o bien usa [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) o [**CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918) en el subproceso en segundo plano.
 
@@ -58,41 +61,41 @@ public class AsyncExample
 ```
 
 > [!div class="tabbedCodeSnippets"]
-```csharp
-public class Example
-{
-    // ...
-    private async void NextMove-Click(object sender, RoutedEventArgs e)
-    {
-        await Task.Run(() => ComputeNextMove());
-        // Update the UI with results
-    }
-
-    private async Task ComputeNextMove()
-    {
-        // ...
-    }
-    // ...
-}
-```
-```vb
-Public Class Example
-    ' ...
-    Private Async Sub NextMove-Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
-        Await Task.Run(Function() ComputeNextMove())
-        ' update the UI with results
-    End Sub
-
-    Private Async Function ComputeNextMove() As Task
-        ' ...
-    End Function
-    ' ...
-End Class
-```
+> ```csharp
+> public class Example
+> {
+>     // ...
+>     private async void NextMove-Click(object sender, RoutedEventArgs e)
+>     {
+>         await Task.Run(() => ComputeNextMove());
+>         // Update the UI with results
+>     }
+> 
+>     private async Task ComputeNextMove()
+>     {
+>         // ...
+>     }
+>     // ...
+> }
+> ```
+> ```vb
+> Public Class Example
+>     ' ...
+>     Private Async Sub NextMove-Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+>         Await Task.Run(Function() ComputeNextMove())
+>         ' update the UI with results
+>     End Sub
+> 
+>     Private Async Function ComputeNextMove() As Task
+>         ' ...
+>     End Function
+>     ' ...
+> End Class
+> ```
 
 En este ejemplo, el controlador `NextMove-Click` vuelve a **await** para mantener la capacidad de respuesta del subproceso de la interfaz de usuario. Sin embargo, la ejecución se retoma en dicho controlador después de completar `ComputeNextMove` (que se ejecuta en un subproceso en segundo plano). El código restante del controlador actualiza la interfaz de usuario con los resultados.
 
-> **Nota**  También existe una API de [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) y [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR229621timer) para UWP que puede usarse para escenarios similares. Para obtener más información, consulta [Subprocesamiento y programación asincrónica](https://msdn.microsoft.com/library/windows/apps/Mt187340).
+> **Nota**  También existe una API de [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) y [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) para UWP que puede usarse para escenarios similares. Para obtener más información, consulta [Subprocesamiento y programación asincrónica](https://msdn.microsoft.com/library/windows/apps/Mt187340).
 
 ## Temas relacionados
 
@@ -100,6 +103,6 @@ En este ejemplo, el controlador `NextMove-Click` vuelve a **await** para mantene
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

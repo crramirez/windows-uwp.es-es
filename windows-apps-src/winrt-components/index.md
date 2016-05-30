@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 title: Componentes de Windows Runtime
 description: Los componentes de Windows Runtime son objetos independientes que permiten crear una instancia y se pueden usar desde cualquier lenguaje, como C#, Visual Basic, JavaScript y C++.
 ms.assetid: 55887622-828b-4318-87f2-25592268f7c1
@@ -30,6 +31,6 @@ Puedes usar Visual Studio y C#, Visual Basic o C++ para crear componentes de Win
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

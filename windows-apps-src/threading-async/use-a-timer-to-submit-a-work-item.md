@@ -1,11 +1,12 @@
 ---
+author: TylerMSFT
 ms.assetid: AAE467F9-B3C7-4366-99A2-8A880E5692BE
 title: Enviar un elemento de trabajo con un temporizador
 description: Obtén información acerca de cómo crear un elemento de trabajo que se ejecute después de que transcurra un temporizador.
 ---
 # Enviar un elemento de trabajo con un temporizador
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** API importantes **
 
@@ -18,7 +19,7 @@ Obtén información acerca de cómo crear un elemento de trabajo que se ejecute 
 
 Usa el método [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) para crear un temporizador para el elemento de trabajo. Envía un lambda que realice el trabajo y usa el parámetro *delay* para especificar cuánto tiempo espera el grupo de subprocesos antes de poder asignar el elemento de trabajo a un subproceso disponible. El retraso se especifica con una estructura [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996).
 
-> **Nota**  Puedes usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acceder a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
+> **Nota** Puedes usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acceder a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta en tres minutos:
 
@@ -69,7 +70,7 @@ En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta en tres mi
 >                     // UI components can be accessed within this scope.
 >                     // 
 > 
->                     ExampleUIUpdateMethod(&quot;Timer completed.&quot;);
+>                     ExampleUIUpdateMethod("Timer completed.");
 > 
 >                 }));
 > 
@@ -148,7 +149,7 @@ En el siguiente ejemplo se crea un temporizador que envía el elemento de trabaj
 > completed = false;
 > 
 > ThreadPoolTimer ^ DelayTimer = ThreadPoolTimer::CreateTimer(
->         ref new TimerElapsedHandler([&amp;](ThreadPoolTimer ^ source)
+>         ref new TimerElapsedHandler([&](ThreadPoolTimer ^ source)
 >         {
 >             // 
 >             // TODO: Work
@@ -158,7 +159,7 @@ En el siguiente ejemplo se crea un temporizador que envía el elemento de trabaj
 >             // Update the UI thread by using the UI core dispatcher.
 >             // 
 >             Dispatcher->RunAsync(CoreDispatcherPriority::High,
->                 ref new DispatchedHandler([&amp;]()
+>                 ref new DispatchedHandler([&]()
 >                 {
 >                     // 
 >                     // UI components can be accessed within this scope.
@@ -170,14 +171,14 @@ En el siguiente ejemplo se crea un temporizador que envía el elemento de trabaj
 > 
 >         }),
 >         delay,
->         ref new TimerDestroyedHandler([&amp;](ThreadPoolTimer ^ source)
+>         ref new TimerDestroyedHandler([&](ThreadPoolTimer ^ source)
 >         {
 >             // 
 >             // TODO: Handle work cancellation/completion.
 >             // 
 > 
 >             Dispatcher->RunAsync(CoreDispatcherPriority::High,
->                 ref new DispatchedHandler([&amp;]()
+>                 ref new DispatchedHandler([&]()
 >                 {
 >                     // 
 >                     // Update the UI thread by using the UI core dispatcher.
@@ -227,6 +228,6 @@ Para obtener información sobre cómo repetir temporizadores, consulta [Crear un
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

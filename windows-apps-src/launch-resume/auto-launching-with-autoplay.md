@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 title: Inicio automático con Reproducción automática
 description: Puedes usar Reproducción automática para ofrecer tu aplicación como una opción cuando un usuario conecte un dispositivo a su PC. Esto incluye dispositivos que no son de volumen, como una cámara o un reproductor de medios, o dispositivos de volumen, como una unidad USB, una tarjeta SD o un DVD.
 ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
 ---
 
-# <span id="dev_launch_resume.auto-launching_with_autoplay"></span>Inicio automático con Reproducción automática (HTML)
+# <span id="dev_launch_resume.auto-launching_with_autoplay"></span>Inicio automático con Reproducción automática
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -12,11 +13,11 @@ ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
 
 Puedes usar **Reproducción automática** para ofrecer tu aplicación como una opción cuando un usuario conecte un dispositivo a su PC. Esto incluye dispositivos que no son de volumen, como una cámara o un reproductor de medios, o dispositivos de volumen, como una unidad USB, una tarjeta SD o un DVD. También puedes usar **Reproducción automática** para ofrecer tu aplicación como una opción cuando los usuarios compartan archivos entre dos equipos mediante proximidad (pulsación).
 
-> **Note**  Si eres un fabricante de dispositivos y quieres asociar tu [Aplicación para dispositivo de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkID=301381) como controlador de **Reproducción automática** en tu dispositivo, puedes identificar esa aplicación en los metadatos del dispositivo. Para obtener más información, consulta el tema sobre la [Reproducción automática de aplicaciones para dispositivo de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkId=306684).
+> **Nota**  Si eres un fabricante de dispositivos y quieres asociar tu [aplicación para dispositivo de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkID=301381) como controlador de **Reproducción automática** en tu dispositivo, puedes identificar esa aplicación en los metadatos del dispositivo. Para obtener más información, consulta el tema sobre la [Reproducción automática de aplicaciones para dispositivo de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkId=306684).
 
 ## Registrar una aplicación para el contenido de Reproducción automática
 
-Puedes registrar aplicaciones como opciones para eventos de contenido de **Reproducción automática**. Los eventos de contenido de **Reproducción automática** se generan cuando se inserta en el equipo un dispositivo de volumen, como una tarjeta de memoria de una cámara, una unidad USB o un DVD. Aquí te mostramos cómo identificar tu aplicación como una opción de **Reproducción automática** cuando se inserta un dispositivo de volumen de una cámara.
+Puedes registrar aplicaciones como opciones para eventos de contenido de **Reproducción automática**. Los eventos de contenido de **Reproducción automática** se generan cuando se inserta en el equipo un dispositivo de volumen, como una tarjeta de memoria de cámara, una unidad USB o un DVD. Aquí te mostramos cómo identificar tu aplicación como una opción de **Reproducción automática** cuando se inserta un dispositivo de volumen de una cámara.
 
 En este tutorial, creaste una aplicación que muestra archivos de imagen o los copia a Imágenes. Registraste la aplicación para el evento de contenido **ShowPicturesOnArrival** de Reproducción automática.
 
@@ -63,7 +64,7 @@ La configuración **Nombre para mostrar de la acción** identifica la cadena que
 
 Abre el archivo MainPage.xaml y agrega el siguiente XAML a la sección &lt;Grid&gt; predeterminada.
 
-```xaml
+```xml
 <TextBlock FontSize="18">File List</TextBlock>
 <TextBlock x:Name="FilesBlock" HorizontalAlignment="Left" TextWrapping="Wrap" 
            VerticalAlignment="Top" Margin="0,20,0,0" Height="280" Width="240" />
@@ -256,7 +257,7 @@ Las API necesarias para obtener acceso al almacenamiento en un dispositivo port�
 
 Abre el archivo MainPage.xaml y agrega el siguiente XAML a la sección &lt;Grid&gt; predeterminada.
 
-```xaml
+```xml
 <StackPanel Orientation="Vertical" Margin="10,0,-10,0">
     <TextBlock FontSize="24">Device Information</TextBlock>
     <StackPanel Orientation="Horizontal">
@@ -282,7 +283,7 @@ Abre el archivo MainPage.xaml y agrega el siguiente XAML a la sección &lt;Grid&
 
 ### Paso 4: Agregar código de activación
 
-El código de este paso hace referencia a la cámara como [**StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654), pasando el identificador de información del dispositivo de la cámara al método [**FromId**](https://msdn.microsoft.com/library/windows/apps/br225655). El identificador de información del dispositivo de la cámara se obtiene difundiendo primero los argumentos del evento como [**DeviceActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224710) y después obteniendo el valor de la propiedad [**DeviceInformationId**](https://msdn.microsoft.com/library/windows/apps/br224711).
+El código de este paso hace referencia a la cámara como [**StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) al pasar el identificador de información del dispositivo de la cámara al método [**FromId**](https://msdn.microsoft.com/library/windows/apps/br225655). El identificador de información del dispositivo de la cámara se obtiene difundiendo primero los argumentos del evento como [**DeviceActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224710) y después obteniendo el valor de la propiedad [**DeviceInformationId**](https://msdn.microsoft.com/library/windows/apps/br224711).
 
 Abre el archivo App.xaml.cs y agrega el siguiente código a la clase **App**.
 
@@ -332,7 +333,7 @@ protected override void OnActivated(IActivatedEventArgs args)
 }
 ```
 
-> **Note**  En el siguiente paso se agrega el método `ShowImages`.
+> **Nota**  En el siguiente paso se agrega el método `ShowImages`.
 
 ### Paso 5: Agregar código para mostrar información de dispositivo
 
@@ -451,7 +452,7 @@ El valor **Evento de contenido** es el texto que suministraste para la clave **C
 
 Abre el archivo MainPage.xaml y agrega el siguiente XAML a la sección &lt;Grid&gt; predeterminada.
 
-```xaml
+```xml
 <StackPanel Orientation="Vertical">
     <TextBlock FontSize="28" Margin="10,0,800,0">Files</TextBlock>
     <TextBlock x:Name="FilesBlock" FontSize="22" Height="600" Margin="10,0,800,0" />
@@ -477,7 +478,7 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-> **Note**  En el siguiente paso se agrega el método `DisplayFiles`.
+> **Nota**  En el siguiente paso se agrega el método `DisplayFiles`.
 
  
 
@@ -577,6 +578,6 @@ Puedes agregar una extensión al archivo package.appxmanifest de tu aplicación 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

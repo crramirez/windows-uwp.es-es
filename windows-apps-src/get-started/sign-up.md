@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 ms.assetid: 16AB1111-4BA8-4352-B796-E97AA9243E31
 title: ¿Estás listo para registrarte?
 description: Regístrate ahora para obtener una cuenta de desarrollador y, de este modo, lograr que tus aplicaciones se incluyan en la Tienda Windows y participar en otros programas de Microsoft.
@@ -19,6 +20,6 @@ Apenas tengas tu cuenta de desarrollador, puedes [crear tu aplicación reservand
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

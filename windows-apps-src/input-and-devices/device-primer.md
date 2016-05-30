@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma.
 title: Dispositivo básico para aplicaciones de la Plataforma universal de Windows (UWP)
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
@@ -9,7 +10,7 @@ template: detail.hbs
 #  Dispositivo básico para aplicaciones de la Plataforma universal de Windows (UWP)
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 ![dispositivos de Windows](images/device-primer/1894834-hig-device-primer-01-500.png)
@@ -186,13 +187,13 @@ Funcionalidades típicas del dispositivo
 
  
 
-\[Este artículo contiene información específica de las aplicaciones para UWP y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
  
 
  
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

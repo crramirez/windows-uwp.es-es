@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Los iconos adecuados armonizan con la tipografía y con el resto del lenguaje de diseño. No mezclan metáforas y comunican solo lo necesario de la manera más rápida y simple posible. 
 title: Iconos
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
@@ -82,7 +83,7 @@ Estas líneas pueden combinarse, unirse, girarse y reflejarse en la creación de
     </tr>  
 </table>
 
-### Ejemplos
+<p>A continuación, se muestran algunos ejemplos:</p>
 
 <table>
     <tr>
@@ -152,9 +153,7 @@ El color de un distintivo solo debe usarse para transmitir el estado de un icono
 
 <table>
 <tr><td>Verde - #128B44</td><td>Azul - #2C71B9</td><td>Amarillo - #FDC214</td></tr>
-<tr><td>Positivo: listo, 
-completado </td><td>Neutro: ayuda, 
-notificación </td><td>Precaución: alerta, advertencia </td></tr>
+<tr><td>Positivo: listo, completado </td><td>Neutro: ayuda, notificación </td><td>Precaución: alerta, advertencia </td></tr>
 <tr><td>![Green status](images/icons-color-inbadging-1.png)</td><td>![Blue status](images/icons-color-inbadging-2.png)</td>
 <td>![Yellow status](images/icons-color-inbadging-3.png)</td></tr>
 </table>
@@ -172,6 +171,7 @@ Los distintivos deben tener un tamaño de entre 10 y 18 píxeles en una cuadríc
 
 * [Directrices sobre los activos de icono y de ventanas](../controls-and-patterns/tiles-and-notifications-app-assets.md)
 
-<!--HONumber=Mar16_HO5-->
+
+<!--HONumber=May16_HO2-->
 
 

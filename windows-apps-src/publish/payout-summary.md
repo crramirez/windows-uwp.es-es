@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: En el apartado Resumen de pago se muestran los detalles sobre el dinero que has ganado con tus aplicaciones y productos desde la aplicación. Asimismo, también te permite saber cuándo recibirás los pagos y cuánto te pagarán.
 title: Resumen de pago
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
@@ -9,7 +10,7 @@ ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 
 En el apartado **Resumen de pago** se muestran los detalles sobre el dinero que has ganado con tus aplicaciones y productos desde la aplicación. Asimismo, también te permite saber cuándo recibirás los pagos y cuánto te pagarán.
 
-Si usas Microsoft Advertising para ganar dinero a partir del 1 de abril de 2016, también podrás ver la información de pago acerca de las ganancias de publicidad en **Resumen de pago**. Para obtener más información acerca de las directivas de pago de publicidad, consulta el [Directivas de pago de pubCenter](http://go.microsoft.com/fwlink/p/?LinkID=624469).
+Si usas Microsoft Advertising para ganar dinero a partir del 1 de abril de 2016, también podrás ver la información de pago acerca de las ganancias de publicidad en **Resumen de pago**. Se te mostrará la aplicación que ha generado estas ganancias, o bien "sin asignar" para las unidades de anuncio que se usan en varias aplicaciones o que no se pueden asignar a una aplicación específica. Para obtener más información acerca de las directivas de pago de publicidad, consulta el [Directivas de pago de pubCenter](http://go.microsoft.com/fwlink/p/?LinkID=624469).
 
 Si vendes productos en Azure Marketplace, también verás información sobre los pagos efectuados correctamente desde el 1 de noviembre de 2015 en adelante en **Resumen de pago**. Para obtener más detalles sobre el pago en Azure Marketplace, consulta la página [Microsoft Azure Marketplace Participation Policies (Directivas de participación de Microsoft Azure Marketplace)](http://go.microsoft.com/fwlink/p/?LinkId=722436) y el documento [Microsoft Azure Marketplace Publisher Agreement (Acuerdo del publicador de Microsoft Azure Marketplace)](http://go.microsoft.com/fwlink/p/?LinkID=699560 ). Puedes encontrar más información sobre cómo ver la información de pagos anteriores de Azure Marketplace [aquí](http://go.microsoft.com/fwlink/p/?LinkID=722439).
 
@@ -68,7 +69,7 @@ En la siguiente tabla se describen los campos que aparecen en el archivo .csv. T
 
 | Nombre del campo              | Descripción                                                                                                                              |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Fuente de ingresos          | La fuente de tus ingresos basada en dónde se produjo la transacción (por ejemplo, Tienda de Windows Phone, Tienda de Windows 8, Tienda Windows, etc.).  |
+| Fuente de ingresos          | Fuente de tus ingresos basada en dónde se produjo la transacción (por ejemplo, Tienda Windows, Tienda de Windows Phone, Tienda Windows 8, Microsoft Advertising, etc.). |
 | Id. de transacción          | Identificador único de transacción                                                                                                            |
 | Hora y fecha de transacción   | Fecha y hora en que se realizó la transacción (hora UTC)                                                                                         |
 | Id. del producto principal       | Identificador del producto principal único. Ten en cuenta que, si no hay un producto principal para la transacción, el identificador del producto principal es igual al identificador del producto. |
@@ -76,8 +77,9 @@ En la siguiente tabla se describen los campos que aparecen en el archivo .csv. T
 | Nombre del producto principal     | Nombre del producto principal. Ten en cuenta que, si no hay un producto principal para la transacción, el nombre del producto principal es igual al nombre del producto.   |
 | Nombre del producto            | Nombre del producto                                                                                                                      |
 | Tipo de producto            | Tipo de producto (por ejemplo aplicación, desde la aplicación, juego, etc.)                                                                                        |
+| Cantidad                | Si el valor de Fuente de ingresos es la Tienda Windows para empresas, Cantidad representa el número de licencias adquiridas. Para otras fuentes de ingresos, el valor de Cantidad siempre será 1. Nota: Aunque una misma transacción esté dividida en dos artículos de línea debido al uso de dos métodos de pago distintos, cada artículo de línea mostrará un valor de 1 en Cantidad.                                                                     |
 | Tipo de transacción        | Tipo de transacción (por ejemplo, compra, reembolso, inversión, anulación, etc.)                                                               |
-| Método de pago          | Instrumento de pago del cliente usado para la transacción (por ejemplo, tarjeta de crédito, operador de telefonía móvil, etc.)                                        |
+| Método de pago          | Instrumento de pago del cliente usado para la transacción (por ejemplo, tarjeta, facturación del operador de telefonía móvil, PayPal, etc.)                                        |
 | País o región        | País o región donde se realizó la transacción                                                                                            |
 | Proveedor o vendedor local | Proveedor o vendedor local de registro                                                                                                          |
 | Moneda de transacción    | Moneda de la transacción                                                                                                              |
@@ -105,6 +107,6 @@ En la siguiente tabla se describen los campos que aparecen en el archivo .csv. T
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

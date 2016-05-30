@@ -1,13 +1,14 @@
 ---
-title: Controlar la reanudación de la aplicación
+author: mcleblanc
+title: Administrar la reanudación de la aplicación
 description: Aprende a actualizar el contenido mostrado cuando el sistema reanuda la aplicación.
 ms.assetid: DACCC556-B814-4600-A10A-90B82664EA15
 ---
 
-# Controlar la reanudación de la aplicación
+# Administrar la reanudación de la aplicación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -51,7 +52,7 @@ MainPage::MainPage()
 {
     InitializeComponent();
     Application::Current->Resuming += 
-        ref new EventHandler<Platform::Object^>(this, &amp;MainPage::App_Resuming);
+        ref new EventHandler<Platform::Object^>(this, &MainPage::App_Resuming);
 }
 ```
 
@@ -87,7 +88,7 @@ void MainPage::App_Resuming(Object^ sender, Object^ e)
 }
 ```
 
-> **Nota**  Como el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) no se genera desde el subproceso de la interfaz de usuario, deberá usarse un distribuidor para acceder al subproceso de la interfaz de usuario e inyectar una actualización en ella, si eso es lo que se quiere hacer en el controlador.
+> **Nota** Dado que el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) no se genera desde el subproceso de la interfaz de usuario, deberá usarse un distribuidor para acceder al subproceso de la interfaz de usuario e inyectar una actualización en ella, si eso es lo que se quiere hacer en el controlador.
 
 ## Comentarios
 
@@ -96,9 +97,9 @@ El sistema suspende la aplicación cuando el usuario cambia a otra aplicación o
 
 Si la aplicación no tiene contenido mostrado que deba actualizar, no es necesario que controle el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339).
 
-** Una nota sobre la depuración con Visual Studio: ** cuando la aplicación está conectada al depurador de Visual Studio, puedes enviar un evento **Resume**. Asegúrate de que se muestra la **barra de herramientas Ubicación de depuración** y haz clic en el menú desplegable junto al icono **Suspender**. A continuación, elige **Reanudar**.
+**Una nota sobre la depuración con Visual Studio:** si la aplicación está conectada al depurador de Visual Studio, puedes enviar un evento **Resume**. Asegúrate de que se muestra la **barra de herramientas Ubicación de depuración** y haz clic en el menú desplegable junto al icono **Suspender**. A continuación, elige **Reanudar**.
 
-> **Nota**  En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida por el momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
+> **Nota** En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida por el momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
 
 ## Temas relacionados
 
@@ -110,6 +111,6 @@ Si la aplicación no tiene contenido mostrado que deba actualizar, no es necesar
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

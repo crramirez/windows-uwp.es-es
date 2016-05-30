@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Mostrar listas y habilitar la interacción con el contenido basado en la colección.
 title: Listas
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
-label: Listas
+label: Lists
 template: detail.hbs
 ---
 # Listas
@@ -25,7 +26,7 @@ Se proporcionan directrices de diseño, características y ejemplos para cada pa
 
 ## Vistas de lista
 
-Las vistas de lista te permiten clasificar elementos y asignar encabezados de grupo, arrastrar y soltar elementos, mantener el contenido y reordenar los elementos.
+Las vistas de lista te permiten clasificar elementos y asignar encabezados de grupo, arrastrar y colocar elementos, mantener el contenido y reordenar los elementos.
 
 ### ¿Es este el control adecuado?
 
@@ -174,10 +175,9 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 
 ## Artículos relacionados
 
-**Para diseñadores**
-- [Hub](hub.md)
-- [Maestro/detalles](master-details.md)
-- [Panel de navegación](nav-pane.md)
+- [Concentrador](hub.md)
+- [Patrón de maestro y detalles](master-details.md)
+- [Paneles de navegación](nav-pane.md)
 - [Zoom semántico](semantic-zoom.md)
 
 **Para desarrolladores**
@@ -189,6 +189,6 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

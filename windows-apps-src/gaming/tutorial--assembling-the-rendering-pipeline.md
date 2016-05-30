@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Ensamblar el marco de representación
 description: Ahora vamos a ver cómo el juego de muestra usa esa estructura y ese estado para mostrar sus gráficos.
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
@@ -16,7 +17,7 @@ Hasta ahora, has visto cómo estructurar un juego de la Plataforma universal de 
 
 -   Comprender cómo configurar un marco de representación básico para mostrar la salida de gráficos para un juego DirectX de UWP.
 
-> **Note**   Los siguientes archivos de código no se analizan en este tema, pero proporcionan clases y métodos a los que se hace referencia aquí y se [proporcionan como código al final de este tema](#code_sample):
+> **Nota** Los siguientes archivos de código no se analizan en este tema, pero proporcionan clases y métodos a los que se hace referencia aquí y se [proporcionan como código al final de este tema](#code_sample):
 -   **Animate.h/.cpp**.
 -   **BasicLoader.h/.cpp**. Proporciona métodos para cargar mallas, sombreadores y texturas, tanto de manera sincrónica como asincrónica. Es muy útil.
 -   **MeshObject.h/.cpp**, **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp** y **WorldMesh.h/.cpp**. Contiene las definiciones de los primitivos de objetos usados en el juego, como las esferas de munición, los obstáculos de cono y cilindro, y las paredes de la galería de disparos. (**GameObject.cpp**, que se analiza brevemente en este tema, contiene el método para representar estos primitivos.)
@@ -853,7 +854,7 @@ En el código de muestra del juego, definimos e implementamos los primitivos en 
 
 **MeshObject.h/.cpp** define la clase base para todos los objetos de malla. Los archivos **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp**, y **WorldMesh.h/.cpp** contienen el código que rellena los búferes de constantes para cada primitivo con el vértice y los datos normales de vértice que definen la geometría del primitivo. Estos archivos de código son una buena forma de empezar si buscas entender cómo crear primitivos de Direct3D en tu propia aplicación de juego, pero no lo analizaremos aquí porque es demasiado específico de la implementación de este juego. Por ahora, damos por sentado que los búferes de vértice de cada primitivo se han rellenado; veamos cómo controla la muestra de juego esos búferes para actualizar el propio juego.
 
-La clase base de los objetos que representan los primitivos desde la perspectiva del juego se define en **GameObject.h./.cpp.** Esta clase, **GameObject**, define los campos y los métodos para los comportamientos comunes de todos los primitivos. Cada tipo de objeto primitivo deriva de él. Veamos cómo se define:
+La clase base para los objetos que representan los primitivos desde la perspectiva del juego se define en **GameObject.h./.cpp.** Esta clase, **GameObject**, define los campos y métodos para los comportamientos comunes en todos los primitivos. Cada tipo de objeto primitivo deriva de él. Veamos cómo se define:
 
 ```cpp
 ref class GameObject
@@ -1003,7 +1004,7 @@ Si se detecta una colisión (un impacto), **GameObject::Render** comprueba el co
 
 Así es como **Material::RenderSetup** configura los búferes de constantes y asigna los recursos de sombreador. De nuevo, observa que el búfer de constantes es el que se usó para actualizar los cambios en los primitivos concretamente.
 
-> **Nota**   La classe **Material** se define en **Material.h/.cpp**.
+> **Nota** La clase **Material** se define en **Material.h/.cpp**.
 
  
 
@@ -1053,7 +1054,7 @@ En este punto, la muestra del juego ha definido los primitivos que deben dibujar
 
 El código de sombreador se define usando el lenguaje de sombreado de alto nivel (HLSL, del inglés High-Level Shader Language), que, en Direct3D 11, se compila desde un programa creado con una sintaxis similar a C. (La sintaxis completa se puede encontrar [aquí](https://msdn.microsoft.com/library/windows/desktop/bb509635).) Los dos sombreadores principales del juego de muestra se definen en **PixelShader.hlsl** y **VertexShader.hlsl**. (También hay dos sombreadores de "baja potencia" definidos para los dispositivos con escasa potencia: **PixelShaderFlat.hlsl** y **VertexShaderFlat.hlsl**. Estos dos sombreadores proporcionan efectos reducidos, por ejemplo no tienen resaltados especulares en las superficies de texturas.) Por último, hay un archivo .hlsli que contiene el formato de los búferes de constantes, **ConstantBuffers.hlsli**.
 
-**ConstantBuffers.hlsli** se define como esto:
+**ConstantBuffers.hlsli** se define de la siguiente manera:
 
 ```cpp
 Texture2D diffuseTexture : register(t0);
@@ -6320,6 +6321,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

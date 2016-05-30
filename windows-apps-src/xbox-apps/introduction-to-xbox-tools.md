@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Introducción a las herramientas de Xbox One
 description: La herramienta específica de Xbox One, Dev Home, con Windows Device Portal.
 area: Xbox
@@ -17,7 +18,7 @@ Para abrir Dev Home, selecciona la ventana **Dev Home** en la pantalla principal
   ![Windows Device Portal](images/windowsdeviceportal_1.png)
 
 ### Interfaz de usuario
-La interfaz de usuario de Dev Home está dividida en las siguientes áreas.
+La interfaz de usuario de Dev Home se divide en las áreas que se describe en las siguientes secciones. Ten en cuenta que aquí se muestran la dirección IP de la consola y el nombre descriptivo.
 
   ![Interfaz de usuario de DevHome](images/devhome_ui.png)
 
@@ -25,7 +26,7 @@ La interfaz de usuario de Dev Home está dividida en las siguientes áreas.
 El encabezado contiene un resumen de la información importante sobre el kit de desarrollo. Esto incluye el nombre de la consola, su dirección IP, el espacio aislado de Xbox Live en que se encuentra y la versión del sistema operativo que se está ejecutando. A la derecha del encabezado, se muestra la hora actual del sistema y la fecha, para mayor comodidad.
 
 #### Ventanas de herramientas
-Bajo el encabezado se encuentra el área principal de la aplicación, que contiene un conjunto de ventanas de herramientas configurable. Estos están pensados para permitir que los desarrolladores personalicen la aplicación para proporcionar acceso a diversas herramientas y conjuntos de información. Para obtener más información acerca de las herramientas, consulta las siguientes descripciones de herramienta individuales. Para obtener información sobre cómo configurar el diseño y la apariencia de las ventanas de herramientas, consulta la sección [Personalizar Dev Home](#customizing-dev-home) más adelante en esta página. 
+Bajo el encabezado se encuentra el área principal de la aplicación, que contiene un conjunto de ventanas de herramientas configurable. Estos están pensados para permitir que los desarrolladores personalicen la aplicación para proporcionar acceso a diversas herramientas y conjuntos de información. Para obtener más información acerca de las herramientas, consulta las siguientes descripciones de herramienta individuales. Para obtener información sobre cómo configurar el diseño y la apariencia de las ventanas de herramientas, consulta la sección [Personalizar Dev Home](#customizing-dev-home) más adelante en esta página.
 
 ##### Menú principal
 Si presionas el botón **Menú** en el controlador o vas al botón de menú (la "hamburguesa") en la parte superior izquierda de la pantalla, puedes acceder al menú principal que te permite configurar el color del tema y la imagen de fondo del área de trabajo de la aplicación, además de enviar comentarios sobre la aplicación.
@@ -80,13 +81,15 @@ Cuando se comuniques con la consola desde el equipo de desarrollo, puedes establ
 
 Para definir un nombre de host para un kit de desarrollo, ve a la herramienta de configuración de la consola y escribe el nombre de host en el cuadro __Nombre de host__.  
 
-  > **Nota**& nbsp; & nbsp; No se requiere un nombre exclusivo para la creación del nombre de host. Por lo tanto, intenta evitar la duplicación de nombres. Una manera de hacerlo es derivar el nombre de host del nombre de tu equipo de desarrollo, que normalmente es único dentro de una organización.
+  > **Nota**
+            &nbsp;&nbsp;No se requiere un nombre exclusivo para la creación del nombre de host. Por lo tanto, intenta evitar la duplicación de nombres. Una manera de hacerlo es derivar el nombre de host del nombre de tu equipo de desarrollo, que normalmente es único dentro de una organización.
 
 ## Windows Device Portal
 Windows Device Portal (WDP) es una herramienta de administración de dispositivos de OneCore que permite una experiencia de administración de dispositivo basada en explorador.
 
-> **Nota**& nbsp; & nbsp;En esta vista previa para desarrolladores, iniciar WDP en Dev Home, provocará que este último se bloquee después de escribir el nombre de usuario y contraseña y hacer clic en **Guardar**. 
-Las credenciales se guardan pero WDP no se inicia. 
+> **Nota**
+            &nbsp;&nbsp;En esta vista previa para desarrolladores, iniciar WDP en Dev Home, provocará que este último se bloquee después de escribir el nombre de usuario y contraseña y hacer clic en **Guardar**.
+Las credenciales se guardan pero WDP no se inicia.
 Puedes iniciar WDP si reinicias Xbox One.
 
 Para habilitar WDP en la consola Xbox One:
@@ -117,6 +120,6 @@ Para habilitar WDP en la consola Xbox One:
 ----
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Sigue estas instrucciones para preparar los paquetes de la aplicación para enviarlos a la Tienda Windows.
 title: Requisitos del paquete de la aplicación
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
@@ -16,7 +17,7 @@ Asegúrate de [probar tu aplicación con el Kit para la certificación de aplica
 
 Si usas Microsoft Visual Studio como entorno de desarrollo, ya cuentas con herramientas integradas que te ayudarán a crear un paquete de la aplicación de manera rápida y sencilla. Para más información, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969).
 
-> **Nota**  Asegúrate de que todos tus nombres de archivo usen ANSI. 
+> **Nota**  Asegúrate de que todos los nombres de archivo usen ANSI. 
 
 
 Cuando crees el paquete en Visual Studio, asegúrate de iniciar sesión con la misma cuenta de Microsoft asociada a tu cuenta de desarrollador. Algunas partes del manifiesto del paquete tienen detalles específicos relacionados con tu cuenta. Esta información se detecta y se agrega automáticamente.
@@ -47,7 +48,7 @@ El manifiesto debe incluir información específica sobre tu cuenta y tu aplicac
 
 Los lotes de la aplicación usan un manifiesto diferente. Revisa la documentación del [manifiesto de lotes](https://msdn.microsoft.com/library/windows/apps/dn263089) para conocer los requisitos y detalles para los manifiestos de lotes de aplicaciones.
 
-> **Sugerencia**  Antes de enviar tu aplicación, asegúrate de ejecutar el [Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/mt186449). Esto puede ayudarte a determinar si tu manifiesto tiene algún problema que pueda causar errores de certificación o envío.
+> **Sugerencia**  Antes de enviar la aplicación, asegúrate de ejecutar el [Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/mt186449). Esto puede ayudarte a determinar si tu manifiesto tiene algún problema que pueda causar errores de certificación o envío.
 
 
 Si la aplicación tiene más de un paquete, estos elementos del manifiesto de la aplicación deben ser iguales en cada paquete (por SO de destino):
@@ -79,6 +80,6 @@ StoreManifest.xml es un archivo de configuración opcional que se puede incluir 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

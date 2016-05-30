@@ -1,10 +1,11 @@
 ---
+author: mtoepke
 title: Agregar contenido visual a la muestra de Marble Maze
-description: En este documento se describe cómo el juego Marble Maze usa Direct3D y Direct2D en el entorno de aplicaciones para Plataforma universal de Windows (UWP) de modo que puedas conocer los patrones y adaptarlos cuando trabajes con el contenido de tu propio juego.
+description: En este documento se describe cómo el juego Marble Maze usa Direct3D y Direct2D en el entorno de aplicaciones de la Plataforma universal de Windows (UWP) para que puedas conocer los patrones y adaptarlos cuando trabajes con el contenido de tu propio juego.
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
 ---
 
-# Agregar contenido visual a la muestra de Marble Maze
+# Agregar contenido visual al ejemplo de Marble Maze
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -24,7 +25,7 @@ Además, nos centramos primero en agregar los activos 3D y luego los activos 2D.
 
 Durante el proceso de desarrollo también fue necesario iterar varias veces algunos de estos pasos. Por ejemplo, al realizar cambios en los modelos de malla y canica, también tuvimos que cambiar parte del código de sombreador que admite esos modelos.
 
-> **Nota**: El código de ejemplo correspondiente a este documento se encuentra en la [muestra de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Nota**   El código de ejemplo correspondiente a este documento se encuentra en el [ejemplo de juego de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 A continuación ofrecemos algunos de los puntos clave tratados en este documento para cuando trabajes con DirectX y contenido visual de juegos; en concreto, para cuando inicialices las bibliotecas de elementos gráficos DirectX, cargues recursos de escena y actualices y presentes la escena:
@@ -47,10 +48,10 @@ Marble Maze usa Direct3D 11.1 para representar los activos 3D del juego, en conc
 
 El desarrollo de un juego exige una buena planificación. Si no tienes experiencia con los elementos gráficos de DirectX, te recomendamos que leas el tema Crear un juego DirectX para familiarizarte con los conceptos básicos de creación de juegos DirectX para UWP. Al tiempo que lees este documento y trabajas con el código fuente de Marble Maze, puedes consultar los siguientes recursos para obtener información más detallada sobre los elementos gráficos DirectX.
 
--   [Gráficos Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080). Se describe Direct3D 11, una eficaz API de elementos gráficos 3D acelerada por hardware para presentar geometría 3D en la plataforma Windows.
--   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990). Se describe Direct2D, una API de elementos gráficos 2D acelerada por hardware que proporciona alto rendimiento y presentación de alta calidad de geometría 2D, mapas de bits y texto.
--   [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038). Se describe DirectWrite, que admite la presentación de texto de alta calidad.
--   [Windows Imaging Component](https://msdn.microsoft.com/library/windows/desktop/ee719902). Se describe WIC, una plataforma extensible que proporciona API de bajo nivel para imágenes digitales.
+-   [Gráficos Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080) Se describe Direct3D 11, una eficaz API de elementos gráficos 3D acelerada por hardware para representar geometría 3D en la plataforma Windows.
+-   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) Se describe Direct2D, una API de elementos gráficos 2D acelerada por hardware que proporciona alto rendimiento y representación de alta calidad de geometría 2D, mapas de bits y texto.
+-   [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) Se describe DirectWrite, que admite la representación de texto de alta calidad.
+-   [Windows Imaging Component](https://msdn.microsoft.com/library/windows/desktop/ee719902) Describe WIC, una plataforma extensible que proporciona API de bajo nivel para imágenes digitales.
 
 ### Niveles de características
 
@@ -242,7 +243,7 @@ DX::ThrowIfFailed(
 
 El método **DeviceResources::CreateWindowSizeDependentResources** inicializa los recursos de elementos gráficos de un modo que funciona para la mayoría de los juegos.
 
-> **Nota**: El término *vista* tiene significados diferentes en Windows Runtime y Direct3D. En Windows en tiempo de ejecución, una vista se refiere a la colección de configuraciones de la interfaz de usuario de una aplicación, incluidos el área de presentación y los comportamientos de entrada, además del subproceso que usa para el procesamiento. La configuración y los parámetros que se necesitan se especifican al crear una vista. El proceso de configuración de la vista de la aplicación se describe en [Estructura de la aplicación Marble Maze](marble-maze-application-structure.md). En Direct3D, el término vista tiene varios significados. En primer lugar, una vista de recursos define los subrecursos a los que puede obtener acceso un recurso. Por ejemplo, cuando un objeto de textura se asocia a una vista de recursos de sombreador, dicho sombreador podrá obtener acceso a la textura más adelante. Una de las ventajas de una vista de recursos es que puedes interpretar datos de formas distintas en diferentes etapas del proceso de representación. Para más información sobre las vistas de recursos, consulta [Vistas de texturas (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb205128). Cuando se usa en el contexto de una transformación de vista o de una matriz de transformación de vista, vista se refiere a la ubicación y la orientación de la cámara. Una transformación de vista cambia la posición de los objetos en el mundo alrededor de la posición y la orientación de la cámara. Para más información sobre las transformaciones de vistas, consulta [Transformación de vista (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb206342). El modo en que Marble Maze usa las vistas de recursos y las vistas de matrices se describe con más detalle en este tema.
+> **Nota**   El término *vista* tiene significados diferentes en Windows Runtime y Direct3D. En Windows en tiempo de ejecución, una vista se refiere a la colección de configuraciones de la interfaz de usuario de una aplicación, incluidos el área de presentación y los comportamientos de entrada, además del subproceso que usa para el procesamiento. La configuración y los parámetros que se necesitan se especifican al crear una vista. El proceso de configuración de la vista de la aplicación se describe en [Estructura de la aplicación Marble Maze](marble-maze-application-structure.md). En Direct3D, el término vista tiene varios significados. En primer lugar, una vista de recursos define los subrecursos a los que puede obtener acceso un recurso. Por ejemplo, cuando un objeto de textura se asocia a una vista de recursos de sombreador, dicho sombreador podrá obtener acceso a la textura más adelante. Una de las ventajas de una vista de recursos es que puedes interpretar datos de formas distintas en diferentes etapas del proceso de representación. Para más información sobre las vistas de recursos, consulta [Vistas de texturas (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb205128). Cuando se usa en el contexto de una transformación de vista o de una matriz de transformación de vista, vista se refiere a la ubicación y la orientación de la cámara. Una transformación de vista cambia la posición de los objetos en el mundo alrededor de la posición y la orientación de la cámara. Para más información sobre las transformaciones de vistas, consulta [Transformación de vista (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb206342). El modo en que Marble Maze usa las vistas de recursos y las vistas de matrices se describe con más detalle en este tema.
 
  
 
@@ -299,7 +300,7 @@ protected:
 
 Al proporcionar una clase base común para los elementos de la interfaz de usuario, la clase **UserInterface**, que administra la interfaz de usuario, solo necesita tener una colección de objetos **ElementBase**, lo que simplifica la administración de la interfaz de usuario y proporciona un administrador de interfaz de usuario reusable. Marble Maze define tipos que derivan de **ElementBase** que implementan comportamientos específicos del juego. Por ejemplo, **HighScoreTable** define el comportamiento de la tabla de puntuaciones máximas. Para obtener más información sobre estos tipos, consulta el código fuente.
 
-> **Nota**: Dado que XAML te permite crear interfaces de usuario complejas con mayor facilidad, como las de los juegos de simulación y estrategia, considera la posibilidad de usar XAML o no para definir tu interfaz de usuario. Para obtener información sobre el desarrollo de una interfaz de usuario con XAML en un juego DirectX de UWP, consulta [Extender la muestra de juego (Windows)](tutorial-resources.md). En este documento se hace referencia a la muestra del juego de disparos 3D con DirectX.
+> **Nota**   Dado que XAML te permite crear interfaces de usuario complejas con mayor facilidad, como las de los juegos de simulación y estrategia, considera la posibilidad de usar XAML para definir la interfaz de usuario. Para obtener información sobre el desarrollo de una interfaz de usuario con XAML en un juego DirectX de UWP, consulta [Extender la muestra de juego (Windows)](tutorial-resources.md). En este documento se hace referencia a la muestra del juego de disparos 3D con DirectX.
 
  
 
@@ -371,7 +372,7 @@ float4 main(sPSInput input) : SV_TARGET
 }
 ```
 
-> **Precaución**: El sombreador de píxeles compilado contiene 32 instrucciones aritméticas y 1 instrucción de textura. Este sombreador debería funcionar correctamente en equipos de escritorio y en tabletas de gama alta. Sin embargo, es posible que un equipo de gama baja no pueda procesar este sombreador y aún así pueda proporcionar una velocidad de fotogramas interactiva. Ten en cuenta el hardware típico del público de destino y diseña los sombreadores para que cumplan con las capacidades de ese hardware.
+> **Precaución**  El sombreador de píxeles compilado contiene 32 instrucciones aritméticas y 1 instrucción de textura. Este sombreador debería funcionar correctamente en equipos de escritorio y en tabletas de gama alta. Sin embargo, es posible que un equipo de gama baja no pueda procesar este sombreador y aún así pueda proporcionar una velocidad de fotogramas interactiva. Ten en cuenta el hardware típico del público de destino y diseña los sombreadores para que cumplan con las capacidades de ese hardware.
 
  
 
@@ -435,7 +436,7 @@ sPSInput main(sVSInput input)
 
 En el documento [Semántica](https://msdn.microsoft.com/library/windows/desktop/bb509647) se describe cada una de las cadenas de semántica disponibles con más detalle.
 
-> **Nota**: En un diseño, puedes especificar componentes adicionales que no se usan para permitir que varios sombreadores compartan el mismo diseño. Por ejemplo, el sombreador no usa el elemento **TANGENT**. Puedes ver el elemento **TANGENT** si quieres experimentar con técnicas como la asignación normal. Al usar la asignación normal, también conocida como mapa de rugosidad, puedes crear el efecto de baches en la superficie de los objetos. Para más información, consulta el tema sobre el [mapa de rugosidad (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb172379).
+> **Nota**   En un diseño, puedes especificar componentes adicionales que no se usan para permitir que varios sombreadores compartan el mismo diseño. Por ejemplo, el sombreador no usa el elemento **TANGENT**. Puedes ver el elemento **TANGENT** si quieres experimentar con técnicas como la asignación normal. Al usar la asignación normal, también conocida como mapa de rugosidad, puedes crear el efecto de baches en la superficie de los objetos. Para más información, consulta el tema sobre el [mapa de rugosidad (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb172379).
 
  
 
@@ -509,9 +510,9 @@ Marble Maze usa SDK-Mesh como formato en tiempo de ejecución porque dicho forma
 
 El método **MarbleMaze::LoadDeferredResources** carga los datos de malla después de cargar los sombreadores de vértices y de píxeles. Una malla es una colección de datos de vértices que a menudo incluye información como posiciones, datos de valores normales, colores, materiales y coordenadas de textura. Las mallas suelen crearse con software de creación 3D y mantenerse en archivos independientes del código de la aplicación. La canica y el laberinto son dos ejemplos de mallas usadas por el juego.
 
-Marble Maze usa la clase **SDKMesh** para administrar mallas. Esta clase se declara en SDKMesh.h. **SDKMesh** proporciona métodos para cargar, presentar y destruir datos de malla.
+Marble Maze usa la clase **SDKMesh** para administrar mallas. Esta clase se declara en SDKMesh.h. **SDKMesh** proporciona métodos para cargar, representar y destruir datos de malla.
 
-> **Importante**: Marble Maze usa el formato SDK-Mesh y proporciona la clase **SDKMesh** solamente a modo de ejemplo. Aunque el formato SDK-Mesh es útil para aprender y crear prototipos, es un formato muy básico que posiblemente no cumpla los requisitos de gran parte del desarrollo de juegos. Te recomendamos usar de un formato de malla que cumpla los requisitos específicos de tu juego.
+> **Importante**   Marble Maze usa el formato SDK-Mesh y proporciona la clase **SDKMesh** solamente a modo de ejemplo. Aunque el formato SDK-Mesh es útil para aprender y crear prototipos, es un formato muy básico que posiblemente no cumpla los requisitos de gran parte del desarrollo de juegos. Te recomendamos usar de un formato de malla que cumpla los requisitos específicos de tu juego.
 
  
 
@@ -899,6 +900,6 @@ Consulta [Agregar métodos de entrada e interactividad en la muestra de Marble M
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

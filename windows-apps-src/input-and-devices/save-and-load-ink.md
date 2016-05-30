@@ -1,15 +1,17 @@
 ---
-Description: Almacena datos de trazo de lápiz en un archivo de formato de intercambio de gráficos (GIF) con los metadatos de Ink Serialized Format (ISF) incrustados.
-title: Almacenar y recuperar trazos de lápiz
+author: Karl-Bridge-Microsoft
+Description: Las aplicaciones para UWP que admiten Windows Ink pueden serializar y deserializar los trazos de lápiz en un archivo de formato Ink Serialized Format (ISF). El archivo ISF es una imagen GIF con metadatos adicionales para todos los comportamientos y propiedades de trazo de lápiz. Las aplicaciones que no están habilitadas para la entrada de lápiz puede ver la imagen GIF estática, incluida la transparencia del fondo del canal alfa.
+title: Almacenar y recuperar datos de trazos de lápiz de Windows Ink
 ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
-label: Store and retrieve ink strokes
+label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
+keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
 ---
 
-# Almacenar y recuperar trazos de lápiz
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+# Almacenar y recuperar datos de trazos de lápiz de Windows Ink
 
-Las aplicaciones que admiten la entrada de lápiz pueden serializar y deserializar los metadatos de entrada de lápiz con total fidelidad, y mantener todos los comportamientos y propiedades. Las aplicaciones que no están habilitadas para la entrada de lápiz puede ver la imagen GIF estática, incluida la transparencia del fondo del canal alfa.
+
+Las aplicaciones para UWP que admiten Windows Ink pueden serializar y deserializar los trazos de lápiz en un archivo de formato Ink Serialized Format (ISF). El archivo ISF es una imagen GIF con metadatos adicionales para todos los comportamientos y propiedades de trazo de lápiz. Las aplicaciones que no están habilitadas para la entrada de lápiz puede ver la imagen GIF estática, incluida la transparencia del fondo del canal alfa.
 
 
 **API importantes**
@@ -32,7 +34,6 @@ Aquí se muestra cómo guardar trazos de lápiz dibujados en un control [**InkCa
 1.  En primer lugar, debemos configurar la interfaz de usuario.
 
     La interfaz de usuario incluye los botones "Save", "Load" y "Clear", así como el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
-
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -63,7 +64,6 @@ Aquí se muestra cómo guardar trazos de lápiz dibujados en un control [**InkCa
 2.  A continuación, definimos algunos comportamientos de entrada de lápiz básicos.
 
     El [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar los datos de entrada del lápiz y el mouse como trazos de lápiz ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), y se declaran los agentes de escucha para los eventos de clic de los botones.
-
 ```    CSharp
 public MainPage()
     {
@@ -89,8 +89,7 @@ public MainPage()
 
     Una vez que se selecciona un archivo, se abre una secuencia [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) establecida en [**ReadWrite**](https://msdn.microsoft.com/library/windows/apps/br241635).
 
-    A continuación, llamamos a [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/br242114) para serializar los trazos de lápiz administrados por el [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) en la secuencia.
-
+    A continuación, llamamos a [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/br242114) para serializar los trazos de lápiz administrados por el objeto [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) en el flujo.
 ```    CSharp
 // Save ink data to a file.
     private async void btnSave_Click(object sender, RoutedEventArgs e)
@@ -154,8 +153,8 @@ public MainPage()
     }
 ```
 
-**Nota**  
-El formato GIF es el único admitido para guardar datos de entrada de lápiz. Sin embargo, el método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) (que se muestra en la sección siguiente) admite otros formatos adicionales por motivos de compatibilidad con versiones anteriores.
+[!NOTE]  
+El formato GIF es el único admitido para guardar datos de entrada de lápiz. Sin embargo, el método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) (que se muestra en la sección siguiente) admite otros formatos por motivos de compatibilidad con versiones anteriores.
 
  
 
@@ -167,7 +166,6 @@ Aquí se muestra cómo cargar trazos de lápiz de un archivo y representarlos en
 1.  En primer lugar, debemos configurar la interfaz de usuario.
 
     La interfaz de usuario incluye los botones "Save", "Load" y "Clear", así como el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
-
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -198,7 +196,6 @@ Aquí se muestra cómo cargar trazos de lápiz de un archivo y representarlos en
 2.  A continuación, definimos algunos comportamientos de entrada de lápiz básicos.
 
     El [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar los datos de entrada del lápiz y el mouse como trazos de lápiz ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), y se declaran los agentes de escucha para los eventos de clic de los botones.
-
 ```    CSharp
 public MainPage()
     {
@@ -225,7 +222,6 @@ public MainPage()
     Una vez que se selecciona un archivo, se abre una secuencia [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) establecida en [**Read**](https://msdn.microsoft.com/library/windows/apps/br241635).
 
     A continuación, llamamos a [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) para leer, deserializar y cargar los trazos de lápiz guardados en el [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492). Cuando los trazos se cargan en el **InkStrokeContainer**, el [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) los representa inmediatamente en el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
-
 ``` csharp
 // Load ink data from a file.
 private async void btnLoad_Click(object sender, RoutedEventArgs e)
@@ -262,16 +258,12 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 **Nota**  
 El formato GIF es el único admitido para guardar datos de entrada de lápiz. Sin embargo, el método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) es compatible con los siguientes formatos por motivos de compatibilidad con versiones anteriores.
 
-| Formato                    | Descripción                                                                                                                                                                                                                                                                                                                                                                                           |
+| Formato                    | Descripción |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | InkSerializedFormat       | Especifica la entrada de lápiz que se vuelve permanente usando ISF. Este formato es la representación más compacta y persistente de la entrada de lápiz. Puede incrustarse en un formato de documento binario o colocarse directamente en el Portapapeles.                                                                                                                                                                                                         |
 | Base64InkSerializedFormat | Especifica la entrada de lápiz que se vuelve permanente codificando el ISF como una secuencia en base64. Este formato se ofrece para que la entrada de lápiz pueda codificarse directamente en un archivo XML o HTML.                                                                                                                                                                                                                                                |
 | Gif                       | Especifica la entrada de lápiz que se vuelve permanente usando un archivo GIF que contiene el ISF como metadatos incrustados en el archivo. Esto permite ver la entrada de lápiz en aplicaciones que no están habilitadas para entrada de lápiz y mantener la fidelidad total de la entrada de lápiz al volver a una aplicación habilitada para esa entrada. Este formato es ideal cuando se transporta contenido de entrada de lápiz en un archivo HTML y para facilitar su uso por parte de aplicaciones que estén o no habilitadas para entrada de lápiz. |
-| Base64Gif                 | Especifica la entrada de lápiz que se vuelve permanente usando un GIF fortificado codificado en base64. Este formato se proporciona cuando se debe codificar la entrada de lápiz directamente en un archivo XML o HTML para la conversión posterior en imagen. Un uso posible es en un formato XML generado para contener toda la información de entrada de lápiz que se use como una manera de generar HTML mediante el Lenguaje de transformación basado en hojas de estilo (XSLT).                           |
-
- 
-
- 
+| Base64Gif                 | Especifica la entrada de lápiz que se vuelve permanente usando un GIF fortificado codificado en base64. Este formato se proporciona cuando se debe codificar la entrada de lápiz directamente en un archivo XML o HTML para la conversión posterior en imagen. Un uso posible es en un formato XML generado para contener toda la información de entrada de lápiz que se use como una manera de generar HTML mediante el Lenguaje de transformación basado en hojas de estilo (XSLT). 
 
 ## <span id="Copy_and_paste_ink_strokes_with_the_clipboard"></span><span id="copy_and_paste_ink_strokes_with_the_clipboard"></span><span id="COPY_AND_PASTE_INK_STROKES_WITH_THE_CLIPBOARD"></span>Copiar y pegar trazos de lápiz con el Portapapeles
 
@@ -285,7 +277,6 @@ Para este ejemplo, habilitamos la selección de trazo cuando se modifica la entr
 1.  En primer lugar, debemos configurar la interfaz de usuario.
 
     La interfaz de usuario incluye los botones "Cut", "Copy", "Paste" y "Clear", junto con el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) y un lienzo de selección.
-
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -324,7 +315,6 @@ Para este ejemplo, habilitamos la selección de trazo cuando se modifica la entr
     El [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar los datos de entrada de lápiz y mouse como trazos de lápiz ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). Aquí también se declaran los agentes de escucha para los eventos de clic de los botones, y los eventos de puntero y trazo para la funcionalidad de selección.
 
     Para obtener un ejemplo completo de cómo implementar la selección de trazo, consulta [Entrada de paso a través para el procesamiento avanzado](pen-and-stylus-interactions.md#passthrough) en [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md).
-
 ```    CSharp
 public MainPage()
     {
@@ -377,7 +367,6 @@ public MainPage()
     A continuación, llamamos a [**DeleteSelected**](https://msdn.microsoft.com/library/windows/apps/br244233) para quitar los trazos del lienzo de entrada de lápiz.
 
     Por último, eliminamos todos los trazos de selección del lienzo de selección.
-
 ```    CSharp
 private void btnCut_Click(object sender, RoutedEventArgs e)
     {
@@ -386,7 +375,6 @@ private void btnCut_Click(object sender, RoutedEventArgs e)
         ClearSelection();
     }
 ```
-
 ```    CSharp
 // Clean up selection UI.
     private void ClearSelection()
@@ -410,7 +398,6 @@ private void btnCut_Click(object sender, RoutedEventArgs e)
 ```
 
     For copy, we simply call [**CopySelectedToClipboard**](https://msdn.microsoft.com/library/windows/apps/br244232) on the [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) of the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011).
-
 ```    CSharp
 private void btnCopy_Click(object sender, RoutedEventArgs e)
     {
@@ -421,7 +408,6 @@ private void btnCopy_Click(object sender, RoutedEventArgs e)
     For paste, we call [**CanPasteFromClipboard**](https://msdn.microsoft.com/library/windows/apps/br208495) to ensure that the content on the clipboard can be pasted to the ink canvas.
 
     If so, we call [**PasteFromClipboard**](https://msdn.microsoft.com/library/windows/apps/br208503) to insert the clipboard ink strokes into the [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) of the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011), which then renders the strokes to the ink canvas.
-
 ```    CSharp
 private void btnPaste_Click(object sender, RoutedEventArgs e)
     {
@@ -439,8 +425,8 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 ## <span id="related_topics"></span>Artículos relacionados
 
-
 * [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md)
+
 **Muestras**
 * [Muestra de entrada de lápiz](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Muestra de entrada de lápiz simple](http://go.microsoft.com/fwlink/p/?LinkID=620312)
@@ -454,6 +440,6 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

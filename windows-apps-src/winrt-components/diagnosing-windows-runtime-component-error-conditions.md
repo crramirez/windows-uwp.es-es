@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 title: Diagnosticar condiciones de error del componente de Windows Runtime
 description: En este artículo se proporciona información adicional acerca de las restricciones en componentes de Windows Runtime escritos con código administrado.
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
@@ -18,7 +19,7 @@ En este artículo no se abarcan todos los errores. Los errores que se tratan aqu
 ## El mensaje de error para implementar la interfaz asincrónica proporciona un tipo incorrecto
 
 
-Los componentes administrados de Windows Runtime no pueden implementar las interfaces de la Plataforma universal de Windows (UWP) que representan operaciones o acciones asincrónicas ([IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br206598.aspx), o [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)). En su lugar, .NET Framework proporciona la clase [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para generar operaciones asincrónicas en componentes de Windows Runtime. El mensaje de error que Winmdexp.exe muestra cuando intentas implementar una interfaz asincrónica incorrectamente hace referencia a esta clase por su nombre anterior, AsyncInfoFactory. .NET Framework ya no incluye la clase AsyncInfoFactory.
+Los componentes administrados de Windows Runtime no pueden implementar las interfaces de la Plataforma universal de Windows (UWP) que representan operaciones o acciones asincrónicas ([IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br206598.aspx) o [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)). En su lugar, .NET Framework proporciona la clase [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para generar operaciones asincrónicas en componentes de Windows Runtime. El mensaje de error que Winmdexp.exe muestra cuando intentas implementar una interfaz asincrónica incorrectamente hace referencia a esta clase por su nombre anterior, AsyncInfoFactory. .NET Framework ya no incluye la clase AsyncInfoFactory.
 
 | Número de error | Texto de mensaje                                                                                                                                                                                                                                                          |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -33,7 +34,7 @@ Los componentes administrados de Windows Runtime no pueden implementar las inter
 ## Referencias ausentes a mscorlib.dll o System.Runtime.dll
 
 
-Este problema se produce únicamente cuando se utiliza Winmdexp.exe desde la línea de comandos. Te recomendamos que uses la opción /reference para incluir referencias a mscorlib.dll y System.Runtime.dll desde los ensamblados de referencia principales de .NET Framework, que se encuentran en "%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\. NETCore\\v4.5 "("%ProgramFiles%\\..." en un equipo de 32 bits).
+Este problema se produce únicamente cuando se utiliza Winmdexp.exe desde la línea de comandos. Te recomendamos que uses la opción /reference para incluir referencias a mscorlib.dll y System.Runtime.dll desde los ensamblados de referencia principales de .NET Framework, que se encuentran en "%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETCore\\v4.5" ("%ProgramFiles%\\..." en un equipo de 32 bits).
 
 | Número de error | Texto de mensaje                                                                                                                                     |
 |--------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -123,7 +124,7 @@ Muchas de estas asignaciones son interfaces. Por ejemplo, [IList&lt;T&gt;](https
 
 En general, la mejor opción es la interfaz que más se asemeje al tipo. Por ejemplo, para Dictionary&lt;int, string&gt;, la mejor opción es probablemente IDictionary&lt;int, string&gt;.
 
-> **Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt;, independientemente de qué interfaz especificas como tipo devuelto. Esto significa que si la primera interfaz no incluye a un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
+> **Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt; independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye a un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
 
 > **Precaución**  Evita el uso de las interfaces no genéricas [IList](https://msdn.microsoft.com/library/system.collections.ilist.aspx) y [IEnumerable](https://msdn.microsoft.com/library/system.collections.ienumerable.aspx) si JavaScript usará tu componente. Estas interfaces se asignan a [IBindableVector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindablevector.aspx) y [IBindableIterator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindableiterator.aspx), respectivamente. Se admiten los enlaces para los controles de XAML y no son visibles para JavaScript. JavaScript emite el error de tiempo de ejecución "La función 'X' tiene una firma no válida y no se puede llamar".
 
@@ -152,7 +153,7 @@ En general, la mejor opción es la interfaz que más se asemeje al tipo. Por eje
 <tr class="odd">
 <td align="left">WME1039</td>
 <td align="left"><p>El método '{0}' tiene un parámetro de tipo '{1}' en su firma. Aunque este tipo genérico no es un tipo válido de Windows Runtime, el tipo o sus parámetros genéricos implementan interfaces que son tipos válidos de Windows Runtime. {2}</p>
-> **Nota**  Para {2}, Winmdexp.exe anexa una lista de alternativas, como "Considere cambiar el tipo 'System.Collections.Generic.List&lt;T&gt;' en la firma de método a uno de los siguientes tipos: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'".
+> **Nota**  Para {2}, Winmdexp.exe anexa una lista de alternativas, como "Considere cambiar el tipo 'System.Collections.Generic.List&lt;T&gt;' en la firma de método a uno de los siguientes tipos: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
 </td>
 </tr>
 <tr class="even">
@@ -247,6 +248,6 @@ El código de JavaScript puede acceder a los parámetros de salida de un método
 * [Winmdexp.exe (herramienta de exportación de metadatos de Windows Runtime)](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

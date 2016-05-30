@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Crear y registrar una tarea en segundo plano
 description: Crea una tarea en segundo plano y regístrala para ejecutarla cuando tu aplicación no esté en primer plano.
 ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
@@ -226,8 +227,7 @@ Los siguientes pasos se completan en una de tus clases de aplicaciones (por ejem
 
     El siguiente código registra la tarea en segundo plano y almacena el resultado:
 
-> [!div class="tabbedCodeSnippets"]
->     ```cs
+> [!div class="tabbedCodeSnippets"] ```cs
 >     BackgroundTaskRegistration task = builder.Register();
 >     ```
 >     ```cpp
@@ -247,8 +247,7 @@ Debes registrar un método con [**BackgroundTaskCompletedEventHandler**](https:/
 
     La siguiente muestra de código reconoce la finalización de la tarea en segundo plano y llama a un método de ejemplo de actualización de la interfaz de usuario que toma una cadena de mensaje.
 
-> [!div class="tabbedCodeSnippets"]
->     ```cs
+> [!div class="tabbedCodeSnippets"] ```cs
 >     private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
 >     {
 >         var settings = Windows.Storage.ApplicationData.Current.LocalSettings;
@@ -275,12 +274,11 @@ Debes registrar un método con [**BackgroundTaskCompletedEventHandler**](https:/
 
     La siguiente muestra de código agrega un constructor [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781) a [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786):
 
-> [!div class="tabbedCodeSnippets"]
->     ```cs
+> [!div class="tabbedCodeSnippets"] ```cs
 >     task.Completed += new BackgroundTaskCompletedEventHandler(OnCompleted);
 >     ```
 >     ```cpp
->     task->Completed += ref new BackgroundTaskCompletedEventHandler(this, &amp;ExampleBackgroundTask::OnCompleted);
+>     task->Completed += ref new BackgroundTaskCompletedEventHandler(this, &ExampleBackgroundTask::OnCompleted);
 >     ```
 
 ## Declarar que tu aplicación usa tareas en segundo plano en el manifiesto de la aplicación
@@ -297,7 +295,7 @@ Antes de que tu aplicación pueda ejecutar tareas en segundo plano, debes declar
 
     Se añadirá el siguiente elemento Extensions al archivo Package.appxmanifest para registrar la tarea en segundo plano:
 
-    ```xaml
+    ```xml
     <Extensions>
       <Extension Category="windows.backgroundTasks" EntryPoint="RuntimeComponent1.ExampleBackgroundTask">
         <BackgroundTasks>
@@ -312,13 +310,13 @@ Antes de que tu aplicación pueda ejecutar tareas en segundo plano, debes declar
 
 Ahora deberías conocer los conceptos básicos de cómo escribir una clase de tareas en segundo plano, cómo registrar la tarea en segundo plano desde dentro de tu aplicación y cómo hacer que tu aplicación reconozca cuándo se ha completado la tarea en segundo plano. También deberías comprender cómo actualizar el manifiesto de la aplicación para que la aplicación pueda registrar correctamente la tarea en segundo plano.
 
-> **Nota**  Descarga la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) para ver ejemplos de código similares en el contexto de una aplicación para UWP completa y robusta que usa tareas en segundo plano.
+> **Nota**  Descarga el [ejemplo de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) para ver ejemplos de código similares en el contexto de una aplicación para UWP completa y robusta que usa tareas en segundo plano.
 
  
 
 Consulta los siguientes temas relacionados para obtener referencia de las API, una guía conceptual sobre tareas en segundo plano e instrucciones más detalladas para escribir aplicaciones que usan tareas en segundo plano.
 
-> **Nota**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Nota**  Este artículo está orientado a desarrolladores de Windows 10 que crean aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -353,6 +351,6 @@ Consulta los siguientes temas relacionados para obtener referencia de las API, u
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,6 +1,7 @@
 ---
+author: drewbatgit
 ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
-description: En este artículo se enumera la compatibilidad con formatos y códecs de audio y vídeo para aplicaciones para UWP.
+description: En este artículo se enumera la compatibilidad con formatos y códecs de vídeo para aplicaciones para UWP.
 title: Códecs admitidos
 ---
 
@@ -2691,6 +2692,6 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

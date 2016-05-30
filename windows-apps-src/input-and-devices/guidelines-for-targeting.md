@@ -1,15 +1,13 @@
 ---
-Description: En este tema se describe el uso de la geometría de contacto para la selección táctil del destino y se ofrecen procedimientos recomendados para la selección del destino en aplicaciones de Windows Runtime.
-title: Selección de destinos
+author: Karl-Bridge-Microsoft
+Description: En este tema se describe el uso de la geometría de contacto para la selección táctil del destino y se proporcionan procedimientos recomendados para la selección del destino en aplicaciones de Windows Runtime.
+title: Selección del destinos
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
-label: Selección de destinos
+label: Targeting
 template: detail.hbs
 ---
 
-# Directrices para la selección de destinos
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+# Directrices para la selección del destino
 
 La selección táctil del destino en Windows usa toda el área de contacto de cada dedo que es detectado por un digitalizador táctil. El conjunto más grande y más complejo de datos de entrada notificado por el digitalizador se usa para aumentar la precisión cuando se determina el destino previsto (o con más probabilidades) del usuario.
 
@@ -83,7 +81,7 @@ En la tabla siguiente se ofrece una lista del tamaño mínimo y el tamaño recom
 <td align="left">Tamaño del destino visual</td>
 <td align="left">&lt; 60% del tamaño real</td>
 <td align="left">90-100% del tamaño real
-<p>La mayoría de usuarios no se darán cuenta de que un destino visual es táctil si tiene menos de 4,2 mm cuadrados (60% del tamaño del destino mínimo recomendado de 7 mm).</p></td>
+<p>La mayoría de los usuarios no se darán cuenta de que un destino visual es táctil si tiene menos de 4,2 mm cuadrados (60% del tamaño del destino mínimo recomendado de 7 mm).</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Tamaño real del destino</td>
@@ -152,8 +150,9 @@ Usa las siguientes directrices cuando diseñes interacciones de arrastre:
 * [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Ejemplo de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Ejemplo de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Ejemplo de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Ejemplos de archivo**
+* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
+**Muestras de archivo**
 * [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: muestra de prueba de acceso táctil](http://go.microsoft.com/fwlink/p/?linkid=231590)
@@ -171,6 +170,6 @@ Usa las siguientes directrices cuando diseñes interacciones de arrastre:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

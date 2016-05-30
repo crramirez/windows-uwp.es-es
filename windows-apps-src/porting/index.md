@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: ba2ac5f5-1e0d-4f1d-a6f8-6a65b4cff501
 description: En esta sección se describe cómo migrar tu aplicación existente a la Plataforma universal de Windows (UWP), donde puedes crear un único paquete de la aplicación Windows 10 que los clientes pueden instalar en todos los tipos de dispositivos. La aplicación se beneficiará de hardware nuevo y apasionante, oportunidades de gran rentabilidad, un conjunto de API moderno, controles de interfaz de usuario adaptables y una variedad de modalidades de entrada como el mouse, el teclado, la funcionalidad táctil y la voz.
 title: Migración de aplicaciones a Windows 10
@@ -20,7 +21,8 @@ En esta guía de migración se explican las diferencias entre la tecnología de 
 | [Migrar de Windows Runtime 8.x a la UWP](w8x-to-uwp-root.md) | Si tienes una aplicación Universal 8.1 (tanto si tiene como destino Windows 8.1, Windows Phone 8.1 o ambos), comprobarás que el código fuente y las habilidades se migrarán sin dificultad a Windows 10. Con Windows 10 puedes crear una aplicación para la aplicación para UWP, que es un único paquete de la aplicación que los clientes pueden instalar en todos los tipos de dispositivos. |
 | [Actualización de tu proyecto de UWP Microsoft Visual Studio 2015 RC a RTM](update-your-visual-studio-2015-rc-project-to-rtm.md) | Si tienes un proyecto de Windows 10 que creaste con Microsoft Visual Studio 2015 RC, tienes dos opciones para actualizar los archivos del proyecto al formato adecuado para Visual Studio 2015 RTM. El método recomendado es crear un nuevo proyecto de Windows 10 en Visual Studio 2015 RTM y copiar ahí los archivos. También puedes seguir la documentación avanzada para editar los archivos de proyecto existentes y pasarlos al nuevo formato. |
 | [Asignación del concepto de aplicaciones Windows para desarrolladores de Android e iOS](android-ios-uwp-map.md) | Si eres un desarrollador con habilidades o código de Android o iOS y quieres hacer el cambio a Windows 10 y la Plataforma universal de Windows, este recurso tiene todo lo que necesitas para asignar las características de la plataforma (y tus conocimientos) entre las tres plataformas. |
-| [Migrar de iOS a UWP](ios-to-uwp-root.md) | ¿Eres un desarrollador de iOS y te preguntas cómo migrar a Windows 10 y UWP? No es tan terrible como piensas. Tenemos las herramientas, las técnicas y la información que necesitas para crear fantásticas aplicaciones que funcionen tan bien en Windows como en tus dispositivos iOS, incluso mejor. |
+| [Migrar de iOS a UWP](ios-to-uwp-root.md) | ¿Eres un desarrollador de iOS y te preguntas cómo migrar a Windows 10 y UWP? No es tan terrible como piensas. Tenemos las herramientas, las técnicas y la información que necesitas para crear fantásticas aplicaciones que funcionen tan bien en Windows como en tus dispositivos iOS, e incluso mejor. |
+| [Migrar de escritorio a UWP](desktop-to-uwp-root.md) | Convertir tus aplicaciones de escritorio Win32 y .NET 4.6.1 en aplicaciones para la Plataforma universal de Windows (UWP). |
  
 ## Temas relacionados
 
@@ -29,6 +31,6 @@ En esta guía de migración se explican las diferencias entre la tecnología de 
 * [Migrar de la web a WinRT](https://msdn.microsoft.com/library/windows/apps/hh465151)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

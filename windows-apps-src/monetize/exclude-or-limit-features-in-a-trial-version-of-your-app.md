@@ -1,11 +1,6 @@
 ---
-Description: Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando algunas características durante el período de prueba.
-title: Excluye o limita características en una versión de prueba
-ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: prueba gratuita
-keywords: período de prueba gratuita
-keywords: ejemplo de código de la prueba gratuita
-keywords: muestra de código de la prueba gratuita
+author: mcleanbyron Description: Si permites que los clientes usen la aplicación de forma gratuita durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando algunas características durante el período de prueba.
+título: Excluye o limita características en una versión de prueba ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056 keywords: prueba gratuita keywords: período de prueba gratuita keywords: ejemplo de código de la prueba gratuita keywords: muestra de código de la prueba gratuita
 ---
 
 # Excluye o limita características en una versión de prueba
@@ -166,7 +161,9 @@ void DisplayTrialVersionExpirationTime()
 
 Ahora, prueba la aplicación con llamadas simuladas al servidor de licencias. En JavaScript, C#, Visual Basic o Visual C++, reemplaza las referencias de [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) por [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) en el código de inicialización de la aplicación.
 
-La clase [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) obtiene información de licencia específica de la versión de prueba de un archivo XML llamado "WindowsStoreProxy.xml", que se encuentra en %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. Si esta ruta de acceso y este archivo no existen, deberás crearlos durante la instalación o durante el tiempo de ejecución. Si intentas acceder a la propiedad [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768) sin el archivo WindowsStoreProxy.xml en esa ubicación específica, obtendrás un mensaje de error.
+[
+              **CurrentAppSimulator**
+            ](https://msdn.microsoft.com/library/windows/apps/hh779766) obtiene información de licencia específica de la versión de prueba de un archivo XML llamado "WindowsStoreProxy.xml", que se encuentra en %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. Si esta ruta de acceso y este archivo no existen, deberás crearlos durante la instalación o durante el tiempo de ejecución. Si intentas acceder a la propiedad [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768) sin el archivo WindowsStoreProxy.xml en esa ubicación específica, obtendrás un mensaje de error.
 
 En este ejemplo se muestra cómo agregar el código a la aplicación para probarla en diferentes estados de licencia.
 
@@ -193,7 +190,7 @@ Puedes editar WindowsStoreProxy.xml para cambiar las fechas de expiración simul
 
 Después de probar tu aplicación con el servidor de licencias simulado, y antes de enviar la aplicación a una Tienda para su certificación, reemplaza [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) por [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765), tal y como se muestra en la siguiente muestra de código.
 
-**Importante** La aplicación debe usar el objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) cuando la envíes a una Tienda, o no logrará la certificación.
+**Importante**  La aplicación debe usar el objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) cuando la envíes a una Tienda, o no logrará la certificación.
 
 ```CSharp
 void appInit()
@@ -233,6 +230,6 @@ Para obtener más información sobre cómo describir tu aplicación, consulta [C
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: En el informe de adquisiciones de IAP del panel del Centro de desarrollo de Windows puedes ver cuántos IAP has vendido, junto con los detalles demográficos y de plataforma.
 title: Informe de adquisiciones de IAP
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
@@ -7,11 +8,11 @@ ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 # Informe de adquisiciones de IAP
 
 
-En el informe de **adquisiciones de IAP** del panel del Centro de desarrollo de Windows puedes ver cuántos IAP has vendido, junto con los detalles demográficos y de plataforma. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+En el informe **Adquisiciones de IAP** del panel del Centro de desarrollo de Windows puedes ver cuántos IAP has vendido, junto con los detalles demográficos y de plataforma. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
 En este informe, una adquisición de IAP significa que un cliente te ha comprado un IAP. Varias compras del mismo IAP consumible realizadas por el mismo cliente se contabilizan como adquisiciones de IAP independientes.
 
-> **Importante**: En el informe **Adquisiciones de IAP** no se incluyen datos sobre reembolsos, devoluciones, anulaciones, etc. Para calcular las ganancias por la aplicación, visita [Resumen de pago](payout-summary.md). En la sección **Reservado**, haz clic en el vínculo **Descargar transacciones reservadas**.
+> **Importante**  En el informe **Adquisiciones de IAP** no se incluyen datos sobre reembolsos, devoluciones, anulaciones, etc. Para calcular las ganancias por la aplicación, visita [Resumen de pago](payout-summary.md). En la sección **Reservado**, haz clic en el vínculo **Descargar transacciones reservadas**.
 
 ## Aplicar filtros
 
@@ -52,7 +53,7 @@ El gráfico **Mercados** muestra el número total de adquisiciones de IAP durant
 
 El gráfico **Grupo demográfico de clientes** muestra información demográfica sobre las personas que adquirieron la aplicación. Puedes ver cuántas adquisiciones (durante el período de tiempo seleccionado) realizaron las personas de un determinado grupo de edad divididas por sexo.
 
-> **Nota**: Algunos clientes han optado por no compartir esta información. Si no podemos determinar el grupo de edad o el sexo, la adquisición se clasifica como **Desconocida**.
+> **Nota**  Algunos clientes han optado por no compartir esta información. Si no podemos determinar el grupo de edad o el sexo, la adquisición se clasifica como **Desconocida**.
 
 ## Versión de SO
 
@@ -64,6 +65,6 @@ En el gráfico **Versión de SO** se muestra el número total de adquisiciones s
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

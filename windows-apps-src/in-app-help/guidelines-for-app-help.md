@@ -1,4 +1,5 @@
 ---
+author: QuinnRadich
 Description: En estas directrices se describe cómo diseñar un contenido de ayuda eficaz para una aplicación.
 title: Directrices para la ayuda de la aplicación
 label: Guidelines for app help
@@ -39,7 +40,7 @@ Toda ayuda, independientemente del tipo, debe seguir estos principios:
 
 Hay tres categorías principales de ayuda, cada una con varios niveles y adecuada para objetivos distintos. Usa la combinación más adecuada para las necesidades de tu aplicación.
 
-#### <span id="instructional_ui"></span><span id="INSTRUCTIONAL_UI"></span>Interfaz de usuario informativa
+#### <span id="instructional_ui"></span><span id="INSTRUCTIONAL_UI"></span>UI informativa
 
 Normalmente, los usuarios deberían poder usar todas las funciones principales de la aplicación sin instrucciones. Sin embargo, en ocasiones la aplicación dependerá del uso de gestos específicos o es posible que haya características secundarias de la aplicación que no sean perceptibles de manera inmediata. En estos casos, se debe usar la interfaz de usuario informativa para enseñar a los usuarios mediante instrucciones cómo realizar tareas específicas.
 
@@ -60,6 +61,6 @@ Para obtener tutoriales detallados, funciones avanzadas o bibliotecas de temas d
 \[Este artículo contiene información específica sobre las aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

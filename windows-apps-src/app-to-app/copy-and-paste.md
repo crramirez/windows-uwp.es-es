@@ -16,7 +16,7 @@ Este artículo explica cómo admitir las funciones copiar y pegar en aplicacione
 
 En muchos casos, es posible que no necesites escribir código para admitir las operaciones del Portapapeles. Muchos de los controles XAML predeterminados que puedes usar para crear aplicaciones ya admiten las operaciones del portapapeles. Para obtener más información sobre los controles disponibles, consulta la [lista de controles][ControlsList].
 
-## Preparación
+## Prepárate
 
 En primer lugar, incluye el espacio de nombres [**Windows.ApplicationModel.DataTransfer**][DataTransfer] en la aplicación. A continuación, agrega una instancia del objeto [**DataPackage**][DataPackage]. Este objeto contiene los datos que el usuario quiere copiar y también las propiedades (como la descripción) que quieres incluir.
 
@@ -27,7 +27,7 @@ DataPackage dataPackage = new DataPackage();
 
 ## Copiar y cortar
 
-Copiar y cortar (también denominados mover) funcionan prácticamente de la misma manera. Elige qué operación deseas usar con la propiedad [**DataPackage.RequestedOperation**][RequestedOperation].
+Copiar y cortar (también denominados mover) funcionan prácticamente de la misma manera. Elige qué operación quieres mediante la propiedad [**DataPackage.RequestedOperation**][RequestedOperation].
 
 ```cs
 // copy 
@@ -36,7 +36,7 @@ dataPackage.RequestedOperation = DataPackageOperation.Copy;
 dataPackage.RequestedOperation = DataPackageOperation.Move;
 ```
 
-A continuación, puedes agregar los datos que un usuario ha seleccionado para el objeto [**DataPackage**][DataPackage]. Si la clase **DataPackage** admite estos datos, puedes usar uno de los métodos correspondientes en el objeto **DataPackage**. Aquí vemos cómo agregar texto:
+A continuación, puedes agregar los datos que un usuario ha seleccionado al objeto [**DataPackage**][DataPackage]. Si la clase **DataPackage** admite estos datos, puedes usar uno de los métodos correspondientes en el objeto **DataPackage**. Aquí vemos cómo agregar texto:
 
 ```cs
 dataPackage.SetText("Hello World!");
@@ -49,7 +49,7 @@ Clipboard.SetContent(dataPackage);
 ```
 ## Pegar
 
-Para obtener los contenidos del portapapeles, llama al método estático [**Clipboard.GetContent**[GetContent]. Este método devuelve un objeto [**DataPackageView**][DataPackageView] que incluye el contenido. Este objeto es casi idéntico a un objeto [**DataPackage**][DataPackage], con la excepción de que su contenido es de solo lectura. Con ese objeto, puedes usar los métodos [**AvailableFormats**][AvailableFormats] o [**Contains**][Contains] para identificar los formatos disponibles. Después puedes llamar al método **DataPackageView** correspondiente para obtener los datos.
+Para obtener el contenido del portapapeles, llama al método estático [**Clipboard.GetContent**[GetContent]. Este método devuelve [**DataPackageView**][DataPackageView], que incluye el contenido. Este objeto es casi idéntico a un objeto [**DataPackage**][DataPackage], con la excepción de que su contenido es de solo lectura. Con ese objeto, puedes usar los métodos [**AvailableFormats**][AvailableFormats] o [**Contains**][Contains] para identificar los formatos disponibles. Después, puedes llamar al método **DataPackageView** correspondiente para obtener los datos.
 
 ```cs
 DataPackageView dataPackageView = Clipboard.GetContent();
@@ -63,7 +63,7 @@ if (dataPackageView.Contains(StandardDataFormats.Text))
 
 ## Seguimiento de cambios en el portapapeles
 
-Además de los comandos copiar y pegar, también puedes realizar un seguimiento de cambios en el portapapeles. Para hacer esto, debes controlar el evento [**Clipboard.ContentChanged**][ContentChanged] del portapapeles.
+Además de los comandos copiar y pegar, también puedes realizar un seguimiento de cambios en el portapapeles. Haz esto controlando el evento [**Clipboard.ContentChanged**][ContentChanged].
 
 ```cs
 Clipboard.ContentChanged += (s, e) => 
@@ -97,6 +97,6 @@ Clipboard.ContentChanged += (s, e) =>
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

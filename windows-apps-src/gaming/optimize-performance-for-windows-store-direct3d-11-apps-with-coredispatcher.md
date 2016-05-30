@@ -1,6 +1,7 @@
 ---
+author: mtoepke
 title: Optimización de la latencia de entrada en juegos DirectX de la Plataforma universal de Windows (UWP)
-description: La latencia de entrada puede influir tremendamente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida.
+description: La latencia de entrada puede influir tremendamente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida en el juego.
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
 ---
 
@@ -244,7 +245,7 @@ Figura 2
 
 ![figura 2: latencia de entrada en DirectX que puede esperar](images/input-latency2.png)
 
-Lo que deducimos de estos diagramas es que existe la posibilidad de reducir la latencia de entrada de los juegos en hasta dos fotogramas completos si son capaces de representar cada fotograma dentro de los 16,7 ms previstos y que están definidos en la frecuencia de actualización de la pantalla. En el ejemplo del juego de puzle se usan cadenas de intercambio que pueden esperar y se controla el límite de la cola de eventos presentes llamando a ` m_deviceResources->SetMaximumFrameLatency(1);`
+Lo que deducimos de estos diagramas es que existe la posibilidad de reducir la latencia de entrada de los juegos en hasta dos fotogramas completos si son capaces de representar cada fotograma dentro de los 16,7 ms previstos y que están definidos en la frecuencia de actualización de la pantalla. En el ejemplo del juego de puzle se usan cadenas de intercambio que pueden esperar y se controla el límite de la cola de eventos presentes llamando a` m_deviceResources->SetMaximumFrameLatency(1);`
 
  
 
@@ -255,6 +256,6 @@ Lo que deducimos de estos diagramas es que existe la posibilidad de reducir la l
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

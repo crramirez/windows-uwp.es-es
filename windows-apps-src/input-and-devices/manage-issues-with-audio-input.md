@@ -1,16 +1,15 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Aprende a administrar los problemas con la precisión del reconocimiento de voz causados por la calidad de la entrada de audio.
 title: Administrar los problemas con la entrada de audio
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
-label: Administrar los problemas con la entrada de audio
+label: Manage audio input issues
 template: detail.hbs
 ---
 
 # Administrar los problemas con la entrada de audio
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+Aprende a administrar los problemas con la precisión del reconocimiento de voz causados por la calidad de la entrada de audio.
 
 **API importantes**
 
@@ -18,7 +17,7 @@ template: detail.hbs
 -   [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)
 -   [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)
 
-Aprende a administrar los problemas con la precisión del reconocimiento de voz causados por la calidad de la entrada de audio.
+
 
 
 ## <span id="Assess_audio-input_quality"></span><span id="assess_audio-input_quality"></span><span id="ASSESS_AUDIO-INPUT_QUALITY"></span>Evaluar la calidad de entrada de audio
@@ -116,6 +115,6 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

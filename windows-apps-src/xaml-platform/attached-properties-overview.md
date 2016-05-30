@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Explica el concepto de propiedad adjunta en XAML y proporciona algunos ejemplos.
 title: Introducción a las propiedades adjuntas
 ms.assetid: 098C1DE0-D640-48B1-9961-D0ADF33266E2
@@ -18,7 +19,7 @@ Se da por hecho que comprendes el concepto básico de propiedad de dependencia y
 
 Las propiedades adjuntas existen principalmente porque permiten una sintaxis XAML. En XAML, las propiedades adjuntas se establecen mediante la sintaxis _AttachedPropertyProvider.PropertyName_. Este es un ejemplo de cómo puedes establecer [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) en XAML.
 
-```XAML
+```XML
 <Canvas>
   <Button Canvas.Left="50">Hello</Button>
 </Canvas>
@@ -26,7 +27,7 @@ Las propiedades adjuntas existen principalmente porque permiten una sintaxis XAM
 
 Observa que, en cierto modo, el uso es similar a una propiedad estática: siempre se hace referencia al tipo **Canvas** que posee y registra la propiedad adjunta, en lugar de hacer referencia a una instancia por su nombre.
 
-**Note**  Usamos [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) como un mero ejemplo de propiedad adjunta sin explicar del todo por qué la usarías. Si quieres saber más sobre el uso de **Canvas.Left** y el modo en que [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) controla sus elementos secundarios de diseño, consulta el tema de referencia de [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) o [Definir diseños con XAML](https://msdn.microsoft.com/library/windows/apps/mt228350).
+**Nota**  Usamos [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) como un mero ejemplo de propiedad adjunta sin explicar del todo por qué la usarías. Si quieres saber más sobre el uso de **Canvas.Left** y el modo en que [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) controla sus elementos secundarios de diseño, consulta el tema de referencia de [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) o [Definir diseños con XAML](https://msdn.microsoft.com/library/windows/apps/mt228350).
 
 ## ¿Por qué usar propiedades adjuntas?
 
@@ -102,7 +103,7 @@ El punto en el nombre de la propiedad adjunta es una parte fundamental del patr�
 
 - Para especificar una propiedad adjunta como parte de una ruta de destino de una animación, encierra el nombre de la propiedad adjunta entre paréntesis ("()"), por ejemplo, "(Canvas.Left)". Para obtener más información, consulta [Sintaxis de property-path](property-path-syntax.md).
 
-**Precaución**  Sin embargo, existe una limitación en la implementación XAML de Windows Runtime y es que no puedes animar una propiedad adjunta personalizada.
+**Precaución**  Sin embargo, existe una limitación en la implementación XAML de Windows Runtime y es que no se puede animar una propiedad adjunta personalizada.
  
 - Para especificar una propiedad adjunta como propiedad de destino para una referencia a un recurso desde un archivo de recursos a **x:Uid**, usa una sintaxis especial que inyecte una declaración **using:** completa con estilo de código entre corchetes ("\[\]") para crear un salto de ámbito deliberado. Por ejemplo, si suponemos que existe un elemento '<TextBlock x:Uid="Title" />', la clave de recursos en el archivo de recursos que se dirige al valor **Canvas.Top** en esa instancia es "Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top". Para obtener más información sobre archivos de recursos y XAML, consulta [Inicio rápido: traducción de recursos de interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
 
@@ -117,6 +118,6 @@ El punto en el nombre de la propiedad adjunta es una parte fundamental del patr�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

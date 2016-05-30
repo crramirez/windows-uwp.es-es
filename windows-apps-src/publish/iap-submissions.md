@@ -1,5 +1,6 @@
 ---
-Description: Los IAP se publican a través del panel del Centro de desarrollo de Windows.
+author: jnHs
+Description: Las IAP se publican a través del panel del Centro de desarrollo de Windows.
 title: Envíos de IAP
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 ---
@@ -46,7 +47,7 @@ Una descripción obligatoria. Se recomienda proporcionar descripciones para cada
 
 Cuando hayas terminado de especificar esta información, haz clic en **Enviar a la Tienda**. En la mayoría de los casos, el proceso de certificación tarda aproximadamente una hora. Después, el IAP se publicará en la Tienda y estará listo para que los clientes puedan comprarlo.
 
-**Nota:** El IAP también debe implementarse en el código de la aplicación. Para más información, consulta [Habilitar compras de productos desde la aplicación](https://msdn.microsoft.com/library/windows/apps/mt219684).
+**Nota**  El IAP también debe implementarse en el código de la aplicación. Para más información, consulta [Habilitar compras de productos desde la aplicación](https://msdn.microsoft.com/library/windows/apps/mt219684).
 
 
 ## Actualizar un IAP después de su publicación
@@ -54,7 +55,7 @@ Cuando hayas terminado de especificar esta información, haz clic en **Enviar a 
 
 Puedes realizar cambios en un IAP publicado en cualquier momento. Los cambios de los IAP se envían y se publican independientemente de la aplicación, de modo que, por lo general, no es necesario actualizar toda la aplicación para realizar cambios en un IAP, como actualizar su precio o su descripción.
 
-> **Importante:** Si la aplicación está disponible para los clientes de Windows 8.x, tendrás que crear y publicar un nuevo envío de aplicación para que las actualizaciones de los IAP estén visibles para dichos clientes. Del mismo modo, si agregas nuevos IAP a una aplicación destinada a Windows 8.x después publicarse la aplicación, tendrás que actualizar el código de la aplicación para hacer referencia a esos IAP y, a continuación, volver a enviar la aplicación. De lo contrario, las nuevas IAP no serán visibles para los clientes de Windows 8.x.
+> **Importante**  Si la aplicación está disponible para los clientes de Windows 8.x, tendrás que crear y publicar un nuevo envío de aplicación para que las actualizaciones de los IAP estén visibles para dichos clientes. Del mismo modo, si agregas nuevos IAP a una aplicación destinada a Windows 8.x después publicarse la aplicación, tendrás que actualizar el código de la aplicación para hacer referencia a esos IAP y, a continuación, volver a enviar la aplicación. De lo contrario, las nuevas IAP no serán visibles para los clientes de Windows 8.x.
 
 Para enviar actualizaciones, ve a la página del IAP en el panel y haz clic en **Actualizar**. Esto creará un nuevo envío para el IAP, con la información de tu envío anterior como punto de partida. Cambia la información que desees y, a continuación, haz clic en **Enviar a la Tienda**.
 
@@ -62,6 +63,6 @@ Si quieres quitar un IAP que ofrecías anteriormente, puedes hacerlo si creas un
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

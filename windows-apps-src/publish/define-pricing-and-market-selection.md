@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: La Tienda Windows llega a clientes de más de 200 países y regiones de todo el mundo.
 title: Definir los precios y la selección del mercado
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
@@ -282,8 +283,8 @@ Puedes elegir que la aplicación (o IAP) aparezca en uno o más de los mercados 
 -   Reino Unido
 -   Estados Unidos
 -   Uruguay
--   ESTADOS UNIDOS Islas menores alejadas
--   ESTADOS UNIDOS Islas Vírgenes
+-   Islas menores alejadas de los EE. UU.
+-   Islas Vírgenes de los Estados Unidos de América
 -   Uzbekistán
 -   Venezuela
 -   Vietnam
@@ -535,8 +536,8 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
 -   Islas Turcas y Caicos
 -   Tuvalu
 -   Uganda
--   ESTADOS UNIDOS Islas menores alejadas
--   ESTADOS UNIDOS Islas Vírgenes
+-   Islas menores alejadas de los EE. UU.
+-   Islas Vírgenes de los Estados Unidos de América
 -   Uzbekistán
 -   Venezuela
 -   Vietnam
@@ -549,6 +550,6 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
 > **Nota**  Para una lista de países y regiones en los que puedas registrarte para una cuenta de desarrollador, consulta [Tipos de cuentas, ubicaciones y precios](https://msdn.microsoft.com/library/windows/apps/jj863494).
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

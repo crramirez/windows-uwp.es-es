@@ -1,6 +1,7 @@
 ---
+author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
-description: En este artículo se describe cómo usar perfiles de cámara para descubrir y administrar las funcionalidades de los diferentes dispositivos de captura de vídeo.
+description: En este artículo se describe cómo usar perfiles de cámara para detectar y administrar las funcionalidades de los diferentes dispositivos de captura de vídeo.
 title: Perfiles de cámara
 ---
 
@@ -22,11 +23,11 @@ Las cámaras de diferentes dispositivos admiten diferentes funcionalidades, incl
 
 Antes de inicializar el objeto [MediaCapture](capture-photos-and-video-with-mediacapture.md), puedes consultar a los dispositivos de captura en el dispositivo actual para ver qué perfiles se admiten. Cuando se selecciona un perfil admitido, sabe que el dispositivo de captura admite todas las funcionalidades en las descripciones de elementos multimedia del perfil. Esto elimina la necesidad de un enfoque de prueba y error para determinar qué combinaciones de funcionalidades se admiten en un dispositivo determinado.
 
-En el artículo sobre la captura multimedia básica, [Capturar fotos y vídeo con MediaCapture](capture-photos-and-video-with-mediacapture.md), la clase [**MediaCaptureInitializationSettings**](https://msdn.microsoft.com/library/windows/apps/br226573) usada para inicializar la captura multimedia se crea solo en la cadena de identificador del dispositivo de captura, la cantidad mínima de datos necesarios para la inicialización.
+En el artículo sobre la captura multimedia básica, [Capturar fotos y vídeo con MediaCapture](capture-photos-and-video-with-mediacapture.md), la clase [**MediaCaptureInitializationSettings**](https://msdn.microsoft.com/library/windows/apps/br226573) usada para inicializar la captura multimedia se crea solo con la cadena de identificador del dispositivo de captura, la cantidad mínima de datos necesarios para la inicialización.
 
 [!code-cs[BasicInitExample](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetBasicInitExample)]
 
-Los ejemplos de código de este artículo reemplazan esta inicialización mínima con el descubrimiento de perfiles de cámara que admiten diferentes funcionalidades, que, a continuación, se usan para inicializar el dispositivo de captura multimedia.
+Los ejemplos de código de este artículo reemplazan esta inicialización mínima con la detección de perfiles de cámara que admiten diferentes funcionalidades, que, a continuación, se usan para inicializar el dispositivo de captura multimedia.
 
 ## Buscar un dispositivo de vídeo que admita perfiles de cámara
 
@@ -46,11 +47,11 @@ Para seleccionar un perfil con funcionalidades concretas, como la capacidad de l
 
 Crea un objeto [**MediaCaptureInitializationSettings**](https://msdn.microsoft.com/library/windows/apps/br226573) nuevo, pasando el identificador de dispositivo seleccionado. A continuación, realiza una llamada al método estático [**MediaCapture.FindAllVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926708) para obtener una lista de todos los perfiles de cámara compatibles con el dispositivo.
 
-Este ejemplo usa un método de consulta Linq, incluido en el espacio de nombres **System.Linq** de "using", para seleccionar un perfil que contenga un objeto [**SupportedRecordMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926705) donde las propiedades [**Width**](https://msdn.microsoft.com/library/windows/apps/dn926700), [**Height**](https://msdn.microsoft.com/library/windows/apps/dn926697) y [**FrameRate**](https://msdn.microsoft.com/library/windows/apps/dn926696) coinciden con los valores solicitados. Si se encuentra una coincidencia, [**VideoProfile**](https://msdn.microsoft.com/library/windows/apps/dn926679) y [**RecordMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926678) de **MediaCaptureInitializationSettings** se establecen con los valores de tipo anónimo devueltos desde la consulta Linq. Si no se encuentra ninguna coincidencia, se usa el perfil predeterminado.
+Este ejemplo usa un método de consulta Linq, incluido en el espacio de nombres **System.Linq** de "using", para seleccionar un perfil que contenga un objeto [**SupportedRecordMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926705) donde las propiedades [**Width**](https://msdn.microsoft.com/library/windows/apps/dn926700), [**Height**](https://msdn.microsoft.com/library/windows/apps/dn926697) y [**FrameRate**](https://msdn.microsoft.com/library/windows/apps/dn926696) coinciden con los valores solicitados. Si se encuentra una coincidencia, [**VideoProfile**](https://msdn.microsoft.com/library/windows/apps/dn926679) y [**RecordMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926678) de **MediaCaptureInitializationSettings** se definen con los valores de tipo anónimo devueltos desde la consulta Linq. Si no se encuentra ninguna coincidencia, se usa el perfil predeterminado.
 
 [!code-cs[FindWVGA30FPSProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindWVGA30FPSProfile)]
 
-Una vez que rellenas **MediaCaptureInitializationSettings** con tu perfil de cámara deseado, simplemente realiza una llamada a [**InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598) en objeto de captura multimedia para configurarlo en el perfil deseado.
+Una vez que rellenas **MediaCaptureInitializationSettings** con el perfil de cámara deseado, simplemente, realiza una llamada a [**InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598) en el objeto de captura multimedia para configurarlo en el perfil deseado.
 
 [!code-cs[InitCaptureWithProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitCaptureWithProfile)]
 
@@ -60,11 +61,11 @@ Puedes usar los perfiles de cámara para determinar si un dispositivo admite la 
 
 [!code-cs[ConcurrencySetup](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetConcurrencySetup)]
 
-El método estático [**MediaCapture.FindConcurrentProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926709) devuelve una lista de los perfiles de cámara que son compatibles con el dispositivo de captura especificado que también admite la simultaneidad. Usa una consulta Linq para encontrar un perfil que admita la simultaneidad y que sea compatible con la cámara frontal y posterior. Si se encuentra un perfil que cumpla estos requisitos, establece el perfil en cada uno de los objetos **MediaCaptureInitializationSettings** y establece la variable de seguimiento de simultaneidad booleano en true.
+El método estático [**MediaCapture.FindConcurrentProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926709) devuelve una lista de los perfiles de cámara que son compatibles con el dispositivo de captura especificado que también admite la simultaneidad. Usa una consulta Linq para encontrar un perfil que admita la simultaneidad y que sea compatible con la cámara frontal y posterior. Si se encuentra un perfil que cumpla estos requisitos, establece el perfil en cada uno de los objetos **MediaCaptureInitializationSettings** y define la variable de seguimiento de simultaneidad booleano como true.
 
 [!code-cs[FindConcurrencyDevices](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindConcurrencyDevices)]
 
-Llama a **MediaCapture.InitializeAsync** para la cámara principal de tu escenario de aplicación. Si se admite la simultaneidad, inicializa también la segunda cámara.
+Llama a **MediaCapture.InitializeAsync** para la cámara principal del escenario de la aplicación. Si se admite la simultaneidad, inicializa también la segunda cámara.
 
 [!code-cs[InitConcurrentMediaCaptures](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitConcurrentMediaCaptures)]
 
@@ -74,7 +75,7 @@ La selección de un perfil que admita HDR comienza como los otros escenarios. Cr
 
 [!code-cs[GetHdrProfileSetup](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetHdrProfileSetup)]
 
-Usa método auxiliar **GetVideoProfileSupportedDeviceIdAsync** definido anteriormente para obtener el identificador de dispositivo para un dispositivo de captura que admita perfiles de cámara.
+Usa el método auxiliar **GetVideoProfileSupportedDeviceIdAsync** definido anteriormente para obtener el identificador de dispositivo para un dispositivo de captura que admita perfiles de cámara.
 
 [!code-cs[FindDeviceHDR](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindDeviceHDR)]
 
@@ -86,11 +87,11 @@ Recorra la lista de perfiles de cámara devueltos. Para cada perfil de cámara, 
 
 ## Determinar si un dispositivo admite captura simultánea de fotos y vídeo
 
-Muchos dispositivos admiten la captura de fotos y vídeo simultáneamente. Para determinar si un dispositivo de captura admite esto, realiza una llamada a [**MediaCapture.FindAllVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926708) para obtener todos los perfiles de cámara admitidos por el dispositivo. Usa una consulta de vínculo para encontrar un perfil que tenga al menos una entrada para ambos [**SupportedPhotoMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926703) y [**SupportedRecordMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926705), lo que significa que el perfil admite la captura simultánea.
+Muchos dispositivos admiten la captura de fotos y vídeo simultáneamente. Para determinar si un dispositivo de captura admite esto, realiza una llamada a [**MediaCapture.FindAllVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926708) para obtener todos los perfiles de cámara admitidos por el dispositivo. Usa una consulta de vínculo para encontrar un perfil que tenga al menos una entrada para [**SupportedPhotoMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926703) y [**SupportedRecordMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926705), lo que significa que el perfil admite la captura simultánea.
 
 [!code-cs[GetPhotoAndVideoSupport](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPhotoAndVideoSupport)]
 
-Puede ajustar esta consulta para buscar los perfiles que admiten resoluciones específicas y otras funcionalidades, además de la grabación de vídeo simultánea. También puedes usar el objeto [**MediaCapture.FindKnownVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926710) y especificar el valor [**BalancedVideoAndPhoto**](https://msdn.microsoft.com/library/windows/apps/dn948843) para recuperar perfiles que admitan la captura simultánea, pero la consulta de todos los perfiles proporcionará resultados más completos.
+Puedes ajustar esta consulta para buscar los perfiles que admiten resoluciones específicas y otras funcionalidades, además de la grabación de vídeo simultánea. También puedes usar el objeto [**MediaCapture.FindKnownVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926710) y especificar el valor [**BalancedVideoAndPhoto**](https://msdn.microsoft.com/library/windows/apps/dn948843) para recuperar perfiles que admitan la captura simultánea, pero la consulta de todos los perfiles proporcionará resultados más completos.
 
 ## Temas relacionados
 
@@ -104,6 +105,6 @@ Puede ajustar esta consulta para buscar los perfiles que admiten resoluciones es
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

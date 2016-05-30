@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: Usa este método en la API de compras de la Tienda Windows para conceder de forma gratuita una aplicación o un producto desde la aplicación (IAP) a un usuario determinado.
 title: Conceder productos gratuitos
@@ -36,7 +37,7 @@ Para más información, consulta [Ver y conceder productos desde un servicio](vi
 
 | Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Authorization  | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer** &lt;*token*&gt;.                           |
+| Authorization  | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;.                           |
 | Host           | cadena | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | cadena | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
@@ -53,7 +54,7 @@ Para más información, consulta [Ver y conceder productos desde un servicio](vi
 | language       | cadena | Idioma del usuario.                                                                                                                                                                                                                                                                                              | Sí      |
 | market         | cadena | Mercado del usuario.                                                                                                                                                                                                                                                                                                | Sí      |
 | orderId        | guid   | GUID que se genera para el pedido. Este valor debe ser exclusivo del usuario, pero no es obligatorio que lo sea en los pedidos.                                                                                                                                                                                              | Sí      |
-| productId      | cadena | Identificador del producto del catálogo de la Tienda Windows. Para obtener el identificador del producto, navega hasta la aplicación en el panel del Centro de desarrollo de Windows, ve a la página **Administración de aplicaciones** &gt; **Identidad de aplicación** y recupera el sufijo de la cadena que se muestra en el campo **URL para Windows 10**. Un identificador de producto de ejemplo es "9WZDNCRFJ3Q8". | Sí      |
+| productId      | cadena | Identificador del producto del catálogo de la Tienda Windows. Para obtener el identificador del producto, navega hasta tu aplicación en el panel del Centro de desarrollo de Windows, ve a la página **Administración de aplicaciones**&gt;**Identidad de aplicación** y recupera el sufijo de la cadena que se muestra en el campo **URL para Windows 10**. Un identificador de producto de ejemplo es "9WZDNCRFJ3Q8". | Sí      |
 | quantity       | entero    | Cantidad que se va a comprar. Actualmente, el único valor admitido es 1. Si no se especifica, el valor predeterminado es 1.                                                                                                                                                                                                                | No       |
 | skuId          | cadena | Identificador de SKU del catálogo de la Tienda Windows. Un ejemplo de identificador de SKU es "0010".                                                                                                                                                                                                                                                | Sí      |
 
@@ -61,7 +62,7 @@ Para más información, consulta [Ver y conceder productos desde un servicio](vi
 
 ### Ejemplo de solicitud
 
-```
+```syntax
 POST https://purchase.mp.microsoft.com/v6.0/purchases/grant HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJK……
 Content-Length: 1863
@@ -156,7 +157,7 @@ El objeto IdentityV6 contiene los parámetros siguientes.
 
 ### Ejemplo de respuesta
 
-```
+```syntax
 Content-Length: 1203
 Content-Type: application/json
 MS-CorrelationId: fb2e69bc-f26a-4aab-a823-7586c19f5762
@@ -242,6 +243,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

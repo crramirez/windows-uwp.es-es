@@ -1,16 +1,13 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Al igual que las personas usan una combinación de voz y gestos para comunicarse entre sí, cuando interactúes con una aplicación pueden resultarte útiles varios tipos y modos de entrada.
 title: Directrices de diseño de varias entradas
 ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
-label: Varias entradas
+label: Multiple inputs
 template: detail.hbs
 ---
 
 # Varias entradas
-
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Al igual que las personas usan una combinación de voz y gestos para comunicarse entre sí, cuando interactúes con una aplicación pueden resultarte útiles varios tipos y modos de entrada.
 
@@ -43,6 +40,6 @@ El usuario selecciona una foto manteniéndola presionada y, a continuación, dic
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

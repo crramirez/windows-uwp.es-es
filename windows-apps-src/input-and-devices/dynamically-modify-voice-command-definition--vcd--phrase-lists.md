@@ -1,15 +1,16 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Aprende a obtener acceso y a actualizar la lista de frases admitidas (elementos PhraseList) en un archivo de definición de comando de voz (VCD), mediante el resultado de reconocimiento de voz en tiempo de ejecución.
-title: Modificar listas de frases de VCD de forma dinámica.
+title: Modificar listas de frases de VCD de forma dinámica
 ms.assetid: 98024EAC-EC0E-44AA-AEC5-A611BA7C5884
 label: Modify VCD phrase lists
 template: detail.hbs
 ---
 
-# Modificar listas de frases de VCD de forma dinámica.
+# Modificar listas de frases de VCD de forma dinámica
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **API importantes**
@@ -21,7 +22,7 @@ Actualiza la lista de frases admitidas (elementos **PhraseList**) y accede a ell
 
 La modificación de forma dinámica de una lista de frases en tiempo de ejecución es útil si el comando de voz es específico para una tarea que implique algún tipo de datos transitorios de aplicaciones o definidos por el usuario. 
 
-Por ejemplo, supongamos que tienes una aplicación de viajes donde los usuarios pueden escribir sus destinos y quieres que también puedan iniciar la aplicación diciendo el nombre de la misma seguido de "Muéstrame el viaje a &lt;destino&gt;". A continuación, en el mismo elemento **ListenFor**, especificarías algo como: `<ListenFor> Show trip to {destination}  </ListenFor>`, donde "destination" es el valor del atributo **Label** de **PhraseList**.
+Por ejemplo, supongamos que tienes una aplicación de viajes donde los usuarios pueden escribir destinos y quieres que los usuarios puedan iniciar la aplicación diciendo el nombre de la aplicación seguido de "Muéstrame el viaje a &lt;destino&gt;". A continuación, en el mismo elemento **ListenFor**, especificarías algo como: `<ListenFor> Show trip to {destination}  </ListenFor>`, donde "destination" es el valor del atributo **Label** de **PhraseList**.
 
 La actualización de la lista de frases en tiempo de ejecución elimina la necesidad de crear un elemento **ListenFor** para cada destino posible. En su lugar, puedes rellenar dinámicamente **PhraseList** con destinos especificados por el usuario a medida que escriben sus itinerarios. 
 
@@ -33,7 +34,7 @@ Este tema se basa en la guía [Iniciar una aplicación en primer plano con los c
 
 Si acabas de empezar a desarrollar aplicaciones de la Plataforma Universal Windows (UWP), consulta estos temas para familiarizarte con las tecnologías presentadas aquí.
 
--   [Crea tu primera aplicación](https://msdn.microsoft.com/library/windows/apps/bg124288)
+-   [Crear tu primera aplicación](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   Encontrarás más información acerca de los eventos, en [Introducción a eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
 **Directrices sobre la experiencia del usuario:  **
@@ -76,7 +77,7 @@ Para actualizar un elemento **PhraseList** en el archivo VCD, obtén el elemento
 
 Después de identificar el conjunto de comandos, obtén una referencia para la lista de frases que quieres modificar y llama al método [**SetPhraseListAsync**](https://msdn.microsoft.com/library/windows/apps/dn653261); a continuación, usa el atributo **Label** del elemento **PhraseList** y una matriz de cadenas para que sea el nuevo contenido de la lista de frases.
 
-**Nota** Si modificas una lista de frases, se reemplazará toda la lista de frases. Si quieres insertar nuevos elementos en una lista de frases, debes especificar tanto los elementos existentes como los elementos nuevos cuando llames a [**SetPhraseListAsync**](https://msdn.microsoft.com/library/windows/apps/dn653261).
+**Nota**  Si modificas una lista de frases, se reemplazará toda la lista de frases. Si quieres insertar nuevos elementos en una lista de frases, debes especificar tanto los elementos existentes como los elementos nuevos cuando llames a [**SetPhraseListAsync**](https://msdn.microsoft.com/library/windows/apps/dn653261).
 
 En este ejemplo, actualizamos el elemento **PhraseList** que se muestra en el ejemplo anterior con un destino adicional a Phoenix.
 
@@ -150,6 +151,6 @@ En nuestro ejemplo, tenemos un elemento **PhraseTopic** que consta de una propie
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

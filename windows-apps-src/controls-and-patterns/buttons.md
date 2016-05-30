@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 label: Buttons
 template: detail.hbs
 ---
@@ -154,39 +155,34 @@ El ámbito del historial de navegación (en la aplicación o global) depende del
 
 La interfaz de usuario del botón Atrás del sistema está optimizada para cada dispositivo y tipo de entrada, pero la experiencia de navegación es global y coherente en los diferentes dispositivos y aplicaciones para la Plataforma universal de Windows (UWP). Estas experiencias diferentes incluyen lo siguiente:
 
-Dispositivos
-Teléfono
-![botón Atrás del sistema en un teléfono](images/nav-back-phone.png)
+Sistema de teléfono de dispositivo ![en un teléfono](images/nav-back-phone.png)
 -   Siempre está presente.
 -   Un botón de hardware o de software situado en la parte inferior del dispositivo.
 -   Navegación hacia atrás global dentro de la aplicación y entre aplicaciones.
 
-<span id="Tablet"></span><span id="tablet"></span><span id="TABLET"></span>Tableta
-![Botón Atrás del sistema en una tableta (en modo tableta)](images/nav-back-tablet.png)
+<span id="Tablet"></span><span id="tablet"></span><span id="TABLET"></span>Sistema de tableta ![en una tableta (en modo tableta)](images/nav-back-tablet.png)
 -   Siempre está presente en el modo tableta.
 
     No está disponible en modo de escritorio. En su lugar, se puede habilitar botón Atrás de la barra de título. Consulta [PC, Portátil, Tableta](#PC).
 
-    Los usuarios pueden cambiar entre ejecutar en modo tableta y el modo de escritorio yendo a **Configuración &gt; Sistema &gt; Modo tableta** y configurando **Hacer que Windows se adapte mejor a los gestos táctiles al usar el dispositivo como tableta**.
+    Los usuarios pueden cambiar entre ejecutar en modo tableta y modo de escritorio desde **Configuración &gt; Sistema &gt; Modo tableta** con la opción **Hacer que Windows se adapte mejor a los gestos táctiles al usar el dispositivo como tableta**.
 
 -   Un botón de software de la barra de navegación situado en la parte inferior del dispositivo.
 -   Navegación hacia atrás global dentro de la aplicación y entre aplicaciones.
 
-<span id="PC"></span><span id="pc"></span>PC, Portátil, Tableta
-![Botón Atrás del sistema en un equipo o un portátil](images/nav-back-pc.png)
+<span id="PC"></span><span id="pc"></span>Sistema de PC, equipo portátil y tableta ![en un equipo de escritorio o portátil](images/nav-back-pc.png)
 -   Opcional en el modo de escritorio.
 
     No está disponible en modo tableta. Consulta [Tableta](#Tablet).
 
     Deshabilitado de manera predeterminada. Deben participar para habilitarlo.
 
-    Los usuarios pueden cambiar entre ejecutar en modo tableta y el modo de escritorio yendo a **Configuración &gt; Sistema &gt; Modo tableta** y configurando **Hacer que Windows se adapte mejor a los gestos táctiles al usar el dispositivo como tableta**.
+    Los usuarios pueden cambiar entre ejecutar en modo tableta y modo de escritorio desde **Configuración &gt; Sistema &gt; Modo tableta** con la opción **Hacer que Windows se adapte mejor a los gestos táctiles al usar el dispositivo como tableta**.
 
 -   Un botón de software situado en la barra de título de la aplicación.
 -   Navegación hacia atrás solo dentro de la aplicación. No es compatible con la navegación entre aplicaciones.
 
-Surface Hub
-![Botón Atrás del sistema en Surface Hub](images/nav-back-surfacehub.png)
+Sistema de Surface Hub ![en Surface Hub](images/nav-back-surfacehub.png)
 -   Siempre está presente.
 -   Un botón de software situado en la parte inferior del dispositivo.
 -   La navegación hacia atrás dentro de la aplicación y entre aplicaciones.
@@ -228,6 +224,6 @@ Surface Hub
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

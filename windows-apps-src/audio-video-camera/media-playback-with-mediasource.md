@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
 description: La clase MediaSource proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde orígenes diferentes, tales como archivos locales o remotos, y expone un modelo común para acceder a datos multimedia, independientemente del formato del contenido multimedia subyacente.
 title: Reproducción de contenido multimedia con MediaSource
@@ -11,7 +12,9 @@ title: Reproducción de contenido multimedia con MediaSource
 
 \[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
 
-La clase [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905) proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde orígenes diferentes, tales como archivos locales o remotos, y expone un modelo común para acceder a datos multimedia, independientemente del formato del contenido multimedia subyacente. La clase [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) amplía la funcionalidad del objeto **MediaSource**, lo que permite administrar y seleccionar entre varias pistas de audio, vídeo y metadatos incluidos en un elemento multimedia. [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite crear listas de reproducción desde uno o más elementos de la reproducción de contenido multimedia.
+La clase [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905) proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde orígenes diferentes, tales como archivos locales o remotos, y expone un modelo común para acceder a datos multimedia, independientemente del formato del contenido multimedia subyacente. La clase [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) amplía la funcionalidad del objeto **MediaSource**, lo que permite administrar y seleccionar entre varias pistas de audio, vídeo y metadatos incluidos en un elemento multimedia. [
+              **MediaPlaybackList**
+            ](https://msdn.microsoft.com/library/windows/apps/dn930955) permite crear listas de reproducción desde uno o más elementos de la reproducción de contenido multimedia.
 
 El código de este artículo es una adaptación de la muestra [Video Playback SDK](http://go.microsoft.com/fwlink/p/?LinkId=620020&clcid=0x409) (SDK de reproducción de vídeo). Puedes descargar esta muestra para ver el código en contexto o para usarla como punto de partida para tu propia aplicación.
 
@@ -32,9 +35,9 @@ Después de crear un objeto **MediaSource**, puedes reproducir el origen directa
 
 Para completar este escenario, tendrás que incluir los espacios de nombres [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962) y [**Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562).
 
-[!code-cs[Usar](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetUsing)]
+[!code-cs[Uso](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetUsing)]
 
-Declarar una variable de tipo **MediaSource**. Para los ejemplos de este artículo, el origen de contenido multimedia se declara como un miembro de clase para que se puede acceder a él desde varias ubicaciones.
+Declara una variable de tipo **MediaSource**. Para los ejemplos de este artículo, el origen de contenido multimedia se declara como un miembro de clase para que se puede acceder a él desde varias ubicaciones.
 
 [!code-cs[DeclareMediaSource](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetDeclareMediaSource)]
 
@@ -123,7 +126,7 @@ Crea un nuevo objeto de indicación, apropiado para el tipo de pista de metadato
 
 [!code-cs[AddDataTrack](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetAddDataTrack)]
 
-El evento **CueEntered** se genera cuando se haya alcanzado la hora de inicio de la indicación, siempre y cuando la pista asociada tenga un modo de presentación de **ApplicationPresented**, **Hidden** o **PlatformPresented**. Los eventos de indicación no se generan para las pistas de metadatos mientras el modo de presentación de la pista sea **Disabled**. En este ejemplo, simplemente se envían a la ventana de depuración los datos personalizados asociados con la indicación.
+El evento **CueEntered** se genera cuando se ha alcanzado la hora de inicio de una indicación, siempre que la pista asociada tenga un modo de presentación de **ApplicationPresented**, **Hidden** o **PlatformPresented**. Los eventos de indicación no se generan para pistas de metadatos mientras el modo de presentación de la pista es **Disabled**. En este ejemplo, simplemente se envían a la ventana de depuración los datos personalizados asociados con la indicación.
 
 [!code-cs[DataCueEntered](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetDataCueEntered)]
 
@@ -174,6 +177,6 @@ Establece la propiedad en [**AutoRepeatEnabled**](https://msdn.microsoft.com/lib
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,18 +1,19 @@
 ---
+author: DelfCo
 Description: Desarrolla tu aplicación para admitir los diseños y fuentes de varios idiomas, incluida la dirección de flujo de derecha a izquierda.
-title: Ajustar el diseño y las fuentes, y admitir la escritura de derecha a izquierda
+title: Ajustar el diseño y las fuentes, y admitir la escritura RTL
 ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
 template: detail.hbs
 ---
 
-# Ajustar el diseño y las fuentes, y admitir la escritura de derecha a izquierda
+# Ajustar el diseño y las fuentes, y admitir la escritura RTL
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Desarrolla tu aplicación para admitir los diseños y fuentes de varios idiomas, incluida la dirección de flujo de derecha a izquierda.
+
+Desarrolla la aplicación para que admita los diseños y fuentes de varios idiomas, incluida la dirección de flujo RTL (de derecha a izquierda).
 
 ## <span id="Layout_guidelines"></span><span id="layout_guidelines"></span><span id="LAYOUT_GUIDELINES"></span>Directrices de diseño
 
@@ -25,7 +26,7 @@ Usa mecanismos de diseño flexibles en lugar del posicionamiento absoluto, los a
 
 Especifica un objeto **Uid** para un elemento:
 
-```XAML
+```XML
 <TextBlock x:Uid="Block1">
 ```
 
@@ -37,7 +38,7 @@ Los controles de diseño de lenguaje XAML, como [**Grid**](https://msdn.microsof
 
 Especifica un objeto **Uid** para la página principal de tu aplicación:
 
-```XAML
+```XML
 <Page x:Uid="MainPage">
 ```
 
@@ -69,14 +70,14 @@ No uses el atributo ni la propiedad **align** en HTML. En cambio, usa la propied
 
 Usa la propiedad [**writing-mode**](https://msdn.microsoft.com/library/ms531187) para admitir diseños de texto vertical en CSS.
 
-## <span id="Mirroring_images"></span><span id="mirroring_images"></span><span id="MIRRORING_IMAGES"></span>Creación de espejos de imágenes
+## <span id="Mirroring_images"></span><span id="mirroring_images"></span><span id="MIRRORING_IMAGES"></span>Creación de imágenes reflejadas
 
 
 ### <span id="XAML"></span><span id="xaml"></span>XAML
 
 Si la aplicación tiene imágenes que deben reflejarse (es decir, se puede voltear la misma imagen) para la entrada de derecha a izquierda, puedes aplicar la propiedad [**FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716):
 
-```XAML
+```XML
 <!-- en-US\localized.xaml -->
 <Image ... FlowDirection="LeftToRight" />
 
@@ -92,12 +93,12 @@ Si tu aplicación tiene imágenes que deben reflejarse (es decir, se puede volte
 .mirrorable { transform: scaleX(-1); }
 ```
 
-**Para XAML y HTML:**: si tu aplicación requiere de una imagen diferente para voltear la imagen correctamente, puedes usar el sistema de administración de recursos con el [calificador layoutdir](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324). El sistema elige una imagen llamada file.layoutdir-rtl.png cuando el [idioma de la aplicación](manage-language-and-region.md) se establece en un idioma de derecha a izquierda. Este método puede ser necesario cuando alguna parte de la imagen se voltea, pero otra no.
+**Para XAML y HTML:**: si la aplicación requiere una imagen diferente para voltear la imagen correctamente, puedes usar el Sistema de administración de recursos con el [calificador layoutdir](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324). El sistema elige una imagen llamada file.layoutdir-rtl.png cuando el [idioma de la aplicación](manage-language-and-region.md) se establece en un idioma de derecha a izquierda. Este método puede ser necesario cuando alguna parte de la imagen se voltea, pero otra no.
 
 ## <span id="Fonts"></span><span id="fonts"></span><span id="FONTS"></span>Fuentes
 
 
-**Para XAML y HTML:** usa las API de asignación de fuentes [**LanguageFont**](https://msdn.microsoft.com/library/windows/apps/br206864) para acceder mediante programación a la familia, tamaño, peso y estilo de fuentes recomendados para un idioma en particular. El objeto **LanguageFont** proporciona acceso a la información de fuente correcta para diversas categorías de contenido, como encabezados de interfaz de usuario, notificaciones, cuerpo y fuentes de cuerpo de documento que los usuarios pueden editar.
+**Para XAML y HTML:** usa las API de asignación de fuentes [**LanguageFont**](https://msdn.microsoft.com/library/windows/apps/br206864) para acceder mediante programación a la familia, tamaño, peso y estilo de fuente recomendados para un idioma en particular. El objeto **LanguageFont** proporciona acceso a la información de fuente correcta para diversas categorías de contenido, como encabezados de interfaz de usuario, notificaciones, cuerpo y fuentes de cuerpo de documento que los usuarios pueden editar.
 
 ### <span id="HTML"></span><span id="html"></span>HTML
 
@@ -113,6 +114,6 @@ Las aplicaciones que muestran varios idiomas en una única página deben estable
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

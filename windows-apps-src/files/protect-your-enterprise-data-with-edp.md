@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 Description: 'En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr realizar algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con los archivos.'
 MS-HAID: 'dev\_files.protect\_your\_enterprise\_data\_with\_edp'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -41,7 +42,7 @@ string localFolderPath = ApplicationData.Current.LocalFolder.Path;
 
 Una vez tengas la ruta de acceso, podrás usar el Explorador de archivos para buscar fácilmente los archivos que crea la aplicación. De esta forma, podrás confirmar que están protegidos y con la identidad correcta.
 
-En el Explorador de archivos, selecciona **Cambiar opciones de carpeta y búsqueda** y, en la pestaña **Vista**, activa **Mostrar los archivos cifrados en color**. Igualmente, usa el comando **Vista** &gt; **Agregar columnas** del Explorador de archivos para agregar la columna **Cifrado para** para poder ver la identidad de la empresa a la que estás protegiendo los archivos.
+En el Explorador de archivos, selecciona **Cambiar opciones de carpeta y búsqueda** y, en la pestaña **Vista**, activa **Mostrar los archivos cifrados en color**. Usa también el comando **Vista**&gt;**Agregar columnas** del Explorador de archivos para agregar la columna **Cifrado para** y poder ver la identidad de la empresa a la que estás protegiendo los archivos.
 
 ## Proteger los datos de la empresa en un archivo nuevo (para una aplicación interactiva)
 
@@ -109,7 +110,7 @@ private async void SaveEnterpriseDataToFile(string enterpriseData, string identi
         await FileProtectionManager.CreateProtectedAndOpenAsync(storageFolder,
             "sample.txt", identity, CreationCollisionOption.ReplaceExisting);
 
-    // It&#39;s important to successfully protect a file *before* writing enterprise data to it.
+    // It's important to successfully protect a file *before* writing enterprise data to it.
     if (protectedFileCreateResult.ProtectionInfo.Identity == identity &&
         protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus.Protected)
     {
@@ -244,7 +245,7 @@ private async void EnableUIPolicyFromFile(StorageFile storageFile)
 }
 ```
 
-**Nota:** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+**Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -263,6 +264,6 @@ private async void EnableUIPolicyFromFile(StorageFile storageFile)
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

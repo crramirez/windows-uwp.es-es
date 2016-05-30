@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Mostrar una pantalla de presentación durante más tiempo
 description: Muestra una pantalla de presentación más tiempo creando una pantalla de presentación extendida para tu aplicación. Esta pantalla extendida imita la pantalla de presentación que aparece al iniciar la aplicación, pero se puede personalizar.
 ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
@@ -18,7 +19,7 @@ ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
 
 Muestra una pantalla de presentación más tiempo creando una pantalla de presentación extendida para tu aplicación. Esta pantalla extendida imita la pantalla de presentación que aparece al iniciar la aplicación, pero se puede personalizar. Tanto si lo que quieres es mostrar información en tiempo real sobre la carga como simplemente dar a tu aplicación un poco más de tiempo para preparar la interfaz de usuario inicial, la pantalla de presentación extendida te permite definir la experiencia de inicio.
 
-> **Nota**  La frase "pantalla de presentación extendida" en este tema hace referencia a una pantalla de representación que permanece en pantalla durante un período de tiempo prolongado. No significa una subclase que se deriva de la clase [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763).
+> **Nota**  La frase "pantalla de presentación extendida" en este tema hace referencia a una pantalla de presentación que permanece en pantalla durante un período de tiempo prolongado. No significa una subclase que se deriva de la clase [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763).
 
  
 
@@ -56,7 +57,7 @@ En el archivo ExtendedSplash.xaml:
 
 Agrega el siguiente código para definir los elementos [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) e [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752), así como un control [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538), en ExtendedSplash.xaml:
 
-```xaml
+```xml
     <Grid Background="#464646">
         <Canvas>
             <Image x:Name="extendedSplashImage" Source="Assets/SplashScreen.png"/>
@@ -120,7 +121,7 @@ Usa estos pasos para definir métodos para mostrar correctamente tu pantalla de 
         if (splash != null)
         {
             // Register an event handler to be executed when the splash screen has been dismissed.
-            splash.Dismissed += new TypedEventHandler&lt;SplashScreen, Object&gt;(DismissedEventHandler);
+            splash.Dismissed += new TypedEventHandler<SplashScreen, Object>(DismissedEventHandler);
 
             // Retrieve the window coordinates of the splash screen image.
             splashImageRect = splash.ImageLocation;
@@ -168,7 +169,7 @@ Usa estos pasos para definir métodos para mostrar correctamente tu pantalla de 
     En ExtendedSplash.xaml.cs, responde cuando se produzca el evento [**SplashScreen.Dismissed**](https://msdn.microsoft.com/library/windows/apps/br224764) estableciendo la clase `dismissed` en true. Si tu aplicación tiene operaciones de configuración, agrégalas a este controlador de eventos.
 
     ```cs
-    // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application&#39;s first view).
+    // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application's first view).
     void DismissedEventHandler(SplashScreen sender, object e)
     {
         dismissed = true;
@@ -222,7 +223,7 @@ Usa estos pasos para definir métodos para mostrar correctamente tu pantalla de 
     {
         if (loadState)
         {
-             // code to load your app&#39;s state here 
+             // code to load your app's state here 
         }
     }
     ```
@@ -261,7 +262,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 
 ExtendedSplash.xaml: este ejemplo incluye un botón `DismissSplash` porque no tiene recursos de aplicación para cargar. En tu aplicación, descarta la pantalla de presentación extendida automáticamente cuando la aplicación haya terminado de cargar los recursos o de preparar la interfaz de usuario inicial.
 
-```xaml
+```xml
 <Page
     x:Class="SplashScreenExample.ExtendedSplash"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -385,7 +386,7 @@ namespace SplashScreenExample
             }
         }
 
-        // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application&#39;s first view).
+        // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application's first view).
         void DismissedEventHandler(SplashScreen sender, object e)
         {
             dismissed = true;
@@ -492,7 +493,7 @@ namespace SplashScreenExample
 
             if (rootFrame.Content == null)
             {
-                // When the navigation stack isn&#39;t restored navigate to the first page,
+                // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
@@ -548,6 +549,6 @@ namespace SplashScreenExample
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

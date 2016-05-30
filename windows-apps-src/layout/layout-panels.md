@@ -1,8 +1,9 @@
 ---
-Description: Puedes usar paneles de diseño para organizar y agrupar elementos de interfaz de usuario en la aplicación.
+author: Jwmsft
+Description: Usar paneles de diseño para organizar y agrupar elementos de la interfaz de usuario en la aplicación.
 title: Paneles de diseño para aplicaciones para la Plataforma universal de Windows (UWP)
 ms.assetid: 07A7E022-EEE9-4C81-AF07-F80868665994
-label: Paneles de diseño
+label: Layout panels
 template: detail.hbs
 ---
 # Paneles de diseño
@@ -30,7 +31,8 @@ Este es un ejemplo de cómo puedes establecer la propiedad adjunta [**Canvas.Lef
 
 Para obtener más información sobre las propiedades adjuntas, consulta [Introducción a las propiedades adjuntas](../xaml-platform/attached-properties-overview.md).
 
-> **Nota**&nbsp;&nbsp;Una propiedad adjunta es un concepto XAML que requiere una sintaxis especial que se debe obtener o establecer desde el código. Para usar propiedades adjuntas en el código, consulta la sección *Propiedades adjuntas en el código* del artículo *Introducción a las propiedades adjuntas*.
+> **Nota**
+            &nbsp;&nbsp;Una propiedad adjunta es un concepto XAML que requiere una sintaxis especial que se debe obtener o establecer desde el código. Para usar propiedades adjuntas en el código, consulta la sección *Propiedades adjuntas en el código* del artículo *Introducción a las propiedades adjuntas*.
 
 **Bordes de panel**
 
@@ -50,7 +52,9 @@ El uso de las propiedades de borde integradas permite reducir el recuento de ele
 
 ## RelativePanel
 
-[**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) permite diseñar los elementos de interfaz de usuario al especificar su posición en relación con otros elementos y en relación con el panel. De manera predeterminada, un elemento se coloca en la esquina superior izquierda del panel. Puedes usar RelativePanel con un elemento [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) y elementos [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) para reorganizar la interfaz de usuario en distintos tamaños de ventana.
+[
+              **RelativePanel**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) permite diseñar los elementos de la interfaz de usuario al especificar su posición en relación con otros elementos y en relación con el panel. De manera predeterminada, un elemento se coloca en la esquina superior izquierda del panel. Puedes usar RelativePanel con un elemento [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) y elementos [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) para reorganizar la interfaz de usuario en distintos tamaños de ventana.
 
 En esta tabla se muestran las propiedades adjuntas que puedes usar para alinear un elemento con el borde o el centro del panel y alinearlo y colocarlo en relación con otros elementos.
 
@@ -97,7 +101,9 @@ Estas son algunas cosas que tienes que tener en cuenta sobre la variación de ta
 
 ## StackPanel
 
-[**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) es un sencillo panel de diseño que organiza los elementos secundarios en una única línea que se puede orientar horizontal o verticalmente. El uso de controles de StackPanel es típico en escenarios donde quieres organizar una pequeña subsección de la interfaz de usuario en la página.
+[
+              **StackPanel**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) es un sencillo panel de diseño que organiza los elementos secundarios en una única línea que se puede orientar horizontal o verticalmente. El uso de controles de StackPanel es típico en escenarios donde quieres organizar una pequeña subsección de la interfaz de usuario en la página.
 
 Puedes usar la propiedad [**Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.orientation.aspx) para especificar la dirección de los elementos secundarios. La orientación predeterminada es [**Vertical**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.orientation.aspx).
 
@@ -158,7 +164,9 @@ En este ejemplo, la variación del tamaño funciona del siguiente modo:
 
 ## VariableSizedWrapGrid
 
-[**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) proporciona un panel de diseño de estilo cuadrícula en el que los elementos se organizan en filas o en columnas que se ajustan automáticamente a una nueva fila o columna cuando se alcanza el valor [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx). 
+[
+              **VariableSizedWrapGrid**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) proporciona un panel de diseño de estilo cuadrícula en el que los elementos se organizan en filas o en columnas que se ajustan automáticamente a una nueva fila o columna cuando se alcanza el valor [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx). 
 
 La propiedad [**Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.orientation.aspx) especifica si la cuadrícula agrega sus elementos en filas o columnas antes de realizar el encapsulado. La orientación predeterminada es **Vertical**, lo que significa que la cuadrícula agrega elementos de arriba abajo hasta que se llene una columna y luego se ajusta a una columna nueva. Cuando el valor es **Horizontal**, la cuadrícula agrega elementos de izquierda a derecha y luego se ajusta a una nueva fila.
 
@@ -219,6 +227,6 @@ Usa el panel Canvas con moderación. Aunque resulta conveniente poder controlar 
 Hay varios paneles especiales que se pueden usar solo como [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) para mostrar los elementos en un [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx). Estos son [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemsstackpanel.aspx), [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemswrapgrid.aspx), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.virtualizingstackpanel.aspx) y [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.wrapgrid.aspx). No puedes usar estos paneles para el diseño general de la interfaz de usuario.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

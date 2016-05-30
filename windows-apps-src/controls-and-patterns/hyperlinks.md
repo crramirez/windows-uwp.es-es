@@ -1,13 +1,14 @@
 ---
-Description: Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra aplicación o permiten iniciar un Identificador uniforme de recursos (URI) específico con una aplicación de explorador diferente.
+author: Jwmsft
+Description: Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra aplicación o permiten iniciar un identificador uniforme de recursos (URI) específico con una aplicación de explorador diferente.
 title: Hipervínculos
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
-label: Hipervínculos
+label: Hyperlinks
 template: detail.hbs
 ---
 # Hipervínculos
 
-Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra aplicación o permiten iniciar un Identificador uniforme de recursos (URI) específico con una aplicación de explorador diferente. Existen dos formas mediante las que se puede agregar un hipervínculo a una aplicación XAML: el elemento de texto **Hyperlink** y el control **HyperlinkButton**.
+Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra aplicación o permiten iniciar un identificador uniforme de recursos (URI) específico con una aplicación de explorador diferente. Existen dos formas mediante las que se puede agregar un hipervínculo a una aplicación XAML: el elemento de texto **Hyperlink** y el control **HyperlinkButton**.
 
 ![Botón de hipervínculo](images/controls/hyperlink-button.png)
 
@@ -47,9 +48,10 @@ En este ejemplo se muestra cómo usar un elemento de texto Hyperlink dentro de u
 ```
 El hipervínculo aparece en línea y fluye con el texto que le rodea:
 
-![Ejemplo de un hipervínculo como un elemento de texto](images/controls_hyperlink-element.png) 
+![Ejemplo de un hipervínculo como elemento de texto](images/controls_hyperlink-element.png) 
 
-> **Sugerencia**&nbsp;&nbsp;Cuando uses un elemento Hyperlink en un control de texto con otros elementos de texto en XAML, coloca el contenido en un contenedor [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) y aplica el atributo `xml:space="preserve"` al contenedor Span para mantener el espacio en blanco entre el elemento Hyperlink y otros elementos.
+> **Sugerencia**
+            &nbsp;&nbsp;Cuando uses un elemento Hyperlink en un control de texto con otros elementos de texto en XAML, coloca el contenido en un contenedor [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) y aplica el atributo `xml:space="preserve"` al contenedor Span para mantener el espacio en blanco entre el elemento Hyperlink y otros elementos.
 
 ## Crear un elemento HyperlinkButton
 
@@ -80,7 +82,8 @@ En los dos tipos de hipervínculos, puedes controlar la navegación del mismo mo
 
 Para usar el hipervínculo para navegar a un URI, establece la propiedad NavigateUri. Cuando un usuario hace clic en el hipervínculo o lo pulsa, el URI especificado se abre en el explorador predeterminado. El explorador predeterminado se ejecuta en un proceso independiente de la aplicación.
 
-> **Nota**&nbsp;&nbsp;No es necesario usar esquemas http: o https:. Se pueden usar esquemas como ms-appx:, ms-appdata: o ms-resources:, si hay contenido de recursos en estas ubicaciones que sea adecuado para cargarlo en un explorador. Sin embargo, el esquema file: se bloquea específicamente. Para más información, consulta [Esquemas de URI](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
+> **Note**
+            &nbsp;&nbsp;No es necesario usar esquemas http: o https:. Se pueden usar esquemas como ms-appx:, ms-appdata: o ms-resources:, si hay contenido de recursos en estas ubicaciones que sea adecuado para cargarlo en un explorador. Sin embargo, el esquema file: se bloquea específicamente. Para más información, consulta [Esquemas de URI](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
 
 > Cuando un usuario hace clic en el hipervínculo, el valor de la propiedad NavigateUri se pasa a un controlador de sistema para esquemas y tipos de URI. El sistema inicia entonces la aplicación que esté registrada para el esquema del URI proporcionado para NavigateUri.
 
@@ -122,7 +125,7 @@ Como un elemento Hyperlink no es un [UIElement](https://msdn.microsoft.com/libra
 
 **Contenido**
 
-El elemento Hyperlink tiene restricciones respecto al contenido que puede existir en su colección de [elementos Inline](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx). En concreto, un elemento Hyperlink solo permite la clase [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) y otros tipos de [Span]() que no sean otro elemento Hyperlink. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) no puede estar en la colección de elementos Inline de un elemento Hyperlink. Si se intenta agregar contenido restringido, se genera una excepción de argumento no válido o una excepción de análisis XAML.
+El elemento Hyperlink tiene restricciones respecto al contenido que puede existir en su colección de [elementos Inline](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx). En concreto, un elemento Hyperlink solo permite la clase [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) y otros tipos de [Span]() que no sean otro elemento Hyperlink. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) no puede estar en la colección de elementos Inlines de un elemento Hyperlink. Si se intenta agregar contenido restringido, se genera una excepción de argumento no válido o una excepción de análisis XAML.
 
 **Comportamiento de Hyperlink y el tema y estilo**
 
@@ -137,13 +140,11 @@ El color predeterminado del hipervínculo es el color de énfasis del sistema. P
 -   Mantén los hipervínculos discretos y suficientemente separados para que el usuario pueda diferenciarlos y seleccionarlos con facilidad.
 -   Agrega información sobre herramientas a los hipervínculos que indican dónde se dirigirá al usuario. Si se dirige al usuario a un sitio externo, incluye el nombre de dominio de nivel superior dentro de la información sobre herramientas y un estilo de texto con un color de fuente secundario.
 
-\[Este artículo contiene información específica para aplicaciones para la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
 ## Artículos relacionados
 
-[Controles de texto](text-controls.md)
-
-**Para diseñadores**
+- [Controles de texto](text-controls.md)
 - [Directrices para información sobre herramientas](tooltips.md)
 
 **Para desarrolladores (XAML)**
@@ -151,6 +152,6 @@ El color predeterminado del hipervínculo es el color de énfasis del sistema. P
 - [**Clase Windows.UI.Xaml.Controls.HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

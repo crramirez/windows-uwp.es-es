@@ -1,5 +1,6 @@
 ---
-title: Introducción: animación
+author: mcleblanc
+title: Tareas iniciales con animación
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: En este proyecto, moveremos un rectángulo, le aplicaremos un efecto de atenuación y después lo volveremos a mostrar.
 ---
@@ -62,7 +63,7 @@ Vuelve a ejecutar el proyecto y verás que el rectángulo está animado. ¡Bien!
 
 Si abres el archivo MainPage.xaml en la vista **XAML**, verás el código XAML que Blend ha agregado mientras trabajabas en el diseñador. En especial, fíjate en el código de los elementos `<Storyboard>` y `<Rectangle>`. El código siguiente muestra un ejemplo. Los puntos suspensivos indican código no relacionado que se omite por razones de brevedad; se han agregado saltos de línea para facilitar la lectura del código.
 
-```xaml
+```xml
 ...
 <Storyboard 
         x:Name="Storyboard1" 
@@ -118,13 +119,13 @@ Si abres el archivo MainPage.xaml en la vista **XAML**, verás el código XAML q
 
 Puedes modificar este XAML manualmente o regresar a Blend y seguir trabajando desde allí. Con Blend es más divertido crear interfaces de usuario atractivas, y la capacidad para animarlas mediante una herramienta gráfica puede acelerar considerablemente el tiempo de desarrollo. Para obtener más información sobre las animaciones, consulta [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350).
 
-**Nota** Para obtener información acerca cómo realizar animaciones para aplicaciones de la Tienda Windows mediante JavaScript y HTML, consulta [Animación de la interfaz de usuario (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
+**Nota**  Para obtener información acerca cómo realizar animaciones para aplicaciones de la Tienda Windows mediante JavaScript y HTML, consulta [Animación de la interfaz de usuario (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
 
 ### Paso siguiente
 
 [Introducción: A continuación](getting-started-what-next.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

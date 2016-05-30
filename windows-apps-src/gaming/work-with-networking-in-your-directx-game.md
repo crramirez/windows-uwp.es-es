@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Conexión en red de juegos
 description: Aprende a desarrollar e incorporar características de red en un juego DirectX.
 ms.assetid: 212eee15-045c-8ba1-e274-4532b2120c55
@@ -386,6 +387,6 @@ using namespace Windows::Web::Http;
 * [Muestra de StreamSocket](http://go.microsoft.com/fwlink/p/?linkid=243037)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Vincula el valor de una propiedad en una plantilla de control al valor de otra propiedad expuesta en el control con plantilla. TemplateBinding solo se puede usar dentro de una definición de ControlTemplate en XAML.
 title: Extensión de marcado TemplateBinding
 ms.assetid: FDE71086-9D42-4287-89ED-8FBFCDF169DC
@@ -33,7 +34,7 @@ Vincula el valor de una propiedad en una plantilla de control al valor de otra p
 
 El uso de **TemplateBinding** es una parte fundamental de la definición de una plantilla de control, tanto si eres un autor de control personalizado como si reemplazas una plantilla de control para los controles existentes. Para obtener más información, consulta [Inicio rápido: plantillas de control](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374).
 
-Es bastante común que *propertyName* y *targetProperty* usen el mismo nombre de propiedad. En este caso, un control podría definir una propiedad en sí misma y reenviar la propiedad a una propiedad existente y con un nombre asignado intuitivamente de una de sus partes componentes. Por ejemplo, un control que incorpore un [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) en su composición, que se usa para mostrar la propiedad **Texto**, podría incluir este código XAML como parte de la plantilla del control: `<TextBlock Text="{TemplateBinding Text}" .... />`
+Es bastante común que *propertyName* y *targetProperty* usen el mismo nombre de propiedad. En este caso, un control podría definir una propiedad en sí misma y reenviar la propiedad a una propiedad existente y con un nombre asignado intuitivamente de una de sus partes componentes. Por ejemplo, un control que incorpore un objeto [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) en su composición, que se usa para mostrar la propiedad **Texto** del control, podría incluir este código XAML como parte de la plantilla del control: `<TextBlock Text="{TemplateBinding Text}" .... />`
 
 Los tipos usados como valor para la propiedad de origen y la propiedad de destino deben coincidir. No existe la posibilidad de introducir un convertidor al usar **TemplateBinding**. Si no coinciden los valores, se produce un error al analizar el XAML. Si necesitas un convertidor, puedes usar la sintaxis detallada para un enlace de plantillas como: `{Binding RelativeSource={RelativeSource TemplatedParent}, Converter="..." ...}`
 
@@ -45,7 +46,7 @@ Un **TemplateBinding** siempre es un enlace unidireccional. Ambas propiedades im
 
 **TemplateBinding** es una extensión de marcado. Las extensiones de marcado generalmente se implementan cuando es necesario que los valores de atributo de escape no sean valores literales o nombres de controlador y el requisito sea más global que simplemente colocar convertidores de tipos en ciertos tipos o propiedades. Todas las extensiones de marcado en XAML usan los caracteres "{" y "}" en su sintaxis de atributo, que es la convención mediante la cual un procesador XAML reconoce que una extensión de marcado debe procesar el atributo.
 
-**Nota** En la implementación del procesador XAML de Windows Runtime no hay una representación de clase de respaldo para la funcionalidad de **TemplateBinding**. **TemplateBinding** se usa exclusivamente en marcado XAML. No hay una forma directa de reproducir el comportamiento en el código.
+**Nota** En la implementación del procesador XAML de Windows Runtime no hay una representación de clase de respaldo para **TemplateBinding**. **TemplateBinding** se usa exclusivamente en marcado XAML. No hay una forma directa de reproducir el comportamiento en el código.
 
 ## Temas relacionados
 
@@ -58,6 +59,6 @@ Un **TemplateBinding** siempre es un enlace unidireccional. Ambas propiedades im
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

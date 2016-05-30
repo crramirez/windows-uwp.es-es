@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Nombres de esquema de URI y archivo reservados
 description: Puedes usar las asociaciones de URI para iniciar automáticamente la aplicación cuando otra aplicación inicie un esquema de URI específico.
 ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
@@ -125,6 +126,6 @@ A continuación se muestran los tipos de archivo que están reservados para el s
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

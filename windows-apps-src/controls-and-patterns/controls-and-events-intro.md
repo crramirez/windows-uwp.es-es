@@ -1,13 +1,14 @@
 ---
-Description: Creas la interfaz de usuario de tu aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a tu aplicación.
-title: Agregar controles de HTML y controlar eventos
+author: Jwmsft
+Description: Creas la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a la aplicación.
+title: Agregar controles y controlar eventos
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
-label: Introducción a los controles y eventos
+label: Intro to controls and events
 template: detail.hbs
 ---
 # Introducción a los controles y eventos
 
-Creas la interfaz de usuario de tu aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a tu aplicación. Hay 3 pasos clave para agregar controles a la aplicación: 
+Creas la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a tu aplicación. Hay 3 pasos clave para agregar controles a la aplicación: 
 
 - Agrega un control a la interfaz de usuario de la aplicación. 
 - Establece las propiedades para el control, como el ancho, el alto o el color de primer plano. 
@@ -117,21 +118,21 @@ Este ejemplo muestra cómo asociar un evento Click con un controlador de eventos
 <Button Name="Button1" Content="Button" Click="Button_Click"/>
 ```
 
-También puedes asociar un evento con su controlador de eventos en el código subyacente. Así es cómo se asocia un controlador de eventos en el código.
+También puedes asociar un evento con su controlador de eventos en el código subyacente. Así es como se asocia un controlador de eventos en el código.
 
 ```csharp
 Button1.Click += new RoutedEventHandler(Button_Click);
 ```
 
-\[En este artículo se incluye información específica para aplicaciones de la Plataforma universal de Windows (UWP) y Windows 10. Para obtener instrucciones sobre Windows 8.1, descarga el [PDF sobre las directrices para Windows 8.1](https://go.microsoft.com/fwlink/p/?linkid=258743)\].
+
 
 ## Temas relacionados
 
 -   [**Barras de comandos**](app-bars.md)
--   [Búsqueda](search.md)
+-   [Buscar](search.md)
 -   [Controles flotantes](dialogs-popups-menus.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

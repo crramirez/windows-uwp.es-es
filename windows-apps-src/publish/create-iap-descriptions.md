@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Cuando envíes un IAP, la información que escribas en el paso s se mostrará a los clientes de la aplicación.
 title: Crear descripciones de IAP
 ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
@@ -44,6 +45,6 @@ También tienes la opción de proporcionar una imagen que puede mostrarse cuando
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
