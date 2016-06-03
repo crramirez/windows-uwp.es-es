@@ -1,39 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md) | InSyncHandedBackSuccess | [Details](#27c6f82e97e9eb24dedcc5d83a18e6aba69611942198)
- [windows-apps-src\monetize\important-notice-eula.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/important-notice-eula.md) | InSyncHandedBackSuccess | [Details](#89af54f5b8cf52366100b4751ed37ddd7a7bacb73310)
 
 ## Item Details
-##### <a name='27c6f82e97e9eb24dedcc5d83a18e6aba69611942198'></a> Source: [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://github.com/Microsoft/windows-apps.es-es/blob/5f26defb1d838fd554a37ddacba3b1a46e1266ce/windows-apps-src/gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md)
-* Handoff File: [walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/9f6d5fd032d9592f3dbbb2b4d915c9d0788d03c2/ol-handoff/Microsoft/windows-apps.es-es/master/walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.es-es.xlf)
-* Handoff Datetime: 2016-05-12 02:32:52
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/e31b26313a703d40e76285904fd9e4fe3c4fa411/ol-handback/Microsoft/windows-apps.es-es/master/walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.es-es.xlf)
-* Handback Datetime: 2016-06-03 13:41:31
-* [Back to Top](#report-top)
-
-##### <a name='89af54f5b8cf52366100b4751ed37ddd7a7bacb73310'></a> Source: [windows-apps-src\monetize\important-notice-eula.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/important-notice-eula.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\monetize\important-notice-eula.md](https://github.com/Microsoft/windows-apps.es-es/blob/5f26defb1d838fd554a37ddacba3b1a46e1266ce/windows-apps-src/monetize/important-notice-eula.md)
-* Handoff File: [important-notice-eula.04fdb9464e2f1d1d572b7ffb7502309634267009.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/9f6d5fd032d9592f3dbbb2b4d915c9d0788d03c2/ol-handoff/Microsoft/windows-apps.es-es/master/important-notice-eula.04fdb9464e2f1d1d572b7ffb7502309634267009.es-es.xlf)
-* Handoff Datetime: 2016-05-12 02:32:52
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [important-notice-eula.04fdb9464e2f1d1d572b7ffb7502309634267009.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/e31b26313a703d40e76285904fd9e4fe3c4fa411/ol-handback/Microsoft/windows-apps.es-es/master/important-notice-eula.04fdb9464e2f1d1d572b7ffb7502309634267009.es-es.xlf)
-* Handback Datetime: 2016-06-03 13:41:31
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
