@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\monetize\what-is-the-difference-admediatorcontrol-or-adcontrol.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/what-is-the-difference-admediatorcontrol-or-adcontrol.md) | InSyncHandedBackSuccess | [Details](#291e1c4d707e8987d29ae5840248918543d7d12a3342)
 
 ## Item Details
+##### <a name='291e1c4d707e8987d29ae5840248918543d7d12a3342'></a> Source: [windows-apps-src\monetize\what-is-the-difference-admediatorcontrol-or-adcontrol.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/what-is-the-difference-admediatorcontrol-or-adcontrol.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\what-is-the-difference-admediatorcontrol-or-adcontrol.md](https://github.com/Microsoft/windows-apps.es-es/blob/74a99322d26b8fe93ec5360b58ed066c7757eba8/windows-apps-src/monetize/what-is-the-difference-admediatorcontrol-or-adcontrol.md)
+* Handoff File: [what-is-the-difference-admediatorcontrol-or-adcontrol.15723f876b4b2e469800049102cc729ac7bee54d.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/9f6d5fd032d9592f3dbbb2b4d915c9d0788d03c2/ol-handoff/Microsoft/windows-apps.es-es/master/what-is-the-difference-admediatorcontrol-or-adcontrol.15723f876b4b2e469800049102cc729ac7bee54d.es-es.xlf)
+* Handoff Datetime: 2016-05-12 02:32:52
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [what-is-the-difference-admediatorcontrol-or-adcontrol.15723f876b4b2e469800049102cc729ac7bee54d.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/0e6fa17803ccd13f35c0f979dcbf49d859253b77/ol-handback/Microsoft/windows-apps.es-es/master/what-is-the-difference-admediatorcontrol-or-adcontrol.15723f876b4b2e469800049102cc729ac7bee54d.es-es.xlf)
+* Handback Datetime: 2016-06-03 15:10:47
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
