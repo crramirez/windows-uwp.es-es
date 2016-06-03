@@ -2,10 +2,10 @@
 author: mcleanbyron
 ms.assetid: 5efb4f40-a021-4dd2-82b4-7c95c3849485
 description: Lee el contrato de licencia para el usuario final (CLUF) en su totalidad para obtener información importante.
-title: Aviso importante: CLUF
+title: Aviso importante CLUF
 ---
 
-# Aviso importante: CLUF
+# Aviso importante CLUF
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
