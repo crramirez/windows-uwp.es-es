@@ -20,7 +20,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [49d5c6b9b25d3dee65e09aeb7726c3695132bc60.PNG](https://github.com/Microsoft/WDG.handback/blob/e833861b67a0c4c1a83116f069b37cdbb94fc658/ol-handback/Microsoft/windows-apps.es-es/master/49d5c6b9b25d3dee65e09aeb7726c3695132bc60.PNG)
-* Handback Datetime: 2016-06-21 17:01:40
+* Handback Datetime: 2016-06-21 17:34:20
 * Handback Error: [handback_validate_file_extension_name_invalide](#49d5c6b9b25d3dee65e09aeb7726c3695132bc602000handback_validate_file_extension_name_invalide)
 * [Back to Top](#report-top)
 
@@ -34,7 +34,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [17324ec7248a681bfd744ca4fb8a3d48be2aad25.PNG](https://github.com/Microsoft/WDG.handback/blob/e833861b67a0c4c1a83116f069b37cdbb94fc658/ol-handback/Microsoft/windows-apps.es-es/master/17324ec7248a681bfd744ca4fb8a3d48be2aad25.PNG)
-* Handback Datetime: 2016-06-21 17:01:40
+* Handback Datetime: 2016-06-21 17:34:20
 * Handback Error: [handback_validate_file_extension_name_invalide](#17324ec7248a681bfd744ca4fb8a3d48be2aad253390handback_validate_file_extension_name_invalide)
 * [Back to Top](#report-top)
 
