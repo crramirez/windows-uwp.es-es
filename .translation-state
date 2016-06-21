@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "54bb42a9e5b6d32f19dc7047125256fdadd6ec0b",
-  "LastTranslatedCommit": "01350e0518410e218679ae917db99e79653550ef",
+  "LastTranslatedCommit": "873bf20f631c7dadb0daa7a0a793cd65a298f294",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
       "FileHash": "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3",
@@ -28215,7 +28215,7 @@
       "TargetFilePath": "windows-apps-src\\debug-test-perf\\images\\em-frameratecounters.PNG",
       "HandbackFilePath": "ol-handback\\Microsoft\\windows-apps.es-es\\master\\49d5c6b9b25d3dee65e09aeb7726c3695132bc60.PNG",
       "HandbackFileCommit": "e833861b67a0c4c1a83116f069b37cdbb94fc658",
-      "HandbackDateTime": "2016-06-21T15:56:20.5587449Z",
+      "HandbackDateTime": "2016-06-21T16:29:01.8394894Z",
       "HandbackException": {
         "internal_error_code": "handback_validate_file_extension_name_invalide",
         "internal_error_message": "Handback file extension name: .png is different with handoff file extension name: .PNG.",
@@ -28225,7 +28225,7 @@
         "stack_trace": null,
         "extended_information": null
       },
-      "HandbackFailureTimes": 2,
+      "HandbackFailureTimes": 3,
       "UpdatedDateTime": "2016-05-18T10:40:03.6658931Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
@@ -54879,7 +54879,7 @@
       "TargetFilePath": "windows-apps-src\\monetize\\images\\feedback_icon.PNG",
       "HandbackFilePath": "ol-handback\\Microsoft\\windows-apps.es-es\\master\\17324ec7248a681bfd744ca4fb8a3d48be2aad25.PNG",
       "HandbackFileCommit": "e833861b67a0c4c1a83116f069b37cdbb94fc658",
-      "HandbackDateTime": "2016-06-21T15:56:20.5587449Z",
+      "HandbackDateTime": "2016-06-21T16:29:01.8394894Z",
       "HandbackException": {
         "internal_error_code": "handback_validate_file_extension_name_invalide",
         "internal_error_message": "Handback file extension name: .png is different with handoff file extension name: .PNG.",
@@ -54889,7 +54889,7 @@
         "stack_trace": null,
         "extended_information": null
       },
-      "HandbackFailureTimes": 2,
+      "HandbackFailureTimes": 3,
       "UpdatedDateTime": "2016-05-18T10:40:03.6658931Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
