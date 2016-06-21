@@ -1,66 +1,66 @@
 ---
-description: Este artículo explica cómo admitir el contrato para contenido compartido en una aplicación para la Plataforma universal de Windows (UWP).
-title: Compartir datos
+description: This article explains how to support the Share contract in a Universal Windows Platform (UWP) app.
+title: Share data
 ms.assetid: 32287F5E-EB86-4B98-97FF-8F6228D06782
 author: awkoren
 ---
 
-# Compartir datos
+# Share data
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este artículo explica cómo admitir el contrato para contenido compartido en una aplicación para la Plataforma universal de Windows (UWP). El contrato para contenido compartido es una manera sencilla de compartir rápidamente los datos, como texto, vínculos, fotos y vídeos, entre aplicaciones. Por ejemplo, es posible que un usuario quiera compartir una página web con sus amigos mediante una aplicación de red social, o guardar un vínculo en una aplicación de notas para consultarlo más adelante.
+This article explains how to support the Share contract in a Universal Windows Platform (UWP) app. The Share contract is an easy way to quickly share data, such as text, links, photos, and videos, between apps. For example, a user might want to share a webpage with their friends using a social networking app, or save a link in a notes app to refer to later.
 
-## Configurar un controlador de eventos
+## Set up an event handler
 
-Agrega un controlador de eventos [**DataRequested**][DataRequested] para que se llame siempre que un usuario invoque el recurso compartido. Esto puede producirse cuando el usuario pulsa un control de la aplicación (por ejemplo, un botón o un comando de la barra de la aplicación) o automáticamente en un escenario específico (si el usuario finaliza un nivel y obtiene una puntuación alta, por ejemplo).
+Add a [**DataRequested**][DataRequested] event handler to be called whenever a user invokes share. This can occur either when the user taps a control in your app (such as a button or app bar command) or automatically in a specific scenario (if the user finishes a level and gets a high score, for example).
 
-[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
+[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
 
-Cuando se produce un evento [**DataRequested**][DataRequested], tu aplicación recibe un objeto [**DataRequest**][DataRequested]. Este objeto contiene un [**DataPackage**][DataPackage] que puedes usar para proporcionar el contenido que el usuario quiere compartir. Debes proporcionar un título y datos para compartir. La descripción es opcional, pero se recomienda.
+When a [**DataRequested**][DataRequested] event occurs, your app receives a [**DataRequest**][DataRequest] object. This contains a [**DataPackage**][DataPackage] that you can use to provide the content that the user wants to share. You must provide a title and data to share. A description is optional, but recommended.
 
-[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
+[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
 
-## Elige los datos
+## Choose data
 
-Puedes compartir varios tipos de datos, incluidos:
+You can share various types of data, including:
 
--   Texto sin formato
--   Identificadores uniformes de recursos (URI)
+-   Plain text
+-   Uniform Resource Identifiers (URIs)
 -   HTML
--   Texto con formato
+-   Formatted text
 -   Bitmaps
--   Texto sin formato
--   Archivos
--   Personalizar datos definidos por el desarrollador
+-   Plain text
+-   Files
+-   Custom developer-defined data
 
-El objeto [**DataPackage**][DataPackage] puede contener uno o más de estos formatos, en cualquier combinación. En el ejemplo a continuación se muestra el uso compartido de un texto.
+The [**DataPackage**][DataPackage] object can contain one or more of these formats, in any combination. The following example demonstrates sharing text.
 
-[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
+[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
 
-## Establecer las propiedades
+## Set properties
 
-Cuando empaquetas datos para compartirlos, puedes suministrar diversas propiedades que proporcionan información adicional acerca del contenido que se va a compartir. Estas propiedades ayudan a las aplicaciones de destino a mejorar la experiencia del usuario. Por ejemplo, una descripción sirve de ayuda cuando el usuario está compartiendo contenido con más de una aplicación. Agregar una vista en miniatura al compartir una imagen o un vínculo a una página web proporciona al usuario una referencia visual. Para obtener más información, consulta [**DataPackage.DataPackagePropertySet**][DataPackagePropertySet].
+When you package data for sharing, you can supply a variety of properties that provide additional information about the content being shared. These properties help target apps improve the user experience. For example, a description helps when the user is sharing content with more than one app. Adding a thumbnail when sharing an image or a link to a web page provides a visual reference to the user. For more information, see [**DataPackage.DataPackagePropertySet**][DataPackagePropertySet].
 
-Todas las propiedades excepto el título son opcionales. La propiedad de título es obligatoria y debe establecerse.
+All properties except the title are optional. The title property is mandatory and must be set.
 
-[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
+[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
 
-## Iniciar la interfaz de usuario de uso compartido
+## Launch the share UI
 
-El sistema proporciona una interfaz de usuario para uso compartido. Para iniciarla, llama al método [**ShowShareUI**][ShowShareUi].
+A UI for sharing is provided by the system. To launch it, call the [**ShowShareUI**][ShowShareUi] method.
 
-[!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
+[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
 
-## Controlar errores
+## Handle errors
 
-En la mayoría de los casos, compartir contenido es un proceso sencillo. Sin embargo, siempre existe la posibilidad de que ocurra algo inesperado. Por ejemplo, es posible que la aplicación solicite al usuario que seleccione contenido para compartir, pero el usuario no seleccionó nada. Para controlar estas situaciones, usa el método [**FailWithDisplayText**][FailWithDisplayText], que muestra un mensaje al usuario si se produce un error.
+In most cases, sharing content is a straightforward process. However, there's always a chance that something unexpected could happen. For example, the app might require the user to select content for sharing but the user didn't select any. To handle these situations, use the [**FailWithDisplayText**][FailWithDisplayText] method, which will display a message to the user if something goes wrong.
 
-## Retrasar el uso compartido con funciones delegadas
+## Delay share with delegates
 
-A veces, puede que no tenga sentido preparar de inmediato los datos que el usuario quiere compartir. Por ejemplo, si la aplicación admite el envío de un archivo de imagen grande en varios formatos posibles, no resulta eficaz crear esas todas esas imágenes antes de que el usuario haga su selección.
+Sometimes, it might not make sense to prepare the data that the user wants to share right away. For example, if your app supports sending a large image file in several different possible formats, it's inefficient to create all those images before the user makes their selection.
 
-Para solucionar este problema, un [**DataPackage**][DataPackage] puede contener una función delegada, es decir, una función a la que se llama cuando la aplicación receptora solicita datos. Te recomendamos que uses una función delegada cuando los datos que un usuario quiere compartir hacen un uso intensivo de los recursos.
+To solve this problem, a [**DataPackage**][DataPackage] can contain a delegate — a function that is called when the receiving app requests data. We recommend using a delegate any time that the data a user wants to share is resource-intensive.
 
 <!-- For some reason, this snippet was inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
@@ -87,8 +87,8 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 }
 ```
 
-## Temas relacionados
-* [Recibir datos](receive-data.md)
+## Related topics
+* [Receive data](receive-data.md)
 
 
 <!-- LINKS -->

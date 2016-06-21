@@ -1,49 +1,49 @@
 ---
-description: En este artículo se explica cómo agregar la funcionalidad de arrastrar y colocar elementos en la aplicación para la Plataforma universal de Windows (UWP).
-title: Arrastrar y colocar
+description: This article explains how to add dragging and dropping in your Universal Windows Platform (UWP) app.
+title: Drag and drop
 ms.assetid: A15ED2F5-1649-4601-A761-0F6C707A8B7E
 author: awkoren
 ---
-# Arrastrar y colocar
+# Drag and drop
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este artículo se explica cómo agregar la funcionalidad de arrastrar y colocar elementos en la aplicación para la Plataforma universal de Windows (UWP). Arrastrar y soltar es una forma clásica y natural de interactuar con contenido, como imágenes y archivos. Una vez implementada, la opción para arrastrar y colocar elementos funciona perfectamente en todos los sentidos; por ejemplo, de una aplicación a otra, de una aplicación al escritorio y del escritorio a una aplicación.
+This article explains how to add dragging and dropping in your Universal Windows Platform (UWP) app. Drag and drop is a classic, natural way of interacting with content such as images and files. Once implemented, drag and drop works seamlessly in all directions, including app-to-app, app-to-desktop, and desktop-to app.
 
-## Establecer áreas válidas
+## Set valid areas
 
-Usa las propiedades [**AllowDrop**][AllowDrop] y [**CanDrag**][CanDrag] para especificar qué áreas de la aplicación son válidas para arrastrar y colocar.
+Use the [**AllowDrop**][AllowDrop] and [**CanDrag**][CanDrag] properties to designate the areas of your app valid for dragging and dropping.
 
-El siguiente marcado muestra cómo establecer un área específica de la aplicación como un valor válido para colocar usando [**AllowDrop**][AllowDrop] en XAML. Si un usuario intenta colocar elementos en otro lugar, el sistema no se lo permitirá. Si quieres que los usuarios puedan colocar elementos en cualquier parte de la aplicación, establece todo el fondo como destino para colocar elementos.
+The markup below shows how to set a specific area of the app as a valid for dropping using the [**AllowDrop**][AllowDrop] in XAML. If a user tries to drop somewhere else, the system won't let them. If you want users to be able to drop items anywhere on your app, set the entire background as a drop target.
 
-[!code-xml[Principal](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]
+[!code-xml[[!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]
 
-Con la opción para arrastrar elementos, seguramente quieras especificar qué elementos se pueden arrastrar. Probablemente los usuarios quieran arrastrar tan solo determinados elementos, como imágenes, y no todo el contenido de la aplicación. Esta es la manera de establecer [**CanDrag**][CanDrag] mediante XAML.
+With dragging, you'll usually want to be specific about what's draggable. Users will want to drag certain items, like pictures, not everything in your app. Here's how to set [**CanDrag**][CanDrag] using XAML.
 
-[!code-xml[Principal](./code/drag_drop/cs/MainPage.xaml#SnippetDragArea)]
+[!code-xml[[!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDragArea)]](./code/drag_drop/cs/MainPage.xaml#SnippetDragArea)]
 
-No es necesario realizar ninguna otra acción para poder arrastrar elementos, a menos que quieras personalizar la interfaz de usuario (de la cual hablamos más adelante en este artículo). La opción para colocar elementos requiere algunos pasos más.
+You don't need to do any other work to allow dragging, unless you want to customize the UI (which is covered later in this article). Dropping requires a few more steps.
 
-## Controlar el evento DragOver
+## Handle the DragOver event
 
-El evento [**DragOver**][DragOver] se desencadena cuando un usuario arrastra un elemento sobre la aplicación, pero aún no lo ha colocado. En este controlador, debes especificar qué tipo de operaciones admite la aplicación si se usa la propiedad [**DragEventArgs.AcceptedOperation**][AcceptedOperation]. La opción Copiar es la más común.
+The [**DragOver**][DragOver] event fires when a user has dragged an item over your app, but not yet dropped it. In this handler, you need to specify what kind of operations your app supports using the [**DragEventArgs.AcceptedOperation**][AcceptedOperation] property. Copy is the most common.
 
-[!code-cs[Principal](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOver)]
+[!code-cs[[!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOver)]](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOver)]
 
-## Procesar el evento Drop
+## Process the Drop event
 
-El evento [**Drop**][Drop] se produce cuando el usuario suelta elementos en un área de colocación válida. Puedes procesarlos mediante la propiedad [**DragEventArgs.DataView**][DataView].
+The [**Drop**][Drop] event occurs when the user releases items in a valid drop area. Process them using the [**DragEventArgs.DataView**][DataView] property.
 
-Para facilitar las cosas, en el siguiente ejemplo, supondremos que el usuario coloca una sola foto y accede a ella. En realidad, los usuarios pueden colocar simultáneamente varios elementos de diferentes formatos. Para controlar esta posibilidad, la aplicación debe comprobar qué tipos de archivos se colocaron y así procesarlos en consecuencia. Además, debe notificar al usuario si este está tratando de hacer algo que la aplicación no admite.
+For simplicity in the example below, we'll assume the user dropped a single photo and access. In reality, users can drop multiple items of varying formats simultaneously. Your app should handle this possibility by checking what types of files were dropped and processing them accordingly, and notifying the user if they're trying to do something your app don't support.
 
-[!code-cs[Principal](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_Drop)]
+[!code-cs[[!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_Drop)]](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_Drop)]
 
-## Personalizar la interfaz de usuario
+## Customize the UI
 
-El sistema proporciona una interfaz de usuario predeterminada para arrastrar y colocar elementos. Asimismo, puedes personalizar diversas partes de la interfaz de usuario mediante la configuración de títulos personalizados y glifos o, directamente, optar por no mostrar la interfaz. Para personalizar la interfaz de usuario, usa la propiedad [**DragUIOverride**][DragUiOverride] en el controlador de eventos [**DragOver**][DragOver].
+The system provides a default UI for dragging and dropping. However, you can also choose to customize various parts of the UI by setting custom captions and glyphs, or by opting not to show a UI at all. To customize the UI, use the [**DragUIOverride**][DragUiOverride] property in the [**DragOver**][DragOver] event handler.
 
-[!code-cs[Principal](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]
+[!code-cs[[!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]
 
  <!-- LINKS -->
 [AllowDrop]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.uielement.allowdrop.aspx

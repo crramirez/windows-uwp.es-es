@@ -1,16 +1,16 @@
 ---
-title: Comparar búferes
-description: Este código de ejemplo muestra cómo comparar búferes en una aplicación para la Plataforma universal de Windows (UWP).
+title: Compare buffers
+description: This example code shows how to compare buffers in an Universal Windows Platform (UWP) app.
 ms.assetid: CB086E51-544A-470D-B7C8-C055271CD615
 author: awkoren
 ---
 
-# Comparar búferes
+# Compare buffers
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este código de ejemplo muestra cómo comparar búferes en una aplicación para la Plataforma universal de Windows (UWP).
+This example code shows how to compare buffers in an Universal Windows Platform (UWP) app.
 
 ```cs
 public void CompareBuffers()
@@ -45,6 +45,6 @@ public void CompareBuffers()
 }
 ```
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

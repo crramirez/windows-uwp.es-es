@@ -1,16 +1,16 @@
 ---
-title: Crear números aleatorios
-description: Este código de ejemplo muestra cómo crear un número aleatorio o búfer para usarlo en criptografía en una aplicación para la Plataforma universal de Windows (UWP).
+title: Create random numbers
+description: This example code shows how to create a random number or buffer for use in cryptography in an Universal Windows Platform (UWP) app.
 ms.assetid: 15746824-F93A-4DC7-836E-EBA916D2CFD3
 author: awkoren
 ---
 
-# Crear números aleatorios
+# Create random numbers
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este código de ejemplo muestra cómo crear un número aleatorio o búfer para usarlo en criptografía en una aplicación para la Plataforma universal de Windows (UWP).
+This example code shows how to create a random number or buffer for use in cryptography in an Universal Windows Platform (UWP) app.
 
 ```cs
 public string GenerateRandomData()
@@ -35,6 +35,6 @@ public uint GenerateRandomNumber()
 }
 ```
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 
