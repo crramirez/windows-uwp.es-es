@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "7069e55b92e69a0af9ba23a0a737b61d427c615c",
+  "LastProcessedCommit": "372f12182f75725fd339baec511a576e9e4bffa8",
   "LastTranslatedCommit": "539cd811a17d686c2c82486af88a4ebb6f7e87a4",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
@@ -85308,6 +85308,40 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.es-es\\master\\move-draw-commands-syntax.d073ef49866bc8693351baace0550221cbdd8795.es-es.xlf",
       "HandoffFileCommit": "2361aa3d7e747ca824d5f5d64ea1e5703966bb5e",
       "HandoffDateTime": "2016-06-22T20:47:30.2611568Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
+    },
+    "3022b0987196ce3d420810b6742c8f6f976dea7e": {
+      "FileHash": "3022b0987196ce3d420810b6742c8f6f976dea7e",
+      "SourceFileCommit": "372f12182f75725fd339baec511a576e9e4bffa8",
+      "SourceFilePath": "windows-apps-src\\style\\motion.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\style\\motion.md"
+      ],
+      "HasMetadata": false,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.es-es\\master\\motion.212117af558af085cfa0768ba51dd5afcc6073cd.es-es.xlf",
+      "HandoffFileCommit": "70952656260e658d9cc870bb62f3ebd9ced2f527",
+      "HandoffDateTime": "2016-06-22T21:47:41.3281354Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
