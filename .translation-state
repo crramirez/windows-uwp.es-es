@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "372f12182f75725fd339baec511a576e9e4bffa8",
+  "LastProcessedCommit": "b6c86bc1458f177e44058ac36d97d650bae36008",
   "LastTranslatedCommit": "539cd811a17d686c2c82486af88a4ebb6f7e87a4",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
@@ -85342,6 +85342,40 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.es-es\\master\\motion.212117af558af085cfa0768ba51dd5afcc6073cd.es-es.xlf",
       "HandoffFileCommit": "70952656260e658d9cc870bb62f3ebd9ced2f527",
       "HandoffDateTime": "2016-06-22T21:47:41.3281354Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
+    },
+    "715d2027114726cf7c9bf0a38d1841f9e83d58e6": {
+      "FileHash": "715d2027114726cf7c9bf0a38d1841f9e83d58e6",
+      "SourceFileCommit": "b6c86bc1458f177e44058ac36d97d650bae36008",
+      "SourceFilePath": "windows-apps-src\\publish\\dev-center-insider-program.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\publish\\dev-center-insider-program.md"
+      ],
+      "HasMetadata": true,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.es-es\\master\\dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.es-es.xlf",
+      "HandoffFileCommit": "43fceb8041393385b502e2ccb007d7b7510cc230",
+      "HandoffDateTime": "2016-06-22T23:16:43.14057Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
