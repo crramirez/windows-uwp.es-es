@@ -1,27 +1,40 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/35017dd14f873350d7e9d75ff6c5c519067547b5/windows-apps-src/gaming/e2e.md) | OutofSyncHandedBackSuccess | [Details](#33c158e254a367e65607e86ff425e9829b8255f52182)
+ [windows-apps-src\publish\app-screenshots-and-images.md](https://github.com/Microsoft/windows-apps/blob/ecb030b7c529f765eded46e4e3e9db99ad0c27e8/windows-apps-src/publish/app-screenshots-and-images.md) | OutofSyncHandedBackSuccess | [Details](#9eac5658e2ac04b2abc1bf06abf5c73b16260bc73570)
+ [windows-apps-src\publish\manage-iaps-in-bulk.md](https://github.com/Microsoft/windows-apps/blob/475371dd55aa111f3743c03dc1600e8cfdbeb5b0/windows-apps-src/publish/manage-iaps-in-bulk.md) | HandedOffSuccess | [Details](#ae4d4ed33b9bd10a2b01b336c942ad3212de65333606)
 
 ## Item Details
-##### <a name='33c158e254a367e65607e86ff425e9829b8255f52182'></a> Source: [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/35017dd14f873350d7e9d75ff6c5c519067547b5/windows-apps-src/gaming/e2e.md)
+##### <a name='9eac5658e2ac04b2abc1bf06abf5c73b16260bc73570'></a> Source: [windows-apps-src\publish\app-screenshots-and-images.md](https://github.com/Microsoft/windows-apps/blob/ecb030b7c529f765eded46e4e3e9db99ad0c27e8/windows-apps-src/publish/app-screenshots-and-images.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/10dd905f895e145dd7b378e47afb06519df9b252/ol-handoff/Microsoft/windows-apps.es-es/master/e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf)
-* Handoff Datetime: 2016-06-24 00:02:29
+* Handoff File: [app-screenshots-and-images.c7fc56a8ad97c50e5d147b844b499b01e8366e0e.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/b2322215cae58c2955d190caf0ba040ccca72eba/ol-handoff/Microsoft/windows-apps.es-es/master/app-screenshots-and-images.c7fc56a8ad97c50e5d147b844b499b01e8366e0e.es-es.xlf)
+* Handoff Datetime: 2016-06-24 21:11:33
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps.es-es/blob/7dcbfae35ea17d3ff54786dbe6685f0b85d4b457/windows-apps-src/gaming/e2e.md)
-* Current Handback File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/929c279e2739541b14e86f08ef82e2ddb5a4e4cc/ol-handback/Microsoft/windows-apps.es-es/master/e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf)
-* Current Handback Datetime: 2016-05-17 13:09:11
+* Current Target File: [windows-apps-src\publish\app-screenshots-and-images.md](https://github.com/Microsoft/windows-apps.es-es/blob/19b1ed428dcd708da7842baf4a67db061ac43b40/windows-apps-src/publish/app-screenshots-and-images.md)
+* Current Handback File: [app-screenshots-and-images.c7fc56a8ad97c50e5d147b844b499b01e8366e0e.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/da8862ce4eaad9d7e13833973beb61f80e150e81/ol-handback/Microsoft/windows-apps.es-es/master/app-screenshots-and-images.c7fc56a8ad97c50e5d147b844b499b01e8366e0e.es-es.xlf)
+* Current Handback Datetime: 2016-05-30 11:06:53
+* [Back to Top](#report-top)
+
+##### <a name='ae4d4ed33b9bd10a2b01b336c942ad3212de65333606'></a> Source: [windows-apps-src\publish\manage-iaps-in-bulk.md](https://github.com/Microsoft/windows-apps/blob/475371dd55aa111f3743c03dc1600e8cfdbeb5b0/windows-apps-src/publish/manage-iaps-in-bulk.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [manage-iaps-in-bulk.07639d5ddc04eb3def8be5984def3a4ebb9bc3db.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/b2322215cae58c2955d190caf0ba040ccca72eba/ol-handoff/Microsoft/windows-apps.es-es/master/manage-iaps-in-bulk.07639d5ddc04eb3def8be5984def3a4ebb9bc3db.es-es.xlf)
+* Handoff Datetime: 2016-06-24 21:11:33
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 
