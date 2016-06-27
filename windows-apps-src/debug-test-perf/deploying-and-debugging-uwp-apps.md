@@ -1,8 +1,11 @@
 ---
 author: mcleblanc
 ms.assetid: 9322B3A3-8F06-4329-AFCB-BE0C260C332C
-description: Este artículo te guiará en el procedimiento para dirigirte a distintos destinos de implementación y de depuración.
-title: Implementación y depuración de aplicaciones para la Plataforma universal de Windows (UWP)
+description: "Este artículo te guiará en el procedimiento para dirigirte a distintos destinos de implementación y de depuración."
+title: "Implementación y depuración de aplicaciones para la Plataforma universal de Windows (UWP)"
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: eb639e78bf144572dfbfd2d65514bb4eff7c7be1
+
 ---
 
 # Implementación y depuración de aplicaciones para la Plataforma universal de Windows (UWP)
@@ -48,7 +51,7 @@ Después de especificar el equipo, puedes seleccionar **Equipo remoto** en la li
 
 ### Instrucciones del equipo remoto
 
-Para implementar en un equipo remoto, el equipo de destino debe tener instalado Visual Studio Remote Tools. El equipo remoto también deben ejecutar una versión de Windows que sea mayor o igual a la propiedad **Versión mínima de la plataforma de destino** de tus aplicaciones. Una vez que has instalado las herramientas remotas, debes iniciar al depurador remoto en el equipo de destino. Para ello, busca **Depurador remoto** en el menú **Inicio** para iniciarlo, y si te lo pide, permite que el depurador configure las opciones del firewall. De manera predeterminada, el depurador se inicia con la autenticación de Windows. Esto requiere credenciales de usuario si el usuario que inició sesión no es el mismo en ambos equipos. Para cambiar a **Sin autenticación**, ve a **Herramientas** -&gt; **Opciones** en el **Depurador remoto** y establécelo en **Sin autenticación**. Una vez que el depurador remoto esté configurado, puedes implementar desde el equipo de desarrollo.
+Para implementar en un equipo remoto, el equipo de destino debe tener instalado Visual Studio Remote Tools. El equipo remoto también deben ejecutar una versión de Windows que sea mayor o igual a la propiedad **Versión mínima de la plataforma de destino** de tus aplicaciones. Una vez que has instalado las herramientas remotas, debes iniciar al depurador remoto en el equipo de destino. Para ello, busca **Depurador remoto** en el menú **Inicio** para iniciarlo, y si te lo pide, permite que el depurador configure las opciones del firewall. De manera predeterminada, el depurador se inicia con la autenticación de Windows. Esto requiere credenciales de usuario si el usuario que inició sesión no es el mismo en ambos equipos. Para cambiar a **Sin autenticación**, ve a **Herramientas** -&gt;**Opciones** en el **Depurador remoto** y establécelo en **Sin autenticación**. Una vez que el depurador remoto esté configurado, puedes implementar desde el equipo de desarrollo.
 
 Para más información, consulta la página de descarga de [Herramientas remotas para Visual Studio]( http://go.microsoft.com/fwlink/?LinkId=717039).
 
@@ -62,7 +65,7 @@ Existen tres modos de autenticación para la implementación del equipo remoto:
 
 ## Opciones de depuración
 
-Windows 10 presenta una mejora del rendimiento de inicio de las aplicaciones para UWP gracias al inicio y la posterior suspensión de aplicaciones de forma proactiva mediante una técnica denominada [inicio previo](https://msdn.microsoft.com/library/windows/apps/Mt593297). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero algunas aplicaciones pueden necesitar ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de código puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo. La depuración se admite tanto desde un proyecto de Visual Studio (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar el inicio previo de la Aplicación Windows universal**) como para las aplicaciones ya instaladas en el equipo (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar paquete de la aplicación instalado** y activa la casilla **Activar aplicación con inicio previo**). Para obtener más información, lee la entrada de blog sobre el [inicio previo de depuración de UWP]( http://go.microsoft.com/fwlink/?LinkId=717245).
+Windows 10 presenta una mejora del rendimiento de inicio de las aplicaciones para UWP gracias al inicio y la posterior suspensión de aplicaciones de forma proactiva mediante una técnica denominada [inicio previo](https://msdn.microsoft.com/library/windows/apps/Mt593297). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero algunas aplicaciones pueden necesitar ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de código puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo. La depuración se admite tanto desde un proyecto de Visual Studio (**Depurar** -&gt;**Otros destinos de depuración** -&gt;**Depurar el inicio previo de la Aplicación Windows universal**) como para las aplicaciones ya instaladas en el equipo (**Depurar** -&gt;**Otros destinos de depuración** -&gt;**Depurar paquete de la aplicación instalado** y activa la casilla **Activar aplicación con inicio previo**). Para obtener más información, lee la entrada de blog sobre el [inicio previo de depuración de UWP]( http://go.microsoft.com/fwlink/?LinkId=717245).
 
 Puedes establecer las siguientes opciones de implementación en la página de propiedades de **Depurar** del proyecto de inicio.
 
@@ -85,6 +88,7 @@ Para configurar la implementación para iniciar automáticamente una sesión de 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

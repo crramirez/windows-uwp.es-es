@@ -1,8 +1,11 @@
 ---
 author: mtoepke
 title: Juegos y DirectX
-description: La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Descubre cómo comenzar un nuevo juego o migrar uno existente.
+description: "La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Descubre cómo comenzar un nuevo juego o migrar uno existente."
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b690fa9a97898da49646e39c982465a4a41adb7a
+
 ---
 
 # Juegos y DirectX
@@ -63,6 +66,7 @@ Para aprovechar al máximo las explicaciones y los tutoriales sobre desarrollo d
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

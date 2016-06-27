@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: Una vista de calendario permite al usuario ver e interactuar con un calendario por el que se puede navegar por mes, año o década.
+Description: "Una vista de calendario permite al usuario ver e interactuar con un calendario por el que se puede navegar por mes, año o década."
 title: Vista de calendario
 ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
 label: Calendar view
 template: detail.hbs
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 7b9d4773cba5c6ebb770e27dd20ba5c6fb40ff75
+
 ---
 
 # Vista de calendario
@@ -192,6 +195,7 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 - [Selector de hora](time-picker.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

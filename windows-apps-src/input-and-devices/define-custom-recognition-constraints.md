@@ -5,6 +5,9 @@ title: Definir restricciones de reconocimiento personalizadas
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 7d91cef0955dbf8544f658369ee488c47aaef787
+
 ---
 
 # Definir restricciones de reconocimiento personalizadas
@@ -18,7 +21,7 @@ Aprende a definir y usar restricciones personalizadas para el reconocimiento de 
 -   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
 
 
-El reconocimiento de voz requiere como mínimo una restricción para definir un vocabulario reconocible. Si no se especifica ninguna restricción, se usa la gramática de dictado predefinida de las aplicaciones universales de Windows. Consulta [Reconocimiento de voz](speech-recognition.md).
+El reconocimiento de voz requiere como mínimo una restricción para definir un vocabulario reconocible. Si no se especifica ninguna restricción, se usa la gramática de dictado predefinida de las aplicaciones universales de Windows. Consulta la información sobre [Reconocimiento de voz](speech-recognition.md)
 
 
 ## <span id="Add_constraints"></span><span id="add_constraints"></span><span id="ADD_CONSTRAINTS"></span>Agregar restricciones
@@ -26,7 +29,7 @@ El reconocimiento de voz requiere como mínimo una restricción para definir un 
 
 Usa la propiedad [**SpeechRecognizer.Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) para agregar restricciones a un reconocedor de voz.
 
-Vamos a describir los tres tipos de restricciones de reconocimiento de voz que se usan en una aplicación. (Para conocer las restricciones de los comandos de voz, consulta [Iniciar una aplicación en primer plano con comandos de voz en Cortana](launch-a-foreground-app-with-voice-commands-in-cortana.md)).
+Vamos a describir los tres tipos de restricciones de reconocimiento de voz que se usan en una aplicación. (Para restricciones de comando de voz, consulta [Iniciar una aplicación en primer plano con comandos de voz en Cortana](launch-a-foreground-app-with-voice-commands-in-cortana.md)).
 
 -   [
               **SpeechRecognitionTopicConstraint**
@@ -242,6 +245,7 @@ Para indicarle al usuario lo que puede decir, usa las propiedades [**SpeechRecog
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

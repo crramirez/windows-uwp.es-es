@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Al igual que las personas usan una combinación de voz y gestos para comunicarse entre sí, cuando interactúes con una aplicación pueden resultarte útiles varios tipos y modos de entrada.
-title: Directrices de diseño de varias entradas
+Description: "Al igual que las personas usan una combinación de voz y gestos para comunicarse entre sí, cuando interactúes con una aplicación pueden resultarte útiles varios tipos y modos de entrada."
+title: "Directrices de diseño de varias entradas"
 ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
 label: Multiple inputs
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 20af1cbfd4d390a1128b96b24c687fd481db1f5c
+
 ---
 
 # Varias entradas
@@ -40,6 +43,7 @@ El usuario selecciona una foto manteniéndola presionada y, a continuación, dic
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

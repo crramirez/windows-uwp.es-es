@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Además de usar los comandos de voz en Cortana para acceder a las funciones del sistema, también puedes usar los comandos de voz a través de Cortana para iniciar una aplicación en primer plano y especificar una acción o un comando para que se ejecute dentro de la aplicación.
-title: Iniciar una aplicación en primer plano con los comandos de voz en Cortana
+Description: "Además de usar los comandos de voz en Cortana para acceder a las funciones del sistema, también puedes usar los comandos de voz a través de Cortana para iniciar una aplicación en primer plano y especificar una acción o un comando para que se ejecute dentro de la aplicación."
+title: "Iniciar una aplicación en primer plano con los comandos de voz en Cortana"
 ms.assetid: 8D3D1F66-7D17-4DD1-B426-DCCBD534EF00
 label: Cortana-Launch a foreground app
 template: detail.hbs
+ms.sourcegitcommit: 7cbea3c4e784fe024aef953e3ea757dad6c5e3b8
+ms.openlocfilehash: aa4d71525d4a41382b8bbe123ca1fa830a4fc720
+
 ---
 
 # Activar una aplicación en primer plano con los comandos de voz a través de Cortana
@@ -21,18 +24,18 @@ Cuando una aplicación controla un comando de voz en primer plano, esta toma el 
 
 Los comandos de voz que requieren contexto o entrada de usuario adicionales (por ejemplo, enviar un mensaje a un determinado contacto) se administran mejor en una aplicación en primer plano, mientras que los comandos básicos (por ejemplo, a enumeración de próximos viajes) pueden controlarse en **Cortana** a través de una aplicación en segundo plano.
 
-Si quieres activar una aplicación en segundo plano mediante los comandos de voz, consulta el tema [Activar una aplicación en segundo plano con los comandos de voz a través de Cortana](launch-a-background-app-with-voice-commands-in-cortana.md).
+Si quieres activar una aplicación en segundo plano con los comandos de voz, consulta el tema [Activar una aplicación en segundo plano con los comandos de voz a través de Cortana](launch-a-background-app-with-voice-commands-in-cortana.md).
 
 > **Nota**  
-> Un comando de voz es una expresión única con un determinado propósito; esta se define en un archivo de definición de comando de voz (VCD) y se dirige a una aplicación instalada mediante **Cortana**.
+> Un comando de voz es una única expresión con un determinado propósito, definida en un archivo de definición de comando de voz (VCD), dirigida a una aplicación instalada mediante **Cortana**.
 
-> Un archivo VCD define uno o más comandos de voz, cada uno de ellos con un único propósito.
+> Un archivo VCD define uno o más comandos de voz, cada uno con un único propósito.
 
 > Una definición de comando de voz puede variar en complejidad. Puede admitir desde una única expresión restringida a una colección de expresiones más flexibles y de lenguaje natural, que denoten el mismo propósito.
 
-Para demostrar las características de una aplicación en primer plano, usaremos la aplicación de administración y planeación de viajes llamada **Adventure Works** de la [muestra de comando de voz de Cortana](http://go.microsoft.com/fwlink/p/?LinkID=619899).
+Para demostrar las funciones de una aplicación en primer plano, usaremos la administración y planificación de viajes llamada **Adventure Works** de la [Muestra de comando de voz de Cortana](http://go.microsoft.com/fwlink/p/?LinkID=619899).
 
-Para crear un nuevo viaje en **Adventure Works** sin **Cortana**, el usuario deberá iniciar la aplicación e ir a la página **Nuevo viaje**. Para ver un viaje existente, un usuario debe iniciar la aplicación, navegar a la página **Viajes próximos** y, después, seleccionar el viaje.
+Para crear un nuevo viaje de **Adventure Works** sin **Cortana**, un usuario debe iniciar la aplicación y navegar a la página **Nuevo viaje**. Para ver un viaje existente, un usuario debe iniciar la aplicación, navegar a la página **Viajes próximos** y, después, seleccionar el viaje.
 
 Con los comandos de voz y **Cortana**, el usuario puede simplemente decir: "Adventure Works agrega un viaje" o "Agregar un viaje en Adventure Works" para iniciar la aplicación y navegar a la página **Nuevo viaje**. A su vez, al indicar "Adventure Works, muestra mi viaje a Londres", se iniciará la aplicación y navegarás a la página **Viajes próximos** que se muestra aquí.
 
@@ -40,7 +43,7 @@ Con los comandos de voz y **Cortana**, el usuario puede simplemente decir: "Adve
 
 A continuación detallamos los pasos básicos para agregar funciones de comandos de voz e integrar Cortana en tu aplicación mediante entradas de voz o de teclado:
 
-1.  Crea un archivo VCD. Se trata de un documento XML en el que se definen todos los comandos de voz que el usuario puede usar para iniciar acciones o invocar comandos al activar la aplicación. Consulta [**VCD elements and attributes v1.2 (Elementos y atributos de VCD v1.2)**](https://msdn.microsoft.com/library/windows/apps/dn706593).
+1.  Crea un archivo VCD. Se trata de un documento XML en el que se definen todos los comandos de voz que el usuario puede decir para iniciar acciones o invocar comandos al activar la aplicación. Consulta [**VCD elements and attributes v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593).
 2.  Registra los conjuntos de comandos en el archivo VCD cuando se inicia la aplicación.
 3.  Administra el comando de activación por voz, la navegación dentro de la aplicación y la ejecución del comando.
 
@@ -80,13 +83,13 @@ Consulta el artículo [Directrices para el diseño de Cortana](https://msdn.micr
       
 Las aplicaciones para UWP pueden seleccionar automáticamente las imágenes más adecuada en función de la configuración específica y las funcionalidades del dispositivo (contraste alto, píxeles efectivos, configuración regional, etc.). Lo único que tienes que hacer es proporcionar las imágenes y asegurarte de que usas la nomenclatura y organización de carpeta apropiadas en el proyecto de aplicación para las diferentes versiones de recursos. Si no proporcionas las versiones de recurso recomendadas, pueden verse afectadas la calidad de imagen, localización y accesibilidad, según las preferencias del usuario, capacidades, tipo de dispositivo y ubicación.
 
-Para obtener más información sobre recursos de imagen para los factores de escala y contraste alto, consulta las [directrices sobre los activos de icono y de mosaicos](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets).
+Para más información sobre recursos de imagen para los factores de escala y contraste alto, consulta las [directrices para los activos de icono y el mosaico](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets).
 
-Debes asignar el nombre a los recursos mediante calificadores. Los calificadores de recursos son modificadores de carpetas y nombres de archivo que identifican el contexto en el que debe usarse una versión particular de un recurso.
+Se asigna nombre a los recursos mediante calificadores. Los calificadores de recursos son modificadores de carpetas y nombres de archivo que identifican el contexto en el que debe usarse una versión particular de un recurso.
 
-La convención de nomenclatura estándar es `foldername/qualifiername-value[_qualifiername-value]/filename.qualifiername-value[_qualifiername-value].ext`. Por ejemplo: puede hacerse referencia a `images/en-US/logo.scale-100_contrast-white.png` en el código mediante la carpeta raíz y el nombre de archivo `images/logo.png`. Consulta [Cómo asignar un nombre a los recursos mediante calificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324.aspx).
+La convención de nomenclatura estándar es `foldername/qualifiername-value[_qualifiername-value]/filename.qualifiername-value[_qualifiername-value].ext`. Por ejemplo: `images/en-US/logo.scale-100_contrast-white.png` simplemente se denomina en código mediante la carpeta raíz y el nombre de archivo: `images/logo.png`. Consulta [Cómo asignar un nombre a los recursos mediante calificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324.aspx).
 
-Te recomendamos que marques el idioma predeterminado en los archivos de recursos de cadena (como `en-US\resources.resw`), y el factor de escala predeterminado en las imágenes (como `logo.scale-100.png`); incluso si no tienes previsto ofrecer recursos localizados o de resolución múltiple. Sin embargo, como mínimo, te recomendamos que proporciones activos para los factores de escala 100, 200 y 400.
+Se recomienda que marques el idioma predeterminado en los archivos de recursos de cadena (como `en-US\resources.resw`) y el factor de escala predeterminado en las imágenes (como `logo.scale-100.png`), incluso si no tienes previstu ofrecer recursos localizados o de resolución múltiple. Sin embargo, como mínimo, te recomendamos que proporciones activos para los factores de escala 100, 200 y 400.
 
 > *Importante
 
@@ -94,15 +97,15 @@ Te recomendamos que marques el idioma predeterminado en los archivos de recursos
     
 ## <span id="Create_a_VCD_file"></span><span id="create_a_vcd_file"></span><span id="CREATE_A_VCD_FILE"></span>Crear un archivo VCD
 
-1. En Visual Studio, haz clic con el botón secundario en el nombre del proyecto principal y selecciona **Agregar > Nuevo elemento**. Agrega un **archivo XML**.
-2. Escribe un nombre para el archivo [**VCD**](https://msdn.microsoft.com/library/windows/apps/dn706593) (en este ejemplo es "AdventureWorksCommands.xml") y haz clic en Agregar. 
+1. En Visual Studio, haz clic en el nombre del proyecto principal, selecciona **Agregar > Nuevo elemento**. Agregar un **archivo XML**.
+2. Escribe un nombre para el archivo [**VCD**](https://msdn.microsoft.com/library/windows/apps/dn706593) (para este ejemplo, "AdventureWorksCommands.xml") y haz clic en Agregar. 
 3. En el **Explorador de soluciones**, selecciona el archivo [**VCD**](https://msdn.microsoft.com/library/windows/apps/dn706593).
-4.  En la ventana **Propiedades**, establece **Acción de compilación** en **Contenido** y, a continuación, establece **Copiar en el directorio de salida** en **Copiar si es posterior**.
+4.  En la ventana **Propiedades**, establece **Acción de compilación** en **Contenido** y luego establece **Copiar en el directorio de salida** en **Copiar si es posterior**.
 
 ## <span id="Edit_the_VCD_file"></span><span id="edit_the_vcd_file"></span><span id="EDIT_THE_VCD_FILE"></span>Modificar el archivo VCD
 
 
-Agrega un elemento **VoiceCommands** al cual apunte un atributo **xmlns**.
+Agrega un elemento **VoiceCommands** con un atributo **xmlns** que apunte a `http://schemas.microsoft.com/voicecommands/1.2`.
 
 2. Por cada idioma que admita la aplicación, debes crear un elemento [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331) que contenga los comandos de voz que admita la aplicación.
 
@@ -111,17 +114,17 @@ Agrega un elemento **VoiceCommands** al cual apunte un atributo **xmlns**.
   >  **Precaución**  
   Para activar una aplicación e iniciar una acción mediante un comando de voz, la aplicación debe registrar un archivo VCD que contenga un [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331) con un idioma que coincida con el idioma de la voz que el usuario seleccionó en su dispositivo. El idioma de voz se encuentra en **Configuración > Sistema > Voz > Idioma de voz**.
 
-3. Agrega un elemento **Command** en cada comando que quieras admitir.
+3. Agregar un elemento **Command** para cada comando que quieras admitir.
 
-  Cada elemento **Command** que hayas declarado en un archivo [**VCD**](https://msdn.microsoft.com/library/windows/apps/dn706593) debe incluir esta información:
+  Cada **Command** declarado en un archivo [**VCD**](https://msdn.microsoft.com/library/windows/apps/dn706593) debe incluir esta información:
 
   - Un atributo **Name** que la aplicación usa para identificar el comando de voz en tiempo de ejecución. 
-  - Un elemento **Example** que contenga una frase que describa cómo puede invocar el comando un usuario. **Cortana** muestra este ejemplo cuando el usuario dice "¿Qué puedo decir?", "Ayuda", o si presiona **Ver más**    
-  -   Un elemento **ListenFor** que contenga las palabras o frases que la aplicación reconoce como un comando. Cada elemento **ListenFor** puede contener referencias a uno o más elementos **PhraseList** que contengan palabras específicas apropiadas para el comando.
+  - Un elemento **Example** que contenga una frase que describa cómo puede invocar el comando un usuario. **Cortana** muestra este ejemplo cuando el usuario dice "¿Qué puedo decir?", "Ayuda", o si presiona **Ver más**.    
+  -   Un elemento **ListenFor** que contiene las palabras o frases que la aplicación reconoce para iniciar como un comando. Cada elemento **ListenFor** puede contener referencias a uno o más elementos **PhraseList** que contengan palabras específicas apropiadas para el comando.
   > **Nota**  
-Los elementos  **ListenFor** no se pueden modificar mediante programación. Sin embargo, los elementos **PhraseList** que están asociados a elementos **ListenFor** se pueden modificar mediante programación. Las aplicaciones deben modificar el contenido del elemento **PhraseList** en tiempo de ejecución, según el conjunto de datos que se genera cuando el usuario usa la aplicación. Consulta [Modificar listas de frases de la definición de comando de voz (VCD) de forma dinámica](dynamically-modify-voice-command-definition--vcd--phrase-lists.md).
+Los elementos  **ListenFor** no se pueden modificar mediante programación. Sin embargo, los elementos **PhraseList** que están asociados a elementos **ListenFor** se pueden modificar mediante programación. Las aplicaciones deben modificar el contenido del elemento **PhraseList** en tiempo de ejecución, según el conjunto de datos que se genera cuando el usuario usa la aplicación. Consulta [Modificar de forma dinámica listas de frases de definición de comando de voz (VCD)](dynamically-modify-voice-command-definition--vcd--phrase-lists.md).
 
-  -   Un elemento **Feedback** que contenga el texto que **Cortana** muestra y dice cuando se inicia la aplicación.
+  -   Un elemento **Feedback** que contiene el texto que **Cortana** muestra y dice cuando se inicia la aplicación.
 
 Un elemento **Navigate** indica que el comando de voz debe activar la aplicación en primer plano. En este ejemplo, el comando ```showTripToDestination``` es una tarea en primer plano.
 
@@ -195,7 +198,7 @@ protected async override void OnLaunched(LaunchActivatedEventArgs e)
 
   Luego, llamamos a [**GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para inicializarlo con nuestro archivo "AdventureWorksCommands.xml".
 
-  A continuación, se pasa este objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) a [**InstallCommandDefinitionsFromStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn708205).    
+  A continuación, este objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) se pasa a [**InstallCommandDefinitionsFromStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn708205).    
 ```csharp
 try
 {
@@ -222,13 +225,13 @@ catch (Exception ex)
 
 ## <span id="Handle_activation_and_execute_voice_commands"></span><span id="handle_activation_and_execute_voice_commands"></span><span id="HANDLE_ACTIVATION_AND_EXECUTE_VOICE_COMMANDS"></span>Controlar la activación y ejecutar los comandos de voz
 
-Especifica la manera en que tu aplicación responde a activaciones ulteriores de comandos de voz (siempre y cuando se haya iniciado al menos una vez y tengas instalados los conjuntos de comandos de voz).
+Especifica la manera en que tu aplicación responde a activaciones posteriores de comandos de voz (siempre y cuando se haya iniciado al menos una vez y tengas instalados los conjuntos de comandos de voz).
 
 1.  Comprobar que la aplicación se haya activado mediante un comando de voz.
 
-    Invalida el evento [**Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) y comprueba si la interfaz [**IActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224727).[**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) forma parte de la enumeración [**VoiceCommand**](https://msdn.microsoft.com/library/windows/apps/br224693).
+    Anula el evento [**Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) y comprueba si [**IActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224727).[**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) es [**VoiceCommand**](https://msdn.microsoft.com/library/windows/apps/br224693).
 
-2.  Determinar el nombre del comando y lo que se ha dicho.
+2.  Determina el nombre del comando y lo que se ha dicho.
 
     Obtén una referencia a un objeto [**VoiceCommandActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn609755) de [**IActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224727) y consulta la propiedad [**Result**](https://msdn.microsoft.com/library/windows/apps/dn609758) de un objeto [**SpeechRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/dn631432).
 
@@ -395,6 +398,7 @@ private string SemanticInterpretation(string interpretationKey, SpeechRecognitio
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

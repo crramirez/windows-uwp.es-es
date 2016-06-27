@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: El control de navegación centralizada usa un patrón de navegación jerárquico para ser compatible con aplicaciones con una arquitectura de información relacional.
-title: Controles de navegación centralizada
+Description: "El control de navegación centralizada usa un patrón de navegación jerárquico para ser compatible con aplicaciones con una arquitectura de información relacional."
+title: "Controles de navegación centralizada"
 ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 70ce2a58b45c8514aca6641ca034caa91fb88d18
+
 ---
 # Patrón o control de navegación centralizada
 
@@ -110,6 +113,7 @@ En los dispositivos móviles, las secciones de navegación centralizada están v
 - [Usar un control de navegación centralizada](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

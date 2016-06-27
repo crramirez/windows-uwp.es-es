@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Obtén información sobre cómo capturar y reconocer la entrada de voz de dictado continuo de larga duración.
+Description: "Obtén información sobre cómo capturar y reconocer la entrada de voz de dictado continuo de larga duración."
 title: Habilitar el dictado continuo
 ms.assetid: 383B3E23-1678-4FBB-B36E-6DE2DA9CA9DC
 label: Continuous dictation
 template: detail.hbs
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: a142592f878fa539d6c40ea2abfcbf834b2de34d
+
 ---
 
 # Dictado continuo
@@ -68,8 +71,8 @@ Durante la inicialización del reconocimiento de voz continuo, debes:
 -   Obtener el distribuidor del subproceso de interfaz de usuario si actualizas la interfaz de usuario de la aplicación en los controladores de eventos de reconocimiento continuo.
 -   Inicializar el reconocedor de voz.
 -   Compilar la gramática de dictado integrada.
-    **Nota**   El reconocimiento de voz requiere, como mínimo, una restricción para definir un vocabulario reconocible. Si no se especifica ninguna restricción, se usa una gramática de dictado predefinida. Consulta [Reconocimiento de voz](speech-recognition.md).
--   Configura los agentes de escucha de eventos para eventos de reconocimiento.
+    **Nota**   El reconocimiento de voz requiere, como mínimo, una restricción para definir un vocabulario reconocible. Si no se especifica ninguna restricción, se usa una gramática de dictado predefinida. Consulta la información sobre [Reconocimiento de voz](speech-recognition.md)
+-   Configura las escuchas de eventos para eventos de reconocimiento.
 
 En este ejemplo, inicializamos el reconocimiento de voz en el evento de página [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508).
 
@@ -100,9 +103,9 @@ SpeechRecognitionCompilationResult result =
 ## <span id="Handle_recognition_events"></span><span id="handle_recognition_events"></span><span id="HANDLE_RECOGNITION_EVENTS"></span>Controlar eventos de reconocimiento
 
 
-Puedes capturar una sola expresión o frase breve llamando al método [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) o al método [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245). 
+Puedes capturar una sola expresión o frase breve si llamas al método [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) o al método [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245). 
 
-No obstante, para capturar una sesión de reconocimiento continua y más prolongada, especificaremos agentes de escucha de eventos para que se ejecuten en segundo plano mientras el usuario habla, y definiremos los controladores para crear la cadena de dictado.
+No obstante, para capturar una sesión de reconocimiento continua y más prolongada, especificaremos escuchas de eventos para que se ejecuten en segundo plano mientras el usuario habla y definiremos los controladores para crear la cadena de dictado.
 
 A continuación, usamos la propiedad [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913) de nuestro reconocedor para obtener un objeto [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896) que proporcione métodos y eventos para administrar una sesión de reconocimiento continua.
 
@@ -271,7 +274,7 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 ```
 
 [!NOTE]  
-Puede crearse un evento [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) después de llamar a [**CancelAsync**](https://msdn.microsoft.com/library/windows/apps/dn913898).  
+Puede producirse un evento [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) después de una llamada a [**CancelAsync**](https://msdn.microsoft.com/library/windows/apps/dn913898).  
 Debido al multithreading, es posible que un evento [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) permanezca en la pila cuando se llame a [**CancelAsync**](https://msdn.microsoft.com/library/windows/apps/dn913898). Si es así, todavía se desencadenará el evento **ResultGenerated**.  
 Si estableces campos privados al cancelar la sesión de reconocimiento, confirma siempre sus valores en el controlador [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900). Por ejemplo, no des por hecho que un campo se inicializa en el controlador si estableces su valor como nulo cuando canceles la sesión.
 
@@ -293,6 +296,7 @@ Si estableces campos privados al cancelar la sesión de reconocimiento, confirma
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

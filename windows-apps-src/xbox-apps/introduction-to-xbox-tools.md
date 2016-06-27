@@ -1,8 +1,11 @@
 ---
 author: Mtoepke
-title: Introducción a las herramientas de Xbox One
-description: La herramienta específica de Xbox One, Dev Home, con Windows Device Portal.
+title: "Introducción a las herramientas de Xbox One"
+description: "La herramienta específica de Xbox One, Dev Home, con Windows Device Portal."
 area: Xbox
+ms.sourcegitcommit: 4872ac9587b3e2e14860cb152bf33536faccc48d
+ms.openlocfilehash: c975cb07aa9b7f0d30a9905cbceba11e89c8f7df
+
 ---
 
 # Introducción a las herramientas de Xbox One
@@ -85,12 +88,7 @@ Para definir un nombre de host para un kit de desarrollo, ve a la herramienta de
             &nbsp;&nbsp;No se requiere un nombre exclusivo para la creación del nombre de host. Por lo tanto, intenta evitar la duplicación de nombres. Una manera de hacerlo es derivar el nombre de host del nombre de tu equipo de desarrollo, que normalmente es único dentro de una organización.
 
 ## Windows Device Portal
-Windows Device Portal (WDP) es una herramienta de administración de dispositivos de OneCore que permite una experiencia de administración de dispositivo basada en explorador.
-
-> **Nota**
-            &nbsp;&nbsp;En esta vista previa para desarrolladores, iniciar WDP en Dev Home, provocará que este último se bloquee después de escribir el nombre de usuario y contraseña y hacer clic en **Guardar**.
-Las credenciales se guardan pero WDP no se inicia.
-Puedes iniciar WDP si reinicias Xbox One.
+Windows Device Portal (WDP) es una herramienta de administración de dispositivos OneCore que permite una experiencia de administración de dispositivo basada en explorador.
 
 Para habilitar WDP en la consola Xbox One:
 
@@ -120,6 +118,7 @@ Para habilitar WDP en la consola Xbox One:
 ----
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

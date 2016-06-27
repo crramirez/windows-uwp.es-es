@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: El selector de fecha del calendario es un control desplegable que está optimizado para seleccionar una fecha determinada desde una vista de calendario en la que la información contextual es importante, por ejemplo, el día de la semana o lo que se haya completado del calendario.
+Description: "El selector de fecha del calendario es un control desplegable que está optimizado para seleccionar una fecha determinada desde una vista de calendario en la que la información contextual es importante, por ejemplo, el día de la semana o lo que se haya completado del calendario."
 title: Selector de fecha del calendario
 ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
 label: Calendar date picker
 template: detail.hbs
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 75f6bb925db63838e4985df15b50977b93805ffe
+
 ---
 
 # Selector de fecha del calendario
@@ -86,6 +89,7 @@ El texto de marcador de posición predeterminado es "seleccionar una fecha". Pue
 - [Selector de hora](time-picker.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

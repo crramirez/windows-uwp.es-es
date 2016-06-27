@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-description: Incorpora la voz en las aplicaciones con síntesis de voz, reconocimiento de voz y los comandos de voz de Cortana.
+description: "Incorpora la voz en las aplicaciones con síntesis de voz, reconocimiento de voz y los comandos de voz de Cortana."
 title: Interacciones de voz
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
 template: detail.hbs
+ms.sourcegitcommit: bcc401c515cdba899fb2202ddddf5bd98b64aecd
+ms.openlocfilehash: bdcced680b69ce6ff9caf3ac860cb139fdfdaeff
+
 ---
 
 # Interacciones de voz
@@ -236,6 +239,7 @@ Estos dos tipos de problema se pueden abordar usando SSML en lugar de texto sin 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: Las pestañas y los controles dinámicos permiten a los usuarios navegar entre contenido al que se accede con frecuencia.
-title: Pestañas y controles dinámicos
+Description: "Las pestañas y los controles dinámicos permiten a los usuarios navegar entre contenido al que se accede con frecuencia."
+title: "Pestañas y controles dinámicos"
 ms.assetid: 556BC70D-CF5D-4295-A655-D58163CC1824
 label: Tabs and pivots
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 6585a75f08a64b7bb8f27fd32a227fa49bb0f3f4
+
 ---
 # Control dinámico y pestañas
 
@@ -108,6 +111,7 @@ El control tiene dos modos:
 [Conceptos básicos de diseño de la navegación](https://msdn.microsoft.com/library/windows/apps/dn958438)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

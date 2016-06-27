@@ -1,10 +1,13 @@
 ---
 author: mijacobs
-Description: Unas animaciones intencionadas y bien diseñadas dan vida a las aplicaciones y ofrecen una experiencia que se percibe elaborada y elegante. Ayuda a los usuarios a comprender los cambios contextuales y relaciona las experiencias con transiciones visuales.
-title: Movimiento y la animación en las aplicaciones para UWP
+Description: "Unas animaciones intencionadas y bien diseñadas dan vida a las aplicaciones y ofrecen una experiencia que se percibe elaborada y elegante. Ayuda a los usuarios a comprender los cambios contextuales y relaciona las experiencias con transiciones visuales."
+title: "Movimiento y la animación en las aplicaciones para UWP"
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: aa1283ed9dbb895854b8d7b2bb16eb485b377fce
+
 ---
 
 # Movimiento para las aplicaciones para UWP
@@ -110,6 +113,7 @@ A medida que el usuario pasa más tiempo en tu aplicación o las tareas se hacen
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

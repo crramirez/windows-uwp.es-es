@@ -1,11 +1,14 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Crea aplicaciones para la Plataforma universal de Windows (UWP) que admitan interacciones personalizadas con los dispositivos de lápiz y pluma, incluida la entrada de lápiz digital, para ofrecer experiencias de escritura y dibujo naturales.
-title: Interacciones de pluma y lápiz en aplicaciones para UWP
+Description: "Crea aplicaciones para la Plataforma universal de Windows (UWP) que admitan interacciones personalizadas con los dispositivos de lápiz y pluma, incluida la entrada de lápiz digital, para ofrecer experiencias de escritura y dibujo naturales."
+title: "Interacciones de pluma y lápiz en aplicaciones para UWP"
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen and stylus interactions in UWP apps
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: 218fae32f8b63c8fe5499af7d3fe6c1f0404334c
+
 ---
 
 # Interacciones de pluma y lápiz en aplicaciones para UWP
@@ -78,7 +81,7 @@ Esta serie de imágenes muestra cómo se representa la entrada manuscrita median
 | --- | --- | ---|
 | Control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) en blanco con una imagen de fondo. | Control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) con trazos de lápiz. | Control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) con un trazo borrado (ten en cuenta que la opción de borrado actúa en todo el trazo, no en una parte). |
 
-La funcionalidad de entrada manuscrita compatible con el control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) la proporciona un objeto de código subyacente denominado [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011).
+La funcionalidad de entrada manuscrita admitida por el control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) la proporciona un objeto de código subyacente denominado [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011).
 
 Para realizar entradas manuscritas básicas, no es necesario preocuparse por [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011). Sin embargo, para personalizar y configurar el comportamiento de la entrada manuscrita en la clase [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), debe acceder al objeto correspondiente **InkPresenter**.
 
@@ -94,7 +97,7 @@ No se pueden crear instancias de la propiedad [**InkPresenter**](https://msdn.mi
 
  
 
-En este apartado, configuraremos [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para que interprete los datos de entrada del lápiz y el mouse como trazos de lápiz. Asimismo, también estableceremos algunos atributos de trazo de lápiz iniciales que se usarán en la representación de trazos del control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+En este apartado, configuraremos [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para que interprete los datos de entrada del lápiz y el mouse como trazos de lápiz. Asimismo, también estableceremos algunos atributos de trazo de lápiz iniciales que se usarán en la representación de trazos de [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
 ```CSharp
 public MainPage()
@@ -181,9 +184,9 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 }
 ```
 
-Estas imágenes muestran cómo se procesa y personaliza la entrada manuscrita mediante la propiedad [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081).
+Estas imágenes muestran cómo se procesa y personaliza la entrada manuscrita mediante [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081).
 
-| ![control inkcanvas con trazos de lápiz negro predeterminados](images/ink-basic-custom-1-small.png) | ![control inkcanvas con trazos de lápiz rojo seleccionados por el usuario](images/ink-basic-custom-2-small.png) |
+| ![inkcanvas con trazos de lápiz negro predeterminados](images/ink-basic-custom-1-small.png) | ![inkcanvas con trazos de lápiz rojo seleccionados por el usuario](images/ink-basic-custom-2-small.png) |
 | --- | -- |
 | [
             **InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) con trazos de lápiz negro predeterminados. | [
@@ -243,11 +246,11 @@ En este ejemplo usaremos los archivos MainPage.xaml y MainPage.xaml.cs para hosp
     private Rect boundingRect;
 ```
 
-3.  A continuación, configuramos [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para que interprete los datos de entrada del lápiz y el mouse como trazos de lápiz, y establecemos algunos atributos de trazo de lápiz iniciales que se usan para la representación de trazos en el control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+3.  A continuación, configuramos [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para que interprete los datos de entrada del lápiz y el mouse como trazos de lápiz, y establecemos algunos atributos de trazo iniciales que se usan para la representación de trazos en [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
-    Recuerda usar la propiedad [**InputProcessingConfiguration**](https://msdn.microsoft.com/library/windows/apps/dn948764) de [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para indicar que la aplicación debe procesar cualquier entrada modificada. La entrada modificada se especifica asignando a **InputProcessingConfiguration.RightDragAction** un valor de la enumeración [**InkInputRightDragAction.LeaveUnprocessed**](https://msdn.microsoft.com/library/windows/apps/dn948760).
+    Recuerda usar la propiedad [**InputProcessingConfiguration**](https://msdn.microsoft.com/library/windows/apps/dn948764) de [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) para indicar que la aplicación debe procesar cualquier entrada modificada. La entrada modificada se especifica asignando a **InputProcessingConfiguration.RightDragAction** un valor de [**InkInputRightDragAction.LeaveUnprocessed**](https://msdn.microsoft.com/library/windows/apps/dn948760).
 
-    A continuación, asignamos agentes de escucha para los eventos sin procesar [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) y [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) que la propiedad [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) ha pasado. Todas las funcionalidades de selección se implementan en los controladores de estos eventos.
+    A continuación, asignamos agentes de escucha para los eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) y [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) sin procesar que la propiedad [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) ha pasado. Todas las funcionalidades de selección se implementan en los controladores de estos eventos.
 
     Por último, asignamos agentes de escucha para los eventos [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702) y [**StrokesErased**](https://msdn.microsoft.com/library/windows/apps/dn948767) de la propiedad [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081). Los controladores de estos eventos se usan para limpiar la interfaz de usuario de selección si se inicia un nuevo trazo o se borra un trazo existente.
 
@@ -295,7 +298,7 @@ public MainPage()
     }
 ```
 
-4.  Una vez hecho todo esto, definimos los controladores de los eventos sin procesar [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) y [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) que la propiedad [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) ha pasado.
+4.  Una vez hecho todo esto, definimos los controladores de los eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) y [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) sin procesar que la propiedad [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) ha pasado.
 
     Todas las funcionalidades de selección se implementan en estos controladores, incluido el trazo de lazo y el rectángulo delimitador.
 
@@ -430,7 +433,7 @@ El secado personalizado requiere un objeto [**IInkD2DRenderer**](https://msdn.mi
 
 Al llamar a [**ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/apps/dn922012) (antes de cargar [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)), una aplicación crea un objeto [**InkSynchronizer**](https://msdn.microsoft.com/library/windows/apps/dn903979) para personalizar la representación de un trazo de lápiz seco en la clase [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) o [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). Por ejemplo, un trazo de lápiz se puede rasterizar e integrar en el contenido de la aplicación, en lugar de hacerlo como una capa de **InkCanvas** diferente.
 
-Consulta [Complex ink sample (Muestra de entrada de lápiz compleja)](http://go.microsoft.com/fwlink/p/?LinkID=620314) para obtener un ejemplo completo de esta funcionalidad.
+Para obtener un ejemplo completo de esta funcionalidad, consulta [Complex ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620314) (Muestra de entrada de lápiz compleja).
 
 
 ## Otros artículos de esta sección 
@@ -489,6 +492,7 @@ Consulta [Complex ink sample (Muestra de entrada de lápiz compleja)](http://go.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

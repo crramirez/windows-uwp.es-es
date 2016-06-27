@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción del usuario intuitivas y distintivas que estén optimizadas para el panel táctil pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada.
-title: Interacciones del panel táctil
+Description: "Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción del usuario intuitivas y distintivas que estén optimizadas para el panel táctil pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada."
+title: "Interacciones del panel táctil"
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: aa09852ff6f387b97e0f1a1bbb2d198927d5da0d
+
 ---
 
 # Directrices para el diseño de panel táctil
@@ -166,6 +169,7 @@ Si necesitas personalizar el cursor del mouse:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

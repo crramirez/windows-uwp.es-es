@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Responde a las entradas de mouse de tus aplicaciones controlando los mismos eventos de puntero básicos que usas para las entradas táctiles y de pluma.
+Description: "Responde a las entradas de mouse de tus aplicaciones controlando los mismos eventos de puntero básicos que usas para las entradas táctiles y de pluma."
 title: Interacciones de mouse
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: b381cdba2a20480bb8b4d7802d2ff490744e5f03
+
 ---
 
 # Interacciones de mouse
@@ -151,6 +154,7 @@ Si necesitas personalizar el cursor del mouse:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

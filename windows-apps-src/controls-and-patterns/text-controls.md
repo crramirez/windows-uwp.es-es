@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: Analiza con qué frecuencia leemos el texto en nuestras vidas diarias, en correo electrónico, un libro, una señal de tráfico, los precios en una carta, la presión de los neumáticos, un letrero en un poste de la calle.
+Description: "Analiza con qué frecuencia leemos el texto en nuestras vidas diarias, en correo electrónico, un libro, una señal de tráfico, los precios en una carta, la presión de los neumáticos, un letrero en un poste de la calle."
 title: Controles de texto
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 1fec4bf13567507087eef08feea0a3ebc255b43f
+
 ---
 # Controles de texto
 Los controles de texto constan de cuadros de entrada de texto, cuadros de contraseña, cuadros de sugerencia automática y bloques de texto. El marco XAML brinda diversos controles para representar e ingresar texto, así como un conjunto de propiedades para aplicar formato al texto.
@@ -160,6 +163,7 @@ La aplicación puede insertar un separador de párrafo entre párrafos de texto.
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length.aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

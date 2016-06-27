@@ -2,7 +2,10 @@
 author: Jwmsft
 ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: Dibujar formas
-description: Aprende a dibujar formas como elipses, rectángulos, polígonos y trayectorias. La clase Path te permite visualizar un lenguaje de dibujo basado en vectores, relativamente complejo, en una interfaz de usuario XAML; por ejemplo, lo puedes visualizar para dibujar curvas Bézier.
+description: "Aprende a dibujar formas como elipses, rectángulos, polígonos y trayectorias. La clase Path te permite visualizar un lenguaje de dibujo basado en vectores, relativamente complejo, en una interfaz de usuario XAML; por ejemplo, lo puedes visualizar para dibujar curvas Bézier."
+ms.sourcegitcommit: 04a3c2dabc4b115faf4b06aa3d3a59c5c38ab95f
+ms.openlocfilehash: 42514e5119b646d196e0a1c7d3099ebed2225c69
+
 ---
 # Dibujar formas
 
@@ -143,7 +146,7 @@ Esta propiedad [**Data**](https://msdn.microsoft.com/library/windows/apps/window
 
 El primer segmento es una curva Bézier cúbica que comienza en `(100,200)` y termina en `(400,175)`, y que se dibuja con los dos puntos de control `(100,25)` y `(400,350)`. Este segmento se indica con el comando "C" de la cadena de atributo [**Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data).
 
-El segundo segmento comienza con un comando de línea horizontal absoluto "H", que especifica una línea dibujada desde el punto de conexión de la subtrayectoria anterior `(400,175)` hasta un nuevo punto de conexión `(280,175)`. Como es un comando de línea horizontal, el valor especificado es una coordenada x.
+El segundo segmento comienza con un comando de línea horizontal absoluto "H", que especifica una línea dibujada desde el punto de conexión de la subtrayectoria anterior `(400,175)` hasta un nuevo punto de conexión `(280,175)`. Como se trata de un comando de línea horizontal, el valor especificado es una coordenada x.
 
 ```xml
 <Path Stroke="DarkGoldenRod" 
@@ -184,7 +187,7 @@ The next example shows a usage of the other technique we discussed: a [**Geometr
           </Path>
 ```
 
-Una de las razones por las que querrías usar la clase [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168) con las diversas partes, es que cada una de ellas tiene propiedades **Double** y **Point** que podrías usar como destino para realizar una animación de interfaz de usuario. Es más, no puedes hacer esto con el formato de serialización de la propiedad [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data). Para obtener más información, consulta [Animaciones con guion gráfico](storyboarded-animations.md).
+El uso de [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168) puede ofrecer un resultado más legible que rellenar una cadena [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data). Por otro lado, [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) usa una sintaxis compatible con las definiciones de rutas de imágenes de Scalable Vector Graphics (SVG), por lo que puede resultar útil para migrar gráficos SVG o como salida de una herramienta como Blend.
 
  
 
@@ -195,6 +198,7 @@ Una de las razones por las que querrías usar la clase [**PathGeometry**](https:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

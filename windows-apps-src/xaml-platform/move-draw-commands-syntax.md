@@ -1,8 +1,11 @@
 ---
 author: jwmsft
-description: Conoce los comandos de movimiento y dibujo (un minilenguaje) que podrás usar para especificar geometrías de rutas de acceso como un valor de atributo XAML.
+description: "Conoce los comandos de movimiento y dibujo (un minilenguaje) que podrás usar para especificar geometrías de rutas de acceso como un valor de atributo XAML."
 title: Sintaxis de comandos de movimiento y dibujo
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
+ms.sourcegitcommit: e1399a25b0455c9a79dcb217c5df1a397420d1f3
+ms.openlocfilehash: 54c080183104335f4b3920cda8bc396a34298a69
+
 ---
 
 # Sintaxis de comandos de movimiento y dibujo
@@ -244,11 +247,11 @@ En lugar de usar valores decimales o enteros, puedes usar la notación científi
 
 ## Herramientas de diseño que producen comandos de movimiento y dibujo
 
-Al usar la herramienta **Lápiz** y otras herramientas de dibujo en Blend para Microsoft Visual Studio 2013, normalmente se produce un objeto [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) que consta de comandos de movimiento y dibujo.
+Al usar la herramienta **Lápiz** y otras herramientas de dibujo en Blend para Microsoft Visual Studio 2015, normalmente se produce un objeto [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) que consta de comandos de movimiento y dibujo.
 
 Es posible que encuentres datos de comandos de movimiento y dibujo existentes en algunas partes del control definidas en las plantillas XAML predeterminadas para los controles en Windows Runtime. Por ejemplo, algunos controles usan una clase [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722) que tiene los datos definidos como comandos de movimiento y dibujo.
 
-Asimismo, hay disponibles complementos o exportadores de otras herramientas que normalmente se usan para el diseño con gráficos de vector y que pueden generar el vector en formato XAML. Normalmente crean objetos [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) en un contenedor de diseño junto con comandos de movimiento y dibujo de la propiedad [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). Puede que haya varios elementos **Path** en el lenguaje XAML para así poder aplicar distintos pinceles. Estos exportadores o complementos se escribieron originalmente para XAML deWindows Presentation Foundation (WPF), pero este aspecto de la sintaxis XAML es idéntico al XAML de Windows en tiempo de ejecución. Igualmente puedes usar trozos de XAML de un exportador y pegarlos directamente en una página XAML de Windows Runtime. (No obstante, no podrás usar el pincel **RadialGradientBrush** si este formaba parte del XAML convertido, ya que no es compatible con el lenguaje XAML de Windows Runtime).
+Asimismo, hay disponibles complementos o exportadores de otras herramientas que normalmente se usan para el diseño con gráficos de vector y que pueden generar el vector en formato XAML. Normalmente crean objetos [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) en un contenedor de diseño junto con comandos de movimiento y dibujo de la propiedad [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356). Es posible contar con varios elementos **Path** en el XAML para poder aplicar distintos pinceles. Muchos de estos exportadores o complementos se escribieron originalmente para XAML de Windows Presentation Foundation (WPF), pero la sintaxis de path XAML es idéntica a la de XAML de Windows Runtime. Normalmente, es posible usar trozos de XAML de un exportador y pegarlos directamente en una página XAML de Windows Runtime. (No obstante, no podrás usar el pincel **RadialGradientBrush** si este formaba parte del XAML convertido, ya que no es compatible con el lenguaje XAML de Windows Runtime).
 
 ## Temas relacionados
 
@@ -259,6 +262,7 @@ Asimismo, hay disponibles complementos o exportadores de otras herramientas que 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

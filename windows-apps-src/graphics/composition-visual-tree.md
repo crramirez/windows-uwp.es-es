@@ -1,8 +1,11 @@
 ---
 author: scottmill
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
-title: Árbol visual de composición
-description: Los elementos visuales de composición conforman la estructura del árbol visual que todas las demás funciones de la API de composición usarán y ampliarán. La API permite a los desarrolladores definir y crear uno o varios objetos visuales que representan un nodo único en un árbol visual.
+title: "Árbol visual de composición"
+description: "Los elementos visuales de composición conforman la estructura del árbol visual que todas las demás funciones de la API de composición usarán y ampliarán. La API permite a los desarrolladores definir y crear uno o varios objetos visuales que representan un nodo único en un árbol visual."
+ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
+ms.openlocfilehash: e31d3b23871bd37cde26fb3e9414e8cfae340d3d
+
 ---
 # Árbol visual de composición
 
@@ -110,7 +113,7 @@ Como la rotación, la propiedad [**Opacity**](https://msdn.microsoft.com/library
 
 ## Cambiar la posición del elemento visual en la colección
 
-La API de composición permite cambiar de varias maneras la posición de un elemento Visual en un objeto [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection), se puede colocar encima de otro elemento Visual con el objeto [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertabove), colocar por debajo con el objeto [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertbelow), mover al primer plano con el objeto [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertattop) o mover al fondo con el objeto [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertatbottom).
+La API de composición permite establecer la posición de un elemento visual en un objeto [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection) que se puede cambiar de varias maneras, se puede colocar encima de otro elemento visual con el objeto [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertabove), colocar por debajo con el objeto [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertbelow), mover al primer plano con el objeto [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertattop) o mover al fondo con el objeto [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertatbottom).
 
 En la muestra, un objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) en el que se hizo clic se pone en primer plano:
 
@@ -517,6 +520,7 @@ namespace compositionvisual
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

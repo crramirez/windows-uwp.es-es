@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Obtén información sobre cómo puede interactuar un usuario con una aplicación en segundo plano mediante el lienzo y la voz de Cortana durante la ejecución de un comando de voz.
-title: Interactuar con una aplicación en segundo plano
+Description: "Obtén información sobre cómo puede interactuar un usuario con una aplicación en segundo plano mediante el lienzo y la voz de Cortana durante la ejecución de un comando de voz."
+title: "Interactuar con una aplicación en segundo plano"
 ms.assetid: 6C60F03C-A242-435D-96BB-736892CC1CA6
 label: Interact with a background app
 template: detail.hbs
+ms.sourcegitcommit: 7d9f5eff0f6561b18024658fe99d1e11bbe3309f
+ms.openlocfilehash: 675553f5c3954597982360900e965b2a756d7f63
+
 ---
 
 # Interactuar con una aplicación en segundo plano en Cortana
@@ -180,15 +183,17 @@ Una vez que se reconoce un comando de voz, **Cortana** debe llamar a ReportSucce
 
 Si el servicio de la aplicación no llama a ReportSuccessAsync o a algún otro método VoiceCommandServiceConnection, el usuario recibe un mensaje de error y se cancela la llamada del servicio de aplicaciones.
 
-Este es un ejemplo de una pantalla de entrega de la aplicación **Adventure Works**. En este ejemplo, un usuario le ha consultado a **Cortana** los próximos viajes. La pantalla de entrega incluye un mensaje personalizado con el nombre de servicio de la aplicación, un icono y la cadena de **Comentarios** declarada en el archivo VCD.
+Este es un ejemplo de una pantalla de entrega de la aplicación **Adventure Works**. En este ejemplo, un usuario le ha consultado a **Cortana** los próximos viajes. La pantalla de entrega incluye un mensaje personalizado con el nombre de servicio de la aplicación, un icono y una cadena de **Comentarios**. 
 
-![pantalla de entrega de la aplicación en segundo plano de Cortana](images/cortana-backgroundapp-progress-result.png)
+[!NOTE] Puedes declarar una cadena **comentarios** en el archivo VCD. Esta cadena no afecta el texto de la interfaz de usuario que se muestra en el lienzo de Cortana, solo afecta al texto que dice **Cortana**.
+
+![Pantalla de entrega de la aplicación en segundo plano de Cortana](images/cortana-backgroundapp-progress-result.png)
 
 
 ## <span id="Progress_screen"></span><span id="progress_screen"></span><span id="PROGRESS_SCREEN"></span>Pantalla de progreso
 
 
-Si el servicio de la aplicación tarda más de 500 ms en llamar a ReportSuccessAsync, **Cortana** muestra al usuario una pantalla de progreso. A continuación se muestra el icono de la aplicación y debes proporcionar cadenas de progreso de la interfaz gráfica de usuario y TTS para indicar que la tarea se está controlando activamente.
+Si el servicio de la aplicación tarda más de 500 ms en llamar a ReportSuccessAsync, **Cortana** muestra al usuario una pantalla de progreso. A continuación se muestra el icono de la aplicación y debes proporcionar cadenas de progreso de la interfaz gráfica de usuario y TTS para indicar que la tarea se está controlando activamente.
 
 **Cortana** muestra una pantalla de progreso durante un máximo de 5 segundos. Transcurridos 5 segundos, **Cortana** muestra al usuario un mensaje de error y el servicio de la aplicación se cierra. Si el servicio de la aplicación necesita más de 5 segundos para completar la acción, puede seguir actualizando **Cortana** con pantallas de progreso.
 
@@ -472,6 +477,7 @@ var userMessage = new VoiceCommandUserMessage();
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -5,6 +5,9 @@ title: Identificar dispositivos de entrada
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: ee5935a79b10b6c4c084457049cbb518e264be0d
+
 ---
 
 # Identificar dispositivos de entrada
@@ -191,6 +194,7 @@ private void GetPointerDevices()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

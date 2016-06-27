@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: En este tema se describe la nueva interfaz de usuario de Windows para realizar una rotación. También se ofrecen directrices sobre la experiencia del usuario que te conviene tener en cuenta al usar este nuevo mecanismo de interacción en tu aplicación de la Tienda Windows.
-title: Rotación
+Description: "En este tema se describe la nueva interfaz de usuario de Windows para realizar una rotación. También se ofrecen directrices sobre la experiencia del usuario que te conviene tener en cuenta al usar este nuevo mecanismo de interacción en tu aplicación de la Tienda Windows."
+title: "Rotación"
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: d91a3cf5dc5ae2e1a68e32fc64848b869f229391
+
 ---
 
 # Rotación
@@ -123,6 +126,7 @@ Windows 8 admite tres tipos de rotación: libre, restringida y combinada.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

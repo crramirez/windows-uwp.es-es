@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Usa la información visual para mostrar a los usuarios cuándo se detectan, se interpretan y se tratan sus interacciones con una aplicación de la Tienda Windows.
-title: Información visual
+Description: "Usa la información visual para mostrar a los usuarios cuándo se detectan, se interpretan y se tratan sus interacciones con una aplicación de la Tienda Windows."
+title: "Información visual"
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
 template: detail.hbs
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: 287ec24dbc60be39c0f944c6d4a86205961fb770
+
 ---
 
 # Instrucciones para la información visual
@@ -182,6 +185,7 @@ Consulta [Agregar controles flotantes y menús](https://msdn.microsoft.com/libra
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,11 +1,14 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Las aplicaciones para UWP que admiten Windows Ink pueden serializar y deserializar los trazos de lápiz en un archivo de formato Ink Serialized Format (ISF). El archivo ISF es una imagen GIF con metadatos adicionales para todos los comportamientos y propiedades de trazo de lápiz. Las aplicaciones que no están habilitadas para la entrada de lápiz puede ver la imagen GIF estática, incluida la transparencia del fondo del canal alfa.
-title: Almacenar y recuperar datos de trazos de lápiz de Windows Ink
+Description: "Las aplicaciones para UWP que admiten Windows Ink pueden serializar y deserializar los trazos de lápiz en un archivo de formato Ink Serialized Format (ISF). El archivo ISF es una imagen GIF con metadatos adicionales para todos los comportamientos y propiedades de trazo de lápiz. Las aplicaciones que no están habilitadas para la entrada de lápiz puede ver la imagen GIF estática, incluida la transparencia del fondo del canal alfa."
+title: "Almacenar y recuperar datos de trazos de lápiz de Windows Ink"
 ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: 0f2e95146281fb992af1201c408ed62705c77741
+
 ---
 
 # Almacenar y recuperar datos de trazos de lápiz de Windows Ink
@@ -440,6 +443,7 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

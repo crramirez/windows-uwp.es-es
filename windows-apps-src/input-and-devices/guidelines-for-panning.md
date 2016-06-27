@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: El movimiento panorámico o el desplazamiento permiten a los usuarios navegar dentro de una única vista para mostrar el contenido de la vista que no cabe en la ventanilla. Algunos ejemplos de vistas son la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos.
-title: Movimiento panorámico
+Description: "El movimiento panorámico o el desplazamiento permiten a los usuarios navegar dentro de una única vista para mostrar el contenido de la vista que no cabe en la ventanilla. Algunos ejemplos de vistas son la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos."
+title: "Movimiento panorámico"
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 7aafb0bbef2a33f926f76e41c26dd0f6920de274
+
 ---
 
 # Directrices sobre el movimiento panorámico
@@ -192,6 +195,7 @@ Esta guía también es útil para aplicaciones, como álbumes de fotografías o 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

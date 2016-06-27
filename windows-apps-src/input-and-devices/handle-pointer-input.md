@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Recibe, procesa y administra los datos de entrada de dispositivos señaladores, como la función táctil, el mouse, la pluma o el lápiz y el panel táctil, en aplicaciones para la Plataforma universal de Windows (UWP).
+Description: "Recibe, procesa y administra los datos de entrada de dispositivos señaladores, como la función táctil, el mouse, la pluma o el lápiz y el panel táctil, en aplicaciones para la Plataforma universal de Windows (UWP)."
 title: Controlar la entrada de puntero
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 8e3d0fdd97c72c2e7816fbc48738c651fb4f5bbd
+
 ---
 
 # Controlar la entrada de puntero
@@ -1107,6 +1110,7 @@ namespace PointerInput
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: Muestra una a una las imágenes de una colección, como las fotos de un álbum o los elementos de una página de detalles de un producto.
+Description: "Muestra una a una las imágenes de una colección, como las fotos de un álbum o los elementos de una página de detalles de un producto."
 title: Directrices para controles de vista invertida
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 7da18bd897248ecef7e1caaebff5b8bbab02e3fe
+
 ---
 # Vista invertida
 
@@ -208,6 +211,7 @@ En el caso de colecciones más grandes (de 10 a 25 elementos), considera la posi
 - [**Clase CarouselPanel (XAML)**](https://msdn.microsoft.com/library/windows/apps/hh967950)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

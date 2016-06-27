@@ -1,8 +1,11 @@
 ---
 author: TylerMSFT
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de Visual C++ (C++/CX) usando la clase de tarea que se define en el espacio de nombres concurrency en ppltasks.h.
-title: Programación asincrónica en C++
+description: "Este artículo describe la manera recomendada de consumir métodos asincrónicos en las extensiones de componentes de Visual C++ (C++/CX) usando la clase de tarea que se define en el espacio de nombres concurrency en ppltasks.h."
+title: "Programación asincrónica en C++"
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 560b51d5bb67f5f2611311cb78f59d189d4ea440
+
 ---
 
 # Programación asincrónica en C++
@@ -190,13 +193,13 @@ void App::DeleteWithTasksHandleErrors(String^ fileName)
 }
 ```
 
-En una continuación basada en tareas, llamamos a la función miembro [**task::get**][taskGet] para obtener los resultados de la tarea. Todavía tenemos que llamar a **task::get** incluso si la operación fue una acción [**IAsyncAction**][IAsyncAction] que no produce ningún resultado porque **task::get** también obtiene cualquier excepción que se haya transportado hacia abajo en la tarea. Si la tarea de entrada está almacenando una excepción, se inicia en la llamada a **task::get**. Si no llamas a **task::get** o no usas una continuación basada en tareas al final de la cadena, o no capturas el tipo de excepción iniciado, se inicia una **unobserved\_task\_exception** cuando se hayan eliminado todas las referencias a la tarea.
+En una continuación basada en tareas, llamamos a la función miembro [**task::get**][taskGet] para obtener los resultados de la tarea. Todavía tenemos que llamar a **task::get** incluso si la operación fue una acción [**IAsyncAction**][IAsyncAction] que no produce ningún resultado porque e **task::get** también obtiene cualquier excepción que se haya transportado hacia abajo en la tarea. Si la tarea de entrada está almacenando una excepción, se inicia en la llamada a **task::get**. Si no llamas a **task::get** o no usas una continuación basada en tareas al final de la cadena, o no capturas el tipo de excepción iniciado, se inicia una **unobserved\_task\_exception** cuando se hayan eliminado todas las referencias a la tarea.
 
 Solamente captura las excepciones que puedas administrar. Si tu aplicación se encuentra con un error del que no puedes recuperarte, es mejor dejar que se bloquee a dejar que continúe ejecutándose en un estado desconocido. Además, en general, no intentes capturar la propia **unobserved\_task\_exception**. Esta excepción principalmente se usa para fines de diagnóstico. Generalmente, cuando se inicia **unobserved\_task\_exception**, indica un error en el código. Normalmente, la causa es una excepción que debe controlarse o una excepción irrecuperable que otro error en el código causó.
 
 ## Administración del contenido del subproceso
 
-La interfaz de usuario de una aplicación para UWP se ejecuta en un contenedor uniproceso (STA). Una tarea cuyo lambda devuelve [**IAsyncAction**][IAsyncAction] o [**IAsyncOperation**][IAsyncOperation] reconoce contenedores. De manera predeterminada, si la tarea se crea en el STA, todas sus continuaciones se ejecutarán también en él, a menos que especifiques lo contrario. En otras palabras, toda la cadena de tareas hereda el reconocimiento de apartamentos de la tarea primaria. Este comportamiento ayuda a simplificar las interacciones con los controles de la interfaz de usuario, a la que solamente puede obtenerse acceso desde el STA.
+La interfaz de usuario de una aplicación para UWP se ejecuta en un contenedor uniproceso (STA). Una tarea cuyo lambda devuelve [**IAsyncAction**][IAsyncAction] or [**IAsyncOperation**][IAsyncOperation] reconoce contenedores. De manera predeterminada, si la tarea se crea en el STA, todas sus continuaciones se ejecutarán también en él, a menos que especifiques lo contrario. En otras palabras, toda la cadena de tareas hereda el reconocimiento de apartamentos de la tarea primaria. Este comportamiento ayuda a simplificar las interacciones con los controles de la interfaz de usuario, a la que solamente puede obtenerse acceso desde el STA.
 
 Por ejemplo, en una aplicación para UWP, en la función miembro de cualquier clase que representa una página XAML, puedes rellenar un control [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) desde dentro de un método [**task::then**][taskThen] sin tener que usar el objeto [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/BR208211).
 
@@ -219,7 +222,7 @@ void App::SetFeedText()
 
 Si una tarea no devuelve [**IAsyncAction**][IAsyncAction] o [**IAsyncOperation**][IAsyncOperation], no reconoce contenedores y, de manera predeterminada, sus continuaciones se ejecutan en el primer subproceso en segundo plano disponible.
 
-Puedes invalidar el contexto de subproceso predeterminado para cualquier tipo de tarea mediante el uso de la sobrecarga de [**task::then**][taskThen] que toma un [**task\_continuation\_context**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749968.aspx). Por ejemplo, en algunos casos, probablemente quieras programar la continuación de una tarea que reconoce contenedores en un subproceso en segundo plano. En tal caso, puedes pasar [**task\_continuation\_context::use\_arbitrary**][useArbitrary] para programar el trabajo de la tarea en el siguiente subproceso disponible en un contenedor multiproceso. Esto puede mejorar el rendimiento de la continuación porque su trabajo no tiene que estar sincronizado con otro trabajo que se esté realizando en el subproceso de interfaz de usuario.
+Puedes invalidar el contexto de subproceso predeterminado para cualquier tipo de tarea mediante el uso de la sobrecarga de [**task::then**]taskThen[ que toma un ]task\_continuation\_context****. Por ejemplo, en algunos casos, probablemente quieras programar la continuación de una tarea que reconoce contenedores en un subproceso en segundo plano. En tal caso, puedes pasar [**task\_continuation\_context::use\_arbitrary**]useArbitrary para programar el trabajo de la tarea en el siguiente subproceso disponible en un contenedor multiproceso. Esto puede mejorar el rendimiento de la continuación porque su trabajo no tiene que estar sincronizado con otro trabajo que se esté realizando en el subproceso de interfaz de usuario.
 
 El siguiente ejemplo demuestra cuándo es útil especificar la opción [**task\_continuation\_context::use\_arbitrary**][useArbitrary] y también muestra cómo el contexto de continuación predeterminado es útil para sincronizar operaciones simultáneas en colecciones no seguras para subprocesos. En este código, repetimos una lista de URL para fuentes RSS, y para cada URL, iniciamos una operación asincrónica para recuperar los datos de fuente. No podemos controlar el orden en el que se recuperan las fuentes. En realidad, no nos interesa hacerlo. Cuando se completa cada operación [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR210642), la primera continuación acepta el objeto [**SyndicationFeed^**](https://msdn.microsoft.com/library/windows/apps/BR243485) y lo usa para inicializar un objeto `FeedData^` definido por la aplicación. Dado que cada una de estas operaciones es independiente de las otras, podemos acelerar el proceso especificando el contexto de continuación **task\_continuation\_context::use\_arbitrary**. No obstante, después de que se inicialice cada objeto `FeedData`, tenemos que agregarlo a un [**Vector**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh441570.aspx), que no es una colección segura para subprocesos. Por lo tanto, podemos crear una continuación y especificar [**task\_continuation\_context::use\_current**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750085.aspx) para garantizar que todas las llamadas a [**Append**](https://msdn.microsoft.com/library/windows/apps/BR206632) se produzcan en el mismo contexto ASTA (contenedor de subproceso único de aplicaciones). Dado que [**task\_continuation\_context::use\_default**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750085.aspx) es el contexto predeterminado, no tenemos que especificarlo explícitamente, pero lo hacemos aquí por razones de claridad.
 
@@ -290,30 +293,50 @@ Los métodos que admiten [**IAsyncOperationWithProgress**](https://msdn.microsof
 
 ## Temas relacionados
 
-* [Creación de operaciones asincrónicas en C++ para aplicaciones de la Tienda Windows][createAsyncCpp]
+* [Creación de operaciones asincrónicas en C++ para aplicaciones de la Tienda Windows]
+            [createAsyncCpp]
 * [Referencia del lenguaje Visual C++](http://msdn.microsoft.com/library/windows/apps/hh699871.aspx)
-* [Programación asincrónica][AsyncProgramming]
-* [Paralelismo de tareas (Runtime de simultaneidad)][taskParallelism]
-* [clase de tarea][task-class]
+* [Programación asincrónica]
+            [AsyncProgramming]
+* [Paralelismo de tareas (Runtime de simultaneidad)]
+            [taskParallelism]
+* [clase de tarea]
+            [task-class]
  
 <!-- LINKS -->
-[AsyncProgramming]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh464924.aspx> "AsyncProgramming"
-[concurrencyNamespace]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492819.aspx> "Concurrency Namespace"
-[createTask]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh913025.aspx> "CreateTask"
-[createAsyncCpp]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx> "CreateAsync"
-[deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199> "DeleteAsync"
-[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/BR206580> "IAsyncAction"
-[IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598> "IAsyncOperation"
-[IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587> "IAsyncInfo"
-[IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel> "IAsyncInfoCancel"
-[taskCanceled]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750106.aspx> "TaskCancelled"
-[task-class]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx> "Clase task"
-[taskGet]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750017.aspx> "TaskGet"
-[taskParallelism]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492427.aspx> "Paralelismo de tareas"
-[taskThen]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx> "TaskThen"
-[useArbitrary]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750036.aspx> "UseArbitrary"
+[AsyncProgramming]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh464924.aspx>
+             "AsyncProgramming"
+[concurrencyNamespace]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492819.aspx>
+             "Espacio de nombres Concurrency"
+[createTask]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh913025.aspx>
+             "CreateTask"
+[createAsyncCpp]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx>
+             "CreateAsync"
+[deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199>
+             "DeleteAsync"
+[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/BR206580>
+             "IAsyncAction"
+[IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598>
+             "IAsyncOperation"
+[IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587>
+             "IAsyncInfo"
+[IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel>
+             "IAsyncInfoCancel"
+[taskCanceled]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750106.aspx>
+             "TaskCancelled"
+[task-class]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx>
+             "Clase de tarea"
+[taskGet]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750017.aspx>
+             "TaskGet"
+[taskParallelism]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492427.aspx>
+             "Paralelismo de tareas"
+[taskThen]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx>
+             "TaskThen"
+[useArbitrary]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750036.aspx>
+             "UseArbitrary"
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

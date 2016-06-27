@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Aprende cómo ampliar Cortana con comandos de voz más flexibles y naturales, de modo que el usuario pueda decir el nombre de tu aplicación en cualquier lugar del comando.
+Description: "Aprende cómo ampliar Cortana con comandos de voz más flexibles y naturales, de modo que el usuario pueda decir el nombre de tu aplicación en cualquier lugar del comando."
 title: Admitir comandos de voz en lenguaje natural en Cortana
 ms.assetid: 281E068A-336A-4A8D-879A-D8715C817911
 label: Support natural language voice commands
 template: detail.hbs
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: c9cd6894c61f3d6cfe770d197317a97a804b4119
+
 ---
 
 # Admitir comandos de voz en lenguaje natural en Cortana
@@ -209,6 +212,7 @@ Este es un archivo VCD que muestra varias maneras de ofrecer comandos de voz con
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

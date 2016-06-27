@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Obtén información sobre cómo seleccionar un idioma instalado para usarlo en el reconocimiento de voz.
+Description: "Obtén información sobre cómo seleccionar un idioma instalado para usarlo en el reconocimiento de voz."
 title: Especificar el idioma del reconocedor de voz
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 24393ef52d72aa08f9aab2d541e65ccb5f2aceed
+
 ---
 
 # Especificar el idioma del reconocedor de voz
@@ -26,9 +29,9 @@ Aquí se enumeran los idiomas instalados en un sistema, se identifica cuál es e
 
 **Requisitos previos:  **
 
-Este tema se basa en el [reconocimiento de voz](speech-recognition.md).
+Este tema se basa en [Reconocimiento de voz](speech-recognition.md).
 
-Debes tener un conocimiento básico del reconocimiento de voz y de las restricciones de reconocimiento.
+Debes tener un conocimiento básico del reconocimiento de voz y de las restricciones del reconocimiento.
 
 Si acabas de empezar a desarrollar aplicaciones para la Plataforma universal de Windows (UWP), consulta estos temas para familiarizarte con las tecnologías que te presentamos aquí.
 
@@ -110,9 +113,15 @@ Una gramática SRGS es un formato XML estándar abierto representado por la clas
 
 
 **Desarrolladores**
-* Interacciones de voz
-* Diseñadores
-* [Directrices para el diseño de Voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Interacciones de voz](speech-interactions.md)
+            
+          
+            **Diseñadores**
+* [Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+            
+          
+            **Muestras**
+* [Muestra de reconocimiento de voz y síntesis de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  
@@ -122,6 +131,7 @@ Una gramática SRGS es un formato XML estándar abierto representado por la clas
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

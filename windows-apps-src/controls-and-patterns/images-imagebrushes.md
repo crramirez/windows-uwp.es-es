@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: Aprende a integrar imágenes en la aplicación, así como a usar las API de las dos clases principales de XAML, Image e ImageBrush.
-title: Imágenes y pinceles de imagen
+Description: "Aprende a integrar imágenes en la aplicación, así como a usar las API de las dos clases principales de XAML, Image e ImageBrush."
+title: "Imágenes y pinceles de imagen"
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 972480aabb6f0db3b5091bd55323f9d1946086e6
+
 ---
 # Imágenes y pinceles de imagen
 
@@ -142,6 +145,7 @@ Si defines un elemento Image o ImageBrush mediante código, usa los constructore
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

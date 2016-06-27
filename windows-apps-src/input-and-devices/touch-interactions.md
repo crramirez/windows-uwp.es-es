@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción de usuario intuitivas y distintivas, que estén optimizadas para la entrada táctil pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada.
-title: Interacciones táctiles
+Description: "Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción de usuario intuitivas y distintivas, que estén optimizadas para la entrada táctil pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada."
+title: "Interacciones táctiles"
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 23eac55de26563c68b401d8912264aebb86d0380
+
 ---
 
 # Interacciones táctiles
@@ -108,7 +111,7 @@ La selección de destinos se optimiza mediante:
 Diseña teniendo en cuenta las interacciones descuidadas mediante:
 
 -   Puntos de acoplamiento que permitan detenerse en las ubicaciones deseadas con mayor facilidad cuando los usuarios interactúan con el contenido.
--   "Guías" direccionales que ayuden con el movimiento panorámico vertical y horizontal, incluso cuando la mano se mueve ligeramente en arco. Si deseas obtener más información, consulta las [directrices para el movimiento panorámico](guidelines-for-panning.md).
+-   "Guías" direccionales que ayuden con el movimiento panorámico vertical y horizontal, incluso cuando la mano se mueve ligeramente en arco. Si deseas obtener más información, consulta las [directrices para movimiento panorámico](guidelines-for-panning.md).
 
 ## Oclusión
 
@@ -128,7 +131,7 @@ La oclusión de dedos y manos se evita mediante:
 
 -   Controladores para mayor precisión
 
-    Cuando necesites una mayor precisión (por ejemplo, para la selección de texto), ofrece controladores de selección que se desplacen para mejorar la precisión. Para más información, consulta las [directrices para seleccionar texto e imágenes (aplicaciones de Windows Runtime)](guidelines-for-textselection.md).
+    Cuando necesites una mayor precisión (por ejemplo, para la selección de texto), ofrece controladores de selección que se desplacen para mejorar la precisión. Para obtener más información, consulta las [directrices para seleccionar texto e imágenes (aplicaciones de Windows Runtime)](guidelines-for-textselection.md).
 
 ## Intervalos
 
@@ -167,12 +170,12 @@ La configuración de zoom se aplica tanto al zoom óptico (compatible con el con
 
 Usa las vistas de aplicación y los eventos para modificar los comportamientos de movimiento panorámico/desplazamiento y zoom. Esto puede proporcionar una experiencia de interacción más uniforme que la que permite el control de los eventos de puntero y de gestos.
 
-Para obtener más información sobre las vistas de aplicación, consulta [Controles, diseños y texto](https://msdn.microsoft.com/library/windows/apps/mt228348).
+Para más información sobre las vistas de aplicación, consulta [Controles, diseños y texto](https://msdn.microsoft.com/library/windows/apps/mt228348).
 
 ## <span id="intro_to_touch_input"></span><span id="INTRO_TO_TOUCH_INPUT"></span>Interacciones táctiles personalizadas
 
 
-Si implementas tu propia compatibilidad con la interacción, ten presente que los usuarios esperan una experiencia intuitiva que implique la interacción directa con los elementos de la interfaz de usuario de tu aplicación. Te recomendamos que modeles tus interacciones personalizadas en las bibliotecas de control de plataforma para que todo sea coherente y reconocible. Los controles de estas bibliotecas proporcionan una experiencia de interacción de usuario completa, con interacciones estándar, efectos físicos animados, comentarios visuales y accesibilidad. Crea interacciones personalizadas solamente si existe un requisito claro y bien definido, y si no hay ninguna interacción básica que admita tu escenario.
+Si implementas tu propia compatibilidad con la interacción, ten presente que los usuarios esperan una experiencia intuitiva que implica la interacción directa con los elementos de la interfaz de usuario de tu aplicación. Te recomendamos que modeles tus interacciones personalizadas en las bibliotecas de control de plataforma para que todo sea coherente y reconocible. Los controles de estas bibliotecas proporcionan una experiencia de interacción de usuario completa, con interacciones estándar, efectos físicos animados, comentarios visuales y accesibilidad. Crea interacciones personalizadas solamente si existe un requisito claro y bien definido, y si no hay ninguna interacción básica que admita tu escenario.
 
 Para proporcionar compatibilidad táctil personalizada, puedes controlar diversos eventos [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). Estos eventos se agrupan en tres niveles de abstracción.
 
@@ -180,7 +183,7 @@ Para proporcionar compatibilidad táctil personalizada, puedes controlar diverso
 
     Puedes deshabilitar los eventos de gestos en elementos concretos al establecer [**IsTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208939), [**IsDoubleTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208931), [**IsRightTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208937) y [**IsHoldingEnabled**](https://msdn.microsoft.com/library/windows/apps/br208935) en **false**.
 
--   Los eventos de puntero, como [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) y [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970), proporcionan detalles de bajo nivel para cada contacto táctil como, por ejemplo, el movimiento del puntero y la capacidad de distinguir eventos de presionar y soltar.
+-   Los eventos de puntero, como [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) y [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970), proporcionan detalles de bajo nivel para cada contacto táctil, como por ejemplo, el movimiento del puntero y la capacidad de distinguir eventos de presionar y soltar.
 
     Un puntero es un tipo de entrada genérico con un mecanismo de eventos unificado. Expone información básica, como la posición de la pantalla, en el origen de entrada activo, que puede ser entrada táctil, panel táctil, mouse o lápiz.
 
@@ -214,7 +217,7 @@ Para obtener detalles sobre los controles individuales, consulta [Lista de contr
 ## <span id="using_pointer_events"></span><span id="USING_POINTER_EVENTS"></span>Eventos de puntero
 
 
-Los eventos de puntero los genera una gran variedad de orígenes de entrada activos como, por ejemplo, la entrada táctil, el panel táctil, el lápiz y el mouse (reemplazan los eventos tradicionales del mouse).
+Los eventos de puntero los genera una gran variedad de orígenes de entrada activos, como por ejemplo, la entrada táctil, el panel táctil, el lápiz y el mouse (reemplazan los eventos tradicionales del mouse).
 
 Los eventos de puntero se basan en un único punto de entrada (dedo, punta del lápiz, cursor del mouse) y no admiten interacciones basadas en velocidad.
 
@@ -432,7 +435,7 @@ Esta es una lista de eventos de manipulación y los argumentos de evento relacio
 | Evento o clase                                                                                               | Descripción                                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Evento ManipulationStarting**](https://msdn.microsoft.com/library/windows/apps/br208951)                                   | Se produce cuando el procesador de manipulación se crea por primera vez.                                                                                  |
-| [**Evento ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950)                                     | Ocurre cuando un dispositivo de entrada comienza una manipulación en la clase [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911).                                            |
+| [**Evento ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950)                                     | Ocurre cuando un dispositivo de entrada comienza una manipulación en el [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911).                                            |
 | [**Evento ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946)                                         | Ocurre cuando el dispositivo de entrada cambia su posición durante la manipulación.                                                                      |
 | [**Evento ManipulationInertiaStarting**](https://msdn.microsoft.com/library/windows/apps/hh702425)                | Ocurre cuando el dispositivo de entrada pierde contacto con el objeto [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) durante una manipulación y el inicio de la inercia. |
 | [**Evento ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945)                                 | Ocurre cuando finaliza la manipulación y la inercia sobre el [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911).                                          |
@@ -616,15 +619,21 @@ Todos los eventos de puntero, los eventos de gestos y los eventos de manipulaci�
 ## <span id="related_topics"></span>Artículos relacionados
 
 * [Controlar la entrada de puntero](handle-pointer-input.md)
-* Identificar dispositivos de entrada
-* [Muestras](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* Muestra de modo de interacción del usuario
-* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Muestras de archivo](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Identificar dispositivos de entrada](identify-input-devices.md)
+            
+          
+            **Muestras**
+* [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+            
+          
+            **Muestras de archivo**
+* [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Entrada: gestos y manipulaciones con GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
  
@@ -634,6 +643,7 @@ Todos los eventos de puntero, los eventos de gestos y los eventos de manipulaci�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 
