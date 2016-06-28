@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\security\index.md](https://github.com/Microsoft/windows-apps/blob/a178f992ddd39b5609ce6d15b7e3560e157b9afb/windows-apps-src/security/index.md) | HandedBackFailed | [Details](#23897e7e78f3391fbee60a5f7cdf93615401247d3727)
+ [windows-apps-src\xaml-platform\dependency-properties-overview.md](https://github.com/Microsoft/windows-apps/blob/2791b5b80bf1405d3efdce5d81824dbe6d347b4f/windows-apps-src/xaml-platform/dependency-properties-overview.md) | HandedBackFailed | [Details](#5c61d4ff2f1efc6d4ce0ed292f2f856b23e53c913897)
 
 ## Item Details
-##### <a name='23897e7e78f3391fbee60a5f7cdf93615401247d3727'></a> Source: [windows-apps-src\security\index.md](https://github.com/Microsoft/windows-apps/blob/a178f992ddd39b5609ce6d15b7e3560e157b9afb/windows-apps-src/security/index.md)
+##### <a name='5c61d4ff2f1efc6d4ce0ed292f2f856b23e53c913897'></a> Source: [windows-apps-src\xaml-platform\dependency-properties-overview.md](https://github.com/Microsoft/windows-apps/blob/2791b5b80bf1405d3efdce5d81824dbe6d347b4f/windows-apps-src/xaml-platform/dependency-properties-overview.md)
 * Status: HandedBackFailed
 * Target File: 
-* Handoff File: [index.36c19658e673067b86aba619b12635d8359c4091.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/393d5fdde04be9cae92908566acf38efba38385b/ol-handoff/Microsoft/windows-apps.es-es/master/index.36c19658e673067b86aba619b12635d8359c4091.es-es.xlf)
-* Handoff Datetime: 2016-06-27 23:56:10
+* Handoff File: [dependency-properties-overview.4e153595dc332630d6475407ba029128b8c8447d.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/0db042d0964474a834c0d05b54005c549e7b19ef/ol-handoff/Microsoft/windows-apps.es-es/master/dependency-properties-overview.4e153595dc332630d6475407ba029128b8c8447d.es-es.xlf)
+* Handoff Datetime: 2016-06-28 17:08:24
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
