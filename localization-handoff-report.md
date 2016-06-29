@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\usage-report.md](https://github.com/Microsoft/windows-apps/blob/6dac44032ac217969148ff73c594f99d8a733355/windows-apps-src/publish/usage-report.md) | HandedBackFailed | [Details](#0cb9d09504a024cabe66661a5c77e21752b7e2e63649)
+ [windows-apps-src\audio-video-camera\hardware-drm.md](https://github.com/Microsoft/windows-apps/blob/22ce05ab6f24c3ee41798732c35314b3dad87ea8/windows-apps-src/audio-video-camera/hardware-drm.md) | HandedBackFailed | [Details](#b7867317c37edf44d9edfaaf28d97a3f23b22814475)
 
 ## Item Details
-##### <a name='0cb9d09504a024cabe66661a5c77e21752b7e2e63649'></a> Source: [windows-apps-src\publish\usage-report.md](https://github.com/Microsoft/windows-apps/blob/6dac44032ac217969148ff73c594f99d8a733355/windows-apps-src/publish/usage-report.md)
+##### <a name='b7867317c37edf44d9edfaaf28d97a3f23b22814475'></a> Source: [windows-apps-src\audio-video-camera\hardware-drm.md](https://github.com/Microsoft/windows-apps/blob/22ce05ab6f24c3ee41798732c35314b3dad87ea8/windows-apps-src/audio-video-camera/hardware-drm.md)
 * Status: HandedBackFailed
 * Target File: 
-* Handoff File: [usage-report.a8db07f7d604dc3af9d06cd2b1cd055c4486237e.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/23059d0dd294b15db7e172eef6b4e7a6ad4a0fc4/ol-handoff/Microsoft/windows-apps.es-es/master/usage-report.a8db07f7d604dc3af9d06cd2b1cd055c4486237e.es-es.xlf)
-* Handoff Datetime: 2016-06-29 16:43:29
+* Handoff File: [hardware-drm.5fb8fda243b613ca726a5d1db43f5767da669e0e.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/4b1eacfb6e264be9b384ae874d4457b16ce3f49d/ol-handoff/Microsoft/windows-apps.es-es/master/hardware-drm.5fb8fda243b613ca726a5d1db43f5767da669e0e.es-es.xlf)
+* Handoff Datetime: 2016-06-29 18:00:41
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
