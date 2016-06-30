@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 8
+ Total Files | 5
 
 ## File List
  Source File | Status | Details 
@@ -11,9 +11,6 @@
  [windows-apps-src\home.md](https://github.com/Microsoft/windows-apps/blob/9be74892a98765a8a45482ce3f5cc5151ab772b1/windows-apps-src/home.md) | InSyncHandedBackSuccess | [Details](#5d0cca643c26458165c388215d34eec76dfe8cf62695)
  [windows-apps-src\index.md](https://github.com/Microsoft/windows-apps/blob/753a917c0ecbf445560203dbc1406acae52e5265/windows-apps-src/index.md) | InSyncHandedBackSuccess | [Details](#97e016047c864026fe0c72e4b7cb819f0fc807482706)
  [windows-apps-src\porting\getting-started-what-next.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-what-next.md) | InSyncHandedBackSuccess | [Details](#2b11133fda76fb42f3a850848c426cbb33fb83663478)
- [windows-apps-src\xbox-apps\images\cpusets-lumia950cache.png](https://github.com/Microsoft/windows-apps/blob/f07627f632d0294f6daf7e08a29a2f28aa84cb05/windows-apps-src/xbox-apps/images/cpusets-lumia950cache.png) | InSyncHandedBackSuccess | [Details](#40067c66cbc577f0e3f48fb474e1c1bcf1c4fed43949)
- [windows-apps-src\xbox-apps\images\devhome_mainmenu.png](https://github.com/Microsoft/windows-apps/blob/c538f363bd4066233ebd363bb5255a6981399929/windows-apps-src/xbox-apps/images/devhome_mainmenu.png) | InSyncHandedBackSuccess | [Details](#468a5a63c57347dc1204479b758b4df640f158bf3962)
- [windows-apps-src\xbox-apps\images\windows-store-app-activation-error.jpg](https://github.com/Microsoft/windows-apps/blob/807670bc737153b77d57441461b9ca7c83a77a44/windows-apps-src/xbox-apps/images/windows-store-app-activation-error.jpg) | InSyncHandedBackSuccess | [Details](#766be26fa9692fb7d435e5b737eb73493659dead3985)
 
 ## Item Details
 ##### <a name='929ad82ce057754ee04f1f27537e03520e95157a2238'></a> Source: [windows-apps-src\gaming\plan-your-directx-port.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/plan-your-directx-port.md)
@@ -25,7 +22,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/da8862ce4eaad9d7e13833973beb61f80e150e81/ol-handback/Microsoft/windows-apps.es-es/master/plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.es-es.xlf)
-* Handback Datetime: 2016-06-30 16:58:19
+* Handback Datetime: 2016-06-30 17:46:37
 * Handback Error: [handback_transform_failed](#929ad82ce057754ee04f1f27537e03520e95157a2238handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -38,7 +35,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/da8862ce4eaad9d7e13833973beb61f80e150e81/ol-handback/Microsoft/windows-apps.es-es/master/plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.es-es.xlf)
-* Handback Datetime: 2016-06-30 16:58:19
+* Handback Datetime: 2016-06-30 17:46:37
 * Handback Error: [handback_transform_failed](#9a3058aabdc6f710149a14d8f125b66efd0760072639handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -51,7 +48,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [home.c2e75b5d0f1c7d5d476b0f47240addd323d5103c.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/89dd9ca41283bb0f607dbb6def820301993b1a38/ol-handback/Microsoft/windows-apps.es-es/master/home.c2e75b5d0f1c7d5d476b0f47240addd323d5103c.es-es.xlf)
-* Handback Datetime: 2016-06-30 16:58:19
+* Handback Datetime: 2016-06-30 17:46:37
 * Handback Error: [handback_transform_failed](#5d0cca643c26458165c388215d34eec76dfe8cf62695handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -64,7 +61,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [index.fbb2a0e1c7a82fa0a97bb1e07bc6c801fcd891f4.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/89dd9ca41283bb0f607dbb6def820301993b1a38/ol-handback/Microsoft/windows-apps.es-es/master/index.fbb2a0e1c7a82fa0a97bb1e07bc6c801fcd891f4.es-es.xlf)
-* Handback Datetime: 2016-06-30 16:58:19
+* Handback Datetime: 2016-06-30 17:46:37
 * Handback Error: [handback_transform_failed](#97e016047c864026fe0c72e4b7cb819f0fc807482706handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -77,47 +74,8 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [getting-started-what-next.ecd0afbdc8655298b5947469bb7c882adb3b3a4a.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/da8862ce4eaad9d7e13833973beb61f80e150e81/ol-handback/Microsoft/windows-apps.es-es/master/getting-started-what-next.ecd0afbdc8655298b5947469bb7c882adb3b3a4a.es-es.xlf)
-* Handback Datetime: 2016-06-30 16:58:19
+* Handback Datetime: 2016-06-30 17:46:37
 * Handback Error: [handback_transform_failed](#2b11133fda76fb42f3a850848c426cbb33fb83663478handback_transform_failed)
-* [Back to Top](#report-top)
-
-##### <a name='40067c66cbc577f0e3f48fb474e1c1bcf1c4fed43949'></a> Source: [windows-apps-src\xbox-apps\images\cpusets-lumia950cache.png](https://github.com/Microsoft/windows-apps/blob/f07627f632d0294f6daf7e08a29a2f28aa84cb05/windows-apps-src/xbox-apps/images/cpusets-lumia950cache.png)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\xbox-apps\images\cpusets-lumia950cache.png](https://github.com/Microsoft/windows-apps.es-es/blob/0c719d60146ef5a53ab2b415d6b7e3bb98141bf5/windows-apps-src/xbox-apps/images/cpusets-lumia950cache.png)
-* Handoff File: [40067c66cbc577f0e3f48fb474e1c1bcf1c4fed4.png](https://github.com/Microsoft/WDG.handoff/blob/68af22b9f02d61291b011dccd8a7589a54d9ff46/ol-handoff/Microsoft/windows-apps.es-es/master/40067c66cbc577f0e3f48fb474e1c1bcf1c4fed4.png)
-* Handoff Datetime: 2016-06-23 00:24:42
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\xbox-apps\cpusets-games.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [40067c66cbc577f0e3f48fb474e1c1bcf1c4fed4.png](https://github.com/Microsoft/WDG.handback/blob/adf3d128540f3e92c0aa902c3709fc40fde14a7d/ol-handback/Microsoft/windows-apps.es-es/master/40067c66cbc577f0e3f48fb474e1c1bcf1c4fed4.png)
-* Handback Datetime: 2016-06-30 16:58:19
-* [Back to Top](#report-top)
-
-##### <a name='468a5a63c57347dc1204479b758b4df640f158bf3962'></a> Source: [windows-apps-src\xbox-apps\images\devhome_mainmenu.png](https://github.com/Microsoft/windows-apps/blob/c538f363bd4066233ebd363bb5255a6981399929/windows-apps-src/xbox-apps/images/devhome_mainmenu.png)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\xbox-apps\images\devhome_mainmenu.png](https://github.com/Microsoft/windows-apps.es-es/blob/0c719d60146ef5a53ab2b415d6b7e3bb98141bf5/windows-apps-src/xbox-apps/images/devhome_mainmenu.png)
-* Handoff File: [468a5a63c57347dc1204479b758b4df640f158bf.png](https://github.com/Microsoft/WDG.handoff/blob/68af22b9f02d61291b011dccd8a7589a54d9ff46/ol-handoff/Microsoft/windows-apps.es-es/master/468a5a63c57347dc1204479b758b4df640f158bf.png)
-* Handoff Datetime: 2016-06-23 00:24:42
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\xbox-apps\introduction-to-xbox-tools.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [468a5a63c57347dc1204479b758b4df640f158bf.png](https://github.com/Microsoft/WDG.handback/blob/adf3d128540f3e92c0aa902c3709fc40fde14a7d/ol-handback/Microsoft/windows-apps.es-es/master/468a5a63c57347dc1204479b758b4df640f158bf.png)
-* Handback Datetime: 2016-06-30 16:58:19
-* [Back to Top](#report-top)
-
-##### <a name='766be26fa9692fb7d435e5b737eb73493659dead3985'></a> Source: [windows-apps-src\xbox-apps\images\windows-store-app-activation-error.jpg](https://github.com/Microsoft/windows-apps/blob/807670bc737153b77d57441461b9ca7c83a77a44/windows-apps-src/xbox-apps/images/windows-store-app-activation-error.jpg)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\xbox-apps\images\windows-store-app-activation-error.jpg](https://github.com/Microsoft/windows-apps.es-es/blob/0c719d60146ef5a53ab2b415d6b7e3bb98141bf5/windows-apps-src/xbox-apps/images/windows-store-app-activation-error.jpg)
-* Handoff File: [766be26fa9692fb7d435e5b737eb73493659dead.jpg](https://github.com/Microsoft/WDG.handoff/blob/68af22b9f02d61291b011dccd8a7589a54d9ff46/ol-handoff/Microsoft/windows-apps.es-es/master/766be26fa9692fb7d435e5b737eb73493659dead.jpg)
-* Handoff Datetime: 2016-06-23 00:24:42
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\xbox-apps\known-issues.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [766be26fa9692fb7d435e5b737eb73493659dead.jpg](https://github.com/Microsoft/WDG.handback/blob/adf3d128540f3e92c0aa902c3709fc40fde14a7d/ol-handback/Microsoft/windows-apps.es-es/master/766be26fa9692fb7d435e5b737eb73493659dead.jpg)
-* Handback Datetime: 2016-06-30 16:58:19
 * [Back to Top](#report-top)
 
 
