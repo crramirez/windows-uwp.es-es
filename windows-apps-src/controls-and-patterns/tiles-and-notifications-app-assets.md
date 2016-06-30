@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Los activos de icono de la aplicación, que aparecen en una amplia variedad de formas en todo el sistema operativo Windows 10, son las tarjetas de llamada de la aplicación para la Plataforma universal de Windows (UWP).
+Description: "Los activos de icono de la aplicación, que aparecen en una amplia variedad de formas en todo el sistema operativo Windows 10, son las tarjetas de llamada de la aplicación para la Plataforma universal de Windows (UWP)."
 title: Activos de mosaico y de icono
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 98eebc4fbf18aa2fbe4586958f666b41580cf6d9
+
 ---
 
 # Directrices sobre los activos de icono y de mosaicos
@@ -384,6 +388,7 @@ A continuación se enumeran todos los tipos de activos, sus usos y nombres de ar
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

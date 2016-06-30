@@ -1,8 +1,12 @@
 ---
-title: Agente de autenticación web
-description: En este artículo se explica cómo conectar tu aplicación de la Plataforma universal de Windows (UWP) a un proveedor de identidad en línea que usa protocolos de autenticación como OpenID u OAuth, como Facebook, Twitter, Flickr, Instagram, etc.
+title: "Agente de autenticación web"
+description: "En este artículo se explica cómo conectar tu aplicación de la Plataforma universal de Windows (UWP) a un proveedor de identidad en línea que usa protocolos de autenticación como OpenID u OAuth, como Facebook, Twitter, Flickr, Instagram, etc."
 ms.assetid: 05F06961-1768-44A7-B185-BCDB74488F85
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 96ca8d019fe6cbf742c98edf0b8bf04b35f71dfd
+
 ---
 
 # Agente de autenticación web
@@ -187,6 +191,7 @@ El depurador web Fiddler puede usarse con aplicaciones.
 
 3.  Agrega una regla de firewall para el tráfico entrante a Fiddler.
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Las notificaciones del sistema adaptables e interactivas permiten crear notificaciones emergentes flexibles con más contenido, imágenes en línea opcionales e interacción del usuario opcional.
+Description: "Las notificaciones del sistema adaptables e interactivas permiten crear notificaciones emergentes flexibles con más contenido, imágenes en línea opcionales e interacción del usuario opcional."
 title: Notificaciones del sistema interactivas y adaptables
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 17faf0ccb0207b318963e00655d7ac91b97e066b
+
 ---
 
 # Notificaciones del sistema interactivas y adaptables
@@ -642,6 +646,7 @@ Para crear acciones individuales para posponer y descartar, haz lo siguiente:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: PatrickFarley
-Description: 'Describe la estructura del tipo de archivo de formato de fabricación 3D y cómo puede crearse y manipularse con la API de Windows.Graphics.Printing3D.'
-MS-HAID: 'dev\_devices\_sensors.generate\_3mf'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Describe la estructura del tipo de archivo de formato de fabricación 3D y cómo puede crearse y manipularse con la API de Windows.Graphics.Printing3D."
+MS-HAID: dev\_devices\_sensors.generate\_3mf
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Generar un paquete 3MF
+translationtype: Human Translation
+ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
+ms.openlocfilehash: fd85530d27a157bd65a6feec8a20cca8cadfb88f
+
 ---
 
 # Generar un paquete 3MF
@@ -140,6 +144,7 @@ En el siguiente método se toma un paquete **Printing3D3MFPackage** terminado y 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

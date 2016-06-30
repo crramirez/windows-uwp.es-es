@@ -5,8 +5,8 @@ title: "Movimiento panorámico"
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 7aafb0bbef2a33f926f76e41c26dd0f6920de274
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 45a2d3cb8cd1db1b138d62b7d6525ed7077207b0
 
 ---
 
@@ -21,7 +21,7 @@ El movimiento panorámico o el desplazamiento permiten a los usuarios navegar de
 
 
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Qué hacer y qué no hacer
+## Qué hacer y qué no hacer
 
 
 **Indicadores de movimiento panorámico y barras de desplazamiento**
@@ -72,7 +72,7 @@ El movimiento panorámico o el desplazamiento permiten a los usuarios navegar de
 
     ![imagen que muestra un área desplazable incrustada que se desplaza en la misma dirección que su contenedor.](images/scrolling-embedded3.png)
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Instrucciones de uso adicionales
+## Instrucciones de uso adicionales
 
 
 El movimiento panorámico de forma táctil, mediante un gesto de deslizar o deslizar rápidamente con uno o varios dedos, es como desplazarse con el mouse. La interacción de movimiento panorámico es más parecida a la acción de girar la rueda del mouse o deslizar el cuadro de desplazamiento que a la de hacer clic en la barra de desplazamiento. A menos que se establezca una distinción en una API o que lo requiera la interfaz de usuario de Windows específica de algún dispositivo, simplemente se hace referencia a las dos interacciones como movimiento panorámico.
@@ -164,7 +164,7 @@ Como se muestra en el diagrama siguiente, si no hay suficiente espacio, la regi�
 
 Esta guía también es útil para aplicaciones, como álbumes de fotografías o aplicaciones de mapas, que admiten el movimiento panorámico sin restricciones en un mapa o una imagen individual y, al mismo tiempo, el movimiento panorámico en un solo eje dentro del álbum (para desplazarse a las imágenes anteriores o siguientes) o del área de detalles. En las aplicaciones que proporcionan un área de detalles u opciones correspondiente a un mapa o una imagen de movimiento panorámico de forma libre, es recomendable que el diseño de página comience por el área de detalles y opciones, ya que el área de movimiento panorámico sin restricciones de la imagen o el mapa podrían interferir con el movimiento panorámico en el área de detalles.
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 
 * [Interacciones del usuario personalizadas](https://msdn.microsoft.com/library/windows/apps/mt185599)
@@ -196,6 +196,6 @@ Esta guía también es útil para aplicaciones, como álbumes de fotografías o 
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

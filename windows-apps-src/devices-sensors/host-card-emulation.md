@@ -1,8 +1,11 @@
 ---
-author: DBirtolo
+author: msatranjr
 ms.assetid: 26834A51-512B-485B-84C8-ABF713787588
-title: Crear una aplicación de tarjeta NFC inteligente
-description: Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC con un elemento seguro basado en SIM, pero ese modelo requería que las aplicaciones de pago seguro estuvieran estrechamente unidas a los operadores de redes móviles (MNO).
+title: "Crear una aplicación de tarjeta NFC inteligente"
+description: "Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC con un elemento seguro basado en SIM, pero ese modelo requería que las aplicaciones de pago seguro estuvieran estrechamente unidas a los operadores de redes móviles (MNO)."
+ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
+ms.openlocfilehash: f47303826b9d2d2040a2bd2f2dbd5e2da3dd3cd0
+
 ---
 # Crear una aplicación de tarjeta NFC inteligente
 
@@ -381,6 +384,7 @@ La compatibilidad para interceptar SMS binarios heredados de Windows Phone 8.1 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Gráficos 3D básicos para juegos DirectX
-description: Se muestra cómo usar la programación DirectX para implementar los conceptos fundamentales de los gráficos 3D.
+title: "Gráficos 3D básicos para juegos DirectX"
+description: "Se muestra cómo usar la programación DirectX para implementar los conceptos fundamentales de los gráficos 3D."
 ms.assetid: 2989c91f-7b45-7377-4e83-9daa0325e92e
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8f27c5060ffdc566c596168e54d51730c349d401
+
 ---
 
 # Gráficos 3D básicos para juegos DirectX
@@ -63,6 +67,7 @@ A continuación, creamos un dispositivo Direct3D, una cadena de intercambio y un
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

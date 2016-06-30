@@ -1,17 +1,17 @@
 ---
-author: martinekuan
+author: msatranjr
 title: Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
-description: La compatibilidad de .NET Framework con los componentes de Windows Runtime facilita la tarea de declarar componentes de eventos al ocultar las diferencias entre el patrón de eventos de la plataforma universal de Windows (UWP) y el patrón de eventos de .NET Framework.
+description: "La compatibilidad de .NET Framework con los componentes de Windows Runtime facilita la tarea de declarar componentes de eventos al ocultar las diferencias entre el patrón de eventos de la plataforma universal de Windows (UWP) y el patrón de eventos de .NET Framework."
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 1308989c8d1c6959560458dd4d87119b4bfa74b0
+
 ---
 
 # Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-\[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 La compatibilidad de .NET Framework con los componentes de Windows Runtime facilita la tarea de declarar componentes de eventos al ocultar las diferencias entre el patrón de eventos de la Plataforma universal de Windows (UWP) y el patrón de eventos de .NET Framework. Sin embargo, al declarar descriptores de acceso de eventos personalizados en un componente de Windows Runtime, debe seguir el patrón usado en la UWP.
 
@@ -32,9 +32,9 @@ El siguiente código para el evento NumberChanged muestra el patrón básico par
  
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
-> private EventRegistrationTokenTable<EventHandler<NumberChangedEventArgs>> 
+> private EventRegistrationTokenTable<EventHandler<NumberChangedEventArgs>>
 >     m_NumberChangedTokenTable = null;
-> 
+>
 > public event EventHandler<NumberChangedEventArgs> NumberChanged
 > {
 >     add
@@ -50,10 +50,10 @@ El siguiente código para el evento NumberChanged muestra el patrón básico par
 >             .RemoveEventHandler(value);
 >     }
 > }
-> 
+>
 > internal void OnNumberChanged(int newValue)
 > {
->     EventHandler<NumberChangedEventArgs> temp = 
+>     EventHandler<NumberChangedEventArgs> temp =
 >         EventRegistrationTokenTable<EventHandler<NumberChangedEventArgs>>
 >         .GetOrCreateEventRegistrationTokenTable(ref m_NumberChangedTokenTable)
 >         .InvocationList;
@@ -66,21 +66,21 @@ El siguiente código para el evento NumberChanged muestra el patrón básico par
 > ```vb
 > Private m_NumberChangedTokenTable As  _
 >     EventRegistrationTokenTable(Of EventHandler(Of NumberChangedEventArgs))
-> 
+>
 > Public Custom Event NumberChanged As EventHandler(Of NumberChangedEventArgs)
-> 
+>
 >     AddHandler(ByVal handler As EventHandler(Of NumberChangedEventArgs))
 >         Return EventRegistrationTokenTable(Of EventHandler(Of NumberChangedEventArgs)).
 >             GetOrCreateEventRegistrationTokenTable(m_NumberChangedTokenTable).
 >             AddEventHandler(handler)
 >     End AddHandler
-> 
+>
 >     RemoveHandler(ByVal token As EventRegistrationToken)
 >         EventRegistrationTokenTable(Of EventHandler(Of NumberChangedEventArgs)).
 >             GetOrCreateEventRegistrationTokenTable(m_NumberChangedTokenTable).
 >             RemoveEventHandler(token)
 >     End RemoveHandler
-> 
+>
 >     RaiseEvent(ByVal sender As Class1, ByVal args As NumberChangedEventArgs)
 >         Dim temp As EventHandler(Of NumberChangedEventArgs) = _
 >             EventRegistrationTokenTable(Of EventHandler(Of NumberChangedEventArgs)).
@@ -126,6 +126,6 @@ Usuarios de Visual Basic: en .NET Framework, un evento es simplemente un delegad
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

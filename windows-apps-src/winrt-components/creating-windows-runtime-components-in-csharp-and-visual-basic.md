@@ -1,17 +1,17 @@
 ---
-author: martinekuan
+author: msatranjr
 title: Crear componentes de Windows Runtime en C# y Visual Basic
-description: A partir de .NET Framework 4.5, puedes usar código administrado para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime.
+description: "A partir de .NET Framework 4.5, puedes usar código administrado para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime."
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: e8fd48b99d6a05af57e67e503c7bd3058b07569c
+
 ---
 
 # Crear componentes de Windows Runtime en C# y Visual Basic
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-\[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 A partir de .NET Framework 4.5, puedes usar código administrado para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime. Puedes usar tu componente en aplicaciones de la Plataforma universal de Windows (UWP) con C++, JavaScript, Visual Basic o C#. En este artículo se describen las reglas de creación de un componente y se describen algunos aspectos de la compatibilidad de .NET Framework para Windows Runtime. En general, esa compatibilidad está diseñada para ser transparente para los programadores de .NET Framework. Sin embargo, cuando creas un componente para su uso con JavaScript o C++, debes tener en cuenta las diferencias en la forma en que esos lenguajes son compatibles con Windows Runtime.
 
@@ -99,7 +99,7 @@ Para algunos tipos de colección usados con frecuencia, la asignación es entre 
 
 Cuando un tipo implementa más de una interfaz, puedes usar cualquiera de las interfaces que implementa como un tipo de parámetro o tipo devuelto de un miembro. Por ejemplo, puedes pasar o devolver un diccionario&lt;int, string&gt; (Dictionary(Of Integer, String) en Visual Basic) como IDictionary&lt;int, string&gt;, IReadOnlyDictionary&lt;int, string&gt; o IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;.
 
-**Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt;, independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
+**Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt; independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
 
 En Windows Runtime, se recorren en iteración IMap&lt;K, V&gt; e IMapView&lt;K, V&gt; con el uso de IKeyValuePair. Cuando los pasas a código administrado, aparecen como IDictionary&lt;TKey, TValue&gt; e IReadOnlyDictionary&lt;TKey, TValue&gt;. Por lo tanto, naturalmente, utilizas System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt; para enumerarlos.
 
@@ -121,11 +121,11 @@ En Windows Runtime, los métodos se pueden sobrecargar. Sin embargo, si se decla
 > {
 >     return s;
 > }
-> [Windows.Foundation.Metadata.DefaultOverload()] 
+> [Windows.Foundation.Metadata.DefaultOverload()]
 > public int OverloadExample(int x)
 > {
 >     return x;
-> } 
+> }
 > ```
 > ```vb
 > Public Function OverloadExample(ByVal s As String) As String
@@ -137,7 +137,7 @@ En Windows Runtime, los métodos se pueden sobrecargar. Sin embargo, si se decla
 > End Function
 > ```
 
-> **Precaución**  JavaScript permite pasar cualquier valor a OverloadExample y convierte el valor al tipo que necesita el parámetro. Puedes llamar a OverloadExample con "cuarenta y dos", "42" o 42.3, pero todos estos valores se pasan a la sobrecarga predeterminada. La sobrecarga predeterminada en el ejemplo anterior devuelve 0, 42 y 42 respectivamente.
+ **Precaución**  JavaScript permite pasar cualquier valor a OverloadExample y convierte el valor al tipo que necesita el parámetro. Puedes llamar a OverloadExample con "cuarenta y dos", "42" o 42.3, pero todos estos valores se pasan a la sobrecarga predeterminada. La sobrecarga predeterminada en el ejemplo anterior devuelve 0, 42 y 42 respectivamente.
 
 No se puede aplicar el atributo DefaultOverloadAttribute a los constructores. Todos los constructores en una clase deben tener números de parámetros diferentes.
 
@@ -202,7 +202,7 @@ Para realizar acciones y operaciones asincrónicas que no son compatibles con la
 > ```vb
 > Public Shared Function DownloadAsStringsAsync(ByVal id As String) _
 >      As IAsyncOperation(Of IList(Of String))
-> 
+>
 >     Return Task.Run(Of IList(Of String))(
 >         Async Function()
 >             Dim data = Await DownloadDataAsync(id)
@@ -241,7 +241,7 @@ Ten en cuenta que puedes usar los métodos de la clase AsyncInfo incluso si tu m
 > ```vb
 > Public Shared Function DownloadAsStringsAsync(ByVal id As String) _
 >     As IAsyncOperation(Of IList(Of String))
-> 
+>
 >     Return AsyncInfo.Run(Of IList(Of String))(
 >         Async Function()
 >             Dim data = Await DownloadDataAsync(id)
@@ -293,7 +293,6 @@ Para obtener más información acerca de las características de los lenguajes C
 
 
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

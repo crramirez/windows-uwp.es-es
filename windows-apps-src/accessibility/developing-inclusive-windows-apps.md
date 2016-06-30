@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: Aprende a desarrollar aplicaciones para UWP de Windows 10 accesibles que incluyan navegación por teclado, configuración de color y contraste y compatibilidad con tecnologías de asistencia.
+Description: "Aprende a desarrollar aplicaciones para UWP de Windows 10 accesibles que incluyan navegación por teclado, configuración de color y contraste y compatibilidad con tecnologías de asistencia."
 ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
 title: Desarrollo de aplicaciones inclusivas de Windows 10
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 77c401fd9686cb260e7b2d9e4bdf47a91d76802e
+
 ---
 
 # Desarrollo de aplicaciones inclusivas de Windows  
@@ -80,6 +84,7 @@ Para obtener más información, consulta el tema completo [Lista de comprobació
 * [Concentrador del desarrollador de accesibilidad de Microsoft](https://msdn.microsoft.com/enable)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

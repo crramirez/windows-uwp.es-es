@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Mostrar una pantalla de presentación durante más tiempo
-description: Muestra una pantalla de presentación más tiempo creando una pantalla de presentación extendida para tu aplicación. Esta pantalla extendida imita la pantalla de presentación que aparece al iniciar la aplicación, pero se puede personalizar.
+author: TylerMSFT
+title: "Mostrar una pantalla de presentación durante más tiempo"
+description: "Muestra una pantalla de presentación más tiempo creando una pantalla de presentación extendida para tu aplicación. Esta pantalla extendida imita la pantalla de presentación que aparece al iniciar la aplicación, pero se puede personalizar."
 ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 6ad43ec4fc865c5aae439693e0cd5b37a5d2c5dc
+
 ---
 
 # Mostrar una pantalla de presentación durante más tiempo
@@ -97,7 +100,7 @@ Usa estos pasos para definir métodos para mostrar correctamente tu pantalla de 
         private SplashScreen splash; // Variable to hold the splash screen object.
         internal bool dismissed = false; // Variable to track splash screen dismissal status.
         internal Frame rootFrame;
-     
+
        // Define methods and constructor
     }
     ```
@@ -131,7 +134,7 @@ Usa estos pasos para definir métodos para mostrar correctamente tu pantalla de 
             PositionRing();
         }
 
-        // Create a Frame to act as the navigation context 
+        // Create a Frame to act as the navigation context
         rootFrame = new Frame();            
     }
     ```
@@ -223,11 +226,11 @@ Usa estos pasos para definir métodos para mostrar correctamente tu pantalla de 
     {
         if (loadState)
         {
-             // code to load your app's state here 
+             // code to load your app's state here
         }
     }
     ```
-    
+
     Cuando modifiques el controlador de activación del inicio en App.xaml.cs, establece también `loadstate` en true si el anterior [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) de la aplicación era **Terminated**. En este caso, el método `RestoreStateAsync` restaura la aplicación a su estado anterior. Para obtener una introducción al inicio, suspensión y finalización de aplicaciones, consulta [Ciclo de vida de la aplicación](app-lifecycle.md).
 
 ## Modificar el controlador de activación de inicio
@@ -547,8 +550,6 @@ namespace SplashScreenExample
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Proporciona un identificador único para los elementos de marcado. En XAML de la Plataforma universal de Windows (UWP), este identificador único se usa en los procesos y herramientas de localización de XAML, por ejemplo, en el uso de recursos de un archivo de recursos .resw.
+description: "Proporciona un identificador único para los elementos de marcado. En XAML de la Plataforma universal de Windows (UWP), este identificador único se usa en los procesos y herramientas de localización de XAML, por ejemplo, en el uso de recursos de un archivo de recursos .resw."
 title: Directiva xUid
 ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4f8aa553c99b6071cedc4f9d93cf8258b75eca49
+
 ---
 
 # Directiva x:Uid
@@ -47,6 +51,7 @@ No incluyas **x:Uid** en elementos de propiedad, ya que no está permitido en XA
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Iniciar la aplicación de la Tienda Windows
-description: En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema de URI para iniciar la aplicación de la Tienda Windows en páginas específicas en la Tienda.
+author: TylerMSFT
+title: "Iniciar la aplicación de la Tienda Windows"
+description: "En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema de URI para iniciar la aplicación de la Tienda Windows en páginas específicas en la Tienda."
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 9b48aeddb5ddc912fccd07149980655a06535470
+
 ---
 
 # Iniciar la aplicación de la Tienda Windows
@@ -81,7 +84,7 @@ Id. de la Tienda <p>(recomendado)</p>
 <td>ms-windows-store://assoc/?Protocol=ms-word </td>
 </tr>
 <tr>
-<td>Inicia una búsqueda de productos asociados a una o varias etiquetas. Las etiquetas deben separarse por comas. 
+<td>Inicia una búsqueda de productos asociados a una o varias etiquetas. Las etiquetas deben separarse por comas.
 </td>
 <td />
 <td>
@@ -91,7 +94,7 @@ Id. de la Tienda <p>(recomendado)</p>
 </tr>
 <tr>
 <td>
-Inicia una búsqueda de la consulta especificada. Se permiten los espacios en la consulta. 
+Inicia una búsqueda de la consulta especificada. Se permiten los espacios en la consulta.
 </td>
 <td />
 <td>ms-windows-store://search/?query=OneNote </td>
@@ -105,7 +108,7 @@ Inicia una búsqueda de la consulta especificada. Se permiten los espacios en la
 </td>
 </tr>
 <tr>
-<td>Inicia una búsqueda de productos del publicador especificado. Se permiten los espacios en el nombre. 
+<td>Inicia una búsqueda de productos del publicador especificado. Se permiten los espacios en el nombre.
 </td>
 <td />
 <td>ms-windows-store://publisher/?name=Microsoft Corporation
@@ -128,8 +131,6 @@ Inicia una búsqueda de la consulta especificada. Se permiten los espacios en la
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

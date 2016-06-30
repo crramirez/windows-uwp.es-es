@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Al trabajar con una aplicación en el panel del Centro de desarrollo de Windows, puedes ver los detalles relacionados con la identidad única que la Tienda Windows asigna a la aplicación y obtener un vínculo a la descripción de la aplicación en la Tienda.
+Description: "Al trabajar con una aplicación en el panel del Centro de desarrollo de Windows, puedes ver los detalles relacionados con la identidad única que la Tienda Windows asigna a la aplicación y obtener un vínculo a la descripción de la aplicación en la Tienda."
 title: Ver detalles de identidad de las aplicaciones
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
+translationtype: Human Translation
+ms.sourcegitcommit: a25d87556bb85718f818af5b586f54e6985aaaa4
+ms.openlocfilehash: f00d817616d473ef220ebc1817c2bf9207a7aea0
+
 ---
 
 # Ver detalles de identidad de las aplicaciones
@@ -53,6 +57,7 @@ El **Id. de la Tienda** de la aplicación también se muestra en esta sección. 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

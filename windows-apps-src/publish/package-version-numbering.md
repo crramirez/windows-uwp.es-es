@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: La Tienda Windows aplica ciertas reglas relacionadas con los números de versión, que dependen de la versión del sistema operativo.
-title: Numeración de la versión del paquete
+Description: "La Tienda Windows aplica ciertas reglas relacionadas con los números de versión, que dependen de la versión del sistema operativo."
+title: "Numeración de la versión del paquete"
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9910ca5b5a3fd5d24643a1dfc6da3644d561c617
+
 ---
 
 # Numeración de la versión del paquete
@@ -77,6 +81,7 @@ Estos son algunos ejemplos de lo que sucede en distintos escenarios de actualiza
 > **Nota**  A diferencia de los paquetes .appx, no se tienen en cuenta los números de versión de ningún paquete .xap al especificar qué paquete proporcionar a un cliente determinado. Para proporcionar a un cliente un paquete .xap a uno más reciente, asegúrate de quitar el antiguo paquete .xap del nuevo envío.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
-description: La clase MediaSource proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde orígenes diferentes, tales como archivos locales o remotos, y expone un modelo común para acceder a datos multimedia, independientemente del formato del contenido multimedia subyacente.
-title: Reproducción de contenido multimedia con MediaSource
+description: "La clase MediaSource proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde orígenes diferentes, tales como archivos locales o remotos, y expone un modelo común para acceder a datos multimedia, independientemente del formato del contenido multimedia subyacente."
+title: "Reproducción de contenido multimedia con MediaSource"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
+
 ---
 
 # Reproducción de contenido multimedia con MediaSource
@@ -177,6 +181,7 @@ Establece la propiedad en [**AutoRepeatEnabled**](https://msdn.microsoft.com/lib
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

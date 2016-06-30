@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
-title: Optimización de la interfaz de usuario de ListView y GridView
-description: Mejora el rendimiento y el tiempo de inicio de ListView y GridView mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de elementos.
+title: "Optimización de la interfaz de usuario de ListView y GridView"
+description: "Mejora el rendimiento y el tiempo de inicio de ListView y GridView mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de elementos."
+translationtype: Human Translation
+ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
+ms.openlocfilehash: 362fbb6b733e855a2126196f12c650bdf2a7665d
+
 ---
 # Optimización de la interfaz de usuario de ListView y GridView
 
@@ -321,6 +325,7 @@ Cuando hay una distribución desigual de los elementos que usan plantillas de el
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

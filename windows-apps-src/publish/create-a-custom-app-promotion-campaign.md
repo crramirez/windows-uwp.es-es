@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Además de crear una campaña publicitaria para tu aplicación que se ejecutará en aplicaciones de Windows, también puedes promocionar tu aplicación en otros canales.
-title: Crear una campaña de promoción de aplicaciones personalizada
+Description: "Además de crear una campaña publicitaria para tu aplicación que se ejecutará en aplicaciones de Windows, también puedes promocionar tu aplicación en otros canales."
+title: "Crear una campaña de promoción de aplicaciones personalizada"
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: b6fa63727ac636d37c52e2f3247c52efb1f8b763
+
 ---
 
 # Crear una campaña de promoción de aplicaciones personalizada
@@ -63,7 +67,7 @@ Para crear una dirección URL de la página de tu aplicación en la Tienda Windo
 2.  Obtener la dirección URL de la página de tu aplicación en la Tienda Windows en formato HTML o de protocolo. La dirección URL en formato HTML está disponible en la página [**Identidad de la aplicación** en el panel del Centro de desarrollo](link-to-your-app.md).
     -   Usa el formato HTTP si quieres que los clientes naveguen a la página de la Tienda Windows de tu aplicación en un explorador (esta dirección URL también iniciará la aplicación de la Tienda Windows en la descripción de la aplicación, en caso de que la aplicación de la Tienda Windows esté instalada). Esta dirección URL tiene el formato **`https://www.microsoft.com/store/apps/*your app name*/*your app ID*`**. Por ejemplo, es la dirección URL HTTP para Skype es `https://www.microsoft.com/store/apps/skype/9wzdncrfj364`.
         > **Nota**  Las direcciones URL en formato HTTP se pueden usar para navegar a la Tienda Windows en un explorador en equipos y tabletas que ejecuten Windows 7 y versiones posteriores, así como en teléfonos con Windows Phone 8 y posterior.
-    -   Usa el formato de protocolo si la promoción de la aplicación es a través de otras aplicaciones de Windows que se ejecutan en un equipo o dispositivo con la aplicación de la Tienda Windows instalada y quieres que los clientes abran la página de la aplicación en la aplicación de la Tienda Windows. Esta dirección URL tiene el formato **`ms-windows-store://pdp/?PRODUCTID=*your app id*`**. Por ejemplo, es la dirección URL de protocolo de Skype es `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364`.
+-   Usa el formato de protocolo si la promoción de la aplicación es a través de otras aplicaciones de Windows que se ejecutan en un equipo o dispositivo con la aplicación de la Tienda Windows instalada y quieres que los clientes abran la página de la aplicación en la aplicación de la Tienda Windows. Esta dirección URL tiene el formato **`ms-windows-store://pdp/?PRODUCTID=*your app id*`**. Por ejemplo, es la dirección URL de protocolo de Skype es `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364`.
 3.  Anexa la siguiente cadena al final de la dirección URL de la aplicación:
     -   Para una dirección URL en formato HTTP, anexa **`?cid=*my custom campaign ID*`**. Por ejemplo, si Skype presenta un identificador de campaña con el valor **custom\_campaign**, la nueva dirección URL HTTP que incluye el identificador de campaña sería: `https://www.microsoft.com/store/apps/skype/9wzdncrfj364?cid=custom\_campaign`.
     -   Para una dirección URL en formato de protocolo, anexa **`&cid=*my custom campaign ID*`**. Por ejemplo, si Skype presenta un identificador de campaña con el valor **custom\_campaign**, la nueva dirección URL de protocolo que incluye el identificador de campaña sería: `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364&cid=custom\_campaign`.
@@ -130,6 +134,7 @@ Antes de que promociones la dirección URL de una campaña personalizada, te rec
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

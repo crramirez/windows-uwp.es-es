@@ -1,13 +1,17 @@
 ---
 author: Jwmsft
-Description: 'Se pueden definir paneles personalizados para el diseño XAML derivando una clase personalizada de la clase Panel.'
-MS-HAID: 'dev\_ctrl\_layout\_txt.xaml\_custom\_panels\_overview'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Se pueden definir paneles personalizados para el diseño XAML derivando una clase personalizada de la clase Panel."
+MS-HAID: dev\_ctrl\_layout\_txt.xaml\_custom\_panels\_overview
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: Introducción a los paneles personalizados de XAML
+title: "Introducción a los paneles personalizados de XAML"
 ms.assetid: 0CD395CD-E2AB-429D-BB49-56A71C5CC35D
 label: XAML custom panels overview
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 8fba13d28f885d89d5b115eebf1a2e75abb8c890
+
 ---
 
 # Introducción a los paneles personalizados de XAML
@@ -26,7 +30,7 @@ Tu panel personalizado hereda estas API de [**Panel**](https://msdn.microsoft.co
 -   Los métodos de invalidación de diseño [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) y [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711). Originalmente fueron definidos por [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706). La clase [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) base no los invalida, pero los paneles prácticos como [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) tienen implementaciones de invalidación que se implementan como código nativo y son ejecutadas por el sistema. La mayor parte del trabajo necesario para definir un panel personalizado se dedica a proporcionar implementaciones nuevas (o adicionales) de **ArrangeOverride** y **MeasureOverride**.
 -   Todas las demás API de [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) y [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356), como [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718), [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) etc. Algunas veces se hace referencia a los valores de estas propiedades en las invalidaciones de diseño, pero no son virtuales por lo que normalmente no se invalidan ni se reemplazan.
 
-Lo que nos ocupa aquí es describir los conceptos relativos a XAML para que puedas tener en cuenta todas las posibilidades sobre cómo se puede y debe comportar un panel personalizado en el diseño. Si prefieres ir directamente a ver un ejemplo de implementación de panel personalizado, consulta [BoxPanel, un ejemplo de panel personalizado](boxpanel-example-custom-panel.md).
+Lo que nos ocupa aquí es describir los conceptos relativos a XAML para que puedas tener en cuenta todas las posibilidades sobre cómo se puede y debe comportar un panel personalizado en el diseño. Si prefieres ir directamente a ver un ejemplo de implementación de panel personalizado, consulta el tema [BoxPanel, un ejemplo de panel personalizado](boxpanel-example-custom-panel.md).
 
 ## La propiedad **Children**
 
@@ -42,7 +46,7 @@ La propiedad [**Children**](https://msdn.microsoft.com/library/windows/apps/br22
 
 Cuando un analizador XAML lee este marcado, se sabe que [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) es la propiedad de contenido XAML de todos los tipos derivados de [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), por lo que el analizador agregará los dos elementos [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) al valor [**UIElementCollection**](https://msdn.microsoft.com/library/windows/apps/br227633) de la propiedad **Children**. La propiedad de contenido XAML facilita una relación optimizada entre elementos primarios y secundarios en el marcado XAML de una definición de interfaz de usuario. Para obtener más información sobre las propiedades de contenido XAML y sobre cómo se rellenan las propiedades de colección cuando se analiza el código XAML, consulta la [Guía de sintaxis XAML](https://msdn.microsoft.com/library/windows/apps/mt185596).
 
-El tipo de colección que mantiene el valor de la propiedad [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) es la clase [**UIElementCollection**](https://msdn.microsoft.com/library/windows/apps/br227633). **UIElementCollection** es una colección fuertemente tipada que usa [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) como tipo de elemento obligatorio. **UIElement** es un tipo base del que heredan cientos de tipos de elementos prácticos de interfaz de usuario, por lo que aquí la aplicación del tipo es deliberadamente menos estricta. Sí obliga a que no puedas tener un objeto [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) como elemento secundario directo de un objeto [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), y eso suele significar que solo se encontrarán como elementos secundarios en un **Panel** los elementos que serán visibles en la interfaz de usuario y que participen en el diseño.
+El tipo de colección que mantiene el valor de la propiedad [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) es la clase [**UIElementCollection**](https://msdn.microsoft.com/library/windows/apps/br227633). **UIElementCollection** es una colección fuertemente tipada que usa [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) como tipo de elemento obligatorio. **UIElement** es un tipo base del que heredan cientos de tipos de elementos prácticos de interfaz de usuario, por lo que aquí la aplicación del tipo es deliberadamente menos estricta. Sí obliga a que no puedas tener un objeto [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) como elemento secundario directo de un objeto [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) y eso suele significar que solo se encontrarán como elementos secundarios en un **Panel** los elementos que serán visibles en la interfaz de usuario y que participen en el diseño.
 
 Normalmente, un panel personalizado acepta cualquier elemento secundario [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) mediante una definición XAML, simplemente usando las características de la propiedad [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) tal cual. En un escenario avanzado, podrías admitir una comprobación adicional del tipo de los elementos secundarios cuando iteras por la colección en las invalidaciones de diseño.
 
@@ -167,7 +171,7 @@ La entrada de [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br20
 
 Lo que suele variar entre las implementaciones [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) es la lógica con la que el panel determina el componente [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) con el que organiza cada elemento. Un panel de posicionamiento absoluto como [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) usa la información de colocación explícita que obtiene de cada elemento mediante los valores [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) y [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/hh759772). Un panel de división del espacio como [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) tendría operaciones matemáticas que dividen el espacio disponible en celdas y cada celda tendría un valor x-y donde el contenido debe colocarse y organizarse. Un panel adaptable como [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) podría expandirse automáticamente para ajustarse al contenido en la dimensión de su orientación.
 
-Además de lo que puedes controlar y pasar directamente a [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914), existen también otros factores que influyen en la posición de los elementos en el diseño. Estos factores proceden de la implementación nativa interna de **Arrange** que es común a todos los tipos derivados de [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) y que otros tipos aumentan, como los elementos de texto. Por ejemplo, unos elementos pueden tener margen y alineación, y otros pueden tener espaciado. Estas propiedades suelen interactuar. Para más información, consulta [Alineación, margen y espaciado](alignment-margin-padding.md).
+Además de lo que puedes controlar y pasar directamente a [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914), existen también otros factores que influyen en la posición de los elementos en el diseño. Estos factores proceden de la implementación nativa interna de **Arrange** que es común a todos los tipos derivados de [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) y que otros tipos aumentan, como los elementos de texto. Por ejemplo, unos elementos pueden tener margen y alineación, y otros pueden tener espaciado. Estas propiedades suelen interactuar. Para obtener más información, consulta [alineación, margen y espaciado](alignment-margin-padding.md).
 
 ## Paneles y controles
 
@@ -176,7 +180,7 @@ Evita colocar funcionalidad en un panel personalizado que debería crearse en su
 
 Si hay alguna interacción que sea accesible para el usuario, debes escribir un control personalizado, no un panel. Por ejemplo, un panel no debe agregar ventanillas de desplazamiento para el contenido que presenta, aunque el objetivo sea evitar el recorte, porque las barras de desplazamiento y las miniaturas, entre otras, son partes de control interactivo. (Después de todo, el contenido podría tener barras de desplazamiento, pero debes dejar eso a la lógica del elemento secundario. No lo fuerces agregando desplazamiento como una operación de diseño). Podrías crear un control y escribir también un panel personalizado que juegue un papel importante en el árbol visual de ese control cuando se trate de presentar contenido en dicho control. Pero el control y el panel deben ser objetos de código distintos.
 
-Un motivo por el que la distinción entre control y panel es importante, es la automatización de la interfaz de usuario de Microsoft y la accesibilidad. Los paneles proporcionan un comportamiento de diseño visual, no lógico. Normalmente, la apariencia visual de un elemento de la interfaz de usuario no es algo importante en escenarios de accesibilidad. La accesibilidad consiste en mostrar las partes de una aplicación que son importantes desde un punto de vista lógico para entender una interfaz de usuario. Cuando se necesita interacción, los controles deben exponer las posibilidades de interacción a la infraestructura de automatización de la interfaz de usuario. Para más información, consulta [Personalizar sistemas de automatización del mismo nivel](https://msdn.microsoft.com/library/windows/apps/mt297667).
+Un motivo por el que la distinción entre control y panel es importante, es la automatización de la interfaz de usuario de Microsoft y la accesibilidad. Los paneles proporcionan un comportamiento de diseño visual, no lógico. Normalmente, la apariencia visual de un elemento de la interfaz de usuario no es algo importante en escenarios de accesibilidad. La accesibilidad consiste en mostrar las partes de una aplicación que son importantes desde un punto de vista lógico para entender una interfaz de usuario. Cuando se necesita interacción, los controles deben exponer las posibilidades de interacción a la infraestructura de automatización de la interfaz de usuario. Para obtener más información, consulta [Personalizar sistemas de automatización del mismo nivel](https://msdn.microsoft.com/library/windows/apps/mt297667).
 
 ## Otras API de diseño
 
@@ -191,7 +195,7 @@ Hay otras API que forman parte del sistema de diseño, pero no se declaran media
             ](https://msdn.microsoft.com/library/windows/apps/br208722) es un evento que se activa cuando cambia algún aspecto del elemento. No es específico de los paneles; el evento se define mediante [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706).
 -   [
               **SizeChanged**
-            ](https://msdn.microsoft.com/library/windows/apps/br208742) es un evento que se activa solo cuando finalizan los pases de diseño e indica que [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) o [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) han cambiado. Este es otro evento [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706). Hay casos en los que [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) se activa, pero **SizeChanged** no. Por ejemplo, puede que el contenido interno se reorganice, pero que el tamaño del elemento no cambie.
+            ](https://msdn.microsoft.com/library/windows/apps/br208742) es un evento que se activa solo cuando finalizan los pases de diseño e indica que [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) o [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) han cambiado como resultado. Este es otro evento [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706). Hay casos en los que [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) se activa, pero **SizeChanged** no. Por ejemplo, puede que el contenido interno se reorganice, pero que el tamaño del elemento no cambie.
 
 
 ## Temas relacionados
@@ -209,6 +213,7 @@ Hay otras API que forman parte del sistema de diseño, pero no se declaran media
 [Alineación, margen y espaciado](alignment-margin-padding.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -2,7 +2,11 @@
 author: DBirtolo
 ms.assetid: ECE848C2-33DE-46B0-BAE7-647DB62779BB
 title: Calibrar los sensores
-description: Es probable que sea necesario calibrar los sensores basados en el magnetómetro de un dispositivo, es decir, la brújula, el inclinómetro y el sensor de orientación, debido a factores ambientales.
+description: "Es probable que sea necesario calibrar los sensores basados en el magnetómetro de un dispositivo, es decir, la brújula, el inclinómetro y el sensor de orientación, debido a factores ambientales."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4652d20b8dd0d04932dcbda330efa8e9367f53d1
+
 ---
 # Calibrar los sensores
 
@@ -29,6 +33,7 @@ En el siguiente vídeo breve se ofrece información general sobre la calibració
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

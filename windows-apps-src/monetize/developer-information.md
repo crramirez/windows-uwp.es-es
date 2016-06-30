@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 278114aa-2a44-4d63-a1d2-d512d8aababc
-description: Obtener información de desarrollo general sobre las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization.
-title: Información para desarrolladores sobre las bibliotecas de Microsoft Advertising
+description: "Obtener información de desarrollo general sobre las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization."
+title: "Información para desarrolladores sobre las bibliotecas de Microsoft Advertising"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: ec3b1d5c33a24da4ad2a4c5c8e4e11c71ece4828
+
 
 ---
 
@@ -34,6 +38,7 @@ Los temas de esta sección proporcionan información útil a los desarrolladores
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

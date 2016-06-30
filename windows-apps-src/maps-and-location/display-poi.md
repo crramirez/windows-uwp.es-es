@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: 'Mostrar puntos de interés en un mapa'
-description: Agrega puntos de interés a un mapa con marcadores, imágenes, formas y elementos de la interfaz de usuario de XAML.
+author: msatranjr
+title: "Mostrar puntos de interés en un mapa"
+description: "Agrega puntos de interés a un mapa con marcadores, imágenes, formas y elementos de la interfaz de usuario de XAML."
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 6f21f9bf9c909d0f89a663cdda05934ad9b4011b
+
 ---
 
 # Mostrar puntos de interés en un mapa
@@ -214,7 +217,7 @@ En este ejemplo se muestra una colección de elementos XAML enlazados a la clase
 
 ## Temas relacionados
 
-* [Bing Maps Developer Center](https://www.bingmapsportal.com/)
+* [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
 * [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
@@ -226,6 +229,7 @@ En este ejemplo se muestra una colección de elementos XAML enlazados a la clase
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

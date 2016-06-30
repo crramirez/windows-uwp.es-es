@@ -1,8 +1,11 @@
 ---
 author: jwmsft
-description: Describe la compatibilidad en el nivel de lenguaje de XAML para Windows Runtime para determinados tipos de datos de Common Language Runtime (CLR) y otros lenguajes de programación como C++.
-title: Tipos de datos intrínsecos de XAML
+description: "Describe la compatibilidad en el nivel de lenguaje de XAML para Windows Runtime para determinados tipos de datos de Common Language Runtime (CLR) y otros lenguajes de programación como C++."
+title: "Tipos de datos intrínsecos de XAML"
 ms.assetid: D50E6127-395D-4E27-BAA2-2FE627F4B711
+ms.sourcegitcommit: 60e328ca8652baeb226e78f5a9d99fbf8c4f5208
+ms.openlocfilehash: 479b900ca14497712f25a7825fde6775a3c1ab60
+
 ---
 
 # Tipos de datos intrínsecos de XAML
@@ -15,7 +18,12 @@ El lugar más común donde verás los usos del tipo de datos intrínseco XAML es
 
 El lenguaje XAML para Windows Runtime proporciona compatibilidad en el nivel de lenguaje para estos tipos.
 
-| Primitivo de XAML | Descripción | | **x:Boolean**  | Para la compatibilidad con CLR, se corresponde con [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx). XAML analiza los valores de **x:Boolean** sin distinguir entre mayúsculas y minúsculas. Ten en cuenta que "x:Bool" no es una alternativa aceptada. | | **x:String**   | Para la compatibilidad con CLR, se corresponde con [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx). La codificación predeterminada de la cadena es la codificación XML adyacente. | | **x:Double**   | Para la compatibilidad con CLR, se corresponde con [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Además de los valores numéricos, la sintaxis del texto para **x:Double** permite el token "NaN", que es la forma en que el valor "Auto" del comportamiento de diseño se puede almacenar como un valor de recurso. En los token se distingue entre mayúsculas y minúsculas. Puedes usar la notación científica como, por ejemplo, "1+E06" para `1,000,000`. | | **x:Int32**    | Para la compatibilidad con CLR, se corresponde con [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx). **x:Int32** se trata como con signo, y puedes incluir el símbolo menos ("-") para un entero negativo. En XAML, la ausencia de un signo en la sintaxis de texto implica un valor con signo positivo. |
+| Primitivo de XAML | Descripción |
+|-------|-------------|
+| **x:Boolean**  | Para la compatibilidad con CLR, se corresponde con [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx). XAML analiza los valores de **x:Boolean** sin distinguir entre mayúsculas y minúsculas. Ten en cuenta que "x:Bool" no es una alternativa aceptada. |
+| **x:String**   | Para la compatibilidad con CLR, se corresponde con [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx). La codificación predeterminada de la cadena es la codificación XML adyacente. |
+| **x:Double**   | Para la compatibilidad con CLR, se corresponde con [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Además de los valores numéricos, la sintaxis del texto para **x:Double** permite el token "NaN", que es la forma en la que el valor "Auto" del comportamiento de diseño se puede almacenar como el valor de un recurso. En los token se distingue entre mayúsculas y minúsculas. Es posible usar notación científica como, por ejemplo, "1+E06" para `1,000,000`. |
+| **x:Int32**    | Para la compatibilidad con CLR, se corresponde con [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx). **x:Int32** se trata como si tuviera signo, y es posible incluir el símbolo menos ("-") para un entero negativo. En XAML, la ausencia de un signo en la sintaxis de texto implica un valor con signo positivo. |
 
 Estos tipos primitivos de lenguaje XAML generalmente son los únicos casos en los que definirás un elemento de objeto que usa el prefijo **x:** en el código XAML. Todas las otras características del lenguaje XAML se suelen usar en forma de atributo, o como extensión de marcado.
 
@@ -36,6 +44,7 @@ La especificación XAML 2009 indica otros tipos primitivos en el nivel de lengua
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

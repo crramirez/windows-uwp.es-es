@@ -3,6 +3,10 @@ author: mcleanbyron
 Description: En este tutorial, puedes crear y ejecutar el primer experimento con pruebas A/B.
 title: Crea y ejecuta tu primer experimento con pruebas A/B
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0f889c22b8999408341f4c12387602b344f49439
+
 ---
 
 # Crea y ejecuta tu primer experimento con pruebas A/B
@@ -175,6 +179,7 @@ Espera al menos varias horas después de completar la sección anterior y, a con
   * [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

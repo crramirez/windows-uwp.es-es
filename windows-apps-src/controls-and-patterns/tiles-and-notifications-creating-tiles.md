@@ -5,8 +5,8 @@ title: Iconos
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: a440a9abaf150dac6ed95d881261b80521a734c0
+ms.sourcegitcommit: d3fe62d4de00c42079d62d105acdbb21e296ba5f
+ms.openlocfilehash: a9f5d25dfd359364fa8e16666b03c7c105a867dd
 
 ---
 
@@ -48,14 +48,11 @@ Hay algunos elementos que deberías actualizar:
 
     Debes cambiar estas imágenes por las tuyas, Tienes la opción de proporcionar imágenes para diferentes escalas visuales, pero no tienes que proporcionarlas todas. Para garantizar que tu aplicación se ve bien en una variedad de dispositivos, te recomendamos que ofrezcas versiones de escala de 100 %, 200 % y 400 % de cada imagen.
 
-    Las imágenes a escala siguen esta convención de nomenclatura:
+    Las imágenes a escala siguen esta convención de nomenclatura: 
     
     *
-              &lt;nombre de imagen&gt;*.scale-*&lt;factor de escala&gt;*.*&lt;extensión de archivo de imagen&gt;* 
-
-
-     
-
+              &lt;nombre de imagen&gt;*.scale-*&lt;factor de escala&gt;*.*&lt;extensión de archivo de imagen&gt;*  
+    
     Por ejemplo: SmallLogo.scale-100.png
 
     Cuando hace referencia a la imagen, se refiere a ella como *&lt;nombre de imagen&gt;*.*&lt;extensión de archivo de imagen&gt;* ("SmallLogo.png" en este ejemplo). El sistema seleccionará automáticamente la imagen a escala adecuada para el dispositivo desde las imágenes que hayas proporcionado.
@@ -110,6 +107,6 @@ Cuando se instale la aplicación, puedes usar las notificaciones para personaliz
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

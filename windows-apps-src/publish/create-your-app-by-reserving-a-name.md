@@ -1,9 +1,13 @@
 ---
 author: jnHs
-Description: El primer paso para crear una nueva aplicación en el panel del Centro de desarrollo de Windows es reservar un nombre de aplicación. Aprende a reservar nombres de aplicación y busca sugerencias para elegir un buen nombre de aplicación.
-title: Crear la aplicación reservando un nombre
-keywords:
+Description: "El primer paso para crear una nueva aplicación en el panel del Centro de desarrollo de Windows es reservar un nombre de aplicación. Aprende a reservar nombres de aplicación y busca sugerencias para elegir un buen nombre de aplicación."
+title: "Crear la aplicación reservando un nombre"
+keywords: 
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
+translationtype: Human Translation
+ms.sourcegitcommit: 3b65bbaf2498dde7484c055ff86ed09e89bf3405
+ms.openlocfilehash: 5e4933be456bc76eb5923f5c081e8376c43c118b
+
 ---
 
 # Crear la aplicación reservando un nombre
@@ -60,6 +64,7 @@ Para obtener más información, consulta [Administrar nombres de aplicación](ma
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

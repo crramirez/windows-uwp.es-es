@@ -1,8 +1,12 @@
 ---
 author: martinekuan
 ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
-title: Crear una aplicación Hello, world (JS)
-description: Este tutorial te enseña a usar JavaScript y HTML para crear una aplicación sencilla Hello, world para la Plataforma universal de Windows (UWP) en Windows 10.
+title: "Crear una aplicación Hello, world (JS)"
+description: "Este tutorial te enseña a usar JavaScript y HTML para crear una aplicación sencilla Hello, world para la Plataforma universal de Windows (UWP) en Windows 10."
+translationtype: Human Translation
+ms.sourcegitcommit: f3cb50e5b0b0baa73431392a1f6854a62f3655de
+ms.openlocfilehash: 5f534169117da94cb2249c897603f567c007299b
+
 ---
 # Crear una aplicación "Hello, world" (JS)
 
@@ -172,7 +176,7 @@ Uno de los archivos que ha creado Visual Studio para ti es default.html, la pág
 </html>
 ```
 
-Vamos a agregar contenido nuevo a tu archivo default.html. Igual que harías para agregar contenido a cualquier otro archivo HTML, agregas tu contenido dentro del elemento [**body**](https://msdn.microsoft.com/library/windows/apps/Hh453011). Puedes usar elementos de HTML5 para crear tu aplicación (con unas [pocas excepciones](https://msdn.microsoft.com/library/windows/apps/Hh465380)). Esto significa que puedes usar elementos de HTML5, como [**h1**](https://msdn.microsoft.com/library/windows/apps/Hh441078), [**p**](https://msdn.microsoft.com/library/windows/apps/Hh453431), [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017), [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) e [**img**](https://msdn.microsoft.com/library/windows/apps/Hh466114).
+Vamos a agregar contenido nuevo a tu archivo default.html. Igual que harías para agregar contenido a cualquier otro archivo HTML, agregas tu contenido dentro del elemento [**body**](https://msdn.microsoft.com/library/windows/apps/Hh453011). Puedes usar elementos de HTML5 para crear tu aplicación (con unas [pocas excepciones](https://msdn.microsoft.com/library/windows/apps/Hh465380)). Esto significa que puedes usar elementos de HTML5 como [**h1**](https://msdn.microsoft.com/library/windows/apps/Hh441078), [**p**](https://msdn.microsoft.com/library/windows/apps/Hh453431), [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017), [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) e [**img**](https://msdn.microsoft.com/library/windows/apps/Hh466114).
 
 **Para modificar la página de inicio**
 
@@ -248,26 +252,26 @@ Echa un vistazo al resto del código en default.js. Controla los eventos [**acti
 })();
 ```
 
-Vamos a definir un controlador de eventos para tu [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017). Nuestro nuevo controlador de eventos obtiene el nombre de usuario del control `nameInput` [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) y lo usa para mostrar un saludo al elemento `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) que creaste en la sección anterior.
+Vamos a definir un controlador de eventos para tu [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017). Nuestro nuevo controlador de eventos obtiene el nombre de usuario del control `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) y lo usa para mostrar un saludo al elemento `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) que creaste en la sección anterior.
 
 ### Uso de eventos que funcionan para entradas táctiles, de mouse y de lápiz
 
 En una aplicación para UWP, no debes preocuparte por las diferencias entre táctil, mouse y otras formas de entrada de puntero. Puedes usar los eventos que conoces, como [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312) y funcionarán para todos los tipos de entrada.
 
-**Sugerencia**   Tu aplicación también puede usar los nuevos eventos *MSPointer\** y *MSGesture\**, que funcionan para la entrada táctil, de mouse y de lápiz, y que pueden proporcionar información adicional sobre el dispositivo que activó el evento. Para más información, consulta [Responder a la interacción del usuario](https://msdn.microsoft.com/library/windows/apps/Hh700412) y [Gestos, manipulaciones e interacciones](https://msdn.microsoft.com/library/windows/apps/Hh761498).
+**Sugerencia**   Tu aplicación también puede usar los nuevos eventos *MSPointer\** y *MSGesture\**, que funcionan para la entrada táctil, de mouse y de lápiz, y que pueden proporcionar información adicional sobre el dispositivo que activó el evento. Para obtener más información, consulta [Responder a la interacción del usuario](https://msdn.microsoft.com/library/windows/apps/Hh700412) y [Gestos, manipulaciones e interacciones](https://msdn.microsoft.com/library/windows/apps/Hh761498).
 
 Continuemos y vamos a crear el controlador de eventos.
 
 **Para crear el controlador de eventos**
 
-1.  En el archivo default.js, después del controlador de eventos [**app.oncheckpoint**](https://msdn.microsoft.com/library/windows/apps/BR229839) y antes de llamar a [**app.start**](https://msdn.microsoft.com/library/windows/apps/BR229705), crea una función de controlador de eventos [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312) denominada `buttonClickHandler` que tome un único parámetro llamado
+1.  En el archivo default.js, después del controlador de eventos [**app.oncheckpoint**](https://msdn.microsoft.com/library/windows/apps/BR229839) y antes de llamar a [**app.start**](https://msdn.microsoft.com/library/windows/apps/BR229705), crea una función de controlador de eventos [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312) denominada `buttonClickHandler` que tome un único parámetro llamado `eventInfo`.
 ```javascript
     function buttonClickHandler(eventInfo) {
      
         }
 ```
 
-2.  Dentro de nuestro controlador de eventos, recupera el nombre de usuario del control `nameInput` [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) y úsalo para crear un saludo. Usa `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) para mostrar el resultado.
+2.  Dentro de nuestro controlador de eventos, recupera el nombre de usuario del control `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) y úsalo para crear un saludo. Usa `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) para mostrar el resultado.
 ```javascript
     function buttonClickHandler(eventInfo) {
             var userName = document.getElementById("nameInput").value;
@@ -300,7 +304,7 @@ Lo único que necesitas hacer ahora es registrar el controlador de eventos con e
     };
 ```
 
-Dentro del controlador [**onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679), el código comprueba qué tipo de activación se ha producido. Existen diferentes tipos de activación. Por ejemplo, tu aplicación se activa cuando el usuario inicia tu aplicación y cuando el usuario quiere abrir un archivo que está asociado con tu aplicación. (Para más información, consulta [Ciclo de vida de la aplicación](https://msdn.microsoft.com/library/windows/apps/Mt243287)).
+Dentro del controlador [**onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679), el código comprueba qué tipo de activación se ha producido. Existen diferentes tipos de activación. Por ejemplo, tu aplicación se activa cuando el usuario inicia tu aplicación y cuando el usuario quiere abrir un archivo que está asociado con tu aplicación. (Para obtener más información, consulta [Ciclo de vida de la aplicación](https://msdn.microsoft.com/library/windows/apps/Mt243287)).
 
 La que nos interesa a nosotros es la de activación [**launch**](https://msdn.microsoft.com/library/windows/apps/BR224693). Una aplicación se *inicia* cuando un usuario la activa cuando no está en ejecución.
 
@@ -320,7 +324,7 @@ Si la activación es una activación de inicio, el código comprueba cómo se ce
             }
 ```
 
-A continuación, llama a [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975).
+A continuación llama a [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975).
 
 ```javascript
             args.setPromise(WinJS.UI.processAll());
@@ -414,7 +418,7 @@ A diferencia de los controles HTML, los controles de WinJS no tienen elementos d
 
 Vamos a agregar un control [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) a tu aplicación.
 
-1.  En el archivo default.html, agrega un control [**label**](https://msdn.microsoft.com/library/windows/apps/Hh453321) y [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) después de `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133).
+1.  En el archivo default.html, agrega una [**etiqueta**](https://msdn.microsoft.com/library/windows/apps/Hh453321) y un control [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) después de `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133).
 
     ```html
     <body class="win-type-body">
@@ -550,6 +554,7 @@ Enhorabuena, has creado tu primera aplicación para Windows 10 y la UWP con Java
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

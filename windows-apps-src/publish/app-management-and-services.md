@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Puedes administrar y ver los detalles relacionados con cada una de tus aplicaciones en el panel del Centro de desarrollo de Windows y configurar servicios como notificaciones de inserción y Mapas.
-title: Administración y servicios de aplicaciones
+Description: "Puedes administrar y ver los detalles relacionados con cada una de tus aplicaciones en el panel del Centro de desarrollo de Windows y configurar servicios como notificaciones de inserción y Mapas."
+title: "Administración y servicios de aplicaciones"
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 71077ac3f64e10734021e5fb655168f7273e3cb6
+
 ---
 
 # Administración y servicios de aplicaciones
@@ -78,6 +82,7 @@ Los desarrolladores con permisos de OEM también pueden [generar paquetes de pre
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Preguntas más frecuentes sobre la migración a DirectX 11
-description: Respuestas a las preguntas más frecuentes sobre la migración de juegos a la Plataforma universal de Windows (UWP).
+title: "Preguntas más frecuentes sobre la migración a DirectX 11"
+description: "Respuestas a las preguntas más frecuentes sobre la migración de juegos a la Plataforma universal de Windows (UWP)."
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dc98f15d80fb70fb6e106555659d699c41fbfa0b
+
 ---
 
 # Preguntas más frecuentes sobre la migración a DirectX 11
@@ -137,6 +141,7 @@ Consulta la información acerca de la [asignación de formatos de superficie](fe
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

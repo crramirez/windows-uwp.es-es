@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: Proporciona una lista de comprobación que te ayudará a garantizar que tu aplicación para Plataforma universal de Windows (UWP) sea accesible.
+Description: "Proporciona una lista de comprobación que te ayudará a garantizar que tu aplicación para Plataforma universal de Windows (UWP) sea accesible."
 ms.assetid: BB8399E2-7013-4F77-AF2C-C1A0E5412856
-title: Lista de comprobación de accesibilidad
+title: "Lista de comprobación de accesibilidad"
 label: Accessibility checklist
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 9580ccc0716b7e9f4ee32ce241b0ac3ee9bf319d
+
 ---
 
 # Lista de comprobación de accesibilidad
@@ -21,7 +25,7 @@ Aquí proporcionamos una lista de comprobación que te ayudará a garantizar que
 
     Debes establecer el nombre accesible de forma explícita para imágenes y otros controles que no promueven contenido de texto interno como nombre accesible implícito. Debes usar etiquetas para los elementos de formulario, de modo que el texto de la etiqueta se pueda usar como destino [**LabeledBy**](https://msdn.microsoft.com/library/windows/apps/Hh759769) en el modelo de Automatización de la interfaz de usuario de Microsoft para la correspondencia de etiquetas y entradas. Si quieres proporcionar a los usuarios más información sobre la interfaz de usuario que la que suele incluir el nombre accesible, las descripciones accesibles e información sobre herramientas ayudan a los usuarios a comprender la interfaz de usuario.
 
-    Para más información, consulta [Nombre accesible](basic-accessibility-information.md#accessible_name) y [Descripción accesible](basic-accessibility-information.md).
+    Para obtener más información, consulta [Nombre accesible](basic-accessibility-information.md#accessible_name) y [Descripción accesible](basic-accessibility-information.md).
 
 2.  Implementar accesibilidad de teclado:
 
@@ -33,7 +37,7 @@ Aquí proporcionamos una lista de comprobación que te ayudará a garantizar que
 
     Si quieres obtener más información, consulta las [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607).
 
-3.  Comprueba visualmente tu interfaz de usuario para asegurarte de que el contraste de texto sea suficiente, que los elementos se presenten correctamente en los temas de contraste alto y que los colores se usen correctamente.
+3.  Comprueba visualmente tu interfaz de usuario para asegurarte de que el contraste de texto sea suficiente, que los elementos se representen correctamente en los temas de contraste alto y que los colores se usen correctamente.
 
     * Usa las opciones de pantalla del sistema para ajustar el valor de puntos por pulgada (ppp) de la pantalla y asegúrate de que la interfaz de usuario de la aplicación se escala correctamente cuando cambie el valor de ppp. (Algunos usuarios cambian los valores de ppp como una opción de accesibilidad que encontrarás en **Accesibilidad**).
     * Usa una herramienta de análisis de color para comprobar que la relación de contraste del texto visual sea de al menos 4.5:1.
@@ -54,7 +58,7 @@ Aquí proporcionamos una lista de comprobación que te ayudará a garantizar que
 
     Si implementaste la compatibilidad de accesibilidad de línea base, declarar tu aplicación como accesible en la Tienda Windows puede ayudarte a llegar a más clientes y obtener más cantidad de buenas clasificaciones.
 
-    Para más información, consulta [Accesibilidad en la Tienda](accessibility-in-the-store.md).
+    Para obtener más información, consulta [Accesibilidad en la Tienda](accessibility-in-the-store.md).
 
 <span id="related_topics"/>
 ## Temas relacionados  
@@ -63,6 +67,7 @@ Aquí proporcionamos una lista de comprobación que te ayudará a garantizar que
 * [Procedimientos que deben evitarse](practices-to-avoid.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

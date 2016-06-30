@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Administrar la activación de archivos
-description: Una aplicación se puede registrar para convertirse en el controlador predeterminado de un tipo de archivo específico.
+author: TylerMSFT
+title: "Administrar la activación de archivos"
+description: "Una aplicación se puede registrar para convertirse en el controlador predeterminado de un tipo de archivo específico."
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 9c6358bccdea55a7c3749388c35aa770f4325960
+
 ---
 
 # Controlar la activación de archivos
@@ -150,8 +153,6 @@ Los archivos que recibes pueden provenir de un origen que no es de confianza. Se
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Durante la edición y entrada de texto, la corrección ortográfica informa al usuario que una palabra está escrita erróneamente resaltándola con una línea en zigzag roja y brindando una forma en la que el usuario puede corregir el error.
-title: Revisión ortográfica y predicción de texto
+Description: "Durante la edición y entrada de texto, la corrección ortográfica informa al usuario que una palabra está escrita erróneamente resaltándola con una línea en zigzag roja y brindando una forma en la que el usuario puede corregir el error."
+title: "Revisión ortográfica y predicción de texto"
 ms.assetid: B867C956-5AB2-4207-A8DE-179CE7871180
 label: Spell checking and text prediction
 template: detail.hbs
+redirect_url: text-controls
+ms.sourcegitcommit: 08f982f5c54d596a7624fe63528f91375e7761ca
+ms.openlocfilehash: 8954b14a84241686a7c784c3d250f197bed7c8b6
+
 ---
 
 # Directrices sobre revisión ortográfica
@@ -66,6 +70,7 @@ Para los controles TextBox de XAML, la revisión ortográfica está desactivada 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

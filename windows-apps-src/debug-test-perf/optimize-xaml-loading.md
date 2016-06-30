@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
 title: Optimizar el marcado XAML
-description: El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo para una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis del marcado XAML, el tiempo de carga y la eficiencia de la memoria de tu aplicación.
+description: "El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo para una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis del marcado XAML, el tiempo de carga y la eficiencia de la memoria de tu aplicación."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c2131b084d8bb989f1f7767f54db697e1cdd8dcf
+
 ---
 # Optimizar el marcado XAML
 
@@ -104,7 +108,7 @@ Si bien la plataforma XAML es capaz de mostrar un gran número de elementos, pue
 
 ## Consolidar varios pinceles que tengan el mismo aspecto en un recurso
 
-La plataforma XAML trata de almacenar en caché los objetos usados frecuentemente para que puedan volver a usarse siempre que sea posible. De todos modos, el lenguaje XAML no puede determinar fácilmente si un pincel declarado en una pieza de marcado es el mismo que está declarado en otra. Este ejemplo usa la clase [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) como demostración, pero el caso resulta ser más probable y más importante con la clase [**GradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210068).
+La plataforma XAML trata de almacenar en caché los objetos usados frecuentemente para que puedan volver a usarse siempre que sea posible. De todos modos, el lenguaje XAML no puede determinar fácilmente si un pincel declarado en una pieza de marcado es el mismo que está declarado en otra. Este ejemplo usa [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) como demostración, pero el caso resulta ser más probable y más importante mediante [**GradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210068).
 
 **Ineficaz.**
 
@@ -286,6 +290,7 @@ Para comprobar si tienes XBF2, abre la aplicación en un editor de código binar
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

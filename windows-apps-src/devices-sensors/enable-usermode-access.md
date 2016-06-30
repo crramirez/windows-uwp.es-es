@@ -1,7 +1,10 @@
 ---
 author: JordanRh1
 title: Habilitar el acceso de modo de usuario en Windows 10 IoT Core
-description: En este tutorial se describe cómo habilitar el acceso de modo de usuario a GPIO, I2C, SPI y UART con Windows 10 IoT Core.
+description: "En este tutorial se describe cómo habilitar el acceso de modo de usuario a GPIO, I2C, SPI y UART con Windows 10 IoT Core."
+ms.sourcegitcommit: f7d7dac79154b1a19eb646e7d29d70b2f6a15e35
+ms.openlocfilehash: eedabee593400ff0260b6d3468ac922285a034f8
+
 ---
 # Habilitar el acceso de modo de usuario en Windows 10 IoT Core
 
@@ -340,13 +343,15 @@ La multiplexación de patillas se logra mediante la cooperación de varios compo
 
 * Servidores de multiplexación de patillas: estos son los controladores que controlan el bloque de control de multiplexación de patillas. Los servidores de multiplexación de patillas reciben solicitudes de multiplexación de patillas para reservar solicitudes de recursos de multiplexación (a través de *IRP_MJ_CREATE*) y solicitudes para cambiar la función de una patilla (a través de solicitudes de *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*). El servidor de multiplexación de patillas suele ser el controlador GPIO, dado que el bloque de multiplexación a veces es parte del bloque GPIO. Incluso si el bloque de multiplexación es un periférico independiente, el controlador GPIO es un lugar lógico para poner la funcionalidad de multiplexación. 
 * Clientes de multiplexación de patillas: son controladores que consumen multiplexación de patillas. Los clientes de multiplexación de patillas reciben recursos de multiplexación de patillas desde el firmware ACPI. Los recursos de multiplexación de patillas son un tipo de recurso de conexión que administra el concentrador de recursos. Los clientes de multiplexación de patillas reservan recursos de multiplexación de patillas abriendo un identificador del recurso. Para realizar un cambio de hardware, los clientes deben confirmar la configuración con el envío de una solicitud *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*. Los clientes liberan recursos de multiplexación de patillas cerrando el identificador y, en ese punto, la configuración de multiplexación se revierte a su estado predeterminado. 
-* Firmware ACPI: especifica la configuración de multiplexación de con recursos `FunctionConfig()`. Los recursos FunctionConfig expresan qué patillas y en qué configuración de multiplexación requiere un cliente. Los recursos FunctionConfig contienen el número de función, la configuración de la extracción y una lista de números de patilla. Los recursos FunctionConfig se proporcionan a los clientes de multiplexación de patillas como recursos de hardware, que reciben los controladores en su devolución de llamada a PrepareHardware, de forma similar a los recursos de conexión GPIO y SPB. Los clientes reciben un id. de concentrador de recursos que se puede usar para abrir un identificador para el recurso. 
+* Firmware ACPI: Especifica la configuración de multiplexación con recursos `MsftFunctionConfig()`. Los recursos MsftFunctionConfig expresan qué patillas, y con qué configuración de multiplexación, requiere un cliente. Los recursos MsftFunctionConfig contienen el número de función, la configuración de extracción y una lista de números de patilla. Los recursos MsftFunctionConfig se proporcionan a los clientes de multiplexación de patillas como recursos de hardware, que los controladores reciben en su devolución de llamada a PrepareHardware, de forma similar a los recursos de conexión GPIO y SPB. Los clientes reciben un id. de concentrador de recursos que se puede usar para abrir un controlador para el recurso. 
+
+> Es necesario pasar el modificador de la línea de comandos `/MsftInternal` para `asl.exe` con el fin de compilar los archivos ASL que contengan descriptores `MsftFunctionConfig()`, dado que estos descriptores están siendo revisados actualmente por el comité de trabajo de ACPI. Por ejemplo: `asl.exe /MsftInternal dsdt.asl`
 
 A continuación se muestra la secuencia de operaciones que participan en la multiplexación de patillas. 
 
 ![Interacción del servidor de cliente de multiplexación de patillas](images/usermode-access-diagram-1.png)
 
-1.  El cliente recibe recursos FunctionConfig del firmware ACPI en su devolución de llamada a [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx).
+1.  El cliente recibe recursos MsftFunctionConfig del firmware ACPI en su devolución de llamada a [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx).
 2.  El cliente usa la función auxiliar del concentrador de recursos `RESOURCE_HUB_CREATE_PATH_FROM_ID()` para crear una ruta de acceso desde el identificador de recurso y, a continuación, abre un identificador para la ruta de acceso (con [ZwCreateFile()](https://msdn.microsoft.com/library/windows/hardware/ff566424.aspx), [IoGetDeviceObjectPointer()](https://msdn.microsoft.com/library/windows/hardware/ff549198.aspx) o [WdfIoTargetOpen()](https://msdn.microsoft.com/library/windows/hardware/ff548634.aspx)).
 3.  El servidor extrae el identificador de concentrador de recursos de la ruta del archivo que usa funciones auxiliares de concentrador de recursos `RESOURCE_HUB_ID_FROM_FILE_NAME()`, a continuación, consulta el concentrador de recursos para obtener el descriptor del recurso.
 4.  El servidor realiza el arbitraje de uso compartido de cada patilla en el descriptor y completa la solicitud IRP_MJ_CREATE.
@@ -362,7 +367,7 @@ Esta sección describe cómo un cliente consume la funcionalidad de multiplexaci
 
 ####    Análisis de recursos
 
-Un controlador WDF recibe recursos `FunctionConfig()` en su rutina [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx). Los recursos FunctionConfig se pueden identificar mediante los campos siguientes:
+Un controlador de WDF recibe recursos `MsftFunctionConfig()` en su rutina [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx). Los recursos MsftFunctionConfig se pueden identificar mediante los campos siguientes:
 
 ```cpp
 CM_PARTIAL_RESOURCE_DESCRIPTOR::Type = CmResourceTypeConnection
@@ -370,7 +375,7 @@ CM_PARTIAL_RESOURCE_DESCRIPTOR::u.Connection.Class = CM_RESOURCE_CONNECTION_CLAS
 CM_PARTIAL_RESOURCE_DESCRIPTOR::u.Connection.Type = CM_RESOURCE_CONNECTION_TYPE_FUNCTION_CONFIG
 ```
 
-Una rutina `EvtDevicePrepareHardware()` puede extraer recursos FunctionConfig del siguiente modo:
+Una rutina `EvtDevicePrepareHardware()` puede extraer recursos MsftFunctionConfig del siguiente modo:
 
 ```cpp
 EVT_WDF_DEVICE_PREPARE_HARDWARE evtDevicePrepareHardware;
@@ -426,7 +431,7 @@ evtDevicePrepareHardware (
 
 ####    Reservar y confirmar recursos
 
-Cuando un cliente quiere multiplexar patillas, reserva y confirma el recurso FunctionConfig. El siguiente ejemplo muestra cómo un cliente puede reservar y confirmar recursos FunctionConfig.
+Cuando un cliente quiere multiplexar patillas, reserva y confirma el recurso MsftFunctionConfig. El siguiente ejemplo muestra de qué forma un cliente puede reservar y confirmar recursos MsftFunctionConfig .
 
 ```cpp
 _IRQL_requires_max_(PASSIVE_LEVEL)
@@ -497,7 +502,7 @@ NTSTATUS AcquireFunctionConfigResource (
 }
 ```
 
-El controlador debe almacenar los WDFIOTARGET en una de sus áreas de contexto para que se pueda cerrar más adelante. Cuando el controlador está listo para liberar la configuración de multiplexación, se debe cerrar el identificador de recursos mediante una llamada a [WdfObjectDelete()](https://msdn.microsoft.com/library/windows/hardware/ff548734.aspx) o [WdfIoTargetClose()](https://msdn.microsoft.com/library/windows/hardware/ff548586.aspx) si tienes intención de reutilizar WDFIOTARGET.
+El controlador debe almacenar el WDFIOTARGET en una de sus áreas de contexto para que se pueda cerrar más adelante. Cuando el controlador está listo para liberar la configuración de multiplexación, se debe cerrar el identificador de recursos mediante una llamada a [WdfObjectDelete()](https://msdn.microsoft.com/library/windows/hardware/ff548734.aspx) o [WdfIoTargetClose()](https://msdn.microsoft.com/library/windows/hardware/ff548586.aspx) si tienes intención de reutilizar WDFIOTARGET.
 
 ```cpp
     WdfObjectDelete(resourceHandle);
@@ -511,7 +516,7 @@ Esta sección describe cómo un servidor de multiplexación de patillas expone s
 
 ####    Controlar solicitudes de IRP_MJ_CREATE
 
-Los clientes abren un identificador para un recurso cuando quieren reservar un recurso de multiplexación de patillas. Un servidor de multiplexación de patillas recibe solicitudes *IRP_MJ_CREATE* por medio de una operación de análisis del concentrador de recursos. El componente de ruta de acceso final de la solicitud *IRP_MJ_CREATE* contiene el identificador de concentrador de recursos, que es un entero de 64 bits en formato hexadecimal. El servidor debe extraer el identificador de concentrador de recursos del nombre de archivo mediante `RESOURCE_HUB_ID_FROM_FILE_NAME()` desde reshub.h y enviar *IOCTL_RH_QUERY_CONNECTION_PROPERTIES* al concentrador de recursos para obtener el descriptor `FunctionConfig()`.
+Los clientes abren un identificador para un recurso cuando quieren reservar un recurso de multiplexación de patillas. Un servidor de multiplexación de patillas recibe solicitudes *IRP_MJ_CREATE* por medio de una operación de análisis del concentrador de recursos. El componente de ruta de acceso final de la solicitud *IRP_MJ_CREATE* contiene el identificador de concentrador de recursos, que es un entero de 64 bits en formato hexadecimal. El servidor debe extraer el identificador de concentrador de recursos del nombre de archivo mediante `RESOURCE_HUB_ID_FROM_FILE_NAME()` desde reshub.h y enviar *IOCTL_RH_QUERY_CONNECTION_PROPERTIES* al concentrador de recursos para obtener el descriptor `MsftFunctionConfig()`.
 
 El servidor debe validar el descriptor y extraer el modo de uso compartido y la lista de patillas del descriptor. A continuación, deberá realizar un arbitraje de uso compartido de las patillas y, si se realiza correctamente, marcar las patillas como reservadas antes de completar la solicitud.
 
@@ -525,18 +530,18 @@ El arbitraje de uso compartido se realiza correctamente de forma general si el a
 
 Si se produce un error en el arbitraje de uso compartido, la solicitud debería completarse con *STATUS_GPIO_INCOMPATIBLE_CONNECT_MODE*. Si el arbitraje de uso compartido se realiza correctamente, se debe completar la solicitud con *STATUS_SUCCESS*.
 
-Ten en cuenta que el modo de uso compartido de la solicitud entrante debe obtenerse del descriptor de FunctionConfig no de [IrpSp -> Parameters.Create.ShareAccess](https://msdn.microsoft.com/library/windows/hardware/ff548630.aspx).
+Ten en cuenta que el modo de uso compartido de la solicitud entrante debe obtenerse del descriptor de MsftFunctionConfig, no de [IrpSp -> Parameters.Create.ShareAccess](https://msdn.microsoft.com/library/windows/hardware/ff548630.aspx).
 
 ####    Controlar solicitudes de IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS
 
-Después de que el cliente haya reservado correctamente un recurso FunctionConfig abriendo un controlador, puede enviar *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* para solicitar al servidor que realice la operación de multiplexación de hardware real. Cuando el servidor recibe *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* para cada patilla de la lista de patillas debe 
+Después de que el cliente haya reservado correctamente un recurso MsftFunctionConfig abriendo un controlador, puede enviar *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* para solicitar al servidor que realice la operación de multiplexación de hardware real. Cuando el servidor recibe *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* para cada patilla de la lista de patillas debe 
 
 *   Establecer el modo de extracción especificado en el miembro PinConfiguration de la estructura PNP_FUNCTION_CONFIG_DESCRIPTOR en el hardware.
 *   Multiplexar la patilla para la función especificada por el miembro FunctionNumber de la estructura PNP_FUNCTION_CONFIG_DESCRIPTOR.
 
 El servidor, a continuación, debe completar la solicitud con *STATUS_SUCCESS*.
 
-El significado de FunctionNumber está definido por el servidor y se entiende que el descriptor FunctionConfig se creó con conocimiento de la forma en que el servidor interpreta este campo.
+El significado de FunctionNumber lo define el servidor, y se entiende que el descriptor MsftFunctionConfig se creó con conocimiento de la forma en la que el servidor interpreta este campo.
 
 Recuerda que cuando se cierra el identificador, el servidor tendrá que revertir las patillas a la configuración en la que estaban cuando se recibió IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS, por lo que es posible que el servidor tenga que guardar el estado de las patillas antes de modificarlas.
 
@@ -546,11 +551,11 @@ Cuando un cliente ya no necesita un recurso de multiplexación, cierra su identi
 
 ### Directrices para crear tablas ACPI
 
-Esta sección describe cómo proporcionar recursos de multiplexación a los controladores de cliente. Ten en cuenta que necesitarás la versión de compilación de Microsoft ASL 14327 o posterior para compilar tablas que contengan recursos `FunctionConfig()`. `FunctionConfig()` los recursos se proporcionan a los clientes de multiplexación de patillas como recursos de hardware. `FunctionConfig()` los recursos se deben proporcionar a los controladores que requieren cambios de multiplexación de patillas, que generalmente son SPB y controladores de controladora de serie, pero no se deben suministrar SPB y controladores periféricos de serie, ya que el controlador de controladora controla la configuración de multiplexación.
-La macro ACPI `FunctionConfig()` se define del siguiente modo:
+Esta sección describe cómo proporcionar recursos de multiplexación a los controladores de cliente. Ten en cuenta que necesitarás la versión de compilación de Microsoft ASL 14327 o posterior para compilar tablas que contengan recursos `MsftFunctionConfig()`. `MsftFunctionConfig()` los recursos se proporcionan a los clientes de multiplexación de patillas como recursos de hardware. `MsftFunctionConfig()` los recursos se deben proporcionar a los controladores que requieren cambios de multiplexación de patillas, que generalmente son SPB y controladores de controladora de serie, pero no se deben suministrar SPB y controladores periféricos de serie, ya que el controlador de controladora controla la configuración de multiplexación.
+La macro ACPI `MsftFunctionConfig()` se define del siguiente modo:
 
 ```cpp
-  FunctionConfig(Shared/Exclusive
+  MsftFunctionConfig(Shared/Exclusive
                 PinPullConfig,
                 FunctionNumber,
                 ResourceSource,
@@ -573,7 +578,7 @@ La macro ACPI `FunctionConfig()` se define del siguiente modo:
 * VendorData – datos binarios opcionales cuyo significado se define mediante el servidor de multiplexación de patillas. Esto suele dejarse en blanco
 * Lista de patillas: una lista de números de patilla separados por comas a los que se aplica la configuración. Cuando el servidor de multiplexación de patillas es un controlador de GpioClx, estos son los números de patilla de GPIO y tienen el mismo significado que los números de patilla de un descriptor GpioIo. 
 
-El siguiente ejemplo muestra cómo uno podría proporcionar un recurso de FunctionConfig() a un controlador de controladora I2C. 
+El siguiente ejemplo muestra cómo se podría proporcionar un recurso de MsftFunctionConfig() a un controlador de controladora I2C. 
 
 ```cpp
 Device(I2C1) 
@@ -591,14 +596,14 @@ Device(I2C1)
         { 
             Memory32Fixed(ReadWrite, 0x3F804000, 0x20) 
             Interrupt(ResourceConsumer, Level, ActiveHigh, Shared) { 0x55 } 
-            FunctionConfig(Exclusive, PullUp, 4, "\\_SB.GPI0", 0, ResourceConsumer, ) { 2, 3 } 
+            MsftFunctionConfig(Exclusive, PullUp, 4, "\\_SB.GPI0", 0, ResourceConsumer, ) { 2, 3 } 
         }) 
         Return(RBUF) 
     } 
 } 
 ```
 
-Además de los recursos de memoria e interrupción que suelen requerir los controladores de controladora, también se especifica un recurso `FunctionConfig()`. Este recurso permite que el controlador de controladora I2C ponga patillas 2 y 3 (administrados por el nodo del dispositivo en \\_SB.GPIO0) en la función 4 con la resistencia pull-up habilitada. 
+Además de los recursos de memoria e interrupción que suelen requerir los controladores de controladora, también se especifica un recurso `MsftFunctionConfig()`. Este recurso permite que el controlador de controladora I2C ponga patillas 2 y 3 (administrados por el nodo del dispositivo en \\_SB.GPIO0) en la función 4 con la resistencia pull-up habilitada. 
 
 ### Compatibilidad de soporte de multiplexación en los controladores de cliente GpioClx 
 
@@ -611,7 +616,7 @@ Consulta [funciones de devolución de llamada de eventos de GpioClx](https://msd
 
 Además de estas dos nuevas DDI, deben auditarse DDI existentes para la compatibilidad de multiplexación de patillas: 
 
-* GpioClx llama a CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – CLIENT_ConnectIoPins para requerir que el controlador de minipuerto configure un conjunto de patillas para entrada o salida de GPIO. GPIO ese excluye mutuamente con FunctionConfig, lo que significa que una patilla nunca se conectará para GPIO y FunctionConfig al mismo tiempo. Dado que la función predeterminada de una patilla no tiene que ser GPIO, no se debe multiplexar una patilla necesariamente cuando se llame a ConnectIoPins. ConnectIoPins es necesario para realizar todas las operaciones que hagan falta para preparar la patilla para E/S de GPIO, incluidas las operaciones de multiplexación. *CLIENT_ConnectInterrupt* debería comportarse de forma similar, dado que las interrupciones se pueden considerar como un caso especial de entrada de GPIO. 
+* GpioClx llama a CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – CLIENT_ConnectIoPins para requerir que el controlador de minipuerto configure un conjunto de patillas para la entrada o la salida de GPIO. GPIO se excluye mutuamente con MsftFunctionConfig, lo que significa que una patilla nunca se conectará para GPIO y MsftFunctionConfig al mismo tiempo. Como la función predeterminada de una patilla no tiene por qué ser GPIO, no es obligatorio multiplexar una patilla cuando se llame a ConnectIoPins. ConnectIoPins es necesario para realizar todas las operaciones que hagan falta para preparar la patilla para E/S de GPIO, incluidas las operaciones de multiplexación. *CLIENT_ConnectInterrupt* debería comportarse de forma similar, dado que las interrupciones se pueden considerar como un caso especial de entrada de GPIO. 
 * CLIENT_DisconnectIoPins/CLIENT_DisconnectInterrupt: estas rutinas deben devolver patillas en el estado en el que estaban cuando se llamó a CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt, a menos que se especifique la marca PreserveConfiguration. Además de revertir la dirección de las patillas a su estado predeterminado, el minipuerto también debería revertir el estado de multiplexación de cada patilla al estado que tenía cuando se llamó a la rutina _Connect. 
 
 Por ejemplo, supongamos que la configuración predeterminada de una patilla sea UART y la patilla también se puede usar como GPIO. Cuando se llama a CLIENT_ConnectIoPins para conectar la patilla para GPIO, debería multiplexar la patilla para el GPIO y, en CLIENT_DisconnectIoPins, debería volver a multiplexar la patilla para UART. En general, las rutinas _Disconnect deben deshacer las operaciones realizadas por las rutinas _Connect. 
@@ -624,13 +629,13 @@ El siguiente diagrama muestra las dependencias entre cada uno de estos component
 
 ![Dependencia de multiplexación de patillas](images/usermode-access-diagram-2.png)
 
-En el tiempo de inicialización del dispositivo, los marcos `SpbCx` y `SerCx` analizan todos los recursos `FunctionConfig()` suministrados como recursos de hardware para el dispositivo. A continuación, SpbCx/SerCx adquieren y liberan los recursos de multiplexación de patillas bajo petición.
+En el tiempo de inicialización del dispositivo, los marcos `SpbCx` y `SerCx` analizan todos los recursos `MsftFunctionConfig()` suministrados como recursos de hardware para el dispositivo. A continuación, SpbCx/SerCx adquieren y liberan los recursos de multiplexación de patillas bajo petición.
 
 `SpbCx` se aplica la configuración de multiplexación de patillas en su controlador *IRP_MJ_CREATE*, justo antes de la devolución de llamada a [EvtSpbTargetConnect()](https://msdn.microsoft.com/library/windows/hardware/hh450818.aspx) del controlador del cliente. Si no se pudo aplicar la configuración de la multiplexación, no se realizará la devolución de llamada a `EvtSpbTargetConnect()` del controlador de controladora. Por lo tanto, un controlador SPB puede suponer que las patillas se multiplexan en la función SPB en el momento en que se llama a `EvtSpbTargetConnect()`.
 
 `SpbCx` revierte la configuración de multiplexación de patillas en su controlador *IRP_MJ_CLOSE*, justo después de invocar la devolución de llamada a [EvtSpbTargetDisconnect()](https://msdn.microsoft.com/library/windows/hardware/hh450820.aspx) del controlador de controladora. El resultado es que las patillas se multiplexan en la función SPB siempre que un controlador periférico abra un identificador para el controlador de controladora SPB, y se multiplexan inmediatamente cuando el controlador periférico cierra su identificador.
 
-`SerCx` se comporta de forma similar. `SerCx` adquiere todos los recursos `FunctionConfig()` en su controlador *IRP_MJ_CREATE* justo antes de invocar la devolución de llamada a [EvtSerCx2FileOpen()](https://msdn.microsoft.com/library/windows/hardware/dn265209.aspx) del controlador de controladora y libera todos los recursos en su controlador IRP_MJ_CLOSE, justo después de invocar la devolución de llamada a [EvtSerCx2FileClose](https://msdn.microsoft.com/library/windows/hardware/dn265208.aspx) del controlador de controladora.
+`SerCx` se comporta de forma similar. `SerCx` adquiere todos los recursos `MsftFunctionConfig()` en su controlador *IRP_MJ_CREATE* justo antes de invocar la devolución de llamada a [EvtSerCx2FileOpen()](https://msdn.microsoft.com/library/windows/hardware/dn265209.aspx) del controlador de controladora y libera todos los recursos en su controlador IRP_MJ_CLOSE, justo después de invocar la devolución de llamada a [EvtSerCx2FileClose](https://msdn.microsoft.com/library/windows/hardware/dn265208.aspx) del controlador de controladora.
 
 La implicación de la multiplexación dinámica de patillas para los controladores de controladora `SerCx` y `SpbCx` consiste en que deben ser capaces de tolerar las patillas que se multiplexan desde la función SPB/UART a horas determinadas. Los controladores de controladora deben asumir que las patillas no se multiplexarán hasta que se llame a `EvtSpbTargetConnect()` o `EvtSerCx2FileOpen()`. No es necesaria la multiplexación de las patillas en la función SPB/UART durante las siguientes devoluciones de llamada. La siguiente no es una lista completa, pero representa las rutinas de PNP más comunes implementadas por los controladores de controladora.
 
@@ -717,7 +722,6 @@ Hay herramientas de línea de comandos simples para Gpio, I2c, Spi y serie dispo
 | GpioClx   | https://msdn.microsoft.com/library/windows/hardware/hh439508.aspx |
 | SerCx | https://msdn.microsoft.com/library/windows/hardware/ff546939.aspx |
 | Pruebas MITT I2C | https://msdn.microsoft.com/library/windows/hardware/dn919852.aspx |
-| Signiant | http://windowsreleases/Playbook/Content%20Owners/Requesting%20Access%20to%20Signiant.aspx |
 | GpioTestTool | https://developer.microsoft.com/es-es/windows/iot/win10/samples/GPIOTestTool |
 | I2cTestTool   | https://developer.microsoft.com/es-es/windows/iot/win10/samples/I2cTestTool | 
 | SpiTestTool | https://developer.microsoft.com/es-es/windows/iot/win10/samples/spitesttool |
@@ -1081,26 +1085,6 @@ GpioInt(Edge, ActiveBoth, Shared, $($_.PullConfig), 0, "\\_SB.GPI0",) { $($_.Pin
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

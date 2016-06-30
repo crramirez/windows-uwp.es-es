@@ -3,6 +3,10 @@ author: DelfCo
 description: Usa la API de transferencia en segundo plano para copiar archivos de forma confiable en la red.
 title: Transferencias en segundo plano
 ms.assetid: 1207B089-BC16-4BF0-BBD4-FD99950C764B
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 02e01be9cf726731697eb5934cb86b398431b532
+
 ---
 
 # Transferencias en segundo plano
@@ -35,9 +39,9 @@ La transferencia en segundo plano proporciona métodos que admiten credenciales 
 
 ### ¿Cómo se adapta esta característica a los cambios de estado de red o apagados inesperados?
 
-Cuando se producen cambios en el estado de la red, la transferencia en segundo plano mantiene una experiencia coherente para cada operación de transferencia, ya que saca provecho de manera inteligente de la información sobre el estado de la conectividad y el plan de datos del operador, que se proporciona con la característica [Conectividad](https://msdn.microsoft.com/library/windows/apps/hh452990). Para definir el comportamiento en distintos escenarios de red, una aplicación establece una directiva de costo para cada operación usando los valores que [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) define.
+Cuando se producen cambios en el estado de la red, la transferencia en segundo plano mantiene una experiencia coherente para cada operación de transferencia, ya que saca provecho de manera inteligente de la información sobre el estado de la conectividad y el plan de datos del operador, que se proporciona con la característica [Conectividad](https://msdn.microsoft.com/library/windows/apps/hh452990). Para definir el comportamiento en distintos escenarios de red, una aplicación establece una directiva de coste para cada operación usando los valores que [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) define.
 
-Por ejemplo, la directiva de costo definida para una operación puede indicar que se debe pausar automáticamente la operación cuando el dispositivo está usando una red de uso medido. La transferencia se reanudará (o reiniciará) de forma automática cuando se establezca una conexión a una red "sin restricciones". Para obtener más información sobre cómo se definen las redes por costo, consulta [**NetworkCostType**](https://msdn.microsoft.com/library/windows/apps/br207292).
+Por ejemplo, la directiva de coste definida para una operación puede indicar que se debe pausar automáticamente la operación cuando el dispositivo está usando una red de uso medido. La transferencia se reanudará (o reiniciará) de forma automática cuando se establezca una conexión a una red "sin restricciones". Para obtener más información sobre cómo se definen las redes por coste, consulta [**NetworkCostType**](https://msdn.microsoft.com/library/windows/apps/br207292).
 
 Aunque la característica de transferencia en segundo plano tiene sus propios mecanismos para controlar los cambios de estado de la red, hay otras consideraciones generales sobre conectividad que debes tener en cuenta en relación con las aplicaciones conectadas a la red. Si quieres obtener más información, lee el tema [Aprovechamiento de la información de conexión de red disponible](https://msdn.microsoft.com/library/windows/apps/hh452983).
 
@@ -77,9 +81,9 @@ Antes de comenzar la creación de una [**UploadOperation**](https://msdn.microso
 
 En el paso anterior, los valores *uriString* y *file* se pasan a una instancia de nuestro siguiente ejemplo, UploadOp, donde se usan para configurar e iniciar la nueva operación de carga. Primero, *uriString* se analiza para crear el objeto [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) necesario.
 
-Después, [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) usa las propiedades del [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) (*file)* proporcionado para rellenar el encabezado de la solicitud y establecer la propiedad *SourceFile* con el objeto **StorageFile**. Después se llama al método [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146) para insertar el nombre de archivo, indicado como una cadena, y la propiedad [**StorageFile.Name**](https://msdn.microsoft.com/library/windows/apps/br227220).
+Después, [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) usa las propiedades del [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) proporcionado (*file*) para rellenar el encabezado de la solicitud y establecer la propiedad *SourceFile* con el objeto **StorageFile**. Después se llama al método [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146) para insertar el nombre de archivo, indicado como una cadena, y la propiedad [**StorageFile.Name**](https://msdn.microsoft.com/library/windows/apps/br227220).
 
-Por último, [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) crea la [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) (*upload*.
+Por último, [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) crea la [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) (*upload*).
 
 [!code-js[uploadFile]
             (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_A "Crear e inicializar la operación de carga")]
@@ -192,7 +196,7 @@ Observa las llamadas de método asincrónico definidas con promesas de JavaScrip
 promise = download.startAsync().then(complete, error, progress);
 ```
 
-La llamada de método asincrónico está seguida por una instrucción then que indica métodos definidos por la aplicación a los que se llama cuando se devuelve un resultado de la llamada de método asincrónico. Si quieres obtener más información acerca de este patrón de programación, consulta [Programación asincrónica en JavaScript con promesas](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
+La llamada de método asincrónico está seguida por una instrucción then que indica métodos definidos por la aplicación a los que se llama cuando se devuelve un resultado de la llamada de método asincrónico. Si quieres obtener más información acerca de este patrón de programación, consulta el tema [Programación asincrónica en JavaScript con promesas](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
 
 ### Agregar métodos adicionales de control de operaciones
 
@@ -316,6 +320,7 @@ Para los errores de validación de parámetros, una aplicación también puede u
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Usa animaciones de elementos emergentes para mostrar y ocultar interfaces de usuarios emergentes para controles flotantes o elementos personalizados emergentes de interfaz de usuario. Los elementos emergentes son contenedores que aparecen sobre el contenido de la aplicación y se descartan si el usuario presiona o hace clic fuera del elemento emergente.
+Description: "Usa animaciones de elementos emergentes para mostrar y ocultar interfaces de usuarios emergentes para controles flotantes o elementos personalizados emergentes de interfaz de usuario. Los elementos emergentes son contenedores que aparecen sobre el contenido de la aplicación y se descartan si el usuario presiona o hace clic fuera del elemento emergente."
 title: Animaciones de elementos emergentes de interfaz de usuario en aplicaciones para UWP
 ms.assetid: 4E9025CE-FC90-4d4c-9DE6-EC6B6F2AD9DF
 label: Motion--Pop-up animations
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 2b135fb62d871c559892e6b1e968767b7be716bd
+
 ---
 
 # Animaciones de interfaz de usuario emergente
@@ -47,6 +51,7 @@ Usa animaciones de elementos emergentes para mostrar y ocultar interfaces de usu
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
-description: Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de una aplicación, durante un intervalo de fechas especificado y otros filtros opcionales.
-title: Obtener adquisiciones de la aplicación
+description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de una aplicación, durante un intervalo de fechas especificado y otros filtros opcionales."
+title: "Obtener adquisiciones de la aplicación"
+ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
+ms.openlocfilehash: 7f87f931c92eca1f64fbd23b4fcba3359293f94a
+
 ---
 
 # Obtener adquisiciones de la aplicación
@@ -63,13 +66,13 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">cadena</td>
-<td align="left">Identificador de producto de la aplicación de la cual quieres recuperar los datos de compra. El identificador del producto está incrustado en el vínculo descriptivo que tienes disponible en la [página Identidad de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt148561) del panel del Centro de desarrollo. Un identificador de producto de ejemplo es 9WZDNCRFJ3Q8.</td>
+<td align="left">El Id. de la Tienda de la aplicación sobre la que quieres recuperar los datos de compra. El Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8.</td>
 <td align="left">Sí</td>
 </tr>
 <tr class="even">
 <td align="left">startDate</td>
 <td align="left">fecha</td>
-<td align="left">Fecha de inicio del intervalo de fechas de los datos de compra que se han de recuperar. El valor predeterminado es la fecha actual.</td>
+<td align="left">La fecha de inicio del intervalo de fechas de los datos de compra que se han de recuperar. El valor predeterminado es la fecha actual.</td>
 <td align="left">No</td>
 </tr>
 <tr class="odd">
@@ -234,7 +237,7 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 
 ### Ejemplo de solicitud
 
-El siguiente ejemplo muestra varias solicitudes para obtener los datos de compra de la aplicación. Reemplaza el valor *applicationId* por el identificador de producto de la aplicación.
+El siguiente ejemplo muestra varias solicitudes para obtener los datos de compra de la aplicación. Reemplaza el valor *applicationId* por el Id. de la Tienda de la aplicación.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0  HTTP/1.1
@@ -262,8 +265,8 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo   | Descripción                                                                                                                                                                                                                              |
 |---------------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| date                | cadena | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
-| applicationId       | cadena | Identificador de producto de la aplicación de la cual recuperas los datos de compra.                                                                                                                                                                 |
+| date                | cadena | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
+| applicationId       | cadena | El Id. de la Tienda de la aplicación sobre la que estás recuperando los datos de compra.                                                                                                                                                                 |
 | applicationName     | cadena | Nombre para mostrar de la aplicación.                                                                                                                                                                                                             |
 | deviceType          | cadena | Tipo de dispositivo que completó la compra. Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).                                                                                                  |
 | orderName           | cadena | Nombre del pedido.                                                                                                                                                                                                                   |
@@ -314,7 +317,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 
 
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

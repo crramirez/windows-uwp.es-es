@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
-Description: Sigue estos procedimientos recomendados para el uso de geovallas en tu aplicación.
+Description: "Sigue estos procedimientos recomendados para el uso de geovallas en tu aplicación."
 title: Directrices para usar geovallas en aplicaciones
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d631885eced58d360d3e0442cbb49ede7b9b86c3
+
 ---
 
 # Directrices para usar geovallas en aplicaciones
@@ -132,6 +136,7 @@ Si tu aplicación debe usar una geovalla con un radio pequeño, aconseja a los u
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

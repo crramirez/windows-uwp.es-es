@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Administración de la activación de URI
-description: Aprende a registrar una aplicación para convertirla en el controlador predeterminado de un nombre de esquema de identificador uniforme de recursos (URI).
+author: TylerMSFT
+title: "Administración de la activación de URI"
+description: "Aprende a registrar una aplicación para convertirla en el controlador predeterminado de un nombre de esquema de identificador uniforme de recursos (URI)."
 ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
+ms.sourcegitcommit: fb83213a4ce58285dae94da97fa20d397468bdc9
+ms.openlocfilehash: ac65b46ea06e64b3b431326db365ce23505c1096
+
 ---
 
 # Controlar la activación de URI
@@ -32,7 +35,7 @@ La aplicación recibe eventos de activación solo para los nombres de esquema de
 1.  En el **Explorador de soluciones**, haz doble clic en package.appxmanifest para abrir el diseñador de manifiestos. Selecciona la pestaña **Declaraciones** y, en la lista desplegable **Declaraciones disponibles**, selecciona **Protocolo** y luego haz clic en **Agregar**.
 
     A continuación se muestra una breve descripción de cada uno de los campos que puedes rellenar en el diseñador de manifiestos para el protocolo (para obtener más detalles, consulta [**Manifiesto del paquete AppX**](https://msdn.microsoft.com/library/windows/apps/dn934791)):
-    
+
 | Campo | Descripción |
 |-------|-------------|
 | **Logo** | Especifica el logotipo que se usa para identificar el nombre de esquema de URI en la opción [Establecer programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/cc144154) del **Panel de control**. Si no se especifica ningún logotipo, se usará el logotipo pequeño para la aplicación. |
@@ -41,10 +44,7 @@ La aplicación recibe eventos de activación solo para los nombres de esquema de
 |  | **Nota**  El nombre debe estar completamente en minúsculas. |
 |  | **Tipos de archivos reservados y prohibidos** Consulta [Tipos de archivos y nombres de esquema de URI reservados](reserved-uri-scheme-names.md) para obtener una lista ordenada alfabéticamente de esquemas de URI que no se pueden registrar para las aplicaciones para UWP porque están reservados o prohibidos. |
 | **Archivo ejecutable** | Especifica el archivo ejecutable de inicio predeterminado para el protocolo. Si no se especifica, se usará el archivo ejecutable de la aplicación. Si se especifica, la cadena debe tener entre 1 y 256 caracteres, acabar en ".exe" y no puede contener los siguientes caracteres: &gt;, &lt;, :, ", &#124;, ? ni \*. Si se especifica, también se usará el elemento **Entry point**. Si no se especifica el elemento **Entry point**, se usará el punto de entrada definido para la aplicación. |
-       
-| Término | Descripción |
-|------|-------------|
-| **Entry point** | Especifica la tarea que administra la extensión del protocolo. Suele ser el nombre completo en el espacio de nombres de un tipo de Windows en tiempo de ejecución. Si no se especifica, se usará el punto de entrada de la aplicación. |
+| **Punto de entrada** | Especifica la tarea que administra la extensión del protocolo. Suele ser el nombre completo en el espacio de nombres de un tipo de Windows en tiempo de ejecución. Si no se especifica, se usará el punto de entrada de la aplicación. |
 | **Página de inicio** | La página web que administra el punto de extensibilidad. |
 | **Grupo de recursos** | Una etiqueta que puedes usar para agrupar las activaciones de extensión con fines de administración de recursos. |
 | **Desired View** (solo Windows) | Especifica el campo **Desired View** para indicar la cantidad de espacio que necesita la ventana cuando se inicia para el nombre del esquema de URI. Los posibles valores de **Desired View** son **Default**, **UseLess**, **UseHalf**, **UseMore** o **UseMinimum**. <br/>**Nota**  Windows tiene en cuenta diferentes factores a la hora de determinar el tamaño final de la ventana de la aplicación de destino, como, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en pantalla, la orientación de la pantalla, etc. El establecimiento de **Desired View** no garantiza un comportamiento de ventanas específico para la aplicación de destino.<br/> **Mobile device family: Desired View** no se admite en la familia de dispositivos móviles. |
@@ -81,43 +81,43 @@ Te recomendamos que incluyas los iconos adecuados con tu proyecto para que el lo
 El controlador de eventos [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) recibe todos los eventos de activación. La propiedad **Kind** indica el tipo de evento de activación. Este ejemplo está configurado para controlar eventos de activación [**Protocol**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.activation.activationkind.aspx#Protocol).
 
 > [!div class="tabbedCodeSnippets"]
-```cs
-public partial class App
-{
-   protected override void OnActivated(IActivatedEventArgs args)
-   {
-      if (args.Kind == ActivationKind.Protocol)
-      {
-         ProtocolActivatedEventArgs eventArgs = args as ProtocolActivatedEventArgs;
-         // TODO: Handle URI activation
-         // The received URI is eventArgs.Uri.AbsoluteUri
-      }
-   }
-}
-```
-```vb
-Protected Overrides Sub OnActivated(ByVal args As Windows.ApplicationModel.Activation.IActivatedEventArgs)
-   If args.Kind = ActivationKind.Protocol Then
-      ProtocolActivatedEventArgs eventArgs = args As ProtocolActivatedEventArgs
-      
-      ' TODO: Handle URI activation
-      ' The received URI is eventArgs.Uri.AbsoluteUri
-   End If
-End Sub
-```
-```cpp
-void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs^ args)
-{
-   if (args->Kind == Windows::ApplicationModel::Activation::ActivationKind::Protocol)
-   {
-      Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^ eventArgs = 
-          dynamic_cast<Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^>(args);
-      
-      // TODO: Handle URI activation  
-      // The received URI is eventArgs->Uri->RawUri
-   } 
-}
-```
+> ```cs
+> public partial class App
+> {
+>    protected override void OnActivated(IActivatedEventArgs args)
+>   {
+>       if (args.Kind == ActivationKind.Protocol)
+>       {
+>          ProtocolActivatedEventArgs eventArgs = args as ProtocolActivatedEventArgs;
+>          // TODO: Handle URI activation
+>          // The received URI is eventArgs.Uri.AbsoluteUri
+>       }
+>    }
+> }
+> ```
+> ```vb
+> Protected Overrides Sub OnActivated(ByVal args As Windows.ApplicationModel.Activation.IActivatedEventArgs)
+>    If args.Kind = ActivationKind.Protocol Then
+>       ProtocolActivatedEventArgs eventArgs = args As ProtocolActivatedEventArgs
+>       
+>       ' TODO: Handle URI activation
+>       ' The received URI is eventArgs.Uri.AbsoluteUri
+>  End If
+> End Sub
+> ```
+> ```cpp
+> void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs^ args)
+> {
+>    if (args->Kind == Windows::ApplicationModel::Activation::ActivationKind::Protocol)
+>    {
+>       Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^ eventArgs =
+>           dynamic_cast<Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^>(args);
+>       
+>       // TODO: Handle URI activation  
+>       // The received URI is eventArgs->Uri->RawUri
+>    }
+> }
+> ```
 
 > **Nota**  Si se inician mediante un contrato de protocolo, asegúrate de que el botón Atrás lleve al usuario de regreso a la pantalla que inició la aplicación y no al contenido previo de la aplicación.
 
@@ -175,8 +175,6 @@ Si prefieres que las aplicaciones usen un único elemento [**Frame**](https://ms
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

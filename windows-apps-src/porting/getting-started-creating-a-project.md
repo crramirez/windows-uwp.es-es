@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
-description: Microsoft Visual Studio es a Windows lo que Xcode a iOS y Mac OS. En este tutorial, te ayudamos a que te sientas cómodo usando Visual Studio.
-title: Creación de un proyecto en Visual Studio
+description: "Microsoft Visual Studio es a Windows lo que Xcode a iOS y Mac OS. En este tutorial, te ayudamos a que te sientas cómodo usando Visual Studio."
+title: "Creación de un proyecto en Visual Studio"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 23d9ed066e2909a15b3106fd19bf6ce5ab09e7a9
+
 ---
 
 # Introducción: creación de un proyecto
@@ -51,6 +55,7 @@ En Visual Studio, también puedes elegir entre distintas plantillas de proyecto,
 [Introducción: elección de un lenguaje de programación](getting-started-choosing-a-programming-language.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

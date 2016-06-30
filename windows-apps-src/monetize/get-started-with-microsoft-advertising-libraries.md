@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: ae45490f-3eb1-4b7f-8e18-bf82f0ca5d6d
-description: Obtén la información que necesitas para comenzar a usar las bibliotecas de Microsoft Advertising para agregar anuncios intersticiales en vídeo y banners a tus aplicaciones.
-title: Introducción a las bibliotecas de Microsoft Advertising
+description: "Obtén la información que necesitas para comenzar a usar las bibliotecas de Microsoft Advertising para agregar anuncios intersticiales en vídeo y banners a tus aplicaciones."
+title: "Introducción a las bibliotecas de Microsoft Advertising"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 08168dc15b33d99a044eedd7864848ed7a858991
+
 
 ---
 
@@ -37,6 +41,7 @@ Para obtener proyectos de muestra completos que muestran cómo agregar anuncios 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

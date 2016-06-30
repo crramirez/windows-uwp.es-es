@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma.
-title: Dispositivo básico para aplicaciones de la Plataforma universal de Windows (UWP)
+Description: "Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma."
+title: "Dispositivo básico para aplicaciones de la Plataforma universal de Windows (UWP)"
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: bb23e8cc85544d4b5f0717b0c2d2ebad1447cb8b
+
 ---
 
 #  Dispositivo básico para aplicaciones de la Plataforma universal de Windows (UWP)
@@ -194,6 +198,7 @@ Funcionalidades típicas del dispositivo
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

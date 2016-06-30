@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Un control de zoom semántico permite que el usuario haga zoom entre dos vistas semánticas distintas del mismo conjunto de datos.
-title: Zoom semántico
+Description: "Un control de zoom semántico permite que el usuario haga zoom entre dos vistas semánticas distintas del mismo conjunto de datos."
+title: "Zoom semántico"
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 47e39290a63408fc66783617ad2f12345eab2fa3
+
 ---
 
 # Zoom semántico
@@ -65,6 +69,7 @@ Una libreta de direcciones es un ejemplo de un conjunto de datos por el que pued
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

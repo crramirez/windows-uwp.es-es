@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Puedes usar un control RichEditBox para escribir y editar documentos de texto enriquecido que contengan texto con formato, hipervínculos e imágenes. Puedes hacer que RichEditBox sea de solo lectura si estableces la propiedad IsReadOnly en true.
+Description: "Puedes usar un control RichEditBox para escribir y editar documentos de texto enriquecido que contengan texto con formato, hipervínculos e imágenes. Puedes hacer que RichEditBox sea de solo lectura si estableces la propiedad IsReadOnly en true."
 title: RichEditBox
 ms.assetid: 4AFC0DFA-3B89-434D-9F86-4309CCFF7839
 label: Rich edit box
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: fc685b952db7292a9eea4d8a54bd6e2685cb13c0
+
 ---
 # Cuadro de texto enriquecido
 Puedes usar un control RichEditBox para escribir y editar documentos de texto enriquecido que contengan texto con formato, hipervínculos e imágenes. Puedes hacer que RichEditBox sea de solo lectura si estableces la propiedad IsReadOnly en **true**.
@@ -211,6 +215,7 @@ Para más información sobre cómo usar los ámbitos de entrada, consulta [Usar 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

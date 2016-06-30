@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 159681E4-BF9E-4A57-9FEE-EC7ED0BEFFAD
 title: Sugerencias de rendimiento de MVVM y lenguaje
-description: En este tema se describen algunos aspectos a tener en cuenta acerca del rendimiento y que están relacionados con la elección de patrones de diseño del software y del lenguaje de programación.
+description: "En este tema se describen algunos aspectos a tener en cuenta acerca del rendimiento y que están relacionados con la elección de patrones de diseño del software y del lenguaje de programación."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 77a162076e14b4726e1fb29673b14be65be37a16
+
 ---
 # Sugerencias de rendimiento de MVVM y lenguaje
 
@@ -40,6 +44,7 @@ Hay varias definiciones concretas del patrón MVVM y marcos de terceros que ayud
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

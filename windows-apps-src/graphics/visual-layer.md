@@ -2,7 +2,11 @@
 author: scottmill
 ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Capa visual
-description: La API de Windows.UI.Composition proporciona acceso a la capa de composición entre la capa de marco (XAML) y la capa de elementos gráficos (DirectX).
+description: "La API de Windows.UI.Composition proporciona acceso a la capa de composición entre la capa de marco (XAML) y la capa de elementos gráficos (DirectX)."
+translationtype: Human Translation
+ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
+ms.openlocfilehash: 164c01737d27451adcb685f9cda544cc00634af4
+
 ---
 # Capa visual
 
@@ -56,15 +60,17 @@ Además de crear un árbol visual desde cero, la API de composición puede inter
 
 
 **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si desarrollas para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
 ## <span id="Additional_Resources_"></span><span id="additional_resources_"></span><span id="ADDITIONAL_RESOURCES_"></span>Recursos adicionales:
 
--   Artículo de MSDN de Kenny Kerr sobre esta API, [Graphics and Animation - Windows Composition Turns 10 (Gráficos y animación: La nueva composición para Windows 10)](https://msdn.microsoft.com/magazine/mt590968)
+-   Artículo MSDN de Kenny Kerr sobre esta API, [Gráficos y animación: La nueva composición para Windows 10](https://msdn.microsoft.com/magazine/mt590968)
 -   Muestras de composición en [Composition GitHub](https://github.com/Microsoft/composition).
--   Documentación de referencia completa de la API
+-   [
+              **Documentación de referencia completa de la API**
+            ](https://msdn.microsoft.com/library/windows/apps/Dn706878).
 -   Problemas conocidos: [Problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues).
 
  
@@ -76,6 +82,7 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

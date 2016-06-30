@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Configurar el proyecto de juego
-description: El primer paso para ensamblar el juego es configurar un proyecto en Microsoft Visual Studio de tal forma que se reduzca al mínimo la cantidad de trabajo necesaria en la infraestructura de código.
+description: "El primer paso para ensamblar el juego es configurar un proyecto en Microsoft Visual Studio de tal forma que se reduzca al mínimo la cantidad de trabajo necesaria en la infraestructura de código."
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d4d7864f9689df0919b53ee70b8e18f8d812b2b0
+
 ---
 
 # Configurar el proyecto de juego
@@ -164,6 +168,7 @@ En el próximo tutorial, [Definir el marco de UWP del juego](tutorial--building-
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

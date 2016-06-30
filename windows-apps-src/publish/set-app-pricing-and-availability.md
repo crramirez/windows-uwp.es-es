@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: La página Precios y disponibilidad del proceso de envío de la aplicación permite determinar cuánto costará tu aplicación, independientemente de si ofreces una prueba gratuita y cómo, cuándo y dónde estará disponible para los clientes.
+Description: "La página Precios y disponibilidad del proceso de envío de la aplicación permite determinar cuánto costará tu aplicación, independientemente de si ofreces una prueba gratuita y cómo, cuándo y dónde estará disponible para los clientes."
 title: Establecer los precios y la disponibilidad de las aplicaciones
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 509ef3b8b9ec06907fccc2dbbe29fa3c72cb8e5d
+
 ---
 
 # Establecer los precios y la disponibilidad de las aplicaciones
@@ -98,6 +102,7 @@ También puedes cambiar la fecha de lanzamiento después de enviar la aplicació
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

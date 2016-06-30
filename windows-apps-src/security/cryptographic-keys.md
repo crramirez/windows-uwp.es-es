@@ -1,76 +1,80 @@
 ---
-title: Cryptographic keys
-description: This article shows how to use standard key derivation functions to derive keys and how to encrypt content using symmetric and asymmetric keys.
+title: "Claves criptográficas"
+description: "En este artículo se muestra cómo usar funciones de derivación de claves estándar para derivar claves y cómo cifrar contenido mediante claves simétricas y asimétricas."
 ms.assetid: F35BEBDF-28C5-4F91-A94E-F7D862B6ED59
 author: awkoren
+ms.sourcegitcommit: 4c8f586f711b1a9e2d2f252cf28a5239d9d68122
+ms.openlocfilehash: c23e0ba44a5013dca9ceec94ff434a34323d53bc
+
 ---
 
-# Cryptographic keys
+# Claves criptográficas
 
 
-\[ \[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \] \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-This article shows how to use standard key derivation functions to derive keys and how to encrypt content using symmetric and asymmetric keys.
+En este artículo se muestra cómo usar funciones de derivación de claves estándar para derivar claves y cómo cifrar contenido mediante claves simétricas y asimétricas.
 
-## Symmetric keys
-
-
-Symmetric key encryption, also called secret key encryption, requires that the key used for encryption also be used for decryption. You can use a [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) class to specify a symmetric algorithm and create or import a key. You can use static methods on the [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) class to encrypt and decrypt data by using the algorithm and key.
-
-Symmetric key encryption typically uses block ciphers and block cipher modes. A block cipher is a symmetric encryption function that operates on fixed size blocks. If the message you want to encrypt is longer than the block length, you must use a block cipher mode. A block cipher mode is a symmetric encryption function built by using a block cipher. It encrypts plaintext as a series of fixed size blocks. The following modes are supported for apps:
-
--   The ECB (electronic codebook) mode encrypts each block of the message separately. This is not considered a secure encryption mode.
--   The CBC (cipher block chaining) mode uses the previous ciphertext block to obfuscate the current block. You must determine what value to use for the first block. This value is called the initialization vector (IV).
--   The CCM (counter with CBC-MAC) mode combines the CBC block cipher mode with a message authentication code (MAC).
--   The GCM (Galois counter mode) mode combines the counter encryption mode with the Galois authentication mode.
-
-Some modes such as CBC require that you use an initialization vector (IV) for the first ciphertext block. The following are common initialization vectors. You specify the IV when calling [**CryptographicEngine.Encrypt**](https://msdn.microsoft.com/library/windows/apps/br241494). For most cases it is important that the IV never be reused with the same key.
-
--   Fixed uses the same IV for all messages to be encrypted. This leaks information and its use is not recommended.
--   Counter increments the IV for each block.
--   Random creates a pseudorandom IV. You can use [**CryptographicBuffer.GenerateRandom**](https://msdn.microsoft.com/library/windows/apps/br241392) to create the IV.
--   Nonce-Generated uses a unique number for each message to be encrypted. Typically, the nonce is a modified message or transaction identifier. The nonce does not have to be kept secret, but it should never be reused under the same key.
-
-Most modes require that the length of the plaintext be an exact multiple of the block size. This usually requires that you pad the plaintext to obtain the appropriate length.
-
-While block ciphers encrypt fixed size blocks of data, stream ciphers are symmetric encryption functions that combine plaintext bits with a pseudorandom bit stream (called a key stream) to generate the ciphertext. Some block cipher modes such as output feedback mode (OTF) and counter mode (CTR) effectively turn a block cipher into a stream cipher. Actual stream ciphers such as RC4, however, typically operate at higher speeds than block cipher modes are capable of achieving.
-
-The following example shows how to use the [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) class to create a symmetric key and use it to encrypt and decrypt data.
-
-## Asymmetric keys
+## Claves simétricas
 
 
-Asymmetric key cryptography, also called public key cryptography, uses a public key and a private key to perform encryption and decryption. The keys are different but mathematically related. Typically the private key is kept secret and is used to encrypt data while the public key is distributed to interested parties and is used to decrypt data. Asymmetric cryptography is also useful for signing data.
+El cifrado de clave simétrica, también denominado cifrado de clave secreta, necesita usar para el descifrado la misma la clave que se usó para el cifrado. También puedes usar una clase [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) para especificar un algoritmo simétrico y crear o importar una clave. Puedes usar métodos estáticos en la clase [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) para cifrar y descifrar datos con el algoritmo y la clave.
 
-Because asymmetric cryptography is much slower than symmetric cryptography, it is seldom used to encrypt large amounts of data directly. Instead, it is typically used in the following manner to encrypt keys.
+El cifrado de clave simétrica suele usar cifrados de bloques y modos de cifrado de bloques. Un cifrado de bloques es una función de cifrado simétrica que se aplica a bloques de tamaño fijo. Si el mensaje que quieres cifrar es más largo que la longitud del bloque, debes usar un modo de cifrado de bloques. Un modo de cifrado de bloques es una función de cifrado simétrica que se crea mediante un cifrado de bloques. Cifra texto no cifrado como una serie de bloques de tamaño fijo. Se admiten los siguientes modos para las aplicaciones:
 
--   Alice requires that Bob send her only encrypted messages.
--   Alice creates a private/public key pair, keeps her private key secret and publishes her public key.
--   Bob has a message he wants to send to Alice.
--   Bob creates a symmetric key.
--   Bob uses his new symmetric key to encrypt his message to Alice.
--   Bob uses Alice’s public key to encrypt his symmetric key.
--   Bob sends the encrypted message and the encrypted symmetric key to Alice (enveloped).
--   Alice uses her private key (from the private/public pair) to decrypt Bob’s symmetric key.
--   Alice uses Bob’s symmetric key to decrypt the message.
+-   El modo ECB (libro de códigos electrónico) cifra cada bloque del mensaje por separado. Este modo de cifrado no se considera seguro.
+-   El modo CBC (encadenamiento de bloques cifrados) usa el bloque de texto cifrado anterior para ofuscar el bloque actual. Debes determinar el valor que hay que utilizar para el primer bloque. Este valor se denomina vector de inicialización (IV).
+-   El modo CCM (contador con CBC-MAC) combina el modo de cifrado de bloques CBC con un código de autenticación de mensaje (MAC).
+-   El modo GCM (modo de contador Galois) combina el modo de cifrado de contador con el modo de autenticación Galois.
 
-You can use an [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) object to specify an asymmetric algorithm or a signing algorithm, to create or import an ephemeral key pair, or to import the public key portion of a key pair.
+Algunos modos como CBC requieren que se utilice un vector de inicialización (IV) para el primer bloque de texto cifrado. A continuación se muestran vectores de inicialización comunes. El usuario especifica el IV al llamar a [**CryptographicEngine.Encrypt**](https://msdn.microsoft.com/library/windows/apps/br241494). En la mayoría de los casos es importante no reutilizar el IV con la misma clave.
 
-## Deriving keys
+-   Fijo usa el mismo IV para todos los mensajes que se van a cifrar. Así se pierde información y no se recomienda su uso.
+-   Contador incrementa el IV para cada bloque.
+-   Aleatorio crea un IV seudoaleatorio. Puedes usar [**CryptographicBuffer.GenerateRandom**](https://msdn.microsoft.com/library/windows/apps/br241392) para crear el IV.
+-   Generado por valor nonce usa un número único para cada mensaje que se va a cifrar. Generalmente, el valor de seguridad (nonce) es un mensaje modificado o un identificador de transacción. No es necesario mantener en secreto el nonce, pero no se debe reutilizar con la misma clave.
+
+La mayoría de los modos requieren que la longitud del texto no cifrado sea un múltiplo exacto del tamaño de bloque. Normalmente esto requiere rellenar el texto no cifrado para alcanzar la longitud correcta.
+
+A diferencia de los cifrados de bloques, que cifran bloques de datos de tamaño fijo, los cifrados de flujos son funciones de cifrado simétrico que combinan fragmentos de texto no cifrado con un flujo de bits seudoaleatorio (denominado flujo de clave) para generar todo el texto cifrado. Algunos modos de cifrado de bloques, como el modo de realimentación de salida (OTF) y el modo de contador (CTR), convierten de manera efectiva un cifrado de bloques en un cifrado de secuencias. No obstante, los cifrados de flujos reales, como RC4, suelen ser más rápidos que los modos de cifrado de bloques.
+
+El siguiente ejemplo muestra cómo usar la clase [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) para crear una clave simétrica y usarla para cifrar y descifrar datos.
+
+## Claves asimétricas
 
 
-It is often necessary to derive additional keys from a shared secret. You can use the [**KeyDerivationAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241518) class and one of the following specialized methods in the [**KeyDerivationParameters**](https://msdn.microsoft.com/library/windows/apps/br241524) class to derive keys.
+La criptografía de clave asimétrica, también denominada criptografía de clave pública, usa una clave pública y una clave privada para realizar el cifrado y el descifrado. Las claves son distintas pero están relacionadas matemáticamente. Normalmente, la clave privada se mantiene en secreto y se usa para descifrar datos, mientras que la clave pública se distribuye a las partes interesadas y se usa para cifrar datos. La criptografía asimétrica también se usa para firmar datos.
 
-| Object                                                                            | Description                                                                                                                                |
+Debido a que la criptografía asimétrica es mucho más lenta que la criptografía simétrica, pocas veces se usa para cifrar grandes cantidades de datos directamente. En cambio, se suele usar para cifrar claves de la siguiente manera.
+
+-   María requiere que Francisco le envíe solo mensajes cifrados.
+-   María crea un par de claves pública y privada, mantiene la clave privada en secreto y publica la clave pública.
+-   Francisco quiere enviarle un mensaje a María.
+-   Francisco crea una clave simétrica.
+-   Francisco usa esta nueva clave simétrica para cifrar el mensaje que quiere enviar a María.
+-   Francisco usa la clave pública de María para cifrar su clave simétrica.
+-   Francisco envía el mensaje cifrado y la clave simétrica cifrada a María (doble cifrado).
+-   María usa su clave privada (del par de claves pública y privada) para descifrar la clave simétrica de Francisco.
+-   María usa la clave simétrica de Francisco para descifrar el mensaje.
+
+Puedes usar un objeto [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) para especificar un algoritmo asimétrico o un algoritmo de firma, para crear o importar un par de claves efímeras, o para importar la parte de la clave pública de un par de claves.
+
+## Derivación de claves
+
+
+Suele ser necesario derivar claves adicionales de un secreto compartido. Para derivar claves, puedes usar la clase [**KeyDerivationAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241518) y uno de los siguientes métodos especializados en la clase [**KeyDerivationParameters**](https://msdn.microsoft.com/library/windows/apps/br241524).
+
+| Objeto                                                                            | Descripción                                                                                                                                |
 |-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| [**BuildForPbkdf2**](https://msdn.microsoft.com/library/windows/apps/br241525)    | Creates a KeyDerivationParameters object for use in the password-based key derivation function 2 (PBKDF2).                                 |
-| [**BuildForSP800108**](https://msdn.microsoft.com/library/windows/apps/br241526)  | Creates a KeyDerivationParameters object for use in a counter mode, hash-based message authentication code (HMAC) key derivation function. |
-| [**BuildForSP80056a**](https://msdn.microsoft.com/library/windows/apps/br241527)  | Creates a KeyDerivationParameters object for use in the SP800-56A key derivation function.                                                 |
+| [**BuildForPbkdf2**](https://msdn.microsoft.com/library/windows/apps/br241525)    | Crea un objeto KeyDerivationParameters para usarlo en la función de derivación de claves basada en contraseña 2 (PBKDF2).                                 |
+| [**BuildForSP800108**](https://msdn.microsoft.com/library/windows/apps/br241526)  | Crea un objeto KeyDerivationParameters para usarlo en una función de derivación de claves de código de autenticación de mensajes basado en hash (HMAC) en modo de contador. |
+| [**BuildForSP80056a**](https://msdn.microsoft.com/library/windows/apps/br241527)  | Crea un objeto KeyDerivationParameters para usarlo en la función de derivación de claves SP800-56A.                                                 |
 
  
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

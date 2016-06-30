@@ -1,8 +1,12 @@
 ---
 author: scottmill
 ms.assetid: 16ad97eb-23f1-0264-23a9-a1791b4a5b95
-title: Interoperación DirectX y Direct2D nativa de composición con BeginDraw y EndDraw
-description: La API de Windows.UI.Composition proporciona interfaces nativas de interoperación que permiten mover contenido directamente al compositor.
+title: "Interoperación DirectX y Direct2D nativa de composición con BeginDraw y EndDraw"
+description: "La API de Windows.UI.Composition proporciona interfaces nativas de interoperación que permiten mover contenido directamente al compositor."
+translationtype: Human Translation
+ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
+ms.openlocfilehash: b5308c8023990996a93277dd1bcfb8298c0bbf4f
+
 ---
 # Interoperación DirectX y Direct2D nativa de composición con BeginDraw y EndDraw
 
@@ -265,6 +269,7 @@ private:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

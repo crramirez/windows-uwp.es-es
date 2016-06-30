@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Crear sombreadores y dibujar primitivos
-description: Aquí te mostramos cómo usar archivos de origen HLSL para compilar y crear sombreadores que luego podrás usar para dibujar primitivos en la pantalla.
+description: "Aquí te mostramos cómo usar archivos de origen HLSL para compilar y crear sombreadores que luego podrás usar para dibujar primitivos en la pantalla."
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 15b5f83b45b928baaa484c10dc6e7bfe9c27a924
+
 ---
 
 # Crear sombreadores y dibujar primitivos
@@ -291,6 +295,7 @@ A continuación, crearemos un cubo 3D en órbita y le aplicaremos efectos de ilu
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

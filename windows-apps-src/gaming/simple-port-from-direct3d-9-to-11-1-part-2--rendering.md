@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Convertir el marco de representación
-description: Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11.
+title: "Convertir el marco de representación"
+description: "Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11."
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5cfdce2a62f6b5761ebf820418762a307dd051bb
+
 ---
 
 # Convertir el marco de representación
@@ -490,6 +494,7 @@ La cadena de representación que acabamos de crear recibirá una llamada proveni
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: A continuación explicamos las reglas de la sintaxis XAML y la terminología que describe las restricciones o alternativas que existen en la sintaxis XAML.
-title: Guía de sintaxis XAML
+description: "A continuación explicamos las reglas de la sintaxis XAML y la terminología que describe las restricciones o alternativas que existen en la sintaxis XAML."
+title: "Guía de sintaxis XAML"
 ms.assetid: A57FE7B4-9947-4AA0-BC99-5FE4686B611D
+translationtype: Human Translation
+ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
+ms.openlocfilehash: 8e7819b02d7a22a16cf16091d08bef0aabc8d36e
+
 ---
 
 # Guía de sintaxis XAML
@@ -319,6 +323,7 @@ Las secciones de uso de XAML también utilizan diversos marcadores de posición 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

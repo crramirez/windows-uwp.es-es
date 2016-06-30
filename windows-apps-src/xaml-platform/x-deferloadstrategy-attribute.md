@@ -1,8 +1,12 @@
 ---
 author: jwmsft
 title: Atributo xDeferLoadStrategy
-description: El atributo xDeferLoadStrategy retrasa la creación de un elemento y sus elementos secundarios, lo que disminuye el tiempo de inicio aunque incrementa ligeramente el uso de memoria. Cada elemento afectado agrega alrededor de 600 bytes de uso de memoria.
+description: "El atributo xDeferLoadStrategy retrasa la creación de un elemento y sus elementos secundarios, lo que disminuye el tiempo de inicio aunque incrementa ligeramente el uso de memoria. Cada elemento afectado agrega alrededor de 600 bytes de uso de memoria."
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: b989a31439444f06dacb86adb186f853d1637f6c
+
 ---
 
 # Atributo x:DeferLoadStrategy
@@ -83,6 +87,7 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

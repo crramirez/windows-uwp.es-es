@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-title: Tareas iniciales con animación
+title: "Tareas iniciales con animación"
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
-description: En este proyecto, moveremos un rectángulo, le aplicaremos un efecto de atenuación y después lo volveremos a mostrar.
+description: "En este proyecto, moveremos un rectángulo, le aplicaremos un efecto de atenuación y después lo volveremos a mostrar."
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 6e0b92af1d3c5f61aa2341d43ca40330fcc359f4
+
 ---
 
 # Introducción: animación
@@ -126,6 +130,7 @@ Puedes modificar este XAML manualmente o regresar a Blend y seguir trabajando de
 [Introducción: A continuación](getting-started-what-next.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

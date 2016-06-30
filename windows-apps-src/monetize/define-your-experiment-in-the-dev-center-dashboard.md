@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: Antes de poder ejecutar un experimento en tu aplicación de la Plataforma universal de Windows (UWP) con pruebas A/B, debes definir tu experimento en el panel del Centro de desarrollo.
+Description: "Antes de poder ejecutar un experimento en tu aplicación de la Plataforma universal de Windows (UWP) con pruebas A/B, debes definir tu experimento en el panel del Centro de desarrollo."
 title: Define tu experimento en el panel del Centro de desarrollo
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7462c23de58b44f897a1737d0d54913144b14f75
+
 ---
 
 # Define tu experimento en el panel del Centro de desarrollo
@@ -80,6 +84,7 @@ Después de definir el experimento en el panel del Centro de desarrollo, estás 
   * [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

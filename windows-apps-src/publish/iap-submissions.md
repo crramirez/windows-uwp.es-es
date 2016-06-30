@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Las IAP se publican a través del panel del Centro de desarrollo de Windows.
-title: Envíos de IAP
+Description: "Las IAP se publican a través del panel del Centro de desarrollo de Windows."
+title: "Envíos de IAP"
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
+ms.sourcegitcommit: 97f4aee47cab9064ac053e7a6e16441d6960d41f
+ms.openlocfilehash: 4a1764dfb8f94409aba973a28ba2999854179196
+
 ---
 
 # Envíos de IAP
@@ -10,48 +13,52 @@ ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 
 Un IAP (producto desde la aplicación) es un elemento complementario para una aplicación que los clientes pueden adquirir. Un IAP puede ser un complemento divertido, un nuevo nivel de juego o cualquier cosa que creas que puede atraer a los usuarios. Los IAP no solo son una manera fantástica de hacer dinero sino que promueven la participación y la interacción del cliente.
 
-Las IAP se publican a través del panel del Centro de desarrollo de Windows. También tendrás que [habilitar los IAP](https://msdn.microsoft.com/library/windows/apps/mt219684) en el código de la aplicación.
+Las IAP se publican a través del panel del Centro de desarrollo de Windows. También tendrás que [habilitar los IAP](../monetize/enable-in-app-product-purchases.md) en el código de la aplicación.
 
-El primer paso en el proceso de envío de IAP es crear el IAP en el panel [definiendo su id. de producto](set-your-iap-product-id.md). Después, puedes crear un envío para que se pueda adquirir el IAP a través de la Tienda Windows. Puedes enviar un IAP al mismo tiempo que [envías la aplicación](app-submissions.md) o puedes trabajar en él de forma independiente. Y puedes realizar [actualizaciones](#updating-an-iap-after-submission) de IAP una vez que la aplicación esté en la Tienda sin tener que volver a enviar la aplicación.
+El primer paso en el proceso de envío de un IAP es crear dicho IAP en el panel mediante la [definición de su tipo de producto y su id. de producto](set-your-iap-product-id.md). Después, es posible crear un envío para que el IAP se pueda adquirir a través de la Tienda Windows. Puedes enviar un IAP al mismo tiempo que [envías la aplicación](app-submissions.md) o puedes trabajar en él de forma independiente. Y puedes realizar [actualizaciones](#updating-an-iap-after-submission) de los IAP una vez que la aplicación esté en la Tienda sin tener que volver a enviar la aplicación.
 
 ## Lista de comprobación para enviar un IAP
 
+A continuación verás una lista de la información que se proporciona al crear el envío de un IAP. A continuación se indican los elementos que debes proporcionar. Algunos de ellos son opcionales o tienen valores predeterminados ya proporcionados que puedes cambiar según lo desees.
 
-A continuación se incluye la información que puedes proporcionar al crear el envío de un IAP. Los elementos que debes proporcionar se indican a continuación. Algunos de ellos son opcionales o tienen valores predeterminados ya proporcionados que puedes cambiar según lo desees.
+### Crea una nueva página del IAP
+| Nombre del campo                    | Notas                            | 
+|-------------------------------|----------------------------------|
+| [**Tipo de producto**](set-your-iap-product-id.md#product-type)      | Obligatorio. Si es **Duradero**, se necesita una **Duración del producto**. |  
+| [**Id. del producto**](set-your-iap-product-id.md#product-id)          | Obligatorio |        
 
 ### Página Propiedades
-| Nombre del campo                    | Notas                                       | Para más información                                                             |
-|-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| **Tipo de producto**              | Obligatorio. Si es **Durable**, es necesaria una **Duración del producto**. | [Especificar propiedades de IAP](enter-iap-properties.md)         |
-| **Tipo de contenido**              | Obligatorio                                    | [Especificar propiedades de IAP](enter-iap-properties.md)                           | 
-| **Palabras clave**                  | Opcional (hasta 10 palabras clave, límite de 30 caracteres cada una) | [Especificar propiedades de IAP](enter-iap-properties.md)                 |
-| **Etiqueta**                       | Opcional (límite de 3000 caracteres)             | [Especificar propiedades de IAP](enter-iap-properties.md)                           |
+| Nombre del campo                    | Notas                              |   
+|-------------------------------|------------------------------------|
+| [**Duración del producto**](enter-iap-properties.md#product-lifetime)  | Se requiere si es el tipo de producto **Duradero**. No es aplicable si el tipo de producto es **Consumible**. | 
+| [**Tipo de contenido**](enter-iap-properties.md#content-type)          | Obligatorio       |               
+| [**Palabras clave**](enter-iap-properties.md#keywords)                  | Opcional (hasta 10 palabras clave, con un límite de 30 caracteres cada una) | 
+| [**Etiqueta**](enter-iap-properties.md#tag)                               | Opcional (límite de 3000 caracteres)             | 
 
 ### Página Precios y disponibilidad 
-| Nombre del campo                    | Notas                                       | Para más información                                                             |
-|-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| **Precio base**                | Obligatorio                                    | [Establecer precios y disponibilidad de IAP](set-iap-pricing-and-availability.md)   |
-| **Mercados y precios personalizados** | Valor predeterminado: disponible en todos los mercados posibles | [Establecer precios y disponibilidad de IAP](set-iap-pricing-and-availability.md)   |
-| **Precio de oferta**              | Opcional                                    | [Establecer precios y disponibilidad de IAP](set-iap-pricing-and-availability.md)   |
-| **Distribución y visibilidad** | Valor predeterminado: los clientes pueden encontrar el IAP explorando o buscando en la Tienda | [Establecer precios y disponibilidad de IAP](set-iap-pricing-and-availability.md) |
-| **Fecha de publicación**              | Valor predeterminado: publicar tan pronto como el IAP supere la certificación | [Establecer precios y disponibilidad de IAP](set-iap-pricing-and-availability.md)   |
+| Nombre del campo                    | Notas                                       | 
+|-------------------------------|---------------------------------------------|
+| [**Precio base**](set-iap-pricing-and-availability.md#base-price)                | Obligatorio                                    | 
+| [**Mercados y precios personalizados**](set-iap-pricing-and-availability.md#markets-and-custom-prices)  | Valor predeterminado: Disponible en todos los mercados posibles | 
+| [**Precio de oferta**](put-apps-and-iaps-on-sale.md)               | Opcional                             |
+| [**Distribución y visibilidad**](set-iap-pricing-and-availability.md#distribution-and-visibility)   | Valor predeterminado: los clientes pueden encontrar IAP explorando o buscando en la Tienda | 
+| [**Fecha de publicación**](set-iap-pricing-and-availability.md#publish-date)                | Valor predeterminado: Publicar tan pronto como el IAP supere la certificación |
 
 ### Página Descripciones
-Una descripción obligatoria. Se recomienda proporcionar descripciones para cada idioma que admite la aplicación.
+Una descripción obligatoria. Se recomienda proporcionar descripciones para cada [idioma](create-iap-descriptions.md#languages) que la aplicación admita.
 
-| Nombre del campo                    | Notas                                       | Para más información       |
-|-------------------------------|---------------------------------------------|---------------------|
-| **Título**                     | Obligatorio (límite de 100 caracteres)              | [Crear descripciones de IAP](create-iap-descriptions.md)                     |
-| **Descripción**               | Opcional (límite de 200 caracteres)              | [Crear descripciones de IAP](create-iap-descriptions.md)                     |
-| **Icono**                      | Opcional (.png, 300 x 300 píxeles)             | [Crear descripciones de IAP](create-iap-descriptions.md)                     |
+| Nombre del campo                    | Notas                                       | 
+|-------------------------------|---------------------------------------------|
+| [**Título**](create-iap-descriptions.md#title)                    | Obligatorio (límite de 100 caracteres)              |
+| [**Descripción**](create-iap-descriptions.md#description)       | Opcional (límite de 200 caracteres)              |
+| [**Icono**](create-iap-descriptions.md#icon)                    | Opcional (.png, 300 x 300 píxeles)             | 
 
-Cuando hayas terminado de especificar esta información, haz clic en **Enviar a la Tienda**. En la mayoría de los casos, el proceso de certificación tarda aproximadamente una hora. Después, el IAP se publicará en la Tienda y estará listo para que los clientes puedan comprarlo.
+Cuando hayas terminado de introducir esta información, haz clic en **Enviar a la Tienda**. En la mayoría de los casos, el proceso de certificación tarda aproximadamente una hora. Después, el IAP se publicará en la Tienda y estará listo para que los clientes puedan comprarlo.
 
-**Nota**  El IAP también debe implementarse en el código de la aplicación. Para más información, consulta [Habilitar compras de productos desde la aplicación](https://msdn.microsoft.com/library/windows/apps/mt219684).
+**Nota** El IAP también debe implementarse en el código de la aplicación. Para obtener más información, consulta [Habilitar compras de productos desde la aplicación](../monetize/enable-in-app-product-purchases.md).
 
 
 ## Actualizar un IAP después de su publicación
-
 
 Puedes realizar cambios en un IAP publicado en cualquier momento. Los cambios de los IAP se envían y se publican independientemente de la aplicación, de modo que, por lo general, no es necesario actualizar toda la aplicación para realizar cambios en un IAP, como actualizar su precio o su descripción.
 
@@ -63,6 +70,7 @@ Si quieres quitar un IAP que ofrecías anteriormente, puedes hacerlo si creas un
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

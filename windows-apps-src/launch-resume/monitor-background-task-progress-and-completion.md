@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Supervisar el progreso y la finalización de tareas en segundo plano
-description: Aprende el modo en que la aplicación puede reconocer el progreso y finalización notificados por una tarea en segundo plano.
+author: TylerMSFT
+title: "Supervisar el progreso y la finalización de tareas en segundo plano"
+description: "Aprende el modo en que la aplicación puede reconocer el progreso y finalización notificados por una tarea en segundo plano."
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 07d69b63b272153bc784ed19166e649f80a98297
+
 ---
 
 # Supervisar el progreso y la finalización de tareas en segundo plano
@@ -41,7 +44,7 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
 >      // TODO: Add code that deals with background task completion.
 >  };
 >  ```
-    
+
 2.  Agrega código al controlador de eventos que se encarga de la finalización de la tarea en segundo plano.
 
     Por ejemplo, la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) actualiza la interfaz de usuario.
@@ -84,7 +87,7 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
     Por ejemplo, la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) actualiza la interfaz de usuario con el estado de progreso pasado a través del parámetro *args*:
 
     > [!div class="tabbedCodeSnippets"]     ```cs     private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)     {         var progress = "Progress: " + args.Progress + "%";         BackgroundTaskSample.SampleBackgroundTaskProgress = progress;
-    > 
+    >
     >         UpdateUI();
     >     }
     >     ```
@@ -93,7 +96,7 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
     >     {
     >         auto progress = "Progress: " + args->Progress + "%";
     >         BackgroundTaskSample::SampleBackgroundTaskProgress = progress;
-    > 
+    >
     >         UpdateUI();
     >     };
     >     ```
@@ -114,15 +117,15 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
     >     ```
     >     ```cpp     void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration^ task)     {         auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressEventArgs^ args)
     >                   {             auto progress = "Progress: " + args->Progress + "%";             BackgroundTaskSample::SampleBackgroundTaskProgress = progress;             UpdateUI();         };
-    > 
+    >
     >         task->Progress += ref new BackgroundTaskProgressEventHandler(progress);
     >         
-    > 
+    >
     >         auto completed = [this](BackgroundTaskRegistration^ task, BackgroundTaskCompletedEventArgs^ args)
     >         {
     >             UpdateUI();
     >         };
-    > 
+    >
     >         task->Completed += ref new BackgroundTaskCompletedEventHandler(completed);
     >     }
     >     ```
@@ -132,7 +135,7 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
     Por ejemplo, la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) usa el siguiente código para adjuntar controladores de eventos cuando se navega por la página SampleBackgroundTask para:
 
     > [!div class="tabbedCodeSnippets"]     ```cs     protected override void OnNavigatedTo(NavigationEventArgs e)     {         foreach (var task in BackgroundTaskRegistration.AllTasks)         {             if (task.Value.Name == BackgroundTaskSample.SampleBackgroundTaskName)             {                 AttachProgressAndCompletedHandlers(task.Value);                 BackgroundTaskSample.UpdateBackgroundTaskStatus(BackgroundTaskSample.SampleBackgroundTaskName, true);             }         }
-    > 
+    >
     >         UpdateUI();
     >     }
     >     ```
@@ -142,7 +145,7 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
     >         // A pointer back to the main page.  This is needed if you want to call methods in MainPage such
     >         // as NotifyUser()
     >         rootPage = MainPage::Current;
-    > 
+    >
     >         //
     >         // Attach progress and completed handlers to any existing tasks.
     >         //
@@ -151,16 +154,16 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
     >         while (hascur)
     >         {
     >             auto cur = iter->Current->Value;
-    > 
+    >
     >             if (cur->Name == SampleBackgroundTaskName)
     >             {
     >                 AttachProgressAndCompletedHandlers(cur);
     >                 break;
     >             }
-    > 
+    >
     >             hascur = iter->MoveNext();
     >         }
-    > 
+    >
     >         UpdateUI();
     >     }
     >     ```
@@ -192,8 +195,6 @@ Aprende el modo en que la aplicación puede reconocer el progreso y finalizació
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

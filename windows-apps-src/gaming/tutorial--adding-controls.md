@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Agregar controles
-description: Echemos un vistazo ahora al modo en que la muestra de juego implementa los controles de movimiento y vista en un juego 3-D, y cómo va a desarrollar controles básicos para mandos, función táctil y mouse.
+description: "Echemos un vistazo ahora al modo en que la muestra de juego implementa los controles de movimiento y vista en un juego 3-D, y cómo va a desarrollar controles básicos para mandos, función táctil y mouse."
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b3297ffd92d9a61d73c574def7e8101dc9196a69
+
 ---
 
 # Agregar controles
@@ -24,12 +28,12 @@ Un buen juego de la UWP admite una amplia variedad de interfaces. Un jugador pot
 
 Esta muestra admite los tres. Es un sencillo juego de disparos en primera persona, y los controles de movimiento y vista que son estándar en este género se pueden implementar fácilmente para todas esas tres formas de entrada.
 
-Si quieres obtener más información acerca de los controles y, en concreto acerca de los controles de movimiento y vista, consulta [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) y [Controles táctiles para juegos](tutorial--adding-touch-controls-to-your-directx-game.md).
+Consulta [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) y [Controles táctiles para juegos](tutorial--adding-touch-controls-to-your-directx-game.md) para obtener más información sobre los controles y, en concreto, sobre los controles de movimiento y vista.
 
 ## Comportamientos de controles comunes
 
 
-Los controles táctiles y los controles de mouse o teclado tienen una implementación principal muy parecida. En una aplicación para UWP, un puntero es simplemente un punto en la pantalla. Puedes moverlo desplazando el ratón o deslizando un dedo por la pantalla táctil. Como resultado, puedes registrar un único conjunto de eventos y despreocuparte de si el jugador usa un mouse o una pantalla táctil para mover y presionar el puntero.
+Los controles táctiles y los controles de ratón/teclado tienen una implementación principal muy parecida. En una aplicación para UWP, un puntero es simplemente un punto en la pantalla. Puedes moverlo desplazando el ratón o deslizando un dedo por la pantalla táctil. Como resultado, puedes registrar un único conjunto de eventos y despreocuparte de si el jugador usa un mouse o una pantalla táctil para mover y presionar el puntero.
 
 Cuando la clase **MoveLookController** en la muestra de juego se inicializa, registra cuatro eventos específicos de puntero y uno específico de ratón:
 
@@ -201,7 +205,7 @@ bool MoveLookController::IsFiring()
 }
 ```
 
-Si el jugador mueve el puntero fuera de la ventana principal del juego o presiona el botón de pausa (la tecla K o el botón de inicio del mando de la Xbox), el juego debe pausarse. **MoveLookController** registra dicha presión e informa al bucle de juego cuando llama al método **IsPauseRequested**. En ese punto, si **IsPauseRequested** devuelve **true**, el bucle de juego llama a **WaitForPress** en **MoveLookController** para mover el mando al estado **WaitForInput**. A continuación, el elemento **MoveLookController** espera a que el jugador seleccione uno de los elementos de menú para cargar, continuar o salir del juego, y así poder detener el procesamiento de eventos de entrada de juego hasta que regrese al estado **Active**.
+Si el jugador mueve el puntero fuera de la ventana principal del juego o presiona el botón de pausa (la tecla K o el botón de inicio del mando de la Xbox), el juego debe pausarse. **MoveLookController** registra dicha presión e informa al bucle de juego cuando llama al método **IsPauseRequested**. En ese punto, si **IsPauseRequested** devuelve **true**, el bucle de juego llama a **WaitForPress** en **MoveLookController** para mover el mando al estado **WaitForInput**. A continuación, el **MoveLookController** espera a que el jugador seleccione uno de los elementos de menú para cargar, continuar o salir del juego, y se detenga el procesamiento de eventos de entrada de juego hasta que regrese al estado **Active**.
 
 Consulta el [código de muestra completo de esta sección](#code_sample).
 
@@ -814,7 +818,7 @@ Y así es como esta muestra implementa un conjunto completo de opciones de contr
 ## Pasos siguientes
 
 
-Hemos revisado todos los componentes principales de un juego DirectX de UWP excepto uno: ¡el audio! La música y los efectos de sonido son importantes en cualquier juego. Hablemos, por tanto, de cómo [agregar sonido](tutorial--adding-sound.md).
+Hemos revisado todos los componentes principales de un juego DirectX de UWP excepto uno: ¡el audio! La música y los efectos sonoros son importantes en cualquier juego. Hablemos, por tanto, de cómo [agregar sonido](tutorial--adding-sound.md).
 
 ## Código de muestra completo para esta sección
 
@@ -1907,7 +1911,7 @@ void MoveLookController::UpdateGameController()
 ```
 
 > **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si desarrollas para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -1925,6 +1929,7 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Migrar GLSL
-description: Una vez que traslades el código que crea y configura los búferes y objetos de sombreador, tienes que portar el código de esos sombreadores, del lenguaje GL Shader Language (GLSL) de OpenGL ES 2.0 al lenguaje High-level Shader Language (HLSL) de Direct3D 11.
+description: "Una vez que traslades el código que crea y configura los búferes y objetos de sombreador, tienes que portar el código de esos sombreadores, del lenguaje GL Shader Language (GLSL) de OpenGL ES 2.0 al lenguaje High-level Shader Language (HLSL) de Direct3D 11."
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d1d203fa74bd80fe26401e64d4e15bb11e5c1050
+
 ---
 
 # Portar GLSL
@@ -184,6 +188,7 @@ Comprender la semántica de HLSL y el empaquetado de los búferes de constantes 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: B48E21AB-0EA5-444B-8333-393DD8D1B76D
 title: Almacenamiento compartido de empresa
-description: El almacenamiento compartido de empresa define las ubicaciones de los datos locales de la línea de aplicaciones empresariales para compartir datos.
+description: "El almacenamiento compartido de empresa define las ubicaciones de los datos locales de la línea de aplicaciones empresariales para compartir datos."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 6f0e479081c361d69ab0c9e8cf4c531627304d32
+
 ---
 # Almacenamiento compartido de empresa
 
@@ -69,6 +73,7 @@ foreach (StorageFile file in sortedItems)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

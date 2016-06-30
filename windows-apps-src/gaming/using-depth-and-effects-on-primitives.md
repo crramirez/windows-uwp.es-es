@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Usar profundidad y efectos en primitivos
-description: Aquí te mostramos cómo usar la profundidad, la perspectiva, el color y otros efectos en primitivos.
+description: "Aquí te mostramos cómo usar la profundidad, la perspectiva, el color y otros efectos en primitivos."
 ms.assetid: 71ef34c5-b4a3-adae-5266-f86ba257482a
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 47547a226a69b2631313972ed67b39b1f29de402
+
 ---
 
 # Usar profundidad y efectos en primitivos
@@ -21,7 +25,7 @@ Suponemos que estás familiarizado con C++. También necesitas tener experiencia
 
 Suponemos además que has consultado [Inicio rápido: configurar recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md) y [Crear sombreadores y dibujar primitivos](creating-shaders-and-drawing-primitives.md).
 
-**Tiempo para completarlo:** 20 minutos.
+**Tiempo para completarlo:** 20 minutos.
 
 Instrucciones
 ------------
@@ -453,6 +457,7 @@ A continuación, aplicaremos texturas en primitivos.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

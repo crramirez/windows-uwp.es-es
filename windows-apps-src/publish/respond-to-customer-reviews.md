@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Puedes responder directamente a las críticas sobre la aplicación para que los clientes sepan que lees sus comentarios.
+Description: "Puedes responder directamente a las críticas sobre la aplicación para que los clientes sepan que lees sus comentarios."
 title: Responder a las opiniones de los clientes
 ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 06228d7816f371f669ad4e6db7310e903f5f0683
+
 ---
 
 # Responder a las opiniones de los clientes
@@ -47,6 +51,7 @@ La relación con tus clientes depende de ti. Microsoft no se involucra en las di
 Escuchar y responder a los clientes es solo el primer paso. Tener en cuenta sus comentarios y actuar en consecuencia es también importante. Si realizas mejoras significativas, puedes presentarla en la Tienda con confianza [creando un nuevo envío](app-submissions.md) para actualizar la aplicación.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

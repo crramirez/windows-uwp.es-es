@@ -5,8 +5,8 @@ title: Controlar la entrada de puntero
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 8e3d0fdd97c72c2e7816fbc48738c651fb4f5bbd
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 2204e8f3ddce067cf2cbc24ce89cbdcea5b361bf
 
 ---
 
@@ -25,7 +25,7 @@ Recibe, procesa y administra los datos de entrada de dispositivos señaladores, 
 Si implementas tu propia compatibilidad con la interacción, ten presente que los usuarios esperan una experiencia intuitiva que implica la interacción directa con los elementos de la interfaz de usuario de la aplicación. Es recomendable que modeles las interacciones personalizadas sobre la [lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406) para que todo sea coherente y pueda detectarse. Los controles de plataforma proporcionan una experiencia de interacción de usuario de la Plataforma universal de Windows (UWP) completa, incluidas interacciones estándar, efectos físicos animados, comentarios visuales y accesibilidad. Crea interacciones personalizadas solamente si existe un requisito claro y bien definido, y las interacciones básicas no admiten el escenario.
 
 
-## <span id="Pointers"></span><span id="pointers"></span><span id="POINTERS"></span>Punteros
+## Punteros
 
 
 Muchas experiencias de interacción implican que el usuario identifique el objeto con el que quiere interactuar apuntando a él con dispositivos de entrada como la función táctil, mouse, pluma o lápiz y panel táctil. Dado que los datos de dispositivos de interfaz de usuario (HID) sin procesar proporcionados por estos dispositivos de entrada incluyen muchas propiedades comunes, se promueve la información en una pila de entrada unificada y expuesta como datos de puntero independiente del dispositivo consolidados. Las aplicaciones para UWP pueden entonces consumir estos datos sin que tengas que preocuparte por el dispositivo de entrada que se use.
@@ -36,7 +36,7 @@ Muchas experiencias de interacción implican que el usuario identifique el objet
 
 Cada punto de entrada (o contacto) de la pila de entrada se representa mediante un objeto [**Pointer**](https://msdn.microsoft.com/library/windows/apps/br227968) que se expone mediante el parámetro [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) proporcionado por diversos eventos de puntero. En el caso de lápices múltiples o entrada multitáctil, cada contacto se trata como un punto de entrada único.
 
-## <span id="Pointer_events"></span><span id="pointer_events"></span><span id="POINTER_EVENTS"></span>Eventos de puntero
+## Eventos de puntero
 
 
 Los eventos de puntero exponen información básica, como el estado de detección (en un intervalo o un contacto) y el tipo de dispositivo, e información extendida, como la ubicación, la presión y la geometría de contacto. Además, también están disponibles las propiedades del dispositivo específico, como qué botón del mouse presionó un usuario o si un usuario está usando el extremo borrador del lápiz. Si la aplicación necesita diferenciar entre distintos dispositivos de entrada y sus funcionalidades, consulta el tema de [identificar dispositivos de entrada](identify-input-devices.md).
@@ -60,7 +60,7 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span id="PointerCanceled"></span><span id="pointercanceled"></span><span id="POINTERCANCELED"></span>[<strong>PointerCanceled</strong>](https://msdn.microsoft.com/library/windows/apps/br208964)</p></td>
+<td align="left"><p>[<strong>PointerCanceled</strong>](https://msdn.microsoft.com/library/windows/apps/br208964)</p></td>
 <td align="left"><p>Se produce cuando la plataforma cancela un puntero.</p>
 <ul>
 <li>Los punteros táctiles se cancelan cuando se detecta un lápiz dentro del alcance de la superficie de entrada.</li>
@@ -71,7 +71,7 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="PointerCaptureLost"></span><span id="pointercapturelost"></span><span id="POINTERCAPTURELOST"></span>[<strong>PointerCaptureLost</strong>](https://msdn.microsoft.com/library/windows/apps/br208965)</p></td>
+<td align="left"><p>[<strong>PointerCaptureLost</strong>](https://msdn.microsoft.com/library/windows/apps/br208965)</p></td>
 <td align="left"><p>Se produce cuando otro elemento de la interfaz de usuario captura el puntero, si se libera el puntero o si se captura otro puntero mediante programación.</p>
 <div class="alert">
 <strong>Nota</strong>  No hay ningún evento de captura de puntero correspondiente.
@@ -81,7 +81,7 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="PointerEntered"></span><span id="pointerentered"></span><span id="POINTERENTERED"></span>[<strong>PointerEntered</strong>](https://msdn.microsoft.com/library/windows/apps/br208968)</p></td>
+<td align="left"><p>[<strong>PointerEntered</strong>](https://msdn.microsoft.com/library/windows/apps/br208968)</p></td>
 <td align="left"><p>Se produce cuando un puntero entra en el área límite de un elemento. Esto puede ocurrir de forma ligeramente distinta para la función táctil, de panel táctil, mouse y de pluma.</p>
 <ul>
 <li>La función táctil requiere un contacto del dedo para desencadenar este evento, bien sea de una pulsación directa hacia abajo o de movimiento en el área límite del elemento.</li>
@@ -90,7 +90,7 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="PointerExited"></span><span id="pointerexited"></span><span id="POINTEREXITED"></span>[<strong>PointerExited</strong>](https://msdn.microsoft.com/library/windows/apps/br208969)</p></td>
+<td align="left"><p>[<strong>PointerExited</strong>](https://msdn.microsoft.com/library/windows/apps/br208969)</p></td>
 <td align="left"><p>Se produce cuando un puntero sale del área límite de un elemento. Esto puede ocurrir de forma ligeramente distinta para la función táctil, de panel táctil, mouse y de pluma.</p>
 <ul>
 <li>La función táctil requiere un contacto con el dedo y desencadena este evento cuando el puntero se mueve fuera del área límite del elemento.</li>
@@ -99,7 +99,7 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 </ul></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="PointerMoved"></span><span id="pointermoved"></span><span id="POINTERMOVED"></span>[<strong>PointerMoved</strong>](https://msdn.microsoft.com/library/windows/apps/br208970)</p></td>
+<td align="left"><p>[<strong>PointerMoved</strong>](https://msdn.microsoft.com/library/windows/apps/br208970)</p></td>
 <td align="left"><p>Se produce cuando un puntero modifica sus coordenadas, el estado de los botones, la presión, la inclinación o la geometría de contacto (por ejemplo, el ancho y alto) dentro del área límite de un elemento. Esto puede ocurrir de forma ligeramente distinta para la función táctil, de panel táctil, mouse y de pluma.</p>
 <ul>
 <li>La función táctil requiere un contacto con el dedo y desencadena este evento solo cuando está en contacto dentro del área límite del elemento.</li>
@@ -108,16 +108,16 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="PointerPressed"></span><span id="pointerpressed"></span><span id="POINTERPRESSED"></span>[<strong>PointerPressed</strong>](https://msdn.microsoft.com/library/windows/apps/br208971)</p></td>
+<td align="left"><p>[<strong>PointerPressed</strong>](https://msdn.microsoft.com/library/windows/apps/br208971)</p></td>
 <td align="left"><p>Se produce cuando el puntero indica una acción de presión (como un toque, presionar el botón del mouse, presionar con el lápiz o presionar el botón de panel táctil) dentro del área límite de un elemento.</p>
 <p>Debe llamarse a [<strong>CapturePointer</strong>](https://msdn.microsoft.com/library/windows/apps/br208918) desde el controlador de este evento.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="PointerReleased"></span><span id="pointerreleased"></span><span id="POINTERRELEASED"></span>[<strong>PointerReleased</strong>](https://msdn.microsoft.com/library/windows/apps/br208972)</p></td>
+<td align="left"><p>[<strong>PointerReleased</strong>](https://msdn.microsoft.com/library/windows/apps/br208972)</p></td>
 <td align="left"><p>Se produce cuando el puntero indica una acción de liberar (por ejemplo, finalizar un toque, soltar el botón del mouse, levantar el lápiz o soltar el botón del panel táctil) dentro del área límite de un elemento o, si se captura el puntero, fuera del área límite.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="PointerWheelChanged"></span><span id="pointerwheelchanged"></span><span id="POINTERWHEELCHANGED"></span>[<strong>PointerWheelChanged</strong>](https://msdn.microsoft.com/library/windows/apps/br208973)</p></td>
+<td align="left"><p>[<strong>PointerWheelChanged</strong>](https://msdn.microsoft.com/library/windows/apps/br208973)</p></td>
 <td align="left"><p>Se produce cuando se gira la rueda del mouse.</p>
 <p>La entrada de mouse se asocia con un solo puntero que se asigna cuando se detecta por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento [<strong>PointerMoved</strong>](https://msdn.microsoft.com/library/windows/apps/br208970).</p></td>
 </tr>
@@ -126,12 +126,12 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 
  
 
-## <span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Ejemplo
+## Ejemplo
 
 
 A continuación se muestran algunos ejemplos de código de una aplicación básica de seguimiento del puntero que muestra cómo escuchar y controlar eventos de puntero y obtener diversas propiedades de punteros activos.
 
-### <span id="Create_the_UI"></span><span id="create_the_ui"></span><span id="CREATE_THE_UI"></span>Crear la interfaz de usuario
+### Crear la interfaz de usuario
 
 Para este ejemplo, usamos un rectángulo (`targetContainer`) como el objeto de destino de la entrada de puntero. El color del destino cambia cuando cambia el estado del puntero.
 
@@ -194,7 +194,7 @@ Este es el lenguaje de marcado de aplicaciones extensible (XAML) para este ejemp
 </Page>
 ```
 
-### <span id="Listen_for_pointer_events"></span><span id="listen_for_pointer_events"></span><span id="LISTEN_FOR_POINTER_EVENTS"></span>Escuchar eventos de puntero
+### Escuchar eventos de puntero
 
 En la mayoría de los casos, es recomendable que obtengas la información del puntero mediante el elemento [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) del controlador de eventos.
 
@@ -243,7 +243,7 @@ El siguiente código configura el objeto de destino, declara variables globales 
 
 ```
 
-### <span id="Handle_pointer_events"></span><span id="handle_pointer_events"></span><span id="HANDLE_POINTER_EVENTS"></span>Controlar eventos de puntero
+### Controlar eventos de puntero
 
 Después, se usan comentarios de interfaz de usuario para mostrar controladores de eventos de puntero básicos.
 
@@ -561,7 +561,7 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
     }
 ```
 
-### <span id="Get_pointer_properties"></span><span id="get_pointer_properties"></span><span id="GET_POINTER_PROPERTIES"></span>Obtener las propiedades del puntero
+### Obtener las propiedades del puntero
 
 Como se indicó anteriormente, debes obtener la información más extendida del puntero desde un objeto [**Windows.UI.Input.PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) obtenido a través de los métodos [**GetCurrentPoint**](https://msdn.microsoft.com/library/windows/apps/hh943077) y [**GetIntermediatePoints**](https://msdn.microsoft.com/library/windows/apps/hh943078) de [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076).
 
@@ -657,7 +657,7 @@ Como se indicó anteriormente, debes obtener la información más extendida del 
              }
 ```
 
-### <span id="Complete_example"></span><span id="complete_example"></span><span id="COMPLETE_EXAMPLE"></span>Ejemplo completo
+### Ejemplo completo
 
 A continuación se muestra el código de C\# de este ejemplo. Para obtener vínculos a ejemplos más complejos, consulta los artículos relacionados en la parte inferior de esta página.
 
@@ -1085,7 +1085,7 @@ namespace PointerInput
 }
 ```
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 
 **Ejemplos**
@@ -1111,6 +1111,6 @@ namespace PointerInput
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

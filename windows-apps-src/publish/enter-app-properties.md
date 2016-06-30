@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: La página Propiedades de la aplicación del proceso de envío de aplicaciones te permite definir la categoría de la aplicación e indicar las preferencias de hardware u otras declaraciones.
-title: Introducir las propiedades de la aplicación
+Description: "La página Propiedades de la aplicación del proceso de envío de aplicaciones te permite definir la categoría de la aplicación e indicar las preferencias de hardware u otras declaraciones."
+title: "Introducir las propiedades de la aplicación"
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8861c13478adbe2010a164126c56f555375e0472
+
 ---
 
 # Introducir las propiedades de la aplicación
@@ -40,6 +44,7 @@ Puedes agregar casillas en esta sección para indicar si alguna de las declaraci
 Para más información, consulta el tema sobre las [Declaraciones de la aplicación](app-declarations.md).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

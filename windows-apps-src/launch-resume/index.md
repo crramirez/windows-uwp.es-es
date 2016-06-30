@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Inicio, reanudación y tareas en segundo plano
-description: Esta sección describe lo que sucede cuando se inicia, suspende, reanuda y finaliza una aplicación de la Plataforma universal de Windows (UWP).
+author: TylerMSFT
+title: "Inicio, reanudación y tareas en segundo plano"
+description: "Esta sección describe lo que sucede cuando se inicia, suspende, reanuda y finaliza una aplicación de la Plataforma universal de Windows (UWP)."
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
+ms.sourcegitcommit: a8e6145f7a5c75d3b37277b80b07b0b3ad739d5c
+ms.openlocfilehash: ab20c4af5b9a87dc73775d304c314c9861d989d4
+
 ---
 
 # Inicio, reanudación y tareas en segundo plano
@@ -36,9 +39,8 @@ Esta sección describe lo que sucede cuando se inicia, suspende, reanuda y final
 | [Iniciar la aplicación predeterminada de un archivo](launch-the-default-app-for-a-file.md)                      | Aprende a iniciar la aplicación predeterminada de un tipo de archivo.                                                                                                                       |
 | [Administrar la activación de archivos](handle-file-activation.md)                                            | Aprende a registrar la aplicación para convertirla en el controlador predeterminado de un tipo de archivo.                                                                                                  |
 | [Directrices sobre tipos de archivo y URI](https://msdn.microsoft.com/library/windows/apps/hh700321) | Si comprendes la relación entre las aplicaciones para UWP y los protocolos y tipos de archivo que estas admiten, podrás proporcionar una experiencia más coherente y elegante a los usuarios. |
-| [Nombres de esquema de URI y archivo reservados](reserved-uri-scheme-names.md)                             | Este tema enumera los nombres de esquema de URI y de archivo reservados que no están disponibles para la aplicación.                                                                                |
-| Activar aplicaciones integradas                                                                          | Descripción                                                                                                                                                                |
-| [Iniciar la aplicación Configuración de Windows](launch-settings-app.md)                                      | Aprende a iniciar la aplicación Configuración de Windows.                                                                                                                              |
+| [Nombres de esquema de URI y archivo reservados](reserved-uri-scheme-names.md)                             | Este tema enumera los nombres reservados de archivo y de esquema de URI que no están disponibles para la aplicación.                                                                                |
+| [Cómo iniciar la aplicación Configuración de Windows](launch-settings-app.md)                                      | Aprende a iniciar la aplicación Configuración de Windows.                                                                                                                              |
 | [Iniciar la aplicación de la Tienda Windows](launch-store-app.md)                                            | Aprende a iniciar la aplicación de la Tienda Windows.                                                                                                                                 |
 | [Iniciar la aplicación Mapas de Windows](launch-maps-app.md)                                              | Aprende a iniciar la aplicación Mapas de Windows.                                                                                                                                  |
 
@@ -101,8 +103,6 @@ Además, puedes usar la clase [**SplashScreen**](https://msdn.microsoft.com/libr
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: EFCF84D0-2F4C-454D-97DA-249E9EAA806C
-description: La clase SystemMediaTransportControls permite que la aplicación use los controles de transporte de medios del sistema que están integrados en Windows, y actualice los metadatos que los controles muestran sobre los elementos multimedia que está reproduciendo actualmente la aplicación.
+description: "La clase SystemMediaTransportControls permite que la aplicación use los controles de transporte de medios del sistema que están integrados en Windows, y actualice los metadatos que los controles muestran sobre los elementos multimedia que está reproduciendo actualmente la aplicación."
 title: Controles de transporte de contenido multimedia del sistema
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5a94ce4112f7662d3fe9bf3c8a7d3f60b1569931
+
 ---
 
 # Controles de transporte de contenido multimedia del sistema
@@ -33,11 +37,11 @@ En la página de código subyacente, agrega directivas de uso para los siguiente
 
 [!code-cs[Espacio de nombres](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetNamespace)]
 
-Agrega un botón controlador que use la clase [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para permitir al usuario seleccionar un archivo; a continuación, llama a [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) para que sea el archivo activo de **MediaElement**.
+Agrega un controlador de pulsación de botón que use un [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para permitir al usuario seleccionar un archivo y después llama a [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) para convertirlo en el archivo activo para el **MediaElement**.
 
 [!code-cs[OpenMediaFile](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetOpenMediaFile)]
 
-Obtén una instancia de la clase [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) llamando a [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708).
+Obtén una instancia de los [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) mediante una llamada a [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708).
 
 Habilita los botones que la aplicación usará, estableciendo la propiedad "is enabled" correspondiente en el objeto **SystemMediaTransportControls**, como [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714), [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713), [**IsNextEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278712) y [**IsPreviousEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278715). Consulta la documentación de referencia de **SystemMediaTransportControls** para ver una lista completa de los controles disponibles.
 
@@ -125,6 +129,7 @@ Para obtener más información sobre la reproducción de audio en segundo plano,
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Si has publicado anteriormente aplicaciones en la Tienda Windows o en la de Windows Phone, dichas aplicaciones también estarán disponibles para los clientes con dispositivos Windows 10.
-title: Cómo aparece una aplicación en la Tienda para los clientes de Windows 10
+Description: "Si has publicado anteriormente aplicaciones en la Tienda Windows o en la de Windows Phone, dichas aplicaciones también estarán disponibles para los clientes con dispositivos Windows 10."
+title: "Cómo aparece una aplicación en la Tienda para los clientes de Windows 10"
 ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5e8d25264a17307c61f4e8b1295ded3f920ee2cf
+
 ---
 
 # Cómo aparece una aplicación en la Tienda para los clientes de Windows 10
@@ -117,6 +121,7 @@ En muchos casos, las [categorías y subcategorías](category-and-subcategory-tab
 | Juegos &gt; Carreras           | Juegos &gt; Carreras y vuelo           |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

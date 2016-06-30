@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Usa un control RichTextBlock con elementos RichTextBlockOverflow para crear diseños de texto avanzados.
+Description: "Usa un control RichTextBlock con elementos RichTextBlockOverflow para crear diseños de texto avanzados."
 title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 28c78b39bad4c66457ec5aba8cf0b4ce0de4f00a
+
 ---
 # Bloque de texto enriquecido
 Los bloques de texto enriquecido proporcionan varias características para el diseño avanzado de texto que puedes usar cuando necesitas admitir párrafos, elementos de interfaz de usuario en línea o diseños de texto complejos.
@@ -147,6 +151,7 @@ Consulta las directrices para texto y tipografía.
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

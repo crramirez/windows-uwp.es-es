@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Iniciar y reanudar aplicaciones (DirectX y C++)
-description: Aprende a iniciar, suspender y reanudar tu aplicación DirectX para la Plataforma universal de Windows (UWP).
+description: "Aprende a iniciar, suspender y reanudar tu aplicación DirectX para la Plataforma universal de Windows (UWP)."
 ms.assetid: c35025f8-0450-2f61-fe84-070fd7379622
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: cc9468e278d651729740147cb21c70d53b43800f
+
 ---
 
 # Iniciar y reanudar aplicaciones (DirectX y C++)
@@ -28,6 +32,7 @@ Aprende a iniciar, suspender y reanudar tu aplicación DirectX de la Plataforma 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

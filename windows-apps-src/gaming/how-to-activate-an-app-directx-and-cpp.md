@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Cómo activar una aplicación (DirectX y C++)
-description: En este tema se muestra cómo definir la experiencia de activación de una aplicación DirectX para la Plataforma universal de Windows (UWP).
+title: "Cómo activar una aplicación (DirectX y C++)"
+description: "En este tema se muestra cómo definir la experiencia de activación de una aplicación DirectX para la Plataforma universal de Windows (UWP)."
 ms.assetid: b07c7da1-8a5e-5b57-6f77-6439bf653a53
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 14859d03c7af45a17772c76f8c79b3c1bc56272c
+
 ---
 
 # Cómo activar una aplicación (DirectX y C++)
@@ -90,6 +94,7 @@ void App::Run()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

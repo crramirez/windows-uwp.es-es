@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 90BB59FC-90FE-453E-A8DE-9315E29EB98C
-title: Obtener información sobre la batería
-description: Aprende a obtener información detallada sobre la batería mediante las API del espacio de nombres Windows.Devices.Power.
+title: "Obtener información sobre la batería"
+description: "Aprende a obtener información detallada sobre la batería mediante las API del espacio de nombres Windows.Devices.Power."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 716123f7401350748c7eb81a2ca4208a74b6e4ac
+
 ---
 # Obtener información sobre la batería
 
@@ -334,6 +338,7 @@ Por último, para ejecutar esta aplicación de batería básica: en el menú **D
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

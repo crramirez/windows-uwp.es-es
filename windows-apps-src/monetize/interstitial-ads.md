@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
-description: Aprende a incluir anuncios intersticiales en una aplicación de Windows 10, Windows 8.1 o Windows Phone 8.1 con las bibliotecas de Microsoft Advertising en el SDK Microsoft Store Engagement and Monetization.
+description: "Aprende a incluir anuncios intersticiales en una aplicación de Windows 10, Windows 8.1 o Windows Phone 8.1 con las bibliotecas de Microsoft Advertising en el SDK Microsoft Store Engagement and Monetization."
 title: Anuncios intersticiales
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 0f159409bb584aacaf66550efe8d147cd8fddd50
+
 ---
 
 # Anuncios intersticiales
@@ -382,6 +386,7 @@ Al usar las bibliotecas de Microsoft Advertising, no puedes dirigirte a **Cualqu
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

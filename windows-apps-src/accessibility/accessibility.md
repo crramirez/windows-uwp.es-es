@@ -5,6 +5,10 @@ ms.assetid: C89D79C2-B830-493D-B020-F3FF8EB5FFDD
 title: Accesibilidad
 label: Accessibility
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3
+
 ---
 
 # Accesibilidad  
@@ -15,6 +19,7 @@ Presenta los conceptos de accesibilidad relativos a las aplicaciones para Plataf
 
 La accesibilidad consiste en crear experiencias que hacen que la aplicación esté a disposición de las personas que usan la tecnología en una amplia gama de entornos y enfoques la interfaz de usuario hacia una variedad de experiencias y necesidades. En algunos casos, los requisitos de accesibilidad están impuestos por ley. Sin embargo, es una buena idea dar solución a estos problemas sin importar los requisitos legales, a fin de asegurarte de que tus aplicaciones tengan el mayor público posible. También hay una declaración de la Tienda Windows relativa a la accesibilidad de tu aplicación.
 
+> [!NOTE]
 > Declarar la aplicación como accesible solo es relevante para la Tienda Windows.
 
 | Artículo | Descripción |
@@ -38,6 +43,7 @@ La accesibilidad consiste en crear experiencias que hacen que la aplicación est
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

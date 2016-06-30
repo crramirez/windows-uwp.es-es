@@ -1,19 +1,20 @@
 ---
-author: martinekuan
-title: Creación de un componente simple de Windows Runtime y llamada a este desde JavaScript
-description: En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o C# para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime, y cómo llamar al componente de tu aplicación universal de Windows creada para Windows mediante JavaScript.
+author: msatranjr
+title: "Creación de un componente simple de Windows Runtime y llamada a este desde JavaScript"
+description: "En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o C# para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime, y cómo llamar al componente de tu aplicación universal de Windows creada para Windows mediante JavaScript."
 ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: c521061d9fdd3eb2c25e3072182fb1d7823f13ba
+
 ---
 
 # Tutorial: Creación de un componente simple de Windows Runtime y llamada a este desde JavaScript
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-\[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
-
-En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o C# para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime, y cómo llamar al componente de tu aplicación universal de Windows creada para Windows usando JavaScript.
+En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o C# para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime, y cómo llamar al componente desde tu aplicación universal de Windows creada para Windows mediante JavaScript.
 
 Visual Studio facilita el proceso de agregar un componente de Windows Runtime escrito con C# o Visual Basic a tu aplicación y crear tipos de Windows Runtime que puedas llamar desde JavaScript. Internamente, los tipos de Windows Runtime pueden usar cualquier funcionalidad de .NET Framework permitida en una aplicación universal de Windows. (Para obtener más información, consulta [Creación de componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [Información general de .NET para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)). Externamente, los miembros del tipo solo pueden exponer tipos de Windows Runtime para obtener sus parámetros y devolver valores. Al compilar la solución, Visual Studio crea un proyecto de componente de Windows Runtime en .NET Framework y, a continuación, ejecuta un paso de compilación que crea un archivo de metadatos (.winmd) de Windows. Este es el componente de Windows Runtime que Visual Studio incluye en tu aplicación.
 
@@ -735,6 +736,7 @@ Para ejecutar la aplicación, presiona la tecla F5. Para iniciar la operación a
 * [Tutorial: Creación de un componente simple de Windows Runtime y llamada al mismo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: Coloca los recursos de cadena de la interfaz de usuario en archivos de recursos. Así, podrás hacer referencia a dichas cadenas desde el código o marcado.
+Description: "Coloca los recursos de cadena de la interfaz de usuario en archivos de recursos. Así, podrás hacer referencia a dichas cadenas desde el código o marcado."
 title: Colocar las cadenas de la interfaz de usuario en recursos
 ms.assetid: E420B9BB-C0F6-4EC0-BA3A-BA2875B69722
 label: Put UI strings into resources
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: b44d9235e34b8d4c75f663029d1dde3f87bd0eb7
+
 ---
 
 # Colocar las cadenas de la interfaz de usuario en recursos
@@ -244,6 +248,7 @@ Prueba la aplicación con otros idiomas.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

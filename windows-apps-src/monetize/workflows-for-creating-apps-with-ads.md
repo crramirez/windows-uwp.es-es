@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: fcebd659-438b-4d03-bc73-6b662ed6f1f3
-description: Obtén información sobre el proceso completo para desarrollar y publicar una aplicación con anuncios.
+description: "Obtén información sobre el proceso completo para desarrollar y publicar una aplicación con anuncios."
 title: Flujos de trabajo para crear aplicaciones con anuncios
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 69dd1a17290b7ffbc14dbc58404868119403f7c0
+
 
 ---
 
@@ -61,6 +65,7 @@ Cuando tu aplicación se publique y esté disponible en la Tienda Windows, puede
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 title: Caja de seguridad de credenciales
-description: En este artículo se describe cómo las aplicaciones de la Plataforma universal de Windows (UWP) pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo moverlas entre dispositivos con la cuenta Microsoft del usuario.
+description: "En este artículo se describe cómo las aplicaciones de la Plataforma universal de Windows (UWP) pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo moverlas entre dispositivos con la cuenta Microsoft del usuario."
 ms.assetid: 7BCC443D-9E8A-417C-B275-3105F5DED863
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: ba3f4fc8584108fefe25de146ae7fc84ee7c9e2c
+
 ---
 
 # Caja de seguridad de credenciales
@@ -127,6 +131,7 @@ Guarda las contraseñas en la caja de seguridad de credenciales solamente si se 
 
 Nunca almacenes credenciales en texto sin formato con los datos de la aplicación o la configuración de itinerancia.
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

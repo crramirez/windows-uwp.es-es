@@ -5,8 +5,8 @@ title: "Selección del destinos"
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: c8244e1a103a1c57df92e54ceeaa02e9c363faa9
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 50a285b484f7e9ed7b349921c3460bd7c9c81603
 
 ---
 
@@ -24,7 +24,7 @@ La selección táctil del destino en Windows usa toda el área de contacto de ca
 
 En este tema se describe el uso de la geometría de contacto para la selección táctil del destino y se ofrecen procedimientos recomendados para la selección del destino en aplicaciones para UWP.
 
-## <span id="Measurements_and_scaling"></span><span id="measurements_and_scaling"></span><span id="MEASUREMENTS_AND_SCALING"></span>Medidas y escalas
+## Medidas y escalas
 
 
 Para mantener la coherencia con distintos tamaños de pantalla y densidades de píxeles, todos los tamaños de destinos se representan en unidades físicas (milímetros). Puedes convertir las unidades físicas a píxeles mediante la siguiente ecuación:
@@ -43,14 +43,14 @@ Píxeles = 48 píxeles
 
 Debes ajustar el resultado en función de cada nivel predefinido de escalado definido por el sistema.
 
-## <span id="Thresholds"></span><span id="thresholds"></span><span id="THRESHOLDS"></span>Umbrales
+## Umbrales
 
 
 Los umbrales de distancia y tiempo pueden usarse para determinar el resultado de una interacción.
 
 Por ejemplo, cuando se detecta un contacto táctil, se registra una pulsación si el objeto se arrastra menos de 2,7 mm desde el punto del contacto táctil y el toque se levanta al cabo de 0,1 segundos o menos desde el contacto táctil. Si se mueve el dedo más allá de este umbral de 2,7 mm, el objeto se arrastra y se selecciona o se mueve (para obtener más información, consulta las [instrucciones del deslizamiento transversal](guidelines-for-cross-slide.md)). Según tu aplicación, mantener presionado el dedo durante más de 0,1 segundos puede provocar que el sistema realice una interacción reveladora (para obtener más información, consulta las [instrucciones para comentarios visuales](guidelines-for-visualfeedback.md#selfreveal)).
 
-## <span id="Target_sizes"></span><span id="target_sizes"></span><span id="TARGET_SIZES"></span>Tamaños de los destinos
+## Tamaños de los destinos
 
 
 En general, establece el tamaño del destino táctil en 9 mm cuadrados o más (48 x 48 píxeles en una pantalla de 135 PPP a un nivel predefinido de escalado de 1.0x). Evita usar destinos táctiles de menos de 7 mm cuadrados.
@@ -112,7 +112,7 @@ Estas recomendaciones del tamaño de destino pueden ajustarse según sea necesar
 -   Visualizaciones táctiles
 -   Digitalizadores táctiles y de hardware
 
-## <span id="Targeting_assistance"></span><span id="targeting_assistance"></span><span id="TARGETING_ASSISTANCE"></span>Asistencia para la selección de destinos
+## Asistencia para la selección de destinos
 
 
 Windows ofrece asistencia para la selección de destinos en situaciones en las que no se pueden aplicar las recomendaciones respecto del tamaño mínimo o el espaciado que se señalan aquí; por ejemplo, hipervínculos en una página web, controles de calendario, listas desplegables y cuadros combinados o selección de texto.
@@ -121,7 +121,7 @@ Las mejoras en la plataforma para selección de destinos y los comportamientos d
 
 Si un elemento táctil debe ser más pequeño que el tamaño mínimo recomendado para los destinos, puedes usar las técnicas siguientes para reducir al mínimo los problemas que puedan presentarse al seleccionar destinos.
 
-## <span id="Tethering"></span><span id="tethering"></span><span id="TETHERING"></span>Tethering
+## Tethering
 
 
 Tethering es una indicación visual (un conector desde un punto de contacto hasta el rectángulo de límite de un objeto) que se usa para indicar al usuario que está conectado a un objeto e interactúa con él, aunque el contacto de entrada no esté en contacto directo con el objeto. Esto puede ocurrir cuando:
@@ -131,7 +131,7 @@ Tethering es una indicación visual (un conector desde un punto de contacto hast
 
 Esta función no se expone a los desarrolladores de aplicaciones de la Tienda Windows con JavaScript.
 
-## <span id="scrubbing"></span><span id="SCRUBBING"></span>Arrastrar
+## Arrastrar
 
 
 Arrastrar significa tocar en cualquier punto de un campo de destinos y deslizar el dedo para seleccionar el destino deseado sin levantarlo hasta llevarlo encima del destino buscado. Esta interacción también se denomina "activación de despegue", donde el objeto que se activa es el que se tocó último antes de levantar el dedo de la pantalla.
@@ -146,7 +146,7 @@ Usa las siguientes directrices cuando diseñes interacciones de arrastre:
 -   El tethering a un destino de arrastre se especifica si las acciones ejecutadas por el destino no son destructivas, por ejemplo cambiar de fecha en un calendario.
 -   El tethering se especifica en una sola dirección, horizontal o vertical.
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 
 **Ejemplos**
@@ -174,6 +174,6 @@ Usa las siguientes directrices cuando diseñes interacciones de arrastre:
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

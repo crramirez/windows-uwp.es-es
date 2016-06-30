@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 9A0F1852-A76B-4F43-ACFC-2CC56AAD1C03
-title: Imprimir desde tu aplicación
-description: Aprende a imprimir documentos desde aplicaciones universales de Windows. En este tema también se muestra cómo imprimir páginas específicas.
+title: "Imprimir desde tu aplicación"
+description: "Aprende a imprimir documentos desde aplicaciones universales de Windows. En este tema también se muestra cómo imprimir páginas específicas."
+translationtype: Human Translation
+ms.sourcegitcommit: e5f61e562f7ec464fc07815b0bdd0ac938fc2fb2
+ms.openlocfilehash: 363c19cfc15a883c4b6d951c59c63187f4239dec
+
 ---
 # Imprimir desde la aplicación
 
@@ -114,7 +118,7 @@ En este ejemplo, se muestra una ventana de impresión en el controlador de event
 
 ## Aplicar formato al contenido de la aplicación
 
-Cuando llamas a **ShowPrintUIAsync**, se genera el evento [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597). El controlador de eventos **PrintTaskRequested** que se muestra en este paso, crea una clase [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436) llamando al método [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436request_createprinttask); a continuación, pasa el título de la página de impresión y el nombre de un delegado [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source). Ten en cuenta que en este ejemplo, el delegado **PrintTaskSourceRequestedHandler** se define en línea. Igualmente, el delegado **PrintTaskSourceRequestedHandler** te proporciona el contenido formateado para imprimir; más adelante lo describiremos con más detalle.
+Cuando llamas a **ShowPrintUIAsync**, se genera el evento [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597). El controlador de eventos **PrintTaskRequested** que se muestra en este paso, crea una clase [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436) llamando al método [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.printing.printtaskrequest.createprinttask.aspx); a continuación, pasa el título de la página de impresión y el nombre de un delegado [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source). Ten en cuenta que en este ejemplo, el delegado **PrintTaskSourceRequestedHandler** se define en línea. Igualmente, el delegado **PrintTaskSourceRequestedHandler** te proporciona el contenido formateado para imprimir; más adelante lo describiremos con más detalle.
 
 En este ejemplo, se define también un controlador de finalización para capturar errores. Es recomendable controlar los eventos de finalización, ya que luego tu aplicación puede informar al usuario si ocurrió un error y proporcionar posibles soluciones. De la misma manera, la aplicación puede usar el evento de finalización para indicar los pasos que el usuario debe seguir después de que el trabajo de impresión se haya completado correctamente.
 
@@ -378,6 +382,7 @@ Al imprimir un subconjunto de las páginas, existen varias formas de mostrar el 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

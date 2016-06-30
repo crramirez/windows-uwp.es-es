@@ -3,8 +3,8 @@ author: jwmsft
 description: "Conoce los comandos de movimiento y dibujo (un minilenguaje) que podrás usar para especificar geometrías de rutas de acceso como un valor de atributo XAML."
 title: Sintaxis de comandos de movimiento y dibujo
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
-ms.sourcegitcommit: e1399a25b0455c9a79dcb217c5df1a397420d1f3
-ms.openlocfilehash: 54c080183104335f4b3920cda8bc396a34298a69
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 49c3a061c51c07677ffb43a230e0900220ba0299
 
 ---
 
@@ -119,7 +119,7 @@ Crea una línea horizontal entre el punto actual y la coordenada x especificada.
 
 | Término | Descripción |
 |------|-------------|
-| x | [**Double**](T:System.Double) <br/> Es la coordenada x del extremo de la línea. |
+| x | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Es la coordenada x del extremo de la línea. |
 
 **Comando de línea vertical**
 
@@ -131,7 +131,7 @@ Crea una línea vertical entre el punto actual y la coordenada y especificada. `
 
 | Término | Descripción |
 |------|-------------|
-| *y* | [**Double**](T:System.Double) <br/> Es la coordenada y del extremo de la línea. |
+| *y* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Es la coordenada y del extremo de la línea. |
 
 **Comando de curva Bézier cúbica**
 
@@ -208,7 +208,7 @@ Crea un arco elíptico entre el punto actual y el extremo especificado. Define e
 | Término | Descripción |
 |------|-------------|
 | *size* | [**Tamaño**](https://msdn.microsoft.com/library/windows/apps/br225995)<br/>Es el radio x y el radio y del arco. |
-| *rotationAngle* | [**Double**](T:System.Double) <br/> Es la rotación de la elipse, en grados. |
+| *rotationAngle* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Es la rotación de la elipse, en grados. |
 | *isLargeArcFlag* | Se establece en 1 si el arco debe ser de 180 grados o mayor; de lo contrario, se establece en 0. |
 | *sweepDirectionFlag* | Se establece en 1 si el arco se dibuja en una dirección de ángulo positivo; de lo contrario, se establece en 0. |
 | *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Es el punto en el que se dibuja el arco.|
@@ -232,8 +232,8 @@ Describe las coordenadas x e y de un punto. Consulta también [**Point**](https:
 
 | Término | Descripción |
 |------|-------------|
-| *x* | [**Double**](T:System.Double) <br/> Es la coordenada x del punto. |
-| *y* | [**Double**](T:System.Double) <br/> Es la coordenada y del punto. |
+| *x* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Es la coordenada x del punto. |
+| *y* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Es la coordenada y del punto. |
 
 **Notas adicionales**
 
@@ -263,6 +263,6 @@ Asimismo, hay disponibles complementos o exportadores de otras herramientas que 
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

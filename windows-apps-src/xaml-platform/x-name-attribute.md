@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Identifica de forma única elementos de objeto para acceder al objeto con instancia desde el código subyacente o el código general.
+description: "Identifica de forma única elementos de objeto para acceder al objeto con instancia desde el código subyacente o el código general."
 title: Atributo xName
 ms.assetid: 4FF1F3ED-903A-4305-B2BD-DCD29E0C9E6D
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 442c2fa103e1e968ef47ea990bfe8e166daec88b
+
 ---
 
 # Atributo x:Name
@@ -69,6 +73,7 @@ Si **Name** está disponible como propiedad que puede establecerse en un element
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

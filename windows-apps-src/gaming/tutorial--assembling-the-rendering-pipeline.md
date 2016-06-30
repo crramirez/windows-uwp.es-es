@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Ensamblar el marco de representación
-description: Ahora vamos a ver cómo el juego de muestra usa esa estructura y ese estado para mostrar sus gráficos.
+title: "Ensamblar el marco de representación"
+description: "Ahora vamos a ver cómo el juego de muestra usa esa estructura y ese estado para mostrar sus gráficos."
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5eb6ea7ad1a30f020c155007396383b88d10c0a8
+
 ---
 
 # Ensamblar el marco de representación
@@ -6321,6 +6325,7 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

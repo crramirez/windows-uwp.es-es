@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: En esta sección se incluyen directrices de la experiencia del usuario para presentar la configuración de la aplicación y almacenarla como datos de la aplicación.
-title: Datos y configuración de la aplicación
+Description: "En esta sección se incluyen directrices de la experiencia del usuario para presentar la configuración de la aplicación y almacenarla como datos de la aplicación."
+title: "Datos y configuración de la aplicación"
 ms.assetid: E7F312F7-54D8-411F-8D92-92FBB95C2463
 label: App settings and data
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 4d6f57dcc9dbfe9c2e031a5fe73f24668f0dc462
+
 ---
 
 # Datos y configuración de la aplicación
@@ -45,6 +49,7 @@ Los datos de la aplicación son los que la propia aplicación crea y administra.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

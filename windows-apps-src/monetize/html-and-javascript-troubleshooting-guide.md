@@ -2,14 +2,18 @@
 author: mcleanbyron
 ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
 description: Lee sobre las soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones de JavaScript y HTML.
-title: Guía de solución de problemas de HTML y JavaScript
+title: "Guía de solución de problemas de HTML y JavaScript"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: af4ea6f3360ea85d1c70ec9b757db65ec23c88af
+
 
 ---
 
 # Guía de solución de problemas de HTML y JavaScript
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema encontrarás soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones de JavaScript y HTML.
 
@@ -139,9 +143,9 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     </div>
     ```
 
-11. Asegúrate de que **AdControl** no esté oculto de la ventanilla. **AdControl** debe ser visible para que los anuncios se muestren correctamente.
+11. Asegúrate de que **AdControl** no esté oculto en la ventanilla. **AdControl** debe ser visible para que los anuncios se muestren correctamente.
 
-12. Los valores activos para [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) y [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) no deben probarse en el emulador. Para asegurar que **AdControl** funcione según lo previsto, usa los identificadores de prueba tanto para el **ApplicationId** como para el **AdUnitId** que se encuentran en [Test mode values](test-mode-values.md) (Valores del modo de prueba).
+12. Los valores activos para [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) y [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los identificadores de prueba tanto para **ApplicationId** como para **AdUnitId** que se encuentran en [Valores del modo de prueba](test-mode-values.md).
 
 <span id="html-blackboxblinksdisappears"/>
 ### La caja negra parpadea y desaparece
@@ -277,7 +281,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 5.  Comprueba el elemento primario de **AdControl**. El elemento primario debe estar activo y visible.
 
-6.  Los valores activos para **ApplicationId** y **AdUnitId** no deben probarse en el emulador. Para asegurar que **AdControl** funcione según lo previsto, usa los identificadores de prueba tanto para el **ApplicationId** como para el **AdUnitId** que se encuentran en [Test mode values](test-mode-values.md) (Valores del modo de prueba).
+6.  Los valores activos para **ApplicationId** y **AdUnitId** no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los identificadores de prueba tanto para **ApplicationId** como para **AdUnitId** que se encuentran en [Valores del modo de prueba](test-mode-values.md).
 
 <span id="js-blackboxblinksdisappears"/>
 ### La caja negra parpadea y desaparece
@@ -378,6 +382,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

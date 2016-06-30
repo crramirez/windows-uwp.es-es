@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Código completo para BasicReaderWriter
-description: Código completo de una clase y sus métodos para leer y escribir archivos de datos binarios en general.
+title: "Código completo para BasicReaderWriter"
+description: "Código completo de una clase y sus métodos para leer y escribir archivos de datos binarios en general."
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
+translationtype: Human Translation
+ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
+ms.openlocfilehash: 46762d7b7234be9ff7b4c288a09162d4f942a707
+
 ---
 
 # Código completo para BasicReaderWriter
@@ -261,6 +265,7 @@ task<void> BasicReaderWriter::WriteDataAsync(
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

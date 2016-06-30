@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Si eres un desarrollador con una aplicación de Windows Phone Silverlight, puedes hacer un uso inigualable de tus conocimientos y código fuente al pasar a Windows 10.
-title: Migrar de Windows Phone Silverlight a UWP
+description: "Si eres un desarrollador con una aplicación de Windows Phone Silverlight, puedes hacer un uso inigualable de tus conocimientos y código fuente al pasar a Windows 10."
+title: "Migrar de Windows Phone Silverlight a UWP"
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 19dde1c9b0df3b2a5e464feb15e43af9dd283661
+
 ---
 
 #  Migrar de Windows Phone Silverlight a UWP
@@ -88,6 +92,7 @@ En el nivel de función, la buena noticia es que hay muy poco que no sea compati
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

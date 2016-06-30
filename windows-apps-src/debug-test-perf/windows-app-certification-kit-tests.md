@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
-title: Pruebas del Kit para la certificación de aplicaciones en Windows
-description: El Kit para la certificación de aplicaciones en Windows contiene diversas pruebas que pueden ayudarte a garantizar que tu aplicación esté lista para publicarse en la Tienda Windows.
+title: "Pruebas del Kit para la certificación de aplicaciones en Windows"
+description: "El Kit para la certificación de aplicaciones en Windows contiene diversas pruebas que pueden ayudarte a garantizar que tu aplicación esté lista para publicarse en la Tienda Windows."
+translationtype: Human Translation
+ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
+ms.openlocfilehash: 816b147c91a340505348aa579c8b1540962a1df5
+
 ---
 ## Pruebas del Kit para la certificación de aplicaciones en Windows
 
@@ -666,6 +670,7 @@ Actualiza el código JavaScript en segundo plano para que llame a Close() correc
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Tecnologías de juegos para las aplicaciones para la Plataforma universal de Windows (UWP)
-description: En esta guía, encontrarás información sobre las tecnologías disponibles para desarrollar juegos para la Plataforma universal de Windows (UWP).
+title: "Tecnologías de juegos para las aplicaciones para la Plataforma universal de Windows (UWP)"
+description: "En esta guía, encontrarás información sobre las tecnologías disponibles para desarrollar juegos para la Plataforma universal de Windows (UWP)."
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3c7807d0b46a32bfe90c79b7eee3111039ca94ab
+
 ---
 
 # Tecnologías de juegos para las aplicaciones para la Plataforma universal de Windows (UWP)
@@ -351,6 +355,7 @@ Para obtener información sobre el envío de tu juego a la Tienda Windows, cons
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

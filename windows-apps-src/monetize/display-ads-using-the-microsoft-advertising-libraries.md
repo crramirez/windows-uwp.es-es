@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 5cde1c22-91fd-4f5c-ac82-32efaa0d9fee
-description: Usa las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization para mostrar anuncios intersticiales en vídeo y banners en tus aplicaciones XAML o HTML/JavaScript.
+description: "Usa las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization para mostrar anuncios intersticiales en vídeo y banners en tus aplicaciones XAML o HTML/JavaScript."
 title: Muestra anuncios mediante las bibliotecas de Microsoft Advertising
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: ab96dac3af382d334c767ad42a563c0dbc67a8f5
+
 ---
 
 # Muestra anuncios mediante las bibliotecas de Microsoft Advertising
@@ -47,6 +51,7 @@ Los siguientes temas proporcionan información sobre tareas comunes relacionadas
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

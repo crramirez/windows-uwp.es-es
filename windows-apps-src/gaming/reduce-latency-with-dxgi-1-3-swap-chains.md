@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Reducir la latencia con cadenas de intercambio de DXGI 1.3
-description: Usa DXGI 1.3 para reducir la latencia de fotogramas eficaz esperando a que la cadena de intercambio señale el momento adecuado para empezar a representar un nuevo fotograma.
+title: "Reducir la latencia con cadenas de intercambio de DXGI 1.3"
+description: "Usa DXGI 1.3 para reducir la latencia de fotogramas eficaz esperando a que la cadena de intercambio señale el momento adecuado para empezar a representar un nuevo fotograma."
 ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 174e2918d54a2b03124752d009f43f0cb0c800ca
+
 ---
 
 # Reducir la latencia con cadenas de intercambio de DXGI 1.3
@@ -158,6 +162,7 @@ Consulta los siguientes temas relacionados para obtener más información sobre 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

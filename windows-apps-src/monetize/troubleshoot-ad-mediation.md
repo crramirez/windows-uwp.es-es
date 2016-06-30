@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: A continuación se indican algunas soluciones para varios problemas de desarrollo comunes relacionados con la mediación de anuncios.
-title: Solucionar problemas de mediación de anuncios
+Description: "A continuación se indican algunas soluciones para varios problemas de desarrollo comunes relacionados con la mediación de anuncios."
+title: "Solucionar problemas de mediación de anuncios"
 ms.assetid: 8728DE4F-E050-4217-93D3-588DD3280A3A
+translationtype: Human Translation
+ms.sourcegitcommit: 10dcf3c2b8ea530b94e9c17ada80aaa98e9418fe
+ms.openlocfilehash: f32dc28c9b199c11a1932639f49ab4c29d3e1e8f
+
 ---
 
 # Solucionar problemas de mediación de anuncios
@@ -19,7 +23,7 @@ Si aún no puedes agregar correctamente el control al diseñador, asegúrate de 
 
 *
               *El objeto AdMediatorControl muestra el error "&lt;*width*
-            &gt; x &lt;*height*&gt; no se admite" en tiempo de ejecución al ofrecer anuncios de Microsoft**. Microsoft Advertising solo admite [tamaños de anuncio determinados recomendados por Interactive Advertising Bureau (IAB)](add-and-use-the-ad-mediator-control.md#supported-ad-sizes-for-microsoft-advertising). En algunos casos, incluso si en el diseñador o en el código XAML estableces el alto y ancho del control de Ad Mediator en uno de estos tamaños de anuncio admitidos, es posible que los problemas de escalado y redondeo impidan que el marco de mediación de anuncios ofrezca un anuncio. Para evitar este problema, asigna los parámetros opcionales **Width** y **Height** de Microsoft Advertising del código a uno de los tamaños de anuncio admitidos.
+            &gt; x &lt;*height*&gt; no se admite" en tiempo de ejecución al ofrecer anuncios de Microsoft**. Microsoft Advertising solo admite [determinados tamaños de anuncio recomendados por Interactive Advertising Bureau (IAB)](add-and-use-the-ad-mediator-control.md#supported-ad-sizes-for-microsoft-advertising). En algunos casos, incluso si en el diseñador o en el código XAML estableces el alto y ancho del control de Ad Mediator en uno de estos tamaños de anuncio admitidos, es posible que los problemas de escalado y redondeo impidan que el marco de mediación de anuncios ofrezca un anuncio. Para evitar este problema, asigna en el código los parámetros opcionales **Width** y **Height** correspondientes a Microsoft Advertising a uno de los tamaños de anuncio admitidos.
 
 En el siguiente ejemplo de código se muestra cómo asignar los parámetros opcionales **Ancho** y **Alto** para Microsoft Advertising en 728 x 90.
 
@@ -70,6 +74,7 @@ Si cambias el valor de **RefreshRate** en el archivo AdMediator.config, ten en c
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

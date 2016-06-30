@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: El reproductor multimedia tiene controles de transporte en XAML personalizados para administrar el control de contenido de audio y vídeo
+Description: "El reproductor multimedia tiene controles de transporte en XAML personalizados para administrar el control de contenido de audio y vídeo"
 title: Crear controles de transporte personalizados
 ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
 label: Create custom media transport controls
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 5500f41b254b32b8d293181fba3acebbfffa90e7
+
 ---
 # Crear controles de transporte personalizados
 
@@ -271,6 +275,7 @@ private void MediaElement_MediaOpened(object sender, RoutedEventArgs e)
 - [Reproducción multimedia](media-playback.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

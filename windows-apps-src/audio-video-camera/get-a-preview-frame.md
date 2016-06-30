@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
-description: En este tema se muestra cómo obtener un marco de vista previa de la secuencia de vista previa de captura multimedia.
+description: "En este tema se muestra cómo obtener un marco de vista previa de la secuencia de vista previa de captura multimedia."
 title: Obtener un marco de vista previa
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c512ec92272ab03cfd8e91602018f09ef8225652
+
 ---
 
 # Obtener un marco de vista previa
@@ -59,6 +63,7 @@ Cuando hayas terminado con el marco de vista previa, asegúrate de llamar a su m
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

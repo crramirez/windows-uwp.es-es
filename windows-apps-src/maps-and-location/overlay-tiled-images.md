@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: Superponer imágenes en mosaico en un mapa
-description: Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
+author: msatranjr
+title: "Superponer imágenes en mosaico en un mapa"
+description: "Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo."
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 71d044eb19e71786da39ca71d4f4fbd2d87645be
+
 ---
 
 # Superponer imágenes en mosaico en un mapa
@@ -364,6 +367,7 @@ Reemplazar todo el mapa con iconos personalizados o de terceros:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Si tu aplicación usa un objeto AdMediatorControl o AdControl para mostrar anuncios en banners, puedes aumentar la velocidad de relleno de anuncios y los ingresos mostrando anuncios de filiales de Microsoft en la aplicación.
+Description: "Si tu aplicación usa un objeto AdMediatorControl o AdControl para mostrar anuncios en banners, puedes aumentar la velocidad de relleno de anuncios y los ingresos mostrando anuncios de filiales de Microsoft en la aplicación."
 title: Acerca de los anuncios de filiales
 ms.assetid: 7B5478FB-7E68-4956-82EF-B43C2873E3EF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0ac051d5774dadde48e2692683a6bcfae8264d1c
+
 ---
 
 # Acerca de los anuncios de filiales
@@ -44,6 +48,7 @@ Después de activar o desactivar esta casilla, no es necesario volver a publicar
 * [Informe de rendimiento de filiales](affiliates-performance-report.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

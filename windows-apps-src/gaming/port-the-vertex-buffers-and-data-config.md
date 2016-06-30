@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Migrar datos y búferes de vértices
-description: En este paso, definirás los búferes de vértices, que contendrán las mallas, y los búferes de índices, que permitirán a los sombreadores recorrer los vértices en un orden especificado.
+title: "Migrar datos y búferes de vértices"
+description: "En este paso, definirás los búferes de vértices, que contendrán las mallas, y los búferes de índices, que permitirán a los sombreadores recorrer los vértices en un orden especificado."
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9692b33303099f9d1193b93ab458a19a5d95abe3
+
 ---
 
 # Portar datos y búferes de vértices
@@ -313,6 +317,7 @@ Cuando estructures tu contenido de Direct3D, separa el código que llama a los m
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: ca92bed1-ad9e-4947-ad91-87d12de727c0
-description: Consulta las notas de la versión de las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization.
-title: Notas de la versión de las bibliotecas de Microsoft Advertising
+description: "Consulta las notas de la versión de las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization."
+title: "Notas de la versión de las bibliotecas de Microsoft Advertising"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 8e2114e969b27d579f62195f026cfcfd9672a94a
+
 ---
 
 # Notas de la versión de las bibliotecas de Microsoft Advertising
@@ -52,6 +56,7 @@ Asegúrate de leer el contrato de licencia del usuario final (CLUF) en su totali
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

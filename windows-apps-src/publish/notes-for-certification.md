@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Cuando envías tu aplicación, tienes la opción de usar la página Notas para la certificación para proporcionar información adicional a los evaluadores de certificación. Esta información puede ayudarte a garantizar que tu aplicación se prueba correctamente.
-title: Notas para la certificación
+Description: "Cuando envías tu aplicación, tienes la opción de usar la página Notas para la certificación para proporcionar información adicional a los evaluadores de certificación. Esta información puede ayudarte a garantizar que tu aplicación se prueba correctamente."
+title: "Notas para la certificación"
 ms.assetid: 4A740A5F-F39F-4FE2-9391-EE00DB46B25A
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 02a0f17fef730da305f5dfb24c834b53045e3eb8
+
 ---
 
 # Notas para la certificación
@@ -43,6 +47,7 @@ Cuando estés considerando qué escribir, recuerda que:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

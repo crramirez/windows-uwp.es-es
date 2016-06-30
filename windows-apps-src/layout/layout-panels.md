@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Usar paneles de diseño para organizar y agrupar elementos de la interfaz de usuario en la aplicación.
-title: Paneles de diseño para aplicaciones para la Plataforma universal de Windows (UWP)
+Description: "Usar paneles de diseño para organizar y agrupar elementos de la interfaz de usuario en la aplicación."
+title: "Paneles de diseño para aplicaciones para la Plataforma universal de Windows (UWP)"
 ms.assetid: 07A7E022-EEE9-4C81-AF07-F80868665994
 label: Layout panels
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 70bb6e1f01fa89c7a504e0299e89153efc30de1e
+
 ---
 # Paneles de diseño
 
@@ -227,6 +231,7 @@ Usa el panel Canvas con moderación. Aunque resulta conveniente poder controlar 
 Hay varios paneles especiales que se pueden usar solo como [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) para mostrar los elementos en un [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx). Estos son [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemsstackpanel.aspx), [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemswrapgrid.aspx), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.virtualizingstackpanel.aspx) y [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.wrapgrid.aspx). No puedes usar estos paneles para el diseño general de la interfaz de usuario.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,14 +1,17 @@
 ---
 author: jnHs
-Description: Cuando termines de crear el envío de la aplicación y hagas clic en Enviar a la Tienda, entra en el paso de certificación.
-title: Proceso de certificación de la aplicación
+Description: "Cuando termines de crear el envío de la aplicación y hagas clic en Enviar a la Tienda, entra en el paso de certificación."
+title: "Proceso de certificación de la aplicación"
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
+ms.sourcegitcommit: 4ea19e85d1e151dd1e03d5acf085c186613be35f
+ms.openlocfilehash: 579d1ef306123f765e19fc9ab3b02c064b690aee
+
 ---
 
 # Proceso de certificación de la aplicación
 
 
-Cuando termines de crear el envío de la aplicación y hagas clic en **Enviar a la Tienda**, entra en el paso de certificación. Normalmente, este proceso se completa en unas horas, aunque en algunos casos puede tardar más. A continuación se muestra un vistazo de lo que ocurre durante el paso de certificación.
+Cuando termines de crear el envío de la aplicación y hagas clic en **Enviar a la Tienda**, entra en el paso de certificación. Normalmente, este proceso se completa en unas horas, aunque en algunos casos puede tardar hasta un día laborable. Una vez que el envío haya superado la certificación, puede costar hasta 16 horas que los clientes vean la aplicación (o las actualizaciones a una aplicación publicada anteriormente) listada en la tienda. Verás una notificación cuando el envío esté publicado y disponible para los clientes, y el estado de la aplicación en el panel será **En la Tienda**.
 
 ## Preprocesamiento
 
@@ -32,11 +35,11 @@ Cuando la aplicación aprueba la certificación, está lista para pasar al proce
 
 Los paquetes de la aplicación se firman digitalmente para protegerlos de alteraciones después de su lanzamiento. Una vez iniciada esta fase, ya no puedes cancelar el envío ni cambiar la fecha de lanzamiento.
 
-Mientras la aplicación se encuentra en la fase de publicación, el vínculo **Mostrar detalles** de la columna Estado para el envío de la aplicación te avisará cuando se pongan a disposición de los clientes en cada una de tus versiones de sistema operativo compatibles los nuevos paquetes y los detalles del listado de la Tienda. La aplicación permanece en la fase de publicación hasta que los nuevos paquetes y los detalles del listado estén disponibles para todos los clientes potenciales de la aplicación. Cuando esto ocurra, el estado cambiará de **Publicación** a **En la Tienda**. 
+Mientras la aplicación se encuentra en la fase de publicación, el vínculo **Mostrar detalles** de la columna Estado para el envío de la aplicación te avisará cuando se pongan a disposición de los clientes en cada una de tus versiones de sistema operativo compatibles los nuevos paquetes y los detalles del listado de la Tienda. La aplicación permanecerá en la fase de publicación hasta que los nuevos paquetes y los detalles del listado estén disponibles para todos los clientes potenciales de la aplicación, lo que puede tardar hasta 16 horas. 
 
 ## En la Tienda 
 
-Tras completar los pasos anteriores, tu envío estará disponible en la Tienda Windows para que lo descarguen los clientes (a menos que haya elegido otra opción [Distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility)).
+Tras completar los pasos anteriores, el estado del envío cambiará de **Publicación** a **En la Tienda**. A continuación, tu envío estará disponible en la Tienda Windows para que lo descarguen los clientes (a menos que hayas elegido otra opción de [Distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility)). 
 
 **Nota** También se realizan comprobaciones puntuales de aplicaciones después de que se hayan publicado para poder identificar posibles problemas y garantizar que la aplicación cumple con todas las [directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944) Si encontramos algún problema, se te notificará al respecto y sobre cómo solucionarlo, si corresponde, o bien sobre si la aplicación se ha quitado de la Tienda.
 
@@ -51,6 +54,7 @@ Tras completar los pasos anteriores, tu envío estará disponible en la Tienda W
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

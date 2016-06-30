@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: El proceso de migración se empieza creando un nuevo proyecto de Windows 10 en Visual Studio y copiando los archivos en él.
-title: Migración de un proyecto de Windows Phone Silverlight a un proyecto de UWP
+description: "El proceso de migración se empieza creando un nuevo proyecto de Windows 10 en Visual Studio y copiando los archivos en él."
+title: "Migración de un proyecto de Windows Phone Silverlight a un proyecto de UWP"
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 74cbd9789636383e6d04798435780dcda6b897d0
+
 ---
 
 # Migración de un proyecto de Windows Phone Silverlight a un proyecto de UWP
@@ -144,6 +148,7 @@ El siguiente tema es [Solución de problemas](wpsl-to-uwp-troubleshooting.md).
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

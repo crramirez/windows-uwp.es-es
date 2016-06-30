@@ -5,8 +5,8 @@ title: Interacciones de mouse
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: b381cdba2a20480bb8b4d7802d2ff490744e5f03
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 10deda7b44d4cfb5c65b425bf82ceaf6654aab95
 
 ---
 
@@ -27,7 +27,7 @@ Donde el mouse y la entrada táctil difieren es en la posibilidad de esta últim
 
 En este tema se describen las consideraciones de diseño para interacciones de mouse.
 
-## <span id="The_UWP_app_mouse_language"></span><span id="the_uwp_app_mouse_language"></span><span id="THE_UWP_APP_MOUSE_LANGUAGE"></span>Lenguaje del mouse de la aplicación para UWP
+## Lenguaje del mouse de la aplicación para UWP
 
 
 Un escueto conjunto de interacciones del mouse se usan de forma coherente en todo el sistema.
@@ -45,19 +45,19 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span id="Hover_to_learn"></span><span id="hover_to_learn"></span><span id="HOVER_TO_LEARN"></span>Mantener el mouse para obtener información</p></td>
+<td align="left"><p>Mantener el mouse para obtener información</p></td>
 <td align="left"><p>Mantén el mouse sobre un elemento para mostrar información más detallada o elementos visuales didácticos (como información sobre herramientas) sin confirmar una acción.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Left-click_for_primary_action"></span><span id="left-click_for_primary_action"></span><span id="LEFT-CLICK_FOR_PRIMARY_ACTION"></span>Clic con el botón primario para acción principal</p></td>
+<td align="left"><p>Clic con el botón primario para acción principal</p></td>
 <td align="left"><p>Haz clic con el botón primario sobre un elemento para invocar su acción principal (como iniciar una aplicación o ejecutar un comando).</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Scroll_to_change_view"></span><span id="scroll_to_change_view"></span><span id="SCROLL_TO_CHANGE_VIEW"></span>Desplazar para cambiar de vista</p></td>
+<td align="left"><p>Desplazar para cambiar de vista</p></td>
 <td align="left"><p>Muestra barras de desplazamiento para moverte hacia arriba, hacia abajo, a la izquierda y a la derecha dentro de un área de contenido. Los usuarios pueden desplazarse haciendo clic en las barras de desplazamiento o girando la rueda del mouse. Las barras de desplazamiento pueden indicar la ubicación de la vista actual dentro del área de contenido (al desplazar lateralmente con entrada táctil se muestra una interfaz de usuario similar).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Right-click_to_select_and_command"></span><span id="right-click_to_select_and_command"></span><span id="RIGHT-CLICK_TO_SELECT_AND_COMMAND"></span>Clic con el botón secundario para seleccionar y ordenar</p></td>
+<td align="left"><p>Clic con el botón secundario para seleccionar y ordenar</p></td>
 <td align="left"><p>Haz clic con el botón secundario para mostrar la barra de navegación (si está disponible) y la barra de la aplicación con comandos globales. Haz clic con el botón secundario en un elemento para seleccionarlo y mostrar la barra de la aplicación con comandos contextuales para el elemento seleccionado.</p>
 <div class="alert">
 <strong>Nota</strong>  Haz clic con el botón derecho para mostrar un menú contextual si la selección o los comandos de la barra de la aplicación no son comportamientos de interfaz de usuario adecuados. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
@@ -67,19 +67,19 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="UI_commands_to_zoom"></span><span id="ui_commands_to_zoom"></span><span id="UI_COMMANDS_TO_ZOOM"></span>Comandos de la interfaz de usuario para hacer zoom</p></td>
+<td align="left"><p>Comandos de la interfaz de usuario para hacer zoom</p></td>
 <td align="left"><p>Muestra los comandos de la interfaz de usuario en la barra de la aplicación (como + y -), o bien presiona Ctrl y gira la rueda del mouse, para emular los gestos de reducir y ampliar.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="UI_commands_to_rotate"></span><span id="ui_commands_to_rotate"></span><span id="UI_COMMANDS_TO_ROTATE"></span>Comandos de la interfaz de usuario para girar</p></td>
+<td align="left"><p>Comandos de la interfaz de usuario para girar</p></td>
 <td align="left"><p>Muestra los comandos de la interfaz de usuario en la barra de la aplicación o bien presiona Ctrl+Mayús y gira la rueda del mouse, para emular el gesto de girar. Gira el dispositivo propiamente dicho para girar toda la pantalla.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Left-click_and_drag_to_rearrange"></span><span id="left-click_and_drag_to_rearrange"></span><span id="LEFT-CLICK_AND_DRAG_TO_REARRANGE"></span>Clic con el botón primario y arrastrar para reorganizar</p></td>
+<td align="left"><p>Clic con el botón primario y arrastrar para reorganizar</p></td>
 <td align="left"><p>Haz clic con el botón primario en un elemento y arrástralo para moverlo.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Left-click_and_drag_to_select_text"></span><span id="left-click_and_drag_to_select_text"></span><span id="LEFT-CLICK_AND_DRAG_TO_SELECT_TEXT"></span>Clic con el botón primario y arrastrar para seleccionar texto</p></td>
+<td align="left"><p>Clic con el botón primario y arrastrar para seleccionar texto</p></td>
 <td align="left"><p>Haz clic con el botón primario dentro de texto seleccionable y arrástralo para seleccionarlo. Haz doble clic para seleccionar una palabra.</p></td>
 </tr>
 </tbody>
@@ -100,7 +100,7 @@ Usa los eventos de [**UIElement**](https://msdn.microsoft.com/library/windows/ap
 
 - [Entrada: gestos y manipulaciones con GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
 
-## <span id="Guidelines_for_visual_feedback"></span><span id="guidelines_for_visual_feedback"></span><span id="GUIDELINES_FOR_VISUAL_FEEDBACK"></span>Instrucciones para la información visual
+## Instrucciones para la información visual
 
 
 -   Cuando se detecta un mouse (a través de eventos de movimiento o mantenimiento del mouse), muestra la interfaz de usuario específica del mouse para indicar las funciones expuestas por el elemento. Si el mouse no se mueve por un determinado período o el usuario inicia una interacción táctil, haz que la interfaz de usuario del mouse vaya desapareciendo gradualmente. Esto mantiene la interfaz de usuario ordenada y organizada.
@@ -113,7 +113,7 @@ Usa los eventos de [**UIElement**](https://msdn.microsoft.com/library/windows/ap
 Para obtener instrucciones más generales sobre la información visual, consulta el tema sobre las [directrices para información visual](guidelines-for-visualfeedback.md).
 
 
-## <span id="Cursors"></span><span id="cursors"></span><span id="CURSORS"></span>Cursores
+## Cursores
 
 
 Dispones de un conjunto de cursores estándar para un puntero del mouse. Estos se usan para indicar la acción principal de un elemento.
@@ -128,7 +128,7 @@ Si necesitas personalizar el cursor del mouse:
 -   Usa los cursores de ajuste horizontal, vertical y diagonal (![cursor de ajuste vertical](images/cursor-vertical.png), ![cursor de ajuste horizontal](images/cursor-horizontal.png), ![cursor de ajuste diagonal (inferior izquierda, superior derecha)](images/cursor-diagonal2.png), ![cursor de ajuste diagonal (superior izquierda, inferior derecha)](images/cursor-diagonal1.png)cuando se puede ajustar el tamaño de un objeto.
 -   Usa los cursores de mano que sujeta (![cursor de mano que sujeta (abierta)](images/cursor-pan1.png), ![cursor de mano que sujeta (cerrada)](images/cursor-pan2.png)) al desplazar contenido lateralmente dentro de un lienzo fijo (como un mapa).
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 * [Controlar la entrada de puntero](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
@@ -155,6 +155,6 @@ Si necesitas personalizar el cursor del mouse:
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Configura la compilación de XAML para unir clases parciales entre el marcado y el código subyacente. La clase parcial de código se define en un archivo de código separado y la clase parcial de marcado se crea mediante la generación del código durante la compilación de XAML.
+description: "Configura la compilación de XAML para unir clases parciales entre el marcado y el código subyacente. La clase parcial de código se define en un archivo de código separado y la clase parcial de marcado se crea mediante la generación del código durante la compilación de XAML."
 title: Atributo xClass
 ms.assetid: 40A7C036-133A-44DF-9D11-0D39232C948F
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 83267df025baeb802bfdd0ec03ecd3bf7b01db76
+
 ---
 
 # Atributo x:Class
@@ -41,6 +45,7 @@ Si bien el archivo de código subyacente puede ser un archivo de C++, existen ci
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

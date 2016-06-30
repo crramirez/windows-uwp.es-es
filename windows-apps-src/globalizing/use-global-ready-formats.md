@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: Desarrolla una aplicación lista para todo el mundo mediante la aplicación del formato adecuado a las fechas, las horas, los números y las divisas.
+Description: "Desarrolla una aplicación lista para todo el mundo mediante la aplicación del formato adecuado a las fechas, las horas, los números y las divisas."
 title: Usar formatos globales
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 label: Use global-ready formats
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 77b5e7bd412936dd5d8c4bc252771631d6b884cf
+
 ---
 
 # <span id="dev_globalizing.use_global-ready_formats"></span>Usar formatos globales
@@ -190,6 +194,7 @@ Este proceso de adaptación a nuevos mercados se puede simplificar teniendo en c
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

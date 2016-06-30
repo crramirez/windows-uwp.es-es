@@ -2,7 +2,11 @@
 author: msatranjr
 ms.assetid: 1abcbb13-80f0-4bf1-a812-649ee8bd1915
 title: Empaquetado de aplicaciones
-description: Esta sección contiene o menciona artículos sobre los paquetes de aplicaciones para la Plataforma universal de Windows (UWP).
+description: "Esta sección contiene o menciona artículos sobre los paquetes de aplicaciones para la Plataforma universal de Windows (UWP)."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 6f50874ceb5e133f2b1b764bfc6fcff6422172db
+
 ---
 # Empaquetado de aplicaciones
 
@@ -21,6 +25,7 @@ Esta sección contiene o menciona artículos sobre los paquetes de aplicaciones 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

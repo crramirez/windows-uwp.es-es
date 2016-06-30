@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Un patrón con un área de contenido y un área de comando para aplicaciones de vista única o experiencias modales, como visores o editores de fotos, visores de documentos, mapas, dibujo u otras aplicaciones que usan una vista de desplazamiento libre.
-title: Directrices para el patrón del lienzo activo
+Description: "Un patrón con un área de contenido y un área de comando para aplicaciones de vista única o experiencias modales, como visores o editores de fotos, visores de documentos, mapas, dibujo u otras aplicaciones que usan una vista de desplazamiento libre."
+title: "Directrices para el patrón del lienzo activo"
 ms.assetid: 4D768472-64D6-406C-9E87-F750F6B981A0
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 490c45fb8dc565e4ae0b890d26f28d698b58f255
+
 ---
 #Patrón del lienzo activo
 
@@ -36,6 +40,7 @@ El patrón de lienzo activo consta de un área de contenido y un área de comand
 -   [**Barra de la aplicación y barra de comandos**](app-bars.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

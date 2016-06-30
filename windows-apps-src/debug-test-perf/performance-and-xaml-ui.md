@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 64F7FC51-E8AC-4098-9C5F-0172E4724B5C
 title: Rendimiento
-description: Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería.
+description: "Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 68f9080cedcc2840fb1e92b81e2fb6bc0b53bee8
+
 ---
 # Rendimiento
 
@@ -31,6 +35,7 @@ Si aún no lo has hecho, un paso que ya hemos visto y que permite realizar mejor
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

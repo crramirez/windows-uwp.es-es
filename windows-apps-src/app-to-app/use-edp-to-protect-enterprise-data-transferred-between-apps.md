@@ -1,10 +1,14 @@
 ---
 author: awkoren
-Description: 'En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con la transferencia de datos.'
-MS-HAID: 'dev\_app\_to\_app.use\_edp\_to\_protect\_enterprise\_data\_transferred\_between\_apps'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con la transferencia de datos."
+MS-HAID: dev\_app\_to\_app.use\_edp\_to\_protect\_enterprise\_data\_transferred\_between\_apps
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Usar EDP para proteger los datos empresariales que se transfieren entre aplicaciones
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 77533d4aca3cc84e0a021a0faac57f5afbbefdd7
+
 ---
 
 # Usar EDP para proteger los datos empresariales que se transfieren entre aplicaciones
@@ -395,6 +399,7 @@ private async void OnPasteWithRequestAccess()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

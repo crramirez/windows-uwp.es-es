@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Controlar escenarios cuando se quitan dispositivos en Direct3D 11
-description: En este tema se explica cómo recrear la cadena de la interfaz de dispositivo de Direct3D y DXGI cuando se quita o reinicializa la tarjeta gráfica.
+title: "Controlar escenarios cuando se quitan dispositivos en Direct3D 11"
+description: "En este tema se explica cómo recrear la cadena de la interfaz de dispositivo de Direct3D y DXGI cuando se quita o reinicializa la tarjeta gráfica."
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8d522a309386b06f97bc63b9eead1ca4cecf165c
+
 ---
 
 # <span id="dev_gaming.handling_device-lost_scenarios"></span>Controlar escenarios cuando se quitan dispositivos en Direct3D 11
@@ -172,6 +176,7 @@ El símbolo del sistema para desarrolladores de Visual Studio admite una herrami
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: El informe Clasificaciones del panel del Centro de desarrollo de Windows te permite ver la distribución de cómo los clientes clasifican la aplicación en la Tienda Windows.
+Description: "El informe Clasificaciones del panel del Centro de desarrollo de Windows te permite ver la distribución de cómo los clientes clasifican la aplicación en la Tienda Windows."
 title: Informe Clasificaciones
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e0258bc9402772d0a036b32563348d11acd0fdb7
+
 ---
 
 # Informe Clasificaciones
@@ -68,6 +72,7 @@ De manera predeterminada, mostramos el mercado que tenía más críticas y se si
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

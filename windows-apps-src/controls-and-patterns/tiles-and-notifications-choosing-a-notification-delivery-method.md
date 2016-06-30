@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: En este artículo se abordan las cuatro opciones de notificación (local, programada, periódica y de inserción) que proporcionan actualizaciones de iconos y distintivos, así como contenido de notificaciones del sistema.
-title: Elegir un método de entrega de notificaciones
+Description: "En este artículo se abordan las cuatro opciones de notificación (local, programada, periódica y de inserción) que proporcionan actualizaciones de iconos y distintivos, así como contenido de notificaciones del sistema."
+title: "Elegir un método de entrega de notificaciones"
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: b79a6f771afe63c9a42567875db5ef8107611afc
+
 ---
 
 # Elegir un método de entrega de notificaciones
@@ -167,6 +171,7 @@ Para obtener más información, consulta lo siguiente:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

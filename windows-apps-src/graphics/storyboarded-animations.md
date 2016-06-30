@@ -3,8 +3,8 @@ author: Jwmsft
 ms.assetid: 0CBCEEA0-2B0E-44A1-A09A-F7A939632F3A
 title: "Animaciones con guion gráfico"
 description: "Las animaciones de guión gráfico no son solo animaciones en un sentido visual."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 83e361fd736ce46893517c7a5cccc9c5efc9a889
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 6c900ae6e1cfde8ec7261acfc57ea19b49f2ede1
 
 ---
 # Animaciones con guion gráfico
@@ -222,7 +222,7 @@ Definir recursos en la raíz XAML de un archivo XAML como page.xaml o app.xaml e
 
  
 
-También puedes colocar tus animaciones en una unidad del [**Guión gráfico**](https://msdn.microsoft.com/library/windows/apps/BR210490) cuando declares las animaciones de estado visual para la apariencia visual de un control. En ese caso, los elementos de **Guión gráfico** que definas irán en un contenedor de [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) anidado más profundamente en un [**Estilo**](https://msdn.microsoft.com/library/windows/apps/BR208849) (el **Estilo** es el recurso con clave). No necesitas una clave o un nombre para tu **Guión gráfico** en este caso porque es el **VisualState** quien tiene un nombre de destino al que puede invocar el [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager). Los estilos para los controles a menudo se incluyen en archivos XAML [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) separados en vez de colocarse en una colección de **Recursos** de una página o aplicación. Para obtener más información, consulta el tema sobre [Animaciones con guion gráfico para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
+También puedes colocar tus animaciones en una unidad del [**Guión gráfico**](https://msdn.microsoft.com/library/windows/apps/BR210490) cuando declares las animaciones de estado visual para la apariencia visual de un control. En ese caso, los elementos de **Guión gráfico** que definas irán en un contenedor de [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) anidado más profundamente en un [**Estilo**](https://msdn.microsoft.com/library/windows/apps/BR208849) (el **Estilo** es el recurso con clave). No necesitas una clave o un nombre para tu **Guión gráfico** en este caso porque es el **VisualState** quien tiene un nombre de destino al que puede invocar el [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager). Los estilos para los controles a menudo se incluyen en archivos XAML [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) separados en vez de colocarse en una colección de **Recursos** de una página o aplicación. Para obtener más información, consulta el tema sobre [Animaciones con guion gráfico para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
 
 ## Animaciones dependientes e independientes
 
@@ -305,11 +305,11 @@ Puedes controlar el evento [**Completo**](https://msdn.microsoft.com/en-us/libra
 
 ### Animaciones para estados visuales
 
-El comportamiento de ejecución para un [**Guión gráfico**](https://msdn.microsoft.com/library/windows/apps/BR210490) que se usa para definir un estado visual del control difiere de cómo puede ejecutar una aplicación un guión gráfico directamente. Tal como se aplica a una definición de estado visual en XAML, el **Guión gráfico** es un elemento del [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) que lo contiene y el estado en su totalidad está controlado mediante la API de [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager). Las animaciones se ejecutarán de acuerdo con sus valores de animación y las propiedades [**Línea de tiempo**](https://msdn.microsoft.com/library/windows/apps/BR210517) cuando se use el **VisualState** que lo contiene mediante un control. Para más información, consulta el tema sobre [guiones gráficos para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808). Para los estados visuales, el [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) aparente es diferente. Si un estado visual se cambia a otro estado, todos los cambios de propiedades aplicados por el estado visual anterior y sus animaciones se cancelan, incluso si el nuevo estado visual no aplica específicamente una nueva animación a una propiedad.
+El comportamiento de ejecución para un [**Guión gráfico**](https://msdn.microsoft.com/library/windows/apps/BR210490) que se usa para definir un estado visual del control difiere de cómo puede ejecutar una aplicación un guión gráfico directamente. Tal como se aplica a una definición de estado visual en XAML, el **Guión gráfico** es un elemento del [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) que lo contiene y el estado en su totalidad está controlado mediante la API de [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager). Las animaciones se ejecutarán de acuerdo con sus valores de animación y las propiedades [**Línea de tiempo**](https://msdn.microsoft.com/library/windows/apps/BR210517) cuando se use el **VisualState** que lo contiene mediante un control. Para más información, consulta el tema sobre [guiones gráficos para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808). Para los estados visuales, el [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) aparente es diferente. Si un estado visual se cambia a otro estado, todos los cambios de propiedades aplicados por el estado visual anterior y sus animaciones se cancelan, incluso si el nuevo estado visual no aplica específicamente una nueva animación a una propiedad.
 
 ### **Storyboard** y **EventTrigger**
 
-Hay una forma de iniciar una animación que se pueda declarar completamente en XAML. Pero, esta técnica ya no se usa tanto. Es una sintaxis heredada de WPF y las versiones anteriores de Silverlight antes de admitir [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager). Esta sintaxis [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) aún funciona en XAML de Windows Runtime por razones de importación/compatibilidad, pero solo funciona para un comportamiento desencadenador en función del evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723); intentar desencadenar otros eventos arrojará excepciones o impedirá la compilación. Para obtener más información, consulta [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) o [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053).
+Hay una forma de iniciar una animación que se pueda declarar completamente en XAML. Pero, esta técnica ya no se usa tanto. Es una sintaxis heredada de WPF y las versiones anteriores de Silverlight antes de admitir [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager). Esta sintaxis [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) aún funciona en XAML de Windows Runtime por razones de importación/compatibilidad, pero solo funciona para un comportamiento desencadenador en función del evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723); intentar desencadenar otros eventos arrojará excepciones o impedirá la compilación. Para obtener más información, consulta [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) o [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053).
 
 ## Animación de propiedades adjuntas de XAML
 
@@ -338,6 +338,6 @@ Hasta ahora, hemos mostrado las animaciones personalizadas que se animan entre d
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

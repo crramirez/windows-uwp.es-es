@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
-description: Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados del informe de errores de un intervalo de fechas y otros filtros opcionales.
+description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados del informe de errores de un intervalo de fechas y otros filtros opcionales."
 title: Obtener los datos del informe de errores
+ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
+ms.openlocfilehash: 5b2421daf9df4ca417d5089166c0927e2b2f7436
+
 ---
 
 # Obtener los datos del informe de errores
@@ -63,13 +66,13 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">cadena</td>
-<td align="left">Identificador de producto de la aplicación de la cual quieres recuperar los datos del informe de errores. El identificador del producto está incrustado en el vínculo descriptivo que tienes disponible en la [página Identidad de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt148561) del panel del Centro de desarrollo. Un identificador de producto de ejemplo es 9WZDNCRFJ3Q8.</td>
+<td align="left">El Id. de la Tienda de la aplicación sobre la que quieres recuperar los datos del informe de errores. El Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8.</td>
 <td align="left">Sí</td>
 </tr>
 <tr class="even">
 <td align="left">startDate</td>
 <td align="left">fecha</td>
-<td align="left">Fecha de inicio del intervalo de fechas de los datos del informe de errores que se han de recuperar. El valor predeterminado es la fecha actual.</td>
+<td align="left">La fecha de inicio del intervalo de fechas de los datos del informe de errores que se han de recuperar. El valor predeterminado es la fecha actual.</td>
 <td align="left">No</td>
 </tr>
 <tr class="odd">
@@ -242,7 +245,7 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 
 ### Ejemplo de solicitud
 
-Los siguientes ejemplos muestran varias solicitudes para obtener los datos del informe de errores. Reemplaza el valor *applicationId* por el identificador de producto de la aplicación.
+Los siguientes ejemplos muestran varias solicitudes para obtener los datos del informe de errores. Reemplaza el valor *applicationId* por el Id. de la Tienda de la aplicación.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/failurehits?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -271,7 +274,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | Valor           | Tipo    | Descripción                                                                                                                                                                                                                              |
 |-----------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date            | cadena  | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
-| applicationId   | cadena  | Identificador de producto de la aplicación de la cual quieres recuperar los datos de compra del IAP.                                                                                                                                                           |
+| applicationId   | cadena  | El Id. de la Tienda de la aplicación sobre la que quieres recuperar los datos de compra de IAP.                                                                                                                                                           |
 | applicationName | cadena  | Nombre para mostrar de la aplicación.                                                                                                                                                                                                             |
 | failureName     | cadena  | El nombre del error.                                                                                                                                                                                                                 |
 | failureHash     | cadena  | Identificador único del error.                                                                                                                                                                                                   |
@@ -326,6 +329,7 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 * [Get app reviews (Obtener opiniones de la aplicación)](get-app-reviews.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

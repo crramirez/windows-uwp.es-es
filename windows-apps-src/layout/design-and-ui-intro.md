@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: En este artículo se describen las funciones, las ventajas y los requisitos de la Plataforma universal de Windows (UWP) desde una perspectiva de diseño. Averigua lo que te ofrece la plataforma de forma gratuita y las herramientas que pone a tu disposición.
-title: Introducción al diseño de aplicaciones para la Plataforma universal de Windows (UWP)
+Description: "En este artículo se describen las funciones, las ventajas y los requisitos de la Plataforma universal de Windows (UWP) desde una perspectiva de diseño. Averigua lo que te ofrece la plataforma de forma gratuita y las herramientas que pone a tu disposición."
+title: "Introducción al diseño de aplicaciones para la Plataforma universal de Windows (UWP)"
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 label: Intro to UWP app design
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: ec154ec64ba18badb5f81b59e76fc04e539de1a8
+
 ---
 
 #  Introducción al diseño de aplicaciones para UWP 
@@ -215,6 +219,7 @@ A continuación se muestra un ejemplo de esta técnica aplicado al diseño de un
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

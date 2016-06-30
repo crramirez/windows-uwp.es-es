@@ -1,13 +1,17 @@
 ---
 author: Jwmsft
-Description: Los estilos te permiten establecer propiedades de control y reutilizar esa configuración para mantener un aspecto uniforme en varios controles.
-MS-HAID: 'dev\_ctrl\_layout\_txt.styling\_controls'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Los estilos te permiten establecer propiedades de control y reutilizar esa configuración para mantener un aspecto uniforme en varios controles."
+MS-HAID: dev\_ctrl\_layout\_txt.styling\_controls
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Controles de estilo
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
 label: Styling controls
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 02cd8f7777f169ad9fc4e5bfe854a8b6e0fe5060
+
 ---
 
 # Controles de estilo
@@ -149,6 +153,7 @@ Se puede usar un establecedor de estilo para la propiedad [**Plantilla**](https:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

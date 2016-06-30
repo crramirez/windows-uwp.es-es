@@ -1,10 +1,14 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción del usuario intuitivas y distintivas que estén optimizadas para entrada táctil, pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada.
-title: Directrices para el diseño de la función táctil
+Description: "Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción del usuario intuitivas y distintivas que estén optimizadas para entrada táctil, pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada."
+title: "Directrices para el diseño de la función táctil"
 ms.assetid: 3250F729-4FDD-4AD4-B856-B8BA575C3375
 label: Touch design guidelines
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 67b851ce854c803934c2b97dbe7519e2916383a3
+
 ---
 
 # Directrices para el diseño de la función táctil
@@ -152,7 +156,7 @@ Además, te recomendamos lo siguiente:
 -   Las interacciones deben admitir manipulaciones compuestas. Por ejemplo, alejar para ampliar mientras se arrastran los dedos para el movimiento panorámico.
 -   Las interacciones no deben distinguirse temporalmente. La misma interacción debe tener el mismo resultado, independientemente del tiempo que se haya tardado en realizarla. Las activaciones temporales introducen retrasos obligatorios para los usuarios y reducen la naturaleza envolvente de la manipulación directa, así como la percepción de la respuesta del sistema.
 
-    **Nota**  Una excepción a esto se produce cuando se usan interacciones temporales específicas para ayudar en el aprendizaje y la exploración (por ejemplo, mantener presionado).
+    **Nota** Una excepción a esto se produce cuando se usan interacciones temporales específicas para ayudar en el aprendizaje y la exploración (por ejemplo, mantener presionado).
 
      
 
@@ -172,6 +176,7 @@ Además, te recomendamos lo siguiente:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

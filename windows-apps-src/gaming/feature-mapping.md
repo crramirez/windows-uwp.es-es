@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Asignar características de DirectX 9 a las API de DirectX 11
-description: Aprende a trasladar las características de tu juego Direct3D 9 a Direct3D 11 y a la Plataforma universal de Windows (UWP).
+title: "Asignar características de DirectX 9 a las API de DirectX 11"
+description: "Aprende a trasladar las características de tu juego Direct3D 9 a Direct3D 11 y a la Plataforma universal de Windows (UWP)."
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3a9e9c32ed2d892674592f32d0f067fed668d9d1
+
 ---
 
 # Asignar características de DirectX 9 a las API de DirectX 11
@@ -669,6 +673,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

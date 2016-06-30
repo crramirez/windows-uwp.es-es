@@ -3,6 +3,10 @@ author: mcleanbyron
 Description: Puedes usar el panel del Centro de desarrollo de Windows para ejecutar los experimentos para las aplicaciones para la Plataforma universal de Windows (UWP) con pruebas A/B.
 title: Ejecuta experimentos para aplicaciones con pruebas A/B
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 88fd0516e3c10b657884b93377480b62c1758992
+
 ---
 
 # Ejecuta experimentos para aplicaciones con pruebas A/B
@@ -50,6 +54,7 @@ Para obtener los resultados más útiles, te recomendamos que sigas estas recome
 * [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

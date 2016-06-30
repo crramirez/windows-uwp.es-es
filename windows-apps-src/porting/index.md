@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: ba2ac5f5-1e0d-4f1d-a6f8-6a65b4cff501
-description: En esta sección se describe cómo migrar tu aplicación existente a la Plataforma universal de Windows (UWP), donde puedes crear un único paquete de la aplicación Windows 10 que los clientes pueden instalar en todos los tipos de dispositivos. La aplicación se beneficiará de hardware nuevo y apasionante, oportunidades de gran rentabilidad, un conjunto de API moderno, controles de interfaz de usuario adaptables y una variedad de modalidades de entrada como el mouse, el teclado, la funcionalidad táctil y la voz.
-title: Migración de aplicaciones a Windows 10
+description: "En esta sección se describe cómo migrar tu aplicación existente a la Plataforma universal de Windows (UWP), donde puedes crear un único paquete de la aplicación Windows 10 que los clientes pueden instalar en todos los tipos de dispositivos. La aplicación se beneficiará de hardware nuevo y apasionante, oportunidades de gran rentabilidad, un conjunto de API moderno, controles de interfaz de usuario adaptables y una variedad de modalidades de entrada como el mouse, el teclado, la funcionalidad táctil y la voz."
+title: "Migración de aplicaciones a Windows 10"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 88ebc2984ce856dd3fb10b8a61de4a32dc711500
+
 ---
 
 # Migración de aplicaciones a Windows 10
@@ -31,6 +35,7 @@ En esta guía de migración se explican las diferencias entre la tecnología de 
 * [Migrar de la web a WinRT](https://msdn.microsoft.com/library/windows/apps/hh465151)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

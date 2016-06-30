@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: El código que se integra con el dispositivo y sus sensores implica la entrada del usuario y la salida de este.
-title: Migración de Windows Runtime 8.x a UWP para E/S, dispositivo y modelo de aplicaciones
+description: "El código que se integra con el dispositivo y sus sensores implica la entrada del usuario y la salida de este."
+title: "Migración de Windows Runtime 8.x a UWP para E/S, dispositivo y modelo de aplicaciones"
 ms.assetid: bb13fb8f-bdec-46f5-8640-57fb0dd2d85b
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e5e560ca4f40496edf9d11c3eef546fdc4c3b079
+
 ---
 
 # Migración de Windows Runtime 8.x a UWP para E/S, dispositivo y modelo de aplicaciones
@@ -73,6 +77,7 @@ Si una aplicación que declara la funcionalidad de Ubicación en su manifiesto d
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

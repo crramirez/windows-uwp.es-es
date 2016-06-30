@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Usar alineación, margen y espaciado interno para influir en el diseño de elementos en una página.
-title: Alineación, margen y espaciado interno de aplicaciones para la Plataforma universal de Windows (UWP)
+Description: "Usar alineación, margen y espaciado interno para influir en el diseño de elementos en una página."
+title: "Alineación, margen y espaciado interno de aplicaciones para la Plataforma universal de Windows (UWP)"
 ms.assetid: 9412ABD4-3674-4865-B07D-64C7C26E4842
 label: Alignment, margin, and padding
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 86635255fbdae83fb2749e2aea7011a8b989e83f
+
 ---
 # Alineación, margen y espaciado
 
@@ -86,6 +90,7 @@ A menudo, las propiedades [**Height**](https://msdn.microsoft.com/library/window
 [**Control.Padding**](https://msdn.microsoft.com/library/windows/apps/br209459)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

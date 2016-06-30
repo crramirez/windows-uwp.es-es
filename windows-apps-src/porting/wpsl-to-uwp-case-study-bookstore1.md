@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
-description: En este tema se presenta un caso práctico de migración de una aplicación para Windows Phone Silverlight muy simple a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10.
-title: Caso práctico de Windows Phone Silverlight a UWP, Bookstore1
+description: "En este tema se presenta un caso práctico de migración de una aplicación para Windows Phone Silverlight muy simple a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10."
+title: "Caso práctico de Windows Phone Silverlight a UWP, Bookstore1"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dbffb4245efece2d39b4eba8979e323fd71626d0
+
 ---
 
 # Caso práctico de Windows Phone Silverlight a UWP: Bookstore1
@@ -131,6 +135,7 @@ En este caso práctico se mostró el proceso de migración de una aplicación mu
 El siguiente caso práctico es [Bookstore2](wpsl-to-uwp-case-study-bookstore2.md), en el que vamos a ver cómo mostrar datos agrupados y obtener acceso a ellos.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

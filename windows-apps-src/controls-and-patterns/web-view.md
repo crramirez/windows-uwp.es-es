@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Un control de vista web inserta una vista en la aplicación que representa al contenido web, mediante el motor de representación de Microsoft Edge. En un control de vista web también pueden aparecer y funcionar hipervínculos.
+Description: "Un control de vista web inserta una vista en la aplicación que representa al contenido web, mediante el motor de representación de Microsoft Edge. En un control de vista web también pueden aparecer y funcionar hipervínculos."
 title: Vista web
 ms.assetid: D3CFD438-F9D6-4B72-AF1D-16EF2DFC1BB1
 label: Web view
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: dd947d0b55dad56fdd6c684ae236f1c31ac8da86
+
 ---
 
 # Vista web
@@ -41,7 +45,7 @@ Puedes obtener el título del documento HTML que se muestra actualmente en la vi
 
 Aunque WebView no es una subclase de Control, recibe el foco de entrada de teclado y participa en la secuencia de tabulación. Proporciona un método [**Focus**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.focus.aspx) y eventos [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.gotfocus.aspx) y [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.lostfocus.aspx), pero carece de propiedades relacionadas con la tabulación. Su posición en la secuencia de tabulación es igual a su posición en el orden de documentos XAML. La secuencia de tabulación incluye todos los elementos de la vista web que pueden recibir el foco de entrada. 
 
-Como se indica en la tabla Events de la página de la clase [**WebView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx), la vista web no admite la mayoría de los eventos de entrada de usuario heredados de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx), como [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.keydown.aspx), [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.keyup.aspx) y [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.pointerpressed.aspx). En vez de eso, puedes usar [**InvokeScriptAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.invokescriptasync.aspx) con la función de JavaScript **eval** para usar los controladores de eventos HTML y usar **window.external.notify** desde el controlador de eventos HTML para notificar a la aplicación mediante [**WebView.ScriptNotify**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.scriptnotify.aspx).
+Como se indica en la tabla Events de la página de la clase [**WebView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx), la vista web no admite la mayoría de los eventos de entrada de usuario heredados de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx), como [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.keydown.aspx), [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.keyup.aspx) y [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.pointerpressed.aspx). En vez de eso, puedes usar [**InvokeScriptAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.invokescriptasync.aspx) con la función JavaScript **eval** para usar los controladores de eventos HTML y usar **window.external.notify** desde el controlador de eventos HTML para notificar a la aplicación mediante [**WebView.ScriptNotify**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.scriptnotify.aspx).
 
 ### Navegar hasta el contenido
 
@@ -78,7 +82,7 @@ Cada una de estas subcarpetas de primer nivel está aislada del contenido de otr
 webView1.Navigate("ms-appdata:///local/intro/welcome.html");
 ```
 
-Para cargar contenido desde el paquete de la aplicación, usa el método **Navigate** con un **URI** que use el [**esquema ms-appx-web**](https://msdn.microsoft.com/library/windows/apps/xaml/jj655406.aspx#ms_appx_web). 
+Para cargar contenido desde el paquete de la aplicación, usa el método **Navigate** con un **URI** que utilice el [**esquema ms-appx-web**](https://msdn.microsoft.com/library/windows/apps/xaml/jj655406.aspx#ms_appx_web). 
 
 ```csharp
 webView1.Navigate("ms-appx-web:///help/about.html");
@@ -231,7 +235,7 @@ private void webView_PermissionRequested(WebView sender, WebViewPermissionReques
 }
 ```
 
-Si la aplicación requiere la entrada del usuario u otras operaciones asincrónicas para responder a una solicitud de permiso, usa el método [**Defer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx) de [**WebViewPermissionRequest**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.aspx) para crear un elemento [**WebViewDeferredPermissionRequest**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewdeferredpermissionrequest.aspx) sobre el que se pueda actuar más adelante. Consulta [**WebViewPermissionRequest.Defer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx). 
+Si la aplicación requiere la entrada del usuario u otras operaciones asincrónicas para responder a una solicitud de permiso, usa el método [**Defer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx) de [**WebViewPermissionRequest**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.aspx) para crear un [**WebViewDeferredPermissionRequest**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewdeferredpermissionrequest.aspx) sobre el que se pueda actuar más adelante. Consulta [**WebViewPermissionRequest.Defer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx). 
 
 Si los usuarios deben cerrar sesión de forma segura en un sitio web hospedado en una vista web, o en otros casos en los que la seguridad sea importante, llama al método estático [**ClearTemporaryWebDataAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cleartemporarywebdataasync.aspx) para borrar todo el contenido de una sesión de vista web almacenado localmente en caché. Esto impide que usuarios malintencionados obtengan acceso a información confidencial. 
 
@@ -251,7 +255,7 @@ string returnValue = await webView1.InvokeScriptAsync("setDate", args);
 
 Puedes usar **InvokeScriptAsync** con la función JavaScript **eval** para insertar contenido en la página web.
 
-En esta sección, el texto de un cuadro de texto XAML (`nameTextBox.Text`) se escribe en un elemento div en una página HTML hospedada en 
+Aquí, el texto de un cuadro de texto XAML (`nameTextBox.Text`) se escribe en un elemento div en una página HTML hospedada en `webView1`. 
 
 ```csharp
 private async void Button_Click(object sender, RoutedEventArgs e)
@@ -281,7 +285,7 @@ private void webView_NavigationStarting(WebView sender, WebViewNavigationStartin
 }
 ```
 
-Para más información, consulta [**WebView.AddWebAllowedObject**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.addweballowedobject.aspx). 
+Para obtener más información, consulta [**WebView.AddWebAllowedObject**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.addweballowedobject.aspx). 
 
 Además, puedes permitir que el contenido de JavaScript confiable en una vista web obtenga acceso directo a las API de Windows Runtime. Esto proporciona eficaces funcionalidades nativas para aplicaciones web hospedadas en una vista web. Para habilitar esta característica, el URI del contenido confiable debe estar en la lista blanca de las ApplicationContentUriRules de la aplicación en Package.appxmanifest, y WindowsRuntimeAccess debe estar establecido específicamente en "all". 
 
@@ -339,6 +343,7 @@ Una vista web que hospeda contenido en el subproceso de la interfaz de usuario n
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

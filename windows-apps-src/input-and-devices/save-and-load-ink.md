@@ -6,8 +6,8 @@ ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: 0f2e95146281fb992af1201c408ed62705c77741
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: cdef00304e1835532eceb8e51fecc8045f2ff300
 
 ---
 
@@ -29,7 +29,7 @@ El formato ISF es la representación más compacta y persistente de la entrada d
 
  
 
-## <span id="Save_ink_strokes_to_a_file"></span><span id="save_ink_strokes_to_a_file"></span><span id="SAVE_INK_STROKES_TO_A_FILE"></span>Guardar los trazos de lápiz en un archivo
+## Guardar los trazos de lápiz en un archivo
 
 
 Aquí se muestra cómo guardar trazos de lápiz dibujados en un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
@@ -161,7 +161,7 @@ El formato GIF es el único admitido para guardar datos de entrada de lápiz. Si
 
  
 
-## <span id="Load_ink_strokes_from_a_file"></span><span id="load_ink_strokes_from_a_file"></span><span id="LOAD_INK_STROKES_FROM_A_FILE"></span>Cargar trazos de lápiz de un archivo
+## Cargar trazos de lápiz de un archivo
 
 
 Aquí se muestra cómo cargar trazos de lápiz de un archivo y representarlos en un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
@@ -268,7 +268,7 @@ El formato GIF es el único admitido para guardar datos de entrada de lápiz. Si
 | Gif                       | Especifica la entrada de lápiz que se vuelve permanente usando un archivo GIF que contiene el ISF como metadatos incrustados en el archivo. Esto permite ver la entrada de lápiz en aplicaciones que no están habilitadas para entrada de lápiz y mantener la fidelidad total de la entrada de lápiz al volver a una aplicación habilitada para esa entrada. Este formato es ideal cuando se transporta contenido de entrada de lápiz en un archivo HTML y para facilitar su uso por parte de aplicaciones que estén o no habilitadas para entrada de lápiz. |
 | Base64Gif                 | Especifica la entrada de lápiz que se vuelve permanente usando un GIF fortificado codificado en base64. Este formato se proporciona cuando se debe codificar la entrada de lápiz directamente en un archivo XML o HTML para la conversión posterior en imagen. Un uso posible es en un formato XML generado para contener toda la información de entrada de lápiz que se use como una manera de generar HTML mediante el Lenguaje de transformación basado en hojas de estilo (XSLT). 
 
-## <span id="Copy_and_paste_ink_strokes_with_the_clipboard"></span><span id="copy_and_paste_ink_strokes_with_the_clipboard"></span><span id="COPY_AND_PASTE_INK_STROKES_WITH_THE_CLIPBOARD"></span>Copiar y pegar trazos de lápiz con el Portapapeles
+## Copiar y pegar trazos de lápiz con el Portapapeles
 
 
 Aquí se muestra cómo usar el Portapapeles para transferir los trazos de lápiz entre aplicaciones.
@@ -426,7 +426,7 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 * [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md)
 
@@ -444,6 +444,6 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

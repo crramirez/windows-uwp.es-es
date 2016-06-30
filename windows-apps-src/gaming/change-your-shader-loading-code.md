@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D
-description: En términos conceptuales, la canalización de sombreador de Direct3D 11 es muy similar a la de OpenGL ES 2.0.
+title: "Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D"
+description: "En términos conceptuales, la canalización de sombreador de Direct3D 11 es muy similar a la de OpenGL ES 2.0."
 ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: bc13df5e7f2648897be31b5cda634d23ffae8b6b
+
 ---
 
 # Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D
@@ -263,6 +267,7 @@ Para obtener más detalles sobre el uso de semántica con Direct3D, lee [Semánt
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

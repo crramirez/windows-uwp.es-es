@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
-description: Usa este método en la API de análisis de la Tienda Windows para obtener los datos de clasificación agregados de un intervalo de fechas y otros filtros opcionales.
-title: Obtener la clasificación de la aplicación
+description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de clasificación agregados de un intervalo de fechas y otros filtros opcionales."
+title: "Obtener la clasificación de la aplicación"
+ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
+ms.openlocfilehash: cf585c8a54f479eb91d7b9a5261dae4a83f0b675
+
 ---
 
 # Obtener la clasificación de la aplicación
@@ -63,13 +66,13 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">cadena</td>
-<td align="left">Identificador de producto de la aplicación de la cual quieres recuperar los datos de clasificación. El identificador del producto está incrustado en el vínculo descriptivo que tienes disponible en la [página Identidad de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt148561) del panel del Centro de desarrollo. Un identificador de producto de ejemplo es 9WZDNCRFJ3Q8.</td>
+<td align="left">El Id. de la Tienda de la aplicación sobre la que quieres recuperar los datos de clasificación. El Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8.</td>
 <td align="left">Sí</td>
 </tr>
 <tr class="even">
 <td align="left">startDate</td>
 <td align="left">fecha</td>
-<td align="left">Fecha de inicio del intervalo de fechas de los datos de clasificación que se han de recuperar. El valor predeterminado es la fecha actual.</td>
+<td align="left">La fecha de inicio del intervalo de fechas de los datos de clasificación que se han de recuperar. El valor predeterminado es la fecha actual.</td>
 <td align="left">No</td>
 </tr>
 <tr class="odd">
@@ -184,7 +187,7 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 
 ### Ejemplo de solicitud
 
-Los ejemplos siguientes muestran varias solicitudes para obtener datos de clasificación. Reemplaza el valor *applicationId* por el identificador de producto de la aplicación.
+Los ejemplos siguientes muestran varias solicitudes para obtener datos de clasificación. Reemplaza el valor *applicationId* por el Id. de la Tienda de la aplicación.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/ratings?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -212,8 +215,8 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 
 | Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
 |-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| date            | cadena  | Es la primera fecha del intervalo de fechas de los datos de clasificación. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
-| applicationId   | cadena  | Identificador de producto de la aplicación de la cual recuperas los datos de clasificación.                                                                                                                                                                 |
+| date            | cadena  | Es la primera fecha del intervalo de fechas de los datos de clasificación. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
+| applicationId   | cadena  | El Id. de la Tienda de la aplicación sobre la que estás recuperando los datos de clasificación.                                                                                                                                                                 |
 | applicationName | cadena  | Nombre para mostrar de la aplicación.                                                                                                                                                                                                         |
 | market          | cadena  | Código de país ISO 3166 del mercado desde el cual se envió la clasificación.                                                                                                                                                              |
 | osVersion       | cadena  | Versión del sistema operativo desde el cual se envió la clasificación. Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).                                                                                               |
@@ -251,7 +254,7 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
   ],
   "@nextLink": "ratings?applicationId=9NBLGGGZ5QDR&aggregationLevel=day&startDate=2015/01/01&endDate=2016/02/01&top=1&skip=1",
   "TotalCount": 15242
-} 
+}
 
 ```
 
@@ -265,7 +268,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 
 
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

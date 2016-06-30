@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: El informe de mediación de anuncios te permite ver la velocidad de relleno efectiva y las velocidades de relleno respectivas para las redes de anuncios que estás usando.
-title: Informe de mediación de anuncios
+Description: "El informe de mediación de anuncios te permite ver la velocidad de relleno efectiva y las velocidades de relleno respectivas para las redes de anuncios que estás usando."
+title: "Informe de mediación de anuncios"
 ms.assetid: 18A33928-B9F2-4F76-9A9C-F01FEE42FEA1
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 1597e21414dbb5d1b540a2dd67478fbcc83d574e
+
 ---
 
 # Informe de mediación de anuncios
@@ -63,6 +67,7 @@ El gráfico **Errores por tipo** muestra los errores específicos que experiment
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

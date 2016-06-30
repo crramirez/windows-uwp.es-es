@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: El informe Críticas del panel del Centro de desarrollo de Windows te permite ver los comentarios que los clientes proporcionaron al clasificar tu aplicación en la Tienda.
-title: Informe Críticas
+Description: "El informe Críticas del panel del Centro de desarrollo de Windows te permite ver los comentarios que los clientes proporcionaron al clasificar tu aplicación en la Tienda."
+title: "Informe Críticas"
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7d1a768ce558718b43a4d124f7c88868e999fb93
+
 ---
 
 # Informe Críticas
@@ -79,6 +83,7 @@ Estas son algunas acciones adicionales que puedes considerar según las crítica
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

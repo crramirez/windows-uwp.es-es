@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
-title: Realizar geocodificación y geocodificación inversa
-description: Puedes convertir direcciones en ubicaciones geográficas (geocodificación) y ubicaciones geográficas en direcciones (geocodificación inversa), si llamas a los métodos de la clase MapLocationFinder del espacio de nombres Windows.Services.Maps.
+title: "Realizar geocodificación y geocodificación inversa"
+description: "Puedes convertir direcciones en ubicaciones geográficas (geocodificación) y ubicaciones geográficas en direcciones (geocodificación inversa), si llamas a los métodos de la clase MapLocationFinder del espacio de nombres Windows.Services.Maps."
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: caf3ad6fecd6ed90c65f85477643fb42ab4787d3
+
 ---
 
 # Realizar geocodificación y geocodificación inversa
@@ -24,7 +28,7 @@ Aquí se explica la relación entre las clases de geocodificación y geocodifica
 -   A su vez, la clase [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) contiene una colección de objetos [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549). Puedes obtener acceso a esta colección a través de la propiedad [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) de **MapLocationFinderResult**.
 -   Igualmente, cada objeto [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) contiene un objeto [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533). Puedes obtener acceso a este objeto a través de la propiedad [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) de cada objeto **MapLocation**.
 
-**Importante**  Debes especificar una clave de autenticación de mapas para poder usar los servicios de mapa. Para más información, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
+**Importante** Es necesario especificar una clave de autenticación de mapas para poder usar los servicios de mapa. Para obtener más información, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
 
  
 
@@ -133,6 +137,7 @@ town = Redmond
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -6,8 +6,8 @@ ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, handwriting recognition
-ms.sourcegitcommit: 1722fc00de000d07ed30cfb0ae12080708c30b76
-ms.openlocfilehash: c2c43052a1a4a96d7c0a95578b7b3fa3a2fd8a74
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: ac07ca76df874c670e7e38698e89de6620f73cc4
 
 ---
 
@@ -25,7 +25,7 @@ El reconocimiento de escritura a mano está integrado en la plataforma de entrad
 
 Para todos los ejemplos que aquí se ofrecen, agrega las referencias de espacio de nombres necesarias para la funcionalidad de entrada de lápiz. Se incluye "Windows.UI.Input.Inking".
 
-## <span id="Basic_handwriting_recognition"></span><span id="basic_handwriting_recognition"></span><span id="BASIC_HANDWRITING_RECOGNITION"></span>Reconocimiento de escritura a mano básico
+## Reconocimiento de escritura a mano básico
 
 
 Aquí se muestra cómo usar el motor de reconocimiento de escritura a mano, asociado con el paquete de idioma instalado de manera predeterminada, para interpretar un conjunto de trazos en un [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
@@ -202,7 +202,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## <span id="International_recognition"></span><span id="international_recognition"></span><span id="INTERNATIONAL_RECOGNITION"></span>Reconocimiento internacional
+## Reconocimiento internacional
 
 
 Se puede usar un completo subconjunto de idiomas admitidos por Windows para el reconocimiento de escritura a mano.
@@ -447,7 +447,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## <span id="Dynamic_handwriting_recognition"></span><span id="dynamic_handwriting_recognition"></span><span id="DYNAMIC_HANDWRITING_RECOGNITION"></span>Reconocimiento de escritura a mano dinámico
+## Reconocimiento de escritura a mano dinámico
 
 
 Los dos ejemplos anteriores requieren que el usuario presione un botón para iniciar el reconocimiento. La aplicación también puede realizar el reconocimiento dinámico mediante la entrada de trazos combinada con una función de temporización básica.
@@ -524,13 +524,13 @@ public MainPage()
 
 2.  Estos son los controladores de los tres eventos que hemos agregado en el primer paso.
 
-    <span id="StrokesCollected"></span><span id="strokescollected"></span><span id="STROKESCOLLECTED"></span>[**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024)  
+    [**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024)  
     Inicia el temporizador de reconocimiento cuando el usuario detenga la entrada manuscrita levantando el lápiz o el dedo, o bien soltando el botón del mouse. Después de un segundo sin ninguna entrada de lápiz, se inicia el reconocimiento.
 
-    <span id="StrokeStarted"></span><span id="strokestarted"></span><span id="STROKESTARTED"></span>[**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
+    [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
     Si se inicia un nuevo trazo antes del siguiente evento de graduación del temporizador, detén el temporizador, ya que el nuevo trazo es probablemente la continuación de una sola entrada de escritura a mano.
 
-    <span id="Tick"></span><span id="tick"></span><span id="TICK"></span>[**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)  
+    [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)  
     Llama a la función de reconocimiento después de un segundo sin entrada de lápiz.
 ```    CSharp
 // Handler for the timer tick event calls the recognition function.
@@ -659,7 +659,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 * [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md)
 
@@ -673,6 +673,6 @@ string str = "Recognition result\n";
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

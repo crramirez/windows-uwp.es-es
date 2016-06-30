@@ -2,11 +2,14 @@
 author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Device Portal para escritorio
-description: Aprende cómo Windows Device Portal abre diagnóstico y automatización en el escritorio de Windows.
----
-# Device Portal para escritorio
+description: "Aprende cómo Windows Device Portal abre diagnóstico y automatización en el escritorio de Windows."
+ms.sourcegitcommit: f09f0233ec11b41989cf52da3c5e8cb37a97b607
+ms.openlocfilehash: 7be27f5fb15676c5330f22995dd044899eddfd3d
 
-A partir de Windows 10, versión 1604, hay funciones para desarrollador adicionales disponibles para escritorio. Estas funciones están disponibles únicamente si el modo de desarrollador está habilitado.
+---
+# Portal de dispositivos para escritorio
+
+A partir de Windows 10, versión 1607, hay funciones para desarrollador adicionales disponibles para escritorio. Estas funciones están disponibles únicamente si el modo de desarrollador está habilitado.
 
 Para obtener información sobre cómo habilitar el modo de desarrollador, consulta [Enable your device for development (Habilitar el dispositivo para el desarrollo)](../get-started/enable-your-device-for-development.md).
 
@@ -101,6 +104,7 @@ Corregir este problema:
 2. Reinicia el equipo para asegurarte de que se aplican a todas las actualizaciones.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

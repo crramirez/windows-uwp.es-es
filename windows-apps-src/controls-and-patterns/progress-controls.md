@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Un control de progreso proporciona información al usuario sobre el hecho de que se está llevando a cabo una operación de ejecución larga.
+Description: "Un control de progreso proporciona información al usuario sobre el hecho de que se está llevando a cabo una operación de ejecución larga."
 title: Directrices sobre los controles de progreso
 ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
 label: Progress controls
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 8a03ca36f6e306a03e8aec7b46e51bfff0079bf5
+
 ---
 # Controles de progreso
 
@@ -308,6 +312,7 @@ stackPanel1.Children.Add(progressRing1);
 - [Cómo crear una barra de progreso indeterminado personalizada para Windows Phone](http://go.microsoft.com/fwlink/p/?LinkID=392426)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,13 @@
 ---
 author: Xansky
-description: En este tema se muestra cómo iniciar el cuadro de diálogo de redacción de mensajes SMS para que el usuario pueda enviar un mensaje SMS. Puedes rellenar previamente los campos del SMS con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario pulse el botón de enviar.
+description: "En este tema se muestra cómo iniciar el cuadro de diálogo de redacción de mensajes SMS para que el usuario pueda enviar un mensaje SMS. Puedes rellenar previamente los campos del SMS con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario pulse el botón de enviar."
 title: Enviar un mensaje SMS
 ms.assetid: 4D7B509B-1CF0-4852-9691-E96D8352A4D6
 keywords: contacts, SMS, send
+translationtype: Human Translation
+ms.sourcegitcommit: 1395e342bb6ad6a2d4fa347f1797aeafd7a524a6
+ms.openlocfilehash: 70dfce318d37d6790585b0fa5da50963f95495dc
+
 ---
 
 # Enviar un mensaje SMS
@@ -55,6 +59,7 @@ Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de SMS. 
 * [Seleccionar contactos](selecting-contacts.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

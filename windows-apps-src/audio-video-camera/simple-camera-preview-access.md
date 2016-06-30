@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 9BA3F85A-970F-411C-ACB1-B65768B8548A
-description: En este artículo se describe cómo mostrar rápidamente la secuencia de vista previa de la cámara en una página XAML en una aplicación para la Plataforma universal de Windows (UWP).
-title: Acceso fácil a la vista previa de cámara
+description: "En este artículo se describe cómo mostrar rápidamente la secuencia de vista previa de la cámara en una página XAML en una aplicación para la Plataforma universal de Windows (UWP)."
+title: "Acceso fácil a la vista previa de cámara"
+translationtype: Human Translation
+ms.sourcegitcommit: 72abc006de1925c3c06ecd1b78665e72e2ffb816
+ms.openlocfilehash: 05e752925c07b0e3720fbdd42d785381aa08b99c
+
 ---
 
 # Acceso fácil a la vista previa de cámara
@@ -11,22 +15,22 @@ title: Acceso fácil a la vista previa de cámara
 
 En este artículo se describe cómo mostrar rápidamente la secuencia de vista previa de la cámara en una página XAML en una aplicación para la Plataforma universal de Windows (UWP). La creación de una aplicación que capture fotos y vídeos con la cámara requiere que realices tareas, como controlar la orientación del dispositivo y de la cámara o establecer opciones de codificación para el archivo capturado. En algunos escenarios de la aplicación, es posible que solo quieras mostrar la secuencia de vista previa de la cámara sin preocuparte por estas otras consideraciones. En este artículo se muestra cómo hacerlo con la cantidad de código mínima. Ten en cuenta que siempre debes apagar la secuencia de vista previa correctamente cuando termines mediante el procedimiento siguiente.
 
-Para obtener información sobre cómo escribir una aplicación de cámara que capture fotos o haga vídeos, consulta [Capture photos and video with MediaCapture (Capturar fotografías y vídeos con MediaCapture)](capture-photos-and-video-with-mediacapture.md).
+Para obtener información sobre cómo escribir una aplicación de cámara que capture fotos o vídeos, consulta [Capturar fotografías y vídeos con MediaCapture](capture-photos-and-video-with-mediacapture.md).
 
 ## Agregar declaraciones de funcionalidades al manifiesto de la aplicación
 
-Para que tu aplicación tenga acceso a la cámara de un dispositivo, debes declarar que esta usa las funcionalidades *cámara web* y *micrófono* del dispositivo. Si quieres guardar las fotos y vídeos capturados en la biblioteca de imágenes de los usuarios, también debes declarar las funcionalidades *picturesLibrary* y *videosLibrary*.
+Para que tu aplicación tenga acceso a la cámara de un dispositivo, debes declarar que esta usa las funcionalidades de *webcam* y *microphone* del dispositivo. Si quieres guardar las fotos y vídeos capturados en la biblioteca de imágenes de los usuarios, también debes declarar las funcionalidades *picturesLibrary* y *videosLibrary*.
 
 **Agregar funcionalidades al manifiesto de la aplicación**
 
 1.  En Microsoft Visual Studio, en el **Explorador de soluciones**, abre el diseñador para el manifiesto de la aplicación haciendo doble clic en el elemento **package.appxmanifest**.
 2.  Selecciona la pestaña **Funcionalidades**.
 3.  Selecciona las casillas **Cámara web** y **Micrófono**.
-4.  Para obtener acceso a la biblioteca de imágenes y vídeos, marca las casillas de **Biblioteca de imágenes** y **Biblioteca de vídeos**.
+4.  Para obtener acceso a la biblioteca de imágenes y vídeos, marca las casillas de **Biblioteca de imágenes** y el cuadro de **Biblioteca vídeos**.
 
-## Agregar un elemento CaptureElement a la página
+## Agregar un CaptureElement a la página
 
-Usa un control [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) para visualizar el flujo de vista previa en la página XAML.
+Usa un [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) para visualizar la secuencia de vista previa en la página XAML.
 
 [!code-xml[CaptureElement](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml#SnippetCaptureElement)]
 
@@ -46,14 +50,14 @@ Crea una nueva instancia de la clase **MediaCapture** y llama a [**InitializeAsy
 
 **Importante** En algunas familias de dispositivos, se muestra al usuario una petición de consentimiento antes de que se conceda acceso a la aplicación para usar la cámara del dispositivo. Por este motivo, solo debes llamar a [**MediaCapture.InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598) desde la conversación principal de la interfaz de usuario. Intentar inicializar la cámara desde otra conversación puede producir errores de inicialización.
 
-Conecta el control **MediaCapture** a **CaptureElement** estableciendo la propiedad [**Origen**](https://msdn.microsoft.com/library/windows/apps/br209280). Por último, llama a [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613) para iniciar la vista previa.
+Conecta el **MediaCapture** al **CaptureElement** estableciendo la propiedad [**Origen**](https://msdn.microsoft.com/library/windows/apps/br209280). Por último, llama a [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613) para iniciar la vista previa.
 
 [!code-cs[StartPreviewAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStartPreviewAsync)]
 
 
-## Apagar el flujo de vista previa
+## Apagar la secuencia de vista previa
 
-Cuando termines de usar el flujo de vista previa, debes apagar siempre ese flujo y deshacerte correctamente de los recursos asociados para garantizar la disponibilidad de la cámara para otras aplicaciones en el dispositivo. Los pasos necesarios para cerrar la secuencia de vista previa son:
+Cuando termines de usar la secuencia de vista previa, debes apagar siempre esa secuencia y deshacerte correctamente de los recursos asociados para garantizar la disponibilidad de la cámara para otras aplicaciones del dispositivo. Los pasos necesarios para cerrar la secuencia de vista previa son:
 
 -   Llama a [**StopPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226622) para detener el flujo de vista previa.
 -   Establece la propiedad [**Origen**](https://msdn.microsoft.com/library/windows/apps/br209280) de **CaptureElement** en null.
@@ -76,7 +80,7 @@ En el controlador de eventos **Suspending**, comprueba primero que la página es
 
 ## Capturar una imagen estática del flujo de vista previa
 
-Es muy sencillo obtener una imagen estática del flujo de vista previa de la captura multimedia en forma de la clase [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358). Para más información, consulta [Obtener un marco de vista previa](get-a-preview-frame.md).
+Resulta muy sencillo obtener una imagen estática de la secuencia de vista previa de la captura multimedia con la forma de [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358). Para obtener más información, consulta [Obtener un marco de vista previa](get-a-preview-frame.md).
 
 ## Temas relacionados
 
@@ -84,6 +88,7 @@ Es muy sencillo obtener una imagen estática del flujo de vista previa de la cap
 * [Obtener un marco de vista previa](get-a-preview-frame.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

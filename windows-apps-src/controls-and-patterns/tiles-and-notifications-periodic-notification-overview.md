@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Las notificaciones periódicas, también denominadas notificaciones de sondeo, actualizan los iconos y los distintivos a intervalos fijos mediante la descarga de contenido directamente desde un servicio de nube.
-title: Introducción a las notificaciones periódicas
+Description: "Las notificaciones periódicas, también denominadas notificaciones de sondeo, actualizan los iconos y los distintivos a intervalos fijos mediante la descarga de contenido directamente desde un servicio de nube."
+title: "Introducción a las notificaciones periódicas"
 ms.assetid: 1EB79BF6-4B94-451F-9FAB-0A1B45B4D01C
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 55932595e0d5592003456a28d00ffd70c5e05eba
+
 ---
 
 # Introducción a las notificaciones periódicas
@@ -74,7 +78,7 @@ El URI solo se sondea si el dispositivo está en línea. Si la red está disponi
 
 De forma predeterminada, las notificaciones de icono y de distintivo periódicas expiran tres días después del momento en que se descargaron. Cuando una notificación expira, el contenido se quita del distintivo, el icono o la cola y no se vuelve a mostrar al usuario. Por lo tanto, se recomienda establecer un tiempo de caducidad explícito en todas las notificaciones de icono y de distintivo periódicas, con un tiempo apropiado para tu aplicación o notificación, para garantizar que el contenido persistirá solo mientras sea relevante. El tiempo de caducidad explícito resulta esencial para contenido con una vida útil definida. También garantiza la eliminación de contenido obsoleto si el servicio de nube se vuelve inaccesible, o si el usuario se desconecta de la red durante un período de tiempo prolongado.
 
-El servicio de nube establece una hora y una fecha de caducidad para una notificación incluyendo el encabezado X-WNS-Expires HTTP en la carga de respuesta. El encabezado HTTP X-WNS-Expires sigue el [formato de fecha de HTTP](http://go.microsoft.com/fwlink/p/?linkid=253706). Para más información, consulta [**StartPeriodicUpdate**](https://msdn.microsoft.com/library/windows/apps/hh701684) o [**StartPeriodicUpdateBatch**](https://msdn.microsoft.com/library/windows/apps/hh967945).
+El servicio de nube establece una hora y una fecha de caducidad para una notificación incluyendo el encabezado X-WNS-Expires HTTP en la carga de respuesta. El encabezado HTTP X-WNS-Expires sigue el [formato de fecha de HTTP](http://go.microsoft.com/fwlink/p/?linkid=253706). Para obtener más información, consulta [**StartPeriodicUpdate**](https://msdn.microsoft.com/library/windows/apps/hh701684) o [**StartPeriodicUpdateBatch**](https://msdn.microsoft.com/library/windows/apps/hh967945).
 
 Por ejemplo, durante un día de gran actividad en el mercado de valores, puedes establecer la caducidad para la actualización del precio de unas acciones en el doble del intervalo de sondeo (por ejemplo, una hora después de la recepción si estás sondeando cada media hora). Otro ejemplo sería una aplicación de noticias, que podría determinar que un día es un tiempo de caducidad apropiado para una actualización diaria del icono de noticias.
 
@@ -87,7 +91,7 @@ Si la cola ha alcanzado su capacidad de cinco notificaciones, la próxima notifi
 
 Puedes usar la cola y las etiquetas de notificaciones para implementar diferentes escenarios de notificación. Por ejemplo, una aplicación de bolsa podría enviar cinco notificaciones, cada una en relación con una cotización diferente y etiquetada con el nombre de la cotización. Esto permite que la cola nunca contenga dos notificaciones para la misma cotización; la más antigua se considera obsoleta.
 
-Para más información, consulta [Uso de la cola de notificaciones](https://msdn.microsoft.com/library/windows/apps/hh781199).
+Para obtener más información, consulta [Uso de la cola de notificaciones](https://msdn.microsoft.com/library/windows/apps/hh781199).
 
 ### <span id="Enabling_the_notification_queue"></span><span id="enabling_the_notification_queue"></span><span id="ENABLING_THE_NOTIFICATION_QUEUE"></span>Habilitar la cola de notificaciones
 
@@ -112,6 +116,7 @@ Debes proporcionar un URI único para cada notificación que quieras que Windows
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

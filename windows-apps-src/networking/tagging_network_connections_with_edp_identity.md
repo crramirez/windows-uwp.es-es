@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: 'En este tema se muestra cómo crear un contexto de subproceso protegido antes de crear conexiones de red en un escenario de Enterprise Data Protection (EDP).'
-MS-HAID: 'dev\_networking.tagging\_network\_connections\_with\_edp\_identity'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "En este tema se muestra cómo crear un contexto de subproceso protegido antes de crear conexiones de red en un escenario de Enterprise Data Protection (EDP)."
+MS-HAID: dev\_networking.tagging\_network\_connections\_with\_edp\_identity
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Etiquetado de conexiones de red con identidad EDP
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2b960bbb5cf58991778e5c20bb915a202ecf6e04
+
 ---
 
 # Etiquetado de conexiones de red con identidad EDP
@@ -127,6 +131,7 @@ public static async void SyncMailbox(string identity)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

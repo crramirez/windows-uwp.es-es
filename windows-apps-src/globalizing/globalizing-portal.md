@@ -1,11 +1,15 @@
 ---
 author: DelfCo
-Description: Globalización es el proceso de diseño y desarrollo de la aplicación para que actúe de forma adecuada en los diferentes mercados globales sin tener que realizar modificaciones ni personalizaciones.
+Description: "Globalización es el proceso de diseño y desarrollo de la aplicación para que actúe de forma adecuada en los diferentes mercados globales sin tener que realizar modificaciones ni personalizaciones."
 Search.SourceType: Video
-title: Globalización y localización
+title: "Globalización y localización"
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 1fc82ff462a5c0af6b10e7dc8455adc215558b4e
+
 ---
 
 # Globalización y localización
@@ -15,7 +19,7 @@ template: detail.hbs
 
 Windows se usa en todo el mundo, lo que incluye a personas con diferentes culturas, regiones e idiomas. Un usuario puede hablar cualquier idioma, o incluso varios idiomas. Un usuario puede estar en cualquier lugar del mundo y puede hablar cualquier idioma en cualquier ubicación. Puedes aumentar el mercado potencial de la aplicación diseñándola para que sea fácilmente adaptable mediante la *globalización* y la *localización*.
 
-**Globalización** es el proceso de diseño y desarrollo de la aplicación para que actúe de forma adecuada en los diferentes mercados globales sin tener que realizar modificaciones ni personalizaciones.
+La **Globalización** es el proceso de diseño y desarrollo de la aplicación para que se comporte de la forma adecuada en los diferentes mercados globales sin tener que realizar modificaciones ni personalizaciones.
 
 Por ejemplo, puedes:
 
@@ -30,7 +34,7 @@ Por ejemplo:
 -   Traducir el texto y las etiquetas de la aplicación para el nuevo mercado y crear recursos separados para su idioma.
 -   Modificar las imágenes dependientes de la referencia cultural según sea necesario y, a continuación, colocarlas en recursos separados.
 
-Mira este vídeo a modo de introducción breve sobre cómo preparar la aplicación para el todo el mundo: [Introduction to globalization and localization](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization) (Introducción a la globalización y localización).
+Mira este vídeo a modo de introducción breve sobre cómo preparar la aplicación para todo el mundo: [Introduction to globalization and localization](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization) (Introducción a la globalización y la localización).
 
 ## Artículos
 <table>
@@ -94,6 +98,7 @@ Consulta también la documentación originalmente creada para Windows 8.x, que a
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

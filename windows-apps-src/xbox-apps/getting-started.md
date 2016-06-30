@@ -1,8 +1,11 @@
 ---
 author: Mtoepke
-title: Introducción al desarrollo de aplicaciones para UWP en Xbox One
-description: Cómo configurar el equipo y Xbox One para el desarrollo para UWP.
+title: "Introducción al desarrollo de aplicaciones para UWP en Xbox One"
+description: "Cómo configurar el equipo y Xbox One para el desarrollo para UWP."
 area: Xbox
+ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
+ms.openlocfilehash: b070b6bec350c3c893f934e212b1de743b349861
+
 ---
 
 #Introducción al desarrollo de aplicaciones para UWP en Xbox One
@@ -13,14 +16,14 @@ Sigue estos pasos **atentamente** para configurar correctamente el equipo y Xbox
 Antes de empezar, debes hacer lo siguiente:
 -   Crear una cuenta del [Centro de desarrollo de Windows](https://dev.windows.com).
 -   Unirte al [Programa Windows Insider](https://insider.windows.com/). Lo necesitarás para obtener la versión preliminar de Windows SDK.
--   Configurar un equipo con Windows 10 (cualquier versión será válida, incluida la versión preliminar de Windows 10 Insider más actualizada); para esta versión, nuestras herramientas de desarrollo requieren que ejecutes Windows 10. 
--   Conecta la consola Xbox One a una red cableada (puede que la red inalámbrica funcione, pero actualmente el rendimiento es mucho mejor con una conexión con cable).
-- Dispón de 30 GB de espacio libre como mínimo en la consola Xbox One.
+-   Configurar un equipo con Windows 10 (cualquier versión será válida, incluida la versión preliminar de Windows 10 Insider más actualizada); para esta versión, nuestras herramientas de desarrollo requieren que se ejecute Windows 10. 
+-   Conectar la consola Xbox One a una red. Para lograr el mejor rendimiento, usa una conexión con cable.
+- Disponer como mínimo de 5 GB de espacio libre en la consola Xbox One.
 
 ## Configurar el equipo de desarrollo
-1.  Instala Visual Studio 2015 Update 2. Asegúrate de que eliges la instalación **Personalizada** y de que seleccionas la casilla **Herramientas de desarrollo de aplicaciones universales de Windows**: no forma parte de la instalación predeterminada. Consulta [Development environment setup (Configuración del entorno de desarrollo)](development-environment-setup.md) para obtener más información (además, si eres desarrollador de C++, asegúrate de que eliges la instalación personalizada y de que también seleccionas C++).
+1.  Instala Visual Studio 2015 Update 2. Asegúrate de que eliges la instalación **Personalizada** y de que seleccionas la casilla **Herramientas de desarrollo de aplicaciones universales de Windows**: no forma parte de la instalación predeterminada. Consulta [Configuración del entorno de desarrollo](development-environment-setup.md) para obtener más información (además, si eres desarrollador de C++, asegúrate de que eliges la instalación personalizada y de que también seleccionas C++).
 
-2.  Instala la versión preliminar 14295 del SDK de Windows 10. Puedes obtenerla desde el [Programa Windows Insider](http://go.microsoft.com/fwlink/p/?LinkId=780552).
+2.  Instala la versión preliminar del SDK de Windows 10 más reciente. Puedes obtenerla desde el [Programa Windows Insider](http://go.microsoft.com/fwlink/p/?LinkId=780552).
   
   > **Importante**
             &nbsp;&nbsp;Si instalas este SDK de versión preliminar en el equipo, no podrás enviar aplicaciones a la tienda integrada en este equipo, por lo tanto, no lo hagas en el equipo de desarrollo de producción. 
@@ -34,10 +37,13 @@ Antes de empezar, debes hacer lo siguiente:
   
   > **Nota**
             &nbsp;&nbsp;Tus aplicaciones y juegos de versión comercial no se ejecutarán en modo de desarrollador, pero sí que lo harán las aplicaciones o juegos que crees. Vuelve al Modo comercial para ejecutar tus aplicaciones y juegos favoritos.
+  
+  > **Nota**
+            &nbsp;&nbsp;Para poder implementar una aplicación en tu Xbox One en el modo de desarrollador, es necesario contar con un usuario que haya iniciado sesión en la consola. Puedes usar tu cuenta de Xbox Live existente o crear una nueva cuenta para la consola en el modo de desarrollador. 
 
 ## Crear tu primer proyecto en Visual Studio 2015
 
-Consulta [Development environment setup (Configuración del entorno de desarrollo)](development-environment-setup.md) para obtener información más detallada.
+Consulta [Configuración del entorno de desarrollo](development-environment-setup.md) para obtener información más detallada.
 
 1.  Para C#: crea un nuevo proyecto universal de Windows, ve a las propiedades del proyecto y selecciona la pestaña **Depurar** , cambia el **Dispositivo de destino** por **Máquina remota**, escribe la dirección IP o el nombre de host de la Xbox One en el campo **Máquina remota** y, a continuación, selecciona **Universal (protocolo sin cifrar)** en la lista desplegable **Modo de autenticación**.   
 
@@ -61,6 +67,7 @@ Consulta [Development environment setup (Configuración del entorno de desarroll
 - [UWP on Xbox One (UWP en Xbox One)](index.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

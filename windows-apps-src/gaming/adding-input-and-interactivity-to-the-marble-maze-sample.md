@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Agregar métodos de entrada e interactividad en la muestra de Marble Maze
-description: Los juegos de aplicación para Plataforma universal de Windows (UWP) se ejecutan en una variedad de dispositivos, como equipos de escritorio, portátiles y tabletas.
+title: "Agregar métodos de entrada e interactividad en la muestra de Marble Maze"
+description: "Los juegos de aplicación para Plataforma universal de Windows (UWP) se ejecutan en una variedad de dispositivos, como equipos de escritorio, portátiles y tabletas."
 ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 563ee292ec7189b0c365ae5ee0d1c41fd6fd1a09
+
 ---
 
 # Agregar métodos de entrada e interactividad al ejemplo de Marble Maze
@@ -522,6 +526,7 @@ Lee [Agregar audio a la muestra de Marble Maze](adding-audio-to-the-marble-maze-
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

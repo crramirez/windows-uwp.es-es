@@ -5,6 +5,10 @@ title: Usar patrones para dar formato a fechas y horas
 ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
 label: Use patterns to format dates and times
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 17cd1619a13adced643b4c8983dbf874bebaa740
+
 ---
 
 # Usar patrones para dar formato a fechas y horas
@@ -189,6 +193,7 @@ var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: El informe Estado del panel del Centro de desarrollo de Windows te permite obtener los datos relacionados con el rendimiento y la calidad de la aplicación, incluidos los bloqueos y los eventos que no responden.
+Description: "El informe Estado del panel del Centro de desarrollo de Windows te permite obtener los datos relacionados con el rendimiento y la calidad de la aplicación, incluidos los bloqueos y los eventos que no responden."
 title: Informe Estado
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 78bedc3e0551feef8efe61b3b664145e29281714
+
 ---
 
 # Informe Estado
@@ -59,6 +63,7 @@ Esta información se basa en un porcentaje de los eventos totales. En la parte s
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

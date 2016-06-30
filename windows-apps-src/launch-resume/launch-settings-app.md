@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Iniciar la aplicación Configuración de Windows
-description: Aprende a iniciar la aplicación Configuración de Windows desde la aplicación. En este tema se describe el esquema de URI ms-settings. Usa este esquema de URI para iniciar la aplicación Configuración de Windows en las páginas de configuración específicas.
+author: TylerMSFT
+title: "Iniciar la aplicación Configuración de Windows"
+description: "Aprende a iniciar la aplicación Configuración de Windows desde la aplicación. En este tema se describe el esquema de URI ms-settings. Usa este esquema de URI para iniciar la aplicación Configuración de Windows en las páginas de configuración específicas."
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
+ms.sourcegitcommit: 3cf9dd4ab83139a2b4b0f44a36c2e57a92900903
+ms.openlocfilehash: e52a4245e8697a68bfc5c5605dc54e5ea510c662
+
 ---
 
 # Iniciar la aplicación Configuración de Windows
@@ -32,7 +35,7 @@ En este ejemplo, se usa un control de hipervínculo XAML para iniciar la página
 
 ```xml
 <!--Set Visibility to Visible when access to the microphone is denied -->  
-<TextBlock x:Name="LocationDisabledMessage" FontStyle="Italic" 
+<TextBlock x:Name="LocationDisabledMessage" FontStyle="Italic"
                  Visibility="Collapsed" Margin="0,15,0,0" TextWrapping="Wrap" >
           <Run Text="This app is not able to access the microphone. Go to " />
               <Hyperlink NavigateUri="ms-settings:privacy-microphone">
@@ -68,10 +71,10 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |                    | Notificaciones y acciones                | Ambos           | ms-settings:notifications                 |
 |                    | Teléfono                                  | Solo para móviles    | ms-settings:phone                         |
 |                    | Mensajes                              | Solo para móviles    | ms-settings:messaging                     |
-|                    | Ahorro de batería                          | Ambos           | ms-settings:batterysaver                  |
-|                    | Ahorro de batería/Configuración del ahorro de batería | Ambos           | ms-settings:batterysaver-settings         |
-|                    | Ahorro de batería/Uso de batería            | Ambos           | ms-settings:batterysaver-usagedetails     |
-|                    | Inicio/apagado y suspensión                          | Solo para el escritorio   | ms-settings:powersleep                    |
+|                    | Ahorro de batería                          | Dispositivos móviles y de escritorio con batería, como una tableta    | ms-settings:batterysaver                  |
+|                    | Ahorro de batería/Configuración del ahorro de batería | Dispositivos móviles y de escritorio con batería, como una tableta | ms-settings:batterysaver-settings         |
+|                    | Ahorro de batería/Uso de batería            | Dispositivos móviles y de escritorio con batería, como una tableta    | ms-settings:batterysaver-usagedetails     |
+|                    | Inicio/apagado y suspensión                          | Solo para dispositivos de escritorio   | ms-settings:powersleep                    |
 |                    | Escritorio: Acerca de                         | Ambos           | ms-settings:deviceencryption              |
 |                    |                                        |                |                                           |
 |                    | Móvil: Cifrado de dispositivo              |                |                                           |
@@ -124,8 +127,6 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -2,7 +2,10 @@
 author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referencia de API principal de Device Portal
-description: Obtén información sobre las API de REST principales de Windows Device Portal que puedes usar para acceder a los datos y controlar el dispositivo mediante programación.
+description: "Obtén información sobre las API de REST principales de Windows Device Portal que puedes usar para acceder a los datos y controlar el dispositivo mediante programación."
+ms.sourcegitcommit: 0e36b2adbd0805d9c738de00959581417d2c1ee8
+ms.openlocfilehash: 364e19c723c6cf48a25104b5719735a533ae54a7
+
 ---
 
 # Referencia de API principal de Device Portal
@@ -2730,7 +2733,456 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
+---
+## Etiquetas de DNS-SD 
+---
+### Ver etiquetas
 
-<!--HONumber=May16_HO2-->
+**Solicitud**
+
+Te permite ver las etiquetas aplicadas actualmente para el dispositivo.  Estas se anuncian a través de los registros TXT de DNS-SD en la tecla T.  
+ 
+Método      | URI de la solicitud
+:------     | :-----
+GET | /api/dns-sd/tags
+<br />
+
+**Parámetros del URI**
+
+- Ninguno
+
+**Encabezados de la solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta** Las etiquetas aplicadas actualmente con el formato siguiente. 
+```
+ {
+    "tags": [
+        "tag1", 
+        "tag2", 
+        ...
+     ]
+}
+```
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+5XX | Error del servidor 
+
+<br />
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+
+---
+### Eliminar etiquetas
+
+**Solicitud**
+
+Elimina todas las etiquetas anunciadas actualmente por DNS-SD.   
+ 
+Método      | URI de la solicitud
+:------     | :-----
+DELETE | /api/dns-sd/tags
+<br />
+
+**Parámetros del URI**
+
+- Ninguno
+
+**Encabezados de la solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+ - Ninguna
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+5XX | Error del servidor 
+
+<br />
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+
+---
+### Eliminar etiqueta
+
+**Solicitud**
+
+Elimina una etiqueta anunciada actualmente por DNS-SD.   
+ 
+Método      | URI de la solicitud
+:------     | :-----
+DELETE | /api/dns-sd/tag
+<br />
+
+**Parámetros del URI**
+
+Parámetro del URI | Descripción
+:------     | :-----
+tagValue | (**obligatorio**) La etiqueta que se debe quitar.
+
+**Encabezados de la solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+ - Ninguna
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+
+<br />
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+ 
+---
+### Agregar una etiqueta
+
+**Solicitud**
+
+Agrega una etiqueta al anuncio de DNS-SD.   
+ 
+Método      | URI de la solicitud
+:------     | :-----
+POST | /api/dns-sd/tag
+<br />
+
+**Parámetros del URI**
+
+Parámetro del URI | Descripción
+:------     | :-----
+tagValue | (**obligatorio**) La etiqueta que se debe agregar.
+
+**Encabezados de la solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+ - Ninguna
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+401 | Desbordamiento del espacio de la etiqueta.  Se produce si la etiqueta propuesta es demasiado larga para el registro de servicio de DNS-SD resultante.  
+
+<br />
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+
+## Explorador de archivos de la aplicación
+
+---
+### Obtener carpetas conocidas
+
+**Solicitud**
+
+Obtén una lista de carpetas accesibles de nivel superior.
+
+Método      | URI de la solicitud
+:------     | :-----
+GET | /api/filesystem/apps/knownfolders
+<br />
+
+**Parámetros del URI**
+
+- Ninguno
+
+**Encabezados de la solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta** Las carpetas disponibles con el formato siguiente. 
+```
+ {"KnownFolders": [
+    "folder0",
+    "folder1",...
+]}
+```
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Implementar la solicitud aceptada y que se está procesando
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
+
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* HoloLens
+* Xbox
+* IoT
+
+---
+### Obtener archivos
+
+**Solicitud**
+
+Obtén una lista de los archivos que hay en una carpeta.
+
+Método      | URI de la solicitud
+:------     | :-----
+GET | /api/filesystem/apps/files
+<br />
+
+**Parámetros del URI**
+
+Parámetro del URI | Descripción
+:------     | :-----
+knownfolderid | (**obligatorio**) El directorio de nivel superior donde quieres la lista de archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. 
+packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. 
+path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. 
+
+**Encabezados de la solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta** Las carpetas disponibles con el formato siguiente. 
+```
+{"Items": [
+    {
+        "CurrentDir": string (folder under the requested known folder),
+        "DateCreated": int,
+        "FileSize": int (bytes),
+        "Id": string,
+        "Name": string,
+        "SubPath": string (present if this item is a folder, this is the name of the folder),
+        "Type": int
+    },...
+]}
+```
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* HoloLens
+* Xbox
+* IoT
+
+---
+### Obtener archivos
+
+**Solicitud**
+
+Obtén una lista de los archivos que hay en una carpeta.
+
+Método      | URI de la solicitud
+:------     | :-----
+GET | /api/filesystem/apps/file
+
+**Parámetros del URI**
+
+Parámetro del URI | Descripción
+:------     | :-----
+knownfolderid | (**obligatorio**) El directorio de nivel superior donde deseas descargar los archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. 
+filename | (**obligatorio**) El nombre del archivo que se va a descargar. 
+packagefullname | (**obligatorio si *knownfolderid* == LocalAppData **) El nombre completo del paquete que te interesa. 
+path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente.
+
+**Encabezados de la solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- El archivo solicitado, si se encuentra presente.
+
+**Respuesta**
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | El archivo solicitado
+404 | Archivo no encontrado
+5XX | Códigos de error
+<br />
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* HoloLens
+* Xbox
+* IoT
+
+---
+### Eliminar un archivo
+
+**Solicitud**
+
+Elimina un archivo de una carpeta.
+
+Método      | URI de la solicitud
+:------     | :-----
+DELETE | /api/filesystem/apps/file
+<br />
+**Parámetros del URI**
+
+Parámetro del URI | Descripción
+:------     | :-----
+knownfolderid | (**obligatorio**) El directorio de nivel superior del que quieres eliminar los archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. 
+filename | (**obligatorio**) El nombre del archivo que se va a eliminar. 
+packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. 
+path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente.
+
+**Encabezados de la solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar. Se elimina el archivo.
+404 | Archivo no encontrado
+5XX | Códigos de error
+<br />
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* HoloLens
+* Xbox
+* IoT
+
+---
+### Cargar un archivo
+
+**Solicitud**
+
+Carga un archivo en una carpeta.  Esto sobrescribirá cualquier archivo existente que tenga el mismo nombre, pero no creará carpetas nuevas. 
+
+Método      | URI de la solicitud
+:------     | :-----
+POST | /api/filesystem/apps/file
+<br />
+**Parámetros del URI**
+
+Parámetro del URI | Descripción
+:------     | :-----
+knownfolderid | (**obligatorio**) El directorio de nivel superior donde quieres cargar los archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente.
+packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. 
+path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente.
+
+**Encabezados de la solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar. El archivo se carga.
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* HoloLens
+* Xbox
+* IoT
+
+
+
+<!--HONumber=Jun16_HO4-->
 
 

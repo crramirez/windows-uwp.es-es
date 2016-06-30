@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Preguntas comunes sobre las campañas publicitarias
-title: Preguntas comunes sobre las campañas publicitarias
+Description: "Preguntas comunes sobre las campañas publicitarias"
+title: "Preguntas comunes sobre las campañas publicitarias"
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
+ms.sourcegitcommit: 3f0664e0387e206c432ce92aa221bb5c604bb675
+ms.openlocfilehash: c61866aa6fb71d41d4c6150cfe6af449da21a1da
+
 ---
 
 # Preguntas comunes sobre las campañas publicitarias
@@ -39,7 +42,9 @@ Alemán, árabe, chino (simplificado), chino (tradicional), danés, español, fi
 
 ## ¿Cuándo se me facturará?
 
-Se te facturará para un mes determinado al principio del mes siguiente.
+Se te facturará cada vez que tu cuenta acumule 50 USD de cargos (o la cantidad equivalente en la moneda local de tu mercado o región) para todas las campañas de pago de tu cuenta.
+
+Si tu cuenta acumula menos de 50 USD de cargos en el período de 30 días después de la última fecha de facturación, se te facturarán dichos cargos a principios del mes siguiente. Esto garantizará que tu cuenta no mantenga un saldo corriente de cargos de campaña publicitaria durante más de un mes.
 
 ## ¿Cómo puedo eliminar una tarjeta de crédito o editar los detalles de una tarjeta de crédito?
 
@@ -54,6 +59,7 @@ Ve a <http://commerce.microsoft.com>, inicia sesión con las credenciales de la 
 * [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

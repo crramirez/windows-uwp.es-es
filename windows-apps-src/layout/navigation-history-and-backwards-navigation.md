@@ -1,11 +1,15 @@
 ---
 author: mijacobs
-Description: La navegación en las aplicaciones para la Plataforma universal de Windows (UWP) se basa en un modelo flexible de estructuras de navegación, elementos de navegación y características de nivel del sistema.
-title: Conceptos básicos del diseño de navegación para aplicaciones para la Plataforma universal de Windows (UWP)
+Description: "La navegación en las aplicaciones para la Plataforma universal de Windows (UWP) se basa en un modelo flexible de estructuras de navegación, elementos de navegación y características de nivel del sistema."
+title: "Conceptos básicos del diseño de navegación para aplicaciones para la Plataforma universal de Windows (UWP)"
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
 label: History and backwards navigation
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: a35b76f04d450aeafcc50c307dc058c52f6aebe4
+
 ---
 
 #  Historial de navegación y navegación hacia atrás
@@ -307,6 +311,7 @@ Cuando el usuario cambia a otra aplicación y vuelve a tu aplicación, te recome
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

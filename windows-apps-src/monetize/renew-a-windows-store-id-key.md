@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
-description: Usa este método para renovar una clave de la Tienda Windows.
+description: "Usa este método para renovar una clave de la Tienda Windows."
 title: Renovar una clave de id. de la Tienda Windows
+ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
+ms.openlocfilehash: 6255346c568ed24e17c795834ab182f73707c4de
+
 ---
 
 # Renovar una clave de id. de la Tienda Windows
@@ -17,8 +20,8 @@ Usa este método para renovar una clave de la Tienda Windows. Cuando se genera u
 
 Para usar este método, necesitarás:
 
--   Un token de acceso de Azure AD que se creó con la URI de audiencia **https://onestore.microsoft.com**.
--   Una clave de id. de la Tienda Windows expirada que se generó mediante una llamada al método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) o [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) desde el código de cliente de la aplicación.
+-   Un token de acceso de Azure AD que se creó con el URI de público `https://onestore.microsoft.com`.
+-   Una clave de Id. de la Tienda Windows expirada que se haya generado mediante una llamada al método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) o [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) desde el código del cliente de la aplicación.
 
 Para obtener más información, consulta [Ver y conceder productos desde un servicio](view-and-grant-products-from-a-service.md).
 
@@ -27,12 +30,12 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 ### Sintaxis de la solicitud
 
-| Tipo de clave    | Método | URI de solicitud                                              |
+| Tipo de clave    | Método | URI de la solicitud                                              |
 |-------------|--------|----------------------------------------------------------|
-| Colecciones | POST   | https://collections.mp.microsoft.com/v6.0/b2b/keys/renew |
-| Compra    | POST   | https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew    |
+| Colecciones | POST   | `https://collections.mp.microsoft.com/v6.0/b2b/keys/renew` |
+| Compra    | POST   | `https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew`    |
 
- 
+<br/> 
 
 ### Encabezado de la solicitud
 
@@ -42,7 +45,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | cadena | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
- 
+<br/> 
 
 ### Cuerpo de la solicitud
 
@@ -51,7 +54,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 | serviceTicket | cadena | Token de acceso de Azure AD.        | Sí      |
 | key           | cadena | Clave de id. de la Tienda Windows expirada. | No       |
 
- 
+<br/> 
 
 ### Ejemplo de solicitud
 
@@ -61,7 +64,7 @@ Content-Length: 2774
 Content-Type: application/json
 Host: collections.mp.microsoft.com
 
-{ 
+{
     "serviceTicket": "eyJ0eXAiOiJKV1QiLCJhb….",
     "Key": "eyJ0eXAiOiJKV1QiLCJhbG…."
 }
@@ -76,7 +79,7 @@ Host: collections.mp.microsoft.com
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
 | clave       | cadena | Clave de la Tienda Windows actualizada que se puede usar en futuras llamadas a la API de colecciones o la API de compras de la Tienda Windows. | No       |
 
- 
+<br/> 
 
 ### Ejemplo de respuesta
 
@@ -103,7 +106,7 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 | 401  | No autorizado | AuthenticationTokenInvalid | El token de acceso de Azure AD no es válido. En algunos casos, los detalles del código ServiceError contendrán más información, como la fecha de expiración del token o si falta la notificación *appid*. |
 | 401  | No autorizado | InconsistentClientId       | La notificación *clientId* de la clave de Id. de la Tienda Windows y la notificación *appid* del token de acceso de Azure AD no coinciden.                                                                     |
 
- 
+<br/> 
 
 ## Temas relacionados
 
@@ -115,6 +118,6 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

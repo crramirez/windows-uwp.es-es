@@ -1,8 +1,11 @@
 ---
 author: drewbatgit
 ms.assetid: 923D8156-81D3-4A1E-9D02-DB219F600FDB
-description: Este artículo describe cómo crear aplicaciones para la Plataforma universal de Windows (UWP) que reproduzcan audio en segundo plano.
+description: "Este artículo describe cómo crear aplicaciones para la Plataforma universal de Windows (UWP) que reproduzcan audio en segundo plano."
 title: Audio en segundo plano
+ms.sourcegitcommit: 99d1ffa637fd8beca5d1e829cc7cacc18a9c21e9
+ms.openlocfilehash: 9275a194017f08692adee6de1c4d1f6deb680613
+
 ---
 
 # Audio en segundo plano
@@ -63,6 +66,9 @@ En alguna ocasión te interesará que los dos procesos de una aplicación de aud
 Un mecanismo de comunicación sencillo genera eventos tanto en el proceso en primer plano como en el proceso en segundo plano. Los métodos [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) y [**SendMessageToBackground**](https://msdn.microsoft.com/library/windows/apps/dn652532), cada uno por separado, invocan eventos en el proceso correspondiente. Se pueden recibir mensajes mediante la suscripción a los eventos [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) y [**MessageReceivedFromForeground**](https://msdn.microsoft.com/library/windows/apps/dn652531).
 
 Los datos se pueden pasar como un argumento a los métodos de mensaje enviado que, a continuación, se pasan a los controladores de eventos de mensajes recibidos. Pasa los datos mediante la clase [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131). Esta clase es un diccionario que contiene una cadena como clave y otros tipos de valor como valores. Puedes pasar tipos de valor sencillos como integradores, cadenas y booleanos.
+
+**Nota**  
+Las aplicaciones solo deben llamar a [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) mientras se ejecuta la aplicación en primer plano. Al intentar llamar a este método mientras no se ejecuta la aplicación en primer plano, se generará una excepción. Una aplicación es responsable de comunicar el estado de la aplicación en primer plano al proceso en segundo plano. Esto puede hacerse con eventos de ciclo de vida de la aplicación, valores de estado que se guardan en almacenamiento local y mensajes entre procesos. 
 
 ## Ciclo de vida de tarea en segundo plano
 
@@ -135,6 +141,7 @@ La siguiente tabla enumera qué políticas se aplican en los diferentes tipos de
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

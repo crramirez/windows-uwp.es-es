@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 0186EA01-8446-45BA-A109-C5EB4B80F368
-description: La clase AdvancedPhotoCapture permite capturar fotos de alto intervalo dinámico (HDR).
-title: Captura de fotos de alto intervalo dinámico (HDR)
+description: "La clase AdvancedPhotoCapture permite capturar fotos de alto intervalo dinámico (HDR)."
+title: "Captura de fotos de alto intervalo dinámico (HDR)"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3015aa4338ddb0c0a006eb631026261a4453f376
+
 ---
 
 # Captura de fotos de alto intervalo dinámico (HDR)
@@ -14,11 +18,11 @@ La clase [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/a
 
 Otros artículos relacionados con la captura HDR incluyen:
 
--   Puedes usar la clase [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) para permitir que el sistema evalúe el contenido del flujo de vista previa de la captura multimedia para determinar si el procesamiento HDR mejoraría el resultado de la captura. Para más información, consulta [Análisis de la escena para capturar multimedia](scene-analysis-for-media-capture.md).
+-   Puedes usar la clase [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) para permitir que el sistema evalúe el contenido del flujo de vista previa de la captura multimedia para determinar si el procesamiento HDR mejoraría el resultado de la captura. Para más información, consulta [Análisis de la escena para la captura multimedia](scene-analysis-for-media-capture.md).
 
--   Usa la clase [**HdrVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926680) para realizar vídeos con el algoritmo de procesamiento HDR integrado de Windows. Para más información, consulta [Controles de dispositivo de captura para captura de vídeos](capture-device-controls-for-video-capture.md).
+-   Usa la clase [**HdrVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926680) para capturar vídeo con el algoritmo de procesamiento HDR integrado de Windows. Para más información, consulta [Capturar controles del dispositivo de captura de vídeo](capture-device-controls-for-video-capture.md).
 
--   Puedes usar la clase [**VariablePhotoSequenceCapture**](https://msdn.microsoft.com/library/windows/apps/dn652564) para capturar una secuencia de fotos, cada una con configuraciones de captura diferentes, e implementar un tipo de HDR propio u otro algoritmo de procesamiento. Para más información, consulta [secuencia de fotos variable](variable-photo-sequence.md).
+-   Puedes usar la clase [**VariablePhotoSequenceCapture**](https://msdn.microsoft.com/library/windows/apps/dn652564) para capturar una secuencia de fotos, cada una con configuraciones de captura diferentes, e implementar un tipo de HDR propio u otro algoritmo de procesamiento. Para más información, consulta [Secuencia de fotos variable](variable-photo-sequence.md).
 
 **Nota**
 -   No se admite la grabación de vídeo y la captura de fotos simultánea con **AdvancedPhotoCapture**.
@@ -67,11 +71,9 @@ Captura una foto HDR mediante una llamada al método [**CaptureAsync**](https://
 El proceso HDR captura distintos marcos y después los compone en una sola imagen una vez que todos de los marcos se han capturado. Puedes obtener acceso a un fotograma después de se capture, pero antes que todo el proceso HDR se complete mediante el control del evento [**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392). No es necesario hacerlo si solamente estás interesado en el resultado final de la foto HDR.
 
 **Importante**
-            
-          
             [
               **OptionalReferencePhotoCaptured**
-            ](https://msdn.microsoft.com/library/windows/apps/mt181392) no se genera en dispositivos que admitan hardware HDR y, por tanto, no se generan los fotogramas de referencia. La aplicación debe controlar el caso donde no se genera este evento.
+            ](https://msdn.microsoft.com/library/windows/apps/mt181392) no se genera en dispositivos que admitan hardware HDR y, por tanto, no se generan los fotogramas de referencia.. La aplicación debe controlar el caso donde no se genera este evento.
 
 Como el fotograma de referencia llega fuera del contexto de la llamada a **CaptureAsync**, se ofrece un mecanismo para pasar información del contexto al controlador **OptionalReferencePhotoCaptured**. Primero debes un objeto que contenga la información de contexto. El nombre y el contenido de este objeto depende de TI. Este ejemplo define un objeto que tiene miembros para realizar un seguimiento del nombre de archivo y de la orientación de cámara de la captura.
 
@@ -102,6 +104,7 @@ Cuando la aplicación haya terminado de capturar, antes de eliminar el objeto **
 * [Capturar fotografías y vídeos con MediaCapture](capture-photos-and-video-with-mediacapture.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

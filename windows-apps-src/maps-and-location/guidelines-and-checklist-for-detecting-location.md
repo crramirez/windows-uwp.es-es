@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-Description: En este tema se describen las directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación del usuario.
-title: Directrices para las aplicaciones con reconocimiento de ubicación
+author: msatranjr
+Description: "En este tema se describen las directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación del usuario."
+title: "Directrices para las aplicaciones con reconocimiento de ubicación"
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
+
 ---
 
 # Directrices para las aplicaciones con reconocimiento de ubicación
@@ -94,9 +97,9 @@ En este tema se describen las directrices de rendimiento para las aplicaciones q
     -   Los sensores raw incluyen el acelerómetro, girómetro y magnetómetro.
     -   Los sensores de fusión incluyen orientación, inclinómetro y brújula. Los sensores de fusión obtienen sus datos a partir de combinaciones de sensores raw.
 
-    Las API de Windows Runtime tienen acceso a todos estos sensores, excepto al magnetómetro. Los sensores de fusión son más precisos y estables que los físicos, pero consumen más energía. Usa los sensores adecuados para cada propósito. Para obtener información, consulta [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358).
+    Las API de Windows Runtime tienen acceso a todos estos sensores, excepto al magnetómetro. Los sensores de fusión son más precisos y estables que los físicos, pero consumen más energía. Usa los sensores adecuados para cada propósito. Para obtener más información, consulta [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358).
 
-**Modo de espera conectado:  **Cuando el equipo se encuentra en estado de modo de espera conectado, siempre se puede crear una instancia de los objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534). No obstante, el objeto **Geolocator** no encontrará ningún sensor que pueda agregar, por lo que las llamadas a [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) agotarán el tiempo de espera después de 7 segundos, no se llamará nunca a las escuchas de eventos [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) y se llamará una vez a las escuchas de eventos [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) con el estado **NoData**.
+**Modo de espera conectado: **Si el equipo se encuentra en estado de modo de espera conectado, siempre se puede crear una instancia de los objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534). No obstante, el objeto **Geolocator** no encontrará ningún sensor que pueda agregar, por lo que las llamadas a [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) agotarán el tiempo de espera después de 7 segundos, no se llamará nunca a las escuchas de eventos [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) y se llamará una vez a las escuchas de eventos [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) con el estado **NoData**.
 
 ## Instrucciones de uso adicionales
 
@@ -167,6 +170,7 @@ La ubicación geográfica de un usuario es información de identificación perso
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -3,6 +3,10 @@ author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
 description: Tareas iniciales con controles habituales
 title: Tareas iniciales con controles habituales
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9d67cf02f80b5aa9d49fe3a0c5eb47a89419991a
+
 ---
 
 # Introducción: controles habituales
@@ -57,6 +61,7 @@ Para ver aún más controles, consulta [Lista de controles](https://msdn.microso
 * [Build 2014: Usar Visual Studio para crear aplicaciones XAML convergidas](http://go.microsoft.com/fwlink/p/?LinkID=397876)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Herramientas de Visual Studio para programación de juegos
-description: Aquí encontrarás información general acerca de las herramientas específicas de DirectX disponibles en Visual Studio.
+title: "Herramientas de Visual Studio para programación de juegos"
+description: "Aquí encontrarás información general acerca de las herramientas específicas de DirectX disponibles en Visual Studio."
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2202474f24e93aab32ec9f4e85e765616cbae056
+
 ---
 
 # Herramientas de Visual Studio para la programación de juegos
@@ -147,6 +151,7 @@ Para obtener más información, consulta [Depurar gráficos DirectX](https://msd
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

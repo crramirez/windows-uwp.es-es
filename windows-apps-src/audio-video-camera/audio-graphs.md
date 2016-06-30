@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: CB924E17-C726-48E7-A445-364781F4CCA1
-description: En este artículo se muestra cómo usar las API del espacio de nombres Windows.Media.Audio para crear gráficos de audio para escenarios de enrutamiento, mezcla y procesamiento de audio.
-title: Gráficos de audio
+description: "En este artículo se muestra cómo usar las API del espacio de nombres Windows.Media.Audio para crear gráficos de audio para escenarios de enrutamiento, mezcla y procesamiento de audio."
+title: "Gráficos de audio"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7e8df66a1fc4c95cb8b0b4be9eded8ef58b6803a
+
 ---
 
 # Gráficos de audio
@@ -72,7 +76,7 @@ Si quieres especificar un dispositivo de captura de audio específico para el no
 
 ##  Nodo de dispositivo de salida
 
-Un nodo de dispositivo de salida envía audio desde el gráfico a un dispositivo de representación de audio, como los altavoces o auriculares. Crea un [**DeviceOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914098) llamando a [**CreateDeviceOutputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn958525). El nodo de salida usa el [**PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524) del gráfico de audio.
+Un nodo de dispositivo de salida envía audio del gráfico a un dispositivo de representación de audio, como los altavoces o auriculares. Crea un [**DeviceOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914098) llamando a [**CreateDeviceOutputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn958525). El nodo de salida usa el [**PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524) del gráfico de audio.
 
 [!code-cs[DeclareDeviceOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareDeviceOutputNode)]
 
@@ -87,7 +91,7 @@ Un nodo de entrada de archivo te permite enviar datos desde un archivo de audio 
 
 [!code-cs[CreateFileInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateFileInputNode)]
 
--   Los nodos de entrada de archivo son compatibles con los siguientes formatos de archivo: mp3, wav, wma, m4a.
+-   Los nodos de entrada de archivo son compatibles con los siguientes formatos de archivo: MP3, WAV, WMA, M4A.
 -   Establece la propiedad [**StartTime**](https://msdn.microsoft.com/library/windows/apps/dn914130) para especificar el desplazamiento de tiempo en el archivo donde debe comenzar la reproducción. Si esta propiedad es null, se usa el comienzo del archivo. Establece la propiedad [**EndTime**](https://msdn.microsoft.com/library/windows/apps/dn914118) para especificar el desplazamiento de tiempo en el archivo donde debe finalizar la reproducción. Si esta propiedad es null, se usa el final del archivo. El valor de tiempo de inicio debe ser menor que el valor de tiempo final y el valor de hora final debe ser menor o igual a la duración del archivo de audio, que puede determinarse comprobando el valor de la propiedad [**Duration**](https://msdn.microsoft.com/library/windows/apps/dn914116).
 -   Busca una posición en el archivo de audio llamando a [**Seek**](https://msdn.microsoft.com/library/windows/apps/dn914127) y especificando el desplazamiento de tiempo en el archivo al que se moverá la posición de reproducción. El valor especificado no debe superar el rango de [**StartTime**](https://msdn.microsoft.com/library/windows/apps/dn914130) y [**EndTime**](https://msdn.microsoft.com/library/windows/apps/dn914118). Obtén la posición de reproducción actual del nodo con la propiedad [**Position**](https://msdn.microsoft.com/library/windows/apps/dn914124) de solo lectura.
 -   Habilita la función de repetición del archivo de audio estableciendo la propiedad [**LoopCount**](https://msdn.microsoft.com/library/windows/apps/dn914120). Cuando no sea null, este valor indica el número de veces que el archivo se reproducirá después de la reproducción inicial. Por lo tanto, por ejemplo, establecer **LoopCount** en 1 hará que el archivo se reproduzca 2 veces en total y, si se establece en 5, hará que el archivo que se reproduzca 6 veces en total. Establecer **LoopCount** en null hace que el archivo se repita indefinidamente. Para detener la repetición, establece este valor en 0.
@@ -102,7 +106,7 @@ Un nodo de salida de archivo permite dirigir datos de audio desde el gráfico a 
 
 [!code-cs[CreateFileOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateFileOutputNode)]
 
--   Los nodos de salida de archivo son compatibles con los siguientes formatos de archivo: mp3, wav, wma, m4a.
+-   Los nodos de salida de archivo son compatibles con los siguientes formatos de archivo: MP3, WAV, WMA, M4A.
 -   Se debe llamar a [**AudioFileOutputNode.Stop**](https://msdn.microsoft.com/library/windows/apps/dn914144) para detener el procesamiento del nodo antes de llamar a [**AudioFileOutputNode.FinalizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914140) o se generará una excepción.
 
 ##  Nodo de entrada de fotogramas de audio
@@ -145,7 +149,7 @@ Un nodo de salida de fotogramas de audio permite recibir y procesar la salida de
 
 [!code-cs[CreateFrameOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateFrameOutputNode)]
 
-El evento [**AudioGraph.QuantumProcessed**](https://msdn.microsoft.com/library/windows/apps/dn914240) se genera cuando el gráfico de audio haya terminado de procesar un cuanto de datos de audio. Puedes obtener acceso a los datos de audio desde dentro del controlador para este evento.
+El evento [**AudioGraph.QuantumProcessed**](https://msdn.microsoft.com/library/windows/apps/dn914240) se genera cuando el gráfico de audio ha terminado de procesar un cuanto de datos de audio. Puedes obtener acceso a los datos de audio desde dentro del controlador para este evento.
 
 [!code-cs[QuantumProcessed](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetQuantumProcessed)]
 
@@ -209,6 +213,7 @@ La API de gráfico de audio te permite agregar efectos de audio para cada tipo d
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

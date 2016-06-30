@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Registrar una tarea en segundo plano
-description: Aprende a crear una función que pueda reutilizarse para registrar de forma segura la mayoría de las tareas en segundo plano.
+description: "Aprende a crear una función que pueda reutilizarse para registrar de forma segura la mayoría de las tareas en segundo plano."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
+
 ---
 
 # Registrar una tarea en segundo plano
@@ -37,14 +40,14 @@ Este método toma el punto de entrada de la tarea, el nombre de la tarea y un de
 > [!div class="tabbedCodeSnippets"]
 > ```cs
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
->                                                 string taskEntryPoint, 
+>                                                 string taskEntryPoint,
 >                                                 string name,
 >                                                 IBackgroundTrigger trigger,
 >                                                 IBackgroundCondition condition)
 > {
 >     
 >     // We'll add code to this function in subsequent steps.
-> 
+>
 > }
 > ```
 > ```cpp
@@ -56,7 +59,7 @@ Este método toma el punto de entrada de la tarea, el nombre de la tarea y un de
 > {
 >     
 >     // We'll add code to this function in subsequent steps.
-> 
+>
 > }
 > ```
 
@@ -74,7 +77,7 @@ El siguiente código registra una tarea en segundo plano usando [**SystemTrigger
 > [!div class="tabbedCodeSnippets"]
 > ```cs
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
->                                                 string taskEntryPoint, 
+>                                                 string taskEntryPoint,
 >                                                 string name,
 >                                                 IBackgroundTrigger trigger,
 >                                                 IBackgroundCondition condition)
@@ -82,16 +85,16 @@ El siguiente código registra una tarea en segundo plano usando [**SystemTrigger
 >     //
 >     // Check for existing registrations of this background task.
 >     //
-> 
+>
 >     foreach (var cur in BackgroundTaskRegistration.AllTasks)
 >     {
-> 
+>
 >         if (cur.Value.Name == name)
 >         {
->             // 
+>             //
 >             // The task is already registered.
->             // 
-> 
+>             //
+>
 >             return (BackgroundTaskRegistration)(cur.Value);
 >         }
 >     }
@@ -119,9 +122,9 @@ El siguiente código registra una tarea en segundo plano usando [**SystemTrigger
 >         
 >         if(cur->Name == name)
 >         {
->             // 
+>             //
 >             // The task is registered.
->             // 
+>             //
 >             
 >             return (BackgroundTaskRegistration ^)(cur);
 >         }
@@ -147,7 +150,7 @@ El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
->                                                 string taskEntryPoint, 
+>                                                 string taskEntryPoint,
 >                                                 string name,
 >                                                 IBackgroundTrigger trigger,
 >                                                 IBackgroundCondition condition)
@@ -155,16 +158,16 @@ El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código 
 >     //
 >     // Check for existing registrations of this background task.
 >     //
-> 
+>
 >     foreach (var cur in BackgroundTaskRegistration.AllTasks)
 >     {
-> 
+>
 >         if (cur.Value.Name == taskName)
 >         {
->             // 
+>             //
 >             // The task is already registered.
->             // 
-> 
+>             //
+>
 >             return (BackgroundTaskRegistration)(cur.Value);
 >         }
 >     }
@@ -172,21 +175,21 @@ El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código 
 >     //
 >     // Register the background task.
 >     //
-> 
+>
 >     var builder = new BackgroundTaskBuilder();
-> 
+>
 >     builder.Name = name;
 >     builder.TaskEntryPoint = taskEntryPoint;
 >     builder.SetTrigger(trigger);
-> 
+>
 >     if (condition != null)
 >     {
-> 
+>
 >         builder.AddCondition(condition);
 >     }
-> 
+>
 >     BackgroundTaskRegistration task = builder.Register();
-> 
+>
 >     return task;
 > }
 > ```
@@ -197,7 +200,7 @@ El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código 
 >                                              IBackgroundTrigger ^ trigger,
 >                                              IBackgroundCondition ^ condition)
 > {
-> 
+>
 >     //
 >     // Check for existing registrations of this background task.
 >     //
@@ -211,9 +214,9 @@ El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código 
 >         
 >         if(cur->Name == name)
 >         {
->             // 
+>             //
 >             // The task is registered.
->             // 
+>             //
 >             
 >             return (BackgroundTaskRegistration ^)(cur);
 >         }
@@ -224,20 +227,20 @@ El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código 
 >     //
 >     // Register the background task.
 >     //
-> 
+>
 >     auto builder = ref new BackgroundTaskBuilder();
-> 
+>
 >     builder->Name = name;
 >     builder->TaskEntryPoint = taskEntryPoint;
 >     builder->SetTrigger(trigger);
-> 
+>
 >     if (condition != nullptr) {
 >         
 >         builder->AddCondition(condition);
 >     }
-> 
+>
 >     BackgroundTaskRegistration ^ task = builder->Register();
-> 
+>
 >     return task;
 > }
 > ```
@@ -266,16 +269,16 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 >     //
 >     // Check for existing registrations of this background task.
 >     //
-> 
+>
 >     foreach (var cur in BackgroundTaskRegistration.AllTasks)
 >     {
-> 
+>
 >         if (cur.Value.Name == taskName)
 >         {
->             // 
+>             //
 >             // The task is already registered.
->             // 
-> 
+>             //
+>
 >             return (BackgroundTaskRegistration)(cur.Value);
 >         }
 >     }
@@ -283,21 +286,21 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 >     //
 >     // Register the background task.
 >     //
-> 
+>
 >     var builder = new BackgroundTaskBuilder();
-> 
+>
 >     builder.Name = taskName;
 >     builder.TaskEntryPoint = taskEntryPoint;
 >     builder.SetTrigger(trigger);
-> 
+>
 >     if (condition != null)
 >     {
-> 
+>
 >         builder.AddCondition(condition);
 >     }
-> 
+>
 >     BackgroundTaskRegistration task = builder.Register();
-> 
+>
 >     return task;
 > }
 > ```
@@ -316,7 +319,7 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 >                                                              IBackgroundTrigger ^ trigger,
 >                                                              IBackgroundCondition ^ condition)
 > {
-> 
+>
 >     //
 >     // Check for existing registrations of this background task.
 >     //
@@ -330,34 +333,34 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 >         
 >         if(cur->Name == name)
 >         {
->             // 
+>             //
 >             // The task is registered.
->             // 
+>             //
 >             
 >             return (BackgroundTaskRegistration ^)(cur);
 >         }
 >         
 >         hascur = iter->MoveNext();
 >     }
-> 
-> 
+>
+>
 >     //
 >     // Register the background task.
 >     //
-> 
+>
 >     auto builder = ref new BackgroundTaskBuilder();
-> 
+>
 >     builder->Name = name;
 >     builder->TaskEntryPoint = taskEntryPoint;
 >     builder->SetTrigger(trigger);
-> 
+>
 >     if (condition != nullptr) {
 >         
 >         builder->AddCondition(condition);
 >     }
-> 
+>
 >     BackgroundTaskRegistration ^ task = builder->Register();
-> 
+>
 >     return task;
 > }
 > ```
@@ -392,8 +395,6 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

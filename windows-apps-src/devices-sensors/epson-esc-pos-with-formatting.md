@@ -2,7 +2,11 @@
 author: DBirtolo
 ms.assetid: 70667353-152B-4B18-92C1-0178298052D4
 title: Epson ESC/POS con formato
-description: Aprende a usar el lenguaje de comandos ESC/POS para dar formato al texto, como aplicar negrita o caracteres de tamaño doble, para tu impresora de punto de servicio.
+description: "Aprende a usar el lenguaje de comandos ESC/POS para dar formato al texto, como aplicar negrita o caracteres de tamaño doble, para tu impresora de punto de servicio."
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 33231abb1e573d837193daeee21713f09c7d8448
+
 ---
 # Epson ESC/POS con formato
 
@@ -56,6 +60,7 @@ Para obtener más información sobre ESC/POS, incluidos los comandos disponibles
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

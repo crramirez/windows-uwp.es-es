@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 69E05E56-B5F0-4D4C-A1FF-B6EAFF5D0E28
-description: Durante el proceso de envío, puedes configurar el comportamiento de la mediación de anuncios que desees ver. Podrás ajustar esto más adelante sin necesidad de realizar cambios en el código ni enviar paquetes nuevos.
-title: Enviar la aplicación y configurar la mediación de anuncios
+description: "Durante el proceso de envío, puedes configurar el comportamiento de la mediación de anuncios que desees ver. Podrás ajustar esto más adelante sin necesidad de realizar cambios en el código ni enviar paquetes nuevos."
+title: "Enviar la aplicación y configurar la mediación de anuncios"
+translationtype: Human Translation
+ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
+ms.openlocfilehash: 13dd6a9c38d85ead29a43f470b7c0f63d025d612
+
 ---
 
 # Enviar la aplicación y configurar la mediación de anuncios
@@ -164,6 +168,7 @@ Quieres usar Microsoft Advertising e Inneractive por igual, de modo que haya una
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

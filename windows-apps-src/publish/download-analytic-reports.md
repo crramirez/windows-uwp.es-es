@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Puedes descargar archivos que contengan los datos de análisis para que puedas revisar las estadísticas y la información sin conexión.
-title: Descargar informes de análisis
+Description: "Puedes descargar archivos que contengan los datos de análisis para que puedas revisar las estadísticas y la información sin conexión."
+title: "Descargar informes de análisis"
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 959007d6d7c4e4c768f196fe04c2fa4a8ac6fc2e
+
 ---
 
 # Descargar informes de análisis
@@ -23,6 +27,7 @@ Puedes descargar archivos que contengan los datos de análisis para que puedas r
 4.  Haz clic en el botón **Descargar informes** y luego guarda o abre el archivo .tsv.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

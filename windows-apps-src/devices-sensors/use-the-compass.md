@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 5B30E32F-27E0-4656-A834-391A559AC8BC
-title: Usar la brújula
-description: Aprende a usar la brújula para determinar el rumbo actual.
+title: "Usar la brújula"
+description: "Aprende a usar la brújula para determinar el rumbo actual."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2c2135867586909328b8d1080c413b3524322246
+
 ---
 # Usar la brújula
 
@@ -176,6 +180,7 @@ Estos nuevos valores se escriben en los bloques de texto que se encuentran en el
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

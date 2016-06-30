@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Iniciar la aplicación Contactos
-description: En este tema se describe el esquema de URI ms-people. La aplicación puede usar este esquema de URI para iniciar la aplicación Contactos para acciones específicas.
+author: TylerMSFT
+title: "Iniciar la aplicación Contactos"
+description: "En este tema se describe el esquema de URI ms-people. La aplicación puede usar este esquema de URI para iniciar la aplicación Contactos para acciones específicas."
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: fd3c38dd0b6df2f430d7be4c40e7131d4ae98616
+
 ---
 
 # Iniciar la aplicación Contactos
@@ -205,8 +208,6 @@ En este tema se describe el esquema de URI **ms-people:**. La aplicación puede 
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

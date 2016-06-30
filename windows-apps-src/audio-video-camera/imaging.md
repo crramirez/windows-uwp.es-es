@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
-description: En este artículo se explica cómo cargar y guardar archivos de imagen mediante BitmapDecoder y BitmapEncoder, y cómo usar el objeto SoftwareBitmap para representar imágenes de mapa de bits.
-title: Creación de imágenes
+description: "En este artículo se explica cómo cargar y guardar archivos de imagen mediante BitmapDecoder y BitmapEncoder, y cómo usar el objeto SoftwareBitmap para representar imágenes de mapa de bits."
+title: "Creación de imágenes"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8da8c78a848c4eea565d432bdf62d3d1528c5a85
+
 ---
 
 # Creación de imágenes
@@ -131,6 +135,7 @@ Puedes transcodificar un archivo de imagen directamente desde un elemento [**Bit
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

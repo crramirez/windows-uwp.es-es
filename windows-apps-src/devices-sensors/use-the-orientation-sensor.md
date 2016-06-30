@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
-title: Usar el sensor de orientaci처n
-description: Aprende a usar los sensores de orientaci처n para determinar la orientaci처n del dispositivo.
+title: "Usar el sensor de orientaci처n"
+description: "Aprende a usar los sensores de orientaci처n para determinar la orientaci처n del dispositivo."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 67c23795be54207c54c1e871dad045e6c0cd7c77
+
 ---
 # Usar el sensor de orientaci처n
 
@@ -348,6 +352,7 @@ Estos nuevos valores se escriben en un bloque de texto que se encuentra en el c�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Planear la migración de OpenGL ES 2.0 a Direct3D
-description: Si vas a migrar un juego de plataformas iOS o Android, probablemente has hecho una gran inversión en OpenGL ES 2.0.
+title: "Planear la migración de OpenGL ES 2.0 a Direct3D"
+description: "Si vas a migrar un juego de plataformas iOS o Android, probablemente has hecho una gran inversión en OpenGL ES 2.0."
 ms.assetid: a31b8c5a-5577-4142-fc60-53217302ec3a
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 804faad3db94bda9d1d67ad899a6ba048a4bfd26
+
 ---
 
 # Planear la migración de OpenGL ES 2.0 a Direct3D
@@ -115,6 +119,7 @@ Si embargo Direct3D puede admitir un sistema de coordenadas a la derecha. Direct
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

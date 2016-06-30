@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
-description: Usa la API de análisis de la Tienda Windows para recuperar datos de análisis mediante programación para las aplicaciones que se registran en tu cuenta del Centro de desarrollo de Windows o la de tu organización.
-title: Acceder a los datos de análisis mediante los servicios de la Tienda Windows
+description: "Usa la API de análisis de la Tienda Windows para recuperar datos de análisis mediante programación para las aplicaciones que se registran en tu cuenta del Centro de desarrollo de Windows o la de tu organización."
+title: "Acceder a los datos de análisis mediante los servicios de la Tienda Windows"
+ms.sourcegitcommit: 204bace243fb082d3ca3b4259982d457f9c533da
+ms.openlocfilehash: 30388a975e9623c5511abe608aa1b21956e2c974
+
 ---
 
 # Acceder a los datos de análisis mediante los servicios de la Tienda Windows
@@ -35,20 +38,20 @@ Los siguientes pasos describen el proceso de principio a fin:
 
 1.  En el Centro de desarrollo, ve a **Configuración de la cuenta**, haz clic en **Administrar usuarios** y asocia la cuenta del Centro de desarrollo de tu organización al directorio de Azure AD de tu organización. Para obtener instrucciones detalladas, consulta [Administrar usuarios de la cuenta](https://msdn.microsoft.com/library/windows/apps/mt489008). Opcionalmente, puedes agregar otros usuarios del directorio de Azure AD de la organización para que también puedan acceder a la cuenta del Centro de desarrollo.
 
-    **Nota**: Solo se puede asociar una cuenta del Centro de desarrollo con un directorio de Azure Active Directory. Del mismo modo, solo un directorio de Azure Active Directory puede asociarse con una cuenta del Centro de desarrollo. Una vez establecida esta asociación, no podrás quitarla sin ponerte en contacto con soporte técnico.
+    > **Nota**: Solo se puede asociar una cuenta del Centro de desarrollo con un directorio de Azure Active Directory. Del mismo modo, solo un directorio de Azure Active Directory puede asociarse con una cuenta del Centro de desarrollo. Una vez establecida esta asociación, no podrás quitarla sin ponerte en contacto con soporte técnico.
 
      
 
-2.  En la página **Administrar usuarios**, haz clic en **Agregar aplicaciones de Azure AD**, agrega la aplicación de Azure AD que usarás para acceder a los datos de análisis de tu cuenta del Centro de desarrollo y asígnale el rol **Administrador**. Si esta aplicación ya existe en el directorio de Azure AD, puedes seleccionarla en **Agregar aplicaciones de Azure AD** para agregarla a tu cuenta del Centro de desarrollo. De lo contrario, puedes crear una nueva aplicación de Azure AD en la página **Agregar aplicaciones de Azure AD**. Para obtener más información, consulta la sección sobre administración de aplicaciones de Azure AD en [Administrar usuarios de la cuenta](https://msdn.microsoft.com/library/windows/apps/mt489008).
+2.  En la página **Administrar usuarios**, haz clic en **Agregar aplicaciones de Azure AD**, agrega la aplicación de Azure AD que representa la aplicación o el servicio que usarás para acceder a los datos de análisis de tu cuenta del Centro de desarrollo y asígnale el rol **Administrador**. Si esta aplicación ya existe en el directorio de Azure AD, puedes seleccionarla en la página **Agregar aplicaciones de Azure AD** para agregarla a tu cuenta del Centro de desarrollo. De lo contrario, puedes crear una nueva aplicación de Azure AD en la página **Agregar aplicaciones de Azure AD**. Para obtener más información, consulta la sección sobre administración de aplicaciones de Azure AD en [Administrar usuarios de la cuenta](https://msdn.microsoft.com/library/windows/apps/mt489008).
 
 3.  Vuelve a la página **Administrar usuarios**, haz clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y luego haz clic en **Agregar nueva clave**. En la siguiente pantalla, copia los valores de **Id. de cliente** y **Clave**. Para obtener más información, consulta la sección sobre administración de aplicaciones de Azure AD en [Administrar usuarios de la cuenta](https://msdn.microsoft.com/library/windows/apps/mt489008). Necesitas estos valores de id. de cliente y clave para obtener un token de acceso de Azure AD para usarlo al llamar a la API de análisis de la Tienda Windows. No podrás acceder a esta información de nuevo después de salir de la página.
 
 
 ### Obtener un token de acceso de Azure AD
 
-Después de asociar una aplicación de Azure AD a tu cuenta del Centro de desarrollo y recuperar el id. de cliente y la clave de la aplicación, puedes usar esta información para obtener un token de acceso de Azure AD. Necesitas un token de acceso para poder llamar a cualquiera de los métodos de la API de análisis de la Tienda Windows.
+Después de asociar una aplicación de Azure AD a tu cuenta del Centro de desarrollo y recuperar el id. de cliente y la clave de la aplicación, puedes usar esta información para obtener un token de acceso de Azure AD. Necesitas un token de acceso para poder llamar a cualquiera de los métodos de la API de análisis de la Tienda Windows. Después de crear un token de acceso, tienes 60 minutos para usarlo antes de que expire.
 
-Para obtener el token de acceso, sigue las instrucciones de [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://msdn.microsoft.com/library/azure/dn645543.aspx) para enviar un HTTP POST al punto de conexión de Azure AD.
+Para obtener el token de acceso, sigue las instrucciones de [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://msdn.microsoft.com/library/azure/dn645543.aspx) para enviar un HTTP POST al siguiente punto de conexión de Azure AD.
 
 ```syntax
 https://login.microsoftonline.com/<tenant id>/oauth2/token
@@ -108,9 +111,9 @@ namespace TestAnalyticsAPI
                     clientSecret,
                     scope).Result;
 
-            // This is your app's product ID. This ID is embedded in the app's listing link
-            // on the App identity page of the Dev Center dashboard.
-            string appID = "<your app's product ID>";
+            // This is your app's Store ID. This ID is available on
+            // the App identity page of the Dev Center dashboard.
+            string appID = "<your app's Store ID>";
 
             DateTime startDate = DateTime.Parse("08-01-2015");
             DateTime endDate = DateTime.Parse("11-01-2015");
@@ -237,6 +240,7 @@ La API análisis de Tienda Windows devuelve respuestas de error en un objeto JSO
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

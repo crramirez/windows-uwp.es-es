@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
-title: Mejorar el rendimiento de la recolección de elementos no usados
-description: La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática con el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no utilizados de .NET para las aplicaciones para UWP.
+title: "Mejorar el rendimiento de la recolección de elementos no usados"
+description: "La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática con el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no utilizados de .NET para las aplicaciones para UWP."
+translationtype: Human Translation
+ms.sourcegitcommit: 5f9626c644315884ea8605a4e69e7e580a44010b
+ms.openlocfilehash: 3fb6a0469a0e7488c40fc03bce8c90780b524656
+
 ---
 # Mejorar el rendimiento de la recolección de elementos no utilizados
 
@@ -79,6 +83,7 @@ El reemplazo de referencias de objeto por índices puede implicar una modificaci
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

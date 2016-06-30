@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: 'Mostrar mapas con vistas 2D, 3D y Streetside'
-description: Muestra mapas personalizables en tu aplicación mediante la clase MapControl. Este tema también presenta la vista 3D aérea y la vista de Streetside.
+author: msatranjr
+title: Mostrar mapas con vistas 2D, 3D y Streetside
+description: "Muestra mapas personalizables en tu aplicación mediante la clase MapControl. Este tema también presenta la vista 3D aérea y la vista de Streetside."
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 249503f6a43ef8c38e76ed29aed4a1bfdb26e9fb
+
 ---
 
 # Mostrar mapas con vistas 2D, 3D y Streetside
@@ -96,7 +99,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 Para poder acceder a la ubicación del usuario, la aplicación debe llamar al método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152). En ese momento, la aplicación debe estar en primer plano y se debe llamar a **RequestAccessAsync** desde el subproceso de la interfaz de usuario. Ten en cuenta que la aplicación no puede acceder a los datos de ubicación del usuario, hasta que este le conceda permiso para obtenerlos.
 
-Usa el método [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) de la clase [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) para obtener la ubicación actual del dispositivo (si está disponible). Para obtener el [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675) correspondiente, usa la propiedad [**Point**](https://msdn.microsoft.com/library/windows/apps/dn263665) de las coordenadas geográficas de la posición geográfica. Para más información, consulta [Obtener la ubicación actual](get-location.md).
+Usa el método [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) de la clase [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) para obtener la ubicación actual del dispositivo (si está disponible). Para obtener el [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675) correspondiente, usa la propiedad [**Point**](https://msdn.microsoft.com/library/windows/apps/dn263665) de las coordenadas geográficas de la posición geográfica. Para obtener más información, consulta [Obtener la ubicación actual](get-location.md).
 
 ```csharp
 // Set your current location.
@@ -126,16 +129,16 @@ switch (accessStatus)
 }
 ```
 
-Al mostrar la ubicación del dispositivo en un mapa, tal vez te interese mostrar elementos gráficos y establecer el nivel de zoom según la exactitud de los datos de ubicación. Para más información, consulta [Directrices para aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148).
+Al mostrar la ubicación del dispositivo en un mapa, tal vez te interese mostrar elementos gráficos y establecer el nivel de zoom según la exactitud de los datos de ubicación. Para obtener más información, consulta [Directrices para aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148).
 
 ## Cambiar la ubicación del mapa
 
 
 Para cambiar la ubicación que aparece en un mapa 2D, llama a una de las sobrecargas del método [**TrySetViewAsync**](https://msdn.microsoft.com/library/windows/apps/dn637060). Este método sirve para especificar nuevos valores de [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005), [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068), [**Heading**](https://msdn.microsoft.com/library/windows/apps/dn637019) y [**Pitch**](https://msdn.microsoft.com/library/windows/apps/dn637044). También puedes especificar una animación opcional para usarla cuando la vista cambie. Para ello, proporciona una constante de la enumeración [**MapAnimationKind**](https://msdn.microsoft.com/library/windows/apps/dn637002).
 
-Para cambiar la ubicación de un mapa 3D, usa el método [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296) en su lugar. Para más información, consulta [Mostrar vistas en 3D](#display3d).
+Para cambiar la ubicación de un mapa 3D, usa el método [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296) en su lugar. Para obtener más información, consulta [Mostrar vistas en 3D](#display3d).
 
-Llama al método [**TrySetViewBoundsAsync**](https://msdn.microsoft.com/library/windows/apps/dn637065) para que se muestre el contenido de una clase [**GeoboundingBox**](https://msdn.microsoft.com/library/windows/apps/dn607949) en el mapa. Usa este método, por ejemplo, para mostrar una ruta o la parte de una ruta en el mapa. Para más información, consulta [Mostrar rutas e indicaciones en un mapa](routes-and-directions.md).
+Llama al método [**TrySetViewBoundsAsync**](https://msdn.microsoft.com/library/windows/apps/dn637065) para que se muestre el contenido de una clase [**GeoboundingBox**](https://msdn.microsoft.com/library/windows/apps/dn607949) en el mapa. Usa este método, por ejemplo, para mostrar una ruta o la parte de una ruta en el mapa. Para obtener más información, consulta [Mostrar rutas e indicaciones en un mapa](routes-and-directions.md).
 
 ## Configurar el mapa
 
@@ -281,7 +284,7 @@ Para obtener información sobre las ubicaciones en el mapa, llama a los siguient
 
 -   [
               **GetLocationFromOffset**
-            ](https://msdn.microsoft.com/library/windows/apps/dn637016): gracias a este método puedes obtener la ubicación geográfica correspondiente al punto especificado en la ventanilla del control de mapa.
+            ](https://msdn.microsoft.com/library/windows/apps/dn637016): Gracias a este método puedes obtener la ubicación geográfica correspondiente al punto especificado en la ventanilla del control del mapa.
 -   [
               **GetOffsetFromLocation**
             ](https://msdn.microsoft.com/library/windows/apps/dn637018): gracias a este método puedes obtener el punto especificado en la ventanilla del control de mapa correspondiente a la ubicación geográfica especificada.
@@ -303,27 +306,28 @@ Debes controlar los siguientes eventos de la clase [**MapControl**](https://msdn
 
 Para determinar si el mapa se está cargando o está totalmente cargado, administra el evento [**LoadingStatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn637028) del control.
 
-Para administrar los cambios que se producen cuando el usuario o la aplicación cambian la configuración del mapa, puedes controlar los siguientes eventos de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). [Directrices para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102) [CenterChanged](https://msdn.microsoft.com/library/windows/apps/dn596102)
+Puedes controlar los siguientes eventos de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) para administrar los cambios que se producen cuando el usuario o la aplicación cambian la configuración del mapa. [Directrices para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 
--   [**HeadingChanged**](https://msdn.microsoft.com/library/windows/apps/dn637006)
--   [**PitchChanged**](https://msdn.microsoft.com/library/windows/apps/dn637020)
--   [**ZoomLevelChanged**](https://msdn.microsoft.com/library/windows/apps/dn637045)
--   [**Temas relacionados**](https://msdn.microsoft.com/library/windows/apps/dn637069)
+-   [**CenterChanged**](https://msdn.microsoft.com/library/windows/apps/dn637006)
+-   [**HeadingChanged**](https://msdn.microsoft.com/library/windows/apps/dn637020)
+-   [**PitchChanged**](https://msdn.microsoft.com/library/windows/apps/dn637045)
+-   [**ZoomLevelChanged**](https://msdn.microsoft.com/library/windows/apps/dn637069)
 
-## Bing Maps Developer Center
+## Temas relacionados
 
-* [Muestra de mapa de UWP](https://www.bingmapsportal.com/)
-* [Obtener la ubicación actual](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Directrices de diseño para aplicaciones con reconocimiento de ubicación](get-location.md)
-* [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/hh465148)
-* [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [UWP traffic app sample (Ejemplo de aplicación de tráfico de UWP)](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [MapControl](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Bing Maps Developer Center](https://www.bingmapsportal.com/)
+* [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Obtener la ubicación actual](get-location.md)
+* [Directrices de diseño para aplicaciones con reconocimiento de ubicación](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP traffic app sample (Ejemplo de aplicación de tráfico de UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

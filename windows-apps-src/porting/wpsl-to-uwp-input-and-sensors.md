@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: El código que se integra con el dispositivo y sus sensores implica la entrada del usuario y la salida de este.
-title: Migración de modelo de E/S, dispositivos y aplicaciones de Windows Phone Silverlight a UWP
+description: "El código que se integra con el dispositivo y sus sensores implica la entrada del usuario y la salida de este."
+title: "Migración de modelo de E/S, dispositivos y aplicaciones de Windows Phone Silverlight a UWP"
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 6b29e741c9cad68083502b25445b965fc266ef6e
+
 ---
 
 #  Migración de modelo de E/S, dispositivos y aplicaciones de Windows Phone Silverlight a UWP
@@ -101,6 +105,7 @@ El siguiente tema es [Migración de capas de negocio y de datos](wpsl-to-uwp-bus
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

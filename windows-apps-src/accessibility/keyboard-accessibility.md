@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: Si tu aplicación no proporciona un buen acceso de teclado, los usuarios invidentes o con problemas de motricidad pueden llegar a tener dificultades para usar tu aplicación o, probablemente, no puedan usarla.
+Description: "Si tu aplicación no proporciona un buen acceso de teclado, los usuarios invidentes o con problemas de motricidad pueden llegar a tener dificultades para usar tu aplicación o, probablemente, no puedan usarla."
 ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
 title: Accesibilidad de teclado
 label: Keyboard accessibility
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: c5b5ca247e3999850d7bf9b81347c201204db7e8
+
 ---
 
 # Accesibilidad de teclado  
@@ -43,7 +46,7 @@ XAML
 </Grid>
 ```
 
-Es posible que quieras excluir un control del orden de tabulación. Por lo general, esto se logra convirtiendo el control a no interactivo, por ejemplo, configurando la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209419) en **false** Un control deshabilitado se excluye automáticamente del orden de tabulación. Pero, en ocasiones, quizá quieras excluir un control del orden de tabulación incluso si no está deshabilitado. En este caso, puedes establecer la propiedad [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422) en **false**.
+Es posible que quieras excluir un control del orden de tabulación. Por lo general, esto se logra convirtiendo el control a no interactivo, por ejemplo, configurando la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209419) en **false** Un control deshabilitado se excluye automáticamente del orden de tabulación. Pero, en ocasiones, quizá quieras excluir un control del orden de tabulación incluso si no está deshabilitado. En este caso, puedes establecer la propiedad [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422) **false**.
 
 Todos los elementos que pueden tener foco suelen estar en el orden de tabulación de manera predeterminada. La excepción es que es posible que ciertos tipos de presentación de texto como [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565) tengan foco con el fin de que el portapapeles pueda acceder a ellos para seleccionar texto; sin embargo, no se encuentran en el orden de tabulación porque no se espera que los elementos de texto estático estén en el orden de tabulación. No suelen ser interactivos (pueden invocarse y no requieren entrada de texto, pero no admiten el [patrón de control de texto](https://msdn.microsoft.com/library/windows/desktop/Ee671194) que admite la búsqueda y el ajuste de puntos de selección en el texto). El texto no debe dar a entender que, si se coloca el foco en él, pueda existir la posibilidad de realizar alguna actividad. Las tecnologías de asistencia seguirán detectando los elementos de texto y los lectores de pantalla los leerán en voz alta, pero esto dependerá de otro tipo de técnicas que no tienen que ver con encontrar estos elementos en el orden de tabulación práctico.
 
@@ -57,7 +60,7 @@ Tanto si ajustas los valores [**TabIndex**](https://msdn.microsoft.com/library/w
 <span id="keyboard_navigation_within_a_ui_element"/>
 <span id="KEYBOARD_NAVIGATION_WITHIN_A_UI_ELEMENT"/>
 ## Navegación por teclado dentro de un elemento de interfaz de usuario  
-Para los elementos compuestos, es importante asegurar una correcta navegación interna entre los elementos contenidos. Un elemento compuesto puede administrar su elemento secundario activo actual para reducir la sobrecarga que implica hacer que todos los elementos secundarios tengan foco. Un elemento compuesto de este tipo se incluye en el orden de tabulación y controla los eventos de navegación por teclado. Muchos de los controles compuestos ya tienen una lógica de navegación interna integrada para controlar la administración de eventos. Por ejemplo, el recorrido mediante teclas de dirección de los elementos está habilitado de manera predeterminada en los controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242704view), [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) y [**FlipView**](https://msdn.microsoft.com/library/windows/apps/BR242678) .
+Para los elementos compuestos, es importante asegurar una correcta navegación interna entre los elementos contenidos. Un elemento compuesto puede administrar su elemento secundario activo actual para reducir la sobrecarga que implica hacer que todos los elementos secundarios tengan foco. Un elemento compuesto de este tipo se incluye en el orden de tabulación y controla los eventos de navegación por teclado. Muchos de los controles compuestos ya tienen una lógica de navegación interna integrada para controlar la administración de eventos. Por ejemplo, el recorrido mediante teclas de dirección de los elementos está habilitado de manera predeterminada en los controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview), [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) y [**FlipView**](https://msdn.microsoft.com/library/windows/apps/BR242678) .
 
 <span id="keyboard_activation"/>
 <span id="KEYBOARD_ACTIVATION"/>
@@ -144,7 +147,7 @@ Para obtener más información sobre la implementación de las teclas de método
 ### Implementar un controlador de eventos de tecla  
 Los eventos de entrada como los eventos de tecla usan un concepto de evento denominado *eventos enrutados*. Un evento enrutado se puede propagar por los elementos secundarios de un control compuesto, lo que permite a un control primario controlar los eventos de varios elementos secundarios. Este modelo de evento es conveniente para definir acciones de teclas de método abreviado en un control que contenga varias partes compuestas que no estén diseñadas para admitir foco ni para formar parte del orden de tabulación.
 
-Para obtener el código de ejemplo que muestra cómo escribir un controlador de eventos de tecla que incluya la comprobación de modificadores como la tecla Ctrl, consulta [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607).
+Para obtener código de ejemplo que muestra cómo escribir un controlador de eventos de tecla que incluya la comprobación de modificadores como la tecla Ctrl, consulta [Interacciones de teclado](https://msdn.microsoft.com/library/windows/apps/Mt185607).
 
 <span id="Keyboard_navigation_for_custom_controls"/>
 <span id="keyboard_navigation_for_custom_controls"/>
@@ -152,7 +155,7 @@ Para obtener el código de ejemplo que muestra cómo escribir un controlador de 
 ## Navegación mediante teclado para controles personalizados  
 Se recomienda el uso de teclas de dirección como métodos abreviados de teclado para navegar entre elementos secundarios, en los casos en que dichos elementos mantengan una relación espacial entre sí. Si los nodos de la vista de árbol tienen sub-elementos secundarios separados para administrar la activación de nodos y las acciones de expandir/contraer, usa las teclas de flecha izquierda y derecha para proporcionar la funcionalidad de expandir/contraer del teclado. Si tienes un control orientado que admite el recorrido direccional dentro del contenido del control, usa las teclas de dirección adecuadas.
 
-Por lo general, para implementar un control de teclas personalizado para controles personalizados se incluye una invalidación de los métodos [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/BR209390_onkeydown) y [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/BR209390_onkeyup) como parte de la lógica de la clase.
+Por lo general, para implementar un control de teclas personalizado para controles personalizados se incluye una invalidación de los métodos [**OnKeyDown**](https://msdn.microsoft.com/en-us/library/windows/apps/hh967982.aspx) y [**OnKeyUp**](https://msdn.microsoft.com/en-us/library/windows/apps/hh967983.aspx) como parte de la lógica de la clase.
 
 <span id="An_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="an_example_of_a_visual_state_for_a_focus_indicator"/>
@@ -162,7 +165,7 @@ Ya hemos mencionado que los controles personalizados que el usuario habilite par
 
 Todos los controles XAML predeterminados mostrarán un indicador de foco visual adecuado cuando reciban el foco (si es que pueden recibirlo). También hay distintos aspectos potenciales según el tema seleccionado por el usuario (en especial si el usuario usa un modo de contraste alto). Si usas los controles XAML en la interfaz de usuario y no reemplazas las plantillas de control, no tienes que hacer nada más para obtener indicadores de foco visual en los controles que se comportan y se muestran correctamente. Si lo que intentas es volver a crear la plantilla de un control, o si tienes curiosidad sobre cómo los controles XAML proporcionan sus indicadores de foco visual, en el resto de esta sección se explica cómo se logra en XAML y la lógica de control.
 
-Aquí incluimos un código XAML de ejemplo que procede de la plantilla XAML predeterminada de una clase [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265).
+Aquí incluimos un código XAML de ejemplo que procede de la plantilla XAML predeterminada de una clase [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) .
 
 XAML
 ```xml
@@ -237,6 +240,7 @@ Los métodos abreviados de teclado no suelen ser relevantes para las aplicacione
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

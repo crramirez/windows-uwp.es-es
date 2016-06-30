@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 79CF3927-25DE-43DD-B41A-87E6768D5C35
-title: Optimiza tu diseño XAML
-description: El diseño puede ser una parte costosa de una aplicación XAML; tanto en la sobrecarga de memoria como en el uso de la CPU. A continuación te mostramos algunos sencillos pasos para mejorar el rendimiento de diseño de la aplicación XAML.
+title: "Optimiza tu diseño XAML"
+description: "El diseño puede ser una parte costosa de una aplicación XAML; tanto en la sobrecarga de memoria como en el uso de la CPU. A continuación te mostramos algunos sencillos pasos para mejorar el rendimiento de diseño de la aplicación XAML."
+translationtype: Human Translation
+ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
+ms.openlocfilehash: dbec176310896164ebc99c20aefca4c5b2b29ee9
+
 ---
 # Optimiza tu diseño XAML
 
@@ -185,6 +189,7 @@ Cada panel XAML está optimizado para lograr un buen rendimiento y todos los pan
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

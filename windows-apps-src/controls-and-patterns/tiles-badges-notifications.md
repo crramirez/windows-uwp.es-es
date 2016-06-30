@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios.
+Description: "Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios."
 title: Iconos, distintivos y notificaciones
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 32b1c3ec674a84ca4ed08d98119fe21f77e15554
+
 ---
 
 # Iconos, distintivos y notificaciones para las aplicaciones para UWP
@@ -127,6 +131,7 @@ Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

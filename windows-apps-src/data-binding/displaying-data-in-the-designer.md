@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
-title: Datos de muestra sobre la superficie de diseño y para la creación de prototipos
-description: Quizás no sea posible o no desees (puede que por motivos de privacidad o rendimiento) que la aplicación muestre datos dinámicos sobre la superficie de diseño en Microsoft Visual Studio o Blend para Visual Studio.
+title: "Datos de muestra sobre la superficie de diseño y para la creación de prototipos"
+description: "Quizás no sea posible o no desees (puede que por motivos de privacidad o rendimiento) que la aplicación muestre datos dinámicos sobre la superficie de diseño en Microsoft Visual Studio o Blend para Visual Studio."
+translationtype: Human Translation
+ms.sourcegitcommit: 53e807c0d9de8faf2d0b5dc0e1c8e9c380e42d86
+ms.openlocfilehash: 2f7ac4b269a167c3b521fa94d77e27091fa490a8
+
 ---
 Datos de muestra sobre la superficie de diseño y para la creación de prototipos
 =============================================================================================
@@ -31,7 +35,7 @@ Al hacerlo, la página no presenta tantas posibilidades de diseño. El motivo es
 
 ![Interfaz de usuario de diseño dispersa.](images/displaying-data-in-the-designer-01.png)
 
-La primera solución es intentar evitar que se ejecute la asignación de **DataContext** y, en su lugar, establecer la propiedad **DataContext** en el marcado de página. De este modo, los datos dinámicos aparecen tanto en tiempo de diseño como en tiempo de ejecución. Para hacerlo, abre primero la página XAML. A continuación, en la ventana **Esquema del documento**, haz clic en el elemento raíz que se puede diseñar (normalmente tiene la etiqueta **\[Page]\**) para seleccionarlo. En la ventana **Propiedades**, busca la propiedad **DataContext** (dentro de la categoría Common) y, a continuación, haz clic en **Nueva**. Haz clic en el tipo de modelo de vista del cuadro de diálogo **Seleccionar objeto** y después en **Aceptar**.
+La primera solución es intentar evitar que se ejecute la asignación de **DataContext** y, en su lugar, establecer la propiedad **DataContext** en el marcado de página. De este modo, los datos dinámicos aparecen tanto en tiempo de diseño como en tiempo de ejecución. Para hacerlo, abre primero la página XAML. A continuación, en la ventana **Esquema del documento**, haz clic en el elemento raíz que se puede diseñar (normalmente tiene la etiqueta **\[Page]\**) para seleccionarlo. En la ventana **Propiedades**, busca la propiedad **DataContext** (dentro de la categoría Common) y, a continuación, haz clic en **Nueva**. Haz clic en el tipo de modelo de vista del cuadro de diálogo **Seleccionar objeto** y, después, en **Aceptar**.
 
 ![Interfaz de usuario para establecer DataContext.](images/displaying-data-in-the-designer-02.png)
 
@@ -142,6 +146,7 @@ La característica **Nuevos datos de ejemplo** usa [**DataContext**](https://msd
 ![Datos de ejemplo para la creación de prototipos.](images/displaying-data-in-the-designer-04.png)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

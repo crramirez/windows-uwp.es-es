@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: El informe sobre canales y conversiones del panel del Centro de desarrollo de Windows te permite ver cómo los clientes de Windows 10 han llegado hasta la descripción de la aplicación.
+Description: "El informe sobre canales y conversiones del panel del Centro de desarrollo de Windows te permite ver cómo los clientes de Windows 10 han llegado hasta la descripción de la aplicación."
 title: Informe de canales y conversiones
 ms.assetid: C359B9FB-A17B-4A8E-B8EE-19F2F98AA4FF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e82299f156a7e4f82e9219dc9b0ef6171e72c74e
+
 ---
 
 # Informe de canales y conversiones
@@ -93,6 +97,7 @@ Para campañas personalizadas, también puedes ver el número de conversiones de
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

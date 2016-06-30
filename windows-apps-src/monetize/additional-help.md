@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 15d8cc6c-80f9-49b7-8036-0abf80ffebba
-description: Obtén información sobre otros recursos para desarrollar aplicaciones con anuncios.
+description: "Obtén información sobre otros recursos para desarrollar aplicaciones con anuncios."
 title: Ayuda adicional
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 5229cf7ebb4133052c3e960fe1c81d6edeef8e57
+
 ---
 
 # Ayuda adicional
@@ -29,6 +33,7 @@ Los siguientes recursos proporcionan más información sobre cómo desarrollar a
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

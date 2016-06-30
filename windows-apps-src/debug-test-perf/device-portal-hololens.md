@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Device Portal para HoloLens
-description: Obtén información sobre cómo Windows Device Portal para HoloLens te permite configurar y administrar de forma remota tu dispositivo HoloLens.
+description: "Obtén información sobre cómo Windows Device Portal para HoloLens te permite configurar y administrar de forma remota tu dispositivo HoloLens."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: bd1ae8ccdd81f319fc36ca04b8b839cb313b2854
+
 ---
 # Device Portal para HoloLens
 
@@ -166,6 +170,7 @@ Envía la entrada de teclado desde la máquina remota a HoloLens.
 Haz clic o pulsa en la región de debajo del teclado virtual para habilitar el envío de pulsaciones de teclas a HoloLens. Escribe texto de entrada en el cuadro de texto y haz clic o pulsa en Enviar para enviar las pulsaciones de teclas a la aplicación activa.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

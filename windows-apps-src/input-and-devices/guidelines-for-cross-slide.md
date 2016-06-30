@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Usa el gesto de deslizamiento transversal para admitir la selección con el gesto de deslizar rápidamente y las interacciones de arrastrar (mover) con el gesto de deslizar.
+Description: "Usa el gesto de deslizamiento transversal para admitir la selección con el gesto de deslizar rápidamente y las interacciones de arrastrar (mover) con el gesto de deslizar."
 title: Instrucciones para el deslizamiento transversal
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 label: Cross-slide
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 47a16acc4025541b1cc19582c2c7d59755fd2594
+
 ---
 
 # Instrucciones para el deslizamiento transversal
@@ -152,6 +156,7 @@ Si es necesario mover más de un objeto, deja que los usuarios seleccionen vario
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

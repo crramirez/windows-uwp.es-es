@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Agrega usuarios a tu cuenta del Centro de desarrollo y asígnales roles con permisos específicos.
+Description: "Agrega usuarios a tu cuenta del Centro de desarrollo y asígnales roles con permisos específicos."
 title: Administrar usuarios de la cuenta
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
+translationtype: Human Translation
+ms.sourcegitcommit: 3cfc50e56f3fa65a9dfa2c8b4582c1a53c2b13d1
+ms.openlocfilehash: 18e25d0064652089d450eec811a7a5d24b8dc3e8
+
 ---
 
 # Administrar usuarios de la cuenta
@@ -225,6 +229,7 @@ Para quitar un usuario, un grupo o una aplicación de Azure AD de tu cuenta del 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

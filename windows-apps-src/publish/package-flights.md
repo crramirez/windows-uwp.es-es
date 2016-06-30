@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Si la aplicación usa los elementos AdMediatorControl o AdControl para mostrar anuncios en banner, puedes aumentar la velocidad de relleno de los anuncios y tus ingresos mostrando anuncios de filiales de Microsoft en la aplicación.
+Description: "Si la aplicación usa los elementos AdMediatorControl o AdControl para mostrar anuncios en banner, puedes aumentar la velocidad de relleno de los anuncios y tus ingresos mostrando anuncios de filiales de Microsoft en la aplicación."
 title: Paquetes piloto
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
+ms.sourcegitcommit: 9e62a7aa18950f7e1cc26b42762e3bb937c389ac
+ms.openlocfilehash: c538da2a58f38925938b9e28ec7ca65cdb9858a3
+
 ---
 
 # Paquetes piloto
@@ -28,11 +31,11 @@ Haz clic en **Crear grupo** para guardar el grupo y continuar configurando el pa
 > **Importante** Asegúrate de obtener el permiso necesario de las personas que agregas a tu grupo piloto, y de que comprenden que obtendrán paquetes diferentes al envío de versión final. 
 > Es posible que también quieras tener en cuenta el modo en que pueden enviarte comentarios sobre la aplicación aquellas personas que incluyas en el paquete piloto. Te sugerimos que [agregues un control en la aplicación para iniciar el Centro de opiniones](../monetize/launch-feedback-hub-from-your-app.md), para que así tus clientes puedan enviarte sus comentarios directamente; además, podrás leer sus comentarios en el [informe de comentarios](feedback-report.md) de la aplicación.
 
-Para editar el grupo piloto más adelante, puedes hacer clic en **Exportar .csv** para guardar la información de tu grupo en un archivo .csv. Realiza los cambios que quieras en este archivo y haz clic en **Importar .csv** para usar la nueva versión para actualizar la pertenencia al grupo. Ten en cuenta que los cambios de pertenencia al grupo piloto pueden tardar hasta 30 minutos en implementarse.
+Para editar el grupo piloto más adelante, puedes hacer clic en **Exportar .csv** para guardar la información de tu grupo en un archivo .csv. Realiza los cambios que quieras en este archivo y haz clic en **Importar .csv** para usar la nueva versión para actualizar la pertenencia al grupo. Ten en cuenta que los cambios de pertenencia al grupo piloto pueden tardar hasta 30 minutos en implementarse. Si agregas personas a un grupo piloto después de haber publicado un paquete piloto asociado, los paquetes se entregarán a esas nuevas personas de forma automática; no será necesario que crees y publiques un nuevo envío para ese paquete piloto. 
 
 ## Crear un nuevo paquete piloto
 
-Después de crear tu primer grupo piloto, verás una página donde puedes agregar detalles para completar el proceso de configuración. Deberás asignar un nombre al paquete piloto y especificar al menos un grupo piloto. Si quieres configurar un nuevo grupo, puedes hacerlo desde esta página.
+Después de crear tu primer grupo piloto, verás una página donde podrás agregar detalles para completar el proceso de configuración. Deberás asignar un nombre al paquete piloto y especificar al menos un grupo piloto. Si quieres configurar un nuevo grupo, puedes hacerlo desde esta página.
 
 Haz clic en **Crear piloto** una vez que hayas escrito el nombre y seleccionado los grupos piloto. No podrás cambiar estos detalles más adelante (aunque siempre puedes eliminar y crear un nuevo paquete piloto para usarlo en lugar del primero).
 
@@ -103,6 +106,7 @@ Para eliminar un paquete piloto que ya no quieras admitir, haz clic en su nombre
 Cuando eliminas un paquete piloto, los clientes que tenían paquetes que distribuiste en ese paquete piloto obtendrán una actualización de la aplicación si existe una versión más reciente del paquete (o tan pronto como esté disponible un paquete de este tipo). Si desinstalan la aplicación y vuelven a instalarla más tarde, esta se tratará como una nueva adquisición y obtendrán la versión más reciente que esté disponible. 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

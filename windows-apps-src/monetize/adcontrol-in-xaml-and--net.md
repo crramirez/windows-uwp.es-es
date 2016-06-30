@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
-description: Aprende a usar la clase AdControl para mostrar anuncios de banner en una aplicación XAML para Windows 10 (UWP), Windows 8.1 o Windows Phone 8.1.
+description: "Aprende a usar la clase AdControl para mostrar anuncios de banner en una aplicación XAML para Windows 10 (UWP), Windows 8.1 o Windows Phone 8.1."
 title: AdControl en XAML y .NET
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: d17d8a39f31bfcbf3172b4592e918f0be4a6bf92
+
 ---
 
 # AdControl en XAML y .NET
@@ -28,11 +32,11 @@ Para obtener un proyecto de ejemplo completo que muestra cómo agregar anuncios 
 
 2.  En el **Administrador de referencias**, selecciona una de las siguientes referencias según el tipo de proyecto:
 
-    -   Para un proyecto de la Plataforma universal de Windows (UWP): expande **Windows Universal**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **SDK de Microsoft Advertising para XAML** (versión 10.0).
+    -   Para un proyecto de la Plataforma universal de Windows (UWP): expande **Windows Universal**, haz clic en **Extensiones**y luego selecciona la casilla junto a **SDK de Microsoft Advertising para XAML** (versión 10.0).
 
-    -   Para un proyecto de Windows 8.1: expande **Windows 8.1**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **SDK de Ad Mediator para Windows 8.1 XAML**. Esta opción agregará las bibliotecas de Microsoft Advertising y Ad Mediator al proyecto, pero puedes ignorar las bibliotecas de Ad Mediator.
+    -   Para un proyecto de Windows 8.1: expande **Windows 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Ad Mediator para Windows 8.1 XAML**. Esta opción agregará las bibliotecas de Microsoft Advertising y de Ad Mediator al proyecto, pero puede ignorar las bibliotecas de Ad Mediator.
 
-    -   Para un proyecto de Windows Phone 8.1: expande **Windows Phone 8.1**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **SDK de Ad Mediator para Windows Phone 8.1 XAML**. Esta opción agregará las bibliotecas de Microsoft Advertising y Ad Mediator al proyecto, pero puedes ignorar las bibliotecas de Ad Mediator.
+    -   Para un proyecto de Windows Phone 8.1: expande **Windows Phone 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Ad Mediator para Windows Phone 8.1 XAML**. Esta opción agregará las bibliotecas de Microsoft Advertising y Ad Mediator al proyecto, pero puedes ignorar las bibliotecas de Ad Mediator.
 
   ![addreferences](images/13-a84c026e-b283-44f2-8816-f950a1ef89aa.png)
 
@@ -155,6 +159,7 @@ Control de errores: para obtener información sobre cómo controlar errores, con
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

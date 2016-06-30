@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-title: Caso práctico de Windows Runtime 8.x a UWP, Bookstore1
+title: "Caso práctico de Windows Runtime 8.x a UWP, Bookstore1"
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
-description: En este tema se presenta un caso práctico de migración de una aplicación Universal 8.1 a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10.
+description: "En este tema se presenta un caso práctico de migración de una aplicación Universal 8.1 a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 43536aacb37a79b3e8507896474be67423a0b9fe
+
 ---
 
 # Caso práctico de Windows Runtime 8.x a UWP: Bookstore1
@@ -124,6 +128,7 @@ También observamos que la migración de modelos de vista es, por lo general, un
 El siguiente caso práctico es [Bookstore2](w8x-to-uwp-case-study-bookstore2.md), en el que vamos a ver cómo mostrar datos agrupados y obtener acceso a ellos.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

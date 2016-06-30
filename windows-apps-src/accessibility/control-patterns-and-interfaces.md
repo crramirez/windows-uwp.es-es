@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: Enumera los patrones de control de Automatización de la interfaz de usuario de Microsoft, las clases que los clientes usan para acceder a ellos y las interfaces que los proveedores usan para implementarlos.
+Description: "Enumera los patrones de control de Automatización de la interfaz de usuario de Microsoft, las clases que los clientes usan para acceder a ellos y las interfaces que los proveedores usan para implementarlos."
 ms.assetid: 2091883C-5D0C-44ED-936A-709022926A42
 title: Interfaces y patrones de control
 label: Control patterns and interfaces
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 9f38c3bd26ef7b409d4c743abf25a5b0a6455f20
+
 ---
 
 # Interfaces y patrones de control  
@@ -43,10 +46,10 @@ Al implementar un patrón de control, debes consultar también la documentación
 | **SynchronizedInput** | [**ISynchronizedInputProvider**](https://msdn.microsoft.com/library/windows/apps/Dn279198) | Permite a las aplicaciones cliente de automatización de la interfaz de usuario dirigir la entrada de mouse o teclado a un elemento específico de la interfaz de usuario. |
 | **Table** | [**ITableProvider**](https://msdn.microsoft.com/library/windows/apps/BR242623) | Se usa para controles que tienen una cuadrícula así como información de encabezado. Por ejemplo, un control de calendario tabular. |
 | **TableItem** | [**ITableItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242620) | Se usa para elementos de una tabla. |
-| **Text** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | Se usa para editar documentos y controles que exponen información textual. Consulta también [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242634) y [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/BR2426272). |
-| **TextChild** | [**ITextChildProvider**](https://msdn.microsoft.com/library/windows/apps/Hh701839) | Se usa para acceder al antecesor más próximo de un elemento que admite el patrón de control **Text**. |
+| **Text** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | Se usa para editar documentos y controles que exponen información textual. Consulta también [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) y [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider2). |
+| **TextChild** | [**ITextChildProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextchildprovider) | Se usa para acceder al antecesor más próximo de un elemento que admite el patrón de control **Text**. |
 | **TextEdit** | No hay ninguna clase administrada disponible | Proporciona acceso a un control que modifica texto, por ejemplo, un control que realiza autocorrección o habilita la composición de entrada mediante un editor de métodos de entrada (IME). |
-| **TextRange** | [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242634) | Proporciona acceso a un intervalo de texto continuo en un contenedor de texto que implementa [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627). Consulta también [**ITextRangeProvider2**](https://msdn.microsoft.com/library/windows/apps/BR2426342). |
+| **TextRange** | [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) | Proporciona acceso a un intervalo de texto continuo en un contenedor de texto que implementa [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider). Consulta también [**ITextRangeProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider2). |
 | **Toggle** | [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653) | Se usa para los controles donde puede alternarse el estado. Por ejemplo, elementos de menú y [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/BR209316) que pueden comprobarse. |
 | **Transform** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | Se usa para los controles cuyo tamaño puede cambiarse, que pueden moverse y girarse. Los usos típicos del patrón de control de transformación son diseñadores, formularios, editores gráficos y aplicaciones de dibujo. |
 | **Value** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | Permite que los clientes obtengan o establezcan un valor en los controles que no admiten un intervalo de valores. |
@@ -65,6 +68,7 @@ Al implementar un patrón de control, debes consultar también la documentación
 * [Accesibilidad](accessibility.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

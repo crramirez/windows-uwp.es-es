@@ -1,8 +1,12 @@
 ---
 author: Mtoepke
 title: UWP en muestras de Xbox One
-description: Ejemplos y bibliotecas para ayudarte a crear fantásticas experiencias de Xbox One y televisión.
+description: "Ejemplos y bibliotecas para ayudarte a crear fantásticas experiencias de Xbox One y televisión."
 area: Xbox
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 6f38f5aabb6a409fab894bf7127ad4011162f7c6
+
 ---
 
 # UWP en muestras de Xbox One
@@ -16,6 +20,7 @@ Para obtener más información, consulta el proyecto [TVHelpers](https://github.
 - [UWP on Xbox One (UWP en Xbox One)](index.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 2ed21281-f996-402d-a968-d1320a4691df
-description: Usa los valores de identificador de aplicación y de unidad de anuncios de prueba de este artículo para ver cómo la aplicación representa los anuncios durante las pruebas.
+description: "Usa los valores de identificador de aplicación y de unidad de anuncios de prueba de este artículo para ver cómo la aplicación representa los anuncios durante las pruebas."
 title: Valores del modo de prueba
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 93b20954ba82b613bde96db30a000902dec3b844
+
 ---
 
 # Valores del modo de prueba
@@ -72,6 +76,7 @@ Estos son los valores de prueba que se usarán para los anuncios de banner e int
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

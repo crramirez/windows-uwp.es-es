@@ -2,7 +2,10 @@
 author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Abrir una cuenta de desarrollador
-description: Esta introducción al procedimiento de registro para establecer una cuenta de desarrollador de la Tienda Windows y otros programas de Microsoft, te ayudará a comprender el proceso de configuración de la cuenta.
+description: "Esta introducción al procedimiento de registro para establecer una cuenta de desarrollador de la Tienda Windows y otros programas de Microsoft, te ayudará a comprender el proceso de configuración de la cuenta."
+ms.sourcegitcommit: c4a753b7642354c4fe42cff721fb21337b14528f
+ms.openlocfilehash: 979df6390fef01a32fb1728956622fbfe38bafa9
+
 ---
 # Abrir una cuenta de desarrollador
 
@@ -37,11 +40,13 @@ Esta introducción al procedimiento de registro para establecer una cuenta de de
 
 ## Directrices adicionales para cuentas de empresa
 
-Al crear una cuenta de empresa, sigue estas directrices, especialmente si más de una persona tendrá acceso a la cuenta.
+Al crear una cuenta de empresa, sigue estas directrices, especialmente si más de una persona tendrá acceso a la cuenta mediante el inicio de sesión con la cuenta que abrió dicha cuenta originalmente. 
 
--   Crea tu cuenta Microsoft con una dirección de correo electrónico que pertenezca al dominio de tu empresa y no a un individuo en particular; por ejemplo, windowsapps@fabrikam.com.
--   Limita el acceso a la cuenta de tu empresa al menor número posible de desarrolladores.
--   Configura una lista de distribución de correo electrónico corporativa que incluya a todos los que necesiten acceder a la cuenta de desarrollador y agrega esta dirección de correo electrónico a tu información de seguridad. Esto permite que todos los empleados de la lista reciban códigos de seguridad cuando sea necesario y administrar la información de seguridad de tu cuenta Microsoft. Si la configuración de una lista de distribución no fuera factible, el propietario de la cuenta de correo electrónico individual tendrá que estar disponible para acceder y compartir el código de seguridad cuando se le pida (como cuando se agrega nueva información de seguridad a la cuenta o cuando hay que acceder a ella desde un nuevo dispositivo).
+> **Importante** Para permitir que varios usuarios accedan a tu cuenta del Centro de desarrollo, te recomendamos que uses Azure Active Directory para asignar roles a los usuarios individuales, quienes podrán tener acceso a la cuenta si inician sesión con sus credenciales individuales de Azure AD. Para obtener más información, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
+
+-   Crea tu cuenta Microsoft con una dirección de correo electrónico que pertenezca al dominio de tu empresa pero no a una persona concreta; por ejemplo, windowsapps@fabrikam.com.
+-   Limita el acceso a esta cuenta Microsoft al menor número posible de desarrolladores.
+-   Configura una lista de distribución de correo electrónico corporativa que incluya a todos los que deban tener acceso a la cuenta de desarrollador y agrega esta dirección de correo electrónico a tu información de seguridad. Esto permite que todos los empleados de la lista reciban códigos de seguridad cuando sea necesario y administrar la información de seguridad de tu cuenta Microsoft. Si la configuración de una lista de distribución no fuera factible, el propietario de la cuenta de correo electrónico individual tendrá que estar disponible para acceder y compartir el código de seguridad cuando se le pida (como cuando se agrega nueva información de seguridad a la cuenta o cuando hay que acceder a ella desde un nuevo dispositivo).
 -   Agrega un número de teléfono corporativo que no requiera una extensión y al que puedan acceder los integrantes principales del equipo.
 -   En general, haz que los desarrolladores usen dispositivos de confianza para iniciar sesión en la cuenta de desarrollador de la empresa. Todos los integrantes principales del equipo deben tener acceso a estos dispositivos de confianza. Así se reducirá la necesidad de enviar códigos de seguridad cuando se acceda a la cuenta.
 -   Si tienes que permitir el acceso a la cuenta desde un equipo que no es de confianza, limita ese acceso a un máximo de cinco desarrolladores. Lo ideal es que estos desarrolladores accedan a la cuenta desde equipos que compartan la misma ubicación de red y geográfica.
@@ -75,6 +80,7 @@ Cuando cierres la cuenta, es importante que comprendas lo que sucede con las apl
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

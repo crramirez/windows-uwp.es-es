@@ -3,8 +3,8 @@ author: Jwmsft
 ms.assetid: F46D5E18-10A3-4F7B-AD67-76437C77E4BC
 title: "Información general sobre las transformaciones"
 description: Aprende a usar las transformaciones en la API de Windows Runtime&\#160;cambiando los sistemas de coordenadas relativos de los elementos de la interfaz de usuario.
-ms.sourcegitcommit: a429fa659caf6c8032ad615f1b850092545d4439
-ms.openlocfilehash: fa5e8964ab35cb33a1ff59a8a52aa384b9d115b4
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: f6212143a83e7423550b6529ea62e25c00728f79
 
 ---
 
@@ -67,7 +67,7 @@ En las pruebas de acceso, un objeto al que se ha aplicado una transformación si
 
 [
               **Transform**
-            ](https://msdn.microsoft.com/library/windows/apps/BR243006) indica objetos que pueden animarse. Para animar un objeto **Transform**, aplica una animación de un tipo compatible a la propiedad que quieras animar. Esto suele significar que estás usando objetos [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) o [**DoubleAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR243136usingkeyframes) para definir la animación, porque todas las propiedades de transformación son del tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Las animaciones que afectan a una transformación que se usa para un valor [**UIElement.RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980) no se consideran animaciones dependientes, aunque tengan una duración distinta de cero. Para más información sobre animaciones dependientes, consulta [Animaciones con guion gráfico](storyboarded-animations.md).
+            ](https://msdn.microsoft.com/library/windows/apps/BR243006) indica objetos que pueden animarse. Para animar un objeto **Transform**, aplica una animación de un tipo compatible a la propiedad que quieras animar. Esto suele significar que estás usando objetos [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) o [**DoubleAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimationusingkeyframes) para definir la animación, porque todas las propiedades de transformación son del tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Las animaciones que afectan a una transformación que se usa para un valor [**UIElement.RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980) no se consideran animaciones dependientes, aunque tengan una duración distinta de cero. Para más información sobre animaciones dependientes, consulta [Animaciones con guion gráfico](storyboarded-animations.md).
 
 Si animas propiedades para lograr un efecto similar en una transformación en cuanto a la apariencia visual neta (por ejemplo, animar las propiedades [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751) and [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718) of a [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) en lugar de aplicar una [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027), dichas animaciones siempre se tratarán como animaciones dependientes. Tendrías que habilitar las animaciones y la animación podría producir problemas de rendimiento importantes, especialmente si estás tratando de permitir las interacciones del usuario mientras ese objeto está animado. Por ese motivo, es preferible usar una transformación y animarla en lugar de animar otras propiedades que harían que la animación se trate como una animación dependiente.
 
@@ -154,6 +154,6 @@ En Windows 10, XAML ha introducido una nueva propiedad, [**UIElement.Transform3
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

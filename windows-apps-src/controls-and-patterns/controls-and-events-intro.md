@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Creas la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a la aplicación.
+Description: "Creas la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a la aplicación."
 title: Agregar controles y controlar eventos
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and events
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 709771424daba7c034dc6f19d6998469705a24da
+
 ---
 # Introducción a los controles y eventos
 
@@ -133,6 +137,7 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 -   [Controles flotantes](dialogs-popups-menus.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

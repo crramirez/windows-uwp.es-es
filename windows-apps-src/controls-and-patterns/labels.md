@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Usa una etiqueta para indicar al usuario lo que debe escribir en un control adyacente. También puedes etiquetar un grupo de controles relacionados o mostrar un texto de instrucciones junto a un grupo de controles relacionados.
+Description: "Usa una etiqueta para indicar al usuario lo que debe escribir en un control adyacente. También puedes etiquetar un grupo de controles relacionados o mostrar un texto de instrucciones junto a un grupo de controles relacionados."
 title: Etiquetas
 ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
 label: Labels
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: fbb186b6f8b7bfba47fb05155a227224a1bd595e
+
 ---
 
 # Etiquetas
@@ -55,6 +59,7 @@ En XAML, muchos controles tienen una propiedad Header integrada que sirve para m
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

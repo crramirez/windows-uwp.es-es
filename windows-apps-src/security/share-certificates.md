@@ -1,8 +1,12 @@
 ---
 title: Compartir certificados entre aplicaciones
-description: Las aplicaciones para la Plataforma universal de Windows (UWP) que necesitan una autenticación segura que vaya más allá de una combinación de id. de usuario y contraseña pueden usar certificados para la autenticación.
+description: "Las aplicaciones para la Plataforma universal de Windows (UWP) que necesitan una autenticación segura que vaya más allá de una combinación de id. de usuario y contraseña pueden usar certificados para la autenticación."
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 2bb1b601e1ab35115c88692f6c36dccc70836541
+
 ---
 
 # Compartir certificados entre aplicaciones
@@ -200,6 +204,7 @@ Si no hay certificados de cliente disponibles, el usuario tendrá que agregar un
 
 Puedes usar estos pasos para crear varias aplicaciones que usen el mismo certificado de usuario para obtener acceso a servicios web protegidos iguales o diferentes.
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: C4DB495D-1F91-40EF-A55C-5CABBF3269A2
-description: Las API en el espacio de nombres Windows.Media.Editing, te permiten desarrollar rápidamente aplicaciones que permitan a los usuarios crear composiciones multimedia desde archivos de origen de audio y vídeo.
-title: Composiciones y edición multimedia
+description: "Las API en el espacio de nombres Windows.Media.Editing, te permiten desarrollar rápidamente aplicaciones que permitan a los usuarios crear composiciones multimedia desde archivos de origen de audio y vídeo."
+title: "Composiciones y edición multimedia"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 226ee9212f6688c48c4d4d7b3195ec5c27a3afdd
+
 ---
 
 # Composiciones y edición multimedia
@@ -59,7 +63,7 @@ Declara una variable de miembro de tipo [**MediaStreamSource**](https://msdn.mic
 
 [!code-cs[DeclareMediaStreamSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetDeclareMediaStreamSource)]
 
-Llama al método [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) del objeto **MediaComposition**, para crear un método **MediaStreamSource** para la composición; a continuación, llama al método [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029) de la clase **MediaElement**. Una vez hecho esto, podrás ver la composición en la interfaz de usuario.
+Llama al método [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) del objeto **MediaComposition** para crear un método **MediaStreamSource** para la composición y, a continuación, llama al método [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029) de la clase **MediaElement**. Una vez hecho esto, podrás ver la composición en la interfaz de usuario.
 
 
 [!code-cs[UpdateMediaElementSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetUpdateMediaElementSource)]
@@ -78,11 +82,11 @@ Para representar una composición multimedia en un archivo plano de vídeo para 
 
 [!code-cs[Namespace2](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetNamespace2)]
 
-Después de permitir al usuario seleccionar un archivo de salida mediante una clase [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871), procesa la composición al archivo seleccionado mediante una llamada al método [**RenderToFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652690) del objeto **MediaComposition**. El resto del código en el siguiente ejemplo, simplemente sigue el patrón de control de una interfaz [**AsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/desktop/br205807).
+Después de permitir al usuario seleccionar un archivo de salida mediante una clase [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871), procesa la composición al archivo seleccionado mediante una llamada al método [**RenderToFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652690) del objeto **MediaComposition**. El resto del código del siguiente ejemplo simplemente sigue el patrón de control de un [**AsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/desktop/br205807).
 
 [!code-cs[RenderCompositionToFile](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetRenderCompositionToFile)]
 
--   La enumeración [**MediaTrimmingPreference**](https://msdn.microsoft.com/library/windows/apps/dn640561) te permite dar prioridad a la velocidad de la operación de transcodificación frente a la precisión de recorte de clips multimedia adyacentes. **Fast** hace que la transcodificación sea más rápida con el recorte de menor precisión, y **Precise** hace que la transcodificación sea más lenta pero con el recorte más preciso.
+-   La enumeración [**MediaTrimmingPreference**](https://msdn.microsoft.com/library/windows/apps/dn640561) permite dar prioridad a la velocidad de la operación de transcodificación en función de la precisión de recorte de clips multimedia adyacentes. **Fast** hace que la transcodificación sea más rápida con el recorte de menor precisión, y **Precise** hace que la transcodificación sea más lenta pero con el recorte más preciso.
 
 ## Recortar un clip de vídeo
 
@@ -150,6 +154,7 @@ Se pueden deserializar composiciones multimedia desde un archivo para que el usu
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: ¡Haz que tu aplicación se note! Además de lograr la mejor versión posible de tu aplicación, hay cosas que se pueden hacer para facilitar que la Tienda Windows y otros sitios la presenten y capten la atención hacia la aplicación.
-title: Facilitar la promoción de la aplicación
+Description: "¡Haz que tu aplicación se note! Además de lograr la mejor versión posible de tu aplicación, hay cosas que se pueden hacer para facilitar que la Tienda Windows y otros sitios la presenten y capten la atención hacia la aplicación."
+title: "Facilitar la promoción de la aplicación"
 ms.assetid: 375A73EB-A010-4319-AEFF-3DC3E3691220
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e0f993d703ccd3a4509de4350f07d50564893763
+
 ---
 
 # Facilitar la promoción de la aplicación
@@ -44,6 +48,7 @@ Si sigues estas instrucciones, también será más fácil para terceros promocio
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

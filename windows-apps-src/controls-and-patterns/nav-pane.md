@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Proporciona navegación de nivel superior mientras conserva el espacio de la pantalla.
-title: Directrices sobre paneles de navegación
+Description: "Proporciona navegación de nivel superior mientras conserva el espacio de la pantalla."
+title: "Directrices sobre paneles de navegación"
 ms.assetid: 8FB52F5E-8E72-4604-9222-0B0EC6A97541
 label: Nav pane
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: eb5600a78d7e8cfcad98509afc4de2d117066f7e
+
 ---
 
 Paneles de navegación
@@ -111,6 +115,7 @@ Para optimizar la [experiencia de 10 pies](http://go.microsoft.com/fwlink/?LinkI
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

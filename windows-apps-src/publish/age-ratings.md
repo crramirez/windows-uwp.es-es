@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: La página Clasificaciones por edades del proceso de envío de la aplicación permite proporcionar información acerca de la aplicación para recibir las clasificaciones por edades apropiadas de la International Age Rating Coalition (IARC).
+Description: "La página Clasificaciones por edades del proceso de envío de la aplicación permite proporcionar información acerca de la aplicación para recibir las clasificaciones por edades apropiadas de la International Age Rating Coalition (IARC)."
 title: Clasificaciones por edades
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 559842fb6740236780756018d01036b835660309
+
 ---
 
 # Clasificaciones por edades
@@ -45,6 +49,7 @@ Anteriormente, los desarrolladores especificaban la clasificación por edades de
 | 18+ (Apto para adultos)            | Los juegos con esta clasificación por edades pueden contener escenas de sangre y violencia extrema, desagradable o explicita, solo adecuada para un público adulto. Todo el contenido debe cumplir con los criterios de las [directivas de contenido](https://msdn.microsoft.com/library/windows/apps/dn764944).                                                                                                                                                            |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Responder a eventos del sistema con tareas en segundo plano
 description: Aprende a crear una tarea en segundo plano que responda a eventos SystemTrigger.
 ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: f6845dce428f5e22ec68744293b1668da52002bf
+
 ---
 
 # Responder a eventos del sistema con tareas en segundo plano
@@ -49,13 +52,13 @@ En este tema se supone que tienes una clase de tareas en segundo plano escrita p
     > ```cs
     > string entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > string taskName   = "Internet-based background task";
-    > 
+    >
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
     > ```
     > ```cpp
     > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > String ^ taskName   = "Internet-based background task";
-    > 
+    >
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
     > ```
 
@@ -106,8 +109,6 @@ Las aplicaciones pueden registrar tareas en segundo plano que respondan a los ev
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Migrar objetos de sombreador
-description: Cuando portes el representador simple de OpenGL ES 2.0, el primer paso es configurar los objetos equivalentes del sombreador de fragmentos y vértices en Direct3D 11, y asegurarte de que el programa principal pueda comunicarse con los objetos del sombreador después de su compilación.
+description: "Cuando portes el representador simple de OpenGL ES 2.0, el primer paso es configurar los objetos equivalentes del sombreador de fragmentos y vértices en Direct3D 11, y asegurarte de que el programa principal pueda comunicarse con los objetos del sombreador después de su compilación."
 ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 17d66e217e40eca0653078820746746eb23185e1
+
 ---
 
 # Portar objetos de sombreador
@@ -318,6 +322,7 @@ Paso siguiente
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

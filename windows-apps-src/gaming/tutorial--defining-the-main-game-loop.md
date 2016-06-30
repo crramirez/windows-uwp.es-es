@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Definir el objeto principal del juego
-description: Vamos a ver los detalles del objeto principal de la muestra de juego y cómo las reglas que implementa se traducen en interacciones con el mundo del juego.
+description: "Vamos a ver los detalles del objeto principal de la muestra de juego y cómo las reglas que implementa se traducen en interacciones con el mundo del juego."
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 66e40c150b5eb4f57c9cddfaf472c56601b3fa0b
+
 ---
 
 # Definir el objeto principal del juego
@@ -3620,6 +3624,7 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Escalado y superposiciones de cadenas de intercambio
-description: Aprende a crear cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas, y a usar cadenas de intercambio de superposición (si las hay) para mejorar la calidad visual.
+description: "Aprende a crear cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas, y a usar cadenas de intercambio de superposición (si las hay) para mejorar la calidad visual."
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
+translationtype: Human Translation
+ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
+ms.openlocfilehash: 3380c5156072a9853261ec6b706a612b42e7ba10
+
 ---
 
 # Escalado y superposiciones de cadenas de intercambio
@@ -324,6 +328,7 @@ Realiza los siguientes pasos para crear una cadena de intercambio en primer plan
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
-description: Usa este método en la API de compras de la Tienda Windows para conceder de forma gratuita una aplicación o un producto desde la aplicación (IAP) a un usuario determinado.
+description: "Usa este método en la API de compras de la Tienda Windows para conceder de forma gratuita una aplicación o un producto desde la aplicación (IAP) a un usuario determinado."
 title: Conceder productos gratuitos
+ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
+ms.openlocfilehash: 9bce5649fc1a9400371e1f9bb67809f1c6288ec6
+
 ---
 
 # Conceder productos gratuitos
@@ -17,32 +20,32 @@ Actualmente, solo puede conceder productos gratuitos. Si el servicio intenta usa
 
 Para usar este método, necesitarás:
 
--   Un token de acceso de Azure AD que se creó con la URI de audiencia **https://onestore.microsoft.com**.
--   Una clave de id. de la Tienda Windows que se generó mediante una llamada al método [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) desde el código de cliente de la aplicación.
+-   Un token de acceso de Azure AD que se haya creado con el URI de público `https://onestore.microsoft.com`.
+-   Una clave de Id. de la Tienda Windows que se haya generado mediante una llamada al método [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) desde el código del cliente en la aplicación.
 
-Para más información, consulta [Ver y conceder productos desde un servicio](view-and-grant-products-from-a-service.md).
+Para obtener más información, consulta [Ver y conceder productos desde un servicio](view-and-grant-products-from-a-service.md).
 
 ## Solicitud
 
 
 ### Sintaxis de la solicitud
 
-| Método | URI de solicitud                                            |
+| Método | URI de la solicitud                                            |
 |--------|--------------------------------------------------------|
-| POST   | https://purchase.mp.microsoft.com/v6.0/purchases/grant |
+| POST   | `https://purchase.mp.microsoft.com/v6.0/purchases/grant` |
 
- 
+<br/> 
 
 ### Encabezado de la solicitud
 
 | Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Authorization  | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;.                           |
+| Autorización  | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;.                           |
 | Host           | cadena | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | cadena | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
- 
+<br/>
 
 ### Cuerpo de la solicitud
 
@@ -53,12 +56,12 @@ Para más información, consulta [Ver y conceder productos desde un servicio](vi
 | devOfferId     | cadena | Identificador de la oferta especificado por el desarrollador que aparecerá en el elemento Colección después de la compra.                                                                                                                                                                                                                                 | No       |
 | language       | cadena | Idioma del usuario.                                                                                                                                                                                                                                                                                              | Sí      |
 | market         | cadena | Mercado del usuario.                                                                                                                                                                                                                                                                                                | Sí      |
-| orderId        | guid   | GUID que se genera para el pedido. Este valor debe ser exclusivo del usuario, pero no es obligatorio que lo sea en los pedidos.                                                                                                                                                                                              | Sí      |
-| productId      | cadena | Identificador del producto del catálogo de la Tienda Windows. Para obtener el identificador del producto, navega hasta tu aplicación en el panel del Centro de desarrollo de Windows, ve a la página **Administración de aplicaciones**&gt;**Identidad de aplicación** y recupera el sufijo de la cadena que se muestra en el campo **URL para Windows 10**. Un identificador de producto de ejemplo es "9WZDNCRFJ3Q8". | Sí      |
-| quantity       | entero    | Cantidad que se va a comprar. Actualmente, el único valor admitido es 1. Si no se especifica, el valor predeterminado es 1.                                                                                                                                                                                                                | No       |
+| orderId        | guid   | GUID que se genera para el pedido. Este valor debe ser exclusivo del usuario, pero no es obligatorio que lo sea en todos los pedidos.                                                                                                                                                                                              | Sí      |
+| productId      | cadena | El Id. de la Tienda del catálogo de la Tienda Windows. El Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8. | Sí      |
+| cantidad       | entero    | La cantidad que se va a comprar. Actualmente, el único valor admitido es 1. Si no se especifica, el valor predeterminado es 1.                                                                                                                                                                                                                | No       |
 | skuId          | cadena | Identificador de SKU del catálogo de la Tienda Windows. Un ejemplo de identificador de SKU es "0010".                                                                                                                                                                                                                                                | Sí      |
 
- 
+<br/> 
 
 ### Ejemplo de solicitud
 
@@ -104,7 +107,7 @@ Content-Type: application/json
 | totalChargedToCsvTopOffPI | decimal                     | En caso de usar un instrumento de pago y un valor almacenado (CSV) independientes, el importe cobrado al CSV.                                                                | Sí      |
 | totalTaxAmount            | decimal                     | Importe total de los impuestos para todos los artículos de línea.                                                                                                              | Sí      |
 
- 
+<br/> 
 
 El objeto ClientContext contiene los parámetros siguientes.
 
@@ -112,7 +115,7 @@ El objeto ClientContext contiene los parámetros siguientes.
 |-----------|--------|---------------------------------------|----------|
 | client    | cadena | Identificador de cliente que creó el pedido. | No       |
 
- 
+<br/> 
 
 El objeto OrderLineItemV6 contiene los parámetros siguientes.
 
@@ -144,7 +147,7 @@ El objeto OrderLineItemV6 contiene los parámetros siguientes.
 | Title                   | cadena         | Título localizado del artículo de línea.                                                                        | Sí      |
 | totalAmount             | decimal        | Importe total de compra del artículo de línea incluidos los impuestos.                                                    | Sí      |
 
- 
+<br/> 
 
 El objeto IdentityV6 contiene los parámetros siguientes.
 
@@ -153,7 +156,7 @@ El objeto IdentityV6 contiene los parámetros siguientes.
 | identityType  | cadena | Contiene el valor **"pub"**.                                                      | Sí      |
 | identityValue | cadena | El valor de cadena del elemento *publisherUserId* de la clave de id. de la Tienda Windows especificada. | Sí      |
 
- 
+<br/> 
 
 ### Ejemplo de respuesta
 
@@ -226,7 +229,7 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 | 401  | No autorizado | InconsistentClientId       | La notificación *clientId* de la clave de id. de la Tienda Windows del cuerpo de la solicitud y la notificación *appid* del token de acceso de Azure AD del encabezado de autorización no coinciden.                     |
 | 400  | BadRequest   | InvalidParameter           | Los detalles contienen información sobre el cuerpo de la solicitud y los campos que tienen un valor no válido.                                                                                    |
 
- 
+<br/> 
 
 ## Temas relacionados
 
@@ -241,8 +244,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

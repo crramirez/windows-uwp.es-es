@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
-title: Planeación del rendimiento
-description: Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería.
+title: "Planeación del rendimiento"
+description: "Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería."
+translationtype: Human Translation
+ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
+ms.openlocfilehash: 39d57811a07b4c404da4b7e369e3bf5441fa99c0
+
 ---
 # Planificación del rendimiento
 
@@ -189,6 +193,7 @@ Optimizar las rutas de código crítico para el rendimiento de la aplicación es
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

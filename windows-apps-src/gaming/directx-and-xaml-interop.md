@@ -3,6 +3,10 @@ author: mtoepke
 title: Interoperabilidad de DirectX y XAML
 description: Puedes usar el lenguaje XAML y Microsoft DirectX juntos en tu juego para la Plataforma universal de Windows (UWP).
 ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 97e694ae2fb8af30a35aa9ebdb714db50a506e6c
+
 ---
 
 # Interoperabilidad de DirectX y XAML
@@ -38,7 +42,7 @@ Una vez que has determinado cómo quieres usar DirectX, usas uno de estos tipos 
 
 -   Si la imagen es más grande que el estado real de la pantalla proporcionada y el usuario puede realizar una panorámica o acercar o alejar la imagen, usa [**Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). Este tipo controla una superficie de dibujo de DirectX de un tamaño definido que es mayor que el de la pantalla. Tal como sucede con [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041), usarás este tipo dinámicamente al componer una imagen o control complejos. Asimismo, al igual que **SurfaceImageSource**, este tipo no funciona bien en juegos de alto rendimiento. Algunos ejemplos de elementos XAML que pueden usar un tipo **VirtualSurfaceImageSource**, son los controles de mapa o un visor de documentos con imágenes grandes o de alta densidad.
 
--   Si usas DirectX para presentar gráficos actualizados en tiempo real o en una situación en la que las actualizaciones deben llegar en intervalos regulares de baja latencia, usa la clase [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) para poder actualizar los elementos gráficos sin tener que sincronizar el temporizador de actualizaciones del marco XAML. Este tipo te permite acceder a la cadena de intercambio del dispositivo gráfico ([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)) directamente y disponer XAML como una capa sobre el destino de representación. Igualmente, funciona muy bien en juegos y otras aplicaciones DirectX de pantalla completa que requieren una interfaz de usuario basada en XAML. Para usar este método debes ser bastante ducho en DirectX, incluidas las tecnologías Infraestructura de gráficos de Microsoft DirectX (DXGI), Direct2D y Direct3D. Para más información, consulta [Guía de programación para Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345).
+-   Si usas DirectX para presentar gráficos actualizados en tiempo real o en una situación en la que las actualizaciones deben llegar en intervalos regulares de baja latencia, usa la clase [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) para poder actualizar los elementos gráficos sin tener que sincronizar el temporizador de actualizaciones del marco XAML. Este tipo te permite acceder a la cadena de intercambio del dispositivo gráfico ([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)) directamente y disponer XAML como una capa sobre el destino de representación. Igualmente, funciona muy bien en juegos y otras aplicaciones DirectX de pantalla completa que requieren una interfaz de usuario basada en XAML. Para usar este método debes ser bastante ducho en DirectX, incluidas las tecnologías Infraestructura de gráficos de Microsoft DirectX (DXGI), Direct2D y Direct3D. Para obtener más información, consulta [Programming Guide for Direct3D 11 (Guía de programación para Direct3 11)](https://msdn.microsoft.com/library/windows/desktop/ff476345).
 
 ## SurfaceImageSource
 
@@ -91,11 +95,11 @@ El procedimiento básico para crear y actualizar un objeto [**SurfaceImageSource
 
 4.  Proporciona un puntero al objeto [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) de [**ISurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) y dibuja en esa superficie mediante DirectX. Solo se dibujará el área especificada para su actualización en el parámetro *updateRect*.
 
-    > **Nota**   Solo puedes tener una operación [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) pendiente a la vez por [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527).
+    > **Nota**   Solo puedes tener una operación [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) pendiente activa a la vez por cada [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527).
 
      
 
-    Este método devuelve el desplazamiento del punto (x,y) del rectángulo de destino actualizado en el parámetro *offset*. Puedes usar este desplazamiento para determinar en qué lugar de [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) se debe dibujar.
+    Este método devuelve el desplazamiento del punto (x,y) del rectángulo de destino actualizado en el parámetro *offset*. Este desplazamiento se usa para determinar en qué lugar de [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) se debe dibujar.
 
     ```cpp
     ComPtr<IDXGISurface> surface;
@@ -123,7 +127,7 @@ El procedimiento básico para crear y actualizar un objeto [**SurfaceImageSource
 
 6.  Usa el elemento [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101) para dibujar el mapa de bits.
 
-> **Note**   Si llamas al elemento [**SurfaceImageSource::SetSource**](https://msdn.microsoft.com/library/windows/apps/br243255) (heredado de **IBitmapSource::SetSource**), este iniciará una excepción. No lo llames desde el objeto [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041).
+> **Nota** Si llamas al elemento [**SurfaceImageSource::SetSource**](https://msdn.microsoft.com/library/windows/apps/br243255) (heredado de **IBitmapSource::SetSource**), actualmente se inicia una excepción. No lo llames desde el objeto [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041).
 
  
 
@@ -241,7 +245,7 @@ A continuación encontrarás el procedimiento básico para crear y actualizar un
 
         Tal como sucede con [**IlSurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323), este método devuelve el desplazamiento del punto (x,y) del rectángulo de destino actualizado en el parámetro *offset*. Puedes usar este desplazamiento para determinar en qué lugar de [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) se debe dibujar.
 
-        > **Nota**   Solo puedes tener una operación [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) pendiente a la vez por [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527).
+        > **Nota** Solo puedes tener una operación [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) pendiente activa a la vez por cada [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527).
 
          
 
@@ -259,7 +263,7 @@ A continuación encontrarás el procedimiento básico para crear y actualizar un
         }
         ```
 
-    2.  Dibuja el contenido específico de la región, pero restringe el dibujo a las regiones enlazadas, para un mejor rendimiento.
+    2.  Dibuja el contenido específico de la región, pero restringe el dibujo a las regiones enlazadas, lo que mejora el rendimiento.
 
     3.  Llama a [**IVirtualSurfaceImageSourceNative::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848324). El resultado es un mapa de bits.
 
@@ -389,6 +393,7 @@ El procedimiento básico para crear y actualizar un objeto [**SwapChainPanel**](
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

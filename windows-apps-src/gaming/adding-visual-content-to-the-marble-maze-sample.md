@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Agregar contenido visual a la muestra de Marble Maze
-description: En este documento se describe cómo el juego Marble Maze usa Direct3D y Direct2D en el entorno de aplicaciones de la Plataforma universal de Windows (UWP) para que puedas conocer los patrones y adaptarlos cuando trabajes con el contenido de tu propio juego.
+description: "En este documento se describe cómo el juego Marble Maze usa Direct3D y Direct2D en el entorno de aplicaciones de la Plataforma universal de Windows (UWP) para que puedas conocer los patrones y adaptarlos cuando trabajes con el contenido de tu propio juego."
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 16eb493595bbac4f15ed0e755258104693dfba05
+
 ---
 
 # Agregar contenido visual al ejemplo de Marble Maze
@@ -900,6 +904,7 @@ Consulta [Agregar métodos de entrada e interactividad en la muestra de Marble M
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

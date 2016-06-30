@@ -3,6 +3,9 @@ author: jnHs
 Description: Para recibir dinero por las ventas de aplicaciones en la Tienda Windows, debes configurar tu cuenta de pago y rellenar los formularios fiscales necesarios.
 title: Configurar formularios fiscales y cuentas de pago
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
+ms.sourcegitcommit: f17132514a42c50d6bfe716f6be706748c287043
+ms.openlocfilehash: 45cb4e8b65f1aeb75c049a88c143a23350d47b64
+
 ---
 
 # Configurar formularios fiscales y cuentas de pago
@@ -12,10 +15,9 @@ Para recibir dinero por las ventas de aplicaciones en la Tienda Windows, debes c
 
 > **Nota** A partir del 1 de abril de 2016, las ganancias de Microsoft Advertising se abonarán en la cuenta de pago que configuraste en el Centro de desarrollo. Para obtener más información, consulta [Consolidación del perfil fiscal y la cuenta de pago del Centro de desarrollo y pubCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
 
-Si solo tienes pensado anunciar aplicaciones gratuitas (y no piensas ofrecer compras desde la aplicación ni usar Microsoft Advertising), no necesitas configurar una cuenta de pago ni rellenar ningún formulario fiscal. Si cambias de opinión más tarde y decides que sí quieres vender aplicaciones (u ofrecer productos desde la aplicación), puedes configurar tu cuenta de pago y rellenar formularios fiscales en cualquier momento. No podrás enviar aplicaciones o IAP de pago hasta que no completes tu cuenta de pago y tu perfil fiscal.
+Si solo tienes pensado anunciar aplicaciones gratuitas (y no piensas ofrecer compras desde la aplicación ni usar Microsoft Advertising), no necesitas configurar una cuenta de pago ni rellenar ningún formulario fiscal. Si cambias de opinión más tarde y decides que sí quieres vender aplicaciones (u ofrecer productos desde la aplicación), puedes configurar tu cuenta de pago y rellenar formularios fiscales en cualquier momento. No podrás enviar aplicaciones ni IAP de pago hasta que no completes tu cuenta de pago y tu perfil fiscal.
 
-> **Nota**
-            [Determinados mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) únicamente te permiten anunciar aplicaciones gratuitas. Si tu cuenta está registrada en uno de esos mercados, no tendrás la opción para configurar una cuenta de pago.
+> **Nota** En [determinados mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets), los desarrolladores únicamente pueden enviar aplicaciones gratuitas. Si tu cuenta está registrada en uno de esos mercados, no tendrás la opción de configurar una cuenta de pago.
 
 
 Una vez que [hayas configurado tu cuenta de desarrollador](opening-a-developer-account.md), hay dos cosas que debes hacer para poder vender aplicaciones (y ofrecer IAP) en la Tienda Windows:
@@ -156,6 +158,7 @@ Si estás fuera de los Estados Unidos, quizás puedas aprovechar los beneficios 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

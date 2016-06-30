@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Se recomienda leer hasta el final esta guía de migración, aunque somos conscientes de que estás deseando seguir avanzando y llegar a la fase de compilación y ejecución de tu proyecto.
-title: Solución de problemas de migración de Windows Runtime 8.x a UWP
+description: "Se recomienda leer hasta el final esta guía de migración, aunque somos conscientes de que estás deseando seguir avanzando y llegar a la fase de compilación y ejecución de tu proyecto."
+title: "Solución de problemas de migración de Windows Runtime 8.x a UWP"
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: e5758472d303f4baaf80d45d6b23b54f2a21e002
+
 ---
 
 # Solución de problemas de migración de Windows Runtime 8.x a UWP
@@ -39,7 +43,7 @@ La información de las soluciones de la tabla está destinada a ofrecerte inform
 
 | Síntoma | Solución |
 |---------|--------|
-| Al abrir un proyecto de Windows 10 en Visual Studio, aparece el mensaje "Se requiere una actualización de Visual Studio. Uno o varios proyectos requieren un platform SDK &lt;version&gt; que no está instalado o se incluye como parte de una actualización futura de Visual Studio". | Consulta la sección [TargetPlatformVersion](#targetplatformversion) en este tema. |
+| Al abrir un proyecto de Windows 10 en Visual Studio, aparece el mensaje "Se requiere una actualización de Visual Studio. Uno o varios proyectos requieren un platform SDK &lt;versión&gt; que no está instalado o se incluye como parte de una actualización futura de Visual Studio". | Consulta la sección [TargetPlatformVersion](#targetplatformversion) en este tema. |
 | Se genera una excepción System.InvalidCastException cuando se llama a InitializeComponent en un archivo xaml.cs.| Esto puede ocurrir cuando tienes más de un archivo xaml (al menos uno de los cuales está calificado como MRT) que comparten el mismo archivo xaml.cs y los elementos tienen atributos x:Name que no son coherentes entre los dos archivos xaml. Intenta agregar el mismo nombre a los mismos elementos en los dos archivos XAML u omite los nombres por completo. |
 | Si se ejecuta en el dispositivo, la aplicación finaliza o, si se inicia desde Visual Studio, se muestra el error "No se puede activar la aplicación de la Tienda Windows \[…\]. Error en la solicitud de activación con el error "Windows no pudo comunicarse con la aplicación de destino. Esto indica normalmente que se anuló el proceso de la aplicación de destino. \[…\]”. | El problema podría ser el código imprescindible que se ejecuta en tus propias páginas o en las propiedades enlazadas (u otros tipos) durante la inicialización. O bien, el problema podría producirse al analizar el archivo XAML que estaba a punto de mostrarse cuando la aplicación finalizó (si se inicia desde Visual Studio, es la página de inicio). Busca claves de recurso no válidas o prueba algunas de las instrucciones de la sección "Seguimiento de problemas" de este tema.|
 | El compilador o el analizador XAML (o una excepción en tiempo de ejecución) muestra el error "*No se pudo resolver el recurso '<resourcekey>'*". | La clave de recurso no es aplicable para las aplicaciones de la Plataforma universal de Windows (UWP) (este es el caso de algunos recursos de Windows Phone, por ejemplo). Busca el recurso equivalente correcto y actualiza el marcado. Algunos ejemplos que podrías encontrar al instante son las claves del sistema como `PhoneAccentBrush`. |
@@ -49,6 +53,7 @@ El siguiente tema es [Migración de XAML y la interfaz de usuario](w8x-to-uwp-po
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

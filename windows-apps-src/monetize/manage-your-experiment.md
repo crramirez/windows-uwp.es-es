@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: Después de definir el experimento en el panel del Centro de desarrollo y codificar el experimento en la aplicación, estás listo para activar el experimento y usar el panel del Centro de desarrollo para revisar los resultados del experimento.
+Description: "Después de definir el experimento en el panel del Centro de desarrollo y codificar el experimento en la aplicación, estás listo para activar el experimento y usar el panel del Centro de desarrollo para revisar los resultados del experimento."
 title: Administra tu experimento en el panel del Centro de desarrollo
 ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 24ca106cc83c4495657972f463c556585cdfcb45
+
 ---
 
 # Administra tu experimento en el panel del Centro de desarrollo
@@ -53,6 +57,7 @@ Cuando estés satisfecho con los parámetros del experimento en el panel y hayas
   * [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

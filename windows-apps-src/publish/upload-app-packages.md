@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: La página Paquetes es donde se cargan todos los archivos del paquete (xap, AppX, .appxupload o .appxbundle) de la aplicación que vas a enviar. En este paso puedes cargar paquetes para cualquier sistema operativo de destino de la aplicación.
-title: Cargar paquetes de aplicación
+Description: "La página Paquetes es donde se cargan todos los archivos del paquete (xap, AppX, .appxupload o .appxbundle) de la aplicación que vas a enviar. En este paso puedes cargar paquetes para cualquier sistema operativo de destino de la aplicación."
+title: "Cargar paquetes de aplicación"
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: bb89968c261cc0c14f82375d0d708bbce5da9869
+
 ---
 
 # Cargar paquetes de aplicación
@@ -55,6 +59,7 @@ Te recomendamos que uses [Applications Insights de Visual Studio](http://go.micr
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

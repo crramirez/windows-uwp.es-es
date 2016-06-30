@@ -3,6 +3,10 @@ author: mcleanbyron
 ms.assetid: adb2fa45-e18f-4254-bd8b-a749a386e3b4
 description: Aprende a usar la clase AdControl para mostrar anuncios de banner en aplicaciones JavaScript y HTML para Windows 10 (UWP), Windows 8.1 o Windows Phone 8.1.
 title: AdControl en HTML 5 y JavaScript
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 6e96b085132126a2c3e7b0b0b86124aba4cd651e
+
 ---
 
 # AdControl en HTML 5 y JavaScript
@@ -25,15 +29,15 @@ Para observar un proyecto de ejemplo completo que muestra cómo agregar anuncios
 
 1. En Visual Studio, abre el proyecto o crea uno nuevo.
 
-2. Si el destino del proyecto es **Cualquier CPU**, actualiza el proyecto para que use una salida de compilación específica por arquitectura (por ejemplo, **x86**). Si el destino del proyecto es **Cualquier CPU**, no podrás agregar una referencia a la biblioteca de Microsoft Advertising correctamente a través de los siguientes pasos. Para obtener más información, consulta [Errores de referencia derivados de orientar el proyecto a Cualquier CPU](known-issues-for-the-advertising-libraries.md#reference_errors).
+2. Si el destino del proyecto es **Cualquier CPU**, actualiza el proyecto para que use una salida de compilación específica por arquitectura (por ejemplo, **x86**). Si el destino del proyecto es **Cualquier CPU**, no podrás agregar una referencia a la biblioteca de publicidad de Microsoft correctamente a través de los siguientes pasos. Para obtener más información, consulta [Errores de referencia derivados de orientar el proyecto a Cualquier CPU](known-issues-for-the-advertising-libraries.md#reference_errors).
 
 3.  Desde la ventana del **Explorador de soluciones**, haz clic con el botón secundario en **Referencias** y, a continuación, selecciona **Agregar referencia...**
 
 4.  En el **Administrador de referencias**, selecciona una de las siguientes referencias según el tipo de proyecto:
 
-    -   Para un proyecto de la Plataforma universal de Windows (UWP): expande **Windows Universal**, haz clic en **Extensiones**y, después, selecciona la casilla junto a **SDK de Microsoft Advertising para JavaScript** (versión 10.0).
+    -   Para un proyecto de la Plataforma universal de Windows (UWP): expande **Windows Universal**, haz clic en **Extensiones**y luego selecciona la casilla junto a **SDK de Microsoft Advertising para JavaScript** (versión 10.0).
 
-    -   Para un proyecto de Windows 8.1: expande **Windows 8.1**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **SDK de Microsoft Advertising para Windows 8.1 (JS) nativo**.
+    -   Para un proyecto de Windows 8.1: expande **Windows 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Microsoft Advertising para Windows 8.1 (JS) nativo**.
 
     -   Para un proyecto de Windows 8.1: expande **Windows Phone 8.1**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **SDK de Microsoft Advertising para Windows Phone 8.1 (JS) nativo**.
 
@@ -128,6 +132,7 @@ Para observar un proyecto de ejemplo completo que muestra cómo agregar anuncios
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

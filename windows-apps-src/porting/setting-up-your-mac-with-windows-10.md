@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 description: Usa tu Mac actual para desarrollar aplicaciones para Windows.
-title: Configuración del Mac con Windows 10
+title: "Configuración del Mac con Windows 10"
 ms.assetid: 6D520610-5DE0-476E-A792-AA57E002D309
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 10ebdb0a534d8f2931d15481c1bee4705268b0bb
+
 ---
 
 # Configuración del Mac con Windows 10
@@ -39,6 +43,7 @@ VirtualBox es una aplicación gratuita para ejecutar máquinas virtuales en tu e
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

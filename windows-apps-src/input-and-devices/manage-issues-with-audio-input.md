@@ -5,8 +5,8 @@ title: Administrar los problemas con la entrada de audio
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
 label: Manage audio input issues
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 6dcab14a290367250e152fb8a1944a924d5aaf46
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 4f926969b5f9f20de904aeaf749e69c0ded3c052
 
 ---
 
@@ -23,7 +23,7 @@ Aprende a administrar los problemas con la precisión del reconocimiento de voz 
 
 
 
-## <span id="Assess_audio-input_quality"></span><span id="assess_audio-input_quality"></span><span id="ASSESS_AUDIO-INPUT_QUALITY"></span>Evaluar la calidad de entrada de audio
+## Evaluar la calidad de entrada de audio
 
 
 Cuando el reconocimiento de voz esté activado, usa el evento [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) del reconocedor de voz para determinar si uno o más problemas de audio pueden interferir con la entrada de voz. El argumento de evento ([**SpeechRecognitionQualityDegradingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn631430)) proporciona la propiedad [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431), que describe los problemas detectados con la entrada de audio.
@@ -62,7 +62,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <span id="Manage_the_speech-recognition_experience"></span><span id="manage_the_speech-recognition_experience"></span><span id="MANAGE_THE_SPEECH-RECOGNITION_EXPERIENCE"></span>Administrar la experiencia de reconocimiento de voz
+## Administrar la experiencia de reconocimiento de voz
 
 
 Usa la descripción que proporciona la propiedad [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) para ayudar al usuario a mejorar las condiciones de reconocimiento.
@@ -102,7 +102,7 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 }
 ```
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 
 * [Interacciones de voz](speech-interactions.md)
@@ -119,6 +119,6 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

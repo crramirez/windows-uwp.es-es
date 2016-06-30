@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: El objeto de aplicación y DirectX
+title: "El objeto de aplicación y DirectX"
 description: Los juegos DirectX para Plataforma universal de Windows (UWP) no usan muchos elementos y objetos de la interfaz de usuario de Windows.
 ms.assetid: 46f92156-29f8-d65e-2587-7ba1de5b48a6
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a8c8cb8fa8ccec54af4c824d23bc26cb91db7cf7
+
 ---
 
 # El objeto de aplicación y DirectX
@@ -155,6 +159,7 @@ En general, cuando diseñes tu aplicación para UWP, usa la clase [**CoreDispatc
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

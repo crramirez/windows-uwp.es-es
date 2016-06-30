@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Una vez que la aplicación esté en la Tienda Windows, es el momento de mostrarla al máximo número de clientes posible.
-title: Promoción de aplicaciones y atracción de clientes
+Description: "Una vez que la aplicación esté en la Tienda Windows, es el momento de mostrarla al máximo número de clientes posible."
+title: "Promoción de aplicaciones y atracción de clientes"
 ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3511533f76294767ca409b09a718555a6194e451
+
 ---
 
 # Promoción de aplicaciones y atracción de clientes
@@ -28,6 +32,7 @@ Una vez que la aplicación esté en la Tienda Windows, es el momento de mostrar
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

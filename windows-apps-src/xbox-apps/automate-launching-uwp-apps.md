@@ -1,7 +1,11 @@
 ---
 title: Automatizar el inicio de las aplicaciones para la Plataforma universal de Windows (UWP) de Windows 10
-description: Los desarrolladores pueden usar la activación de protocolos y la activación del inicio para automatizar el inicio de los juegos o aplicaciones para UWP para las pruebas automatizadas.
+description: "Los desarrolladores pueden usar la activación de protocolos y la activación del inicio para automatizar el inicio de los juegos o aplicaciones para UWP para las pruebas automatizadas."
 author: listurm
+translationtype: Human Translation
+ms.sourcegitcommit: adf2d16f9c208631f91fbcad19d1ea8087cd9cb5
+ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
+
 ---
 
 # Automatizar el inicio de aplicaciones de Windows 10 para UWP
@@ -204,6 +208,7 @@ Platform::String^ argval = launchArgs->Arguments;
 En resumen, puedes usar distintos métodos para iniciar la aplicación para UWP. Dependiendo de los requisitos y de los casos de uso, algunos métodos pueden resultar más adecuados que otros. 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

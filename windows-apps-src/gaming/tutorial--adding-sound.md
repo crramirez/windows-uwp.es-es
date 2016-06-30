@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Agregar sonido
-description: En este paso, examinaremos el modo en que la muestra del juego de disparos crea un objeto para la reproducción de sonido usando las API de XAudio2.
+description: "En este paso, examinaremos el modo en que la muestra del juego de disparos crea un objeto para la reproducción de sonido usando las API de XAudio2."
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f9e536e71dd7b5c94d587a8bb66df3b41cc9a4ae
+
 ---
 
 # Agregar sonido
@@ -10,14 +14,14 @@ ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-En este paso, examinaremos el modo en que la muestra de juego de disparos crea un objeto para la reproducción de sonido usando las API de [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
+En este paso, examinaremos cómo la muestra de juego de disparos crea un objeto para la reproducción de sonido usando las API de [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
 
 ## Objetivo
 
 
--   Agregar salida de sonido mediante [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
+-   Agregar salida de sonido usando [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
 
-En la muestra del juego, los comportamientos y objetos de audio se definen en tres archivos:
+En la muestra de juego, los comportamientos y objetos de audio se definen en tres archivos:
 
 -   **Audio.h/.cpp**. Este archivo de código define el objeto **Audio**, que contiene los recursos XAudio2 para la reproducción de sonido. También define el método para suspender y reanudar la reproducción de audio si el juego se pausa o desactiva.
 -   **MediaReader.h/.cpp**. Este código define los métodos para leer archivos de audio .wav desde el almacenamiento local.
@@ -208,10 +212,10 @@ Este método usa las API de [Media Foundation](https://msdn.microsoft.com/librar
 3.  Establece el tipo de elemento multimedia de salida descodificado para el lector llamando a [**IMFSourceReader::SetCurrentMediaType**](https://msdn.microsoft.com/library/windows/desktop/bb970432).
 4.  Crea un búfer [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799) y copia los resultados de una llamada a [**IMFMediaType::MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177) en el objeto [**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850). Esto formatea el búfer que contiene el archivo de audio después de cargarse.
 5.  Obtiene la duración, en segundos, de la secuencia de audio llamando a [**IMFSourceReader::GetPresentationAttribute**](https://msdn.microsoft.com/library/windows/desktop/dd374662) y, a continuación, convierte la duración en bytes.
-6.  Lee el archivo de audio como un flujo llamando a [**IMFSourceReader::ReadSample**](https://msdn.microsoft.com/library/windows/desktop/dd374665).
-7.  Copia el contenido del búfer de la muestra de audio en una matriz que devuelve el método.
+6.  Lee el archivo de audio como una secuencia llamando a [**IMFSourceReader::ReadSample**](https://msdn.microsoft.com/library/windows/desktop/dd374665).
+7.  Copia el contenido del búfer de la muestra de audio en una matriz devuelta por el método.
 
-Lo más importante en **SoundEffect::Initialize** es la creación del objeto voz de origen, **m\_sourceVoice**, a partir de la voz de procesamiento. Usamos la voz de origen para la reproducción real del búfer de datos de sonido obtenido de **MediaReader::LoadMedia**.
+Lo más importante en **SoundEffect::Initialize** es la creación del objeto voz de origen, **m\_sourceVoice**, a partir de la voz de procesamiento. Usamos la voz de origen para la reproducción real del búfer da datos de sonido obtenido de **MediaReader::LoadMedia**.
 
 El juego de muestra llama a este método cuando inicializa el objeto **SoundEffect**, de esta forma:
 
@@ -307,7 +311,7 @@ Ahora, cada vez que la munición y un objetivo colisionan, una llamada a **Sound
 
 Con esto terminamos este rápido repaso del desarrollo de juegos DirectX para la Plataforma universal de Windows (UWP). Llegados a este punto, ya tienes una idea de qué necesitas hacer para que tu propio juego para Windows 8 sea una gran experiencia. Recuerda que tu juego se puede jugar en una amplia variedad de dispositivos y plataformas de Windows 8, así que diseña los componentes (gráficos, controles, interfaz de usuario y audio) para tantas configuraciones diferentes como puedas.
 
-Para obtener más información sobre formas de modificar la muestra de juego proporcionada en estos documentos, consulta el tema sobre [Extending the game sample (Cómo extender la muestra de juego)](tutorial-resources.md).
+Para obtener más información sobre formas de modificar la muestra de juego proporcionada en estos documentos, consulta el tema sobre [cómo extender la muestra de juego](tutorial-resources.md).
 
 ## Código de muestra completo para esta sección
 
@@ -559,6 +563,7 @@ void SoundEffect::PlaySound(_In_ float volume)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

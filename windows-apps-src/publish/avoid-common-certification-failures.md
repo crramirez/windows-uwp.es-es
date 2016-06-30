@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplicaciones no se puedan certificar o problemas que pueden detectarse durante una comprobación puntual después de que la aplicación se haya publicado.
-title: Evitar errores de certificación comunes
+Description: "Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplicaciones no se puedan certificar o problemas que pueden detectarse durante una comprobación puntual después de que la aplicación se haya publicado."
+title: "Evitar errores de certificación comunes"
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 6af2842eeb5eeebfc9ffc5a7a3ec98fdcebddb74
+
 ---
 
 # Evitar errores de certificación comunes
@@ -40,6 +44,7 @@ Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplic
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

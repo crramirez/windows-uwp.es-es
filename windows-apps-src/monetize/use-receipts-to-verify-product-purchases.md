@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
-description: Cada transacción de la Tienda Windows que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción.
+description: "Cada transacción de la Tienda Windows que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción."
 title: Usar recibos para comprobar compras de productos
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: b1322b74bf1038f05cd1cba275e432e279ed362d
+
 ---
 
 # Usar recibos para comprobar compras de productos
@@ -239,6 +243,7 @@ namespace ReceiptVerificationSample
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

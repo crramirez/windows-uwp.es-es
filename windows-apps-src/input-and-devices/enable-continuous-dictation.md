@@ -5,8 +5,8 @@ title: Habilitar el dictado continuo
 ms.assetid: 383B3E23-1678-4FBB-B36E-6DE2DA9CA9DC
 label: Continuous dictation
 template: detail.hbs
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: a142592f878fa539d6c40ea2abfcbf834b2de34d
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 1bcf6ce700b50ff633a29863fee41c2bfa3d9f98
 
 ---
 
@@ -29,7 +29,7 @@ Para las sesiones de reconocimiento de voz más largas y continuas, como el dict
 
 
 
-## <span id="Set_up"></span><span id="set_up"></span><span id="SET_UP"></span>Configuración
+## Configuración
 
 
 La aplicación necesita unos pocos objetos para administrar una sesión de dictado continuo:
@@ -63,7 +63,7 @@ En este apartado, usaremos un objeto [**StringBuilder**](https://msdn.microsoft.
 private StringBuilder dictatedTextBuilder;
 ```
 
-## <span id="Initialization"></span><span id="initialization"></span><span id="INITIALIZATION"></span>Inicialización
+## Inicialización
 
 
 Durante la inicialización del reconocimiento de voz continuo, debes:
@@ -94,13 +94,13 @@ this.speechRecognizer = new SpeechRecognizer();
 
     A continuación, llamamos inmediatamente a [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) sin agregar una gramática.
 
-    <span codelanguage="CSharp"></span>
+    
 ```    CSharp
 SpeechRecognitionCompilationResult result =
       await speechRecognizer.CompileConstraintsAsync();
 ```
 
-## <span id="Handle_recognition_events"></span><span id="handle_recognition_events"></span><span id="HANDLE_RECOGNITION_EVENTS"></span>Controlar eventos de reconocimiento
+## Controlar eventos de reconocimiento
 
 
 Puedes capturar una sola expresión o frase breve si llamas al método [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) o al método [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245). 
@@ -213,7 +213,7 @@ private async void ContinuousRecognitionSession_Completed(
       }
 ```
 
-## <span id="Provide_ongoing_recognition_feedback"></span><span id="provide_ongoing_recognition_feedback"></span><span id="PROVIDE_ONGOING_RECOGNITION_FEEDBACK"></span>Proporcionar comentarios sobre reconocimiento continuos
+## Proporcionar comentarios sobre reconocimiento continuos
 
 
 Cuando la gente habla, a menudo se basan en el contexto para comprender lo que se dice. Del mismo modo, el reconocedor de voz a menudo necesita contexto para proporcionar resultados de reconocimiento de alta confianza. Por ejemplo, por sí mismas, las palabras "rebelar" y "revelar" no se distinguen si no se obtiene más contexto de las palabras de alrededor. Hasta que el reconocedor tenga la certeza de que una palabra o palabras se han reconocido correctamente, no generará el evento [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900).
@@ -241,7 +241,7 @@ private async void SpeechRecognizer_HypothesisGenerated(
   }
 ```
 
-## <span id="Start_and_stop_recognition"></span><span id="start_and_stop_recognition"></span><span id="START_AND_STOP_RECOGNITION"></span>Iniciar y detener el reconocimiento
+## Iniciar y detener el reconocimiento
 
 
 Antes de iniciar una sesión de reconocimiento, comprueba el valor de la propiedad [**State**](https://msdn.microsoft.com/library/windows/apps/dn913915) del reconocedor de voz. El reconocedor de voz debe estar en estado [**Idle**](https://msdn.microsoft.com/library/windows/apps/dn653227).
@@ -280,7 +280,7 @@ Si estableces campos privados al cancelar la sesión de reconocimiento, confirma
 
  
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 
 * [Interacciones de voz](speech-interactions.md)
@@ -297,6 +297,6 @@ Si estableces campos privados al cancelar la sesión de reconocimiento, confirma
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

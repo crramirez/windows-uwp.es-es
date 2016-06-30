@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Puedes enviar aplicaciones a la Tienda Windows en más de 100 idiomas.
+Description: "Puedes enviar aplicaciones a la Tienda Windows en más de 100 idiomas."
 title: Idiomas admitidos
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 17a5a106e24305afd3041f434d2e0890d21fd7ec
+
 ---
 
 # Idiomas admitidos
@@ -134,6 +138,7 @@ Son los idiomas que admite la Tienda Windows. La aplicación debe admitir al men
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

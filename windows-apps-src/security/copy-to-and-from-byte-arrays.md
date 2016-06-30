@@ -1,16 +1,20 @@
 ---
-title: Copy to and from byte arrays
-description: This example code shows how to copy to and from byte arrays in an Universal Windows Platform (UWP) app.
+title: Copiar a la matriz de bytes o desde ella
+description: "Este código de ejemplo muestra cómo copiar a matrices de bytes y desde ellas en una aplicación para la Plataforma universal de Windows (UWP)."
 ms.assetid: C343B08C-1FA1-40FD-8CA5-7FC9B707C5E3
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
+ms.openlocfilehash: db1691421cf4e540c9593efb4bbf2a608426c0ed
+
 ---
 
-# Copy to and from byte arrays
+# Copiar a la matriz de bytes o desde ella
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-This example code shows how to copy to and from byte arrays in an Universal Windows Platform (UWP) app.
+Este código de ejemplo muestra cómo copiar a matrices de bytes y desde ellas en una aplicación para la Plataforma universal de Windows (UWP).
 
 ```cs
 public void ByteArrayCopy()
@@ -30,6 +34,7 @@ public void ByteArrayCopy()
 }
 ```
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

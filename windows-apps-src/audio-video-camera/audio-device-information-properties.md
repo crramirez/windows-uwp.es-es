@@ -1,14 +1,17 @@
 ---
 author: drewbatgit
 ms.assetid: 3b75d881-bdcf-402b-a330-23cd29d68e53
-description: En este artículo se enumeran las propiedades DeviceInformation relacionadas con dispositivos de audio.
-title: Propiedades de información de dispositivo de audio
+description: "En este artículo se enumeran las propiedades DeviceInformation relacionadas con dispositivos de audio."
+title: "Propiedades de información de dispositivo de audio"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b1bcb5b005e82303884c2e096356d5a0f542b1e1
+
 ---
 
 # Propiedades de información de dispositivo de audio
 
-En este artículo se enumeran las propiedades de información de dispositivos relacionadas con dispositivos de audio. En Windows, cada dispositivo de hardware tiene asociadas las propiedades [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) que proporcionan información detallada acerca de un dispositivo y que puedes usar cuando necesitas información específica sobre el dispositivo o al crear un selector de dispositivos. 
-Para obtener información general sobre la enumeración de dispositivos en Windows, consulta [**Enumerar dispositivos**](../devices-sensors/enumerate-devices.md) y [**Propiedades de información de dispositivo**](../devices-sensors/device-information-properties.md).
+En este artículo se enumeran las propiedades de información de dispositivos relacionadas con dispositivos de audio. En Windows, cada dispositivo de hardware tiene asociadas las propiedades [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) que proporcionan información detallada acerca de un dispositivo y que puedes usar cuando necesitas información específica sobre el dispositivo o al crear un selector de dispositivos. Para obtener información general sobre la enumeración de dispositivos en Windows, consulta [**Enumerar dispositivos**](../devices-sensors/enumerate-devices.md) y [**Propiedades de información de dispositivo**](../devices-sensors/device-information-properties.md).
 
 
 |Nombre|Tipo|Descripción|
@@ -27,6 +30,7 @@ Para obtener información general sobre la enumeración de dispositivos en Windo
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

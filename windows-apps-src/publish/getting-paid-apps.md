@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Aquí encontrarás información importante que necesitarás para asegurarte de que recibes tanto los pagos de tus aplicaciones y productos desde la aplicación (IAP), como las ganancias de Microsoft Advertising.
+Description: "Aquí encontrarás información importante que necesitarás para asegurarte de que recibes tanto los pagos de tus aplicaciones y productos desde la aplicación (IAP), como las ganancias de Microsoft Advertising."
 title: Recibir pagos
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b7c9bcf36aaee0344c6916fcc81aca189ef0f481
+
 ---
 
 # Recibir pagos
@@ -56,6 +60,7 @@ Una vez hayas establecido el estado de suspensión de pago en **Activado**, todo
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Conceptos básicos sobre la muestra de Marble Maze
-description: En este documento se describen las características fundamentales del proyecto Marble Maze, como la forma en que usa Visual C++ en el entorno de Windows Runtime, cómo se crea y se estructura, y cómo se compila.
+title: "Conceptos básicos sobre la muestra de Marble Maze"
+description: "En este documento se describen las características fundamentales del proyecto Marble Maze, como la forma en que usa Visual C++ en el entorno de Windows Runtime, cómo se crea y se estructura, y cómo se compila."
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5a9df995078763df73542a4101e73e147517b1eb
+
 ---
 
 # Conceptos básicos sobre la muestra de Marble Maze
@@ -142,6 +146,7 @@ Lee [Estructura de la aplicación Marble Maze](marble-maze-application-structure
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jwmsft
 title: Atributo xPhase
-description: Usa xPhase con la extensión de marcado xBind para representar los elementos ListView y GridView de forma incremental y mejorar la experiencia de movimiento panorámica.
+description: "Usa xPhase con la extensión de marcado xBind para representar los elementos ListView y GridView de forma incremental y mejorar la experiencia de movimiento panorámica."
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: dfa12909d19a44ed38939c612712c8fe90f3f584
+
 ---
 
 # Atributo x:Phase
@@ -76,6 +80,7 @@ El escalonamiento solo se aplica cuando la plantilla de elementos se representa 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Puedes crear una campaña publicitaria con el panel del Centro de desarrollo para ayudar a promover tu aplicación y cultivar tu base de usuarios.
-title: Crear una campaña publicitaria para tu aplicación
+Description: "Puedes crear una campaña publicitaria con el panel del Centro de desarrollo para ayudar a promover tu aplicación y cultivar tu base de usuarios."
+title: "Crear una campaña publicitaria para tu aplicación"
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
+ms.sourcegitcommit: ce26f020480c3f45e3fc4130a49eb66ecbdf5ba7
+ms.openlocfilehash: 9596dd4de0c05ee6f85189e529ad18e528e954df
+
 ---
 
 # Crear una campaña publicitaria para tu aplicación
@@ -23,11 +26,11 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 3.  En la página **Nueva campaña**, define la configuración general de esta campaña en la sección **Detalles de campaña**.
     -   Asigna un nombre a la campaña publicitaria en el campo **Nombre de la campaña**.
     -   En **Tipo de campaña**, elige una de estas opciones:
-        -   **Publicidad de pago**: esta publicidad se ejecutará en cualquier aplicación que coincida con el dispositivo y la categoría de la aplicación.
-        -   **Publicidad interna gratuita**: esta publicidad solo se ejecutará en tus aplicaciones (que coincidan con el dispositivo de la aplicación anunciada). La publicidad interna es gratuita. Para obtener más información, consulta [Acerca de los anuncios internos](about-house-ads.md).
-        -   **Comunidad de publicidad gratuita**: esta publicidad se ejecutará en aplicaciones publicadas por otros desarrolladores que también crean campañas publicitarias de la comunidad. Para poder seleccionar esta opción, primero debes activar la casilla **Mostrar publicidad de la comunidad en mi aplicación** en la página del panel **Rentabilizar con anuncios**. Para obtener más información, consulta [Acerca de la publicidad de la comunidad](about-community-ads.md).
+        -   **De pago**: estos anuncios se ejecutarán en cualquier aplicación que coincida con el dispositivo y la categoría de la aplicación.
+        -   **De la comunidad (gratuita)**: esta publicidad se ejecutará en aplicaciones publicadas por otros desarrolladores que también crean campañas publicitarias de la comunidad. Para poder seleccionar esta opción, primero debes activar la casilla **Mostrar anuncios de la comunidad en mi aplicación** en la página del panel **Monetizar con anuncios**. Para obtener más información, consulta [Acerca de la publicidad de la comunidad](about-community-ads.md).
+        -   **Interna (gratuita)**: esta publicidad solo se ejecutará en tus aplicaciones (que coincidan con el dispositivo de la aplicación anunciada). Los anuncios internos son gratis. Para obtener más información, consulta [Acerca de los anuncios internos](about-house-ads.md).
 
-    > **Nota**  Si la aplicación no se ha publicado aún, recibirás un mensaje de error en la página **Nueva campaña**. Debes esperar a que tu aplicación se publique antes de poder crear una campaña publicitaria para ella.
+    > **Nota** Si la aplicación no se ha publicado aún, recibirás un mensaje de error en la página **Nueva campaña**. Debes esperar a que tu aplicación se publique antes de poder crear una campaña publicitaria para ella.
 
 4.  De manera predeterminada, elegiremos el público para tus anuncios, en función de la configuración seleccionada al crear la aplicación en el panel del Centro de desarrollo. Si prefieres elegir tú mismo el público de tus anuncios, selecciona **Cambiar a segmentación manual** para expandir la sección **Público**. Si quieres volver a la segmentación predeterminada, selecciona **Cambiar a segmentación automática**.
 
@@ -38,15 +41,15 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
     -   Elige el sistema operativo. Solo se muestran los sistemas operativos admitidos por la aplicación.
     -   Selecciona el sexo y el intervalo de edad de la audiencia deseada.
 
-    Esta sección también muestra un gráfico de **Alcance estimado**. Este gráfico muestra la audiencia a la que puedes llegar con tus selecciones actuales de destinatarios como un porcentaje de todos los usuarios de aplicaciones habilitadas para anuncios de Windows en los mercados seleccionados.
+    Esta sección también muestra un gráfico de **Alcance estimado**. Este gráfico muestra el público al que puedes llegar con tus selecciones actuales de destinatarios como un porcentaje de todos los usuarios de aplicaciones habilitadas para anuncios de Windows en los mercados seleccionados.
 
 5.  En la sección **Diseño de anuncios**, elige una de estas opciones:
-    -   **Cargar mi anuncio**. Elige esta opción para usar tus propios diseños de anuncio. Puedes cargar distintos archivos para cada uno de los tamaños de anuncio disponibles. Los archivos deben cumplir los siguientes requisitos y directrices:
+    -   **Usar creativos personalizados**. Elige esta opción para usar tus propios diseños de anuncio. Puedes cargar distintos archivos para cada uno de los tamaños de anuncio disponibles. Los archivos deben cumplir los siguientes requisitos y directrices:
         -   Cada archivo debe ser un .png o .jpg de menos de 2 MB.
         -   Los diseños de tus anuncios deben cumplir los requisitos especificados en la [Microsoft Creative Acceptance Policy](http://go.microsoft.com/fwlink?LinkId=532595).
         -   El contenido de los diseños de anuncio debe ser pertinente para la aplicación que promueves. Los diseños de anuncios que no están relacionados con la aplicación no se distribuirán a los anuncios de otras aplicaciones.
-        -   Todo el contenido de los diseños de anuncio debe ser legible. Por ejemplo, el contenido no debe aparecer borroso, pixelado o estirado.
-    -   **Anuncio generado automáticamente**. Elige esta opción para usar anuncios de una lista de plantillas predeterminadas. Tienes las siguientes opciones para personalizar el contenido de los anuncios. A medida que hagas selecciones, las vistas previas de los anuncios se actualizarán automáticamente.
+        -   Todo el contenido de los diseños de anuncio debe ser legible. Por ejemplo, el contenido no debe aparecer borroso, pixelado ni estirado.
+    -   **Usar creativos generados automáticamente**. Elige esta opción para usar anuncios de una lista de plantillas predeterminadas. Tienes las siguientes opciones para personalizar el contenido de los anuncios. A medida que hagas selecciones, las vistas previas de los anuncios se actualizarán automáticamente.
         -   Selecciona la casilla **Mostrar clasificación de mi aplicación** si quieres mostrar la clasificación de la aplicación. Si la aplicación es gratuita en todos los mercados seleccionados, también tendrás la opción de **Mostrar que mi aplicación es gratuita**.
         -   En el menú desplegable **Idioma**, selecciona el idioma de los anuncios. El texto del distintivo de la Tienda Windows y el texto de lema personalizado (si se especifica) se mostrarán en el idioma que selecciones.
         -   Para agregar una línea de texto adicional al anuncio, escribe el texto en el campo **Custom tag line**.
@@ -54,7 +57,9 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
         -   Para elegir un color de fondo y una imagen para tus anuncios, expande **Personalizar el diseño del anuncio/ver los tamaños de los anuncios**. Las imágenes disponibles son las imágenes que has asociado a la aplicación en la Tienda.
 
-6.  Ahora elige tu anuncio configuración financiera de la campaña publicitaria en la sección **Presupuesto y pago**.
+6. Si usas Kochava o Tune para medir el análisis de instalación de la aplicación, haz clic en **URL de seguimiento de instalaciones de terceros (Kochava, Tune)** y escribe la dirección URL de seguimiento de la instalación desde Kochava o Tune. Al guardar la campaña, se valida la dirección URL de seguimiento para garantizar que se resuelve en la página de descripción de la aplicación en la tienda Windows. Para obtener más información sobre el seguimiento de la instalación con Kochava y Tune, consulta la documentación de [Kochava](http://support.kochava.com/) y [Tune](https://help.tune.com/).
+
+7.  Ahora elige la configuración financiera de la campaña publicitaria en la sección **Presupuesto y pago**.
    > **Nota**  Si vas a crear una campaña interna o de la comunidad, no aparecerá la sección **Presupuesto y pago**, ya que estas campañas son gratis.
 
     -   En **Presupuesto**, usa el control deslizante para establecer la cantidad de dinero que quieres gastar cada mes para mostrar el anuncio.
@@ -63,9 +68,9 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
     -   Establece un instrumento de pago de la campaña publicitaria haciendo clic en **Agregar nuevo instrumento de pago** y rellena los detalles de la cuenta.
         > **Importante**  El país o la región de la dirección de facturación de tu instrumento de pago debe coincidir con el país o la región asociado con tu cuenta del Centro de desarrollo.
-    - Si has recibido un cupón de un representante de Microsoft para pagar una campaña publicitaria, haz clic en **Utilizar un cupón**, escribe el código del cupón y haz clic en **Aplicar** para aplicar el cupón a la campaña.
+- Si has recibido un cupón de un representante de Microsoft para pagar una campaña publicitaria, haz clic en **Utilizar un cupón**, escribe el código del cupón y haz clic en **Aplicar** para aplicar el cupón a la campaña.
 
-7.  Por último, haz clic en **Revisar** para confirmar la configuración de la campaña publicitaria y, si es una campaña publicitaria de pago, la información de presupuesto y pago. Haz clic en **Confirmar** y tus anuncios empezarán a aparecer en dispositivos Windows o Windows Phone en pocas horas.
+8.  Por último, haz clic en **Revisar** para confirmar la configuración de la campaña publicitaria y, si es una campaña publicitaria de pago, la información de presupuesto y pago. Haz clic en **Confirmar** y tus anuncios empezarán a aparecer en dispositivos en pocas horas.
 
 ## Temas relacionados
 
@@ -78,6 +83,7 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

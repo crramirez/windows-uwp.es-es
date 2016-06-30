@@ -1,8 +1,12 @@
 ---
 author: DelfCo
 ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
-description: Tecnologías para tener acceso a la red y servicios web.
+description: "Tecnologías para tener acceso a la red y servicios web."
 title: Redes y servicios web
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: df62edbf63777a8fcec4ab08c1fb56ab76ea6624
+
 ---
 
 # Redes y servicios web
@@ -24,6 +28,7 @@ Las siguientes tecnologías de red y servicios web están disponibles para los d
 | [Etiquetado de conexiones de red con identidad EDP](tagging_network_connections_with_edp_identity.md) | En este tema se muestra cómo crear un contexto de subproceso protegido antes de crear conexiones de red en un escenario de Enterprise Data Protection (EDP). |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

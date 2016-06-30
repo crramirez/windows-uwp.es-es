@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: En este tema se describen los procedimientos recomendados sobre accesibilidad de texto en una aplicación mediante la configuración de los colores de texto y fondo, de forma que cumplan con la relación de contraste necesaria.
+Description: "En este tema se describen los procedimientos recomendados sobre accesibilidad de texto en una aplicación mediante la configuración de los colores de texto y fondo, de forma que cumplan con la relación de contraste necesaria."
 ms.assetid: BA689C76-FE68-4B5B-9E8D-1E7697F737E6
 title: Requisitos de texto accesible
 label: Accessible text requirements
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 1307b4f70cf7ffed300f4254a7d92b67b5afd085
+
 ---
 
 # Requisitos de texto accesible  
@@ -44,7 +47,7 @@ Una aplicación para UWP puede usar estos elementos predeterminados (comúnmente
             ](https://msdn.microsoft.com/library/windows/apps/BR209683): el rol es [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)
 * [
               **RichTextBlock**
-            ](https://msdn.microsoft.com/library/windows/apps/BR227565) (y la clase de desbordamiento [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/BR227565overflow)): el rol es [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)
+            ](https://msdn.microsoft.com/library/windows/apps/BR227565) (y la clase de desbordamiento [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.richtextblockoverflow)): el rol es [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)
 * [
               **RichEditBox**
             ](https://msdn.microsoft.com/library/windows/apps/BR227548): el rol es [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)
@@ -72,7 +75,7 @@ Muchos lectores tienen problemas para leer el texto que hay en una aplicación c
 <span id="text_scale_factor"/>
 <span id="TEXT_SCALE_FACTOR"/>
 ## Factor de escala de texto  
-Varios controles y elementos de texto tienen una propiedad [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209652_istextscalefactorenabled). Esta propiedad tiene el valor **true** de forma predeterminada. Cuando su valor es **true**, la opción **Ajuste de escala de texto** del teléfono (**Configuración &gt; Accesibilidad**) hace que el tamaño del texto de ese elemento se agrande. El texto que tiene un tamaño de **FontSize** pequeño se verá más afectado que el texto que tiene un tamaño de **FontSize** grande. De todos modos, puedes deshabilitar el aumento de tamaño automático si estableces la propiedad **IsTextScaleFactorEnabled** del elemento en **false**. Prueba con este marcado, ajusta la opción **Tamaño del texto** en el teléfono y mira a ver qué ocurre con los elementos **TextBlock**:
+Varios controles y elementos de texto tienen una propiedad [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.istextscalefactorenabled). Esta propiedad tiene el valor **true** de forma predeterminada. Cuando su valor es **true**, la opción **Ajuste de escala de texto** del teléfono (**Configuración &gt; Accesibilidad**) hace que el tamaño del texto de ese elemento se agrande. El texto que tiene un tamaño de **FontSize** pequeño se verá más afectado que el texto que tiene un tamaño de **FontSize** grande. De todos modos, puedes deshabilitar el aumento de tamaño automático si estableces la propiedad **IsTextScaleFactorEnabled** del elemento en **false**. Prueba con este marcado, ajusta la opción **Tamaño del texto** en el teléfono y mira a ver qué ocurre con los elementos **TextBlock**:
 
 XAML
 ```xml
@@ -126,6 +129,7 @@ Estos tipos tienen una propiedad **IsTextScaleFactorEnabled**:
 * [Muestra de accesibilidad en XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

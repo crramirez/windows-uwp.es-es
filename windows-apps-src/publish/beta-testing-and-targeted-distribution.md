@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: El panel del Centro de desarrollo de Windows te ofrece la opción de que tu aplicación esté disponible solo para ciertas personas, de forma que puedas hacer que la prueben los evaluadores antes de ponerla a disposición del público.
-title: Pruebas beta y distribución dirigida
+Description: "El panel del Centro de desarrollo de Windows te ofrece la opción de que tu aplicación esté disponible solo para ciertas personas, de forma que puedas hacer que la prueben los evaluadores antes de ponerla a disposición del público."
+title: "Pruebas beta y distribución dirigida"
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a544565bf7bb82f2be1ded3e60836d5d191c6e93
+
 ---
 
 # Pruebas beta y distribución dirigida
@@ -81,6 +85,7 @@ Si eliges esta opción, debes tener en cuenta lo siguiente:
 -   No se puede revocar el acceso a la aplicación cuando los evaluadores ya la han descargado. Una vez la hayan descargado, podrán seguir usándola y recibirán cualquier actualización que envíes.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

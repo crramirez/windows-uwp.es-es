@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Empaquetar los juegos DirectX para la Plataforma universal de Windows (UWP)
-description: Los juegos para la Plataforma universal de Windows UWP de gran tamaño, especialmente aquellos que admiten varios idiomas con activos específicos de alguna región o activos de alta definición como característica opcional, pueden crecer hasta alcanzar tamaños considerables.
+description: "Los juegos para la Plataforma universal de Windows UWP de gran tamaño, especialmente aquellos que admiten varios idiomas con activos específicos de alguna región o activos de alta definición como característica opcional, pueden crecer hasta alcanzar tamaños considerables."
 ms.assetid: 68254203-c43c-684f-010a-9cfa13a32a77
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 14043fffc22849ca8d31f85e1035c38c07f1cdd4
+
 ---
 
 #  Empaquetar los juegos DirectX para la Plataforma universal de Windows (UWP)
@@ -46,7 +50,7 @@ Los recursos para el empaquetado de recursos se especifican de una de dos manera
 
 -   Los archivos de activos tienen el mismo nombre de archivo y las versiones específicas del paquete de recursos se encuentran en directorios con nombres específicos. El sistema reserva estos nombres de directorio. Por ejemplo, \\en-us, \\scale-140, \\dxfl-dx11.
 -   Los archivos de activos se almacenan en carpetas con nombres arbitrarios, pero los nombres de los archivos en sí tienen una etiqueta común que se anexa a las cadenas que el sistema reserva para indicar el idioma u otro calificador. En concreto, la cadena calificadora se une al nombre de archivo generalizado tras un carácter de subrayado (“\_”). Por ejemplo, \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_scale-140.png, \\assets\\coolsign\_dxfl-dx11.dds. También puedes combinar estas cadenas. Por ejemplo, \\assets\\menu\_option1\_scale-140\_lang-en-us.png.
-    > **Nota**  Cuando un calificador de idioma se usa en un nombre de archivo y no individualmente en un nombre de directorio, debe tener el formato "lang-<tag>", por ejemplo, "lang-en-us" tal como se describe en [Cómo asignar nombre a los recursos mediante calificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324).
+    > **Note** Cuando se usa en un nombre de archivo y no de forma independiente en un nombre de directorio, un calificador de idioma debe tomar la forma "lang-<tag>", por ejemplo, "lang-en-us" como se describe en [Cómo asignar un nombre a los recursos mediante calificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324).
 
      
 
@@ -224,6 +228,7 @@ Cuando configures tu aplicación para que admita paquetes de recursos para difer
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

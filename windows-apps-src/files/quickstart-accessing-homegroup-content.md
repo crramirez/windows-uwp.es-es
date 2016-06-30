@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: Acceso a contenido de Grupo Hogar
-description: Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye imágenes, música y vídeos.
+description: "Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye imágenes, música y vídeos."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
+
 ---
 # Acceso a contenido de Grupo Hogar
 
@@ -214,6 +218,7 @@ Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

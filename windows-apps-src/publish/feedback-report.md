@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: El informe Comentarios del panel del Centro de desarrollo de Windows te permite ver los problemas, las sugerencias y los votos a favor que los clientes de Windows 10 han enviado a través del Centro de opiniones.
+Description: "El informe Comentarios del panel del Centro de desarrollo de Windows te permite ver los problemas, las sugerencias y los votos a favor que los clientes de Windows 10 han enviado a través del Centro de opiniones."
 title: Informe de comentarios
 ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
+translationtype: Human Translation
+ms.sourcegitcommit: 4e857ec7ee98459afdd0d8ec85b5ec3a761049f3
+ms.openlocfilehash: 9ad3025f7890de3677801b309b6714b1b46a0607
+
 ---
 
 # Informe de comentarios
@@ -52,6 +56,7 @@ Ten en cuenta que los comentarios los traduce un sistema de traducción automát
 Como se mencionó anteriormente, te recomendamos que incorpores un vínculo al Centro de opiniones directamente en tu aplicación para animar a los clientes a que envíen comentarios. Para obtener más información, consulta [Launch Feedback Hub from your app (Iniciar el Centro de opiniones desde la aplicación)](../monetize/launch-feedback-hub-from-your-app.md).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

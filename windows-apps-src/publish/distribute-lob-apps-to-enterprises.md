@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que las empresas las compren por volumen a través de la Tienda Windows para empresas, sin necesidad de que las aplicaciones estén disponibles en la Tienda de forma general.
+Description: "Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que las empresas las compren por volumen a través de la Tienda Windows para empresas, sin necesidad de que las aplicaciones estén disponibles en la Tienda de forma general."
 title: Distribuir aplicaciones de LOB a empresas
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
+ms.sourcegitcommit: 9ad7589344d2af986e52ae43acc3e48de6374ae6
+ms.openlocfilehash: d7551e0456ce0e59dbbfa92690ddd5ba2ebaf8b4
+
 ---
 
 # Distribuir aplicaciones de LOB a empresas
@@ -48,7 +51,9 @@ Para obtener más información, consulta [Opciones de licencias organizativas](o
 
 ### Implementación de aplicaciones de LOB para empresas
 
-Después de hacer clic **Enviar a la Tienda**, la aplicación pasará por el proceso de certificación. Cuando esté lista, un administrador de la empresa debe agregarla a su tienda privada en el portal de la Tienda Windows para empresas. La empresa puede implementar la aplicación en sus usuarios.
+Después de hacer clic **Enviar a la Tienda**, la aplicación pasará por el proceso de certificación. Cuando esté lista, un administrador de la empresa debe agregarla a su tienda privada en el portal de la Tienda Windows para empresas. Luego la empresa puede implementar la aplicación para sus usuarios.
+
+> **Nota** Para obtener la aplicación de línea de negocio, la organización debe encontrarse en un [mercado admitido](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets) y no debes haber excluido ese mercado al enviar la aplicación. 
 
 Para obtener más información, consulta [Trabajar con aplicaciones de línea de negocio](http://go.microsoft.com/fwlink/p/?LinkId=698846) y [Distribuir aplicaciones a través de la tienda privada](http://go.microsoft.com/fwlink/p/?LinkId=698847).
 
@@ -75,6 +80,7 @@ Para obtener más información, consulta [Transferir localmente aplicaciones de 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

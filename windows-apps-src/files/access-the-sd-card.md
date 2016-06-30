@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: Acceso a la tarjeta SD
-description: Puedes almacenar datos no esenciales y tener acceso a ellos en una tarjeta microSD opcional, especialmente en los dispositivos móviles de bajo coste que tienen un almacenamiento interno limitado.
+description: "Puedes almacenar datos no esenciales y tener acceso a ellos en una tarjeta microSD opcional, especialmente en los dispositivos móviles de bajo coste que tienen un almacenamiento interno limitado."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c515d36c76a8363861a72cb58229ff857e1bb2b8
+
 ---
 # Acceder a la tarjeta SD
 
@@ -147,6 +151,7 @@ using Windows.Storage;
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

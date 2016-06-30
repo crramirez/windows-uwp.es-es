@@ -1,8 +1,12 @@
 ---
 author: mijacobs
-Description: Las animaciones de transición de contenido permiten cambiar el contenido de un área de la pantalla sin cambiar ni el contenedor ni el fondo. El nuevo contenido hace un fundido de entrada. Si hay contenido existente para sustituir, el contenido realiza un fundido de salida.
-title: Directrices para animaciones de transición de contenido
+Description: "Las animaciones de transición de contenido permiten cambiar el contenido de un área de la pantalla sin cambiar ni el contenedor ni el fondo. El nuevo contenido hace un fundido de entrada. Si hay contenido existente para sustituir, el contenido realiza un fundido de salida."
+title: "Directrices para animaciones de transición de contenido"
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
+
 ---
 
 # Animaciones de transición de contenido
@@ -48,6 +52,7 @@ Las animaciones de transición de contenido permiten cambiar el contenido de un 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

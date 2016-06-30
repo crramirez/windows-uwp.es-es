@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: B5E3A66D-0453-4D95-A3DB-8E650540A300
-description: En este artículo se muestra cómo usar la clase MediaProcessingTrigger y una tarea en segundo plano para procesar los archivos multimedia en segundo plano.
+description: "En este artículo se muestra cómo usar la clase MediaProcessingTrigger y una tarea en segundo plano para procesar los archivos multimedia en segundo plano."
 title: Procesar archivos multimedia en segundo plano
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dcf655ff80c4463a567ade0b6d1cc784b60c18be
+
 ---
 
 # Procesar archivos multimedia en segundo plano
@@ -24,18 +28,18 @@ Para obtener información más detallada sobre las diferentes características d
 
 Para agregar una tarea en segundo plano a la solución existente en Microsoft Visual Studio, escribe un nombre para la composición.
 
-1.  En el menú **Archivo**, selecciona **Agregar** y, a continuación, **Nuevo proyecto...**.
+1.  En el menú **Archivo**, selecciona **Agregar** y luego **Nuevo proyecto...**.
 2.  Selecciona el tipo de proyecto **Componente de Windows Runtime (Windows Universal)**.
 3.  Escribe un nombre para el nuevo proyecto de componente. En este ejemplo usaremos el nombre de proyecto **MediaProcessingBackgroundTask**.
 4.  Haz clic en Aceptar.
 
-En el **Explorador de soluciones**, haz clic con el botón secundario en el icono del archivo "Class1.cs" que se crea de forma predeterminada, y selecciona **Cambiar nombre**. Cambia el nombre del archivo a "MediaProcessingTask.cs". Cuando Visual Studio te pregunte si quieres cambiar el nombre de todas las referencias a esta clase, haz clic en **Sí**.
+En el **Explorador de soluciones**, haz clic con el botón derecho en el icono del archivo "Class1.cs", que se crea de forma predeterminada, y selecciona **Cambiar nombre**. Cambia el nombre del archivo a "MediaProcessingTask.cs". Cuando Visual Studio te pregunte si deseas cambiar el nombre de todas las referencias a esta clase, haz clic en **Sí**.
 
 En el archivo de clase que ha cambiado de nombre, agrega las siguientes directivas de tipo **using** para incluir estos espacios de nombres en el proyecto.
                                   
 [!code-cs[BackgroundUsing](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundUsing)]
 
-Actualiza la declaración de clase para que tu clase herede de la interfaz [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794).
+Actualiza la declaración de clase para que su clase herede de [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794).
 
 [!code-cs[BackgroundClass](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundClass)]
 
@@ -70,7 +74,7 @@ En el método que usaste para crear el objeto **Progress** en el paso anterior, 
 
 [!code-cs[Progress](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetProgress)]
 
-El método auxiliar **SendToastNotification** crea una nueva notificación del sistema mediante la obtención de un documento XML de plantilla de una notificación del sistema que solo tiene contenido de texto. De esta manera se establecerá el elemento de texto de la notificación del sistema XML y se creará un nuevo objeto [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) a partir del documento XML. Por último, puedes mostrar la notificación del sistema al usuario mediante una llamada a [**ToastNotifier.Show**](https://msdn.microsoft.com/library/windows/apps/br208659).
+El método auxiliar **SendToastNotification** crea una nueva notificación del sistema mediante la obtención de un documento XML de plantilla de una notificación del sistema que solo tiene contenido de texto. De esta manera se establecerá el elemento de texto de la notificación del sistema XML y se creará un nuevo objeto [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) a partir del documento XML. Por último, puedes mostrar al usuario la notificación del sistema mediante una llamada a [**ToastNotifier.Show**](https://msdn.microsoft.com/library/windows/apps/br208659).
 
 [!code-cs[SendToastNotification](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetSendToastNotification)]
 
@@ -81,7 +85,7 @@ Para poder iniciar la tarea en segundo plano desde la aplicación en primer plan
 1.  En el **Explorador de soluciones**, haz doble clic en el icono del archivo Package.appmanifest para abrir el editor del manifiesto.
 2.  Selecciona la pestaña **Declaraciones**.
 3.  En **Declaraciones disponibles**, selecciona **Tareas en segundo plano** y haz clic en **Agregar**.
-4.  En **Declaraciones admitidas**, asegúrate de que esté seleccionado el elemento **Tareas en segundo plano**. En **Propiedades**, selecciona la casilla **Procesamiento multimedia**.
+4.  En **Declaraciones admitidas**, asegúrate de que esté seleccionado el elemento **Tareas en segundo plano**. En **Propiedades**, selecciona la casilla de verificación **Procesamiento multimedia**.
 5.  En el cuadro de texto **Punto de entrada**, especifica el espacio de nombres y el nombre de clase para la prueba en segundo plano, separados por un punto. Para este ejemplo, la entrada es:
    ```csharp
    MediaProcessingBackgroundTask.MediaProcessingTask
@@ -135,6 +139,7 @@ Se llama al controlador de eventos **OnCompleted** cuando la tarea en segundo pl
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

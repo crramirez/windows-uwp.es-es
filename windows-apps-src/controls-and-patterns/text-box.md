@@ -3,6 +3,10 @@ author: Jwmsft
 ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
 label: Text box
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 873ca8f869f4303f8fc4a9a7ff08f81df29d367d
+
 ---
 # Cuadro de texto
 El control TextBox permite a un usuario escribir texto en una aplicación. Se usa normalmente para capturar una sola línea de texto, pero se puede configurar para capturar varias líneas de texto. El texto se muestra en la pantalla en un formato simple, uniforme y no cifrado.
@@ -79,8 +83,7 @@ Puedes hacer que un cuadro de texto sea de solo lectura si estableces la propied
 
 Puedes hacer que un TextBox sea de solo lectura si estableces la propiedad IsReadOnly en true. Por ejemplo, podrías tener un TextBox para que un usuario escribiera comentarios que se habilitarán únicamente en determinadas condiciones. Puedes hacer el TextBox de solo lectura hasta que se cumplan las condiciones. Si solo necesitas mostrar texto, piensa en la posibilidad de usar un TextBlock o RichTextBlock en su lugar.
 
-Un cuadro de texto de solo lectura tiene el mismo aspecto que un cuadro de texto de lectura y escritura, por lo que podría resultar confuso para el usuario. 
-Un usuario puede seleccionar y copiar texto.
+Un cuadro de texto de solo lectura tiene el mismo aspecto que un cuadro de texto de lectura y escritura, por lo que podría resultar confuso para el usuario. Un usuario puede seleccionar y copiar texto.
 IsEnabled
 
 
@@ -279,6 +282,7 @@ Para obtener más información y ejemplos, consulta [Usar el ámbito de entrada 
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

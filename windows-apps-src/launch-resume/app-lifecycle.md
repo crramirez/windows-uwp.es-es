@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Ciclo de vida de la aplicación
-description: En este tema se describe el ciclo de vida de una aplicación para la Plataforma universal de Windows (UWP), desde el momento en que se activa hasta que se cierra.
+author: TylerMSFT
+title: "Ciclo de vida de la aplicación"
+description: "En este tema se describe el ciclo de vida de una aplicación para la Plataforma universal de Windows (UWP), desde el momento en que se activa hasta que se cierra."
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
+ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
+ms.openlocfilehash: 8451942c05d5d44cafba243f7cbebceedbe86fc0
+
 ---
 
 # Ciclo de vida de la aplicación
@@ -67,8 +70,6 @@ El evento [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br24
  
 
 **Nota**
-            
-          
             La *sesión del usuario actual* se basa en el inicio de sesión de Windows. Siempre y cuando el usuario actual no haya cerrado la sesión explícitamente o apagado el equipo, o bien Windows no se haya reiniciado por otros motivos, la sesión del usuario actual persiste durante los eventos como la autenticación de pantalla de bloqueo y el cambio de usuario, entre otros.
 
  
@@ -81,7 +82,7 @@ El evento [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br24
 
 Si inicias sesión en el equipo con la cuenta de Administrador, no podrás activar ninguna de las aplicaciones para UWP.
 
-Para más información, consulta [Extensiones de la aplicación](https://msdn.microsoft.com/library/windows/apps/hh464906).
+Para más información, consulta [Contratos y extensiones de aplicaciones (aplicaciones de la Tienda Windows)](https://msdn.microsoft.com/library/windows/apps/hh464906).
 
 ### **OnActivated** frente a las activaciones específicas
 
@@ -104,9 +105,9 @@ Conviene que liberes los recursos exclusivos y los identificadores de archivos p
 
 En general, la aplicación debe guardar su estado y liberar sus recursos e identificadores de archivos inmediatamente cuando se controle el evento de suspensión, y el código no debería tardar más de un segundo en completarse. Si una aplicación no regresa del evento de suspensión en unos segundos, Windows da por sentado que la aplicación dejó de responder y la finaliza.
 
-Hay algunos escenarios de aplicación donde la aplicación debe seguir ejecutándose para completar tareas en segundo plano. Por ejemplo, la aplicación puede seguir reproduciendo audio en segundo plano; para más información, consulta [Audio en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140)). Además, las operaciones de transferencia en segundo plano continúan incluso cuando la aplicación se haya suspendido o finalizado; para más información, consulta [Cómo descargar un archivo](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer).
+Hay algunos escenarios de aplicación donde la aplicación debe seguir ejecutándose para completar tareas en segundo plano. Por ejemplo, la aplicación puede seguir reproduciendo audio en segundo plano; para más información, consulta [Audio en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140)). Además, las operaciones de transferencia en segundo plano continúan incluso cuando la aplicación se haya suspendido o finalizado; para más información, consulta [Cómo descargar un archivo](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer)).
 
-Para obtener instrucciones, consulta [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088).
+Para obtener instrucciones, consulta el tema de [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
 **Una nota sobre la depuración con Visual Studio: **Visual Studio impide que Windows suspenda una aplicación que está conectada al depurador. Esto permite que el usuario vea la interfaz de usuario de depuración de Visual Studio mientras se ejecuta la aplicación. Mientras depuras una aplicación, puedes enviarle un evento de suspensión mediante Visual Studio. Asegúrate de que se muestra la barra de herramientas **Ubicación de depuración** y luego haz clic en el botón **Suspender**.
 
@@ -128,13 +129,13 @@ Consulta [**ApplicationExecutionState**](https://msdn.microsoft.com/library/wind
 
 Si se activa una aplicación suspendida para que participe en un contrato entre aplicaciones o una extensión, recibirá primero el evento **Resuming** y después el evento **Activated**.
 
-Mientras la aplicación está suspendida, no recibirá ninguno de los eventos de red que registró para recibir. Dichos eventos no se colocarán en la cola; simplemente se perderán. Por ello, la aplicación debe comprobar el estado de red cuando se reanude.
+Mientras una aplicación está suspendida, no recibe ninguno de los eventos de red que registró para recibir. Dichos eventos no se colocan en la cola; simplemente se pierden. Por ello, la aplicación debe comprobar el estado de red cuando se reanude.
 
 **Nota**  Dado que el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) no se genera a partir del subproceso de interfaz de usuario, es necesario usar un distribuidor si el código del controlador de reanudación se comunica con la interfaz de usuario.
 
  
 
-Para obtener instrucciones, consulta [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088).
+Para obtener instrucciones, consulta el tema de [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
 ## Cierre de la aplicación
 
@@ -160,7 +161,7 @@ La experiencia de bloqueo del sistema está diseñada para que los usuarios pued
 
 Si la aplicación se bloquea, deja de responder o genera una excepción, se enviará un informe del problema a Microsoft según la [configuración de comentarios y diagnósticos](http://go.microsoft.com/fwlink/p/?LinkID=614828) del usuario. Microsoft te proporciona un subconjunto de datos de error en el informe del problema, para que puedas usarlo para mejorar la aplicación. Puedes consultar estos datos en la página Calidad de la aplicación en el panel.
 
-Cuando el usuario activa una aplicación tras un bloqueo, su controlador de eventos de activación recibe un valor [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) de **NotRunning** y debe mostrar simplemente su interfaz de usuario y datos iniciales. Después de un bloqueo, no uses de forma habitual la aplicación que usarías para **Resuming** con **Suspended** porque los datos pueden estar dañados; consulta [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088).
+Cuando el usuario activa una aplicación tras un bloqueo, su controlador de eventos de activación recibe un valor [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) de **NotRunning** y debe mostrar simplemente su interfaz de usuario y datos iniciales. Después de un bloqueo, no uses de forma habitual la aplicación que usarías para **Resuming** con **Suspended** porque los datos pueden estar dañados; consulta [Directrices para suspender y reanudar una aplicación (aplicaciones de la Tienda Windows)](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
 ## Eliminación de la aplicación
 
@@ -192,7 +193,7 @@ En las plantillas de proyecto iniciales de Visual Studio se proporciona el códi
             ](https://msdn.microsoft.com/library/windows/apps/br209041) (XAML)
 
 **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si desarrollas para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -200,7 +201,7 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 * [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [Administrar el inicio previo de aplicaciones](handle-app-prelaunch.md)
+* [Controlar el inicio previo de aplicaciones](handle-app-prelaunch.md)
 * [Controlar la activación de aplicaciones](activate-an-app.md)
 * [Controlar la suspensión de la aplicación](suspend-an-app.md)
 * [Controlar la reanudación de la aplicación](resume-an-app.md)
@@ -211,8 +212,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

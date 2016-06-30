@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Definir el marco de la aplicación para la Plataforma universal de Windows (UWP) del juego
+title: "Definir el marco de la aplicación para la Plataforma universal de Windows (UWP) del juego"
 description: La primera parte de codificar un juego de Plataforma universal de Windows (UWP) con DirectX es crear el marco que permite al objeto de juego interactuar con Windows.
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2ebc7bca06454f78ab375058e49f012cacb00cc8
+
 ---
 
 #  Definir el marco de la aplicación para la Plataforma universal de Windows (UWP) del juego
@@ -1424,6 +1428,7 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

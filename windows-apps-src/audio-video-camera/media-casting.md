@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
-description: En este artículo se muestra cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows.
+description: "En este artículo se muestra cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows."
 title: Transmitir contenido multimedia
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9c8d549c9b770af351894f2a19dd035a43d70264
+
 ---
 
 # Transmitir contenido multimedia
@@ -151,6 +155,7 @@ Por último, implementa el controlador para el botón Desconectar. Detén la con
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

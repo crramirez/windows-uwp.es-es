@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: Prepara la aplicación para la localizarla a otros idiomas, mercados o regiones.
-title: Preparar la aplicación para la localización
+Description: "Prepara la aplicación para la localizarla a otros idiomas, mercados o regiones."
+title: "Preparar la aplicación para la localización"
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 label: Prepare your app for localization
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: e52a5322767677859e32ccbecf4951745c49f36f
+
 ---
 
 # Preparar la aplicación para la localización
@@ -187,6 +191,7 @@ El método de ordenación sigue el formato del **panel de control regional**:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

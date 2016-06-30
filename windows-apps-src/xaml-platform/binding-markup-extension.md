@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: La extensión de marcado Binding se convierte en tiempo de carga XAML en una instancia de la clase Binding.
-title: Extensión de marcado Binding
+description: "La extensión de marcado Binding se convierte en tiempo de carga XAML en una instancia de la clase Binding."
+title: "Extensión de marcado Binding"
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 740110809845220d919c6ba3c90b1393dbc8ae94
+
 ---
 
 # Extensión de marcado {Binding}
@@ -130,6 +134,7 @@ Microsoft IntelliSense en Microsoft Visual Studio muestra las propiedades del co
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

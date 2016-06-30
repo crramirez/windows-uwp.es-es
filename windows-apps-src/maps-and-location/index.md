@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: Introducción a ubicación y mapas
-description: En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos.
+author: msatranjr
+title: "Introducción a ubicación y mapas"
+description: "En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos."
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
+ms.sourcegitcommit: a3240047ec77ada0c5f6b5586eee2404353889f6
+ms.openlocfilehash: 829a8d7eb4da810e2353593c03cd5aa4e047173a
+
 ---
 
 # Introducción a ubicación y mapas
@@ -27,7 +30,7 @@ Muestra mapas con las vistas 2D, 3D o Streetside en tu aplicación mediante las 
 | Tema | Descripción |
 |-------|-------------|
 | [Solicitar una clave de autenticación de mapas](authentication-key.md) | La aplicación debe autenticarse para poder usar [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este artículo se describe cómo solicitar una clave de autenticación de mapas desde el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/) y agregarla a la aplicación. |
-| [Directrices de diseño para mapas](controls-map.md) | En el control de mapa se pueden mostrar mapas y vistas aéreas, indicaciones, resultados de búsqueda y el estado del tráfico. |
+| [Control de mapa](controls-map.md) | En el control de mapa se pueden mostrar mapas y vistas aéreas, indicaciones, resultados de búsqueda y el estado del tráfico. |
 | [Mostrar mapas con vistas 2D, 3D y Streetside](display-maps.md) | Muestra mapas personalizables en tu aplicación mediante la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). Este tema también presenta la vista 3D aérea y la vista de Streetside. |
 | [Mostrar puntos de interés en un mapa](display-poi.md) | Agrega puntos de interés a un mapa mediante marcadores, imágenes, formas y elementos de interfaz de usuario XAML. |
 | [Superponer imágenes en mosaico en un mapa](overlay-tiled-images.md) | Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo. |
@@ -80,6 +83,7 @@ La aplicación puede iniciar la aplicación Mapas de Windows como aquí se indic
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Sigue estas instrucciones para preparar los paquetes de la aplicación para enviarlos a la Tienda Windows.
-title: Requisitos del paquete de la aplicación
+Description: "Sigue estas instrucciones para preparar los paquetes de la aplicación para enviarlos a la Tienda Windows."
+title: "Requisitos del paquete de la aplicación"
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 951c00f9fd2c945ac44d47bfae701049e937b98f
+
 ---
 
 # Requisitos del paquete de la aplicación
@@ -80,6 +84,7 @@ StoreManifest.xml es un archivo de configuración opcional que se puede incluir 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

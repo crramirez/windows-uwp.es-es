@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
 title: Configurar una geovalla
-description: Configura una geovalla en tu aplicación y aprende a administrar las notificaciones en primer y segundo plano.
+description: "Configura una geovalla en tu aplicación y aprende a administrar las notificaciones en primer y segundo plano."
 ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: e161e478b1b306f5d8d77b7649aeecd80e21b5be
+
 ---
 
 # Configurar una geovalla
@@ -306,12 +310,12 @@ Para escuchar un evento de geovalla en segundo plano
 En el manifiesto de la aplicación, en la pestaña **Declaraciones**, agrega una declaración para una tarea de ubicación en segundo plano. Para ello haz lo siguiente:
 
 -   Agrega una declaración del tipo **Tareas en segundo plano**.
--   Establece un tipo de tarea de propiedad **Ubicación**.
+-   Establece una propiedad de tipo de tarea **Ubicación**.
 -   Establece un punto de entrada en tu aplicación al que se llamará cuando se genere el evento.
 
 ### Paso 2: Registrar la tarea en segundo plano
 
-El código de este paso registra la tarea de geovalla en segundo plano. Recuerda que cuando se creó la geovalla, comprobamos los permisos de ubicación. Para más información, consulta [Configurar una geovalla](#setup).
+El código de este paso registra la tarea de geovalla en segundo plano. Recuerda que cuando se creó la geovalla, comprobamos los permisos de ubicación. Para obtener más información, consulta [Configurar una geovalla](#setup).
 
 ```csharp
 async private void RegisterBackgroundTask(object sender, RoutedEventArgs e)
@@ -421,7 +425,7 @@ Si la configuración de privacidad de la ubicación no permite que la aplicació
 </TextBlock>
 ```
 
-Como alternativa, la aplicación puede llamar al método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar la aplicación **Configuración** desde el código. Para más información, consulta [Iniciar la aplicación Configuración de Windows](https://msdn.microsoft.com/library/windows/apps/mt228342).
+Como alternativa, la aplicación puede llamar al método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar la aplicación **Configuración** desde el código. Para obtener más información, consulta [Iniciar la aplicación Configuración de Windows](https://msdn.microsoft.com/library/windows/apps/mt228342).
 
 ```csharp
 using Windows.System;
@@ -432,7 +436,7 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 ## Probar y depurar la aplicación
 
 
-Las tareas para probar y depurar aplicaciones de geovalla pueden resultar todo un desafío porque dependen de la ubicación del dispositivo. Aquí describimos varios métodos para probar geovallas en primer y en segundo plano.
+Las tareas de probar y depurar aplicaciones de geovalla pueden resultar todo un desafío porque dependen de la ubicación del dispositivo. Aquí describimos varios métodos para probar geovallas en primer y en segundo plano.
 
 **Para depurar una aplicación de geovalla**
 
@@ -446,7 +450,7 @@ Las tareas para probar y depurar aplicaciones de geovalla pueden resultar todo u
 
 1.  Compila tu aplicación en Visual Studio.
 2.  Inicia la aplicación en el emulador de Visual Studio.
-3.  Usa estas herramientas para simular varias ubicaciones dentro y fuera de tu región de geovalla. Asegúrate de esperar lo suficiente una vez transcurrido el tiempo que especifica la propiedad [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para desencadenar el evento. Ten en cuenta que debes aceptar la solicitud para habilitar permisos de ubicación para la aplicación. Para obtener más información sobre la simulación de ubicaciones, consulta el tema [Set the simulated geolocation of the device (Establecer la geolocalización simulada del dispositivo)](http://go.microsoft.com/fwlink/p/?LinkID=325245).
+3.  Usa estas herramientas para simular varias ubicaciones dentro y fuera de tu región de geovalla. Asegúrate de esperar lo suficiente una vez transcurrido el tiempo que especifica la propiedad [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para desencadenar el evento. Ten en cuenta que debes aceptar la solicitud para habilitar permisos de ubicación para la aplicación. Para obtener más información sobre la simulación de ubicaciones, consulta el tema sobre cómo [Establecer la geolocalización simulada del dispositivo](http://go.microsoft.com/fwlink/p/?LinkID=325245).
 4.  También puedes usar el emulador para calcular el tamaño de las vallas y los tiempos de permanencia aproximados que deben detectarse a velocidades diferentes.
 
 ### Probar y depurar una aplicación de geovalla que se ejecuta en segundo plano
@@ -458,7 +462,7 @@ Las tareas para probar y depurar aplicaciones de geovalla pueden resultar todo u
 3.  Cierra la aplicación que se está ejecutando localmente.
 4.  Inicia la aplicación en el emulador de Visual Studio. Ten en cuenta que la simulación de geovallas en segundo plano solo puede hacerse en una aplicación a la vez en el emulador. No inicies varias aplicaciones de geovalla en el emulador.
 5.  En el emulador, simula varias ubicaciones dentro y fuera de tu región de geovalla. Asegúrate de esperar lo suficiente una vez transcurrido el [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) para desencadenar el evento. Ten en cuenta que debes aceptar la solicitud para habilitar permisos de ubicación para la aplicación.
-6.  Usa Visual Studio para desencadenar la tarea de ubicación en segundo plano. Para obtener más información sobre cómo desencadenar tareas en segundo plano en Visual Studio, consulta [How to trigger background tasks (Cómo desencadenar tareas en segundo plano)](http://go.microsoft.com/fwlink/p/?LinkID=325378).
+6.  Usa Visual Studio para desencadenar la tarea de ubicación en segundo plano. Para obtener más información sobre cómo desencadenar tareas en segundo plano en Visual Studio, consulta [Cómo desencadenar tareas en segundo plano](http://go.microsoft.com/fwlink/p/?LinkID=325378).
 
 ## Solucionar problemas de tu aplicación
 
@@ -478,6 +482,7 @@ Antes de que la aplicación pueda acceder a la ubicación, la opción **Ubicaci�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

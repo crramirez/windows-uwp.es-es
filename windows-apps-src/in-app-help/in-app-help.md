@@ -1,9 +1,13 @@
 ---
 author: QuinnRadich
-Description: Diseñar una ayuda eficaz para que se muestre de forma reactiva desde la aplicación.
-title: Directrices para diseñar la ayuda en la aplicación.
+Description: "Diseñar una ayuda eficaz para que se muestre de forma reactiva desde la aplicación."
+title: "Directrices para diseñar la ayuda en la aplicación."
 label: In-app help
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 7edad75b1639768023eb8add1e23fe0aafb0b674
+
 ---
 
 # Páginas de ayuda en la aplicación
@@ -52,6 +56,7 @@ En ocasiones, puede ser útil proporcionar más información acerca de una carac
 * [Directrices para la ayuda de la aplicación](guidelines-for-app-help.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

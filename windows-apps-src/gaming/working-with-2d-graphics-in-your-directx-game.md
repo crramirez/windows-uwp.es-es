@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Elementos gráficos 2D para juegos DirectX
-description: Se analiza el uso de efectos y elementos gráficos de mapas de bits 2D y cómo usarlos en un juego.
+title: "Elementos gráficos 2D para juegos DirectX"
+description: "Se analiza el uso de efectos y elementos gráficos de mapas de bits 2D y cómo usarlos en un juego."
 ms.assetid: ad69e680-d709-83d7-4a4c-7bbfe0766bc7
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 50782c5923f9c811f5d8e91aa9aee897876e6c24
+
 ---
 
 # Elementos gráficos 2D para juegos DirectX
@@ -67,6 +71,7 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

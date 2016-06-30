@@ -1,8 +1,12 @@
 ---
 author: Mtoepke
-title: Desactivación del modo de desarrollador de Xbox One
-description: Cómo desactivar el modo de desarrollador.
+title: "Desactivación del modo de desarrollador de Xbox One"
+description: "Cómo desactivar el modo de desarrollador."
 area: Xbox
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0751598ba50d69e1667b20ddc03f30d65ce08002
+
 ---
 
 # Desactivación del modo de desarrollador de Xbox One
@@ -84,6 +88,7 @@ Si anteriormente no has vuelto a definir el modo comercial a la consola Xbox One
 - [UWP on Xbox One (UWP en Xbox One)](index.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

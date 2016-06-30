@@ -2,7 +2,11 @@
 author: DBirtolo
 ms.assetid: 949D1CE0-DD7D-420E-904D-758FADEBE85A
 title: Habilitar funcionalidades de dispositivos
-description: Este tutorial describe cómo declarar funcionalidades del dispositivo en Microsoft Visual Studio. Esta opción permite que la aplicación use cámaras, micrófonos, sensores de ubicación y otros dispositivos.
+description: "Este tutorial describe cómo declarar funcionalidades del dispositivo en Microsoft Visual Studio. Esta opción permite que la aplicación use cámaras, micrófonos, sensores de ubicación y otros dispositivos."
+translationtype: Human Translation
+ms.sourcegitcommit: 512b89027f6b707de346fffe104f165074fabcea
+ms.openlocfilehash: 01ccd8dea8b19a52867ce89ba2eb9a1fb2d2a72f
+
 ---
 # Habilitar funcionalidades de dispositivos
 
@@ -72,6 +76,7 @@ La siguiente tabla conecta algunas de las funcionalidades a las API de Windows R
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

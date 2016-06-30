@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: c0450f7b-5c81-4d8c-92ef-2b1190d18af7
-description: Aprende a usar la clase AdControl para mostrar anuncios de banner en una aplicación Silverlight para Windows Phone 8.1 o Windows Phone 8.0.
+description: "Aprende a usar la clase AdControl para mostrar anuncios de banner en una aplicación Silverlight para Windows Phone 8.1 o Windows Phone 8.0."
 title: AdControl en Windows Phone Silverlight
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 5a12badfb11cfd43c0833522d996da7df73b3d55
+
 
 ---
 
@@ -122,6 +126,7 @@ Los ensamblados de Microsoft Advertising para proyectos de Windows Phone Silverl
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

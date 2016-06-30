@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Si tu cuenta de desarrollador tiene los permisos adecuados, puedes generar y descargar paquetes de preinstalación que un OEM puede usar para incluir tu aplicación en su imagen.
+Description: "Si tu cuenta de desarrollador tiene los permisos adecuados, puedes generar y descargar paquetes de preinstalación que un OEM puede usar para incluir tu aplicación en su imagen."
 title: Generar paquetes preinstalados para OEM
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dba1c1f754b4200bd00395e0b71d18bee30e3a2d
+
 ---
 
 # Generar paquetes preinstalados para OEM
@@ -46,6 +50,7 @@ Si tienes más preguntas sobre la generación de paquetes de preinstalación, en
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

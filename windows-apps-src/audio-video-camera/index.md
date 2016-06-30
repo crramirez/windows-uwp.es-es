@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
-description: En esta sección se ofrece información sobre la creación de aplicaciones universales de Windows para capturar, reproducir o editar fotos, vídeos o audio.
-title: Audio, vídeo y cámara
+description: "En esta sección se ofrece información sobre la creación de aplicaciones universales de Windows para capturar, reproducir o editar fotos, vídeos o audio."
+title: "Audio, vídeo y cámara"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8480eb181b6af26eae5950a1f1bf040d0cb5db99
+
 ---
 
 # Audio, vídeo y cámara
@@ -45,6 +49,7 @@ En esta sección se ofrece información sobre la creación de aplicaciones unive
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

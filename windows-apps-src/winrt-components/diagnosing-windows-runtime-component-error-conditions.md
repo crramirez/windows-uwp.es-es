@@ -1,16 +1,18 @@
 ---
-author: martinekuan
+author: msatranjr
 title: Diagnosticar condiciones de error del componente de Windows Runtime
-description: En este artículo se proporciona información adicional acerca de las restricciones en componentes de Windows Runtime escritos con código administrado.
+description: "En este artículo se proporciona información adicional acerca de las restricciones en componentes de Windows Runtime escritos con código administrado."
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 29199b7c94c4fecd173fb96f0d8fb43692d72464
+
 ---
 
 # Diagnosticar condiciones de error del componente de Windows Runtime
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-\[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
 
 En este artículo se proporciona información adicional acerca de las restricciones en componentes de Windows Runtime escritos con código administrado. Expande la información que se proporciona en los mensajes de error de [Winmdexp.exe (herramienta de exportación de metadatos Windows Runtime)](https://msdn.microsoft.com/library/hh925576.aspx)y complementa la información sobre las restricciones que se proporciona en [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
@@ -220,17 +222,17 @@ En el UWP, los valores devueltos se considera que son parámetros de salida y lo
     > ```cs
     > using System.Runtime.InteropServices;
     > using System.Runtime.InteropServices.WindowsRuntime;
-    > 
+    >
     > [return: ReturnValueName("average")]
     > public int GetAverage(out int lowValue, out int highValue)
     > ```
     > ```vb
     > Imports System.Runtime.InteropServices
     > Imports System.Runtime.InteropServices.WindowsRuntime
-    > 
+    >
     > Public Function GetAverage(<Out> ByRef lowValue As Integer, _
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
-    > ``` 
+    > ```
 
 > **Nota**  Si cambias el nombre del valor devuelto y el nuevo nombre entra en conflicto con el nombre de otro parámetro, obtendrás el error WME1091.
 
@@ -248,6 +250,7 @@ El código de JavaScript puede acceder a los parámetros de salida de un método
 * [Winmdexp.exe (herramienta de exportación de metadatos de Windows Runtime)](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

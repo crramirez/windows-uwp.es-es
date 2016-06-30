@@ -5,8 +5,8 @@ title: "Selección de texto e imágenes"
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
 template: detail.hbs
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: a47b48f9315c51505b2c487c140011e053105556
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 6533e76981d815c2d62008c17e2320fc770dfcc9
 
 ---
 
@@ -23,7 +23,7 @@ En este artículo se describe la selección y manipulación de texto, imágenes 
 -   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Qué hacer y qué no hacer
+## Qué hacer y qué no hacer
 
 
 -   Usa glifos de fuentes al implementar una interfaz de usuario de barra de redimensionamiento propia. La barra de redimensionamiento es una combinación de dos fuentes Segoe UI que se encuentran disponibles en todo el sistema. El uso de recursos de fuente simplifica los problemas de representación a diferentes ppp y da resultado con las diversas mesetas de escalado de la interfaz de usuario. Cuando implementes tus propias barras de redimensionamiento, estas deben compartir los siguientes rasgos de interfaz de usuario:
@@ -39,7 +39,7 @@ En este artículo se describe la selección y manipulación de texto, imágenes 
 
 -   No permitas la selección de elementos de interfaz de usuario, como controles, etiquetas, imágenes, contenido registrado, etc. Por lo general, las aplicaciones de Windows solo permiten seleccionar dentro de controles específicos. Los controles como los botones, las etiquetas y los logotipos no son seleccionables. Evalúa si la selección puede ser un problema para la aplicación y, si es así, identifica las áreas de la interfaz de usuario donde debes prohibir la selección. 
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Instrucciones de uso adicionales
+## Instrucciones de uso adicionales
 
 
 La selección y la manipulación de texto son particularmente sensibles frente a los retos que pueden presentar las interacciones táctiles en la experiencia del usuario. Las entradas mediante mouse, pluma o lápiz y teclado tienen un alto grado de detalle: el clic de un mouse o el contacto de una pluma o lápiz por lo general se asignan a un solo píxel, y una tecla se considera presionada o no presionada. La entrada táctil no es precisa: es difícil asignar toda la superficie de la punta de un dedo a una ubicación x-y específica en la pantalla para situar un símbolo de intercalación de texto de manera precisa.
@@ -103,7 +103,7 @@ Por ejemplo, las barras de redimensionamiento también se pueden usar en aplicac
 
 *Editor de imágenes con barras de redimensionamiento de recorte.*
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 
 
@@ -135,6 +135,6 @@ Por ejemplo, las barras de redimensionamiento también se pueden usar en aplicac
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

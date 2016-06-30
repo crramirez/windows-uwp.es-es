@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: Este caso práctico, que se basa en la información proporcionada en Bookstore1, comienza con una aplicación Universal 8.1 que muestra datos agrupados en un control SemanticZoom.
-title: Caso práctico de Windows Runtime 8.x a UWP Bookstore2
+description: "Este caso práctico, que se basa en la información proporcionada en Bookstore1, comienza con una aplicación Universal 8.1 que muestra datos agrupados en un control SemanticZoom."
+title: "Caso práctico de Windows Runtime 8.x a UWP Bookstore2"
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 97682b2b914707874dcac998f7db5f2029ad433e
+
 ---
 
 # Caso práctico de Windows Runtime 8.x a UWP: Bookstore2
@@ -169,6 +173,7 @@ En este caso práctico se ha observado una interfaz de usuario más ambiciosa qu
 El siguiente caso práctico es [QuizGame](w8x-to-uwp-case-study-quizgame.md), en el que vamos a ver cómo mostrar datos agrupados y obtener acceso a ellos.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

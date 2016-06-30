@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-title: Elección de un lenguaje de programación
+title: "Elección de un lenguaje de programación"
 ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
-description: Elección de un lenguaje de programación
+description: "Elección de un lenguaje de programación"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 10fa4a349621c8e7b248c7daf4d7cdf967e25255
+
 ---
 
 # Introducción: elección de un lenguaje de programación
@@ -140,6 +144,7 @@ C# es un lenguaje sencillo de entender e incluye muchos marcos y clases de sopor
 [Introducción: desplazamiento por Visual Studio](getting-started-getting-around-in-visual-studio.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

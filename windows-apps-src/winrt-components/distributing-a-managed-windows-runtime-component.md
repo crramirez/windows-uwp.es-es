@@ -1,20 +1,20 @@
 ---
-author: martinekuan
+author: msatranjr
 title: Distribuir un componente de Windows Runtime administrado
 description: Puedes distribuir tu componente de Windows Runtime de copia de archivos.
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 3d7a51ed13f63ca9d6070fbbe860c653c4deaf07
+
 ---
 
 
 # Distribuir un componente de Windows Runtime administrado
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-
-\[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
-
-Puedes distribuir tu componente de Windows Runtime de copia de archivos. Sin embargo, si el componente consta de muchos archivos, la instalación puede ser tediosa para los usuarios. Además, los errores en la colocación de archivos o la incapacidad para establecer referencias pueden causarles problemas. Puedes empaquetar un componente complejo como un SDK de extensión de Visual Studio, para que sea fácil de instalar y usar. Los usuarios solamente necesitan establecer una referencia para todo el paquete. Pueden localizar e instalar tu componente usando el cuadro de diálogo **Extensiones y actualizaciones**, como se describe en [Búsqueda y uso de extensiones de Visual Studio](https://msdn.microsoft.com/library/vstudio/dd293638.aspx), en la biblioteca de MSDN.
+Puedes distribuir tu componente de Windows Runtime mediante la copia de archivos. Sin embargo, si el componente consta de muchos archivos, la instalación puede ser tediosa para los usuarios. Además, los errores en la colocación de archivos o la incapacidad para establecer referencias pueden causarles problemas. Puedes empaquetar un componente complejo como un SDK de extensión de Visual Studio, para que sea fácil de instalar y usar. Los usuarios solamente necesitan establecer una referencia para todo el paquete. Pueden localizar e instalar tu componente usando el cuadro de diálogo **Extensiones y actualizaciones**, como se describe en [Búsqueda y uso de extensiones de Visual Studio](https://msdn.microsoft.com/library/vstudio/dd293638.aspx), en la biblioteca de MSDN.
 
 ## Planear un componente de Windows Runtime distribuible
 
@@ -75,6 +75,6 @@ Normalmente, un componente complejo incluye los recursos de Windows, pero debes 
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

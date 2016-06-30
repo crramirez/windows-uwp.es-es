@@ -3,6 +3,9 @@ author: Mtoepke
 title: Configurar el entorno de desarrollo de UWP en Xbox
 description: Pasos para configurar y probar el entorno de desarrollo de UWP en Xbox.
 area: Xbox
+ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
+ms.openlocfilehash: d56206f990e7885af4935401356bd3a2ce2cd292
+
 ---
 
 # Configurar el entorno de desarrollo de UWP en Xbox
@@ -23,12 +26,16 @@ En este artículo se describen los pasos para configurar y probar el entorno de 
 
 ## Configuración del SDK de Windows 10
 
-Instala la compilación 14295 de la versión preliminar del SDK de Windows 10. Para obtener información sobre la instalación, consulta [Descarga las actualizaciones para desarrolladores de Insider Preview](http://go.microsoft.com/fwlink/p/?LinkId=780552).
+Instala la versión preliminar del SDK de Windows 10 más reciente. Para obtener información sobre la instalación, consulta [Descarga las actualizaciones para desarrolladores de Insider Preview](http://go.microsoft.com/fwlink/p/?LinkId=780552).
 
   > **Importante**
             &nbsp;&nbsp;Debes instalar el SDK más reciente, pero _no_ necesitas instalar la última versión de Windows Insider Preview del sistema operativo.
 
-## Crea tu primera aplicación
+## Configuración de la consola Xbox One
+
+Para poder implementar una aplicación en tu Xbox One, un usuario debe haber iniciado sesión en la consola. Puedes usar tu cuenta de Xbox Live existente o crear una nueva cuenta para la consola en el modo de desarrollador. 
+
+## Crear tu primera aplicación
 
 1. Asegúrate de que el equipo de desarrollo esté en la misma red local que la consola Xbox One de destino. Por lo general, esto significa que deben usar el mismo enrutador y estar en la misma subred. Se recomienda una conexión de red con cable.
 
@@ -101,6 +108,7 @@ Enhorabuena, has creado e implementado tu primera aplicación para UWP en Xbox c
 ----
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

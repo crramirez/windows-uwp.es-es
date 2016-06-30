@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Agregar audio a la muestra de Marble Maze
-description: En este documento se describen las prácticas clave que se deben tener en cuenta al trabajar con audio y se muestra la aplicación de dichas prácticas en Marble Maze.
+description: "En este documento se describen las prácticas clave que se deben tener en cuenta al trabajar con audio y se muestra la aplicación de dichas prácticas en Marble Maze."
 ms.assetid: 77c23d0a-af6d-17b5-d69e-51d9885b0d44
+translationtype: Human Translation
+ms.sourcegitcommit: c663692e31a62fdf40df9d706070d0d2ce0e1cdd
+ms.openlocfilehash: 0b2a0cb240431a49ef2bdb82a188f3dcb0294fc5
+
 ---
 
 # Agregar audio al ejemplo de Marble Maze
@@ -780,6 +784,7 @@ Marble Maze también usa la marca **m\_engineExperiencedCriticalError** para pro
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

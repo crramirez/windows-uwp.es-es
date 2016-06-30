@@ -1,9 +1,13 @@
 ---
 author: Jwmsft
-Description: Usa los controles de vista de lista o de vista de cuadrícula para mostrar y manipular los conjuntos de datos, como una galería de imágenes o un conjunto de mensajes de correo electrónico.
-title: Vista de lista y vista de cuadrícula
+Description: "Usa los controles de vista de lista o de vista de cuadrícula para mostrar y manipular los conjuntos de datos, como una galería de imágenes o un conjunto de mensajes de correo electrónico."
+title: "Vista de lista y vista de cuadrícula"
 label: List view and grid view
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: e878b11bbecd4a1007f8b5f56bde5741da18c1e1
+
 ---
 # ListView y GridView
 
@@ -393,8 +397,7 @@ private void ListView1_SelectionChanged(object sender, SelectionChangedEventArgs
 
 ### Modo de clic
 
-Puedes cambiar una vista de lista para que un usuario haga clic en elementos, como botones, en lugar de seleccionarlos. Por ejemplo, resulta útil si tu aplicación navega a una página nueva cuando el usuario hace clic en un elemento de una lista o cuadrícula. 
-Para habilitar este comportamiento:
+Puedes cambiar una vista de lista para que un usuario haga clic en elementos, como botones, en lugar de seleccionarlos. Por ejemplo, resulta útil si tu aplicación navega a una página nueva cuando el usuario hace clic en un elemento de una lista o cuadrícula. Para habilitar este comportamiento:
 - Establece **SelectionMode** en **None**.
 - Establece **IsItemClickEnabled** en **true**.
 - Controla el evento **ItemClick** para que haga algo cuando el usuario haga clic en un elemento.
@@ -504,6 +507,7 @@ private void DeselectAllButton_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

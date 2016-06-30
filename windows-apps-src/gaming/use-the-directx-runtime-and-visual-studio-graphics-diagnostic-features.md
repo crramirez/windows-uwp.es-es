@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Herramientas de diagnóstico de gráficos
-description: Obtén información sobre cómo obtener y usar las características de diagnóstico de elementos gráficos como, por ejemplo, el uso de la GPU, los análisis de fotogramas de gráficos y la depuración de elementos gráficos en Visual Studio.
+title: "Herramientas de diagnóstico de gráficos"
+description: "Obtén información sobre cómo obtener y usar las características de diagnóstico de elementos gráficos como, por ejemplo, el uso de la GPU, los análisis de fotogramas de gráficos y la depuración de elementos gráficos en Visual Studio."
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f266cb50893fd37162f21be169d6daf6e37c6bb9
+
 ---
 
 # Herramientas de diagnóstico de gráficos
@@ -35,6 +39,7 @@ Entre las características del diagnóstico de elementos gráficos se incluye la
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

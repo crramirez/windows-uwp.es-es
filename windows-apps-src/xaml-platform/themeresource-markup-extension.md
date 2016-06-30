@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Proporciona un valor para cualquier atributo XAML mediante la evaluación de una referencia a un recurso, con lógica del sistema adicional que recupera diferentes recursos en función del tema activo en ese momento.
-title: Extensión de marcado ThemeResource
+description: "Proporciona un valor para cualquier atributo XAML mediante la evaluación de una referencia a un recurso, con lógica del sistema adicional que recupera diferentes recursos en función del tema activo en ese momento."
+title: "Extensión de marcado ThemeResource"
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
+translationtype: Human Translation
+ms.sourcegitcommit: 9c657f906e6dedb259b8a98373f56ac5a63bd845
+ms.openlocfilehash: 246c991bbdbc95e73ea8d4884cd4d617592bfc51
+
 ---
 
 # Extensión de marcado {ThemeResource}
@@ -152,6 +156,7 @@ Cuando exista una clave de recurso como parte del uso de cualquier **{ThemeResou
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

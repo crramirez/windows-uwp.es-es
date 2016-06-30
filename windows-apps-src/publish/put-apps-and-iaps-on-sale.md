@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Puedes promocionar tu aplicación o producto desde la aplicación (IAP) en la Tienda Windows poniéndolos en oferta durante un tiempo limitado.
+Description: "Puedes promocionar tu aplicación o producto desde la aplicación (IAP) en la Tienda Windows poniéndolos en oferta durante un tiempo limitado."
 title: Poner aplicaciones e IAP en oferta
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b53d8d4ddcf3f75ffe039203377d12fd02e52f07
+
 ---
 
 # Poner aplicaciones e IAP en oferta
@@ -65,6 +69,7 @@ Si la oferta no ha comenzado en el momento de completarse el proceso de certific
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

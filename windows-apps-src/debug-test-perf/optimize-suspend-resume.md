@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: E1943DCE-833F-48AE-8402-CD48765B24FC
-title: Optimizar la suspensión y reanudación
-description: Crea aplicaciones para la Plataforma universal de Windows (UWP) que optimicen el uso del sistema del ciclo de vida de los procesos, para reanudarlo de forma eficaz tras su suspensión o finalización.
+title: "Optimizar la suspensión y reanudación"
+description: "Crea aplicaciones para la Plataforma universal de Windows (UWP) que optimicen el uso del sistema del ciclo de vida de los procesos, para reanudarlo de forma eficaz tras su suspensión o finalización."
+translationtype: Human Translation
+ms.sourcegitcommit: e0f04c4242891b25db460d4852ab8cc070d82260
+ms.openlocfilehash: 9fee4ab9c55c1243c04c2ed5f007412751528037
+
 ---
 # Optimizar la suspensión y reanudación
 
@@ -89,6 +93,7 @@ La mayoría de las aplicaciones no necesitan controlar el evento [**Resuming**](
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

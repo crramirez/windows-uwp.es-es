@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Migrar de DirectX 9 a la Plataforma universal de Windows (UWP)
-description: En esta sección se incluyen artículos, información general y tutoriales para migrar juegos de DirectX 9 a la Plataforma universal de Windows (UWP).
+title: "Migrar de DirectX 9 a la Plataforma universal de Windows (UWP)"
+description: "En esta sección se incluyen artículos, información general y tutoriales para migrar juegos de DirectX 9 a la Plataforma universal de Windows (UWP)."
 ms.assetid: 536c0b99-cdf3-1527-1ee2-4187f50a2cf0
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 1cb77db78fe368c567990c9521122b42ef10ec65
+
 ---
 
 # Portar de DirectX 9 a la Plataforma universal de Windows (UWP)
@@ -35,6 +39,7 @@ Esta sección incluye artículos, información general y tutoriales para migrar 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

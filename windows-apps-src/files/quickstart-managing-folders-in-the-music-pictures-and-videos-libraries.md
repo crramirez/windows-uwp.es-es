@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
-title: Archivos y carpetas de las bibliotecas de música, imágenes y vídeos
-description: Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados.
+title: "Archivos y carpetas de las bibliotecas de música, imágenes y vídeos"
+description: "Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 332f89f53a55d5783f7497ca5c6cd601dcee5217
+
 ---
 
 # Archivos y carpetas de las bibliotecas de música, imágenes y vídeos
@@ -322,6 +326,7 @@ using (var sourceStream = await sourceFile.OpenReadAsync())
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

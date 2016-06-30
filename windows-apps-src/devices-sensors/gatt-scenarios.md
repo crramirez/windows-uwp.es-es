@@ -1,8 +1,11 @@
 ---
-author: DBirtolo
+author: msatranjr
 ms.assetid: 28B30708-FE08-4BE9-AE11-5429F963C330
 title: Bluetooth GATT
-description: Este artículo proporciona información general sobre el perfil de atributo genérico (GATT) de Bluetooth para las aplicaciones para la Plataforma universal de Windows (UWP), junto con código de muestra para tres escenarios habituales de GATT
+description: "Este artículo proporciona información general sobre el perfil de atributo genérico (GATT) de Bluetooth para las aplicaciones para la Plataforma universal de Windows (UWP), junto con código de muestra para tres escenarios habituales de GATT"
+ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
+ms.openlocfilehash: 664f6ce7829c9e9a6674daa6cdc21e7561ff094b
+
 ---
 # Perfil GATT de Bluetooth
 
@@ -396,6 +399,7 @@ void MainPage::BatteryLevelChanged(
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

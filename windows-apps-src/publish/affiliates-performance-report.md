@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Para ver los datos de rendimiento de los anuncios de filiales en tus aplicaciones, usa los informes de rendimiento de filiales en el nivel de la cuenta y de la aplicación en el panel del Centro de desarrollo de Windows.
+Description: "Para ver los datos de rendimiento de los anuncios de filiales en tus aplicaciones, usa los informes de rendimiento de filiales en el nivel de la cuenta y de la aplicación en el panel del Centro de desarrollo de Windows."
 title: Informe de rendimiento de filiales
 ms.assetid: 38AD494C-0F85-4FED-8732-9064D1FC503D
+translationtype: Human Translation
+ms.sourcegitcommit: 577b238875b2d0edd47d9ad0e5e73ca79a6acf75
+ms.openlocfilehash: 8c200c4f4b743aeaae71d6a6179fc15db0e7ec5e
+
 ---
 
 # Informe de rendimiento de filiales
@@ -45,6 +49,7 @@ La sección **Rendimiento de filiales** en la página **Información general del
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

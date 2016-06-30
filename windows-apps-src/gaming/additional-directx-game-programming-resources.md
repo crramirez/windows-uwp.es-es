@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Recursos de programación de juegos
-description: Para obtener más información sobre la programación de juegos en Windows, consulta los siguientes recursos.
+title: "Recursos de programación de juegos"
+description: "Para obtener más información sobre la programación de juegos en Windows, consulta los siguientes recursos."
 ms.assetid: b84dd17a-756b-2369-8fee-f1ec7d865239
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 598d5d1afffd394b66aa7af23f22e7a13af48208
+
 ---
 
 # Recursos de programación de juegos
@@ -80,6 +84,7 @@ Para obtener más información sobre la programación de juegos en Windows, cons
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

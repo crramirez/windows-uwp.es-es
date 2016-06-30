@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Crear y usar un servicio de aplicación
-description: Obtén información sobre cómo escribir una aplicación para la Plataforma universal de Windows (UWP) que pueda proporcionar servicios a otras aplicaciones para UWP y cómo consumir esos servicios.
+author: TylerMSFT
+title: "Crear y usar un servicio de aplicación"
+description: "Obtén información sobre cómo escribir una aplicación para la Plataforma universal de Windows (UWP) que pueda proporcionar servicios a otras aplicaciones para UWP y cómo consumir esos servicios."
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: ade51661fa6628c76b555316f645ec6622dd299a
+
 ---
 
 # Crear y consumir un servicio de aplicación
@@ -26,7 +29,7 @@ En este procedimiento lo crearemos todo en una solución para hacerlo más senci
 En el archivo Package.appxmanifest del proyecto AppServiceProvider, agrega la siguiente extensión de AppService al elemento **&lt;Application&gt;**. Este ejemplo anuncia el servicio `com.Microsoft.Inventory` y es lo que identifica a esta aplicación como un proveedor de servicios de aplicaciones. El servicio real se implementará como una tarea en segundo plano. La aplicación de servicio de aplicaciones expone el servicio a otras aplicaciones. Se recomienda usar un estilo inverso de nombre de dominio para el nombre del servicio.
 
 ``` syntax
-... 
+...
 <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
@@ -196,7 +199,7 @@ Es necesario implementar la aplicación del proveedor del servicio de aplicacion
         {
             this.inventoryService = new AppServiceConnection();
 
-            // Here, we use the app service name defined in the app service provider's Package.appxmanifest file in the <Extension> section. 
+            // Here, we use the app service name defined in the app service provider's Package.appxmanifest file in the <Extension> section.
             this.inventoryService.AppServiceName = "com.microsoft.inventory";
 
             // Use Windows.ApplicationModel.Package.Current.Id.FamilyName within the app service provider to get this value.
@@ -388,8 +391,6 @@ namespace MyAppService
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

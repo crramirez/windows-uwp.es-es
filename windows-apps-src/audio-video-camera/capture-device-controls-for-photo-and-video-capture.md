@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 831123A7-1F40-4B74-AE9F-69AC9883B4AD
-description: Este artículo muestra cómo los controles de dispositivo de vídeo permiten escenarios de captura de fotos y vídeo mejorados, como la estabilización de imagen óptica y el zoom suave.
-title: Controles de dispositivos de captura para captura de fotos y vídeos
+description: "Este artículo muestra cómo los controles de dispositivo de vídeo permiten escenarios de captura de fotos y vídeo mejorados, como la estabilización de imagen óptica y el zoom suave."
+title: "Controles de dispositivos de captura para captura de fotos y vídeos"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c70f3e54ae5c83ccc28c47cb1e0ec236f75c3775
+
 ---
 
 # Controles de dispositivos de captura para captura de fotos y vídeos
@@ -342,6 +346,7 @@ Para establecer el nivel de zoom en el dispositivo de captura, crea un nuevo obj
 * [Capturar fotografías y vídeos con MediaCapture](capture-photos-and-video-with-mediacapture.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Los iconos adecuados armonizan con la tipografía y con el resto del lenguaje de diseño. No mezclan metáforas y comunican solo lo necesario de la manera más rápida y simple posible. 
+Description: "Los iconos adecuados armonizan con la tipografía y con el resto del lenguaje de diseño. No mezclan metáforas y comunican solo lo necesario de la manera más rápida y simple posible."
 title: Iconos
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: e5e601bf3ff9d0b1518c86130a5b0fefbb86a773
+
 ---
 
 # Iconos de aplicaciones para UWP
@@ -172,6 +176,7 @@ Los distintivos deben tener un tamaño de entre 10 y 18 píxeles en una cuadríc
 * [Directrices sobre los activos de icono y de ventanas](../controls-and-patterns/tiles-and-notifications-app-assets.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

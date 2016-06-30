@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Clases de configuración de plantillas
-title: Clases de configuración de plantillas
+description: "Clases de configuración de plantillas"
+title: "Clases de configuración de plantillas"
 ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 1ae6ca45808eae8943f471cceaf78fc5e8d81410
+
 ---
 
 # Clases de configuración de plantillas
@@ -113,6 +117,7 @@ Cuando uses valores **TemplateSettings** como parte de la plantilla de control, 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

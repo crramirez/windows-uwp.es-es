@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Puedes usar la clase PropertyPath y la sintaxis de cadena para crear una instancia de un valor PropertyPath en XAML o en código.
+description: "Puedes usar la clase PropertyPath y la sintaxis de cadena para crear una instancia de un valor PropertyPath en XAML o en código."
 title: Sintaxis de Property-path
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0b1851bc9d19de5b678f8c6c3a255c0ba3057a85
+
 ---
 
 # Sintaxis de Property-path
@@ -116,6 +120,7 @@ La mayor parte de las veces, puedes aplicar una clase [**PropertyPath**](https:/
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

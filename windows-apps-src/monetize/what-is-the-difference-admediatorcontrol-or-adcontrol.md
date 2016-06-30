@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 9165f709-71d7-42cf-9b30-3190fe029fb4
-description: Obtén información sobre las diferencias entre la clase AdControl en las bibliotecas de Microsoft Advertising y la clase AdMediatorControl en las bibliotecas de mediación de anuncios.
-title: Cuál es la diferencia - AdMediator o AdControl
+description: "Obtén información sobre las diferencias entre la clase AdControl en las bibliotecas de Microsoft Advertising y la clase AdMediatorControl en las bibliotecas de mediación de anuncios."
+title: "Cuál es la diferencia - AdMediator o AdControl"
+translationtype: Human Translation
+ms.sourcegitcommit: 8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707
+ms.openlocfilehash: 291e1c4d707e8987d29ae5840248918543d7d12a
+
 ---
 
 # Cuál es la diferencia: AdMediator o AdControl
@@ -42,6 +46,7 @@ Si solo quieres mostrar anuncios de banner de Microsoft (no de otras redes de an
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

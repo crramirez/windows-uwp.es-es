@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Usar un desencadenador de mantenimiento
-description: Aprende a usar la clase MaintenanceTrigger para ejecutar código ligero en segundo plano mientras el dispositivo está enchufado.
+description: "Aprende a usar la clase MaintenanceTrigger para ejecutar código ligero en segundo plano mientras el dispositivo está enchufado."
 ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 0da08ba5431f4d5c56d06657d3d6123a67ba5079
+
 ---
 
 # Usar un desencadenador de mantenimiento
@@ -35,12 +38,12 @@ Este código de ejemplo crea un desencadenador que se ejecuta una vez cada hora:
 > [!div class="tabbedCodeSnippets"]
 > ```cs
 > uint waitIntervalMinutes = 60;
-> 
+>
 > MaintenanceTrigger taskTrigger = new MaintenanceTrigger(waitIntervalMinutes, false);
 > ```
 > ```cpp
 > unsigned int waitIntervalMinutes = 60;
-> 
+>
 > MaintenanceTrigger ^ taskTrigger = ref new MaintenanceTrigger(waitIntervalMinutes, false);
 > ```
 
@@ -71,16 +74,16 @@ Este código de ejemplo crea un desencadenador que se ejecuta una vez cada hora:
     > ```cs
     > string entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > string taskName   = "Maintenance background task example";
-    > 
+    >
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, taskTrigger, exampleCondition);
     > ```
     > ```cpp
     > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > String ^ taskName   = "Maintenance background task example";
-    > 
+    >
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, taskTrigger, exampleCondition);
     > ```
-    
+
     > **Nota** Para todas las familias de dispositivos, excepto la de equipos de escritorio, si el dispositivo dispone de poca memoria, las tareas en segundo plano pueden finalizarse. Si no se expone una excepción de falta de memoria o la aplicación no la controla, la tarea en segundo plano finalizará sin que se muestre ninguna advertencia y sin que se genere el evento OnCanceled. Esto contribuye a garantizar la experiencia del usuario de la aplicación en primer plano. La tarea en segundo plano debe estar diseñada para controlar este escenario.
 
     > **Nota** Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquier tipo de desencadenador en segundo plano.
@@ -119,8 +122,6 @@ Este código de ejemplo crea un desencadenador que se ejecuta una vez cada hora:
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

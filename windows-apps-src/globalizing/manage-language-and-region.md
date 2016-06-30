@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: Controla el modo en que Windows selecciona los recursos de la interfaz de usuario y da formato a los elementos de la interfaz de usuario de la aplicación mediante las diversas opciones de idioma y región que ofrece Windows.
-title: Administrar los idiomas y la región
+Description: "Controla el modo en que Windows selecciona los recursos de la interfaz de usuario y da formato a los elementos de la interfaz de usuario de la aplicación mediante las diversas opciones de idioma y región que ofrece Windows."
+title: "Administrar los idiomas y la región"
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 label: Manage language and region
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 294f087fffeefda67ddacd09636915144bf18ff4
+
 ---
 
 # Administrar los idiomas y la región
@@ -225,6 +229,7 @@ En la siguiente tabla se incluyen ejemplos de lo que el usuario vería en la int
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

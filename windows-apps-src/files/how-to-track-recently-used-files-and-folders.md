@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: Seguimiento de los archivos y carpetas usados recientemente
-description: Realiza un seguimiento de los archivos a los que el usuario accede con mayor frecuencia; para ello, agrégalos a la lista de elementos usados recientemente (MRU) de la aplicación.
+description: "Realiza un seguimiento de los archivos a los que el usuario accede con mayor frecuencia; para ello, agrégalos a la lista de elementos usados recientemente (MRU) de la aplicación."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 83100d1246dd18324104a63c9cd950e2ff1fce0b
+
 ---
 # Realizar un seguimiento de los archivos y carpetas usados recientemente
 
@@ -109,6 +113,7 @@ Cuando un usuario selecciona un elemento, considera la posibilidad de agregarlo 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

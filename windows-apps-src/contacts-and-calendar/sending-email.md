@@ -4,8 +4,8 @@ description: "Se muestra cómo iniciar el cuadro de diálogo de redacción de co
 title: "Enviar correo electrónico"
 ms.assetid: 74511E90-9438-430E-B2DE-24E196A111E5
 keywords: contacts, email, send
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: b4b5b029c321256028993e283395a91bd0ed3d7c
+ms.sourcegitcommit: 252e144b2436f047f7b0849bb6e5aee87b2e3464
+ms.openlocfilehash: ff0d2cd86f8ba422db7a26565c52293a3e21a018
 
 ---
 
@@ -27,7 +27,7 @@ Se muestra cómo iniciar el cuadro de diálogo de redacción de correo electrón
 Crea un nuevo objeto [**EmailMessage**](https://msdn.microsoft.com/library/windows/apps/Dn631270) y define los datos que quieras que se rellenen previamente en el cuadro de diálogo de redacción de correo electrónico. Llama a [**ShowComposeNewEmailAsync**](https://msdn.microsoft.com/library/windows/apps/Dn631269) para que se muestre el cuadro de diálogo.
 
 ``` cs
-private async void ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient, 
+private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient, 
     string messageBody, 
     StorageFile attachmentFile)
 {
@@ -75,6 +75,6 @@ Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de corre
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

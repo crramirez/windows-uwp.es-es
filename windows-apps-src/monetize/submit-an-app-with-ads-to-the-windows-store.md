@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: b307fc7d-0424-459d-8c20-e37e5cfec0d0
-description: Obtén información acerca de los requisitos que deben cumplir las aplicaciones que usan las bibliotecas de Microsoft Advertising para que se puedan publicar en la Tienda.
-title: Enviar una aplicación con anuncios a la Tienda Windows
+description: "Obtén información acerca de los requisitos que deben cumplir las aplicaciones que usan las bibliotecas de Microsoft Advertising para que se puedan publicar en la Tienda."
+title: "Enviar una aplicación con anuncios a la Tienda Windows"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: d2e6f9873b2539f9c0558abdc9ee936b938a03b1
+
 
 ---
 
@@ -25,6 +29,7 @@ Todas las aplicaciones enviadas a la Tienda Windows deben seguir las [Directivas
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

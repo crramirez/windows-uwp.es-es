@@ -5,8 +5,8 @@ title: Identificar dispositivos de entrada
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: ee5935a79b10b6c4c084457049cbb518e264be0d
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 2ebef9767520d9f54f35ba22e2681cb41766e181
 
 ---
 
@@ -21,7 +21,7 @@ Identifica los dispositivos de entrada que se conectan a un dispositivo de la Pl
 -   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 
 
-## <span id="Retrieve_mouse_properties"></span><span id="retrieve_mouse_properties"></span><span id="RETRIEVE_MOUSE_PROPERTIES"></span>Recuperar las propiedades del mouse
+## Recuperar las propiedades del mouse
 
 
 El espacio de nombres [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contiene la clase [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626) que se usa para recuperar las propiedades expuestas por uno o varios dispositivos mouse conectados. Solo es necesario crear un nuevo objeto **MouseCapabilities** y obtener las propiedades que te interesan.
@@ -44,7 +44,7 @@ private void GetMouseProperties()
 }
 ```
 
-## <span id="Retrieve_keyboard_properties"></span><span id="retrieve_keyboard_properties"></span><span id="RETRIEVE_KEYBOARD_PROPERTIES"></span>Recuperar las propiedades del teclado
+## Recuperar las propiedades del teclado
 
 
 El espacio de nombres [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contiene la clase [**KeyboardCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225623) que se usa para recuperar si hay algún teclado conectado. Solo es necesario crear un nuevo objeto **KeyboardCapabilities** y obtener la propiedad [**KeyboardPresent**](https://msdn.microsoft.com/library/windows/apps/br225625).
@@ -59,7 +59,7 @@ private void GetKeyboardProperties()
 }
 ```
 
-## <span id="Retrieve_touch_properties"></span><span id="retrieve_touch_properties"></span><span id="RETRIEVE_TOUCH_PROPERTIES"></span>Recuperar las propiedades táctiles
+## Recuperar las propiedades táctiles
 
 
 El espacio de nombres [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contiene la clase [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644) que se usa para recuperar si hay algún digitalizador táctil conectado. Solo es necesario crear un nuevo objeto **TouchCapabilities** y obtener las propiedades que te interesan.
@@ -79,7 +79,7 @@ private void GetTouchProperties()
 }
 ```
 
-## <span id="Retrieve_pointer_properties"></span><span id="retrieve_pointer_properties"></span><span id="RETRIEVE_POINTER_PROPERTIES"></span>Recuperar las propiedades del puntero
+## Recuperar las propiedades del puntero
 
 
 El espacio de nombres [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contiene la clase [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) que se usa para recuperar si hay dispositivos detectados compatibles con la entrada de puntero (táctil, teclado táctil, mouse o pluma). Solo tienes que crear un nuevo objeto **PointerDevice** y obtener las propiedades que te interesan.
@@ -175,7 +175,7 @@ private void GetPointerDevices()
     }
 ```
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 
 **Ejemplos**
@@ -195,6 +195,6 @@ private void GetPointerDevices()
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

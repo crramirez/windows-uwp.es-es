@@ -1,12 +1,16 @@
 ---
 author: mijacobs
-Description: Como representación visual del lenguaje, la tarea principal de la tipografía es ser clara. Su estilo nunca debe obstaculizar ese objetivo. No obstante, la tipografía también tiene un rol importante como componente de diseño, con un gran efecto en la densidad y la complejidad del diseño, y en la experiencia de usuario de ese diseño.
-title: Tipografía
+Description: "Como representación visual del lenguaje, la tarea principal de la tipografía es ser clara. Su estilo nunca debe obstaculizar ese objetivo. No obstante, la tipografía también tiene un rol importante como componente de diseño, con un gran efecto en la densidad y la complejidad del diseño, y en la experiencia de usuario de ese diseño."
+title: "Tipografía"
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
 label: Typography
 template: detail.hbs
 extraBodyClass: style-typography
-brief: As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design.
+brief: "As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design."
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 02d5149f945bb631e385e45a295fdfe08bd98fb0
+
 ---
 
 # Tipografía para aplicaciones UWP
@@ -79,7 +83,7 @@ El espacio entre palabras predeterminado siempre es 100 % y el espaciado de las 
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            Usa la propiedad [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) en un control de texto XAML para controlar el interletraje, y [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar el seguimiento. De forma predeterminada, Typography.Kerning se ha establecido en “true”, y FontStretch se ha establecido en “Normal”; ambos son valores recomendados.
+Usa la propiedad [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) en un control de texto XAML para controlar el interletraje, y [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar el seguimiento. De forma predeterminada, Typography.Kerning se ha establecido en “true”, y FontStretch se ha establecido en “Normal”; ambos son valores recomendados.
     </div>
 </aside>
 
@@ -125,7 +129,7 @@ Cuando el texto se extiende más allá de la alto del icono, la primera línea d
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            La propiedad [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) de XAML proporciona acceso a la altura de las mayúsculas y a la métrica de los tipos de letra de línea de base. Puedes usar esta opción para visualizar de forma vertical, centrar o alinear en la parte superior el contenido.
+La propiedad [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) de XAML proporciona acceso a la altura de las mayúsculas y a la métrica de los tipos de letra de línea de base. Puedes usar esta opción para visualizar de forma vertical, centrar o alinear en la parte superior el contenido.
     </div>
 </aside>
 
@@ -150,14 +154,14 @@ Para crear la jerarquía de una rampa de tipografías se deben usar fuentes Sego
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            La mayoría de niveles de la rampa están disponibles como [recursos estáticos](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) de XAML que siguen la convención de nomenclatura `*TextBlockStyle` (ex: 
+La mayoría de los niveles de la rampa están disponibles como [recursos estáticos](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) de XAML que siguen la convención de nomenclatura `*TextBlockStyle` (ej.: `HeaderTextBlockStyle`). 
     </div>
 </aside>
 
 
 ## Texto principal y secundario
 
-Para crear otras jerarquías adicionales no incluidas en la rampa de tipografías, establece el texto secundario en el 60 % de opacidad. En la [paleta de colores de temas](color.md#color-themes), se usaría BaseMedium. El texto principal siempre debe tener un 100% de opacidad, o BaseHigh.
+Para crear otras jerarquías no incluidas en la rampa de tipos, establece el texto secundario en el 60 % de opacidad. En la [paleta de colores de temas](color.md#color-themes), se usaría BaseMedium. El texto principal siempre debe tener un 100% de opacidad, o BaseHigh.
 
 
 ## Títulos completamente en mayúsculas
@@ -180,6 +184,7 @@ Sin embargo, en algunos idiomas los nombres propios pueden cambiar su significad
 * [Controles de texto](../controls-and-patterns/text-controls.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,19 +1,20 @@
 ---
-author: martinekuan
+author: msatranjr
 title: Pasar matrices a un componente de Windows Runtime
-description: En la Plataforma universal de Windows (UWP), los parámetros son o bien para la entrada, o bien para la salida, nunca para ambas. Esto significa que el contenido de una matriz que se pasa a un método, así como la propia matriz, se dispondrá para la entrada o bien para la salida.
+description: "En la Plataforma universal de Windows (UWP), los parámetros son o bien para la entrada, o bien para la salida, nunca para ambas. Esto significa que el contenido de una matriz que se pasa a un método, así como la propia matriz, se dispondrá para la entrada o bien para la salida."
 ms.assetid: 8DE695AC-CEF2-438C-8F94-FB783EE18EB9
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 21e4b504b4adc6e2cb9b16d377781aaaab6a4aac
+
 ---
 
 # Pasar matrices a un componente de Windows Runtime
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-\[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
-
-En la Plataforma universal de Windows (UWP), los parámetros son de entrada o de salida, nunca para ambas opciones. Esto significa que el contenido de una matriz que se pasa a un método, así como de la propia matriz, es, o bien para la entrada, o bien para la salida. Si el contenido de la matriz es para la entrada, el método lee la matriz pero no escribe en ella. Si el contenido de la matriz es para la salida, el método escribe en la matriz pero no la lee. Esto representa un problema para los parámetros de matriz, porque las matrices de .NET Framework son tipos de referencia y el contenido de una matriz es mutable incluso cuando la referencia de la matriz se pasa por valor (**ByVal** en Visual Basic). La [Herramienta de exportación de metadatos de Windows Runtime (Winmdexp.exe)](https://msdn.microsoft.com/library/hh925576.aspx) requiere que especifiques el uso previsto de la matriz si no está claro a partir del contexto, mediante la aplicación del atributo ReadOnlyArrayAttribute o el atributo WriteOnlyArrayAttribute en el parámetro. El uso de matrices se determina de la siguiente manera:
+En la Plataforma universal de Windows (UWP), los parámetros son o bien para la entrada, o bien para la salida, nunca para ambas. Esto significa que el contenido de una matriz que se pasa a un método, así como de la propia matriz, es, o bien para la entrada, o bien para la salida. Si el contenido de la matriz es para la entrada, el método lee la matriz pero no escribe en ella. Si el contenido de la matriz es para la salida, el método escribe en la matriz pero no la lee. Esto representa un problema para los parámetros de matriz, porque las matrices de .NET Framework son tipos de referencia y el contenido de una matriz es mutable incluso cuando la referencia de la matriz se pasa por valor (**ByVal** en Visual Basic). La [Herramienta de exportación de metadatos de Windows Runtime (Winmdexp.exe)](https://msdn.microsoft.com/library/hh925576.aspx) requiere que especifiques el uso previsto de la matriz si no está claro a partir del contexto, mediante la aplicación del atributo ReadOnlyArrayAttribute o el atributo WriteOnlyArrayAttribute en el parámetro. El uso de matrices se determina de la siguiente manera:
 
 -   Para el valor devuelto o para un parámetro de salida (un parámetro **ByRef** con el atributo [OutAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.outattribute.aspx) en Visual Basic), la matriz siempre es solo de salida. No apliques el atributo ReadOnlyArrayAttribute. El atributo WriteOnlyArrayAttribute se permite en los parámetros de salida, pero es redundante.
 
@@ -40,7 +41,7 @@ Si un método debe aceptar una matriz de entrada, modifica el contenido de la ma
 >     ' Manipulate the copy.
 >     '   ...
 >     Return output
-> End Function 
+> End Function
 > ```
 
 Te recomendamos que hagas una copia de la matriz de entrada inmediatamente y manipules la copia. Esto ayuda a garantizar que el método se comporte del mismo modo independientemente de si tu componente es llamado por el código de .NET Framework.
@@ -63,6 +64,6 @@ Si el llamador es código administrado, la matriz original está disponible para
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

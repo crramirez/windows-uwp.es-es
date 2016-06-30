@@ -5,8 +5,8 @@ title: "Información básica sobre interacción"
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
-ms.sourcegitcommit: 1221928ebea4a2a926154ed1148e49bdb1e0834c
-ms.openlocfilehash: 7c2d3bd1ab2d2f4923cf84834a73fd1c58113212
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 068bb7d0c7af4b55ab10a955c563988f5123e5eb
 
 ---
 
@@ -15,13 +15,13 @@ ms.openlocfilehash: 7c2d3bd1ab2d2f4923cf84834a73fd1c58113212
 
 ![Tipos de entrada de Windows](images/input-interactions/icons-inputdevices03.png)
 
-Las interacciones del usuario en la Plataforma universal de Windows (UWP) son una combinación de orígenes de entrada y salida (tales como mouse, teclado, lápiz, función táctil, panel táctil, voz, **Cortana**, controlador, gestos, miradas, etc.), junto con diversos modos o modificadores, que permiten experiencias ampliadas (incluidos la rueda y los botones del mouse, los botones de borrador de lápiz y de menú contextual, el teclado táctil y los servicios de aplicaciones de segundo plano). 
+Las interacciones del usuario en la Plataforma universal de Windows (UWP) son una combinación de orígenes de entrada y salida (tales como mouse, teclado, lápiz, función táctil, panel táctil, voz, **Cortana**, controlador, gestos, miradas, etc.), junto con diversos modos o modificadores, que permiten experiencias ampliadas (incluidos la rueda y los botones del mouse, los botones de borrador de lápiz y de menú contextual, el teclado táctil y los servicios de aplicaciones de segundo plano).
 
 UWP usa un sistema "inteligente" de interacción contextual que, en la mayoría de los casos, elimina la necesidad de controlar individualmente los tipos únicos de entradas que recibe la aplicación. Esto incluye el control de la función táctil, el panel táctil, el mouse y la entrada manuscrita como un tipo de puntero genérico para admitir gestos estáticos (como presionar o mantener presionado), gestos de manipulación (como deslizar para movimiento panorámico) o la representación de la entrada de lápiz digital.
 
 Familiarízate con cada tipo de dispositivo de entrada y sus comportamientos, capacidades y limitaciones con determinados factores de forma. Esto puede ayudarte a decidir si los controles de plataforma y las prestaciones son suficientes para tu aplicación o requieren que proporciones experiencias de interacción personalizadas.
 
-## <span id="Cortana"></span><span id="cortana"></span><span id="CORTANA"></span>Cortana
+## Cortana
 
 
 En Windows 10, la extensibilidad **Cortana** te permite controlar los comandos de voz desde un usuario e iniciar tu aplicación para llevar a cabo una única acción.
@@ -44,7 +44,7 @@ Al integrar la funcionalidad básica de tu aplicación y ofrecer un punto de ent
 Más información en las [Directrices para el diseño de Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233).
  
 
-## <span id="Speech"></span><span id="speech"></span><span id="SPEECH"></span>Voz
+## Voz
 
 
 Voz es un método eficaz y natural para que los usuarios interactúen con las aplicaciones. Es una forma fácil y precisa de comunicarse con aplicaciones y permite que los usuarios sean productivos y se mantengan informados en diversas situaciones.
@@ -68,19 +68,19 @@ Uso típico
 
 Existen tres modos de interacción de Voz:
 
-<span id="Natural_language"></span><span id="natural_language"></span><span id="NATURAL_LANGUAGE"></span>Lenguaje natural  
+Lenguaje natural  
 Lenguaje natural hace referencia a cómo interactuamos oralmente con usuarios de forma regular. Nuestra voz varía de una persona a otra y de una situación a otra, y normalmente se entiende. Cuando no es así, solemos usar palabras diferentes y otro orden de las palabras para obtener el mismo concepto.
 
 Las interacciones del lenguaje natural con una aplicación son similares: hablamos a la aplicación a través de nuestro dispositivo como si fuera una persona y esperamos que este comprenda y actúe en consecuencia.
 
 El lenguaje natural es el modo más avanzado de interacción de voz y se puede implementar y exponer a través de **Cortana**.
 
-<span id="Command_and_control"></span><span id="command_and_control"></span><span id="COMMAND_AND_CONTROL"></span>Comando y control  
+Comando y control  
 Comando y control es el uso de los comandos de voz para activar los controles y las funciones como, por ejemplo, hacer clic en un botón o seleccionar un elemento de menú.
 
 Como comando y control es esencial para una experiencia de usuario correcta, normalmente no se recomienda un solo tipo de entrada. Voz suele ser una de varias opciones de entrada para los usuarios según sus preferencias o características de hardware.
 
-<span id="Dictation"></span><span id="dictation"></span><span id="DICTATION"></span>Dictado  
+Dictado  
 El método de entrada de voz más básico. Cada expresión se convierte en texto.
 
 La función de dictado normalmente se usa cuando una aplicación no necesita comprender el significado o la intención.
@@ -88,7 +88,7 @@ La función de dictado normalmente se usa cuando una aplicación no necesita com
 Más información sobre [Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121).
  
 
-## <span id="Pen"></span><span id="pen"></span><span id="PEN"></span>Lápiz
+## Lápiz
 
 
 Un lápiz (o pluma) puede servir como un dispositivo señalador de precisión de píxeles (por ejemplo, un mouse) y es el dispositivo de entrada ideal para la entrada de lápiz digital.
@@ -119,7 +119,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 Más información en las [Directrices para el diseño de lápiz](https://msdn.microsoft.com/library/windows/apps/dn456352).
  
 
-## <span id="Touch"></span><span id="touch"></span><span id="TOUCH"></span>Función táctil
+## Función táctil
 
 
 Con la función táctil, es posible usar gestos físicos mediante uno o más dedos bien para emular la manipulación directa de los elementos de interfaz de usuario (como el movimiento panorámico, girar, cambiar el tamaño o mover), como un método de entrada alternativo (parecido al mouse o al lápiz), o bien como un método de entrada complementario (para modificar los aspectos de otra entrada, como difuminar un trazo de lápiz dibujado con un lápiz). Las experiencias táctiles como esta pueden proporcionar sensaciones más naturales y realistas para los usuarios que interactúan con los elementos en una pantalla.
@@ -150,7 +150,7 @@ En general, la función táctil:
 Más información en las [Directrices para el diseño de la función táctil](https://msdn.microsoft.com/library/windows/apps/hh465370).
  
 
-## <span id="Touchpad"></span><span id="touchpad"></span><span id="TOUCHPAD"></span>Panel táctil
+## Panel táctil
 
 
 Un panel táctil combina la entrada multitáctil indirecta con la entrada precisa de un dispositivo señalador, como un mouse. Esta combinación hace que el panel táctil sea ideal tanto para una interfaz de usuario optimizada para entrada táctil como para los destinos de menor tamaño de las aplicaciones de productividad.
@@ -170,7 +170,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 Más información en las [Directrices para el diseño del panel táctil](https://msdn.microsoft.com/library/windows/apps/dn456353).
  
 
-## <span id="Keyboard"></span><span id="keyboard"></span><span id="KEYBOARD"></span>Teclado
+## Teclado
 
 
 Un teclado es el principal dispositivo de entrada de texto y, a menudo, resulta indispensable para personas con ciertas discapacidades o para los usuarios que lo consideran una manera más rápida y eficaz de interactuar con una aplicación.
@@ -208,7 +208,7 @@ En general, un teclado:
 Más información en las [Directrices para el diseño de teclado](https://msdn.microsoft.com/library/windows/apps/hh972345).
  
 
-## <span id="Mouse"></span><span id="mouse"></span><span id="MOUSE"></span>Mouse
+## Mouse
 
 
 Un mouse es ideal para aplicaciones de productividad e interfaz de usuario de alta densidad en las que las interacciones del usuario requieren precisión a nivel de píxel para la selección de destinos y comandos.
@@ -231,7 +231,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 Más información en las [Directrices para el diseño de mouse](https://msdn.microsoft.com/library/windows/apps/dn456351).
  
 
-## <span id="Gesture"></span><span id="gesture"></span><span id="GESTURE"></span>Gesto
+## Gesto
 
 
 Un gesto es cualquier forma de movimiento del usuario que se reconoce como entrada para controlar o interactuar con una aplicación. Los gestos adoptan muchas formas, desde simplemente el uso de una mano para seleccionar como destino algo de la pantalla, pasando por patrones de movimiento específicos y aprendidos, hasta ampliaciones largas de movimiento continuo mediante todo el cuerpo. Ten cuidado al diseñar gestos personalizados, debido a que su significado puede variar en función de la configuración regional y la referencia cultural.
@@ -252,7 +252,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 
  
 
-## <span id="Gamepad_Controller"></span><span id="gamepad_controller"></span><span id="GAMEPAD_CONTROLLER"></span>Controlador para juegos y controlador
+## Controlador para juegos y controlador
 
 
 El controlador para juegos y controlador es un dispositivo muy especializado normalmente diseñado para jugar. Sin embargo, también se usa para emular la entrada de teclado básica y proporciona una experiencia de navegación en la interfaz de usuario muy similar al teclado.
@@ -272,7 +272,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 
  
 
-## <span id="Multiple_inputs"></span><span id="multiple_inputs"></span><span id="MULTIPLE_INPUTS"></span>Varias entradas
+## Varias entradas
 
 
 Acoger al máximo de usuarios y dispositivos posibles y diseñar tus aplicaciones para que funcionen con el máximo posible de tipos de entrada (gestos, voz, función táctil, panel táctil, mouse y teclado) maximiza la flexibilidad, la facilidad de uso y la accesibilidad.
@@ -304,6 +304,6 @@ Uso típico Al igual que las personas usan una combinación de voz y gestos para
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,7 +1,11 @@
 ---
 title: Conectarse a proveedores de identidades con el Administrador de cuentas web
-description: En este artículo se describe cómo usar AccountsSettingsPane para conectar la aplicación para la Plataforma universal de Windows (UWP) a proveedores de identidades externos, como Microsoft o Facebook, con las nuevas API de Administrador de cuentas web de Windows 10. 
+description: "En este artículo se describe cómo usar AccountsSettingsPane para conectar la aplicación para la Plataforma universal de Windows (UWP) a proveedores de identidades externos, como Microsoft o Facebook, con las nuevas API de Administrador de cuentas web de Windows 10."
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: c9f6a0183edc3c01566311360417c256329ef904
+ms.openlocfilehash: 6ab12d6da9c4858cf6ab16d4143cf073bb0cb275
+
 ---
 # Conectarse a proveedores de identidades con el Administrador de cuentas web
 
@@ -383,6 +387,7 @@ En teoría, puedes usar comandos de configuración para cualquier cosa. Sin emba
 [Web account management sample (Muestra de administración de cuentas web)](http://go.microsoft.com/fwlink/p/?LinkId=620621)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

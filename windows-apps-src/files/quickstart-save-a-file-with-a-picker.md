@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: Guardar un archivo con un selector
-description: Usa FileSavePicker para permitir a los usuarios especificar el nombre y la ubicación donde desean que tu aplicación guarde un archivo.
+description: "Usa FileSavePicker para permitir a los usuarios especificar el nombre y la ubicación donde desean que tu aplicación guarde un archivo."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 68c7fcedbea40541632aa0a7ae65aa77db206280
+
 ---
 
 # Guardar un archivo con un selector
@@ -116,6 +120,7 @@ El ejemplo comprueba que el archivo es válido y escribe en él su propio nombre
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

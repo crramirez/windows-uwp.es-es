@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: La sección Descripciones del proceso de envío de la aplicación es donde proporcionas el texto y las imágenes que los clientes verán en la información de la aplicación en la Tienda.
-title: Crear descripciones de la aplicación
+Description: "La sección Descripciones del proceso de envío de la aplicación es donde proporcionas el texto y las imágenes que los clientes verán en la información de la aplicación en la Tienda."
+title: "Crear descripciones de la aplicación"
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
+ms.sourcegitcommit: 447beeae917b03dea2538e74fd9cd8ef48b0f41f
+ms.openlocfilehash: ca85f55e12713903dbbee0a4e247cfb1a51c17d3
+
 ---
 
 # Crear descripciones de la aplicación
@@ -26,9 +29,9 @@ En la sección **Idiomas de descripción adicionales**, puedes hacer clic en **A
 
 Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío.
 
-> **Nota** Al crear una descripción en un idioma que no sea compatible con los paquetes, debes indicar qué nombre de aplicación reservado debe mostrarse en esa descripción, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre. El nombre que elijas aquí solo se aplica a la descripción de la Tienda para este idioma y no afecta al nombre que se muestra cuando un usuario instala la aplicación.
+> **Nota** Al crear una descripción en un idioma que no sea compatible con los paquetes, debes indicar qué nombre de aplicación reservado debe mostrarse en esa descripción, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre. El nombre que elijas aquí solo se aplicará a la descripción de la Tienda para este idioma y no afectará al nombre que se muestra cuando un usuario instala la aplicación.
 
-Para editar una descripción, haz clic en su nombre en la visión general del envío. Las secciones de la página **Descripción** están descritas a continuación.
+Para editar una descripción, haz clic en el nombre del idioma en la información general del envío. Las secciones de la página **Descripción** están descritas a continuación.
 
 ## Campos de descripción predeterminada
 
@@ -117,6 +120,7 @@ Si tienes una directiva de privacidad de la aplicación, escribe la dirección U
 **Importante**  Microsoft no proporciona una directiva de privacidad predeterminada para tu aplicación. De igual modo, tu aplicación no está cubierta por ninguna directiva de privacidad de Microsoft. Para determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) y las [Directivas de la Tienda Windows](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_5_1).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

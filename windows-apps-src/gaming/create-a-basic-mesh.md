@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Crear y mostrar una malla básica
-description: En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies.
+title: "Crear y mostrar una malla básica"
+description: "En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies."
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c082456d5eb0cf1c5c697a6af5bc1d4de1f5ada2
+
 ---
 
 # Crear y mostrar una malla básica
@@ -445,6 +449,7 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

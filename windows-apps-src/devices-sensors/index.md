@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 0b891f63-02fa-4c30-b307-9fbcccac5caa
-title: Dispositivos, sensores y energía
-description: Para proporcionar a los usuarios una experiencia enriquecida, puede que sea necesario integrar sensores o dispositivos externos en la aplicación.
+title: "Dispositivos, sensores y energía"
+description: "Para proporcionar a los usuarios una experiencia enriquecida, puede que sea necesario integrar sensores o dispositivos externos en la aplicación."
+translationtype: Human Translation
+ms.sourcegitcommit: d6757aba4be1a9e326e9e0dade16663286d24f72
+ms.openlocfilehash: ae6ab11963ed06083e581ce42f39ce483d53e0d6
+
 ---
 # Dispositivos, sensores y energía
 
@@ -30,6 +34,7 @@ Para proporcionar a los usuarios una experiencia enriquecida, puede que sea nece
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

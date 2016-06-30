@@ -1,8 +1,11 @@
 ---
 author: mcleblanc
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
-title: Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
-description: Mejora el control del inicio y la activación de la aplicación para crear aplicaciones para la Plataforma universal de Windows (UWP) con tiempo de inicio optimizado.
+title: "Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación"
+description: "Mejora el control del inicio y la activación de la aplicación para crear aplicaciones para la Plataforma universal de Windows (UWP) con tiempo de inicio optimizado."
+ms.sourcegitcommit: 5411faa3af685e1a285119ba456a440725845711
+ms.openlocfilehash: 46e78612c0f4391b9448ea9bd7a001722fb08a28
+
 ---
 # Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
 
@@ -115,9 +118,9 @@ La segunda fase de activación comprende la creación e inicialización de las e
 
 El aspecto de la página de carga depende de ti y puede ser tan simple como una barra o anillo de progreso. En este momento, la acción principal de la aplicación es indicar que está realizando tareas antes de poder responder. En el caso del juego, para poder mostrar la interfaz de usuario de la pantalla inicial, es necesario cargar en la memoria algunas imágenes y sonidos desde el disco. Estas tareas tardan unos segundos, por lo que la aplicación mantiene al usuario informado reemplazando la pantalla de presentación con una página de carga, que muestra una animación simple relacionada con el tema del juego.
 
-La tercera fase comienza una vez que el juego tiene un conjunto mínimo de información para crear una interfaz de usuario interactiva que reemplaza la página de carga. En este punto, la única información disponible para el juego en línea es el contenido que la aplicación cargó desde el disco. El juego se puede proporcionar con suficiente contenido para crear una interfaz de usuario interactiva, pero como se trata de un juego en línea, no será funcional hasta que se conecte a Internet y descargue cierta información adicional. Hasta que esté disponible toda la información necesaria, el usuario puede interactuar con la interfaz de usuario, pero las características que necesitan datos adicionales de la Web deberían ofrecer un indicio de que aún se está cargando el contenido. El tiempo que tarda una aplicación hasta estar totalmente funcional puede prolongarse, por eso, es importante que la funcionalidad se ponga a disposición tan pronto como sea posible.
+La tercera fase comienza una vez que el juego tiene un conjunto mínimo de información para crear una interfaz de usuario interactiva que reemplaza la página de carga. En este punto, la única información disponible para el juego en línea es el contenido que la aplicación cargó desde el disco. El juego se puede proporcionar con suficiente contenido para crear una interfaz de usuario interactiva, pero como se trata de un juego en línea, no será funcional hasta que se conecte a Internet y descargue cierta información adicional. Hasta que esté disponible toda la información necesaria, el usuario puede interactuar con la interfaz de usuario, pero las características que necesitan datos adicionales de la Web deberían ofrecer un indicio de que aún se está cargando el contenido. El tiempo que tarda una aplicación hasta estar totalmente funcional puede prolongarse, por lo que es importante que la funcionalidad esté disponible tan pronto como sea posible.
 
-Ahora que ya hemos identificado las tres fases de activación en un juego en línea, las asociaremos con el código real.
+Ahora que ya hemos identificado las tres fases de activación del juego en línea, las asociaremos con el código real.
 
 ### Fase 1
 
@@ -261,7 +264,7 @@ Existen varias razones por las cuales se activa una aplicación, cada una de las
 
 Las aplicaciones que muestran una página de carga en el controlador de activación comienzan la tarea de creación de la interfaz de usuario en segundo plano. Una vez creado ese elemento, se produce su evento [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723). En el controlador de eventos, se reemplaza el contenido de la ventana (que actualmente es la pantalla de carga) con la página principal recién creada.
 
-Es fundamental que una aplicación con un período de inicialización extendido muestre una página de carga. Aparte de proporcionar la información confiable sobre el proceso de activación, el proceso finalizará si no se llama a [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) dentro de los 15 segundos posteriores al inicio del proceso de activación.
+Es fundamental que una aplicación con un período de inicialización extendido muestre una página de carga. Aparte de proporcionar los comentarios de los usuarios sobre el proceso de activación, el proceso finalizará si no se llama a [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) dentro de los 15 segundos posteriores al inicio del proceso de activación.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -321,7 +324,7 @@ Para ver un ejemplo del uso de pantallas de presentación extendidas, consulta e
 
 El simple hecho de que la aplicación haya mostrado la interfaz de usuario no significa que esté totalmente lista para usarse. En el caso de nuestro juego, la interfaz de usuario se muestra con marcadores de posición para las características que necesitan datos de Internet. En este punto, el juego descarga los datos adicionales necesarios para que la aplicación pase a estar totalmente funcional y habilita las características de manera progresiva a medida que se obtienen los datos.
 
-Algunas veces, la mayor parte del contenido necesario para la activación se puede empaquetar con la aplicación. Tal es el caso de un juego simple. Esto simplifica bastante el proceso de activación. Pero muchos programas (por ejemplo, lectores de noticias y visores de fotos) deben extraer información desde la Web para ser funcionales. Estos datos pueden ser de gran tamaño y tardar una gran cantidad de tiempo en descargarse. El modo en que la aplicación obtiene estos datos durante el proceso de activación puede tener un enrome impacto en el rendimiento percibido de una aplicación.
+Algunas veces, la mayor parte del contenido necesario para la activación se puede empaquetar con la aplicación. Tal es el caso de un juego simple. Esto simplifica bastante el proceso de activación. No obstante, muchos programas (por ejemplo, lectores de noticias y visores de fotos) deben extraer información de la Web para ser funcionales. Estos datos pueden ser de gran tamaño y tardar una gran cantidad de tiempo en descargarse. El modo en que la aplicación obtiene estos datos durante el proceso de activación puede tener un enrome impacto en el rendimiento percibido de una aplicación.
 
 Tendrías que mostrar una página de carga o, lo que es peor, una pantalla de presentación durante varios minutos si una aplicación tratara de descargar en la primera o segunda fase de activación todo el conjunto de datos que necesita para ser funcional. Como resultado, la aplicación parecería suspendida o el sistema la finalizaría. Te recomendamos que la aplicación descargue la cantidad mínima de datos para mostrar una interfaz de usuario interactiva con elementos marcadores de posición en la segunda fase y después cargar los datos de manera progresiva para reemplazar los elementos marcadores de posición en la tercera fase. Para más información sobre cómo usar los datos, consulta [Optimizar ListView y GridView](optimize-gridview-and-listview.md).
 
@@ -359,6 +362,7 @@ Por lo tanto, es recomendable usar el almacenamiento en caché de páginas segú
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

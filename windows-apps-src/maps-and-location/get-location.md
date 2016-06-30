@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
-title: Obtener la ubicación del usuario
-description: Busca la ubicación del usuario y responde a los cambios de ubicación. La configuración de privacidad de la aplicación Configuración administra el acceso a la ubicación del usuario. En este tema también se muestra cómo comprobar si la aplicación tiene permisos para acceder a la ubicación del usuario.
+title: "Obtener la ubicación del usuario"
+description: "Busca la ubicación del usuario y responde a los cambios de ubicación. La configuración de privacidad de la aplicación Configuración administra el acceso a la ubicación del usuario. En este tema también se muestra cómo comprobar si la aplicación tiene permisos para acceder a la ubicación del usuario."
 ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: d35bf3ef13e2b36dfed6613a00f65d19b9013464
+
 ---
 
 # Obtener la ubicación del usuario
@@ -263,6 +267,7 @@ Para que la aplicación pueda acceder a la ubicación del usuario, la opción **
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,12 +1,15 @@
 ---
 author: mijacobs
-Description: El color proporciona una forma intuitiva de buscar a través de los distintos niveles de información de una aplicación y sirve de herramienta crucial para reforzar el modelo de interacción.
+Description: "El color proporciona una forma intuitiva de buscar a través de los distintos niveles de información de una aplicación y sirve de herramienta crucial para reforzar el modelo de interacción."
 title: Color
 ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
-
 label: Color
 template: detail.hbs
 extraBodyClass: style-color
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 878470a7cbf44862c47a1428a1d25d332db32fdc
+
 ---
 
 # Color
@@ -50,7 +53,7 @@ De manera predeterminada, los hipervínculos usarán el color de énfasis del us
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            En XAML, el color de énfasis principal se expone como un [recurso de tema](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx) denominado `SystemAccentColor`. Los tonos están disponibles como `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2` y `SystemAccentColorDark3`. También está disponible mediante programación a través de [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) y la enumeración [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx).
+En XAML, el color de énfasis principal se expone como un [recurso de tema](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx) denominado `SystemAccentColor`. Los tonos están disponibles como `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2` y `SystemAccentColorDark3`. También está disponible mediante programación a través de [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) y la enumeración [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx).
     </div>
 </aside>
 
@@ -90,7 +93,7 @@ Para facilitar el diseño de temas, Windows proporciona una paleta de colores ad
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            Cada color está disponible como XAML [recurso de tema](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_color_ramp_and_theme-dependent_brushes) que sigue la convención de nomenclatura `System*Color` (ej.: `SystemChromeHighColor`). Puedes controlar el tema de la aplicación a través de [Application.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme.aspx) o [FrameworkElement.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.requestedtheme.aspx).
+Cada color está disponible como XAML [recurso de tema](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_color_ramp_and_theme-dependent_brushes) que sigue la convención de nomenclatura `System*Color` (ej.: `SystemChromeHighColor`). Puedes controlar el tema de la aplicación a través de [Application.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme.aspx) o [FrameworkElement.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.requestedtheme.aspx).
     </div>
 </aside>
 
@@ -99,6 +102,7 @@ Para facilitar el diseño de temas, Windows proporciona una paleta de colores ad
 La paleta está optimizada para el uso de la pantalla. Se recomienda mantener una relación de contraste para el texto de 4,5:1 respecto al fondo para mejorar la legibilidad. Hay muchas herramientas gratuitas para probar si los colores la cumplen, como [Contrast Ratio](http://leaverou.github.io/contrast-ratio/).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

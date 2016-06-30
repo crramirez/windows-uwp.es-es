@@ -1,8 +1,11 @@
 ---
 author: awkoren
-Description: Implementa y depura una aplicación para la Plataforma universal de Windows (UWP) convertida a partir de una aplicación de escritorio de Windows (Win32, WPF y Windows Forms) mediante el uso de las extensiones de conversión de escritorio.
+Description: "Implementa y depura una aplicación para la Plataforma universal de Windows (UWP) convertida a partir de una aplicación de escritorio de Windows (Win32, WPF y Windows Forms) mediante el uso de las extensiones de conversión de escritorio."
 Search.Product: eADQiWindows 10XVcnh
-title: Implementar y depurar una aplicación de la Plataforma universal de Windows (UWP) convertida a partir de una aplicación de escritorio de Windows
+title: "Implementar y depurar una aplicación de la Plataforma universal de Windows (UWP) convertida a partir de una aplicación de escritorio de Windows"
+ms.sourcegitcommit: 606d5237cb67cb4439704f81b180c3c48cc1556f
+ms.openlocfilehash: 14634c12435cd8d6d4471a65c0f8deb36e3b1c80
+
 ---
 
 # Implementa y depura tu aplicación para UWP convertida (Proyecto Centennial)
@@ -176,6 +179,8 @@ Una aplicación convertida se ejecuta siempre como el usuario interactivo. Esto 
 
 Si intentas ejecutar el cmdlet Add-AppxPackage en un equipo en el que no importaste el certificado que creaste, obtendrás un error.
 
+Antes de implementar la aplicación, debes iniciar sesión con un certificado. Para obtener información sobre cómo crear un certificado, consulta [Firma el paquete .Appx](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter#deploy-your-converted-appx). 
+
 Aquí se explica cómo importar un certificado que creaste anteriormente. Puedes instalarlo directamente o puedes instalarlo desde un appx que hayas firmado, como hará el cliente.
 1.  En el Explorador de archivos, haz clic en un appx que hayas firmado con un certificado de prueba y elige **Propiedades** en el menú contextual.
 2.  Haz clic o pulsa la pestaña **Firmas digitales**.
@@ -189,9 +194,7 @@ Aquí se explica cómo importar un certificado que creaste anteriormente. Puedes
 10. Haz clic o pulsa **Siguiente**. Aparece una nueva pantalla. Haz clic o pulsa **Finalizar**.
 11. Debería aparecer un cuadro de diálogo de confirmación. Si es así, haz clic en **Aceptar**. Si aparece otro cuadro de diálogo en el que se indica que hay un problema con el certificado, tendrás que solucionarlo.
 
-### Información adicional
-
-Para que Windows confíe en el certificado, el certificado debe estar ubicado en el nodo **Certificados (equipo Local) > Entidades de certificación raíz de confianza > Certificados** o en el nodo **Certificados (equipo local) > Personas de confianza > Certificados**. Solo los certificados de estas dos ubicaciones pueden validar certificados de confianza en el contexto del equipo local. De lo contrario, aparece un mensaje de error similar a la siguiente cadena:
+Para que Windows confíe en el certificado, el certificado debe estar ubicado en el nodo **Certificados (equipo local) > Entidades de certificación raíz de confianza > Certificados** o en el nodo **Certificados (equipo local) > Personas de confianza > Certificados**. Solo los certificados de estas dos ubicaciones pueden validar certificados de confianza en el contexto del equipo local. De lo contrario, aparece un mensaje de error similar a la siguiente cadena:
 ```CMD
 "Add-AppxPackage : Deployment failed with HRESULT: 0x800B0109, A certificate chain processed,
 but terminated in a rootcertificate which is not trusted by the trust provider.
@@ -207,7 +210,16 @@ Pero la aplicación se ejecuta en un entorno especial donde se redirigen los acc
 
 Dentro de una carpeta denominada VFS, se muestran las carpetas que contienen los archivos DLL en los que la aplicación tiene dependencias. Estos archivos DLL se instalan en carpetas del sistema para la versión de escritorio clásica de la aplicación. Sin embargo, como aplicación para UWP, los archivos DLL son locales en la aplicación. De esta forma, no existen problemas de versión cuando se instalan y desinstalan aplicaciones para UWP.
 
+## Consulta también
+[Convertir la aplicación de escritorio en una aplicación para la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)
 
-<!--HONumber=May16_HO2-->
+[Vista previa de Desktop App Converter (Project Centennial)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter)
+
+[Convertir manualmente la aplicación de escritorio de Windows en una aplicación para la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-manual-conversion)
+
+[Puente de la aplicación de escritorio a ejemplos de código de UWP en GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
+
+
+<!--HONumber=Jun16_HO4-->
 
 

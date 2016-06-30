@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Optimización de la latencia de entrada en juegos DirectX de la Plataforma universal de Windows (UWP)
-description: La latencia de entrada puede influir tremendamente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida en el juego.
+title: "Optimización de la latencia de entrada en juegos DirectX de la Plataforma universal de Windows (UWP)"
+description: "La latencia de entrada puede influir tremendamente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida en el juego."
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 19bcf043f3fc8c729f5f9fbbeee237bd1749443d
+
 ---
 
 #  Optimización de la latencia de entrada en juegos DirectX de la Plataforma universal de Windows (UWP)
@@ -256,6 +260,7 @@ Lo que deducimos de estos diagramas es que existe la posibilidad de reducir la l
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

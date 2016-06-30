@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Migrar el bucle del juego
-description: Aprende a implementar una ventana para un juego de la Plataforma universal de Windows (UWP) y a traer el bucle de la repetición, incluso cómo crear una interfaz IFrameworkView para controlar una clase CoreWindow de pantalla completa.
+description: "Aprende a implementar una ventana para un juego de la Plataforma universal de Windows (UWP) y a traer el bucle de la repetición, incluso cómo crear una interfaz IFrameworkView para controlar una clase CoreWindow de pantalla completa."
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3c2369a2fdc48aed14f7ad363df8792e0ed5d795
+
 ---
 
 # Migrar el bucle del juego
@@ -139,6 +143,7 @@ Para obtener información detallada sobre el desarrollo de juegos de la Tienda W
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

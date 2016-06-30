@@ -1,12 +1,16 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Para que los usuarios escriban datos con facilidad mediante el teclado táctil o con el panel de entrada suave (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que el usuario escriba.
-MS-HAID: 'dev\_ctrl\_layout\_txt.use\_input\_scope\_to\_change\_the\_touch\_keyboard'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Para que los usuarios escriban datos con facilidad mediante el teclado táctil o con el panel de entrada suave (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que el usuario escriba."
+MS-HAID: dev\_ctrl\_layout\_txt.use\_input\_scope\_to\_change\_the\_touch\_keyboard
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: Usar el ámbito de entrada para cambiar el teclado táctil
+title: "Usar el ámbito de entrada para cambiar el teclado táctil"
 ms.assetid: 6E5F55D7-24D6-47CC-B457-B6231EDE2A71
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 02f06ee498b136f811b4b3b8080a9cb043693504
+
 ---
 
 # Usar el ámbito de entrada para cambiar el teclado táctil
@@ -261,6 +265,7 @@ Incluye la tecla **=**.
 |Disponibilidad de funciones:<ul><li>Revisión ortográfica: habilitada de manera predeterminada, se puede deshabilitar</li><li>Autocorrección: siempre deshabilitada</li><li>Uso de mayúsculas automático: siempre habilitado</li><li>Predicción de texto: siempre deshabilitada</li></ul> | Disponibilidad de funciones:<ul><li>Revisión ortográfica: deshabilitada de manera predeterminada, se puede habilitar</li><li>Autocorrección: deshabilitada de manera predeterminada, se puede habilitar</li><li>Uso de mayúsculas automático: deshabilitado de manera predeterminada, se puede habilitar. La primera letra de cada palabra se escribe en mayúscula.</li><li>Predicción de texto: deshabilitada de manera predeterminada, se puede habilitar</li></ul> |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

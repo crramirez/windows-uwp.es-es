@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 08b4ae43-69e8-4424-b3c0-a07c93d275c3
-description: Aprende a detectar errores de AdControl en la aplicación.
+description: "Aprende a detectar errores de AdControl en la aplicación."
 title: Tutorial de control de errores en JavaScript
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: d26a8efeb253c6c793d8edd21d7452bbf15da261
+
 
 ---
 
@@ -82,6 +86,7 @@ Verás el anuncio original desde la aplicación de muestra que compilaste anteri
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

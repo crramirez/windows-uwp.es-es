@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
-description: Aprende sobre los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization.
+description: "Aprende sobre los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization."
 title: Problemas conocidos de las bibliotecas de Microsoft Advertising
+translationtype: Human Translation
+ms.sourcegitcommit: 5b6d3e034b73e6ae693fbeab3ecd3b2b81f38bb1
+ms.openlocfilehash: cfaa108cc93b6bae903e86ad141656bf613f185d
+
 ---
 
 # Problemas conocidos de las bibliotecas de Microsoft Advertising
@@ -112,6 +116,7 @@ Para ponerte en contacto con soporte técnico para problemas relacionados con la
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

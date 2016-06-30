@@ -3,6 +3,10 @@ author: jnHs
 Description: El nuevo panel del Centro de desarrollo de Windows te permite administrar y enviar todas las aplicaciones para dispositivos Windows en un solo lugar.
 title: Usar el panel del Centro de desarrollo de Windows
 ms.assetid: FB63F773-71AC-464E-BDE1-21C429FB2B0B
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7478a832cea6114c7a6e7f6be5cc3e908981a64c
+
 ---
 
 # Usar el panel del Centro de desarrollo de Windows
@@ -33,6 +37,7 @@ Las aplicaciones que estaban vinculadas para compartir identidad en el anterior 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

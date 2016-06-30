@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Puedes especificar si la aplicación puede comprarse por volumen, y en qué condiciones, a través de la Tienda Windows para empresas en la sección Licencias organizativas de la página Precios y disponibilidad de un envío de aplicación.
+Description: "Puedes especificar si la aplicación puede comprarse por volumen, y en qué condiciones, a través de la Tienda Windows para empresas en la sección Licencias organizativas de la página Precios y disponibilidad de un envío de aplicación."
 title: Opciones de licencia organizativas
 ms.assetid: 1EB139B0-67E7-4F66-AAEF-491B1E52E96F
+ms.sourcegitcommit: 13603b66bd6168073b855bbe37ea92763e14a5a0
+ms.openlocfilehash: e4adbc66b4b4a88ca3787737e9bbddf0d937b604
+
 ---
 
 # Opciones de licencia organizativas
@@ -29,12 +32,12 @@ Si prefieres no permitir que ofrezcamos tu aplicación a las organizaciones para
 
 Muchas organizaciones necesitan aplicaciones que permitan la licencia sin conexión. Por ejemplo, si tienen que implementar aplicaciones en dispositivos que rara vez o nunca se conectan a Internet. Si quieres permitir que tu aplicación esté a disposición de estos clientes, activa la casilla **Permitir la compra de licencias en desconexión (sin conexión) para empresas**.
 
-> **Nota**  Esta casilla está desmarcada de forma predeterminada; debes marcarla para permitirnos que podamos ofrecer tu aplicación a empresas comprobadas que la instalarán mediante licencias sin conexión.
+> **Nota** De forma predeterminada, esta casilla está sin activar; debes marcarla para permitirnos ofrecer tu aplicación a empresas comprobadas que la instalarán mediante licencias sin conexión. Las organizaciones deben someterse a una validación adicional para instalar aplicaciones de pago en sus usuarios finales de este modo.
 
-Las licencias sin conexión permiten a las organizaciones adquirir la aplicación por volumen e instalarla sin necesidad de que cada uno de los dispositivos se conecte al sistema de licencias de la Tienda.
-La organización podrá descargar el paquete de la aplicación y una licencia que permite la instalación en dispositivos (a través de sus propias herramientas de administración o de la precarga de aplicaciones en imágenes del sistema operativo) sin notificar a la Tienda el uso de una licencia en particular. Si habilitas este escenario, podrás aumentar en gran medida la flexibilidad de implementación y podrás mejorar considerablemente el atractivo de la aplicación para estos clientes.
+Las licencias sin conexión permiten a las organizaciones adquirir la aplicación por volumen e instalarla sin necesidad de que cada uno de los dispositivos se conecte al sistema de licencias de la Tienda. La organización podrá descargar el paquete de la aplicación y una licencia que permite la instalación en dispositivos (a través de sus propias herramientas de administración o de la precarga de aplicaciones en imágenes del sistema operativo) sin notificar a la Tienda el uso de una licencia en particular. Si habilitas este escenario, podrás aumentar en gran medida la flexibilidad de implementación y podrás mejorar considerablemente el atractivo de la aplicación para estos clientes.
 
->**Nota**  Con este método, las empresas deben someterse a una validación adicional para instalar aplicaciones de pago en sus usuarios finales.
+> **Importante** Las licencias sin conexión no se admiten para paquetes .xap.  
+
  
 ## Compatibilidad con aplicaciones de pago
 
@@ -83,6 +86,7 @@ En este momento, los desarrolladores en los siguientes países y regiones pueden
 - Estados Unidos
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

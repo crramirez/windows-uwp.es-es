@@ -1,10 +1,14 @@
 ---
 author: TylerMSFT
-Description: 'En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con los flujos y búferes.'
-MS-HAID: 'dev\_files.use\_edp\_to\_protect\_streams\_and\_buffers'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con los flujos y búferes."
+MS-HAID: dev\_files.use\_edp\_to\_protect\_streams\_and\_buffers
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 'Usar Enterprise Data Protection (EDP) para proteger secuencias y búferes'
+title: "Usar Enterprise Data Protection (EDP) para proteger secuencias y búferes"
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: fdde4f7d2ab46b6349273f7c1c9d91cf27aa341a
+
 ---
 
 # Usar Enterprise Data Protection (EDP) para proteger secuencias y búferes
@@ -308,6 +312,7 @@ private async void EnableUIPolicyFromProtectedBuffer(IBuffer buffer)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

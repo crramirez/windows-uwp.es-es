@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Agregar una pantalla de presentación
-description: Define la imagen de la pantalla de presentación y el color de fondo de la aplicación con Microsoft Visual Studio 2015.
+author: TylerMSFT
+title: "Agregar una pantalla de presentación"
+description: "Define la imagen de la pantalla de presentación y el color de fondo de la aplicación con Microsoft Visual Studio 2015."
 ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 261b52d1835e992a784aa5fa356230fdd326b8c5
+
 ---
 
 # Agregar una pantalla de presentación
@@ -73,8 +76,6 @@ Este artículo está destinado a desarrolladores de Windows 10 que programan apl
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

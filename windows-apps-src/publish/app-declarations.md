@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Puedes proporcionar información adicional sobre la aplicación en la sección Declaraciones de la aplicación de la página Propiedades de la aplicación durante el proceso de envío.
-title: Declaraciones de la aplicación
+Description: "Puedes proporcionar información adicional sobre la aplicación en la sección Declaraciones de la aplicación de la página Propiedades de la aplicación durante el proceso de envío."
+title: "Declaraciones de la aplicación"
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: ee2e54494a868fbec8c4a8bd7bbb9bdcd6cbf9ae
+
 ---
 
 # Declaraciones de la aplicación
@@ -62,6 +66,7 @@ Si quieres impedir que los datos de la aplicación se incluyan en copias de segu
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

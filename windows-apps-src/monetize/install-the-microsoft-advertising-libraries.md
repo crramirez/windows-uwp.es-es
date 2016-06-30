@@ -3,6 +3,10 @@ author: mcleanbyron
 ms.assetid: 3aeddb83-5314-447b-b294-9fc28273cd39
 description: Aprende a instalar las bibliotecas de Microsoft Advertising.
 title: Instalar las bibliotecas de Microsoft Advertising
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 0951818ceaf3d96543f9f97ec6993d08fdaab2b8
+
 
 ---
 
@@ -91,6 +95,7 @@ Antes de poder usar cualquiera de los controles de publicidad en el código de l
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

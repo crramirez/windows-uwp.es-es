@@ -1,8 +1,12 @@
 ---
 author: Mtoepke
-title: Activación del modo de desarrollador de Xbox One
-description: Cómo activar el modo de desarrollador para poder alternar entre el modo comercial y el modo de desarrollador.
+title: "Activación del modo de desarrollador de Xbox One"
+description: "Cómo activar el modo de desarrollador para poder alternar entre el modo comercial y el modo de desarrollador."
 area: Xbox
+translationtype: Human Translation
+ms.sourcegitcommit: 7d832fee5bcd3a15cee1e7d8f4c66da9b0afa5e1
+ms.openlocfilehash: 9ad9904150acb00982c96eebeaf010f7023d3320
+
 ---
 
 # Activación del modo de desarrollador de Xbox One
@@ -83,6 +87,7 @@ Una vez que se haya habilitado el modo de desarrollador en la consola, usa **Dev
 - [UWP on Xbox One (UWP en Xbox One)](index.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

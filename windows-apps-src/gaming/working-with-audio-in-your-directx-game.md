@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Audio para juegos
-description: Aprende a desarrollar e incorporar música y sonidos en un juego DirectX, y a procesar las señales de audio para crear sonidos dinámicos y posicionales.
+description: "Aprende a desarrollar e incorporar música y sonidos en un juego DirectX, y a procesar las señales de audio para crear sonidos dinámicos y posicionales."
 ms.assetid: ab29297a-9588-c79b-24c5-3b94b85e74a8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 98896d4966ee2adb3bf494dcba22656fc8bb6414
+
 ---
 
 # Audio para juegos
@@ -315,6 +319,7 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

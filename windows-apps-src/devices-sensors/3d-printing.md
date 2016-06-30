@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
 ms.assetid: 551d4e70-312d-4b40-8d3e-336ce934e0ad
-title: Impresión en 3D
-description: En esta sección se describe cómo usar la funcionalidad de impresión en 3D en la aplicación universal de Windows.
+title: "Impresión en 3D"
+description: "En esta sección se describe cómo usar la funcionalidad de impresión en 3D en la aplicación universal de Windows."
+translationtype: Human Translation
+ms.sourcegitcommit: 4b8125e064c4e2e6f4eeced50885ad352d4d6988
+ms.openlocfilehash: a56adc5c7bc3f2d5ec4976e4e5394ff26ea983dc
+
 ---
 # Impresión en 3D
 
@@ -24,6 +28,7 @@ En esta sección se describe cómo usar la funcionalidad de impresión en 3D en 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

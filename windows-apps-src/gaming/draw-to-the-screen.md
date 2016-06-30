@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Dibujar en la pantalla
-description: Por fin hemos portado el código que dibuja un cubo giratorio en la pantalla.
+description: "Por fin hemos portado el código que dibuja un cubo giratorio en la pantalla."
 ms.assetid: cc681548-f694-f613-a19d-1525a184d4ab
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 1b7431c20e25173a0aa3f8d6ee0d407be869d60a
+
 ---
 
 # Dibujar en la pantalla
@@ -68,7 +72,7 @@ El tiempo de ejecución de Direct3D crea implícitamente una interfaz [**IDXGISu
 
 La inicialización y la configuración del dispositivo Direct3D, el contexto del dispositivo y los destinos de representación, pueden enlazarse en los métodos personalizados **CreateDeviceResources** y **CreateWindowSizeDependentResources** de la plantilla Direct3D.
 
-Para más información sobre contexto de dispositivo Direct3D en relación con EGL y el tipo EGLContext, lee [Migrar el código EGL a DXGI y Direct3D](moving-from-egl-to-dxgi.md).
+Para obtener más información sobre el contexto del dispositivo Direct3D en relación con EGL y el tipo EGLContext, puedes leer [Portar el código EGL a DXGI y Direct3D](moving-from-egl-to-dxgi.md).
 
 ## Instrucciones
 
@@ -225,6 +229,7 @@ Este ejemplo pasa por alto gran parte de la complejidad que implica configurar l
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

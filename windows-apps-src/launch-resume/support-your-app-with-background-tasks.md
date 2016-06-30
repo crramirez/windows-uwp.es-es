@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Dar soporte a tu aplicación mediante tareas en segundo plano
-description: Los temas de esta sección muestran cómo ejecutar tu propio código ligero en segundo plano al responder a los desencadenadores con tareas en segundo plano.
+author: TylerMSFT
+title: "Dar soporte a tu aplicación mediante tareas en segundo plano"
+description: "Los temas de esta sección muestran cómo ejecutar tu propio código ligero en segundo plano al responder a los desencadenadores con tareas en segundo plano."
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 38942aa2a274828cc36677a93d0923beb03060dc
+
 ---
 
 # Dar soporte a tu aplicación mediante tareas en segundo plano
@@ -15,9 +18,9 @@ Los temas de esta sección muestran cómo ejecutar tu propio código ligero en s
 
 Las tareas en segundo plano son clases separadas que implementan la interfaz de [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794). Una tarea en segundo plano se registra mediante la clase [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). El nombre de la clase se especifica como punto de entrada al registrar la tarea en segundo plano.
 
-Para comenzar a usar enseguida una tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano](create-and-register-a-background-task.md).
+Para comenzar rápidamente con una tarea en segundo plano, consulta [Creación y registro de una tarea en segundo plano](create-and-register-a-background-task.md).
 
-**Sugerencia** A partir de Windows 10, ya no necesitas colocar una aplicación en la pantalla de bloqueo para registrar correctamente las tareas en segundo plano.
+**Sugerencia** A partir de Windows 10, ya no es necesario colocar una aplicación en la pantalla de bloqueo para registrar las tareas en segundo plano.
 
  
 
@@ -36,7 +39,7 @@ Puedes hacer que tu aplicación responda a eventos generados por el sistema regi
 
  
 
-Para más información, consulta [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md).
+Para obtener más información, consulta [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md).
 
 ## Condiciones para tareas en segundo plano
 
@@ -54,29 +57,29 @@ Puedes controlar cuándo se ejecuta la tarea en segundo plano, incluso después 
 
  
 
-Para más información, consulta [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md).
+Para obtener más información, consulta [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md).
 
 ## Requisitos del manifiesto de la aplicación
 
 
-Antes de que la aplicación pueda registrar correctamente una tarea en segundo plano, debe estar declarada en el manifiesto de la aplicación. Para más información, consulta [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md).
+Antes de que la aplicación pueda registrar correctamente una tarea en segundo plano, debe estar declarada en el manifiesto de la aplicación. Para obtener más información, consulta [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md).
 
 ## Tareas en segundo plano
 
 
-Se pueden usar los siguientes desencadenadores en tiempo real para ejecutar el código personalizado ligero en segundo plano:
+Los siguientes desencadenadores en tiempo real pueden usarse para ejecutar el código personalizado ligero en segundo plano:
 
 **Canal de control: **Las tareas en segundo plano pueden mantener una conexión activa y recibir mensajes en el canal de control, mediante la clase [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Si tu aplicación está escuchando un socket, puedes usar el agente de socket en lugar de la clase **ControlChannelTrigger**. Para más información sobre el uso del agente de socket, consulta [SocketActivityTrigger](https://msdn.microsoft.com/library/windows/apps/dn806009). La clase **ControlChannelTrigger** no se admite en Windows Phone.
 
-**Temporizador: **Las tareas en segundo plano se pueden ejecutar cada 15 minutos y se pueden configurar para que se ejecuten a una determinada hora mediante la clase [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). Para más información, consulta [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md).
+**Temporizador: **Las tareas en segundo plano se pueden ejecutar cada 15 minutos y se pueden configurar para que se ejecuten a una determinada hora mediante la clase [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). Para obtener más información, consulta [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md).
 
-**Notificación de inserción: **Las tareas en segundo plano responden a la clase [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), para recibir notificaciones de inserción sin procesar.
+**Notificación de inserción: **Las tareas en segundo plano responden a la clase [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) para recibir notificaciones de inserción sin procesar.
 
 **Nota**  
 
 Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquier tipo de desencadenador en segundo plano.
 
-Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
+Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
 
 ## Desencadenadores de eventos del sistema
 
@@ -132,12 +135,12 @@ Tu aplicación no tiene que hacer nada de forma distinta para obtener las cuotas
 ## Desencadenador de mantenimiento
 
 
-Las tareas de mantenimiento solo se ejecutan cuando el dispositivo está conectado a la corriente alterna. Para más información, consulta [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md).
+Las tareas de mantenimiento solo se ejecutan cuando el dispositivo está conectado a la corriente alterna. Para obtener más información, consulta [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md).
 
 ## Tarea en segundo plano para sensores y dispositivos
 
 
-La aplicación puede acceder a sensores y dispositivos periféricos desde una tarea en segundo plano mediante la clase [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Puedes usar este desencadenador para operaciones de larga duración como, por ejemplo, la sincronización o supervisión de datos. A diferencia de las tareas para eventos del sistema, una tarea **DeviceUseTrigger** solo se puede desencadenar mientras tu aplicación se está ejecutando en primer plano y no se puede establecer en ella ninguna condición.
+La aplicación puede acceder a sensores y dispositivos periféricos desde una tarea en segundo plano con la clase [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Puedes usar este desencadenador para operaciones de larga duración como, por ejemplo, la sincronización o supervisión de datos. A diferencia de las tareas para eventos del sistema, una tarea **DeviceUseTrigger** solo se puede desencadenar mientras tu aplicación se está ejecutando en primer plano y no se puede establecer en ella ninguna condición.
 
 Algunas operaciones críticas del dispositivo, como las actualizaciones del firmware que se ejecutan durante mucho tiempo, no se pueden realizar con [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Esas operaciones solo se pueden realizar en el equipo y solo las puede realizar una aplicación privilegiada que use [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Una *aplicación privilegiada* es una aplicación que ha recibido la autorización del fabricante del dispositivo para realizar esas operaciones. Los metadatos del dispositivo se usan para especificar qué aplicación, si es el caso, se ha designado como aplicación privilegiada para un dispositivo. Para más información, consulta [Sincronización y actualización de dispositivos para aplicaciones para dispositivos de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkId=306619).
 
@@ -151,7 +154,7 @@ Las tareas en segundo plano pueden notificar progreso, finalización o cancelaci
 [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
 
 **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si desarrollas para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -186,8 +189,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

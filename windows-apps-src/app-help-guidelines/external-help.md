@@ -1,9 +1,13 @@
 ---
 author: QuinnRadich
-Description: Diseña páginas de ayuda externa para ofrecer instrucciones detalladas y asesoramiento sobre la aplicación.
-title: Directrices para diseñar páginas de ayuda externa
+Description: "Diseña páginas de ayuda externa para ofrecer instrucciones detalladas y asesoramiento sobre la aplicación."
+title: "Directrices para diseñar páginas de ayuda externa"
 label: External help
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 03ef3fc34d2018c0ec712977065377a9c52cd8b2
+
 ---
 
 # Páginas de ayuda externa
@@ -38,6 +42,7 @@ Las páginas de ayuda externa son el lugar ideal para proporcionar a los usuario
 * [Directrices para la ayuda de la aplicación](guidelines-for-app-help.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

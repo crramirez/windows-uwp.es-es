@@ -5,8 +5,8 @@ title: "Directrices de diseño de varias entradas"
 ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
 label: Multiple inputs
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 20af1cbfd4d390a1128b96b24c687fd481db1f5c
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 71c5994e1a308993aef6603ba77ab5e695bde293
 
 ---
 
@@ -23,20 +23,20 @@ Para comenzar, ten en cuenta los distintos escenarios en que la aplicación cont
 -   ¿Se admiten todos los métodos de entrada en todo momento? ¿Con algunos controles? ¿En determinados momentos o circunstancias?
 -   ¿Tiene prioridad un método de entrada?
 
-## <span id="Single__or_exclusive_-mode_interactions_"></span><span id="single__or_exclusive_-mode_interactions_"></span><span id="SINGLE__OR_EXCLUSIVE_-MODE_INTERACTIONS_"></span>Interacciones de modo único (o exclusivo)
+## Interacciones de modo único (o exclusivo)
 
 
 Con las interacciones de modo único se admiten varios tipos de entrada, pero solo se puede usar una por acción. Por ejemplo, reconocimiento de voz para los comandos y gestos para la navegación; o bien, escribir texto con entrada táctil o con gestos, según la proximidad.
 
-## <span id="Multimodal_interactions"></span><span id="multimodal_interactions"></span><span id="MULTIMODAL_INTERACTIONS"></span>Interacciones multimodales
+## Interacciones multimodales
 
 
 Con las interacciones multimodales, se usan varios métodos de entrada en una secuencia para completar una sola acción.
 
-<span id="Speech___gesture"></span><span id="speech___gesture"></span><span id="SPEECH___GESTURE"></span>Voz + gestos  
+Voz + gestos  
 El usuario apunta a un producto y, a continuación, dice "Agregar al carro".
 
-<span id="Speech___touch"></span><span id="speech___touch"></span><span id="SPEECH___TOUCH"></span>Voz + función táctil  
+Voz + función táctil  
 El usuario selecciona una foto manteniéndola presionada y, a continuación, dice "Enviar foto".
 
 
@@ -44,6 +44,6 @@ El usuario selecciona una foto manteniéndola presionada y, a continuación, dic
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
-title: Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles
-description: Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de CollectionViewSource que están enlazadas juntas en una cadena.
+title: "Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles"
+description: "Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de CollectionViewSource que están enlazadas juntas en una cadena."
+translationtype: Human Translation
+ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
+ms.openlocfilehash: 2ff66a1d6a80bb085f54dec8e35371ba0c9e6b27
+
 ---
 # Enlazar datos jerárquicos y crear una vista de tipo maestro-detalles
 
@@ -220,6 +224,7 @@ Ten en cuenta que mediante un enlace directo al elemento [**CollectionViewSource
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

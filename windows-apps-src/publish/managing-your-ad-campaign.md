@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Para administrar las campañas publicitarias de la aplicación, haz clic en Monetización &gt; Promocionar la aplicación desde la página de la aplicación en el panel del Centro de desarrollo de Windows.
-title: Administrar campañas publicitarias
+Description: "Para administrar las campañas publicitarias de la aplicación, haz clic en Monetización &gt; Promocionar la aplicación desde la página de la aplicación en el panel del Centro de desarrollo de Windows."
+title: "Administrar campañas publicitarias"
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8e6305f3e6904833245013ef7eb63809c97ec423
+
 ---
 
 # Administrar campañas publicitarias
@@ -46,6 +50,7 @@ Para realizar cambios en una campaña publicitaria, haz clic en su nombre para i
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

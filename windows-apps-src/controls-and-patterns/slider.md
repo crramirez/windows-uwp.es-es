@@ -5,6 +5,10 @@ title: Controles deslizantes
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 64ae11c8c7e46d973c13cacb69482fd957e0488d
+
 ---
 # Controles deslizantes
 
@@ -170,6 +174,7 @@ Al diseñar un control deslizante personalizado, piensa en la manera de presenta
 - [**Clase de control deslizante**](https://msdn.microsoft.com/library/windows/apps/br209614)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

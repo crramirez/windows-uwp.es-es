@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 3C03FDD8-FA61-4E7B-BDCA-3C29DFEA20E4
-description: Después de instalar el SDK de Microsoft Store Engagement and Monetization, sigue las instrucciones de este tema para usar el control de Ad Mediator en tu aplicación.
+description: "Después de instalar el SDK de Microsoft Store Engagement and Monetization, sigue las instrucciones de este tema para usar el control de Ad Mediator en tu aplicación."
 title: Agregar y usar el control de Ad Mediator
+translationtype: Human Translation
+ms.sourcegitcommit: 8c3f1997427a7c3d4f4b4b7acc876a2a091e4553
+ms.openlocfilehash: a0d73b50207d251c079714265845a816f4ac23da
+
 ---
 
 # Agregar y usar el control de Ad Mediator
@@ -288,6 +292,7 @@ if (Debugger.IsAttached)
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: La Tienda Windows llega a clientes de más de 200 países y regiones de todo el mundo.
-title: Definir los precios y la selección del mercado
+Description: "La Tienda Windows llega a clientes de más de 200 países y regiones de todo el mundo."
+title: "Definir los precios y la selección del mercado"
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9a1d8b8fb57989091fe7b82ad34066240f62cb8b
+
 ---
 
 # Definir los precios y la selección del mercado
@@ -550,6 +554,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
 > **Nota**  Para una lista de países y regiones en los que puedas registrarte para una cuenta de desarrollador, consulta [Tipos de cuentas, ubicaciones y precios](https://msdn.microsoft.com/library/windows/apps/jj863494).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

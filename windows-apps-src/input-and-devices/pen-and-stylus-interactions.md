@@ -6,8 +6,8 @@ ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen and stylus interactions in UWP apps
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: 218fae32f8b63c8fe5499af7d3fe6c1f0404334c
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: e642e6ba5319dce2d78c243ab3c57a9ffcc6902f
 
 ---
 
@@ -47,7 +47,7 @@ Existen tres componentes para la plataforma de entrada de lápiz:
               **IInkD2DRenderer**
             ](https://msdn.microsoft.com/library/mt147263): habilita la representación de trazos de lápiz en el contexto de dispositivo de Direct2D designado de una aplicación universal de Windows, en lugar del control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535). Esto permite la personalización completa de la experiencia de entrada manuscrita.
 
-## <span id="inkcanvas"></span><span id="INKCANVAS"></span>Entrada manuscrita básica con InkCanvas
+## Entrada manuscrita básica con InkCanvas
 
 
 Para la funcionalidad básica de entrada manuscrita, solo debes colocar un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) en cualquier parte de una página.
@@ -85,7 +85,7 @@ La funcionalidad de entrada manuscrita admitida por el control [**InkCanvas**](h
 
 Para realizar entradas manuscritas básicas, no es necesario preocuparse por [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011). Sin embargo, para personalizar y configurar el comportamiento de la entrada manuscrita en la clase [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), debe acceder al objeto correspondiente **InkPresenter**.
 
-## <span id="inkpresenter"></span><span id="INKPRESENTER"></span>Personalización básica con InkPresenter
+## Personalización básica con InkPresenter
 
 
 Se crea una instancia de un objeto [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) con cada control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
@@ -196,7 +196,7 @@ Estas imágenes muestran cómo se procesa y personaliza la entrada manuscrita me
 
 Para proporcionar funcionalidades que vayan más allá de la entrada manuscrita y el borrado (como la selección de trazo), la aplicación debe identificar la entrada específica de [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081), la cual debe pasarse sin procesar para que la aplicación la controle.
 
-## <span id="passthrough"></span><span id="PASSTHROUGH"></span>Entrada de paso a través para el procesamiento avanzado
+## Entrada de paso a través para el procesamiento avanzado
 
 
 De manera predeterminada, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) procesa todas las entradas como trazos de lápiz o trazos de borrado. Esto incluye la entrada que modificó una prestación de hardware secundaria, como el botón de menú contextual del lápiz, el botón secundario del mouse o similares.
@@ -422,7 +422,7 @@ public MainPage()
     }
 ```
 
-## <span id="iinkd2drenderer"></span><span id="IINKD2DRENDERER"></span>Representación de entrada de lápiz personalizada
+## Representación de entrada de lápiz personalizada
 
 
 De manera predeterminada, la entrada de lápiz se procesa en un subproceso en segundo plano de baja latencia y se representa como "húmeda" mientras se dibuja. Cuando se completa el trazo (se levanta el lápiz o el dedo o se libera el botón del mouse), el trazo se procesa en el subproceso de la interfaz de usuario y se representa como "seco" en la capa de [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (lo verás sobre el contenido de la aplicación y reemplazando la entrada de lápiz húmeda).
@@ -463,7 +463,7 @@ Para obtener un ejemplo completo de esta funcionalidad, consulta [Complex ink sa
  
 
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 
 * [Controlar la entrada de puntero](handle-pointer-input.md)
@@ -493,6 +493,6 @@ Para obtener un ejemplo completo de esta funcionalidad, consulta [Complex ink sa
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

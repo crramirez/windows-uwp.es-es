@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Descubre cómo se ponen los paquetes de la aplicación a disposición de los clientes y cómo se administran escenarios de paquetes específicos.
-title: Orientación para administrar paquetes de la aplicación
+Description: "Descubre cómo se ponen los paquetes de la aplicación a disposición de los clientes y cómo se administran escenarios de paquetes específicos."
+title: "Orientación para administrar paquetes de la aplicación"
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: ac8d150f426c7d32e8a3b61b7f08cc0b84feedb8
+
 ---
 
 # Orientación para administrar paquetes de la aplicación
@@ -134,6 +138,7 @@ Ten en cuenta que aunque quites todos los paquetes que admitan una determinada f
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

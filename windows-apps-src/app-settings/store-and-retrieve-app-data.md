@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Obtén información sobre cómo almacenar y recuperar datos locales, de itinerancia y temporales de la aplicación.
-title: Almacenar y recuperar la configuración y otros datos de aplicación
+Description: "Obtén información sobre cómo almacenar y recuperar datos locales, de itinerancia y temporales de la aplicación."
+title: "Almacenar y recuperar la configuración y otros datos de aplicación"
 ms.assetid: 41676A02-325A-455E-8565-C9EC0BC3A8FE
 label: App settings and data
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 433cda6432d1e695bacb338e68012bcc9c837eb6
+
 ---
 
 # Almacenar y recuperar la configuración y otros datos de aplicación
@@ -67,7 +71,7 @@ Windows.Storage.StorageFolder localFolder =
 
 ### <span id="Create_and_retrieve_a_simple_local_setting"></span><span id="create_and_retrieve_a_simple_local_setting"></span><span id="CREATE_AND_RETRIEVE_A_SIMPLE_LOCAL_SETTING"></span>Crear y recuperar una configuración local simple
 
-Para crear o escribir una configuración, usa la propiedad [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) para obtener acceso a la configuración en el contenedor `localSettings` que obtuvimos en el paso anterior. En este ejemplo se crea una configuración denominada
+Para crear o escribir una configuración, usa la propiedad [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) para obtener acceso a la configuración en el contenedor `localSettings` que obtuvimos en el paso anterior. En este ejemplo se crea una configuración llamada `exampleSetting`.
 
 ```CSharp
 // Simple setting
@@ -237,7 +241,7 @@ Windows.Storage.ApplicationDataContainer roamingSettings =
 
 ### <span id="Create_and_retrieve_roaming_settings"></span><span id="create_and_retrieve_roaming_settings"></span><span id="CREATE_AND_RETRIEVE_ROAMING_SETTINGS"></span>Crear y recuperar la configuración de itinerancia
 
-Usa la propiedad [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) para obtener acceso a la configuración en el contenedor `roamingSettings` que obtuvimos en la sección anterior. En este ejemplo se crea una configuración sencilla denominada `exampleSetting` y un valor compuesto denominado
+Usa la propiedad [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) para obtener acceso a la configuración en el contenedor `roamingSettings` que obtuvimos en la sección anterior. En este ejemplo se crea una configuración sencilla denominada `exampleSetting` y un valor compuesto llamado `composite`.
 
 ```CSharp
 // Simple setting
@@ -378,7 +382,7 @@ async void ReadTimestamp()
 ## <span id="Organize_app_data_with_containers"></span><span id="organize_app_data_with_containers"></span><span id="ORGANIZE_APP_DATA_WITH_CONTAINERS"></span>Organizar los datos de aplicación con contenedores
 
 
-Para que tengas tus archivos y la configuración de datos de la aplicación organizados, crea contenedores (representados por objetos [**ApplicationDataContainer**](https://msdn.microsoft.com/library/windows/apps/br241599)) en lugar de trabajar directamente con directorios. Puedes agregar contenedores a los almacenes de datos de aplicaciones locales, de itinerancia y temporales. Los contenedores se pueden anidar hasta en 32 niveles de profundidad.
+Para ayudar a organizar tus archivos y configuración de datos de la aplicación, crea contenedores (representados por objetos [**ApplicationDataContainer**](https://msdn.microsoft.com/library/windows/apps/br241599)) en lugar de trabajar directamente con directorios. Puedes agregar contenedores a los almacenes de datos de aplicaciones locales, de itinerancia y temporales. Los contenedores se pueden anidar hasta en 32 niveles de profundidad.
 
 Para crear un contenedor de configuraciones, llama al método [**ApplicationDataContainer.CreateContainer**](https://msdn.microsoft.com/library/windows/apps/br241611). En este ejemplo se crea un contenedor de configuraciones local denominado `exampleContainer` y se agrega una configuración llamada `exampleSetting`. El valor **Siempre** de la enumeración [**ApplicationDataCreateDisposition**](https://msdn.microsoft.com/library/windows/apps/br241616) indica que el contenedor se crea si no existe ya.
 
@@ -456,6 +460,7 @@ Opcionalmente, puedes crear versiones de los datos de aplicación para la aplica
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

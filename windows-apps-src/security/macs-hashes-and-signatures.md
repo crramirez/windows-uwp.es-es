@@ -1,37 +1,41 @@
 ---
-title: MACs, hashes, and signatures
-description: This article discusses how message authentication codes (MACs), hashes, and signatures can be used in Universal Windows Platform (UWP) apps to detect message tampering.
+title: MAC, hash y firmas
+description: "En este artículo se describe cómo se pueden utilizar los códigos de autenticación de mensaje (MAC), los hash y las firmas en las aplicaciones de la Plataforma universal de Windows (UWP) para detectar mensajes manipulados."
 ms.assetid: E674312F-6678-44C5-91D9-B489F49C4D3C
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
+ms.openlocfilehash: d7c66d9ead6e3dbf750f1d058e311ef3c84a204f
+
 ---
 
-# MACs, hashes, and signatures
+# MAC, hash y firmas
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-This article discusses how message authentication codes (MACs), hashes, and signatures can be used in Universal Windows Platform (UWP) apps to detect message tampering.
+En este artículo se describe cómo se pueden utilizar los códigos de autenticación de mensaje (MAC), los hash y las firmas en las aplicaciones de la Plataforma universal de Windows (UWP) para detectar mensajes manipulados.
 
-## Message authentication codes (MACs)
+## Códigos de autenticación de mensaje (MAC)
 
 
-Encryption helps prevent an unauthorized individual from reading a message, but it does not prevent that individual from tampering with the message. An altered message, even if the alteration results in nothing but nonsense, can have real costs. A message authentication code (MAC) helps prevent message tampering. For example, consider the following scenario:
+El cifrado ayuda a impedir que personas no autorizadas puedan leer un mensaje, pero no evita que una persona pueda manipular el mensaje. La modificación de un mensaje, aunque produzca algo sin sentido, puede tener un impacto grave. Los códigos de autenticación de mensaje (MAC) ayudan a prevenir la manipulación de mensajes. Por ejemplo, considera el siguiente escenario:
 
--   Bob and Alice share a secret key and agree on a MAC function to use.
--   Bob creates a message and inputs the message and the secret key into a MAC function to retrieve a MAC value.
--   Bob sends the \[unencrypted\] message and the MAC value to Alice over a network.
--   Alice uses the secret key and the message as input to the MAC function. She compares the generated MAC value to the MAC value sent by Bob. If they are the same, the message was not changed in transit.
+-   Roberto y Alicia comparten una clave secreta y se ponen de acuerdo para usar una función MAC.
+-   Roberto crea un mensaje y suministra el mensaje y la clave secreta a la función MAC para obtener un valor MAC.
+-   Después Roberto envía el mensaje \[sin cifrar\] y el valor MAC a Alicia a través de una red.
+-   Alicia usa la clave secreta y el mensaje como entrada de la función MAC. Compara el valor MAC generado con el valor MAC enviado por Roberto. Si coinciden, significa que no se manipuló el mensaje durante el tránsito.
 
-Note that Eve, a third party eavesdropping on the conversation between Bob and Alice, cannot effectively manipulate the message. Eve does not have access to the private key and cannot, therefore, create a MAC value which would make the tampered message appear legitimate to Alice.
+Eva, que interceptó la conversación de Roberto y Alicia, no puede manipular el mensaje. Eva no tiene acceso a la clave privada y, por lo tanto, no puede crear un valor MAC que pueda hacer que el mensaje manipulado para Alicia parezca genuino.
 
-Creating a message authentication code ensures only that the original message was not altered and, by using a shared secret key, that the message hash was signed by someone with access to that private key.
+Crear un código de autenticación de mensaje solo garantiza que no se manipuló el mensaje original y, mediante una clave secreta compartida, que alguien con acceso a esa clave privada firmó el hash de mensaje.
 
-You can use the [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) to enumerate the available MAC algorithms and generate a symmetric key. You can use static methods on the [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) class to perform the necessary encryption that creates the MAC value.
+Puedes usar el [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) para enumerar los algoritmos de MAC disponibles y generar una clave simétrica. Puedes usar métodos estáticos en la clase [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) para realizar el cifrado necesario para crear el valor MAC.
 
-Digital signatures are the public key equivalent of private key message authentication codes (MACs). Although MACs use private keys to enable a message recipient to verify that a message has not been altered during transmission, signatures use a private/public key pair.
+Las firmas digitales son el equivalente de clave pública a los códigos de autenticación de mensaje (MAC) de clave privada. Aunque los MAC usan claves privadas para permitir que el destinatario de un mensaje compruebe que no se ha manipulado un mensaje durante la transmisión, las firmas usan un par de claves, la pública y la privada.
 
-This example code shows how to use the [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) class to create a hashed message authentication code (HMAC).
+Este código de ejemplo muestra cómo usar la clase [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) para crear un código de autenticación de mensajes basado en hash (HMAC).
 
 ```cs
 using Windows.Security.Cryptography;
@@ -118,23 +122,23 @@ namespace SampleMacAlgorithmProvider
 }
 ```
 
-## Hashes
+## Hash
 
 
-A cryptographic hash function takes an arbitrarily long block of data and returns a fixed-size bit string. Hash functions are typically used when signing data. Because most public key signature operations are computationally intensive, it is typically more efficient to sign (encrypt) a message hash than it is to sign the original message. The following procedure represents a common, albeit simplified, scenario:
+Una función hash criptográfica toma un bloque de datos de una longitud arbitraria y devuelve una cadena de bits de tamaño fijo. Las funciones hash se suelen usar al firmar datos. Como la mayoría de las operaciones de firma con clave pública requieren realizar cálculos intensivos, suele ser más eficiente firmar (cifrar) un hash de mensaje que firmar el mensaje original. El siguiente procedimiento representa un escenario frecuente (aunque simplificado):
 
--   Bob and Alice share a secret key and agree on a MAC function to use.
--   Bob creates a message and inputs the message and the secret key into a MAC function to retrieve a MAC value.
--   Bob sends the \[unencrypted\] message and the MAC value to Alice over a network.
--   Alice uses the secret key and the message as input to the MAC function. She compares the generated MAC value to the MAC value sent by Bob. If they are the same, the message was not changed in transit.
+-   Roberto y Alicia comparten una clave secreta y se ponen de acuerdo para usar una función MAC.
+-   Roberto crea un mensaje y suministra el mensaje y la clave secreta a la función MAC para obtener un valor MAC.
+-   Después Roberto envía el mensaje \[sin cifrar\] y el valor MAC a Alicia a través de una red.
+-   Alicia usa la clave secreta y el mensaje como entrada de la función MAC. Compara el valor MAC generado con el valor MAC enviado por Roberto. Si coinciden, significa que no se manipuló el mensaje durante el tránsito.
 
-Note that Alice sent an unencrypted message. Only the hash was encrypted. The procedure ensures only that the original message was not altered and, by using Alice's public key, that the message hash was signed by someone with access to Alice's private key, presumably Alice.
+Ten en cuenta que Alicia envió un mensaje sin cifrar. Lo que cifró fue el hash. Este procedimiento solo garantiza que no se manipuló el mensaje original y, mediante la clave pública de Alicia, que alguien con acceso a la clave privada de Alicia (probablemente Alicia) firmó el hash de mensaje.
 
-You can use the [**HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) class to enumerate the available hash algorithms and create a [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) value.
+Puedes usar la clase [**HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) para enumerar los algoritmos hash disponibles y crear un valor [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498).
 
-Digital signatures are the public key equivalent of private key message authentication codes (MACs). Whereas MACs use private keys to enable a message recipient to verify that a message has not been altered during transmission, signatures use a private/public key pair.
+Las firmas digitales son el equivalente de clave pública a los códigos de autenticación de mensaje (MAC) de clave privada. A diferencia de los MAC, que usan claves privadas para permitir que el destinatario de un mensaje compruebe que el mensaje no se ha manipulado durante la transmisión, las firmas usan un par de claves, la pública y la privada.
 
-The [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) object can be used to repeatedly hash different data without having to re-create the object for each use. The [**Append**](https://msdn.microsoft.com/library/windows/apps/br241499) method adds new data to a buffer to be hashed. The [**GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) method hashes the data and resets the object for another use. This is shown by the following example.
+El objeto [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) puede usarse para aplicar el algoritmo hash a distintos datos repetidamente sin tener que recrear el objeto para cada uso. El método [**Append**](https://msdn.microsoft.com/library/windows/apps/br241499) agrega nuevos datos a un búfer para que se les aplique el algoritmo hash. El método [**GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) aplica el algoritmo hash a los datos y restablece el objeto para otro uso. Esto se muestra en el siguiente ejemplo.
 
 ```cs
 public void SampleReusableHash()
@@ -175,17 +179,18 @@ public void SampleReusableHash()
 
 ```
 
-## Digital signatures
+## Firmas digitales
 
 
-Digital signatures are the public key equivalent of private key message authentication codes (MACs). Whereas MACs use private keys to enable a message recipient to verify that a message has not been altered during transmission, signatures use a private/public key pair.
+Las firmas digitales son el equivalente de clave pública a los códigos de autenticación de mensaje (MAC) de clave privada. A diferencia de los MAC, que usan claves privadas para permitir que el destinatario de un mensaje compruebe que el mensaje no se ha manipulado durante la transmisión, las firmas usan un par de claves, la pública y la privada.
 
-Because most public key signature operations are computationally intensive, however, it is typically more efficient to sign (encrypt) a message hash than it is to sign the original message. The sender creates a message hash, signs it, and sends both the signature and the (unencrypted) message. The recipient calculates a hash over the message, decrypts the signature, and compares the decrypted signature to the hash value. If they match, the recipient can be fairly certain that the message did, in fact, come from the sender and was not altered during transmission.
+Pero como la mayoría de las operaciones de firma con clave pública requieren realizar cálculos intensivos, suele ser más eficiente firmar (cifrar) un hash de mensaje que firmar el mensaje original. El remitente crea un hash de mensaje, lo firma y envía la firma y el mensaje (sin cifrar). El destinatario calcula un hash para el mensaje, descifra la firma y compara la firma descifrada con el valor de hash. Si coinciden, el destinatario puede estar razonablemente seguro de que el mensaje proviene realmente del remitente y no se manipuló durante la transmisión.
 
-Signing ensures only that the original message was not altered and, by using the sender's public key, that the message hash was signed by someone with access to the private key.
+La firma solo garantiza que no se manipuló el mensaje original y, mediante la clave pública del remitente, que alguien con acceso a la clave privada firmó el hash de mensaje.
 
-You can use an [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) object to enumerate the available signature algorithms and generate or import a key pair. You can use static methods on the [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) class to sign a message or verify a signature.
+Puedes usar un objeto [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) para enumerar los algoritmos de firma disponibles y generar o importar un par de claves. Puedes usar métodos estáticos en la clase [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) para firmar un mensaje o comprobar una firma.
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

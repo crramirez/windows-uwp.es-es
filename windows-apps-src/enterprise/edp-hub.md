@@ -1,10 +1,14 @@
 ---
 author: mcleblanc
-Description: 'En este tema del centro se describe un panorama completo de desarrollador sobre cómo Protección de datos de empresa (EDP) se relaciona con los archivos, los búferes, el Portapapeles, las redes, las tareas en segundo plano y la protección de datos con la pantalla bloqueada.'
-MS-HAID: 'dev\_enterprise.edp\_hub'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "En este tema del centro se describe un panorama completo de desarrollador sobre cómo Protección de datos de empresa (EDP) se relaciona con los archivos, los búferes, el Portapapeles, las redes, las tareas en segundo plano y la protección de datos con la pantalla bloqueada."
+MS-HAID: dev\_enterprise.edp\_hub
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 'Protección de datos de empresa (EDP)'
+title: "Protección de datos de empresa (EDP)"
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 97bdbce8360fabad63f9fe7e85e5172ccd83f403
+
 ---
 
 # Protección de datos de empresa (EDP)
@@ -377,6 +381,7 @@ Windows.Security.EnterpriseData.ProtectionPolicyManager.RevokeContent("contoso.c
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -5,8 +5,8 @@ title: "Interacciones del panel táctil"
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: aa09852ff6f387b97e0f1a1bbb2d198927d5da0d
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 361df3a06faa771a81a6d63c2fe873a1aace1125
 
 ---
 
@@ -41,7 +41,7 @@ Los paneles táctiles integran diversas experiencias de interacción, por lo que
 
 Los gestos y las directrices que se explican en este tema te pueden ayudar a asegurarte de que tu aplicación admite la entrada del panel táctil sin problemas y con muy poco código.
 
-## <span id="The_touchpad_language"></span><span id="the_touchpad_language"></span><span id="THE_TOUCHPAD_LANGUAGE"></span>El idioma del panel táctil
+## El idioma del panel táctil
 
 
 Un escueto conjunto de interacciones del panel táctil se usan de forma coherente en todo el sistema. Optimiza tu aplicación para la entrada táctil y del mouse, y este idioma hará que los usuarios se sientan cómodos al instante, lo que aumentará su confianza y les permitirá aprender a usar tu aplicación con mayor facilidad.
@@ -71,39 +71,39 @@ Estos son algunos ejemplos de gestos optimizados para panel táctil para realiza
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span id="Three-finger_tap"></span><span id="three-finger_tap"></span><span id="THREE-FINGER_TAP"></span>Pulsación de tres dedos</p></td>
+<td align="left"><p>Pulsación de tres dedos</p></td>
 <td align="left"><p>Preferencias de usuario para realizar búsquedas con <strong>Cortana</strong> o mostrar el <strong>Centro de actividades</strong>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Three_finger_slide"></span><span id="three_finger_slide"></span><span id="THREE_FINGER_SLIDE"></span>Deslizamiento de tres dedos</p></td>
+<td align="left"><p>Deslizamiento de tres dedos</p></td>
 <td align="left"><p>Preferencia del usuario para abrir la vista de tarea de escritorio virtual, mostrar el Escritorio o cambiar entre aplicaciones abiertas.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Single_finger_tap_for_primary_action"></span><span id="single_finger_tap_for_primary_action"></span><span id="SINGLE_FINGER_TAP_FOR_PRIMARY_ACTION"></span>Pulsar con un dedo para la acción principal</p></td>
+<td align="left"><p>Pulsar con un dedo para la acción principal</p></td>
 <td align="left"><p>Usa un solo dedo para pulsar en un elemento e invocar su acción principal (como iniciar una aplicación o ejecutar un comando).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Two_finger_tap_to_right-click"></span><span id="two_finger_tap_to_right-click"></span><span id="TWO_FINGER_TAP_TO_RIGHT-CLICK"></span>Pulsar con dos dedos para hacer clic con el botón derecho</p></td>
+<td align="left"><p>Pulsar con dos dedos para hacer clic con el botón derecho</p></td>
 <td align="left"><p>Pulsa con dos dedos al mismo tiempo en un elemento para seleccionarlo y mostrar los comandos contextuales.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Two_finger_slide_to_pan"></span><span id="two_finger_slide_to_pan"></span><span id="TWO_FINGER_SLIDE_TO_PAN"></span>Deslizar con dos dedos para realizar un movimiento panorámico</p></td>
+<td align="left"><p>Deslizar con dos dedos para realizar un movimiento panorámico</p></td>
 <td align="left"><p>El deslizamiento se usa principalmente para interacciones de movimiento panorámico, pero también se puede usar para mover, dibujar o escribir.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Pinch_and_stretch_to_zoom"></span><span id="pinch_and_stretch_to_zoom"></span><span id="PINCH_AND_STRETCH_TO_ZOOM"></span>Reducir y ampliar para hacer zoom</p></td>
+<td align="left"><p>Reducir y ampliar para hacer zoom</p></td>
 <td align="left"><p>Los gestos de reducir y ampliar se usan comúnmente para el cambio de tamaño y el zoom semántico.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Single_finger_press_and_slide_to_rearrange"></span><span id="single_finger_press_and_slide_to_rearrange"></span><span id="SINGLE_FINGER_PRESS_AND_SLIDE_TO_REARRANGE"></span>Presionar con un dedo y deslizar para reordenar</p></td>
+<td align="left"><p>Presionar con un dedo y deslizar para reordenar</p></td>
 <td align="left"><p>Arrastra un elemento.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Single_finger_press_and_slide_to_select_text"></span><span id="single_finger_press_and_slide_to_select_text"></span><span id="SINGLE_FINGER_PRESS_AND_SLIDE_TO_SELECT_TEXT"></span>Presionar con un dedo y deslizar para seleccionar texto</p></td>
+<td align="left"><p>Presionar con un dedo y deslizar para seleccionar texto</p></td>
 <td align="left"><p>Presiona dentro de texto seleccionable y deslízalo para seleccionarlo. Pulsa dos veces para seleccionar una palabra.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Left_and_right_click_zone"></span><span id="left_and_right_click_zone"></span><span id="LEFT_AND_RIGHT_CLICK_ZONE"></span>Zona de clic con los botones primario y secundario</p></td>
+<td align="left"><p>Zona de clic con los botones primario y secundario</p></td>
 <td align="left"><p>Simula las funciones de los botones primario y secundario de un dispositivo de mouse.</p></td>
 </tr>
 </tbody>
@@ -111,14 +111,14 @@ Estos son algunos ejemplos de gestos optimizados para panel táctil para realiza
 
  
 
-## <span id="Hardware"></span><span id="hardware"></span><span id="HARDWARE"></span>Hardware
+## Hardware
 
 
 Consulta las funciones del dispositivo de mouse ([**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626)) para identificar cuáles son los aspectos de la interfaz de usuario de tu aplicación a los que el hardware del panel táctil puede acceder directamente. Te recomendamos que proporciones interfaces de usuario tanto para entrada táctil como para entrada del mouse.
 
 Para obtener más información sobre cómo consultar las funciones de dispositivos, consulta [Identificar los dispositivos de entrada](identify-input-devices.md).
 
-## <span id="Visual_feedback"></span><span id="visual_feedback"></span><span id="VISUAL_FEEDBACK"></span>Información visual
+## Información visual
 
 
 -   Cuando se detecte un cursor del panel táctil (a través de eventos de movimiento o mantenimiento del mouse), muestra la interfaz de usuario específica del mouse para indicar las funciones expuestas por el elemento. Si el cursor del panel táctil no se mueve por un determinado período o el usuario inicia una interacción táctil, haz que la interfaz de usuario del panel táctil vaya desapareciendo gradualmente. Esto mantiene la interfaz de usuario ordenada y organizada.
@@ -129,7 +129,7 @@ Para obtener más información sobre cómo consultar las funciones de dispositiv
 
 Para obtener instrucciones más generales sobre la información visual, consulta el tema sobre las [directrices para información visual](https://msdn.microsoft.com/library/windows/apps/hh465342).
 
-## <span id="Cursors"></span><span id="cursors"></span><span id="CURSORS"></span>Cursores
+## Cursores
 
 
 Hay disponible un conjunto de cursores estándar para un puntero del panel táctil. Estos se usan para indicar la acción principal de un elemento.
@@ -144,7 +144,7 @@ Si necesitas personalizar el cursor del mouse:
 -   Usa los cursores de ajuste horizontal, vertical y diagonal (![cursor de ajuste vertical](images/cursor-vertical.png), ![cursor de ajuste horizontal](images/cursor-horizontal.png), ![cursor de ajuste diagonal (inferior izquierda, superior derecha)](images/cursor-diagonal2.png), ![cursor de ajuste diagonal (superior izquierda, inferior derecha)](images/cursor-diagonal1.png)cuando se puede ajustar el tamaño de un objeto.
 -   Usa los cursores de mano que sujeta (![cursor de mano que sujeta (abierta)](images/cursor-pan1.png), ![cursor de mano que sujeta (cerrada)](images/cursor-pan2.png)) al desplazar contenido lateralmente dentro de un lienzo fijo (como un mapa).
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 
 * [Controlar la entrada de puntero](handle-pointer-input.md)
@@ -170,6 +170,6 @@ Si necesitas personalizar el cursor del mouse:
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

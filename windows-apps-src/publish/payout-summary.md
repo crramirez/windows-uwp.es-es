@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: En el apartado Resumen de pago se muestran los detalles sobre el dinero que has ganado con tus aplicaciones y productos desde la aplicación. Asimismo, también te permite saber cuándo recibirás los pagos y cuánto te pagarán.
+Description: "En el apartado Resumen de pago se muestran los detalles sobre el dinero que has ganado con tus aplicaciones y productos desde la aplicación. Asimismo, también te permite saber cuándo recibirás los pagos y cuánto te pagarán."
 title: Resumen de pago
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
+ms.sourcegitcommit: c626a828f9cee6b23ec26fc2eaa60a6477870baf
+ms.openlocfilehash: 773a072f5656068eb6e0b2d792cf73a7ff1d16f0
+
 ---
 
 # Resumen de pago
@@ -69,9 +72,10 @@ En la siguiente tabla se describen los campos que aparecen en el archivo .csv. T
 
 | Nombre del campo              | Descripción                                                                                                                              |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Fuente de ingresos          | Fuente de tus ingresos basada en dónde se produjo la transacción (por ejemplo, Tienda Windows, Tienda de Windows Phone, Tienda Windows 8, Microsoft Advertising, etc.). |
-| Id. de transacción          | Identificador único de transacción                                                                                                            |
-| Hora y fecha de transacción   | Fecha y hora en que se realizó la transacción (hora UTC)                                                                                         |
+| Fuente de ingresos          | La fuente de tus ingresos, que se basa en el lugar en el que se ha producido la transacción (por ejemplo, Tienda Windows, Tienda de Windows Phone, Tienda Windows 8, Microsoft Advertising, etc.). |
+| Id. de pedido          |  Un identificador de pedido exclusivo. Este id. permite identificar las transacciones de compra con sus respectivas transacciones que no son de compra (como las devoluciones, la anulaciones, etc.). Ambas tendrá el mismo id. de pedido. Además, en el caso de un cargo dividido en el que se hayan usado varios métodos de pago para una sola compra, te permitirá vincular las transacciones de compra.                                                                                                          |
+| Id. de transacción          |       Identificador único de transacción  |
+| Fecha y hora de transacción   | Fecha y hora en que se realizó la transacción (hora UTC)                                                                                         |
 | Id. del producto principal       | Identificador del producto principal único. Ten en cuenta que, si no hay un producto principal para la transacción, el identificador del producto principal es igual al identificador del producto. |
 | Id. del producto              | Identificador único del producto                                                                                                                |
 | Nombre del producto principal     | Nombre del producto principal. Ten en cuenta que, si no hay un producto principal para la transacción, el nombre del producto principal es igual al nombre del producto.   |
@@ -107,6 +111,7 @@ En la siguiente tabla se describen los campos que aparecen en el archivo .csv. T
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

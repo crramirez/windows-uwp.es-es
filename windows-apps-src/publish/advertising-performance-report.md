@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Para ver los datos de rendimiento de las unidades de anuncio en tus aplicaciones, usa los informes de rendimiento de la publicidad de nivel de aplicación y de nivel de cuenta en el panel del Centro de desarrollo de Windows.
+Description: "Para ver los datos de rendimiento de las unidades de anuncio en tus aplicaciones, usa los informes de rendimiento de la publicidad de nivel de aplicación y de nivel de cuenta en el panel del Centro de desarrollo de Windows."
 title: Informe de rendimiento de la publicidad
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
+translationtype: Human Translation
+ms.sourcegitcommit: 93e12837aec151b0cd1fa711c9e04081d74a3962
+ms.openlocfilehash: 1617005cff264a89eb66e326e2bedf9f6641a3da
+
 ---
 
 # Informe de rendimiento de la publicidad
@@ -90,6 +94,7 @@ La sección **Rendimiento de publicidad** en la página **Información general d
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
-title: Kit para la certificación de aplicaciones en Windows
-description: Para que la aplicación tenga posibilidades de publicarse en la Tienda Windows, o de obtener la certificación de Windows, debes validarla y probarla localmente antes de enviarla para su certificación. En este tema explicamos cómo instalar y ejecutar el Kit para la certificación de aplicaciones en Windows.
+title: "Kit para la certificación de aplicaciones en Windows"
+description: "Para que la aplicación tenga posibilidades de publicarse en la Tienda Windows, o de obtener la certificación de Windows, debes validarla y probarla localmente antes de enviarla para su certificación. En este tema explicamos cómo instalar y ejecutar el Kit para la certificación de aplicaciones en Windows."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 16e116c2a92a6ad751b0e4fe58fc7b41de0455cb
+
 ---
 # Kit para la certificación de aplicaciones en Windows
 
@@ -95,6 +99,7 @@ A medida que evolucionan los equipos de bajo consumo, las características de re
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

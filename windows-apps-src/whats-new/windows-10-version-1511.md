@@ -1,7 +1,11 @@
 ---
 author: QuinnRadich
-title: Novedades de Windows 10, versión 1511, noviembre de 2015
-description: Windows 10, versión 1511, y las nuevas herramientas para desarrolladores proporcionan las herramientas, funciones y experiencias con tecnología de la nueva Plataforma universal de Windows.
+title: "Novedades de Windows 10, versión 1511, noviembre de 2015"
+description: "Windows 10, versión 1511, y las nuevas herramientas para desarrolladores proporcionan las herramientas, funciones y experiencias con tecnología de la nueva Plataforma universal de Windows."
+translationtype: Human Translation
+ms.sourcegitcommit: 1029eff0f21c62f8235f37516971996791051d4c
+ms.openlocfilehash: 07d40584e998d358c6c80bd5aec43be885a79495
+
 ---
 
 # Novedades de Windows
@@ -26,6 +30,7 @@ Kit para la certificación de aplicaciones en Windows | El Kit para la certifica
 Descargas de diseños | Echa un vistazo a nuestras nuevas plantillas de diseño de aplicaciones para UWP para Adobe Photoshop. También hemos actualizado las plantillas de Microsoft PowerPoint y Adobe Illustrator y creado una versión PDF de nuestras directrices. [Visita la página Descargas de diseños](https://developer.microsoft.com/en-us/windows/design/assets).
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

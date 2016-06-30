@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Estructura de la aplicación Marble Maze
-description: La estructura de una aplicación DirectX para la Plataforma universal de Windows (UWP) es diferente de la de una aplicación de escritorio tradicional.
+title: "Estructura de la aplicación Marble Maze"
+description: "La estructura de una aplicación DirectX para la Plataforma universal de Windows (UWP) es diferente de la de una aplicación de escritorio tradicional."
 ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e9cc290fa77471f315daf7f29f605412d2ec45cc
+
 ---
 
 # Estructura de la aplicación Marble Maze
@@ -373,6 +377,7 @@ Lee [Agregar contenido visual a la muestra de Marble Maze](adding-visual-content
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

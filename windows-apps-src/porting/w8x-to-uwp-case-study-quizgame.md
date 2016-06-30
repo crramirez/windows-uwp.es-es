@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
-description: En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT 8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10.
-title: Caso práctico de Windows Runtime 8.x a UWP, aplicación de muestra punto a punto de QuizGame
+description: "En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT 8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10."
+title: "Caso práctico de Windows Runtime 8.x a UWP, aplicación de muestra punto a punto de QuizGame"
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: cd05c3edbc254cceb00c55caba698d21998f5594
+
 ---
 
 # Caso práctico de Windows Runtime 8.x a UWP, aplicación de muestra punto a punto de QuizGame
@@ -191,6 +195,7 @@ Con ese último retoque, la aplicación se comportará y tendrá el mismo aspect
 La aplicación que migramos en este caso práctico era relativamente compleja e incluía varios proyectos, una biblioteca de clases y una gran cantidad de código e interfaz de usuario. Aun así, la migración resultó sencilla. Parte de la facilidad de la migración corresponde directamente a la similitud entre la plataforma para desarrollador de Windows 10 y las plataformas de Windows 8.1 y Windows Phone 8.1. En parte también se debe a la forma en que la aplicación original se diseñó para separar los modelos, los modelos de vista y las vistas.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

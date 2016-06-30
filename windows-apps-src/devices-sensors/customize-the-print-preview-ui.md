@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 88132B6F-FB50-4B03-BC21-233988746230
-title: Personalizar la interfaz de usuario de vista previa de impresión
-description: En esta sección se describe cómo personalizar las opciones de impresión y la configuración de la interfaz de usuario de la vista previa de impresión.
+title: "Personalizar la interfaz de usuario de vista previa de impresión"
+description: "En esta sección se describe cómo personalizar las opciones de impresión y la configuración de la interfaz de usuario de la vista previa de impresión."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 36c1499b51aa5b8b5ab4b0b354197c67dc89801f
+
 ---
 # Personalizar la interfaz de usuario de vista previa de impresión
 
@@ -183,6 +187,7 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Guías para portar juegos
-description: Proporciona guías para portar los juegos a Direct3D 11, la Plataforma universal de Windows (UWP) y a Windows 10.
+title: "Guías para portar juegos"
+description: "Proporciona guías para portar los juegos a Direct3D 11, la Plataforma universal de Windows (UWP) y a Windows 10."
 ms.assetid: 1dff815b-d3bd-557e-52c1-58e40f4dd6b1
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0cf7f4e6679d362691cea8ccbd45786176715cad
+
 ---
 
 # Guías para portar juegos
@@ -37,7 +41,7 @@ Proporciona guías para portar los juegos a Direct3D 11, la Plataforma universal
 
  
 
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si desarrollas para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -50,6 +54,7 @@ Proporciona guías para portar los juegos a Direct3D 11, la Plataforma universal
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

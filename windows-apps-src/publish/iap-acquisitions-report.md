@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: En el informe de adquisiciones de IAP del panel del Centro de desarrollo de Windows puedes ver cuántos IAP has vendido, junto con los detalles demográficos y de plataforma.
+Description: "En el informe de adquisiciones de IAP del panel del Centro de desarrollo de Windows puedes ver cuántos IAP has vendido, junto con los detalles demográficos y de plataforma."
 title: Informe de adquisiciones de IAP
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3191df12ca5b59f545cf250c3e669b30192af6bc
+
 ---
 
 # Informe de adquisiciones de IAP
@@ -65,6 +69,7 @@ En el gráfico **Versión de SO** se muestra el número total de adquisiciones s
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

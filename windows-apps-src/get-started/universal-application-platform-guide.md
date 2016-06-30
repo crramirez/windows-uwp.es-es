@@ -1,8 +1,11 @@
 ---
-author: martinekuan
-title: Guía de aplicaciones para la Plataforma universal de Windows (UWP)
-description: En esta guía, conocerás las aplicaciones para la Plataforma universal de Windows (UWP) que se pueden ejecutar en una amplia variedad de dispositivos.
+author: TylerMSFT
+title: "Guía de aplicaciones para la Plataforma universal de Windows (UWP)"
+description: "En esta guía, conocerás las aplicaciones para la Plataforma universal de Windows (UWP) que se pueden ejecutar en una amplia variedad de dispositivos."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
+ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
+ms.openlocfilehash: 191a7aef1a027747379c991e17afc1580a9ec549
+
 ---
 
 # Guía de aplicaciones para la Plataforma universal de Windows (UWP)
@@ -255,9 +258,9 @@ El conjunto de API de una familia de dispositivos se desglosa en subdivisiones, 
 
 Una aplicación para UWP o un componente de Windows en tiempo de ejecución escritos en C++/CX tienen acceso a las API de Win32 que forman parte de UWP. Todas las familias de dispositivos de Windows 10 implementan estas API de Win32. Vincular tu aplicación con Windowsapp.lib. Windowsapp.lib es un biblioteca "paraguas" que proporciona las exportaciones de las API de UWP. Al vincular Windowsapp.lib a tu aplicación se agregarán dependencias a archivos DLL presentes en todas las familias de dispositivos de Windows 10.
 
-Para obtener la lista completa de las API de Win32 disponibles para las aplicaciones para UWP, consulta [API Sets for UWP apps (Conjuntos de API para aplicaciones para UWP)](https://msdn.microsoft.com/library/windows/desktop/mt186421) y [Dlls for UWP apps (DLLs para aplicaciones para UWP)](https://msdn.microsoft.com/library/windows/desktop/mt186422).
+Para obtener la lista completa de las API de Win32 disponibles para las aplicaciones para UWP, consulta [Conjuntos de API para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/desktop/mt186421) y [DLLs para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/desktop/mt186422).
 
-## Experiencia de usuario
+## Experiencia del usuario
 
 
 Una aplicación universal de Windows te permite aprovechar las exclusivas funcionalidades del dispositivo en el que se ejecuta. La aplicación puede usar toda la potencia de un dispositivo de escritorio, la interacción natural de la manipulación directa de una tableta (incluida la entrada táctil y de lápiz), la portabilidad y la comodidad de los dispositivos móviles y la capacidad de colaboración de [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365).
@@ -292,6 +295,7 @@ Consulta [Usar el panel unificado del Centro de desarrollo de Windows](../publis
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

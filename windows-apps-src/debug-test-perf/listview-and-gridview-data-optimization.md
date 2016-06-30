@@ -1,25 +1,29 @@
 ---
 author: mcleblanc
 ms.assetid: 3A477380-EAC5-44E7-8E0F-18346CC0C92F
-title: Virtualización de datos de ListView y GridView
-description: Mejora el rendimiento y el tiempo de inicio de las clases ListView y GridView mediante la virtualización de datos.
+title: "Virtualización de datos de ListView y GridView"
+description: "Mejora el rendimiento y el tiempo de inicio de las clases ListView y GridView mediante la virtualización de datos."
+translationtype: Human Translation
+ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
+ms.openlocfilehash: 26faa92e98547844af2be1720c458d793ac2f3ac
+
 ---
 # Virtualización de datos de ListView y GridView
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Nota** Para más información, consulta la sesión //build/ [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView (Aumentar considerablemente el rendimiento cuando los usuarios interactúan con grandes cantidades de datos de las clases GridView y ListView)](https://channel9.msdn.com/Events/Build/2013/3-158).
+**Nota** Para obtener más información, consulta la sesión //build/ [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView](https://channel9.msdn.com/Events/Build/2013/3-158) (Aumentar considerablemente el rendimiento cuando los usuarios interactúan con grandes cantidades de datos de las clases GridView y ListView).
 
-Mejora el rendimiento y el tiempo de inicio de las clases [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) mediante la virtualización de datos. Para la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de elementos, consulta el tema [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md).
+Mejorar el rendimiento y el tiempo de inicio de [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) mediante la virtualización de datos. Para la virtualización de la interfaz de usuario, reducción de elementos y la actualización progresiva de elementos, consulta el tema [Optimización de ListView y GridView UI](optimize-gridview-and-listview.md).
 
-Si dispones de un conjunto de datos que es tan grande que no se puede o no se debe almacenar en la memoria de una sola vez, necesitarás un método de virtualización de datos. Cargas una porción inicial en la memoria (disco local, red o nube) y aplicas la virtualización de la interfaz de usuario a este conjunto de datos parcial. Más tarde, se pueden cargar datos de manera incremental o desde puntos arbitrarios del conjunto de datos maestro (acceso aleatorio) a petición. Determinar si la virtualización es apropiada para tu caso depende de muchos factores.
+Se necesita un método de virtualización de datos para un conjunto de datos que sea tan grande que no se pueda o no se deba almacenar en la memoria de una sola vez. Cargas una porción inicial en la memoria (disco local, red o nube) y aplicas la virtualización de la interfaz de usuario a este conjunto de datos parcial. Más tarde, se pueden cargar datos de manera incremental o desde puntos arbitrarios del conjunto de datos maestro (acceso aleatorio) a petición. Determinar si la virtualización es apropiada para tu caso depende de muchos factores.
 
 -   El tamaño del conjunto de datos
 -   El tamaño de cada elemento
 -   El origen del conjunto de datos (disco local, red o nube)
 -   El consumo de memoria total de la aplicación
 
-**Nota** Ten en cuenta que existe una característica habilitada de manera predeterminada para las clases ListView y GridView, que muestra elementos visuales de marcador de posición temporales mientras el usuario realiza un movimiento panorámico o de desplazamiento rápido. A medida que se cargan los datos, estos elementos visuales de marcador de posición se reemplazan por la plantilla de elemento. Para desactivar la característica, puedes establecer la propiedad [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) en "false", aunque si lo haces, te recomendamos que uses el atributo x:Phase para representar de manera progresiva los elementos de la plantilla de elemento. Consulta [Actualizar los elementos ListView y GridView de forma progresiva](optimize-gridview-and-listview.md#update-items-incrementally).
+**Nota** Ten en cuenta que existe una característica habilitada de manera predeterminada para las clases ListView y GridView, que muestra elementos visuales de marcador de posición temporales mientras el usuario realiza un movimiento panorámico o de desplazamiento rápido. A medida que se cargan los datos, estos elementos visuales de marcador de posición se reemplazan por la plantilla de elemento. Para desactivar la característica, puedes establecer [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) en false, aunque si lo haces, te recomendamos que uses el atributo x:Phase para representar de manera progresiva los elementos de la plantilla de elemento. Consulta [Actualizar los elementos ListView y GridView de forma progresiva](optimize-gridview-and-listview.md#update-items-incrementally).
 
 Aquí encontrarás más información acerca de las técnicas de virtualización de datos incremental y de acceso aleatorio.
 
@@ -66,9 +70,9 @@ Esta es la estrategia básica para el origen de datos de la virtualización de d
     -   Si está disponible en la memoria, devuélvelo.
     -   Si no lo está, devuelve null o un elemento de marcador de posición.
     -   Usa la solicitud de un elemento (o la información del rango de [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)) para saber qué elementos son necesarios y para capturar datos de los elementos del backend de forma asincrónica. Una vez hayas recuperado los datos, crea una notificación de cambio mediante la interfaz [**INotifyCollectionChanged**]((https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) o [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052), para que el control de elementos tenga conocimiento del nuevo elemento.
--   (Opcional) A medida que cambia la ventanilla del control de elementos, identifica qué elementos del origen de datos son necesarios a través de la implementación de la interfaz [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070).
+-   (Opcionalmente) A medida que la ventanilla del control de elementos cambia, identifica qué elementos son necesarios del origen de datos a través de la implementación de [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070).
 
-Asimismo, la estrategia de cuándo cargar elementos de datos, la cantidad de carga y qué elementos mantener en memoria depende de tu aplicación. Algunas consideraciones generales que se deben tener en cuenta:
+Además, la estrategia de cuándo cargar elementos de datos, la cantidad de carga y qué elementos mantener en memoria depende de tu aplicación. Algunas consideraciones generales que se deben tener en cuenta:
 
 -   Realiza solicitudes asincrónicas para datos; no bloquees el subproceso de la interfaz de usuario.
 -   Encuentra el punto óptimo en el tamaño de los lotes en los que capturas elementos. Se recomienda que sea más grande que pequeño. No tan pequeña que realizas demasiadas solicitudes pequeñas; ni tan grande que tarda demasiado tiempo en recuperarse.
@@ -84,6 +88,7 @@ Asimismo, la estrategia de cuándo cargar elementos de datos, la cantidad de car
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

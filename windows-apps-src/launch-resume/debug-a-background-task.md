@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Depurar una tarea en segundo plano
-description: Aprende a depurar una tarea en segundo plano, incluida la activación y el seguimiento de depuración de la tarea en segundo plano en el registro de eventos de Windows.
+description: "Aprende a depurar una tarea en segundo plano, incluida la activación y el seguimiento de depuración de la tarea en segundo plano en el registro de eventos de Windows."
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 1b49c3f06456eef2f3e56227ecb5af5fc991fb13
+
 ---
 
 # Depurar una tarea en segundo plano
@@ -111,8 +114,6 @@ Para obtener más información acerca de cómo usar VS para depurar una tarea en
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

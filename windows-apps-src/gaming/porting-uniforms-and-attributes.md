@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D
-description: Durante el proceso de migración de OpenGL ES 2.0 a Direct3D 11, debes cambiar la sintaxis y el comportamiento de API para pasar datos entre la aplicación y los programas sombreadores.
+title: "Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D"
+description: "Durante el proceso de migración de OpenGL ES 2.0 a Direct3D 11, debes cambiar la sintaxis y el comportamiento de API para pasar datos entre la aplicación y los programas sombreadores."
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a588ba010ddf21a07d493774cff7f6ab5dbfdf47
+
 ---
 
 # Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D
@@ -297,6 +301,7 @@ struct VertexShaderInput
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

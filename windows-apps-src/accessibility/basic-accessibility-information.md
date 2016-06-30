@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: La información de accesibilidad básica se suele clasificar en nombre, rol y valor. En este tema se describe el código para ayudar a que tu aplicación exponga la información básica requerida por las tecnologías de asistencia.
+Description: "La información de accesibilidad básica se suele clasificar en nombre, rol y valor. En este tema se describe el código para ayudar a que tu aplicación exponga la información básica requerida por las tecnologías de asistencia."
 ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
-title: Exponer información básica de accesibilidad
+title: "Exponer información básica de accesibilidad"
 label: Expose basic accessibility information
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 1c6bc8567b39357d414a46ef2b92197c78bca971
+
 ---
 
 # Exponer información básica de accesibilidad  
@@ -32,7 +35,7 @@ Las mayoría de los elementos contenedores, como paneles, no promueven su conten
 <span id="role_value"/>
 <span id="ROLE_VALUE"/>
 ## Rol y valor  
-Los controles y otros elementos de la interfaz de usuario que forman parte del vocabulario XAML de Windows implementan compatibilidad para la automatización de la interfaz de usuario para notificar el rol y el valor como parte de sus definiciones. Puedes usar las herramientas de automatización de la interfaz de usuario para los controles o puedes leer la documentación para las implementaciones de [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) de cada control. Los roles disponibles en un marco de trabajo de automatización de la interfaz de usuario están definidos en la enumeración [**AutomationControlType**](https://msdn.microsoft.com/library/windows/apps/BR209182). Los clientes de automatización de la interfaz de usuario, como las tecnologías de asistencia, pueden obtener información de roles mediante llamadas a los métodos que el marco de trabajo de automatización de la interfaz de usuario expone con **AutomationPeer** del control.
+Los controles y otros elementos de la interfaz de usuario que forman parte del vocabulario XAML de Windows implementan compatibilidad para la automatización de la interfaz de usuario para notificar el rol y el valor como parte de sus definiciones. Puedes usar las herramientas de automatización de la interfaz de usuario para los controles o puedes leer la documentación para las implementaciones de [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) de cada control. Los roles disponibles en un marco de trabajo de automatización de la interfaz de usuario están definidos en la enumeración [**AutomationControlType**](https://msdn.microsoft.com/library/windows/apps/BR209182). Los clientes de automatización de la interfaz de usuario, como las tecnologías de asistencia pueden obtener información de roles mediante llamadas a los métodos que el marco de trabajo de automatización de la interfaz de usuario expone con **AutomationPeer** del control.
 
 No todos los controles tienen un valor. Los controles que tienen un valor proporcionan esta información a la automatización de la interfaz de usuario mediante los modelos y sistemas del mismo nivel admitidos por ese control. Por ejemplo, un elemento de formulario [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) tiene un valor. Una tecnología de asistencia puede ser un cliente de automatización de la interfaz de usuario y puede descubrir que un valor existe y cuál es su valor. En este caso concreto, **TextBox** es compatible con el patrón [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) mediante las definiciones [**TextBoxAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242550).
 
@@ -55,7 +58,7 @@ Para simplificar el uso de cadenas que ya existen en la interfaz de usuario visi
 * [
               **TextBlock**
             ](https://msdn.microsoft.com/library/windows/apps/BR209652), [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) y **RichTextBlock** promueven el valor de la propiedad **Text** como nombre accesible predeterminado.
-* Todas las subclases [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/BR209365) usan una técnica iterativa "ToString" para encontrar cadenas en su valor [**Content**](https://msdn.microsoft.com/library/windows/apps/BR209365_content) y promueven estas cadenas como nombre accesible predeterminado.
+* Todas las subclases [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) usan una técnica iterativa "ToString" para encontrar cadenas en su valor [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) y promueven estas cadenas como nombre accesible predeterminado.
 
 > [!NOTE]
 > Tal y como impone la automatización de la interfaz de usuario, la longitud del nombre accesible no puede ser superior a 2048 caracteres. Si una cadena usada para determinar el nombre accesible de manera automática excede ese límite, el nombre accesible se truncará en ese punto.
@@ -111,7 +114,7 @@ Una descripción accesible proporciona información de accesibilidad adicional a
 
 El lector de pantalla Narrador lee la descripción accesible de un elemento solamente cuando el usuario solicita más información acerca del elemento presionando Bloq Mayús+F.
 
-El nombre accesible está destinado a identificar el control, en lugar de documentar su comportamiento. Si una pequeña descripción no es suficiente para explicar el control, podrás establecer la propiedad adjunta [**AutomationProperties.HelpText**](https://msdn.microsoft.com/library/windows/apps/Hh759765), además de [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770).
+El nombre accesible está destinado a identificar el control, en lugar de documentar su comportamiento. Si una pequeña descripción no es suficiente para explicar el control, podrás establecer la propiedad adjunta [**AutomationProperties.HelpText**](https://msdn.microsoft.com/library/windows/apps/Hh759765) además de [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770).
 
 <span id="Testing_accessibility_early_and_often"/>
 <span id="testing_accessibility_early_and_often"/>
@@ -119,7 +122,7 @@ El nombre accesible está destinado a identificar el control, en lugar de docume
 ## Probar la accesibilidad desde el principio y con frecuencia  
 En última instancia, el mejor enfoque para admitir lectores de pantalla es probar tu aplicación usando uno tú mismo. Eso mostrará cómo se comporta el lector de pantalla y qué información de accesibilidad básica puede faltar en la aplicación. Después, puedes ajustar los valores de la interfaz de usuario o propiedad de automatización de la interfaz de usuario en consecuencia. Para más información, consulta [Pruebas de accesibilidad](accessibility-testing.md).
 
-Una de las herramientas que puedes usar para probar la accesibilidad se llama **AccScope**. La herramienta **AccScope** es especialmente útil porque puedes ver representaciones visuales de la interfaz de usuario que muestran cómo verían tu aplicación las tecnologías de asistencia como un árbol de automatización. En particular, hay un modo de Narrador que muestra cómo el Narrador obtiene el texto de la aplicación y cómo organiza los elementos de la interfaz de usuario. AccScope está diseñado para que pueda usarse y resulte útil durante todo el ciclo de desarrollo de una aplicación, incluso en la fase de diseño preliminar. Para más información, consulta [AccScope](https://msdn.microsoft.com/library/windows/desktop/Dn433239).
+Una de las herramientas que puedes usar para probar la accesibilidad se llama **AccScope**. La herramienta **AccScope** es especialmente útil porque puedes ver representaciones visuales de la interfaz de usuario que muestran cómo verían tu aplicación las tecnologías de asistencia como un árbol de automatización. En particular, hay un modo de Narrador que muestra cómo el Narrador obtiene el texto de la aplicación y cómo organiza los elementos de la interfaz de usuario. AccScope está diseñado para que pueda usarse y resulte útil durante todo el ciclo de desarrollo de una aplicación, incluso en la fase de diseño preliminar. Para más información, consulta el tema sobre [AccScope](https://msdn.microsoft.com/library/windows/desktop/Dn433239).
 
 <span id="Accessible_names_from_dynamic_data"/>
 <span id="accessible_names_from_dynamic_data"/>
@@ -133,7 +136,7 @@ Windows admite muchos controles que se pueden usar para mostrar valores que prov
 ## Nombres accesibles y localización  
 Para asegurarte de que el nombre accesible también sea un elemento que está localizado, deberías usar técnicas adecuadas para almacenar las cadenas localizables como recursos y después hacer referencia a las conexiones de los recursos con valores [directiva x:Uid](https://msdn.microsoft.com/library/windows/apps/Mt204791). Si el nombre accesible proviene de un uso de [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) establecido de manera explícita, asegúrate de que esa cadena también sea localizable.
 
-Ten en cuenta que las propiedades adjuntas, como las propiedades [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081), usan una sintaxis de calificación especial para el nombre del recurso, de manera que el recurso hace referencia a la propiedad adjunta como si se aplicara a un elemento específico. Por ejemplo, el nombre de recurso [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) tal y como se aplica a un elemento de la interfaz de usuario denominado `MediumButton` es:
+Ten en cuenta que las propiedades adjuntas, como las propiedades [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081), usan una sintaxis de calificación especial para el nombre del recurso, de manera que el recurso hace referencia a la propiedad adjunta como si se aplicara a un elemento específico. Por ejemplo, el nombre de recurso [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) tal y como se aplica a un elemento de la interfaz de usuario denominado `MediumButton` es: `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name`.
 
 <span id="related_topics"/>
 ## Temas relacionados  
@@ -143,6 +146,7 @@ Ten en cuenta que las propiedades adjuntas, como las propiedades [**AutomationPr
 * [Pruebas de accesibilidad](accessibility-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

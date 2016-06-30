@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Un ámbito de nombres XAML almacena relaciones entre los nombres de objetos definidos en XAML y sus equivalentes de instancia. Este concepto es similar al significado más amplio del término ámbito de nombres en otros lenguajes y tecnologías de programación.
-title: Ámbitos de nombres XAML
+description: "Un ámbito de nombres XAML almacena relaciones entre los nombres de objetos definidos en XAML y sus equivalentes de instancia. Este concepto es similar al significado más amplio del término ámbito de nombres en otros lenguajes y tecnologías de programación."
+title: "Ámbitos de nombres XAML"
 ms.assetid: EB060CBD-A589-475E-B83D-B24068B54C21
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: b8b833f40bc38799acc8813d38ddea63426f05b3
+
 ---
 
 # Ámbitos de nombres XAML
@@ -23,11 +27,11 @@ También puedes usar el método de utilidad [**FindName**](https://msdn.microsof
 
 Técnicamente, lo que sucede es que el código XAML se somete a un pase del compilador de marcado al mismo tiempo que el código XAML y la clase parcial que define para el código subyacente se compilan juntos. Cada elemento de objeto con un **Name** o [atributo x:Name](x-name-attribute.md) definido en el marcado genera un campo interno con un nombre que coincide con el nombre XAML. Este campo inicialmente está vacío. Después, la clase genera un método **InitializeComponent** que solo se llama cuando todo el código XAML está cargado. Dentro de la lógica de **InitializeComponent**, cada campo interno se rellena con el valor devuelto [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para la cadena de nombre equivalente. Para observar esta infraestructura por ti mismo, examina los archivos ".g" (generados) que se crean para cada página XAML en la subcarpeta /obj de un proyecto de aplicación de Windows Runtime después de la compilación. También puedes considerar a los campos y el método **InitializeComponent** como miembros de los ensamblados resultantes si reflexionas sobre ellos o examinas el contenido del lenguaje de la interfaz.
 
-**Nota**  Específicamente para aplicaciones de extensiones de componentes de Visual C++ (C++/CX), un campo de respaldo de una referencia a **x:Name** no se crea para el elemento raíz de un archivo XAML. Si necesitas hacer referencia al objeto raíz desde el código subyacente en C++/CX, usa otras API o un cruce seguro de árbol. Por ejemplo, puedes llamar a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para un elemento secundario con nombre conocido y después llamar a [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
+**Nota**  Específicamente para aplicaciones de extensiones de componentes de Visual C++ (C++/CX), un campo de respaldo de una referencia a **x:Name** no se crea para el elemento raíz de un archivo XAML. Si necesitas hacer referencia al objeto raíz desde el código subyacente en C++/CX, usa otras API o un cruce seguro de árbol. Por ejemplo, puedes llamar a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) para un elemento secundario con nombre conocido y, después, llamar a [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739).
 
 ## Creación de objetos en tiempo de ejecución con XamlReader.Load
 
-El lenguaje XAML también se puede usar como la entrada de cadena del método [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048), que actúa de manera similar a la operación de análisis de origen XAML inicial. **XamlReader.Load** crea un nuevo árbol desconectado de objetos en tiempo de ejecución. Después, el árbol desconectado puede conectarse a algún punto del árbol de objetos principal. Debes conectar explícitamente el árbol de objetos creado; para ello, agrégalo a una colección de propiedades de contenido como **Children**, o establece otra propiedad que acepte un valor de objeto (por ejemplo, si cargas un nuevo [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101) para un valor de propiedad [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378)).
+XAML también se puede usar como la entrada de cadena del método [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048), que actúa de manera similar a la operación de análisis de origen XAML inicial. **XamlReader.Load** crea un nuevo árbol desconectado de objetos en tiempo de ejecución. Después, el árbol desconectado puede conectarse a algún punto del árbol de objetos principal. Debes conectar explícitamente el árbol de objetos creado; para ello, agrégalo a una colección de propiedades de contenido como **Children**, o establece otra propiedad que acepte un valor de objeto (por ejemplo, si cargas un nuevo [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101) para un valor de propiedad [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378)).
 
 ### Implicaciones del ámbito de nombres XAML de XamlReader.Load
 
@@ -41,7 +45,7 @@ Este problema del ámbito de nombres XAML discreto solo afecta a la búsqueda de
 
 Puedes usar varias técnicas para obtener referencias a los objetos definidos en un ámbito de nombres XAML diferente:
 
--   Recorre todo el árbol en pasos discretos mediante la propiedad [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739) o las propiedades de la colección que se sabe existen en tu estructura de árbol de objetos (como la colección que devuelve [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514)).
+-   Recorre todo el árbol a pasos discretos con [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739) o las propiedades de la colección que se sabe existen en tu estructura de árbol de objetos (como la colección que devuelve [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514)).
 -   Si haces la llamada desde un ámbito de nombres XAML discreto y deseas el ámbito de nombres XAML raíz, siempre es fácil obtener una referencia a la ventana principal que se muestra actualmente. Puedes obtener la raíz visual (el elemento XAML raíz, también conocido como origen del contenido) de la ventana de la aplicación actual en una línea de código con la llamada `Window.Current.Content`. Después puedes convertirla a [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) y llamar a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) desde este ámbito.
 -   Si estás llamando desde el ámbito de nombres XAML raíz y deseas un objeto que esté dentro de un ámbito de nombres XAML discreto, lo más conveniente es que planifiques de antemano el código y conserves una referencia al objeto devuelto por [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048) y agregado al árbol de objetos principal. Este objeto ahora es un objeto válido para llamadas [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) dentro del ámbito de nombres XAML discreto. Podrías mantener este objeto disponible como variable global o pasarlo con parámetros del método.
 -   Para evitar por completo las consideraciones acerca de los nombres y los ámbitos de nombres XAML, examina el árbol visual. La API [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/br243038) te permite atravesar el árbol visual en términos de objetos principales y colecciones secundarias exclusivamente según la posición y el índice.
@@ -82,6 +86,7 @@ Debido a la separación de los ámbitos de nombres XAML, buscar elementos con no
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

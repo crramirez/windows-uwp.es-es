@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Buscar es una de las formas principales en que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto.
-title: Búsqueda y buscar en la página
+Description: "Buscar es una de las formas principales en que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto."
+title: "Búsqueda y buscar en la página"
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: cd746f81e8cca27c5111f3d15342d1def0f874dc
+
 ---
 
 # Búsqueda y buscar en la página
@@ -216,6 +220,7 @@ Para obtener más información sobre cómo agregar comandos a la barra de comand
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

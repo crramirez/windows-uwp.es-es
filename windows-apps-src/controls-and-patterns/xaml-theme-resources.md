@@ -1,13 +1,17 @@
 ---
 author: Jwmsft
-Description: Los recursos de tema en XAML son un conjunto de recursos que aplican distintos valores según el tema del sistema que esté activo.
-MS-HAID: 'dev\_ctrl\_layout\_txt.xaml\_theme\_resources'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Los recursos de tema en XAML son un conjunto de recursos que aplican distintos valores según el tema del sistema que esté activo."
+MS-HAID: dev\_ctrl\_layout\_txt.xaml\_theme\_resources
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Recursos de temas XAML
 ms.assetid: 41B87DBF-E7A2-44E9-BEBA-AF6EEBABB81B
 label: XAML theme resources
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: fa0d0881eee0f87b549a7d053e75882ffd2afa6e
+
 ---
 
 # Recursos de temas XAML
@@ -442,6 +446,7 @@ Observa que la [extensión de marcado {ThemeResource}](../xaml-platform/themeres
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

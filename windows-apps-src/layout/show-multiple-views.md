@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Ayuda a tus usuarios a ser más productivos al permitirles ver varias partes independientes de la aplicación en ventanas distintas.
-title: Mostrar varias vistas de una aplicación
+Description: "Ayuda a tus usuarios a ser más productivos al permitirles ver varias partes independientes de la aplicación en ventanas distintas."
+title: "Mostrar varias vistas de una aplicación"
 ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
 label: Show multiple views for an app
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 23e999f86fb0552b96cddbd3b9d11803106bf6c2
+
 ---
 
 # Mostrar varias vistas de una aplicación
@@ -181,6 +185,7 @@ Cuando uses [**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

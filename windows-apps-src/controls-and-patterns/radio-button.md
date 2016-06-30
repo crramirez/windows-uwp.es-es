@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Los botones de radio permiten a los usuarios seleccionar una opción entre dos o más opciones
+Description: "Los botones de radio permiten a los usuarios seleccionar una opción entre dos o más opciones"
 title: Directrices para botones de radio
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 317df548e72f9aff475ba0959668b6441ac29d3d
+
 ---
 # Botones de radio
 Los botones de radio permiten a los usuarios seleccionar una opción entre dos o más opciones Cada opción aparece representada por un botón de radio; un usuario solo puede seleccionar un único botón de radio en un grupo de botones de radio.
@@ -181,6 +185,7 @@ En esta ilustración, se muestra el modo correcto de colocar y espaciar botones 
 - [**Clase RadioButton Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227544)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -5,8 +5,8 @@ title: "Interacciones táctiles"
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 23eac55de26563c68b401d8912264aebb86d0380
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: a78dd1030e653d1cf0a1d7f191b4768e5a99860a
 
 ---
 
@@ -159,7 +159,7 @@ Además, te recomendamos lo siguiente:
 -   Las descripciones y las indicaciones visuales adecuadas tienen un gran efecto sobre el uso de las interacciones avanzadas.
 
 
-## <span id="App_views"></span><span id="app_views"></span><span id="APP_VIEWS"></span>Vistas de aplicación
+## Vistas de aplicación
 
 
 Retoca la experiencia de interacción del usuario mediante la configuración de zoom y movimiento panorámico/desplazamiento de las vistas de tu aplicación. Una vista de aplicación determina cómo un usuario accede a tu aplicación y su contenido, y los manipula. Las vistas también proporcionan comportamientos, tales como inercia, puntos de acoplamiento y "devolución" de límite de contenido.
@@ -172,7 +172,7 @@ Usa las vistas de aplicación y los eventos para modificar los comportamientos d
 
 Para más información sobre las vistas de aplicación, consulta [Controles, diseños y texto](https://msdn.microsoft.com/library/windows/apps/mt228348).
 
-## <span id="intro_to_touch_input"></span><span id="INTRO_TO_TOUCH_INPUT"></span>Interacciones táctiles personalizadas
+## Interacciones táctiles personalizadas
 
 
 Si implementas tu propia compatibilidad con la interacción, ten presente que los usuarios esperan una experiencia intuitiva que implica la interacción directa con los elementos de la interfaz de usuario de tu aplicación. Te recomendamos que modeles tus interacciones personalizadas en las bibliotecas de control de plataforma para que todo sea coherente y reconocible. Los controles de estas bibliotecas proporcionan una experiencia de interacción de usuario completa, con interacciones estándar, efectos físicos animados, comentarios visuales y accesibilidad. Crea interacciones personalizadas solamente si existe un requisito claro y bien definido, y si no hay ninguna interacción básica que admita tu escenario.
@@ -209,12 +209,12 @@ Este es el conjunto básico de gestos táctiles que admite la UWP.
 For more info about gestures, manipulations, and interactions, see [Custom user interactions](custom-user-input-portal.md).
 -->
 
-## <span id="gestures"></span><span id="GESTURES"></span>Eventos de gestos
+## Eventos de gestos
 
 
 Para obtener detalles sobre los controles individuales, consulta [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406).
 
-## <span id="using_pointer_events"></span><span id="USING_POINTER_EVENTS"></span>Eventos de puntero
+## Eventos de puntero
 
 
 Los eventos de puntero los genera una gran variedad de orígenes de entrada activos, como por ejemplo, la entrada táctil, el panel táctil, el lápiz y el mouse (reemplazan los eventos tradicionales del mouse).
@@ -423,7 +423,7 @@ Private Sub touchRectangle_PointerPressed(sender As Object, e As PointerRoutedEv
 End Sub
 ```
 
-## <span id="using_manipulation_events"></span><span id="USING_MANIPULATION_EVENTS"></span>Eventos de manipulación
+## Eventos de manipulación
 
 
 Usa eventos de manipulación si necesitas incluir en tu aplicación compatibilidad para interacciones con varios dedos o interacciones que requieren datos de velocidad.
@@ -599,12 +599,12 @@ Private Sub testRectangle_ManipulationDelta(
 End Sub
 ```
 
-## <span id="Routed_events"></span><span id="routed_events"></span><span id="ROUTED_EVENTS"></span>Eventos enrutados
+## Eventos enrutados
 
 
 Todos los eventos de puntero, los eventos de gestos y los eventos de manipulación mencionados aquí se implementan como *eventos enrutados*. Esto significa que el evento podría estar controlado por objetos distintos que el que generó el evento. Los elementos principales sucesivos de un árbol de objetos, como los contenedores principales de un objeto [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) o la raíz [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) de tu aplicación, pueden elegir controlar estos eventos aunque el elemento original no lo haga. Por el contrario, cualquier objeto que no controle el evento puede marcar el evento controlado para que nunca llegue a un elemento principal. Para obtener más información sobre el concepto de evento enrutado y cómo afecta a la forma de escribir controladores para eventos enrutados, consulta [Introducción a eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/hh758286).
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Qué hacer y qué no hacer
+## Qué hacer y qué no hacer
 
 
 -   Diseña aplicaciones en las que la interacción táctil sea el principal método de entrada que se espera.
@@ -616,7 +616,7 @@ Todos los eventos de puntero, los eventos de gestos y los eventos de manipulaci�
 -   No uses la cantidad de dedos para distinguir la manipulación en la medida de lo posible.
 
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 * [Controlar la entrada de puntero](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
@@ -644,6 +644,6 @@ Todos los eventos de puntero, los eventos de gestos y los eventos de manipulaci�
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

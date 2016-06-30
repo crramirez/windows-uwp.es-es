@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Ve los nombres que has reservado para tu aplicación, reserva nombres adicionales (para otros idiomas o para cambiar el nombre de la aplicación) y elimina nombres reservados que ya no necesites.
-title: Administrar nombres de aplicación
+Description: "Ve los nombres que has reservado para tu aplicación, reserva nombres adicionales (para otros idiomas o para cambiar el nombre de la aplicación) y elimina nombres reservados que ya no necesites."
+title: "Administrar nombres de aplicación"
 ms.assetid: D95A6227-746E-4729-AE55-648A7102401C
+translationtype: Human Translation
+ms.sourcegitcommit: 48952b5d4f2565d06ec79475f88fbabf93fd0f70
+ms.openlocfilehash: e03e99b5de2142c2bcf46ee2aad4a76bb87ee4e5
+
 ---
 
 # Administrar nombres de aplicación
@@ -43,6 +47,7 @@ Una vez que se ha publicado la aplicación con el nuevo nombre, puedes eliminar 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

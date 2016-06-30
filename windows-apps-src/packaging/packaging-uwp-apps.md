@@ -2,7 +2,11 @@
 author: msatranjr
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Empaquetado de aplicaciones para UWP
-description: Para vender tu aplicación para la Plataforma universal de Windows (UWP) o distribuirla a otros usuarios, necesitas crear un paquete .appxupload para esta.
+description: "Para vender tu aplicación para la Plataforma universal de Windows (UWP) o distribuirla a otros usuarios, necesitas crear un paquete .appxupload para esta."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a77e441cbd1b6826e06064dbd4be449813754b25
+
 ---
 # Empaquetado de aplicaciones para UWP
 
@@ -136,6 +140,7 @@ La siguiente lista proporciona los requisitos para la instalación de prueba de 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

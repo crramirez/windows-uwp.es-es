@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 1C77C50C-5DA4-4414-9316-6EEDD78629E2
 title: Pruebas beta
-description: Las pruebas beta te ofrecen la posibilidad de mejorar la aplicación en función de los comentarios de las personas ajenas al equipo de desarrollo de aplicaciones que prueban la aplicación no comercial en sus propios dispositivos.
+description: "Las pruebas beta te ofrecen la posibilidad de mejorar la aplicación en función de los comentarios de las personas ajenas al equipo de desarrollo de aplicaciones que prueban la aplicación no comercial en sus propios dispositivos."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7404a90fc9efc05d4e2bb83321bb2ba80b8378ce
+
 ---
 # Pruebas beta
 
@@ -45,6 +49,7 @@ Consulta [Pruebas beta y distribución dirigida](https://msdn.microsoft.com/libr
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

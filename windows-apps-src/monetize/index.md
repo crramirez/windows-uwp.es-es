@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
-description: Windows SDK, SDK de Microsoft Store Engagement and Monetization y la Tienda Windows proporcionan muchas características que permiten realizar más dinero desde tus aplicaciones y conseguir clientes gracias a la interacción con los usuarios.
-title: Rentabiliza tu aplicación
+description: "Windows SDK, SDK de Microsoft Store Engagement and Monetization y la Tienda Windows proporcionan muchas características que permiten realizar más dinero desde tus aplicaciones y conseguir clientes gracias a la interacción con los usuarios."
+title: "Rentabiliza tu aplicación"
+translationtype: Human Translation
+ms.sourcegitcommit: de85956c7c1d2a0ba509d61ee8928b412f057f8a
+ms.openlocfilehash: 6d5f483b44ae4516f4969431e31f70388a66c5d9
+
 ---
 
 # Rentabilizar la aplicación y atraer clientes
@@ -28,6 +32,7 @@ Para obtener detalles sobre los aranceles de la Tienda Windows y cómo recibir e
 | [Usar los servicios de la Tienda Windows](using-windows-store-services.md)                                    | La Tienda Windows muestra varios servicios a los que se puede llamar a través de las API de REST para obtener acceso mediante programación a determinados tipos de datos de aplicaciones registradas en una cuenta del Centro de desarrollo de Windows, ya sea tuya o de tu organización.    |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

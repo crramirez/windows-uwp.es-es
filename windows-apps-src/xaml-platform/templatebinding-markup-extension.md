@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Vincula el valor de una propiedad en una plantilla de control al valor de otra propiedad expuesta en el control con plantilla. TemplateBinding solo se puede usar dentro de una definición de ControlTemplate en XAML.
-title: Extensión de marcado TemplateBinding
+description: "Vincula el valor de una propiedad en una plantilla de control al valor de otra propiedad expuesta en el control con plantilla. TemplateBinding solo se puede usar dentro de una definición de ControlTemplate en XAML."
+title: "Extensión de marcado TemplateBinding"
 ms.assetid: FDE71086-9D42-4287-89ED-8FBFCDF169DC
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 1a8006e58391c41568731810d9b1901474e8d18f
+
 ---
 
 # Extensión de marcado {TemplateBinding}
@@ -59,6 +63,7 @@ Un **TemplateBinding** siempre es un enlace unidireccional. Ambas propiedades im
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

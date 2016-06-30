@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Ejecutar una tarea en segundo plano en un temporizador
-description: Aprende a programar una tarea en segundo plano única o a ejecutar una tarea en segundo plano periódica.
+description: "Aprende a programar una tarea en segundo plano única o a ejecutar una tarea en segundo plano periódica."
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 3fc1e3efa742ff8ab24f78856872fe322703f152
+
 ---
 
 # Ejecutar una tarea en segundo plano en un temporizador
@@ -27,9 +30,9 @@ Aprende a programar una tarea en segundo plano única o ejecutar una tarea en se
 
 -   Crea un nuevo [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). El segundo parámetro, *OneShot*, especifica si la tarea en segundo plano se ejecutará una vez o seguirá ejecutándose periódicamente. Si *OneShot* se establece en true, el primer parámetro (*FreshnessTime*) especifica el número de minutos que deben esperarse antes de programar la tarea en segundo plano. Si *OneShot* se establece en false, *FreshnessTime* especifica la frecuencia con la que se ejecutará la tarea en segundo plano.
 
-    El temporizador integrado de las aplicaciones para la Plataforma universal de Windows (UWP) ejecuta tareas en segundo plano en intervalos de 15 minutos.
+    El temporizador integrado de las aplicaciones para la Plataforma universal de Windows (UWP) destinadas a la familia de dispositivos de escritorio o móviles ejecuta tareas en segundo plano en intervalos de 15 minutos.
 
-    -   Si *FreshnessTime* se establece en 15 minutos y *OneShot* tiene el valor true, la tarea se ejecutará una vez comenzando entre el minuto 0 y el 15 desde el momento en que se registre.
+    -   Si *FreshnessTime* se establece en 15 minutos y *OneShot* tiene el valor true, la tarea se ejecutará una vez entre 0 y 15 minutos después de que se registre.
 
     -   Si *FreshnessTime* se establece en 15 minutos y *OneShot* tiene el valor false, la tarea se ejecutará cada 15 minutos comenzando entre el minuto 0 y el 15 desde el momento en que se registre.
 
@@ -86,19 +89,19 @@ Aprende a programar una tarea en segundo plano única o ejecutar una tarea en se
     > ```cs
     > string entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > string taskName   = "Example hourly background task";
-    > 
+    >
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
     > ```cpp
     > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > String ^ taskName   = "Example hourly background task";
-    > 
+    >
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
-    
+
     > **Nota** Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
 
-   
+
 ## Observaciones
 
 > **Nota** A partir de Windows 10, ya no es necesario que el usuario agregue tu aplicación a la pantalla de bloqueo para poder usar las tareas en segundo plano. Para obtener una guía sobre los tipos de desencadenadores de tarea en segundo plano, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
@@ -129,8 +132,6 @@ Aprende a programar una tarea en segundo plano única o ejecutar una tarea en se
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

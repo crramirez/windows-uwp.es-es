@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Descubre cómo promocionar tus aplicaciones y contenido en la Tienda Windows. En estas directrices se describe cómo usar los recursos que tienes a tu disposición y se incluyen recomendaciones para promocionar tus aplicaciones en publicidad impresa, digital, en televisión y en las redes sociales.
+Description: "Descubre cómo promocionar tus aplicaciones y contenido en la Tienda Windows. En estas directrices se describe cómo usar los recursos que tienes a tu disposición y se incluyen recomendaciones para promocionar tus aplicaciones en publicidad impresa, digital, en televisión y en las redes sociales."
 title: Directrices de marketing para aplicaciones de la Tienda Windows
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 64c6dd45053070096ff7d7e932bac1c560194518
+
 ---
 
 # Directrices de marketing para aplicaciones de la Tienda Windows
@@ -53,6 +57,7 @@ Microsoft es el único propietario de las marcas de Microsoft y del fondo de com
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

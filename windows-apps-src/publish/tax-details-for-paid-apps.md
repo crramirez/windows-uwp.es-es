@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Para conocer tus consideraciones fiscales para la selección de precios, la implicación en el pago y la responsabilidad fiscal, consulta tus países/regiones de distribución en las tablas siguientes.
+Description: "Para conocer tus consideraciones fiscales para la selección de precios, la implicación en el pago y la responsabilidad fiscal, consulta tus países/regiones de distribución en las tablas siguientes."
 title: Detalles de impuestos para aplicaciones de pago
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
+ms.sourcegitcommit: a59d999ac36e04fbfa53d5b8992b235bff2d3818
+ms.openlocfilehash: 364608e1452ddff7aae261bb0f29ec14ee4fb0a3
+
 ---
 
 # Detalles de impuestos para aplicaciones de pago
@@ -83,7 +86,7 @@ Para conocer tus consideraciones fiscales para la selección de precios, la impl
 | Georgia                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
 | Alemania                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 19 % de impuestos) | Microsoft          |
 | Ghana                            | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
-| Grecia                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 23 % de impuestos) | Microsoft          |
+| Grecia                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 24 % de impuestos) | Microsoft          |
 | Groenlandia                        | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
 | Granada                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
 | Guatemala                        | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. [Obtén más información sobre las consideraciones fiscales para este país.](#mixed-remittance-countries-regions) | 70 % del precio seleccionado                 | Desarrollador          |
@@ -157,7 +160,7 @@ Para conocer tus consideraciones fiscales para la selección de precios, la impl
 | Filipinas                      | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. [Obtén más información sobre las consideraciones fiscales para este país.](#mixed-remittance-countries-regions)                                                                  | 70 % del precio seleccionado                 | Desarrollador          |
 | Polonia                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 23 % de impuestos) | Microsoft          |
 | Portugal                         | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 23 % de impuestos) | Microsoft          |
-| Puerto Rico                      | Los impuestos se suman al precio seleccionado. [Obtén más información sobre las consideraciones fiscales para este país.](#mixed-remittance-countries-regions)                                                                                                     | 70 % del precio seleccionado                 | Desarrollador          |
+| Puerto Rico                      | Los impuestos se suman al precio seleccionado. [Obtén más información sobre los aspectos fiscales de este país.](#mixed-remittance-countries-regions)                                                                                                     | 70 % del precio seleccionado                 | Microsoft          |
 | Catar                            | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
 | Rumanía                          | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | 70 % de (precio seleccionado menos el 24 % de impuestos) | Microsoft          |
 | Rusia                           | El precio seleccionado es el precio de venta final e incluye los impuestos aplicables.                                                                   | 70 % del precio seleccionado                 | Desarrollador          |
@@ -278,6 +281,7 @@ Cada fila del informe contiene la fecha y la hora de la transacción y, si está
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
