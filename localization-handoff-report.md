@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\packaging\install-universal-windows-apps-with-the-winappdeploycmd-tool.md](https://github.com/Microsoft/windows-apps/blob/50898b5caf706ebd48513c8e368731ba39f5a267/windows-apps-src/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | OutofSyncHandedBackSuccess | [Details](#18a6b7a5a4b5ef0f6064528e78a235b9fc7b372d3465)
+ [windows-apps-src\launch-resume\create-and-register-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/579547b7bd2ee76390b8cac66855be4a9dce008e/windows-apps-src/launch-resume/create-and-register-a-background-task.md) | OutofSyncHandedBackSuccess | [Details](#e8da193f96709bdd87bd6a008eb5885cc5c819fd3009)
 
 ## Item Details
-##### <a name='18a6b7a5a4b5ef0f6064528e78a235b9fc7b372d3465'></a> Source: [windows-apps-src\packaging\install-universal-windows-apps-with-the-winappdeploycmd-tool.md](https://github.com/Microsoft/windows-apps/blob/50898b5caf706ebd48513c8e368731ba39f5a267/windows-apps-src/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md)
+##### <a name='e8da193f96709bdd87bd6a008eb5885cc5c819fd3009'></a> Source: [windows-apps-src\launch-resume\create-and-register-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/579547b7bd2ee76390b8cac66855be4a9dce008e/windows-apps-src/launch-resume/create-and-register-a-background-task.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [install-universal-windows-apps-with-the-winappdeploycmd-tool.35efc75d02349fa7a3de1cc06d8eeca7b5ad10e2.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/646aec05e78418dd4331595d63d1505b868ad30f/ol-handoff/Microsoft/windows-apps.es-es/master/install-universal-windows-apps-with-the-winappdeploycmd-tool.35efc75d02349fa7a3de1cc06d8eeca7b5ad10e2.es-es.xlf)
-* Handoff Datetime: 2016-07-06 20:13:35
+* Handoff File: [create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/21c76cef2fb261881889208638091fd6cbdf8ca2/ol-handoff/Microsoft/windows-apps.es-es/master/create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.es-es.xlf)
+* Handoff Datetime: 2016-07-06 20:55:35
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\packaging\install-universal-windows-apps-with-the-winappdeploycmd-tool.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md)
-* Current Handback File: [install-universal-windows-apps-with-the-winappdeploycmd-tool.35efc75d02349fa7a3de1cc06d8eeca7b5ad10e2.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/install-universal-windows-apps-with-the-winappdeploycmd-tool.35efc75d02349fa7a3de1cc06d8eeca7b5ad10e2.es-es.xlf)
+* Current Target File: [windows-apps-src\launch-resume\create-and-register-a-background-task.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/launch-resume/create-and-register-a-background-task.md)
+* Current Handback File: [create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.es-es.xlf)
 * Current Handback Datetime: 2016-07-06 15:11:22
 * [Back to Top](#report-top)
 
