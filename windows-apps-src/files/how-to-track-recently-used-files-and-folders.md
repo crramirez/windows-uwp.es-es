@@ -57,7 +57,7 @@ La lista de MRU de una aplicación se representa mediante la clase [**StorageIte
               **StorageItemMostRecentlyUsedList.Add**
             ](https://msdn.microsoft.com/library/windows/apps/br207476) es un método sobrecargado. En el ejemplo, se usa [**Add(IStorageItem, String)**](https://msdn.microsoft.com/library/windows/apps/br207481) para poder asociar metadatos al archivo. La configuración de metadatos permite grabar el propósito del elemento como, por ejemplo, "imagen de perfil". También puedes agregar el archivo sin metadatos a la lista de MRU, llamando al método [**Add(IStorageItem)**](https://msdn.microsoft.com/library/windows/apps/br207480). Cuando se agrega un elemento a la lista de MRU, el método devuelve una cadena de identificación única, denominada token, que se usa para recuperar el elemento.
 
-    **Sugerencia**  Necesitarás el token para recuperar un elemento de la lista de MRU, así que consérvalo en algún lugar. Para más información sobre los datos de aplicación, consulta [Administrar datos de la aplicación](https://msdn.microsoft.com/library/windows/apps/hh465109).
+    **Sugerencia** Necesitarás el token para recuperar un elemento de la lista de MRU, así que consérvalo en algún lugar. Para más información sobre los datos de aplicación, consulta [Administrar datos de la aplicación](https://msdn.microsoft.com/library/windows/apps/hh465109).
 
      
 

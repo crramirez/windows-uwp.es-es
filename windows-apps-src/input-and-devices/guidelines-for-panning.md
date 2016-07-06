@@ -196,6 +196,6 @@ Esta guía también es útil para aplicaciones, como álbumes de fotografías o 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

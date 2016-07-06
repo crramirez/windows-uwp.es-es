@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: Cosas que debes hacer para cualquier aplicación habilitada para la red
-title: Conceptos básicos de redes
+description: "Cosas que debes hacer para cualquier aplicación habilitada para la red"
+title: "Conceptos básicos de redes"
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 96c6617595b49c48ee77bec87b6aa87ae1634ed9
+
 ---
 
 # Conceptos básicos de redes
@@ -47,9 +51,9 @@ Si la aplicación usa desencadenadores de actividad de sockets, debes especifica
 Hay algunos escenarios donde cualquier tipo de desencadenador sería adecuado. Cuando elijas qué tipo de desencadenador usar en tu aplicación, ten en cuenta lo siguiente.
 
 -   SI estás usando [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) o [System.Net.Http.HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638), debes usar [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
--   Si estás usando elementos **StreamSockets** habilitados para la inserción, puedes usar desencadenadores de canal de control, pero deberías tener como preferencia la clase [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009). La última opción permite que el sistema tenga más espacio en la memoria y reduzca los requisitos de energía cuando la conexión no se use activamente.
+-   Si estás usando elementos **StreamSockets** habilitados para la inserción, puedes usar desencadenadores de canal de control, pero deberías tener como preferencia [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009). La última opción permite que el sistema tenga más espacio en la memoria y reduzca los requisitos de energía cuando la conexión no se use activamente.
 -   Si deseas minimizar la superficie de memoria de la aplicación cuando no está dando servicio activamente a las solicitudes de red, ten como preferencia [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009), cuando te sea posible.
--   Si quieres que tu aplicación pueda recibir datos mientras el sistema está en modo de espera, usa la clase [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009).
+-   Si quieres que tu aplicación pueda recibir datos mientras el sistema está en modo de espera conectado, usa [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009).
 
 Para ver detalles y ejemplos acerca de cómo usar el agente de sockets, consulta [Comunicaciones de red en segundo plano](network-communications-in-the-background.md).
 
@@ -82,10 +86,10 @@ El valor de SocketProtectionLevel que proporciones establecerá el nivel de prot
 
 -   [
               **ConnectAsync(EndpointPair, SocketProtectionLevel)**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701511): inicia una operación asincrónica en un objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para establecer la conexión a un destino de red remoto especificado como un objeto [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953) y una enumeración [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
+            ](https://msdn.microsoft.com/library/windows/apps/hh701511): Inicia una operación asincrónica en un objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para conectar con un destino de red remoto especificado como un objeto [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953) y una enumeración [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
 -   [
               **ConnectAsync(HostName, String, SocketProtectionLevel)**
-            ](https://msdn.microsoft.com/library/windows/apps/br226916): inicia una operación asincrónica en un objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para establecer la conexión a un destino remoto especificado por un nombre de host remoto, un nombre de servicio remoto y una enumeración [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
+            ](https://msdn.microsoft.com/library/windows/apps/br226916): Inicia una operación asincrónica en un objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para conectar con un destino remoto especificado por un nombre de host remoto, un nombre de servicio remoto y una enumeración [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
 
 Si el parámetro *protectionLevel* se establece en **Windows.Networking.Sockets.SocketProtectionLevel.Ssl** cuando se llama a cualquiera de los métodos [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) arriba mencionados, la clase [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) deberá establecerse para usar SSL/TLS en el cifrado. Este valor requiere cifrado y nunca permite el uso de un cifrado NULL.
 
@@ -363,7 +367,7 @@ using Windows::Storage::Streams;
 
 Al igual que las conexiones de sockets tradicionales, las conexiones WebSocket también pueden cifrarse mediante el cifrado Seguridad de la capa de transporte (TLS) o Capa de sockets seguros (SSL), cuando se usan las características [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) y [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) en Windows 8, para una aplicación de la Tienda Windows. En la mayoría de los casos, querrás usar una conexión WebSocket segura. Esto aumentará las posibilidades de que tu conexión se realice correctamente, ya que muchos servidores proxy rechazarán las conexiones WebSocket no cifradas.
 
-Para obtener ejemplos sobre cómo crear o actualizar una conexión de sockets segura a un servicio de red, consulta [How to secure WebSocket connections with TLS/SSL (Cómo proteger conexiones WebSocket con TLS/SSL)](https://msdn.microsoft.com/library/windows/apps/xaml/hh994399).
+Para obtener ejemplos sobre cómo crear o actualizar una conexión de sockets segura a un servicio de red, consulta [Cómo proteger conexiones WebSocket con TLS/SSL](https://msdn.microsoft.com/library/windows/apps/xaml/hh994399).
 
 Además del cifrado con TLS/SSL, es posible que un servidor necesite un valor de encabezado **Sec-WebSocket-Protocol** para completar el protocolo de enlace inicial. Este valor, representado por las propiedades [**StreamWebSocketInformation.Protocol**](https://msdn.microsoft.com/library/windows/apps/hh701514) y [**MessageWebSocketInformation.Protocol**](https://msdn.microsoft.com/library/windows/apps/hh701358), indica la versión del protocolo de la conexión y permite que el servidor interprete correctamente el protocolo de enlace de apertura y los datos que se intercambian después. Mediante esta información del protocolo, si en algún momento el servidor no puede interpretar los datos entrantes de manera segura, se puede cerrar la conexión.
 
@@ -429,6 +433,7 @@ Las API para redes admiten distintos métodos para recuperar la información que
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

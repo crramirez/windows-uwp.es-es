@@ -109,6 +109,6 @@ Enhorabuena, has creado e implementado tu primera aplicación para UWP en Xbox c
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

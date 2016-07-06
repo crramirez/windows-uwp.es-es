@@ -5,8 +5,8 @@ title: "Hipervínculos"
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 81cb45dd1f7887fef2d8851c839905117c048460
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: 1d19cfa9c272ee511fbaf89ac0076697ede470b9
 
 ---
 # Hipervínculos
@@ -15,7 +15,7 @@ Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra apli
 
 ![Botón de hipervínculo](images/controls/hyperlink-button.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
+
 
 -   [**Elemento de texto Hyperlink**](https://msdn.microsoft.com/library/windows/apps/dn279356)
 -   [**Control HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)
@@ -139,7 +139,7 @@ El color predeterminado del hipervínculo es el color de énfasis del sistema. P
 ## Recomendaciones
 
 -   Usa los hipervínculos solo para la navegación; no los uses para otras acciones.
--   Usa el estilo Body de la tabla de tipos para los hipervínculos basados en texto. Obtén información sobre [**fuentes y la tabla de tipos de Windows 10**](text-controls.md).
+-   Usa el estilo Body de la tabla de tipos para los hipervínculos basados en texto. Obtén información sobre [**fuentes y la tabla de tipos de Windows 10**](fonts.md).
 -   Mantén los hipervínculos discretos y suficientemente separados para que el usuario pueda diferenciarlos y seleccionarlos con facilidad.
 -   Agrega información sobre herramientas a los hipervínculos que indican dónde se dirigirá al usuario. Si se dirige al usuario a un sitio externo, incluye el nombre de dominio de nivel superior dentro de la información sobre herramientas y un estilo de texto con un color de fuente secundario.
 
@@ -156,6 +156,6 @@ El color predeterminado del hipervínculo es el color de énfasis del sistema. P
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

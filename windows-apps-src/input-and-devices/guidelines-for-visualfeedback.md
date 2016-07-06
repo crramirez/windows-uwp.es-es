@@ -5,8 +5,8 @@ title: "Información visual"
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
 template: detail.hbs
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: 287ec24dbc60be39c0f944c6d4a86205961fb770
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 2bf873f35192c20f15c6cb445b6be6436354c8c2
 
 ---
 
@@ -20,37 +20,24 @@ Usa la información visual para mostrar a los usuarios cuándo se detectan, se i
 -   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 -   [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
 
+## Recomendaciones
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Qué hacer y qué no hacer
-
--   Proporciona información visual sin importar lo breve que sea el contacto. Esto permite al usuario:
-    -   Confirmar que la pantalla táctil funciona.
-    -   Identificar si el destino responde y si está habilitado para entrada táctil.
-    -   Identificar si el usuario se equivocó de destino.
--   Muestra la información de inmediato para todos los eventos de interacción.
--   Proporciona información que contenga indicaciones visuales sutiles e intuitivas que no distraigan a los usuarios.
--   Asegúrate de que los destinos táctiles obedezcan al dedo durante todas las manipulaciones.
--   Habilita la selección de elementos con el gesto de deslizar rápidamente cuando el movimiento panorámico esté restringido a una sola dirección.
+-   Intenta permanecer lo más cerca posible de la plantilla de control original, para obtener un control óptimo y rendimiento de la aplicación.
 -   No uses visualizaciones táctiles en situaciones en que podrían interferir con el uso de la aplicación. Para más información, consulta [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969).
--   No muestres información a menos que sea absolutamente necesario. No muestres información visual a menos que esta sirva para añadir valor que no se encuentra disponible en ningún otro sitio. De este modo, mantendrás la interfaz de usuario ordenada y organizada. Nunca muestres información sobre herramientas si esta repite el texto que ya se encuentra visible. La información sobre herramientas debe reservarse para ocasiones específicas, como texto truncado (texto con puntos suspensivos) que no se muestra al seleccionar el elemento, o cuando se necesita información adicional para comprender o usar la aplicación.
--   No uses el gesto de pulsar y sostener en otro sitio que no sea la interfaz de usuario informativa.  
-    **Importante**  El gesto de pulsar y sostener puede usarse para la selección cuando el movimiento panorámico está habilitado tanto en dirección vertical como horizontal.    
--   No personalices los comportamientos de la información visual de los gestos integrados de Windows 8, ya que esto podría generar una experiencia del usuario confusa e incoherente.
--   No muestres información visual durante el desplazamiento lateral o el arrastre. El movimiento real del objeto en la pantalla es suficiente. Pero si el área de contenido no se desplaza lateralmente ni de algún otro modo, usa visualizaciones para indicar las condiciones de límite. Para más información, consulta las [directrices para desplazamiento lateral](guidelines-for-panning.md).
--   No muestres información para un control que no se identifica como el destino. La información visual es decisiva cuando se usa la entrada táctil para llevar a cabo actividades que requieren exactitud y precisión en función de la ubicación. Si se muestra información siempre que se detecte entrada táctil, se ayuda al usuario a entender las heurísticas de destino personalizadas que definen la aplicación y los controles correspondientes.
--   No uses el comportamiento de la información pensado para un tipo de entrada con otro. Por ejemplo, un rectángulo de foco de teclado debe usarse solo con la entrada de teclado y no con la entrada táctil.
+-   No muestres información a menos que sea absolutamente necesario. No muestres información visual a menos que esta sirva para añadir valor que no se encuentra disponible en ningún otro sitio. De este modo, mantendrás la interfaz de usuario ordenada y organizada.
+-   Intenta no personalizar drásticamente los comportamientos de la información visual de los gestos integrados de Windows, ya que esto podría generar una experiencia del usuario confusa e incoherente.
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Instrucciones de uso adicionales
+## Instrucciones de uso adicionales
 
 Las visualizaciones de contacto son especialmente importantes para las interacciones táctiles que requieren exactitud y precisión. Por ejemplo, tu aplicación debe indicar de manera clara la ubicación de una pulsación para que el usuario sepa si se equivocó al pulsar el objetivo, por cuánto se equivocó y qué ajustes debe realizar.
 
-Usa los controles de la plataforma expuestos mediante los marcos de lenguaje de las aplicaciones de la Tienda Windows (aplicaciones de la Tienda Windows con JavaScript y aplicaciones de la Tienda Windows con C++, C\# o Visual Basic) para obtener las visualizaciones de Windows 8 de manera gratuita. Si tu aplicación presenta interacciones personalizadas que necesitan de información personalizada, debes asegurarte de que esta información sea adecuada, abarque los dispositivos de entrada y no distraiga al usuario de su tarea. Esto es especialmente importante en las aplicaciones de dibujo o de juegos, donde la información visual podría entrar en conflicto con áreas críticas de la interfaz de usuario u ocultarlas.
+Al usar los controles de plataforma XAML predeterminados disponibles te asegurarás de que tu aplicación funciona correctamente en todos los dispositivos y en todas las situaciones de entrada. Si tu aplicación presenta interacciones personalizadas que necesitan de información personalizada, debes asegurarte de que esta información sea adecuada, abarque los dispositivos de entrada y no distraiga al usuario de su tarea. Esto es especialmente importante en las aplicaciones de dibujo o de juegos, donde la información visual podría entrar en conflicto con áreas críticas de la interfaz de usuario u ocultarlas.
 
 [!IMPORTANT] Te recomendamos que no cambies el comportamiento de interacción de los gestos integrados. 
 
-### <span id="Feedback_UI"></span><span id="feedback_ui"></span><span id="FEEDBACK_UI"></span>Interfaz de usuario de información
+**Comentarios a través de los dispositivos**
 
-La interfaz de usuario de información por lo general depende del dispositivo de entrada (táctil, panel táctil, mouse, lápiz o pluma, teclado, etc.). Por ejemplo, la información integrada para un mouse por lo general implica mover y cambiar el cursor, mientras que la entrada táctil o de lápiz requiere visualizaciones de contacto, y la navegación y entrada de teclado usa rectángulos de foco y resaltado.
+Los comentarios visuales dependen por lo general del dispositivo de entrada (táctil, panel táctil, mouse, lápiz o pluma, teclado, etc.). Por ejemplo, la información integrada para un mouse por lo general implica mover y cambiar el cursor, mientras que la entrada táctil o de lápiz requiere visualizaciones de contacto, y la navegación y entrada de teclado usa rectángulos de foco y resaltado.
 
 Usa [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969) para establecer el comportamiento de la información para los gestos de la plataforma.
 
@@ -58,102 +45,61 @@ Si personalizas la interfaz de usuario de información, asegúrate de proporcion
 
 Estos son algunos ejemplos de visualizaciones de contacto integradas en Windows.
 
-| ![Captura de pantalla que muestra una visualización táctil](images/feedback-touch-cursor.png) | ![Captura de pantalla que muestra una visualización de mouse](images/feedback-mouse-cursor2.png) | ![Captura de pantalla que muestra una visualización de lápiz](images/feedback-pen-cursor3.png) | ![Captura de pantalla que muestra una visualización de teclado](images/feedback-keyboard-cursor.png) | 
+| ![Información táctil](images/TouchFeedback.png) | ![Comentarios del mouse](images/MouseFeedback.png) | ![Comentarios del lápiz](images/PenFeedback.png) | ![Comentarios del teclado](images/KeyboardFeedback.png) |
 | --- | --- | --- | --- |
 | Visualización táctil | Visualización de mouse y panel táctil | Visualización de pluma | Visualización de teclado |
 
-### <span id="Informational_UI"></span><span id="informational_ui"></span><span id="INFORMATIONAL_UI"></span>Interfaz de usuario informativa (elementos emergentes)
+## Elementos visuales de foco de alta visibilidad
 
-Una de las principales formas de información visual es la interfaz de usuario informativa (o interfaz de usuario de desambiguación). La interfaz de usuario informativa identifica y muestra información sobre un objeto, describe las funciones y cómo acceder a ellas, y ofrece instrucciones cuando es necesario.
+Todas las aplicaciones de Windows admiten elementos visuales de foco alrededor de controles interactivos más definidos en la aplicación. Estos nuevos elementos visuales de foco son totalmente personalizables y se pueden deshabilitar cuando sea necesario.
 
-Estos son los distintos tipos de interfaz de usuario informativa admitidos por las aplicaciones de la Tienda Windows.
+## Personalización de marca de color y personalización
 
--   Información sobre herramientas
--   Información sobre herramientas enriquecida
--   Menús
--   Cuadros de diálogo de mensaje
--   Controles flotantes
+**Propiedades de borde**
 
-La interfaz de usuario informativa es especialmente útil para superar la oclusión con la punta de los dedos (obstrucción) y para mejorar las interacciones táctiles con la aplicación. Incluso tiene un gesto integrado dedicado a ella: pulsar y sostener.
+Los elementos visuales de enfoque de alta visibilidad constan de dos partes: el borde principal y el borde secundario. El borde principal es de **2px** de espesor y se ejecuta alrededor de la parte de *fuera* del borde secundario. El borde secundario es de **1px** de espesor y se ejecuta alrededor de la parte de *dentro* del borde primario.
+![Contornos visuales de foco de alta visibilidad](images/FocusRectRedlines.png)
 
-Pulsar y sostener es una interacción dependiente del tiempo y este tipo de interacción no se recomienda en Windows 8. En este caso, resulta aceptable una interacción con intervalo pues se usa como herramienta para el aprendizaje y la exploración. La duración recomendada depende del tipo de interfaz de usuario informativa. Estos son los umbrales de tiempo recomendados.
+Para cambiar el grosor del tipo de borde (principal o secundario) usa **FocusVisualPrimaryThickness** o **FocusVisualSecondaryThickness**, respectivamente:
+```XAML
+<Slider Width="200" FocusVisualPrimaryThickness="5" FocusVisualSecondaryThickness="2"/>
+```
+![Grosores de los márgenes visuales de foco de alta visibilidad](images/FocusMargin.png)
 
-| Tipo de interfaz de usuario informativa | Intervalos | Activación | Uso |
-| --- | --- | --- | --- |
-| Información sobre herramienta para superar oclusión (para arrastre y destinos pequeños) | 0 milisegundos | Sí | Para aclaración rápida de acciones. Generalmente se usa para comandos. |
-| Información sobre herramienta para superar oclusión (para acciones) | 200 milisegundos | Sí | |
-| Información sobre herramientas enriquecida | ~2000 milisegundos | No | Para exploración y aprendizaje más lentos y reflexivos. Generalmente se usa con elementos de una colección. |
-| Interacción reveladora | ~2000 milisegundos | No | |
-| Menú contextual | ~2000 milisegundos | No | Expone un conjunto limitado de comandos relacionados con el objeto seleccionado. |
-| Controles flotantes | ~2000 milisegundos | No | Expone un conjunto limitado de comandos relacionados con el objeto seleccionado. |
+El margen es una propiedad de tipo [**Grosor**](https://msdn.microsoft.com/library/system.windows.thickness)y, por lo tanto, el margen se puede personalizar para que aparezca únicamente en determinadas partes del control. Consulta la siguiente información: ![Grosor de los márgenes visuales de foco de alta visibilidad, solo de la parte inferior](images/FocusThicknessSide.png)
 
-Para más información sobre cómo ofrecer la interfaz de usuario informativa, consulta los temas [Diseñar la interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/hh465304) y [Mostrar elementos emergentes](https://msdn.microsoft.com/library/windows/apps/hh738362).
+El margen es el espacio entre los límites de los elementos visuales de control y el inicio del *borde secundario* de los elementos visuales de foco. El margen predeterminado está **1px** por encima de los límites del control. Puedes editar este margen según el control, cambiando la propiedad **FocusVisualMargin**:
+```XAML
+<Slider Width="200" FocusVisualMargin="-5"/>
+```
+![Diferencias en los márgenes visuales de foco de alta visibilidad](images/FocusPlusMinusMargin.png)
 
-### <span id="Tooltips"></span><span id="tooltips"></span><span id="TOOLTIPS"></span>Información sobre herramientas
+*Un margen negativo alejará el borde del centro del control y un margen positivo acercará el borde hacia el centro del control.*
 
-Usa la información sobre herramientas para mostrar más información sobre un control antes de pedir al usuario que realice una acción.
+Para desactivar elementos visuales de foco en el control por completo, simplemente se deshabilitó **UseSystemFocusVisuals**:
+```XAML
+<Slider Width="200" UseSystemFocusVisuals="False"/>
+```
 
-La información sobre herramientas ([**Tooltip**](https://msdn.microsoft.com/library/windows/apps/br229763)) aparece automáticamente cuando el usuario realiza un gesto de pulsar y sostener (o cuando se detecta un evento en que el puntero se mantiene) sobre un control o un objeto. La información sobre herramientas desaparece cuando el contacto o el cursor se retiran del control o del objeto. La información sobre herramientas puede incluir texto e imágenes, pero no es interactiva.
+El grosor, el margen o si el desarrollador de aplicaciones desea o no tener los elementos visuales de foco es determinante al regirse por el control.
 
-### <span id="Occlusion_tooltips_small"></span><span id="occlusion_tooltips_small"></span><span id="OCCLUSION_TOOLTIPS_SMALL"></span>Información sobre herramientas para superar oclusión para destinos pequeños
+**Propiedades de color**
 
-La información sobre herramientas para superar oclusión describe el destino que queda oculto. Resulta útil cuando se intenta seleccionar y activar elementos más pequeños que un destino táctil estándar, como hipervínculos en una página web.
+Hay solo dos propiedades de color para los elementos visuales de foco: el color del borde principal y el color del borde secundario. Estos colores de borde de los elementos visuales de foco pueden cambiar según el control en el nivel de página y de forma global en el nivel de aplicación:
 
-Esta información sobre herramientas puede reemplazarse con una ventana emergente informativa una vez superado un umbral de tiempo determinado. Por ejemplo, usa la información sobre herramientas para superar oclusión para mostrar el texto oculto del hipervínculo y después reemplázala con un elemento emergente que contenga la dirección URL.
+Para marcar los elementos visuales de foco en toda la aplicación, reemplaza los pinceles del sistema:
+```XAML
+<SolidColorBrush x:Key="SystemControlFocusVisualPrimaryBrush" Color="DarkRed"/>
+<SolidColorBrush x:Key="SystemControlFocusVisualSecondaryBrush" Color="Pink"/>
+```
+![Cambios de color en los elementos visuales de foco de alta visibilidad](images/FocusRectColorChanges.png)
 
-### <span id="Occlusion_tooltips_actions"></span><span id="occlusion_tooltips_actions"></span><span id="OCCLUSION_TOOLTIPS_ACTIONS"></span>Informaciones sobre herramientas para superar la oclusión para acciones y comandos
+Para cambiar los colores según el control, modifica las propiedades de los elementos visuales de foco en el control deseado:
+```XAML
+<Slider Width="200" FocusVisualPrimaryBrush="DarkRed" FocusVisualSecondaryBrush="Pink"/>
+```
 
-Esta información sobre herramientas describe la acción o el comando que tiene lugar cuando un usuario levanta el dedo de un elemento. Esta información sobre herramientas es útil cuando se intenta seleccionar y activar un botón o un control similar.
-
-Una información sobre herramientas para destino pequeño puede ir seguida de una información sobre herramientas para acción una vez superado un umbral de tiempo determinado. En este caso, la información sobre herramientas para destino pequeño debe expandirse para incluir la información adicional en la información sobre herramientas para acción.
-
-### <span id="Rich_tooltip"></span><span id="rich_tooltip"></span><span id="RICH_TOOLTIP"></span>Información sobre herramientas enriquecida
-
-Esta información sobre herramientas revela información secundaria sobre un elemento. Por ejemplo, una información sobre herramientas enriquecida podría ser una descripción textual de una imagen, el texto completo de un título truncado u otra información relacionada con el destino.
-
-La información sobre herramientas enriquecida por lo general contiene información de la que no es necesario disponer de inmediato y que, en algunos casos, podría ser motivo de distracción si se mostrara demasiado pronto. Un umbral de tiempo más prolongado proporciona a los usuarios la posibilidad de pensar si desean obtener la información.
-
-Cuando se muestra una información sobre herramientas enriquecida, el objeto ya no se activa cuando el usuario levanta el dedo. El motivo es que la información obtenida de este modo podría llevar a que el usuario eligiera no activar el elemento.
-
-Es recomendable que el diseño visual y la información contenida en la información sobre herramientas enriquecida sea diferente de la que ofrece la información sobre herramientas estándar, y más sustancial.
-
-### <span id="Context_menu"></span><span id="context_menu"></span><span id="CONTEXT_MENU"></span>Menú contextual
-
-El menú contextual ([**PopupMenu**](https://msdn.microsoft.com/library/windows/apps/br208693)) es un menú ligero que ofrece a los usuarios acceso inmediato a las acciones (como comandos del Portapapeles) para objetos de texto o de la interfaz de usuario en las aplicaciones de la Tienda Windows.
-
-El menú contextual optimizado para entrada táctil consta de dos partes. Como resultado de la interacción de sostener, se muestra una indicación visual: la sugerencia. Después se muestra el menú contextual una vez que desaparece la sugerencia y el usuario levanta el dedo.
-
-En las imágenes siguientes se muestra cómo invocar el menú contextual predeterminado para texto pulsando dentro de una selección o sobre una barra de redimensionamiento (también puedes usar el gesto de pulsar y sostener).
-
-![pulsa (o pulsa y sostén) dentro de la selección o en una barra de redimensionamiento para invocar el menú contextual.](images/textselection-show-context.png)
-
-Consulta [Agregar menús contextuales](https://msdn.microsoft.com/library/windows/apps/hh465300).
-
-### <span id="Message_dialog"></span><span id="message_dialog"></span><span id="MESSAGE_DIALOG"></span>Cuadro de diálogo de mensaje
-
-Usa cuadros de diálogo de mensaje ([**MessageDialog**](https://msdn.microsoft.com/library/windows/apps/br208674)) para pedir una respuesta al usuario (basada en la acción del usuario o en el estado de la aplicación) antes de continuar. Hasta que el usuario responda, se requiere su interacción explícita y se bloquean las entradas en la aplicación.
-
-![cuadro de diálogo de mensaje para un mensaje de error](images/messagedialog.png)
-
-Estos son algunos motivos típicos para mostrar un cuadro de diálogo de mensaje.
-
--   Proporcionar información urgente
--   Hacer una pregunta antes de continuar con la ejecución
--   Mostrar mensajes de error
-
-Consulta [Agregar cuadros de diálogo de mensaje](https://msdn.microsoft.com/library/windows/apps/hh738361).
-
-### <span id="Flyout"></span><span id="flyout"></span><span id="FLYOUT"></span>Control flotante
-
-Un control flotante ([**Flyout**](https://msdn.microsoft.com/library/windows/apps/br211726)) es un panel de interfaz de usuario ligero que se muestra al realizar una pulsación, un clic u otra acción de activación y se usa para presentar al usuario información, preguntas o un menú con opciones relacionadas con la actividad actual. Puede cerrarse por cambio de foco (desaparece cuando el usuario toca o hace clic fuera del panel del control flotante o presiona la tecla Esc). En otras palabras, los controles flotantes se pueden pasar por alto.
-
-A diferencia de la información sobre herramientas, los controles flotantes aceptan entrada. A diferencia de lo que ocurre con los cuadros de diálogo de mensaje, la aplicación sigue activa y acepta entradas.
-
-![control flotante con confirmación](images/flyout.png)
-
-Consulta [Agregar controles flotantes y menús](https://msdn.microsoft.com/library/windows/apps/hh465325).
-
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 **Para diseñadores**
 * [Directrices sobre el movimiento panorámico](guidelines-for-panning.md)
@@ -182,10 +128,6 @@ Consulta [Agregar controles flotantes y menús](https://msdn.microsoft.com/libra
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

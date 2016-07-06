@@ -1,12 +1,19 @@
 ---
-author: mcleanbyron Description: Ofrece productos consumibles desde la aplicación&\#8212;artículos que se pueden comprar, usar y volver a comprar&\#8212;a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza.
-title: Habilita las compras de productos desde la aplicación consumibles ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4 keywords: oferta desde la aplicación keywords: consumibles keywords: compra desde la aplicación keywords: producto desde la aplicación keywords: cómo ofrecer soporte técnico en la aplicación keywords: muestra de código de compra desde la aplicación keywords: muestra de código de oferta desde la aplicación
+author: mcleanbyron
+Description: "Ofrece productos consumibles desde la aplicación &\\#8212;artículos que se pueden comprar, usar y volver a comprar&\\#8212;, a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza."
+title: "Habilitar compras de productos consumibles desde la aplicación"
+ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
+keywords: in-app offer code sample
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 25f09e043d61f1705f9f0a4fa34114fd06166fa4
+
 ---
 
 # Habilitar compras de productos consumibles desde la aplicación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar), a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se puedan comprar y se usen para comprar bonificaciones concretas.
 
@@ -119,6 +126,7 @@ private async void GetUnfulfilledConsumables()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

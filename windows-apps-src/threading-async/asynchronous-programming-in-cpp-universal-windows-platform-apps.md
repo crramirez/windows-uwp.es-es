@@ -337,6 +337,6 @@ Los métodos que admiten [**IAsyncOperationWithProgress**](https://msdn.microsof
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

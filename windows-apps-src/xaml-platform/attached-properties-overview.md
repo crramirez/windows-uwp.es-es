@@ -1,8 +1,12 @@
 ---
 author: jwmsft
 description: Explica el concepto de propiedad adjunta en XAML y proporciona algunos ejemplos.
-title: Introducción a las propiedades adjuntas
+title: "Introducción a las propiedades adjuntas"
 ms.assetid: 098C1DE0-D640-48B1-9961-D0ADF33266E2
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: b676110274bacc8aeacb2527099534cf0e26fa6b
+
 ---
 
 # Introducción a las propiedades adjuntas
@@ -118,6 +122,7 @@ El punto en el nombre de la propiedad adjunta es una parte fundamental del patr�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

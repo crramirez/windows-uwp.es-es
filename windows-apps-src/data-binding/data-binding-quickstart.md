@@ -3,8 +3,8 @@ author: mcleblanc
 ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
 title: "Introducción al enlace de datos"
 description: "En este tema se muestra cómo enlazar un control (o cualquier otro elemento de interfaz de usuario) a un solo elemento o enlazar un control de elementos a una colección de elementos en una aplicación para la Plataforma universal de Windows (UWP)."
-ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
-ms.openlocfilehash: c30e048f450c062c6e0148e5040a58bfa47193bb
+ms.sourcegitcommit: c5325f0d0a067847bea81a115db4770a39ddd12a
+ms.openlocfilehash: 4753c2fc52fa0227b3867685b793a3d6cfc05630
 
 ---
 Introducción al enlace de datos
@@ -32,7 +32,7 @@ Cada enlace consta de un destino de enlace y de un origen de enlace. Normalmente
 
 Agrega una nueva clase al proyecto, dale el nombre de Recording.cs (si usas C#) y agrégale este código.
 
-``` csharp
+```csharp
 namespace Quickstart
 {
     public class Recording
@@ -66,7 +66,7 @@ namespace Quickstart
 }
 ```
 
-``` cpp
+```cpp
 #include <sstream>
 
 namespace Quickstart
@@ -140,7 +140,7 @@ namespace Quickstart
 
 Después, haz una exposición de la clase de origen de enlace a partir de la clase que representa la página de marcado. Eso lo haremos agregando una propiedad de tipo **RecordingViewModel** a **MainPage**.
 
-``` csharp
+```csharp
 namespace Quickstart
 {
     public sealed partial class MainPage : Page
@@ -156,7 +156,7 @@ namespace Quickstart
 }
 ```
 
-``` cpp
+```cpp
 namespace Quickstart
 {
     public ref class MainPage sealed
@@ -181,7 +181,7 @@ namespace Quickstart
 
 La última parte es enlazar un **TextBlock** a la propiedad **ViewModel.DefaultRecording.OneLiner**.
 
-``` xml
+```xml
 <Page x:Class="Quickstart.MainPage" ... >
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock Text="{x:Bind ViewModel.DefaultRecording.OneLineSummary}"
@@ -202,7 +202,7 @@ Un escenario común es enlazar a una colección de objetos profesionales. En C# 
 
 El siguiente ejemplo enlaza una [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) a una colección de objetos `Recording`. Empecemos agregando la colección a nuestro modelo de vista. Solo tienes que agregar estos miembros nuevos a la clase **RecordingViewModel**.
 
-``` csharp
+```csharp
     public class RecordingViewModel
     {
         ...
@@ -222,7 +222,7 @@ El siguiente ejemplo enlaza una [**ListView**](https://msdn.microsoft.com/librar
     }
 ```
 
-``` cpp
+```cpp
     public ref class RecordingViewModel sealed
     {
     private:
@@ -270,11 +270,11 @@ El siguiente ejemplo enlaza una [**ListView**](https://msdn.microsoft.com/librar
             };
         }
     };
-    ```
+```
 
-And then bind a [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) to the **ViewModel.Recordings** property.
+Después, enlaza un control [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) a la propiedad **ViewModel.Recordings**.
 
-``` xml
+```xml
 <Page x:Class="Quickstart.MainPage" ... >
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView ItemsSource="{x:Bind ViewModel.Recordings}"
@@ -283,13 +283,13 @@ And then bind a [**ListView**](https://msdn.microsoft.com/library/windows/apps/B
 </Page>
 ```
 
-Aún no hemos proporcionamos una plantilla de datos para la clase **Recording**, por lo que lo mejor que puede hacer el marco de trabajo de la interfaz de usuario es llamar a [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) para cada elemento de la [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878). La implementación predeterminada de **ToString** es devolver el nombre del tipo.
+Aún no hemos proporcionado una plantilla de datos para la clase **Recording**, por lo que lo mejor que puede hacer el marco de trabajo de la interfaz de usuario es llamar a [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) para cada elemento del control [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878). La implementación predeterminada de **ToString** es devolver el nombre del tipo.
 
 ![Enlazar una vista de lista](images/xaml-databinding1.png)
 
 Para solucionar este problema, podemos tanto invalidar [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) para devolver el valor de **OneLineSummary**, o podemos proporcionar una plantilla de datos. La opción de plantilla de datos es más común y posiblemente más flexible. Estableces una plantilla de datos mediante la propiedad [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369) de un control de contenido o la propiedad [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830) de un control de elementos. Hay dos formas en las que podríamos diseñar una plantilla de datos para **Recording** junto con una ilustración del resultado.
 
-``` xml
+```xml
     <ListView ItemsSource="{x:Bind ViewModel.Recordings}"
         HorizontalAlignment="Center" VerticalAlignment="Center">
         <ListView.ItemTemplate>
@@ -298,11 +298,11 @@ Para solucionar este problema, podemos tanto invalidar [**ToString**](https://ms
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-    ```
+```
 
-![Binding a list view](images/xaml-databinding2.png)
+![Enlazar una vista de lista](images/xaml-databinding2.png)
 
-``` xml
+```xml
     <ListView ItemsSource="{x:Bind ViewModel.Recordings}"
     HorizontalAlignment="Center" VerticalAlignment="Center">
         <ListView.ItemTemplate>
@@ -321,7 +321,7 @@ Para solucionar este problema, podemos tanto invalidar [**ToString**](https://ms
 
 ![Enlazar una vista de lista](images/xaml-databinding3.png)
 
-Para obtener más información sobre la sintaxis XAML, consulta el tema [Crear una interfaz de usuario con XAML](https://msdn.microsoft.com/library/windows/apps/Mt228349). Para obtener más información acerca del diseño de controles, consulta [Definir diseños con XAML](https://msdn.microsoft.com/library/windows/apps/Mt228350).
+Para más información sobre la sintaxis XAML, consulta el tema [Crear una interfaz de usuario con XAML](https://msdn.microsoft.com/library/windows/apps/Mt228349). Para obtener más información acerca del diseño de controles, consulta [Definir diseños con XAML](https://msdn.microsoft.com/library/windows/apps/Mt228350).
 
 Agregar una vista de detalles
 -----------------------------------------------------------------------------------------------------
@@ -334,7 +334,7 @@ Esto se puede llevar a cabo de dos maneras. Puedes enlazar la vista de detalles 
 
 Primero, esta es la técnica [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770). Si usas las extensiones de componentes de Visual C++ (C++/CX), ya que usaremos [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782), tendrás que agregar el atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) a la clase **Recording**.
 
-``` cpp
+```cpp
     [Windows::UI::Xaml::Data::Bindable]
     public ref class Recording sealed
     {
@@ -344,7 +344,7 @@ Primero, esta es la técnica [**SelectedItem**](https://msdn.microsoft.com/libra
 
 El único cambio adicional necesario es al marcado.
 
-``` xml
+```xml
 <Page x:Class="Quickstart.MainPage" ... >
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -373,7 +373,7 @@ El único cambio adicional necesario es al marcado.
 
 Para la técnica [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833), primero agrega un **CollectionViewSource** como recurso de página.
 
-``` xml
+```xml
     <Page.Resources>
         <CollectionViewSource x:Name="RecordingsCollection" Source="{x:Bind ViewModel.Recordings}"/>
     </Page.Resources>
@@ -381,7 +381,7 @@ Para la técnica [**CollectionViewSource**](https://msdn.microsoft.com/library/w
 
 Y luego ajusta los enlaces en la [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) (a la que ya no necesitas llamar) y en la vista de detalles usa el [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833). Ten en cuenta al enlazar la lista de detalles directamente al **CollectionViewSource**, estás dando por sentado que quieres enlazar el elemento actual a los enlaces donde la ruta de acceso no se encuentra en la propia colección. No es necesario especificar la propiedad **CurrentItem** como la ruta de acceso para el enlace, aunque sí puedes hacerlo si encuentras alguna ambigüedad.
 
-``` xml
+```xml
     ...
 
     <ListView ItemsSource="{Binding Source={StaticResource RecordingsCollection}}">
@@ -403,7 +403,7 @@ Hay un pequeño problema con la representación anterior. La propiedad **Release
 
 Una solución más flexible es usar algo conocido como un convertidor de valores. Este es un ejemplo de cómo crear tu propio convertidor de valores. Agrega este código al archivo de código fuente Recording.cs.
 
-``` csharp
+```csharp
 public class StringFormatter : Windows.UI.Xaml.Data.IValueConverter
 {
     // This converts the value object to the string to display.
@@ -434,7 +434,7 @@ public class StringFormatter : Windows.UI.Xaml.Data.IValueConverter
 
 Ahora podemos agregar una instancia de **StringFormatter** como un recurso de página y usarla en nuestro enlace. Pasamos la cadena de formato en el convertidor de marcado de flexibilidad de formato.
 
-``` xml
+```xml
     <Page.Resources>
         <local:StringFormatter x:Key="StringFormatterValueConverter"/>
     </Page.Resources>
@@ -455,6 +455,6 @@ Este es el resultado.
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 9322B3A3-8F06-4329-AFCB-BE0C260C332C
 description: "Este artículo te guiará en el procedimiento para dirigirte a distintos destinos de implementación y de depuración."
 title: "Implementación y depuración de aplicaciones para la Plataforma universal de Windows (UWP)"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: eb639e78bf144572dfbfd2d65514bb4eff7c7be1
+translationtype: Human Translation
+ms.sourcegitcommit: 14f6684541716034735fbff7896348073fa55f85
+ms.openlocfilehash: e2209e90080c7346bb363304b1a28f6446300332
 
 ---
 
@@ -27,6 +28,18 @@ Para elegir un destino, navega hasta la lista desplegable de destino de depuraci
 -   **Dispositivo** implementará la aplicación en un dispositivo conectado mediante USB. El dispositivo debe haberlo desbloqueado el desarrollador y debe tener la pantalla desbloqueada.
 -   Un destino **Emulador** arrancará e implementará la aplicación en un emulador con la configuración especificada en el nombre. Los emuladores solo están disponibles en equipos compatibles con Hyper-V que ejecutan Windows 8.1 o posterior.
 -   **Equipo remoto** te permitirá especificar un destino remoto para implementar la aplicación. Puedes encontrar más información acerca de la implementación en un equipo remoto en [Especificación de un dispositivo remoto](#specifying-a-remote-device).
+
+## Depuración de aplicaciones implementadas
+Visual Studio también se puede asociar a cualquier proceso de aplicación para UWP en ejecución seleccionando **Depurar** y, después, **Asociar al proceso**. Para la asociación a un proceso en ejecución no se requiere el proyecto de Visual Studio original, pero la carga de los [símbolos](#symbols) del proceso será de gran ayuda al depurar un proceso del que no tienes el código original.  
+  
+Además, cualquier paquete de la aplicación instalado se puede asociar y depurar seleccionando **Depurar**, **Otros** y, después, **Depurar paquete de aplicaciones instalado**.   
+ 
+![Cuadro de diálogo Depurar paquete de aplicaciones instalado](images/gs-debug-uwp-apps-002.png)  
+
+Al seleccionar **No iniciar, pero depurar mi código al empezar**, el depurador de Visual Studio se asociará a la aplicación para UWP cuando se inicie a la hora personalizada. Esta es una forma eficaz de depurar las rutas de acceso de control a partir de [distintos métodos de inicio](../xbox-apps/automate-launching-uwp-apps.md), como la activación de protocolos con parámetros personalizados.  
+
+Las aplicaciones para UWP se pueden desarrollar y compilar en Windows 8.1 o posterior, pero requieren Windows 10 para ejecutarse. Si estás desarrollando una aplicación para UWP en un equipo con Windows 8.1, puedes depurar de forma remota una aplicación para UWP que se ejecute en otro dispositivo de Windows 10, siempre que el equipo host y el equipo de destino se encuentren en la misma LAN. Para hacerlo, descarga e instala [Herramientas remotas para Visual Studio](http://aka.ms/remotedebugger) en ambos equipos. La versión instalada debe coincidir con la versión existente de Visual Studio que hayas instalado y la arquitectura que selecciones (x86, x 64) también debe coincidir con la de aplicación de destino.   
+  
 
 ## Especificación de un dispositivo remoto
 
@@ -85,10 +98,51 @@ Para configurar la implementación para iniciar automáticamente una sesión de 
 -   En la página de propiedades de **Depurar** de C# y Visual Basic, activa la casilla **No iniciar, pero depurar mi código al empezar**.
 -   En la página de propiedades de **Depuración** de JavaScript y C++, establece el valor de **Iniciar aplicación** en **Sí**.
 
+## Símbolos
+
+Los archivos de símbolos contienen una variedad de datos muy útiles al depurar el código, como variables, nombres de función y direcciones de punto de entrada, lo que te permite comprender mejor las excepciones y el orden de ejecución de la pila de llamadas. Los símbolos de la mayoría de variantes de Windows están disponibles a través del [Servidor de símbolos de Microsoft](http://msdl.microsoft.com/download/symbols) o se pueden descargar para búsquedas más rápidas y sin conexión en [Descargar paquetes de símbolos de Windows](http://aka.ms/winsymbols).
+
+Para establecer opciones de símbolos de Visual Studio, selecciona **Herramientas > Opciones** y, después, ve a **Depurar > Símbolos** en la ventana del cuadro de diálogo.
+
+**Figura 4. Cuadro de diálogo Opciones.**
+            
+![Cuadro de diálogo Opciones](images/gs-debug-uwp-apps-004.png)
+
+Para cargar símbolos en una sesión de depuración con [WinDbg](#windbg), establece la variable **sympath** en la ubicación del paquete de símbolos. Por ejemplo, al ejecutar el comando siguiente se cargarán los símbolos del servidor de símbolos de Microsoft y, después, se almacenarán en caché en el directorio C:\Symbols:
+
+```
+.sympath SRV*C:\Symbols*http://msdl.microsoft.com/download/symbols
+.reload
+```
+
+Puedes agregar más rutas de acceso mediante el delimitador ';' o usar el comando `.sympath+`. Para obtener información sobre operaciones de símbolos más avanzadas que usan WinDbg, consulta [Public and Private Symbols (Símbolos públicos y privados)](https://msdn.microsoft.com/library/windows/hardware/ff553493).
+
+## WinDbg
+
+WinDbg es un depurador eficaz que se suministra como parte del conjunto de herramientas de depuración para Windows, que se incluye con [Windows SDK](http://go.microsoft.com/fwlink/p?LinkID=271979). La instalación de Windows SDK te permite instalar las herramientas de depuración para Windows como un producto independiente. Aunque es muy útil para depurar código nativo, WinDbg no se recomienda para aplicaciones escritas en código administrado o HTML5. 
+
+Para usar WinDbg con aplicaciones para UWP, tendrás que deshabilitar primero PLM para el paquete de la aplicación mediante PLMDebug, como se describe en la sección anterior. 
+
+```
+plmdebug /enableDebug [PackageFullName] "\"C:\Program Files\Debugging Tools for Windows (x64)\WinDbg.exe\" -server npipe:pipe=test"
+```
+
+A diferencia de Visual Studio, la mayoría de la funcionalidad principal de WinDbg se basa en proporcionar comandos a la ventana de comando. Los comandos proporcionados permiten ver el estado de ejecución, investigar los volcados de memoria de modo usuario y realizar la depuración de distintos modos. 
+
+Uno de los comandos más populares de WinDBG es `!analyze -v`, que se usa para recuperar una cantidad de información detallada acerca de la excepción actual, como:
+
+- FAULTING_IP: puntero de instrucción en el momento del error
+- EXCEPTION_RECORD: dirección, código e indicadores de la excepción actual
+- STACK_TEXT: seguimiento de la pila antes de la excepción
+
+Para obtener una lista completa de todos los comandos de WinDbg, consulta [Debugger Commands (Comandos del depurador)](https://msdn.microsoft.com/library/ff540507).
+
+## Temas relacionados
+- [Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)](testing-debugging-plm.md)
+- [Depuración, pruebas y rendimiento](index.md)
 
 
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

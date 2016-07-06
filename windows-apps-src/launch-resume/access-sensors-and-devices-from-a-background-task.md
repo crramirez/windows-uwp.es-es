@@ -200,6 +200,6 @@ Además del método [**Unregister**](https://msdn.microsoft.com/library/windows/
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

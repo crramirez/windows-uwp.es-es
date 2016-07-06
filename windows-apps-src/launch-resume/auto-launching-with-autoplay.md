@@ -579,6 +579,6 @@ Puedes agregar una extensión al archivo package.appxmanifest de tu aplicación 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

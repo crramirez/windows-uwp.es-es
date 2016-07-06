@@ -174,6 +174,6 @@ Usa las siguientes directrices cuando diseñes interacciones de arrastre:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -305,6 +305,6 @@ Consulta las [aplicaciones de muestra](https://code.msdn.microsoft.com/windowsap
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

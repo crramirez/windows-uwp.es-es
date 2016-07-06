@@ -5,8 +5,8 @@ title: "Controles de navegación centralizada"
 ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 70ce2a58b45c8514aca6641ca034caa91fb88d18
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: fdff043aa92842adb6ac2d572794bf02fdd5c6b3
 
 ---
 # Patrón o control de navegación centralizada
@@ -16,7 +16,15 @@ Un control de navegación centralizada permite organizar el contenido de la apli
 
 ![Ejemplo de un control de navegación centralizada](images/hub_example_tablet.png)
 
-El contenido en un control de navegación centralizada se puede mostrar en una vista panorámica sólida que permite a los usuarios obtener una vista rápida de lo que es nuevo, lo que está disponible y lo que es relevante. Las navegaciones centralizadas suelen tener un encabezado de página, mientras que varias secciones de contenido obtienen cada una un encabezado de sección.
+El contenido en un control de navegación centralizada se puede mostrar en una vista panorámica que permite a los usuarios obtener una vista rápida de lo que es nuevo, lo que está disponible y lo que es relevante. Las navegaciones centralizadas suelen tener un encabezado de página, y las secciones de contenido obtienen cada una un encabezado de sección.
+
+
+-   [**Clase Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)
+-   [**Clase HubSection**](https://msdn.microsoft.com/library/windows/apps/dn251845)
+
+## ¿Es este el control adecuado?
+
+El control de navegación centralizada funciona bien para mostrar grandes cantidades de contenido organizado en una jerarquía. Los concentradores dan prioridad a la exploración y detección de contenido nuevo, lo que los hace útiles para mostrar elementos en una tienda o una colección de elementos multimedia.
 
 El control de navegación centralizada tiene varias funciones que hacen que funcione bien para crear un patrón de navegación de contenido.
 
@@ -34,24 +42,13 @@ El control de navegación centralizada tiene varias funciones que hacen que func
 
 -   **Anchos de página y de contenido variables**
 
-    Dado que es un modelo panorámico, el control de navegación centralizada permite variabilidad en sus anchos de sección. Esto es ideal para el contenido de distintas profundidades y permite dar formato igual de bien a una cantidad de elementos de pequeña a grande.
+    Dado que es un modelo panorámico, el control de navegación centralizada permite variabilidad en sus anchos de sección. Esto es estupendo para contenido de distintas profundidades o cantidades.
 
 -   **Arquitectura flexible**
 
     Si prefieres mantener la arquitectura de la aplicación superficial, puedes tener todo el contenido del canal en un resumen de sección del control de navegación centralizada.
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
-
--   [**Clase Hub (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn251843)
--   [**Clase HubSection (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn251845)
--   [**Objeto Hub (HTML)**](https://msdn.microsoft.com/library/windows/apps/dn255137)
-
-
-## ¿Es este el control adecuado?
-
-El control de navegación centralizada funciona bien para mostrar grandes cantidades de contenido organizado en una jerarquía. Los concentradores dan prioridad a la exploración y detección de contenido nuevo, lo que los hace útiles para mostrar elementos en una tienda o una colección de elementos multimedia.
-
-La navegación centralizada es solo uno de varios elementos de navegación que puedes usar. Para más información sobre patrones de navegación y otros elementos de navegación, consulta el artículo [Conceptos básicos del diseño de navegación para aplicaciones para la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn958438).
+La navegación centralizada es solo uno de varios elementos de navegación que puedes usar. Para más información sobre patrones de navegación y otros elementos de navegación, consulta el artículo [Conceptos básicos del diseño de navegación para aplicaciones para la Plataforma universal de Windows (UWP)](../layout/navigation-basics.md).
 
 ## Arquitectura de navegación centralizada
 
@@ -107,13 +104,13 @@ En los dispositivos móviles, las secciones de navegación centralizada están v
 
 ## Artículos relacionados
 
-- [Conceptos básicos de navegación](https://msdn.microsoft.com/library/windows/apps/dn958438)
-- [**Clase Hub del espacio de nombres Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/dn251843)
-- [Ejemplo del control de navegación centralizada XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
+- [Clase Hub](https://msdn.microsoft.com/library/windows/apps/dn251843)
+- [Conceptos básicos de navegación](../layout/navigation-basics.md)
 - [Usar un control de navegación centralizada](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
+- [Ejemplo del control de navegación centralizada XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

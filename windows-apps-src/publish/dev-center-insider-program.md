@@ -2,8 +2,8 @@
 title: Programa Insider del Centro de desarrollo
 description: "Prueba las nuevas características del Centro de desarrollo antes de que estén disponibles para todos los desarrolladores y cuéntanos qué te parecen."
 author: JnHs
-ms.sourcegitcommit: 836ffd3f1bc3a9d9be4fa510d5188b565972c130
-ms.openlocfilehash: 64b9327258d6116922d3e4cc097ed3dda08b541b
+ms.sourcegitcommit: b6c86bc1458f177e44058ac36d97d650bae36008
+ms.openlocfilehash: 715d2027114726cf7c9bf0a38d1841f9e83d58e6
 
 ---
 
@@ -19,8 +19,8 @@ Estas son algunas de las características que hemos puesto a disposición exclus
 
 | Característica del Programa Insider del Centro de desarrollo   | Cómo pueden probarla los usuarios de Insider del Centro de desarrollo | Fecha de adición |
 |--------------------------------------|------------------------------------|------------|
+|**Administrar IAP en masa**: realiza cambios en varios IAP a la vez en lugar de enviar cada actualización individualmente. | Haga clic en **Administrar IAP en masa** en la página Introducción o IAPs de una aplicación. |Junio de 2016|
 |**Actualización de informe de uso**: el informe mejorado muestra ahora los datos de uso de los clientes de Windows 10 de todas las aplicaciones, sin requerir el uso de Visual Studio Application Insights.|Consulta la información del informe de **uso** de una aplicación. |Junio de 2016|
-|**Notificaciones de inserción de destino**: crea notificaciones personalizadas para enviar a los clientes de la aplicación (todos o solo un segmento seleccionado, según los criterios específicos que definas).|Ve a la página Notificaciones de inserción (debajo de Servicios) de una aplicación. Haz clic en **Nueva notificación** para crear y programar la notificación. Puedes enviarla a todos los usuarios de la aplicación o hacer clic en **Crear nuevo grupo de clientes** para definir un segmento específico de clientes de la aplicación. [Más información](http://go.microsoft.com/fwlink/p/?LinkId=718017)|Junio de 2016|
 |**Disponibilidad de familias de dispositivos**: administra la disponibilidad de familias de dispositivos para la aplicación y descubre los paquetes que se ofrecerán a familias de dispositivos específicas de Windows 10 (y versiones anteriores del sistema operativo, si procede) en el orden de clasificación.|Observa esta información y realiza tus selecciones en la página **Paquetes** del envío de la aplicación.|Mayo de 2016|
 |**Ver los comentarios enviados**: visualiza todos los comentarios que has enviado al Centro de desarrollo y obtén notificaciones cuando hagamos cambios basados en tus comentarios.|En **Configuración de la cuenta**, haz clic en **Comentarios enviados** en el panel de navegación izquierdo.|Abril de 2016|
 |**Datos de adquisición hasta la fecha**: ahora puedes ver las adquisiciones totales acumuladas de tus aplicaciones e IAP.|Observa esta información en el informe **Adquisiciones** de una aplicación y en el informe **Adquisiciones de IAP**.|Abril de 2016|
@@ -34,6 +34,6 @@ Estas son algunas de las características que hemos puesto a disposición exclus
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

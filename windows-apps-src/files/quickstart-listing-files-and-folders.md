@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Enumerar y consultar archivos y carpetas
-description: Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas.
+description: "Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 6ecad1bbd3c08dcd7aa1d3b82739931f20fc4ee2
+
 ---
 # Enumerar y consultar archivos y carpetas
 
@@ -320,6 +324,7 @@ July ‎2015 (2)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

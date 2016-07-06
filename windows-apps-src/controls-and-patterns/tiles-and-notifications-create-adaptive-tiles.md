@@ -5,8 +5,8 @@ title: Crear iconos adaptables
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 0bcdc9570365ca0dcacf4f9c0c1b99afaffcf157
+ms.sourcegitcommit: a6632c7b8fdee5320f35e316abd318193a254c51
+ms.openlocfilehash: 6cd4519007d1241cb7c411dade1a092140b598c4
 
 ---
 
@@ -20,21 +20,21 @@ Las plantillas de iconos adaptables son una nueva característica de Windows 10,
 
 (Si quieres, puedes seguir usando las plantillas preestablecidas del [catálogo de plantillas de iconos de Windows 8](https://msdn.microsoft.com/library/windows/apps/hh761491) al diseñar las notificaciones para Windows 10.)
 
-## <span id="Getting_started"></span><span id="getting_started"></span><span id="GETTING_STARTED"></span>Introducción
+## Introducción
 
 
 **Instala NotificationsExtensions.** Si quieres usar C# en lugar de XML para generar notificaciones, instala el paquete de NuGet denominado [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki). Las muestras de C# que se proporcionan en este artículo usan NotificationsExtensions.
 
 **Instala Notifications Visualizer** Al igual que la vista de editor o de diseño XAML de Visual Studio, esta aplicación para UWP gratuita te ayuda a diseñar iconos dinámicos adaptables proporcionando una vista previa visual instantánea del icono a medida que lo editas. Puedes leer [esta entrada de blog](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/09/22/introducing-notifications-visualizer-for-windows-10.aspx) para obtener más información y puedes descargar Notifications Visualizer [aquí](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
 
-## <span id="Usage_guidance"></span><span id="usage_guidance"></span><span id="USAGE_GUIDANCE"></span>Guía de uso
+## Guía de uso
 
 
 Las plantillas adaptables están diseñadas para funcionar en diferentes factores de forma y tipos de notificación. Los elementos, como el grupo y el subgrupo, vinculan entre sí el contenido y no implican un comportamiento visual determinado de forma indiscriminada. El aspecto final de una notificación debe basarse en el dispositivo específico en el que se va a mostrar, ya sea un teléfono, una tableta, un equipo de escritorio u otro dispositivo.
 
 Las sugerencias son atributos opcionales que se pueden agregar a los elementos con el fin de lograr un comportamiento visual específico. Las sugerencias pueden ser específicas de un dispositivo o de una notificación.
 
-## <span id="A_basic_example"></span><span id="a_basic_example"></span><span id="A_BASIC_EXAMPLE"></span>Un ejemplo básico
+## Un ejemplo básico
 
 
 En este ejemplo se muestra lo que pueden generar las plantillas de iconos adaptables.
@@ -104,7 +104,7 @@ TileContent content = new TileContent()
 
 ![icono de muestra rápido](images/adaptive-tiles-quicksample.png)
 
-## <span id="Tile_sizes"></span><span id="tile_sizes"></span><span id="TILE_SIZES"></span>Tamaños de iconos
+## Tamaños de iconos
 
 
 El contenido para cada tamaño de icono se especifica de forma individual en diferentes elementos [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) dentro de la carga XML. Elige el tamaño de destino estableciendo el atributo de plantilla a uno de los siguientes valores:
@@ -196,12 +196,12 @@ TileContent content = new TileContent()
 
 ![tamaños de iconos adaptables: pequeños, medianos, anchos y grandes](images/adaptive-tiles-sizes.png)
 
-## <span id="Branding"></span><span id="branding"></span><span id="BRANDING"></span>Personalización de marca
+## Personalización de marca
 
 
 Puedes controlar la personalización de marca en la parte inferior de un icono dinámico (el nombre para mostrar y el logotipo de esquina) mediante el atributo de personalización de marca de la carga de notificación. Puedes elegir mostrar "none", solo "name", solo "logo" o ambos con "nameAndLogo".
 
-**Nota** Windows Phone no admite el logotipo de esquina, por lo que "logo" y "nameAndLogo" se definen de manera predeterminada en "name" en el teléfono.
+**Nota**  Windows Mobile no admite el logotipo de esquina, por lo que "logo" y "nameAndLogo" se definen de manera predeterminada en "name" en Mobile.
 
  
 
@@ -283,10 +283,12 @@ Si no especificas la personalización de marca en la carga de notificaciones, la
 
  
 
-## <span id="Display_name"></span><span id="display_name"></span><span id="DISPLAY_NAME"></span>Nombre para mostrar
+## Nombre para mostrar
 
 
 Puedes invalidar el nombre para mostrar de una notificación escribiendo la cadena de texto que quieras con el atributo **displayName**. Al igual que con la personalización de marca, puedes especificar esto en el elemento [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que afecta a toda la carga de notificaciones, o en el elemento [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que solo afecta a iconos individuales.
+
+**Problema conocido**  En Windows Mobile, si especifica un ShortName para Tile, no se usará el nombre para mostrar proporcionado en la notificación (ShortName se muestra siempre). 
 
 ```XML
 <tile>
@@ -332,7 +334,7 @@ TileContent content = new TileContent()
 
 ![nombre para mostrar de los iconos adaptables](images/adaptive-tiles-displayname.png)
 
-## <span id="Text"></span><span id="text"></span><span id="TEXT"></span>Texto
+## Texto
 
 
 El elemento [&lt;text&gt;](tiles-and-notifications-adaptive-tiles-schema.md) se usa para mostrar texto. Puedes usar sugerencias para modificar la apariencia del texto.
@@ -344,7 +346,7 @@ El elemento [&lt;text&gt;](tiles-and-notifications-adaptive-tiles-schema.md) se 
 </table>
 ```
 
-<span codelanguage="CSharp"></span>
+
 ```CSharp
 <colgroup>
 <col width="100%" />
@@ -366,7 +368,7 @@ new TileText()
 
 ![texto del icono adaptable](images/adaptive-tiles-text.png)
 
-## <span id="Text_wrapping"></span><span id="text_wrapping"></span><span id="TEXT_WRAPPING"></span>Ajuste de texto
+## Ajuste de texto
 
 
 De manera predeterminada, el texto no se ajusta y continuará fuera del borde de la ventana. Usa el atributo **hint-wrap** para establecer el ajuste de texto en un elemento de texto. También puedes controlar el número mínimo y máximo de líneas mediante **hint-minLines** y **hint-maxLines**, que aceptan enteros positivos.
@@ -378,7 +380,7 @@ De manera predeterminada, el texto no se ajusta y continuará fuera del borde de
 </table>
 ```
 
-<span codelanguage="CSharp"></span>
+
 ```CSharp
 <colgroup>
 <col width="100%" />
@@ -401,7 +403,7 @@ new TileText()
 
 ![icono adaptable con ajuste de texto](images/adaptive-tiles-textwrapping.png)
 
-## <span id="Text_styles"></span><span id="text_styles"></span><span id="TEXT_STYLES"></span>Estilos de texto
+## Estilos de texto
 
 
 Los estilos controlan el tamaño de fuente, el color y el espesor de los elementos de texto. Hay una serie de estilos disponibles, así como una variación "sutil" de cada estilo que establece la opacidad al 60 % y que, por lo general, hace que el color del texto tenga un tono gris claro.
@@ -479,7 +481,7 @@ Cada estilo tiene una variación sutil que proporciona al texto una opacidad del
 
  
 
-## <span id="Text_alignment"></span><span id="text_alignment"></span><span id="TEXT_ALIGNMENT"></span>Alineación del texto
+## Alineación del texto
 
 
 El texto se puede ser alinear de forma horizontal a la izquierda, al centro o a la derecha. En el caso de los idiomas que se escriben de izquierda a derecha, como el inglés, el texto se alinea de manera predeterminada a la izquierda. En el caso de los idiomas que se escriben de derecha a izquierda, como el árabe, el texto se alinea de manera predeterminada a la derecha. Puedes establecer la alineación manualmente mediante el atributo **hint-align** en los elementos.
@@ -491,7 +493,7 @@ El texto se puede ser alinear de forma horizontal a la izquierda, al centro o a 
 </table>
 ```
 
-<span codelanguage="CSharp"></span>
+
 ```CSharp
 <colgroup>
 <col width="100%" />
@@ -514,7 +516,7 @@ new TileText()
 
 ![alineación de texto de iconos adaptables](images/adaptive-tiles-textalignment.png)
 
-## <span id="Groups_and_subgroups"></span><span id="groups_and_subgroups"></span><span id="GROUPS_AND_SUBGROUPS"></span>Grupos y subgrupos
+## Grupos y subgrupos
 
 
 Los grupos permiten declarar semánticamente que el contenido dentro del grupo está relacionado y debe mostrarse en su totalidad para que el contenido tenga sentido. Por ejemplo, puede que tengas dos elementos de texto, un encabezado y un subencabezado, y no tendría sentido que solo se mostrara el encabezado. Al agrupar estos elementos dentro de un subgrupo, se mostrarán todos los elementos (si caben) o no se mostrará ninguno (si no caben).
@@ -616,7 +618,7 @@ private static TileGroup CreateGroup(string from, string subject, string body)
 
 ![grupos y subgrupos de iconos adaptables](images/adaptive-tiles-groups-subgroups.png)
 
-## <span id="Subgroups__columns_"></span><span id="subgroups__columns_"></span><span id="SUBGROUPS__COLUMNS_"></span>Subgrupos (columnas)
+## Subgrupos (columnas)
 
 
 Los subgrupos también permiten dividir los datos en secciones semánticas dentro de un grupo. Para los iconos dinámicos, esto se traduce visualmente en columnas.
@@ -841,7 +843,7 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 ![ejemplo de un icono de información meteorológica](images/adaptive-tiles-weathertile.png)
 
-## <span id="Images"></span><span id="images"></span><span id="IMAGES"></span>Imágenes
+## Imágenes
 
 
 El elemento &lt;image&gt; se usa para mostrar imágenes en la notificación de icono. Las imágenes pueden colocarse alineadas dentro del contenido del icono (valor predeterminado), como una imagen de fondo detrás del contenido o como una animación de imagen que aparezca desde la parte superior de la notificación.
@@ -939,7 +941,7 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 Las imágenes colocadas en la raíz del elemento &lt;binding&gt;, o en el primer grupo, también se ampliarán para ajustarse al alto disponible.
 
-### <span id="Image_alignment"></span><span id="image_alignment"></span><span id="IMAGE_ALIGNMENT"></span>Alineación de la imagen
+### Alineación de la imagen
 
 Las imágenes se pueden configurar para que se alineen a la izquierda, al centro o a la derecha con el atributo **hint-align**. Esto también hará que las imágenes se muestren en su resolución nativa en lugar de ampliarse para rellenar el ancho.
 
@@ -974,7 +976,7 @@ TileLarge = new TileBinding()
 
 ![ejemplo de alineación de imagen (izquierda, centro, derecha)](images/adaptive-tiles-imagealignment.png)
 
-### <span id="Image_margins"></span><span id="image_margins"></span><span id="IMAGE_MARGINS"></span>Márgenes de la imagen
+### Márgenes de la imagen
 
 De forma predeterminada, las imágenes alineadas tienen un margen de 8 píxeles entre cualquier contenido de la parte superior e inferior de la imagen. Este margen puede quitarse mediante el atributo **hint-removeMargin** de la imagen. Sin embargo, las imágenes siempre mantienen el margen de 8 píxeles desde el borde del icono, y los subgrupos (columnas) siempre mantienen el espaciado interno de 8 píxeles entre las columnas.
 
@@ -1064,7 +1066,7 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 ![ejemplo de sugerencia de eliminación de margen](images/adaptive-tiles-removemargin.png)
 
-### <span id="Image_cropping"></span><span id="image_cropping"></span><span id="IMAGE_CROPPING"></span>Recorte de imagen
+### Recorte de imagen
 
 Las imágenes se pueden recortar en forma de círculo mediante el atributo **hint-crop**, que actualmente solo admite valores "none" (valor predeterminado) o "circle".
 
@@ -1142,7 +1144,7 @@ TileLarge = new TileBinding()
 
 ![ejemplo de recorte de imagen](images/adaptive-tiles-imagecropping.png)
 
-### <span id="Background_image"></span><span id="background_image"></span><span id="BACKGROUND_IMAGE"></span>Imagen de fondo
+### Imagen de fondo
 
 Para establecer una imagen de fondo, coloca un elemento de imagen en la raíz del elemento &lt;binding&gt; y establece el atributo de ubicación en "background".
 
@@ -1266,7 +1268,7 @@ TileWide = new TileBinding()
 
 ![ejemplo de una superposición de sugerencia de imagen](images/adaptive-tiles-image-hintoverlay.png)
 
-### <span id="Peek_image"></span><span id="peek_image"></span><span id="PEEK_IMAGE"></span>Imagen que aparece
+### Imagen que aparece
 
 Puedes especificar una imagen que "aparezca" desde la parte superior del icono. La imagen que aparece usa una animación para bajar y subir desde la parte superior del icono, detenerse para que se pueda leer y, a continuación, volver a deslizarse para desaparecer y así mostrar el contenido principal del icono. Para establecer una imagen que aparece, coloca un elemento de imagen en la raíz del elemento &lt;binding&gt; y establece el atributo de ubicación en "peek".
 
@@ -1344,12 +1346,12 @@ En este ejemplo se muestra una imagen de fondo con una opacidad del 20 % (izqui
 
 ![Atributo hint-overlay en una imagen que aparece](images/hintoverlay.png)
 
-## <span id="Vertical_alignment__text_stacking_"></span><span id="vertical_alignment__text_stacking_"></span><span id="VERTICAL_ALIGNMENT__TEXT_STACKING_"></span>Alineación vertical (apilamiento de texto)
+## Alineación vertical (apilamiento de texto)
 
 
 Puedes controlar la alineación vertical del contenido del icono mediante el atributo **hint-textStacking** en el elemento [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) y el elemento [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md). De manera predeterminada, todo el contenido se alinea de forma vertical en la parte superior, pero también puedes alinear contenido en la parte inferior o en el centro.
 
-### <span id="Text_stacking_on_binding_element"></span><span id="text_stacking_on_binding_element"></span><span id="TEXT_STACKING_ON_BINDING_ELEMENT"></span>Apilamiento de texto en el elemento binding
+### Apilamiento de texto en el elemento binding
 
 Cuando se aplica al nivel [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md), el apilamiento de texto define la alineación vertical de todo el contenido de la notificación y se alinea en el espacio vertical disponible por encima del área de notificación o la personalización de marca.
 
@@ -1397,7 +1399,7 @@ TileMedium = new TileBinding()
 
 ![apilamiento de texto en el elemento binding](images/adaptive-tiles-textstack-bindingelement.png)
 
-### <span id="Text_stacking_on_subgroup_element"></span><span id="text_stacking_on_subgroup_element"></span><span id="TEXT_STACKING_ON_SUBGROUP_ELEMENT"></span>Apilamiento de texto en el elemento subgroup
+### Apilamiento de texto en el elemento subgroup
 
 Cuando se aplica al nivel [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md), el apilamiento de texto define la alineación vertical del contenido del subgrupo (columna) y se alinea en el espacio vertical disponible en todo el grupo.
 
@@ -1476,7 +1478,7 @@ TileWide = new TileBinding()
 ...
 ```
 
-## <span id="related_topics"></span>Temas relacionados
+## Temas relacionados
 
 
 * [Esquema de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md)
@@ -1492,6 +1494,6 @@ TileWide = new TileBinding()
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -130,6 +130,6 @@ Estos tipos tienen una propiedad **IsTextScaleFactorEnabled**:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

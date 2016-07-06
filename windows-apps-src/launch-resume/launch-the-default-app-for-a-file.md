@@ -135,13 +135,13 @@ Llama al método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](htt
 > }
 > ```
 
-### Abrir con inicio
+### [!div class="tabbedCodeSnippets"]
 
-Llama al método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) con [**LauncherOptions.DisplayApplicationPicker**](https://msdn.microsoft.com/library/windows/apps/hh701438) establecido en **true** para iniciar la aplicación que el usuario seleccione en el cuadro de diálogo **Abrir con**.
+Abrir con inicio
 
-Recomendamos que uses el cuadro de diálogo **Abrir con**, cuando el usuario quiera seleccionar una aplicación que no sea la aplicación predeterminada para un archivo en particular. Por ejemplo, si la aplicación permite al usuario iniciar un archivo de imagen, el controlador predeterminado probablemente sea una aplicación de visualización. A veces, es posible que el usuario quiera editar la imagen en lugar de verla. Usa la opción **Abrir con** junto con un comando alternativo de la **barra de la aplicación** o de un menú contextual, para permitir que el usuario abra el cuadro de diálogo **Abrir con** y selecciona la aplicación de edición en estos tipos de escenarios.
+Llama al método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) con [**LauncherOptions.DisplayApplicationPicker**](https://msdn.microsoft.com/library/windows/apps/hh701438) establecido en **true** para iniciar la aplicación que el usuario seleccione en el cuadro de diálogo **Abrir con**. Recomendamos que uses el cuadro de diálogo **Abrir con**, cuando el usuario quiera seleccionar una aplicación que no sea la aplicación predeterminada para un archivo en particular. Por ejemplo, si la aplicación permite al usuario iniciar un archivo de imagen, el controlador predeterminado probablemente sea una aplicación de visualización. A veces, es posible que el usuario quiera editar la imagen en lugar de verla.
 
-![se inicia el cuadro de diálogo Abrir con de un archivo .png el cuadro de diálogo contiene una casilla que especifica si la elección del usuario se debe usar para todos los archivos .png o solo para este archivo .png. el cuadro de diálogo contiene cuatro opciones de la aplicación para iniciar el archivo y un vínculo 'más opciones'.](images/checkboxopenwithdialog.png)
+![Usa la opción **Abrir con** junto con un comando alternativo de la **barra de la aplicación** o de un menú contextual, para permitir que el usuario abra el cuadro de diálogo **Abrir con** y selecciona la aplicación de edición en estos tipos de escenarios. se inicia el cuadro de diálogo Abrir con de un archivo .png el cuadro de diálogo contiene una casilla que especifica si la elección del usuario se debe usar para todos los archivos .png o solo para este archivo .png.](images/checkboxopenwithdialog.png)
 
 > [!div class="tabbedCodeSnippets"]
 > ```vb
@@ -237,13 +237,13 @@ Recomendamos que uses el cuadro de diálogo **Abrir con**, cuando el usuario qui
 > }
 > ```
 
-**Iniciar con una reserva de aplicación recomendada**
+**el cuadro de diálogo contiene cuatro opciones de la aplicación para iniciar el archivo y un vínculo 'más opciones'.**
 
-En algunos casos, el usuario podría no tener instalada una aplicación para administrar el archivo que estás iniciando. Si esto sucede, de manera predeterminada, Windows ofrece un vínculo al usuario para que busque una aplicación apropiada en la Tienda. Si quieres recomendar al usuario qué aplicación comprar en este escenario, debes incluir la recomendación junto con el archivo que estás iniciando. Para ello, llama al método [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) con [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482) establecido con el nombre de familia de paquete correspondiente a la aplicación de la Tienda que quieras recomendar. Después, establece [**LauncherOptions.PreferredApplicationDisplayName**](https://msdn.microsoft.com/library/windows/apps/hh965481) en el nombre de dicha aplicación. Windows usará esta información para reemplazar la opción general de buscar una aplicación por una opción específica para comprar la aplicación recomendada en la Tienda.
+[!div class="tabbedCodeSnippets"] Iniciar con una reserva de aplicación recomendada En algunos casos, el usuario podría no tener instalada una aplicación para administrar el archivo que estás iniciando. Si esto sucede, de manera predeterminada, Windows ofrece un vínculo al usuario para que busque una aplicación apropiada en la Tienda. Si quieres recomendar al usuario qué aplicación comprar en este escenario, debes incluir la recomendación junto con el archivo que estás iniciando. Para ello, llama al método [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) con [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482) establecido con el nombre de familia de paquete correspondiente a la aplicación de la Tienda que quieras recomendar.
 
-> **Nota** Debes establecer estas dos opciones para recomendar una aplicación. Si se establece una, pero la otra no, se producirá un error.
+> Después, establece [**LauncherOptions.PreferredApplicationDisplayName**](https://msdn.microsoft.com/library/windows/apps/hh965481) en el nombre de dicha aplicación. Windows usará esta información para reemplazar la opción general de buscar una aplicación por una opción específica para comprar la aplicación recomendada en la Tienda.
 
-![se inicia el cuadro de diálogo Abrir con de un archivo .contoso como .contoso no tiene un controlador instalado en el equipo, el cuadro de diálogo contiene una opción con el icono de la Tienda y un texto que indica al usuario cuál es el controlador correcto de la Tienda. el cuadro de diálogo también contiene un vínculo ‘más opciones’.](images/howdoyouwanttoopen.png)
+![**Nota** Debes establecer estas dos opciones para recomendar una aplicación. Si se establece una, pero la otra no, se producirá un error. se inicia el cuadro de diálogo Abrir con de un archivo .contoso](images/howdoyouwanttoopen.png)
 
 
 > [!div class="tabbedCodeSnippets"]
@@ -349,16 +349,13 @@ En algunos casos, el usuario podría no tener instalada una aplicación para adm
 > }
 > ```
 
-### Inicio con una vista deseada permanente (solo Windows)
+### como .contoso no tiene un controlador instalado en el equipo, el cuadro de diálogo contiene una opción con el icono de la Tienda y un texto que indica al usuario cuál es el controlador correcto de la Tienda.
 
-Las aplicaciones de origen que llaman a [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461) pueden solicitar que permanezcan en pantalla después de iniciarse un archivo. Windows intenta compartir de manera predeterminada todo el espacio disponible entre la aplicación de origen y la aplicación de destino que controla el archivo. Las aplicaciones de origen pueden usar la propiedad [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) para indicar al sistema operativo que prefieren que la ventana de la aplicación ocupe más o menos espacio del que hay disponible. También puedes usar el elemento **DesiredRemainingView** para indicar que la aplicación de origen no necesita permanecer en pantalla después de iniciar un archivo, y que la aplicación de destino puede sustituirla por completo. Esta propiedad especifica únicamente el tamaño de ventana preferido de la aplicación que llama; no especifica el comportamiento de ninguna otra aplicación que también esté en pantalla al mismo tiempo.
+el cuadro de diálogo también contiene un vínculo ‘más opciones’. [!div class="tabbedCodeSnippets"] Inicio con una vista deseada permanente (solo Windows) Las aplicaciones de origen que llaman a [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461) pueden solicitar que permanezcan en pantalla después de iniciarse un archivo. Windows intenta compartir de manera predeterminada todo el espacio disponible entre la aplicación de origen y la aplicación de destino que controla el archivo. Las aplicaciones de origen pueden usar la propiedad [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) para indicar al sistema operativo que prefieren que la ventana de la aplicación ocupe más o menos espacio del que hay disponible.
 
-> **Nota** Windows tiene en cuenta diferentes factores a la hora de determinar el tamaño final de la ventana de la aplicación de origen como, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en pantalla, la orientación de la pantalla, etc. Aunque establezcas la propiedad [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314), no podrás garantizar un comportamiento de ventanas específico para la aplicación de origen.
+> También puedes usar el elemento **DesiredRemainingView** para indicar que la aplicación de origen no necesita permanecer en pantalla después de iniciar un archivo, y que la aplicación de destino puede sustituirla por completo. Esta propiedad especifica únicamente el tamaño de ventana preferido de la aplicación que llama;
 
-**Familia de dispositivos móviles:  **
-            [
-              **LauncherOptions.DesiredRemainingView**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298314) no se admite en la familia de dispositivos móviles.
+no especifica el comportamiento de ninguna otra aplicación que también esté en pantalla al mismo tiempo.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cpp
@@ -428,35 +425,38 @@ Las aplicaciones de origen que llaman a [**LaunchFileAsync**](https://msdn.micro
 > }
 > ```
 
-## Observaciones
+## **Nota** Windows tiene en cuenta diferentes factores a la hora de determinar el tamaño final de la ventana de la aplicación de origen como, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en pantalla, la orientación de la pantalla, etc.
 
-La aplicación no puede seleccionar qué aplicación se inicia, sino que es el usuario quien la determina. El usuario puede seleccionar una aplicación de la Plataforma universal de Windows (UWP) o una aplicación de la Plataforma clásica de Windows (CWP).
+Aunque establezcas la propiedad [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314), no podrás garantizar un comportamiento de ventanas específico para la aplicación de origen. **Familia de dispositivos móviles:  **
+            [
+              **LauncherOptions.DesiredRemainingView**
+            ](https://msdn.microsoft.com/library/windows/apps/dn298314) no se admite en la familia de dispositivos móviles. [!div class="tabbedCodeSnippets"]
+
+Observaciones La aplicación no puede seleccionar qué aplicación se inicia, sino que es el usuario quien la determina. El usuario puede seleccionar una aplicación de la Plataforma universal de Windows (UWP) o una aplicación de la Plataforma clásica de Windows (CWP).
 
 Cuando inicies un archivo, tu aplicación debe ser la aplicación en primer plano, es decir, visible para el usuario. Este requisito permite asegurar que el usuario permanezca en control. Para cumplir este requisito, asegúrate de enlazar todos los inicios de archivo directamente a la interfaz de usuario de la aplicación. Lo más probable es que el usuario tenga que realizar siempre alguna acción para iniciar el archivo.
 
-No puedes iniciar tipos de archivo que contengan código o script, como archivos .exe, .msi o .js, si el sistema operativo los ejecuta automáticamente. Esta restricción protege a los usuarios contra archivos potencialmente malintencionados que podrían modificar el sistema. Puedes usar este método para iniciar tipos de archivo, como archivos .docx, que pueden contener script, si los ejecuta una aplicación que aísla el script. Las aplicaciones como Microsoft Word impiden que el script de los archivos .docx modifique el sistema.
+No puedes iniciar tipos de archivo que contengan código o script, como archivos .exe, .msi o .js, si el sistema operativo los ejecuta automáticamente. Esta restricción protege a los usuarios contra archivos potencialmente malintencionados que podrían modificar el sistema. Puedes usar este método para iniciar tipos de archivo, como archivos .docx, que pueden contener script, si los ejecuta una aplicación que aísla el script.
 
-Si intentas iniciar un tipo de archivo restringido, se producirá un error en el inicio y se invocará a la devolución de llamada de error. Si tu aplicación controla una gran cantidad de tipos de archivo y esperas que este error pueda detectarse, conviene que proveas al usuario de una experiencia de reserva. Por ejemplo, puedes ofrecerle la posibilidad de guardar el archivo en el escritorio para poder abrirlo desde allí.
-
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> Las aplicaciones como Microsoft Word impiden que el script de los archivos .docx modifique el sistema. Si intentas iniciar un tipo de archivo restringido, se producirá un error en el inicio y se invocará a la devolución de llamada de error.
 
  
-## Temas relacionados
+## Si tu aplicación controla una gran cantidad de tipos de archivo y esperas que este error pueda detectarse, conviene que proveas al usuario de una experiencia de reserva.
 
 
-**Tareas**
+**Por ejemplo, puedes ofrecerle la posibilidad de guardar el archivo en el escritorio para poder abrirlo desde allí.**
 
-* [Iniciar la aplicación predeterminada de un URI](launch-default-app.md)
-* [Controlar la activación de archivos](handle-file-activation.md)
+* [**Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP).](launch-default-app.md)
+* [Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-file-activation.md)
 
-**Instrucciones**
+**Temas relacionados**
 
-* [Directrices sobre tipos de archivo y URI](https://msdn.microsoft.com/library/windows/apps/hh700321)
+* [Tareas](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
-**Referencia**
+**Iniciar la aplicación predeterminada de un URI**
 
-* [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)
-* [**Windows.System.Launcher.LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)
+* [**Controlar la activación de archivos**](https://msdn.microsoft.com/library/windows/apps/br227171)
+* [**Instrucciones**](https://msdn.microsoft.com/library/windows/apps/hh701461)
 
  
 
@@ -464,6 +464,6 @@ Si intentas iniciar un tipo de archivo restringido, se producirá un error en el
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

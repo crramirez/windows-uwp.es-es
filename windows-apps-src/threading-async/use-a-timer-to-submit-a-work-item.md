@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: AAE467F9-B3C7-4366-99A2-8A880E5692BE
 title: Enviar un elemento de trabajo con un temporizador
-description: Obtén información acerca de cómo crear un elemento de trabajo que se ejecute después de que transcurra un temporizador.
+description: "Obtén información acerca de cómo crear un elemento de trabajo que se ejecute después de que transcurra un temporizador."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 033669a781aa85cc2c90fa11816e385ffefa997d
+
 ---
 # Enviar un elemento de trabajo con un temporizador
 
@@ -228,6 +232,7 @@ Para obtener información sobre cómo repetir temporizadores, consulta [Crear un
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

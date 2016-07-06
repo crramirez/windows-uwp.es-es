@@ -282,6 +282,6 @@ Cada fila del informe contiene la fecha y la hora de la transacción y, si está
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -170,6 +170,6 @@ Habrá veces que [**Range**](https://msdn.microsoft.com/library/windows/apps/dn9
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

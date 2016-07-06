@@ -1,11 +1,17 @@
 ---
-author: Xansky description: Mediante el espacio de nombres Windows.ApplicationModel.Contacts, tienes varias opciones para seleccionar contactos.
-title: Seleccionar contactos ms.assetid: 35FEDEE6-2B0E-4391-84BA-5E9191D4E442 keywords: contactos, seleccionar keywords: seleccionar un solo contacto keywords: seleccionar varios contactos keywords: contactos, seleccionar varios keywords: seleccionar datos específicos de contactos keywords: contacto, seleccionar datos específicos keywords: contacto, seleccionar campos específicos
+author: Xansky
+description: Mediante el espacio de nombres Windows.ApplicationModel.Contacts, tienes varias opciones para seleccionar contactos.
+title: Seleccionar contactos
+ms.assetid: 35FEDEE6-2B0E-4391-84BA-5E9191D4E442
+keywords: contact, selecting specific fields
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 6f2c6a546ed3daa0ef0311bc54ca47f31d01f3d8
+
 ---
 
 # Seleccionar contactos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Mediante el espacio de nombres [**Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/BR225002), tienes varias opciones para seleccionar contactos. Aquí te mostraremos cómo seleccionar un único contacto o varios contactos, y aprenderás a configurar el selector de contactos para recuperar solamente la información de contacto que necesita tu aplicación.
@@ -20,15 +26,15 @@ var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
 
 ## Establecer el modo de selección (opcional)
 
-De manera predeterminada, el selector de contactos recupera todos los datos disponibles para los contactos que selecciona el usuario. La propiedad [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/BR224913-selectionmode) permite configurar el selector de contactos para recuperar únicamente los campos de datos que necesita la aplicación. Esta es una forma más eficaz de usar el selector de contactos si solo necesitas un subconjunto de los datos de contacto disponibles.
+De manera predeterminada, el selector de contactos recupera todos los datos disponibles para los contactos que selecciona el usuario. La propiedad [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) permite configurar el selector de contactos para recuperar únicamente los campos de datos que necesita la aplicación. Esta es una forma más eficaz de usar el selector de contactos si solo necesitas un subconjunto de los datos de contacto disponibles.
 
-Primero, establece la propiedad [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/BR224913-selectionmode) en **Fields**:
+Primero, establece la propiedad [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) en **Fields**:
 
 ```cs
 contactPicker.SelectionMode = Windows.ApplicationModel.Contacts.ContactSelectionMode.Fields;
 ```
 
-Luego, usa la propiedad [**desiredFieldsWithContactFieldType**](https://msdn.microsoft.com/library/windows/apps/BR224913-desiredfieldswithcontactfieldtype) para especificar los campos que quieres que recupere el selector de contactos. En este ejemplo se configura el selector de contactos para que recupere direcciones de correo electrónico:
+Luego, usa la propiedad [**DesiredFieldsWithContactFieldType**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.desiredfieldswithcontactfieldtype) para especificar los campos que quieres que recupere el selector de contactos. En este ejemplo se configura el selector de contactos para que recupere direcciones de correo electrónico:
 
 ``` cs
 contactPicker.DesiredFieldsWithContactFieldType.Add(Windows.ApplicationModel.Contacts.ContactFieldType.Email);
@@ -40,7 +46,7 @@ contactPicker.DesiredFieldsWithContactFieldType.Add(Windows.ApplicationModel.Con
 Contact contact = await contactPicker.PickContactAsync();
 ```
 
-Usa [**pickContactsAsync**](https://msdn.microsoft.com/library/windows/apps/BR224913-pickcontactsasync) si quieres que el usuario seleccione uno o varios contactos.
+Usa [**PickContactsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.pickcontactsasync) si quieres que el usuario seleccione uno o varios contactos.
 
 ```cs
 public IList<Contact> contacts;
@@ -225,6 +231,6 @@ Con esto deberías tener nociones básicas sobre cómo usar el selector de conta
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

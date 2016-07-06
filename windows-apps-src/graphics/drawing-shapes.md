@@ -199,6 +199,6 @@ El uso de [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR2
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

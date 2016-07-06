@@ -5,19 +5,20 @@ title: Selector de fecha del calendario
 ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
 label: Calendar date picker
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 75f6bb925db63838e4985df15b50977b93805ffe
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: 7ae444d9e096834daa2eef71c691b9bb8b86d7c4
 
 ---
 
 # Selector de fecha del calendario
 
-El selector de fecha del calendario es un control desplegable que está optimizado para seleccionar una fecha determinada desde una vista de calendario en la que la información contextual es importante, por ejemplo, el día de la semana o lo que se haya completado del calendario. Puedes modificar el calendario para que proporcione contexto adicional o limite las fechas disponibles.
+El selector de fecha del calendario es un control desplegable que está optimizado para seleccionar una fecha determinada desde una vista de calendario en la que la información contextual es importante, por ejemplo, el día de la semana o lo que se haya completado del calendario. Puedes modificar el calendario para que proporcione contexto adicional o para que limite las fechas disponibles.
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
 
--   [**Clase TimePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)
--   [**Propiedad Time**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.time.aspx)
+
+-   [**Clase CalendarDatePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx)
+-   [**Propiedad Date**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.date.aspx)
+-   [**Evento DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx)
 
 ## ¿Es este el control adecuado?
 Usa un **selector de fecha del calendario** para permitir al usuario seleccionar una fecha determinada desde una vista de calendario contextual. Úsalo para, por ejemplo, elegir la fecha de una cita o de una salida.
@@ -77,7 +78,8 @@ Puedes agregar un [**Encabezado**](https://msdn.microsoft.com/library/windows/ap
 El texto de marcador de posición predeterminado es "seleccionar una fecha". Puedes quitar esto estableciendo la propiedad PlaceholderText en una cadena vacía, o bien puedes proporcionar texto personalizado como se muestra aquí.
 
 ```xaml
-<CalendarDatePicker x:Name="arrivalCalendarDatePicker" Header="Arrival date" PlaceholderText="Choose your arrival date"/>
+<CalendarDatePicker x:Name="arrivalCalendarDatePicker" Header="Arrival date" 
+                    PlaceholderText="Choose your arrival date"/>
 ```
 
 
@@ -90,6 +92,6 @@ El texto de marcador de posición predeterminado es "seleccionar una fecha". Pue
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,6 +1,13 @@
 ---
-author: martinekuan ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD title: Habilitar el dispositivo para el desarrollo description: Existe un enfoque diferente para el desarrollo en dispositivos de Windows 10.
-keywords: Introducción keywords: Licencia de desarrollador keywords: Visual Studio, licencia de desarrollador keywords: habilitar dispositivo
+author: martinekuan
+ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
+title: Habilitar el dispositivo para el desarrollo
+description: Existe un enfoque diferente para el desarrollo en dispositivos de Windows 10.
+keywords: enable device
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4c890d6202a3151e8fc0cf03b3ff33b98cd6a863
+
 ---
 # Habilitar el dispositivo para el desarrollo
 
@@ -172,6 +179,7 @@ Error : DEP0700 : Error en el registro de la operación.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

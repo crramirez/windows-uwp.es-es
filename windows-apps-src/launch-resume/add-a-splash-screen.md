@@ -76,6 +76,6 @@ Este artículo está destinado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

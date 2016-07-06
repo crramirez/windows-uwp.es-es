@@ -5,15 +5,15 @@ title: "Imágenes y pinceles de imagen"
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 972480aabb6f0db3b5091bd55323f9d1946086e6
+ms.sourcegitcommit: 485f3069ff92995082550366839f14be50f674a5
+ms.openlocfilehash: f37f609d87b48a39b958a8e32470488689a3e68c
 
 ---
 # Imágenes y pinceles de imagen
 
 Para mostrar una imagen, puedes usar los objetos **Image** o **ImageBrush**. Un objeto Image representa una imagen y un objeto ImageBrush pinta otro objeto con una imagen. 
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
+
 
 -   [**Clase Image**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)
 -   [**Propiedad Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)
@@ -25,13 +25,10 @@ Usa un elemento **Image** para mostrar una imagen independiente en la aplicació
 
 Usa un elemento **ImageBrush** para aplicar una imagen a otro objeto. Entre los usos de ImageBrush, se incluyen efectos decorativos para el texto o fondos en mosaico para los controles o los contenedores de diseño. Puede controlar la forma en que la imagen se ajusta, se alinea y se aplica en mosaico, lo que permite crear patrones y otros efectos. 
 
-## Ejemplos
-
-
 
 ## Crear una imagen
 
-### Image
+### Imagen
 En este ejemplo se muestra cómo crear una imagen con el objeto [**Image**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx).
 
 
@@ -143,9 +140,13 @@ Si defines un elemento Image o ImageBrush mediante código, usa los constructore
 > **Nota**
             &nbsp;&nbsp;Si estableces imágenes mediante código, puedes usar el control automático para acceder a recursos sin calificar con calificadores de referencia cultural y de escala actuales, o bien puedes usar [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) y [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) con calificadores de escala y referencia cultural para obtener los recursos directamente. Para obtener más información, consulta [Sistema de administración de recursos](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).
 
+## Artículos relacionados
+
+-   [Audio, vídeo y cámara](https://msdn.microsoft.com/windows/uwp/audio-video-camera/index)
+-   [**Clase Image**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)
+-   [**Clase ImageBrush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx)
 
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO5-->
 
 

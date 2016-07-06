@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: Permisos de acceso de archivos
-description: Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, las aplicaciones también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades.
+description: "Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, las aplicaciones también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 91f97f1ba245b0cf6cac1cff7971cace5ca3b5a0
+
 ---
 # Permisos de acceso a archivos
 
@@ -165,6 +169,7 @@ En la siguiente tabla se incluyen otras ubicaciones a las que puedes tener acces
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

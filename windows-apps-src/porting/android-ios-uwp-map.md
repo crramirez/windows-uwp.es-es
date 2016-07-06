@@ -1,8 +1,11 @@
 ---
 author: GrantMeStrength
-Description: Compara las características de plataforma entre iOS, Android y Windows 10.
+Description: "Compara las características de plataforma entre iOS, Android y Windows 10."
 Search.Product: eADQiWindows 10XVcnh
-title: Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS
+title: "Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS"
+ms.sourcegitcommit: de5420b45832a482d08e5e7ede436407f7dbf2af
+ms.openlocfilehash: 074a71bf3d037004ca376c11b58d17c906f804a5
+
 ---
 
 #Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS
@@ -137,7 +140,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <td align="left"><strong>Pantalla de presentación.</strong> <br><br>Muestra una imagen al iniciar la aplicación (se usa principalmente para la personalización de marca).</td>
 <td align="left">Las pantallas de presentación no se proporcionan de manera predeterminada y se implementan al editar el <strong>fondo del tema</strong> de las actividades iniciales.</td>
 <td align="left">Las aplicaciones deben tener una <strong>imagen de inicio estática</strong> o un <strong>archivo de inicio XIB o de guion gráfico</strong>.</td>
-<td align="left">Puedes crear una pantalla de presentación con una <strong>imagen</strong> y un fondo de color. <a href="https://msdn.microsoft.com/library/windows/apps/mt187309.aspx">El tiempo de la pantalla de presentación se puede ampliar</a>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187306.aspx">Agregar una pantalla de presentación</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/hh465338.aspx">Directrices para pantallas de presentación</a></td>
+<td align="left">Puedes crear una pantalla de presentación con una <strong>imagen</strong> y un fondo de color. <a href="https://msdn.microsoft.com/library/windows/apps/mt187309.aspx">El tiempo de la pantalla de presentación se puede ampliar</a>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187306.aspx">Agregar una pantalla de presentación</a></td>
 </tr>
 </tbody>
 </table>
@@ -387,7 +390,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 </tr>
 <tr class="even">
 <td align="left"><strong>Pruebas.</strong> <br><br>Se permite limitar fácilmente el contenido o quitar la publicidad según una versión de prueba de una aplicación.</td>
-<td align="left">Google Play <strong> no admite oficialmente las pruebas de aplicación</strong>. Las pruebas o la eliminación de publicidad se logran creando una compra desde la aplicación y tomando la ruta de acceso al código correspondiente al confirmar que la compra se ha realizado correctamente.</td>
+<td align="left">Google Play <strong>no admite oficialmente las pruebas de aplicación</strong>. Las pruebas o la eliminación de publicidad se logran creando una compra desde la aplicación y tomando la ruta de acceso al código correspondiente al confirmar que la compra se ha realizado correctamente.</td>
 <td align="left">La App Store<strong> no admite oficialmente las pruebas de aplicación</strong>. Las pruebas o la eliminación de publicidad se logran creando una compra desde la aplicación y tomando la ruta de acceso al código correspondiente al confirmar que la compra se ha realizado correctamente.</td>
 <td align="left">Para ofrecer una versión de prueba gratuita de la aplicación, usa la <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt148548.aspx">opción 'Prueba gratuita'</a></strong> al enviar la aplicación a la Tienda. Luego, puedes usar el objeto <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.licenseinformation.istrial.aspx">LicenseInformation.IsTrial</a></strong> para comprobar el estado de prueba de la aplicación y presentar distintas rutas de código, según corresponda. Puedes registrar el <a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.licenseinformation.licensechanged">evento LicenseChanged</a> para que reciba notificación cuando el usuario cambia el estado de prueba mientras se ejecuta la aplicación.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219685.aspx">Excluir o limitar las características de una versión de prueba</a></td>
 </tr>
@@ -660,6 +663,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 </table>
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

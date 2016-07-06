@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
-title: Crear un elemento de trabajo periódico
-description: Obtén información sobre cómo crear un elemento de trabajo que se repita periódicamente.
+title: "Crear un elemento de trabajo periódico"
+description: "Obtén información sobre cómo crear un elemento de trabajo que se repita periódicamente."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: f5b16c62b591481c52cfa4bb7e1ddb162bf18f42
+
 ---
 # Crear un elemento de trabajo periódico
 
@@ -190,7 +194,7 @@ Cuando sea necesario, llama al método [**Cancel**](https://msdn.microsoft.com/e
 > PeriodicTimer->Cancel();
 > ```
 
-## Comentarios
+## Observaciones
 
 Para obtener información sobre los temporizadores de un solo uso, consulta [Enviar un elemento de trabajo con un temporizador](use-a-timer-to-submit-a-work-item.md).
 
@@ -203,6 +207,7 @@ Para obtener información sobre los temporizadores de un solo uso, consulta [Env
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

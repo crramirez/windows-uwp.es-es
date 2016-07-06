@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: Enviar un elemento de trabajo al grupo de subprocesos
-description: Obtén información acerca de cómo realizar trabajo en un subproceso separado mediante el envío de un elemento de trabajo al grupo de subprocesos.
+description: "Obtén información acerca de cómo realizar trabajo en un subproceso separado mediante el envío de un elemento de trabajo al grupo de subprocesos."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: afb6d8b1b1ee5eeb99ba68e8b842436bd58619d0
+
 ---
 # Enviar un elemento de trabajo al grupo de subprocesos
 
@@ -258,6 +262,7 @@ Puedes obtener más información si descargas el código de este inicio rápido 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

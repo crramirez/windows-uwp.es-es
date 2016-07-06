@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: La aplicación debe incluir varios logotipos, capturas de pantalla e imágenes.
-title: Imágenes y capturas de pantalla de aplicación
+Description: "La aplicación debe incluir varios logotipos, capturas de pantalla e imágenes."
+title: "Imágenes y capturas de pantalla de aplicación"
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
+ms.sourcegitcommit: ecb030b7c529f765eded46e4e3e9db99ad0c27e8
+ms.openlocfilehash: 9eac5658e2ac04b2abc1bf06abf5c73b16260bc7
+
 ---
 
 # Imágenes y capturas de pantalla de aplicación
@@ -12,7 +15,7 @@ La aplicación debe incluir varios logotipos, capturas de pantalla e imágenes. 
 
 Durante el [proceso de envío de la aplicación](app-submissions.md), proporcionas las [capturas de pantalla](#screenshots) y el [material gráfico de promoción](#promotional-artwork) en el paso [Descripciones](create-app-descriptions.md). Estas imágenes se usan para mostrar la aplicación en la Tienda.
 
-La Tienda también usa el icono de la aplicación y otras imágenes que incluyas en el paquete de la aplicación. Ejecuta el [Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/mt186449) para determinar si te falta alguna de las imágenes necesarias.
+La Tienda también usa el icono de la aplicación y otras imágenes que incluyas en el paquete de la aplicación. Ejecuta el [Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/mt186449) para determinar si te falta alguna de las imágenes necesarias. Para obtener instrucciones y recomendaciones acerca de estas imágenes, consulta [Activos de mosaico y de icono](../controls-and-patterns/tiles-and-notifications-app-assets.md).
 
 > **Nota**  La manera en que se usan las imágenes en la Tienda, en la pantalla Inicio del cliente y dentro de la propia aplicación puede variar en función del sistema operativo del cliente y de otros factores.
 
@@ -102,6 +105,7 @@ En la Tienda de Windows Phone 8.1 y versiones anteriores, se pueden usar dos tam
 En la Tienda de Windows 8.1 y versiones anteriores, los diseños promocionales pueden usar una imagen con un tamaño de 414 x 180 píxeles. Si tu aplicación se ejecuta en Windows 8.1 o versiones anteriores, te recomendamos que proporciones una imagen de este tamaño para la consideración promocional.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

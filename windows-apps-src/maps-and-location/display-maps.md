@@ -328,6 +328,6 @@ Puedes controlar los siguientes eventos de la clase [**MapControl**](https://msd
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

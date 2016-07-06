@@ -3,8 +3,8 @@ description: "Este artículo explica cómo admitir las funciones copiar y pegar 
 title: Copiar y pegar
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
 author: awkoren
-ms.sourcegitcommit: bf081c07f8235790b99b3c1037751f24a86bbc1f
-ms.openlocfilehash: ed1dc1ca0f34f0efafd14aa1cfd1e4b75351882c
+ms.sourcegitcommit: 9a8fd6d34c4b89dae1ec4be2db69498b5d458b5a
+ms.openlocfilehash: 3e3ba8811f4fac283164143aad88913aaabbee49
 
 ---
 #Copiar y pegar
@@ -53,7 +53,7 @@ Clipboard.SetContent(dataPackage);
 ```
 ## Pegar
 
-Para obtener el contenido del portapapeles, llama al método estático [**GetContent**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.GetContent). Este método devuelve un objeto [**DataPackageView**][DataPackageView] que incluye el contenido. Este objeto es casi idéntico a un objeto [**DataPackage**][DataPackage], con la excepción de que su contenido es de solo lectura. Con ese objeto, puedes usar los métodos [**AvailableFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.AvailableFormats) o [**Contains**][Contains] para identificar los formatos disponibles. Después, puedes llamar al método **DataPackageView** correspondiente para obtener los datos.
+Para obtener el contenido del portapapeles, llama al método estático [**GetContent**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.GetContent). Este método devuelve un objeto [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView) que incluye el contenido. Este objeto es casi idéntico a un objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage), con la excepción de que su contenido es de solo lectura. Con ese objeto, puedes usar los métodos [**AvailableFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.AvailableFormats) o [**Contains**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.Contains(System.String)) para identificar los formatos disponibles. Después, puedes llamar al método [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView) correspondiente para obtener los datos.
 
 ```cs
 DataPackageView dataPackageView = Clipboard.GetContent();
@@ -103,6 +103,6 @@ Clipboard.ContentChanged += (s, e) =>
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

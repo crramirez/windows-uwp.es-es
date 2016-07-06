@@ -230,6 +230,6 @@ En este ejemplo se muestra una colección de elementos XAML enlazados a la clase
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

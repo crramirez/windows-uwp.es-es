@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
 title: Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
-description: Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows 10 Mobile.
+description: "Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows 10 Mobile."
+translationtype: Human Translation
+ms.sourcegitcommit: 9a33710315486c23a204a528d3d87421c6990b85
+ms.openlocfilehash: c53bda2329cd984e3a03d4a166e7353097e62cef
+
 ---
 # Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
 
@@ -625,7 +629,7 @@ El emulador de Microsoft incluye XDECleanup.exe, una herramienta que elimina tod
 
 Cuando instalas el emulador, se instala una imagen VHD de Windows 10 Mobile, que obtiene su propia entrada la lista **Programas y características** del Panel de control. Si quieres desinstalar la imagen, busca **Imagen de 10 Windows 10 Mobile - <version>** en la lista de programas instalados, haz clic en él y elige **Desinstalar**.
 
-En la versión actual, tendrás que eliminar manualmente el archivo VHD para el emulador. Si instalaste el emulador en la ruta de acceso predeterminada, el archivo VHD se encuentra en C:\\Archivos de programa (x86)\\Windows Kits\\10\\Emulation\\Mobile\\<version>\\flash.vhd.
+En la versión actual, tendrás que eliminar manualmente el archivo VHD para el emulador. Si el emulador se ha instalado en la ruta predeterminada, el archivo VHD se encuentra en C:\\Archivos de programa (x86)\\Windows Kits\\10\\Emulation\\Mobile\\<version>\\flash.vhd.
 
 ###Cómo deshabilitar los gráficos acelerados por hardware
 
@@ -654,6 +658,7 @@ Para encontrar respuestas y solucionar problemas al empezar a trabajar con las h
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

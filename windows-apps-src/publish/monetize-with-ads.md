@@ -60,7 +60,7 @@ Las unidades de anuncio aparecen en una tabla en la parte inferior de esta secci
 -   Si la aplicación muestra pancartas, asigna estos valores a las propiedades [ApplicationId](https://msdn.microsoft.com/library/mt313174.aspx) y [AdUnitId](https://msdn.microsoft.com/library/mt313171.aspx) del objeto [AdControl](https://msdn.microsoft.com/library/mt313154.aspx).
 -   Si la aplicación muestra anuncios intersticiales en vídeos, pasa estos valores para el método [RequestAd](https://msdn.microsoft.com/library/mt313192.aspx) del objeto [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx).
 
-> **Nota**  Si la aplicación usa la mediación de anuncios para mostrar anuncios en banners de Microsoft Advertising (es decir, usa un objeto **AdMediatorControl**), no tienes que solicitar unidades de anuncios. En este escenario, las unidades de anuncios de Microsoft Advertising se generan automáticamente.
+> **Nota** Si la aplicación usa la mediación de anuncios para mostrar anuncios en banners de Microsoft Advertising (es decir, usa un objeto **AdMediatorControl**), no tienes que solicitar unidades de anuncios. En este escenario, las unidades de anuncios de Microsoft Advertising se generan automáticamente.
 
  
 

@@ -127,6 +127,6 @@ Windows 8 admite tres tipos de rotación: libre, restringida y combinada.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -220,6 +220,6 @@ Dentro de una carpeta denominada VFS, se muestran las carpetas que contienen los
 [Puente de la aplicación de escritorio a ejemplos de código de UWP en GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

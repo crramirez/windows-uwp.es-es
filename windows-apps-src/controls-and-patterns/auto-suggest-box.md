@@ -6,8 +6,8 @@ ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
 dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 2900aa542a7986cac408051159f013e10dd3a5aa
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: bc3337101f0f2e8449d052743f7b3ce8d2dac516
 
 ---
 # Cuadro de sugerencias automáticas
@@ -15,7 +15,7 @@ Usa un AutoSuggestBox para proporcionar una lista de sugerencias para que el usu
 
 ![Un cuadro de sugerencias automáticas](images/controls/auto-suggest-box-open.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
+
 
 -   [**Clase AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)
 -   [**Evento TextChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx)
@@ -76,9 +76,9 @@ El evento QuerySubmitted se produce cuando un usuario confirma una cadena de con
 - Mientras el foco está en el cuadro de texto, presiona Entrar o haz clic en el icono de la consulta. La propiedad de los argumentos del evento [ChosenSuggestion](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.chosensuggestion.aspx) es **null**.
 - Mientras el foco está en la lista de sugerencias, presiona Entrar, haz clic o pulsa en un elemento. La propiedad de los argumentos del evento ChosenSuggestion contiene el elemento que se seleccionó en la lista.
 
-En todos los casos, la propiedad de los argumentos del evento [QueryText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext.aspx) contiene el texto del cuadro de texto. 
+En todos los casos, la propiedad de los argumentos del evento [QueryText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext.aspx) contiene el texto del cuadro de texto.
 
-### Usa AutoSuggestBox para búsquedas
+## Usa AutoSuggestBox para búsquedas
 
 Usa un AutoSuggestBox para proporcionar una lista de sugerencias para que el usuario seleccione una a medida que escribe.
 
@@ -92,9 +92,9 @@ Aquí se muestra un AutoSuggestBox con un icono 'Buscar'.
 
 ![Ejemplo de punto de entrada para el control de la sugerencia automática](images/controls_autosuggest_entrypoint.png)
 
-## Muestras
+## Ejemplos
 
-Para ver ejemplos completos del funcionamiento de AutoSuggestBox, consulta la [muestra de migración de AutoSuggestBox](http://go.microsoft.com/fwlink/p/?LinkId=619996) y la [Muestra de conceptos básicos de interfaz de usuario de XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992).
+Para ver ejemplos completos del funcionamiento de AutoSuggestBox, consulta la [muestra de migración de AutoSuggestBox](http://go.microsoft.com/fwlink/p/?LinkId=619996) y la [muestra de conceptos básicos de interfaz de usuario de XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992).
 
 Este es un AutoSuggestBox simple con los controladores de eventos necesarios.
 
@@ -108,8 +108,8 @@ Este es un AutoSuggestBox simple con los controladores de eventos necesarios.
 ```csharp
 private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
 {
-    // Only get results when it was a user typing, 
-    // otherwise assume the value got filled in by TextMemberPath 
+    // Only get results when it was a user typing,
+    // otherwise assume the value got filled in by TextMemberPath
     // or the handler for SuggestionChosen.
     if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
     {
@@ -144,18 +144,30 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
     ![Ejemplo de un cuadro de sugerencias automáticas sin resultados de búsqueda](images/controls_autosuggest_noresults.png)
 
+{{> contenido que no sea interno = "
+## Lista de comprobación Globalización y localización
+
+<table>
+<tr>
+<th>Espaciado vertical</th><td>Usar caracteres no latinos para el espaciado vertical para garantizar que los scripts no latinos se muestren correctamente, incluidos los números.</td>
+</tr>
+<tr>
+<th>Desplazamiento</th><td>Cuando el texto de sugerencia automática está seleccionado, el usuario debería poder desplazarse al final de la cadena.</td>
+</tr>
+</table>
+"}}
 
 ## Artículos relacionados
 
 - [Controles de texto](text-controls.md)
 - [Revisión ortográfica](spell-checking-and-prediction.md)
-- [Búsqueda](search.md)
+- [Buscar](search.md)
 - [**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Clase Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -234,23 +234,23 @@ En el UWP, los valores devueltos se considera que son parámetros de salida y lo
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> **Nota**  Si cambias el nombre del valor devuelto y el nuevo nombre entra en conflicto con el nombre de otro parámetro, obtendrás el error WME1091.
+> [!div class="tabbedCodeSnippets"]
 
-El código de JavaScript puede acceder a los parámetros de salida de un método por nombre, incluido el valor devuelto. Por ejemplo, consulta el atributo [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx).
+**Nota**  Si cambias el nombre del valor devuelto y el nuevo nombre entra en conflicto con el nombre de otro parámetro, obtendrás el error WME1091. El código de JavaScript puede acceder a los parámetros de salida de un método por nombre, incluido el valor devuelto.
 
-| Número de error | Texto de mensaje |
+| Por ejemplo, consulta el atributo [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx). | Número de error |
 |---------------|------------|
-| WME1091 | El método '\{0}' tiene el valor devuelto denominado '\{1}', que es el mismo que el nombre de un parámetro. Los parámetros de método de Windows Runtime y el valor devuelto deben tener nombres únicos. |
-| WME1092 | El método '\{0}' tiene un parámetro denominado '\{1}', que es el mismo que el nombre de un valor de retorno predeterminado. Considera la posibilidad de usar otro nombre para el parámetro o usa System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explícitamente el nombre del valor devuelto.<br/>**Nota**  El nombre predeterminado es "returnValue" para los descriptores de acceso de propiedad y "value" para todos los otros métodos. |
+| Texto de mensaje | WME1091 El método '\{0}' tiene el valor devuelto denominado '\{1}', que es el mismo que el nombre de un parámetro. |
+| Los parámetros de método de Windows Runtime y el valor devuelto deben tener nombres únicos. | WME1092 El método '\{0}' tiene un parámetro denominado '\{1}', que es el mismo que el nombre de un valor de retorno predeterminado.<br/>Considera la posibilidad de usar otro nombre para el parámetro o usa System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explícitamente el nombre del valor devuelto. |
  
 
-## Temas relacionados
+## **Nota**  El nombre predeterminado es "returnValue" para los descriptores de acceso de propiedad y "value" para todos los otros métodos.
 
-* [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
-* [Winmdexp.exe (herramienta de exportación de metadatos de Windows Runtime)](https://msdn.microsoft.com/library/hh925576.aspx)
+* [Temas relacionados](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Crear componentes de Windows Runtime en C# y Visual Basic](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

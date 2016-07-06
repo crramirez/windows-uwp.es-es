@@ -51,7 +51,7 @@ Segoe UI Symbol también dependía de los glifos de "ancho cero" para la superpo
 
 Todos los glifos de **Segoe MDL2 Assets** tienen el mismo ancho fijo y un alto y un punto de origen izquierdo coherentes, de modo que es posible lograr efectos de superposición y coloreado simplemente superponiendo glifos.
 
-Muchos de los iconos también disponen de formas reflejas para su uso en idiomas que se leen de derecha a izquierda, como el árabe, el farsi y el hebreo.
+Muchos de los iconos también disponen de formas reflejas para su uso en idiomas que se leen de derecha a izquierda, como el árabe, el dari, el persa y el hebreo.
 
 Si desarrollas una aplicación en C#, VB, C++ y XAML, puedes elegir usar la [**enumeración Symbol**](https://msdn.microsoft.com/library/windows/apps/dn252842) en lugar del id. de Unicode para especificar glifos en la fuente Segoe MDL2 Assets. Si desarrollas una aplicación en JavaScript y HTML, puedes elegir usar la [**enumeración AppBarIcon**](https://msdn.microsoft.com/library/windows/apps/hh770557) en lugar del id. de Unicode para especificar glifos en la fuente **Segoe MDL2 Assets**.
 

@@ -5,8 +5,8 @@ title: Directrices para controles de vista invertida
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 7da18bd897248ecef7e1caaebff5b8bbab02e3fe
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: ecb46c0d42821d833e8232780b553754f8f097c5
 
 ---
 # Vista invertida
@@ -14,7 +14,7 @@ ms.openlocfilehash: 7da18bd897248ecef7e1caaebff5b8bbab02e3fe
 Usa la vista invertida para explorar una a una las imágenes u otros elementos de una colección, como las fotos de un álbum o los elementos de una página con los detalles de un producto. Si usas dispositivos táctiles, puedes desplazarte por la colección deslizando el dedo por los elementos. En cambio, si usas un mouse, aparecerán botones de navegación al pasar el mouse por encima. En el caso del teclado, te puedes desplazar por la colección con las teclas de dirección.
 
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
+
 
 -   [**Clase FlipView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx)
 -   [**Propiedad ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)
@@ -206,12 +206,11 @@ En el caso de colecciones más grandes (de 10 a 25 elementos), considera la posi
 
 ## Artículos relacionados
 
-- [Directrices sobre listas](https://msdn.microsoft.com/library/windows/apps/mt186889)
-- [**Clase FlipView (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242678)
-- [**Clase CarouselPanel (XAML)**](https://msdn.microsoft.com/library/windows/apps/hh967950)
+- [Directrices sobre listas](lists.md)
+- [**Clase FlipView**](https://msdn.microsoft.com/library/windows/apps/br242678)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

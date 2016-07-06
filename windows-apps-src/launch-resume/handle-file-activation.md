@@ -110,49 +110,49 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
     > **Note**  When launched via File Contract, make sure that Back button takes the user back to the screen that launched the app and not to the app's previous content.
 
-Se recomienda que las aplicaciones creen un nuevo elemento Frame de XAML para cada evento de activación que abra una nueva página. Así, la navegación hacia atrás del nuevo marco XAML no incluirá nada del contenido anterior que la aplicación tuviera en la ventana actual al pasar a suspensión. Las aplicaciones que decidan usar un solo elemento Frame de XAML para los contratos Iniciar y Archivo deben borrar las páginas del diario de navegación del elemento Frame antes de ir a una página nueva.
+[!div class="tabbedCodeSnippets"] Se recomienda que las aplicaciones creen un nuevo elemento Frame de XAML para cada evento de activación que abra una nueva página. Así, la navegación hacia atrás del nuevo marco XAML no incluirá nada del contenido anterior que la aplicación tuviera en la ventana actual al pasar a suspensión.
 
-Si se inician a través de la activación de archivo, las aplicaciones deberían plantearse incluir una interfaz de usuario que permita al usuario volver a la página superior de la aplicación.
+Las aplicaciones que decidan usar un solo elemento Frame de XAML para los contratos Iniciar y Archivo deben borrar las páginas del diario de navegación del elemento Frame antes de ir a una página nueva.
 
-## Observaciones
+## Si se inician a través de la activación de archivo, las aplicaciones deberían plantearse incluir una interfaz de usuario que permita al usuario volver a la página superior de la aplicación.
 
 
-Los archivos que recibes pueden provenir de un origen que no es de confianza. Se recomienda que valides el contenido de un archivo antes de realizar una acción en él. Para más información, consulta [Escribir código seguro](http://go.microsoft.com/fwlink/p/?LinkID=142053).
+Observaciones Los archivos que recibes pueden provenir de un origen que no es de confianza. Se recomienda que valides el contenido de un archivo antes de realizar una acción en él.
 
-> **Nota**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
-## Temas relacionados
-
-**Ejemplo completo**
-
-* [Ejemplo de inicio por asociación](http://go.microsoft.com/fwlink/p/?LinkID=231484)
-
-**Conceptos**
-
-* [Programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [Modelo de asociación de tipos de archivo y protocolos](https://msdn.microsoft.com/library/windows/desktop/hh848047)
-
-**Tareas**
-
-* [Iniciar la aplicación predeterminada de un archivo](launch-the-default-app-for-a-file.md)
-* [Controlar la activación de URI](handle-uri-activation.md)
-
-**Instrucciones**
-
-* [Directrices sobre tipos de archivo y URI](https://msdn.microsoft.com/library/windows/apps/hh700321)
-
-**Referencia**
-* [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
-* [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
+> Para más información, consulta [Escribir código seguro](http://go.microsoft.com/fwlink/p/?LinkID=142053). **Nota**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP).
 
  
 
+## Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+**Temas relacionados**
+
+* [Ejemplo completo](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+
+**Ejemplo de inicio por asociación**
+
+* [Conceptos](https://msdn.microsoft.com/library/windows/desktop/cc144154)
+* [Programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+
+**Modelo de asociación de tipos de archivo y protocolos**
+
+* [Tareas](launch-the-default-app-for-a-file.md)
+* [Iniciar la aplicación predeterminada de un archivo](handle-uri-activation.md)
+
+**Controlar la activación de URI**
+
+* [Instrucciones](https://msdn.microsoft.com/library/windows/apps/hh700321)
+
+**Directrices sobre tipos de archivo y URI**
+* [**Referencia**](https://msdn.microsoft.com/library/windows/apps/br224716)
+* [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br242331)
+
+ 
+
  
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

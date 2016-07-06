@@ -119,62 +119,62 @@ El controlador de eventos [**OnActivated**](https://msdn.microsoft.com/library/w
 > }
 > ```
 
-> **Nota**  Si se inician mediante un contrato de protocolo, asegúrate de que el botón Atrás lleve al usuario de regreso a la pantalla que inició la aplicación y no al contenido previo de la aplicación.
+> [!div class="tabbedCodeSnippets"]
 
-Se recomienda que las aplicaciones creen un nuevo elemento [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) de XAML para cada evento de activación que abra una nueva página. De esta forma, la navegación hacia atrás del nuevo elemento **Frame** de XAML no incluirá ningún contenido anterior que la aplicación tuviera en la ventana actual al pasar a suspensión. Las aplicaciones que decidan usar un solo elemento **Frame** de XAML para los contratos inicio y archivo deben borrar las páginas del diario de navegación del elemento **Frame** antes de ir a una página nueva.
+**Nota**  Si se inician mediante un contrato de protocolo, asegúrate de que el botón Atrás lleve al usuario de regreso a la pantalla que inició la aplicación y no al contenido previo de la aplicación. Se recomienda que las aplicaciones creen un nuevo elemento [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) de XAML para cada evento de activación que abra una nueva página. De esta forma, la navegación hacia atrás del nuevo elemento **Frame** de XAML no incluirá ningún contenido anterior que la aplicación tuviera en la ventana actual al pasar a suspensión.
 
-Si las aplicaciones se inician a través de la activación de protocolo, sería necesario plantearse que incluyeran una interfaz de usuario que permita al usuario volver a la parte superior de la aplicación.
+Las aplicaciones que decidan usar un solo elemento **Frame** de XAML para los contratos inicio y archivo deben borrar las páginas del diario de navegación del elemento **Frame** antes de ir a una página nueva.
 
-## Observaciones
-
-
-Cualquier aplicación o sitio web puede usar tu nombre de esquema de URI, incluidos los malintencionados. Por este motivo, los datos que incluyes en el URI podrían provenir de un origen que no es de confianza. Te desaconsejamos que realices una acción permanente en función de los parámetros que recibes en el URI. Puedes usar parámetros de URI, por ejemplo, para que la aplicación se inicie en una página de la cuenta del usuario, pero no te recomendamos que los uses para modificar directamente la cuenta del usuario.
-
-> **Nota**  Si vas a crear un nuevo nombre de esquema de URI para la aplicación, asegúrate de seguir las directrices de [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550). Esto garantiza que el nombre cumpla los estándares de los esquemas de URI.
-
-> **Nota**  Si se inician mediante un contrato de protocolo, asegúrate de que el botón Atrás lleve al usuario de regreso a la pantalla que inició la aplicación y no al contenido previo de la aplicación.
-
-Es recomendable que las aplicaciones creen un nuevo elemento [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) de XAML para cada evento de activación que abra un nuevo destino de URI. De esta forma, la navegación hacia atrás del nuevo elemento **Frame** de XAML no incluirá ningún contenido anterior que la aplicación tuviera en la ventana actual al pasar a suspensión.
-
-Si prefieres que las aplicaciones usen un único elemento [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) de XAML para los contratos de inicio y protocolo, borra las páginas en el diario de navegación del elemento **Frame** antes de ir a una página nueva. Cuando el inicio se realiza mediante un contrato de protocolo, considera la posibilidad de incluir una interfaz de usuario que permita al usuario volver al comienzo de la aplicación.
-
-> **Nota**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
-## Temas relacionados
+## Si las aplicaciones se inician a través de la activación de protocolo, sería necesario plantearse que incluyeran una interfaz de usuario que permita al usuario volver a la parte superior de la aplicación.
 
 
-**Ejemplo completo**
+Observaciones Cualquier aplicación o sitio web puede usar tu nombre de esquema de URI, incluidos los malintencionados. Por este motivo, los datos que incluyes en el URI podrían provenir de un origen que no es de confianza. Te desaconsejamos que realices una acción permanente en función de los parámetros que recibes en el URI.
 
-* [Ejemplo de inicio por asociación](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+> Puedes usar parámetros de URI, por ejemplo, para que la aplicación se inicie en una página de la cuenta del usuario, pero no te recomendamos que los uses para modificar directamente la cuenta del usuario. **Nota**  Si vas a crear un nuevo nombre de esquema de URI para la aplicación, asegúrate de seguir las directrices de [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550).
 
-**Conceptos**
+> Esto garantiza que el nombre cumpla los estándares de los esquemas de URI.
 
-* [Programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [Modelo de asociación de tipos de archivo y URI](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+**Nota**  Si se inician mediante un contrato de protocolo, asegúrate de que el botón Atrás lleve al usuario de regreso a la pantalla que inició la aplicación y no al contenido previo de la aplicación. Es recomendable que las aplicaciones creen un nuevo elemento [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) de XAML para cada evento de activación que abra un nuevo destino de URI.
 
-**Tareas**
+De esta forma, la navegación hacia atrás del nuevo elemento **Frame** de XAML no incluirá ningún contenido anterior que la aplicación tuviera en la ventana actual al pasar a suspensión. Si prefieres que las aplicaciones usen un único elemento [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) de XAML para los contratos de inicio y protocolo, borra las páginas en el diario de navegación del elemento **Frame** antes de ir a una página nueva.
 
-* [Iniciar la aplicación predeterminada de un URI](launch-default-app.md)
-* [Controlar la activación de archivos](handle-file-activation.md)
-
-**Instrucciones**
-
-* [Directrices sobre tipos de archivo y URI](https://msdn.microsoft.com/library/windows/apps/hh700321)
-
-**Referencia**
-
-* [**Manifiesto del paquete AppX**](https://msdn.microsoft.com/library/windows/apps/dn934791)
-* [**Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742)
-* [**Windows.UI.Xaml.Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)
+> Cuando el inicio se realiza mediante un contrato de protocolo, considera la posibilidad de incluir una interfaz de usuario que permita al usuario volver al comienzo de la aplicación. **Nota**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP).
 
  
 
+## Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+
+**Temas relacionados**
+
+* [Ejemplo completo](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+
+**Ejemplo de inicio por asociación**
+
+* [Conceptos](https://msdn.microsoft.com/library/windows/desktop/cc144154)
+* [Programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+
+**Modelo de asociación de tipos de archivo y URI**
+
+* [Tareas](launch-default-app.md)
+* [Iniciar la aplicación predeterminada de un URI](handle-file-activation.md)
+
+**Controlar la activación de archivos**
+
+* [Instrucciones](https://msdn.microsoft.com/library/windows/apps/hh700321)
+
+**Directrices sobre tipos de archivo y URI**
+
+* [**Referencia**](https://msdn.microsoft.com/library/windows/apps/dn934791)
+* [**Manifiesto del paquete AppX**](https://msdn.microsoft.com/library/windows/apps/br224742)
+* [**Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br242330)
+
+ 
+
  
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

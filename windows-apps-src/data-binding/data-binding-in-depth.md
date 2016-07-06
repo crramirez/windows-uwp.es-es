@@ -3,8 +3,8 @@ author: mcleblanc
 ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: Enlace de datos en profundidad
 description: "El enlace de datos es una forma para que la interfaz de usuario de la aplicación muestre los datos y, opcionalmente, se mantenga sincronizada con dichos datos."
-ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
-ms.openlocfilehash: c371ca1804d76a0ffdf812cfb933b03916654bad
+ms.sourcegitcommit: ca92d44cc8e3fb7eaed5a522435efe9cb4796560
+ms.openlocfilehash: d12f8d6bd44323cf1c19bff1ac080070ba0e8ed2
 
 ---
 # Enlace de datos en profundidad
@@ -12,15 +12,15 @@ ms.openlocfilehash: c371ca1804d76a0ffdf812cfb933b03916654bad
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** API importantes **
+**API importantes**
 
 -   [**Clase de enlace**](https://msdn.microsoft.com/library/windows/apps/BR209820)
 -   [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)
 -   [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)
 
-**Nota**  En este tema se describen detalladamente las características del enlace de datos. Para obtener una introducción breve y práctica, consulta [Introducción al enlace de datos](data-binding-quickstart.md).
+> **Nota**
+            &nbsp;&nbsp;En este tema se describen detalladamente las características del enlace de datos. Para obtener una introducción breve y práctica, consulta [Introducción al enlace de datos](data-binding-quickstart.md).
 
- 
 
 El enlace de datos es una forma en que la interfaz de usuario de la aplicación muestra los datos y, opcionalmente, se mantiene sincronizada con dichos datos. Enlace de datos permite separar la preocupación de los datos de la preocupación de la interfaz de usuario y que da como resultado un modelo conceptual más sencillo y una mejor legibilidad, comprobación y mantenimiento de la aplicación.
 
@@ -77,7 +77,7 @@ Una manera más ligera de hacer que una clase sea observable, y necesaria para l
 
 **Note** Para C++/CX, debe implementar [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899) y la clase de origen de enlace debe tener el atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) o implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878).
 
-``` csharp
+```csharp
 public class HostViewModel : INotifyPropertyChanged
 {
     private string nextButtonText;
@@ -111,7 +111,7 @@ Ahora la propiedad **NextButtonText** es observable. Cuando creas una enlace uni
 
 Para que no tengas que implementar el patrón mostrado anteriormente varias veces, solo puedes derivar de la clase base **BindableBase** que encontrarás en el ejemplo de [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) (en la carpeta "Common"). Este es un ejemplo de cómo queda.
 
-``` csharp
+```csharp
 public class HostViewModel : BindableBase
 {
     private string nextButtonText;
@@ -151,11 +151,11 @@ Con la carga incremental, puedes enlazar controles de lista a orígenes de datos
 En los dos ejemplos siguientes, la propiedad **Button.Content** es el destino de enlace y su valor se establece en una extensión de marcado que declara el objeto de enlace. Se muestra el primer [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) y luego [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). Declarar enlaces en el marcado es el caso común (es cómodo, legible y administrable). Sin embargo, puedes evitar el marcado y de manera imperativa (mediante programación) crear una instancia de la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820) en su lugar, si necesitas.
 
 <!-- XAML lang specifier not yet supported in OP. Using XML for now. -->
-``` xml
+```xml
 <Button Content="{x:Bind ...}" ... />
 ```
 
-``` xml
+```xml
 <Button Content="{Binding ...}" ... />
 ```
 
@@ -163,7 +163,7 @@ En los dos ejemplos siguientes, la propiedad **Button.Content** es el destino de
 
 Hay un solo paso que necesitamos ejecutar antes de crear nuestro marcado [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). Tenemos que exponer nuestra clase de origen de enlace desde la clase que representa nuestra página de marcado. Eso lo haremos agregando una propiedad (de tipo **HostViewModel** en este caso) a nuestra clase de página **HostView**.
 
-``` csharp
+```csharp
 namespace QuizGame.View
 {
     public sealed partial class HostView : Page
@@ -181,7 +181,7 @@ namespace QuizGame.View
 
 Una vez que hayas hecho esto, puedes analizar más minuciosamente el marcado que declara el objeto de enlace. El siguiente ejemplo usa el mismo destino de enlace **Button.Content** que usamos en la sección "Destino de enlace" anteriormente, y muestra que está enlazado a la propiedad **HostViewModel.NextButtonText**.
 
-``` xml
+```xml
 <Page x:Class="QuizGame.View.HostView" ... >
     <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
 </Page>
@@ -197,7 +197,7 @@ La propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.
 
 Dentro de [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348) (independientemente de si se usa como plantilla de elemento, plantilla de contenido o plantilla de encabezado), el valor de **Path** no se interpreta en el contexto de la página, sino en el contexto del objeto de datos al que se aplica la plantilla. Para que sus enlaces pueden validarse (y un código eficaz generado para ellos) en tiempo de compilación, un **DataTemplate** debe declarar el tipo de su objeto de datos mediante **x:DataType**. El ejemplo siguiente puede usarse como **ItemTemplate** de un control de elementos enlazados a una colección de objetos **SampleDataGroup**.
 
-``` xml
+```xml
 <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
     <StackPanel Orientation="Vertical" Height="50">
       <TextBlock Text="{x:Bind Title}"/>
@@ -222,7 +222,7 @@ El código para admitir **{x:Bind}** se genera en tiempo de compilación en las 
 
 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) supone que, de forma predeterminada, se está realizando un enlace a la propiedad [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) de la página de marcado. Por lo tanto, estableceremos el **DataContext** de nuestra página para que sea una instancia de la clase de origen de enlace (de tipo **HostViewModel** en este caso). El siguiente ejemplo muestra el marcado que declara el objeto de enlace. Usamos el mismo destino de enlace **Button.Content** que usamos en la sección "Destino de enlace" anterior, y enlazamos a la propiedad **HostViewModel.NextButtonText**.
 
-``` xml
+```xml
 <Page xmlns:viewmodel="using:QuizGame.ViewModel" ... >
     <Page.DataContext>
         <viewmodel:HostViewModel/>
@@ -240,7 +240,7 @@ Un objeto de enlace tiene una propiedad **Source**, que el valor predeterminado 
 
 Dentro de un [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348), [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) se establece en el objeto de datos con plantilla. El ejemplo siguiente puede usarse como la propiedad **ItemTemplate** de un control de elementos enlazado a una colección de cualquier tipo que tiene propiedades de cadena denominadas **Title** y **Description**.
 
-``` xml
+```xml
 <DataTemplate x:Key="SimpleItemTemplate">
     <StackPanel Orientation="Vertical" Height="50">
       <TextBlock Text="{Binding Title}"/>
@@ -259,7 +259,7 @@ Si desea controlar la visibilidad de un elemento de interfaz de usuario en funci
 
 Este es un convertidor de valores adecuado para un enlace único o unidireccional, que convierte un valor [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx) en un valor de cadena que contiene el mes. La clase implementa [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903).
 
-``` csharp
+```csharp
 public class DateToStringConverter : IValueConverter
 {
     // Define the Convert method to convert a DateTime value to 
@@ -296,7 +296,7 @@ public class DateToStringConverter : IValueConverter
 }
 ```
 
-``` vbnet
+```vbnet
 Public Class DateToStringConverter
     Implements IValueConverter
 
@@ -338,7 +338,7 @@ End Class
 
 Y esta es la forma de consumir ese convertidor de valores en el marcado del objeto de enlace.
 
-``` xml
+```xml
 <UserControl.Resources>
   <local:DateToStringConverter x:Key="Converter1"/>
 </UserControl.Resources>
@@ -368,7 +368,7 @@ La [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/a
 
 TemplatesResourceDictionary.xaml
 
-``` xml
+```xml
 <ResourceDictionary
     x:Class="ExampleNamespace.TemplatesResourceDictionary"
     .....
@@ -384,7 +384,7 @@ TemplatesResourceDictionary.xaml
 
 TemplatesResourceDictionary.xaml.cs
 
-``` csharp
+```csharp
 using Windows.UI.Xaml.Data;
  
 namespace ExampleNamespace
@@ -401,7 +401,7 @@ namespace ExampleNamespace
 
 MainPage.xaml
 
-``` xml
+```xml
 <Page x:Class="ExampleNamespace.MainPage"
     ....
     xmlns:examplenamespace="using:ExampleNamespace">
@@ -421,7 +421,7 @@ MainPage.xaml
 
 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) admite una característica llamada enlace de eventos. Con esta característica, puede especificar el controlador para un evento con un enlace, que es una opción adicional sobre el control de eventos con un método en el archivo de código subyacente. Supongamos que tienes una propiedad **RootFrame** en tu clase **MainPage**.
 
-``` csharp
+```csharp
     public sealed partial class MainPage : Page
     {
         ....    
@@ -431,7 +431,7 @@ MainPage.xaml
 
 Se puede enlazar el evento **Click** de un botón a un método en el objeto **Frame** devuelto por la propiedad **RootFrame como esta**. Ten en cuenta que también enlazamos la propiedad **IsEnabled** del botón a otro miembro del mismo **Frame**.
 
-``` xml
+```xml
     <AppBarButton Icon="Forward" IsCompact="True"
     IsEnabled="{x:Bind RootFrame.CanGoForward, Mode=OneWay}"
     Click="{x:Bind RootFrame.GoForward}"/>
@@ -441,13 +441,14 @@ Los métodos sobrecargados no puede usarse para controlar un evento con esta té
               **Frame.GoBack**
             ](https://msdn.microsoft.com/library/windows/apps/Dn996568) está sobrecargado, por lo tanto, no podemos usar ese método con esta técnica.
 
-La técnica de enlace de eventos es similar a implementar y consumir comandos (un comando es una propiedad que devuelve un objeto que implementa la interfaz [**ICommand**](T:System.Windows.Input.ICommand)). Ambos [{x: enlace}](https://msdn.microsoft.com/library/windows/apps/Mt204783) y [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) funcionan con comandos. Debido a que no tienes que implementar el patrón de comando varias veces, puedes usar la clase **DelegateCommand** auxiliar que encontrarás en la muestra [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) (en la carpeta "Común").
+La técnica de enlace de eventos es similar a implementar y consumir comandos (un comando es una propiedad que devuelve un objeto que implementa la interfaz [**ICommand**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.icommand.aspx)). Ambos [{x: enlace}](https://msdn.microsoft.com/library/windows/apps/Mt204783) y [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) funcionan con comandos. Debido a que no tienes que implementar el patrón de comando varias veces, puedes usar la clase **DelegateCommand** auxiliar que encontrarás en la muestra [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) (en la carpeta "Común").
+
 
 ## Enlace a una colección de carpetas o archivos
 
 Para recuperar datos de archivos y carpetas, puedes usar las API en el espacio de nombres [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346). No obstante, los distintos métodos **GetFilesAsync**, **GetFoldersAsync** y **GetItemsAsync** no devuelven valores adecuados para enlaces a controles de lista. En cambio, debes enlazar a los valores devueltos de los métodos [**GetVirtualizedFilesVector**](https://msdn.microsoft.com/library/windows/apps/Hh701422), [**GetVirtualizedFoldersVector**](https://msdn.microsoft.com/library/windows/apps/Hh701428) y [**GetVirtualizedItemsVector**](https://msdn.microsoft.com/library/windows/apps/Hh701430) de la clase [**FileInformationFactory**](https://msdn.microsoft.com/library/windows/apps/BR207501). En el siguiente ejemplo de código de la [muestra de StorageDataSource y GetVirtualizedFilesVector](http://go.microsoft.com/fwlink/p/?linkid=228621) encontrarás el patrón de uso más común. No olvides que declarar el manifiesto **picturesLibrary** del paquete de funcionalidad de la aplicación y confirmar que hay imágenes en la carpeta de la biblioteca de imágenes.
 
-``` csharp
+```csharp
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             var library = Windows.Storage.KnownFolders.PicturesLibrary;
@@ -486,7 +487,7 @@ Para activar la función de agrupación de un [**CollectionViewSource**](https:/
 
 El siguiente ejemplo muestra el modelo de "tiene un grupo". La clase de página tiene una propiedad denominada [**ViewModel**](https://msdn.microsoft.com/library/windows/apps/BR208713), que devuelve una instancia de nuestro modelo de vista. El [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) enlaza a la propiedad **Authors** del modelo de vista (**Authors** es la colección de objetos de grupo) y también especifica que es la propiedad **Author.BookSkus** que contiene los elementos agrupados. Por último, la [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) está enlazada al **CollectionViewSource**, y su estilo de grupo se define para que pueda representar los elementos en grupos.
 
-``` csharp
+```csharp
     <Page.Resources>
         <CollectionViewSource
         x:Name="AuthorHasACollectionOfBookSku"
@@ -511,7 +512,7 @@ Para implementar el patrón de "es un grupo" en uno de dos maneras. Es una forma
 
 El siguiente ejemplo muestra el uso del patrón "es un grupo" [LINQ](http://msdn.microsoft.com/library/bb397926.aspx). Esta vez agrupamos libros por género, mostrados con el nombre de género en los encabezados de grupo. Esto se indica en la ruta de acceso de la propiedad "Key" en referencia al valor [**Key**](https://msdn.microsoft.com/library/windows/apps/bb343251.aspx) del grupo.
 
-``` csharp
+```csharp
     using System.Linq;
 
     ...
@@ -535,7 +536,7 @@ El siguiente ejemplo muestra el uso del patrón "es un grupo" [LINQ](http://msdn
 
 Recuerda que, al usar [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) con plantillas de datos que necesitamos para indicar el tipo enlazado a estableciendo un valor **x:DataType**. Si el tipo es genérico y no podemos declaramos que en el marcado que necesitamos usar [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) en su lugar en la plantilla de encabezado de estilo de grupo.
 
-``` xml
+```xml
     <Grid.Resources>
         <CollectionViewSource x:Name="GenreIsACollectionOfBookSku"
         Source="{Binding Genres}"
@@ -581,7 +582,7 @@ También puedes conectar elementos de la interfaz de usuario a datos usando cód
 
 En el siguiente ejemplo se muestra cómo implementar un enlace en el código.
 
-``` xml
+```xml
 <TextBox x:Name="MyTextBox" Text="Text"/>
 ```
 
@@ -601,7 +602,7 @@ Binding binding = new Binding() { Path = new PropertyPath("Brush1") };
 MyTextBox.SetBinding(TextBox.ForegroundProperty, binding);
 ```
 
-``` vbnet
+```vbnet
 ' Create an instance of the MyColors class 
 ' that implements INotifyPropertyChanged. 
 Dim textcolor As New MyColors()
@@ -641,6 +642,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

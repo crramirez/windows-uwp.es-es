@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: Recupera o crea el contenido web más reciente y popular usando fuentes sindicadas generadas a partir de los estándares de RSS y Atom mediante características del espacio de nombres Windows.Web.Syndication.
+description: "Recupera o crea el contenido web más reciente y popular usando fuentes sindicadas generadas a partir de los estándares de RSS y Atom mediante características del espacio de nombres Windows.Web.Syndication."
 title: Fuentes RSS y Atom
 ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 625a18203bd2d60acc97a6243d4f3e1e0cf2b297
+
 ---
 
 # Fuentes RSS y Atom
@@ -256,6 +260,7 @@ Como se sugirió anteriormente, el tipo de contenido representado por un objeto 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

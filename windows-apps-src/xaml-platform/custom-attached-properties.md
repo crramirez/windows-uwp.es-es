@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Se explica cómo implementar una propiedad adjunta de XAML como una propiedad de dependencia y cómo definir la convención de descriptor de acceso necesaria para que la propiedad adjunta se pueda usar en XAML.
+description: "Se explica cómo implementar una propiedad adjunta de XAML como una propiedad de dependencia y cómo definir la convención de descriptor de acceso necesaria para que la propiedad adjunta se pueda usar en XAML."
 title: Propiedades adjuntas personalizadas
 ms.assetid: E9C0C57E-6098-4875-AA3E-9D7B36E160E0
+translationtype: Human Translation
+ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
+ms.openlocfilehash: cf6ca169623311e515f02a174224d57652afc753
+
 ---
 
 # Propiedades adjuntas personalizadas
@@ -251,6 +255,7 @@ El código tiene un aspecto similar a este seudocódigo:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

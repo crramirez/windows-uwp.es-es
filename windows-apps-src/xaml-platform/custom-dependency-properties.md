@@ -3,8 +3,8 @@ author: jwmsft
 description: "Se explica cómo definir e implementar las propiedades de dependencia personalizadas para una aplicación de Windows Runtime con C++, C# o Visual Basic."
 title: Propiedades de dependencia personalizadas
 ms.assetid: 5ADF7935-F2CF-4BB6-B1A5-F535C2ED8EF8
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 63301870ab53f4061cac9b9ad87a5fb75e8c48da
+ms.sourcegitcommit: d50b73fcf78c28157cff7003dc3e180de9d69f70
+ms.openlocfilehash: 80a42040887818a0c6a66ed32327144bed586dc2
 
 ---
 
@@ -249,7 +249,7 @@ private static void OnLabelChanged(DependencyObject d, DependencyPropertyChanged
     String s = e.NewValue as String; //null checks omitted
     if (s == String.Empty)
     {
-        iwlc.HasLabelValue = false;
+        iwlc.HasLabelValue = false;s
     } else {
         iwlc.HasLabelValue = true;
     }
@@ -274,7 +274,7 @@ static void OnLabelChanged(DependencyObject^ d, DependencyPropertyChangedEventAr
     if (s->IsEmpty()) {
         iwlc->HasLabelValue=false;
     }
-}
+}s
 ```
 
 ### Comportamiento modificado por propiedades para estructuras y enumeraciones
@@ -335,7 +335,7 @@ Las propiedades de dependencia de tipo de colección son relativamente raras en 
 -   Normalmente no animas una colección.
 -   No sueles rellenar previamente los elementos de una colección con estilos o una plantilla.
 -   Aunque el enlace a colecciones es un escenario importante, una colección no necesita ser una propiedad de dependencia para ser un origen de enlace. En el caso de los destinos de enlace, es más habitual usar subclases de [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/br242803) o [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348) para admitir elementos de colección o para usar patrones de modelo de vista. Para obtener más información sobre el enlace hacia o desde colecciones, consulta [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
--   Las notificaciones de los cambios en una colección se controlan mejor mediante interfaces como **INotifyPropertyChanged** o **INotifyCollectionChanged**, o bien derivando el tipo de colección de [**ObservableCollection**](T:System.Collections.ObjectModel.ObservableCollection%601).
+-   Las notificaciones de los cambios en una colección se controlan mejor mediante interfaces como **INotifyPropertyChanged** o **INotifyCollectionChanged**, o bien derivando el tipo de colección de [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx).
 
 En cualquier caso, existen escenarios para propiedades de dependencia de tipo de colección. Las siguientes tres secciones proporcionan una orientación sobre cómo implementar una propiedad de dependencia de tipo de colección.
 
@@ -374,6 +374,6 @@ La implementación para registrar una propiedad en C++/CX es más complicada que
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

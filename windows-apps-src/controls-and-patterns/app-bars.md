@@ -2,8 +2,8 @@
 author: Jwmsft
 label: App bars/command bars
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: a7abca8712d2b02eac8bfd150a9476a955e2982a
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: 01cd10c72745ff4bd8204a9adaa8eebf5a892efe
 
 ---
 
@@ -13,9 +13,9 @@ Las barras de comandos (también conocidas como "barras de la aplicación") prop
 
 ![Ejemplo de una barra de comandos con iconos](images/controls_appbar_icons.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
 
--   [**CommandBar **](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx)
+
+-   [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx)
 -   [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx)
 -   [**AppBarToggleButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx)
 -   [**AppBarSeparator**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx)
@@ -50,14 +50,14 @@ Esta es la misma barra de comandos, en su estado abierto. Las etiquetas identifi
 ![Barra de comandos cerrada](images/commandbar_anatomy_open.png)
 
 La barra de comandos se divide en 4 áreas principales:
-- El botón "ver más" \[•••\] se muestra en la parte derecha de la barra. Presionar el botón "ver más" \[•••\] tiene dos resultados: revela las etiquetas de los botones de comando principales y abre el menú de desbordamiento si hay comandos secundarios presentes. El botón no estará visible si no hay comandos secundarios ni etiquetas ocultas presentes. La propiedad [
-              `OverflowButtonVisibility`
+- El botón "ver más" \[•••\] se muestra en la parte derecha de la barra. Presionar el botón "ver más" \[•••\] tiene dos resultados: revela las etiquetas de los botones de comando principales y abre el menú de desbordamiento si hay comandos secundarios existentes. En el nuevo SDK, el botón no estará visible si no hay comandos secundarios ni etiquetas ocultas existentes. La propiedad [
+              **OverflowButtonVisibility**
             ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx) permite que las aplicaciones cambien este comportamiento predeterminado de ocultación automática.
-- El área de contenido se alinea a la izquierda de la barra. Se muestra si la propiedad `Content` está completada.
-- El área de comandos principales se alinea a la derecha de la barra, junto al botón "ver más" \[•••\]. Se muestra si la propiedad `PrimaryCommands` está completada.  
-- El menú de desbordamiento solo se muestra cuando la barra de comandos está abierta y la propiedad `SecondaryCommands` está completada. 
+- El área de contenido se alinea a la izquierda de la barra. Se muestra si la propiedad [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx) está completada.
+- El área de comandos principales se alinea a la derecha de la barra, junto al botón "ver más" \[•••\]. Se muestra si la propiedad [**PrimaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx) está completada.  
+- El menú de desbordamiento solo se muestra cuando la barra de comandos está abierta y la propiedad [**SecondaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx) está completada. El nuevo comportamiento de desbordamiento dinámico moverá automáticamente los comandos principales al área SecondaryCommands cuando el espacio sea limitado.
 
-El diseño se invierte cuando la propiedad [FlowDirection]() es **RightToLeft**.
+El diseño se invierte cuando la propiedad [FlowDirection](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.flowdirection.aspx) es **RightToLeft**.
 
 ## Crear una barra de comandos
 En este ejemplo, se crea la barra de comandos mostrada anteriormente.
@@ -95,7 +95,7 @@ También puedes agregar comandos a la colección **SecondaryCommands** y estos e
 
 El área de desbordamiento predeterminada tiene un estilo distinto del de la barra. Puedes ajustar el estilo al establecer la propiedad [**CommandBarOverflowPresenterStyle**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.commandbaroverflowpresenterstyle.aspx) en un [estilo](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx) destinado al objeto [**CommandBarOverflowPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbaroverflowpresenter.aspx).
 
-Puedes mover los comandos mediante programación entre los objetos PrimaryCommands y SecondaryCommands, según sea necesario. 
+Puedes mover los comandos mediante programación entre los objetos PrimaryCommands y SecondaryCommands, según sea necesario. {{> contenido interno = "Los comandos también se pueden mover automáticamente dentro o fuera del área de desbordamiento, cuando cambie el ancho de la barra de comandos, por ejemplo, cuando los usuarios cambian el tamaño de la ventana de la aplicación. El desbordamiento dinámico está activado de forma predeterminada pero las aplicaciones pueden desactivar este comportamiento cambiando el valor de la propiedad `IsDynamicOverflowEnabled`."}}
 
 ### Botones de la barra de la aplicación
 
@@ -103,7 +103,8 @@ Las propiedades PrimaryCommands y SecondaryCommands solo se pueden rellenar con 
 
 Los controles de botón de la barra de la aplicación se caracterizan por un icono y una etiqueta asociada. Tienen dos tamaños; normal y compacto. De manera predeterminada, la etiqueta de texto se muestra. Cuando la propiedad [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.iscompact.aspx) se establece en **true**, la etiqueta de texto se oculta. Cuando se usa en un control CommandBar, la barra de comandos sobrescribe la propiedad IsCompact del botón automáticamente al abrir y cerrar la barra de comandos.
 
-Para colocar las etiquetas de los botones de barra de la aplicación a la derecha de los iconos correspondientes, las aplicaciones pueden usar la nueva propiedad [`DefaultLabelPosition`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.defaultlabelposition.aspx) de CommandBar. Los botones de la barra de la aplicación individuales no pueden mover su posición de etiqueta. Se debe hacer en la barra de comandos como un todo.
+Para colocar las etiquetas de los botones de barra de la aplicación a la derecha de los iconos correspondientes, las aplicaciones pueden usar la nueva propiedad [**DefaultLabelPosition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.defaultlabelposition.aspx) de CommandBar.
+
 ```xaml
 <CommandBar DefaultLabelPosition="Right">
     <AppBarToggleButton Icon="Shuffle" Label="Shuffle"/>
@@ -115,7 +116,9 @@ Este es el aspecto del fragmento de código anterior cuando lo dibuja una aplica
 
 ![Barra de comandos con etiquetas a la derecha](images/app-bar-labels-on-right.png)
 
-Al colocar un botón de barra de la aplicación en el menú de desbordamiento (SecondaryCommands), se muestra solo como texto. Este es el mismo botón de alternancia de la barra de la aplicación que se muestra en el espacio de acción como un comando principal (superior) y en el área de desbordamiento como un comando secundario (inferior).
+Los botones de la barra de la aplicación individuales no pueden mover su posición de etiqueta. Se debe hacer en la barra de comandos como un todo. Los botones de la barra de la aplicación pueden especificar que sus etiquetas no se muestren nunca si se establece la nueva propiedad [**LabelPosition**](https://msdn.microsoft.com/library/windows/apps/mt710920.aspx) en **Collapsed**. Recomendamos limitar el uso de esta configuración para iconografía universalmente reconocible como '+'.
+
+Al colocar un botón de barra de la aplicación en el menú de desbordamiento (SecondaryCommands), se muestra solo como texto. La propiedad **LabelPosition** de los botones de la barra de la aplicación se ignorará en el desbordamiento. Este es el mismo botón de alternancia de la barra de la aplicación que se muestra en el espacio de acción como un comando principal (superior) y en el área de desbordamiento como un comando secundario (inferior).
 
 ![Botón de la barra de la aplicación como comando principal y secundario](images/app-bar-toggle-button-two-modes.png)
 
@@ -138,7 +141,7 @@ Cuando la etiqueta se ajusta en la ubicación sugerida, tiene este aspecto.
 
 Puedes agregar cualquier elemento XAML al área de contenido al establecer la propiedad **Content**. Si quieres agregar más de un elemento, tendrías que colocarlos en un contenedor de panel y hacer que el panel sea un elemento secundario único de la propiedad Content.
 
-Cuando hay comandos principales y contenido, los comandos principales tienen prioridad y pueden provocar el recorte del contenido. 
+Cuando hay comandos principales y contenido, los comandos principales tienen prioridad y pueden provocar el recorte del contenido. {{> contenido interno = "El contenido no recortará cuando esté habilitado el desbordamiento dinámico porque los comandos principales se moverán al menú de desbordamiento y liberarán espacio para el contenido."}}
 
 Cuando la propiedad [**ClosedDisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closeddisplaymode.aspx) es **Compact**, el contenido se puede recortar si es mayor que el tamaño compacto de la barra de comandos. Debes controlar los eventos [**Opening**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.opening.aspx) y [**Closed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closed.aspx) para mostrar u ocultar partes de la interfaz de usuario en el área de contenido de modo que no se recorten. Para obtener más información, consulta la sección [Estados abiertos y cerrados](#open-and-closed-states).
 
@@ -220,7 +223,7 @@ Cambiar la propiedad ClosedDisplayMode para proporcionar más o menos informaci�
 
 ### IsSticky
 
-Después de abrir la barra de comandos, si el usuario interactúa con la aplicación en cualquier lugar fuera del control, de manera predeterminada, se cierra el menú desbordamiento y se ocultan las etiquetas. El cierre de esta forma se llama *cierre del elemento por cambio de foco*. Puedes controlar cómo se cierra la barra al establecer la propiedad [**IsSticky**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.issticky.aspx). Cuando la barra es de visualización permanente (`IsSticky="true"`), no se cierra mediante un gesto de cierre del elemento por cambio de foco. La barra permanece abierta hasta que el usuario presiona el botón "ver más" \[•••\] o, si está presente, selecciona un elemento en el menú de desbordamiento.
+Después de abrir la barra de comandos, si el usuario interactúa con la aplicación en cualquier lugar fuera del control, de manera predeterminada, se cierra el menú desbordamiento y se ocultan las etiquetas. El cierre de esta forma se llama *cierre del elemento por cambio de foco*. Puedes controlar cómo se cierra la barra al establecer la propiedad [**IsSticky**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.issticky.aspx). Cuando la barra es de visualización permanente (`IsSticky="true"`), no se cierra mediante un gesto de cierre del elemento por cambio de foco. La barra permanece abierta hasta que el usuario presiona el botón "ver más" \[•••\] o selecciona un elemento en el menú de desbordamiento. Recomendamos evitar usar las barras de comando permanentes porque no cumplen con las expectativas de los usuarios sobre el cierre del elemento por cambio de foco.
 
 ## Lo que se debe y no se debe hacer
 
@@ -238,7 +241,7 @@ Las barras de comandos pueden colocarse en las siguientes regiones de la pantall
 
 ![Ejemplo 2 de colocación de barra de la aplicación](images/AppbarGuidelines_Placement2.png)
 
->**Dispositivos táctiles**: si la barra de comandos debe permanecer visible para un usuario cuando aparece el teclado táctil o el panel de entrada de software (SIP), puedes asignarla a la propiedad `BottomAppBar` de una página y pasará a estar visible cuando el SIP esté presente. De lo contrario, debes colocar la barra de comandos de manera alineada y en una posición relativa al contenido de tu aplicación.
+>**Dispositivos táctiles**: si la barra de comandos debe permanecer visible para un usuario cuando aparece el teclado táctil o el panel de entrada de software (SIP), puedes asignarla a la propiedad [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx) de una página y pasará a estar visible cuando exista el SIP. De lo contrario, debes colocar la barra de comandos de manera alineada y en una posición relativa al contenido de tu aplicación.
 
 ### Acciones
 
@@ -281,7 +284,7 @@ Considera la posibilidad de realizar agrupaciones lógicas de los comandos, como
 **Para diseñadores**
             
           
-            [Conceptos básicos sobre el diseño de comandos de aplicaciones de Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn958433)
+            [Conceptos básicos sobre el diseño de comandos de aplicaciones de Plataforma universal de Windows (UWP)](../layout/commanding-basics.md)
 
 **Para desarrolladores (XAML)**
             
@@ -292,6 +295,6 @@ Considera la posibilidad de realizar agrupaciones lógicas de los comandos, como
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

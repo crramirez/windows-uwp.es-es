@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: Este artículo es una descripción general de los conceptos y las tecnologías relacionados con escenarios de accesibilidad para aplicaciones para la Plataforma universal de Windows (UWP).
+Description: "Este artículo es una descripción general de los conceptos y las tecnologías relacionados con escenarios de accesibilidad para aplicaciones para la Plataforma universal de Windows (UWP)."
 ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
-title: Información general sobre accesibilidad
+title: "Información general sobre accesibilidad"
 label: Accessibility overview
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 430484a9243abc644de75d35c03bb11cf47960c0
+
 ---
 
 # Información general sobre accesibilidad  
@@ -153,7 +157,8 @@ private void ShowAccessibleUICheckBox_Click(object sender, RoutedEventArgs e)
 ## Verificación y publicación  
 Para obtener más información sobre las declaraciones de accesibilidad y la publicación de la aplicación, consulta [Accesibilidad en la Tienda](accessibility-in-the-store.md).
 
-> [!NOTE] La declaración de la aplicación como accesible solo se aplica a la Tienda Windows.
+> [!NOTE]
+> Declarar la aplicación como accesible solo es relevante para la Tienda Windows.
 
 <span id="Assistive_technology_support_in_custom_controls"/>
 <span id="assistive_technology_support_in_custom_controls"/>
@@ -174,6 +179,7 @@ No se puede acceder de manera predeterminada al contenido de Microsoft DirectX h
 * [Muestra de accesibilidad en XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

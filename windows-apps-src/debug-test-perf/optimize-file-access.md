@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 40122343-1FE3-4160-BABE-6A2DD9AF1E8E
 title: Optimizar el acceso a archivos
-description: Crea aplicaciones para la Plataforma universal de Windows (UWP) que puedan obtener acceso al sistema de archivos de forma eficaz, y así evitar problemas de rendimiento debido a la latencia de discos o a los ciclos de memoria o de la CPU
+description: "Crea aplicaciones para la Plataforma universal de Windows (UWP) que puedan obtener acceso al sistema de archivos de forma eficaz, y así evitar problemas de rendimiento debido a la latencia de discos o a los ciclos de memoria o de la CPU"
+translationtype: Human Translation
+ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
+ms.openlocfilehash: 354a11fefd7164fd6ba5b21ec871ecbe7916ad25
+
 ---
 # Optimizar el acceso a archivos
 
@@ -182,7 +186,7 @@ Para aumentar la velocidad de la aplicación, los adaptadores de flujos de UWP c
 > End Using
 > ```
 
-Este comportamiento de búfer es conveniente en la mayoría de los escenarios en que se convierte una secuencia de UWP en una de .NET. Sin embargo, en algunos escenarios quizás necesites retocar el comportamiento de búfer para aumentar el rendimiento.
+Este comportamiento de búfer es conveniente en la mayoría de los escenarios en que se convierte un flujo de UWP en uno de .NET. Sin embargo, en algunos escenarios quizás necesites retocar el comportamiento de búfer para aumentar el rendimiento.
 
 ### Trabajar con grandes conjuntos de datos
 
@@ -233,6 +237,7 @@ En una aplicación de chat, podrías usar un flujo en una interfaz de red para e
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

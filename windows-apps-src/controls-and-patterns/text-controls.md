@@ -5,18 +5,18 @@ title: Controles de texto
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 1fec4bf13567507087eef08feea0a3ebc255b43f
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: b075820275d7b5e592cdae736ed92beef67a7b9a
 
 ---
 # Controles de texto
 Los controles de texto constan de cuadros de entrada de texto, cuadros de contraseña, cuadros de sugerencia automática y bloques de texto. El marco XAML brinda diversos controles para representar e ingresar texto, así como un conjunto de propiedades para aplicar formato al texto.
 
 - Los controles para mostrar texto de solo lectura son [TextBlock](text-block.md) y [RichTextBlock](rich-text-block.md).
-- Los controles de edición y entrada de texto son: [TextBox](text-block.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) y [RichEditBox](rich-edit-box.md). 
+- Los controles de edición y entrada de texto son: [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) y [RichEditBox](rich-edit-box.md).
 
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
+**API importantes**
 
 -   [**Clase AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)
 -   [**Clase PasswordBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
@@ -33,7 +33,7 @@ El control de texto que uses dependerá del escenario. Usa esta información par
 
 Usa un **TextBlock** para mostrar la mayor parte del texto de solo lectura en la aplicación. Puedes usarlo para mostrar texto de una o varias líneas, hipervínculos en línea y texto con formato como, por ejemplo, negrita, cursiva o subrayado.
 
-TextBlock suele ser más fácil de usar y proporciona mejor rendimiento de representación de texto que RichTextBlock, por lo que es preferible para gran parte del texto de la interfaz de usuario de la aplicación. Puedes acceder fácilmente y usar texto de un TextBlock en tu aplicación obteniendo el valor de la propiedad [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx). 
+TextBlock suele ser más fácil de usar y proporciona mejor rendimiento de representación de texto que RichTextBlock, por lo que es preferible para gran parte del texto de la interfaz de usuario de la aplicación. Puedes acceder fácilmente y usar texto de un TextBlock en tu aplicación obteniendo el valor de la propiedad [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx).
 
 También proporciona muchas de las mismas opciones de formato para personalizar la representación del texto. Aunque puedes incluir saltos de línea en el texto, TextBlock está diseñado para mostrar un único párrafo y no admite la sangría del texto.
 
@@ -67,7 +67,7 @@ Hay muchas maneras de obtener la entrada del usuario en la aplicación. Estas pr
     -   **¿El valor introducido es aproximado y/o relativo a otra cantidad mostrada en la misma página?** De ser así, usa un [control deslizante](slider.md).
     -   **¿Sería bueno que el usuario recibiera una respuesta instantánea del efecto de los cambios en la configuración?** De ser así, usa un [control deslizante](slider.md), posiblemente con un control adjunto.
     -   **¿Es probable que el valor introducido se ajuste tras observar el resultado (como, por ejemplo, el volumen o el brillo de pantalla)?** De ser así, usa un [control deslizante](slider.md).
-    
+
 ## Ejemplos
 
 Cuadro de texto
@@ -115,15 +115,15 @@ Por ejemplo, si un cuadro de texto se usa únicamente para escribir un PIN de 4 
 >Importante  
 >El ámbito de entrada no implica que se realice ninguna validación de entrada y tampoco impide que el usuario proporcione cualquier entrada a través de un teclado de hardware u otro dispositivo de entrada. Sigues siendo responsable de la validación de la entrada en tu código, según sea necesario.
 
-Para obtener más información, consulta [Usar el ámbito de entrada para cambiar el teclado táctil]().
+Para obtener más información, consulta [Usar el ámbito de entrada para cambiar el teclado táctil](https://msdn.microsoft.com/library/windows/apps/mt280229).
 
 ## Colores de fuentes
 
 **Se aplica a:** TextBlock, RichTextBlock, TextBox, RichEditBox
 
-Windows tiene la posibilidad de que las fuentes incluyan varias capas de colores para cada glifo. Por ejemplo, la fuente Segoe UI Emoji define las versiones de color de los emoticonos y otros caracteres Emoji. 
+Windows tiene la posibilidad de que las fuentes incluyan varias capas de colores para cada glifo. Por ejemplo, la fuente Segoe UI Emoji define las versiones de color de los emoticonos y otros caracteres Emoji.
 
-Los controles estándar y de texto enriquecido admiten la visualización de las fuentes de color. De manera predeterminada, la propiedad **IsColorFontEnabled** es **true** y las fuentes con estas capas adicionales se representan en color. La fuente de color predeterminada del sistema es Segoe UI Emoji y los controles se revertirán a esta fuente para mostrar los glifos de color. 
+Los controles estándar y de texto enriquecido admiten la visualización de las fuentes de color. De manera predeterminada, la propiedad **IsColorFontEnabled** es **true** y las fuentes con estas capas adicionales se representan en color. La fuente de color predeterminada del sistema es Segoe UI Emoji y los controles se revertirán a esta fuente para mostrar los glifos de color.
 
 ```xaml
 <TextBlock FontSize="30">Hello ☺⛄☂♨⛅</TextBlock>
@@ -145,16 +145,39 @@ No es necesario iniciar la primera línea o párrafo de un archivo con estos car
 
 Tu aplicación puede usar el separador de línea para indicar un final de línea incondicional. Sin embargo, los separadores de línea no se corresponden con los caracteres de avance de línea y retorno de carro independientes o una combinación de estos caracteres. Los separadores de línea se deben procesar por separado de los caracteres de avance de línea y retorno de carro.
 
-La aplicación puede insertar un separador de párrafo entre párrafos de texto. El uso de este separador permite la creación de archivos de texto sin formato que se pueden formatear con anchos de línea diferentes en diferentes sistemas operativos. El sistema de destino puede ignorar los separadores de línea y realizar saltos entre párrafos solo en los separadores de párrafo.
+La aplicación puede insertar un separador de párrafo entre párrafos de texto. El uso de este separador permite la creación de archivos de texto sin formato que se pueden formatear con anchos de línea diferentes en diferentes sistemas operativos. El sistema de destino puede hacer caso omiso de los separadores de línea y realizar saltos entre párrafos solo en los separadores de párrafo.
 
+## Directrices sobre revisión ortográfica
 
+**Se aplica a:** TextBox, RichEditBox
+
+Durante la edición y entrada de texto, la revisión ortográfica informa al usuario de que una palabra está escrita de forma errónea resaltándola con una línea en zigzag roja y permite que el usuario pueda corregir el error.
+
+Este es un ejemplo del corrector ortográfico integrado:
+
+![el corrector ortográfico integrado](images/spellchecking.png)
+
+Usa la revisión ortográfica con controles de entrada de texto para estos dos propósitos:
+
+-   **Para una corrección automática de los errores ortográficos**
+
+    El motor de revisión ortográfica corrige de forma automática las palabras mal escritas cuando está seguro de la corrección. Por ejemplo, el motor cambia automáticamente "dle" por "del".
+
+-   **Para mostrar una ortografía alternativa**
+
+    Cuando el motor de revisión ortográfica no está seguro de las correcciones, agrega una línea roja debajo de la palabra mal escrita y muestra las alternativas en un menú contextual cuando presionas o haces clic con el botón secundario en la palabra.
+
+-   Usa la revisión ortográfica para ayudar a los usuarios a medida que escriben palabras u oraciones en controles de escritura de texto. Revisa la ortografía de las palabras con entradas táctil, de mouse y de teclado.
+-   No uses la revisión ortográfica si es probable que una palabra no esté en el diccionario o si no aporta valor a los usuarios. Por ejemplo, no la actives si el cuadro de texto está pensado para capturar un nombre o número de teléfono.
+-   No deshabilites la revisión ortográfica solo porque el motor de revisión ortográfica actual no admite el idioma de tu aplicación. Si el corrector ortográfico no admite un idioma, no hace nada y dejar la opción activada no causa ningún trastorno. Además, es posible que algunos usuarios usen un editor de métodos de entrada (IME) para incorporar otro idioma a tu aplicación y puede que el corrector sí admita ese idioma. Por ejemplo, al crear una aplicación en japonés, no desactives la revisión ortográfica aunque el motor de revisión no reconozca todavía este idioma. El usuario puede cambiar a un IME en inglés y empezar a escribir en inglés en la aplicación; si la revisión ortográfica está habilitada, se revisará la ortografía de los textos en inglés.
+
+Para los controles TextBox y RichEditBox, la revisión ortográfica está activada de manera predeterminada. Para desactivarla, establece la propiedad **IsSpellCheckEnabled** en **false**.
 
 ## Artículos relacionados
 
 **Para diseñadores**
 - [**Directrices de fuentes**](fonts.md)
 - [**Directrices y lista de iconos de Segoe MDL2**](segoe-ui-symbol-font.md)
-- [Directrices sobre revisión ortográfica](spell-checking-and-prediction.md)
 - [Adición de búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
 
 **Para desarrolladores (XAML)**
@@ -164,6 +187,6 @@ La aplicación puede insertar un separador de párrafo entre párrafos de texto.
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

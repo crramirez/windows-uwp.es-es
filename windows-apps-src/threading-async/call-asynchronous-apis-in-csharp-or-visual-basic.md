@@ -27,7 +27,8 @@ Supongamos que tienes una aplicación que enumera títulos de entradas de blog d
 
 En este ejemplo se obtienen las listas de entradas de un blog llamando al método asincrónico, [**SyndicationClient.RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460), y esperando el resultado.
 
-> [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"] [!code-csharp[Main](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
+> [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
+[!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"] [!code-csharp[Main](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
           [!code-vb[Main](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
 
 Hay un par de aspectos importantes acerca de este ejemplo. En primer lugar, la línea `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` usa el operador **await** con la llamada al método asincrónico [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460). Puedes considerar que el operador **await** indica al compilador que estás llamando a un método asincrónico, que hace que el compilador haga cierto trabajo extra para que no tengas que hacerlo. A continuación, la declaración del controlador de eventos incluye la palabra clave **async**. Debes incluir esta palabra clave en la declaración de cualquier método en el que uses el operador **await**.
@@ -112,6 +113,6 @@ Windows 7 themes: the distinctive artwork of Cheng Ling, 7/20/2011 9:53:07 AM -0
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

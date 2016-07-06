@@ -304,6 +304,6 @@ Uso típico Al igual que las personas usan una combinación de voz y gestos para
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

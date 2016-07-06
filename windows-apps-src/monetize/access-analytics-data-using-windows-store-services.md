@@ -241,6 +241,6 @@ La API análisis de Tienda Windows devuelve respuestas de error en un objeto JSO
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

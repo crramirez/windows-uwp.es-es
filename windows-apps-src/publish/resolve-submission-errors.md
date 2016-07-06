@@ -1,24 +1,24 @@
 ---
 author: jnHs
-Description: Si se producen errores después de enviar la aplicación a la Tienda, tienes que resolverlos para poder continuar el proceso de certificación.
-title: Resolver errores de envío
+Description: "Si se producen errores después de enviar la aplicación a la Tienda, tienes que resolverlos para poder continuar el proceso de certificación."
+title: "Resolver errores de envío"
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
+ms.sourcegitcommit: e295011db20d151f54e2581f8c67014b30261eb6
+ms.openlocfilehash: cd0e1011bd1f857d8c859428ae0ff7e755db842e
+
 ---
 
 # Resolver errores de envío
 
-
 Si se producen errores después de enviar la aplicación a la Tienda, tienes que resolverlos para poder continuar el [proceso de certificación](the-app-certification-process.md). El mensaje de error indicará cuál es el problema y lo que probablemente tendrás que hacer para corregirlo. Aquí encontrarás información adicional que puede ayudarte a resolver estos errores.
 
 ## Aplicaciones para UWP
-
 
 Si envías una aplicación para UWP, es posible que veas un error durante el procesamiento previo si el archivo de paquete no es un archivo .appxupload generado por Visual Studio para la Tienda. Asegúrate de seguir los pasos de [Empaquetado de aplicaciones universales de Windows para Windows 10](../packaging/packaging-uwp-apps.md) al crear el archivo de paquete de la aplicación y carga solo el archivo .appxupload en la página [Paquetes](upload-app-packages.md) del envío, no un appx o .appxbundle.
 
 Si se muestra un error de compilación, asegúrate de que eres capaz de generar correctamente la aplicación en modo de lanzamiento. Para obtener más información, consulta [Errores de compilador interno nativo .NET](http://go.microsoft.com/fwlink/p/?LinkID=613098).
 
 ## Aplicaciones de Windows Phone
-
 
 Es posible que veas **error 2001** cuando se detectan problemas con los paquetes de Windows Phone durante el procesamiento previo. En la mayoría de los casos, necesitarás volver a compilar el paquete de la aplicación para corregir el error. Una vez que lo hayas hecho, reemplaza el paquete antiguo por el nuevo en la página [Paquetes](upload-app-packages.md) del envío antes de hacer clic de nuevo en **Enviar a la Tienda**.
 
@@ -32,15 +32,25 @@ Hay una serie de problemas que pueden causar este error. Revisa la lista siguien
 
 Otro error que puede aparecer después de enviar la aplicación es el **error 1300**. Esto ocurre cuando ya se han precompilado uno o varios ensamblados (o todo el paquete). Para solucionar este problema, recompila el paquete de la aplicación en Microsoft Visual Studio y, a continuación, envía el paquete recién generado.
 
- 
+## Errores de nombre/identidad
+
+Si aparece un error que dice **El nombre encontrado en el paquete no es uno de los nombres de aplicación reservados. Reserva el nombre de la aplicación o actualiza el paquete con el nombre de la aplicación correcto para este idioma** puede deberse a que escribiste un nombre incorrecto en el paquete. Este error también puede producirse si estás usando un nombre de aplicación que aún no has reservado en el Centro de desarrollo. Normalmente se puede resolver el error siguiendo estos pasos:
+
+- Ve a la página de la aplicación [Identidad de la aplicación](view-app-identity-details.md) (en **Administración de aplicaciones**) para confirmar si la aplicación tiene una identidad asignada. Si no la tiene, verás una opción para crear una. Debes reservar un nombre para tu aplicación con el fin de crear la identidad. Asegúrate de que este sea el nombre que usaste en el paquete.
+- Si la aplicación ya tiene una identidad, puede significar que aún tienes que reservar el nombre que quieras usar en el paquete. En **Administración de aplicaciones**, haz clic en [Administrar nombres de la aplicación](manage-app-names.md). Escribe el nombre que te gustaría usar y haz clic en **Reservar nombre de aplicación**.
+
+> **Importante** Si el nombre que quieres usar no está disponible, es posible que otra aplicación ya haya reservado ese nombre. Si la aplicación ya está publicada con ese nombre o si crees que tienes derecho a usar ese nombre, [ponte en contacto con soporte técnico](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
 
  
 
+ 
 
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -59,9 +59,9 @@ Haz el registro para controlar el evento [**Resuming**](https://msdn.microsoft.c
 > }
 > ```
 
-## Actualizar el contenido mostrado tras la suspensión
+## [!div class="tabbedCodeSnippets"]
 
-Cuando la aplicación controla el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339), tiene la oportunidad de actualizar el contenido que muestra.
+Actualizar el contenido mostrado tras la suspensión
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -91,28 +91,28 @@ Cuando la aplicación controla el evento [**Resuming**](https://msdn.microsoft.c
 > }
 > ```
 
-> **Nota** Dado que el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) no se genera desde el subproceso de la interfaz de usuario, deberá usarse un distribuidor para acceder al subproceso de la interfaz de usuario e inyectar una actualización en ella, si eso es lo que se quiere hacer en el controlador.
+> Cuando la aplicación controla el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339), tiene la oportunidad de actualizar el contenido que muestra.
 
-## Comentarios
-
-
-El sistema suspende la aplicación cuando el usuario cambia a otra aplicación o al escritorio. El sistema reanuda la aplicación cuando el usuario vuelve a cambiar a ella. Cuando el sistema reanuda la aplicación, el contenido de las variables y las estructuras de datos es el mismo que antes de que el sistema la suspendiera. El sistema restaura la aplicación en el punto exacto en el que estaba, para que parezca al usuario que se ejecutaba en segundo plano No obstante, es posible que la aplicación haya estado suspendida durante un período de tiempo largo. Por ello, debe actualizar el contenido mostrado que puede haber cambiado mientras la aplicación estaba suspendida, como fuentes de noticias o la ubicación del usuario.
-
-Si la aplicación no tiene contenido mostrado que se deba actualizar, no es necesario que controle el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339).
-
-> **Nota** Si la aplicación está conectada al depurador de Visual Studio, puedes enviarle un evento **Resume**. Asegúrate de que la **barra de herramientas Ubicación de depuración** es visible y haz clic en el menú desplegable junto al icono **Suspender**. A continuación, elige **Reanudar**.
-
-> **Nota** En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida por el momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
-
-## Temas relacionados
-
-* [Controlar la activación de aplicaciones](activate-an-app.md)
-* [Controlar la suspensión de la aplicación](suspend-an-app.md)
-* [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [Ciclo de vida de la aplicación](app-lifecycle.md)
+## [!div class="tabbedCodeSnippets"]
 
 
+**Nota** Dado que el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) no se genera desde el subproceso de la interfaz de usuario, deberá usarse un distribuidor para acceder al subproceso de la interfaz de usuario e inyectar una actualización en ella, si eso es lo que se quiere hacer en el controlador. Comentarios El sistema suspende la aplicación cuando el usuario cambia a otra aplicación o al escritorio. El sistema reanuda la aplicación cuando el usuario vuelve a cambiar a ella. Cuando el sistema reanuda la aplicación, el contenido de las variables y las estructuras de datos es el mismo que antes de que el sistema la suspendiera.
 
-<!--HONumber=Jun16_HO4-->
+El sistema restaura la aplicación en el punto exacto en el que estaba, para que parezca al usuario que se ejecutaba en segundo plano
+
+> No obstante, es posible que la aplicación haya estado suspendida durante un período de tiempo largo. Por ello, debe actualizar el contenido mostrado que puede haber cambiado mientras la aplicación estaba suspendida, como fuentes de noticias o la ubicación del usuario. Si la aplicación no tiene contenido mostrado que se deba actualizar, no es necesario que controle el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339). **Nota** Si la aplicación está conectada al depurador de Visual Studio, puedes enviarle un evento **Resume**.
+
+> Asegúrate de que la **barra de herramientas Ubicación de depuración** es visible y haz clic en el menú desplegable junto al icono **Suspender**. A continuación, elige **Reanudar**. **Nota** En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida por el momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones.
+
+## Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual.
+
+* [Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.](activate-an-app.md)
+* [Temas relacionados](suspend-an-app.md)
+* [Controlar la activación de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465088)
+* [Controlar la suspensión de la aplicación](app-lifecycle.md)
+
+
+
+<!--HONumber=Jun16_HO5-->
 
 

@@ -5,8 +5,8 @@ title: Listas
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 96fd7c2af74ec609a6cfbb41a14b6f4086747813
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
 
 ---
 # Listas
@@ -22,9 +22,9 @@ Se proporcionan directrices de diseño, características y ejemplos para cada pa
 
 ## API importantes
 
--   [**Clase ListView **](https://msdn.microsoft.com/library/windows/apps/br242878)
--   [**Clase GridView **](https://msdn.microsoft.com/library/windows/apps/br242705)
--   [**Clase ComboBox **](https://msdn.microsoft.com/library/windows/apps/br209348)
+-   [**Clase ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)
+-   [**Clase GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)
+-   [**Clase ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)
 
 
 ## Vistas de lista
@@ -85,33 +85,37 @@ Una vista de cuadrícula es una solución ideal para una biblioteca de contenido
 
 ## Listas desplegables
 
-Las listas desplegables, también conocidas como cuadros combinados, se inician en un estado compacto para mostrar una lista de elementos seleccionables. Una lista desplegable admite la selección única o múltiple. Los elementos seleccionados siempre son visibles y los elementos no visibles pueden aparecer en la vista cuando el usuario presiona el elemento seleccionado.
+Las listas desplegables, también conocidas como cuadros combinados, se inician en un estado compacto para mostrar una lista de elementos seleccionables. Los elementos seleccionados siempre son visibles y los elementos no visibles pueden aparecer en la vista cuando el usuario presione el cuadro combinado para expandirlo.
 
 ### ¿Es este el control adecuado?
 
 -   Usa una lista desplegable para que los usuarios puedan seleccionar un único valor en un conjunto de elementos que pueden representarse correctamente con una línea de texto.
--   Usa una vista de lista o cuadrícula en lugar de una lista desplegable para mostrar elementos que contengan varias líneas de texto o imágenes.
+-   Usa una vista de lista o cuadrícula en lugar de un cuadro combinado para mostrar elementos que contengan varias líneas de texto o imágenes.
 -   Cuando haya menos de cinco elementos, considera el uso de [botones de radio](radio-button.md) (si solo se puede seleccionar un elemento) o [casillas](checkbox.md) (si se pueden seleccionar varios elementos).
--   Usa una lista desplegable cuando los elementos de selección sean de importancia secundaria en el flujo de la aplicación. Si la opción predeterminada es la recomendada para la mayoría de los usuarios en la mayoría de situaciones, mostrar todos los elementos usando un cuadro de lista podría atraer más atención de la necesaria sobre las opciones. Usar una lista desplegable te permite ahorrar espacio y minimizar las distracciones.
+-   Usa un cuadro combinado cuando los elementos de selección sean de importancia secundaria en el flujo de tu aplicación. Si la opción predeterminada es la recomendada para la mayoría de los usuarios en la mayoría de situaciones, mostrar todos los elementos usando una vista de lista podría atraer más atención de la necesaria sobre las opciones. Usar un cuadro combinado te permite ahorrar espacio y minimizar la distracción.
 
 ### Ejemplos
 
-Una lista desplegable en su estado compacto puede mostrar un encabezado.
+Un cuadro combinado en su estado compacto puede mostrar un encabezado.
 
 ![Ejemplo de una lista desplegable en su estado compacto](images/combo_box_collapsed.png)
 
-Aunque las listas desplegables se expanden para admitir mayores longitudes de cadena, evita cadenas que sean demasiado largas y difíciles de leer.
+Aunque los cuadros combinados se expanden para admitir mayores longitudes de cadena, evita cadenas que sean demasiado largas y difíciles de leer.
 
 ![Ejemplo de una lista desplegable con cadena de texto larga](images/combo_box_listitemstate.png)
 
-Si la colección en una lista desplegable es lo suficientemente larga, aparecerá una barra de desplazamiento para albergarla. Agrupa los elementos de la lista de forma lógica.
+Si la colección en un cuadro combinado es lo suficientemente larga, aparecerá una barra de desplazamiento para albergarla. Agrupa los elementos de la lista de forma lógica.
 
 ![Ejemplo de una barra de desplazamiento en una lista desplegable](images/combo_box_scroll.png)
 
 ### Recomendaciones
 
--   Limita el contenido de texto de los elementos de la lista desplegable a una sola línea.
--   Ordena los elementos de una lista desplegable en el orden más lógico. Agrupa opciones relacionadas, coloca las opciones más comunes en la parte superior y ordena los elementos alfabéticamente. Ubica los nombres en orden alfabético, los números en orden numérico y las fechas en orden cronológico.
+-   El texto de los elementos del cuadro combinado no debe ocupar más de una línea.
+-   Ordena los elementos de un cuadro combinado en el orden más lógico. Agrupa opciones relacionadas y coloca las opciones más comunes en la parte superior. Ubica los nombres en orden alfabético, los números en orden numérico y las fechas en orden cronológico.
+
+### Búsqueda de texto
+
+Los cuadros combinados admiten automáticamente la búsqueda dentro de sus colecciones. A medida que los usuarios escriben caracteres en un teclado físico mientras se centran en un cuadro combinado abierto o cerrado, los candidatos que coincidan con la cadena del usuario se incluyen en la vista. Esta funcionalidad es especialmente útil cuando se navega en una lista larga. Por ejemplo, cuando se interactúa con una lista desplegable que contiene una lista de estados, los usuarios pueden presionar la tecla "w" para mostrar "Washington" para la selección rápida. 
 
 ## Cuadros de lista
 
@@ -188,11 +192,9 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 - [**Clase GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)
 - [**Clase ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)
 - [**Clase ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868)
-- [Agregar cuadros combinados y cuadros de lista](https://msdn.microsoft.com/library/windows/apps/xaml/hh780616)
 
 
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

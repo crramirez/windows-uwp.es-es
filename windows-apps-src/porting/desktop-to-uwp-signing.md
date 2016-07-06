@@ -52,6 +52,6 @@ Para corregir estos archivos binarios con formato incorrecto, asegúrate de que 
 - [SignTool.exe (Sign Tool)](https://msdn.microsoft.com/library/8s9b9yaz(v=vs.110).aspx)
 - [Cómo firmar un paquete de la aplicación con SignTool](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835835(v=vs.85).aspx)
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

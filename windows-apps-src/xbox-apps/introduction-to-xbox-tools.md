@@ -3,8 +3,8 @@ author: Mtoepke
 title: "Introducción a las herramientas de Xbox One"
 description: "La herramienta específica de Xbox One, Dev Home, con Windows Device Portal."
 area: Xbox
-ms.sourcegitcommit: 4872ac9587b3e2e14860cb152bf33536faccc48d
-ms.openlocfilehash: c975cb07aa9b7f0d30a9905cbceba11e89c8f7df
+ms.sourcegitcommit: 914a1b76c6b502415bee36865af009a8dfe9bb53
+ms.openlocfilehash: e2f87cdeb8ce3371a34bb989e5fa29ef63d18621
 
 ---
 
@@ -56,6 +56,11 @@ Dev Home se acoplará a la derecha. Puede cambiar el contexto si presionas dos v
 | Visual Studio | Te permite emparejar la consola con una instancia de Visual Studio para permitir la implementación. Si es necesario, desactiva las instancias existentes de VS emparejadas para evitar la implementación de la aplicación para UWP en un kit. |
 | [Windows Device Portal](#windows-device-portal) | Habilita WDP (una herramienta de administración de dispositivos basada en explorador) en el kit. |
 | Estado de Xbox Live | Proporciona el estado actual del servicio Xbox Live. |
+
+### Administrar el tamaño de la asignación de almacenamiento de desarrollador
+
+Para aumentar o disminuir la cantidad de espacio en disco que se usa para el almacenamiento de desarrollador, selecciona **Administrar el almacenamiento de desarrollador** en el menú principal. Cambia el valor de la barra **Almacenamiento de desarrollador** y luego selecciona **Guardar y reiniciar** para reiniciar la consola.
+  ![Administrar la asignación de almacenamiento de desarrollador](images/devhome_storage.png)
 
 ### Personalizar Dev Home
 
@@ -110,7 +115,7 @@ Para habilitar WDP en la consola Xbox One:
   ![Advertencia de certificado de seguridad](images/security_cert_warning.jpg)
 
 ## Consulta también
-- [Tecnologías de Microsoft Developer: Windows Device Portal](https://ms-iot.github.io/content/en-US/win10/tools/DevicePortal.htm)
+- [Tecnologías de Microsoft Developer: Windows Device Portal](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-xbox)
 - [UWP en Xbox One](index.md)
 
 
@@ -119,6 +124,6 @@ Para habilitar WDP en la consola Xbox One:
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

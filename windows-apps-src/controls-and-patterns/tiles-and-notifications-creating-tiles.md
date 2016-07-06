@@ -107,6 +107,6 @@ Cuando se instale la aplicación, puedes usar las notificaciones para personaliz
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

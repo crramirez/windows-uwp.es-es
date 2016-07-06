@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: En este tema se explica el sistema de propiedades de dependencia de que dispones cuando escribes una aplicación de Windows Runtime con C++, C#, o Visual Basic junto con definiciones XAML para la interfaz de usuario.
-title: Introducción a las propiedades de dependencia
+description: "En este tema se explica el sistema de propiedades de dependencia de que dispones cuando escribes una aplicación de Windows Runtime con C++, C#, o Visual Basic junto con definiciones XAML para la interfaz de usuario."
+title: "Introducción a las propiedades de dependencia"
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
+translationtype: Human Translation
+ms.sourcegitcommit: 2791b5b80bf1405d3efdce5d81824dbe6d347b4f
+ms.openlocfilehash: 5c61d4ff2f1efc6d4ce0ed292f2f856b23e53c91
+
 ---
 
 # Introducción a las propiedades de dependencia
@@ -165,11 +169,11 @@ Los valores que provienen de estilos o plantillas son valores aplazados, similar
 
 Puedes animar el valor de una propiedad de dependencia con una animación con guion gráfico. Las animaciones con guion gráfico de Windows Runtime no son simples decoraciones visuales. Es más útil pensar en las animaciones como una técnica de máquina de estado que puede establecer los valores de propiedades individuales o de todas las propiedades y vistas de un control, y cambiar estos valores con el tiempo.
 
-Para que pueda animarse, la propiedad de destino de la animación debe ser una propiedad de dependencia. Además, para que sea animado, el tipo de valor de la propiedad de destino debe ser compatible con uno de los tipos de animación derivados de [**Timeline**](https://msdn.microsoft.com/library/windows/apps/br210517) existentes. Los valores de [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723), [**Double**](T:System.Double) y [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) se pueden animar con técnicas de interpolación o de fotograma clave. El resto de valores, en su mayoría, se pueden animar con fotogramas clave de **Object** discretos.
+Para que pueda animarse, la propiedad de destino de la animación debe ser una propiedad de dependencia. Además, para que sea animado, el tipo de valor de la propiedad de destino debe ser compatible con uno de los tipos de animación derivados de [**Timeline**](https://msdn.microsoft.com/library/windows/apps/br210517) existentes. Los valores de [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723), [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) y [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) se pueden animar con técnicas de interpolación o de fotograma clave. El resto de valores, en su mayoría, se pueden animar con fotogramas clave de **Object** discretos.
 
 Cuando se aplica una animación y está en funcionamiento, el valor animado opera con una prioridad mayor que cualquier otro valor (como un valor local) que la propiedad tenga. Las animaciones también tienen un comportamiento [**HoldEnd**](https://msdn.microsoft.com/library/windows/apps/br210306) opcional que puede hacer las que las animaciones se apliquen a valores de propiedad aún si visualmente parece que la animación se detuvo.
 
-El principio de máquina de estado se expresa mediante el uso de animaciones con guion gráfico como parte del modelo de estado [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/br209021) de los controles. Para obtener más información sobre animaciones con guion gráfico, consulta [Animaciones con guion gráfico](https://msdn.microsoft.com/library/windows/apps/mt187354). Para obtener más información sobre **VisualStateManager** y definir estados visuales para los controles, consulta [Animaciones con guion gráfico para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808) o [Inicio rápido: plantillas de control](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374).
+El principio de máquina de estado se expresa mediante el uso de animaciones con guion gráfico como parte del modelo de estado [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/br209021) de los controles. Para obtener más información sobre animaciones con guion gráfico, consulta [Animaciones con guion gráfico](https://msdn.microsoft.com/library/windows/apps/mt187354). Para obtener más información sobre **VisualStateManager** y definir estados visuales para los controles, consulta [Animaciones con guion gráfico para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808) o [Plantillas de control](../controls-and-patterns/control-templates.md).
 
 ### Comportamiento modificado por la propiedad
 
@@ -204,6 +208,7 @@ Los aspectos de subprocesos de [**DependencyObject**](https://msdn.microsoft.com
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

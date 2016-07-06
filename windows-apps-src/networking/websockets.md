@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: Los WebSockets ofrecen un mecanismo para una comunicación bidireccional, rápida y segura entre un cliente y un servidor a través de Internet mediante HTTP(S).
+description: "Los WebSockets ofrecen un mecanismo para una comunicación bidireccional, rápida y segura entre un cliente y un servidor a través de Internet mediante HTTP(S)."
 title: WebSockets
 ms.assetid: EAA9CB3E-6A3A-4C13-9636-CCD3DE46E7E2
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7e9ee140914718ce71357ba8ecaf10116949b87b
+
 ---
 
 # WebSockets
@@ -353,6 +357,7 @@ El siguiente ejemplo crea una tarea que finaliza tras una demora especificada y 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

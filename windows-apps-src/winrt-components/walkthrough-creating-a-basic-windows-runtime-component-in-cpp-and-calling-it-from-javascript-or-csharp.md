@@ -634,6 +634,6 @@ Si quitas un proyecto de componente de Windows Runtime de C++ de una solución, 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

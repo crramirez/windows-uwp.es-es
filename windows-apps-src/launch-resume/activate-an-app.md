@@ -100,10 +100,10 @@ Invalida el método [**OnLaunched**](https://msdn.microsoft.com/library/windows/
 > }
 > ```
 
-## Restaurar los datos de la aplicación si se suspendió y después finalizó
+## [!div class="tabbedCodeSnippets"]
 
 
-Cuando el usuario cambia a la aplicación finalizada, el sistema envía el evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018), con el objeto [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) establecido en **Launch** y el objeto [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) establecido en **Terminated** o **ClosedByUser**. La aplicación debe cargar sus datos de aplicación guardados y actualizar el contenido que muestra.
+Restaurar los datos de la aplicación si se suspendió y después finalizó Cuando el usuario cambia a la aplicación finalizada, el sistema envía el evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018), con el objeto [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) establecido en **Launch** y el objeto [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) establecido en **Terminated** o **ClosedByUser**.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -158,30 +158,30 @@ Cuando el usuario cambia a la aplicación finalizada, el sistema envía el event
 > }
 > ```
 
-Si el valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) es **NotRunning**, la aplicación no pudo guardar sus datos de aplicación correctamente y debe iniciarse desde cero, como si se estuviera iniciando por primera vez.
+La aplicación debe cargar sus datos de aplicación guardados y actualizar el contenido que muestra.
 
-## Comentarios
+## [!div class="tabbedCodeSnippets"]
 
-> **Nota**  En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida en ese momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
+> Si el valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) es **NotRunning**, la aplicación no pudo guardar sus datos de aplicación correctamente y debe iniciarse desde cero, como si se estuviera iniciando por primera vez. Comentarios **Nota**  En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida en ese momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones.
 
-## Temas relacionados
+## Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual.
 
-* [Controlar la suspensión de la aplicación](suspend-an-app.md)
-* [Controlar la reanudación de la aplicación](resume-an-app.md)
-* [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [Ciclo de vida de la aplicación](app-lifecycle.md)
+* [Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.](suspend-an-app.md)
+* [Temas relacionados](resume-an-app.md)
+* [Controlar la suspensión de la aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088)
+* [Controlar la reanudación de la aplicación](app-lifecycle.md)
 
-**Referencia**
+**Directrices para suspender y reanudar una aplicación**
 
-* [**Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766)
-* [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324)
-
- 
+* [**Ciclo de vida de la aplicación**](https://msdn.microsoft.com/library/windows/apps/br224766)
+* [**Referencia**](https://msdn.microsoft.com/library/windows/apps/br242324)
 
  
 
+ 
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

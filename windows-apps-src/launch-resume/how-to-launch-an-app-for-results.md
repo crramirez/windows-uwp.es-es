@@ -203,6 +203,6 @@ Después, pásalo a la aplicación iniciada mediante **LaunchUriForResultsAsync*
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -41,12 +41,12 @@ En este tema se supone que tienes una clase de tareas en segundo plano escrita p
     > SystemTrigger ^ internetTrigger = ref new SystemTrigger(SystemTriggerType::InternetAvailable, false);
     > ```
 
-## Registrar la tarea en segundo plano
+## [!div class="tabbedCodeSnippets"]
 
 
--   Registra la tarea en segundo plano llamando a tu función de registro de tareas en segundo plano. Para más información sobre el registro de tareas en segundo plano, consulta [Registrar una tarea en segundo plano](register-a-background-task.md).
+-   Registrar la tarea en segundo plano Registra la tarea en segundo plano llamando a tu función de registro de tareas en segundo plano.
 
-    El siguiente código registra la tarea en segundo plano:
+    Para más información sobre el registro de tareas en segundo plano, consulta [Registrar una tarea en segundo plano](register-a-background-task.md).
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -62,46 +62,46 @@ En este tema se supone que tienes una clase de tareas en segundo plano escrita p
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
     > ```
 
-    > **Nota** Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquier tipo de desencadenador en segundo plano.
+    > El siguiente código registra la tarea en segundo plano:
 
-    Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
+    [!div class="tabbedCodeSnippets"] **Nota** Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquier tipo de desencadenador en segundo plano.
 
-    > **Nota** Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
+    > Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md). **Nota** Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro.
 
      
 
-## Observaciones
+## Se devuelve un error si cualquiera de los parámetros de registro no es válido.
 
 
-Para ver el registro de una tarea en segundo plano en acción, descarga la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
+Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
+
+Observaciones Para ver el registro de una tarea en segundo plano en acción, descarga la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
 
 Las tareas en segundo plano pueden ejecutarse en respuesta a los eventos [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) y [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517), pero aún debes [declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md). También debes llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquier tipo de tarea en segundo plano.
 
-Las aplicaciones pueden registrar tareas en segundo plano que respondan a los eventos [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) y [**NetworkOperatorNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/br224831), lo que les permite proporcionar una comunicación en tiempo real con el usuario aunque la aplicación no esté en el primer plano. Para obtener más información, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
-
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> Las aplicaciones pueden registrar tareas en segundo plano que respondan a los eventos [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) y [**NetworkOperatorNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/br224831), lo que les permite proporcionar una comunicación en tiempo real con el usuario aunque la aplicación no esté en el primer plano. Para obtener más información, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
 
  
-## Temas relacionados
+## **Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP).
 
 
 ****
 
-* [Crear y registrar una tarea en segundo plano](create-and-register-a-background-task.md)
-* [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
-* [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
-* [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
-* [Registrar una tarea en segundo plano](register-a-background-task.md)
-* [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md)
-* [Actualizar un icono dinámico desde una tarea en segundo plano](update-a-live-tile-from-a-background-task.md)
-* [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
-* [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
-* [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
+* [Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](create-and-register-a-background-task.md)
+* [Temas relacionados](declare-background-tasks-in-the-application-manifest.md)
+* [Crear y registrar una tarea en segundo plano](handle-a-cancelled-background-task.md)
+* [Declarar tareas en segundo plano en el manifiesto de la aplicación](monitor-background-task-progress-and-completion.md)
+* [Controlar una tarea en segundo plano cancelada](register-a-background-task.md)
+* [Supervisar el progreso y la finalización de tareas en segundo plano](set-conditions-for-running-a-background-task.md)
+* [Registrar una tarea en segundo plano](update-a-live-tile-from-a-background-task.md)
+* [Establecer condiciones para ejecutar una tarea en segundo plano](use-a-maintenance-trigger.md)
+* [Actualizar un icono dinámico desde una tarea en segundo plano](run-a-background-task-on-a-timer-.md)
+* [Usar un desencadenador de mantenimiento](guidelines-for-background-tasks.md)
 
 ****
 
-* [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Ejecutar una tarea en segundo plano en un temporizador](debug-a-background-task.md)
+* [Directrices para tareas en segundo plano](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 
@@ -109,6 +109,6 @@ Las aplicaciones pueden registrar tareas en segundo plano que respondan a los ev
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

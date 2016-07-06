@@ -3,8 +3,8 @@ author: mtoepke
 title: Juegos y DirectX
 description: "La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Descubre cómo comenzar un nuevo juego o migrar uno existente."
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b690fa9a97898da49646e39c982465a4a41adb7a
+ms.sourcegitcommit: 41ee0d2a45408b5b1a0dbc0b102f1b59843814b2
+ms.openlocfilehash: e5447f6238ece768513d160579e1c7e89b04e509
 
 ---
 
@@ -38,6 +38,8 @@ La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear,
 | [Controlar escenarios cuando se quitan dispositivos en Direct3D 11](handling-device-lost-scenarios.md) | En este tema se explica cómo recrear la cadena de la interfaz de dispositivo de Direct3D y DXGI cuando se quita o reinicializa la tarjeta gráfica. |
 | [Programación asincrónica para juegos](asynchronous-programming-directx-and-cpp.md) | En este tema se tratan diversos aspectos que deben considerarse cuando se usa la programación asincrónica y los subprocesos con DirectX. |
 | [Conexión en red de juegos](work-with-networking-in-your-directx-game.md) | Aprende a desarrollar e incorporar características de red en un juego DirectX. |
+| [Accesibilidad para juegos](accessibility-for-games.md) | Aprende a hacer que los juegos sean más accesibles. |
+| [Nube para juegos](cloud-for-games.md) | Aprende a hacer uso de las tecnologías de nube para desarrollar juegos. |
 | [Interoperabilidad de DirectX y XAML](directx-and-xaml-interop.md) | Puedes usar el lenguaje XAML y Microsoft DirectX juntos en un juego para UWP. |
 | [Empaquetar un juego](package-your-windows-store-directx-game.md) | Los juegos para UWP grandes, especialmente aquellos que admiten varios idiomas con activos específicos de una región o activos de alta definición como característica opcional, pueden crecer hasta alcanzar tamaños considerables. En este tema, aprende cómo usar los paquetes de la aplicación y los lotes de aplicaciones para personalizar la aplicación a fin de que los clientes solamente reciban los recursos que de verdad necesitan. |
 | [Guías de migración de juegos](porting-guides.md) | Ofrece guías para migrar los juegos existentes a Direct3D 11, UWP y Windows 10. |
@@ -67,6 +69,6 @@ Para aprovechar al máximo las explicaciones y los tutoriales sobre desarrollo d
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

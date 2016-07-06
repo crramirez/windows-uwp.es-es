@@ -85,6 +85,6 @@ Tabla 2: tipos UWP que se asignan a tipos de .NET Framework con el mismo nombre 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

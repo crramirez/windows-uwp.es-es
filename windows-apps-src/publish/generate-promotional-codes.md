@@ -3,8 +3,8 @@ author: jnHs
 Description: "Puedes generar códigos promocionales para una aplicación o un producto desde la aplicación (IAP) que hayas publicado en la Tienda Windows."
 title: "Genera códigos promocionales"
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4001f374a80cd7c62df6230a9429dd5b5a19d2b2
+ms.sourcegitcommit: df994a3bbda9f6d4df0ee2dd6c2cb646d91a0bfc
+ms.openlocfilehash: bfea802fb4a6efcfe34121802ce49f20a9b0305e
 
 ---
 
@@ -32,7 +32,7 @@ Ten en cuenta las siguientes directivas para los códigos promocionales:
 
 -   Puedes generar códigos promocionales para cualquier aplicación o IAP que hayas publicado en la Tienda Windows. Los usuarios pueden canjear los códigos en cualquier versión de Windows compatible con la aplicación o con la IAP.
 -   Los códigos promocionales expiran seis meses después de la fecha en que los pediste.
--   Cada 6 meses puedes generar hasta 250 códigos promocionales para cada una de tus aplicaciones o IAP. El período de 6 meses comienza en la fecha en que se envía el primer pedido de códigos promocionales.
+-   Cada 6 meses puedes generar hasta 500 códigos promocionales para cada una de tus aplicaciones o IAP. El período de 6 meses comienza en la fecha en que se envía el primer pedido de códigos promocionales.
 -   Debes seguir los requisitos definidos en el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058), incluida la sección **3k. Códigos promocionales**.
 
 ## Pedido de códigos promocionales
@@ -48,6 +48,8 @@ Para pedir códigos promocionales para una aplicación o IAP que has publicado e
     -   Selecciona la aplicación o IAP para la que quieres generar códigos.
     -   Especifica un nombre para el pedido. Este nombre te servirá para diferenciar los diferentes pedidos de códigos cuando revises los datos de uso de los códigos promocionales.
     -   Especifica cuántos códigos quieres pedir.
+    -   Especifica cuándo deben activarse los códigos promocionales. Para elegir una determinada fecha y hora de inicio, desactiva la casilla **Los códigos están activos inmediatamente**.
+    -   Especifica cuándo deben expirar los códigos promocionales. Para elegir una fecha y hora de expiración específicas, desactiva la casilla **Los códigos expiran después de seis meses**.
 
 3.  Haz clic en **Pedir códigos**. El pedido se envía y el panel te lleva a la página **Código promocionales**, donde el nuevo pedido aparece como **Pendiente** en la tabla resumen de pedidos de códigos promocionales.
 
@@ -74,11 +76,13 @@ Para descargar un pedido completado y distribuir los códigos promocionales a lo
 
         https://account.microsoft.com/billing/redeem?mstoken=&lt;promotional_code>
 
-    -   **Fecha del pedido**: es la fecha en la que se hizo el pedido de este código.
+    -   **Fecha de inicio**: la fecha en la que se inicia este código.
     -   **Fecha de expiración**: es la fecha de expiración de este código.
     -   **Id. de código**: es un identificador único de este código.
     -   **Id. de pedido**: es un identificador único del pedido en el que se suministró este código.
     -   **Entregado a**: es un campo vacío que puedes rellenar con un valor que identifique al usuario al que se le dio el código.
+    -   **Disponible**: el número de códigos que siguen estando disponibles para su canjeo.
+    -   **Canjeado**: el número de códigos que se han canjeado.
 
 4.  Distribuye las direcciones URL canjeables a los usuarios mediante el formato de comunicación que prefieras (por ejemplo, correo electrónico, mensaje SMS o tarjetas impresas). Te recomendamos que incluyas lo siguiente en la comunicación:
     -   Una explicación de para qué aplicación o IAP es el código promocional y, de forma opcional, una descripción de por qué el usuario recibe el código.
@@ -134,6 +138,6 @@ También puedes descargar un pedido activo desde esta tabla.
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

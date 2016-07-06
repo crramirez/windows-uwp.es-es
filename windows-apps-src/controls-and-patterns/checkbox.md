@@ -5,17 +5,17 @@ title: Casillas
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: dcf9ca0757fdef78b71ae665772b980b08641d34
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: b1532ef10a284cbb6e28694ab1598c08b8619773
 
 ---
 # Casillas
 
-Una casilla se usa para seleccionar o anular la selección de elementos de acción. Puede usarse para un solo elemento o para una lista de varios elementos que un usuario puede elegir. El control tiene tres estados de selección: no seleccionado, seleccionado e indeterminado. Usa el estado indeterminado cuando una colección de opciones secundarias tienen los estados seleccionado y no seleccionado.
+Una casilla se usa para seleccionar o anular la selección de elementos de acción. Puede usarse para un solo elemento o para una lista de varios elementos que un usuario puede elegir. El control tiene tres estados de selección: no seleccionado, seleccionado e indeterminado. Usa el estado indeterminado cuando una colección de opciones secundarias presente los estados seleccionado y no seleccionado.
 
 ![Ejemplo de los estados de una casilla](images/templates-checkbox-states-default.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
+
 -   [**Clase CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316)
 -   [**Evento Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)
 -   [**Propiedad IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) 
@@ -26,7 +26,7 @@ Usa una **casilla** para elegir entre las opciones de tipo sí y no, como en el 
 
 ![Una casilla usada para una sola selección](images/checkbox1.png)
 
-Para una selección de dos posibles opciones, la principal diferencia entre una **casilla** y un **modificador para alternar** es que la casilla se usa para un estado y el modificador para alternar se usa para una acción. Se puede retrasar la confirmación de una interacción de casilla (como parte del envío de un formulario, por ejemplo), pero se debe confirmar inmediatamente la interacción de un modificador para alternar. Además, las casillas permiten la selección múltiple.
+Para una selección de dos posibles opciones, la principal diferencia entre una **casilla** y un [**modificador para alternar**](toggles.md) es que la casilla se usa para un estado y el modificador para alternar se usa para una acción. Se puede retrasar la confirmación de una interacción de casilla (como parte del envío de un formulario, por ejemplo), pero se debe confirmar inmediatamente la interacción de un modificador para alternar. Además, las casillas permiten la selección múltiple.
 
 Usa **varias casillas** para escenarios de múltiple elección en los que un usuario selecciona uno o más elementos de un grupo de opciones que no son mutuamente excluyentes.
 
@@ -287,11 +287,13 @@ private void SetCheckedState()
 ## Artículos relacionados
 
 -   [**Clase CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) 
+-   [Botones de radio](radio-button.md)
+-   [Modificador para alternar](toggles.md)
 
 
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

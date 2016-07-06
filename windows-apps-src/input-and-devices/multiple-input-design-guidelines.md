@@ -44,6 +44,6 @@ El usuario selecciona una foto manteniéndola presionada y, a continuación, dic
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

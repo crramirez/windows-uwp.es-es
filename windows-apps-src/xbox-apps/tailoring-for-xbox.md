@@ -24,6 +24,6 @@ De manera predeterminada, la aplicación se ajustará a una escala del 200 % si
 Para obtener información sobre las prácticas de diseño, consulta el tema [Diseño para Xbox y televisión](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode).
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

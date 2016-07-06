@@ -1,12 +1,19 @@
 ---
-author: mcleanbyron Description: Si permites que los clientes usen la aplicación de forma gratuita durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando algunas características durante el período de prueba.
-título: Excluye o limita características en una versión de prueba ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056 keywords: prueba gratuita keywords: período de prueba gratuita keywords: ejemplo de código de la prueba gratuita keywords: muestra de código de la prueba gratuita
+author: mcleanbyron
+Description: "Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando algunas características durante el período de prueba."
+title: "Excluye o limita características en una versión de prueba"
+ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
+keywords: free trial code sample
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9c38784325f4dc51052f70a819012508f2a0bdbb
+
 ---
 
 # Excluye o limita características en una versión de prueba
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando algunas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, también puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
 
@@ -230,6 +237,7 @@ Para obtener más información sobre cómo describir tu aplicación, consulta [C
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

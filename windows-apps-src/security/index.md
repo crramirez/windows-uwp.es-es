@@ -1,8 +1,12 @@
 ---
 title: Seguridad
-description: Esta sección contiene artículos sobre la compilación de aplicaciones para la Plataforma universal de Windows (UWP) seguras para Windows 10.
+description: "Esta sección contiene artículos sobre la compilación de aplicaciones para la Plataforma universal de Windows (UWP) seguras para Windows 10."
 ms.assetid: 41E2EEFB-E8A9-4592-814C-72B703CD952C
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: a178f992ddd39b5609ce6d15b7e3560e157b9afb
+ms.openlocfilehash: 23897e7e78f3391fbee60a5f7cdf93615401247d
+
 ---
 
 # Seguridad
@@ -12,9 +16,13 @@ author: awkoren
 
 Esta sección contiene artículos sobre la compilación de aplicaciones para la Plataforma universal de Windows (UWP) seguras para Windows 10.
 
+## Introducción 
+
 Si no estás familiarizado con el desarrollo de Windows o UWP, empieza por la [Introducción al desarrollo seguro de aplicaciones de Windows](web-authentication-broker.md). En este artículo de introducción se proporciona una descripción general de las consideraciones de seguridad de las aplicaciones y las distintas funciones disponibles en Windows 10.
 
-La [sección autenticación](authentication-and-user-identity.md) contiene tutoriales para escenarios relacionados con el inicio de sesión de usuario y la identidad. Las aplicaciones presentan varias opciones de autenticación de usuario, que van desde el inicio de sesión único (SSO) simple mediante el [agente de autenticación web](web-authentication-broker.md) hasta la autenticación en dos fases de alta seguridad.
+## Autenticación e identidad de usuario
+
+La [sección autenticación e identidad de usuario](authentication-and-user-identity.md) contiene tutoriales para escenarios relacionados con el inicio de sesión de usuario y la identidad. Las aplicaciones presentan varias opciones de autenticación de usuario, que van desde el inicio de sesión único (SSO) simple mediante el [agente de autenticación web](web-authentication-broker.md) hasta la autenticación en dos fases de alta seguridad.
 
 <table>
 <tr><th>Tema</th><th>Descripción</th></tr>
@@ -31,8 +39,9 @@ La [sección autenticación](authentication-and-user-identity.md) contiene tutor
 <tr><td>[Agente de autenticación web](web-authentication-broker.md)</td><td>En este artículo se explica cómo conectar tu aplicación a un proveedor de identidad en línea que usa protocolos de autenticación como OpenID u OAuth, por ejemplo, Facebook, Twitter, Flickr, Instagram, etc. El método [AuthenticateAsync](https://msdn.microsoft.com/library/windows/apps/br212066) envía una solicitud al proveedor de identidad en línea y obtiene un token de acceso que describe los recursos del proveedor a los que tiene acceso la aplicación.</td></tr>
 </table>
 
+## Criptografía 
 
-La sección de criptografía contiene información sobre temas más complejos relacionados con la criptografía.
+La sección de criptografía contiene información sobre temas más complejos relacionados con la criptografía. 
 
 | Tema                                                                         | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,6 +53,7 @@ La sección de criptografía contiene información sobre temas más complejos re
 | [Tareas comunes de criptografía](common-cryptography-tasks.md)                     | En estos artículos se ofrece código de ejemplo para tareas comunes de criptografía, como crear números aleatorios, comparar búferes, convertir entre cadenas y datos binarios, copiar a matrices de bytes y desde ellas; y codificar y descodificar datos.                                                                                                                                                                                                                                                                                    |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

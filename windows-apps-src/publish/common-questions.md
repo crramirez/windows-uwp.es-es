@@ -60,6 +60,6 @@ Ve a <http://commerce.microsoft.com>, inicia sesión con las credenciales de la 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -71,6 +71,6 @@ Aquí te mostramos algunos ejemplos de cómo la interfaz de usuario informativa 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

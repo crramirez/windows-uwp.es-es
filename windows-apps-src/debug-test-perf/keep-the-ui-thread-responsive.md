@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
 title: Mantener la capacidad de respuesta del subproceso de la interfaz de usuario
-description: Los usuarios esperan que las aplicaciones sigan respondiendo mientras realizan cálculos, independientemente del tipo de equipo.
+description: "Los usuarios esperan que las aplicaciones sigan respondiendo mientras realizan cálculos, independientemente del tipo de equipo."
+translationtype: Human Translation
+ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
+ms.openlocfilehash: 6144b5b60a0092efd1056dd5de166a64733356ec
+
 ---
 # Mantener la capacidad de respuesta del subproceso de la interfaz de usuario
 
@@ -103,6 +107,7 @@ En este ejemplo, el controlador `NextMove-Click` vuelve a **await** para mantene
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

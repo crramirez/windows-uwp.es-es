@@ -3,8 +3,8 @@ description: "Este artículo explica cómo admitir el contrato para contenido co
 title: Compartir datos
 ms.assetid: 32287F5E-EB86-4B98-97FF-8F6228D06782
 author: awkoren
-ms.sourcegitcommit: 03b9943d9bf76343bfbbe714f681a2b398d1a9ad
-ms.openlocfilehash: de9d4e88cfc00d5e428b8ddb8a27cc4ffd619e85
+ms.sourcegitcommit: 9a8fd6d34c4b89dae1ec4be2db69498b5d458b5a
+ms.openlocfilehash: a91f0eb8b62a860809f8ffb63278be1eff31a2f3
 
 ---
 
@@ -51,13 +51,13 @@ Todas las propiedades excepto el título son opcionales. La propiedad de título
 
 ## Iniciar la interfaz de usuario de uso compartido
 
-El sistema proporciona una interfaz de usuario para uso compartido. Para iniciarla, llama al método [**ShowShareUI**][ShowShareUi].
+El sistema proporciona una interfaz de usuario para uso compartido. Para iniciarla, llama al método [**ShowShareUI**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.ShowShareUI).
 
 [!code-cs[Principal](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
 
 ## Controlar errores
 
-En la mayoría de los casos, compartir contenido es un proceso sencillo. Sin embargo, siempre existe la posibilidad de que ocurra algo inesperado. Por ejemplo, es posible que la aplicación haya solicitado al usuario que seleccione contenido para compartir, pero el usuario no ha seleccionado nada. Para controlar estas situaciones, usa el método [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String), que mostrará un mensaje al usuario si se produce cualquier problema.
+En la mayoría de los casos, compartir contenido es un proceso sencillo. Sin embargo, siempre existe la posibilidad de que ocurra algo inesperado. Por ejemplo, es posible que la aplicación solicite al usuario que seleccione contenido para compartir, pero el usuario no seleccionó nada. Para controlar estas situaciones, usa el método [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String)), que muestra un mensaje al usuario si se produce un error.
 
 ## Retrasar el uso compartido con funciones delegadas
 
@@ -104,6 +104,6 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

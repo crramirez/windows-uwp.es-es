@@ -246,6 +246,6 @@ Para indicarle al usuario lo que puede decir, usa las propiedades [**SpeechRecog
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

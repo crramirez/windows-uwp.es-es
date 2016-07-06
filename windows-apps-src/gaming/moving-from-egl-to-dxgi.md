@@ -25,7 +25,7 @@ DirectX Graphics Interface (DXGI) y varias API de Direct3D cumplen el mismo rol 
 
 DXGI y Direct3D, al igual que EGL, proporcionan métodos para configurar recursos gráficos, obtener un contexto de representación en el que tus sombreadores puedan dibujar y para mostrar los resultados en una ventana. No obstante, DXGI y Direct3D tienen algunas opciones más y demandan más esfuerzo para configurarse correctamente cuando se portan desde EGL.
 
-> **Nota**  Esta guía se basa en la especificación abierta del grupo Khronos para EGL 1.4, que se encuentra en este archivo PDF: [Khronos Native Platform Graphics Interface (EGL Version 1.4 - April 6, 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). Las diferencias en la sintaxis específica de otras plataformas y lenguajes de desarrollo no se analizan en esta guía.
+> **Nota** Esta guía se basa en la especificación abierta del grupo Khronos para EGL 1.4, que se encuentra en este archivo PDF: [Khronos Native Platform Graphics Interface (EGL Version 1.4 - April 6, 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). Las diferencias en la sintaxis específica de otras plataformas y lenguajes de desarrollo no se analizan en esta guía.
 
  
 

@@ -644,6 +644,6 @@ Todos los eventos de puntero, los eventos de gestos y los eventos de manipulaci√
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

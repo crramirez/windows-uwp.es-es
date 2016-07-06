@@ -17,6 +17,6 @@ Esta sección contiene artículos sobre cómo integrar NFC en aplicaciones para 
 | [Crear una aplicación de tarjeta NFC inteligente](host-card-emulation.md)   | Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC mediante el uso de un elemento seguro basado en SIM, pero ese modelo requería que las aplicaciones de pago seguro estuvieran estrechamente unidas a los operadores de redes móviles (MNO). Esto limitaba la variedad de soluciones de pago posibles por otros comerciantes o desarrolladores que no estaban unidos a MNO. En Windows 10 Mobile, se ha incluido una nueva tecnología de emulación de tarjetas denominada Emulación de tarjeta de host (HCE). Este artículo sirve como guía para el desarrollo de una aplicación HCE.   |
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

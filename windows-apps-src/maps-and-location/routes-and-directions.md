@@ -196,6 +196,6 @@ En este ejemplo se muestra lo siguiente en un [**MapControl**](https://msdn.micr
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

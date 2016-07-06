@@ -59,6 +59,6 @@ El sistema proporciona una interfaz de usuario predeterminada para arrastrar y c
 * [Drop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.drop.aspx)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

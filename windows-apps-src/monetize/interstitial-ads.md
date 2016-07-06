@@ -51,7 +51,7 @@ A diferencia de los banners, los anuncios intersticiales **se muestran en toda l
 <span id="interstitialadsxaml10"/>
 ### Anuncios intersticiales (XAML/.NET)
 
-> **Nota**  Esta sección proporciona ejemplos de C#, pero Visual Basic y C++ también son compatibles.
+> **Nota** Esta sección proporciona ejemplos de C#, pero Visual Basic y C++ también son compatibles.
  
 1. Abre el proyecto en Visual Studio.
 2. En **Administrador de referencias**, selecciona una de las siguientes referencias según el tipo de proyecto:
@@ -83,7 +83,7 @@ A diferencia de los banners, los anuncios intersticiales **se muestran en toda l
 #endif
     ```
 
-    > **Nota**  Reemplazarás los valores de prueba con valores dinámicos antes de enviar tu aplicación para su envío.
+    > **Nota** Reemplazarás los valores de prueba con valores dinámicos antes de enviar tu aplicación para su envío.
 
 5.  Crea una instancia de un [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx), conecta todos los controladores de eventos y solicita un anuncio.
 
@@ -241,7 +241,7 @@ En este ejemplo se supone que has creado un proyecto de aplicación universal pa
 
 En este ejemplo se supone que has creado un proyecto de aplicación universal para XAML en Visual Studio de 2015 y te diriges a una arquitectura de CPU concreta.
 
-> **Importante**  Este código está escrito en C++ según lo necesario para DirectX.
+> **Importante** Este código está escrito en C++ según lo necesario para DirectX.
 
  
 1. Abre el proyecto en Visual Studio.

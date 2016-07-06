@@ -36,6 +36,6 @@ Las aplicaciones DirectX/C++ no se escalan. El ajuste de escala automático solo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

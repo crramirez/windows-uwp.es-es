@@ -5,8 +5,8 @@ title: Vista de calendario
 ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
 label: Calendar view
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 7b9d4773cba5c6ebb770e27dd20ba5c6fb40ff75
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: 466d8fe25cb2dfe8ce3b4efef995d9e3cb682dc1
 
 ---
 
@@ -14,10 +14,8 @@ ms.openlocfilehash: 7b9d4773cba5c6ebb770e27dd20ba5c6fb40ff75
 
 Una vista de calendario permite al usuario ver e interactuar con un calendario por el que se puede navegar por mes, año o década. Un usuario puede seleccionar una fecha determinada o un intervalo de fechas. No tiene una superficie de selector y el calendario está siempre visible. 
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
-
 - [**Clase CalendarView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx)
-- [**Propiedad Date**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.date.aspx)
+- [**Evento SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx)
 
 ## ¿Es este el control adecuado?
 Usa una vista de calendario para permitir al usuario seleccionar una fecha determinada o un intervalo de fechas a partir de un calendario siempre visible.
@@ -196,6 +194,6 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 
