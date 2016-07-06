@@ -53,7 +53,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/da8862ce4eaad9d7e13833973beb61f80e150e81/ol-handback/Microsoft/windows-apps.es-es/master/plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.es-es.xlf)
-* Handback Datetime: 2016-07-06 16:15:47
+* Handback Datetime: 2016-07-06 16:42:27
 * Handback Error: [handback_transform_failed](#929ad82ce057754ee04f1f27537e03520e95157a2238handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -66,7 +66,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/da8862ce4eaad9d7e13833973beb61f80e150e81/ol-handback/Microsoft/windows-apps.es-es/master/plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.es-es.xlf)
-* Handback Datetime: 2016-07-06 16:15:47
+* Handback Datetime: 2016-07-06 16:42:27
 * Handback Error: [handback_transform_failed](#9a3058aabdc6f710149a14d8f125b66efd0760072640handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -79,7 +79,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [home.c2e75b5d0f1c7d5d476b0f47240addd323d5103c.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/89dd9ca41283bb0f607dbb6def820301993b1a38/ol-handback/Microsoft/windows-apps.es-es/master/home.c2e75b5d0f1c7d5d476b0f47240addd323d5103c.es-es.xlf)
-* Handback Datetime: 2016-07-06 16:15:47
+* Handback Datetime: 2016-07-06 16:42:27
 * Handback Error: [handback_transform_failed](#5d0cca643c26458165c388215d34eec76dfe8cf62696handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -92,7 +92,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [index.fbb2a0e1c7a82fa0a97bb1e07bc6c801fcd891f4.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/89dd9ca41283bb0f607dbb6def820301993b1a38/ol-handback/Microsoft/windows-apps.es-es/master/index.fbb2a0e1c7a82fa0a97bb1e07bc6c801fcd891f4.es-es.xlf)
-* Handback Datetime: 2016-07-06 16:15:47
+* Handback Datetime: 2016-07-06 16:42:27
 * Handback Error: [handback_transform_failed](#97e016047c864026fe0c72e4b7cb819f0fc807482707handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -129,7 +129,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [getting-started-what-next.ecd0afbdc8655298b5947469bb7c882adb3b3a4a.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/da8862ce4eaad9d7e13833973beb61f80e150e81/ol-handback/Microsoft/windows-apps.es-es/master/getting-started-what-next.ecd0afbdc8655298b5947469bb7c882adb3b3a4a.es-es.xlf)
-* Handback Datetime: 2016-07-06 16:15:47
+* Handback Datetime: 2016-07-06 16:42:27
 * Handback Error: [handback_transform_failed](#2b11133fda76fb42f3a850848c426cbb33fb83663480handback_transform_failed)
 * [Back to Top](#report-top)
 
