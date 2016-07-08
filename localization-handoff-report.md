@@ -6,19 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\controls-and-patterns\index.md](https://github.com/Microsoft/windows-apps/blob/7c45a464be250e210df48d3fdef35f00d77e16d5/windows-apps-src/controls-and-patterns/index.md) | HandedBackFailed | [Details](#23fdd3513d11a0fa0171e50fe71d49c8e3db73761903)
+ [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps/blob/26ca8018c2214fe4af9c7ae6d9860d7556e96e24/windows-apps-src/input-and-devices/designing-for-tv.md) | OutofSyncHandedBackSuccess | [Details](#1c03d381630b89672bb9ae39497f1f1a2c9a714e2714)
 
 ## Item Details
-##### <a name='23fdd3513d11a0fa0171e50fe71d49c8e3db73761903'></a> Source: [windows-apps-src\controls-and-patterns\index.md](https://github.com/Microsoft/windows-apps/blob/7c45a464be250e210df48d3fdef35f00d77e16d5/windows-apps-src/controls-and-patterns/index.md)
-* Status: HandedBackFailed
+##### <a name='1c03d381630b89672bb9ae39497f1f1a2c9a714e2714'></a> Source: [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps/blob/26ca8018c2214fe4af9c7ae6d9860d7556e96e24/windows-apps-src/input-and-devices/designing-for-tv.md)
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [index.fbf3d9a627adba69545b050281feb3391279f52e.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/b2d8023910bdf93a027b1895220201f84b6db323/ol-handoff/Microsoft/windows-apps.es-es/master/index.fbf3d9a627adba69545b050281feb3391279f52e.es-es.xlf)
-* Handoff Datetime: 2016-07-08 18:20:46
+* Handoff File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/f684cfa3ed765dcec3e9769f629d9ab6a19a5f82/ol-handoff/Microsoft/windows-apps.es-es/master/designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.es-es.xlf)
+* Handoff Datetime: 2016-07-08 19:19:41
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/input-and-devices/designing-for-tv.md)
+* Current Handback File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.es-es.xlf)
+* Current Handback Datetime: 2016-07-06 15:11:22
 * [Back to Top](#report-top)
 
 
