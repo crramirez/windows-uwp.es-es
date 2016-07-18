@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\networking\network-communications-in-the-background.md](https://github.com/Microsoft/windows-apps/blob/eea01135c60df0323b73bf3fda8b44e6d02cd04b/windows-apps-src/networking/network-communications-in-the-background.md) | OutofSyncHandedBackSuccess | [Details](#8f26599b8d725845d20872fccd6edf3a6744ce383481)
+ [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps/blob/f431a3f886d9e9d2175e8327104f93dfa0177fa8/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md) | OutofSyncHandedBackSuccess | [Details](#daf73e682b9d48ae9b7f64589337fd72e54ebbb72310)
 
 ## Item Details
-##### <a name='8f26599b8d725845d20872fccd6edf3a6744ce383481'></a> Source: [windows-apps-src\networking\network-communications-in-the-background.md](https://github.com/Microsoft/windows-apps/blob/eea01135c60df0323b73bf3fda8b44e6d02cd04b/windows-apps-src/networking/network-communications-in-the-background.md)
+##### <a name='daf73e682b9d48ae9b7f64589337fd72e54ebbb72310'></a> Source: [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps/blob/f431a3f886d9e9d2175e8327104f93dfa0177fa8/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [network-communications-in-the-background.392e988ada0e7db55009da5cb3fcaf902abcb446.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/3a9a28d33f940a8b78a746d1f98a580caf93bdf7/ol-handoff/Microsoft/windows-apps.es-es/master/network-communications-in-the-background.392e988ada0e7db55009da5cb3fcaf902abcb446.es-es.xlf)
-* Handoff Datetime: 2016-07-18 21:54:38
+* Handoff File: [create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/be8a3288f86e8e975ac078209e9b2f53c916f02c/ol-handoff/Microsoft/windows-apps.es-es/master/create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.es-es.xlf)
+* Handoff Datetime: 2016-07-18 22:25:06
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\networking\network-communications-in-the-background.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/networking/network-communications-in-the-background.md)
-* Current Handback File: [network-communications-in-the-background.392e988ada0e7db55009da5cb3fcaf902abcb446.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/network-communications-in-the-background.392e988ada0e7db55009da5cb3fcaf902abcb446.es-es.xlf)
+* Current Target File: [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md)
+* Current Handback File: [create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.es-es.xlf)
 * Current Handback Datetime: 2016-07-06 15:11:22
 * [Back to Top](#report-top)
 
