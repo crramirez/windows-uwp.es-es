@@ -3,6 +3,7 @@ author: scottmill
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: "Animaciones de composición"
 description: "Muchas de las propiedades de objetos y efectos de composición se pueden animar con animaciones de fotogramas y expresión clave, lo que permite a las propiedades de un elemento de la interfaz de usuario cambiar con el tiempo o según un cálculo concreto."
+translationtype: Human Translation
 ms.sourcegitcommit: 62f0ea80940ff862d26feaa063414d95b048f685
 ms.openlocfilehash: e0088692b9de10c188f15b85b1f20b98cc113517
 
@@ -19,9 +20,11 @@ En este documento se supone que estás familiarizado con los conceptos básicos 
    
  
 ##Tipos de animaciones de composición
-Las **animaciones de fotograma clave** proporcionan experiencias de animación *fotograma a fotograma* basadas en tiempo tradicionales. Los desarrolladores pueden definir explícitamente *puntos de control* que describan los valores que una propiedad de animación necesita para estar en puntos específicos en la línea de tiempo de animación. Cabe destacar que puede usar las funciones de aceleración (también denominadas "interpoladores") para describir cómo realizar la transición entre estos puntos de control.  
 
-Las **animaciones de expresión** son un nuevo tipo de animación que se introdujo en la capa visual con la actualización de noviembre de Windows 10 (compilación 10586). La idea de las animaciones de expresión es que un desarrollador puede crear relaciones matemáticas entre las propiedades visuales y los valores discretos que se evaluarán y actualizarán en cada fotograma. Los desarrolladores pueden hacer referencia a las propiedades en objetos de composición o conjuntos de propiedades, usar aplicaciones auxiliares de funciones matemáticas e incluso hacer referencia a la entrada para derivar estas relaciones matemáticas. Las expresiones hacen que las experiencias como las del efecto parallax y los encabezados permanentes se puedan desarrollar sin problemas en la plataforma Windows.  
+            Las **animaciones de fotograma clave** proporcionan experiencias de animación *fotograma a fotograma* basadas en tiempo tradicionales. Los desarrolladores pueden definir explícitamente *puntos de control* que describan los valores que una propiedad de animación necesita para estar en puntos específicos en la línea de tiempo de animación. Cabe destacar que puede usar las funciones de aceleración (también denominadas "interpoladores") para describir cómo realizar la transición entre estos puntos de control.  
+
+
+            Las **animaciones de expresión** son un nuevo tipo de animación que se introdujo en la capa visual con la actualización de noviembre de Windows 10 (compilación 10586). La idea de las animaciones de expresión es que un desarrollador puede crear relaciones matemáticas entre las propiedades visuales y los valores discretos que se evaluarán y actualizarán en cada fotograma. Los desarrolladores pueden hacer referencia a las propiedades en objetos de composición o conjuntos de propiedades, usar aplicaciones auxiliares de funciones matemáticas e incluso hacer referencia a la entrada para derivar estas relaciones matemáticas. Las expresiones hacen que las experiencias como las del efecto parallax y los encabezados permanentes se puedan desarrollar sin problemas en la plataforma Windows.  
 
 ##Motivos para usar las animaciones de composición
 **Rendimiento**  
@@ -152,7 +155,8 @@ Ejemplo que inserta un fotograma clave en el punto medio de la animación:
 animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f));
 ```
 
-**Nota:** Al animar el color con animaciones de fotograma clave, hay algunos aspectos adicionales a tener en cuenta:
+
+            **Nota:** Al animar el color con animaciones de fotograma clave, hay algunos aspectos adicionales a tener en cuenta:
 1.  StartAnimation se asocia a Visual.Brush, en lugar de Visual, con **Color** como el parámetro de propiedad que se quiere animar.
 2.  El componente "valor" del fotograma clave se define mediante el objeto Colors fuera del espacio de nombres Windows.UI.
 3.  Tienes la opción de definir el espacio de colores por el que pasará la interpolación, para lo cual debes establecer la propiedad InterpolationColorSpace. Algunos valores posibles son: a.  CompositionColorSpace.Rgb b.  CompositionColorSpace.Hsl
@@ -193,7 +197,8 @@ animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f), easeIn);
 
 ##Iniciar y detener animaciones de fotograma clave
 Después de definir la animación y los fotogramas clave, estás listo para enlazar la animación. Al iniciar la animación, debes especificar el objeto Visual y la propiedad de destino que se van a animar, así como una referencia a la animación. Para ello, llama a la función StartAnimation(). Recuerda que al llamar a StartAnimation() en una propiedad, se desconectarán y quitarán todas las animaciones que se ejecutaban anteriormente.  
-**Nota:** La referencia a la propiedad que elijas para animar tendrá el formato de una cadena.  
+
+            **Nota:** La referencia a la propiedad que elijas para animar tendrá el formato de una cadena.  
 
 Ejemplo en el que se establece e inicia una animación en la propiedad Offset de Visual:  
 ```cs
@@ -290,7 +295,8 @@ Las animaciones de expresión son un nuevo tipo de animación que el equipo de c
 
 **Por lo tanto, ¿para qué sirven las animaciones de expresión?** El poder real de las animaciones de expresión proviene de su capacidad para crear una relación matemática que incluya referencias a parámetros o propiedades de otros objetos. Esto significa que puede tener una ecuación que haga referencia a valores de propiedades en otros objetos de composición, variables locales o incluso en valores compartidos de conjuntos de propiedades de composición. Debido a este modelo de referencia y a que la ecuación se evalúa en cada fotograma, si los valores que definen una ecuación cambian, también cambiará el resultado de la ecuación. Esto abre posibilidades más allá de las animaciones de fotograma clave tradicionales, en que los valores deben ser discretos y predefinidos. Por ejemplo, experiencias como los encabezados permanentes y el efecto parallax se pueden describir fácilmente mediante animaciones de expresión.
 
-**Nota:** Los términos "Expresión" o "Cadena de expresión" se usan como referencia para la ecuación matemática que define el objeto de animación de expresión.
+
+            **Nota:** Los términos "Expresión" o "Cadena de expresión" se usan como referencia para la ecuación matemática que define el objeto de animación de expresión.
 
 ##Crear y adjuntar la animación de expresión
 Antes de pasar a la sintaxis de creación de animaciones de expresión, hay algunos principios básicos que debemos mencionar:  
@@ -667,6 +673,6 @@ _target.StartAnimation(“Opacity”, exp);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

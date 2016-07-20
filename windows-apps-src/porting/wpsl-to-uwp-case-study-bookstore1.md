@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
-description: "En este tema se presenta un caso práctico de migración de una aplicación para Windows Phone Silverlight muy simple a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10."
+description: "En este tema se presenta un caso práctico de migración de una aplicación para WindowsPhone Silverlight muy simple a una aplicación para la Plataforma universal de Windows (UWP) de Windows10."
 title: "Caso práctico de Windows Phone Silverlight a UWP, Bookstore1"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
@@ -13,19 +13,22 @@ ms.openlocfilehash: dbffb4245efece2d39b4eba8979e323fd71626d0
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-En este tema se presenta un caso práctico de migración de una aplicación para Windows Phone Silverlight muy simple a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10. Con Windows 10, puedes crear un paquete de la aplicación único que los clientes pueden instalar en una amplia variedad de dispositivos, como se verá en este caso práctico. Consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
+En este tema se presenta un caso práctico de migración de una aplicación para WindowsPhone Silverlight muy simple a una aplicación para la Plataforma universal de Windows (UWP) de Windows10. Con Windows 10, puedes crear un paquete de la aplicación único que los clientes pueden instalar en una amplia variedad de dispositivos, como se verá en este caso práctico. Consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 La aplicación que portaremos consta de un enlace **ListBox** enlazado con un modelo de vista. El modelo de vista tiene una lista de libros que muestra el título, el autor y la portada de libro. Las imágenes de portada de libro tienen el valor de **Acción de compilación** establecido en **Contenido** y de **Copiar en el directorio de salida** establecido en **No copiar**.
 
 En los temas anteriores de esta sección se describen las diferencias entre las plataformas y se proporcionan detalles y pautas sobre el proceso de migración de diversos aspectos de una aplicación, entre ellos el marcado XAML, el enlace a un modelo de vista y el acceso a los datos. El objetivo de un caso práctico consiste en complementar esa orientación mostrando un ejemplo real en la práctica. En el caso práctico se supone que has leído las directrices, ya que no se repiten.
 
-**Nota** Cuando abras Bookstore1Universal\_10 en Visual Studio, si aparece el mensaje "Se requiere una actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md#targetplatformversion).
+
+            **Nota** Cuando abras Bookstore1Universal\_10 en Visual Studio, si aparece el mensaje "Se requiere una actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md#targetplatformversion).
 
 ## Descargas
 
-[Descargar la aplicación para Windows Phone Silverlight Bookstore1WPSL8](http://go.microsoft.com/fwlink/?linkid=517053).
 
-[Descargar la aplicación para Windows 10 Bookstore1Universal\_10](http://go.microsoft.com/fwlink/?linkid=532950).
+            [Descargar la aplicación para Windows Phone Silverlight Bookstore1WPSL8](http://go.microsoft.com/fwlink/?linkid=517053).
+
+
+            [Descargar la aplicación para Windows 10 Bookstore1Universal\_10](http://go.microsoft.com/fwlink/?linkid=532950).
 
 ## La aplicación Windows Phone Silverlight
 
@@ -73,9 +76,9 @@ La vista y el modelo de vista funcionan juntos correctamente y **ListBox** está
 
 ## Saldar la deuda de elementos y algunos estilos iniciales
 
-De forma predeterminada, se admiten todas las orientaciones. La aplicación Windows Phone Silverlight se restringe explícitamente a sí misma a la orientación vertical solo, por lo que para saldar la deuda de los elementos n.º 1 y n.º 2 debemos ir al manifiesto del paquete de la aplicación en el nuevo proyecto y comprobar que el valor sea **Portrait** en **Orientaciones admitidas**.
+De forma predeterminada, se admiten todas las orientaciones. La aplicación WindowsPhone Silverlight se restringe explícitamente a sí misma a la orientación vertical solo, por lo que para saldar la deuda de los elementos n.º 1 y n.º 2 debemos ir al manifiesto del paquete de la aplicación en el nuevo proyecto y comprobar que el valor sea **Portrait** en **Orientaciones admitidas**.
 
-En el caso de esta aplicación, el elemento n.º 3 no es una deuda, ya que la barra de estado (anteriormente denominada bandeja del sistema) se muestra de forma predeterminada. Para los elementos n.º 4 y n.º 5, tenemos que encontrar cuatro estilos **TextBlock** de la Plataforma universal de Windows (UWP) que correspondan a los estilos de Windows Phone Silverlight que estábamos usando. Puedes ejecutar la aplicación Windows Phone Silverlight en el emulador y compararla en paralelo con la ilustración de la sección [Texto](wpsl-to-uwp-porting-xaml-and-ui.md#text). Si hacemos esto y echamos una mirada a las propiedades de los estilos del sistema de Windows Phone Silverlight, podemos generar esta tabla.
+En el caso de esta aplicación, el elemento n.º 3 no es una deuda, ya que la barra de estado (anteriormente denominada bandeja del sistema) se muestra de forma predeterminada. Para los elementos n.º4 y n.º 5, tenemos que encontrar cuatro estilos **TextBlock** de la Plataforma universal de Windows (UWP) que correspondan a los estilos de WindowsPhone Silverlight que estábamos usando. Puedes ejecutar la aplicación WindowsPhone Silverlight en el emulador y compararla en paralelo con la ilustración de la sección [Texto](wpsl-to-uwp-porting-xaml-and-ui.md#text). Si hacemos esto y echamos una mirada a las propiedades de los estilos del sistema de Windows Phone Silverlight, podemos generar esta tabla.
 
 | Clave de estilo de Windows Phone Silverlight | Clave de estilo de UWP          |
 |-------------------------------------|------------------------|
@@ -86,9 +89,9 @@ En el caso de esta aplicación, el elemento n.º 3 no es una deuda, ya que la ba
  
 Para establecer estos estilos puedes escribirlos en el editor de marcado o usar las herramientas de XAML de Visual Studio y establecerlos sin necesidad de escribir nada. Para ello, haz clic con el botón derecho en un objeto **TextBlock** y luego en **Editar estilo**&gt;**Aplicar recurso**. Para hacerlo con objetos **TextBlock** en la plantilla de elemento, haz clic con el botón derecho en **ListBox** y luego en **Editar plantillas adicionales**&gt;**Editar elementos generados (ItemTemplate)**.
 
-Hay un fondo blanco con 80 % de opacidad detrás de los elementos porque el estilo predeterminado del control **ListBox** establece su fondo en el recurso del sistema `ListBoxBackgroundThemeBrush`. Establece `Background="Transparent"` en **ListBox** para borrar este fondo. Para alinear a la izquierda los **TextBlock** de la plantilla de elemento, edítalos de nuevo tal como se describe más arriba y establece un **Margin** de `"9.6,0"` en ambos **TextBlock**.
+Hay un fondo blanco con 80% de opacidad detrás de los elementos porque el estilo predeterminado del control **ListBox** establece su fondo en el recurso del sistema `ListBoxBackgroundThemeBrush`. Establece `Background="Transparent"` en **ListBox** para borrar este fondo. Para alinear a la izquierda los **TextBlock** de la plantilla de elemento, edítalos de nuevo tal como se describe más arriba y establece un **Margin** de `"9.6,0"` en ambos **TextBlock**.
 
-Después de hacerlo, y debido a los [cambios relacionados con los píxeles de visualización](wpsl-to-uwp-porting-xaml-and-ui.md#effective-pixels), debemos recorrer y multiplicar toda dimensión de tamaño fijo que aún no hayamos modificado (márgenes, ancho, alto, etc.) por 0,8. De este modo, las imágenes deben cambiar de 70 x 70 px a 56 x 56 px, por ejemplo.
+Después de hacerlo, y debido a los [cambios relacionados con los píxeles de visualización](wpsl-to-uwp-porting-xaml-and-ui.md#effective-pixels), debemos recorrer y multiplicar toda dimensión de tamaño fijo que aún no hayamos modificado (márgenes, ancho, alto, etc.) por 0,8. De este modo, las imágenes deben cambiar de 70x70px a 56x56px, por ejemplo.
 
 Pero obtengamos esas imágenes que vamos a representar antes de mostrar los resultados de la aplicación de estilos.
 

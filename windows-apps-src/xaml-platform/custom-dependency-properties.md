@@ -3,6 +3,7 @@ author: jwmsft
 description: "Se explica cómo definir e implementar las propiedades de dependencia personalizadas para una aplicación de Windows Runtime con C++, C# o Visual Basic."
 title: Propiedades de dependencia personalizadas
 ms.assetid: 5ADF7935-F2CF-4BB6-B1A5-F535C2ED8EF8
+translationtype: Human Translation
 ms.sourcegitcommit: d50b73fcf78c28157cff7003dc3e180de9d69f70
 ms.openlocfilehash: 80a42040887818a0c6a66ed32327144bed586dc2
 
@@ -57,7 +58,8 @@ La definición de una propiedad de dependencia se puede considerar un conjunto d
 -   Definir una propiedad de contenedor, siguiendo el modelo de descriptor de acceso de propiedad usado en el lenguaje que estés implementando. El nombre de la propiedad de contenedor debe coincidir con la cadena *name* que usaste en [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829). Implementa los descriptores de acceso **get** y **set** para conectar el contenedor con la propiedad de dependencia que contiene; para ello, llama a [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) y [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) y pasa tu propio identificador de propiedad como un parámetro.
 -   (Opcional) Colocar atributos como [**ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011) en el contenedor.
 
-**Nota**  Si estás definiendo una propiedad adjunta personalizada, normalmente omites el contenedor. En su lugar, escribes un estilo diferente de descriptor de acceso que un procesador XAML puede usar. Consulta [Propiedades adjuntas personalizadas](custom-attached-properties.md). 
+
+            **Nota**  Si estás definiendo una propiedad adjunta personalizada, normalmente omites el contenedor. En su lugar, escribes un estilo diferente de descriptor de acceso que un procesador XAML puede usar. Consulta [Propiedades adjuntas personalizadas](custom-attached-properties.md). 
 
 ## Registro de la propiedad
 
@@ -82,7 +84,8 @@ Public Shared ReadOnly LabelProperty As DependencyProperty =
       New PropertyMetadata(Nothing))
 ```
 
-**Nota**  La implementación típica es registrar la propiedad de dependencia en el cuerpo de una clase, pero también puedes registrarla en el constructor estático de la clase. Este enfoque tiene sentido si necesitas más de una línea de código para inicializar la propiedad de dependencia.
+
+            **Nota** La implementación típica es registrar la propiedad de dependencia en el cuerpo de una clase, pero también puedes registrarla en el constructor estático de la clase. Este enfoque tiene sentido si necesitas más de una línea de código para inicializar la propiedad de dependencia.
 
 En C++, tienes opciones para dividir la implementación entre el encabezado y el archivo de código. La división típica es declarar el propio identificador como propiedad **public****static** en el encabezado con una implementación de **get**, pero sin **set**. La implementación **get** hace referencia a un campo privado, que es una instancia de [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) sin inicializar. También puedes declarar los contenedores y las implementaciones **get** y **set** del contenedor. En este caso, el encabezado incluye una implementación mínima. Si el contenedor necesita atribución de Windows Runtime, inclúyela también en el encabezado. Pon la llamada de [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) en el archivo de código, dentro de la función auxiliar que solo se ejecuta cuando la aplicación se inicializa por primera vez. Usa el valor devuelto de **Register** para rellenar los identificadores estáticos pero sin inicializar que has declarado en el encabezado, que estableciste inicialmente en **nullptr**, en el ámbito raíz del archivo de implementación.
 
@@ -127,13 +130,15 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 }
 ```
 
-**Nota**  Para el código C++, el motivo de tener un campo privado y una propiedad pública de solo lectura que muestra [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) es que, de esta manera, otros llamadores que usan tu propiedad de dependencia también pueden usar las API de utilidad del sistema de propiedades que requieran que el identificador sea público. Si haces que el identificador sea privado, los usuarios no podrán usar estas API de utilidad. Algunos ejemplos de estas API y escenarios son [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) o [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) a elegir, [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) y [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). No puedes usar un campo público para esto porque las reglas de compilación de Windows Runtime no admiten miembros de datos públicos que usan tipos de referencia como **DependencyProperty**.
+
+            **Nota**  Para el código C++, el motivo de tener un campo privado y una propiedad pública de solo lectura que muestra [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) es que, de esta manera, otros llamadores que usan tu propiedad de dependencia también pueden usar las API de utilidad del sistema de propiedades que requieran que el identificador sea público. Si haces que el identificador sea privado, los usuarios no podrán usar estas API de utilidad. Algunos ejemplos de estas API y escenarios son [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) o [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) a elegir, [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) y [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). No puedes usar un campo público para esto porque las reglas de compilación de Windows Runtime no admiten miembros de datos públicos que usan tipos de referencia como **DependencyProperty**.
 
 ## Convenciones de nomenclatura para propiedades de dependencia
 
 Existen convenciones de nomenclatura para las propiedades de dependencia; síguelas siempre salvo circunstancias excepcionales. La propiedad de dependencia en sí tiene un nombre básico ("Label" en el ejemplo anterior) que se proporciona como el primer parámetro de [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829). El nombre debe ser único en cada tipo de registro, y este requisito también se aplica a todos los miembros heredados. Las propiedades de dependencia heredadas mediante tipos base ya se consideran parte del tipo de registro; los nombres de las propiedades heredadas no se pueden volver a registrar.
 
-**Precaución**  Aunque el nombre que proporciones aquí puede ser cualquier identificador de cadena que sea válido en la programación del lenguaje que uses, normalmente también querrás poder establecer tu propiedad de dependencia en XAML. Para poder establecerse en XAML, el nombre de propiedad que elijas debe ser un nombre XAML válido. Para obtener más información, consulta [Introducción a XAML](xaml-overview.md).
+
+            **Precaución**  Aunque el nombre que proporciones aquí puede ser cualquier identificador de cadena que sea válido en la programación del lenguaje que uses, normalmente también querrás poder establecer tu propiedad de dependencia en XAML. Para poder establecerse en XAML, el nombre de propiedad que elijas debe ser un nombre XAML válido. Para obtener más información, consulta [Introducción a XAML](xaml-overview.md).
 
 Cuando crees la propiedad de identificador, combina el nombre de la propiedad tal y como lo registraste con el sufijo "Property" ("LabelProperty", por ejemplo). Esta propiedad es el identificador de la propiedad de dependencia y se usa como entrada para las llamadas a [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) y [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) que hagas en tus propios contenedores de propiedad. También puede usarlo el sistema de propiedades y, posiblemente, los procesadores XAML.
 
@@ -141,7 +146,8 @@ Cuando crees la propiedad de identificador, combina el nombre de la propiedad ta
 
 Tu contenedor de propiedad debe llamar a [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) en la implementación **get** y a [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) en la implementación **set**.
 
-**Precaución**  Salvo en circunstancias excepcionales, las implementaciones del contenedor solo deben realizar las operaciones [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) y [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361). De lo contrario, el comportamiento cuando la propiedad se establece mediante XAML será diferente de cuando se establece mediante código. Por motivos de eficacia, el analizador XAML omite los contenedores al establecer las propiedades de dependencia; siempre que es posible, usa el Registro de propiedades de dependencia.
+
+            **Precaución**  Salvo en circunstancias excepcionales, las implementaciones del contenedor solo deben realizar las operaciones [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) y [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361). De lo contrario, el comportamiento cuando la propiedad se establece mediante XAML será diferente de cuando se establece mediante código. Por motivos de eficacia, el analizador XAML omite los contenedores al establecer las propiedades de dependencia; siempre que es posible, utiliza el Registro de propiedades de dependencia.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -189,7 +195,8 @@ En los anteriores ejemplos de llamada a [**DependencyProperty.Register**](https:
 
 Normalmente deberás proporcionar [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) como instancia creada en línea, dentro de los parámetros de [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829).
 
-**Nota** Si vas a definir una implementación [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812), deberás usar el método de utilidad [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) en lugar de llamar a un constructor [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) para definir la instancia **PropertyMetadata**.
+
+            **Nota** Si vas a definir una implementación [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812), deberás usar el método de utilidad [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) en lugar de llamar a un constructor [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) para definir la instancia **PropertyMetadata**.
 
 El siguiente ejemplo modifica los ejemplos mostrados anteriormente [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) al hacer referencia a una instancia de [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) con un valor de [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770). La implementación de la devolución de llamada "OnLabelChanged" se mostrará más adelante en esta sección.
 
@@ -226,7 +233,8 @@ Puedes especificar un valor predeterminado para una propiedad de dependencia de 
 
 Si no se especifica un valor predeterminado, el valor predeterminado de una propiedad de dependencia es null para un tipo de referencia, o el valor predeterminado del tipo para un tipo de valor o tipo primitivo del lenguaje (por ejemplo, 0 para un entero o una cadena vacía para una cadena). El principal motivo para establecer un valor predeterminado es que este valor se restablece al llamar a [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357) en la propiedad. Quizás sea más conveniente establecer un valor predeterminado para cada propiedad que establecer valores predeterminados en los constructores, especialmente para los tipos de valor. Sin embargo, para los tipos de referencia, asegúrate de que al establecer un valor predeterminado no se crea un patrón de singleton no intencionado. Para más información, consulta los [Procedimientos recomendados](#best-practices) más adelante en este tema
 
-**Nota**  No realices el registro con un valor [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371) predeterminado. Esto confundirá a los usuarios de la propiedad y tendrá consecuencias imprevistas en el sistema de propiedades.
+
+            **Nota**  No realices el registro con un valor [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371) predeterminado. Esto confundirá a los usuarios de la propiedad y tendrá consecuencias imprevistas en el sistema de propiedades.
 
 ### CreateDefaultValueCallback
 
@@ -361,7 +369,7 @@ Existe un principio general por el que los constructores de clases no deben llam
 
 ### Registro de las propiedades de dependencia de las aplicaciones C++/CX
 
-La implementación para registrar una propiedad en C++/CX es más complicada que en C#C#, tanto debido a la separación en encabezado y archivo de implementación, como debido a la inicialización en el ámbito raíz del archivo de implementación como una práctica errónea. (Las extensiones de componente Visual C++ (C++/CX) ponen el código del inicializador estático desde el ámbito raíz directamente en **DllMain**, mientras que los compiladores C# asignan los inicializadores estáticos a clases y, por lo tanto, evitan problemas de bloqueo de carga de **DllMain**). En este caso, la mejor práctica consiste en declarar una función auxiliar que se encargue de todo el registro de la propiedad de dependencia de una clase, una función por clase. Luego, por cada clase personalizada que la aplicación consuma, tendrás que hacer referencia a la función de registro del auxiliar que todas las clases personalizadas que quieres usar exponen. Llama una vez a cada función de registro del auxiliar como parte de [**Application constructor**](https://msdn.microsoft.com/library/windows/apps/br242325) (`App::App()`), antes de `InitializeComponent`. Ese constructor solo se ejecuta cuando se hace realmente referencia a la aplicación por primera vez. No se volverá a ejecutar si, por ejemplo, se reanuda una aplicación suspendida. Además, tal como se ha visto en el ejemplo de registro de C++ anterior, la comprobación de **nullptr** en torno a cada llamada de [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) es importante: garantiza que ningún llamador de la función pueda registrar dos veces la propiedad. Una segunda llamada de registro probablemente bloquearía la aplicación sin esa comprobación, ya que el nombre de la propiedad sería un duplicado. Puedes ver este patrón de implementación en el [ejemplo de controles personalizados y de usuario XAML](http://go.microsoft.com/fwlink/p/?linkid=238581) si buscas en el código la versión C++/CX de la muestra.
+La implementación para registrar una propiedad en C++/CX es más complicada que en C#C#, tanto debido a la separación en encabezado y archivo de implementación, como debido a la inicialización en el ámbito raíz del archivo de implementación como una práctica errónea. (Las extensiones de componente VisualC++ (C++/CX) ponen el código del inicializador estático desde el ámbito raíz directamente en **DllMain**, mientras que los compiladores C# asignan los inicializadores estáticos a clases y, por lo tanto, evitan problemas de bloqueo de carga de **DllMain**). En este caso, la mejor práctica consiste en declarar una función auxiliar que se encargue de todo el registro de la propiedad de dependencia de una clase, una función por clase. Luego, por cada clase personalizada que la aplicación consuma, tendrás que hacer referencia a la función de registro del auxiliar que todas las clases personalizadas que quieres usar exponen. Llama una vez a cada función de registro del auxiliar como parte de [**Application constructor**](https://msdn.microsoft.com/library/windows/apps/br242325) (`App::App()`), antes de `InitializeComponent`. Ese constructor solo se ejecuta cuando se hace realmente referencia a la aplicación por primera vez. No se volverá a ejecutar si, por ejemplo, se reanuda una aplicación suspendida. Además, tal como se ha visto en el ejemplo de registro de C++ anterior, la comprobación de **nullptr** en torno a cada llamada de [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) es importante: garantiza que ningún llamador de la función pueda registrar dos veces la propiedad. Una segunda llamada de registro probablemente bloquearía la aplicación sin esa comprobación, ya que el nombre de la propiedad sería un duplicado. Puedes ver este patrón de implementación en el [ejemplo de controles personalizados y de usuario XAML](http://go.microsoft.com/fwlink/p/?linkid=238581) si buscas en el código la versión C++/CX de la muestra.
 
 ## Temas relacionados
 
@@ -374,6 +382,6 @@ La implementación para registrar una propiedad en C++/CX es más complicada que
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

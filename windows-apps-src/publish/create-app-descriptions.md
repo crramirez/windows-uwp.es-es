@@ -3,8 +3,9 @@ author: jnHs
 Description: "La sección Descripciones del proceso de envío de la aplicación es donde proporcionas el texto y las imágenes que los clientes verán en la información de la aplicación en la Tienda."
 title: "Crear descripciones de la aplicación"
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
-ms.sourcegitcommit: 447beeae917b03dea2538e74fd9cd8ef48b0f41f
-ms.openlocfilehash: ca85f55e12713903dbbee0a4e247cfb1a51c17d3
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: bd10b94cdb3e16e8a6165610fb77adcdaca5b0a4
 
 ---
 
@@ -29,7 +30,8 @@ En la sección **Idiomas de descripción adicionales**, puedes hacer clic en **A
 
 Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío.
 
-> **Nota** Al crear una descripción en un idioma que no sea compatible con los paquetes, debes indicar qué nombre de aplicación reservado debe mostrarse en esa descripción, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre. El nombre que elijas aquí solo se aplicará a la descripción de la Tienda para este idioma y no afectará al nombre que se muestra cuando un usuario instala la aplicación.
+> 
+              **Nota** Al crear una descripción en un idioma que no sea compatible con los paquetes, debes indicar qué nombre de aplicación reservado debe mostrarse en esa descripción, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre. El nombre que elijas aquí solo se aplicará a la descripción de la Tienda para este idioma y no afectará al nombre que se muestra cuando un usuario instala la aplicación.
 
 Para editar una descripción, haz clic en el nombre del idioma en la información general del envío. Las secciones de la página **Descripción** están descritas a continuación.
 
@@ -64,7 +66,8 @@ El icono de la aplicación se usa al mostrar la descripción de la aplicación a
 
 Se trata de resúmenes de las funciones clave de la aplicación. Se muestran al cliente en una lista con viñetas en la descripción de la aplicación junto con su descripción. Hazlas breves, con unas cuantas palabras por función (y no más de 200 caracteres). Puedes incluir hasta 20 funciones.
 
-**Nota**  Aparecerán con viñetas en la información, así que no agregues tus propias viñetas.
+
+              **Nota** Aparecerán con viñetas en la información, así que no agregues tus propias viñetas.
 
  
 
@@ -72,7 +75,8 @@ Se trata de resúmenes de las funciones clave de la aplicación. Se muestran al 
 
 Describe la configuración de hardware que necesita la aplicación para funcionar correctamente. Esto es especialmente importante, si la aplicación requiere hardware que quizás no esté disponible en todos los equipos. Se muestran al cliente en una lista con viñetas en la descripción de la aplicación. Hazlas breves, con unas cuantas palabras por elemento (y no más de 200 caracteres). Puedes incluir hasta 11 elementos.
 
-**Nota**  Aparecerán con viñetas en la información, así que no agregues tus propias viñetas.
+
+              **Nota** Aparecerán con viñetas en la información, así que no agregues tus propias viñetas.
 
  
 
@@ -109,7 +113,8 @@ Escribe la dirección URL de la página web de tu aplicación. La dirección URL
 
 Escribe la dirección de correo electrónico o la dirección URL de la página web donde los clientes pueden entrar y buscar soporte técnico para la aplicación.
 
-**Importante**  Microsoft no proporciona a tus clientes soporte técnico para la aplicación.
+
+              **Importante** Microsoft no proporciona a tus clientes soporte técnico para la aplicación.
 
  
 
@@ -117,10 +122,11 @@ Escribe la dirección de correo electrónico o la dirección URL de la página w
 
 Si tienes una directiva de privacidad de la aplicación, escribe la dirección URL aquí. Eres responsable de garantizar que la aplicación cumpla con las leyes y normas de privacidad aplicables y de proporcionar una directiva de privacidad, si es necesario.
 
-**Importante**  Microsoft no proporciona una directiva de privacidad predeterminada para tu aplicación. De igual modo, tu aplicación no está cubierta por ninguna directiva de privacidad de Microsoft. Para determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) y las [Directivas de la Tienda Windows](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_5_1).
+
+              **Importante** Microsoft no proporciona una directiva de privacidad predeterminada para tu aplicación. De igual modo, tu aplicación no está cubierta por ninguna directiva de privacidad de Microsoft. Para determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) y las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

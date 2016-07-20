@@ -8,8 +8,8 @@ keywords:
 - game sample, Universal Windows Platform (UWP)
 - Direct3D 11 game
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9f62e2a42dc0a1b70e37194cd5755e51699ddc38
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 7891642d33e7391e05ae0639e36ff90e6697def6
 
 ---
 
@@ -32,11 +32,11 @@ Te enseñaremos las técnicas y consideraciones para desarrollar juegos de UWP. 
 
 Antes de empezar este tutorial, necesitas estar familiarizado con estos temas.
 
--   Microsoft C++ con Component Extensions (C++/CX). Se trata de una actualización de Microsoft C++ que incorpora el recuento automático de referencias y es el lenguaje de desarrollo de juegos de UWP con DirectX 11.1 o versiones posteriores.
+-   Microsoft C++ con Component Extensions (C++/CX). Se trata de una actualización de Microsoft C++ que incorpora el recuento automático de referencias y es el lenguaje de desarrollo de juegos de UWP con DirectX11.1 o versiones posteriores.
 -   Álgebra lineal básica y conceptos de física newtoniana.
 -   Terminología básica de programación de gráficos.
 -   Conceptos básicos de programación en Windows.
--   Conocimiento básico de las API [Direct2D](https://msdn.microsoft.com/en-us/library/windows/apps/dd370990.aspx) y [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh404569).
+-   Conocimiento básico de las API [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) y [Direct3D11](https://msdn.microsoft.com/library/windows/desktop/hh404569).
 
 ##  La muestra de juego de disparos Direct3D de la Tienda Windows
 
@@ -78,6 +78,6 @@ La muestra hace una demostración de los siguientes conceptos de juego:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

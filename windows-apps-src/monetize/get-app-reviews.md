@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de revisión de un intervalo de fechas proporcionado y otros filtros opcionales."
 title: "Obtener opiniones de la aplicación"
-ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
-ms.openlocfilehash: bb0f912bd3380e21e04fa44f2c75244c6585f03a
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 6e7e8c6a1b870031fb7055bf09c8ebbaa7dc13a5
 
 ---
 
@@ -24,28 +25,28 @@ Para usar este método, necesitas lo siguiente:
 
 -   Obtener un token de acceso de Azure AD para la aplicación.
 
-Para más información, consulta [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md).
+Para obtener más información, consulta [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md).
 
 ## Solicitud
 
 
 ### Sintaxis de la solicitud
 
-| Método | URI de solicitud                                                      |
+| Método | URI de la solicitud                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | https://manage.devcenter.microsoft.com/v1.0/my/analytics/reviews |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/reviews``` |
 
- 
+<span/> 
 
 ### Encabezado de la solicitud
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;. |
+| Autorización | cadena | Obligatorio. El token de acceso de Azure AD con la forma **Portador**&lt;*token*&gt;. |
 
- 
+<span/> 
 
-### Cuerpo de la solicitud
+### Parámetros de la solicitud
 
 <table>
 <colgroup>
@@ -132,10 +133,11 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
 </tbody>
 </table>
 
+<span/>
  
 ### Campos de filtro
 
-El parámetro *filter* del cuerpo de la solicitud contiene una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un campo y un elemento que se asocian a los operadores **eq** o **ne**; asimismo, algunos campos también son compatibles con los operadores **contains**, **gt**, **lt**, **ge**, y **le**. Las instrucciones se pueden combinar mediante **and** u **or**.
+El parámetro *filter* de la solicitud contiene una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un campo y un elemento que se asocian a los operadores **eq** o **ne**; asimismo, algunos campos también son compatibles con los operadores **contains**, **gt**, **lt**, **ge**, y **le**. Las instrucciones se pueden combinar mediante **and** u **or**.
 
 Este es un ejemplo de una cadena *filter*: *filter=contains(reviewText,'great') and contains(reviewText,'ads') and deviceRAM lt 2048 and market eq 'US'*
 
@@ -282,7 +284,7 @@ Para obtener una lista de los campos y operadores compatibles de cada campo, con
 </tbody>
 </table>
 
- 
+<span/> 
 
 ### Ejemplo de solicitud
 
@@ -307,6 +309,7 @@ Authorization: Bearer <your access token>
 | @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de datos de compra de la solicitud. |
 | TotalCount | entero    | Número total de filas en el resultado de datos de la consulta.                                                                                                                                                                                                                             |
 
+<span/>
  
 ### Valores de revisión
 
@@ -337,7 +340,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | deviceStorageCapacity  | número  | Capacidad del disco de almacenamiento principal, en GB.                                                                                                                                                                                     |
 | rating                 | número  | Clasificación de la aplicación, en estrellas.                                                                                                                                                                                                            |
 
- 
+<span/> 
 
 ### Ejemplo de respuesta
 
@@ -386,6 +389,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

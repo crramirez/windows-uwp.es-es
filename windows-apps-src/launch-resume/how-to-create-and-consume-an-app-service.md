@@ -3,8 +3,10 @@ author: TylerMSFT
 title: "Crear y usar un servicio de aplicación"
 description: "Obtén información sobre cómo escribir una aplicación para la Plataforma universal de Windows (UWP) que pueda proporcionar servicios a otras aplicaciones para UWP y cómo consumir esos servicios."
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: ade51661fa6628c76b555316f645ec6622dd299a
+keywords: app to app
+translationtype: Human Translation
+ms.sourcegitcommit: d7d7edf8d1ed6ae1c4be504cd4827bb941f14380
+ms.openlocfilehash: 13b9456d1f6ee2b592db0e5e38b9f9e7fe41764c
 
 ---
 
@@ -21,7 +23,7 @@ Obtén información sobre cómo escribir una aplicación para la Plataforma univ
 
 En este procedimiento lo crearemos todo en una solución para hacerlo más sencillo.
 
--   En Microsoft Visual Studio 2015, crea un nuevo proyecto de aplicación para UWP y asígnale el nombre AppServiceProvider. (En el cuadro de diálogo **Nuevo proyecto**, selecciona **Plantillas &gt; Otros idiomas &gt; Visual C# &gt; Windows &gt; Windows universal &gt; Aplicación vacía (Windows Universal)**). Esta será la aplicación que proporciona el servicio de aplicaciones.
+-   En Microsoft Visual Studio2015, crea un nuevo proyecto de aplicación para UWP y asígnale el nombre AppServiceProvider. (En el cuadro de diálogo **Nuevo proyecto**, selecciona **Plantillas &gt; Otros idiomas &gt; Visual C# &gt; Windows &gt; Windows universal &gt; Aplicación vacía (Windows Universal)**). Esta será la aplicación que proporciona el servicio de aplicaciones.
 
 ## Agregar una extensión de servicio de aplicaciones a package.appxmanifest
 
@@ -98,14 +100,17 @@ El atributo **EntryPoint** identifica la clase que implementa el servicio, que s
 
     Esta clase es el lugar donde el servicio de aplicaciones hará su trabajo.
 
-    Se llama a **Run()** cuando se crea la tarea en segundo plano. Como las tareas en segundo plano finalizan cuando se completa la función **Run**, el código toma un aplazamiento para que la tarea en segundo plano se mantenga hasta que atienda las solicitudes.
+    
+            Se llama a **Run()** cuando se crea la tarea en segundo plano. Como las tareas en segundo plano finalizan cuando se completa la función **Run**, el código toma un aplazamiento para que la tarea en segundo plano se mantenga hasta que atienda las solicitudes.
 
-    Se llama a **OnTaskCanceled()** cuando se cancela la tarea. La tarea se cancela cuando la aplicación cliente desecha el elemento [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704), cuando se suspende la aplicación cliente, cuando el sistema operativo se apaga o se suspende o cuando el sistema operativo se queda sin recursos para ejecutar la tarea.
+    
+            Se llama a **OnTaskCanceled()** cuando se cancela la tarea. La tarea se cancela cuando la aplicación cliente desecha el elemento [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704), cuando se suspende la aplicación cliente, cuando el sistema operativo se apaga o se suspende o cuando el sistema operativo se queda sin recursos para ejecutar la tarea.
 
 ## Escribir el código para el servicio de aplicaciones
 
 
-El código para el servicio de aplicaciones se encuentra en **OnRequestedReceived()**. Reemplaza el código auxiliar **OnRequestedReceived()** en el archivo Class1.cs de MyAppService por el código de este ejemplo. Este código obtiene un índice para un elemento de inventario y, junto con una cadena de comandos, lo pasa al servicio para recuperar el nombre y el precio del elemento de inventario especificado. Se ha quitado el código de control de errores por motivos de brevedad.
+
+            El código para el servicio de aplicaciones se encuentra en **OnRequestedReceived()**. Reemplaza el código auxiliar **OnRequestedReceived()** en el archivo Class1.cs de MyAppService por el código de este ejemplo. Este código obtiene un índice para un elemento de inventario y, junto con una cadena de comandos, lo pasa al servicio para recuperar el nombre y el precio del elemento de inventario especificado. Se ha quitado el código de control de errores por motivos de brevedad.
 
 ```cs
 private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
@@ -159,9 +164,11 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
 Ten en cuenta que **OnRequestedReceived()** es de tipo **async** porque en este ejemplo se realiza una llamada de método que admite await a [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722).
 
-Se toma un aplazamiento para que el servicio pueda usar métodos **async** en el controlador OnRequestReceived. Esto asegura que la llamada a OnRequestReceived no se completará hasta que termine de procesar el mensaje. [
+Se toma un aplazamiento para que el servicio pueda usar métodos **async** en el controlador OnRequestReceived. Esto asegura que la llamada a OnRequestReceived no se completará hasta que termine de procesar el mensaje. 
+            [
               **SendResponseAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/dn921722) se usa para enviar una respuesta junto con la finalización. **SendResponseAsync** no indica la finalización de la llamada. Es la finalización del aplazamiento lo que indica a [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712) que se ha completado el procesamiento de OnRequestReceived.
+            ](https://msdn.microsoft.com/library/windows/apps/dn921722) se usa para enviar una respuesta junto con la finalización. 
+            **SendResponseAsync** no indica la finalización de la llamada. Es la finalización del aplazamiento lo que indica a [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712) que se ha completado el procesamiento de OnRequestReceived.
 
 Los servicios de aplicaciones usan un elemento [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) para intercambiar información. El tamaño de los datos que se pueden pasar solo está limitado por los recursos del sistema. No hay claves predefinidas para su uso en el elemento **ValueSet**. Debes determinar qué valores clave usarás para definir el protocolo del servicio de aplicaciones. Debes escribir el llamador teniendo ese protocolo presente. En este ejemplo, hemos elegido una clave denominada "Command" que tiene un valor que indica si queremos que el servicio de aplicaciones proporcione el nombre del elemento de inventario o su precio. El índice del nombre de inventario se almacena en la clave "ID". El valor devuelto se almacena en la clave "Result".
 
@@ -391,6 +398,6 @@ namespace MyAppService
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -3,8 +3,9 @@ author: awkoren
 Description: "Ejecuta Desktop Converter App para convertir una aplicación de escritorio de Windows (por ejemplo, Win32, WPF y Windows Forms) en una aplicación de la Plataforma universal de Windows (UWP)."
 Search.Product: eADQiWindows 10XVcnh
 title: Vista previa de Desktop App Converter (Project Centennial)
-ms.sourcegitcommit: 07016fabb8b49e57dd0ae4ef68447451d31aa2dc
-ms.openlocfilehash: bc28197cccc0559f57abc8cb81e23bf241ca3716
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 8a22285467005722ad6ee5bf4f129a7dfdea944c
 
 ---
 
@@ -22,9 +23,14 @@ El convertidor ejecuta al instalador de escritorio en un entorno de Windows aisl
 
 En esta sección se describen los cambios entre las versiones de Desktop App Converter. 
 
-### 16/6/2016
+### 07/07/2016 (v0.1.22)
 
-* Desktop App Converter (v0.1.20) corrige los problemas que impiden las conversiones correctas en las últimas compilaciones de Windows 10 Insider Preview. 
+* Se agregó soporte técnico para detectar automáticamente las extensiones de shell de la aplicación de escritorio y declararlas en el AppXManifest del paquete para UWP. Para obtener más información sobre las extensiones de escritorio, consulte [**Extensiones para aplicaciones de escritorio convertidas**](desktop-to-uwp-extensions.md). 
+* Detección mejorada de AppExecutable para un gran conjunto de aplicaciones. 
+
+### 16/06/2016 (v0.1.20)
+
+* Corrige problemas que impedían las conversiones correctas en las últimas compilaciones de Windows 10 Insider Preview. 
 * Se reemplazó ```–CreateX86Package``` por ```–PackageArch```, lo que permite especificar la arquitectura del paquete generado. 
 
 ### 8/6/2016
@@ -61,7 +67,7 @@ El equipo debe tener las siguientes funcionalidades mínimas:
 + Traducción de direcciones de segundo nivel (SLAT)
 
 ### Recursos recomendados
-+ [Kit de desarrollo de software de Windows (SDK) para Windows 10](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk)
++ [Kit de desarrollo de software de Windows (SDK) para Windows 10](http://go.microsoft.com/fwlink/?LinkId=615097)
 
 ## Instalar Desktop App Converter   
 Desktop App Converter se basa en las características de Windows 10 que se envían como parte de las compilaciones de Windows Insider Preview. Asegúrate de que estás en la última compilación para usar el convertidor.
@@ -114,7 +120,7 @@ PS C:\>.\DesktopAppConverter.ps1 -Installer C:\Installer\MyApp.exe
 ```
 
 ## Implementa la AppX convertida
-Usa el cmdlet [Add-AppxPackage](https://technet.microsoft.com/en-us/library/hh856048.aspx) en PowerShell para implementar un paquete de la aplicación firmado (.appx) en una cuenta de usuario. Para firmar el paquete .appx, consulta la siguiente sección, "Firma el paquete AppX". Además, puedes incluir el parámetro *Register* del cmdlet para instalar desde una carpeta de archivos desempaquetados durante el proceso de desarrollo. Para obtener más información, consulta [Implementa y depura tu aplicación para UWP convertida](desktop-to-uwp-deploy-and-debug.md).
+Usa el cmdlet [Add-AppxPackage](https://technet.microsoft.com/library/hh856048.aspx) en PowerShell para implementar un paquete de la aplicación firmado (.appx) en una cuenta de usuario. Para firmar el paquete .appx, consulta la siguiente sección, "Firma el paquete AppX". Además, puedes incluir el parámetro *Register* del cmdlet para instalar desde una carpeta de archivos desempaquetados durante el proceso de desarrollo. Para obtener más información, consulta [Implementa y depura tu aplicación para UWP convertida](desktop-to-uwp-deploy-and-debug.md).
 
 ## Firma el paquete .Appx
 
@@ -126,7 +132,8 @@ C:\> MakeCert.exe -r -h 0 -n "CN=<publisher_name>" -eku 1.3.6.1.5.5.7.3.3 -pe -s
 C:\> pvk2pfx.exe -pvk <my.pvk> -spc <my.cer> -pfx <my.pfx>
 C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
 ```
-**Nota:** Cuando ejecutes MakeCert.exe y se te pida que escribas una contraseña, selecciona **Ninguno**.
+
+              **Nota:** Cuando ejecutes MakeCert.exe y se te pida que escribas una contraseña, selecciona **Ninguno**.
 
 Para obtener más información sobre los certificados y las firmas, consulta:
 
@@ -224,7 +231,7 @@ La vista previa de Desktop App Converter admite ahora la creación de paquetes d
 
 ## Consulta también
 + [Obtener Desktop App Converter](http://go.microsoft.com/fwlink/?LinkId=785437)
-+ [Lleva tu aplicación de escritorio a la Plataforma universal de Windows](https://developer.microsoft.com/en-us/windows/bridges/desktop)
++ [Lleva tu aplicación de escritorio a la Plataforma universal de Windows](https://developer.microsoft.com/windows/bridges/desktop)
 + [Traer las aplicaciones de escritorio a UWP mediante Desktop App Converter](https://channel9.msdn.com/events/Build/2016/P504)
 + [Project Centennial: llevar las aplicaciones de escritorio existentes a la Plataforma universal de Windows](https://channel9.msdn.com/events/Build/2016/B829)  
 + [UserVoice para Puente de escritorio (Project Centennial)](http://aka.ms/UserVoiceDesktopToUwp)
@@ -232,6 +239,6 @@ La vista previa de Desktop App Converter admite ahora la creación de paquetes d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

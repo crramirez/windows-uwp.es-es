@@ -2,6 +2,7 @@
 author: jnHs
 Description: "Administrar tus IAP en masa te permite realizar cambios en varias IAP al mismo tiempo, en lugar de enviar cada actualización individualmente."
 title: Administrar IAP en masa
+translationtype: Human Translation
 ms.sourcegitcommit: 475371dd55aa111f3743c03dc1600e8cfdbeb5b0
 ms.openlocfilehash: ae4d4ed33b9bd10a2b01b336c942ad3212de6533
 
@@ -10,7 +11,8 @@ ms.openlocfilehash: ae4d4ed33b9bd10a2b01b336c942ad3212de6533
 
 # Administrar IAP en masa
 
-> **Importante** Esta característica está disponible actualmente solo para las cuentas de desarrollador que se hayan unido al [Programa Insider del Centro de desarrollo](dev-center-insider-program.md). La implementación de esta característica puede cambiar antes de que esté disponible para todos los desarrolladores. Esta documentación preliminar proporciona información básica sobre cómo funciona la característica.
+> 
+            **Importante** Esta característica está disponible actualmente solo para las cuentas de desarrollador que se hayan unido al [Programa Insider del Centro de desarrollo](dev-center-insider-program.md). La implementación de esta característica puede cambiar antes de que esté disponible para todos los desarrolladores. Esta documentación preliminar proporciona información básica sobre cómo funciona la característica.
 
 Administrar tus IAP en masa te permite realizar cambios en varias IAP al mismo tiempo, en lugar de enviar cada actualización individualmente. Puedes acceder a esta funcionalidad desde la página de introducción de la aplicación haciendo clic en **Administrar IAP en masa**.
 
@@ -43,7 +45,8 @@ Antes de importar los cambios, debes actualizar el archivo .csv descargado con l
 
 Para realizar cambios en los IAP que ya has publicado, actualiza los valores que desees cambiar en la copia de la hoja de cálculo. Puedes quitar cualquier fila del IAP que no quieras actualizar o dejarlas tal cual. Ten en cuenta que si ya hay un envío en curso para ese IAP, no podrás realizar cambios con el archivo .csv.
 
-> **Importante** Al enviar actualizaciones de IAP que ya hayas publicado, no puedes cambiar los campos **Id. del producto** y **Tipo de producto**.
+> 
+            **Importante** Al enviar actualizaciones de IAP que ya hayas publicado, no puedes cambiar los campos **Id. del producto** y **Tipo de producto**.
 
 Para enviar un nuevo IAP, agrega una nueva fila y escribe la información de tu nuevo IAP. Asegúrate de escribir toda la información necesaria. 
 
@@ -52,6 +55,6 @@ Cuando hayas realizado todos los cambios, guarda el archivo .csv (con el mismo n
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

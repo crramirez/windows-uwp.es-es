@@ -5,6 +5,7 @@ ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: Temas de contraste alto
 label: High-contrast themes
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
 ms.openlocfilehash: 4201f5a0b08f1fc8d691218da0803ee04ab2c86a
 
@@ -43,7 +44,8 @@ Si es necesario cambiar un color respecto a su valor predeterminado del sistema 
 </Application.Resources
 ```
 
-* **HighContrast** no es el único nombre de clave disponible. También están **HighContrastBlack**, **HighContrastWhite** y **HighContrastCustom**. En la mayoría de los casos, solo necesitarás **HighContrast**.
+* 
+            **HighContrast** no es el único nombre de clave disponible. También están **HighContrastBlack**, **HighContrastWhite** y **HighContrastCustom**. En la mayoría de los casos, solo necesitarás **HighContrast**.
 * En **Default**, crea el tipo de [**Brush**](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx) que necesites, normalmente un **SolidColorBrush**. Dale un nombre de **x: Key** que resulte específico para su uso:<br/>
     `<SolidColorBrush x:Key="BrandedPageBackground" />`
 * Asígnale el **Color** que desees:<br/>
@@ -161,7 +163,8 @@ Los colores superpuestos o adyacentes deben distinguirse unos de otros, pero no 
 Si se usan colores de fondo de contraste alto para diferenciar elementos de la interfaz de usuario superpuestos, el único método garantizado para asegurar el contraste entre dichos elementos es introducir bordes.
 
 ## Detectar si un tema de contraste alto está habilitado  
-Usa miembros de la clase [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) para detectar la configuración actual de los temas de contraste alto. La propiedad [**HighContrast**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrast) determina si un tema de contraste alto está seleccionado actualmente. Si el valor **HighContrast** está establecido en **true**, el siguiente paso es comprobar el valor de la propiedad [**HighContrastScheme**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrastscheme) para obtener el nombre del tema de contraste alto que se usa. Los temas "Blanco en contraste alto" y "Negro en contraste alto" normalmente son valores de **HighContrastScheme** a los que el código debería responder. Las claves de [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) definidas mediante XAML no pueden tener espacios, por lo que las claves para estos temas en un diccionario de recursos normalmente son "HighContrastWhite" y "HighContrastBlack", respectivamente. También deberías tener una lógica de reserva para un tema de contraste alto predeterminado en caso de que el valor sea alguna otra cadena. En el [ejemplo de contraste alto XAML](http://go.microsoft.com/fwlink/p/?linkid=254993) se muestra esta lógica.
+Usa miembros de la clase [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) para detectar la configuración actual de los temas de contraste alto. La propiedad [**HighContrast**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrast) determina si un tema de contraste alto está seleccionado actualmente. Si el valor **HighContrast** está establecido en **true**, el siguiente paso es comprobar el valor de la propiedad [**HighContrastScheme**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrastscheme) para obtener el nombre del tema de contraste alto que se usa. Los temas "Blanco en contraste alto" y "Negro en contraste alto" normalmente son valores de **HighContrastScheme** a los que el código debería responder. Las claves de [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) definidas mediante XAML no pueden tener espacios, por lo que las claves para estos temas en un diccionario de recursos normalmente son "HighContrastWhite" y "HighContrastBlack", respectivamente. También deberías tener una lógica de reserva para un tema de contraste alto predeterminado en caso de que el valor sea alguna otra cadena. 
+            En el [ejemplo de contraste alto XAML](http://go.microsoft.com/fwlink/p/?linkid=254993) se muestra esta lógica.
 
 > [!NOTE]
 > Asegúrate de llamar al constructor [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) desde un ámbito cuando la aplicación esté inicializada y ya esté mostrando contenido.
@@ -177,6 +180,6 @@ Las aplicaciones pueden cambiar para usar valores de recursos de contraste alto 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -2,6 +2,7 @@
 author: WilliamsJason
 title: "Referencia de API de registro de carpeta dinámica de Device Portal"
 description: "Obtén información acerca de cómo tener acceso a las API de registro de carpeta dinámica mediante programación."
+translationtype: Human Translation
 ms.sourcegitcommit: ef0f1339b77a8d1f60a677b2ff19a63b68f0d6cd
 ms.openlocfilehash: 41e4cc67120b9e32fac34404ca918edcf58ba267
 
@@ -61,6 +62,6 @@ La tercera forma consiste en copiar una carpeta completa cada vez mediante [/api
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

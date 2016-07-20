@@ -19,13 +19,16 @@ La aplicación que portaremos consta de un enlace **ListBox** enlazado con un mo
 
 En los temas anteriores de esta sección se describen las diferencias entre las plataformas y se proporcionan detalles y pautas sobre el proceso de migración de diversos aspectos de una aplicación, entre ellos el marcado XAML, el enlace a un modelo de vista y el acceso a los datos. El objetivo de un caso práctico consiste en complementar esa orientación mostrando un ejemplo real en la práctica. En el caso práctico se supone que has leído las directrices, ya que no se repiten.
 
-**Nota** Cuando abras Bookstore1Universal\_10 en Visual Studio, si aparece el mensaje "Se requiere una actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+
+            **Nota** Cuando abras Bookstore1Universal\_10 en Visual Studio, si aparece el mensaje "Se requiere una actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
 
 ## Descargas
 
-[Descarga la aplicación Bookstore1\_81 Universal 8.1](http://go.microsoft.com/fwlink/?linkid=532946).
 
-[Descarga la aplicación para Windows 10 Bookstore1Universal\_10](http://go.microsoft.com/fwlink/?linkid=532950).
+            [Descarga la aplicación Bookstore1\_81 Universal 8.1](http://go.microsoft.com/fwlink/?linkid=532946).
+
+
+            [Descarga la aplicación para Windows 10 Bookstore1Universal\_10](http://go.microsoft.com/fwlink/?linkid=532950).
 
 ## Aplicación Universal 8.1
 
@@ -47,7 +50,7 @@ La solución Bookstore1\_81 es un proyecto de aplicación universal 8.1 y contie
 -   Bookstore1\_81.WindowsPhone. Este es el proyecto que crea el paquete de la aplicación para Windows Phone 8.1.
 -   Bookstore1\_81.Shared. Este es el proyecto que contiene código fuente, archivos de marcado y otros activos y recursos que usan los otros dos proyectos.
 
-Para este caso práctico, tenemos las opciones habituales que se describen en [Si ya tienes una aplicación Universal 8.1](w8x-to-uwp-root.md#if-you-have-an-81-universal-windows-app) con respecto a los dispositivos que se admiten. En este caso, la decisión es muy simple: esta aplicación tiene las mismas características y funciona principalmente con el mismo código en los formatos Windows 8.1 y Windows Phone 8.1. Por lo tanto, portaremos el contenido del proyecto compartido (y cualquier otra cosa que necesitemos de los otros proyectos) a una aplicación de Windows 10 que tenga como destino la familia de dispositivos universales (que se pueda instalar en la más amplia variedad de dispositivos).
+Para este caso práctico, tenemos las opciones habituales que se describen en [Si ya tienes una aplicación Universal 8.1](w8x-to-uwp-root.md#if-you-have-an-81-universal-windows-app) con respecto a los dispositivos que se admiten. En este caso, la decisión es muy simple: esta aplicación tiene las mismas características y funciona principalmente con el mismo código en los formatos Windows 8.1 y Windows Phone 8.1. Por lo tanto, portaremos el contenido del proyecto compartido (y cualquier otra cosa que necesitemos de los otros proyectos) a una aplicación de Windows10 que tenga como destino la familia de dispositivos universales (que se pueda instalar en la más amplia variedad de dispositivos).
 
 Es una tarea muy rápida crear un nuevo proyecto en Visual Studio, copiar archivos en él desde Bookstore1\_81 e incluir los archivos copiados en el nuevo proyecto. Empieza creando un proyecto nuevo de Aplicación vacía (Windows Universal). Asígnale el nombre Bookstore1Universal\_10. Estos son los archivos que hay que copiar de Bookstore1\_81 a Bookstore1Universal\_10.
 
@@ -59,7 +62,7 @@ Es una tarea muy rápida crear un nuevo proyecto en Visual Studio, copiar archiv
 
 **Del proyecto de Windows**
 
--   Copia BookstoreStyles.xaml. Usaremos este como un punto de partida adecuado porque todas las claves de recurso de este archivo se resolverán en una aplicación de Windows 10; no lo harán algunas de las que están en el archivo equivalente de Windows Phone.
+-   Copia BookstoreStyles.xaml. Usaremos este como un punto de partida adecuado porque todas las claves de recurso de este archivo se resolverán en una aplicación de Windows10; no lo harán algunas de las que están en el archivo equivalente de Windows Phone.
 
 Edita el código fuente y los archivos de marcado que acabas de copiar y cambia las referencias al espacio de nombres Bookstore1\_81 a Bookstore1Universal\_10. Una forma rápida de hacerlo es usar la función **Reemplazar en archivos**. No es necesario hacer cambios de código en el modelo de vista ni en ningún otro código imperativo. Pero solo para que sea más fácil averiguar la versión de la aplicación que se está ejecutando, cambia el valor devuelto por la propiedad **Bookstore1Universal\_10.BookstoreViewModel.AppName** de "BOOKSTORE1\_81" a "BOOKSTORE1UNIVERSAL\_10".
 
@@ -77,7 +80,7 @@ La vista y el modelo de vista funcionan juntos correctamente y **ListBox** está
 
 ## Estilos universales
 
-La aplicación Bookstore1\_81 usa dos diccionarios de recursos distintos (BookstoreStyles.xaml) para adaptar sus estilos a los sistemas operativos Windows 8.1 y Windows Phone 8.1. Ninguno de estos dos archivos BookstoreStyles.xaml contiene exactamente los estilos que necesitamos para nuestra aplicación de Windows 10. Pero la buena noticia es que lo que queremos es realmente mucho más sencillo que cualquiera de ellos. Por lo tanto, los pasos siguientes implicarán eliminar y simplificar los archivos y el marcado de nuestro proyecto. Los pasos se indican a continuación. Puedes usar los vínculos que aparecen en la parte superior de este tema para descargar los proyectos y ver los resultados de todos los cambios entre este punto y el final del caso práctico.
+La aplicación Bookstore1\_81 usa dos diccionarios de recursos distintos (BookstoreStyles.xaml) para adaptar sus estilos a los sistemas operativos Windows 8.1 y Windows Phone 8.1. Ninguno de estos dos archivos BookstoreStyles.xaml contiene exactamente los estilos que necesitamos para nuestra aplicación de Windows10. Pero la buena noticia es que lo que queremos es realmente mucho más sencillo que cualquiera de ellos. Por lo tanto, los pasos siguientes implicarán eliminar y simplificar los archivos y el marcado de nuestro proyecto. Los pasos se indican a continuación. Puedes usar los vínculos que aparecen en la parte superior de este tema para descargar los proyectos y ver los resultados de todos los cambios entre este punto y el final del caso práctico.
 
 -   Para ajustar el espaciado entre los elementos, busca la plantilla de datos `BookTemplate` en MainPage.xaml y elimina el `Margin="0,0,0,8"` de la raíz **Grid**.
 -   Además, en `BookTemplate`, hay referencias a `BookTemplateTitleTextBlockStyle` y `BookTemplateAuthorTextBlockStyle`. Bookstore1\_81 usaba dichas claves como direccionamiento indirecto de manera que una sola clave tenía distintas implementaciones en las dos aplicaciones. Ya no necesitamos el direccionamiento indirecto; podemos hacer referencia a estilos del sistema directamente. Por lo tanto, reemplaza las referencias por `TitleTextBlockStyle` y `SubtitleTextBlockStyle`, respectivamente.

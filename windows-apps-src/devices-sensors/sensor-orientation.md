@@ -4,8 +4,8 @@ ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
 title: "Orientación del sensor"
 description: "Los datos de sensor procedentes de las clases Accelerometer, Gyrometer, Compass, Inclinometer y OrientationSensor se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante la orientación horizontal del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3da7957bf9b162f1ac1533ccff90c8764f34890a
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 0f1123d3be66973d5b56a4789b1ff6e171f94900
 
 ---
 # Orientación del sensor
@@ -33,7 +33,7 @@ En la siguiente imagen se muestra la orientación de pantalla en Landscape y la 
 
 ![Orientación de pantalla en Landscape con la orientación del dispositivo en LandscapeFlipped](images/accelerometer-axis-orientation-landscape-180-with-text-inverted.png)
 
-Los valores de orientación se consultan a través de la clase [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/Dn264258), usando para ello el método [**GetForCurrentView**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.display.displayinformation.getforcurrentview.aspx) con la propiedad [**CurrentOrientation**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.display.displayinformation.currentorientation.aspx). Luego, se puede crear lógica contrastándolos con la enumeración [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/BR226142). No olvides que, por cada orientación que admitas, deberás admitir también una conversión de los ejes de referencia a dicha orientación.
+Los valores de orientación se consultan a través de la clase [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/Dn264258), usando para ello el método [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.getforcurrentview.aspx) con la propiedad [**CurrentOrientation**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.currentorientation.aspx). Luego, se puede crear lógica contrastándolos con la enumeración [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/BR226142). No olvides que, por cada orientación que admitas, deberás admitir también una conversión de los ejes de referencia a dicha orientación.
 
 ## Dispositivos con orientación horizontal predeterminada y dispositivos con orientación vertical predeterminada
 
@@ -171,6 +171,6 @@ Los datos de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

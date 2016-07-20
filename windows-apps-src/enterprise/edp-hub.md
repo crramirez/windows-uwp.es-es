@@ -4,16 +4,17 @@ Description: "En este tema del centro se describe un panorama completo de desarr
 MS-HAID: dev\_enterprise.edp\_hub
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: "Protección de datos de empresa (EDP)"
+title: Enterprise Data Protection (EDP)
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 97bdbce8360fabad63f9fe7e85e5172ccd83f403
+ms.sourcegitcommit: 235a0d96c0cf86fdb16a0a6b933fc0f2bbed99f0
+ms.openlocfilehash: 2cae64ff234a4fb85fd6a3e50ade3b91480b36c8
 
 ---
 
-# Protección de datos de empresa (EDP)
+# Enterprise Data Protection (EDP)
 
-__Nota__ La directiva de Protección de datos de empresa (EDP) no se puede aplicar en la versión 1511 de Windows 10 (compilación 10586) o en una versión anterior.
+> [!NOTE]
+> La directiva de Enterprise Data Protection (EDP) no se puede aplicar en Windows 10, versión 1511 (compilación 10586), ni en versiones anteriores.
 
 En este tema del centro se describe un panorama completo de desarrollador sobre cómo Protección de datos de empresa (EDP) se relaciona con los archivos, los búferes, el Portapapeles, las redes, las tareas en segundo plano y la protección de datos con la pantalla bloqueada.
 
@@ -56,12 +57,13 @@ La siguiente tarea consiste en crear una aplicación que tenga en cuenta (y pued
 
 Una vez que la aplicación está en la lista de aplicaciones permitidas, podrá leer los datos protegidos. Asimismo, de manera predeterminada, el sistema protegerá automáticamente cualquier salida de datos de la aplicación. La protección automática es necesaria porque la empresa administrativa debe, de un modo u otro, garantizar que los datos de la empresa permanecen bajo su propio control. Sin embargo, mantener este control estricto en la aplicación es solo la manera predeterminada de lograr esto. Otra opción mejor consiste en pedir al sistema que confíe en ti lo suficiente como para que te ofrezca mayor flexibilidad y poder. Para ello, debes aumentar la inteligencia de la aplicación. Esto significa que debes ir un paso más allá de la lista de aplicaciones permitidas; significa que debes habilitar la aplicación para empresas y poder declarar que lo está.
 
-La aplicación está habilitada si usa las técnicas que describiremos para mantener de forma autónoma los datos empresariales protegidos, independientemente de si están en reposo, en uso o en desarrollo. Una aplicación habilitada reconoce orígenes de datos empresariales y datos empresariales y los protege cuando estos llegan a la aplicación. Si está habilitada, también significa que tiene en cuenta, y cumple, la directiva EDP siempre que los datos empresariales salen de tu aplicación. Por ejemplo, no permite que el contenido vaya a un punto de conexión de red no empresarial, encapsula los datos en un formulario cifrado portátil antes de permitir que utilicen un perfil móvil y, posiblemente (según la configuración de directiva), pide confirmación al usuario antes de pegar datos empresariales en una aplicación que no está en la lista de aplicaciones permitidas. Una vez hayas habilitado la aplicación, esta anuncia al sistema que está habilitada declarando la funcionalidad restringida **enterpriseDataPolicy**. Para obtener más información sobre cómo trabajar con funcionalidades restringidas, consulta [Funcionalidades especiales y restringidas](https://msdn.microsoft.com/library/windows/apps/mt270968#special_and_restricted_capabilities).
+La aplicación está habilitada si usa las técnicas que describiremos para mantener de forma autónoma los datos empresariales protegidos, independientemente de si están en reposo, en uso o en desarrollo. Una aplicación habilitada reconoce orígenes de datos empresariales y datos empresariales y los protege cuando estos llegan a la aplicación. Si está habilitada, también significa que tiene en cuenta, y cumple, la directiva EDP siempre que los datos empresariales salen de tu aplicación. Por ejemplo, no permite que el contenido vaya a un punto de conexión de red no empresarial, encapsula los datos en un formulario cifrado portátil antes de permitir que utilicen un perfil móvil y, posiblemente (según la configuración de directiva), pide confirmación al usuario antes de pegar datos empresariales en una aplicación que no está en la lista de aplicaciones permitidas. Una vez hayas habilitado la aplicación, esta anuncia al sistema que está habilitada declarando la funcionalidad restringida **enterpriseDataPolicy**. Para obtener más información sobre cómo trabajar con funcionalidades restringidas, consulta [Funcionalidades especiales y restringidas](https://msdn.microsoft.com/library/windows/apps/mt270968#special-and-restricted-capabilities).
 
 Idealmente, todos los datos empresariales son datos protegidos que están tanto en reposo como en desarrollo. No obstante, inevitablemente, debe haber un período breve entre el que los datos empresariales se generan inicialmente y se protegen. Además, a veces, los datos empresariales pueden existir en un punto de conexión de red empresarial sin estar cifrados. Una aplicación habilitada es capaz de proteger de forma independiente dichos datos; en el caso de las aplicaciones permitidas, pero que no están habilitadas, el sistema debe imponerles la protección.
 
 Esto se debe a que una aplicación que no está habilitada siempre se ejecuta en modo de empresa. El sistema se asegura de ello. Sin embargo, una aplicación habilitada puede moverse libremente entre el modo personal y empresarial, y según corresponda para el tipo de datos con los que trabaje en cualquier momento determinado. También es importante que una aplicación habilitada respete los datos personales y que no etiquete datos personales como datos empresariales. Es posible que una aplicación administre simultáneamente datos empresariales y personales, siempre que mantenga estos requisitos. En la sección siguiente, se muestra cómo cambiar los modos en el código.
 
+<span id="confirming-an-identity-is-managed"/>
 ## Confirmar la administración de una entidad y determinar el nivel de aplicación de directivas de protección
 
 Por lo general, la aplicación obtiene una identidad empresarial desde un recurso externo, como una dirección de correo electrónico del buzón de correo, un dominio administrado o un nombre de host de URI. Puedes llamar a [**ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync**](https://msdn.microsoft.com/library/windows/apps/dn706027) para obtener la identidad administrada, si existe, de un nombre de host del punto de conexión de red.
@@ -102,12 +104,12 @@ El siguiente paso consiste en determinar e implementar el nivel de aplicación d
 ## Características de EDP de un vistazo
 
 
-**Protección de archivos y búfer.**
+**Protección de archivos y búfer**
 
 -   La aplicación puede proteger, contener y borrar los datos asociados con una identidad de empresa.
--   Windows controla la administración de claves. Windows usa las teclas de RMS de la empresa cuando están disponibles para el dispositivo; de lo contrario, Windows retrocede a la protección de eliminación selectiva local.
+-   Windows controla la administración de claves. Windows usa las claves RMS de la empresa cuando están disponibles para el dispositivo; de lo contrario, Windows recurre a la protección de eliminación selectiva local.
 
-**Administración de directivas de dispositivo.**
+**Administración de directivas de dispositivo**
 
 -   La aplicación puede consultar la identidad (empresa u organización) que administra el dispositivo.
 -   La aplicación puede proteger a los usuarios de la divulgación involuntaria de datos mediante la asociación de una identidad con los datos en cuestión.
@@ -134,7 +136,7 @@ Consulta [Etiquetado de conexiones de red con identidad EDP](../networking/taggi
 
 ## Protección de datos con la pantalla bloqueada (DPL) y tareas en segundo plano
 
-Una organización puede optar por administrar una directiva de "protección de datos con la pantalla bloqueada (DPL)" segura, en la que las claves de cifrado que se necesiten para acceder a los recursos protegidos se quiten temporalmente de la memoria del dispositivo cuando este último esté bloqueado. Para preparar la aplicación para esta posibilidad, consulta la sección [Controlar los eventos de bloqueo de dispositivo y evitar dejar contenido no protegido en la memoria](#handle_lock_events) en este tema. Asimismo, si la aplicación tiene una tarea en segundo plano que debe proteger archivos, consulta [Protect enterprise data in a new file (for a background task) (Proteger datos empresariales en un nuevo archivo [para una tarea en segundo plano])](../files/protect-your-enterprise-data-with-edp.md#protect_data_new_file_bg).
+Una organización puede optar por administrar una directiva de "protección de datos con la pantalla bloqueada (DPL)" segura, en la que las claves de cifrado que se necesiten para acceder a los recursos protegidos se quiten temporalmente de la memoria del dispositivo cuando este último esté bloqueado. Para preparar la aplicación para esta posibilidad, consulta la sección [Controlar los eventos de bloqueo de dispositivo y evitar dejar contenido no protegido en la memoria](#handle-lock-events) en este tema. Asimismo, si la aplicación tiene una tarea en segundo plano que debe proteger archivos, consulta [Protect enterprise data in a new file (for a background task) (Proteger datos empresariales en un nuevo archivo [para una tarea en segundo plano])](../files/protect-your-enterprise-data-with-edp.md#protect-data-new-file-bg).
 
 ## Aplicación de directivas de la interfaz de usuario
 
@@ -172,15 +174,17 @@ private void SwitchMailbox(Mailbox targetMailbox)
     }
 }
 ```
-
+<span id="handle-lock-events"/>
 ## Controlar los eventos de bloqueo del dispositivo y evitar dejar contenido no protegido en la memoria
 
 
 En este escenario, tomaremos el ejemplo de una aplicación de correo habilitada diseñada para administrar el correo personal y empresarial. Cuando la aplicación se ejecuta en una organización que ha optado por administrar una directiva de "protección de datos con la pantalla bloqueada" (DPL) segura, la aplicación debe asegurarse de que quita todos los datos confidenciales de la memoria mientras el dispositivo está bloqueado. Para ello, se registra en los eventos [**ProtectionPolicyManager.ProtectedAccessSuspending**](https://msdn.microsoft.com/library/windows/apps/dn705787) y [**ProtectionPolicyManager.ProtectedAccessResumed**](https://msdn.microsoft.com/library/windows/apps/dn705786) para recibir una notificación siempre que el dispositivo se bloquee o desbloquee (en caso de que la DPL esté activada).
 
-[
+
+            [
               **ProtectedAccessSuspending**
-            ](https://msdn.microsoft.com/library/windows/apps/dn705787) se genera antes de que se quiten temporalmente las claves de protección de datos aprovisionadas en el dispositivo. Estas claves se quitan cuando el dispositivo se bloquea con el fin de garantizar que no puede haber ningún acceso no autorizado a los datos cifrados mientras el dispositivo está bloqueado y posiblemente no lo posee su propietario. [
+            ](https://msdn.microsoft.com/library/windows/apps/dn705787) se genera antes de que se quiten temporalmente las claves de protección de datos aprovisionadas en el dispositivo. Estas claves se quitan cuando el dispositivo se bloquea con el fin de garantizar que no puede haber ningún acceso no autorizado a los datos cifrados mientras el dispositivo está bloqueado y posiblemente no lo posee su propietario. 
+            [
               **ProtectedAccessResumed**
             ](https://msdn.microsoft.com/library/windows/apps/dn705786) se genera una vez que las claves vuelven a estar disponibles en el momento del desbloqueo del dispositivo.
 
@@ -382,6 +386,6 @@ Windows.Security.EnterpriseData.ProtectionPolicyManager.RevokeContent("contoso.c
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

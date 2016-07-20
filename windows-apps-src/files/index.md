@@ -4,8 +4,8 @@ ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: Archivos, carpetas y bibliotecas
 description: "Obtén información sobre la lectura y escritura de la configuración de la aplicación, los selectores de archivos y carpetas y las ubicaciones de espacios aislados como, por ejemplo, la biblioteca de vídeos y música."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2056a5adee0ce6e65962eeba21fccbfe976c811a
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: ea52cafab084f202705282d63f4a37ec0d65bd03
 
 ---
  # Archivos, carpetas y bibliotecas
@@ -24,7 +24,7 @@ Usa las API de los espacios de nombres [Windows.Storage](https://msdn.microsoft.
 | [Usar Enterprise Data Protection (EDP) para proteger archivos](protect-your-enterprise-data-with-edp.md) | En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr realizar algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con los archivos. |
 | [Usar Enterprise Data Protection (EDP) para proteger flujos y búferes](use-edp-to-protect-streams-and-buffers.md) | En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con los flujos y búferes. |
 | [Acceso a contenido de Grupo Hogar](quickstart-accessing-homegroup-content.md) | Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye imágenes, música y vídeos. |
-| [Determinar la disponibilidad de los archivos de Microsoft OneDrive](quickstart-determining-availability-of-microsoft-onedrive-files.md) | Determina si un archivo de Microsoft OneDrive está disponible mediante la propiedad [StorageFile.IsAvailable](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.storagefile.isavailable.aspx). |
+| [Determinar la disponibilidad de los archivos de Microsoft OneDrive](quickstart-determining-availability-of-microsoft-onedrive-files.md) | Determina si un archivo de Microsoft OneDrive está disponible mediante la propiedad [StorageFile.IsAvailable](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx). |
 | [Archivos y carpetas de las bibliotecas de música, imágenes y vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md) | Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados. |
 | [Realizar un seguimiento de los archivos y carpetas usados recientemente](how-to-track-recently-used-files-and-folders.md) | Realiza un seguimiento de los archivos a los que el usuario accede con mayor frecuencia agregándolos a la lista de elementos usados recientemente (MRU) de la aplicación. La plataforma administra la lista MRU automáticamente ordenando los elementos según la hora del último acceso y eliminando los más antiguos cuando se alcanza el límite de 25 elementos en la lista. Todas las aplicaciones tienen sus propias listas de MRU. |
 | [Acceder a la tarjeta SD](access-the-sd-card.md) | Puedes almacenar y tener acceso a datos no esenciales en una tarjeta microSD, especialmente en los dispositivos móviles de bajo costo que tienen un almacenamiento interno limitado. |
@@ -46,6 +46,6 @@ Usa las API de los espacios de nombres [Windows.Storage](https://msdn.microsoft.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

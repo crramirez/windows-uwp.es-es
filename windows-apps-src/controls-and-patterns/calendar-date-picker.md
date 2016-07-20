@@ -5,6 +5,7 @@ title: Selector de fecha del calendario
 ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
 label: Calendar date picker
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
 ms.openlocfilehash: 7ae444d9e096834daa2eef71c691b9bb8b86d7c4
 
@@ -68,7 +69,8 @@ Al configurar la fecha en el código, el valor está restringido por las propied
 
 Puedes controlar el evento [**DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx) para obtener una notificación cuando el valor Date haya cambiado.
 
-> **Nota**
+> 
+            **Nota**
             &nbsp;&nbsp;Para obtener información importante acerca de los valores de fecha, consulta [Valores de DateTime y Calendar](date-and-time.md#datetime-and-calendar-values) en el artículo Controles de fecha y hora.
 
 ### Establecer un encabezado y un texto de marcador de posición
@@ -92,6 +94,6 @@ El texto de marcador de posición predeterminado es "seleccionar una fecha". Pue
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -3,8 +3,9 @@ author: awkoren
 Description: "Implementa y depura una aplicación para la Plataforma universal de Windows (UWP) convertida a partir de una aplicación de escritorio de Windows (Win32, WPF y Windows Forms) mediante el uso de las extensiones de conversión de escritorio."
 Search.Product: eADQiWindows 10XVcnh
 title: "Implementar y depurar una aplicación de la Plataforma universal de Windows (UWP) convertida a partir de una aplicación de escritorio de Windows"
-ms.sourcegitcommit: 606d5237cb67cb4439704f81b180c3c48cc1556f
-ms.openlocfilehash: 14634c12435cd8d6d4471a65c0f8deb36e3b1c80
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 618b129449d285054604008615c32de74c8bfd9b
 
 ---
 
@@ -123,7 +124,7 @@ Puedes empezar de este modo:
 
 10. Por último, ahora puedes establecer un punto de interrupción en el código de Win32 y presionar la tecla F5 para iniciar el depurador. Copiará las actualizaciones que realizaste en tu aplicación de Win32 en el paquete AppX y te permitirá depurar directamente desde dentro de Visual Studio.
 
-11. Si actualizas tu aplicación, necesitarás usar MakeAppX para volver a empaquetar la aplicación. Para obtener más información, consulta [App packager (MakeAppx.exe) (Empaquetador de aplicaciones [MakeAppx.exe])](https://msdn.microsoft.com/en-us/library/windows/desktop/hh446767(v=vs.85).aspx). 
+11. Si actualizas tu aplicación, necesitarás usar MakeAppX para volver a empaquetar la aplicación. Para obtener más información, consulta [App packager (MakeAppx.exe) (Empaquetador de aplicaciones [MakeAppx.exe])](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx). 
 
 Si tienes varias configuraciones de compilación (por ejemplo, para lanzamiento y depuración), puedes agregar lo siguiente al archivo AppXFileList.xml para copiar la compilación de Win32 desde distintas ubicaciones:
 
@@ -215,11 +216,11 @@ Dentro de una carpeta denominada VFS, se muestran las carpetas que contienen los
 
 [Vista previa de Desktop App Converter (Project Centennial)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter)
 
-[Convertir manualmente la aplicación de escritorio de Windows en una aplicación para la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-manual-conversion)
+[Convertir manualmente la aplicación de escritorio de Windows en una aplicación para la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion)
 
 [Puente de la aplicación de escritorio a ejemplos de código de UWP en GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

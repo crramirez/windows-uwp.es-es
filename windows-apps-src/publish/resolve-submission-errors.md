@@ -3,6 +3,7 @@ author: jnHs
 Description: "Si se producen errores después de enviar la aplicación a la Tienda, tienes que resolverlos para poder continuar el proceso de certificación."
 title: "Resolver errores de envío"
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
+translationtype: Human Translation
 ms.sourcegitcommit: e295011db20d151f54e2581f8c67014b30261eb6
 ms.openlocfilehash: cd0e1011bd1f857d8c859428ae0ff7e755db842e
 
@@ -24,11 +25,16 @@ Es posible que veas **error 2001** cuando se detectan problemas con los paquetes
 
 Hay una serie de problemas que pueden causar este error. Revisa la lista siguiente para determinar lo que es posible que se aplique a los paquetes.
 
--   **Uno o más ensamblados del paquete se han ofuscado incorrectamente:** usa una herramienta diferente para realizar la ofuscación o quita la ofuscación. El proceso de compilación optimiza los ensamblados ofuscados pero, en ocasiones, algunos ensamblados se ofuscan con una herramienta que modifica el MSIL de una forma no compatible que provoca un error.
--   **El tamaño de uno o más métodos de la aplicación supera los 256 KB de nivel de integridad:** refactoriza el método incorrecto en funciones más pequeñas. El tamaño de MSIL para métodos de un ensamblado se puede determinar mediante la herramienta ILDASM.
--   **Error en la validación de la firma de nombre seguro para uno o más ensamblados:** este error suele ocurrir cuando la firma de nombre seguro se realizó con una clave diferente a la esperada en los metadatos del ensamblado. Firma con la clave correcta o quita la firma de nombre seguro.
--   **El paquete contiene ensamblados en modo mixto (con código administrado y nativo):** los ensamblados en modo mixto no son compatibles con Windows Phone. Quita los ensamblados de modo mixto del paquete y vuelve a enviar la aplicación.
--   **Un ensamblado de Windows Phone 8.1 XAP o appx/appxbundle no es válido:** asegúrate de que el archivo .winmd tiene al menos un punto de entrada público. Si es necesario, puedes usar cualquier aplicación descompilador para revisar el código y comprobar si hay puntos de entrada públicos.
+-   
+            **Uno o más ensamblados del paquete se han ofuscado incorrectamente:** usa una herramienta diferente para realizar la ofuscación o quita la ofuscación. El proceso de compilación optimiza los ensamblados ofuscados pero, en ocasiones, algunos ensamblados se ofuscan con una herramienta que modifica el MSIL de una forma no compatible que provoca un error.
+-   
+            **El tamaño de uno o más métodos de la aplicación supera los 256 KB de nivel de integridad:** refactoriza el método incorrecto en funciones más pequeñas. El tamaño de MSIL para métodos de un ensamblado se puede determinar mediante la herramienta ILDASM.
+-   
+            **Error en la validación de la firma de nombre seguro para uno o más ensamblados:** este error suele ocurrir cuando la firma de nombre seguro se realizó con una clave diferente a la esperada en los metadatos del ensamblado. Firma con la clave correcta o quita la firma de nombre seguro.
+-   
+            **El paquete contiene ensamblados en modo mixto (con código administrado y nativo):** los ensamblados en modo mixto no son compatibles con Windows Phone. Quita los ensamblados de modo mixto del paquete y vuelve a enviar la aplicación.
+-   
+            **Un ensamblado de Windows Phone 8.1 XAP o appx/appxbundle no es válido:** asegúrate de que el archivo .winmd tiene al menos un punto de entrada público. Si es necesario, puedes usar cualquier aplicación descompilador para revisar el código y comprobar si hay puntos de entrada públicos.
 
 Otro error que puede aparecer después de enviar la aplicación es el **error 1300**. Esto ocurre cuando ya se han precompilado uno o varios ensamblados (o todo el paquete). Para solucionar este problema, recompila el paquete de la aplicación en Microsoft Visual Studio y, a continuación, envía el paquete recién generado.
 
@@ -39,7 +45,8 @@ Si aparece un error que dice **El nombre encontrado en el paquete no es uno de l
 - Ve a la página de la aplicación [Identidad de la aplicación](view-app-identity-details.md) (en **Administración de aplicaciones**) para confirmar si la aplicación tiene una identidad asignada. Si no la tiene, verás una opción para crear una. Debes reservar un nombre para tu aplicación con el fin de crear la identidad. Asegúrate de que este sea el nombre que usaste en el paquete.
 - Si la aplicación ya tiene una identidad, puede significar que aún tienes que reservar el nombre que quieras usar en el paquete. En **Administración de aplicaciones**, haz clic en [Administrar nombres de la aplicación](manage-app-names.md). Escribe el nombre que te gustaría usar y haz clic en **Reservar nombre de aplicación**.
 
-> **Importante** Si el nombre que quieres usar no está disponible, es posible que otra aplicación ya haya reservado ese nombre. Si la aplicación ya está publicada con ese nombre o si crees que tienes derecho a usar ese nombre, [ponte en contacto con soporte técnico](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
+> 
+            **Importante** Si el nombre que quieres usar no está disponible, es posible que otra aplicación ya haya reservado ese nombre. Si la aplicación ya está publicada con ese nombre o si crees que tienes derecho a usar ese nombre, [ponte en contacto con soporte técnico](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
 
  
 
@@ -51,6 +58,6 @@ Si aparece un error que dice **El nombre encontrado en el paquete no es uno de l
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

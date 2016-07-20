@@ -3,8 +3,9 @@ author: eliotcowley
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
 description: "En este tema se ofrece una descripción general sobre cómo agregar la administración de derechos digitales (DRM) basada en hardware de PlayReady a una aplicación para la Plataforma universal de Windows (UWP)."
 title: DRM de hardware
-ms.sourcegitcommit: b782d1e3d4f5c90e4cac9fbad3877c5457a27c45
-ms.openlocfilehash: ec443d26652ba6c1ff5de2b96749825890d0228a
+translationtype: Human Translation
+ms.sourcegitcommit: 22ce05ab6f24c3ee41798732c35314b3dad87ea8
+ms.openlocfilehash: b7867317c37edf44d9edfaaf28d97a3f23b22814
 
 ---
 
@@ -14,7 +15,8 @@ ms.openlocfilehash: ec443d26652ba6c1ff5de2b96749825890d0228a
 
 En este tema se ofrece una descripción general sobre cómo agregar la administración de derechos digitales (DRM) basada en hardware PlayReady a una aplicación para la Plataforma universal de Windows (UWP).
 
-> [!NOTE] La DRM basada en hardware PlayReady se admite en una gran variedad de dispositivos, incluidos dispositivos Windows y que no son Windows, como televisores, teléfonos y tabletas. Para que un dispositivo Windows admita la DRM de hardware PlayReady, debe ejecutar Windows 10 y tener una configuración de hardware compatible.
+> [!NOTE] 
+> La DRM basada en hardware PlayReady se admite en una gran variedad de dispositivos, incluidos dispositivos Windows y que no son Windows, como televisores, teléfonos y tabletas. Para que un dispositivo Windows admita la DRM de hardware PlayReady, debe ejecutar Windows10 y tener una configuración de hardware compatible.
 
 Cada vez más proveedores de contenido se encaminan al uso de protecciones basadas en hardware para conceder permiso para reproducir contenido completo de alto valor en las aplicaciones. Para cubrir esta necesidad, se ha agregado a PlayReady una compatibilidad sólida con la implementación de hardware del cifrado principal. Esta compatibilidad permite la reproducción segura de alta definición (1080p) y altísima definición (UHD) de contenido en varias plataformas de dispositivos. Se protege el material de clave (incluyendo claves privadas, claves de contenido y cualquier otro material de clave que se use para derivar o desbloquear dichas claves), así como muestras de vídeo descifradas comprimidas y descomprimidas mediante el aprovechamiento de la seguridad de hardware.
 
@@ -28,9 +30,10 @@ Los detalles sobre la implementación de Windows TEE está fuera del ámbito de 
 
 ## Consideraciones para el uso de la DRM de hardware.
 
-En este tema se ofrece una lista breve de puntos que deben tenerse en cuenta para desarrollar aplicaciones diseñadas para usar DRM de hardware. Como se explica en [DRM PlayReady](playready-client-sdk.md#output-protection), con la HWDRM PlayReady para Windows 10, todas las protecciones de salida se aplican desde dentro de la implementación de Windows TEE, lo que tiene algunas consecuencias en los comportamientos de la protección de salida:
+En este tema se ofrece una lista breve de puntos que deben tenerse en cuenta para desarrollar aplicaciones diseñadas para usar DRM de hardware. Como se explica en [DRM PlayReady](playready-client-sdk.md#output-protection), con la HWDRM PlayReady para Windows10, todas las protecciones de salida se aplican desde dentro de la implementación de Windows TEE, lo que tiene algunas consecuencias en los comportamientos de la protección de salida:
 
--   **Compatibilidad con el nivel de protección de salida (OPL) para vídeo digital sin comprimir 270:** La HWDRM PlayReady para Windows 10 no admite una resolución menor y aplicará el uso de HDCP. Microsoft recomienda que el contenido de alta definición para la HWDRM tenga un OPL mayor de 270 (aunque no es necesario). Además, Microsoft recomienda que se establezca una restricción de tipo HDCP en la licencia (HDCP versión 2.2 en Windows 10).
+-   
+            **Compatibilidad con el nivel de protección de salida (OPL) para vídeo digital sin comprimir 270:** La HWDRM PlayReady para Windows10 no admite una resolución menor y aplicará el uso de HDCP. Microsoft recomienda que el contenido de alta definición para la HWDRM tenga un OPL mayor de 270 (aunque no es necesario). Además, Microsoft recomienda que se establezca una restricción de tipo HDCP en la licencia (HDCP versión 2.2 en Windows10).
 -   A diferencia de la DRM de software, se aplican protecciones de salida a todos los monitores basadas en el monitor menos capacitado. Por ejemplo, si el usuario tiene dos monitores conectados y solo uno de ellos es compatible con HDCP, se producirá un error en la reproducción si la licencia requiere HDCP, incluso si el contenido solamente se representa en el monitor compatible con HDCP. En el caso de la DRM de software (SWDRM), el contenido se podría reproducir siempre que solo se representara en el monitor compatible con HDCP.
 -   No se garantiza que el cliente pueda usar la HWDRM ni que esta sea segura, a menos que las claves de contenido y las licencias cumplan las siguientes condiciones:
     -   La licencia que se use para la clave de contenido de vídeo debe tener una propiedad de nivel de seguridad mínimo de 3000.
@@ -97,6 +100,6 @@ También puedes usar la propiedad [**PlayReadyStatics.PlayReadyCertificateSecuri
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

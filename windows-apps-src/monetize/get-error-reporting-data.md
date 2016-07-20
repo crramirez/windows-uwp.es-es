@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados del informe de errores de un intervalo de fechas y otros filtros opcionales."
 title: Obtener los datos del informe de errores
-ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
-ms.openlocfilehash: 5b2421daf9df4ca417d5089166c0927e2b2f7436
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 682f727a21d74f5cea8fddc4886c873d537e1cfb
 
 ---
 
@@ -31,21 +32,21 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
 
 ### Sintaxis de la solicitud
 
-| Método | URI de solicitud                                                          |
+| Método | URI de la solicitud                                                          |
 |--------|----------------------------------------------------------------------|
-| GET    | https://manage.devcenter.microsoft.com/v1.0/my/analytics/failurehits |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/failurehits``` |
 
- 
+<span/> 
 
 ### Encabezado de la solicitud
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;. |
 
- 
+<span/> 
 
-### Cuerpo de la solicitud
+### Parámetros de solicitud
 
 <table>
 <colgroup>
@@ -154,10 +155,11 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
 </tbody>
 </table>
 
+<span/>
  
 ### Campos de filtro
 
-El parámetro *filter* del cuerpo de la solicitud contiene una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un campo y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Estos son algunos ejemplos de parámetros *filter*:
+El parámetro *filter* de la solicitud contiene una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un campo y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Estos son algunos ejemplos de parámetros *filter*:
 
 -   *filter=market eq 'US' and gender eq 'm'*
 -   *filter=(market ne 'US') and (gender ne 'Desconocido') and (gender ne 'm') and (market ne 'NO') and (ageGroup ne 'mayor que 55' or ageGroup ne ‘menor que 13’)*
@@ -241,7 +243,7 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 </tbody>
 </table>
 
- 
+<span/> 
 
 ### Ejemplo de solicitud
 
@@ -266,7 +268,8 @@ Authorization: Bearer <your access token>
 | @nextLink  | cadena  | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de errores de la solicitud. |
 | TotalCount | número | Número total de filas en el resultado de datos de la consulta.                                                                                                                                                                                                                     |
 
- 
+<span/>
+
 ### Valores de error
 
 Los elementos en la matriz *Value* contienen los siguientes valores.
@@ -288,7 +291,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | eventCount      | número | Número de eventos atribuidos a este error del nivel de agregación especificado.                                                                                                                                            |
 | deviceCount     | número | Número de dispositivos únicos que corresponden a este error del nivel de agregación especificado.                                                                                                                                        |
 
- 
+<span/> 
 
 ### Ejemplo de respuesta
 
@@ -330,6 +333,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

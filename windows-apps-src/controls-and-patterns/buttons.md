@@ -3,8 +3,8 @@ author: Jwmsft
 label: Buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 91399060e129df18acd38e18d98cad848667a5ad
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: de5af77435b34b8f28005351a7de125f211ca522
 
 ---
 # Botones
@@ -71,7 +71,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 
 Cuando se pulsa un botón con un dedo o lápiz o se presiona el botón izquierdo del mouse mientras el puntero está sobre él, botón genera el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx). Si un botón tiene el foco del teclado, al presionar la tecla ENTRAR o la barra espaciadora también se genera el evento Click.
 
-Por lo general, no se pueden manipular eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) de bajo nivel en un Button porque tiene el comportamiento Click en su lugar. Para obtener más información, consulta el tema de [introducción a los eventos y eventos enrutados](https://msdn.microsoft.com/en-us/library/windows/apps/mt185584.aspx).
+Por lo general, no se pueden manipular eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) de bajo nivel en un Button porque tiene el comportamiento Click en su lugar. Para obtener más información, consulta el tema de [introducción a los eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/mt185584.aspx).
 
 Puedes cambiar la forma en que un botón genera el evento Click cambiando la propiedad [**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx). El valor de ClickMode predeterminado es **Release**. Si ClickMode es **Hover**, no se genera el evento Click con el teclado o de forma táctil. 
 
@@ -204,7 +204,8 @@ Sistema de Surface Hub ![en Surface Hub](images/nav-back-surfacehub.png)
 
     Se mantiene el historial de navegación de página en la aplicación; no se admite la navegación hacia atrás entre aplicaciones.
 
-    **Nota**  En el modo tableta, la barra de título se muestra cuando un usuario se desliza rápidamente hacia abajo desde la parte superior del dispositivo o mueve el puntero del mouse cerca de la parte superior del dispositivo. Para evitar confusiones y duplicaciones, el botón Atrás de la barra de título no se muestra en modo tableta.
+    
+              **Nota** En el modo tableta, la barra de título se muestra cuando un usuario desliza rápidamente hacia abajo desde la parte superior del dispositivo o mueve el puntero del mouse cerca de la parte superior del dispositivo. Para evitar confusiones y duplicaciones, el botón Atrás de la barra de título no se muestra en modo tableta.
 
      
 
@@ -229,6 +230,6 @@ Sistema de Surface Hub ![en Surface Hub](images/nav-back-surfacehub.png)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

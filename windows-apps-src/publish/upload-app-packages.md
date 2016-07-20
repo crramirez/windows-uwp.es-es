@@ -4,8 +4,8 @@ Description: "La página Paquetes es donde se cargan todos los archivos del paqu
 title: "Cargar paquetes de aplicación"
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: bb89968c261cc0c14f82375d0d708bbce5da9869
+ms.sourcegitcommit: 7f1a40f33a3137e4e0ded674b5bfdf35f11135dc
+ms.openlocfilehash: f628820747f51f7200e2748c2c3f41b58455b2fa
 
 ---
 
@@ -23,7 +23,8 @@ Para cargar paquetes, arrástralos en el campo de carga o haz clic para examinar
 
 Si has creado algún [paquete piloto](package-flights.md) para tu aplicación, verás una lista desplegable con la opción para copiar los paquetes de uno de los paquetes piloto. Selecciona el paquete piloto que tiene los paquetes que quieres extraer. A continuación, podrás seleccionar varios o todos los paquetes, para incluirlos en este envío.
 
-> **Importante** Para Windows 10, siempre debes cargar aquí el archivo .appxupload, no .appx ni .appxbundle. Para más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar aplicaciones universales de Windows para Windows 10](../packaging/packaging-uwp-apps.md).
+> 
+            **Importante** Para Windows10, siempre debes cargar aquí el archivo .appxupload, no .appx ni .appxbundle. Para más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar aplicaciones universales de Windows para Windows 10](../packaging/packaging-uwp-apps.md).
 
 Si se detectan problemas con los paquetes durante su validación, deberás quitar el paquete, corregir el problema y, a continuación, intenta cargarlo de nuevo. Para obtener más información, consulta [Resolver errores de carga de paquetes](resolve-package-upload-errors.md).
 
@@ -45,12 +46,6 @@ Si se detecta que uno o varios de los paquetes son redundantes, se mostrará una
 
 Cuando detectemos paquetes redundantes, proporcionaremos una opción para quitarlos de este envío automáticamente. También puedes quitar paquetes del envío individualmente, si lo prefieres.
 
-## Paquetes con Application Insights de Visual Studio
-
-
-Te recomendamos que uses [Applications Insights de Visual Studio](http://go.microsoft.com/fwlink/?LinkId=615086) en tus paquetes (o que lo habilites activando la casilla "Mostrar telemetría en el Centro de desarrollo de Windows" al crear el paquete) para que podamos proporcionarte [detalles de telemetría de uso de la aplicación](usage-report.md). Si no configuraste Application Insights en Microsoft Visual Studio, cuando detectemos que un paquete lo incluye, mostraremos un mensaje que confirma que al enviar el paquete, aceptas habilitar la telemetría de uso de la aplicación sobre tu cuenta de desarrollador. Puedes deshabilitar la telemetría de uso de la aplicación en cualquier momento en la **configuración de la cuenta**.
-
- 
 
  
 
@@ -60,6 +55,6 @@ Te recomendamos que uses [Applications Insights de Visual Studio](http://go.micr
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

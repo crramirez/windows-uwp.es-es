@@ -4,8 +4,8 @@ ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "Crear una aplicación Hello, world (XAML)"
 description: "En este tutorial se enseña a usar el lenguaje XAML con C# para crear una sencilla aplicación Hello, world para la Plataforma universal de Windows (UWP) de Windows 10."
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 0d6b6421b4f5ebc01c865e80db96d1158b9bd825
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 0a524d51f713c37ce2069b4e750bf3ed20fe19ab
 
 ---
 
@@ -13,7 +13,8 @@ ms.openlocfilehash: 0d6b6421b4f5ebc01c865e80db96d1158b9bd825
 
 En este tutorial se enseña a usar lenguaje XAML con C# para crear una sencilla aplicación "Hello, world" para la Plataforma universal de Windows (UWP) de Windows 10. Con un único proyecto en Microsoft Visual Studio, puedes compilar una aplicación que se ejecute en cualquier dispositivo de Windows 10. Aquí nos centraremos en crear una aplicación que se ejecute por igual en dispositivos móviles y de escritorio.
 
-**Importante**   Este tutorial está diseñado para usarse con Microsoft Visual Studio 2015 y Windows 10. No funcionará correctamente con las versiones anteriores.
+
+              **Importante**  Este tutorial está diseñado para usarse con Microsoft Visual Studio 2015 y Windows 10. No funcionará correctamente con las versiones anteriores.
 
 Aquí aprenderás a:
 
@@ -45,8 +46,10 @@ Aquí aprenderás a:
 3.  En el panel izquierdo, expande **Instalado > Plantillas > Visual C# > Windows** y, a continuación, selecciona el grupo de plantillas **Universal**. El panel central del cuadro de diálogo muestra una lista de plantillas de proyecto para aplicaciones de la Plataforma universal de Windows (UWP).
 
    ![La ventana Nuevo proyecto ](images/newproject-cs.png)
+   
+   (Si no ves estas opciones, asegúrate de tener instaladas las herramientas de desarrollo de las aplicaciones universales de Windows. Consulta [Preparación](get-set-up.md) para obtener más información).
 
-4.  En el panel central, selecciona la plantilla **Aplicación vacía (Windows Universal)**.
+4.  En el panel central, selecciona la plantilla **Aplicación vacía universal de Windows**.
 
    La plantilla **Aplicación vacía** crea una aplicación para UWP mínima que se compila y ejecuta, pero que no contiene datos ni controles de interfaz de usuario. Después, a lo largo de este curso, agregarás controles a la aplicación.
 
@@ -209,10 +212,12 @@ Además de las opciones para realizar la depuración en un dispositivo de escrit
 
 -   **Dispositivo**
 -   **Emulador <SDK version> WVGA de 4 pulgadas y 512 MB**
--   **Emulador <SDK version> WVGA de 4 pulgadas y 1 GB**
+-   **Emulador <SDK version> WVGA de 4pulgadas y 1GB**
 -   Etc. (Varios emuladores en otras configuraciones)
 
-Se recomienda probar la aplicación en un dispositivo con una pantalla pequeña y de memoria limitada, por lo tanto, usa la opción **Emulador 10.0.10240.0 WVGA de 4 pulgadas y 512 MB**.
+(Si no ves los emuladores, asegúrate de tener instaladas las herramientas de desarrollo de las aplicaciones universales de Windows. Consulta [Preparación](get-set-up.md) para obtener más información).
+
+Se recomienda probar la aplicación en un dispositivo con una pantalla pequeña y de memoria limitada, por lo tanto, usa la opción **Emulador 10.0.10240.0 WVGA de 4pulgadas y 512MB**.
 **Para iniciar la depuración en un emulador de dispositivo móvil**
 
 1.  En el menú del dispositivo de destino (![menú Iniciar depuración](images/startdebug-full.png)) en la barra de herramientas **Estándar**, elige **Emulador 10.0.10240.0 WVGA de 4 pulgadas y 512 MB**.
@@ -239,7 +244,7 @@ También puedes observar que puedes escribir en [**TextBox**](https://msdn.micro
 
 Los elementos XAML pueden enviar mensajes cuando se producen ciertos eventos. Estos mensajes de eventos te dan la oportunidad de realizar alguna acción como respuesta al evento. El código para responder al evento lo pones en un método de controlador de eventos. Uno de los eventos más comunes en muchas aplicaciones es que un usuario haga clic en un [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265).
 
-Crearemos un controlador de eventos para el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) del botón. El controlador de eventos obtendrá el nombre del usuario del control `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) y lo usará para enviar un saludo a `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652).
+Crearemos un controlador de eventos para el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) del botón. El controlador de eventos obtendrá el nombre del usuario del control `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) y lo usará para enviar un saludo a `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652).
 
 ### Uso de eventos que funcionan para entradas táctiles, de mouse y de lápiz
 
@@ -261,7 +266,7 @@ Crearemos un controlador de eventos para el evento [**Click**](https://msdn.micr
    <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
 ```    
 
-5.  Agrega código al controlador de eventos que creaste en la página de código subyacente. En el controlador de eventos, recupera el nombre del usuario del control `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) y úsalo para crear un saludo. Usa `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) para mostrar el resultado.
+5.  Agrega código al controlador de eventos que creaste en la página de código subyacente. En el controlador de eventos, recupera el nombre del usuario del control `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) y úsalo para crear un saludo. Usa `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) para mostrar el resultado.
     
 ```csharp    
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -309,9 +314,9 @@ Ahora haremos que la interfaz de usuario se adapte a diferentes tamaños de pant
 
 Si has usado [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021) en versiones anteriores de XAML, puedes observar que aquí el XAML usa una sintaxis simplificada.
 
-El [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) llamado `wideState` tiene un [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) con su propiedad [**MinWindowWidth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) establecida en 641. Esto significa que el estado se aplicará únicamente cuando el ancho de la ventana no sea inferior al mínimo de 641 píxeles. Para este estado no definas ningún objeto [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) a fin de que se usen las propiedades de diseño definidas en el XAML para el contenido de la página.
+El [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) llamado `wideState` tiene un [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) con su propiedad [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) establecida en 641. Esto significa que el estado se aplicará únicamente cuando el ancho de la ventana no sea inferior al mínimo de 641 píxeles. Para este estado no definas ningún objeto [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) a fin de que se usen las propiedades de diseño definidas en el XAML para el contenido de la página.
 
-El segundo [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007), `narrowState`, tiene un [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) con su propiedad [**MinWindowWidth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) establecida en 0. Este estado se aplica cuando el ancho de la ventana es mayor que 0, pero inferior a 641 píxeles. (En 641 píxeles, se aplica `wideState`). En este estado, defines algunos objetos [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) para cambiar las propiedades de diseño de los controles de la interfaz de usuario:
+El segundo [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007), `narrowState`, tiene un [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) con su propiedad [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) establecida en 0. Este estado se aplica cuando el ancho de la ventana es mayor que 0, pero inferior a 641 píxeles. (En 641 píxeles, se aplica `wideState`). En este estado, defines algunos objetos [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) para cambiar las propiedades de diseño de los controles de la interfaz de usuario:
 
 -   Cambias [**Orientation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.orientation) del elemento `inputPanel` desde **Horizontal** a **Vertical**.
 -   Agrega un margen superior de 4 al elemento `inputButton`.
@@ -323,6 +328,6 @@ Enhorabuena, has creado tu primera aplicación para Windows 10 y UWP.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

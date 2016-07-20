@@ -5,8 +5,9 @@ ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
 title: Accesibilidad de teclado
 label: Keyboard accessibility
 template: detail.hbs
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: c5b5ca247e3999850d7bf9b81347c201204db7e8
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 6ac488b6db1ed838cc458c6adaa90dcca18d4c7d
 
 ---
 
@@ -155,7 +156,7 @@ Para obtener código de ejemplo que muestra cómo escribir un controlador de eve
 ## Navegación mediante teclado para controles personalizados  
 Se recomienda el uso de teclas de dirección como métodos abreviados de teclado para navegar entre elementos secundarios, en los casos en que dichos elementos mantengan una relación espacial entre sí. Si los nodos de la vista de árbol tienen sub-elementos secundarios separados para administrar la activación de nodos y las acciones de expandir/contraer, usa las teclas de flecha izquierda y derecha para proporcionar la funcionalidad de expandir/contraer del teclado. Si tienes un control orientado que admite el recorrido direccional dentro del contenido del control, usa las teclas de dirección adecuadas.
 
-Por lo general, para implementar un control de teclas personalizado para controles personalizados se incluye una invalidación de los métodos [**OnKeyDown**](https://msdn.microsoft.com/en-us/library/windows/apps/hh967982.aspx) y [**OnKeyUp**](https://msdn.microsoft.com/en-us/library/windows/apps/hh967983.aspx) como parte de la lógica de la clase.
+Por lo general, para implementar un control de teclas personalizado para controles personalizados se incluye una invalidación de los métodos [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982.aspx) y [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983.aspx) como parte de la lógica de la clase.
 
 <span id="An_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="an_example_of_a_visual_state_for_a_focus_indicator"/>
@@ -225,8 +226,8 @@ Ten en cuenta que solo uno de los estados con nombre ajusta la propiedad [**Visi
 <span id="Keyboard_accessibility_and_Windows_Phone"/>
 <span id="keyboard_accessibility_and_windows_phone"/>
 <span id="KEYBOARD_ACCESSIBILITY_AND_WINDOWS_PHONE"/>
-## Accesibilidad de teclado y Windows Phone
-Por lo general, un dispositivo de Windows Phone carece de un teclado de hardware dedicado. Sin embargo, un panel de entrada de software (SIP) puede dar cabida a diversos escenarios de accesibilidad de teclado. Los lectores de pantalla pueden leer entradas de texto desde el SIP de **Texto** e incluso advertir de posibles eliminaciones. Los usuarios podrán saber dónde están sus dedos porque el lector de pantalla es capaz de detectar que el usuario está examinando las teclas, de modo que lee en voz alta el nombre de la tecla examinada. De igual modo, algunos de los conceptos de accesibilidad relativos al teclado se pueden asignar a determinados comportamientos de tecnología de asistencia en los que no se usa el teclado en absoluto. Por ejemplo, incluso si un SIP no incluye una tecla TAB, el Narrador admite un gesto táctil que equivale a presionar dicha tecla, de modo que disponer de un orden de tabulación útil de los controles de una interfaz de usuario sigue siendo un principio de accesibilidad de gran importancia. Las teclas de dirección para navegar por los elementos de controles complejos también se pueden usar como gestos táctiles en el Narrador. Cuando el foco llega a un control que no está destinado a la entrada de texto, Narrador admite un gesto con el que se invoca la acción de dicho control.
+## Accesibilidad de teclado y WindowsPhone
+Por lo general, un dispositivo de WindowsPhone carece de un teclado de hardware dedicado. Sin embargo, un panel de entrada de software (SIP) puede dar cabida a diversos escenarios de accesibilidad de teclado. Los lectores de pantalla pueden leer entradas de texto desde el SIP de **Texto** e incluso advertir de posibles eliminaciones. Los usuarios podrán saber dónde están sus dedos porque el lector de pantalla es capaz de detectar que el usuario está examinando las teclas, de modo que lee en voz alta el nombre de la tecla examinada. De igual modo, algunos de los conceptos de accesibilidad relativos al teclado se pueden asignar a determinados comportamientos de tecnología de asistencia en los que no se usa el teclado en absoluto. Por ejemplo, incluso si un SIP no incluye una tecla TAB, el Narrador admite un gesto táctil que equivale a presionar dicha tecla, de modo que disponer de un orden de tabulación útil de los controles de una interfaz de usuario sigue siendo un principio de accesibilidad de gran importancia. Las teclas de dirección para navegar por los elementos de controles complejos también se pueden usar como gestos táctiles en el Narrador. Cuando el foco llega a un control que no está destinado a la entrada de texto, Narrador admite un gesto con el que se invoca la acción de dicho control.
 
 Los métodos abreviados de teclado no suelen ser relevantes para las aplicaciones Windows Phone, puesto que un SIP carece de teclas Control o ALT.
 
@@ -241,6 +242,6 @@ Los métodos abreviados de teclado no suelen ser relevantes para las aplicacione
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

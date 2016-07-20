@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: "Usa este método en la API de compras de la Tienda Windows para conceder de forma gratuita una aplicación o un producto desde la aplicación (IAP) a un usuario determinado."
 title: Conceder productos gratuitos
-ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
-ms.openlocfilehash: 9bce5649fc1a9400371e1f9bb67809f1c6288ec6
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 64c600460c1cbcbd6bb486649e2bc98298ca9dbe
 
 ---
 
@@ -32,9 +33,9 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 | Método | URI de la solicitud                                            |
 |--------|--------------------------------------------------------|
-| POST   | `https://purchase.mp.microsoft.com/v6.0/purchases/grant` |
+| POST   | ```https://purchase.mp.microsoft.com/v6.0/purchases/grant``` |
 
-<br/> 
+<span/> 
 
 ### Encabezado de la solicitud
 
@@ -45,7 +46,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | cadena | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
-<br/>
+<span/>
 
 ### Cuerpo de la solicitud
 
@@ -61,7 +62,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 | cantidad       | entero    | La cantidad que se va a comprar. Actualmente, el único valor admitido es 1. Si no se especifica, el valor predeterminado es 1.                                                                                                                                                                                                                | No       |
 | skuId          | cadena | Identificador de SKU del catálogo de la Tienda Windows. Un ejemplo de identificador de SKU es "0010".                                                                                                                                                                                                                                                | Sí      |
 
-<br/> 
+<span/>
 
 ### Ejemplo de solicitud
 
@@ -95,7 +96,7 @@ Content-Type: application/json
 | friendlyName              | cadena                      | Nombre descriptivo del pedido. No disponible para los pedidos realizados a través de la API de compras de la Tienda de Windows.                                                               | Sí      |
 | isPIRequired              | booleano                     | Indica si se requiere un instrumento de pago (PI) como parte del pedido de compra.                                                                   | Sí      |
 | language                  | cadena                      | Identificador de idioma del pedido (por ejemplo, "en").                                                                                                       | Sí      |
-| market                    | cadena                      | Identificador de mercado del pedido (por ejemplo, "EE. UU").                                                                                                         | Sí      |
+| market                    | cadena                      | Identificador de mercado del pedido (por ejemplo, "EE.UU").                                                                                                         | Sí      |
 | orderId                   | cadena                      | Id. que identifica el pedido para un usuario determinado.                                                                                                   | Sí      |
 | orderLineItems            | list&lt;OrderLineItemV6&gt; | Lista de artículos de línea del pedido. Normalmente hay 1 artículo de línea por pedido.                                                                          | Sí      |
 | orderState                | cadena                      | Estado del pedido. Los estados válidos son **Editing**, **CheckingOut**, **Pending**, **Purchased**, **Refunded**, **ChargedBack** y **Cancelled**. | Sí      |
@@ -107,7 +108,7 @@ Content-Type: application/json
 | totalChargedToCsvTopOffPI | decimal                     | En caso de usar un instrumento de pago y un valor almacenado (CSV) independientes, el importe cobrado al CSV.                                                                | Sí      |
 | totalTaxAmount            | decimal                     | Importe total de los impuestos para todos los artículos de línea.                                                                                                              | Sí      |
 
-<br/> 
+<span/>
 
 El objeto ClientContext contiene los parámetros siguientes.
 
@@ -115,7 +116,7 @@ El objeto ClientContext contiene los parámetros siguientes.
 |-----------|--------|---------------------------------------|----------|
 | client    | cadena | Identificador de cliente que creó el pedido. | No       |
 
-<br/> 
+<span/>
 
 El objeto OrderLineItemV6 contiene los parámetros siguientes.
 
@@ -147,7 +148,7 @@ El objeto OrderLineItemV6 contiene los parámetros siguientes.
 | Title                   | cadena         | Título localizado del artículo de línea.                                                                        | Sí      |
 | totalAmount             | decimal        | Importe total de compra del artículo de línea incluidos los impuestos.                                                    | Sí      |
 
-<br/> 
+<span/>
 
 El objeto IdentityV6 contiene los parámetros siguientes.
 
@@ -156,7 +157,7 @@ El objeto IdentityV6 contiene los parámetros siguientes.
 | identityType  | cadena | Contiene el valor **"pub"**.                                                      | Sí      |
 | identityValue | cadena | El valor de cadena del elemento *publisherUserId* de la clave de id. de la Tienda Windows especificada. | Sí      |
 
-<br/> 
+<span/> 
 
 ### Ejemplo de respuesta
 
@@ -229,7 +230,7 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 | 401  | No autorizado | InconsistentClientId       | La notificación *clientId* de la clave de id. de la Tienda Windows del cuerpo de la solicitud y la notificación *appid* del token de acceso de Azure AD del encabezado de autorización no coinciden.                     |
 | 400  | BadRequest   | InvalidParameter           | Los detalles contienen información sobre el cuerpo de la solicitud y los campos que tienen un valor no válido.                                                                                    |
 
-<br/> 
+<span/> 
 
 ## Temas relacionados
 
@@ -244,6 +245,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -5,8 +5,8 @@ title: "A continuación"
 description: "Ahora que ya creaste tu primera aplicación, visita el resto del Centro de desarrollo. Esta es una introducción a las diferentes secciones que contiene.'"
 keywords: Dev Center, Getting started
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: cb77a32f99bc6e27cfe87af16d6cd4e08855d7b6
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 5d8f036b7dcaba1c697f574011875cadbf1970c1
 
 ---
 # A continuación
@@ -30,7 +30,7 @@ Ve a [Desarrollar](http://go.microsoft.com/fwlink/p/?LinkId=529575)
 ## Vender aplicaciones
 
 
-La Tienda Windows te permite llegar a millones de clientes que usan Microsoft Windows. La Tienda Windows es un catálogo de soluciones donde puedes vender aplicaciones a clientes de prácticamente todo el mundo. Los clientes encuentran las aplicaciones pertinentes para sus países o regiones de manera coherente en todos los dispositivos. Puedes elegir vender tus aplicaciones en países o regiones específicas y puedes especificar una única franja de precios que le pone precios a tus aplicaciones en las diferentes monedas locales.
+La Tienda Windows te permite llegar a millones de clientes que usan MicrosoftWindows. La Tienda Windows es un catálogo de soluciones donde puedes vender aplicaciones a clientes de prácticamente todo el mundo. Los clientes encuentran las aplicaciones pertinentes para sus países o regiones de manera coherente en todos los dispositivos. Puedes elegir vender tus aplicaciones en países o regiones específicas y puedes especificar una única franja de precios que le pone precios a tus aplicaciones en las diferentes monedas locales.
 
 Ve a [Publicar](http://go.microsoft.com/fwlink/p/?linkid=268275).
 
@@ -39,7 +39,7 @@ Ve a [Publicar](http://go.microsoft.com/fwlink/p/?linkid=268275).
 
 Esta sección contiene información detallada sobre las clases, propiedades, métodos, eventos, estilos y demás API que puedes usar para crear aplicaciones para la Plataforma universal de Windows (UWP).
 
-Ve a [Referencia de API](https://msdn.microsoft.com/en-us/library/windows/apps/br211369.aspx).
+Ve a [Referencia de API](https://msdn.microsoft.com/library/windows/apps/br211369.aspx).
 
 ## Referencia de lenguajes
 
@@ -72,6 +72,6 @@ Ve a [Desarrollar aplicaciones de IoT](http://go.microsoft.com/fwlink/p/?LinkId=
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

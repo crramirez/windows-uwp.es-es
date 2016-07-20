@@ -4,8 +4,8 @@ ms.assetid: 949D1CE0-DD7D-420E-904D-758FADEBE85A
 title: Habilitar funcionalidades de dispositivos
 description: "Este tutorial describe cómo declarar funcionalidades del dispositivo en Microsoft Visual Studio. Esta opción permite que la aplicación use cámaras, micrófonos, sensores de ubicación y otros dispositivos."
 translationtype: Human Translation
-ms.sourcegitcommit: 512b89027f6b707de346fffe104f165074fabcea
-ms.openlocfilehash: 01ccd8dea8b19a52867ce89ba2eb9a1fb2d2a72f
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 306e10ee9349f3742ac5a06229d22aad04457d7a
 
 ---
 # Habilitar funcionalidades de dispositivos
@@ -18,7 +18,7 @@ Este tutorial describe cómo declarar funcionalidades del dispositivo en Microso
 ## Especificar la funcionalidad de los dispositivos que usará la aplicación
 
 
-Las aplicaciones de Windows requieren que especifiques en el manifiesto del paquete de la aplicación cuándo se usan determinados tipos de dispositivos. En Visual Studio puedes declarar la mayoría de las funcionalidades mediante el [Diseñador de manifiestos](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230259.aspx), o puedes agregarlas manualmente tal como se describe en [Cómo especificar funcionalidades de dispositivos en un manifiesto del paquete (manualmente)](https://msdn.microsoft.com/library/windows/apps/Dn263092). En este tutorial se supone que vas a usar el Diseñador de manifiestos.
+Las aplicaciones de Windows requieren que especifiques en el manifiesto del paquete de la aplicación cuándo se usan determinados tipos de dispositivos. En Visual Studio puedes declarar la mayoría de las funcionalidades mediante el [Diseñador de manifiestos](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx), o puedes agregarlas manualmente tal como se describe en [Cómo especificar funcionalidades de dispositivos en un manifiesto del paquete (manualmente)](https://msdn.microsoft.com/library/windows/apps/Dn263092). En este tutorial se supone que vas a usar el Diseñador de manifiestos.
 
 **Nota**  
 Algunos tipos de dispositivos como, por ejemplo, las impresoras, los escáneres y los sensores no necesitan estar declarados en el manifiesto del paquete de la aplicación.
@@ -35,7 +35,8 @@ Algunos tipos de dispositivos como, por ejemplo, las impresoras, los escáneres 
 | Generación de código | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Permite que las aplicaciones generen código de forma dinámica. |
 | Autenticación de empresa | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Esta funcionalidad está sujeta a la directiva de la Tienda Windows. Proporciona la capacidad de conectarse a recursos de la intranet de empresa que requieran credenciales de dominio. Normalmente, esta funcionalidad no es necesaria para la mayoría de las aplicaciones. | 
 | Internet (cliente) | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Proporciona acceso saliente a Internet y a redes de lugares públicos, como aeropuertos y cafeterías. Por ejemplo, redes intranet en las que el usuario ha designado la red como pública. La mayoría de las aplicaciones que requieran acceso a Internet deben usar esta funcionalidad. |
-| Internet (cliente y servidor) | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Proporciona acceso entrante y saliente a Internet y a redes de lugares públicos, como aeropuertos y cafeterías. Esta funcionalidad es un superconjunto de **Internet (cliente)**. No es necesario habilitar **Internet (cliente)** si también se habilita esta funcionalidad. El acceso entrante a los puertos críticos siempre está bloqueado. |
+| Internet (cliente y servidor) | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Proporciona acceso entrante y saliente a Internet y a redes de lugares públicos, como aeropuertos y cafeterías. Esta funcionalidad es un superconjunto de **Internet (cliente)**. 
+              No es necesario habilitar **Internet (cliente)** si también se habilita esta funcionalidad. El acceso entrante a los puertos críticos siempre está bloqueado. |
 | Ubicación| ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Proporciona acceso a la ubicación actual. Se obtiene del hardware dedicado, como un sensor GPS en el equipo, o se deriva de la información de red disponible. | 
 | Micrófono | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Proporciona acceso a la fuente de audio del micrófono. Permite que la aplicación grabe con los micrófonos conectados. | 
 | Biblioteca de música | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Proporciona la capacidad de agregar, cambiar o eliminar archivos de la **Biblioteca de música** del equipo local y de equipos de **grupo en el hogar**. | 
@@ -77,6 +78,6 @@ La siguiente tabla conecta algunas de las funcionalidades a las API de Windows R
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

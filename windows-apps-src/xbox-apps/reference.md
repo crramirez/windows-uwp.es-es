@@ -3,6 +3,7 @@ author: v-angraf
 title: Referencia de API de UWP en Xbox One
 description: Referencia de API para UWP en Xbox One.
 area: Xbox
+translationtype: Human Translation
 ms.sourcegitcommit: 1a8dc5bcfc619756696dd9892ca63d3ad92c3c16
 ms.openlocfilehash: 3e857501687f74eacbe863889d61d33fcdbcd086
 
@@ -28,6 +29,6 @@ Esta sección contiene temas de referencia para la UWP en las API de Xbox One.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

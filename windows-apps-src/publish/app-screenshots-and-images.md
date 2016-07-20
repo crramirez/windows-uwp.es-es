@@ -3,6 +3,7 @@ author: jnHs
 Description: "La aplicación debe incluir varios logotipos, capturas de pantalla e imágenes."
 title: "Imágenes y capturas de pantalla de aplicación"
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
+translationtype: Human Translation
 ms.sourcegitcommit: ecb030b7c529f765eded46e4e3e9db99ad0c27e8
 ms.openlocfilehash: 9eac5658e2ac04b2abc1bf06abf5c73b16260bc7
 
@@ -17,7 +18,8 @@ Durante el [proceso de envío de la aplicación](app-submissions.md), proporcion
 
 La Tienda también usa el icono de la aplicación y otras imágenes que incluyas en el paquete de la aplicación. Ejecuta el [Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/mt186449) para determinar si te falta alguna de las imágenes necesarias. Para obtener instrucciones y recomendaciones acerca de estas imágenes, consulta [Activos de mosaico y de icono](../controls-and-patterns/tiles-and-notifications-app-assets.md).
 
-> **Nota**  La manera en que se usan las imágenes en la Tienda, en la pantalla Inicio del cliente y dentro de la propia aplicación puede variar en función del sistema operativo del cliente y de otros factores.
+> 
+            **Nota**  La manera en que se usan las imágenes en la Tienda, en la pantalla Inicio del cliente y dentro de la propia aplicación puede variar en función del sistema operativo del cliente y de otros factores.
 
 
 ## Imágenes proporcionadas durante el proceso de envío
@@ -32,9 +34,9 @@ En la siguiente tabla se indican las distintas imágenes que puedes cargar y se 
 | [Capturas de pantalla para móviles](#screenshots)                          | 768 x 1280, 720 x 1280 o 480 x 800 | Se muestra en la descripción de la aplicación en la Tienda cuando se visualiza en un dispositivo móvil.                                                                                                           | Se recomienda para todas las aplicaciones, especialmente si la aplicación está pensada para usarse en dispositivos móviles. Se necesita al menos una captura de pantalla (para cualquier familia de dispositivos). |
 | [Capturas de pantalla holográficas](#screenshots)                          | 1268 x 720 o superior                 | Se muestra en la descripción de la aplicación en la Tienda cuando se visualiza en un dispositivo holográfico.                                                                                                           | Se recomienda si la aplicación está diseñada para Microsoft HoloLens. Se necesita al menos una captura de pantalla (para cualquier familia de dispositivos). |
 | [Icono de la aplicación](#app-tile-icon)                             | 300 x 300                            | Se muestra como el icono de la aplicación en la Tienda para Windows Phone 8.1 y versiones anteriores (y, si solo tienes paquetes destinados a Windows Phone 8.1 o versiones anteriores, en la Tienda de Windows 10). | Se requiere para la visualización correcta en la Tienda si la aplicación está destinada a Windows Phone 8.1 o versiones anteriores.                                                                 |
-| [Imagen promocional: contenido destacado de Windows 10](#promotional-artwork) | 2400 x 1200                          | Se usa para diseños promocionales en la Tienda de Windows 10.                                                                                                                        | Se recomienda para todas las aplicaciones, especialmente aquellas con paquetes para UWP destinados a los clientes de Windows 10.                                                               |
+| [Imagen promocional: contenido destacado de Windows10](#promotional-artwork) | 2400 x 1200                          | Se usa para diseños promocionales en la Tienda de Windows10.                                                                                                                        | Se recomienda para todas las aplicaciones, especialmente aquellas con paquetes para UWP destinados a los clientes de Windows10.                                                               |
 | [Imágenes promocionales: Windows Phone 8.1 y versiones anteriores](#promotional-artwork) | 1000 x 800, 358 x 358                | Se usa para diseños promocionales en la Tienda de Windows Phone 8.1 y versiones anteriores.                                                                                                     | Se recomienda para todas las aplicaciones destinadas a Windows Phone 8.1 o versiones anteriores.                                                                                           |
-| [Imágenes promocionales: Windows 8.1 y versiones anteriores](#promotional-artwork)        | 414 x 180                            | Se usa para diseños promocionales en la Tienda de Windows 8.1.                                                                                                                       | Se recomienda para todas las aplicaciones destinadas a Windows 8.1 o versiones anteriores.                                                                                                 |
+| [Imágenes promocionales: Windows8.1 y versiones anteriores](#promotional-artwork)        | 414 x 180                            | Se usa para diseños promocionales en la Tienda de Windows8.1.                                                                                                                       | Se recomienda para todas las aplicaciones destinadas a Windows8.1 o versiones anteriores.                                                                                                 |
  
 
 ## Capturas de pantalla
@@ -45,7 +47,8 @@ Verás varios campos en la página **Descripción**, donde tendrás la opción d
 
 Solo se necesita una captura de pantalla para el envío (aunque puedes proporcionar varias; hasta 9 capturas de pantalla de equipos de escritorio y hasta 8 de dispositivos móviles y holográficas). No hace falta proporcionar capturas de pantalla individuales para cada tipo de dispositivo, pero es recomendable proporcionar capturas de pantalla de todos los tipos de dispositivos que admita la aplicación. De este modo, los clientes verán imágenes similares al aspecto que tendrá la aplicación en sus dispositivos.
 
-> **Nota**  Microsoft Visual Studio proporciona una [herramienta para ayudarte a obtener estas capturas de pantalla](http://go.microsoft.com/fwlink/p/?LinkId=221135).
+> 
+            **Nota**  Microsoft Visual Studio proporciona una [herramienta para ayudarte a obtener estas capturas de pantalla](http://go.microsoft.com/fwlink/p/?LinkId=221135).
 
 Cada captura de pantalla debe ser un archivo .png en orientación horizontal o vertical y el tamaño del archivo no puede ser superior a 2 MB.
 
@@ -56,7 +59,8 @@ Los requisitos de tamaño pueden variar en función de la familia de dispositivo
 
 Puedes proporcionar un título corto que describa cada captura de pantalla en 200 caracteres o menos.
 
-> **Nota**  Si creas descripciones para [varios idiomas](supported-languages.md), tendrás una página de **Descripción** para cada uno. Tendrás que cargar imágenes para cada idioma por separado (incluso si vas a utilizar las mismas imágenes) y proporcionar títulos para cada idioma.
+> 
+            **Nota**  Si creas descripciones para [varios idiomas](supported-languages.md), tendrás una página de **Descripción** para cada uno. Tendrás que cargar imágenes para cada idioma por separado (incluso si vas a utilizar las mismas imágenes) y proporcionar títulos para cada idioma.
 
 
 ## Icono de la aplicación
@@ -69,7 +73,8 @@ El icono de la aplicación debe ser un archivo .png que mida de 300 x 300 píxel
 
 El equipo editorial de la Tienda Windows usa imágenes diferentes para mostrar aplicaciones en la Tienda. El envío de material gráfico promocional permite al equipo de la Tienda Windows tener en cuenta tu aplicación en diseños promocionales.
 
-> **Importante**  El hecho de proporcionar estas imágenes promocionales de la aplicación no garantiza que esta se destaque; pero, si no las incluyes, no se considerará para la promoción. (Consulta [Facilitar la promoción de la aplicación](make-your-app-easier-to-promote.md) para más información).
+> 
+            **Importante**  El hecho de proporcionar estas imágenes promocionales de la aplicación no garantiza que esta se destaque; pero, si no las incluyes, no se considerará para la promoción. (Consulta [Facilitar la promoción de la aplicación](make-your-app-easier-to-promote.md) para más información).
 
 Es recomendable enviar material gráfico promocional en distintos tamaños, según las versiones del sistema operativo a las que se dirige tu aplicación. Para todos los tamaños, las imágenes deben estar en formato .png.
 
@@ -83,9 +88,9 @@ Aquí te sugerimos algunos aspectos que debes tener en cuenta al diseñar tu mat
 -   No incluyas imágenes de gestos desconsiderados, desnudez, apuestas, monedas, drogas, tabaco o alcohol.
 -   No uses armas apuntando hacia el usuario o violencia excesiva y sangre.
 
-### Para Windows 10: 2400 x 1200
+### Para Windows10: 2400 x 1200
 
-En la Tienda de Windows 10, en la parte superior de las páginas de categorías Aplicaciones y Juegos se incluye una imagen giratoria de productos destacados para promover el contenido. Para que la aplicación sea apta para esta colocación de contenido destacado, asegúrate de enviar una imagen 2400 x 1200.
+En la Tienda de Windows10, en la parte superior de las páginas de categorías Aplicaciones y Juegos se incluye una imagen giratoria de productos destacados para promover el contenido. Para que la aplicación sea apta para esta colocación de contenido destacado, asegúrate de enviar una imagen 2400 x 1200.
 
 Al diseñar tu imagen, ten en cuenta que, si la usamos el contenido destacado, aplicaremos un degradado por el tercio inferior para que podamos mostrar de forma legible el texto de marketing sobre la imagen. Por este motivo, evita colocar texto y elementos visuales clave en el tercio inferior de la imagen. Además, es posible que recortemos tu imagen, por lo que recomendamos que coloques la información de marca y los detalles más importantes de tu aplicación en el centro.
 
@@ -98,7 +103,8 @@ En la siguiente imagen se muestran las proporciones clave que deberías tener en
 
 En la Tienda de Windows Phone 8.1 y versiones anteriores, se pueden usar dos tamaños de imagen en diseños promocionales: 1000 x 800 píxeles y 358 x 358 píxeles. Si la aplicación se ejecuta en Windows Phone 8.1 o versiones anteriores, te recomendamos que proporciones imágenes en estos dos tamaños para la consideración promocional.
 
-> **Sugerencia**   Asegúrate de proporcionar una [imagen de icono de la aplicación](#app-tile-icon) de 300 x 300 para que la aplicación no aparezca en la Tienda con un icono en blanco.
+> 
+            **Sugerencia**   Asegúrate de proporcionar una [imagen de icono de la aplicación](#app-tile-icon) de 300 x 300 para que la aplicación no aparezca en la Tienda con un icono en blanco.
 
 ### Para Windows 8.1 y versiones anteriores: 414 x 180
 
@@ -106,6 +112,6 @@ En la Tienda de Windows 8.1 y versiones anteriores, los diseños promocionales p
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -3,6 +3,7 @@ author: mtoepke
 title: Juegos y DirectX
 description: "La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Descubre cómo comenzar un nuevo juego o migrar uno existente."
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
+translationtype: Human Translation
 ms.sourcegitcommit: 41ee0d2a45408b5b1a0dbc0b102f1b59843814b2
 ms.openlocfilehash: e5447f6238ece768513d160579e1c7e89b04e509
 
@@ -33,31 +34,31 @@ La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear,
 | [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) | Aprende a agregar controles de movimiento y vista tradicionales de mouse y teclado (también conocidos como controles mouselook) a un juego DirectX. |
 | [Optimizar el bucle de representación y de entrada](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) | La latencia de entrada puede influir tremendamente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida en el juego. Además, una correcta optimización de los eventos de entrada contribuye a mejorar la vida de la batería. Aprende a elegir las opciones adecuadas de procesamiento de eventos de entrada de [CoreDispatcher](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) para garantizar que el juego controle las entradas de la forma más fluida posible. |
 | [Escalado de cadena de intercambio y superposiciones](multisampling--scaling--and-overlay-swap-chains.md) | Aprende a crear cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas, y usa también cadenas de intercambio (si las hay) para mejorar la calidad visual. |
-| [Reducir la latencia con cadenas de intercambio de DXGI 1.3](reduce-latency-with-dxgi-1-3-swap-chains.md) | Usa DXGI 1.3 para reducir la latencia de fotogramas eficaz esperando a que la cadena de intercambio señale el momento adecuado para empezar a representar un nuevo fotograma. |
+| [Reducir la latencia con cadenas de intercambio de DXGI 1.3](reduce-latency-with-dxgi-1-3-swap-chains.md) | Usa DXGI1.3 para reducir la latencia de fotogramas eficaz esperando a que la cadena de intercambio señale el momento adecuado para empezar a representar un nuevo fotograma. |
 | [Muestreo múltiple en aplicaciones para UWP](multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md) | Aprende a usar el muestreo múltiple en aplicaciones para UWP compiladas con Direct3D. |
-| [Controlar escenarios cuando se quitan dispositivos en Direct3D 11](handling-device-lost-scenarios.md) | En este tema se explica cómo recrear la cadena de la interfaz de dispositivo de Direct3D y DXGI cuando se quita o reinicializa la tarjeta gráfica. |
+| [Controlar escenarios cuando se quitan dispositivos en Direct3D11](handling-device-lost-scenarios.md) | En este tema se explica cómo recrear la cadena de la interfaz de dispositivo de Direct3D y DXGI cuando se quita o reinicializa la tarjeta gráfica. |
 | [Programación asincrónica para juegos](asynchronous-programming-directx-and-cpp.md) | En este tema se tratan diversos aspectos que deben considerarse cuando se usa la programación asincrónica y los subprocesos con DirectX. |
 | [Conexión en red de juegos](work-with-networking-in-your-directx-game.md) | Aprende a desarrollar e incorporar características de red en un juego DirectX. |
 | [Accesibilidad para juegos](accessibility-for-games.md) | Aprende a hacer que los juegos sean más accesibles. |
 | [Nube para juegos](cloud-for-games.md) | Aprende a hacer uso de las tecnologías de nube para desarrollar juegos. |
 | [Interoperabilidad de DirectX y XAML](directx-and-xaml-interop.md) | Puedes usar el lenguaje XAML y Microsoft DirectX juntos en un juego para UWP. |
 | [Empaquetar un juego](package-your-windows-store-directx-game.md) | Los juegos para UWP grandes, especialmente aquellos que admiten varios idiomas con activos específicos de una región o activos de alta definición como característica opcional, pueden crecer hasta alcanzar tamaños considerables. En este tema, aprende cómo usar los paquetes de la aplicación y los lotes de aplicaciones para personalizar la aplicación a fin de que los clientes solamente reciban los recursos que de verdad necesitan. |
-| [Guías de migración de juegos](porting-guides.md) | Ofrece guías para migrar los juegos existentes a Direct3D 11, UWP y Windows 10. |
+| [Guías de migración de juegos](porting-guides.md) | Ofrece guías para migrar los juegos existentes a Direct3D11, UWP y Windows10. |
 | [Recursos de programación de juegos](additional-directx-game-programming-resources.md) | Para más información sobre la programación de juegos en Windows, consulta los siguientes recursos. |
 
  
 
 > **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
 Para aprovechar al máximo las explicaciones y los tutoriales sobre desarrollo de juegos, debes estar familiarizado con los siguientes temas:
 
--   Microsoft C++ con Component Extensions (C++/CX). Se trata de una actualización de Microsoft C++ que incorpora el recuento automático de referencias, y es el lenguaje de desarrollo para juegos de UWP con DirectX 11.1 o versiones posteriores.
+-   Microsoft C++ con Component Extensions (C++/CX). Se trata de una actualización de Microsoft C++ que incorpora el recuento automático de referencias, y es el lenguaje de desarrollo para juegos de UWP con DirectX11.1 o versiones posteriores.
 -   Terminología básica de programación de gráficos.
 -   Conceptos básicos de programación en Windows.
--   Conocimiento básico de las API de Direct3D 9 u 11.
+-   Conocimiento básico de las API de Direct3D9 u11.
 
  
 
@@ -69,6 +70,6 @@ Para aprovechar al máximo las explicaciones y los tutoriales sobre desarrollo d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

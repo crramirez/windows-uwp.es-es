@@ -5,6 +5,7 @@ title: Listas
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
 ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
 
@@ -182,7 +183,7 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 
 ## Artículos relacionados
 
-- [Concentrador](hub.md)
+- [Hub](hub.md)
 - [Patrón de maestro y detalles](master-details.md)
 - [Paneles de navegación](nav-pane.md)
 - [Zoom semántico](semantic-zoom.md)
@@ -195,6 +196,6 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

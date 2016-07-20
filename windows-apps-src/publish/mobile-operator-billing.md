@@ -1,45 +1,48 @@
 ---
 author: jnHs
-Description: "En la Tienda Windows se ofrece la facturación de operador de telefonía móvil como método de pago para operadores de telefonía móviles que admiten esta funcionalidad."
+Description: "En la TiendaWindows se ofrece la facturación de operador de telefonía móvil como método de pago para operadores de telefonía móviles que admiten esta funcionalidad."
 title: "Facturación de operadores de telefonía móvil"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
-ms.sourcegitcommit: 76ea880f7dd1e737b3b0640d10a138e0eb790802
-ms.openlocfilehash: d22d89523ff3089b3b56d1a85fa2c4b137389887
+translationtype: Human Translation
+ms.sourcegitcommit: 80a20f4f87ce2ef40ce4ff7c6551d74ac375da1c
+ms.openlocfilehash: bd70a3c5990909351f04ca4200f4ea522989d1e9
 
 ---
 
 # Facturación de operadores de telefonía móvil
 
 
-En la Tienda Windows se ofrece la facturación de operador de telefonía móvil como método de pago para operadores de telefonía móviles que admiten esta funcionalidad. Si el operador de telefonía móvil de un usuario admite esta capacidad, el cliente puede hacer compras en la Tienda con su cuenta móvil.
+En la TiendaWindows se ofrece la facturación de operador de telefonía móvil como método de pago para operadores de telefonía móviles que admiten esta funcionalidad. Si el operador de telefonía móvil de un usuario admite esta capacidad, el cliente puede hacer compras en la Tienda con su cuenta móvil.
 
-> **Nota**  Si el operador de telefonía móvil de un cliente ofrece facturación de operadores de telefonía móvil, pero el cliente no tiene esta opción en su dispositivo, consulta estos [pasos para solucionar problemas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
+> 
+            **Nota**  Si el operador de telefonía móvil de un cliente ofrece facturación de operadores de telefonía móvil, pero el cliente no tiene esta opción en su dispositivo, consulta estos [pasos para solucionar problemas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
 
  
 
 Estamos trabajando con los operadores de telefonía móvil para ampliar la disponibilidad de este método de pago. Si quieres sugerir un operador de telefonía móvil que no aparece en las listas siguientes, ponte en contacto con el operador de telefonía móvil.
 
-## Facturación de operador de telefonía móvil para dispositivos de Windows 10
+## Facturación de operador de telefonía móvil para dispositivos de Windows10
 
 
-Windows 10 presenta una nueva implementación de facturación de operador de telefonía móvil. En los dispositivos que incluyen esta implementación, los clientes pueden agregar la facturación de operador de telefonía móvil como método de pago en el dispositivo. Esta implementación está disponible para PC y tabletas con Windows 10 y teléfonos con Windows 10 Mobile.
+Windows10 presenta una nueva implementación de facturación de operador de telefonía móvil. En los dispositivos que incluyen esta implementación, los clientes pueden agregar la facturación de operador de telefonía móvil como método de pago en el dispositivo. Esta implementación está disponible para PC y tabletas con Windows10 y teléfonos con Windows10Mobile.
 
-Actualmente, los siguientes operadores de telefonía móvil admiten la implementación de la facturación de operador de telefonía móvil de Windows 10.
+Actualmente, los siguientes operadores de telefonía móvil admiten la implementación de la facturación de operador de telefonía móvil de Windows10.
 
 | País o región | Operadores de telefonía móvil |
 |----------------|------------------|
 | Finlandia        | DNA, Elisa       |
 | Alemania        | O2               |
+| Italia          | Wind             |
 | Noruega         | Telenor          |
 | Suiza    | Swisscom         |
 | Estados Unidos  | Sprint           |
 
  
 
-## Facturación de operador de telefonía móvil para dispositivos de Windows Phone 8.x y Windows 10 Mobile
+## Facturación de operador de telefonía móvil para dispositivos de WindowsPhone8.x y Windows10Mobile
 
 
-Una implementación heredada de facturación de operador de telefonía móvil está disponible para dispositivos de Windows Phone 8.x. Algunos operadores de telefonía móvil pueden incluir esta implementación en teléfonos diseñados para Windows 10 Mobile. En los dispositivos que incluyen esta implementación, la facturación de operador de telefonía móvil se ofrece automáticamente como un pago a los usuarios.
+Una implementación heredada de facturación de operador de telefonía móvil está disponible para dispositivos de Windows Phone 8.x. Algunos operadores de telefonía móvil pueden incluir esta implementación en teléfonos diseñados para Windows10Mobile. En los dispositivos que incluyen esta implementación, la facturación de operador de telefonía móvil se ofrece automáticamente como un pago a los usuarios.
 
 Los siguientes operadores de telefonía móvil admiten la implementación heredada de facturación de operador de telefonía móvil.
 
@@ -116,6 +119,6 @@ Esta lista se actualizará periódicamente a medida que ampliemos nuestro soport
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

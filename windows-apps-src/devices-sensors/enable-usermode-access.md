@@ -2,8 +2,9 @@
 author: JordanRh1
 title: Habilitar el acceso de modo de usuario en Windows 10 IoT Core
 description: "En este tutorial se describe cómo habilitar el acceso de modo de usuario a GPIO, I2C, SPI y UART con Windows 10 IoT Core."
-ms.sourcegitcommit: f7d7dac79154b1a19eb646e7d29d70b2f6a15e35
-ms.openlocfilehash: eedabee593400ff0260b6d3468ac922285a034f8
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: eddb2ca0aaa4bdbc19b2c3015ec8d599e0ef5584
 
 ---
 # Habilitar el acceso de modo de usuario en Windows 10 IoT Core
@@ -38,7 +39,7 @@ Device(RHPX)
 * _CID – Id. compatible Debe ser “MSFT8000”.  
 * _UID: id. único Establecer en 1.  
 
-Después, declaramos cada uno de los recursos GPIO y SPB que se deben exponer en modo de usuario. El orden en que se declaran los recursos es importante porque los índices de recursos se usan para asociar las propiedades con los recursos. Si hay varios buses de I2C o SPI expuestos, el primero declarado se considera el bus 'predeterminado' para ese tipo de bus y será la instancia devuelta por los métodos `GetDefaultAsync()` de [Windows.Devices.I2c.I2cController](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.i2c.i2ccontroller.aspx) y [Windows.Devices.Spi.SpiController](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.spi.spicontroller.aspx). 
+Después, declaramos cada uno de los recursos GPIO y SPB que se deben exponer en modo de usuario. El orden en que se declaran los recursos es importante porque los índices de recursos se usan para asociar las propiedades con los recursos. Si hay varios buses de I2C o SPI expuestos, el primero declarado se considera el bus 'predeterminado' para ese tipo de bus y será la instancia devuelta por los métodos `GetDefaultAsync()` de [Windows.Devices.I2c.I2cController](https://msdn.microsoft.com/library/windows/apps/windows.devices.i2c.i2ccontroller.aspx) y [Windows.Devices.Spi.SpiController](https://msdn.microsoft.com/library/windows/apps/windows.devices.spi.spicontroller.aspx). 
 
 ### SPI 
 
@@ -616,7 +617,8 @@ Consulta [funciones de devolución de llamada de eventos de GpioClx](https://msd
 
 Además de estas dos nuevas DDI, deben auditarse DDI existentes para la compatibilidad de multiplexación de patillas: 
 
-* GpioClx llama a CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – CLIENT_ConnectIoPins para requerir que el controlador de minipuerto configure un conjunto de patillas para la entrada o la salida de GPIO. GPIO se excluye mutuamente con MsftFunctionConfig, lo que significa que una patilla nunca se conectará para GPIO y MsftFunctionConfig al mismo tiempo. Como la función predeterminada de una patilla no tiene por qué ser GPIO, no es obligatorio multiplexar una patilla cuando se llame a ConnectIoPins. ConnectIoPins es necesario para realizar todas las operaciones que hagan falta para preparar la patilla para E/S de GPIO, incluidas las operaciones de multiplexación. *CLIENT_ConnectInterrupt* debería comportarse de forma similar, dado que las interrupciones se pueden considerar como un caso especial de entrada de GPIO. 
+* GpioClx llama a CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – CLIENT_ConnectIoPins para requerir que el controlador de minipuerto configure un conjunto de patillas para la entrada o la salida de GPIO. GPIO se excluye mutuamente con MsftFunctionConfig, lo que significa que una patilla nunca se conectará para GPIO y MsftFunctionConfig al mismo tiempo. Como la función predeterminada de una patilla no tiene por qué ser GPIO, no es obligatorio multiplexar una patilla cuando se llame a ConnectIoPins. ConnectIoPins es necesario para realizar todas las operaciones que hagan falta para preparar la patilla para E/S de GPIO, incluidas las operaciones de multiplexación. 
+              *CLIENT_ConnectInterrupt* debería comportarse de forma similar, dado que las interrupciones se pueden considerar como un caso especial de entrada de GPIO. 
 * CLIENT_DisconnectIoPins/CLIENT_DisconnectInterrupt: estas rutinas deben devolver patillas en el estado en el que estaban cuando se llamó a CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt, a menos que se especifique la marca PreserveConfiguration. Además de revertir la dirección de las patillas a su estado predeterminado, el minipuerto también debería revertir el estado de multiplexación de cada patilla al estado que tenía cuando se llamó a la rutina _Connect. 
 
 Por ejemplo, supongamos que la configuración predeterminada de una patilla sea UART y la patilla también se puede usar como GPIO. Cuando se llama a CLIENT_ConnectIoPins para conectar la patilla para GPIO, debería multiplexar la patilla para el GPIO y, en CLIENT_DisconnectIoPins, debería volver a multiplexar la patilla para UART. En general, las rutinas _Disconnect deben deshacer las operaciones realizadas por las rutinas _Connect. 
@@ -700,11 +702,11 @@ Haz clic en Ejecutar seleccionados. Hay documentación adicional disponible en c
 
 Hay herramientas de línea de comandos simples para Gpio, I2c, Spi y serie disponibles en el repositorio de muestras de ms-iot github (https://github.com/ms-iot/samples). Estas herramientas pueden ser útiles para la depuración manual.
 
-| Herramienta | Link |
+| Herramienta | Vínculo |
 |------|------|
-| GpioTestTool | https://developer.microsoft.com/es-es/windows/iot/win10/samples/GPIOTestTool |
-| I2cTestTool   | https://developer.microsoft.com/es-es/windows/iot/win10/samples/I2cTestTool | 
-| SpiTestTool | https://developer.microsoft.com/es-es/windows/iot/win10/samples/spitesttool |
+| GpioTestTool | https://developer.microsoft.com/windows/iot/win10/samples/GPIOTestTool |
+| I2cTestTool   | https://developer.microsoft.com/windows/iot/win10/samples/I2cTestTool | 
+| SpiTestTool | https://developer.microsoft.com/windows/iot/win10/samples/spitesttool |
 | MinComm (serie) |    https://github.com/ms-iot/samples/tree/develop/MinComm |
 
 ## Recursos
@@ -722,9 +724,9 @@ Hay herramientas de línea de comandos simples para Gpio, I2c, Spi y serie dispo
 | GpioClx   | https://msdn.microsoft.com/library/windows/hardware/hh439508.aspx |
 | SerCx | https://msdn.microsoft.com/library/windows/hardware/ff546939.aspx |
 | Pruebas MITT I2C | https://msdn.microsoft.com/library/windows/hardware/dn919852.aspx |
-| GpioTestTool | https://developer.microsoft.com/es-es/windows/iot/win10/samples/GPIOTestTool |
-| I2cTestTool   | https://developer.microsoft.com/es-es/windows/iot/win10/samples/I2cTestTool | 
-| SpiTestTool | https://developer.microsoft.com/es-es/windows/iot/win10/samples/spitesttool |
+| GpioTestTool | https://developer.microsoft.com/windows/iot/win10/samples/GPIOTestTool |
+| I2cTestTool   | https://developer.microsoft.com/windows/iot/win10/samples/I2cTestTool | 
+| SpiTestTool | https://developer.microsoft.com/windows/iot/win10/samples/spitesttool |
 | MinComm (serie) |    https://github.com/ms-iot/samples/tree/develop/MinComm |
 | Hardware Lab Kit (HLK) | https://msdn.microsoft.com/library/windows/hardware/dn930814.aspx |
 
@@ -732,7 +734,7 @@ Hay herramientas de línea de comandos simples para Gpio, I2c, Spi y serie dispo
 
 ### Apéndice A: Lista de ASL de Raspberry Pi
 
-Patillaje de encabezado: https://developer.microsoft.com/es-es/windows/iot/win10/samples/PinMappingsRPi2
+Patillaje de encabezado: https://developer.microsoft.com/windows/iot/win10/samples/PinMappingsRPi2
 
 ```
 DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
@@ -894,7 +896,7 @@ DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
 
 ### Apéndice B: Lista de ASL de MinnowBoardMax
 
-Patillaje de encabezado: https://developer.microsoft.com/es-es/windows/iot/win10/samples/PinMappingsMBM
+Patillaje de encabezado: https://developer.microsoft.com/windows/iot/win10/samples/PinMappingsMBM
 
 ```
 DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
@@ -1085,6 +1087,6 @@ GpioInt(Edge, ActiveBoth, Shared, $($_.PullConfig), 0, "\\_SB.GPI0",) { $($_.Pin
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

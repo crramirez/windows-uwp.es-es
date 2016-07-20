@@ -4,8 +4,8 @@ title: Atributo xDeferLoadStrategy
 description: "El atributo xDeferLoadStrategy retrasa la creación de un elemento y sus elementos secundarios, lo que disminuye el tiempo de inicio aunque incrementa ligeramente el uso de memoria. Cada elemento afectado agrega alrededor de 600 bytes de uso de memoria."
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: b989a31439444f06dacb86adb186f853d1637f6c
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: a5230a92ad919fc52c40c19646ff799453e64fa4
 
 ---
 
@@ -13,7 +13,8 @@ ms.openlocfilehash: b989a31439444f06dacb86adb186f853d1637f6c
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**x:DeferLoadStrategy="Lazy"** retrasa la creación de un elemento y sus elementos secundarios, lo que disminuye el tiempo de inicio aunque incrementa ligeramente el uso de memoria. Cada elemento afectado agrega alrededor de 600 bytes de uso de memoria. Cuanto mayor sea del árbol de elementos aplazado, mayor será el ahorro de tiempo de inicio, aunque a cambio de un mayor superficie de memoria. Por lo tanto, es posible usar en exceso este atributo en la medida en que disminuye el rendimiento.
+
+              **x:DeferLoadStrategy="Lazy"** retrasa la creación de un elemento y sus elementos secundarios, lo que disminuye el tiempo de inicio aunque incrementa ligeramente el uso de memoria. Cada elemento afectado agrega alrededor de 600 bytes de uso de memoria. Cuanto mayor sea del árbol de elementos aplazado, mayor será el ahorro de tiempo de inicio, aunque a cambio de un mayor superficie de memoria. Por lo tanto, es posible usar en exceso este atributo en la medida en que disminuye el rendimiento.
 
 ## Uso del atributo XAML
 
@@ -27,7 +28,7 @@ Las restricciones de el de uso **x: DeferLoadStrategy** son:
 
 -   Requiere definir el atributo [x:Name](x-name-attribute.md) , ya que debe haber una forma de encontrar el elemento más adelante.
 -   Solo se puede marcar un elemento [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) como diferido, a excepción de los tipos derivados de la clase [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249).
--   No se pueden aplazar elementos raíz en las clases [**Page**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.usercontrol) y [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
+-   No se pueden aplazar elementos raíz en las clases [**Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) y [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
 -   Los elementos de la clase [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) no se puede aplazar.
 -   No funciona con atributos XAML sueltos cargados con el método [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048).
 -   Mover un elemento primario borrará todos los elementos que no se hayan realizado.
@@ -88,6 +89,6 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

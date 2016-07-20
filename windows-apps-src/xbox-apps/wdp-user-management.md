@@ -2,6 +2,7 @@
 author: WilliamsJason
 title: "Referencia de API de Administración de usuarios de prueba de Xbox Live"
 description: "Obtén información sobre cómo tener acceso a las API de Administración de usuarios mediante programación."
+translationtype: Human Translation
 ms.sourcegitcommit: 67f158b1d3d5ece14c36483a2513a2db2f478660
 ms.openlocfilehash: ad01d4daf089c61fc50c7927cfbf123d7d7ee4df
 
@@ -71,6 +72,6 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

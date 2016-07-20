@@ -5,6 +5,7 @@ title: "Hipervínculos"
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
 ms.openlocfilehash: 1d19cfa9c272ee511fbaf89ac0076697ede470b9
 
@@ -53,7 +54,8 @@ El hipervínculo aparece en línea y fluye con el texto que le rodea:
 
 ![Ejemplo de un hipervínculo como elemento de texto](images/controls_hyperlink-element.png) 
 
-> **Sugerencia**
+> 
+            **Sugerencia**
             &nbsp;&nbsp;Cuando uses un elemento Hyperlink en un control de texto con otros elementos de texto en XAML, coloca el contenido en un contenedor [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) y aplica el atributo `xml:space="preserve"` al contenedor Span para mantener el espacio en blanco entre el elemento Hyperlink y otros elementos.
 
 ## Crear un elemento HyperlinkButton
@@ -85,7 +87,8 @@ En los dos tipos de hipervínculos, puedes controlar la navegación del mismo mo
 
 Para usar el hipervínculo para navegar a un URI, establece la propiedad NavigateUri. Cuando un usuario hace clic en el hipervínculo o lo pulsa, el URI especificado se abre en el explorador predeterminado. El explorador predeterminado se ejecuta en un proceso independiente de la aplicación.
 
-> **Note**
+> 
+            **Note**
             &nbsp;&nbsp;No es necesario usar esquemas http: o https:. Se pueden usar esquemas como ms-appx:, ms-appdata: o ms-resources:, si hay contenido de recursos en estas ubicaciones que sea adecuado para cargarlo en un explorador. Sin embargo, el esquema file: se bloquea específicamente. Para más información, consulta [Esquemas de URI](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
 
 > Cuando un usuario hace clic en el hipervínculo, el valor de la propiedad NavigateUri se pasa a un controlador de sistema para esquemas y tipos de URI. El sistema inicia entonces la aplicación que esté registrada para el esquema del URI proporcionado para NavigateUri.
@@ -128,7 +131,8 @@ Como un elemento Hyperlink no es un [UIElement](https://msdn.microsoft.com/libra
 
 **Contenido**
 
-El elemento Hyperlink tiene restricciones respecto al contenido que puede existir en su colección de [elementos Inline](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx). En concreto, un elemento Hyperlink solo permite la clase [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) y otros tipos de [Span]() que no sean otro elemento Hyperlink. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) no puede estar en la colección de elementos Inlines de un elemento Hyperlink. Si se intenta agregar contenido restringido, se genera una excepción de argumento no válido o una excepción de análisis XAML.
+El elemento Hyperlink tiene restricciones respecto al contenido que puede existir en su colección de [elementos Inline](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx). En concreto, un elemento Hyperlink solo permite la clase [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx) y otros tipos de [Span]() que no sean otro elemento Hyperlink. 
+            [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) no puede estar en la colección de elementos Inlines de un elemento Hyperlink. Si se intenta agregar contenido restringido, se genera una excepción de argumento no válido o una excepción de análisis XAML.
 
 **Comportamiento de Hyperlink y el tema y estilo**
 
@@ -156,6 +160,6 @@ El color predeterminado del hipervínculo es el color de énfasis del sistema. P
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

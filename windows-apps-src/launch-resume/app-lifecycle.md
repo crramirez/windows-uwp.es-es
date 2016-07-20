@@ -3,8 +3,9 @@ author: TylerMSFT
 title: "Ciclo de vida de la aplicación"
 description: "En este tema se describe el ciclo de vida de una aplicación para la Plataforma universal de Windows (UWP), desde el momento en que se activa hasta que se cierra."
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
-ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
-ms.openlocfilehash: 8451942c05d5d44cafba243f7cbebceedbe86fc0
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: c35f3c4bbc33d7202769badd7a0bcdc91f39bc84
 
 ---
 
@@ -69,14 +70,14 @@ El evento [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br24
 
  
 
-**Nota**
-            La *sesión del usuario actual* se basa en el inicio de sesión de Windows. Siempre y cuando el usuario actual no haya cerrado la sesión explícitamente o apagado el equipo, o bien Windows no se haya reiniciado por otros motivos, la sesión del usuario actual persiste durante los eventos como la autenticación de pantalla de bloqueo y el cambio de usuario, entre otros.
+
+              **Nota** La *sesión del usuario actual* se basa en el inicio de sesión de Windows. Siempre y cuando el usuario actual no haya cerrado la sesión explícitamente o apagado el equipo, o bien Windows no se haya reiniciado por otros motivos, la sesión del usuario actual persiste durante los eventos como la autenticación de pantalla de bloqueo y el cambio de usuario, entre otros.
 
  
 
-[
-              **PreviousExecutionState**
-            ](https://msdn.microsoft.com/library/windows/apps/br224729) también puede tener los valores **Running** o **Suspended**, aunque en estos casos la aplicación no ha finalizado previamente, por lo que no será necesario restaurar ningún dato, ya que todo está en la memoria.
+
+              [
+              **PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) también puede tener los valores **Running** o **Suspended**, aunque en estos casos la aplicación no ha finalizado previamente, así que no será necesario restaurar ningún dato, porque todo estará ya en la memoria.
 
 **Nota**  
 
@@ -84,7 +85,8 @@ Si inicias sesión en el equipo con la cuenta de Administrador, no podrás activ
 
 Para más información, consulta [Contratos y extensiones de aplicaciones (aplicaciones de la Tienda Windows)](https://msdn.microsoft.com/library/windows/apps/hh464906).
 
-### **OnActivated** frente a las activaciones específicas
+### 
+              **OnActivated** frente a las activaciones específicas
 
 El método [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) permite controlar todos los tipos de activación posibles. Sin embargo, es más habitual usar distintos métodos para controlar los tipos de activación más comunes y usar **OnActivated** solo como método de reserva para los tipos de activación menos comunes. Por ejemplo, el objeto [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) tiene un método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) que se invoca como una devolución de llamada siempre que el objeto [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693) sea **Launch**, y esta es la activación típica de la mayoría de las aplicaciones. Hay más de 6 métodos **On\*** para las activaciones específicas: [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336), [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/hh701806). Las plantillas de inicio de las aplicaciones XAML tienen una implementación para **OnLaunched** y un controlador para [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341).
 
@@ -105,11 +107,12 @@ Conviene que liberes los recursos exclusivos y los identificadores de archivos p
 
 En general, la aplicación debe guardar su estado y liberar sus recursos e identificadores de archivos inmediatamente cuando se controle el evento de suspensión, y el código no debería tardar más de un segundo en completarse. Si una aplicación no regresa del evento de suspensión en unos segundos, Windows da por sentado que la aplicación dejó de responder y la finaliza.
 
-Hay algunos escenarios de aplicación donde la aplicación debe seguir ejecutándose para completar tareas en segundo plano. Por ejemplo, la aplicación puede seguir reproduciendo audio en segundo plano; para más información, consulta [Audio en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140)). Además, las operaciones de transferencia en segundo plano continúan incluso cuando la aplicación se haya suspendido o finalizado; para más información, consulta [Cómo descargar un archivo](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer)).
+Hay algunos escenarios de aplicación donde la aplicación debe seguir ejecutándose para completar tareas en segundo plano. Por ejemplo, la aplicación puede seguir reproduciendo audio en segundo plano; para más información, consulta [Audio en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140)). Además, las operaciones de transferencia en segundo plano continúan incluso cuando la aplicación se haya suspendido o finalizado; para más información, consulta [Cómo descargar un archivo](https://msdn.microsoft.com/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer)).
 
 Para obtener instrucciones, consulta el tema de [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
-**Una nota sobre la depuración con Visual Studio: **Visual Studio impide que Windows suspenda una aplicación que está conectada al depurador. Esto permite que el usuario vea la interfaz de usuario de depuración de Visual Studio mientras se ejecuta la aplicación. Mientras depuras una aplicación, puedes enviarle un evento de suspensión mediante Visual Studio. Asegúrate de que se muestra la barra de herramientas **Ubicación de depuración** y luego haz clic en el botón **Suspender**.
+
+              **Una nota sobre la depuración con Visual Studio: **Visual Studio impide que Windows suspenda una aplicación que esté conectada al depurador. Esto permite que el usuario vea la interfaz de usuario de depuración de Visual Studio mientras se ejecuta la aplicación. Mientras depuras una aplicación, puedes enviarle un evento de suspensión mediante Visual Studio. Asegúrate de que se muestra la barra de herramientas **Ubicación de depuración** y luego haz clic en el botón **Suspender**.
 
 ## Visibilidad de la aplicación
 
@@ -131,7 +134,8 @@ Si se activa una aplicación suspendida para que participe en un contrato entre 
 
 Mientras una aplicación está suspendida, no recibe ninguno de los eventos de red que registró para recibir. Dichos eventos no se colocan en la cola; simplemente se pierden. Por ello, la aplicación debe comprobar el estado de red cuando se reanude.
 
-**Nota**  Dado que el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) no se genera a partir del subproceso de interfaz de usuario, es necesario usar un distribuidor si el código del controlador de reanudación se comunica con la interfaz de usuario.
+
+              **Nota** Dado que el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) no se genera a partir del subproceso de interfaz de usuario, es necesario usar un distribuidor si el código del controlador de reanudación se comunica con la interfaz de usuario.
 
  
 
@@ -146,11 +150,12 @@ No hay ningún evento especial que indique que el usuario ha cerrado una aplicac
 
 Después de que el usuario haya cerrado una aplicación, primero se suspende y luego se finaliza. A continuación, pasa al estado **NotRunning**.
 
-En Windows 8.1 y en versiones posteriores, una vez que el usuario cierra la aplicación, esta se quita de la pantalla y de la lista de cambio, pero no finaliza explícitamente.
+En Windows8.1 y en versiones posteriores, una vez que el usuario cierra la aplicación, esta se quita de la pantalla y de la lista de cambio, pero no finaliza explícitamente.
 
 Si una aplicación registró un controlador de eventos para el evento **Suspending**, se llamará a este controlador cuando se suspenda la aplicación. Puedes usar este controlador de eventos para guardar datos relevantes de la aplicación y del usuario en un almacenamiento persistente.
 
-**Comportamiento de cierre por parte del usuario: **si la aplicación debe hacer algo distinto cuando la cierra el usuario que cuando la cierra Windows, puedes usar el controlador de eventos de activación para determinar si la finalizó Windows o el usuario. Consulta las descripciones de los estados **ClosedByUser** y **Terminated** en la referencia relativa a la enumeración [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694).
+
+              **Comportamiento de cierre por parte del usuario: **Si la aplicación debe hacer algo distinto cuando la cierra el usuario que cuando la cierra Windows, puedes usar el controlador de eventos de activación para determinar si la ha finalizado Windows o el usuario. Consulta las descripciones de los estados **ClosedByUser** y **Terminated** en la referencia relativa a la enumeración [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694).
 
 Te recomendamos que las aplicaciones no se cierren automáticamente mediante programación a menos que sea absolutamente necesario. Por ejemplo, si una aplicación detecta una pérdida de memoria, se puede cerrar para preservar la seguridad de los datos personales del usuario. Cuando una aplicación se cierra mediante programación, el sistema considera que se ha bloqueado.
 
@@ -176,24 +181,24 @@ En las plantillas de proyecto iniciales de Visual Studio se proporciona el códi
 ## Principales API del ciclo de vida de la aplicación
 
 
--   [
-              Espacio de nombres **Windows.ApplicationModel**
-            ](https://msdn.microsoft.com/library/windows/apps/br224691)
--   [
-              Espacio de nombres **Windows.ApplicationModel.Activation**
-            ](https://msdn.microsoft.com/library/windows/apps/br224766)
--   [
-              Espacio de nombres **Windows.ApplicationModel.Core**
-            ](https://msdn.microsoft.com/library/windows/apps/br205865)
--   [
-              Clase **Windows.UI.Xaml.Application**
-            ](https://msdn.microsoft.com/library/windows/apps/br242324) (XAML)
--   [
-              Clase **Windows.UI.Xaml.Window**
-            ](https://msdn.microsoft.com/library/windows/apps/br209041) (XAML)
+-   
+              [
+              Espacio de nombres **Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691)
+-   
+              Espacio de nombres [
+              **Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766)
+-   
+              Espacio de nombres [
+              **Windows.ApplicationModel.Core**](https://msdn.microsoft.com/library/windows/apps/br205865)
+-   
+              Clase [
+              **Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) (XAML)
+-   
+              Clase [
+              **Windows.UI.Xaml.Window**](https://msdn.microsoft.com/library/windows/apps/br209041) (XAML)
 
 **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -212,6 +217,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

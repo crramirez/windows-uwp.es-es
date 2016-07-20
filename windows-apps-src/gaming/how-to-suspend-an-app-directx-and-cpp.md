@@ -94,7 +94,7 @@ void App::Run()
 ## Llamar a Trim()
 
 
-Desde Windows 8.1, todas las aplicaciones de la Tienda Windows con DirectX deben llamar a [**IDXGIDevice3::Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) al suspenderse. Esta llamada la indica al controlador gráfico que libere todos los búferes temporales asignados para la aplicación, lo que reduce la posibilidad de que se cierre la aplicación para reclamar recursos de memoria mientras esté en estado de suspensión. Este es un requisito de certificación para Windows 8.1.
+Desde Windows8.1, todas las aplicaciones de la TiendaWindows con DirectX deben llamar a [**IDXGIDevice3::Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) al suspenderse. Esta llamada la indica al controlador gráfico que libere todos los búferes temporales asignados para la aplicación, lo que reduce la posibilidad de que se cierre la aplicación para reclamar recursos de memoria mientras esté en estado de suspensión. Este es un requisito de certificación para Windows8.1.
 
 ```cpp
 void App::OnSuspending(Platform::Object^ sender, SuspendingEventArgs^ args)

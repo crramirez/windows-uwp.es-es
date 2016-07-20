@@ -3,8 +3,9 @@ author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referencia de API principal de Device Portal
 description: "Obtén información sobre las API de REST principales de Windows Device Portal que puedes usar para acceder a los datos y controlar el dispositivo mediante programación."
-ms.sourcegitcommit: 0e36b2adbd0805d9c738de00959581417d2c1ee8
-ms.openlocfilehash: 364e19c723c6cf48a25104b5719735a533ae54a7
+translationtype: Human Translation
+ms.sourcegitcommit: 30aeffcf090c881f84331ced4f7199fd0092b676
+ms.openlocfilehash: 0fa515d28431d4256b977ee3c3c41169661f129f
 
 ---
 
@@ -21,13 +22,13 @@ Todo lo que contiene Windows Device Portal se basa en las API de REST que puedes
 
 Puede instalar una aplicación mediante el siguiente formato de solicitud.
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /api/app/packagemanager/package
 <br />
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -67,11 +68,11 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener el estado de la instalación de una aplicación que está en curso mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/app/packagemanager/state
 <br />
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -109,12 +110,12 @@ Código de estado HTTP      | Descripción
 
 Puedes desinstalar una aplicación mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 DELETE | /api/app/packagemanager/package
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -153,12 +154,12 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener una lista de aplicaciones instaladas en el sistema mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/app/packagemanager/packages
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -224,12 +225,12 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener una lista de dispositivos que están instalados en la máquina mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/devicemanager/devices
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -283,12 +284,12 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener la lista de todos los volcados de memoria disponibles para todas las aplicaciones transferidas localmente mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/debug/dump/usermode/dumps
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -327,14 +328,14 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener la configuración de colección de volcado de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/debug/dump/usermode/crashcontrol
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -378,14 +379,14 @@ Código de estado HTTP      | Descripción
 
 Puedes eliminar un volcado de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 DELETE | /api/debug/dump/usermode/crashdump
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -425,14 +426,14 @@ Código de estado HTTP      | Descripción
 
 Puedes deshabilitar los volcados de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 DELETE | /api/debug/dump/usermode/crashcontrol
 
 <br />
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -471,14 +472,14 @@ Código de estado HTTP      | Descripción
 
 Puedes descargar un volcado de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/debug/dump/usermode/crashdump
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -520,14 +521,14 @@ Código de estado HTTP      | Descripción
 
 Puedes habilitar los volcados de memoria de una aplicación transferida localmente mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /api/debug/dump/usermode/crashcontrol
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -564,12 +565,12 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener la lista de archivos de minivolcado de comprobación de errores mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/debug/dump/kernel/dumplist
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -613,14 +614,14 @@ Código de estado HTTP      | Descripción
 
 Puedes descargar un archivo de volcado de memoria de comprobación de errores mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/debug/dump/kernel/dump
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -660,12 +661,12 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener la configuración del control de bloqueo de comprobación de errores mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/debug/dump/kernel/crashcontrol
 
 <br />
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -711,12 +712,12 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener un volcado de memoria de kernel dinámico mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/debug/dump/livekernel
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -754,14 +755,14 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener el volcado de memoria del proceso de usuario dinámico mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/debug/dump/usermode/live
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -801,14 +802,14 @@ Código de estado HTTP      | Descripción
 
 Puedes establecer la configuración para recopilar datos de comprobación de errores mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /api/debug/dump/kernel/crashcontrol
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -851,12 +852,12 @@ Código de estado HTTP      | Descripción
 
 Puedes crear una sesión ETW en tiempo real mediante el siguiente formato de solicitud. Se administrará a través de un websocket.  Los eventos ETW se procesan por lotes en el servidor y se envían al cliente una vez por segundo. 
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET/WebSocket | /api/etw/session/realtime
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -894,7 +895,8 @@ Estos comandos se envían desde el cliente al servidor.
 
 Comando | Descripción
 :----- | :-----
-el proveedor *{guid}* habilita *{level}* | Habilita el proveedor marcado con *{guid}* (sin corchetes) en el nivel especificado. *{level}* es un **int** de 1 (mínimo detalle) a 5 (detallado).
+el proveedor *{guid}* habilita *{level}* | Habilita el proveedor marcado con *{guid}* (sin corchetes) en el nivel especificado. 
+              *{level}* es un **int** de 1 (mínimo detalle) a 5 (detallado).
 el proveedor *{guid}* deshabilita | Deshabilitar el proveedor con la marca *{guid}* (sin corchetes).
 
 Esta respuesta se envía desde el servidor al cliente. Esto se envía como texto y tú obtienes el siguiente formato analizando el JSON.
@@ -945,12 +947,12 @@ Ejemplo:
 
 Puedes enumerar los proveedores registrados con el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/etw/providers
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -996,12 +998,12 @@ Código de estado HTTP      | Descripción
 
 Puedes enumerar los proveedores registrados con el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/etw/customproviders
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -1046,12 +1048,12 @@ GET | /api/etw/customproviders
 
 Puedes obtener el nombre de una máquina mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/os/machinename
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -1096,12 +1098,12 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener la información del sistema operativo de una máquina mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/os/info
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -1146,20 +1148,74 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
+### Obtén la familia de dispositivos. 
+
+**Solicitud**
+
+Puedes obtener la familia de dispositivos (Xbox, Teléfono, escritorio, etc.) mediante el siguiente formato de solicitud.
+ 
+Método      | URI de la solicitud
+:------     | :-----
+GET | /api/os/devicefamily
+<br />
+
+**Parámetros del URI**
+
+- Ninguno
+
+**Encabezados de la solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+La respuesta incluye la familia de dispositivos (SKU - escritorio, Xbox, etc.).
+
+```
+{
+   "DeviceType" : string
+}
+```
+
+DeviceType tendrá un aspecto como "Windows.Xbox", "Windows.Desktop", etc. 
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* Xbox
+* HoloLens
+* IoT
+
+---
 ### Establecer el nombre de la máquina
 
 **Solicitud**
 
 Puedes establecer el nombre de una máquina mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /api/os/machinename
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -1200,13 +1256,13 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener la lista de procesos que se encuentran en ejecución actualmente mediante el siguiente formato de solicitud.  esto puede actualizarse a una conexión WebSocket también, con los mismos datos de JSON que se envían al cliente una vez por segundo. 
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/resourcemanager/processes
 GET/WebSocket | /api/resourcemanager/processes
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -1261,14 +1317,14 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener las estadísticas de rendimiento del sistema mediante el siguiente formato de solicitud. Esto incluye información como, por ejemplo, leer y escribir ciclos y la cantidad de memoria que se ha usado.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/resourcemanager/systemperf
 GET/WebSocket | /api/resourcemanager/systemperf
 <br />
 Esto también se pueden actualizar a una conexión WebSocket.  Proporciona los mismos datos de JSON a continuación una vez por segundo. 
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -1342,12 +1398,12 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener el estado actual de la batería mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/power/battery
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -1399,12 +1455,12 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener el plan de energía activo mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/power/activecfg
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -1445,14 +1501,14 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener el subvalor de un plan de energía mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/power/cfg/*<power scheme path>*
 <br />
 Opciones:
 - SCHEME_CURRENT
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -1488,12 +1544,12 @@ Código de estado HTTP      | Descripción
 
 Puedes comprobar el estado de energía del sistema mediante el siguiente formato de solicitud. Esto te permitirá comprobar si se encuentra en un estado de energía bajo.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/power/state
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -1535,14 +1591,14 @@ Código de estado HTTP      | Descripción
 
 Puedes establecer el plan de energía activo mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /api/power/activecfg
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -1580,14 +1636,14 @@ Código de estado HTTP      | Descripción
 
 Puedes establecer el subvalor de un plan de energía mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /api/power/cfg/*<power scheme path>*
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -1622,13 +1678,13 @@ Código de estado HTTP      | Descripción
 
 **Solicitud**
 
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/power/sleepstudy/report
 <br />
 Puedes obtener un informe de estudio de suspensión mediante el siguiente formato de solicitud.
 
-**Parámetros de URI**
+**Parámetros del URI**
 Parámetro de URI | Descripción
 :---          | :---
 FileName | (**obligatorio**) Nombre completo del archivo que quieres descargar. Este valor debe estar codificado mediante hex64.
@@ -1667,12 +1723,12 @@ Código de estado HTTP      | Descripción
 
 Puedes enumerar los informes de estudio de suspensión disponibles mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/power/sleepstudy/reports
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -1718,12 +1774,12 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener la transformación de estudio de suspensión mediante el siguiente formato de solicitud. Esta transformación es de tipo XSLT que convierte el informe de estudio de suspensión en un formato XML que puede leer una persona.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/power/sleepstudy/transform
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -1763,12 +1819,12 @@ Código de estado HTTP      | Descripción
 
 Puedes reiniciar el equipo de destino mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /api/control/restart
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -1805,12 +1861,12 @@ Código de estado HTTP      | Descripción
 
 Puedes apagar el equipo de destino mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /api/control/shutdown
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -1851,14 +1907,14 @@ Código de estado HTTP      | Descripción
 
 Puedes iniciar una aplicación moderna mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /api/taskmanager/app
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -1900,14 +1956,14 @@ Código de estado HTTP      | Descripción
 
 Puedes detener una aplicación moderna mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 DELETE | /api/taskmanager/app
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -1951,12 +2007,12 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener la configuración IP actual mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/networking/ipconfig
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -2037,12 +2093,12 @@ Código de estado HTTP      | Descripción
 
 Puedes enumerar las interfaces de red inalámbrica disponibles mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/wifi/interfaces
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -2099,14 +2155,14 @@ Código de estado HTTP      | Descripción
 
 Puedes enumerar la lista de redes inalámbricas en la interfaz especificada mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/wifi/networks
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -2169,14 +2225,14 @@ Código de estado HTTP      | Descripción
 
 Puedes conectarte a una red Wi-Fi o desconectarte de ella mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /api/wifi/network
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -2219,14 +2275,14 @@ Código de estado HTTP      | Descripción
 
 Puedes eliminar un perfil asociado con una red en una interfaz específica mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 DELETE | /api/wifi/network
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -2268,14 +2324,14 @@ Código de estado HTTP      | Descripción
 
 Puedes descargar un archivo relacionado con WER mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/wer/report/file
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -2319,14 +2375,14 @@ Código de estado HTTP      | Descripción
 
 Puedes enumerar los archivos en un informe WER mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/wer/report/files
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -2374,12 +2430,12 @@ Código de estado HTTP      | Descripción
 
 Puedes obtener los informes WER mediante el siguiente formato de solicitud.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/wer/reports
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -2434,12 +2490,12 @@ Código de estado HTTP      | Descripción
 
 Puedes cargar un perfil WPR e iniciar un seguimiento con dicho perfil mediante el siguiente formato de solicitud.  Solo se puede ejecutar un seguimiento cada vez. El perfil no permanecerá en el dispositivo. 
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /api/wpr/customtrace
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -2486,14 +2542,14 @@ Código de estado HTTP      | Descripción
 
 Puedes iniciar una sesión de seguimiento de WPR de arranque mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /api/wpr/boottrace
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -2542,12 +2598,12 @@ Código de estado HTTP      | Descripción
 
 Puedes detener una sesión de seguimiento de WPR de arranque mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/wpr/boottrace
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
 - Ninguno
 
@@ -2587,14 +2643,14 @@ Código de estado HTTP      | Descripción
 
 Puedes iniciar una sesión de seguimiento de WPR mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.  Solo se puede ejecutar un seguimiento cada vez. 
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 POST | /api/wpr/trace
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -2643,16 +2699,175 @@ Código de estado HTTP      | Descripción
 
 Puedes detener una sesión de seguimiento de WPR mediante el siguiente formato de solicitud. También se conoce como una sesión de seguimiento del rendimiento.
  
-Método      | URI de solicitud
+Método      | URI de la solicitud
 :------     | :-----
 GET | /api/wpr/trace
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
+
+- Ninguno
+
+**Encabezados de la solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+- Ninguna.  
+              **Nota:** Esta es una operación de larga duración.  Devolverá cuando el archivo ETL haya terminado de escribirse en disco.  
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* HoloLens
+* IoT
+
+---
+### Recuperar el estado de una sesión de seguimiento
+
+**Solicitud**
+
+Puedes recuperar el estado de la sesión actual de WPR mediante el siguiente formato de solicitud
+ 
+Método      | URI de la solicitud
+:------     | :-----
+GET | /api/wpr/status
+<br />
+
+**Parámetros del URI**
 
 - Ninguno
 
 **Encabezados de solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+El estado de la sesión de seguimiento de WPR en el siguiente formato.
+
+```
+{
+    "SessionType": string, (Running or Idle) 
+    "State": string (normal or boot)
+}
+```
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* HoloLens
+* IoT
+
+---
+### Lista de sesiones de seguimiento completadas (ETL)
+
+**Solicitud**
+
+Puedes obtener una lista del seguimientos de ETL en el dispositivo mediante el siguiente formato de solicitud. 
+
+Método      | URI de la solicitud
+:------     | :-----
+GET | /api/wpr/tracefiles
+<br />
+
+**Parámetros del URI**
+
+- Ninguno
+
+**Encabezados de la solicitud**
+
+- Ninguno
+
+**Cuerpo de la solicitud**
+
+- Ninguno
+
+**Respuesta**
+
+La lista de sesiones de seguimiento completadas se proporciona en el siguiente formato.
+
+```
+{"Items": [{
+    "CurrentDir": string (filepath),
+    "DateCreated": int (File CreationTime),
+    "FileSize": int (bytes),
+    "Id": string (filename),
+    "Name": string (filename),
+    "SubPath": string (filepath),
+    "Type": int
+}]}
+```
+
+**Código de estado**
+
+Esta API tiene los siguientes códigos de estado esperado.
+
+Código de estado HTTP      | Descripción
+:------     | :-----
+200 | Aceptar
+4XX | Códigos de error
+5XX | Códigos de error
+<br />
+**Familias de dispositivos disponibles**
+
+* Windows Mobile
+* Escritorio de Windows
+* HoloLens
+* IoT
+
+---
+### Descargar una sesión de seguimiento (ETL)
+
+**Solicitud**
+
+Puedes descargar un archivo de seguimiento (seguimiento de arranque o el seguimiento de modo de usuario) mediante el siguiente formato de solicitud. 
+
+Método      | URI de la solicitud
+:------     | :-----
+GET | /api/wpr/tracefile
+<br />
+
+**Parámetros del URI**
+
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
+
+Parámetro de URI | Description
+:---          | :---
+filename   | (**obligatorio**) El nombre del seguimiento ETL para descargar.  Los encontrarás en /api/wpr/tracefiles
+
+**Encabezados de la solicitud**
 
 - Ninguno
 
@@ -2682,22 +2897,26 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Recuperar el estado de una sesión de seguimiento
+### Eliminar una sesión de seguimiento (ETL)
 
 **Solicitud**
 
-Puedes recuperar el estado de la sesión actual de WPR mediante el siguiente formato de solicitud
- 
-Método      | URI de solicitud
+Puedes eliminar un archivo de seguimiento (seguimiento de arranque o el seguimiento de modo de usuario) mediante el siguiente formato de solicitud. 
+
+Método      | URI de la solicitud
 :------     | :-----
-GET | /api/wpr/status
+DELETE | /api/wpr/tracefile
 <br />
 
-**Parámetros de URI**
+**Parámetros del URI**
 
-- Ninguno
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
-**Encabezados de solicitud**
+Parámetro de URI | Description
+:---          | :---
+filename   | (**obligatorio**) Nombre del seguimiento ETL que se debe eliminar.  Los encontrarás en /api/wpr/tracefiles
+
+**Encabezados de la solicitud**
 
 - Ninguno
 
@@ -2707,14 +2926,7 @@ GET | /api/wpr/status
 
 **Respuesta**
 
-El estado de la sesión de seguimiento de WPR en el siguiente formato.
-
-```
-{
-    "SessionType": string, (Running or Idle) 
-    "State": string (normal or boot)
-}
-```
+- Devuelve el archivo de seguimiento ETL.
 
 **Código de estado**
 
@@ -2759,7 +2971,8 @@ GET | /api/dns-sd/tags
 
 - Ninguno
 
-**Respuesta** Las etiquetas aplicadas actualmente con el formato siguiente. 
+
+              **Respuesta** Las etiquetas aplicadas actualmente con el siguiente formato. 
 ```
  {
     "tags": [
@@ -2952,7 +3165,8 @@ GET | /api/filesystem/apps/knownfolders
 
 - Ninguno
 
-**Respuesta** Las carpetas disponibles con el formato siguiente. 
+
+              **Respuesta** Las carpetas disponibles con el siguiente formato. 
 ```
  {"KnownFolders": [
     "folder0",
@@ -3006,7 +3220,8 @@ path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especif
 
 - Ninguno
 
-**Respuesta** Las carpetas disponibles con el formato siguiente. 
+
+              **Respuesta** Las carpetas disponibles con el siguiente formato. 
 ```
 {"Items": [
     {
@@ -3039,11 +3254,11 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtener archivos
+### Descargar un archivo
 
 **Solicitud**
 
-Obtén una lista de los archivos que hay en una carpeta.
+Obtener un archivo de una carpeta conocida o appLocalData.
 
 Método      | URI de la solicitud
 :------     | :-----
@@ -3183,6 +3398,6 @@ Código de estado HTTP      | Descripción
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

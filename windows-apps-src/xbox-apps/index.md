@@ -3,8 +3,9 @@ author: Mtoepke
 title: UWP en Xbox One
 description: "Cómo crear aplicaciones de la Plataforma universal de Windows (UWP) en Xbox One."
 area: Xbox
-ms.sourcegitcommit: b94df28172a0ffa33e69e7d20c83c715a1bfdb52
-ms.openlocfilehash: d50602cf6ba7041d34200e8bc93a14188038b5ae
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: b615eaab90ef43026baedd0113ad28f43bede343
 
 ---
 
@@ -12,7 +13,7 @@ ms.openlocfilehash: d50602cf6ba7041d34200e8bc93a14188038b5ae
 
 Introducción a la creación de una aplicación para la Plataforma universal de Windows (UWP) en Xbox One.
 
-Esta versión preliminar admite el desarrollo de aplicaciones y juegos. No es necesario ser un desarrollador de [ID@Xbox](http://www.xbox.com/en-us/Developers/id) para experimentar, crear y probar juegos o aplicaciones en Xbox, pero debes inscribirte en [ID@Xbox](http://www.xbox.com/en-us/Developers/id) si quieres publicar y vender un juego en Xbox One o aprovechar las ventajas de Xbox Live en Windows 10. Para unirte a nuestra comunidad de desarrolladores independientes y entusiastas, regístrate en [ID@Xbox](http://www.xbox.com/en-us/Developers/id). 
+Esta versión preliminar admite el desarrollo de aplicaciones y juegos. No es necesario ser un desarrollador de [ID@Xbox](http://www.xbox.com/Developers/id) para experimentar, crear y probar juegos o aplicaciones en Xbox, pero debes inscribirte en [ID@Xbox](http://www.xbox.com/Developers/id) si quieres publicar y vender un juego en Xbox One o aprovechar las ventajas de Xbox Live en Windows 10. Para unirte a nuestra comunidad de desarrolladores independientes y entusiastas, regístrate en [ID@Xbox](http://www.xbox.com/Developers/id). 
 
 Esta sección incluye pasos de configuración, una guía por el proceso de autenticación, información sobre la instalación de las versiones de las herramientas de Visual Studio y Windows 10 necesarias y, finalmente, los pasos para configurar, compilar, ejecutar y depurar tu primera aplicación sencilla. 
 
@@ -23,7 +24,7 @@ Esta sección incluye pasos de configuración, una guía por el proceso de auten
 |[Problemas conocidos](known-issues.md)| Problemas conocidos de UWP en Xbox One Developer Preview. |
 |[Preguntas más frecuentes](frequently-asked-questions.md)| Preguntas más frecuentes relacionadas con UWP en Xbox One. |
 |[Activación del modo de desarrollador de Xbox One](devkit-activation.md)| Explica cómo habilitar el modo de desarrollador en Xbox One. |
-|[Introducción a las herramientas de Xbox One](introduction-to-xbox-tools.md)| Describe la herramienta específica de Xbox One _Dev Home_, usando Windows Device Portal y configurando Visual Studio para el desarrollo, y guía a un desarrollador nuevo a través de su primera aplicación Xbox para UWP. |
+|[Herramientas](introduction-to-xbox-tools.md)| Describe _Dev Home_, la herramienta específica para Xbox One, cómo usar Windows Device Portal y cómo configurar Visual Studio para el desarrollo. Esta sección también orienta a un desarrollador principiante durante su primera aplicación para UWP de Xbox y explica cómo usar la herramienta Fiddler para ver el tráfico de red. |
 |[Configurar el entorno de desarrollo de UWP en Xbox](development-environment-setup.md)| Describe los pasos para configurar y probar el entorno de desarrollo de Xbox One. |
 |[Procedimientos recomendados](tailoring-for-xbox.md)| Cómo desactivar el modo de mouse, dibujar los bordes de la pantalla y deshabilitar el ajuste de escala. |
 |[Recursos del sistema de aplicaciones para UWP y juegos en Xbox One](system-resource-allocation.md)| Describe los recursos disponibles para la aplicación cuando se ejecuta en Xbox One. | 
@@ -36,12 +37,12 @@ Esta sección incluye pasos de configuración, una guía por el proceso de auten
 
 ## Consulta también
 - [Introducción a las aplicaciones para UWP en Xbox One](http://go.microsoft.com/fwlink/?LinkId=780786) 
-- [Automatizar el inicio de aplicaciones de Windows 10 para UWP](automate-launching-uwp-apps.md)
+- [Automatizar el inicio de aplicaciones de Windows10 para UWP](automate-launching-uwp-apps.md)
 - [CPUSets para el desarrollo de juegos](cpusets-games.md)
   
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

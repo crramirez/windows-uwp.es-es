@@ -6,8 +6,9 @@ ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
 dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: bc3337101f0f2e8449d052743f7b3ce8d2dac516
+translationtype: Human Translation
+ms.sourcegitcommit: a2f4e7a679ca47f2a034e19936c1115e87a2eb24
+ms.openlocfilehash: 12f5905fce642a10656864e41325c8f4bd56c025
 
 ---
 # Cuadro de sugerencias automáticas
@@ -144,30 +145,18 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
     ![Ejemplo de un cuadro de sugerencias automáticas sin resultados de búsqueda](images/controls_autosuggest_noresults.png)
 
-{{> contenido que no sea interno = "
-## Lista de comprobación Globalización y localización
-
-<table>
-<tr>
-<th>Espaciado vertical</th><td>Usar caracteres no latinos para el espaciado vertical para garantizar que los scripts no latinos se muestren correctamente, incluidos los números.</td>
-</tr>
-<tr>
-<th>Desplazamiento</th><td>Cuando el texto de sugerencia automática está seleccionado, el usuario debería poder desplazarse al final de la cadena.</td>
-</tr>
-</table>
-"}}
 
 ## Artículos relacionados
 
 - [Controles de texto](text-controls.md)
 - [Revisión ortográfica](spell-checking-and-prediction.md)
-- [Buscar](search.md)
+- [Búsqueda](search.md)
 - [**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Clase Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

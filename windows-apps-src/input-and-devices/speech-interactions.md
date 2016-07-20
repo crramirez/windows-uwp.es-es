@@ -5,6 +5,7 @@ title: Interacciones de voz
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
 ms.openlocfilehash: ecd002e6f3a92702459426858693dd7547b0ca02
 
@@ -21,11 +22,14 @@ Integra el reconocimiento de voz y texto a voz (también denominado TTS o sínte
 -   Consulta las [Directrices para el diseño de Cortana](cortana-interactions.md) si expones la funcionalidad de la aplicación en la interfaz de usuario de **Cortana**.
 
 
-**Reconocimiento de voz: **convierte las palabras que pronuncia el usuario en texto para entrada de formulario, para dictado de texto, para especificar una acción o un comando y para llevar a cabo tareas. Las gramáticas predefinidas para el dictado de texto libre y la búsqueda web, y las gramáticas personalizadas creadas con la versión 1.0 de la Especificación de gramática de reconocimiento de voz (SRGS) son compatibles.
 
-**TTS: **usa un motor de síntesis de voz (voz) para convertir una cadena de texto en palabras habladas. La cadena de entrada puede ser texto básico y sin adornos o Lenguaje de marcado de síntesis de voz (SSML) más complejo. SSML proporciona una forma estándar de controlar características de la salida de voz, como la pronunciación, el volumen, el tono, la velocidad o el énfasis.
+            **Reconocimiento de voz: **convierte las palabras que pronuncia el usuario en texto para entrada de formulario, para dictado de texto, para especificar una acción o un comando y para llevar a cabo tareas. Las gramáticas predefinidas para el dictado de texto libre y la búsqueda web, y las gramáticas personalizadas creadas con la versión 1.0 de la Especificación de gramática de reconocimiento de voz (SRGS) son compatibles.
 
-**Nota**  Con **Cortana** y comandos de voz personalizados, la aplicación puede iniciarse en primer plano (la aplicación toma el foco, como si se iniciara desde el menú Inicio) o activarse como un servicio en segundo plano (**Cortana** conserva el foco, pero proporciona los resultados de la aplicación). Los comandos que requieren contexto o entrada de usuario adicionales (por ejemplo, enviar un mensaje a un determinado contacto) se administran mejor en una aplicación en primer plano, mientras que los comandos básicos pueden controlarse en **Cortana** a través de una aplicación en segundo plano.
+
+            **TTS: **usa un motor de síntesis de voz (voz) para convertir una cadena de texto en palabras habladas. La cadena de entrada puede ser texto básico y sin adornos o Lenguaje de marcado de síntesis de voz (SSML) más complejo. SSML proporciona una forma estándar de controlar características de la salida de voz, como la pronunciación, el volumen, el tono, la velocidad o el énfasis.
+
+
+            **Nota**  Con **Cortana** y comandos de voz personalizados, la aplicación puede iniciarse en primer plano (la aplicación toma el foco, como si se iniciara desde el menú Inicio) o activarse como un servicio en segundo plano (**Cortana** conserva el foco, pero proporciona los resultados de la aplicación). Los comandos que requieren contexto o entrada de usuario adicionales (por ejemplo, enviar un mensaje a un determinado contacto) se administran mejor en una aplicación en primer plano, mientras que los comandos básicos pueden controlarse en **Cortana** a través de una aplicación en segundo plano.
 Si expones funcionalidad como un servicio en segundo plano mediante comandos de voz en la interfaz de usuario de **Cortana**, consulta las [Directrices para el diseño de Cortana](cortana-design-guidelines.md).
 
  
@@ -158,7 +162,8 @@ Las gramáticas predefinidas de dictado y búsqueda en Internet proporcionan a t
 -   La gramática predeterminada de dictado de texto libre tiene la capacidad de reconocer la mayoría de las palabras y frases que un usuario puede decir en un idioma en particular y está optimizada para reconocer frases cortas. El dictado de texto libre es útil si no quieres limitar los tipos de términos que puede decir un usuario. Entre los usos típicos se incluyen la creación de notas o el dictado del contenido de un mensaje.
 -   La gramática de búsqueda web, como una gramática de dictado, contiene un gran número de palabras y frases que puede decir un usuario. Sin embargo, está optimizada para reconocer los términos que suelen usar las personas cuando buscan en la web.
 
-**Nota** Debido a que las gramáticas predefinidas de dictado y búsqueda en Internet pueden ser grandes y se accede a ellas a través de Internet (no se encuentran en el dispositivo), su rendimiento puede no ser tan rápido como el de una gramática personalizada instalada en el dispositivo.
+
+            **Nota** Debido a que las gramáticas predefinidas de dictado y búsqueda en Internet pueden ser grandes y se accede a ellas a través de Internet (no se encuentran en el dispositivo), su rendimiento puede no ser tan rápido como el de una gramática personalizada instalada en el dispositivo.
 
  
 
@@ -169,7 +174,7 @@ Estas gramáticas predefinidas pueden usarse para reconocer hasta 10 segundos de
 Una gramática personalizada se ha diseñado y creado por el usuario y se instala con la aplicación. El reconocimiento de voz con una restricción personalizada se realiza en el dispositivo.
 
 -   Las restricciones de lista mediante programación ofrecen un enfoque ligero para la creación de gramáticas sencillas como, por ejemplo, una lista de palabras o frases. Una restricción de lista es efectiva para reconocer frases cortas y distintas. Especificar explícitamente todas las palabras en una gramática también mejora la precisión del reconocimiento, porque el motor de reconocimiento de voz debe procesar la voz únicamente para confirmar una coincidencia. La lista también se puede actualizar mediante programación.
--   Una gramática SRGS es un documento estático que, a diferencia de una restricción de lista mediante programación, usa el formato XML definido por [SRGS versión 1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302). Una gramática SRGS proporciona el máximo control sobre la funcionalidad de reconocimiento de voz al permitir capturar varios significados semánticos en un solo reconocimiento.
+-   Una gramáticaSRGS es un documento estático que, a diferencia de una restricción de lista mediante programación, usa el formato XML definido por [SRGS versión 1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302). Una gramática SRGS proporciona el máximo control sobre la funcionalidad de reconocimiento de voz al permitir capturar varios significados semánticos en un solo reconocimiento.
 
     Estas son algunas sugerencias para crear gramáticas SRGS:
 
@@ -180,7 +185,8 @@ Una gramática personalizada se ha diseñado y creado por el usuario y se instal
     -   Intenta no definir frases en la gramática que contengan una sola sílaba. El reconocimiento tiende a ser más exacto con frases con dos o más sílabas.
     -   Evita usar frases que suenen parecido. Por ejemplo, frases como "hola", "cola" y "bola" pueden confundir al motor de reconocimiento y la precisión del reconocimiento puede no ser buena.
 
-**Nota**  El tipo de restricción que uses dependerá de la complejidad de la funcionalidad de reconocimiento que quieras crear. Cualquier enfoque puede ser la mejor opción para una tarea de reconocimiento determinada y puedes encontrar usos para todos los tipos de restricción en tu aplicación.
+
+            **Nota**  El tipo de restricción que uses dependerá de la complejidad de la funcionalidad de reconocimiento que quieras crear. Cualquier enfoque puede ser la mejor opción para una tarea de reconocimiento determinada y puedes encontrar usos para todos los tipos de restricción en tu aplicación.
 
  
 
@@ -230,10 +236,12 @@ Estos dos tipos de problema se pueden abordar usando SSML en lugar de texto sin 
 ## Artículos relacionados
 
 * [Interacciones de voz](https://msdn.microsoft.com/library/windows/apps/mt185614)
-* [Interacciones de Cortana](https://msdn.microsoft.com/library/windows/apps/mt185598)
-             
+* 
+             [Interacciones de Cortana](https://msdn.microsoft.com/library/windows/apps/mt185598)
+            
           
             **Muestras**
+          
 * [Muestra de reconocimiento de voz y síntesis de voz](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -244,6 +252,6 @@ Estos dos tipos de problema se pueden abordar usando SSML en lugar de texto sin 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

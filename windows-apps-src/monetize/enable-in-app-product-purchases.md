@@ -4,6 +4,7 @@ Description: "Independientemente de que la aplicación sea gratuita o no, puedes
 title: "Habilitar compras de productos desde la aplicación"
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
 keywords: in-app offer code sample
+translationtype: Human Translation
 ms.sourcegitcommit: bb28828463b14130deede9f7cf796c6e32fcb48b
 ms.openlocfilehash: 2e9a011a248e4c7e1d3f06064a7f82e308f07131
 
@@ -11,11 +12,12 @@ ms.openlocfilehash: 2e9a011a248e4c7e1d3f06064a7f82e308f07131
 
 # Habilitar compras de productos desde la aplicación
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación.
 
-> **Nota**  Los productos desde la aplicación no pueden ofrecerse durante la versión de prueba de una aplicación. Los clientes que usan una versión de prueba de la aplicación solamente pueden comprar un producto desde la aplicación si compran una versión completa de la misma.
+> 
+            **Nota**  Los productos desde la aplicación no pueden ofrecerse durante la versión de prueba de una aplicación. Los clientes que usan una versión de prueba de la aplicación solamente pueden comprar un producto desde la aplicación si compran una versión completa de la misma.
 
 ## Requisitos previos
 
@@ -47,7 +49,8 @@ void AppInit()
 
 Para cada función que quieras tener disponible a través de un producto desde la aplicación, crea una oferta y agrégala a la aplicación.
 
-> **Importante**  Debes agregar todos los productos desde la aplicación que quieras presentar a tus clientes antes de enviarlos a la Tienda. Si deseas agregar nuevos productos en la aplicación más adelante, tendrás que actualizar la aplicación y enviar una nueva versión.
+> 
+            **Importante**  Debes agregar todos los productos desde la aplicación que quieras presentar a tus clientes antes de enviarlos a la Tienda. Si deseas agregar nuevos productos en la aplicación más adelante, tendrás que actualizar la aplicación y enviar una nueva versión.
 
 1.  **Crea un token de oferta desde la aplicación**
 
@@ -136,6 +139,6 @@ Si necesitas usar recibos para comprobar que el usuario ha realizado una compra 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

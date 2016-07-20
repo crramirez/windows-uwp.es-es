@@ -6,8 +6,8 @@ ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: bb23e8cc85544d4b5f0717b0c2d2ebad1447cb8b
+ms.sourcegitcommit: 0501d59108c5f01b3cefd3d038f3c7d320c862eb
+ms.openlocfilehash: 3461d5cd399682e0c26a7a6864c916bda21eec43
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: bb23e8cc85544d4b5f0717b0c2d2ebad1447cb8b
 
 Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma. Al diseñar un dispositivo en particular, hay que tener en cuenta principalmente cómo aparecerá la aplicación en el dispositivo dónde, cuándo y cómo se usará la aplicación en el dispositivo y cómo interactuará el usuario con el dispositivo.
 
-## <span id="Phones_and_phablets"></span><span id="phones_and_phablets"></span><span id="PHONES_AND_PHABLETS"></span>Teléfonos y tabléfonos
+## Teléfonos y tabléfonos
 
 
 Los más usados de todos los dispositivos informáticos, los teléfonos pueden hacer muchas cosas con la superficie de pantalla limitada y las entradas básicas. Los teléfonos están disponibles en una amplia variedad de tamaños; los teléfonos más grandes se denominan tabléfonos. Las experiencias de la aplicación en tabléfonos son similares a las de los teléfonos, pero debido a que la superficie de pantalla de los tabléfonos es mayor, se pueden producir algunos cambios clave en el consumo de contenido.
@@ -61,7 +61,7 @@ Funcionalidades típicas del dispositivo
 
  
 
-## <span id="Tablets"></span><span id="tablets"></span><span id="TABLETS"></span>Tabletas
+## Tabletas
 
 
 Los Tablet PC ultraportátiles están equipados con pantallas táctiles, cámaras, micrófonos y acelerómetros. El tamaño de la pantalla de las tabletas varía de 7" a 13,3".
@@ -72,7 +72,7 @@ Tamaños de pantalla
 ![un dispositivo de tableta](images/device-primer/1894834-hig-device-primer-05.png)
 
 Uso típico
--   Aproximadamente el 80 % del uso de la tableta es por parte del propietario, mientras que el 20 % restante del uso es compartido.
+-   Aproximadamente el 80% del uso de la tableta es por parte del propietario, mientras que el 20% restante del uso es compartido.
 -   Normalmente se usa en casa como un dispositivo complementario mientras se ve el televisor.
 -   Se usa durante períodos más prolongados que los teléfonos y tabléfonos.
 -   Se escribe texto en ráfagas cortas.
@@ -96,7 +96,7 @@ Funcionalidades típicas del dispositivo
 
  
 
-## <span id="PCs_and_laptops"></span><span id="pcs_and_laptops"></span><span id="PCS_AND_LAPTOPS"></span>PC y portátiles
+## PC y portátiles
 
 
 Los PC y los portátiles de Windows incluyen una amplia gama de dispositivos y tamaños de pantalla. En general, los PC y los portátiles pueden mostrar más de información que los teléfonos o tabletas.
@@ -128,7 +128,7 @@ Funcionalidades típicas del dispositivo
 
  
 
-## <span id="Surface_Hub_devices"></span><span id="surface_hub_devices"></span><span id="SURFACE_HUB_DEVICES"></span>Dispositivos de Surface Hub
+## Dispositivos de Surface Hub
 
 
 Microsoft Surface Hub es un dispositivo de colaboración en equipo de pantalla grande diseñado para el uso simultáneo por parte de varios usuarios.
@@ -161,7 +161,7 @@ Funcionalidades típicas del dispositivo
 
  
 
-## <span id="Windows_IoT_devices"></span><span id="windows_iot_devices"></span><span id="WINDOWS_IOT_DEVICES"></span>Dispositivos de Windows IoT
+## Dispositivos de Windows IoT
 
 
 Los dispositivos Windows IoT son una nueva clase de dispositivos que se centran en la incrustación de dispositivos electrónicos pequeños, sensores y conectividad dentro de los objetos físicos. Por lo general, estos dispositivos están conectados a través de una red o Internet para informar sobre los datos reales que detectan y, en algunos casos, actúan sobre ellos. Es posible que los dispositivos no tengan ninguna pantalla (también conocidos como dispositivos "sin periféricos") o que estén conectados a una pantalla pequeña (conocidos como dispositivos "con periféricos") con un tamaño de pantalla generalmente de 3,5 pulgadas o inferior.
@@ -199,6 +199,6 @@ Funcionalidades típicas del dispositivo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: 415F4107-0612-4235-9722-0F5E4E26F957
 title: Sensores
 description: "Los sensores permiten que las aplicaciones conozcan cuál es la relación entre un dispositivo y el entorno físico. Pueden indicar a la aplicación la dirección, la orientación y el movimiento del dispositivo."
 translationtype: Human Translation
-ms.sourcegitcommit: e5f61e562f7ec464fc07815b0bdd0ac938fc2fb2
-ms.openlocfilehash: dff6228524396c5d6662313ecc808b33e9dd1998
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 15f9fbdc48d43feb02f46313cea4001392d7f0fe
 
 ---
 # Sensores
@@ -42,7 +42,7 @@ La principal ventaja del procesamiento por lotes de los sensores es una mayor du
 
 Puedes influir en la frecuencia con que el sensor envía lotes, ajustando la latencia. Por ejemplo, el sensor [**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687) tiene la propiedad [**ReportLatency**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportlatency). Cuando se establece esta propiedad para una aplicación, el sensor enviará datos después del período de tiempo especificado. Puedes controlar la cantidad de datos que se acumulen para una latencia determinada, estableciendo la propiedad [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportinterval).
 
-Hay un par de advertencias que se deben tener en cuenta con respecto a la configuración de la latencia. La primera advertencia es que cada sensor tiene un valor [**MaxBatchSize**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.accelerometer.maxbatchsize.aspx) que puede admitir basado en el propio sensor. Este es el número de eventos que el sensor puede almacenar en memoria caché antes de que se obligue a enviarlos. Si se multiplica **MaxBatchSize** por [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportinterval), se determina el valor de [**ReportLatency**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportlatency) máximo. Si especificas un valor mayor que este, se usará la latencia máxima para que no se pierdan datos. Además, varias aplicaciones pueden establecer la latencia que cada una desea. Para satisfacer las necesidades de todas las aplicaciones, se usará el período de latencia más corto. Por estos motivos, la latencia que se establezca en la aplicación puede no coincidir con la latencia observada.
+Hay un par de advertencias que se deben tener en cuenta con respecto a la configuración de la latencia. La primera advertencia es que cada sensor tiene un valor [**MaxBatchSize**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.maxbatchsize.aspx) que puede admitir basado en el propio sensor. Este es el número de eventos que el sensor puede almacenar en memoria caché antes de que se obligue a enviarlos. Si se multiplica **MaxBatchSize** por [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportinterval), se determina el valor de [**ReportLatency**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportlatency) máximo. Si especificas un valor mayor que este, se usará la latencia máxima para que no se pierdan datos. Además, varias aplicaciones pueden establecer la latencia que cada una desea. Para satisfacer las necesidades de todas las aplicaciones, se usará el período de latencia más corto. Por estos motivos, la latencia que se establezca en la aplicación puede no coincidir con la latencia observada.
 
 Si un sensor usa informe por lotes, una llamada a [**GetCurrentReading**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.getcurrentreading) borrará el lote de datos actual y se iniciará un nuevo período de latencia.
 
@@ -74,7 +74,7 @@ El sensor [**Barometer**](https://msdn.microsoft.com/library/windows/apps/Dn8724
 
 ## Brújula
 
-El sensor [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705) devuelve una dirección 2D con respecto al norte magnético sobre la base del plano horizontal de la tierra. Este sensor no debe usarse al determinar la orientación específica del dispositivo ni para representar nada en un espacio 3D. Las características gráficas pueden causar una declinación natural en la dirección. Por ello algunos sistemas admiten tanto [**HeadingMagneticNorth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.compassreading.headingmagneticnorth.aspx) como [**HeadingTrueNorth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.compassreading.headingtruenorth.aspx). Piensa en cuál es mejor para tu aplicación, pero recuerda que no todos los sistemas informarán un valor de norte verdadero. Los sensores de girómetro y magnetómetro (un dispositivo que mide la magnitud de fuerza magnética) combinan sus datos para dar origen a la orientación de la brújula, lo que tiene el efecto neto de estabilizar los datos (la fuerza de campo magnético es muy inestable debido a los componentes del sistema eléctrico).
+El sensor [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705) devuelve una dirección 2D con respecto al norte magnético sobre la base del plano horizontal de la tierra. Este sensor no debe usarse al determinar la orientación específica del dispositivo ni para representar nada en un espacio 3D. Las características gráficas pueden causar una declinación natural en la dirección. Por ello algunos sistemas admiten tanto [**HeadingMagneticNorth**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.compassreading.headingmagneticnorth.aspx) como [**HeadingTrueNorth**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.compassreading.headingtruenorth.aspx). Piensa en cuál es mejor para tu aplicación, pero recuerda que no todos los sistemas informarán un valor de norte verdadero. Los sensores de girómetro y magnetómetro (un dispositivo que mide la magnitud de fuerza magnética) combinan sus datos para dar origen a la orientación de la brújula, lo que tiene el efecto neto de estabilizar los datos (la fuerza de campo magnético es muy inestable debido a los componentes del sistema eléctrico).
 
 ![Lecturas de brújula en relación con el polo norte magnético](images/compass.png)
 
@@ -118,7 +118,7 @@ El sensor [**Proximity**](https://msdn.microsoft.com/library/windows/apps/Dn8724
 
 ## Orientación sencilla
 
-El [**SimpleOrientationSensor**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.simpleorientationsensor.aspx) detecta la orientación de cuadrante actual del dispositivo especificado o si se encuentra cara arriba o abajo. Tiene seis estados [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) posibles (**NotRotated**, **Rotated90**, **Rotated180**, **Rotated270**, **FaceUp**, **FaceDown**).
+El [**SimpleOrientationSensor**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.simpleorientationsensor.aspx) detecta la orientación de cuadrante actual del dispositivo especificado o si se encuentra cara arriba o abajo. Tiene seis estados [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) posibles (**NotRotated**, **Rotated90**, **Rotated180**, **Rotated270**, **FaceUp**, **FaceDown**).
 
 Una aplicación de lector que cambia su pantalla sobre la base de si el dispositivo se encuentra paralelo o perpendicular al suelo puede usar estos valores del objeto SimpleOrientationSensor para determinar cómo se está sosteniendo el dispositivo.
 
@@ -129,6 +129,6 @@ Para algunas muestras que ilustran el uso de un par de sensores diferentes, cons
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

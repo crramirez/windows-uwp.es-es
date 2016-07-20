@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
-description: "En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT 8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10."
+description: "En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows10."
 title: "Caso práctico de Windows Runtime 8.x a UWP, aplicación de muestra punto a punto de QuizGame"
 translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
@@ -15,31 +15,36 @@ ms.openlocfilehash: cd05c3edbc254cceb00c55caba698d21998f5594
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT 8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10.
+En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows10.
 
-Una aplicación Universal 8.1 es aquella que crea dos versiones de la misma aplicación: un paquete de la aplicación para Windows 8.1 y otro paquete de la aplicación distinto para Windows Phone 8.1. La versión para WinRT 8.1 de QuizGame usa una organización de proyecto de aplicación universal de Windows, pero toma un enfoque distinto y crea una aplicación funcionalmente distinta para las dos plataformas. El paquete de la aplicación de Windows 8.1 actúa como el host de una sesión del juego de preguntas, mientras el paquete de la aplicación de Windows Phone 8.1 asume el rol del cliente al host. Las dos partes de la sesión del juego de preguntas se comunican a través de redes de punto a punto.
+Una aplicación Universal 8.1 es aquella que crea dos versiones de la misma aplicación: un paquete de la aplicación para Windows 8.1 y otro paquete de la aplicación distinto para Windows Phone 8.1. La versión para WinRT8.1 de QuizGame usa una organización de proyecto de aplicación universal de Windows, pero toma un enfoque distinto y crea una aplicación funcionalmente distinta para las dos plataformas. El paquete de la aplicación de Windows 8.1 actúa como el host de una sesión del juego de preguntas, mientras el paquete de la aplicación de Windows Phone 8.1 asume el rol del cliente al host. Las dos partes de la sesión del juego de preguntas se comunican a través de redes de punto a punto.
 
 La adaptación de las dos partes al equipo y al teléfono, respectivamente, tiene sentido. Pero, ¿no sería aún mejor si se pudieran ejecutar el host y el cliente en prácticamente cualquier dispositivo que quisieras? En este caso práctico, se portarán las dos aplicaciones a Windows 10, donde se compilarán en un único paquete de la aplicación que los usuarios podrán instalar en una amplia gama de dispositivos.
 
 La aplicación usa patrones que usan vistas y modelos de vista. Como resultado de esta clara separación, el proceso de migración de esta aplicación es, como se verá, muy sencillo.
 
-**Nota** En esta muestra se da por hecho que la red está configurada para enviar y recibir paquetes UDP de multidifusión de grupos personalizados (la mayoría de las redes domésticas lo están, aunque puede que su red del trabajo no lo esté). La muestra también envía y recibe paquetes TCP.
+
+            **Nota** En esta muestra se da por hecho que la red está configurada para enviar y recibir paquetes UDP de multidifusión de grupos personalizados (la mayoría de las redes domésticas lo están, aunque puede que su red del trabajo no lo esté). La muestra también envía y recibe paquetes TCP.
 
  
 
-**Nota** Cuando abras QuizGame10 en Visual Studio, si aparece el mensaje "Se requiere una actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+
+            **Nota** Cuando abras QuizGame10 en Visual Studio, si aparece el mensaje "Se requiere una actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
 
  
 
 ## Descargas
 
-[Descarga la aplicación QuizGame Universal 8.1](http://go.microsoft.com/fwlink/?linkid=532953). Este es el estado inicial de la aplicación antes de portar. 
 
-[Descarga la aplicación de Windows 10 QuizGame10](http://go.microsoft.com/fwlink/?linkid=532954). Este es el estado de la aplicación justo después de la migración. 
+            [Descarga la aplicación QuizGame Universal 8.1](http://go.microsoft.com/fwlink/?linkid=532953). Este es el estado inicial de la aplicación antes de portar. 
 
-[Consulta la versión más reciente de esta muestra en GitHub](https://github.com/Microsoft/Windows-appsample-quizgame).
 
-## La solución de WinRT 8.1
+            [Descarga la aplicación de Windows 10 QuizGame10](http://go.microsoft.com/fwlink/?linkid=532954). Este es el estado de la aplicación justo después de la migración. 
+
+
+            [Consulta la versión más reciente de esta muestra en GitHub](https://github.com/Microsoft/Windows-appsample-quizgame).
+
+## La solución de WinRT8.1
 
 
 Este es el aspecto de QuizGame (la aplicación que vamos a portar).
@@ -78,7 +83,7 @@ QuizGame tiene las siguientes partes.
 
 -   P2PHelper. Se trata de una biblioteca de clases portable que contiene la lógica de red punto a punto.
 -   QuizGame.Windows. Este es el proyecto que crea el paquete de la aplicación para la aplicación host, que está destinado a Windows 8.1.
--   QuizGame.WindowsPhone. Este es el proyecto que crea el paquete de la aplicación para la aplicación cliente, que está destinado a Windows Phone 8.1.
+-   QuizGame.WindowsPhone. Este es el proyecto que crea el paquete de la aplicación para la aplicación cliente, que está destinado a Windows Phone8.1.
 -   QuizGame.Shared. Este es el proyecto que contiene código fuente, archivos de marcado y otros activos y recursos, que usan los otros dos proyectos.
 
 Para este caso práctico, tenemos las opciones habituales que se describen en [Si ya tienes una aplicación Universal 8.1](w8x-to-uwp-root.md#if-you-have-an-81-universal-windows-app) con respecto a los dispositivos que se admiten.
@@ -91,7 +96,7 @@ En función de estas opciones, podrás portar QuizGame.Windows a un nuevo proyec
 
 **P2PHelper**
 
--   En la solución, crea un nuevo proyecto de biblioteca de clases de Windows 10 (**Nuevo proyecto**&gt;**Windows Universal**&gt;**Biblioteca de clases (Windows Universal)**) y asígnale el nombre P2PHelper.
+-   En la solución, crea un nuevo proyecto de biblioteca de clases de Windows10 (**Nuevo proyecto**&gt;**Windows Universal**&gt;**Biblioteca de clases (Windows Universal)**) y asígnale el nombre P2PHelper.
 -   Elimina Class1.cs del nuevo proyecto.
 -   Copia P2PSession.cs, P2PSessionClient.cs y P2PSessionHost.cs en la carpeta del nuevo proyecto e incluye los archivos copiados en el nuevo proyecto.
 -   El proyecto se compila sin necesidad de realizar más cambios.
@@ -103,7 +108,7 @@ En función de estas opciones, podrás portar QuizGame.Windows a un nuevo proyec
 
 **QuizGameHost**
 
--   Crea un nuevo proyecto de aplicación de Windows 10 (**Agregar**&gt;**Nuevo proyecto**&gt;**Windows Universal**&gt;**Aplicación vacía (Windows Universal)**) y asígnale el nombre QuizGameHost.
+-   Crea un nuevo proyecto de aplicación de Windows10 (**Agregar**&gt;**Nuevo proyecto**&gt;**Windows Universal**&gt;**Aplicación vacía (Windows Universal)**) y asígnale el nombre QuizGameHost.
 -   Agrega una referencia a P2PHelper (**Agregar referencia**&gt;**Proyectos**&gt;**Solución**&gt;**P2PHelper**).
 -   En el **Explorador de soluciones**, crea una nueva carpeta para cada una de las carpetas compartidas en el disco. A su vez, haz clic con el botón derecho en cada carpeta recién creada, luego haz clic en **Agregar**&gt;**Elemento existente** y navega a una carpeta. Abre la carpeta compartida correspondiente, selecciona todos los archivos y haz clic en **Agregar como vínculo**.
 -   Copia MainPage.xaml de \\QuizGame.Windows\\ a \\QuizGameHost\\ y cambia el espacio de nombres a QuizGameHost.
@@ -130,7 +135,7 @@ por esta:
 
 **QuizGameClient**
 
--   Crea un nuevo proyecto de aplicación de Windows 10 (**Agregar**&gt;**Nuevo proyecto**&gt;**Windows Universal**&gt;**Aplicación vacía (Windows Universal)**) y asígnale el nombre QuizGameClient.
+-   Crea un nuevo proyecto de aplicación de Windows10 (**Agregar**&gt;**Nuevo proyecto**&gt;**Windows Universal**&gt;**Aplicación vacía (Windows Universal)**) y asígnale el nombre QuizGameClient.
 -   Agrega una referencia a P2PHelper (**Agregar referencia**&gt;**Proyectos**&gt;**Solución**&gt;**P2PHelper**).
 -   En el **Explorador de soluciones**, crea una nueva carpeta para cada una de las carpetas compartidas en el disco. A su vez, haz clic con el botón derecho en cada carpeta recién creada, luego haz clic en **Agregar**&gt;**Elemento existente** y navega a una carpeta. Abre la carpeta compartida correspondiente, selecciona todos los archivos y haz clic en **Agregar como vínculo**.
 -   Copia MainPage.xaml de \\QuizGame.WindowsPhone\\ a \\QuizGameClient\\ y cambia el espacio de nombres a QuizGameClient.
@@ -192,7 +197,7 @@ Con ese último retoque, la aplicación se comportará y tendrá el mismo aspect
 
 ## Conclusión
 
-La aplicación que migramos en este caso práctico era relativamente compleja e incluía varios proyectos, una biblioteca de clases y una gran cantidad de código e interfaz de usuario. Aun así, la migración resultó sencilla. Parte de la facilidad de la migración corresponde directamente a la similitud entre la plataforma para desarrollador de Windows 10 y las plataformas de Windows 8.1 y Windows Phone 8.1. En parte también se debe a la forma en que la aplicación original se diseñó para separar los modelos, los modelos de vista y las vistas.
+La aplicación que migramos en este caso práctico era relativamente compleja e incluía varios proyectos, una biblioteca de clases y una gran cantidad de código e interfaz de usuario. Aun así, la migración resultó sencilla. Parte de la facilidad de la migración corresponde directamente a la similitud entre la plataforma para desarrollador de Windows10 y las plataformas de Windows8.1 y Windows Phone8.1. En parte también se debe a la forma en que la aplicación original se diseñó para separar los modelos, los modelos de vista y las vistas.
 
 
 

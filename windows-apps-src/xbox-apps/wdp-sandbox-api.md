@@ -2,6 +2,7 @@
 author: payzer
 title: Referencia de API de espacio aislado de Xbox Live de Device Portal
 description: "Obtén información sobre cómo tener acceso al espacio aislado de Xbox Live mediante programación."
+translationtype: Human Translation
 ms.sourcegitcommit: a857ba338a971e651653193ff2149f08b1665a36
 ms.openlocfilehash: c1671db55dcb05ab7a126fad271a5e49146fe9ac
 
@@ -89,6 +90,6 @@ Código de estado HTTP      | Descripción
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

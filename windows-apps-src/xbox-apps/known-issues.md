@@ -3,8 +3,9 @@ author: Mtoepke
 title: Problemas conocidos de UWP en Xbox One Developer Preview
 description: 
 area: Xbox
-ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
-ms.openlocfilehash: 9a9180f8d6fcd51808310a7f8fbac986ca9c3817
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: e016be20af9a0d7a67fa383cbdc93083d12a1113
 
 ---
 
@@ -21,7 +22,8 @@ Para los desarrolladores, esto significa que no todas las API y las herramientas
 
 La siguiente lista destaca algunos problemas conocidos que pueden aparecer en esta versión, aunque esta no es una lista exhaustiva. 
 
-**Queremos recibir tus comentarios**, de modo que informa sobre todos los problemas que encuentres en el foro [Desarrollo de aplicaciones universales de Windows](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop). 
+
+              **Queremos recibir tus comentarios**, así que notifica todos los problemas que encuentres en el foro [Desarrollo de aplicaciones universales de Windows](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop). 
 
 Si sigues teniendo problemas, lee la información de este tema, consulta las [preguntas más frecuentes](frequently-asked-questions.md) y usa los foros para pedir ayuda.
 
@@ -44,17 +46,19 @@ public App() {
 }
 ```
 
-Para desactivar el modo de mouse en una aplicación HTML/Javascript, sigue este ejemplo:
+Para desactivar el modo de mouse en una aplicación HTML/JavaScript, sigue este ejemplo:
 
 ```code
 // Turn off mouse mode
 navigator.gamepadInputEmulation = "keyboard";
 ```
 
-> **Nota**
-            &nbsp;&nbsp;En esta versión preliminar para desarrolladores, cuando el modo de mouse está activado, el desplazamiento con el stick derecho del mando puede provocar que la consola se bloquee. Si surge este problema, es necesario reiniciar la consola.
+Para obtener más información, incluido cómo activar la navegación direccional en una aplicación HTML/JavaScript, consulta [Cómo deshabilitar el modo de mouse](how-to-disable-mouse-mode.md#html).
 
-Para obtener información sobre la compatibilidad con el modo de mouse, consulta el tema [Diseño para Xbox y televisión](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode). Este tema incluye información acerca de cómo habilitar y deshabilitar el modo de mouse, de forma que puedas elegir el comportamiento adecuado para la aplicación.
+> 
+              **Nota**&nbsp;&nbsp;En esta versión preliminar para desarrolladores, si el modo de mouse está activado, el desplazamiento con el stick derecho del mando puede provocar que la consola se bloquee. Si surge este problema, es necesario reiniciar la consola.
+
+Para obtener información sobre la compatibilidad con el modo de mouse, consulta el tema [Diseño para Xbox y televisión](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode). Este tema incluye información acerca de cómo habilitar y deshabilitar el modo de mouse, de forma que puedas elegir el comportamiento adecuado para la aplicación.
 
 ## Para implementar una aplicación, es necesario contar con un usuario que haya iniciado sesión (error 0x87e10008).
 
@@ -66,9 +70,9 @@ Para solucionar este problema, inicia sesión con un usuario desde el Shell de X
  
 ## Aún no se han aplicado los límites de memoria para las aplicaciones en segundo plano
  
-El límite de 128 MB para las aplicaciones que se ejecutan en segundo plano no se aplica en esta versión preliminar. Esto significa aunque la aplicación supere los 128 MB cuando se ejecute en segundo plano, podrá asignar memoria.
+El límite de 128MB para las aplicaciones que se ejecutan en segundo plano no se aplica en esta versión preliminar. Esto significa aunque la aplicación supere los 128MB cuando se ejecute en segundo plano, podrá asignar memoria.
  
-Actualmente no hay ninguna solución para este problema. El uso de memoria debería regularse de acuerdo con esto; en una futura versión preliminar, la aplicación recibirá errores de asignación de memoria si supera el límite de 128 MB.
+Actualmente no hay ninguna solución para este problema. El uso de memoria debería regularse de acuerdo con esto; en una futura versión preliminar, la aplicación recibirá errores de asignación de memoria si supera el límite de 128MB.
  
 ## La implementación desde VS sufre un error si el control parental está activado
 
@@ -110,7 +114,7 @@ Please use the forum to report any issues you see.-->
 
 ## Compatibilidad con DirectX 12
 
-UWP en Xbox One admite el nivel de característica 10 de DirectX 11. De momento no se admite DirectX 12. Xbox One, al igual que todas las consolas de juegos tradicionales, es una herramienta de hardware especializada que requiere un SDK específico para alcanzar su potencial máximo. Si estás trabajando en un juego que requiere acceso al máximo potencial del hardware de Xbox One, puedes inscribirte en el programa [ID@XBOX](http://www.xbox.com/en-us/Developers/id) para obtener acceso a ese SDK, que incluye la compatibilidad con DirectX 12.
+UWP en Xbox One admite el nivel de característica 10 de DirectX 11. De momento no se admite DirectX 12. Xbox One, al igual que todas las consolas de juegos tradicionales, es una herramienta de hardware especializada que requiere un SDK específico para alcanzar su potencial máximo. Si estás trabajando en un juego que requiere acceso al máximo potencial del hardware de Xbox One, puedes inscribirte en el programa [ID@XBOX](http://www.xbox.com/Developers/id) para obtener acceso a ese SDK, que incluye la compatibilidad con DirectX 12.
 
 <!-- ### Xbox One Developer Preview disables game streaming to Windows 10
 
@@ -121,8 +125,8 @@ To restore the game streaming feature, you must leave the developer preview. -->
 
 De manera predeterminada, el área de visualización de las aplicaciones para UWP en Xbox debe estar encuadrada por la zona segura del televisor. Sin embargo, Xbox One Developer Preview contiene un error conocido que hace que la zona segura del televisor empiece en [0, 0] en lugar de en [_offset_, _offset_].
 
-> **Nota**
-            &nbsp;&nbsp;Esto solo se aplica a las aplicaciones para UWP que usan Javascript.
+> 
+              **Nota**&nbsp;&nbsp;Esto solo se aplica a las aplicaciones para UWP que usan JavaScript.
 
 La forma más sencilla de solucionar este problema es deshabilitar la zona segura del televisor, como se muestra en el siguiente ejemplo de JavaScript.
 
@@ -138,15 +142,17 @@ UWP apps and games running on Xbox One share resources with the system and other
 If you are running into memory or performance issues, this may be why. 
 For more details, see [System resources for UWP apps and games on Xbox One](system-resource-allocation.md).-->
 
+<!--
+## Networking using traditional sockets
 
-## Conexión a redes con sockets tradicionales
-
-En esta versión preliminar para desarrolladores, no está disponible el acceso a redes entrantes y salientes desde la consola que usa los sockets TCP o UDP tradicionales (WinSock, Windows.Networking.Sockets). Los desarrolladores sí pueden usar HTTP y WebSockets. 
+In this developer preview, inbound and outbound network access from the console that uses traditional TCP/UDP sockets (WinSock, Windows.Networking.Sockets) is not available. 
+Developers can still use HTTP and WebSockets.
+--> 
 
 
 ## Cobertura de las API de la UWP
 
-En Xbox no se admiten todas las API de la UWP. Consulta [UWP features that aren't yet supported on Xbox](http://go.microsoft.com/fwlink/p/?LinkId=760755) (Características de la UWP que aún no se admiten en Xbox) para ver la lista de las API que sabemos que no funcionan. Si encuentras problemas con otras API, notifícalo en los foros. 
+En Xbox no se admiten todas las API de la UWP. Consulta [Características de la UWP que aún no se admiten en Xbox](http://go.microsoft.com/fwlink/p/?LinkId=760755) para ver la lista de las API que sabemos que no funcionan. Si encuentras problemas con otras API, notifícalo en los foros. 
 
 <!--## XAML controls do not look like or behave like the controls in the Xbox One shell
 
@@ -230,6 +236,6 @@ This is caused by a failure in the WDP infrastructure on the console and can be 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

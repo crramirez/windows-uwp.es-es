@@ -4,8 +4,8 @@ ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
 description: "Tecnologías para tener acceso a la red y servicios web."
 title: Redes y servicios web
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: df62edbf63777a8fcec4ab08c1fb56ab76ea6624
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: b4e291c0948a7734b8ba188bc060dfba2e9a83d1
 
 ---
 
@@ -20,7 +20,7 @@ Las siguientes tecnologías de red y servicios web están disponibles para los d
 | [Conceptos básicos de redes](networking-basics.md)                                               | Cosas que debes hacer en cualquier aplicación habilitada para la red                     |
 | [¿Qué tecnología de red?](which-networking-technology.md)                          | Una introducción rápida de las tecnologías de redes disponibles para un desarrollador UWP, con sugerencias sobre cómo elegir las tecnologías que son adecuadas para la aplicación.               |
 | [Comunicaciones de red en segundo plano](network-communications-in-the-background.md) | Las aplicaciones usan tareas en segundo plano y dos mecanismos principales para mantener las comunicaciones cuando no están en primer plano: el agente de sockets y los desencadenadores del canal de control.                  |
-| [Sockets](sockets.md)                                                                   | Puedes usar [Windows.Networking.Sockets](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.networking.sockets.aspx) y [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms737523) para comunicarte con otros dispositivos como un desarrollador de aplicaciones de la aplicación para UWP. Este tema proporciona instrucciones detalladas sobre el uso del espacio de nombres de Windows.Networking.Sockets para llevar a cabo operaciones de red. |
+| [Sockets](sockets.md)                                                                   | Puedes usar [Windows.Networking.Sockets](https://msdn.microsoft.com/library/windows/apps/xaml/windows.networking.sockets.aspx) y [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms737523) para comunicarte con otros dispositivos como un desarrollador de aplicaciones de la aplicación para UWP. Este tema proporciona instrucciones detalladas sobre el uso del espacio de nombres de Windows.Networking.Sockets para llevar a cabo operaciones de red. |
 | [WebSockets](websockets.md)                                                             | WebSocket ofrece un mecanismo para una comunicación bidireccional, rápida y segura entre un cliente y un servidor a través de Internet mediante HTTP(S).                 |
 | [HttpClient](httpclient.md)                                                             | Usa la API del espacio de nombres [Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/dn279692) para enviar y recibir información mediante los protocolos HTTP 2.0 y HTTP 1.1.             |
 | [Fuentes RSS y Atom](web-feeds.md)                                                          | Recupera o crea el contenido web más reciente o popular usando fuentes sindicadas generadas a partir de los estándares de RSS y Atom mediante características del espacio de nombres [Windows.Web.Syndication](https://msdn.microsoft.com/library/windows/apps/br243632).                   |
@@ -29,6 +29,6 @@ Las siguientes tecnologías de red y servicios web están disponibles para los d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

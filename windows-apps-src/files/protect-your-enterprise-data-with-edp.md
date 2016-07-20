@@ -6,18 +6,20 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Usar Enterprise Data Protection (EDP) para proteger archivos
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 2d9b1ec4e39e5c8a100030184ee9287a0d97ea24
+ms.sourcegitcommit: 9b9e9ecb70f3a0bb92038ae94f45ddcee3357dbd
+ms.openlocfilehash: a31fc65599f43be5b302b568774a51ab77065300
 
 ---
 
 # Usar Enterprise Data Protection (EDP) para proteger archivos
 
-__Nota__ La directiva de Protección de datos de empresa (EDP) no se puede aplicar en la versión 1511 de Windows 10 (compilación 10586) o en una versión anterior.
+> [!NOTE]
+> La directiva de Enterprise Data Protection (EDP) no se puede aplicar en Windows10, versión 1511 (compilación 10586), ni en versiones anteriores.
 
 En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr realizar algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con los archivos. Para obtener una perspectiva de desarrollador completa sobre cómo se relaciona EDP con los archivos, las secuencias, el portapapeles, las redes, las tareas en segundo plano y la protección de datos con la pantalla bloqueada, consulta [Enterprise Data Protection (EDP) (Protección de datos de empresa [EDP])](../enterprise/edp-hub.md).
 
-**Nota** La [muestra de Protección de datos de empresa (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) abarca muchos de los escenarios que se muestran en este tema.
+> [!NOTE]
+> En la [muestra de Enterprise Data Protection (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) se abarcan muchos de los escenarios que se muestran en este tema.
 
 ## Requisitos previos
 
@@ -44,7 +46,7 @@ Puedes crear una aplicación que hospede los ejemplos de código de este tema pa
 string localFolderPath = ApplicationData.Current.LocalFolder.Path;
 ```
 
-Una vez tengas la ruta de acceso, podrás usar el Explorador de archivos para buscar fácilmente los archivos que crea la aplicación. De esta forma, podrás confirmar que están protegidos y con la identidad correcta.
+Cuando tengas la ruta de acceso, podrás usar el Explorador de archivos para buscar fácilmente los archivos que crea la aplicación. De esta forma, podrás confirmar que están protegidos y con la identidad correcta.
 
 En el Explorador de archivos, selecciona **Cambiar opciones de carpeta y búsqueda** y, en la pestaña **Vista**, activa **Mostrar los archivos cifrados en color**. Usa también el comando **Vista**&gt;**Agregar columnas** del Explorador de archivos para agregar la columna **Cifrado para** y poder ver la identidad de la empresa a la que estás protegiendo los archivos.
 
@@ -53,7 +55,7 @@ En el Explorador de archivos, selecciona **Cambiar opciones de carpeta y búsque
 
 Existen muchas formas en las que los datos de la empresa pueden entrar en tu aplicación como, por ejemplo, desde determinados extremos de red, archivos, el Portapapeles o desde el contrato para contenido compartido. También es posible que tu aplicación cree nuevos datos empresariales. Sean cuales sean los medios por los cuales la aplicación habilitada reciba datos empresariales, la aplicación deberá tener cuidado para proteger los datos para la identidad de la empresa administrada cuando conserva los datos en un nuevo archivo.
 
-Los pasos básicos consisten en usar una API de almacenamiento normal para crear el archivo, usar una API de EDP para proteger el archivo en la identidad empresarial y, a continuación, (de nuevo, mediante las API de almacenamiento normal) escribir en el archivo. Asegúrate de proteger el archivo antes de escribir en él (tal como se muestra en el ejemplo siguiente). Usa el método [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157) para proteger el archivo. Recuerda que, como siempre, solo tiene sentido proteger el archivo en una identidad si esa identidad está administrada. Para obtener más información sobre por qué se produce ese caso y la manera en que tu aplicación puede determinar la identidad de la empresa en la que se está ejecutando, consulta [Confirming an identity is managed (Confirmar que una identidad está administrada)](../enterprise/edp-hub.md#confirming_an_identity_is_managed).
+Los pasos básicos consisten en usar una API de almacenamiento normal para crear el archivo, usar una API de EDP para proteger el archivo en la identidad empresarial y, a continuación, (de nuevo, mediante las API de almacenamiento normal) escribir en el archivo. Asegúrate de proteger el archivo antes de escribir en él (tal como se muestra en el ejemplo siguiente). Usa el método [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157) para proteger el archivo. Recuerda que, como siempre, solo tiene sentido proteger el archivo en una identidad si esa identidad está administrada. Para obtener más información sobre por qué se produce ese caso y la manera en que tu aplicación puede determinar la identidad de la empresa en la que se está ejecutando, consulta [Confirming an identity is managed (Confirmar que una identidad está administrada)](../enterprise/edp-hub.md#confirming-an-identity-is-managed).
 
 ```CSharp
 using Windows.Security.EnterpriseData;
@@ -84,7 +86,8 @@ private async void SaveEnterpriseDataToFile(string enterpriseData, string identi
 ## Proteger los datos empresariales en un archivo nuevo (para una tarea en segundo plano)
 
 
-La API [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157) que hemos usado en la sección anterior solo es adecuada para aplicaciones interactivas. En el caso de una tarea en segundo plano, el código puede ejecutarse mientras la pantalla está bloqueada. Además, es posible que la empresa esté administrando una directiva de seguridad de protección de datos con la pantalla bloqueada (DPL), en la que las claves de cifrado que se necesitan para obtener acceso a los recursos protegidos se quitan temporalmente de la memoria del dispositivo cuando este último esté bloqueado. Esto impide la pérdida de datos si el dispositivo se pierde. La función también quita las claves asociadas con los archivos protegidos cuando se cierran sus identificadores. Sin embargo, es posible crear nuevos archivos protegidos mientras la ventana de bloqueo está activa (el tiempo entre el bloqueo del dispositivo y su desbloqueo) y obtener acceso a ellos mientras se mantiene abierto el identificador de archivo. **StorageFolder.CreateFileAsync** cierra el identificador cuando se crea el archivo, por lo que este algoritmo no se puede usar.
+La API [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157) que hemos usado en la sección anterior solo es adecuada para aplicaciones interactivas. En el caso de una tarea en segundo plano, el código puede ejecutarse mientras la pantalla está bloqueada. Además, es posible que la empresa esté administrando una directiva de seguridad de protección de datos con la pantalla bloqueada (DPL), en la que las claves de cifrado que se necesitan para obtener acceso a los recursos protegidos se quitan temporalmente de la memoria del dispositivo cuando este último esté bloqueado. Esto impide la pérdida de datos si el dispositivo se pierde. La función también quita las claves asociadas con los archivos protegidos cuando se cierran sus identificadores. Sin embargo, es posible crear nuevos archivos protegidos mientras la ventana de bloqueo está activa (el tiempo entre el bloqueo del dispositivo y su desbloqueo) y obtener acceso a ellos mientras se mantiene abierto el identificador de archivo. 
+            **StorageFolder.CreateFileAsync** cierra el identificador cuando se crea el archivo, por lo que este algoritmo no se puede usar.
 
 1.  Crea un archivo nuevo mediante **StorageFolder.CreateFileAsync**.
 2.  Cífralo mediante **FileProtectionManager.ProtectAsync**.
@@ -249,26 +252,23 @@ private async void EnableUIPolicyFromFile(StorageFile storageFile)
 }
 ```
 
-**Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> '!NOTA] Este artículo está orientado a desarrolladores de Windows10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
 ## Temas relacionados
 
+- [Muestra de Enterprise data protection (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
 
-[enterprise data protection (EDP) sample (Muestra de Protección de datos de empresa [EDP])](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
-
-[**Espacio de nombres Windows.Security.EnterpriseData**](https://msdn.microsoft.com/library/windows/apps/dn279153)
-
- 
-
- 
+- [**Espacio de nombres Windows.Security.EnterpriseData**](https://msdn.microsoft.com/library/windows/apps/dn279153)
 
 
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Jul16_HO1-->
 
 

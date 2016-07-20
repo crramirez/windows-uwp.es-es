@@ -4,8 +4,8 @@ title: "Animaciones de fotograma clave y animaciones de función de aceleración
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
 description: "Las animaciones de fotograma clave lineales, las animaciones de fotograma clave con un valor KeySpline o las funciones de aceleración son tres técnicas distintas para prácticamente el mismo escenario."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f2c6d6c0e1d11fee40440cae06d68907313f62dc
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 9c010e0abca4dd095b32b42b3a8606f8faf3fcaa
 
 ---
 # Animaciones de fotograma clave y animaciones de función de aceleración
@@ -31,24 +31,25 @@ De forma implícita, la duración de una animación de fotograma clave es la dur
 
 Además de la propiedad [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration), puedes configurar todas las propiedades basadas en la clase [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) en una animación de fotograma clave, de la misma forma que con una animación **From**/**To**/**By**, ya que las clases de animación de fotograma clave también derivan de **Timeline**. Estas son:
 
--   [
-              **AutoReverse**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.autoreverse): una vez se alcanza el último fotograma clave, los fotogramas se repiten en orden inverso desde el final. Esto duplica la duración aparente de la animación.
--   [
-              **BeginTime**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.begintime): retrasa el inicio de la animación. La escala de tiempo para los valores **KeyTime** de los fotogramas no inicia el recuento hasta que se alcanza **BeginTime**, de modo que no hay riesgo de cortar los fotogramas.
--   [
-              **FillBehavior**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): controla lo que sucede cuando se llega al último fotograma clave. **FillBehavior** no tiene ningún efecto en los fotogramas clave intermedios.
--   [
-              **RepeatBehavior**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
+-   
+              [
+              **AutoReverse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.autoreverse): Una vez que se alcanza el último fotograma clave, los fotogramas se repiten en orden inverso desde el final. Esto duplica la duración aparente de la animación.
+-   
+              [
+              **BeginTime**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.begintime): Retrasa el inicio de la animación. La escala de tiempo para los valores **KeyTime** de los fotogramas no inicia el recuento hasta que se alcanza **BeginTime**, de modo que no hay riesgo de cortar los fotogramas.
+-   
+              [
+              **FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): Controla lo que sucede cuando se llega al último fotograma clave. 
+              **FillBehavior** no tiene ningún efecto en los fotogramas clave intermedios.
+-   
+              [
+              **RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
     -   si está establecido como **Forever**, los fotogramas clave y sus escalas de tiempo se repiten de manera indefinida.
     -   Si está establecido como un recuento de iteraciones, la escala de tiempo se repite esa cantidad de veces.
     -   Si está establecido como un valor de [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377), la escala de tiempo se repite hasta llegar a dicho horario. Esto puede truncar parte de la animación en la secuencia de fotograma clave, si no es un factor entero de la duración implícita de la escala de tiempo.
--   [
-              **SpeedRatio**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (no se usa con frecuencia)
+-   
+              [
+              **SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (no se usa habitualmente)
 
 ### Fotogramas clave lineales
 
@@ -76,7 +77,8 @@ Aquí te mostramos cómo usar una animación de fotograma clave para escalar el 
 
 Los fotogramas clave discretos no usan ninguna interpolación. Cuando se llega a un valor **KeyTime**, simplemente se aplica el nuevo **Value**. Según la propiedad de interfaz de usuario que se está animando, por lo general, esto genera una animación que simula un "salto". Asegúrate de que este sea el comportamiento estético que realmente quieres. Puedes minimizar los saltos aparentes al aumentar la cantidad de fotogramas clave declarados, pero si tu objetivo es una animación suave, lo mejor es que uses en cambio fotogramas clave lineales o spline.
 
-**Nota** Los fotogramas clave discretos son la única forma de animar un valor que no es del tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) y [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) con la clase [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132). Analizaremos esto en mayor detalle más adelante en este tema.
+
+              **Nota** Los fotogramas clave discretos son la única forma de animar un valor que no sea del tipo [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) y [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) con la clase [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132). Analizaremos esto en mayor detalle más adelante en este tema.
 
  
 
@@ -158,47 +160,47 @@ Las funciones de aceleración te permiten aplicar fórmulas matemáticas persona
 
 Las funciones de aceleración se pueden aplicar a las animaciones de tres formas:
 
--   Mediante el uso de un fotograma clave de aceleración en una animación de fotograma clave, tal como describimos en la sección anterior. Usa [**EasingColorKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210267), [**EasingDoubleKeyFrame.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.easingdoublekeyframe.easingfunction.aspx) o [**EasingPointKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210279).
--   Mediante la configuración de la propiedad **EasingFunction** en uno de los tipos de animaciones **From**/**To**/**By**. Usa [**ColorAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR243075), [**DoubleAnimation.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) o [**PointAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210354).
+-   Mediante el uso de un fotograma clave de aceleración en una animación de fotograma clave, tal como describimos en la sección anterior. Usa [**EasingColorKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210267), [**EasingDoubleKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.easingdoublekeyframe.easingfunction.aspx) o [**EasingPointKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210279).
+-   Mediante la configuración de la propiedad **EasingFunction** en uno de los tipos de animaciones **From**/**To**/**By**. Usa [**ColorAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR243075), [**DoubleAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) o [**PointAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210354).
 -   Mediante la configuración de [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) como parte de una [**VisualTransition**](https://msdn.microsoft.com/library/windows/apps/BR209034). Esto es específico para definir estados visuales para los controles; para obtener más información, consulta [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) o el tema sobre [guiones gráficos para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
 
 A continuación te indicamos una lista de funciones de aceleración:
 
--   [
-              **BackEase**
-            ](https://msdn.microsoft.com/library/windows/apps/BR243049): Retira el movimiento de una animación un poquito antes de que comience la animación en la ruta indicada.
--   [
-              **BounceEase**
-            ](https://msdn.microsoft.com/library/windows/apps/BR243057): crea un efecto de rebote.
--   [
-              **CircleEase**
-            ](https://msdn.microsoft.com/library/windows/apps/BR243063): crea una animación que se acelera o desacelera con una función circular.
--   [
-              **CubicEase**
-            ](https://msdn.microsoft.com/library/windows/apps/BR243126): crea una animación que se acelera o desacelera con la fórmula f(t) = t3.
--   [
-              **ElasticEase**
-            ](https://msdn.microsoft.com/library/windows/apps/BR210282): crea una animación que se asemeja a un muelle que oscila de arriba abajo hasta que se detiene.
--   [
-              **ExponentialEase**
-            ](https://msdn.microsoft.com/library/windows/apps/BR210294): crea una animación que se acelera o desacelera con una fórmula exponencial.
--   [
-              **PowerEase**
-            ](https://msdn.microsoft.com/library/windows/apps/BR210399): crea una animación que se acelera o desacelera con la fórmula f(t) = tp, donde p equivale a la propiedad [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power).
--   [
-              **QuadraticEase**
-            ](https://msdn.microsoft.com/library/windows/apps/BR210403): crea una animación que se acelera o desacelera con la fórmula f(t) = t2.
--   [
-              **QuarticEase**
-            ](https://msdn.microsoft.com/library/windows/apps/BR210405): crea una animación que se acelera o desacelera con la fórmula f(t) = t4.
--   [
-              **QuinticEase**
-            ](https://msdn.microsoft.com/library/windows/apps/BR210407): crea una animación que se acelera o desacelera con la fórmula f(t) = t5.
--   [
-              **SineEase**
-            ](https://msdn.microsoft.com/library/windows/apps/BR210439): crea una animación que se acelera o desacelera con una fórmula senoidal.
+-   
+              [
+              **BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049): Retira el movimiento de una animación un poquito antes de que comience dicha animación en la ruta indicada.
+-   
+              [
+              **BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057): Crea un efecto de rebote.
+-   
+              [
+              **CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063): Crea una animación que se acelera o desacelera con una función circular.
+-   
+              [
+              **CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126): Crea una animación que se acelera o desacelera con la fórmula f(t) = t3.
+-   
+              [
+              **ElasticEase**](https://msdn.microsoft.com/library/windows/apps/BR210282): Crea una animación que se asemeja a un muelle que oscila de arriba abajo hasta que se detiene.
+-   
+              [
+              **ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294): Crea una animación que se acelera o desacelera con una fórmula exponencial.
+-   
+              [
+              **PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399): Crea una animación que se acelera o desacelera con la fórmula f(t) = tp, donde p equivale a la propiedad [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power).
+-   
+              [
+              **QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403): Crea una animación que se acelera o desacelera con la fórmula f(t) = t2.
+-   
+              [
+              **QuarticEase**](https://msdn.microsoft.com/library/windows/apps/BR210405): Crea una animación que se acelera o desacelera con la fórmula f(t) = t4.
+-   
+              [
+              **QuinticEase**](https://msdn.microsoft.com/library/windows/apps/BR210407): Crea una animación que se acelera o desacelera con la fórmula f(t) = t5.
+-   
+              [
+              **SineEase**](https://msdn.microsoft.com/library/windows/apps/BR210439): Crea una animación que se acelera o desacelera con una fórmula senoidal.
 
-Algunas de las funciones de aceleración tienen sus propias propiedades. Por ejemplo, [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057) tiene dos propiedades [**Bounces**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounces.aspx) y [**Bounciness**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounciness.aspx) que modifican el comportamiento a lo largo del tiempo de dicha función **BounceEase**. Otras funciones de aceleración, como [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126), no tienen otras propiedades que no sean la propiedad [**EasingMode**](https://msdn.microsoft.com/library/windows/apps/BR210275) que comparten todas las funciones de aceleración y siempre producen el mismo comportamiento de la función a lo largo del tiempo.
+Algunas de las funciones de aceleración tienen sus propias propiedades. Por ejemplo, [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057) tiene dos propiedades [**Bounces**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounces.aspx) y [**Bounciness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounciness.aspx) que modifican el comportamiento a lo largo del tiempo de dicha función **BounceEase**. Otras funciones de aceleración, como [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126), no tienen otras propiedades que no sean la propiedad [**EasingMode**](https://msdn.microsoft.com/library/windows/apps/BR210275) que comparten todas las funciones de aceleración y siempre producen el mismo comportamiento de la función a lo largo del tiempo.
 
 Algunas de estas funciones de aceleración se superponen un poco, según cómo configures las propiedades en las funciones de aceleración que contienen propiedades. Por ejemplo, [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403) es exactamente igual que [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399) con un valor de [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power) que equivale a 2. Y [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063) es básicamente un valor predeterminado de [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294).
 
@@ -315,6 +317,6 @@ Puedes usar más de un [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/l
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

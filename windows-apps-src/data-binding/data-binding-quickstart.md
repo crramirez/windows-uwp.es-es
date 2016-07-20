@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
 title: "Introducción al enlace de datos"
 description: "En este tema se muestra cómo enlazar un control (o cualquier otro elemento de interfaz de usuario) a un solo elemento o enlazar un control de elementos a una colección de elementos en una aplicación para la Plataforma universal de Windows (UWP)."
-ms.sourcegitcommit: c5325f0d0a067847bea81a115db4770a39ddd12a
-ms.openlocfilehash: 4753c2fc52fa0227b3867685b793a3d6cfc05630
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 092df9799982dc5da5cc085b2e73a5dd376c0eb8
 
 ---
 Introducción al enlace de datos
@@ -198,7 +199,7 @@ Este es el resultado.
 Enlazar a una colección de elementos.
 ------------------------------------------------------------------------------------------------------------------
 
-Un escenario común es enlazar a una colección de objetos profesionales. En C# y Visual Basic, la clase [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/ms668604.aspx) genérica es una buena elección de colección para el enlace de datos porque implementa las interfaces [**INotifyPropertyChanged**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx) y [**INotifyCollectionChanged**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx). Estas interfaces proporcionan notificación de cambios a los enlaces cuando los elementos se añaden o se eliminan o cuando cambia una propiedad de la lista en sí. Si quieres que los controles enlazados se actualicen con los cambios en las propiedades de objetos de la colección, el objeto profesional también debe implementar **INotifyPropertyChanged**. Para obtener más información, consulta el tema [Enlace de datos en profundidad](data-binding-in-depth.md).
+Un escenario común es enlazar a una colección de objetos profesionales. En C# y Visual Basic, la clase [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx) genérica es una buena elección de colección para el enlace de datos porque implementa las interfaces [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx) y [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx). Estas interfaces proporcionan notificación de cambios a los enlaces cuando los elementos se añaden o se eliminan o cuando cambia una propiedad de la lista en sí. Si quieres que los controles enlazados se actualicen con los cambios en las propiedades de objetos de la colección, el objeto profesional también debe implementar **INotifyPropertyChanged**. Para obtener más información, consulta el tema [Enlace de datos en profundidad](data-binding-in-depth.md).
 
 El siguiente ejemplo enlaza una [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) a una colección de objetos `Recording`. Empecemos agregando la colección a nuestro modelo de vista. Solo tienes que agregar estos miembros nuevos a la clase **RecordingViewModel**.
 
@@ -330,7 +331,8 @@ Puedes elegir mostrar todos los detalles de objetos **Recording** en los element
 
 Esto se puede llevar a cabo de dos maneras. Puedes enlazar la vista de detalles a la propiedad [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) de la [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878). O puedes usar un [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833): enlaza tanto la **ListView** como la vista de detalles al **CollectionViewSource** (que se encargará en tu lugar del elemento actualmente seleccionado). A continuación se muestran ambas técnicas y proporcionan los mismos resultados que se muestra en la ilustración.
 
-**Nota**  Hasta ahora en este tema solo hemos usado la [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), pero ambas técnicas que te mostramos a continuación requieren la [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) más flexible (pero menos eficaz).
+
+              **Nota** Hasta ahora, en este tema solo hemos usado la [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783), pero ambas técnicas que te mostramos a continuación requieren la [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) más flexible (pero menos eficaz).
 
 Primero, esta es la técnica [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770). Si usas las extensiones de componentes de Visual C++ (C++/CX), ya que usaremos [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782), tendrás que agregar el atributo [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) a la clase **Recording**.
 
@@ -455,6 +457,6 @@ Este es el resultado.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

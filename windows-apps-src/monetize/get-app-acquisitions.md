@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de una aplicación, durante un intervalo de fechas especificado y otros filtros opcionales."
 title: "Obtener adquisiciones de la aplicación"
-ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
-ms.openlocfilehash: 7f87f931c92eca1f64fbd23b4fcba3359293f94a
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: e28c309a51d28e14e57b8bd027dc8c353311d89a
 
 ---
 
@@ -31,21 +32,21 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
 
 ### Sintaxis de la solicitud
 
-| Método | URI de solicitud                                                              |
+| Método | URI de la solicitud                                                              |
 |--------|--------------------------------------------------------------------------|
-| GET    | https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions``` |
 
- 
+<span/>
 
 ### Encabezado de la solicitud
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;. |
+| Authorization | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;. |
 
- 
+<span/> 
 
-### Cuerpo de la solicitud
+### Parámetros de solicitud
 
 <table>
 <colgroup>
@@ -127,10 +128,11 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
 </tbody>
 </table>
 
+<span/>
  
 ### Campos de filtro
 
-El parámetro *filter* del cuerpo de la solicitud contiene una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un campo y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Estos son algunos ejemplos de parámetros *filter*:
+El parámetro *filter* de la solicitud contiene una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un campo y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Estos son algunos ejemplos de parámetros *filter*:
 
 -   *filter=market eq 'US' and gender eq 'm'*
 -   *filter=(market ne 'US') and (gender ne 'Desconocido') and (gender ne 'm') and (market ne 'NO') and (ageGroup ne 'mayor que 55' or ageGroup ne ‘menor que 13’)*
@@ -233,7 +235,7 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 </tbody>
 </table>
 
- 
+<span/> 
 
 ### Ejemplo de solicitud
 
@@ -258,6 +260,7 @@ Authorization: Bearer <your access token>
 | @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de datos de compra de la solicitud. |
 | TotalCount | entero    | Número total de filas en el resultado de datos de la consulta.                                                                                                                                                                                                                             |
 
+<span/>
  
 ### Valores de compra
 
@@ -278,7 +281,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 | acquisitionType     | cadena | Tipo de compra (gratuita, de pago, etc.). Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).                                                                                                    |
 | acquisitionQuantity | número | Número de compras que se realizaron durante el nivel de agregación especificado.                                                                                                                                                         |
 
- 
+<span/> 
 
 ### Ejemplo de respuesta
 
@@ -317,6 +320,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

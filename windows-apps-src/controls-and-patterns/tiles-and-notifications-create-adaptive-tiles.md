@@ -5,6 +5,7 @@ title: Crear iconos adaptables
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a6632c7b8fdee5320f35e316abd318193a254c51
 ms.openlocfilehash: 6cd4519007d1241cb7c411dade1a092140b598c4
 
@@ -18,7 +19,7 @@ ms.openlocfilehash: 6cd4519007d1241cb7c411dade1a092140b598c4
 
 Las plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). Para obtener la lista completa de atributos y elementos adaptables, consulta el [Esquema de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
 
-(Si quieres, puedes seguir usando las plantillas preestablecidas del [catálogo de plantillas de iconos de Windows 8](https://msdn.microsoft.com/library/windows/apps/hh761491) al diseñar las notificaciones para Windows 10.)
+(Si quieres, puedes seguir usando las plantillas preestablecidas del [catálogo de plantillas de iconos de Windows 8](https://msdn.microsoft.com/library/windows/apps/hh761491) al diseñar las notificaciones para Windows10.)
 
 ## Introducción
 
@@ -201,7 +202,8 @@ TileContent content = new TileContent()
 
 Puedes controlar la personalización de marca en la parte inferior de un icono dinámico (el nombre para mostrar y el logotipo de esquina) mediante el atributo de personalización de marca de la carga de notificación. Puedes elegir mostrar "none", solo "name", solo "logo" o ambos con "nameAndLogo".
 
-**Nota**  Windows Mobile no admite el logotipo de esquina, por lo que "logo" y "nameAndLogo" se definen de manera predeterminada en "name" en Mobile.
+
+            **Nota**  Windows Mobile no admite el logotipo de esquina, por lo que "logo" y "nameAndLogo" se definen de manera predeterminada en "name" en Mobile.
 
  
 
@@ -279,7 +281,8 @@ TileContent content = new TileContent()
 
 Si no especificas la personalización de marca en la carga de notificaciones, las propiedades del icono base determinarán la personalización de marca. Si en el icono base se muestra el nombre para mostrar, a continuación, la personalización de marca se definirá de manera predeterminada en "name". De lo contrario, la personalización de marca se definirá de manera predeterminada en "none" si no se muestra el nombre para mostrar.
 
-**Nota** Este es un cambio de Windows 8.x, en el que la personalización de marca predeterminada era "logo".
+
+            **Nota** Este es un cambio de Windows8.x, en el que la personalización de marca predeterminada era "logo".
 
  
 
@@ -288,7 +291,8 @@ Si no especificas la personalización de marca en la carga de notificaciones, la
 
 Puedes invalidar el nombre para mostrar de una notificación escribiendo la cadena de texto que quieras con el atributo **displayName**. Al igual que con la personalización de marca, puedes especificar esto en el elemento [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que afecta a toda la carga de notificaciones, o en el elemento [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md), que solo afecta a iconos individuales.
 
-**Problema conocido**  En Windows Mobile, si especifica un ShortName para Tile, no se usará el nombre para mostrar proporcionado en la notificación (ShortName se muestra siempre). 
+
+            **Problema conocido**  En Windows Mobile, si especifica un ShortName para Tile, no se usará el nombre para mostrar proporcionado en la notificación (ShortName se muestra siempre). 
 
 ```XML
 <tile>
@@ -406,7 +410,7 @@ new TileText()
 ## Estilos de texto
 
 
-Los estilos controlan el tamaño de fuente, el color y el espesor de los elementos de texto. Hay una serie de estilos disponibles, así como una variación "sutil" de cada estilo que establece la opacidad al 60 % y que, por lo general, hace que el color del texto tenga un tono gris claro.
+Los estilos controlan el tamaño de fuente, el color y el espesor de los elementos de texto. Hay una serie de estilos disponibles, así como una variación "sutil" de cada estilo que establece la opacidad al 60% y que, por lo general, hace que el color del texto tenga un tono gris claro.
 
 ```XML
 <text hint-style="base">Header content</text>
@@ -431,7 +435,8 @@ new TileText()
 
 ![estilos de texto de iconos adaptables](images/adaptive-tiles-textstyles.png)
 
-**Nota** El estilo se define de manera predeterminada en subtítulo si no se especifica ninguna sugerencia de estilo.
+
+            **Nota** El estilo se define de manera predeterminada en subtítulo si no se especifica ninguna sugerencia de estilo.
 
  
 
@@ -441,12 +446,12 @@ new TileText()
 |--------------------------------|---------------------------|-------------|
 | &lt;text hint-style="\*" /&gt; | Alto de fuente               | Espesor de la fuente |
 | subtítulo                        | 12 píxeles efectivos (epx) | Regular     |
-| body                           | 15 epx                    | Regular     |
-| base                           | 15 epx                    | Semibold    |
-| subtitle                       | 20 epx                    | Regular     |
-| title                          | 24 epx                    | Semilight   |
-| subheader                      | 34 epx                    | Light       |
-| header                         | 46 epx                    | Light       |
+| body                           | 15epx                    | Regular     |
+| base                           | 15epx                    | Semibold    |
+| subtitle                       | 20epx                    | Regular     |
+| title                          | 24epx                    | Semilight   |
+| subheader                      | 34epx                    | Light       |
+| header                         | 46epx                    | Light       |
 
  
 
@@ -464,7 +469,7 @@ Estas variaciones reducen el alto de línea para que el contenido de la parte su
 
 **Variaciones de estilo de texto sutiles**
 
-Cada estilo tiene una variación sutil que proporciona al texto una opacidad del 60 % que, por lo general, hace que el color del texto tenga un tono gris claro.
+Cada estilo tiene una variación sutil que proporciona al texto una opacidad del 60% que, por lo general, hace que el color del texto tenga un tono gris claro.
 
 |                        |
 |------------------------|
@@ -523,7 +528,8 @@ Los grupos permiten declarar semánticamente que el contenido dentro del grupo e
 
 Con el fin de obtener la mejor experiencia en los dispositivos y las pantallas, proporciona varios grupos. El hecho de tener varios grupos permite que el icono se adapte a las pantallas más grandes.
 
-**Nota** El único elemento secundario válido de un grupo es un subgrupo.
+
+            **Nota** El único elemento secundario válido de un grupo es un subgrupo.
 
  
 
@@ -637,19 +643,19 @@ El atributo **hint-weight** te permite controlar el ancho de las columnas. El va
 </tr>
 <tr class="even">
 <td align="left">1</td>
-<td align="left">25 %</td>
+<td align="left">25%</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
-<td align="left">25 %</td>
+<td align="left">25%</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
-<td align="left">25 %</td>
+<td align="left">25%</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
-<td align="left">25 %</td>
+<td align="left">25%</td>
 </tr>
 <tr class="even">
 <td align="left">Espesor total: 4</td>
@@ -676,11 +682,11 @@ Para hacer que una columna sea dos veces más grande que otra columna, asigna a 
 </tr>
 <tr class="even">
 <td align="left">1</td>
-<td align="left">33,3 %</td>
+<td align="left">33,3%</td>
 </tr>
 <tr class="odd">
 <td align="left">2</td>
-<td align="left">66,7 %</td>
+<td align="left">66,7%</td>
 </tr>
 <tr class="even">
 <td align="left">Espesor total: 3</td>
@@ -693,7 +699,7 @@ Para hacer que una columna sea dos veces más grande que otra columna, asigna a 
 
 ![subgrupos, una columna que duplica el tamaño de otra](images/adaptive-tiles-subgroups02.png)
 
-Si quieres que la primera columna ocupe un 20 % del ancho total y que la segunda columna ocupe un 80 % del ancho total, asigna el espesor de la primera en 20 y el de la segunda en 80. Si los valores totales del espesor suman 100, actúan como porcentajes.
+Si quieres que la primera columna ocupe un 20% del ancho total y que la segunda columna ocupe un 80% del ancho total, asigna el espesor de la primera en 20 y el de la segunda en 80. Si los valores totales del espesor suman 100, actúan como porcentajes.
 
 <table>
 <colgroup>
@@ -707,11 +713,11 @@ Si quieres que la primera columna ocupe un 20 % del ancho total y que la segund
 </tr>
 <tr class="even">
 <td align="left">20</td>
-<td align="left">20 %</td>
+<td align="left">20%</td>
 </tr>
 <tr class="odd">
 <td align="left">80</td>
-<td align="left">80 %</td>
+<td align="left">80%</td>
 </tr>
 <tr class="even">
 <td align="left">Espesor total: 100</td>
@@ -724,7 +730,8 @@ Si quieres que la primera columna ocupe un 20 % del ancho total y que la segund
 
 ![subgrupos, con espesores que suman 100](images/adaptive-tiles-subgroups03.png)
 
-**Nota** Un margen de 8 píxeles se agrega automáticamente entre las columnas.
+
+            **Nota** Un margen de 8 píxeles se agrega automáticamente entre las columnas.
 
  
 
@@ -848,7 +855,8 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 El elemento &lt;image&gt; se usa para mostrar imágenes en la notificación de icono. Las imágenes pueden colocarse alineadas dentro del contenido del icono (valor predeterminado), como una imagen de fondo detrás del contenido o como una animación de imagen que aparezca desde la parte superior de la notificación.
 
-**Nota** Hay [restricciones en el tamaño del archivo y en las dimensiones de las imágenes](https://msdn.microsoft.com/library/windows/apps/hh781198).
+
+            **Nota** Hay [restricciones en el tamaño del archivo y en las dimensiones de las imágenes](https://msdn.microsoft.com/library/windows/apps/hh781198).
 
  
 
@@ -1340,9 +1348,9 @@ El resultado tendrá el siguiente aspecto:
 
 Puedes usar **hint-overlay** en una imagen que aparece para agregar opacidad y hacer más legible el nombre para mostrar del icono. Si especificas **hint-overlay** en el elemento &lt;binding&gt;, la superposición se aplicará tanto en la imagen que aparece como en la imagen de fondo.
 
-También puedes aplicar el atributo **hint-overlay** a un elemento &lt;image&gt; con el valor placement="peek" o placement="background" para establecer niveles de opacidad discretos para cada una de esas imágenes. Si no especificas una superposición, el valor predeterminado de la opacidad de la imagen de fondo será 20 % y el de la imagen que aparece será 0 %.
+También puedes aplicar el atributo **hint-overlay** a un elemento &lt;image&gt; con el valor placement="peek" o placement="background" para establecer niveles de opacidad discretos para cada una de esas imágenes. Si no especificas una superposición, el valor predeterminado de la opacidad de la imagen de fondo será 20% y el de la imagen que aparece será 0%.
 
-En este ejemplo se muestra una imagen de fondo con una opacidad del 20 % (izquierda) y una opacidad del 0 % (derecha):
+En este ejemplo se muestra una imagen de fondo con una opacidad del 20% (izquierda) y una opacidad del 0% (derecha):
 
 ![Atributo hint-overlay en una imagen que aparece](images/hintoverlay.png)
 
@@ -1494,6 +1502,6 @@ TileWide = new TileBinding()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

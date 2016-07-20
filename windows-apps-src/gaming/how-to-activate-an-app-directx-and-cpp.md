@@ -39,7 +39,8 @@ void App::Initialize(CoreApplicationView^ applicationView)
 ## Activar la instancia de CoreWindow para la aplicación
 
 
-Cuando se inicia la aplicación, debes obtener una referencia a [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para la aplicación. **CoreWindow** contiene el distribuidor de mensajes de eventos de ventana que la aplicación usa para procesar eventos de ventana. Obtén esta referencia en la devolución de llamada del evento de activación de la aplicación con una llamada a [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589). Después de obtener esta referencia, activa la ventana de aplicación principal con una llamada a [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).
+Cuando se inicia la aplicación, debes obtener una referencia a [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para la aplicación. 
+            **CoreWindow** contiene el distribuidor de mensajes de eventos de ventana que la aplicación usa para procesar eventos de ventana. Obtén esta referencia en la devolución de llamada del evento de activación de la aplicación con una llamada a [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589). Después de obtener esta referencia, activa la ventana de aplicación principal con una llamada a [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).
 
 ```cpp
 void App::OnActivated(CoreApplicationView^ applicationView, IActivatedEventArgs^ args)

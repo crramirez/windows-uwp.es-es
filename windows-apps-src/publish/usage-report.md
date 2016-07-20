@@ -4,28 +4,35 @@ Description: "El informe de uso del panel del Centro de desarrollo de Windows te
 title: Informe de uso
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 translationtype: Human Translation
-ms.sourcegitcommit: 056642044953bab02f78912c7611ddcf5d6d48e6
-ms.openlocfilehash: 476e7ee0c9c7ea7dce7f5e3a0389091ede9132c4
+ms.sourcegitcommit: 6dac44032ac217969148ff73c594f99d8a733355
+ms.openlocfilehash: 0cb9d09504a024cabe66661a5c77e21752b7e2e6
 
 ---
 
 # Informe de uso
 
 
-El informe de **uso** del panel Centro de desarrollo de Windows te permite ver cómo los clientes usan la aplicación y obtener información sobre los eventos personalizados que definiste. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
+El informe **Uso** del panel del Centro de desarrollo de Windows te permite ver cómo los clientes de Windows10 usan la aplicación y obtener información sobre los eventos personalizados que hayas definido. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
 
-> **Nota**  Anteriormente, el informe de **uso** solo proporcionaba datos si el SDK de Visual Studio Application Insights estaba activado en la aplicación. Con el informe de **uso** actualizado, esto ya no es necesario.
+> 
+            **Nota**  Anteriormente, el informe **Uso** solo proporcionaba datos si se activaba el SDK de Visual Studio Application Insights en la aplicación. Con el informe de **uso** actualizado, esto ya no es necesario.
 
 ## Aplicar filtros
 
 
 En la parte superior de la página, se puede expandir **Aplicar filtros** para filtrar todos los datos de esta página por intervalo de fechas o grupo de productos (versiones de SO relacionadas).
 
--   **Fecha**: el filtro predeterminado es **Últimos 30 días**, pero puedes ampliarlo hasta **Últimos 12 meses**.
--   **Versión del paquete**: el valor predeterminado es **Todas las versiones**. Si la aplicación incluye más de un paquete, puedes elegir uno concreto aquí.
--   **Tipo de dispositivo**: el valor predeterminado es **Todos**, pero puede mostrar los datos de un determinado tipo de dispositivo.
+-   
+            **Fecha**: el filtro predeterminado es **Últimos 30 días**, pero puedes ampliarlo hasta **Últimos 3 meses**.
+-   
+            **Versión del paquete**: El valor predeterminado es **Todas las versiones**. Si la aplicación incluye más de un paquete, puedes elegir uno concreto aquí.
+-   
+            **Tipo de dispositivo**: el valor predeterminado es **Todos**, pero puede mostrar los datos de un determinado tipo de dispositivo.
 
 La información de todos los gráficos que aparecen a continuación reflejará el período de tiempo seleccionado en **Aplicar filtros**. De manera predeterminada, se incluirán datos de todos los tipos de dispositivo compatibles y las versiones del paquete, a menos que hayas usado la sección **Aplicar filtros** para filtrar solo por una.
+
+> 
+            **Nota** En este informe solo se incluyen los datos de uso de los clientes de Windows10.
 
 ## Sesiones de usuario totales
 
@@ -55,6 +62,6 @@ Los eventos personalizados se implementan con el método [registro](https://msdn
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

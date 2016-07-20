@@ -2,8 +2,9 @@
 author: Jwmsft
 label: App bars/command bars
 template: detail.hbs
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: 01cd10c72745ff4bd8204a9adaa8eebf5a892efe
+translationtype: Human Translation
+ms.sourcegitcommit: a2f4e7a679ca47f2a034e19936c1115e87a2eb24
+ms.openlocfilehash: c7107599529d5af5b118a46cb065106f08afe113
 
 ---
 
@@ -24,7 +25,7 @@ Las barras de comandos (también conocidas como "barras de la aplicación") prop
 
 El control CommandBar es un control de propósito general, flexible y ligero que puede mostrar contenido complejo, como imágenes o bloques de texto, así como comandos simples, como por ejemplo, controles [AppBarButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx) y [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx).
 
-XAML proporciona tanto el control AppBar y como el control CommandBar. El control AppBar solo se debería usar cuando se actualiza una aplicación universal para Windows 8 que usa dicho control y se necesita minimizar los cambios. Para nuevas aplicaciones de Windows 10, es recomendable usar el control CommandBar en su lugar. Para este documento, se supone que usas el control CommandBar.
+XAML proporciona tanto el control AppBar y como el control CommandBar. El control AppBar solo se debería usar cuando se actualiza una aplicación universal para Windows8 que usa dicho control y se necesita minimizar los cambios. Para nuevas aplicaciones de Windows 10, es recomendable usar el control CommandBar en su lugar. Para este documento, se supone que usas el control CommandBar.
 
 ## Ejemplos
 Una barra de comandos expandida en la aplicación Fotos de Microsoft.
@@ -50,7 +51,8 @@ Esta es la misma barra de comandos, en su estado abierto. Las etiquetas identifi
 ![Barra de comandos cerrada](images/commandbar_anatomy_open.png)
 
 La barra de comandos se divide en 4 áreas principales:
-- El botón "ver más" \[•••\] se muestra en la parte derecha de la barra. Presionar el botón "ver más" \[•••\] tiene dos resultados: revela las etiquetas de los botones de comando principales y abre el menú de desbordamiento si hay comandos secundarios existentes. En el nuevo SDK, el botón no estará visible si no hay comandos secundarios ni etiquetas ocultas existentes. La propiedad [
+- El botón "ver más" \[•••\] se muestra en la parte derecha de la barra. Presionar el botón "ver más" \[•••\] tiene dos resultados: revela las etiquetas de los botones de comando principales y abre el menú de desbordamiento si hay comandos secundarios existentes. En el nuevo SDK, el botón no estará visible si no hay comandos secundarios ni etiquetas ocultas existentes. 
+            La propiedad [
               **OverflowButtonVisibility**
             ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx) permite que las aplicaciones cambien este comportamiento predeterminado de ocultación automática.
 - El área de contenido se alinea a la izquierda de la barra. Se muestra si la propiedad [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx) está completada.
@@ -95,7 +97,7 @@ También puedes agregar comandos a la colección **SecondaryCommands** y estos e
 
 El área de desbordamiento predeterminada tiene un estilo distinto del de la barra. Puedes ajustar el estilo al establecer la propiedad [**CommandBarOverflowPresenterStyle**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.commandbaroverflowpresenterstyle.aspx) en un [estilo](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx) destinado al objeto [**CommandBarOverflowPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbaroverflowpresenter.aspx).
 
-Puedes mover los comandos mediante programación entre los objetos PrimaryCommands y SecondaryCommands, según sea necesario. {{> contenido interno = "Los comandos también se pueden mover automáticamente dentro o fuera del área de desbordamiento, cuando cambie el ancho de la barra de comandos, por ejemplo, cuando los usuarios cambian el tamaño de la ventana de la aplicación. El desbordamiento dinámico está activado de forma predeterminada pero las aplicaciones pueden desactivar este comportamiento cambiando el valor de la propiedad `IsDynamicOverflowEnabled`."}}
+Puedes mover los comandos mediante programación entre los objetos PrimaryCommands y SecondaryCommands, según sea necesario. 
 
 ### Botones de la barra de la aplicación
 
@@ -141,7 +143,7 @@ Cuando la etiqueta se ajusta en la ubicación sugerida, tiene este aspecto.
 
 Puedes agregar cualquier elemento XAML al área de contenido al establecer la propiedad **Content**. Si quieres agregar más de un elemento, tendrías que colocarlos en un contenedor de panel y hacer que el panel sea un elemento secundario único de la propiedad Content.
 
-Cuando hay comandos principales y contenido, los comandos principales tienen prioridad y pueden provocar el recorte del contenido. {{> contenido interno = "El contenido no recortará cuando esté habilitado el desbordamiento dinámico porque los comandos principales se moverán al menú de desbordamiento y liberarán espacio para el contenido."}}
+Cuando hay comandos principales y contenido, los comandos principales tienen prioridad y pueden provocar el recorte del contenido. 
 
 Cuando la propiedad [**ClosedDisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closeddisplaymode.aspx) es **Compact**, el contenido se puede recortar si es mayor que el tamaño compacto de la barra de comandos. Debes controlar los eventos [**Opening**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.opening.aspx) y [**Closed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closed.aspx) para mostrar u ocultar partes de la interfaz de usuario en el área de contenido de modo que no se recorten. Para obtener más información, consulta la sección [Estados abiertos y cerrados](#open-and-closed-states).
 
@@ -183,9 +185,12 @@ private void CommandBar_Closing(object sender, object e)
 ### ClosedDisplayMode
 
 Puedes controlar cómo se muestra la barra de comandos en su estado cerrado al establecer la propiedad [**ClosedDisplayMode** ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closeddisplaymode.aspx). Hay tres modos de visualización de estado cerrado entre los que puedes elegir:
-- **Compacta**: el modo predeterminado. Se muestra el contenido, los iconos de comando principales sin etiquetas y el botón "ver más" \[•••].
-- **Mínima**: se muestra solo una barra delgada que actúa como el botón "ver más" \[•••]. El usuario puede presionar en cualquier parte de la barra para abrirla.
-- **Oculta**: cuando se cierra, la barra de comandos no se muestra. Esto puede ser de utilidad para mostrar comandos contextuales con una barra de comandos alineada. En este caso, tienes que abrir la barra de comandos mediante programación estableciendo la propiedad **IsOpen** o cambiando la propiedad ClosedDisplayMode a **Mínima** o **Compacta**.
+- 
+            **Compacta**: el modo predeterminado. Se muestra el contenido, los iconos de comando principales sin etiquetas y el botón "ver más" \[•••].
+- 
+            **Mínima**: se muestra solo una barra delgada que actúa como el botón "ver más" \[•••]. El usuario puede presionar en cualquier parte de la barra para abrirla.
+- 
+            **Oculta**: cuando se cierra, la barra de comandos no se muestra. Esto puede ser de utilidad para mostrar comandos contextuales con una barra de comandos alineada. En este caso, tienes que abrir la barra de comandos mediante programación estableciendo la propiedad **IsOpen** o cambiando la propiedad ClosedDisplayMode a **Mínima** o **Compacta**.
 
 Aquí, se usa una barra de comandos para contener comandos de formato simples para un objeto [RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx). Cuando el cuadro de edición no tiene el foco, los comandos de formato pueden resultar una distracción, por lo que se ocultan. Cuando se usa el cuadro de edición, la propiedad ClosedDisplayMode de la barra de comandos cambia a Compacta, de modo que se muestren los comandos de formato.
 
@@ -214,7 +219,8 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 }
 ```
 
->**Nota**
+>
+            **Nota**
             &nbsp;&nbsp;La implementación de los comandos de edición está fuera del ámbito de este ejemplo. Para más información, consulta el artículo sobre la propiedad [RichEditBox](rich-edit-box.md).
 
 Aunque los modos Mínima y Oculta son de utilidad en algunas situaciones, ten en cuenta que ocultar todas las acciones podría confundir a los usuarios.
@@ -241,13 +247,14 @@ Las barras de comandos pueden colocarse en las siguientes regiones de la pantall
 
 ![Ejemplo 2 de colocación de barra de la aplicación](images/AppbarGuidelines_Placement2.png)
 
->**Dispositivos táctiles**: si la barra de comandos debe permanecer visible para un usuario cuando aparece el teclado táctil o el panel de entrada de software (SIP), puedes asignarla a la propiedad [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx) de una página y pasará a estar visible cuando exista el SIP. De lo contrario, debes colocar la barra de comandos de manera alineada y en una posición relativa al contenido de tu aplicación.
+>
+            **Dispositivos táctiles**: si la barra de comandos debe permanecer visible para un usuario cuando aparece el teclado táctil o el panel de entrada de software (SIP), puedes asignarla a la propiedad [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx) de una página y pasará a estar visible cuando exista el SIP. De lo contrario, debes colocar la barra de comandos de manera alineada y en una posición relativa al contenido de tu aplicación.
 
 ### Acciones
 
 Da prioridad a las acciones que van en la barra de comandos en función de su visibilidad.
 
--   Coloca los comandos más importantes, los que quieres que permanezcan visibles en la barra, en las primeras ranuras del espacio de acción. En las pantallas más pequeñas (320 epx de ancho), caben entre 2 y 4 elementos en el espacio de acción de la barra de comandos, en función de otras interfaces de usuario en pantalla.
+-   Coloca los comandos más importantes, los que quieres que permanezcan visibles en la barra, en las primeras ranuras del espacio de acción. En las pantallas más pequeñas (320epx de ancho), caben entre 2 y 4 elementos en el espacio de acción de la barra de comandos, en función de otras interfaces de usuario en pantalla.
 -   Coloca los comandos menos importantes más adelante en el espacio de acción de la barra o dentro de las primeras ranuras del área de desbordamiento. Estos comandos estarán visibles cuando la barra tenga suficiente superficie de pantalla, pero se incluirán en el menú desplegable del área de desbordamiento cuando no haya suficiente espacio.
 -   Coloca los comandos menos importantes dentro del área de desbordamiento. Estos comandos siempre aparecerán en el menú desplegable.
 
@@ -281,20 +288,24 @@ Considera la posibilidad de realizar agrupaciones lógicas de los comandos, como
 
 ## Artículos relacionados
 
-**Para diseñadores**
+
+            **Para diseñadores**
             
           
             [Conceptos básicos sobre el diseño de comandos de aplicaciones de Plataforma universal de Windows (UWP)](../layout/commanding-basics.md)
+          
 
-**Para desarrolladores (XAML)**
+
+            **Para desarrolladores (XAML)**
             
           
             [
               **CommandBar**
             ](https://msdn.microsoft.com/library/windows/apps/dn279427)
+          
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

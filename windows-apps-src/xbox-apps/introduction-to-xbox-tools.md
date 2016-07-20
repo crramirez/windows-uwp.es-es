@@ -3,8 +3,9 @@ author: Mtoepke
 title: "Introducción a las herramientas de Xbox One"
 description: "La herramienta específica de Xbox One, Dev Home, con Windows Device Portal."
 area: Xbox
-ms.sourcegitcommit: 914a1b76c6b502415bee36865af009a8dfe9bb53
-ms.openlocfilehash: e2f87cdeb8ce3371a34bb989e5fa29ef63d18621
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 4414677e942818506020888fa15e7e16ecaf4733
 
 ---
 
@@ -14,7 +15,8 @@ Esta sección describe la herramienta específica de Xbox One, _Dev Home_, con W
 
 ## Dev Home
 
-_Dev Home_ es una experiencia de herramientas del kit de desarrollo de Xbox One diseñada para facilitar la productividad del desarrollador. Ofrece funcionalidad para administrar y configurar el kit de desarrollo.
+
+              _Dev Home_ es una experiencia de herramientas del kit de desarrollo de Xbox One diseñada para ayudar en la productividad del desarrollador. Ofrece funcionalidad para administrar y configurar el kit de desarrollo.
 
 Para abrir Dev Home, selecciona la ventana **Dev Home** en la pantalla principal. Si no ves ninguna ventana, la consola no está en modo de desarrollador.
 
@@ -53,7 +55,7 @@ Dev Home se acoplará a la derecha. Puede cambiar el contexto si presionas dos v
 | Juegos y aplicaciones  | Enumera los títulos y las aplicaciones instaladas en el kit de desarrollo y la capacidad para abrirlos rápidamente. También puedes ver el estado de la administración del ciclo de vida de los procesos (PLM) de juegos y aplicaciones, así como cambiar los estados PLM desde un menú contextual. |
 | Usuarios | Enumera los usuarios registrados actualmente en la consola. Habilita el inicio y cierre de sesión de usuario de un solo clic, la opción de agregar usuarios e invitados y la visualización de los detalles de dichos usuarios e invitados. |
 | [Configuración de la consola](#console-settings) | Ofrece una vista resumida y opciones de configuración de la consola y de la información. |
-| Visual Studio | Te permite emparejar la consola con una instancia de Visual Studio para permitir la implementación. Si es necesario, desactiva las instancias existentes de VS emparejadas para evitar la implementación de la aplicación para UWP en un kit. |
+| VisualStudio | Te permite emparejar la consola con una instancia de Visual Studio para permitir la implementación. Si es necesario, desactiva las instancias existentes de VS emparejadas para evitar la implementación de la aplicación para UWP en un kit. |
 | [Windows Device Portal](#windows-device-portal) | Habilita WDP (una herramienta de administración de dispositivos basada en explorador) en el kit. |
 | Estado de Xbox Live | Proporciona el estado actual del servicio Xbox Live. |
 
@@ -89,8 +91,8 @@ Cuando se comuniques con la consola desde el equipo de desarrollo, puedes establ
 
 Para definir un nombre de host para un kit de desarrollo, ve a la herramienta de configuración de la consola y escribe el nombre de host en el cuadro __Nombre de host__.  
 
-  > **Nota**
-            &nbsp;&nbsp;No se requiere un nombre exclusivo para la creación del nombre de host. Por lo tanto, intenta evitar la duplicación de nombres. Una manera de hacerlo es derivar el nombre de host del nombre de tu equipo de desarrollo, que normalmente es único dentro de una organización.
+  > 
+              **Nota**&nbsp;&nbsp;No se requiere un nombre exclusivo para la creación del nombre de host. Por lo tanto, intenta evitar la duplicación de nombres. Una manera de hacerlo es derivar el nombre de host del nombre de tu equipo de desarrollo, que normalmente es único dentro de una organización.
 
 ## Windows Device Portal
 Windows Device Portal (WDP) es una herramienta de administración de dispositivos OneCore que permite una experiencia de administración de dispositivo basada en explorador.
@@ -115,7 +117,8 @@ Para habilitar WDP en la consola Xbox One:
   ![Advertencia de certificado de seguridad](images/security_cert_warning.jpg)
 
 ## Consulta también
-- [Tecnologías de Microsoft Developer: Windows Device Portal](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-xbox)
+- [Cómo usar Fiddler con Xbox One al desarrollar para la UWP](uwp-fiddler.md)
+- [Tecnologías de Microsoft Developer: Windows Device Portal](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-xbox)
 - [UWP en Xbox One](index.md)
 
 
@@ -124,6 +127,6 @@ Para habilitar WDP en la consola Xbox One:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

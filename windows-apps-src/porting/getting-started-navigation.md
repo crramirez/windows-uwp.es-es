@@ -17,9 +17,9 @@ ms.openlocfilehash: c542faa6365c8558988162bee12f266d67474461
 
 iOS ofrece la clase **UINavigationController** para ayudar con la navegación en la aplicación: puedes insertar y extraer vistas para crear la jerarquía de elementos **UIViewController** que definen la aplicación.
 
-Por el contrario, una aplicación de Windows 10 que contiene varias vistas requiere más que un enfoque de sitio web para la navegación. Puedes esperar que los usuarios pasen de una página a otra conforme hacen clic en controles para abrirse camino por la aplicación. Para obtener información, consulta [Conceptos básicos de diseño de la navegación](https://msdn.microsoft.com/library/windows/apps/dn958438).
+Por el contrario, una aplicación de Windows10 que contiene varias vistas requiere más que un enfoque de sitio web para la navegación. Puedes esperar que los usuarios pasen de una página a otra conforme hacen clic en controles para abrirse camino por la aplicación. Para obtener información, consulta [Conceptos básicos de diseño de la navegación](https://msdn.microsoft.com/library/windows/apps/dn958438).
 
-Una de las formas de administrar esta navegación en una aplicación de Windows 10 es usar la clase [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682). En el tutorial siguiente se muestra cómo puedes probarlo.
+Una de las formas de administrar esta navegación en una aplicación de Windows10 es usar la clase [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682). En el tutorial siguiente se muestra cómo puedes probarlo.
 
 Para seguir con la solución que iniciaste anteriormente, abre el archivo **MainPage.xaml** y agrega un botón en la vista **Diseño**. Cambia la propiedad **Content** del botón de "Botón" a "Ir a la página". A continuación, crea un controlador para el evento **Click** del botón, como se muestra en la siguiente ilustración. Si no recuerdas cómo hacerlo, revisa el tutorial de la sección anterior (sugerencia: haz doble clic en el botón de la vista **Diseño**).
 
@@ -35,7 +35,7 @@ Ahora, vamos a agregar un controlador de eventos al botón: haz doble clic en el
 
 ![agregar un botón atrás y su evento click en visual studio](images/ios-to-uwp/vs-add-back-button.png)
 
-Si vuelves a la vista **XAML** del archivo BlankPage.xaml, el código de lenguaje XAML del elemento `<AppBarButton>` debería parecerse a lo siguiente:
+Si vuelves a la vista **XAML** del archivo BlankPage.xaml, el código de lenguajeXAML del elemento `<AppBarButton>` debería parecerse a lo siguiente:
 
 ` <AppBarButton Icon="Back" Click="AppBarButton_Click"/>`
 
@@ -78,7 +78,8 @@ También puedes obtener o establecer la propiedad [**CacheSize**](https://msdn.m
 
 Para más información sobre la navegación, consulta [Navegación](https://msdn.microsoft.com/library/windows/apps/mt187344) y [Ejemplo de animaciones de personalidad XAML](http://go.microsoft.com/fwlink/p/?LinkID=242401).
 
-**Nota:**  Para obtener información sobre la navegación para aplicaciones de la Tienda Windows con JavaScript y HTML, consulta [Inicio rápido: usar la navegación de una página](https://msdn.microsoft.com/library/windows/apps/hh452768).
+
+            **Nota:**  Para obtener información sobre la navegación para aplicaciones de la Tienda Windows con JavaScript y HTML, consulta [Inicio rápido: usar la navegación de una página](https://msdn.microsoft.com/library/windows/apps/hh452768).
  
 ### Paso siguiente
 

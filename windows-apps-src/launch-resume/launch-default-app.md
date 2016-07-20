@@ -3,8 +3,9 @@ author: TylerMSFT
 title: "Iniciar la aplicación predeterminada de un URI"
 description: "Aprende a iniciar la aplicación predeterminada de un identificador de recursos uniforme (URI). Los URI te permiten iniciar otra aplicación para realizar una tarea específica. En este tema también se proporciona una descripción general de los muchos esquemas de URI integrados en Windows."
 ms.assetid: 7B0D0AF5-D89E-4DB0-9B79-90201D79974F
-ms.sourcegitcommit: 9011d2e2e1e51edc89851e815d31e13390c24f96
-ms.openlocfilehash: d454317d135e2b2b952c16fb00685e34b489865c
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 053746735cb9f11bcdeb2244f33b589e4670974b
 
 ---
 
@@ -45,7 +46,7 @@ En general, la aplicación no puede seleccionar qué aplicación se inicia, sino
 
 Usa el método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) para iniciar un URI. Cuando llames a este método, tu aplicación debe ser la aplicación en primer plano; es decir, debe estar visible para el usuario. Este requisito permite asegurar que el usuario permanezca en control. Para cumplir este requisito, asegúrate de enlazar todos los inicios de URI directamente a la interfaz de usuario de la aplicación. El usuario siempre debe tener que realizar alguna acción para iniciar el URI. Si intentas iniciar un URI y tu aplicación no está en primer plano, se producirá un error en el inicio y se invocará a la devolución de llamada de error.
 
-Primero, crea un objeto [**System.Uri**](https://msdn.microsoft.com/en-us/library/windows/apps/system.uri.aspx) para que represente el URI, y luego pásalo al método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476). Usa el resultado devuelto para ver si la llamada se realizó correctamente, como se muestra en el siguiente ejemplo.
+Primero, crea un objeto [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/system.uri.aspx) para que represente el URI, y luego pásalo al método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476). Usa el resultado devuelto para ver si la llamada se realizó correctamente, como se muestra en el siguiente ejemplo.
 
 ```cs
 private async void launchURI_Click(object sender, RoutedEventArgs e)
@@ -106,9 +107,11 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### Establecer las preferencias de visualización restantes
 
-Las aplicaciones de origen que llaman a [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) pueden solicitar permanecer en pantalla después de iniciarse un URI. Windows intenta compartir de manera predeterminada todo el espacio disponible entre la aplicación de origen y la aplicación de destino que controla el URI. Las aplicaciones de origen pueden usar la propiedad [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) para indicar al sistema operativo que prefieren que la ventana de la aplicación ocupe más o menos espacio del que hay disponible. **DesiredRemainingView** también se puede usar para indicar que la aplicación de origen no necesita permanecer en pantalla después del inicio del URI y puede sustituirse por completo por la aplicación de destino. Esta propiedad especifica únicamente el tamaño de ventana preferido de la aplicación que llama; no especifica el comportamiento de ninguna otra aplicación que también esté en pantalla al mismo tiempo.
+Las aplicaciones de origen que llaman a [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) pueden solicitar permanecer en pantalla después de iniciarse un URI. Windows intenta compartir de manera predeterminada todo el espacio disponible entre la aplicación de origen y la aplicación de destino que controla el URI. Las aplicaciones de origen pueden usar la propiedad [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) para indicar al sistema operativo que prefieren que la ventana de la aplicación ocupe más o menos espacio del que hay disponible. 
+              **DesiredRemainingView** también se puede usar para indicar que la aplicación de origen no necesita permanecer en pantalla después del inicio del URI y puede sustituirse por completo por la aplicación de destino. Esta propiedad especifica únicamente el tamaño de ventana preferido de la aplicación que llama; no especifica el comportamiento de ninguna otra aplicación que también esté en pantalla al mismo tiempo.
 
-**Nota** Windows tiene en cuenta diferentes factores a la hora de determinar el tamaño final de la ventana de la aplicación de origen como, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en pantalla, la orientación de la pantalla, etc. Establecer [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) no garantiza un comportamiento de ventanas específico para la aplicación de origen.
+
+              **Nota** Windows tiene en cuenta diferentes factores a la hora de determinar el tamaño final de la ventana de la aplicación de origen como, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en pantalla, la orientación de la pantalla, etc. Establecer [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) no garantiza un comportamiento de ventanas específico para la aplicación de origen.
 
  
 
@@ -143,7 +146,7 @@ La aplicación puede usar el esquema de URI **ms-settings:** para [iniciar la ap
 
 Para obtener más información, consulta [Iniciar la aplicación Configuración de Windows](launch-settings-app.md) y [Directrices para aplicaciones compatibles con la privacidad](https://msdn.microsoft.com/library/windows/apps/hh768223).
 
-## Esquema de URI de la aplicación de la Tienda Windows
+## Esquema de URI de la aplicación de la TiendaWindows
 
 
 La aplicación puede usar el esquema de URI **ms-windows-store:** para [iniciar la aplicación de la Tienda Windows](launch-store-app.md). Permite abrir páginas de detalles del producto, páginas de revisión del producto, páginas de búsqueda, etc. Por ejemplo, el siguiente URI abre la aplicación de la Tienda Windows e inicia la página principal de la Tienda.
@@ -225,6 +228,6 @@ Para obtener más información, consulta [Iniciar la aplicación Personas](launc
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

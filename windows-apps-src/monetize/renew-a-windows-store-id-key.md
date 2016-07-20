@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: "Usa este método para renovar una clave de la Tienda Windows."
 title: Renovar una clave de id. de la Tienda Windows
-ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
-ms.openlocfilehash: 6255346c568ed24e17c795834ab182f73707c4de
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: a3cef13e84c5bb06be4f3e3d4b2db4e02650df62
 
 ---
 
@@ -32,10 +33,10 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 | Tipo de clave    | Método | URI de la solicitud                                              |
 |-------------|--------|----------------------------------------------------------|
-| Colecciones | POST   | `https://collections.mp.microsoft.com/v6.0/b2b/keys/renew` |
-| Compra    | POST   | `https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew`    |
+| Colecciones | POST   | ```https://collections.mp.microsoft.com/v6.0/b2b/keys/renew``` |
+| Compra    | POST   | ```https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew```    |
 
-<br/> 
+<span/>
 
 ### Encabezado de la solicitud
 
@@ -45,7 +46,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | cadena | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
-<br/> 
+<span/>
 
 ### Cuerpo de la solicitud
 
@@ -54,7 +55,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 | serviceTicket | cadena | Token de acceso de Azure AD.        | Sí      |
 | key           | cadena | Clave de id. de la Tienda Windows expirada. | No       |
 
-<br/> 
+<span/> 
 
 ### Ejemplo de solicitud
 
@@ -79,7 +80,7 @@ Host: collections.mp.microsoft.com
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
 | clave       | cadena | Clave de la Tienda Windows actualizada que se puede usar en futuras llamadas a la API de colecciones o la API de compras de la Tienda Windows. | No       |
 
-<br/> 
+<span/>
 
 ### Ejemplo de respuesta
 
@@ -106,7 +107,7 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 | 401  | No autorizado | AuthenticationTokenInvalid | El token de acceso de Azure AD no es válido. En algunos casos, los detalles del código ServiceError contendrán más información, como la fecha de expiración del token o si falta la notificación *appid*. |
 | 401  | No autorizado | InconsistentClientId       | La notificación *clientId* de la clave de Id. de la Tienda Windows y la notificación *appid* del token de acceso de Azure AD no coinciden.                                                                     |
 
-<br/> 
+<span/>
 
 ## Temas relacionados
 
@@ -118,6 +119,6 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

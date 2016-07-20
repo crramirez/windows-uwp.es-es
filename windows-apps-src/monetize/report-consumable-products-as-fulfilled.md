@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
 description: "Usa este método en la API de colecciones de la Tienda Windows para notificar un producto consumible como completado para un cliente determinado. Para que un usuario pueda volver a comprar un producto consumible, la aplicación o el servicio debe notificar el producto consumible como completado para dicho usuario."
 title: Notificar productos consumibles como completados
-ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
-ms.openlocfilehash: b099bdc26565ef218eaf1f73c5bb3ec9c24065c3
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 5bd85c6ec9728a0dc08ab8ef4f586b0017510a74
 
 ---
 
@@ -37,9 +38,9 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 | Método | URI de la solicitud                                                   |
 |--------|---------------------------------------------------------------|
-| POST   | `https://collections.mp.microsoft.com/v6.0/collections/consume` |
+| POST   | ```https://collections.mp.microsoft.com/v6.0/collections/consume``` |
 
-<br/> 
+<span/> 
 
 ### Encabezado de la solicitud
 
@@ -50,7 +51,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | cadena | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
-<br/> 
+<span/>
 
 ### Cuerpo de la solicitud
 
@@ -60,13 +61,10 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 | itemId        | Cadena       | Valor itemId devuelto por una [consulta de productos](query-for-products.md). Usa este parámetro con trackingId                                                                                                                                                                                                  | No       |
 | trackingId    | Guid         | Identificador de seguimiento único proporcionado por el desarrollador. Usa este parámetro con itemId.                                                                                                                                                                                                                                     | No       |
 | productId     | Cadena       | Valor productId devuelto por una [consulta de productos](query-for-products.md). Usa este parámetro con transactionId                                                                                                                                                                                            | No       |
-| transactionId | Guid         | Valor de identificador de transacción que se obtiene de uno de los siguientes orígenes:                                                                                                                                                                                                                                      | No       |
-|               |              | * Propiedad [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396) de la clase [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).   |        |
-|               |              | * Recibo de aplicación o de producto devuelto por [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) o [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811).   |        |
-|               |              | * Parámetro transactionId devuelto por una [consulta de productos](query-for-products.md).   |        |        
-|               |              | Usa este parámetro con productId.   |        |
+| transactionId | Guid         | El valor de identificador de transacción que se obtiene de uno de los siguientes orígenes. Usa este parámetro con productId.  <br/><br/><ul><li>La propiedad [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396) de la clase [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).</li><li>El recibo de la aplicación o del producto devuelto por [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) o [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811).</li><li>El parámetro transactionId devuelto por una [consulta de productos](query-for-products.md).</li></ul>                                                                                                                                                                                                                                   | No       |
+
  
-<br/>
+<span/>
 
 El objeto UserIdentity contiene los parámetros siguientes.
 
@@ -76,7 +74,7 @@ El objeto UserIdentity contiene los parámetros siguientes.
 | identityValue        | cadena | Valor de cadena de la clave de id. de la Tienda Windows.                                                                                                   | Sí      |
 | localTicketReference | Cadena | Identificador solicitado para la respuesta devuelta. Se recomienda usar el mismo valor que la notificación *userId* de la clave de id. de la Tienda Windows. | Sí      |
 
-<br/> 
+<span/> 
 
 ### Ejemplos de solicitud
 
@@ -146,7 +144,7 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 | 401  | No autorizado | PartnerAadTicketRequired   | No se pasó un token de acceso de Azure AD al servicio en el encabezado de autorización.                                                                                                   |
 | 401  | No autorizado | InconsistentClientId       | La notificación *clientId* de la clave de id. de la Tienda Windows del cuerpo de la solicitud y la notificación *appid* del token de acceso de Azure AD del encabezado de autorización no coinciden.                     |
 
-<br/> 
+<span/> 
 
 ## Temas relacionados
 
@@ -160,6 +158,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

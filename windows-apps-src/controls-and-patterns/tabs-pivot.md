@@ -5,8 +5,9 @@ title: "Pestañas y controles dinámicos"
 ms.assetid: 556BC70D-CF5D-4295-A655-D58163CC1824
 label: Tabs and pivots
 template: detail.hbs
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: 8737ce16d98952f24f9651d30d49ffa85b8d306b
+translationtype: Human Translation
+ms.sourcegitcommit: a2f4e7a679ca47f2a034e19936c1115e87a2eb24
+ms.openlocfilehash: b6cf34346ad557ce53d3009afe8bc83bc7ed21aa
 
 ---
 # Control dinámico y pestañas
@@ -91,9 +92,6 @@ El control tiene dos modos:
 -   Los controles dinámicos están inmóviles cuando todos los encabezados de control dinámico caben en el espacio permitido.
 -   Al tocar una etiqueta de tabla dinámica se navega a la página correspondiente, aunque no se moverá la propia tabla dinámica. La tabla dinámica activa se destacará.
 
-{{> contenido que no sea interno = "
--   Especialmente, te recomendamos evitar elementos en una vista de carrusel en un entorno de 10 pies. Configura la nueva propiedad `IsHeaderItemsCarouselEnabled` en Falsa si la aplicación se ejecutará en Xbox.
-"}}
 
 **Carrusel**
 
@@ -101,16 +99,6 @@ El control tiene dos modos:
 -   Al tocar una etiqueta de control dinámico se navega a la página correspondiente y, después, la etiqueta de control dinámico activa gira a la primera posición.
 -   Gira elementos en un bucle de carrusel de la última a la primera sección de control dinámico.
 
-{{> contenido que no sea interno = "
-### Foco dinámico
-
-De manera predeterminada, el foco del teclado en un encabezado dinámico se representa con un subrayado.
-
-![El foco predeterminado subraya el encabezado seleccionado](images/pivot_focus_selectedHeader.png)
-
-Las aplicaciones que tienen un control dinámico e incorporan el subrayado en elementos visuales de la selección de encabezado pueden usar la nueva propiedad `HeaderFocusVisualPlacement` para cambiar el valor predeterminado. Cuando `HeaderFocusVisualPlacement=\"ItemHeaders\"`, el foco se dibuja alrededor de todo el panel de encabezado.
-
-![La opción ItemsHeader dibuja el rectángulo del foco alrededor de todos los encabezados dinámicos](images/pivot_focus_headers.png) "}}
 
 ## Recomendaciones
 
@@ -129,6 +117,6 @@ Las aplicaciones que tienen un control dinámico e incorporan el subrayado en el
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

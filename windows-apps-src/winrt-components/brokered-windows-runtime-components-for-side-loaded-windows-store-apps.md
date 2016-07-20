@@ -2,6 +2,7 @@
 author: msatranjr
 title: Componentes de Windows Runtime
 description: "En este documento se describe la función orientada a empresas que cuentan con asistencia de Windows 10, que permite a las aplicaciones táctiles de .NET usar el código existente responsable de importantes operaciones fundamentales de la empresa."
+translationtype: Human Translation
 ms.sourcegitcommit: 4e9f3de68c44cf545ceee2efd99d9db8cab08676
 ms.openlocfilehash: fa7e7404a9a3ab5d75d47b3a5271bd1fd84b5569
 
@@ -13,7 +14,8 @@ En este artículo se describe la función orientada a empresas que cuentan con a
 
 ##Introducción
 
->**Nota**  El código de muestra que acompaña este documento se puede [descargar desde esta ubicación](http://go.microsoft.com/fwlink/p/?LinkID=393655) y la plantilla de Microsoft Visual Studio para compilar Componentes negociados de Windows Runtime se puede descargar aquí: [Plantilla de Visual Studio de 2015 destinada a las aplicaciones universales de Windows para Windows 10](https://visualstudiogallery.msdn.microsoft.com/10be07b3-67ef-4e02-9243-01b78cd27935)
+>
+            **Nota**  El código de muestra que acompaña este documento se puede [descargar desde esta ubicación](http://go.microsoft.com/fwlink/p/?LinkID=393655) y la plantilla de Microsoft Visual Studio para compilar Componentes negociados de Windows Runtime se puede descargar aquí: [Plantilla de Visual Studio de 2015 destinada a las aplicaciones universales de Windows para Windows 10](https://visualstudiogallery.msdn.microsoft.com/10be07b3-67ef-4e02-9243-01b78cd27935)
 
 Windows incluye una nueva característica llamada *Componentes negociados de Windows Runtime para aplicaciones de prueba*. Usamos el término IPC (comunicación entre procesos) para describir la capacidad de ejecutar activos de software de escritorio existentes en un proceso (componente de escritorio) mientras se interactúa con este código en una aplicación para UWP. Este es un modelo que resultará familiar para los desarrolladores empresariales porque las aplicaciones de base de datos y las aplicaciones que usan servicios NT en Windows comparten una arquitectura multiproceso similar.
 
@@ -26,7 +28,8 @@ Por último, dada la arrolladora implantación del tiempo de ejecución de .NET 
 
 ##Componentes de aplicación
 
->**Nota**  Esta característica es exclusivamente para el uso de .NET. La aplicación cliente y el componente de escritorio deben estar creados con .NET.
+>
+            **Nota**  Esta característica es exclusivamente para el uso de .NET. La aplicación cliente y el componente de escritorio deben estar creados con .NET.
 
 **Modelo de aplicación**
 
@@ -40,13 +43,15 @@ El componente de escritorio es un nuevo tipo de aplicación que se incorpora com
 
 El contrato entre la aplicación de prueba y el componente de escritorio se describe en términos del sistema de tipos de UWP. Esto implica declarar una o varias clases de C\# que pueden representar una UWP. Consulta el tema de MSDN [Crear componentes de Windows Runtime en C\# y Visual Basic](https://msdn.microsoft.com/en-us/library/br230301.aspx) para obtener un requisito específico de la creación de la clase de Windows en tiempo de ejecución con C\#.
 
->**Nota**  No se admiten las enumeraciones en el contrato de componentes de Windows Runtime entre el componente de escritorio y la aplicación de prueba en este momento.
+>
+            **Nota**  No se admiten las enumeraciones en el contrato de componentes de Windows Runtime entre el componente de escritorio y la aplicación de prueba en este momento.
 
 **Aplicación de prueba**
 
 La aplicación de prueba es una aplicación para UWP normal en todos los aspectos excepto en uno: se instala mediante una instalación de prueba en lugar de instalarse mediante la aplicación de la Tienda Windows. La mayoría de los mecanismos de instalación son idénticos: el manifiesto y el paquete de la aplicación son similares (más adelante se describe una incorporación al manifiesto). Cuando se habilita la instalación de prueba, un sencillo script de PowerShell puede instalar los certificados necesarios y la propia aplicación. El procedimiento recomendado es que la aplicación de prueba pase la prueba de certificación del WACK que se incluye en el menú Proyecto/Tienda de Visual Studio
 
->**Nota** La instalación de prueba puede activarse en Configuración-&gt; Actualización y seguridad -&gt;
+>
+            **Nota** La instalación de prueba puede activarse en Configuración-&gt; Actualización y seguridad -&gt;
 Para desarrolladores.
 
 Un aspecto importante a tener en cuenta es que el mecanismo Agente de aplicación que se incluye en Windows 10 es solo de 32 bits. El componente de escritorio debe ser de 32 bits.
@@ -65,7 +70,8 @@ Por suerte, son fáciles de declarar con las clases de C\#. Sin embargo, hay con
 
 La secuencia para definir el contrato se presenta de este modo:
 
-**Paso 1**: crear una nueva biblioteca de clase en Visual Studio. Asegúrate de crear el proyecto con la plantilla Biblioteca de clase y no con la plantilla componente de Windows Runtime
+
+            **Paso 1**: crear una nueva biblioteca de clase en Visual Studio. Asegúrate de crear el proyecto con la plantilla Biblioteca de clase y no con la plantilla componente de Windows Runtime
 
 Obviamente a continuación hay una implementación, pero esta sección solo abarca la definición del contrato entre procesos. La muestra correspondiente incluye la siguiente clase (EnterpriseServer.cs), cuya forma inicial tiene este aspecto:
 
@@ -97,19 +103,23 @@ namespace Fabrikam
 
 Esto define una clase "EnterpriseServer" de la que se puede crear instancias desde la aplicación de prueba. Esta clase proporciona la funcionalidad prometida en la clase RuntimeClass. La clase RuntimeClass puede usarse para generar el archivo winmd de referencia que se incluirá en la aplicación de prueba.
 
-**Paso 2:** Editar el archivo de proyecto manualmente para cambiar el tipo de salida de proyecto a componente de Windows Runtime
+
+            **Paso 2:** Editar el archivo de proyecto manualmente para cambiar el tipo de salida de proyecto a componente de Windows Runtime
 
 Para hacer esto en Visual Studio, haz clic con el botón derecho en el proyecto recién creado y selecciona "Descargar el proyecto", a continuación, haz clic otra vez con el botón derecho y selecciona "Editar EnterpriseServer.csproj" para abrir el archivo de proyecto, un archivo XML, para editarlo.
 
 En el archivo abierto, busca la etiqueta <OutputType> y cambia su valor a "winmdobj".
 
-**Paso 4:** Crear una regla de compilación que cree un archivo de metadatos de Windows de "referencia" (archivo .winmd), es decir, no tiene ninguna implementación.
 
-**Paso 5:** Crear una regla de compilación que cree un archivo de metadatos de Windows de "implementación", es decir, que tenga la misma información de metadatos, pero que incluya además la implementación.
+            **Paso 4:** Crear una regla de compilación que cree un archivo de metadatos de Windows de "referencia" (archivo .winmd), es decir, no tiene ninguna implementación.
+
+
+            **Paso 5:** Crear una regla de compilación que cree un archivo de metadatos de Windows de "implementación", es decir, que tenga la misma información de metadatos, pero que incluya además la implementación.
 
 Esto se realiza con los siguientes scripts. Agrega los scripts a la línea de comandos de evento posterior a la compilación, en Proyecto **Propiedades** > **Eventos de compilación**.
 
-> **Nota** el script es diferente en función de la versión de Windows de destino (Windows 10) y la versión de Visual Studio en uso.
+> 
+            **Nota** el script es diferente en función de la versión de Windows de destino (Windows 10) y la versión de Visual Studio en uso.
 
 ```cmd
 call "$(DevEnvDir)..\..\vc\vcvarsall.bat" x86 10.0.10240.0
@@ -155,7 +165,8 @@ La sección <ActivatableClass> es la misma que una RuntimeClass que está realme
 
 Como se indicó en la sección "Definición del contrato", se debe crear una referencia de proyecto al archivo winmd de referencia del componente de escritorio. El sistema de proyectos de Visual Studio normalmente crea una estructura de directorios de dos niveles con el mismo nombre. En la muestra es EnterpriseIPCApplication\\EnterpriseIPCApplication. El archivo de referencia **winmd** se copia manualmente a este directorio de segundo nivel y, a continuación, se usa el cuadro de diálogo Referencias de proyectos (haga clic en el botón **Examinar...** ) para ubicar y hacer referencia a este archivo **winmd**. Después, el espacio de nombres de nivel superior del componente de escritorio (por ejemplo, Fabrikam) debe aparecer como nodo de nivel superior en la parte Referencias del proyecto.
 
->**Nota** Es muy importante usar el archivo de **referencia winmd** en la aplicación de prueba. Si trasladas accidentalmente el archivo de **implementación winmd** al directorio de la aplicación de prueba y haces referencia a él, probablemente recibirás un error del tipo "no se encuentra IStringable". Esta es una señal segura de que se hizo referencia al archivo **winmd** incorrecto. Las reglas posteriores a la compilación en la aplicación del servidor IPC (que se detallan en la sección siguiente) segregan cuidadosamente estos dos archivos **winmd** en directorios diferentes.
+>
+            **Nota** Es muy importante usar el archivo de **referencia winmd** en la aplicación de prueba. Si trasladas accidentalmente el archivo de **implementación winmd** al directorio de la aplicación de prueba y haces referencia a él, probablemente recibirás un error del tipo "no se encuentra IStringable". Esta es una señal segura de que se hizo referencia al archivo **winmd** incorrecto. Las reglas posteriores a la compilación en la aplicación del servidor IPC (que se detallan en la sección siguiente) segregan cuidadosamente estos dos archivos **winmd** en directorios diferentes.
 
 Se pueden usar variables de entorno (especialmente %ProgramFiles%) en <ActivatableClassAttribute Value="path">. Como se indicó anteriormente, el Agente de aplicación solo admite 32 bits por lo que %ProgramFiles% se resolverá en C:\\Archivos de programa (x86) si la aplicación se ejecuta en un sistema operativo de 64 bits.
 
@@ -425,7 +436,8 @@ return Task<int>.Run( () =>
 
 ```
 
->**Nota** Es habitual esperar otras posibles operaciones de ejecución larga mientras se escribe la implementación. Si este es el caso, es necesario declarar el código de **Task.Run**:
+>
+            **Nota** Es habitual esperar otras posibles operaciones de ejecución larga mientras se escribe la implementación. Si este es el caso, es necesario declarar el código de **Task.Run**:
 
 ```csharp
 return Task<int>.Run(async () =>
@@ -451,15 +463,18 @@ Como el enfoque de IPC implica calcular referencias a las interfaces de Windows 
 El proceso para crear y registrar proxies y código auxiliar para usarlos dentro de un paquete de aplicación de la Tienda Windows normal se describe en el tema [Generar eventos de componentes de Windows en tiempo de ejecución](https://msdn.microsoft.com/en-us/library/windows/apps/dn169426.aspx).
 Los pasos que se describen en este artículo son más complicados que el proceso que se describe a continuación, porque implican registrar el proxy o el código auxiliar dentro del paquete de la aplicación (en lugar de registrarlo globalmente).
 
-**Paso 1:** Usa la solución para el proyecto de componente de escritorio para crear un proyecto de proxy/código auxiliar en Visual Studio:
+
+            **Paso 1:** Usa la solución para el proyecto de componente de escritorio para crear un proyecto de proxy/código auxiliar en Visual Studio:
 
 **Solución > Agregar > Proyecto > Visual C++ > Consola Win32 y Selecciona la opción DLL.**
 
 En los pasos siguientes, damos por hecho que el componente de servidor se llama **MyWinRTComponent**.
 
-**Paso 3:** Elimina todos los archivos CPP/H del proyecto.
 
-**Paso 4:** La sección anterior, "Definición del contrato" contiene un comando posterior a la compilación que ejecuta **winmdidl.exe**, **midl.exe**, **mdmerge.exe**, y así sucesivamente. Una de las salidas del paso midl de este comando posterior a la compilación genera cuatro salidas importantes:
+            **Paso 3:** Elimina todos los archivos CPP/H del proyecto.
+
+
+            **Paso 4:** La sección anterior, "Definición del contrato" contiene un comando posterior a la compilación que ejecuta **winmdidl.exe**, **midl.exe**, **mdmerge.exe**, y así sucesivamente. Una de las salidas del paso midl de este comando posterior a la compilación genera cuatro salidas importantes:
 
 a) Dlldata.c
 
@@ -469,9 +484,11 @@ c)Un archivo \*\_i.c (por ejemplo, MyWinRTComponent\_i.c)
 
 d) Un archivo \*\_p.c (por ejemplo, MyWinRTComponent\_p.c)
 
-**Paso 5:** Agrega estos cuatro archivos generados al proyecto "MyWinRTProxy".
 
-**Paso 6**: agrega un archivo def al proyecto "MyWinRTProxy" **(Proyecto > Agregar nuevo elemento > Código > Archivo de definición de módulos**) y actualiza el contenido para que sea:
+            **Paso 5:** Agrega estos cuatro archivos generados al proyecto "MyWinRTProxy".
+
+
+            **Paso 6**: agrega un archivo def al proyecto "MyWinRTProxy" **(Proyecto > Agregar nuevo elemento > Código > Archivo de definición de módulos**) y actualiza el contenido para que sea:
 
 LIBRARY MyWinRTComponent.Proxies.dll
 
@@ -485,7 +502,8 @@ DllRegisterServer PRIVATE
 
 DllUnregisterServer PRIVATE
 
-**Paso 7:** Abre las propiedades del proyecto "MyWinRTProxy":
+
+            **Paso 7:** Abre las propiedades del proyecto "MyWinRTProxy":
 
 **Propiedades de configuración > General > Nombre de destino:**
 
@@ -503,7 +521,8 @@ MyWinRTComponent.Proxies
 
 **Enlazador > Metadatos de Windows > Generar metadatos de Windows: selecciona "No"**
 
-**Paso 8:** Compila el proyecto "MyWinRTProxy".
+
+            **Paso 8:** Compila el proyecto "MyWinRTProxy".
 
 **Implementar el proxy**
 
@@ -578,6 +597,6 @@ En la lista de módulos cargados de un servidor de Agente de sesiones debe figur
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

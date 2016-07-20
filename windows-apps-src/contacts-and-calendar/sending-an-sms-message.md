@@ -5,8 +5,8 @@ title: Enviar un mensaje SMS
 ms.assetid: 4D7B509B-1CF0-4852-9691-E96D8352A4D6
 keywords: contacts, SMS, send
 translationtype: Human Translation
-ms.sourcegitcommit: 1395e342bb6ad6a2d4fa347f1797aeafd7a524a6
-ms.openlocfilehash: 70dfce318d37d6790585b0fa5da50963f95495dc
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 738f7049b0a8fe5b42abfbc25f09501d0f6e7370
 
 ---
 
@@ -19,7 +19,7 @@ En este tema se muestra cómo iniciar el cuadro de diálogo de redacción de men
 
 ## Iniciar el cuadro de diálogo de redacción de SMS
 
-Crea un nuevo objeto [**ChatMessage**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.chat.chatmessage) y define los datos que quieras que se rellenen previamente en el cuadro de diálogo de redacción de correo electrónico. Llama a [**ShowComposeSmsMessageAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessagemanager.showcomposesmsmessageasync) para que se muestre el cuadro de diálogo.
+Crea un nuevo objeto [**ChatMessage**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessage) y define los datos que quieras que se rellenen previamente en el cuadro de diálogo de redacción de correo electrónico. Llama a [**ShowComposeSmsMessageAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessagemanager.showcomposesmsmessageasync) para que se muestre el cuadro de diálogo.
 
 ```cs
 private async void ComposeSms(Windows.ApplicationModel.Contacts.Contact recipient,
@@ -60,6 +60,6 @@ Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de SMS. 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

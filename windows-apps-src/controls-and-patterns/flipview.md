@@ -5,6 +5,7 @@ title: Directrices para controles de vista invertida
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
 ms.openlocfilehash: ecb46c0d42821d833e8232780b553754f8f097c5
 
@@ -105,7 +106,8 @@ En este ejemplo, ItemsSource está enlazado a una clase [**CollectionViewSource*
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->**Nota**
+>
+            **Nota**
             &nbsp;&nbsp;Puedes rellenar una vista invertida agregando elementos a su colección Items o estableciendo su propiedad ItemsSource, pero recuerda que no puedes usar ambos métodos al mismo tiempo. Si estableces la propiedad ItemsSource y agregas un elemento en XAML, el elemento agregado se omite. Si estableciste la propiedad ItemsSource y decides agregar un elemento a la colección Items en código, se inicia una excepción.
 
 ### Especificar el aspecto de los elementos
@@ -211,6 +213,6 @@ En el caso de colecciones más grandes (de 10 a 25 elementos), considera la posi
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: Enviar un elemento de trabajo al grupo de subprocesos
 description: "Obtén información acerca de cómo realizar trabajo en un subproceso separado mediante el envío de un elemento de trabajo al grupo de subprocesos."
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: afb6d8b1b1ee5eeb99ba68e8b842436bd58619d0
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: d8b0f512d075510fae527e563ef99f24cc201577
 
 ---
 # Enviar un elemento de trabajo al grupo de subprocesos
@@ -25,7 +25,8 @@ Crea un elemento de trabajo mediante una llamada a [**RunAsync**](https://msdn.m
 
 Hay tres versiones de [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) disponibles para que puedas especificar opcionalmente la prioridad del elemento de trabajo, así como controlar si se ejecuta simultáneamente con otros elementos de trabajo.
 
-**Nota** Puedes usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acceder a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
+
+              **Nota** Usa [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acceder a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo y se envía un lambda para que realice el trabajo:
 
@@ -197,7 +198,7 @@ Ten en cuenta que el elemento de trabajo comprueba la propiedad [**IAsyncInfo.St
 
 ## Controlar la finalización del elemento de trabajo
 
-Proporciona un controlador de finalización mediante la configuración de la propiedad [**IAsyncAction.Completed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.iasyncaction.completed.aspx) del elemento de trabajo. Proporciona un delegado (puedes usar una función lambda o una función delegada) para controlar que el elemento de trabajo se complete. Por ejemplo, usa [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acceder al subproceso de interfaz de usuario y mostrar el resultado.
+Proporciona un controlador de finalización mediante la configuración de la propiedad [**IAsyncAction.Completed**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.completed.aspx) del elemento de trabajo. Proporciona un delegado (puedes usar una función lambda o una función delegada) para controlar que el elemento de trabajo se complete. Por ejemplo, usa [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acceder al subproceso de interfaz de usuario y mostrar el resultado.
 
 En el siguiente ejemplo se actualiza la interfaz de usuario con el resultado del elemento de trabajo enviado en el paso 1:
 
@@ -263,6 +264,6 @@ Puedes obtener más información si descargas el código de este inicio rápido 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

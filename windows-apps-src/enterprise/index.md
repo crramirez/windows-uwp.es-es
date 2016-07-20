@@ -4,8 +4,8 @@ description: "Esta guía básica proporciona una visión general de las caracter
 title: Empresa
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 468c87694f519a5081f3242346039e6e7310d1db
-ms.openlocfilehash: c2cfcc270d6b1380f065e7ada275c1c60ae05b04
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 58f7c9739a000b6cac1c000570807587233018ce
 
 ---
 
@@ -16,7 +16,8 @@ ms.openlocfilehash: c2cfcc270d6b1380f065e7ada275c1c60ae05b04
 
 Esta guía básica proporciona una visión general de las características fundamentales de empresa para la Plataforma universal de Windows (UWP) Windows 10. Windows 10 te permite escribir una vez e implementa en todos los dispositivos, porque crea una aplicación que se adapta a cualquier dispositivo. Esto te permite crear las fantásticas experiencias que los usuarios esperan y ofrecer control sobre la seguridad, la administración y la configuración requerida por tu organización.
 
-**Nota**  Este artículo está dirigido a los desarrolladores que escriben aplicaciones de empresa para UWP. Para el desarrollo general de UWP, consulta las [Guías de procedimientos para aplicaciones Windows 10](https://msdn.microsoft.com/library/windows/apps/mt244352). Para el desarrollo de WPF, Windows Forms o Win32, ve al [Centro de desarrollo de escritorio](https://dev.windows.com/en-us/desktop). Para los recursos de profesionales de TI como la implementación de Windows 10 o la administración de características de seguridad de la empresa, consulta [Windows 10 en TechNet](https://msdn.microsoft.com/library/dn986868).
+
+              **Nota** Este artículo está dirigido a los desarrolladores que escriben aplicaciones de empresa para UWP. Para el desarrollo general de UWP, consulta las [Guías de procedimientos para aplicaciones Windows 10](https://msdn.microsoft.com/library/windows/apps/mt244352). Para el desarrollo de WPF, Windows Forms o Win32, ve al [Centro de desarrollo de escritorio](https://dev.windows.com/desktop). Para los recursos de profesionales de TI como la implementación de Windows 10 o la administración de características de seguridad de la empresa, consulta [Windows 10 en TechNet](https://msdn.microsoft.com/library/dn986868).
 
  
 
@@ -95,7 +96,7 @@ Tienes varias opciones para distribuir aplicaciones a los usuarios de la organiz
 | Tema | Descripción |
 |-------|-------------|
 | [Distribuir aplicaciones de línea de negocio a empresas](https://msdn.microsoft.com/library/windows/apps/mt608995) | Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que las empresas las compren por volumen a través de la Tienda Windows para empresas, sin necesidad de que las aplicaciones estén disponibles en la Tienda de forma general. |
-| [Instalación de prueba de aplicaciones](https://technet.microsoft.com/en-us/library/mt269549) | Al realizar la instalación de prueba de una aplicación, se implementa un paquete de la aplicación firmado en un dispositivo. Es necesario mantener la firma, el hospedaje y la implementación de estas aplicaciones. Se ha simplificado el proceso de instalación de prueba de aplicaciones para Windows 10.             |
+| [Instalación de prueba de aplicaciones](https://technet.microsoft.com/library/mt269549) | Al realizar la instalación de prueba de una aplicación, se implementa un paquete de la aplicación firmado en un dispositivo. Es necesario mantener la firma, el hospedaje y la implementación de estas aplicaciones. Se ha simplificado el proceso de instalación de prueba de aplicaciones para Windows 10.             |
 | [Publicar aplicaciones en la Tienda Windows](https://dev.windows.com/publish) | El panel de la Tienda Windows unificado te permite publicar y administrar todas las aplicaciones para todos los dispositivos Windows. Personalizar la disponibilidad de la aplicación con el precio de cada mercado, la distribución y visibilidad de los controles y otras opciones. |
 
  
@@ -116,6 +117,6 @@ Para obtener más información acerca de Prism, consulta el [repositorio de GitH
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

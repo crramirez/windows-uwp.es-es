@@ -3,8 +3,9 @@ author: joannaleecy
 title: Uso de servicios en la nube con juegos para UWP
 description: "Obtén más información acerca de cómo implementar la nube como un back-end para tus juegos para UWP."
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
-ms.sourcegitcommit: b25f02dc4ebcf960882e64f66f0306a8e584ebbd
-ms.openlocfilehash: d9b252783213f0c6a82944729f98c84e21d56535
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 8bf42e9c2c2e074240eb8e7b94efdfbca65cc7f9
 
 ---
 #  Uso de servicios en la nube con juegos para UWP
@@ -47,14 +48,15 @@ Obtén información acerca de cómo otros desarrolladores han implementado soluc
     </tr>
     <tr>
         <td>[343 Industries](https://www.halowaypoint.com/)</td>
-        <td>_Halo 5: Guardians_ implementó [Halo: Spartan Companies](https://www.halowaypoint.com/spartan-companies) como su plataforma de juegos social usando Microsoft Azure DocumentDB, que se eligió por su velocidad y flexibilidad debido a sus funcionalidades de indexación automática.</td>
+        <td>
+              _Halo 5: Guardians_ implementó [Halo: Spartan Companies](https://www.halowaypoint.com/spartan-companies) como su plataforma de juegos social usando Microsoft Azure DocumentDB, que se eligió por su velocidad y flexibilidad debido a sus funcionalidades de indexación automática.</td>
         <td>
             <ul>
                 <li>Capa de datos escalable para controlar la administración y creación de grupos para juegos multijugador <li>Integración de juegos y redes sociales <li>Consultas en tiempo real de datos a través de varios atributos <li>Sincronización de logros y estadísticas de juegos </ul>
         </td>
         <td>
             <ul>
-                <li>[Juego social implementado con Azure DocumentDB](https://azure.microsoft.com/en-us/blog/how-halo-5-guardians-implemented-social-gameplay-using-azure-documentdb/)</td>
+                <li>[Juego social implementado con Azure DocumentDB](https://azure.microsoft.com/blog/how-halo-5-guardians-implemented-social-gameplay-using-azure-documentdb/)</td>
             </ul>
     </tr>
     <tr>
@@ -87,7 +89,8 @@ Obtén información acerca de cómo otros desarrolladores han implementado soluc
     </tr>
     </td>
         <td>[Pixel Squad](http://www.crimecoast.com/)</td>
-        <td>Pixel Squad desarrolló _Crime Coast_ con el motor de juego de Unity y Azure. _Crime Coast_ es un juego de estrategia social disponible para las plataformas Android, iOS y Windows. En su juego se usó lo siguiente: Almacenamiento de blobs de Azure, Caché en Redis de Azure administrada, una matriz de máquinas virtuales IIS de carga equilibrada y el centro de notificaciones de Microsoft. Descubre cómo administraron la escala y controlaron el aumento de jugadores con 5000 jugadores simultáneos.
+        <td>Pixel Squad desarrolló _Crime Coast_ con el motor de juego de Unity y Azure. 
+              _Crime Coast_ es un juego de estrategia social disponible para las plataformas Android, iOS y Windows. En su juego se usó lo siguiente: Almacenamiento de blobs de Azure, Caché en Redis de Azure administrada, una matriz de máquinas virtuales IIS de carga equilibrada y el centro de notificaciones de Microsoft. Descubre cómo administraron la escala y controlaron el aumento de jugadores con 5000 jugadores simultáneos.
         </td>
         <td>
             <ul>
@@ -115,18 +118,18 @@ Mientras que los productores y diseñadores juegos discuten qué característica
 ### Guías de aprendizaje paso a paso
 
 * [Build 2016 Codelabs: Use Microsoft Azure App Service and Microsoft SQL Azure backend to save game score (Build 2016 - Codelabs: Usar el Servicio de aplicaciones de Microsoft Azure y el back-end de Microsoft SQL Azure para guardar la puntuación del juego)](https://github.com/Microsoft-Build-2016/CodeLabs-GameDev-6-Azure)
-* [Diseñar la estrategia de interacción móvil del juego](https://azure.microsoft.com/en-us/documentation/articles/mobile-engagement-gaming-scenario/)
-* [Uso de Azure Mobile Engagement para la implementación de Unity iOS](https://azure.microsoft.com/en-us/documentation/articles/mobile-engagement-unity-ios-get-started/)
+* [Diseñar la estrategia de interacción móvil del juego](https://azure.microsoft.com/documentation/articles/mobile-engagement-gaming-scenario/)
+* [Uso de Azure Mobile Engagement para la implementación de Unity iOS](https://azure.microsoft.com/documentation/articles/mobile-engagement-unity-ios-get-started/)
 
 ### Descripción de IaaS, PaaS o SaaS
 
 En primer lugar, debes pensar en el nivel de servicio más idóneo para tu juego. Conocer las diferencias de los siguientes tres servicios puede ayudarte a determinar el enfoque que quieres para crear el back-end.
 
-* [Infraestructura como servicio (IaaS)](https://azure.microsoft.com/en-us/overview/what-is-iaas/)
+* [Infraestructura como servicio (IaaS)](https://azure.microsoft.com/overview/what-is-iaas/)
 
     Infraestructura como servicio (IaaS) es una infraestructura informática instantánea aprovisionada y administrada a través de Internet. Imagina tener la posibilidad de tener muchos equipos disponibles para escalar y reducir verticalmente y con rapidez según la demanda. IaaS te ayuda a evitar el costo y la complejidad de comprar y administrar tus propios servidores físicos y otras infraestructuras de centro de datos.
 
-* [Plataforma como servicio (PaaS)](https://azure.microsoft.com/en-us/overview/what-is-paas/)
+* [Plataforma como servicio (PaaS)](https://azure.microsoft.com/overview/what-is-paas/)
 
     Plataforma como servicio (PaaS) es como IaaS, pero también incluye la administración de infraestructuras, como servidores, almacenamiento y redes. Así, además de no tener que comprar servidores físicos e infraestructura de centro de datos, tampoco tendrás que comprar ni administrar licencias de software, infraestructura de aplicaciones subyacente, software intermedio, herramientas de desarrollo u otros recursos.
 
@@ -201,6 +204,6 @@ Estas son algunas de las empresas que ofrecen back-end de nube para los juegos b
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

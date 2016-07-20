@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: "Usa este método en la API de colecciones de la Tienda Windows para obtener todos los productos que posee un cliente para las aplicaciones asociadas a tu identificador de cliente de Azure AD. Puedes definir el ámbito de la consulta para un producto concreto, o bien usar otros filtros."
 title: Consultar productos
-ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
-ms.openlocfilehash: b8661d73487dde61b207159d11a0583700fa22bc
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 93ed2b850de22d562b16f3f10f4ca409054910d3
 
 ---
 
@@ -33,9 +34,9 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 | Método | URI de la solicitud                                                 |
 |--------|-------------------------------------------------------------|
-| POST   | `https://collections.mp.microsoft.com/v6.0/collections/query` |
+| POST   | ```https://collections.mp.microsoft.com/v6.0/collections/query``` |
 
-<br/>
+<span/>
  
 ### Encabezado de la solicitud
 
@@ -46,7 +47,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | cadena | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
- <br/>
+<span/>
 
 ### Cuerpo de la solicitud
 
@@ -61,7 +62,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 | productTypes      | Cadena       | Si se especifica, el servicio devuelve solo los productos que coinciden con los tipos de producto especificados. Los tipos de producto admitidos son **Application**, **Durable** y **UnmanagedConsumable**.                                                                                       | No       |
 | validityType      | cadena       | Si se establece en **All**, se devolverán todos los productos de un usuario, incluidos los artículos expirados. Si se establece en **Valid**, solo se devolverán los productos que sean válidos en este momento (es decir, que tengan un estado activo, una fecha de inicio anterior a la actual &lt; y una fecha final posterior &gt; a la actual). | No       |
 
-<br/> 
+<span/>
 
 El objeto UserIdentity contiene los parámetros siguientes.
 
@@ -71,7 +72,7 @@ El objeto UserIdentity contiene los parámetros siguientes.
 | identityValue        | cadena | Valor de cadena de la clave de id. de la Tienda Windows.                                                                                                                                                                                    | Sí      |
 | localTicketReference | Cadena | Identificador solicitado para los productos devueltos. Los artículos devueltos en el cuerpo de la respuesta tendrán una *localTicketReference* coincidente. Se recomienda usar el mismo valor que la notificación *userId* de la clave de id. de la Tienda Windows. | Sí      |
 
-<br/> 
+<span/> 
 
 El objeto ProductSkuId contiene los parámetros siguientes.
 
@@ -80,7 +81,7 @@ El objeto ProductSkuId contiene los parámetros siguientes.
 | productId | cadena | El Id. de la Tienda del catálogo de la Tienda Windows. El Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8. | Sí      |
 | skuID     | cadena | El identificador de SKU del catálogo de la Tienda Windows. Un ejemplo de identificador de SKU es "0010".                                                                                                                                                                                                                                                | Sí      |
 
-<br/> 
+<span/>
 
 ### Ejemplo de solicitud
 
@@ -124,7 +125,7 @@ Content-Type: application/json
 | continuationToken | Cadena                   | Si hay varios conjuntos de productos, este token se devuelve cuando se alcanza el límite de la página. Puedes especificar este token de continuación en llamadas posteriores para recuperar los productos restantes. | No       |
 | Elementos             | CollectionItemContractV6 | Matriz de productos para el usuario especificado.                                                                                                                                               | No       |
 
-<br/> 
+<span/> 
 
 El objeto CollectionItemContractV6 contiene los parámetros siguientes.
 
@@ -154,7 +155,7 @@ El objeto CollectionItemContractV6 contiene los parámetros siguientes.
 | Tags                 | cadena             | No disponible                                                                                                                                                | Sí      |
 | transactionId        | guid               | El identificador de transacción como resultado de la compra de este artículo. Se puede usar para notificar la cumplimentación de un artículo.                                       | Sí      |
 
-<br/> 
+<span/> 
 
 El objeto IdentityContractV6 contiene los parámetros siguientes.
 
@@ -163,7 +164,7 @@ El objeto IdentityContractV6 contiene los parámetros siguientes.
 | identityType  | cadena | Contiene el valor **"pub"**.                                                      | Sí      |
 | identityValue | cadena | El valor de cadena del elemento *publisherUserId* de la clave de id. de la Tienda Windows especificada. | Sí      |
 
-<br/> 
+<span/> 
 
 ### Ejemplo de respuesta
 
@@ -216,6 +217,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

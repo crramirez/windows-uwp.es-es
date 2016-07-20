@@ -6,8 +6,8 @@ ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 label: Prepare your app for localization
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: e52a5322767677859e32ccbecf4951745c49f36f
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 4f9bc1d14db7c348e2b4dc9db2440f94d44ab4a5
 
 ---
 
@@ -31,7 +31,8 @@ Especifica imágenes y otros recursos de archivo con la etiqueta de idioma aprop
 
 Agrega comentarios de localización a los archivos de recursos de tu aplicación. Los comentarios están visibles para el localizador y deben proporcionar información contextual que lo ayude a traducir correctamente los recursos. Los comentarios deben proporcionar también información de restricción suficiente en el recurso para que la traducción no interrumpa el software. Los comentarios se pueden registrar de manera opcional mediante la herramienta Makepri.exe.
 
-**XAML:** los archivos .resw (recursos creados en Visual Studio para aplicaciones con XAML) tienen un elemento de comentario. Por ejemplo:
+
+              **XAML:** Los archivos .resw (recursos creados en Visual Studio para aplicaciones que usan XAML) tienen un elemento de comentario. Por ejemplo:
 
 ```XML
 <data name="String1">
@@ -40,7 +41,8 @@ Agrega comentarios de localización a los archivos de recursos de tu aplicación
 </data>
 ```
 
-**HTML:** los archivos .resjson (recursos creados en Visual Studio para aplicaciones con HTML) permiten metadatos en los campos que comiencen con un guion bajo. Por ejemplo, los comentarios:
+
+              **HTML:** Los archivos .resjson (recursos creados en Visual Studio para aplicaciones que usan HTML) permiten metadatos en los campos que comienzan con un guion bajo. Por ejemplo, comentarios:
 
 ```json
 {
@@ -121,20 +123,20 @@ Después de que las cadenas se separan en archivos de recursos, pueden traducirs
 Ten en cuenta las siguientes opciones:
 
 -   **Puedes traducir los archivos de recursos abriéndolos directamente en el proyecto.** Este enfoque funcionará correctamente en un proyecto que tenga un pequeño volumen de cadenas que deban traducirse en dos o tres idiomas. Puede ser apropiado para un escenario en el que un desarrollador habla más de un idioma y quiere controlar el proceso de traducción. Este enfoque es beneficioso ya que es rápido, no requiere herramientas y minimiza el riesgo de malas traducciones, pero no es escalable. En particular, los recursos de diferentes idiomas pueden perder la sincronización con facilidad, lo que causa malas experiencias de usuario y dolores de cabeza en el mantenimiento.
--   **El formato del texto de los archivos de recursos de cadena es de tipo XML o ResJSON, así que puedes traducirlos mediante cualquier editor de texto. Una vez hecho esto, los archivos que hayas traducido se copiarán en el proyecto.** Debes tener en cuenta que, si los traductores usan este método, es posible que acaben traduciendo por accidente las etiquetas XML, pero podrán trabajar en un entorno que no sea el proyecto Microsoft Visual Studio. Puedes usar este método para aquellos proyectos que debas traducir en unos pocos idiomas. El formato XLIFF es un formato XML que se diseñó específicamente para la localización, y que es compatible con varias de herramientas y proveedores de localización. Asimismo, puedes usar el [Kit de herramientas para aplicaciones multilingües](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx) para crear archivos XLIFF a partir de otros archivos de recursos como, por ejemplo, .resw o .resjson.
+-   **El formato del texto de los archivos de recursos de cadena es de tipo XML o ResJSON, así que puedes traducirlos mediante cualquier editor de texto. Una vez hecho esto, los archivos que hayas traducido se copiarán en el proyecto.** Debes tener en cuenta que, si los traductores usan este método, es posible que acaben traduciendo por accidente las etiquetas XML, pero podrán trabajar en un entorno que no sea el proyecto Microsoft Visual Studio. Puedes usar este método para aquellos proyectos que debas traducir en unos pocos idiomas. El formato XLIFF es un formato XML que se diseñó específicamente para la localización, y que es compatible con varias de herramientas y proveedores de localización. Asimismo, puedes usar el [Kit de herramientas para aplicaciones multilingües](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370.aspx) para crear archivos XLIFF a partir de otros archivos de recursos como, por ejemplo, .resw o .resjson.
 
 Probablemente sea necesario realizar entregas a los localizadores en el caso de otros archivos, como los archivos de audio y vídeo. Generalmente, no recomendamos crear archivos culturalmente dependientes porque pueden ser difíciles de localizar.
 
 Además, considera las siguientes sugerencias:
 
--   **Usa una herramienta de localización.** Tienes a tu disposición un gran número de herramientas de localización que puedes usar para analizar archivos de recursos y permitir que los traductores editen solamente las cadenas traducibles. Este enfoque reduce el riesgo de que un traductor edite las etiquetas XML por error, pero tiene la desventaja de introducir un nuevo proceso y herramienta al proceso de localización. Una herramienta de localización es un buen recurso para organizar proyectos que tengan un gran volumen de cadenas, pero que solo necesiten traducirse a una pequeña cantidad de idiomas. Para obtener más información, consulta el artículo acerca de [Cómo usar el Kit de herramientas para aplicaciones multilingües](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx).
+-   **Usa una herramienta de localización.** Tienes a tu disposición un gran número de herramientas de localización que puedes usar para analizar archivos de recursos y permitir que los traductores editen solamente las cadenas traducibles. Este enfoque reduce el riesgo de que un traductor edite las etiquetas XML por error, pero tiene la desventaja de introducir un nuevo proceso y herramienta al proceso de localización. Una herramienta de localización es un buen recurso para organizar proyectos que tengan un gran volumen de cadenas, pero que solo necesiten traducirse a una pequeña cantidad de idiomas. Para obtener más información, consulta el artículo acerca de [Cómo usar el Kit de herramientas para aplicaciones multilingües](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370.aspx).
 -   **Usa un proveedor de localización.** Puedes usar un proveedor de localización si el proyecto contiene un gran volumen de cadenas y debe traducirse a muchos idiomas. Un proveedor de localizaciones puede darte consejo sobre las herramientas y los procesos, así como traducir tus archivos de recursos. Esta es una solución ideal, pero también la opción más costosa, y puede aumentar los tiempos de entrega para el contenido traducido.
 -   **Mantén informados a tus localizadores.** Informa a tus localizadores acerca de qué cadenas pueden considerarse sustantivos o verbos. Explícales aquellas palabras inventadas usando herramientas de terminología. Mantén la corrección gramatical de tus cadenas, y haz que no sean ambiguas y sean lo menos técnicas posibles para evitar confusiones.
 
 ## <span id="keep_access_keys_and_labels_consistent."></span><span id="KEEP_ACCESS_KEYS_AND_LABELS_CONSISTENT."></span>Mantener la coherencia de las claves de acceso y las etiquetas.
 
 
-Es todo un desafío sincronizar las claves de acceso que se usan en los métodos de accesibilidad con el modo de visualizar las claves de acceso localizadas, ya que los dos recursos de cadena se clasifican en dos secciones separadas. Asegúrate de proporcionar comentarios para la cadena de etiquetas, como: `Make sure that the emphasized shortcut key  is synchronized with the access key.`
+Es todo un desafío sincronizar las claves de acceso que se usan en los métodos de accesibilidad con el modo de visualizar las claves de acceso localizadas, ya que los dos recursos de cadena se clasifican en dos secciones separadas. Asegúrate de proporcionar comentarios para la cadena de etiquetas, como:  `Make sure that the emphasized shortcut key  is synchronized with the access key.`
 
 **HTML:**
 
@@ -192,6 +194,6 @@ El método de ordenación sigue el formato del **panel de control regional**:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 
