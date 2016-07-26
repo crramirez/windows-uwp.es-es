@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\accessibility\keyboard-accessibility.md](https://github.com/Microsoft/windows-apps/blob/3de603aec1dd4d4e716acbbb3daa52a306dfa403/windows-apps-src/accessibility/keyboard-accessibility.md) | InSyncHandedBackSuccess | [Details](#6ac488b6db1ed838cc458c6adaa90dcca18d4c7d37)
 
 ## Item Details
+##### <a name='6ac488b6db1ed838cc458c6adaa90dcca18d4c7d37'></a> Source: [windows-apps-src\accessibility\keyboard-accessibility.md](https://github.com/Microsoft/windows-apps/blob/3de603aec1dd4d4e716acbbb3daa52a306dfa403/windows-apps-src/accessibility/keyboard-accessibility.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\accessibility\keyboard-accessibility.md](https://github.com/Microsoft/windows-apps.es-es/blob/dda65eb1936d04a029c0f5cfd96597a9b22bcaea/windows-apps-src/accessibility/keyboard-accessibility.md)
+* Handoff File: [keyboard-accessibility.6d8cdb025afd6e0fa1cf6c4ac022318e13c4e1f8.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/d3649cce9db856e04bd4554328d40c03ca67fc50/ol-handoff/Microsoft/windows-apps.es-es/master/keyboard-accessibility.6d8cdb025afd6e0fa1cf6c4ac022318e13c4e1f8.es-es.xlf)
+* Handoff Datetime: 2016-07-12 18:26:37
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [keyboard-accessibility.6d8cdb025afd6e0fa1cf6c4ac022318e13c4e1f8.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/8bdb5c79c4dc1ae57b05e3e0a8df6aa0930e33a6/ol-handback/Microsoft/windows-apps.es-es/master/keyboard-accessibility.6d8cdb025afd6e0fa1cf6c4ac022318e13c4e1f8.es-es.xlf)
+* Handback Datetime: 2016-07-26 13:47:29
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
