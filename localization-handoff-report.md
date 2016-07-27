@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps/blob/8022dbe38454d7ee40b81531e1ec9f7838722d7c/windows-apps-src/publish/dev-center-insider-program.md) | OutofSyncHandedBackSuccess | [Details](#7d3be87539fe36565171210c20b4c770d25f4b413670)
+ [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps/blob/1fe82576c6677fb0435e589772317b65fcc16d12/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md) | OutofSyncHandedBackSuccess | [Details](#57ed52794cba522730a911dc5ed29ca4519d46a42310)
 
 ## Item Details
-##### <a name='7d3be87539fe36565171210c20b4c770d25f4b413670'></a> Source: [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps/blob/8022dbe38454d7ee40b81531e1ec9f7838722d7c/windows-apps-src/publish/dev-center-insider-program.md)
+##### <a name='57ed52794cba522730a911dc5ed29ca4519d46a42310'></a> Source: [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps/blob/1fe82576c6677fb0435e589772317b65fcc16d12/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/ff432d4f1919021d8cb525123e414bc473e7f1ce/ol-handoff/Microsoft/windows-apps.es-es/master/dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.es-es.xlf)
-* Handoff Datetime: 2016-07-27 20:17:50
+* Handoff File: [create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/b96c19b9409bc860a84cd21fc135f038b729b4e9/ol-handoff/Microsoft/windows-apps.es-es/master/create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.es-es.xlf)
+* Handoff Datetime: 2016-07-27 22:17:45
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/publish/dev-center-insider-program.md)
-* Current Handback File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.es-es.xlf)
+* Current Target File: [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md)
+* Current Handback File: [create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.es-es.xlf)
 * Current Handback Datetime: 2016-07-20 16:37:02
 * [Back to Top](#report-top)
 
