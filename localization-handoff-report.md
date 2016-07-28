@@ -1,43 +1,26 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\images\universalapps-overview.png](https://github.com/Microsoft/windows-apps/blob/e44ae1a8c78b63ce654c05aa31d96eb86b262fb6/windows-apps-src/get-started/images/universalapps-overview.png) | OutofSyncHandedBackSuccess | [Details](#8b0f197d2a4a9ef53b68b278816df934af0283d12519)
- [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/e44ae1a8c78b63ce654c05aa31d96eb86b262fb6/windows-apps-src/get-started/universal-application-platform-guide.md) | OutofSyncHandedBackSuccess | [Details](#66366e04c76769311f9f18b0db249be2d9c48e3c2688)
+ [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps/blob/d0aeeb1a2ad42f23ca294bdd581aa8915b493870/windows-apps-src/packaging/app-capability-declarations.md) | OutofSyncHandedBackSuccess | [Details](#15297eaab55215f3c0fb7cc1927500c26d17b8573508)
 
 ## Item Details
-##### <a name='8b0f197d2a4a9ef53b68b278816df934af0283d12519'></a> Source: [windows-apps-src\get-started\images\universalapps-overview.png](https://github.com/Microsoft/windows-apps/blob/e44ae1a8c78b63ce654c05aa31d96eb86b262fb6/windows-apps-src/get-started/images/universalapps-overview.png)
+##### <a name='15297eaab55215f3c0fb7cc1927500c26d17b8573508'></a> Source: [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps/blob/d0aeeb1a2ad42f23ca294bdd581aa8915b493870/windows-apps-src/packaging/app-capability-declarations.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [8b0f197d2a4a9ef53b68b278816df934af0283d1.png](https://github.com/Microsoft/WDG.handoff/blob/357232b49363298d62bc4614bf06b770ffefeeb0/ol-handoff/Microsoft/windows-apps.es-es/master/8b0f197d2a4a9ef53b68b278816df934af0283d1.png)
-* Handoff Datetime: 2016-07-28 16:46:46
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\get-started\universal-application-platform-guide.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\images\universalapps-overview.png](https://github.com/Microsoft/windows-apps.es-es/blob/f628cb03061126c1d5dd84ea77e602dec6b331af/windows-apps-src/get-started/images/universalapps-overview.png)
-* Current Handback File: [ef5e5d3d444ca57a8ae13980cb4a45d0a51d488e.png](https://github.com/Microsoft/WDG.handback/blob/ad6a4a334b900b783f8a215ff06bc469a4f1beff/ol-handback/Microsoft/windows-apps.es-es/master/ef5e5d3d444ca57a8ae13980cb4a45d0a51d488e.png)
-* Current Handback Datetime: 2016-06-30 16:13:42
-* [Back to Top](#report-top)
-
-##### <a name='66366e04c76769311f9f18b0db249be2d9c48e3c2688'></a> Source: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/e44ae1a8c78b63ce654c05aa31d96eb86b262fb6/windows-apps-src/get-started/universal-application-platform-guide.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/357232b49363298d62bc4614bf06b770ffefeeb0/ol-handoff/Microsoft/windows-apps.es-es/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.es-es.xlf)
-* Handoff Datetime: 2016-07-28 16:46:46
+* Handoff File: [app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/99d93c942d57d9f18c9957e4a321527feeb8d245/ol-handoff/Microsoft/windows-apps.es-es/master/app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.es-es.xlf)
+* Handoff Datetime: 2016-07-28 17:18:00
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/get-started/universal-application-platform-guide.md)
-* Current Handback File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.es-es.xlf)
+* Current Target File: [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/packaging/app-capability-declarations.md)
+* Current Handback File: [app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.es-es.xlf)
 * Current Handback Datetime: 2016-07-20 16:37:02
 * [Back to Top](#report-top)
 
