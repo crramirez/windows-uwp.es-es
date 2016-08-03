@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://github.com/Microsoft/windows-apps/blob/3402b6bd0d30bd075742dc106ef1e7bcbab275be/windows-apps-src/input-and-devices/pen-and-stylus-interactions.md) | OutofSyncHandedBackSuccess | [Details](#5b8f1e918d043e8ffdbb2ce9dd031f549e40043a4285)
+ [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://github.com/Microsoft/windows-apps/blob/c1f2ba6ece86b01bce3b50c612ac0be89cf76552/windows-apps-src/input-and-devices/pen-and-stylus-interactions.md) | OutofSyncHandedBackSuccess | [Details](#d8ec29486fa9e58c520dc8ffa43ea82b6f4bf6c94285)
 
 ## Item Details
-##### <a name='5b8f1e918d043e8ffdbb2ce9dd031f549e40043a4285'></a> Source: [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://github.com/Microsoft/windows-apps/blob/3402b6bd0d30bd075742dc106ef1e7bcbab275be/windows-apps-src/input-and-devices/pen-and-stylus-interactions.md)
+##### <a name='d8ec29486fa9e58c520dc8ffa43ea82b6f4bf6c94285'></a> Source: [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://github.com/Microsoft/windows-apps/blob/c1f2ba6ece86b01bce3b50c612ac0be89cf76552/windows-apps-src/input-and-devices/pen-and-stylus-interactions.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/97170c7b7e6b8233de9dc74523f1fd8405028e13/ol-handoff/Microsoft/windows-apps.es-es/master/pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.es-es.xlf)
-* Handoff Datetime: 2016-08-03 21:12:45
+* Handoff File: [pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/671bd7ab902ee2af07b4a3d6931875c27f189f9c/ol-handoff/Microsoft/windows-apps.es-es/master/pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.es-es.xlf)
+* Handoff Datetime: 2016-08-03 21:43:37
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
