@@ -6,15 +6,30 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\app-settings\guidelines-for-app-settings.md](https://github.com/Microsoft/windows-apps/blob/9e947480abda43267ec83c43620cf21c85060f64/windows-apps-src/app-settings/guidelines-for-app-settings.md) | HandedOffSuccess | [Details](#0d5ac3adf531eb2876852d59acb2b71b1596fa2051)
- [windows-apps-src\app-settings\store-and-retrieve-app-data.md](https://github.com/Microsoft/windows-apps/blob/a5a5ded90ad3bcad1ceb32243b41afe33a3b7ed6/windows-apps-src/app-settings/store-and-retrieve-app-data.md) | HandedOffSuccess | [Details](#c5481371bfe0574bc92db182149a6c5bde50187d82)
+ [windows-apps-src\app-settings\app-settings-and-data.md](https://github.com/Microsoft/windows-apps/blob/aa0a1170332f00e482fca8466930af5da3295f64/windows-apps-src/app-settings/app-settings-and-data.md) | HandedOffSuccess | [Details](#8ba114c2b920e321aecd92a5b4d53825bdb5d59950)
+ [windows-apps-src\app-settings\guidelines-for-app-settings.md](https://github.com/Microsoft/windows-apps/blob/78ede41d559613e89d3174430f5474559f48c6bf/windows-apps-src/app-settings/guidelines-for-app-settings.md) | HandedOffSuccess | [Details](#6302ec1bf332a27986876dbde4da92bbc916f85b51)
 
 ## Item Details
-##### <a name='0d5ac3adf531eb2876852d59acb2b71b1596fa2051'></a> Source: [windows-apps-src\app-settings\guidelines-for-app-settings.md](https://github.com/Microsoft/windows-apps/blob/9e947480abda43267ec83c43620cf21c85060f64/windows-apps-src/app-settings/guidelines-for-app-settings.md)
+##### <a name='8ba114c2b920e321aecd92a5b4d53825bdb5d59950'></a> Source: [windows-apps-src\app-settings\app-settings-and-data.md](https://github.com/Microsoft/windows-apps/blob/aa0a1170332f00e482fca8466930af5da3295f64/windows-apps-src/app-settings/app-settings-and-data.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [guidelines-for-app-settings.1eb3014d8ebbc319fbe1eed647ec2258ff1eaf7b.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/485ca9d536858dc7ddb0d64b9c4101df242d9cee/ol-handoff/Microsoft/windows-apps.es-es/master/guidelines-for-app-settings.1eb3014d8ebbc319fbe1eed647ec2258ff1eaf7b.es-es.xlf)
-* Handoff Datetime: 2016-08-10 21:21:47
+* Handoff File: [app-settings-and-data.9232794ed41c2439c7db748b385db44334159f35.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/b3e5548161dc7c159a0253930d4e8c507a0ad59a/ol-handoff/Microsoft/windows-apps.es-es/master/app-settings-and-data.9232794ed41c2439c7db748b385db44334159f35.es-es.xlf)
+* Handoff Datetime: 2016-08-10 21:50:37
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\app-settings\app-settings-and-data.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/app-settings/app-settings-and-data.md)
+* Current Handback File: [app-settings-and-data.9232794ed41c2439c7db748b385db44334159f35.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/app-settings-and-data.9232794ed41c2439c7db748b385db44334159f35.es-es.xlf)
+* Current Handback Datetime: 2016-07-06 15:11:22
+* [Back to Top](#report-top)
+
+##### <a name='6302ec1bf332a27986876dbde4da92bbc916f85b51'></a> Source: [windows-apps-src\app-settings\guidelines-for-app-settings.md](https://github.com/Microsoft/windows-apps/blob/78ede41d559613e89d3174430f5474559f48c6bf/windows-apps-src/app-settings/guidelines-for-app-settings.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [guidelines-for-app-settings.1eb3014d8ebbc319fbe1eed647ec2258ff1eaf7b.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/b3e5548161dc7c159a0253930d4e8c507a0ad59a/ol-handoff/Microsoft/windows-apps.es-es/master/guidelines-for-app-settings.1eb3014d8ebbc319fbe1eed647ec2258ff1eaf7b.es-es.xlf)
+* Handoff Datetime: 2016-08-10 21:50:37
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -22,21 +37,6 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [windows-apps-src\app-settings\guidelines-for-app-settings.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/app-settings/guidelines-for-app-settings.md)
 * Current Handback File: [guidelines-for-app-settings.1eb3014d8ebbc319fbe1eed647ec2258ff1eaf7b.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/guidelines-for-app-settings.1eb3014d8ebbc319fbe1eed647ec2258ff1eaf7b.es-es.xlf)
-* Current Handback Datetime: 2016-07-06 15:11:22
-* [Back to Top](#report-top)
-
-##### <a name='c5481371bfe0574bc92db182149a6c5bde50187d82'></a> Source: [windows-apps-src\app-settings\store-and-retrieve-app-data.md](https://github.com/Microsoft/windows-apps/blob/a5a5ded90ad3bcad1ceb32243b41afe33a3b7ed6/windows-apps-src/app-settings/store-and-retrieve-app-data.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [store-and-retrieve-app-data.5da8a763047d281092870b7268f4d599223c086e.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/485ca9d536858dc7ddb0d64b9c4101df242d9cee/ol-handoff/Microsoft/windows-apps.es-es/master/store-and-retrieve-app-data.5da8a763047d281092870b7268f4d599223c086e.es-es.xlf)
-* Handoff Datetime: 2016-08-10 21:21:47
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\app-settings\store-and-retrieve-app-data.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/app-settings/store-and-retrieve-app-data.md)
-* Current Handback File: [store-and-retrieve-app-data.5da8a763047d281092870b7268f4d599223c086e.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/store-and-retrieve-app-data.5da8a763047d281092870b7268f4d599223c086e.es-es.xlf)
 * Current Handback Datetime: 2016-07-06 15:11:22
 * [Back to Top](#report-top)
 
