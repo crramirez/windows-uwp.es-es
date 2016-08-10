@@ -1,155 +1,43 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 9
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\accessibility\custom-automation-peers.md](https://github.com/Microsoft/windows-apps/blob/9e1a458fa7ec51d621156e3ec6ed97b0361a6217/windows-apps-src/accessibility/custom-automation-peers.md) | HandedOffSuccess | [Details](#be53632455fe2fa847cc77c82ed0c2e2edff668516)
- [windows-apps-src\accessibility\designing-inclusive-software.md](https://github.com/Microsoft/windows-apps/blob/c5ccae0e095b7c8e403a230fe8f3442754aa2ad7/windows-apps-src/accessibility/designing-inclusive-software.md) | HandedOffSuccess | [Details](#94848fd1acf51e7ab8dab0f45584d3214be5883017)
- [windows-apps-src\accessibility\developing-inclusive-windows-apps.md](https://github.com/Microsoft/windows-apps/blob/9f68c2bdc92bfbdbc8328e4df161f7ecdfccf8e5/windows-apps-src/accessibility/developing-inclusive-windows-apps.md) | HandedOffSuccess | [Details](#19c90991ab86383fa259b05460cbd656d408e97718)
- [windows-apps-src\maps-and-location\get-location.md](https://github.com/Microsoft/windows-apps/blob/bdb6cbd0b0ccb7b6aa04cf6ba98bb154af325515/windows-apps-src/maps-and-location/get-location.md) | HandedOffSuccess | [Details](#1172aae67169295ac6f2446c839a1cce5a84fa364681)
- [windows-apps-src\monetize\get-app-acquisitions.md](https://github.com/Microsoft/windows-apps/blob/a201bb6020614f56b7682cb34cb1350ae185a4e1/windows-apps-src/monetize/get-app-acquisitions.md) | HandedOffSuccess | [Details](#122a23a12269ed6b81f40ddf1485db59f1e446af4740)
- [windows-apps-src\monetize\get-app-ratings.md](https://github.com/Microsoft/windows-apps/blob/a201bb6020614f56b7682cb34cb1350ae185a4e1/windows-apps-src/monetize/get-app-ratings.md) | HandedOffSuccess | [Details](#b243aba5aa25cd31dbeec69c0a2a7ea4b1c15edd4742)
- [windows-apps-src\monetize\get-app-reviews.md](https://github.com/Microsoft/windows-apps/blob/a201bb6020614f56b7682cb34cb1350ae185a4e1/windows-apps-src/monetize/get-app-reviews.md) | HandedOffSuccess | [Details](#526b7f35f3033409020713e6fe17ced5b7584fda4743)
- [windows-apps-src\monetize\get-error-reporting-data.md](https://github.com/Microsoft/windows-apps/blob/a201bb6020614f56b7682cb34cb1350ae185a4e1/windows-apps-src/monetize/get-error-reporting-data.md) | HandedOffSuccess | [Details](#4b2ec15fb94f03f39e0e8edb285458b573b425764744)
- [windows-apps-src\monetize\get-in-app-acquisitions.md](https://github.com/Microsoft/windows-apps/blob/a201bb6020614f56b7682cb34cb1350ae185a4e1/windows-apps-src/monetize/get-in-app-acquisitions.md) | HandedOffSuccess | [Details](#aa6512b265a570381fa3d936433921e996f6ffba4745)
+ [windows-apps-src\accessibility\high-contrast-themes.md](https://github.com/Microsoft/windows-apps/blob/f3da82cab8813653a6ee999976983937649b42b2/windows-apps-src/accessibility/high-contrast-themes.md) | HandedOffSuccess | [Details](#30785998d11f09ef94f33789e3e74b0933d9c83e19)
+ [windows-apps-src\accessibility\keyboard-accessibility.md](https://github.com/Microsoft/windows-apps/blob/2215aeae041ff975d99d29ea42350f6ce0f2a681/windows-apps-src/accessibility/keyboard-accessibility.md) | HandedOffSuccess | [Details](#112c7be4cb5418332a19565be9b739e7032ba83439)
 
 ## Item Details
-##### <a name='be53632455fe2fa847cc77c82ed0c2e2edff668516'></a> Source: [windows-apps-src\accessibility\custom-automation-peers.md](https://github.com/Microsoft/windows-apps/blob/9e1a458fa7ec51d621156e3ec6ed97b0361a6217/windows-apps-src/accessibility/custom-automation-peers.md)
+##### <a name='30785998d11f09ef94f33789e3e74b0933d9c83e19'></a> Source: [windows-apps-src\accessibility\high-contrast-themes.md](https://github.com/Microsoft/windows-apps/blob/f3da82cab8813653a6ee999976983937649b42b2/windows-apps-src/accessibility/high-contrast-themes.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [custom-automation-peers.c1505cf3498003a346b4fc2babcd3293dd99e456.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/e98257db4c1aab5de09ef3ba81bc5ec5529a62c4/ol-handoff/Microsoft/windows-apps.es-es/master/custom-automation-peers.c1505cf3498003a346b4fc2babcd3293dd99e456.es-es.xlf)
-* Handoff Datetime: 2016-08-10 18:22:58
+* Handoff File: [high-contrast-themes.48ba9338c4156c9023e5f696133f2b776c3bd1dc.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/cf30d84ecee7d5a5c7944826633bf9c311c003db/ol-handoff/Microsoft/windows-apps.es-es/master/high-contrast-themes.48ba9338c4156c9023e5f696133f2b776c3bd1dc.es-es.xlf)
+* Handoff Datetime: 2016-08-10 19:21:59
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\accessibility\custom-automation-peers.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/accessibility/custom-automation-peers.md)
-* Current Handback File: [custom-automation-peers.c1505cf3498003a346b4fc2babcd3293dd99e456.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/custom-automation-peers.c1505cf3498003a346b4fc2babcd3293dd99e456.es-es.xlf)
-* Current Handback Datetime: 2016-07-06 15:11:22
-* [Back to Top](#report-top)
-
-##### <a name='94848fd1acf51e7ab8dab0f45584d3214be5883017'></a> Source: [windows-apps-src\accessibility\designing-inclusive-software.md](https://github.com/Microsoft/windows-apps/blob/c5ccae0e095b7c8e403a230fe8f3442754aa2ad7/windows-apps-src/accessibility/designing-inclusive-software.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [designing-inclusive-software.cace2c94cd90e8f06f4407c372de9ef7748f95e7.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/e98257db4c1aab5de09ef3ba81bc5ec5529a62c4/ol-handoff/Microsoft/windows-apps.es-es/master/designing-inclusive-software.cace2c94cd90e8f06f4407c372de9ef7748f95e7.es-es.xlf)
-* Handoff Datetime: 2016-08-10 18:22:58
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\accessibility\designing-inclusive-software.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/accessibility/designing-inclusive-software.md)
-* Current Handback File: [designing-inclusive-software.cace2c94cd90e8f06f4407c372de9ef7748f95e7.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/designing-inclusive-software.cace2c94cd90e8f06f4407c372de9ef7748f95e7.es-es.xlf)
+* Current Target File: [windows-apps-src\accessibility\high-contrast-themes.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/accessibility/high-contrast-themes.md)
+* Current Handback File: [high-contrast-themes.48ba9338c4156c9023e5f696133f2b776c3bd1dc.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/high-contrast-themes.48ba9338c4156c9023e5f696133f2b776c3bd1dc.es-es.xlf)
 * Current Handback Datetime: 2016-07-20 16:37:02
 * [Back to Top](#report-top)
 
-##### <a name='19c90991ab86383fa259b05460cbd656d408e97718'></a> Source: [windows-apps-src\accessibility\developing-inclusive-windows-apps.md](https://github.com/Microsoft/windows-apps/blob/9f68c2bdc92bfbdbc8328e4df161f7ecdfccf8e5/windows-apps-src/accessibility/developing-inclusive-windows-apps.md)
+##### <a name='112c7be4cb5418332a19565be9b739e7032ba83439'></a> Source: [windows-apps-src\accessibility\keyboard-accessibility.md](https://github.com/Microsoft/windows-apps/blob/2215aeae041ff975d99d29ea42350f6ce0f2a681/windows-apps-src/accessibility/keyboard-accessibility.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [developing-inclusive-windows-apps.beba11e2cada78ec18c4a0ad550feb430438a92b.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/e98257db4c1aab5de09ef3ba81bc5ec5529a62c4/ol-handoff/Microsoft/windows-apps.es-es/master/developing-inclusive-windows-apps.beba11e2cada78ec18c4a0ad550feb430438a92b.es-es.xlf)
-* Handoff Datetime: 2016-08-10 18:22:58
+* Handoff File: [keyboard-accessibility.6d8cdb025afd6e0fa1cf6c4ac022318e13c4e1f8.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/cf30d84ecee7d5a5c7944826633bf9c311c003db/ol-handoff/Microsoft/windows-apps.es-es/master/keyboard-accessibility.6d8cdb025afd6e0fa1cf6c4ac022318e13c4e1f8.es-es.xlf)
+* Handoff Datetime: 2016-08-10 19:21:59
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\accessibility\developing-inclusive-windows-apps.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/accessibility/developing-inclusive-windows-apps.md)
-* Current Handback File: [developing-inclusive-windows-apps.beba11e2cada78ec18c4a0ad550feb430438a92b.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/developing-inclusive-windows-apps.beba11e2cada78ec18c4a0ad550feb430438a92b.es-es.xlf)
-* Current Handback Datetime: 2016-07-20 16:37:02
-* [Back to Top](#report-top)
-
-##### <a name='1172aae67169295ac6f2446c839a1cce5a84fa364681'></a> Source: [windows-apps-src\maps-and-location\get-location.md](https://github.com/Microsoft/windows-apps/blob/bdb6cbd0b0ccb7b6aa04cf6ba98bb154af325515/windows-apps-src/maps-and-location/get-location.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [get-location.0207e7bc18a4623b2c1141391e7792506f51e45b.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/e98257db4c1aab5de09ef3ba81bc5ec5529a62c4/ol-handoff/Microsoft/windows-apps.es-es/master/get-location.0207e7bc18a4623b2c1141391e7792506f51e45b.es-es.xlf)
-* Handoff Datetime: 2016-08-10 18:22:58
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\maps-and-location\get-location.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/maps-and-location/get-location.md)
-* Current Handback File: [get-location.0207e7bc18a4623b2c1141391e7792506f51e45b.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/get-location.0207e7bc18a4623b2c1141391e7792506f51e45b.es-es.xlf)
-* Current Handback Datetime: 2016-07-06 15:11:22
-* [Back to Top](#report-top)
-
-##### <a name='122a23a12269ed6b81f40ddf1485db59f1e446af4740'></a> Source: [windows-apps-src\monetize\get-app-acquisitions.md](https://github.com/Microsoft/windows-apps/blob/a201bb6020614f56b7682cb34cb1350ae185a4e1/windows-apps-src/monetize/get-app-acquisitions.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [get-app-acquisitions.f14b6d2a411a11089761ab93454ca2bd46c9fee7.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/e98257db4c1aab5de09ef3ba81bc5ec5529a62c4/ol-handoff/Microsoft/windows-apps.es-es/master/get-app-acquisitions.f14b6d2a411a11089761ab93454ca2bd46c9fee7.es-es.xlf)
-* Handoff Datetime: 2016-08-10 18:22:58
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\get-app-acquisitions.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/monetize/get-app-acquisitions.md)
-* Current Handback File: [get-app-acquisitions.f14b6d2a411a11089761ab93454ca2bd46c9fee7.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/get-app-acquisitions.f14b6d2a411a11089761ab93454ca2bd46c9fee7.es-es.xlf)
-* Current Handback Datetime: 2016-07-20 16:37:02
-* [Back to Top](#report-top)
-
-##### <a name='b243aba5aa25cd31dbeec69c0a2a7ea4b1c15edd4742'></a> Source: [windows-apps-src\monetize\get-app-ratings.md](https://github.com/Microsoft/windows-apps/blob/a201bb6020614f56b7682cb34cb1350ae185a4e1/windows-apps-src/monetize/get-app-ratings.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [get-app-ratings.6d54049db0a56dc7967b6a7d76fb6de1ca1034a1.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/e98257db4c1aab5de09ef3ba81bc5ec5529a62c4/ol-handoff/Microsoft/windows-apps.es-es/master/get-app-ratings.6d54049db0a56dc7967b6a7d76fb6de1ca1034a1.es-es.xlf)
-* Handoff Datetime: 2016-08-10 18:22:58
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\get-app-ratings.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/monetize/get-app-ratings.md)
-* Current Handback File: [get-app-ratings.6d54049db0a56dc7967b6a7d76fb6de1ca1034a1.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/get-app-ratings.6d54049db0a56dc7967b6a7d76fb6de1ca1034a1.es-es.xlf)
-* Current Handback Datetime: 2016-07-20 16:37:02
-* [Back to Top](#report-top)
-
-##### <a name='526b7f35f3033409020713e6fe17ced5b7584fda4743'></a> Source: [windows-apps-src\monetize\get-app-reviews.md](https://github.com/Microsoft/windows-apps/blob/a201bb6020614f56b7682cb34cb1350ae185a4e1/windows-apps-src/monetize/get-app-reviews.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [get-app-reviews.aa07f186e9d0e663a6f8e9963ebc5a00c31a4b37.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/e98257db4c1aab5de09ef3ba81bc5ec5529a62c4/ol-handoff/Microsoft/windows-apps.es-es/master/get-app-reviews.aa07f186e9d0e663a6f8e9963ebc5a00c31a4b37.es-es.xlf)
-* Handoff Datetime: 2016-08-10 18:22:58
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\get-app-reviews.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/monetize/get-app-reviews.md)
-* Current Handback File: [get-app-reviews.aa07f186e9d0e663a6f8e9963ebc5a00c31a4b37.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/get-app-reviews.aa07f186e9d0e663a6f8e9963ebc5a00c31a4b37.es-es.xlf)
-* Current Handback Datetime: 2016-07-20 16:37:02
-* [Back to Top](#report-top)
-
-##### <a name='4b2ec15fb94f03f39e0e8edb285458b573b425764744'></a> Source: [windows-apps-src\monetize\get-error-reporting-data.md](https://github.com/Microsoft/windows-apps/blob/a201bb6020614f56b7682cb34cb1350ae185a4e1/windows-apps-src/monetize/get-error-reporting-data.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [get-error-reporting-data.63a456478a0dce2251d9adb48f2372706ef3aaeb.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/e98257db4c1aab5de09ef3ba81bc5ec5529a62c4/ol-handoff/Microsoft/windows-apps.es-es/master/get-error-reporting-data.63a456478a0dce2251d9adb48f2372706ef3aaeb.es-es.xlf)
-* Handoff Datetime: 2016-08-10 18:22:58
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\get-error-reporting-data.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/monetize/get-error-reporting-data.md)
-* Current Handback File: [get-error-reporting-data.63a456478a0dce2251d9adb48f2372706ef3aaeb.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/get-error-reporting-data.63a456478a0dce2251d9adb48f2372706ef3aaeb.es-es.xlf)
-* Current Handback Datetime: 2016-07-20 16:37:02
-* [Back to Top](#report-top)
-
-##### <a name='aa6512b265a570381fa3d936433921e996f6ffba4745'></a> Source: [windows-apps-src\monetize\get-in-app-acquisitions.md](https://github.com/Microsoft/windows-apps/blob/a201bb6020614f56b7682cb34cb1350ae185a4e1/windows-apps-src/monetize/get-in-app-acquisitions.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [get-in-app-acquisitions.fcb7e186f3708c32617a611f4226f5a83e6f41a5.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/e98257db4c1aab5de09ef3ba81bc5ec5529a62c4/ol-handoff/Microsoft/windows-apps.es-es/master/get-in-app-acquisitions.fcb7e186f3708c32617a611f4226f5a83e6f41a5.es-es.xlf)
-* Handoff Datetime: 2016-08-10 18:22:58
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\get-in-app-acquisitions.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/monetize/get-in-app-acquisitions.md)
-* Current Handback File: [get-in-app-acquisitions.fcb7e186f3708c32617a611f4226f5a83e6f41a5.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/get-in-app-acquisitions.fcb7e186f3708c32617a611f4226f5a83e6f41a5.es-es.xlf)
-* Current Handback Datetime: 2016-07-20 16:37:02
+* Current Target File: [windows-apps-src\accessibility\keyboard-accessibility.md](https://github.com/Microsoft/windows-apps.es-es/blob/dda65eb1936d04a029c0f5cfd96597a9b22bcaea/windows-apps-src/accessibility/keyboard-accessibility.md)
+* Current Handback File: [keyboard-accessibility.6d8cdb025afd6e0fa1cf6c4ac022318e13c4e1f8.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/8bdb5c79c4dc1ae57b05e3e0a8df6aa0930e33a6/ol-handback/Microsoft/windows-apps.es-es/master/keyboard-accessibility.6d8cdb025afd6e0fa1cf6c4ac022318e13c4e1f8.es-es.xlf)
+* Current Handback Datetime: 2016-07-26 13:47:29
 * [Back to Top](#report-top)
 
 
