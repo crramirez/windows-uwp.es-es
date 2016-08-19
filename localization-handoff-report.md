@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\controls-and-patterns\xaml-theme-resources.md](https://github.com/Microsoft/windows-apps/blob/32b6685dfd04994d13dc8805c5205e87a20b10f1/windows-apps-src/controls-and-patterns/xaml-theme-resources.md) | HandedOffSuccess | [Details](#092b183ead828ae411ff64d37e581bbbb59a1f5b3198)
+ [windows-apps-src\publish\manage-account-users.md](https://github.com/Microsoft/windows-apps/blob/db271d616cf957877f302802a813eb06c7d09c18/windows-apps-src/publish/manage-account-users.md) | HandedOffSuccess | [Details](#c5a257e763c2298e54b215e87d3ab54e6f89a2755016)
 
 ## Item Details
-##### <a name='092b183ead828ae411ff64d37e581bbbb59a1f5b3198'></a> Source: [windows-apps-src\controls-and-patterns\xaml-theme-resources.md](https://github.com/Microsoft/windows-apps/blob/32b6685dfd04994d13dc8805c5205e87a20b10f1/windows-apps-src/controls-and-patterns/xaml-theme-resources.md)
+##### <a name='c5a257e763c2298e54b215e87d3ab54e6f89a2755016'></a> Source: [windows-apps-src\publish\manage-account-users.md](https://github.com/Microsoft/windows-apps/blob/db271d616cf957877f302802a813eb06c7d09c18/windows-apps-src/publish/manage-account-users.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [xaml-theme-resources.44ab71091ba985b4a3127b7f58980eecf9a95090.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/85afaf8b2a3b69106e22941b4cbfa8a7985f111d/ol-handoff/Microsoft/windows-apps.es-es/master/xaml-theme-resources.44ab71091ba985b4a3127b7f58980eecf9a95090.es-es.xlf)
-* Handoff Datetime: 2016-08-18 23:22:36
+* Handoff File: [manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/d7759733f47f10a02a3ca788777220ae4abce2fe/ol-handoff/Microsoft/windows-apps.es-es/master/manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.es-es.xlf)
+* Handoff Datetime: 2016-08-19 19:54:20
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\controls-and-patterns\xaml-theme-resources.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/controls-and-patterns/xaml-theme-resources.md)
-* Current Handback File: [xaml-theme-resources.44ab71091ba985b4a3127b7f58980eecf9a95090.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/xaml-theme-resources.44ab71091ba985b4a3127b7f58980eecf9a95090.es-es.xlf)
+* Current Target File: [windows-apps-src\publish\manage-account-users.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/publish/manage-account-users.md)
+* Current Handback File: [manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.es-es.xlf)
 * Current Handback Datetime: 2016-07-06 15:11:22
 * [Back to Top](#report-top)
 
