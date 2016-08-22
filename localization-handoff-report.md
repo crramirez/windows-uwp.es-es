@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-supported-api.md](https://github.com/Microsoft/windows-apps/blob/1d9aeb17507b8ee369f3cb0babd8525e50dced70/windows-apps-src/porting/desktop-to-uwp-supported-api.md) | HandedOffSuccess | [Details](#81ab822f8c2f0975450f3918f62c76aa1aeeedc54849)
+ [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/a84d3f73f2f46010e65b30c097d90f3936b52a29/windows-apps-src/get-started/application-development-for-windows-as-a-service.md) | HandedOffSuccess | [Details](#72ac67b17fc519d374798e5121b309f664ff6b1b3545)
 
 ## Item Details
-##### <a name='81ab822f8c2f0975450f3918f62c76aa1aeeedc54849'></a> Source: [windows-apps-src\porting\desktop-to-uwp-supported-api.md](https://github.com/Microsoft/windows-apps/blob/1d9aeb17507b8ee369f3cb0babd8525e50dced70/windows-apps-src/porting/desktop-to-uwp-supported-api.md)
+##### <a name='72ac67b17fc519d374798e5121b309f664ff6b1b3545'></a> Source: [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/a84d3f73f2f46010e65b30c097d90f3936b52a29/windows-apps-src/get-started/application-development-for-windows-as-a-service.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-supported-api.220ba582d79150eb52605ad0af9b424c0fb476ad.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/8b9ec81a5ccb634e78a3db5b79f0eb4e4b145372/ol-handoff/Microsoft/windows-apps.es-es/master/desktop-to-uwp-supported-api.220ba582d79150eb52605ad0af9b424c0fb476ad.es-es.xlf)
-* Handoff Datetime: 2016-08-22 22:23:41
+* Handoff File: [application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/4164811a2f86ce439833ee5d35b5cf9f9b03ef22/ol-handoff/Microsoft/windows-apps.es-es/master/application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.es-es.xlf)
+* Handoff Datetime: 2016-08-22 22:54:33
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
