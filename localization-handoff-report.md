@@ -6,22 +6,19 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/cc8abd578f0e8734c1e2478a1e17062b21b677be/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#d260fadaa4e8fe0fc1c15bcf4df0607d5c0718dc7936)
+ [windows-apps-src\porting\desktop-to-uwp-supported-api.md](https://github.com/Microsoft/windows-apps/blob/1d9aeb17507b8ee369f3cb0babd8525e50dced70/windows-apps-src/porting/desktop-to-uwp-supported-api.md) | HandedOffSuccess | [Details](#81ab822f8c2f0975450f3918f62c76aa1aeeedc54849)
 
 ## Item Details
-##### <a name='d260fadaa4e8fe0fc1c15bcf4df0607d5c0718dc7936'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/cc8abd578f0e8734c1e2478a1e17062b21b677be/windows-apps-src/TOC.md)
+##### <a name='81ab822f8c2f0975450f3918f62c76aa1aeeedc54849'></a> Source: [windows-apps-src\porting\desktop-to-uwp-supported-api.md](https://github.com/Microsoft/windows-apps/blob/1d9aeb17507b8ee369f3cb0babd8525e50dced70/windows-apps-src/porting/desktop-to-uwp-supported-api.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/f88c43f2b4445a4114b272cd424b5a6adf51cc45/ol-handoff/Microsoft/windows-apps.es-es/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.es-es.xlf)
-* Handoff Datetime: 2016-08-22 21:55:15
+* Handoff File: [desktop-to-uwp-supported-api.220ba582d79150eb52605ad0af9b424c0fb476ad.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/8b9ec81a5ccb634e78a3db5b79f0eb4e4b145372/ol-handoff/Microsoft/windows-apps.es-es/master/desktop-to-uwp-supported-api.220ba582d79150eb52605ad0af9b424c0fb476ad.es-es.xlf)
+* Handoff Datetime: 2016-08-22 22:23:41
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/TOC.md)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.es-es.xlf)
-* Current Handback Datetime: 2016-07-20 16:37:02
 * [Back to Top](#report-top)
 
 
