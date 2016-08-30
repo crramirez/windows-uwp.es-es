@@ -6,22 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\put-apps-and-iaps-on-sale.md](https://github.com/Microsoft/windows-apps/blob/b10e6fd50001664b627bc7cb4bd29b9b83140fdc/windows-apps-src/publish/put-apps-and-iaps-on-sale.md) | HandedOffSuccess | [Details](#f96e0d54862c82c6b41aa3d31a0e29e49d6cc1575087)
+ [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps/blob/e38d47ea340bd2a37b5bedb023c116102887fdb2/windows-apps-src/publish/dev-center-insider-program.md) | HandedOffSuccess | [Details](#dfc4b1a66a4afc5bbd42daa9b2cf08fbadb98e2d5047)
 
 ## Item Details
-##### <a name='f96e0d54862c82c6b41aa3d31a0e29e49d6cc1575087'></a> Source: [windows-apps-src\publish\put-apps-and-iaps-on-sale.md](https://github.com/Microsoft/windows-apps/blob/b10e6fd50001664b627bc7cb4bd29b9b83140fdc/windows-apps-src/publish/put-apps-and-iaps-on-sale.md)
+##### <a name='dfc4b1a66a4afc5bbd42daa9b2cf08fbadb98e2d5047'></a> Source: [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps/blob/e38d47ea340bd2a37b5bedb023c116102887fdb2/windows-apps-src/publish/dev-center-insider-program.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [put-apps-and-iaps-on-sale.b0787d48e63e124da4f7babe09b539067e0a8d75.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/f8fb11c12c91899aa023c548c3fd2eb43eed2ebf/ol-handoff/Microsoft/windows-apps.es-es/master/put-apps-and-iaps-on-sale.b0787d48e63e124da4f7babe09b539067e0a8d75.es-es.xlf)
-* Handoff Datetime: 2016-08-29 23:39:51
+* Handoff File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/136b5d352c28374257c858cf756eb063dddc8c6d/ol-handoff/Microsoft/windows-apps.es-es/master/dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.es-es.xlf)
+* Handoff Datetime: 2016-08-30 15:41:13
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\put-apps-and-iaps-on-sale.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/publish/put-apps-and-iaps-on-sale.md)
-* Current Handback File: [put-apps-and-iaps-on-sale.b0787d48e63e124da4f7babe09b539067e0a8d75.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/put-apps-and-iaps-on-sale.b0787d48e63e124da4f7babe09b539067e0a8d75.es-es.xlf)
-* Current Handback Datetime: 2016-07-06 15:11:22
+* Current Target File: [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/publish/dev-center-insider-program.md)
+* Current Handback File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.es-es.xlf)
+* Current Handback Datetime: 2016-07-20 16:37:02
 * [Back to Top](#report-top)
 
 
