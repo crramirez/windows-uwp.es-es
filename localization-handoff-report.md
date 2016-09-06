@@ -6,19 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\whats-new\windows-10-version-1607-api-diff.md](https://github.com/Microsoft/windows-apps/blob/9744ad0720baf7abdacf439249c18742a5e6d34b/windows-apps-src/whats-new/windows-10-version-1607-api-diff.md) | HandedOffSuccess | [Details](#9d3d69899c6a3762330f5f4ef8b44250a38be0377998)
+ [windows-apps-src\publish\manage-account-users.md](https://github.com/Microsoft/windows-apps/blob/3b4dc64cd4dfda07bb55ffc69bb9a99740fc951a/windows-apps-src/publish/manage-account-users.md) | HandedOffSuccess | [Details](#ce50957f133fe612ca4a3d5b90a0a34145a960a45071)
 
 ## Item Details
-##### <a name='9d3d69899c6a3762330f5f4ef8b44250a38be0377998'></a> Source: [windows-apps-src\whats-new\windows-10-version-1607-api-diff.md](https://github.com/Microsoft/windows-apps/blob/9744ad0720baf7abdacf439249c18742a5e6d34b/windows-apps-src/whats-new/windows-10-version-1607-api-diff.md)
+##### <a name='ce50957f133fe612ca4a3d5b90a0a34145a960a45071'></a> Source: [windows-apps-src\publish\manage-account-users.md](https://github.com/Microsoft/windows-apps/blob/3b4dc64cd4dfda07bb55ffc69bb9a99740fc951a/windows-apps-src/publish/manage-account-users.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/f5b30f9968ac8e5cec4208df76d369781b5fbf7e/ol-handoff/Microsoft/windows-apps.es-es/master/windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.es-es.xlf)
-* Handoff Datetime: 2016-09-02 23:11:46
+* Handoff File: [manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/42dbf557bb1cb1537c6f73c8fef229eeceebe9a6/ol-handoff/Microsoft/windows-apps.es-es/master/manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.es-es.xlf)
+* Handoff Datetime: 2016-09-06 18:13:29
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\publish\manage-account-users.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/publish/manage-account-users.md)
+* Current Handback File: [manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.es-es.xlf)
+* Current Handback Datetime: 2016-07-06 15:11:22
 * [Back to Top](#report-top)
 
 
