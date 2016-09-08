@@ -6,22 +6,19 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-deploy-and-debug.md](https://github.com/Microsoft/windows-apps/blob/5be903ea1be083e14c5a2bb67c3e27529d21fc53/windows-apps-src/porting/desktop-to-uwp-deploy-and-debug.md) | HandedOffSuccess | [Details](#4a2c9ef0f27d009b3a5234cb11a2b36f0326fec74903)
+ [windows-apps-src\debug-test-perf\pgo-for-uwp.md](https://github.com/Microsoft/windows-apps/blob/75a69f10fa8639e2613f572ebe5d099efc47493c/windows-apps-src/debug-test-perf/pgo-for-uwp.md) | HandedOffSuccess | [Details](#e14cbc1ba1b6b8bda62b5cbae0031c2c280fcd183307)
 
 ## Item Details
-##### <a name='4a2c9ef0f27d009b3a5234cb11a2b36f0326fec74903'></a> Source: [windows-apps-src\porting\desktop-to-uwp-deploy-and-debug.md](https://github.com/Microsoft/windows-apps/blob/5be903ea1be083e14c5a2bb67c3e27529d21fc53/windows-apps-src/porting/desktop-to-uwp-deploy-and-debug.md)
+##### <a name='e14cbc1ba1b6b8bda62b5cbae0031c2c280fcd183307'></a> Source: [windows-apps-src\debug-test-perf\pgo-for-uwp.md](https://github.com/Microsoft/windows-apps/blob/75a69f10fa8639e2613f572ebe5d099efc47493c/windows-apps-src/debug-test-perf/pgo-for-uwp.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/52c3dc51605e45ba011e870451e2314f4ffc61a7/ol-handoff/Microsoft/windows-apps.es-es/master/desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.es-es.xlf)
-* Handoff Datetime: 2016-09-08 01:15:45
+* Handoff File: [pgo-for-uwp.2dd70475a37ff893d1828f5b16cce6dd3988a8f6.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/7ad5f0c8303ad5c82c79289ae975a7b79d337e09/ol-handoff/Microsoft/windows-apps.es-es/master/pgo-for-uwp.2dd70475a37ff893d1828f5b16cce6dd3988a8f6.es-es.xlf)
+* Handoff Datetime: 2016-09-08 20:16:03
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\porting\desktop-to-uwp-deploy-and-debug.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/porting/desktop-to-uwp-deploy-and-debug.md)
-* Current Handback File: [desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.es-es.xlf)
-* Current Handback Datetime: 2016-07-20 16:37:02
 * [Back to Top](#report-top)
 
 
