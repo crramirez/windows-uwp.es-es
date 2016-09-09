@@ -6,19 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\microsoft-store-services-sdk.md](https://github.com/Microsoft/windows-apps/blob/b86774181d9c4fab6773a7b262ac94760abca95d/windows-apps-src/monetize/microsoft-store-services-sdk.md) | HandedOffSuccess | [Details](#58c65fa89daab4bf4492cf8be95e9fc575d63a554845)
+ [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps/blob/c3a8b083272fc421763eb153372f660ef357f044/windows-apps-src/publish/dev-center-insider-program.md) | HandedOffSuccess | [Details](#67aacbbcdf066ec22bcf18bc6bad1e0f0e17c7d05059)
 
 ## Item Details
-##### <a name='58c65fa89daab4bf4492cf8be95e9fc575d63a554845'></a> Source: [windows-apps-src\monetize\microsoft-store-services-sdk.md](https://github.com/Microsoft/windows-apps/blob/b86774181d9c4fab6773a7b262ac94760abca95d/windows-apps-src/monetize/microsoft-store-services-sdk.md)
+##### <a name='67aacbbcdf066ec22bcf18bc6bad1e0f0e17c7d05059'></a> Source: [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps/blob/c3a8b083272fc421763eb153372f660ef357f044/windows-apps-src/publish/dev-center-insider-program.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [microsoft-store-services-sdk.d3b62fc3b977619643ceecfd26fc7b191dbe8895.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/1d923df37709cb56c155e9e2fb2cb572dac4a8bc/ol-handoff/Microsoft/windows-apps.es-es/master/microsoft-store-services-sdk.d3b62fc3b977619643ceecfd26fc7b191dbe8895.es-es.xlf)
-* Handoff Datetime: 2016-09-08 23:45:38
+* Handoff File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/155cf4c63976e86d8187516efe00727f48af1d09/ol-handoff/Microsoft/windows-apps.es-es/master/dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.es-es.xlf)
+* Handoff Datetime: 2016-09-09 15:11:33
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/publish/dev-center-insider-program.md)
+* Current Handback File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.es-es.xlf)
+* Current Handback Datetime: 2016-07-20 16:37:02
 * [Back to Top](#report-top)
 
 
