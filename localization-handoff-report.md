@@ -6,22 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/743a3649613d39083520f8d79f4c0daf97336568/windows-apps-src/get-started/learn-more.md) | HandedOffSuccess | [Details](#5a1b5dbb3b9d841ca0c3f14f591acd716c153c543945)
+ [windows-apps-src\publish\set-app-pricing-and-availability.md](https://github.com/Microsoft/windows-apps/blob/fc5265cf7d455e34225fd74f9792cdb46b0029d7/windows-apps-src/publish/set-app-pricing-and-availability.md) | HandedOffSuccess | [Details](#91a65020c29e990d96ab26f5abbd777da78106585110)
 
 ## Item Details
-##### <a name='5a1b5dbb3b9d841ca0c3f14f591acd716c153c543945'></a> Source: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/743a3649613d39083520f8d79f4c0daf97336568/windows-apps-src/get-started/learn-more.md)
+##### <a name='91a65020c29e990d96ab26f5abbd777da78106585110'></a> Source: [windows-apps-src\publish\set-app-pricing-and-availability.md](https://github.com/Microsoft/windows-apps/blob/fc5265cf7d455e34225fd74f9792cdb46b0029d7/windows-apps-src/publish/set-app-pricing-and-availability.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/de557c84b7e131ca06bc1e83eccca1ac1d1782a6/ol-handoff/Microsoft/windows-apps.es-es/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.es-es.xlf)
-* Handoff Datetime: 2016-09-13 20:41:49
+* Handoff File: [set-app-pricing-and-availability.3ec1f87db875e425961116b86bf130e63e81412d.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/ccc8732c57e42e788bf35a5263435b1f31ed2165/ol-handoff/Microsoft/windows-apps.es-es/master/set-app-pricing-and-availability.3ec1f87db875e425961116b86bf130e63e81412d.es-es.xlf)
+* Handoff Datetime: 2016-09-13 21:42:56
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/get-started/learn-more.md)
-* Current Handback File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.es-es.xlf)
-* Current Handback Datetime: 2016-07-20 16:37:02
+* Current Target File: [windows-apps-src\publish\set-app-pricing-and-availability.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/publish/set-app-pricing-and-availability.md)
+* Current Handback File: [set-app-pricing-and-availability.3ec1f87db875e425961116b86bf130e63e81412d.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/set-app-pricing-and-availability.3ec1f87db875e425961116b86bf130e63e81412d.es-es.xlf)
+* Current Handback Datetime: 2016-07-06 15:11:22
 * [Back to Top](#report-top)
 
 
