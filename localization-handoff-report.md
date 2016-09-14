@@ -1,40 +1,27 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\payment-thresholds-methods-and-timeframes.md](https://github.com/Microsoft/windows-apps/blob/842221e9596f5bb132e9109a1c4f8a5d9e9439dd/windows-apps-src/publish/payment-thresholds-methods-and-timeframes.md) | HandedOffSuccess | [Details](#1513c5b7714a1f2169ad7f5b08819dd06448d58c5097)
- [windows-apps-src\publish\respond-to-customer-reviews.md](https://github.com/Microsoft/windows-apps/blob/934715cc2681f613982d081335155e29fa7af775/windows-apps-src/publish/respond-to-customer-reviews.md) | HandedOffSuccess | [Details](#24d327a92a6a58ecf265f9cdadd5a49d24c0857d5107)
+ [windows-apps-src\winrt-components\brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md](https://github.com/Microsoft/windows-apps/blob/700eeb0416ba73a761030e15df8c7c6d8d212785/windows-apps-src/winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md) | HandedOffSuccess | [Details](#f1d9c4f782ddd0933ee82d766bf9c70acde4dc198012)
 
 ## Item Details
-##### <a name='1513c5b7714a1f2169ad7f5b08819dd06448d58c5097'></a> Source: [windows-apps-src\publish\payment-thresholds-methods-and-timeframes.md](https://github.com/Microsoft/windows-apps/blob/842221e9596f5bb132e9109a1c4f8a5d9e9439dd/windows-apps-src/publish/payment-thresholds-methods-and-timeframes.md)
+##### <a name='f1d9c4f782ddd0933ee82d766bf9c70acde4dc198012'></a> Source: [windows-apps-src\winrt-components\brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md](https://github.com/Microsoft/windows-apps/blob/700eeb0416ba73a761030e15df8c7c6d8d212785/windows-apps-src/winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [payment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/eecc87e2118b8ae765937ff92fd9b359ed437176/ol-handoff/Microsoft/windows-apps.es-es/master/payment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.es-es.xlf)
-* Handoff Datetime: 2016-09-14 19:12:13
+* Handoff File: [brokered-windows-runtime-components-for-side-loaded-windows-store-apps.55ac70b0596c54a60c1d03f25ca7482d0090ce24.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/171be22d55d0c45795c07f1b2b28519ea4063c42/ol-handoff/Microsoft/windows-apps.es-es/master/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.55ac70b0596c54a60c1d03f25ca7482d0090ce24.es-es.xlf)
+* Handoff Datetime: 2016-09-14 19:43:40
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='24d327a92a6a58ecf265f9cdadd5a49d24c0857d5107'></a> Source: [windows-apps-src\publish\respond-to-customer-reviews.md](https://github.com/Microsoft/windows-apps/blob/934715cc2681f613982d081335155e29fa7af775/windows-apps-src/publish/respond-to-customer-reviews.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [respond-to-customer-reviews.8b15e11c210d9bb5ead696d30c383e78922f29c8.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/eecc87e2118b8ae765937ff92fd9b359ed437176/ol-handoff/Microsoft/windows-apps.es-es/master/respond-to-customer-reviews.8b15e11c210d9bb5ead696d30c383e78922f29c8.es-es.xlf)
-* Handoff Datetime: 2016-09-14 19:12:13
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\respond-to-customer-reviews.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/publish/respond-to-customer-reviews.md)
-* Current Handback File: [respond-to-customer-reviews.8b15e11c210d9bb5ead696d30c383e78922f29c8.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/respond-to-customer-reviews.8b15e11c210d9bb5ead696d30c383e78922f29c8.es-es.xlf)
-* Current Handback Datetime: 2016-07-06 15:11:22
+* Current Target File: [windows-apps-src\winrt-components\brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md)
+* Current Handback File: [brokered-windows-runtime-components-for-side-loaded-windows-store-apps.55ac70b0596c54a60c1d03f25ca7482d0090ce24.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.55ac70b0596c54a60c1d03f25ca7482d0090ce24.es-es.xlf)
+* Current Handback Datetime: 2016-07-20 16:37:02
 * [Back to Top](#report-top)
 
 
