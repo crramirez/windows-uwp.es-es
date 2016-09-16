@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps/blob/6be8bb0a78b614e160fb40629601bdab2d7fc71a/windows-apps-src/get-started/whats-a-uwp.md) | HandedOffSuccess | [Details](#3fd9f4d539977c4b531e08efe0719328365c757c3950)
+ [windows-apps-src\graphics\composition-animation.md](https://github.com/Microsoft/windows-apps/blob/9146f0d3771f1f3687c94dc9f4978b5db5765c5d/windows-apps-src/graphics/composition-animation.md) | HandedOffSuccess | [Details](#9f098ef590e51547f066289965a7ce9fd02dc8cd3965)
 
 ## Item Details
-##### <a name='3fd9f4d539977c4b531e08efe0719328365c757c3950'></a> Source: [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps/blob/6be8bb0a78b614e160fb40629601bdab2d7fc71a/windows-apps-src/get-started/whats-a-uwp.md)
+##### <a name='9f098ef590e51547f066289965a7ce9fd02dc8cd3965'></a> Source: [windows-apps-src\graphics\composition-animation.md](https://github.com/Microsoft/windows-apps/blob/9146f0d3771f1f3687c94dc9f4978b5db5765c5d/windows-apps-src/graphics/composition-animation.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/fc3b6b4bd9b74b8675452b56a0a45c995eec193e/ol-handoff/Microsoft/windows-apps.es-es/master/whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.es-es.xlf)
-* Handoff Datetime: 2016-09-16 19:12:28
+* Handoff File: [composition-animation.64277e041816f40676f859bbeb8895857bec9110.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/98b8472f1e3841fbda87f3ae6428646d70638eeb/ol-handoff/Microsoft/windows-apps.es-es/master/composition-animation.64277e041816f40676f859bbeb8895857bec9110.es-es.xlf)
+* Handoff Datetime: 2016-09-16 22:42:06
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/get-started/whats-a-uwp.md)
-* Current Handback File: [whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.es-es.xlf)
+* Current Target File: [windows-apps-src\graphics\composition-animation.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/graphics/composition-animation.md)
+* Current Handback File: [composition-animation.64277e041816f40676f859bbeb8895857bec9110.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/composition-animation.64277e041816f40676f859bbeb8895857bec9110.es-es.xlf)
 * Current Handback Datetime: 2016-07-20 16:37:02
 * [Back to Top](#report-top)
 
