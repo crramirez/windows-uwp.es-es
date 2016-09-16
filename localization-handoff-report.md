@@ -6,22 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\organizational-licensing.md](https://github.com/Microsoft/windows-apps/blob/4a297b7a2a2383a825a848ed6939f9743733253f/windows-apps-src/publish/organizational-licensing.md) | HandedOffSuccess | [Details](#f3c1ee23e53e3c31a577eb3be03e3fc3055f1ec25095)
+ [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps/blob/6be8bb0a78b614e160fb40629601bdab2d7fc71a/windows-apps-src/get-started/whats-a-uwp.md) | HandedOffSuccess | [Details](#3fd9f4d539977c4b531e08efe0719328365c757c3950)
 
 ## Item Details
-##### <a name='f3c1ee23e53e3c31a577eb3be03e3fc3055f1ec25095'></a> Source: [windows-apps-src\publish\organizational-licensing.md](https://github.com/Microsoft/windows-apps/blob/4a297b7a2a2383a825a848ed6939f9743733253f/windows-apps-src/publish/organizational-licensing.md)
+##### <a name='3fd9f4d539977c4b531e08efe0719328365c757c3950'></a> Source: [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps/blob/6be8bb0a78b614e160fb40629601bdab2d7fc71a/windows-apps-src/get-started/whats-a-uwp.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [organizational-licensing.0c29f420ae9657fb30f0ccdc5c23237b41a4611d.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/9b894c89f53b7c7bc0e5c0c859c1cfa85733b71d/ol-handoff/Microsoft/windows-apps.es-es/master/organizational-licensing.0c29f420ae9657fb30f0ccdc5c23237b41a4611d.es-es.xlf)
-* Handoff Datetime: 2016-09-15 21:41:37
+* Handoff File: [whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/fc3b6b4bd9b74b8675452b56a0a45c995eec193e/ol-handoff/Microsoft/windows-apps.es-es/master/whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.es-es.xlf)
+* Handoff Datetime: 2016-09-16 19:12:28
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\organizational-licensing.md](https://github.com/Microsoft/windows-apps.es-es/blob/e53f454bc4c461b2434c3387589e28a597068263/windows-apps-src/publish/organizational-licensing.md)
-* Current Handback File: [organizational-licensing.0c29f420ae9657fb30f0ccdc5c23237b41a4611d.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/45ea58b222954eb601000ff83302f042237b5a2e/ol-handback/Microsoft/windows-apps.es-es/master/organizational-licensing.0c29f420ae9657fb30f0ccdc5c23237b41a4611d.es-es.xlf)
-* Current Handback Datetime: 2016-07-06 15:11:22
+* Current Target File: [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/get-started/whats-a-uwp.md)
+* Current Handback File: [whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.es-es.xlf)
+* Current Handback Datetime: 2016-07-20 16:37:02
 * [Back to Top](#report-top)
 
 
