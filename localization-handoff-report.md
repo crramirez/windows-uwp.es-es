@@ -6,19 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\whats-new\windows-10-version-1607.md](https://github.com/Microsoft/windows-apps/blob/fabe73cf75db4ce4b27805c7a4cf1c820be1b43e/windows-apps-src/whats-new/windows-10-version-1607.md) | HandedOffSuccess | [Details](#e9e381f3d01e2c0acc5c4ad55937fce3120a32498012)
+ [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/0f2ed552898f7cbb476055a6d6b7aa76545113b1/windows-apps-src/get-started/universal-application-platform-guide.md) | HandedOffSuccess | [Details](#c433bd2eba2a5be114680f52a8da0b5c7b5631863949)
 
 ## Item Details
-##### <a name='e9e381f3d01e2c0acc5c4ad55937fce3120a32498012'></a> Source: [windows-apps-src\whats-new\windows-10-version-1607.md](https://github.com/Microsoft/windows-apps/blob/fabe73cf75db4ce4b27805c7a4cf1c820be1b43e/windows-apps-src/whats-new/windows-10-version-1607.md)
+##### <a name='c433bd2eba2a5be114680f52a8da0b5c7b5631863949'></a> Source: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/0f2ed552898f7cbb476055a6d6b7aa76545113b1/windows-apps-src/get-started/universal-application-platform-guide.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [windows-10-version-1607.6bb58601464d15df4974464e6781e2d2b478becb.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/b41b4ba3089cbbec9b6349eee95992dcbf0b6133/ol-handoff/Microsoft/windows-apps.es-es/master/windows-10-version-1607.6bb58601464d15df4974464e6781e2d2b478becb.es-es.xlf)
-* Handoff Datetime: 2016-09-19 20:11:08
+* Handoff File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.es-es.xlf](https://github.com/Microsoft/WDG.handoff/blob/a10286bc029bbf2ec7964fa5143f56d11f1d9c9a/ol-handoff/Microsoft/windows-apps.es-es/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.es-es.xlf)
+* Handoff Datetime: 2016-09-19 21:42:53
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps.es-es/blob/ae25724f2c2f0d2747098f5df2f0d64c8f04d5a1/windows-apps-src/get-started/universal-application-platform-guide.md)
+* Current Handback File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.es-es.xlf](https://github.com/Microsoft/WDG.handback/blob/9646d4157c932fa06798caec79eed2dd516cb04b/ol-handback/Microsoft/windows-apps.es-es/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.es-es.xlf)
+* Current Handback Datetime: 2016-07-20 16:37:02
 * [Back to Top](#report-top)
 
 
