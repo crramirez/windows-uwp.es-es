@@ -5,7 +5,6 @@ MS-HAID: dev\_app\_to\_app.use\_edp\_to\_protect\_enterprise\_data\_transferred\
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Usar EDP para proteger los datos empresariales que se transfieren entre aplicaciones
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: 77533d4aca3cc84e0a021a0faac57f5afbbefdd7
 
@@ -13,11 +12,13 @@ ms.openlocfilehash: 77533d4aca3cc84e0a021a0faac57f5afbbefdd7
 
 # Usar EDP para proteger los datos empresariales que se transfieren entre aplicaciones
 
-__Nota__ La directiva de Protección de datos de empresa (EDP) no se puede aplicar en la versión 1511 de Windows 10 (compilación 10586) o en una versión anterior.
+
+            __Nota__ La directiva de Protección de datos de empresa (EDP) no se puede aplicar en la versión 1511 de Windows 10 (compilación 10586) o en una versión anterior.
 
 En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con la transferencia de datos. Para obtener una perspectiva de desarrollador completa sobre cómo se relaciona EDP con los archivos, las secuencias, el portapapeles, las redes, las tareas en segundo plano y la protección de datos con la pantalla bloqueada, consulta [Enterprise Data Protection (EDP) (Protección de datos de empresa [EDP])](../enterprise/edp-hub.md).
 
-**Nota** La [muestra de Protección de datos de empresa (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) abarca muchos de los escenarios que se muestran en este tema.
+
+            **Nota** La [muestra de Protección de datos de empresa (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) abarca muchos de los escenarios que se muestran en este tema.
 
 ## Requisitos previos
 
@@ -37,7 +38,8 @@ En este tema se muestran ejemplos de las tareas de codificación necesarias para
 ## Origen del Portapapeles simple
 
 
-En este escenario, la aplicación es de tipo Bloc de notas que procesa archivos personales y empresariales. Aquí, la aplicación no necesita cambiar su lógica de copiar y pegar. Solo debe llamar a [**ProtectionPolicyManager.TryApplyProcessUIPolicy**](https://msdn.microsoft.com/library/windows/apps/dn705791) siempre que el usuario abra y muestre contenido de un documento empresarial. Una vez que el contenido se muestre en la interfaz de usuario de la aplicación, el usuario puede copiarlo para luego pegarlo en otra aplicación, que es la razón por la que la configuración de la directiva de interfaz de usuario es importante. De este modo, el sistema operativo puede aplicar la directiva establecida para una operación de pegar que implique datos protegidos. Igualmente, es importante borrar la directiva de interfaz de usuario en cuanto ya no se necesite, de modo que el usuario es una vez más pueda copiar y pegar datos personales. **TryApplyProcessUIPolicy** devuelve false si una directiva de empresa no administra su argumento de identidad.
+En este escenario, la aplicación es de tipo Bloc de notas que procesa archivos personales y empresariales. Aquí, la aplicación no necesita cambiar su lógica de copiar y pegar. Solo debe llamar a [**ProtectionPolicyManager.TryApplyProcessUIPolicy**](https://msdn.microsoft.com/library/windows/apps/dn705791) siempre que el usuario abra y muestre contenido de un documento empresarial. Una vez que el contenido se muestre en la interfaz de usuario de la aplicación, el usuario puede copiarlo para luego pegarlo en otra aplicación, que es la razón por la que la configuración de la directiva de interfaz de usuario es importante. De este modo, el sistema operativo puede aplicar la directiva establecida para una operación de pegar que implique datos protegidos. Igualmente, es importante borrar la directiva de interfaz de usuario en cuanto ya no se necesite, de modo que el usuario es una vez más pueda copiar y pegar datos personales. 
+            **TryApplyProcessUIPolicy** devuelve false si una directiva de empresa no administra su argumento de identidad.
 
 ```CSharp
 using Windows.Security.EnterpriseData;
@@ -212,7 +214,8 @@ La aplicación tiene abierto un documento nuevo y vacío, que se supone que es n
 
 Al admite el contrato para contenido compartido en la aplicación, para configurar un origen de contenido compartido, establece el contexto de identidad de la empresa el objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/br205873), tal como se muestra en este ejemplo de código.
 
-**Nota** Este ejemplo de código depende de si ya configuraste la identidad del objeto de administrador de directivas de protección para la vista actual (consulta [Etiquetar una ventana específica con la identidad de la empresa](#tag_window_with_id)); de lo contrario, la propiedad [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) contendrá la cadena vacía.
+
+            **Nota** Este ejemplo de código depende de si ya configuraste la identidad del objeto de administrador de directivas de protección para la vista actual (consulta [Etiquetar una ventana específica con la identidad de la empresa](#tag_window_with_id)); de lo contrario, la propiedad [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) contendrá la cadena vacía.
 
 
 
@@ -305,7 +308,8 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 
 En este escenario, la aplicación habilita la interfaz de usuario de pegar solo cuando hay datos en el Portapapeles. Para esta función, puedes usar el método [**ProtectionPolicyManager.CheckAccess**](https://msdn.microsoft.com/library/windows/apps/dn705783), que permite una comprobación pasiva de la directiva.
 
-**Nota** Este ejemplo de código depende de si ya configuraste la identidad del objeto de administrador de directivas de protección para la vista actual (consulta [Etiquetar una ventana específica con la identidad de la empresa](#tag_window_with_id)); de lo contrario, la propiedad [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) contendrá la cadena vacía.
+
+            **Nota** Este ejemplo de código depende de si ya configuraste la identidad del objeto de administrador de directivas de protección para la vista actual (consulta [Etiquetar una ventana específica con la identidad de la empresa](#tag_window_with_id)); de lo contrario, la propiedad [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) contendrá la cadena vacía.
 
 
 
@@ -338,7 +342,8 @@ private bool IsClipboardPeekAllowedAsync()
 
 En este escenario se muestra cómo comprobar el acceso para una operación de pegar.
 
-**Nota** Este ejemplo de código depende de si ya configuraste la identidad del objeto de administrador de directivas de protección para la vista actual (consulta [Etiquetar una ventana específica con la identidad de la empresa](#tag_window_with_id)); de lo contrario, la propiedad [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) contendrá la cadena vacía.
+
+            **Nota** Este ejemplo de código depende de si ya configuraste la identidad del objeto de administrador de directivas de protección para la vista actual (consulta [Etiquetar una ventana específica con la identidad de la empresa](#tag_window_with_id)); de lo contrario, la propiedad [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) contendrá la cadena vacía.
 
 
 
@@ -382,7 +387,8 @@ private async void OnPasteWithRequestAccess()
 }
 ```
 
-**Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+            **Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
 

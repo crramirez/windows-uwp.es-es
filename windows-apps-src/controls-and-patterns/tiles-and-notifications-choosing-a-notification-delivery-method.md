@@ -5,7 +5,6 @@ title: "Elegir un método de entrega de notificaciones"
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: b79a6f771afe63c9a42567875db5ef8107611afc
 
@@ -70,7 +69,7 @@ Esta tabla resume los tipos de entrega de notificaciones.
 <td align="left">Icono, distintivo</td>
 <td align="left">Notificaciones que actualizan regularmente los iconos y los distintivos a intervalos fijos mediante el sondeo del servicio de nube para detectar el contenido nuevo.</td>
 <td align="left"><ul>
-<li>Una aplicación de pronóstico del tiempo actualiza su icono cada 30 minutos para indicar el pronóstico del tiempo.</li>
+<li>Una aplicación de pronóstico del tiempo actualiza su icono cada 30minutos para indicar el pronóstico del tiempo.</li>
 <li>Un sitio de &quot;ofertas diarias&quot; actualiza la oferta del día todas las mañanas.</li>
 <li>Un icono que muestra los días que faltan para un evento actualiza la cuenta atrás mostrada cada día a medianoche.</li>
 </ul></td>

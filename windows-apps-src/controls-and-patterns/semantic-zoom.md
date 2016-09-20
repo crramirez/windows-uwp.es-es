@@ -5,7 +5,6 @@ title: "Zoom semántico"
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 47e39290a63408fc66783617ad2f12345eab2fa3
 
@@ -21,7 +20,8 @@ El control de zoom semántico permite que el usuario haga zoom entre dos vistas 
 
 -   [**Clase SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)
 
-**Características**:
+
+            **Características**:
 
 -   El tamaño de la vista alejada está restringido por los límites del control del zoom semántico.
 -   Al pulsar en un encabezado de grupo, se alterna entre las vistas. Se puede habilitar el gesto de reducir como una forma de alternar entre las vistas.

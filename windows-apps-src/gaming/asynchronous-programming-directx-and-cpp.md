@@ -3,7 +3,6 @@ author: mtoepke
 title: "Programación asincrónica (DirectX y C++)"
 description: "En este tema se tratan diversos aspectos que deben considerarse cuando se usa la programación asincrónica y los subprocesos con DirectX."
 ms.assetid: 17613cd3-1d9d-8d2f-1b8d-9f8d31faaa6b
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 67a75e9d1324e7ac50e0575bfd7bda870a87efb2
 
@@ -33,7 +32,8 @@ No obstante, si tu juego es lo suficientemente complejo, o si buscas obtener un 
 
 Tu aplicación puede controlar estos componentes en múltiples subprocesos simultáneos. E/S de archivo, especialmente la carga de recursos, se beneficia enormemente de la carga asincrónica, ya que tu juego o aplicación puede estar en un estado interactivo mientras se carga o transmiten varios (o varios cientos) de megabytes de recursos. La forma más sencilla de crear y administrar estos subprocesos es usando la [biblioteca de modelos de procesamiento paralelo](https://msdn.microsoft.com/library/dd492418.aspx) y el patrón **task**, según se incluye en el espacio de nombres **concurrency** definido en PPLTasks.h. El uso de la [biblioteca de modelos de procesamiento paralelo](https://msdn.microsoft.com/library/dd492418.aspx) permite sacar provecho directo de las CPU con tecnología de hyperthreading y de múltiples núcleos, y puede mejorar elementos como, por ejemplo, las horas de carga percibidas, así como las complicaciones y los retrasos que se derivan del procesamiento de red y los cálculos de CPU intensivos.
 
-> **Nota**   En una aplicación para la Plataforma universal de Windows (UWP), la interfaz de usuario se ejecuta totalmente en un contenedor uniproceso (STA). Si creas una interfaz de usuario para tu juego de DirectX usando la [interoperabilidad de XAML](directx-and-xaml-interop.md), solamente puedes obtener acceso a los controles mediante el uso del STA.
+> 
+            **Nota**   En una aplicación para la Plataforma universal de Windows (UWP), la interfaz de usuario se ejecuta totalmente en un contenedor uniproceso (STA). Si creas una interfaz de usuario para tu juego de DirectX usando la [interoperabilidad de XAML](directx-and-xaml-interop.md), solamente puedes obtener acceso a los controles mediante el uso del STA.
 
  
 
@@ -56,7 +56,7 @@ Crea un contexto diferido usando [**ID3D11Device::CreateDeferredContext**](https
 ## Temas relacionados
 
 
-* [Introducción a multithreading en Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476891)
+* [Introducción a multithreading en Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476891)
 
  
 

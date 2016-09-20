@@ -25,7 +25,7 @@ Obtén información sobre cómo controlar el inicio previo de las aplicaciones m
 
 Cuando los recursos del sistema disponibles lo permiten, el rendimiento de inicio de las aplicaciones de la Tienda Windows mejora al iniciar en segundo plano y de manera proactiva las aplicaciones que el usuario usa con más frecuencia. Una aplicación iniciada previamente se coloca en el estado suspendido poco después de iniciarse. Cuando el usuario invoca la aplicación, esta pasa del estado de suspensión al de ejecución para reanudarse, lo que resulta más rápido que iniciarla en frío.
 
-Antes de Windows 10, las aplicaciones no aprovechaban el inicio previo automáticamente. A partir de Windows 10, todas las aplicaciones para la Plataforma universal de Windows (UWP) lo usan automáticamente.
+Antes de Windows10, las aplicaciones no aprovechaban el inicio previo automáticamente. A partir de Windows10, todas las aplicaciones para la Plataforma universal de Windows (UWP) lo usan automáticamente.
 
 La mayoría de las aplicaciones funcionan con el inicio previo sin realizar cambios. Sin embargo, algunos tipos de aplicaciones pueden necesitar un cambio en el comportamiento de inicio para funcionar con el inicio previo. Por ejemplo, una aplicación de mensajería que cambia la visibilidad en línea de los usuarios durante el inicio o un juego que supone que el usuario está presente y muestra los elementos visuales elaborados cuando se inicia la aplicación.
 
@@ -80,7 +80,8 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 }
 ```
 
-**Sugerencia**  Si prefieres no usar el inicio previo, activa la marca [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740). Si se activa, vuelve de OnLaunched() antes de hacer cualquier trabajo para crear un marco o activar la ventana.
+
+            **Sugerencia**  Si prefieres no usar el inicio previo, activa la marca [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740). Si se activa, vuelve de OnLaunched() antes de hacer cualquier trabajo para crear un marco o activar la ventana.
 
  
 
@@ -118,7 +119,7 @@ public sealed partial class MainPage : Page
     -   Un ejemplo de implicación de rendimiento es que podrías esperar a que el usuario cambie a la aplicación para recuperar la información meteorológica actual, en lugar de cargarla con el inicio previo de la aplicación y tener que volver a cargarla cuando la aplicación sea visible para garantizar que la información esté actualizada.
 -   Si la aplicación borra su icono dinámico al iniciarse, aplázala hasta el evento de cambio de visibilidad.
 -   La telemetría de la aplicación deberá distinguir entre las activaciones de icono normales y las de inicio previo para que puedas identificar el escenario donde ocurren los problemas.
--   Si tienes Microsoft Visual Studio 2015 Update 1 y Windows 10, versión 1511, puedes simular el inicio previo de tu aplicación en Visual Studio 2015. Para ello, elige **Depurar**&gt;**Otros destinos de depuración**&gt;**Depurar inicio previo de la aplicación universal de Windows**.
+-   Si tienes Microsoft Visual Studio 2015 Update 1 y Windows10, versión 1511, puedes simular el inicio previo de tu aplicación en Visual Studio2015. Para ello, elige **Depurar**&gt;**Otros destinos de depuración**&gt;**Depurar inicio previo de la aplicación universal de Windows**.
 
 ## Temas relacionados
 

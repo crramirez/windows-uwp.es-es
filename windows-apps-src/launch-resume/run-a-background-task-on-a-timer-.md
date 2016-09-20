@@ -30,13 +30,14 @@ Aprende a programar una tarea en segundo plano única o ejecutar una tarea en se
 
 -   Crea un nuevo [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). El segundo parámetro, *OneShot*, especifica si la tarea en segundo plano se ejecutará una vez o seguirá ejecutándose periódicamente. Si *OneShot* se establece en true, el primer parámetro (*FreshnessTime*) especifica el número de minutos que deben esperarse antes de programar la tarea en segundo plano. Si *OneShot* se establece en false, *FreshnessTime* especifica la frecuencia con la que se ejecutará la tarea en segundo plano.
 
-    El temporizador integrado de las aplicaciones para la Plataforma universal de Windows (UWP) destinadas a la familia de dispositivos de escritorio o móviles ejecuta tareas en segundo plano en intervalos de 15 minutos.
+    El temporizador integrado de las aplicaciones para la Plataforma universal de Windows (UWP) destinadas a la familia de dispositivos de escritorio o móviles ejecuta tareas en segundo plano en intervalos de 15minutos.
 
-    -   Si *FreshnessTime* se establece en 15 minutos y *OneShot* tiene el valor true, la tarea se ejecutará una vez entre 0 y 15 minutos después de que se registre.
+    -   Si *FreshnessTime* se establece en 15minutos y *OneShot* tiene el valor true, la tarea se ejecutará una vez entre 0 y 15minutos después de que se registre.
 
     -   Si *FreshnessTime* se establece en 15 minutos y *OneShot* tiene el valor false, la tarea se ejecutará cada 15 minutos comenzando entre el minuto 0 y el 15 desde el momento en que se registre.
 
-    **Nota** Si *FreshnessTime* se establece en menos de 15 minutos, se iniciará una excepción cuando se intente registrar la tarea en segundo plano.
+    
+            **Nota** Si *FreshnessTime* se establece en menos de 15 minutos, se iniciará una excepción cuando se intente registrar la tarea en segundo plano.
 
      
 
@@ -104,17 +105,20 @@ Aprende a programar una tarea en segundo plano única o ejecutar una tarea en se
 
 ## [!div class="tabbedCodeSnippets"]
 
-> **Nota** Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido.
+> 
+            **Nota** Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido.
 
 > Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee. Observaciones
 
 
-## **Nota** A partir de Windows 10, ya no es necesario que el usuario agregue tu aplicación a la pantalla de bloqueo para poder usar las tareas en segundo plano.
+## 
+            **Nota** A partir de Windows 10, ya no es necesario que el usuario agregue tu aplicación a la pantalla de bloqueo para poder usar las tareas en segundo plano.
 
 
 * [Para obtener una guía sobre los tipos de desencadenadores de tarea en segundo plano, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).](create-and-register-a-background-task.md)
-* [**Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP).](declare-background-tasks-in-the-application-manifest.md)
-* [Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
+* [
+            **Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP).](declare-background-tasks-in-the-application-manifest.md)
+* [Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
 * [Temas relacionados](monitor-background-task-progress-and-completion.md)
 * [Crear y registrar una tarea en segundo plano](register-a-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](respond-to-system-events-with-background-tasks.md)

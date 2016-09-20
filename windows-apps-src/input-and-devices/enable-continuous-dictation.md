@@ -5,8 +5,9 @@ title: Habilitar el dictado continuo
 ms.assetid: 383B3E23-1678-4FBB-B36E-6DE2DA9CA9DC
 label: Continuous dictation
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 1bcf6ce700b50ff633a29863fee41c2bfa3d9f98
+ms.openlocfilehash: 1f074b210d42b1c40817e88b5d73921652fa7d05
 
 ---
 
@@ -76,9 +77,7 @@ Durante la inicialización del reconocimiento de voz continuo, debes:
 
 En este ejemplo, inicializamos el reconocimiento de voz en el evento de página [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508).
 
-1.  Como los eventos generados por el reconocedor de voz se producen en un subproceso en segundo plano, se crea una referencia al distribuidor para efectuar actualizaciones en el subproceso de interfaz de usuario. [
-              **OnNavigatedTo**
-            ](https://msdn.microsoft.com/library/windows/apps/br227508) siempre se invoca en el subproceso de interfaz de usuario.
+1.  Como los eventos generados por el reconocedor de voz se producen en un subproceso en segundo plano, se crea una referencia al distribuidor para efectuar actualizaciones en el subproceso de interfaz de usuario. [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) siempre se invoca en el subproceso de interfaz de usuario.
 ```    CSharp
 this.dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
 ```
@@ -111,22 +110,14 @@ A continuación, usamos la propiedad [**ContinuousRecognitionSession**](https://
 
 En particular, hay dos eventos que son fundamentales:
 
--   [
-              **ResultGenerated**
-            ](https://msdn.microsoft.com/library/windows/apps/dn913900), que se crea cuando el reconocedor genera algunos resultados.
--   [
-              **Completed**
-            ](https://msdn.microsoft.com/library/windows/apps/dn913899), que se crea cuando finaliza la sesión de reconocimiento continua.
+-   [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900), que se crea cuando el reconocedor genera algunos resultados.
+-   [**Completed**](https://msdn.microsoft.com/library/windows/apps/dn913899), que se crea cuando finaliza la sesión de reconocimiento continua.
 
 El evento [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) se genera a medida que el usuario habla. El reconocedor escucha continuamente al usuario y genera periódicamente un evento que pasa un fragmento de entrada de voz. Debes examinar la entrada de voz mediante la propiedad [**Result**](https://msdn.microsoft.com/library/windows/apps/dn913895) del argumento del evento y realizar las acciones correspondientes en el controlador de eventos como, por ejemplo, agregar el texto a un objeto StringBuilder.
 
 Como instancia de [**SpeechRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/dn631432), la propiedad [**Result**](https://msdn.microsoft.com/library/windows/apps/dn913895) es útil para determinar si quieres aceptar la entrada de voz: Una clase [**SpeechRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/dn631432) proporciona dos propiedades para esto:
--   [
-              **Status**
-            ](https://msdn.microsoft.com/library/windows/apps/dn631440) indica si el reconocimiento se realizó correctamente. Recuerda que el reconocimiento puede crear un error por diversos motivos.
--   [
-              **Confidence**
-            ](https://msdn.microsoft.com/library/windows/apps/dn631434) indica la confianza relativa en que el reconocedor comprendió las palabras correctas.
+-   [**Status**](https://msdn.microsoft.com/library/windows/apps/dn631440) indica si el reconocimiento se realizó correctamente. Recuerda que el reconocimiento puede crear un error por diversos motivos.
+-   [**Confidence**](https://msdn.microsoft.com/library/windows/apps/dn631434) indica la confianza relativa en que el reconocedor comprendió las palabras correctas.
 
 Estos son los pasos básicos para admitir el reconocimiento continuo:  
 
@@ -257,12 +248,8 @@ if (speechRecognizer.State == SpeechRecognizerState.Idle)
 
 El reconocimiento puede detenerse de dos maneras:
 
--   [
-              **StopAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/dn913908) permite completar los eventos de reconocimiento pendientes (ten en cuenta que [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) continúa generándose hasta que se completan todas las operaciones de reconocimiento pendientes).
--   [
-              **CancelAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/dn913898) finaliza la sesión de reconocimiento inmediatamente y descarta los resultados pendientes.
+-   [**StopAsync**](https://msdn.microsoft.com/library/windows/apps/dn913908) permite completar los eventos de reconocimiento pendientes (ten en cuenta que [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) continúa generándose hasta que se completan todas las operaciones de reconocimiento pendientes).
+-   [**CancelAsync**](https://msdn.microsoft.com/library/windows/apps/dn913898) finaliza la sesión de reconocimiento inmediatamente y descarta los resultados pendientes.
 
 Después de comprobar el estado del reconocedor de voz, finalizamos la sesión mediante una llamada al método [**CancelAsync**](https://msdn.microsoft.com/library/windows/apps/dn913898) de la propiedad [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913) del reconocedor de voz.
 
@@ -297,6 +284,6 @@ Si estableces campos privados al cancelar la sesión de reconocimiento, confirma
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

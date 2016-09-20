@@ -5,7 +5,6 @@ ms.assetid: E9E4537F-1160-4183-9A83-26602FCFDC9A
 description: "Un control de vista en dos paneles tiene un panel expandible y contraíble y un área de contenido."
 label: Split view
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 391bfdbbf09474ad707dbbf306d4997825fa8386
 
@@ -32,11 +31,11 @@ Un control de vista en dos paneles tiene un panel expandible y contraíble y un 
 
 -   **CompactOverlay**
 
-    Una parte estrecha del panel siempre está visible en este modo, que es lo suficientemente ancho como para mostrar iconos. El ancho del panel cerrado predeterminado es de 48 px, que se puede modificar con `CompactPaneLength`. Si el panel se abre, se superpondrá al área de contenido.
+    Una parte estrecha del panel siempre está visible en este modo, que es lo suficientemente ancho como para mostrar iconos. El ancho del panel cerrado predeterminado es de 48px, que se puede modificar con `CompactPaneLength`. Si el panel se abre, se superpondrá al área de contenido.
 
 -   **CompactInline**
 
-    Una parte estrecha del panel siempre está visible en este modo, que es lo suficientemente ancho como para mostrar iconos. El ancho del panel cerrado predeterminado es de 48 px, que se puede modificar con `CompactPaneLength`. Si el panel se abre, reducirá el espacio disponible para el contenido para apartarlo de su camino.
+    Una parte estrecha del panel siempre está visible en este modo, que es lo suficientemente ancho como para mostrar iconos. El ancho del panel cerrado predeterminado es de 48px, que se puede modificar con `CompactPaneLength`. Si el panel se abre, reducirá el espacio disponible para el contenido para apartarlo de su camino.
 
 ## <span id="Is_this_the_right_control_"></span><span id="is_this_the_right_control_"></span><span id="IS_THIS_THE_RIGHT_CONTROL_"></span>¿Es este el control adecuado?
 

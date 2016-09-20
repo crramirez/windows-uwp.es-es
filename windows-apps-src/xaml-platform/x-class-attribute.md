@@ -3,7 +3,6 @@ author: jwmsft
 description: "Configura la compilación de XAML para unir clases parciales entre el marcado y el código subyacente. La clase parcial de código se define en un archivo de código separado y la clase parcial de marcado se crea mediante la generación del código durante la compilación de XAML."
 title: Atributo xClass
 ms.assetid: 40A7C036-133A-44DF-9D11-0D39232C948F
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 83267df025baeb802bfdd0ec03ecd3bf7b01db76
 
@@ -33,7 +32,8 @@ Configura la compilación de XAML para unir clases parciales entre el marcado y 
 
 ## Observaciones
 
-**x:Class** se puede declarar como un atributo para cualquier elemento que sea la raíz de un árbol de archivos u objetos XAML y que se compile mediante acciones de compilación, o para la raíz de [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) en la definición de una aplicación compilada. Declarar **x:Class** en cualquier elemento que no sea una raíz de página o de aplicación, y en cualquier circunstancia para un archivo XAML que no está compilado con la acción de compilación **Page**, genera un error en tiempo de compilación.
+
+            **x:Class** se puede declarar como un atributo para cualquier elemento que sea la raíz de un árbol de archivos u objetos XAML y que se compile mediante acciones de compilación, o para la raíz de [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) en la definición de una aplicación compilada. Declarar **x:Class** en cualquier elemento que no sea una raíz de página o de aplicación, y en cualquier circunstancia para un archivo XAML que no está compilado con la acción de compilación **Page**, genera un error en tiempo de compilación.
 
 La clase que se utiliza como **x:Class** no puede ser una clase anidada.
 

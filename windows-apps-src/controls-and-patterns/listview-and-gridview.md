@@ -4,7 +4,6 @@ Description: "Usa los controles de vista de lista o de vista de cuadrícula para
 title: "Vista de lista y vista de cuadrícula"
 label: List view and grid view
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: e878b11bbecd4a1007f8b5f56bde5741da18c1e1
 
@@ -38,10 +37,12 @@ Para ver una comparación y orientación más detalladas sobre qué control usar
 
 La vista de lista forma parte de [ItemsControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.aspx), de modo que puede contener una colección de elementos de cualquier tipo. Debe tener elementos su colección [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) antes de poder mostrar algo en la pantalla. Para rellenar la vista, puedes agregar elementos directamente a la colección [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) o establecer la propiedad [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) en un origen de datos. 
 
-**Importante**
+
+            **Importante**
             &nbsp;&nbsp;Puedes usar Items o ItemsSource para rellenar la lista, pero no ambos al mismo tiempo. Si estableces la propiedad ItemsSource y agregas un elemento en XAML, el elemento agregado se omite. Si estableces la propiedad ItemsSource y decides agregar un elemento a la colección Items en código, se inicia una excepción.
 
-> **Nota**
+> 
+            **Nota**
             &nbsp;&nbsp;Para que resulte más sencillo, en muchos de los ejemplos de este artículo la colección **Items** se rellena directamente. Sin embargo, es más habitual que los elementos en una lista provengan de un origen dinámico, como una lista de libros de una base de datos en línea. Usa la propiedad **ItemsSource** para tales fines. 
 
 ### Agregar elementos a la colección Items
@@ -148,7 +149,8 @@ No obstante, seguramente quieras mostrar una presentación más enriquecida de l
 
 En este ejemplo, el elemento de datos es una cadena simple. Puedes usan una clase DataTemplate para agregar una imagen a la izquierda de la cadena y mostrar la cadena en azul.  
 
-> **Nota**
+> 
+            **Nota**
             &nbsp;&nbsp;Cuando usas la [extensión de marcado x:Bind](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) en una clase DataTemplate, debes especificar el DataType (`x:DataType`) en la DataTemplate. Para establecer `x:DataType="System:String"`, como en este ejemplo, se debe agregar la `xmlns:System="using:System"`[declaración de espacio de nombres XAML](https://msdn.microsoft.com/windows/uwp/xaml-platform/xaml-overview#xaml-namespaces) a Page.
 
 **XAML**
@@ -189,7 +191,8 @@ Al agregar elementos a una vista de lista o vista de cuadrícula, el control aju
 
 ![Una vista de lista simple](images/listview-simple.png)
 
-- **GridView** usa una clase [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemswrapgrid.aspx), que agrega los elementos horizontalmente y ajusta y se desplaza verticalmente, como a continuación.
+- 
+            **GridView** usa una clase [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemswrapgrid.aspx), que agrega los elementos horizontalmente y ajusta y se desplaza verticalmente, como a continuación.
 
 ![Una vista de cuadrícula simple](images/gridview-simple.png)
 
@@ -199,12 +202,17 @@ Para modificar el diseño de elementos, puedes ajustar las propiedades en el pan
 
 En este ejemplo se muestra cómo hacer que un **ListView** disponga sus contenedores de elementos en una lista horizontal cambiando la propiedad [**Orientation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.orientation.aspx) de la clase **ItemsStackPanel**.
 Dado que la vista de lista se desplaza verticalmente de manera predeterminada, también debes ajustar algunas propiedades de la clase [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) de la vista de lista interna para que se desplace horizontalmente.
-- [ScrollViewer.HorizontalScrollMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode.aspx) en **Enabled** o **Auto**
-- [ScrollViewer.HorizontalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.horizontalscrollbarvisibility.aspx) en **Auto** 
-- [ScrollViewer.VerticalScrollMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.verticalscrollmode.aspx) en **Disabled** 
-- [ScrollViewer.VerticalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility.aspx) en **Hidden** 
+- 
+            [ScrollViewer.HorizontalScrollMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode.aspx) en **Enabled** o **Auto**
+- 
+            [ScrollViewer.HorizontalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.horizontalscrollbarvisibility.aspx) en **Auto** 
+- 
+            [ScrollViewer.VerticalScrollMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.verticalscrollmode.aspx) en **Disabled** 
+- 
+            [ScrollViewer.VerticalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility.aspx) en **Hidden** 
 
-> **Nota**
+> 
+            **Nota**
             &nbsp;&nbsp;En estos ejemplos se muestran con el ancho de la vista de lista sin ninguna restricción, por lo que no se muestran las barras de desplazamiento horizontal. Si ejecutas este código, puedes establecer `Width="180"` en el control ListView para que muestre las barras de desplazamiento.
 
 **XAML**
@@ -233,7 +241,8 @@ La lista resultante tiene este aspecto.
 
  En el siguiente ejemplo, el control **ListView** dispone los elementos en una lista de ajuste vertical, con una clase **ItemsWrapGrid** en lugar de una clase **ItemsStackPanel**. 
  
-> **Nota**
+> 
+            **Nota**
             &nbsp;&nbsp;El alto de la vista de lista debe restringirse para forzar el control a que encapsule los contenedores.
 
 **XAML**
@@ -268,22 +277,26 @@ Si muestras datos agrupados en la vista de lista, la propiedad ItemsPanel determ
 
 Puedes elegir entre varias maneras para permitir que el usuario interactúe con una vista de lista. De manera predeterminada, un usuario puede seleccionar un único elemento. Puedes cambiar la propiedad [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx) para habilitar la selección múltiple o para deshabilitar la selección. Puedes establecer la propiedad [**IsItemClickEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) para que un usuario haga clic en un elemento para invocar una acción (por ejemplo, un botón) en lugar de seleccionar el elemento.
 
-> **Nota**
+> 
+            **Nota**
             &nbsp;&nbsp;Tanto ListView como GridView usan la enumeración [**ListViewSelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewselectionmode.aspx) en sus propiedades SelectionMode. IsItemClickEnabled es **False** de manera predeterminada, por lo que deberás establecerla únicamente para permitir el modo de clic.
 
 En esta tabla se muestran las maneras en que un usuario puede interactuar con una vista de lista, y cómo se puedes responder a la interacción.
 
 Para habilitar esta interacción: | Usa esta configuración: | Controla este evento: | Usa esta propiedad para obtener el elemento seleccionado:
 ----------------------------|---------------------|--------------------|--------------------------------------------
-Sin interacción | [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx)
+Sin interacción | 
+            [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx)
              = 
             **None**, [IsItemClickEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) = **False** | No disponible | No disponible 
-Selección única | SelectionMode = **Single**, IsItemClickEnabled = **False** | [SelectionChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectionchanged.aspx) | [SelectedItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selecteditem.aspx), [SelectedIndex](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectedindex.aspx)  
+Selección única | SelectionMode = **Single**, IsItemClickEnabled = **False** | [SelectionChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectionchanged.aspx) | 
+            [SelectedItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selecteditem.aspx), [SelectedIndex](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectedindex.aspx)  
 Selección múltiple | SelectionMode = **Multiple**, IsItemClickEnabled = **False** | [SelectionChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectionchanged.aspx) | [SelectedItems](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selecteditems.aspx)  
 Selección extendida | SelectionMode = **Extended**, IsItemClickEnabled = **False** | [SelectionChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectionchanged.aspx) | [SelectedItems](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selecteditems.aspx)  
 Hacer clic | SelectionMode = **None**, IsItemClickEnabled = **True** | [ItemClick](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.itemclick.aspx) | No disponible 
 
-> **Nota**
+> 
+            **Nota**
             &nbsp;&nbsp;A partir de Windows 10, puedes habilitar IsItemClickEnabled para generar un evento ItemClick mientras SelectionMode también está establecido en Single, Multiple o Extended. Si haces esto, primero se genera el evento ItemClick y luego se genera el evento SelectionChanged. En algunos casos, como si navegaras a otra página en el controlador de eventos ItemClick, no se genera el evento SelectionChanged y no se selecciona el elemento.
 
 Puedes establecer estas propiedades en XAML o en el código, como se muestra aquí.
@@ -455,7 +468,8 @@ A veces, es necesario manipular la selección de un elemento de la vista de list
 
 Los métodos [**SelectAll**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectall.aspx), [**SelectRange**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectrange.aspx) y [**DeselectRange**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.deselectrange.aspx) proporcionan una manera más eficaz de modificar la selección que usar la propiedad SelectedItems. Estos métodos seleccionan o anulan la selección mediante los intervalos de índices de elementos. Los elementos que están virtualizados permanecen virtualizados, porque solo se usa el índice. Se seleccionan todos los elementos en el intervalo especificado (o se anula la selección) independientemente de su estado de selección original. El evento SelectionChanged se produce solo una vez para cada llamada a estos métodos.
 
-> **Importante**
+> 
+            **Importante**
             &nbsp;&nbsp;Debes llamar a estos métodos solo cuando la propiedad SelectionMode se establece en Multiple o Extended. Si llamas a SelectRange cuando SelectionMode es Single o None, se produce una excepción.
 
 Cuando seleccionas elementos usando intervalos de índices, usa la propiedad [**SelectedRanges**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectedranges.aspx) para obtener todos los intervalos seleccionados en la lista.

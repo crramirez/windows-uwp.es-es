@@ -5,7 +5,6 @@ title: Notificaciones del sistema interactivas y adaptables
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 17faf0ccb0207b318963e00655d7ac91b97e066b
 
@@ -25,7 +24,8 @@ El modelo de notificaciones del sistema adaptables e interactivas tiene estas ac
 -   Tres tipos de activación diferentes para la notificación del sistema principal y para cada acción.
 -   La opción de crear una notificación para determinados escenarios, como las llamadas entrantes, avisos y alarmas.
 
-**Nota** Para ver las plantillas heredadas de Windows 8.1 y Windows Phone 8.1, consulta el [catálogo de plantillas de notificaciones del sistema heredado](https://msdn.microsoft.com/library/windows/apps/hh761494).
+
+            **Nota** Para ver las plantillas heredadas de Windows 8.1 y Windows Phone 8.1, consulta el [catálogo de plantillas de notificaciones del sistema heredado](https://msdn.microsoft.com/library/windows/apps/hh761494).
 
  
 
@@ -68,7 +68,7 @@ Dentro del elemento visual, debes tener exactamente un elemento de enlace que co
 Las notificaciones de icono en las aplicaciones de la plataforma universal de Windows (UWP) admiten varias plantillas que se basan en distintos tamaños de icono. Las notificaciones del sistema, sin embargo, tienen solo un nombre de plantilla: **ToastGeneric**. Tener solo el nombre de una plantilla quiere decir:
 
 -   Puede cambiar el contenido de la notificación del sistema, por ejemplo, agregando otra línea de texto, una imagen en línea o cambiando la imagen en miniatura que se muestra en el icono de la aplicación a otra cosa, y puede realizar cualquiera de estas cosas sin necesidad de preocuparse de cambiar la plantilla completa o de crear una carga no válida debido a un error de coincidencia entre el nombre de plantilla y el contenido.
--   Puedes usar el mismo código para construir la misma carga para la **notificación del sistema** que tiene como objetivo aplicarse a los diferentes tipos de dispositivos de Microsoft Windows, como teléfonos, tabletas, equipos y Xbox One. Cada uno de estos dispositivos aceptará la notificación y la mostrará al usuario en sus directivas de interfaz de usuario con el modelo de interacción y prestaciones visuales adecuado.
+-   Puedes usar el mismo código para construir la misma carga para la **notificación del sistema** que tiene como objetivo aplicarse a los diferentes tipos de dispositivos de MicrosoftWindows, como teléfonos, tabletas, equipos y Xbox One. Cada uno de estos dispositivos aceptará la notificación y la mostrará al usuario en sus directivas de interfaz de usuario con el modelo de interacción y prestaciones visuales adecuado.
 
 Para todos los atributos que se admiten en la sección visual y sus elementos secundarios, consulta la sección Esquema a continuación. Para ver más ejemplos, consulta la sección Ejemplos de XML a continuación
 
@@ -111,7 +111,8 @@ Puedes usar las notificaciones del sistema para las alarmas, los recordatorios y
 ## <span id="xml_examples"></span><span id="XML_EXAMPLES"></span>Ejemplos de XML
 
 
-**Nota** Las capturas de pantalla de notificación del sistema de estos ejemplos se tomaron desde una aplicación de escritorio. En los dispositivos móviles, es posible que las notificaciones del sistema aparezcan de forma contraída, con un capturador en la parte inferior de la notificación del sistema para expandirlas.
+
+            **Nota** Las capturas de pantalla de notificación del sistema de estos ejemplos se tomaron desde una aplicación de escritorio. En los dispositivos móviles, es posible que las notificaciones del sistema aparezcan de forma contraída, con un capturador en la parte inferior de la notificación del sistema para expandirlas.
 
  
 

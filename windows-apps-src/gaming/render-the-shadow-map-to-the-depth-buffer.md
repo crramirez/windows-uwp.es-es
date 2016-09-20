@@ -3,7 +3,6 @@ author: mtoepke
 title: "Representar el mapa de sombras en el búfer de profundidad"
 description: Representa desde el punto de vista de la luz para crear un mapa de profundidad de dos dimensiones representando el volumen de sombra.
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 644e2084baa750965a5283208fde1cea24ecfdea
 
@@ -122,7 +121,8 @@ void ShadowSceneRenderer::RenderShadowMap()
 }
 ```
 
-**Optimizar el frustum de vista:** asegúrate de que tu implementación calcule un frustum de vista ajustado para que obtengas la mayor precisión posible de tu búfer de profundidad. Consulta [Técnicas habituales para mejorar los mapas de profundidad de sombras](https://msdn.microsoft.com/library/windows/desktop/ee416324) para ver más sugerencias sobre la técnica de sombras.
+
+            **Optimizar el frustum de vista:** asegúrate de que tu implementación calcule un frustum de vista ajustado para que obtengas la mayor precisión posible de tu búfer de profundidad. Consulta [Técnicas habituales para mejorar los mapas de profundidad de sombras](https://msdn.microsoft.com/library/windows/desktop/ee416324) para ver más sugerencias sobre la técnica de sombras.
 
 ## Sombreador de vértices para el pase de sombras
 

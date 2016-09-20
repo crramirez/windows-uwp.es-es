@@ -6,7 +6,6 @@ ms.assetid: 9AABB5DE-1D81-4791-AB47-7F058F64C491
 dev.assetid: AF2F2008-9B53-430C-BBC3-8888F631B0B0
 label: Media player
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 2dbc4e7fa227de3f37b8a337eded0004496dbe36
 
@@ -74,7 +73,8 @@ También puedes integrar [**MediaElement**](https://msdn.microsoft.com/library/w
 ### Establecer el origen del contenido multimedia
 Para reproducir archivos de la red o archivos insertados en la aplicación, debes establecer la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) en la ruta de acceso del archivo.
 
-**Sugerencia**  Para abrir archivos desde Internet, tienes que declarar la capacidad **Internet (Client)** en el manifiesto de la aplicación (Package.appxmanifest). Para obtener más información sobre las funcionalidades de declaración, consulta [Declaraciones de funcionalidad de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270968).
+
+            **Sugerencia**  Para abrir archivos desde Internet, tienes que declarar la capacidad **Internet (Client)** en el manifiesto de la aplicación (Package.appxmanifest). Para obtener más información sobre las funcionalidades de declaración, consulta [Declaraciones de funcionalidad de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
  
 
@@ -268,7 +268,8 @@ private void MediaElement_CurrentStateChanged(object sender, RoutedEventArgs e)
     ```
 
 ### Controlar el reproductor multimedia mediante programación
-[
+
+            [
               **MediaElement**
             ](https://msdn.microsoft.com/library/windows/apps/br242926) proporciona varias propiedades, métodos y eventos para controlar la reproducción de audio y vídeo. Para obtener una lista completa de las propiedades, los métodos y los eventos, consulta la página de referencia de [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926).
     
@@ -318,7 +319,8 @@ private bool SetAudioLanguage(string lcid, MediaElement media)
 
 ### Habilitar la representación de vídeo a pantalla completa
 
-Establece la propiedad [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/dn298980) para habilitar y deshabilitar la representación a pantalla completa. Al establecer la representación a pantalla completa mediante programación en la aplicación, debes usar siempre **IsFullWindow** en lugar de hacerlo manualmente. **IsFullWindow** garantiza que se llevarán a cabo las optimizaciones en el nivel del sistema que mejoran el rendimiento y la duración de la batería. Si la representación a pantalla completa no se configura correctamente, es posible que estas optimizaciones no se habiliten.
+Establece la propiedad [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/dn298980) para habilitar y deshabilitar la representación a pantalla completa. Al establecer la representación a pantalla completa mediante programación en la aplicación, debes usar siempre **IsFullWindow** en lugar de hacerlo manualmente. 
+            **IsFullWindow** garantiza que se llevarán a cabo las optimizaciones en el nivel del sistema que mejoran el rendimiento y la duración de la batería. Si la representación a pantalla completa no se configura correctamente, es posible que estas optimizaciones no se habiliten.
 
 Con el siguiente código se crea un [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244) que alterna la representación a pantalla completa.
 
@@ -339,16 +341,20 @@ private void FullWindow_Click(object sender, object e)
 
 Usa la propiedad [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) para cambiar la forma en que el contenido de vídeo rellena el contenedor en el que se encuentra. Esto amplía el vídeo y cambia su tamaño según el valor de [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968). Los estados de **Stretch** son similares a la configuración de tamaño de imagen en muchos televisores. Puedes enlazarlo con un botón y dejar que el usuario elija qué configuración prefiere.
 
--   [
+-   
+            [
               **None**
             ](https://msdn.microsoft.com/library/windows/apps/br242968) muestra la resolución nativa del contenido en su tamaño original.
--   [
+-   
+            [
               **Uniform**
             ](https://msdn.microsoft.com/library/windows/apps/br242968) rellena la mayor cantidad de espacio posible, a la vez que conserva la relación de aspecto y el contenido de la imagen. Esto puede hacer que aparezcan barras negras horizontales o verticales en los bordes del vídeo. Esto es similar a los modos de pantalla panorámica.
--   [
+-   
+            [
               **UniformToFill**
             ](https://msdn.microsoft.com/library/windows/apps/br242968) rellena todo el espacio, pero conserva la relación de aspecto. Esto puede hacer que se recorte parte de la imagen. Esto es similar a los modos de pantalla completa.
--   [
+-   
+            [
               **Fill**
             ](https://msdn.microsoft.com/library/windows/apps/br242968) rellena todo el espacio, pero no conserva la relación de aspecto. La imagen no se recorta, pero se podría estirar. Esto es similar a los modos con ajuste.
 

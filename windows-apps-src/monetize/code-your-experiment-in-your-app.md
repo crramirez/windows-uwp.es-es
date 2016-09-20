@@ -3,7 +3,6 @@ author: mcleanbyron
 Description: "Después de definir el experimento en el panel del Centro de desarrollo, ya puedes escribir el código el experimento de la aplicación."
 title: "Escribe el código de tu aplicación para los experimentos"
 ms.assetid: 6A5063E1-28CD-4087-A4FA-FBB511E9CED5
-translationtype: Human Translation
 ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
 ms.openlocfilehash: 4e6706624e71c6d448a3d457c27d11c9f6ecc156
 

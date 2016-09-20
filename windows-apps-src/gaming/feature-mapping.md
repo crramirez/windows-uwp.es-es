@@ -3,7 +3,6 @@ author: mtoepke
 title: "Asignar características de DirectX 9 a las API de DirectX 11"
 description: "Aprende a trasladar las características de tu juego Direct3D 9 a Direct3D 11 y a la Plataforma universal de Windows (UWP)."
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3a9e9c32ed2d892674592f32d0f067fed668d9d1
 
@@ -26,7 +25,8 @@ Aprende a trasladar las características de tu juego Direct3D 9 a Direct3D 11 y 
 ## Asignar Direct3D 9 a las API de DirectX 11
 
 
-[Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) sigue siendo la base de los gráficos DirectX, pero la API cambió a partir de DirectX 9:
+
+            [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) sigue siendo la base de los gráficos DirectX, pero la API cambió a partir de DirectX 9:
 
 -   La Infraestructura de gráficos de Microsoft DirectX (DXGI) se usa para configurar adaptadores de gráficos. Usa [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534) para seleccionar formatos de búfer, crear cadenas de intercambio, presentar marcos y crear recursos compartidos. Consulta [Introducción a DXGI](https://msdn.microsoft.com/library/windows/desktop/bb205075).
 -   El contexto de dispositivo de Direct3D se usa para establecer el estado de canalización y generar comandos de representación. La mayoría de nuestras muestras usan un contexto inmediato para representar directamente en el dispositivo. Direct3D 11 también admite la representación multithreading, en cuyo caso se usan contextos diferidos. Consulta [Introducción a un dispositivo en Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476880).
@@ -37,7 +37,8 @@ Para obtener una lista completa de las características de  Direct3D 11, consult
 ## Pasar de Direct2D 9 a Direct2D 11
 
 
-[Direct2D (Windows)](https://msdn.microsoft.com/library/windows/desktop/dd370990) sigue siendo parte importante de los gráficos DirectX y Windows. Todavía puedes usar Direct2D para dibujar juegos 2D y dibujar superposiciones (HUD) sobre Direct3D.
+
+            [Direct2D (Windows)](https://msdn.microsoft.com/library/windows/desktop/dd370990) sigue siendo parte importante de los gráficos DirectX y Windows. Todavía puedes usar Direct2D para dibujar juegos 2D y dibujar superposiciones (HUD) sobre Direct3D.
 
 Direct2D se ejecuta encima de Direct3D. Los juegos 2D pueden implementarse en cualquiera de sus API. Por ejemplo, un juego 2D implementado con Direct3D puede usar la proyección ortográfica, establecer valores Z para controlar el orden de dibujo de primitivos y usar sombreadores de píxeles para agregar efectos especiales.
 
@@ -61,7 +62,7 @@ La biblioteca de utilidades de D3DX (D3DX 9, D3DX 10 y D3DX 11), incluidos los e
 
 Visual Studio todavía usa FXC como opción avanzada para compilar objetos de sombreador. Los sombreadores de los juegos de la UWP se compilan con anticipación. El código de bytes se carga en tiempo de ejecución y, a continuación, cada recurso de sombreador se enlaza a la canalización de elementos gráficos durante el pase de representación apropiado. Los sombreadores deben moverse a sus propios archivos .HLSL independientes y las técnicas de representación deben implementarse en el código C++.
 
-Para ver rápidamente la carga de recursos de sombreador, consulta [Migración simple de Direct3D 9 a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+Para ver rápidamente la carga de recursos de sombreador, consulta [Migración simple de Direct3D9 a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
 Direct3D 11 introdujo el modelo de sombreador 5, que requiere el nivel de característica 11\_0 (o superior) de Direct3D. Consulta [HLSL Shader Model 5 Features for Direct3D 11 (Características del modelo de sombreador 5 de HLSL para Direct3D 11)](https://msdn.microsoft.com/library/windows/desktop/ff471419).
 
@@ -91,7 +92,8 @@ DirectInput no es compatible con la UWP:
 ## Usar Microsoft Media Foundation en lugar de DirectShow
 
 
-DirectShow ya no forma parte de la API de DirectX ni de la API de Windows. [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) proporciona contenido de vídeo para Direct3D mediante superficies compartidas. Consulta [Las API de vídeo en Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh447677).
+DirectShow ya no forma parte de la API de DirectX ni de la API de Windows. 
+            [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) proporciona contenido de vídeo para Direct3D mediante superficies compartidas. Consulta [Las API de vídeo en Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh447677).
 
 ## Reemplazar DirectPlay con código de red
 

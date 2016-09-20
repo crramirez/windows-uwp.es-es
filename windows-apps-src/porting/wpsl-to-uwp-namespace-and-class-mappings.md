@@ -1,11 +1,11 @@
-﻿---
+---
 author: mcleblanc
-description: "En este se tema se ofrece una asignación completa de las API de Windows Phone Silverlight a sus equivalentes de la Plataforma universal de Windows (UWP)."
+description: "En este se tema se ofrece una asignación completa de las API de WindowsPhone Silverlight a sus equivalentes de la Plataforma universal de Windows (UWP)."
 title: Asignaciones de espacios de nombres y clases de Windows Phone Silverlight a UWP
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 164e5303c48b6c65807984e4afcaf81ac12f6431
+ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
 
 ---
 
@@ -13,13 +13,13 @@ ms.openlocfilehash: 164e5303c48b6c65807984e4afcaf81ac12f6431
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-En este se tema se ofrece una asignación completa de las API de Windows Phone Silverlight a sus equivalentes de la Plataforma universal de Windows (UWP). Por lo general, no existe una asignación exacta de funcionalidades, aunque: cualquier plataforma puede tener más o menos funcionalidades que su equivalente en un espacio de nombres o una clase.
+En este se tema se ofrece una asignación completa de las API de WindowsPhone Silverlight a sus equivalentes de la Plataforma universal de Windows (UWP). Por lo general, no existe una asignación exacta de funcionalidades, aunque: cualquier plataforma puede tener más o menos funcionalidades que su equivalente en un espacio de nombres o una clase.
 
 La tabla de asignaciones te ayudará cuando trabajes en un proyecto de UWP y vuelvas a usar el código fuente de un proyecto de Windows Phone Silverlight. Existen diferencias en los nombres de los espacios de nombres y las clases (incluidos los controles de la interfaz de usuario) entre ambas plataformas. En muchos casos, basta con cambiar el nombre de un espacio de nombres y, después, el código se compilará. A veces, una clase o el nombre la API han cambiado, así como el nombre del espacio de nombres. En otros casos, la asignación requiere un poco más de trabajo y, en raras ocasiones, requiere un cambio de enfoque.
 
-**Cómo usar la tabla: ** en primer lugar, busca el nombre de la clase que estás usando. Las clases se muestran siempre que la asignación es más complicada que simplemente cambiar el nombre del espacio de nombres. Si la clase no aparece en la lista, significa que la asignación es simplemente un cambio de espacio de nombres. Por lo tanto, busca el nombre del espacio de nombres de la clase y encontrarás el nombre del espacio de nombres de UWP equivalente. La clase estará en ese espacio de nombres. Si el espacio de nombres no figura en la lista, su nombre no ha cambiado.
+**Cómo usar la tabla:  ** En primer lugar, busca el nombre de la clase que estás usando. Las clases se muestran siempre que la asignación es más complicada que simplemente cambiar el nombre del espacio de nombres. Si la clase no aparece en la lista, significa que la asignación es simplemente un cambio de espacio de nombres. Por lo tanto, busca el nombre del espacio de nombres de la clase y encontrarás el nombre del espacio de nombres de UWP equivalente. La clase estará en ese espacio de nombres. Si el espacio de nombres no figura en la lista, su nombre no ha cambiado.
 
-**Nota** Windows 10 admite mucho más de .NET Framework que una aplicación de la Tienda de Windows Phone. Por ejemplo, Windows 10 tiene varios espacios de nombres System.ServiceModel.\* como System.Net System.Net.NetworkInformation y System.Net.Sockets.
+**Nota**  Windows 10 admite mucho más de .NET Framework que una aplicación de la Tienda de Windows Phone. Por ejemplo, Windows 10 tiene varios espacios de nombres System.ServiceModel.\* como System.Net System.Net.NetworkInformation y System.Net.Sockets.
 Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que es una tecnología de compilación anticipada que convierte MSIL en código máquina que se puede ejecutar nativamente. Las aplicaciones de .NET Native se inician más rápido, usan menos memoria y usan menos batería que sus equivalentes MSIL.
 
 | Windows Phone Silverlight | Windows Runtime |
@@ -28,7 +28,8 @@ Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que 
 | Clase **Microsoft.Advertising.Mobile.UI.AdControl** | Clase [AdControl](http://msdn.microsoft.com/library/advertising-windows-sdk-api-reference-adcontrol.aspx) |
 | Alarmas, avisos y agentes en segundo plano | |
 | Clase **Microsoft.Phone.BackgroundAgent** | Clase [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) |
-| Espacio de nombres **Microsoft.Phone.Scheduler** | Espacio de nombres [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847) |
+| Espacio de nombres **Microsoft.Phone.Scheduler** | Espacio de nombre [ 
+              **Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847) namespace |
 | Clase **Microsoft.Phone.Scheduler.Alarm** | Clases [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) y [**ToastNotificationManager**](https://msdn.microsoft.com/library/windows/apps/br208642) |
 | Clases **Microsoft.Phone.Scheduler.PeriodicTask**, **ScheduledAction**, **ScheduledActionService**, **ScheduledTask**, **ScheduledTaskAgent** | Clase [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) |
 | Clase **Microsoft.Phone.Scheduler.Reminder** | Clases [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) y [**ToastNotificationManager**](https://msdn.microsoft.com/library/windows/apps/br208642) |
@@ -46,7 +47,7 @@ Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que 
 | (ST = **System.Threading**) <br/> Propiedad **ST.Thread.ManagedThreadId** | (S = **System**) <br/> Propiedad **S.Environment.ManagedThreadId** |
 | Clase **System.Threading.Timer** | Clase [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/br230587) |
 | (SWT = **System.Windows.Threading**) <br/> Clase **SWT.Dispatcher** | Clase [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) |
-| (SWT = **System.Windows.Threading**) <br/> Clase **SWT.DispatcherTimer** | Clase [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250) |
+| (SWT = **System.Windows.Threading**) <br/> Clase **SWT.DispatcherTimer** | Clase[**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250) |
 | Blend para Visual Studio | |
 | (MEDC = **Microsoft.Expression.Drawing.Core**) <br/> Clase **MEDC.GeometryHelper** | No hay equivalente directo. |
 | Espacio de nombres **Microsoft.Expression.Interactivity** | Espacio de nombres [Microsoft.Xaml.Interactivity](http://go.microsoft.com/fwlink/p/?LinkId=328776) |
@@ -112,7 +113,7 @@ Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que 
 | Clase **Microsoft.Devices.Radio.FMRadio** | No hay equivalente directo. | 
 | Clases **Microsoft.Devices.Sensors.Accelerometer**, **Compass** | En el espacio de nombres [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/br206408) |
 | Clase **Microsoft.Devices.Sensors.Gyroscope** | Clase [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/br225718) |
-| Clase **Microsoft.Devices.Sensors.Motion** | Clase [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/br225766) |
+| Clase **Microsoft.Devices.Sensors.Motion** | Clase [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/br225766)  |
 | Globalization | |
 | Espacio de nombres **System.Globalization** | Espacio de nombres [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) |
 | (ST = **System.Threading**) <br/> Propiedad **ST.Thread.CurrentCulture** | (SG = **System.Globalization**) <br/> Propiedad **S.CultureInfo.CurrentCulture** |
@@ -159,8 +160,8 @@ Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que 
 | Espacio de nombres **Microsoft.Phone.Maps.Controls** | Espacio de nombres [**Windows.UI.Xaml.Controls.Maps**](https://msdn.microsoft.com/library/windows/apps/dn610751) |
 | Clase **Microsoft.Phone.Maps.Controls.Map** | Clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) |
 | Espacio de nombres **Microsoft.Phone.Maps.Services** | Espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) |
-| Clases **Microsoft.Phone.Maps.Services.GeocodeQuery**, **ReverseGeocodeQuery** | Clases [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) |
-| Clases **System.Device.Location.GeoCoordinate** | Clase [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675) |
+| Clases **Microsoft.Phone.Maps.Services.GeocodeQuery**, **ReverseGeocodeQuery** | Clase [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) |
+| Clase **System.Device.Location.GeoCoordinate** | Clase [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675) |
 | Clase **Microsoft.Phone.Maps.Services.Route** | Clase [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) |
 | Clase **Microsoft.Phone.Maps.Services.RouteQuery** | Clase [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) |
 | Monetización | |
@@ -198,7 +199,7 @@ Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que 
 | MPN = **Microsoft.Phone.Notification** <br/> Clase **MPN.HttpNotification** | Clase [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616) |
 | MPN = **Microsoft.Phone.Notification** <br/> Clase **MPN.HttpNotificationChannel** | Clase [**PushNotificationChannel**](https://msdn.microsoft.com/library/windows/apps/br241283) |
 | Programación | |
-| Espacio de nombres **System** | Espacio de nombres [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021) |
+| Espacio de nombres **System** | Espacios de nombres [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021) |
 | Clases **System.Diagnostics.StackFrame**, **StackTrace** | No hay equivalente directo. | 
 | Espacio de nombres **System.Diagnostics** | Espacio de nombres [**Windows.Foundation.Diagnostics**](https://msdn.microsoft.com/library/windows/apps/br206677) |
 | Interfaz **System.ICloneable** | Un método personalizado que devuelve el tipo adecuado. |
@@ -208,7 +209,7 @@ Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que 
 | Reflexión | |
 | Clase **System.Type** class | Clase **System.Reflection.TypeInfo**. Consulta [Reflexión en .NET Framework para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/hh535795.aspx). |
 | Recursos | |
-| Clase **System.Resources.ResourceManager** | (WA = **Windows.ApplicationModel**)<br/>Espacios de nombres [**WA.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) y [**WA.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022); clase [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/br206078). Consulta [Crear y recuperar recursos en aplicaciones de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/hh694557.aspx). |
+| Clase **System.Resources.ResourceManager** | (WA = **Windows.ApplicationModel**)<br/>Espacios de nombres [**WA.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) y [**WA.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022), clase [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/br206078). Consulta [Crear y recuperar recursos en aplicaciones de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/hh694557.aspx). |
 | Elemento seguro | |
 | (MPS = **Microsoft.Phone.SecureElement**) <br/> Clases **MPS.SecureElementChannel**, **MPS.SecureElementSession** | Clase [**SmartCardConnection**](https://msdn.microsoft.com/library/windows/apps/dn608002) |
 | (MPS = **Microsoft.Phone.SecureElement**) <br/> Clase **MPS.SecureElementReader** | Clase [**SmartCardReader**](https://msdn.microsoft.com/library/windows/apps/dn263857) |
@@ -221,7 +222,7 @@ Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que 
 | Shell | |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> Clase **MPSh.ApplicationBar** | Clase [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/dn279427) |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> Clase **MPSh.ApplicationBarIconButton** | Clase [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244) (cuando se usa dentro de la propiedad [**PrimaryCommands**](https://msdn.microsoft.com/library/windows/apps/dn279430))
-| (MPSh = **Microsoft.Phone.Shell**) <br/> Clase **MPSh.ApplicationBarMenuItem** | Clase [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244) (cuando se usa dentro de la propiedad [**SecondaryCommands**](https://msdn.microsoft.com/library/windows/apps/dn279434))
+| (MPSh = **Microsoft.Phone.Shell**) <br/> Clase **MPSh.ApplicationBarMenuItem** | Clase [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244) (cuando se usa dentro de la propiedad [**SecondaryCommands**](https://msdn.microsoft.com/library/windows/apps/dn279434) )
 | (MPSh = **Microsoft.Phone.Shell**) <br/> Clases **MPSh.CycleTileData**, **MPSh.FlipTileData**, **MPSh.IconicTileData**, **MPSh.ShellTileData**, **MPSh.StandardTileData** | Clase [**TileTemplateType**](https://msdn.microsoft.com/library/windows/apps/br208621) |
 | (MPSh = **Microsoft.Phone.Shell**) <br/> Clase **MPSh.PhoneApplicationService** | Clases [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016), [**DisplayRequest**](https://msdn.microsoft.com/library/windows/apps/br241816)
 | (MPSh = **Microsoft.Phone.Shell**) <br/> Clase **MPSh.ProgressIndicator** | Clase [**StatusBarProgressIndicator**](https://msdn.microsoft.com/library/windows/apps/dn633865) |
@@ -249,6 +250,6 @@ El siguiente tema es [Migración del proyecto](wpsl-to-uwp-porting-to-a-uwp-proj
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

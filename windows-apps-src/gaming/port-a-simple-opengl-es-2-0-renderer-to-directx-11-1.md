@@ -11,7 +11,7 @@ ms.openlocfilehash: f70d4ec46743d930f8cb45084e55cce2e60e2460
 # Portar un representador simple de OpenGL ES 2.0 a Direct3D 11
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Para este ejercicio de migración, empezaremos con algo básico: llevar un representador simple de un cubo giratorio con vértices sombreados de OpenGL ES 2.0 a Direct3D, de modo que coincida con la plantilla Aplicación DirectX 11 (Windows universal) de Visual Studio 2015. A medida que avancemos en este proceso de migración, aprenderás a hacer lo siguiente:
 
@@ -21,7 +21,7 @@ Para este ejercicio de migración, empezaremos con algo básico: llevar un repre
 -   Usar la semántica básica de HLSL en el desarrollo de sombreador de Direct3D
 -   Portar GLSL simple a HLSL
 
-Este tema empieza tras la creación de un nuevo proyecto en DirectX 11. Para aprender a crear un nuevo proyecto en DirectX 11, lee [Create a new DirectX 11 project for Universal Windows Platform (UWP) (Crear un nuevo proyecto de DirectX 11 para la Plataforma universal de Windows [UWP])](user-interface.md).
+Este tema empieza tras la creación de un nuevo proyecto en DirectX 11. Para aprender a crear un nuevo proyecto en DirectX 11, lee [Create a new DirectX 11 project for Universal Windows Platform (UWP) (Crear un nuevo proyecto de DirectX11 para la Plataforma universal de Windows [UWP])](user-interface.md).
 
 El proyecto creado a partir de alguno de estos vínculos tiene todo el código preparado para la infraestructura de [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476345). Puedes empezar a migrar el representador de Open GL ES 2.0 a Direct3D 11 inmediatamente.
 
@@ -76,7 +76,8 @@ typedef struct
 
 Esta estructura tiene una sola instancia y contiene todos los componentes necesarios para representar una malla muy simple de vértices sombreados.
 
-> **Nota** Todo el código de OpenGL ES 2.0 en este tema se basa en la implementación de la API de Windows proporcionada por Khronos Group y usa la sintaxis de programación C de Windows.
+> 
+            **Nota** Todo el código de OpenGL ES 2.0 en este tema se basa en la implementación de la API de Windows proporcionada por Khronos Group y usa la sintaxis de programación C de Windows.
 
  
 
@@ -132,8 +133,8 @@ Esta estructura tiene una sola instancia y contiene todos los componentes necesa
 
 
 -   [Preparar el entorno para el desarrollo de un juego DirectX de UWP](prepare-your-dev-environment-for-windows-store-directx-game-development.md)
--   [Crear un nuevo proyecto de DirectX 11 para UWP](user-interface.md)
--   [Asignar conceptos e infraestructura de OpenGL ES 2.0 a Direct3D 11](map-concepts-and-infrastructure.md)
+-   [Crear un nuevo proyecto de DirectX11 para UWP](user-interface.md)
+-   [Asignar conceptos e infraestructura de OpenGL ES 2.0 a Direct3D11](map-concepts-and-infrastructure.md)
 
  
 

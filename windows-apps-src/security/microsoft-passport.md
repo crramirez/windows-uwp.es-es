@@ -1,9 +1,8 @@
 ---
 title: Microsoft Passport y Windows Hello
-description: "En este artículo se describe la nueva tecnología Microsoft Passport que se incluirá como parte del sistema operativo Windows 10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios back-end y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows 10."
+description: "En este artículo se describe la nueva tecnología Microsoft Passport que se incluirá como parte del sistema operativo Windows10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios back-end y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows 10."
 ms.assetid: 0B907160-B344-4237-AF82-F9D47BCEE646
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: 781866bbbef755815422d1aa5bf71010bb08630d
 
@@ -15,7 +14,7 @@ ms.openlocfilehash: 781866bbbef755815422d1aa5bf71010bb08630d
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este artículo se describe la nueva tecnología Microsoft Passport que se incluirá como parte del sistema operativo Windows 10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios backend y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows 10.
+En este artículo se describe la nueva tecnología Microsoft Passport que se incluirá como parte del sistema operativo Windows 10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios backend y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows10.
 
 Ten en cuenta que este artículo se centra en el desarrollo de aplicaciones. Para información sobre los detalles de implementación y la arquitectura de Microsoft Passport y Windows Hello, consulta la [Guía de Microsoft Passport en TechNet](https://technet.microsoft.com/library/mt589441.aspx).
 
@@ -60,7 +59,7 @@ Microsoft Passport reemplaza las contraseñas por autenticación sólida en dos 
 ## 2.1 ¿Qué es Windows Hello?
 
 
-Windows Hello es el nombre que Microsoft dio al nuevo sistema de inicio de sesión biométrico integrado en Windows 10. Dado que está integrado directamente en el sistema operativo, Windows Hello permite la identificación por rostro o huella digital para desbloquear los dispositivos de los usuarios. La autenticación se produce cuando el usuario proporciona su identificador biométrico único para acceder a las credenciales de Microsoft Passport específicas del dispositivo, lo que significa que un atacante que robe el dispositivo no podrá iniciar sesión en él a menos que cuente con el PIN. El almacén de credenciales seguro de Windows protege los datos biométricos en el dispositivo. Si usas Windows Hello para desbloquear un dispositivo, el usuario autorizado obtiene acceso a todos sus servicios, sitios web, datos, aplicaciones y experiencia de Windows.
+Windows Hello es el nombre que Microsoft dio al nuevo sistema de inicio de sesión biométrico integrado en Windows10. Dado que está integrado directamente en el sistema operativo, Windows Hello permite la identificación por rostro o huella digital para desbloquear los dispositivos de los usuarios. La autenticación se produce cuando el usuario proporciona su identificador biométrico único para acceder a las credenciales de Microsoft Passport específicas del dispositivo, lo que significa que un atacante que robe el dispositivo no podrá iniciar sesión en él a menos que cuente con el PIN. El almacén de credenciales seguro de Windows protege los datos biométricos en el dispositivo. Si usas Windows Hello para desbloquear un dispositivo, el usuario autorizado obtiene acceso a todos sus servicios, sitios web, datos, aplicaciones y experiencia de Windows.
 
 El autenticador de Windows Hello se conoce como un saludo. Un saludo es único para la combinación de un dispositivo individual y un usuario específico. No se mueve entre dispositivos, no se comparte con un servidor o la aplicación que llama y no se pueden extraer fácilmente de un dispositivo. Si varios usuarios comparten un dispositivo, cada uno de ellos necesita configurar su propia cuenta. Cada cuenta obtiene un único saludo para ese dispositivo. Se puede considerar un saludo como un token que puedes usar para desbloquear (o liberar) una credencial almacenada. El saludo en sí no autentica el usuario en una aplicación o servicio, sino que libera las credenciales que sí pueden hacerlo. En otras palabras, el saludo no es una credencial de usuario, pero es un segundo factor de Microsoft Passport.
 
@@ -99,7 +98,7 @@ Ahora que tenemos un conocimiento básico de cómo funcionan Microsoft Passport 
 
 Existen diferentes escenarios que se pueden implementar con Microsoft Passport. Por ejemplo, iniciar sesión en tu aplicación en un dispositivo. Otro escenario habitual sería autenticarse en un servicio. En lugar de usar un nombre de inicio de sesión y una contraseña, se usará Microsoft Passport. En los siguientes capítulos, analizaremos la implementación de un par de escenarios diferentes, como la autenticación en los servicios con Microsoft Passport y cómo pasar de un sistema existente que usa el nombre de usuario y contraseña a un sistema que usa Microsoft Passport.
 
-Por último, ten en cuenta que las API de Microsoft Passport requieren el uso del SDK de Windows 10 que coincida con el sistema operativo en el que se usará la aplicación. Es decir, se debe usar el SDK de Windows 10.0.10240 para las aplicaciones que se van a implementar en Windows 10 y el 10.0.10586 para las aplicaciones que se van a implementar en Windows 10, versión 1511.
+Por último, ten en cuenta que las API de Microsoft Passport requieren el uso del SDK de Windows10 que coincida con el sistema operativo en el que se usará la aplicación. Es decir, se debe usar el SDK de Windows 10.0.10240 para las aplicaciones que se van a implementar en Windows10 y el 10.0.10586 para las aplicaciones que se van a implementar en Windows10, versión 1511.
 
 ## 3 Implementación de Microsoft Passport
 
@@ -420,9 +419,9 @@ El paso final de la migración a un escenario de Microsoft Passport completo con
 
 Windows 10 presenta un mayor nivel de seguridad que también es muy sencillo de poner en práctica. Windows Hello proporciona un nuevo sistema de inicio de sesión biométrico que reconoce al usuario e invalida activamente los esfuerzos para sortear la identificación correcta. Microsoft Passport funciona con Windows Hello para ofrecer varias capas de claves y certificados que nunca se podrán revelar o usar fuera del módulo de plataforma segura. Además, existe una capa de seguridad adicional disponible a través del uso opcional de claves y certificados de identidad de atestación.
 
-Como desarrollador, puedes usar esta guía de diseño e implementación de estas tecnologías con el fin de agregar fácilmente una autenticación segura a tus implementaciones de Windows 10 para proteger las aplicaciones y los servicios back-end. El código necesario es mínimo y fácil de entender. El trabajo pesado lo hace Windows 10.
+Como desarrollador, puedes usar esta guía de diseño e implementación de estas tecnologías con el fin de agregar fácilmente una autenticación segura a tus implementaciones de Windows10 para proteger las aplicaciones y los servicios back-end. El código necesario es mínimo y fácil de entender. El trabajo pesado lo hace Windows10.
 
-Las opciones de implementación flexibles permiten que Microsoft Passport y Windows Hello reemplacen el sistema de autenticación existente o funcionen con este. La experiencia de implementación es fácil y económica. No se requiere ninguna infraestructura adicional para implementar la seguridad de Windows 10. Con las aplicaciones Microsoft Passport y Microsoft Hello integradas en el sistema operativo, Windows 10 ofrece la solución más segura para los problemas de autenticación a los que se enfrenta el desarrollador moderno.
+Las opciones de implementación flexibles permiten que Microsoft Passport y Windows Hello reemplacen el sistema de autenticación existente o funcionen con este. La experiencia de implementación es fácil y económica. No se requiere ninguna infraestructura adicional para implementar la seguridad de Windows10. Con las aplicaciones Microsoft Passport y Microsoft Hello integradas en el sistema operativo, Windows10 ofrece la solución más segura para los problemas de autenticación a los que se enfrenta el desarrollador moderno.
 
 ¡Misión logra! Acabas de hacer que Internet sea un lugar seguro.
 

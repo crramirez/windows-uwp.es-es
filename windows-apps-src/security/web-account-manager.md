@@ -3,8 +3,8 @@ title: Conectarse a proveedores de identidades con el Administrador de cuentas w
 description: "En este artículo se describe cómo usar AccountsSettingsPane para conectar la aplicación para la Plataforma universal de Windows (UWP) a proveedores de identidades externos, como Microsoft o Facebook, con las nuevas API de Administrador de cuentas web de Windows 10."
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: c9f6a0183edc3c01566311360417c256329ef904
-ms.openlocfilehash: 6ab12d6da9c4858cf6ab16d4143cf073bb0cb275
+ms.sourcegitcommit: f3cdb187ec4056d4c7db6acde471b0bc91c78390
+ms.openlocfilehash: 093ca8906853121bbf33a729c523717d26cb7b0d
 
 ---
 # Conectarse a proveedores de identidades con el Administrador de cuentas web
@@ -188,6 +188,8 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
     }
 }
 ```
+
+> Nota: Si recibes un error al solicitar un token, asegúrate de que has asociado a tu aplicación a la Tienda, tal y como se describe en el paso 1. La aplicación no podrá obtener un token si omites este paso. 
 
 Cuando tengas un token, podrás usarlo para llamar a la API de tu proveedor. En el siguiente código, llamaremos a las API de Microsoft Live para obtener información básica sobre el usuario y mostrarla en nuestra interfaz de usuario. 
 
@@ -388,6 +390,6 @@ En teoría, puedes usar comandos de configuración para cualquier cosa. Sin emba
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

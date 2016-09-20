@@ -5,7 +5,6 @@ title: Activos de mosaico y de icono
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 98eebc4fbf18aa2fbe4586958f666b41580cf6d9
 
@@ -43,11 +42,11 @@ El alto de la barra de personalización de marca se basa en el factor de escala 
 
 | Factor de escala | Píxeles |
 |--------------|--------|
-| 100 %         | 32     |
-| 125 %         | 40     |
-| 150 %         | 48     |
-| 200 %         | 64     |
-| 400 %         | 128    |
+| 100%         | 32     |
+| 125%         | 40     |
+| 150%         | 48     |
+| 200%         | 64     |
+| 400%         | 128    |
 
  
 
@@ -59,11 +58,11 @@ El ancho de los márgenes se basa en el factor de escala del dispositivo en el q
 
 | Factor de escala | Píxeles |
 |--------------|--------|
-| 100 %         | 8      |
-| 125 %         | 10     |
-| 150 %         | 12     |
-| 200 %         | 16     |
-| 400 %         | 32     |
+| 100%         | 8      |
+| 125%         | 10     |
+| 150%         | 12     |
+| 200%         | 16     |
+| 400%         | 32     |
 
  
 
@@ -128,7 +127,7 @@ Algunos iconos están diseñados para una orientación horizontal o vertical, mi
 
 ![tres iconos centrados](images/assetguidance13.png)
 
-Con activos sin bordes, ten en cuenta los elementos que interactúan dentro de los márgenes y bordes de los iconos. Mantén los márgenes de, al menos, el 16 % del alto o ancho del icono. Este porcentaje representa el doble de ancho de los márgenes en los tamaños de mosaico más pequeños:
+Con activos sin bordes, ten en cuenta los elementos que interactúan dentro de los márgenes y bordes de los iconos. Mantén los márgenes de, al menos, el 16% del alto o ancho del icono. Este porcentaje representa el doble de ancho de los márgenes en los tamaños de mosaico más pequeños:
 
 ![icono sin bordes con márgenes](images/assetguidance14.png)
 
@@ -232,7 +231,7 @@ Como mínimo, te recomendamos que proporciones activos para los factores de esca
 
 **Activos basados en la escala**
 
-| Categoría             | Nombre del elemento      | A una escala del 100 % | A una escala del 125 % | A una escala del 150 % | A una escala del 200 % | A una escala del 400 % |
+| Categoría             | Nombre del elemento      | A una escala del 100% | A una escala del 125% | A una escala del 150% | A una escala del 200% | A una escala del 400% |
 |----------------------|-------------------|---------------|---------------|---------------|---------------|---------------|
 | Pequeño                | Square71x71Logo   | 71x71         | 89x89         | 107x107       | 142x142       | 284x284       |
 | Mediano               | Square150x150Logo | 150x150       | 188x188       | 225x225       | 300x300       | 600x600       |
@@ -244,7 +243,7 @@ Como mínimo, te recomendamos que proporciones activos para los factores de esca
 
 **Ejemplos de nombre de archivo para los activos basados en la escala**
 
-| Categoría             | Nombre del elemento      | A una escala del 100 %                  | A una escala del 125 %                  | A una escala del 150 %                  |
+| Categoría             | Nombre del elemento      | A una escala del 100%                  | A una escala del 125%                  | A una escala del 150%                  |
 |----------------------|-------------------|--------------------------------|--------------------------------|--------------------------------|
 | Pequeño                | Square71x71Logo   | AppNameSmallTile.scale-100.png | AppNameSmallTile.scale-125.png | AppNameSmallTile.scale-150.png |
 | Medio               | Square150x150Logo | AppNameMedTile.scale-100.png   | AppNameMedTile.scale-125.png   | AppNameMedTile.scale-150.png   |
@@ -254,7 +253,7 @@ Como mínimo, te recomendamos que proporciones activos para los factores de esca
 
  
 
-| Categoría             | Nombre del elemento      | A una escala del 200 %                  | A una escala del 400 %                  |
+| Categoría             | Nombre del elemento      | A una escala del 200%                  | A una escala del 400%                  |
 |----------------------|-------------------|--------------------------------|--------------------------------|
 | Pequeño                | Square71x71Logo   | AppNameSmallTile.scale-200.png | AppNameSmallTile.scale-400.png |
 | Medio               | Square150x150Logo | AppNameMedTile.scale-200.png   | AppNameMedTile.scale-400.png   |

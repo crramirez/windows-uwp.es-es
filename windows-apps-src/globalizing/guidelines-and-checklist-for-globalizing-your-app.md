@@ -6,7 +6,6 @@ title: "Directrices para globalización y localización"
 ms.assetid: 0342DC3F-DDD1-4DD4-872E-A4EC340CAE79
 label: Do's and don'ts
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: bdbe6b3e319aa90a78660c664f1603bac93399ca
 
@@ -124,7 +123,7 @@ Prepara la aplicación para que se adapte fácilmente a los diversos mercados el
 <td align="left"><p>Separa los recursos como imágenes y cadenas de UI del código.</p></td>
 <td align="left"><p>Diseña tus aplicaciones para que los recursos, como las cadenas y las imágenes, estén separados del código. Esto permite que se mantengan y localicen de forma independiente, como también se personalicen para diferentes factores de ajuste de escala, opciones de accesibilidad y un gran número de otros contextos de máquina y usuario.</p>
 <p>Separa los recursos de cadena del código de tu aplicación para crear un único código base independiente del idioma. Separa siempre las cadenas del código de aplicación y de marcado, y colócalas en un archivo de recursos, como un archivo ResW o ResJSON.</p>
-<p>Usa la infraestructura de recursos de Windows para controlar la selección de los recursos más apropiados que mejor se adapten al entorno en tiempo de ejecución del usuario.</p></td>
+<p>Usa la infraestructura de recursos de Windowspara controlar la selección de los recursos más apropiados que mejor se adapten al entorno en tiempo de ejecución del usuario.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Aísla otros archivos de recursos localizables.</p></td>

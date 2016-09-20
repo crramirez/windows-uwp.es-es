@@ -1,175 +1,295 @@
 ---
 author: Xansky
-Description: "Describe los pasos necesarios para asegurarte que una aplicación para la Plataforma universal de Windows (UWP) pueda usarse cuando un tema de contraste alto esté activo."
+description: "Describe los pasos necesarios para garantizar que la aplicación para la Plataforma universal de Windows (UWP) pueda usarse con un tema de contraste alto activo."
 ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: Temas de contraste alto
-label: High-contrast themes
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 4201f5a0b08f1fc8d691218da0803ee04ab2c86a
+ms.sourcegitcommit: f3da82cab8813653a6ee999976983937649b42b2
+ms.openlocfilehash: 30785998d11f09ef94f33789e3e74b0933d9c83e
 
 ---
 
 # Temas de contraste alto  
 
-Describe los pasos necesarios para asegurarte que una aplicación para la Plataforma universal de Windows (UWP) pueda usarse cuando un tema de contraste alto esté activo.
+Windows admite temas de contraste alto para el sistema operativo y las aplicaciones que los usuarios pueden elegir habilitar. Los temas de contraste alto usan una pequeña paleta de colores de contraste que facilita la visualización de la interfaz.
 
-De manera predeterminada, una aplicación para UWP admite temas de contraste alto. Si un usuario elige que el sistema use un tema de contraste alto en la configuración del sistema o en las herramientas de accesibilidad, el marco usa automáticamente la configuración de colores y estilos que producen un diseño y una representación de contraste alto para los controles y los componentes de la interfaz de usuario.
+**Figura 1. Calculadora con el tema claro y el tema Negro en contraste alto.**
 
-Esta compatibilidad predeterminada se basa en el uso de temas y plantillas predeterminados. Estos temas y plantillas hacen referencia a colores del sistema como definiciones de recursos, y los orígenes de los recursos se modifican automáticamente cuando el sistema usa un modo de contraste alto. Sin embargo, si usas estilos, temas y plantillas personalizados para el control, ten cuidado de no deshabilitar la compatibilidad integrada para contraste alto. Si usas uno de los diseñadores XAML para Microsoft Visual Studio para la aplicación de estilos, el diseñador generará un tema de contraste alto independiente junto con el tema principal siempre que definas una plantilla que sea significativamente diferente a la predeterminada. Los diccionarios de temas independientes se incluyen en la colección [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.themedictionaries.aspx), una propiedad dedicada de un elemento [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794).
+![Calculadora con el tema claro y el tema Negro en contraste alto.](images/high-contrast-calculators.png)
 
-Para más información sobre temas y plantillas de control, consulta [Inicio rápido: plantillas de control](https://msdn.microsoft.com/library/windows/apps/xaml/Hh465374). Resulta muy revelador consultar controles específicos en los temas y diccionarios de recursos XAML y ver cómo se construyen estos temas y cómo hacen referencia a recursos que son similares, aunque diferentes para cada posible valor de contraste alto.
+
+Puedes cambiar a un tema de contraste alto desde *Configuración > Accesibilidad > Contraste alto*.
+
+> [!NOTE]
+> No confundas los temas de contraste alto con temas claros y oscuros, que permiten una paleta de colores mucho más amplia que no se considera de contraste alto. Para obtener más temas claros y oscuros, consulta el artículo sobre el [color](../style/color.md).
+
+Aunque los controles comunes ofrecen total compatibilidad con el contraste alto de forma gratuita, es necesario prestar atención al personalizar la interfaz de usuario. El error más común en relación con el contraste alto lo causa la codificación de forma rígida de un color en un control alineado.
+
+```xaml
+<!-- Don't do this! -->
+<Grid Background="#E6E6E6">
+
+<!-- Instead, create BrandedPageBackgroundBrush and do this. -->
+<Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
+```
+
+Si el color `#E6E6E6` se establece alineado en el primer ejemplo, el objeto Grid conservará ese color de fondo en todos los temas. Si el usuario cambia al tema Negro en contraste alto, se esperará que tu aplicación tenga un fondo negro. Dado que `#E6E6E6` es casi blanco, es posible que algunos usuarios no puedan interactuar con la aplicación.
+
+En el segundo ejemplo, la [**extensión de marcado {ThemeResource}**](../xaml-platform/themeresource-markup-extension.md) se usa para hacer referencia a un color de la colección [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.themedictionaries.aspx), una propiedad dedicada de un elemento [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794). ThemeDictionaries permite a XAML intercambiar los colores automáticamente en función del tema actual del usuario.
 
 ## Diccionarios de temas
 
-Si es necesario cambiar un color respecto a su valor predeterminado del sistema o se necesita agregar imágenes como elemento decorativo, como una imagen de fondo, crea una colección de **ThemeDictionaries** para la aplicación.
+Si necesitas cambiar un color de su valor predeterminado del sistema, crea una colección ThemeDictionaries para tu aplicación.
 
-* Comienza con la creación de las asociaciones adecuadas, si aún no existen. En App.xaml, crea una colección de **ThemeDictionaries**:
-
-``` xaml
- <Application.Resources>
-    <ResourceDictionary>
-        <ResourceDictionary.ThemeDictionaries>
-            <!-- Default is a fallback if a more precise theme isn't called out below -->
-            <ResourceDictionary x:Key="Default">
-
-            </ResourceDictionary>
-            <!-- HighContrast is used in any high contrast theme -->
-            <ResourceDictionary x:Key="HighContrast">
-
-            </ResourceDictionary>
-        </ResourceDictionary.ThemeDictionaries>
-    </ResourceDictionary>
-</Application.Resources
-```
-
-* 
-            **HighContrast** no es el único nombre de clave disponible. También están **HighContrastBlack**, **HighContrastWhite** y **HighContrastCustom**. En la mayoría de los casos, solo necesitarás **HighContrast**.
-* En **Default**, crea el tipo de [**Brush**](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx) que necesites, normalmente un **SolidColorBrush**. Dale un nombre de **x: Key** que resulte específico para su uso:<br/>
-    `<SolidColorBrush x:Key="BrandedPageBackground" />`
-* Asígnale el **Color** que desees:<br/>
-    `<SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />`
-* Copia ese **Brush** en **HighContrast**:
+1. Comienza con la creación de las asociaciones adecuadas, si aún no existen. En App.xaml, crea una colección ThemeDictionaries que incluya, como mínimo, los temas **Default** y **HighContrast**.
+2. En Default, crea el tipo de [Brush](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx) que necesites, normalmente SolidColorBrush. Asígnale un nombre x:Key que resulte específico para su uso.
+3. Asígnale el Color que quieras.
+4. Copia ese Brush en HighContrast.
 
 ``` xaml
 <Application.Resources>
     <ResourceDictionary>
         <ResourceDictionary.ThemeDictionaries>
-            <!-- Default is a fallback if a more precise theme isn't called out below -->
+            <!-- Default is a fallback if a more precise theme isn't called
+            out below -->
             <ResourceDictionary x:Key="Default">
-                <SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />
+                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
             </ResourceDictionary>
-            <!-- HighContrast is used in any high contrast theme -->
+
+            <!-- Optional, Light is used in light theme.
+            If included, Default will be used for Dark theme -->
+            <ResourceDictionary x:Key="Light">
+                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
+            </ResourceDictionary>
+
+            <!-- HighContrast is used in all high contrast themes -->
             <ResourceDictionary x:Key="HighContrast">
-                <SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />
+                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
             </ResourceDictionary>
         </ResourceDictionary.ThemeDictionaries>
     </ResourceDictionary>
 </Application.Resources>
 ```
 
-* Determina de qué color debería ser el **Brush** y modifícalo en **HighContrast**.
+El último paso es determinar qué color se usará en el contraste alto y se trata en la siguiente sección.
 
-Determinar un color para contraste alto requiere un poco de aprendizaje. Las asociaciones que has creado anteriormente son fáciles de actualizar.
+> [!NOTE]
+> HighContrast no es el único nombre de clave disponible. También están HighContrastBlack, HighContrastWhite y HighContrastCustom. En la mayoría de los casos, solo necesitarás HighContrast.
 
 ## Colores de contraste alto
 
-Los usuarios pueden cambiar a contraste alto mediante la página de configuración. De manera predeterminada, hay 4 temas de contraste alto. Una vez que el usuario selecciona una opción, la página muestra una vista previa del probable aspecto de las aplicaciones.
+En la página *Configuración > Accesibilidad > Contraste alto*, hay 4 temas de contraste alto de manera predeterminada. 
 
-![Configuración de contraste alto](images/high-contrast-settings.png)<br/>
-_Configuración de contraste alto_
+**Figura 2. Cuando el usuario selecciona una opción, la página muestra una vista previa.**
 
- Puedes hacer clic en todos los cuadrados de la vista previa para cambiar su valor. Asimismo, cada cuadrado se asigna directamente a un recurso del sistema.
+![Configuración de contraste alto](images/high-contrast-settings.png)
 
-![Recursos de contraste alto](images/high-contrast-resources.png)<br/>
-_Recursos de contraste alto_
+**Figura 3. Puedes hacer clic en todas las muestras de color de la vista previa para cambiar su valor. Asimismo, cada muestra se asigna directamente a un recurso de color XAML.**
 
-Si das a los nombres indicados anteriormente el prefijo _SystemColor_ y el sufijo _Color_, por ejemplo, **SystemColorWindowTextColor**, estos se actualizarán dinámicamente para que coincidan con lo que haya especificado el usuario. Esto evita tener que seleccionar un color específico para contraste alto. En su lugar, elige un recurso del sistema que se corresponda con la finalidad del color. En el ejemplo anterior, hemos denominado al color de fondo de nuestra página **SolidColorBrushBrandedPageBackground**. Dado que se utilizará para un fondo, podemos asignarlo al **SystemColorWindowColor** en contraste alto:
+![Recursos de contraste alto](images/high-contrast-resources.png)
+
+Cada recurso `SystemColor*Color` es una variable que actualiza automáticamente el color cuando el usuario cambia los temas de contraste alto. A continuación se muestran directrices sobre dónde y cuándo usar cada recurso.
+
+Recurso | Uso
+-------- | -----
+SystemColorWindowTextColor | Copia del cuerpo, encabezados, listas; cualquier texto con el que no se pueda interactuar
+SystemColorHotlightColor | Hipervínculos
+SystemColorGrayTextColor | Interfaz de usuario deshabilitada
+SystemColorHighlightTextColor | Color de primer plano de la interfaz de usuario o el texto en curso o seleccionado, o con el que se esté interactuando actualmente
+SystemColorHighlightColor | Color de fondo de la interfaz de usuario o el texto en curso o seleccionado, o con el que se esté interactuando actualmente
+SystemColorButtonTextColor | Color de primer plano de los botones; cualquier interfaz de usuario con la que se pueda interactuar
+SystemColorButtonFaceColor | Color de fondo de los botones; cualquier interfaz de usuario con la que se pueda interactuar
+SystemColorWindowColor | Fondo de páginas, paneles, elementos emergentes y barras
+<br/>
+A menudo resulta útil observar las aplicaciones existentes, Inicio o los controles comunes para ver cómo han resuelto otras personas problemas de diseño de contraste alto similares a los tuyos.
+
+**Cosas que hacer**
+
+* Respetar los pares de fondo/primer plano siempre que sea posible.
+* Probar los 4 temas de contraste alto mientras se ejecuta la aplicación. El usuario no debería tener que reiniciar la aplicación al cambiar los temas.
+* Ser coherente.
+
+**Cosas que evitar**
+
+* Codificar de forma rígida un color en el tema HighContrast; usar los recursos `SystemColor*Color`.
+* Elegir un recurso de color con fines estéticos. Recuerda que cambian con el tema.
+* Usar `SystemColorGrayTextColor` para una copia del cuerpo que sea secundaria o actúe como una sugerencia.
+
+
+Para continuar con el ejemplo anterior, deberás elegir un recurso de `BrandedPageBackgroundBrush`. Dado que el nombre indica que se usará para un fondo, `SystemColorWindowColor` es una buena elección.
 
 ``` xaml
 <Application.Resources>
     <ResourceDictionary>
         <ResourceDictionary.ThemeDictionaries>
-            <!-- Default is a fallback if a more precise theme isn't called out below -->
+            <!-- Default is a fallback if a more precise theme isn't called
+            out below -->
             <ResourceDictionary x:Key="Default">
-                <SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />
+                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
             </ResourceDictionary>
-            <!-- HighContrast is used in any high contrast theme -->
+
+            <!-- Optional, Light is used in light theme.
+            If included, Default will be used for Dark theme -->
+            <ResourceDictionary x:Key="Light">
+                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
+            </ResourceDictionary>
+
+            <!-- HighContrast is used in all high contrast themes -->
             <ResourceDictionary x:Key="HighContrast">
-                <SolidColorBrush x:Key="BrandedPageBackground" Color="{ThemeResource SystemColorWindowColor}" />
+                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="{ThemeResource SystemColorWindowColor}" />
             </ResourceDictionary>
         </ResourceDictionary.ThemeDictionaries>
     </ResourceDictionary>
 </Application.Resources>
 ```
 
-Si se respete la paleta de 8 colores de contraste alto, no es necesario crear más **ResourceDictionaries** de contraste alto. Esta paleta limitada suelen presentar retos difíciles a la hora de representar estados visuales complejos. Con frecuencia, agregar un borde únicamente a un área en contraste alto puede ayudar a aclarar una situación.
+Más adelante, en la aplicación, puedes establecer el fondo.
 
-### Qué hacer y qué no hacer
-
-* Prueba en modo de contraste alto desde el principio y con frecuencia.
-* Usa los colores con nombre para su finalidad prevista.
-* Pon primitivos como **Color**, **Brush** y **Thickness** dentro de los **ThemeDictionaries**. Evita colocar en ellos recursos más complejos, como elementos **Style**. El siguiente ejemplo funciona bien:
-
-``` xaml
-<Application.Resources>
-    <ResourceDictionary>
-        <ResourceDictionary.ThemeDictionaries>
-            <!-- Default is a fallback if a more precise theme isn't called out below -->
-            <ResourceDictionary x:Key="Default">
-                <SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />
-            </ResourceDictionary>
-            <!-- HighContrast is used in any high contrast theme -->
-            <ResourceDictionary x:Key="HighContrast">
-                <SolidColorBrush x:Key="BrandedPageBackground" Color="{ThemeResource SystemColorWindowColor}" />
-            </ResourceDictionary>
-        </ResourceDictionary.ThemeDictionaries>
-
-        <Style x:Key="MyButtonStyle" TargetType="Button">
-            <Setter Property="Foreground" Value="{ThemeResource BrandedPageBackground}" />
-        </Style>
-    </ResourceDictionary>
-</Application.Resources>
-
-...
-
-<Button Style="{StaticResource MyButtonStyle}" />
+```xaml
+<Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
 ```
 
-* Usa colores de primer plano de contraste alto para los elementos de la interfaz de usuario en primer plano.
-* Usa colores de contraste alto con su par de colores definido. Por ejemplo, usa siempre **BUTTONTEXT** con **BUTTONFACE**, especialmente en una situación de primer y segundo plano.
-* Usa el par de colores de contraste alto recomendado para un elemento determinado de la interfaz de usuario con el fin de garantizar que se cumpla la relación de contraste necesaria de 14:1.
-* No separes los pares de colores de contraste alto ni mezcles y combines arbitrariamente colores de contraste alto. Esto suele crear una interfaz de usuario invisible para al menos uno de los temas de contraste alto preinstalados.
-* No coloques ningún objeto **Brush** que crees fuera de una colección de **ThemeDictionaries**.
-* Nunca uses **StaticResource** para hacer referencia a un recurso en una colección de **ThemeDictionaries**. Esto parecerá funcionar hasta que el usuario cambie los temas mientras la aplicación esté en ejecución. En su lugar, usa **ThemeResource**.
-* No uses valores de color codificados.
-* No uses un color solo porque te guste.
-
-Consulta [Recursos de temas XAML](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources) para obtener más información.
+Observa que `{ThemeResource}` se usa dos veces, una vez para hacer referencia a `SystemColorWindowColor` y otra para hacer referencia a `BrandedPageBackgroundBrush`. Ambos son necesarios para que la aplicación use el tema correctamente en tiempo de ejecución. Este es un buen momento para probar la funcionalidad en la aplicación. El fondo de Grid se actualizará automáticamente al cambiar a un tema de contraste alto. También se actualizará al cambiar entre los distintos temas de contraste alto.
 
 ## Cuándo usar bordes
-En el modo de contraste alto, agrega bordes a un elemento de la interfaz de usuario cuando sea necesario mantener una forma con límites reconocibles en dicho elemento. Usa bordes para diferenciar entre las áreas de contenido de navegación, acciones y contenido.
 
-![Un panel de navegación separado del resto de la página](images/high-contrast-actions-content.png)<br/>
-_Un panel de navegación separado del resto de la página_
+Las páginas, los paneles, los elementos emergentes y las barras deberían usar `SystemColorWindowColor` para su fondo en contraste alto. Agrega un borde solo de contraste alto cuando sea necesario para conservar los límites importantes en la interfaz de usuario.
 
-Si un elemento de la interfaz de usuario _no_ tienen borde o fondo de manera predeterminada, no agregues un borde ni un fondo para el estado predeterminado en el modo de contraste alto.
+**Figura 4. El panel de navegación y la página comparten el mismo color de fondo en contraste alto. Es fundamental un borde solo de contraste alto para dividirlos.**
 
-Si un elemento de la interfaz de usuario _sí_ tienen un borde de forma predeterminada, conserva dicho borde en el modo de contraste alto.
+![Un panel de navegación separado del resto de la página](images/high-contrast-actions-content.png)
 
-Los colores superpuestos o adyacentes deben distinguirse unos de otros, pero no es obligatorio que cumplan con la relación de contraste de color de 14:1. Sin embargo, el procedimiento recomendado es una relación de contraste de 3:1 para estos tipos de situaciones.
+## Elementos de lista
 
-Si se usan colores de fondo de contraste alto para diferenciar elementos de la interfaz de usuario superpuestos, el único método garantizado para asegurar el contraste entre dichos elementos es introducir bordes.
+En contraste alto, los elementos de una clase [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) tienen el fondo establecido en `SystemColorHighlightColor` al mantener el mouse encima, pulsarlos o seleccionarlos. Los elementos de lista complejos suelen presentar un error en que el contenido del elemento de lista no puede invertir el color al mantener el mouse sobre el elemento, pulsarlo o seleccionarlo. Esto hace que el elemento no se pueda leer.
 
-## Detectar si un tema de contraste alto está habilitado  
-Usa miembros de la clase [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) para detectar la configuración actual de los temas de contraste alto. La propiedad [**HighContrast**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrast) determina si un tema de contraste alto está seleccionado actualmente. Si el valor **HighContrast** está establecido en **true**, el siguiente paso es comprobar el valor de la propiedad [**HighContrastScheme**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrastscheme) para obtener el nombre del tema de contraste alto que se usa. Los temas "Blanco en contraste alto" y "Negro en contraste alto" normalmente son valores de **HighContrastScheme** a los que el código debería responder. Las claves de [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) definidas mediante XAML no pueden tener espacios, por lo que las claves para estos temas en un diccionario de recursos normalmente son "HighContrastWhite" y "HighContrastBlack", respectivamente. También deberías tener una lógica de reserva para un tema de contraste alto predeterminado en caso de que el valor sea alguna otra cadena. 
-            En el [ejemplo de contraste alto XAML](http://go.microsoft.com/fwlink/p/?linkid=254993) se muestra esta lógica.
+**Figura 5. Una lista sencilla con el tema claro (izquierda) y el tema Negro en contraste alto (derecha). El segundo elemento está seleccionado; observa cómo se invierte su color de texto en contraste alto.**
+
+![Lista simple con el tema claro y el tema Negro en contraste alto](images/high-contrast-list1.png)
+
+
+
+### Elementos de lista con texto de color
+
+Una causa es establecer TextBlock.Foreground en la clase [DataTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) de ListView. Normalmente, esto se hace para establecer una jerarquía visual. La propiedad Foreground se establece en la clase [ListViewItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx) y la propiedad TextBlocks de DataTemplate hereda el color de Foreground correcto al mantener el mouse sobre el elemento, pulsarlo o seleccionarlo. Sin embargo, al establecer Foreground se interrumpe la herencia.
+
+**Figura 6. Una lista compleja con el tema claro (izquierda) y el tema Negro en contraste alto (derecha). Observa que, en contraste alto, la segunda línea del elemento seleccionado no se puede invertir.**
+
+![Lista compleja con el tema claro y el tema Negro en contraste alto](images/high-contrast-list2.png)
+
+Para resolverlo establece Foreground de manera condicional a través de un objeto Style de una colección de ThemeDictionaries. Dado que SecondaryBodyTextBlockStyle no ha establecido Foreground en HighContrast, su color se invertirá correctamente.
+
+```xaml
+<!-- In App.xaml... -->
+<ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key="Default">
+        <Style
+            x:Key="SecondaryBodyTextBlockStyle"
+            TargetType="TextBlock"
+            BasedOn="{StaticResource BodyTextBlockStyle}">
+            <Setter Property="Foreground" Value="{StaticResource SystemControlForegroundBaseMediumBrush}" />
+        </Style>
+    </ResourceDictionary>
+
+    <ResourceDictionary x:Key="Light">
+        <Style
+            x:Key="SecondaryBodyTextBlockStyle"
+            TargetType="TextBlock"
+            BasedOn="{StaticResource BodyTextBlockStyle}">
+            <Setter Property="Foreground" Value="{StaticResource SystemControlForegroundBaseMediumBrush}" />
+        </Style>
+    </ResourceDictionary>
+
+    <ResourceDictionary x:Key="HighContrast">
+        <!-- The Foreground Setter is omitted in HighContrast -->
+        <Style
+            x:Key="SecondaryBodyTextBlockStyle"
+            TargetType="TextBlock"
+            BasedOn="{StaticResource BodyTextBlockStyle}" />
+    </ResourceDictionary>
+</ResourceDictionary.ThemeDictionaries>
+
+<!-- Usage in your DataTemplate... -->
+<DataTemplate>
+    <StackPanel>
+        <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="Double line list item" />
+
+        <!-- Note how ThemeResource is used to reference the Style -->
+        <TextBlock Style="{ThemeResource SecondaryBodyTextBlockStyle}" Text="Second line of text" />
+    </StackPanel>
+</DataTemplate>
+```
+
+### Elementos de lista con botones y vínculos
+
+A veces, los elementos de lista contienen controles más complejos, como [HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.hyperlinkbutton.aspx) o [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx). Estos controles tienen sus propios estados para mantener el mouse, pulsar y, en ocasiones, seleccionar, que no funcionan sobre un elemento de lista. Los hipervínculos también son amarillos en el tema Negro en contraste alto, lo que dificulta su lectura al mantener el mouse sobre un elemento de lista, pulsarlo o seleccionarlo.
+
+**Figura 7. Observa que el hipervínculo resulta difícil de leer en contraste alto.**
+
+![Lista con un hipervínculo con el tema claro y el tema Negro en contraste alto](images/high-contrast-list3.png)
+
+Una solución es establecer el fondo de la clase DataTemplate en `SystemColorWindowColor` en contraste alto. Esta acción crea el efecto de un borde en contraste alto.
+
+```xaml
+<!-- In App.xaml... -->
+<ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key="Default">
+        <SolidColorBrush x:Key="HighContrastOnlyBackgroundBrush" Color="Transparent" />
+    </ResourceDictionary>
+
+    <ResourceDictionary x:Key="HighContrast">
+        <SolidColorBrush x:Key="HighContrastOnlyBackgroundBrush" Color="{ThemeResource SystemColorWindowColor}" />
+    </ResourceDictionary>
+</ResourceDictionary.ThemeDictionaries>
+
+<!-- Usage in your ListView... -->
+<ListView>
+    <ListView.ItemContainerStyle>
+        <Style TargetType="ListViewItem">
+            <!-- Causes the DataTemplate to fill the entire width and height
+            of the list item -->
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+
+            <!-- Padding is handled in the DataTemplate -->
+            <Setter Property="Padding" Value="0" />
+        </Style>
+    </ListView.ItemContainerStyle>
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <!-- Margin of 2px allows some of the ListViewItem's background
+            to shine through. An additional left padding of 10px puts the
+            content a total of 12px from the left edge -->
+            <StackPanel
+                Margin="2,2,2,2"
+                Padding="10,0,0,0"
+                Background="{ThemeResource HighContrastOnlyBackgroundBrush}">
+
+                <!-- Foreground is explicitly set so that it doesn't
+                disappear on hovered, pressed, or selected -->
+                <TextBlock
+                    Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}"
+                    Text="Double line list item" />
+
+                <HyperlinkButton Content="Hyperlink" />
+            </StackPanel>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>
+```
+**Figura 8. El efecto de borde es una buena opción si tienes controles más complejos en los elementos de lista.**
+
+![Lista con un hipervínculo con el tema claro y el tema Negro en contraste alto, fijos](images/high-contrast-list4.png)
+
+
+
+## Detección de contraste alto
+
+Puedes comprobar mediante programación si el tema actual es un tema de contraste alto usando los miembros de la clase [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237).
 
 > [!NOTE]
-> Asegúrate de llamar al constructor [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) desde un ámbito cuando la aplicación esté inicializada y ya esté mostrando contenido.
-
-Las aplicaciones pueden cambiar para usar valores de recursos de contraste alto mientras la aplicación se encuentra en ejecución. Esto funciona siempre que los recursos se soliciten con la [extensión de marcado {ThemeResource}](https://msdn.microsoft.com/library/windows/apps/Mt185591) en el código XAML del estilo o la plantilla. Todos los temas predeterminados (generic.xaml) usan esta técnica de extensión de marcado {ThemeResource}, por lo que obtendrás este comportamiento si usas los temas de control predeterminados. Los controles personalizados o los estilos de controles personalizados pueden hacerlo si también usaste esta técnica de recurso de extensión de marcado {ThemeResource} en tus plantillas y estilos personalizados.
+> Asegúrate de llamar al constructor **AccessibilitySettings** desde un ámbito donde la aplicación esté inicializada y mostrando contenido.
 
 ## Temas relacionados  
 * [Accesibilidad](accessibility.md)
@@ -180,6 +300,6 @@ Las aplicaciones pueden cambiar para usar valores de recursos de contraste alto 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

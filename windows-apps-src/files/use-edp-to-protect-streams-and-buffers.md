@@ -5,7 +5,6 @@ MS-HAID: dev\_files.use\_edp\_to\_protect\_streams\_and\_buffers
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "Usar Enterprise Data Protection (EDP) para proteger secuencias y búferes"
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: fdde4f7d2ab46b6349273f7c1c9d91cf27aa341a
 
@@ -13,11 +12,13 @@ ms.openlocfilehash: fdde4f7d2ab46b6349273f7c1c9d91cf27aa341a
 
 # Usar Enterprise Data Protection (EDP) para proteger secuencias y búferes
 
-__Nota__ La directiva de Protección de datos de empresa (EDP) no se puede aplicar en la versión 1511 de Windows 10 (compilación 10586) o en una versión anterior.
+
+            __Nota__ La directiva de Protección de datos de empresa (EDP) no se puede aplicar en la versión 1511 de Windows 10 (compilación 10586) o en una versión anterior.
 
 En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con los flujos y búferes. Para obtener una perspectiva de desarrollador completa sobre cómo se relaciona EDP con los archivos, las secuencias, el portapapeles, las redes, las tareas en segundo plano y la protección de datos con la pantalla bloqueada, consulta [Enterprise Data Protection (EDP) (Protección de datos de empresa [EDP])](../enterprise/edp-hub.md).
 
-**Nota** La [muestra de Protección de datos de empresa (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) abarca muchos de los escenarios que se muestran en este tema.
+
+            **Nota** La [muestra de Protección de datos de empresa (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) abarca muchos de los escenarios que se muestran en este tema.
 
 ## Requisitos previos
 
@@ -37,7 +38,8 @@ En este tema se muestran ejemplos de las tareas de codificación necesarias para
 ## Proteger una secuencia de datos a una identidad de empresa
 
 
-**Nota** Cuando se protege un flujo o un búfer, es muy recomendable suscribirse al evento [**ProtectionPolicyManager.PolicyChanged**](https://msdn.microsoft.com/library/windows/apps/mt608411) para que tu aplicación sepa cuándo se deshabilita EDP en el dispositivo. Cuando esto sucede, debes desproteger las secuencias y los búferes. Las secuencias o búferes que dejes protegidos se pueden revocar si el usuario anula la inscripción del dispositivo de Mobile Device Management (MDM). Además, si EDP se deshabilitó en el momento de creación del recurso, esa revocación no es apropiada. La desprotección de los recursos cuando EDP está deshabilitada impide que esto suceda.
+
+            **Nota** Cuando se protege un flujo o un búfer, es muy recomendable suscribirse al evento [**ProtectionPolicyManager.PolicyChanged**](https://msdn.microsoft.com/library/windows/apps/mt608411) para que tu aplicación sepa cuándo se deshabilita EDP en el dispositivo. Cuando esto sucede, debes desproteger las secuencias y los búferes. Las secuencias o búferes que dejes protegidos se pueden revocar si el usuario anula la inscripción del dispositivo de Mobile Device Management (MDM). Además, si EDP se deshabilitó en el momento de creación del recurso, esa revocación no es apropiada. La desprotección de los recursos cuando EDP está deshabilitada impide que esto suceda.
 
 
 
@@ -293,7 +295,8 @@ private async void EnableUIPolicyFromProtectedBuffer(IBuffer buffer)
 
 ```
 
-**Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+            **Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 

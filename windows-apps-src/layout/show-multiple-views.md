@@ -5,7 +5,6 @@ title: "Mostrar varias vistas de una aplicación"
 ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
 label: Show multiple views for an app
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 23e999f86fb0552b96cddbd3b9d11803106bf6c2
 
@@ -147,7 +146,8 @@ Si se abren vistas secundarias, se puede ocultar la ventana de la vista principa
 
 Otras vistas, incluidas todas las vistas que se crean llamando a [**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278) en el código de la aplicación, son vistas secundarias. La vista principal y las vistas secundarias se almacenan en la colección [**CoreApplication.Views**](https://msdn.microsoft.com/library/windows/apps/br205861). Por lo general, las vistas secundarias se crean en respuesta a una acción del usuario. En algunos casos, el sistema crea vistas secundarias para tu aplicación.
 
-**Nota** Puedes usar la característica *acceso asignado* de Windows para ejecutar una aplicación en [modo de pantalla completa](https://technet.microsoft.com/library/mt219050.aspx). Al hacerlo, el sistema crea una vista secundaria para presentar la interfaz de usuario de la aplicación sobre la pantalla de bloqueo. No se permiten vistas secundarias creadas por la aplicación, por lo que si intentas mostrar tu propia vista secundaria en modo de pantalla completa, se iniciará una excepción.
+
+            **Nota** Puedes usar la característica *acceso asignado* de Windows para ejecutar una aplicación en [modo de pantalla completa](https://technet.microsoft.com/library/mt219050.aspx). Al hacerlo, el sistema crea una vista secundaria para presentar la interfaz de usuario de la aplicación sobre la pantalla de bloqueo. No se permiten vistas secundarias creadas por la aplicación, por lo que si intentas mostrar tu propia vista secundaria en modo de pantalla completa, se iniciará una excepción.
 
  
 

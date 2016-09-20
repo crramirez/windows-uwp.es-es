@@ -3,7 +3,6 @@ author: mtoepke
 title: Cargar recursos en tu juego DirectX
 description: "La mayoría de los juegos, en algún momento, cargan recursos y activos (como sombreadores, texturas, mallas predefinidas y otros datos de gráficos) del almacenamiento local u otro flujo de datos."
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: fd4d2162e9a0007df34b465f570820843b326d72
 
@@ -33,7 +32,7 @@ Por ejemplo, es probable que las mallas para objetos poligonales en el juego est
 
 Esta muestra también incluye tres archivos de código para cargar y administrar recursos. En este tema, incluimos los objetos de código definidos en estos archivos.
 
--   BasicLoader.h/.cpp
+-   BasicLoader.h/.cpp 
 -   BasicReaderWriter.h/.cpp
 -   DDSTextureLoader.h/.cpp
 
@@ -236,7 +235,8 @@ task<void> BasicLoader::LoadMeshAsync(
 }
 ```
 
-**CreateMesh** interpreta los datos de bytes cargados del archivo, y crea un búfer de vértices y un búfer de índices para la malla, pasando las listas de vértices e índices, respectivamente, a [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) y especificando ya sea D3D11\_BIND\_VERTEX\_BUFFER o D3D11\_BIND\_INDEX\_BUFFER. Este código se usa en **BasicLoader**:
+
+            **CreateMesh** interpreta los datos de bytes cargados del archivo, y crea un búfer de vértices y un búfer de índices para la malla, pasando las listas de vértices e índices, respectivamente, a [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) y especificando ya sea D3D11\_BIND\_VERTEX\_BUFFER o D3D11\_BIND\_INDEX\_BUFFER. Este código se usa en **BasicLoader**:
 
 ```cpp
 void BasicLoader::CreateMesh(
@@ -297,7 +297,7 @@ void BasicLoader::CreateMesh(
 }
 ```
 
-Normalmente creas un par de búferes de vértices e índices para todas las mallas del juego. Puedes elegir dónde y cuándo cargar las mallas. Si tienes varias mallas, quizás quieres cargar algunas del disco en puntos específicos del juego; por ejemplo, durante estados de carga predefinidos específicos. Para mallas grandes, como datos de terreno, puedes transmitir los vértices de una memoria caché; pero este es un procedimiento más complejo y no lo incluimos en este tema.
+Normalmente creas un par de búferes de vértices e índices para todas las mallas del juego. Puedes elegir dónde y cuándo cargar las mallas. Si tienes varias mallas, quizás quieres cargar algunas del disco en puntos específicos del juego; por ejemplo, durante estados de carga predefinidos específicos.  Para mallas grandes, como datos de terreno, puedes transmitir los vértices de una memoria caché; pero este es un procedimiento más complejo y no lo incluimos en este tema.
 
 Recuerda que debes conocer el formato de los datos de vértices. Hay muchísimas formas de representar datos de vértices en las herramientas que se usan para crear modelos. También hay muchas formas de representar el diseño de entrada de los datos de vértices en Direct3D, como franjas y listas de triángulos. Para obtener más información sobre los datos de vértices, consulta [Introducción a los búferes en Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898) y [Primitivos](https://msdn.microsoft.com/library/windows/desktop/bb147291).
 
@@ -317,7 +317,9 @@ Un archivo DDS es un archivo binario que contiene la siguiente información:
 
 -   Una descripción de los datos del archivo.
 
-    Los datos se describen con una descripción de encabezado mediante [**DDS\_HEADER**](https://msdn.microsoft.com/library/windows/desktop/bb943982); el formato de píxeles se define mediante [**DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984). Observa que las estructuras **DDS\_HEADER** y **DDS\_PIXELFORMAT** reemplazan las estructuras desusadas DDSURFACEDESC2, DDSCAPS2 y DDPIXELFORMAT DirectDraw 7. **DDS\_HEADER** es el binario equivalente de DDSURFACEDESC2 y DDSCAPS2. **DDS\_PIXELFORMAT** es el binario equivalente de DDPIXELFORMAT.
+    Los datos se describen con una descripción de encabezado mediante [**DDS\_HEADER**](https://msdn.microsoft.com/library/windows/desktop/bb943982); el formato de píxeles se define mediante [**DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984). Observa que las estructuras **DDS\_HEADER** y **DDS\_PIXELFORMAT** reemplazan las estructuras desusadas DDSURFACEDESC2, DDSCAPS2 y DDPIXELFORMAT DirectDraw 7. 
+            **DDS\_HEADER** es el binario equivalente de DDSURFACEDESC2 y DDSCAPS2. 
+            **DDS\_PIXELFORMAT** es el binario equivalente de DDPIXELFORMAT.
 
     ```cpp
     DWORD               dwMagic;

@@ -11,7 +11,7 @@ ms.openlocfilehash: 286f479c86c06c9d08b4e36cf9776b590a13cc5f
 # Asignaciones de .NET Framework de tipos de Windows Runtime
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En la tabla siguiente se enumeran las asignaciones que .NET Framework realiza entre los tipos de Plataforma universal de Windows (UWP) y los tipos de .NET Framework. En una aplicación universal de Windows escrita con código administrado, IntelliSense muestra el tipo de .NET Framework en lugar del tipo UWP. Por ejemplo, si un método Windows Runtime toma un parámetro de tipo IVector&lt;string&gt;, IntelliSense muestra un parámetro de tipo IList&lt;string&gt;. De forma similar, en un componente de Windows Runtime escrito con código administrado, se usa el tipo de .NET Framework en las signaturas de miembro. Cuando la [herramienta de exportación de metadatos de Windows Runtime (Winmdexp.exe)](https://msdn.microsoft.com/library/hh925576.aspx) genera su componente de Windows Runtime, el tipo de .NET Framework se convierte en el tipo UWP correspondiente.
 

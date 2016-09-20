@@ -27,7 +27,8 @@ Por suerte, los compiladores de Visual Basic y C# simplifican este proceso: cuan
 
 El siguiente código para el evento NumberChanged muestra el patrón básico para eventos de la UWP. En este ejemplo, el constructor para el objeto "event argument", NumberChangedEventArgs, usa un solo parámetro de número entero que representa el valor numérico modificado.
 
-> **Nota**  Este es el mismo patrón que usan los compiladores para los eventos habituales que declaras en un componente de Windows Runtime.
+> 
+            **Nota**  Este es el mismo patrón que usan los compiladores para los eventos habituales que declaras en un componente de Windows Runtime.
 
  
 > [!div class="tabbedCodeSnippets"]
@@ -95,7 +96,8 @@ El siguiente código para el evento NumberChanged muestra el patrón básico par
 
 [!div class="tabbedCodeSnippets"] El método ("Shared" en Visual Basic) GetOrCreateEventRegistrationTokenTable estático crea la instancia del evento del objeto EventRegistrationTokenTable&lt;T&gt; de forma diferida. Pasa el campo de nivel de clase que contendrá la instancia de la tabla de tokens a este método. Si el campo está vacío, el método crea la tabla, almacena una referencia en la tabla del campo y devuelve una referencia a la tabla.
 
-> Si el campo ya contiene una referencia a la tabla de tokens, el método devuelve solo esa referencia. **Importante**  Para garantizar la seguridad de los subprocesos, el campo que contiene la instancia del evento de EventRegistrationTokenTable&lt;T&gt; debe ser un campo de nivel de clase. Si se trata de un campo de nivel de clase, el método GetOrCreateEventRegistrationTokenTable garantiza que cuando varios subprocesos intentan crear la tabla de tokens, todos los subprocesos obtienen la misma instancia de la tabla.
+> Si el campo ya contiene una referencia a la tabla de tokens, el método devuelve solo esa referencia. 
+            **Importante**  Para garantizar la seguridad de los subprocesos, el campo que contiene la instancia del evento de EventRegistrationTokenTable&lt;T&gt; debe ser un campo de nivel de clase. Si se trata de un campo de nivel de clase, el método GetOrCreateEventRegistrationTokenTable garantiza que cuando varios subprocesos intentan crear la tabla de tokens, todos los subprocesos obtienen la misma instancia de la tabla.
 
 En el caso de un evento determinado, todas las llamadas al método GetOrCreateEventRegistrationTokenTable deben utilizar el mismo campo de nivel de clase.
 
@@ -106,9 +108,11 @@ Llamar al método GetOrCreateEventRegistrationTokenTable en el descriptor de acc
 
     >La sobrecarga del método [RemoveEventHandler(EventRegistrationToken)](https://msdn.microsoft.com/library/hh138425.aspx) elimina el delegado de la tabla y de la lista de invocación.
 
--   **Nota**  Los métodos AddEventHandler y RemoveEventHandler(EventRegistrationToken) bloquean la tabla para ayudar a garantizar la seguridad de los subprocesos. La propiedad [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) devuelve un delegado que incluye todos los controladores de eventos que están registrados actualmente para controlar el evento.
+-   
+            **Nota**  Los métodos AddEventHandler y RemoveEventHandler(EventRegistrationToken) bloquean la tabla para ayudar a garantizar la seguridad de los subprocesos. La propiedad [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) devuelve un delegado que incluye todos los controladores de eventos que están registrados actualmente para controlar el evento.
 
-    >Usa este delegado para generar el evento o usa los métodos de la clase delegada para invocar los controladores de forma individual. **Nota**  Te recomendamos que sigas el patrón del ejemplo proporcionado anteriormente en este artículo y que copies el delegado en una variable temporal antes de invocarlo. Esto evita una condición de carrera en la que un subproceso elimina el último controlador, lo que reduce el delegado a nulo justo antes de que otro subproceso intente invocar el delegado.
+    >Usa este delegado para generar el evento o usa los métodos de la clase delegada para invocar los controladores de forma individual. 
+            **Nota**  Te recomendamos que sigas el patrón del ejemplo proporcionado anteriormente en este artículo y que copies el delegado en una variable temporal antes de invocarlo. Esto evita una condición de carrera en la que un subproceso elimina el último controlador, lo que reduce el delegado a nulo justo antes de que otro subproceso intente invocar el delegado.
 
 Los delegados son inmutables, por lo que la copia sigue siendo válida. Coloca tu propio código en los descriptores de acceso según corresponda.
 

@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
 title: "Optimización de la interfaz de usuario de ListView y GridView"
 description: "Mejora el rendimiento y el tiempo de inicio de ListView y GridView mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de elementos."
-translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
 ms.openlocfilehash: 362fbb6b733e855a2126196f12c650bdf2a7665d
 
@@ -27,7 +26,8 @@ Para obtener unos movimientos panorámicos/desplazamientos suaves, es fundamenta
 
 ## Virtualización de interfaz de usuario
 
-La virtualización de la interfaz de usuario es la mejora más importante que puedes hacer. Esto significa que los elementos de la interfaz de usuario representen los elementos se crean a petición. Para controlar los elementos enlazados a una colección de 1 000 elementos, sería un desperdicio de recursos crear la interfaz de usuario de todos los elementos al mismo tiempo, porque no todos pueden mostrarse al mismo tiempo. [
+La virtualización de la interfaz de usuario es la mejora más importante que puedes hacer. Esto significa que los elementos de la interfaz de usuario representen los elementos se crean a petición. Para controlar los elementos enlazados a una colección de 1 000 elementos, sería un desperdicio de recursos crear la interfaz de usuario de todos los elementos al mismo tiempo, porque no todos pueden mostrarse al mismo tiempo. 
+            [
               **ListView**
             ](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) (y otros controles derivados de [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803)) realizan la virtualización de la interfaz de usuario por ti. Cuando los elementos están a punto de desplazarse hacia la vista (a una páginas de distancia), el marco de trabajo genera la interfaz de usuario de los elementos y los almacena. Asimismo, cuando sea improbable que los elementos se muestren de nuevo, el marco de trabajo recupera la memoria.
 
@@ -247,9 +247,12 @@ En algunas aplicaciones, debes tener una interfaz de usuario distinta para los d
 
 **El evento ChoosingItemContainer**
 
-[
+
+            [
               **ChoosingItemContainer**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) es un evento que te permite proporcionar un elemento (**ListViewItem**/**GridViewItem**) a los controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) cada vez que se necesita un nuevo elemento durante el inicio o el reciclado. Puedes crear un contenedor basado en el tipo de elemento de datos que mostrará el contenedor (puedes verlo en el siguiente ejemplo). El elemento **ChoosingItemContainer** es la mejor manera de conseguir el mayor rendimiento al usar diferentes plantillas de datos para distintos elementos. El almacenamiento en caché del contenedor se puede conseguir mediante **ChoosingItemContainer**. Por ejemplo, si tienes cinco plantillas diferentes y usas una de ellas más a menudo que las demás, entonces, el elemento ChoosingItemContainer no solo te permite crear elementos en las proporciones necesarias, sino también mantener un número apropiado de los elementos almacenados en caché y disponibles para su reciclaje. [
+            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) es un evento que te permite proporcionar un elemento (**ListViewItem**/**GridViewItem**) a los controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) cada vez que se necesita un nuevo elemento durante el inicio o el reciclado. Puedes crear un contenedor basado en el tipo de elemento de datos que mostrará el contenedor (puedes verlo en el siguiente ejemplo). 
+            El elemento **ChoosingItemContainer** es la mejor manera de conseguir el mayor rendimiento al usar diferentes plantillas de datos para distintos elementos. El almacenamiento en caché del contenedor se puede conseguir mediante **ChoosingItemContainer**. Por ejemplo, si tienes cinco plantillas diferentes y usas una de ellas más a menudo que las demás, entonces, el elemento ChoosingItemContainer no solo te permite crear elementos en las proporciones necesarias, sino también mantener un número apropiado de los elementos almacenados en caché y disponibles para su reciclaje. 
+            [
               **ChoosingGroupHeaderContainer**
             ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer) proporciona la misma funcionalidad para encabezados de grupo.
 

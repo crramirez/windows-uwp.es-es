@@ -5,7 +5,7 @@ description: "Aquí te mostramos cómo cargar datos de texturas sin procesar y c
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 56e8bf524537526d639f4d732ab228f3c0ea75da
+ms.openlocfilehash: 5533b086557be44b27e4e371c0d71bc8bc6310b0
 
 ---
 
@@ -16,7 +16,7 @@ ms.openlocfilehash: 56e8bf524537526d639f4d732ab228f3c0ea75da
 
 Aquí te mostramos cómo cargar datos de texturas sin procesar y cómo aplicar esos datos a un primitivo 3D, mediante el cubo que creamos en [Usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md). También te mostramos cómo introducir un modelo de iluminación simple con producto escalar, donde las superficies del cubo son más claras o más oscuras a una distancia y ángulos relativos a una fuente de luz.
 
-**Objetivo:** aplicar texturas en primitivos.
+**Objetivo:** Aplicar texturas en primitivos.
 
 ## Requisitos previos
 
@@ -25,7 +25,7 @@ Suponemos que estás familiarizado con C++. También necesitas tener experiencia
 
 Suponemos además que consultaste [Inicio rápido: configurar recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md), [Crear sombreadores y dibujar primitivos](creating-shaders-and-drawing-primitives.md) y [Usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md).
 
-**Tiempo para completarlo:** 20 minutos.
+**Tiempo para completarlo:** 20minutos.
 
 Instrucciones
 ------------
@@ -527,6 +527,6 @@ Cargamos datos de texturas sin procesar y aplicamos esos datos a un primitivo 3D
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

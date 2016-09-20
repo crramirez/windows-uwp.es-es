@@ -3,7 +3,6 @@ author: jnHs
 Description: "Obtén información sobre qué hacer si crees que otra aplicación está infringiendo tus derechos de propiedad intelectual."
 title: "Protección de marcas comerciales y derechos de autor"
 ms.assetid: 61C4EEC0-AD4D-4828-ADEC-F18E99DD4FFC
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 2c3f35ee5fb3f04e9f2fc389162793caa9ce5f1a
 

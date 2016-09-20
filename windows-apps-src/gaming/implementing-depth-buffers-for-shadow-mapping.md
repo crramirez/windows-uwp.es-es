@@ -3,7 +3,6 @@ author: mtoepke
 title: "Tutorial - implementar volúmenes de sombra con búferes de profundidad en Direct3D 11"
 description: "En este tutorial se muestra cómo representar volúmenes de sombra mediante mapas de profundidad en Direct3D 11 en dispositivos de todos los niveles de característica de Direct3D."
 ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 4bb1f5c71d83b2dc3271b5b2ceaa9a1156b00004
 
@@ -52,7 +51,7 @@ En este tutorial se muestra cómo representar volúmenes de sombra mediante mapa
 ## Migración de la aplicación de asignación de sombras al escritorio de Direct3D 9
 
 
-Windows 8 agregó funciones de comparación de profundidad a los niveles de característica 9\_1 y 9\_3. Ahora puedes migrar el código de representación con volúmenes de sombra a DirectX 11 y el representador de Direct3D 11 ofrecerá compatibilidad con nivel inferior para dispositivos que tengan el nivel de característica 9. En este tutorial se muestra de qué manera cualquier aplicación o juego de Direct3D 11 puede implementar volúmenes de sombra mediante la prueba de profundidad. El código abarca los siguientes procesos:
+Windows8 agregó funciones de comparación de profundidad a los niveles de característica 9\_1 y 9\_3. Ahora puedes migrar el código de representación con volúmenes de sombra a DirectX 11 y el representador de Direct3D 11 ofrecerá compatibilidad con nivel inferior para dispositivos que tengan el nivel de característica 9. En este tutorial se muestra de qué manera cualquier aplicación o juego de Direct3D 11 puede implementar volúmenes de sombra mediante la prueba de profundidad. El código abarca los siguientes procesos:
 
 1.  Crear recursos de dispositivo Direct3D para asignación de sombras.
 2.  Agregar un pase de representación para crear el mapa de profundidad.
@@ -65,15 +64,15 @@ Cuando termines de leer este tutorial, sabrás cómo implementar una técnica b�
 ## Requisitos previos
 
 
-Debes [preparar el entorno de desarrollo para el desarrollo de juegos de DirectX para la Plataforma universal de Windows (UWP)](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Todavía no necesitas una plantilla, pero sí necesitarás Microsoft Visual Studio 2015 para compilar el ejemplo de código de este tutorial.
+Debes [preparar el entorno de desarrollo para el desarrollo de juegos de DirectX para la Plataforma universal de Windows (UWP)](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Todavía no necesitas una plantilla, pero sí necesitarás MicrosoftVisual Studio2015 para compilar el ejemplo de código de este tutorial.
 
 ## Temas relacionados
 
 
 **Direct3D**
 
-* [Escribir sombreadores HLSL en Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
-* [Crear un nuevo proyecto de DirectX 11 para UWP](user-interface.md)
+* [Escribir sombreadores HLSL en Direct3D9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+* [Crear un nuevo proyecto de DirectX11 para UWP](user-interface.md)
 
 **Artículos técnicos sobre la asignación de sombras**
 

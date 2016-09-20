@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 831123A7-1F40-4B74-AE9F-69AC9883B4AD
 description: "Este artículo muestra cómo los controles de dispositivo de vídeo permiten escenarios de captura de fotos y vídeo mejorados, como la estabilización de imagen óptica y el zoom suave."
 title: "Controles de dispositivos de captura para captura de fotos y vídeos"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: c70f3e54ae5c83ccc28c47cb1e0ec236f75c3775
 
@@ -20,7 +19,8 @@ Los controles mencionados en este artículo se agregan a la aplicación con el m
 
 El código de este artículo es una adaptación de la [muestra del SDK de controles manuales de la cámara](http://go.microsoft.com/fwlink/?LinkId=619479). Puedes descargar la muestra para ver el código usado en contexto o para usar la muestra como punto de partida para tu propia aplicación.
 
-**Nota** Este artículo se basa en los conceptos y el código planteados en [Capturar fotos y vídeo con MediaCapture](capture-photos-and-video-with-mediacapture.md), donde se describen los pasos para la implementación básica de fotos y la captura de vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios más avanzados de captura. El código de este artículo supone que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
+
+            **Nota** Este artículo se basa en los conceptos y el código planteados en [Capturar fotos y vídeo con MediaCapture](capture-photos-and-video-with-mediacapture.md), donde se describen los pasos para la implementación básica de fotos y la captura de vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios más avanzados de captura. El código de este artículo supone que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
 
 Todas las API de control de dispositivo mencionadas en este artículo son miembros del espacio de nombres [**Windows.Media.Devices**](https://msdn.microsoft.com/library/windows/apps/br206902).
 
@@ -28,8 +28,7 @@ Todas las API de control de dispositivo mencionadas en este artículo son miembr
 
 ## Exposure
 
-[
-            **ExposureControl**](https://msdn.microsoft.com/library/windows/apps/dn278910) te permite definir la velocidad del obturador que se usa durante la captura de fotos o vídeo.
+[**ExposureControl**](https://msdn.microsoft.com/library/windows/apps/dn278910) te permite definir la velocidad del obturador que se usa durante la captura de fotos o vídeo.
 
 Este ejemplo usa un control [**Slider**](https://msdn.microsoft.com/library/windows/apps/br209614) para ajustar el valor actual de la exposición y una casilla para activar o desactivar el ajuste de exposición automática.
 
@@ -51,7 +50,8 @@ En el controlador de eventos **CheckedChanged** de la casilla de exposición aut
 
 [!code-cs[ExposureCheckBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetExposureCheckBox)]
 
-**Importante** El modo de exposición automática se admite únicamente mientras se ejecuta la secuencia de vista previa. Comprueba que la secuencia de vista previa se está ejecutando antes de activar la exposición automática.
+
+            **Importante** El modo de exposición automática se admite únicamente mientras se ejecuta la secuencia de vista previa. Comprueba que la secuencia de vista previa se está ejecutando antes de activar la exposición automática.
 
 ## Compensación de exposición
 
@@ -75,8 +75,7 @@ En el controlador de eventos **ValueChanged**, obtén el valor actual del contro
 
 ## Flash
 
-[
-            **FlashControl**](https://msdn.microsoft.com/library/windows/apps/dn297725) te permite activar o desactivar el flash o activar el flash automático, que permite al sistema determinar dinámicamente si se usa el flash. Este control también te permite habilitar la reducción de ojos rojos automática en los dispositivos que lo admiten. Todas estas opciones de configuración se aplican a la captura de fotos. El [**TorchControl**](https://msdn.microsoft.com/library/windows/apps/dn279077) es un control independiente para activar o desactivar la linterna para la captura de vídeo.
+[**FlashControl**](https://msdn.microsoft.com/library/windows/apps/dn297725) te permite activar o desactivar el flash o activar el flash automático, que permite al sistema determinar dinámicamente si se usa el flash. Este control también te permite habilitar la reducción de ojos rojos automática en los dispositivos que lo admiten. Todas estas opciones de configuración se aplican a la captura de fotos. El [**TorchControl**](https://msdn.microsoft.com/library/windows/apps/dn279077) es un control independiente para activar o desactivar la linterna para la captura de vídeo.
 
 En este ejemplo se usa un conjunto de botones de radio para permitir al usuario alternar entre activado, desactivado y la configuración de flash automática. También se proporciona una casilla para permitir la alternancia de la función de reducción de ojos rojos y la linterna de vídeo.
 
@@ -98,7 +97,8 @@ Por último, en el controlador de la casilla de la linterna de vídeo, define la
 
 [!code-cs[Linterna](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTorch)]
 
-**Nota**: En algunos dispositivos, la linterna no emitirá luz, incluso si [**TorchControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078) está definido como true, a menos que el dispositivo esté ejecutando una secuencia de vista previa y realizando una captura de vídeo. El orden de operaciones recomendado es activar la vista previa de vídeo; a continuación, activar la linterna estableciendo **Enabled** en true y, a continuación, iniciar la captura de vídeo. En algunos dispositivos la linterna se enciende después de iniciar la vista previa. En otros dispositivos, es posible que la linterna no se encienda hasta que se inicie la captura de vídeo.
+
+            **Nota**: En algunos dispositivos, la linterna no emitirá luz, incluso si [**TorchControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078) está definido como true, a menos que el dispositivo esté ejecutando una secuencia de vista previa y realizando una captura de vídeo. El orden de operaciones recomendado es activar la vista previa de vídeo; a continuación, activar la linterna estableciendo **Enabled** en true y, a continuación, iniciar la captura de vídeo. En algunos dispositivos la linterna se enciende después de iniciar la vista previa. En otros dispositivos, es posible que la linterna no se encienda hasta que se inicie la captura de vídeo.
 
 ## Enfocar
 
@@ -120,7 +120,8 @@ Crea un nuevo objeto [**FocusSettings**](https://msdn.microsoft.com/library/wind
 
 [!code-cs[CafFocusRadioButton](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetCafFocusRadioButton)]
 
-**Importante** El modo de autoenfoque se admite únicamente mientras se ejecuta la secuencia de vista previa. Comprueba que la secuencia de vista previa se está ejecutando antes de activar el autoenfoque automático.
+
+            **Importante** El modo de autoenfoque se admite únicamente mientras se ejecuta la secuencia de vista previa. Comprueba que la secuencia de vista previa se está ejecutando antes de activar el autoenfoque automático.
 
 ### Pulsar para enfocar
 
@@ -164,9 +165,11 @@ A continuación, obtén el objeto [**RegionsOfInterestControl**](https://msdn.mi
 
 Por último, llama a [**FocusAsync**](https://msdn.microsoft.com/library/windows/apps/dn297794) en el objeto **FocusControl** para iniciar el enfoque.
 
-**Importante** Al implementar el método de pulsar para enfocar, el orden de las operaciones es importante. Debes llamar a estas API en el siguiente orden:
 
-**1.**
+            **Importante** Al implementar el método de pulsar para enfocar, el orden de las operaciones es importante. Debes llamar a estas API en el siguiente orden:
+
+
+            **1.**
             [
               **FocusControl.Configure**
             ](https://msdn.microsoft.com/library/windows/apps/dn608067)
@@ -182,6 +185,7 @@ Por último, llama a [**FocusAsync**](https://msdn.microsoft.com/library/windows
             [
               **FocusControl.FocusAsync**
             ](https://msdn.microsoft.com/library/windows/apps/dn297794)
+          
 
 [!code-cs[TapToFocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapToFocus)]
 
@@ -235,8 +239,7 @@ En el controlador de eventos **CheckedChanged**, obtén el objeto [**FlashContro
 
 ## Velocidad ISO
 
-[
-            **IsoSpeedControl**](https://msdn.microsoft.com/library/windows/apps/dn297850) te permite definir la velocidad ISO que se usa durante la captura de fotos o vídeo.
+[**IsoSpeedControl**](https://msdn.microsoft.com/library/windows/apps/dn297850) te permite definir la velocidad ISO que se usa durante la captura de fotos o vídeo.
 
 En este ejemplo se usa un control [**Slider**](https://msdn.microsoft.com/library/windows/apps/br209614) para ajustar el valor de compensación de exposición actual y una casilla para alternar el ajuste de velocidad ISO automática.
 
@@ -272,8 +275,7 @@ Para habilitar o deshabilitar OIS, define [**OpticalImageStabilizationControl.Mo
 
 ## Balance de blancos
 
-[
-            **WhiteBalanceControl**](https://msdn.microsoft.com/library/windows/apps/dn279104) te permite definir el balance de blancos que se usa durante la captura de fotos o vídeo.
+[**WhiteBalanceControl**](https://msdn.microsoft.com/library/windows/apps/dn279104) te permite definir el balance de blancos que se usa durante la captura de fotos o vídeo.
 
 En este ejemplo se usa un control [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348) para seleccionar entre valores predeterminados de temperatura de color integrados y un control [**Slider**](https://msdn.microsoft.com/library/windows/apps/br209614) para el ajuste manual del balance de blancos.
 
@@ -295,9 +297,11 @@ En el controlador de eventos **ValueChanged**, obtén el valor actual del contro
 
 [!code-cs[WhiteBalanceSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetWhiteBalanceSlider)]
 
-**Importante** El ajuste del balance de blancos se admite únicamente mientras se ejecuta la secuencia de vista previa. Comprueba que la secuencia de vista previa se está ejecutando antes de establecer el valor del balance de blancos o el valor predeterminado.
 
-**Importante** El valor predeterminado de **ColorTemperaturePreset.Auto** indica al sistema que ajuste automáticamente el nivel de balance de blancos. En algunos escenarios, como capturar una secuencia fotográfica donde los niveles de balance de blancos deben iguales para cada fotograma, te recomendamos que bloquees el control en el valor automático actual. Para ello, llama a [**SetPresetAsync**](https://msdn.microsoft.com/library/windows/apps/dn279113) y especifica el valor predeterminado **Manual** y no establezcas un valor en el control mediante [**SetValueAsync**](https://msdn.microsoft.com/library/windows/apps/dn279114). Esto hará que el dispositivo bloquee el valor actual. No intentes leer el valor actual del control y después pasar el valor obtenido a **SetValueAsync** porque no se garantiza que este valor sea correcto.
+            **Importante** El ajuste del balance de blancos se admite únicamente mientras se ejecuta la secuencia de vista previa. Comprueba que la secuencia de vista previa se está ejecutando antes de establecer el valor del balance de blancos o el valor predeterminado.
+
+
+            **Importante** El valor predeterminado de **ColorTemperaturePreset.Auto** indica al sistema que ajuste automáticamente el nivel de balance de blancos. En algunos escenarios, como capturar una secuencia fotográfica donde los niveles de balance de blancos deben iguales para cada fotograma, te recomendamos que bloquees el control en el valor automático actual. Para ello, llama a [**SetPresetAsync**](https://msdn.microsoft.com/library/windows/apps/dn279113) y especifica el valor predeterminado **Manual** y no establezcas un valor en el control mediante [**SetValueAsync**](https://msdn.microsoft.com/library/windows/apps/dn279114). Esto hará que el dispositivo bloquee el valor actual. No intentes leer el valor actual del control y después pasar el valor obtenido a **SetValueAsync** porque no se garantiza que este valor sea correcto.
 
 ## Zoom
 

@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: "Device Portal para dispositivos móviles"
 description: "Obtén información sobre cómo Windows Device Portal te permite configurar y administrar el dispositivo móvil de forma remota."
-translationtype: Human Translation
 ms.sourcegitcommit: df6d42d6a91b8721e905fe9bc3a339dc33408459
 ms.openlocfilehash: eeeb8f98d97468544cc30e3d9884cce15cb913a9
 
@@ -32,7 +31,7 @@ Puedes elegir entre tres formas de conectarte a Device Portal: USB, host local y
 
 1. En el explorador, escribe la dirección que se muestra aquí para el tipo de conexión que estás usando.
 
-    - USB: `http://127.0.0.1:10080`
+    - USB:  `http://127.0.0.1:10080`
 
     Usa esta dirección cuando el teléfono esté conectado a un equipo a través de una conexión USB. Ambos dispositivos deben tener Windows 10, versión 1511 o posterior.
     
@@ -40,7 +39,7 @@ Puedes elegir entre tres formas de conectarte a Device Portal: USB, host local y
 
     Usa esta dirección para ver Device Portal localmente en el teléfono, mediante Microsoft Edge para Windows 10 Mobile.
     
-    - Red local: `https://<The IP address of the phone>`
+    - Red local:  `https://<The IP address of the phone>`
 
     Usa esta dirección para conectarte a través de una red local.
 
@@ -52,7 +51,7 @@ Puedes elegir entre tres formas de conectarte a Device Portal: USB, host local y
 
 4. (Opcional) Activa la casilla Recordar mi equipo en el navegador para recordar este emparejamiento en el futuro.
 
-A continuación se muestra la sección de Portal de dispositivos de la página de configuración para desarrollador en Windows Phone.
+A continuación se muestra la sección de Portal de dispositivos de la página de configuración para desarrollador en WindowsPhone.
 
 ![Configuración de Portal de dispositivos](images/device-portal/mob-dev-mode-portal.png)
 

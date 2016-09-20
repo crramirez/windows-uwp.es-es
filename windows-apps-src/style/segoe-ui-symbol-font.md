@@ -33,8 +33,7 @@ En este artículo se enumeran y se proporcionan instrucciones de uso de los glif
 
 La fuente de iconos **Segoe UI Symbol** de Windows 8/8.1 se ha reemplazado por la fuente **Segoe MDL2 Assets** a partir del lanzamiento de Windows 10. Se puede usar de forma muy parecida a la antigua, pero muchos glifos se han redibujado con el estilo de iconos de Windows 10 y con las medidas establecidas de modo que los iconos queden alineados dentro del cuadrado em de la fuente, y no con la línea base tipográfica.
 
-
-              **Nota** Un **em** es una unidad de medida de la fuente. En la fuente, 1 em es igual al 100 % del valor de punto especificado a 72 ppp. Por ejemplo 16 puntos es igual a 16 píxeles a 72 ppp (lo que también se conoce como meseta 100 %). Las nuevas fuentes MDL2 están diseñadas para que la superficie del icono sea un cuadrado em. Por lo tanto, si pones 16 píxeles de ancho y alto en el código, obtienes una superficie de icono de 16x16 píxeles. Eso no significa que el icono ocupe siempre esta superficie completa.
+**Nota** Un **em** es una unidad de medida de la fuente. En la fuente, 1 em es igual al 100 % del valor de punto especificado a 72 ppp. Por ejemplo 16 puntos es igual a 16 píxeles a 72 ppp (lo que también se conoce como meseta 100 %). Las nuevas fuentes MDL2 están diseñadas para que la superficie del icono sea un cuadrado em. Por lo tanto, si pones 16 píxeles de ancho y alto en el código, obtienes una superficie de icono de 16x16 píxeles. Eso no significa que el icono ocupe siempre esta superficie completa.
 
  
 
@@ -1602,8 +1601,7 @@ Usa glifos de la siguiente lista para una [**AppBar**](https://msdn.microsoft.co
 
 **Para diseñadores**
 * [Directrices sobre fuentes](fonts.md)
-* 
-              [W3C: ¿En qué idiomas se escribe de derecha a izquierda (RTL)?](http://www.i18nguy.com/temp/rtl.mdl)
+* [W3C: ¿En qué idiomas se escribe de derecha a izquierda (RTL)?](http://www.i18nguy.com/temp/rtl.mdl)
 **Para desarrolladores (XAML)**
 * [**Enumeración Symbol**](https://msdn.microsoft.com/library/windows/apps/dn252842)
 

@@ -3,7 +3,6 @@ author: TylerMSFT
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: Acceso a la tarjeta SD
 description: "Puedes almacenar datos no esenciales y tener acceso a ellos en una tarjeta microSD opcional, especialmente en los dispositivos móviles de bajo coste que tienen un almacenamiento interno limitado."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: c515d36c76a8363861a72cb58229ff857e1bb2b8
 
@@ -64,7 +63,7 @@ Para tener acceso a los archivos multimedia de las bibliotecas multimedia (Músi
 
 ### Obtención de una referencia a la tarjeta SD
 
-La carpeta [**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158) es la clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) de raíz lógica para el conjunto de dispositivos extraíbles actualmente conectados al dispositivo. Si está presente una tarjeta SD, la primera (y única) clase **StorageFolder** en la carpeta **KnownFolders.RemovableDevices** representa la tarjeta SD.
+La carpeta [**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158) es la clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) de raíz lógica para el conjunto de dispositivos extraíbles actualmente conectados al dispositivo. Si está presente una tarjeta SD, la primera (y única) clase **StorageFolder** en la carpeta **KnownFolders.RemovableDevices** representa la tarjetaSD.
 
 Usa código como el siguiente para determinar la presencia de una tarjeta SD y para obtener una referencia a ella como [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230).
 
@@ -93,7 +92,7 @@ using Windows.Storage;
 
 La tarjeta SD puede contener muchas carpetas y archivos que no se reconocen como carpetas conocidas y que no se pueden consultar mediante el uso de una ubicación de [**KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151). Para buscar archivos, tu aplicación debe enumerar el contenido de la tarjeta recorriendo el sistema de archivos de forma recursiva. Usa [**GetFilesAsync (CommonFileQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227274) y [**GetFoldersAsync (CommonFolderQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227281) para obtener el contenido de la tarjeta SD de un modo eficaz.
 
-Te recomendamos que uses un subproceso en segundo plano para recorrer la tarjeta SD. Una tarjeta SD puede contener varios gigabytes de datos.
+Te recomendamos que uses un subproceso en segundo plano para recorrer la tarjetaSD. Una tarjeta SD puede contener varios gigabytes de datos.
 
 Tu aplicación también solicitará al usuario que elija carpetas específicas mediante el selector de carpetas.
 

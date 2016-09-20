@@ -3,7 +3,6 @@ author: jnHs
 Description: "Puedes ver análisis detallados de las aplicaciones en el panel del Centro de desarrollo de Windows."
 title: "Análisis"
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
-translationtype: Human Translation
 ms.sourcegitcommit: dfaf348956b19746aa5332aeb7ad5cbc4b224e8c
 ms.openlocfilehash: 8922a53da8b1bc97bef7faf49d0e412a26127188
 
@@ -13,7 +12,8 @@ ms.openlocfilehash: 8922a53da8b1bc97bef7faf49d0e412a26127188
 
 Puedes ver análisis detallados de las aplicaciones en el panel del Centro de desarrollo de Windows. Los gráficos y las estadísticas te permiten saber cómo están funcionando las aplicaciones: p. ej., puedes saber a cuántos clientes has llegado o cómo usan estos la aplicación y qué opinan de ella. También encontrarás información sobre el estado de la aplicación, el uso de los anuncios y mucho más. Visualiza los informes en el panel o [descarga los informes que necesites](download-analytic-reports.md) para analizar los datos sin conexión. También te ofrecemos varias formas de [acceder a los datos de análisis sin usar el panel](#no-dashboard).
 
-> **Nota**
+> 
+            **Nota**
             &nbsp;&nbsp;Además de los informes de panel, puedes acceder mediante programación a algunos datos de análisis mediante la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
 ## Análisis para todas las aplicaciones
@@ -40,7 +40,8 @@ En esta sección encontrarás detalles sobre la información presentada en cada 
 -   [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md)
 -   [Informe de canales y conversiones](channels-and-conversions-report.md)
 
-> **Nota**
+> 
+            **Nota**
             &nbsp;&nbsp;Según las funciones y la implementación específicas de la aplicación, es posible que no veas datos en todos estos informes.
 
 ## Filtros de página y de sección
@@ -70,8 +71,9 @@ Usa los siguientes recursos para empezar a usar Power BI para acceder a los dato
 * [Aprender a usar Power BI](https://powerbi.microsoft.com/guided-learning/)
 * [Aprender a usar el paquete de contenido del Centro de desarrollo de Windows para Power BI para conectar con los datos de análisis](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
-> **Nota**
-            &nbsp;&nbsp;Para conectar con el paquete de contenido del Centro de desarrollo de Windows para Power BI, te recomendamos que especifiques las credenciales de un directorio de Azure AD asociado con tu cuenta del Centro de desarrollo. Si usas las credenciales de cuenta de Microsoft, los datos de análisis de Power BI no se actualizarán automáticamente y tendrás que iniciar sesión en Power BI para actualizarlos. Si la organización ya usa Office 365 u otros servicios empresariales de Microsoft, ya tienes Azure AD. De lo contrario, puedes [obtenerlo de forma gratuita](http://go.microsoft.com/fwlink/p/?LinkId=703757). Para obtener más información acerca de cómo asociar tu cuenta del Centro de desarrollo con Azure AD, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
+> 
+            **Nota**
+            &nbsp;&nbsp;Para conectar con el paquete de contenido del Centro de desarrollo de Windows para Power BI, te recomendamos que especifiques las credenciales de un directorio de Azure AD asociado con tu cuenta del Centro de desarrollo. Si usas las credenciales de cuenta de Microsoft, los datos de análisis de Power BI no se actualizarán automáticamente y tendrás que iniciar sesión en Power BI para actualizarlos. Si la organización ya usa Office365 u otros servicios empresariales de Microsoft, ya tienes AzureAD. De lo contrario, puedes [obtenerlo de forma gratuita](http://go.microsoft.com/fwlink/p/?LinkId=703757). Para obtener más información acerca de cómo asociar tu cuenta del Centro de desarrollo con Azure AD, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
 
 ### Aplicación del Centro de desarrollo
 

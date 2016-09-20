@@ -3,7 +3,6 @@ author: mtoepke
 title: "Muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP)"
 description: "Aprende a usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D."
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 7b240de9ab3c7b53877d38eb9097dde25b2a40be
 
@@ -27,7 +26,8 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
 
 1.  Llama a [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) para averiguar qué formatos DXGI se pueden usar con el muestreo múltiple. Suministra los formatos de destino de representación que tu juego puede usar. Tanto el destino de representación como el destino de resolución deben usar el mismo formato, por lo tanto, comprueba [**D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RENDERTARGET**](https://msdn.microsoft.com/library/windows/desktop/ff476134) y **D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RESOLVE**.
 
-    **Nivel de característica 9:  ** Si bien los dispositivos que tienen el nivel de característica 9 [garantizan la compatibilidad con formatos de destino de representación de muestras múltiples](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), no garantizan la compatibilidad con destinos de resolución de varias muestras. Por lo tanto, debes realizar esta comprobación antes de usar la técnica del muestreo múltiple que se describe en este tema.
+    
+            **Nivel de característica 9:  ** Si bien los dispositivos que tienen el nivel de característica 9 [garantizan la compatibilidad con formatos de destino de representación de muestras múltiples](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), no garantizan la compatibilidad con destinos de resolución de varias muestras. Por lo tanto, debes realizar esta comprobación antes de usar la técnica del muestreo múltiple que se describe en este tema.
 
     El siguiente código comprueba la compatibilidad del muestreo múltiple en todos los valores DXGI\_FORMAT:
 
@@ -79,7 +79,8 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
     }
     ```
 
-    > **Nota**  Usa [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) si necesitas comprobar la compatibilidad de muestras múltiples con búferes de recursos en mosaico.
+    > 
+            **Nota**  Usa [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) si necesitas comprobar la compatibilidad de muestras múltiples con búferes de recursos en mosaico.
 
      
 

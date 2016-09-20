@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
 description: "Windows SDK, SDK de Microsoft Store Engagement and Monetization y la Tienda Windows proporcionan muchas características que permiten realizar más dinero desde tus aplicaciones y conseguir clientes gracias a la interacción con los usuarios."
 title: "Rentabiliza tu aplicación"
-translationtype: Human Translation
 ms.sourcegitcommit: de85956c7c1d2a0ba509d61ee8928b412f057f8a
 ms.openlocfilehash: 6d5f483b44ae4516f4969431e31f70388a66c5d9
 

@@ -3,7 +3,6 @@ author: mtoepke
 title: "Guías para portar juegos"
 description: "Proporciona guías para portar los juegos a Direct3D 11, la Plataforma universal de Windows (UWP) y a Windows 10."
 ms.assetid: 1dff815b-d3bd-557e-52c1-58e40f4dd6b1
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 0cf7f4e6679d362691cea8ccbd45786176715cad
 
@@ -29,8 +28,8 @@ Proporciona guías para portar los juegos a Direct3D 11, la Plataforma universal
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Portar de DirectX 9 a la Plataforma universal de Windows](porting-your-directx-9-game-to-windows-store.md)</p></td>
-<td align="left"><p>En esta sección se incluyen artículos, información general y tutoriales para portar juegos de DirectX 9 a UWP.</p></td>
+<td align="left"><p>[Portar de DirectX9 a la Plataforma universal de Windows](porting-your-directx-9-game-to-windows-store.md)</p></td>
+<td align="left"><p>En esta sección se incluyen artículos, información general y tutoriales para portar juegos de DirectX9 a UWP.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Portar desde OpenGL ES 2.0 a Direct3D 11.1](port-from-opengl-es-2-0-to-directx-11-1.md)</p></td>
@@ -41,7 +40,8 @@ Proporciona guías para portar los juegos a Direct3D 11, la Plataforma universal
 
  
 
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> 
+            **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 

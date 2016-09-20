@@ -5,7 +5,7 @@ description: "Las API en el espacio de nombres Windows.Media.Editing, te permite
 title: "Composiciones y edición multimedia"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 226ee9212f6688c48c4d4d7b3195ec5c27a3afdd
+ms.openlocfilehash: ee46b6d4ad116034cd84f062e7bf710ff8600479
 
 ---
 
@@ -86,7 +86,7 @@ Después de permitir al usuario seleccionar un archivo de salida mediante una cl
 
 [!code-cs[RenderCompositionToFile](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetRenderCompositionToFile)]
 
--   La enumeración [**MediaTrimmingPreference**](https://msdn.microsoft.com/library/windows/apps/dn640561) permite dar prioridad a la velocidad de la operación de transcodificación en función de la precisión de recorte de clips multimedia adyacentes. **Fast** hace que la transcodificación sea más rápida con el recorte de menor precisión, y **Precise** hace que la transcodificación sea más lenta pero con el recorte más preciso.
+-   La enumeración [**MediaTrimmingPreference**](https://msdn.microsoft.com/library/windows/apps/dn640561) permite dar prioridad a la velocidad de la operación de transcodificación en función de la precisión de recorte de clips multimedia adyacentes. **Fast** hace que la transcodificación sea más rápida con el recorte de menor precisión, mientras que **Precise** hace que la transcodificación sea más lenta pero con el recorte más preciso.
 
 ## Recortar un clip de vídeo
 
@@ -155,6 +155,6 @@ Se pueden deserializar composiciones multimedia desde un archivo para que el usu
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -27,9 +27,11 @@ Para participar en anuncios de la comunidad:
 
 1. Ve a la página **Monetización**&gt;**Monetizar con anuncios** del panel del Centro de desarrollo de Windows.
 2. En la sección **Anuncios de la comunidad**, activa la casilla **Mostrar anuncios de la comunidad en mi aplicación**.
-   > **Nota**: Después de activar o desactivar esta casilla, no es necesario volver a publicar tu aplicación para que se apliquen los cambios.
+   > 
+            **Nota**: Después de activar o desactivar esta casilla, no es necesario volver a publicar tu aplicación para que se apliquen los cambios.
 
-3. [Crear una campaña publicitaria](create-an-ad-campaign-for-your-app.md) para la aplicación. Para el tipo de campaña, selecciona **Free community ads**.
+3. 
+            [Crear una campaña publicitaria](create-an-ad-campaign-for-your-app.md) para la aplicación. Para el tipo de campaña, selecciona **Free community ads**.
 
 
 ## Temas relacionados

@@ -5,7 +5,6 @@ title: "Menús contextuales y cuadros de diálogo"
 ms.assetid: 7CA2600C-A1DB-46AE-8F72-24C25E224417
 label: Menus, dialogs, and popups
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
 
@@ -74,7 +73,8 @@ Este es un ejemplo de un cuadro de diálogo de dos botones que se presenta al us
 
 Los cuadros de diálogo son modales, lo que significa que bloquean toda interacción con la aplicación hasta que el usuario seleccione un botón de cuadro de diálogo. Para reforzar visualmente su comportamiento modal, los cuadros de diálogo dibujan una capa de superposición que oculta parcialmente la interfaz de usuario de la aplicación temporalmente inaccesible.
 
-**Nota** Cuando Cancelar es una de las opciones disponibles del cuadro de diálogo, las aplicaciones pueden elegir permitir que los usuarios descarten el cuadro de diálogo presionando la tecla Escape. Este comportamiento no está integrado en el control, pero es una combinación de teclas implementada normalmente.
+
+            **Nota** Cuando Cancelar es una de las opciones disponibles del cuadro de diálogo, las aplicaciones pueden elegir permitir que los usuarios descarten el cuadro de diálogo presionando la tecla Escape. Este comportamiento no está integrado en el control, pero es una combinación de teclas implementada normalmente.
 
 Los controles flotantes y menús contextuales son controles de cierre del elemento por cambio de foco, lo que significa que los usuarios pueden elegir entre una variedad de acciones para descartar rápidamente interfaces de usuario transitorias. Estas interacciones están destinadas a ser ligeras y de no bloqueo. Algunas de las acciones de cierre del elemento por cambio de foco son
 - Hacer clic o pulsar fuera de la interfaz de usuario transitoria

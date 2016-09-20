@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: f54ae666-d609-49d6-90ba-e2e62ebc3652
 description: "Obtén información sobre los tamaños de anuncios de banner admitidos."
 title: "Tamaños de anuncios admitidos para anuncios de banner"
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: f83febcb6c96ad85329633e652978f5c7724e743
 
@@ -39,7 +38,8 @@ Microsoft Advertising admite anuncios de banner con los siguientes tamaños.
 <td align="left"><img src="images/13-f6f413da-ddde-4424-9364-41d8ba536d21.jpg" alt="AdSizesPhone320x50" /></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>480 x 80</p><p>**Nota** Este tamaño solo es compatible con Windows Phone Silverlight.</p></td>
+<td align="left"><p>480 x 80</p><p>
+            **Nota** Este tamaño solo es compatible con Windows Phone Silverlight.</p></td>
 <td align="left"><img src="images/13-0f11f562-0624-40d6-9720-400420f0a486.jpg" alt="AdSizesPhone480x80" /></td>
 </tr>
 <tr class="even">

@@ -3,7 +3,6 @@ author: mtoepke
 title: Plantillas de proyectos y herramientas para juegos
 description: Muestra lo que necesitas hacer para empezar a programar juegos de DirectX para la Plataforma universal de Windows (UWP).
 ms.assetid: d5afd5d3-ad01-0f16-3ddf-2c4eb86b68a7
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: b7b4cba0c88a914c3d0da4cf79adb51bcad2307f
 
@@ -22,7 +21,8 @@ En primer lugar, necesitarás Visual Studio.
 ## Obtener Visual Studio
 
 
-[Descarga e instala Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions).
+
+            [Descarga e instala Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions).
 
 <table>
 <colgroup>
@@ -58,7 +58,7 @@ En primer lugar, necesitarás Visual Studio.
 
 Si estás vas a portar un juego existente, consulta los siguientes temas.
 
--   [Migrar desde OpenGL ES 2.0 a DirectX 11](port-from-opengl-es-2-0-to-directx-11-1.md)
+-   [Migrar desde OpenGL ES2.0 a DirectX11](port-from-opengl-es-2-0-to-directx-11-1.md)
 -   [Migrar desde DirectX 9 a UWP](porting-your-directx-9-game-to-windows-store.md)
 
 Si estás creando un nuevo juego DirectX, consulta los siguientes temas.

@@ -5,18 +5,18 @@ title: Interacciones de teclado
 ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
-ms.sourcegitcommit: d65e1315e83fef5e53771adad0943c9cb59d9139
-ms.openlocfilehash: 9de90236d94522f1b80309c3fec51ce59aee0319
+translationtype: Human Translation
+ms.sourcegitcommit: f9c475a90c270270217999c5a7289e29e7fef208
+ms.openlocfilehash: a1d97c5a66db1b799ccc16769ff18130155743b8
 
 ---
 
 # Interacciones de teclado
 
 
-La entrada de teclado es una parte importante de la experiencia de interacción del usuario global en las aplicaciones. El teclado es indispensable para personas con ciertas discapacidades o para los usuarios que, simplemente, lo consideran una manera más eficaz de interactuar con una aplicación. Por ejemplo, los usuarios deben poder navegar por la aplicación con las teclas TAB y las flechas de dirección, activar los elementos de la interfaz de usuario con la barra espaciadora y la tecla ENTRAR y, asimismo, acceder a los comandos con los métodos abreviados del teclado.
+La entrada de teclado es una parte importante de la experiencia de interacción del usuario global en las aplicaciones. El teclado es indispensable para personas con ciertas discapacidades o para los usuarios que, simplemente, lo consideran una manera más eficaz de interactuar con una aplicación. Por ejemplo, los usuarios deben poder navegar por la aplicación con las teclas TAB y las flechas de dirección, activar los elementos de la interfaz de usuario con la barra espaciadora y la tecla ENTRAR y, asimismo, acceder a los comandos con los métodos abreviados del teclado.  
+
 ![Imagen principal de teclado](images/input-patterns/input-keyboard-small.jpg)
-
-
 
 **API importantes**
 
@@ -49,7 +49,7 @@ Según el dispositivo, el teclado táctil aparece cuando un campo de texto u otr
 
 ![Icono del teclado táctil en el centro de notificaciones](images/input-patterns/touch-keyboard-notificationcenter.png)
 
-**Nota** Es posible que el usuario deba ir a la pantalla **Modo tableta** en Configuración &gt; Sistema, y activar "Hacer que Windows se adapte mejor a los gestos táctiles al usar el dispositivo como tableta" para habilitar la aparición automática del teclado táctil.
+**Nota** Es posible que el usuario deba ir a la pantalla **Modo tableta** en Configuración &gt; Sistema y activar "Hacer que Windows se adapte mejor a los gestos táctiles al usar el dispositivo como tableta" para habilitar la aparición automática del teclado táctil.
 
  
 
@@ -74,30 +74,30 @@ La siguiente es una lista de controles de no edición que pueden recibir el foco
 
 Estos son algunos ejemplos de los diferentes modos del teclado táctil. La primera imagen es el diseño predeterminado, la segunda es el diseño para pulgares (puede que no esté disponible para todos los idiomas).
 
-Estos son algunos ejemplos de los diferentes modos del teclado táctil. La primera imagen es el diseño predeterminado, la segunda es el diseño para pulgares (es posible que este último no esté disponible en todos los idiomas).
+Estos son algunos ejemplos de los diferentes modos del teclado táctil. La primera imagen es el diseño predeterminado, la segunda es el diseño para pulgares (puede que no esté disponible para todos los idiomas).
 <table>
 <tr>
-    <td>**El teclado táctil en el modo de diseño predeterminado:  **</td>
-    <td>![the touch keyboard in default layout mode](images/touchkeyboard-standard.png)</td>
+    <td>**Teclado táctil en el modo de diseño predeterminado:  **</td>
+    <td>![teclado táctil en el modo de diseño predeterminado](images/touchkeyboard-standard.png)</td>
 </tr>
 <tr>
-    <td>**El teclado táctil en el modo de diseño expandido:  **</td>
-    <td>![the touch keyboard in expanded layout mode](images/touchkeyboard-expanded.png)</td>
+    <td>**Teclado táctil en el modo de diseño expandido:  **</td>
+    <td>![teclado táctil en el modo de diseño expandido](images/touchkeyboard-expanded.png)</td>
 </tr>
 <tr>
-    <td>**El teclado táctil en el modo de diseño para pulgares predeterminado:  **</td>
-    <td>![the touch keyboard in thumb layout mode](images/touchkeyboard-thumb.png)</td>
+    <td>**Teclado táctil en el modo de diseño para pulgares predeterminado:  **</td>
+    <td>![Teclado táctil en el modo de diseño para pulgares](images/touchkeyboard-thumb.png)</td>
 </tr>
 <tr>
-    <td>**El teclado táctil en el modo de diseño para pulgares numérico:  **</td>
-    <td>![the touch keyboard in numeric thumb layout mode](images/touchkeyboard-numeric-thumb.png)</td>
+    <td>**Teclado táctil en el modo de diseño para pulgares numérico:  **</td>
+    <td>![Teclado táctil en el modo de diseño para pulgares numérico](images/touchkeyboard-numeric-thumb.png)</td>
 </tr>
 </table>
 
 
 La correcta interacción con el teclado permite a los usuarios emplear escenarios de aplicación básicos mediante el uso exclusivo del teclado. Es decir, que los usuarios pueden alcanzar todos los elementos interactivos de la interfaz de usuario y activar funciones predeterminadas. Hay una serie de factores que pueden afectar el grado de éxito, como la navegación por el teclado, las teclas de acceso para accesibilidad y las teclas de aceleración (o de método abreviado) para usuarios avanzados.
 
-**Nota**  El teclado táctil no admite la alternancia ni la mayoría de los comandos del sistema (consulta [Patrones](#keyboard_command_patterns).
+**Nota** El teclado táctil no admite la alternancia ni la mayoría de los comandos del sistema (consulta [Patrones](#keyboard_command_patterns)).
 
 ## Navegación
 
@@ -354,9 +354,7 @@ Un controlador de eventos de entrada implementa un delegado que proporciona la s
 
 -   El remitente del evento. El remitente notifica el objeto al que se adjunta el controlador de eventos.
 -   Datos del evento. Para los eventos de teclado, esos datos serán una instancia de [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072). El delegado de los controladores es [**KeyEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227904). Las propiedades más importantes de **KeyRoutedEventArgs** para la mayoría de los escenarios de controladores son [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) y posiblemente [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075).
--   [
-              **OriginalSource**
-            ](https://msdn.microsoft.com/library/windows/apps/br208810). Dado que los eventos de teclado están enrutados, los datos del evento proporcionan el objeto **OriginalSource**. Si estás permitiendo deliberadamente que los eventos se propaguen por un árbol de objetos, a veces **OriginalSource** es el objeto de interés en lugar del remitente. Sin embargo, eso depende de tu diseño. Si deseas obtener más información sobre cómo podrías usar **OriginalSource** en lugar del remitente, consulta la sección "Eventos de teclado enrutados" de este tema o bien el tema [Introducción a eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/mt185584).
+-   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810). Dado que los eventos de teclado están enrutados, los datos del evento proporcionan el objeto **OriginalSource**. Si estás permitiendo deliberadamente que los eventos se propaguen por un árbol de objetos, a veces **OriginalSource** es el objeto de interés en lugar del remitente. Sin embargo, eso depende de tu diseño. Si deseas obtener más información sobre cómo podrías usar **OriginalSource** en lugar del remitente, consulta la sección "Eventos de teclado enrutados" de este tema o bien el tema [Introducción a eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
 ### Adjuntar un controlador de eventos de teclado
 
@@ -401,9 +399,7 @@ Todos los eventos de teclado usan [**KeyRoutedEventArgs**](https://msdn.microsof
 -   [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074)
 -   [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)
 -   [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)
--   [
-              **OriginalSource**
-            ](https://msdn.microsoft.com/library/windows/apps/br208810) (heredada de [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809).
+-   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) (heredada de [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809))
 
 ### Tecla
 
@@ -636,7 +632,7 @@ Ciertos controles reaccionan ante los eventos de teclado con su propio control. 
 
 Por lo general, puedes agregar controladores para [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) y [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) a una clase [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) o cualquier control relacionado que tenga por finalidad procesar entrada de texto. Sin embargo, puede ocurrir que, como parte de su diseño intencional, un control no responda a todos los valores de teclas que se dirijan a él a través de eventos de tecla. El comportamiento es específico de cada control.
 
-A modo de ejemplo, [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736) (la clase base para [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)) procesa [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) para poder buscar la barra espaciadora o la tecla ENTRAR. La clase **ButtonBase** considera que el evento **KeyUp** equivale al botón primario del mouse presionado con el propósito de generar un evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737). Este procesamiento del evento se logra cuando **ButtonBase** invalida el método virtual [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983). En su implementación, establece [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) en **true**. El resultado es que cualquier elemento primario de un botón que escucha un evento de tecla, en el caso de una barra espaciadora, no recibiría el evento ya controlado para sus propios controladores.
+A modo de ejemplo, [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736) (la clase base para [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)) procesa [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) para poder buscar la barra espaciadora o la tecla ENTRAR. La clase **ButtonBase** considera que el evento **KeyUp** equivale al botón izquierdo del mouse presionado con el propósito de generar un evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737). Este procesamiento del evento se logra cuando **ButtonBase** invalida el método virtual [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983). En su implementación, establece [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) en **true**. El resultado es que cualquier elemento primario de un botón que escucha un evento de tecla, en el caso de una barra espaciadora, no recibiría el evento ya controlado para sus propios controladores.
 
 Otro ejemplo es [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683). **TextBox** no considera algunas teclas como texto, por ejemplo, las teclas de dirección; en cambio, las considera específicas del comportamiento de la interfaz de usuario de control. **TextBox** marca estos casos de eventos como controlados.
 
@@ -706,6 +702,6 @@ Es posible conseguir que los usuarios escriban datos en la aplicación de forma 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,7 +3,6 @@ author: mcleblanc
 description: Desplazamiento por Visual Studio
 title: Desplazamiento por Visual Studio
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d31e6e940f0b03667f1e19abec17804f6f3e16a6
 
@@ -13,7 +12,7 @@ ms.openlocfilehash: d31e6e940f0b03667f1e19abec17804f6f3e16a6
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Desplazamiento por Microsoft Visual Studio
+## Desplazamiento por MicrosoftVisual Studio
 
 Volvamos al proyecto que creamos antes: te mostraremos cómo desplazarte por el entorno de desarrollo integrado (IDE) Microsoft de Visual Studio.
 
@@ -21,7 +20,7 @@ Si eres desarrollador de Xcode, deberías estar familiarizado con la vista prede
 
 ![entorno de desarrollo de xcode](images/ios-to-uwp/xcode-ide.png)
 
-Microsoft Visual Studio es muy similar, aunque la vista predeterminada tiene los controles en el lado izquierdo del **cuadro de herramientas**. Los archivos de origen están en el **Explorador de soluciones** en el lado derecho y las propiedades están en **Propiedades**, en el panel **Explorador de soluciones**, de este modo:
+MicrosoftVisual Studio es muy similar, aunque la vista predeterminada tiene los controles en el lado izquierdo del **cuadro de herramientas**. Los archivos de origen están en el **Explorador de soluciones** en el lado derecho y las propiedades están en **Propiedades**, en el panel **Explorador de soluciones**, de este modo:
 
 ![entorno de desarrollo de visual studio](images/ios-to-uwp/vs-ide.png)
 
@@ -117,7 +116,7 @@ Por último, para ejecutar la aplicación, selecciona el menú **Depurar** y des
 
 ![resultados de ejecutar el primer tutorial: hola a todos](images/ios-to-uwp/vs-hello-world.png)
 
-Para salir de la aplicación, vuelve a Visual Studio, pulsa el menú **Depurar** y después pulsa **Detener depuración** (o presiona Mayús + F5). Ten en cuenta que Visual Studio te permite probar la aplicación en muchos dispositivos diferentes para comprobar cómo funcionará en cada uno.
+Para salir de la aplicación, vuelve a VisualStudio, pulsa el menú **Depurar** y después pulsa **Detener depuración** (o presiona Mayús+F5). Ten en cuenta que Visual Studio te permite probar la aplicación en muchos dispositivos diferentes para comprobar cómo funcionará en cada uno.
 
 ## Paso siguiente
 

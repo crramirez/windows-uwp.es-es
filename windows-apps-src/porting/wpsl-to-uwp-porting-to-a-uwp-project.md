@@ -3,7 +3,6 @@ author: mcleblanc
 description: "El proceso de migración se empieza creando un nuevo proyecto de Windows 10 en Visual Studio y copiando los archivos en él."
 title: "Migración de un proyecto de Windows Phone Silverlight a un proyecto de UWP"
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 74cbd9789636383e6d04798435780dcda6b897d0
 
@@ -64,7 +63,7 @@ Encontrarás que refactorizar un poco o agregar código adaptable (lo cual se ex
 
 ## Compilación condicional y código adaptable
 
-Si quieres compatibilidad con Windows Phone Silverlight y Windows 10 en un solo archivo de código, también puedes hacerlo. Si buscas en el proyecto de Windows 10 en las páginas de propiedades del proyecto, verás que el proyecto define WINDOWS\_UAP como un símbolo de compilación condicional. En general, puedes usar la siguiente lógica para realizar la compilación condicional.
+Si quieres compatibilidad con Windows Phone Silverlight y Windows 10 en un solo archivo de código, también puedes hacerlo. Si buscas en el proyecto de Windows10 en las páginas de propiedades del proyecto, verás que el proyecto define WINDOWS\_UAP como un símbolo de compilación condicional. En general, puedes usar la siguiente lógica para realizar la compilación condicional.
 
 ```csharp
 #if WINDOWS_UAP
@@ -98,7 +97,7 @@ Si es así y ahora quieres además compatibilidad con Windows 10, también puede
 #endif // WINDOWS_UAP
 ```
 
-Quizá hayas usado la compilación condicional para limitar el control del botón Atrás del hardware para Windows Phone. En Windows 10, el evento de botón Atrás es un concepto universal. Los botones Atrás implementados en hardware o en software generarán el evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596), por lo que ese es el que hay que controlar.
+Quizá hayas usado la compilación condicional para limitar el control del botón Atrás del hardware para Windows Phone. En Windows10, el evento de botón Atrás es un concepto universal. Los botones Atrás implementados en hardware o en software generarán el evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596), por lo que ese es el que hay que controlar.
 
 ```csharp
        Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested +=
@@ -113,7 +112,8 @@ Quizá hayas usado la compilación condicional para limitar el control del botó
 
 ```
 
-Quizá hayas usado la compilación condicional para limitar el control del botón de la cámara del hardware para Windows Phone. En Windows 10, el botón de la cámara de hardware es un concepto específico de la familia de dispositivos móviles. Debido a que se ejecutará un paquete de la aplicación en todos los dispositivos, cambiamos nuestra condición de tiempo de compilación a una condición de tiempo de ejecución mediante el uso de código adaptable. Para ello, usamos la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar en tiempo de ejecución la presencia de la clase [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). **HardwareButtons** se define en el SDK de la extensión móvil, por lo que deberemos agregar una referencia a ese SDK a nuestro proyecto para poder compilar este código. No obstante, ten en cuenta que el controlador solo se ejecutará en un dispositivo que implementa los tipos definidos en el SDK de extensión móvil y que esa es la familia de dispositivos móviles. Por lo tanto, el siguiente código solo cuida el uso de las características que están presentes, aunque lo consigue de una forma distinta de la compilación condicional.
+Quizá hayas usado la compilación condicional para limitar el control del botón de la cámara del hardware para Windows Phone. En Windows10, el botón de la cámara de hardware es un concepto específico de la familia de dispositivos móviles. Debido a que se ejecutará un paquete de la aplicación en todos los dispositivos, cambiamos nuestra condición de tiempo de compilación a una condición de tiempo de ejecución mediante el uso de código adaptable. Para ello, usamos la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar en tiempo de ejecución la presencia de la clase [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). 
+            **HardwareButtons** se define en el SDK de la extensión móvil, por lo que deberemos agregar una referencia a ese SDK a nuestro proyecto para poder compilar este código. No obstante, ten en cuenta que el controlador solo se ejecutará en un dispositivo que implementa los tipos definidos en el SDK de extensión móvil y que esa es la familia de dispositivos móviles. Por lo tanto, el siguiente código solo cuida el uso de las características que están presentes, aunque lo consigue de una forma distinta de la compilación condicional.
 
 ```csharp
        // Note: Cache the value instead of querying it more than once.

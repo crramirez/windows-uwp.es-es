@@ -3,7 +3,6 @@ author: mtoepke
 title: "Cómo reanudar una aplicación (DirectX y C++)"
 description: "En este tema se muestra cómo restaurar datos importantes de la aplicación cuando el sistema reanuda la aplicación DirectX para la Plataforma universal de Windows (UWP)."
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d5383da7332c80d4337f0e0b3eef0a6851fcd527
 

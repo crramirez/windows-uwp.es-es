@@ -5,7 +5,6 @@ title: "Controles por función"
 ms.assetid: 8DB4347B-91D6-4659-91F2-80ECF7BBB596
 label: Controls by function
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: 5d6548a4b72144e3a9bf5d759809720c79472afb
 

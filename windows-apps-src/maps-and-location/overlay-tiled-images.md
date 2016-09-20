@@ -16,14 +16,15 @@ ms.openlocfilehash: 71d044eb19e71786da39ca71d4f4fbd2d87645be
 
 Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante los orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
 
-**Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga la muestra siguiente de [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) (repositorio de muestras universales de Windows) que encontrarás en GitHub.
+
+            **Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga la muestra siguiente de [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) (repositorio de muestras universales de Windows) que encontrarás en GitHub.
 
 -   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
 ## Información general de la imagen en mosaico
 
 
-Los servicios de mapa, como Nokia Maps y Mapas de Bing, dividen los mapas en iconos cuadrados para una rápida recuperación y presentación. Estos iconos tienen un tamaño de 256 x 256 píxeles y se representan previamente con varios niveles de detalle. Muchos de los servicios de terceros también proporcionan datos basados en mapas que están divididos en iconos. Usa los orígenes de icono para recuperar iconos de terceros o para crear tus propios iconos personalizados y superponerlos en el mapa que se muestra en [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
+Los servicios de mapa, como Nokia Maps y Mapas de Bing, dividen los mapas en iconos cuadrados para una rápida recuperación y presentación. Estos iconos tienen un tamaño de 256x256píxeles y se representan previamente con varios niveles de detalle. Muchos de los servicios de terceros también proporcionan datos basados en mapas que están divididos en iconos. Usa los orígenes de icono para recuperar iconos de terceros o para crear tus propios iconos personalizados y superponerlos en el mapa que se muestra en [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
 **Importante**  
 Al usar la opción de orígenes de icono, no tienes que escribir código para solicitar o colocar los iconos individuales. La clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) se encarga de solicitar los iconos a medida que los necesita. Cada solicitud especifica las coordenadas X e Y, y el nivel de zoom para el icono individual. Solo debes indicar el formato del URI o el nombre de archivo que se debe usar para recuperar los iconos en la propiedad **UriFormatString**. Es decir, se insertan los parámetros reemplazables en el URI base o en el nombre de archivo para indicar dónde se deben pasar las coordenadas X e Y, y el nivel de zoom para cada icono.

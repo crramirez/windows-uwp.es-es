@@ -3,7 +3,6 @@ author: jwmsft
 description: "En este tema se explican las asignaciones de espacios de nombres XML/XAML (xmlns) tal y como se encuentran en el elemento raíz de la mayoría de los archivos XAML. También describe cómo producir asignaciones similares para tipos y ensamblados personalizados."
 title: "Espacios de nombres XAML y asignación de espacios de nombres"
 ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
-translationtype: Human Translation
 ms.sourcegitcommit: 3ca9492b334bf4b3d4f0fcab8fca5625f4e23fa5
 ms.openlocfilehash: fe24a66836d85e8d102ebc6b23b42c32a687c593
 
@@ -26,7 +25,7 @@ Tanto en su propósito general como en su aplicación a la programación de apli
 
 La información del tipo de respaldo se asocia a definiciones de espacios de nombres XAML determinadas. Los marcos de XAML, como Windows Runtime, pueden agregar varios ensamblados y espacios de nombres de código para asignarse a un único espacio de nombres XAML. Esto nos da el concepto de vocabulario XAML, que abarca un marco o tecnología de programación mayor. Un vocabulario XAML puede ser bastante amplio; por ejemplo, la mayoría del código XAML documentado para aplicaciones de Windows Runtime de esta referencia constituye un solo vocabulario XAML. Un vocabulario XAML también se puede ampliar; para ello, agrega tipos a las definiciones de código de respaldo asegurándote de incluir los tipos en espacios de nombres de código que ya se usan como orígenes de espacio de nombres asignados del vocabulario XAML.
 
-Un procesador XAML puede consultar los tipos y los miembros en los ensamblados de respaldo asociados a ese espacio de nombres XAML cuando cree una representación de objetos en tiempo de ejecución. Por este motivo, XAML resulta útil como medio para formalizar e intercambiar definiciones de comportamiento de construcción de objetos, y se usa como técnica de definición de interfaz de usuario para una aplicación de la Tienda Windows.
+Un procesador XAML puede consultar los tipos y los miembros en los ensamblados de respaldo asociados a ese espacio de nombres XAML cuando cree una representación de objetos en tiempo de ejecución. Por este motivo, XAML resulta útil como medio para formalizar e intercambiar definiciones de comportamiento de construcción de objetos, y se usa como técnica de definición de interfaz de usuario para una aplicación de la TiendaWindows.
 
 ## Espacios de nombres XAML en un uso de marcado XAML típico
 
@@ -34,11 +33,11 @@ Un archivo XAML casi siempre declara un espacio de nombres XAML predeterminado e
 
 ## Declaraciones de espacio de nombres predeterminado y del lenguaje XAML
 
-En el elemento raíz de la mayoría de archivos XAML, hay dos declaraciones **xmlns**. La primera asigna un espacio de nombres XAML como predeterminado: `xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"`
+En el elemento raíz de la mayoría de archivos XAML, hay dos declaraciones **xmlns**. La primera asigna un espacio de nombres XAML como predeterminado:  `xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"`
 
 Este es el mismo identificador de espacio de nombres XAML que se usaba en varias tecnologías de Microsoft anteriores que también usan XAML como formato de marcado para la definición de la interfaz de usuario. El uso del mismo identificador es deliberado y resulta útil cuando se migra una interfaz de usuario previamente definida a una aplicación de Windows en tiempo de ejecución con C++, C# o Visual Basic.
 
-La segunda declaración asigna un espacio de nombres XAML diferente para los elementos del lenguaje definidos por XAML, y le asigna (normalmente) el prefijo "x": `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`
+La segunda declaración asigna un espacio de nombres XAML diferente para los elementos del lenguaje definidos por XAML, y le asigna (normalmente) el prefijo "x":  `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`
 
 Este valor de **xmlns** y el prefijo x: al que está asignado también son idénticos a las definiciones que se usaban en varias tecnologías anteriores de Microsoft que usan XAML.
 
@@ -54,21 +53,27 @@ Además del espacio de nombres predeterminado y del espacio de nombres XAML del 
 
 El espacio de nombres XAML "d:" se usa para la compatibilidad con diseñadores, concretamente para la compatibilidad con diseñadores en las superficies de diseño de XAML de Microsoft Visual Studio. El espacio de nombres XAML "d:" permite el uso de atributos de diseñador o en tiempo de diseño en elementos XAML. Estos atributos de diseñador solo afectan a los aspectos de diseño relativos al comportamiento de XAML. Los atributos de diseñador se ignoran cuando el analizador XAML de Windows en tiempo de ejecución carga el mismo código XAML al ejecutarse una aplicación. Por lo general, los atributos de diseñador son válidos en cualquier elemento XAML pero, en la práctica, hay determinados escenarios en los que resulta apropiado aplicar uno mismo un atributo de diseñador. En particular, muchos de los atributos de diseñador están destinados a proporcionar una mejor experiencia de interacción con contextos de datos y orígenes de datos mientras desarrollas código XAML y otro código que use enlace de datos.
 
--   **Atributos d:DesignHeight y d:DesignWidth:** estos atributos se aplican a veces a la raíz de un archivo XAML que Visual Studio u otra superficie de diseñador XAML crean automáticamente. Por ejemplo, estos atributos se establecen en la raíz de [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) del XAML que se crea al agregar un nuevo **UserControl** al proyecto de la aplicación. Estos atributos facilitan el diseño de la composición del contenido XAML, de forma que se pueden anticipar las limitaciones de contenido que podrían existir al usar el contenido XAML en una instancia de control o en otra parte de una página de interfaz de usuario mayor.
+-   
+            **Atributos d:DesignHeight y d:DesignWidth:** estos atributos se aplican a veces a la raíz de un archivo XAML que Visual Studio u otra superficie de diseñador XAML crean automáticamente. Por ejemplo, estos atributos se establecen en la raíz de [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) del XAML que se crea al agregar un nuevo **UserControl** al proyecto de la aplicación. Estos atributos facilitan el diseño de la composición del contenido XAML, de forma que se pueden anticipar las limitaciones de contenido que podrían existir al usar el contenido XAML en una instancia de control o en otra parte de una página de interfaz de usuario mayor.
 
-   **Nota** Si migras el XAML desde Microsoft Silverlight, estos atributos podrían encontrarse en los elementos raíz que representan la página de interfaz de usuario completa. En ese caso, es posible que quieras quitar los atributos. Otras características de los diseñadores de XAML, como el simulador, son probablemente más útiles para crear diseños de página que controlen la escala y muestren los estados mejor que en un diseño de página de tamaño fijo con **d:DesignHeight** y **d:DesignWidth**.
+   
+            **Nota** Si migras el XAML desde Microsoft Silverlight, estos atributos podrían encontrarse en los elementos raíz que representan la página de interfaz de usuario completa. En ese caso, es posible que quieras quitar los atributos. Otras características de los diseñadores de XAML, como el simulador, son probablemente más útiles para crear diseños de página que controlen la escala y muestren los estados mejor que en un diseño de página de tamaño fijo con **d:DesignHeight** y **d:DesignWidth**.
 
--   **Atributo d:DataContext:** puedes establecer este atributo en una raíz de página o en un control para invalidar cualquier [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) explícito o heredado que tenga el objeto.
--   **Atributo d:DesignSource:** especifica un origen de datos en tiempo de diseño para un [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833), lo que invalida [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835).
--   **Extensiones de marcado d:DesignInstance y d:DesignData:** estas extensiones de marcado se usan para proporcionar recursos de datos en tiempo de diseño para **d:DataContext** o **d:DesignSource**. En este tema no explicaremos en detalle cómo usar los recursos de datos en tiempo de diseño. Para obtener más información, consulta [Atributos en tiempo de diseño](http://go.microsoft.com/fwlink/p/?LinkId=272504). Para obtener algunos ejemplos de uso, consulta [Datos de muestra sobre la superficie de diseño y para la creación de prototipos](https://msdn.microsoft.com/library/windows/apps/mt517866).
+-   
+            **Atributo d:DataContext:** puedes establecer este atributo en una raíz de página o en un control para invalidar cualquier [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) explícito o heredado que tenga el objeto.
+-   
+            **Atributo d:DesignSource:** especifica un origen de datos en tiempo de diseño para un [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833), lo que invalida [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835).
+-   
+            **Extensiones de marcado d:DesignInstance y d:DesignData:** estas extensiones de marcado se usan para proporcionar recursos de datos en tiempo de diseño para **d:DataContext** o **d:DesignSource**. En este tema no explicaremos en detalle cómo usar los recursos de datos en tiempo de diseño. Para obtener más información, consulta [Atributos en tiempo de diseño](http://go.microsoft.com/fwlink/p/?LinkId=272504). Para obtener algunos ejemplos de uso, consulta [Datos de muestra sobre la superficie de diseño y para la creación de prototipos](https://msdn.microsoft.com/library/windows/apps/mt517866).
 
 ### **mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 
 " mc:" indica y admite un modo de compatibilidad de marcado para leer XAML. Normalmente, el prefijo "d:" se asocia al atributo **mc:Ignorable**. Esta técnica permite a los analizadores XAML en tiempo de ejecución omitir los atributos de diseño en "d:".
 
-### **local:** y **common:**
+### 
+            **local:** y **common:**
 
-"local:" es un prefijo que se suele asignar automáticamente en las páginas XAML a un proyecto de aplicación de la Tienda Windows con plantilla. Se asigna para que haga referencia al mismo espacio de nombres que se ha creado para contener el [atributo x:Class](x-class-attribute.md) y el código de todos los archivos XAML, incluido app.xaml. Mientras definas cualquier clase personalizada que quieras usar en XAML en este mismo espacio de nombres, puedes usar el prefijo **local:** para referirte a tus tipos personalizados en XAML. Un prefijo relacionado que procede de un proyecto de aplicación de la Tienda Windows con plantilla es **common:**. Este prefijo hace referencia a un espacio de nombres "Common" anidado que contiene clases de utilidad como conversores y comandos; encontrarás las definiciones en la carpeta Common de la vista **Explorador de soluciones**.
+"local:" es un prefijo que se suele asignar automáticamente en las páginas XAML a un proyecto de aplicación de la TiendaWindows con plantilla. Se asigna para que haga referencia al mismo espacio de nombres que se ha creado para contener el [atributo x:Class](x-class-attribute.md) y el código de todos los archivos XAML, incluido app.xaml. Mientras definas cualquier clase personalizada que quieras usar en XAML en este mismo espacio de nombres, puedes usar el prefijo **local:** para referirte a tus tipos personalizados en XAML. Un prefijo relacionado que procede de un proyecto de aplicación de la TiendaWindows con plantilla es **common:**. Este prefijo hace referencia a un espacio de nombres "Common" anidado que contiene clases de utilidad como conversores y comandos; encontrarás las definiciones en la carpeta Common de la vista **Explorador de soluciones**.
 
 ### **vsm:**
 
@@ -80,7 +85,7 @@ Puedes asignar un espacio de nombres XAML con el fin de usar XAML para acceder a
 
 Una definición de **xmlns** incluye un valor, así como el nombre del prefijo. El valor es una cadena entrecomillada y seguida del signo igual. Una convención habitual en XML es asociar el espacio de nombres XML con un Identificador uniforme de recursos (URI), de manera que hay una convención para la exclusividad y la identificación. Esta convención también se observa en el espacio de nombres XAML predeterminado y en el espacio de nombres XAML del lenguaje XAML, así como en algunos espacios de nombres XAML de uso menos frecuente usados por el lenguaje XAML de Windows en tiempo de ejecución. Sin embargo, en el caso de un espacio de nombres XAML que asigna tipos personalizados, en lugar de especificar un URI, la definición del prefijo comienza por el token "using:". Después del token "using:", se asigna un nombre al espacio de nombres de código.
 
-Por ejemplo, para asignar un prefijo "custom1" que permita hacer referencia a un espacio de nombres "CustomClasses" y usar las clases de dicho espacio de nombres o ensamblado como elementos de objeto en XAML, la página XAML debe incluir la siguiente asignación en el elemento raíz: `xmlns:custom1="using:CustomClasses"`
+Por ejemplo, para asignar un prefijo "custom1" que permita hacer referencia a un espacio de nombres "CustomClasses" y usar las clases de dicho espacio de nombres o ensamblado como elementos de objeto en XAML, la página XAML debe incluir la siguiente asignación en el elemento raíz:  `xmlns:custom1="using:CustomClasses"`
 
 No es necesario asignar las clases parciales del mismo ámbito de página. Por ejemplo, no necesitas prefijos para hacer referencia a los controladores de eventos que has definido para controlar los eventos de la definición de la interfaz de usuario XAML de tu página. Además, muchas de las páginas XAML iniciales precedentes de proyectos generados en Visual Studio para una aplicación de Windows Runtime con C++, C# o Visual Basic ya asignan un prefijo "local:" que hace referencia al espacio de nombres predeterminado especificado por el proyecto y el espacio de nombres usado por las definiciones de clases parciales.
 

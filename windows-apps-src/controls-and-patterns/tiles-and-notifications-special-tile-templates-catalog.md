@@ -5,7 +5,6 @@ title: Plantillas de iconos especiales
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: ab7366b8b3cbf75f1f7e9fe35ca83077ac21d081
 
@@ -189,19 +188,22 @@ La aplicación de contactos en Windows 10 usa una plantilla de iconos especial q
 
 Las plantilla de iconos de Contactos funciona en los iconos de estos tamaños:
 
-**Icono mediano** (TileMedium)
+
+            **Icono mediano** (TileMedium)
 
 ![icono de contactos mediano](images/people-tile-medium.png)
 
  
 
-**Icono ancho** (TileWide)
+
+            **Icono ancho** (TileWide)
 
 ![icono de contactos ancho](images/people-tile-wide.png)
 
  
 
-**Icono grande (solo escritorio)** (TileLarge)
+
+            **Icono grande (solo escritorio)** (TileLarge)
 
 ![icono de contactos grande](images/people-tile-large.png)
 

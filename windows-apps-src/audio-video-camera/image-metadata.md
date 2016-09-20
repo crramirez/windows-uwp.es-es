@@ -5,7 +5,7 @@ description: "En este artículo se muestra cómo leer y escribir propiedades de 
 title: Metadatos de imagen
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 571d71d52931392a36c3c11030749f6ecb3cc961
+ms.openlocfilehash: 1f97bf89682bee430849a6b962c68a8c4877a609
 
 ---
 
@@ -66,9 +66,7 @@ Cuando tengas el descodificador, crea una lista de cadenas y agrega una entrada 
 
 -   Para obtener información sobre el lenguaje de consulta de metadatos WIC y las propiedades compatibles, consulta el tema [Consultas de metadatos nativos de formato de imagen WIC](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
--   Muchas propiedades de metadatos solo son compatibles con un subconjunto de tipos de imagen. [
-              **GetPropertiesAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/br226250) no se realizará correctamente con el código de error 0x88982F41 si una de las propiedades solicitadas no es compatible con la imagen asociada con el descodificador y con el código 0x88982F81 si la imagen no admite metadatos. Las constantes asociadas con estos códigos de error son WINCODEC\_ERR\_PROPERTYNOTSUPPORTED y WINCODEC\_ERR\_UNSUPPORTEDOPERATION y se definen en el archivo de encabezado winerror.h.
+-   Muchas propiedades de metadatos solo son compatibles con un subconjunto de tipos de imagen. [**GetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226250) no se ejecutará correctamente y generará un error con el código 0x88982F41 si la imagen asociada con el descodificador no admite una de las propiedades solicitadas y con el código 0x88982F81 si la imagen no admite metadatos. Las constantes asociadas con estos códigos de error son WINCODEC\_ERR\_PROPERTYNOTSUPPORTED y WINCODEC\_ERR\_UNSUPPORTEDOPERATION y se definen en el archivo de encabezado winerror.h.
 -   Como una imagen puede contener o no un valor para una propiedad concreta, usa el elemento **IDictionary.ContainsKey** para comprobar que una propiedad está presente en los resultados antes de intentar acceder a ella.
 
 La escritura de metadatos de imagen en la secuencia requiere un elemento **BitmapEncoder** asociado al archivo de resultado de la imagen.
@@ -79,9 +77,7 @@ Crea un objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
 
 -   Para obtener información detallada sobre las propiedades que se admiten para cada tipo de archivo de imagen, consulta [Propiedades de Windows](https://msdn.microsoft.com/library/windows/desktop/dd561977), [Directivas de metadatos de fotos](https://msdn.microsoft.com/library/windows/desktop/ee872003) y [Consultas de metadatos nativos de formato de imagen WIC](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
--   [
-              **SetPropertiesAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/br226252) no se ejecutará correctamente y devolverá el código de error 0x88982F41 si la imagen asociada con el codificador no admite una de las propiedades solicitadas.
+-   [**SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252) no se ejecutará correctamente y devolverá el código de error 0x88982F41 si la imagen asociada con el codificador no admite una de las propiedades solicitadas.
 
 ## Temas relacionados
 
@@ -96,6 +92,6 @@ Crea un objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

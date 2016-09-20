@@ -5,7 +5,7 @@ description: "En este paso, examinaremos el modo en que la muestra del juego de 
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f9e536e71dd7b5c94d587a8bb66df3b41cc9a4ae
+ms.openlocfilehash: e44bc1046310b57cffa3eb4009e91885c61470eb
 
 ---
 
@@ -309,7 +309,7 @@ Ahora, cada vez que la munición y un objetivo colisionan, una llamada a **Sound
 ## Pasos siguientes
 
 
-Con esto terminamos este rápido repaso del desarrollo de juegos DirectX para la Plataforma universal de Windows (UWP). Llegados a este punto, ya tienes una idea de qué necesitas hacer para que tu propio juego para Windows 8 sea una gran experiencia. Recuerda que tu juego se puede jugar en una amplia variedad de dispositivos y plataformas de Windows 8, así que diseña los componentes (gráficos, controles, interfaz de usuario y audio) para tantas configuraciones diferentes como puedas.
+Con esto terminamos este rápido repaso del desarrollo de juegos DirectX para la Plataforma universal de Windows (UWP). Llegados a este punto, ya tienes una idea de qué necesitas hacer para que tu propio juego para Windows8 sea una gran experiencia. Recuerda que tu juego se puede jugar en una amplia variedad de dispositivos y plataformas de Windows8, así que diseña los componentes (gráficos, controles, interfaz de usuario y audio) para tantas configuraciones diferentes como puedas.
 
 Para obtener más información sobre formas de modificar la muestra de juego proporcionada en estos documentos, consulta el tema sobre [cómo extender la muestra de juego](tutorial-resources.md).
 
@@ -564,6 +564,6 @@ void SoundEffect::PlaySound(_In_ float volume)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 48a1ef86-8514-4af8-9c93-81e869d36de7
 description: "Aprende a crear mediante programación un objeto ** AdControl ** con JavaScript."
 title: Crear un objeto AdControl en JavaScript
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 481f9d785181ca197debdb807bb0b0c7b4168632
 

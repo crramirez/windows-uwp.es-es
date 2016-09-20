@@ -32,7 +32,8 @@ En la siguiente lista se describen las nuevas características y los cambios rea
 
     Puedes usar un objeto PlayReady con varios identificadores de clave (Id. de clave) como en Windows 8.1, o bien usar los [datos del modelo de descifrado de contenido (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) con varios Id. de clave.
 
-    **Nota** En Windows 10, se admiten varios identificadores de clave en &lt;Id. de clave&gt; en CDMData.
+    
+            **Nota** En Windows 10, se admiten varios identificadores de clave en &lt;Id. de clave&gt; en CDMData.
 
      
 
@@ -68,7 +69,8 @@ Para usar la tecnología DRM de hardware de PlayReady, la aplicación web de Jav
 
 En ocasiones algunos contenidos no son compatibles con DRM de hardware. El contenido Cocktail nunca se admite en DRM de hardware; si quieres reproducir este tipo de contenido debes desactivar DRM de hardware. Algunas tecnologías DRM de hardware admitirán HEVC y otras no lo harán. Si quieres reproducir contenido HEVC y la tecnología DRM de hardware no lo admite, también tendrás que desactivarla.
 
-**Nota** Para determinar si se admite el contenido HEVC, después de crear una instancia de `com.microsoft.playready`, usa el método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441).
+
+            **Nota** Para determinar si se admite el contenido HEVC, después de crear una instancia de `com.microsoft.playready`, usa el método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441).
 
  
 
@@ -259,7 +261,8 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 }
 ```
 
-**Nota** El elemento `<SessionID>B64 encoded session ID</SessionID>` de los datos de detención segura de la muestra anterior puede ser un asterisco (\*), que es un carácter comodín para todas las sesiones de detención segura registradas. Es decir, la etiqueta **SessionID** puede ser una sesión específica o un carácter comodín (\*) para seleccionar todas las sesiones de detención segura.
+
+            **Nota** El elemento `<SessionID>B64 encoded session ID</SessionID>` de los datos de detención segura de la muestra anterior puede ser un asterisco (\*), que es un carácter comodín para todas las sesiones de detención segura registradas. Es decir, la etiqueta **SessionID** puede ser una sesión específica o un carácter comodín (\*) para seleccionar todas las sesiones de detención segura.
 
 ## Consideraciones de programación para Encrypted Media Extension
 

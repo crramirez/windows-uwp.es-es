@@ -3,7 +3,6 @@ author: mtoepke
 title: "Código completo para BasicReaderWriter"
 description: "Código completo de una clase y sus métodos para leer y escribir archivos de datos binarios en general."
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
-translationtype: Human Translation
 ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
 ms.openlocfilehash: 46762d7b7234be9ff7b4c288a09162d4f942a707
 
@@ -30,14 +29,18 @@ Este ejemplo no se puede descargar.
 
 ## Tecnologías
 
-**Lenguajes de programación**: C++  
-**Modelos de programación**: Windows Runtime
+
+            **Lenguajes de programación**: C++  
+
+            **Modelos de programación**: Windows Runtime
 
 
 ## Requisitos
 
- **Cliente mínimo compatible**: Windows 10       
- **Servidor mínimo compatible**: Windows Server 2016 Technical Preview 
+ 
+            **Cliente mínimo compatible**: Windows 10       
+
+             **Servidor mínimo compatible**: Windows Server 2016 Technical Preview 
 
 ## Ver el código (C++)
 

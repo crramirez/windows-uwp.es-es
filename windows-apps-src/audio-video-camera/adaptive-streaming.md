@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: AE98C22B-A071-4206-ABBB-C0F0FB7EF33C
 description: "En este artículo se describe cómo agregar la reproducción de contenido multimedia de streaming adaptable a las aplicaciones para la Plataforma universal de Windows (UWP). Actualmente, esta característica admite la reproducción de contenido HTTP Live Streaming (HLS) y Dynamic Adaptive Streaming over HTTP (DASH)."
 title: Streaming adaptable
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 8ebf90b02fcfbb4349ba2b303d9c91727b731ad7
 

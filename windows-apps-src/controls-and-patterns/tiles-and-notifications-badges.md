@@ -1,125 +1,129 @@
 ---
 author: mijacobs
-Description: Learn how to use tiles, badges, toasts, and notifications to provide entry points into your app and keep users up-to-date.
-title: Tiles, badges, and notifications
+Description: "Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios."
+title: Iconos, distintivos y notificaciones
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: a02793e45f190b9401f18e845af3dc73d235c3fc
+
 ---
+# Notificaciones para aplicaciones para UWP
+
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Badge notifications for UWP apps
-
 <div style="float:left; font-size:80%; text-align:left; margin: 0px 15px 15px 0px;">
-<img src="images/badge-example.png" alt="A tile with a numeric badge displaying the number 63 to indicate 63 unread mails." style="padding-bottom:0.0em; margin-bottom: 2px" /><br/>A tile with a numeric badge displaying<br/> the number 63 to indicate 63 unread mails.</div>
+<img src="images/badge-example.png" alt="A tile with a numeric badge displaying the number 63 to indicate 63 unread mails." style="padding-bottom:0.0em; margin-bottom: 2px" /><br/>Un icono con una notificación numérica que muestra<br/> el número 63 para indicar que hay 63 correos electrónicos sin leer.</div>
 
-A notification badge conveys summary or status information specific to your app. They can be numeric (1-99) or one of a set of system-provided glyphs. Examples of information best conveyed through a badge include network connection status in an online game, user status in a messaging app, number of unread mails in a mail app, and number of new posts in a social media app. 
+Las notificaciones transmiten información de estado o resumen de la aplicación y son específicos de la aplicación. Las notificaciones ser numéricas (1-99) o pueden formar parte de un conjunto de glifos proporcionados por el sistema. Algunos ejemplos de la información que se transmite mejor mediante una notificación son el estado de conexión de red de un juego en línea, el estado de un usuario de una aplicación de mensajería, la cantidad de correos electrónicos sin leer en una aplicación de correo electrónico y la cantidad de entradas nuevas en una aplicación de medios sociales. 
 
-Notification badges appear on your app's taskbar icon and in the lower-right corner of its start tile, regardless of whether the app is running. Badges can be displayed on all tile sizes.  
+Las notificaciones aparecen en la barra de tareas de la aplicación y en la esquina inferior derecha de su icono de inicio, independientemente de si se está ejecutando la aplicación. Las notificaciones se pueden mostrar en iconos de todos los tamaños.  
 
-**Note**&nbsp;&nbsp;You cannot provide your own badge image; only system-provided badge images can be used.
+**Nota**&nbsp;&nbsp;No puedes proporcionar tu propia imagen de notificación (solo se pueden usar las imágenes de notificación que proporciona el sistema).
 
-## Numeric badges
+## Notificaciones numéricas
 
 <table>
     <tr>
-        <th>Value</th>
-        <th>Badge</th>
+        <th>Valor</th>
+        <th>Notificación</th>
         <th>XML</th>
     </tr>
     <tr>
-        <td>A number from 1 to 99. A value of 0 is equivalent to the glyph value "none" and will clear the badge.</td>
-        <td>![A numeric badge less than 100.](images/badges/badge-numeric.png)</td>
+        <td>Un número de 1 a 99. Un valor de 0 es equivalente al valor de glifo "ninguno" y borrará la notificación.</td>
+        <td>![Una notificación inferior a 100.](images/badges/badge-numeric.png)</td>
         <td>`<badge value="1"/>`</td>
     </tr>
     <tr>
-        <td>Any number greater than 99.</td>
-        <td>![A numeric badge greater than 99.](images/badges/badge-numeric-greater.png)</td></td>
+        <td>Cualquier número superior a 99.</td>
+        <td>![Una notificación mayor que 99.](images/badges/badge-numeric-greater.png)</td></td>
         <td>`<badge value="100"/>`</td>
     </tr>    
 </table>
 
-## Glyph badges
-Instead of a number, a badge can display one of a non-extensible set of status glyphs. 
+## Notificaciones de glifo
+En lugar de un número, una notificación puede mostrar un elemento de un conjunto no extensible de glifos de estado. 
 
 <table>
 <tr>
-    <th>Status</th>
-    <th>Glyph</th>
+    <th>Estado</th>
+    <th>Glifo</th>
     <th>XML</th>
 </tr>
 <tr>
-    <td>none</td>
-    <td>(No badge shown.)</td>
+    <td>ninguno</td>
+    <td>(No se muestran notificaciones.)</td>
     <td>`<badge value="none"/>`</td>
 </tr>
 <tr>
-    <td>activity</td>
-    <td>![Glyph](images/badges/badge-activity.png)</td>
+    <td>actividad</td>
+    <td>![Glifo](images/badges/badge-activity.png)</td>
     <td>`<badge value="activity"/>`</td>
 </tr>
 <tr>
-    <td>alarm</td>
-    <td>![Glyph](images/badges/badge-alarm.png)</td>
+    <td>alarma</td>
+    <td>![Glifo](images/badges/badge-alarm.png)</td>
     <td>`<badge value="alarm"/>`</td>
 </tr>
 <tr>
-    <td>alert</td>
-    <td>![Glyph](images/badges/badge-alert.png)</td>
+    <td>alerta</td>
+    <td>![Glifo](images/badges/badge-alert.png)</td>
     <td>`<badge value="alert"/>`</td>
 </tr>
 <tr>
-    <td>attention</td>
-    <td>![Glyph](images/badges/badge-attention.png)</td>
+    <td>atención</td>
+    <td>![Glifo](images/badges/badge-attention.png)</td>
     <td>`<badge value="attention"/>`</td>
 </tr>
 <tr>
-    <td>available</td>
-    <td>![Glyph](images/badges/badge-available.png)</td>
+    <td>disponible</td>
+    <td>![Glifo](images/badges/badge-available.png)</td>
     <td>`<badge value="available"/>`</td>
 </tr>
 <tr>
-    <td>away</td>
-    <td>![Glyph](images/badges/badge-away.png)</td>
+    <td>ausente</td>
+    <td>![Glifo](images/badges/badge-away.png)</td>
     <td>`<badge value="away"/>`</td>
 </tr>
 <tr>
-    <td>busy</td>
-    <td>![Glyph](images/badges/badge-busy.png)</td>
+    <td>ocupado</td>
+    <td>![Glifo](images/badges/badge-busy.png)</td>
     <td>`<badge value="busy"/>`</td>
 </tr>
 <tr>
     <td>error</td>
-    <td>![Glyph](images/badges/badge-error.png)</td>
+    <td>![Glifo](images/badges/badge-error.png)</td>
     <td>`<badge value="error"/>`</td>
 </tr>
 <tr>
     <td>newMessage</td>
-    <td>![Glyph](images/badges/badge-newMessage.png)</td>
+    <td>![Glifo](images/badges/badge-newMessage.png)</td>
     <td>`<badge value="newMessage"/>`</td>
 </tr>
 <tr>
-    <td>paused</td>
-    <td>![Glyph](images/badges/badge-paused.png)</td>
+    <td>en pausa</td>
+    <td>![Glifo](images/badges/badge-paused.png)</td>
     <td>`<badge value="paused"/>`</td>
 </tr>
 <tr>
-    <td>playing</td>
-    <td>![Glyph](images/badges/badge-playing.png)</td>
+    <td>reproducción</td>
+    <td>![Glifo](images/badges/badge-playing.png)</td>
     <td>`<badge value="playing"/>`</td>
 </tr>
 <tr>
-    <td>unavailable</td>
-    <td>![Glyph](images/badges/badge-unavailable.png)</td>
+    <td>no disponible</td>
+    <td>![Glifo](images/badges/badge-unavailable.png)</td>
     <td>`<badge value="unavailable"/>`</td>
 </tr>
 </table>
 
-## Create a badge
+## Crear una notificación
 
-These examples show you how to to create a badge update.
+Estos ejemplos muestran cómo crear una actualización de notificación.
 
-### Create a numeric badge
+### Crear una notificación numérica
 
 ````csharp
 private void setBadgeNumber(int num)
@@ -146,7 +150,7 @@ private void setBadgeNumber(int num)
 }
 ````
 
-### Create a glyph badge
+### Crear una notificación de glifo
 ````csharp
 private void updateBadgeGlyph()
 {
@@ -174,7 +178,7 @@ private void updateBadgeGlyph()
 }
 ````
 
-### Clear a badge
+### Borrar una notificación
 
 ````csharp
 private void clearBadge()
@@ -183,12 +187,17 @@ private void clearBadge()
 }
 ````
 
-## Get the samples
+## Obtener las muestras
 
-* [Notifications sample](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> Shows how to create live tiles, send badge updates, and display toast notifications. 
+* [Muestra de notificaciones](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> Muestra cómo crear iconos dinámicos, enviar actualizaciones de notificación y mostrar notificaciones del sistema. 
 
-## Related articles
+## Artículos relacionados
 
-* [Adaptive and interactive toast notifications](tiles-and-notifications-adaptive-interactive-toasts.md)
-* [Create tiles](tiles-and-notifications-creating-tiles.md)
-* [Create adaptive tiles](tiles-and-notifications-create-adaptive-tiles.md)
+* [Notificaciones del sistema interactivas y adaptables](tiles-and-notifications-adaptive-interactive-toasts.md)
+* [Crear iconos](tiles-and-notifications-creating-tiles.md)
+* [Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md)
+
+
+<!--HONumber=Aug16_HO3-->
+
+

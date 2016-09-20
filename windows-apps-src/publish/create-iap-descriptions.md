@@ -20,7 +20,8 @@ Antes de escribir la información de la descripción, debes especificar uno o m�
 
 En la sección **Descripciones** del envío del IAP, haz clic en **Administrar idiomas de descripción** y, después, haz clic en **Administrar idiomas** en la página siguiente. Activa las casillas para los idiomas que deseas agregar y, después, haz clic en **Actualizar**. Los idiomas que has seleccionado se mostrarán en la sección **Idiomas de descripción** de la página. Para quitar uno o más de estos idiomas, haz clic en **Quitar** (o haz clic en **Administrar idiomas** y desactiva la casilla de los idiomas que desees quitar). Haz clic en **Guardar** cuando estés satisfecho con la lista de idiomas.
 
-> **Sugerencia** Para agregar y quitar idiomas adicionales, haz clic en **Administrar idiomas de descripción** en la información general del envío del IAP.
+> 
+            **Sugerencia** Para agregar y quitar idiomas adicionales, haz clic en **Administrar idiomas de descripción** en la información general del envío del IAP.
 
 Para editar una descripción, haz clic en el nombre del idioma en la información general del envío del IAP. A continuación se describe la información que se puede especificar para cada idioma.
 

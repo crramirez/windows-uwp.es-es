@@ -1,15 +1,14 @@
 ---
 author: mtoepke
-title: "Preguntas más frecuentes sobre la migración a DirectX 11"
+title: "Preguntas más frecuentes sobre la migración a DirectX11"
 description: "Respuestas a las preguntas más frecuentes sobre la migración de juegos a la Plataforma universal de Windows (UWP)."
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: dc98f15d80fb70fb6e106555659d699c41fbfa0b
 
 ---
 
-# Preguntas más frecuentes sobre la migración a DirectX 11
+# Preguntas más frecuentes sobre la migración a DirectX11
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -30,7 +29,8 @@ El dispositivo Direct3D ahora se usa para crear recursos en memoria de vídeo, m
 ##  ¿Tengo que actualizar el temporizador del juego para UWP?
 
 
-[
+
+            [
               **QueryPerformanceCounter**
             ](https://msdn.microsoft.com/library/windows/desktop/ms644904), junto con [**QueryPerformanceFrequency**](https://msdn.microsoft.com/library/windows/desktop/ms644905), sigue siendo la mejor manera de implementar un temporizador para las aplicaciones para UWP.
 
@@ -61,12 +61,12 @@ También puedes usar DDSTextureLoader y WICTextureLoader, de [DirectXTK](http://
 ## ¿Dónde está el SDK de DirectX?
 
 
-El SDK de DirectX se incluye como parte de Windows SDK. El SDK de DirectX más reciente que se separó del Windows SDK fue el de junio de 2010. Las muestras de Direct3D están en la Galería de código junto con el resto de las muestras de aplicaciones de la Tienda Windows.
+El SDK de DirectX se incluye como parte de WindowsSDK. El SDK de DirectX más reciente que se separó del WindowsSDK fue el de junio de 2010. Las muestras de Direct3D están en la Galería de código junto con el resto de las muestras de aplicaciones de la Tienda Windows.
 
 ## ¿Qué sucede con los redistribuibles de DirectX?
 
 
-La mayoría de los componentes del Windows SDK ya están incluidos en versiones compatibles del sistema operativo o no tienen ningún componente DLL (como DirectXMath). Todos los componentes de API de Direct3D que las aplicaciones para UWP pueden usar ya están disponibles para tu juego. No es necesario redistribuirlos.
+La mayoría de los componentes del WindowsSDK ya están incluidos en versiones compatibles del sistema operativo o no tienen ningún componente DLL (como DirectXMath). Todos los componentes de API de Direct3D que las aplicaciones para UWP pueden usar ya están disponibles para tu juego. No es necesario redistribuirlos.
 
 Las aplicaciones de escritorio Win32 todavía usan DirectSetup, por lo tanto, si también estás actualizando la versión de escritorio de tu juego, consulta [Implementación de Direct3D 11 para desarrolladores de juegos](https://msdn.microsoft.com/library/windows/desktop/ee416644).
 
@@ -82,12 +82,12 @@ Sí:
 
 -   Lee [Converting to Direct3D 9 (Convertir a Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb204851).
 -   Asegúrate de que tu juego no tenga remanentes de la canalización fija. Consulta [Características desusadas](https://msdn.microsoft.com/library/windows/desktop/cc308047).
--   Luego sigue la ruta de migración de DirectX 9: [Migrar de D3D 9 a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+-   Luego sigue la ruta de migración de DirectX9: [Migrar de D3D9 a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
-##  ¿Puedo migrar mi juego DirectX 10 u 11 a UWP?
+##  ¿Puedo migrar mi juego DirectX10 u11 a UWP?
 
 
-Los juegos de escritorio de DirectX 10.x y 11 son fáciles de migrar a UWP. Consulta [Migrar a Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476190).
+Los juegos de escritorio de DirectX10.x y11 son fáciles de migrar a UWP. Consulta [Migrar a Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476190).
 
 ## ¿Cómo elijo el dispositivo de pantalla correcto en un sistema de varios monitores?
 

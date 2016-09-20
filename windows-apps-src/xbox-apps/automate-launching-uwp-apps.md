@@ -2,7 +2,6 @@
 title: Automatizar el inicio de las aplicaciones para la Plataforma universal de Windows (UWP) de Windows 10
 description: "Los desarrolladores pueden usar la activación de protocolos y la activación del inicio para automatizar el inicio de los juegos o aplicaciones para UWP para las pruebas automatizadas."
 author: listurm
-translationtype: Human Translation
 ms.sourcegitcommit: adf2d16f9c208631f91fbcad19d1ea8087cd9cb5
 ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
 
@@ -14,9 +13,11 @@ ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
 
 Los desarrolladores tienen varias opciones para lograr el inicio automatizado de las aplicaciones para la Plataforma universal de Windows (UWP). En este documento exploramos los métodos para iniciar una aplicación mediante la activación de protocolos y del inicio.
 
-La *activación de protocolos* permite que una aplicación se registre como controlador para un protocolo determinado. 
 
-La *activación del inicio* es el inicio normal de una aplicación, como, por ejemplo, al iniciarla desde el icono de la aplicación.
+            La *activación de protocolos* permite que una aplicación se registre como controlador para un protocolo determinado. 
+
+
+            La *activación del inicio* es el inicio normal de una aplicación, como, por ejemplo, al iniciarla desde el icono de la aplicación.
 
 Con cada método de activación, tienes la posibilidad de usar la línea de comandos o una aplicación de selector. Para todos los métodos de activación, si la aplicación se está ejecutando, la activación la llevará al primer plano (lo que la reactiva) y proporcionará argumentos de activación nuevos. Esto ofrece flexibilidad para usar los comandos de activación para proporcionar mensajes nuevos a la aplicación. Es importante tener en cuenta que el proyecto debe compilarse e implementarse para que el método de activación ejecute la aplicación recién actualizada. 
 

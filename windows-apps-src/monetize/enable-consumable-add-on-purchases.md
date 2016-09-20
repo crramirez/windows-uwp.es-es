@@ -1,60 +1,67 @@
 ---
 author: mcleanbyron
 ms.assetid: FD381669-F962-465E-940B-AED9C8D19C90
-description: Learn how to use the Windows.Services.Store namespace to work with consumable add-ons.
-title: Enable consumable add-on purchases
-keywords: in-app offer
-keywords: consumable
-keywords: in-app purchase
-keywords: in-app product
-keywords: how to support in-app
-keywords: in-app purchase code sample
-keywords: in-app offer code sample
+description: Aprende a usar el espacio de nombres Windows.Services.Store para trabajar con complementos consumibles.
+title: Habilitar compras de complementos consumibles
+keywords: "muestra de código de oferta desde la aplicación"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 1e9ecad5abb9addbe41b38d0b56b84404716f2a8
+
 ---
 
-# Enable consumable add-on purchases
+# Habilitar compras de complementos consumibles
 
-Apps that target Windows 10, version 1607 or later can use methods of the [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) class in the [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) namespace to manage the user's fulfillment of consumable add-ons in your UWP apps (add-ons are also known as in-app products or IAPs). Use consumable add-ons for items that can be purchased, used, and purchased again. This is especially useful for things like in-game currency (gold, coins, etc.) that can be purchased and then used to purchase specific power-ups.
+Las aplicaciones diseñadas para Windows 10, versión 1607 o posterior pueden usar métodos de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para administrar el suministro de complementos consumibles del usuario en las aplicaciones para UWP (los complementos se conocen también como productos desde la aplicación o IAP). Usar complementos consumibles para los elementos que se puedan comprar, usar y volver a comprar. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se pueden comprar y usar para comprar bonificaciones concretas.
 
->**Note** This article is applicable to apps that target Windows 10, version 1607 or later. If your app targets an earlier version of Windows 10, you must use the [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) namespace instead of the **Windows.Services.Store** namespace. For more information, see [In-app purchases and trials using the Windows.ApplicationModel.Store namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+>**Nota**&nbsp;&nbsp;Este artículo es aplicable a las aplicaciones diseñadas para Windows 10, versión 1607 o posterior. Si la aplicación está destinada a una versión anterior de Windows 10, debes usar el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) en lugar del espacio de nombres **Windows.Services.Store**. Para obtener más información, consulta [Compras desde la aplicación y pruebas con el espacio de nombres Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
-## Overview of consumable add-ons
+## Introducción a los complementos consumibles
 
-Apps that target Windows 10, version 1607 or later can offer two types of consumable add-ons that differ in the way that fulfillments are managed:
+Las aplicaciones destinadas a Windows 10, versión 1607 o posterior pueden ofrecer dos tipos de complementos consumibles que difieren en la forma en que se administran los suministros:
 
-* **Developer-managed consumable**. For this type of consumable, you are responsible for keep tracking of the user's balance of items that the add-on represents. For example, if your add-on represents 100 coins in a game and the user consumes 10 coins, your app must report the add-on as fulfilled to the Store and your app or service must maintain the new remaining balance for the user.
-* **Store-managed consumable**. For this type of consumable, Microsoft keeps track of the user's balance of items that the add-on represents. For example, if your add-on represents an initial quantity of 100 coins in a game and the user consumes 10 coins, your app reports to the Store that 10 units of the add-on were fulfilled, and the Store maintains the remaining balance. **This type is available starting in Windows 10, version 1607. The ability to create a Store-managed consumable in the Windows Dev Center dashboard is coming soon.**
+* **Consumible administrado por el desarrollador**. Para este tipo de consumible, eres responsable de realizar un seguimiento del saldo del usuario de los elementos que representa el complemento, así como de notificar la compra del complemento cuando se complete en la Tienda y una vez que el usuario haya consumido todos los elementos. El usuario no puede comprar el complemento otra vez hasta que la aplicación notifique que la compra del complemento anterior se ha completado.
 
-To offer a consumable add-on to a user, follow this general process:
+  Por ejemplo, si el complemento representa 100 monedas en un juego y el usuario consume 10 monedas, la aplicación o el servicio debe mantener el nuevo saldo restante de 90 monedas para el usuario. Cuando el usuario haya consumido las 100 monedas, la aplicación debe notificar el complemento como completado y, a continuación, el usuario puede volver a comprar el complemento de 100 monedas.
 
-1. Enable users to [purchase the add-on](enable-in-app-purchases-of-apps-and-add-ons.md) from your app.
-3. When the user consumes the add-on (for example, they spend coins in a game), [report the add-on as fulfilled](enable-consumable-add-on-purchases.md#report_fulfilled).
+* **Consumible administrado por la Tienda**. Para este tipo de consumible, la Tienda realiza un seguimiento del saldo del usuario de los elementos que representa el complemento. Cuando el usuario consume algún elemento, debes notificar dichos elementos como completados en la Tienda. A continuación, la Tienda actualiza el saldo del usuario. La aplicación puede consultar el saldo actual del usuario en cualquier momento. Cuando el usuario haya consumido todos los elementos, el usuario puede volver a comprar el complemento.
 
-At any time, you can also [get the remaining balance](enable-consumable-add-on-purchases.md#get_balance) for a Store-managed consumable.
+  Por ejemplo, si el complemento representa una cantidad inicial de 100 monedas en un juego y el usuario consume 10 monedas, la aplicación notifica a la Tienda que se han completado 10 unidades del complemento, y la Tienda actualiza el saldo restante. Cuando el usuario ha consumido las 100 monedas, puede volver a comprar el complemento de 100 monedas.
 
-## Prerequisites
+  >**Nota**&nbsp;&nbsp;Los consumibles administrados por la Tienda están disponibles a partir de Windows 10, versión 1607. La capacidad para crear un consumible administrado por la Tienda en el panel del Centro de desarrollo de Windows estará disponible próximamente.
 
-These examples have the following prerequisites:
-* A Visual Studio project for a Universal Windows Platform (UWP) app that targets Windows 10, version 1607 or later.
-* You have created an app in the Windows Dev Center dashboard with consumable add-ons (also known as in-app products or IAPs), and this app is published and available in the Store. This can be an app that you want to release to customers, or it can be a basic app that meets minimum [Windows App Certification Kit](https://developer.microsoft.com/windows/develop/app-certification-kit) requirements that you are using for testing purposes only. For more information, see the [testing guidance](in-app-purchases-and-trials.md#testing).
+Para ofrecer un complemento consumible a un usuario, sigue este proceso general:
 
-The code in these examples assume:
-* The code runs in the context of a [Page](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) that contains a [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) named ```workingProgressRing``` and a [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) named ```textBlock```. These objects are used to indicate that an asynchronous operation is occurring and to display output messages, respectively.
-* The code file has a **using** statement for the **Windows.Services.Store** namespace.
-* The app is a single-user app that runs only in the context of the user that launched the app. For more information, see [In-app purchases and trials](in-app-purchases-and-trials.md#api_intro).
+1. Permitir que los usuarios [compren el complemento](enable-in-app-purchases-of-apps-and-add-ons.md) desde la aplicación.
+3. Cuando el usuario consume el complemento (por ejemplo, al gastar monedas en un juego), [notifica el complemento como completado](enable-consumable-add-on-purchases.md#report_fulfilled).
+
+En cualquier momento, también puedes [obtener el saldo restante](enable-consumable-add-on-purchases.md#get_balance) para un consumible administrado por la tienda.
+
+## Requisitos previos
+
+Estos ejemplos cumplen los siguientes requisitos:
+* Un proyecto de Visual Studio para una aplicación de la Plataforma universal de Windows (UWP) destinado a Windows 10, versión 1607 o posterior.
+* Has creado una aplicación en el panel del Centro de desarrollo de Windows con los complementos consumibles (también conocidos como productos desde la aplicación o IAP) y esta aplicación está publicada y disponible en la Tienda. Esta puede ser una aplicación que quieres publicar para los clientes o puede ser una aplicación básica que cumpla con los requisitos mínimos del [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) que se usa solo con fines de prueba. Para obtener más información, consulta la [guía para prueba](in-app-purchases-and-trials.md#testing).
+
+El código de estos ejemplos supone que:
+* El código se ejecuta en el contexto de una [página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contiene un elemento [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` y un elemento [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Estos objetos se usan para indicar que se está produciendo una operación asincrónica y para mostrar mensajes de salida, respectivamente.
+* El archivo de código tiene una instrucción **using** para el espacio de nombres **Windows.Services.Store**.
+* La aplicación es una aplicación de usuario único que se ejecuta solamente en el contexto del usuario que inició la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro) (Habilitar las compras de productos desde la aplicación y las pruebas).
+
+Para una aplicación de muestra completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 <span id="report_fulfilled" />
-## Report a consumable add-on as fulfilled
+## Notificar un complemento consumible como completado
 
-After the user [purchases the add-on](enable-in-app-purchases-of-apps-and-add-ons.md) from your app and they consume your add-on, your app must report the add-on as fulfilled by calling the [ReportConsumableFulfillmentAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.reportconsumablefulfillmentasync.aspx) method of the [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) class. You must pass the following information to this method:
+Después de que el usuario [compre el complemento](enable-in-app-purchases-of-apps-and-add-ons.md) desde la aplicación y de consumir el complemento, la aplicación debe notificar el complemento como completado llamando al método [ReportConsumableFulfillmentAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.reportconsumablefulfillmentasync.aspx) de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Debes pasar la siguiente información a este método:
 
-* The [Store ID](in-app-purchases-and-trials.md#store_ids) of the add-on that you want to report as fulfilled.
-* The units of the add-on you want to report as fulfilled.
-  * For a developer-managed consumable, specify 1 for the *quantity* parameter. This alerts the Store that the consumable has been fulfilled, and the customer can then purchase the consumable again. The user cannot purchase the consumable again until your app has notified the Store that it was fulfilled.
-  * For a Store-managed consumable, specify the actual number of units that have been consumed. The Store will update the remaining balance for the consumable.
-* The tracking ID for the fulfillment. This is a developer-supplied GUID that identifies the specific transaction that the fulfillment operation is associated with for tracking purposes. For more information, see the remarks in [ReportConsumableFulfillmentAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.reportconsumablefulfillmentasync.aspx).
+* El [Id. de la tienda](in-app-purchases-and-trials.md#store_ids) del complemento que quieres notificar como completado.
+* Las unidades del complemento que quieres notificar como completadas.
+  * Para los consumibles administrados por el desarrollador, especifica 1 para el parámetro *cantidad*. Esto alerta a la Tienda de que el consumible se ha suministrado y el cliente puede, a continuación, volver a comprar el consumible. El usuario no puede volver a comprar el consumible hasta que la aplicación haya notificado a la Tienda que se suministró.
+  * Para un consumible administrado por la Tienda, especifica el número real de unidades que se hayan consumido. La Tienda actualizará el saldo restante para el consumible.
+* El identificador de seguimiento del suministro. Este es un GUID proporcionado por el desarrollador que identifica la transacción específica a la que la operación de suministro está asociada para realizar un seguimiento. Para obtener más información, consulta las observaciones de [ReportConsumableFulfillmentAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.reportconsumablefulfillmentasync.aspx).
 
-This example demonstrates how to report a Store-managed consumable as fulfilled.
+Este ejemplo muestra cómo notificar un consumible administrado por la Tienda como completado.
 
 ```csharp
 private StoreContext context = null;
@@ -114,9 +121,9 @@ public async void ConsumeAddOn(string storeId)
 ```
 
 <span id="get_balance" />
-## Get the remaining balance for a Store-managed consumable
+## Obtener el saldo restante para un consumible administrado por la Tienda
 
-This example demonstrates how to use the [GetConsumableBalanceRemainingAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getconsumablebalanceremainingasync.aspx) method of the [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) class to get the remaining balance for a Store-managed consumable add-on.
+En este ejemplo se muestra cómo usar el método [GetConsumableBalanceRemainingAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getconsumablebalanceremainingasync.aspx) de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para obtener el saldo restante para un complemento consumible administrado por la Tienda.
 
 ```csharp
 private StoreContext context = null;
@@ -162,10 +169,17 @@ public async void GetRemainingBalance(string storeId)
 }
 ```
 
-## Related topics
+## Temas relacionados
 
-* [In-app purchases and trials](in-app-purchases-and-trials.md)
-* [Get product info for apps and add-ons](get-product-info-for-apps-and-add-ons.md)
-* [Get license info for apps and add-ons](get-license-info-for-apps-and-add-ons.md)
-* [Enable in-app purchases of apps and add-ons](enable-in-app-purchases-of-apps-and-add-ons.md)
-* [Implement a trial version of your app](implement-a-trial-version-of-your-app.md)
+* [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md)
+* [Obtener información de producto para aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
+* [Obtener información de licencia para aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
+* [Habilitar compras desde la aplicación para aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md)
+* [Muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

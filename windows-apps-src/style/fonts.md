@@ -47,8 +47,7 @@ No tienes que usar la fuente Segoe UI para todo. Puedes usar otras fuentes para 
 
 Esta es la lista de fuentes que se garantiza que estarán disponibles en todas las ediciones de Windows 10 que admitan aplicaciones para UWP.
 
-
-              **Nota** Si usas una fuente que no esté en esta lista, es posible que la aplicación descargue automáticamente los datos de fuente de un servicio Microsoft. Esto puede tener influencia en el rendimiento y en otros aspectos que pueden ser un problema, especialmente para dispositivos móviles. En particular, ten en cuenta que esto podría consumir parte del plan de datos móviles de un usuario o provocar la aplicación de costos de uso de datos móviles. Las aplicaciones para UWP que estarán disponibles en los dispositivos móviles nunca deben usar fuentes para el contenido de la interfaz de usuario que no aparezcan en esta lista.
+**Nota** Si usas una fuente que no esté en esta lista, es posible que la aplicación descargue automáticamente los datos de fuente de un servicio Microsoft. Esto puede tener influencia en el rendimiento y en otros aspectos que pueden ser un problema, especialmente para dispositivos móviles. En particular, ten en cuenta que esto podría consumir parte del plan de datos móviles de un usuario o provocar la aplicación de costos de uso de datos móviles. Las aplicaciones para UWP que estarán disponibles en los dispositivos móviles nunca deben usar fuentes para el contenido de la interfaz de usuario que no aparezcan en esta lista.
 
  
 
@@ -275,8 +274,7 @@ Esta es la lista de fuentes que se garantiza que estarán disponibles en todas l
 
 **Para diseñadores**
 * [Etiqueta (o bloque de texto)](../controls-and-patterns/labels.md)
-* 
-              [Iconos de Segoe UI Symbol](segoe-ui-symbol-font.md)
+* [Iconos de Segoe UI Symbol](segoe-ui-symbol-font.md)
 **Para desarrolladores (XAML)**
 * [Recursos de temas en XAML](https://msdn.microsoft.com/library/windows/apps/mt187274)
 * [Diseñar una página de la aplicación](https://msdn.microsoft.com/library/windows/apps/hh872191)

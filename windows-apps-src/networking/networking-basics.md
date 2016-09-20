@@ -5,7 +5,7 @@ title: "Conceptos básicos de redes"
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 96c6617595b49c48ee77bec87b6aa87ae1634ed9
+ms.openlocfilehash: 221c3278f8561fa322257714f67bd2985fa04f22
 
 ---
 
@@ -38,7 +38,7 @@ En determinadas circunstancias, existen otras funcionalidades que pueden ser nec
 
 ## Comunicación cuando la aplicación no está en primer plano
 
-El artículo [Support your app with background tasks (Consigue que tu aplicación sea compatible con tareas en segundo plano)](https://msdn.microsoft.com/library/windows/apps/mt299103) contiene información general sobre el uso de tareas en segundo plano para que realicen trabajos cuando la aplicación no esté en primer plano. Más concretamente, tu código debe realizar unos pasos especiales para recibir notificaciones cuando no es la aplicación en primer plano actual y llegan datos a través de la red para esta. Usaste desencadenadores de canal de control para este propósito en Windows 8 y aún se admiten en Windows 10. Encontrarás información completa acerca del uso de desencadenadores de canal de control [**aquí**](https://msdn.microsoft.com/library/windows/apps/hh701032). Esta nueva tecnología de Windows 10 proporciona una mejor funcionalidad con menos sobrecarga en algunos escenarios, como los siguientes sockets de secuencia habilitados para la inserción: el agente de sockets y los desencadenadores de actividad de socket.
+El artículo [Dar soporte a tu aplicación mediante tareas en segundo plano)](https://msdn.microsoft.com/library/windows/apps/mt299103) contiene información general sobre el uso de tareas en segundo plano para que realicen trabajos cuando la aplicación no esté en primer plano. Más concretamente, tu código debe realizar unos pasos especiales para recibir notificaciones cuando no es la aplicación en primer plano actual y llegan datos a través de la red para esta. Usaste desencadenadores de canal de control para este propósito en Windows 8 y aún se admiten en Windows 10. Encontrarás información completa acerca del uso de desencadenadores de canal de control [**aquí**](https://msdn.microsoft.com/library/windows/apps/hh701032). Esta nueva tecnología de Windows 10 proporciona una mejor funcionalidad con menos sobrecarga en algunos escenarios, como los siguientes sockets de secuencia habilitados para la inserción: el agente de sockets y los desencadenadores de actividad de socket.
 
 Si la aplicación usa [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) o [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906), podrá transferir la propiedad de un socket abierto a un agente de sockets proporcionado por el sistema y, a continuación, salir del primer plano o incluso cerrarse. Cuando se establece una conexión en el socket transferido o si llega tráfico a ese socket, se activa la aplicación o su tarea en segundo plano designada. Si la aplicación no se está ejecutando, se iniciará. A continuación, el agente de sockets notifica a la aplicación mediante la clase [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009), que hay tráfico nuevo. Es entonces cuando la aplicación recupera el socket desde el agente de sockets y procesa el tráfico en el mismo socket. Esto significa que la aplicación consume menos recursos del sistema cuando no se está procesando activamente el tráfico de red.
 
@@ -67,12 +67,8 @@ Un objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br2
 
 Hay dos formas de asegurar una conexión de [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) con SSL/TLS:
 
--   [
-              **ConnectAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701504): establece la conexión inicial en un servicio de red y negocia inmediatamente el uso de SSL/TLS de todas las comunicaciones.
--   [
-              **UpgradeToSslAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/br226922): conecta inicialmente a un servicio de red sin cifrado. La aplicación puede enviar o recibir datos. A continuación, actualiza la conexión para usar SSL/TLS en todas las comunicaciones.
+-   [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504): establece la conexión inicial en un servicio de red y negocia inmediatamente el uso de SSL/TLS de todas las comunicaciones.
+-   [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922): conecta inicialmente con un servicio de red sin cifrado. La aplicación puede enviar o recibir datos. A continuación, actualiza la conexión para usar SSL/TLS en todas las comunicaciones.
 
 El valor de SocketProtectionLevel que proporciones establecerá el nivel de protección mínimo que deseas permitir. Sin embargo, el nivel de protección definitivo de la conexión establecida se determina en un proceso de negociación entre ambos puntos de la conexión. El resultado puede ser un nivel de protección más alto que el especificado, si el otro punto de conexión requiere un nivel superior. La intensidad de SSL que se haya negociado con [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) o [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) puede determinarse al obtener la propiedad [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868) después de que la operación asincrónica se complete correctamente.
 
@@ -80,16 +76,10 @@ El valor de SocketProtectionLevel que proporciones establecerá el nivel de prot
 
 ### Usar ConnectAsync
 
-[
-              **ConnectAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701504) se puede usar para establecer la conexión inicial a un servicio de red y, a continuación, negociar inmediatamente el uso de SSL/TLS de todas las comunicaciones. Hay dos métodos **ConnectAsync** que admiten pasar un parámetro *protectionLevel*:
+[**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) se puede usar para establecer la conexión inicial a un servicio de red y, a continuación, negociar inmediatamente el uso de SSL/TLS de todas las comunicaciones. Hay dos métodos **ConnectAsync** que admiten pasar un parámetro *protectionLevel*:
 
--   [
-              **ConnectAsync(EndpointPair, SocketProtectionLevel)**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701511): Inicia una operación asincrónica en un objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para conectar con un destino de red remoto especificado como un objeto [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953) y una enumeración [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
--   [
-              **ConnectAsync(HostName, String, SocketProtectionLevel)**
-            ](https://msdn.microsoft.com/library/windows/apps/br226916): Inicia una operación asincrónica en un objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para conectar con un destino remoto especificado por un nombre de host remoto, un nombre de servicio remoto y una enumeración [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
+-   [**ConnectAsync(EndpointPair, SocketProtectionLevel)**](https://msdn.microsoft.com/library/windows/apps/hh701511): inicia una operación asincrónica en un objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para establecer la conexión con un destino de red remoto especificado como un objeto [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953) y una enumeración [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
+-   [**ConnectAsync(HostName, String, SocketProtectionLevel)**](https://msdn.microsoft.com/library/windows/apps/br226916): inicia una operación asincrónica en un objeto [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) para establecer la conexión con un destino remoto especificado por un nombre de host remoto, un nombre de servicio remoto y una enumeración [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
 
 Si el parámetro *protectionLevel* se establece en **Windows.Networking.Sockets.SocketProtectionLevel.Ssl** cuando se llama a cualquiera de los métodos [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) arriba mencionados, la clase [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) deberá establecerse para usar SSL/TLS en el cifrado. Este valor requiere cifrado y nunca permite el uso de un cifrado NULL.
 
@@ -434,6 +424,6 @@ Las API para redes admiten distintos métodos para recuperar la información que
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

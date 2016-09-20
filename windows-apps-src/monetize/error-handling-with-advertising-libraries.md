@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: cb7380d0-bc14-4936-aa1c-206304b3dc70
 description: Aprende a controlar los errores generados por la clase AdControl en las bibliotecas de Microsoft Advertising.
 title: Control de errores con las bibliotecas de Microsoft Advertising
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 5e0c7e6328247e5f686b14b10c80d8aafc13e0e4
 

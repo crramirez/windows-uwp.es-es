@@ -3,7 +3,6 @@ author: mtoepke
 title: Crear sombreadores y dibujar primitivos
 description: "Aquí te mostramos cómo usar archivos de origen HLSL para compilar y crear sombreadores que luego podrás usar para dibujar primitivos en la pantalla."
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 15b5f83b45b928baaa484c10dc6e7bfe9c27a924
 
@@ -18,7 +17,8 @@ Aquí te mostramos cómo usar archivos de origen HLSL para compilar y crear somb
 
 Creamos y dibujamos un triángulo amarillo con sombreadores de vértices y píxeles. Después de crear el dispositivo Direct3D, la cadena de intercambio y la vista del destino de representación, leemos datos de los archivos de objetos binarios del sombreador.
 
-**Objetivo:** crear sombreadores y dibujar primitivos.
+
+            **Objetivo:** crear sombreadores y dibujar primitivos.
 
 ## Requisitos previos
 
@@ -27,7 +27,8 @@ Suponemos que estás familiarizado con C++. También necesitas tener experiencia
 
 Suponemos además que has consultado [Inicio rápido: configurar recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md).
 
-**Tiempo para completarlo:** 20 minutos.
+
+            **Tiempo para completarlo:** 20 minutos.
 
 ## Instrucciones
 

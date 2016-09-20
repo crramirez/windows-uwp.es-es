@@ -3,7 +3,6 @@ author: PatrickFarley
 title: "Obtener la ubicación del usuario"
 description: "Busca la ubicación del usuario y responde a los cambios de ubicación. La configuración de privacidad de la aplicación Configuración administra el acceso a la ubicación del usuario. En este tema también se muestra cómo comprobar si la aplicación tiene permisos para acceder a la ubicación del usuario."
 ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
-translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
 ms.openlocfilehash: d35bf3ef13e2b36dfed6613a00f65d19b9013464
 
@@ -17,7 +16,8 @@ ms.openlocfilehash: d35bf3ef13e2b36dfed6613a00f65d19b9013464
 
 Busca la ubicación del usuario y responde a los cambios de ubicación. La configuración de privacidad de la aplicación Configuración administra el acceso a la ubicación del usuario. En este tema también se muestra cómo comprobar si la aplicación tiene permisos para acceder a la ubicación del usuario.
 
-**Sugerencia** Para obtener más información sobre cómo obtener acceso a la ubicación del usuario en la aplicación, descarga la muestra siguiente de [Windows-universal-samples repo (Repositorio de muestras universales de Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub.
+
+            **Sugerencia** Para obtener más información sobre cómo obtener acceso a la ubicación del usuario en la aplicación, descarga la muestra siguiente de [Windows-universal-samples repo (Repositorio de muestras universales de Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub.
 
 -   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -41,7 +41,8 @@ En esta sección se describe cómo detectar la ubicación geográfica del usuari
 
 ### Paso 1: Solicitar acceso para la ubicación del usuario
 
-**Importante** Debes solicitar permiso para obtener acceso a la ubicación del usuario mediante el método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) antes de intentar acceder a esta. Debes llamar al método **RequestAccessAsync** desde el subproceso de la interfaz de usuario, y la aplicación debe estar en primer plano. Hasta que el usuario no conceda permiso a la aplicación, esta no podrá acceder a la información de ubicación del usuario.
+
+            **Importante** Debes solicitar permiso para obtener acceso a la ubicación del usuario mediante el método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) antes de intentar acceder a esta. Debes llamar al método **RequestAccessAsync** desde el subproceso de la interfaz de usuario, y la aplicación debe estar en primer plano. Hasta que el usuario no conceda permiso a la aplicación, esta no podrá acceder a la información de ubicación del usuario.
 
 ```csharp
 using Windows.Devices.Geolocation;
@@ -254,7 +255,8 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 Para que la aplicación pueda acceder a la ubicación del usuario, la opción **Ubicación** debe estar habilitada en el dispositivo. En la aplicación **Configuración**, comprueba que la siguiente **configuración de privacidad de ubicación** esté activada:
 
--   **La ubicación de este dispositivo...** está **activada** (no es aplicable en Windows 10 Mobile)
+-   
+            **La ubicación de este dispositivo...** está **activada** (no es aplicable en Windows 10 Mobile)
 -   La configuración de servicios de ubicación, **"Ubicación"**, está **activada**
 -   En **Elige las aplicaciones que pueden usar tu ubicación**, la aplicación está establecida como **activada**
 

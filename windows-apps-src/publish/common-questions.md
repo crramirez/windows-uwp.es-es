@@ -28,7 +28,7 @@ Si usas una de las plantillas de anuncio predeterminadas, puedes elegir el tama�
 
 ## ¿Dónde aparecerá el anuncio?
 
-El anuncio aparecerá en las aplicaciones que comparten la clasificación por edades y la versión del SO de tu aplicación. Estas propiedades se establecen al publicar la aplicación en la Tienda Windows.
+El anuncio aparecerá en las aplicaciones que comparten la clasificación por edades y la versión del SO de tu aplicación. Estas propiedades se establecen al publicar la aplicación en la TiendaWindows.
 
 Actualmente, se admiten campañas publicitarias en estos países y regiones:
 

@@ -5,7 +5,6 @@ title: "Directrices para la configuración de una aplicación"
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: aeccd755c5fe5df8f2ff5549950ce2d6cb74e8e4
 
@@ -24,7 +23,8 @@ La configuración es la parte de la aplicación que el usuario puede personaliza
 
 ## <span id="Should_I_include_a_settings_page_in_my_app_"></span><span id="should_i_include_a_settings_page_in_my_app_"></span><span id="SHOULD_I_INCLUDE_A_SETTINGS_PAGE_IN_MY_APP_"></span>¿Debo incluir una página de configuración en mi aplicación?
 
-Estos son ejemplos de opciones de la aplicación que pertenecen a una página de configuración de la aplicación: 
+
+        Estos son ejemplos de opciones de la aplicación que pertenecen a una página de configuración de la aplicación: 
 
 -   Las opciones de configuración que afectan al comportamiento de la aplicación y que no se ajustan con frecuencia, como cuando eliges entre Celsius o Fahrenheit como unidades de temperatura predeterminadas en una aplicación del tiempo, cuando cambias la configuración de una cuenta para una aplicación de correo, la configuración de las notificaciones o las opciones de accesibilidad.
 -   Opciones que dependen de las preferencias del usuario, como música, efectos de sonido o temas de colores.
@@ -115,11 +115,16 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
 -   Presenta el contenido de arriba a abajo en una sola columna, desplazable si fuera necesario. Limita el desplazamiento a un máximo del doble del alto de pantalla.
 -   Usa los controles siguientes para la configuración de la aplicación:
 
-    -   [Modificadores para alternar](../controls-and-patterns/toggles.md): para permitir que los usuarios activen o desactiven valores.
-    -   [Botones de radio](../controls-and-patterns/radio-button.md): para permitir a los usuarios elegir un elemento de un conjunto de hasta 5 opciones relacionadas que sean mutuamente excluyentes.
-    -   [Cuadro de entrada de texto](../controls-and-patterns/text-block.md): para permitir que los usuarios escriban texto. Usa el tipo de cuadro de texto que corresponda al tipo de texto que obtienes del usuario, como correo electrónico o contraseña.
-    -   [Hipervínculos](../controls-and-patterns/hyperlinks.md): para llevar a los usuarios a otra página dentro de la aplicación o a un sitio web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
-    -   [Botones](../controls-and-patterns/buttons.md): para permitir que los usuarios inicien una acción inmediata sin descartar el control flotante Configuración actual.
+    -   
+            [Modificadores para alternar](../controls-and-patterns/toggles.md): para permitir que los usuarios activen o desactiven valores.
+    -   
+            [Botones de radio](../controls-and-patterns/radio-button.md): para permitir a los usuarios elegir un elemento de un conjunto de hasta 5 opciones relacionadas que sean mutuamente excluyentes.
+    -   
+            [Cuadro de entrada de texto](../controls-and-patterns/text-block.md): para permitir que los usuarios escriban texto. Usa el tipo de cuadro de texto que corresponda al tipo de texto que obtienes del usuario, como correo electrónico o contraseña.
+    -   
+            [Hipervínculos](../controls-and-patterns/hyperlinks.md): para llevar a los usuarios a otra página dentro de la aplicación o a un sitio web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
+    -   
+            [Botones](../controls-and-patterns/buttons.md): para permitir que los usuarios inicien una acción inmediata sin descartar el control flotante Configuración actual.
 -   Agrega un mensaje descriptivo si se desactiva uno de los controles. Coloca este mensaje por encima del control deshabilitado.
 -   Anima controles y contenido como un solo bloque después de que se hayan animado el control flotante de configuración y el encabezado. Anima el contenido mediante las animaciones [**enterPage**](https://msdn.microsoft.com/library/windows/apps/br212672) o [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288), con un desplazamiento izquierdo de 100 píxeles.
 -   Usa encabezados de sección, párrafos y etiquetas para ayudar a organizar y aclarar el contenido, si fuera necesario.
@@ -132,12 +137,15 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
 ## <span id="related_topics"></span>Temas relacionados
 
 * [Conceptos básicos del diseño de comandos](https://msdn.microsoft.com/library/windows/apps/dn958433)
-* [Directrices para controles de progreso](https://msdn.microsoft.com/library/windows/apps/hh465469)
+* 
+            [Directrices para controles de progreso](https://msdn.microsoft.com/library/windows/apps/hh465469)
             
           
             **Para desarrolladores (XAML)**
+          
 * [Almacenar y recuperar datos de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt299098)
-* [
+* 
+            [
               **EntranceThemeTransition**
             ](https://msdn.microsoft.com/library/windows/apps/br210288) �
 

@@ -5,7 +5,6 @@ title: Notifications Visualizer
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: dcbf05669093047bd76dc01c217daf353d8fb9da
 
@@ -32,7 +31,8 @@ Esta captura de pantalla de la aplicación muestra la carga de XML y cómo apare
 
 Con Notifications Visualizer, puedes crear y probar cargas de iconos adaptables sin tener que editar e implementar la aplicación en sí. Una vez creada una carga con resultados visuales ideales puedes integrarla en tu aplicación. Consulta [Enviar una notificación de icono local](tiles-and-notifications-sending-a-local-tile-notification.md) para obtener más información.
 
-**Nota** La simulación de Notifications Visualizer del menú Inicio de Windows no siempre es totalmente precisa y no es compatible con algunas propiedades de carga como [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712). Cuando tengas el diseño de icono que desees, pruébalo anclando el icono al menú Inicio real para comprobar que aparece como deseas.
+
+            **Nota** La simulación de Notifications Visualizer del menú Inicio de Windows no siempre es totalmente precisa y no es compatible con algunas propiedades de carga como [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712). Cuando tengas el diseño de icono que desees, pruébalo anclando el icono al menú Inicio real para comprobar que aparece como deseas.
 
  
 

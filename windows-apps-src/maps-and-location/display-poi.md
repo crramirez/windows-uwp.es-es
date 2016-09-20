@@ -3,8 +3,9 @@ author: msatranjr
 title: "Mostrar puntos de interés en un mapa"
 description: "Agrega puntos de interés a un mapa con marcadores, imágenes, formas y elementos de la interfaz de usuario de XAML."
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 6f21f9bf9c909d0f89a663cdda05934ad9b4011b
+ms.openlocfilehash: aec420d6591546e63c6343d7151afe9e95d1afd8
 
 ---
 
@@ -26,9 +27,9 @@ Muestra elementos de la interfaz de usuario de XAML en el mapa como, por ejemplo
 
 En resumen:
 
--   [Agrega un MapIcon al mapa](#mapicon) para mostrar una imagen, por ejemplo, un marcador con texto opcional.
--   [Agrega un MapPolygon al mapa](#mappolygon) para mostrar una forma multipunto.
--   [Agrega una MapPolyline al mapa](#mappolyline) para mostrar las líneas en el mapa.
+-   [Agrega MapIcon al mapa](#mapicon) para mostrar una imagen, por ejemplo, un marcador con texto opcional.
+-   [Agrega MapPolygon al mapa](#mappolygon) para mostrar una forma multipunto.
+-   [Agrega MapPolyline al mapa](#mappolyline) para mostrar las líneas en el mapa.
 -   [Agrega código XAML al mapa](#mapxaml) para mostrar elementos de la interfaz de usuario personalizados.
 
 Si quieres colocar en el mapa un elevado número de elementos, considera la posibilidad de [superponer imágenes en mosaico en el mapa](overlay-tiled-images.md). Para mostrar carreteras en el mapa, consulta [Mostrar rutas e indicaciones](routes-and-directions.md).
@@ -230,6 +231,6 @@ En este ejemplo se muestra una colección de elementos XAML enlazados a la clase
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

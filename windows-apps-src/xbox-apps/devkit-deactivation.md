@@ -3,7 +3,6 @@ author: Mtoepke
 title: "Desactivación del modo de desarrollador de Xbox One"
 description: "Cómo desactivar el modo de desarrollador."
 area: Xbox
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 0751598ba50d69e1667b20ddc03f30d65ce08002
 
@@ -45,7 +44,8 @@ El método preferido de desactivar el modo de desarrollador en la consola es usa
 
 También puedes desactivar el modo de desarrollador restableciendo la consola.  
 
-> **Nota**
+> 
+            **Nota**
             &nbsp;&nbsp;Al restablecer la consola, se perderán todos los datos guardados a nivel local.
 
 Para restablecer la consola, realiza los siguientes pasos:

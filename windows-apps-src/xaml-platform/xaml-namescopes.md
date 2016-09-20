@@ -5,7 +5,7 @@ title: "Ámbitos de nombres XAML"
 ms.assetid: EB060CBD-A589-475E-B83D-B24068B54C21
 translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: b8b833f40bc38799acc8813d38ddea63426f05b3
+ms.openlocfilehash: 34ef0bf246abe49a5e19adef66bddda7004a3441
 
 ---
 
@@ -33,7 +33,7 @@ Técnicamente, lo que sucede es que el código XAML se somete a un pase del comp
 
 XAML también se puede usar como la entrada de cadena del método [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048), que actúa de manera similar a la operación de análisis de origen XAML inicial. **XamlReader.Load** crea un nuevo árbol desconectado de objetos en tiempo de ejecución. Después, el árbol desconectado puede conectarse a algún punto del árbol de objetos principal. Debes conectar explícitamente el árbol de objetos creado; para ello, agrégalo a una colección de propiedades de contenido como **Children**, o establece otra propiedad que acepte un valor de objeto (por ejemplo, si cargas un nuevo [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101) para un valor de propiedad [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378)).
 
-### Implicaciones del ámbito de nombres XAML de XamlReader.Load
+### Implicaciones del ámbito de nombres XAML de XamlReader.Load 
 
 El ámbito de nombres XAML preliminar que se define con el nuevo árbol de objetos creado por [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048) evalúa los nombres definidos en el código XAML proporcionado para comprobar su exclusividad. Si los nombres del código XAML proporcionado no son internamente exclusivos en este punto, **XamlReader.Load** inicia una excepción. El árbol de objetos desconectado no intenta combinar su ámbito de nombres XAML con el ámbito de nombres XAML de la aplicación principal, si está conectado al árbol de objetos de la aplicación principal. Después de conectar los árboles, la aplicación contará con un árbol de objetos unificado, pero con ámbitos de nombres XAML discretos en su interior. Las divisiones se producen en los puntos de conexión entre los objetos, donde estableces que alguna propiedad sea el valor devuelto de una llamada **XamlReader.Load**.
 
@@ -52,7 +52,7 @@ Puedes usar varias técnicas para obtener referencias a los objetos definidos en
 
 ## Ámbitos de nombres XAML en plantillas
 
-En XAML, las plantillas ofrecen la posibilidad de volver a usar y aplicar contenido de una manera sencilla, pero las plantillas también pueden incluir elementos con nombres definidos en el nivel de plantilla. Esa misma plantilla podría usarse varias veces en una página. Por esta razón, las plantillas definen sus propios ámbitos de nombres XAML sin importar la página contenedora donde se aplica el estilo o la plantilla. Observa este ejemplo:
+En XAML, las plantillas ofrecen la posibilidad de volver a usar y aplicar contenido de una manera sencilla, pero las plantillas también pueden incluir elementos con nombres definidos en el nivel de plantilla.  Esa misma plantilla podría usarse varias veces en una página. Por esta razón, las plantillas definen sus propios ámbitos de nombres XAML sin importar la página contenedora donde se aplica el estilo o la plantilla. Observa este ejemplo:
 
 ```xml
 <Page
@@ -87,6 +87,6 @@ Debido a la separación de los ámbitos de nombres XAML, buscar elementos con no
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

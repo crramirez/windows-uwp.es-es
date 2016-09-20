@@ -7,7 +7,7 @@ label: Page layouts with XAML
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 681023be35b01eac84272a73d1ae3e7a459351db
-ms.openlocfilehash: 0cc466ccdc4d214539fb4258f95fda72e08ac9db
+ms.openlocfilehash: 8ca8852df2747410b9d139b55a4f24366cc0eefc
 
 ---
 # Definir diseños de página con XAML
@@ -16,27 +16,22 @@ XAML proporciona un sistema de diseño flexible que te permite usar ajustes de t
 
 Aquí describimos cómo usar las propiedades de XAML y los paneles de diseño para hacer que la aplicación tenga capacidad de respuesta y sea adaptable. Nos basamos en la información importante sobre el diseño de interfaz de usuario con capacidad de respuesta y en técnicas que se encuentran en [Introducción al diseño de aplicaciones para UWP](../layout/design-and-ui-intro.md). Debes entender qué son los píxeles efectivos y comprender cada una de las técnicas de diseño con capacidad de respuesta: Cambiar la posición, Cambiar el tamaño, Redistribuir, Mostrar, Reemplazar y Rediseñar.
 
-> **Nota**
-            &nbsp;&nbsp;El diseño de la aplicación comienza con el modelo de navegación que elijas, como la posibilidad de usar una clase [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) con el modelo ["pestañas y controles dinámicos"](../controls-and-patterns/tabs-pivot.md) o la clase [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) con el modelo ["panel de navegación"](../controls-and-patterns/nav-pane.md). Para obtener más información sobre el asunto, consulta [Conceptos básicos de diseño de navegación para las aplicaciones para UWP](../layout/navigation-basics.md). Aquí, hablaremos sobre las técnicas para hacer que el diseño de una sola página o grupo de elementos tenga capacidad de respuesta. Esta información se aplica independientemente del modelo de navegación que elijas para tu aplicación.
+> **Nota**&nbsp;&nbsp;El diseño de la aplicación comienza con el modelo de navegación que elijas, como la posibilidad de usar una clase [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) con el modelo ["pestañas y controles dinámicos"](../controls-and-patterns/tabs-pivot.md) o la clase [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) con el modelo ["panel de navegación"](../controls-and-patterns/nav-pane.md). Para obtener más información sobre el asunto, consulta [Conceptos básicos de diseño de navegación para las aplicaciones para UWP](../layout/navigation-basics.md). Aquí, hablaremos sobre las técnicas para hacer que el diseño de una sola página o grupo de elementos tenga capacidad de respuesta. Esta información se aplica independientemente del modelo de navegación que elijas para tu aplicación.
 
 En el marco XAML se proporcionan varios niveles de optimización que puedes usar para crear una interfaz de usuario con capacidad de respuesta.
 - **Diseño fluido**
-              
-            Usa las propiedades y los paneles de diseño para que interfaz de usuario predeterminada sea fluida.
+   Usa las propiedades y los paneles de diseño para que la interfaz de usuario predeterminada sea fluida.
 
     La base de un diseño dinámico es hacer un uso adecuado de las propiedades y los paneles de diseño para cambiar la posición, cambiar el tamaño y redistribuir el contenido. Puedes establecer un tamaño fijo en un elemento o usar variaciones automáticas de tamaño para permitir que el panel de diseño primario cambie su tamaño. Las distintas clases [**Panel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.panel.aspx), como [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) y [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx), proporcionan maneras diferentes de ajustar el tamaño y la posición de sus elementos secundarios.
 
 - **Diseño adaptativo**
-              
-            Usa estados visuales para que se produzcan modificaciones importantes en tu interfaz de usuario en función del tamaño de la ventana o de otros cambios.
+   Usa estados visuales para que se produzcan modificaciones importantes en tu interfaz de usuario en función del tamaño de la ventana o de otros cambios.
 
     Cuando el tamaño de la ventana de tu aplicación aumenta o disminuye más allá de una cantidad determinada, es recomendable cambiar las propiedades de diseño para cambiar la posición, cambiar el tamaño, redistribuir, mostrar o reemplazar secciones de la interfaz de usuario. Puedes definir diferentes estados visuales para la interfaz de usuario y aplicarlos cuando el ancho o el alto de la ventana cruce un umbral especificado. Un [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) proporciona una forma fácil de establecer el umbral (también llamado 'punto de interrupción') en el que se aplica un estado.
 
 - **Diseño personalizado**
-              
-            Un diseño personalizado se optimiza para una familia de dispositivos específica o un intervalo de tamaños de pantalla.. Dentro de la familia de dispositivos, el diseño debería responder y adaptarse a los cambios en el intervalo de tamaños de ventana compatibles.
-    > **Nota**
-            &nbsp;&nbsp; Con [Continuum for Phones (Continuum para teléfonos)](http://go.microsoft.com/fwlink/p/?LinkID=699431), los usuarios pueden conectar sus teléfonos a un monitor, mouse o teclado. Esta funcionalidad difumina el límite entre las familias de dispositivos de teléfono y de escritorio.
+   Un diseño personalizado se optimiza para una familia de dispositivos específica o un intervalo de tamaños de pantalla. Dentro de la familia de dispositivos, el diseño debería responder y adaptarse a los cambios en el intervalo de tamaños de ventana compatibles.
+    > **Nota**&nbsp;&nbsp; Con [Continuum para teléfonos](http://go.microsoft.com/fwlink/p/?LinkID=699431), los usuarios pueden conectar sus teléfonos a un monitor, mouse o teclado. Esta funcionalidad difumina el límite entre las familias de dispositivos de teléfono y de escritorio.
 
     Los enfoques de adaptación incluyen
     - Crear un desencadenador personalizado
@@ -71,8 +66,7 @@ Establece las propiedades [**Height**](https://msdn.microsoft.com/library/window
 
 La variación de tamaño automática se usa para permitir que los elementos de la interfaz de usuario cambien su tamaño de modo que se ajusten a su contenido o contenedor primario. La variación de tamaño automática también se puede usar con las filas y columnas de una cuadrícula. Para usar la variación de tamaño automática, establece las propiedades Height o Width de los elementos de interfaz de usuario en **Auto**.
 
-> **Nota**
-            &nbsp;&nbsp;El hecho de que el tamaño de un elemento cambie de tamaño para ajustarse a su contenido o su contenedor depende del valor de sus propiedades [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) y [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) y de cómo el contenedor primario controla la variación de tamaño de sus elementos secundarios. Para más información, consulta [Alineación]() y [Paneles de diseño]() más adelante en este artículo.
+> **Nota**&nbsp;&nbsp;El hecho de que el tamaño de un elemento cambie para ajustarse a su contenido o su contenedor depende del valor de sus propiedades [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) y [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx), y de cómo el contenedor principal controla la variación de tamaño de sus elementos secundarios. Para más información, consulta [Alineación]() y [Paneles de diseño]() más adelante en este artículo.
 
 La *variación de tamaño proporcional* se usa para distribuir espacio disponible entre las filas y columnas de una cuadrícula en proporciones ponderadas. En XAML, los valores de variación de tamaño proporcional se expresan como \* (o *n*\* en una variación de tamaño proporcional ponderada). Por ejemplo, para especificar que una columna sea cinco veces más ancha que la segunda columna en un diseño de dos columnas, usa "5\*" y "\*" en las propiedades [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.width.aspx) de los elementos [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.aspx).
 
@@ -156,8 +150,7 @@ Puedes mostrar u ocultar un elemento si estableces su propiedad [**Visibility**]
 
 Puedes cambiar la propiedad Visibility de un elemento en código o en un estado visual. Cuando el objeto Visibility de un elemento cambia, también cambian todos sus elementos secundarios. Puedes reemplazar secciones de la interfaz de usuario al mostrar un panel mientras contraes otro.
 
-> **Sugerencia**
-            &nbsp;&nbsp;Cuando tengas elementos en la interfaz de usuario que tengan el estado **Collapsed** de manera predeterminada, los objetos aún se crean en el inicio, aunque no sean visibles. Puedes postergar la carga de estos elementos hasta que se muestren si estableces el **atributo x:DeferLoadStrategy** en "Lazy". Esto puede mejorar el rendimiento del inicio. Para obtener más información, consulta [atributo x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md).
+> **Sugerencia**&nbsp;&nbsp;Si tienes elementos en la interfaz de usuario con el estado **Collapsed** de manera predeterminada, los objetos se seguirán creando en el inicio, aunque no sean visibles. Puedes postergar la carga de estos elementos hasta que se muestren si estableces el **atributo x:DeferLoadStrategy** en "Lazy". Esto puede mejorar el rendimiento del inicio. Para obtener más información, consulta [atributo x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md).
 
 ### Recursos de estilo
 
@@ -171,8 +164,8 @@ Esta es una comparación de las principales funciones de los controles de panel 
 
 Control de panel | Descripción
 --------------|------------
-[**Lienzo**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx) | La clase **Canvas** no admite las interfaces de usuario fluidas; tú controlas todos los aspectos de posición y variación de tamaño de los elementos secundarios. Normalmente se usa para casos especiales, como la creación de gráficos o la definición de áreas estáticas pequeñas de una interfaz de usuario adaptativa de mayor tamaño. Puedes usar código o estados visuales para cambiar la posición de los elementos en tiempo de ejecución.<ul><li>Los elementos se colocan de forma absoluta mediante las propiedades adjuntas Canvas.Top y Canvas.Left.</li><li>La disposición se puede especificar explícitamente mediante la propiedad adjunta Canvas.ZIndex.</li><li>Los valores Stretch de HorizontalAlignment/VerticalAlignment se omiten. Si el tamaño de un elemento no se establece explícitamente, su tamaño se ajusta a su contenido.</li><li>El contenido secundario no se recorta visualmente si su tamaño es mayor que el panel. </li><li>El contenido secundario no se ve restringido por los límites del panel.</li></ul>
-[**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) | La clase **Grid** admite la variación fluida de tamaño de los elementos secundarios. Puedes usar código o estados visuales para cambiar la posición y redistribuir elementos.<ul><li>Los elementos se organizan en filas y columnas mediante las propiedades adjuntas Grid.Row y Grid.Column.</li><li>Los elementos pueden abarcar varias filas y columnas mediante las propiedades adjuntas Grid.RowSpan y Grid.ColumnSpan.</li><li>Los valores Stretch de HorizontalAlignment/VerticalAlignment se respetan. Si el tamaño de un elemento no se establece explícitamente, se amplía para rellenar el espacio disponible en la celda de la cuadrícula.</li><li>El contenido secundario se recorta visualmente si su tamaño es mayor que el panel.</li><li>El tamaño del contenido se ve restringido por los límites del panel, por lo que el contenido desplazable muestra barras de desplazamiento si es necesario.</li></ul>
+[**Lienzo**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx) | La clase **Canvas** no admite las interfaces de usuario fluidas; tú controlas todos los aspectos de posición y cambio de tamaño de los elementos secundarios. Normalmente se usa para casos especiales, como la creación de gráficos o la definición de áreas estáticas pequeñas de una interfaz de usuario adaptativa de mayor tamaño. Puedes usar código o estados visuales para cambiar la posición de los elementos en tiempo de ejecución.<ul><li>Los elementos se colocan de forma absoluta mediante las propiedades adjuntas Canvas.Top y Canvas.Left.</li><li>La disposición se puede especificar explícitamente mediante la propiedad adjunta Canvas.ZIndex.</li><li>Los valores Stretch de HorizontalAlignment/VerticalAlignment se omiten. Si el tamaño de un elemento no se establece explícitamente, su tamaño se ajusta a su contenido.</li><li>El contenido secundario no se recorta visualmente si su tamaño es mayor que el panel. </li><li>El contenido secundario no se ve restringido por los límites del panel.</li></ul>
+[**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) | La clase **Grid** admite el cambio de tamaño fluido de los elementos secundarios. Puedes usar código o estados visuales para cambiar la posición y redistribuir elementos.<ul><li>Los elementos se organizan en filas y columnas mediante las propiedades adjuntas Grid.Row y Grid.Column.</li><li>Los elementos pueden abarcar varias filas y columnas mediante las propiedades adjuntas Grid.RowSpan y Grid.ColumnSpan.</li><li>Los valores Stretch de HorizontalAlignment/VerticalAlignment se respetan. Si el tamaño de un elemento no se establece explícitamente, se amplía para rellenar el espacio disponible en la celda de la cuadrícula.</li><li>El contenido secundario se recorta visualmente si su tamaño es mayor que el panel.</li><li>El tamaño del contenido se ve restringido por los límites del panel, por lo que el contenido desplazable muestra barras de desplazamiento si es necesario.</li></ul>
 [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) | <ul><li>Los elementos se organizan en relación con el borde o el centro del panel y en relación entre ellos.</li><li>Los elementos se colocan mediante una variedad de propiedades adjuntas que controlan la alineación del panel, la alineación de elementos de mismo nivel y la posición de los elemento del mismo nivel. </li><li>Los valores Stretch de HorizontalAlignment/VerticalAlignment se omiten, a menos que las propiedades adjuntas RelativePanel de la alineación provoquen una ampliación (por ejemplo, un elemento se alinea a los bordes derecho e izquierdo del panel). Si el tamaño de un elemento no se establece explícitamente y no se amplía, su tamaño se ajusta a su contenido.</li><li>El contenido secundario se recorta visualmente si su tamaño es mayor que el panel.</li><li>El tamaño del contenido se ve restringido por los límites del panel, por lo que el contenido desplazable muestra barras de desplazamiento si es necesario.</li></ul>
 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) |<ul><li>Los elementos se apilan en una única línea vertical u horizontal.</li><li>Los valores Stretch de HorizontalAlignment/VerticalAlignment se respetan en la dirección opuesta a la propiedad Orientation. Si el tamaño de un elemento no se establece explícitamente, se amplía para rellenar el ancho disponible (o el alto si la Orientation es Horizontal). En la dirección especificada por la propiedad Orientation, el tamaño de un elemento se ajusta a su contenido.</li><li>El contenido secundario se recorta visualmente si su tamaño es mayor que el panel.</li><li>El tamaño del contenido no está restringido por los límites del panel en la dirección especificada por la propiedad Orientation, por lo que el contenido desplazable se amplía más allá de los límites del panel y no se muestran barras de desplazamiento. Tienes que restringir explícitamente el alto (o el ancho) del contenido secundario para mostrar sus barras de desplazamiento.</li></ul>
 [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) |<ul><li>Los elementos se organizan en filas o en columnas que se ajustan automáticamente a una nueva fila o columna cuando se alcanza el valor MaximumRowsOrColumns.</li><li>La organización de los elementos en filas o en columnas se especifica mediante la propiedad Orientation.</li><li>Los elementos pueden abarcar varias filas y columnas mediante las propiedades adjuntas VariableSizedWrapGrid.RowSpan y VariableSizedWrapGrid.ColumnSpan.</li><li>Los valores Stretch de HorizontalAlignment/VerticalAlignment se omiten. El tamaño de los elementos se ajusta según se especifica en las propiedades ItemHeight y ItemWidth. Si no se establecen estas propiedades, el tamaño del elemento de la primera se ajusta a su contenido y todas las demás celdas heredan este tamaño.</li><li>El contenido secundario se recorta visualmente si su tamaño es mayor que el panel.</li><li>El tamaño del contenido se ve restringido por los límites del panel, por lo que el contenido desplazable muestra barras de desplazamiento si fuera necesario.</li></ul>
@@ -284,8 +277,7 @@ En este ejemplo se hace lo mismo que en el ejemplo anterior, pero se usa la sint
 </Page>
 ```
 
-> **Importante**
-            &nbsp;&nbsp;En el ejemplo anterior, la propiedad adjunta VisualStateManager.VisualStateGroups se establece en el elemento**Grid**. Cuando usas objetos StateTrigger, para que los desencadenadores se apliquen automáticamente, asegúrate siempre de que VisualStateGroups se adjunte al primer elemento secundario de la raíz. (Aquí, **Grid** es el primer elemento secundario del elemento **Page** raíz).
+> **Importante**&nbsp;&nbsp;En el ejemplo anterior, la propiedad adjunta VisualStateManager.VisualStateGroups está establecida en el elemento **Grid**. Cuando usas objetos StateTrigger, para que los desencadenadores se apliquen automáticamente, asegúrate siempre de que VisualStateGroups se adjunte al primer elemento secundario de la raíz. (Aquí, **Grid** es el primer elemento secundario del elemento **Page** raíz).
 
 ### Sintaxis de propiedad adjunta
 
@@ -389,8 +381,7 @@ Usa vistas de XAML para crear definiciones de interfaz de usuario diferentes que
 
 **Agregar una vista XAML a una aplicación**
 1. Selecciona Proyecto > Agregar nuevo elemento. Se abrirá el cuadro de diálogo Agregar nuevo elemento,
-    > **Sugerencia**
-            &nbsp;&nbsp;Asegúrate de que la carpeta o el proyecto, y no la solución, estén seleccionados en el Explorador de soluciones.
+    > **Sugerencia**&nbsp;&nbsp;Asegúrate de que una carpeta o el proyecto, y no la solución, estén seleccionados en el Explorador de soluciones.
 2. En Visual C# o Visual Basic, en el panel izquierdo, elige el tipo de plantilla XAML.
 3. En el panel central, selecciona Vista XAML.
 4. Escribe el nombre de la vista. El nombre de la vista se debe asignar correctamente. Para más información sobre la asignación de nombres, consulta el resto de esta sección.
@@ -424,8 +415,7 @@ Para proporcionar vistas y funcionalidad únicas, puedes crear archivos Page (XA
 
 **Agregar una página XAML a una aplicación**
 1. Selecciona Proyecto > Agregar nuevo elemento. Se abrirá el cuadro de diálogo Agregar nuevo elemento,
-    > **Sugerencia**
-            &nbsp;&nbsp;Asegúrate de que seleccionas el proyecto y no la solución en el Explorador de soluciones.
+    > **Sugerencia**&nbsp;&nbsp;Asegúrate de que el proyecto, y no la solución, esté seleccionado en el Explorador de soluciones.
 2. En Visual C# o Visual Basic, en el panel izquierdo, elige el tipo de plantilla XAML.
 3. En el panel central, selecciona Página en blanco.
 4. Escribe el nombre para la página. Por ejemplo, "MainPage_Mobile". Se crean archivos de código MainPage_Mobile.xaml y MainPage_Mobile.xaml.cs/vb/cpp.
@@ -448,6 +438,6 @@ También puedes usar distintos criterios para determinar a qué página navegar.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

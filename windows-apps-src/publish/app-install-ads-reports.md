@@ -3,7 +3,6 @@ author: jnHs
 title: "Informe de anuncios de instalación de aplicaciones"
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
 description: 
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: acd91c578d7222e5fb115a4784f3360333f2a063
 
@@ -22,9 +21,12 @@ Aquí verás dos secciones: **Rendimiento de los anuncios** e **Historial de fac
 
 Aquí, las métricas de rendimiento se muestran como líneas trazadas en un gráfico con la métrica seleccionada en el eje y y el tiempo en el eje x. El informe predeterminado muestra impresiones. Haz clic en los encabezados de pestaña para ver datos de otras métricas de rendimiento. Las métricas de seguimiento aquí son:
 
--   **Impresiones**: el número de veces que se mostró tu anuncio.
--   **Clics**: el número de veces que un usuario hizo clic en el anuncio.
--   **Instalaciones**: el número de veces que alguien hizo clic en el anuncio y luego instaló la aplicación. Consulta la siguiente información sobre el seguimiento de las instalaciones.
+-   
+            **Impresiones**: el número de veces que se mostró tu anuncio.
+-   
+            **Clics**: el número de veces que un usuario hizo clic en el anuncio.
+-   
+            **Instalaciones**: el número de veces que alguien hizo clic en el anuncio y luego instaló la aplicación. Consulta la siguiente información sobre el seguimiento de las instalaciones.
 
 Puedes mostrar datos de rendimiento de hasta cuatro campañas publicitarias a la vez. Haz clic en **Más campañas** para elegir las campañas que se mostrarán. También puedes hacer clic en el signo menos en una campaña mostrada para quitarla.
 
@@ -38,7 +40,8 @@ Mediante la supervisión de las instalaciones de sus campañas publicitarias, lo
 
 ### ¿Cómo se miden las instalaciones?
 
-Las campañas publicitarias **Promocionar tu aplicación** realizan impresiones de anuncios dentro de otras aplicaciones. Los usuarios que se exponen al anuncio probablemente instalarán la aplicación de una de estas dos maneras: haciendo clic en el anuncio o en función de la visualización de la impresión del anuncio.
+
+            Las campañas publicitarias **Promocionar tu aplicación** realizan impresiones de anuncios dentro de otras aplicaciones. Los usuarios que se exponen al anuncio probablemente instalarán la aplicación de una de estas dos maneras: haciendo clic en el anuncio o en función de la visualización de la impresión del anuncio.
 
 Si se muestra un anuncio a un usuario y este instala la aplicación en 24 horas, ya sea haciendo clic en el anuncio o yendo directamente a la página de la aplicación en la Tienda, la instalación se atribuye a la campaña que entregó la impresión.
 

@@ -3,7 +3,6 @@ author: mtoepke
 title: "Convertir el marco de representación"
 description: "Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como portar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11."
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 5cfdce2a62f6b5761ebf820418762a307dd051bb
 
@@ -21,7 +20,7 @@ ms.openlocfilehash: 5cfdce2a62f6b5761ebf820418762a307dd051bb
 -   [Parte 3: Migrar el bucle del juego](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
 
 
-Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como migrar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11. Parte 2 del tutorial [Migrar una aplicación simple de Direct3D 9 a DirectX 11 y la Plataforma universal de Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+Aprende a convertir un marco de representación simple de Direct3D 9 a Direct3D 11 y a realizar algunas acciones como migrar búferes de geometría, compilar y cargar programas sombreadores HLSL e implementar la cadena de representación en Direct3D 11. Parte 2 del tutorial [Migrar una aplicación simple de Direct3D9 a DirectX11 y la Plataforma universal de Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
 ## Convertir efectos a sombreadores HLSL
 
@@ -103,7 +102,8 @@ Es posible que tus archivos HLSL usen la sintaxis anterior para la semántica de
 
 Este es nuestro sombreador de vértices para la transformación de hardware, esta vez definido en su propio archivo.
 
-> **Nota** Los sombreadores de vértices son necesarios para producir la salida de la semántica del valor del sistema SV\_POSITION. Esta semántica resuelve los datos de posición de vértice para coordinar valores donde: el valor de X está entre -1 y 1; el de Y está entre -1 y 1; el de Z se divide por el valor W de la coordenada homogénea original (Z/W) y el de W es 1 dividido por el valor W original (1/W).
+> 
+            **Nota** Los sombreadores de vértices son necesarios para producir la salida de la semántica del valor del sistema SV\_POSITION. Esta semántica resuelve los datos de posición de vértice para coordinar valores donde: el valor de X está entre -1 y 1; el de Y está entre -1 y 1; el de Z se divide por el valor W de la coordenada homogénea original (Z/W) y el de W es 1 dividido por el valor W original (1/W).
 
  
 
@@ -150,7 +150,8 @@ VS_OUTPUT main(VS_INPUT input) // main is the default function name
 
 Esto es todo lo que necesitamos para nuestro sombreador de píxeles de paso. Aunque lo llamamos de paso, en verdad obtiene datos de color interpolados en correcta perspectiva para cada píxel. Ten en cuenta que nuestro sombreador de píxeles aplica la semántica del valor del sistema SV\_TARGET a la salida del valor de color, como lo requiere la API.
 
-> **Nota** Los sombreadores de píxeles del nivel 9\_x no se pueden leer en la semántica del valor del sistema SV\_POSITION. Los sombreadores de píxeles de modelo 4.0 (y posterior) pueden usar SV\_POSITION para recuperar la ubicación de píxeles en la pantalla, donde x está entre 0 y el ancho del destino de representación e y está entre 0 y el alto del destino de representación (con desplazamiento de 0,5 cada uno).
+> 
+            **Nota** Los sombreadores de píxeles del nivel 9\_x no se pueden leer en la semántica del valor del sistema SV\_POSITION. Los sombreadores de píxeles de modelo 4.0 (y posterior) pueden usar SV\_POSITION para recuperar la ubicación de píxeles en la pantalla, donde x está entre 0 y el ancho del destino de representación e y está entre 0 y el alto del destino de representación (con desplazamiento de 0,5 cada uno).
 
  
 
@@ -234,7 +235,8 @@ m_d3dDevice->CreateVertexShader(
 
 Para incluir el código de bytes del sombreador en el paquete de la aplicación compilado, solo agrega el archivo HLSL al proyecto de Visual Studio. Visual Studio usará la [herramienta compiladora de efectos](https://msdn.microsoft.com/library/windows/desktop/bb232919) (FXC) para compilar archivos HLSL en objetos de sombreador compilado (archivos .CSO) e incluirlos en el paquete de la aplicación.
 
-> **Nota** Asegúrate de establecer el nivel de característica de destino correcto para el compilador HLSL. Haz clic con el botón derecho en el archivo de origen HLSL en Visual Studio, selecciona Propiedades y cambia la configuración de **Modelo de sombreador** en **Compilador HLSL -&gt; General**. Direct3D compara esta propiedad con las capacidades de hardware cuando la aplicación crea el recurso de sombreador de Direct3D.
+> 
+            **Nota** Asegúrate de establecer el nivel de característica de destino correcto para el compilador HLSL. Haz clic con el botón derecho en el archivo de origen HLSL en Visual Studio, selecciona Propiedades y cambia la configuración de **Modelo de sombreador** en **Compilador HLSL -&gt; General**. Direct3D compara esta propiedad con las capacidades de hardware cuando la aplicación crea el recurso de sombreador de Direct3D.
 
  
 
@@ -244,7 +246,9 @@ Este es un buen lugar para crear el diseño de entrada, que corresponde a la dec
 
 Los datos de vértice se deben almacenar en tipos compatibles en la memoria del sistema. Los tipos de datos DirectXMath pueden ser útiles, por ejemplo, DXGI\_FORMAT\_R32G32B32\_FLOAT corresponde a [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475).
 
-> **Nota** Los búferes de constantes usan un diseño de entrada fijo que se alinea a cuatro números de punto flotante a la vez. [
+> 
+            **Nota** Los búferes de constantes usan un diseño de entrada fijo que se alinea a cuatro números de punto flotante a la vez. 
+            [
               **XMFLOAT4**
             ](https://msdn.microsoft.com/library/windows/desktop/ee419608) (y sus derivados) se recomiendan para datos de búferes de constantes.
 

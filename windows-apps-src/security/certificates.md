@@ -3,7 +3,6 @@ title: "Introducción a los certificados"
 description: "En este artículo se describe el uso de certificados en las aplicaciones de la Plataforma universal de Windows (UWP)."
 ms.assetid: 4EA2A9DF-BA6B-45FC-AC46-2C8FC085F90D
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
 ms.openlocfilehash: 84596f70a5deee6cebb5f4bac442a6aaca8210cd
 

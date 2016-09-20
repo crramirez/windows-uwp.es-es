@@ -3,7 +3,6 @@ author: mtoepke
 title: Configurar el proyecto de juego
 description: "El primer paso para ensamblar el juego es configurar un proyecto en Microsoft Visual Studio de tal forma que se reduzca al mínimo la cantidad de trabajo necesaria en la infraestructura de código."
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d4d7864f9689df0919b53ee70b8e18f8d812b2b0
 
@@ -31,7 +30,7 @@ Puedes escribir un juego desde cero, solo con un sencillo editor de texto, unas 
 
 Una plantilla de Visual Studio es una colección de configuraciones y archivos de código para un tipo específico de aplicación basándose en el lenguaje y la tecnología elegidos. En Microsoft Visual Studio 2015, encontrarás varias plantillas que pueden facilitar enormemente el desarrollo de juegos y aplicaciones gráficas. Si no usas una plantilla, debes desarrollar tú mismo casi todo el marco básico de generación de gráficos, lo que puede suponer una ardua tarea para un desarrollador de juegos novel.
 
-La plantilla adecuada para este tutorial es la titulada DirectX 11 App (Universal Windows). En Visual Studio 2015, haz clic en **Archivo...**&gt;**Nuevo proyecto** y posteriormente:
+La plantilla adecuada para este tutorial es la titulada DirectX 11 App (Universal Windows). En Visual Studio2015, haz clic en **Archivo...**&gt;**Nuevo proyecto** y posteriormente:
 
 1.  Desde **Plantillas**, selecciona **Visual C++**, **Windows**, **Universal**.
 2.  En el panel central, selecciona **DirectX 11 App (Universal Windows)**.
@@ -123,7 +122,7 @@ Si la ventana de tu juego no está cerrada, se distribuirán todos los eventos, 
 ## 2. Revisa y actualiza el archivo package.appxmanifest
 
 
-La plantilla no solo consiste en archivos de código. El archivo **package.appxmanifest** contiene metadatos de tu proyecto que sirven para empaquetar y lanzar el juego, así como para enviarlo a la Tienda Windows. También contiene información importante que el sistema del jugador usa para proporcionar acceso a los recursos del sistema que el programa necesita para ejecutarse.
+La plantilla no solo consiste en archivos de código. El archivo **package.appxmanifest** contiene metadatos de tu proyecto que sirven para empaquetar y lanzar el juego, así como para enviarlo a la TiendaWindows. También contiene información importante que el sistema del jugador usa para proporcionar acceso a los recursos del sistema que el programa necesita para ejecutarse.
 
 Ejecuta el **Diseñador de manifiestos** haciendo doble clic en el archivo **package.appxmanifest** en el **Explorador de soluciones**. Verás esta vista:
 
@@ -135,7 +134,7 @@ Para más información sobre el archivo **package.appxmanifest** y el empaquetad
 
 Si no seleccionas las funcionalidades que usa tu juego, como el acceso a **Internet** para los juegos locales guardados, o Internet para ver las puntuaciones más altas globales, no podrás tener acceso a los recursos o características correspondientes. Cuando crees un nuevo juego, asegúrate de que seleccionas las funcionalidades que necesitará el juego para ejecutarse.
 
-Ahora, veamos el resto de archivos que vienen con la plantilla **DirectX 11 App (Universal Windows)**.
+Ahora, veamos el resto de archivos que vienen con la plantilla **DirectX11 App (Universal Windows)**.
 
 ## 3. Revisa las bibliotecas y los encabezados incluidos
 
@@ -147,7 +146,7 @@ Hay varios archivos que aún no hemos visto. Estos archivos proporcionan herrami
 | StepTimer.h                  | Define un temporizador de alta resolución útil para aplicaciones de representación de juego o interactivas.                                                                                                                                       |
 | Sample3DSceneRenderer.h/.cpp | Define una implementación de representador básica que conecta una cadena de intercambio de Direct3D y un adaptador gráfico a tu aplicación para UWP con DirectX.                                                                                            |
 | DirectXHelper.h              | Implementa un único método, **DX::ThrowIfFailed**, que convierte los valores de errores HRESULT devueltos por las API de DirectX en excepciones de Windows Runtime. Usa este método para colocar un punto de interrupción para depurar errores de DirectX. |
-| pch.h/.cpp                   | Contiene todos los archivos de inclusión del sistema Windows para las API usadas por una aplicación Direct3D, incluidas las API de DirectX 11.                                                                                                           |
+| pch.h/.cpp                   | Contiene todos los archivos de inclusión del sistema Windows para las API usadas por una aplicación Direct3D, incluidas las API de DirectX11.                                                                                                           |
 | SamplePixelShader.hlsl       | Contiene el código de lenguaje de sombreado de alto nivel (HLSL) para un sombreador de píxeles muy básico.                                                                                                                                     |
 | SampleVertexShader.hlsl      | Contiene el código de lenguaje de sombreado de alto nivel (HLSL) para un sombreador de vértices muy básico.                                                                                                                                    |
 
@@ -155,7 +154,7 @@ Hay varios archivos que aún no hemos visto. Estos archivos proporcionan herrami
 
 ### Pasos siguientes
 
-En este punto, puedes crear un proyecto de juego de UWP con DirectX e identificar los componentes y archivos proporcionados por la plantilla DirectX 11 App (Universal Windows).
+En este punto, puedes crear un proyecto de juego de UWP con DirectX e identificar los componentes y archivos proporcionados por la plantilla DirectX11 App (Universal Windows).
 
 En el próximo tutorial, [Definir el marco de UWP del juego](tutorial--building-the-games-metro-style-app-framework.md), trabajaremos con un juego completo y examinaremos cómo se usan y amplían en él muchos de los conceptos y componentes proporcionados por la plantilla.
 

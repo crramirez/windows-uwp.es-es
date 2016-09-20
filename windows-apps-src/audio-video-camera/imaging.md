@@ -18,17 +18,11 @@ En este artículo se explica cómo cargar y guardar archivos de imagen mediante 
 
 La clase **SoftwareBitmap** es una API versátil que se puede crear desde varios orígenes, entre los que se incluyen archivos de imagen, objetos [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/br243259), superficies de Direct3D y código. **SoftwareBitmap** permite convertir fácilmente entre los modos alfa y formatos de píxel diferentes, y también permite el acceso de bajo nivel a datos de píxel. Además, **SoftwareBitmap** es una interfaz común que utilizan varias características de Windows, entre las que se incluyen:
 
--   [
-              **CapturedFrame**
-            ](https://msdn.microsoft.com/library/windows/apps/dn278725) permite tener fotogramas capturados por la cámara como un elemento **SoftwareBitmap**.
+-   [**CapturedFrame**](https://msdn.microsoft.com/library/windows/apps/dn278725) permite tener fotogramas capturados por la cámara como un elemento **SoftwareBitmap**.
 
--   [
-              **VideoFrame**
-            ](https://msdn.microsoft.com/library/windows/apps/dn930917) permite tener una representación **SoftwareBitmap** de un elemento **VideoFrame**.
+-   [**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) permite tener una representación **SoftwareBitmap** de un elemento **VideoFrame**.
 
--   [
-              **FaceDetector**
-            ](https://msdn.microsoft.com/library/windows/apps/dn974129) permite detectar caras de un elemento **SoftwareBitmap**.
+-   [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) permite detectar caras de un elemento **SoftwareBitmap**.
 
 El código de ejemplo de este artículo usa las API de los siguientes espacios de nombres.
 
@@ -50,7 +44,8 @@ Para guardar un elemento **SoftwareBitmap** en un archivo, obtén una instancia 
 
 [!code-cs[PickOuputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickOuputFile)]
 
-Llama al método [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116) del objeto **StorageFile** para obtener un flujo de acceso aleatorio en el que se escribirá la imagen. Llama al método estático [**BitmapEncoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226211) para obtener una instancia de la clase [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) para el flujo especificado. El primer parámetro para **CreateAsync** es un GUID que representa el códec que se debe usar para codificar la imagen. La clase **BitmapEncoder** expone una propiedad que contiene el identificador de cada códec compatible con el codificador, como por ejemplo [**JpegEncoderId**](https://msdn.microsoft.com/library/windows/apps/br226226).
+Llama al método [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116) del objeto **StorageFile** para obtener un flujo de acceso aleatorio en el que se escribirá la imagen. Llama al método estático [**BitmapEncoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226211) para obtener una instancia de la clase [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) para el flujo especificado. El primer parámetro para **CreateAsync** es un GUID que representa el códec que se debe usar para codificar la imagen. 
+            La clase **BitmapEncoder** expone una propiedad que contiene el identificador de cada códec compatible con el codificador, como por ejemplo [**JpegEncoderId**](https://msdn.microsoft.com/library/windows/apps/br226226).
 
 Usa el método [**SetSoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887337) para establecer la imagen que se va a codificar. Puedes establecer los valores de la propiedad [**BitmapTransform**](https://msdn.microsoft.com/library/windows/apps/br226254) para aplicar transformaciones básicas a la imagen mientras se codifica. La propiedad [**IsThumbnailGenerated**](https://msdn.microsoft.com/library/windows/apps/br226225) determina si el codificador genera una miniatura. Ten en cuenta que no todos los formatos de archivo admiten las miniaturas, por lo que si usas esta característica, debes capturar el error de operación no compatible que se produce si las miniaturas no se admiten.
 

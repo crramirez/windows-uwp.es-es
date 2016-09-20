@@ -5,7 +5,6 @@ MS-HAID: dev\_audio\_vid\_camera.custom\_video\_effects
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "Efectos de vídeo personalizados"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
 
@@ -69,7 +68,8 @@ El método [**DiscardQueuedFrames**](https://msdn.microsoft.com/library/windows/
 
 La propiedad [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792) permite que el sistema sepa si el efecto se escribe en el resultado del efecto. Si la aplicación no modifica los fotogramas de vídeo: por ejemplo, un efecto que solo realiza análisis de fotogramas de vídeo, debes definir esta propiedad como true, lo que hará que el sistema copie eficazmente la entrada de fotograma a la salida de fotograma.
 
-**Sugerencia**  Cuando la propiedad [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792) se define como true, el sistema copia el fotograma de entrada al fotograma de salida antes de llamar a [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794). Definir la propiedad **IsReadOnly** como true no te impide escribir en los fotogramas de salida del efecto en **ProcessFrame**.
+
+            **Sugerencia**  Cuando la propiedad [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792) se define como true, el sistema copia el fotograma de entrada al fotograma de salida antes de llamar a [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794). Definir la propiedad **IsReadOnly** como true no te impide escribir en los fotogramas de salida del efecto en **ProcessFrame**.
 
 [!code-cs[IsReadOnly](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetIsReadOnly)] 
 
@@ -89,7 +89,8 @@ El sistema comprueba la propiedad [**SupportedEncodingProperties**](https://msdn
 [!code-cs[SupportedEncodingProperties](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetSupportedEncodingProperties)]
 
 
-**Nota**  Si se devuelve una lista vacía de objetos [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) de **SupportedEncodingProperties**, el sistema tendrá como valor predeterminado la codificación ARGB32.
+
+            **Nota**  Si se devuelve una lista vacía de objetos [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) de **SupportedEncodingProperties**, el sistema tendrá como valor predeterminado la codificación ARGB32.
 
  
 
@@ -100,7 +101,8 @@ El sistema comprueba la propiedad [**SupportedMemoryTypes**](https://msdn.micros
 [!code-cs[SupportedMemoryTypes](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetSupportedMemoryTypes)]
 
 
-**Nota**   Si especificas [**MediaMemoryTypes.GpuAndCpu**](https://msdn.microsoft.com/library/windows/apps/dn764822), el sistema usará la memoria del sistema o GPU, la que sea más eficiente para la canalización. Cuando uses este valor, debes comprobar el método [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) para ver si el valor de [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) o [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505) pasado al método contiene datos y, a continuación, procesar el fotograma según corresponda.
+
+            **Nota**   Si especificas [**MediaMemoryTypes.GpuAndCpu**](https://msdn.microsoft.com/library/windows/apps/dn764822), el sistema usará la memoria del sistema o GPU, la que sea más eficiente para la canalización. Cuando uses este valor, debes comprobar el método [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) para ver si el valor de [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) o [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505) pasado al método contiene datos y, a continuación, procesar el fotograma según corresponda.
 
  
 
@@ -139,7 +141,8 @@ Agrega el siguiente código dentro del espacio de nombres para que el efecto imp
 [!code-cs[COMImport](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetCOMImport)]
 
 
-**Nota**  Dado que esta técnica accede a un búfer de imagen nativo sin administrar, tendrás que configurar el proyecto para permitir un código no seguro.
+
+            **Nota**  Dado que esta técnica accede a un búfer de imagen nativo sin administrar, tendrás que configurar el proyecto para permitir un código no seguro.
 1.  En el Explorador de soluciones, haz clic con el botón secundario en el proyecto VideoEffectComponent y selecciona Propiedades...
 2.  Selecciona la pestaña Compilación.
 3.  Activa la casilla de verificación "Permitir código no seguro"
@@ -216,7 +219,8 @@ Para poder usar el efecto de vídeo desde la aplicación, debes agregar una refe
 
 Puedes configurar una secuencia simple de vista previa de la cámara siguiendo los pasos descritos en el artículo [Acceso fácil a la vista previa de cámara](simple-camera-preview-access.md). Sigue estos pasos que te proporcionarán un objeto [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) inicializado que se usa para obtener acceso a la secuencia de vídeo de la cámara.
 
-Para agregar el efecto de vídeo personalizado en una secuencia de cámara, primero crea un nuevo objeto [**VideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608055), pasando el espacio de nombres y el nombre de clase para el efecto. A continuación llama al método [**AddVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn878035) del objeto **MediaCapture** para agregar el efecto a la secuencia especificada. Este ejemplo usa el valor [**MediaStreamType.VideoPreview**](https://msdn.microsoft.com/library/windows/apps/br226640) para especificar que se debe agregar el efecto a la secuencia de vista previa. Si la aplicación admite la captura de vídeo, también podrías usar **MediaStreamType.VideoRecord** para agregar el efecto a la secuencia de captura. **AddVideoEffect** devuelve un objeto [**IMediaExtension**](https://msdn.microsoft.com/library/windows/apps/br240985) que representa el efecto personalizado. Puedes usar el método SetProperties para establecer la configuración para el efecto.
+Para agregar el efecto de vídeo personalizado en una secuencia de cámara, primero crea un nuevo objeto [**VideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608055), pasando el espacio de nombres y el nombre de clase para el efecto. A continuación llama al método [**AddVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn878035) del objeto **MediaCapture** para agregar el efecto a la secuencia especificada. Este ejemplo usa el valor [**MediaStreamType.VideoPreview**](https://msdn.microsoft.com/library/windows/apps/br226640) para especificar que se debe agregar el efecto a la secuencia de vista previa. Si la aplicación admite la captura de vídeo, también podrías usar **MediaStreamType.VideoRecord** para agregar el efecto a la secuencia de captura. 
+            **AddVideoEffect** devuelve un objeto [**IMediaExtension**](https://msdn.microsoft.com/library/windows/apps/br240985) que representa el efecto personalizado. Puedes usar el método SetProperties para establecer la configuración para el efecto.
 
 Una vez que se haya agregado el efecto, se llama a [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613) para iniciar la secuencia de vista previa.
 
@@ -235,13 +239,15 @@ Para obtener instrucciones generales sobre la creación de composiciones multime
 ## Temas relacionados
 
 
-[Acceso fácil a la vista previa de cámara](simple-camera-preview-access.md)
+
+            [Acceso fácil a la vista previa de cámara](simple-camera-preview-access.md)
             
           
             [Composiciones y edición multimedia](media-compositions-and-editing.md)
             
           
             [Documentación de Win2D](http://go.microsoft.com/fwlink/?LinkId=519078)
+          
  
 
  

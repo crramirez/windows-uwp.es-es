@@ -3,7 +3,6 @@ title: "Crear una aplicación de inicio de sesión de Microsoft Passport"
 description: "Esta es primera parte de un tutorial completo acerca de cómo crear una aplicación para UWP (Plataforma universal de Windows) de Windows 10 que use Microsoft Passport como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña."
 ms.assetid: A9E11694-A7F5-4E27-95EC-889307E0C0EF
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: af8ae79f67d77195d5ed4801d040b2f1aafe8a97
 ms.openlocfilehash: d28f0b9ea08d35a220cdb58367f03af95966e282
 
@@ -28,7 +27,7 @@ Antes de comenzar, debe leer la introducción a [Microsoft Passport y Windows He
 
 Para crear este proyecto, necesitarás algo de experiencia con C# y XAML. También tendrás que usar Visual Studio de 2015 (Community Edition o superior) en una máquina de Windows 10.
 
--   Abre Visual Studio 2015 y selecciona Archivo > Nuevo > Proyecto.
+-   Abre Visual Studio2015 y selecciona Archivo > Nuevo > Proyecto.
 -   Se abrirá una ventana de "Nuevo proyecto". Navegación a Plantillas > Visual C#.
 -   Elige la aplicación vacía (Windows Universal) y el nombre de la aplicación "PassportLogin".
 -   Compila y ejecuta la nueva aplicación (F5); debería mostrarse una ventana vacía en la pantalla. Cierre la aplicación.

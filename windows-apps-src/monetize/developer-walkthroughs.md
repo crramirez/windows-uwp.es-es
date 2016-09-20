@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 527660fb-8e32-41b4-89cb-d422ed48c69b
 description: "Usa los tutoriales de esta sección para aprender a agregar anuncios en banners y anuncios intersticiales en vídeo a las aplicaciones mediante las bibliotecas de Microsoft Advertising."
 title: Tutoriales de desarrollo para las bibliotecas de Microsoft Advertising
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: b36b5d5ba747fbb71c988033ddd0cdb4cee0ed8b
 

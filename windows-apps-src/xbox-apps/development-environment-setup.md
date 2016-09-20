@@ -26,9 +26,10 @@ En este artículo se describen los pasos para configurar y probar el entorno de 
 
 ## Configuración del SDK de Windows 10
 
-Instala la versión preliminar del SDK de Windows 10 más reciente. Para obtener información sobre la instalación, consulta [Descarga las actualizaciones para desarrolladores de Insider Preview](http://go.microsoft.com/fwlink/p/?LinkId=780552).
+Instala la versión preliminar del SDK de Windows10 más reciente. Para obtener información sobre la instalación, consulta [Descarga las actualizaciones para desarrolladores de Insider Preview](http://go.microsoft.com/fwlink/p/?LinkId=780552).
 
-  > **Importante**
+  > 
+            **Importante**
             &nbsp;&nbsp;Debes instalar el SDK más reciente, pero _no_ necesitas instalar la última versión de Windows Insider Preview del sistema operativo.
 
 ## Configuración de la consola Xbox One

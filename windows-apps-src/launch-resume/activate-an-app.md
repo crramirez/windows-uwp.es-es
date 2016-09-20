@@ -36,7 +36,8 @@ Define la clase de la aplicación.
 
 Invalida el método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335). Este método se llama cada vez que el usuario inicia la aplicación. El parámetro [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) contiene el estado anterior de la aplicación y los argumentos de activación.
 
-**Nota**: En las aplicaciones de la Tienda de Windows Phone, se invoca este método cada vez que el usuario inicia la aplicación desde el icono Inicio o la lista de aplicaciones, incluso si la aplicación está suspendida en la memoria en ese momento. En Windows, al iniciar una aplicación suspendida desde el icono Inicio o la lista de aplicaciones, no se llama a este método.
+
+            **Nota**: En las aplicaciones de la Tienda de Windows Phone, se invoca este método cada vez que el usuario inicia la aplicación desde el icono Inicio o la lista de aplicaciones, incluso si la aplicación está suspendida en la memoria en ese momento. En Windows, al iniciar una aplicación suspendida desde el icono Inicio o la lista de aplicaciones, no se llama a este método.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -162,7 +163,8 @@ La aplicación debe cargar sus datos de aplicación guardados y actualizar el co
 
 ## [!div class="tabbedCodeSnippets"]
 
-> Si el valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) es **NotRunning**, la aplicación no pudo guardar sus datos de aplicación correctamente y debe iniciarse desde cero, como si se estuviera iniciando por primera vez. Comentarios **Nota**  En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida en ese momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones.
+> Si el valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) es **NotRunning**, la aplicación no pudo guardar sus datos de aplicación correctamente y debe iniciarse desde cero, como si se estuviera iniciando por primera vez. Comentarios 
+            **Nota**  En las aplicaciones de la Tienda de WindowsPhone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida en ese momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones.
 
 ## Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual.
 

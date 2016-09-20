@@ -3,7 +3,6 @@ author: jwmsft
 description: Identifica exclusivamente los elementos que se crean y a los cuales se hace referencia como recursos, y que existen dentro de un ResourceDictionary.
 title: Atributo xKey
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
-translationtype: Human Translation
 ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
 ms.openlocfilehash: 00d801dc3ebb8894f8e21ba0c1b9f3aecc981f30
 
@@ -38,7 +37,7 @@ Identifica exclusivamente los elementos que se crean y a los cuales se hace refe
 | objeto | Cualquier objeto que se pueda compartir. Consulta [Referencias a ResourceDictionary y a recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273). |
 | stringKeyValue | Se usa una cadena verdadera como clave, que debe cumplir con la gramática _XamlName_. Consulta "Gramática XamlName", a continuación. | 
 
-##  Gramática XamlName
+##   Gramática XamlName
 
 A continuación se muestra la gramática normativa de una cadena que se usa como clave en la implementación de XAML en la Plataforma universal de Windows (UWP):
 
@@ -59,7 +58,9 @@ CombiningCharacter::= none
 
 Los elementos secundarios de un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) generalmente incluyen un atributo **x:Key** que especifica un valor de clave único dentro de ese diccionario. El procesador XAML hace cumplir la exclusividad de la clave en tiempo de carga. Los valores **x:Key** que no son únicos generarán errores o excepciones en el analizador. Si la [extensión de marcado {StaticResource}](staticresource-markup-extension.md) lo solicita, una clave no resuelta también generará excepciones de análisis XAML.
 
-**x:Key** y [x:Name](x-name-attribute.md) no son conceptos idénticos. **x:Key** se usa exclusivamente en los diccionarios de recursos. x:Name se usa para todas las áreas de XAML. Una llamada a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) usando el valor de clave no recuperará un recurso con clave.
+
+            **x:Key** y [x:Name](x-name-attribute.md) no son conceptos idénticos. 
+            **x:Key** se usa exclusivamente en los diccionarios de recursos. x:Name se usa para todas las áreas de XAML. Una llamada a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) usando el valor de clave no recuperará un recurso con clave.
 
 Ten en cuenta que, en la sintaxis implícita que se muestra, el objeto [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) está implícito en la forma en que el procesador XAML produce un objeto nuevo para rellenar una colección [**Resources**](https://msdn.microsoft.com/library/windows/apps/br208740).
 

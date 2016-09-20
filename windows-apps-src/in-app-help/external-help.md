@@ -11,7 +11,7 @@ ms.openlocfilehash: 0e21737e33f33d7239162ddcf9d4cdf39db17655
 
 # Páginas de ayuda externa
 
-\ [Actualizado para aplicaciones para la Plataforma universal de Windows (UWP) en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\ [Actualizado para aplicaciones para la Plataforma universal de Windows (UWP) en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Si la aplicación requiere ayuda detallada para el contenido complejo, considera la posibilidad de hospedar estas instrucciones en una página web.
 

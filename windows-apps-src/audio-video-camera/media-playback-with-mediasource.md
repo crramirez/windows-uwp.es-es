@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
 description: "La clase MediaSource proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde orígenes diferentes, tales como archivos locales o remotos, y expone un modelo común para acceder a datos multimedia, independientemente del formato del contenido multimedia subyacente."
 title: "Reproducción de contenido multimedia con MediaSource"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
@@ -16,7 +15,8 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 \[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
 
-La clase [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905) proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde orígenes diferentes, tales como archivos locales o remotos, y expone un modelo común para acceder a datos multimedia, independientemente del formato del contenido multimedia subyacente. La clase [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) amplía la funcionalidad del objeto **MediaSource**, lo que permite administrar y seleccionar entre varias pistas de audio, vídeo y metadatos incluidos en un elemento multimedia. [
+La clase [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905) proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde orígenes diferentes, tales como archivos locales o remotos, y expone un modelo común para acceder a datos multimedia, independientemente del formato del contenido multimedia subyacente. La clase [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) amplía la funcionalidad del objeto **MediaSource**, lo que permite administrar y seleccionar entre varias pistas de audio, vídeo y metadatos incluidos en un elemento multimedia. 
+            [
               **MediaPlaybackList**
             ](https://msdn.microsoft.com/library/windows/apps/dn930955) permite crear listas de reproducción desde uno o más elementos de la reproducción de contenido multimedia.
 
@@ -144,7 +144,8 @@ En este ejemplo se agrega una pista de texto personalizado al especificar **Time
 
 El objeto [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) permite crear una lista de reproducción de elementos multimedia, que se representan con objetos **MediaPlaybackItem**.
 
-**Nota**  Los elementos de una [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) se representan mediante la reproducción sin pausas. El sistema usará los metadatos proporcionados en archivos codificados MP3 o AAC para determinar la compensación del retraso o el espaciado interno necesaria para la reproducción sin pausas. Si los archivos codificados MP3 o AAC no proporcionan estos metadatos, el sistema determina el retraso o el espaciado interno de forma heurística. Para los formatos sin pérdida, como PCM, FLAC o ALAC, el sistema no realiza ninguna acción porque estos codificadores no introducen ningún retraso ni espaciado interno.
+
+            **Nota**  Los elementos de una [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) se representan mediante la reproducción sin pausas. El sistema usará los metadatos proporcionados en archivos codificados MP3 o AAC para determinar la compensación del retraso o el espaciado interno necesaria para la reproducción sin pausas. Si los archivos codificados MP3 o AAC no proporcionan estos metadatos, el sistema determina el retraso o el espaciado interno de forma heurística. Para los formatos sin pérdida, como PCM, FLAC o ALAC, el sistema no realiza ninguna acción porque estos codificadores no introducen ningún retraso ni espaciado interno.
 
 Para empezar, declara una variable para almacenar el objeto **MediaPlaybackList**.
 

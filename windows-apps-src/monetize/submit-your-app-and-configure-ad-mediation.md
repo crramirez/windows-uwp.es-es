@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 69E05E56-B5F0-4D4C-A1FF-B6EAFF5D0E28
 description: "Durante el proceso de envío, puedes configurar el comportamiento de la mediación de anuncios que desees ver. Podrás ajustar esto más adelante sin necesidad de realizar cambios en el código ni enviar paquetes nuevos."
 title: "Enviar la aplicación y configurar la mediación de anuncios"
-translationtype: Human Translation
 ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
 ms.openlocfilehash: 13dd6a9c38d85ead29a43f470b7c0f63d025d612
 
@@ -29,12 +28,15 @@ En los siguientes pasos se describe cómo crear una configuración de línea bas
 1.  En **Configurar mediación para**, asegúrate de que el paquete de la aplicación que deseas configurar está seleccionado.
 2.  En **Destino**, asegúrate de que **Línea base** está seleccionado.
 3.  En **Frecuencia de actualización**, establece la frecuencia de actualización para determinar la duración del ciclo de mediación (frecuencia de presentación de los anuncios). La duración debe ser entre 30 y 120 segundos.
-  > **Nota** Si ya configuraste una frecuencia de actualización en cualquiera de los portales de redes de anuncios, procura establecer la misma frecuencia de actualización aquí.
+  > 
+            **Nota** Si ya configuraste una frecuencia de actualización en cualquiera de los portales de redes de anuncios, procura establecer la misma frecuencia de actualización aquí.
 
 4.  A continuación, en la sección **Mediación de anuncios de Windows** se enumeran todas las redes de anuncios usadas por la aplicación y se proporcionan dos maneras diferentes de especificar la frecuencia en que la aplicación debe usar cada red de anuncios. Elige una de estas opciones en la lista desplegable **Tipo de mediación**:
 
-    -   **Orden por peso**. Elige esta opción para aplicar valores de porcentaje a cada red de anuncios que especifiquen la frecuencia con que la aplicación los debe usar. La suma total de los porcentajes que definas para todas las redes de anuncios debe ser del 100 % exactamente. Para obtener más información, consulta [Ordenar redes de anuncios por peso](#order-ad-networks-by-weight).
-    -   **Orden por clasificación**. Elige esta opción para aplicar un número de clasificación en cada red de anuncios, de 1 a *n*, que especifique la frecuencia con que la aplicación debe usar cada red de anuncios. Para obtener más información, consulta [Ordenar redes de anuncios por clasificación](#order-ad-networkds-by-rank).
+    -   
+            **Orden por peso**. Elige esta opción para aplicar valores de porcentaje a cada red de anuncios que especifiquen la frecuencia con que la aplicación los debe usar. La suma total de los porcentajes que definas para todas las redes de anuncios debe ser del 100% exactamente. Para obtener más información, consulta [Ordenar redes de anuncios por peso](#order-ad-networks-by-weight).
+    -   
+            **Orden por clasificación**. Elige esta opción para aplicar un número de clasificación en cada red de anuncios, de 1 a *n*, que especifique la frecuencia con que la aplicación debe usar cada red de anuncios. Para obtener más información, consulta [Ordenar redes de anuncios por clasificación](#order-ad-networkds-by-rank).
 
     El Centro de desarrollo aplica automáticamente la [configuración predeterminada](#default-ad-mediation-settings) que especifica la frecuencia con que la aplicación debe usar cada red de anuncios.
 
@@ -51,14 +53,14 @@ En los siguientes pasos se describe cómo crear una configuración de línea bas
 
 ### Ordenar redes de anuncios por peso
 
-Elige esta opción en la lista desplegable **Mediation type** para especificar los valores de porcentaje que especifican la frecuencia con que la aplicación debe usar cada red de anuncios. La suma total de los porcentajes que definas para todas las redes de anuncios debe ser del 100 % exactamente.
+Elige esta opción en la lista desplegable **Mediation type** para especificar los valores de porcentaje que especifican la frecuencia con que la aplicación debe usar cada red de anuncios. La suma total de los porcentajes que definas para todas las redes de anuncios debe ser del 100% exactamente.
 
-Para repartir automáticamente las solicitudes de forma equitativa en todas las redes, haz clic en **Distribuir las solicitudes de anuncios de forma equitativa a través de todas las redes de anuncios activas**. Para repartir solicitudes de forma desigual, usa los controles deslizantes para indicar la frecuencia con la que la aplicación debe usar cada red de anuncios. La suma total de los porcentajes que definas para todas las redes de anuncios deben ser del 100 % exactamente. Al arrastrar los controles deslizantes, tienes varias opciones:
+Para repartir automáticamente las solicitudes de forma equitativa en todas las redes, haz clic en **Distribuir las solicitudes de anuncios de forma equitativa a través de todas las redes de anuncios activas**. Para repartir solicitudes de forma desigual, usa los controles deslizantes para indicar la frecuencia con la que la aplicación debe usar cada red de anuncios. La suma total de los porcentajes que definas para todas las redes de anuncios deben ser del 100% exactamente. Al arrastrar los controles deslizantes, tienes varias opciones:
 
 -   Si arrastras el control deslizante a un número, el número indica el porcentaje de tiempo que se llamará a esta red de anuncios como primera opción de la aplicación en un ciclo de mediación.
--   Si arrastras el control deslizante a **Copia de seguridad**, esto indica que debe llamarse a esta red de anuncios solo si ninguna de las redes de anuncios que tienen un porcentaje designado puede proporcionar un anuncio. Esto equivale a establecer el porcentaje en 0 %.
+-   Si arrastras el control deslizante a **Copia de seguridad**, esto indica que debe llamarse a esta red de anuncios solo si ninguna de las redes de anuncios que tienen un porcentaje designado puede proporcionar un anuncio. Esto equivale a establecer el porcentaje en 0%.
 -   Si arrastras el control deslizante a **Inactiva**, esto indica que nunca se llamará a esta red de anuncios. Los ensamblados de la red de anuncios permanecerán en el paquete, pero el mediador no intentará invocarlos. Esta opción se puede establecer en configuraciones específicas del mercado para excluir redes de anuncios que se sabe que no funcionan correctamente o no admiten un determinado mercado.
--   Al ajustar el porcentaje de una red de anuncios, cualquier control deslizante con el que hayas seleccionado un valor distinto de **Copia de seguridad** se ajustará automáticamente para que la distribución total agregue hasta 100 %. Si seleccionas la casilla **Bloquear** para una red de anuncios, esa red de anuncios permanecerá fija en el valor seleccionado actualmente. Después puedes ajustar los valores de otras redes de anuncios sin afectar al valor de la red de anuncios bloqueada
+-   Al ajustar el porcentaje de una red de anuncios, cualquier control deslizante con el que hayas seleccionado un valor distinto de **Copia de seguridad** se ajustará automáticamente para que la distribución total agregue hasta 100%. Si seleccionas la casilla **Bloquear** para una red de anuncios, esa red de anuncios permanecerá fija en el valor seleccionado actualmente. Después puedes ajustar los valores de otras redes de anuncios sin afectar al valor de la red de anuncios bloqueada
 
 ### Ordenar redes de anuncios por clasificación
 
@@ -104,7 +106,8 @@ Cuando envías una actualización de aplicación, se aplica automáticamente la 
 
 Si no se cumple alguna de estas condiciones, deberás volver a crear la configuración de línea base y cualquier otra configuración objetivo específica del mercado de la aplicación.
 
-> **Nota** El Id. de un objeto **AdMediatorControl** se genera cuando arrastras el control a una superficie de diseño de la aplicación. Este identificador no cambiará a menos que elimines el control y los reemplace arrastrando un nuevo control a la misma superficie de diseño.
+> 
+            **Nota** El Id. de un objeto **AdMediatorControl** se genera cuando arrastras el control a una superficie de diseño de la aplicación. Este identificador no cambiará a menos que elimines el control y los reemplace arrastrando un nuevo control a la misma superficie de diseño.
 
  
 
@@ -142,8 +145,8 @@ Generalmente quieres usar Microsoft Advertising primero. Si Microsoft Advertisin
 
 | Red de anuncios            | Configuración |
 |-----------------------|---------------|
-| Microsoft             | 90 %           |
-| Inneractive           | 10 %           |
+| Microsoft             | 90%           |
+| Inneractive           | 10%           |
 | AdDuplex              | Copia de seguridad        |
 
 ### Ejemplo 4
@@ -152,8 +155,8 @@ Quieres usar Microsoft Advertising e Inneractive por igual, de modo que haya una
 
 | Red de anuncios            | Configuración |
 |-----------------------|---------------|
-| Microsoft             | 50 %           |
-| Inneractive           | 50 %           |
+| Microsoft             | 50%           |
+| Inneractive           | 50%           |
 | AdDuplex              | Copia de seguridad        |
 
 

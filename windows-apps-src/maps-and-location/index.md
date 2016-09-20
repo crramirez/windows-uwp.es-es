@@ -16,7 +16,8 @@ ms.openlocfilehash: 829a8d7eb4da810e2353593c03cd5aa4e047173a
 
 En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos.
 
-> **Sugerencia**  Para obtener más información sobre el uso de los mapas y la ubicación en tu aplicación, descarga las muestras siguientes de [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) (Repositorio de muestras universales de Windows) en GitHub:
+> 
+            **Sugerencia**  Para obtener más información sobre el uso de los mapas y la ubicación en tu aplicación, descarga las muestras siguientes de [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) (Repositorio de muestras universales de Windows) en GitHub:
 -   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 -   [Muestra de ubicación geográfica deUWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
 

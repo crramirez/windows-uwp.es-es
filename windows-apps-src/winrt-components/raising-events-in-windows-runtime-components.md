@@ -11,7 +11,7 @@ ms.openlocfilehash: 54934cba0e26da547e09b95a63d2c63363eaf85d
 # Generación de eventos en componentes de Windows Runtime
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Si tu componente de Windows Runtime genera un evento de un tipo de delegado definido por el usuario en un subproceso en segundo plano (subproceso de trabajo) y deseas que JavaScript pueda recibir el evento, puedes implementarlo o generarlo mediante uno de estos métodos:
@@ -139,7 +139,8 @@ Agregar un componente de Windows Runtime de C# a la solución: en el Explorador 
 
 En el Explorador de soluciones, abre el menú contextual para la solución y, a continuación, elige **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, selecciona **Propiedades de configuración** en el panel izquierdo y luego, en la parte superior del cuadro de diálogo, establece **Configuración** en **Depurar** y **Plataforma** en x86, x64 o ARM. Elige el botón **Aceptar**.
 
-**Importante** Platform = Any CPU no funcionará porque no es válido para la DLL de Win32 de código nativo que agregarás a la solución más adelante.
+
+            **Importante** Platform = Any CPU no funcionará porque no es válido para la DLL de Win32 de código nativo que agregarás a la solución más adelante.
 
 En el Explorador de soluciones, cambia el nombre class1.cs por ToasterComponent.cs para que coincida con el nombre del proyecto. Visual Studio cambia automáticamente el nombre de la clase en el archivo para que coincida con el nuevo nombre de archivo.
 
@@ -147,7 +148,8 @@ En el archivo .cs, agrega una directiva using para el espacio de nombres Windows
 
 Cuando necesitas proxies y códigos auxiliares, tu componente debe utilizar interfaces para exponer sus miembros públicos. En ToasterComponent.cs, define una interfaz para el notificador y otra para la notificación del sistema que produce el notificador.
 
-**Nota** En C#, este paso se puede omitir. En su lugar, crea primero una clase y, a continuación, abre su menú contextual y elige **Refactorizar &gt; Extraer interfaz**. En el código que se genera, otorga manualmente acceso público a las interfaces.
+
+            **Nota** En C#, este paso se puede omitir. En su lugar, crea primero una clase y, a continuación, abre su menú contextual y elige **Refactorizar &gt; Extraer interfaz**. En el código que se genera, otorga manualmente acceso público a las interfaces.
 
 ```csharp
     public interface IToaster
@@ -215,7 +217,8 @@ A continuación, necesitamos clases que implementen estas interfaces y sean púb
 
 En el código anterior, creamos la notificación del sistema y, a continuación, hacemos girar un elemento de trabajo del grupo de subprocesos para iniciar la notificación. Aunque el IDE podría sugerir que apliques la palabra clave "await" para la llamada asincrónica, no es necesario en este caso porque el método no realiza ningún trabajo que dependa de los resultados de la operación.
 
-**Nota** La llamada asincrónica en el código anterior usa ThreadPool.RunAsync únicamente para demostrar un método sencillo de desencadenar el evento en un subproceso en segundo plano. Este método en concreto se podría escribir como se muestra en el ejemplo siguiente y funcionaría correctamente porque el programador de tareas de .NET automáticamente calcula la referencia de las llamadas asincrónicas y "await" al subproceso de IU.
+
+            **Nota** La llamada asincrónica en el código anterior usa ThreadPool.RunAsync únicamente para demostrar un método sencillo de desencadenar el evento en un subproceso en segundo plano. Este método en concreto se podría escribir como se muestra en el ejemplo siguiente y funcionaría correctamente porque el programador de tareas de .NET automáticamente calcula la referencia de las llamadas asincrónicas y "await" al subproceso de IU.
   
 ````csharp
     public async void MakeToast(string message)

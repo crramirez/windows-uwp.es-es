@@ -20,7 +20,8 @@ ms.openlocfilehash: ab575415e5e6a091fb45dab49af21d0552834406
 
 Aprende a crear una tarea en segundo plano que reconozca solicitudes de cancelación y detenga el trabajo, y que informe de la cancelación a la aplicación a través del almacenamiento persistente.
 
-> **Nota**  Para todas las familias de dispositivos, excepto la de equipos de escritorio, si el dispositivo dispone de poca memoria, las tareas en segundo plano pueden finalizarse. Si no se expone una excepción de falta de memoria o la aplicación no la controla, la tarea en segundo plano finalizará sin que se muestre ninguna advertencia y sin que se genere el evento OnCanceled. Esto contribuye a garantizar la experiencia del usuario de la aplicación en primer plano. La tarea en segundo plano debe estar diseñada para controlar este escenario.
+> 
+            **Nota**  Para todas las familias de dispositivos, excepto la de equipos de escritorio, si el dispositivo dispone de poca memoria, las tareas en segundo plano pueden finalizarse. Si no se expone una excepción de falta de memoria o la aplicación no la controla, la tarea en segundo plano finalizará sin que se muestre ninguna advertencia y sin que se genere el evento OnCanceled. Esto contribuye a garantizar la experiencia del usuario de la aplicación en primer plano. La tarea en segundo plano debe estar diseñada para controlar este escenario.
 
 En este tema se da por hecho que ya has creado una clase de tarea en segundo plano, incluido el método Run que se usa como punto de entrada de la tarea en segundo plano. Para comenzar rápidamente a crear una tarea en segundo plano, consulta [Creación y registro de una tarea en segundo plano](create-and-register-a-background-task.md). Para obtener información más detallada sobre las condiciones y los desencadenadores, consulta [Dar soporte a una aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
 
@@ -202,7 +203,8 @@ El [ejemplo de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=
 
 ## [!div class="tabbedCodeSnippets"]
 
-**Nota**  El ejemplo de código anterior usa la propiedad [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800), que se usa para registrar el progreso de la tarea en segundo plano.
+
+            **Nota**  El ejemplo de código anterior usa la propiedad [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800), que se usa para registrar el progreso de la tarea en segundo plano.
 
 El progreso se notifica a la aplicación mediante la clase [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782).
 
@@ -335,8 +337,9 @@ El [ejemplo de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=
 * [Ejemplo de método Run](declare-background-tasks-in-the-application-manifest.md)
 * [El método Run completo y el código de la devolución de llamada del temporizador, del [ejemplo de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) se muestra a continuación para ilustrar el contexto:](guidelines-for-background-tasks.md)
 * [[!div class="tabbedCodeSnippets"]](monitor-background-task-progress-and-completion.md)
-* [**Nota**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP).](register-a-background-task.md)
-* [Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](respond-to-system-events-with-background-tasks.md)
+* [
+            **Nota**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP).](register-a-background-task.md)
+* [Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](respond-to-system-events-with-background-tasks.md)
 * [Temas relacionados](run-a-background-task-on-a-timer-.md)
 * [Crear y registrar una tarea en segundo plano](set-conditions-for-running-a-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](update-a-live-tile-from-a-background-task.md)

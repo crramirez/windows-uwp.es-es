@@ -5,7 +5,6 @@ title: Colocar las cadenas de la interfaz de usuario en recursos
 ms.assetid: E420B9BB-C0F6-4EC0-BA3A-BA2875B69722
 label: Put UI strings into resources
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: b44d9235e34b8d4c75f663029d1dde3f87bd0eb7
 
@@ -32,7 +31,8 @@ Este tema muestra los pasos para agregar varios recursos de cadena de idioma a t
 1.  Abre la solución (o crea una nueva) en Visual Studio.
 
 2.  Abre package.appxmanifest en Visual Studio, ve a la pestaña **Aplicación** y (para este ejemplo) establece el idioma predeterminado en "en-US". Si hay varios archivos package.appxmanifest en la solución, haz lo siguiente para cada uno.
-    <br>**Nota** De este modo, se especifica el idioma predeterminado del proyecto. Los recursos de idioma predeterminado se usan cuando los idiomas de visualización o el idioma preferido del usuario no coinciden con los recursos de idioma indicados en la aplicación.
+    <br>
+            **Nota** De este modo, se especifica el idioma predeterminado del proyecto. Los recursos de idioma predeterminado se usan cuando los idiomas de visualización o el idioma preferido del usuario no coinciden con los recursos de idioma indicados en la aplicación.
 3.  Crea una carpeta que contenga los archivos de recursos.
     1.  En el Explorador de soluciones, haz clic con el botón derecho en el proyecto (el proyecto compartido si la solución contiene varios proyectos) y selecciona **Agregar**&gt;**Nueva carpeta**.
     2.  Asigna el nombre "Strings" a la nueva carpeta.
@@ -41,11 +41,14 @@ Este tema muestra los pasos para agregar varios recursos de cadena de idioma a t
 4.  Crea una subcarpeta y un archivo de recursos para inglés (Estados Unidos).
     1.  Haz clic con el botón derecho en la carpeta Strings y agrega una nueva carpeta debajo. Asígnale el nombre "en-US". El archivo de recursos debe colocarse en una carpeta a la que se ha asignado un nombre para la etiqueta de idioma [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302). Consulta [Cómo asignar nombre a los recursos mediante calificadores](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324) para obtener información detallada sobre el calificador de idioma y ver una lista de etiquetas de idioma comunes.
     2.  Haz clic con el botón derecho en la carpeta en-US y selecciona **Agregar**&gt;**Nuevo elemento**.
-    3.  **XAML:** selecciona "Archivo de recursos (.resw)".
-        <br>**HTML:** selecciona "Archivo de recursos (.resjson)".
+    3.  
+                    **XAML:** selecciona "Archivo de recursos (.resw)".
+<br>
+            **HTML:** selecciona "Archivo de recursos (.resjson)".
 
     4.  Haz clic en **Agregar**. Se agrega un archivo de recursos con el nombre predeterminado "Resources.resw" (para **XAML**) o "resources.rejson" (para **HTML**). Te recomendamos que uses este nombre de archivo predeterminado. Las aplicaciones pueden particionar sus recursos en otros archivos, pero debes asegurarte de hacer referencia a estos correctamente (consulta el tema [Cómo cargar recursos de cadenas](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323)).
-    5.  **Solo XAML:** si tienes archivos .resx únicamente con recursos de cadena de proyectos de .NET anteriores, selecciona **Agregar**&gt;**Elemento existente**, agrega el archivo .resx y cambia el nombre del archivo a .resw.
+    5.  
+            **Solo XAML:** si tienes archivos .resx únicamente con recursos de cadena de proyectos de .NET anteriores, selecciona **Agregar**&gt;**Elemento existente**, agrega el archivo .resx y cambia el nombre del archivo a .resw.
     6.  Abre el archivo y usa el editor para agregar estos recursos:
 
         **XAML:**
@@ -112,7 +115,8 @@ auto str = loader->GetString("Farewell");
 
 1.  Agrega al archivo HTML algunas referencias a la Biblioteca de Windows para JavaScript, si aún no las contiene.
 
-    **Nota** El siguiente código muestra el texto HTML del archivo default.html del proyecto de Windows que se genera cuando creas un nuevo proyecto **Aplicación vacía (Windows universal)** de JavaScript en Visual Studio. Ten en cuenta que el archivo ya contiene referencias a WinJS.
+    
+            **Nota** El siguiente código muestra el texto HTML del archivo default.html del proyecto de Windows que se genera cuando creas un nuevo proyecto **Aplicación vacía (Windows universal)** de JavaScript en Visual Studio. Ten en cuenta que el archivo ya contiene referencias a WinJS.
 
     ```    HTML
     <!-- WinJS references -->
@@ -160,7 +164,8 @@ auto str = loader->GetString("Farewell");
 
     El patrón general del atributo data-win-res para la sustitución de HTML es data-win-res = "{*propertyname1*: '*resouce ID*', *propertyname2*: '*resource ID2*'}".
 
-    **Nota** Si la cadena no contiene ningún marcado, enlaza el recurso siempre que sea posible a la propiedad textContent en lugar de innerHTML. La propiedad textContent puede reemplazarse con más rapidez que innerHTML.
+    
+            **Nota** Si la cadena no contiene ningún marcado, enlaza el recurso siempre que sea posible a la propiedad textContent en lugar de innerHTML. La propiedad textContent puede reemplazarse con más rapidez que innerHTML.
 
 5.  Consulta los recursos de cadena en JavaScript.
     <span codelanguage="JavaScript"></span>

@@ -20,7 +20,8 @@ Las tareas en segundo plano son clases separadas que implementan la interfaz de 
 
 Para comenzar rápidamente con una tarea en segundo plano, consulta [Creación y registro de una tarea en segundo plano](create-and-register-a-background-task.md).
 
-**Sugerencia** A partir de Windows 10, ya no es necesario colocar una aplicación en la pantalla de bloqueo para registrar las tareas en segundo plano.
+
+            **Sugerencia** A partir de Windows10, ya no es necesario colocar una aplicación en la pantalla de bloqueo para registrar las tareas en segundo plano.
 
  
 
@@ -69,11 +70,14 @@ Antes de que la aplicación pueda registrar correctamente una tarea en segundo p
 
 Los siguientes desencadenadores en tiempo real pueden usarse para ejecutar el código personalizado ligero en segundo plano:
 
-**Canal de control: **Las tareas en segundo plano pueden mantener una conexión activa y recibir mensajes en el canal de control, mediante la clase [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Si tu aplicación está escuchando un socket, puedes usar el agente de socket en lugar de la clase **ControlChannelTrigger**. Para más información sobre el uso del agente de socket, consulta [SocketActivityTrigger](https://msdn.microsoft.com/library/windows/apps/dn806009). La clase **ControlChannelTrigger** no se admite en Windows Phone.
 
-**Temporizador: **Las tareas en segundo plano se pueden ejecutar cada 15 minutos y se pueden configurar para que se ejecuten a una determinada hora mediante la clase [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). Para obtener más información, consulta [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md).
+            **Canal de control: **Las tareas en segundo plano pueden mantener una conexión activa y recibir mensajes en el canal de control, mediante la clase [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Si tu aplicación está escuchando un socket, puedes usar el agente de socket en lugar de la clase **ControlChannelTrigger**. Para más información sobre el uso del agente de socket, consulta [SocketActivityTrigger](https://msdn.microsoft.com/library/windows/apps/dn806009). La clase **ControlChannelTrigger** no se admite en Windows Phone.
 
-**Notificación de inserción: **Las tareas en segundo plano responden a la clase [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) para recibir notificaciones de inserción sin procesar.
+
+            **Temporizador: **Las tareas en segundo plano se pueden ejecutar cada 15minutos y se pueden configurar para que se ejecuten a una determinada hora mediante la clase [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). Para obtener más información, consulta [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md).
+
+
+            **Notificación de inserción: **Las tareas en segundo plano responden a la clase [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) para recibir notificaciones de inserción sin procesar.
 
 **Nota**  
 
@@ -84,7 +88,8 @@ Para garantizar que la aplicación universal de Windows continúe funcionando co
 ## Desencadenadores de eventos del sistema
 
 
-> **Nota** La enumeración [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839) incluye los siguientes desencadenadores de eventos del sistema.
+> 
+            **Nota** La enumeración [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839) incluye los siguientes desencadenadores de eventos del sistema.
 
 | Nombre del desencadenador            | Descripción                                                       |
 |-------------------------|-------------------------------------------------------------------|

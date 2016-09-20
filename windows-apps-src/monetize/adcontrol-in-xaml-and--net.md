@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
 description: "Aprende a usar la clase AdControl para mostrar anuncios de banner en una aplicación XAML para Windows 10 (UWP), Windows 8.1 o Windows Phone 8.1."
 title: AdControl en XAML y .NET
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: d17d8a39f31bfcbf3172b4592e918f0be4a6bf92
 
@@ -40,7 +39,8 @@ Para obtener un proyecto de ejemplo completo que muestra cómo agregar anuncios 
 
   ![addreferences](images/13-a84c026e-b283-44f2-8816-f950a1ef89aa.png)
 
-    > **Nota**  Esta imagen corresponde a la creación de un proyecto de UWP para Windows 10 en Visual Studio 2015. Si estás creando una aplicación de Windows 8.1 o Windows Phone 8.1 o si usas Visual Studio 2013, la pantalla tendrá un aspecto diferente.
+    > 
+            **Nota**  Esta imagen corresponde a la creación de un proyecto de UWP para Windows 10 en Visual Studio 2015. Si estás creando una aplicación de Windows 8.1 o Windows Phone 8.1 o si usas Visual Studio 2013, la pantalla tendrá un aspecto diferente.
 
 3.  En el **Administrador de referencias**, haz clic en Aceptar.
 4.  Modifica el código XAML de la página en la que se insertará publicidad para que incluya el espacio de nombres **Microsoft.Advertising.WinRT.UI**. Por ejemplo, en la aplicación de ejemplo predeterminada que genera Visual Studio (denominada, en esta aplicación, MyAdFundedWindows10AppXAML), la página XAML es **MainPage.XAML**.
@@ -86,7 +86,8 @@ Para obtener un proyecto de ejemplo completo que muestra cómo agregar anuncios 
 
     1.  Asigna las propiedades [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) y [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) en **Page** para probar los valores proporcionados en los [Valores del modo de prueba](test-mode-values.md).
 
-        > **Nota**   Reemplazarás los valores de prueba con valores dinámicos antes de enviar la aplicación.
+        > 
+            **Nota**   Reemplazarás los valores de prueba con valores dinámicos antes de enviar la aplicación.
 
     2.  Ajusta el alto y ancho del control para que se corresponda con uno de los [Tamaños de anuncios admitidos para anuncios de banner](supported-ad-sizes-for-banner-ads.md).
 
@@ -138,7 +139,8 @@ Para obtener un proyecto de ejemplo completo que muestra cómo agregar anuncios 
 
 2.  En el código, reemplaza los valores de unidad de anuncio de prueba (**ApplicationId** y **AdUnitId**) con los valores dinámicos generados en el Centro de desarrollo.
 
-3.  [Envía la aplicación](../publish/app-submissions.md) a la Tienda desde el panel del Centro de desarrollo.
+3.  
+            [Envía la aplicación](../publish/app-submissions.md) a la Tienda desde el panel del Centro de desarrollo.
 
 4.  Revisa los [informes de rendimiento de publicidad](../publish/advertising-performance-report.md) en el panel del Centro de desarrollo.
 

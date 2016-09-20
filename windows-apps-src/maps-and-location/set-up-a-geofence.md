@@ -5,7 +5,7 @@ description: "Configura una geovalla en tu aplicación y aprende a administrar l
 ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
 translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: e161e478b1b306f5d8d77b7649aeecd80e21b5be
+ms.openlocfilehash: e91f0bbb203ef1c77ad1435b1a3f10aa53c3a483
 
 ---
 
@@ -115,21 +115,11 @@ Geofence geofence = new Geofence(fenceId, geocircle);
 
 Puedes ajustar aún más la geovalla mediante uno de los otros constructores. En el siguiente ejemplo, el constructor de geovalla especifica estos parámetros adicionales:
 
--   [
-              **MonitoredStates**
-            ](https://msdn.microsoft.com/library/windows/apps/dn263728): indica de qué eventos de geovalla quieres recibir notificaciones para entrar en la región definida, salir de la región definida o eliminar la geovalla.
--   [
-              **SingleUse**
-            ](https://msdn.microsoft.com/library/windows/apps/dn263732): quita la geovalla cuando se alcanzan todos los estados de la geovalla que se está supervisando.
--   [
-              **DwellTime**
-            ](https://msdn.microsoft.com/library/windows/apps/dn263703): indica cuánto tiempo debe estar el usuario dentro o fuera del área definida antes de desencadenar eventos de entrada o salida.
--   [
-              **StartTime**
-            ](https://msdn.microsoft.com/library/windows/apps/dn263735): indica cuándo comenzar a supervisar la geovalla.
--   [
-              **Duration**
-            ](https://msdn.microsoft.com/library/windows/apps/dn263697): indica el período durante el cual se va a supervisar la geovalla.
+-   [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728): indica de qué eventos de geovalla quieres recibir notificaciones para entrar en la región definida, salir de la región definida o eliminar la geovalla.
+-   [**SingleUse**](https://msdn.microsoft.com/library/windows/apps/dn263732): quita la geovalla cuando se alcanzan todos los estados de la geovalla que se está supervisando.
+-   [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703): indica cuánto tiempo debe estar el usuario dentro o fuera del área definida antes de desencadenar eventos de entrada o salida.
+-   [**StartTime**](https://msdn.microsoft.com/library/windows/apps/dn263735): indica cuándo comenzar a supervisar la geovalla.
+-   [**Duration**](https://msdn.microsoft.com/library/windows/apps/dn263697): indica el periodo durante el cual se va a supervisar la geovalla.
 
 ```csharp
 // Set the fence ID.
@@ -469,7 +459,7 @@ Las tareas de probar y depurar aplicaciones de geovalla pueden resultar todo un 
 
 Antes de que la aplicación pueda acceder a la ubicación, la opción **Ubicación** debe estar habilitada en el dispositivo. En la aplicación **Configuración**, comprueba que la siguiente **configuración de privacidad de ubicación** esté activada:
 
--   **La ubicación de este dispositivo...** está **activada** (no es aplicable en Windows 10 Mobile)
+-   **La ubicación de este dispositivo...** está **activada** (no es aplicable en Windows10 Mobile)
 -   La configuración de servicios de ubicación, **"Ubicación"**, está **activada**
 -   En **Elige las aplicaciones que pueden usar tu ubicación**, la aplicación está establecida como **activada**
 
@@ -483,6 +473,6 @@ Antes de que la aplicación pueda acceder a la ubicación, la opción **Ubicaci�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

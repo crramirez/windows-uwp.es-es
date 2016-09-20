@@ -3,13 +3,12 @@ author: mtoepke
 title: Inicializar Direct3D 11
 description: "Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a obtener identificadores para el dispositivo Direct3D y el contexto de dispositivo, y a usar DXGI para configurar una cadena de intercambio."
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: f0e25e43633d895673d640f139af338f6f0713f2
 
 ---
 
-# Inicializar Direct3D 11
+# Inicializar Direct3D11
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -21,7 +20,7 @@ ms.openlocfilehash: f0e25e43633d895673d640f139af338f6f0713f2
 -   [Parte 3: Migrar el bucle del juego](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
 
 
-Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a obtener identificadores para el dispositivo Direct3D y el contexto de dispositivo, y a usar DXGI para configurar una cadena de intercambio. Parte 1 del tutorial [Migrar una aplicación simple de Direct3D 9 a DirectX 11 y la Plataforma universal de Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a obtener identificadores para el dispositivo Direct3D y el contexto de dispositivo, y a usar DXGI para configurar una cadena de intercambio. Parte 1 del tutorial [Migrar una aplicación simple de Direct3D9 a DirectX11 y la Plataforma universal de Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
 ## Inicializar el dispositivo Direct3D
 
@@ -70,7 +69,8 @@ Primero, creamos el dispositivo. Obtenemos una lista de los niveles de caracter�
 
 Después de crear el dispositivo Direct3D 11 y su contexto, podemos aprovechar la funcionalidad del puntero COM para obtener la versión más reciente de las interfaces, lo cual incluye capacidad adicional, siempre recomendable.
 
-> **Nota** D3D\_FEATURE\_LEVEL\_9\_1 (que corresponde al modelo de sombreador 2.0) es el nivel mínimo que se requiere que el juego de la Tienda Windows admita. (Los paquetes ARM de tu juego no obtendrán la certificación si no son compatibles con el nivel 9\_1.) Si el juego también incluye una ruta de acceso de representación para las 3 funcionalidades del modelo de sombreador, debes incluir D3D\_FEATURE\_LEVEL\_9\_3 en la matriz
+> 
+            **Nota** D3D\_FEATURE\_LEVEL\_9\_1 (que corresponde al modelo de sombreador 2.0) es el nivel mínimo que se requiere que el juego de la Tienda Windows admita. (Los paquetes ARM de tu juego no obtendrán la certificación si no son compatibles con el nivel 9\_1.) Si el juego también incluye una ruta de acceso de representación para las 3 funcionalidades del modelo de sombreador, debes incluir D3D\_FEATURE\_LEVEL\_9\_3 en la matriz
 
  
 
@@ -122,7 +122,8 @@ Direct3D 11 incluye una API de dispositivo denominada infraestructura de gráfic
 
 El dispositivo Direct3D implementa una interfaz COM para DXGI. Primero necesitamos obtener esa interfaz y usarla para solicitar el adaptador DXGI que hospeda el dispositivo. Luego usamos el adaptador DXGI para crear una fábrica de DXGI.
 
-> **Nota** Dado que son interfaces COM, tu primera respuesta podría ser usar [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). En cambio, debes usar punteros inteligentes [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx). Luego, simplemente llama al método [**Como()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx), suministrando un puntero COM vacío del tipo de interfaz correcto.
+> 
+            **Nota** Dado que son interfaces COM, tu primera respuesta podría ser usar [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). En cambio, debes usar punteros inteligentes [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx). Luego, simplemente llama al método [**Como()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx), suministrando un puntero COM vacío del tipo de interfaz correcto.
 
  
 
@@ -146,7 +147,8 @@ dxgiAdapter->GetParent(
 
 Ahora que tenemos la fábrica de DXGI, podemos usarla para crear la cadena de intercambio. Definamos los parámetros de la cadena de intercambio. Necesitamos especificar el formato de la superficie. Elegiremos el formato [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059) porque es compatible con Direct2D. Deshabilitaremos el ajuste de escala de la pantalla, el muestreo múltiple y la representación en estéreo, porque no se usarán en este ejemplo. Dado que estamos ejecutando directamente en una clase CoreWindow, podemos dejar el ancho y el alto establecidos en 0 y obtener los valores de pantalla completa de manera automática.
 
-> **Nota** Siempre establece el parámetro *SDKVersion* para aplicaciones para UWP D3D11\_SDK\_VERSION.
+> 
+            **Nota** Siempre establece el parámetro *SDKVersion* para aplicaciones para UWP D3D11\_SDK\_VERSION.
 
  
 
@@ -166,7 +168,8 @@ swapChain.As(&m_swapChain);
 
 Para asegurarnos de no estar representando con una frecuencia superior a la que la pantalla puede realmente mostrar, establecemos la latencia del marco en 1 y usamos [**DXGI\_SWAP\_EFFECT\_FLIP\_SEQUENTIAL**](https://msdn.microsoft.com/library/windows/desktop/bb173077). Esto ahorra energía y es un requisito de certificación de almacenamiento. Obtendremos más detalles sobre la presentación en pantalla en la segunda parte de este tutorial.
 
-> **Nota** Puedes usar multithreading (por ejemplo, elementos de trabajo [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642)) para continuar con otro trabajo mientras se bloquea la conversación de representación.
+> 
+            **Nota** Puedes usar multithreading (por ejemplo, elementos de trabajo [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642)) para continuar con otro trabajo mientras se bloquea la conversación de representación.
 
  
 

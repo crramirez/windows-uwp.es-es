@@ -5,7 +5,7 @@ description: "Aquí te mostramos cómo crear un dispositivo Direct3D, una cadena
 ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f60d7c5b526fcdea8552256a6ebe4b92d5736264
+ms.openlocfilehash: af52969011a90f0c665dc8a5508c213d3a73b5b7
 
 ---
 
@@ -23,7 +23,7 @@ Aquí te mostramos cómo crear un dispositivo Direct3D, una cadena de intercambi
 
 Suponemos que estás familiarizado con C++. También necesitas tener experiencia básica en los conceptos de programación de gráficos.
 
-**Tiempo para completarlo:** 20 minutos.
+**Tiempo para completarlo:** 20minutos.
 
 ## Instrucciones
 
@@ -220,15 +220,9 @@ Entramos en un bucle sin fin para representar y mostrar continuamente la escena.
 
 En este bucle, llamamos a:
 
-1.  [
-              **ID3D11DeviceContext::OMSetRenderTargets**
-            ](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar el destino de representación como el destino de salida.
-2.  [
-              **ID3D11DeviceContext::ClearRenderTargetView**
-            ](https://msdn.microsoft.com/library/windows/desktop/ff476388) para borrar el destino representado en un color sólido.
-3.  [
-              **IDXGISwapChain::Present**
-            ](https://msdn.microsoft.com/library/windows/desktop/bb174576) para mostrar la imagen representada en la ventana.
+1.  [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar el destino de representación como el destino de salida.
+2.  [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) para borrar el destino representado en un color sólido.
+3.  [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) para mostrar la imagen representada en la ventana.
 
 Como antes habíamos establecido la latencia de fotogramas en 1, Windows, por lo general, disminuye la velocidad del bucle de representación a la velocidad de actualización de pantalla, que es normalmente alrededor de 60 Hz. Windows disminuye el bucle sin fin poniendo a la aplicación en modo de suspensión cuando llama a [**Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576). Windows pone a la aplicación en modo de suspensión hasta que se actualiza la pantalla.
 
@@ -298,6 +292,6 @@ A continuación, también dibujaremos un triángulo en la pantalla.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

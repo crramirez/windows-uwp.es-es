@@ -5,7 +5,6 @@ title: "Directrices para el diseño de la función táctil"
 ms.assetid: 3250F729-4FDD-4AD4-B856-B8BA575C3375
 label: Touch design guidelines
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 67b851ce854c803934c2b97dbe7519e2916383a3
 
@@ -33,7 +32,7 @@ Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias
 ## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Instrucciones de uso adicionales
 
 
-Ante todo, diseña tu aplicación teniendo en mente que el principal método de entrada de los usuarios será táctil. Si usas los controles de la plataforma, la compatibilidad con el mouse, el panel táctil y el lápiz o la pluma no requiere programación adicional, ya que Windows 8 la ofrece de forma gratuita.
+Ante todo, diseña tu aplicación teniendo en mente que el principal método de entrada de los usuarios será táctil. Si usas los controles de la plataforma, la compatibilidad con el mouse, el panel táctil y el lápiz o la pluma no requiere programación adicional, ya que Windows8 la ofrece de forma gratuita.
 
 Pero ten presente que una interfaz de usuario optimizada para entrada táctil no es siempre mejor que una interfaz de usuario tradicional. Ambas ofrecen ventajas y desventajas exclusivas de la tecnología y la aplicación en cuestión. A la hora de diseñar una interfaz de usuario básicamente táctil, es importante entender las diferencias fundamentales entre entrada táctil (incluido el panel táctil), con pluma o lápiz, con mouse y con el teclado. No des por sentado las propiedades y los comportamientos de los dispositivos de entrada conocidos, ya que, en Windows 8, la entrada táctil no se limita a simular esas funciones.
 
@@ -156,7 +155,8 @@ Además, te recomendamos lo siguiente:
 -   Las interacciones deben admitir manipulaciones compuestas. Por ejemplo, alejar para ampliar mientras se arrastran los dedos para el movimiento panorámico.
 -   Las interacciones no deben distinguirse temporalmente. La misma interacción debe tener el mismo resultado, independientemente del tiempo que se haya tardado en realizarla. Las activaciones temporales introducen retrasos obligatorios para los usuarios y reducen la naturaleza envolvente de la manipulación directa, así como la percepción de la respuesta del sistema.
 
-    **Nota** Una excepción a esto se produce cuando se usan interacciones temporales específicas para ayudar en el aprendizaje y la exploración (por ejemplo, mantener presionado).
+    
+            **Nota** Una excepción a esto se produce cuando se usan interacciones temporales específicas para ayudar en el aprendizaje y la exploración (por ejemplo, mantener presionado).
 
      
 

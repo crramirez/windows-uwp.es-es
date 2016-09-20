@@ -1,11 +1,11 @@
 ---
 author: TylerMSFT
 title: "Guía de aplicaciones para la Plataforma universal de Windows (UWP)"
-description: "En esta guía, conocerás las aplicaciones para la Plataforma universal de Windows (UWP) que se pueden ejecutar en una amplia variedad de dispositivos."
+description: "Obtén más información sobre las aplicaciones para la Plataforma universal de Windows (UWP) que se pueden ejecutar en una amplia variedad de dispositivos."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 translationtype: Human Translation
-ms.sourcegitcommit: 4ad8dc5883b7edafa2c2579d3733eafba0b9cc1f
-ms.openlocfilehash: 8f4e906c9f1c685a5f6aeebd5fe0ebcc96ff9a7c
+ms.sourcegitcommit: 2df873ad451e2bb1196a1ce42e3fcd40f8c3ac8e
+ms.openlocfilehash: 925db2c5242eb49229f41298f1db4e2653f3499d
 
 ---
 
@@ -34,7 +34,7 @@ Como la aplicación para UWP se ejecuta en una amplia variedad de dispositivos c
 
 Las aplicaciones de Windows 8.1 y Windows Phone 8.1 están destinadas a un sistema operativo, ya sea Windows o Windows Phone. Con Windows 10, ya no hace falta que destines tu aplicación a un sistema operativo, sino a una o más familias de dispositivos. Una familia de dispositivos identifica las API, las características del sistema y los comportamientos que puedes esperar en todos los dispositivos de la familia. También determina el conjunto de dispositivos en los que se puede instalar la aplicación desde la Tienda. Esta es la jerarquía de familias de dispositivos.
 
-![familias de dispositivos](images/devicefamilytree.png)
+![familias de dispositivos](images/device-family-tree.png)
 
 Una familia de dispositivos es una colección de API con un nombre y un número de versión específicos. Una familia de dispositivos es la base de un sistema operativo. Los ordenadores ejecutan el sistema operativo de escritorio, basado en la familia de dispositivos de escritorio. Los teléfonos, tabletas, etc., ejecutan el sistema operativo móvil, basado en la familia de dispositivos móviles. Etcétera.
 
@@ -51,6 +51,8 @@ Tú decides a qué familia (o familias) de dispositivos destinarás la aplicaci�
 -   El conjunto de dispositivos en los que se puede instalar la aplicación desde la Tienda (y, por lo tanto, los factores de forma que debes tener en cuenta).
 
 Decidir una familia de dispositivos tiene dos consecuencias principales: la superficie de API que la aplicación puede llamar incondicionalmente y el número de dispositivos a los que puede llegar la aplicación. Estos dos factores implican equilibrios y están inversamente relacionados. Por ejemplo, una aplicación para UWP es una aplicación destinada específicamente a la familia de dispositivos universales y, por lo tanto, está disponible para todos los dispositivos. Una aplicación destinada a la familia de dispositivos universales puede suponer que están presentes solo las API de esa familia (porque ese es su objetivo). La llamada a otras API debe ser condicional. Además, una aplicación de este tipo debe tener una interfaz de usuario altamente adaptable y funciones de entrada completas porque se puede ejecutar en una amplia variedad de dispositivos. Una aplicación móvil de Windows es una aplicación destinada específicamente a la familia de dispositivos móviles, que está disponible para los dispositivos con un sistema operativo basado en esa familia (que incluye teléfonos, tabletas y dispositivos similares). Una aplicación de la familia de dispositivos móviles puede suponer que están presentes todas las API de la familia de dispositivos móviles y su interfaz de usuario tiene que ser moderadamente adaptable. Una aplicación destinada a la familia de dispositivos IoT puede instalarse únicamente en dispositivos IoT y puede suponer que están presentes todas las API de esa familia. Esa aplicación puede tener una interfaz de usuario y unas funciones de entrada muy especializadas porque sabrá que se ejecutará únicamente en un determinado tipo de dispositivo.
+
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-UWP-and-Device-Families/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
 Estas son algunas consideraciones que te ayudarán a decidir a qué familia de dispositivos destinar tu aplicación:
 
@@ -103,9 +105,7 @@ Para ayudarte a adaptar el diseño de interfaz de usuario general en función de
 
 ### Diseño de interfaz de usuario adaptable con paneles adaptables
 
-Los paneles de diseño proporcionan tamaños y posiciones a sus elementos secundarios, en función del espacio disponible. Por ejemplo, [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) ordena sus elementos secundarios en una secuencia (horizontal o verticalmente). 
-              [
-              **Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) es como una cuadrícula CSS que coloca sus elementos secundarios en celdas.
+Los paneles de diseño proporcionan tamaños y posiciones a sus elementos secundarios, en función del espacio disponible. Por ejemplo, [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) ordena sus elementos secundarios en una secuencia (horizontal o verticalmente). [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) es como una cuadrícula CSS que coloca sus elementos secundarios en celdas.
 
 El nuevo [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/dn879546) implementa un estilo de diseño definido por las relaciones entre sus elementos secundarios. Está destinado a crear diseños de aplicaciones que puedan adaptarse a los cambios en la resolución de pantalla. El **RelativePanel** simplifica el proceso de reorganizar los elementos definiendo relaciones entre ellos, lo que te permite crear una interfaz de usuario más dinámica sin usar diseños anidados.
 
@@ -185,15 +185,9 @@ Puedes crear una aplicación universal de Windows con controles universales que 
 
 Las siguientes API ofrecen acceso a la entrada:
 
--   
-              [
-              **CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) es una nueva API que le permite consumir entrada sin procesar en el subproceso principal o en un subproceso en segundo plano.
--   
-              [
-              **PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) unifica los datos sin procesar de la entrada táctil, de mouse y de lápiz en un conjunto único y coherente de interfaces y eventos que se pueden consumir en el subproceso principal o en un subproceso en segundo plano mediante **CoreInput.**
--   
-              [
-              **PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) es una API de dispositivo que permite consultar las capacidades del dispositivo para determinar qué modalidades de entrada están disponibles en el dispositivo.
+-   [**CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) es una nueva API que te permite consumir entrada sin procesar en el subproceso principal o en un subproceso en segundo plano.
+-   [**PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) unifica los datos sin procesar de la entrada táctil, de mouse y de lápiz en un conjunto único y coherente de interfaces y eventos que se pueden consumir en el subproceso principal o en un subproceso en segundo plano mediante **CoreInput.**
+-   [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) es una API de dispositivo que permite consultar las capacidades del dispositivo para determinar qué modalidades de entrada están disponibles en el dispositivo.
 -   El nuevo control XAML [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) y [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) y las API de Windows Runtime te permiten tener acceso a los datos de trazo de lápiz.
 
 ## Escribir código
@@ -263,8 +257,7 @@ Para obtener la lista completa de las API de Win32 disponibles para las aplicaci
 
 Una aplicación universal de Windows te permite aprovechar las exclusivas funcionalidades del dispositivo en el que se ejecuta. La aplicación puede usar toda la potencia de un dispositivo de escritorio, la interacción natural de la manipulación directa de una tableta (incluida la entrada táctil y de lápiz), la portabilidad y la comodidad de los dispositivos móviles y la capacidad de colaboración de [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365) y otros dispositivos compatibles con aplicaciones para UWP.
 
-Un buen [diseño](http://go.microsoft.com/fwlink/?LinkId=258848) consiste en decidir cómo interactuarán los usuarios con tu aplicación, qué aspecto tendrá y cómo funcionará. La experiencia del usuario tiene un papel clave a la hora de determinar la satisfacción de los usuarios con tu aplicación, así que no ahorres esfuerzos en este paso. 
-              [Conceptos básicos de diseño](https://dev.windows.com/design) es una introducción al diseño de aplicaciones universales de Windows. Consulta [Introducción a las aplicaciones de la Plataforma universal de Windows (UWP) para diseñadores](https://msdn.microsoft.com/library/windows/apps/dn958439) para obtener información sobre cómo diseñar aplicaciones para UWP que encandilen a los usuarios. Antes de empezar a escribir código, consulta la [Información básica de dispositivos](../input-and-devices/device-primer.md) , que te ayudará a reflexionar sobre la experiencia de interacción que ofrecerá la aplicación en los diferentes factores de forma a los que quieras destinarla.
+Un buen [diseño](http://go.microsoft.com/fwlink/?LinkId=258848) consiste en decidir cómo interactuarán los usuarios con tu aplicación, qué aspecto tendrá y cómo funcionará. La experiencia del usuario tiene un papel clave a la hora de determinar la satisfacción de los usuarios con tu aplicación, así que no ahorres esfuerzos en este paso. [Conceptos básicos de diseño](https://dev.windows.com/design) es una introducción al diseño de aplicaciones universales de Windows. Consulta [Introducción a las aplicaciones de la Plataforma universal de Windows (UWP) para diseñadores](https://msdn.microsoft.com/library/windows/apps/dn958439) para obtener información sobre cómo diseñar aplicaciones para UWP que encandilen a los usuarios. Antes de empezar a escribir código, consulta la [Información básica de dispositivos](../input-and-devices/device-primer.md) , que te ayudará a reflexionar sobre la experiencia de interacción que ofrecerá la aplicación en los diferentes factores de forma a los que quieras destinarla.
 
 ![dispositivos de Windows](images/1894834-hig-device-primer-01-500.png)
 
@@ -274,8 +267,7 @@ Además de la interacción en diferentes dispositivos, [planea la aplicación](h
 
 -   Piensa de qué forma puedes ayudar a los usuarios a cambiar de dispositivo y seguir con la aplicación en el punto en el que la dejaron. Incluye [notificaciones](https://msdn.microsoft.com/library/windows/apps/mt187203) y [compras desde la aplicación](https://msdn.microsoft.com/library/windows/apps/mt219684) en tu planeación. Estas características deberían funcionar en todos los dispositivos.
 
--   Diseña el flujo de trabajo con [Conceptos básicos de diseño de la navegación para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn958438) para integrar dispositivos móviles, de pantalla pequeña y de pantalla grande. 
-              [Diseña la interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/dn958435) para responder a diferentes tamaños de pantalla y resoluciones.
+-   Diseña el flujo de trabajo con [Conceptos básicos de diseño de la navegación para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn958438) para integrar dispositivos móviles, de pantalla pequeña y de pantalla grande. [Diseña la interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/dn958435) para responder a diferentes tamaños de pantalla y resoluciones.
 
 -   Determina si hay características de la aplicación que no tienen sentido en una pantalla pequeña de móvil. También puede haber áreas que no tengan sentido en un ordenador de escritorio fijo y solo destaquen en un dispositivo móvil. Por ejemplo, la mayoría de los escenarios sobre [ubicación](https://msdn.microsoft.com/library/windows/apps/mt219698) implica un dispositivo móvil.
 
@@ -290,12 +282,8 @@ El nuevo panel unificado del Centro de desarrollo de Windows te permite administ
 
 Consulta [Usar el panel unificado del Centro de desarrollo de Windows](../publish/using-the-windows-dev-center-dashboard.md) para aprender a enviar tus aplicaciones para publicarlas en la Tienda Windows.
 
- 
-
- 
 
 
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

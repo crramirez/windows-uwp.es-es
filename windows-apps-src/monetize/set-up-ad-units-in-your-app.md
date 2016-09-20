@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
 description: "Aprende a agregar valores de identificador de aplicación y de identificador de unidad de anuncios a la aplicación desde el panel del Centro de desarrollo de Windows antes de enviar la aplicación a la Tienda."
 title: "Configurar unidades de anuncios en la aplicación"
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 96c09de9321f67dc26cc3538f2655bd598f134f9
 
@@ -30,7 +29,8 @@ Para configurar el identificador de aplicación y las unidades de anuncios de la
 
     * Si la aplicación muestra anuncios intersticiales en vídeos, pasa estos valores para el método **RequestAd** del objeto **InterstitialAd**.
 
-> **Importante** Si la aplicación usa la mediación de anuncios para mostrar anuncios de banner de Microsoft Advertising (es decir, usa un objeto **AdMediatorControl**), no tienes que solicitar unidades de anuncios. En este escenario, las unidades de anuncios se generan automáticamente. Para obtener más información, consulta [Cuál es la diferencia: AdMediator o AdControl](what-is-the-difference-admediatorcontrol-or-adcontrol.md).
+> 
+            **Importante** Si la aplicación usa la mediación de anuncios para mostrar anuncios de banner de Microsoft Advertising (es decir, usa un objeto **AdMediatorControl**), no tienes que solicitar unidades de anuncios. En este escenario, las unidades de anuncios se generan automáticamente. Para obtener más información, consulta [Cuál es la diferencia: AdMediator o AdControl](what-is-the-difference-admediatorcontrol-or-adcontrol.md).
 
  
 

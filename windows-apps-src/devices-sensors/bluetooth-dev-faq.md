@@ -1,19 +1,23 @@
 ---
 author: msatranjr
-title: Bluetooth developer FAQ
-description: This article contains answers to commonly asked questions related to the UWP bluetooth APIs.
+title: "Preguntas más frecuentes de los desarrolladores de Bluetooth"
+description: "Este artículo contiene respuestas a las preguntas más frecuentes relacionadas con las API de Bluetooth para la UWP."
+translationtype: Human Translation
+ms.sourcegitcommit: e4c95448262c6c62956fcb50581c98d8c34d6dc0
+ms.openlocfilehash: 2afc1250aa9d7a6cf6c9c8cb45dd2379b9d36984
+
 ---
-# Bluetooth Developer FAQ
+# Preguntas más frecuentes de los desarrolladores de Bluetooth
 
-This article contains answers to commonly asked UWP Bluetooth API questions.
+Este artículo contiene respuestas a las preguntas más frecuentes sobre las API de Bluetooth para la UWP.
 
-## Why does my Bluetooth LE Device stop responding after a disconnect?
+## ¿Por qué mi dispositivo Bluetooth LE deja de responder tras una desconexión?
 
-The common reason this happens is because the remote device has lost pairing information. A lot of earlier Bluetooth devices don't require authentication. To protect the user, all pairing ceremonies performed from the Settings app will require authentication and some devices don't know how to deal with that. 
+La razón más habitual para que esto suceda es porque el dispositivo remoto haya perdido la información de emparejamiento. Muchos de los dispositivos Bluetooth más antiguos no requieren autenticación. Para proteger al usuario, todas las ceremonias de emparejamiento realizadas desde la aplicación Configuración requerirán autenticación, y algunos dispositivos no saben cómo hacerlo. 
 
-Starting with Windows 10 release 1511, developers have control over the pairing ceremony. The [Device Enumeration and Pairing Sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing) details the various aspects of associating new devices.
+A partir de Windows10, versión 1511, los desarrolladores tienen el control de la ceremonia de emparejamiento. La [Device enumeration and pairing sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing) (Muestra de enumeración y emparejamiento de dispositivos) detalla los diversos aspectos de la asociación de nuevos dispositivos.
 
-In this example, we initiate pairing with a device using no encryption. Note, this will only work if the remote device does not require encryption or authentication to function.
+En este ejemplo, iniciamos el emparejamiento con un dispositivo sin usar cifrado. Ten en cuenta que esto solo funcionará si el dispositivo remoto no requiere cifrado ni autenticación para funcionar.
 
 ```csharp
 // Get ceremony type and protection level selections
@@ -30,9 +34,15 @@ In this example, we initiate pairing with a device using no encryption. Note, th
     DevicePairingResult result = await customPairing.PairAsync(ceremonySelected, protectionLevel);
 ```
 
-## Do I have to pair Bluetooth devices before using them?
+## ¿Tengo que emparejar los dispositivos Bluetooth antes de usarlos?
 
-You don't have to for Bluetooth RFCOMM (classic) devices. Starting with Windows 10 release 1607, you can simply query for nearby devices and connect to them. The updated [RFCOMM Chat Sample](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BluetoothRfcommChat) shows this functionality. 
+En el caso de los dispositivos Bluetooth RFCOMM (los clásicos), no es necesario. A partir de Windows10, versión 1607, puedes simplemente consultar si hay dispositivos cercanos y conectarte a ellos. La [RFCOMM Chat Sample](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BluetoothRfcommChat) (Muestra de chat de RFCOMM) actualizada muestra esta funcionalidad. 
 
-This feature is not available for Bluetooth Low Energy (GATT Client), so you will still have to pair either through the Settings page or using the [Windows.Devices.Enumeration](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.aspx) APIs in order access these devices.
+Esta característica no está disponible para Bluetooth de bajo consumo (Bluetooth LE) (cliente GATT), por lo que para acceder a estos dispositivos aún tendrás que emparejarlos mediante la página Configuración o mediante las API [Windows.Devices.Enumeration](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.aspx).
+
+
+
+
+<!--HONumber=Aug16_HO3-->
+
 

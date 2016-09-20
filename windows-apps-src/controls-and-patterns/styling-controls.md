@@ -8,7 +8,6 @@ title: Controles de estilo
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
 label: Styling controls
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 02cd8f7777f169ad9fc4e5bfe854a8b6e0fe5060
 

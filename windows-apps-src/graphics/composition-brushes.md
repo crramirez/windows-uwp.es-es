@@ -5,7 +5,7 @@ title: "Pinceles de composición"
 description: "Un pincel pinta el área de un objeto Visual con su salida. Distintos pinceles tienen tipos de salida diferentes."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: a9f30ca041d320798c7ace596bd9be37f9712129
+ms.openlocfilehash: 11989aafb86d280b93eed7c2e3f016b5914b15ab
 
 ---
 # Pinceles de composición
@@ -14,15 +14,9 @@ ms.openlocfilehash: a9f30ca041d320798c7ace596bd9be37f9712129
 
 Un pincel pinta el área de un objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) con su salida. Distintos pinceles tienen tipos de salida diferentes. La API de composición proporciona tres tipos de pincel:
 
--   
-              [
-              **CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) pinta un elemento visual con un color sólido.
--   
-              [
-              **CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) pinta un elemento visual con el contenido de una superficie de composición.
--   
-              [
-              **CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406) pinta un elemento visual con el contenido de un efecto de composición.
+-   [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) pinta un elemento visual con un color sólido.
+-   [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) pinta un elemento visual con el contenido de una superficie de composición.
+-   [**CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406) pinta un elemento visual con el contenido de un efecto de composición.
 
 Todos los pinceles heredan del objeto [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398). Los crea directa o indirectamente el objeto [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) y son recursos independientes del dispositivo. Aunque los pinceles son independientes del dispositivo, los objetos [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) y [**CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406) pintan un objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) con contenido de una superficie de composición que depende del dispositivo.
 
@@ -102,9 +96,7 @@ visual.Brush = _surfaceBrush;
 
 A veces, el contenido del objeto [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) de un objeto [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) no rellena completamente las áreas del elemento visual que se está dibujando. Cuando esto sucede, la API de composición usa el pincel la configuración de modo [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) y [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) para determinar cómo rellenar el área restante.
 
--   
-              [
-              **HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) y [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) son de tipo flotante y se pueden usar para controlar la posición del pincel dentro de los límites del elemento visual.
+-   [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) y [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) son de tipo flotante y se pueden usar para controlar la posición del pincel dentro de los límites del elemento visual.
     -   El valor 0,0 alinea la esquina izquierda o superior del pincel con la esquina izquierda o superior del elemento visual.
     -   El valor 0,5 alinea el centro del pincel con el centro del elemento visual.
     -   El valor 1,0 alinea a la esquina derecha o inferior del pincel con la esquina derecha o inferior del elemento visual.
@@ -125,6 +117,6 @@ A veces, el contenido del objeto [**ICompositionSurface**](https://msdn.microsof
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

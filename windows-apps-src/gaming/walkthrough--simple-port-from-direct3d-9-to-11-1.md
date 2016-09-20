@@ -29,7 +29,7 @@ Este ejercicio de migración muestra cómo traer un marco de representación sen
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Inicializar Direct3D 11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)</p></td>
+<td align="left"><p>[Inicializar Direct3D11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)</p></td>
 <td align="left"><p>Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a obtener identificadores para el dispositivo Direct3D y el contexto de dispositivo, y a usar DXGI para configurar una cadena de intercambio.</p></td>
 </tr>
 <tr class="even">
@@ -67,7 +67,7 @@ Ten en cuenta que este tutorial usa [**CoreWindow**](https://msdn.microsoft.com/
 
 Debes [preparar tu entorno de desarrollo para el desarrollo de juegos de DirectX de UWP](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Todavía no necesitas una plantilla, pero sí necesitarás Microsoft Visual Studio 2015 para cargar las muestras de código de este tutorial.
 
-Consulta [Conceptos y consideraciones de migración](porting-considerations.md) para comprender mejor los conceptos de programación de DirectX 11 y UWP que se muestran en este tutorial.
+Consulta [Conceptos y consideraciones de migración](porting-considerations.md) para comprender mejor los conceptos de programación de DirectX11 y UWP que se muestran en este tutorial.
 
 ## Temas relacionados
 
@@ -76,8 +76,9 @@ Consulta [Conceptos y consideraciones de migración](porting-considerations.md) 
             
           
             [Escribir sombreadores HLSL en Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+          
 
-[Crear un nuevo proyecto de DirectX 11 para UWP](user-interface.md)
+[Crear un nuevo proyecto de DirectX11 para UWP](user-interface.md)
 
 **Tienda Windows**
             
@@ -85,6 +86,7 @@ Consulta [Conceptos y consideraciones de migración](porting-considerations.md) 
             [
               **Microsoft::WRL::ComPtr**
             ](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
+          
 
 [**Identificador de objeto operador (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx
 

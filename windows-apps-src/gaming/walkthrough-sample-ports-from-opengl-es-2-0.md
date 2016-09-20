@@ -3,7 +3,6 @@ author: mtoepke
 title: Tutorial sobre migraciones de muestra desde OpenGL ES 2.0
 description: "En este conjunto de temas se analizan diversos escenarios de migración de canalizaciones de elementos gráficos de OpenGL ES 2.0 de diversas complejidades."
 ms.assetid: 07390da1-83f3-7fbb-5696-d1da3a2bc870
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: c7fcbcdfc1b0776ac53728fc4f2dc58b6887ab56
 
@@ -16,7 +15,7 @@ ms.openlocfilehash: c7fcbcdfc1b0776ac53728fc4f2dc58b6887ab56
 
 En este conjunto de temas se analizan diversos escenarios de migración de canalizaciones de elementos gráficos de OpenGL ES 2.0 de diversas complejidades.
 
-## Tutoriales de OpenGL ES 2.0 a Direct3D 11
+## Tutoriales de OpenGL ES 2.0 a Direct3D11
 
 ## 
 <table>

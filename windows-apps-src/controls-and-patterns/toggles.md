@@ -5,7 +5,6 @@ title: Directrices para controles de modificadores para alternar
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: e90760c6894ee5d32ba1063993a703023d23c152
 
@@ -146,7 +145,7 @@ También puedes usar contenido más complejo si configuras las propiedades [**On
 
 ## Recomendaciones
 
--   Sustituye las etiquetas On y Off cuando haya etiquetas más específicas para la opción. Si hay etiquetas cortas (3 o 4 caracteres) que representan opuestos binarios que son más adecuadas para una determinada opción, úsalas. Por ejemplo, podrías usar "Show/Hide" si la opción es "Mostrar imágenes". Usar etiquetas más específicas puede ayudar a localizarlas en la IU.
+-   Sustituye las etiquetas On y Off cuando haya etiquetas más específicas para la opción. Si hay etiquetas cortas (3o4 caracteres) que representan opuestos binarios que son más adecuadas para una determinada opción, úsalas. Por ejemplo, podrías usar "Show/Hide" si la opción es "Mostrar imágenes". Usar etiquetas más específicas puede ayudar a localizarlas en la IU.
 -   Evita reemplazar las etiquetas On y Off a menos que debas hacerlo; usa las etiquetas predeterminadas a menos que la situación requiera que las personalices.
 -   Las etiquetas no deben tener más de 4 caracteres.
 

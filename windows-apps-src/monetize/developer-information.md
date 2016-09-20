@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 278114aa-2a44-4d63-a1d2-d512d8aababc
 description: "Obtener información de desarrollo general sobre las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization."
 title: "Información para desarrolladores sobre las bibliotecas de Microsoft Advertising"
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: ec3b1d5c33a24da4ad2a4c5c8e4e11c71ece4828
 
@@ -17,7 +16,8 @@ ms.openlocfilehash: ec3b1d5c33a24da4ad2a4c5c8e4e11c71ece4828
 
 Los temas de esta sección proporcionan información útil a los desarrolladores sobre las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization.
 
-  > **Importante**   Las bibliotecas de Microsoft Advertising son un conjunto diferente de extensiones de las bibliotecas de mediación de anuncios. Usa las clases [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) y [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) en las bibliotecas de Microsoft Advertising si quieres mostrar banners o anuncios intersticiales en vídeo de Microsoft en una aplicación XAML o JavaScript. Usa la clase **AdMediatorControl** en las bibliotecas de mediación de anuncios si quieres mostrar anuncios en banners desde varias redes de anuncios en una aplicación XAML. Para obtener más información, consulta [What is the difference: AdMediator or AdControl (Diferencias entre AdMediator y AdControl)](what-is-the-difference-admediatorcontrol-or-adcontrol.md).
+  > 
+            **Importante**   Las bibliotecas de Microsoft Advertising son un conjunto diferente de extensiones de las bibliotecas de mediación de anuncios. Usa las clases [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) y [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) en las bibliotecas de Microsoft Advertising si quieres mostrar banners o anuncios intersticiales en vídeo de Microsoft en una aplicación XAML o JavaScript. Usa la clase **AdMediatorControl** en las bibliotecas de mediación de anuncios si quieres mostrar anuncios en banners desde varias redes de anuncios en una aplicación XAML. Para obtener más información, consulta [What is the difference: AdMediator or AdControl (Diferencias entre AdMediator y AdControl)](what-is-the-difference-admediatorcontrol-or-adcontrol.md).
 
 ## En esta sección:
 

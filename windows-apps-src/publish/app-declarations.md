@@ -3,7 +3,6 @@ author: jnHs
 Description: "Puedes proporcionar información adicional sobre la aplicación en la sección Declaraciones de la aplicación de la página Propiedades de la aplicación durante el proceso de envío."
 title: "Declaraciones de la aplicación"
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: ee2e54494a868fbec8c4a8bd7bbb9bdcd6cbf9ae
 
@@ -35,7 +34,8 @@ Cuando declaras que tu aplicación es accesible, aceptas que será accesible par
 
 Para obtener más información, consulta [Accesibilidad en aplicaciones de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/dn263101), [Pruebas de accesibilidad](https://msdn.microsoft.com/library/windows/apps/mt297664) y [Accesibilidad en la Tienda](https://msdn.microsoft.com/library/windows/apps/mt297663).
 
-> **Importante**  No describas tu aplicación como accesible, a menos que hayas realizado en ella ingeniería específica y la hayas probado para dicho fin. Si la aplicación se declara como accesible, pero en realidad no admite la accesibilidad, probablemente recibas comentarios negativos de la comunidad.
+> 
+            **Importante**  No describas tu aplicación como accesible, a menos que hayas realizado en ella ingeniería específica y la hayas probado para dicho fin. Si la aplicación se declara como accesible, pero en realidad no admite la accesibilidad, probablemente recibas comentarios negativos de la comunidad.
 
 ## Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble.
 
@@ -45,7 +45,8 @@ Si quieres impedir que la aplicación se instale en unidades alternativas o alma
 
 Ten en cuenta que no hay ninguna opción para restringir la instalación de modo que una aplicación solo pueda instalarse en un medio de almacenamiento extraíble.
 
-> **Nota**  En Windows Phone 8.1, esta condición se indicó previamente a través de StoreManifest.xml.
+> 
+            **Nota**  En Windows Phone 8.1, esta condición se indicó previamente a través de StoreManifest.xml.
 
 ## Windows puede incluir los datos de la aplicación en copias de seguridad automáticas en OneDrive.
 
@@ -53,7 +54,8 @@ Esta casilla está activada de forma predeterminada para permitir que los datos 
 
 Si quieres impedir que los datos de la aplicación se incluyan en copias de seguridad automáticas, desactiva la casilla.
 
-> **Nota**  En Windows Phone 8.1, esta condición se indicó previamente a través de StoreManifest.xml.
+> 
+            **Nota**  En Windows Phone 8.1, esta condición se indicó previamente a través de StoreManifest.xml.
 
  
 

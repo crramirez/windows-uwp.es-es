@@ -3,7 +3,6 @@ ms.assetid: E0728EB0-DFC3-4203-A367-8997B16E2328
 description: "En esta sección se explica cómo compartir datos entre aplicaciones para la Plataforma universal de Windows (UWP), como por ejemplo, cómo usar el contrato para contenido compartido, cómo copiar y pegar y cómo arrastrar y colocar."
 title: "Comunicación entre aplicaciones"
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: dcd542257761083f3ec04eb0da2b13d5d68a19e2
 ms.openlocfilehash: 63550064b6f31b85cd3b6fa2a09bac4b7cfcf895
 

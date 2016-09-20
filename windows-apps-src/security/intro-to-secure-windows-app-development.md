@@ -5,7 +5,7 @@ ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 author: awkoren
 translationtype: Human Translation
 ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: c09170042841dcff6625d1d236cf708c717301c5
+ms.openlocfilehash: 434505a697e045198972ce529366be281774af86
 
 ---
 
@@ -20,11 +20,11 @@ Este artículo de introducción ayuda a los arquitectos y desarrolladores de apl
 ## 1 Introducción
 
 
-El desarrollo de una aplicación segura puede ser desafiante. En el frenético mundo actual de los dispositivos móviles, las redes sociales, la nube y las complejas aplicaciones empresariales, los clientes esperan que las aplicaciones se pongan a su disposición y se actualicen más rápidamente que nunca. También usan muchos tipos de dispositivos, lo que agrega a la complejidad en la creación de experiencias de aplicación. Si creas aplicaciones para la Plataforma universal de Windows para Windows 10 (UWP), se podría incluir la lista tradicional de equipos de escritorio, portátiles, tabletas y dispositivos móviles, además de una creciente lista de dispositivos nuevos que abarcan Internet de las cosas, Xbox One, Microsoft Surface Hub y HoloLens. Como desarrollador, debes asegurarte de que tus aplicaciones comuniquen y almacenen los datos de forma segura, en todas las plataformas o dispositivos implicados.
+El desarrollo de una aplicación segura puede ser desafiante. En el frenético mundo actual de los dispositivos móviles, las redes sociales, la nube y las complejas aplicaciones empresariales, los clientes esperan que las aplicaciones se pongan a su disposición y se actualicen más rápidamente que nunca. También usan muchos tipos de dispositivos, lo que agrega a la complejidad en la creación de experiencias de aplicación. Si creas aplicaciones para la Plataforma universal de Windows para Windows10 (UWP), se podría incluir la lista tradicional de equipos de escritorio, portátiles, tabletas y dispositivos móviles, además de una creciente lista de dispositivos nuevos que abarcan Internet de las cosas, Xbox One, Microsoft Surface Hub y HoloLens. Como desarrollador, debes asegurarte de que tus aplicaciones comuniquen y almacenen los datos de forma segura, en todas las plataformas o dispositivos implicados.
 
-Estas son algunas de las ventajas de usar las funciones de seguridad de Windows 10.
+Estas son algunas de las ventajas de usar las funciones de seguridad de Windows10.
 
--   Al usar API coherentes en los componentes y las tecnologías de seguridad, conseguirás una seguridad estandarizada en todos los dispositivos que admiten Windows 10.
+-   Al usar API coherentes en los componentes y las tecnologías de seguridad, conseguirás una seguridad estandarizada en todos los dispositivos que admiten Windows10.
 -   Escribirás, probarás y mantendrás una menor cantidad de código que la que implica la implementación de código personalizado para cubrir estos escenarios de seguridad.
 -   Tus aplicaciones se hacen en más estables y seguras porque el sistema operativo se usa para controlar cómo la aplicación obtiene acceso a sus recursos y los recursos del sistema local o remoto.
 
@@ -32,7 +32,7 @@ Durante la autenticación, se valida la identidad de un usuario que solicita acc
 
 El término "datos en desarrollo" hace referencia a la conexión y los mensajes que se transfieren entre los datos. Un ejemplo de esto es la recuperación de datos de un servidor remoto a través de servicios web. El uso de la Capa de sockets seguros (SSL) y el Protocolo seguro de transferencia de hipertexto (HTTPS) garantiza la seguridad de la conexión. La clave a la hora de proteger los datos en desarrollo es impedir que partes intermediarias accedan a estos mensajes o que aplicaciones no autorizadas se comuniquen con los servicios web.
 
-Por último, el término "datos en reposo" se refiere a los datos que se encuentran en la memoria o en medios de almacenamiento. Windows 10 tiene un modelo de aplicaciones que impide el acceso no autorizado a datos entre aplicaciones y ofrece una API de cifrado para proteger aún más los datos almacenados en el dispositivo. Una función llamada Caja de seguridad de credenciales se puede usar para almacenar las credenciales de usuario de forma segura en el dispositivo, con el sistema operativo que impide que otras aplicaciones accedan a ellos.
+Por último, el término "datos en reposo" se refiere a los datos que se encuentran en la memoria o en medios de almacenamiento. Windows10 tiene un modelo de aplicaciones que impide el acceso no autorizado a datos entre aplicaciones y ofrece una API de cifrado para proteger aún más los datos almacenados en el dispositivo. Una función llamada Caja de seguridad de credenciales se puede usar para almacenar las credenciales de usuario de forma segura en el dispositivo, con el sistema operativo que impide que otras aplicaciones accedan a ellos.
 
 ## 2 Factores de autenticación
 
@@ -42,7 +42,7 @@ Para proteger los datos, la persona que solicita acceso a ellos se debe identifi
 Para autenticarse con un servicio o una aplicación determinados, el usuario usa credenciales compuestas de algo que sabe, algo que tiene o algo que es. Cada una de estas se denominan factores de autenticación.
 
 -   **Algo que el usuario conoce** suele ser una contraseña, pero también puede ser un número de identificación personal (PIN) o una combinación "secreta" de pregunta y respuesta.
--   **Algo que el usuario tiene** suele ser un dispositivo de memoria de hardware, por ejemplo, un stick USB, que contiene los datos de autenticación exclusivos del usuario.
+-   **Algo que el usuario tiene** suele ser un dispositivo de memoria de hardware, por ejemplo, un stick USB que contiene los datos de autenticación exclusivos del usuario.
 -   **Algo que el usuario es** suele incluir sus huellas digitales, pero hay otros factores cada vez más populares, como la voz, el rostro, las características oculares (el ojo) o los patrones de comportamiento del usuario. Cuando se almacenan como datos, estas mediciones se denominan datos biométricos.
 
 Una contraseña creada por el usuario es un factor de autenticación en sí mismo, pero a menudo no es suficiente; cualquier persona que conozca la contraseña puede suplantar al usuario a quien pertenece. Una tarjeta inteligente puede proporcionar un mayor nivel de seguridad, pero te la pueden robar o se puede perder. Un sistema que puede autenticar a un usuario mediante la huella digital o una detección ocular puede proporcionar el nivel de seguridad más alto y práctico, pero requiere hardware costoso y especializado (como una cámara Intel RealSense de reconocimiento facial) que podría no estar al alcance de todos los usuarios.
@@ -158,7 +158,7 @@ Además, Azure AD se puede usar como proveedor de OAuth, lo que proporciona al u
 ## 2.4 Microsoft Passport y Windows Hello
 
 
-En Windows 10, un mecanismo conveniente de autenticación multifactor está integrado en el sistema operativo. Los dos componentes implicados se denominan Microsoft Passport y Windows Hello. Windows Hello es el nuevo sistema de inicio de sesión biométrico integrado en Windows 10. Dado que está integrado directamente en el sistema operativo, Windows Hello permite la identificación por rostro o huella digital para desbloquear los dispositivos de los usuarios. El almacén de credenciales seguro de Windows protege los datos biométricos en el dispositivo.
+En Windows10, un mecanismo conveniente de autenticación multifactor está integrado en el sistema operativo. Los dos componentes implicados se denominan Microsoft Passport y Windows Hello. Windows Hello es el nuevo sistema de inicio de sesión biométrico integrado en Windows10. Dado que está integrado directamente en el sistema operativo, Windows Hello permite la identificación por rostro o huella digital para desbloquear los dispositivos de los usuarios. El almacén de credenciales seguro de Windows protege los datos biométricos en el dispositivo.
 
 Windows Hello ofrece una forma eficaz para que un dispositivo reconozca a un usuario individual y eso aborda la primera parte de la ruta entre un usuario y un elemento de datos o servicio solicitado. Después de que el dispositivo haya reconocido al usuario, aún tiene que autenticarlo antes de determinar si va a conceder acceso a un recurso solicitado. Microsoft Passport proporciona una autenticación en dos fases (2FA) altamente eficaz, totalmente integrada en Windows, y reemplaza las contraseñas reutilizables por la combinación de un dispositivo específico y un gesto biométrico o PIN. El PIN lo especifica el usuario como parte de su inscripción a Microsoft Passport.
 
@@ -177,7 +177,7 @@ Para información sobre Microsoft Passport y Windows Hello, consulta la [Guía d
 ## 3 Métodos de seguridad de datos en desarrollo
 
 
-Los métodos de seguridad de datos en desarrollo se aplican a los datos en tránsito entre los dispositivos conectados a una red. Los datos podrían transferirse entre sistemas en el entorno de alta seguridad de una intranet corporativa privada, o entre un cliente y un servicio web en el entorno no seguro de la Web. Las aplicaciones de Windows 10 admiten estándares, como SSL, a través de sus API para redes y funcionan con tecnologías, como por ejemplo, Administración de API de Azure, con las que los desarrolladores pueden garantizar el nivel apropiado de seguridad para sus aplicaciones.
+Los métodos de seguridad de datos en desarrollo se aplican a los datos en tránsito entre los dispositivos conectados a una red. Los datos podrían transferirse entre sistemas en el entorno de alta seguridad de una intranet corporativa privada, o entre un cliente y un servicio web en el entorno no seguro de la Web. Las aplicaciones de Windows10 admiten estándares, como SSL, a través de sus API para redes y funcionan con tecnologías, como por ejemplo, Administración de API de Azure, con las que los desarrolladores pueden garantizar el nivel apropiado de seguridad para sus aplicaciones.
 
 ## 3.1 Autenticación de sistema remoto
 
@@ -276,7 +276,7 @@ Administración de API de Azure también puede reducir el número de llamadas de
 ## 4 Métodos de seguridad de datos en reposo
 
 
-Cuando se reciben datos en un dispositivo, nos referimos a estos como "datos en reposo". Estos datos deben almacenarse en el dispositivo de forma segura, para impedir el acceso de usuarios o aplicaciones no autorizados. El modelo de aplicaciones en Windows 10 contribuye enormemente a garantizar que los datos almacenados por cualquier aplicación solo son accesibles para esa aplicación, al tiempo que proporciona las API para compartir datos cuando sea necesario. También existen API adicionales disponibles para garantizar que los datos se puedan cifrar y que las credenciales se puedan almacenar de forma segura.
+Cuando se reciben datos en un dispositivo, nos referimos a estos como "datos en reposo". Estos datos deben almacenarse en el dispositivo de forma segura, para impedir el acceso de usuarios o aplicaciones no autorizados. El modelo de aplicaciones en Windows10 contribuye enormemente a garantizar que los datos almacenados por cualquier aplicación solo son accesibles para esa aplicación, al tiempo que proporciona las API para compartir datos cuando sea necesario. También existen API adicionales disponibles para garantizar que los datos se puedan cifrar y que las credenciales se puedan almacenar de forma segura.
 
 ## 4.1 Modelo de aplicaciones de Windows
 
@@ -285,7 +285,7 @@ Tradicionalmente, Windows nunca ha tenido una definición de una aplicación. So
 
 Las aplicaciones Windows 10 se ejecutan en un contenedor, lo que significa que tienen privilegios limitados de forma predeterminada (el usuario puede solicitar y conceder privilegios adicionales). Por ejemplo, si una aplicación quiere acceder a los archivos del sistema, hay que usar un selector de archivos del espacio de nombres [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) para permitir que el usuario seleccione un archivo (no se habilita ningún tipo de acceso directo a los archivos). Otro ejemplo es si una aplicación quiere acceder a los datos de ubicación del usuario, debe permitir la declaración de las necesidades de funcionalidad de ubicación del dispositivo, solicitando al usuario en el momento de la descarga que esta aplicación solicitará acceso a la ubicación del usuario. Además de eso, la primera vez que la aplicación quiera acceder a la ubicación del usuario, se muestra una petición de consentimiento adicional al usuario en la que se pide permiso para acceder a los datos.
 
-Ten en cuenta que este modelo de aplicaciones actúa como una "cárcel" para las aplicaciones, lo que significa que no pueden salir afuera. Sin embargo, no es un "castillo" inaccesible desde el exterior (evidentemente, las aplicaciones con privilegios de administrador aún pueden entrar). Device Guard en Windows 10, que permite a las organizaciones y los departamentos de TI especificar qué aplicaciones (Win32) se pueden ejecutar, puede ayudar aún más a limitar este acceso.
+Ten en cuenta que este modelo de aplicaciones actúa como una "cárcel" para las aplicaciones, lo que significa que no pueden salir afuera. Sin embargo, no es un "castillo" inaccesible desde el exterior (evidentemente, las aplicaciones con privilegios de administrador aún pueden entrar). Device Guard en Windows10, que permite a las organizaciones y los departamentos de TI especificar qué aplicaciones (Win32) se pueden ejecutar, puede ayudar aún más a limitar este acceso.
 
 El modelo de aplicaciones también administra el ciclo de vida de las aplicaciones. Limita la ejecución en segundo plano de las aplicaciones de manera predeterminada. Por ejemplo, tan pronto como una aplicación pasa a segundo plano, el proceso se suspende (después de dar a la aplicación un período breve para tratar la suspensión de la aplicación en el código) y su memoria se inmoviliza. El sistema operativo proporciona mecanismos para que las aplicaciones pida la ejecución en segundo plano de tareas concretas (en una programación, desencadenada por diversos eventos, como conectividad Internet o Bluetooth, cambios de energía, etc., y en escenarios específicos, como la reproducción de música o el seguimiento de GPS).
 
@@ -296,7 +296,7 @@ Para más información, consulta [It's Universal: Understanding the Lifecycle of
 ## 4.2 Protección de credenciales almacenadas
 
 
-Las aplicaciones de Windows que acceden a servicios autenticados suelen proporcionar a los usuarios la opción de almacenar sus credenciales en el dispositivo local. Esto resulta útil para los usuarios; al proporcionar su nombre de usuario y contraseña, la aplicación los usa automáticamente en inicios posteriores de la aplicación. Dado que puede ser un problema de seguridad si un atacante obtiene acceso a los datos almacenados, Windows 10 ofrece la posibilidad de que las aplicaciones de Windows almacenen las credenciales de usuario en una caja de seguridad de credenciales. La aplicación llama a la API de Caja de seguridad de credenciales para almacenar y recuperar las credenciales que esta contiene, en lugar de almacenarlas en el contenedor de almacenamiento de la aplicación. La caja de seguridad de credenciales la administra el sistema operativo, pero el acceso está limitado a la aplicación que las almacena, a fin de ofrecer una solución administrada de forma segura para el almacenamiento de credenciales.
+Las aplicaciones de Windows que acceden a servicios autenticados suelen proporcionar a los usuarios la opción de almacenar sus credenciales en el dispositivo local. Esto resulta útil para los usuarios; al proporcionar su nombre de usuario y contraseña, la aplicación los usa automáticamente en inicios posteriores de la aplicación. Dado que puede ser un problema de seguridad si un atacante obtiene acceso a los datos almacenados, Windows10 ofrece la posibilidad de que las aplicaciones de Windows almacenen las credenciales de usuario en una caja de seguridad de credenciales. La aplicación llama a la API de Caja de seguridad de credenciales para almacenar y recuperar las credenciales que esta contiene, en lugar de almacenarlas en el contenedor de almacenamiento de la aplicación. La caja de seguridad de credenciales la administra el sistema operativo, pero el acceso está limitado a la aplicación que las almacena, a fin de ofrecer una solución administrada de forma segura para el almacenamiento de credenciales.
 
 Cuando un usuario proporciona las credenciales que deben almacenarse, la aplicación obtiene una referencia para la caja de seguridad de credenciales mediante el objeto [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) del espacio de nombres [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089). A continuación, crea un objeto [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061) que contiene un identificador para la aplicación Windows, así como el nombre de usuario y la contraseña. Esta información se transfiere al método [**PasswordVault.Add**](https://msdn.microsoft.com/library/windows/apps/hh701231) para almacenar las credenciales en la caja de seguridad. En el siguiente ejemplo de código C# se muestra este procedimiento.
 
@@ -447,7 +447,7 @@ Para más información, echa un vistazo a los artículos [Firmas digitales](http
 ## 5 Resumen
 
 
-La Plataforma universal de Windows en Windows 10 ofrece varias formas de sacar provecho de las funcionalidades del sistema operativo para crear aplicaciones más seguras. En escenarios de autenticación diferentes, como factor único, multifactor o autenticación negociada con un proveedor de identidades OAuth, existen API que para mitigar los desafíos más comunes a la autenticación. Windows Hello proporciona un nuevo sistema de inicio de sesión biométrico que reconoce al usuario e invalida activamente los esfuerzos para sortear la identificación correcta. Microsoft Passport funciona con Windows Hello para ofrecer varias capas de claves y certificados que nunca se podrán revelar o usar fuera del módulo de plataforma segura. Además, existe una capa de seguridad adicional disponible a través del uso opcional de claves y certificados de identidad de atestación.
+La Plataforma universal de Windows en Windows10 ofrece varias formas de sacar provecho de las funcionalidades del sistema operativo para crear aplicaciones más seguras. En escenarios de autenticación diferentes, como factor único, multifactor o autenticación negociada con un proveedor de identidades OAuth, existen API que para mitigar los desafíos más comunes a la autenticación. Windows Hello proporciona un nuevo sistema de inicio de sesión biométrico que reconoce al usuario e invalida activamente los esfuerzos para sortear la identificación correcta. Microsoft Passport funciona con Windows Hello para ofrecer varias capas de claves y certificados que nunca se podrán revelar o usar fuera del módulo de plataforma segura. Además, existe una capa de seguridad adicional disponible a través del uso opcional de claves y certificados de identidad de atestación.
 
 Para proteger datos en desarrollo, hay API que permiten comunicarse con sistemas remotos de manera segura a través de SSL, al tiempo que proporcionan la posibilidad de validar la autenticidad del servidor con el anclaje SSL. La publicación de API de forma segura y controlada es algo en que Administración de API de Azure ayuda al proporcionar eficaces opciones de configuración para exponer las API en la Web mediante un proxy que proporciona ofuscación adicional del punto de conexión de las API. El acceso a estas API se protege mediante claves de API y las llamadas a las API se pueden limitar para controlar el rendimiento.
 
@@ -501,6 +501,6 @@ Cuando los datos llegan al dispositivo, el modelo de aplicaciones de Windows ofr
 -   [**Windows.Security.EnterpriseData**](https://msdn.microsoft.com/library/windows/apps/dn279153)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

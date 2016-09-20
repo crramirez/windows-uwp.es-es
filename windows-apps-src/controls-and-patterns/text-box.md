@@ -3,7 +3,6 @@ author: Jwmsft
 ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
 label: Text box
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 873ca8f869f4303f8fc4a9a7ff08f81df29d367d
 
@@ -62,7 +61,8 @@ Este es el cuadro de texto que se obtiene de este XAML.
 
 Es habitual usar un cuadro de texto para aceptar la entrada de datos en un formulario y usar la propiedad [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) para obtener la cadena de texto completa del cuadro de texto. Normalmente usas un evento como un clic del botón Enviar para tener acceso a la propiedad Text, pero puedes controlar el evento [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanged.aspx) o [TextChanging](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanging.aspx) eventos si necesitas hacer algo cuando cambia el texto. 
 
-Puedes agregar un [Header](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.header.aspx) (o etiqueta) y [PlaceholderText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.placeholdertext.aspx) (o marca de agua) al cuadro de texto para dar al usuario una indicación de para qué se usa el cuadro de texto. Para personalizar el aspecto del encabezado, puedes establecer la propiedad [HeaderTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.headertemplate.aspx) en lugar de Header. *Para obtener información de diseño, consulta Directrices para etiquetas*.
+Puedes agregar un [Header](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.header.aspx) (o etiqueta) y [PlaceholderText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.placeholdertext.aspx) (o marca de agua) al cuadro de texto para dar al usuario una indicación de para qué se usa el cuadro de texto. Para personalizar el aspecto del encabezado, puedes establecer la propiedad [HeaderTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.headertemplate.aspx) en lugar de Header. 
+            *Para obtener información de diseño, consulta Directrices para etiquetas*.
 
 Puedes restringir el número de caracteres que el usuario puede escribir estableciendo la propiedad [MaxLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.maxlength.aspx). Sin embargo, MaxLength no restringe la longitud del texto pegado. Usa el evento [Paste](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.paste.aspx) para modificar el texto pegado si esto es importante para la aplicación.
 
@@ -73,9 +73,12 @@ El cuadro de texto incluye un botón Borrar todo ("X") que aparece cuando se esc
 El botón Borrar todo solo se muestra para cuadros de texto editables, de una única línea que contienen texto y tienen el foco. 
 
 El botón Borrar todo no se muestra en ninguno de estos casos:
-- **IsReadOnly** es **true**
-- **AcceptsReturn** es **true**
-- **TextWrap** tiene un valor distinto de **NoWrap**
+- 
+            **IsReadOnly** es **true**
+- 
+            **AcceptsReturn** es **true**
+- 
+            **TextWrap** tiene un valor distinto de **NoWrap**
 
 ### Hacer un cuadro de texto de solo lectura
 
@@ -93,7 +96,8 @@ Hay dos propiedades que puedes usar para controlar si el TextBox muestra texto e
 - Para indicar que el cuadro de texto puede permitir y mostrar los caracteres de nueva línea o retorno, establece la propiedad [**AcceptsReturn**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.acceptsreturn.aspx) en **true**.
 - Para habilitar el ajuste de texto, establece la propiedad [**TextWrapping**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textwrapping.aspx) en **Wrap**. Esto hace que el texto se ajuste cuando llega al borde del cuadro de texto, independientemente de los caracteres de separador de línea.
 
-> **Nota**
+> 
+            **Nota**
             &nbsp;&nbsp;TextBox y RichEditBox no admiten el valor **WrapWholeWords** para sus propiedades TextWrapping. Si intentas usar WrapWholeWords como valor para TextBox.TextWrapping o RichEditBox.TextWrapping, se genera una excepción de argumento no válido.
 
 Un TextBox multilínea continuará creciendo verticalmente cuando se escriba texto a menos que se restrija por su propiedad [Height](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) o [MaxHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxheight.aspx) , o por un contenedor primario. Debes probar que un cuadro de texto multilínea no crece más allá de su área visible y limitar su crecimiento si lo hace. Te recomendamos que especifiques siempre una altura adecuada para un cuadro de texto multilínea y que no dejes que crezca en altura a medida que el usuario escribe. 
@@ -212,7 +216,8 @@ El teclado táctil se puede usar para escribir texto cuando la aplicación se ej
 
 Por ejemplo, si un cuadro de texto se usa únicamente para escribir un PIN de 4 dígitos, establece la propiedad [InputScope](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.inputscope.aspx) en **Number**. Esto indica al sistema que debe mostrar el diseño de teclado numérico, lo cual facilita al usuario la inserción del PIN.
 
-> **Importante**
+> 
+            **Importante**
             &nbsp;&nbsp;El ámbito de entrada no implica que se realice ninguna validación de entrada y tampoco impide que el usuario proporcione cualquier entrada a través de un teclado de hardware u otro dispositivo de entrada. Sigues siendo responsable de la validación de la entrada en tu código, según sea necesario.
 
 Otras propiedades que afectan el teclado táctil son [IsSpellCheckEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.isspellcheckenabled.aspx), [IsTextPredictionEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.istextpredictionenabled.aspx) y [PreventKeyboardDisplayOnProgrammaticFocus](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus.aspx). (IsSpellCheckEnabled también afecta al TextBox cuando se usa un teclado de hardware.) 

@@ -3,7 +3,6 @@ author: eliotcowley
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
 description: "En este artículo se describe el proceso para agregar streaming adaptable de contenido multimedia con protección de contenido de Microsoft PlayReady a una aplicación para la Plataforma universal de Windows (UWP)."
 title: Streaming adaptable con PlayReady
-translationtype: Human Translation
 ms.sourcegitcommit: 176f8989aea5402106e3c14144948cec87a5dc27
 ms.openlocfilehash: d76f50e97f16699f34f138fcd25af8a90696085a
 

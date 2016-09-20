@@ -1,15 +1,14 @@
 ---
 author: mtoepke
-title: "Asignar OpenGL ES 2.0 a Direct3D 11"
+title: Asignar OpenGL ES2.0 a Direct3D11
 description: "Cuando comiences el proceso de migrar tu arquitectura de gráficos desde OpenGL ES 2.0 a Direct3D por primera vez, familiarízate con las diferencias clave entre las API."
 ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: a058c5f669704695cc3a2ae5385feccbf6cb4bc3
 
 ---
 
-# Asignar OpenGL ES 2.0 a Direct3D 11
+# Asignar OpenGL ES2.0 a Direct3D11
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]

@@ -3,7 +3,6 @@ author: jwmsft
 description: "La extensión de marcado xBind es una alternativa a Binding. xBind carece de algunas de las características de Binding, pero se ejecuta en menos tiempo y usa menos memoria que Binding, además de admitir una mejor depuración."
 title: "Extensión de marcado xBind"
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
-translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
 ms.openlocfilehash: ceb5562ae08d7cc966f80fdb7e23f12afe040430
 
@@ -13,9 +12,11 @@ ms.openlocfilehash: ceb5562ae08d7cc966f80fdb7e23f12afe040430
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Nota** Para obtener información general sobre el uso de enlace de datos en la aplicación con **{x:Bind}** (y para realizar una comparación total entre **{x:Bind}** y **{Binding}**), consulta el tema [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-La extensión de marcado **{x:Bind}** (nueva para Windows 10) es una alternativa a **{Binding}**. **{x:Bind}** carece de algunas de las características de **{Binding}**, pero se ejecuta en menos tiempo y usa menos memoria que **{Binding}**, además de admitir una mejor depuración.
+            **Nota** Para obtener información general sobre el uso de enlace de datos en la aplicación con **{x:Bind}** (y para realizar una comparación total entre **{x:Bind}** y **{Binding}**), consulta el tema [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
+
+La extensión de marcado **{x:Bind}** (nueva para Windows 10) es una alternativa a **{Binding}**. 
+            **{x:Bind}** carece de algunas de las características de **{Binding}**, pero se ejecuta en menos tiempo y usa menos memoria que **{Binding}**, además de admitir una mejor depuración.
 
 En el tiempo de carga de XAML, **{x:Bind}** se convierte en lo que puedes interpretar como un objeto de enlace, que obtiene un valor de una propiedad en un origen de datos. Opcionalmente, el objeto de enlace puede configurarse para observar cambios en el valor de la propiedad de origen de datos y se actualiza en función de los cambios. Opcionalmente, también puede configurarse para insertar los cambios en su propio valor de nuevo en la propiedad de origen. Los objetos de enlace creados por **{x: enlace}** y **{Binding}** son prácticamente funcionalmente equivalentes. Pero **{x:Bind}** ejecuta el código con propósito especial, que genera en el momento de la compilación y **{Binding}** usa la inspección de objetos en el tiempo de ejecución con un propósito general. En consecuencia, los enlaces **{x:Bind}** (a menudo denominados enlaces compilados) tienen un rendimiento óptimo, proporcionan la validación de tiempo de compilación de las expresiones de enlace y admiten depuración al permitirte establecer puntos de interrupción en los archivos de código que se generan como la clase parcial de la página. Estos archivos pueden encontrarse en la carpeta `obj`, con nombres como (para C#) `<view name>.g.cs`.
 
@@ -41,7 +42,8 @@ En el tiempo de carga de XAML, **{x:Bind}** se convierte en lo que puedes interp
 |------|-------------|
 | _propertyPath_ | Una cadena que especifica la ruta de acceso de la propiedad para el enlace. Para obtener más información, consulta la sección [Ruta de acceso de propiedades](#property-path) que aparece más adelante. |
 | _bindingProperties_ |
-| _propName_
+| 
+            _propName_
             =
             _value_\[, _propName_=_value_\]* | Una o más propiedades de enlace que se especifican con una sintaxis de par de nombre-valor. |
 | _propName_ | El nombre de cadena de la propiedad que se establecerá en el objeto Binding. Por ejemplo, "Converter". | 
@@ -49,9 +51,12 @@ En el tiempo de carga de XAML, **{x:Bind}** se convierte en lo que puedes interp
 
 ## Ruta de acceso de propiedades
 
-*PropertyPath* establece **Path** para una expresión **{x:Bind}**. **Path** es una ruta de acceso de propiedad que especifica el valor de la propiedad, una subpropiedad, un campo o un método al que estás enlazando (el origen). Puedes mencionar el nombre de la propiedad **Path** explícitamente: `{Binding Path=...}`. O puedes omitirlo: `{Binding ...}`.
 
-**{x:Bind}** no usa **DataContext** como un origen predeterminado; en su lugar, usa el control de usuario o de la página. Por lo tanto, buscará las propiedades, campos y métodos en el código subyacente de la página o control de usuario. Para exponer el modelo de vista a **{x:Bind}**, normalmente se prefiere agregar nuevos campos o propiedades al código subyacente para el control de usuario o la página. Los pasos de las rutas de acceso de propiedad están delimitados por puntos (.) y puedes incluir varios delimitadores para desviar subpropiedades sucesivas. Usa puntos como delimitadores independientemente del lenguaje de programación que uses para implementar el objeto al que se está enlazando.
+            *PropertyPath* establece **Path** para una expresión **{x:Bind}**. 
+            **Path** es una ruta de acceso de propiedad que especifica el valor de la propiedad, una subpropiedad, un campo o un método al que estás enlazando (el origen). Puedes mencionar el nombre de la propiedad **Path** explícitamente: `{Binding Path=...}`. O puedes omitirlo: `{Binding ...}`.
+
+
+            **{x:Bind}** no usa **DataContext** como un origen predeterminado; en su lugar, usa el control de usuario o de la página. Por lo tanto, buscará las propiedades, campos y métodos en el código subyacente de la página o control de usuario. Para exponer el modelo de vista a **{x:Bind}**, normalmente se prefiere agregar nuevos campos o propiedades al código subyacente para el control de usuario o la página. Los pasos de las rutas de acceso de propiedad están delimitados por puntos (.) y puedes incluir varios delimitadores para desviar subpropiedades sucesivas. Usa puntos como delimitadores independientemente del lenguaje de programación que uses para implementar el objeto al que se está enlazando.
 
 Por ejemplo: en una página, **Text="{x:Bind Employee.FirstName}"** buscará un miembro **Employee** de la página y, a continuación, un miembro **FirstName** en el objeto devuelto por **Employee**. Si estás enlazando un control de elemento a una propiedad que contiene las personas a cargo del empleado, la ruta de acceso de la propiedad podría ser "Employee.Dependents" y la plantilla del elemento del control de elementos se ocuparía de mostrar los elementos en "Dependents".
 
@@ -81,10 +86,11 @@ En el código subyacente generado, el enlace compilado controla el evento y lo e
 
 Para obtener más información sobre la sintaxis de cadena de una ruta de acceso de propiedades, consulta [Property-path syntax](property-path-syntax.md) y ten en cuenta las diferencias que se describen aquí para **{x:Bind}**.
 
-##  Propiedades que se pueden establecer con {x: enlace}
+##   Propiedades que se pueden establecer con {x: enlace}
 
 
-**{x:Bind}** se explica a través de la sintaxis de marcadores de posición *bindingProperties* porque hay muchas propiedades de lectura y escritura que se pueden establecer en la extensión de marcado. Las propiedades pueden establecerse en cualquier orden con pares separados por comas *propName*=*value*. Ten en cuenta que no puedes incluir saltos de línea en la expresión de enlace. Algunas de las propiedades requieren tipos que no tienen una conversión de tipos, por lo que requieren sus propias extensiones de marcado anidadas dentro de **{x:Bind}**.
+
+            **{x:Bind}** se explica a través de la sintaxis de marcadores de posición *bindingProperties* porque hay muchas propiedades de lectura y escritura que se pueden establecer en la extensión de marcado. Las propiedades pueden establecerse en cualquier orden con pares separados por comas *propName*=*value*. Ten en cuenta que no puedes incluir saltos de línea en la expresión de enlace. Algunas de las propiedades requieren tipos que no tienen una conversión de tipos, por lo que requieren sus propias extensiones de marcado anidadas dentro de **{x:Bind}**.
 
 Estas propiedades funcionan de forma muy parecida a como lo hacen las propiedades de la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820).
 
@@ -98,7 +104,8 @@ Estas propiedades funcionan de forma muy parecida a como lo hacen las propiedade
 | **Modo** | Especifica el modo de enlace como una de las siguientes cadenas: "OneTime", "OneWay" o "TwoWay". El valor predeterminado es "OneTime". Ten en cuenta que esto difiere del valor predeterminado de **{Binding}**, que es "OneWay" en la mayoría de los casos. |
 | **TargetNullValue** | Especifica un valor que se mostrará cuando se resuelve el valor de origen pero es explícitamente **null**. | 
 
-**Nota** Si quieres convertir el marcado de **{Binding}** a **{x:Bind}**, ten en cuenta las diferencias en los valores predeterminados de la propiedad **Mode**.
+
+            **Nota** Si quieres convertir el marcado de **{Binding}** a **{x:Bind}**, ten en cuenta las diferencias en los valores predeterminados de la propiedad **Mode**.
  
 ## Observaciones
 
@@ -108,15 +115,19 @@ Al usar **{x:Bind}** con plantillas de datos, debes indicar el tipo al que se en
 
 Los enlaces compilados dependen de la generación de código. Por tanto, si usas **{x:Bind}** en un diccionario de recursos, entonces el diccionario de recursos debe tener una clase de código subyacente. Consulta [Diccionarios de recursos con {x: enlace}](../data-binding/data-binding-in-depth.md#resource-dictionaries-with-x-bind) para ver un ejemplo de código.
 
-**Importante** Si estableces un valor local para una propiedad que anteriormente tenía una extensión de marcado **{x:Bind}** para proporcionar un valor local, el enlace se elimina por completo.
 
-**Sugerencia** Si tienes que especificar una llave para un valor, como en [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) o [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), debe ir precedida por una barra diagonal inversa: `\{`. Como alternativa, escribe la cadena completa que contiene las llaves que necesitan escape entre un conjunto de comillas secundario, por ejemplo, `ConverterParameter='{Mix}'`.
+            **Importante** Si estableces un valor local para una propiedad que anteriormente tenía una extensión de marcado **{x:Bind}** para proporcionar un valor local, el enlace se elimina por completo.
 
-[
+
+            **Sugerencia** Si tienes que especificar una llave para un valor, como en [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) o [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), debe ir precedida por una barra diagonal inversa: `\{`. Como alternativa, escribe la cadena completa que contiene las llaves que necesitan escape entre un conjunto de comillas secundario, por ejemplo, `ConverterParameter='{Mix}'`.
+
+
+            [
               **Converter**
             ](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) y **ConverterLanguage** tienen relación con la conversión de un valor o tipo del origen de enlace en un valor o tipo que sea compatible con la propiedad de destino de enlace. Para más información y ejemplos, consulta la sección “Conversiones de datos” de [Enlaces de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-**{x:Bind}** es solo una extensión de marcado; no hay forma de crear o manipular estos enlaces mediante programación. Para obtener más información acerca de las extensiones de marcado, consulta [Introducción a XAML](xaml-overview.md).
+
+            **{x:Bind}** es solo una extensión de marcado; no hay forma de crear o manipular estos enlaces mediante programación. Para obtener más información acerca de las extensiones de marcado, consulta [Introducción a XAML](xaml-overview.md).
 
 ## Ejemplos
 

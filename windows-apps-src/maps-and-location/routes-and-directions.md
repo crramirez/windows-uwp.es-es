@@ -3,8 +3,9 @@ author: msatranjr
 title: Mostrar rutas e indicaciones en un mapa
 description: "Solicita rutas e indicaciones y muéstralas en tu aplicación."
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 2132b0c76a78dac5250ea85f08abd0b1edbd6ed7
+ms.openlocfilehash: eb3596236e7de29473635b26f48f0c7e4fa1d49f
 
 ---
 
@@ -20,7 +21,7 @@ Solicita rutas e indicaciones y muéstralas en tu aplicación.
 
 -   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-**Sugerencia**  Si los mapas no son una característica principal de tu aplicación, considera la posibilidad de iniciar la aplicación Mapas de Windows en su lugar. Puedes usar los esquemas URI `bingmaps:`, `ms-drive-to:` y `ms-walk-to:` para iniciar la aplicación de mapas de Windows para mostrar mapas específicos e indicaciones paso a paso. Para obtener más información, consulta [Iniciar la aplicación Mapas de Windows](https://msdn.microsoft.com/library/windows/apps/mt228341).
+**Sugerencia** Si los mapas no son una característica principal de tu aplicación, considera la posibilidad de iniciar la aplicación Mapas de Windows en su lugar. Puedes usar los esquemas URI `bingmaps:`, `ms-drive-to:` y `ms-walk-to:` para iniciar la aplicación de mapas de Windows para mostrar mapas específicos e indicaciones paso a paso. Para obtener más información, consulta [Iniciar la aplicación Mapas de Windows](https://msdn.microsoft.com/library/windows/apps/mt228341).
 
  
 
@@ -31,10 +32,8 @@ Así es como están relacionadas las clases de rutas e indicaciones:
 
 -   La clase [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) tiene métodos que obtienen rutas e indicaciones.
 -   Estos métodos devuelven un [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939).
--   [
-            **MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) contiene un objeto [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937). Obtén acceso a este objeto a través de la propiedad [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) de **MapRouteFinderResult**.
--   [
-            **MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) contiene una colección de objetos [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955). Obtén acceso a esta colección a través de la propiedad [**Legs**](https://msdn.microsoft.com/library/windows/apps/dn636973) de **MapRoute**.
+-   [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) contiene un objeto [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937). Obtén acceso a este objeto a través de la propiedad [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) de **MapRouteFinderResult**.
+-   [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) contiene una colección de objetos [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955). Obtén acceso a esta colección a través de la propiedad [**Legs**](https://msdn.microsoft.com/library/windows/apps/dn636973) de **MapRoute**.
 -   Cada [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) contiene una colección de objetos [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961). Accede a esta colección a través de la propiedad [**Maneuvers**](https://msdn.microsoft.com/library/windows/apps/dn636959) de **MapRouteLeg**.
 
 ## Mostrar indicaciones
@@ -196,6 +195,6 @@ En este ejemplo se muestra lo siguiente en un [**MapControl**](https://msdn.micr
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

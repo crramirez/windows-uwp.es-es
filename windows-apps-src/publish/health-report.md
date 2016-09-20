@@ -3,7 +3,6 @@ author: jnHs
 Description: "El informe Estado del panel del Centro de desarrollo de Windows te permite obtener los datos relacionados con el rendimiento y la calidad de la aplicación, incluidos los bloqueos y los eventos que no responden."
 title: Informe Estado
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 78bedc3e0551feef8efe61b3b664145e29281714
 
@@ -14,15 +13,18 @@ ms.openlocfilehash: 78bedc3e0551feef8efe61b3b664145e29281714
 
 El informe **Estado** del panel del Centro de desarrollo de Windows te permite obtener los datos relacionados con el rendimiento y la calidad de la aplicación, incluidos los bloqueos y los eventos que no responden. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Si corresponde, puedes ver seguimientos de la pila para una mayor depuración. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
-> **Nota**  Si ya habías publicado aplicaciones y habías visto datos de rendimiento anteriormente en los paneles previos, es posible que observes que se notifica un mayor número de bloqueos y eventos aquí. Esto se debe a que podemos incluir más datos en este informe para ofrecerle una perspectiva más completa.
+> 
+            **Nota**  Si ya habías publicado aplicaciones y habías visto datos de rendimiento anteriormente en los paneles previos, es posible que observes que se notifica un mayor número de bloqueos y eventos aquí. Esto se debe a que podemos incluir más datos en este informe para ofrecerle una perspectiva más completa.
 
 ## Aplicar filtros
 
 
 Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** para filtrar todos los datos de esta página por intervalo de fechas o por versión del paquete.
 
--   **Fecha**: el filtro predeterminado es **Últimas 72 horas**, pero puedes ampliarlo hasta **Últimos 6 meses**.
--   **Versión del paquete**: el valor predeterminado es **Todas las versiones**. Si la aplicación incluye más de una versión del paquete, puedes elegir uno concreto.
+-   
+            **Fecha**: el filtro predeterminado es **Últimas 72 horas**, pero puedes ampliarlo hasta **Últimos 6 meses**.
+-   
+            **Versión del paquete**: el valor predeterminado es **Todas las versiones**. Si la aplicación incluye más de una versión del paquete, puedes elegir uno concreto.
 
 La información de todos los gráficos que aparecen a continuación reflejará el período de tiempo seleccionado en la sección **Aplicar filtros**. De manera predeterminada, se incluirán datos de todas las versiones de paquetes, a menos que hayas usado la opción **Aplicar filtros** para elegir solo una.
 

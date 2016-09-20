@@ -3,7 +3,6 @@ author: mcleblanc
 title: "Tareas iniciales con animación"
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: "En este proyecto, moveremos un rectángulo, le aplicaremos un efecto de atenuación y después lo volveremos a mostrar."
-translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
 ms.openlocfilehash: 6e0b92af1d3c5f61aa2341d43ca40330fcc359f4
 
@@ -123,7 +122,8 @@ Si abres el archivo MainPage.xaml en la vista **XAML**, verás el código XAML q
 
 Puedes modificar este XAML manualmente o regresar a Blend y seguir trabajando desde allí. Con Blend es más divertido crear interfaces de usuario atractivas, y la capacidad para animarlas mediante una herramienta gráfica puede acelerar considerablemente el tiempo de desarrollo. Para obtener más información sobre las animaciones, consulta [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350).
 
-**Nota**  Para obtener información acerca cómo realizar animaciones para aplicaciones de la Tienda Windows mediante JavaScript y HTML, consulta [Animación de la interfaz de usuario (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
+
+            **Nota**  Para obtener información acerca cómo realizar animaciones para aplicaciones de la Tienda Windows mediante JavaScript y HTML, consulta [Animación de la interfaz de usuario (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
 
 ### Paso siguiente
 

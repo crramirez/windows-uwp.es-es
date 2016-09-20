@@ -3,7 +3,6 @@ author: mcleblanc
 title: "Elección de un lenguaje de programación"
 ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
 description: "Elección de un lenguaje de programación"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 10fa4a349621c8e7b248c7daf4d7cdf967e25255
 
@@ -17,7 +16,7 @@ ms.openlocfilehash: 10fa4a349621c8e7b248c7daf4d7cdf967e25255
 
 Antes de continuar, debes conocer los lenguajes de programación que puedes elegir cuando desarrollas aplicaciones para la Plataforma universal de Windows (UWP). Aunque en los tutoriales de este artículo se usa C#, puedes desarrollar aplicaciones para UWP con uno o varios lenguajes de programación (consulta [Lenguajes, herramientas y marcos](https://msdn.microsoft.com/library/windows/apps/dn465799)).
 
-Puedes usar C++, C#, Microsoft Visual Basic y JavaScript para desarrollar. JavaScript usa el marcado HTML5 para el diseño de la UI, mientras que el resto de los lenguajes emplea un lenguaje de marcado conocido como *lenguaje XAML* para describir sus UI.
+Puedes usar C++, C#, MicrosoftVisual Basic y JavaScript para desarrollar. JavaScript usa el marcado HTML5 para el diseño de la UI, mientras que el resto de los lenguajes emplea un lenguaje de marcado conocido como *lenguaje XAML* para describir sus UI.
 
 Aunque en este artículo nos centramos en C#, los otros lenguajes ofrecen ventajas únicas que te podrían interesar. Por ejemplo, si uno de los factores de mayor importancia es el rendimiento de la aplicación, especialmente para aplicaciones con muchos gráficos, C++ podría ser la elección correcta. La versión Microsoft .NET de Visual Basic es excelente para desarrolladores de aplicaciones en Visual Basic. JavaScript con HTML5 es excelente para los desarrolladores con experiencia en desarrollo web. Para obtener más información, consulta uno de los recursos siguientes:
 
@@ -27,7 +26,8 @@ Aunque en este artículo nos centramos en C#, los otros lenguajes ofrecen ventaj
 -   [Crear la primera aplicación de la Tienda de Windows Phone con C# o Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=397877)
 -   [WinJS en Windows Phone 8.1](http://go.microsoft.com/fwlink/p/?LinkID=397879)
 
-**Nota:**  Para las aplicaciones que usen gráficos 3D, los estándares OpenGL y OpenGL ES no están disponibles de forma nativa para las aplicaciones para UWP. Si no quieres reescribir el código OpenGL ES en Microsoft DirectX, tal vez te interese informarte sobre **Angle**. Angle es un proyecto actualmente en curso diseñado para convertir OpenGL a DirectX mediante la traducción de llamadas de la API de OpenGL a llamadas de la API de DirectX. Para conocer más, consulta lo siguiente:
+
+            **Nota:**  Para las aplicaciones que usen gráficos 3D, los estándares OpenGL y OpenGL ES no están disponibles de forma nativa para las aplicaciones para UWP. Si no quieres reescribir el código OpenGL ES en Microsoft DirectX, tal vez te interese informarte sobre **Angle**. Angle es un proyecto actualmente en curso diseñado para convertir OpenGL a DirectX mediante la traducción de llamadas de la API de OpenGL a llamadas de la API de DirectX. Para conocer más, consulta lo siguiente:
 -   [Ángulo](https://code.google.com/p/angleproject/)
 -   [Crear tu primera aplicación de la Tienda Windows con DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
 -   [Ejemplos de aplicaciones de la Tienda Windows con DirectX](http://go.microsoft.com/fwlink/p/?LinkId=263603)

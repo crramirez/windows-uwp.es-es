@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
 description: "Este tema describe los efectos diseñados para usarse en escenarios de captura de vídeo. Esto incluye el efecto de estabilización de vídeo."
 title: "Efectos para captura de vídeos"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
 

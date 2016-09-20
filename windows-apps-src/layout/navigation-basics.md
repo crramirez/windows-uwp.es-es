@@ -5,7 +5,6 @@ title: "Conceptos básicos del diseño de navegación para aplicaciones para la 
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 6926d70c7140b1545a8b5492981d6d0b61af3784
 
@@ -23,7 +22,8 @@ Para que la experiencia de navegación con varias páginas de las aplicaciones p
 
     Compilar una estructura de navegación que tenga sentido para el usuario es fundamental para crear una experiencia de navegación intuitiva.
 
--   **Elementos de navegación compatibles** que admitan la estructura elegida.
+-   
+            **Elementos de navegación compatibles** que admitan la estructura elegida.
 
     Los elementos de navegación pueden ayudar a los usuarios a obtener el contenido que desean y también pueden permitir a los usuarios saber dónde se encuentran dentro de la aplicación. Sin embargo, también ocupan espacio que se podría usar para elementos de contenido o comandos, por lo que es importante usar los elementos de navegación adecuados para la estructura de la aplicación.
 

@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
 description: "Cada transacción de la Tienda Windows que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción."
 title: Usar recibos para comprobar compras de productos
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: b1322b74bf1038f05cd1cba275e432e279ed362d
 
@@ -22,7 +21,7 @@ ms.openlocfilehash: b1322b74bf1038f05cd1cba275e432e279ed362d
 
 Cada transacción de la Tienda Windows que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción. Este recibos proporcionan información sobre el producto enumerado y el coste abonado por el cliente.
 
-El acceso a esta información resulta útil en aquellos casos en los que la aplicación debe comprobar que un usuario compró tu aplicación o ha realizado compras de productos desde la aplicación en la Tienda Windows. Por ejemplo, imagina un juego que ofrece contenido descargado. Si el usuario que compró el contenido quiere jugar en otro dispositivo, debes comprobar que ese usuario ya sea propietario del contenido. A continuación se muestra cómo hacerlo.
+El acceso a esta información resulta útil en aquellos casos en los que la aplicación debe comprobar que un usuario compró tu aplicación o ha realizado compras de productos desde la aplicación en la TiendaWindows. Por ejemplo, imagina un juego que ofrece contenido descargado. Si el usuario que compró el contenido quiere jugar en otro dispositivo, debes comprobar que ese usuario ya sea propietario del contenido. A continuación se muestra cómo hacerlo.
 
 ## Solicitar un recibo
 

@@ -9,14 +9,13 @@ ms.assetid: E3CBFA3D-6AF5-44E1-B9F9-C3D3EA8A25CE
 label: ResourceDictionary and XAML resource references
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: fddd345507aace54aca66fe1caa2d9f89a74a299
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 352514139f6c9d096dc0b04de46231c8a5ed8034
 
 ---
-
 # Referencias a ResourceDictionary y a los recursos XAML
 
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Puedes definir la interfaz de usuario o los recursos de la aplicación con XAML. Los recursos suelen ser definiciones de algún objeto que esperas usar más de una vez. Para consultar un recurso XAML más adelante, debes especificar una clave de un recurso que actúe como su nombre. Puedes hacer referencia a un recurso a través de una aplicación o desde cualquier página XAML de esta. Puedes definir los recursos con un elemento [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) desde el XAML de Windows Runtime. Después, puedes hacer referencia a tus recursos mediante una [extensión de marcado StaticResource](../xaml-platform/staticresource-markup-extension.md) o una [extensión de marcado ThemeResource](../xaml-platform/themeresource-markup-extension.md).
 
@@ -51,8 +50,7 @@ En este ejemplo:
 -   `<x:String>` - Define el recurso con la clave "greeting".
 -   `{StaticResource greeting}` - Busca el recurso con la clave "greeting", que se asigna a la propiedad [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676) del objeto [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
 
-> **Nota**
-            &nbsp;&nbsp;No confundas los conceptos relativos a [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) con la acción de compilación **Resource**, los archivos de recursos (.resw) u otros "recursos" que se describen en el contexto de la estructuración del proyecto de código que genera el paquete de la aplicación.
+> **Nota**&nbsp;&nbsp;No confundas los conceptos relativos a [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) con la acción de compilación **Resource**, los archivos de recursos (.resw) u otros "recursos" que se describen en el contexto de la estructuración del proyecto de código que genera el paquete de la aplicación.
 
 Los recursos no tienen que ser cadenas, pueden ser cualquier objeto susceptible de compartirse, como estilos, plantillas, pinceles y colores. Sin embargo, los controles, las formas y otros objetos [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) no se pueden compartir, por lo que no se pueden declarar como recursos reutilizables. Para más información sobre el uso compartido, consulta la sección [Los recursos XAML deben ser compartibles](#xaml_resources_must_be_sharable), más adelante en este tema.
 
@@ -76,12 +74,8 @@ Aquí, un pincel y una cadena se declaran como recursos y los controles los usan
 
 Todos los recursos deben tener una clave. Por lo general, esa clave es una cadena definida con `x:Key=”myString”`. Sin embargo, existen otras maneras de especificar una clave:
 
--   [
-              **Style**
-            ](https://msdn.microsoft.com/library/windows/apps/br208849) y [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) requieren un elemento **TargetType**, y usarán el elemento **TargetType** como clave si no se especifica [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787). En este caso, la clave es el objeto Tipo en sí, no una cadena. (Ver ejemplos abajo)
--   Los recursos [
-              **DataTemplate**
-            ](https://msdn.microsoft.com/library/windows/apps/br242348) que tengan un elemento **TargetType** usarán este elemento **TargetType** como clave si no se especifica [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787). En este caso, la clave es el objeto Tipo en sí, no una cadena.
+-   [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) y [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) necesitan un elemento **TargetType**, y usarán el elemento **TargetType** como clave si no se especifica [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787). En este caso, la clave es el objeto Tipo en sí, no una cadena. (Ver ejemplos abajo)
+-   Los recursos [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348) que tengan un elemento **TargetType** usarán este elemento **TargetType** como clave si no se especifica [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787). En este caso, la clave es el objeto Tipo en sí, no una cadena.
 -   [x:Name](https://msdn.microsoft.com/library/windows/apps/mt204788) puede usarse en lugar de [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787). Sin embargo, x:Name también genera un campo de código subyacente para el recurso. Como resultado, x:Name es menos eficiente que x:Key porque ese campo debe inicializarse cuando se carga la página.
 
 La [extensión de marcado StaticResource](../xaml-platform/staticresource-markup-extension.md) puede recuperar recursos solo con un nombre de cadena ([x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787) o [x:Name](https://msdn.microsoft.com/library/windows/apps/mt204788)). Sin embargo, el marco XAML también busca los recursos de estilo implícito (aquellos que usan **TargetType** en lugar de x:Key o x:Name) cuando decide qué estilo y plantilla usar para un control que no haya establecido las propiedades [**Style**](https://msdn.microsoft.com/library/windows/apps/br208743) y [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) o [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/br242830).
@@ -110,8 +104,7 @@ Para obtener más información sobre los estilos implícitos y cómo funcionan, 
 
 El acceso a los miembros del diccionario de recursos es igual que el acceso a cualquier otro diccionario.
 
-> **Precaución**
-            &nbsp;&nbsp;Al realizar una búsqueda de recursos en el código, solo se busca en los recursos del diccionario `Page.Resources`. A diferencia de la [extensión de marcado StaticResource](../xaml-platform/staticresource-markup-extension.md), el código no vuelve al diccionario `Application.Resources` si los recursos no se encuentran en el primer diccionario.
+> **Precaución**&nbsp;&nbsp;Al realizar una búsqueda de recursos en el código, solo se busca en los recursos del diccionario `Page.Resources`. A diferencia de la [extensión de marcado StaticResource](../xaml-platform/staticresource-markup-extension.md), el código no vuelve al diccionario `Application.Resources` si los recursos no se encuentran en el primer diccionario.
 
  
 
@@ -199,9 +192,7 @@ sealed partial class App : Application
 
 ## Cada FrameworkElement puede tener un ResourceDictionary
 
-[
-              **FrameworkElement**
-            ](https://msdn.microsoft.com/library/windows/apps/br208706) es una clase base de la que heredan los controles y tiene una propiedad [**Resources**](https://msdn.microsoft.com/library/windows/apps/br208740). Por lo tanto, puedes agregar un diccionario de recursos locales a cualquier objeto **FrameworkElement**.
+[**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) es una clase base de la que heredan los controles y tiene una propiedad [**Resources**](https://msdn.microsoft.com/library/windows/apps/br208740). Por lo tanto, puedes agregar un diccionario de recursos locales a cualquier objeto **FrameworkElement**.
 
 Aquí, un diccionario de recursos se agrega a un elemento de página.
 
@@ -263,8 +254,7 @@ Para acceder a los recursos de ese elemento desde el código, usa la propiedad [
 
 Un *diccionario de recursos combinado* combina un diccionario de recursos en otro, que está normalmente en otro archivo.
 
-> **Sugerencia**
-            &nbsp;&nbsp;Puedes crear un archivo de diccionario de recursos en Microsoft Visual Studio mediante la opción **Agregar &gt; Nuevo elemento… &gt; Diccionario de recursos** del menú **Proyecto**.
+> **Sugerencia**&nbsp;&nbsp;Puedes crear un archivo de diccionario de recursos en Microsoft Visual Studio mediante la opción **Agregar &gt; Nuevo elemento… &gt; Diccionario de recursos** del menú **Proyecto**.
 
 En este apartado, debes definir un diccionario de recursos en un archivo XAML independiente denominado Dictionary1.xaml.
 
@@ -406,8 +396,7 @@ El comportamiento de búsqueda para las referencias a recursos XAML comienza con
 
 A continuación, la secuencia de búsqueda comprueba el siguiente objeto primario del árbol de objetos en tiempo de ejecución de la aplicación. Si existe un [**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740) y contiene un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), se solicita el elemento de diccionario con la clave especificada. Si se encuentra el recurso, la secuencia de búsqueda se detiene y el objeto se proporciona a la ubicación donde se creó la referencia. En caso contrario, el comportamiento de búsqueda continúa con el siguiente nivel primario hacia la raíz del árbol de objetos. La búsqueda continúa recursivamente hacia arriba hasta llegar al elemento raíz del XAML, agotando así la búsqueda de todas las ubicaciones de recursos inmediatos posibles.
 
-> **Nota**
-            &nbsp;&nbsp;Es una práctica habitual definir todos los recursos inmediatos en el nivel raíz de una página, tanto para aprovechar este comportamiento de búsqueda de recursos como por una convención de estilo de marcado del XAML.
+> **Nota**&nbsp;&nbsp;Es una práctica habitual definir todos los recursos inmediatos en el nivel raíz de una página, tanto para aprovechar este comportamiento de búsqueda de recursos como por una convención de estilo de marcado de XAML.
 
  
 
@@ -443,12 +432,8 @@ Un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br20
 -   Pinceles y colores (clases derivadas de los valores [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) y [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723))
 -   Tipos de animación, incluido [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)
 -   Transformaciones (clases derivadas de [**GeneralTransform**](https://msdn.microsoft.com/library/windows/apps/br210034))
--   [
-              **Matrix**
-            ](https://msdn.microsoft.com/library/windows/apps/br210127) y [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/br243266)
--   Valores de [
-              **Point**
-            ](https://msdn.microsoft.com/library/windows/apps/br225870)
+-   [**Matrix**](https://msdn.microsoft.com/library/windows/apps/br210127) y [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/br243266)
+-   Valores de [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)
 -   Otras estructuras relacionadas con la interfaz de usuario, como [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864) y [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/br242343)
 -   [Tipos de datos intrínsecos de XAML](https://msdn.microsoft.com/library/windows/apps/mt186448)
 
@@ -516,6 +501,6 @@ Para los escenarios avanzados, puedes implementar una clase que pueda tener un c
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

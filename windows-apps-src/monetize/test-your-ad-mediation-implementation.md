@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 54ECD653-7FC2-4A95-AC5A-972C4FB5A54B
 description: "Antes de enviar tu aplicación, es conveniente probar la implementación de mediación de anuncios."
 title: "Probar la implementación de mediación de anuncios"
-translationtype: Human Translation
 ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
 ms.openlocfilehash: 0805ed5462a4b100b837ed9c11ec2d9e7caabc34
 
@@ -25,7 +24,8 @@ Las redes de anuncios girarán en orden secuencial, mostrándose una después de
 
 Se mostrarán anuncios de prueba para las redes de anuncios que los admiten. Ten en cuenta que los anuncios de prueba a veces pueden parecer errores. Asegúrate de revisar los eventos para determinar si se han producido errores.
 
-> **Nota** Al probar una aplicación de Windows Phone Silverlight, AdMob de Google siempre devolverá un error de **Solicitud no válida** porque no usa metadatos de prueba. Para comprobar la implementación de AdMob de Google, debes especificar los parámetros necesarios, tal como se describe en la siguiente sección.
+> 
+            **Nota** Al probar una aplicación de Windows Phone Silverlight, AdMob de Google siempre devolverá un error de **Solicitud no válida** porque no usa metadatos de prueba. Para comprobar la implementación de AdMob de Google, debes especificar los parámetros necesarios, tal como se describe en la siguiente sección.
 
  
 

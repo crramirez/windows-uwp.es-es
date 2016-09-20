@@ -6,7 +6,6 @@ title: "Globalización y localización"
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: 1fc82ff462a5c0af6b10e7dc8455adc215558b4e
 
@@ -19,7 +18,8 @@ ms.openlocfilehash: 1fc82ff462a5c0af6b10e7dc8455adc215558b4e
 
 Windows se usa en todo el mundo, lo que incluye a personas con diferentes culturas, regiones e idiomas. Un usuario puede hablar cualquier idioma, o incluso varios idiomas. Un usuario puede estar en cualquier lugar del mundo y puede hablar cualquier idioma en cualquier ubicación. Puedes aumentar el mercado potencial de la aplicación diseñándola para que sea fácilmente adaptable mediante la *globalización* y la *localización*.
 
-La **Globalización** es el proceso de diseño y desarrollo de la aplicación para que se comporte de la forma adecuada en los diferentes mercados globales sin tener que realizar modificaciones ni personalizaciones.
+
+            La **Globalización** es el proceso de diseño y desarrollo de la aplicación para que se comporte de la forma adecuada en los diferentes mercados globales sin tener que realizar modificaciones ni personalizaciones.
 
 Por ejemplo, puedes:
 
@@ -27,7 +27,8 @@ Por ejemplo, puedes:
 -   Recuperar texto e imágenes dependientes de la referencia cultural de recursos que puedan adaptarse a diferentes mercados locales, en lugar de codificarlos de forma rígida en el marcado o el código de la aplicación.
 -   Usar API de globalización para mostrar los datos que tienen un formato distinto en diferentes regiones, como valores numéricos, fechas, horas y monedas.
 
-**Localización** es el proceso de adaptación de la aplicación para que cumpla los requisitos políticos, de idioma y cultura de un mercado local específico.
+
+            **Localización** es el proceso de adaptación de la aplicación para que cumpla los requisitos políticos, de idioma y cultura de un mercado local específico.
 
 Por ejemplo:
 

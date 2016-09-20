@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
 title: "Mejorar el rendimiento de la recolección de elementos no usados"
 description: "La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática con el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no utilizados de .NET para las aplicaciones para UWP."
-translationtype: Human Translation
 ms.sourcegitcommit: 5f9626c644315884ea8605a4e69e7e580a44010b
 ms.openlocfilehash: 3fb6a0469a0e7488c40fc03bce8c90780b524656
 
@@ -14,17 +13,18 @@ ms.openlocfilehash: 3fb6a0469a0e7488c40fc03bce8c90780b524656
 
 La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática con el recolector de elementos no utilizados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no usados de .NET para las aplicaciones para UWP. Para más información sobre el funcionamiento del recolector de elementos no utilizados de .NET y las herramientas para depurar y analizar su rendimiento, consulta [Recolección de elementos no utilizados](https://msdn.microsoft.com/library/windows/apps/xaml/0xy59wtx.aspx).
 
-**Nota**  La necesidad de intervenir en el comportamiento predeterminado del recolector de elementos no usados es una clara señal de problemas de memoria generales en la aplicación. Para más información, consulta [Herramienta de uso de memoria durante la depuración en Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Este tema solo se aplica a C# y Visual Basic.
+
+            **Nota**  La necesidad de intervenir en el comportamiento predeterminado del recolector de elementos no usados es una clara señal de problemas de memoria generales en la aplicación. Para más información, consulta [Herramienta de uso de memoria durante la depuración en Visual Studio2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Este tema solo se aplica a C# y Visual Basic.
 
  
 
 El recolector de elementos no utilizados determina cuándo ejecutarse buscando un equilibrio entre el consumo de memoria del montón administrado y cantidad de trabajo que debe realizar la recolección de elementos no utilizados. Uno de los modos en que el recolector de elementos no utilizados hace esto es dividiendo el montón en generaciones y recolectando solo parte del montón la mayor parte del tiempo. Hay tres generaciones en el montón administrado:
 
--   Generación 0. Esta generación contiene los objetos asignados recientemente, a menos que su tamaño sea de 85 KB o superior, en cuyo caso forman parte del montón de objetos grandes. El montón de objetos grandes se recolecta con las recolecciones de generación 2. Las recolecciones de generación 0 son el tipo de recolección más frecuente y limpian los objetos de corta duración, como las variables locales.
+-   Generación 0. Esta generación contiene los objetos asignados recientemente, a menos que su tamaño sea de 85KB o superior, en cuyo caso forman parte del montón de objetos grandes. El montón de objetos grandes se recolecta con las recolecciones de generación 2. Las recolecciones de generación 0 son el tipo de recolección más frecuente y limpian los objetos de corta duración, como las variables locales.
 -   Generación 1. Esta generación contiene objetos que han sobrevivido a las recolecciones de generación 0. Sirve como búfer entre las generaciones 0 y 2. Las recolecciones de generación 1 tienen lugar con menor frecuencia que las de generación 0 y limpian los objetos temporales que se encontraban activos durante las recolecciones de generación 0 anteriores. Las recolecciones de generación 1 también recolectan la generación 0.
--   Generación 2. Esta generación contiene los objetos de larga duración que han sobrevivido a las recolecciones de las generaciones 0 y 1. Las colecciones de generación 2 son las menos frecuentes y recolectan todo el montón administrado, incluido el montón de objetos de gran tamaño que contiene objetos cuyo tamaño es de 85 KB o superior.
+-   Generación 2. Esta generación contiene los objetos de larga duración que han sobrevivido a las recolecciones de las generaciones 0 y 1. Las colecciones de generación 2 son las menos frecuentes y recolectan todo el montón administrado, incluido el montón de objetos de gran tamaño que contiene objetos cuyo tamaño es de 85KB o superior.
 
-Puedes medir el rendimiento del recolector de elementos no usados en relación con dos aspectos: el tiempo que tarda la recolección de elementos no usados y el consumo de memoria del montón administrado. Si tienes una aplicación pequeña con un tamaño de montón inferior a 100 MB, céntrate en reducir el consumo de memoria. Si tienes una aplicación con un montón administrado superior a 100 MB, céntrate solo en reducir el tiempo de la recolección de elementos no usados. A continuación se muestra cómo mejorar el rendimiento del recolector de elementos no usados de .NET.
+Puedes medir el rendimiento del recolector de elementos no usados en relación con dos aspectos: el tiempo que tarda la recolección de elementos no usados y el consumo de memoria del montón administrado. Si tienes una aplicación pequeña con un tamaño de montón inferior a 100MB, céntrate en reducir el consumo de memoria. Si tienes una aplicación con un montón administrado superior a 100MB, céntrate solo en reducir el tiempo de la recolección de elementos no usados. A continuación se muestra cómo mejorar el rendimiento del recolector de elementos no usados de .NET.
 
 ## Reducir el consumo de memoria
 
@@ -38,7 +38,8 @@ Induce una recolección de elementos no utilizados solamente si has medido el re
 
 Para inducir una recolección de elementos no usados de una generación, llama a [**GC.Collect(n)**](https://msdn.microsoft.com/library/windows/apps/xaml/y46kxc5e.aspx), donde n es la generación que quieres recolectar (0, 1 o 2).
 
-**Nota**  Se recomienda no forzar una recolección de elementos no usados en la aplicación, ya que el recolector de elementos no usados usa muchas medidas heurísticas para determinar el mejor momento de realizar una recolección y, si la fuerzas, en muchos casos provocarás un uso innecesario de la CPU. Pero si sabes que tienes una gran cantidad de objetos en la aplicación que ya no se usan y quieres devolver esta memoria al sistema, puede resultar conveniente forzar una recolección de elementos no utilizados. Por ejemplo, puedes inducir una recolección al final de una secuencia de carga en un juego para liberar memoria antes de comenzar la partida.
+
+            **Nota**  Se recomienda no forzar una recolección de elementos no usados en la aplicación, ya que el recolector de elementos no usados usa muchas medidas heurísticas para determinar el mejor momento de realizar una recolección y, si la fuerzas, en muchos casos provocarás un uso innecesario de la CPU. Pero si sabes que tienes una gran cantidad de objetos en la aplicación que ya no se usan y quieres devolver esta memoria al sistema, puede resultar conveniente forzar una recolección de elementos no utilizados. Por ejemplo, puedes inducir una recolección al final de una secuencia de carga en un juego para liberar memoria antes de comenzar la partida.
  
 Para evitar inducir accidentalmente demasiadas recolecciones de elementos no utilizados, puedes establecer el valor de [**GCCollectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/bb495757.aspx) en **Optimized**. Esto indica al recolector de elementos no utilizados que debe iniciar una recolección solo si determina que será lo suficientemente productiva como para justificar su ejecución.
 
@@ -66,7 +67,7 @@ Un ejemplo común de objetos de mediana duración son los objetos que se usan pa
 
 ### Reducir recolecciones de generación 2 al evitar objetos de gran tamaño con duraciones cortas
 
-Los objetos de 85 KB o mayores se asignan al montón de objetos grandes (LOH) y se recolectan como parte de la generación 2. Si tienes variables temporales como, por ejemplo, búferes, cuyo tamaño supera los 85 KB, una recolección de generación 2 las eliminará. Al limitar las variables temporales a menos de 85 KB, se reduce el número de recolecciones de generación 2 en la aplicación. Una técnica común consiste en crear una grupo de búferes y volver a usar los objetos del grupo para evitar asignaciones temporales de gran tamaño.
+Los objetos de 85KB o mayores se asignan al montón de objetos grandes (LOH) y se recolectan como parte de la generación 2. Si tienes variables temporales como, por ejemplo, búferes, cuyo tamaño supera los 85KB, una recolección de generación 2 las eliminará. Al limitar las variables temporales a menos de 85KB, se reduce el número de recolecciones de generación 2 en la aplicación. Una técnica común consiste en crear una grupo de búferes y volver a usar los objetos del grupo para evitar asignaciones temporales de gran tamaño.
 
 ### Evitar objetos con muchas referencias
 

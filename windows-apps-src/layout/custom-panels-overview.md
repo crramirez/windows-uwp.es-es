@@ -10,7 +10,7 @@ label: XAML custom panels overview
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 8fba13d28f885d89d5b115eebf1a2e75abb8c890
+ms.openlocfilehash: aebe6b873fff2a4284f03ca519f998ded742f677
 
 ---
 
@@ -71,28 +71,14 @@ El diseño candidato debe caber en la ventana actual de la aplicación o algunas
 
 Lo que en gran parte hace que el sistema de diseño funcione es que cualquier elemento basado en [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) ya tiene algo de su comportamiento inherente cuando actúa como elemento secundario en un contenedor. Por ejemplo, hay varias API de **FrameworkElement** que informan del comportamiento de diseño o que son necesarias para realizar el trabajo de diseño. Estos son:
 
--   [
-              **DesiredSize**
-            ](https://msdn.microsoft.com/library/windows/apps/br208921) (en realidad es una propiedad [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911))
--   [
-              **ActualHeight**
-            ](https://msdn.microsoft.com/library/windows/apps/br208707) y [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)
--   [
-              **Height**
-            ](https://msdn.microsoft.com/library/windows/apps/br208718) y [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)
+-   [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) (en realidad es una propiedad [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911))
+-   [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) y [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)
+-   [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) y [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)
 -   [**Margen**](https://msdn.microsoft.com/library/windows/apps/br208724)
--   [
-              Evento **LayoutUpdated**
-            ](https://msdn.microsoft.com/library/windows/apps/br208722)
--   [
-              **HorizontalAlignment**
-            ](https://msdn.microsoft.com/library/windows/apps/br208720) y [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
--   [
-              Métodos **ArrangeOverride**
-            ](https://msdn.microsoft.com/library/windows/apps/br208711) y [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
--   [
-              Métodos **Arrange**
-            ](https://msdn.microsoft.com/library/windows/apps/br208914)y [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952): estos tienen implementaciones nativas definidas en el nivel de [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) que controlan la acción de diseño en el nivel de elemento.
+-   Evento [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722)
+-   [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720) y [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
+-   Métodos [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) y [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
+-   Métodos [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) y [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952): estos tienen implementaciones nativas definidas en el nivel de [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) que controlan la acción de diseño en el nivel de elemento.
 
 ## **MeasureOverride**
 
@@ -187,15 +173,9 @@ Un motivo por el que la distinción entre control y panel es importante, es la a
 
 Hay otras API que forman parte del sistema de diseño, pero no se declaran mediante [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511). Pueden usarse en una implementación de panel o en un control personalizado que use paneles.
 
--   [
-              **UpdateLayout**
-            ](https://msdn.microsoft.com/library/windows/apps/br208989), [**InvalidateMeasure**](https://msdn.microsoft.com/library/windows/apps/br208930) e [**InvalidateArrange**](https://msdn.microsoft.com/library/windows/apps/br208929) son métodos que inician un pase de diseño. Es posible que **InvalidateArrange** no inicie un pase de medición, pero los otros dos sí lo hacen. No llames nunca a estos métodos desde la invalidación de un método de diseño porque provocarán un bucle de diseño casi con total seguridad. Normalmente, el código de control tampoco necesita llamarlos. La mayoría de los aspectos de diseño se inician automáticamente cuando se detectan cambios en las propiedades de diseño definidas por el entorno, como [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) y otras.
--   [
-              **LayoutUpdated**
-            ](https://msdn.microsoft.com/library/windows/apps/br208722) es un evento que se activa cuando cambia algún aspecto del elemento. No es específico de los paneles; el evento se define mediante [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706).
--   [
-              **SizeChanged**
-            ](https://msdn.microsoft.com/library/windows/apps/br208742) es un evento que se activa solo cuando finalizan los pases de diseño e indica que [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) o [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) han cambiado como resultado. Este es otro evento [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706). Hay casos en los que [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) se activa, pero **SizeChanged** no. Por ejemplo, puede que el contenido interno se reorganice, pero que el tamaño del elemento no cambie.
+-   [**UpdateLayout**](https://msdn.microsoft.com/library/windows/apps/br208989), [**InvalidateMeasure**](https://msdn.microsoft.com/library/windows/apps/br208930) e [**InvalidateArrange**](https://msdn.microsoft.com/library/windows/apps/br208929) son métodos que inician un pase de diseño. Es posible que **InvalidateArrange** no inicie un pase de medición, pero los otros dos sí lo hacen. No llames nunca a estos métodos desde la invalidación de un método de diseño porque provocarán un bucle de diseño casi con total seguridad. Normalmente, el código de control tampoco necesita llamarlos. La mayoría de los aspectos de diseño se inician automáticamente cuando se detectan cambios en las propiedades de diseño definidas por el entorno, como [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) y otras.
+-   [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) es un evento que se activa cuando cambia algún aspecto del elemento. No es específico de los paneles; el evento se define mediante [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706).
+-   [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br208742) es un evento que se activa solo cuando finalizan los pases de diseño e indica que [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) o [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) han cambiado como resultado. Este es otro evento [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706). Hay casos en los que [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) se activa, pero **SizeChanged** no. Por ejemplo, puede que el contenido interno se reorganice, pero que el tamaño del elemento no cambie.
 
 
 ## Temas relacionados
@@ -214,6 +194,6 @@ Hay otras API que forman parte del sistema de diseño, pero no se declaran media
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

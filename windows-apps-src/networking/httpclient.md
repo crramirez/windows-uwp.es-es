@@ -5,7 +5,7 @@ title: HttpClient
 ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b1908e83ffcab562c12c82cfcf7b5fe281d7ada1
+ms.openlocfilehash: a3d63f7bd090d9afe92813133503997b98502683
 
 ---
 
@@ -41,27 +41,13 @@ La clase [**Windows.Web.Http.HttpRequestMessage**](https://msdn.microsoft.com/li
 
 El espacio de nombres [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) representa el contenido HTTP como el cuerpo de entidad HTTP y los encabezados con cookies. El contenido HTTP puede asociarse a una solicitud HTTP o a una respuesta HTTP. El espacio de nombres **Windows.Web.Http** proporciona distintas clases para representar el contenido HTTP.
 
--   [
-              **HttpBufferContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298625). Contenido como un búfer
--   [
-              **HttpFormUrlEncodedContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298685). Contenido como tuplas de nombre y valor codificadas con el tipo MIME **application/x-www-form-urlencoded**.
--   [
-              **HttpMultipartContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298708). Contenido con el formato del tipo MIME **multipart/\***.
--   [
-              **HttpMultipartFormDataContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279596). Contenido que se codifica como el tipo MIME **multipart/form-data**.
--   [
-              **HttpStreamContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279649). Contenido como un flujo (el tipo interno lo usan el método HTTP GET para recibir datos y el método HTTP POST para cargar datos).
--   [
-              **HttpStringContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279661). Contenido como una cadena.
--   [
-              **IHttpContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279684): una interfaz base para que los desarrolladores creen sus propios objetos de contenido.
+-   [**HttpBufferContent**](https://msdn.microsoft.com/library/windows/apps/dn298625). Contenido como un búfer
+-   [**HttpFormUrlEncodedContent**](https://msdn.microsoft.com/library/windows/apps/dn298685). Contenido como tuplas de nombre y valor codificadas con el tipo MIME **application/x-www-form-urlencoded**.
+-   [**HttpMultipartContent**](https://msdn.microsoft.com/library/windows/apps/dn298708). Contenido con el formato del tipo MIME **multipart/\***.
+-   [**HttpMultipartFormDataContent**](https://msdn.microsoft.com/library/windows/apps/dn279596). Contenido que se codifica como el tipo MIME **multipart/form-data**.
+-   [**HttpStreamContent**](https://msdn.microsoft.com/library/windows/apps/dn279649). Contenido como un flujo (el tipo interno lo usan el método HTTP GET para recibir datos y el método HTTP POST para cargar datos).
+-   [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661). Contenido como una cadena.
+-   [**IHttpContent**](https://msdn.microsoft.com/library/windows/apps/dn279684): una interfaz base para que los desarrolladores creen sus propios objetos de contenido.
 
 El fragmento de código de la sección "Enviar una solicitud GET sencilla a través de HTTP" usa la clase [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661) para representar la respuesta HTTP de una solicitud HTTP GET como una cadena.
 
@@ -115,16 +101,15 @@ catch (Exception ex)
 
 Se inicia una excepción cuando se pasa una cadena no válida del identificador uniforme de recursos (URI) al constructor del objeto [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998).
 
-**.NET: **El tipo [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) aparece como [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) en C# y VB.
+**.NET: **el tipo [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) aparece como [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) en C# y VB.
 
 En C# y Visual Basic, este error puede evitarse si se usa la clase [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) en .NET 4.5 y uno de los métodos [**System.Uri.TryCreate**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx) para probar la cadena recibida del usuario antes de que se cree el URI.
 
 En C++, no hay ningún método para probar y analizar una cadena en un URI. Si una aplicación recibe información del usuario relativa a [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998), el constructor debe estar en un bloque Try/Catch. Si se genera una excepción, la aplicación podrá notificar al usuario y solicitar otro nombre de host.
 
-[
-            **Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) no tiene una función conveniente. Por este motivo, una aplicación que use [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) y otras clases de este espacio de nombres debe usar el valor **HRESULT**.
+[**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) no tiene una función conveniente. Por este motivo, una aplicación que use [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) y otras clases de este espacio de nombres debe usar el valor **HRESULT**.
 
-En las aplicaciones que usan .NET Framework 4.5 en C#, VB.NET, [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx) devuelve el valor **HRESULT** asignado a la excepción específica. La propiedad [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx) devuelve el mensaje que describe la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
+En las aplicaciones que usan .NET Framework4.5 en C#, VB.NET, [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx) devuelve el valor **HRESULT** asignado a la excepción específica. La propiedad [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx) devuelve el mensaje que describe la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
 En las aplicaciones que usan C++ administrado, [Platform::Exception](http://msdn.microsoft.com/library/windows/apps/hh755825.aspx) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [Platform::Exception::HResult](http://msdn.microsoft.com/library/windows/apps/hh763371.aspx) devuelve el valor **HRESULT** asignado a la excepción concreta. La propiedad [Platform::Exception::Message](http://msdn.microsoft.com/library/windows/apps/hh763375.aspx) devuelve la cadena proporcionada por el sistema asociada con el valor **HRESULT**. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
@@ -133,6 +118,6 @@ Para la mayoría de los errores de validación de parámetros, el valor de **HRE
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

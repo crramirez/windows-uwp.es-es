@@ -84,7 +84,8 @@ Copia este código al elemento Extensions (agregarás atributos en los siguiente
 
 2.  Cambia la lista del atributo Task Type para indicar el tipo de registro de tareas usado con esta tarea en segundo plano. Si la tarea en segundo plano se registra con varios tipos de desencadenadores, agrega elementos Task y atributos Type adicionales para cada uno.
 
-    **Nota**  Asegúrate de incluir en la lista todos los tipos de desencadenadores que estás usando, o la tarea en segundo plano no se registrará con los tipos de desencadenadores no declarados (el método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) generará un error y lanzará una excepción).
+    
+            **Nota**  Asegúrate de incluir en la lista todos los tipos de desencadenadores que estás usando, o la tarea en segundo plano no se registrará con los tipos de desencadenadores no declarados (el método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) generará un error y lanzará una excepción).
 
     Este ejemplo de fragmento de código indica el uso de desencadenadores de eventos del sistema y de notificaciones de inserción:
 
@@ -97,7 +98,8 @@ Copia este código al elemento Extensions (agregarás atributos en los siguiente
                 </Extension>
     ```
 
-    > **Nota**  Normalmente, una aplicación se ejecutará en un proceso especial llamado "BackgroundTaskHost.exe". Se puede agregar un elemento Executable al elemento Extension, lo cual permite a la tarea en segundo plano ejecutarse en el contexto de la aplicación. Usa el elemento Executable únicamente con tareas en segundo plano que lo requieran, como por ejemplo [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).    
+    > 
+            **Nota**  Normalmente, una aplicación se ejecutará en un proceso especial llamado "BackgroundTaskHost.exe". Se puede agregar un elemento Executable al elemento Extension, lo cual permite a la tarea en segundo plano ejecutarse en el contexto de la aplicación. Usa el elemento Executable únicamente con tareas en segundo plano que lo requieran, como por ejemplo [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).    
 
 ## Agregar extensiones adicionales de tareas en segundo plano
 

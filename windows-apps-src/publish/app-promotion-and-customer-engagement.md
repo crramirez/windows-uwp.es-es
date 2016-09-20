@@ -1,9 +1,8 @@
 ---
 author: jnHs
-Description: "Una vez que la aplicación esté en la Tienda Windows, es el momento de mostrarla al máximo número de clientes posible."
+Description: "Una vez que la aplicación esté en la TiendaWindows, es el momento de mostrarla al máximo número de clientes posible."
 title: "Promoción de aplicaciones y atracción de clientes"
 ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3511533f76294767ca409b09a718555a6194e451
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 3511533f76294767ca409b09a718555a6194e451
 # Promoción de aplicaciones y atracción de clientes
 
 
-Una vez que la aplicación esté en la Tienda Windows, es el momento de mostrarla al máximo número de clientes posible. Te damos opciones para que promuevas tu aplicación y atraigas a los clientes.
+Una vez que la aplicación esté en la TiendaWindows, es el momento de mostrarla al máximo número de clientes posible. Te damos opciones para que promuevas tu aplicación y atraigas a los clientes.
 
 -   [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md)
 -   [Crea una campaña de promoción de la aplicación personalizada](create-a-custom-app-promotion-campaign.md)

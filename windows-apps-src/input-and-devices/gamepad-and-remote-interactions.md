@@ -8,7 +8,7 @@ template: detail.hbs
 isNew: true
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 463da46dc1f4e2ed5125a26b058075e7fe1faafd
+ms.openlocfilehash: c353d649529eef8361c982ff6451371a4cebc4eb
 
 ---
 
@@ -19,20 +19,17 @@ Ahora puedes enchufar y usar el controlador para juegos con aplicaciones para UW
 
 Para garantizar una experiencia de usuario correcta y divertida para tu aplicación para UWP al usar un controlador para juegos o el control remoto, ten en cuenta lo siguiente:
 
-* [Hardware buttons](designing-for-tv.md#hardware-buttons)
-             -
+* [Hardware buttons](designing-for-tv.md#hardware-buttons) -
 El controlador para juegos y el control remoto proporcionan configuraciones y botones muy diferentes.
 
-* [Interacción y navegación con foco XY](designing-for-tv.md#xy-focus-navigation-and-interaction)
-             -
+* [Interacción y navegación con foco XY](designing-for-tv.md#xy-focus-navigation-and-interaction) -
 La navegación con foco XY permite al usuario navegar por la interfaz de usuario de la aplicación.
 
-* [Modo de mouse](designing-for-tv.md#mouse-mode)
-             -
-El modo de mouse permite a tu aplicación emular una experiencia de mouse cuando la navegación con foco XY no es suficiente.
+* [Modo de mouse](designing-for-tv.md#mouse-mode) -
+El modo de mouse permite a la aplicación emular una experiencia de mouse cuando la navegación con foco XY no es suficiente.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

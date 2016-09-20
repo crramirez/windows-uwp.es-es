@@ -11,7 +11,7 @@ ms.openlocfilehash: f9f1f34bb02cda89d31caa9453b6e3eb056e7bc9
 
 # Directrices para una interfaz de usuario informativa
 
-\ [Actualizado para aplicaciones para la Plataforma universal de Windows (UWP) en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\ [Actualizado para aplicaciones para la Plataforma universal de Windows (UWP) en Windows10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Algunas veces, puede resultar útil informar al usuario acerca de las funciones de la aplicación que quizá no sean obvias para ellos, tales como interacciones táctiles específicas. En estos casos, es necesario presentar instrucciones al usuario a través de la interfaz de usuario para que pueda descubrir y usar esas características que posiblemente no conozcan.
 
@@ -27,21 +27,30 @@ A menos que la aplicación dependa de los gestos táctiles, la interfaz de usuar
 
 Una buena interfaz de usuario informativa es pertinente y educativa para el usuario y mejora su experiencia. Debe ser:
 
--   **Simple:** Los usuarios no quieren que su experiencia se vea interrumpida con información complicada.
--   **Memorable:** Los usuarios no desean ver las mismas instrucciones cada vez que intenten realizar una tarea, por lo que estas deben ser fáciles de recordar.
--   **Pertinente de manera inmediata:** si la interfaz de usuario informativa no informa a los usuarios sobre algo que quieren hacer inmediatamente, estos no tendrán ningún motivo para prestarle atención.
+-   
+            **Simple:** Los usuarios no quieren que su experiencia se vea interrumpida con información complicada.
+-   
+            **Memorable:** Los usuarios no desean ver las mismas instrucciones cada vez que intenten realizar una tarea, por lo que estas deben ser fáciles de recordar.
+-   
+            **Pertinente de manera inmediata:** si la interfaz de usuario informativa no informa a los usuarios sobre algo que quieren hacer inmediatamente, estos no tendrán ningún motivo para prestarle atención.
 
 Evita el uso excesivo de la interfaz de usuario informativa y asegúrate de elegir los temas correctos. No incluyas la siguiente información:
 
--   **Características fundamentales:** si los usuarios necesitan instrucciones para usar la aplicación, considera la posibilidad de crear un diseño de aplicación más intuitivo.
--   **Características obvias:** La interfaz de usuario informativa no debe interferir en los casos en que los usuarios puedan descubrir el funcionamiento de una característica por sí solos.
--   **Características complejas:** La interfaz de usuario informativa debe ser concisa. Los usuarios interesados en características complejas normalmente están dispuestos a buscar instrucciones.
+-   
+            **Características fundamentales:** si los usuarios necesitan instrucciones para usar la aplicación, considera la posibilidad de crear un diseño de aplicación más intuitivo.
+-   
+            **Características obvias:** La interfaz de usuario informativa no debe interferir en los casos en que los usuarios puedan descubrir el funcionamiento de una característica por sí solos.
+-   
+            **Características complejas:** La interfaz de usuario informativa debe ser concisa. Los usuarios interesados en características complejas normalmente están dispuestos a buscar instrucciones.
 
 Evita que la interfaz de usuario informativa suponga una molestia para los usuarios. No hagas lo siguiente:
 
--   **Ocultar información importante:** la interfaz de usuario informativa nunca debería obstaculizar otras características de la aplicación.
--   **Obligar a los usuarios a participar:** los usuarios deben tener la posibilidad de omitir la interfaz de usuario informativa y avanzar en la aplicación.
--   **Mostrar información repetida:** No agobies al usuario con la interfaz de usuario informativa, incluso si la pasa por alto la primera vez. La mejor solución es agregar una opción de configuración para volver a mostrar la interfaz de usuario informativa.
+-   
+            **Ocultar información importante:** la interfaz de usuario informativa nunca debería obstaculizar otras características de la aplicación.
+-   
+            **Obligar a los usuarios a participar:** los usuarios deben tener la posibilidad de omitir la interfaz de usuario informativa y avanzar en la aplicación.
+-   
+            **Mostrar información repetida:** No agobies al usuario con la interfaz de usuario informativa, incluso si la pasa por alto la primera vez. La mejor solución es agregar una opción de configuración para volver a mostrar la interfaz de usuario informativa.
 
 ## <span id="examples_of_instructional_ui"></span><span id="EXAMPLES_OF_INSTRUCTIONAL_UI"></span>Ejemplos de interfaz de usuario informativa
 

@@ -3,7 +3,6 @@ author: TylerMSFT
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: "Archivos y carpetas de las bibliotecas de música, imágenes y vídeos"
 description: "Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 332f89f53a55d5783f7497ca5c6cd601dcee5217
 
@@ -39,7 +38,8 @@ Una biblioteca es una colección virtual de carpetas que incluye una carpeta con
 ## Obtener una referencia a una biblioteca
 
 
-**Nota** Recuerda que debes declarar la funcionalidad apropiada.
+
+            **Nota** Recuerda que debes declarar la funcionalidad apropiada.
  
 
 Para obtener una referencia a la biblioteca de música, imágenes o vídeos del usuario, llama al método [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725). Proporciona el valor correspondiente de la enumeración [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399).
@@ -122,15 +122,20 @@ El dispositivo proporciona cinco ubicaciones predefinidas para que los usuarios 
 
 Las ubicaciones son las siguientes:
 
--   Carpeta **Imágenes**. Contiene imágenes.
+-   
+            Carpeta **Imágenes**. Contiene imágenes.
 
-    -   Carpeta **Álbum de cámara**. Contiene fotos y vídeo de la cámara integrada.
+    -   
+            Carpeta **Álbum de cámara**. Contiene fotos y vídeo de la cámara integrada.
 
-    -   Carpeta **Imágenes guardadas**. Contiene imágenes que el usuario ha guardado de otras aplicaciones.
+    -   
+            Carpeta **Imágenes guardadas**. Contiene imágenes que el usuario ha guardado de otras aplicaciones.
 
--   Carpeta **Música**. Contiene canciones, podcasts y audiolibros.
+-   
+            Carpeta **Música**. Contiene canciones, podcasts y audiolibros.
 
--   Carpeta **Vídeo**. Contiene vídeos.
+-   
+            Carpeta **Vídeo**. Contiene vídeos.
 
 Además, los usuarios y las aplicaciones pueden almacenar archivos multimedia en la tarjeta SD, fuera de las carpetas de la bibliotecas multimedia. Para buscar de forma segura un archivo multimedia en la tarjeta SD, examina el contenido de la tarjeta SD o pide al usuario que localice el archivo con un selector de archivos. Para obtener más información, consulta [Acceso a la tarjeta SD](access-the-sd-card.md).
 
@@ -204,7 +209,8 @@ Estos son algunos ejemplos de consultas con los resultados que devuelven.
 
 A continuación, indicamos las funcionalidades que puedes especificar en el archivo de manifiesto de la aplicación para tener acceso a los archivos multimedia de esta.
 
--   **Música**. Especifica la capacidad de **Biblioteca de música** en el archivo de manifiesto de la aplicación, para dejar que esta vea archivos de los tipos siguientes y tenga acceso a ellos:
+-   
+            **Música**. Especifica la capacidad **Music Library** en el archivo de manifiesto de la aplicación, para dejar que dicha aplicación vea archivos de los tipos siguientes y tenga acceso a ellos:
 
     -   .qcp
     -   .wav
@@ -214,31 +220,31 @@ A continuación, indicamos las funcionalidades que puedes especificar en el arch
     -   .aac
     -   .amr
     -   .wma
-    -   .3g2
-    -   .3gp
-    -   .mp4
-    -   .wm
-    -   .asf
-    -   .3gpp
-    -   .3gp2
-    -   .mpa
-    -   .adt
-    -   .adts
-    -   .pya
--   **Fotos**. Especifica la capacidad de **Biblioteca de imágenes** en el archivo de manifiesto de la aplicación, para dejar que esta vea archivos de los tipos siguientes y tenga acceso a ellos:
+    -   .3g2 -   .3gp -   .mp4 -   .wm -   .asf -   .3gpp -   .3gp2 -   .mpa -   .adt -   .adts -   .pya -   **Fotos**.
+    -   Especifica la capacidad **Pictures Library** en el archivo de manifiesto de la aplicación, para dejar que esta vea archivos de los tipos siguientes y tenga acceso a ellos:
+    -   -   .jpeg -   .jpe -   .jpg -   .gif -   .tiff -   .tif -   .png -   .bmp -   .wdp -   .jxr -   .hdp -   **Vídeos**.
+    -   Especifica la capacidad **Video Library** en el archivo de manifiesto de la aplicación, para dejar que esta vea archivos de los tipos siguientes y tenga acceso a ellos:
+    -   -   .wm -   .m4v -   .wmv -   .asf -   .mov -   .mp4 -   .3g2 -   .3gp -   .mp4v -   .avi -   .pyv -   .3gpp -   .3gp2
+    -   Trabajo con fotos
+    -   En dispositivos en los que la cámara guarda dos imágenes por cada foto, una en baja resolución y otra en alta resolución, las consultas profundas solo devuelven las imágenes de baja resolución.
+    -   El Álbum de cámara y la carpeta Imágenes guardadas no admiten consultas profundas.
+    -   Abrir una foto en la aplicación que la capturó
+    -   Si quieres que el usuario pueda volver a abrir una foto en la aplicación que la capturó, puedes guardar el **CreatorAppId** con los metadatos de la foto; usa para ello un código similar al del ejemplo siguiente.
+    -   En este ejemplo, **testPhoto** es un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
+-   Usar métodos de secuencias para agregar un archivo a una biblioteca multimedia Si accedes a una biblioteca a través de una carpeta conocida —por ejemplo, **KnownFolders.PictureLibrary**— y usas métodos de secuencias para agregar un archivo a la biblioteca, tienes que asegurarte de que cierras todas las secuencias que abre el código.
 
-    -   .jpeg
-    -   .jpe
-    -   .jpg
-    -   .gif
-    -   .tiff
-    -   .tif
+    -   De lo contrario, estos métodos no podrán agregar el archivo a la biblioteca multimedia, ya que habrá al menos una secuencia que controla el archivo.
+    -   Por ejemplo, si ejecutas el código siguiente, el archivo no se agrega a la biblioteca multimedia.
+    -   En la línea de código, `using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))`, tanto el método **OpenAsync** como el método **GetOutputStreamAt** abren una secuencia.
+    -   No obstante, tan solo se desecha la secuencia que abre el método **GetOutputStreamAt** como resultado de la instrucción **using**.
+    -   La otra secuencia permanece abierta y evita que se guarde el archivo.
+    -   Para agregar correctamente un archivo a la biblioteca de contenido multimedia con métodos de secuencias, asegúrate de cerrar todas las secuencias que abre el código, tal como se muestra en el ejemplo siguiente.
     -   .png
     -   .bmp
     -   .wdp
     -   .jxr
     -   .hdp
--   **Vídeos**. Especifica la capacidad de **Video Library** en el archivo de manifiesto de la aplicación, para dejar que esta vea archivos de los tipos siguientes y tenga acceso a ellos:
+-   <bpt id="p1">**</bpt>Videos<ept id="p1">**</ept>. Specify the <bpt id="p1">**</bpt>Video Library<ept id="p1">**</ept> capability in the app manifest file to let your app see and access files of the following file types:
 
     -   .wm
     -   .m4v
@@ -254,16 +260,16 @@ A continuación, indicamos las funcionalidades que puedes especificar en el arch
     -   .3gpp
     -   .3gp2
 
-## Trabajo con fotos
+## Working with photos
 
 
-En dispositivos en los que la cámara guarda dos imágenes para cada foto, una en baja resolución y otra en alta resolución, las consultas profundas solo devuelven las imágenes de baja resolución.
+On devices where the camera saves both a low-resolution image and a high-resolution image of every picture, the deep queries return only the low-resolution image.
 
-El Álbum de cámara y la carpeta Imágenes guardadas no admiten consultas profundas.
+The Camera Roll and the Saved Pictures folder do not support the deep queries.
 
-**Abrir una foto en la aplicación que la capturó**
+**Opening a photo in the app that captured it**
 
-Si quieres que el usuario pueda volver a abrir una foto en la aplicación que la capturó, puedes guardar el **CreatorAppId** con los metadatos de la foto; usa para ello un código similar al del ejemplo siguiente. En este ejemplo, **testPhoto** es un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
+If you want to let the user open a photo again later in the app that captured it, you can save the <bpt id="p1">**</bpt>CreatorAppId<ept id="p1">**</ept> with the photo's metadata by using code similar to the following example. In this example, <bpt id="p1">**</bpt>testPhoto<ept id="p1">**</ept> is a <bpt id="p2">[</bpt><bpt id="p3">**</bpt>StorageFile<ept id="p3">**</ept><ept id="p2">](https://msdn.microsoft.com/library/windows/apps/br227171)</ept>.
 
 ```CSharp
   IDictionary<string, object> propertiesToSave = new Dictionary<string, object>();
@@ -274,12 +280,12 @@ Si quieres que el usuario pueda volver a abrir una foto en la aplicación que la
   testPhoto.Properties.SavePropertiesAsync(propertiesToSave).AsyncWait();   
 ```
 
-## Usar métodos de secuencias para agregar un archivo a una biblioteca multimedia
+## Using stream methods to add a file to a media library
 
 
-Si accedes a una biblioteca a través de una carpeta conocida —por ejemplo, **KnownFolders.PictureLibrary**— y usas métodos de secuencias para agregar un archivo a la biblioteca, tienes que asegurarte de que cierras todas las secuencias que abre el código. De lo contrario, estos métodos no podrán agregar el archivo a la biblioteca multimedia, ya que habrá al menos una secuencia que controla el archivo.
+When you access a media library by using a known folder such as <bpt id="p1">**</bpt>KnownFolders.PictureLibrary<ept id="p1">**</ept>, and you use stream methods to add a file to the media library, you have to make sure to close all the streams that your code opens. Otherwise these methods fail to add the file to the media library as expected because at least one stream still has a handle to the file.
 
-Por ejemplo, si ejecutas el código siguiente, el archivo no se agrega a la biblioteca multimedia. En la línea de código, `using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))`, tanto el método **OpenAsync** como el método **GetOutputStreamAt** abren una secuencia. No obstante, tan solo se desecha la secuencia que abre el método **GetOutputStreamAt** como resultado de la instrucción **using**. La otra secuencia permanece abierta y evita que se guarde el archivo.
+For example, when you run the following code, the file is not added to the media library. In the line of code, <ph id="ph1">`using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))`</ph>, both the <bpt id="p1">**</bpt>OpenAsync<ept id="p1">**</ept> method and the <bpt id="p2">**</bpt>GetOutputStreamAt<ept id="p2">**</ept> method open a stream. However only the stream opened by the <bpt id="p1">**</bpt>GetOutputStreamAt<ept id="p1">**</ept> method is disposed as a result of the <bpt id="p2">**</bpt>using<ept id="p2">**</ept> statement. The other stream remains open and prevents saving the file.
 
 ```CSharp
 StorageFolder testFolder = await StorageFolder.GetFolderFromPathAsync(@"C:\test");
@@ -295,7 +301,7 @@ using (var sourceStream = (await sourceFile.OpenReadAsync()).GetInputStreamAt(0)
 
 ```
 
-Para agregar correctamente un archivo a la biblioteca de contenido multimedia con métodos de secuencias, asegúrate de cerrar todas las secuencias que abre el código, tal como se muestra en el ejemplo siguiente.
+To use stream methods successfully to add a file to the media library, make sure to close all the streams that your code opens, as shown in the following example.
 
 ```CSharp
 StorageFolder testFolder = await StorageFolder.GetFolderFromPathAsync(@"C:\test");

@@ -3,7 +3,6 @@ title: "Agente de autenticación web"
 description: "En este artículo se explica cómo conectar tu aplicación de la Plataforma universal de Windows (UWP) a un proveedor de identidad en línea que usa protocolos de autenticación como OpenID u OAuth, como Facebook, Twitter, Flickr, Instagram, etc."
 ms.assetid: 05F06961-1768-44A7-B185-BCDB74488F85
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: 96ca8d019fe6cbf742c98edf0b8bf04b35f71dfd
 
@@ -17,7 +16,8 @@ ms.openlocfilehash: 96ca8d019fe6cbf742c98edf0b8bf04b35f71dfd
 
 En este artículo se explica cómo conectar tu aplicación de la Plataforma universal de Windows (UWP) a un proveedor de identidad en línea que usa protocolos de autenticación como OpenID u OAuth, como Facebook, Twitter, Flickr, Instagram, etc. El método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) envía una solicitud al proveedor de identidad en línea y obtiene un token de acceso que describe los recursos del proveedor a los que tiene acceso la aplicación.
 
-**Nota** Para obtener una muestra de código completa que funcione, clona el [repositorio de WebAuthenticationBroker en GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
+
+            **Nota** Para obtener una muestra de código completa que funcione, clona el [repositorio de WebAuthenticationBroker en GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
 
  
 
@@ -152,7 +152,8 @@ El depurador web Fiddler puede usarse con aplicaciones.
 
 1.  Dado que AuthHost se ejecuta en su propio contenedor de aplicaciones para darle la funcionalidad de red privada, debes establecer una clave del Registro: Editor del Registro de Windows 5.00
 
-    **HKEY\_LOCAL\_MACHINE**
+    
+            **HKEY\_LOCAL\_MACHINE**
             \\
             **SOFTWARE**
             \\

@@ -3,7 +3,6 @@ title: Compartir certificados entre aplicaciones
 description: "Las aplicaciones para la Plataforma universal de Windows (UWP) que necesitan una autenticación segura que vaya más allá de una combinación de id. de usuario y contraseña pueden usar certificados para la autenticación."
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: 2bb1b601e1ab35115c88692f6c36dccc70836541
 
@@ -64,14 +63,15 @@ En este artículo se usa Microsoft Internet Information Services (IIS) como ejem
 
 Puedes repetir los pasos anteriores para crear varios servicios web a los que se pueda acceder con el mismo certificado de cliente.
 
-## Crear una aplicación de la Tienda Windows que use autenticación de certificado
+## Crear una aplicación de la TiendaWindows que use autenticación de certificado
 
 
 Ahora que tienes uno o varios servicios web protegidos, tus aplicaciones pueden usar certificados para autenticar en esos servicios web. Cuando se realiza una solicitud a un servicio web autenticado usando el objeto [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639), la solicitud inicial no contendrá un certificado de cliente. El servicio web autenticado responderá con una solicitud para autenticar el cliente. Cuando esto ocurre, el cliente de Windows consultará automáticamente los certificados de cliente disponibles en el almacén de certificados. El usuario puede seleccionar uno de estos certificados para autenticarse en el servicio web. Algunos certificados están protegidos por contraseña, por lo que necesitarás proporcionar al usuario una manera de especificar la contraseña del certificado.
 
 Si no hay certificados de cliente disponibles, el usuario tendrá que agregar un certificado al almacén de certificados. En tu aplicación puedes incluir código que permita al usuario seleccionar un archivo PFX que contenga un certificado de cliente y, después, importar ese certificado al almacén de certificados de cliente.
 
-**Sugerencia** Puedes usar makecert.exe para crear un archivo PFX para usarlo con este inicio rápido. Para obtener información sobre cómo usar makecert.exe, consulta [MakeCert.](https://msdn.microsoft.com/library/windows/desktop/aa386968)
+
+            **Sugerencia** Puedes usar makecert.exe para crear un archivo PFX para usarlo con este inicio rápido. Para obtener información sobre cómo usar makecert.exe, consulta [MakeCert.](https://msdn.microsoft.com/library/windows/desktop/aa386968)
 
  
 

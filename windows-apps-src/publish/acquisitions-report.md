@@ -3,7 +3,6 @@ author: jnHs
 Description: "El informe de adquisiciones del panel del Centro de desarrollo de Windows te permite ver quién ha adquirido la aplicación, junto con datos demográficos y de plataforma."
 title: Informe de adquisiciones
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: bfdf4f9f2d94a31a1c159e947615c10abf556aad
 
@@ -16,7 +15,8 @@ El informe de **adquisiciones** del panel del Centro de desarrollo de Windows te
 
 En este informe, una adquisición significa que un cliente nuevo ha obtenido una licencia para tu aplicación (tanto si cobras dinero como si la ofreces gratis).
 
-> **Importante**: El informe de **adquisiciones** no incluye datos sobre reembolsos, devoluciones, anulaciones, etc. Para calcular las ganancias por la aplicación, visita [Resumen de pago](payout-summary.md). En la sección **Reservado**, haz clic en el vínculo **Descargar transacciones reservadas**.
+> 
+            **Importante**: El informe de **adquisiciones** no incluye datos sobre reembolsos, devoluciones, anulaciones, etc. Para calcular las ganancias por la aplicación, visita [Resumen de pago](payout-summary.md). En la sección **Reservado**, haz clic en el vínculo **Descargar transacciones reservadas**.
 
 
 
@@ -25,8 +25,10 @@ En este informe, una adquisición significa que un cliente nuevo ha obtenido una
 
 Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** para filtrar todos los datos de esta página por intervalo de fechas o por tipo de dispositivo.
 
--   **Fecha**: el filtro predeterminado es **Últimos 30 días**, pero puedes ampliarlo hasta **Últimos 12 meses**.
--   **Tipo de dispositivo**: la opción predeterminada es **Todos los dispositivos**. Si quieres mostrar los datos de adquisiciones de un determinado tipo de dispositivo únicamente, puede elegir uno específico aquí.
+-   
+            **Fecha**: el filtro predeterminado es **Últimos 30 días**, pero puedes ampliarlo hasta **Últimos 12 meses**.
+-   
+            **Tipo de dispositivo**: la opción predeterminada es **Todos los dispositivos**. Si quieres mostrar los datos de adquisiciones de un determinado tipo de dispositivo únicamente, puede elegir uno específico aquí.
 
 La información de los gráficos que aparecen a continuación reflejará el período de tiempo seleccionado en la sección **Aplicar filtros**.
 
@@ -46,7 +48,8 @@ También puedes filtrar los resultados por mercado o por la versión del SO.
 
 El gráfico **Grupo demográfico de clientes** muestra información demográfica sobre las personas que adquirieron la aplicación. Puedes ver cuántas adquisiciones (durante el período de tiempo seleccionado) realizaron las personas de un determinado grupo de edad divididas por sexo.
 
-> **Nota**  Algunos clientes han optado por no compartir esta información. Si no podemos determinar el grupo etario o el sexo, la adquisición se clasifica como **Desconocida**.
+> 
+            **Nota**  Algunos clientes han optado por no compartir esta información. Si no podemos determinar el grupo etario o el sexo, la adquisición se clasifica como **Desconocida**.
 
  
 

@@ -20,14 +20,14 @@ Este artículo proporciona información general sobre el perfil de atributo gen�
 
 ## Información general
 
-Los desarrolladores pueden usar las API del espacio de nombres [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) para tener acceso a los servicios, descriptores y características de Bluetooth LE. Los dispositivos Bluetooth LE exponen su funcionalidad a través de una colección de:
+Los desarrolladores pueden usar las API del espacio de nombres [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) para tener acceso a los servicios, descriptores y características de Bluetooth LE. Los dispositivos BluetoothLE exponen su funcionalidad a través de una colección de:
 
 -   Servicios principales
 -   Servicios incluidos
 -   Características
 -   Descriptores
 
-Los servicios principales definen el contrato funcional del dispositivo LE y contienen una colección de características que definen el servicio. Dichas características, a su vez, contienen descriptores que las describen.
+Los servicios principales definen el contrato funcional del dispositivoLE y contienen una colección de características que definen el servicio. Dichas características, a su vez, contienen descriptores que las describen.
 
 Las API de Bluetooth GATT exponen objetos y funciones, en lugar del acceso al transporte sin procesar. En el nivel del controlador, los servicios primarios se enumeran como nodos de dispositivo secundarios que forman parte del dispositivo Bluetooth LE y que usan las API [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459).
 
@@ -37,9 +37,9 @@ Las API del perfil GATT de Bluetooth también permiten a los desarrolladores tra
 -   Leer y escribir valores de características / descriptores
 -   Registrar una devolución de llamada para el evento de característica ValueChanged
 
-Las API de Bluetooth GATT simplifican el desarrollo al trabajar con propiedades comunes y al ofrecer valores predeterminados razonables para facilitar la administración y la configuración del dispositivo. Ofrecen a los desarrolladores un medio para tener acceso a la funcionalidad de un dispositivo Bluetooth LE desde una aplicación.
+Las API de Bluetooth GATT simplifican el desarrollo al trabajar con propiedades comunes y al ofrecer valores predeterminados razonables para facilitar la administración y la configuración del dispositivo. Ofrecen a los desarrolladores un medio para tener acceso a la funcionalidad de un dispositivo BluetoothLE desde una aplicación.
 
-Para crear una implementación útil, el desarrollador debe tener conocimientos previos sobre los servicios y las características GATT que la aplicación pretende consumir, y debe procesar los valores de características específicos para que los datos binarios proporcionados por la API se conviertan en datos útiles antes de presentárselos al usuario. Las API de Bluetooth GATT exponen solo los primitivos básicos requeridos para comunicarse con un dispositivo Bluetooth LE. Para interpretar los datos, debe definirse un perfil de aplicación, ya sea mediante un perfil estándar de un SIG de Bluetooth o mediante un perfil personalizado implementado por un proveedor de dispositivos. Un perfil crea un contrato vinculante entre la aplicación y el dispositivo, que indica qué representan los datos intercambiados y cómo interpretarlos.
+Para crear una implementación útil, el desarrollador debe tener conocimientos previos sobre los servicios y las características GATT que la aplicación pretende consumir, y debe procesar los valores de características específicos para que los datos binarios proporcionados por la API se conviertan en datos útiles antes de presentárselos al usuario. Las API de Bluetooth GATT exponen solo los primitivos básicos requeridos para comunicarse con un dispositivo BluetoothLE. Para interpretar los datos, debe definirse un perfil de aplicación, ya sea mediante un perfil estándar de un SIG de Bluetooth o mediante un perfil personalizado implementado por un proveedor de dispositivos. Un perfil crea un contrato vinculante entre la aplicación y el dispositivo, que indica qué representan los datos intercambiados y cómo interpretarlos.
 
 Para mayor comodidad, el SIG de Bluetooth ofrece una [lista de perfiles públicos](http://go.microsoft.com/fwlink/p/?LinkID=317977).
 

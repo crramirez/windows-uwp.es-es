@@ -42,7 +42,7 @@ Puedes elegir entre dos formas de conectarte a Device Portal: host local y a tra
 
     Usa esta dirección para ver Device Portal de forma local.
     
-    - Red local: `https://<The IP address of the desktop>:PORT`
+    - Red local:  `https://<The IP address of the desktop>:PORT`
 
     Usa esta dirección para conectarte a través de una red local.
 

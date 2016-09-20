@@ -3,7 +3,6 @@ author: mcleblanc
 title: "Caso práctico de Windows Runtime 8.x a UWP, Bookstore1"
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
 description: "En este tema se presenta un caso práctico de migración de una aplicación Universal 8.1 a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 43536aacb37a79b3e8507896474be67423a0b9fe
 

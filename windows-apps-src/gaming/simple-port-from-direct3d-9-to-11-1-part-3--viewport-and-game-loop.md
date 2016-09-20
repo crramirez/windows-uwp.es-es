@@ -3,7 +3,6 @@ author: mtoepke
 title: Migrar el bucle del juego
 description: "Aprende a implementar una ventana para un juego de la Plataforma universal de Windows (UWP) y a traer el bucle de la repetición, incluso cómo crear una interfaz IFrameworkView para controlar una clase CoreWindow de pantalla completa."
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3c2369a2fdc48aed14f7ad363df8792e0ed5d795
 
@@ -30,7 +29,8 @@ Para configurar una ventana de escritorio con una ventanilla de Direct3D 9, tuvi
 
 El entorno de UWP ofrece un sistema mucho más simple. En lugar de configurar una ventana tradicional, un juego de la Tienda Windows que usa DirectX implementa [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478). Esta interfaz existe para que los juegos y las aplicaciones de DirectX se ejecuten directamente en una clase [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) en el interior del contenedor de la aplicación.
 
-> **Nota** Windows suministra punteros administrados a recursos, como el objeto de la aplicación de origen y la clase [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Consulta [**Identificador de objeto operador (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> 
+            **Nota** Windows suministra punteros administrados a recursos, como el objeto de la aplicación de origen y la clase [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Consulta [**Identificador de objeto operador (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
  
 
@@ -72,9 +72,9 @@ public:
 ## Migrar el bucle del juego
 
 
-Veamos el bucle del juego en nuestra implementación de Direct3D 9. Este código existe en la función main de la aplicación. Cada iteración de este bucle procesa un mensaje de ventana o representa un marco.
+Veamos el bucle del juego en nuestra implementación de Direct3D9. Este código existe en la función main de la aplicación. Cada iteración de este bucle procesa un mensaje de ventana o representa un marco.
 
-Bucle de un juego de escritorio de Direct3D 9
+Bucle de un juego de escritorio de Direct3D9
 
 ```cpp
 while(WM_QUIT != msg.message)
@@ -124,7 +124,7 @@ Ahora tenemos una aplicación para UWP que configura la misma infraestructura b�
 ## Dónde ir desde aquí
 
 
-Usa un marcador para las [preguntas más frecuentes sobre la migración a DirectX 11](directx-porting-faq.md).
+Usa un marcador para las [preguntas más frecuentes sobre la migración a DirectX11](directx-porting-faq.md).
 
 Las plantillas de DirectX de UWP incluyen una sólida infraestructura de dispositivo de Direct3D lista para usar en tu juego. Si quieres obtener directrices para elegir la plantilla correcta, consulta [Crear un proyecto de juego DirectX con una plantilla](user-interface.md).
 

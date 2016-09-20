@@ -5,7 +5,7 @@ description: Los juegos DirectX para Plataforma universal de Windows (UWP) no us
 ms.assetid: 46f92156-29f8-d65e-2587-7ba1de5b48a6
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a8c8cb8fa8ccec54af4c824d23bc26cb91db7cf7
+ms.openlocfilehash: 78e2bbcc4c9182b09138da457c839466b49ac31a
 
 ---
 
@@ -27,7 +27,7 @@ En primer lugar, veamos los espacios de nombres de Windows Runtime que debes inc
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
 -   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
-> **Nota**   Si no pretendes desarrollar una aplicación para UWP, usa los componentes de interfaz de usuario incluidos en las bibliotecas y los espacios de nombres específicos de JavaScript o XAML, en lugar de los tipos proporcionados en estos espacios de nombres.
+> **Nota** Si no pretendes desarrollar una aplicación para UWP, usa los componentes de interfaz de usuario incluidos en las bibliotecas y los espacios de nombres específicos de JavaScript o XAML, en lugar de los tipos proporcionados en estos espacios de nombres.
 
  
 
@@ -52,7 +52,7 @@ Este es el conjunto básico de pasos necesarios para obtener una ventana con el 
 
     En este tipo, define:
 
-    -   Un método denominado [**CreateView**](https://msdn.microsoft.com/library/windows/apps/hh700491) que devuelva una instancia de la implementación de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478), tal como la creaste en el paso 1.
+    -   Un método denominado [**CreateView**](https://msdn.microsoft.com/library/windows/apps/hh700491) que devuelva una instancia de la implementación de [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478), tal como la creaste en el paso1.
 
 3.  Pasa una instancia del proveedor de vistas a [**CoreApplication.Run**](https://msdn.microsoft.com/library/windows/apps/hh700469) desde **main**.
 
@@ -82,18 +82,14 @@ En resumen, el objeto aplicación proporciona una fábrica de proveedores de vis
 ## Comportamientos y propiedades de CoreApplicationView
 
 
-[
-              **CoreApplicationView**
-            ](https://msdn.microsoft.com/library/windows/apps/br225017) representa la vista actual de la aplicación. El singleton de aplicación crea la vista de la aplicación durante la inicialización, pero la vista permanece inactiva hasta que se activa. Puedes obtener la clase [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que muestra la vista al accediendo a la propiedad [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) de esta y puedes controlar eventos de activación y desactivación para la vista registrando delegados con el evento [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018).
+[**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) representa la vista actual de la aplicación. El singleton de aplicación crea la vista de la aplicación durante la inicialización, pero la vista permanece inactiva hasta que se activa. Puedes obtener la clase [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que muestra la vista al accediendo a la propiedad [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) de esta y puedes controlar eventos de activación y desactivación para la vista registrando delegados con el evento [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018).
 
 ## Comportamientos y propiedades de CoreWindow
 
 
 La ventana primaria, que es una instancia de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225), se crea y se pasa al proveedor de vistas cuando se inicializa el objeto de aplicación. Si la aplicación tiene una ventana para mostrar, la muestra; de lo contrario, simplemente inicializa la vista.
 
-[
-              **CoreWindow**
-            ](https://msdn.microsoft.com/library/windows/apps/br208225) proporciona diversos eventos específicos de entrada y comportamientos básicos de ventana. Puedes controlar estos eventos registrando tus propios delegados con ellos.
+[**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) proporciona diversos eventos específicos de entrada y comportamientos básicos de ventana. Puedes controlar estos eventos registrando tus propios delegados con ellos.
 
 También puedes obtener el distribuidor de eventos de ventana para la ventana a través de la propiedad [**CoreWindow.Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208264) que proporciona una instancia de [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211).
 
@@ -160,6 +156,6 @@ En general, cuando diseñes tu aplicación para UWP, usa la clase [**CoreDispatc
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

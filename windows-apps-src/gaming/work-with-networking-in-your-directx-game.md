@@ -3,7 +3,6 @@ author: mtoepke
 title: "Conexión en red de juegos"
 description: "Aprende a desarrollar e incorporar características de red en un juego DirectX."
 ms.assetid: 212eee15-045c-8ba1-e274-4532b2120c55
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 63a40f5853740d1053449e1b1839f5b0232ce28e
 

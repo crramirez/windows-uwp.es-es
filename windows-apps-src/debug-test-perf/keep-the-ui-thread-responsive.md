@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
 title: Mantener la capacidad de respuesta del subproceso de la interfaz de usuario
 description: "Los usuarios esperan que las aplicaciones sigan respondiendo mientras realizan cálculos, independientemente del tipo de equipo."
-translationtype: Human Translation
 ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
 ms.openlocfilehash: 6144b5b60a0092efd1056dd5de166a64733356ec
 
@@ -18,7 +17,8 @@ La aplicación se controla mediante eventos, lo que significa que el código rea
 
 Deberás usar el subproceso de la interfaz de usuario para que realice casi todos los cambios en el subproceso de la interfaz de usuario, incluida la creación de tipos de interfaz de usuario y el acceso a sus miembros. La interfaz de usuario no se puede actualizar desde un subproceso, aunque puedes publicar un mensaje con [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para hacer que el código se ejecute allí.
 
-> **Nota**  La única excepción es que existe un subproceso de representación separado que puede aplicar cambios a la interfaz de usuario que no afectarán el modo en que se controla la entrada o el diseño básico. Por ejemplo, muchas animaciones y transiciones que no afectan al diseño pueden ejecutarse en este subproceso de representación.
+> 
+            **Nota**  La única excepción es que existe un subproceso de representación separado que puede aplicar cambios a la interfaz de usuario que no afectarán el modo en que se controla la entrada o el diseño básico. Por ejemplo, muchas animaciones y transiciones que no afectan al diseño pueden ejecutarse en este subproceso de representación.
 
 ## Retrasar la creación de instancias de elementos
 
@@ -27,7 +27,8 @@ Entre las fases más lentas de una aplicación se incluyen el inicio y el cambio
 -   Usa [x: DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785) para retrasar la creación de instancias de elementos.
 -   Inserta mediante programación los elementos en el árbol a petición.
 
-[
+
+            [
               **CoreDispatcher.RunIdleAsync**
             ](https://msdn.microsoft.com/library/windows/apps/Hh967918) pone el trabajo en cola para que el subproceso de la interfaz de usuario lo procese cuando no esté ocupado.
 
@@ -97,13 +98,14 @@ public class AsyncExample
 > End Class
 > ```
 
-En este ejemplo, el controlador `NextMove-Click` vuelve a **await** para mantener la capacidad de respuesta del subproceso de la interfaz de usuario. Sin embargo, la ejecución se retoma en dicho controlador después de completar `ComputeNextMove` (que se ejecuta en un subproceso en segundo plano). El código restante del controlador actualiza la interfaz de usuario con los resultados.
+[!div class="tabbedCodeSnippets"] En este ejemplo, el controlador `NextMove-Click` vuelve a **await** para mantener la capacidad de respuesta del subproceso de la interfaz de usuario. Sin embargo, la ejecución se retoma en dicho controlador después de completar `ComputeNextMove` (que se ejecuta en un subproceso en segundo plano).
 
-> **Nota**  También existe una API de [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) y [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) para UWP que puede usarse para escenarios similares. Para obtener más información, consulta [Subprocesamiento y programación asincrónica](https://msdn.microsoft.com/library/windows/apps/Mt187340).
+> El código restante del controlador actualiza la interfaz de usuario con los resultados. 
+            **Nota**  También existe una API de [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) y [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) para UWP que puede usarse para escenarios similares.
 
-## Temas relacionados
+## Para obtener más información, consulta [Subprocesamiento y programación asincrónica](https://msdn.microsoft.com/library/windows/apps/Mt187340).
 
-* [Interacciones del usuario personalizadas](https://msdn.microsoft.com/library/windows/apps/Mt185599)
+* [Temas relacionados](https://msdn.microsoft.com/library/windows/apps/Mt185599)
 
 
 

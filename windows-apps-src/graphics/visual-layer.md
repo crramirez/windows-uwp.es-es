@@ -4,8 +4,8 @@ ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Capa visual
 description: "La API de Windows.UI.Composition proporciona acceso a la capa de composición entre la capa de marco (XAML) y la capa de elementos gráficos (DirectX)."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 1abb663d0ee27d7e57ab83dab2589557d1f9f29a
+ms.sourcegitcommit: 4a00847f0559d93eea199d7ddca0844b5ccaa5aa
+ms.openlocfilehash: 3a3dbf7b529d5d2848b161869d2f77fef3651488
 
 ---
 # Capa visual
@@ -27,18 +27,10 @@ La API permite a los desarrolladores definir y crear uno o varios objetos [**Vis
 
 Los elementos visuales pueden ser contenedores de otros elementos visuales o pueden hospedar elementos visuales de contenido. La API facilita el uso al ofrecer un conjunto claro de objetos [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) para tareas específicas que existen en una jerarquía de objetos:
 
--   
-              [
-              **Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858): El objeto base. La mayoría de las propiedades están aquí y las heredan los otros elementos visuales.
--   
-              [
-              **ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810): Se deriva del objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) y agrega la capacidad de insertar elementos visuales secundarios.
--   
-              [
-              **SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433): Se deriva del objeto [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) e incluye contenido en forma de imágenes, efectos y cadenas de intercambio.
--   
-              [
-              **Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789): Es la fábrica de objetos que administra la relación entre una aplicación y el proceso del compositor del sistema.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858): El objeto base. La mayoría de las propiedades están aquí y las heredan los otros elementos visuales.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810): Se deriva del objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) y agrega la capacidad de insertar elementos visuales secundarios.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433): Se deriva del objeto [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) e incluye contenido en forma de imágenes, efectos y cadenas de intercambio.
+-   [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789): Es la fábrica de objetos que administra la relación entre una aplicación y el proceso del compositor del sistema.
 
 El compositor también es una fábrica de varios otros objetos de composición que se usan para recortar o transformar elementos visuales en el árbol, así como un amplio conjunto de animaciones y efectos de transformación.
 
@@ -58,15 +50,9 @@ Para más información, consulta la información general sobre las [animaciones 
 
 Además de crear un árbol visual desde cero, la API de composición puede interactuar con una interfaz de usuario XAML existente mediante la clase [**ElementCompositionPreview**](https://msdn.microsoft.com/library/windows/apps/Mt608976) de [**Windows.UI.Xaml.Hosting**](https://msdn.microsoft.com/library/windows/apps/Hh701908).
 
-- 
-              [
-              **ElementCompositionPreview.GetElementVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): Obtén el elemento visual de respaldo de un elemento para animarlo con las API de composición.
-- 
-              [
-              **ElementCompositionPreview.SetChildVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): Agrega una "isla visual" de contenido de composición a un árbol XAML.
-- 
-              [
-              **ElementCompositionPreview.GetScrollViewerManipulationPropertySet()**](https://msdn.microsoft.com/library/windows/apps/mt608980.aspx): Usa la manipulación de una clase [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) como entrada para una animación de composición.
+- [**ElementCompositionPreview.GetElementVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): Obtén el elemento visual de respaldo de un elemento para animarlo con las API de composición.
+- [**ElementCompositionPreview.SetChildVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): Agrega una "isla visual" de contenido de composición a un árbol XAML.
+- [**ElementCompositionPreview.GetScrollViewerManipulationPropertySet()**](https://msdn.microsoft.com/library/windows/apps/mt608980.aspx): Usa la manipulación de una clase [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) como entrada para una animación de composición.
 
 
 **Nota**  
@@ -78,10 +64,8 @@ Este artículo está orientado a desarrolladores de Windows10 que programen apli
 
 -   Artículo de MSDN de Kenny Kerr sobre esta API: [Gráficos y animación: La nueva composición para Windows10](https://msdn.microsoft.com/magazine/mt590968)
 -   Muestras avanzadas de la interfaz de usuario y la composición en [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs).
--   
-              [
-              **Documentación de referencia completa de la API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
--   Problemas conocidos: [Problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues).
+-   [**Documentación de referencia completa de la API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
+-   Problemas conocidos: [Problemas conocidos](http://go.microsoft.com/fwlink/?LinkId=823237).
 
  
 
@@ -93,6 +77,6 @@ Este artículo está orientado a desarrolladores de Windows10 que programen apli
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

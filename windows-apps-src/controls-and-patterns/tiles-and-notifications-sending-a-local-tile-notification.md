@@ -5,7 +5,6 @@ title: "Enviar una notificación de icono local"
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: cc2f86f2a56aae5ee9e3019dafa3417a25e7d610
 
@@ -21,7 +20,8 @@ Los iconos de la aplicación principal de Windows 10 se definen en el manifiesto
 
 ![icono predeterminado e icono con notificación](images/sending-local-tile-01.png)
 
-**Nota** Obtén información sobre cómo [crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md) y sobre el [esquema de plantillas de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
+
+            **Nota** Obtén información sobre cómo [crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md) y sobre el [esquema de plantillas de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
 
  
 

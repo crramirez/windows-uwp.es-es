@@ -3,8 +3,9 @@ author: msatranjr
 Description: "En este tema se describen las directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación del usuario."
 title: "Directrices para las aplicaciones con reconocimiento de ubicación"
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
+ms.openlocfilehash: bbdd4d5a54deba11161c1865cd8f6f2fb47bcad4
 
 ---
 
@@ -65,15 +66,15 @@ En este tema se describen las directrices de rendimiento para las aplicaciones q
 
     -   Especifica el umbral de movimiento. Algunas aplicaciones solo necesitan actualizaciones de la ubicación cuando el usuario se ha desplazado una gran distancia. Por ejemplo, es posible que una aplicación que proporciona noticias locales o actualizaciones meteorológicas no necesite actualizaciones de la ubicación a menos que la ubicación del usuario haya cambiado a otra ciudad. En este caso, debes ajustar el movimiento mínimo requerido para un evento de actualización de la ubicación. Para ello, establece la propiedad [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539). Esta acción filtra los eventos [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540). Estos eventos solo se generan cuando un cambio de posición supera el umbral de movimiento.
 
-    -   Usa un valor de [**reportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541) que se alinee con la experiencia de la aplicación y reduzca el uso de los recursos del sistema. Por ejemplo, es posible que una aplicación de información meteorológica solo requiera una actualización de los datos cada 15 minutos. La mayoría de aplicaciones, excepto las de navegación en tiempo real, no requiere una transmisión constante de alta precisión de actualizaciones de la ubicación. Si la aplicación no requiere el flujo de datos más preciso posible o si rara vez requiere actualizaciones, establece la propiedad **ReportInterval** para indicar la frecuencia mínima de actualizaciones de ubicación que necesita la aplicación. El origen de la ubicación puede ahorrar energía si solo calcula la ubicación cuando es necesario.
+    -   Usa un valor de [**reportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541) que se alinee con la experiencia de la aplicación y reduzca el uso de los recursos del sistema. Por ejemplo, es posible que una aplicación de información meteorológica solo requiera una actualización de los datos cada 15minutos. La mayoría de aplicaciones, excepto las de navegación en tiempo real, no requiere una transmisión constante de alta precisión de actualizaciones de la ubicación. Si la aplicación no requiere el flujo de datos más preciso posible o si rara vez requiere actualizaciones, establece la propiedad **ReportInterval** para indicar la frecuencia mínima de actualizaciones de ubicación que necesita la aplicación. El origen de la ubicación puede ahorrar energía si solo calcula la ubicación cuando es necesario.
 
         Las aplicaciones que sí necesitan datos en tiempo real deben establecer [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541) en 0, para indicar que no se especifica ningún intervalo mínimo. El intervalo predeterminado de informe es de 1 segundo o de la frecuencia que el hardware admita, lo que sea más corto.
 
         Los dispositivos que proporcionan datos de ubicación pueden realizar un seguimiento del intervalo de informe solicitado por distintas aplicaciones y proporcionar informes de datos según el intervalo solicitado más pequeño. La aplicación con mayor necesidad de precisión recibirá los datos que necesita. Por tanto, es posible que el proveedor de ubicación genere actualizaciones con una frecuencia superior a la solicitada por la aplicación si otra aplicación ha solicitado actualizaciones más frecuentes.
 
-        **Nota:**  No se garantiza que el origen de la ubicación atenderá la solicitud para el intervalo de informe indicado. No todos los dispositivos de proveedores de ubicación hacen un seguimiento del intervalo de informe, pero lo debes proporcionar para los que sí lo hacen.
+        **Nota:** No se garantiza que el origen de la ubicación atenderá la solicitud para el intervalo de informe indicado. No todos los dispositivos de proveedores de ubicación hacen un seguimiento del intervalo de informe, pero lo debes proporcionar para los que sí lo hacen.
 
-    -   Para ahorrar energía, establece la propiedad [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) para indicar a la plataforma de ubicación si la aplicación necesita datos de alta precisión. En caso de que no haya ninguna aplicación que necesite datos de alta precisión, el sistema puede ahorrar energía si no activa los proveedores GPS.
+    -   Para ahorrar energía, establece la propiedad [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) para indicar a la plataforma de ubicación si la aplicación necesita datos de alta precisión. En caso de que no haya ninguna aplicación que necesite datos de alta precisión, el sistema puede ahorrar energía si no activa los proveedoresGPS.
 
         -   Establece [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) en **HIGH** para permitir que el GPS pueda adquirir datos.
         -   Si la aplicación únicamente usa la información de ubicación para personalizar la publicidad, establece [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) en **Default** y usa solamente un patrón de llamada de un único intento para minimizar el consumo de energía.
@@ -99,7 +100,7 @@ En este tema se describen las directrices de rendimiento para las aplicaciones q
 
     Las API de Windows Runtime tienen acceso a todos estos sensores, excepto al magnetómetro. Los sensores de fusión son más precisos y estables que los físicos, pero consumen más energía. Usa los sensores adecuados para cada propósito. Para obtener más información, consulta [Sensores](https://msdn.microsoft.com/library/windows/apps/mt187358).
 
-**Modo de espera conectado: **Si el equipo se encuentra en estado de modo de espera conectado, siempre se puede crear una instancia de los objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534). No obstante, el objeto **Geolocator** no encontrará ningún sensor que pueda agregar, por lo que las llamadas a [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) agotarán el tiempo de espera después de 7 segundos, no se llamará nunca a las escuchas de eventos [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) y se llamará una vez a las escuchas de eventos [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) con el estado **NoData**.
+**Modo de espera conectado: **si el equipo se encuentra en estado de modo de espera conectado, siempre se puede crear una instancia de los objetos [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534). No obstante, el objeto **Geolocator** no encontrará ningún sensor que pueda agregar, por lo que las llamadas a [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) agotarán el tiempo de espera después de 7 segundos, no se llamará nunca a las escuchas de eventos [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) y se llamará una vez a las escuchas de eventos [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) con el estado **NoData**.
 
 ## Instrucciones de uso adicionales
 
@@ -171,6 +172,6 @@ La ubicación geográfica de un usuario es información de identificación perso
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -21,8 +21,10 @@ En este artículo se proporciona una descripción general de los anuncios de Blu
 
 Hay dos funciones principales que un desarrollador puede realizar mediante las API de anuncio:
 
--   [Monitor de anuncios](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx): escuchar balizas cercanas y filtrarlas en función de la carga o proximidad.  
--   [Anunciante](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): definir una carga de Windows para anunciarse en nombre de un desarrollador.  
+-   
+            [Monitor de anuncios](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx): escuchar balizas cercanas y filtrarlas en función de la carga o proximidad.  
+-   
+            [Anunciante](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): definir una carga de Windows para anunciarse en nombre de un desarrollador.  
 
 Hay un completo código de ejemplo en el [ejemplo de publicidad de Bluetooth](http://go.microsoft.com/fwlink/p/?LinkId=619990) en Github
 

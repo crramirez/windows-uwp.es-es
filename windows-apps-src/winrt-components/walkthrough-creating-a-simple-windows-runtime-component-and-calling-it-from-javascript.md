@@ -11,14 +11,15 @@ ms.openlocfilehash: c521061d9fdd3eb2c25e3072182fb1d7823f13ba
 # Tutorial: Creación de un componente simple de Windows Runtime y llamada a este desde JavaScript
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este tutorial se muestra cómo puedes usar .NET Framework con Visual Basic o C# para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime, y cómo llamar al componente desde tu aplicación universal de Windows creada para Windows mediante JavaScript.
 
 Visual Studio facilita el proceso de agregar un componente de Windows Runtime escrito con C# o Visual Basic a tu aplicación y crear tipos de Windows Runtime que puedas llamar desde JavaScript. Internamente, los tipos de Windows Runtime pueden usar cualquier funcionalidad de .NET Framework permitida en una aplicación universal de Windows. (Para obtener más información, consulta [Creación de componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) e [Información general de .NET para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)). Externamente, los miembros del tipo solo pueden exponer tipos de Windows Runtime para obtener sus parámetros y devolver valores. Al compilar la solución, Visual Studio crea un proyecto de componente de Windows Runtime en .NET Framework y, a continuación, ejecuta un paso de compilación que crea un archivo de metadatos (.winmd) de Windows. Este es el componente de Windows Runtime que Visual Studio incluye en tu aplicación.
 
-> **Nota** .NET Framework asigna automáticamente algunos tipos de .NET Framework usados habitualmente, como tipos de datos primitivos y tipos de colección, a sus equivalentes de Windows Runtime. Estos tipos de .NET Framework pueden usarse en la interfaz pública de un componente de Windows Runtime y se mostrarán a los usuarios del componente como los tipos correspondientes de Windows Runtime. Consulta [Creación de componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
+> 
+            **Nota** .NET Framework asigna automáticamente algunos tipos de .NET Framework usados habitualmente, como tipos de datos primitivos y tipos de colección, a sus equivalentes de Windows Runtime. Estos tipos de .NET Framework pueden usarse en la interfaz pública de un componente de Windows Runtime y se mostrarán a los usuarios del componente como los tipos correspondientes de Windows Runtime. Consulta [Creación de componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
 En este tutorial se explican las tareas siguientes. Una vez completada la primera sección, que configura la aplicación de Windows con JavaScript, puedes completar el resto de las secciones en cualquier orden.
 
@@ -125,7 +126,8 @@ Crear una interfaz de usuario sencilla En el proyecto de JavaScript, abre el arc
 </body>
 ```
 
-**Nota** Al ejecutar la aplicación por primera vez, solo se admiten los botones Basics 1 y Basics 2. En el proyecto de JavaScript, en la carpeta css, abre default.css.
+
+            **Nota** Al ejecutar la aplicación por primera vez, solo se admiten los botones Basics 1 y Basics 2. En el proyecto de JavaScript, en la carpeta css, abre default.css.
 
 ```css
 body
@@ -177,18 +179,20 @@ Visual Studio agrega el componente al paquete de la aplicación (archivo .appx) 
 
 El resultado se muestra aquí: Selecciona el botón Basics 2 para aumentar el valor de la propiedad SampleProperty y mostrar el nuevo valor en el área de salida. Pueden utilizarse tipos primitivos, como cadenas y números, como tipos de parámetros y tipos devueltos y se pueden pasar entre código administrado y JavaScript.
 
-> Como los números en JavaScript se almacenan en formato de punto flotante de precisión doble, se convierten en tipos numéricos de .NET Framework. **Nota** De forma predeterminada, puedes establecer puntos de interrupción solo en el código de JavaScript.
+> Como los números en JavaScript se almacenan en formato de punto flotante de precisión doble, se convierten en tipos numéricos de .NET Framework. 
+            **Nota** De forma predeterminada, puedes establecer puntos de interrupción solo en el código de JavaScript.
 
  
 
 Para depurar el código de Visual Basic o C#, consulta Creación de componentes de Windows Runtime en C# y Visual Basic.
 
-## Para detener la depuración y cerrar la aplicación, pasa de la aplicación a Visual Studio y presiona Mayús + F5.
+## Para detener la depuración y cerrar la aplicación, pasa de la aplicación a Visual Studio y presiona Mayús+F5.
 
 
 Uso de Windows Runtime desde JavaScript y código administrado Windows Runtime se puede llamar desde JavaScript o código administrado. Los objetos de Windows Runtime se pueden pasar del uno al otro, y los eventos se pueden controlar desde cualquier lado. Sin embargo, las formas de utilizar tipos de Windows Runtime en ambos entornos difieren en algunos detalles, ya que JavaScript y .NET Framework admiten Windows Runtime de manera diferente. En el ejemplo siguiente se muestran estas diferencias mediante la clase [Windows.Foundation.Collections.PropertySet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.propertyset.aspx). En este ejemplo, puedes crear una instancia de la colección PropertySet en código administrado y registrar un controlador de eventos para controlar los cambios en la colección. A continuación, puedes agregar el código de JavaScript que obtiene la colección, registra su propio controlador de eventos y utiliza la colección.
 
-> Por último, puedes agregar un método que realiza cambios en la colección desde el código administrado y muestra cómo JavaScript controla una excepción administrada. **Importante** En este ejemplo, el evento se desencadena en el subproceso de la interfaz de usuario. Si desencadenas el evento desde un subproceso en segundo plano, por ejemplo en una llamada asincrónica, deberás realizar algún proceso adicional para que JavaScript controle el evento.
+> Por último, puedes agregar un método que realiza cambios en la colección desde el código administrado y muestra cómo JavaScript controla una excepción administrada. 
+            **Importante** En este ejemplo, el evento se desencadena en el subproceso de la interfaz de usuario. Si desencadenas el evento desde un subproceso en segundo plano, por ejemplo en una llamada asincrónica, deberás realizar algún proceso adicional para que JavaScript controle el evento.
 
  
 
@@ -339,7 +343,7 @@ El controlador de eventos muestra los cambios a medida que se agregan o cambian 
 > End Sub
 > ```
 
-Para detener la depuración y cerrar la aplicación, vuelve a Visual Studio y presiona Mayús + F5. Para agregar dos elementos más a la colección PropertySet desde el código administrado, agrega el código siguiente a la clase PropertySetStats: [!div class="tabbedCodeSnippets"] Este código resalta otra diferencia en la manera de usar los tipos de Windows Runtime en los dos entornos. Si escribes este código tú mismo, te darás cuenta de que IntelliSense no muestra el método "insert" que has utilizado en el código de JavaScript. En cambio, muestra el método Add, que suele verse en las colecciones de .NET Framework. Esto se debe a que algunas interfaces de colección utilizadas con frecuencia tienen diferentes nombres pero una funcionalidad similar en Windows Runtime y .NET Framework.
+Para detener la depuración y cerrar la aplicación, vuelve a Visual Studio y presiona Mayús+F5. Para agregar dos elementos más a la colección PropertySet desde el código administrado, agrega el código siguiente a la clase PropertySetStats: [!div class="tabbedCodeSnippets"] Este código resalta otra diferencia en la manera de usar los tipos de Windows Runtime en los dos entornos. Si escribes este código tú mismo, te darás cuenta de que IntelliSense no muestra el método "insert" que has utilizado en el código de JavaScript. En cambio, muestra el método Add, que suele verse en las colecciones de .NET Framework. Esto se debe a que algunas interfaces de colección utilizadas con frecuencia tienen diferentes nombres pero una funcionalidad similar en Windows Runtime y .NET Framework.
 
 Cuando utilizas estas interfaces en código administrado, aparecen como sus equivalentes de .NET Framework.
 
@@ -371,7 +375,8 @@ Cuando utilizas las mismas interfaces en JavaScript, el único cambio respecto a
 
 > El segundo cambio, sin embargo, tiene una clave duplicada. Los usuarios de los diccionarios de .NET Framework esperan que el método Add produzca una excepción, y esto es lo que sucede. JavaScript controla la excepción de .NET Framework.
 
-**Nota** No puedes mostrar el mensaje de la excepción desde el código de JavaScript. El texto del mensaje se reemplaza por un seguimiento de la pila.
+
+            **Nota** No puedes mostrar el mensaje de la excepción desde el código de JavaScript. El texto del mensaje se reemplaza por un seguimiento de la pila.
 
 ## Para obtener más información, consulta "Producir excepciones" en Creación de componentes de Windows Runtime en C# y Visual Basic.
 
@@ -447,7 +452,8 @@ function showMap(map) {
 }
 ```
 
-**Importante** Cuando un tipo administrado implementa varias interfaces, JavaScript usa la que aparece en primer lugar en la lista.
+
+            **Importante** Cuando un tipo administrado implementa varias interfaces, JavaScript usa la que aparece en primer lugar en la lista.
 
 ```javascript
 var returnsButton1 = document.getElementById("returnsButton1");
@@ -490,7 +496,8 @@ Otro comportamiento inesperado: si pasas una variable sin asignar de JavaScript 
 ## En resumen, ten cuidado cuando pases tipos de la colección de .NET Framework a código JavaScript.
 
 
-**Nota** Si quieres concatenar grandes cantidades de texto, puedes hacerlo con más eficacia si mueves el código a un método de .NET Framework y usas la clase StringBuilder tal como se muestra en la función showMap. Aunque no puedas exponer tus propios tipos genéricos desde un componente de Windows Runtime, puedes devolver colecciones genéricas de .NET Framework para las clases de Windows Runtime usando código como el siguiente: [!div class="tabbedCodeSnippets"]
+
+            **Nota** Si quieres concatenar grandes cantidades de texto, puedes hacerlo con más eficacia si mueves el código a un método de .NET Framework y usas la clase StringBuilder tal como se muestra en la función showMap. Aunque no puedas exponer tus propios tipos genéricos desde un componente de Windows Runtime, puedes devolver colecciones genéricas de .NET Framework para las clases de Windows Runtime usando código como el siguiente: [!div class="tabbedCodeSnippets"]
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -674,7 +681,8 @@ Si colocas un punto de interrupción en el cuerpo del controlador de eventos, po
     -   El método AsyncInfo.Run crea un origen de cancelación y un objeto que implementa la interfaz IProgress&lt;T&gt;.
     -   Para el delegado, pasa un token [CancellationToken](https://msdn.microsoft.com/library/system.threading.cancellationtoken.aspx) desde el origen de la cancelación y la interfaz [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx).
 
--   **Nota** Si el objeto Promise no proporciona una función para reaccionar a la cancelación, AsyncInfo.Run sigue pasando un token cancelable y la cancelación puede producirse igualmente. Si el objeto Promise no proporciona una función para controlar las actualizaciones del progreso, AsyncInfo.Run sigue proporcionando un objeto que implementa IProgress&lt;T&gt;, pero se omiten sus informes. El delegado usa el método [Task.Run&lt;TResult&gt;(Func&lt;TResult&gt;, CancellationToken](https://msdn.microsoft.com/library/hh160376.aspx)) para crear una tarea iniciada que use el token y la interfaz de progreso.
+-   
+            **Nota** Si el objeto Promise no proporciona una función para reaccionar a la cancelación, AsyncInfo.Run sigue pasando un token cancelable y la cancelación puede producirse igualmente. Si el objeto Promise no proporciona una función para controlar las actualizaciones del progreso, AsyncInfo.Run sigue proporcionando un objeto que implementa IProgress&lt;T&gt;, pero se omiten sus informes. El delegado usa el método [Task.Run&lt;TResult&gt;(Func&lt;TResult&gt;, CancellationToken](https://msdn.microsoft.com/library/hh160376.aspx)) para crear una tarea iniciada que use el token y la interfaz de progreso.
 
     -   Una función lambda proporciona el delegado de la tarea iniciada, que calcula el resultado deseado. Más información al respecto en un momento.
     -   El método AsyncInfo.Run crea un objeto que implementa la interfaz [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx), conecta el mecanismo de cancelación de Windows Runtime con el origen del token y conecta la función de información del progreso del objeto Promise con la interfaz IProgress&lt;T&gt;. La interfaz IAsyncOperationWithProgress&lt;TResult, TProgress&gt; se devuelve a JavaScript.

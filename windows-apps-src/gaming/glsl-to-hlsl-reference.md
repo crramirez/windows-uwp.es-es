@@ -1,9 +1,8 @@
 ---
 author: mtoepke
 title: Referencia de GLSL a HLSL
-description: "El código de lenguaje de sombreador de OpenGL (GLSL) se migra a código de lenguaje de sombreado de alto nivel de Microsoft (HLSL) cuando se migra la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D 11 para crear un juego para la Plataforma universal de Windows (UWP)."
+description: "El código de lenguaje de sombreador de OpenGL (GLSL) se migra a código de lenguaje de sombreado de alto nivel de Microsoft (HLSL) cuando se migra la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D11 para crear un juego para la Plataforma universal de Windows (UWP)."
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
-translationtype: Human Translation
 ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
 ms.openlocfilehash: 02a3ba1768b6fa7b09b6c9f637a72d88c0cef604
 
@@ -14,7 +13,7 @@ ms.openlocfilehash: 02a3ba1768b6fa7b09b6c9f637a72d88c0cef604
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-El código de lenguaje de sombreador de OpenGL (GLSL) se migra a código de lenguaje de sombreado de alto nivel de Microsoft (HLSL) cuando [se migra la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md) para crear un juego para la Plataforma universal de Windows (UWP). El GLSL al que se hace referencia aquí es compatible con OpenGL ES 2.0. El HLSL es compatible con Direct3D 11. Para obtener información acerca de las diferencias entre Direct3D 11 y las versiones anteriores de Direct3D, consulta el tema sobre la [asignación de características](feature-mapping.md).
+El código de lenguaje de sombreador de OpenGL (GLSL) se migra a código de lenguaje de sombreado de alto nivel de Microsoft (HLSL) cuando [se migra la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D11](port-from-opengl-es-2-0-to-directx-11-1.md) para crear un juego para la Plataforma universal de Windows (UWP). El GLSL al que se hace referencia aquí es compatible con OpenGL ES 2.0. El HLSL es compatible con Direct3D11. Para obtener información acerca de las diferencias entre Direct3D 11 y las versiones anteriores de Direct3D, consulta el tema sobre la [asignación de características](feature-mapping.md).
 
 -   [Comparación entre OpenGL ES 2.0 y Direct3D 11](#compare)
 -   [Migrar variables de GLSL a HLSL](#variables)
@@ -69,7 +68,8 @@ GLSL y HLSL generalmente difieren de estas maneras:
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left">Modificadores de almacenamiento de [Variable](#variables)</td>
+<td align="left">
+            Modificadores de almacenamiento de [Variable](#variables)</td>
 <td align="left">Búfer de constantes y transferencias de datos a través de declaraciones de diseño de entrada</td>
 </tr>
 <tr class="even">
@@ -81,11 +81,13 @@ GLSL y HLSL generalmente difieren de estas maneras:
 </tr>
 <tr class="odd">
 <td align="left">texture2D [Function]</td>
-<td align="left">[texture.Sample](https://msdn.microsoft.com/library/windows/desktop/bb509695) [datatype.Function]</td>
+<td align="left">
+            [texture.Sample](https://msdn.microsoft.com/library/windows/desktop/bb509695) [datatype.Function]</td>
 </tr>
 <tr class="even">
 <td align="left">sampler2D [datatype]</td>
-<td align="left">[Texture2D](https://msdn.microsoft.com/library/windows/desktop/ff471525) [datatype]</td>
+<td align="left">
+            [Texture2D](https://msdn.microsoft.com/library/windows/desktop/ff471525) [datatype]</td>
 </tr>
 <tr class="odd">
 <td align="left">Matrices principales de fila (predeterminado)</td>
@@ -106,7 +108,8 @@ GLSL y HLSL generalmente difieren de estas maneras:
 
  
 
-> **Nota:**  HLSL tiene las texturas y las muestras como dos objetos separados. En GLSL, como en Direct3D 9, el enlace de textura es parte del estado de la muestra.
+> 
+            **Nota:**  HLSL tiene las texturas y las muestras como dos objetos separados. En GLSL, como en Direct3D 9, el enlace de textura es parte del estado de la muestra.
 
  
 

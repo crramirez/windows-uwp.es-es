@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: "En este artículo se describe cómo usar la clase CameraCaptureUI para capturar fotos o vídeos con la interfaz de usuario de cámara integrada en Windows."
 title: "Capturar fotografías y vídeos con CameraCaptureUI"
-translationtype: Human Translation
 ms.sourcegitcommit: 72abc006de1925c3c06ecd1b78665e72e2ffb816
 ms.openlocfilehash: a98edd0b4c52271fad4255af5ab0a005b0c66d68
 
@@ -26,7 +25,8 @@ Para usar la interfaz de usuario de captura de cámara, incluye el espacio de no
 
 Para capturar una foto, crea un objeto [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) nuevo. El uso de la propiedad [**PhotoSettings**](https://msdn.microsoft.com/library/windows/apps/br241058) del objeto puede especificar las propiedades de la foto devuelta, como el formato de imagen de la foto. De manera predeterminada, la interfaz de usuario de captura de cámara permite al usuario recortar la foto antes de que se devuelva, aunque esto se puede deshabilitar con la propiedad [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042). Este ejemplo establece [**CroppedSizeInPixels**](https://msdn.microsoft.com/library/windows/apps/br241044) para solicitar que la imagen devuelta sea de 200 x 200 píxeles.
 
-**Nota**  No se admite el recorte de imágenes en CameraCaptureUI en dispositivos de la familia de dispositivos móviles. El valor de la propiedad [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) se omite cuando se ejecuta la aplicación en estos dispositivos.
+
+            **Nota**  No se admite el recorte de imágenes en CameraCaptureUI en dispositivos de la familia de dispositivos móviles. El valor de la propiedad [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) se omite cuando se ejecuta la aplicación en estos dispositivos.
 
 Realiza una llamada a [**CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057) y especifica [**CameraCaptureUIMode.Photo**](https://msdn.microsoft.com/library/windows/apps/br241040) para especificar que se debe capturar una foto. El método devuelve una instancia [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) que contiene la imagen si la captura se realiza correctamente. Si el usuario cancela la captura, el objeto devuelto es null.
 
@@ -94,7 +94,7 @@ Finalmente, define el origen de la secuencia para usar el método [**SetMediaStr
 Puedes continuar capturando clips de vídeo y agregarlos a la composición. Para obtener más información sobre las composiciones multimedia, consulta [Composiciones multimedia y edición](media-compositions-and-editing.md).
 
 **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 

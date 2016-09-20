@@ -2,7 +2,6 @@
 title: Desbloqueo de Windows con dispositivos complementarios (IoT)
 description: "Un dispositivo complementario es un dispositivo que puede actuar junto con Windows 10 para equipos de escritorio para mejorar la experiencia de autenticación de usuario. Con el marco de dispositivo complementario, un dispositivo complementario puede proporcionar una experiencia enriquecida para Microsoft Passport, incluso si Windows Hello no está disponible (por ejemplo, si Windows 10 para equipos de escritorio no tiene una cámara para la autenticación facial o un dispositivo lector de huellas digitales)."
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: a6265ca66a1a9d729465845da1014d1aff0e7d4d
 ms.openlocfilehash: 18102d6277ff1c66ebd147b5c1fd2f2d6c91edd1
 
@@ -11,7 +10,8 @@ ms.openlocfilehash: 18102d6277ff1c66ebd147b5c1fd2f2d6c91edd1
 
 Un dispositivo complementario es un dispositivo que puede actuar junto con Windows 10 para equipos de escritorio para mejorar la experiencia de autenticación de usuario. Con el marco de dispositivo complementario, un dispositivo complementario puede proporcionar una experiencia más satisfactoria para Microsoft Passport incluso cuando Windows Hello no está disponible (por ejemplo, si el escritorio de Windows 10 no tiene una cámara para la autenticación facial o el dispositivo lector de huellas digitales).
 
-> **Nota** El marco de dispositivo complementario es una característica especializada no disponible para todos los desarrolladores de aplicaciones. Para usar este marco, la aplicación debe estar aprovisionada específicamente por Microsoft e incluir la funcionalidad *secondaryAuthenticationFactor* restringida en su manifiesto. Para obtener una autorización, ponte en contacto con [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
+> 
+            **Nota** El marco de dispositivo complementario es una característica especializada no disponible para todos los desarrolladores de aplicaciones. Para usar este marco, la aplicación debe estar aprovisionada específicamente por Microsoft e incluir la funcionalidad *secondaryAuthenticationFactor* restringida en su manifiesto. Para obtener una autorización, ponte en contacto con [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
 
 ## Introducción
 
@@ -56,9 +56,12 @@ Normalmente, los dispositivos complementarios van acompañados de una aplicació
 
 Cada dispositivo complementario debe combinarse con una aplicación que admita tres señales de usuario. Estas señales pueden ser acciones o gestos.
 
-- **Señal de propósito**: permite al usuario mostrar su propósito para desbloquear, por ejemplo, pulsando un botón en el dispositivo complementario. La señal de propósito debe recopilarse en el lado **dispositivo complementario**.
-- **Señal de presencia del usuario**: demuestra la presencia del usuario. Por ejemplo, el dispositivo complementario requiere un código PIN antes de que se puede usar para desbloquear el equipo (no confundir con el PIN del equipo) o puede requerir presionar un botón.
-- **Señal de desambiguación**: elimina la ambigüedad sobre el escritorio de Windows 10 que quiere desbloquear el usuario cuando haya disponibles varias opciones para el dispositivo complementario.
+- 
+            **Señal de propósito**: permite al usuario mostrar su propósito para desbloquear, por ejemplo, pulsando un botón en el dispositivo complementario. La señal de propósito debe recopilarse en el lado **dispositivo complementario**.
+- 
+            **Señal de presencia del usuario**: demuestra la presencia del usuario. Por ejemplo, el dispositivo complementario requiere un código PIN antes de que se puede usar para desbloquear el equipo (no confundir con el PIN del equipo) o puede requerir presionar un botón.
+- 
+            **Señal de desambiguación**: elimina la ambigüedad sobre el escritorio de Windows 10 que quiere desbloquear el usuario cuando haya disponibles varias opciones para el dispositivo complementario.
 
 Cualquier cantidad de estas señales de usuario se puede combinar en una. Son necesarias las señales de presencia y propósito del usuario en cada uso.
 

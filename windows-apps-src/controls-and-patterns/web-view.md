@@ -6,20 +6,29 @@ ms.assetid: D3CFD438-F9D6-4B72-AF1D-16EF2DFC1BB1
 label: Web view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: dd947d0b55dad56fdd6c684ae236f1c31ac8da86
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 5752e1a7f7ac358043ec99c8db07cbfda9c4cd37
 
 ---
-
 # Vista web
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 
 
 
 Un control de vista web inserta una vista en la aplicación que representa al contenido web, mediante el motor de representación de Microsoft Edge. En un control de vista web también pueden aparecer y funcionar hipervínculos.
 
-**API importantes**
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br227702"><strong>Clase WebView</strong></a></li>
+</ul>
 
--   [**Clase WebView**](https://msdn.microsoft.com/library/windows/apps/br227702)
+</div>
+</div>
+
+
+
 
 ## ¿Es este el control adecuado?
 
@@ -29,9 +38,7 @@ Usa un control de vista web para mostrar contenido HTML de formato enriquecido d
 
 **Modificar la apariencia de una vista web**
 
-[
-              **WebView**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx) no es una subclase de [**Control**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.aspx), así que no tiene una plantilla de control. Sin embargo, puedes establecer varias propiedades para controlar algunos aspectos visuales de la vista web.
+[**WebView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx) no es una subclase de [**Control**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.aspx), así que no tiene una plantilla de control. Sin embargo, puedes establecer varias propiedades para controlar algunos aspectos visuales de la vista web.
 - Para restringir el área de visualización, establece las propiedades [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx) y [**Height**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx). 
 - Para traducir, escalar, sesgar y girar una vista web, usa la propiedad [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.rendertransform.aspx).
 - Para controlar la opacidad de la vista web, establece la propiedad [**Opacity**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.opacity.aspx).
@@ -158,18 +165,10 @@ private void webView1_NavigationCompleted(WebView sender, WebViewNavigationCompl
 ```
 
 Los eventos similares se producen en el mismo orden para cada **iframe** en el contenido de la vista web: 
-- [
-              **FrameNavigationStarting**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framenavigationstarting.aspx): se produce antes de que un fotograma en la vista web navegue a nuevo contenido. 
-- [
-              **FrameContentLoading**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framecontentloading.aspx): se produce cuando un fotograma en la vista web empieza a cargar contenido nuevo. 
-- [
-              **FrameDOMContentLoaded**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framedomcontentloaded.aspx): se produce cuando un fotograma en la vista web ha terminado de analizar el contenido HTML actual. 
-- [
-              **FrameNavigationCompleted**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framenavigationcompleted.aspx): se produce cuando un fotograma en la vista web ha terminado de cargar el contenido. 
+- [**FrameNavigationStarting**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framenavigationstarting.aspx): se produce antes de que un fotograma en la vista web navegue a nuevo contenido. 
+- [**FrameContentLoading**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framecontentloading.aspx): se produce cuando un fotograma en la vista web empieza a cargar contenido nuevo. 
+- [**FrameDOMContentLoaded**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framedomcontentloaded.aspx): se produce cuando un fotograma en la vista web ha terminado de analizar el contenido HTML actual. 
+- [**FrameNavigationCompleted**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framenavigationcompleted.aspx): se produce cuando un fotograma en la vista web ha terminado de cargar el contenido. 
 
 ### Responder a posibles problemas
 
@@ -317,12 +316,11 @@ Para obtener una imagen previa del contenido actual de la vista web, usa el mét
 
 De manera predeterminada, el contenido de una vista web está hospedado en el subproceso de interfaz de usuario en la familia de dispositivos de escritorio, y fuera de dicho subproceso en todos los demás dispositivos. Puedes usar la propiedad estática [**WebView.DefaultExecutionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.defaultexecutionmode.aspx) para consultar el comportamiento  subproceso predeterminado para el cliente actual. Si es necesario, puedes usar el constructor [**WebView(WebViewExecutionMode)**](https://msdn.microsoft.com/library/windows/apps/xaml/dn932036.aspx) para invalidar este comportamiento. 
 
-> **Nota**
-            &nbsp;&nbsp;Pueden producirse problemas de rendimiento al hospedar contenido en el subproceso de la interfaz de usuario en dispositivos móviles, de modo que asegúrate de probar todos los dispositivos de destino cuando cambies el elemento DefaultExecutionMode.
+> **Nota:**&nbsp;&nbsp;Pueden producirse problemas de rendimiento al hospedar contenido en el subproceso de la interfaz de usuario en dispositivos móviles, de modo que asegúrate de probar todos los dispositivos de destino cuando cambies el elemento DefaultExecutionMode.
 
 Una vista web que hospeda contenido en el subproceso de la interfaz de usuario no es compatible con los controles primarios que requieren gestos para propagar desde el control de vista web al elemento primario, como [**FlipView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flipview.aspx), [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx) y otros controles relacionados. Estos controles no podrán recibir los gestos que se inicien en la vista web hospedada en el subproceso. Además, no se admite directamente la impresión de contenido web desde subprocesos. Deberás imprimir los elementos con un relleno [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.aspx).
 
-## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>Recomendaciones
+## Recomendaciones
 
 
 -   Asegúrate de que el sitio web cargado tiene un formato correcto para el dispositivo y usa colores, tipografía y navegación coherentes con el resto de tu aplicación.
@@ -331,7 +329,7 @@ Una vista web que hospeda contenido en el subproceso de la interfaz de usuario n
 
 
 
-## <span id="related_topics"></span>Temas relacionados
+## Temas relacionados
 
 * [**Clase WebView**](https://msdn.microsoft.com/library/windows/apps/br227702)
  
@@ -344,6 +342,6 @@ Una vista web que hospeda contenido en el subproceso de la interfaz de usuario n
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

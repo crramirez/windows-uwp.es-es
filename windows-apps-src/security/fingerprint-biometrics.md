@@ -3,7 +3,6 @@ title: "Biometría de huellas digitales"
 description: "En este artículo se explica cómo agregar la opción de biometría de huellas digitales en la aplicación para la Plataforma universal de Windows (UWP)."
 ms.assetid: 55483729-5F8A-401A-8072-3CD611DDFED2
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: 093924b51c48c3bed71e0a47b10fc80f966b34ac
 

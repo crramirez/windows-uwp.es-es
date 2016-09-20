@@ -3,7 +3,6 @@ author: jwmsft
 description: "La extensión de marcado Binding se convierte en tiempo de carga XAML en una instancia de la clase Binding."
 title: "Extensión de marcado Binding"
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
-translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
 ms.openlocfilehash: 740110809845220d919c6ba3c90b1393dbc8ae94
 
@@ -13,13 +12,16 @@ ms.openlocfilehash: 740110809845220d919c6ba3c90b1393dbc8ae94
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Nota**  Un nuevo mecanismo de enlace está disponible para Windows 10. Está optimizado para el rendimiento y la productividad del desarrollador. Consulta [Extensión de marcado {x:Bind}](x-bind-markup-extension.md).
 
-**Nota**  Para obtener información general sobre el uso de enlace de datos en la aplicación con **{Binding}** (y para realizar una comparación total entre **{x:Bind}** y **{Binding}**), consulta el tema [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
+            **Nota**  Un nuevo mecanismo de enlace está disponible para Windows 10. Está optimizado para el rendimiento y la productividad del desarrollador. Consulta [Extensión de marcado {x:Bind}](x-bind-markup-extension.md).
+
+
+            **Nota**  Para obtener información general sobre el uso de enlace de datos en la aplicación con **{Binding}** (y para realizar una comparación total entre **{x:Bind}** y **{Binding}**), consulta el tema [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 La extensión de marcado **{Binding}** se convierte en tiempo de carga XAML en una instancia de la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Este objeto de enlace obtiene un valor de propiedad en un origen de datos. Opcionalmente, el objeto de enlace puede configurarse para observar cambios en el valor de la propiedad de origen de datos y se actualiza en función de los cambios. Opcionalmente, también puede configurarse para insertar los cambios en su propio valor de nuevo en la propiedad de origen. La propiedad que es el destino de un enlace de datos debe ser una propiedad de dependencia. Para obtener más información, consulta [Introducción a las propiedades de dependencia](dependency-properties-overview.md).
 
-**{Binding}** tiene la misma prioridad de propiedad de dependencia que un valor local, y definir un valor local en código imperativo quita el efecto de cualquier **{Binding}** definido en el marcado.
+
+            **{Binding}** tiene la misma prioridad de propiedad de dependencia que un valor local, y definir un valor local en código imperativo quita el efecto de cualquier **{Binding}** definido en el marcado.
 
 **Aplicaciones de ejemplo que muestran {Binding}**
 
@@ -42,7 +44,8 @@ La extensión de marcado **{Binding}** se convierte en tiempo de carga XAML en u
 | Término | Descripción |
 |------|-------------|
 | *propertyPath* | Una cadena que especifica la ruta de acceso de la propiedad para el enlace. Para obtener más información, consulta la sección [Ruta de acceso de propiedades](#property-path) que aparece más adelante. |
-| *bindingProperties* | *propName*
+| *bindingProperties* | 
+            *propName*
             =
             *value*\[, *propName*=*value*\]*<br/>Una o más propiedades de enlace que se especifican con una sintaxis de par de nombre-valor. |
 | *propName* | El nombre de cadena de la propiedad que se establecerá en el objeto [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Por ejemplo, "Converter". | 
@@ -50,7 +53,8 @@ La extensión de marcado **{Binding}** se convierte en tiempo de carga XAML en u
 
 ## Ruta de acceso de propiedades
 
-*PropertyPath* define el valor de [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830), que es la propiedad a la que estás enlazando (la propiedad de origen). Puedes mencionar el nombre de la propiedad explícitamente: `{Binding Path=...}`. O puedes omitirlo: `{Binding ...}`.
+
+            *PropertyPath* define el valor de [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830), que es la propiedad a la que estás enlazando (la propiedad de origen). Puedes mencionar el nombre de la propiedad explícitamente: `{Binding Path=...}`. O puedes omitirlo: `{Binding ...}`.
 
 El tipo de [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) es una ruta de acceso de propiedad, que es una cadena que se evalúa como una propiedad o una subpropiedad de su tipo personalizado o de un tipo de marco. El tipo puede ser (pero no tiene por qué serlo) un [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). Los pasos de las rutas de acceso de propiedad están delimitados por puntos (.) y puedes incluir varios delimitadores para desviar subpropiedades sucesivas. Usa puntos como delimitadores independientemente del lenguaje de programación que uses para implementar el objeto al que se está enlazando.
 
@@ -67,7 +71,8 @@ Para obtener más información sobre la sintaxis de cadenas de una ruta de acces
 ## Propiedades de la clase de enlace que se pueden establecer con {Binding}
 
 
-**{Binding}** se explica a través de la sintaxis de marcadores de posición *bindingProperties* porque hay muchas propiedades de lectura y escritura de [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) que se pueden definir en la extensión de marcado. Las propiedades pueden establecerse en cualquier orden con pares separados por comas *propName*=*value*. Algunas de las propiedades requieren tipos que no tengan una conversión de tipos, por lo que requieren sus propias extensiones de marcado anidadas dentro de **{Binding}**.
+
+            **{Binding}** se explica a través de la sintaxis de marcadores de posición *bindingProperties* porque hay muchas propiedades de lectura y escritura de [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) que se pueden definir en la extensión de marcado. Las propiedades pueden establecerse en cualquier orden con pares separados por comas *propName*=*value*. Algunas de las propiedades requieren tipos que no tengan una conversión de tipos, por lo que requieren sus propias extensiones de marcado anidadas dentro de **{Binding}**.
 
 | Propiedad | Descripción |
 |----------|-------------|
@@ -83,17 +88,21 @@ Para obtener más información sobre la sintaxis de cadenas de una ruta de acces
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | Especifica un valor que se mostrará cuando se resuelva el valor de origen, pero es explícitamente **null**. |
 | [**UpdateSourceTrigger**](https://msdn.microsoft.com/library/windows/apps/dn279350) | Especifica el tiempo de las actualizaciones de origen de enlace. Si no se especifica, el valor predeterminado es **Default**. |
 
-**Nota**  Si quieres convertir el marcado de **{x:Bind}** a **{Binding}**, ten en cuenta las diferencias en los valores predeterminados de la propiedad **Mode**.
 
-[
+            **Nota**  Si quieres convertir el marcado de **{x:Bind}** a **{Binding}**, ten en cuenta las diferencias en los valores predeterminados de la propiedad **Mode**.
+
+
+            [
               **Converter**
             ](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) y **ConverterLanguage** tienen relación con la conversión de un valor o tipo del origen de enlace en un valor o tipo que sea compatible con la propiedad de destino de enlace. Para más información y ejemplos, consulta la sección “Conversiones de datos” de [Enlaces de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-[
+
+            [
               **Source**
             ](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) y [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) especifican un origen de enlace, por lo que son mutuamente excluyentes.
 
-**Sugerencia**  Si tienes que especificar una llave para un valor, como en [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) o [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), debe ir precedido por una barra diagonal inversa: `\{`. Como alternativa, escribe la cadena completa que contiene las llaves que necesitan escape entre un conjunto de comillas secundario, por ejemplo, `ConverterParameter='{Mix}'`.
+
+            **Sugerencia**  Si tienes que especificar una llave para un valor, como en [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) o [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), debe ir precedido por una barra diagonal inversa: `\{`. Como alternativa, escribe la cadena completa que contiene las llaves que necesitan escape entre un conjunto de comillas secundario, por ejemplo, `ConverterParameter='{Mix}'`.
 
 ## Ejemplos
 
@@ -122,13 +131,15 @@ Para obtener más información sobre la sintaxis de cadenas de una ruta de acces
 </Page>
 ```
 
-El segundo ejemplo establece cuatro propiedades de [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) distintas: [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828), [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830), [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209829) y [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826). **Path** en este caso se muestra explícitamente como una propiedad **Binding**. **Path** se evalúa en un origen de enlace de datos que es otro objeto del mismo árbol de objetos en tiempo de ejecución, un [**Slider**](https://msdn.microsoft.com/library/windows/apps/br209614) denominado `sliderValueConverter`.
+El segundo ejemplo establece cuatro propiedades de [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) distintas: [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828), [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830), [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209829) y [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826). 
+            **Path** en este caso se muestra explícitamente como una propiedad **Binding**. **Path** se evalúa en un origen de enlace de datos que es otro objeto del mismo árbol de objetos en tiempo de ejecución, un [**Slider**](https://msdn.microsoft.com/library/windows/apps/br209614) denominado `sliderValueConverter`.
 
 Observa que el valor de la propiedad [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826) usa otra extensión de marcado, [extensión de marcado {StaticResource}](staticresource-markup-extension.md), de forma que hay dos usos de extensiones de marcado anidadas. La interior se evalúa primero de tal forma que, una vez obtenido el recurso, hay un [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) práctico (una clase personalizada de la cual el elemento `local:S2Formatter` de los recursos crea una instancia) que puede usarse en el enlace.
 
 ## Compatibilidad con herramientas
 
-Microsoft IntelliSense en Microsoft Visual Studio muestra las propiedades del contexto de datos durante la creación de **{Binding}** en el editor de marcado XAML. Tan pronto como escribes "{Binding", se muestran las propiedades de contexto de datos adecuadas para [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) en la lista desplegable. IntelliSense también ayuda con las otras propiedades de [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Para que funcione, debes tener el contexto de datos o el contexto de datos en tiempo de diseño establecido en la página de marcado. **Ir a definición** (F12) también funciona con **{Binding}**. Como alternativa, puedes usar el cuadro de diálogo de enlace de datos.
+Microsoft IntelliSense en Microsoft Visual Studio muestra las propiedades del contexto de datos durante la creación de **{Binding}** en el editor de marcado XAML. Tan pronto como escribes "{Binding", se muestran las propiedades de contexto de datos adecuadas para [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) en la lista desplegable. IntelliSense también ayuda con las otras propiedades de [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Para que funcione, debes tener el contexto de datos o el contexto de datos en tiempo de diseño establecido en la página de marcado. 
+            **Ir a definición** (F12) también funciona con **{Binding}**. Como alternativa, puedes usar el cuadro de diálogo de enlace de datos.
 
  
 

@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 09BA9250-A476-4803-910E-52F0A51704B1
 description: "En este artículo se muestra cómo usar la interfaz IMediaEncodingProperties para establecer la resolución y la velocidad de fotogramas de la captura de vista previa de la cámara, así como de las fotos y los vídeos capturados."
 title: "Establecer las propiedades de codificación multimedia"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d7b44ce9db2e3d540036525c4b43e155a9500010
 

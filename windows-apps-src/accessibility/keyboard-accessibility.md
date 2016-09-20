@@ -6,8 +6,8 @@ title: Accesibilidad de teclado
 label: Keyboard accessibility
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 6ac488b6db1ed838cc458c6adaa90dcca18d4c7d
+ms.sourcegitcommit: 2215aeae041ff975d99d29ea42350f6ce0f2a681
+ms.openlocfilehash: 112c7be4cb5418332a19565be9b739e7032ba834
 
 ---
 
@@ -47,7 +47,7 @@ XAML
 </Grid>
 ```
 
-Es posible que quieras excluir un control del orden de tabulación. Por lo general, esto se logra convirtiendo el control a no interactivo, por ejemplo, configurando la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209419) en **false** Un control deshabilitado se excluye automáticamente del orden de tabulación. Pero, en ocasiones, quizá quieras excluir un control del orden de tabulación incluso si no está deshabilitado. En este caso, puedes establecer la propiedad [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422)**false**.
+Es posible que quieras excluir un control del orden de tabulación. Por lo general, esto se logra convirtiendo el control a no interactivo, por ejemplo, configurando la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209419) en **false** Un control deshabilitado se excluye automáticamente del orden de tabulación. Pero, en ocasiones, quizá quieras excluir un control del orden de tabulación incluso si no está deshabilitado. En este caso, puedes establecer la propiedad [**IsTabStop **](https://msdn.microsoft.com/library/windows/apps/BR209422)**false**.
 
 Todos los elementos que pueden tener foco suelen estar en el orden de tabulación de manera predeterminada. La excepción es que es posible que ciertos tipos de presentación de texto como [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565) tengan foco con el fin de que el portapapeles pueda acceder a ellos para seleccionar texto; sin embargo, no se encuentran en el orden de tabulación porque no se espera que los elementos de texto estático estén en el orden de tabulación. No suelen ser interactivos (pueden invocarse y no requieren entrada de texto, pero no admiten el [patrón de control de texto](https://msdn.microsoft.com/library/windows/desktop/Ee671194) que admite la búsqueda y el ajuste de puntos de selección en el texto). El texto no debe dar a entender que, si se coloca el foco en él, pueda existir la posibilidad de realizar alguna actividad. Las tecnologías de asistencia seguirán detectando los elementos de texto y los lectores de pantalla los leerán en voz alta, pero esto dependerá de otro tipo de técnicas que no tienen que ver con encontrar estos elementos en el orden de tabulación práctico.
 
@@ -238,10 +238,10 @@ Los métodos abreviados de teclado no suelen ser relevantes para las aplicacione
 * [Entrada: muestra de teclado táctil](http://go.microsoft.com/fwlink/p/?linkid=246019)
 * [Muestra de respuesta a la apariencia del teclado en pantalla](http://go.microsoft.com/fwlink/p/?linkid=231633)
 * [Muestra de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
- 
 
 
 
-<!--HONumber=Jul16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

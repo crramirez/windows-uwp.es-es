@@ -3,7 +3,6 @@ author: mtoepke
 title: "Agregar métodos de entrada e interactividad en la muestra de Marble Maze"
 description: "Los juegos de aplicación para Plataforma universal de Windows (UWP) se ejecutan en una variedad de dispositivos, como equipos de escritorio, portátiles y tabletas."
 ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 563ee292ec7189b0c365ae5ee0d1c41fd6fd1a09
 
@@ -17,7 +16,8 @@ ms.openlocfilehash: 563ee292ec7189b0c365ae5ee0d1c41fd6fd1a09
 
 Los juegos de aplicación para Plataforma universal de Windows (UWP) se ejecutan en una variedad de dispositivos, como equipos de escritorio, portátiles y tabletas. Un dispositivo puede tener varios mecanismos de entrada y de control. Al dar soporte a varios dispositivos de entrada, el juego podrá acomodarse a una amplia variedad de preferencias y habilidades entre los clientes. En este documento se describen las prácticas clave que se deben tener en cuenta al trabajar con dispositivos de entrada y se muestra cómo Marble Maze aplica estas prácticas.
 
-> **Nota**   El código de ejemplo correspondiente a este documento se encuentra en el [ejemplo de juego de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
+> 
+            **Nota**   El código de ejemplo correspondiente a este documento se encuentra en el [ejemplo de juego de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 A continuación se indican algunos de los puntos principales que se tratan en este documento para trabajar con métodos de entrada en el juego:
@@ -34,11 +34,13 @@ A continuación se indican algunos de los puntos principales que se tratan en es
 
 Marble Maze es compatible con dispositivos de controladores comunes de Xbox 360, el mouse y entrada táctil para seleccionar elementos de menú y el mando de la Xbox 360, el mouse, la entrada táctil y el acelerómetro para controlar el juego. Marble Maze usa la API XInput para realizar un sondeo del controlador para la entrada. La entrada táctil permite que las aplicaciones puedan realizar un seguimiento de la entrada de las huellas de los dedos y responder a ella. El acelerómetro es un sensor que mide la fuerza que se aplica a lo largo de los ejes "x", "y" y "z". Al usar Windows Runtime, puedes realizar un sondeo del estado actual del acelerómetro, así como recibir eventos táctiles mediante el mecanismo de administración de eventos de Windows Runtime.
 
-> **Nota**  En este documento se usa el término función táctil para referirse tanto a la entrada táctil como de mouse y el término puntero para referirse a cualquier dispositivo que use eventos de puntero. Dado que la función táctil y el mouse usan eventos de puntero estándar, puedes usar cualquier dispositivo para seleccionar elementos de menú y controlar el juego.
+> 
+            **Nota**  En este documento se usa el término función táctil para referirse tanto a la entrada táctil como de mouse y el término puntero para referirse a cualquier dispositivo que use eventos de puntero. Dado que la función táctil y el mouse usan eventos de puntero estándar, puedes usar cualquier dispositivo para seleccionar elementos de menú y controlar el juego.
 
  
 
-> **Nota**  El manifiesto del paquete define que la rotación admitida sea Horizontal para el juego, ya que así se impide que la orientación cambie al girar el dispositivo para hacer rodar la canica.
+> 
+            **Nota**  El manifiesto del paquete define que la rotación admitida sea Horizontal para el juego, ya que así se impide que la orientación cambie al girar el dispositivo para hacer rodar la canica.
 
  
 
@@ -446,15 +448,17 @@ for (DWORD userIndex = 0; userIndex < XUSER_MAX_COUNT; ++userIndex)
 
 XInput define la constante **XINPUT\_GAMEPAD\_LEFT\_THUMB\_DEADZONE** del stick izquierdo. Esto es un umbral de zona muerta adecuado para la mayoría de los juegos.
 
-> **Importante**  Cuando trabajes con el mando de Xbox 360, ten siempre en cuenta la zona muerta. La zona muerta se refiere a la varianza entre mandos y sus sensibilidades para el movimiento inicial. En algunos mandos, es posible que un pequeño movimiento no genere ninguna lectura, pero en otros podría generar una lectura apreciable. Para tener esto en cuenta en tu juego, crea una zona sin movimiento para el movimiento inicial del stick analógico. Para más información acerca de la zona muerta, consulta [Introducción a XInput](https://msdn.microsoft.com/library/windows/desktop/ee417001).
+> 
+            **Importante**  Cuando trabajes con el mando de Xbox 360, ten siempre en cuenta la zona muerta. La zona muerta se refiere a la varianza entre mandos y sus sensibilidades para el movimiento inicial. En algunos mandos, es posible que un pequeño movimiento no genere ninguna lectura, pero en otros podría generar una lectura apreciable. Para tener esto en cuenta en tu juego, crea una zona sin movimiento para el movimiento inicial del stick analógico. Para más información acerca de la zona muerta, consulta [Introducción a XInput](https://msdn.microsoft.com/library/windows/desktop/ee417001).
 
  
 
 ###  Aplicación de la entrada al estado del juego
 
-Los dispositivos notifican los valores de entrada de varias maneras. Por ejemplo, la entrada del puntero podría expresarse en coordenadas de la pantalla y la entrada del mando podría estar en un formato totalmente distinto. Uno de los retos al combinar la entrada de varios dispositivos en un único conjunto de valores de entrada es la normalización, es decir, la conversión de valores a un formato común. Marble Maze normaliza los valores escalándolos en el intervalo \[-1.0, 1.0\]. Para normalizar la entrada del mando Xbox 360, Marble Maze divide los valores de entrada por 32 768 porque los valores de entrada del stick siempre están entre -32 768 y 32 767. La función **PointToTouch**, que ya se ha descrito en esta sección, logra un resultado similar al convertir las coordenadas de pantalla en valores normalizados que están en un intervalo aproximado entre -1,0 y +1,0.
+Los dispositivos notifican los valores de entrada de varias maneras. Por ejemplo, la entrada del puntero podría expresarse en coordenadas de la pantalla y la entrada del mando podría estar en un formato totalmente distinto. Uno de los retos al combinar la entrada de varios dispositivos en un único conjunto de valores de entrada es la normalización, es decir, la conversión de valores a un formato común. Marble Maze normaliza los valores escalándolos en el intervalo \[-1.0, 1.0\]. Para normalizar la entrada del mando Xbox 360, Marble Maze divide los valores de entrada por 32768 porque los valores de entrada del stick siempre están entre -32768 y 32767. La función **PointToTouch**, que ya se ha descrito en esta sección, logra un resultado similar al convertir las coordenadas de pantalla en valores normalizados que están en un intervalo aproximado entre -1,0 y +1,0.
 
-> **Sugerencia**  Aunque la aplicación use un método de entrada, te recomendamos normalizar siempre los valores de entrada. Al hacerlo así, puedes simplificar la forma en que otros componentes interpretan la entrada de tu juego, como la simulación de efectos físicos, y se facilita la escritura de juegos que funcionan en varias resoluciones de pantalla.
+> 
+            **Sugerencia**  Aunque la aplicación use un método de entrada, te recomendamos normalizar siempre los valores de entrada. Al hacerlo así, puedes simplificar la forma en que otros componentes interpretan la entrada de tu juego, como la simulación de efectos físicos, y se facilita la escritura de juegos que funcionan en varias resoluciones de pantalla.
 
  
 

@@ -7,7 +7,7 @@ label: Use patterns to format dates and times
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 17cd1619a13adced643b4c8983dbf874bebaa740
+ms.openlocfilehash: f49af17ada36ceb2e5898d80047c2d616b1d0c6e
 
 ---
 
@@ -28,13 +28,11 @@ Usa la API [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft
 ## <span id="Introduction"></span><span id="introduction"></span><span id="INTRODUCTION"></span>Introducción
 
 
-[
-              **Windows.Globalization.DateTimeFormatting**
-            ](https://msdn.microsoft.com/library/windows/apps/br206859) proporciona varias maneras de dar el formato adecuado a fechas y horas para los idiomas y las regiones de todo el mundo. Puedes usar los formatos estándar para el año, el mes, día etc., o puedes usar plantillas de cadena estándar, como "longdate" o "month day".
+[**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859) proporciona varias maneras de dar el formato adecuado a fechas y horas para los idiomas y las regiones de todo el mundo. Puedes usar los formatos estándar para el año, el mes, día etc., o puedes usar plantillas de cadena estándar, como "longdate" o "month day".
 
 Sin embargo, cuando quieras tener más control sobre el orden y el formato de los constituyentes de la cadena [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576) que quieres mostrar, puedes usar una sintaxis especial para el parámetro de plantilla de cadena, denominada "patrón". La sintaxis de patrón te permite obtener los elementos individuales que componen un objeto **DateTime** (solo el nombre del mes o el valor del año, por ejemplo) para mostrarlos en el formato personalizado que desees. Además, el patrón se puede localizar para adaptarse a otros idiomas y regiones.
 
-**Nota** Se trata de una descripción general de los patrones de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828).
+**Nota**  Se trata de una descripción general de los patrones de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828).
 
  
 
@@ -194,6 +192,6 @@ var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

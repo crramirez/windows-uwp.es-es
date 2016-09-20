@@ -5,7 +5,6 @@ title: Instrucciones para el deslizamiento transversal
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 label: Cross-slide
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 47a16acc4025541b1cc19582c2c7d59755fd2594
 
@@ -55,7 +54,8 @@ Aquí encontrarás algunas directrices que debes tener en cuenta a la hora de in
 
 Usa el deslizamiento transversal para listas y colecciones que se desplazan en una sola dirección. Para más información, consulta [Agregar controles ListView](https://msdn.microsoft.com/library/windows/apps/hh465382).
 
-**Nota**  En los casos en que el área de contenido pueda moverse panorámicamente en dos direcciones, por ejemplo, en un explorador web o un lector de libros electrónicos, conviene usar la interacción sincronizada de pulsar y sostener para invocar el menú contextual para objetos, como imágenes e hipervínculos.
+
+            **Nota**  En los casos en que el área de contenido pueda moverse panorámicamente en dos direcciones, por ejemplo, en un explorador web o un lector de libros electrónicos, conviene usar la interacción sincronizada de pulsar y sostener para invocar el menú contextual para objetos, como imágenes e hipervínculos.
 
  
 
@@ -135,10 +135,12 @@ Si es necesario mover más de un objeto, deja que los usuarios seleccionen vario
 * [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Ejemplo de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Ejemplo de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Ejemplo de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* 
+            [Ejemplo de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
             
           
             **Ejemplos de archivo**
+          
 * [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: muestra de prueba de acceso táctil](http://go.microsoft.com/fwlink/p/?linkid=231590)

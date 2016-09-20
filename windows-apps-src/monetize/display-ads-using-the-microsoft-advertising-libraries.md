@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 5cde1c22-91fd-4f5c-ac82-32efaa0d9fee
 description: "Usa las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization para mostrar anuncios intersticiales en vídeo y banners en tus aplicaciones XAML o HTML/JavaScript."
 title: Muestra anuncios mediante las bibliotecas de Microsoft Advertising
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: ab96dac3af382d334c767ad42a563c0dbc67a8f5
 
@@ -16,7 +15,8 @@ ms.openlocfilehash: ab96dac3af382d334c767ad42a563c0dbc67a8f5
 
 Usa las bibliotecas de Microsoft Advertising en el [SDK de Microsoft Store Engagement and Monetization](monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md) para mostrar anuncios intersticiales en vídeo y banners en tus aplicaciones XAML o HTML/JavaScript para Windows 10, Windows 8.1, Windows Phone 8.1 y Windows Phone 8.
 
-> **Importante**   Las bibliotecas de Microsoft Advertising son un conjunto diferente de extensiones de las bibliotecas de mediación de anuncios. Para obtener más información sobre las diferencias entre la mediación de anuncios y las bibliotecas de Microsoft Advertising, consulta [What is the difference: AdMediatorControl or AdControl](what-is-the-difference-admediatorcontrol-or-adcontrol.md) (Diferencias entre AdMediatorControl y AdControl). Para obtener información sobre el uso de la mediación de anuncios, consulta [Usar la mediación de anuncios para maximizar los ingresos](https://msdn.microsoft.com/windows/uwp/monetize/use-ad-mediation-to-maximize-revenue).
+> 
+            **Importante**   Las bibliotecas de Microsoft Advertising son un conjunto diferente de extensiones de las bibliotecas de mediación de anuncios. Para obtener más información sobre las diferencias entre la mediación de anuncios y las bibliotecas de Microsoft Advertising, consulta [What is the difference: AdMediatorControl or AdControl](what-is-the-difference-admediatorcontrol-or-adcontrol.md) (Diferencias entre AdMediatorControl y AdControl). Para obtener información sobre el uso de la mediación de anuncios, consulta [Usar la mediación de anuncios para maximizar los ingresos](https://msdn.microsoft.com/windows/uwp/monetize/use-ad-mediation-to-maximize-revenue).
 
  
 Los siguientes temas proporcionan información sobre tareas comunes relacionadas con las bibliotecas de Windows Advertising.

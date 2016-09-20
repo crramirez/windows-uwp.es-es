@@ -3,7 +3,6 @@ author: jnHs
 Description: "Puedes ayudar a los clientes a descubrir tu aplicación mediante un vínculo a su descripción en la Tienda."
 title: "Vincular a tu aplicación"
 ms.assetid: 5420B65C-7ECE-4364-8959-D1683684E146
-translationtype: Human Translation
 ms.sourcegitcommit: d36f14604bd8c2ce0d5778a67f5b5b9460d9fbf3
 ms.openlocfilehash: 891b99b52f7e3b347c0e2f9d298f144313cc7b2d
 
@@ -23,7 +22,8 @@ Este vínculo está en formato **`https://www.microsoft.com/store/apps/<your app
 
 Cuando un cliente hace clic en este vínculo, se abrirá la página de descripción basada en web de la aplicación. Si la aplicación está disponible para el dispositivo del cliente, la aplicación de la Tienda también se inicia y muestra la sinopsis de la aplicación.
 
-> **Nota**  Según las versiones de los sistemas operativos que te interesen, puede que veas más de un vínculo. Todas las aplicaciones mostrarán la dirección URL para Windows 10, que funciona en cualquier sistema operativo. Puedes ver vínculos adicionales para Windows 8.1 y versiones anteriores o para Windows Phone 8.1 y versiones anteriores, aunque solo funcionarán para las versiones de sistema operativo especificadas.
+> 
+            **Nota**  Según las versiones de los sistemas operativos que te interesen, puede que veas más de un vínculo. Todas las aplicaciones mostrarán la dirección URL para Windows 10, que funciona en cualquier sistema operativo. Puedes ver vínculos adicionales para Windows 8.1 y versiones anteriores o para Windows Phone 8.1 y versiones anteriores, aunque solo funcionarán para las versiones de sistema operativo especificadas.
 
  
 
@@ -34,7 +34,8 @@ Puedes crear un vínculo directo a la sinopsis de tu aplicación mediante un dis
 
 Para crear el distintivo, visita la página [Distintivos de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkID=534236). Debes tener el id. de la Tienda de la aplicación para usar este formulario para generar el distintivo y un vínculo. Este identificador consiste en los 12 últimos caracteres de la **dirección URL para Windows 10** que se muestra en la página [Identidad de la aplicación](view-app-identity-details.md), en la sección **Administración de aplicaciones**.
 
-> **Nota**  Consulta [Directrices para el marketing de aplicaciones](app-marketing-guidelines.md) para obtener más información sobre el uso del distintivo de la Tienda Windows.
+> 
+            **Nota**  Consulta [Directrices para el marketing de aplicaciones](app-marketing-guidelines.md) para obtener más información sobre el uso del distintivo de la Tienda Windows.
 
  
 

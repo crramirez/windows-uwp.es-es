@@ -3,8 +3,9 @@ author: msatranjr
 title: Mostrar mapas con vistas 2D, 3D y Streetside
 description: "Muestra mapas personalizables en tu aplicación mediante la clase MapControl. Este tema también presenta la vista 3D aérea y la vista de Streetside."
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 249503f6a43ef8c38e76ed29aed4a1bfdb26e9fb
+ms.openlocfilehash: 5569722bdfc8dfb78d43dbe6abf23dcd06f619c0
 
 ---
 
@@ -282,18 +283,10 @@ private async void display3DLocation()
 
 Para obtener información sobre las ubicaciones en el mapa, llama a los siguientes métodos de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
--   [
-              **GetLocationFromOffset**
-            ](https://msdn.microsoft.com/library/windows/apps/dn637016): Gracias a este método puedes obtener la ubicación geográfica correspondiente al punto especificado en la ventanilla del control del mapa.
--   [
-              **GetOffsetFromLocation**
-            ](https://msdn.microsoft.com/library/windows/apps/dn637018): gracias a este método puedes obtener el punto especificado en la ventanilla del control de mapa correspondiente a la ubicación geográfica especificada.
--   [
-              **IsLocationInView**
-            ](https://msdn.microsoft.com/library/windows/apps/dn637022): gracias a este método puedes determinar si la ubicación geográfica especificada está actualmente visible en la ventanilla del control de mapa.
--   [
-              **FindMapElementsAtOffset**
-            ](https://msdn.microsoft.com/library/windows/apps/dn637014): gracias a este método puedes obtener los elementos del mapa ubicados en el punto que se especificó en la ventanilla del control de mapa.
+-   [**GetLocationFromOffset**](https://msdn.microsoft.com/library/windows/apps/dn637016): gracias a este método, puedes obtener la ubicación geográfica correspondiente al punto especificado en la ventanilla del control del mapa.
+-   [**GetOffsetFromLocation**](https://msdn.microsoft.com/library/windows/apps/dn637018): gracias a este método, puedes obtener el punto especificado en la ventanilla del control de mapa correspondiente a la ubicación geográfica especificada.
+-   [**IsLocationInView**](https://msdn.microsoft.com/library/windows/apps/dn637022): gracias a este método, puedes determinar si la ubicación geográfica especificada está actualmente visible en la ventanilla del control de mapa.
+-   [**FindMapElementsAtOffset**](https://msdn.microsoft.com/library/windows/apps/dn637014): gracias a este método, puedes obtener los elementos del mapa ubicados en el punto que se especificó en la ventanilla del control de mapa.
 
 ## Controlar la interacción del usuario y los cambios
 
@@ -328,6 +321,6 @@ Puedes controlar los siguientes eventos de la clase [**MapControl**](https://msd
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

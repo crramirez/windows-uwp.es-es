@@ -3,7 +3,6 @@ author: PatrickFarley
 title: "Impresión 3D desde la aplicación"
 description: "Aprende a agregar la función de impresión 3D a tu aplicación universal de Windows. En este tema se explica cómo iniciar el cuadro de diálogo de impresión 3D después de asegurarte de que tu modelo 3D se puede imprimir y en el formato correcto."
 ms.assetid: D78C4867-4B44-4B58-A82F-EDA59822119C
-translationtype: Human Translation
 ms.sourcegitcommit: 61d9f5c1fca1ad2e26f052b901361813975ae357
 ms.openlocfilehash: e68a9c681974152bc0d4dfa58e824f80e77dc51f
 
@@ -60,11 +59,13 @@ En tu método `OnLoadClick`, usa la clase [FileOpenPicker](https://msdn.microsof
 
 En este punto, es posible cargar un archivo de datos 3D en la memoria de la aplicación. Sin embargo, los datos de geometría 3D tienen muchos formatos diferentes y no todos son eficaces para la impresión 3D. En Windows 10, se usa el tipo de archivo de formato de fabricación 3D (.3mf) para todas las tareas de impresión 3D.
 
-> **Nota**: El tipo de archivo 3MF ofrece una gran cantidad de funciones que no se incluyen en este tutorial. Para obtener más información sobre 3MF y las características que proporciona a los creadores y los consumidores de productos 3D, consulta [3MF Specification](http://3mf.io/what-is-3mf/3mf-specification/) (Especificación 3MF). Para obtener información sobre cómo aprovechar estas características mediante las API de Windows 10, consulta el tutorial [Generar un paquete 3MF](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf).
+> 
+            **Nota**: El tipo de archivo 3MF ofrece una gran cantidad de funciones que no se incluyen en este tutorial. Para obtener más información sobre 3MF y las características que proporciona a los creadores y los consumidores de productos 3D, consulta [3MF Specification](http://3mf.io/what-is-3mf/3mf-specification/) (Especificación 3MF). Para obtener información sobre cómo aprovechar estas características mediante las API de Windows 10, consulta el tutorial [Generar un paquete 3MF](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf).
 
 Afortunadamente, la aplicación [3D Builder](https://www.microsoft.com/store/apps/3d-builder/9wzdncrfj3t6) puede abrir archivos de los formatos 3D más populares y guardarlos como archivos .3mf. En este ejemplo, donde puede variar el tipo de archivo, una solución muy sencilla es abrir 3D Builder y pedir al usuario que guarde los datos importados como un archivo .3mf y que vuelva a cargarlo.
 
-> **Nota**: Además de convertir los formatos de archivo, **3D Builder** proporciona herramientas sencillas para editar modelos, agregar datos de color y realizar otras operaciones específicas de la impresión, por lo que a menudo vale la pena integrarlo en una aplicación que se encargue de la impresión en 3D.
+> 
+            **Nota**: Además de convertir los formatos de archivo, **3D Builder** proporciona herramientas sencillas para editar modelos, agregar datos de color y realizar otras operaciones específicas de la impresión, por lo que a menudo vale la pena integrarlo en una aplicación que se encargue de la impresión en 3D.
 
 [!code-cs[FileCheck](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetFileCheck)]
 
@@ -89,9 +90,11 @@ Más adelante, cuando se muestre el cuadro de diálogo de impresión en 3D al us
 
 El propósito principal de este método es usar el objeto *args* para enviar **Printing3D3MFPackage** a la canalización. El tipo **Print3DTaskRequestedEventArgs** tiene una propiedad: **Request**. Es del tipo [Print3DTaskRequest](https://msdn.microsoft.com/library/windows/apps/dn998050) y representa una solicitud de trabajo de impresión. Su método **CreateTask** permite que el programa envíe la información correcta al trabajo de impresión y devuelve una referencia al objeto [Print3DTask](https://msdn.microsoft.com/library/windows/apps/dn998044) que se envía a la canalización de impresión 3D.
 
-**CreateTask** tiene los siguientes parámetros de entrada: un elemento **string** para el nombre del trabajo de impresión, un elemento **string** para el identificador de la impresora que se usará y un delegado **Print3DTaskSourceRequestedHandler**. El delegado se invoca automáticamente cuando se produce el evento **3DTaskSourceRequested** (lo hace la propia API). Lo importante a tener en cuenta es que este delegado se invoca cuando se inicia un trabajo de impresión y es el responsable de proporcionar el paquete de impresión 3D correcto.
 
-**Print3DTaskSourceRequestedHandler** usa un parámetro, un objeto [Print3DTaskSourceRequestedArgs](https://msdn.microsoft.com/library/windows/apps/dn998056) que proporciona los datos que se enviarán. El único método público de esta clase, **SetSource**, acepta el paquete que se va a imprimir. Implementa un delegado **Print3DTaskSourceRequestedHandler** de la siguiente manera:
+            **CreateTask** tiene los siguientes parámetros de entrada: un elemento **string** para el nombre del trabajo de impresión, un elemento **string** para el identificador de la impresora que se usará y un delegado **Print3DTaskSourceRequestedHandler**. El delegado se invoca automáticamente cuando se produce el evento **3DTaskSourceRequested** (lo hace la propia API). Lo importante a tener en cuenta es que este delegado se invoca cuando se inicia un trabajo de impresión y es el responsable de proporcionar el paquete de impresión 3D correcto.
+
+
+            **Print3DTaskSourceRequestedHandler** usa un parámetro, un objeto [Print3DTaskSourceRequestedArgs](https://msdn.microsoft.com/library/windows/apps/dn998056) que proporciona los datos que se enviarán. El único método público de esta clase, **SetSource**, acepta el paquete que se va a imprimir. Implementa un delegado **Print3DTaskSourceRequestedHandler** de la siguiente manera:
 
 [!code-cs[SourceHandler](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetSourceHandler)]
 
@@ -103,7 +106,8 @@ El valor devuelto **Print3DTask** se asigna a la variable de clase declarada al 
 
 [!code-cs[Opcional](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetOptional)]
 
-> **Nota**: Debes implementar los métodos `Task_Submitting` y `Task_Completed` si quieres registrarlos en estos eventos.
+> 
+            **Nota**: Debes implementar los métodos `Task_Submitting` y `Task_Completed` si quieres registrarlos en estos eventos.
 
 ## Ejecutar la tarea de impresión: abrir el cuadro de diálogo de impresión 3D
 

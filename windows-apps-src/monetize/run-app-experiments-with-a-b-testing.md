@@ -3,7 +3,6 @@ author: mcleanbyron
 Description: Puedes usar el panel del Centro de desarrollo de Windows para ejecutar los experimentos para las aplicaciones para la Plataforma universal de Windows (UWP) con pruebas A/B.
 title: Ejecuta experimentos para aplicaciones con pruebas A/B
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 88fd0516e3c10b657884b93377480b62c1758992
 
@@ -21,12 +20,15 @@ Después de haber identificado una variación que se adapte mejor a tus objetivo
 
 Para crear y ejecutar una prueba A/B, sigue estos pasos:
 
-1. [Define tu experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md). Cada experimento consta de:
+1. 
+            [Define tu experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md). Cada experimento consta de:
   * Un *evento de visualización* que indica cuándo el usuario empieza a ver una variación que forma parte del experimento.
   * Uno o más objetivos con *eventos de conversión* que indican cuándo se ha alcanzado un objetivo.
   * Una o más *variaciones* que definen la configuración usada por el experimento.
-2. [Escribe el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md). Usa una API en el SDK de Microsoft Store Engagement and Monetization para obtener la configuración de la variación para el experimento, usa estos datos para modificar el comportamiento de la característica que estás probando y envía los eventos de vista y conversión al Centro de desarrollo.
-3. [Ejecuta y administra tu experimento en el panel del Centro de desarrollo](manage-your-experiment.md). Usa el panel para revisar los resultados y completar el experimento.
+2. 
+            [Escribe el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md). Usa una API en el SDK de Microsoft Store Engagement and Monetization para obtener la configuración de la variación para el experimento, usa estos datos para modificar el comportamiento de la característica que estás probando y envía los eventos de vista y conversión al Centro de desarrollo.
+3. 
+            [Ejecuta y administra tu experimento en el panel del Centro de desarrollo](manage-your-experiment.md). Usa el panel para revisar los resultados y completar el experimento.
 
 Para ver un tutorial que muestra el proceso de principio a fin, consulta [Create and run your first experiment with A/B testing](create-and-run-your-first-experiment-with-a-b-testing.md) (Crear y ejecutar el primer experimento con pruebas A/B).
 

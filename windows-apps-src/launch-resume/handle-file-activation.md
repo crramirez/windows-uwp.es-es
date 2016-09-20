@@ -25,7 +25,8 @@ Te recomendamos que solo registres tu aplicación para un tipo de archivo si tie
 
 En estos pasos se muestra cómo realizar el registro de un tipo de archivo personalizado, .alsdk, y cómo se activa una aplicación cuando el usuario inicia un archivo .alsdk.
 
-> **Nota**  En las aplicaciones para UWP, algunas extensiones de archivo y URI se reservan para que las usen aplicaciones integradas y del sistema operativo. Se ignorarán los intentos de registrar aplicaciones con una extensión de archivo o URI reservada. Para más información, consulta [Nombres de esquemas de URI y archivos reservados](reserved-uri-scheme-names.md).
+> 
+            **Nota**  En las aplicaciones para UWP, algunas extensiones de archivo y URI se reservan para que las usen aplicaciones integradas y del sistema operativo. Se ignorarán los intentos de registrar aplicaciones con una extensión de archivo o URI reservada. Para más información, consulta [Nombres de esquemas de URI y archivos reservados](reserved-uri-scheme-names.md).
 
 ## Paso 1: Especificar el punto de extensión en el manifiesto del paquete
 
@@ -41,9 +42,12 @@ La aplicación recibe eventos de activación solo para las extensiones de archiv
 | **Display Name** | Especifica el nombre para mostrar de un grupo de tipos de archivo. El nombre para mostrar se usa para identificar el tipo de archivo en [Establecer programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/cc144154) en el **Panel de control**. |
 | **Logotipo** | Especifica el logotipo que se usa para identificar el tipo de archivo en el escritorio y en [Establecer programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/cc144154) en el **Panel de control**. Si no se especifica ningún logotipo, se usa el logotipo pequeño para la aplicación. |
 | **Información sobre herramientas** | Especifica la [Información sobre herramientas](https://msdn.microsoft.com/library/windows/desktop/cc144152) de un grupo de tipos de archivo. Este texto de información sobre herramientas aparece cuando el usuario mantiene el puntero sobre el icono de un archivo de este tipo. |
-| **Nombre** | Elige un nombre para un grupo de tipos de archivos que comparten el mismo nombre para mostrar, logotipo, información y marcas de edición. Elige un nombre de grupo que pueda continuar siendo el mismo a lo largo de las actualizaciones de la aplicación. **Nota**  El nombre debe estar completamente en minúsculas. |
-| **Content Type** | Especifica el tipo de contenido MIME, como **image/jpeg**, de un tipo de archivo concreto. **Nota importante sobre los tipos de contenido permitidos:  **Esta es una lista ordenada alfabéticamente de los tipos de contenido MIME que no se pueden especificar en el manifiesto del paquete porque están reservados o prohibidos: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
-| **File type** | Especifica el tipo de archivo que se va a registrar, precedido de un punto, por ejemplo, ".jpeg". **Tipos de archivos reservados y prohibidos** Consulta [Tipos de archivos y nombres de esquema de URI reservados](reserved-uri-scheme-names.md) para obtener una lista ordenada alfabéticamente de los tipos de archivo para aplicaciones integradas que no se pueden registrar para las aplicaciones para UWP porque están reservados o prohibidos. |
+| **Nombre** | Elige un nombre para un grupo de tipos de archivos que comparten el mismo nombre para mostrar, logotipo, información y marcas de edición. Elige un nombre de grupo que pueda continuar siendo el mismo a lo largo de las actualizaciones de la aplicación. 
+            **Nota**  El nombre debe estar completamente en minúsculas. |
+| **Content Type** | Especifica el tipo de contenido MIME, como **image/jpeg**, de un tipo de archivo concreto. 
+            **Nota importante sobre los tipos de contenido permitidos:  **Esta es una lista ordenada alfabéticamente de los tipos de contenido MIME que no se pueden especificar en el manifiesto del paquete porque están reservados o prohibidos: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
+| **File type** | Especifica el tipo de archivo que se va a registrar, precedido de un punto, por ejemplo, ".jpeg". 
+            **Tipos de archivos reservados y prohibidos** Consulta [Tipos de archivos y nombres de esquema de URI reservados](reserved-uri-scheme-names.md) para obtener una lista ordenada alfabéticamente de los tipos de archivo para aplicaciones integradas que no se pueden registrar para las aplicaciones para UWP porque están reservados o prohibidos. |
 
 2.  Escribe `alsdk` como el valor de **Name**.
 3.  Escribe `.alsdk` como el valor de **File Type**.
@@ -119,11 +123,12 @@ Las aplicaciones que decidan usar un solo elemento Frame de XAML para los contra
 
 Observaciones Los archivos que recibes pueden provenir de un origen que no es de confianza. Se recomienda que valides el contenido de un archivo antes de realizar una acción en él.
 
-> Para más información, consulta [Escribir código seguro](http://go.microsoft.com/fwlink/p/?LinkID=142053). **Nota**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP).
+> Para más información, consulta [Escribir código seguro](http://go.microsoft.com/fwlink/p/?LinkID=142053). 
+            **Nota**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP).
 
  
 
-## Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+## Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 **Temas relacionados**
 

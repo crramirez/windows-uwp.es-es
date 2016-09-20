@@ -70,7 +70,8 @@ Comprobar registros existentes Comprueba si la tarea ya está registrada.
 
 Es importante que compruebes esto porque si una tarea está registrada varias veces, se ejecutará más de una vez cada vez que sea desencadenada; esto hace un consumo excesivo de CPU y puede ocasionar un comportamiento inesperado. Puedes comprobar registros existentes consultando la propiedad [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) e iterando en el resultado.
 
-> Comprueba el nombre de cada instancia. Si coincide con el nombre de la tarea que estás registrando, entonces interrumpe el bucle y coloca una variable de marca para que tu código pueda elegir otra ruta en el siguiente paso. **Nota** Usa nombres de tareas en segundo plano que sean exclusivos de tu aplicación.
+> Comprueba el nombre de cada instancia. Si coincide con el nombre de la tarea que estás registrando, entonces interrumpe el bucle y coloca una variable de marca para que tu código pueda elegir otra ruta en el siguiente paso. 
+            **Nota** Usa nombres de tareas en segundo plano que sean exclusivos de tu aplicación.
 
 Asegúrate de que cada tarea en segundo plano tenga un nombre exclusivo.
 
@@ -143,7 +144,8 @@ Asegúrate de que cada tarea en segundo plano tenga un nombre exclusivo.
 
 Comprueba si se encontró la tarea en la lista de registros de tareas en segundo plano existentes. Si ya está en la lista, devuelve esa instancia de la tarea. Después registra la tarea con un nuevo objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768).
 
-> Este código debe comprobar si el parámetro de la condición es nulo y, si no lo es, agregar la condición al objeto de registro. Devuelve el [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) devuelto por el método [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772). **Nota** Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro.
+> Este código debe comprobar si el parámetro de la condición es nulo y, si no lo es, agregar la condición al objeto de registro. Devuelve el [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) devuelto por el método [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772). 
+            **Nota** Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro.
 
 Se devuelve un error si cualquiera de los parámetros de registro no es válido.
 
@@ -374,8 +376,9 @@ El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código 
 ****
 
 * [[!div class="tabbedCodeSnippets"]](create-and-register-a-background-task.md)
-* [**Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP).](declare-background-tasks-in-the-application-manifest.md)
-* [Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
+* [
+            **Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP).](declare-background-tasks-in-the-application-manifest.md)
+* [Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
 * [Temas relacionados](monitor-background-task-progress-and-completion.md)
 * [Crear y registrar una tarea en segundo plano](respond-to-system-events-with-background-tasks.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](set-conditions-for-running-a-background-task.md)

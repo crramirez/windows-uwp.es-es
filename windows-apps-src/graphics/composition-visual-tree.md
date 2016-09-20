@@ -3,8 +3,9 @@ author: scottmill
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
 title: "Árbol visual de composición"
 description: "Los elementos visuales de composición conforman la estructura del árbol visual que todas las demás funciones de la API de composición usarán y ampliarán. La API permite a los desarrolladores definir y crear uno o varios objetos visuales que representan un nodo único en un árbol visual."
+translationtype: Human Translation
 ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 61adc6a894c56c6cfd292d89d4cd5c4ba6b0d017
+ms.openlocfilehash: 0603939bb62b107a781cb3804bcf92aeac7a6155
 
 ---
 # Árbol visual de composición
@@ -17,18 +18,10 @@ Los elementos visuales de composición conforman la estructura del árbol visual
 
 Existen tres tipos de elementos visuales que conforman la estructura del árbol visual, además de una clase de pincel base con varias subclases que afectan al contenido de un elemento visual:
 
--   [
-              **Visual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706858): objeto base, la mayoría de las propiedades están aquí y las heredan los otros objetos Visual.
--   [
-              **ContainerVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706810): se deriva del objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) y agrega la capacidad para crear los elementos secundarios.
--   [
-              **SpriteVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Mt589433): se deriva del objeto [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) y agrega la capacidad de asociar un pincel, de modo que el elemento Visual pueda representar píxeles, por ejemplo, imágenes, efectos o un color sólido.
--   [
-              **CompositionBrush**
-            ](https://msdn.microsoft.com/library/windows/apps/Mt589398): permite la aplicación de un efecto en el contenido de un elemento Visual. Existe una serie de subclases de CompositionBrush.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858): objeto base, la mayoría de las propiedades están aquí y las heredan los otros objetos Visual.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810): se deriva del objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) y agrega la capacidad para crear los elementos secundarios.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433): se deriva del objeto [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) y agrega la capacidad de asociar un pincel, de modo que el elemento Visual pueda representar píxeles, por ejemplo, imágenes, efectos o un color sólido.
+-   [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398): permite la aplicación de un efecto en el contenido de un elemento Visual. Existe una serie de subclases de CompositionBrush.
 
 ## Muestra de CompositionVisual
 
@@ -45,15 +38,9 @@ Esto muestra varios de los conceptos básicos para trabajar con la API, entre lo
 
 En la muestra, también hay tres elementos visuales diferentes:
 
--   [
-              **Visual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706858): objeto base, la mayoría de las propiedades están aquí y las heredan los otros objetos Visual.
--   [
-              **ContainerVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706810): se deriva del objeto Visual y agrega la capacidad para crear los elementos secundarios.
--   [
-              **SpriteVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Mt589433): se deriva del objeto Visual y agrega la capacidad de asociar un pincel, de modo que el elemento Visual pueda representar píxeles, por ejemplo, imágenes, efectos o un color sólido.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858): objeto base, la mayoría de las propiedades están aquí y las heredan los otros objetos Visual.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810): se deriva del objeto Visual y agrega la capacidad para crear los elementos secundarios.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433): se deriva del objeto Visual y agrega la capacidad de asociar un pincel, de modo que el elemento Visual pueda representar píxeles, por ejemplo, imágenes, efectos o un color sólido.
 
 Si bien en esta muestra no se abarcan conceptos como, por ejemplo, animaciones o efectos más complejos, se incluyen los elementos esenciales que todos los sistemas usan.
 
@@ -521,6 +508,6 @@ namespace compositionvisual
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

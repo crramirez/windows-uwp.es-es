@@ -1,9 +1,8 @@
 ---
 author: mcleblanc
-description: "Si tienes un proyecto de Windows 10 que creaste con Microsoft Visual Studio 2015 RC, tienes dos opciones para actualizar los archivos del proyecto al formato adecuado para Visual Studio 2015 RTM."
+description: Si tienes un proyecto de Windows 10 que creaste con Microsoft Visual Studio 2015 RC, tienes dos opciones para actualizar los archivos del proyecto al formato adecuado para Visual Studio2015 RTM.
 title: "Actualización de tu proyecto de UWP Microsoft Visual Studio 2015 RC a RTM"
 ms.assetid: 104E36CE-36DE-4E9C-A944-711C200B44EF
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 9c2b9f164b6578a9e1d269295b3fa0d7a863a6a0
 
@@ -13,11 +12,11 @@ ms.openlocfilehash: 9c2b9f164b6578a9e1d269295b3fa0d7a863a6a0
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Si tienes un proyecto de Windows 10 que creaste con Microsoft Visual Studio 2015 RC, tienes dos opciones para actualizar los archivos del proyecto al formato adecuado para Visual Studio 2015 RTM. El método recomendado es crear un nuevo proyecto de Windows 10 en Visual Studio 2015 RTM y copiar ahí los archivos. También puedes seguir la documentación avanzada para editar los archivos de proyecto existentes y pasarlos al nuevo formato.
+Si tienes un proyecto de Windows 10 que creaste con Microsoft Visual Studio 2015 RC, tienes dos opciones para actualizar los archivos del proyecto al formato adecuado para Visual Studio2015 RTM. El método recomendado es crear un nuevo proyecto de Windows 10 en Visual Studio 2015 RTM y copiar ahí los archivos. También puedes seguir la documentación avanzada para editar los archivos de proyecto existentes y pasarlos al nuevo formato.
 
 ## Lo que ves cuando abres un proyecto de Visual Studio 2015 RC de Windows 10 en Visual Studio 2015 RTM
 
-Cuando abras un proyecto de Visual Studio 2015 RC de Windows 10 en Visual Studio 2015 RTM, verás un mensaje el que se indica que se requiere actualización en el **Explorador de soluciones**.
+Cuando abras un proyecto de Visual Studio 2015 RC de Windows 10 en Visual Studio2015 RTM, verás un mensaje el que se indica que se requiere actualización en el **Explorador de soluciones**.
 
 ![se requiere una actualización](images/vsrc-to-rtm/solution-explorer.png)
 
@@ -35,7 +34,7 @@ Si obtienes acceso al menú contextual del proyecto en el **Explorador de soluci
 
 ## Opciones avanzadas: edita tus archivos de proyecto existentes
 
-Una diferencia significativa entre el formato de proyecto de Windows 10 de Visual Studio 2015 RC y Visual Studio 2015 RTM es que el formato RTM usa [NuGet](http://docs.nuget.org/) versión 3. Ten en cuenta esta diferencia si tienes intención de actualizar manualmente el proyecto.
+Una diferencia significativa entre el formato de proyecto de Windows 10 de Visual Studio 2015 RC y Visual Studio2015 RTM es que el formato RTM usa [NuGet](http://docs.nuget.org/) versión 3. Ten en cuenta esta diferencia si tienes intención de actualizar manualmente el proyecto.
 
 Si quieres actualizar manualmente el proyecto, o si estás interesado en saber las diferencias entre los formatos de proyecto de Visual Studio 2015 RC y Visual Studio 2015 RTM, consulta [Migrar aplicaciones a la Plataforma universal de Windows (UWP)](http://msdn.microsoft.com/library/mt148501.aspx).
 

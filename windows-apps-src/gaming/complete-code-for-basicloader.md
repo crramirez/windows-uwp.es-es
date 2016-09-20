@@ -3,7 +3,6 @@ author: mtoepke
 title: "Código completo para BasicLoader"
 description: "Código completo de una clase y sus métodos para convertir y cargar recursos gráficos comunes; como mallas, texturas y varios objetos de sombreador."
 ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
-translationtype: Human Translation
 ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
 ms.openlocfilehash: 355e5a65a16e5e2df9bb039383f68dda16ff23a2
 
@@ -30,13 +29,17 @@ Este ejemplo no se puede descargar.
 
 ## Tecnologías
 
-**Lenguajes de programación**: C++  
-**Modelos de programación**: Windows Runtime
+
+            **Lenguajes de programación**: C++  
+
+            **Modelos de programación**: Windows Runtime
 
 ## Requisitos
 
-**Cliente mínimo compatible**: Windows 10                              
-**Servidor mínimo compatible**: Windows Server 2016 Technical Preview 
+
+            **Cliente mínimo compatible**: Windows 10                              
+
+            **Servidor mínimo compatible**: Windows Server 2016 Technical Preview 
 
 
 ## Ver el código (C++)

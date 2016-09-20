@@ -92,7 +92,7 @@ Mantén tu ruta de acceso de al código de inicio libre de todo lo que no se nec
 
 ### Reducir el número de elementos
 
-El rendimiento de inicio de una aplicación XAML está relacionada directamente con el número de elementos que creas durante el inicio. Cuantos menos elementos crees, menos tiempo tardará la aplicación en iniciarse. Como referencia aproximada, considera la posibilidad de que la creación de cada elemento tarde 1 ms.
+El rendimiento de inicio de una aplicación XAML está relacionada directamente con el número de elementos que creas durante el inicio. Cuantos menos elementos crees, menos tiempo tardará la aplicación en iniciarse. Como referencia aproximada, considera la posibilidad de que la creación de cada elemento tarde 1ms.
 
 -   Las plantillas que se usan en los controles de elementos pueden tener el mayor impacto, ya que se repiten varias veces. Consulta [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md).
 -   Los objetos UserControl y las plantillas de controles se ampliarán, por lo que también deberían tenerse en cuenta.
@@ -102,9 +102,11 @@ En la ventana [Visual Studio Live Visual Tree](http://blogs.msdn.com/b/visualstu
 
 ![Árbol visual activo.](images/live-visual-tree.png)
 
-**Usa x:DeferLoadStrategy**. La contracción de un elemento o el establecimiento de su opacidad en 0, no impedirá su creación. Con x:DeferLoadStrategy, puedes retrasar la carga de un fragmento de la interfaz de usuario y cargarlo cuando se necesite. Esta es una buena manera de retrasar el procesamiento de la interfaz de usuario que no es visible en la pantalla de inicio, de modo que puedes cargarla cuando sea necesario o como parte de un conjunto de lógica retrasada. Para activar la carga, solo necesitas llamar a FindName para el elemento. Para más información y un ejemplo, consulta [Atributo x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785).
 
-**Virtualización**. Si tienes una lista o contenido repetido en la interfaz de usuario, se recomienda encarecidamente usar la virtualización de la interfaz de usuario. Si la interfaz de usuario de la lista no se virtualiza, vas a pagar el coste de la creación de todos los elementos iniciales, lo que puede ralentizar el inicio. Consulta [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md).
+            **Usa x:DeferLoadStrategy**. La contracción de un elemento o el establecimiento de su opacidad en 0, no impedirá su creación. Con x:DeferLoadStrategy, puedes retrasar la carga de un fragmento de la interfaz de usuario y cargarlo cuando se necesite. Esta es una buena manera de retrasar el procesamiento de la interfaz de usuario que no es visible en la pantalla de inicio, de modo que puedes cargarla cuando sea necesario o como parte de un conjunto de lógica retrasada. Para activar la carga, solo necesitas llamar a FindName para el elemento. Para más información y un ejemplo, consulta [Atributo x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785).
+
+
+            **Virtualización**. Si tienes una lista o contenido repetido en la interfaz de usuario, se recomienda encarecidamente usar la virtualización de la interfaz de usuario. Si la interfaz de usuario de la lista no se virtualiza, vas a pagar el coste de la creación de todos los elementos iniciales, lo que puede ralentizar el inicio. Consulta [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md).
 
 El rendimiento de la aplicación no solo se basa en el rendimiento sin procesar, sino también en la percepción. Si cambias el orden de las operaciones para que los aspectos visuales se produzcan primero, el usuario tendrá la sensación de que la aplicación es más rápida. Los usuarios considerarán que la aplicación se ha cargado cuando el contenido aparece en la pantalla. Normalmente, las aplicaciones tienen que hacer varias cosas como parte del inicio y no todas ellas son necesarios para que aparezca la interfaz de usuario. Por tanto, ellas se pueden retrasar o recibir una menor prioridad que la interfaz de usuario.
 
@@ -346,13 +348,15 @@ Si una aplicación necesita un archivo en particular durante la inicialización,
 
 El control Frame proporciona funciones de navegación.
 
-Ofrece la navegación a una página (método Navigate), el registro en diario de navegación (propiedades BackStack/ForwardStack, método GoForward/GoBack), almacenamiento en caché de las páginas (Page.NavigationCacheMode) y compatibilidad con la serialización (método GetNavigationState). El rendimiento que se debe tener en cuenta con el objeto Frame implica principalmente el registro en diario y el almacenamiento de páginas en caché. **Registro en diario de marcos**. Cuando navegas a una página con Frame.Navigate(), se agrega un objeto PageStackEntry para la página actual a la colección Frame.BackStack.
+Ofrece la navegación a una página (método Navigate), el registro en diario de navegación (propiedades BackStack/ForwardStack, método GoForward/GoBack), almacenamiento en caché de las páginas (Page.NavigationCacheMode) y compatibilidad con la serialización (método GetNavigationState). El rendimiento que se debe tener en cuenta con el objeto Frame implica principalmente el registro en diario y el almacenamiento de páginas en caché. 
+            **Registro en diario de marcos**. Cuando navegas a una página con Frame.Navigate(), se agrega un objeto PageStackEntry para la página actual a la colección Frame.BackStack.
 
 El objeto PageStackEntry es relativamente pequeño, pero no existe ningún límite integrado para el tamaño de la colección BackStack. Posiblemente, un usuario puede navegar en un bucle y aumentar esta colección indefinidamente. En el objeto PageStackEntry también se incluye el parámetro que se pasó al método Frame.Navigate(). Se recomienda que dicho parámetro sea un tipo primitivo serializable (tal como un entero o cadena) para permitir que funcione el método Frame.GetNavigationState().
 
 Sin embargo, ese parámetro podría hacer referencia a un objeto que represente cantidades más grandes de conjuntos de trabajo u otros recursos, lo que haría que cada entrada del objeto BackStack sea más costesa. Por ejemplo, podrías usar potencialmente un objeto StorageFile como parámetro y, en consecuencia, el objeto BackStack mantiene abierto un número indeterminado de archivos.
 
-Por lo tanto, se recomienda que los parámetros de navegación tengan un tamaño pequeño y que se limite el tamaño del objeto BackStack. El objeto BackStack es un vector estándar (IList en C#, Platform::Vector en C++/CX), por lo que se puede recortar mediante la eliminación de entradas. **Almacenamiento en caché de páginas**.
+Por lo tanto, se recomienda que los parámetros de navegación tengan un tamaño pequeño y que se limite el tamaño del objeto BackStack. El objeto BackStack es un vector estándar (IList en C#, Platform::Vector en C++/CX), por lo que se puede recortar mediante la eliminación de entradas. 
+            **Almacenamiento en caché de páginas**.
 
 De manera predeterminada, cuando navegas a una página con el método Frame.Navigate, se crea una nueva instancia de la página. Del mismo modo, si luego vuelves a navegar a la página anterior con el método Frame.GoBack, se asigna una nueva instancia de la página anterior. Sin embargo, el objeto Frame ofrece una memoria caché de página opcional que puede evitar esta creación de instancias. Para que una página se almacene en la memoria caché, usa la propiedad Page.NavigationCacheMode. Si se establece ese modo en Required, se forzará el almacenamiento en caché de la página. Si lo estableces en Enabled, se permitirá su almacenamiento en caché.
 

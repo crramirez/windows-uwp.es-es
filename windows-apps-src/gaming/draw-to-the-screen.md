@@ -5,7 +5,7 @@ description: "Por fin hemos portado el código que dibuja un cubo giratorio en l
 ms.assetid: cc681548-f694-f613-a19d-1525a184d4ab
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1b7431c20e25173a0aa3f8d6ee0d407be869d60a
+ms.openlocfilehash: 1e2039743ba45d577c08c0a6d9c17c7f923b2d86
 
 ---
 
@@ -27,22 +27,14 @@ En OpenGL ES 2.0, el contexto de dibujo se define como un tipo EGLContext que co
 
 Con Direct3D, el proceso de configurar los recursos de gráficos para dibujar en la pantalla es más didáctico y requiere pocas API adicionales. (Pero recuerda que una plantilla Direct3D de Microsoft Visual Studio puede simplificar de manera significativa este proceso). Para obtener un contexto (denominado contexto de dispositivo Direct3D), primero debes obtener un objeto [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) y usarlo para crear y configurar un objeto [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). Estos dos objetos se usan en conjunto para configurar los recursos específicos que necesitas para dibujar en pantalla.
 
-En menos palabras, las API de DXGI contienen sobre todo varias API para administrar recursos que directamente pertenecen al adaptador de gráficos y Direct3D contiene las API para una interfaz entre la GPU y tu programa principal que se ejecuta en la CPU.
+En menos palabras, las API de DXGI contienen sobre todo varias API para administrar recursos que directamente pertenecen al adaptador de gráficos y Direct3D contiene las API para una interfaz entre la GPU y tu programa principal que se ejecuta en la CPU. 
 
 Para que podamos hacer comparaciones en nuestra muestra, estos son los tipos relevantes de cada API:
 
--   [
-              **ID3D11Device1**
-            ](https://msdn.microsoft.com/library/windows/desktop/hh404575): proporciona una representación visual del dispositivo de gráficos y sus recursos.
--   [
-              **ID3D11DeviceContext1**
-            ](https://msdn.microsoft.com/library/windows/desktop/hh404598): proporciona la interfaz para configurar búferes y emitir comandos de representación.
--   [
-              **IDXGISwapChain1**
-            ](https://msdn.microsoft.com/library/windows/desktop/hh404631): la cadena de intercambio es análoga al búfer de reserva en OpenGL ES 2.0. Es la región de la memoria en el adaptador de gráficos que contiene las imágenes finales de representación para mostrar. Se denomina "cadena de intercambio" porque tiene varios búferes que pueden escribirse e "intercambiarse" para presentar la representación más reciente en pantalla.
--   [
-              **ID3D11RenderTargetView**
-            ](https://msdn.microsoft.com/library/windows/desktop/ff476582): contiene el búfer del mapa de bits 2D donde el contexto del dispositivo Direct3D dibuja y, además, presenta la cadena de intercambio. Al igual que con OpenGL ES 2.0, puedes tener varios destinos de representación. Algunos de ellos no se enlazan a la cadena de intercambio, pero se usan para técnicas de sombreado de varios pases.
+-   [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575): proporciona una representación visual del dispositivo de gráficos y sus recursos.
+-   [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598): proporciona la interfaz para configurar búferes y emitir comandos de representación.
+-   [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631): la cadena de intercambio es análoga al búfer de reserva en OpenGL ES 2.0. Es la región de la memoria en el adaptador de gráficos que contiene las imágenes finales de representación para mostrar. Se denomina "cadena de intercambio" porque tiene varios búferes que pueden escribirse e "intercambiarse" para presentar la representación más reciente en pantalla.
+-   [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582): contiene el búfer del mapa de bits 2D donde el contexto del dispositivo Direct3D dibuja y, además, presenta la cadena de intercambio. Al igual que con OpenGL ES 2.0, puedes tener varios destinos de representación. Algunos de ellos no se enlazan a la cadena de intercambio, pero se usan para técnicas de sombreado de varios pases.
 
 En la plantilla, el objeto de representador contiene estos campos:
 
@@ -230,6 +222,6 @@ Este ejemplo pasa por alto gran parte de la complejidad que implica configurar l
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

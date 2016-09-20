@@ -5,8 +5,9 @@ ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
 title: "Exponer información básica de accesibilidad"
 label: Expose basic accessibility information
 template: detail.hbs
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 1c6bc8567b39357d414a46ef2b92197c78bca971
+translationtype: Human Translation
+ms.sourcegitcommit: 05fa9bb674839c255d8b63da04a018e397c84490
+ms.openlocfilehash: a72a49756b5d2828526a39fce50357ae90549aae
 
 ---
 
@@ -29,7 +30,7 @@ En esta tabla, se describe cómo definir un nombre accesible para varios tipos d
 | Imágenes            | El elemento XAML [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) no tiene un equivalente directo con el atributo **alt** de HTML de **img** y elementos similares. Usa [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) para proporcionar un nombre o usa la técnica de subtítulos. Consulta [Nombres accesibles para imágenes](#images). |
 | Elementos de formulario     | El nombre accesible para un elemento de formulario debe ser el mismo que la etiqueta que se muestra para ese elemento. Consulta [Etiquetas y LabeledBy](#labels). |
 | Botones y vínculos | De manera predeterminada, el nombre accesible de un botón o vínculo se basa en el texto visible, usando las mismas reglas descritas en [Nombre del texto interno](#name_from_inner_text). En los casos en los que un botón incluye solo una imagen, usa [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) para proporcionar un equivalente de solo texto de la acción prevista del botón. |
-
+<br/>
 Las mayoría de los elementos contenedores, como paneles, no promueven su contenido como nombre accesible. Esto se debe a que el contenido del elemento debe notificar un nombre y su respectivo rol, no su contenedor. El elemento contenedor puede notificar que se trata de un elemento que tiene elementos secundarios en una representación de automatización de la interfaz de usuario de Microsoft para que la lógica de las tecnologías de asistencia pueda recorrerlo. Pero los usuarios de tecnologías de asistencia, por lo general, no necesitan saber sobre los contenedores y, por consiguiente, la mayoría de los contenedores no llevan nombre.
 
 <span id="role_value"/>
@@ -55,9 +56,7 @@ De manera predeterminada, cualquier clase derivada de [**Control**](https://msdn
 ## Nombre del texto interno  
 Para simplificar el uso de cadenas que ya existen en la interfaz de usuario visible para los valores de nombres accesibles, muchos de los controles y otros elementos de la interfaz de usuario permiten determinar automáticamente un nombre accesible predeterminado en función del texto interno del elemento o a partir de los valores de cadena de las propiedades de contenido.
 
-* [
-              **TextBlock**
-            ](https://msdn.microsoft.com/library/windows/apps/BR209652), [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) y **RichTextBlock** promueven el valor de la propiedad **Text** como nombre accesible predeterminado.
+* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) y **RichTextBlock** promueven el valor de la propiedad **Text** como nombre accesible predeterminado.
 * Todas las subclases [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) usan una técnica iterativa "ToString" para encontrar cadenas en su valor [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) y promueven estas cadenas como nombre accesible predeterminado.
 
 > [!NOTE]
@@ -147,6 +146,6 @@ Ten en cuenta que las propiedades adjuntas, como las propiedades [**AutomationPr
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

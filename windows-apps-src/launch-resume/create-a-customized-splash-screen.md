@@ -22,7 +22,8 @@ ms.openlocfilehash: 6ad43ec4fc865c5aae439693e0cd5b37a5d2c5dc
 
 Muestra una pantalla de presentación más tiempo creando una pantalla de presentación extendida para tu aplicación. Esta pantalla extendida imita la pantalla de presentación que aparece al iniciar la aplicación, pero se puede personalizar. Tanto si lo que quieres es mostrar información en tiempo real sobre la carga como simplemente dar a tu aplicación un poco más de tiempo para preparar la interfaz de usuario inicial, la pantalla de presentación extendida te permite definir la experiencia de inicio.
 
-> **Nota**  La frase "pantalla de presentación extendida" en este tema hace referencia a una pantalla de presentación que permanece en pantalla durante un período de tiempo prolongado. No significa una subclase que se deriva de la clase [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763).
+> 
+            **Nota**  La frase "pantalla de presentación extendida" en este tema hace referencia a una pantalla de presentación que permanece en pantalla durante un período de tiempo prolongado. No significa una subclase que se deriva de la clase [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763).
 
  
 
@@ -69,7 +70,8 @@ Agrega el siguiente código para definir los elementos [**Canvas**](https://msdn
     </Grid>
 ```
 
-**Nota**  Este código establece el ancho del control [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) en 20 píxeles. Puedes establecer manualmente el ancho en un valor adecuado para tu aplicación; sin embargo, los controles con un ancho inferior a 20 píxeles no se representarán.
+
+            **Nota**  Este código establece el ancho del control [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) en 20 píxeles. Puedes establecer manualmente el ancho en un valor adecuado para tu aplicación; sin embargo, los controles con un ancho inferior a 20 píxeles no se representarán.
 
  
 
@@ -213,7 +215,8 @@ Usa estos pasos para definir métodos para mostrar correctamente tu pantalla de 
     }
     ```
 
-    **Nota**  Antes de tratar de obtener la ubicación de la imagen, asegúrate de que la variable de clase (`splash`) contenga un objeto [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, como se muestra en el ejemplo.
+    
+            **Nota**  Antes de tratar de obtener la ubicación de la imagen, asegúrate de que la variable de clase (`splash`) contenga un objeto [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) válido, como se muestra en el ejemplo.
 
      
 
@@ -259,7 +262,8 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 ## Código completo
 
 
-> **Nota**  El código siguiente difiere ligeramente de los fragmentos de código mostrados en los pasos anteriores.
+> 
+            **Nota**  El código siguiente difiere ligeramente de los fragmentos de código mostrados en los pasos anteriores.
 -   ExtendedSplash.xaml incluye un botón `DismissSplash`. Al hacer clic en este botón, el controlador de eventos `DismissSplashButton_Click` llama al método `DismissExtendedSplash`. En la aplicación, llama a `DismissExtendedSplash` cuando la aplicación haya terminado de cargar los recursos o de inicializar su interfaz de usuario.
 -   Esta aplicación también usa una plantilla de proyecto de aplicación para UWP que usa la navegación [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682). Como resultado, en App.xaml.cs, el controlador de activación de inicio ([**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)) define un `rootFrame` y lo usa para establecer el contenido de la ventana de la aplicación.
 

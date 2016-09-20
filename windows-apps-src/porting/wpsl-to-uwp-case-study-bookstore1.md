@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
 description: "En este tema se presenta un caso práctico de migración de una aplicación para WindowsPhone Silverlight muy simple a una aplicación para la Plataforma universal de Windows (UWP) de Windows10."
 title: "Caso práctico de Windows Phone Silverlight a UWP, Bookstore1"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: dbffb4245efece2d39b4eba8979e323fd71626d0
 

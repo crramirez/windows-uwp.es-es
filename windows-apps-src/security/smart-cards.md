@@ -4,8 +4,8 @@ description: "En este tema se explica la manera en que las aplicaciones para la 
 ms.assetid: 86524267-50A0-4567-AE17-35C4B6D24745
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 6e673ce75ee7f178332da6fc9ae68dbf01a9d7ce
+ms.sourcegitcommit: 2ea21aeee5dd93bb44de3a1793b352d2046b3839
+ms.openlocfilehash: d0646aca9863f3f326df9b3a86adb2481fdcda70
 
 ---
 
@@ -15,7 +15,7 @@ ms.openlocfilehash: 6e673ce75ee7f178332da6fc9ae68dbf01a9d7ce
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este tema se explica la manera en que las aplicaciones para la Plataforma universal de Windows (UWP) pueden usar tarjetas inteligentes para conectar a los usuarios para proteger los servicios de red, incluido cómo obtener acceso a los lectores de tarjetas inteligentes físicas, crear tarjetas inteligentes virtuales, comunicarse con tarjetas inteligentes, autenticar usuarios, restablecer los PIN de usuario y quitar o desconectar tarjetas inteligentes.
+En este tema se explica la manera en que las aplicaciones para la Plataforma universal de Windows (UWP) pueden usar tarjetas inteligentes para conectar a los usuarios para proteger los servicios de red, incluido cómo obtener acceso a los lectores de tarjetas inteligentes físicas, crear tarjetas inteligentes virtuales, comunicarse con tarjetas inteligentes, autenticar usuarios, restablecer los PIN de usuario y quitar o desconectar tarjetas inteligentes. 
 
 ## Configurar el manifiesto de la aplicación
 
@@ -116,9 +116,7 @@ Ahora que tenemos definida la lógica de los desafíos de autenticación, podemo
 
 2.  A continuación, pasa el valor del desafío de la tarjeta y la clave de administración proporcionada por el servicio o por la herramienta de administración al **ChallengeResponseAlgorithm** que hemos definido en el ejemplo anterior.
 
-3.  [
-              **VerifyResponseAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/dn297627) devolverá **true** si la autenticación es correcta.
+3.  [**VerifyResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn297627) devolverá **true** si la autenticación es correcta.
 
 ```cs
 bool verifyResult = false;
@@ -156,9 +154,7 @@ bool result = await provisioning.RequestPinChangeAsync();
 Para solicitar el restablecimiento de un PIN:
 
 1.  Llama a [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825) para iniciar la operación. Esta llamada incluye un método [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701) que representa la tarjeta inteligente y la solicitud de restablecimiento del PIN.
-2.  [
-              **SmartCardPinResetHandler**
-            ](https://msdn.microsoft.com/library/windows/apps/dn297701) proporciona información que nuestro elemento **ChallengeResponseAlgorithm**, encapsulado en una llamada a [**SmartCardPinResetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn297693) usa para comparar el valor del desafío de la tarjeta con la clave de administración proporcionada por el servicio o por la herramienta de administración con el fin de autenticar la solicitud.
+2.  [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701) proporciona información que nuestro elemento **ChallengeResponseAlgorithm**, encapsulado en una llamada a [**SmartCardPinResetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn297693), usa para comparar el valor del desafío de la tarjeta con la clave de administración proporcionada por el servicio o por la herramienta de administración con el fin de autenticar la solicitud.
 
 3.  Si el desafío es correcto, la llamada a [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825) finaliza y devuelve **true** si el PIN se restableció correctamente.
 
@@ -208,6 +204,6 @@ bool result = await SmartCardProvisioning
 ```
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

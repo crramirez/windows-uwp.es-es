@@ -4,7 +4,6 @@ description: Migrar de iOS a UWP
 Search.SourceType: Video
 title: Migrar de iOS a UWP
 ms.assetid: 7a05751d-02df-4240-9ba5-d95f65a7a9c5
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 7f6160d651a4264d81ac1a1c9a011e32f53778b0
 
@@ -28,7 +27,7 @@ En la actualidad, Windows se ejecuta en un gran número de dispositivos. La UWP 
 | Tema | Descripción |
 |-------|-------------|
 | [Selección de un enfoque para iOS y desarrollo de aplicaciones para UWP](selecting-an-approach-to-ios-and-uwp-app-development.md) | ¿Cuáles son las opciones al desarrollar aplicaciones multiplataforma? |
-| [Introducción a UWP para desarrolladores de iOS](getting-started-with-uwp-for-ios-developers.md) | Si eres desarrollador de iOS y estás pensando en desarrollar aplicaciones para Windows 10, estos documentos son un excelente punto de partida. |
+| [Introducción a UWP para desarrolladores de iOS](getting-started-with-uwp-for-ios-developers.md) | Si eres desarrollador de iOS y estás pensando en desarrollar aplicaciones para Windows10, estos documentos son un excelente punto de partida. |
 | [Configuración del Mac con Windows 10](setting-up-your-mac-with-windows-10.md) | Usa tu Mac actual para desarrollar aplicaciones para Windows. |
 
 ## Temas relacionados

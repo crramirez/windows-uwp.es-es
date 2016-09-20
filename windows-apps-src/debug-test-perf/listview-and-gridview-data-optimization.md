@@ -4,15 +4,15 @@ ms.assetid: 3A477380-EAC5-44E7-8E0F-18346CC0C92F
 title: "Virtualización de datos de ListView y GridView"
 description: "Mejora el rendimiento y el tiempo de inicio de las clases ListView y GridView mediante la virtualización de datos."
 translationtype: Human Translation
-ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
-ms.openlocfilehash: 26faa92e98547844af2be1720c458d793ac2f3ac
+ms.sourcegitcommit: e44dd5c2c3c9fb252062af3a6a9f409e1777a878
+ms.openlocfilehash: 0a16dc27db6fb1e04e1ab0c575077ca10b97f12d
 
 ---
 # Virtualización de datos de ListView y GridView
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Nota** Para obtener más información, consulta la sesión //build/ [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView](https://channel9.msdn.com/Events/Build/2013/3-158) (Aumentar considerablemente el rendimiento cuando los usuarios interactúan con grandes cantidades de datos de las clases GridView y ListView).
+**Nota** Para obtener más información, consulta la sesión //build/ [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView (Aumentar considerablemente el rendimiento cuando los usuarios interactúan con grandes cantidades de datos de las clases GridView y ListView)](https://channel9.msdn.com/Events/Build/2013/3-158).
 
 Mejorar el rendimiento y el tiempo de inicio de [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) mediante la virtualización de datos. Para la virtualización de la interfaz de usuario, reducción de elementos y la actualización progresiva de elementos, consulta el tema [Optimización de ListView y GridView UI](optimize-gridview-and-listview.md).
 
@@ -23,18 +23,16 @@ Se necesita un método de virtualización de datos para un conjunto de datos que
 -   El origen del conjunto de datos (disco local, red o nube)
 -   El consumo de memoria total de la aplicación
 
-**Nota** Ten en cuenta que existe una característica habilitada de manera predeterminada para las clases ListView y GridView, que muestra elementos visuales de marcador de posición temporales mientras el usuario realiza un movimiento panorámico o de desplazamiento rápido. A medida que se cargan los datos, estos elementos visuales de marcador de posición se reemplazan por la plantilla de elemento. Para desactivar la característica, puedes establecer [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) en false, aunque si lo haces, te recomendamos que uses el atributo x:Phase para representar de manera progresiva los elementos de la plantilla de elemento. Consulta [Actualizar los elementos ListView y GridView de forma progresiva](optimize-gridview-and-listview.md#update-items-incrementally).
+**Nota** Ten en cuenta que existe una característica habilitada de manera predeterminada para las clases ListView y GridView que muestra elementos visuales de marcador de posición temporales mientras el usuario realiza un movimiento panorámico o de desplazamiento rápido. A medida que se cargan los datos, estos elementos visuales de marcador de posición se reemplazan por la plantilla de elemento. Para desactivar la característica, puedes establecer [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) en false, aunque si lo haces, te recomendamos que uses el atributo x:Phase para representar de manera progresiva los elementos de la plantilla de elemento. Consulta [Actualizar los elementos ListView y GridView de forma progresiva](optimize-gridview-and-listview.md#update-items-incrementally).
 
 Aquí encontrarás más información acerca de las técnicas de virtualización de datos incremental y de acceso aleatorio.
 
-## Virtualización de datos incremental
+##  Virtualización de datos incremental
 
 La virtualización de datos incremental carga los datos en secuencia. Un [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) que usa la virtualización de datos incremental puede usarse para ver una colección de un millón de elementos, pero solo 50 elementos se cargan inicialmente. A medida que el usuario realiza un movimiento panorámico/desplazamiento, se cargan los 50 siguientes. A medida que se cargan los elementos, se reduce el tamaño del control de la barra de desplazamiento. Para este tipo de virtualización de datos, debes escribir una clase de origen de datos que implemente estas interfaces.
 
 -   [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx)
--   [
-              **INotifyCollectionChanged**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) (C#/VB) o [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) (C++/CX)
+-   [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) (C#/VB) o [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) (C++/CX)
 -   [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916)
 
 Un origen de datos como el siguiente, es una lista en memoria que se puede extender continuamente. El control de elementos solicitará elementos con el indexador [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) estándar y las propiedades de recuento. El recuento debe representar el número de elementos localmente, no el tamaño real del conjunto de datos.
@@ -43,18 +41,14 @@ Cuando el control de elementos se acerque al final de los datos existentes, llam
 
 ## Virtualización de datos de acceso aleatorio
 
-La virtualización de datos de acceso aleatorio permite cargar desde un punto arbitrario del conjunto de datos. Un [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) que usa la virtualización de datos de acceso aleatorio, usado para ver una colección de un millón de elementos, puede cargar los elementos del 100 000 al 100 050. Si el usuario se mueve al principio de la lista, el control carga los elementos del 1 al 50. En cualquier momento, el control de la barra de desplazamiento indica que **ListView** contiene un millón de elementos. El control de posición de la barra de desplazamiento se ubica en relación con el lugar donde se encuentran los elementos visibles en el conjunto de datos completo de la colección. Este tipo de virtualización de datos puede reducir significativamente los requisitos de memoria y los tiempos de carga de la colección. Para habilitarla, debes escribir una clase de origen de datos que recupere los datos a petición y administre una memoria caché local e implemente estas interfaces.
+La virtualización de datos de acceso aleatorio permite cargar desde un punto arbitrario del conjunto de datos. Un [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) que usa la virtualización de datos de acceso aleatorio, usado para ver una colección de un millón de elementos, puede cargar los elementos del 100000 al 100050. Si el usuario se mueve al principio de la lista, el control carga los elementos del 1 al 50. En cualquier momento, el control de la barra de desplazamiento indica que **ListView** contiene un millón de elementos. El control de posición de la barra de desplazamiento se ubica en relación con el lugar donde se encuentran los elementos visibles en el conjunto de datos completo de la colección. Este tipo de virtualización de datos puede reducir significativamente los requisitos de memoria y los tiempos de carga de la colección. Para habilitarla, debes escribir una clase de origen de datos que recupere los datos a petición y administre una memoria caché local e implemente estas interfaces.
 
 -   [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx)
--   [
-              **INotifyCollectionChanged**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) (C#/VB) o [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) (C++/CX)
+-   [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) (C#/VB) o [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) (C++/CX)
 -   (Opcional) [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)
 -   (Opcional) [**ISelectionInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877074)
 
-[
-              **IItemsRangeInfo**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn877070) proporciona información sobre los elementos que está usando activamente el control. El control de elementos llamará a este método siempre que cambie su vista e incluirá estos dos conjuntos de intervalos.
+[**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070) proporciona información sobre los elementos que está usando activamente el control. El control de elementos llamará a este método siempre que cambie su vista e incluirá estos dos conjuntos de intervalos.
 
 -   El conjunto de elementos que existe en la ventanilla.
 -   Un conjunto de elementos no virtualizados que está usando el control que puede que no estén en la ventanilla.
@@ -62,14 +56,14 @@ La virtualización de datos de acceso aleatorio permite cargar desde un punto ar
     -   El elemento especificado.
     -   El primer elemento.
 
-Al implementar [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070), el origen de datos sabe qué elementos deben capturarse y almacenarse en caché, y cuándo eliminarse de los datos de caché que ya no son necesarios. **IItemsRangeInfo** usa objetos de la clase [**ItemIndexRange**](https://msdn.microsoft.com/library/windows/apps/Dn877081) para describir un conjunto de elementos en función del índice de la colección. Esto permite evitar que se usen punteros de elemento, que podrían no ser correctos o estables. **IItemsRangeInfo** está diseñado para usarse en una sola instancia de un control de elementos, porque se basa en la información de estado para ese control de elementos. Si varios controles de elementos necesitan acceso a los mismos datos, necesitarás una instancia por separado del origen de datos para cada uno. Pueden compartir una memoria caché común, pero la lógica de depuración de la caché será más complicada.
+Al implementar [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070), el origen de datos sabe qué elementos deben capturarse y almacenarse en caché, y cuándo eliminarse de los datos de caché que ya no son necesarios. **IItemsRangeInfo** usa objetos [**ItemIndexRange**](https://msdn.microsoft.com/library/windows/apps/Dn877081) para describir un conjunto de elementos en función del índice de la colección. Esto permite evitar que se usen punteros de elemento, que podrían no ser correctos o estables. **IItemsRangeInfo** está diseñado para usarse en una sola instancia de un control de elementos, porque se basa en la información de estado para ese control de elementos. Si varios controles de elementos necesitan acceso a los mismos datos, necesitarás una instancia por separado del origen de datos para cada uno. Pueden compartir una memoria caché común, pero la lógica de depuración de la caché será más complicada.
 
 Esta es la estrategia básica para el origen de datos de la virtualización de datos de acceso aleatorio.
 
 -   Cuando se solicite un elemento
     -   Si está disponible en la memoria, devuélvelo.
     -   Si no lo está, devuelve null o un elemento de marcador de posición.
-    -   Usa la solicitud de un elemento (o la información del rango de [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)) para saber qué elementos son necesarios y para capturar datos de los elementos del backend de forma asincrónica. Una vez hayas recuperado los datos, crea una notificación de cambio mediante la interfaz [**INotifyCollectionChanged**]((https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) o [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052), para que el control de elementos tenga conocimiento del nuevo elemento.
+    -   Usa la solicitud de un elemento (o la información del rango de [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)) para saber qué elementos son necesarios y para capturar datos de los elementos del backend de forma asincrónica. Después de recuperar los datos, genera una notificación de cambio a través de [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) o [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) para que el control de elementos sepa del nuevo elemento.
 -   (Opcionalmente) A medida que la ventanilla del control de elementos cambia, identifica qué elementos son necesarios del origen de datos a través de la implementación de [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070).
 
 Además, la estrategia de cuándo cargar elementos de datos, la cantidad de carga y qué elementos mantener en memoria depende de tu aplicación. Algunas consideraciones generales que se deben tener en cuenta:
@@ -89,6 +83,6 @@ Además, la estrategia de cuándo cargar elementos de datos, la cantidad de carg
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

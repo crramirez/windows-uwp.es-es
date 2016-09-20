@@ -1,17 +1,17 @@
 ---
 author: drewbatgit
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
-description: "En este artículo se describe cómo usar las clases SceneAnalysisEffect y FaceDetectionEffect para analizar el contenido del flujo de vista previa de captura de multimedia."
-title: "Análisis de la escena para la captura multimedia"
+description: "En este artículo se describe cómo usar las clases SceneAnalysisEffect y FaceDetectionEffect para analizar el contenido de la secuencia de vista previa de captura de multimedia."
+title: "Efectos para analizar fotogramas de cámara"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 891c0d274c2d3fb82f855011158ecd3ccdcd87b3
+ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
+ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
 
 ---
 
-# Análisis de la escena para la captura multimedia
+# Efectos para analizar fotogramas de cámara
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe cómo usar las clases [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) y [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) para analizar el contenido de la secuencia de vista previa de captura de multimedia.
@@ -112,7 +112,8 @@ No todos los dispositivos tienen un dispositivo de captura que puede ajustar el 
 
 ## Temas relacionados
 
-* [Capturar fotografías y vídeos con MediaCapture](capture-photos-and-video-with-mediacapture.md)
+* [Cámara](camera.md)
+* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -123,6 +124,6 @@ No todos los dispositivos tienen un dispositivo de captura que puede ajustar el 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

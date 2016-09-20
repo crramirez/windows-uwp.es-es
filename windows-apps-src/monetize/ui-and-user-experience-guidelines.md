@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "Obtén las directrices de la interfaz de usuario y de la experiencia del usuario para los anuncios en aplicaciones."
 title: Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios en aplicaciones
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a
 
@@ -80,7 +79,7 @@ Nuestro objetivo es ayudarte a lograr esta distinción. Dado que conoces tu apli
 
     * Si optas por ahorrar ancho de banda del usuario en función de [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx), existen algunas API en la clase **ConnectionProfile** que pueden resultarte útiles.
 
-* Usa el tiempo de espera predeterminado (30 s), a menos que haya una razón válida para cambiarlo, pero no uses menos de 10 s.
+* Usa el tiempo de espera predeterminado (30s), a menos que haya una razón válida para cambiarlo, pero no uses menos de 10s.
 
     * Los anuncios en vídeo tardan mucho más tiempo en descargarse que los banners, especialmente en los mercados que no tienen conexiones de alta velocidad.
 

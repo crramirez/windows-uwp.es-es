@@ -11,7 +11,7 @@ ms.openlocfilehash: f2522afa91abe26303a85cbfbabd5ec5b3dba59c
 
 # Directrices para la ayuda de la aplicación
 
-\ [Actualizado para aplicaciones para la Plataforma universal de Windows (UWP) en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\ [Actualizado para aplicaciones para la Plataforma universal de Windows (UWP) en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Las aplicaciones pueden ser complejas, por lo que proporcionar una ayuda eficaz a los usuarios puede mejorar enormemente su experiencia. No todas las aplicaciones necesitan proporcionar ayuda para los usuarios, y el tipo de ayuda que se proporciona puede variar mucho en función de la aplicación y de cómo la van a emplear los usuarios.
 
@@ -29,15 +29,20 @@ Un usuario no buscará en el contenido de ayuda a menos que ya tenga un problema
 
 Toda ayuda, independientemente del tipo, debe seguir estos principios básicos:
 
--   **Fácil de entender:** Una ayuda que confunda al usuario será peor que no ofrecer ninguna ayuda.
+-   
+            **Fácil de entender:** Una ayuda que confunda al usuario será peor que no ofrecer ninguna ayuda.
 
--   **Sencilla:** los usuarios que buscan ayuda quieren respuestas claras presentadas de manera directa.
+-   
+            **Sencilla:** los usuarios que buscan ayuda quieren respuestas claras presentadas de manera directa.
 
--   **Pertinente:** Los usuarios no quieren ponerse a buscar el problema específico. Quieren que primero se presente la ayuda apropiada (esto se denomina "ayuda contextual") o una interfaz fácil de navegar.
+-   
+            **Pertinente:** Los usuarios no quieren ponerse a buscar el problema específico. Quieren que primero se presente la ayuda apropiada (esto se denomina "ayuda contextual") o una interfaz fácil de navegar.
 
--   **Directa:** Cuando un usuario busca ayuda, quiere ver algo que le ayude. Es decir, si la aplicación incluye páginas sobre informes de errores, cómo proporcionar comentarios, ver las condiciones del servicio o funciones similares, estas deben incluirse como enlaces o pies de página en la página de la ayuda principal y no como puntos importantes,
+-   
+            **Directa:** Cuando un usuario busca ayuda, quiere ver algo que le ayude. Es decir, si la aplicación incluye páginas sobre informes de errores, cómo proporcionar comentarios, ver las condiciones del servicio o funciones similares, estas deben incluirse como enlaces o pies de página en la página de la ayuda principal y no como puntos importantes,
 
--   **Coherente:** Independientemente de su tipo, la ayuda forma parte de la aplicación y debe tratarse como cualquier otra parte de la interfaz de usuario. Los mismos principios de diseño, facilidad de uso, accesibilidad y estilo que se usan en el resto de la aplicación también deben estar presentes en la ayuda que se ofrece.
+-   
+            **Coherente:** Independientemente de su tipo, la ayuda forma parte de la aplicación y debe tratarse como cualquier otra parte de la interfaz de usuario. Los mismos principios de diseño, facilidad de uso, accesibilidad y estilo que se usan en el resto de la aplicación también deben estar presentes en la ayuda que se ofrece.
 
 ## <span id="types_of_help"></span><span id="TYPES_OF_HELP"></span>Tipos de ayuda
 

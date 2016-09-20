@@ -5,8 +5,9 @@ title: "Interacciones táctiles"
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: a78dd1030e653d1cf0a1d7f191b4768e5a99860a
+ms.openlocfilehash: ca4ab33a58391f36e376323ca29d27961a2a7404
 
 ---
 
@@ -620,16 +621,12 @@ Todos los eventos de puntero, los eventos de gestos y los eventos de manipulaci�
 
 * [Controlar la entrada de puntero](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
-            
-          
-            **Muestras**
+**Muestras**
 * [Ejemplo de entrada básica](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Muestra de entrada de latencia baja](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Muestra de modo de interacción del usuario](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Muestra de elementos visuales de foco](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-            
-          
-            **Muestras de archivo**
+* [Focus visuals sample (Muestra de elementos visuales de foco)](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+**Muestras de archivo**
 * [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: muestra de eventos de entrada de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Muestra de desplazamiento, movimiento panorámico y zoom XAML](http://go.microsoft.com/fwlink/p/?linkid=251717)
@@ -644,6 +641,6 @@ Todos los eventos de puntero, los eventos de gestos y los eventos de manipulaci�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,6 @@ title: "Introducción al diseño de aplicaciones para la Plataforma universal de
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 label: Intro to UWP app design
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: ec154ec64ba18badb5f81b59e76fc04e539de1a8
 
@@ -29,7 +28,7 @@ En este artículo se describen las características de la interfaz de usuario y 
 
 Las aplicaciones para UWP ajustan automáticamente el tamaño de los controles, las fuentes y otros elementos de la interfaz de usuario para que sean legibles en todos los dispositivos.
 
-Cuando la aplicación se ejecuta en un dispositivo, el sistema usa un algoritmo para normalizar la manera en que los elementos de la interfaz de usuario se muestran en la pantalla. Este algoritmo de escalado tiene en cuenta la distancia de visualización y la densidad de la pantalla (píxeles por pulgada) para optimizar el tamaño percibido (en lugar del tamaño físico). El algoritmo de escalado garantiza que una fuente de 24 px en un Surface Hub a 3 metros de distancia sea tan legible para el usuario como una fuente de 24 px en un teléfono de 5 pulgadas a unos centímetros de distancia.
+Cuando la aplicación se ejecuta en un dispositivo, el sistema usa un algoritmo para normalizar la manera en que los elementos de la interfaz de usuario se muestran en la pantalla. Este algoritmo de escalado tiene en cuenta la distancia de visualización y la densidad de la pantalla (píxeles por pulgada) para optimizar el tamaño percibido (en lugar del tamaño físico). El algoritmo de escalado garantiza que una fuente de 24px en un Surface Hub a 3 metros de distancia sea tan legible para el usuario como una fuente de 24px en un teléfono de 5 pulgadas a unos centímetros de distancia.
 
 ![distancias de visualización para diferentes dispositivos](images/1910808-hig-uap-toolkit-03.png)
 
@@ -47,7 +46,8 @@ En la ilustración siguiente se muestran los elementos de diseño que no se asig
 
 ![elementos de diseño que no se alinean a la cuadrícula de píxeles de 4 x 4](images/rsp-design/offthegridillustration.png)
 
-**Sugerencia**   Al crear bocetos de pantalla en los programas de edición de imágenes, establece el valor de PPP en 72 y las dimensiones de imagen en la resolución eficaz de la clase de tamaño que quieres obtener. (Para obtener una lista de clases de tamaño y resoluciones eficaces, consulta la sección [recomendaciones para las clases de tamaño específico](#sizeclasses) de este artículo).
+
+            **Sugerencia**   Al crear bocetos de pantalla en los programas de edición de imágenes, establece el valor de PPP en 72 y las dimensiones de imagen en la resolución eficaz de la clase de tamaño que quieres obtener. (Para obtener una lista de clases de tamaño y resoluciones eficaces, consulta la sección [recomendaciones para las clases de tamaño específico](#sizeclasses) de este artículo).
 
 
 ### Entrada universal e interacciones inteligentes
@@ -175,7 +175,7 @@ En este ejemplo se muestra cómo se puede adaptar a una única columna de conten
 
 ![redistribuir los elementos de diseño](images/rsp-design/rspd-reflow.png)
 
-### <span id="_____________Reveal___________"></span><span id="_____________reveal___________"></span><span id="_____________REVEAL___________"></span> Mostrar
+### <span id="_____________Reveal___________"></span><span id="_____________reveal___________"></span><span id="_____________REVEAL___________"></span>  Mostrar
 
 Puedes mostrar la interfaz de usuario según la superficie de la pantalla o cuando el dispositivo admite funcionalidades adicionales, situaciones específicas u orientaciones de pantalla preferidas.
 

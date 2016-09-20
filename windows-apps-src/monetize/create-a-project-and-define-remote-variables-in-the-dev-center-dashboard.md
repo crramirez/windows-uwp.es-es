@@ -1,36 +1,46 @@
 ---
 author: mcleanbyron
-Description: Before you can run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must create a project and define your remote variables in the Dev Center dashboard.
-title: Create a project and define remote variables in the Dev Center dashboard
+Description: "Antes de poder ejecutar un experimento en tu aplicación para la Plataforma universal de Windows (UWP) con pruebas A/B, debes crear un proyecto y definir tus variables remotas en el panel del Centro de desarrollo."
+title: Crear un proyecto y definir variables remotas en el panel del Centro de desarrollo
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: ea455892717546f7f789054609664ca1c0017699
+
 ---
 
-# Create a project and define remote variables in the Dev Center dashboard
+# Crear un proyecto y definir variables remotas en el panel del Centro de desarrollo
 
-To get started with experimentation, create an experimentation [project](run-app-experiments-with-a-b-testing.md#terms) for your app in the Dev Center dashboard and define the remote variables that your app can access.
+Para comenzar con la experimentación, crea un [proyecto](run-app-experiments-with-a-b-testing.md#terms) de experimentación para tu aplicación en el panel del Centro de desarrollo y define las variables remotas a las que puede acceder la aplicación.
 
-1. Sign in to the [Dev Center dashboard](https://dev.windows.com/overview).
-2. Under **Your apps**, select the app for which you want to create an experiment.
-3. In the navigation pane, select **Services** and then select **Experimentation**.
-4. On the **Experimentation** page, click the **New project** button in the **Projects** section. If you have already created one or more projects, those projects are listed in the **Projects** section.
-5. In the **New project** page, enter a name for your new project.
-6. In the **Remote variables** section, add the [variables](run-app-experiments-with-a-b-testing.md#terms) that you want to be available to all experiments in this project, and define default values for each variable. The default values you specify here are used for the control group of the experiments, and for any users who do not participate in the experiment.
-  1. If the **Remote variables** section is collapsed, click **Show** on the section heading.
-  2. Click **Add variable** to create each new variable that you want to be available to any experiment in this project, and type the variable name and the default value of the variable.
-  3. When you are done adding variables, click **Save**.
-3. In the **SDK integration** section, make note of the [API key](run-app-experiments-with-a-b-testing.md#terms) value. When you [code your app for experimentation](code-your-experiment-in-your-app.md), you must reference this API key in your code so you can receive variation data and report view and conversion events to Dev Center.
+1. Inicia sesión en el [panel del Centro de desarrollo](https://dev.windows.com/overview).
+2. En **Tus aplicaciones**, selecciona la aplicación para la que deseas crear un experimento.
+3. En el panel de navegación, selecciona **Servicios** y, a continuación, selecciona **Experimentación**.
+4. En la página **Experimentación**, haz clic en el botón **Nuevo proyecto** en la sección **Proyectos**. Si ya creaste uno o varios proyectos, estos se enumeran en la sección **Proyectos**.
+5. En la página **Nuevo proyecto**, escribe un nombre para el nuevo proyecto.
+6. En la sección **Variables remotas**, agrega las [variables](run-app-experiments-with-a-b-testing.md#terms) que quieres que estén disponibles para todos los experimentos en este proyecto y define los valores predeterminados para cada variable. Los valores predeterminados que especificaste aquí se usan para el grupo de control de los experimentos y para los usuarios que no participen en el experimento.
+  1. Si la sección **Variables remotas** está contraída, haz clic en **Mostrar** en el encabezado de la sección.
+  2. Haz clic en **Agregar variable** para crear cada nueva variable que quieras que esté disponible para cualquier experimento en este proyecto y escribe el nombre de la variable y el valor predeterminado de la variable.
+  3. Cuando hayas terminado de agregar variables, haz clic en **Guardar**.
+3. En la sección **Integración de SDK**, asegúrate de anotar el valor del [id. de proyecto](run-app-experiments-with-a-b-testing.md#terms). Cuando [codifiques tu aplicación para los experimentos](code-your-experiment-in-your-app.md), debes hacer referencia a este id. de proyecto en el código para que puedas recibir datos de variación y notificar los eventos de vista y conversión al Centro de desarrollo.
 
->**Note** You cannot edit, add, or remove remote variables while an experiment in the project is active. This limitation helps protect the integrity of the data for the control group for the active experiment.
+>**Nota**&nbsp;&nbsp;No puedes editar, agregar o quitar variables remotas mientras haya un experimento activo en el proyecto. Esta limitación ayuda a proteger la integridad de los datos para el grupo de control del experimento activo.
 
 
-## Next steps
+## Pasos siguientes
 
-After you create a project, you can [code your app for experimentation](code-your-experiment-in-your-app.md) to start retrieving remote variable values in your app, and you can [create an experiment in the project](define-your-experiment-in-the-dev-center-dashboard.md).
+Después de crear un proyecto, puedes [codificar la aplicación para la experimentación](code-your-experiment-in-your-app.md) para comenzar a recuperar los valores de variables remotos en la aplicación y puedes [crear un experimento en el proyecto](define-your-experiment-in-the-dev-center-dashboard.md).
 
-## Related topics
+## Temas relacionados
 
-* [Code your app for experimentation](code-your-experiment-in-your-app.md)
-* [Define your experiment in the Dev Center dashboard](define-your-experiment-in-the-dev-center-dashboard.md)
-* [Manage your experiment in the Dev Center dashboard](manage-your-experiment.md)
-* [Create and run your first experiment with A/B testing](create-and-run-your-first-experiment-with-a-b-testing.md)
-* [Run app experiments with A/B testing](run-app-experiments-with-a-b-testing.md)
+* [Programar tu aplicación para los experimentos](code-your-experiment-in-your-app.md)
+* [Definir el experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md)
+* [Administrar el experimento en el panel del Centro de desarrollo](manage-your-experiment.md)
+* [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
+* [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

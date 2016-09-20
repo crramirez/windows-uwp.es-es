@@ -3,7 +3,6 @@ author: mtoepke
 title: "Compatibilidad con la orientación de pantalla (DirectX y C++)"
 description: "Aquí se comentan los procedimientos recomendados para controlar la rotación de pantalla en una aplicación DirectX para UWP, de modo que el hardware de gráficos del dispositivo Windows 10 se pueda usar de manera eficaz."
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 8da32494e0bb0bd48d485c946df1c9a5baec7fbe
 
@@ -344,7 +343,8 @@ En lo que respecta al proceso, estás realizando un poco más de trabajo que si 
 
     La matriz correcta se selecciona según los datos proporcionados por Windows 10 (como los resultados de [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)) para determinar la orientación de la pantalla, y se multiplicarán por las coordenadas de cada píxel (Direct2D) o vértice (Direct3D) en la escena, girándolos con eficacia para alinearlo con la orientación de la pantalla. (Ten en cuenta que en Direct2D, el origen de la pantalla se define como la esquina superior izquierda, mientras que Direct3D el origen se define como el centro lógico de la ventana).
 
-> **Nota** Para obtener más información sobre las transformaciones 2D usadas para la rotación y cómo definirlas, consulta el tema sobre [definición de matrices para la rotación de pantalla (2D)](#defining_matrices_2d). Para obtener más información sobre las transformaciones 3D usadas para la rotación, consulta el tema sobre [definición de matrices para la rotación de pantalla (3D)](#defining_matrices_3d).
+> 
+            **Nota** Para obtener más información sobre las transformaciones 2D usadas para la rotación y cómo definirlas, consulta el tema sobre [definición de matrices para la rotación de pantalla (2D)](#defining_matrices_2d). Para obtener más información sobre las transformaciones 3D usadas para la rotación, consulta el tema sobre [definición de matrices para la rotación de pantalla (3D)](#defining_matrices_3d).
 
  
 
@@ -446,7 +446,8 @@ default:
 
 Una vez que tengas la matriz de rotación y el origen correctos para la imagen 2D, establécelo con una llamada a [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) entre las llamadas a [**ID2D1DeviceContext::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/dd371768) y [**ID2D1DeviceContext::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/dd371924).
 
-**Advertencia** Direct2D no tiene ninguna pila de transformación. Si la aplicación también está usando [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) como parte de su código de representación, esta matriz necesita multiplicarse posteriormente para cualquier otra transformación que hayas aplicado.
+
+            **Advertencia** Direct2D no tiene ninguna pila de transformación. Si la aplicación también está usando [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) como parte de su código de representación, esta matriz necesita multiplicarse posteriormente para cualquier otra transformación que hayas aplicado.
 
  
 

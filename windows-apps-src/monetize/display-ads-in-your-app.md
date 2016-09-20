@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
 description: "El SDK de Microsoft Store Engagement and Monetization proporciona varias maneras de rentabilizar tu aplicación con anuncios."
 title: "Mostrar anuncios en tu aplicación"
-translationtype: Human Translation
 ms.sourcegitcommit: 8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707
 ms.openlocfilehash: c79ba96908cc7b52afefbe44c3f56ce009c87f16
 

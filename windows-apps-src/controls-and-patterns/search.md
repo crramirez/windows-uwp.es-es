@@ -5,7 +5,6 @@ title: "Búsqueda y buscar en la página"
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: cd746f81e8cca27c5111f3d15342d1def0f874dc
 
@@ -51,7 +50,8 @@ La búsqueda es una función común y los usuarios encontrarán la interfaz de u
 
 Entre algunos ámbitos comunes de la búsqueda se incluyen:
 
-**Global** y **contextual o refinar.**  Búsqueda en varias fuentes de contenido en la nube y local. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
+
+            **Global** y **contextual o refinar.**  Búsqueda en varias fuentes de contenido en la nube y local. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
 
 **Web.**  Buscar en un índice web. Los resultados incluyen páginas, entidades y respuestas.
 
@@ -152,63 +152,63 @@ Buscar en la página permite que los usuarios encuentren coincidencias de texto 
 
         -   Cuadro de entrada
         -   Botones Anterior y Siguiente
-        -   Un contador de coincidencias
-        -   Cerrar (solo escritorio)
-    -   La vista debe resaltar coincidencias y desplazarse para mostrar la siguiente coincidencia en pantalla. Los usuarios pueden moverse rápidamente por el documento mediante el uso de los botones **Anterior** y **Siguiente**, y mediante el uso de las barras de desplazamiento o la manipulación directa con la funcionalidad táctil.
-
+        -   Un contador de coincidencias - Cerrar (solo escritorio) - La vista debe resaltar coincidencias y desplazarse para mostrar la siguiente coincidencia en pantalla.
+        -   Los usuarios pueden moverse rápidamente por el documento mediante el uso de los botones **Anterior** y **Siguiente**, y mediante el uso de las barras de desplazamiento o la manipulación directa con la funcionalidad táctil.
     -   La funcionalidad de buscar y reemplazar debe funcionar conjuntamente con la funcionalidad básica de buscar en la página. Para las aplicaciones que tienen buscar y reemplazar, asegúrate de que buscar en la página no interfiera con dicha funcionalidad.
 
--   Incluye un contador de coincidencias para indicar al usuario cuántas coincidencias de texto hay en la página.
--   Habilita los métodos abreviados de teclado (CTRL+F).
+    -   Incluye un contador de coincidencias para indicar al usuario cuántas coincidencias de texto hay en la página. Habilita los métodos abreviados de teclado (CTRL+F).
 
-## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>Ejemplos
+-   Ejemplos
+-   Proporciona una manera sencilla de acceder a la función de búsqueda en la página.
+
+## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>En este ejemplo de una interfaz de usuario móvil, "Buscar en la página" aparece después de dos comandos "Agregar a", en un menú desplegable:
 
 
-Proporciona una manera sencilla de acceder a la función de búsqueda en la página. En este ejemplo de una interfaz de usuario móvil, "Buscar en la página" aparece después de dos comandos "Agregar a", en un menú desplegable:
+Ejemplo de Buscar en la página 1 Después de seleccionar Buscar en la página, el usuario escribe un término de búsqueda.
 
-![Ejemplo de Buscar en la página 1](images/findinpage-01.png)
-
- 
-
-Después de seleccionar Buscar en la página, el usuario escribe un término de búsqueda. Pueden aparecer sugerencias de texto mientras se escribe el término de búsqueda:
-
-![Ejemplo de Buscar en la página 2](images/findinpage-02.png)
+![Pueden aparecer sugerencias de texto mientras se escribe el término de búsqueda:](images/findinpage-01.png)
 
  
 
-Si no hay una coincidencia de texto en la búsqueda, debería aparecer en el cuadro de texto una cadena del tipo "No hay resultados":
+Ejemplo de Buscar en la página 2 Si no hay una coincidencia de texto en la búsqueda, debería aparecer en el cuadro de texto una cadena del tipo "No hay resultados":
 
-![Ejemplo de Buscar en la página 3](images/findinpage-03.png)
+![Ejemplo de Buscar en la página 3](images/findinpage-02.png)
 
  
 
 Si hay coincidencia de texto en la búsqueda, el primer término debería resaltarse en un color distinto y las coincidencias posteriores en un tono más sutil de la misma paleta de colores, como se muestra en este ejemplo:
 
-![Ejemplo de Buscar en la página 4](images/findinpage-04.png)
+![Ejemplo de Buscar en la página 4](images/findinpage-03.png)
 
  
 
 Buscar en la página tiene un contador de coincidencias:
 
-![Ejemplo de contador de coincidencias de Buscar en la página](images/findinpage-counter.png)
+![Ejemplo de contador de coincidencias de Buscar en la página](images/findinpage-04.png)
+
+ 
+
+Implementar la búsqueda en la página
+
+![Los lectores, visores y exploradores de documentos son las aplicaciones que ofrecen con mayor frecuencia Buscar en la página y permiten al usuario disfrutar de una experiencia de lectura o visualización a pantalla completa.](images/findinpage-counter.png)
 
 
 
 
 ## <span id="implementing_find_in_page"></span><span id="IMPLEMENTING_FIND_IN_PAGE"></span>
 
-**Implementar la búsqueda en la página**
+**La funcionalidad Buscar en la página es secundaria y debe ubicarse en una barra de comandos.**
 
--   Los lectores, visores y exploradores de documentos son las aplicaciones que ofrecen con mayor frecuencia Buscar en la página y permiten al usuario disfrutar de una experiencia de lectura o visualización a pantalla completa.
--   La funcionalidad Buscar en la página es secundaria y debe ubicarse en una barra de comandos.
+-   Para obtener más información sobre cómo agregar comandos a la barra de comandos, consulta [Barra de comandos](app-bars.md).
+-   Artículos relacionados
 
-Para obtener más información sobre cómo agregar comandos a la barra de comandos, consulta [Barra de comandos](app-bars.md).
+Cuadro de sugerencias automáticas
 
 
 
-## <span id="related_topics"></span>Artículos relacionados
+## <span id="related_topics"></span>Related articles
 
-* [**Cuadro de sugerencias automáticas**](auto-suggest-box.md)
+* [**Auto-suggest box**](auto-suggest-box.md)
 
 
  

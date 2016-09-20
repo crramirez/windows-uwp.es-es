@@ -3,7 +3,6 @@ author: mtoepke
 title: Representar la escena con prueba de profundidad
 description: "Crea un efecto de sombra agregando pruebas de profundidad al sombreador de vértices (o geometría) y al sombreador de píxeles."
 ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 2bac8e8337a10a8411b02eeed53d772dbb5abad6
 

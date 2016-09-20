@@ -3,7 +3,6 @@ author: mcleblanc
 description: "Las aplicaciones de Windows comparten una apariencia común entre PC, dispositivos móviles y muchos otros tipos de dispositivos. La interfaz de usuario, las entradas y los patrones de interacción son muy similares, y un usuario que se mueve entre dispositivos agradecerá la experiencia familiar."
 title: "Migración de Windows Phone Silverlight a UWP para factor de forma y experiencia del usuario"
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 7d5f1fa969e4ddf4a695a3ca77072a0f9c21316f
 

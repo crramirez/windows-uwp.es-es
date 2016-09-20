@@ -3,7 +3,6 @@ author: mtoepke
 title: "Definir el marco de la aplicación para la Plataforma universal de Windows (UWP) del juego"
 description: La primera parte de codificar un juego de Plataforma universal de Windows (UWP) con DirectX es crear el marco que permite al objeto de juego interactuar con Windows.
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 2ebc7bca06454f78ab375058e49f012cacb00cc8
 
@@ -26,7 +25,7 @@ La primera parte de codificar un juego de Plataforma universal de Windows (UWP) 
 
 En cualquier juego DirectX de UWP, debes obtener un proveedor de vista que el singleton de la aplicación, el objeto de Windows Runtime que define una instancia de tu aplicación en ejecución, puede usar para acceder a los recursos gráficos que necesita. A través de Windows Runtime, tu aplicación tiene conexión directa con la interfaz gráfica, pero debes especificar los recursos que necesitas y cómo controlarlos.
 
-Tal y como hablamos en [Configuración del proyecto de juego](tutorial--setting-up-the-games-infrastructure.md), Microsoft Visual Studio 2015 proporciona una implementación de un representador básico para DirectX en el archivo **Sample3DSceneRenderer.cpp**, que está disponible cuando seleccionas la plantilla **DirectX 11 App (Universal Windows)** .
+Tal y como hablamos en [Configuración del proyecto de juego](tutorial--setting-up-the-games-infrastructure.md), Microsoft Visual Studio2015 proporciona una implementación de un representador básico para DirectX en el archivo **Sample3DSceneRenderer.cpp**, que está disponible cuando seleccionas la plantilla **DirectX 11 App (Universal Windows)** .
 
 Para obtener más detalles para comprender y crear un proveedor de vista y un representador, consulta el tema sobre cómo [configurar una aplicación para UWP con C++ y DirectX para mostrar una vista DirectX](https://msdn.microsoft.com/library/windows/apps/hh465077).
 
@@ -160,7 +159,7 @@ void App::Load(
 
 Una vez establecida la ventana principal, el singleton de la aplicación llama a **Load**. En la muestra, este método usa un conjunto de tareas asincrónicas (cuya sintaxis se define en la [biblioteca de modelos paralelos](https://msdn.microsoft.com/library/windows/apps/dd492418.aspx)) para crear objetos del juego, cargar recursos gráficos e inicializar la máquina de estados del juego. Al usar el modelo de tarea asincrónica, el método Load finaliza rápidamente y permite que la aplicación empiece a procesar entradas. En este método, la aplicación también muestra una barra de progreso mientras los archivos de recursos se cargan.
 
-Distinguimos dos fases dentro de la carga de recursos porque el acceso al contexto de dispositivo de Direct3D 11 está limitado al subproceso en el que el contexto de dispositivo se creó, mientras que el acceso al dispositivo de Direct3D 11 para crear objetos no está sujeto a ningún subproceso. La tarea **CreateGameDeviceResourcesAsync** se ejecuta en un subproceso distinto del de la tarea de finalización (*FinalizeCreateGameDeviceResources*), que se ejecuta en el subproceso original. Empleamos un modelo parecido para cargar los recursos de nivel con **LoadLevelAsync** y **FinalizeLoadLevel**.
+Distinguimos dos fases dentro de la carga de recursos porque el acceso al contexto de dispositivo de Direct3D11 está limitado al subproceso en el que el contexto de dispositivo se creó, mientras que el acceso al dispositivo de Direct3D11 para crear objetos no está sujeto a ningún subproceso. La tarea **CreateGameDeviceResourcesAsync** se ejecuta en un subproceso distinto del de la tarea de finalización (*FinalizeCreateGameDeviceResources*), que se ejecuta en el subproceso original. Empleamos un modelo parecido para cargar los recursos de nivel con **LoadLevelAsync** y **FinalizeLoadLevel**.
 
 Tras crear los objetos del juego y cargar los recursos gráficos, inicializamos la máquina de estado del juego en las condiciones de inicio (por ejemplo, definir la cantidad de munición inicial, el número de nivel y las posiciones de los objetos). Si el estado del juego indica que el jugador está reanudando un juego, cargamos el nivel actual (aquel en el que el jugador estaba cuando el juego se suspendió).
 
@@ -219,7 +218,8 @@ En la muestra de juego, iniciamos un bucle que finaliza cuando el jugador cierra
 
 Cuando el juego tiene el foco, debes controlar cada evento en la cola de mensajes tan pronto como llegue, y por tanto debes llamar a [**CoreWindowDispatch.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) con la opción **ProcessAllIfPresent**. Otras opciones pueden causar retrasos en el procesamiento de eventos de mensaje, lo que puede provocar que el juego no responda bien o que los comportamientos táctiles parezcan lentos e imprecisos.
 
-No hace falta decir que, cuando la aplicación no está visible o está suspendida o acoplada, no conviene que consuma ningún recurso en ciclos de envío de mensajes que nunca llegarán a su destino. Por lo tanto, el juego debe usar **ProcessOneAndAllPending**, que lo bloquea hasta que recibe un evento y, a continuación, procesa dicho evento y cualquier otro que llegue a la cola de procesos durante el procesamiento del primer evento. A continuación, [
+No hace falta decir que, cuando la aplicación no está visible o está suspendida o acoplada, no conviene que consuma ningún recurso en ciclos de envío de mensajes que nunca llegarán a su destino. Por lo tanto, el juego debe usar **ProcessOneAndAllPending**, que lo bloquea hasta que recibe un evento y, a continuación, procesa dicho evento y cualquier otro que llegue a la cola de procesos durante el procesamiento del primer evento. 
+            A continuación, [
               **ProcessEvents**
             ](https://msdn.microsoft.com/library/windows/apps/br208215) regresa inmediatamente una vez procesada la cola.
 
@@ -235,7 +235,7 @@ void App::Uninitialize()
 }
 ```
 
-En la muestra de juego, dejamos que el singleton de la aplicación del juego limpie todo una vez que el juego termine. En Windows 10, cerrar la ventana de la aplicación no acaba con el proceso de la aplicación, sino que en su lugar se escribe en la memoria el estado del singleton de la aplicación. Si hay algo especial que debe ocurrir cuando el sistema tiene que reclamar su memoria, cualquier limpieza de recursos, pon el código de esa limpieza en este método.
+En la muestra de juego, dejamos que el singleton de la aplicación del juego limpie todo una vez que el juego termine. En Windows10, cerrar la ventana de la aplicación no acaba con el proceso de la aplicación, sino que en su lugar se escribe en la memoria el estado del singleton de la aplicación. Si hay algo especial que debe ocurrir cuando el sistema tiene que reclamar su memoria, cualquier limpieza de recursos, pon el código de esa limpieza en este método.
 
 Volveremos a hacer referencia a estos 5 métodos en el tutorial, así que tenlos en cuenta. Ahora vamos a echar un vistazo a la estructura general del motor de juego y las máquinas de estado que la definen.
 
@@ -362,9 +362,12 @@ Dentro del bucle de juego en **Run**, la muestra ha implementado una máquina de
 
 En la muestra de juego, el juego puede encontrarse en 3 estados principales (UpdateEngineState):
 
--   **Waiting for resources**. El bucle del juego está ciclando, incapaz de realizar la transición hasta que disponga de recursos (en concreto recursos gráficos). Cuando las tareas asincrónicas para cargar recursos finalizan, el estado se actualiza a **ResourcesLoaded**. Esto suele ocurrir entre niveles cuando el nivel necesita cargar nuevos recursos del disco. En la muestra de juego, simulamos este comportamiento, dado que la muestra no necesita ningún recurso adicional por nivel en ese momento.
--   **Waiting for press**. El bucle del juego está ciclando, esperando a la entrada específica del usuario. Esta entrada es una acción del jugador para cargar un juego, iniciar un nivel o continuar un nivel. El código de muestra se refiere a estos subestados como valores de enumeración PressResultState.
--   **Dynamics**. El bucle del juego se está ejecutando mientras el usuario juega. Cuando el usuario está jugando, el juego comprueba las 3 condiciones con las que puede realizar una transición: que se acabe el tiempo establecido para un nivel, que el jugador complete un nivel o que el jugador complete todos los niveles.
+-   
+            **Waiting for resources**. El bucle del juego está ciclando, incapaz de realizar la transición hasta que disponga de recursos (en concreto recursos gráficos). Cuando las tareas asincrónicas para cargar recursos finalizan, el estado se actualiza a **ResourcesLoaded**. Esto suele ocurrir entre niveles cuando el nivel necesita cargar nuevos recursos del disco. En la muestra de juego, simulamos este comportamiento, dado que la muestra no necesita ningún recurso adicional por nivel en ese momento.
+-   
+            **Waiting for press**. El bucle del juego está ciclando, esperando a la entrada específica del usuario. Esta entrada es una acción del jugador para cargar un juego, iniciar un nivel o continuar un nivel. El código de muestra se refiere a estos subestados como valores de enumeración PressResultState.
+-   
+            **Dynamics**. El bucle del juego se está ejecutando mientras el usuario juega. Cuando el usuario está jugando, el juego comprueba las 3 condiciones con las que puede realizar una transición: que se acabe el tiempo establecido para un nivel, que el jugador complete un nivel o que el jugador complete todos los niveles.
 
 Aquí podemos ver la estructura del código. El código completo se encuentra en el [código completo para esta sección](#code_sample).
 

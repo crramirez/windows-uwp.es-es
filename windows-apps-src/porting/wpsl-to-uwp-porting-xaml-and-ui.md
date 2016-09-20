@@ -5,7 +5,7 @@ title: "Migración de XAML y la interfaz de usuario de Windows Phone Silverlight
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 7fa520443f242844cd661d70bad0fdeb2297fb1d
+ms.openlocfilehash: 344ea7a71fce744bcf90ac99ada9a6fe17568a9b
 
 ---
 
@@ -65,8 +65,7 @@ Los modelos de vista son un lugar donde hay código imperativo que hace referenc
     return new BitmapImage(new Uri(this.CoverImagePath, UriKind.Relative));
 ```
 
-
-              **BitmapImage** se encuentra en el espacio de nombres **System.Windows.Media.Imaging** en Windows Phone Silverlight, y una directiva "using" en el mismo archivo permite usar **BitmapImage** sin la calificación de espacio de nombres como en el fragmento de código anterior. En casos como este, puedes hacer clic con el botón secundario en el nombre de tipo (**BitmapImage**) en Visual Studio y usar el comando **Resolver** en el menú contextual para agregar una nueva directiva de espacio de nombres al archivo. En este caso, se agrega el espacio de nombres [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258), que es donde reside el tipo en Windows en UWP. Puedes quitar la directiva using **System.Windows.Media.Imaging** y será todo lo necesario para migrar código como en el fragmento de código anterior. Cuando termines, habrás quitado todos los espacios de nombres de Windows Phone Silverlight.
+**BitmapImage** se encuentra en el espacio de nombres **System.Windows.Media.Imaging** en Windows Phone Silverlight, y una directiva "using" en el mismo archivo permite usar **BitmapImage** sin la calificación de espacio de nombres como en el fragmento de código anterior. En casos como este, puedes hacer clic con el botón secundario en el nombre de tipo (**BitmapImage**) en Visual Studio y usar el comando **Resolver** en el menú contextual para agregar una nueva directiva de espacio de nombres al archivo. En este caso, se agrega el espacio de nombres [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258), que es donde reside el tipo en Windows en UWP. Puedes quitar la directiva using **System.Windows.Media.Imaging** y será todo lo necesario para migrar código como en el fragmento de código anterior. Cuando termines, habrás quitado todos los espacios de nombres de Windows Phone Silverlight.
 
 En casos sencillos como este, donde se asignan los tipos de un espacio de nombres anterior a los mismos tipos de uno nuevo, puedes usar el comando **Buscar y reemplazar** de Visual Studio para realizar cambios masivos en el código fuente. El comando **Resolver** es una excelente manera de detectar un nuevo espacio de nombres de un tipo. Otro ejemplo podría ser reemplazar todas las apariciones de "System.Windows" por "Windows.UI.Xaml". Esto migrará básicamente todas las directivas using y todos los nombres de tipo completos que hacen referencia a ese espacio de nombres.
 
@@ -194,12 +193,10 @@ Las aplicaciones WindowsPhone Silverlight usan controles definidos en los espaci
 | Clase ControlTiltEffect.TiltEffect | Las animaciones de la biblioteca de animaciones de UWP están integradas en los estilos predeterminados de los controles comunes. Consulta la [Animación de acciones de puntero](https://msdn.microsoft.com/library/windows/apps/xaml/jj649432). |
 | LongListSelector con los datos agrupados | LongListSelector de WindowsPhone Silverlight funciona de dos maneras, que se pueden usar conjuntamente. En primer lugar, es capaz de mostrar datos agrupados por una clave como, por ejemplo, una lista de nombres agrupados por su letra inicial. En segundo lugar, es capaz de aplicar "zoom" entre dos vistas semánticas: la lista agrupada de elementos (por ejemplo, nombres) y una lista de únicamente las claves de grupo (por ejemplo, letras iniciales). Con el UWP, puedes mostrar datos agrupados con las [Directrices para controles de lista y cuadrícula](https://msdn.microsoft.com/library/windows/apps/mt186889). |
 | LongListSelector con datos planos | Por motivos de rendimiento, en el caso de listas muy largas, recomendamos LongListSelector en lugar de un cuadro de lista de WindowsPhone Silverlight, incluso para datos planos no agrupados. En una aplicación para UWP, se prefiere [GridView](https://msdn.microsoft.com/library/windows/apps/br242705) para listas de elementos largas independientemente de si los datos son susceptibles de agruparse. |
-| Panorámica | El control Panorama de Silverlight Windows Phone se asigna a las [Directrices para controles de navegación centralizada en aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn449149) y directrices para el control de navegación centralizada. <br/> Ten en cuenta que un control Panorama se ajusta automáticamente desde la última sección a la primera y su imagen de fondo se mueve en parallax en relación con las secciones. 
-              Las secciones [Hub](https://msdn.microsoft.com/library/windows/apps/dn251843) no se ajustan automáticamente y no se usa parallax. |
+| Panorámica | El control Panorama de Silverlight Windows Phone se asigna a las [Directrices para controles de navegación centralizada en aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn449149) y directrices para el control de navegación centralizada. <br/> Ten en cuenta que un control Panorama se ajusta automáticamente desde la última sección a la primera y su imagen de fondo se mueve en parallax en relación con las secciones. Las secciones [Hub](https://msdn.microsoft.com/library/windows/apps/dn251843) no se ajustan automáticamente y no se usa parallax. |
 | Control dinámico | El equivalente de UWP del control dinámico de Windows Phone Silverlight es [Windows.UI.Xaml.Controls.Pivot](https://msdn.microsoft.com/library/windows/apps/dn608241). Está disponible para todas las familias de dispositivos. |
 
-
-              **Nota** El estado visual PointerOver es pertinente en estilos o plantillas personalizados en las aplicaciones de Windows10, pero no en aplicaciones de Windows Phone Silverlight. Existen otros motivos por los que los estilos o plantillas personalizados existentes pueden no ser adecuados para aplicaciones de Windows 10, incluidas las claves de recursos del sistema que usas, los cambios en los conjuntos de estados visuales usados y las mejoras de rendimiento realizadas en los estilos o plantillas predeterminadas de Windows 10. Te recomendamos que editar una nueva copia de una plantilla de control predeterminada para Windows 10 y, a continuación, volverle a aplicar la personalización de plantillas y estilos.
+**Nota** El estado visual PointerOver es pertinente en estilos o plantillas personalizados en las aplicaciones de Windows10, pero no en aplicaciones de Windows Phone Silverlight. Existen otros motivos por los que los estilos o plantillas personalizados existentes pueden no ser adecuados para aplicaciones de Windows 10, incluidas las claves de recursos del sistema que usas, los cambios en los conjuntos de estados visuales usados y las mejoras de rendimiento realizadas en los estilos o plantillas predeterminadas de Windows 10. Te recomendamos que editar una nueva copia de una plantilla de control predeterminada para Windows 10 y, a continuación, volverle a aplicar la personalización de plantillas y estilos.
 
 Para obtener información sobre los controles de UWP, consulta [Controles por función](https://msdn.microsoft.com/library/windows/apps/mt185405), [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406) y [Directrices sobre controles](https://msdn.microsoft.com/library/windows/apps/dn611856).
 
@@ -372,8 +369,7 @@ Como anteriormente 480 era el ancho fijo en píxeles de visualización para una 
 
 Para que la aplicación ofrezca la mejor experiencia en todas las pantallas, te recomendamos que crees cada recurso de mapa de bits en una variedad de tamaños, cada uno adecuado para un factor de escala particular. Ofrecer recursos con una escala del 100 %, 200 % y 400 % (en este orden de prioridad), te dará excelentes resultados en la mayoría de los casos en todos los factores de escala intermedios.
 
-
-              **Nota** Si por cualquier motivo no puedes crear recursos en más de un tamaño, crea recursos con una escala del 100 %. En Microsoft Visual Studio, la plantilla de proyecto predeterminada para aplicaciones para UWP proporciona recursos de personalización de marca (imágenes de icono y logotipos) en un solo tamaño, pero no tiene la escala del 100%. Al crear recursos para tu propia aplicación, sigue las instrucciones de esta sección y ofrece tamaños del 100%, 200% y 400%, además de usar paquetes de recursos.
+**Nota** Si por cualquier motivo no puedes crear recursos en más de un tamaño, crea recursos con una escala del 100 %. En Microsoft Visual Studio, la plantilla de proyecto predeterminada para aplicaciones para UWP proporciona recursos de personalización de marca (imágenes de icono y logotipos) en un solo tamaño, pero no tiene la escala del 100%. Al crear recursos para tu propia aplicación, sigue las instrucciones de esta sección y ofrece tamaños del 100%, 200% y 400%, además de usar paquetes de recursos.
 
 Si tienes ilustraciones intrincadas, puede que quieras ofrecer tus recursos en más tamaños aún. Si estás empezando con el arte vectorial, es relativamente fácil generar recursos de alta calidad con cualquier factor de escala.
 
@@ -399,6 +395,6 @@ El siguiente tema es [Migración de modelo de E/S, dispositivos y aplicaciones](
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
 description: "En este artículo se muestra cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows."
 title: Transmitir contenido multimedia
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 9c8d549c9b770af351894f2a19dd035a43d70264
 
@@ -66,7 +65,8 @@ En el controlador de eventos **Click** para el botón, llama a [**TransformToVis
 
 En el controlador de eventos **CastingDeviceSelected** llama al método [**CreateCastingConnection**](https://msdn.microsoft.com/library/windows/apps/dn972547) de la propiedad de los argumentos del evento [**SelectedCastingDevice**](https://msdn.microsoft.com/library/windows/apps/dn972546), que representa el dispositivo de conversión seleccionado por el usuario. Registrar controladores para los eventos [**ErrorOccurred**](https://msdn.microsoft.com/library/windows/apps/dn972519) y [**StateChanged**](https://msdn.microsoft.com/library/windows/apps/dn972523). Por último, se llama a [**RequestStartCastingAsync**](https://msdn.microsoft.com/library/windows/apps/dn972520) para comenzar la conversión, pasando el resultado del método [**GetAsCastingSource**](https://msdn.microsoft.com/library/windows/apps/dn920012) del objeto **MediaElement** para especificar que el contenido multimedia que se va a convertir es el contenido del **MediaElement**.
 
-**Nota**  La conexión de la conversión se debe iniciar en el subproceso de interfaz de usuario. Dado que no se llama a **CastingDeviceSelected** desde el subproceso de interfaz de usuario, debes realizar estas llamadas dentro de una llamada a [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317), lo que hace que se les llame en el subproceso de interfaz de usuario.
+
+            **Nota**  La conexión de la conversión se debe iniciar en el subproceso de interfaz de usuario. Dado que no se llama a **CastingDeviceSelected** desde el subproceso de interfaz de usuario, debes realizar estas llamadas dentro de una llamada a [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317), lo que hace que se les llame en el subproceso de interfaz de usuario.
 
 [!code-cs[CastingDeviceSelected](./code/MediaCastingWin10/cs/MainPage.xaml.cs#SnippetCastingDeviceSelected)]
 

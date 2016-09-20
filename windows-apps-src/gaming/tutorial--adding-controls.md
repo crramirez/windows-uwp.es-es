@@ -5,7 +5,7 @@ description: "Echemos un vistazo ahora al modo en que la muestra de juego implem
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b3297ffd92d9a61d73c574def7e8101dc9196a69
+ms.openlocfilehash: 49214f3bc14b6a475a77c5dbb7c0f08bb0818df6
 
 ---
 
@@ -24,7 +24,7 @@ Echemos un vistazo ahora al modo en que la muestra de juego implementa los contr
 ## Aplicaciones y controles de juegos de UWP
 
 
-Un buen juego de la UWP admite una amplia variedad de interfaces. Un jugador potencial puede tener Windows 10 en una tableta sin botones físicos o un PC multimedia con un mando de la Xbox conectado, o la última plataforma de juego de escritorio con un ratón y un teclado de juego de alto rendimiento. Tu juego debería ser compatible con todos esos dispositivos si su diseño lo permite.
+Un buen juego de la UWP admite una amplia variedad de interfaces. Un jugador potencial puede tener Windows10 en una tableta sin botones físicos o un PC multimedia con un mando de la Xbox conectado, o la última plataforma de juego de escritorio con un ratón y un teclado de juego de alto rendimiento. Tu juego debería ser compatible con todos esos dispositivos si su diseño lo permite.
 
 Esta muestra admite los tres. Es un sencillo juego de disparos en primera persona, y los controles de movimiento y vista que son estándar en este género se pueden implementar fácilmente para todas esas tres formas de entrada.
 
@@ -37,21 +37,11 @@ Los controles táctiles y los controles de ratón/teclado tienen una implementac
 
 Cuando la clase **MoveLookController** en la muestra de juego se inicializa, registra cuatro eventos específicos de puntero y uno específico de ratón:
 
--   [
-              **CoreWindow::PointerPressed**
-            ](https://msdn.microsoft.com/library/windows/apps/br208278). Se presionó (o se mantuvo presionado) el botón izquierdo o derecho del mouse o se tocó la superficie táctil.
--   [
-              **CoreWindow::PointerMoved**
-            ](https://msdn.microsoft.com/library/windows/apps/br208276). El mouse se movió, o se realizó una acción de arrastrar en la superficie táctil.
--   [
-              **CoreWindow::PointerReleased**
-            ](https://msdn.microsoft.com/library/windows/apps/br208279). Se soltó el botón izquierdo del mouse, o se retiró el objeto que estaba en contacto con la superficie táctil.
--   [
-              **CoreWindow::PointerExited**
-            ](https://msdn.microsoft.com/library/windows/apps/br208275). El puntero se movió fuera de la ventana principal.
--   [
-              **Windows::Devices::Input::MouseMoved**
-            ](https://msdn.microsoft.com/library/windows/apps/hh758356). El mouse se desplazó una distancia determinada. Ten en cuenta que solo nos interesan los valores delta del movimiento de ratón, no la posición actual en las coordenadas x-y.
+-   [**CoreWindow::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278). Se presionó (o se mantuvo presionado) el botón izquierdo o derecho del mouse o se tocó la superficie táctil.
+-   [**CoreWindow::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276). El mouse se movió, o se realizó una acción de arrastrar en la superficie táctil.
+-   [**CoreWindow::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279). Se soltó el botón izquierdo del mouse, o se retiró el objeto que estaba en contacto con la superficie táctil.
+-   [**CoreWindow::PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208275). El puntero se movió fuera de la ventana principal.
+-   [**Windows::Devices::Input::MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356). El mouse se desplazó una distancia determinada. Ten en cuenta que solo nos interesan los valores delta del movimiento de ratón, no la posición actual en las coordenadas x-y.
 
 ```cpp
 void MoveLookController::Initialize(
@@ -92,7 +82,7 @@ El mando de la Xbox se controla de forma independiente mediante las API de [XInp
 
 En la muestra de juego, la clase **MoveLookController** tiene tres estados específicos de mando, independientemente del tipo de control:
 
--   **Ninguna**. Es el estado inicializado para el mando. El juego no espera la entrada de ningún mando.
+-   **Ninguno**. Es el estado inicializado para el mando. El juego no espera la entrada de ningún mando.
 -   **WaitForInput**. El juego está en pausa y permanece a la espera de que el jugador continúe.
 -   **Active**. El juego está en ejecución, procesando la entrada del jugador.
 
@@ -1911,7 +1901,7 @@ void MoveLookController::UpdateGameController()
 ```
 
 > **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -1930,6 +1920,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

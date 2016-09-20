@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: adb2fa45-e18f-4254-bd8b-a749a386e3b4
 description: Aprende a usar la clase AdControl para mostrar anuncios de banner en aplicaciones JavaScript y HTML para Windows 10 (UWP), Windows 8.1 o Windows Phone 8.1.
 title: AdControl en HTML 5 y JavaScript
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 6e96b085132126a2c3e7b0b0b86124aba4cd651e
 
@@ -23,7 +22,8 @@ Para observar un proyecto de ejemplo completo que muestra cómo agregar anuncios
 
 * Instala el [SDK de Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk) con Visual Studio 2015 o Visual Studio 2013.
 
-> **Nota** Si has instalado la compilación 14295 de Windows 10 Anniversary SDK Preview o una versión posterior con Visual Studio de 2015, también debes instalar la biblioteca WinJS. Antes, esta biblioteca estaba incluida en versiones anteriores de Windows SDK para Windows 10, pero, desde la compilación 14295 de Windows 10 Anniversary SDK Preview, debe instalarse por separado. Para instalar WinJS, consulta cómo [obtener WinJS](http://try.buildwinjs.com/download/GetWinJS/).
+> 
+            **Nota** Si has instalado la compilación 14295 de Windows 10 Anniversary SDK Preview o una versión posterior con Visual Studio de 2015, también debes instalar la biblioteca WinJS. Antes, esta biblioteca estaba incluida en versiones anteriores de Windows SDK para Windows 10, pero, desde la compilación 14295 de Windows 10 Anniversary SDK Preview, debe instalarse por separado. Para instalar WinJS, consulta cómo [obtener WinJS](http://try.buildwinjs.com/download/GetWinJS/).
 
 ## Programación de código
 
@@ -43,7 +43,8 @@ Para observar un proyecto de ejemplo completo que muestra cómo agregar anuncios
 
     ![javascriptaddreference](images/13-f7f6d6a6-161e-4f17-995d-1236d0b5d9f2.png)
 
-    > **Nota**  Esta imagen corresponde a la creación de un proyecto de UWP para Windows 10 en Visual Studio 2015. Si estás creando una aplicación de Windows 8.1 o Windows Phone 8.1 o si usas Visual Studio 2013, la pantalla tendrá un aspecto diferente.
+    > 
+            **Nota**  Esta imagen corresponde a la creación de un proyecto de UWP para Windows 10 en Visual Studio 2015. Si estás creando una aplicación de Windows 8.1 o Windows Phone 8.1 o si usas Visual Studio 2013, la pantalla tendrá un aspecto diferente.
 
 5.  En el **Administrador de referencias**, haz clic en Aceptar.
 
@@ -65,7 +66,8 @@ Para observar un proyecto de ejemplo completo que muestra cómo agregar anuncios
     <script src="/MSAdvertisingJS/ads/ad.js"></script>
     ```
 
-    > **Nota**   Esta línea debe colocarse en la sección **&lt;head&gt;** después de incluir default.js. De lo contrario, se producirá un error al compilar el proyecto.
+    > 
+            **Nota**   Esta línea debe colocarse en la sección **&lt;head&gt;** después de incluir default.js. De lo contrario, se producirá un error al compilar el proyecto.
 
 8.  Modifica la sección **&lt;body&gt;** en el archivo default.html (u otro archivo html adecuado para el proyecto) para que incluya el elemento div para **AdControl**. Asigna las propiedades **applicationId** y **adUnitId** de **AdControl** a los valores de prueba proporcionados en los [Valores del modo de prueba](test-mode-values.md) y ajusta el alto y ancho del control para que tenga uno de los [Tamaños de anuncios admitidos para anuncios de banner](supported-ad-sizes-for-banner-ads.md).
 
@@ -88,7 +90,8 @@ Para observar un proyecto de ejemplo completo que muestra cómo agregar anuncios
 
 2.  En el código, reemplaza los valores de unidades de anuncio de prueba (**applicationId** y **adUnitId**) con los valores dinámicos generados en el Centro de desarrollo.
 
-3.  [Envía la aplicación](../publish/app-submissions.md) a la Tienda desde el panel del Centro de desarrollo.
+3.  
+            [Envía la aplicación](../publish/app-submissions.md) a la Tienda desde el panel del Centro de desarrollo.
 
 4.  Revisa los [informes de rendimiento de publicidad](../publish/advertising-performance-report.md) en el panel del Centro de desarrollo.
 

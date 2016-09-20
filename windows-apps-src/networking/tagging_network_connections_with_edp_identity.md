@@ -5,7 +5,6 @@ MS-HAID: dev\_networking.tagging\_network\_connections\_with\_edp\_identity
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Etiquetado de conexiones de red con identidad EDP
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 2b960bbb5cf58991778e5c20bb915a202ecf6e04
 
@@ -13,11 +12,13 @@ ms.openlocfilehash: 2b960bbb5cf58991778e5c20bb915a202ecf6e04
 
 # Etiquetado de conexiones de red con identidad EDP
 
-__Nota__ La directiva de Protección de datos de empresa (EDP) no se puede aplicar en la versión 1511 de Windows 10 (compilación 10586) o en una versión anterior.
+
+            __Nota__ La directiva de Protección de datos de empresa (EDP) no se puede aplicar en la versión 1511 de Windows 10 (compilación 10586) o en una versión anterior.
 
 En este tema se muestra cómo crear un contexto de subproceso protegido antes de crear conexiones de red en un escenario de Enterprise Data Protection (EDP). Para obtener una perspectiva de desarrollador completa sobre cómo se relaciona EDP con los archivos, las secuencias, el portapapeles, las redes, las tareas en segundo plano y la protección de datos con la pantalla bloqueada, consulta [Enterprise Data Protection (EDP) (Protección de datos de empresa [EDP])](../enterprise/edp-hub.md).
 
-**Nota** La [muestra de Protección de datos de empresa (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) abarca numerosos escenarios de EDP.
+
+            **Nota** La [muestra de Protección de datos de empresa (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) abarca numerosos escenarios de EDP.
 
 
 
@@ -41,13 +42,15 @@ En este tema se muestra cómo crear un contexto de subproceso protegido antes de
 
 En este escenario, una aplicación de correo mejorada sincroniza un conjunto de buzones que son una mezcla de buzones de empresa y personales. La aplicación pasa la identidad del usuario a una llamada a [**ProtectionPolicyManager.CreateCurrentThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706025) para crear un contexto de subproceso protegido. Esto etiqueta todas las conexiones de red que se realizan posteriormente en el mismo subproceso a dicha identidad y permite el acceso controlado a recursos de red de empresa por parte de la directiva de la empresa.
 
-En este caso, "la empresa" se refiere a la empresa a la que pertenece la identidad del usuario. [
+En este caso, "la empresa" se refiere a la empresa a la que pertenece la identidad del usuario. 
+            [
               **CreateCurrentThreadNetworkContext**
             ](https://msdn.microsoft.com/library/windows/apps/dn706025) devuelve un objeto [**ThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706029) independientemente de la aplicación de directivas. Por lo general, si la aplicación espera controlar los recursos combinados, puede llamar a **CreateCurrentThreadNetworkContext** para todas las identidades. Después de recuperar recursos de red, la aplicación llama a **Desechar** en el **ThreadNetworkContext** para borrar cualquier etiqueta de identidad del subproceso actual. El patrón que uses para desechar el objeto de contexto dependerá del lenguaje de programación.
 
 Si la identidad es desconocida, la aplicación puede consultar la identidad administrada de directiva de empresa de la dirección de red del recurso con la API [**ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync**](https://msdn.microsoft.com/library/windows/apps/dn706027).
 
-**Nota** Como puedes ver en el ejemplo de código, el patrón de uso correcto para [**CreateCurrentThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706025) es reducir al mínimo el ámbito en el que está activado. Debes establecer el contexto de la red de empresa, crear y usar conexiones de red, y luego cerrar revertir el contexto, usar las conexiones y cerrarlas. El siguiente ejemplo de código ilustra los detalles. Es importante no crear archivos en un subproceso mientras se establece el contexto de la red de empresa en ese subproceso. Si lo haces, el archivo se cifrará de forma automática, independientemente de si tu intención es para que el archivo sea personal. Esta es una de las razones por las que se recomienda revertir el contexto lo antes posible.
+
+            **Nota** Como puedes ver en el ejemplo de código, el patrón de uso correcto para [**CreateCurrentThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706025) es reducir al mínimo el ámbito en el que está activado. Debes establecer el contexto de la red de empresa, crear y usar conexiones de red, y luego cerrar revertir el contexto, usar las conexiones y cerrarlas. El siguiente ejemplo de código ilustra los detalles. Es importante no crear archivos en un subproceso mientras se establece el contexto de la red de empresa en ese subproceso. Si lo haces, el archivo se cifrará de forma automática, independientemente de si tu intención es para que el archivo sea personal. Esta es una de las razones por las que se recomienda revertir el contexto lo antes posible.
 
 
 
@@ -112,7 +115,8 @@ public static async void SyncMailbox(string identity)
 }
 ```
 
-**Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+            **Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
 

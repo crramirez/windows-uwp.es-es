@@ -3,7 +3,6 @@ author: DelfCo
 description: Puedes usar Windows.Networking.Sockets y Winsock para comunicarte con otros dispositivos como un desarrollador de aplicaciones para la Plataforma universal de Windows (UWP).
 title: Sockets
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
-translationtype: Human Translation
 ms.sourcegitcommit: 4557fa59d377edc2ae5bf5a9be63516d152949bb
 ms.openlocfilehash: 432d9849335c537836fd23a4cd95c79c51bc881d
 
@@ -20,7 +19,8 @@ ms.openlocfilehash: 432d9849335c537836fd23a4cd95c79c51bc881d
 
 Puedes usar [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) y [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms737523) para comunicarte con otros dispositivos como un desarrollador de aplicaciones de la Plataforma universal de Windows (UWP). Este tema proporciona instrucciones detalladas sobre el uso del espacio de nombres **Windows.Networking.Sockets** para llevar a cabo operaciones de red.
 
->**Nota** Como parte del [aislamiento de red](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx), el sistema prohíbe establecer conexiones de sockets (Sockets o WinSock) entre dos aplicaciones para UWP que se ejecuten en el mismo equipo, ya sea mediante la dirección de bucle invertido local (127.0.0.0) o especificando explícitamente la dirección IP local. Esto significa que no puedes usar sockets para la comunicación entre dos aplicaciones para UWP. UWP proporciona otros mecanismos para la comunicación entre aplicaciones. Consulta [App-to-app communication (Comunicación entre aplicaciones)](https://msdn.microsoft.com/windows/uwp/app-to-app/index) para obtener más información.
+>
+>            **Nota** Como parte del [aislamiento de red](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx), el sistema prohíbe establecer conexiones de sockets (Sockets o WinSock) entre dos aplicaciones para UWP que se ejecuten en el mismo equipo, ya sea mediante la dirección de bucle invertido local (127.0.0.0) o especificando explícitamente la dirección IP local. Esto significa que no puedes usar sockets para la comunicación entre dos aplicaciones para UWP. UWP proporciona otros mecanismos para la comunicación entre aplicaciones. Consulta [App-to-app communication (Comunicación entre aplicaciones)](https://msdn.microsoft.com/windows/uwp/app-to-app/index) para obtener más información.
 
 ## Operaciones básicas de sockets TCP
 
@@ -255,7 +255,8 @@ foreach (IBuffer packet in packetsToSend)
 await outputStream.FlushAsync();
 ```
 
-En versiones anteriores de Windows, **FlushAsync** devolvía inmediatamente y no garantizaba la que se hayan completado todas las operaciones en la secuencia. En Windows 10, el comportamiento ha cambiado. La devolución de **FlushAsync** está ahora garantizada una vez completadas todas las operaciones del flujo de salida.
+En versiones anteriores de Windows, **FlushAsync** devolvía inmediatamente y no garantizaba la que se hayan completado todas las operaciones en la secuencia. En Windows 10, el comportamiento ha cambiado. 
+            La devolución de **FlushAsync** está ahora garantizada una vez completadas todas las operaciones del flujo de salida.
 
 Existen algunas limitaciones importantes impuestas mediante el uso de escrituras por lote en el código.
 

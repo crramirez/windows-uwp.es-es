@@ -3,7 +3,6 @@ author: IvorB
 ms.assetid: E9ADC88F-BD4F-4721-8893-0E19EA94C8BA
 title: Emparejamientos fuera de banda
 description: "El emparejamiento fuera de banda permite que las aplicaciones se conecten a un punto de servicio periférico sin tener que usar el modo de detección."
-translationtype: Human Translation
 ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
 ms.openlocfilehash: d8d37b779a0f9a4bec36d73fcd2d35272c587b11
 
@@ -23,13 +22,17 @@ El emparejamiento fuera de banda permite que las aplicaciones se conecten a un p
     "providerName":"PrinterProtocolProvider.dll"
 ```
 
-**connectionKind**: es el tipo de conexión. Los valores válidos son "Network" y "Bluetooth".
 
-**physicalAddress**: es la dirección MAC del periférico. Por ejemplo, si tienes una impresora de red, esta sería la dirección MAC que puedes encontrar en la hoja de pruebas de la impresora, con el formato AA:BB:CC:DD:EE:FF.
+            **connectionKind**: es el tipo de conexión. Los valores válidos son "Network" y "Bluetooth".
 
-**connectionString**: es la cadena de conexión del periférico. Por ejemplo, si tienes una impresora de red, este valor correspondería a la dirección IP que puedes encontrar en la hoja de pruebas de la impresora, con el formato 192.168.1.1:9001. Este campo se omite en todos los dispositivos periféricos con Bluetooth.
 
-**peripheralKinds**: es el GUID que indica el tipo de dispositivo. Los valores válidos son:
+            **physicalAddress**: es la dirección MAC del periférico. Por ejemplo, si tienes una impresora de red, esta sería la dirección MAC que puedes encontrar en la hoja de pruebas de la impresora, con el formato AA:BB:CC:DD:EE:FF.
+
+
+            **connectionString**: es la cadena de conexión del periférico. Por ejemplo, si tienes una impresora de red, este valor correspondería a la dirección IP que puedes encontrar en la hoja de pruebas de la impresora, con el formato 192.168.1.1:9001. Este campo se omite en todos los dispositivos periféricos con Bluetooth.
+
+
+            **peripheralKinds**: es el GUID que indica el tipo de dispositivo. Los valores válidos son:
 
 | Tipo de dispositivo | GUID |
 | ---- | ---- |
@@ -38,7 +41,8 @@ El emparejamiento fuera de banda permite que las aplicaciones se conecten a un p
 | *Caja registradora* | 772E18F2-8925-4229-A5AC-6453CB482FDA |
 
 
-**providerId**: es el GUID que indica la clase del proveedor de protocolo. Los valores válidos son:
+
+            **providerId**: es el GUID que indica la clase del proveedor de protocolo. Los valores válidos son:
 
 | Clase de proveedor del protocolo | GUID |
 | ---- | ---- |
@@ -52,7 +56,8 @@ El emparejamiento fuera de banda permite que las aplicaciones se conecten a un p
 | *Cajón BT APG* | 332E6550-2E01-42EB-9401-C6A112D80185 |
 
 
-**providerName**: es el nombre de la DLL del proveedor. Los proveedores predeterminados son:
+
+            **providerName**: es el nombre de la DLL del proveedor. Los proveedores predeterminados son:
 
 | Proveedor | Nombre de DLL |
 | ---- | ---- |

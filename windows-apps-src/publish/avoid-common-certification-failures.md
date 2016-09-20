@@ -3,7 +3,6 @@ author: jnHs
 Description: "Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplicaciones no se puedan certificar o problemas que pueden detectarse durante una comprobación puntual después de que la aplicación se haya publicado."
 title: "Evitar errores de certificación comunes"
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 6af2842eeb5eeebfc9ffc5a7a3ec98fdcebddb74
 
@@ -14,13 +13,15 @@ ms.openlocfilehash: 6af2842eeb5eeebfc9ffc5a7a3ec98fdcebddb74
 
 Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplicaciones no se puedan certificar o problemas que pueden detectarse durante una comprobación puntual después de que la aplicación se haya publicado.
 
-> **Note**  También debes revisar las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944) para asegurarte de que la aplicación cumple los requisitos establecidos en ellas.
+> 
+            **Note**  También debes revisar las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944) para asegurarte de que la aplicación cumple los requisitos establecidos en ellas.
 
  
 
 -   Envía la aplicación solamente cuando esté terminada. Puedes usar la descripción de la aplicación para mencionar las próximas funciones, pero asegúrate de que no contenga secciones incompletas, vínculos a páginas web en construcción o cualquier elemento que pueda dar al cliente la impresión de que la aplicación está incompleta.
 
--   [Prueba tu aplicación con el Kit para la certificación de aplicaciones de Windows](https://msdn.microsoft.com/library/windows/apps/mt186449) antes de que envíes tu aplicación.
+-   
+            [Prueba tu aplicación con el Kit para la certificación de aplicaciones de Windows](https://msdn.microsoft.com/library/windows/apps/mt186449) antes de que envíes tu aplicación.
 
 -   Prueba tu aplicación en diversas configuraciones para asegurarte de que sea lo más estable posible.
 

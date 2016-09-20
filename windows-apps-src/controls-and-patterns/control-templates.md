@@ -8,7 +8,6 @@ title: Plantillas de control
 ms.assetid: 6E642626-A1D6-482F-9F7E-DBBA7A071DAD
 label: Control templates
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 071ba59af02b860e9fe58133eb5f1c2a7207ed2b
 
@@ -96,7 +95,10 @@ Esta tabla enumera los posibles valores de [**IsChecked**](https://msdn.microsof
 
 |                     |                    |                         |
 |---------------------|--------------------|-------------------------|
-| valor **IsChecked** | estado de **CheckBox** | aspecto de **CheckBox** |
+| 
+            valor **IsChecked** | 
+            estado de **CheckBox** | 
+            aspecto de **CheckBox** |
 | **true**            | `Checked`          | Contiene una "X".        |
 | **false**           | `Unchecked`        | Vacío.                  |
 | **nulo**            | `Indeterminate`    | Contiene un círculo.      |
@@ -105,10 +107,7 @@ Esta tabla enumera los posibles valores de [**IsChecked**](https://msdn.microsof
 
 La apariencia de un control se especifica cuando tiene un estado determinado mediante objetos [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007). Un **VisualState** contiene una clase [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) o [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br243053) que cambia la apariencia de los elementos de la clase [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). Cuando el control ingresa en el estado que especifica la propiedad [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031), se aplican los cambios de propiedad en **Setter** o [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490). Cuando el control sale del estado, se eliminan los cambios. Agregas objetos **VisualState** a objetos [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014). Agregas objetos **VisualStateGroup** a la propiedad adjunta [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505), que se establece en la raíz [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) de la clase **ControlTemplate**.
 
-Este código XAML muestra los objetos [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) para los estados `Checked`, `Unchecked` e `Indeterminate`. El ejemplo establece la propiedad adjunta [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) en [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250), que es el elemento raíz de [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). `Checked`
-            **VisualState** especifica que el valor de [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962) de la clase [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) denominada `CheckGlyph` (que mostramos en el ejemplo anterior) es 1. `Indeterminate`
-            **VisualState** especifica que el valor de **Opacity** de la clase [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/br243343) denominada `IndeterminateGlyph` es 1. `Unchecked`
-            **VisualState** no tiene ninguna clase [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) o [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490), por lo que [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) vuelve a su apariencia predeterminada.
+Este código XAML muestra los objetos [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) para los estados `Checked`, `Unchecked` e `Indeterminate`. El ejemplo establece la propiedad adjunta [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) en [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250), que es el elemento raíz de [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). `Checked`**VisualState** especifica que el valor de [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962) de la clase [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) denominada `CheckGlyph` (que mostramos en el ejemplo anterior) es 1. `Indeterminate`**VisualState** especifica que el valor de **Opacity** de la clase [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/br243343) denominada `IndeterminateGlyph` es 1. `Unchecked`**VisualState** no tiene ninguna clase [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) o [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490), por lo que [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) vuelve a su apariencia predeterminada.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">

@@ -6,7 +6,6 @@ ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
 label: History and backwards navigation
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: a35b76f04d450aeafcc50c307dc058c52f6aebe4
 
@@ -166,7 +165,8 @@ En el modo de escritorio, cada aplicación se ejecuta en una ventana con una bar
 
 El botón Atrás de la barra de título solo está disponible en aplicaciones que se ejecuten en dispositivos en modo de escritorio, y solo admite el historial de navegación en la aplicación; no admite el historial de navegación entre aplicaciones.
 
-**Importante**  El botón Atrás de la barra de título no se muestra de forma predeterminada. Debes habilitarlo tú mismo.
+
+            **Importante**  El botón Atrás de la barra de título no se muestra de forma predeterminada. Debes habilitarlo tú mismo.
 
  
 

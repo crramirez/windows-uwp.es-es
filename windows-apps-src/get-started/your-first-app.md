@@ -3,7 +3,6 @@ author: martinekuan
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
 title: "Crear tu primera aplicación"
 description: "Crear una aplicación para la Plataforma universal de Windows (UWP) para Windows 10 es mucho más sencillo de lo que piensas."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: e2ed4b9587927a2a6a765b47ff69b9cedfd9b92d
 
@@ -18,7 +17,7 @@ Crear una aplicación de la Plataforma universal de Windows (UWP) para Windows 1
 
 Estos tutoriales te ayudarán a crear tu primera aplicación para UWP en el lenguaje que elijas. Aquí aprenderás a:
 
--   Crear un proyecto de aplicación para UWP en Microsoft Visual Studio.
+-   Crear un proyecto de aplicación para UWP en Microsoft VisualStudio.
 -   Agregar elementos de interfaz de usuario y código al proyecto.
 -   Compilar y depurar tu aplicación en la máquina local y en un emulador de teléfono.
 
@@ -26,7 +25,7 @@ Para empezar, elige el lenguaje que prefieras.
 
 ## Tutoriales de XAML y C#/Visual Basic
 
-Usa tus conocimientos de .NET, WPF o Silverlight para compilar aplicaciones con la plataforma XAML con C# o Visual Basic.
+Usa tus conocimientos de .NET, WPF o Silverlight para compilar aplicaciones con la plataforma XAML con C# o VisualBasic.
 
 [Crear una aplicación "Hello, world" mediante XAML con C# o VB](create-a-hello-world-app-xaml-universal.md)
 

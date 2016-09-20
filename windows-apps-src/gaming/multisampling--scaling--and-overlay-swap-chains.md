@@ -3,7 +3,6 @@ author: mtoepke
 title: Escalado y superposiciones de cadenas de intercambio
 description: "Aprende a crear cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas, y a usar cadenas de intercambio de superposición (si las hay) para mejorar la calidad visual."
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
-translationtype: Human Translation
 ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
 ms.openlocfilehash: 3380c5156072a9853261ec6b706a612b42e7ba10
 
@@ -16,12 +15,12 @@ ms.openlocfilehash: 3380c5156072a9853261ec6b706a612b42e7ba10
 
 Aprende a crear cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas, y a usar cadenas de intercambio de superposición (si las hay) para mejorar la calidad visual.
 
-## Cadenas de intercambio en DirectX 11.2
+## Cadenas de intercambio en DirectX11.2
 
 
-En Direct3D 11.2 se pueden crear aplicaciones para la Plataforma universal de Windows (UWP) con cadenas de intercambio con escala desde resoluciones no nativas (reducidas), por lo que la velocidad de relleno es más rápida. Direct3D 11.2 también incluye API para poder realizar representaciones con superposiciones de hardware, lo que permite que puedas mostrar UI en otra cadena de intercambio en resolución nativa. Gracias a ello, tu juego puede dibujar una interfaz de usuario en una resolución nativa completa y a una gran velocidad de fotogramas, con lo cual estarás sacando el máximo partido a los dispositivos móviles y a las pantallas con valores altos de PPP (como 3840 x 2160). En este artículo te enseñamos a usar la superposición de cadenas de intercambio.
+En Direct3D11.2 se pueden crear aplicaciones para la Plataforma universal de Windows (UWP) con cadenas de intercambio con escala desde resoluciones no nativas (reducidas), por lo que la velocidad de relleno es más rápida. Direct3D11.2 también incluye API para poder realizar representaciones con superposiciones de hardware, lo que permite que puedas mostrar UI en otra cadena de intercambio en resolución nativa. Gracias a ello, tu juego puede dibujar una interfaz de usuario en una resolución nativa completa y a una gran velocidad de fotogramas, con lo cual estarás sacando el máximo partido a los dispositivos móviles y a las pantallas con valores altos de PPP (como 3840 x 2160). En este artículo te enseñamos a usar la superposición de cadenas de intercambio.
 
-Direct3D 11.2 incluye también una característica nueva para reducir la latencia en las cadenas de intercambio de modelo de volteo. Consulta [Reducir la latencia con cadenas de intercambio DXGI 1.3](reduce-latency-with-dxgi-1-3-swap-chains.md).
+Direct3D11.2 incluye también una característica nueva para reducir la latencia en las cadenas de intercambio de modelo de volteo. Consulta [Reducir la latencia con cadenas de intercambio DXGI1.3](reduce-latency-with-dxgi-1-3-swap-chains.md).
 
 ## Usar el escalado de cadenas de intercambio
 
@@ -79,7 +78,7 @@ Cuando tu juego se ejecuta en hardware de bajo nivel (o en hardware optimizado p
 
 2.  Después, elige una subregión de esa cadena para ajustar la escala, estableciendo para ello el tamaño del origen en una resolución reducida.
 
-    En la muestra de cadenas de intercambio en primer plano de DX, este tamaño reducido se calcula según un porcentaje:
+    En la muestra de cadenas de intercambio en primer plano deDX, este tamaño reducido se calcula según un porcentaje:
 
     ```cpp
     m_d3dRenderSizePercentage = percentage;
@@ -120,7 +119,7 @@ Cuando se usa el escalado de cadenas de intercambio, existe un inconveniente car
 
 Realiza los siguientes pasos para crear una cadena de intercambio en primer plano que use la funcionalidad de superposición de hardware. Estos pasos son los que se efectúan después de crear por primera vez una cadena de intercambio para contenido de juego en tiempo real, como se ha descrito anteriormente.
 
-1.  En primer lugar, comprueba si el adaptador de DXGI admite las superposiciones. Para ello, obtén el adaptador de salida de DXGI de la cadena de intercambio:
+1.  En primer lugar, comprueba si el adaptador de DXGI admite las superposiciones. Para ello, obtén el adaptador de salida deDXGI de la cadena de intercambio:
 
     ```cpp
     ComPtr<IDXGIAdapter> outputDxgiAdapter;
@@ -145,7 +144,8 @@ Realiza los siguientes pasos para crear una cadena de intercambio en primer plan
     m_overlaySupportExists = dxgiOutput2->SupportsOverlays() ? true : false;
     ```
     
-    > **Nota**  Ve al siguiente paso si el adaptador DXGI admite las superposiciones. Si no es así, la representación con varias cadenas de intercambio no tendrá un resultado eficaz. En lugar de ello, representa la interfaz de usuario en una resolución reducida en la misma cadena de intercambio que el contenido del juego en tiempo real.
+    > 
+            **Nota**  Ve al siguiente paso si el adaptador DXGI admite las superposiciones. Si no es así, la representación con varias cadenas de intercambio no tendrá un resultado eficaz. En lugar de ello, representa la interfaz de usuario en una resolución reducida en la misma cadena de intercambio que el contenido del juego en tiempo real.
 
      
 
@@ -161,7 +161,8 @@ Realiza los siguientes pasos para crear una cadena de intercambio en primer plan
      foregroundSwapChainDesc.AlphaMode = DXGI_ALPHA_MODE_PREMULTIPLIED; // Foreground swap chain alpha values must be premultiplied.
     ```
 
-    > **Nota**  Debes establecer la marca [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) de nuevo cada vez que la cadena de intercambio cambie de tamaño.
+    > 
+            **Nota**  Debes establecer la marca [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) de nuevo cada vez que la cadena de intercambio cambie de tamaño.
 
     ```cpp
     HRESULT hr = m_foregroundSwapChain->ResizeBuffers(

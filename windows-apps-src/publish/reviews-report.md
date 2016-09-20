@@ -3,7 +3,6 @@ author: jnHs
 Description: "El informe Críticas del panel del Centro de desarrollo de Windows te permite ver los comentarios que los clientes proporcionaron al clasificar tu aplicación en la Tienda."
 title: "Informe Críticas"
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 7d1a768ce558718b43a4d124f7c88868e999fb93
 
@@ -14,7 +13,8 @@ ms.openlocfilehash: 7d1a768ce558718b43a4d124f7c88868e999fb93
 
 El informe **Críticas** del panel del Centro de desarrollo de Windows te permite ver los comentarios que los clientes proporcionaron al clasificar tu aplicación en la Tienda. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
-> **Nota** También puedes [responder a las críticas de los clientes](respond-to-customer-reviews.md) desde esta página.
+> 
+            **Nota** También puedes [responder a las críticas de los clientes](respond-to-customer-reviews.md) desde esta página.
 
 Este informe muestra el número de estrellas que un cliente asignó a tu aplicación al escribir una crítica, pero no analiza las clasificaciones por estrellas en toda la aplicación; para obtener las estadísticas de las clasificaciones, consulta el [informe Críticas](ratings-report.md).
 
@@ -36,21 +36,32 @@ Cada crítica del cliente contiene lo siguiente:
 
 Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** para filtrar todos los datos de esta página.
 
->**Sugerencia** Si no ves ninguna crítica en la página, comprueba que los filtros no hayan excluido todas tus críticas. Por ejemplo, si filtras por un SO de destino que no es compatible con la aplicación, no verás ninguna crítica.
+>
+            **Sugerencia** Si no ves ninguna crítica en la página, comprueba que los filtros no hayan excluido todas tus críticas. Por ejemplo, si filtras por un SO de destino que no es compatible con la aplicación, no verás ninguna crítica.
 
--   **Clasificación**: de manera predeterminada se comprueban todas las clasificaciones por estrellas, pero puedes activar o desactivar clasificaciones específicas (de 1 a 5 estrellas) si quieres ver solo las críticas asociadas a una clasificación por estrellas particular.
--   **Fecha**: el filtro predeterminado es **Últimos 30 días**, pero puedes ampliarlo hasta **Últimos 12 meses**.
--   **Contenido de la crítica**: el valor predeterminado es **Todos**, que incluye clasificaciones sin texto de crítica agregado. Puedes seleccionar **Clasificaciones con contenido de crítica** para mostrar solo las clasificaciones que incluyen contenido de crítica escrita.
--   **SO de destino**: el valor predeterminado es **Todos**. Puedes elegir un determinado sistema operativo de destino si quieres que esta página muestre solo clasificaciones de clientes con paquetes cuyo destino es el SO en cuestión.
--   **Respuestas**: el valor predeterminado es **Todas**. Puedes optar por filtrar las críticas para mostrar solamente aquellas donde has [respondido a los clientes](respond-to-customer-reviews.md), o solo aquellas donde aún ha no ha respondido.
--   **Actualizaciones**: el valor predeterminado es **Todas**. Puedes optar por filtrar las críticas para mostrar solamente las críticas que ha actualizado el cliente desde que [respondiste a una crítica](respond-to-customer-reviews.md) o solo aquellas que el cliente aún no ha actualizado.
--   **Mercado**: el valor predeterminado es **Todos los mercados**. Puedes elegir un mercado específico si quieres que esta página solo muestre críticas de clientes en ese mercado.
--   **Tipo de dispositivo**: el filtro predeterminado es **Todos los dispositivos**. Puedes elegir un tipo de dispositivo específico si quieres que esta página solo muestre críticas aportadas por clientes que usen ese tipo de dispositivo.
--   **Versión del paquete**: el filtro predeterminado es **Todos los paquetes**. Puedes elegir un paquete específico si deseas que esta página muestre solamente críticas realizadas por los clientes que tenían ese paquete cuando revisaron la aplicación.
+-   
+            **Clasificación**: de manera predeterminada se comprueban todas las clasificaciones por estrellas, pero puedes activar o desactivar clasificaciones específicas (de 1 a 5 estrellas) si quieres ver solo las críticas asociadas a una clasificación por estrellas particular.
+-   
+            **Fecha**: el filtro predeterminado es **Últimos 30 días**, pero puedes ampliarlo hasta **Últimos 12 meses**.
+-   
+            **Contenido de la crítica**: el valor predeterminado es **Todos**, que incluye clasificaciones sin texto de crítica agregado. Puedes seleccionar **Clasificaciones con contenido de crítica** para mostrar solo las clasificaciones que incluyen contenido de crítica escrita.
+-   
+            **SO de destino**: el valor predeterminado es **Todos**. Puedes elegir un determinado sistema operativo de destino si quieres que esta página muestre solo clasificaciones de clientes con paquetes cuyo destino es el SO en cuestión.
+-   
+            **Respuestas**: el valor predeterminado es **Todas**. Puedes optar por filtrar las críticas para mostrar solamente aquellas donde has [respondido a los clientes](respond-to-customer-reviews.md), o solo aquellas donde aún ha no ha respondido.
+-   
+            **Actualizaciones**: el valor predeterminado es **Todas**. Puedes optar por filtrar las críticas para mostrar solamente las críticas que ha actualizado el cliente desde que [respondiste a una crítica](respond-to-customer-reviews.md) o solo aquellas que el cliente aún no ha actualizado.
+-   
+            **Mercado**: el valor predeterminado es **Todos los mercados**. Puedes elegir un mercado específico si quieres que esta página solo muestre críticas de clientes en ese mercado.
+-   
+            **Tipo de dispositivo**: el filtro predeterminado es **Todos los dispositivos**. Puedes elegir un tipo de dispositivo específico si quieres que esta página solo muestre críticas aportadas por clientes que usen ese tipo de dispositivo.
+-   
+            **Versión del paquete**: el filtro predeterminado es **Todos los paquetes**. Puedes elegir un paquete específico si deseas que esta página muestre solamente críticas realizadas por los clientes que tenían ese paquete cuando revisaron la aplicación.
 
 La información contenida en todos los gráficos enumerados a continuación reflejará el período de tiempo seleccionado en la sección **Aplicar filtros** y todos los filtros que hayas elegido aquí.
 
-> **Nota** La clasificación media que un cliente ve en la Tienda tiene en cuenta el mercado y el tipo de dispositivo del cliente, y considera las clasificaciones durante el último año. Por lo tanto, puede ser diferente de lo que aparece en este informe. Para ver cómo la clasificación media aparecerá en la Tienda para un cliente determinado, tendrás que aplicar filtros para seleccionar un mercado y tipo de dispositivo específicos, así como para establecer la opción **Fecha** en **Últimos 12 meses**.
+> 
+            **Nota** La clasificación media que un cliente ve en la Tienda tiene en cuenta el mercado y el tipo de dispositivo del cliente, y considera las clasificaciones durante el último año. Por lo tanto, puede ser diferente de lo que aparece en este informe. Para ver cómo la clasificación media aparecerá en la Tienda para un cliente determinado, tendrás que aplicar filtros para seleccionar un mercado y tipo de dispositivo específicos, así como para establecer la opción **Fecha** en **Últimos 12 meses**.
 
 ## Traducción de críticas
 
@@ -74,7 +85,8 @@ Estas son algunas acciones adicionales que puedes considerar según las crítica
 -   Si notas que hay muchas revisiones que sugieren agregar o modificar una función, o que se quejan sobre un problema, piensa en lanzar una nueva versión que contemple lo indicado en comentarios específicos. (Asegúrate de actualizar la [descripción](create-app-descriptions.md) de tu aplicación para indicar que el problema se ha corregido).
 -   Si el promedio de la clasificación es alto, pero el nombre de descargas es bajo, quizás quieras buscar maneras de [exponer la aplicación a más personas](app-promotion-and-customer-engagement.md), dado que es bien recibida por los usuarios que la han probado.
 
-> **Nota** Es probable que veas un número diferente de opiniones al comparar el informe **Críticas** del Centro de desarrollo de Windows con el informe Críticas de la aplicación móvil más antigua del Centro de desarrollo. Esto se debe a que la aplicación solo muestra los datos de las opiniones que dejaron los clientes en Windows Phone 8.1 y versiones anteriores. También puede ser que Microsoft haya eliminado opiniones de la Tienda Windows que se identificaron como spam, inadecuadas, ofensivas o que infringían las directivas de otra forma. Esperamos que esta acción dé como resultado una mejor experiencia del cliente.
+> 
+            **Nota** Es probable que veas un número diferente de opiniones al comparar el informe **Críticas** del Centro de desarrollo de Windows con el informe Críticas de la aplicación móvil más antigua del Centro de desarrollo. Esto se debe a que la aplicación solo muestra los datos de las opiniones que dejaron los clientes en Windows Phone 8.1 y versiones anteriores. También puede ser que Microsoft haya eliminado opiniones de la Tienda Windows que se identificaron como spam, inadecuadas, ofensivas o que infringían las directivas de otra forma. Esperamos que esta acción dé como resultado una mejor experiencia del cliente.
 
  
 

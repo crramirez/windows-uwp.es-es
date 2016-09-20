@@ -16,8 +16,10 @@ La Plataforma universal de Windows (UWP) es el núcleo de una amplia gama de dis
 ## API de CPUSets
 
 La API de CPUSets proporciona control sobre los conjuntos de CPU que están disponibles para los subprocesos en los que se realizará la programación. Existen dos funciones disponibles para controlar dónde se programan los subprocesos:
-- **SetProcessDefaultCpuSets**: esta función puede usarse para especificar los nuevos subprocesos de conjuntos de CPU que pueden ejecutarse si no se asignan a determinados conjuntos de CPU.
-- **SetThreadSelectedCpuSets**: esta función permite limitar los conjuntos de CPU que los que se puede ejecutar un subproceso específico.
+- 
+            **SetProcessDefaultCpuSets**: esta función puede usarse para especificar los nuevos subprocesos de conjuntos de CPU que pueden ejecutarse si no se asignan a determinados conjuntos de CPU.
+- 
+            **SetThreadSelectedCpuSets**: esta función permite limitar los conjuntos de CPU que los que se puede ejecutar un subproceso específico.
 
 Si la función **SetProcessDefaultCpuSets** nunca se ha usado, los subprocesos recién creados se pueden programar en cualquier conjunto de CPU disponible para el proceso. En esta sección se explican los conceptos básicos de la API de CPUSets.
 
@@ -95,7 +97,9 @@ Como hemos visto, la API de CPUSets proporciona una gran cantidad de informació
 
 Este método es eficaz si el juego tiene algunos subprocesos que deben ejecutarse en tiempo real junto con otros subprocesos de trabajo que requieren relativamente poco tiempo de CPU. Algunas tareas, como la música de fondo continua, deben ejecutarse sin interrupciones para una experiencia de juego perfecta. Incluso un único fotograma de colapso de un subproceso de audio puede causar la aparición de mensajes o problemas, por lo cual es muy importante que reciba la cantidad de tiempo de CPU en cada fotograma.
 
-Al usar **SetThreadSelectedCpuSets** junto con **SetProcessDefaultCpuSets** puedes garantizar que los subprocesos intensos no se interrumpan a causa de subprocesos de trabajo. **SetThreadSelectedCpuSets** puede usarse para asignar subprocesos intensos a conjuntos de CPU específicos. **SetProcessDefaultCpuSets** puede usarse para garantizar que los subprocesos sin asignar creados se coloquen en otros conjuntos de CPU. En el caso de las CPU que usan hyperthreading, también es importante para tener en cuenta los núcleos lógicos en el mismo núcleo físico. Los subprocesos de trabajo no deberían poder ejecutarse en núcleos lógicos que comparten el mismo núcleo físico que un subproceso que quieres ejecutar con la capacidad de respuesta en tiempo real. El siguiente código muestra cómo determinar si un equipo usa hyperthreading.
+Al usar **SetThreadSelectedCpuSets** junto con **SetProcessDefaultCpuSets** puedes garantizar que los subprocesos intensos no se interrumpan a causa de subprocesos de trabajo. 
+            **SetThreadSelectedCpuSets** puede usarse para asignar subprocesos intensos a conjuntos de CPU específicos. 
+            **SetProcessDefaultCpuSets** puede usarse para garantizar que los subprocesos sin asignar creados se coloquen en otros conjuntos de CPU. En el caso de las CPU que usan hyperthreading, también es importante para tener en cuenta los núcleos lógicos en el mismo núcleo físico. Los subprocesos de trabajo no deberían poder ejecutarse en núcleos lógicos que comparten el mismo núcleo físico que un subproceso que quieres ejecutar con la capacidad de respuesta en tiempo real. El siguiente código muestra cómo determinar si un equipo usa hyperthreading.
 
 ```
 unsigned long retsize = 0;
@@ -134,7 +138,7 @@ Un ejemplo de organización de subprocesos basada en núcleos físicos puede enc
 
 La coherencia de caché es el concepto en que la memoria caché es la misma en varios recursos de hardware que actúan en los mismos datos. Si los subprocesos se programan en diferentes núcleos, pero que funcionan en los mismos datos, es posible que estén funcionando en copias independientes de los datos en memorias caché diferentes. Para obtener los resultados correctos, estas cachés deben mantenerse coherentes entre sí. Mantener la coherencia entre varias cachés es relativamente costoso, pero es necesario para que cualquier sistema de varios núcleos funcione. Además, está completamente fuera del control del código de cliente; el sistema subyacente funciona independientemente para mantener las memorias caché actualizadas mediante el acceso a los recursos de memoria compartidos entre núcleos.
 
-Si el juego tiene varios subprocesos que comparten una cantidad considerable de datos, puedes reducir al mínimo el costo de la coherencia de caché. Para ello, asegúrate de que estén programados en conjuntos de CPU que comparten una caché de último nivel. La caché de último nivel es la más lenta disponible para un núcleo en sistemas que no usan nodos NUMA. Es extremadamente raro que un equipo de juegos use nodos NUMA. Si los núcleos no comparten una caché de último nivel, mantener la coherencia requerirá acceder a recursos de memoria de mayor nivel y, por tanto, más lentos. El bloqueo de dos subprocesos para separar conjuntos de CPU que comparten una caché y un núcleo físico puede proporcionar un rendimiento aún mayor que su programación en núcleos físicos independientes si no requieren más del 50 % del tiempo en un fotograma determinado. 
+Si el juego tiene varios subprocesos que comparten una cantidad considerable de datos, puedes reducir al mínimo el costo de la coherencia de caché. Para ello, asegúrate de que estén programados en conjuntos de CPU que comparten una caché de último nivel. La caché de último nivel es la más lenta disponible para un núcleo en sistemas que no usan nodos NUMA. Es extremadamente raro que un equipo de juegos use nodos NUMA. Si los núcleos no comparten una caché de último nivel, mantener la coherencia requerirá acceder a recursos de memoria de mayor nivel y, por tanto, más lentos. El bloqueo de dos subprocesos para separar conjuntos de CPU que comparten una caché y un núcleo físico puede proporcionar un rendimiento aún mayor que su programación en núcleos físicos independientes si no requieren más del 50% del tiempo en un fotograma determinado. 
 
 Este ejemplo de código muestra cómo determinar si los subprocesos que se comunican con frecuencia pueden compartir una caché de último nivel.
 

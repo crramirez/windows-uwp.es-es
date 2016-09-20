@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 86D9D3CF-8FDC-4B67-881B-DF33A1BEE8BF
 description: "Antes de usar mediación de anuncios, tienes que configurar cuentas con cada red de anuncios que quieras usar en tus aplicaciones."
 title: Seleccionar y administrar redes de anuncios
-translationtype: Human Translation
 ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
 ms.openlocfilehash: 49c9b8e60da9239c948265fb22563013019da259
 
@@ -14,7 +13,7 @@ ms.openlocfilehash: 49c9b8e60da9239c948265fb22563013019da259
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Antes de usar mediación de anuncios, tienes que configurar cuentas con cada red de anuncios que quieras usar en tus aplicaciones. Te recomendamos hacerlo antes de agregar el control de Ad Mediator a tu proyecto de Microsoft Visual Studio. También recomendamos configurar las cuentas con todas las redes de anuncios que sea posible, para que puedas disponer de la máxima flexibilidad para optimizar el rendimiento de mediación de anuncios.
+Antes de usar mediación de anuncios, tienes que configurar cuentas con cada red de anuncios que quieras usar en tus aplicaciones. Te recomendamos hacerlo antes de agregar el control de Ad Mediator a tu proyecto de MicrosoftVisualStudio. También recomendamos configurar las cuentas con todas las redes de anuncios que sea posible, para que puedas disponer de la máxima flexibilidad para optimizar el rendimiento de mediación de anuncios.
 
 ## Tipos de redes de anuncios y proyectos compatibles
 
@@ -44,7 +43,8 @@ Ten en cuenta que al [agregar el control de Ad Mediator](add-and-use-the-ad-medi
 
 | Sitio web                        | Para configurar los parámetros de red de anuncios, usa la página [rentabilizar con anuncios](https://msdn.microsoft.com/library/windows/apps/mt170658) en el [panel del Centro de desarrollo de Windows](https://dev.windows.com/overview).   |
 |--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Ubicación del SDK                   | [SDK de Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk).                                                                                                                                                                                                                         |
+| Ubicación del SDK                   | 
+            [SDK de Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk).                                                                                                                                                                                                                         |
 | Incorporación de una aplicación              | Agregar el control de mediación de anuncios a tu aplicación y enviar la aplicación en el panel del Centro de desarrollo de Windows.                                                                                                                                                                                                            |
 | Parámetros necesarios            | ApplicationId y AdUnitId: estos parámetros se rellenan automáticamente al enviar el paquete de la aplicación, en función del contenido de la aplicación. Sin embargo, también puedes editar estos parámetros al [enviar la aplicación y configurar la mediación de anuncios](submit-your-app-and-configure-ad-mediation.md). <br> <br> Alto y ancho (solo necesario para Windows Phone 8 Silverlight y Windows Phone 8.1 Silverlight).                                                                                                                                                                                                           |
 | Parámetros que se sobrescriben u omiten | Latitude (se sobrescribe)  <br><br> Longitude (se sobrescribe) <br><br> AutoRefreshIntervalInSeconds (se omite) <br><br> IsAutoRefreshEnabled (se omite) <br><br> IsAutoCollapsedEnabled (se omite) <br><br> IsEngaged (se omite) <br><br> IsSuspended (se omite) |

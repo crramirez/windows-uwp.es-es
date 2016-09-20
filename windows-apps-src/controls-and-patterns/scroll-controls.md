@@ -5,7 +5,6 @@ title: Directrices para barras de desplazamiento
 ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scroll bars
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: b390f8a2cbabf243bd4d73c16122648e3d4a0586
 
@@ -21,7 +20,8 @@ El movimiento panorámico y el desplazamiento permite a los usuarios acceder a c
 
 Un control de visor de desplazamiento está compuesto por tanto contenido como quepa en la ventanilla y una o dos barras de desplazamiento. Se pueden usar gestos táctiles para acceder a una vista de movimiento panorámico y zoom (las barras de desplazamiento solo aparecen en fundido mientras se manipulan) y el puntero puede usarse para los desplazamientos. El gesto de toque genera un movimiento panorámico con inercia.
 
-**Nota** Windows: hay dos modos de visualización panorámica basados en el dispositivo de entrada detectado (indicadores de movimiento panorámico para entrada táctil y barras de desplazamiento para otros dispositivos de entrada, entre ellos mouse, panel táctil, teclado y pluma).
+
+            **Nota** Windows: hay dos modos de visualización panorámica basados en el dispositivo de entrada detectado (indicadores de movimiento panorámico para entrada táctil y barras de desplazamiento para otros dispositivos de entrada, entre ellos mouse, panel táctil, teclado y pluma).
 
 ![Muestra del aspecto de los controles de barra de desplazamiento e indicador de movimiento panorámico estándar](images/SCROLLBAR.png)
 
@@ -45,7 +45,8 @@ Este XAML muestra cómo colocar una imagen en un visor de desplazamiento y habil
 
 ## ScrollViewer en una plantilla de control
 
-Es habitual que exista un control ScrollViewer como elemento compuesto de otros controles. Un elemento ScrollViewer, junto con la clase [**ScrollContentPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx) para compatibilidad, mostrará una ventanilla junto con las barras de desplazamiento solo cuando el espacio de diseño del control de host tenga una limitación menor que el tamaño del contenido expandido. Esto suele ser así en el caso de las listas, por lo que las plantillas [**ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx) siempre incluyen un ScrollViewer. [
+Es habitual que exista un control ScrollViewer como elemento compuesto de otros controles. Un elemento ScrollViewer, junto con la clase [**ScrollContentPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx) para compatibilidad, mostrará una ventanilla junto con las barras de desplazamiento solo cuando el espacio de diseño del control de host tenga una limitación menor que el tamaño del contenido expandido. Esto suele ser así en el caso de las listas, por lo que las plantillas [**ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx) siempre incluyen un ScrollViewer. 
+            [
               **TextBox**
             ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) y [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx) también incluyen un ScrollViewer en sus plantillas.
 

@@ -3,7 +3,6 @@ author: martinekuan
 ms.assetid: C9787269-B54F-4FFA-A884-D4A3BF28F80D
 title: "¿Qué es una aplicación para Plataforma universal de Windows (UWP)?"
 description: "Obtén información sobre los distintos tipos de aplicaciones a las que llamamos aplicaciones de universales de Windows - aplicaciones de la Tienda Windows, aplicaciones de la Tienda de Windows Phone y aplicaciones de Windows Runtime."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: f02851d848a82af7104a6038c5d8850d5362c832
 

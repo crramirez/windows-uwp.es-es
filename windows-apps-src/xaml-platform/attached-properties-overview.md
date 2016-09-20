@@ -3,7 +3,6 @@ author: jwmsft
 description: Explica el concepto de propiedad adjunta en XAML y proporciona algunos ejemplos.
 title: "Introducción a las propiedades adjuntas"
 ms.assetid: 098C1DE0-D640-48B1-9961-D0ADF33266E2
-translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
 ms.openlocfilehash: b676110274bacc8aeacb2527099534cf0e26fa6b
 
@@ -31,13 +30,15 @@ Las propiedades adjuntas existen principalmente porque permiten una sintaxis XAM
 
 Observa que, en cierto modo, el uso es similar a una propiedad estática: siempre se hace referencia al tipo **Canvas** que posee y registra la propiedad adjunta, en lugar de hacer referencia a una instancia por su nombre.
 
-**Nota**  Usamos [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) como un mero ejemplo de propiedad adjunta sin explicar del todo por qué la usarías. Si quieres saber más sobre el uso de **Canvas.Left** y el modo en que [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) controla sus elementos secundarios de diseño, consulta el tema de referencia de [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) o [Definir diseños con XAML](https://msdn.microsoft.com/library/windows/apps/mt228350).
+
+            **Nota**  Usamos [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) como un mero ejemplo de propiedad adjunta sin explicar del todo por qué la usarías. Si quieres saber más sobre el uso de **Canvas.Left** y el modo en que [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) controla sus elementos secundarios de diseño, consulta el tema de referencia de [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) o [Definir diseños con XAML](https://msdn.microsoft.com/library/windows/apps/mt228350).
 
 ## ¿Por qué usar propiedades adjuntas?
 
 Las propiedades adjuntas son una manera de evitar las convenciones de código que podrían impedir que los distintos objetos de una relación intercambien información en tiempo de ejecución. En efecto, es posible incluir propiedades en una clase base común para que cada objeto pueda simplemente obtener y establecer esa propiedad. Pero el mero número de escenarios en los que podrías hacerlo llenaría las clases base con propiedades que pueden compartirse. Podría incluso dar lugar a casos en los que podría haber cientos de descendientes intentando usar una propiedad. Eso no es un buen diseño de clases. Para solucionar este problema, el concepto de propiedad adjunta permite a un objeto asignar un valor para una propiedad que no está definida por su propia estructura de clase. La clase definidora puede leer el valor de los objetos secundarios en tiempo de ejecución después de que se creen los diversos objetos en las relaciones de un árbol de objetos.
 
-Por ejemplo, los elementos secundarios pueden usar las propiedades adjuntas para informar a su elemento primario sobre cómo deben presentarse en la interfaz de usuario. Este es el caso de la propiedad adjunta [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771). **Canvas.Left** se crea como una propiedad adjunta porque se establece en elementos contenidos en un elemento [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), en lugar de en el propio **Canvas**. Después, cualquier elemento secundario posible usa **Canvas.Left** y [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/hh759772) para especificar su desplazamiento dentro del elemento primario contenedor de diseño **Canvas**. Las propiedades adjuntas permiten que este escenario funcione sin abarrotar el modelo de objetos de elementos base con numerosas propiedades que solo se aplican a uno de los muchos contenedores de diseño posibles. En su lugar, muchos de los contenedores de diseño implementan su propio conjunto de propiedades adjuntas.
+Por ejemplo, los elementos secundarios pueden usar las propiedades adjuntas para informar a su elemento primario sobre cómo deben presentarse en la interfaz de usuario. Este es el caso de la propiedad adjunta [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771). 
+            **Canvas.Left** se crea como una propiedad adjunta porque se establece en elementos contenidos en un elemento [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), en lugar de en el propio **Canvas**. Después, cualquier elemento secundario posible usa **Canvas.Left** y [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/hh759772) para especificar su desplazamiento dentro del elemento primario contenedor de diseño **Canvas**. Las propiedades adjuntas permiten que este escenario funcione sin abarrotar el modelo de objetos de elementos base con numerosas propiedades que solo se aplican a uno de los muchos contenedores de diseño posibles. En su lugar, muchos de los contenedores de diseño implementan su propio conjunto de propiedades adjuntas.
 
 Para implementar la propiedad adjunta, la clase [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) define un campo [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) estático denominado [**Canvas.LeftProperty**](https://msdn.microsoft.com/library/windows/apps/br209272). A continuación, **Canvas** proporciona los métodos [**SetLeft**](https://msdn.microsoft.com/library/windows/apps/br209273) y [**GetLeft**](https://msdn.microsoft.com/library/windows/apps/br209269) como descriptores de acceso públicos para la propiedad adjunta, para habilitar tanto la configuración XAML como el acceso a valores en tiempo de ejecución. En XAML y en el sistema de propiedades de dependencia, este conjunto de API sigue un patrón que habilita una sintaxis XAML específica para las propiedades adjuntas, y almacena el valor en el almacén de propiedades de dependencia.
 
@@ -51,7 +52,8 @@ Aunque las propiedades adjuntas puedan establecerse en cualquier elemento XAML (
 
 Para obtener más información sobre estos escenarios y tipos propietarios, consulta la sección "Más información sobre Canvas.Left" de [Propiedades adjuntas personalizadas](custom-attached-properties.md).
 
-## Propiedades adjuntas en el código
+## Propiedades adjuntas en el código 
+
 
 Las propiedades adjuntas no tienen contenedores de propiedades típicos para obtener o establecer acceso fácilmente como lo hacen otras propiedades de dependencia. Esto se debe a que la propiedad adjunta no forma parte necesariamente del modelo de objetos centrado en el código para las instancias en las que se establece la propiedad. (Aunque no es lo más común, se permite definir una propiedad que sea tanto una propiedad adjunta que otros tipos puedan establecer en sí mismos, como que tenga un uso de propiedad convencional en el tipo propietario).
 
@@ -97,28 +99,29 @@ El siguiente ejemplo muestra cómo se puede establecer una propiedad adjunta en 
     //Canvas::SetTop(myCheckBox, 75);
 ```
 
-## Propiedades adjuntas personalizadas
+## [!div class="tabbedCodeSnippets"]
 
-Para ver ejemplos de código sobre cómo definir propiedades adjuntas personalizadas y más información acerca de los escenarios donde se usa una propiedad adjunta, consulta [Propiedades adjuntas personalizadas](custom-attached-properties.md).
+Propiedades adjuntas personalizadas
 
-## Sintaxis especial para referencias a propiedades adjuntas
+## Para ver ejemplos de código sobre cómo definir propiedades adjuntas personalizadas y más información acerca de los escenarios donde se usa una propiedad adjunta, consulta [Propiedades adjuntas personalizadas](custom-attached-properties.md).
 
-El punto en el nombre de la propiedad adjunta es una parte fundamental del patrón de identificación. A veces se producen ambigüedades cuando una sintaxis o una situación trata el punto como si tuviese otro significado. Por ejemplo, el punto se trata como un cruce seguro del modelo de objetos para una ruta de acceso de enlace. En la mayoría de los casos en los que se produce esta ambigüedad, la propiedad adjunta tiene una sintaxis especial que permite que el punto interno se analice como separador *owner***.***property* de una propiedad adjunta.
+Sintaxis especial para referencias a propiedades adjuntas El punto en el nombre de la propiedad adjunta es una parte fundamental del patrón de identificación. A veces se producen ambigüedades cuando una sintaxis o una situación trata el punto como si tuviese otro significado. Por ejemplo, el punto se trata como un cruce seguro del modelo de objetos para una ruta de acceso de enlace.
 
-- Para especificar una propiedad adjunta como parte de una ruta de destino de una animación, encierra el nombre de la propiedad adjunta entre paréntesis ("()"), por ejemplo, "(Canvas.Left)". Para obtener más información, consulta [Sintaxis de property-path](property-path-syntax.md).
+- En la mayoría de los casos en los que se produce esta ambigüedad, la propiedad adjunta tiene una sintaxis especial que permite que el punto interno se analice como separador *owner***.***property* de una propiedad adjunta. Para especificar una propiedad adjunta como parte de una ruta de destino de una animación, encierra el nombre de la propiedad adjunta entre paréntesis ("()"), por ejemplo, "(Canvas.Left)".
 
-**Precaución**  Sin embargo, existe una limitación en la implementación XAML de Windows Runtime y es que no se puede animar una propiedad adjunta personalizada.
+Para obtener más información, consulta [Sintaxis de property-path](property-path-syntax.md).
  
-- Para especificar una propiedad adjunta como propiedad de destino para una referencia a un recurso desde un archivo de recursos a **x:Uid**, usa una sintaxis especial que inyecte una declaración **using:** completa con estilo de código entre corchetes ("\[\]") para crear un salto de ámbito deliberado. Por ejemplo, si suponemos que existe un elemento '<TextBlock x:Uid="Title" />', la clave de recursos en el archivo de recursos que se dirige al valor **Canvas.Top** en esa instancia es "Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top". Para obtener más información sobre archivos de recursos y XAML, consulta [Inicio rápido: traducción de recursos de interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
+- 
+            **Precaución**  Sin embargo, existe una limitación en la implementación XAML de Windows Runtime y es que no se puede animar una propiedad adjunta personalizada. Para especificar una propiedad adjunta como propiedad de destino para una referencia a un recurso desde un archivo de recursos a **x:Uid**, usa una sintaxis especial que inyecte una declaración **using:** completa con estilo de código entre corchetes ("\[\]") para crear un salto de ámbito deliberado. Por ejemplo, si suponemos que existe un elemento '<TextBlock x:Uid="Title" />', la clave de recursos en el archivo de recursos que se dirige al valor **Canvas.Top** en esa instancia es "Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top".
 
-## Temas relacionados
+## Para obtener más información sobre archivos de recursos y XAML, consulta [Inicio rápido: traducción de recursos de interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
 
-* [Propiedades adjuntas personalizadas](custom-attached-properties.md)
-* [Introducción a las propiedades de dependencia](dependency-properties-overview.md)
-* [Definir diseños con XAML](https://msdn.microsoft.com/library/windows/apps/mt228350)
-* [Inicio rápido: traducción de recursos de interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/hh943060)
-* [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)
-* [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359)
+* [Temas relacionados](custom-attached-properties.md)
+* [Propiedades adjuntas personalizadas](dependency-properties-overview.md)
+* [Introducción a las propiedades de dependencia](https://msdn.microsoft.com/library/windows/apps/mt228350)
+* [Definir diseños con XAML](https://msdn.microsoft.com/library/windows/apps/hh943060)
+* [**Inicio rápido: traducción de recursos de interfaz de usuario**](https://msdn.microsoft.com/library/windows/apps/br242361)
+* [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242359)
 
 
 

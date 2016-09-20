@@ -1,11 +1,11 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
 title: Abrir archivos y carpetas con un selector
 description: Para obtener acceso a archivos y carpetas, permite al usuario interactuar con un selector. Puedes usar las clases FileOpenPicker y FileSavePicker para obtener acceso a archivos, y la clase FolderPicker para obtener acceso a una carpeta.
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 387529636eb44206a23356b0a8bb2748d7c10748
+ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
+ms.openlocfilehash: 91128639cea8948579ec128e4cd695bdfeb5fe86
 
 ---
 
@@ -23,8 +23,7 @@ ms.openlocfilehash: 387529636eb44206a23356b0a8bb2748d7c10748
 
 Para obtener acceso a archivos y carpetas, permite al usuario interactuar con un selector. Puedes usar las clases [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) y [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para obtener acceso a archivos, y la clase [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881) para obtener acceso a una carpeta.
 
-
-              **Nota** Consulta también [Muestra de selector de archivos](http://go.microsoft.com/fwlink/p/?linkid=619994).
+**Nota** Consulta también [File picker sample](http://go.microsoft.com/fwlink/p/?linkid=619994) (Muestra de selector de archivos).
 
  
 
@@ -71,7 +70,7 @@ Por ejemplo, podrías llamar al selector de archivos en la aplicación para que 
 ```CSharp
 var picker = new Windows.Storage.Pickers.FileOpenPicker();
 picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
-picker.SuggestedStartLocation = 
+picker.SuggestedStartLocation =
     Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
 picker.FileTypeFilter.Add(".jpg");
 picker.FileTypeFilter.Add(".jpeg");
@@ -101,7 +100,7 @@ El uso del selector de archivos requiere la creación y personalización de un o
 ```CSharp
 var picker = new Windows.Storage.Pickers.FileOpenPicker();
     picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
-    picker.SuggestedStartLocation = 
+    picker.SuggestedStartLocation =
         Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
     picker.FileTypeFilter.Add(".jpg");
     picker.FileTypeFilter.Add(".jpeg");
@@ -178,21 +177,16 @@ else
 }
 ```
 
-
-              **Sugerencia** Cuando la aplicación obtenga acceso a un archivo o a una carpeta a través del selector de archivos, agrégalo a a la propiedad [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) o a la propiedad [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458) para tenerlo controlado en el futuro. Obtendrás más información sobre cómo usar estas listas en el tema [Cómo hacer un seguimiento de los archivos y carpetas usados recientemente](how-to-track-recently-used-files-and-folders.md).
-
- 
+**Sugerencia** Cuando la aplicación obtenga acceso a un archivo o a una carpeta a través del selector de archivos, agrégalo a la propiedad [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) o a la propiedad [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458) para tenerlo controlado en el futuro. Obtendrás más información sobre cómo usar estas listas en el tema [Cómo hacer un seguimiento de los archivos y carpetas usados recientemente](how-to-track-recently-used-files-and-folders.md).
 
  
 
  
 
+ 
 
 
 
-
-
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

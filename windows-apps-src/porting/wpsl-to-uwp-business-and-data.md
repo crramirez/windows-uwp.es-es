@@ -3,7 +3,6 @@ author: mcleblanc
 description: "Detrás de la interfaz de usuario se encuentran las capas de negocio y de datos."
 title: "Migración de capas de negocio y de datos de Windows Phone Silverlight a UWP"
 ms.assetid: 27c66759-2b35-41f5-9f7a-ceb97f4a0e3f
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 24e94e91adc0e5ef0b7a076d54299eab8c4ba527
 
@@ -23,11 +22,11 @@ Una de las prioridades de la Plataforma universal de Windows (UWP) es permitirte
 
 ## Proceso en segundo plano
 
-Una aplicación Windows Phone Silverlight puede usar un objeto **ScheduledTaskAgent** administrado para realizar una tarea mientras la aplicación no está en primer plano. Una aplicación para UWP usa la clase [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) para crear y registrar una tarea en segundo plano de una forma similar. Se define una clase que implementa el trabajo de la tarea en segundo plano. El sistema ejecuta la tarea en segundo plano periódicamente, llamando al método [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) de su clase para ejecutar el trabajo. En una aplicación para UWP, recuerda establecer la declaración **Tareas en segundo plano** en el manifiesto del paquete de la aplicación. Para obtener más información, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt299103).
+Una aplicación WindowsPhone Silverlight puede usar un objeto **ScheduledTaskAgent** administrado para realizar una tarea mientras la aplicación no está en primer plano. Una aplicación para UWP usa la clase [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) para crear y registrar una tarea en segundo plano de una forma similar. Se define una clase que implementa el trabajo de la tarea en segundo plano. El sistema ejecuta la tarea en segundo plano periódicamente, llamando al método [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) de su clase para ejecutar el trabajo. En una aplicación para UWP, recuerda establecer la declaración **Tareas en segundo plano** en el manifiesto del paquete de la aplicación. Para obtener más información, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt299103).
 
-Para transferir archivos grandes de datos en segundo plano, una aplicación Windows Phone Silverlight usa la clase **BackgroundTransferService**. Una aplicación para UWP usa para ello las API en el espacio de nombres [**Windows.Networking.BackgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242). Las funciones usan un patrón similar para iniciar las transferencias, pero en la nueva API se han mejorado las funcionalidades y el rendimiento. Para obtener más información, consulta [Transferencia de datos en segundo plano](https://msdn.microsoft.com/library/windows/apps/xaml/hh452975).
+Para transferir archivos grandes de datos en segundo plano, una aplicación WindowsPhone Silverlight usa la clase **BackgroundTransferService**. Una aplicación para UWP usa para ello las API en el espacio de nombres [**Windows.Networking.BackgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242). Las funciones usan un patrón similar para iniciar las transferencias, pero en la nueva API se han mejorado las funcionalidades y el rendimiento. Para obtener más información, consulta [Transferencia de datos en segundo plano](https://msdn.microsoft.com/library/windows/apps/xaml/hh452975).
 
-Una aplicación Windows Phone Silverlight usa las clases administradas del espacio de nombres **Microsoft.Phone.BackgroundAudio** para reproducir audio mientras la aplicación no está en primer plano. La UWP usa el modelo de aplicación de la Tienda de Windows Phone; consulta [Audio en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140) y la muestra [Audio en segundo plano](http://go.microsoft.com/fwlink/p/?linkid=619997).
+Una aplicación WindowsPhone Silverlight usa las clases administradas del espacio de nombres **Microsoft.Phone.BackgroundAudio** para reproducir audio mientras la aplicación no está en primer plano. La UWP usa el modelo de aplicación de la Tienda de Windows Phone; consulta [Audio en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt282140) y la muestra [Audio en segundo plano](http://go.microsoft.com/fwlink/p/?linkid=619997).
 
 ## Servicios en la nube, redes y bases de datos
 
@@ -47,7 +46,7 @@ Una aplicación Windows Phone Silverlight se puede colocar en un estado inactivo
 
 ## Rentabilidad: modo de prueba y compras desde la aplicación
 
-Una aplicación Windows Phone Silverlight puede usar la clase [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) de UWP para la mayoría de sus funciones de modo de prueba y compra desde la aplicación, de modo que no es necesario portar código. Sin embargo, una aplicación Windows Phone Silverlight llama a **MarketplaceDetailTask.Show** para ofrecer la compra de la aplicación:
+Una aplicación WindowsPhone Silverlight puede usar la clase [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) de UWP para la mayoría de sus funciones de modo de prueba y compra desde la aplicación, de modo que no es necesario portar código. Sin embargo, una aplicación WindowsPhone Silverlight llama a **MarketplaceDetailTask.Show** para ofrecer la compra de la aplicación:
 
 ```csharp
     private void Buy()
@@ -98,7 +97,7 @@ Y el equivalente de UWP:
     string myFavoriteAuthor = propertySet.ContainsKey(key) ? (string)propertySet[key] : "<none>";
 ```
 
-Aunque tienen disponible un subconjunto del espacio de nombres **Windows.Storage**, muchas aplicaciones Windows Phone Silverlight realizan E/S de archivo con la clase **IsolatedStorageFile** porque ha sido compatible durante más tiempo. Suponiendo que se usa **IsolatedStorageFile**, este es un ejemplo de antes y después de escribir y leer un archivo, primero la versión de Windows Phone Silverlight:
+Aunque tienen disponible un subconjunto del espacio de nombres **Windows.Storage**, muchas aplicaciones WindowsPhone Silverlight realizan E/S de archivo con la clase **IsolatedStorageFile** porque ha sido compatible durante más tiempo. Suponiendo que se usa **IsolatedStorageFile**, este es un ejemplo de antes y después de escribir y leer un archivo, primero la versión de WindowsPhone Silverlight:
 
 ```csharp
     const string filename = "FavoriteAuthor.txt";

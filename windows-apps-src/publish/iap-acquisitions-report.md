@@ -3,7 +3,6 @@ author: jnHs
 Description: "En el informe de adquisiciones de IAP del panel del Centro de desarrollo de Windows puedes ver cuántos IAP has vendido, junto con los detalles demográficos y de plataforma."
 title: Informe de adquisiciones de IAP
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3191df12ca5b59f545cf250c3e669b30192af6bc
 
@@ -16,16 +15,20 @@ En el informe **Adquisiciones de IAP** del panel del Centro de desarrollo de Win
 
 En este informe, una adquisición de IAP significa que un cliente te ha comprado un IAP. Varias compras del mismo IAP consumible realizadas por el mismo cliente se contabilizan como adquisiciones de IAP independientes.
 
-> **Importante**  En el informe **Adquisiciones de IAP** no se incluyen datos sobre reembolsos, devoluciones, anulaciones, etc. Para calcular las ganancias por la aplicación, visita [Resumen de pago](payout-summary.md). En la sección **Reservado**, haz clic en el vínculo **Descargar transacciones reservadas**.
+> 
+            **Importante**  En el informe **Adquisiciones de IAP** no se incluyen datos sobre reembolsos, devoluciones, anulaciones, etc. Para calcular las ganancias por la aplicación, visita [Resumen de pago](payout-summary.md). En la sección **Reservado**, haz clic en el vínculo **Descargar transacciones reservadas**.
 
 ## Aplicar filtros
 
 
 Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** para filtrar todos los datos de esta página por intervalo de fechas o por tipo de dispositivo. También puedes filtrar para mostrar solo los datos de un IAP específico.
 
--   **Fecha**: el filtro predeterminado es **Últimos 30 días**, pero puedes ampliarlo hasta **Últimos 12 meses**.
--   **IAP**: el filtro predeterminado es **Todos los IAP**. Si quieres mostrar datos de adquisición solamente de uno de los IAP, aquí puedes elegir uno concreto.
--   **Tipo de dispositivo**: la opción predeterminada es **Todos los dispositivos**. Si quieres mostrar los datos de adquisiciones de IAP de un determinado tipo de dispositivo únicamente, puede elegir uno específico aquí.
+-   
+            **Fecha**: el filtro predeterminado es **Últimos 30 días**, pero puedes ampliarlo hasta **Últimos 12 meses**.
+-   
+            **IAP**: el filtro predeterminado es **Todos los IAP**. Si quieres mostrar datos de adquisición solamente de uno de los IAP, aquí puedes elegir uno concreto.
+-   
+            **Tipo de dispositivo**: la opción predeterminada es **Todos los dispositivos**. Si quieres mostrar los datos de adquisiciones de IAP de un determinado tipo de dispositivo únicamente, puede elegir uno específico aquí.
 
 La información de los gráficos que aparecen a continuación reflejará el período de tiempo seleccionado en la sección **Aplicar filtros**.
 
@@ -57,7 +60,8 @@ El gráfico **Mercados** muestra el número total de adquisiciones de IAP durant
 
 El gráfico **Grupo demográfico de clientes** muestra información demográfica sobre las personas que adquirieron la aplicación. Puedes ver cuántas adquisiciones (durante el período de tiempo seleccionado) realizaron las personas de un determinado grupo de edad divididas por sexo.
 
-> **Nota**  Algunos clientes han optado por no compartir esta información. Si no podemos determinar el grupo de edad o el sexo, la adquisición se clasifica como **Desconocida**.
+> 
+            **Nota**  Algunos clientes han optado por no compartir esta información. Si no podemos determinar el grupo de edad o el sexo, la adquisición se clasifica como **Desconocida**.
 
 ## Versión de SO
 

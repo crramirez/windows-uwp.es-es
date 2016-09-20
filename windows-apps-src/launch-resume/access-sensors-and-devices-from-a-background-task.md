@@ -14,7 +14,8 @@ ms.openlocfilehash: 65471f26596f94fe550c92a10e01ca7f5cef64a1
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-[
+
+            [
               **DeviceUseTrigger**
             ](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que la aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, incluso cuando la aplicación en primer plano esté suspendida. Por ejemplo, en función de dónde se ejecute la aplicación, podrías usar una tarea en segundo plano para sincronizar datos con dispositivos o sensores de monitores. Para ahorrar batería y garantizar el consentimiento apropiado por parte del usuario, el uso de [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) está sujeto a las directivas descritas en este tema.
 
@@ -25,7 +26,8 @@ Para acceder a dispositivos periféricos o sensores en segundo plano, crea una t
 
 Cuando la aplicación deje de ser visible para el usuario, Windows la suspenderá o finalizará para recuperar recursos de CPU y memoria. Esto permite ejecutar otras aplicaciones en primer plano y reduce el consumo de batería. Cuando suceda esto, sin ayuda de una tarea en segundo plano, todos los eventos de datos en curso se perderán. Windows proporciona el desencadenador de tarea en segundo plano, [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337), para que la aplicación pueda realizar operaciones de sincronización y supervisión de larga duración en dispositivos y sensores de manera segura en segundo plano, aunque la aplicación esté suspendida. Para obtener más información sobre el ciclo de vida de la aplicación, consulta [Iniciar, reanudar y tareas en segundo plano](index.md). Para obtener más información sobre las tareas en segundo plano, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
 
-**Nota**: En una aplicación universal de Windows, para sincronizar un dispositivo en segundo plano, el usuario debe haber aprobado la sincronización en segundo plano de la aplicación. El dispositivo también debe estar conectado o emparejado con el equipo, con E/S activa, y se le permite un máximo de 10 minutos de actividad en segundo plano. Más adelante en este tema se proporcionan más detalles sobre la aplicación de directivas.
+
+            **Nota**: En una aplicación universal de Windows, para sincronizar un dispositivo en segundo plano, el usuario debe haber aprobado la sincronización en segundo plano de la aplicación. El dispositivo también debe estar conectado o emparejado con el equipo, con E/S activa, y se le permite un máximo de 10minutos de actividad en segundo plano. Más adelante en este tema se proporcionan más detalles sobre la aplicación de directivas.
 
 ### Limitación: operaciones críticas del dispositivo
 
@@ -85,7 +87,7 @@ Para usar [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps
 **Importante**  
 Ten en cuenta estos puntos importantes al usar [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337):
 
--   La capacidad de desencadenar tareas en segundo plano mediante programación que usan [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) se incluyó por primera vez en Windows 8.1 y Windows Phone 8.1.
+-   La capacidad de desencadenar tareas en segundo plano mediante programación que usan [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) se incluyó por primera vez en Windows8.1 y WindowsPhone8.1.
 
 -   Windows aplica ciertas directivas para garantizar el consentimiento por parte del usuario al actualizar dispositivos periféricos en el equipo.
 
@@ -95,7 +97,8 @@ Ten en cuenta estos puntos importantes al usar [**DeviceUseTrigger**](https://ms
 
  
 
-**Sugerencia**: Para ver cómo funcionan estas tareas en segundo plano, descarga una muestra. Para ver un ejemplo de esto en un equipo, consulta la [muestra de dispositivo USB personalizado](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para ver un ejemplo en un teléfono, consulta la [muestra de sensores en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
+
+            **Sugerencia**: Para ver cómo funcionan estas tareas en segundo plano, descarga una muestra. Para ver un ejemplo de esto en un equipo, consulta la [muestra de dispositivo USB personalizado](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para ver un ejemplo en un teléfono, consulta la [muestra de sensores en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
 
  
 
@@ -129,9 +132,9 @@ En la siguiente tabla se indican las directivas de inicio de tareas que se aplic
 | Se ejecuta una sola tarea en segundo plano de [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/dn297337) por aplicación. | ![se aplica la directiva](images/ap-tools.png) |
 | Todavía no se ha alcanzado la cantidad máxima de tareas en segundo plano de [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/dn297337) en el dispositivo (en el que se ejecuta la aplicación). | familia de dispositivos de escritorio: se puede registrar y ejecutar en paralelo una cantidad ilimitada de tareas. |
 |  |  |
-|  | familia de dispositivos móviles: 1 tarea en un dispositivo de 512 MB; de lo contrario, pueden registrarse 2 tareas y ejecutarse en paralelo. |
+|  | familia de dispositivos móviles: 1 tarea en un dispositivo de 512MB; de lo contrario, pueden registrarse 2 tareas y ejecutarse en paralelo. |
 | La cantidad máxima de dispositivos periféricos o sensores a los que puede acceder la aplicación desde una sola tarea en segundo plano de [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/dn297337) al usar las API o los protocolos compatibles. | Ilimitada |
-| La tarea en segundo plano consume 400 ms de tiempo de CPU (dando por hecho una CPU a 1 GHz) cada minuto cuando la pantalla está bloqueada o cada 5 minutos cuando la pantalla no está bloqueada. Si no se cumple esta directiva, se puede cancelar la tarea. | ![se aplica la directiva](images/ap-tools.png) |
+| La tarea en segundo plano consume 400ms de tiempo de CPU (dando por hecho una CPU a 1GHz) cada minuto cuando la pantalla está bloqueada o cada 5 minutos cuando la pantalla no está bloqueada. Si no se cumple esta directiva, se puede cancelar la tarea. | ![se aplica la directiva](images/ap-tools.png) |
  
 
 ### Comprobaciones de directivas en tiempo de ejecución

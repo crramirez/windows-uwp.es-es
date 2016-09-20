@@ -5,7 +5,7 @@ description: "En este artículo se muestra cómo usar la clase MediaProcessingTr
 title: Procesar archivos multimedia en segundo plano
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: dcf655ff80c4463a567ade0b6d1cc784b60c18be
+ms.openlocfilehash: 704fa52a9e98382940b7863d6196ca0af5d33460
 
 ---
 
@@ -140,6 +140,6 @@ Se llama al controlador de eventos **OnCompleted** cuando la tarea en segundo pl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

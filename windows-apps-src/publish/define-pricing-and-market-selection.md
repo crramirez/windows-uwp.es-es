@@ -3,7 +3,6 @@ author: jnHs
 Description: "La Tienda Windows llega a clientes de más de 200 países y regiones de todo el mundo."
 title: "Definir los precios y la selección del mercado"
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 9a1d8b8fb57989091fe7b82ad34066240f62cb8b
 
@@ -14,7 +13,8 @@ ms.openlocfilehash: 9a1d8b8fb57989091fe7b82ad34066240f62cb8b
 
 La Tienda Windows llega a clientes de más de 200 países y regiones de todo el mundo. Puedes elegir los mercados en los que te gustaría ofrecer la aplicación y puedes determinar el precio que cobrarás a los clientes, con la opción de personalizar los precios según el mercado.
 
-**Nota**  Asegúrate de tener en cuenta nuestras [directrices, que te ayudarán a globalizar tu aplicación](https://msdn.microsoft.com/library/windows/apps/hh969150).
+
+            **Nota**  Asegúrate de tener en cuenta nuestras [directrices, que te ayudarán a globalizar tu aplicación](https://msdn.microsoft.com/library/windows/apps/hh969150).
 
  
 
@@ -23,9 +23,10 @@ La Tienda Windows llega a clientes de más de 200 países y regiones de todo el 
 
 Cuando selecciones el **Precio base** de la aplicación, este se usará en cada mercado en el que se venda la aplicación, a menos que especifiques un precio personalizado para un mercado determinado.
 
-Puedes establecer el **Precio base** en **Libre** o puedes elegir una franja de precios, lo que establece el precio de venta en todos los países donde eliges distribuir la aplicación. Las franjas de precios empiezan por 0,99 USD, con incrementos adicionales (1,29 USD, 1,49 USD, 1,99 USD, etc.). Estos incrementos aumentan a medida que el precio sube.
+Puedes establecer el **Precio base** en **Libre** o puedes elegir una franja de precios, lo que establece el precio de venta en todos los países donde eliges distribuir la aplicación. Las franjas de precios empiezan por 0,99USD, con incrementos adicionales (1,29USD, 1,49USD, 1,99USD, etc.). Estos incrementos aumentan a medida que el precio sube.
 
-> **Nota**  Estas franjas de precios se aplican también a [productos desde la aplicación (IAP)](iap-submissions.md).
+> 
+            **Nota**  Estas franjas de precios se aplican también a [productos desde la aplicación (IAP)](iap-submissions.md).
 
 Cada franja de precios tiene un valor correspondiente en cada una de las más de 60 monedas ofrecidas por la Tienda. Usamos estos valores para ayudarte a vender tus aplicaciones a un punto de precio comparable mundial. No obstante, debido a cambios en las tasas de cambio extranjeras, el importe de ventas exacto puede variar levemente de una moneda a otra.
 
@@ -38,15 +39,18 @@ De manera predeterminada, tu aplicación figurará en todos los mercados posible
 
 Para cambiar esta configuración, expande la sección **Mercados y precios personalizados** de la página **Precios y disponibilidad** de envío de la aplicación. Puedes anular la selección de mercados individuales para excluirlos o hacer clic en **Anular toda la selección** y agregar los mercados individuales que quieras.
 
-> **Importante**   Es tu responsabilidad cumplir con todos los requisitos legales locales, incluso si estos no se mencionan aquí ni en el panel del Centro de desarrollo de Windows.
+> 
+            **Importante**   Es tu responsabilidad cumplir con todos los requisitos legales locales, incluso si estos no se mencionan aquí ni en el panel del Centro de desarrollo de Windows.
 
 Si quieres establecer precios personalizados para la aplicación en mercados específicos, también puedes hacerlo aquí; si no, de manera predeterminada, la aplicación se ofrecerá al precio base (en la moneda local del mercado en cuestión).
 
-> **Nota**  También puedes establecer precios personalizados para mercados específicos para [envíos de IAP](iap-submissions.md).
+> 
+            **Nota**  También puedes establecer precios personalizados para mercados específicos para [envíos de IAP](iap-submissions.md).
 
 Ten en cuenta que incluso si seleccionas todos los mercados, las leyes y restricciones locales u otros factores pueden impedir que ciertas aplicaciones se muestren en algunos países y regiones. Además, algunos mercados pueden tener requisitos específicos en relación con las clasificaciones por edades. Si la aplicación no cumple estos requisitos, no podremos ofrecer tu aplicación en ese mercado. Consulta [Clasificaciones por edades](age-ratings.md) Para obtener más información.
 
-> **Nota**  Para las aplicaciones destinadas a Windows 8 o Windows 8.1, algunos mercados individuales se tratan como un solo mercado "Resto del mundo". Para obtener más información, consulta [Mercados "Resto del mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8-x). Ten en cuenta que los clientes en Windows 8 o Windows 8.1 solo verán la aplicación a su precio base, incluso si cambias el precio en el mercado.
+> 
+            **Nota**  Para las aplicaciones destinadas a Windows 8 o Windows 8.1, algunos mercados individuales se tratan como un solo mercado "Resto del mundo". Para obtener más información, consulta [Mercados "Resto del mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8-x). Ten en cuenta que los clientes en Windows 8 o Windows 8.1 solo verán la aplicación a su precio base, incluso si cambias el precio en el mercado.
 
  
 
@@ -307,49 +311,49 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 
 | País o región | Métodos de pago         | Ajuste de expansión comercial | Fecha efectiva |
 |----------------|-------------------------|-------------------------------|----------------|
-| Brasil         | Facturación de operadores de telefonía móvil | 13,9 %                         | Diciembre de 2014  |
-| Chile          | Facturación de operadores de telefonía móvil | 13,9 %                         | Marzo de 2014     |
-| China          | Facturación de operadores de telefonía móvil | 13,9 %                         | Diciembre de 2014  |
-| Colombia       | Facturación de operadores de telefonía móvil | 13,9 %                         | Marzo de 2014     |
-| Costa Rica     | Facturación de operadores de telefonía móvil | 13,9 %                         | Marzo de 2014     |
-| Ecuador        | Facturación de operadores de telefonía móvil | 13,9 %                         | Noviembre de 2014  |
-| Egipto          | Facturación de operadores de telefonía móvil | 13,9 %                         | Junio de 2014      |
-| Guatemala      | Facturación de operadores de telefonía móvil | 13,9 %                         | Octubre de 2014   |
-| India          | Facturación de operadores de telefonía móvil | 13,9 %                         | Diciembre de 2014  |
-| Jordania         | Facturación de operadores de telefonía móvil | 13,9 %                         | Marzo de 2015     |
-| Kenia          | Facturación de operadores de telefonía móvil | 13,9 %                         | Julio de 2014      |
-| Malasia       | Facturación de operadores de telefonía móvil | 13,9 %                         | Marzo de 2014     |
-| México         | Facturación de operadores de telefonía móvil | 13,9 %                         | Marzo de 2014     |
-| Pakistán       | Facturación de operadores de telefonía móvil | 13,9 %                         | Octubre de 2015   |
-| Perú           | Facturación de operadores de telefonía móvil | 13,9 %                         | Marzo de 2014     |
-| Filipinas    | Facturación de operadores de telefonía móvil | 13,9 %                         | Junio de 2015      |
-| Puerto Rico    | Facturación de operadores de telefonía móvil | 13,9 %                         | Junio de 2015      |
-| Sudáfrica   | Facturación de operadores de telefonía móvil | 13,9 %                         | Marzo de 2014     |
-| Vietnam        | Facturación de operadores de telefonía móvil | 13,9 %                         | Octubre de 2014   |
+| Brasil         | Facturación de operadores de telefonía móvil | 13,9%                         | Diciembre de 2014  |
+| Chile          | Facturación de operadores de telefonía móvil | 13,9%                         | Marzo de 2014     |
+| China          | Facturación de operadores de telefonía móvil | 13,9%                         | Diciembre de 2014  |
+| Colombia       | Facturación de operadores de telefonía móvil | 13,9%                         | Marzo de 2014     |
+| Costa Rica     | Facturación de operadores de telefonía móvil | 13,9%                         | Marzo de 2014     |
+| Ecuador        | Facturación de operadores de telefonía móvil | 13,9%                         | Noviembre de 2014  |
+| Egipto          | Facturación de operadores de telefonía móvil | 13,9%                         | Junio de 2014      |
+| Guatemala      | Facturación de operadores de telefonía móvil | 13,9%                         | Octubre de 2014   |
+| India          | Facturación de operadores de telefonía móvil | 13,9%                         | Diciembre de 2014  |
+| Jordania         | Facturación de operadores de telefonía móvil | 13,9%                         | Marzo de 2015     |
+| Kenia          | Facturación de operadores de telefonía móvil | 13,9%                         | Julio de 2014      |
+| Malasia       | Facturación de operadores de telefonía móvil | 13,9%                         | Marzo de 2014     |
+| México         | Facturación de operadores de telefonía móvil | 13,9%                         | Marzo de 2014     |
+| Pakistán       | Facturación de operadores de telefonía móvil | 13,9%                         | Octubre de 2015   |
+| Perú           | Facturación de operadores de telefonía móvil | 13,9%                         | Marzo de 2014     |
+| Filipinas    | Facturación de operadores de telefonía móvil | 13,9%                         | Junio de 2015      |
+| Puerto Rico    | Facturación de operadores de telefonía móvil | 13,9%                         | Junio de 2015      |
+| Sudáfrica   | Facturación de operadores de telefonía móvil | 13,9%                         | Marzo de 2014     |
+| Vietnam        | Facturación de operadores de telefonía móvil | 13,9%                         | Octubre de 2014   |
 
   
 
 | País o región       | Métodos de pago | Ajuste de expansión comercial | Fecha efectiva |
 |----------------------|-----------------|-------------------------------|----------------|
-| Argentina            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Australia            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Austria              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Bélgica              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Brasil               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Canadá               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Chile                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| China                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Colombia             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| República Checa       | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Dinamarca              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Finlandia              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Francia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Alemania              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Grecia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Hong Kong            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Hungría              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| India                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Irlanda              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Argentina            | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Australia            | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Austria              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Bélgica              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Brasil               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Canadá               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Chile                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| China                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Colombia             | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| República Checa       | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Dinamarca              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Finlandia              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Francia               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Alemania              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Grecia               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Hong Kong            | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Hungría              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| India                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Irlanda              | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Israel               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Italia                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Japón                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
@@ -360,18 +364,18 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 | Portugal             | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Rusia               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 | Arabia Saudí         | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
-| Singapur            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Eslovaquia             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Sudáfrica         | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Corea del Sur          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| España                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Suecia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Suiza          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Taiwán               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Turquía               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Emiratos Árabes Unidos | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Reino Unido       | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Estados Unidos        | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Singapur            | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Eslovaquia             | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Sudáfrica         | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Corea del Sur          | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| España                | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Suecia               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Suiza          | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Taiwán               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Turquía               | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Emiratos Árabes Unidos | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Reino Unido       | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
+| Estados Unidos        | Tarjeta de regalo       | 2,24%                         | Marzo de 2016     |
 
  
 
@@ -551,7 +555,8 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
 -   Zambia
 -   Zimbabue
 
-> **Nota**  Para una lista de países y regiones en los que puedas registrarte para una cuenta de desarrollador, consulta [Tipos de cuentas, ubicaciones y precios](https://msdn.microsoft.com/library/windows/apps/jj863494).
+> 
+            **Nota**  Para una lista de países y regiones en los que puedas registrarte para una cuenta de desarrollador, consulta [Tipos de cuentas, ubicaciones y precios](https://msdn.microsoft.com/library/windows/apps/jj863494).
 
 
 

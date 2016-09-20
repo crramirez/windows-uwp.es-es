@@ -5,7 +5,6 @@ title: "Conceptos básicos sobre el diseño de comandos de aplicaciones de la Pl
 ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
 label: Command design basics
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: be7ff187df9800a8c2c47c4315f3f9b021e265f8
 
@@ -33,7 +32,8 @@ Si se usan los elementos adecuados para las interacciones apropiadas, se puede m
 | Selectores de fecha y hora | [selector de fecha del calendario, vista de calendario, selector de fecha, selector de hora](https://msdn.microsoft.com/library/windows/apps/hh465466)                                                                                                                 | Permite al usuario ver y modificar la información de fecha y hora, como al escribir la fecha de expiración de una tarjeta de crédito o al establecer una alarma.                   |
 | Listas                 | [lista desplegable, cuadro de lista, vista de lista y vista de cuadrícula](https://msdn.microsoft.com/library/windows/apps/mt186889)                                                                                                                                              | Presenta los elementos en una lista interactiva o una cuadrícula. Usa estos elementos para permitir a los usuarios seleccionar una película de una lista de nuevas versiones o administrar un inventario. |
 | Entrada de texto predictivo | [Cuadro de sugerencias automáticas](https://msdn.microsoft.com/library/windows/apps/dn997762)                                                                                                                                                                    | Ahorra tiempo a los usuarios cuando escriben datos o realizan consultas, al proporcionar sugerencias a medida que escriben.                                                   |
-| Controles de selección    | [casilla](https://msdn.microsoft.com/library/windows/apps/hh700393), [botón de radio](https://msdn.microsoft.com/library/windows/apps/hh700395), [modificador para alternar](https://msdn.microsoft.com/library/windows/apps/hh465475) | Permite al usuario elegir entre diferentes opciones, como al completar una encuesta o al configurar los parámetros de la aplicación.                                      |
+| Controles de selección    | 
+            [casilla](https://msdn.microsoft.com/library/windows/apps/hh700393), [botón de radio](https://msdn.microsoft.com/library/windows/apps/hh700395), [modificador para alternar](https://msdn.microsoft.com/library/windows/apps/hh465475) | Permite al usuario elegir entre diferentes opciones, como al completar una encuesta o al configurar los parámetros de la aplicación.                                      |
 
  
 
@@ -135,7 +135,8 @@ Independientemente de lo bien diseñada que esté la interfaz de usuario y de lo
     -   modificar contenido o editar texto
     -   cambiar el nombre de un archivo
 
-**Sugerencia**  Ten cuidado con la cantidad de cuadros de diálogo de confirmación que usa la aplicación; pueden ser muy útiles cuando el usuario comete un error, pero son un estorbo cuando el usuario intenta realizar una acción de forma intencionada.
+
+            **Sugerencia**  Ten cuidado con la cantidad de cuadros de diálogo de confirmación que usa la aplicación; pueden ser muy útiles cuando el usuario comete un error, pero son un estorbo cuando el usuario intenta realizar una acción de forma intencionada.
 
  
 

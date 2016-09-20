@@ -1,136 +1,145 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Enable keyboard access using tab navigation and access keys so users can navigate across UI elements with the keyboard.
-title: Access keys
+Description: "Habilita el acceso de teclado con la navegación mediante tabulación y las teclas de acceso para que los usuarios puedan navegar por los elementos de la interfaz de usuario con el teclado."
+title: Teclas de acceso
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Access keys
 template: detail.hbs
 keyword: Access keys, keyboard, accessibility
+translationtype: Human Translation
+ms.sourcegitcommit: ac86012b63646e53dbde492eef504cb8230f2afd
+ms.openlocfilehash: d96d507c6ce8537888619ce174e2ff0e5284dcce
+
 ---
 
-# Access keys
+# Teclas de acceso
 
-Users who cannot easily use a mouse, such as those with motor disabilities, often rely on the keyboard to navigate and interact with an app.  The XAML framework lets you enable keyboard access using tab navigation and access keys so users can navigate across UI elements with the keyboard.
+Los usuarios que tienen dificultades para usar un mouse, como las personas con discapacidades motrices, a menudo dependen del teclado para navegar por una aplicación e interactuar con ella.  El marco XAML te permite proporcionar acceso de teclado a los elementos de la interfaz de usuario gracias a la navegación mediante tabulación y las teclas de acceso.
 
-- Tab navigation is a basic keyboard accessibility resource that’s enabled by default. Users press the tab and arrow keys on the keyboard to move focus around the UI elements.  
-- Access keys are an additional accessibility aid that you can implement. An access key uses the Alt key plus one or more alphanumeric characters associated with a UI element. For example, _Alt, F_ is commonly used to open the File menu, while _Alt, AL_ could invoke the Align Left option.  
+- La navegación mediante tabulación es una prestación básica de la accesibilidad de teclado (habilitada de manera predeterminada) que permite a los usuarios mover el foco entre los elementos de la interfaz de usuario con las teclas de dirección y el tabulador del teclado.
+- Las teclas de acceso son una prestación de accesibilidad adicional (que se implementa en la aplicación) para permitir un acceso rápido a los comandos de la aplicación mediante una combinación del modificador de teclado (tecla Alt) y una o más claves alfanuméricas (normalmente una letra asociada con el comando). Entre las teclas de acceso habituales se incluyen _Alt+A_ para abrir el menú Archivo y _Alt+AL_ para alinear a la izquierda.  
 
-For more info about keyboard navigation and accessibility, see [Keyboard interaction](https://msdn.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) and [Keyboard accessibility](https://msdn.microsoft.com/windows/uwp/accessibility/keyboard-accessibility). This article assumes you understand the concepts discussed in those articles.
+Para obtener más información sobre la navegación por teclado y la accesibilidad de teclado, consulta [Interacciones de teclado](https://msdn.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) y [Accesibilidad de teclado](https://msdn.microsoft.com/windows/uwp/accessibility/keyboard-accessibility). En este artículo se da por hecho que conoces los conceptos que se tratan en los artículos siguientes.
 
-## Access key overview
+## Información general sobre las teclas de acceso
 
-Access keys let users directly invoke buttons or set focus with the keyboard without requiring them to repeatedly press the arrow keys and tab. Access keys are intended to be easily discoverable, so you should document them directly in the UI; for example, a floating badge over the control with the access key.
+Las teclas de acceso permiten a los usuarios invocar botones directamente o establecer el foco con el teclado sin tener que presionar repetidamente las teclas de dirección y el tabulador. Las teclas de acceso están concebidas para que resulte fácil descubrirlas, por lo que debes documentarlas directamente en la interfaz de usuario; por ejemplo, una notificación flotante sobre el control con la tecla de acceso.
 
+![Ejemplo de teclas de acceso y sugerencias de teclas asociadas en Microsoft Word](images/keyboard/accesskeys-keytips.png)
 
-_Figure 1: Example of Key Tips; floating badge access keys from Microsoft Word._
+_Figura 1: Ejemplo de teclas de acceso y sugerencias de teclas asociadas en Microsoft Word._
 
-An access key is one or several alphanumeric characters associated with a UI element. For example, Microsoft Word uses _H_ for the Home tab, _2_ for Undo button, or _JI_ for the Draw tab.
+Una tecla de acceso es uno o varios caracteres alfanuméricos asociados con un elemento de la interfaz de usuario. Por ejemplo, Microsoft Word usa _O_ para la pestaña Inicio, _2_ para el botón Deshacer, o _JR_ para la pestaña Dibujo.
 
-**Access key scope**
+**Ámbito de las teclas de acceso**
 
-An access key belongs to a specific scope. For example, in Figure 1, _F_, _H_, _N_, and _JI_, belong to the page’s scope.  When the user presses _H_, the scope changes to the Home tab’s scope and its access keys are shown as seen in Figure 2. The access keys, _V_, _FP_, _FF_, and _FS_ belong to the Home tab’s scope.
+Una tecla de acceso pertenece a un ámbito específico. Por ejemplo, en la figura 1 _F_, _H_, _N_, y _JI_, pertenecen al ámbito de la página.  Cuando el usuario presiona _H_, el ámbito cambia al ámbito de la pestaña Home (Inicio) y se muestran sus teclas de acceso, tal como se muestra en la figura 2. Las teclas de acceso, _V_, _FP_, _FF_, y _FS_ pertenecen al ámbito de la pestaña Home (Inicio).
 
+![Ejemplo de teclas de acceso y sugerencias de teclas asociadas para el ámbito de la pestaña Home (Inicio) en Microsoft Word](images/keyboard/accesskeys-keytips-hometab.png)
 
-_Figure 2: Access keys that belong to the Home tab’s scope_
+_Figura 2: Ejemplo de teclas de acceso y sugerencias de teclas asociadas para el ámbito de la pestaña Inicio en Microsoft Word._
 
-Two elements can have the same access keys if the elements belong to different scopes. For example, _2_ is the access key for Undo on the page’s scope (Figure 1), and also for Italic in the Home tab’s scope (Figure 2). All access keys belong to the default scope unless another scope is specified.
+Dos elementos pueden tener las mismas teclas de acceso si los elementos que pertenecen a ámbitos diferentes. Por ejemplo, _2_ es la tecla de acceso para Deshacer en el ámbito de la página (figura 1) y también para cursiva en el ámbito de la pestaña Home (Inicio) (figura 2). Todas las teclas de acceso pertenecen al ámbito predeterminado, a menos que se especifique otro ámbito.
 
-**Access key sequence**
+**Secuencia de teclas de acceso**
 
-To use access keys, users typically press one key at a time to achieve an action rather than pressing keys simultaneously. (There is an exception to this that we discuss in the next section.) The sequence of keystrokes needed to achieve the action is an _access key sequence_. The user presses the Alt key to initiate the access key sequence. An access key is invoked when the user presses the last key in an access key sequence. For example, to open the View tab in Word, the user would press the _Alt, W_ access key sequence.
+Por lo general, las combinaciones de teclas de acceso se presionan de una en una para lograr la acción, no se presionan de forma simultánea. (Existe una excepción a esto que se tratará en la siguiente sección). La secuencia de pulsaciones de teclas necesaria para lograr la acción es una _secuencia de teclas de acceso_. El usuario presiona la tecla Alt para iniciar la secuencia de teclas de acceso. Se invoca una tecla de acceso cuando el usuario presiona la última tecla de una secuencia de teclas de acceso. Por ejemplo, para abrir la pestaña Vista en Word, el usuario presiona la secuencia de teclas de acceso _Alt, N_.
 
-A user can invoke several access keys in an access key sequence. For example, to open the Format Painter in a Word document, the user presses Alt to initialize the sequence, then presses _H_ to navigate to the Home section and change the access key scope, then _F_, and eventually _P_. _H_ and _FP_ are the access keys for the Home tab and the Format Painter button respectively.
+Un usuario puede invocar varias teclas de acceso en una secuencia de teclas de acceso. Por ejemplo, para abrir Copiar formato en un documento de Word, el usuario presiona Alt para inicializar la secuencia, a continuación, presiona _O_ para navegar a la sección Inicio y cambiar el ámbito de las teclas de acceso, luego _O_ y, finalmente _O_ otra vez. _O_ y _OO_ son las teclas de acceso para la pestaña Inicio y el botón Copiar formato respectivamente.
 
-Some elements finalize an access key sequence after they’re invoked (like the Format Painter button) and others don’t (like the Home tab). Invoking an access key can result in executing a command, moving the focus, changing the access key scope, or some other action associated with it.
+Algunos elementos finalizan una secuencia de teclas de acceso después su invocación (como el botón Copiar formato) y otros no (como la pestaña Inicio). Invocar una tecla de acceso puede producir que se ejecute un comando, se mueva el foco, se cambie el ámbito de las teclas de acceso o alguna otra acción asociada con ella.
 
-## Access Key User Interaction
+## Interacción del usuario con las teclas de acceso
 
-To understand the Access Key APIs, it is necessary to first understand the user interaction model. Below you can find a summary of the access key user interaction model:
+Para comprender las API de las teclas de acceso, es necesario comprender antes el modelo de interacción del usuario. A continuación encontrarás un resumen del modelo de interacción del usuario con las teclas de acceso:
 
-- When the user presses the Alt key, the access key sequence starts, even when the focus is on an input control. Then, the user can press the access key to invoke the associated action. This user interaction requires that you document the available access keys within the UI with some visual affordance, such as floating badges, that are shown when the Alt key is pressed
-- When the user presses the Alt key plus the access key simultaneously, the access key is invoked immediately. This is similar to having a keyboard shorcut defined by Alt+_access key_. In this case, the access key visual affordances are not shown. However, invoking an access key could result in changing the access key scope. In this case, an access key sequence is initiated and the visual affordances are shown for the new scope.
+- Cuando el usuario presiona la tecla Alt, se inicia la secuencia de teclas de acceso, incluso cuando el foco está en un control de entrada. A continuación, el usuario puede presionar la tecla de acceso para invocar la acción asociada. Esta interacción del usuario requiere que documentes las teclas de acceso disponibles en la interfaz de usuario con alguna prestación visual, como notificaciones flotantes que se muestren al presionar la tecla Alt
+- Cuando el usuario presiona la tecla Alt y la tecla de acceso simultáneamente, la tecla de acceso se invoca inmediatamente. Esto es parecido a disponer de un método abreviado de teclado definido por Alt +_tecla de acceso_. En este caso, no se muestran las prestaciones visuales de las teclas de acceso. Sin embargo, invocar una tecla de acceso podría producir un cambio del ámbito de las teclas de acceso. En este caso, se inicia una secuencia de teclas de acceso y se muestran las prestaciones visuales del nuevo ámbito.
+    > [!NOTE]
+    > Únicamente las teclas de acceso de un solo carácter pueden aprovechar esta interacción del usuario. La combinación Alt +_tecla de acceso_ no se admite para las teclas de acceso con más de un carácter.    
+- Si hay varias claves de acceso de varios caracteres que comparten algunos caracteres, cuando el usuario presiona un carácter compartido, las teclas de acceso se filtran. Por ejemplo, supongamos que se muestran 3 teclas de acceso: _A1_, _A2_, y _C_. Si el usuario presiona _A_, a continuación solo se mostrarán las teclas de acceso _A1_ y _A2_ y se ocultará la prestación visual de C.
+- La tecla Esc quita un nivel de filtrado. Por ejemplo, si tenemos las teclas de acceso _B_, _ABC_, _ACD_, y _ABD_ y el usuario presiona _A_, a continuación, solo se mostrarán _ABC_, _ACD_ y _ABD_. Si luego el usuario presiona _B_, solo se mostrarán _ABC_ y _ABD_. Si el usuario presiona la tecla Esc, se quitará un nivel de filtrado y se mostrarán las teclas de acceso _ABC_, _ACD_ y _ABD_. Si el usuario vuelve a presionar la tecla Esc, se quitará otro nivel de filtrado y todas las teclas de acceso (_B_, _ABC_, _ACD_ y _ABD_) estarán habilitadas y se mostrarán sus prestaciones visuales.
+- La tecla Esc retrocede al ámbito anterior. Las teclas de acceso pueden pertenecer a distintos ámbitos para que sea más fácil navegar por las aplicaciones que tengan una gran cantidad de comandos. La secuencia de teclas de acceso comienza siempre en el ámbito principal. Todas las teclas de acceso pertenecen al ámbito principal, excepto aquellas que especifican un elemento concreto de la interfaz de usuario como el propietario de su ámbito. Si el usuario invoca la tecla de acceso de un elemento que sea propietario de un ámbito, el marco XAML mueve el ámbito a ella automáticamente y la agrega a una pila de navegación interna de teclas de acceso. La tecla Esc retrocede por la pila de navegación de teclas de acceso.
+- Existen varias maneras de descartar la secuencia de teclas de acceso:
+    - El usuario puede presionar Alt para descartar una secuencia de teclas de acceso que esté en curso. Recuerda que presionar Alt también inicia la secuencia de teclas de acceso.
+    - La tecla Esc descarta la secuencia de teclas de acceso si se está en el ámbito principal y sin filtrar.
+        > [!NOTE]
+        > La pulsación de la tecla Esc se pasa a la capa de la interfaz de usuario para controlarla también ahí.
+- La tecla de tabulador descarta la secuencia de teclas de acceso y vuelve a la navegación mediante tabulación.
+- La tecla Entrar descarta la secuencia de teclas de acceso y envía la pulsación de la tecla al elemento que tiene el foco.
+- Las teclas de dirección descartan la secuencia de teclas de acceso y envían la pulsación de la tecla al elemento que tiene el foco.
+- Un evento de puntero hacia abajo, como un clic del mouse o una función táctil, descarta la secuencia de teclas de acceso.
+- De manera predeterminada, cuando se invoca una tecla de acceso, se descarta la secuencia de teclas de acceso.  Sin embargo, este comportamiento puede invalidarse si se establece la propiedad [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) en **false**.
+- Se produce una colisión de teclas de acceso cuando no es posible un autómata limitado determinista. Es preferible que estas colisiones de teclas de acceso no existan, pero pueden producirse debido a un gran número de comandos, a problemas de localización o a la generación en tiempo de ejecución de las teclas de acceso.
 
-    **NOTE**&nbsp;&nbsp;Only access keys with one character can take advantage of this user interaction. The Alt+_access key_ combination is not supported for access keys with more than one character.
-- When there are several multi-character access keys that share some characters, when the user presses a shared character, the access keys are filtered. For example, assume there are three access keys shown: _A1_, _A2_, and _C_. If the user presses _A_, then only the _A1_ and _A2_ access key are shown and the visual affordance for C is hidden.
-- The Esc key removes one level the filtering. For example, if there are access keys _B_, _ABC_, _ACD_, and _ABD_ and the user presses _A_, then only _ABC_, _ACD_ and _ABD_ are shown. If the user then presses _B_, only _ABC_ and _ABD_ are shown. If user presses Esc, one level of filtering is removed and _ABC_, _ACD_ and _ABD_ access keys are shown. If the user presses Esc again, another level of filtering is removed and all the access keys -   _B_, _ABC_, _ACD_, and _ABD_ – are enabled and their visual affordances are shown.
-- The Esc key navigates back to the previous scope. Access keys can belong to different scopes to make it easier to navigate across apps that have a lot of commands. The access key sequence always starts on the main scope. All access keys belong to the main scope except those that specify a particular UI element as their scope owner. When the user invokes the access key of an element that is a scope owner, the XAML framework automatically moves the scope to it and adds it to an internal access key navigation stack. The Esc key moves back through the access key navigation stack.
-- There are several ways to dismiss the access key sequence:
-    - The user can press Alt to dismiss an access key sequence that is in progress. Remember that pressing Alt initiates the access key sequence as well.
-    - The Esc key dismisses the access key sequence if it is in the main scope and is not filtered.
+ Hay dos casos donde se producen colisiones:
+ - Cuando dos elementos de la interfaz de usuario tienen el mismo valor de tecla de acceso y pertenecen al mismo ámbito de teclas de acceso. Por ejemplo, una tecla de acceso _A1_ para un `button1` y una tecla de acceso _A1_ para un `button2` que pertenece al ámbito predeterminado. En este caso, el sistema resuelve la colisión mediante el procesamiento de la tecla de acceso del primer elemento agregado al árbol visual. El resto se omiten.
+ - Cuando hay más de una opción de cálculo en el mismo ámbito de teclas de acceso. Por ejemplo, _A_ y _A1_. Cuando el usuario presiona _A_, el sistema tiene dos opciones: invocar la tecla de acceso _A_ o seguir y consumir el carácter A de la tecla de acceso _A1_. En este caso, el sistema procesará solo la invocación de la primera tecla de acceso que alcancen los autómatas. En el ejemplo de _A_ y _A1_, el sistema solo invocará la tecla de acceso _A_.
+-   Cuando el usuario presiona un valor de tecla de acceso no válido en una secuencia de teclas de acceso, no sucede nada. Existen dos categorías de teclas que se consideran teclas de acceso válidas en una secuencia de teclas de acceso:
+ - Teclas especiales para salir de la secuencia de teclas de acceso; es decir, Esc, Alt, las teclas de dirección, Entrar y la tecla de tabulador.
+ - Caracteres alfanuméricos asignados a las teclas de acceso.
 
-        **NOTE**&nbsp;&nbsp;The Esc keystroke is passed to the UI layer to be handled there as well.
-    - The Tab key dismisses the access key sequence and returns to the Tab navigation.
-    - The Enter key dismisses the access key sequence and sends the keystroke to the element that has the focus.
-    - The arrow keys dismiss the access key sequence and send the keystroke to the element that has the focus.
-    - A pointer down event such a mouse click or a touch dismisses the access key sequence.
-    - By default, when an access key is invoked, the access key sequence is dismissed.  However, you can override this behavior by setting the [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) property to **false**.
-- Access key collisions occur when a deterministic finite automaton is not possible. Access key collisions are not desirable but can happen because of a large number of commands, localization issues, or runtime generation of access keys.
+## Las API de teclas de acceso
 
- There are two cases where collisions happen:
- - When two UI elements have the same access key value and belong to the same access key scope. For example, an access key _A1_ for a `button1` and access key _A1_ for a `button2` that belongs to the default scope. In this case, the system resolves the collision by processing the access key of the first element added to the visual tree. The rest are ignored.
- - When there is more than one computational option in the same access key scope. For example, _A_ and _A1_. When user presses _A_, the system has two options: invoke the _A_ access key or keep going and consume the A character from the _A1_ access key. In this case, the system will process only the first access key invocation reached by the automata. For the example, _A_ and _A1_, the system will only invoke the _A_ access key.
-- 	When the user presses an invalid access key value in an access key sequence, nothing happens. There are two categories of keys considered as valid access keys in an access key sequence:
- - Special keys to exit the access key sequence: This is Esc, Alt, the arrow keys, Enter, and Tab.
- - The alphanumeric characters assigned to the access keys.
-
-## Access key APIs
-
-To support the access key user interaction, the XAML framework provides the APIs described here.
+Para admitir la interacción del usuario con las teclas de acceso, el marco XAML proporciona las API que se describen aquí.
 
 **AccessKeyManager**
 
-The [AccessKeyManager](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.aspx) is a helper class that you can use to manage your UI when access keys are shown or hidden. The [IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx) event is raised each time the app enters and exits from the access key sequence. You can query the [IsDisplayModeEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabled.aspx) property to determine whether the visual affordances are shown or hidden.  You can also call [ExitDisplayMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.exitdisplaymode.aspx) to force dismissal of an access key sequence.
+[AccessKeyManager](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.aspx) es una clase auxiliar que sirve para administrar la interfaz de usuario cuando se muestran u ocultan teclas de acceso. El evento [IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx) se genera cada vez que la aplicación entra y sale de la secuencia de teclas de acceso. Puedes consultar la propiedad [IsDisplayModeEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabled.aspx) para determinar si las prestaciones visuales se muestran o se ocultan.  También se puede llamar a [ExitDisplayMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.exitdisplaymode.aspx) para forzar el descarte de una secuencia de teclas de acceso.
 
-**NOTE**&nbsp;&nbsp;There is no built-in implementation of the access key's visual; you have to provide it.  
+> [!NOTE]
+> No existe ninguna implementación integrada del objeto visual de las tecla de acceso; tienes que proporcionarla tú.  
 
 **AccessKey**
 
-The [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx) property lets you specify an access key on a UIElement or [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.accesskey.aspx). If two elements have the same access key and the same scope, only the first element added to the visual tree will be processed.
+La propiedad [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx) te permite especificar una tecla de acceso en un UIElement o [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.accesskey.aspx). Si dos elementos tienen la misma tecla de acceso y el mismo ámbito, únicamente se procesará el primer elemento agregado al árbol visual.
 
-To ensure the XAML Framework processes the access keys, the UI elements must be realized in the visual tree. If there are no elements in the visual tree with an access key, no access key events are raised.
+Para garantizar que el marco XAML procesa las teclas de acceso, los elementos de la interfaz de usuario deben realizarse en el árbol visual. Si no hay ningún elemento en el árbol visual con una tecla de acceso, no se genera ningún evento de tecla de acceso.
 
-Access key APIs don’t support characters that need two keystrokes to be generated. An individual character must correspond to a key on a particular language’s native keyboard layout.  
+Las API de teclas de acceso no admiten caracteres que necesiten dos pulsaciones de teclas para generarse. Un carácter individual debe corresponderse con una tecla de la distribución del teclado nativa de un idioma en concreto.  
 
 **AccessKeyDisplayRequested/Dismissed**
 
-The [AccessKeyDisplayRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplayrequested.aspx) and the [AccessKeyDisplayDismissed](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplaydismissed.aspx) events are raised when an access key visual affordance should be displayed or dismissed. These events are not raised for elements with their [Visibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility.aspx) property set to **Collapsed**. The AccessKeyDisplayRequested event is raised during an access key sequence every time the user presses a character that is used by the access key. For example, if an access key is set to _AB_, this event is raised when the user presses Alt, and again when the user presses _A_. When user presses _B_, the AccessKeyDisplayDismissed event is raised
+Los eventos [AccessKeyDisplayRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplayrequested.aspx) y [AccessKeyDisplayDismissed](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplaydismissed.aspx) se generan cuando la prestación visual de una tecla de acceso debe mostrarse o descartarse. Estos eventos no se generan para elementos cuya propiedad [Visibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility.aspx) esté establecida en **Collapsed**. El evento AccessKeyDisplayRequested se genera durante una secuencia de teclas de acceso cada vez que el usuario presiona un carácter que la tecla de acceso usa. Por ejemplo, si se establece una tecla de acceso en _AB_, este evento se genera cuando el usuario presiona la tecla Alt y otra vez cuando el usuario presiona _A_. Cuando el usuario presiona _B_, se genera el evento AccessKeyDisplayDismissed
 
 **AccessKeyInvoked**
 
-The [AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx) event is raised when a user reaches the last character of an access key. An access key can have one or several characters. For example, for access keys _A_ and _BC_, when a user presses _Alt, A_, or _Alt,  B, C_, the event is raised, but not when the user presses just _Alt, B_. This event is raised when the key is pressed, not when it’s released.
+El evento [AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx) se genera cuando un usuario alcanza el último carácter de una tecla de acceso. Una tecla de acceso puede tener uno o varios caracteres. Por ejemplo, para las teclas de acceso _A_ y _BC_, cuando el usuario presiona _Alt, A_, o _Alt, B, C_, se genera el evento, pero no se genera cuando el usuario presiona solo _Alt, B_. Este evento se genera cuando se presiona la tecla, no cuando se suelta.
 
 **IsAccessKeyScope**
 
-The [IsAccessKeyScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.isaccesskeyscope.aspx) property lets you specify that a UIElement is the root of an access key scope. The AccessKeyDisplayRequested event is raised for this element, but not for its children. When a user invokes this element, the XAML framework changes the scope automatically and raises the AccessKeyDisplayRequested event on its children and the AccessKeyDisplayDismissed event on other UI elements (including the parent).  The access key sequence is not exited when the scope is changed.
+La propiedad [IsAccessKeyScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.isaccesskeyscope.aspx) te permite especificar que un UIElement sea la raíz de un ámbito de teclas de acceso. El evento de AccessKeyDisplayRequested se genera para este elemento, pero no para sus elementos secundarios. Cuando un usuario invoca este elemento, el marco XAML cambia automáticamente el ámbito y genera el evento AccessKeyDisplayRequested en sus elementos secundarios y el evento de AccessKeyDisplayDismissed en otros elementos de la interfaz de usuario (incluido al elemento primario).  Cuando se cambia el ámbito, no se sale de la secuencia de teclas de acceso.
 
 **AccessKeyScopeOwner**
 
-To make an element participate in the scope of another element (the source) that is not its parent in the visual tree, you can set the [AccessKeyScopeOwner](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyscopeowner.aspx) property. The element bound to the AccessKeyScopeOwner property must have IsAccessKeyScope set to **true**. Otherwise, an exception is thrown.
+Para hacer que un elemento participe en el ámbito de otro elemento (el origen) que no sea su elemento primario del árbol visual, puedes establecer la propiedad [AccessKeyScopeOwner](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyscopeowner.aspx). El elemento enlazado a la propiedad AccessKeyScopeOwner debe tener la propiedad IsAccessKeyScope establecida en **true**. De lo contrario, se producirá una excepción.
 
 **ExitDisplayModeOnAccessKeyInvoked**
 
-By default, when an access key is invoked and the element is not a scope owner, the access key sequence is finalized and the [AccessKeyManager.IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx) event is raised. You can set the [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) property to **false** to override this behavior and prevent exiting from the access key sequence after its invoked. (This property is on both [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) and [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.exitdisplaymodeonaccesskeyinvoked.aspx)).
+De manera predeterminada, cuando se invoca una tecla de acceso y el elemento no es propietario de ningún ámbito, se finaliza la secuencia de teclas de acceso y se genera el evento [AccessKeyManager.IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx). Puedes establecer la propiedad [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) en **false** para invalidar este comportamiento y evitar salir de la secuencia de teclas de acceso después de su invocación. (Esta propiedad está tanto en [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) como en [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.exitdisplaymodeonaccesskeyinvoked.aspx)).
 
-**NOTE**&nbsp;&nbsp;If the element is a scope owner (`IsAccessKeyScope="True"`), the app enters a new access key scope and the IsDisplayModeEnabledChanged event is not raised.
+> [!NOTE]
+> Si el elemento es propietario de un ámbito (`IsAccessKeyScope="True"`), la aplicación entra en un nuevo ámbito de teclas de acceso y el evento IsDisplayModeEnabledChanged no se genera.
 
-**Localization**
+**Localización**
 
-Access keys can be localized in multiple languages and loaded at runtime using the [ResourceLoader](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.resources.resourceloader.aspx) APIs.
+Las teclas de acceso pueden localizarse en varios idiomas y cargarse en el tiempo de ejecución mediante la API [ResourceLoader](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.resources.resourceloader.aspx).
 
-## Control patterns used when an access key is invoked
+## Patrones de control usados cuando se invoca una tecla de acceso
 
-Control patterns are interface implementations that expose common control functionality; for example, buttons implement the **Invoke** control pattern and this raises the **Click** event. When an access key is invoked, the XAML framework looks up whether the invoked element implements a control pattern and executes it if it does. If the element has more than one control pattern, only one is invoked, the rest are ignored. Control patterns are searched in the following order:
+Los patrones de control son implementaciones de la interfaz que exponen la funcionalidad de control común; por ejemplo, unos botones implementan el patrón de control **Invoke** y esto provoca el evento **Click**. Cuando se invoca una tecla de acceso, el marco XAML busca si el elemento invocado implementa un patrón de control y, si es así, lo ejecuta. Si el elemento tiene más de un patrón de control, se invoca solo uno de ellas y se omite el resto. Los patrones de control se buscan en el siguiente orden:
 
-1.	Invoke. For example, a Button.
-2.	Toggle. For example, a Checkbox.
-3.	Selection. For example, a RadioButton.
-4.	Expand/Collapse. For example, a ComboBox.
+1.  Invocar. Por ejemplo, un botón (Button).
+2.  Cambiar. Por ejemplo, una casilla (Checkbox).
+3.  Selección. Por ejemplo, un botón de selección (RadioButton).
+4.  Ampliar/contraer. Por ejemplo, un cuadro combinado (ComboBox).
 
-If a control pattern is not found, the access key invocation will appear as a no-op and a debug message is recorded to assist you in debugging this situation: "No automation patterns for this component found. Implement desired behavior in the event handler for AccessKeyInvoked. Setting Handled to true in your event handler will suppress this message."
+Si no se encuentra ningún patrón de control, la invocación de la tecla de acceso aparecerá como sin opciones y se registrará un mensaje de depuración para ayudarte a depurar esta situación: "No automation patterns for this component found. (No se han encontrado patrones de automatización para este componente). Implement desired behavior in the event handler for AccessKeyInvoked. (Implementa el comportamiento deseado en el controlador de eventos de AccessKeyInvoked). Setting Handled to true in your event handler will suppress this message. (Si Handled se establece en true en el controlador de eventos, este mensaje se suprimirá)".
 
-**NOTE**&nbsp;&nbsp;The debugger's Application process type must be _Mixed (Managed and Native)_ or _Native_ in Visual Studio's Debug Settings to see this message.
+> [!NOTE]
+> Para ver este mensaje, el tipo de proceso de la aplicación del depurador debe ser _Mixto (administrado y nativo)_ o _Nativo_ en la configuración de depuración de Visual Studio.
 
-If you do not want an access key to execute its default control pattern, or if the element does not have a control pattern, you should handle the [AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx) event and implement the desired behavior.
+Si no deseas que una tecla de acceso ejecute su patrón de control predeterminado, o si el elemento no posee ningún patrón de control, debes controlar el evento [AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx) e implementar el comportamiento deseado.
 ```csharp
 private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
 {
@@ -139,19 +148,20 @@ private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args
 }
 ```
 
-For more info about control patterns, see [UI Automation Control Patterns Overview](https://msdn.microsoft.com/library/windows/desktop/ee671194.aspx).
+Para obtener más información sobre los patrones de control, consulta [UI Automation Control Patterns Overview](https://msdn.microsoft.com/library/windows/desktop/ee671194.aspx) (Introducción a los patrones de control de automatización de la interfaz de usuario).
 
-## Access keys and Narrator
+## Teclas de acceso y Narrador
 
-Windows Runtime has UI Automation providers that expose properties on Microsoft UI Automation elements. These properties enable UI Automation client applications to discover information about pieces of the user interface. The [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763) property lets clients, such as Narrator, discover the access key associated with an element. Narrator will read this property every time an element gets focus. If AutomationProperties.AccessKey is does not have value, the XAML framework returns the [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx) property value from the UIElement or TextElement. You don't need to setup AutomationProperties.AccessKey if the AccessKey property already has a value.
+Windows Runtime posee proveedores de automatización de la interfaz de usuario que exponen las propiedades de los elementos de automatización de la interfaz de usuario de Microsoft. Estas propiedades permiten a las aplicaciones cliente de automatización de la interfaz de usuario obtener información sobre algunas partes de la interfaz de usuario. La propiedad [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763) permite a los clientes (por ejemplo, a Narrador) descubrir la tecla de acceso asociada con un elemento. Narrador leerá esta propiedad cada vez que un el foco se sitúe sobre un elemento. Si AutomationProperties.AccessKey no tiene ningún valor, el marco XAML devuelve el valor de la propiedad [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx) del UIElement o TextElement. No es necesario configurar AutomationProperties.AccessKey si la propiedad AccessKey ya posee un valor.
 
-## Example: Access key for button
+## Ejemplo: Tecla de acceso de un botón
 
-This example shows how to create an access key for a Button. It uses Tooltips as a visual affordance to implement a floating badge that contains the access key.
+Este ejemplo muestra cómo crear una tecla de acceso de un botón. Usa la información sobre herramientas como una prestación visual para implementar una notificación flotante que contenga la tecla de acceso.
 
-**NOTE**&nbsp;&nbsp;Tooltip is used for simplicity, but we recommend that you create your own control to display it using, for example, [Popup](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.popup.aspx).
+> [!NOTE]
+> La información sobre herramientas se usa por motivos de sencillez, pero te recomendamos crear tu propio control para mostrarla mediante, por ejemplo, la clase [Popup](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.popup.aspx).
 
-The XAML framework automatically calls the handler for the Click event, so you don't need to handle the AccessKeyInvoked event. The example provides visual affordances for only the characters that are remaining to invoke the access key by using the [AccessKeyDisplayRequestedEventArgs.PressedKeys](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeydisplayrequestedeventargs.pressedkeys.aspx) property. For example, if there are three displayed access keys: _A1_, _A2_, and _C_, and the user presses _A_, then only _A1_ and _A2_ access key are unfiltered, and are displayed as _1_ and _2_ instead of _A1_ and _A2_.
+El marco XAML llama automáticamente al controlador del evento Click, por lo que no es necesario que controles el evento AccessKeyInvoked. El ejemplo proporciona prestaciones visuales únicamente para los caracteres que quedan para invocar la tecla de acceso mediante la propiedad [AccessKeyDisplayRequestedEventArgs.PressedKeys](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeydisplayrequestedeventargs.pressedkeys.aspx). Por ejemplo, si se muestran tres teclas de acceso, _A1_, _A2_ y _C_, y el usuario presiona _A_, solo las teclas de acceso _A1_ y _A2_ se quedarán sin filtrar y se mostrarán como _1_ y _2_, en lugar de como _A1_ y _A2_.
 
 ```xaml
 <StackPanel
@@ -219,13 +229,13 @@ The XAML framework automatically calls the handler for the Click event, so you d
     }
 ```
 
-## Example: Scoped access keys
+## Ejemplo: Teclas de acceso con ámbito
 
-This example shows how to create scoped access keys. The PivotItem’s IsAccessKeyScope property prevents the access keys of the PivotItem's child elements from showing when user presses Alt. These access keys are shown only when the user invokes the PivotItem because the XAML framework automatically switches the scope. The framework also hides the access keys of the other scopes.
+Este ejemplo muestra cómo crear teclas de acceso con ámbito. La propiedad IsAccessKeyScope de PivotItem impide que se muestren las teclas de acceso de los elementos secundarios de PivotItem cuando el usuario presiona Alt. Estas teclas de acceso se muestran solamente cuando el usuario invoca el PivotItem, porque el marco XAML cambia el ámbito automáticamente. El marco también oculta las teclas de acceso de los otros ámbitos.
 
-This example also shows how to handle the AccessKeyInvoked event. The PivotItem doesn’t implement any control pattern, so the XAML framework doesn't invoke any action by default. This implementation shows how to select the PivotItem that was invoked using the access key.
+En este ejemplo también se muestra cómo controlar el evento AccessKeyInvoked. El PivotItem no implementa ningún patrón de control, por lo que el marco XAML no invoca ninguna acción de forma predeterminada. Esta implementación muestra cómo seleccionar el PivotItem que se haya invocado mediante la tecla de acceso.
 
-Finally, the example shows the IsDisplayModeChanged event where you can do something when the display mode changes. In this example, the Pivot control is collapsed until the user presses Alt. When the user finishes interacting with the Pivot, it collapses again. You can use IsDisplayModeEnabled to check if the access key display mode is enabled or disabled.
+Por último, el ejemplo muestra el evento IsDisplayModeChanged, donde puedes hacer algo cuando cambia el modo de presentación. En este ejemplo, el control Pivot está contraído hasta que el usuario presiona Alt. Cuando el usuario termina de interactuar con Pivot, se contrae nuevamente. Puedes usar IsDisplayModeEnabled para comprobar si el modo de presentación de la tecla de acceso está habilitado o deshabilitado.
 
 ```xaml   
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -372,3 +382,9 @@ public sealed partial class ScopedAccessKeys : Page
         }
     }
 ```
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

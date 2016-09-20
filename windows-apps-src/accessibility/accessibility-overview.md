@@ -5,7 +5,6 @@ ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
 title: "Información general sobre accesibilidad"
 label: Accessibility overview
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: 430484a9243abc644de75d35c03bb11cf47960c0
 
@@ -158,7 +157,8 @@ private void ShowAccessibleUICheckBox_Click(object sender, RoutedEventArgs e)
 Para obtener más información sobre las declaraciones de accesibilidad y la publicación de la aplicación, consulta [Accesibilidad en la Tienda](accessibility-in-the-store.md).
 
 > [!NOTE]
-> Declarar la aplicación como accesible solo es relevante para la Tienda Windows.
+> 
+            [!NOTE] La declaración de la aplicación como accesible solo se aplica a la Tienda Windows.
 
 <span id="Assistive_technology_support_in_custom_controls"/>
 <span id="assistive_technology_support_in_custom_controls"/>

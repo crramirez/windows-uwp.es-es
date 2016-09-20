@@ -3,7 +3,6 @@ author: jnHs
 Description: "El panel del Centro de desarrollo de Windows te ofrece la opción de que tu aplicación esté disponible solo para ciertas personas, de forma que puedas hacer que la prueben los evaluadores antes de ponerla a disposición del público."
 title: "Pruebas beta y distribución dirigida"
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: a544565bf7bb82f2be1ded3e60836d5d191c6e93
 
@@ -59,19 +58,22 @@ Con esta opción, solo aquellos con un vínculo directo a la descripción de la 
 
 Para usar esta opción, al enviar la aplicación selecciona **Ocultar la aplicación en la Tienda. Los clientes que dispongan de un vínculo directo a la descripción de la aplicación podrán continuar descargándola, salvo en Windows 8 y Windows 8.1.** en la sección [Distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility) de la página **Precios y disponibilidad**.
 
-> **Importante**  Esta opción no funciona para los evaluadores con Windows 8 o Windows 8.1.
+> 
+            **Importante**  Esta opción no funciona para los evaluadores con Windows 8 o Windows 8.1.
 
 ### Distribución dirigida a clientes con direcciones de correo electrónico específicas
 
 Para las pruebas en Windows Phone 8.1 y versiones anteriores, esta opción ofrece una forma de limitar la distribución de la aplicación. Solo las personas cuya dirección de correo electrónico (asociada a sus cuentas Microsoft) escribas en el cuadro podrán descargar la aplicación mediante un vínculo directo a su descripción.
 
-> **Importante**  Las personas con las direcciones de correo electrónico que especifiques solo podrán descargar la aplicación en dispositivos que ejecuten Windows Phone 8.1 o versiones anteriores.
+> 
+            **Importante**  Las personas con las direcciones de correo electrónico que especifiques solo podrán descargar la aplicación en dispositivos que ejecuten Windows Phone 8.1 o versiones anteriores.
  
 Puedes encontrar el vínculo directo de la aplicación en la página [Identidad de la aplicación](view-app-identity-details.md) del panel (usa la **Dirección URL para Windows Phone**). Ningún cliente podrá encontrar la aplicación mediante búsqueda o exploración en la Tienda y, aunque se disponga del vínculo a la descripción, no se podrá descargar salvo que se use para ello una cuenta de Microsoft asociada a una de las direcciones de correo electrónico que escribiste al enviar la aplicación.
 
-> **Nota**  Si usas esta opción, aún puedes poner la aplicación a disposición de los evaluadores en dispositivos Windows 10 [generando códigos promocionales](generate-promotional-codes.md), como se describió anteriormente. Cualquier persona que tenga uno de los códigos promocionales de la aplicación podrá descargarla en un dispositivo de Windows 10, aunque no hayas escrito aquí su dirección de correo.
+> 
+            **Nota**  Si usas esta opción, aún puedes poner la aplicación a disposición de los evaluadores en dispositivos Windows 10 [generando códigos promocionales](generate-promotional-codes.md), como se describió anteriormente. Cualquier persona que tenga uno de los códigos promocionales de la aplicación podrá descargarla en un dispositivo de Windows 10, aunque no hayas escrito aquí su dirección de correo.
 
-Para usar esta opción, al enviar la aplicación selecciona **Ocultar esta aplicación y ponerla a la disposición de solo las personas que especifiques abajo, quienes podrán descargar esta aplicación en dispositivos Windows Phone 8.x. Se puede usar un código de promoción para descargar esta aplicación en dispositivos Windows 10** de la sección [Distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility) de la página **Precios y disponibilidad**.
+Para usar esta opción, al enviar la aplicación selecciona **Ocultar esta aplicación y ponerla a la disposición de solo las personas que especifiques abajo, quienes podrán descargar esta aplicación en dispositivos Windows Phone 8.x. Se puede usar un código de promoción para descargar esta aplicación en dispositivos Windows10** de la sección [Distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility) de la página **Precios y disponibilidad**.
 
 Si eliges esta opción, debes tener en cuenta lo siguiente:
 

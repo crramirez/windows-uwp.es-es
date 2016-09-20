@@ -13,14 +13,16 @@ ms.openlocfilehash: d7551e0456ce0e59dbbfa92690ddd5ba2ebaf8b4
 
 Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que las empresas las compren por volumen a través de la Tienda Windows para empresas, sin necesidad de que las aplicaciones estén disponibles en la Tienda de forma general.
 
-> **Importante**  Por ahora, solo las aplicaciones gratuitas pueden distribuirse de forma exclusiva a las empresas a través de la Tienda Windows para empresas. Si envías una aplicación de pago como LOB, esta no estará disponible para la empresa en este momento. 
+> 
+            **Importante**  Por ahora, solo las aplicaciones gratuitas pueden distribuirse de forma exclusiva a las empresas a través de la Tienda Windows para empresas. Si envías una aplicación de pago como LOB, esta no estará disponible para la empresa en este momento. 
 
 ## Configurar la asociación de empresa
 
 
 El primer paso para publicar aplicaciones LOB exclusivamente para una empresa es establecer la asociación entre tu cuenta y la tienda privada de la empresa.
 
-> **Importante**  Este proceso de asociación debe iniciarlo la empresa y debe enviarse a la dirección de correo electrónico de la **Información de contacto** de tu cuenta. Para obtener más información, consulta el artículo [Working with line-of-business apps (Trabajar con aplicaciones de línea de negocio)](http://go.microsoft.com/fwlink/p/?LinkId=698846).
+> 
+            **Importante**  Este proceso de asociación debe iniciarlo la empresa y debe enviarse a la dirección de correo electrónico de la **Información de contacto** de tu cuenta. Para obtener más información, consulta el artículo [Working with line-of-business apps (Trabajar con aplicaciones de línea de negocio)](http://go.microsoft.com/fwlink/p/?LinkId=698846).
 
 Si una empresa decide invitarte para que publiques aplicaciones para su uso exclusivo, recibirás un correo electrónico con un vínculo para confirmar la asociación. También puedes confirmar estas asociaciones en la sección **Asociaciones de empresa** de tu **Configuración de la cuenta**.
 
@@ -39,7 +41,8 @@ Cuando se selecciona la opción **Line-of-business (LOB) distribution**, las opc
 
 Selecciona las empresas que deben obtener la aplicación. Nadie más podrá acceder a ella.
 
-> **Nota**  Tienes que seleccionar una empresa, como mínimo, para publicar una aplicación como línea de negocio.
+> 
+            **Nota**  Tienes que seleccionar una empresa, como mínimo, para publicar una aplicación como línea de negocio.
 
 ### Licencias organizativas
 
@@ -53,7 +56,8 @@ Para obtener más información, consulta [Opciones de licencias organizativas](o
 
 Después de hacer clic **Enviar a la Tienda**, la aplicación pasará por el proceso de certificación. Cuando esté lista, un administrador de la empresa debe agregarla a su tienda privada en el portal de la Tienda Windows para empresas. Luego la empresa puede implementar la aplicación para sus usuarios.
 
-> **Nota** Para obtener la aplicación de línea de negocio, la organización debe encontrarse en un [mercado admitido](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets) y no debes haber excluido ese mercado al enviar la aplicación. 
+> 
+            **Nota** Para obtener la aplicación de línea de negocio, la organización debe encontrarse en un [mercado admitido](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets) y no debes haber excluido ese mercado al enviar la aplicación. 
 
 Para obtener más información, consulta [Trabajar con aplicaciones de línea de negocio](http://go.microsoft.com/fwlink/p/?LinkId=698846) y [Distribuir aplicaciones a través de la tienda privada](http://go.microsoft.com/fwlink/p/?LinkId=698847).
 
@@ -69,7 +73,7 @@ La creación de aplicaciones a través de la Tienda para empresas garantiza que 
 
 En algunos casos, puede que las empresas no quieran que sus aplicaciones de LOB se envíen a través del Centro de desarrollo de Windows por diferentes razones (por ejemplo, por cuestiones de cumplimiento o debido a aplicaciones que necesitan funciones adicionales). En este caso, las empresas pueden implementar aplicaciones directamente en las máquinas a través de la instalación de prueba, sin necesidad de usar la Tienda Windows para empresas.
 
-Para obtener más información, consulta [Transferir localmente aplicaciones de LOB en Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
+Para obtener más información, consulta [Transferir localmente aplicaciones de LOB en Windows10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
 
  
 

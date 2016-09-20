@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
 title: "Componentes de la Plataforma universal de Windows y optimización de la interoperabilidad"
 description: "Crea aplicaciones para la Plataforma universal de Windows (UWP) que usen componentes UWP e interactúen con tipos administrados y nativos al mismo tiempo que evitan problemas de rendimiento de interoperabilidad."
-translationtype: Human Translation
 ms.sourcegitcommit: 5c7a49558ed11f82b7afea1ea96271c45c2f9139
 ms.openlocfilehash: b9300b3feb1e5229951f3e1ebe454b61ba8065ae
 
@@ -22,12 +21,12 @@ Si no eres cuidadoso, el uso de componentes de UWP puede afectar considerablemen
 
 La interoperabilidad puede afectar considerablemente al rendimiento y es posible que la estés usando sin darte cuenta. UWP controla gran parte de la interoperabilidad para que puedas ser más productivo y para que puedas volver a usar el código escrito en otros lenguajes. Te animamos a que aproveches lo que UWP hace por ti, pero ten en cuenta que puede afectar al rendimiento. En esta sección se describen algunos métodos que puedes usar para reducir el efecto de la interoperabilidad en el rendimiento de tu aplicación.
 
-UWP cuenta con una biblioteca de tipos a los que se puede tener acceso en cualquier lenguaje en el que se pueda escribir una aplicación para UWP. Los tipos de UWP en C# o Microsoft Visual Basic se usan del mismo modo que los objetos de .NET. No es necesario que realices llamadas de método de invocación de plataforma para tener acceso a los componentes de UWP. Esto facilita mucho la escritura de las aplicaciones, pero es importante que sepas que puede haber más interoperabilidad de la que esperas. Si un componente de UWP está escrito en un lenguaje diferente de C# o Visual Basic, al usar ese componente estás cruzando el límite de la interoperabilidad. Cruzar los límites de interoperabilidad puede afectar al rendimiento de las aplicaciones.
+UWP cuenta con una biblioteca de tipos a los que se puede tener acceso en cualquier lenguaje en el que se pueda escribir una aplicación para UWP. Los tipos de UWP en C# o MicrosoftVisual Basic se usan del mismo modo que los objetos de .NET. No es necesario que realices llamadas de método de invocación de plataforma para tener acceso a los componentes de UWP. Esto facilita mucho la escritura de las aplicaciones, pero es importante que sepas que puede haber más interoperabilidad de la que esperas. Si un componente de UWP está escrito en un lenguaje diferente de C# o Visual Basic, al usar ese componente estás cruzando el límite de la interoperabilidad. Cruzar los límites de interoperabilidad puede afectar al rendimiento de las aplicaciones.
 
 Cuando desarrollas una aplicación para UWP en C# o Visual Basic, los dos conjuntos más comunes de API que se usan son las API de UWP y las API de .NET para aplicaciones para UWP. En general, los tipos que se definen en la UWP están en espacios de nombres que comienzan con "Windows". Los tipos .NET están en espacios de nombres que empiezan con "System". Sin embargo, existen algunas excepciones. Los tipos de .NET para aplicaciones para UWP no necesitan interoperabilidad cuando están en uso. Si ves que el rendimiento es deficiente en un área que usa componentes de UWP, puedes usar las API de .NET para aplicaciones para UWP para mejorar el rendimiento.
 
 **Nota**  
-La mayoría de los componentes de UWP que se incluyen en Windows 10 se implementan en C++. Por eso, cuando los usas desde C# o Visual Basic, cruzas los límites de la interoperabilidad. Como siempre, antes de dedicarte a modificar tu código, asegúrate de evaluar tu aplicación para averiguar si el uso de componentes de UWP afecta al rendimiento.
+La mayoría de los componentes de UWP que se incluyen en Windows10 se implementan en C++. Por eso, cuando los usas desde C# o Visual Basic, cruzas los límites de la interoperabilidad. Como siempre, antes de dedicarte a modificar tu código, asegúrate de evaluar tu aplicación para averiguar si el uso de componentes de UWP afecta al rendimiento.
 
 En este tema, cuando hablamos de "componentes de UWP", nos referimos a los componentes que se escriben en un lenguaje diferente de C# o Visual Basic.
 
