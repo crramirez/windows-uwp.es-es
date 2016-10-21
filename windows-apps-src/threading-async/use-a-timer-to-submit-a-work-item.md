@@ -3,8 +3,9 @@ author: TylerMSFT
 ms.assetid: AAE467F9-B3C7-4366-99A2-8A880E5692BE
 title: Enviar un elemento de trabajo con un temporizador
 description: "Obtén información acerca de cómo crear un elemento de trabajo que se ejecute después de que transcurra un temporizador."
+translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 033669a781aa85cc2c90fa11816e385ffefa997d
+ms.openlocfilehash: ea45e3b61f7646b5df978f36961bd6264ff08fe2
 
 ---
 # Enviar un elemento de trabajo con un temporizador
@@ -22,8 +23,7 @@ Obtén información acerca de cómo crear un elemento de trabajo que se ejecute 
 
 Usa el método [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) para crear un temporizador para el elemento de trabajo. Envía un lambda que realice el trabajo y usa el parámetro *delay* para especificar cuánto tiempo espera el grupo de subprocesos antes de poder asignar el elemento de trabajo a un subproceso disponible. El retraso se especifica con una estructura [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996).
 
-> 
-            **Nota** Puedes usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acceder a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
+> **Nota** Puedes usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para obtener acceso a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta en tres minutos:
 
@@ -81,11 +81,11 @@ En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta en tres mi
 >         }), delay);
 > ```
 
-## [!div class="tabbedCodeSnippets"]
+## Proporcionar un controlador de finalización
 
-Proporcionar un controlador de finalización Si es necesario, controla la cancelación y la finalización del elemento de trabajo con un [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926). Usa la sobrecarga [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) para enviar un lambda adicional.
+Si es necesario, controla la cancelación y la finalización del elemento de trabajo con un [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926). Usa la sobrecarga [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) para enviar un lambda adicional. Este se ejecuta cuando se cancela el temporizador o cuando se completa el elemento de trabajo.
 
-Este se ejecuta cuando se cancela el temporizador o cuando se completa el elemento de trabajo.
+En el siguiente ejemplo se crea un temporizador que envía el elemento de trabajo y llama a un método cuando finaliza el elemento de trabajo o cuando se cancela el temporizador:
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -201,9 +201,9 @@ Este se ejecuta cuando se cancela el temporizador o cuando se completa el elemen
 >         }));
 > ```
 
-## En el siguiente ejemplo se crea un temporizador que envía el elemento de trabajo y llama a un método cuando finaliza el elemento de trabajo o cuando se cancela el temporizador:
+## Cancelar el temporizador
 
-[!div class="tabbedCodeSnippets"] Cancelar el temporizador
+Si el temporizador sigue contando el tiempo restante pero ya no se necesita el elemento de trabajo, llama a [**Cancel**](https://msdn.microsoft.com/library/windows/apps/BR230588). Se cancela el temporizador y el elemento de trabajo no se envía al grupo de subprocesos.
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -213,19 +213,19 @@ Este se ejecuta cuando se cancela el temporizador o cuando se completa el elemen
 > DelayTimer->Cancel();
 > ```
 
-## Si el temporizador sigue contando el tiempo restante pero ya no se necesita el elemento de trabajo, llama a [**Cancel**](https://msdn.microsoft.com/library/windows/apps/BR230588).
+## Observaciones
 
-Se cancela el temporizador y el elemento de trabajo no se envía al grupo de subprocesos. [!div class="tabbedCodeSnippets"]
+Las aplicaciones de la Plataforma universal de Windows (UWP) no pueden usar **Thread.Sleep** porque puede bloquear el subproceso de interfaz de usuario. En su lugar, puedes usar un [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587) para crear un elemento de trabajo, y esto retrasará la tarea realizada por el elemento de trabajo sin bloquear el subproceso de interfaz de usuario.
 
-Observaciones Las aplicaciones de la Plataforma universal de Windows (UWP) no pueden usar **Thread.Sleep** porque puede bloquear el subproceso de interfaz de usuario.
+Consulta la [muestra de grupo de subprocesos](http://go.microsoft.com/fwlink/p/?linkid=255387) para obtener una muestra de código completa de elementos de trabajo, elementos de trabajo de temporizador y elementos de trabajo periódicos. El ejemplo de código se escribió originalmente para Windows 8.1, pero el código se puede reutilizar en Windows 10.
 
-En su lugar, puedes usar un [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587) para crear un elemento de trabajo, y esto retrasará la tarea realizada por el elemento de trabajo sin bloquear el subproceso de interfaz de usuario.
+Para obtener información sobre cómo repetir temporizadores, consulta [Crear un elemento de trabajo periódico](create-a-periodic-work-item.md).
 
-## Consulta la [muestra de grupo de subprocesos](http://go.microsoft.com/fwlink/p/?linkid=255387) para obtener una muestra de código completa de elementos de trabajo, elementos de trabajo de temporizador y elementos de trabajo periódicos.
+## Temas relacionados
 
-* [El ejemplo de código se escribió originalmente para Windows 8.1, pero el código se puede reutilizar en Windows 10.](submit-a-work-item-to-the-thread-pool.md)
-* [Para obtener información sobre cómo repetir temporizadores, consulta [Crear un elemento de trabajo periódico](create-a-periodic-work-item.md).](best-practices-for-using-the-thread-pool.md)
-* [Temas relacionados](use-a-timer-to-submit-a-work-item.md)
+* [Enviar un elemento de trabajo al grupo de subprocesos](submit-a-work-item-to-the-thread-pool.md)
+* [Procedimientos recomendados para usar el grupo de subprocesos](best-practices-for-using-the-thread-pool.md)
+* [Enviar un elemento de trabajo con un temporizador](use-a-timer-to-submit-a-work-item.md)
  
 
  
@@ -233,6 +233,6 @@ En su lugar, puedes usar un [**ThreadPoolTimer**](https://msdn.microsoft.com/lib
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ title: Habilitar funcionalidades de dispositivos
 description: "Este tutorial describe cómo declarar funcionalidades del dispositivo en Microsoft Visual Studio. Esta opción permite que la aplicación use cámaras, micrófonos, sensores de ubicación y otros dispositivos."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 306e10ee9349f3742ac5a06229d22aad04457d7a
+ms.openlocfilehash: b36dd4d77821a65b1f435d755f7bb415b2e386ee
 
 ---
 # Habilitar funcionalidades de dispositivos
@@ -35,8 +35,7 @@ Algunos tipos de dispositivos como, por ejemplo, las impresoras, los escáneres 
 | Generación de código | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Permite que las aplicaciones generen código de forma dinámica. |
 | Autenticación de empresa | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Esta funcionalidad está sujeta a la directiva de la Tienda Windows. Proporciona la capacidad de conectarse a recursos de la intranet de empresa que requieran credenciales de dominio. Normalmente, esta funcionalidad no es necesaria para la mayoría de las aplicaciones. | 
 | Internet (cliente) | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Proporciona acceso saliente a Internet y a redes de lugares públicos, como aeropuertos y cafeterías. Por ejemplo, redes intranet en las que el usuario ha designado la red como pública. La mayoría de las aplicaciones que requieran acceso a Internet deben usar esta funcionalidad. |
-| Internet (cliente y servidor) | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Proporciona acceso entrante y saliente a Internet y a redes de lugares públicos, como aeropuertos y cafeterías. Esta funcionalidad es un superconjunto de **Internet (cliente)**. 
-              No es necesario habilitar **Internet (cliente)** si también se habilita esta funcionalidad. El acceso entrante a los puertos críticos siempre está bloqueado. |
+| Internet (cliente y servidor) | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Proporciona acceso entrante y saliente a Internet y a redes de lugares públicos, como aeropuertos y cafeterías. Esta funcionalidad es un superconjunto de **Internet (cliente)**. No es necesario habilitar **Internet (cliente)** si también se habilita esta funcionalidad. El acceso entrante a los puertos críticos siempre está bloqueado. |
 | Ubicación| ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Proporciona acceso a la ubicación actual. Se obtiene del hardware dedicado, como un sensor GPS en el equipo, o se deriva de la información de red disponible. | 
 | Micrófono | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Proporciona acceso a la fuente de audio del micrófono. Permite que la aplicación grabe con los micrófonos conectados. | 
 | Biblioteca de música | ![Disponible en el Diseñador de manifiestos](images/ap-tools.png) | Proporciona la capacidad de agregar, cambiar o eliminar archivos de la **Biblioteca de música** del equipo local y de equipos de **grupo en el hogar**. | 
@@ -78,6 +77,6 @@ La siguiente tabla conecta algunas de las funcionalidades a las API de Windows R
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

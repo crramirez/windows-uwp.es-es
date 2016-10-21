@@ -3,8 +3,9 @@ author: msatranjr
 title: "Introducción a ubicación y mapas"
 description: "En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos."
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
+translationtype: Human Translation
 ms.sourcegitcommit: a3240047ec77ada0c5f6b5586eee2404353889f6
-ms.openlocfilehash: 829a8d7eb4da810e2353593c03cd5aa4e047173a
+ms.openlocfilehash: 327185d655d8495901cfa9fa0a99c0af3a8cdae0
 
 ---
 
@@ -16,8 +17,7 @@ ms.openlocfilehash: 829a8d7eb4da810e2353593c03cd5aa4e047173a
 
 En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos.
 
-> 
-            **Sugerencia**  Para obtener más información sobre el uso de los mapas y la ubicación en tu aplicación, descarga las muestras siguientes de [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) (Repositorio de muestras universales de Windows) en GitHub:
+> **Sugerencia**  Para obtener más información sobre el uso de los mapas y la ubicación en tu aplicación, descarga las muestras siguientes del [repositorio de muestras universales de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub:
 -   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 -   [Muestra de ubicación geográfica deUWP](http://go.microsoft.com/fwlink/p/?linkid=533278)
 
@@ -85,6 +85,6 @@ La aplicación puede iniciar la aplicación Mapas de Windows como aquí se indic
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO5-->
 
 

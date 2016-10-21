@@ -1,10 +1,11 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: Seguimiento de los archivos y carpetas usados recientemente
 description: "Realiza un seguimiento de los archivos a los que el usuario accede con mayor frecuencia; para ello, agrégalos a la lista de elementos usados recientemente (MRU) de la aplicación."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 83100d1246dd18324104a63c9cd950e2ff1fce0b
+translationtype: Human Translation
+ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
+ms.openlocfilehash: 84b78cc4af9490f142c0f74fec127e1d003ce6df
 
 ---
 # Realizar un seguimiento de los archivos y carpetas usados recientemente
@@ -21,8 +22,7 @@ Realiza un seguimiento de los archivos a los que el usuario accede con mayor fre
 
 La lista de MRU de una aplicación se representa mediante la clase [**StorageItemMostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207475), que se obtiene a partir de la propiedad estática [**StorageApplicationPermissions.MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458). Los elementos MRU se almacenan como objetos [**IStorageItem**](https://msdn.microsoft.com/library/windows/apps/br227129), lo que significa que los objetos [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) (que representan archivos) y los objetos [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) (que representan carpetas) pueden agregarse a la lista de MRU.
 
-
-            **Nota**  Consulta también el [ejemplo de selector de archivos](http://go.microsoft.com/fwlink/p/?linkid=619994) y el [ejemplo de acceso a archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
+**Nota** Consulta también el [ejemplo de selector de archivos](http://go.microsoft.com/fwlink/p/?linkid=619994) y el [ejemplo de acceso a archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
  
 
@@ -46,20 +46,16 @@ La lista de MRU de una aplicación se representa mediante la clase [**StorageIte
 
     ```CSharp
     ...
-    
+
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
 
     var mru = Windows.Storage.AccessCache.StorageApplicationPermissions.MostRecentlyUsedList;
     string mruToken = mru.Add(file, "profile pic");
     ```
-    
-    
-            [
-              **StorageItemMostRecentlyUsedList.Add**
-            ](https://msdn.microsoft.com/library/windows/apps/br207476) es un método sobrecargado. En el ejemplo, se usa [**Add(IStorageItem, String)**](https://msdn.microsoft.com/library/windows/apps/br207481) para poder asociar metadatos al archivo. La configuración de metadatos permite grabar el propósito del elemento como, por ejemplo, "imagen de perfil". También puedes agregar el archivo sin metadatos a la lista de MRU, llamando al método [**Add(IStorageItem)**](https://msdn.microsoft.com/library/windows/apps/br207480). Cuando se agrega un elemento a la lista de MRU, el método devuelve una cadena de identificación única, denominada token, que se usa para recuperar el elemento.
 
-    
-            **Sugerencia**  Necesitarás el token para recuperar un elemento de la lista de MRU, así que consérvalo en algún lugar. Para más información sobre los datos de aplicación, consulta [Administrar datos de la aplicación](https://msdn.microsoft.com/library/windows/apps/hh465109).
+    [**StorageItemMostRecentlyUsedList.Add**](https://msdn.microsoft.com/library/windows/apps/br207476) es un método sobrecargado. En el ejemplo, se usa [**Add(IStorageItem, String)**](https://msdn.microsoft.com/library/windows/apps/br207481) para poder asociar metadatos al archivo. La configuración de metadatos permite grabar el propósito del elemento como, por ejemplo, "imagen de perfil". También puedes agregar el archivo sin metadatos a la lista de MRU, llamando al método [**Add(IStorageItem)**](https://msdn.microsoft.com/library/windows/apps/br207480). Cuando se agrega un elemento a la lista de MRU, el método devuelve una cadena de identificación única, denominada token, que se usa para recuperar el elemento.
+
+    **Sugerencia** Necesitarás el token para recuperar un elemento de la lista de MRU, así que consérvalo en algún lugar. Para más información sobre los datos de aplicación, consulta [Administrar datos de la aplicación](https://msdn.microsoft.com/library/windows/apps/hh465109).
 
      
 
@@ -110,10 +106,6 @@ Cuando un usuario selecciona un elemento, considera la posibilidad de agregarlo 
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

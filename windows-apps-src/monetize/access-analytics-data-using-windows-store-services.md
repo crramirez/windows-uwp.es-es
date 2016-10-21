@@ -3,83 +3,75 @@ author: mcleanbyron
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: "Usa la API de análisis de la Tienda Windows para recuperar datos de análisis mediante programación para las aplicaciones que se registran en tu cuenta del Centro de desarrollo de Windows o la de tu organización."
 title: "Acceder a los datos de análisis mediante los servicios de la Tienda Windows"
-ms.sourcegitcommit: 204bace243fb082d3ca3b4259982d457f9c533da
-ms.openlocfilehash: 30388a975e9623c5511abe608aa1b21956e2c974
+translationtype: Human Translation
+ms.sourcegitcommit: 47e0ac11178af98589e75cc562631c6904b40da4
+ms.openlocfilehash: 1293bb5beb927425928d832f887129263db5a895
 
 ---
 
 # Acceder a los datos de análisis mediante los servicios de la Tienda Windows
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-Usa la *API de análisis de Tienda Windows* para recuperar datos de análisis mediante programación para las aplicaciones que se registran en tu cuenta del Centro de desarrollo de Windows o la de tu organización. Esta API permite recuperar los datos de adquisiciones de IAP y de la aplicación, errores, revisiones, así como clasificaciones y opiniones de la aplicación. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas provenientes de la aplicación o el servicio.
-
-## Requisitos previos para usar la API de análisis de la Tienda Windows
-
-
--   Tú (o tu organización) debéis tener un directorio de Azure AD. Si ya usas Office365 u otros servicios empresariales de Microsoft, ya tienes un directorio de AzureAD. De lo contrario, puedes [obtener uno de forma gratuita](http://go.microsoft.com/fwlink/p/?LinkId=703757).
--   Debes tener una [cuenta de usuario](https://azure.microsoft.com/documentation/articles/active-directory-create-users/) en el directorio de AzureAD que quieres asociar a tu cuenta del Centro de desarrollo de Windows.
-
-## Usar la API de análisis de la Tienda Windows
-
-
-Para poder usar la API de análisis de la Tienda Windows, debes asociar una aplicación de Azure AD con tu cuenta del Centro de desarrollo y obtener un token de acceso de AzureAD. La aplicación de Azure AD representa la aplicación o el servicio desde donde quieres originar la llamada a la API de análisis de la Tienda Windows. Una vez que tengas un token de acceso, puedes llamar a la API de análisis de la Tienda Windows desde la aplicación o el servicio.
+Usa la *API de análisis de la Tienda Windows* para recuperar datos de análisis mediante programación referentes a las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows o en la de tu organización. Esta API permite recuperar los datos respecto a las adquisiciones de aplicaciones y de complementos (conocidas también como producto desde la aplicación o IAP), errores, valoraciones de la aplicación y opiniones. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas procedentes de la aplicación o el servicio.
 
 Los siguientes pasos describen el proceso de principio a fin:
 
-1.  
-            [Asocia una aplicación de Azure AD con la cuenta del Centro de desarrollo de Windows](#associate-an-azure-ad-application-with-your-windows-dev-center-account).
-2.  
-            [Obtén un token de acceso de Azure AD](#obtain-an-azure-ad-access-token).
-3.  
-            [Invoca la API de análisis de la Tienda Windows](#call-the-windows-store-analytics-api).
+1.  Asegúrate de que se hayan completado todos los [requisitos previos](#prerequisites).
+2.  Antes de llamar a un método en la API de análisis de la Tienda Windows [obtén un token de acceso de Azure AD](#obtain-an-azure-ad-access-token). Después de obtener un token, tienes 60minutos para utilizar dicho token en llamadas a la API de análisis de la Tienda Windows antes de que expire. Después de que el token expire, puedes generar un nuevo token.
+3.  [Llama a la API de análisis de la Tienda Windows](#call-the-windows-store-analytics-api).
 
+<span id="prerequisites" />
+## Paso 1: Completar los requisitos previos para usar la API de análisis de la Tienda Windows
 
-### Asociar una aplicación de Azure AD a la cuenta del Centro de desarrollo de Windows
+Antes de empezar a escribir código para llamar a la API de análisis de la Tienda Windows, asegúrate de que has completado los siguientes requisitos previos.
 
-1.  En el Centro de desarrollo, ve a **Configuración de la cuenta**, haz clic en **Administrar usuarios** y asocia la cuenta del Centro de desarrollo de tu organización al directorio de AzureAD de tu organización. Para obtener instrucciones detalladas, consulta [Administrar usuarios de la cuenta](https://msdn.microsoft.com/library/windows/apps/mt489008). Opcionalmente, puedes agregar otros usuarios del directorio de Azure AD de la organización para que también puedan acceder a la cuenta del Centro de desarrollo.
+* Tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para el directorio. Si ya usas Office365 u otros servicios empresariales de Microsoft, ya tienes un directorio de AzureAD. De lo contrario, puedes [crear un nuevo Azure AD desde el Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) sin ningún coste adicional.
 
-    > 
-            **Nota**: Solo se puede asociar una cuenta del Centro de desarrollo con un directorio de AzureActiveDirectory. Del mismo modo, solo un directorio de Azure Active Directory puede asociarse con una cuenta del Centro de desarrollo. Una vez establecida esta asociación, no podrás quitarla sin ponerte en contacto con soporte técnico.
+* Debes asociar una aplicación de Azure AD con tu cuenta del Centro de desarrollo, recuperar el identificador de inquilino y el identificador de cliente correspondientes a la aplicación y generar la clave. La aplicación de Azure AD representa la aplicación o el servicio desde donde quieres originar la llamada a la API de análisis de la Tienda Windows. Necesitas el identificador de inquilino, el identificador de cliente y la clave para obtener un token de acceso de Azure AD que se pasa a la API.
 
-     
+  >**Nota**&nbsp;&nbsp;Esta tarea solo es necesario realizarla una vez. Una vez que tengas el identificador de inquilino, el identificador de cliente y la clave, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.
 
-2.  En la página **Administrar usuarios**, haz clic en **Agregar aplicaciones de Azure AD**, agrega la aplicación de Azure AD que representa la aplicación o el servicio que usarás para acceder a los datos de análisis de tu cuenta del Centro de desarrollo y asígnale el rol **Administrador**. Si esta aplicación ya existe en el directorio de Azure AD, puedes seleccionarla en la página **Agregar aplicaciones de Azure AD** para agregarla a tu cuenta del Centro de desarrollo. De lo contrario, puedes crear una nueva aplicación de Azure AD en la página **Agregar aplicaciones de Azure AD**. Para obtener más información, consulta la sección sobre administración de aplicaciones de Azure AD en [Administrar usuarios de la cuenta](https://msdn.microsoft.com/library/windows/apps/mt489008).
+Para asociar una aplicación de Azure AD con la cuenta del Centro de desarrollo y recuperar los valores requeridos:
 
-3.  Vuelve a la página **Administrar usuarios**, haz clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y luego haz clic en **Agregar nueva clave**. En la siguiente pantalla, copia los valores de **Id. de cliente** y **Clave**. Para obtener más información, consulta la sección sobre administración de aplicaciones de Azure AD en [Administrar usuarios de la cuenta](https://msdn.microsoft.com/library/windows/apps/mt489008). Necesitas estos valores de id. de cliente y clave para obtener un token de acceso de Azure AD para usarlo al llamar a la API de análisis de la Tienda Windows. No podrás acceder a esta información de nuevo después de salir de la página.
+1.  En el Centro de desarrollo, ve a **Configuración de la cuenta**, haz clic en **Administrar usuarios** y asocia la cuenta del Centro de desarrollo de tu organización al directorio de AzureAD de tu organización. Para obtener instrucciones detalladas, consulta [Administrar usuarios de la cuenta](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
 
+2.  En la página **Administrar usuarios**, haz clic en **Agregar aplicaciones de Azure AD**, agrega la aplicación de Azure AD que representa la aplicación o el servicio que usarás para acceder a los datos de análisis de tu cuenta del Centro de desarrollo y asígnale el rol **Administrador**. Si esta aplicación ya existe en el directorio de Azure AD, puedes seleccionarla en la página **Agregar aplicaciones de Azure AD** para agregarla a tu cuenta del Centro de desarrollo. De lo contrario, puedes crear una nueva aplicación de Azure AD en la página **Agregar aplicaciones de Azure AD**. Para obtener más información, consulta [Agregar y administrar aplicaciones de Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
-### Obtener un token de acceso de AzureAD
+3.  Vuelve a la página **Administrar usuarios**, haz clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y copia los valores de **Id. de inquilino** e **Id. de cliente**.
 
-Después de asociar una aplicación de Azure AD a tu cuenta del Centro de desarrollo y recuperar el id. de cliente y la clave de la aplicación, puedes usar esta información para obtener un token de acceso de AzureAD. Necesitas un token de acceso para poder llamar a cualquiera de los métodos de la API de análisis de la Tienda Windows. Después de crear un token de acceso, tienes 60 minutos para usarlo antes de que expire.
+4. Haz clic en **Agregar nueva clave**. En la siguiente pantalla, copia el valor **Clave**. No podrás acceder a esta información de nuevo después de salir de la página. Para obtener más información, consulta la información sobre la administración de claves en [Agregar y administrar aplicaciones de Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
-Para obtener el token de acceso, sigue las instrucciones de [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://msdn.microsoft.com/library/azure/dn645543.aspx) para enviar un HTTP POST al siguiente punto de conexión de AzureAD.
+<span id="obtain-an-azure-ad-access-token" />
+## Paso 2: Obtención de un token de acceso de Azure AD
 
-```syntax
-https://login.microsoftonline.com/<tenant id>/oauth2/token
+Antes de llamar a cualquiera de los métodos en la API de análisis de la Tienda Windows, debes obtener un token de acceso de Azure AD para pasarlo al encabezado **Authorization** de cada método en la API. Después de obtener un token de acceso, tienes 60minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizarlo para poder seguir usándolo en llamadas posteriores a la API.
+
+Para obtener el token de acceso, sigue las instrucciones que aparecen en [Llamadas entre servicios mediante las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar una solicitud HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. A continuación te mostramos un ejemplo de solicitud.
+
+```
+POST https://login.microsoftonline.com/<your_tenant_id>/oauth2/token HTTP/1.1
+Host: login.microsoftonline.com
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+
+grant_type=client_credentials
+&client_id=<your_client_id>
+&client_secret=<your_client_secret>
+&resource=https://manage.devcenter.microsoft.com
 ```
 
--   Para obtener el identificador del inquilino, inicia sesión en el [Portal de administración de Azure](http://manage.windowsazure.com/), ve a **Active Directory** y haz clic en el directorio que vinculaste a tu cuenta del Centro de desarrollo. El id. de inquilino de este directorio está insertado en la dirección URL de esta página, como se muestra en la cadena *your\_tenant\_ID* del siguiente ejemplo.
+Para los parámetros *tenant\_id*, *client\_id* y *client\_secret*, especifica el identificador de inquilino, el identificador de cliente y la clave correspondientes a la aplicación que hayas recuperado del Centro de desarrollo en la sección anterior. Para el parámetro *resource*, debes especificar el identificador URI ```https://manage.devcenter.microsoft.com```.
 
-  ```syntax
-  https://manage.windowsazure.com/@<your_tenant_name>#Workspaces/ActiveDirectoryExtension/Directory/<your_tenant_ID>/directoryQuickStart
-  ```
+Después de que el token de acceso expire, puedes actualizarlo siguiendo las instrucciones que se muestran [aquí](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
 
--   En el caso de los parámetros *client\_id* y *client\_secret*, especifica el identificador de cliente y la clave de la aplicación que recuperaste anteriormente del Centro de desarrollo.
--   Para el parámetro *resource*, especifica el siguiente URI: ```https://manage.devcenter.microsoft.com```.
-
-
-### Llamar a la API de análisis de la Tienda Windows
+<span id="call-the-windows-store-analytics-api" />
+## Paso 3: Llama a la API de análisis de la Tienda Windows.
 
 Cuando tengas un token de acceso de Azure AD, podrás llamar a la API de análisis de la Tienda Windows. Para obtener información sobre la sintaxis de cada método, consulta los siguientes artículos. Debes pasar el token de acceso al encabezado **Authorization** de cada método.
 
--   [Obtener adquisiciones de la aplicación](get-app-acquisitions.md)
--   [Obtener adquisiciones de IAP](get-in-app-acquisitions.md)
--   [Obtener datos de informe de errores](get-error-reporting-data.md)
--   [Obtener clasificaciones de la aplicación](get-app-ratings.md)
--   [Obtener opiniones de la aplicación](get-app-reviews.md)
+-   [Obtener los datos de las adquisiciones de la aplicación](get-app-acquisitions.md)
+-   [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
+-   [Obtener los datos del informe de errores](get-error-reporting-data.md)
+-   [Obtener las valoraciones de la aplicación](get-app-ratings.md)
+-   [Obtener las opiniones de la aplicación](get-app-reviews.md)
 
 ## Ejemplo de código
 
@@ -139,7 +131,7 @@ namespace TestAnalyticsAPI
                 "https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions?applicationId={0}&startDate={1}&endDate={2}&top={3}&skip={4}",
                 appID, startDate, endDate, top, skip);
 
-            //// Get IAP acquisitions
+            //// Get add-on acquisitions
             //requestURI = string.Format(
             //    "https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions?applicationId={0}&startDate={1}&endDate={2}&top={3}&skip={4}",
             //    appID, startDate, endDate, top, skip);
@@ -236,15 +228,15 @@ La API análisis de Tienda Windows devuelve respuestas de error en un objeto JSO
 
 ## Temas relacionados
 
-* [Obtener adquisiciones de la aplicación](get-app-acquisitions.md)
-* [Obtener adquisiciones de IAP](get-in-app-acquisitions.md)
-* [Obtener datos de informe de errores](get-error-reporting-data.md)
-* [Obtener clasificaciones de la aplicación](get-app-ratings.md)
-* [Get app reviews (Obtener opiniones de la aplicación)](get-app-reviews.md)
+* [Obtener los datos de las adquisiciones de la aplicación](get-app-acquisitions.md)
+* [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
+* [Obtener los datos del informe de errores](get-error-reporting-data.md)
+* [Obtener las valoraciones de la aplicación](get-app-ratings.md)
+* [Obtener las opiniones de la aplicación](get-app-reviews.md)
  
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 

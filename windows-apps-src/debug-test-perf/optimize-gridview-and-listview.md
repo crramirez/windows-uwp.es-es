@@ -3,13 +3,14 @@ author: mcleblanc
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
 title: "Optimización de la interfaz de usuario de ListView y GridView"
 description: "Mejora el rendimiento y el tiempo de inicio de ListView y GridView mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de elementos."
+translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 362fbb6b733e855a2126196f12c650bdf2a7665d
+ms.openlocfilehash: 1aba484afcb704b0b28ceee6027f5ae05d8e420d
 
 ---
 # Optimización de la interfaz de usuario de ListView y GridView
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Nota**  
 Para más información, consulta la sesión de //build/ [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView (Aumentar considerablemente el rendimiento cuando los usuarios interactúan con grandes cantidades de datos de GridView y ListView)](https://channel9.msdn.com/events/build/2013/3-158).
@@ -26,10 +27,7 @@ Para obtener unos movimientos panorámicos/desplazamientos suaves, es fundamenta
 
 ## Virtualización de interfaz de usuario
 
-La virtualización de la interfaz de usuario es la mejora más importante que puedes hacer. Esto significa que los elementos de la interfaz de usuario representen los elementos se crean a petición. Para controlar los elementos enlazados a una colección de 1 000 elementos, sería un desperdicio de recursos crear la interfaz de usuario de todos los elementos al mismo tiempo, porque no todos pueden mostrarse al mismo tiempo. 
-            [
-              **ListView**
-            ](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) (y otros controles derivados de [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803)) realizan la virtualización de la interfaz de usuario por ti. Cuando los elementos están a punto de desplazarse hacia la vista (a una páginas de distancia), el marco de trabajo genera la interfaz de usuario de los elementos y los almacena. Asimismo, cuando sea improbable que los elementos se muestren de nuevo, el marco de trabajo recupera la memoria.
+La virtualización de la interfaz de usuario es la mejora más importante que puedes hacer. Esto significa que los elementos de la interfaz de usuario representen los elementos se crean a petición. Para controlar los elementos enlazados a una colección de 1 000 elementos, sería un desperdicio de recursos crear la interfaz de usuario de todos los elementos al mismo tiempo, porque no todos pueden mostrarse al mismo tiempo. [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) (y otros controles derivados estándar de [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803)) realizan la virtualización de la interfaz de usuario por ti. Cuando los elementos están a punto de desplazarse hacia la vista (a una páginas de distancia), el marco de trabajo genera la interfaz de usuario de los elementos y los almacena. Asimismo, cuando sea improbable que los elementos se muestren de nuevo, el marco de trabajo recupera la memoria.
 
 Si proporcionas una plantilla del panel de elementos personalizada (consulta [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx)), asegúrate de usar un panel de virtualización, como [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) o [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795). Si usas las clases [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227651), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227717) o [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635), no obtendrás la virtualización. Además, los siguientes eventos [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) se generan únicamente cuando se usa una clase [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) o [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795): [**ChoosingGroupHeaderContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer), [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) y [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.containercontentchanging).
 
@@ -247,14 +245,7 @@ En algunas aplicaciones, debes tener una interfaz de usuario distinta para los d
 
 **El evento ChoosingItemContainer**
 
-
-            [
-              **ChoosingItemContainer**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) es un evento que te permite proporcionar un elemento (**ListViewItem**/**GridViewItem**) a los controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) cada vez que se necesita un nuevo elemento durante el inicio o el reciclado. Puedes crear un contenedor basado en el tipo de elemento de datos que mostrará el contenedor (puedes verlo en el siguiente ejemplo). 
-            El elemento **ChoosingItemContainer** es la mejor manera de conseguir el mayor rendimiento al usar diferentes plantillas de datos para distintos elementos. El almacenamiento en caché del contenedor se puede conseguir mediante **ChoosingItemContainer**. Por ejemplo, si tienes cinco plantillas diferentes y usas una de ellas más a menudo que las demás, entonces, el elemento ChoosingItemContainer no solo te permite crear elementos en las proporciones necesarias, sino también mantener un número apropiado de los elementos almacenados en caché y disponibles para su reciclaje. 
-            [
-              **ChoosingGroupHeaderContainer**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer) proporciona la misma funcionalidad para encabezados de grupo.
+[**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) es un evento que te permite proporcionar un elemento (**ListViewItem**/**GridViewItem**) a los controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) cada vez que se necesita un nuevo elemento durante el inicio o el reciclado. Puedes crear un contenedor basado en el tipo de elemento de datos que mostrará el contenedor (puedes verlo en el siguiente ejemplo). **ChoosingItemContainer** es la mejor manera de conseguir el mayor rendimiento al usar diferentes plantillas de datos para distintos elementos. El almacenamiento en caché del contenedor se puede conseguir mediante **ChoosingItemContainer**. Por ejemplo, si tienes cinco plantillas diferentes y usas una de ellas más a menudo que las demás, entonces, el elemento ChoosingItemContainer no solo te permite crear elementos en las proporciones necesarias, sino también mantener un número apropiado de los elementos almacenados en caché y disponibles para su reciclaje. [**ChoosingGroupHeaderContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer) proporciona la misma funcionalidad para encabezados de grupo.
 
 ```csharp
 // Example shows how to use ChoosingItemContainer to return the correct
@@ -329,6 +320,6 @@ Cuando hay una distribución desigual de los elementos que usan plantillas de el
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

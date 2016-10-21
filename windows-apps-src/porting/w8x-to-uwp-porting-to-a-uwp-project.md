@@ -3,8 +3,9 @@ author: mcleblanc
 description: "Tienes dos opciones cuando empieza el proceso de migración."
 title: "Migración de un proyecto de Windows Runtime 8.x a un proyecto de UWP"
 ms.assetid: 2dee149f-d81e-45e0-99a4-209a178d415a
+translationtype: Human Translation
 ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: 60f59c58aedc56da58350a050acd184a376b8067
+ms.openlocfilehash: 97b187b5e1ee988d4e1d514f139cec48088be3f2
 
 ---
 
@@ -43,7 +44,7 @@ La mayoría de las API de Windows Runtime a las que tu aplicación Universal 8.1
 
 Si se producen errores de compilación sobre espacios de nombres o tipos o miembros no encontrados, es probable que esta sea la causa. Abre el tema de las API en la documentación de referencia de la API y navega hasta la sección Requisitos, donde podrás consultar cuál es la familia de dispositivos de la implementación. Si esa no es la familia de dispositivos de destino, para que la API esté disponible para el proyecto, necesitarás una referencia al SDK de extensión de esa familia de dispositivos.
 
-Haz clic en **Proyecto**&gt;**Agregar referencia**&gt;**Windows Universal**&gt;**Extensiones** y selecciona el SDK de extensión apropiado. Por ejemplo, si las API a las que quieres llamar solo están disponibles en la familia de dispositivos móviles y se introdujeron en la versión 10.0.x.y, selecciona **Extensiones de Windows Mobile para UWP**.
+Haz clic en **Proyecto** &gt; **Agregar referencia** &gt; **Windows Universal** &gt; **Extensiones** y selecciona el SDK de extensión apropiado. Por ejemplo, si las API a las que quieres llamar solo están disponibles en la familia de dispositivos móviles y se introdujeron en la versión 10.0.x.y, selecciona **Extensiones de Windows Mobile para UWP**.
 
 Ello agregará la siguiente referencia al archivo de proyecto:
 
@@ -67,8 +68,7 @@ Consulta también [Manifiesto del paquete de la aplicación](#appxpackage).
 
 Si usas la compilación condicional (con directivas de preprocesador C#) para que los archivos de código funcionen en Windows 8.1 y Windows Phone 8.1, ahora puedes revisar esa compilación condicional a la luz del trabajo de convergencia realizado en Windows10. Convergencia significa que, en la aplicación de Windows 10, algunas condiciones se pueden quitar por completo. Otras cambian a comprobaciones en tiempo de ejecución, como se muestra en los siguientes ejemplos.
 
-
-            **Nota** Si quieres admitir Windows 8.1, Windows Phone 8.1 y Windows10 en un solo archivo de código, también puedes hacerlo. Si buscas en el proyecto de Windows10 en las páginas de propiedades del proyecto, verás que el proyecto define WINDOWS\_UAP como un símbolo de compilación condicional. Por tanto, puedes usarlo en combinación con WINDOWS\_APP y WINDOWS\_PHONE\_APP. En estos ejemplos se muestra el caso más simple de eliminación de la compilación condicional de una aplicación Universal 8.1 de sustitución del código equivalente para una aplicación de Windows10.
+**Nota** También puedes admitir Windows 8.1, Windows Phone 8.1 y Windows 10 en un solo archivo de código. Si buscas en el proyecto de Windows10 en las páginas de propiedades del proyecto, verás que el proyecto define WINDOWS\_UAP como un símbolo de compilación condicional. Por tanto, puedes usarlo en combinación con WINDOWS\_APP y WINDOWS\_PHONE\_APP. En estos ejemplos se muestra el caso más simple de eliminación de la compilación condicional de una aplicación Universal 8.1 de sustitución del código equivalente para una aplicación de Windows10.
 
 Este primer ejemplo muestra el patrón de uso de la API **PickSingleFileAsync** (que se aplica únicamente a Windows 8.1) y la API **PickSingleFileAndContinue** (que se aplica únicamente a Windows Phone 8.1).
 
@@ -134,8 +134,7 @@ void HardwareButtons_CameraPressed(object sender, Windows.Phone.UI.Input.CameraE
 #endif // WINDOWS_PHONE_APP
 ```
 
-En Windows10, el botón de la cámara de hardware es un concepto específico de la familia de dispositivos móviles. Debido a que se ejecutará un paquete de la aplicación en todos los dispositivos, cambiamos nuestra condición de tiempo de compilación a una condición de tiempo de ejecución mediante el uso de código adaptable. Para ello, usamos la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar en tiempo de ejecución la presencia de la clase [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). 
-            **HardwareButtons** se define en el SDK de la extensión móvil, por lo que deberemos agregar una referencia a ese SDK a nuestro proyecto para poder compilar este código. No obstante, ten en cuenta que el controlador solo se ejecutará en un dispositivo que implementa los tipos definidos en el SDK de extensión móvil y que esa es la familia de dispositivos móviles. Por lo tanto, este código es moralmente equivalente al código Universal 8.1 en que procura usar únicamente características que están presentes, aunque lo consiga de un modo distinto.
+En Windows10, el botón de la cámara de hardware es un concepto específico de la familia de dispositivos móviles. Debido a que se ejecutará un paquete de la aplicación en todos los dispositivos, cambiamos nuestra condición de tiempo de compilación a una condición de tiempo de ejecución mediante el uso de código adaptable. Para ello, usamos la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar en tiempo de ejecución la presencia de la clase [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). **HardwareButtons** se define en el SDK de la extensión móvil, por lo que deberemos agregar una referencia a ese SDK al proyecto para poder compilar este código. No obstante, ten en cuenta que el controlador solo se ejecutará en un dispositivo que implementa los tipos definidos en el SDK de extensión móvil y que esa es la familia de dispositivos móviles. Por lo tanto, este código es moralmente equivalente al código Universal 8.1 en que procura usar únicamente características que están presentes, aunque lo consiga de un modo distinto.
 
 ```csharp
     // Note: Cache the value instead of querying it more than once.
@@ -178,6 +177,6 @@ El siguiente tema es [Solución de problemas](w8x-to-uwp-troubleshooting.md).
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

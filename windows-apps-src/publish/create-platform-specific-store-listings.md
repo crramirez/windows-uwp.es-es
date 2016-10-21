@@ -1,45 +1,55 @@
-﻿---
+---
 author: jnHs
-Description: If you've provided packages targeting different operating systems, you have the option to customize parts of your Store listing for different targeted operating systems.
-title: Create platform-specific Store listings
+Description: "Si has proporcionado paquetes destinados a diferentes sistemas operativos, tienes la opción de personalizar partes de la descripción de la Tienda para cada sistema operativo de destino."
+title: "Creación de descripciones de la Tienda específicas de la plataforma"
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
+translationtype: Human Translation
+ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
+ms.openlocfilehash: 8d9b026cf09d076cd7f7dc8a72d611e68ddd61c7
+
 ---
 
-# Create platform-specific Store listings
+# Creación de descripciones de la Tienda específicas de la plataforma
 
 
-If you've provided packages targeting different operating systems, you have the option to customize parts of your Store listing for different targeted operating systems. You will not see this option unless you have already uploaded packages, and include packages for earlier OS versions (Windows 8.x or earlier and/or Windows Phone 8.x or earlier).
+Si has proporcionado paquetes destinados a diferentes sistemas operativos, tienes la opción de personalizar partes de la descripción de la Tienda para cada sistema operativo de destino. No verás esta opción a menos que ya hayas cargado paquetes e incluido paquetes para versiones anteriores del sistema operativo (Windows 8.x o versiones anteriores o para Windows Phone 8.x o versiones anteriores).
 
-> **Important**  Customers on Windows 10 will always see your default Store listing.
+> **Importante**  Los clientes de Windows 10 siempre verán la descripción de la Tienda predeterminada.
 
-Platform-specific Store listings can be useful if you want to mention features that appear only in one OS version, or want to provide screenshots that are specific to a particular OS (independent of device type), rather than having all customers see the same Store listing.
+Las descripciones de la Tienda específicas de la plataforma son útiles si quieres mencionar las características que solo aparecen en una versión de SO o si quieres proporcionar capturas de pantalla que son específicas de un SO particular (independientemente del tipo de dispositivo), en lugar de que todos los clientes vean la misma descripción de la Tienda.
 
-> **Note**  Creating a platform-specific Store listing in one language does not create a platform-specific Store listing in other languages that your app supports, even if you have [entered Store listing info](create-app-store-listings.md) for those languages. You'll need to create the platform-specific Store listing separately for each language.
+> **Nota**  Al crear una descripción de la Tienda específica de la plataforma en un idioma, no se crea una descripción de la Tienda específica de la plataforma en otros idiomas que admita la aplicación, aunque hayas [especificado información de descripción de la Tienda](create-app-store-listings.md) para esos idiomas. Deberás crear la descripción de la Tienda específica de la plataforma por separado para cada idioma.
 
-## Creating a platform-specific Store listing
+## Creación de una descripción de la Tienda específica de la plataforma
 
-Near the top of your **Store listing** page, you'll see a link to **create a platform-specific app Store listing** if you have uploaded packages that support earlier OS versions ((Windows 8.x or earlier and/or Windows Phone 8.x or earlier).
+En la parte superior de tu página de **descripción de la Tienda**, verás un enlace a **Creación de una descripción de la Tienda de aplicaciones específicas de la plataforma** si has cargado paquetes que admitan versiones anteriores del sistema operativo (Windows 8.x o versiones anteriores o Windows Phone 8.x o versiones anteriores).
 
-> **Tip** You can't create platform-specific Store listings until after you've uploaded packages.
+> **Sugerencia** No podrás crear descripciones de la Tienda específicos de la plataforma hasta después de haber cargado los paquetes.
 
-When you click the link to **create a platform-specific app Store listing**, a popup will appear asking you to choose from your supported targeted operating systems. Windows 10 is not included in the list of choices, because customers on Windows 10 will always see the app's default Store listing.
+Al hacer clic en el enlace a **Creación de una descripción de la Tienda de aplicaciones específicas de la plataforma**, aparecerá un elemento emergente en el que se te pedirá que elijas entre los sistemas operativos de destino admitidos. Windows 10 no está incluido en la lista de opciones, ya que los clientes de Windows 10 siempre verán la descripción de la Tienda predeterminada de la aplicación.
 
-> **Note**  If you've already created platform-specific Store listings for all of the OS versions your app targets, you won't be able to make a selection.
+> **Nota**  Si ya has creado descripciones de la Tienda específicas de la plataforma para todas las versiones de SO de destino de tu aplicación, no podrás realizar la selección.
 
-You can use your default Store listing as a starting point, which will bring over all of the text and images you've entered for your default Store listing; you'll then be able to make any changes you'd like before saving. You can also start from a completely blank Store listing if you prefer.
+Puedes optar por usar tu descripción de la Tienda predeterminada como punto de partida, lo que mostrará todo el texto y las imágenes que hayas introducido para la descripción de la Tienda predeterminada; después, podrás realizar las modificaciones que quieras antes de guardar. También puedes empezar con una descripción de la Tienda completamente en blanco si lo prefieres.
 
-After you click **Continue**, your **Store listing** page will now include a section for the platform-specific Store listing you've just created (underneath the [Default Store listing](create-app-store-listings.md#default-store-listing-fields) section). This section will include its own set of fields for **Description** (required), **Release notes**, **Screenshots**, **App tile icon**, **App features**, and **Additional system requirements**. Make sure to enter info into each field where you want to display info in the custom Store listing, even if it's the same info as in your default Store listing. If you leave any of these fields blank, no info will appear for that field in the custom Store listing.
+Después de hacer clic en **Continuar**, la página **Descripción de la Tienda** dispondrá de una sección para la descripción de la Tienda específica de la plataforma que acabas de crear (debajo de la sección [Descripción de la Tienda predeterminada](create-app-store-listings.md#default-store-listing-fields)). Esta sección incluirá su propio conjunto de campos: **Descripción** (obligatoria), **Notas de la versión**, **Capturas de pantalla**, **Icono de la aplicación**, **Características de la aplicación** y **Requisitos adicionales del sistema**. Asegúrate de escribir en todos los campos de la descripción de la Tienda personalizada que quieres que muestren información, aunque sea la misma que la de la descripción de la Tienda predeterminada. Si dejas en blanco alguno de estos campos, no se mostrará información sobre ellos en la descripción de la Tienda personalizada.
 
-> **Note**  Not all fields of your app's Store listing can be customized for a specific targeted OS. For more info, see [Shared fields](create-app-store-listings.md#shared-fields).
+> **Nota**  No todos los campos de la descripción de la Tienda de la aplicación se pueden personalizar para un SO de destino específico. Para obtener más información, consulta [Campos compartidos](create-app-store-listings.md#shared-fields).
 
-## Removing a platform-specific Store listing
+## Supresión de una descripción de la Tienda específica de la plataforma
 
-If you create a platform-specific Store listing and later decide you'd rather show your default Store listing to customers on that operating system, click the **Delete** link. After confirming that you'd like to show those customers your default Store listing, click **OK**. The platform-specific Store listing will be removed. If you decide you want it back later, you can always create a new platform-specific Store listing for that operating system by following the steps listed above.
+Si creas una descripción de la Tienda específica de la plataforma y más adelante decides mostrar la descripción de la Tienda predeterminada a los clientes que usan ese sistema operativo, haz clic en el enlace **Eliminar**. Después de confirmar que quieres mostrar a esos clientes la descripción de la Tienda predeterminada, haz clic en **Aceptar**. Se quitará la descripción de la Tienda específica de la plataforma. Si más adelante quieres recuperarla, puedes seguir los pasos anteriores y crear una nueva descripción de la Tienda específica para ese sistema operativo.
 
- 
+ 
 
- 
+ 
 
 
+
+
+
+
+
+<!--HONumber=Aug16_HO5-->
 
 

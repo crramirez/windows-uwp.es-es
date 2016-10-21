@@ -5,8 +5,9 @@ title: "Conceptos básicos del diseño de contenido para aplicaciones para la Pl
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: c8328150601bf132c28e569c4db21095cb77f88c
+ms.openlocfilehash: 4ac800f9d2dd51ac074ec50cd1046e5a78c80710
 
 ---
 
@@ -21,12 +22,9 @@ Este artículo proporciona recomendaciones de diseño del contenido para los tre
 
 Hay tres escenarios principales de contenido:
 
--   
-            **Consumo**: una experiencia principalmente unidireccional en que se consume contenido. Incluye tareas como la lectura, escuchar música, ver vídeos y ver fotos e imágenes.
--   
-            **Creación**: una experiencia principalmente unidireccional en que el foco está en la creación de contenido. Puede dividirse en hacer las cosas desde cero, como tomar una foto o un vídeo, crear una nueva imagen en una aplicación de dibujo o abrir un documento nuevo.
--   
-            **Interactivo**: una experiencia de contenido bidireccional que incluye consumir, crear y revisar el contenido.
+-   **Consumo**: una experiencia principalmente unidireccional en que se consume contenido. Incluye tareas como la lectura, escuchar música, ver vídeos y ver fotos e imágenes.
+-   **Creación**: una experiencia principalmente unidireccional en que el foco está en la creación de nuevo contenido. Puede dividirse en hacer las cosas desde cero, como tomar una foto o un vídeo, crear una nueva imagen en una aplicación de dibujo o abrir un documento nuevo.
+-   **Interactivo**: una experiencia de contenido bidireccional que incluye consumir, crear y revisar el contenido.
 
 ## <span id="Consumption-focused_apps"></span><span id="consumption-focused_apps"></span><span id="CONSUMPTION-FOCUSED_APPS"></span>Aplicaciones centradas en el consumo
 
@@ -52,8 +50,7 @@ Como ejemplo, se muestra un diseño para una aplicación de fotos que usa las ba
 Recomendaciones generales para las aplicaciones centradas en la creación:
 
 -   Minimizar el uso de elementos de [navegación](navigation-basics.md).
--   
-            Los elementos de [comando](commanding-basics.md) son especialmente importantes en las aplicaciones centradas en la creación de elementos. Dado que los usuarios van a ejecutar una gran cantidad de comandos, te recomendamos que proporciones una funcionalidad de historial y de deshacer comandos.
+-   Los elementos de [Comando](commanding-basics.md) son especialmente importantes en las aplicaciones centradas en la creación de elementos. Dado que los usuarios van a ejecutar una gran cantidad de comandos, te recomendamos que proporciones una funcionalidad de historial y de deshacer comandos.
 
 ## <span id="Apps_with_interactive_content"></span><span id="apps_with_interactive_content"></span><span id="APPS_WITH_INTERACTIVE_CONTENT"></span>Aplicaciones con contenido interactivo
 
@@ -64,10 +61,8 @@ En una aplicación con contenido interactivo, los usuarios crean, muestran y edi
 
 Ese tipo de aplicaciones deben equilibrar los tres elementos de interfaz de usuario:
 
--   
-            Los elementos de [navegación](navigation-basics.md) ayudan a los usuarios a buscar y ver contenido. Si ver y buscar contenido es el escenario más importante, da prioridad a los elementos de navegación, filtrado, ordenación y búsqueda.
--   
-            [Los elementos de comando](commanding-basics.md) permiten al usuario crear, editar y manipular el contenido.
+-   Los elementos de [Navegación](navigation-basics.md) ayudan a los usuarios a buscar y visualizar contenido. Si ver y buscar contenido es el escenario más importante, da prioridad a los elementos de navegación, filtrado, ordenación y búsqueda.
+-   Los elementos de [Comando](commanding-basics.md) permiten al usuario crear, editar y manipular el contenido.
 
 Recomendaciones generales para las aplicaciones con contenido interactivo:
 
@@ -99,8 +94,7 @@ A continuación se facilitan algunos elementos de interfaz de usuario usados fre
 </tr>
 <tr class="even">
 <td align="left">Visores de imágenes</td>
-<td align="left">
-            [Vista de volteo](../controls-and-patterns/flipview.md), [imagen](../controls-and-patterns/images-imagebrushes.md)</td>
+<td align="left">[Vista invertida](../controls-and-patterns/flipview.md), [imagen](../controls-and-patterns/images-imagebrushes.md)</td>
 <td align="left">Muestra imágenes. El control de vista de volteo muestra una a una las imágenes de una colección, como las fotos de un álbum o los elementos de una página de detalles de un producto.</td>
 </tr>
 <tr class="odd">
@@ -110,8 +104,7 @@ A continuación se facilitan algunos elementos de interfaz de usuario usados fre
 </tr>
 <tr class="even">
 <td align="left">Texto y entrada de texto</td>
-<td align="left"><p>
-            [Bloque de texto](../controls-and-patterns/text-block.md), [cuadro de texto](../controls-and-patterns/text-box.md), [cuadro de edición enriquecido](../controls-and-patterns/rich-edit-box.md)</p>
+<td align="left"><p>[Bloque de texto](../controls-and-patterns/text-block.md), [cuadro de texto](../controls-and-patterns/text-box.md), [cuadro de edición enriquecido](../controls-and-patterns/rich-edit-box.md)</p>
 </td>
 <td align="left">Muestra texto. Algunos elementos permiten al usuario editar texto. Para obtener más información, consulta [Controles de texto](../controls-and-patterns/text-controls.md)</td>
 </tr>
@@ -130,6 +123,6 @@ A continuación se facilitan algunos elementos de interfaz de usuario usados fre
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

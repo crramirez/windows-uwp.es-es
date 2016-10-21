@@ -3,8 +3,9 @@ author: mcleblanc
 description: "El código que se integra con el dispositivo y sus sensores implica la entrada del usuario y la salida de este."
 title: "Migración de Windows Runtime 8.x a UWP para E/S, dispositivo y modelo de aplicaciones"
 ms.assetid: bb13fb8f-bdec-46f5-8640-57fb0dd2d85b
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: e5e560ca4f40496edf9d11c3eef546fdc4c3b079
+ms.openlocfilehash: 4f7a73eb48d898ed99a5145eccc04da259fe4871
 
 ---
 
@@ -37,8 +38,7 @@ La forma de concebir la selección de destinos de aplicación cambia con Windows
 
 Si tienes código en tu aplicación Universal 8.1 que detecta el sistema operativo en el que se está ejecutando, es posible que necesites cambiarlo en función del motivo de la lógica. Si la aplicación está pasando el valor y no actúa en él, podrás continuar recopilando la información del sistema operativo.
 
-
-            **Nota** Es recomendable que no uses el sistema operativo o la familia de dispositivos para detectar la presencia de funciones. Identificar el sistema operativo actual o la familia de dispositivos normalmente no es la mejor manera de determinar si una función concreta de la familia de dispositivos o del sistema operativo está presente. En lugar de detectar el sistema operativo o la familia de dispositivos (y el número de versión), prueba la presencia de la propia funcion (consulta [Compilación condicional y código adaptable](w8x-to-uwp-porting-to-a-uwp-project.md#reviewing-conditional-compilation)). Si debes requerir un sistema operativo determinado o una familia de dispositivos, asegúrate de usarlo como una versión compatible mínima, en lugar de diseñar la prueba solamente para esa versión.
+**Nota** Es recomendable que no uses el sistema operativo o la familia de dispositivos para detectar la presencia de características. Identificar el sistema operativo actual o la familia de dispositivos normalmente no es la mejor manera de determinar si una función concreta de la familia de dispositivos o del sistema operativo está presente. En lugar de detectar el sistema operativo o la familia de dispositivos (y el número de versión), prueba la presencia de la propia funcion (consulta [Compilación condicional y código adaptable](w8x-to-uwp-porting-to-a-uwp-project.md#reviewing-conditional-compilation)). Si debes requerir un sistema operativo determinado o una familia de dispositivos, asegúrate de usarlo como una versión compatible mínima, en lugar de diseñar la prueba solamente para esa versión.
 
  
 
@@ -78,6 +78,6 @@ Si una aplicación que declara la funcionalidad de Ubicación en su manifiesto d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ description: "Este ejercicio de migración muestra cómo traer un marco de repre
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 27c6f82e97e9eb24dedcc5d83a18e6aba6961194
+ms.openlocfilehash: 53e0b3f5a69f133e74430b1a2e32a13180569f06
 
 ---
 
@@ -73,20 +73,12 @@ Consulta [Conceptos y consideraciones de migración](porting-considerations.md) 
 
 
 **Direct3D**
-            
-          
-            [Escribir sombreadores HLSL en Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
-          
+[Writing HLSL Shaders in Direct3D 9 (Escribir sombreadores HLSL en Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb944006)
 
 [Crear un nuevo proyecto de DirectX11 para UWP](user-interface.md)
 
 **Tienda Windows**
-            
-          
-            [
-              **Microsoft::WRL::ComPtr**
-            ](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
-          
+[**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
 
 [**Identificador de objeto operador (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx
 
@@ -100,6 +92,6 @@ Consulta [Conceptos y consideraciones de migración](porting-considerations.md) 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

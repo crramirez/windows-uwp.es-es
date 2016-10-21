@@ -3,8 +3,9 @@ author: msatranjr
 title: "Solicitar una clave de autenticación de mapas"
 description: "La aplicación universal de Windows debe autenticarse para poder usar MapControl y los servicios de mapa en el espacio de nombres Windows.Services.Maps."
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: b7c981e071f70ab0a76d73333a94580b3c497b0e
+ms.openlocfilehash: 4cbc0142e7d76795bb147ce4cc98b3da48715b85
 
 ---
 
@@ -16,8 +17,7 @@ ms.openlocfilehash: b7c981e071f70ab0a76d73333a94580b3c497b0e
 
 La [aplicación universal de Windows](https://msdn.microsoft.com/library/windows/apps/dn894631) debe autenticarse para poder usar [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este tema se describe cómo solicitar una clave de autenticación de mapas desde el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/) y agregarla a la aplicación.
 
-
-            **Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga el ejemplo siguiente del [repositorio de ejemplos de la plataforma universal de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub:
+**Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga la muestra siguiente del [repositorio Windows-universal-samples](http://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub:
 
 -   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -42,14 +42,10 @@ Para crear una nueva clave
 
 7.  Rellena el formulario **Crear clave** y, después, haz clic en **Crear**.
 
-    -   
-            **Nombre de la aplicación:** el nombre de tu aplicación.
-    -   
-            **Dirección URL de la aplicación (opcional):** dirección URL de tu aplicación.
-    -   
-            **Tipo de clave:** selecciona **Básica** o **Empresa**.
-    -   
-            **Tipo de aplicación:** selecciona **Aplicación universal de Windows** para usarla en tu aplicación universal de Windows.
+    -   **Nombre de la aplicación:** El nombre de tu aplicación.
+    -   **Dirección URL de la aplicación (opcional):** La dirección URL de tu aplicación.
+    -   **Tipo de clave:** Selecciona **Básica** o **Empresa**.
+    -   **Tipo de aplicación:** Selecciona **Aplicación universal de Windows** para usarla en tu aplicación universal de Windows.
 
     A continuación se muestra un ejemplo del aspecto del formulario.
 
@@ -100,6 +96,6 @@ Para usar servicios en el espacio de nombres [**Windows.Services.Maps**](https:/
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

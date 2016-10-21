@@ -3,13 +3,14 @@ author: mcleblanc
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: "Planeación del rendimiento"
 description: "Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería."
+translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 39d57811a07b4c404da4b7e369e3bf5441fa99c0
+ms.openlocfilehash: a53434223585d2c36fe30f4c2a49f019c7552662
 
 ---
 # Planificación del rendimiento
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, puedes realizar mediciones al principio y con la suficiente frecuencia durante el ciclo de vida del proyecto, para estar seguro de que cumples los objetivos.
@@ -160,7 +161,7 @@ Usa estas técnicas y herramientas para probar la aplicación con respecto a los
 -   Prueba en distintas configuraciones de hardware, incluidos los equipos de escritorio y todo en uno, equipos portátiles, ultrabooks, tabletas y otros dispositivos móviles.
 -   Prueba en distintos tamaños de pantalla. Si bien cuanto más grande sea la pantalla más se puede mostrar, presentar todo ese contenido adicional puede tener un impacto negativo en el rendimiento.
 -   Elimina todas las variables de prueba que puedas.
-    -   Cierra las aplicaciones en segundo plano en el dispositivo de prueba. Para ello, en Windows, selecciona **Configuración** en el menú Inicio &gt;**Personalización**&gt;**Pantalla de bloqueo**. Selecciona cada aplicación activa y selecciona **Ninguno**.
+    -   Cierra las aplicaciones en segundo plano en el dispositivo de prueba. Para ello, en Windows, selecciona **Configuración** desde el menú Inicio &gt; **Personalización** &gt; **Pantalla de bloqueo**. Selecciona cada aplicación activa y selecciona **Ninguno**.
     -   Compila la aplicación en código nativo. Para ello, compílala en la configuración de lanzamiento antes de implementarla en el dispositivo de prueba.
     -   Para garantizar que el mantenimiento automático no afecta el rendimiento del dispositivo de prueba, desencadénalo manualmente y espera a que finalice. En Windows, en el menú Inicio, busca **Seguridad y mantenimiento**. En el área **Mantenimiento**, en **Mantenimiento automático**, selecciona **Iniciar mantenimiento** y espera a que el estado cambie de **Mantenimiento en curso**.
     -   Ejecuta la aplicación varias veces para eliminar las variables aleatorias de prueba y garantizar medidas coherentes.
@@ -193,6 +194,6 @@ Optimizar las rutas de código crítico para el rendimiento de la aplicación es
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

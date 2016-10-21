@@ -2,8 +2,9 @@
 title: Automatizar el inicio de las aplicaciones para la Plataforma universal de Windows (UWP) de Windows 10
 description: "Los desarrolladores pueden usar la activación de protocolos y la activación del inicio para automatizar el inicio de los juegos o aplicaciones para UWP para las pruebas automatizadas."
 author: listurm
-ms.sourcegitcommit: adf2d16f9c208631f91fbcad19d1ea8087cd9cb5
-ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
+translationtype: Human Translation
+ms.sourcegitcommit: c5d0f685f4c733cbe4ba4c07aab565b888ddfe58
+ms.openlocfilehash: 4b31ec06b1ded4882d26cffed029eb8179ff47c3
 
 ---
 
@@ -13,11 +14,9 @@ ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
 
 Los desarrolladores tienen varias opciones para lograr el inicio automatizado de las aplicaciones para la Plataforma universal de Windows (UWP). En este documento exploramos los métodos para iniciar una aplicación mediante la activación de protocolos y del inicio.
 
+La *activación de protocolos* permite que una aplicación se registre como controlador para un protocolo determinado. 
 
-            La *activación de protocolos* permite que una aplicación se registre como controlador para un protocolo determinado. 
-
-
-            La *activación del inicio* es el inicio normal de una aplicación, como, por ejemplo, al iniciarla desde el icono de la aplicación.
+La *activación del inicio* es el inicio normal de una aplicación, como por ejemplo, al iniciarla desde el icono de la aplicación.
 
 Con cada método de activación, tienes la posibilidad de usar la línea de comandos o una aplicación de selector. Para todos los métodos de activación, si la aplicación se está ejecutando, la activación la llevará al primer plano (lo que la reactiva) y proporcionará argumentos de activación nuevos. Esto ofrece flexibilidad para usar los comandos de activación para proporcionar mensajes nuevos a la aplicación. Es importante tener en cuenta que el proyecto debe compilarse e implementarse para que el método de activación ejecute la aplicación recién actualizada. 
 
@@ -46,7 +45,7 @@ Para activar la aplicación con un protocolo, usa la línea de comandos con el i
   scheme://username:password@host:port/path.extension?query#fragment
   ```
 
-El objeto de URI tiene métodos para analizar una cadena URI en este formato. Para obtener más información, consulta [Uri class (MSDN)](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.uri.aspx). 
+El objeto de URI tiene métodos para analizar una cadena URI en este formato. Para obtener más información, consulta [Uri class (MSDN)](https://msdn.microsoft.com/library/windows/apps/windows.foundation.uri.aspx). 
 
 Ejemplos:
 
@@ -99,7 +98,7 @@ Uri(URI));
        }
 }
 ```
-La activación de protocolos con la aplicación de selector tiene las mismas limitaciones de argumentos que la activación de protocolos con la línea de comandos. Ambas admiten caracteres Unicode hasta un límite 2038 caracteres en el URI sin procesar. 
+La activación de protocolos con la aplicación de selector tiene las mismas limitaciones de argumentos que la activación de protocolos con la línea de comandos. Ambas admiten caracteres Unicode hasta un límite 2038 caracteres en el identificador URI sin procesar. 
 
 ## Activación de selector
 
@@ -114,11 +113,11 @@ La mejor forma de obtener el nombre de familia de paquete es completar estos pas
 
 3. Si el **nombre de familia de paquete** no se muestra, abre PowerShell y ejecuta `>get-appxpackage MyPackageName` para encontrar **PackageFamilyName**.
 
-El identificador de aplicación se puede encontrar en el archivo **Package.appxmanifest** (abierto en la vista XML), bajo el elemento `<Applications>`.
+El identificador de la aplicación se puede encontrar en el archivo **Package.appxmanifest** (abierto en la vista XML), bajo el elemento `<Applications>`.
 
 ### Línea de comandos
 
-Una herramienta para realizar una activación de inicio de una aplicación para UWP se instala con el SDK de Windows 10. Se puede ejecutar desde la línea de comandos y usa el AUMID de la aplicación para iniciarse como argumento.
+Con el SDK de Windows10 se instala una herramienta para realizar una activación de inicio de una aplicación para UWP. Se puede ejecutar desde la línea de comandos y usa el AUMID de la aplicación para iniciarse como argumento.
 
 ```
 C:\Program Files (x86)\Windows Kits\10\App Certification Kit\microsoft.windows.softwarelogo.appxlauncher.exe <AUMID>
@@ -134,7 +133,7 @@ Esta opción no admite argumentos de línea de comandos.
 
 ### Aplicación de selector
 
-Puedes crear una aplicación independiente que admita el uso de COM para el inicio. En el ejemplo siguiente se muestra el código de C++ para iniciarse con la activación de inicio en un programa selector. Con este código, puedes crear un objeto **ApplicationActivationManager** y llamar a **ActivateApplication** pasando el AUMID encontrado anteriormente y los argumentos correspondientes. Para obtener más información acerca de los otros parámetros, consulta el tema sobre el [método IApplicationActivationManager::ActivateApplication (MSDN)](https://msdn.microsoft.com/en-us/library/windows/desktop/hh706903(v=vs.85).aspx).
+Puedes crear una aplicación independiente que admita el uso de COM para el inicio. En el ejemplo siguiente se muestra el código de C++ para iniciarse con la activación de inicio en un programa selector. Con este código, puedes crear un objeto **ApplicationActivationManager** y llamar a **ActivateApplication** pasando el AUMID encontrado anteriormente y los argumentos correspondientes. Para obtener más información acerca de los otros parámetros, consulta el tema sobre el [método IApplicationActivationManager::ActivateApplication (MSDN)](https://msdn.microsoft.com/library/windows/desktop/hh706903(v=vs.85).aspx).
 
 ```
 #include <ShObjIdl.h>
@@ -208,8 +207,12 @@ Platform::String^ argval = launchArgs->Arguments;
 ## Resumen
 En resumen, puedes usar distintos métodos para iniciar la aplicación para UWP. Dependiendo de los requisitos y de los casos de uso, algunos métodos pueden resultar más adecuados que otros. 
 
+## Consulta también
+- [UWP en Xbox One](index.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Aug16_HO3-->
 
 

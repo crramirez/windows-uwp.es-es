@@ -4,8 +4,8 @@ Description: "El informe de uso del panel del Centro de desarrollo de Windows te
 title: Informe de uso
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 translationtype: Human Translation
-ms.sourcegitcommit: 6dac44032ac217969148ff73c594f99d8a733355
-ms.openlocfilehash: 0cb9d09504a024cabe66661a5c77e21752b7e2e6
+ms.sourcegitcommit: c413ff1d4fe709e92f7a306e671f9a4fe22a5999
+ms.openlocfilehash: 21be2064914189abe8ef68c858d33346b947550c
 
 ---
 
@@ -14,25 +14,20 @@ ms.openlocfilehash: 0cb9d09504a024cabe66661a5c77e21752b7e2e6
 
 El informe **Uso** del panel del Centro de desarrollo de Windows te permite ver cómo los clientes de Windows10 usan la aplicación y obtener información sobre los eventos personalizados que hayas definido. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
 
-> 
-            **Nota**  Anteriormente, el informe **Uso** solo proporcionaba datos si se activaba el SDK de Visual Studio Application Insights en la aplicación. Con el informe de **uso** actualizado, esto ya no es necesario.
+> **Nota**  Anteriormente, el informe de **uso** solo proporcionaba datos si el SDK de Visual Studio Application Insights estaba activado en la aplicación. Con el informe de **uso** actualizado, esto ya no es necesario.
 
 ## Aplicar filtros
 
 
 En la parte superior de la página, se puede expandir **Aplicar filtros** para filtrar todos los datos de esta página por intervalo de fechas o grupo de productos (versiones de SO relacionadas).
 
--   
-            **Fecha**: el filtro predeterminado es **Últimos 30 días**, pero puedes ampliarlo hasta **Últimos 3 meses**.
--   
-            **Versión del paquete**: El valor predeterminado es **Todas las versiones**. Si la aplicación incluye más de un paquete, puedes elegir uno concreto aquí.
--   
-            **Tipo de dispositivo**: el valor predeterminado es **Todos**, pero puede mostrar los datos de un determinado tipo de dispositivo.
+-   **Fecha**: el filtro predeterminado es **Últimos 30 días**, pero puedes ampliarlo hasta **Últimos 3 meses**.
+-   **Versión del paquete**: el valor predeterminado es **Todas**. Si la aplicación incluye más de un paquete, puedes elegir uno concreto aquí.
+-   **Tipo de dispositivo**: el valor predeterminado es **Todos**, pero también puedes mostrar los datos de un determinado tipo de dispositivo.
 
 La información de todos los gráficos que aparecen a continuación reflejará el período de tiempo seleccionado en **Aplicar filtros**. De manera predeterminada, se incluirán datos de todos los tipos de dispositivo compatibles y las versiones del paquete, a menos que hayas usado la sección **Aplicar filtros** para filtrar solo por una.
 
-> 
-            **Nota** En este informe solo se incluyen los datos de uso de los clientes de Windows10.
+> **Nota** En este informe solo se incluyen los datos de uso de los clientes de Windows 10.
 
 ## Sesiones de usuario totales
 
@@ -50,7 +45,7 @@ Cada usuario activo representa a un cliente que usó la aplicación ese día. Es
 
 El gráfico **Eventos personalizados** muestra el total de repeticiones de cualquier evento personalizado que has definido para la aplicación. Puede incluir varias repeticiones para el mismo cliente.
 
-Los eventos personalizados se implementan con el método [registro](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.log.aspx) del [SDK de Microsoft Store Engagement and Monetization](../monetize/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md).
+Los eventos personalizados se implementan mediante el método [StoreServicesCustomEventLogger.Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) de [Microsoft Store Services SDK](../monetize/microsoft-store-services-sdk.md).
 
 
 
@@ -58,10 +53,6 @@ Los eventos personalizados se implementan con el método [registro](https://msdn
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

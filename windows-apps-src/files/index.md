@@ -1,11 +1,11 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: Archivos, carpetas y bibliotecas
 description: "Obtén información sobre la lectura y escritura de la configuración de la aplicación, los selectores de archivos y carpetas y las ubicaciones de espacios aislados como, por ejemplo, la biblioteca de vídeos y música."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: ea52cafab084f202705282d63f4a37ec0d65bd03
+ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
+ms.openlocfilehash: 32c6e33f9506abc1876075f6ca11656241921005
 
 ---
  # Archivos, carpetas y bibliotecas
@@ -21,8 +21,6 @@ Usa las API de los espacios de nombres [Windows.Storage](https://msdn.microsoft.
 | [Obtener las propiedades de archivos](quickstart-getting-file-properties.md) | Obtén las propiedades de nivel superior, básicas y extendidas de un archivo representado mediante un objeto [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171). |
 | [Abrir archivos y carpetas con un selector](quickstart-using-file-and-folder-pickers.md) | Para obtener acceso a archivos y carpetas, permite al usuario interactuar con un selector. Puedes usar [FolderPicker](https://msdn.microsoft.com/library/windows/apps/br207881) para obtener acceso a una carpeta. |
 | [Guardar un archivo con un selector](quickstart-save-a-file-with-a-picker.md) | Usa [FileSavePicker](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir a los usuarios especificar el nombre y la ubicación donde desean que tu aplicación guarde un archivo. |
-| [Usar Enterprise Data Protection (EDP) para proteger archivos](protect-your-enterprise-data-with-edp.md) | En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr realizar algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con los archivos. |
-| [Usar Enterprise Data Protection (EDP) para proteger flujos y búferes](use-edp-to-protect-streams-and-buffers.md) | En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con los flujos y búferes. |
 | [Acceso a contenido de Grupo Hogar](quickstart-accessing-homegroup-content.md) | Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye imágenes, música y vídeos. |
 | [Determinar la disponibilidad de los archivos de Microsoft OneDrive](quickstart-determining-availability-of-microsoft-onedrive-files.md) | Determina si un archivo de Microsoft OneDrive está disponible mediante la propiedad [StorageFile.IsAvailable](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx). |
 | [Archivos y carpetas de las bibliotecas de música, imágenes y vídeos](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md) | Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados. |
@@ -42,10 +40,6 @@ Usa las API de los espacios de nombres [Windows.Storage](https://msdn.microsoft.
 
 
 
-
-
-
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

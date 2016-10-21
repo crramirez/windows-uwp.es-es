@@ -1,71 +1,75 @@
 ---
 author: mcleanbyron
 ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
-description: Use this method in the Windows Store submission API to get data for an existing add-on submission.
-title: Get an add-on submission using the Windows Store submission API
+description: "Usa este método en la API de envío de la Tienda Windows para obtener datos para un envío de complemento existente."
+title: "Obtener un envío de complemento con el uso de la API de envío de la Tienda Windows"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 699f26e8a73e1777f5966faf346945807d460315
+
 ---
 
-# Get an add-on submission using the Windows Store submission API
+# Obtener un envío de complemento con el uso de la API de envío de la Tienda Windows
 
 
 
 
-Use this method in the Windows Store submission API to get data for an existing add-on (also known as in-app product or IAP) submission. For more information about the process of process of creating an add-on submission by using the Windows Store submission API, see [Manage add-on submissions](manage-add-on-submissions.md).
+Usa este método en la API de envío de la Tienda Windows para obtener datos de un envío de complemento (también conocido como producto desde la aplicación o IAP) existente. Para obtener más información sobre el proceso de creación del envío de un complemento mediante la API de envío de la Tienda Windows, consulta [Administrar envíos de complemento](manage-add-on-submissions.md).
 
-## Prerequisites
+## Requisitos previos
 
-To use this method, you need to first do the following:
+Para usar este método, primero debes hacer lo siguiente:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
-* Create an add-on submission for an app in your Dev Center account. You can do this in the Dev Center dashboard, or you can do this by using the [Create an add-on submission](create-an-add-on-submission.md) method.
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de la Tienda Windows.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* Crea un envío de complemento para una aplicación de tu cuenta del Centro de desarrollo. Puedes hacerlo desde el panel del Centro de desarrollo o mediante el método para [Crear un envío de complemento](create-an-add-on-submission.md).
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Nota**&nbsp;&nbsp;Este método solo puede usarse en cuentas del Centro de desarrollo de Windows que estén autorizadas para usar la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
-## Request
+## Solicitud
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Method | Request URI                                                      |
+| Método | URI de la solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET   | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions/{submissionId} ``` |
 
 <span/>
- 
+ 
 
-### Request header
+### Encabezado de la solicitud
 
-| Header        | Type   | Description                                                                 |
+| Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Request parameters
+### Parámetros de solicitud
 
-| Name        | Type   | Description                                                                 |
+| Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | string | Required. The Store ID of the add-on that contains the submission you want to get. The Store ID is available on the Dev Center dashboard, and it is included in the response data for requests to [Create an add-on](create-an-add-on.md) or [get add-on details](get-all-add-ons.md).  |
-| submissionId | string | Required. The ID of the submission to get. This ID is available in the Dev Center dashboard, and it is included in the response data for requests to [Create an add-on submission](create-an-add-on-submission.md).  |
+| inAppProductId | cadena | Obligatorio. El Id. de la Tienda del complemento que contiene el envío que quieres obtener. El Id. de la Tienda está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta de las solicitudes para [crear complementos](create-an-add-on.md) u [obtener detalles de complementos](get-all-add-ons.md).  |
+| submissionId | cadena | Obligatorio. El identificador del envío que se va a obtener. Esta identificación está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta de las solicitudes de [Creación de un envío de complementos](create-an-add-on-submission.md).  |
 
 <span/>
 
-### Request body
+### Cuerpo de la solicitud
 
-Do not provide a request body for this method.
+No incluyas un cuerpo de la solicitud para este método.
 
-### Request example
+### Ejemplo de solicitud
 
-The following example demonstrates how to get an add-on submission.
+En el siguiente ejemplo se muestra cómo obtener un envío de complemento.
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP/submissions/1152921504621243680 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## Respuesta
 
-The following example demonstrates the JSON response body for a successful call to this method. The response body contains information about the specified submission. For more details about the values in the response body, see [add-on submission resource](manage-add-on-submissions.md#add-on-submission-object).
+En el siguiente ejemplo se muestra el cuerpo de respuesta JSON de una llamada correcta a este método. El cuerpo de la respuesta contiene información sobre el envío especificado. Para obtener más información acerca de los valores del cuerpo de la respuesta, consulta [Recurso de envío de complemento](manage-add-on-submissions.md#add-on-submission-object).
 
 ```json
 {
@@ -140,23 +144,29 @@ The following example demonstrates the JSON response body for a successful call 
 }
 ```
 
-## Error codes
+## Códigos de error
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Si la solicitud no se puede completar correctamente, la respuesta contendrá uno de los siguientes códigos de error HTTP.
 
-| Error code |  Description   |
+| Código de error |  Descripción   |
 |--------|------------------|
-| 404  | The submission could not be found. |
-| 409  | The submission does not belong to the specified add-on, or the add-on uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 404  | No se pudo encontrar el envío. |
+| 409  | El envío no pertenece al complemento especificado o el complemento usa una característica de panel del Centro de desarrollo que [la API de envío de la Tienda Windows no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 <span/>
 
 
-## Related topics
+## Temas relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Create an add-on submission](create-an-add-on-submission.md)
-* [Commit an add-on submission](commit-an-add-on-submission.md)
-* [Update an add-on submission](update-an-add-on-submission.md)
-* [Delete an add-on submission](delete-an-add-on-submission.md)
-* [Get the status of an add-on submission](get-status-for-an-add-on-submission.md)
+* [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
+* [Crear un envío de complemento](create-an-add-on-submission.md)
+* [Confirmar un envío de complemento](commit-an-add-on-submission.md)
+* [Actualizar un envío de complemento](update-an-add-on-submission.md)
+* [Eliminar un envío de complemento](delete-an-add-on-submission.md)
+* [Obtener el estado de un envío de complemento](get-status-for-an-add-on-submission.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

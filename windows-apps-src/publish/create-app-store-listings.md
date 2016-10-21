@@ -1,111 +1,121 @@
-﻿---
+---
 author: jnHs
-Description: The Store listings section of the app submission process is where you provide the text and images that customers will see in your app's Store listing.
-title: Create app Store listings
+Description: "La sección de descripciones de la Tienda del proceso de envío de la aplicación es donde incluyes el texto y las imágenes que los clientes verán en la descripción de la Tienda en tu aplicación."
+title: "Creación de descripciones de la Tienda de aplicaciones"
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
+translationtype: Human Translation
+ms.sourcegitcommit: d24294583d1ec0186cd63138979d40a06b0c7351
+ms.openlocfilehash: 9ef2a465cb8f9143775feab163ee1d66d135a6b3
+
 ---
 
-# Create app Store listings
+# Creación de descripciones de la Tienda de aplicaciones
 
 
-The **Store listings** section of the [app submission process](app-submissions.md) is where you provide the text and [images](app-screenshots-and-images.md) that customers will see in your app's Store listing.
+La sección de **Descripciones de la Tienda** del [proceso de envío de aplicación](app-submissions.md) es donde proporcionas el texto y las [imágenes](app-screenshots-and-images.md) que los clientes verán en la descripción de la Tienda en tu aplicación.
 
-Many of the fields in a **Store listing** are optional, but we suggest providing multiple images and as much info as possible to make your listing stand out. The minimum required for the **Store listings** step to be considered complete is a text description and at least one [screenshot](app-screenshots-and-images.md).
+Muchos de los campos de una **Descripción de la tienda** son opcionales, pero se recomienda proporcionar varias imágenes y tanta información como sea posible para que la lista destaque. El mínimo necesario para que el paso **Descripciones de la Tienda** se considere completado es una descripción de texto y al menos una [captura de pantalla](app-screenshots-and-images.md).
 
-By default, we'll use the same Store listing (per language) for all of your targeted operating systems. If you'd like to use a customized Store listing for a specific operating system, you can [create platform-specific Store listings](create-platform-specific-store-listings.md).
+De manera predeterminada, usaremos la misma descripción de la Tienda (por idioma) para todos los sistemas operativos de destino. Si quieres usar una descripción de la Tienda personalizada para un sistema operativo específico, puedes [crear descripciones de la Tienda específicas de la plataforma](create-platform-specific-store-listings.md).
 
-## Store listing languages
+## Idiomas de la descripción de la Tienda
 
-You must complete the **Store listing** page for at least one language. We recommend providing a Store listing in each language that your packages support, but you have flexibility to remove languages for which you don’t wish to provide a Store listing. You can also create Store listings in additional languages which aren’t supported by your packages.
+Debes completar la página **Descripción de la Tienda** para al menos un idioma. Te recomendamos que proporciones una descripción de la Tienda en cada idioma que admiten los paquetes, pero que dispongas de flexibilidad para eliminar idiomas para los que no quieres proporcionar una descripción de la Tienda. También puedes crear descripciones de la Tienda en otros idiomas que no son compatibles con los paquetes.
 
-> **Note**  If your submission includes packages already, we’ll show the [languages](supported-languages.md) supported in your packages on the submission overview page (unless you remove any of them).
+> **Nota**  Si tu envío ya incluye paquetes, te mostraremos los [idiomas](supported-languages.md) compatibles para tus paquetes en la página de información general de envíos (a menos que elimines alguno).
 
-To add or remove languages for your Store listings, click **Manage Store listing languages** from the submission overview page. If you‘ve already uploaded packages, you’ll see their languages listed in the **Languages supported by your packages** section. To remove one or more of these languages, click **Remove**. If you later decide to include a language that you previously removed from this section, you can click **Add**.
+Para agregar o eliminar idiomas para tus descripciones de la Tienda, haz clic en **Administrar idiomas de la descripción de la Tienda** desde la página de información general de envíos. Si ya has cargado paquetes, verás los idiomas enumerados en la sección **Idiomas admitidos por los paquetes**. Para quitar uno o más de estos idiomas, haz clic en **Quitar**. Si más adelante decides incluir un idioma que anteriormente eliminaste de esta sección, puedes hacer clic en **Agregar**.
 
-In the **Additional Store listing languages** section, you can click **Manage additional languages** to add or remove languages that are *not* included in your packages. Check the boxes for the languages that you’d like to add, then click **Update**. The languages you’ve selected will be displayed in the **Additional Store listing languages** section. To remove one or more of these languages, click **Remove** (or click **Manage additional languages** and uncheck the box for languages you’d like to remove).
+En la sección **Idiomas de descripción de la Tienda adicionales**, puedes hacer clic en **Administrar idiomas adicionales** para agregar o quitar idiomas que *no* están incluidos en los paquetes. Activa las casillas para los idiomas que deseas agregar y, después, haz clic en **Actualizar**. Los idiomas que has seleccionado se mostrarán en la sección **Idiomas adicionales de descripción de la Tienda**. Para quitar uno o más de estos idiomas, haz clic en **Quitar** (o haz clic en **Administrar idiomas adicionales** y desactiva la casilla para los idiomas que quieres quitar).
 
-When you have finished making your selections, click **Save** to return to the submission overview page.
+Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío.
 
-> **Note** When creating a Store listing in a language that isn't supported by your packages, you'll need to indicate which of your reserved app names should be displayed in that Store listing, since there isn't an associated package in that language from which to pull the name. The name you choose here only applies to the Store listing for this language and does not impact the name displayed when a customer installs the app.
+> **Nota** Al crear una descripción de la Tienda en un idioma que no sea compatible con los paquetes, debes indicar qué nombre de aplicación reservado debe mostrarse en esa descripción de la Tienda, ya que no hay ningún paquete asociado en ese idioma desde el que se pueda extraer el nombre. El nombre que elijas aquí solo se aplicará a la descripción de la Tienda para este idioma y no afectará al nombre que se muestra cuando un usuario instala la aplicación.
 
-To edit a Store listing, click the language name from the Submission overview. The sections of the **Store listing** page are described below.
+Para editar una descripción de la Tienda, haz clic en el nombre del idioma en la información general del envío. Las secciones de la página **Descripción de la Tienda** se describen a continuación.
 
-## Default Store listing fields
+## Campos de descripción de la Tienda predeterminados
 
-At the top of the **Store listing** page are the fields associated with your default Store listing for the selected language. These fields will be shown to all of your customers, unless you have packages targeting earlier OS versions (Windows 8.x or earlier; Windows Phone 8.x or earlier) and create platform-specific Store listings to include different screenshots or info to display to customers on specified OS versions. For more info, see [Create platform-specific Store listings](create-platform-specific-store-listings.md).
+En la parte superior de la página **Descripción de la Tienda** se encuentran los campos asociados a tu descripción de la Tienda predeterminada para el idioma seleccionado. Estos campos se mostrarán a todos los clientes, a menos que tengas paquetes destinados a versiones anteriores del sistema operativo (Windows 8.x o versiones anteriores; Windows Phone 8.x o versiones anteriores) y crees descripciones de la Tienda específicas de la plataforma para incluir diferentes capturas de pantalla o informaciones para mostrar a los clientes con las versiones específicas del sistema operativo. Para obtener más información, consulta [Creación de descripciones de la Tienda específicas de la plataforma](create-platform-specific-store-listings.md).
 
-### Description
+### Descripción
 
-The description field is where you can tell customers what your app does. This field is required, and will accept up to 10,000 characters of plain text.
+El campo de descripción es donde puedes indicar a los clientes qué hace la aplicación. Este campo es necesario y acepta hasta 10 000 caracteres de texto sin formato.
 
-For some tips on making your description stand out, see [Write a great app description](write-a-great-app-description.md).
+Para obtener consejos para que la descripción destaque, consulta [Escribir una excelente descripción de la aplicación](write-a-great-app-description.md).
 
-### Release notes
+### Notas de la versión
 
-If this is the first time you're submitting your app, you'll probably want to leave this field blank. For an update to an existing app, this is where you can let customer know what's changed in the latest release. This field has a 1500 character limit.
+Si es la primera vez que vas a enviar la aplicación, probablemente quieras dejar este campo en blanco. Respecto a una actualización de una aplicación existente, aquí es donde puedes informar a los clientes de lo que ha cambiado en la versión más reciente. Este campo tiene un límite de 1500 caracteres.
 
-### Screenshots
+### Capturas de pantalla
 
-In most cases, you'll see multiple fields to provide screenshots for different types of devices. You are not required to provide separate screenshots for each device type; only one screenshot is required for your submission (though you can provide up to nine per device type). In most cases we suggest providing screenshots on as many device types as your app supports, so that customers will see images that resemble how the app will look on their device.
+En la mayoría de los casos, verás varios campos para proporcionar capturas de pantalla para distintos tipos de dispositivos. No es necesario que proporciones capturas de pantalla independientes para cada tipo de dispositivo; solo es necesaria una captura de pantalla para el envío (aunque puedes proporcionar hasta nueve por tipo de dispositivo). En la mayoría de los casos, se recomienda proporcionar capturas de pantalla en todos los tipos de dispositivo que admita la aplicación, para que los clientes vean las imágenes que se asemejan al aspecto que tendrá la aplicación en su dispositivo.
 
-For more info, see [App screenshots and images](app-screenshots-and-images.md).
+Para obtener más información, consulta [capturas de pantalla e imágenes de la aplicación](app-screenshots-and-images.md).
 
-### App tile icon
+### Icono de la aplicación
 
-The app tile icon is used when displaying your app's Store listing to customers on Windows Phone 8.1 and earlier (and in some Store layouts for customers on Windows 10). This must be a .png file measuring 300 x 300 pixels.
+La ventana de la aplicación se usa al mostrar la descripción de la Tienda de la aplicación a los clientes en Windows Phone 8.1 y versiones anteriores (y en algunos diseños de la Tienda para clientes en Windows 10). Debe ser un archivo .png que mida de 300 x 300 píxeles.
 
-For more info, see [App tile icon](app-screenshots-and-images.md#app-tile-icon).
+Para más información, consulta [Icono de la ventana de aplicaciones](app-screenshots-and-images.md#app-tile-icon).
 
-### App features
+### Funciones de la aplicación
 
-These are short summaries of your app's key features. They are displayed to the customer as a bulleted list in your app's Store listing, along with the Description. Keep these brief, with just a few words (and no more than 200 characters) per feature. You may include up to 20 features.
+Se trata de resúmenes de las funciones clave de la aplicación. Se muestran al cliente en una lista con viñetas en su descripción de la Tienda de la aplicación, junto con su descripción. Hazlas breves, con unas cuantas palabras por función (y no más de 200 caracteres). Puedes incluir hasta 20 funciones.
 
-**Note**  These will appear bulleted in your Store listing, so don't add your own bullets.
+**Nota**  Aparecerán con viñetas en la descripción de la Tienda, así que no agregues tus propias viñetas.
 
-### Additional system requirements
+### Requisitos adicionales del sistema
 
-If needed, you can describe the hardware configurations that your app requires to work properly (beyond the info you provided in the **System requirements** section in [App properties](enter-app-properties.md#system-requirements). This is especially important if your app requires hardware that might not be available on every computer.
+Si es necesario, puedes describir las configuraciones de hardware que requiere tu aplicación para funcionar correctamente (más allá de la información que proporcionaste en la sección **Requisitos del sistema** en las [Propiedades de la aplicación](enter-app-properties.md#system-requirements). Esto es especialmente importante, si la aplicación requiere hardware que quizás no esté disponible en todos los equipos.
 
- You can enter up to 11 items for both **Minimum hardware** and **Recommended hardware**.  They are displayed to the customer as a bulleted list in your app's listing. Keep these brief, with just a few words (and no more than 200 characters) per item. The info you enter here will be shown to customers viewing your app's Store listing on Windows 10, version 1607 or later, along with the requirements you indicated on the product's properties page.
+ Puedes escribir hasta 11 elementos para **Hardware mínimo** y **Hardware recomendado**.  Se muestran al cliente en una lista con viñetas en la descripción de la aplicación. Hazlas breves, con unas cuantas palabras por elemento (y no más de 200 caracteres). La información que escribas aquí se mostrará a los clientes que consultan la descripción de la Tienda de aplicaciones en Windows 10, versión 1607 o posterior, junto con los requisitos que indicaste en la página de propiedades del producto.
 
-**Note**  These will appear bulleted in the listing, so don't add your own bullets.
+**Nota**  Aparecerán con viñetas en la información, así que no agregues tus propias viñetas.
 
-## Shared fields
+## Campos compartidos
 
-The items described below are all shared fields and will apply to all of your Store listings in a given language, regardless of operating system, even if you [create platform-specific Store listings](create-platform-specific-store-listings.md).
+Los elementos que se describen a continuación son todos campos compartidos y se aplicarán a todas las descripciones de la Tienda en un idioma determinado, independientemente del sistema operativo, incluso si [creas descripciones de la Tienda específicas de la plataforma](create-platform-specific-store-listings.md).
 
-### Keywords
+### Palabras clave
 
-Keywords are single words or short phrases that are not displayed to customers, but can help your app appear in search results related to the keyword. You can include up to 7 keywords with a maximum of 30 characters each.
+Las palabras clave son palabras simples o frases cortas que no se muestran al cliente, pero que ayudan a que tu aplicación aparezca en los resultados de búsqueda relacionados con la palabra clave. Puedes incluir hasta 7 palabras clave con un máximo de 30 caracteres cada una.
 
-If you want to add keywords, think about the words that customers might use when searching for apps like yours, especially if they're not part of your app's name. Be sure not to use any keywords that are not actually relevant to your app.
+Si quieres agregar palabras clave, piensa en las palabras que los clientes podrían usar al buscar aplicaciones como la tuya, especialmente si no forman parte del nombre de la aplicación. Asegúrate de no usar cualquier palabra clave que no sea relevante para tu aplicación.
 
-### Copyright and trademark info
+### Información de copyright y marca comercial
 
-If you'd like to provide additional copyright and/or trademark info, enter it here. This field has a 200 character limit.
+Si quieres proporcionar información adicional de copyright o marcas comerciales, escríbela aquí. Este campo tiene un límite de 200 caracteres.
 
-### Additional license terms
+### Términos de licencia adicionales
 
-Leave this field blank if you want your app to be licensed to customers under the terms of the **Standard Application License Terms** (which are linked to from the [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/hh694058)).
+Deja este campo en blanco si quieres que la aplicación se licencie a los clientes en virtud de los términos establecidos en los **Términos de licencia de aplicaciones estándar** (a los que se vincula desde el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058)).
 
-If your license terms are different from the **Standard Application License Terms**, enter them here.
+Si los términos de licencia son diferentes a los **Términos de licencia de aplicaciones estándar**, escríbelos aquí.
 
-If you enter a single URL into this field, it will be displayed to customers as a link that they can click to read your additional license terms. This is useful if your additional license terms are very long, or if you want to include clickable links or formatting in your additional license terms.
+Si escribes una sola dirección URL en este campo, se mostrará a los clientes como un vínculo en el que pueden hacer clic para leer los términos de licencia adicionales. Esto es útil si los términos de licencia adicionales son muy largos, o si quieres incluir vínculos en los que se puede hacer clic o dar formato a los términos de licencia adicionales.
 
-You can also up to 10,000 characters of text in this field. If you do that, customers will see these additional license terms displayed as plain text.
+También puedes incluir hasta 10.000 caracteres de texto en este campo. Si lo haces, los clientes verán estos términos de licencia adicionales mostrados como texto sin formato.
 
-### Website
+### Sitio web
 
-Enter the URL of the web page for your app. This URL must point to a page on your own website, not your app's web listing in the Store.
+Escribe la dirección URL de la página web de tu aplicación. La dirección URL debe llevar a una página de tu propio sitio web y no a la descripción web de la aplicación en la Tienda.
 
-### Support contact info
+### Información de contacto de soporte técnico
 
-Enter the URL of the web page where your customers can go for support on your app, or an email address that customers can contact for support.
+Escribe la dirección de correo electrónico o la dirección URL de la página web donde los clientes pueden entrar y buscar soporte técnico para la aplicación.
 
-**Important**  Microsoft doesn't provide your customers with support for your app.
+**Importante**  Microsoft no proporciona a tus clientes soporte técnico para la aplicación.
 
-### Privacy policy
+### Directiva de privacidad
 
-If you have a privacy policy for your app, enter its URL here. You are responsible for ensuring your app complies with privacy laws and regulations and for providing a privacy policy, if required.
+Si tienes una directiva de privacidad de la aplicación, escribe la dirección URL aquí. Eres responsable de garantizar que la aplicación cumpla con las leyes y normas de privacidad aplicables y de proporcionar una directiva de privacidad, si es necesario.
 
-**Important**  Microsoft doesn't provide a default privacy policy for your app. Likewise, your app is not covered by any Microsoft privacy policy. To determine if your app requires a privacy policy, review the [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/hh694058) and the [Windows Store Policies](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).
+**Importante**  Microsoft no proporciona una directiva de privacidad predeterminada para tu aplicación. De igual modo, tu aplicación no está cubierta por ninguna directiva de privacidad de Microsoft. Para determinar si la aplicación requiere una directiva de privacidad, revisa el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) y las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

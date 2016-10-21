@@ -3,15 +3,16 @@ author: mtoepke
 title: Referencia de OpenGL ES 2.0 a Direct3D 11
 description: "Usa estos temas de referencia para buscar muestras de código corto y asignación de API al migrar de OpenGL ES 2.0 a Direct3D 11."
 ms.assetid: fe18c8a9-b113-8f5d-9c31-c294dede8560
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ad6da83773bf5b791f4b2921b8ea55345aae999b
+ms.openlocfilehash: dff8bf0f8723055e955cd32042f14f58037494b5
 
 ---
 
 # Referencia de OpenGL ES 2.0 a Direct3D 11
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Usa estos temas de referencia para buscar muestras de código corto y asignación de API al migrar de OpenGL ES 2.0 a Direct3D 11.
 ## 
@@ -46,6 +47,6 @@ Usa estos temas de referencia para buscar muestras de código corto y asignació
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

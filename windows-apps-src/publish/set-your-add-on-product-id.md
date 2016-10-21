@@ -1,45 +1,55 @@
-﻿---
+---
 author: jnHs
-Description: When you create a new add-on in the Windows Dev Center dashboard, you need to specify a product type and assign it a product ID.
-title: Set your add-on product type and product ID
+Description: Si se crea un nuevo complemento en el panel del Centro de desarrollo de Windows, es necesario que especifiques un tipo de producto y asignarle a este un id. del producto.
+title: Establecer el tipo del producto de tu complemento y el id. del producto
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
+translationtype: Human Translation
+ms.sourcegitcommit: e59324aca65cf8baacb085da22a20d952fdb8c9a
+ms.openlocfilehash: 2a469506c8b440e1aa8555ac57b88f2026ae4d8e
+
 ---
 
-# Set your add-on product type and product ID
+# Establecer el tipo del producto de tu complemento y el id. del producto
 
-An add-on must be associated with an app that you've created in the dashboard already (even if you haven't submitted it yet). You can find the button to **Create a new add-on** on either your app's **Overview** page or its **Add-ons** page.
+Un complemento debe estar asociado a una aplicación que ya hayas creado en el panel (incluso si todavía no la has enviado). Puedes encontrar el botón para **Crear un complemento nuevo** en la página **Introducción** de la aplicación o en su página **Complemento**.
 
-Once you've clicked the button, you'll see the **Create a new add-on** page. Here, you'll need to specify a product type and assign it a product ID.
+Una vez que hagas clic en el botón, verás la página **Crear un nuevo complemento**. Aquí deberás especificar un tipo de producto y asignarle un id. del producto.
 
-## Product type
+## Tipo de producto
 
-First, you'll need to indicate which type of add-on you are offering. This selection refers to how the customer can use your add-on.
+En primer lugar, debes indicar qué tipo de complemento ofreces. Esta selección se refiere al modo en la que el cliente puede usar tu complemento.
 
-> **Note** You won't be able to change the product type after you save this page to create the add-on. If you did choose the wrong product type, you can always delete your in-progress add-on submission and start over by creating a new add-on.
+> **Nota** No podrás cambiar el tipo de producto después de guardar la página para crear el complemento. Si eliges el tipo de producto incorrecto, siempre puede eliminar el envío del complemento en curso y empezar la creación de un nuevo complemento desde el principio.
 
-If the product can be purchased, used (consumed), and then purchased again, you'll want to select one of the **consumable** proudct types. Consumable add-ons are often used for things like in-game currency (gold, coins, etc.) which can be purchased in set amounts and then used up by the customer. For more info on including consumable add-ons in your app, see [Enable consumable add-on purchases](../monetize/enable-consumable-add-on-purchases.md).
+Si el producto se puede comprar, usar (consumir) y después se puede volver a comprar, tendrás que seleccionar uno de los tipos de producto **consumibles**. Los complementos consumibles se suelen usar para cosas como dinero de juego (oro, monedas, etc.) que se pueden comprar en cantidades establecidas que luego puede usar el cliente. Para obtener más información sobre cómo incluir complementos consumibles en tu aplicación, consulta [Habilitar compras de complementos consumibles](../monetize/enable-consumable-add-on-purchases.md).
 
-There are two types of consumable add-ons that you can select:
+Hay dos tipos de complementos consumibles que puedes seleccionar:
 
-- **Developer-managed consumable**: Supported on all OS versions. Balance and fulfillment must be managed within your app. 
-- **Store-managed consumable:** Balance will be tracked by Microsoft across all of the customer’s devices running Windows 10, version 1607 or later; not supported on any earlier OS versions. To use this option, the parent product must be compiled using Windows 10 SDK version 14393 or later. Also note that you cannot submit a Store-managed consumable add-on to the Store until the parent product has been published (though you can create the submission in your dashboard and begin working on it at any time). You'll need to enter the quantity for your Store-managed consumable add-on in the **Properties** page.
+- **Consumible administrado por el desarrollador**: compatible con todas las versiones de SO. El saldo y el suministro deben administrarse dentro de la aplicación. 
+- **Consumible administrado por la Tienda:** Microsoft realizará un seguimiento del saldo de todos los dispositivos de clientes que ejecuten la versión 1607 de Windows 10 o posterior. No es compatible con ninguna versión de SO anterior. Para usar esta opción, el producto principal se debe compilar con la versión 14393 del SDK de Windows 10 o posterior. Ten en cuenta que no podrás enviar un complemento consumible administrado por la Tienda a la Tienda hasta que se publique el producto principal (aunque puedes crear el envío en tu panel y empezar a trabajar en cualquier momento). Tendrás que escribir la cantidad del complemento consumible administrado por la Tienda en la página **Propiedades**.
 
-You should select **Durable** if your product can be purchased only once. Durable add-ons are often used to unlock additional functionality in an app. Durable add-ons are not consumed, but you can set the **Product lifetime** so that they expire after a set duration (with options from 1-365 days). The default **Product lifetime** for a durable add-on is **Forever**, which means the add-on never expires. You can change this to a different duration in the [Add-on properties](enter-add-on-properties.md) step of the add-on submission process.
+Debes seleccionar **Duradero** si se puede comprar el producto solo una vez. Los complementos duraderos a menudo se usan para desbloquear funcionalidad adicional en una aplicación. Los complementos duraderos no se consumen pero puedes establecer la **duración del producto** para que caduque después de un período establecido (con opciones de 1 a 365 días). La **duración del producto** predeterminada para un complemento duradero es **para siempre**, lo que significa que el complemento no caduca nunca. Esto se puede cambiar a una duración distinta en el paso [Propiedades del complemento](enter-add-on-properties.md) del proceso de envío del complemento.
 
-## Product ID
+## Id. del producto
 
-Enter a unique product ID for your add-on. This is the same identifier that you will need to reference in [your app's code to call the add-on](https://msdn.microsoft.com/library/windows/apps/mt219684).
+Escribe un id. del producto único para el complemento. Este es el mismo identificador al que debes hacer referencia en [el código de la aplicación para llamar al complemento](https://msdn.microsoft.com/library/windows/apps/mt219684).
 
-Here are a few things to keep in mind when choosing a product ID:
+A continuación, se detallan algunos aspectos que se deben tener en cuenta al elegir un id. del producto:
 
--   Customers won't see this product ID. (Later, you can enter a [title and description](create-add-on-descriptions.md) to be displayed to customers.)
--   You can’t change or delete an add-on's product ID after it's been published.
--   A product ID can't be more than 100 characters in length.
--   A product ID cannot include any of the following characters: **&lt; &gt; \* % & : \\ ? + ,**
--   To offer your add-on on all devices, you must only use alphanumeric characters, periods, and/or underscores. If you use any other types of characters, the add-on will not be available for purchase to customers running Windows Phone 8.1 or earlier.
--   A product ID doesn't have to be unique within the Windows Store, but it must be unique to your developer account.
- 
+-   Los clientes no verán este id. de producto. (Más adelante, puedes escribir un [título y descripción](create-add-on-descriptions.md) que se muestre a los clientes.)
+-   No se puede cambiar ni eliminar el id. del producto del complemento una vez que se haya publicado.
+-   Un id. del producto no puede tener más de 100 caracteres de longitud.
+-   Un id. del producto no puede incluir ninguno de los caracteres siguientes: **&lt; &gt; \* % & : \\ ? + ,**
+-   Para ofrecer el complemento en todos los dispositivos, debes usar solo caracteres alfanuméricos, puntos o guiones bajos. Si usas otros tipos de caracteres, el complemento no estará disponible para su compra para clientes que ejecutan Windows Phone 8.1 o versiones anteriores.
+-   Un id. de producto no tiene por qué ser único en la Tienda Windows, pero debe ser exclusivo para tu cuenta de desarrollador.
+ 
 
 
+
+
+
+
+
+<!--HONumber=Aug16_HO5-->
 
 

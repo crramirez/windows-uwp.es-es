@@ -3,8 +3,9 @@ author: DBirtolo
 ms.assetid: 15BAB25C-DA8C-4F13-9B8F-EA9E4270BCE9
 title: Usar el sensor de luz
 description: "Aprende a usar el sensor de luz ambiental para detectar cambios de iluminaci√≥n."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 289d50ff4f45147c46bd66c526cf109d8fdf6d32
+ms.openlocfilehash: fe1b9a508e3b540f202e187dbe1696423c7cd373
 
 ---
 # Usar el sensor de luz
@@ -171,6 +172,6 @@ Estos nuevos valores se escriben en un bloque de texto que se encuentra en el c√
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

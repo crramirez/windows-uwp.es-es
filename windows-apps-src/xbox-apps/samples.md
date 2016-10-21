@@ -2,15 +2,17 @@
 author: Mtoepke
 title: UWP en muestras de Xbox One
 description: "Ejemplos y bibliotecas para ayudarte a crear fantásticas experiencias de Xbox One y televisión."
-area: Xbox
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6f38f5aabb6a409fab894bf7127ad4011162f7c6
+translationtype: Human Translation
+ms.sourcegitcommit: cee28021caddaf017b32e9bbce3fa31f3f77f4f7
+ms.openlocfilehash: 21aeb9ed928d0a0e9676245e86617cd24d5e3257
 
 ---
 
 # UWP en muestras de Xbox One
 
-TVHelpers es un conjunto de muestras y bibliotecas de JavaScript y XAML/C# para ayudarte a crear fantásticas experiencias de Xbox One y televisión en JavaScript y C#. TVJS es una biblioteca que te ayuda a compilar aplicaciones para UWP de alta gama para Xbox One. TVJS incluye compatibilidad para la navegación de controlador automática, reproducción de elementos multimedia enriquecidos, búsqueda y más. Puedes usar TVJS con tu aplicación web hospedada tan fácilmente como con una aplicación para UWP web empaquetada con acceso total a API de Windows Runtime.
+TVHelpers es un conjunto de muestras y bibliotecas de JavaScript y XAML/C# para ayudarte a crear fantásticas experiencias de Xbox One y televisión en JavaScript y C#. TVJS es una biblioteca que te ayuda a compilar aplicaciones para la plataforma universal de Windows (UWP) de alta gama para Xbox One. 
+
+TVJS incluye compatibilidad para la navegación de controlador automática, reproducción de elementos multimedia enriquecidos, búsqueda y más. Puedes usar TVJS con tu aplicación web hospedada tan fácilmente como con una aplicación para UWP web empaquetada con acceso total a API de Windows Runtime.
   
 Para obtener más información, consulta el proyecto [TVHelpers](https://github.com/Microsoft/TVHelpers) la [wiki](https://github.com/Microsoft/TVHelpers/wiki) del proyecto.
 
@@ -20,6 +22,6 @@ Para obtener más información, consulta el proyecto [TVHelpers](https://github.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

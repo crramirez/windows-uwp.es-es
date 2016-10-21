@@ -3,8 +3,9 @@ author: mtoepke
 title: Referencia de GLSL a HLSL
 description: "El código de lenguaje de sombreador de OpenGL (GLSL) se migra a código de lenguaje de sombreado de alto nivel de Microsoft (HLSL) cuando se migra la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D11 para crear un juego para la Plataforma universal de Windows (UWP)."
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
+translationtype: Human Translation
 ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 02a3ba1768b6fa7b09b6c9f637a72d88c0cef604
+ms.openlocfilehash: 1be2c49dc88dcaecfa1d349f9dda7a9cc0619b92
 
 ---
 
@@ -68,8 +69,7 @@ GLSL y HLSL generalmente difieren de estas maneras:
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left">
-            Modificadores de almacenamiento de [Variable](#variables)</td>
+<td align="left">Modificadores de almacenamiento de [variable](#variables)</td>
 <td align="left">Búfer de constantes y transferencias de datos a través de declaraciones de diseño de entrada</td>
 </tr>
 <tr class="even">
@@ -81,13 +81,11 @@ GLSL y HLSL generalmente difieren de estas maneras:
 </tr>
 <tr class="odd">
 <td align="left">texture2D [Function]</td>
-<td align="left">
-            [texture.Sample](https://msdn.microsoft.com/library/windows/desktop/bb509695) [datatype.Function]</td>
+<td align="left">[texture.Sample](https://msdn.microsoft.com/library/windows/desktop/bb509695) [datatype.Function]</td>
 </tr>
 <tr class="even">
 <td align="left">sampler2D [datatype]</td>
-<td align="left">
-            [Texture2D](https://msdn.microsoft.com/library/windows/desktop/ff471525) [datatype]</td>
+<td align="left">[Texture2D](https://msdn.microsoft.com/library/windows/desktop/ff471525) [datatype]</td>
 </tr>
 <tr class="odd">
 <td align="left">Matrices principales de fila (predeterminado)</td>
@@ -108,8 +106,7 @@ GLSL y HLSL generalmente difieren de estas maneras:
 
  
 
-> 
-            **Nota:**  HLSL tiene las texturas y las muestras como dos objetos separados. En GLSL, como en Direct3D 9, el enlace de textura es parte del estado de la muestra.
+> **Nota:** HLSL tiene las texturas y las muestras como dos objetos separados. En GLSL, como en Direct3D 9, el enlace de textura es parte del estado de la muestra.
 
  
 
@@ -574,6 +571,6 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

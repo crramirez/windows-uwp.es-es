@@ -3,22 +3,22 @@ author: mtoepke
 title: Crear sombreadores y dibujar primitivos
 description: "Aquí te mostramos cómo usar archivos de origen HLSL para compilar y crear sombreadores que luego podrás usar para dibujar primitivos en la pantalla."
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 15b5f83b45b928baaa484c10dc6e7bfe9c27a924
+ms.openlocfilehash: 36ce1c3c0df0dd9dd4f5cf3d31282d5b15050f5c
 
 ---
 
 # Crear sombreadores y dibujar primitivos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aquí te mostramos cómo usar archivos de origen HLSL para compilar y crear sombreadores que luego podrás usar para dibujar primitivos en la pantalla.
 
 Creamos y dibujamos un triángulo amarillo con sombreadores de vértices y píxeles. Después de crear el dispositivo Direct3D, la cadena de intercambio y la vista del destino de representación, leemos datos de los archivos de objetos binarios del sombreador.
 
-
-            **Objetivo:** crear sombreadores y dibujar primitivos.
+**Objetivo:** crear sombreadores y dibujar primitivos.
 
 ## Requisitos previos
 
@@ -27,8 +27,7 @@ Suponemos que estás familiarizado con C++. También necesitas tener experiencia
 
 Suponemos además que has consultado [Inicio rápido: configurar recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md).
 
-
-            **Tiempo para completarlo:** 20 minutos.
+**Tiempo para completarlo:** 20minutos.
 
 ## Instrucciones
 
@@ -297,6 +296,6 @@ A continuación, crearemos un cubo 3D en órbita y le aplicaremos efectos de ilu
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

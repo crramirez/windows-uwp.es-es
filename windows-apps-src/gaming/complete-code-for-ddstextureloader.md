@@ -3,8 +3,9 @@ author: mtoepke
 title: "Código completo para DDSTextureLoader"
 description: "Código completo de una clase y método para cargar una textura DDS de la memoria."
 ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
+translationtype: Human Translation
 ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
-ms.openlocfilehash: 9a842c773ce16e1093a158426b89caf239858f05
+ms.openlocfilehash: edcddb162d58b5f05248c7cd94b6079207e4a318
 
 ---
 
@@ -29,17 +30,13 @@ Este ejemplo no se puede descargar.
 
 ## Tecnologías
 
-
-            **Lenguajes de programación**: C++    
-
-            **Modelos de programación**: Windows Runtime
+**Lenguajes de programación**: C++    
+**Modelos de programación**: Windows Runtime
 
 ## Requisitos
 
-
-            **Cliente mínimo compatible**: Windows 10                               
-
-            **Servidor mínimo compatible**: Windows Server 2016 Technical Preview
+**Cliente mínimo compatible**: Windows 10                               
+**Servidor mínimo compatible**: Windows Server 2016 Technical Preview
 
 
 
@@ -1229,6 +1226,6 @@ void CreateDDSTextureFromMemory(
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

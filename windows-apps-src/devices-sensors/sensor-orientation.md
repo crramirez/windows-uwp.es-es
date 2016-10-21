@@ -5,7 +5,7 @@ title: "Orientación del sensor"
 description: "Los datos de sensor procedentes de las clases Accelerometer, Gyrometer, Compass, Inclinometer y OrientationSensor se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante la orientación horizontal del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 0f1123d3be66973d5b56a4789b1ff6e171f94900
+ms.openlocfilehash: f0f9c7184c81edf8136849bf8a7bd9d04c340f62
 
 ---
 # Orientación del sensor
@@ -171,6 +171,6 @@ Los datos de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

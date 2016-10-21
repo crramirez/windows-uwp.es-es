@@ -3,8 +3,9 @@ author: msatranjr
 title: Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
 description: "La compatibilidad de .NET Framework con los componentes de Windows Runtime facilita la tarea de declarar componentes de eventos al ocultar las diferencias entre el patrón de eventos de la plataforma universal de Windows (UWP) y el patrón de eventos de .NET Framework."
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
+translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 1308989c8d1c6959560458dd4d87119b4bfa74b0
+ms.openlocfilehash: c1beff6cbfefdfd3c11c9b16e18519c02c201930
 
 ---
 
@@ -27,8 +28,7 @@ Por suerte, los compiladores de Visual Basic y C# simplifican este proceso: cuan
 
 El siguiente código para el evento NumberChanged muestra el patrón básico para eventos de la UWP. En este ejemplo, el constructor para el objeto "event argument", NumberChangedEventArgs, usa un solo parámetro de número entero que representa el valor numérico modificado.
 
-> 
-            **Nota**  Este es el mismo patrón que usan los compiladores para los eventos habituales que declaras en un componente de Windows Runtime.
+> **Nota**  Este es el mismo patrón que usan los compiladores para los eventos habituales que declaras en un componente de Windows Runtime.
 
  
 > [!div class="tabbedCodeSnippets"]
@@ -94,42 +94,39 @@ El siguiente código para el evento NumberChanged muestra el patrón básico par
 > End Event
 > ```
 
-[!div class="tabbedCodeSnippets"] El método ("Shared" en Visual Basic) GetOrCreateEventRegistrationTokenTable estático crea la instancia del evento del objeto EventRegistrationTokenTable&lt;T&gt; de forma diferida. Pasa el campo de nivel de clase que contendrá la instancia de la tabla de tokens a este método. Si el campo está vacío, el método crea la tabla, almacena una referencia en la tabla del campo y devuelve una referencia a la tabla.
+El método ("Shared" en Visual Basic) GetOrCreateEventRegistrationTokenTable estático crea la instancia del evento del objeto EventRegistrationTokenTable&lt;T&gt; de forma diferida. Pasa el campo de nivel de clase que contendrá la instancia de la tabla de tokens a este método. Si el campo está vacío, el método crea la tabla, almacena una referencia en la tabla del campo y devuelve una referencia a la tabla. Si el campo ya contiene una referencia a la tabla de tokens, el método devuelve solo esa referencia.
 
-> Si el campo ya contiene una referencia a la tabla de tokens, el método devuelve solo esa referencia. 
-            **Importante**  Para garantizar la seguridad de los subprocesos, el campo que contiene la instancia del evento de EventRegistrationTokenTable&lt;T&gt; debe ser un campo de nivel de clase. Si se trata de un campo de nivel de clase, el método GetOrCreateEventRegistrationTokenTable garantiza que cuando varios subprocesos intentan crear la tabla de tokens, todos los subprocesos obtienen la misma instancia de la tabla.
-
-En el caso de un evento determinado, todas las llamadas al método GetOrCreateEventRegistrationTokenTable deben utilizar el mismo campo de nivel de clase.
+> **Importante**  Para garantizar la seguridad de los subprocesos, el campo que contiene la instancia del evento de EventRegistrationTokenTable&lt;T&gt; debe ser un campo de nivel de clase. Si se trata de un campo de nivel de clase, el método GetOrCreateEventRegistrationTokenTable garantiza que cuando varios subprocesos intentan crear la tabla de tokens, todos los subprocesos obtienen la misma instancia de la tabla. En el caso de un evento determinado, todas las llamadas al método GetOrCreateEventRegistrationTokenTable deben utilizar el mismo campo de nivel de clase.
 
 Llamar al método GetOrCreateEventRegistrationTokenTable en el descriptor de acceso "remove" y en el método [RaiseEvent](https://msdn.microsoft.com/library/fwd3bwed.aspx) (método OnRaiseEvent en C#) garantiza que no se produce ninguna excepción si estos métodos se llaman antes de que se hayan agregado los delegados del controlador de eventos.
 
--   Los otros miembros de la clase EventRegistrationTokenTable&lt;T&gt; que se utilizan en el patrón de eventos de la UWP incluyen lo siguiente:
+Los otros miembros de la clase EventRegistrationTokenTable&lt;T&gt; que se utilizan en el patrón de eventos de la UWP incluyen lo siguiente:
+
 -   El método [AddEventHandler](https://msdn.microsoft.com/library/hh138458.aspx) genera un token para el delegado del controlador de eventos, almacena el delegado en la tabla, lo agrega a la lista de invocación y devuelve el token.
+-   La sobrecarga del método [RemoveEventHandler(EventRegistrationToken)](https://msdn.microsoft.com/library/hh138425.aspx) elimina el delegado de la tabla y de la lista de invocación.
 
-    >La sobrecarga del método [RemoveEventHandler(EventRegistrationToken)](https://msdn.microsoft.com/library/hh138425.aspx) elimina el delegado de la tabla y de la lista de invocación.
+    >**Nota**  Los métodos AddEventHandler y RemoveEventHandler(EventRegistrationToken) bloquean la tabla para ayudar a garantizar la seguridad de los subprocesos.
 
--   
-            **Nota**  Los métodos AddEventHandler y RemoveEventHandler(EventRegistrationToken) bloquean la tabla para ayudar a garantizar la seguridad de los subprocesos. La propiedad [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) devuelve un delegado que incluye todos los controladores de eventos que están registrados actualmente para controlar el evento.
+-   La propiedad [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) devuelve un delegado que incluye todos los controladores de eventos que están registrados actualmente para controlar el evento. Usa este delegado para generar el evento o usa los métodos de la clase delegada para invocar los controladores de forma individual.
 
-    >Usa este delegado para generar el evento o usa los métodos de la clase delegada para invocar los controladores de forma individual. 
-            **Nota**  Te recomendamos que sigas el patrón del ejemplo proporcionado anteriormente en este artículo y que copies el delegado en una variable temporal antes de invocarlo. Esto evita una condición de carrera en la que un subproceso elimina el último controlador, lo que reduce el delegado a nulo justo antes de que otro subproceso intente invocar el delegado.
+    >**Nota**  Te recomendamos que sigas el patrón del ejemplo proporcionado anteriormente en este artículo y que copies el delegado en una variable temporal antes de invocarlo. Esto evita una condición de carrera en la que un subproceso elimina el último controlador, lo que reduce el delegado a nulo justo antes de que otro subproceso intente invocar el delegado. Los delegados son inmutables, por lo que la copia sigue siendo válida.
 
-Los delegados son inmutables, por lo que la copia sigue siendo válida. Coloca tu propio código en los descriptores de acceso según corresponda.
+Coloca tu propio código en los descriptores de acceso según corresponda. Si la seguridad de los subprocesos es un problema, debes proporcionar tu propio bloqueo para que el código.
 
-Si la seguridad de los subprocesos es un problema, debes proporcionar tu propio bloqueo para que el código. Usuarios de C#: cuando escribes descriptores de acceso de eventos personalizados en el patrón de eventos de la UWP, el compilador no proporciona los accesos directos sintácticos habituales.
+Usuarios de C#: cuando escribes descriptores de acceso de eventos personalizados en el patrón de eventos de la UWP, el compilador no proporciona los accesos directos sintácticos habituales. Genera errores si utilizas el nombre del evento en tu código.
 
-Genera errores si utilizas el nombre del evento en tu código. Usuarios de Visual Basic: en .NET Framework, un evento es simplemente un delegado de multidifusión que representa todos los controladores de eventos registrados. Generar el evento simplemente implica invocar el delegado. La sintaxis de Visual Basic, por lo general, oculta las interacciones con el delegado, y el compilador copia el delegado antes de invocarlo, tal como se describe en la nota sobre seguridad para subprocesos. Cuando creas un evento personalizado en un componente de Windows Runtime, tienes que tratar directamente con el delegado.
+Usuarios de Visual Basic: en .NET Framework, un evento es simplemente un delegado de multidifusión que representa todos los controladores de eventos registrados. Generar el evento simplemente implica invocar el delegado. La sintaxis de Visual Basic, por lo general, oculta las interacciones con el delegado, y el compilador copia el delegado antes de invocarlo, tal como se describe en la nota sobre seguridad para subprocesos. Cuando creas un evento personalizado en un componente de Windows Runtime, tienes que tratar directamente con el delegado. Esto también significa que puedes, por ejemplo, usar el método [MulticastDelegate.GetInvocationList](https://msdn.microsoft.com/library/system.multicastdelegate.getinvocationlist.aspx) para obtener una matriz que contenga un delegado independiente para cada controlador de eventos, si quieres invocar los controladores por separado.
 
-## Esto también significa que puedes, por ejemplo, usar el método [MulticastDelegate.GetInvocationList](https://msdn.microsoft.com/library/system.multicastdelegate.getinvocationlist.aspx) para obtener una matriz que contenga un delegado independiente para cada controlador de eventos, si quieres invocar los controladores por separado.
+## Temas relacionados
 
-* [Temas relacionados](https://msdn.microsoft.com/library/ms172877.aspx)
-* [Eventos (Visual Basic)](https://msdn.microsoft.com/library/awbftdfh.aspx)
-* [Eventos (Guía de programación de C#)](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
-* [Introducción a .NET para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
-* [.NET para aplicaciones para UWP](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
-
+* [Eventos (Visual Basic)](https://msdn.microsoft.com/library/ms172877.aspx)
+* [Eventos (Guía de programación de C#)](https://msdn.microsoft.com/library/awbftdfh.aspx)
+* [Introducción a .NET para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
+* [Tutorial: Creación de un componente simple de Windows Runtime y llamada al mismo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

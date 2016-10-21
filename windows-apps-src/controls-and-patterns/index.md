@@ -1,17 +1,15 @@
 ---
 description: "Obtén instrucciones de diseño y de codificación para agregar controles y patrones a aplicaciones para UWP. Descubre más de 45 controles eficaces para su uso con la aplicación."
-title: Controles y patrones para la UWP - desarrollo de aplicaciones de Windows
+title: 'Controles y patrones para UWP: desarrollo de aplicaciones de Windows'
 author: mijacobs
-keywords: uwp controls, user interface, app controls
+keywords: "controles de UWP, interfaz de usuario, controles de la aplicación"
 translationtype: Human Translation
-ms.sourcegitcommit: 7c45a464be250e210df48d3fdef35f00d77e16d5
-ms.openlocfilehash: 23fdd3513d11a0fa0171e50fe71d49c8e3db7376
+ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
+ms.openlocfilehash: ef383e46f2c610b57eec1c7767d5100e42075f6c
 
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-
 # Controles y patrones para aplicaciones para UWP
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 En el desarrollo de aplicaciones para UWP, un <i>control</i> es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Los controles son los elementos esenciales de la interfaz de usuario. Ponemos a tu disposición más de 45 controles, que van desde botones simples hasta controles de datos de enorme eficacia, como la vista de cuadrícula. Un <i>patrón</i> es una receta para combinar varios controles con el fin de hacer algo nuevo.
 
@@ -67,7 +65,7 @@ Obtener información detallada sobre los patrones y controles específicos.
 </li>
 
 
-<li>[Cuadros de diálogo, elementos emergentes y menús](dialogs-popups-menus.md)</li>
+<li>[Cuadros de diálogo y controles flotantes](dialogs.md)</li>
 
 <li>[Inversión de la vista](flipview.md)</li>
 
@@ -83,17 +81,19 @@ Obtener información detallada sobre los patrones y controles específicos.
 
 <li>[Panel de maestro y detalles](master-details.md)</li>
 
-<li>[Reproducción de multimedia](media-playback.md)
+<li>[Reproducción de contenido multimedia](media-playback.md)
 <ul>
 <li>[Controles de transporte personalizados](custom-transport-controls.md)</li>
 </ul>
 </li>
 
+<li>[Menús y menús contextuales](menus.md)</li>
+
 <li>[Panel de navegación](nav-pane.md)</li>
 
 <li>[Controles de progreso](progress-controls.md)</li>
 
-<li>[Botón de radio](radio-button.md)</li>
+<li>[Botón de selección](radio-button.md)</li>
 
 <li>[Controles de desplazamiento y movimiento panorámico](scroll-controls.md)</li>
 
@@ -143,6 +143,8 @@ Obtener información detallada sobre los patrones y controles específicos.
 
 <li>[Notificaciones del sistema interactivas y adaptables](tiles-and-notifications-adaptive-interactive-toasts.md)</li>
 
+<li>[Notificaciones](tiles-and-notifications-badges.md)</li>
+
 <li>[Visualizador de notificaciones](tiles-and-notifications-notifications-visualizer.md)</li>
 
 <li>[Métodos de entrega de notificaciones](tiles-and-notifications-choosing-a-notification-delivery-method.md)</li>
@@ -167,6 +169,6 @@ Obtener información detallada sobre los patrones y controles específicos.
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

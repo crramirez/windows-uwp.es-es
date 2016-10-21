@@ -1,17 +1,18 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: Guardar un archivo con un selector
 description: "Usa FileSavePicker para permitir a los usuarios especificar el nombre y la ubicación donde desean que tu aplicación guarde un archivo."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 68c7fcedbea40541632aa0a7ae65aa77db206280
+translationtype: Human Translation
+ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
+ms.openlocfilehash: 8e65131a913f5ea69438ff986151da11d3126314
 
 ---
 
 # Guardar un archivo con un selector
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -21,8 +22,7 @@ ms.openlocfilehash: 68c7fcedbea40541632aa0a7ae65aa77db206280
 
 Usa [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para permitir a los usuarios especificar el nombre y la ubicación donde desean que tu aplicación guarde un archivo.
 
-> 
-            **Nota** Consulta también [File picker sample (Muestra del selector de archivos)](http://go.microsoft.com/fwlink/p/?linkid=619994).
+> **Nota**  Consulta también la [muestra de selector de archivos](http://go.microsoft.com/fwlink/p/?linkid=619994).
 
  
 
@@ -46,7 +46,7 @@ Usa [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br20787
 
 ```cs
 var savePicker = new Windows.Storage.Pickers.FileSavePicker();
-savePicker.SuggestedStartLocation = 
+savePicker.SuggestedStartLocation =
     Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
 // Dropdown of file types the user can save the file as
 savePicker.FileTypeChoices.Add("Plain Text", new List<string>() { ".txt" });
@@ -58,19 +58,14 @@ Establece las propiedades en el objeto del selector de archivos que sean relevan
 
 Este ejemplo establece tres propiedades: [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880), [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) y [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878).
 
-> 
-            **Nota**
-            Los objetos [
-              **FileSavePicker**
-            ](https://msdn.microsoft.com/library/windows/apps/br207871) muestran el selector de archivos mediante [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891).
+> **Nota**  Los objetos de la clase [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) muestran el selector de archivos mediante la enumeración [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891).
 
      
 - Dado que nuestro usuario está guardando un documento o archivo de texto, la muestra establece [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880) en la carpeta local de la aplicación mediante [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621). Establece [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) en una ubicación adecuada para el tipo de archivo que se está guardando, por ejemplo, música, imágenes, vídeos o documentos. Desde la ubicación de inicio, el usuario puede dirigirse a otras ubicaciones.
- 
+
 - Como queremos asegurarnos de que nuestra aplicación puede abrir el archivo después de que este se haya guardado, usaremos [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) para especificar los tipos de archivo que admite la muestra (archivos de texto y documentos de MicrosoftWord). Procura que todos los tipos de archivo que indiques sean compatibles con tu aplicación. Los usuarios podrán guardar sus archivos como cualquier otro tipo de archivo que especifiques. También pueden cambiar el tipo de archivo seleccionando otro de los tipos de archivo especificados. La primera opción de tipo de archivo de la lista se seleccionará de manera predeterminada: para controlar esto, establece la propiedad [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873).
 
-> 
-            **Nota** El selector de archivos usa también el tipo de archivo seleccionado actualmente para filtrar los archivos que se van a mostrar, de modo que el usuario solo podrá ver los tipos de archivo que coincidan con los tipos de archivo seleccionados.
+> **Nota**  El selector de archivos usa también el tipo de archivo seleccionado actualmente para filtrar los archivos que se van a mostrar, de modo que solo muestren al usuario los tipos de archivo que coincidan con los tipos de archivo seleccionados.
 
 - Para ahorrar trabajo al usuario, el ejemplo establece un [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878). Haz que el nombre de archivo sugerido sea relevante para el archivo que se va a guardar. Por ejemplo, como en Word, puedes sugerir el nombre de archivo existente si solo hay uno, o la primera línea de un documento, si se va a guardar un archivo que aún no tiene nombre.
 
@@ -90,7 +85,7 @@ Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
         // Let Windows know that we're finished changing the file so
         // the other app can update the remote version of the file.
         // Completing updates may require Windows to ask for user input.
-        Windows.Storage.Provider.FileUpdateStatus status = 
+        Windows.Storage.Provider.FileUpdateStatus status =
             await Windows.Storage.CachedFileManager.CompleteUpdatesAsync(file);
         if (status == Windows.Storage.Provider.FileUpdateStatus.Complete)
         {
@@ -109,8 +104,7 @@ Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
 
 El ejemplo comprueba que el archivo es válido y escribe en él su propio nombre. Consulta también [Creación, escritura y lectura de archivos](quickstart-reading-and-writing-files.md).
 
-
-            **Sugerencia** Siempre debes comprobar el archivo guardado para garantizar que sea válido antes de realizar otros procesos. Luego, puedes guardar contenido en el archivo según corresponda para la aplicación y proporcionar el comportamiento adecuado si el archivo no es válido.
+**Sugerencia**  Siempre debes comprobar el archivo guardado para garantizar que sea válido antes de realizar otros procesos. Luego, puedes guardar contenido en el archivo según corresponda para la aplicación y proporcionar el comportamiento adecuado si el archivo no es válido.
 
      
 
@@ -120,10 +114,6 @@ El ejemplo comprueba que el archivo es válido y escribe en él su propio nombre
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: jnHs
 Description: "Ve los nombres que has reservado para tu aplicación, reserva nombres adicionales (para otros idiomas o para cambiar el nombre de la aplicación) y elimina nombres reservados que ya no necesites."
 title: "Administrar nombres de aplicación"
 ms.assetid: D95A6227-746E-4729-AE55-648A7102401C
+translationtype: Human Translation
 ms.sourcegitcommit: 48952b5d4f2565d06ec79475f88fbabf93fd0f70
-ms.openlocfilehash: e03e99b5de2142c2bcf46ee2aad4a76bb87ee4e5
+ms.openlocfilehash: e5616be7c3f1b767e4a73af3c6fbc168333090cc
 
 ---
 
@@ -19,8 +20,7 @@ Puedes reservar varios nombres de aplicación para la misma aplicación. Esto es
 
 En la sección **Reservar más nombres** de la página **Administrar nombres de aplicación**, verás un cuadro de texto. Escribe el nombre que te gustaría reservar y haz clic en **Comprobar disponibilidad**. Si el nombre está disponible, haz clic en **Reservar nombre**.
 
-> 
-            **Nota**  Para obtener más información sobre la reserva de nombres de aplicación y sobre por qué un nombre determinado puede no estar disponible, consulta [Crear tu aplicación reservando un nombre](create-your-app-by-reserving-a-name.md).
+> **Nota** Para obtener más información sobre la reserva de nombres de aplicación y sobre por qué un nombre determinado puede no estar disponible, consulta [Crear la aplicación reservando un nombre](create-your-app-by-reserving-a-name.md).
 
 Puedes seguir reservando nombres de aplicación adicionales aquí si lo deseas.
 
@@ -48,6 +48,6 @@ Una vez que se ha publicado la aplicación con el nuevo nombre, puedes eliminar 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,8 +4,8 @@ title: Juegos y DirectX
 description: "La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Descubre cómo comenzar un nuevo juego o migrar uno existente."
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
 translationtype: Human Translation
-ms.sourcegitcommit: 41ee0d2a45408b5b1a0dbc0b102f1b59843814b2
-ms.openlocfilehash: e5447f6238ece768513d160579e1c7e89b04e509
+ms.sourcegitcommit: adaff9abeb0ae8f9c9deb964b18e673c4d4c5f73
+ms.openlocfilehash: fccc85584e84bf3364130fe80c61b75c6377c0c8
 
 ---
 
@@ -32,7 +32,8 @@ La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear,
 | [Audio para juegos](working-with-audio-in-your-directx-game.md) | Aprende a desarrollar e incorporar música y sonidos en un juego DirectX, y cómo procesar las señales de audio para crear sonidos dinámicos y posicionales. |
 | [Controles táctiles para juegos](tutorial--adding-touch-controls-to-your-directx-game.md) | Aprende a agregar controles táctiles básicos a un juego en C++ para UWP con DirectX. Se muestra cómo agregar controles basados en el tacto para mover una cámara de plano fijo en un entorno de Direct3D, donde arrastrar con un dedo o un lápiz cambia la perspectiva de la cámara. |
 | [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) | Aprende a agregar controles de movimiento y vista tradicionales de mouse y teclado (también conocidos como controles mouselook) a un juego DirectX. |
-| [Optimizar el bucle de representación y de entrada](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) | La latencia de entrada puede influir tremendamente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida en el juego. Además, una correcta optimización de los eventos de entrada contribuye a mejorar la vida de la batería. Aprende a elegir las opciones adecuadas de procesamiento de eventos de entrada de [CoreDispatcher](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) para garantizar que el juego controle las entradas de la forma más fluida posible. |
+| [Movimiento de mouse relativo](relative-mouse-movement.md) | Aprende a agregar controles de mouse relativos, que no usan el cursor del sistema y no devuelven coordenadas de pantalla absolutas. En su lugar, siguen el delta de píxeles entre los diferentes movimientos del mouse. |
+| [Optimizar el bucle de representación y de entrada](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) | La latencia de entrada puede influir considerablemente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida. Además, una correcta optimización de los eventos de entrada contribuye a mejorar la vida de la batería. Aprende a elegir las opciones adecuadas de procesamiento de eventos de entrada de [CoreDispatcher](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) para garantizar que el juego controle las entradas de la forma más fluida posible. |
 | [Escalado de cadena de intercambio y superposiciones](multisampling--scaling--and-overlay-swap-chains.md) | Aprende a crear cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas, y usa también cadenas de intercambio (si las hay) para mejorar la calidad visual. |
 | [Reducir la latencia con cadenas de intercambio de DXGI 1.3](reduce-latency-with-dxgi-1-3-swap-chains.md) | Usa DXGI1.3 para reducir la latencia de fotogramas eficaz esperando a que la cadena de intercambio señale el momento adecuado para empezar a representar un nuevo fotograma. |
 | [Muestreo múltiple en aplicaciones para UWP](multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md) | Aprende a usar el muestreo múltiple en aplicaciones para UWP compiladas con Direct3D. |
@@ -42,8 +43,9 @@ La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear,
 | [Accesibilidad para juegos](accessibility-for-games.md) | Aprende a hacer que los juegos sean más accesibles. |
 | [Nube para juegos](cloud-for-games.md) | Aprende a hacer uso de las tecnologías de nube para desarrollar juegos. |
 | [Interoperabilidad de DirectX y XAML](directx-and-xaml-interop.md) | Puedes usar el lenguaje XAML y Microsoft DirectX juntos en un juego para UWP. |
-| [Empaquetar un juego](package-your-windows-store-directx-game.md) | Los juegos para UWP grandes, especialmente aquellos que admiten varios idiomas con activos específicos de una región o activos de alta definición como característica opcional, pueden crecer hasta alcanzar tamaños considerables. En este tema, aprende cómo usar los paquetes de la aplicación y los lotes de aplicaciones para personalizar la aplicación a fin de que los clientes solamente reciban los recursos que de verdad necesitan. |
-| [Guías de migración de juegos](porting-guides.md) | Ofrece guías para migrar los juegos existentes a Direct3D11, UWP y Windows10. |
+| [Empaquetar un juego](package-your-windows-store-directx-game.md) | Los juegos para UWP grandes, especialmente aquellos que admiten varios idiomas con activos específicos de una región o activos de alta definición como característica opcional, pueden crecer hasta alcanzar tamaños considerables. En este tema, aprende cómo usar los paquetes de la aplicación y los lotes de aplicaciones para personalizar tu aplicación de modo que los clientes solamente reciban los recursos que de verdad necesitan. |
+| [Aprobación de concepto](concept-approval.md) | Descubre cómo enviar el producto para la aprobación del concepto, lo que será necesario si tu producto se ejecuta en Xbox o usa Xbox Live. |
+| [Guías para portar juegos](porting-guides.md) | Ofrece guías para portar los juegos existentes a Direct3D11, UWP y Windows10. |
 | [Recursos de programación de juegos](additional-directx-game-programming-resources.md) | Para más información sobre la programación de juegos en Windows, consulta los siguientes recursos. |
 
  
@@ -70,6 +72,6 @@ Para aprovechar al máximo las explicaciones y los tutoriales sobre desarrollo d
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

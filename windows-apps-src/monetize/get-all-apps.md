@@ -1,79 +1,83 @@
 ---
 author: mcleanbyron
 ms.assetid: 2BCFF687-DC12-49CA-97E4-ACEC72BFCD9B
-description: Use this method in the Windows Store submission API to retrieve information about all apps that are registered to your Windows Dev Center account.
-title: Get all apps using the Windows Store submission API
+description: "Usa este método en la API de envío de la Tienda Windows para recuperar información sobre todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows."
+title: "Obtener todas las aplicaciones mediante la API de envío de la Tienda Windows"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 6180cc4ef94df3e28af4843685e16f2d1fdfa7ac
+
 ---
 
-# Get all apps using the Windows Store submission API
+# Obtener todas las aplicaciones mediante la API de envío de la Tienda Windows
 
 
 
 
-Use this method in the Windows Store submission API to retrieve data for all the apps that are registered to your Windows Dev Center account.
+Usa este método en la API de envío de la Tienda Windows para recuperar los datos de todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows.
 
-## Prerequisites
+## Requisitos previos.
 
-To use this method, you need to first do the following:
+Para usar este método, primero debes hacer lo siguiente:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de la Tienda Windows.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
-## Request
+## Solicitud
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Method | Request URI                                                      |
+| Método | URI de la solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications``` |
 
 <span/>
- 
+ 
 
-### Request header
+### Encabezado de la solicitud
 
-| Header        | Type   | Description                                                                 |
+| Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Request parameters
+### Parámetros de solicitud
 
-All request parameters are optional for this method. If you call this method without parameters, the response contains data for all apps that are registered to your account.
- 
-|  Parameter  |  Type  |  Description  |  Required  |
+Todos los parámetros de solicitud son opcionales para este método. Si llamas a este método sin parámetros, la respuesta contiene datos de todas las aplicaciones registradas en tu cuenta.
+ 
+|  Parámetro  |  Tipo  |  Descripción  |  Obligatorio  |
 |------|------|------|------|
-|  top  |  int  |  The number of items to return in the request (that is, the number of apps to return). If your account has more apps than the value you specify in the query, the response body includes a relative URI path that you can append to the method URI to request the next page of data.  |  No  |
-|  skip  |  int  |  The number of items to bypass in the query before returning the remaining items. Use this parameter to page through data sets. For example, top=10 and skip=0 retrieves items 1 through 10, top=10 and skip=10 retrieves items 11 through 20, and so on.  |  No  |
+|  top  |  entero  |  El número de elementos que se devolverán en la solicitud (es decir, el número de aplicaciones que se devolverán). Si las aplicaciones de la cuenta superan el valor especificado en la consulta, el cuerpo de la respuesta incluye una ruta de acceso al URI relativa que puedes anexar al URI del método para solicitar la siguiente página de datos.  |  No  |
+|  skip  |  entero  |  El número de elementos que se omitirán en la consulta antes de devolver los elementos restantes. Usa este parámetro para consultar conjuntos de datos. Por ejemplo, top = 10 y skip = 0 recuperan los elementos del 1 al 10, mientras que top = 10 y skip = 10 recuperan los elementos del 11 al 20, y así sucesivamente.  |  No  |
 
 <span/>
 
-### Request body
+### Cuerpo de la solicitud
 
-Do not provide a request body for this method.
+No incluyas un cuerpo de la solicitud para este método.
 
-### Request examples
+### Ejemplos de solicitud
 
-The following example demonstrates how to retrieve information about all the apps that are registered to your account.
+En el siguiente ejemplo se muestra cómo recuperar información sobre todas las aplicaciones registradas en tu cuenta.
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-The following example demonstrates how to retrieve the first 10 apps that are registered to your account.
+En el siguiente ejemplo se muestra cómo recuperar las 10 primeras aplicaciones registradas en tu cuenta.
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## Respuesta
 
-The following example demonstrates the JSON response body returned by a successful request for the first 10 apps that are registered to a developer account with 21 total apps. For brevity, this example only shows the data for the first two apps returned by the request. For more details about the values in the response body, see the following section.
+En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una solicitud correcta para las 10 primeras aplicaciones registradas en una cuenta de desarrollador con un total de 21 aplicaciones. Para mayor brevedad, en este ejemplo se muestran solo los datos de las dos primeras aplicaciones que devuelve la solicitud. Para obtener más información acerca de los valores del cuerpo de respuesta, consulta la siguiente sección.
 
 ```json
 {
@@ -109,30 +113,36 @@ The following example demonstrates the JSON response body returned by a successf
 }
 ```
 
-### Response body
+### Cuerpo de la respuesta
 
-| Value      | Type   | Description                                                                                                                                                                                                                                                                         |
+| Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| value      | array  | An array of objects that contain information about each app that is registered to your account. For more information about the data in each object, see [Application resource](get-app-data.md#application_object).                                                                                                                           |
-| @nextLink  | string | If there are additional pages of data, this string contains a relative path that you can append to the base ```https://manage.devcenter.microsoft.com/v1.0/my/``` request URI to request the next page of data. For example, if the *top* parameter of the initial request body is set to 10 but there are 20 apps registered to your account, the response body will include a @nextLink value of ```applications?skip=10&top=10```, which indicates that you can call ```https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10``` to request the next 10 apps. |
-| totalCount | int    | The total number of rows in the data result for the query (that is, the total number of apps that are registered to your account).                                                                                                                                                                                                                             |
+| value      | matriz  | Una matriz de objetos que contienen información acerca de cada aplicación registrada en tu cuenta. Para obtener más información sobre los datos de cada objeto, consulta [Recurso de aplicación](get-app-data.md#application_object).                                                                                                                           |
+| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene una ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar la siguiente página de datos. Por ejemplo, si el parámetro *top* del cuerpo de solicitud inicial se establece en 10, pero hay 20 aplicaciones registradas en la cuenta, el cuerpo de la respuesta incluirá un valor de @nextLink de ```applications?skip=10&top=10```, lo que indica que puedes llamar a ```https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10``` para solicitar las 10 aplicaciones siguientes. |
+| totalCount | entero    | El número total de filas del resultado de datos de la consulta (es decir, el número total de aplicaciones registradas en tu cuenta).                                                                                                                                                                                                                             |
 
 <span/>
 
-## Error codes
+## Códigos de error
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Si la solicitud no se puede completar correctamente, la respuesta contendrá uno de los siguientes códigos de error HTTP.
 
-| Error code |  Description   |
+| Código de error |  Descripción   |
 |--------|------------------|
-| 404  | No apps were found. |
-| 409  | The apps use Dev Center dashboard features that are [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 404  | No se encontró ninguna aplicación. |
+| 409  | Las aplicaciones usan características de panel del Centro de desarrollo que [la API de envío de la Tienda Windows no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 <span/>
 
-## Related topics
+## Temas relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Get an app](get-an-app.md)
-* [Get package flights for an app](get-flights-for-an-app.md)
-* [Get add-ons for an app](get-add-ons-for-an-app.md)
+* [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
+* [Obtener una aplicación](get-an-app.md)
+* [Obtener paquetes piloto para una aplicación](get-flights-for-an-app.md)
+* [Obtener complementos para una aplicación](get-add-ons-for-an-app.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

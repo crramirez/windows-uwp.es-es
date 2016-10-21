@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
 title: "Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles"
 description: "Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de CollectionViewSource que están enlazadas juntas en una cadena."
+translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 2ff66a1d6a80bb085f54dec8e35371ba0c9e6b27
+ms.openlocfilehash: 91786a785eece1448a36ebf48b8c8ef5c131e609
 
 ---
 # Enlazar datos jerárquicos y crear una vista de tipo maestro-detalles
@@ -12,8 +13,7 @@ ms.openlocfilehash: 2ff66a1d6a80bb085f54dec8e35371ba0c9e6b27
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-> 
-            **Nota**  Consulta también [Master/detail sample](http://go.microsoft.com/fwlink/p/?linkid=619991).
+> **Nota** Consulta también [Master/detail sample](http://go.microsoft.com/fwlink/p/?linkid=619991).
 
 Puedes hacer una vista de tipo maestro-detalles (también conocida como list-details) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) que están enlazadas juntas en una cadena. En este tema se usa la [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) donde es posible y la extensión más flexible (pero menos eficaz) [de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) cuando es necesario.
 
@@ -225,6 +225,6 @@ Ten en cuenta que mediante un enlace directo al elemento [**CollectionViewSource
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

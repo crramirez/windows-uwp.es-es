@@ -1,54 +1,64 @@
 ---
-title: Respond to customer feedback
-description: You can respond directly to feedback that your customers leave in Feedback Hub.
+title: Responder a los comentarios de los clientes
+description: Puedes responder directamente a los comentarios que los clientes dejan en el Centro de opiniones.
 author: JnHs
+translationtype: Human Translation
+ms.sourcegitcommit: b96053bb6aff04350a1cfd6b74a5d4a2424cc329
+ms.openlocfilehash: c3088c2498a94c988359dd08c6c900ad9a6c4f95
+
 ---
 
-# Respond to customer feedback
+# Responder a los comentarios de los clientes
 
-You can use the [Feedback report](feedback-report.md) to review the feedback that your Windows 10 customers have left about your app in Feedback Hub, and then respond directly to that feedback. You can post your responses in Feedback Hub for everyone to see (either as individual comments, or by updating the status of a piece of feedback and adding a description) to tell customers about new features or bug fixes, or to ask for more specific feedback on how to improve your app. You can also send your response as an email directly to the customer who left the feedback.
+Puedes usar el [informe de comentarios](feedback-report.md) para revisar los comentarios que los clientes de Windows 10 dejaron sobre tu aplicación en el Centro de opiniones y luego responder directamente a los comentarios. Puedes publicar tus respuestas en el Centro de opiniones para que todos lo vean (como comentarios individuales o al actualizar el estado de un comentario y agregar una descripción), para indicar a los clientes sobre nuevas funciones o correcciones de errores o para pedir comentarios más específicos sobre cómo mejorar la aplicación. También puedes enviar tu respuesta por correo electrónico directamente al cliente que envió el comentario.
 
-> **Tip** You can encourage customers to leave feedback by using the Feedback API in the [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) to add a control that lets customers directly [launch Feedback Hub from your UWP app](../monetize/launch-feedback-hub-from-your-app.md). Keep in mind that any customer who has downloaded your app on a Windows 10 device that supports Feedback Hub has the ability to leave feedback for it directly through the Feedback Hub app. Because of this, you may see customer feedback in this report, even if you have not specifically requested feedback from within your app.
+> **Sugerencia** Puedes animar a los clientes a que dejen comentarios con la API de comentarios en el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para agregar un control que permite que los clientes [inicien el Centro de opiniones desde tu aplicación para UWP](../monetize/launch-feedback-hub-from-your-app.md) directamente. Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella directamente mediante la aplicación Centro de opiniones. Por este motivo, es posible que veas comentarios de los clientes en este informe, aunque no hayas solicitado específicamente que te envíen comentarios desde dentro de tu aplicación.
 
-To provide a response to any piece of feedback, click the **Respond to feedback** link that appears by the piece of feedback in your **Feedback report**.
+Para proporcionar una respuesta a cualquier comentario, haz clic en el vínculo **Responder a los comentarios** que aparece junto al comentario en tu **informe de comentarios**.
 
-Windows Dev Center supports three options for responding to customers who provide feedback about your app. Regardless of which option you choose, keep in mind that there is a 1000-character limit for each response.
+El Centro de desarrollo de Windows admite tres opciones de respuesta a los clientes que proporcionan comentarios sobre tu aplicación. Independientemente de la opción que elijas, ten en cuenta que hay un límite de 1000 caracteres para cada respuesta.
 
-## Public comments in Feedback Hub
+## Comentarios públicos del Centro de opiniones
 
-By default, the radio button for **Comment** is selected after you click **Respond to feedback**. To post a public response to the customer’s feedback, leave this button selected. Enter your comment in the box, and then click **Submit**.
+De manera predeterminada, el botón de radio de **Comentario** se selecciona después de hacer clic en **Responder a los comentarios**. Para publicar una respuesta pública a los comentarios del cliente, deja este botón seleccionado. Escribe tu comentario en el cuadro y, a continuación, haz clic en **Enviar**.
 
-The comment you entered will be displayed as a comment in the Feedback Hub, along with the comments submitted by other customers. Your publisher name and app name will be displayed with your comment to identify you as the developer. There is no limit on the number of comments you can write for a piece of feedback, but note that you can’t edit or delete comments after you submit them. The five most recent comments to a piece of feedback will be shown in your **Feedback report** (as well as in Feedback Hub). When there are more than five comments, you can click **Show all comments** to see all of them in Feedback Hub.
+Se mostrará el comentario que hayas escrito como un comentario en el Centro de opiniones, junto con los comentarios enviados por otros clientes. Tu nombre de editor y nombre de la aplicación se mostrarán junto con tu comentario para identificarte como desarrollador. No hay ningún límite en el número de comentarios que puedes escribir para un comentario, pero ten en cuenta que no puedes editar ni eliminar comentarios después enviarlos. Los cinco comentarios más recientes a un comentario se mostrarán en tu **informe de comentarios** (también en el Centro de opiniones). Cuando hay más de cinco comentarios, puedes hacer clic en **Mostrar todos los comentarios** para verlos todos en el Centro de opiniones.
 
-## Private responses via email
+## Respuestas privadas por correo electrónico
 
-If you’d prefer not to post a public response, you can check the **Send comment as email** box to send a private response directly to the customer (if they have provided an email address and haven’t opted out of receiving responses via email). When you do so, Microsoft sends an email to the customer on your behalf. The email will contain their original feedback as well as the response you write.
+Si prefieres no publicar una respuesta pública, puedes activar la casilla **Enviar comentario como correo electrónico** para enviar una respuesta privada directamente al cliente (si se ha proporcionado una dirección de correo electrónico y no ha optado por no recibir respuestas por correo electrónico). Al hacerlo, Microsoft envía un correo electrónico al cliente en tu nombre. El correo electrónico contendrá los comentarios originales, así como la respuesta que escribas.
 
-After you check the **Send comment as email** box, enter your comment and then click **Submit**. Note that you must provide an email address in the **Support contact email** field when using this option. By default, we use the email address that you provided in your account contact info. If you prefer to use a different email address, you can update the **Support contact email** field to use a different one. The customer who receives your response will be able to reply directly to this email address.
+Después de activar la casilla **Enviar comentario como correo electrónico**, escribe el comentario y, a continuación, haz clic en **Enviar**. Ten en cuenta que debes proporcionar una dirección de correo electrónico en el campo **Correo electrónico de contacto de soporte técnico** cuando uses esta opción. De manera predeterminada, usamos la dirección de correo electrónico que proporcionaste en la información de contacto de tu cuenta. Si prefieres usar una dirección de correo electrónico diferente, puedes actualizar el campo **Correo electrónico de contacto de soporte técnico** para usar uno diferente. El cliente que recibe la respuesta podrá responder directamente a esta dirección de correo electrónico.
 
-## Public status updates and descriptions in Feedback Hub
+## Actualizaciones de estado públicas y descripciones del Centro de opiniones
 
-A third option for a public response is to set the status on a piece of feedback to let your customers that you’re working on the issue, or have fixed it. When you update the status of a piece of feedback, it is displayed along with the feedback in the Feedback Hub.
+Una tercera opción para una respuesta pública es establecer el estado de un comentario para informar a los clientes que estás trabajando en el problema o que ya se ha solucionado. Cuando actualizas el estado de un comentario, se muestra junto con los comentarios del Centro de opiniones.
 
-To use this option, select the **Update status** radio button. Then select one of the following options:
+Para usar esta opción, selecciona el botón de radio **Actualizar estado**. A continuación, selecciona una de las siguientes opciones:
 
-- **Investigating**: You’re aware of an issue and you’re looking into it.
-- **Working on it**: You’re in the process of fixing a problem or adding a requested feature.
-- **Completed**: You’ve published an update to fix the issue or add the requested feature.
+- **Investigando**: eres consciente de un problema y lo estás investigando.
+- **Trabajando en ello**: estás en proceso de solución de un problema o agregando una característica solicitada.
+- **Completado**: has publicado una actualización para solucionar el problema o agregar una característica solicitada.
 
-Along with updating the status, you can enter a comment to provide more info, such as an estimate for when you think it a problem will be fixed, or more info about the latest changes. This description will be displayed at the top of the list of comments (and the Feedback report will display the current status and description).
+Junto con la actualización de estado, puedes escribir un comentario para proporcionar más información, como una estimación de cuándo crees que se habrá solucionado un problema o más información sobre los últimos cambios. Esta descripción aparecerá en la parte superior de la lista de comentarios (y el informe de comentarios mostrará el estado actual y la descripción).
 
-Using the **Update status** option allows you to change the status whenever you want (along with providing updated descriptions for each status change). Whenever you change the status of a piece of feedback, the status will be updated in Feedback Hub so that customers viewing your response will see the latest status.
+Con la opción **Actualizar estado** puedes cambiar el estado cuando quieras (además de proporcionar descripciones actualizadas para cada cambio de estado). Siempre que cambie el estado de un comentario, se actualizará el estado en el Centro de opiniones para que los clientes que visualicen la respuesta vean el estado más reciente.
 
-## Guidelines for responses
-No matter which method you use to respond to a customer’s feedback, you must follow these guidelines for all responses.
-- Responses must be no longer than 1000 characters.
-- You may not offer any type of compensation, including digital app items, to users for their public comments.
-- Don’t include any marketing content or ads in your response. Remember, the person who left feedback is already your customer.
-- Don’t promote other apps or services in your response.
-- Your response should be directly related to the specific app and feedback.
-- Don’t include any profane, aggressive, personal, or malicious comments in your response. Always be polite and keep in mind that happy customers will likely be your app’s biggest promoters.
+## Orientación para las respuestas
+Independientemente del método que uses para responder a los comentarios de un cliente, debes seguir estas directrices para todas las respuestas.
+- Las respuestas no pueden tener más de 1000 caracteres.
+- No puedes ofrecer a los usuarios ningún tipo de compensación, incluidos productos de aplicaciones digitales, por sus comentarios públicos.
+- No incluyas ningún contenido de marketing ni anuncios en la respuesta. Recuerda que la persona que deje un comentario ya es tu cliente.
+- No promuevas otras aplicaciones o servicios en la respuesta.
+- La respuesta debe estar directamente relacionada con la aplicación y el comentario específicos.
+- No incluyas comentarios irreverentes, agresivos, personales ni maliciosos en tu respuesta. Sé siempre educado y recuerda que los clientes que estén contentos serán probablemente los mayores promotores de tu aplicación.
 
-> **Note** Customers can report a developer to Microsoft if they receive an inappropriate feedback response. They can also opt out of receiving feedback responses by email.
+> **Nota** Los clientes pueden notificar a Microsoft sobre la recepción de una respuesta inapropiada de un desarrollador a un comentario. Pueden también optar por no recibir las respuestas de los comentarios por correo electrónico.
 
-Your relationship with your customers is your own. Microsoft doesn’t get involved in disputes between developers and customers. However, if you think that the content of a customer’s feedback on your product is inappropriate, please submit a [support ticket](http://go.microsoft.com/fwlink/p/?LinkID=401178).
+La relación con tus clientes depende de ti. Microsoft no se involucra en las discusiones entre los desarrolladores y los clientes. No obstante, si crees que el contenido de los comentarios de un cliente sobre tu producto es inadecuado, envía una [incidencia de soporte técnico](http://go.microsoft.com/fwlink/p/?LinkID=401178).
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

@@ -3,8 +3,9 @@ author: mtoepke
 title: "Cómo activar una aplicación (DirectX y C++)"
 description: "En este tema se muestra cómo definir la experiencia de activación de una aplicación DirectX para la Plataforma universal de Windows (UWP)."
 ms.assetid: b07c7da1-8a5e-5b57-6f77-6439bf653a53
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 14859d03c7af45a17772c76f8c79b3c1bc56272c
+ms.openlocfilehash: 0b13604d2b0349817881a5c1c56c311931c90759
 
 ---
 
@@ -38,8 +39,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 ## Activar la instancia de CoreWindow para la aplicación
 
 
-Cuando se inicia la aplicación, debes obtener una referencia a [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para la aplicación. 
-            **CoreWindow** contiene el distribuidor de mensajes de eventos de ventana que la aplicación usa para procesar eventos de ventana. Obtén esta referencia en la devolución de llamada del evento de activación de la aplicación con una llamada a [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589). Después de obtener esta referencia, activa la ventana de aplicación principal con una llamada a [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).
+Cuando se inicia la aplicación, debes obtener una referencia a [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) para la aplicación. **CoreWindow** contiene el distribuidor de mensajes de eventos de ventana que la aplicación usa para procesar eventos de ventana. Obtén esta referencia en la devolución de llamada del evento de activación de la aplicación con una llamada a [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589). Después de obtener esta referencia, activa la ventana de aplicación principal con una llamada a [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).
 
 ```cpp
 void App::OnActivated(CoreApplicationView^ applicationView, IActivatedEventArgs^ args)
@@ -95,6 +95,6 @@ void App::Run()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

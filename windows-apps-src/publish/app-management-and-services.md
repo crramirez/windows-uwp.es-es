@@ -3,8 +3,9 @@ author: jnHs
 Description: "Puedes administrar y ver los detalles relacionados con cada una de tus aplicaciones en el panel del Centro de desarrollo de Windows y configurar servicios como notificaciones de inserción y Mapas."
 title: "Administración y servicios de aplicaciones"
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 71077ac3f64e10734021e5fb655168f7273e3cb6
+translationtype: Human Translation
+ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
+ms.openlocfilehash: 9787ef724622a95d291b4631196b3e13bcb1298a
 
 ---
 
@@ -22,14 +23,11 @@ La sección **Servicios** te permite administrar varios servicios diferentes par
 
 Según el tipo de paquete de la aplicación y sus requisitos específicos, puedes usar una de las siguientes opciones para las notificaciones de inserción:
 
--   
-            **Servicios de notificaciones de inserción de Windows (WNS)** te permite enviar notificaciones del sistema, iconos, distintivos y actualizaciones sin procesar desde tu propio servicio en la nube. Para obtener más información, consulta [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/mt187203).
+-   **Servicios de notificaciones de inserción de Windows (WNS)** te permite enviar notificaciones del sistema, iconos, distintivos y actualizaciones sin procesar desde tu propio servicio en la nube. Para obtener más información, consulta [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/mt187203).
 
--   
-            **Aplicaciones móviles de Microsoft Azure** te permite enviar notificaciones push, autenticar y administrar los usuarios de la aplicación, y almacenar datos de la aplicación en la nube. Para obtener más información, consulta la [documentación de Aplicaciones móviles](http://go.microsoft.com/fwlink/p/?LinkId=221116).
+-   **Aplicaciones móviles de Microsoft Azure** te permite enviar notificaciones push, autenticar y administrar los usuarios de la aplicación y almacenar datos de la aplicación en la nube. Para obtener más información, consulta la [documentación de Aplicaciones móviles](http://go.microsoft.com/fwlink/p/?LinkId=221116).
 
--   
-            **Servicio de notificaciones push de Microsoft (MPNS)** puede usarse con los paquetes .xap para Windows Phone. Puedes enviar un número limitado de notificaciones no autenticadas sin realizar ninguna configuración, aunque recomendamos usar notificaciones autenticadas para evitar limitaciones. Si estás usando MPNS, tendrás que cargar un certificado en el campo proporcionado en la página **Notificaciones de inserción**. Para obtener más información, consulta [Configurar un servicio web autenticado para enviar notificaciones de inserción para Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
+-   **Servicio de notificaciones push de Microsoft (MPNS)** puede usarse con los paquetes .xap para Windows Phone. Puedes enviar un número limitado de notificaciones no autenticadas sin realizar ninguna configuración, aunque recomendamos usar notificaciones autenticadas para evitar limitaciones. Si estás usando MPNS, tendrás que cargar un certificado en el campo proporcionado en la página **Notificaciones de inserción**. Para obtener más información, consulta [Configurar un servicio web autenticado para enviar notificaciones de inserción para Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
 
 ### Experimentación
 
@@ -41,14 +39,13 @@ Para obtener más información, consulta [Ejecutar experimentos en la aplicació
 
 Para usar servicios de mapa en aplicaciones para Windows Phone 8.1 y versiones anteriores, necesitas un id. de aplicación del servicio de mapas y un token para incluirlo en el código de la aplicación. Puedes obtener este token en la página **Mapas** de la sección **Servicios**.
 
-> 
-            **Nota**  Para usar servicios de mapa en aplicaciones destinadas a otros sistemas operativos, visita el [Centro de desarrollo de Mapas de Bing](http://go.microsoft.com/fwlink/p/?LinkId=614880). Consulta [Solicitar una clave de autenticación de mapas](https://msdn.microsoft.com/library/windows/apps/mt219694) para obtener más información.
+> **Nota** Para usar los servicios de mapa en aplicaciones destinadas a otros sistemas operativos, visita el [Centro de desarrollo de Mapas de Bing](http://go.microsoft.com/fwlink/p/?LinkId=614880). Consulta [Solicitar una clave de autenticación de mapas](https://msdn.microsoft.com/library/windows/apps/mt219694) para obtener más información.
 
 Para más información, consulta [Usar servicios de mapa](use-map-services.md).
 
 ### Colecciones y compras de producto
 
-Para usar la API de colección de la TiendaWindows y la API de compra de la TiendaWindows para acceder a la información sobre la propiedad de las aplicaciones y los IAP, tienes que especificar aquí los identificadores de cliente Azure AD asociados. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
+Para usar la API de colección de la TiendaWindows y la API de compra de la TiendaWindows para acceder a la información sobre la propiedad de las aplicaciones y los complementos, tienes que especificar aquí los identificadores de cliente de Azure AD asociados. Ten en cuenta que la aplicación de los cambios puede tardar hasta 16 horas.
 
 Para más información, consulta [Ver y conceder productos desde un servicio](https://msdn.microsoft.com/library/windows/apps/mt609002).
 
@@ -72,8 +69,7 @@ Para más información, consulta [Administrar nombres de aplicación](manage-app
 
 Esta página permite ver los detalles relacionados con todos los paquetes publicados.
 
-> 
-            **Nota**  No verás información aquí hasta que no se haya publicado la aplicación.
+> **Nota** Aquí no verás ninguna información hasta que se haya publicado la aplicación.
 
 Se muestra el nombre, la versión y la arquitectura de cada paquete. Haz clic en **Detalles** para mostrar información adicional como el idioma admitido, las capacidades de la aplicación y los tamaños de archivo.
 
@@ -87,6 +83,6 @@ Los desarrolladores con permisos de OEM también pueden [generar paquetes de pre
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

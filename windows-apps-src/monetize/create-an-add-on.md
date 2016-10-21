@@ -1,62 +1,66 @@
 ---
 author: mcleanbyron
 ms.assetid: 5BD650D2-AA26-4DE9-8243-374FDB7D932B
-description: Use this method in the Windows Store submission API to create an add-on for an app that is registered to your Windows Dev Center account.
-title: Create an add-on using the Windows Store submission API
+description: "Usa este método en la API de envío de la Tienda Windows para crear un complemento de una aplicación que está registrada en tu cuenta del Centro de desarrollo de Windows."
+title: "Creación de un complemento mediante la API de envío de la Tienda Windows"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 11cf25fbeacbe3145c9cc3f4a80bdcce3028bf55
+
 ---
 
-# Create an add-on using the Windows Store submission API
+# Creación de un complemento mediante la API de envío de la Tienda Windows
 
 
 
 
-Use this method in the Windows Store submission API to create an add-on (also known as in-app product or IAP) for an app that is registered to your Windows Dev Center account.
+Usa este método en la API de envío de la Tienda Windows para crear un complemento (también conocido como producto desde la aplicación o IAP) para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows.
 
->**Note**&nbsp;&nbsp;This method creates an add-on without any submissions. To create a submission for an add-on, see the methods in [Manage add-on submissions](manage-add-on-submissions.md).
+>**Nota**&nbsp;&nbsp;Este método crea un complemento sin envíos. Para crear un envío de un complemento, consulta los métodos en [Administración de envíos de complementos](manage-add-on-submissions.md).
 
-## Prerequisites
+## Requisitos previos
 
-To use this method, you need to first do the following:
+Para usar este método, primero debes hacer lo siguiente:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
-## Request
+## Solicitud
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones del cuerpo del encabezado y la solicitud.
 
-| Method | Request URI                                                      |
+| Method | URI de la solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` |
 
 <span/>
- 
+ 
 
-### Request header
+### Encabezado de la solicitud
 
-| Header        | Type   | Description                                                                 |
+| Encabezado        | Type   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Autorización | string | Obligatorio. Token de acceso de Azure AD con formato **Token del** &lt;*portador*&gt;. |
 
 <span/>
 
-### Request body
+### Cuerpo de la solicitud
 
-The request body has the following parameters.
- 
-|  Parameter  |  Type  |  Description  |  Required  |
+El cuerpo de la solicitud tiene los siguientes parámetros.
+ 
+|  Parámetro  |  Type  |  Descripción  |  Obligatorio  |
 |------|------|------|------|
-|  applicationIds  |  array  |  An array that contains the Store ID of the app that this add-on is associated with. Only one item is supported in this array.   |  Yes  |
-|  productId  |  string  |  The product ID of the add-on. This is an identifier that can use in code to refer to the add-on. For more information, see [Set your product type and product ID](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id).  |  Yes  |
-|  productType  |  string  |  The product type of the add-on. The following values are supported: **Durable** and **Consumable**.  |  Yes  |
+|  applicationIds  |  matriz  |  Una matriz que contiene la Id. de la tienda de la aplicación asociada con este complemento. Solo se admite un elemento en esta matriz.   |  Sí  |
+|  productId  |  string  |  La Id. de producto del complemento. Esto es un identificador que puede usarse en el código para hacer referencia al complemento. Para obtener más información, consulta [Establecimiento del tipo de producto y la Id. del producto](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id).  |  Sí  |
+|  productType  |  string  |  El tipo de producto del complemento. Se admiten los siguientes valores: **Duradero** y **Consumible**.  |  Sí  |
 
 <span/>
 
-### Request example
+### Ejemplo de solicitud
 
-The following example demonstrates how to create a new consumable add-on for an app.
+El siguiente ejemplo muestra cómo crear un nuevo complemento de consumible para una aplicación.
 
 ```syntax
 POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts HTTP/1.1
@@ -69,9 +73,9 @@ Content-Type: application/json
 }
 ```
 
-## Response
+## Respuesta
 
-The following example demonstrates the JSON response body for a successful call to this method. For more details about the values in the response body, see [add-on resource](manage-add-ons.md#add-on-object).
+El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisfactoria a este método. Para obtener más información acerca de los valores en el cuerpo de la respuesta, consulta [Recurso de complemento](manage-add-ons.md#add-on-object).
 
 ```json
 {
@@ -90,21 +94,27 @@ The following example demonstrates the JSON response body for a successful call 
 }
 ```
 
-## Error codes
+## Códigos de error
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Si la solicitud no se puede completar correctamente, la respuesta contendrá uno de los siguientes códigos de error HTTP.
 
-| Error code |  Description                                                                                                                                                                           |
+| Código de error |  Descripción                                                                                                                                                                           |
 |--------|------------------|
-| 400  | The request is invalid. |
-| 409  | The add-on could not be created because of its current state, or the add-on uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 400  | La solicitud no es válida. |
+| 409  | No se pudo crear el complemento debido a su estado actual o a que este complemento usa una función del panel del Centro de desarrollo que [actualmente no admite la API de envío de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 <span/>
 
-## Related topics
+## Temas relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage add-on submissions](manage-add-on-submissions.md)
-* [Get all add-ons](get-all-add-ons.md)
-* [Get an add-on](get-an-add-on.md)
-* [Delete an add-on](delete-an-add-on.md)
+* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
+* [Administración de envíos de complementos](manage-add-on-submissions.md)
+* [Obtención de todos los complementos](get-all-add-ons.md)
+* [Obtención de un complemento](get-an-add-on.md)
+* [Eliminación de un complemento](delete-an-add-on.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

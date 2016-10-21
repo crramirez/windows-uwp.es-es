@@ -3,8 +3,9 @@ author: mtoepke
 title: "Definir el marco de la aplicación para la Plataforma universal de Windows (UWP) del juego"
 description: La primera parte de codificar un juego de Plataforma universal de Windows (UWP) con DirectX es crear el marco que permite al objeto de juego interactuar con Windows.
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2ebc7bca06454f78ab375058e49f012cacb00cc8
+ms.openlocfilehash: 9dea19c87c4049c73a938b1cd5576644f7b0f8b9
 
 ---
 
@@ -218,10 +219,7 @@ En la muestra de juego, iniciamos un bucle que finaliza cuando el jugador cierra
 
 Cuando el juego tiene el foco, debes controlar cada evento en la cola de mensajes tan pronto como llegue, y por tanto debes llamar a [**CoreWindowDispatch.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) con la opción **ProcessAllIfPresent**. Otras opciones pueden causar retrasos en el procesamiento de eventos de mensaje, lo que puede provocar que el juego no responda bien o que los comportamientos táctiles parezcan lentos e imprecisos.
 
-No hace falta decir que, cuando la aplicación no está visible o está suspendida o acoplada, no conviene que consuma ningún recurso en ciclos de envío de mensajes que nunca llegarán a su destino. Por lo tanto, el juego debe usar **ProcessOneAndAllPending**, que lo bloquea hasta que recibe un evento y, a continuación, procesa dicho evento y cualquier otro que llegue a la cola de procesos durante el procesamiento del primer evento. 
-            A continuación, [
-              **ProcessEvents**
-            ](https://msdn.microsoft.com/library/windows/apps/br208215) regresa inmediatamente una vez procesada la cola.
+No hace falta decir que, cuando la aplicación no está visible o está suspendida o acoplada, no conviene que consuma ningún recurso en ciclos de envío de mensajes que nunca llegarán a su destino. Por lo tanto, el juego debe usar **ProcessOneAndAllPending**, que lo bloquea hasta que recibe un evento y, a continuación, procesa dicho evento y cualquier otro que llegue a la cola de procesos durante el procesamiento del primer evento. A continuación, [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) regresa inmediatamente una vez procesada la cola.
 
 El juego está en ejecución. Los eventos que usa para realizar la transición entre estados de juego se despachan y procesan. Los gráficos se actualizan mientras el bucle del juego cicla. Esperamos que el jugador se divierta. Sin embargo, antes o después la diversión debe acabar...
 
@@ -362,12 +360,9 @@ Dentro del bucle de juego en **Run**, la muestra ha implementado una máquina de
 
 En la muestra de juego, el juego puede encontrarse en 3 estados principales (UpdateEngineState):
 
--   
-            **Waiting for resources**. El bucle del juego está ciclando, incapaz de realizar la transición hasta que disponga de recursos (en concreto recursos gráficos). Cuando las tareas asincrónicas para cargar recursos finalizan, el estado se actualiza a **ResourcesLoaded**. Esto suele ocurrir entre niveles cuando el nivel necesita cargar nuevos recursos del disco. En la muestra de juego, simulamos este comportamiento, dado que la muestra no necesita ningún recurso adicional por nivel en ese momento.
--   
-            **Waiting for press**. El bucle del juego está ciclando, esperando a la entrada específica del usuario. Esta entrada es una acción del jugador para cargar un juego, iniciar un nivel o continuar un nivel. El código de muestra se refiere a estos subestados como valores de enumeración PressResultState.
--   
-            **Dynamics**. El bucle del juego se está ejecutando mientras el usuario juega. Cuando el usuario está jugando, el juego comprueba las 3 condiciones con las que puede realizar una transición: que se acabe el tiempo establecido para un nivel, que el jugador complete un nivel o que el jugador complete todos los niveles.
+-   **Waiting for resources**. El bucle del juego está ciclando, incapaz de realizar la transición hasta que disponga de recursos (en concreto recursos gráficos). Cuando las tareas asincrónicas para cargar recursos finalizan, el estado se actualiza a **ResourcesLoaded**. Esto suele ocurrir entre niveles cuando el nivel necesita cargar nuevos recursos del disco. En la muestra de juego, simulamos este comportamiento, dado que la muestra no necesita ningún recurso adicional por nivel en ese momento.
+-   **Waiting for press**. El bucle del juego está ciclando, esperando a la entrada específica del usuario. Esta entrada es una acción del jugador para cargar un juego, iniciar un nivel o continuar un nivel. El código de muestra se refiere a estos subestados como valores de enumeración PressResultState.
+-   **Dynamics**. El bucle del juego se está ejecutando mientras el usuario juega. Cuando el usuario está jugando, el juego comprueba las 3 condiciones con las que puede realizar una transición: que se acabe el tiempo establecido para un nivel, que el jugador complete un nivel o que el jugador complete todos los niveles.
 
 Aquí podemos ver la estructura del código. El código completo se encuentra en el [código completo para esta sección](#code_sample).
 
@@ -1432,6 +1427,6 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

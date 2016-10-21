@@ -5,8 +5,9 @@ title: "Mostrar varias vistas de una aplicación"
 ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
 label: Show multiple views for an app
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 23e999f86fb0552b96cddbd3b9d11803106bf6c2
+translationtype: Human Translation
+ms.sourcegitcommit: 0d67e3cef26ca6aca07556312a18be93fe758c85
+ms.openlocfilehash: ccbcb1f3f5ee31724416f512138757865ffabc98
 
 ---
 
@@ -26,7 +27,7 @@ Si creas varias ventanas para una aplicación, cada una de ellas se comporta de 
 
 Una vista de la aplicación es el emparejamiento 1:1 de un subproceso y una ventana que la aplicación usa para mostrar contenido. Está representada por un objeto [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017).
 
-Las vistas las administra el objeto [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016). Debes llamar a [**CoreApplication.CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278) para crear un objeto [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017). LA **CoreApplicationView** reúne una [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) y un [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) (almacenado en la [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) y las propiedades de [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/dn433264)). Puedes considerar la **CoreApplicationView** como el objeto que Windows Runtime usa para interactuar con el sistema Windows principal.
+Las vistas las administra el objeto [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016). Llama al método [**CoreApplication.CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278) para crear un objeto [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017). LA **CoreApplicationView** reúne una [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) y un [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) (almacenado en la [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) y las propiedades de [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/dn433264)). Puedes considerar la **CoreApplicationView** como el objeto que Windows Runtime usa para interactuar con el sistema Windows principal.
 
 Normalmente, no trabajas directamente con la [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017). En su lugar, Windows Runtime proporciona la clase [**ApplicationView**](https://msdn.microsoft.com/library/windows/apps/hh701658) en el espacio de nombres [**Windows.UI.ViewManagement**](https://msdn.microsoft.com/library/windows/apps/br242295). Esta clase ofrece propiedades, métodos y eventos que usas cuando tu aplicación interactúa con el sistema de ventanas. Para trabajar con una **ApplicationView**, llama al método [**ApplicationView.GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/hh701672) estático, que obtiene una instancia **ApplicationView** vinculada a la conversación actual de la **CoreApplicationView**.
 
@@ -93,9 +94,9 @@ int newViewId = 0;</code></pre></td>
 
     Debes usar el método [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) para programar el trabajo de la conversación de la interfaz de usuario para la nueva vista. Debes usar una [expresión lambda](http://go.microsoft.com/fwlink/p/?LinkId=389615) para pasar una función como un argumento para el método **RunAsync**. El trabajo que realices en la función lambda se realizará en el subproceso de la nueva vista.
 
-    En XAML, lo normal es agregar un [**Marco**](https://msdn.microsoft.com/library/windows/apps/br242682) a la propiedad [**Contenido**](https://msdn.microsoft.com/library/windows/apps/br209051) de la [**Ventana**](https://msdn.microsoft.com/library/windows/apps/br209041) y luego desplazar al **Marco** a una [**Página**](https://msdn.microsoft.com/library/windows/apps/br227503) XAML donde has definido el contenido de la aplicación. Para obtener más información, consulta [Navegación de punto a punto entre dos páginas](peer-to-peer-navigation-between-two-pages.md).
+    En XAML, lo normal es agregar un elemento [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) a la propiedad [**Content**](https://msdn.microsoft.com/library/windows/apps/br209051) del elemento [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) y luego desplazar al elemento **Frame** a una [**página**](https://msdn.microsoft.com/library/windows/apps/br227503) XAML donde has definido el contenido de la aplicación. Para obtener información, consulta [Navegar entre dos páginas](navigate-between-two-pages.md).
 
-    Después de rellenar la nueva [**Ventana**](https://msdn.microsoft.com/library/windows/apps/br209041) debes llamar al método [**Activar**](https://msdn.microsoft.com/library/windows/apps/br209046) de la **Ventana** para mostrar la **Ventana** más adelante. Este trabajo se realiza en la conversación de la nueva vista, de modo que la nueva **Ventana** se activa.
+    Después de rellenar el elemento nuevo [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) debes llamar al método [**Activate**](https://msdn.microsoft.com/library/windows/apps/br209046) del elemento **Window** para mostrar el elemento **Window** más adelante. Este trabajo se realiza en la conversación de la nueva vista, de modo que la nueva **Ventana** se activa.
 
     Por último, obtén el [**Id**](https://msdn.microsoft.com/library/windows/apps/dn281120) de la nueva vista que vas a usar para mostrar la vista más adelante. De nuevo, este trabajo se realiza en la conversación de la nueva vista, por lo que [**ApplicationView.GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/hh701672) obtiene el **Id** de la nueva vista.
 
@@ -146,8 +147,7 @@ Si se abren vistas secundarias, se puede ocultar la ventana de la vista principa
 
 Otras vistas, incluidas todas las vistas que se crean llamando a [**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278) en el código de la aplicación, son vistas secundarias. La vista principal y las vistas secundarias se almacenan en la colección [**CoreApplication.Views**](https://msdn.microsoft.com/library/windows/apps/br205861). Por lo general, las vistas secundarias se crean en respuesta a una acción del usuario. En algunos casos, el sistema crea vistas secundarias para tu aplicación.
 
-
-            **Nota** Puedes usar la característica *acceso asignado* de Windows para ejecutar una aplicación en [modo de pantalla completa](https://technet.microsoft.com/library/mt219050.aspx). Al hacerlo, el sistema crea una vista secundaria para presentar la interfaz de usuario de la aplicación sobre la pantalla de bloqueo. No se permiten vistas secundarias creadas por la aplicación, por lo que si intentas mostrar tu propia vista secundaria en modo de pantalla completa, se iniciará una excepción.
+**Nota** Puedes usar la característica *acceso asignado* de Windows para ejecutar una aplicación en [modo de pantalla completa](https://technet.microsoft.com/library/mt219050.aspx). Al hacerlo, el sistema crea una vista secundaria para presentar la interfaz de usuario de la aplicación sobre la pantalla de bloqueo. No se permiten vistas secundarias creadas por la aplicación, por lo que si intentas mostrar tu propia vista secundaria en modo de pantalla completa, se iniciará una excepción.
 
  
 
@@ -182,10 +182,6 @@ Cuando uses [**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

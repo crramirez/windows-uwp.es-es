@@ -3,8 +3,9 @@ author: mcleblanc
 description: "Si eres un desarrollador con una aplicación de Windows Phone Silverlight, puedes hacer un uso inigualable de tus conocimientos y código fuente al pasar a Windows 10."
 title: Migrar de WindowsPhone Silverlight a UWP
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 19dde1c9b0df3b2a5e464feb15e43af9dd283661
+ms.openlocfilehash: c75d1871364a837047c1bd81bc094c5120900a4e
 
 ---
 
@@ -18,8 +19,7 @@ Al migrar la aplicación de Windows Phone Silverlight a una aplicación de Windo
 
 Si lo deseas, la versión de Windows Phone Silverlight de la aplicación y la versión de Windows 10 pueden estar disponibles para los clientes al mismo tiempo.
 
-
-            **Nota** Esta guía está diseñada para ayudarte a portar la aplicación WindowsPhone Silverlight a Windows10 manualmente.. Además de usar la información de esta guía para migrar la aplicación, puedes probar la vista previa de desarrollador de **Puente Mobilize.NET Silverlight** para facilitar la automatización del proceso de migración. Esta herramienta analiza el código fuente de la aplicación y convierte las referencias en controles de Windows Phone Silverlight y las API en sus equivalentes de UWP. Dado que esta herramienta todavía está en la vista previa de desarrollador, aún no procesa todos los escenarios de conversión. Sin embargo, la mayoría de los desarrolladores deberían poder ahorrar tiempo y esfuerzo si empiezan con esta herramienta. Para probar la vista previa de desarrollador, visita el [sitio web de Mobilize.NET](http://go.microsoft.com/fwlink/p/?LinkId=624546).
+**Nota** Esta guía está diseñada para ayudarte a portar manualmente la aplicación Windows Phone Silverlight a Windows 10. Además de usar la información de esta guía para migrar la aplicación, puedes probar la vista previa de desarrollador de **Puente Mobilize.NET Silverlight** para facilitar la automatización del proceso de migración. Esta herramienta analiza el código fuente de la aplicación y convierte las referencias en controles de Windows Phone Silverlight y las API en sus equivalentes de UWP. Dado que esta herramienta todavía está en la vista previa de desarrollador, aún no procesa todos los escenarios de conversión. Sin embargo, la mayoría de los desarrolladores deberían poder ahorrar tiempo y esfuerzo si empiezan con esta herramienta. Para probar la vista previa de desarrollador, visita el [sitio web de Mobilize.NET](http://go.microsoft.com/fwlink/p/?LinkId=624546).
 
 ## ¿XAML y .NET o HTML?
 
@@ -27,8 +27,7 @@ Windows Phone Silverlight tiene un marco de trabajo de interfaz de usuario XAML 
 
 Consulta [Guía básica para aplicaciones para la Plataforma universal de Windows con C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/br229583).
 
-
-            **Nota** Windows 10 admite mucho más de .NET Framework que una aplicación de la Tienda de Windows Phone. Por ejemplo, Windows 10 tiene varios espacios de nombres System.ServiceModel.\* como System.Net System.Net.NetworkInformation y System.Net.Sockets. Por lo tanto, ahora es un buen momento para migrar tu Windows Phone Silverlight y compilar y usar el código .NET en la nueva plataforma. Consulta [Asignaciones de espacios de nombres y clases](wpsl-to-uwp-namespace-and-class-mappings.md).
+**Nota**  Windows 10 admite mucho más de .NET Framework que una aplicación de la Tienda de Windows Phone. Por ejemplo, Windows 10 tiene varios espacios de nombres System.ServiceModel.\* como System.Net System.Net.NetworkInformation y System.Net.Sockets. Por lo tanto, ahora es un buen momento para migrar tu Windows Phone Silverlight y compilar y usar el código .NET en la nueva plataforma. Consulta [Asignaciones de espacios de nombres y clases](wpsl-to-uwp-namespace-and-class-mappings.md).
 Otro buen motivo para volver a compilar el código fuente de .NET existente en una aplicación de Windows 10 es que te beneficiarás de .NET Native, que es una tecnología de compilación anticipada que convierte MSIL en código máquina que se puede ejecutar nativamente. Las aplicaciones de .NET Native se inician más rápido, usan menos memoria y usan menos batería que sus equivalentes MSIL.
 
 Esta guía de migración se centrará en XAML, pero, como alternativa, puedes compilar una aplicación funcionalmente equivalente (que llame a muchas de las mismas API de UWP) con JavaScript, Hojas de estilo CSS y HTML5 junto con la Biblioteca de Windows para JavaScript. Aunque los marcos de trabajo de la interfaz de usuario de Windows en tiempo de ejecución de XAML y HTML son diferentes entre sí, el que elijas funcionará universalmente en toda la gama de dispositivos Windows.
@@ -43,12 +42,9 @@ La opción que elijas de la sección anterior determinará la gama de dispositiv
 
 ## Enfoque de la migración capa a capa
 
--   
-            **Vista**. La vista (junto con el modelo de vista) conforma la interfaz de usuario de la aplicación. Lo ideal es que la vista conste de marcado enlazado a propiedades observables de un modelo de vista. Otro patrón (común y conveniente, pero solo a corto plazo) es para el código imperativo en un archivo de código subyacente para manipular directamente elementos de la interfaz de usuario. En cualquier caso, gran parte del marcado y diseño de interfaz de usuario (incluso el código imperativo que manipula los elementos de la interfaz de usuario) serán sencillos de migrar.
--   
-            **Modelos de vistas y modelos de datos**. Aunque no adoptes formalmente patrones de separación de cuestiones (por ejemplo, MVVM), inevitablemente hay código presente en la aplicación que realiza la función de modelo de vista y modelo de datos. El código del modelo de vista usa tipos en los espacios de nombres del marco de trabajo de la interfaz de usuario. Tanto el modelo de vista como el modelo de datos usan además un sistema operativo no visual y las API de .NET (incluidas las API para el acceso a datos). La mayoría de ellas están [disponibles para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/br211369), por lo que posiblemente podrás migrar gran parte de este código sin cambios. Pero recuerda: un modelo de vista es un modelo, o *abstracción*, de una vista. Un modelo de vista proporciona el estado y el comportamiento de la interfaz de usuario, mientras que la vista en sí proporciona los elementos visuales. Por este motivo, cualquier interfaz de usuario que adaptes a los diferentes factores de forma en los que UWP te permite ejecutar probablemente necesitará los cambios de modelo de vista correspondientes. Para las redes y las llamadas a los servicios en la nube, normalmente puedes elegir entre usar las API de UWP o .NET. Para conocer los factores que implica tomar esta decisión, consulta [Servicios en la nube, redes y bases de datos](wpsl-to-uwp-business-and-data.md#networking-cloud).
--   
-            **Servicios en la nube**. Es probable que parte de la aplicación (quizás una gran parte) se ejecute en la nube en forma de servicios. La parte de la aplicación que se ejecuta en el dispositivo cliente se conecta a ellos. Esta es la parte de una aplicación distribuida que probablemente no se modificará al migrar la parte del cliente. Si aún no tienes uno, una buena opción de servicios en la nube para tu aplicación para UWP es [Servicios móviles de Microsoft Azure](http://azure.microsoft.com/services/mobile-services/), que proporciona componentes back-end eficaces a los que las aplicaciones universales de Windows pueden llamar para servicios que van desde sencillas notificaciones de actualizaciones de iconos dinámicos hasta la clase de escalabilidad de tareas difíciles que puede proporcionar una granja de servidores.
+-   **Vista**. La vista (junto con el modelo de vista) conforma la interfaz de usuario de la aplicación. Lo ideal es que la vista conste de marcado enlazado a propiedades observables de un modelo de vista. Otro patrón (común y conveniente, pero solo a corto plazo) es para el código imperativo en un archivo de código subyacente para manipular directamente elementos de la interfaz de usuario. En cualquier caso, gran parte del marcado y diseño de interfaz de usuario (incluso el código imperativo que manipula los elementos de la interfaz de usuario) serán sencillos de migrar.
+-   **Modelos de vista y de datos**. Aunque no adoptes formalmente patrones de separación de cuestiones (por ejemplo, MVVM), inevitablemente hay código presente en la aplicación que realiza la función de modelo de vista y modelo de datos. El código del modelo de vista usa tipos en los espacios de nombres del marco de trabajo de la interfaz de usuario. Tanto el modelo de vista como el modelo de datos usan además un sistema operativo no visual y las API de .NET (incluidas las API para el acceso a datos). La mayoría de ellas están [disponibles para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/br211369), por lo que posiblemente podrás migrar gran parte de este código sin cambios. Pero recuerda: un modelo de vista es un modelo, o *abstracción*, de una vista. Un modelo de vista proporciona el estado y el comportamiento de la interfaz de usuario, mientras que la vista en sí proporciona los elementos visuales. Por este motivo, cualquier interfaz de usuario que adaptes a los diferentes factores de forma en los que UWP te permite ejecutar probablemente necesitará los cambios de modelo de vista correspondientes. Para las redes y las llamadas a los servicios en la nube, normalmente puedes elegir entre usar las API de UWP o .NET. Para conocer los factores que implica tomar esta decisión, consulta [Servicios en la nube, redes y bases de datos](wpsl-to-uwp-business-and-data.md#networking-cloud).
+-   **Servicios en la nube**. Es probable que parte de la aplicación (quizás una gran parte) se ejecute en la nube en forma de servicios. La parte de la aplicación que se ejecuta en el dispositivo cliente se conecta a ellos. Esta es la parte de una aplicación distribuida que probablemente no se modificará al migrar la parte del cliente. Si aún no tienes uno, una buena opción de servicios en la nube para tu aplicación para UWP es [Servicios móviles de Microsoft Azure](http://azure.microsoft.com/services/mobile-services/), que proporciona componentes back-end eficaces a los que las aplicaciones universales de Windows pueden llamar para servicios que van desde sencillas notificaciones de actualizaciones de iconos dinámicos hasta la clase de escalabilidad de tareas difíciles que puede proporcionar una granja de servidores.
 
 Antes o durante la migración, considera la posibilidad de si la aplicación podría mejorarse mediante la refactorización de modo que el código con un propósito similar se agrupe en capas y no se disperse arbitrariamente. La factorización de la aplicación para UWP en capas, como las descritas anteriormente, facilita corregir la aplicación, probarla y posteriormente leerla y mantenerla. Puedes hacer más reutilizable las funciones (y evitar algunos problemas de diferencias de API de interfaz de usuario entre plataformas) siguiendo el patrón Model-View-ViewModel ([MVVM](http://msdn.microsoft.com/magazine/dd419663.aspx)). Este patrón mantiene separadas entre sí las partes de la aplicación correspondientes a los datos, al negocio y a la interfaz de usuario. Incluso dentro de la interfaz de usuario, puede mantener separados el estado y el comportamiento, además de poderse probar por separado, desde los elementos visuales. Con MVVM, puedes escribir una vez la lógica de datos y de negocio, y usarla en todos los dispositivos, independientemente de la interfaz de usuario. Es probable que también puedas volver a usar la mayor parte del modelo de vista y los elementos de vista entre dispositivos.
 
@@ -83,24 +79,16 @@ En el nivel de función, la buena noticia es que hay muy poco que no sea compati
 * [Novedades para desarrolladores en Windows 10](https://dev.windows.com/getstarted/whats-new-windows-10)
 * [Guía de aplicaciones para la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn894631)
 * [Guía básica para aplicaciones universales de Windows (UWP) con C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/br229583)
-* 
-            [Siguientes pasos para los desarrolladores de Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
-            
-          
-            **Artículos de MSDN Magazine**
-          
-* 
-            [Visual Studio Magazine: Windows Phone 8.1: A Giant Leap Forward for Convergence (Visual Studio Magazine: Windows Phone 8.1, un paso de gigante hacia la convergencia)](http://go.microsoft.com/fwlink/p/?LinkID=398541)
-            
-          
-            **Presentaciones**
-          
+* [What's next for Windows Phone 8 developers (Novedades para desarrolladores de Windows Phone 8)](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
+**Artículos de revista**
+* [Visual Studio Magazine: Windows Phone 8.1: A Giant Leap Forward for Convergence (Visual Studio Magazine: Windows Phone 8.1, un paso de gigante hacia la convergencia)](http://go.microsoft.com/fwlink/p/?LinkID=398541)
+**Presentaciones**
 * [La historia de traer la música de Nokia de Windows Phones a Windows 8.](http://go.microsoft.com/fwlink/p/?LinkId=321521)
  
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

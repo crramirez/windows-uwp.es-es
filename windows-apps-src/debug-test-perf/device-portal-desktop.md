@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Device Portal para escritorio
 description: "Aprende cómo Windows Device Portal abre diagnóstico y automatización en el escritorio de Windows."
-ms.sourcegitcommit: f09f0233ec11b41989cf52da3c5e8cb37a97b607
-ms.openlocfilehash: 7be27f5fb15676c5330f22995dd044899eddfd3d
+translationtype: Human Translation
+ms.sourcegitcommit: b5d259172a7e3975d48a5ba669cfbe345869aebf
+ms.openlocfilehash: 3436a95124071045c8ec89ed8ddf644ccc80c29f
 
 ---
 # Portal de dispositivos para escritorio
@@ -42,7 +43,7 @@ Puedes elegir entre dos formas de conectarte a Device Portal: host local y a tra
 
     Usa esta dirección para ver Device Portal de forma local.
     
-    - Red local:  `https://<The IP address of the desktop>:PORT`
+    - Red local: `https://<The IP address of the desktop>:PORT`
 
     Usa esta dirección para conectarte a través de una red local.
 
@@ -73,8 +74,10 @@ Si quieres seleccionar los números de puerto para Device Portal (como 80 y 443)
     - HttpPort: un DWORD necesario. Contiene el número de puerto que escuchará Device Portal para las conexiones HTTP.  
     - HttpsPort: un DWORD necesario. Contiene el número de puerto que escuchará Device Portal para las conexiones HTTPS.
 
-## Error al instalar el paquete de modo de desarrollador
-En ocasiones, debido a problemas de compatibilidad o de red, el modo de desarrollador no se instalará correctamente. El paquete de modo de desarrollador es necesario para la implementación remota (Device Portal y SSH), pero no para el desarrollo local.  
+## Error al instalar el paquete de modo de desarrollador o al iniciar Device Portal
+En ocasiones, debido a problemas de compatibilidad o de red, el modo de desarrollador no se instalará correctamente. El paquete de modo de desarrollador es necesario para la implementación **remota** (Device Portal y SSH), pero no para el desarrollo local.  Aunque pueden ocurrir estos problemas, puedes seguir implementando la aplicación localmente con Visual Studio. 
+
+Consulta el foro de [problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para buscar soluciones para estos y otros problemas. 
 
 ### No se pudo ubicar el paquete
 
@@ -105,6 +108,6 @@ Corregir este problema:
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO5-->
 
 

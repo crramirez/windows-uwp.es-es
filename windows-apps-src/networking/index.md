@@ -4,8 +4,8 @@ ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
 description: "Tecnologías para tener acceso a la red y servicios web."
 title: Redes y servicios web
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: b4e291c0948a7734b8ba188bc060dfba2e9a83d1
+ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
+ms.openlocfilehash: 03a5ce2b8d5f501d4254cbe0ee3d47f575775f7a
 
 ---
 
@@ -25,10 +25,9 @@ Las siguientes tecnologías de red y servicios web están disponibles para los d
 | [HttpClient](httpclient.md)                                                             | Usa la API del espacio de nombres [Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/dn279692) para enviar y recibir información mediante los protocolos HTTP 2.0 y HTTP 1.1.             |
 | [Fuentes RSS y Atom](web-feeds.md)                                                          | Recupera o crea el contenido web más reciente o popular usando fuentes sindicadas generadas a partir de los estándares de RSS y Atom mediante características del espacio de nombres [Windows.Web.Syndication](https://msdn.microsoft.com/library/windows/apps/br243632).                   |
 | [Transferencias en segundo plano](background-transfers.md)                                         | Usa la API de transferencia en segundo plano para copiar archivos de forma confiable en la red.           |
-| [Etiquetado de conexiones de red con identidad EDP](tagging_network_connections_with_edp_identity.md) | En este tema se muestra cómo crear un contexto de subproceso protegido antes de crear conexiones de red en un escenario de Enterprise Data Protection (EDP). |
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

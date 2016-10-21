@@ -1,22 +1,23 @@
 ---
 author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
-description: "En este artículo se describe cómo usar perfiles de cámara para detectar y administrar las funcionalidades de los diferentes dispositivos de captura de vídeo."
-title: "Perfiles de cámara"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 755b2747b2250c4ad19970095aed220551389471
+description: "En este artículo se describe cómo usar perfiles de cámara para detectar y administrar las funcionalidades de los diferentes dispositivos de captura de vídeo. Esto incluye tareas como la selección de perfiles que admiten resoluciones específicas o velocidades de fotogramas, perfiles que admiten el acceso simultáneo con varias cámaras y perfiles que admiten HDR."
+title: "Descubrir y seleccionar las funcionalidades de cámara con los perfiles de cámara"
+translationtype: Human Translation
+ms.sourcegitcommit: 625cf715a88837cb920433fa34e47a1e1828a4c8
+ms.openlocfilehash: 09cb41f834de52d541addee4e44715c52f5e99dc
 
 ---
 
-# Perfiles de cámara
+# Descubrir y seleccionar las funcionalidades de cámara con los perfiles de cámara
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este artículo se describe cómo usar perfiles de cámara para descubrir y administrar las funcionalidades de los diferentes dispositivos de captura de vídeo.
+En este artículo se describe cómo usar perfiles de cámara para detectar y administrar las funcionalidades de los diferentes dispositivos de captura de vídeo. Esto incluye tareas como la selección de perfiles que admiten resoluciones específicas o velocidades de fotogramas, perfiles que admiten el acceso simultáneo con varias cámaras y perfiles que admiten HDR.
 
-**Nota**  
-Este artículo se basa en los conceptos y el código analizados en [Capturar fotos y vídeo con MediaCapture](capture-photos-and-video-with-mediacapture.md), donde se describen los pasos para la implementación de la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios más avanzados de captura. El código de este artículo supone que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
+> [!NOTE] 
+> Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para la implementación de la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios más avanzados de captura. El código de este artículo supone que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
 
  
 
@@ -25,8 +26,6 @@ Este artículo se basa en los conceptos y el código analizados en [Capturar fot
 Las cámaras de diferentes dispositivos admiten diferentes funcionalidades, incluido el conjunto de resoluciones de captura admitidas, la velocidad de fotogramas para capturas de vídeo y si se admite HDR y las capturas de velocidad de fotogramas variable. El marco de captura multimedia de la Plataforma universal de Windows (UWP) almacena este conjunto de funcionalidades en un [**MediaCaptureVideoProfileMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926695). Un perfil de cámara, representado por un objeto [**MediaCaptureVideoProfile**](https://msdn.microsoft.com/library/windows/apps/dn926694), tiene tres conjuntos de descripciones de elementos multimedia; uno para la captura de fotos, uno para la captura de vídeo y otro para la vista previa de vídeo.
 
 Antes de inicializar el objeto [MediaCapture](capture-photos-and-video-with-mediacapture.md), puedes consultar a los dispositivos de captura en el dispositivo actual para ver qué perfiles se admiten. Cuando se selecciona un perfil admitido, sabe que el dispositivo de captura admite todas las funcionalidades en las descripciones de elementos multimedia del perfil. Esto elimina la necesidad de un enfoque de prueba y error para determinar qué combinaciones de funcionalidades se admiten en un dispositivo determinado.
-
-En el artículo sobre la captura multimedia básica, [Capturar fotos y vídeo con MediaCapture](capture-photos-and-video-with-mediacapture.md), la clase [**MediaCaptureInitializationSettings**](https://msdn.microsoft.com/library/windows/apps/br226573) usada para inicializar la captura multimedia se crea solo con la cadena de identificador del dispositivo de captura, la cantidad mínima de datos necesarios para la inicialización.
 
 [!code-cs[BasicInitExample](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetBasicInitExample)]
 
@@ -54,7 +53,7 @@ Este ejemplo usa un método de consulta Linq, incluido en el espacio de nombres 
 
 [!code-cs[FindWVGA30FPSProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindWVGA30FPSProfile)]
 
-Una vez que rellenas **MediaCaptureInitializationSettings** con el perfil de cámara deseado, simplemente, realiza una llamada a [**InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598) en el objeto de captura multimedia para configurarlo en el perfil deseado.
+Tras rellenar **MediaCaptureInitializationSettings** con el perfil de cámara deseado, simplemente, realiza una llamada a [**InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598) en el objeto de captura multimedia para configurarlo en el perfil deseado.
 
 [!code-cs[InitCaptureWithProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitCaptureWithProfile)]
 
@@ -84,7 +83,7 @@ Usa el método auxiliar **GetVideoProfileSupportedDeviceIdAsync** definido anter
 
 El método estático [**MediaCapture.FindKnownVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926710) devuelve los perfiles de cámara compatibles con el dispositivo especificado que se clasifica por el valor [**KnownVideoProfile**](https://msdn.microsoft.com/library/windows/apps/dn948843) especificado. Para este escenario, el valor **VideoRecording** se especifica para limitar los perfiles de cámara devueltos a aquellos que admiten la grabación de vídeo.
 
-Recorra la lista de perfiles de cámara devueltos. Para cada perfil de cámara, recorra cada [**VideoProfileMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926695) en la comprobación de perfiles para determinar si la propiedad [**IsHdrVideoSupported**](https://msdn.microsoft.com/library/windows/apps/dn926698) es true. Una vez que se encuentre una descripción de elemento multimedia adecuada, interrumpe el recorrido y asigna el perfil y los objetos de la descripción al objeto **MediaCaptureInitializationSettings**.
+Recorra la lista de perfiles de cámara devueltos. Para cada perfil de cámara, recorre cada [**VideoProfileMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926695) en la comprobación de perfiles para determinar si la propiedad [**IsHdrVideoSupported**](https://msdn.microsoft.com/library/windows/apps/dn926698) es true. Tras encontrar una descripción de elemento multimedia adecuada, interrumpe el recorrido y asigna el perfil y los objetos de la descripción al objeto **MediaCaptureInitializationSettings**.
 
 [!code-cs[FindHDRProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindHDRProfile)]
 
@@ -98,7 +97,8 @@ Puedes ajustar esta consulta para buscar los perfiles que admiten resoluciones e
 
 ## Temas relacionados
 
-* [Capturar fotografías y vídeos con MediaCapture](capture-photos-and-video-with-mediacapture.md)
+* [Cámara](camera.md)
+* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -109,6 +109,6 @@ Puedes ajustar esta consulta para buscar los perfiles que admiten resoluciones e
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

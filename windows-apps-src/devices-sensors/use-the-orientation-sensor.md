@@ -3,8 +3,9 @@ author: DBirtolo
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
 title: "Usar el sensor de orientación"
 description: "Aprende a usar los sensores de orientación para determinar la orientación del dispositivo."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 67c23795be54207c54c1e871dad045e6c0cd7c77
+ms.openlocfilehash: 1265697f03e0de74444fc936a3041d1e88147e77
 
 ---
 # Usar el sensor de orientación
@@ -352,6 +353,6 @@ Estos nuevos valores se escriben en un bloque de texto que se encuentra en el c�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

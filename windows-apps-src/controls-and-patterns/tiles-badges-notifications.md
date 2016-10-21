@@ -5,32 +5,26 @@ title: Iconos, distintivos y notificaciones
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 32b1c3ec674a84ca4ed08d98119fe21f77e15554
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: dbc178f5df541e482f4a2e86c6662ead1992a1ce
 
 ---
-
 # Iconos, distintivos y notificaciones para las aplicaciones para UWP
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
+Aprende a usar iconos, distintivos, notificaciones del sistema y notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios.
 
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" />
+Un icono es una representación de la aplicación en el menú Inicio. Todas las aplicaciones para UWP tienen un icono. Asimismo, puedes habilitar distintos tamaños de icono (pequeño, mediano, grande y ancho).</p>
 
-Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios.
+<p>Puedes usar una <em>notificación de icono</em> para actualizar el icono con el fin de comunicar información nueva al usuario, como titulares de noticias o el asunto del mensaje sin leer más reciente.</p>
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><img src="images/tile-and-live-tile.png" alt="Breakdown of tile elements" /></td>
-<td align="left"><p>Todas las aplicaciones tienen un icono. Un <em>icono</em> es una representación de la aplicación en el menú Inicio. Puedes habilitar distintos tamaños de icono (pequeño, mediano, grande y ancho). Puedes usar una <em>notificación de icono</em> para actualizar el icono con el fin de comunicar información nueva al usuario, como titulares de noticias o el asunto del mensaje sin leer más reciente. Puedes usar un <em>distintivo</em> o <em>notificación</em> para proporcionar información de estado o resumen en forma de un glifo proporcionado por el sistema o un número de 1 a 99.</p>
-<p>Una <em>notificación del sistema</em> es una notificación que tu aplicación envía al usuario a través de un elemento de la interfaz de usuario emergente denominado <em>notificación del sistema</em> (o <em>banner</em>). La notificación se puede ver esté el usuario en la aplicación o no.</p>
-<p>Una <em>notificación de inserción</em> o <em>notificación sin procesar</em> es una notificación enviada a tu aplicación desde Servicios de notificaciones de inserción de Windows (WNS) o desde una tarea en segundo plano. Tu aplicación puede responder a estas notificaciones notificándole al usuario de que ha sucedido algo interesante (mediante una actualización de distintivo, una actualización de icono o una notificación del sistema) o puede responder de la manera que elijas.</p></td>
-</tr>
-</tbody>
-</table>
+<p>Puedes usar un <em>distintivo</em> en forma de glifo proporcionado por el sistema o un número de 1 a 99, para proporcionar información breve acerca del estado. Recuerda que los distintivos también pueden aparecer en el icono de la barra de tareas de una aplicación. </p>
+
+<p>Una <em>notificación del sistema</em> es una notificación que la aplicación envía al usuario a través de un elemento emergente de la interfaz de usuario denominado <em>notificación del sistema</em> (o <em>mensaje emergente</em>). La notificación se puede ver esté el usuario en la aplicación o no.</p>
+<p>Una <em>notificación de inserción</em> o <em>notificación sin procesar</em> es una notificación enviada a tu aplicación desde Servicios de notificaciones de inserción de Windows (WNS) o desde una tarea en segundo plano. Tu aplicación puede responder a estas notificaciones notificándole al usuario de que ha sucedido algo interesante (mediante una actualización de distintivo, una actualización de icono o una notificación del sistema) o puede responder de la manera que elijas.</p>
 
  
 ## Iconos 
@@ -131,6 +125,6 @@ Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

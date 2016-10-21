@@ -4,8 +4,9 @@ Description: "En estas directrices se describe cómo diseñar un contenido de la
 title: "Directrices para la ayuda de la aplicación"
 label: Guidelines for app help
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 0aa2db498ab7ec25839da259dd0026b0a7cd2b13
-ms.openlocfilehash: f2522afa91abe26303a85cbfbabd5ec5b3dba59c
+ms.openlocfilehash: 0ca099b0acfcba16d62c6158c7a829adaf475891
 
 ---
 
@@ -29,20 +30,15 @@ Un usuario no buscará en el contenido de ayuda a menos que ya tenga un problema
 
 Toda ayuda, independientemente del tipo, debe seguir estos principios básicos:
 
--   
-            **Fácil de entender:** Una ayuda que confunda al usuario será peor que no ofrecer ninguna ayuda.
+-   **Fácil de entender:** una ayuda que confunda al usuario será peor que no ofrecer ninguna ayuda.
 
--   
-            **Sencilla:** los usuarios que buscan ayuda quieren respuestas claras presentadas de manera directa.
+-   **Sencilla:** los usuarios que buscan ayuda quieren respuestas claras presentadas de manera directa.
 
--   
-            **Pertinente:** Los usuarios no quieren ponerse a buscar el problema específico. Quieren que primero se presente la ayuda apropiada (esto se denomina "ayuda contextual") o una interfaz fácil de navegar.
+-   **Pertinente:** los usuarios no quieren ponerse a buscar el problema específico. Quieren que primero se presente la ayuda apropiada (esto se denomina "ayuda contextual") o una interfaz fácil de navegar.
 
--   
-            **Directa:** Cuando un usuario busca ayuda, quiere ver algo que le ayude. Es decir, si la aplicación incluye páginas sobre informes de errores, cómo proporcionar comentarios, ver las condiciones del servicio o funciones similares, estas deben incluirse como enlaces o pies de página en la página de la ayuda principal y no como puntos importantes,
+-   **Directa:** cuando un usuario busca ayuda, quiere ver algo que le ayude. Es decir, si la aplicación incluye páginas sobre informes de errores, cómo proporcionar comentarios, ver las condiciones del servicio o funciones similares, estas deben incluirse como enlaces o pies de página en la página de la ayuda principal y no como puntos importantes,
 
--   
-            **Coherente:** Independientemente de su tipo, la ayuda forma parte de la aplicación y debe tratarse como cualquier otra parte de la interfaz de usuario. Los mismos principios de diseño, facilidad de uso, accesibilidad y estilo que se usan en el resto de la aplicación también deben estar presentes en la ayuda que se ofrece.
+-   **Coherente:** independientemente de su tipo, la ayuda forma parte de la aplicación y debe tratarse como cualquier otra parte de la interfaz de usuario. Los mismos principios de diseño, facilidad de uso, accesibilidad y estilo que se usan en el resto de la aplicación también deben estar presentes en la ayuda que se ofrece.
 
 ## <span id="types_of_help"></span><span id="TYPES_OF_HELP"></span>Tipos de ayuda
 
@@ -70,6 +66,6 @@ Para obtener tutoriales detallados, funciones avanzadas o bibliotecas de temas d
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: mtoepke
 title: Configurar el proyecto de juego
 description: "El primer paso para ensamblar el juego es configurar un proyecto en Microsoft Visual Studio de tal forma que se reduzca al mínimo la cantidad de trabajo necesaria en la infraestructura de código."
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d4d7864f9689df0919b53ee70b8e18f8d812b2b0
+ms.openlocfilehash: fd8e676e66c1df530aca41e05f2ea68d96d01a32
 
 ---
 
@@ -30,7 +31,7 @@ Puedes escribir un juego desde cero, solo con un sencillo editor de texto, unas 
 
 Una plantilla de Visual Studio es una colección de configuraciones y archivos de código para un tipo específico de aplicación basándose en el lenguaje y la tecnología elegidos. En Microsoft Visual Studio 2015, encontrarás varias plantillas que pueden facilitar enormemente el desarrollo de juegos y aplicaciones gráficas. Si no usas una plantilla, debes desarrollar tú mismo casi todo el marco básico de generación de gráficos, lo que puede suponer una ardua tarea para un desarrollador de juegos novel.
 
-La plantilla adecuada para este tutorial es la titulada DirectX 11 App (Universal Windows). En Visual Studio2015, haz clic en **Archivo...**&gt;**Nuevo proyecto** y posteriormente:
+La plantilla adecuada para este tutorial es la titulada DirectX 11 App (Universal Windows). En Visual Studio 2015, haz clic en **Archivo...** &gt; **Nuevo proyecto** y, a continuación:
 
 1.  Desde **Plantillas**, selecciona **Visual C++**, **Windows**, **Universal**.
 2.  En el panel central, selecciona **DirectX 11 App (Universal Windows)**.
@@ -168,6 +169,6 @@ En el próximo tutorial, [Definir el marco de UWP del juego](tutorial--building-
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,8 +4,8 @@ title: Atributo xDeferLoadStrategy
 description: "El atributo xDeferLoadStrategy retrasa la creación de un elemento y sus elementos secundarios, lo que disminuye el tiempo de inicio aunque incrementa ligeramente el uso de memoria. Cada elemento afectado agrega alrededor de 600 bytes de uso de memoria."
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: a5230a92ad919fc52c40c19646ff799453e64fa4
+ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
+ms.openlocfilehash: c1a0515ea4298b6eb870bdf69e452f774962cdd8
 
 ---
 
@@ -13,8 +13,9 @@ ms.openlocfilehash: a5230a92ad919fc52c40c19646ff799453e64fa4
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
+**x:DeferLoadStrategy="Lazy"** es una característica que puedes usar para optimizar el rendimiento del inicio o de los escenarios para crear árboles de una aplicación XAML. Al usar **x:DeferLoadStrategy="Lazy"**, se retrasa la creación de un elemento y sus elementos secundarios consiguiendo así reducir el tiempo de inicio y el coste de la memoria, ya que no es necesario crear los elementos. Esto es útil para reducir los costes de los elementos que no se usan a menudo. El elemento se ejecutará en el momento en que se le haga referencia desde el código o desde VisualStateManager.
 
-              **x:DeferLoadStrategy="Lazy"** retrasa la creación de un elemento y sus elementos secundarios, lo que disminuye el tiempo de inicio aunque incrementa ligeramente el uso de memoria. Cada elemento afectado agrega alrededor de 600 bytes de uso de memoria. Cuanto mayor sea del árbol de elementos aplazado, mayor será el ahorro de tiempo de inicio, aunque a cambio de un mayor superficie de memoria. Por lo tanto, es posible usar en exceso este atributo en la medida en que disminuye el rendimiento.
+Sin embargo, la mantener los registros de aplazamiento agrega unos 600 bytes al uso de la memoria, por cada elemento afectado. Cuanto mayor sea del árbol de elementos aplazado, mayor será el ahorro de tiempo de inicio, aunque a cambio de un mayor superficie de memoria. Por lo tanto, es posible usar en exceso este atributo en la medida en que disminuye el rendimiento.
 
 ## Uso del atributo XAML
 
@@ -28,7 +29,7 @@ Las restricciones de el de uso **x: DeferLoadStrategy** son:
 
 -   Requiere definir el atributo [x:Name](x-name-attribute.md) , ya que debe haber una forma de encontrar el elemento más adelante.
 -   Solo se puede marcar un elemento [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) como diferido, a excepción de los tipos derivados de la clase [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249).
--   No se pueden aplazar elementos raíz en las clases [**Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) y [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
+-   No se pueden aplazar elementos raíz en las clases [**Page**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.usercontrol) y [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348).
 -   Los elementos de la clase [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) no se puede aplazar.
 -   No funciona con atributos XAML sueltos cargados con el método [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048).
 -   Mover un elemento primario borrará todos los elementos que no se hayan realizado.
@@ -89,6 +90,6 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

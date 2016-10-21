@@ -3,13 +3,14 @@ author: mcleblanc
 ms.assetid: 79CF3927-25DE-43DD-B41A-87E6768D5C35
 title: "Optimiza tu diseño XAML"
 description: "El diseño puede ser una parte costosa de una aplicación XAML; tanto en la sobrecarga de memoria como en el uso de la CPU. A continuación te mostramos algunos sencillos pasos para mejorar el rendimiento de diseño de la aplicación XAML."
+translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: dbec176310896164ebc99c20aefca4c5b2b29ee9
+ms.openlocfilehash: ae6ad7a761737613c323eb80af993ab5dfcd7977
 
 ---
 # Optimiza tu diseño XAML
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -129,8 +130,7 @@ Tal como se muestra en estos ejemplos, existen muchas formas de lograr la misma 
 
 Un requisito común de la interfaz de usuario es tener un diseño en el que los elementos se superpongan entre sí. Por lo general el espaciado interno, los márgenes, las alineaciones y las transformaciones se usan para ubicar los elementos de esta forma. El control [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) de XAML está optimizado para mejorar el rendimiento de diseño de los elementos que se superponen.
 
-
-            **Importante**  Para ver la mejora, usa una clase [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) de una sola celda. No definas las propiedades [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) ni [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
+**Importante**  Para ver la mejora, usa una clase [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) de una sola celda. No definas las propiedades [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) ni [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
 
 ### Ejemplos
 
@@ -156,10 +156,8 @@ Un requisito común de la interfaz de usuario es tener un diseño en el que los 
 
 ## Usar las propiedades de borde integradas de un panel
 
-
-            [
-              Los controles **Grid**
-            ](https://msdn.microsoft.com/library/windows/apps/BR242704), [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/Dn879546) y [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378) tienen propiedades de borde integradas que te permiten dibujar un borde alrededor de ellos sin tener que agregar un elemento [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) adicional al XAML. Las nuevas propiedades que admiten el borde integrado son: **BorderBrush**, **BorderThickness**, **CornerRadius** y **Padding**. Cada una de ellas es una clase [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362), por lo que puedes usarlas con enlaces y animaciones. Además, están diseñadas para reemplazar completamente otro elemento **Border**.
+[
+              Los controles **Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704), [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/Dn879546) y [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378) tienen propiedades de borde integradas que te permiten dibujar un borde alrededor de ellos sin tener que agregar un elemento [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) adicional al XAML. Las nuevas propiedades que admiten el borde integrado son: **BorderBrush**, **BorderThickness**, **CornerRadius** y **Padding**. Cada una de ellas es una clase [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362), por lo que puedes usarlas con enlaces y animaciones. Además, están diseñadas para reemplazar completamente otro elemento **Border**.
 
 Si tu interfaz de usuario tiene elementos [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) alrededor de estos paneles, usa el borde integrado en su lugar, ya que guarda un elemento adicional en la estructura de diseño de la aplicación. Tal como se mencionó anteriormente, esto puede suponer un ahorro significativo, especialmente en el caso de interfaces de usuario repetidas.
 
@@ -176,13 +174,9 @@ Si tu interfaz de usuario tiene elementos [**Border**](https://msdn.microsoft.co
 
 La clase [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) expone dos eventos similares para responder a los cambios de diseño: [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated) y [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged). Puede que estés usando uno de estos eventos para recibir una notificación cuando cambia el tamaño de un elemento durante el diseño. La semántica de los dos eventos es diferente y hay aspectos importantes de rendimiento para elegir entre ellos.
 
-Para lograr un buen rendimiento, [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged) es casi siempre la opción adecuada. 
-            **SizeChanged** tiene una semántica intuitiva. Se genera durante el diseño una vez que se actualiza el tamaño de la clase [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706).
+Para lograr un buen rendimiento, [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged) es casi siempre la opción adecuada. **SizeChanged** tiene una semántica intuitiva. Se genera durante el diseño una vez que se actualiza el tamaño de la clase [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706).
 
-
-            [
-              **LayoutUpdated**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated) también se genera durante el diseño, pero tiene una semántica global que se genera en todos los elementos cada vez que se actualiza cualquiera de ellos. Es habitual usarla para realizar solo procesamiento local en el controlador de eventos, en cuyo caso el código se ejecuta con más frecuencia de la necesaria. Usa **LayoutUpdated** solo si necesitas saber cuándo cambia la posición de un elemento sin que haya cambiado el tamaño (que es poco habitual).
+[**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated) también se genera durante el diseño, pero tiene una semántica global que se genera en todos los elementos cada vez que se actualiza cualquiera de ellos. Es habitual usarla para realizar solo procesamiento local en el controlador de eventos, en cuyo caso el código se ejecuta con más frecuencia de la necesaria. Usa **LayoutUpdated** solo si necesitas saber cuándo cambia la posición de un elemento sin que haya cambiado el tamaño (que es poco habitual).
 
 ## Elegir entre los paneles
 
@@ -193,6 +187,6 @@ Cada panel XAML está optimizado para lograr un buen rendimiento y todos los pan
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

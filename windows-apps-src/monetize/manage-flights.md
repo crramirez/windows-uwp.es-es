@@ -1,31 +1,41 @@
 ---
 author: mcleanbyron
 ms.assetid: 37F2C162-4910-4336-BEED-8536C88DCA65
-description: Use these methods in the Windows Store submission API to manage package flights for apps that are registered to your Windows Dev Center account.
-title: Manage package flights using the Windows Store submission API
+description: "Usa estos métodos en la API de envío de la Tienda Windows para administrar paquetes piloto para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows."
+title: "Administrar paquetes piloto mediante la API de envío de la Tienda Windows"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: de1c23d721cee67d813520e3a23eb553cd90b7e9
+
 ---
 
-# Manage package flights using the Windows Store submission API
+# Administrar paquetes piloto mediante la API de envío de la Tienda Windows
 
 
 
 
-Use the following methods in the Windows Store submission API to manage package flights for apps that are registered to your Windows Dev Center account. For an introduction to the Windows Store submission API, including prerequisites for using the API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+Usa los métodos siguientes en la API de envío de la Tienda Windows para administrar paquetes piloto para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
->**Note**&nbsp;&nbsp;These methods can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled. These methods can only be used to get, create, or delete package flights. To create submissions for package flights, see the methods in [Manage package flight submissions](manage-flight-submissions.md).
+>**Nota**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado. Estos métodos solo pueden usarse para obtener, crear o eliminar paquetes piloto. Para crear envíos de paquetes piloto, consulta los métodos de [Administrar envíos de paquetes piloto](manage-flight-submissions.md).
 
-| Method        | URI    | Description                                                                 |
+| Método        | URI    | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}``` | Gets data for a package flight for an app that is registered to your Windows Dev Center account. For more information, see [Get a package flight](get-a-flight.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights``` | Creates a new package flight. For more information, see [Create a package flight](create-a-flight.md).|
-| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}``` | Deletes a package flight. For more information, see [Delete a package flight](delete-a-flight.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}``` | Obtiene los datos de un paquete piloto para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows. Para obtener más información, consulta [Obtener un paquete piloto](get-a-flight.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights``` | Crea un nuevo paquete piloto. Para obtener más información, consulta [Crear un paquete piloto](create-a-flight.md).|
+| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}``` | Elimina un paquete piloto. Para obtener más información, consulta [Eliminar un paquete piloto](delete-a-flight.md). |
 
 
-## Prerequisites
+## Requisitos previos
 
-If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API before trying to use any of these methods.
+Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de la Tienda Windows antes de intentar usar cualquiera de estos métodos.
 
-## Related topics
+## Temas relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage package flight submissions](manage-flight-submissions.md)
+* [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
+* [Administrar envíos de paquetes piloto](manage-flight-submissions.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

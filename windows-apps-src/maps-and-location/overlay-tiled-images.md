@@ -3,21 +3,21 @@ author: msatranjr
 title: "Superponer imágenes en mosaico en un mapa"
 description: "Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo."
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 71d044eb19e71786da39ca71d4f4fbd2d87645be
+ms.openlocfilehash: a00d3d27161310077a0690cef7e4d11a5209bee7
 
 ---
 
 # Superponer imágenes en mosaico en un mapa
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante los orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
 
-
-            **Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga la muestra siguiente de [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) (repositorio de muestras universales de Windows) que encontrarás en GitHub.
+**Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga la muestra siguiente del [repositorio de muestras universales de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub.
 
 -   [Muestra de mapa en la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -144,36 +144,36 @@ void MainPage::AddHttpMapTileSource()
 }
 ```
 
-## [!div class="tabbedCodeSnippets"]
+## Superponer iconos desde el almacenamiento local
 
 
-Superponer iconos desde el almacenamiento local Superpón imágenes en mosaico almacenadas como archivos en el almacenamiento local mediante la clase [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994).
+Superpón imágenes en mosaico almacenadas como archivos en el almacenamiento local mediante la clase [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). Normalmente, estos archivos se empaquetan y distribuyen con la aplicación.
 
-1.  Normalmente, estos archivos se empaquetan y distribuyen con la aplicación.
-2.  Crea una instancia de una clase [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). A continuación, especifica el formato de los nombres de archivo en el valor de la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998). Para crear este valor, inserta los parámetros reemplazables en el nombre de archivo base.
+1.  Crea una instancia de una clase [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994).
+2.  A continuación, especifica el formato de los nombres de archivo en el valor de la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998). Para crear este valor, inserta los parámetros reemplazables en el nombre de archivo base. Por ejemplo, en la siguiente muestra de código, el valor de [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) es:
 
     ``` syntax
         Tile_{zoomlevel}_{x}_{y}.png
     ```
 
-    Por ejemplo, en la siguiente muestra de código, el valor de [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) es: Si el formato de los nombres de archivo requiere argumentos adicionales que no están disponibles en la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), deberás crear un URI personalizado. Crea y devuelve un URI personalizado mediante el control del evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001).
+    Si el formato de los nombres de archivo requiere argumentos adicionales que no están disponibles en la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998), deberás crear un URI personalizado. Crea y devuelve un URI personalizado mediante el control del evento [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001). Para obtener más información, consulta la sección [Proporcionar un URI personalizado](#customuri) que figura más adelante en este tema.
 
-3.  Para obtener más información, consulta la sección [Proporcionar un URI personalizado](#customuri) que figura más adelante en este tema.
+3.  A continuación, sigue los pasos restantes que se han descrito anteriormente en [Información general de la imagen en mosaico](#tileintro).
 
-A continuación, sigue los pasos restantes que se han descrito anteriormente en [Información general de la imagen en mosaico](#tileintro).
+Puedes usar los siguientes protocolos y ubicaciones para cargar mosaicos desde un almacenamiento local:
 
-| Puedes usar los siguientes protocolos y ubicaciones para cargar mosaicos desde un almacenamiento local: | URI |
+| URI | Más información |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Más información | ms-appx:/// |
-|  | Apunta a la raíz de la carpeta de instalación de la aplicación. |
-| Esta es la ubicación a la que hace referencia la propiedad [Package.InstalledLocation](https://msdn.microsoft.com/library/windows/apps/br224681). | ms-appdata:///local/ |
-|  | Apunta a la raíz del almacenamiento local de la aplicación. |
-| Esta es la ubicación a la que hace referencia la propiedad [ApplicationData.LocalFolder](https://msdn.microsoft.com/library/windows/apps/br241621). | ms-appdata:///temp |
-|  | Apunta a la carpeta temporal de la aplicación. |
+| ms-appx:/// | Apunta a la raíz de la carpeta de instalación de la aplicación. |
+|  | Esta es la ubicación a la que hace referencia la propiedad [Package.InstalledLocation](https://msdn.microsoft.com/library/windows/apps/br224681). |
+| ms-appdata:///local/ | Apunta a la raíz del almacenamiento local de la aplicación. |
+|  | Esta es la ubicación a la que hace referencia la propiedad [ApplicationData.LocalFolder](https://msdn.microsoft.com/library/windows/apps/br241621). |
+| ms-appdata:///temp | Apunta a la carpeta temporal de la aplicación. |
+|  | Esta es la ubicación a la que hace referencia la propiedad [ApplicationData.TemporaryFolder](https://msdn.microsoft.com/library/windows/apps/br241629). |
 
  
 
-Esta es la ubicación a la que hace referencia la propiedad [ApplicationData.TemporaryFolder](https://msdn.microsoft.com/library/windows/apps/br241629). El ejemplo siguiente carga iconos almacenados como archivos en la carpeta de instalación de la aplicación mediante el protocolo `ms-appx:///`. El valor de [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) se especifica en el constructor de la clase [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994).
+El ejemplo siguiente carga iconos almacenados como archivos en la carpeta de instalación de la aplicación mediante el protocolo `ms-appx:///`. El valor de [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) se especifica en el constructor de la clase [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994). En este ejemplo, los iconos solo se muestran cuando el nivel de zoom del mapa está dentro del intervalo que especifica la propiedad opcional [**ZoomLevelRange**](https://msdn.microsoft.com/library/windows/apps/dn637171).
 
 ```csharp
         void AddLocalMapTileSource()
@@ -195,15 +195,15 @@ Esta es la ubicación a la que hace referencia la propiedad [ApplicationData.Tem
         }
 ```
 
-## En este ejemplo, los iconos solo se muestran cuando el nivel de zoom del mapa está dentro del intervalo que especifica la propiedad opcional [**ZoomLevelRange**](https://msdn.microsoft.com/library/windows/apps/dn637171).
+## Proporcionar un URI personalizado
 
 
-Proporcionar un URI personalizado Si los parámetros reemplazables disponibles en la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) de la clase [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) o la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) de la clase [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994) no son suficientes para recuperar los iconos, deberás crear un URI personalizado. Crea y devuelve un URI personalizado al proporcionar un controlador personalizado para el evento **UriRequested**.
+Si los parámetros reemplazables disponibles en la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) de la clase [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986) o la propiedad [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) de la clase [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994) no son suficientes para recuperar los iconos, deberás crear un URI personalizado. Crea y devuelve un URI personalizado al proporcionar un controlador personalizado para el evento **UriRequested**. El evento **UriRequested** se genera para cada icono individual.
 
-1.  El evento **UriRequested** se genera para cada icono individual.
-2.  En el controlador personalizado del evento **UriRequested**, se combinan los argumentos personalizados requeridos con las propiedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn610743), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn610744) y [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn610745) de la clase [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177), para crear el URI personalizado.
+1.  En el controlador personalizado del evento **UriRequested**, se combinan los argumentos personalizados requeridos con las propiedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn610743), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn610744) y [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn610745) de la clase [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177), para crear el URI personalizado.
+2.  Devuelve el URI personalizado en la propiedad [**Uri**](https://msdn.microsoft.com/library/windows/apps/dn610748) de la clase [**MapTileUriRequest**](https://msdn.microsoft.com/library/windows/apps/dn637173), que está incluido en la propiedad [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637179) de la clase [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177).
 
-Devuelve el URI personalizado en la propiedad [**Uri**](https://msdn.microsoft.com/library/windows/apps/dn610748) de la clase [**MapTileUriRequest**](https://msdn.microsoft.com/library/windows/apps/dn637173), que está incluido en la propiedad [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637179) de la clase [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177). En el siguiente ejemplo se muestra cómo proporcionar un URI personalizado mediante la creación de un controlador personalizado para el evento **UriRequested**.
+En el siguiente ejemplo se muestra cómo proporcionar un URI personalizado mediante la creación de un controlador personalizado para el evento **UriRequested**. También se muestra cómo implementar el modelo de aplazamiento si tienes que hacer algo asincrónicamente para crear el URI personalizado.
 
 ```csharp
 using Windows.UI.Xaml.Controls.Maps;
@@ -241,17 +241,17 @@ using System.Threading.Tasks;
         }
 ```
 
-## También se muestra cómo implementar el modelo de aplazamiento si tienes que hacer algo asincrónicamente para crear el URI personalizado.
+## Superponer iconos desde un origen personalizado
 
 
-Superponer iconos desde un origen personalizado Superpón iconos personalizados mediante la clase [**CustomMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636983).
+Superpón iconos personalizados mediante la clase [**CustomMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636983). Crea iconos mediante programación en la memoria sobre la marcha o escribe tu propio código para cargar los iconos existentes de otro origen.
 
-Crea iconos mediante programación en la memoria sobre la marcha o escribe tu propio código para cargar los iconos existentes de otro origen. Para crear o cargar iconos personalizados, debes proporcionar un controlador personalizado del evento [**BitmapRequested**](https://msdn.microsoft.com/library/windows/apps/dn636984).
+Para crear o cargar iconos personalizados, debes proporcionar un controlador personalizado del evento [**BitmapRequested**](https://msdn.microsoft.com/library/windows/apps/dn636984). El evento **BitmapRequested** se genera para cada icono individual.
 
-1.  El evento **BitmapRequested** se genera para cada icono individual.
-2.  En el controlador personalizado del evento [**BitmapRequested**](https://msdn.microsoft.com/library/windows/apps/dn636984), combina los argumentos personalizados requeridos con las propiedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn637135), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637136) y [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637137) de la clase [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132), para crear o recuperar un icono personalizado. Devuelve el icono personalizado en la propiedad [**PixelData**](https://msdn.microsoft.com/library/windows/apps/dn637140) de la clase [**MapTileBitmapRequest**](https://msdn.microsoft.com/library/windows/apps/dn637128), que está incluido en la propiedad [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637134) de la clase [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132).
+1.  En el controlador personalizado del evento [**BitmapRequested**](https://msdn.microsoft.com/library/windows/apps/dn636984), combina los argumentos personalizados requeridos con las propiedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn637135), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637136) y [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637137) de la clase [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132), para crear o recuperar un icono personalizado.
+2.  Devuelve el icono personalizado en la propiedad [**PixelData**](https://msdn.microsoft.com/library/windows/apps/dn637140) de la clase [**MapTileBitmapRequest**](https://msdn.microsoft.com/library/windows/apps/dn637128), que está incluido en la propiedad [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637134) de la clase [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132). Ten en cuenta que la propiedad **PixelData** es del tipo [**IRandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701664).
 
-Ten en cuenta que la propiedad **PixelData** es del tipo [**IRandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701664). En el siguiente ejemplo se muestra cómo proporcionar iconos personalizados mediante la creación de un controlador personalizado para el evento **BitmapRequested**. Este ejemplo crea iconos rojos idénticos que son parcialmente opacos. Asimismo, el ejemplo pasa por alto las propiedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn637135), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637136) y [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637137) de la clase [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132). Aunque no se trata de un ejemplo real, muestra igualmente cómo crear sobre la marcha iconos personalizados en la memoria.
+En el siguiente ejemplo se muestra cómo proporcionar iconos personalizados mediante la creación de un controlador personalizado para el evento **BitmapRequested**. Este ejemplo crea iconos rojos idénticos que son parcialmente opacos. Asimismo, el ejemplo pasa por alto las propiedades [**X**](https://msdn.microsoft.com/library/windows/apps/dn637135), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637136) y [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637137) de la clase [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132). Aunque no se trata de un ejemplo real, muestra igualmente cómo crear sobre la marcha iconos personalizados en la memoria. En el ejemplo también se muestra cómo implementar el modelo de aplazamiento si tienes que hacer algo asincrónicamente para crear los iconos personalizados.
 
 ```csharp
 using Windows.UI.Xaml.Controls.Maps;
@@ -350,25 +350,25 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
 }
 ```
 
-## En el ejemplo también se muestra cómo implementar el modelo de aplazamiento si tienes que hacer algo asincrónicamente para crear los iconos personalizados.
+## Reemplazo del mapa predeterminado
 
 
-Reemplazo del mapa predeterminado
+Reemplazar todo el mapa con iconos personalizados o de terceros:
 
--   Reemplazar todo el mapa con iconos personalizados o de terceros:
 -   Especifica [**MapTileLayer**](https://msdn.microsoft.com/library/windows/apps/dn637143).**BackgroundReplacement** como el valor de la propiedad [**Layer**](https://msdn.microsoft.com/library/windows/apps/dn637157) de la clase [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144).
+-   Especifica [**MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127).**None** como el valor de la propiedad [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
-## Especifica [**MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127).**None** como el valor de la propiedad [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
+## Temas relacionados
 
-* [Temas relacionados](https://www.bingmapsportal.com/)
-* [Bing Maps Developer Center (Centro para desarrolladores de Mapas de Bing)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [UWP map sample (Muestra de mapa de UWP)](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Directrices de diseño para mapas](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Vídeo de compilación de 2015: Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
+* [Bing Maps Developer Center (Centro para desarrolladores de Mapas de Bing)](https://www.bingmapsportal.com/)
+* [UWP map sample (Muestra de mapa de UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Vídeo de compilación de 2015: Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Ejemplo de aplicación de tráfico de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 
 
-<!--HONumber=Jun16_HO5-->
+
+
+<!--HONumber=Aug16_HO3-->
 
 

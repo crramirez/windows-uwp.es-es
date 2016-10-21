@@ -3,8 +3,9 @@ author: jwmsft
 description: "A continuación explicamos las reglas de la sintaxis XAML y la terminología que describe las restricciones o alternativas que existen en la sintaxis XAML."
 title: "Guía de sintaxis XAML"
 ms.assetid: A57FE7B4-9947-4AA0-BC99-5FE4686B611D
+translationtype: Human Translation
 ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: 8e7819b02d7a22a16cf16091d08bef0aabc8d36e
+ms.openlocfilehash: 1fb5f64b5fe58843c06603045a3de9576887d1c7
 
 ---
 
@@ -30,10 +31,8 @@ Un archivo XAML siempre tiene exactamente un elemento que funciona como raíz y 
 
 En lo que respecta a la sintaxis XAML, hay tres formas de declarar objetos en XAML:
 
--   
-            **Directamente, mediante la sintaxis de elemento de objeto:** se usan etiquetas de apertura y cierre para crear instancias de un objeto como un elemento de formulario XML. Puedes usar esta sintaxis para declarar objetos raíz o para crear objetos anidados que establecen valores de propiedad.
--   
-            **Indirectamente, mediante la sintaxis de atributo:** se usa un valor de cadena insertado que contiene instrucciones sobre la creación de un objeto. El analizador XAML utiliza esta cadena para establecer el valor de una propiedad en un valor de referencia recién creado. Solo se admite en determinados objetos y propiedades comunes.
+-   **Directamente, mediante la sintaxis de elementos de objeto:** se usan etiquetas de apertura y cierre y así poder crear instancias de un objeto como un elemento de formulario XML. Puedes usar esta sintaxis para declarar objetos raíz o para crear objetos anidados que establecen valores de propiedad.
+-   **Indirectamente, mediante la sintaxis de atributo:** se usa un valor de cadena insertado que contiene instrucciones sobre la creación de un objeto. El analizador XAML utiliza esta cadena para establecer el valor de una propiedad en un valor de referencia recién creado. Solo se admite en determinados objetos y propiedades comunes.
 -   Usando una extensión de marcado.
 
 Esto no significa siempre puedas elegir cualquiera de las sintaxis para crear un objeto en un vocabulario XAML. Algunos objetos solo se pueden crear con la sintaxis de elemento de objeto. Algunos objetos solo se pueden crear si se establecen inicialmente en un atributo. De hecho, los objetos que pueden crearse tanto con la sintaxis de elemento de objeto como de atributo son en comparación relativamente infrecuentes en los vocabularios XAML. Aunque ambas formas de sintaxis sean posibles, una de ellas será más común por cuestión de estilo.
@@ -85,8 +84,7 @@ Este ejemplo abreviado usa el texto de inicialización para especificar valores 
 </UserControl ...>
 ```
 
-
-            **Nota** Algunas estructuras no se pueden declarar como elementos de objeto. No se admite el texto de inicialización y no pueden usarse como recursos. Debes usar una sintaxis de atributo para establecer las propiedades en estos valores en XAML. Estos tipos son: [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) y [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995).
+**Nota** Algunas estructuras no se pueden declarar como elementos de objeto. No se admite el texto de inicialización y no pueden usarse como recursos. Debes usar una sintaxis de atributo para establecer las propiedades en estos valores en XAML. Estos tipos son: [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) y [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995).
 
 ## Establecer propiedades
 
@@ -126,19 +124,11 @@ En la siguiente gramática, *property* es el nombre de la propiedad que deseas e
 
 `<`*object*`>`
 
-`<`
-            *object*
-            `.`
-            *property*
-          `>`
+`<`*object*`.`*property*`>`
 
 *propertyValueAsObjectElement*
 
-`</`
-            *object*
-            `.`
-            *property*
-          `>`
+`</`*object*`.`*property*`>`
 
 `</`*object*`>`
 
@@ -245,8 +235,7 @@ En primer lugar, la presencia del elemento de objeto indica que se debe crear un
 
 Otra regla de XAML es que los atributos de un elemento deben poder establecerse en cualquier orden. Por ejemplo, no existe ninguna diferencia entre `<Rectangle Height="50" Width="100" />` y `<Rectangle Width="100"  Height="50" />`. El orden utilizado es una cuestión de estilo.
 
-
-            **Nota** Los diseñadores XAML suelen promover determinadas convenciones de orden cuando se usan superficies de diseño que no sean el editor XML, pero puedes editar libremente ese código XAML más tarde para reordenar los atributos e introducir otros nuevos.
+**Nota** Los diseñadores XAML suelen promover determinados protocolos de orden cuando se usan superficies de diseño que no sean el editor XML; de todos modos, puedes editar libremente ese código XAML más tarde para reordenar los atributos e introducir otros nuevos.
 
 ## Propiedades adjuntas
 
@@ -276,8 +265,7 @@ Para obtener más información, consulta [Introducción a las propiedades adjunt
 
 Ya que la llave de apertura \{ es la apertura de la secuencia de la extensión de marcado, debes usar una secuencia de escape para especificar un valor de cadena literal que comienza con "\{". La secuencia de escape es "\{\}". Por ejemplo, para especificar un valor de cadena que es una única llave de apertura, especifica el valor de atributo como "\{\}\{". También puedes usar otras comillas (por ejemplo, **'** dentro de un valor de atributo delimitado por **""**) para proporcionar un valor "\{" como cadena.
 
-
-            **Nota** "\\}" también funciona si está dentro de un atributo entre comillas.
+**Nota** "\\}" también funciona si está dentro de un atributo entre comillas.
  
 ## Valores de enumeración
 
@@ -286,8 +274,7 @@ Muchas propiedades de la API de Windows en tiempo de ejecución usan enumeracion
 -   No uses la forma completa, porque no funcionará. Por ejemplo, esto sería un ejemplo de XAML no válido: `<Button Visibility="Visibility.Visible"/>`
 -   No uses el valor de la constante. Es decir, no utilices el valor entero de la enumeración, que se encuentra allí de forma explícita o implícita, en función de cómo se definió la enumeración. Aunque parezca que funcione, se trata de una mala práctica en XAML o en código, ya que estás confiando en un detalle de implementación que podría ser transitorio. Por ejemplo, no uses esto: `<Button Visibility="1"/>`.
 
-
-            **Nota** En los temas de referencia sobre las API que usan XAML y enumeraciones, haz clic en el vínculo del tipo de enumeración de la sección **Valor de propiedad** de **Sintaxis**. Este vínculo lleva a la página de la enumeración, donde puedes encontrar las constantes con nombre para esa enumeración.
+**Nota** En los temas de referencia sobre las API que usan XAML y enumeraciones, haz clic en el vínculo del tipo de enumeración de la sección **Valor de propiedad** de **Sintaxis**. Este vínculo lleva a la página de la enumeración, donde puedes encontrar las constantes con nombre para esa enumeración.
 
 Las enumeraciones pueden estar basadas en marcas, lo que quiere decir que tienen el atributo **FlagsAttribute**. Si necesitas especificar una combinación de valores para una enumeración basada en marcas como un valor de atributo XAML, usa el nombre de cada constante de enumeración, con una coma (,) entre cada nombre y sin caracteres de espacio entre ellos. Los atributos basados en marcas no son comunes en el vocabulario XAML de Windows Runtime, pero [**ManipulationModes**](https://msdn.microsoft.com/library/windows/apps/br227934) es un ejemplo que admite la configuración de un valor de enumeración basada en marcas en XAML.
 
@@ -311,17 +298,11 @@ Muchas secciones de la sintaxis XAML incluyen, en la sección "Uso", marcadores 
 
 Las secciones de uso de XAML también utilizan diversos marcadores de posición generalizados. Estos marcadores de posición no se vuelven a definir cada vez en **Valores de XAML**, porque adivinarás o acabarás por aprender lo que representan. Creemos que la mayoría de nuestros lectores se cansarían de verlos en la sección **Valores de XAML** una y otra vez y, por eso, los hemos omitido de las definiciones. Como referencia, aquí tienes una lista de algunos de estos marcadores de posición y lo que significan en general:
 
--   
-            *object*: en teoría representa cualquier valor de objeto, aunque en la práctica se suele limitar a determinados tipos de objetos, como una selección de cadena u objeto, así que deberías leer las observaciones de la página de referencia para obtener más información.
--   
-            *object*
-            *property*: la combinación *object**property* se usa para aquellos casos en que la sintaxis que se muestra es la de un tipo que se puede usar como valor de atributo para muchas propiedades. Por ejemplo, la sección **Uso del atributo Xaml** que se muestra para [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) incluye: <*object**property*= "*predefinedColorName*"/>
--   
-            *eventhandler*: aparece como el valor de atributo para todas las sintaxis XAML mostradas para un atributo de evento. Aquí, lo que proporcionas es el nombre de función para una función de controlador de eventos. Dicha función se debe definir en el código subyacente de la página XAML. En el nivel de programación, esa función debe coincidir con la firma de delegado del evento que estés controlando; de lo contrario, el código de la aplicación no se compilará. De todos modos esto es algo a tener en cuenta para la programación, pero no para XAML, así que no estamos diciendo que se aplique al tipo delegado en la sintaxis XAML. Si quieres saber qué delegado deberías implementar para un evento, consulta la sección **Información del evento** del tema de referencia sobre el evento, en una fila de la tabla llamada **Delegado**.
--   
-            *enumMemberName*: se muestra en la sintaxis de atributo de todas las enumeraciones. Existe un marcador de posición similar para las propiedades que usan un valor de enumeración, aunque suele prefijar el marcador de posición con una indicación del nombre de la enumeración. Por ejemplo, la sintaxis que se muestra para [**FrameworkElement.FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716) es <*frameworkElement***FlowDirection**= "*flowDirectionMemberName*"/>. Si te encuentras en una de esas páginas de referencia sobre propiedades, haz clic en el vínculo del tipo de enumeración que aparece en la sección **Valor de propiedad** , junto al texto **Tipo:**. Como valor de atributo de una propiedad que use esa enumeración, puedes usar cualquier cadena que aparezca en la columna **Miembro** de la tabla **Miembros** .
--   
-            *double*, *int*, *string*, *bool*: se trata de tipos primitivos conocidos en el lenguaje XAML. Si estás programando con C# o Visual Basic, estos tipos se proyectan en tipos equivalentes de Microsoft .NET como [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx), [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx) y [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx), y puedes usar cualquier miembro de esos tipos .NET cuando trabajes con tus valores definidos con XAML en el código subyacente en .NET. Si programas con C++/CX, usarás los tipos primitivos de C++, pero también puedes considerarlos equivalentes a los tipos definidos por el espacio de nombres [**Platform**](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx), por ejemplo [**Platform::String**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx). En algunos casos habrá restricciones de valores adicionales para determinadas propiedades. De todos modos, normalmente estarán indicadas en la sección **Valor de propiedad** u Observaciones, y no en la sección XAML, ya que ese tipo de restricciones se aplican tanto a los usos de código como a los de XAML.
+-   *object*: en teoría representa cualquier valor de objeto, aunque en la práctica se suele limitar a determinados tipos de objetos, como una selección de cadena u objeto, así que te recomendamos que leas las observaciones de la página de referencia para obtener más información.
+-   *object* *property*: la combinación *object* *property* se usa para aquellos casos en que la sintaxis que se muestra es la de un tipo que se puede usar como valor de atributo de muchas propiedades. Por ejemplo, la sección **Uso del atributo Xaml** que se muestra para [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) incluye: <*object* *property*= "*predefinedColorName*"/>
+-   *eventhandler*: aparece como el valor de atributo de todas las sintaxis XAML mostradas de un atributo de evento. Aquí, lo que proporcionas es el nombre de función para una función de controlador de eventos. Dicha función se debe definir en el código subyacente de la página XAML. En el nivel de programación, esa función debe coincidir con la firma de delegado del evento que estés controlando; de lo contrario, el código de la aplicación no se compilará. De todos modos esto es algo a tener en cuenta para la programación, pero no para XAML, así que no estamos diciendo que se aplique al tipo delegado en la sintaxis XAML. Si quieres saber qué delegado deberías implementar para un evento, consulta la sección **Información del evento** del tema de referencia sobre el evento, en una fila de la tabla llamada **Delegado**.
+-   *enumMemberName*: se muestra en la sintaxis de atributo de todas las enumeraciones. Existe un marcador de posición similar para las propiedades que usan un valor de enumeración, aunque suele prefijar el marcador de posición con una indicación del nombre de la enumeración. Por ejemplo, la sintaxis que se muestra para [**FrameworkElement.FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716) es <*frameworkElement***FlowDirection**= "*flowDirectionMemberName*"/>. Si te encuentras en una de esas páginas de referencia sobre propiedades, haz clic en el vínculo del tipo de enumeración que aparece en la sección **Valor de propiedad** , junto al texto **Tipo:**. Como valor de atributo de una propiedad que use esa enumeración, puedes usar cualquier cadena que aparezca en la columna **Miembro** de la tabla **Miembros** .
+-   *double*, *int*, *string*, *bool*: se trata de tipos primitivos conocidos en el lenguaje XAML. Si estás programando con C# o Visual Basic, estos tipos se proyectan en tipos equivalentes de Microsoft .NET como [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx), [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx) y [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx), y puedes usar cualquier miembro de esos tipos .NET cuando trabajes con tus valores definidos con XAML en el código subyacente en .NET. Si programas con C++/CX, usarás los tipos primitivos de C++, pero también puedes considerarlos equivalentes a los tipos definidos por el espacio de nombres [**Platform**](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx), por ejemplo [**Platform::String**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx). En algunos casos habrá restricciones de valores adicionales para determinadas propiedades. De todos modos, normalmente estarán indicadas en la sección **Valor de propiedad** u Observaciones, y no en la sección XAML, ya que ese tipo de restricciones se aplican tanto a los usos de código como a los de XAML.
 
 ## Trucos, sugerencias y notas sobre el estilo
 
@@ -338,6 +319,6 @@ Las secciones de uso de XAML también utilizan diversos marcadores de posición 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

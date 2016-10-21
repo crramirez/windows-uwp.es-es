@@ -4,20 +4,29 @@ ms.assetid: 4311D293-94F0-4BBD-A22D-F007382B4DB8
 title: Enumerar dispositivos
 description: "El espacio de nombres de enumeración te permite buscar dispositivos que están conectados en el sistema de forma interna o externa o que se pueden detectar mediante protocolos de redes o de redes inalámbricas."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 296ca0ece8cead74112c3e665f13b5e5547e6da3
+ms.sourcegitcommit: 23a600fdcf972fcb291653e8aac447e035c12c6d
+ms.openlocfilehash: 2aa1a86a2cb0b413fae5fbcd87599a9f1a822324
 
 ---
 # Enumerar dispositivos
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
+## Muestras
 
-** API importantes **
+La forma más sencilla de enumerar todos los dispositivos disponibles es hacer una instantánea con el comando [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.findallasync.aspx), que se explica detalladamente más abajo.
 
--   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
+```CSharp
+async void enumerateSnapshot(){
+  DeviceInformationCollection collection = await DeviceInformation.FindAllAsync();
+}
+```
 
-El espacio de nombres de enumeración te permite buscar dispositivos que están conectados en el sistema de forma interna o externa o que se pueden detectar mediante protocolos de redes o de redes inalámbricas. Las API que se usan para enumerar los dispositivos posibles son los espacios de nombres [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459). Entre las razones para usar estas API se incluyen las siguientes:
+Para descargar una muestra que presente los usos más avanzados de las API de [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459), haz clic [aquí](http://go.microsoft.com/fwlink/?LinkID=620536).
+
+## API de enumeración
+
+El espacio de nombres de enumeración te permite buscar dispositivos conectados internamente con el sistema, conectados externamente o detectables mediante protocolos de redes o de redes inalámbricas. Las API que se usan para enumerar los dispositivos posibles son los espacios de nombres [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459). Entre las razones para usar estas API se incluyen las siguientes:
 
 -   Buscar un dispositivo para conectar con la aplicación.
 -   Obtener información sobre los dispositivos conectados o detectables por el sistema.
@@ -69,8 +78,7 @@ La clase [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn93
 
 Mientras se muestra la clase [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841), el contenido de la interfaz de usuario se actualizará automáticamente si se agregan, quitan o actualizan los dispositivos.
 
-
-              **Nota** No puedes especificar [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx) mediante [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841). Si quieres tener dispositivos con un elemento **DeviceInformationKind** determinado, tendrás que compilar una clase [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) y proporcionar tu propia interfaz de usuario.
+**Nota** No puedes especificar [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx) mediante [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841). Si quieres tener dispositivos con un elemento **DeviceInformationKind** determinado, tendrás que compilar una clase [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) y proporcionar tu propia interfaz de usuario.
 
  
 
@@ -81,9 +89,15 @@ La conversión de contenido multimedia y DIAL también proporciona sus propios s
 
 En algunos casos, la clase [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841) no será adecuada para tus necesidades y necesitarás algo más flexible. Es posible que quieras compilar tu propia interfaz de usuario o que necesites enumerar dispositivos sin mostrar una interfaz de usuario al usuario. En estas situaciones, puedes enumerar una instantánea de dispositivos. Esto implica echar un vistazo a los dispositivos que están actualmente conectados o emparejados con el sistema. Sin embargo, debes tener en cuenta que este método solo examina una instantánea de los dispositivos que están disponibles, por lo que no podrás encontrar los dispositivos que se conecten después de enumerarlos a través de la lista. Tampoco recibirás ninguna notificación si se actualiza o quita un dispositivo. Otra posible desventaja que debes tener en cuenta es que este método retendrá los resultados hasta que se complete toda la enumeración. Por este motivo, no debes usar este método cuando estés interesado en los objetos **AssociationEndpoint**, **AssociationEndpointContainer** o **AssociationEndpointService**, ya que se encuentran en un protocolo de redes o de redes inalámbricas. Esta operación puede tardar hasta 30 segundos en completarse. En ese caso, deberías usar un objeto [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) para enumerar los dispositivos posibles.
 
-Para enumerar una instantánea de dispositivos, usa el método [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.findallasync.aspx). Este método espera hasta que se completa todo el proceso de enumeración y devuelve todos los resultados como un objeto [**DeviceInformationCollection**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationcollection.aspx). Este método también se sobrecarga para proporcionar varias opciones para filtrar los resultados y limitarlos a los dispositivos de tu interés. Para ello, proporciona una enumeración [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381) o pasa un selector de dispositivos. El selector de dispositivos es una cadena AQS que especifica los dispositivos que quieres enumerar. Para más información, consulta [Compilar un selector de dispositivos](build-a-device-selector.md).
+Para enumerar una instantánea de dispositivos, usa el método [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.findallasync.aspx). Este método espera hasta que se completa todo el proceso de enumeración y devuelve todos los resultados como un objeto [**DeviceInformationCollection**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationcollection.aspx). Este método también se sobrecarga para proporcionar varias opciones para filtrar los resultados y limitarlos a los dispositivos de tu interés. Para ello, proporciona una enumeración [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381) o pasa un selector de dispositivos. El selector de dispositivos es una cadena AQS que especifica los dispositivos que quieres enumerar. Para obtener más información, consulta [Compilar un selector de dispositivos](build-a-device-selector.md).
+
+A continuación se proporciona un ejemplo de instantánea de enumeración de dispositivos:
+
+
 
 Además de limitar los resultados, también puedes especificar las propiedades que quieres recuperar para los dispositivos. Si lo haces, las propiedades especificadas estarán disponibles en el contenedor de propiedades de cada objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) que se devuelva en la colección. Es importante tener en cuenta que no todas las propiedades están disponibles para todos los tipos de dispositivos. Para ver qué propiedades están disponibles para los distintos tipos de dispositivos, consulta [Propiedades de información de dispositivo](device-information-properties.md).
+
+
 
 ## Enumerar y ver los dispositivos
 
@@ -105,8 +119,7 @@ Para crear una clase [**DeviceWatcher**](https://msdn.microsoft.com/library/wind
 
 Ver dispositivos como una tarea en segundo plano es muy similar a crear una clase [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446), tal como se describió anteriormente. De hecho, deberás crear primero un objeto **DeviceWatcher** normal, tal como se describe en la sección anterior. Una vez creado, debes llamar al método [**GetBackgroundTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.enumerationcompleted.aspx) en vez de a [**DeviceWatcher.Start**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.start). Cuando llames a **GetBackgroundTrigger**, debes especificar cuál de las notificaciones te interesa: agregar, quitar o actualizar. No se puede solicitar la notificación de actualizar o quitar sin solicitar la de agregar. Una vez registres el desencadenador, la clase **DeviceWatcher** comenzará a ejecutarse inmediatamente en segundo plano. De ahora en adelante, siempre que recibas una nueva notificación para la aplicación que coincida con los criterios, se desencadenará la tarea en segundo plano y te proporcionará los cambios más recientes desde la última vez que se desencadenó la aplicación.
 
-
-              **Importante** La primera vez que una clase [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) desencadene tu aplicación, será cuando el observador alcance el estado **EnumerationCompleted**. Esto significa que contendrá todos los resultados iniciales. Las siguientes veces que desencadene tu aplicación, solo contendrá las notificaciones de agregar, actualizar y quitar que se hayan producido desde que se activó el último desencadenador. Esta acción se diferencia de un objeto [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) de primer plano, ya que los resultados iniciales no llegan de uno en uno y solo se entregan en conjunto después alcanzar el estado **EnumerationCompleted**.
+**Importante** La primera vez que una clase [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) desencadene la aplicación, el observador cambiará al estado **EnumerationCompleted**. Esto significa que contendrá todos los resultados iniciales. Las siguientes veces que desencadene tu aplicación, solo contendrá las notificaciones de agregar, actualizar y quitar que se hayan producido desde que se activó el último desencadenador. Esta acción se diferencia de un objeto [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) de primer plano, ya que los resultados iniciales no llegan de uno en uno y solo se entregan en conjunto después alcanzar el estado **EnumerationCompleted**.
 
  
 
@@ -131,18 +144,13 @@ Si compilas tu propio selector de dispositivos para enumerar a través de objeto
 
 Es importante tener en cuenta que las propiedades disponibles en el contenedor de propiedades de un objeto [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393), variarán en función de la clase [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx) del dispositivo. Algunas propiedades solo están disponibles con determinados tipos. Para obtener más información sobre las propiedades disponibles para cada tipo, consulta el artículo [Propiedades de información de dispositivo](device-information-properties.md). Así pues, en el ejemplo anterior, si buscas el objeto primario **Device**, obtendrás acceso a información adicional que no estaba disponible en el objeto de dispositivo **DeviceInterface**. Por este motivo, cuando creas las cadenas de filtro AQS, es importante que te asegures de que las propiedades solicitadas están disponibles para los objetos **DeviceInformationKind** que estás enumerando. Para obtener más información acerca de cómo compilar un filtro, consulta el tema [Crear un selector de dispositivos](build-a-device-selector.md).
 
-Cuando se enumeran objetos como **AssociationEndpoint**, **AssociationEndpointContainer** o **AssociationEndpointService**, la enumeración se realiza a través de un protocolo de redes o de redes inalámbricas. En estos casos, te recomendamos no usar [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.findallasync.aspx) y usar [**CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.createwatcher.aspx) en su lugar. Esto se debe a que las búsquedas a través de una red a menudo dan como resultado operaciones de búsqueda cuyo tiempo de espera no finalizará en un período de 10 o más segundos antes de generar [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.enumerationcompleted.aspx). 
-              **FindAllAsync** no completa la operación hasta que no se desencadena **EnumerationCompleted**. Si usas [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446), obtendrás resultados más próximos a los resultados en tiempo real independientemente de cuándo se llame al evento **EnumerationCompleted**.
+Cuando se enumeran objetos como **AssociationEndpoint**, **AssociationEndpointContainer** o **AssociationEndpointService**, la enumeración se realiza a través de un protocolo de redes o de redes inalámbricas. En estos casos, te recomendamos no usar [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.findallasync.aspx) y usar [**CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.createwatcher.aspx) en su lugar. Esto se debe a que las búsquedas a través de una red a menudo dan como resultado operaciones de búsqueda cuyo tiempo de espera no finalizará en un período de 10 o más segundos antes de generar [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.enumerationcompleted.aspx). **FindAllAsync** no completa la operación hasta que se desencadena **EnumerationCompleted**. Si usas [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446), obtendrás resultados más próximos a los resultados en tiempo real independientemente de cuándo se llame al evento **EnumerationCompleted**.
 
 ## Guardar un dispositivo para usarlo más adelante
 
 
 Todos los objetos [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) se identifican de forma exclusiva mediante una combinación de dos fragmentos de información: [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) y [**DeviceInformation.Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx). Si mantienes estos dos fragmentos de información, puedes volver a crear el objeto **DeviceInformation** después de perderlo si se proporciona esta información a [**CreateFromIdAsync**](https://msdn.microsoft.com/library/windows/apps/br225425.aspx). De este modo, puedes guardar las preferencias del usuario para un dispositivo que se integre con la aplicación.
 
-## Muestra
-
-
-Para descargar una muestra que te indique cómo usar las API [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459), haz clic [aquí](http://go.microsoft.com/fwlink/?LinkID=620536).
 
  
 
@@ -154,6 +162,6 @@ Para descargar una muestra que te indique cómo usar las API [**Windows.Devices.
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

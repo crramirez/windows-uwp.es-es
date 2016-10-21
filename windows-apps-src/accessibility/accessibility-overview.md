@@ -5,8 +5,9 @@ ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
 title: "Información general sobre accesibilidad"
 label: Accessibility overview
 template: detail.hbs
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 430484a9243abc644de75d35c03bb11cf47960c0
+translationtype: Human Translation
+ms.sourcegitcommit: a93f6fb154300ac27b9dc700182d90083fb2cbc8
+ms.openlocfilehash: 669672ecd8c15adb2e53eb8e4a8efd8483af14d1
 
 ---
 
@@ -157,8 +158,7 @@ private void ShowAccessibleUICheckBox_Click(object sender, RoutedEventArgs e)
 Para obtener más información sobre las declaraciones de accesibilidad y la publicación de la aplicación, consulta [Accesibilidad en la Tienda](accessibility-in-the-store.md).
 
 > [!NOTE]
-> 
-            [!NOTE] La declaración de la aplicación como accesible solo se aplica a la Tienda Windows.
+> Declarar la aplicación como accesible solo es relevante para la Tienda Windows.
 
 <span id="Assistive_technology_support_in_custom_controls"/>
 <span id="assistive_technology_support_in_custom_controls"/>
@@ -176,10 +176,11 @@ No se puede acceder de manera predeterminada al contenido de Microsoft DirectX h
 ## Temas relacionados  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
 * [Diseño de accesibilidad](https://msdn.microsoft.com/library/windows/apps/Hh700407)
-* [Muestra de accesibilidad en XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Ejemplo de accesibilidad XAML](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Accesibilidad](accessibility.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

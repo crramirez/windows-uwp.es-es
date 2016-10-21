@@ -3,43 +3,42 @@ author: jnHs
 Description: "La página Clasificaciones por edades del proceso de envío de la aplicación permite proporcionar información acerca de la aplicación para recibir las clasificaciones por edades apropiadas de la International Age Rating Coalition (IARC)."
 title: Clasificaciones por edades
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 559842fb6740236780756018d01036b835660309
+translationtype: Human Translation
+ms.sourcegitcommit: 8781eb0e5ea352216a1f4e1c6deedbd04d4b588c
+ms.openlocfilehash: d190a32f16d1e7c1d98e33d1757bc9047277b62b
 
 ---
 
 # Clasificaciones por edades
 
-La página **Clasificaciones por edades** del [Proceso de envío de la aplicación](app-submissions.md) permite proporcionar información acerca de la aplicación para recibir las clasificaciones por edades apropiadas de la [International Age Rating Coalition (IARC)](http://go.microsoft.com/fwlink/p/?LinkId=716854). Estas clasificaciones tienen que ver con la idoneidad del contenido de la aplicación y sus metadatos, en lugar de con la edad del público objetivo de tu aplicación.
+La página **Clasificaciones por edades** del [Proceso de envío de la aplicación](app-submissions.md) permite proporcionar información acerca de la aplicación para recibir las clasificaciones por edades y contenido apropiadas administradas por la [International Age Rating Coalition (IARC)](http://go.microsoft.com/fwlink/p/?LinkId=716854). Estas clasificaciones tienen que ver con la idoneidad del contenido de la aplicación, más que con la edad del público objetivo de tu aplicación.
 
 ## Responder al cuestionario de clasificaciones por edades
 
-La primera vez que envíes una aplicación (o la primera vez que actualices una aplicación publicada con el proceso anterior de clasificación por edades), se te solicitará que respondas un cuestionario de varias opciones para determinar la clasificación por edades de tu aplicación.
+La primera vez que envíes una aplicación (o la primera vez que actualices una aplicación publicada con el proceso anterior de clasificación por edades), se te solicitará que completes un cuestionario de elección múltiple para determinar la clasificación por edades de tu aplicación.
 
-> 
-            **Importante**  Si ya lo realizaste para la aplicación en otro escaparate y tienes un identificador de clasificación de IARC, puedes seleccionar la opción para proporcionarnos tu identificador de clasificación. Usaremos tu identificador para asociar las clasificaciones existentes con tu aplicación en la Tienda Windows.
+> **Importante** Si ya has completado el cuestionario respecto a la aplicación en otro escaparate y tienes un identificador de la clasificación de la IARC, puedes seleccionar la opción de proporcionarnos tu identificador de clasificación. Usaremos tu identificador para asociar las clasificaciones existentes con tu aplicación en la Tienda Windows.
 
-Tienes que responder a las preguntas con precisión. Como parte de este proceso, compartimos con IARC tu dirección de correo y el nombre para mostrar del publicador. Después de completar el cuestionario, IARC asignará clasificaciones por edades basadas en tus respuestas. Usaremos estas clasificaciones a la hora de mostrar tu aplicación a los clientes en diferentes mercados. También recibirás un correo electrónico de IARC con información sobre las clasificaciones de la aplicación.
+Tienes que responder a las preguntas con precisión. Como parte de este proceso, compartimos con la IARC tu nombre para mostrar de publicador y tu dirección de correo electrónico. Tras completar el cuestionario, el sistema de clasificación de la IARC proporcionará la información de clasificación por edades y contenido en base a tus respuestas. Esta información de clasificación la usaremos a la hora de mostrar tu aplicación a los clientes en diferentes mercados. También recibirás un correo electrónico de la IARC con una confirmación de la clasificación por edades de la aplicación cuando dicha aplicación se haya publicado.
 
-La primera pregunta te pide que elijas la categoría que mejor describa la aplicación (y sus metadatos). Una vez que hagas una selección, verá más preguntas. Las preguntas específicas que verás variarán en función de tus respuestas anteriores. Si te equivocas en algo, puedes comenzar el cuestionario de nuevo para proporcionar las respuestas correctas.
+La primera pregunta te pide que elijas la categoría que mejor describa la aplicación (y sus metadatos). Una vez que hagas una selección, verá más preguntas. Las preguntas específicas que verás variarán en función de tus respuestas anteriores. Si te equivocas en algo, puedes retroceder o comenzar el cuestionario de nuevo para proporcionar las respuestas correctas.
 
-Cuando termines de responder a las preguntas, haz clic en **Save and generate**. A continuación, verás las clasificaciones asignadas de la aplicación y podrás seguir con el envío. También puedes hacer clic en **Editar** para repetir el cuestionario.
+Cuando termines de responder a las preguntas, haz clic en **Save and generate**. A continuación, verás las clasificaciones asignadas de la aplicación y podrás seguir con el envío. También puedes hacer clic en **Editar** corregir las respuestas al cuestionario.
 
-La próxima vez que actualices la aplicación, verás todas las clasificaciones asignadas de la aplicación en esta página. También puede hacer clic **Editar** si deseas repetir el cuestionario. Asegúrate de repetirlo si el contenido de tu aplicación cambia de manera que debas ajustar alguna respuesta. IARC también puede actualizar las preguntas ocasionalmente. En este caso, es posible que se te pida que repitas el cuestionario cuando envíes una actualización.
+La próxima vez que actualices la aplicación, verás todas las clasificaciones asignadas de la aplicación en esta página. También puedes hacer clic en **Editar** para repetir el cuestionario si el contenido de tu aplicación cambia de tal forma que debas ajustar alguna respuesta. La IARC también puede actualizar las preguntas ocasionalmente. En este caso, es posible que se te pida que vuelvas a completar el cuestionario cuando envíes una actualización.
 
-> 
-            **Nota**  La legislación de Corea del Sur exige que los juegos disponibles en Corea del Sur se clasifiquen a través del [panel de clasificación de juegos](http://go.microsoft.com/fwlink/p/?LinkId=228256) de Corea del Sur. Si la aplicación es un juego y quieres ofrecerlo en Corea del Sur, debes rellenar esta sección adicional y cargar el certificado de clasificación. Ten en cuenta que si la aplicación no es un juego o si no quieres ofrecerla en Corea del Sur, puedes dejar esta sección en blanco.
+> **Nota** La legislación de Corea del Sur exige que los juegos disponibles en Corea del Sur se clasifiquen a través del [Game Rating Board](http://go.microsoft.com/fwlink/p/?LinkId=228256) (Consejo de clasificación de juegos) de Corea del Sur. Si la aplicación es un juego y quieres ofrecerlo en Corea del Sur, debes rellenar esta sección adicional y cargar el certificado de clasificación. Ten en cuenta que si la aplicación no es un juego o si no quieres ofrecerla en Corea del Sur, puedes dejar esta sección en blanco.
 
 ## Apelar clasificaciones o clasificaciones rechazadas
 
-Si tienes dudas sobre las clasificaciones por edades que recibió tu aplicación quieres apelarlas, puedes ponerte en contacto con IARC a través del vínculo que aparece en el correo electrónico de certificado de clasificación que recibirás una vez publicada la aplicación.
+Si tienes dudas sobre la clasificación por edades que ha recibido tu aplicación quieres apelarla, puedes ponerte en contacto con la IARC a través del vínculo que aparece en el correo electrónico de certificado de la clasificación que recibirás una vez publicada la aplicación.
 
-En algunos casos, es posible que la clasificación de tu aplicación haga que esta se clasifique como no adecuada para un país o región determinado. En este caso, verás un mensaje que indica los mercados en los que no se puede ofrecer tu aplicación. Si no estás de acuerdo con esta clasificación, puedes solicitar una apelación mediante el vínculo que aparece en el correo electrónico de certificado de clasificación que recibirás de IARC.
+En algunos casos, es posible que la clasificación de tu aplicación haga que esta se clasifique como no adecuada para un país o región determinado. En este caso, verás un mensaje que indicará los mercados en los que no se puede ofrecer tu aplicación. Si no estás de acuerdo con esta clasificación (o con cualquier otra), puedes solicitar una apelación mediante el vínculo que aparece en el correo electrónico de certificado de la clasificación que recibirás de la IARC.
 
 ## Clasificaciones por edades anteriores de la Tienda Windows
 
 
-Anteriormente, los desarrolladores especificaban la clasificación por edades de su aplicación en lugar de responder al cuestionario. A continuación, busca el desglose de clasificaciones por edades anteriores de la Tienda Windows:
+Anteriormente, los propios desarrolladores especificaban la clasificación por edades de su aplicación, en lugar de completar el cuestionario. A continuación tienes el desglose de clasificaciones por edades anteriores de la Tienda Windows:
 
 | Clasificación por edades                           | Descripción                            |
 |--------------------------------------|----------------------------------------|
@@ -51,6 +50,6 @@ Anteriormente, los desarrolladores especificaban la clasificación por edades de
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

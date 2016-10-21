@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: EAC34672-5C12-402D-920B-6F2835EA5ACE
 title: "Herramientas de creación de perfiles y rendimiento"
 description: "Microsoft proporciona varias herramientas que te ayudarán a mejorar el rendimiento de tu aplicación para la Plataforma universal de Windows (UWP)."
+translationtype: Human Translation
 ms.sourcegitcommit: 5bbd14fb53cae67bbb827f94e695b2703e07fc34
-ms.openlocfilehash: f7f9821be7d1423b2f89367bd20c09981eca24eb
+ms.openlocfilehash: 3d0cf5f983efdee116bcf8b87398fe376efca3c6
 
 ---
 # Herramientas de creación de perfiles y rendimiento
@@ -13,8 +14,7 @@ ms.openlocfilehash: f7f9821be7d1423b2f89367bd20c09981eca24eb
 
 Microsoft proporciona varias herramientas que te ayudarán a mejorar el rendimiento de tu aplicación para la Plataforma universal de Windows (UWP). Sigue estos vínculos para obtener información sobre el uso de estas herramientas.
 
-
-            **Herramienta Capacidad de respuesta de la interfaz de usuario XAML en Visual Studio 2015**. Una de las mejores herramientas para usar a la hora de medir el impacto en el rendimiento de tu aplicación es la herramienta Capacidad de respuesta de interfaz de usuario XAML. Esta se ha [actualizado para Visual Studio de 2015](http://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) para admitir aún más escenarios.
+**Herramienta Capacidad de respuesta de la interfaz de usuario XAML en Visual Studio 2015**. Una de las mejores herramientas para usar a la hora de medir el impacto en el rendimiento de tu aplicación es la herramienta Capacidad de respuesta de interfaz de usuario XAML. Esta se ha [actualizado para Visual Studio de 2015](http://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) para admitir aún más escenarios.
 
 Consulta también:
 
@@ -30,6 +30,6 @@ Consulta también:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

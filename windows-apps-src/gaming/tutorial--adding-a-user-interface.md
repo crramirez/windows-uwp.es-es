@@ -3,8 +3,9 @@ author: mtoepke
 title: Agregar una interfaz de usuario
 description: "Has visto cómo el juego de muestra implementa el objeto principal del juego, así como el marco de representación básico."
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d7af6683ab2def1af62e73be008e9189190cde95
+ms.openlocfilehash: 4f4ca9626e38ce7449b6476345205d136b3d9a2d
 
 ---
 
@@ -172,8 +173,7 @@ void GameHud::Render(
 
 En este código, el destino de representación de Direct2D establecido para la superposición se actualiza para reflejar los cambios en el número de impactos, el tiempo restante y el número de nivel. Los rectángulos se dibujan con llamadas a [**DrawRect**](https://msdn.microsoft.com/library/windows/desktop/dd371902) y el punto de mira, con un par de llamadas a [**DrawLine**](https://msdn.microsoft.com/library/windows/desktop/dd371895).
 
-> 
-            **Nota** Probablemente has observado que la llamada a **GameHud::Render** toma un parámetro [**Windows::Foundation::Rect**](https://msdn.microsoft.com/library/windows/apps/br225994), que contiene el tamaño del rectángulo de la ventana principal. Esto demuestra una parte esencial de la programación de UI: obtener el tamaño de ventana en una medición llamada DIPs (píxeles independientes del dispositivo), donde un DIP se define como un 1/96 de una pulgada. Direct2D escala las unidades de dibujo en píxeles reales cuando se produce el dibujo, y lo hace usando la configuración de puntos por pulgada (DPI) de Windows. Del mismo modo, cuando dibujas texto usando DirectWrite, especificas DIP en lugar de puntos para el tamaño de la fuente. Los DIP se expresan como números de punto flotante.
+> **Nota** Probablemente has observado que la llamada a **GameHud::Render** usa un parámetro [**Windows::Foundation::Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) que contiene el tamaño del rectángulo de la ventana principal. Esto demuestra una parte esencial de la programación de UI: obtener el tamaño de ventana en una medición llamada DIPs (píxeles independientes del dispositivo), donde un DIP se define como un 1/96 de una pulgada. Direct2D escala las unidades de dibujo en píxeles reales cuando se produce el dibujo, y lo hace usando la configuración de puntos por pulgada (DPI) de Windows. Del mismo modo, cuando dibujas texto usando DirectWrite, especificas DIP en lugar de puntos para el tamaño de la fuente. Los DIP se expresan como números de punto flotante.
 
  
 
@@ -366,8 +366,7 @@ void GameInfoOverlay::RecreateDpiDependentResources()
 
 El método **Initialize** obtiene una fábrica del objeto [**ID2D1Device**](https://msdn.microsoft.com/library/windows/desktop/hh404478) que se le pasa, que usa para crear un [**ID2D1DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/hh404479) que el propio objeto de superposición puede dibujar, y establece el campo **m\_dWriteFactory** para la referencia [**IDWriteFactory**](https://msdn.microsoft.com/library/windows/desktop/dd368183) proporcionada. También establece el DPI para el contexto. A continuación, llama a **RecreateDeviceResources** para ensamblar y dibujar la representación.
 
-
-            **RecreateDeviceResources** usa el objeto de fábrica DirectWrite para crear formateadores (pinceles) para las cadenas de texto del título y del cuerpo que se mostrarán en la superposición. Crea un pincel blanco para dibujar el texto, otro negro para dibujar el fondo y otro naranja para dibujar los mensajes de acción. A continuación, llama a **RecreateDpiDependentResources** para preparar un mapa de bits para dibujar el texto llamando a [**ID2D1DeviceContext::CreateBitmap**](https://msdn.microsoft.com/library/windows/desktop/hh404480). Por último, **RecreateDpiDependentResources** establece el destino de representación para el contexto del dispositivo Direct2D al mapa de bits y lo borra, lo que a su vez establece cada píxel en el mapa como color negro.
+**RecreateDeviceResources** usa el objeto de fábrica DirectWrite para crear formateadores (pinceles) para las cadenas de texto del título y del cuerpo que se mostrarán en la superposición. Crea un pincel blanco para dibujar el texto, otro negro para dibujar el fondo y otro naranja para dibujar los mensajes de acción. A continuación, llama a **RecreateDpiDependentResources** para preparar un mapa de bits para dibujar el texto llamando a [**ID2D1DeviceContext::CreateBitmap**](https://msdn.microsoft.com/library/windows/desktop/hh404480). Por último, **RecreateDpiDependentResources** establece el destino de representación para el contexto del dispositivo Direct2D al mapa de bits y lo borra, lo que a su vez establece cada píxel en el mapa como color negro.
 
 Ahora, todo lo que la superposición necesita es algo de texto para mostrar.
 
@@ -385,12 +384,9 @@ static const D2D1_RECT_F actionRectangle = D2D1::RectF(50.0f, GameInfoOverlayCon
 
 Cada una de estas áreas tiene un objetivo específico:
 
--   
-            **titleRectangle** es donde se dibuja el texto del título.
--   
-            **bodyRectangle** es donde se dibuja el texto del cuerpo.
--   
-            **actionRectangle** es donde se dibuja el texto que informa al jugador que debe realizar una acción específica. (Está en el borde inferior izquierdo del mapa de bits de superposición).
+-   En **titleRectangle** se escribe el texto del título.
+-   En **bodyRectangle** se escribe el texto del cuerpo.
+-   En **actionRectangle** se escribe el texto que informa al jugador que debe realizar una acción específica. (Está en el borde inferior izquierdo del mapa de bits de superposición).
 
 Teniendo en cuenta estas áreas, veamos uno de los métodos específicos de estado, **GameInfoOverlay::SetGameStats**, y cómo se dibuja la superposición.
 
@@ -1497,6 +1493,6 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

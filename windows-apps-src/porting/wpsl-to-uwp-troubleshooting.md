@@ -3,8 +3,9 @@ author: mcleblanc
 description: "Se recomienda leer hasta el final esta guía de migración, aunque somos conscientes de que estás deseando seguir avanzando y llegar a la fase de compilación y ejecución de tu proyecto."
 title: "Solución de problemas de la migración de Windows Phone Silverlight a UWP"
 ms.assetid: d9a9a2a7-9401-4990-a992-4b13887f2661
+translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 0e7c4ba00ab513c1ea9da94f1a3f69b5921c2dc1
+ms.openlocfilehash: 070e4a00cada6f6cf7b6c1d027d2391eecb8facd
 
 ---
 
@@ -61,6 +62,6 @@ El siguiente tema es [Migración de XAML y la interfaz de usuario](wpsl-to-uwp-p
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 1C77C50C-5DA4-4414-9316-6EEDD78629E2
 title: Pruebas beta
 description: "Las pruebas beta te ofrecen la posibilidad de mejorar la aplicación en función de los comentarios de las personas ajenas al equipo de desarrollo de aplicaciones que prueban la aplicación no comercial en sus propios dispositivos."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7404a90fc9efc05d4e2bb83321bb2ba80b8378ce
+ms.openlocfilehash: 13857b2ba5946149d04ad4f6eda6828cc11a0640
 
 ---
 # Pruebas beta
@@ -12,8 +13,7 @@ ms.openlocfilehash: 7404a90fc9efc05d4e2bb83321bb2ba80b8378ce
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-
-            Las *pruebas beta* te ofrecen la posibilidad de mejorar la aplicación en función de los comentarios de las personas ajenas al equipo de desarrollo de aplicaciones, que prueban la aplicación no comercial en sus propios dispositivos.
+Las *pruebas beta* te ofrecen la posibilidad de mejorar tu aplicación en función de los comentarios de los individuos fuera del equipo de desarrollo de aplicaciones que prueban la aplicación no comercial en sus propios dispositivos.
 
 Esta sección describe las opciones de pruebas beta para las aplicaciones universales de Windows.
 
@@ -50,6 +50,6 @@ Consulta [Pruebas beta y distribución dirigida](https://msdn.microsoft.com/libr
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

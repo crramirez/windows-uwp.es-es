@@ -1,63 +1,73 @@
-﻿---
+---
 author: jnHs
-Description: You can promote your app or add-on in the Windows Store by putting it on sale for a limited time.
-title: Put apps and add-ons on sale
+Description: "Puedes promocionar tu aplicación o complemento en la Tienda Windows al ponerlos en oferta durante un tiempo limitado."
+title: Poner aplicaciones y complementos en oferta
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
+translationtype: Human Translation
+ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
+ms.openlocfilehash: d5884fc4be04de69132662ade7e42f69d36d2346
+
 ---
 
-# Put apps and add-ons on sale
+# Poner aplicaciones y complementos en oferta
 
-You can promote your app or add-on in the Windows Store by putting it on sale for a limited time.
+Puedes promocionar tu aplicación o complemento en la Tienda Windows al ponerlos en oferta durante un tiempo limitado.
 
-When you schedule a sale to temporarily lower the price of your app or add-on, customers viewing your Store listing will see that the price has been reduced, and they'll be able to purchase it at the lower price during the time period that you have selected. If you lower the price to **Free**, they can download it without paying at all during the sale period.
+Cuando programes una oferta para reducir temporalmente el precio de tu aplicación o complemento, los clientes que consulten la descripción de la Tienda verán que el precio ha bajado y podrán comprarlos al precio reducido durante el período que hayas seleccionado. Si reduces el precio a **Gratis**, podrán descargarla sin pagar nada durante el periodo de oferta.
 
-> **Note**  Sale pricing is only shown to your customers on Windows 10. On other operating systems, customers will see the regular price for your app or add-on. You can always change a price by choosing a different price tier in a new submission, but it will not be displayed as a limited-time sale.
+> **Nota**  El precio de oferta solo se muestra a tus clientes de Windows 10. En otros sistemas operativos, los clientes verán el precio normal de la aplicación o el complemento. Siempre puedes cambiar un precio eligiendo una franja de precios diferente en un nuevo envío, pero no se mostrará como una oferta por tiempo limitado.
 
-## Scheduling a sale
+## Programar una oferta
 
-Sales are scheduled as part of the submission for an app or add-on. If you want to schedule a sale for an app or add-on that has already been published, you'll need to create a new submission, even if that is the only change you want to make.
+Las ofertas se programan como parte del envío de una aplicación o un complemento. Si quieres programar una oferta para una aplicación o un complemento que ya se ha publicado, tendrás que crear un nuevo envío, aunque ese sea el único cambio que quieras realizar.
 
-**To schedule a sale**
+**Para programar una oferta**
 
-1.  On the **Pricing and availability** page of an in-progress app or add-on submission, go to the **Sale pricing** section.
-2.  Click **New sale**.
-3.  Enter the date and time for the start and end of the sale period. The times shown are in UTC.
+1.  En la página **Precios y disponibilidad** de un envío en curso de una aplicación o un complemento, ve a la sección **Precio de oferta**.
+2.  Haz clic en **Nueva oferta**.
+3.  Escribe la fecha y la hora del inicio y final del período de oferta. Las horas se muestran en hora UTC.
 
-   > **Note**  For add-ons, you can't schedule sales that overlap with each other.
+   > **Nota**  Para los complementos, no puedes programar ofertas que se superpongan entre sí.
 
-4.  Choose your sale price from the drop-down list. You can pick any price, including **Free**.
-5.  If you'd like to enter custom prices for this sale, click **Show custom market pricing options**. You can set custom sale prices per market (or exclude specific markets from the sale) here. For more info, see [Define pricing and market selection](define-pricing-and-market-selection.md).
+4.  Elige el precio de oferta en la lista desplegable. Puedes elegir cualquier precio, incluido **Gratis**.
+5.  Si quieres especificar precios personalizados para esta oferta, haz clic en **Mostrar las opciones de precio de mercado personalizadas**. Puedes establecer precios de oferta personalizados por mercado (o excluir mercados específicos de la oferta) aquí. Para más información, consulta [Definir la selección de precios y mercados](define-pricing-and-market-selection.md).
 
-    > **Note**  Market selections that you make in the **Sale pricing** section will not affect the markets in which the app is offered; these selections only determine whether a sale price is offered, and in which markets. If you set sale pricing for a market in which your app is not available, this won't cause the app to become available in that market.
+    > **Nota**  Las selecciones de mercado que realices en la sección **Precio de oferta** no afectarán a los mercados en los que se ofrece la aplicación. Estas selecciones solo determinan si se ofrece un precio de oferta y en qué mercados. Si estableces un precio de oferta para un mercado en el que la aplicación no está disponible, esto no hará que la aplicación esté disponible en ese mercado.
 
-6.  Click **Done** to save the scheduled sale.
-7.  Click **Save** at the bottom of the **Pricing and availability** page, then click **Submit to the Store** from the submission overview.
+6.  Haz clic en **Listo** para guardar la oferta programada.
+7.  Haz clic en **Guardar** en la parte inferior de la página **Precios y disponibilidad** y, después, haz clic en **Enviar a la Tienda** en el resumen del envío.
 
-> **Note**  It's possible to select a price tier that is higher than your app's base price. However, sale pricing will only be shown to customers if the sale price is lower than the regular price of the app in that market. Selecting a price that is higher than your app's base price might be appropriate for your sale if you've already set custom prices in certain markets that are higher than your app's base price, and you want to temporarily lower the price in those markets (but the sale price is still higher than the app's base price). If your selections would result in the price of the app being raised in a certain market, we won't show that (higher) price to customers in that market; they will continue to see the app at its previous (lower) price. We'll also show customers the lowest price available if you schedule separate overlapping sales with different prices.
+> **Nota**  Es posible seleccionar una franja de precios mayor que el precio base de la aplicación. Sin embargo, el precio de oferta solo se mostrará a los clientes si es inferior al precio normal de la aplicación en ese mercado. Seleccionar un precio de oferta mayor que el precio base de la aplicación puede ser apropiado si ya has establecido en determinados mercados precios personalizados que superan el precio base y quieres reducir temporalmente el precio en dichos mercados (siendo el precio de venta todavía mayor que el precio base de la aplicación). Si tus selecciones resultan en que el precio de la aplicación aumente en un mercado concreto, dicho precio (superior) no se mostrará en ese mercado: los clientes seguirán viendo la aplicación con su precio anterior (inferior). También se mostrará a los clientes el menor precio disponible si programas distintas ofertas superpuestas con diferentes precios.
 
-## Changing or canceling a scheduled sale
+## Cambiar o cancelar una oferta programada
 
 
-To revise or cancel a sale that you've previously scheduled for an app or add-on, you'll need to create a new submission and submit it to the Store.
+Para revisar o cancelar una oferta previamente programada para una aplicación o un complemento, debes crear y realizar un nuevo envío para la Tienda.
 
-**To edit a scheduled sale**
+**Para editar una oferta programada**
 
-1.  On the **Pricing and availability** page of an in-progress app or add-on submission, go to the **Sale pricing** section.
-2.  Find the sale that you want to update, then click its price to edit the sale.
-3.  Make your changes and then click **Done**.
-4.  Click **Save** at the bottom of the **Pricing and availability** page, then click **Submit to the Store** from the submission overview.
+1.  En la página **Precios y disponibilidad** de un envío en curso de una aplicación o un complemento, ve a la sección **Precio de oferta**.
+2.  Busca la oferta que quieres actualizar y haz clic en su precio para editarla.
+3.  Realiza los cambios y luego haz clic en **Listo**.
+4.  Haz clic en **Guardar** en la parte inferior de la página **Precios y disponibilidad** y, después, haz clic en **Enviar a la Tienda** en el resumen del envío.
 
-After your submission goes through the certification process, the changes will take effect (even if the sale had already started).
+Cuando el envío supere el proceso de certificación, los cambios surtirán efecto (aunque la oferta ya haya comenzado).
 
-> **Tip**  You can reuse a completed sale in a new submission by editing its start and end dates. This is especially useful if you’ve configured a sale with complicated custom market pricing.
- 
-**To cancel a scheduled sale**
+> **Sugerencia**  Para volver a usar una oferta completada en un nuevo envío, puedes editar sus fechas de inicio y fin. Esto es especialmente útil si configuraste una oferta con precios complicados de mercado personalizado.
+ 
+**Para cancelar una oferta programada**
 
-1.  On the **Pricing and availability** page of an in-progress app or add-on submission, go to the **Sale pricing** section.
-2.  Find the sale that you want to cancel and click **Delete** to remove it.
-3.  Click **Save** at the bottom of the **Pricing and availability** page, then click **Submit to the Store** from the submission overview.
+1.  En la página **Precios y disponibilidad** de un envío en curso de una aplicación o un complemento, ve a la sección **Precio de oferta**.
+2.  Encuentra la oferta que quieres cancelar y haz clic en **Eliminar** para quitarla.
+3.  Haz clic en **Guardar** en la parte inferior de la página **Precios y disponibilidad** y, después, haz clic en **Enviar a la Tienda** en el resumen del envío.
 
-As long as the sale hasn't started by the time the submission completes the certification process, the deleted sale won't run at all. If you delete a sale that has already ended, the sale will simply be removed from your **Pricing and availability** page.
+Si la oferta no ha comenzado en el momento de completarse el proceso de certificación, nunca llegará a entrar en efecto. Si eliminas una oferta que ya ha finalizado, simplemente se quitará de tu página **Precios y disponibilidad**.
 
-> **Important**   Since customers can see the scheduled end date when viewing your app's Store listing, we don't recommend deleting a sale after it's started. If you delete a sale that is already in progress, the sale will end when the submission completes the certification process, which can be frustrating to your potential customers.
+> **Importante**  Dado que los clientes pueden ver la fecha de finalización programada en la descripción de la Tienda que se muestra la aplicación, no es recomendable eliminar una oferta una vez iniciada. Si eliminas una oferta que ya está en curso, terminará cuando el envío complete el proceso de certificación, lo que puede resultar frustrante para los clientes potenciales.
+
+
+
+
+<!--HONumber=Aug16_HO3-->
+
 

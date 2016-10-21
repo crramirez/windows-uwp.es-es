@@ -6,8 +6,8 @@ title: "Diseño de software inclusivo en Windows 10"
 label: Designing inclusive software
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: cdd41595ee2727c0eeefab7b041c1adfefc15dfa
+ms.sourcegitcommit: c5ccae0e095b7c8e403a230fe8f3442754aa2ad7
+ms.openlocfilehash: 94848fd1acf51e7ab8dab0f45584d3214be58830
 
 ---
 
@@ -26,17 +26,13 @@ El diseño inclusivo crea mejores productos para todos. Se trata de considerar l
 ## Principios de diseño inclusivo  
 Los siguientes 4 principios están impulsando el cambio de Microsoft hacia el diseño inclusivo:
 
+**Piensa de forma universal**: Nos centramos en lo que unifica a las personas: motivaciones, relaciones y capacidades humanas. Esto nos lleva a tener en cuenta el impacto social más amplio de nuestro trabajo. El resultado es una experiencia que tiene una diversidad de formas para que todas las personas participen.
 
-              **Piensa de forma universal**: Nos centramos en lo que unifica a las personas: motivaciones, relaciones y capacidades humanas. Esto nos lleva a tener en cuenta el impacto social más amplio de nuestro trabajo. El resultado es una experiencia que tiene una diversidad de formas para que todas las personas participen.
+**Haz que sea personal**: Después, nos retamos a crear conexiones emocionales. Las interacciones de persona a persona pueden inspirar una mejor interacción de la persona con la tecnología. Las circunstancias particulares de una persona pueden mejorar el diseño para todos los usuarios. El resultado es una experiencia que parece creada especialmente para una persona.
 
+**Mantenlo simple**: Partimos de la simplicidad como el unificador fundamental. Cuando se reduce el desorden, las personas saben qué hacer a continuación. Están inspiradas a avanzar hacia espacios que sean limpios, livianos y abiertos. El resultado es una experiencia realista e intemporal.
 
-              **Haz que sea personal**: A continuación, nos retamos a crear conexiones emocionales. Las interacciones de persona a persona pueden inspirar una mejor interacción de la persona con la tecnología. Las circunstancias particulares de una persona pueden mejorar el diseño para todos los usuarios. El resultado es una experiencia que parece creada especialmente para una persona.
-
-
-              **Mantenlo simple**: Partimos de la simplicidad como el unificador fundamental. Cuando se reduce el desorden, las personas saben qué hacer a continuación. Están inspiradas a avanzar hacia espacios que sean limpios, livianos y abiertos. El resultado es una experiencia realista e intemporal.
-
-
-              **Crea deleite**: Las experiencias agradables provocan fascinación y descubrimiento. Algunas veces es mágico. Algunas veces es un detalle que es simplemente perfecto. Diseñamos estos momentos para que se sientan como un ansiado cambio de ritmo. El resultado es una experiencia que tiene impulso y flujo.
+**Crea deleite**: Las experiencias agradables provocan fascinación y descubrimiento. Algunas veces es mágico. Algunas veces es un detalle que es simplemente perfecto. Diseñamos estos momentos para que se sientan como un ansiado cambio de ritmo. El resultado es una experiencia que tiene impulso y flujo.
 
 ## Usuarios de diseño inclusivo  
 Existen básicamente dos tipos de usuarios de la tecnología de asistencia (AT):
@@ -73,7 +69,7 @@ Una vez que tienes tu entorno de desarrollo, diseña una jerarquía lógica para
 2.  Para identificar claramente los límites entre los controles personalizados y los controles estándar en la interfaz de usuario  
 3.  Para determinar cómo interactúan entre sí las partes de la interfaz de usuario  
 
-Una jerarquía lógica es una excelente manera de solucionar posibles problemas de facilidad de uso. Si no puedes estructurar la interfaz de usuario de una manera relativamente sencilla, puede que tengas problemas con la facilidad de uso. Una representación lógica de un cuadro de diálogo sencillo no debe dar como resultado páginas de diagramas. En el caso de jerarquías lógicas que se vuelvan demasiado profundas o anchas, puede que tengas que volver a diseñar tu interfaz de usuario. Para obtener más información, descarga el libro electrónico [Software de ingeniería de accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262).  
+Una jerarquía lógica es una excelente manera de solucionar posibles problemas de facilidad de uso. Si no puedes estructurar la interfaz de usuario de una manera relativamente sencilla, puede que tengas problemas con la facilidad de uso. Una representación lógica de un cuadro de diálogo sencillo no debe dar como resultado páginas de diagramas. En el caso de jerarquías lógicas que se vuelvan demasiado profundas o anchas, puede que tengas que volver a diseñar tu interfaz de usuario. Para obtener más información, descarga el libro electrónico sobre [diseño de software para accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262).  
 
 ### Diseña los ajustes de interfaz de usuario visuales adecuados  
 Al diseñar la interfaz de usuario visual, asegúrate de que tu producto tenga una configuración de contraste alto, use las fuentes y opciones de suavizado predeterminadas del sistema, se escale correctamente según la configuración de puntos por pulgada (PPP) de la pantalla, tenga texto predeterminado con una relación de contraste de al menos 5:1 con el fondo y que tenga combinaciones de colores que resultarán fáciles de diferenciar a los usuarios con deficiencias en la percepción del color.  
@@ -99,18 +95,19 @@ En resumen, sigue estos siete pasos para garantizar que tu software sea inclusiv
 2.  A medida que diseñes soluciones para tus requisitos, usa los controles proporcionados por tu entorno de desarrollo (controles estándar) tanto como sea posible y evita los esfuerzos y costos innecesarios de los controles personalizados.  
 3.  Diseña una jerarquía lógica para tu producto, tomando nota de dónde están los controles estándar, los controles personalizados y el foco del teclado en la interfaz de usuario.  
 4.  Diseña configuraciones del sistema útiles (tales como la navegación por teclado, el contraste alto y los valores altos de PPP) en tu producto.  
-5.  Implementa tu diseño usando el [concentrador del desarrollador de accesibilidad de Microsoft](https://developer.microsoft.com/windows/accessible-apps) y la especificación de accesibilidad de tu marco como punto de referencia.  
+5.  Implementa tu diseño mediante el [Centro de Microsoft para desarrolladores de accesibilidad](https://developer.microsoft.com/windows/accessible-apps) y la especificación de accesibilidad de tu marco como punto de referencia.  
 6.  Prueba tu producto en usuarios con necesidades especiales para garantizar que podrán aprovechar las técnicas de diseño inclusivo implementadas en él.  
 7.  Entrega tu producto final y documenta tu implementación para aquellas otras personas que trabajen en el proyecto después de ti.  
 
 ## Temas relacionados  
 * [Diseño inclusivo](http://design.microsoft.com/inclusive)
-* [Software de ingeniería de accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
-* [Concentrador del desarrollador de accesibilidad de Microsoft](https://developer.microsoft.com/windows/accessible-apps)
-* [Desarrollo de aplicaciones inclusivas de Windows](developing-inclusive-windows-apps.md)  
+* [Diseño de software para accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
+* [Centro de Microsoft para desarrolladores de accesibilidad](https://developer.microsoft.com/windows/accessible-apps)
+* [Desarrollo de aplicaciones inclusivas de Windows](developing-inclusive-windows-apps.md) 
+* [Accesibilidad](accessibility.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,15 +3,16 @@ title: "Crear un servicio de inicio de sesión de Microsoft Passport"
 description: "Esta es la segunda parte de un tutorial completo acerca de cómo usar Microsoft Passport como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña en aplicaciones para UWP (Plataforma universal de Windows) de Windows 10."
 ms.assetid: ECC9EF3D-E0A1-4BC4-94FA-3215E6CFF0E4
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 6fe013a69bad964dafa788efb4e26ba521b3d621
+ms.openlocfilehash: 2250cc400828b2142bc5d152f54de554daa24aa9
 
 ---
 
 # Crear un servicio de inicio de sesión de Microsoft Passport
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 \[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
@@ -1180,6 +1181,6 @@ A modo de ejercicio, te dejamos los detalles sobre cómo implementar la autentic
 * [Aplicación de inicio de sesión de Microsoft Passport](microsoft-passport-login.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

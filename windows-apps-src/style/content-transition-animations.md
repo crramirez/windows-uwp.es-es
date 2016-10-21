@@ -3,8 +3,9 @@ author: mijacobs
 Description: "Las animaciones de transición de contenido permiten cambiar el contenido de un área de la pantalla sin cambiar ni el contenedor ni el fondo. El nuevo contenido hace un fundido de entrada. Si hay contenido existente para sustituir, el contenido realiza un fundido de salida."
 title: "Directrices para animaciones de transición de contenido"
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
+translationtype: Human Translation
+ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
+ms.openlocfilehash: 2b3e0196b573fb426c9cd71fc613819a2dd2d615
 
 ---
 
@@ -21,7 +22,7 @@ ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
 
 Las animaciones de transición de contenido permiten cambiar el contenido de un área de la pantalla sin cambiar ni el contenedor ni el fondo. El nuevo contenido hace un fundido de entrada. Si hay contenido existente para sustituir, el contenido realiza un fundido de salida.
 
-## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>Cosas que hacer y cosas que evitar
+## Cosas que hacer y cosas que evitar
 
 
 -   Usa una animación de entrada cuando haya un conjunto de elementos nuevos para introducir en un contenedor vacío. Por ejemplo, después de la carga inicial de una aplicación, parte del contenido de la aplicación puede no estar disponible inmediatamente para su visualización. Cuando ese contenido esté listo para mostrarse, usa una animación de transiciones de contenido para hacer aparecer dicho contenido tardío.
@@ -34,7 +35,7 @@ Las animaciones de transición de contenido permiten cambiar el contenido de un 
 
 
 
-## <span id="related_topics"></span>Artículos relacionados
+## Artículos relacionados
 
 **Para desarrolladores (XAML)**
 * [Introducción a las animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
@@ -52,6 +53,6 @@ Las animaciones de transición de contenido permiten cambiar el contenido de un 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

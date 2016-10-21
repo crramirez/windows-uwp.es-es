@@ -2,27 +2,27 @@
 author: drewbatgit
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
 description: "En este artículo se explica cómo cargar y guardar archivos de imagen mediante BitmapDecoder y BitmapEncoder, y cómo usar el objeto SoftwareBitmap para representar imágenes de mapa de bits."
-title: "Creación de imágenes"
+title: "Crear, editar y guardar imágenes de mapa de bits"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8da8c78a848c4eea565d432bdf62d3d1528c5a85
+ms.sourcegitcommit: c61bad4b4a5440531c0177247c425addaf452920
+ms.openlocfilehash: ff6bff692c4e0e73b2c99e06b46e8a3050ba12c4
 
 ---
 
-# Creación de imágenes
+# Crear, editar y guardar imágenes de mapa de bits
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se explica cómo cargar y guardar archivos de imagen mediante [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) y [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206), y cómo usar el objeto [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) para representar imágenes de mapa de bits.
 
 La clase **SoftwareBitmap** es una API versátil que se puede crear desde varios orígenes, entre los que se incluyen archivos de imagen, objetos [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/br243259), superficies de Direct3D y código. **SoftwareBitmap** permite convertir fácilmente entre los modos alfa y formatos de píxel diferentes, y también permite el acceso de bajo nivel a datos de píxel. Además, **SoftwareBitmap** es una interfaz común que utilizan varias características de Windows, entre las que se incluyen:
 
--   [**CapturedFrame**](https://msdn.microsoft.com/library/windows/apps/dn278725) permite tener fotogramas capturados por la cámara como un elemento **SoftwareBitmap**.
+-   [**CapturedFrame**](https://msdn.microsoft.com/library/windows/apps/dn278725) permite obtener fotogramas capturados por la cámara como un elemento **SoftwareBitmap**.
 
--   [**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) permite tener una representación **SoftwareBitmap** de un elemento **VideoFrame**.
+-   [**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) permite obtener una representación **SoftwareBitmap** de un elemento **VideoFrame**.
 
--   [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) permite detectar caras de un elemento **SoftwareBitmap**.
+-   [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) permite detectar caras en un elemento **SoftwareBitmap**.
 
 El código de ejemplo de este artículo usa las API de los siguientes espacios de nombres.
 
@@ -44,8 +44,7 @@ Para guardar un elemento **SoftwareBitmap** en un archivo, obtén una instancia 
 
 [!code-cs[PickOuputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickOuputFile)]
 
-Llama al método [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116) del objeto **StorageFile** para obtener un flujo de acceso aleatorio en el que se escribirá la imagen. Llama al método estático [**BitmapEncoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226211) para obtener una instancia de la clase [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) para el flujo especificado. El primer parámetro para **CreateAsync** es un GUID que representa el códec que se debe usar para codificar la imagen. 
-            La clase **BitmapEncoder** expone una propiedad que contiene el identificador de cada códec compatible con el codificador, como por ejemplo [**JpegEncoderId**](https://msdn.microsoft.com/library/windows/apps/br226226).
+Llama al método [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116) del objeto **StorageFile** para obtener un flujo de acceso aleatorio en el que se escribirá la imagen. Llama al método estático [**BitmapEncoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226211) para obtener una instancia de la clase [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) para el flujo especificado. El primer parámetro para **CreateAsync** es un GUID que representa el códec que se debe usar para codificar la imagen. La clase **BitmapEncoder** expone una propiedad que contiene el identificador de cada códec compatible con el codificador, como por ejemplo [**JpegEncoderId**](https://msdn.microsoft.com/library/windows/apps/br226226).
 
 Usa el método [**SetSoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887337) para establecer la imagen que se va a codificar. Puedes establecer los valores de la propiedad [**BitmapTransform**](https://msdn.microsoft.com/library/windows/apps/br226254) para aplicar transformaciones básicas a la imagen mientras se codifica. La propiedad [**IsThumbnailGenerated**](https://msdn.microsoft.com/library/windows/apps/br226225) determina si el codificador genera una miniatura. Ten en cuenta que no todos los formatos de archivo admiten las miniaturas, por lo que si usas esta característica, debes capturar el error de operación no compatible que se produce si las miniaturas no se admiten.
 
@@ -63,7 +62,9 @@ Para mostrar una imagen dentro de una página XAML con el control [**Image**](ht
 
 [!code-xml[ImageControl](./code/ImagingWin10/cs/MainPage.xaml#SnippetImageControl)]
 
-Crea un nuevo objeto [**SoftwareBitmapSource**](https://msdn.microsoft.com/library/windows/apps/dn997854). Establece el contenido del objeto de origen mediante una llamada a [**SetBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn997856), pasándole un elemento **SoftwareBitmap**. Después puedes establecer la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br242760) del control **Image** al objeto **SoftwareBitmapSource** recién creado.
+Actualmente, el control **Image** solo admite imágenes que usan la codificación BGRA8 y el canal alfa premultiplicado o ningún canal alfa. Antes de intentar mostrar una imagen, asegúrate de que tiene el formato correcto y, si no es así, usa el método estático [**Convert**](https://msdn.microsoft.com/library/windows/apps/dn887362) de **SoftwareBitmap** para convertir la imagen al formato compatible.
+
+Crea un nuevo objeto [**SoftwareBitmapSource**](https://msdn.microsoft.com/library/windows/apps/dn997854). Establece el contenido del objeto de origen mediante una llamada a [**SetBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn997856) y pásale un elemento **SoftwareBitmap**. Después puedes establecer la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br242760) del control **Image** al objeto **SoftwareBitmapSource** recién creado.
 
 [!code-cs[SoftwareBitmapToWriteableBitmap](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetSoftwareBitmapToWriteableBitmap)]
 
@@ -131,6 +132,6 @@ Puedes transcodificar un archivo de imagen directamente desde un elemento [**Bit
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,48 +1,58 @@
-﻿---
+---
 author: jnHs
-Description: Managing your add-ons in bulk allows you to make changes to multiple add-ons at once rather than submitting each update individually.
-title: Manage add-ons in bulk
+Description: "Administrar tus complementos en masa te permite realizar cambios en varios complementos al mismo tiempo, en lugar de enviar cada actualización individualmente."
+title: Administrar complementos en masa
+translationtype: Human Translation
+ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
+ms.openlocfilehash: 9d387cf3a7850301660a672e3255a762ecd3bd4a
+
 
 ---
 
-# Manage add-ons in bulk
+# Administrar complementos en masa
 
-> **Important** This feature is currently only available to developer accounts which have joined the [Dev Center Insider Program](dev-center-insider-program.md). The implementation of this feature may change before it becomes available to all developers. This preliminary documentation provides some basic info about how the feature works.
+> **Importante** Esta característica está disponible actualmente solo para las cuentas de desarrollador que se hayan unido al [Programa Insider del Centro de desarrollo](dev-center-insider-program.md). La implementación de esta característica puede cambiar antes de que esté disponible para todos los desarrolladores. Esta documentación preliminar proporciona información básica sobre cómo funciona la característica.
 
-Managing your add-ons in bulk allows you to make changes to multiple add-ons at once rather than submitting each update individually. You can access this functionality from your app’s overview page by clicking **Manage add-ons in bulk**.
+Administrar tus complementos en masa te permite realizar cambios en varios complementos al mismo tiempo, en lugar de enviar cada actualización individualmente. Puedes acceder a esta funcionalidad desde la página de introducción de la aplicación haciendo clic en **Administrar complementos en masa**.
 
-## Export current add-on info
+## Exportar información de complementos actual
 
-To get started, you’ll first need to download a .csv template file. If you’ve already created add-ons, this file will include info about them. If not, it will be a blank file that you can use to enter info for new add-ons.
+Para empezar, primero tendrás que descargar un archivo de plantilla .csv. Si ya creaste complementos, este archivo incluye información sobre ellos. De lo contrario, será un archivo en blanco que puedes usar para especificar información para nuevos complementos.
 
-To generate and download this template file, click **Export add-ons** and save the .csv file to your computer.
+Para generar y descargar este archivo de plantilla, haz clic en **Exportar complementos** y guarda el archivo .csv en el equipo.
 
-The .csv file contains the following columns. 
+El archivo .csv contiene las siguientes columnas. 
 
-| Column name               | Description                            | Required?      |
+| Nombre de columna               | Descripción                            | ¿Requerido?      |
 |---------------------------|----------------------------------|----------------------|
-| Product ID	|  The unique [product ID](set-your-add-on-product-id.md#product-id) of the add-on.  | Yes. Can’t be changed after the add-on is published. |
-| Action |The action you want to apply when you import the template. Supported values are **Submit** (to submit a new add-on or update a previously-published add-on) and **CreateDraft** (to save the changes without submitting them to the Store). |	 Yes |
-| Product type	| The [product type](set-your-add-on-product-id.md#product-type) of the add-on. Supported values are **Consumable** or **Durable**. |	Yes. Can’t be changed after add-on is published. |
-| Product lifetime	| For a Durable add-on, this is either **Forever** (for a product that never expires) or a set duration. Acceptable duration values are: **1day, 3days, 5days, 7days, 14days, 30days, 60days, 90days, 180days, 365days**	| Yes (if Product type is Durable) |
-| Content type	| The [content type](enter-add-on-properties.md#content-type) of the add-on. For most add-ons. this should be **ElectronicSoftwareDownload**. Other acceptable values are: **ElectronicBooks, ElectronicMagazineSingleIssue, ElectronicNewspaperSingleIssue, MusicDownload, MusicStreaming, OnlineDataStorageServices, VideoDownload, VideoStreaming, SoftwareAsAService** |	Yes |
-| Tag	| Optional [Tag](enter-add-on-properties.md#custom-developer-data) (also known as **Custom developer data**) info used in your app’s implementation. | No |
-| Base price	| The [price tier](set-add-on-pricing-and-availability.md#base-price) at which you want to offer the add-on. Must either be **Free** or a valid price tier in the format **0.99USD**. |	Yes |
-| Release date	| The date at which you want to publish the add-on. Acceptable values are **Immediate**, **Manual**, or a date string that complies with the [ISO 8601 standard](http://go.microsoft.com/fwlink/p/?LinkId=817237). | Yes |
-| Titles	| The name that customers will see for the add-on, preceded by the language code and a semicolon. For example, to use the title “Example Title” in English/United States, you would *enter en-us;Example Title*. Additional titles for other languages can be separated by semicolons. Each title must be 100 characters or fewer. 	| Yes |
-|Descriptions	| Optional additional info to display to customers, preceded by the language-locale code and a semicolon. For example, to use the description “This is an example” in English/United States, you would enter *en-us;This is an example*. Additional titles for other languages can be separated by semicolons. Each description must be 200 characters or fewer.	| No |
-| Markets |	One or more [markets](define-pricing-and-market-selection.md#windows-store-consumer-markets) in which you want to offer the add-on. Separate each market by a semicolon. |	Yes |
-|Keywords |	Optional [keywords](enter-add-on-properties.md#keywords) used in your app’s implementation. | No |
+| Id. del producto    |  [Id. del producto](set-your-add-on-product-id.md#product-id) único del complemento.  | Sí. No se puede cambiar después de publicar el complemento. |
+| Acción |Acción que se va a aplicar al importar la plantilla. Los valores admitidos son **Enviar** (para enviar un nuevo complemento o actualizar un complemento publicado anteriormente) y **CreateDraft** (para guardar los cambios sin enviarlos a la Tienda). |  Sí |
+| Tipo de producto  | [Tipo de producto](set-your-add-on-product-id.md#product-type) del complemento. Los valores admitidos son **Consumible** o **Duradero**. |   Sí. No se puede cambiar después de publicar el complemento. |
+| Duración del producto  | Para un complemento de tipo Duradero es **Para siempre** (para un producto que no expira nunca) o una duración establecida. Los valores de duración aceptables son: **1 día, 3días, 5días, 7días, 14días, 30días, 60días, 90días, 180días, 365días**    | Sí (si el tipo de producto es Duradero) |
+| Tipo de contenido  | [Tipo de contenido](enter-add-on-properties.md#content-type) del complemento. Para la mayoría de los complementos debería ser **ElectronicSoftwareDownload**. Otros valores aceptables son: **ElectronicBooks, ElectronicMagazineSingleIssue, ElectronicNewspaperSingleIssue, MusicDownload, MusicStreaming, OnlineDataStorageServices, VideoDownload, VideoStreaming, SoftwareAsAService** |    Sí |
+| Etiqueta   | Información de [etiqueta](enter-add-on-properties.md#custom-developer-data) (también conocida como **datos de desarrollador personalizados**) opcional que se usa en la implementación de la aplicación. | No |
+| Precio base    | [Franja de precios](set-add-on-pricing-and-availability.md#base-price) en la que quieres ofrecer el complemento. Debe estar entre **Free** o una franja de precios válida en el formato **0,99USD**. | Sí |
+| Fecha de lanzamiento  | La fecha en la que quieres publicar el complemento. Los valores aceptables son **Inmediato**, **Manual** o una cadena de fecha que cumpla con el [estándar ISO 8601](http://go.microsoft.com/fwlink/p/?LinkId=817237). | Sí |
+| Títulos    | Nombre que verán los clientes del complemento, precedido por el código de idioma y un punto y coma. Por ejemplo, para usar el título "Título de ejemplo" en inglés (Estados Unidos) tendrías que *escribir en-us;Título de ejemplo*. Los títulos adicionales para otros idiomas se pueden separar por punto y coma. Cada título debe tener 100 caracteres como máximo.  | Sí |
+|Descripciones   | Información adicional opcional para mostrar a los clientes, precedida por el código de idioma y configuración regional y un punto y coma. Por ejemplo, para usar la descripción "Esto es un ejemplo" en inglés (Estados Unidos), tendrías que escribir *en-us;Esto es un ejemplo*. Los títulos adicionales para otros idiomas se pueden separar por punto y coma. Cada descripción debe tener 200 caracteres como máximo.    | No |
+| Mercados | Uno o más [mercados](define-pricing-and-market-selection.md#windows-store-consumer-markets) en los que quieres ofrecer el complemento. Separa cada mercado por un punto y coma. |  Sí |
+|Palabras clave | [Palabras clave](enter-add-on-properties.md#keywords) opcionales que se usan en la implementación de la aplicación. | No |
 
-## Import add-ons
+## Importar complementos
 
-Before you can import changes, you’ll need to update the downloaded .csv file with the changes you’d like to make.
+Antes de importar los cambios, debes actualizar el archivo .csv descargado con los cambios que quieras realizar.
 
-To make changes to add-ons that you’ve already published, update the values you wish to change in your copy of the spreadsheet. You can remove any rows for add-ons that you don’t want to update, or leave them as is. Note that if there is already a submission in progress for that add-on, you won’t be able to make changes using the .csv file.
+Para realizar cambios en los complementos que ya has publicado, actualiza los valores que quieres cambiar en la copia de la hoja de cálculo. Puedes quitar las filas de los complementos que no quieras actualizar o dejarlas tal cual. Ten en cuenta que si ya hay un envío en curso para ese complemento, no podrás realizar cambios con el archivo .csv.
 
-> **Important** When submitting updates to add-ons that you’ve already published, you can’t change the **Product ID** and **Product type** fields.
+> **Importante** Al enviar actualizaciones de complementos que ya has publicado, no puedes cambiar los campos **Id. del producto** y **Tipo de producto**.
 
-To submit a new add-on, add a new row and enter the info for your new add-on. Be sure to enter all of the required info. 
+Para enviar un nuevo complemento, agrega una nueva fila y escribe la información de tu nuevo complemento. Asegúrate de escribir toda la información necesaria. 
 
-When you have made all of the changes, save the .csv file (with the same filename), then upload the file by dragging it to the specified field (or click **Browse your files**). A summary of your changes will be shown, along with any errors that must be fixed before submitting. After you’ve verified that the info is correct, you can click **Submit to the Store**. Each add-on will go through the submission process using the info that you’ve provided.
+Cuando hayas realizado todos los cambios, guarda el archivo .csv (con el mismo nombre de archivo) y después carga el archivo arrastrándolo al campo especificado (o haz clic en **Examinar los archivos**). Se mostrará un resumen de los cambios junto con todos los errores que deben corregirse antes de su envío. Después de comprobar que la información es correcta, puedes hacer clic en **Enviar a la Tienda**. Cada complemento pasará por el proceso de envío con la información que hayas proporcionado.
+
+
+
+
+<!--HONumber=Aug16_HO3-->
+
 

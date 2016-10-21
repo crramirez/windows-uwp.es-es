@@ -3,15 +3,16 @@ author: jnHs
 Description: "Si la aplicación usa la mediación de anuncios o muestra banners o anuncios intersticiales en vídeo de Microsoft Advertising, usa la página Rentabilidad &gt; Rentabilizar con anuncios para administrar el uso que haces de los anuncios."
 title: Rentabilizar con anuncios
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 97eeeedb9e73b6c67abe6e2ff8cadbc744a6a7c4
+ms.openlocfilehash: af322795be849bdaa2b1babeaec29d09f5d73fcf
 
 ---
 
 # Rentabilizar con anuncios
 
 
-Si la aplicación usa un control **AdMediatorControl**, **AdControl**, o **InterstitialAd** para mostrar banners o anuncios intersticiales en vídeo, usa la página **Rentabilidad**&gt;**Rentabilizar con anuncios** para administrar el uso de anuncios.
+Si la aplicación usa un control **AdMediatorControl**, **AdControl** o **InterstitialAd** para mostrar anuncios en banner o anuncios intersticiales en vídeo, usa la página **Monetización** &gt; **Monetizar con anuncios** para administrar el uso de los anuncios.
 
 ## Mediación de anuncios de Windows
 
@@ -32,8 +33,7 @@ Activa la casilla de esta sección si quieres mostrar anuncios de filiales de Mi
 
 Si cambias esta selección, no es necesario volver a publicar la aplicación para que los cambios surtan efecto. Para obtener más información sobre los anuncios de filiales de Microsoft , consulta el tema [Acerca de los anuncios de filiales](about-affiliate-ads.md).
 
-> 
-            **Nota**  Si la aplicación usa la mediación de anuncios (es decir, usa un **AdMediatorControl** para mostrar anuncios), la aplicación puede mostrar anuncios de filiales solo si la configuración de la mediación de anuncios está configurada para mostrar anuncios de Microsoft.
+> **Nota**  Si la aplicación usa la mediación de anuncios (es decir, usa un objeto **AdMediatorControl** para mostrar anuncios), la aplicación puede mostrar anuncios de filiales solo si las opciones de mediación de anuncios están configurada para mostrar anuncios de Microsoft.
 
 ## Anuncios de la comunidad
 
@@ -60,8 +60,7 @@ Las unidades de anuncio aparecen en una tabla en la parte inferior de esta secci
 -   Si la aplicación muestra pancartas, asigna estos valores a las propiedades [ApplicationId](https://msdn.microsoft.com/library/mt313174.aspx) y [AdUnitId](https://msdn.microsoft.com/library/mt313171.aspx) del objeto [AdControl](https://msdn.microsoft.com/library/mt313154.aspx).
 -   Si la aplicación muestra anuncios intersticiales en vídeos, pasa estos valores para el método [RequestAd](https://msdn.microsoft.com/library/mt313192.aspx) del objeto [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx).
 
-> 
-            **Nota**  Si la aplicación usa la mediación de anuncios para mostrar anuncios en banners de Microsoft Advertising (es decir, usa un objeto **AdMediatorControl**), no tienes que solicitar unidades de anuncios. En este escenario, las unidades de anuncios de Microsoft Advertising se generan automáticamente.
+> **Nota**  Si la aplicación usa la mediación de anuncios para mostrar anuncios en banners de Microsoft Advertising (es decir, usa un objeto **AdMediatorControl**), no es necesario solicitar unidades de anuncio. En este escenario, las unidades de anuncios de Microsoft Advertising se generan automáticamente.
 
  
 
@@ -71,6 +70,6 @@ Las unidades de anuncio aparecen en una tabla en la parte inferior de esta secci
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

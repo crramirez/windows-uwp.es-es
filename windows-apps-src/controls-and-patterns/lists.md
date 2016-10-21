@@ -6,11 +6,13 @@ ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
+ms.sourcegitcommit: 508a09e0c12006c00dbdf7675516b41119eab8a6
+ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 
 ---
 # Listas
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Mostrar listas y habilitar la interacción con el contenido basado en la colección. Los cuatro patrones de lista tratados en este artículo son:
 
@@ -21,11 +23,18 @@ Mostrar listas y habilitar la interacción con el contenido basado en la colecci
 
 Se proporcionan directrices de diseño, características y ejemplos para cada patrón de lista. Al final del artículo, se encuentran vínculos a temas relacionados y API.
 
-## API importantes
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br242878"><strong>Clase ListView</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br242705"><strong>Clase GridView</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br209348"><strong>Clase ComboBox</strong></a></li>
+</ul>
 
--   [**Clase ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)
--   [**Clase GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)
--   [**Clase ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)
+</div>
+</div>
+
+
 
 
 ## Vistas de lista
@@ -42,20 +51,50 @@ Usa una vista de lista para:
 
 ### Ejemplos
 
-Al usar un [patrón maestro/de detalles](master-details.md), puedes usar una vista de lista para organizar el panel maestro. El panel maestro muestra una lista de elementos que pueden seleccionarse. Cuando un usuario selecciona un elemento en el panel maestro, se muestra información adicional sobre el elemento seleccionado en el panel de detalles. A menudo, el panel de detalles contiene una vista de cuadrícula.
+Esta es una vista de lista simple que muestra los datos agrupados en un teléfono.
 
-![Ejemplo de un patrón de maestro y detalles](images/Stock_Tracker/uap_finance_desktop700.png)
-
-Es posible encadenar varias listas para crear jerarquías de maestro y detalles complejas. Para obtener más información, consulta el [patrón de maestro/detalles](master-details.md).
-
-El ejemplo de un diseño de lista tiene encabezados de grupo y se muestra como una sola columna:
-
-![Ejemplo de una vista de lista con cuatro tipos de unidades principales](images/controls_listview_4types.png)
+![Vista de lista con datos agrupados](images/simple-list-view-phone.png)
 
 ### Recomendaciones
 
--   Los elementos dentro de una lista deben tener el mismo comportamiento.
+-   Los elementos de una lista deben tener el mismo comportamiento.
 -   Si tu lista está dividida en grupos, puedes usar el [zoom semántico](semantic-zoom.md), que facilita a los usuarios la navegación por los contenidos agrupados.
+
+### Artículos de vista de lista
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tema</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>[Vista de lista y vista de cuadrícula](listview-and-gridview.md)</p></td>
+<td align="left"><p>Aprende los conceptos básicos del uso de una vista de lista o una vista de cuadrícula en tu aplicación.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[Plantillas de elemento de la vista de lista](listview-item-templates.md)</p></td>
+<td align="left"><p>Los elementos que se muestran en una lista o cuadrícula pueden tener un papel importante en el aspecto general de la aplicación. Modifica las plantillas de control y las plantillas de datos para definir la apariencia de los elementos y mejorar el aspecto de tu aplicación.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[Listas invertidas](inverted-lists.md)</p></td>
+<td align="left"><p>Las listas invertidas tienen nuevos elementos agregados en la parte inferior, al igual que en una aplicación de chat. Sigue estas instrucciones para usar una lista invertida en tu aplicación.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[Extraer para actualizar](pull-to-refresh.md)</p></td>
+<td align="left"><p>El patrón extraer para actualizar permite al usuario desplegar una lista de datos con la entrada táctil para recuperar más datos. Usa estas instrucciones para implementar el patrón extraer para actualizar en tu vista de lista.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[Interfaz de usuario anidada](nested-ui.md)</p></td>
+<td align="left"><p>La interfaz de usuario anidada es una interfaz de usuario (IU) que expone los controles accionables incluidos en un contenedor sobre el que un usuario puede actuar. Por ejemplo, es posible que tengas un elemento de la vista de lista que contenga un botón y que el usuario pueda seleccionar el elemento de lista o presionar el botón anidado en este. Sigue estos procedimientos recomendados para proporcionar la mejor experiencia de interfaz de usuario anidada a los usuarios.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## Vistas de cuadrícula
 
@@ -84,9 +123,37 @@ Una vista de cuadrícula es una solución ideal para una biblioteca de contenido
 -   Los elementos dentro de una lista deben tener el mismo comportamiento.
 -   Si tu lista está dividida en grupos, puedes usar el [zoom semántico](semantic-zoom.md), que facilita a los usuarios la navegación por los contenidos agrupados.
 
+### Artículos de la vista de cuadrícula
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tema</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>[Vista de lista y vista de cuadrícula](listview-and-gridview.md)</p></td>
+<td align="left"><p>Aprende los conceptos básicos del uso de una vista de lista o una vista de cuadrícula en tu aplicación.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[Plantillas de elemento de la vista de lista](listview-item-templates.md)</p></td>
+<td align="left"><p>Los elementos que se muestran en una lista o cuadrícula pueden tener un papel importante en el aspecto general de la aplicación. Modifica las plantillas de control y las plantillas de datos para definir la apariencia de los elementos y mejorar el aspecto de tu aplicación.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[Interfaz de usuario anidada](nested-ui.md)</p></td>
+<td align="left"><p>La interfaz de usuario anidada es una interfaz de usuario (IU) que expone los controles accionables incluidos en un contenedor sobre el que un usuario puede actuar. Por ejemplo, es posible que tengas un elemento de la vista de lista que contenga un botón y que el usuario pueda seleccionar el elemento de lista o presionar el botón anidado en este. Sigue estos procedimientos recomendados para proporcionar la mejor experiencia de interfaz de usuario anidada a los usuarios.</p></td>
+</tr>
+</tbody>
+</table>
+
 ## Listas desplegables
 
-Las listas desplegables, también conocidas como cuadros combinados, se inician en un estado compacto para mostrar una lista de elementos seleccionables. Los elementos seleccionados siempre son visibles y los elementos no visibles pueden aparecer en la vista cuando el usuario presione el cuadro combinado para expandirlo.
+Las listas desplegables, también conocidas como cuadros combinados, se inician en un estado compacto y se expanden para mostrar una lista de elementos seleccionables. Los elementos seleccionados siempre son visibles y los elementos no visibles pueden aparecer en la vista cuando el usuario presione el cuadro combinado para expandirlo.
 
 ### ¿Es este el control adecuado?
 
@@ -184,9 +251,10 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 ## Artículos relacionados
 
 - [Hub](hub.md)
-- [Patrón de maestro y detalles](master-details.md)
-- [Paneles de navegación](nav-pane.md)
+- [Panel de maestro y detalles](master-details.md)
+- [Panel de navegación](nav-pane.md)
 - [Zoom semántico](semantic-zoom.md)
+- [Arrastrar y colocar](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 
 **Para desarrolladores**
 - [**Clase ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)
@@ -196,6 +264,6 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

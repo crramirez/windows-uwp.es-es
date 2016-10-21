@@ -3,8 +3,9 @@ author: mtoepke
 title: "Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D"
 description: "En términos conceptuales, la canalización de sombreador de Direct3D 11 es muy similar a la de OpenGL ES 2.0."
 ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: bc13df5e7f2648897be31b5cda634d23ffae8b6b
+ms.openlocfilehash: 144e3374c16118418872f6c473c5f39101fbfce0
 
 ---
 
@@ -29,36 +30,14 @@ Los objetos de sombreador se crean en la interfaz [**ID3D11Device1**](https://ms
 
 La canalización de gráficos en Direct3D 11 se administra mediante instancias de la interfaz [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) y tiene estas fases:
 
--   
-            [Fase del ensamblador de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205116). Esta fase suministra datos (triángulos, líneas y puntos) a la canalización. 
-            Los métodos [
-              **ID3D11DeviceContext1**
-            ](https://msdn.microsoft.com/library/windows/desktop/hh404598) que admiten esta fase llevan el prefijo "IA".
--   
-            [Fase del sombreador de vértices](https://msdn.microsoft.com/library/windows/desktop/bb205146#Vertex_Shader_Stage). Esta fase procesa vértices, normalmente realizando ciertas operaciones, como transformar, enmascarar e iluminar. Un sombreador de vértices siempre toma un solo vértice de entrada y produce un solo vértice de salida. 
-            Los métodos [
-              **ID3D11DeviceContext1**
-            ](https://msdn.microsoft.com/library/windows/desktop/hh404598) que admiten esta fase llevan el prefijo "VS".
--   
-            [Fase de salida en secuencias](https://msdn.microsoft.com/library/windows/desktop/bb205121). Esta fase transmite datos primitivos de la canalización a la memoria para llegar al rasterizador. Los datos pueden transmitirse o pasarse al rasterizador. Los datos trasmitidos a la memoria pueden regresar a la canalización como datos de entrada o volver a leerse en la CPU. 
-            Los métodos [
-              **ID3D11DeviceContext1**
-            ](https://msdn.microsoft.com/library/windows/desktop/hh404598) que admiten esta fase llevan el prefijo "SO".
--   
-            [Fase del rasterizador](https://msdn.microsoft.com/library/windows/desktop/bb205125). El rasterizador recorta primitivos, los prepara para el sombreador de píxeles y determina cómo invocar sombreadores de píxeles. Si quieres deshabilitar la rasterización, indica a la canalización que no hay sombreador de píxeles (establece la fase del sombreador de píxeles en NULL con [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472)) y deshabilita la prueba de profundidad y la galería de símbolos (establece DepthEnable y StencilEnable en FALSE en [**D3D11\_DEPTH\_STENCIL\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476110)). Mientras estén deshabilitadas, los contadores de la canalización relacionados con la rasterización no se actualizarán.
--   
-            [Fase del sombreador de píxeles](https://msdn.microsoft.com/library/windows/desktop/bb205146#Pixel_Shader_Stage). La fase del sombreador de píxeles recibe datos interpolados para un primitivo y genera datos por píxel, como el color. 
-            Los métodos [
-              **ID3D11DeviceContext1**
-            ](https://msdn.microsoft.com/library/windows/desktop/hh404598) que admiten esta fase llevan el prefijo "PS".
--   
-            [Fase de fusión de salida](https://msdn.microsoft.com/library/windows/desktop/bb205120). Esta fase combina varios tipos de datos de salida (valores de sombreador de píxeles, información de profundidad y galería de símbolos) con los contenidos del destino de representación y los búferes de profundidad y galería de símbolos para generar el resultado final de canalización. 
-            Los métodos [
-              **ID3D11DeviceContext1**
-            ](https://msdn.microsoft.com/library/windows/desktop/hh404598) que admiten esta fase llevan el prefijo "OM".
+-   [Fase del ensamblador de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205116) Esta fase suministra datos (triángulos, líneas y puntos) a la canalización. Los métodos [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) que admiten esta fase llevan el prefijo "IA".
+-   [Fase del sombreador de vértices](https://msdn.microsoft.com/library/windows/desktop/bb205146#Vertex_Shader_Stage): Esta fase procesa vértices, normalmente realizando ciertas operaciones como transformar, enmascarar e iluminar. Un sombreador de vértices siempre toma un solo vértice de entrada y produce un solo vértice de salida. Los métodos [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) que admiten esta fase llevan el prefijo "VS".
+-   [Fase de salida en secuencias](https://msdn.microsoft.com/library/windows/desktop/bb205121): Esta fase transmite datos primitivos de desde la canalización a la memoria para llegar al rasterizador. Los datos pueden transmitirse o pasarse al rasterizador. Los datos trasmitidos a la memoria pueden regresar a la canalización como datos de entrada o volver a leerse en la CPU. Los métodos [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) que admiten esta fase llevan el prefijo "SO".
+-   [Fase del rasterizador](https://msdn.microsoft.com/library/windows/desktop/bb205125): El rasterizador recorta primitivos, los prepara para el sombreador de píxeles y determina cómo invocar sombreadores de píxeles. Si quieres deshabilitar la rasterización, indica a la canalización que no hay sombreador de píxeles (establece la fase del sombreador de píxeles en NULL con [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472)) y deshabilita la prueba de profundidad y la galería de símbolos (establece DepthEnable y StencilEnable en FALSE en [**D3D11\_DEPTH\_STENCIL\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476110)). Mientras estén deshabilitadas, los contadores de la canalización relacionados con la rasterización no se actualizarán.
+-   [Fase del sombreador de píxeles](https://msdn.microsoft.com/library/windows/desktop/bb205146#Pixel_Shader_Stage): La fase del sombreador de píxeles recibe datos interpolados para un primitivo y genera datos por píxel, como el color. Los métodos [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) que admiten esta fase llevan el prefijo "PS".
+-   [Fase de fusión de salida](https://msdn.microsoft.com/library/windows/desktop/bb205120): Esta fase combina varios tipos de datos de salida (valores de sombreador de píxeles, información de profundidad y galería de símbolos) con los contenidos del destino de representación y los búferes de profundidad y galería de símbolos para generar el resultado final de la canalización. Los métodos [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) que admiten esta fase llevan el prefijo "OM".
 
-(También hay fases para los sombreadores de geometría, sombreadores de casco, teseladores y sombreadores de dominio, pero, como estos no tienen análogos en OpenGL ES 2.0, no los trataremos en este tema). Para obtener una lista completa de los métodos para estas fases, consulta las páginas de referencia [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) y [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). 
-            **ID3D11DeviceContext1** extiende **ID3D11DeviceContext** para Direct3D 11.
+(También hay fases para los sombreadores de geometría, sombreadores de casco, teseladores y sombreadores de dominio, pero, como estos no tienen análogos en OpenGL ES 2.0, no los trataremos en este tema). Para obtener una lista completa de los métodos para estas fases, consulta las páginas de referencia [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) y [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). **ID3D11DeviceContext1** extiende **ID3D11DeviceContext** para Direct3D 11.
 
 ## Crear un sombreador
 
@@ -149,10 +128,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
 | OpenGL ES 2.0 | Direct3D 11                                                                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| glViewport    | 
-            [
-              **CD3D11\_VIEWPORT**
-            ](https://msdn.microsoft.com/library/windows/desktop/jj151722), [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) |
+| glViewport    | [**CD3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/jj151722), [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) |
 
  
 
@@ -165,10 +141,7 @@ La configuración de un sombreador de vértices en Direct3D 11 se realiza cuando
 |----------------------------------|-----------------------------------------------------------------------------------------------------------|
 | glAttachShader                   | [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524)                       |
 | glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::VSGetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476489)                       |
-| glGetUniformfv, glGetUniformiv   | 
-            [
-              **ID3D11DeviceContext1::VSGetConstantBuffers1**
-            ](https://msdn.microsoft.com/library/windows/desktop/hh446793). |
+| glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::VSGetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh446793). |
 
  
 
@@ -181,10 +154,7 @@ La configuración de un sombreador de píxeles en Direct3D 11 se realiza cuando 
 |----------------------------------|-----------------------------------------------------------------------------------------------------------|
 | glAttachShader                   | [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513)                         |
 | glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::PSGetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476468)                       |
-| glGetUniformfv, glGetUniformiv   | 
-            [
-              **ID3D11DeviceContext1::PSGetConstantBuffers1**
-            ](https://msdn.microsoft.com/library/windows/desktop/hh404645). |
+| glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::PSGetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh404645). |
 
  
 
@@ -195,10 +165,7 @@ Cuando la canalización se completa, dibujas los resultados de las fases de somb
 
 | OpenGL ES 2.0  | Direct3D 11                                                                                                                                                                                                                                         |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| glDrawElements | 
-            [
-              **ID3D11DeviceContext1::Draw**
-            ](https://msdn.microsoft.com/library/windows/desktop/ff476407), [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) (u otros métodos Draw\* en [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/ff476385)). |
+| glDrawElements | [**ID3D11DeviceContext1::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407), [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) (or other Draw\* methods on [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/ff476385)). |
 | eglSwapBuffers | [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)                                                                                                                                                                              |
 
  
@@ -283,6 +250,6 @@ Para obtener más detalles sobre el uso de semántica con Direct3D, lee [Semánt
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

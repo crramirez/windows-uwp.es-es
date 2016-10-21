@@ -1,73 +1,83 @@
 ---
 author: mcleanbyron
-Description: The Microsoft Store Services SDK provides libraries and tools that you can use to add features to your apps that help you make more money and gain customers.
+Description: "Microsoft Store Services SDK proporciona bibliotecas y herramientas que puedes usar para agregar características a tus aplicaciones y que te ayudan a obtener más dinero y a ganar clientes."
 title: Microsoft Store Services SDK
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
+translationtype: Human Translation
+ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
+ms.openlocfilehash: 98675e9cb06b05e55d49ca625818626aea5a5346
+
 ---
 
 # Microsoft Store Services SDK
 
-The Microsoft Store Services SDK provides libraries and tools that help you make more money and gain customers in your Universal Windows Platform (UWP) apps, such as displaying ads in your apps and running experiments with A/B testing. This SDK will evolve over time to include new engagement and monetization features.
+Microsoft Store Services SDK proporciona bibliotecas y herramientas que te ayudan a obtener más dinero y a ganar clientes en tus aplicaciones para Plataforma universal de Windows (UWP), por ejemplo, mostrando anuncios en tus aplicaciones y ejecutando experimentos mediante pruebas A/B. Este SDK evolucionará con el tiempo para incluir nuevas características de participación y monetización.
 
 
-## Features available in the SDK
+## Características disponibles en el SDK
 
-The Microsoft Store Services SDK provides libraries and tools that support the following features.
+Microsoft Store Services SDK proporciona bibliotecas y herramientas que admiten las siguientes características.
 
-### Run experiments with A/B testing for UWP apps
+### Ejecutar experimentos con pruebas A/B para aplicaciones para UWP
 
-Run A/B tests in your Universal Windows Platform (UWP) apps to measure the effectiveness of features on some customers before you release the features to everyone. After you define an experiment in your Dev Center dashboard, use the [StoreServicesExperimentVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesexperimentvariation.aspx) class to get variations for your experiment in your app, use this data to modify the behavior of the feature you are testing, and then use the [LogForVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation.aspx) method to send view event and conversion events to Dev Center. Finally, use your dashboard to view the results and manage the experiment.
+Ejecuta pruebas A/B en las aplicaciones para la Plataforma universal de Windows (UWP) para medir la eficacia de las características en algunos clientes antes de lanzar las características para todo el mundo. Después de definir un experimento en el panel del Centro de desarrollo, usa la clase [StoreServicesExperimentVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesexperimentvariation.aspx) para obtener las variaciones del experimento en tu aplicación, usa estos datos para modificar el comportamiento de la característica que estés probando y luego usa el método [LogForVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation.aspx) para enviar eventos de visualización y eventos de conversión al Centro de desarrollo. Por último, usa el panel para ver los resultados y administrar el experimento.
 
-For more information, see [Run experiments with A/B testing](run-app-experiments-with-a-b-testing.md).
+Para obtener más información, consulta [Ejecutar experimentos con pruebas A/B](run-app-experiments-with-a-b-testing.md).
 
-### App feedback for UWP apps
+### Comentarios de la aplicación para aplicaciones para UWP
 
-Use the [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) class in your UWP apps to direct your Windows 10 customers to Feedback Hub, where they can submit problems, suggestions, and upvotes. Then, manage this feedback in the [Feedback report](../publish/feedback-report.md) in the Dev Center dashboard.
+Usa la clase [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) en tus aplicaciones para UWP para dirigir a los clientes de Windows 10 al Centro de opiniones, donde pueden enviar sus problemas, sugerencias y votos a favor. A continuación, administra esta información en el [Informe de comentarios](../publish/feedback-report.md) en el panel del Centro de desarrollo.
 
-For more information, see [Launch Feedback Hub from your app](launch-feedback-hub-from-your-app.md).
+Para obtener más información, consulta [Iniciar el Centro de opiniones desde la aplicación](launch-feedback-hub-from-your-app.md).
 
-### Display ads in your apps
+### Mostrar anuncios en tus aplicaciones
 
-Increase your revenue by displaying banner ads or video interstitial ads from Microsoft in UWP apps. You can also maximize your ad fill rates by using ad mediation to display ads from multiple ad network providers.
+Para aumentar los ingresos, muestra anuncios en banner o anuncios intersticiales en vídeo de Microsoft en las aplicaciones para UWP. También puedes maximizar la velocidad de relleno de los anuncios mediante la mediación de anuncios para mostrar anuncios desde varios proveedores de red de anuncios.
 
-For more information, see [Display ads in your app](display-ads-in-your-app.md).
+Para obtener más información, consulta [Mostrar anuncios en tu aplicación](display-ads-in-your-app.md).
 
->**Note**&nbsp;&nbsp;Microsoft Store Services SDK only supports UWP apps. To display ads in Windows 8.1 and Windows Phone 8.x apps, use the [Microsoft Advertising SDK for Windows and Windows Phone 8.x](http://aka.ms/store-8-sdk).
+>**Nota**&nbsp;&nbsp;Microsoft Store Services SDK solo admite aplicaciones para UWP. Para mostrar anuncios en las aplicaciones de Windows 8.1 y Windows Phone 8.x, usa el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk).
 
-### API reference
+### Referencia de las API
 
-For reference documentation about the APIs in the Microsoft Store Services SDK, see [Microsoft Store Services SDK API reference](https://msdn.microsoft.com/library/windows/apps/mt691886.aspx).
+Para obtener documentación de referencia sobre las API incluidas en Microsoft Store Services SDK, consulta [Microsoft Store Services SDK API reference (Referencia de las API de Microsoft Store Services SDK)](https://msdn.microsoft.com/library/windows/apps/mt691886.aspx).
 
-## Install the SDK
+## Instalar el SDK
 
-To install the Microsoft Store Services SDK:
+Para instalar Microsoft Store Services SDK:
 
-1.  Close all instances of Visual Studio 2013 or Visual Studio 2015 and uninstall any previous versions of the Microsoft Store Engagement and Monetization SDK, Universal Ad Client SDK, Ad Mediator extension or Microsoft Advertising SDK.
-2.  Download and install the [SDK](http://aka.ms/store-em-sdk). It may take a few minutes to install. Be sure and wait until the process has finished.
-3.  Restart Visual Studio.
+1.  Cierra todas las instancias de Visual Studio 2013 o Visual Studio 2015 y desinstala las versiones anteriores del SDK de Microsoft Store Engagement and Monetization, el SDK de cliente de anuncios universal, la extensión Ad Mediator o el SDK de Microsoft Advertising.
+2.  Descarga e instala el [SDK](http://aka.ms/store-em-sdk). Puede tardar unos minutos en instalarse. Espera a que finalice el proceso.
+3.  Reinicia Visual Studio.
 
-Microsoft periodically releases new versions of the Microsoft Store Services SDK with performance improvements and new features. If you have existing projects that use the Microsoft Store Services SDK and you want to use the latest version, simply download and install the latest version of the SDK.
+Microsoft publica periódicamente nuevas versiones de Microsoft Store Services SDK con nuevas características y mejoras de rendimiento. Si tienes proyectos existentes que usan Microsoft Store Services SDK y quieres usar la versión más reciente, simplemente descarga e instala la versión más reciente del SDK.
 
-The advertising features for UWP apps from previous releases of the Microsoft Store Engagement and Monetization SDK, Universal Ad Client SDK, Ad Mediator extension and Microsoft Advertising SDK are now included in the Microsoft Store Services SDK. If you have existing UWP projects that use advertising features from one of these previous releases, you can continue working with your projects without any changes after you install the Microsoft Store Services SDK.
+Las características de publicidad, destinadas a aplicaciones para UWP, de las versiones anteriores del SDK de Microsoft Store Engagement and Monetization, el SDK de cliente de anuncios universal, la extensión Ad Mediator y el SDK de Microsoft Advertising ahora se incluyen en Microsoft Store Services SDK. Si tienes proyectos existentes de UWP que usan las características de publicidad de una de estas versiones anteriores, puedes seguir trabajando con los proyectos sin necesidad de cambios después de instalar Microsoft Store Services SDK.
 
->**Note**  To install the Microsoft Store Services SDK with Visual Studio 2015, you must have version 1.1 or later of the Visual Studio Tools for Universal Windows Apps installed. For more information about this update to the Visual Studio Tools for Universal Windows Apps, see the [release notes](http://go.microsoft.com/fwlink/?LinkID=624516).
+>**Nota**  Para instalar Microsoft Store Services SDK con Visual Studio 2015, debes tener instalada la versión 1.1 o posterior de Visual Studio Tools para aplicaciones universales de Windows. Para obtener más información sobre esta actualización a Visual Studio Tools para aplicaciones universales de Windows, consulta las [notas de la versión](http://go.microsoft.com/fwlink/?LinkID=624516).
 
-## Framework packages in the SDK
+## Paquetes de marcos en el SDK
 
-The following libraries in the Microsoft Store Services SDK are configured as *framework packages*:
+Las siguientes bibliotecas incluidas en Microsoft Store Services SDK están configuradas como *paquetes de marcos*:
 
-* Microsoft.Advertising.dll. This library contains the advertising APIs in the [Microsoft.Advertising](https://msdn.microsoft.com/en-us/library/windows/apps/mt313187.aspx) and [Microsoft.Advertising.WinRT.UI](https://msdn.microsoft.com/en-us/library/windows/apps/microsoft.advertising.winrt.ui.aspx) namespaces.
-* Microsoft.Services.Store.Engagement.dll. This library contains the APIs in the [Microsoft.Services.Store.Engagement](https://msdn.microsoft.com/en-us/library/windows/apps/microsoft.services.store.engagement.aspx) namespace.
+* Microsoft.Advertising.dll. Esta biblioteca contiene las API de publicidad en los espacios de nombres [Microsoft.Advertising](https://msdn.microsoft.com/en-us/library/windows/apps/mt313187.aspx) y [Microsoft.Advertising.WinRT.UI](https://msdn.microsoft.com/en-us/library/windows/apps/microsoft.advertising.winrt.ui.aspx).
+* Microsoft.Services.Store.Engagement.dll. Esta biblioteca contiene las API en el espacio de nombres [Microsoft.Services.Store.Engagement](https://msdn.microsoft.com/en-us/library/windows/apps/microsoft.services.store.engagement.aspx).
 
-This means that after you install the SDK on your development computer, these libraries are automatically updated through Windows Update whenever we publish new versions of the libraries with fixes and performance improvements. This helps to ensure that you always have the latest available version of the libraries installed on your development computer.
+Esto significa que después de instalar el SDK en el equipo de desarrollo, dichas bibliotecas se actualizan automáticamente mediante Windows Update cada vez que publicamos nuevas versiones de las bibliotecas con correcciones y mejoras de rendimiento. Esto ayuda a garantizar que siempre tengas la versión más reciente de las bibliotecas instalada en el equipo de desarrollo.
 
-In addition, after a user installs a version of your app that uses these libraries, the libraries will also automatically be updated on their device whenever we publish new versions of the libraries with fixes and performance improvements. This means that users will always have the most current version of the libraries, without any need for you to publish updated versions of your app to the Store.
+Además, después de que un usuario instale una versión de tu aplicación que use estas bibliotecas, las bibliotecas se actualizarán automáticamente en su dispositivo cada vez que publiquemos nuevas versiones de las bibliotecas con correcciones y mejoras de rendimiento. Esto significa que los usuarios siempre tendrán la versión más actual de las bibliotecas, sin necesidad de que publiques versiones actualizadas de tu aplicación en la Tienda.
 
-However, if we release a new version of the SDK that introduces new APIs or features in these libraries, you will need to install the latest version of the SDK to use those features. In this scenario, you would also need to publish your updated app to the Store.
+Sin embargo, si publicamos una nueva versión del SDK que incorpora nuevas API o características en estas bibliotecas, tendrás que instalar la versión más reciente del SDK para usar dichas características. En este escenario, también necesitarás publicar la aplicación actualizada en la Tienda.
 
-## Related topics
+## Temas relacionados
 
-* [Microsoft Store Services SDK API reference](https://msdn.microsoft.com/library/windows/apps/mt691886.aspx)
-* [Run experiments with A/B testing](run-app-experiments-with-a-b-testing.md)
-* [Launch Feedback Hub from your app](launch-feedback-hub-from-your-app.md)
-* [Display ads in your app](display-ads-in-your-app.md)
+* [Microsoft Store Services SDK API reference (Referencia de las API de Microsoft Store Services SDK)](https://msdn.microsoft.com/library/windows/apps/mt691886.aspx)
+* [Ejecutar experimentos con pruebas A/B](run-app-experiments-with-a-b-testing.md)
+* [Iniciar el Centro de opiniones desde la aplicación](launch-feedback-hub-from-your-app.md)
+* [Mostrar anuncios en tu aplicación](display-ads-in-your-app.md)
+
+
+
+<!--HONumber=Sep16_HO2-->
+
+

@@ -5,7 +5,7 @@ title: "Interoperación DirectX y Direct2D nativa de composición con BeginDraw 
 description: "La API de Windows.UI.Composition proporciona interfaces nativas de interoperación que permiten mover contenido directamente al compositor."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: c2086e703e3972d4dd38dc1b7147bfa5f01231cf
+ms.openlocfilehash: 4d1bf75fee06c8f4c31ce23c89bf6267ab9e6394
 
 ---
 # Interoperación DirectX y Direct2D nativa de composición con BeginDraw y EndDraw
@@ -28,8 +28,7 @@ Para cargar píxeles en la superficie, la aplicación debe llamar al método [**
 
 La aplicación solo puede llamar a BeginDraw en una superficie a la vez, para cualquier objeto [**CompositionGraphicsDevice**](https://msdn.microsoft.com/library/windows/apps/Dn706749) dado. Después de llamar a [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx), la aplicación debe llamar a [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) en esa superficie antes de llamar a **BeginDraw** en otra. Dado que la API es ágil, la aplicación es responsable de sincronizar estas llamadas si desea realizar la representación desde varios subprocesos de trabajo. Si una aplicación desea interrumpir la representación de una superficie y cambiar a otra temporalmente, puede usar el método [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx). Esto permite que otro objeto **BeginDraw** realice la acción correctamente, pero no hace que la primera actualización de superficie esté disponible para la composición en pantalla. Esto permite que la aplicación haga varias actualizaciones de forma transaccional. Cuando una superficie se suspende, la aplicación puede continuar con la actualización con una llamada al método [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062) o declarar que la actualización ha finalizado con una llamada a **EndDraw**. Esto significa que se puede actualizar activamente solo una superficie para cualquier objeto **CompositionGraphicsDevice** dado. Cada dispositivo de gráficos mantiene este estado independientemente de los demás, por lo que una aplicación puede representar dos superficies simultáneamente si pertenecen a dispositivos gráficos diferentes. Sin embargo, esto excluye la memoria de vídeo de esas dos superficies de la agrupación y, como tal, el uso de la memoria es menos eficiente.
 
-Los métodos [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx), [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx), [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062) y [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) devuelven errores si la aplicación realiza una operación incorrecta (por ejemplo, pasar argumentos no válidos o llamar a **BeginDraw** en una superficie antes de llamar a **EndDraw** en otra). Estos tipos de errores representan errores de aplicación y, por lo tanto, la expectativa es que se controlan con un error inmediato. 
-              **BeginDraw** también puede devolver un error si se pierde el dispositivo DirectX subyacente. Este error no es grave, ya que la aplicación puede volver a crear su dispositivo DirectX e intentarlo de nuevo. Por consiguiente, se espera que la aplicación procese la pérdida del dispositivo simplemente omitiendo la representación. Si se produce un error en **BeginDraw** por cualquier motivo, la aplicación tampoco debe llamar a **EndDraw**, ya que el inicio no se realizó correctamente en primer lugar.
+Los métodos [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx), [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx), [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062) y [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) devuelven errores si la aplicación realiza una operación incorrecta (por ejemplo, pasar argumentos no válidos o llamar a **BeginDraw** en una superficie antes de llamar a **EndDraw** en otra). Estos tipos de errores representan errores de aplicación y, por lo tanto, la expectativa es que se controlan con un error inmediato. **BeginDraw** también puede devolver un error si se pierde el dispositivo DirectX subyacente. Este error no es grave, ya que la aplicación puede volver a crear su dispositivo DirectX e intentarlo de nuevo. Por consiguiente, se espera que la aplicación procese la pérdida del dispositivo simplemente omitiendo la representación. Si se produce un error en **BeginDraw** por cualquier motivo, la aplicación tampoco debe llamar a **EndDraw**, ya que el inicio no se realizó correctamente en primer lugar.
 
 ## Desplazamiento
 
@@ -271,6 +270,6 @@ private:
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

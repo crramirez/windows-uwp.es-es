@@ -5,8 +5,9 @@ title: "Movimiento y la animación en las aplicaciones para UWP"
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: aa1283ed9dbb895854b8d7b2bb16eb485b377fce
+translationtype: Human Translation
+ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
+ms.openlocfilehash: 1cdbb81c783d17af16743a4ff5f82dc1c92df6b4
 
 ---
 
@@ -14,7 +15,7 @@ ms.openlocfilehash: aa1283ed9dbb895854b8d7b2bb16eb485b377fce
 
 Unas animaciones intencionadas y bien diseñadas dan vida a las aplicaciones y ofrecen una experiencia que se percibe elaborada y elegante. Ayuda a los usuarios a comprender los cambios contextuales y relaciona las experiencias con transiciones visuales.
 
-## <span id="Benefits_of_animation"></span><span id="benefits_of_animation"></span><span id="BENEFITS_OF_ANIMATION"></span>Ventajas de la animación
+## Ventajas de la animación
 
 
 La animación es algo más que hacer que las cosas se muevan. La animación es una herramienta que permite crear un ecosistema físico donde el usuario vive y manipula mediante el tacto. La calidad de la experiencia depende de cómo responda la aplicación al usuario y de qué tipo de personalidad transmita la interfaz de usuario.
@@ -61,7 +62,7 @@ A medida que el usuario pasa más tiempo en tu aplicación o las tareas se hacen
         </td>
         <td>Las animaciones de listas te permiten insertar o quitar uno o varios elementos de una colección, como un álbum de fotos o una lista de resultados de búsqueda.
         </td>
-    </tr> 
+    </tr>
     <tr>
         <td>[Arrastrar y colocar](motion-dragdrop.md)
         </td>
@@ -110,10 +111,6 @@ A medida que el usuario pasa más tiempo en tu aplicación o las tareas se hacen
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

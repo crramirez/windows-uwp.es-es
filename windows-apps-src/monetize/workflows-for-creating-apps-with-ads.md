@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: fcebd659-438b-4d03-bc73-6b662ed6f1f3
 description: "Obtén información sobre el proceso completo para desarrollar y publicar una aplicación con anuncios."
 title: Flujos de trabajo para crear aplicaciones con anuncios
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 69dd1a17290b7ffbc14dbc58404868119403f7c0
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 0f832674f0e635f609f09fa15acead109b1d67ff
 
 
 ---
@@ -12,9 +13,9 @@ ms.openlocfilehash: 69dd1a17290b7ffbc14dbc58404868119403f7c0
 # Flujos de trabajo para crear aplicaciones con anuncios
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Para mostrar anuncios en tus aplicaciones, estas deben poder recibir anuncios de una red de anuncios. Microsoft proporciona un servicio web que permite a los desarrolladores de aplicaciones de Windows recibir anuncios. Cuando los usuarios hacen clic en el anuncio en la aplicación, puedes (como *publicador* del anuncio) obtener dinero del creador de los anuncios (el *anunciante*). El dinero que obtienes de los anunciantes se te paga a través de tu cuenta.
+
+Para mostrar anuncios en tus aplicaciones, estas deben poder recibirlos de una red de anuncios. Microsoft proporciona un servicio web que permite a los desarrolladores de aplicaciones de Windows recibir anuncios. Cuando los usuarios hacen clic en el anuncio en la aplicación, puedes (como *publicador* del anuncio) obtener dinero del creador de los anuncios (el *anunciante*). El dinero que obtienes de los anunciantes se te paga a través de tu cuenta.
 
 Los siguientes pasos principales describen el proceso general de desarrollo y publicación de una aplicación con anuncios.
 
@@ -65,6 +66,6 @@ Cuando tu aplicación se publique y esté disponible en la Tienda Windows, puede
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

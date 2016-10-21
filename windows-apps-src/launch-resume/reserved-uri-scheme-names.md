@@ -3,14 +3,15 @@ author: TylerMSFT
 title: Nombres de esquema de URI y archivo reservados
 description: "Puedes usar las asociaciones de URI para iniciar automáticamente la aplicación cuando otra aplicación inicie un esquema de URI específico."
 ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 2736267bf72b1cadd2c635b15daf6975a70937df
+ms.openlocfilehash: 2d3d647985701a7bbccc606fd485ad9f6361f9e7
 
 ---
 # Nombres de esquema de URI y archivo reservados
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Puedes usar las asociaciones de URI para iniciar automáticamente la aplicación cuando otra aplicación inicie un esquema de URI específico. No obstante, hay algunas asociaciones de URI que no se puede usar, asociaciones que están reservadas. Si la aplicación se registra para una asociación reservada, se omitirá el registro. Este tema enumera los nombres de esquema de URI y de archivo reservados que no están disponibles para la aplicación.
@@ -127,6 +128,6 @@ A continuación se muestran los tipos de archivo que están reservados para el s
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,95 +1,90 @@
 ---
 author: mcleanbyron
 Description: "Antes de poder ejecutar un experimento en tu aplicación de la Plataforma universal de Windows (UWP) con pruebas A/B, debes definir tu experimento en el panel del Centro de desarrollo."
-title: Define tu experimento en el panel del Centro de desarrollo
+title: Definir el experimento en el panel del Centro de desarrollo
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7462c23de58b44f897a1737d0d54913144b14f75
+translationtype: Human Translation
+ms.sourcegitcommit: ce0431243866125eff83569e3b9b1c75e0703358
+ms.openlocfilehash: df6744cb9f4dd60c9eef07dc89f2265ac4244aab
 
 ---
 
-# Define tu experimento en el panel del Centro de desarrollo
+# Definir el experimento en el panel del Centro de desarrollo
 
-Para ejecutar un experimento en tu aplicación de la Plataforma universal de Windows (UWP) con pruebas A/B, empieza por definir tu experimento en el panel del Centro de desarrollo
+Después de [crear un proyecto y definir variables remotas en el panel del Centro de desarrollo](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) y [escribir el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md), estás listo para crear un experimento en el proyecto. Al crear el experimento, defines los objetivos y otras variaciones que los usuarios recibirán.
 
-Las siguientes secciones describen el proceso general para definir un experimento en el panel. Para ver un tutorial que muestra de principio a fin el proceso de crear y ejecutar un experimento, consulta [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
-
-## Obtén una clave de API
-
-Para empezar, ve a la página **Experimentos** del panel del Centro de desarrollo y obtén una *clave de API* para tu experimento.
-
-Una clave de API es un identificador único que asocia tu aplicación con un experimento en tu cuenta del Centro de desarrollo. Cada experimento está asociado con exactamente una clave de API. Sin embargo, una aplicación puede tener varias claves de API y cada clave de API puede asociarse con múltiples experimentos. Puedes usar claves de API para ayudar a diferenciar entre distintos conjuntos de experimentos. Por ejemplo, podría tener una serie de experimentos que lanza para los evaluadores de su organización y otra serie de experimentos que lanza únicamente para los usuarios externos de su aplicación.
-
-Debes usar esta clave de API para conectar con el servicio de pruebas A/B en el código de tu aplicación. Para obtener más información, consulta [Escribe el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md).
+<span id="get-an-api-key" />
+<span id="create-an-experiment" />
+## Crear el experimento
 
 1. Inicia sesión en el [panel del Centro de desarrollo](https://dev.windows.com/overview).
 2. En **Tus aplicaciones**, selecciona la aplicación para la que deseas crear un experimento.
-3. En el panel de navegación, selecciona **Servicios** y, a continuación, selecciona **Experimentación**.
-4. La sección **Claves de API** proporciona una clave de API predeterminada para tu aplicación que se denomina **Clave de API 1 #**. Si deseas usar esta clave, opcionalmente, escribe un nombre descriptivo para esta clave y cópiala para usarla en el código de tu aplicación. Para generar una nueva clave de API, seleccione **Nueva clave de API** y escribe un nombre descriptivo para la clave de API.
+3. En el panel de navegación, selecciona **Servicios** y luego selecciona **Experimentación**.
+4. En la página **Experimentación**, identifica en la tabla de proyectos el proyecto en el que quieres agregar un experimento y haz clic en el vínculo **Agregar experimento** para ese proyecto.
+5. En el campo **Nombre del experimento**, escribe un nombre que puedes usar para identificar fácilmente el experimento. Después de crear un experimento, este nombre aparece en la lista de experimentos existentes en la página **Experimentación** de tu aplicación y en la página del proyecto.
+6. Si quieres editar el experimento mientras está activo, haz clic en la casilla **Experimento editable**. Activa esta casilla solo si vas a crear un experimento para validar todas las variaciones a través de pruebas internas. Para obtener más información, consulta la sección [Crear un experimento para pruebas internas](define-your-experiment-in-the-dev-center-dashboard.md#test_experiments).
 
-## Crea un experimento
-
-A continuación, crea un nuevo experimento y define los objetivos del mismo.
-
-1. En la sección **Experimentos**, haz clic en el botón **Nuevo experimento**.
-2. En la sección **Nombre de la clave de API**, selecciona la clave de API que deseas asociar con este experimento. Si solo tienes una clave de API, se seleccionará ese clave de API de manera predeterminada.
-3. En el campo **Nombre del experimento**, escriba un nombre que puedes usar para identificar fácilmente el experimento. Después de crear un experimento, este nombre aparece en la lista de experimentos en borrador, activos y finalizados en la página **Experimentos**.
-4. Si quieres crear un experimento de prueba, haz clic en la casilla de verificación **Probar experimento**. La diferencia entre los experimentos de prueba y los experimentos normales es que solo los experimentos de prueba se pueden cambiar después de que se activan.
-
-  Los experimentos de prueba están pensados para ayudarte a probar todas las variaciones en un dispositivo del cliente antes de lanzar el experimento a los clientes. Para asegurarte de que una variación se ejecute en los clientes según lo previsto, puedes activar un experimento de prueba con el 100% de la distribución asignada a una variación y el 0% asignada a otras variaciones. Después de comprobar esta variación, puedes repetir el proceso para las otras variaciones.
-  > 
-            **Nota**  Marca esta casilla solo si vas a crear un experimento de prueba para validar parámetros a través de pruebas internas. No actives esta casilla si vas a crear un experimento que lanzarás a los clientes.
-
-5. En el campo **Nombre de evento de vista** , escribe el nombre del *evento de vista* para tu experimento. El evento de vista es una cadena arbitraria que representa una actividad cuando el usuario comienza a visualizar una variación que forma parte de tu experimento. El código de tu aplicación enviará esta cadena de evento de vista al Centro de desarrollo cuando el usuario comience a visualizar una variación. Para obtener más información, consulta [Escribe el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md).
+  > **Nota**&nbsp;&nbsp;No actives esta casilla si vas a crear un experimento que publicarás para clientes (es decir, un experimento asociado a un id. de proyecto que se usa en una versión de tu aplicación que está disponible para clientes.) La edición de un experimento mientras está activo invalida los resultados del experimento.
+4. En la lista desplegable **Nombre de proyecto**, se selecciona el proyecto actual automáticamente. Si quieres agregar el nuevo experimento a otro proyecto, puedes seleccionar ese proyecto aquí. De lo contrario, deja solo esta selección.
+5.   Anota el valor de [Id. de proyecto](run-app-experiments-with-a-b-testing.md#terms). Cuando [escribas el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md), deberás hacer referencia a este identificador en el código para que puedas recibir datos de variación y notificar los eventos de visualización y conversión al Centro de desarrollo.
+5. En la sección **Evento de visualización**, escribe el nombre del [evento de visualización](run-app-experiments-with-a-b-testing.md#terms) para tu experimento en el campo **Nombre de evento de visualización**.
 6. En la sección **Objetivos y eventos de conversión**, define al menos un objetivo para tu experimento:
   * En el campo **Nombre del objetivo** , escribe un nombre descriptivo para tu objetivo. Después de ejecutar un experimento, este nombre aparece en el resumen de resultados del experimento.
-  * En el campo **Nombre de evento de conversión**, escribe el nombre del *evento de conversión* para este objetivo. Un evento de conversión es una cadena arbitraria que representa una meta de este objetivo. El código de tu aplicación enviará esta cadena de evento de conversión al Centro de desarrollo cuando el usuario alcanza un objetivo. Para obtener más información, consulta [Escribe el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md).
-  * En el campo **Objetivo** , elige **Maximizar** o **Minimizar**, en función de si deseas maximizar o minimizar las repeticiones del evento de conversión. Esta información se usa en el resumen de resultados del experimento.
+  * En el campo **Nombre de evento de conversión**, escribe el nombre del [evento de conversión](run-app-experiments-with-a-b-testing.md#terms) para este objetivo.
+  * En el campo **Objetivo**, elige **Maximizar** o **Minimizar**, en función de si deseas maximizar o minimizar las repeticiones del evento de conversión. Esta información se usa en el resumen de resultados del experimento.
 
-  >
-            **Nota** El Centro de desarrollo solo notifica el primer evento de conversión para cada vista de usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. Esto está pensado para ayudar a evitar que un solo usuario sesgue los resultados del experimento de un grupo de muestra de usuarios cuando el objetivo es maximizar el número de usuarios que realizan una conversión.
+  >**Nota**&nbsp;&nbsp;El Centro de desarrollo solo notifica el primer evento de conversión para cada visualización de usuario en un período de 24 horas. Si un usuario desencadena varios eventos de conversión en tu aplicación en un período de 24 horas, solo se informa el primer evento de conversión. Esto está pensado para ayudar a evitar que un solo usuario sesgue los resultados del experimento de un grupo de muestra de usuarios cuando el objetivo es maximizar el número de usuarios que realizan una conversión.
 
-## Define las variaciones y la configuración del experimento
+<span id="define-the-variations-and-settings-for-the-experiment" />
+### Definir las variables remotas y las variaciones del experimento
 
-A continuación, define las variaciones y la configuración de tu prueba.
+A continuación, define las [variables](run-app-experiments-with-a-b-testing.md#terms) remotas y las [variaciones](run-app-experiments-with-a-b-testing.md#terms) del experimento.
 
-* Una *variación* es una colección de una o más opciones de configuración que estás probando en el experimento. Cada experimento debe tener al menos una opción de configuración y dos variaciones (incluido el control). Un experimento puede tener hasta cinco variaciones.
-* Una *configuración* es un valor que tu aplicación usa para inicializar una variable de programa. Durante el experimento, el valor de la configuración cambia de variación en variación. Después de finalizar el experimento, se le asigna a la configuración el valor de la variación que elijas lanzar a todos los usuarios de tu aplicación. Las configuraciones puede tener los siguientes tipos: cadena, booleano, doble y entero.
+1. En la sección **Variaciones y variables remotas**, deberías ver dos variaciones predeterminadas, **Variación A (Control)** y **Variación B**. Si quieres más variaciones, haz clic en **Agregar variación**. Opcionalmente, puedes cambiar el nombre de cada variación.
+2. De manera predeterminada, las variaciones se distribuyen por igual a los usuarios de tu aplicación. Si deseas elegir un porcentaje de distribución específico, desactiva la casilla **Distribuir de forma equitativa** y escribe los porcentajes en la fila **% de distribución**.
+3. Agrega variables remotas a tus variaciones. En el control de la lista desplegable de la parte inferior de esta sección, elige cada variable que quieres agregar y haz clic en **Agregar variable**.
 
-Para definir las variaciones y la configuración de tu experimento:
-1. En la sección **Variaciones y configuración**, verás dos variaciones predeterminadas, **Variación A (Control)** y **Variación B**. Si quieres más variaciones, haz clic en **Agregar variación**. Opcionalmente, puedes cambiar el nombre de cada variación.
-2. A continuación, crea las configuraciones de tus variaciones. Haz clic en **Agregar configuración** para crear cada nueva configuración y escribe el nombre y el valor de la misma en cada variación.
-3. De manera predeterminada, las variaciones se distribuyen por igual a los usuarios de tu aplicación. Si deseas elegir un porcentaje de distribución específico, desactiva la casilla de verificación **Distribuir de forma equitativa** y escribe los porcentajes en la fila**(%) de distribución**.
+  >**Nota**&nbsp;&nbsp; Las variables que figuran en la lista en este control se heredan del proyecto para el experimento. El valor predeterminado de la variable (tal como se define en el proyecto) se asigna automáticamente a la variación de control. Si quieres crear nuevas variables que no se muestran aquí, ve a la página del proyecto relacionado y agrégalas allí.
+4. Edita los valores de variable de cada variación única del experimento (es decir, las variaciones que no son la variación de control).
 
-## Guarda tu experimento
+<span id="save-and-activate-your-experiment" />
+### Guardar y activar el experimento
 
-Cuando termines de escribir los campos necesarios para tu experimento, haz clic en **Guardar** para guardar el experimento.
+Cuando termines de especificar los campos necesarios para tu experimento, haz clic en **Guardar** para guardar el experimento.
 
-> 
-            **Importante** Después de guardar un experimento, ya no puedes cambiar su clave de API, incluso si aún no lo hubieras activado.
+Si estás satisfecho con los parámetros de tu experimento y estás listo para activarlo y, así, poder empezar la recopilación de datos del experimento de tu aplicación, haz clic en **Activar**. Cuando el experimento está activo, la aplicación puede recuperar las variables de variación y notificar los eventos de visualización y conversión al Centro de desarrollo. Para obtener más información, consulta el tema sobre cómo [ejecutar y administrar tu experimento en el panel del Centro de desarrollo](manage-your-experiment.md).
 
-Si estás satisfecho con los parámetros de tu experimento y estás listo para activarlo para poder empezar la recopilación de datos del experimento para tu aplicación, haz clic en **Activar**. Cuando el experimento esté activo, tu aplicación puede recuperar la configuración de la variación y notificar los eventos de vista y conversión al Centro de desarrollo.
+> **Importante**  Un proyecto solo puede contener un experimento activo a la vez. Después de activar un experimento, ya no se pueden modificar sus parámetros a menos que hayas activado la casilla **Experimento editable** al crear el experimento. Te recomendamos que escribas el código del experimento en tu aplicación antes de activar el experimento.
 
-> 
-            **Importante**  Después de activar un experimento, ya no se pueden modificar sus parámetros a menos que sea un experimento de prueba (hiciste clic en la casilla **Experimento de prueba** cuando lo creaste). Te recomendamos que escribas el código del experimento en tu aplicación antes de activar el experimento.
+<span id="test_experiments"/>
+## Crear un experimento para pruebas internas
+
+Es posible que quieras probar el experimento con una audiencia controlada (por ejemplo, un conjunto de evaluadores internos) y confirmar que todas las variaciones funcionan según lo previsto antes de activar el experimento para los clientes. Puedes hacerlo al crear un experimento que tenga seleccionada la opción **Experimento editable**.
+
+Para probar el experimento antes de publicarlo para los clientes, sigue este proceso:
+
+1. Crea dos proyectos: uno para la versión pública de la aplicación y otro para una compilación privada de la aplicación que solo está disponible para la audiencia de prueba. Las siguientes instrucciones hacen referencia a estos proyectos como el proyecto público y el proyecto de prueba, respectivamente.
+2. Cuando [escribas el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md), haz referencia al id. de proyecto de tu proyecto público en la compilación pública de la aplicación. En la compilación privada de la aplicación, haz referencia al id. de proyecto del proyecto de prueba.
+3. Crea un experimento en el proyecto de prueba y selecciona la opción **Experimento editable** para el experimento.
+4. Activa el experimento en el proyecto de prueba. Asigna una distribución de 100% a una variación y comprueba si esta variación funciona según lo esperado para los evaluadores. Repite el proceso para otras variaciones.
+5. Después de comprobar que las variaciones funcionan según lo previsto, realiza los cambios finales necesarios en el experimento del proyecto de prueba. Cuando estés listo para publicar el experimento para los clientes, clona el experimento en el proyecto público. En este experimento, no selecciones la opción **Experimento editable**.
+4. Asegúrate de que la distribución de variación de destino es correcta en el experimento clonado.
+5. Activa el experimento clonado para publicar el experimento para los clientes.
 
 ## Pasos siguientes
 
-Después de definir el experimento en el panel del Centro de desarrollo, estás listo para los siguientes pasos:
-1. 
-            [Escribe el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md). Usa una API en el SDK de monetización y la participación de Microsoft Store para obtener la configuración de la variación para el experimento, usa estos datos para modificar el comportamiento de la característica que estás probando y envía los eventos de vista y conversión al Centro de desarrollo.
-2. 
-            [Ejecuta y administra tu experimento en el panel del Centro de desarrollo](manage-your-experiment.md). Usa el panel para revisar los resultados y completar el experimento.
+Después de definir el experimento en el panel del Centro de desarrollo y escribir el código del experimento en tu aplicación, ya puedes [ejecutar y administrar el experimento en el panel del centro de desarrollo](manage-your-experiment.md).
 
 ## Temas relacionados
 
-  * [Escribe el código de tu aplicación para los experimentos.](code-your-experiment-in-your-app.md)
-  * [Administra tu experimento en el panel del Centro de desarrollo](manage-your-experiment.md)
-  * [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
-  * [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
+* [Crear un proyecto y definir variables remotas en el panel del Centro de desarrollo](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
+* [Programar tu aplicación para los experimentos](code-your-experiment-in-your-app.md)
+* [Administrar el experimento en el panel del Centro de desarrollo](manage-your-experiment.md)
+* [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
+* [Ejecutar experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

@@ -3,14 +3,15 @@ author: mcleanbyron
 ms.assetid: 141900dd-f1d3-4432-ac8b-b98eaa0b0da2
 description: "Obtén información sobre las soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones XAML."
 title: "Guía de solución de problemas de XAML y C#"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: ef9ad8f8056b17793d7ad8230e410e014edf2c95
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 0688ca6e0c88628803ad4e9a55b9285bd39351b4
 
 ---
 
 # Guía de solución de problemas de XAML y C#
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 En este tema encontrarás soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones de XAML.
 
@@ -289,8 +290,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
     El error más común que provoca una caja negra es "No ad available". Este error significa que no hay ningún anuncio disponible para devolver desde la solicitud.
 
-3.  
-            **AdControl** se comporta con normalidad. A veces el mismo anuncio aparecerá más de una vez en una fila, lo que da la apariencia de que los anuncios no se actualizan.
+3.  **AdControl** funciona con normalidad. A veces el mismo anuncio aparecerá más de una vez en una fila, lo que da la apariencia de que los anuncios no se actualizan.
 
 <span id="csharp-adsnotrefreshing"/>
 ### Los anuncios no se actualizan
@@ -340,6 +340,6 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

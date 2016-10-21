@@ -3,8 +3,9 @@ author: jnHs
 Description: Para recibir dinero por las ventas de aplicaciones en la Tienda Windows, debes configurar tu cuenta de pago y rellenar los formularios fiscales necesarios.
 title: Configurar formularios fiscales y cuentas de pago
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
-ms.sourcegitcommit: f17132514a42c50d6bfe716f6be706748c287043
-ms.openlocfilehash: 45cb4e8b65f1aeb75c049a88c143a23350d47b64
+translationtype: Human Translation
+ms.sourcegitcommit: ea9ea2d39ecd0fc54381df8d5fa7dd7cdc2fae51
+ms.openlocfilehash: 7de230aeee932f781a282ab7555e1c90bcd76460
 
 ---
 
@@ -13,22 +14,19 @@ ms.openlocfilehash: 45cb4e8b65f1aeb75c049a88c143a23350d47b64
 
 Para recibir dinero por las ventas de aplicaciones en la Tienda Windows, debes configurar tu cuenta de pago y rellenar los formularios fiscales necesarios.
 
-> 
-            **Nota** A partir del 1 de abril de 2016, las ganancias de Microsoft Advertising se abonarán en la cuenta de pago que configuraste en el Centro de desarrollo. Para obtener más información, consulta [Consolidación del perfil fiscal y la cuenta de pago del Centro de desarrollo y pubCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
+> **Nota** A partir del 1 de abril de 2016, las ganancias de Microsoft Advertising se abonarán en la cuenta de pago que configuraste en el Centro de desarrollo. Para obtener más información, consulta [Consolidación del perfil fiscal y la cuenta de pago del Centro de desarrollo y pubCenter](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
 
-Si solo tienes pensado anunciar aplicaciones gratuitas (y no piensas ofrecer compras desde la aplicación ni usar Microsoft Advertising), no necesitas configurar una cuenta de pago ni rellenar ningún formulario fiscal. Si cambias de opinión más tarde y decides que sí quieres vender aplicaciones (u ofrecer productos desde la aplicación), puedes configurar tu cuenta de pago y rellenar formularios fiscales en cualquier momento. No podrás enviar aplicaciones ni IAP de pago hasta que no completes tu cuenta de pago y tu perfil fiscal.
+Si solo tienes pensado anunciar aplicaciones gratuitas (y no piensas ofrecer compras desde la aplicación ni usar Microsoft Advertising), no necesitas configurar una cuenta de pago ni rellenar ningún formulario fiscal. Si cambias de opinión más tarde y decides que sí quieres vender aplicaciones (u ofrecer productos desde la aplicación), puedes configurar tu cuenta de pago y rellenar formularios fiscales en cualquier momento. No podrás enviar aplicaciones ni complementos de pago hasta que no completes tu cuenta de pago y tu perfil fiscal.
 
-> 
-            **Nota** En [determinados mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets), los desarrolladores únicamente pueden enviar aplicaciones gratuitas. Si tu cuenta está registrada en uno de esos mercados, no tendrás la opción de configurar una cuenta de pago.
+> **Nota** En [determinados mercados](account-types-locations-and-fees.md#developer-account-and-app-submission-markets), los desarrolladores únicamente pueden enviar aplicaciones gratuitas. Si tu cuenta está registrada en uno de esos mercados, no tendrás la opción de configurar una cuenta de pago.
 
 
-Una vez que [hayas configurado tu cuenta de desarrollador](opening-a-developer-account.md), hay dos cosas que debes hacer para poder vender aplicaciones (y ofrecer IAP) en la Tienda Windows:
+Una vez que [hayas configurado tu cuenta de desarrollador](opening-a-developer-account.md), hay dos cosas que debes hacer para poder vender aplicaciones (y ofrecer complementos) en la Tienda Windows:
 
 -   [Configurar tu cuenta de pago](#setting_up_your_payout_account)
 -   [Completar los formularios fiscales](#paying_taxes)
 
-> 
-            **Nota** Para obtener más información sobre cómo te pagaremos el dinero recaudado mediante tus aplicaciones, consulta [Proceso de pago](getting-paid-apps.md).
+> **Nota** Para obtener más información sobre cómo te pagaremos el dinero recaudado mediante tus aplicaciones, consulta [Proceso de pago](getting-paid-apps.md).
 
  
 
@@ -37,8 +35,7 @@ Una vez que [hayas configurado tu cuenta de desarrollador](opening-a-developer-a
 
 Una cuenta de pago es la cuenta bancaria a la que te enviamos las ganancias por tus ventas. Esta cuenta bancaria debe estar ubicada en el mismo país o región donde registraste tu cuenta de desarrollador.
 
-> 
-            **Nota** En algunos mercados, puede usarse PayPal para tu cuenta de pago. Consulta [Tipos de cuenta, ubicaciones y tarifas](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) para averiguar si PayPal es compatible con un mercado específico y lee la [Información de PayPal](#paypal) a continuación para obtener más detalles.
+> **Nota** En algunos mercados, puede usarse PayPal para tu cuenta de pago. Consulta [Tipos de cuenta, ubicaciones y tarifas](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) para averiguar si PayPal es compatible con un mercado específico y lee la [Información de PayPal](#paypal) a continuación para obtener más detalles.
 
  
 **Para configurar tu cuenta de pago**
@@ -46,20 +43,17 @@ Una cuenta de pago es la cuenta bancaria a la que te enviamos las ganancias por 
 1.  En el panel del Centro de desarrollo de Windows, haz clic en **Configuración de la cuenta** en el menú de navegación izquierdo.
 2.  En el menú de navegación izquierdo de la página **Configuración de la cuenta**, haz clic en **Cuenta de pago**.
 
-   > 
-            **Nota** Dado que se trata de información confidencial, se te pedirá que vuelvas a iniciar sesión.
+   > **Nota** Dado que se trata de información confidencial, se te pedirá que vuelvas a iniciar sesión.
 
 3.  En la pantalla que aparece, completa la información de tu cuenta.
 
-   > 
-            **Nota** Los campos que usas para proporcionar la información de tu cuenta solo aceptan caracteres alfanuméricos.
+   > **Nota** Los campos que usas para proporcionar la información de tu cuenta solo aceptan caracteres alfanuméricos.
 
 4.  Guarda tu información.
 
 Si necesitas actualizar o cambiar tu cuenta de pago, sigue los mismos pasos de arriba, reemplazando la información actual con los nuevos datos.
 
-> 
-            **Importante** Las modificaciones en tu cuenta de pago pueden retrasar los pagos hasta un ciclo de pago. Este retraso se debe a que necesitamos comprobar el cambio en la cuenta, al igual que lo hicimos la primera vez que la configuraste. Recibirás el pago de la totalidad del monto, una vez que tu cuenta se haya comprobado. Todos los pagos vencidos en el ciclo de pago corriente se agregarán al siguiente. Consulta [Proceso de pago](getting-paid-apps.md) para obtener más información.
+> **Importante** Las modificaciones en tu cuenta de pago pueden retrasar los pagos hasta un ciclo de pago. Este retraso se debe a que necesitamos comprobar el cambio en la cuenta, al igual que lo hicimos la primera vez que la configuraste. Recibirás el pago de la totalidad del monto, una vez que tu cuenta se haya comprobado. Todos los pagos vencidos en el ciclo de pago corriente se agregarán al siguiente. Consulta [Proceso de pago](getting-paid-apps.md) para obtener más información.
 
  
 
@@ -94,7 +88,7 @@ Una vez que el pago se haya emitido, tienes 30 días para presentar el formulari
 
 Si eres un desarrollador que vive en Rusia, puede que tengas que proporcionar documentación a tu banco antes de que este ingrese un importe en tu cuenta. Cuando reúnas los requisitos para recibir pagos, te proporcionaremos la siguiente documentación por correo electrónico:
 
-1.  Certificado de aceptación (CoA): indica los importes de los pagos que se transfieren a tu cuenta.
+1.  Certificado de aceptación (AC): indica los importes de los pagos que se transfieren a tu cuenta.
 2.  Contrato de desarrollador de aplicaciones: una copia firmada del acuerdo para desarrolladores que debe estar refrendada.
 
 Para garantizar que el pago se realiza correctamente, ten en cuenta los siguientes puntos:
@@ -108,11 +102,11 @@ Para garantizar que el pago se realiza correctamente, ten en cuenta los siguient
 
 Si eres un desarrollador que vive en Ucrania, puede que tengas que proporcionar documentación a tu banco antes de que este ingrese un importe en tu cuenta. Cuando reúnas los requisitos para recibir pagos, te proporcionaremos la siguiente documentación por correo electrónico:
 
-1.  Certificado de aceptación (CoA): indica los importes de los pagos que se transfieren a tu cuenta.
+1.  Certificado de aceptación (AC): indica los importes de los pagos que se transfieren a tu cuenta.
 2.  Contrato de desarrollador de aplicaciones: una copia firmada del acuerdo para desarrolladores que debe estar refrendada.
 3.  Contrato de enmienda (AA): este documento puede ser utilizado por tu banco para ayudar a identificar tus fondos de pago.
 
-Microsoft proporciona los tres documentos con el primer pago. En los pagos posteriores, solo recibirás el documento CoA. Guarda los documentos ADA y AA. Podrías necesitarlos para recibir pagos de tu banco en el futuro.
+Microsoft proporciona los tres documentos con el primer pago. En los pagos posteriores, solo recibirás el documento AC. Guarda los documentos ADA y AA. Podrías necesitarlos para recibir pagos de tu banco en el futuro.
 
 Para garantizar que el pago se realiza correctamente, ten en cuenta los siguientes puntos:
 
@@ -130,8 +124,7 @@ Después de [registrar una cuenta de desarrollador](opening-a-developer-account.
 
 Puedes completar y enviar tus formularios fiscales por vía electrónica en el panel; en la mayoría de lo casos, no es necesario que imprimas y envíes por correo postal ningún formulario.
 
-> 
-            **Importante** Diferentes países y regiones tienen distintos requisitos fiscales. El importe exacto que debes pagar en impuestos depende de los países y las regiones donde vendas tus aplicaciones. Consulta el [Acuerdo de desarrollador de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) para conocer en qué países o regiones Microsoft remite ventas e IVA de importación en tu nombre. En otros países o regiones, según el lugar donde te hayas registrado, es posible que debas remitir las ventas y el IVA de importación de tus ventas de aplicaciones directamente a la autoridad fiscal local. Además, es posible que las ganancias por las ventas de aplicaciones estén sujetas a impuestos como ingresos. Te recomendamos encarecidamente que te pongas en contacto con la autoridad correspondiente de tu país o región que pueda ayudarte a identificar la información fiscal correcta para tus actividades de desarrollador de la Tienda Windows.
+> **Importante** Diferentes países y regiones tienen distintos requisitos fiscales. El importe exacto que debes pagar en impuestos depende de los países y las regiones donde vendas tus aplicaciones. Consulta el [Acuerdo de desarrollador de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) para conocer en qué países o regiones Microsoft remite ventas e IVA de importación en tu nombre. En otros países o regiones, según el lugar donde te hayas registrado, es posible que debas remitir las ventas y el IVA de importación de tus ventas de aplicaciones directamente a la autoridad fiscal local. Además, es posible que las ganancias por las ventas de aplicaciones estén sujetas a impuestos como ingresos. Te recomendamos encarecidamente que te pongas en contacto con la autoridad correspondiente de tu país o región que pueda ayudarte a identificar la información fiscal correcta para tus actividades de desarrollador de la Tienda Windows.
 
  
 **Completar tu perfil fiscal**
@@ -139,8 +132,7 @@ Puedes completar y enviar tus formularios fiscales por vía electrónica en el p
 1.  En el panel del Centro de desarrollo de Windows, haz clic en **Configuración de la cuenta** en el menú de navegación izquierdo.
 2.  En el menú de navegación izquierdo de la página **Configuración de la cuenta**, haz clic en **Perfil fiscal**.
 
-   > 
-            **Nota** Dado que se trata de información confidencial, se te pedirá que vuelvas a iniciar sesión.
+   > **Nota** Dado que se trata de información confidencial, se te pedirá que vuelvas a iniciar sesión.
 
 3.  Revisa el estado de tu perfil fiscal actual y haz clic en **Editar** para completar los formularios necesarios.
 4.  Responde a las preguntas sobre residencia y nacionalidad estadounidense y haz clic en **Siguiente**.
@@ -168,6 +160,6 @@ Si estás fuera de los Estados Unidos, quizás puedas aprovechar los beneficios 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

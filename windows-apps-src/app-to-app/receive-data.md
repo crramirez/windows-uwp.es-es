@@ -1,49 +1,50 @@
 ---
-description: "En este artículo se explica cómo recibir contenido en la aplicación de la Plataforma universal de Windows (UWP) compartida desde otra aplicación mediante el contrato para contenido compartido. Este contrato para contenido compartido permite que la aplicación se presente como una opción cuando el usuario invoca el recurso compartido."
+description: "En este artículo se explica cómo recibir contenido en la aplicación de Plataforma universal de Windows (UWP) compartida desde otra aplicación mediante el uso del contrato para contenido compartido. Este contrato para contenido compartido permite que la aplicación se presente como una opción cuando el usuario invoca Compartir."
 title: Recibir datos
 ms.assetid: 0AFF9E0D-DFF4-4018-B393-A26B11AFDB41
 author: awkoren
-ms.sourcegitcommit: 7069e55b92e69a0af9ba23a0a737b61d427c615c
-ms.openlocfilehash: 806bcb591ec3b7c786f8aa98d854863539d723e2
+translationtype: Human Translation
+ms.sourcegitcommit: b8d627da82da463b87ace2a2ef6e739b1caafaa2
+ms.openlocfilehash: 0092fe2832eeafbc4e7cfa36a3444b9551a4f672
 
 ---
 
 # Recibir datos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este artículo se explica cómo recibir contenido en la aplicación de la Plataforma universal de Windows (UWP) compartida desde otra aplicación mediante el contrato para contenido compartido. Este contrato para contenido compartido permite que la aplicación se presente como una opción cuando el usuario invoca el recurso compartido.
+En este artículo se explica cómo recibir contenido en la aplicación de Plataforma universal de Windows (UWP) compartida desde otra aplicación mediante el uso del contrato para contenido compartido. Este contrato para contenido compartido permite que la aplicación se presente como una opción cuando el usuario invoca Compartir.
 
 ## Declarar la aplicación como destino de recursos compartidos
 
-Cuando un usuario invoca el recurso compartido, el sistema muestra una lista de posibles aplicaciones de destino. Para que aparezca en la lista, la aplicación debe declarar que es compatible con el contrato para contenido compartido. Esto permite que el sistema sepa que tu aplicación está disponible para recibir contenido.
+Cuando un usuario invoca Compartir, el sistema muestra una lista de posibles aplicaciones de destino. Para que aparezca en la lista, la aplicación debe declarar que es compatible con el contrato para contenido compartido. Esto permite que el sistema sepa que tu aplicación está disponible para recibir contenido.
 
 1.  Abre el archivo de manifiesto. Su nombre debe ser similar a **package.appxmanifest**.
 2.  Abre la pestaña **Declaraciones**.
-3.  Elige la opción **Compartir destino** en la lista **Declaraciones disponibles** y haz clic en **Agregar**.
+3.  Elige la opción **Compartir destino** en la lista **Declaraciones disponibles** y luego selecciona **Agregar**.
 
 ## Elegir tipos de archivo y formatos
 
-A continuación, debes decidir qué tipos de archivo y formatos de datos admites. Las API de recurso compartido admiten varios formatos estándar, como texto, HTML y mapas de bits. También puedes especificar tipos de archivo y formatos de datos personalizados. Si lo haces, recuerda que las aplicaciones de origen tienen que saber cuáles son esos tipos de formatos y archivos; de lo contrario, esas aplicaciones no pueden usar los formatos para compartir datos.
+A continuación, debes decidir qué tipos de archivo y formatos de datos admites. Las API de recurso compartido admiten varios formatos estándar, como texto, HTML y mapas de bits. También puedes especificar tipos de archivo y formatos de datos personalizados. Si lo haces, recuerda que las aplicaciones de origen tienen que saber cuáles son esos tipos de formatos y archivos; de lo contrario, dichas aplicaciones no pueden usar los formatos para compartir datos.
 
-Registra únicamente los formatos que tu aplicación pueda controlar. Cuando el usuario invoca la opción Compartir, solo aparecen las aplicaciones de destino que admiten los datos que se van a compartir.
+Registra únicamente los formatos que tu aplicación pueda controlar. Cuando el usuario invoca Compartir, solo aparecen las aplicaciones de destino que admiten los datos que se van a compartir.
 
 Para establecer los tipos de archivo:
 
 1.  Abre el archivo de manifiesto. Su nombre debe ser similar a **package.appxmanifest**.
-2.  En la sección **Tipos de archivo admitidos** de la página **Declaraciones**, haz clic en **Agregar nuevo**.
-3.  Escribe la extensión del nombre de archivo que quieres admitir. Por ejemplo, .docx. Debes incluir el punto. Si quieres admitir todos los tipos de archivo, activa la casilla **Compatible con todos los tipos de archivo**.
+2.  En la sección **Tipos de archivo admitidos** de la página **Declaraciones**, selecciona **Agregar nuevo**.
+3.  Escribe la extensión del nombre de archivo que quieres admitir, por ejemplo, ".docx". Debes incluir el punto. Si quieres admitir todos los tipos de archivo, activa la casilla **SupportsAnyFileType**.
 
 Para establecer los formatos de datos:
 
 1.  Abre el archivo de manifiesto.
-2.  Abre la sección **Formatos de datos** de la página **Declaraciones** y haz clic en **Agregar nueva**.
-3.  Escribe el nombre del formato de datos que admites. Por ejemplo, "Texto".
+2.  Abre la sección **Formatos de datos** de la página **Declaraciones** y selecciona **Agregar nueva**.
+3.  Escribe el nombre del formato de datos que admites, por ejemplo, "Texto".
 
-## Administración de la activación de recursos compartidos
+## Controlar la activación de recursos compartidos
 
-Cuando un usuario selecciona tu aplicación (por lo general, la selecciona desde la lista de aplicaciones de destino disponibles en la interfaz de usuario de recursos compartidos), se genera un evento [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Application.OnShareTargetActivated(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs)). Tu aplicación debe controlar este evento para procesar los datos que el usuario quiere compartir.
+Cuando un usuario selecciona tu aplicación (por lo general, la selecciona desde la lista de aplicaciones de destino disponibles en la interfaz de usuario del recurso compartido), se genera un evento [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Application.OnShareTargetActivated(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs)). Tu aplicación debe controlar este evento para procesar los datos que el usuario quiere compartir.
 
 <!-- For some reason, the snippets in this file are all inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
@@ -95,9 +96,9 @@ Por último, una vez que tu aplicación haya procesado correctamente el contenid
 shareOperation.ReportCompleted();
 ```
 
-Cuando usas estos métodos, normalmente los llamas en el orden indicado anteriormente y no lo haces más de una vez. Sin embargo, hay veces en las que una aplicación de destino puede llamar a [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved) antes de a [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted). Por ejemplo, la aplicación podría recuperar los datos como parte de una tarea del controlador de activación, pero no llamar a **ReportStarted** hasta que el usuario haga clic en el botón Compartir.
+Cuando usas estos métodos, normalmente los llamas en el orden indicado anteriormente y no lo haces más de una vez. Sin embargo, hay veces en las que una aplicación de destino puede llamar a [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved) antes de a [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted). Por ejemplo, la aplicación podría recuperar los datos como parte de una tarea del controlador de activación, pero no llamar a **ReportStarted** hasta que el usuario seleccione botón **Compartir**.
 
-## Devolución de un objeto Quicklink en operaciones de uso compartido correctas
+## Devolver un objeto Quicklink en operaciones de uso compartido correctas
 
 Cuando un usuario seleccione tu aplicación para recibir contenido, te recomendamos que crees un [**QuickLink**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink). Un **QuickLink** es como un acceso directo que hace que a los usuarios les resulte más fácil compartir información con tu aplicación. Por ejemplo, tu aplicación puede crear un **QuickLink** que abra un nuevo mensaje de correo configurado previamente con la dirección de correo de un amigo.
 
@@ -129,6 +130,7 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 
 ## Consulta también 
 
+* [Comunicación entre aplicaciones](index.md)
 * [Compartir datos](share-data.md)
 * [OnShareTargetActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onsharetargetactivated.aspx)
 * [ReportStarted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted.aspx)
@@ -140,6 +142,7 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 * [QuickLInkId](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.id.aspx)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

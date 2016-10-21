@@ -3,21 +3,23 @@ author: jnHs
 Description: "Una vez que la aplicación esté en la TiendaWindows, es el momento de mostrarla al máximo número de clientes posible."
 title: "Promoción de aplicaciones y atracción de clientes"
 ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3511533f76294767ca409b09a718555a6194e451
+translationtype: Human Translation
+ms.sourcegitcommit: 4dec7ebaaeb0bc0dba24002f8cd8a805285de3d6
+ms.openlocfilehash: 1f43cb9fdf633cecf6848a4ef0dd49a0f07f79c3
 
 ---
 
 # Promoción de aplicaciones y atracción de clientes
 
 
-Una vez que la aplicación esté en la TiendaWindows, es el momento de mostrarla al máximo número de clientes posible. Te damos opciones para que promuevas tu aplicación y atraigas a los clientes.
+Una vez que la aplicación esté en la TiendaWindows, es el momento de mostrarla al máximo número de clientes posible. Te brindamos opciones para que promuevas tus productos y mantengas a los clientes implicados.
 
 -   [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md)
--   [Crea una campaña de promoción de la aplicación personalizada](create-a-custom-app-promotion-campaign.md)
+-   [Crear una campaña de promoción de la aplicación personalizada](create-a-custom-app-promotion-campaign.md)
 -   [Generar códigos promocionales](generate-promotional-codes.md)
--   [Poner aplicaciones e IAP en oferta](put-apps-and-iaps-on-sale.md)
--   [Responder a las críticas de los clientes](respond-to-customer-reviews.md)
+-   [Poner aplicaciones y complementos a la venta](put-apps-and-add-ons-on-sale.md)
+-   [Responder a los comentarios de los clientes](respond-to-customer-feedback.md)
+-   [Responder a las opiniones de los clientes](respond-to-customer-reviews.md)
 -   [Directrices de marketing para aplicaciones de la Tienda Windows](app-marketing-guidelines.md)
 -   [Vincular a tu aplicación](link-to-your-app.md)
 -   [Facilitar la promoción de la aplicación](make-your-app-easier-to-promote.md)
@@ -28,10 +30,6 @@ Una vez que la aplicación esté en la TiendaWindows, es el momento de mostrarla
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

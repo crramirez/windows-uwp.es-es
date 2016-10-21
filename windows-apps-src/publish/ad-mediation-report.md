@@ -3,8 +3,9 @@ author: jnHs
 Description: "El informe de mediación de anuncios te permite ver la velocidad de relleno efectiva y las velocidades de relleno respectivas para las redes de anuncios que estás usando."
 title: "Informe de mediación de anuncios"
 ms.assetid: 18A33928-B9F2-4F76-9A9C-F01FEE42FEA1
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1597e21414dbb5d1b540a2dd67478fbcc83d574e
+ms.openlocfilehash: 07b4e34cc5e91ec70b88631560dd1429f11d2d6b
 
 ---
 
@@ -13,8 +14,7 @@ ms.openlocfilehash: 1597e21414dbb5d1b540a2dd67478fbcc83d574e
 
 El informe de **mediación de anuncios** te permite ver la velocidad de relleno efectiva y las velocidades de relleno respectivas para las redes de anuncios que estás usando. También muestra las velocidades de adopción de las configuraciones de mediación y proporciona visibilidad de los errores notificados por las redes de anuncios y el mediador. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión.
 
-
-            **Importante**  El informe de **mediación de anuncios** solo proporciona datos si usas la [mediación de anuncios de Windows](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359) en la aplicación.
+**Importante** El informe de **Mediación de anuncios** solo proporciona datos si usas la [mediación de anuncios de Windows](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359) en la aplicación.
 
  
 
@@ -23,12 +23,9 @@ El informe de **mediación de anuncios** te permite ver la velocidad de relleno 
 
 Cerca de la parte superior de la página, puede expandir **Filtros de página** para filtrar todos los datos de esta página por intervalo de fechas o por mercado.
 
--   
-            **Fecha**: el filtro predeterminado es **Últimos 30 días**, pero puedes ampliarlo hasta **Últimos 12 meses**.
--   
-            **Mercado**: el valor predeterminado es **Todos los mercados**. Puedes elegir un mercado específico si quieres que esta página solo muestre clasificaciones de clientes en ese mercado.
--   
-            **Plataforma**: el valor predeterminado es **Todas las plataformas**. Si la aplicación está destinada a varias plataformas, puedes elegir una plataforma específica.
+-   **Fecha**: El filtro predeterminado es **Últimos 30 días**, pero puedes ampliarlo hasta **Últimos 12 meses**.
+-   **Mercado**: El valor predeterminado es **Todos los mercados**. Puedes elegir un mercado específico si quieres que esta página solo muestre clasificaciones de clientes en ese mercado.
+-   **Plataforma**: El valor predeterminado es **Todas las plataformas**. Si la aplicación está destinada a varias plataformas, puedes elegir una plataforma específica.
 
 La información de todos los gráficos que aparecen a continuación reflejará el período de tiempo seleccionado en **Filtros de página**. De manera predeterminada, esto incluirá datos de todos los mercados y plataformas en que se muestra la aplicación, a menos que hayas usado **Filtros de página** para especificar un mercado o una plataforma en concreto.
 
@@ -71,6 +68,6 @@ El gráfico **Errores por tipo** muestra los errores específicos que experiment
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

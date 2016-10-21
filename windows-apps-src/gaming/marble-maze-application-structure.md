@@ -3,21 +3,21 @@ author: mtoepke
 title: "Estructura de la aplicación Marble Maze"
 description: "La estructura de una aplicación DirectX para la Plataforma universal de Windows (UWP) es diferente de la de una aplicación de escritorio tradicional."
 ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: e9cc290fa77471f315daf7f29f605412d2ec45cc
+ms.openlocfilehash: 84dbe1730274bd39b1ba359c588bc68976a2d19e
 
 ---
 
 # Estructura de la aplicación Marble Maze
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 La estructura de una aplicación DirectX para la Plataforma universal de Windows (UWP) es diferente de la de una aplicación de escritorio tradicional. En lugar de trabajar con tipos de identificadores como **HWND** y funciones como **CreateWindow**, Windows Runtime proporciona interfaces como [**Windows::UI::Core::ICoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208296) para que puedas desarrollar aplicaciones para UWP de una manera más moderna y orientada a objetos. En esta sección de la documentación se muestra cómo está estructurado el código de la aplicación Marble Maze.
 
-> 
-            **Nota**  El código de ejemplo correspondiente a este documento se encuentra en la [muestra de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Nota**   El código de ejemplo correspondiente a este documento se encuentra en la [muestra de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 ## 
@@ -29,7 +29,7 @@ Estos son algunos de los puntos principales que se tratan en este documento para
 -   Usa controladores de eventos para responder a eventos de ventana. (Estos sustituyen a los mensajes de ventana de las aplicaciones de escritorio de Windows).
 -   Usa una máquina de estado para controlar el flujo y el orden de la lógica del juego.
 
-##   Organización de archivos
+##  Organización de archivos
 
 
 Algunos de los componentes de Marble Maze se pueden volver a utilizar con cualquier juego casi sin modificaciones. Para tu propio juego, puedes adaptar la organización y las ideas que proporcionan estos archivos. En la siguiente tabla se describen brevemente los archivos de código fuente importantes.
@@ -60,7 +60,7 @@ Algunos de los componentes de Marble Maze se pueden volver a utilizar con cualqu
 
  
 
-##   Formatos de recursos en tiempo de diseño y en tiempo de ejecución
+##  Formatos de recursos en tiempo de diseño y en tiempo de ejecución
 
 
 Cuando puedas, usa los formatos en tiempo de ejecución en vez de los formatos en tiempo de diseño para lograr una carga más eficaz de los recursos del juego.
@@ -73,7 +73,7 @@ Los sombreadores HLSL son un ejemplo de recursos que usan formato en tiempo de d
 
 Por razones instructivas, el proyecto Marble Maze incluye el formato en tiempo de diseño y el formato en tiempo de ejecución para muchos recursos, pero solo debes mantener los formatos en tiempo de diseño en el proyecto de origen para tu propio juego porque puedes convertirlos en formatos en tiempo de ejecución cuando los necesites. Esta documentación muestra cómo convertir los formatos en tiempo de diseño en formatos en tiempo de ejecución.
 
-##   Ciclo de vida de la aplicación
+##  Ciclo de vida de la aplicación
 
 
 Marble Maze sigue el ciclo de vida de una aplicación para UWP típica. Para obtener más información sobre el ciclo de vida en una aplicación para UWP, consulta [Ciclo de vida de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt243287).
@@ -82,7 +82,7 @@ Cuando se inicializa un juego para UWP, suele inicializar los componentes en tie
 
 Después de la inicialización, los juegos suelen ejecutar el *bucle del juego*. En este bucle, los juegos suelen realizar cuatro acciones: procesar eventos de Windows, recopilar métodos de entrada, actualizar objetos de la escena y representar la escena. Cuando el juego actualiza la escena, puede aplicar el estado de entrada actual en los objetos de la escena and y simular eventos físicos, como las colisiones de objetos. El juego también puede realizar otras actividades como reproducir efectos de sonido o enviar datos por la red. Cuando el juego representa la escena, captura el estado actual de la escena y la representa en el dispositivo de pantalla. En las siguientes secciones se describen estas actividades con mayor detalle.
 
-##   Agregar a la plantilla
+##  Agregar a la plantilla
 
 
 La plantilla *Aplicación DirectX 11 (Windows universal)* crea una ventana principal que se puede representar con Direct3D. Esta plantilla incluye además la clase **DeviceResources**, responsable de crear todos los recursos de dispositivo de Direct3D que se necesitan para representar contenido en 3D en una aplicación para UWP. La clase **AppMain** crea el objeto de la clase **MarbleMaze**, inicia la carga de recursos, repite una serie de instrucciones para actualizar el temporizador y llama al método de representación **MarbleMaze** para cada marco. Los métodos **CreateWindowSizeDependentResources**, Update y Render para esta clase llaman a los métodos correspondientes en la clase **MarbleMaze**. El siguiente ejemplo muestra el lugar en que el constructor **AppMain** crea el objeto de la clase **MarbleMaze**. La clase de los recursos de dispositivo se pasa a esta clase para que pueda usar los objetos Direct3D en la representación.
@@ -101,8 +101,7 @@ Cuando los controladores de estos eventos reciben la llamada, pasan la entrada a
 
 Para asegurase de que el juego responda a los eventos de ventana en menos de 5 segundos después de su inicio, recomendamos que cargues los activos del juego asincrónicamente en segundo plano. Mientras los activos se cargan en segundo plano, el juego puede responder a los eventos de la ventana.
 
-> 
-            **Nota**  También puedes mostrar el menú principal cuando esté listo y permitir que los activos restantes sigan cargándose en segundo plano. Si el usuario selecciona una opción del menú antes de que se hayan cargado todos los recursos, puedes indicar que los recursos de la escena siguen cargándose mostrando una barra de progreso, por ejemplo.
+> **Nota**  También puedes mostrar el menú principal cuando esté listo y permitir que los activos restantes sigan cargándose en segundo plano. Si el usuario selecciona una opción del menú antes de que se hayan cargado todos los recursos, puedes indicar que los recursos de la escena siguen cargándose mostrando una barra de progreso, por ejemplo.
 
  
 
@@ -122,8 +121,7 @@ La clase **MarbleMaze** define la marca *m\_deferredResourcesReady* para indicar
 
 Para obtener más información sobre la programación asincrónica de las aplicaciones para UWP, consulta [Programación asincrónica en C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
->> > 
-            **Sugerencia**  Si escribes código del juego que forma parte de una biblioteca C++ de Windows Runtime (es decir, una DLL), podrías leer [Creación de operaciones asincrónicas en C++ para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/hh750113.aspx) para aprender a crear operaciones asincrónicas que pueden consumir las aplicaciones y otras bibliotecas.
+>> > **Sugerencia**   Si escribes código del juego que forma parte de una biblioteca C++ de Windows Runtime (es decir, una DLL), te sería conveniente leer [Crear operaciones asincrónicas en C++ para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/hh750113.aspx) para aprender a crear operaciones asincrónicas que las aplicaciones y otras bibliotecas pueden consumir.
 
  
 
@@ -353,8 +351,7 @@ void MarbleMaze::LoadState()
 }
 ```
 
-> 
-            **Importante**  Marble Maze no distingue entre el inicio en frío (es decir, iniciar por primera vez sin un evento de suspensión anterior) y la reanudación desde un estado suspendido. Este diseño es el recomendado para todas las aplicaciones para UWP.
+> **Importante**  Marble Maze no distingue entre el arranque en frío (es decir, arrancar por primera vez sin un evento de suspensión anterior) y la reanudación desde un estado suspendido. Este diseño es el recomendado para todas las aplicaciones para UWP.
 
  
 
@@ -381,6 +378,6 @@ Lee [Agregar contenido visual a la muestra de Marble Maze](adding-visual-content
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

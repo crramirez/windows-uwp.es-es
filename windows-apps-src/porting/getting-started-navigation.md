@@ -3,8 +3,9 @@ author: mcleblanc
 title: "Introducción a la navegación"
 description: "Introducción a la navegación"
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c542faa6365c8558988162bee12f266d67474461
+ms.openlocfilehash: daf56299b3a5e81bb756bc9fcb8112da044b00f3
 
 ---
 
@@ -77,8 +78,7 @@ También puedes obtener o establecer la propiedad [**CacheSize**](https://msdn.m
 
 Para más información sobre la navegación, consulta [Navegación](https://msdn.microsoft.com/library/windows/apps/mt187344) y [Ejemplo de animaciones de personalidad XAML](http://go.microsoft.com/fwlink/p/?LinkID=242401).
 
-
-            **Nota:**  Para obtener información sobre la navegación para aplicaciones de la Tienda Windows con JavaScript y HTML, consulta [Inicio rápido: usar la navegación de una página](https://msdn.microsoft.com/library/windows/apps/hh452768).
+**Nota:** Para obtener información sobre la navegación para aplicaciones de la Tienda Windows con JavaScript y HTML, consulta [Inicio rápido: usar la navegación de una página](https://msdn.microsoft.com/library/windows/apps/hh452768).
  
 ### Paso siguiente
 
@@ -87,6 +87,6 @@ Para más información sobre la navegación, consulta [Navegación](https://msdn
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,15 +3,16 @@ author: mtoepke
 title: "Preguntas más frecuentes sobre la migración a DirectX11"
 description: "Respuestas a las preguntas más frecuentes sobre la migración de juegos a la Plataforma universal de Windows (UWP)."
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: dc98f15d80fb70fb6e106555659d699c41fbfa0b
+ms.openlocfilehash: 908da9d15a49291f6a1c2467858b525c2f3dc7da
 
 ---
 
 # Preguntas más frecuentes sobre la migración a DirectX11
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Respuestas a las preguntas más frecuentes sobre la migración de juegos a la Plataforma universal de Windows (UWP).
@@ -29,10 +30,7 @@ El dispositivo Direct3D ahora se usa para crear recursos en memoria de vídeo, m
 ##  ¿Tengo que actualizar el temporizador del juego para UWP?
 
 
-
-            [
-              **QueryPerformanceCounter**
-            ](https://msdn.microsoft.com/library/windows/desktop/ms644904), junto con [**QueryPerformanceFrequency**](https://msdn.microsoft.com/library/windows/desktop/ms644905), sigue siendo la mejor manera de implementar un temporizador para las aplicaciones para UWP.
+[**QueryPerformanceCounter**](https://msdn.microsoft.com/library/windows/desktop/ms644904), junto con [**QueryPerformanceFrequency**](https://msdn.microsoft.com/library/windows/desktop/ms644905), sigue siendo la mejor manera de implementar un temporizador para las aplicaciones para UWP.
 
 Debes tener en cuenta un aspecto de los temporizadores y el ciclo de vida de una aplicación para UWP. La acción de suspensión y reanudación es diferente a cuando un jugador reinicia un juego de escritorio, ya que tu juego reanudará una instantánea de la última vez que estuvo activo. Si transcurre mucho tiempo, por ejemplo, algunas semanas, algunas implementaciones del temporizador del juego podrían tener errores leves. Puedes usar eventos de ciclo de vida de la aplicación para restablecer el temporizador cuando se reanuda el juego.
 
@@ -125,12 +123,12 @@ Microsoft Visual Studio 2015 incluye herramientas de diagnóstico para elementos
 ##  ¿Cuál es el equivalente de la función *x* en Direct3D 11?
 
 
-Consulta la información acerca de la [asignación de funciones](feature-mapping.md#function-mapping) proporcionada en el artículo "Asignar características de DirectX 9 a las API de DirectX 11".
+Consulta la información acerca de la [asignación de funciones](feature-mapping.md#function-mapping) proporcionada en el artículo Asignar características de DirectX 9 a las API de DirectX 11.
 
 ##  ¿Cuál es el equivalente DXGI\_FORMAT del formato de superficie *y*?
 
 
-Consulta la información acerca de la [asignación de formatos de superficie](feature-mapping.md#surface-format-mapping) proporcionada en el artículo "Asignar características de DirectX 9 a las API de DirectX 11".
+Consulta la información acerca de la [asignación de formatos de superficie](feature-mapping.md#surface-format-mapping) proporcionada en el artículo Asignar características de DirectX 9 a las API de DirectX 11.
 
  
 
@@ -142,6 +140,6 @@ Consulta la información acerca de la [asignación de formatos de superficie](fe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

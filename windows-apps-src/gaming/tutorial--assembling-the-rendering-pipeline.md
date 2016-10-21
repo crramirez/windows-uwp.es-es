@@ -3,8 +3,9 @@ author: mtoepke
 title: "Ensamblar el marco de representación"
 description: "Ahora vamos a ver cómo el juego de muestra usa esa estructura y ese estado para mostrar sus gráficos."
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5eb6ea7ad1a30f020c155007396383b88d10c0a8
+ms.openlocfilehash: c0c935af257fe52e22cadaffb6e008ddbf9629a8
 
 ---
 
@@ -20,18 +21,12 @@ Hasta ahora, has visto cómo estructurar un juego de la Plataforma universal de 
 
 -   Comprender cómo configurar un marco de representación básico para mostrar la salida de gráficos para un juego DirectX de UWP.
 
-> 
-            **Nota** Los siguientes archivos de código no se analizan en este tema, pero proporcionan clases y métodos a los que se hace referencia aquí y se [proporcionan como código al final de este tema](#code_sample):
--   
-            **Animate.h/.cpp**.
--   
-            **BasicLoader.h/.cpp**. Proporciona métodos para cargar mallas, sombreadores y texturas, tanto de manera sincrónica como asincrónica. Es muy útil.
--   
-            **MeshObject.h/.cpp**, **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp** y **WorldMesh.h/.cpp**. Contiene las definiciones de los primitivos de objetos usados en el juego, como las esferas de munición, los obstáculos de cono y cilindro, y las paredes de la galería de disparos. (**GameObject.cpp**, que se analiza brevemente en este tema, contiene el método para representar estos primitivos.)
--   
-            **Level.h/.cpp** y **Level\[1-6\].h/.cpp**. Contiene la configuración para cada uno de los seis niveles del juego, incluidos los criterios de éxito y el número y la posición de los obstáculos y destinos.
--   
-            **TargetTexture.h/.cpp**. Contiene un conjunto de métodos para dibujar los mapas de bits usados como las texturas de los destinos.
+> **Nota** Los siguientes archivos de código no se analizan en este tema, pero proporcionan clases y métodos a los que se hace referencia aquí y se [proporcionan como código al final de este tema](#code_sample):
+-   **Animate.h/.cpp**.
+-   **BasicLoader.h/.cpp**. Proporciona métodos para cargar mallas, sombreadores y texturas, tanto de manera sincrónica como asincrónica. Es muy útil.
+-   **MeshObject.h/.cpp**, **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp** y **WorldMesh.h/.cpp**. Contiene las definiciones de los primitivos de objetos usados en el juego, como las esferas de munición, los obstáculos de cono y cilindro, y las paredes de la galería de disparos. (**GameObject.cpp**, que se analiza brevemente en este tema, contiene el método para representar estos primitivos.)
+-   **Level.h/.cpp** y **Level\[1-6\].h/.cpp**. Contiene la configuración para cada uno de los seis niveles del juego, incluidos los criterios de éxito y el número y la posición de los obstáculos y destinos.
+-   **TargetTexture.h/.cpp**. Contiene un conjunto de métodos para dibujar los mapas de bits usados como las texturas de los destinos.
 
 Estos archivos contienen código que no es específico de los juegos DirectX de UWP. Pero puedes revisarlos de manera separada si quisieras obtener más detalles sobre la implementación.
 
@@ -133,14 +128,10 @@ Dado que las API de Direct3D 11 están definidas como API COM, debes proporciona
 
 La muestra de juego declara 4 búferes de constantes específicos:
 
--   
-            **m\_constantBufferNeverChanges**. Este búfer de constantes contiene los parámetros de iluminación. Se establece una vez y nunca más cambia.
--   
-            **m\_constantBufferChangeOnResize**. Este búfer de constantes contiene la matriz de proyección. La matriz de proyección depende del tamaño y la relación de aspecto de la ventana. Solo se actualiza cuando cambia el tamaño de la ventana.
--   
-            **m\_constantBufferChangesEveryFrame**. Este búfer de constantes contiene la matriz de vista. Esta matriz depende de la posición de la cámara y la dirección de vista (lo normal para la proyección) y cambia solamente una vez por fotograma.
--   
-            **m\_constantBufferChangesEveryPrim**. Este búfer de constantes contiene las propiedades materiales y matriz de modelos de cada primitivo. La matriz de modelos transforma los vértices desde las coordenadas locales en coordenadas globales. Estas constantes son específicas de cada primitivo y se actualizan para cada llamada de dibujo.
+-   **m\_constantBufferNeverChanges**. Este búfer de constantes contiene los parámetros de iluminación. Se establece una vez y nunca más cambia.
+-   **m\_constantBufferChangeOnResize**. Este búfer de constantes contiene la matriz de proyección. La matriz de proyección depende del tamaño y la relación de aspecto de la ventana. Solo se actualiza cuando cambia el tamaño de la ventana.
+-   **m\_constantBufferChangesEveryFrame**. Este búfer de constantes contiene la matriz de vista. Esta matriz depende de la posición de la cámara y la dirección de vista (lo normal para la proyección) y cambia solamente una vez por fotograma.
+-   **m\_constantBufferChangesEveryPrim**. Este búfer de constantes contiene las propiedades materiales y matriz de modelos de cada primitivo. La matriz de modelos transforma los vértices desde las coordenadas locales en coordenadas globales. Estas constantes son específicas de cada primitivo y se actualizan para cada llamada de dibujo.
 
 La idea de los búferes de constantes múltiples con diferentes frecuencias se reduce a la cantidad de datos que deben enviarse a la GPU por fotograma. Por lo tanto, la muestra separa las constantes en diferentes búferes sobre la base de la frecuencia que con la que deben actualizarse. Este es el procedimiento recomendado para la programación de Direct3D.
 
@@ -199,8 +190,7 @@ El primer punto de la agenda en cualquier juego es establecer una conexión con 
 
 Ahora, en la muestra de juego, reemplazamos dos de estos métodos (**CreateDeviceIndependentResources** y **CreateDeviceResources**) proporcionados en la clase **DirectXBase** implementada en la plantilla **DirectX 11 App (Windows Universal)**. Para cada uno de estos métodos reemplazados, primero llamamos a las implementaciones de **DirectXBase** que se reemplazan y después agregamos más detalles de implementación específicos de la muestra de juego. No olvides que la implementación de la clase **DirectXBase** incluida en la muestra de juego presenta modificaciones con respecto a la versión de la plantilla de Visual Studio, ya que incorpora compatibilidad con la vista estereoscópica y rotación previa del objeto **SwapBuffer**.
 
-
-            **CreateWindowSizeDependentResources** no se reemplaza con el objeto **GameRenderer**. Usamos la implementación correspondiente que se suministra en la clase **DirectXBase**.
+**CreateWindowSizeDependentResources** no se reemplaza con el objeto **GameRenderer**. Usamos la implementación correspondiente que se suministra en la clase **DirectXBase**.
 
 Para más información sobre las implementaciones base de **DirectXBase** de estos métodos, consulta el tema sobre [cómo configurar tu aplicación DirectX de UWP para mostrar una vista](https://msdn.microsoft.com/library/windows/apps/hh465077)-
 
@@ -672,13 +662,11 @@ void GameRenderer::FinalizeCreateGameDeviceResources()
 }
 ```
 
-
-            **CreateDeviceResourcesAsync** es un método que ejecuta un conjunto de tareas asincrónicas distinto para cargar los recursos del juego. Puesto que se espera que se ejecute en un subproceso independiente, solo tiene acceso a los métodos de dispositivo de Direct3D11 (definidos en [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)), y no a los métodos de contexto de dispositivo (definidos en [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)), por lo que tiene la opción de no realizar ninguna representación. El método **FinalizeCreateGameDeviceResources** se ejecuta en el subproceso principal y carece de acceso a los métodos de contexto dispositivo de Direct3D11.
+**CreateDeviceResourcesAsync** es un método que ejecuta un conjunto distinto de tareas asincrónicas para así poder cargar los recursos del juego. Puesto que se espera que se ejecute en un subproceso independiente, solo tiene acceso a los métodos de dispositivo de Direct3D11 (definidos en [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)), y no a los métodos de contexto de dispositivo (definidos en [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)), por lo que tiene la opción de no realizar ninguna representación. El método **FinalizeCreateGameDeviceResources** se ejecuta en el subproceso principal y carece de acceso a los métodos de contexto dispositivo de Direct3D11.
 
 La secuencia de eventos para cargar los recursos de los dispositivos del juego se produce del siguiente modo.
 
-
-            **CreateDeviceResourcesAsync** inicializa en primer lugar los búferes de constantes para los primitivos. Los búferes de constantes son búferes de latencia baja y ancho fijo que guardan los datos que un sombreador usa durante la ejecución del sombreado. (Piensa en estos búferes como pasar datos al sombreador de forma constante durante la ejecución de la llamada de dibujo en concreto). En este ejemplo, los búferes contienen los datos que los sombreadores usarán para:
+**CreateDeviceResourcesAsync** inicializa en primer lugar los búferes de constantes de los elementos primitivos. Los búferes de constantes son búferes de latencia baja y ancho fijo que guardan los datos que un sombreador usa durante la ejecución del sombreado. (Piensa en estos búferes como pasar datos al sombreador de forma constante durante la ejecución de la llamada de dibujo en concreto). En este ejemplo, los búferes contienen los datos que los sombreadores usarán para:
 
 -   Colocar las fuentes de luz y establecer su color cuando se inicialice el representador;
 -   Calcular la matriz de vista siempre que se cambie el tamaño de la ventana;
@@ -693,8 +681,7 @@ A continuación, **CreateDeviceResourcesAsync** inicia tareas asincrónicas para
 
 Por último, devuelve un grupo de tareas que contiene todas las tareas asincrónicas creadas por el método. La función que llama espera a que todas estas tareas asincrónicas finalicen y después llama a **FinalizeCreateGameDeviceResources**.
 
-
-            **FinalizeCreateGameDeviceResources** carga los datos iniciales en los búferes de constantes con una llamada de método de contexto de dispositivo a [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486): `m_deviceContext->UpdateSubresource`. Este método crea los objetos de malla para los objetos de esfera, cilindro, cara y juego del mundo, así como los materiales asociados. Después se pasea por la lista de objetos del juego para asociar los recursos de dispositivos pertinentes con cada objeto.
+**FinalizeCreateGameDeviceResources** carga los datos iniciales en los búferes de constantes realizando una llamada de método de contexto de dispositivo a [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486): `m_deviceContext->UpdateSubresource`. Este método crea los objetos de malla para los objetos de esfera, cilindro, cara y juego del mundo, así como los materiales asociados. Después se pasea por la lista de objetos del juego para asociar los recursos de dispositivos pertinentes con cada objeto.
 
 Las texturas para los objetos de objetivos numerados y anillados se generan en procedimientos usando el código de **TargetTexture.cpp**. El representador crea una instancia del tipo **TargetTexture**, que crea la textura de mapa de bits para los objetos de objetivos del juego cuando llamamos al método **TargetTexture::CreateTextureResourceView**. La textura resultante se compone de anillos de colores concéntricos, con un valor numérico en la parte superior. Estos recursos generados se asocian con los objetos de juego de objetivos adecuados.
 
@@ -869,8 +856,7 @@ Ahora echemos un vistazo a cómo crea el juego el marco para dibujar los gráfic
 
 En el código de muestra del juego, definimos e implementamos los primitivos en dos clases base y las especializaciones correspondientes a cada tipo de primitivo.
 
-
-            **MeshObject.h/.cpp** define la clase base para todos los objetos de malla. Los archivos **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp**, y **WorldMesh.h/.cpp** contienen el código que rellena los búferes de constantes para cada primitivo con el vértice y los datos normales de vértice que definen la geometría del primitivo. Estos archivos de código son una buena forma de empezar si buscas entender cómo crear primitivos de Direct3D en tu propia aplicación de juego, pero no lo analizaremos aquí porque es demasiado específico de la implementación de este juego. Por ahora, damos por sentado que los búferes de vértice de cada primitivo se han rellenado; veamos cómo controla la muestra de juego esos búferes para actualizar el propio juego.
+**MeshObject.h/.cpp** define la clase base de todos los objetos de malla. Los archivos **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp**, y **WorldMesh.h/.cpp** contienen el código que rellena los búferes de constantes para cada primitivo con el vértice y los datos normales de vértice que definen la geometría del primitivo. Estos archivos de código son una buena forma de empezar si buscas entender cómo crear primitivos de Direct3D en tu propia aplicación de juego, pero no lo analizaremos aquí porque es demasiado específico de la implementación de este juego. Por ahora, damos por sentado que los búferes de vértice de cada primitivo se han rellenado; veamos cómo controla la muestra de juego esos búferes para actualizar el propio juego.
 
 La clase base para los objetos que representan los primitivos desde la perspectiva del juego se define en **GameObject.h./.cpp.** Esta clase, **GameObject**, define los campos y métodos para los comportamientos comunes en todos los primitivos. Cada tipo de objeto primitivo deriva de él. Veamos cómo se define:
 
@@ -967,16 +953,11 @@ protected private:
 
 La mayoría de los campos contienen datos sobre el estado, las propiedades visuales o la posición del primitivo en el mundo de juego. Hay unos pocos métodos en particular que son necesarios en la mayoría de los juegos:
 
--   
-            **Mesh**. Obtiene la geometría de malla del primitivo, que se almacena en **m\_mesh**. Esta geometría se define en **MeshObject.h/.cpp**.
--   
-            **IsTouching**. Este método determina si el primitivo se encuentra a una distancia específica de un punto y devuelve el punto en la superficie más cercana al punto y lo normal a la superficie del objeto en ese punto. Debido a que la muestra sólo se encarga de las colisiones entre munición y primitivos, esto es suficiente para la dinámica del juego. No es una función de intersección primitivo-primitivo con carácter general, aunque podría usarse como base para una.
--   
-            **AnimatePosition**. Actualiza el movimiento y la animación del primitivo.
--   
-            **UpdatePosition**. Actualiza la posición del objeto en el espacio de coordenadas del mundo.
--   
-            **Render**. Coloca las propiedades materiales del primitivo en el búfer de constantes primitivas y a continuación reproduce (dibuja) la geometría primitiva usando el contexto de dispositivo.
+-   **Mesh**. Obtiene la geometría de malla del primitivo, que se almacena en **m\_mesh**. Esta geometría se define en **MeshObject.h/.cpp**.
+-   **IsTouching**. Este método determina si el primitivo se encuentra a una distancia específica de un punto y devuelve el punto en la superficie más cercana al punto y lo normal a la superficie del objeto en ese punto. Debido a que la muestra sólo se encarga de las colisiones entre munición y primitivos, esto es suficiente para la dinámica del juego. No es una función de intersección primitivo-primitivo con carácter general, aunque podría usarse como base para una.
+-   **AnimatePosition**. Actualiza el movimiento y la animación del primitivo.
+-   **UpdatePosition**. Actualiza la posición del objeto en el espacio de coordenadas del mundo.
+-   **Render**. Coloca las propiedades materiales del primitivo en el búfer de constantes primitivas y a continuación reproduce (dibuja) la geometría primitiva usando el contexto de dispositivo.
 
 Es una práctica recomendada crear un tipo de objeto base que defina el mínimo conjunto de métodos para un primitivo, porque la mayoría de los juegos tienen un número de primitivos muy grande, y el código puede hacerse difícil de administrar rápidamente. También simplifica el código del juego que el bucle de actualización pueda tratar a los primitivos de forma polimórfica, permitiendo que los propios objetos definan su propio comportamiento de actualización y representación.
 
@@ -1027,8 +1008,7 @@ Si se detecta una colisión (un impacto), **GameObject::Render** comprueba el co
 
 Así es como **Material::RenderSetup** configura los búferes de constantes y asigna los recursos de sombreador. De nuevo, observa que el búfer de constantes es el que se usó para actualizar los cambios en los primitivos concretamente.
 
-> 
-            **Nota** La clase **Material** se define en **Material.h/.cpp**.
+> **Nota** La clase **Material** se define en **Material.h/.cpp**.
 
  
 
@@ -1078,8 +1058,7 @@ En este punto, la muestra del juego ha definido los primitivos que deben dibujar
 
 El código de sombreador se define usando el lenguaje de sombreado de alto nivel (HLSL, del inglés High-Level Shader Language), que, en Direct3D 11, se compila desde un programa creado con una sintaxis similar a C. (La sintaxis completa se puede encontrar [aquí](https://msdn.microsoft.com/library/windows/desktop/bb509635).) Los dos sombreadores principales del juego de muestra se definen en **PixelShader.hlsl** y **VertexShader.hlsl**. (También hay dos sombreadores de "baja potencia" definidos para los dispositivos con escasa potencia: **PixelShaderFlat.hlsl** y **VertexShaderFlat.hlsl**. Estos dos sombreadores proporcionan efectos reducidos, por ejemplo no tienen resaltados especulares en las superficies de texturas.) Por último, hay un archivo .hlsli que contiene el formato de los búferes de constantes, **ConstantBuffers.hlsli**.
 
-
-            **ConstantBuffers.hlsli** se define de la siguiente manera:
+**ConstantBuffers.hlsli** se define de la siguiente manera:
 
 ```cpp
 Texture2D diffuseTexture : register(t0);
@@ -1137,8 +1116,7 @@ struct PixelShaderFlatInput
 };
 ```
 
-
-            **VertexShader.hlsl** se define de esta manera:
+**VertexShader.hlsl** se define de esta manera:
 
 VertexShader.hlsl
 
@@ -6348,6 +6326,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

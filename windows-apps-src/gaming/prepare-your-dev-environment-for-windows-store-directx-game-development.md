@@ -3,15 +3,16 @@ author: mtoepke
 title: Plantillas de proyectos y herramientas para juegos
 description: Muestra lo que necesitas hacer para empezar a programar juegos de DirectX para la Plataforma universal de Windows (UWP).
 ms.assetid: d5afd5d3-ad01-0f16-3ddf-2c4eb86b68a7
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b7b4cba0c88a914c3d0da4cf79adb51bcad2307f
+ms.openlocfilehash: 360ffe86a6b2033510cb7d4b790477c80d5d1205
 
 ---
 
 # Plantillas de proyectos y herramientas para juegos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este tema te mostramos todo lo que necesitas hacer para empezar a programar juegos de DirectX para la Plataforma universal de Windows (UWP).
@@ -21,8 +22,7 @@ En primer lugar, necesitarás Visual Studio.
 ## Obtener Visual Studio
 
 
-
-            [Descarga e instala Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions).
+[Descarga e instala Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions).
 
 <table>
 <colgroup>
@@ -81,6 +81,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

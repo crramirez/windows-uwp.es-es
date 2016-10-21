@@ -6,26 +6,38 @@ ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: fdff043aa92842adb6ac2d572794bf02fdd5c6b3
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 6c27d9b968dfca6d0c1db37eb7779d9ff3744f41
 
 ---
 # Patrón o control de navegación centralizada
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Un control de navegación centralizada permite organizar el contenido de la aplicación en secciones o categorías distintas, aunque relacionadas. Las secciones de un control de navegación centralizada están pensadas para que se recorran en un orden preferido y pueden servir como punto de partida para experiencias más detalladas.
 
 ![Ejemplo de un control de navegación centralizada](images/hub_example_tablet.png)
 
-El contenido en un control de navegación centralizada se puede mostrar en una vista panorámica que permite a los usuarios obtener una vista rápida de lo que es nuevo, lo que está disponible y lo que es relevante. Las navegaciones centralizadas suelen tener un encabezado de página, y las secciones de contenido obtienen cada una un encabezado de sección.
+El contenido en un control de navegación centralizada se puede mostrar en una vista panorámica que permite a los usuarios obtener una vista rápida de lo que es nuevo, lo que está disponible y lo que es relevante. Los hubs suelen tener un encabezado de página y cada sección de contenido, un encabezado de sección.
+
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251843"><strong>Clase Hub</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251845"><strong>Clase HubSection</strong></a></li>
+</ul>
+
+</div>
+</div>
 
 
--   [**Clase Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)
--   [**Clase HubSection**](https://msdn.microsoft.com/library/windows/apps/dn251845)
+
+
 
 ## ¿Es este el control adecuado?
 
-El control de navegación centralizada funciona bien para mostrar grandes cantidades de contenido organizado en una jerarquía. Los concentradores dan prioridad a la exploración y detección de contenido nuevo, lo que los hace útiles para mostrar elementos en una tienda o una colección de elementos multimedia.
+El control de hub funciona bien para mostrar grandes cantidades de contenido organizado en una jerarquía. Los concentradores dan prioridad a la exploración y detección de contenido nuevo, lo que los hace útiles para mostrar elementos en una tienda o una colección de elementos multimedia.
 
 El control de navegación centralizada tiene varias funciones que hacen que funcione bien para crear un patrón de navegación de contenido.
 
@@ -112,6 +124,6 @@ En los dispositivos móviles, las secciones de navegación centralizada están v
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,22 +5,36 @@ title: Directrices para botones de radio
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 317df548e72f9aff475ba0959668b6441ac29d3d
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 435a2a6f1b9707d1f64587a693bd9a60d587ca83
 
 ---
 # Botones de radio
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 Los botones de radio permiten a los usuarios seleccionar una opción entre dos o más opciones Cada opción aparece representada por un botón de radio; un usuario solo puede seleccionar un único botón de radio en un grupo de botones de radio.
 
 (Si tienes curiosidad acerca del origen nombre, los botones de radio se llaman así por los botones de canales preestablecidos de una radio).
 
 ![Botones de radio](images/controls/radio-button.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br227544"><strong>Clase RadioButton</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx"><strong>Evento Checked</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx"><strong>Propiedad IsChecked</strong></a></li>
+</ul>
 
--   [**Clase RadioButton**](https://msdn.microsoft.com/library/windows/apps/br227544)
--   [**Evento Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)
--   [**Propiedad IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
+</div>
+</div>
+
+
+
+
+
 
 ## ¿Es este el control adecuado?
 
@@ -57,9 +71,7 @@ Los botones de radio funcionan en grupos. Hay dos formas de agrupar los controle
 - Colocarlos dentro del mismo contenedor principal.
 - Establece la propiedad [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) en cada botón de radio en el mismo valor.
 
-> 
-            **Nota**
-            &nbsp;&nbsp;Un grupo de botones de radio se comporta como un control único cuando se accede a él con el teclado. Solo se puede acceder a la opción seleccionada mediante la tecla TAB, pero los usuarios pueden desplazarse por el grupo con las teclas de flecha.
+> **Nota**&nbsp;&nbsp;Un grupo de botones de radio se comporta como un control único cuando se accede a él con el teclado. Solo se puede acceder a la opción seleccionada mediante la tecla TAB, pero los usuarios pueden desplazarse por el grupo con las teclas de flecha.
 
 En este ejemplo, el primer grupo de botones de radio se agrupará implícitamente al estar en el mismo panel de pila. El segundo grupo se divide entre dos paneles de pila, por lo que explícitamente están agrupados por GroupName.
 
@@ -186,6 +198,6 @@ En esta ilustración, se muestra el modo correcto de colocar y espaciar botones 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

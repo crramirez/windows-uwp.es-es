@@ -5,15 +5,14 @@ title: "Crear una aplicación de tarjeta NFC inteligente"
 description: "Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC con un elemento seguro basado en SIM, pero ese modelo requería que las aplicaciones de pago seguro estuvieran estrechamente unidas a los operadores de redes móviles (MNO)."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 1c131951d725107daffd8286e85c53acd9c0b88a
+ms.openlocfilehash: 52a8be1df522c6b5512a7fe560d01e8d840194af
 
 ---
 # Crear una aplicación de tarjeta NFC inteligente
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-
-              **Importante** Este tema solo es válido para Windows10 Mobile.
+**Importante** Este tema solo se aplica a Windows10 Mobile.
 
 Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC con un elemento seguro basado en SIM, pero ese modelo requería que las aplicaciones de pago seguro estuvieran estrechamente unidas a los operadores de redes móviles (MNO). Esto limitaba la variedad de soluciones de pago posibles por otros comerciantes o desarrolladores que no estaban unidos a MNO. En Windows 10 Mobile, se ha incluido una nueva tecnología de emulación de tarjetas denominada Emulación de tarjeta de host (HCE). La tecnología HCE permite a tu aplicación comunicarse directamente con un lector de tarjetas NFC. En este tema se muestra cómo funciona la emulación de tarjeta de host (HCE) en dispositivos de Windows 10 Mobile y cómo se desarrolla una aplicación HCE para que los clientes puedan acceder a los servicios a través de su teléfono en lugar de con una tarjeta física sin colaboración con un MNO.
 
@@ -101,8 +100,7 @@ taskBuilder.SetTrigger(new SmartCardTrigger(SmartCardTriggerType.EmulatorHostApp
 bgTask = taskBuilder.Register();
 ```
 
-Ten en cuenta que el desencadenador de tareas se establece en [**SmartCardTriggerType**](https://msdn.microsoft.com/library/windows/apps/Dn608017). 
-              **EmulatorHostApplicationActivated**. Esto significa que cada vez que el sistema operativo que resuelve la aplicación recibe una APDU del comando SELECT AID, se iniciará la tarea en segundo plano.
+Ten en cuenta que el desencadenador de tareas se establece en [**SmartCardTriggerType**](https://msdn.microsoft.com/library/windows/apps/Dn608017). **EmulatorHostApplicationActivated**. Esto significa que cada vez que el sistema operativo que resuelve la aplicación recibe una APDU del comando SELECT AID, se iniciará la tarea en segundo plano.
 
 ## Recibir y responder a APDU
 
@@ -388,6 +386,6 @@ La compatibilidad para interceptar SMS binarios heredados de Windows Phone8.1 se
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

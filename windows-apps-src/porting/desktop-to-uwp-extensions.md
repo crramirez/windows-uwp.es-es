@@ -4,8 +4,8 @@ Description: "Además de las API normales disponibles para todas las aplicacione
 Search.Product: eADQiWindows 10XVcnh
 title: Extensiones para aplicaciones de escritorio convertidas
 translationtype: Human Translation
-ms.sourcegitcommit: aa64c39c452beb2356186789a0d8bc44f79d82d2
-ms.openlocfilehash: 0ad7e8d0fe63ffbfa8668be8955859258887d6f0
+ms.sourcegitcommit: 09ddc8cad403a568a43e08f32abeaf0bbd40d59a
+ms.openlocfilehash: 2aa55797ed3a6588b3a27158282a02827fbd2109
 
 ---
 
@@ -26,18 +26,12 @@ Para declarar una tarea de inicio, agrega lo siguiente al manifiesto de la aplic
     <desktop:StartupTask TaskId="MyStartupTask" Enabled="true" DisplayName="My App Service" />
 </desktop:Extension>
 ```
-- 
-            *Extension Category* siempre debe tener el valor "windows.startupTask".
-- 
-            *Extension Executable* es la ruta de acceso relativa al archivo .exe que iniciar.
-- 
-            *Extensión EntryPoint* siempre debe tener el valor "Windows.FullTrustApplication".
-- 
-            *StartupTask TaskId* es un identificador exclusivo para la tarea. Con este identificador, la aplicación puede llamar a las API de la clase **Windows.ApplicationModel.StartupTask** para habilitar o deshabilitar una tarea de inicio mediante programación.
-- 
-            *StartupTask Enabled* indica si la tarea se inicia por primera vez habilitada o deshabilitada. Las tareas habilitadas se ejecutarán la próxima vez que el usuario inicie sesión (a menos que el usuario las deshabilite). 
-- 
-            *StartupTask DisplayName* es el nombre de la tarea que aparece en el Administrador de tareas. Esta cadena se puede traducir mediante ```ms-resource```. 
+- *Extension Category* siempre debe tener el valor "windows.startupTask".
+- *Extension Executable* es la ruta de acceso relativa al archivo .exe que iniciar.
+- *Extensión EntryPoint* siempre debe tener el valor "Windows.FullTrustApplication".
+- *StartupTask TaskId* es un identificador exclusivo para la tarea. Con este identificador, la aplicación puede llamar a las API de la clase **Windows.ApplicationModel.StartupTask** para habilitar o deshabilitar una tarea de inicio mediante programación.
+- *StartupTask Enabled* indica si la tarea se inicia por primera vez habilitada o deshabilitada. Las tareas habilitadas se ejecutarán la próxima vez que el usuario inicie sesión (a menos que el usuario las deshabilite). 
+- *StartupTask DisplayName* es el nombre de la tarea que aparece en el Administrador de tareas. Esta cadena se puede traducir mediante ```ms-resource```. 
 
 Las aplicaciones pueden declarar varias tareas de inicio; cada una se desencadenará y se ejecutará de forma independiente. Todas las tareas de inicio aparecerán en el Administrador de tareas en la pestaña **Inicio** con el nombre especificado en el manifiesto de la aplicación y el icono de la aplicación. El Administrador de tareas analizará automáticamente el impacto en el inicio de las tareas. Los usuarios pueden optar por deshabilitar manualmente la tarea de inicio de la aplicación mediante el Administrador de tareas; si el usuario deshabilita una tarea, no puedes volver a habilitarla mediante programación.
 
@@ -50,19 +44,15 @@ Para especificar un alias de ejecución de la aplicación, agrega lo siguiente a
 ```XML 
 <uap3:Extension Category="windows.appExecutionAlias" Executable="exes\launcher.exe" EntryPoint="Windows.FullTrustApplication">
     <uap3:AppExecutionAlias>
-        <desktop:ExecutionAlias Alias="Foo.exe">
+        <desktop:ExecutionAlias Alias="Foo.exe" />
     </uap3:AppExecutionAlias>
 </uap3:Extension>
 ```
 
-- 
-            *Extension Category* siempre debe tener el valor "windows.appExecutionAlias".
-- 
-            *Extensión ejecutable* es la ruta de acceso relativa al archivo ejecutable que iniciar cuando se invoque el alias.
-- 
-            *Extensión EntryPont* siempre debe tener el valor "Windows.FullTrustApplication".
-- 
-            *ExecutionAlias Alias* es el nombre corto de la aplicación. Siempre debe acabar con la extensión ".exe". 
+- *Extension Category* siempre debe tener el valor "windows.appExecutionAlias".
+- *Extensión ejecutable* es la ruta de acceso relativa al archivo ejecutable para iniciar cuando se invoque el alias.
+- *Extensión EntryPont* siempre debe tener el valor "Windows.FullTrustApplication".
+- *ExecutionAlias Alias* es el nombre corto de la aplicación. Siempre debe acabar con la extensión ".exe". 
 
 Solo puedes especificar un único alias de ejecución de la aplicación para cada aplicación del paquete. Si varias aplicaciones se registran para el mismo alias, el sistema llamará a la última que se haya registrado, así que asegúrate de elegir un alias exclusivo que sea bastante improbable que otras aplicaciones sustituyan.
 
@@ -78,12 +68,9 @@ Para declarar una asociación de protocolo, agrega lo siguiente al manifiesto de
 </uap3:Extension>
 ```
 
-- 
-            *Extension Category* siempre debe tener el valor "windows.protocol". 
-- 
-            *Protocol Name* es el nombre del protocolo. 
-- 
-            *Protocol Parameters* es la lista de parámetros y valores que pasar a la aplicación como argumentos del evento cuando se activa. Ten en cuenta que si una variable puede contener una ruta de archivo, debes encapsular dicho valor entre comillas para que no se interrumpa si se pasa una ruta de acceso que incluya espacios.
+- *Extension Category* siempre debe tener el valor "windows.protocol". 
+- *Protocol Name* es el nombre del protocolo. 
+- *Protocol Parameters* es la lista de parámetros y valores para pasar a la aplicación como argumentos del evento cuando se activa. Ten en cuenta que si una variable puede contener una ruta de archivo, debes encapsular dicho valor entre comillas para que no se interrumpa si se pasa una ruta de acceso que incluya espacios.
 
 ## Archivos e integración en el Explorador de archivos
 
@@ -99,10 +86,8 @@ Para empezar, agrega lo siguiente al manifiesto de la aplicación:
 </uap3:Extension>
 ```
 
-- 
-            *Extension Category* siempre debe tener el valor "windows.fileTypeAssociation". 
-- 
-            *FileTypeAssociation Name* es un id. exclusivo. Este identificador se usa internamente para generar un ProgID con hash asociado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación. Por ejemplo, si deseas cambiar el icono de una extensión de archivo, puedes moverla a un nuevo FileTypeAssociation con un nombre diferente.  
+- *Extension Category* siempre debe tener el valor "windows.fileTypeAssociation". 
+- *FileTypeAssociation Name* es un id. exclusivo. Este identificador se usa internamente para generar un ProgID con hash asociado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación. Por ejemplo, si deseas cambiar el icono de una extensión de archivo, puedes moverla a un nuevo FileTypeAssociation con un nombre diferente.  
 
 A continuación, agrega elementos secundarios adicionales a esta entrada en función de las características específicas que necesites. A continuación se describen las opciones disponibles.
 
@@ -119,8 +104,7 @@ Ejemplo:
 </uap:SupportedFileTypes>
 ```
 
-- 
-            *FileType* es la extensión que la aplicación admite.
+- *FileType* es la extensión que la aplicación admite.
 
 ### Verbos de menú contextual 
 
@@ -137,26 +121,19 @@ Ejemplo:
 </uap2:SupportedVerbs>
 ```
 
-- 
-            *Verb Id* es un id. exclusivo del verbo. Si la aplicación es una aplicación para UWP, este se pasa a la aplicación como parte de los argumentos del evento de activación para que pueda controlar la elección del usuario correctamente. Si la aplicación es una aplicación de plena confianza convertida, en su lugar recibe parámetros (consulta el siguiente punto). 
-- 
-            *Verb Parameters* es la lista de parámetros de argumento y valores asociados con el verbo. Si la aplicación es una aplicación de plena confianza convertida, estos se pasan a él como argumentos del evento cuando se activa, para que puedas personalizar su comportamiento para verbos de activación distintos. Si una variable puede contener una ruta de archivo, debes encapsular dicho valor entre comillas para que no se interrumpa si se pasa una ruta de acceso que incluya espacios. Ten en cuenta que si la aplicación es una aplicación para UWP, no se pueden pasar parámetros; en su lugar, la aplicación recibe el identificador (consulta el punto anterior). 
-- 
-            *Verb extended* especifica que el verbo solo debe aparecer si el usuario mantiene presionada la tecla **Mayús** antes de hacer clic con el botón secundario en el archivo para mostrar el menú contextual. Este atributo es opcional y su valor predeterminado es *False* (por ejemplo, mostrar siempre el verbo) si no se incluye. Este comportamiento se especifica de forma individual para cada verbo (excepto "Abrir", que siempre es *False*). 
-- 
-            *Verb* es el nombre para mostrar en el menú contextual del Explorador de archivos. Esta cadena se puede traducir mediante ```ms-resource```.
+- *Verb Id* es un id. exclusivo del verbo. Si la aplicación es una aplicación para UWP, este se pasa a la aplicación como parte de los argumentos del evento de activación para que pueda controlar la elección del usuario correctamente. Si la aplicación es una aplicación de plena confianza convertida, en su lugar recibe parámetros (consulta el siguiente punto). 
+- *Verb Parameters* es la lista de parámetros de argumento y valores asociados con el verbo. Si la aplicación es una aplicación de plena confianza convertida, estos se pasan a él como argumentos del evento cuando se activa, para que puedas personalizar su comportamiento para verbos de activación distintos. Si una variable puede contener una ruta de archivo, debes encapsular dicho valor entre comillas para que no se interrumpa si se pasa una ruta de acceso que incluya espacios. Ten en cuenta que si la aplicación es una aplicación para UWP, no se pueden pasar parámetros; en su lugar, la aplicación recibe el identificador (consulta el punto anterior). 
+- *Verb extended* especifica que el verbo solo debe aparecer si el usuario mantiene presionada la tecla **Mayús** antes de hacer clic con el botón derecho en el archivo para mostrar el menú contextual. Este atributo es opcional y su valor predeterminado es *False* (por ejemplo, mostrar siempre el verbo) si no se incluye. Este comportamiento se especifica de forma individual para cada verbo (excepto "Abrir", que siempre es *False*). 
+- *Verb* es el nombre para mostrar en el menú contextual del Explorador de archivos. Esta cadena se puede traducir mediante ```ms-resource```.
 
 ### Modelo de selección múltiple
 
 Varias selecciones permiten especificar cómo la aplicación controla que un usuario abra simultáneamente varios archivos con ella (por ejemplo, si selecciona 10 archivos en el Explorador de archivos y pulsa "Abrir").
 
 Las aplicaciones de escritorio convertidas tienen las mismas tres opciones que las aplicaciones de escritorio normales. 
-- 
-            *Player*: La aplicación se activa una sola vez con todos los archivos seleccionados pasados como parámetros de argumento.
-- 
-            *Single*: La aplicación se activa una vez para el primer archivo seleccionado. Otros archivos se omiten. 
-- 
-            *Document*: Se activa una nueva instancia independiente de la aplicación para cada archivo seleccionado.
+- *Player*: La aplicación se activa una sola vez con todos los archivos seleccionados pasados como parámetros de argumento.
+- *Single*: La aplicación se activa una vez para el primer archivo seleccionado. Otros archivos se omiten. 
+- *Document*: Se activa una nueva instancia independiente de la aplicación para cada archivo seleccionado.
 
 Puedes establecer preferencias diferentes para distintos tipos de archivo y acciones. Por ejemplo, si deseas abrir *documentos* en el modo *Document* y las *imágenes* en el modo *Player*.
 
@@ -202,6 +179,6 @@ A continuación mostramos un ejemplo completo que integra muchos de los elemento
 - [Manifiesto del paquete de la aplicación](https://msdn.microsoft.com/library/windows/apps/br211474.aspx)
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

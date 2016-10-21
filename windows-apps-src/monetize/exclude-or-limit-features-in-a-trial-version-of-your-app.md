@@ -1,21 +1,23 @@
 ---
 author: mcleanbyron
-Description: "Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando algunas características durante el período de prueba."
-title: "Excluye o limita características en una versión de prueba"
+Description: "Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de la aplicación excluyendo o limitando algunas características durante el período de prueba."
+title: "Excluir o limitar las características de una versión de prueba"
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: free trial code sample
+keywords: "muestra de código de prueba gratuita"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9c38784325f4dc51052f70a819012508f2a0bdbb
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: fdca95a6e925ca2238fdcd8791ade2ed4ea5a310
 
 ---
 
-# Excluye o limita características en una versión de prueba
+# Excluir o limitar las características de una versión de prueba
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando algunas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, también puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
+
+>**Nota**&nbsp;&nbsp;En este artículo se muestra cómo usar miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Si la aplicación está orientada a Windows 10, versión 1607 o posterior, es recomendable que uses miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para implementar una versión de prueba, en lugar del espacio de nombres **Windows.ApplicationModel.Store**. Para obtener más información, consulta [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md).
+
+Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de la aplicación excluyendo o limitando algunas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, también puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
 
 Veamos cómo puedes agregar esto a tu aplicación.
 
@@ -73,7 +75,7 @@ void initializeLicense()
     // Initialize the license info for testing.
     // comment the next line for release
     licenseInformation = CurrentAppSimulator.LicenseInformation;
-      
+
 }
 ```
 
@@ -144,8 +146,8 @@ void DisplayTrialVersionExpirationTime()
         if (licenseInformation.IsTrial)
         {
             var longDateFormat = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("longdate");
-                                                
-            // Display the expiration date using the DateTimeFormatter. 
+
+            // Display the expiration date using the DateTimeFormatter.
             // For example, longDateFormat.Format(licenseInformation.ExpirationDate)
 
             var daysRemaining = (licenseInformation.ExpirationDate - DateTime.Now).Days;
@@ -168,9 +170,7 @@ void DisplayTrialVersionExpirationTime()
 
 Ahora, prueba la aplicación con llamadas simuladas al servidor de licencias. En JavaScript, C#, Visual Basic o Visual C++, reemplaza las referencias de [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) por [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) en el código de inicialización de la aplicación.
 
-[
-              **CurrentAppSimulator**
-            ](https://msdn.microsoft.com/library/windows/apps/hh779766) obtiene información de licencia específica de la versión de prueba de un archivo XML llamado "WindowsStoreProxy.xml", que se encuentra en %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. Si esta ruta de acceso y este archivo no existen, deberás crearlos durante la instalación o durante el tiempo de ejecución. Si intentas acceder a la propiedad [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768) sin el archivo WindowsStoreProxy.xml en esa ubicación específica, obtendrás un mensaje de error.
+[**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) obtiene información de licencia específica de la versión de prueba de un archivo XML llamado "WindowsStoreProxy.xml", que se encuentra en %perfilusuario%\\AppData\\local\\packages\\&lt;nombre del paquete&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. Si esta ruta de acceso y este archivo no existen, deberás crearlos durante la instalación o durante el tiempo de ejecución. Si intentas acceder a la propiedad [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768) sin el archivo WindowsStoreProxy.xml en esa ubicación específica, obtendrás un mensaje de error.
 
 En este ejemplo se muestra cómo agregar el código a la aplicación para probarla en diferentes estados de licencia.
 
@@ -197,7 +197,7 @@ Puedes editar WindowsStoreProxy.xml para cambiar las fechas de expiración simul
 
 Después de probar tu aplicación con el servidor de licencias simulado, y antes de enviar la aplicación a una Tienda para su certificación, reemplaza [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) por [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765), tal y como se muestra en la siguiente muestra de código.
 
-**Importante**  La aplicación debe usar el objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) cuando la envíes a una Tienda, o no logrará la certificación.
+**Importante** La aplicación debe usar el objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) cuando la envíes a una Tienda. De lo contrario, no logrará la certificación.
 
 ```CSharp
 void appInit()
@@ -224,7 +224,7 @@ Para obtener más información sobre cómo describir tu aplicación, consulta [C
 
 ## Temas relacionados
 
-* [Muestra de la Tienda (muestra pruebas y compras desde la aplicación)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
+* [Muestra de la Tienda (muestra pruebas y compras desde la aplicación)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [Establecer los precios y la disponibilidad de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt148548)
 * [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)
 * [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)
@@ -234,10 +234,6 @@ Para obtener más información sobre cómo describir tu aplicación, consulta [C
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

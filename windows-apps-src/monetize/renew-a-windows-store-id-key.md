@@ -4,15 +4,15 @@ ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: "Usa este método para renovar una clave de la Tienda Windows."
 title: Renovar una clave de id. de la Tienda Windows
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: a3cef13e84c5bb06be4f3e3d4b2db4e02650df62
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 1a2cb625f95a5ad8e94911ead2402cb2589e209a
 
 ---
 
 # Renovar una clave de id. de la Tienda Windows
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Usa este método para renovar una clave de la Tienda Windows. Cuando se genera una clave de id. de la Tienda Windows mediante una llamada al método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) o [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675), la clave es válida durante 90 días. Cuando la clave expira, puedes usarla para renegociar una nueva clave mediante este método.
 
@@ -42,9 +42,9 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 | Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Host           | cadena | Debe establecerse en el valor **collections.mp.microsoft.com** o **purchase.mp.microsoft.com**.           |
+| Host           | string | Debe establecerse en el valor **collections.mp.microsoft.com** o **purchase.mp.microsoft.com**.           |
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
-| Content-Type   | cadena | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
+| Content-Type   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
 <span/>
 
@@ -52,8 +52,8 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 | Parámetro     | Tipo   | Descripción                       | Obligatorio |
 |---------------|--------|-----------------------------------|----------|
-| serviceTicket | cadena | Token de acceso de Azure AD.        | Sí      |
-| key           | cadena | Clave de id. de la Tienda Windows expirada. | No       |
+| serviceTicket | string | Token de acceso de Azure AD.        | Sí      |
+| key           | string | Clave de id. de la Tienda Windows expirada. | No       |
 
 <span/> 
 
@@ -78,7 +78,7 @@ Host: collections.mp.microsoft.com
 
 | Parámetro | Tipo   | Descripción                                                                                                            | Obligatorio |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
-| clave       | cadena | Clave de la Tienda Windows actualizada que se puede usar en futuras llamadas a la API de colecciones o la API de compras de la Tienda Windows. | No       |
+| clave       | string | Clave de la Tienda Windows actualizada que se puede usar en futuras llamadas a la API de colecciones o la API de compras de la Tienda Windows. | No       |
 
 <span/>
 
@@ -119,6 +119,6 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

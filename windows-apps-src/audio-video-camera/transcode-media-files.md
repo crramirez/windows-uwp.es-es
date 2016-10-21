@@ -3,8 +3,9 @@ author: drewbatgit
 ms.assetid: A1A0D99A-DCBF-4A14-80B9-7106BEF045EC
 description: "Puedes usar las API Windows.Media.Transcoding para transcodificar archivos de vídeo de un formato a otro."
 title: Transcodificar archivos multimedia
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 06c452291f10acd35dde9659c08a386ea38fa90a
+ms.openlocfilehash: 7e96f12881e4f210a1bba57d2a9c298dbb1c32e3
 
 ---
 
@@ -15,8 +16,7 @@ ms.openlocfilehash: 06c452291f10acd35dde9659c08a386ea38fa90a
 
 Puedes usar las API [**Windows.Media.Transcoding**](https://msdn.microsoft.com/library/windows/apps/br207105) para transcodificar archivos de vídeo de un formato a otro.
 
-
-            La *transcodificación* es la conversión de un archivo multimedia digital, como un archivo de vídeo o audio, de un formato a otro. Para ello, generalmente, se descodifica el archivo y después se lo vuelve a codificar. Por ejemplo, puedes convertir un archivo de Windows Media a MP4 para que pueda reproducirse en un dispositivo portátil compatible con este formato. O bien, puedes convertir un archivo de vídeo de alta definición a una resolución más baja. En ese caso, el archivo que se volvió a codificar podría usar el mismo códec que el archivo original, pero tendría un perfil de codificación diferente.
+La *transcodificación* es la conversión de un archivo multimedia digital (como un archivo de vídeo o audio) de un formato a otro. Para ello, generalmente, se descodifica el archivo y después se lo vuelve a codificar. Por ejemplo, puedes convertir un archivo de Windows Media a MP4 para que pueda reproducirse en un dispositivo portátil compatible con este formato. O bien, puedes convertir un archivo de vídeo de alta definición a una resolución más baja. En ese caso, el archivo que se volvió a codificar podría usar el mismo códec que el archivo original, pero tendría un perfil de codificación diferente.
 
 ## Configurar el proyecto de la transcodificación
 
@@ -76,6 +76,6 @@ Puedes registrar eventos para responder cuando el progreso de la transcodificaci
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

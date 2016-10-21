@@ -3,8 +3,9 @@ author: jwmsft
 description: "Proporciona un valor para cualquier atributo XAML mediante la evaluación de una referencia a un recurso, con lógica del sistema adicional que recupera diferentes recursos en función del tema activo en ese momento."
 title: "Extensión de marcado ThemeResource"
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
+translationtype: Human Translation
 ms.sourcegitcommit: 9c657f906e6dedb259b8a98373f56ac5a63bd845
-ms.openlocfilehash: 246c991bbdbc95e73ea8d4884cd4d617592bfc51
+ms.openlocfilehash: 803c62987c3a019fc576c6f1d0c343e042ba947b
 
 ---
 
@@ -32,8 +33,7 @@ Un **ThemeResource** es una técnica para obtener valores para un atributo XAML 
 
 Cuando la aplicación se inicia por primera vez, las referencias a recursos realizadas por una referencia a **ThemeResource** se evalúan en función del tema que se esté usando en el inicio. Pero si el usuario cambia después el tema activo en tiempo de ejecución, el sistema volverá a evaluar todas las referencias a **ThemeResource**, recuperará un recurso específico del tema que podría ser diferente, y volverá a mostrar la aplicación con los nuevos valores de recurso en los lugares correspondientes del árbol visual. Un **StaticResource** se determina en el momento de la carga del código XAML o del inicio de la aplicación y no se vuelve a evaluar en tiempo de ejecución. (Hay otras técnicas, como los estados visuales, que vuelven a cargar el código XAML dinámicamente, pero trabajan en un nivel superior al de la evaluación básica de recursos que permite la [extensión de marcado {StaticResource}](staticresource-markup-extension.md)).
 
-
-            **ThemeResource** toma un argumento, que especifica la clave del recurso solicitado. Una clave de recursos es siempre una cadena en XAML de Windows Runtime. Para obtener más información acerca de cómo especificar inicialmente la clave de recurso, consulta [Atributo x:Key](x-key-attribute.md).
+**ThemeResource** toma un argumento, el cual especifica la clave del recurso solicitado. Una clave de recursos es siempre una cadena en XAML de Windows Runtime. Para obtener más información acerca de cómo especificar inicialmente la clave de recurso, consulta [Atributo x:Key](x-key-attribute.md).
 
 Para obtener más información sobre cómo definir recursos y usar correctamente un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), incluida una muestra de código, consulta [Referencias a ResourceDictionary y a recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273).
 
@@ -44,8 +44,7 @@ Intentar especificar un **ThemeResource** en una clave que no puede resolverse i
 
 En la implementación del procesador XAML de Windows Runtime no hay una representación de clase de respaldo para la funcionalidad de **ThemeResource**. El equivalente más parecido en el código consiste en usar la API de colección de un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), por ejemplo, una llamada a [**Contains**](https://msdn.microsoft.com/library/windows/apps/jj635925) o [**TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj603139).
 
-
-            **ThemeResource** es una extensión de marcado. Las extensiones de marcado generalmente se implementan cuando es necesario que los valores de atributo de escape no sean valores literales o nombres de controlador y el requisito sea más global que simplemente colocar convertidores de tipos en ciertos tipos o propiedades. Todas las extensiones de marcado en XAML usan los caracteres "{" y "}" en su sintaxis de atributo, que es la convención mediante la cual un procesador XAML reconoce que una extensión de marcado debe procesar el atributo.
+**ThemeResource** es una extensión de marcado. Las extensiones de marcado generalmente se implementan cuando es necesario que los valores de atributo de escape no sean valores literales o nombres de controlador y el requisito sea más global que simplemente colocar convertidores de tipos en ciertos tipos o propiedades. Todas las extensiones de marcado en XAML usan los caracteres "{" y "}" en su sintaxis de atributo, que es la convención mediante la cual un procesador XAML reconoce que una extensión de marcado debe procesar el atributo.
 
 ### Cuánto y cómo usar {ThemeResource} en lugar de {StaticResource}
 
@@ -65,12 +64,9 @@ Windows Runtime proporciona un conjunto de recursos que están diseñados espec�
 
 Las definiciones XAML de los estados visuales en una plantilla de control deben usar referencias a **ThemeResource** siempre que haya un recurso subyacente que pueda cambiar debido a un cambio de tema. Normalmente, un cambio de tema del sistema no provocará un cambio del estado visual. En este caso, los recursos deben usar referencias a **ThemeResource** para que se puedan volver a evaluar los valores para el estado visual aún activo. Por ejemplo, si tienes un estado visual que cambia un color de pincel de una parte determinada de la interfaz de usuario y una de sus propiedades, y ese color de pincel es diferente de un tema a otro, debes usar una referencia a **ThemeResource** para proporcionar el valor de esa propiedad en la plantilla predeterminada así como todas las modificaciones del estado visual en esa plantilla predeterminada.
 
+Los usos de **ThemeResource** se pueden ver en una serie de valores dependientes. Por ejemplo, un valor de [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) usado por un [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) que también es un recurso con clave podría usar una referencia a **ThemeResource**. Sin embargo, las propiedades de la interfaz de usuario que usan el recurso **SolidColorBrush** con clave también usarían una referencia a **ThemeResource**, por lo que es cada propiedad del tipo [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) la que habilita específicamente un cambio de valor dinámico cuando el tema cambia.
 
-            Los usos de **ThemeResource** se podrían ver en una serie de valores dependientes. Por ejemplo, un valor de [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) usado por un [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) que también es un recurso con clave podría usar una referencia a **ThemeResource**. Sin embargo, las propiedades de la interfaz de usuario que usan el recurso **SolidColorBrush** con clave también usarían una referencia a **ThemeResource**, por lo que es cada propiedad del tipo [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) la que habilita específicamente un cambio de valor dinámico cuando el tema cambia.
-
-
-            **Nota**
-             XAML de Windows8.1 admite `{ThemeResource}` y la evaluación de recursos en tiempo de ejecución en la conmutación de temas, pero XAML para aplicaciones destinadas a Windows8 no lo admite.
+**Nota** tanto `{ThemeResource}` como la evaluación de recursos en tiempo de ejecución se admiten en el lenguaje XAML de Windows 8.1, pero no en el lenguaje XAML de aplicaciones destinadas a Windows 8.
 
 ### Recursos del sistema
 
@@ -160,6 +156,6 @@ Cuando exista una clave de recurso como parte del uso de cualquier **{ThemeResou
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

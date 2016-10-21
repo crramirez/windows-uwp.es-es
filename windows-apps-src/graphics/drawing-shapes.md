@@ -5,12 +5,12 @@ title: Dibujar formas
 description: "Aprende a dibujar formas como elipses, rectángulos, polígonos y trayectorias. La clase Path te permite visualizar un lenguaje de dibujo basado en vectores, relativamente complejo, en una interfaz de usuario XAML; por ejemplo, lo puedes visualizar para dibujar curvas Bézier."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 3add60b9067f40c5d330bd66a84eea41b465e8d7
+ms.openlocfilehash: 2fd20e07c9b7e54559baeeb8324f11065a25444c
 
 ---
 # Dibujar formas
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** API importantes **
@@ -25,15 +25,13 @@ Aprende a dibujar formas como elipses, rectángulos, polígonos y trayectorias. 
 
 Son dos los conjuntos de clases que definen una región del espacio en la interfaz de usuario XAML: las clases [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377) y las clases [**Geometry**](https://msdn.microsoft.com/library/windows/apps/BR210041). La principal diferencia entre estas clases es que **Shape** tiene asociado un pincel y se puede representar en la pantalla, mientras que **Geometry** simplemente define una región del espacio y no se representa, salvo que ayude a aportar información a otra propiedad de interfaz de usuario. Puedes pensar en **Shape** como una clase [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911), la cual tiene su límite definido por **Geometry**. Este tema se centra principalmente en las clases **Shape**.
 
-Las clases [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377) son: [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345), [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/BR243343), [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371), [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359), [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365) y [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355). 
-              La clase **Path** es interesante porque puede definir una geometría arbitraria; asimismo, la clase [**Geometry**](https://msdn.microsoft.com/library/windows/apps/BR210041) también tiene su función aquí, dado que es una forma de definir las partes de una clase **Path**.
+Las clases [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377) son: [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345), [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/BR243343), [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371), [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359), [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365) y [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355). La clase **Path** es interesante porque puede definir una geometría arbitraria. Asimismo, la clase [**Geometry**](https://msdn.microsoft.com/library/windows/apps/BR210041) también tiene su función aquí, dado que es una forma de definir las partes de una clase **Path**.
 
 ## Relleno y trazo para formas
 
 Para representar una clase [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377) en el lienzo de la aplicación, debes asociarla a una clase [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076). Establece la propiedad [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill) de la clase **Shape** en la clase **Brush** que quieras. Para obtener más información sobre los pinceles, consulta [Usar pinceles](using-brushes.md).
 
-Igualmente, una clase [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377) también puede tener una propiedad [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke), que es una línea dibujada en torno al perímetro de la forma. Además, la propiedad **Stroke** no solo necesita tener una clase [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) que defina su apariencia, también debe tener un valor distinto de cero para la propiedad [**StrokeThickness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.strokethickness). 
-              **StrokeThickness** es una propiedad que define el grosor del perímetro en torno al borde de la forma. Si no especificas un valor **Brush** de la propiedad **Stroke** o si estableces **StrokeThickness** en 0, no se dibujará el borde alrededor de la forma.
+Igualmente, una clase [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377) también puede tener una propiedad [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke), que es una línea dibujada en torno al perímetro de la forma. Además, la propiedad **Stroke** no solo necesita tener una clase [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) que defina su apariencia, también debe tener un valor distinto de cero para la propiedad [**StrokeThickness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.strokethickness). **StrokeThickness** es una propiedad que define el grosor del perímetro en torno al borde de la forma. Si no especificas un valor **Brush** de la propiedad **Stroke** o si estableces **StrokeThickness** en 0, no se dibujará el borde alrededor de la forma.
 
 ## Elipse
 
@@ -100,8 +98,7 @@ Y aquí tienes el [**polígono**](https://msdn.microsoft.com/library/windows/app
 
 ![Polígono representado.](images/shapes-polygon.jpg)
 
-
-              **Sugerencia** El valor de [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) se usa a menudo como tipo en XAML para escenarios en los que no se declaran los vértices de las formas. Por ejemplo, un valor **Point** forma parte de los datos del evento referentes a los eventos de entrada táctil; de esta manera, podrás saber con exactitud en qué punto de un espacio de coordenadas se produjo la acción táctil. Para obtener más información sobre el valor **Point** y cómo usarlo en XAML o en código, consulta el tema de referencia de la API para [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870).
+**Sugerencia**  El valor de [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) se usa a menudo como tipo en XAML para escenarios en los que no se declaran los vértices de las formas. Por ejemplo, un valor **Point** forma parte de los datos del evento referentes a los eventos de entrada táctil; de esta manera, podrás saber con exactitud en qué punto de un espacio de coordenadas se produjo la acción táctil. Para obtener más información sobre el valor **Point** y cómo usarlo en XAML o en código, consulta el tema de referencia de la API para [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870).
 
  
 
@@ -115,8 +112,7 @@ No uses valores de la estructura [**Point**](https://msdn.microsoft.com/library/
 
 Una [**Polilínea**](https://msdn.microsoft.com/library/windows/apps/BR243365) es similar a un [**polígono**](https://msdn.microsoft.com/library/windows/apps/BR243359) ya que el límite de la forma está definido por un conjunto de puntos, pero hay que tener en cuenta que el último punto de la **polilínea** no está conectado al primero.
 
-
-              **Nota** Puedes tener un punto inicial y un punto final explícitamente idénticos en la propiedad [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) establecida para la [**polilínea**](https://msdn.microsoft.com/library/windows/apps/BR243365), pero en ese caso te recomendamos que uses un [**polígono**](https://msdn.microsoft.com/library/windows/apps/BR243359).
+**Nota**: Puedes tener un punto inicial y un punto final explícitamente idénticos en la propiedad [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) establecida para la clase [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365), pero en ese caso te recomendamos que uses una clase [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359).
 
  
 
@@ -204,6 +200,6 @@ El uso de [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR2
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

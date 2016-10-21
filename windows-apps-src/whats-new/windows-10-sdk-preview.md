@@ -1,23 +1,23 @@
 ---
 author: QuinnRadich
-title: Novedades de Windows 10
-description: "La compilación de Windows 10 Anniversary SDK Preview y las nuevas herramientas para desarrolladores proporcionan las herramientas, funciones y experiencias con tecnología de la nueva Plataforma universal de Windows."
+title: "Novedades de Windows 10, vista previa de la versión 1607"
+description: "Tanto la vista previa de la versión 1607 de Windows 10 como las nuevas herramientas para desarrolladores te proporcionan las herramientas, características y experiencias que ofrece la tecnología de la nueva Plataforma universal de Windows."
+keywords: "conoce las novedades, novedades, actualizar, actualizaciones, características, nuevo, Windows 10, vista previa de 1607"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 9623e10b15dbc5f9480d1cd9bd740fa8e914b3c6
+ms.sourcegitcommit: 5646bf7681b5b028031eab02f8dd5c352d4b9cc1
+ms.openlocfilehash: 33c1888620d4e3c2d95cbf701e9128ce006961da
 
 ---
 
 # Novedades de Windows
 
-La compilación 14295 de Windows 10 Anniversary SDK Preview y las actualizaciones de herramientas para desarrolladores de Windows seguirán proporcionando herramientas, funciones y experiencias con la tecnología de la Plataforma universal de Windows. 
-              [Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
+Tanto la vista previa de la versión 1607 de Windows 10 como las actualizaciones de las herramientas de desarrollador de Windows te siguen proporcionando las herramientas, características y experiencias que permite la tecnología de la Plataforma universal de Windows. [Instala las herramientas y el SDK](http://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](https://msdn.microsoft.com/library/windows/apps/bg124288) o para aprender a usar el [código de aplicación existente en Windows](https://msdn.microsoft.com/library/windows/apps/mt238321).
 
-## Compilación 12295 de Windows 10 Anniversary SDK Preview
+## Vista previa de la versión 1607 de Windows 10
 
-Función | Descripción
+Característica | Descripción
  :---- | :----
-Redes | Ahora puedes proporcionar tu propia validación personalizada de certificados SSL/TLS de servidor mediante la suscripción al evento [HttpBaseProtocolFilter.ServerCustomValidationRequest](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx#_blank). También puedes deshabilitar por completo la lectura de las respuestas HTTP de la memoria caché si especificas el valor de enumeración [HttpCacheReadBehavior.NoCache](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpcachereadbehavior.aspx#_blank) en una solicitud HTTP. Ahora es posible borrar las credenciales de autenticación para habilitar un escenario "cerrar sesión" al llamar al método [HttpBaseProtocolFilter.ClearAuthenticationCache](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx#_blank).
+Redes | Si te suscribes al evento [HttpBaseProtocolFilter.ServerCustomValidationRequest](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx#_blank), podrás proporcionar tu validación personalizada de certificados SSL/TLS de servidor. También puedes deshabilitar por completo la lectura de las respuestas HTTP de la memoria caché si especificas el valor de enumeración [HttpCacheReadBehavior.NoCache](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpcachereadbehavior.aspx#_blank) en una solicitud HTTP. Ahora es posible borrar las credenciales de autenticación para habilitar un escenario "cerrar sesión" al llamar al método [HttpBaseProtocolFilter.ClearAuthenticationCache](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx#_blank).
 Extensiones | Microsoft Edge permite ahora usar extensiones. Con las extensiones, los usuarios pueden ampliar las capacidades de Microsoft Edge, lo que proporciona una funcionalidad nicho que es importante para el público de destino. Echa un vistazo a la [documentación de las extensiones](https://developer.microsoft.com/microsoft-edge/platform/documentation/extensions/#_blank) para obtener más información.
 API para Bluetooth | Las aplicaciones ahora pueden acceder a servicios RFCOMM en periféricos Bluetooth remotos a través de [Windows.Devices.Bluetooth y Windows.Devices.Bluetooth.Rfcomm](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.aspx#_blank) sin tener que emparejar con el periférico. Existen nuevos métodos que permiten que las aplicaciones busquen y accedan a servicios RFCOMM en dispositivos no emparejados.
 API de chat | La nueva clase [ChatSyncManager](https://msdn.microsoft.com/library/windows/apps/mt414181.aspx#_blank) te permite sincronizar mensajes de textos desde y en la nube.
@@ -30,6 +30,6 @@ API de mapas | La clase [MapControl](https://msdn.microsoft.com/library/windows/
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

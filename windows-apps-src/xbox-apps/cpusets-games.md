@@ -2,8 +2,9 @@
 title: CPUSets para el desarrollo de juegos
 description: "En este artículo se incluye una descripción general de la API de CPUSets, nueva para la Plataforma universal de Windows (UWP) y con información esencial relevante para el desarrollo de juegos y aplicaciones."
 author: hammondsp
-ms.sourcegitcommit: 3cefaf4e527d2a0da412dab474a348b55ad409c9
-ms.openlocfilehash: f125ae7e268a8d35b477a1557c498762869f859b
+translationtype: Human Translation
+ms.sourcegitcommit: 9f15d551715d9ccf23e4eb397637f4fafacec350
+ms.openlocfilehash: 6065435dc3add0d9bde15dc6bdd355935b8f53cd
 
 ---
 
@@ -16,10 +17,8 @@ La Plataforma universal de Windows (UWP) es el núcleo de una amplia gama de dis
 ## API de CPUSets
 
 La API de CPUSets proporciona control sobre los conjuntos de CPU que están disponibles para los subprocesos en los que se realizará la programación. Existen dos funciones disponibles para controlar dónde se programan los subprocesos:
-- 
-            **SetProcessDefaultCpuSets**: esta función puede usarse para especificar los nuevos subprocesos de conjuntos de CPU que pueden ejecutarse si no se asignan a determinados conjuntos de CPU.
-- 
-            **SetThreadSelectedCpuSets**: esta función permite limitar los conjuntos de CPU que los que se puede ejecutar un subproceso específico.
+- **SetProcessDefaultCpuSets**: esta función puede usarse para especificar los nuevos subprocesos de conjuntos de CPU que pueden ejecutarse si no se asignan a determinados conjuntos de CPU.
+- **SetThreadSelectedCpuSets**: esta función permite limitar los conjuntos de CPU que puede ejecutar un subproceso específico.
 
 Si la función **SetProcessDefaultCpuSets** nunca se ha usado, los subprocesos recién creados se pueden programar en cualquier conjunto de CPU disponible para el proceso. En esta sección se explican los conceptos básicos de la API de CPUSets.
 
@@ -97,9 +96,7 @@ Como hemos visto, la API de CPUSets proporciona una gran cantidad de informació
 
 Este método es eficaz si el juego tiene algunos subprocesos que deben ejecutarse en tiempo real junto con otros subprocesos de trabajo que requieren relativamente poco tiempo de CPU. Algunas tareas, como la música de fondo continua, deben ejecutarse sin interrupciones para una experiencia de juego perfecta. Incluso un único fotograma de colapso de un subproceso de audio puede causar la aparición de mensajes o problemas, por lo cual es muy importante que reciba la cantidad de tiempo de CPU en cada fotograma.
 
-Al usar **SetThreadSelectedCpuSets** junto con **SetProcessDefaultCpuSets** puedes garantizar que los subprocesos intensos no se interrumpan a causa de subprocesos de trabajo. 
-            **SetThreadSelectedCpuSets** puede usarse para asignar subprocesos intensos a conjuntos de CPU específicos. 
-            **SetProcessDefaultCpuSets** puede usarse para garantizar que los subprocesos sin asignar creados se coloquen en otros conjuntos de CPU. En el caso de las CPU que usan hyperthreading, también es importante para tener en cuenta los núcleos lógicos en el mismo núcleo físico. Los subprocesos de trabajo no deberían poder ejecutarse en núcleos lógicos que comparten el mismo núcleo físico que un subproceso que quieres ejecutar con la capacidad de respuesta en tiempo real. El siguiente código muestra cómo determinar si un equipo usa hyperthreading.
+Al usar **SetThreadSelectedCpuSets** junto con **SetProcessDefaultCpuSets** puedes garantizar que los subprocesos intensos no se interrumpan a causa de subprocesos de trabajo. **SetThreadSelectedCpuSets** puede usarse para asignar subprocesos intensos a conjuntos de CPU específicos. **SetProcessDefaultCpuSets** puede usarse para garantizar que los subprocesos sin asignar creados se coloquen en otros conjuntos de CPU. En el caso de las CPU que usan hyperthreading, también es importante para tener en cuenta los núcleos lógicos en el mismo núcleo físico. Los subprocesos de trabajo no deberían poder ejecutarse en núcleos lógicos que comparten el mismo núcleo físico que un subproceso que quieres ejecutar con la capacidad de respuesta en tiempo real. El siguiente código muestra cómo determinar si un equipo usa hyperthreading.
 
 ```
 unsigned long retsize = 0;
@@ -193,10 +190,11 @@ La API de CPUSets disponible para el desarrollo de UWP proporciona una cantidad 
 ## Recursos adicionales
 - [Conjuntos de CPU (MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
 - [Muestra de CPUSets proporcionada por ATG](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
+- [UWP en Xbox One](index.md)
 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

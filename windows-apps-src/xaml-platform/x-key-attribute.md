@@ -3,8 +3,9 @@ author: jwmsft
 description: Identifica exclusivamente los elementos que se crean y a los cuales se hace referencia como recursos, y que existen dentro de un ResourceDictionary.
 title: Atributo xKey
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 00d801dc3ebb8894f8e21ba0c1b9f3aecc981f30
+translationtype: Human Translation
+ms.sourcegitcommit: ebda34ce4d9483ea72dec3bf620de41c98d7a9aa
+ms.openlocfilehash: 35d4e02ce477757e1a97a54fd9d200dd31675f4d
 
 ---
 
@@ -58,9 +59,7 @@ CombiningCharacter::= none
 
 Los elementos secundarios de un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) generalmente incluyen un atributo **x:Key** que especifica un valor de clave único dentro de ese diccionario. El procesador XAML hace cumplir la exclusividad de la clave en tiempo de carga. Los valores **x:Key** que no son únicos generarán errores o excepciones en el analizador. Si la [extensión de marcado {StaticResource}](staticresource-markup-extension.md) lo solicita, una clave no resuelta también generará excepciones de análisis XAML.
 
-
-            **x:Key** y [x:Name](x-name-attribute.md) no son conceptos idénticos. 
-            **x:Key** se usa exclusivamente en los diccionarios de recursos. x:Name se usa para todas las áreas de XAML. Una llamada a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) usando el valor de clave no recuperará un recurso con clave.
+**x:Key** y [x:Name](x-name-attribute.md) no son conceptos idénticos. **x:Key** se usa exclusivamente en los diccionarios de recursos. x:Name se usa para todas las áreas de XAML. Una llamada a [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) mediante el valor de clave no recuperará un recurso con clave. Es posible que los objetos definidos en un diccionario de recursos tengan el elemento **x:Key**, **x:Name** o ambos. No es necesario que la clave y el nombre coincidan.
 
 Ten en cuenta que, en la sintaxis implícita que se muestra, el objeto [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) está implícito en la forma en que el procesador XAML produce un objeto nuevo para rellenar una colección [**Resources**](https://msdn.microsoft.com/library/windows/apps/br208740).
 
@@ -71,6 +70,6 @@ Un elemento de un diccionario de recursos puede pasar por alto un valor de **x:K
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,19 +1,16 @@
 ---
 description: "Aprende a diseñar y codificar una aplicación para UWP en la que resulte fácil navegar y cuyo aspecto sea perfecto en varios dispositivos y tamaños de pantalla."
-title: "Diseño de la distribución de una aplicación de Windows - desarrollo de aplicaciones de Windows"
+title: "Diseño de la distribución de una aplicación para UWP: desarrollo de aplicaciones de Windows"
 author: mijacobs
-keywords: uwp app layout, universal windows platform, app design, interface
+keywords: "diseño de aplicaciones para UWP, Plataforma universal de Windows, diseño de aplicaciones, interfaz"
 translationtype: Human Translation
-ms.sourcegitcommit: fa1567d3ff80dc9c9376736c7d25c2bb06e79cc9
-ms.openlocfilehash: 7a1233724b9b0fd9af709bbf114669fe102e6f0d
+ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
+ms.openlocfilehash: 72c4b957c98956965c773b4c2182796880f59a1d
 
 ---
-
+# Diseño de aplicaciones para UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-<div class="uwpd-banner">
-<h1 class="uwpd-ruledheader">Diseño de aplicaciones para UWP</h1>
-</div>
 
 La estructura de la aplicación, el diseño de la página y la navegación son la base de la experiencia del usuario de tu aplicación. Los artículos de esta sección te ayudarán a crear una aplicación en la que resulte fácil navegar y que quede bien en varios dispositivos y tamaños de pantalla.
 
@@ -86,6 +83,6 @@ Además de las propiedades de dimensiones (ancho, alto y restricciones), los ele
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

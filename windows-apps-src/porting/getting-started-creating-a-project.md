@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
 description: "MicrosoftVisual Studio es a Windows lo que Xcode a iOS y MacOS. En este tutorial, te ayudamos a que te sientas cómodo usando Visual Studio."
 title: "Creación de un proyecto en Visual Studio"
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 23d9ed066e2909a15b3106fd19bf6ce5ab09e7a9
+ms.openlocfilehash: 40dc6a52dbd495a78e5aa0d95a590d3e878d4068
 
 ---
 
@@ -24,8 +25,7 @@ También encontrarás este [blog sobre la compilación de aplicaciones para Wind
 
 Crear una aplicación para Windows 10 (denominada más formalmente como aplicación de la plataforma universal de Windows [UWP]) es como crear una aplicación de iOS con guiones gráficos. Las aplicaciones de Windows 10 se suelen construir en varias páginas y cada una de ellas contiene una parte distinta de la interfaz de usuario, como un sitio web. Cada página suele tener dos archivos de origen asociados: uno para almacenar la interfaz de usuario en [Introducción a XAML](https://msdn.microsoft.com/library/windows/apps/mt185595), y otro que contiene el código fuente, que suele ser C#. A medida que el usuario interactúe con la aplicación, irá pasando por estas páginas. En este tutorial vas a crear una aplicación con dos páginas.
 
-
-            **Nota:**  Una característica importante de las aplicaciones de Windows 10 es el hecho de que el mismo código fuente y el mismo conjunto de API están disponibles independientemente de la plataforma. Como sabes, cuando escribes una aplicación de iOS universal para iPhone y iPad, puedes determinar en el tiempo de ejecución la plataforma en que se ejecuta la aplicación y realizar la acción apropiada. De manera similar, las aplicaciones de Windows10 saben reconocer en tiempo de ejecución el dispositivo en que se ejecutan. Con una aplicación para UWP, no es necesario usar elementos \#ifdef en el código fuente para crear compilaciones de teléfono frente a compilaciones de escritorio. Para mayor comodidad, las aplicaciones de Windows 10 también usan sus controles de interfaz de usuario de forma inteligente en función del dispositivo: por ejemplo, la aplicación puede hacer referencia a un control de selector de fecha, y el control adoptará automáticamente el aspecto y funcionamiento dependiendo de si la pantalla es de escritorio o de teléfono. Sin embargo, el código fuente no se modifica.
+**Nota:** Una característica importante de las aplicaciones de Windows 10 es que el mismo código fuente y el mismo conjunto de API estarán disponibles para ti independientemente de la plataforma. Como sabes, cuando escribes una aplicación de iOS universal para iPhone y iPad, puedes determinar en el tiempo de ejecución la plataforma en que se ejecuta la aplicación y realizar la acción apropiada. De manera similar, las aplicaciones de Windows10 saben reconocer en tiempo de ejecución el dispositivo en que se ejecutan. Con una aplicación para UWP, no es necesario usar elementos \#ifdef en el código fuente para crear compilaciones de teléfono frente a compilaciones de escritorio. Para mayor comodidad, las aplicaciones de Windows 10 también usan sus controles de interfaz de usuario de forma inteligente en función del dispositivo: por ejemplo, la aplicación puede hacer referencia a un control de selector de fecha, y el control adoptará automáticamente el aspecto y funcionamiento dependiendo de si la pantalla es de escritorio o de teléfono. Sin embargo, el código fuente no se modifica.
 
 Veamos cómo crear una aplicación de Windows 10. En primer lugar, ejecuta Visual Studio. La primera vez que lo hagas, VisualStudio te pedirá que obtengas una licencia de desarrollador. Una licencia de desarrollador te permite instalar y probar aplicaciones de la Tienda Windows en el equipo local antes de enviarlas a la Tienda Windows. Para obtener una licencia, sigue las instrucciones en pantalla para iniciar sesión con una cuenta Microsoft. Si no tienes una, haz clic en el vínculo **Regístrese** del cuadro de diálogo **Licencia de desarrollador** y sigue las instrucciones en pantalla.
 
@@ -56,6 +56,6 @@ En Visual Studio, también puedes elegir entre distintas plantillas de proyecto,
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

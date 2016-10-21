@@ -5,8 +5,9 @@ title: Controlar la entrada de puntero
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 2204e8f3ddce067cf2cbc24ce89cbdcea5b361bf
+ms.openlocfilehash: 2053062f6a5f850da8983bce2465cd10cdc01d56
 
 ---
 
@@ -30,7 +31,7 @@ Si implementas tu propia compatibilidad con la interacción, ten presente que lo
 
 Muchas experiencias de interacción implican que el usuario identifique el objeto con el que quiere interactuar apuntando a él con dispositivos de entrada como la función táctil, mouse, pluma o lápiz y panel táctil. Dado que los datos de dispositivos de interfaz de usuario (HID) sin procesar proporcionados por estos dispositivos de entrada incluyen muchas propiedades comunes, se promueve la información en una pila de entrada unificada y expuesta como datos de puntero independiente del dispositivo consolidados. Las aplicaciones para UWP pueden entonces consumir estos datos sin que tengas que preocuparte por el dispositivo de entrada que se use.
 
-**Nota**  Si la aplicación lo requiere, también se promueve la información específica del dispositivo desde los datos sin procesar de HID.
+**Nota** Si la aplicación lo requiere, también se promueve la información específica del dispositivo desde los datos sin procesar de HID.
 
  
 
@@ -43,7 +44,7 @@ Los eventos de puntero exponen información básica, como el estado de detecció
 
 Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 
-**Nota**  Llama a [**CapturePointer**](https://msdn.microsoft.com/library/windows/apps/br208918) para limitar la entrada del puntero a un elemento específico de la interfaz de usuario. Cuando un elemento captura un puntero, solo ese objeto recibe los eventos de entrada del puntero, incluso aunque se mueva el puntero fuera del área límite del objeto. Normalmente capturas el puntero dentro de un controlador de eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) ya que [**IsInContact**](https://msdn.microsoft.com/library/windows/apps/br227976) (botón del mouse presionado, función táctil o pluma en contacto) debe ser verdadero para que **CapturePointer** se realice correctamente.
+**Nota** Llama a [**CapturePointer**](https://msdn.microsoft.com/library/windows/apps/br208918) para limitar la entrada del puntero a un elemento específico de la interfaz de usuario. Cuando un elemento captura un puntero, solo ese objeto recibe los eventos de entrada del puntero, incluso aunque se mueva el puntero fuera del área límite del objeto. Normalmente capturas el puntero dentro de un controlador de eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) ya que [**IsInContact**](https://msdn.microsoft.com/library/windows/apps/br227976) (botón del mouse presionado, función táctil o pluma en contacto) debe ser verdadero para que **CapturePointer** se realice correctamente.
 
  
 
@@ -64,7 +65,7 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 <td align="left"><p>Se produce cuando la plataforma cancela un puntero.</p>
 <ul>
 <li>Los punteros táctiles se cancelan cuando se detecta un lápiz dentro del alcance de la superficie de entrada.</li>
-<li>No se detectan contactos activos de más de 100 ms.</li>
+<li>No se detectan contactos activos de más de 100ms.</li>
 <li>Se modifica el monitor o la pantalla (resolución, configuración, configuración de multimonitor).</li>
 <li>El escritorio está bloqueado o el usuario ha cerrado la sesión.</li>
 <li>El número de contactos simultáneos superó el número admitido por el dispositivo.</li>
@@ -249,10 +250,7 @@ Después, se usan comentarios de interfaz de usuario para mostrar controladores 
 
 -   Este controlador administra un evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). Se agrega el evento al registro de eventos, se agrega el puntero a la matriz de punteros que se utiliza para realizar un seguimiento de los punteros de interés y se muestran los detalles de los punteros.
 
-    **Note**
-            [
-              Los eventos **PointerPressed**
-            ](https://msdn.microsoft.com/library/windows/apps/br208971) y [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) no siempre se producen en parejas. La aplicación debe escuchar y controlar cualquier evento que pueda concluir una acción de puntero hacia abajo (como [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) y [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).
+    **Nota:** Los eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) y [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) no siempre se producen en parejas. La aplicación debe escuchar y controlar cualquier evento que pueda concluir una acción de puntero hacia abajo (como [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) y [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).
 
      
 
@@ -333,7 +331,7 @@ Después, se usan comentarios de interfaz de usuario para mostrar controladores 
 
 -   Este controlador administra un evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970). Se agrega el evento al registro de eventos y se actualizan los detalles del puntero.
 
-    **Importante**  La entrada del mouse se asocia con un puntero único que se asigna cuando se detecta por primera vez la entrada del mouse. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). El evento [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) solo se desencadena cuando se libera ese mismo botón del mouse (no se puede asociar ningún otro botón con el puntero hasta que se complete este evento). Debido a esta asociación exclusiva, los clics de otros botones del mouse se enrutan a través del evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970).
+    **Importante** La entrada del mouse se asocia con un puntero único que se asigna cuando se detecta por primera vez la entrada del mouse. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971). El evento [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) solo se desencadena cuando se libera ese mismo botón del mouse (no se puede asociar ningún otro botón con el puntero hasta que se complete este evento). Debido a esta asociación exclusiva, los clics de otros botones del mouse se enrutan a través del evento [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970).
 
      
 
@@ -522,10 +520,7 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
 
 -   Este controlador administra un evento [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965). Se agrega el evento al registro de eventos, se quita el puntero de la matriz de punteros y se actualizan los detalles del puntero.
 
-    **Nota**
-            [
-              **PointerCaptureLost**
-            ](https://msdn.microsoft.com/library/windows/apps/br208965) puede producirse en lugar de [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972). La captura del puntero se puede perder por varios motivos.
+    **Nota:** [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965) puede producirse en lugar de [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972). La captura del puntero se puede perder por varios motivos.
 
      
 
@@ -1111,6 +1106,6 @@ namespace PointerInput
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

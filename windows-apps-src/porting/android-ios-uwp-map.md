@@ -4,8 +4,8 @@ Description: "Compara las características de plataforma entre iOS, Android y Wi
 Search.Product: eADQiWindows 10XVcnh
 title: "Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 640ddc7b77d5a23562dba2ecd9812464beb8a422
+ms.sourcegitcommit: a55e7d0945902ce44ebad481475e8324c9859054
+ms.openlocfilehash: 8acd22c44cf6423aba01083d1e32d282c87f44cb
 
 ---
 
@@ -120,16 +120,16 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <td align="left">El código XAML que proporciona un sistema de diseño flexible compuesto por <strong>clases de panel de diseño</strong>, como <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.canvas.aspx">Canvas</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx">Grid</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.relativepanel.aspx">RelativePanel</a></strong> y <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx">StackPanel</a></strong> para diseños estáticos y dinámicos. <strong><a href="https://msdn.microsoft.com/library/ms171352.aspx">Las propiedades</a></strong> se usan para controlar el tamaño y la posición de los elementos.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228350.aspx">Definir diseños con XAML</a><br/></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>Navegación punto a punto.</strong> <br><br>Presenta al usuario métodos de navegación entre páginas de la misma importancia jerárquica.</td>
+<td align="left"><strong>Navegación de sistemas del mismo nivel.</strong> <br><br>Presentación al usuario de métodos de navegación entre páginas de la misma importancia jerárquica.</td>
 <td align="left"><strong>Las pestañas</strong>, las <strong>vistas de deslizamiento</strong> y los <strong>cajones de navegación</strong> proporcionan una <strong>navegación lateral</strong>.</td>
 <td align="left"><strong>Los controladores de la barra de pestañas</strong>, <strong>controladores de vista en dos paneles</strong> y <strong>controladores de vista de página</strong> permiten una navegación entre vistas de jerarquía igual.</td>
-<td align="left">Puedes mostrar una lista persistente de vínculos o pestañas situadas encima del contenido mediante <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">pestañas o tablas dinámicas</a></strong>. El <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">panel de navegación o vista en dos paneles</a></strong> permite mostrar una lista de vínculos junto con el contenido.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187344.aspx">Navegación</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt465735.aspx">Navegación de punto a punto entre dos páginas</a></td>
+<td align="left">Puedes mostrar una lista persistente de vínculos o pestañas situadas encima del contenido mediante <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">pestañas o tablas dinámicas</a></strong>. El <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">panel de navegación o vista en dos paneles</a></strong> permite mostrar una lista de vínculos junto con el contenido.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">Navegación</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">Navegar entre dos páginas</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>Navegación jerárquica.</strong> <br><br>Navega entre las páginas principales y secundarias de una jerarquía.</td>
+<td align="left"><strong>Navegación jerárquica.</strong> <br><br>Navegación entre las páginas principales y secundarias de una jerarquía.</td>
 <td align="left"><strong>Las listas</strong>, <strong>listas de cuadrículas</strong>, <strong>botones</strong> y otros controles proporcionan una <strong>navegación descendente</strong> cuando se usan con <strong>intenciones</strong> para cargar otras <strong>actividades</strong>.</td>
 <td align="left"><strong>Los controladores de navegación</strong> permiten a los usuarios navegar entre los niveles de una jerarquía.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">Los hubs</a></strong> permiten mostrar al usuario una vista previa del contenido que se puede seleccionar para navegar a páginas secundarias. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">El maestro y los detalles</a></strong> permiten a los usuarios elegir de una lista de resúmenes de elemento que se muestran junto a la sección de detalle correspondiente.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187344.aspx">Navegación</a></td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">Los hubs</a></strong> permiten mostrar al usuario una vista previa del contenido que se puede seleccionar para navegar a páginas secundarias. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">El maestro y los detalles</a></strong> permiten a los usuarios elegir de una lista de resúmenes de elemento que se muestran junto a la sección de detalles correspondiente.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">Navegación</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">Navegar entre dos páginas</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Navegación con el botón Atrás.</strong> <br><br>Navega hacia atrás por una aplicación.</td>
@@ -665,6 +665,6 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

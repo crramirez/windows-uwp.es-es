@@ -1,99 +1,109 @@
 ---
 author: TylerMSFT
-ms.assetid:
-description: This article shows you how to reduce memory when your app moves to the background.
-title: Reduce memory usage when your app moves to the background state
+ms.assetid: 
+description: "En este artículo se muestra cómo reducir el uso de memoria cuando la aplicación pasa al estado de segundo plano."
+title: "Reducir el uso de memoria cuando la aplicación pasa al estado de segundo plano"
+translationtype: Human Translation
+ms.sourcegitcommit: bf0cb8f072a2a6974ab582329d8b482add37f1d9
+ms.openlocfilehash: 80e89e24236903ab90f7c4fe326782a0a7e5272f
+
 ---
 
-# Free memory when your app moves to the background
+# Liberar memoria cuando la aplicación pasa a segundo plano
 
-This article shows you how to reduce the amount of memory that your app uses when it moves to the background state so that it won't be suspended and possibly terminated.
+En este artículo se muestra cómo reducir la cantidad de memoria que usa la aplicación cuando pasa al estado de segundo plano para evitar su suspensión o, posiblemente, su finalización.
 
-## New background events
+## Nuevos eventos de segundo plano
 
-Windows 10, version 1607, introduces two new application lifecycle events, [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) and [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). These events let your app know when it is entering and leaving the background.
+Windows 10, versión 1607, incorpora dos nuevos eventos de ciclo de vida de aplicación: [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) y [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). Estos eventos permiten que la aplicación sepa cuándo entra y sale del estado de segundo plano.
 
-When your app moves into the background, the memory constraints enforced by the system may change. Use these events to check your current memory consumption and free resources in order to stay below the limit so that your app won't be suspended and possibly terminated while it is in the background.
+Cuando la aplicación pasa al estado de segundo plano, pueden cambiar las restricciones de memoria que aplica el sistema. Usa estos eventos para comprobar el consumo de memoria actual y liberar recursos para permanecer por debajo del límite, de modo que no se suspenda o, tal vez, se finalice la aplicación mientras está en segundo plano.
 
-### Events for controlling your app's memory usage
+### Eventos para controlar el uso de memoria de la aplicación
 
-[MemoryManager.AppMemoryUsageLimitChanging](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusagelimitchanging.aspx) is raised just before the limit of total memory the app can use is changed. For example, when the app moves into the background and on the Xbox the memory limit changes from 1024MB to 128MB.  
-This is the most important event to handle to keep the platform from suspending or terminating the app.
+El evento [MemoryManager.AppMemoryUsageLimitChanging](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusagelimitchanging.aspx) se genera justo antes de que cambie el límite del total de memoria que puede usar la aplicación. Por ejemplo, si la aplicación pasa a segundo plano y en la consola Xbox el límite de memoria cambia de 1024MB a 128MB.  
+Este es el evento más importante que se debe controlar para evitar que la plataforma suspenda o finalice la aplicación.
 
-[MemoryManager.AppMemoryUsageIncreased](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusageincreased.aspx) is raised when the app's memory consumption has increased to a higher value in the [AppMemoryUsageLevel](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.appmemoryusagelevel.aspx) enumeration. For example, from **Low** to **Medium**. Handling this event is optional but recommended because the application is still responsible for staying under the limit.
+El evento [MemoryManager.AppMemoryUsageIncreased](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusageincreased.aspx) se genera cuando el consumo de memoria de la aplicación ha aumentado a un valor superior en la enumeración [AppMemoryUsageLevel](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.appmemoryusagelevel.aspx). Por ejemplo, de **Low** a **Medium**. Si bien controlar este evento es opcional, se recomienda hacerlo porque la aplicación sigue siendo responsable de mantenerse por debajo del límite.
 
-[MemoryManager.AppMemoryUsageDecreased](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusagedecreased.aspx) is raised when the app's memory consumption has decreased to a lower value in the **AppMemoryUsageLevel** enumeration. For example, from **High** to **Low**. Handling this event is optional but indicates the application may be able to allocate additional memory if needed.
+El evento [MemoryManager.AppMemoryUsageDecreased](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusagedecreased.aspx) se genera cuando el consumo de memoria de la aplicación ha disminuido a un valor inferior en la enumeración **AppMemoryUsageLevel**. Por ejemplo, de **High** a **Low**. Controlar este evento es opcional, pero indica que la aplicación puede asignar memoria adicional si es necesario.
 
-## Handle the transition between foreground and background
+## Controlar la transición entre el primer plano y el segundo plano
 
-When your app moves from the foreground to the background, the [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) event is raised. When your app returns to the foreground, the [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) event is raised. You can register handlers for these events when your app is created. In the default project template, this is done in the **App** class constructor in App.xaml.cs.
+Cuando la aplicación pasa de primer plano a segundo plano, se genera el evento [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground). Cuando la aplicación vuelve al primer plano, se genera el evento [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). Puedes registrar controladores para estos eventos cuando creas la aplicación. En la plantilla de proyecto predeterminada, esto se realiza en el constructor de clase **App** en App.xaml.cs.
 
-Because running in the background will reduce the memory resources your app is allowed to retain, you should also register for the [**AppMemoryUsageIncreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageIncreased) and [**AppMemoryUsageLimitChanging**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageLimitChanging) events which you can use to check your app's current memory usage and the current limit. The handlers for these events are shown in the following examples. For more information on the application lifecycle for UWP apps, see [App lifecycle](../\launch-resume\app-lifecycle.md).
+Dado que la ejecución en segundo plano reducirá los recursos de memoria que la aplicación tiene permitido conservar, también debes registrar los eventos [**AppMemoryUsageIncreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageIncreased) y [**AppMemoryUsageLimitChanging**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageLimitChanging), que puedes usar para comprobar el uso actual de memoria de la aplicación y el límite actual. En los siguientes ejemplos se muestran los controladores de estos eventos. Para obtener más información sobre el ciclo de vida de las aplicaciones para UWP, consulta [Ciclo de vida de la aplicación](../\launch-resume\app-lifecycle.md).
 
 [!code-cs[RegisterEvents](./code/ReduceMemory/cs/App.xaml.cs#SnippetRegisterEvents)]
 
-When the [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) event is raised, set the tracking variable to indicate that you are currently running in the background. This will be useful when you write the code for reducing memory usage.
+Cuando se genera el evento [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground), establece la variable de seguimiento para indicar que actualmente estás ejecutando en segundo plano. Esto será útil cuando escribas el código para reducir el uso de memoria.
 
 [!code-cs[EnteredBackground](./code/ReduceMemory/cs/App.xaml.cs#SnippetEnteredBackground)]
 
-When your app transitions to the background, the system reduces the memory limit for the app to ensure that the current foreground app has sufficient resources to provide a responsive user experience
+Cuando la aplicación cambia al estado de segundo plano, el sistema reduce el límite de memoria de la aplicación con el fin de garantizar que la aplicación en primer plano actual tenga los recursos suficientes para proporcionar una experiencia del usuario que responda adecuadamente.
 
-The [**AppMemoryUsageLimitChanging**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageLimitChanging) event handler lets your app know that its allotted memory has been reduced and provides the new limit in the event arguments passed into the handler. Compare the [**MemoryManager.AppMemoryUsage**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsage) property, which provides your app's current usage, to the [**NewLimit**](https://msdn.microsoft.com/library/windows/apps/Windows.System.AppMemoryUsageLimitChangingEventArgs.NewLimit) property of the event arguments, which specifies the new limit. If your memory usage exceeds the limit, you need to reduce your memory usage.
+El controlador del evento [**AppMemoryUsageLimitChanging**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageLimitChanging) permite a la aplicación saber que la memoria que tiene asignada se ha reducido y proporciona el nuevo límite en los argumentos del evento pasados al controlador. Compara la propiedad [**MemoryManager.AppMemoryUsage**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsage), que proporciona el uso actual de la aplicación, con propiedad la [**NewLimit**](https://msdn.microsoft.com/library/windows/apps/Windows.System.AppMemoryUsageLimitChangingEventArgs.NewLimit) de los argumentos del evento, que especifica el nuevo límite. Si el uso de memoria supera el límite, debes reducir dicho uso de memoria.
 
-In this example, this is done in the helper method **ReduceMemoryUsage**, which is defined later in this article.
+En este ejemplo, esto se realiza en el método auxiliar **ReduceMemoryUsage**, que se define más adelante en este artículo.
 
 [!code-cs[MemoryUsageLimitChanging](./code/ReduceMemory/cs/App.xaml.cs#SnippetMemoryUsageLimitChanging)]
 
 > [!NOTE]
-> Some device configurations will allow an application to continue running over the new memory limit until the system experiences resource pressure, and some will not. On Xbox, in particular, apps will be suspended or terminated if they do not reduce memory to under the new limits within 2 seconds. This means that you can deliver the best experience across the broadest range of devices by using this event to reduce resource usage below the limit within 2 seconds of the event being raised.
+> Las configuraciones de algunos dispositivo permitirán que una aplicación siga ejecutándose por encima del nuevo límite de memoria hasta que el sistema sufra presión de recursos, pero las de otros dispositivos no lo permitirán. En concreto, en Xbox, las aplicaciones se suspenderán o finalizarán si no reducen el uso de memoria por debajo de los nuevos límites en un plazo de 2 (dos) segundos. Esto significa que puedes ofrecer la mejor experiencia en la gama más amplia de dispositivos mediante el uso de este evento para reducir el uso de recursos por debajo del límite en el plazo de 2 (dos) segundos desde que se genere el evento.
 
-It is possible that although your app's memory usage is currently under the memory limit for background apps when it first transitions to the background, it may increase its memory consumption over time and begin to approach the limit. The handler the [**AppMemoryUsageIncreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageIncreased) provides an opportunity to check your current usage when it increases and, if necessary, free memory.
+Es posible que, aunque el uso de memoria de la aplicación esté actualmente por debajo del límite de memoria para aplicaciones en segundo plano, cuando cambie por primera vez a segundo plano, pueda aumentar el consumo de memoria con el tiempo y empezar a acercarse al límite. El controlador del evento [**AppMemoryUsageIncreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageIncreased) ofrece la posibilidad de comprobar el uso actual cuando aumenta y, si es necesario, liberar memoria.
 
-Check to see if the [**AppMemoryUsageLevel**](https://msdn.microsoft.com/library/windows/apps/Windows.System.AppMemoryUsageLevel) is **High** or **OverLimit**, and if so, reduce your memory usage. In this example this is handled by the helper method, **ReduceMemoryUsage**. You can also subscribe to the [**AppMemoryUsageDecreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageDecreased) event, check to see if your app is under the limit, and if so then you know you can allocate additional resources.
+Comprueba si el valor de [**AppMemoryUsageLevel**](https://msdn.microsoft.com/library/windows/apps/Windows.System.AppMemoryUsageLevel) es **High** u **OverLimit**, y si es así, reduce el uso de memoria. En este ejemplo, esto se controla con el método auxiliar **ReduceMemoryUsage**. También puede suscribirte al evento [**AppMemoryUsageDecreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageDecreased), comprobar si la aplicación está por debajo del límite y, si es así, saber que puedes asignar recursos adicionales.
 
 [!code-cs[MemoryUsageIncreased](./code/ReduceMemory/cs/App.xaml.cs#SnippetMemoryUsageIncreased)]
 
-**ReduceMemoryUsage** is a helper method that you can implement to release memory when your app is over the usage limit while running in the background. How you release memory depends on the specifics of your app, but one recommended way to free up memory is to dispose of your UI and the other resources associated with your app view. To do so, ensure that you are running in the background state then set the [**Content**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Window.Content) property of your app's window to `null` and unregister your UI event handlers and remove any other references you may have to the page. Failing to unregister your UI event handlers and clearing any other references you may have to the page will prevent the page resources from being released. Then call **GC.Collect** to reclaim the freed up memory immediately.
+**ReduceMemoryUsage** es un método auxiliar que puedes implementar para liberar memoria cuando la aplicación supera el límite de uso mientras se ejecuta en segundo plano. La manera de liberar memoria depende de los detalles específicos de la aplicación, pero una forma recomendada es desechar la interfaz de usuario y los demás recursos asociados con la vista de la aplicación. Para ello, comprueba que estés ejecutando en el estado de segundo plano y luego establece la propiedad [**Content**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Window.Content) de la ventana de la aplicación en `null`, anula el registro de los controladores de eventos de la interfaz de usuario y quita todas las referencias que pudieras tener a la página. Si no logras anular el registro de los controladores de eventos de la interfaz de usuario ni borrar todas las referencias que pudieras tener a la página, no podrás liberar los recursos de la página. A continuación, llama a **GC.Collect** para recuperar la memoria liberada inmediatamente.
 
 [!code-cs[UnloadViewContent](./code/ReduceMemory/cs/App.xaml.cs#SnippetUnloadViewContent)]
 
-When the window content is collected, each Frame begins its disconnection process. If there are Pages in the visual object tree under the window content, these will begin firing their Unloaded event. Pages cannot be completely cleared from memory unless all references to them are removed. In the Unloaded callback, do the following to ensure that memory is quickly freed:
-* Clear and set any large data structures in your Page to `null`.
-* Unregister all event handlers that have callback methods within the Page. Make sure to register those callbacks during the Loaded event handler for the Page. The Loaded event is raised when the UI has been reconstituted and the Page has been added to the visual object tree.
-* Call `GC.Collect` at the end of the Unloaded callback to quickly garbage collect any of the large data structures you have just set to `null`.
+Cuando se recopila el contenido de la ventana, cada fotograma comienza su proceso de desconexión. Si hay objetos Page en el árbol de objetos visuales en el contenido de la ventana, iniciarán la generación del evento Unloaded. Los objetos Pages no se puede borrar completamente de la memoria, a menos que se eliminen todas las referencias a ellos. En la devolución de llamada de Unloaded, realiza los siguientes pasos para garantizar que la memoria se libere rápidamente:
+* Borra y establece cualquier estructura de datos de gran tamaño de Page en `null`.
+* Anula el registro de todos los controladores de eventos que tienen métodos de devolución de llamada dentro de Page. Asegúrate de registrar esas devoluciones de llamada durante el controlador del evento Loaded correspondiente a Page. El evento Loaded se genera si la interfaz de usuario se ha reconstituido y el objeto Page se ha agregado al árbol de objetos visuales.
+* Llama a `GC.Collect` al final de la devolución de llamada de Unloaded para efectuar rápidamente la recolección de elementos no utilizados de cualquiera de las estructuras de datos de gran tamaño que estableciste recién en `null`.
 
 [!code-cs[MainPageUnloaded](./code/ReduceMemory/cs/App.xaml.cs#SnippetMainPageUnloaded)]
 
-In the [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) event handler, set the tracking variable (`isInBackgroundMode`) to indicate that your app is no longer running in the background. Next, check to see if the [**Content**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Window.Content) of the current window is `null`-- which it will be if you disposed of your app views in order to clear up memory while you were running in the background. If the window content is `null`, rebuild your app view. In this example, the window content is created in the helper method **CreateRootFrame**.
+En el controlador del evento [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground), establece la variable de seguimiento (`isInBackgroundMode`) para indicar que la aplicación ya no se ejecuta en segundo plano. A continuación, comprueba si el valor de la propiedad [**Content**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Window.Content) de la ventana actual es `null`, que será así si has desechado las vistas de la aplicación para liberar memoria durante la ejecución en segundo plano. Si el contenido de la ventana es `null`, reconstruye la vista de la aplicación. En este ejemplo, el contenido de la ventana se crea en el método auxiliar **CreateRootFrame**.
 
 [!code-cs[LeavingBackground](./code/ReduceMemory/cs/App.xaml.cs#SnippetLeavingBackground)]
 
-The **CreateRootFrame** helper method recreates the view content for your app. The code in this method is nearly identical to the [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) handler code provided in the default project template. The one difference is that the **Launching** handler determines the previous execution state from the [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.PreviousExecutionState) property of the [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) and the **CreateRootFrame** method simply gets the previous execution state passed in as an argument. To minimize duplicated code, you can refactor the default **Launching** event handler code to call **CreateRootFrame**.
+El método auxiliar **CreateRootFrame** vuelve a crear el contenido de la vista de la aplicación. El código de este método es casi idéntico al código del controlador [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) proporcionado en la plantilla de proyecto predeterminada. La única diferencia es que el controlador **Launching** determina el estado de ejecución anterior a partir de la propiedad [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.PreviousExecutionState) de la clase [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) y el método **CreateRootFrame** simplemente obtiene el estado de ejecución anterior que se pasó como argumento. Para minimizar el código duplicado, puedes refactorizar el código del controlador de eventos **Launching** predeterminado para llamar a **CreateRootFrame**.
 
 [!code-cs[CreateRootFrame](./code/ReduceMemory/cs/App.xaml.cs#SnippetCreateRootFrame)]
 
-## Guidelines
+## Instrucciones
 
-### Moving from the foreground to the background
+### Pasar de primer plano a segundo plano
 
-When an app moves from the foreground to the background, the system does work on behalf of the app to free up resources that are not needed in the background. For example, the UI frameworks flush cached textures and the video subsystem frees memory allocated on behalf of the app. However, an app will still need to carefully monitor its memory usage to avoid being suspended or terminated by the system.
+Cuando una aplicación pasa de primer plano a segundo plano, el sistema funciona en nombre de la aplicación para liberar los recursos que no son necesarios en segundo plano. Por ejemplo, los marcos de interfaz de usuario vacían las texturas almacenadas en caché y el subsistema de vídeo libera la memoria asignada en nombre de la aplicación. Aun así, una aplicación debe supervisar cuidadosamente su uso de memoria para evitar que el sistema la suspenda o la finalice.
 
-When an app moves from the foreground to the background it will first get an **EnteredBackground** event and then a **AppMemoryUsageLimitChanging** event.
+Cuando una aplicación pasa de primer plano a segundo plano, primero obtiene un evento **EnteredBackground** y después un evento **AppMemoryUsageLimitChanging**.
 
-- **Do** use the **EnteredBackground** event to free up UI resources that you know your app does not need while running in the background. For example, you could free the cover art image for a song.
-- **Do** use the **AppMemoryUsageLimitChanging** event to ensure that your app is using less memory than the new background limit. Make sure that you free up resources if not. If you do not, your app may be suspended or terminated according to device specific policy.
-- **Do** manually invoke the garbage collector if your app is over the new memory limit when the **AppMemoryUsageLimitChanging** event is raised.
-- **Do** use the **AppMemoryUsageIncreased** event to continue to monitor your app’s memory usage while running in the background if you expect it to change. If the **AppMemoryUsageLevel** is **High** or **OverLimit** make sure that you free up resources.
-- **Consider** freeing UI resources in the **AppMemoryUsageLimitChanging** event handler instead of in the **EnteredBackground** handler as a performance optimization. Use a boolean value set in the **EnteredBackground/LeavingBackground** event handlers to track whether the app is in the background or foreground. Then in the **AppMemoryUsageLimitChanging** event handler, if **AppMemoryUsage** is over the limit and the app is in the background (based on the Boolean value) you can free UI resources.
-- **Do not** perform long running operations in the **EnteredBackground** event because you can cause the transition between applications to appear slow to the user.
+- **Usa** el evento **EnteredBackground** para liberar los recursos de interfaz de usuario que sabes que la aplicación no necesita mientras se ejecuta en segundo plano. Por ejemplo, podrías liberar la imagen de portada de una canción.
+- **Usa** el evento **MemoryManager.AppMemoryUsageLimitChanging** para asegurarte de que la aplicación esté usando menos memoria que el nuevo límite de segundo plano. Si no es así, asegúrate de liberar recursos. Si no lo haces, puede que se suspenda o finalice la aplicación según la directiva específica del dispositivo.
+- **Invoca** manualmente el recolector de elementos no utilizados si la aplicación supera el nuevo límite de memoria cuando se genera el evento **AppMemoryUsageLimitChanging**.
+- **Usa** el evento **AppMemoryUsageIncreased** para seguir supervisando el uso de memoria de la aplicación mientras se ejecuta en segundo plano si esperas que cambie. Si el valor de **AppMemoryUsageLevel** es **High** u **OverLimit**, asegúrate de liberar recursos.
+- **Considera** liberar recursos de interfaz de usuario en el controlador del evento **AppMemoryUsageLimitChanging** en lugar de hacerlo en el controlador de **EnteredBackground** como una optimización del rendimiento. Usa un valor booleano que se establece los controladores de los eventos **EnteredBackground/LeavingBackground** para saber si la aplicación está en segundo plano o en primer plano. A continuación, en el controlador del evento **AppMemoryUsageLimitChanging**, si el valor de **AppMemoryUsage** supera el límite y la aplicación está en segundo plano (según el valor booleano), puedes liberar recursos de interfaz de usuario.
+- **No** realices operaciones prolongadas en el evento **EnteredBackground** porque puedes provocar que al usuario la transición entre aplicaciones le parezca lenta.
 
-### Moving from the background to the foreground
+### Pasar de segundo plano a primer plano
 
-When an app moves from the background to the foreground, the app will first get an **AppMemoryUsageLimitChanging** event and then a **LeavingBackground** event.
+Cuando una aplicación pasa de segundo plano a primer plano, primero obtiene un evento **AppMemoryUsageLimitChanging** y después un evento **LeavingBackground**.
 
-- **Do** use the **LeavingBackground** event to recreate UI resources that your app discarded when moving into the background.
+- **No** uses el evento **LeavingBackground** para volver a crear los recursos de interfaz de usuario que la aplicación desechó cuando pasó a segundo plano.
 
-## Related topics
+## Temas relacionados
 
-* [Background media playback sample](http://go.microsoft.com/fwlink/p/?LinkId=800141) - shows how to free memory when your app moves to the background state.
-* [Diagnostic Tools](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015/) - use the diagnostic tools to observe garbage collection events and validate that your app is releasing memory the way you expect it to.
+* [Muestra de reproducción de contenido multimedia en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=800141): enseña cómo liberar memoria cuando la aplicación pasa al estado de segundo plano.
+* [Herramientas de diagnóstico](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015/): usa las herramientas de diagnóstico para observar los eventos de recolección de elementos no utilizados y validar que la aplicación esté liberando memoria según lo previsto.
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

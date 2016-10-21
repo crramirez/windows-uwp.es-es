@@ -3,8 +3,9 @@ author: mtoepke
 title: Definir el objeto principal del juego
 description: "Vamos a ver los detalles del objeto principal de la muestra de juego y cómo las reglas que implementa se traducen en interacciones con el mundo del juego."
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 66e40c150b5eb4f57c9cddfaf472c56601b3fa0b
+ms.openlocfilehash: 8af939fee50540e5213e624703400d99cbb6785f
 
 ---
 
@@ -30,8 +31,7 @@ La mayor parte de la estructura básica del juego se define en estos archivos:
 
 En el tema sobre la [definición del marco de la aplicación para UWP del juego](tutorial--building-the-games-metro-style-app-framework.md), revisamos el marco del juego definido en **App.cpp**.
 
-
-            **Simple3DGame.cpp** proporciona el código para una clase, **Simple3DGame**, que especifica la implementación del propio juego. Anteriormente, consideramos el tratamiento del juego de muestra como una aplicación para UWP. Ahora, vamos a ver el código que lo convierte en un juego.
+**Simple3DGame.cpp** proporciona el código de la clase **Simple3DGame**, que especifica la implementación del propio juego. Anteriormente, consideramos el tratamiento del juego de muestra como una aplicación para UWP. Ahora, vamos a ver el código que lo convierte en un juego.
 
 El código completo de **Simple3DGame.h/.cpp** se proporciona en el [código de muestra completo para esta sección](#code_sample).
 
@@ -86,33 +86,21 @@ private:
 
 Primero, revisemos los métodos internos definidos en **Simple3DGame**.
 
--   
-            **Initialize**. Establece los valores iniciales de las variables globales e inicializa los objetos del juego.
--   
-            **LoadGame**. Inicializa un nuevo nivel y comienza a cargarlo.
--   
-            **LoadLevelAsync**. Inicia una tarea asincrónica (consulta la [biblioteca de modelos paralelos](https://msdn.microsoft.com/library/windows/apps/dd492418.aspx) para obtener información más detallada) con objeto de inicializar el nivel y después invocar una tarea asincrónica en el representador para cargar los recursos de nivel específicos del dispositivo. Este método se ejecuta en otro subproceso; como consecuencia, solo se puede llamar a los métodos [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) (en contraposición a los métodos [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) desde este subproceso. Los métodos de contexto de dispositivo se llaman en el método **FinalizeLoadLevel**.
--   
-            **FinalizeLoadLevel**. Finaliza cualquier tarea de carga de nivel que sea necesario realizar en el subproceso principal. Esto incluye cualquier llamada a métodos de contexto de dispositivo de Direct3D11 ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)).
--   
-            **StartLevel**. Inicia el juego para un nuevo nivel.
--   
-            **PauseGame**. Pausa el juego.
--   
-            **RunGame**. Ejecuta una iteración del bucle del juego. Si el estado del juego es is **Active**, recibe una llamada de **App::Update** una vez cada iteración del bucle del juego.
--   
-            **OnSuspending** y **OnResuming**. Suspende y reanuda el audio del juego, respectivamente.
+-   **Initialize**. Establece los valores iniciales de las variables globales e inicializa los objetos del juego.
+-   **LoadGame**. Inicializa un nuevo nivel y comienza a cargarlo.
+-   **LoadLevelAsync**. Inicia una tarea asincrónica (consulta la [biblioteca de modelos paralelos](https://msdn.microsoft.com/library/windows/apps/dd492418.aspx) para obtener información más detallada) con objeto de inicializar el nivel y después invocar una tarea asincrónica en el representador para cargar los recursos de nivel específicos del dispositivo. Este método se ejecuta en otro subproceso; como consecuencia, solo se puede llamar a los métodos [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) (en contraposición a los métodos [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) desde este subproceso. Los métodos de contexto de dispositivo se llaman en el método **FinalizeLoadLevel**.
+-   **FinalizeLoadLevel**. Finaliza cualquier tarea de carga de nivel que sea necesario realizar en el subproceso principal. Esto incluye cualquier llamada a métodos de contexto de dispositivo de Direct3D11 ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)).
+-   **StartLevel**. Inicia el juego para un nuevo nivel.
+-   **PauseGame**. Pausa el juego.
+-   **RunGame**. Ejecuta una iteración del bucle del juego. Si el estado del juego es is **Active**, recibe una llamada de **App::Update** una vez cada iteración del bucle del juego.
+-   **OnSuspending** y **OnResuming**. Suspende y reanuda el audio del juego, respectivamente.
 
 Y los métodos privados:
 
--   
-            **LoadSavedState** y **SaveState**. Carga y guarda el estado actual del juego, respectivamente.
--   
-            **SaveHighScore** y **LoadHighScore**. Guarda y carga la puntuación más alta entre partidas, respectivamente.
--   
-            **InitializeAmmo**. Restablece el estado de cada objeto de esfera usado como munición a su estado original al inicio de cada ronda.
--   
-            **UpdateDynamics**. Se trata de un método importante, ya que actualiza todos los objetos del juego basándose en entrada de controles, física y rutinas de animación preestablecidas. Es el corazón de la interactividad que define el juego. Lo analizamos con más detalle en la sección sobre cómo [actualizar el juego](#update_game).
+-   **LoadSavedState** y **SaveState**. Carga y guarda el estado actual del juego, respectivamente.
+-   **SaveHighScore** y **LoadHighScore**. Guarda y carga la puntuación más alta entre partidas, respectivamente.
+-   **InitializeAmmo**. Restablece el estado de cada objeto de esfera usado como munición a su estado original al inicio de cada ronda.
+-   **UpdateDynamics**. Se trata de un método importante, ya que actualiza todos los objetos del juego basándose en entrada de controles, física y rutinas de animación preestablecidas. Es el corazón de la interactividad que define el juego. Lo analizamos con más detalle en la sección sobre cómo [actualizar el juego](#update_game).
 
 Los otros métodos públicos son captadores de propiedades que devuelven información específica de juego y de superposición al marco de la aplicación para que la muestre.
 
@@ -412,12 +400,9 @@ A continuación verás un diagrama que representa el flujo básico del juego y s
 
 Cuando el juego de muestra comienza a reproducirse, el objeto del juego puede estar en tres estados distintos:
 
--   
-            **Waiting for resources**. Este estado se activa cuando el objeto del juego se inicializa o cuando los componentes de un nivel empiezan a cargarse. Si una solicitud de carga de un juego anterior desencadenó este estado, se muestra la superposición de las estadísticas del juego; si lo desencadenó una solicitud para jugar un nivel, se muestra la superposición de inicio del nivel. Cuando los recursos terminen de cargarse, el juego pasa por el estado **Resources loaded** y después realiza la transición al estado **Waiting for press**.
--   
-            **Waiting for press**. Este estado se activa cuando se pausa el juego, ya sea que lo haga el jugador o el sistema (después de, por ejemplo, la carga de recursos). Cuando el jugador está listo para salir de este estado, se le pide que cargue un nuevo estado de juego (LoadGame), inicie o reinicie el nivel cargado (StartLevel) o continúe el nivel actual (ContinueGame).
--   
-            **Dynamics**. Si la entrada de presión de un jugador se completa y la acción resultante es comenzar o continuar un nivel, el objeto de juego realiza una transición al estado *Dynamics*. El juego se juega en este estado, y el mundo del juego y los objetos del jugador se actualizan aquí según las rutinas de animación y la entrada del jugador. Se deja este estado cuando el jugador desencadena un evento de pausa, ya sea presionando P, realizando una acción que desactive la ventana principal o completando un nivel o el juego.
+-   **Waiting for resources**. Este estado se activa cuando el objeto del juego se inicializa o cuando los componentes de un nivel empiezan a cargarse. Si una solicitud de carga de un juego anterior desencadenó este estado, se muestra la superposición de las estadísticas del juego; si lo desencadenó una solicitud para jugar un nivel, se muestra la superposición de inicio del nivel. Cuando los recursos terminen de cargarse, el juego pasa por el estado **Resources loaded** y después realiza la transición al estado **Waiting for press**.
+-   **Waiting for press**. Este estado se activa cuando se pausa el juego, ya sea que lo haga el jugador o el sistema (después de, por ejemplo, la carga de recursos). Cuando el jugador está listo para salir de este estado, se le pide que cargue un nuevo estado de juego (LoadGame), inicie o reinicie el nivel cargado (StartLevel) o continúe el nivel actual (ContinueGame).
+-   **Dynamics**. Si la entrada de presión de un jugador se completa y la acción resultante es comenzar o continuar un nivel, el objeto de juego realiza una transición al estado *Dynamics*. El juego se juega en este estado, y el mundo del juego y los objetos del jugador se actualizan aquí según las rutinas de animación y la entrada del jugador. Se deja este estado cuando el jugador desencadena un evento de pausa, ya sea presionando P, realizando una acción que desactive la ventana principal o completando un nivel o el juego.
 
 Echemos un vistazo ahora al código específico de la clase **App** (consulta el tema sobre cómo [definir el marco de UWP del juego](tutorial--building-the-games-metro-style-app-framework.md)) para el método **Update** que implementa esta máquina de estados.
 
@@ -570,8 +555,7 @@ Cuando el juego está en el estado dinámico, es decir, cuando el jugador está 
 
 `GameState runState = m_game->RunGame();`
 
-
-            **RunGame** controla el conjunto de datos que define el estado actual del juego para la iteración actual del bucle del juego. Fluye de la siguiente manera:
+**RunGame** controla el conjunto de datos que define el estado actual del juego para la iteración actual del bucle del juego. Fluye de la siguiente manera:
 
 1.  El método actualiza el temporizador que cuenta los segundos que quedan hasta que se complete el nivel y comprueba si el tiempo del nivel ha expirado. Esta es una de las reglas del juego: cuando se agota el tiempo sin haber dado a todos los objetivos, el juego se acaba.
 2.  Si se ha agotado el tiempo, el método establece el estado de juego **TimeExpired** y regresa al método **Update** en el código anterior.
@@ -3641,6 +3625,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

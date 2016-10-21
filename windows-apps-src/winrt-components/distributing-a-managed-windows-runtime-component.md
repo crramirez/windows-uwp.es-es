@@ -3,8 +3,9 @@ author: msatranjr
 title: Distribuir un componente de Windows Runtime administrado
 description: Puedes distribuir tu componente de Windows Runtime de copia de archivos.
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
+translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 3d7a51ed13f63ca9d6070fbbe860c653c4deaf07
+ms.openlocfilehash: 3a82ee44b748c2c8748ed063cbc67e02200a4e31
 
 ---
 
@@ -36,15 +37,13 @@ Para decidir cómo distribuir tu componente, considera su complejidad. Se recomi
 
 Un SDK de extensión es especialmente útil si se cumple más de una de las anteriores.
 
-> 
-            **Nota**  Para los componentes complejos, el sistema de administración de paquetes NuGet ofrece una alternativa de código abierto a los SDK de extensión. Como el SDK de extensión, NuGet te permite crear paquetes que simplifican la instalación de componentes complejos. Para ver una comparación de paquetes NuGet y SDK de extensión de Visual Studio, consulta [Agregar referencias con el uso de NuGet frente a un SDK de extensión](https://msdn.microsoft.com/library/jj161096.aspx) en la biblioteca de MSDN.
+> **Nota**  Para los componentes complejos, el sistema de administración de paquetes NuGet ofrece una alternativa de código abierto a los SDK de extensiones. Como el SDK de extensión, NuGet te permite crear paquetes que simplifican la instalación de componentes complejos. Para ver una comparación de paquetes NuGet y SDK de extensión de Visual Studio, consulta [Agregar referencias con el uso de NuGet frente a un SDK de extensión](https://msdn.microsoft.com/library/jj161096.aspx) en la biblioteca de MSDN.
 
 ## Distribución por copia de archivos
 
 Si tu componente consta de un archivo .winmd único, o un archivo .winmd y un archivo de índice de recursos (.pri), simplemente puedes hacer que el archivo .winmd esté disponible para que los usuarios lo copien. Los usuarios pueden colocar el archivo donde quieran en un proyecto, usar el cuadro de diálogo **Agregar elemento existente** para agregar el archivo .winmd al proyecto y, a continuación, usar el cuadro de diálogo Administrador de referencias para crear una referencia. Si incluyes un archivo .pri o un archivo .xml, indica a los usuarios que coloquen estos archivos con el archivo .winmd.
 
-> 
-            **Nota**  Visual Studio genera siempre un archivo .pri al compilar el componente de Windows Runtime, aunque tu proyecto no incluya ningún recurso. Si tienes una aplicación de prueba para tu componente, puedes determinar si se usa el archivo .pri examinando el contenido del paquete de la aplicación en la carpeta bin\\debug\\AppX. De todos modos, si el archivo .pri de tu componente no aparece ahí, no es necesario que lo distribuyas. Como alternativa, puedes usar la herramienta [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) para volcar el archivo de recursos de tu proyecto de componente de Windows Runtime. Por ejemplo, en la ventana del símbolo del sistema de Visual Studio, escribe: makepri dump /if MyComponent.pri /of MyComponent.pri.xml. Si lo deseas, puedes obtener más información acerca de los archivos .pri en [Resource Management System (Windows) (Sistema de administración de recursos para Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
+> **Nota**  Visual Studio genera siempre un archivo .pri al compilar el componente de Windows Runtime, aunque tu proyecto no incluya ningún recurso. Si tienes una aplicación de prueba para tu componente, puedes determinar si se usa el archivo .pri examinando el contenido del paquete de la aplicación en la carpeta bin\\debug\\AppX. De todos modos, si el archivo .pri de tu componente no aparece ahí, no es necesario que lo distribuyas. Como alternativa, puedes usar la herramienta [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) para volcar el archivo de recursos de tu proyecto de componente de Windows Runtime. Por ejemplo, en la ventana del símbolo del sistema de Visual Studio, escribe: makepri dump /if MyComponent.pri /of MyComponent.pri.xml. Si lo deseas, puedes obtener más información acerca de los archivos .pri en [Resource Management System (Windows) (Sistema de administración de recursos para Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
 
 ## Distribución por SDK de extensión
 
@@ -56,12 +55,9 @@ Normalmente, un componente complejo incluye los recursos de Windows, pero debes 
 2.  Crear un nuevo proyecto usando la plantilla VSIX Project. Puedes encontrar la plantilla en Visual C# o Visual Basic, en la categoría de extensibilidad. Esta plantilla se instala como parte del SDK de Visual Studio. ([Tutorial: crear un SDK con C# o Visual Basic](https://msdn.microsoft.com/library/jj127119.aspx) o [Tutorial: crear un SDK con C++](https://msdn.microsoft.com/library/jj127117.aspx), demuestra el uso de esta plantilla en un escenario muy simple. )
 3.  Determinar la estructura de carpetas para tu SDK. La estructura de carpetas comienza en el nivel de raíz de tu proyecto VSIX, con las carpetas **Referencias**, **Redist**, y **DesignTime**.
 
-    -   
-            **Referencias** es la ubicación para los archivos binarios que pueden programar tus usuarios. El SDK de extensión crea referencias a estos archivos en los proyectos de Visual Studio de tus usuarios.
-    -   
-            **Redist** es la ubicación de otros archivos que deben distribuirse con tus archivos binarios, en las aplicaciones que se crean mediante tu componente.
-    -   
-            **DesignTime** es la ubicación de los archivos que se usan solo cuando los desarrolladores están creando aplicaciones que usan tu componente.
+    -   **Referencias** es la ubicación para los archivos binarios que pueden programar tus usuarios. El SDK de extensión crea referencias a estos archivos en los proyectos de Visual Studio de tus usuarios.
+    -   **Redist** es la ubicación de otros archivos que deben distribuirse con tus archivos binarios, en las aplicaciones que se crean mediante tu componente.
+    -   **DesignTime** es la ubicación de los archivos que se usan solo cuando los desarrolladores crean aplicaciones que usan tu componente.
 
     En cada una de estas carpetas, puedes crear carpetas de configuración. Los nombres permitidos son debug, retail y CommonConfiguration. La carpeta CommonConfiguration es para los archivos que son los mismos independientemente de si son utilizados por compilaciones retail o debug. Si solo distribuyes compilaciones retail de tu componente, puedes poner todo el contenido en CommonConfiguration y omitir las otros dos carpetas.
 
@@ -80,6 +76,6 @@ Normalmente, un componente complejo incluye los recursos de Windows, pero debes 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

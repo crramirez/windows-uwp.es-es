@@ -2,10 +2,9 @@
 author: Mtoepke
 title: "Preguntas más frecuentes"
 description: "Preguntas más frecuentes sobre UWP en Xbox."
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 01173aeabb74d6d703597a9bd7a48c179c688c07
+ms.sourcegitcommit: 07e7ec6a5816d4b8d33322b2b1af05ffc3e1b820
+ms.openlocfilehash: 38e5d48b2b0303b5f7d13fdaf6f71e1b3fa56978
 
 ---
 
@@ -21,10 +20,10 @@ Si tus juegos y aplicaciones no funcionan, o si no tienes acceso a la tienda o a
 
 Para empezar, asegúrate de que estés ejecutando el modo de desarrollador y no el modo comercial. No puedes conectarte a Xbox One cuando está en modo comercial. Para comprobar esto de forma simple, pulsa el botón **Página principal** y busca el icono Página principal para desarrolladores en el lado derecho de la pantalla. Si el icono no está allí, pero en su lugar ves contenido Gold o Live, significa que estás en el modo comercial. Para cambiar al modo de desarrollador, es necesario ejecutar la aplicación Dev Mode Activation.
 
-> 
-              **Nota**&nbsp;&nbsp;Para implementar una aplicación, es necesario contar con un usuario que haya iniciado sesión.
+> [!NOTE]
+> Para implementar una aplicación, es necesario contar con un usuario que haya iniciado sesión.
 
-Para obtener más información, consulta [Solucionar errores de implementación](frequently-asked-questions.md#fixing-deployment-failures) más adelante en esta página.
+Para obtener más información, consulta [Solucionar errores de implementación](#fixing-deployment-failures) más adelante en esta página.
 
 ### ¿Cómo puedo alternar entre el modo comercial y el modo de desarrollador?
 
@@ -40,59 +39,54 @@ Para comprobarlo de forma simple, presiona el botón **Página principal** y mir
 
 Sí, puedes alternar entre el modo de desarrollador y el modo comercial, en el que puedes jugar a juegos. Para obtener más información, consulta la página [Activación del modo de desarrollador de Xbox One](devkit-activation.md). 
 
-<!-- > **CAUTION**&nbsp;&nbsp;The Xbox Developer Preview System Update includes experimental and early pre-release software. 
-This means that some popular games and apps will not work as expected and you may experience occasional crashes and data loss. -->
-
 ### ¿Perderé mis juegos y aplicaciones o los cambios guardados?
 
-Si decides salir del programa Developer Preview, es posible que tengas que realizar un restablecimiento de fábrica, lo que borrará todo el contenido de la consola. Si esto sucede, tendrás que volver a instalar todos los juegos y aplicaciones. Siempre y cuando estés conectado mientras juegas, las partidas guardadas se almacenan en tu perfil en la nube de la cuenta de Live, por lo que no las perderás.
+Si decides abandonar el programa para desarrolladores, no perderás tus aplicaciones y juegos instalados. Además, si estabas conectado cuando jugabas, las partidas guardadas estarán almacenadas en tu perfil en la nube de la cuenta de Live, por lo que no las perderás.
 
-### ¿Cómo puedo salir de Developer Preview?
+### ¿Cómo puedo abandonar el programa para desarrolladores?
 
-Consulta el tema [Xbox One Developer Mode Deactivation (Desactivación del modo de desarrollador de Xbox One](devkit-deactivation.md) para obtener más información acerca de cómo salir de Developer Preview.
+Consulta el tema [Desactivación del modo de desarrollador de Xbox One](devkit-deactivation.md) para obtener más información acerca de cómo abandonar el programa para desarrolladores.
 
 ### He vendido mi consola Xbox One y la he dejado en el modo de desarrollador. ¿Cómo puedo desactivar el modo de desarrollador?
 
-Si ya no tienes acceso a tu Xbox One, puedes desactivarla en el Centro de desarrollo de Windows. Para obtener más información, consulta la sección **Desactivar la consola con el Centro de desarrollo de Windows** en el tema [Xbox One Developer Mode Deactivation (Desactivación del modo de desarrollador de Xbox One)](devkit-deactivation.md#deactivate-your-console-through-windows-dev-center).
+Si ya no tienes acceso a tu Xbox One, puedes desactivarla en el Centro de desarrollo de Windows. Para obtener más información, consulta la sección **Desactivar la consola con el Centro de desarrollo de Windows** en el tema [Desactivación del modo de desarrollador de Xbox One](devkit-deactivation.md#deactivate-your-console-through-windows-dev-center).
 
-### Salí de Developer Preview con el Centro de desarrollo de Windows, pero aún estoy en el modo de desarrollador. ¿Qué puedo hacer?
+### Abandoné el programa para desarrolladores desde el Centro de desarrollo de Windows, pero aún estoy en el modo de desarrollador. ¿Qué puedo hacer?
 
 Inicia la Página principal para desarrolladores y selecciona el botón **Leave developer mode**. La consola se reiniciará en modo comercial. 
 
 ### ¿Puedo publicar mi aplicación?
 
-La publicación de aplicaciones estará disponible a través del Centro de desarrollo más adelante este año. Las aplicaciones para UWP creadas y probadas en una consola Xbox One comercial pasarán por el mismo proceso de ingesta, revisión y publicación que Windows realiza hoy en día, con revisiones adicionales para satisfacer los estándares actuales de Xbox One.
+Puedes [publicar aplicaciones](../publish/index.md) a través del Centro de desarrollo si tienes una [cuenta de desarrollador](https://developer.microsoft.com/store/register). Las aplicaciones para UWP creadas y probadas en una consola Xbox One comercial pasarán por el mismo proceso de ingesta, revisión y publicación que Windows realiza hoy en día, con revisiones adicionales para cumplir los estándares actuales de Xbox One.
 
 ### ¿Puedo publicar mi juego?
 
 Puedes usar UWP y Xbox One en el modo de desarrollador para crear y probar los juegos de Xbox One. Para publicar juegos para UWP, debes registrarte en [ID@XBOX](http://www.xbox.com/Developers/id). 
-
-              [ID@Xbox](http://www.xbox.com/Developers/id) proporciona a los desarrolladores acceso completo a las API de Xbox Live para sus juegos, incluida la puntuación de jugador y los logros, así como la capacidad de aprovechar el modo multijugador entre dispositivos, almacenamientos en la nube y todas las características de Xbox Live en Xbox One. 
-
-              [ID@XBOX](http://www.xbox.com/Developers/id) también puede proporcionar acceso a kits de desarrollo de Xbox One para juegos que requieran tener acceso al máximo potencial del hardware de Xbox One.
+[ID@Xbox](http://www.xbox.com/Developers/id) proporciona a los desarrolladores acceso completo a las API de Xbox Live para sus juegos, incluida la puntuación de jugador y los logros, así como la capacidad de aprovechar el modo multijugador entre dispositivos, almacenamientos en la nube y todas las características de Xbox Live en Xbox One. 
+[ID@XBOX](http://www.xbox.com/Developers/id) también puede proporcionar acceso a kits de desarrollo de Xbox One para juegos que requieran tener acceso al máximo potencial del hardware de Xbox One.
 
 ### ¿Los motores de juego estándar funcionarán?
 
-Echa un vistazo a la página [Known issues (Problemas conocidos)](known-issues.md) de esta versión preliminar.
+Echa un vistazo a la página [Problemas conocidos](known-issues.md) de esta versión.
 
-### ¿Qué capacidades y recursos del sistema hay disponibles para los juegos para UWP en Xbox One? 
+### ¿Qué funcionalidades y recursos del sistema hay disponibles para los juegos para UWP en Xbox One? 
 
-Para obtener más información, consulta [System resources for UWP apps and games on Xbox One (Recursos del sistema de aplicaciones para UWP y juegos en Xbox One)](system-resource-allocation.md).
+Para obtener más información, consulta [Recursos del sistema de aplicaciones para UWP y juegos en Xbox One](system-resource-allocation.md).
 
 ### ¿Si creo un juego para UWP de DirectX 12, se ejecutará en mi Xbox One en el modo de desarrollador?
 
-Para obtener más información, consulta [System resources for UWP apps and games on Xbox One (Recursos del sistema de aplicaciones para UWP y juegos en Xbox One)](system-resource-allocation.md).
+Para obtener más información, consulta [Recursos del sistema de aplicaciones para UWP y juegos en Xbox One](system-resource-allocation.md).
 
 ### ¿Toda la superficie de la API de UWP estará disponible en Xbox?
 
-Echa un vistazo a la página [Known issues (Problemas conocidos)](known-issues.md) de esta versión preliminar.
+Echa un vistazo a la página [Problemas conocidos](known-issues.md) de esta versión.
 
 ### Solucionar errores de implementación
 
 Si no puedes implementar la aplicación desde Visual Studio, estos pasos pueden ayudarte a solucionar el problema. Si sigues teniendo problemas, pide ayuda en el foro.
 
-> 
-              **Nota**&nbsp;&nbsp;Para implementar una aplicación, es necesario contar con un usuario que haya iniciado sesión. Si recibes un mensaje de error 0x87e10008, asegúrate de que haya un usuario que haya iniciado sesión y vuelve a intentarlo.
+> [!NOTE]
+> Para implementar una aplicación, es necesario contar con un usuario que haya iniciado sesión. Si recibes un mensaje de error 0x87e10008, asegúrate de que haya un usuario que haya iniciado sesión y vuelve a intentarlo.
 
 Si Visual Studio no puede conectarse a tu Xbox One:
 
@@ -102,10 +96,10 @@ Si Visual Studio no puede conectarse a tu Xbox One:
 3. Si aún no lo has hecho, lee el tema [Configuración del entorno de desarrollo](development-environment-setup.md) y el tema [Introducción a las herramientas de Xbox One](introduction-to-xbox-tools.md).
 
 4. Asegúrate de que puedes "hacer ping" a la dirección IP de la consola desde el equipo de desarrollo.
-> 
-              **Nota**&nbsp;&nbsp;Para obtener el mejor rendimiento de la implementación, te recomendamos que uses una conexión con cable a la consola.
+  > [!NOTE]
+  > Para obtener el mejor rendimiento de la implementación, te recomendamos que uses una conexión con cable a la consola.
 
-5. Asegúrate de usar la opción Universal (protocolo sin cifrar) de la lista desplegable de Autenticación de la pestaña **Depurar**. Consulta [Configuración del entorno de desarrollo](development-environment-setup.md) para obtener más detalles.
+5. Asegúrate de usar la opción Universal (protocolo sin cifrar) de la lista desplegable Autenticación de la pestaña **Depurar**. Consulta [Configuración del entorno de desarrollo](development-environment-setup.md) para obtener más detalles.
 
 <!--6. Make sure you are not hitting a PIN pairing issue; see "Visual Studio/Xbox PIN pairing failures" in the [Known Issues](known-issues.md) topic.-->
 
@@ -125,21 +119,21 @@ Go to Settings > System > Console info & updates > Reset console, and select the
 > **Caution**&nbsp;&nbsp;Doing this will delete all saved settings on your Xbox One including wireless settings, user accounts and any game progress that has not been saved to cloud storage.
 
 > **Caution**&nbsp;&nbsp;DO NOT select the **Reset and remove everything** button.
-This will delete all of your games, apps, settings and content, deactivate Developer Mode, and remove you console from the Developer Preview group.
+This will delete all of your games, apps, settings and content and deactivate Developer Mode.
 -->
 
-### Si voy a crear una aplicación con HTML o JavaScript, ¿cómo habilito la navegación con el mando para juegos?
+### Si voy a crear una aplicación con HTML o JavaScript, ¿cómo puedo habilitar la navegación con el mando para juegos?
 
 TVHelpers es un conjunto de muestras y bibliotecas de JavaScript y XAML/C# para ayudarte a crear fantásticas experiencias de Xbox One y televisión en JavaScript y C#. TVJS es una biblioteca que te ayuda a compilar aplicaciones para UWP de alta gama para Xbox One. TVJS incluye compatibilidad para la navegación de controlador automática, reproducción de elementos multimedia enriquecidos, búsqueda y más. Puedes usar TVJS con tu aplicación web hospedada tan fácilmente como con una aplicación para UWP web empaquetada con acceso total a API de Windows Runtime.
 
 Para obtener más información, consulta el proyecto [TVHelpers](https://github.com/Microsoft/TVHelpers) y la [wiki](https://github.com/Microsoft/TVHelpers/wiki) del proyecto.
 
 ## Consulta también
-- [Problemas conocidos de UWP en Xbox One Developer Preview.](known-issues.md)
-- [UWP on Xbox One (UWP en Xbox One)](index.md)
+- [Problemas conocidos de UWP en Xbox One](known-issues.md)
+- [UWP en Xbox One](index.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

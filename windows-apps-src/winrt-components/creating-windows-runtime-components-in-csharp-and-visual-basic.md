@@ -3,8 +3,9 @@ author: msatranjr
 title: Crear componentes de Windows Runtime en C# y Visual Basic
 description: "A partir de .NET Framework 4.5, puedes usar código administrado para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime."
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
+translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: e8fd48b99d6a05af57e67e503c7bd3058b07569c
+ms.openlocfilehash: e7793cd27d996ce2adbfebfbad91541bdccf0d82
 
 ---
 
@@ -35,8 +36,7 @@ Internamente, los tipos de Windows Runtime en tu componente pueden usar cualquie
     -   Derivar de tipos que no están en Windows Runtime, como System.Exception y System.EventArgs.
 -   Todos los tipos públicos deben tener un espacio de nombres raíz que coincida con el nombre del ensamblado y el nombre del ensamblado no puede empezar por "Windows".
 
-    > 
-            **Sugerencia**  De forma predeterminada, los proyectos de Visual Studio tienen nombres de espacio de nombres que coinciden con el nombre del ensamblado. En Visual Basic, la declaración de espacio de nombres para este espacio de nombres predeterminado no se muestra en tu código.
+    > **Sugerencia**  De forma predeterminada, los proyectos de Visual Studio tienen nombres de espacio de nombres que coinciden con el nombre del ensamblado. En Visual Basic, la declaración de espacio de nombres para este espacio de nombres predeterminado no se muestra en tu código.
 
 -   Las estructuras públicas no pueden tener miembros que no sean campos públicos y los campos deben ser tipos de valor o cadenas.
 -   Las clases públicas deben ser **sealed** (**NotInheritable** en Visual Basic). Si el modelo de programación requiere polimorfismo, puedes crear una interfaz pública e implementarla en las clases que deben ser polimórficas.
@@ -100,8 +100,7 @@ Para algunos tipos de colección usados con frecuencia, la asignación es entre 
 
 Cuando un tipo implementa más de una interfaz, puedes usar cualquiera de las interfaces que implementa como un tipo de parámetro o tipo devuelto de un miembro. Por ejemplo, puedes pasar o devolver un diccionario&lt;int, string&gt; (Dictionary(Of Integer, String) en Visual Basic) como IDictionary&lt;int, string&gt;, IReadOnlyDictionary&lt;int, string&gt; o IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;.
 
-
-            **Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt; independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
+**Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt; independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
 
 En Windows Runtime, se recorren en iteración IMap&lt;K, V&gt; e IMapView&lt;K, V&gt; con el uso de IKeyValuePair. Cuando los pasas a código administrado, aparecen como IDictionary&lt;TKey, TValue&gt; e IReadOnlyDictionary&lt;TKey, TValue&gt;. Por lo tanto, naturalmente, utilizas System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt; para enumerarlos.
 
@@ -139,32 +138,31 @@ En Windows Runtime, los métodos se pueden sobrecargar. Sin embargo, si se decla
 > End Function
 > ```
 
- [!div class="tabbedCodeSnippets"] 
-            **Precaución**  JavaScript permite pasar cualquier valor a OverloadExample y convierte el valor al tipo que necesita el parámetro. Puedes llamar a OverloadExample con "cuarenta y dos", "42" o 42.3, pero todos estos valores se pasan a la sobrecarga predeterminada.
+ **Precaución**  JavaScript permite pasar cualquier valor a OverloadExample y convierte el valor al tipo que necesita el parámetro. Puedes llamar a OverloadExample con "cuarenta y dos", "42" o 42.3, pero todos estos valores se pasan a la sobrecarga predeterminada. La sobrecarga predeterminada en el ejemplo anterior devuelve 0, 42 y 42 respectivamente.
 
-La sobrecarga predeterminada en el ejemplo anterior devuelve 0, 42 y 42 respectivamente. No se puede aplicar el atributo DefaultOverloadAttribute a los constructores.
+No se puede aplicar el atributo DefaultOverloadAttribute a los constructores. Todos los constructores en una clase deben tener números de parámetros diferentes.
 
-## Todos los constructores en una clase deben tener números de parámetros diferentes.
+## Implementar IStringable
 
 
-Implementar IStringable A partir de Windows 8.1, Windows Runtime incluye una interfaz IStringable cuyo método único, IStringable.ToString, proporciona compatibilidad básica de formato en comparación con la que proporciona Object.ToString.
+A partir de Windows 8.1, Windows Runtime incluye una interfaz IStringable cuyo método único, IStringable.ToString, proporciona compatibilidad básica de formato en comparación con la que proporciona Object.ToString. Si decides implementar IStringable en un tipo administrado público que se exporta en un componente de Windows Runtime, se aplican las siguientes restricciones:
 
--   Si decides implementar IStringable en un tipo administrado público que se exporta en un componente de Windows Runtime, se aplican las siguientes restricciones:
+-   Puedes definir la interfaz IStringable solo en una relación "la clase implementa", como el siguiente código en C#:
 
     ```cs
     public class NewClass : IStringable
     ```
 
-    Puedes definir la interfaz IStringable solo en una relación "la clase implementa", como el siguiente código en C#:
+    O el siguiente código Visual Basic:
 
     ```vb
     Public Class NewClass : Implements IStringable
     ```
 
--   O el siguiente código Visual Basic:
 -   No puedes implementar IStringable en una interfaz.
 -   No puedes declarar que un parámetro es de tipo IStringable.
 -   IStringable no puede ser el tipo devuelto de un método, una propiedad o un campo.
+-   No puedes ocultar tu implementación de IStringable de las clases de base mediante una definición de método como la siguiente:
 
     ```cs
     public class NewClass : IStringable
@@ -176,20 +174,20 @@ Implementar IStringable A partir de Windows 8.1, Windows Runtime incluye una int
     }
     ```
 
-    No puedes ocultar tu implementación de IStringable de las clases de base mediante una definición de método como la siguiente: En su lugar, la implementación de IStringable.ToString siempre debe invalidar la implementación de la clase de base.
+    En su lugar, la implementación de IStringable.ToString siempre debe invalidar la implementación de la clase de base. Solo puedes ocultar una implementación ToString al invocarla en una instancia de clase fuertemente tipada.
 
-Solo puedes ocultar una implementación ToString al invocarla en una instancia de clase fuertemente tipada.
+Ten en cuenta que en una gran variedad de condiciones, las llamadas de código nativo a un tipo administrado que implementa IStringable u oculta su implementación ToString pueden producir un comportamiento inesperado.
 
-## Ten en cuenta que en una gran variedad de condiciones, las llamadas de código nativo a un tipo administrado que implementa IStringable u oculta su implementación ToString pueden producir un comportamiento inesperado.
+## Operaciones asincrónicas
 
 
-Operaciones asincrónicas
+Para implementar un método asincrónico en tu componente, agrega "Async" al final del nombre del método y devuelve una de las interfaces de Windows Runtime que representan operaciones o acciones asincrónicas: IAsyncAction, IAsyncActionWithProgress&lt;TProgress&gt;, IAsyncOperation&lt;TResult&gt; o IAsyncOperationWithProgress&lt;TResult, TProgress&gt;.
 
-Para implementar un método asincrónico en tu componente, agrega "Async" al final del nombre del método y devuelve una de las interfaces de Windows Runtime que representan operaciones o acciones asincrónicas: IAsyncAction, IAsyncActionWithProgress&lt;TProgress&gt;, IAsyncOperation&lt;TResult&gt; o IAsyncOperationWithProgress&lt;TResult, TProgress&gt;. Puedes usar tareas en .NET Framework (la clase [Task](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) y la clase genérica [Task&lt;TResult&gt;](https://msdn.microsoft.com/library/dd321424.aspx)) para implementar el método asincrónico. Debes devolver una tarea que represente una operación en curso, como una tarea que se devuelve de un método asincrónico escrito en C# o Visual Basic, o una tarea que se devuelve del método [Task.Run](https://msdn.microsoft.com/library/system.threading.tasks.task.run.aspx) .
+Puedes usar tareas en .NET Framework (la clase [Task](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) y la clase genérica [Task&lt;TResult&gt;](https://msdn.microsoft.com/library/dd321424.aspx)) para implementar el método asincrónico. Debes devolver una tarea que represente una operación en curso, como una tarea que se devuelve de un método asincrónico escrito en C# o Visual Basic, o una tarea que se devuelve del método [Task.Run](https://msdn.microsoft.com/library/system.threading.tasks.task.run.aspx) . Si usas un constructor para crear la tarea, debes llamar a su método [Task.Start](https://msdn.microsoft.com/library/system.threading.tasks.task.start.aspx) antes de devolverlo.
 
-Si usas un constructor para crear la tarea, debes llamar a su método [Task.Start](https://msdn.microsoft.com/library/system.threading.tasks.task.start.aspx) antes de devolverlo. Un método que usa "await" ("Await" en Visual Basic) necesita la palabra clave **async** (**Async** en Visual Basic).
+Un método que usa "await" ("Await" en Visual Basic) necesita la palabra clave **async** (**Async** en Visual Basic). Si expones este método desde un componente de Windows Runtime, aplica la palabra clave **async** al delegado que pasas al método Run.
 
-Si expones este método desde un componente de Windows Runtime, aplica la palabra clave **async** al delegado que pasas al método Run. Para realizar acciones y operaciones asincrónicas que no son compatibles con la cancelación o los informes de progreso, puedes usar el método de extensión [WindowsRuntimeSystemExtensions.AsAsyncAction](https://msdn.microsoft.com/library/system.windowsruntimesystemextensions.asasyncaction.aspx) o [AsAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779745.aspx) para encapsular la tarea en la interfaz adecuada. Por ejemplo, el siguiente código implementa un método asincrónico mediante el método Task.Run&lt;TResult&gt; para iniciar una tarea.
+Para realizar acciones y operaciones asincrónicas que no son compatibles con la cancelación o los informes de progreso, puedes usar el método de extensión [WindowsRuntimeSystemExtensions.AsAsyncAction](https://msdn.microsoft.com/library/system.windowsruntimesystemextensions.asasyncaction.aspx) o [AsAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779745.aspx) para encapsular la tarea en la interfaz adecuada. Por ejemplo, el siguiente código implementa un método asincrónico mediante el método Task.Run&lt;TResult&gt; para iniciar una tarea. El método de extensión AsAsyncOperation&lt;TResult&gt; devuelve la tarea como una operación asincrónica de Windows Runtime.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -214,7 +212,7 @@ Si expones este método desde un componente de Windows Runtime, aplica la palabr
 > End Function
 > ```
 
-El método de extensión AsAsyncOperation&lt;TResult&gt; devuelve la tarea como una operación asincrónica de Windows Runtime. [!div class="tabbedCodeSnippets"] El siguiente código de JavaScript muestra cómo se puede llamar al método mediante el uso de un objeto [WinJS.Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx).
+El siguiente código de JavaScript muestra cómo se puede llamar al método mediante el uso de un objeto [WinJS.Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx). La función que se pasa al método a continuación se ejecuta cuando se completa la llamada asincrónica. El parámetro stringList contiene la lista de cadenas devuelta por el método DownloadAsStringAsync y la función efectúa el procesamiento que sea necesario.
 
 ```javascript
 function asyncExample(id) {
@@ -226,9 +224,9 @@ function asyncExample(id) {
 }
 ```
 
-La función que se pasa al método a continuación se ejecuta cuando se completa la llamada asincrónica. El parámetro stringList contiene la lista de cadenas devuelta por el método DownloadAsStringAsync y la función efectúa el procesamiento que sea necesario.
+Para realizar acciones y operaciones asincrónicas compatibles con la cancelación o los informes de progreso, usa la clase [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para generar una tarea iniciada y para enlazar las funciones de cancelación e informes de progreso de la tarea con las funciones de cancelación e informes de progreso de la interfaz de Windows Runtime adecuada. Para obtener un ejemplo compatible tanto con la cancelación como con los informes de progreso, consulta [Tutorial: crear un componente simple en C# o Visual Basic y llamarlo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
 
-Para realizar acciones y operaciones asincrónicas compatibles con la cancelación o los informes de progreso, usa la clase [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) para generar una tarea iniciada y para enlazar las funciones de cancelación e informes de progreso de la tarea con las funciones de cancelación e informes de progreso de la interfaz de Windows Runtime adecuada. Para obtener un ejemplo compatible tanto con la cancelación como con los informes de progreso, consulta [Tutorial: crear un componente simple en C# o Visual Basic y llamarlo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md). Ten en cuenta que puedes usar los métodos de la clase AsyncInfo incluso si tu método asincrónico no es compatible con la cancelación o los informes de progreso. Si usas una función lambda de Visual Basic o un método anónimo de C#, no proporciones parámetros para el token y la interfaz [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx).
+Ten en cuenta que puedes usar los métodos de la clase AsyncInfo incluso si tu método asincrónico no es compatible con la cancelación o los informes de progreso. Si usas una función lambda de Visual Basic o un método anónimo de C#, no proporciones parámetros para el token y la interfaz [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx). Si usas una función lambda de C#, facilita un parámetro de token, pero omítelo. El ejemplo anterior, en el que se usó el método AsAsyncOperation&lt;TResult&gt;, tiene el siguiente aspecto cuando usas la sobrecarga de método [AsyncInfo.Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;](https://msdn.microsoft.com/library/hh779740.aspx)):
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -253,51 +251,49 @@ Para realizar acciones y operaciones asincrónicas compatibles con la cancelaci�
 > End Function
 > ```
 
-Si usas una función lambda de C#, facilita un parámetro de token, pero omítelo.
+Si creas un método asincrónico que, opcionalmente, es compatible con la cancelación o los informes de progreso, considera la posibilidad de agregar sobrecargas que no tengan parámetros para un token de cancelación o la interfaz IProgress&lt;T&gt;.
 
-## El ejemplo anterior, en el que se usó el método AsAsyncOperation&lt;TResult&gt;, tiene este aspecto cuando usas la sobrecarga de método [AsyncInfo.Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;](https://msdn.microsoft.com/library/hh779740.aspx)):
-
-
-[!div class="tabbedCodeSnippets"] Si creas un método asincrónico que, opcionalmente, es compatible con la cancelación o los informes de progreso, considera la posibilidad de agregar sobrecargas que no tengan parámetros para un token de cancelación o la interfaz IProgress&lt;T&gt; .
-
-Iniciar excepciones Se puede iniciar cualquier tipo de excepción que esté incluida en .NET para las aplicaciones de Windows.
-
--   No puedes declarar tus propios tipos de excepción públicos en un componente de Windows Runtime, pero puedes declarar e iniciar tipos no públicos. Si tu componente no controla la excepción, se genera la excepción correspondiente en el código que llamó a tu componente. La apariencia de la excepción para el llamador depende de la manera en que el lenguaje de la llamada sea compatible con Windows Runtime.
-
-    > En JavaScript, la excepción aparecerá como un objeto en el que el mensaje de excepción se reemplaza por un seguimiento de la pila. Cuando depuras tu aplicación en Visual Studio, puedes ver el texto del mensaje original en el cuadro de diálogo de excepción del depurador, identificado como "WinRT Information".
-
--   No puedes acceder al texto del mensaje original desde el código de JavaScript. 
-            **Sugerencia**  Actualmente, el seguimiento de la pila contiene el tipo de excepción administrado, pero no recomendamos analizar el seguimiento para identificar el tipo de excepción. En su lugar, usa un valor de HRESULT según se describe más adelante en este apartado. En C++, la excepción aparece como una excepción de la plataforma. Si la propiedad de HResult de la excepción administrada se puede asignar al HRESULT de una excepción de plataforma específica, se utiliza la excepción específica; de lo contrario, se inicia una excepción [Platform::COMException](https://msdn.microsoft.com/library/windows/apps/xaml/hh710414.aspx).
--   El texto del mensaje de la excepción administrada no está disponible para el código C++.
-
-Si se inició una excepción de plataforma específica, aparece el texto del mensaje predeterminado para ese tipo de excepción; de lo contrario, no se muestra ningún texto de mensaje. Consulta [Excepciones (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699896.aspx).
-
-> En C# o Visual Basic, la excepción es una excepción administrada normal. Cuando inicias una excepción desde tu componente, puedes facilitar a un llamador de JavaScript o C++ el control de la excepción iniciando un tipo de excepción no pública cuyo valor de propiedad de HResult sea específico para tu componente.
-
-## HRESULT está disponible para un llamador de JavaScript a través de la propiedad de número del objeto de excepción y para un llamador de C++ a través de la propiedad [COMException::HResult](https://msdn.microsoft.com/library/windows/apps/xaml/hh710415.aspx).
+## Iniciar excepciones
 
 
-            **Nota**  Usa un valor negativo para tu HRESULT. Un valor positivo se interpreta como éxito y no se inicia ninguna excepción en el llamador de JavaScript o C++. Declarar y generar eventos
+Se puede iniciar cualquier tipo de excepción que esté incluida en .NET para las aplicaciones de Windows. No puedes declarar tus propios tipos de excepción públicos en un componente de Windows Runtime, pero puedes declarar e iniciar tipos no públicos.
+
+Si tu componente no controla la excepción, se genera la excepción correspondiente en el código que llamó a tu componente. La apariencia de la excepción para el llamador depende de la manera en que el lenguaje de la llamada sea compatible con Windows Runtime.
+
+-   En JavaScript, la excepción aparecerá como un objeto en el que el mensaje de excepción se reemplaza por un seguimiento de la pila. Cuando depuras tu aplicación en Visual Studio, puedes ver el texto del mensaje original en el cuadro de diálogo de excepción del depurador, identificado como "WinRT Information". No puedes acceder al texto del mensaje original desde el código de JavaScript.
+
+    > **Sugerencia**  Actualmente, el seguimiento de la pila contiene el tipo de excepción administrado, pero no recomendamos analizar el seguimiento para identificar el tipo de excepción. En su lugar, usa un valor de HRESULT según se describe más adelante en este apartado.
+
+-   En C++, la excepción aparece como una excepción de la plataforma. Si la propiedad de HResult de la excepción administrada se puede asignar al HRESULT de una excepción de plataforma específica, se utiliza la excepción específica; de lo contrario, se inicia una excepción [Platform::COMException](https://msdn.microsoft.com/library/windows/apps/xaml/hh710414.aspx). El texto del mensaje de la excepción administrada no está disponible para el código C++. Si se inició una excepción de plataforma específica, aparece el texto del mensaje predeterminado para ese tipo de excepción; de lo contrario, no se muestra ningún texto de mensaje. Consulta [Excepciones (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699896.aspx).
+-   En C# o Visual Basic, la excepción es una excepción administrada normal.
+
+Cuando inicias una excepción desde tu componente, puedes facilitar a un llamador de JavaScript o C++ el control de la excepción iniciando un tipo de excepción no pública cuyo valor de propiedad de HResult sea específico para tu componente. HRESULT está disponible para un llamador de JavaScript a través de la propiedad de número del objeto de excepción y para un llamador de C++ a través de la propiedad [COMException::HResult](https://msdn.microsoft.com/library/windows/apps/xaml/hh710415.aspx).
+
+> **Nota**  Usa un valor negativo para tu HRESULT. Un valor positivo se interpreta como éxito y no se inicia ninguna excepción en el llamador de JavaScript o C++.
+
+## Declarar y generar eventos
 
 Cuando se declara un tipo para retener los datos para tu evento, deriva de Object en lugar de EventArgs, ya que EventArgs no es un tipo de Windows Runtime. Usa [EventHandler&lt;TEventArgs&gt;](https://msdn.microsoft.com/library/db0etb8x.aspx) como el tipo de evento y usa tu tipo de argumento de evento como argumento de tipo genérico. Genera el evento del mismo modo que en una aplicación de .NET Framework.
 
 Cuando se usa tu componente de Windows Runtime desde JavaScript o C++, el evento sigue el modelo de eventos de Windows Runtime que esperan estos lenguajes. Cuando usas el componente de C# o Visual Basic, el evento aparece como un evento de .NET Framework normal. Se proporciona un ejemplo en [Tutorial: crear un componente simple en C# o Visual Basic y llamarlo desde JavaScript]().
 
-## Si implementas descriptores de acceso de eventos personalizados (declaras un evento con la palabra clave **Custom** en Visual Basic), debes seguir el patrón de eventos de Windows Runtime en tu implementación.
+Si implementas descriptores de acceso de eventos personalizados (declaras un evento con la palabra clave **Custom** en Visual Basic), debes seguir el patrón de eventos de Windows Runtime en tu implementación. Consulta [Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime](custom-events-and-event-accessors-in-windows-runtime-components.md). Ten en cuenta que cuando controlas el evento desde el código de C# o Visual Basic, seguirá pareciendo un evento de .NET Framework ordinario.
+
+## Pasos siguientes
 
 
-Consulta [Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime](custom-events-and-event-accessors-in-windows-runtime-components.md). Ten en cuenta que cuando controlas el evento desde el código de C# o Visual Basic, seguirá pareciendo un evento de .NET Framework ordinario. Pasos siguientes
+Una vez que hayas creado un componente de Windows Runtime para tu propio uso, es posible que observes que la funcionalidad que encapsula es útil para otros desarrolladores. Tienes dos opciones para empaquetar un componente para su distribución a otros desarrolladores. Consulta [Distribuir un componente de Windows Runtime administrado](https://msdn.microsoft.com/library/jj614475.aspx).
 
-Una vez que hayas creado un componente de Windows Runtime para tu propio uso, es posible que observes que la funcionalidad que encapsula es útil para otros desarrolladores.
+Para obtener más información acerca de las características de los lenguajes C# y Visual Basic, así como de la compatibilidad de .NET Framework con Windows Runtime, consulta [Referencia de los lenguajes Visual Basic y C#](https://msdn.microsoft.com/library/windows/apps/xaml/br212458.aspx).
 
-## Tienes dos opciones para empaquetar un componente para su distribución a otros desarrolladores.
+## Temas relacionados
 
-* [Consulta [Distribuir un componente de Windows Runtime administrado](https://msdn.microsoft.com/library/jj614475.aspx).](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
-* [Para obtener más información acerca de las características de los lenguajes C# y Visual Basic, así como de la compatibilidad de .NET Framework con Windows Runtime, consulta [Referencia de los lenguajes Visual Basic y C#](https://msdn.microsoft.com/library/windows/apps/xaml/br212458.aspx).](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
-* [Temas relacionados](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
+* [Introducción a .NET para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
+* [Tutorial: Creación de un componente simple de Windows Runtime y llamada al mismo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

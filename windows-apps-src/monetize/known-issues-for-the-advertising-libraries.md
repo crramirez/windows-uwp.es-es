@@ -1,27 +1,30 @@
 ---
 author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
-description: "Aprende sobre los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization."
+description: "Obtén información sobre los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en el Microsoft Store Services SDK."
 title: Problemas conocidos de las bibliotecas de Microsoft Advertising
-ms.sourcegitcommit: 5b6d3e034b73e6ae693fbeab3ecd3b2b81f38bb1
-ms.openlocfilehash: cfaa108cc93b6bae903e86ad141656bf613f185d
+translationtype: Human Translation
+ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
+ms.openlocfilehash: 7d0eeda4deac304fb9b573b6ed206a191f037a3e
 
 ---
 
 # Problemas conocidos de las bibliotecas de Microsoft Advertising
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-En este tema se enumeran los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization.
 
-## La instalación requiere Visual Studio Tools para aplicaciones universales de Windows
+En este tema se enumeran los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en el Microsoft Store Services SDK (para aplicaciones para UWP) y el SDK de Microsoft Advertising para Windows y Windows Phone 8.x (para aplicaciones de Windows 8.1 y Windows Phone 8.x).
 
-Para instalar el [SDK de Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk) con Visual Studio 2015, debes tener instalada la versión 1.1 o posterior de Visual Studio Tools para aplicaciones universales de Windows. Para obtener más información, consulta las [notas de la versión](http://go.microsoft.com/fwlink/?LinkID=624516) de Visual Studio.
+## La instalación del Microsoft Store Services SDK requiere Visual Studio Tools para aplicaciones universales de Windows
+
+Para instalar el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) con Visual Studio 2015, debes tener instalada la versión 1.1 o posterior de Visual Studio Tools para aplicaciones universales de Windows. Para obtener más información, consulta las [notas de la versión](http://go.microsoft.com/fwlink/?LinkID=624516) de Visual Studio.
 
 ## Proyectos de Windows Phone 8.x Silverlight
 
-Para obtener los ensamblados de Microsoft Advertising para proyectos de Windows Phone 8.x Silverlight, instala el [SDK de Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk), abre el proyecto en Visual Studio y después ve a **Proyecto** > **Agregar servicio conectado** > **Ad Mediator** para descargar automáticamente los ensamblados. Después de hacer esto, puedes quitar las referencias de Ad Mediator del proyecto si no quieres usar la mediación de anuncios. Para obtener más información, consulta [AdControl in Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md) (AdControl en Windows Phone Silverlight).
+El SDK de Microsoft Advertising para Windows y Windows Phone 8.x ofrece compatibilidad limitada con los proyectos de Windows Phone 8.x Silverlight. Para obtener más información, consulta [Mostrar anuncios en tu aplicación](display-ads-in-your-app.md#silverlight_support).
+
+Para obtener los ensamblados de Microsoft Advertising para proyectos de Windows Phone 8.x Silverlight, instala el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk), abre el proyecto en Visual Studio y, después, ve a **Proyecto** > **Agregar servicio conectado** > **Ad Mediator** para descargar automáticamente los ensamblados. Después de hacer esto, puedes quitar las referencias de Ad Mediator del proyecto si no quieres usar la mediación de anuncios. Para obtener más información, consulta [AdControl in Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md) (AdControl en Windows Phone Silverlight).
 
 ## Interfaz de AdControl desconocida en XAML
 
@@ -116,6 +119,6 @@ Para ponerte en contacto con soporte técnico para problemas relacionados con la
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

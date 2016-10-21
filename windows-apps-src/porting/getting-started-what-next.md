@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-title: Introducción: ¿y después?
+title: "Introducción: ¿y después?"
 ms.assetid: 903046E7-581F-4845-AB80-1A57C42B1B02
-description: Con esta información básica, ya puedes empezar a crear aplicaciones para la Plataforma universal de Windows (UWP) más interesantes.
+description: "Con esta información básica, ya puedes empezar a crear aplicaciones para la Plataforma universal de Windows (UWP) más interesantes."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d71c0026c8658e8aa88827915b8f2d815f10c6ef
+
 ---
 
 # Introducción. ¿Y después?
@@ -13,16 +17,16 @@ description: Con esta información básica, ya puedes empezar a crear aplicacion
 
 Con esta información básica, ya puedes empezar a crear aplicaciones para la Plataforma universal de Windows (UWP) más interesantes. Para los próximos pasos, lee los siguientes temas y después abre Microsoft Visual Studio y empieza a escribir código.
 
--   [Extensiones y contratos entre aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh464906): cómo declarar contratos entre las aplicaciones y otras aplicaciones y Windows, por ejemplo, el contrato de Reproducir en y la extensión Explorador de juegos.
--   [Trabajar con iconos, notificaciones y notificaciones del sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259): cómo crear iconos, actualizar iconos y sus notificaciones, enviar notificaciones del sistema, así como mostrar y actualizar actualizaciones de iconos y notificaciones en la pantalla de bloqueo.
--   [Inicio, reanudación y multitarea](https://msdn.microsoft.com/library/windows/apps/hh770837): cómo iniciar automáticamente, activar, suspender y reanudar aplicaciones y cómo trabajar con tareas en segundo plano.
--   [Directrices para datos móviles de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465094): cómo ofrecer una excelente experiencia de usuario final para las aplicaciones que el usuario usa en más de un dispositivo, como un equipo en el trabajo y una tableta en casa.
--   [Crear la primera aplicación de Windows Runtime con C# o Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=394138): un tema centrado en el desarrollo de Windows Phone.
--   [Vídeos para desarrolladores de iOS y Android](https://msdn.microsoft.com/library/windows/apps/dn393982): ayuda adicional, en este caso en formato visual.
+-   [Contratos y extensiones de aplicaciones ](https://msdn.microsoft.com/library/windows/apps/hh464906): cómo declarar contratos entre tus aplicaciones y otras aplicaciones y Windows; por ejemplo, el contrato de Reproducir en y la extensión Explorador de juegos.
+-   [Trabajar con iconos, distintivos y notificaciones del sistema](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259): cómo crear iconos, actualizar iconos y sus notificaciones, y enviar notificaciones del sistema, así como mostrar y actualizar actualizaciones de iconos y notificaciones en la pantalla de bloqueo.
+-   [Inicio, reanudación y multitarea](https://msdn.microsoft.com/library/windows/apps/hh770837): cómo iniciar automáticamente, activar, suspender y reanudar aplicaciones, y cómo trabajar con tareas en segundo plano.
+-   [Directrices de datos móviles de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465094): cómo ofrecer una excelente experiencia de usuario final para las aplicaciones que el usuario usa en más de un dispositivo, como un equipo en el trabajo y una tableta en casa.
+-   [Creación de tu primera aplicación de Windows en tiempo de ejecución con C# o Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=394138): un tema centrado en el desarrollo para Windows Phone.
+-   [Vídeos para desarrolladores de iOS y Android](https://msdn.microsoft.com/library/windows/apps/dn393982): ayuda adicional; en este caso, en formato visual.
 
 Además, asegúrate de visitar nuestros [recursos de la comunidad](http://go.microsoft.com/fwlink/p/?LinkId=263513) para obtener información sobre cómo obtener ayuda y conectarte mediante foros de desarrolladores, blogs, encuentros y talleres para desarrolladores, y eventos y contactos locales de Microsoft.
 
-Creemos que Windows 10 te ofrecerá nuevas oportunidades de creación de aplicaciones. Esperamos ver pronto las excelentes aplicaciones que crearás.
+Creemos que Windows10 te ofrecerá nuevas oportunidades de creación de aplicaciones. Esperamos ver pronto las excelentes aplicaciones que crearás.
 
 ## Temas relacionados
 
@@ -33,6 +37,7 @@ Creemos que Windows 10 te ofrecerá nuevas oportunidades de creación de aplica
 * [Blog sobre la compilación de aplicaciones para Windows](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

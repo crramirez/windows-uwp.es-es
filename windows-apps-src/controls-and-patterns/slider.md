@@ -5,21 +5,34 @@ title: Controles deslizantes
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 64ae11c8c7e46d973c13cacb69482fd957e0488d
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 9b21a15edcead96fdc1a335a1c6e58cc0a279858
 
 ---
 # Controles deslizantes
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Un control deslizante es un control que permite que el usuario seleccione entre un intervalo de valores moviendo un control de posición por una pista.
 
 ![Control deslizante](images/controls/slider.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx"><strong>Clase de control deslizante</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx"><strong>Valor de propiedad</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx"><strong>Evento ValueChanged</strong></a></li>
+</ul>
 
--   [**Clase de control deslizante**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx)
--   [**Valor de propiedad**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx)
--   [**Evento ValueChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)
+</div>
+</div>
+
+
+
+
+
 
 ## ¿Es este el control adecuado?
 
@@ -166,16 +179,12 @@ Al diseñar un control deslizante personalizado, piensa en la manera de presenta
 ## Temas relacionados
 
 **Para diseñadores**
-- 
-            [Directrices sobre modificadores para alternar](toggles.md)
-            
-          
-            **Para desarrolladores (XAML)**
-          
+- [Directrices sobre modificadores para alternar](toggles.md)
+**Para desarrolladores (XAML)**
 - [**Clase de control deslizante**](https://msdn.microsoft.com/library/windows/apps/br209614)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

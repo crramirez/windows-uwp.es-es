@@ -3,15 +3,16 @@ title: "Protección de datos"
 description: "En este artículo se explica cómo usar la clase DataProtectionProvider en el espacio de nombres Windows.Security.Cryptography.DataProtection para cifrar y descifrar datos digitales en una aplicación para UWP."
 ms.assetid: 9EE3CC45-5C44-4196-BD8B-1D64EFC5C509
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 958d5dd1c5f61078a0b288d53debe93875d65f06
+ms.openlocfilehash: 2a3be202f6754c452185aecbae3b259e09bd3fd3
 
 ---
 
 # Protección de datos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este artículo se explica cómo usar la clase [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559) en el espacio de nombres [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) para cifrar y descifrar datos digitales en una aplicación para UWP.
 
@@ -263,6 +264,6 @@ namespace SampleProtectStreamAsync
 ```
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

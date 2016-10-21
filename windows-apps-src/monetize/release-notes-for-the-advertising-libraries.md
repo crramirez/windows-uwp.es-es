@@ -1,34 +1,32 @@
 ---
 author: mcleanbyron
 ms.assetid: ca92bed1-ad9e-4947-ad91-87d12de727c0
-description: "Consulta las notas de la versión de las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization."
+description: "Consulta las notas de la versión de las bibliotecas de Microsoft Advertising en el Microsoft Store Services SDK."
 title: "Notas de la versión de las bibliotecas de Microsoft Advertising"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 8e2114e969b27d579f62195f026cfcfd9672a94a
+translationtype: Human Translation
+ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
+ms.openlocfilehash: b82c4385b0e7089bdddbe094f47f0766f90aa21b
 
 ---
 
 # Notas de la versión de las bibliotecas de Microsoft Advertising
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Esta sección incluye las notas de la versión para la versión actual de las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization. Estas bibliotecas admiten aplicaciones de XAML y JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8.1 y Windows Phone 8.
+
+En esta sección se proporcionan notas de la versión destinadas a la versión actual de las bibliotecas de Microsoft Advertising incluidas en Microsoft Store Services SDK (para aplicaciones para UWP) y el SDK de Microsoft Advertising para Windows y Windows Phone 8.x (para aplicaciones de Windows 8.1 y Windows Phone 8.x). Estas bibliotecas admiten aplicaciones de XAML y JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8.1 y Windows Phone 8.
 
 ## Instalación
 
 
-Las bibliotecas de Microsoft Advertising están disponibles como parte del [SDK de Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk). Para todos los tipos de proyecto distintos de Windows Phone 8.x Silverlight, los ensamblados de Microsoft Advertising que solían distribuirse en versiones independientes anteriores del SDK de cliente de anuncios universal de Microsoft y el SDK de Microsoft Advertising ahora se instalan con el SDK de Microsoft Store Engagement and Monetization. Para obtener más información acerca de cómo instalar el SDK y las bibliotecas que este incluye, consulta [Instalar las bibliotecas de Microsoft Advertising](install-the-microsoft-advertising-libraries.md).
+Las bibliotecas de Microsoft Advertising están disponibles como parte de [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) (para aplicaciones para UWP) y [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk) (para aplicaciones de Windows 8.1 y Windows Phone 8.x). Para obtener más información sobre cómo instalar los SDK y las bibliotecas incluidas en ellos, consulta [Instalar las bibliotecas de Microsoft Advertising](install-the-microsoft-advertising-libraries.md).
 
-Para obtener los ensamblados de Microsoft Advertising para proyectos de Windows Phone 8.x Silverlight, instala el [SDK de Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk), abre el proyecto en Visual Studio y, después, ve a **Proyecto** > **Agregar servicio conectado** > **Ad Mediator** para descargar automáticamente los ensamblados. Después de hacer esto, puedes quitar las referencias de Ad Mediator del proyecto si no quieres usar la mediación de anuncios. Para obtener más información, consulta [AdControl in Windows Phone Silverlight (AdControl in Windows Phone Silverlight)](adcontrol-in-windows-phone-silverlight.md).
+Para obtener los ensamblados de Microsoft Advertising para proyectos de Windows Phone 8.x Silverlight, instala el [SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk), abre el proyecto en Visual Studio y, después, ve a **Proyecto** > **Agregar servicio conectado** > **Ad Mediator** para descargar automáticamente los ensamblados. Después de hacer esto, puedes quitar las referencias de Ad Mediator del proyecto si no quieres usar la mediación de anuncios. Para obtener más información, consulta [AdControl en Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md).
 
-## Explicación de la diferencia entre las bibliotecas de Microsoft Advertising y la mediación de anuncios
-
-Aunque tanto las bibliotecas de Microsoft Advertising como las de mediación de anuncios se incluyen en el SDK de Microsoft Store Engagement and Monetization, están destinadas a propósitos diferentes. Usa las clases [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) e [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) en las bibliotecas de Microsoft Advertising si quieres mostrar banners o anuncios intersticiales en vídeo de Microsoft en una aplicación XAML o JavaScript. Usa la clase **AdMediatorControl** en las bibliotecas de mediación de anuncios si quieres mostrar anuncios de banners de varias redes de anuncios en una aplicación XAML (la mediación de anuncios no se admite para aplicaciones JavaScript/HTML). Para obtener más información, consulta [Cuál es la diferencia: AdMediator o AdControl](what-is-the-difference-admediatorcontrol-or-adcontrol.md).
 
 ## Desinstalar versiones anteriores
 
-Antes de instalar el SDK de Microsoft Store Engagement and Monetization, se recomienda encarecidamente desinstalar todas las instancias anteriores del SDK de cliente de anuncios universal de Microsoft o el SDK de Microsoft Advertising.
+Antes de instalar Microsoft Store Services SDK (para aplicaciones para UWP) o el SDK de Microsoft Advertising para Windows y Windows Phone 8.x (para aplicaciones de Windows 8.1 y Windows Phone 8.x), se recomienda encarecidamente desinstalar todas las instancias anteriores del SDK de Microsoft Universal Ad Client o el SDK de Microsoft Advertising.
 
 ## Establecer el destino en las salidas de compilación específicas de la arquitectura
 
@@ -40,7 +38,7 @@ Las bibliotecas de Microsoft Advertising (que incluyen las clases **AdControl** 
 
 ## Ningún control de cuadro de herramientas
 
-En la versión actual de las bibliotecas de Microsoft Advertising en el SDK de Microsoft Store Engagement and Monetization, no hay ningún control de cuadro de herramientas para arrastrar una clase **AdControl** o **InterstitialAd** a una superficie de diseño de la aplicación. Para obtener instrucciones sobre cómo agregar estos controles en el marcado y el código, consulta los [tutoriales de desarrollo](developer-walkthroughs.md).
+En la versión actual de las bibliotecas de Microsoft Advertising incluidas en Microsoft Store Services SDK o en el SDK de Microsoft Advertising para Windows y Windows Phone 8.x, no hay ningún control de cuadro de herramientas para arrastrar un objeto **AdControl** o **InterstitialAd** a una superficie de diseño de la aplicación. Para obtener instrucciones sobre cómo agregar estos controles en el marcado y el código, consulta los [tutoriales de desarrollo](developer-walkthroughs.md).
 
 ## Las propiedades de latitud y longitud ya no está disponibles
 
@@ -56,6 +54,6 @@ Asegúrate de leer el contrato de licencia del usuario final (CLUF) en su totali
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

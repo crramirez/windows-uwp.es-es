@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: cf0d2709-21a1-4d56-9341-d4897e405f5d
 description: "Aprende a detectar errores de AdControl en la aplicación."
 title: Tutorial de control de errores en XAML y C#
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 7cb827b4269afb55f0326eec0a0ee25b93119eb0
+translationtype: Human Translation
+ms.sourcegitcommit: 90c866fcdb4df0f32a4ace0cb4f6b761d6e9170e
+ms.openlocfilehash: bca54776fb4793fbc9e0b9af070a0cc676168d86
 
 
 ---
@@ -12,9 +13,9 @@ ms.openlocfilehash: 7cb827b4269afb55f0326eec0a0ee25b93119eb0
 # Tutorial de control de errores en XAML y C#
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este tema muestra cómo detectar errores de [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) en la aplicación.
+
+En este tema se muestra cómo detectar errores de [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) en la aplicación.
 
 En estos ejemplos se da por hecho que tienes una aplicación XAML o C# que contiene un objeto **AdControl**. Para obtener instrucciones paso a paso que muestran cómo agregar un objeto **AdControl** a la aplicación, consulta [AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md). Para un proyecto de muestra completo que muestra cómo agregar anuncios en banners a una aplicación XAML con C# y C++, consulta las [muestras de publicidad en GitHub](http://aka.ms/githubads).
 
@@ -72,7 +73,7 @@ En estos ejemplos se da por hecho que tienes una aplicación XAML o C# que conti
     ``` syntax
     private void OnAdError(object sender, AdErrorEventArgs e)
     {
-        System.Diagnostics.Debug.WriteLine("AdControl error (" + ((AdControl)sender).Name + "): " + e.Error + " ErrorCode: " + e.ErrorCode.ToString());
+        System.Diagnostics.Debug.WriteLine("AdControl error (" + ((AdControl)sender).Name + "): " + e.ErrorMessage + " ErrorCode: " + e.ErrorCode.ToString());
     }
     ```
 
@@ -92,6 +93,6 @@ AdControl error (): MicrosoftAdvertising.Shared.AdException: all ad requests mus
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

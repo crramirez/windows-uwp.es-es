@@ -1,27 +1,29 @@
 ---
 author: mcleanbyron
-Description: "Ofrece productos consumibles desde la aplicación &\\#8212;artículos que se pueden comprar, usar y volver a comprar&\\#8212;, a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza."
+Description: "Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar) a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza."
 title: "Habilitar compras de productos consumibles desde la aplicación"
 ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
-keywords: in-app offer code sample
+keywords: "muestra de código de oferta desde la aplicación"
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 25f09e043d61f1705f9f0a4fa34114fd06166fa4
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 15092f726283f36c8dc5970157d3cd54dea9b837
 
 ---
 
 # Habilitar compras de productos consumibles desde la aplicación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar), a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se puedan comprar y se usen para comprar bonificaciones concretas.
+
+>**Nota**&nbsp;&nbsp;En este artículo se muestra cómo usar miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Si la aplicación está orientada a Windows 10, versión 1607, o posterior, te recomendamos que uses miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para administrar los complementos (también conocidos como productos dentro de la aplicación o IAP), en lugar del espacio de nombres **Windows.ApplicationModel.Store**. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
+
+Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar) a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se puedan comprar y se usen para comprar bonificaciones concretas.
 
 ## Requisitos previos
 
 -   Este tema se centra en la compra y los informes de suministro de productos consumibles dentro de la aplicación. Si no estás familiarizado con los productos desde la aplicación, consulta [Habilitar compras de productos desde la aplicación](enable-in-app-product-purchases.md) para ver información sobre la licencia y cómo incluir de forma adecuada los productos desde la aplicación en la Tienda.
 -   Cuando codificas y pruebas nuevos productos desde la aplicación por primera vez, debes usar el objeto [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) en lugar del objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765). De esta manera, puedes comprobar la lógica de la licencia con llamadas simuladas al servidor de licencias, en lugar de llamar al servidor activo. Para ello, debes personalizar el archivo llamado "WindowsStoreProxy.xml" in %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. El simulador de Microsoft Visual Studio crea este archivo la primera vez que ejecutas la aplicación, aunque también puedes cargar un archivo personalizado en tiempo de ejecución. Para obtener más información, consulta **CurrentAppSimulator**.
--   Este tema también hace referencia a los ejemplos de código que se proporcionan en la [muestra de la Tienda](http://go.microsoft.com/fwlink/p/?LinkID=627610). Esta muestra es ideal para conseguir experiencia práctica con las diferentes opciones de monetización que se proporcionan para las aplicaciones para la Plataforma universal de Windows (UWP).
+-   Este tema también hace referencia a los ejemplos de código que se proporcionan en la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store). Esta muestra es ideal para conseguir experiencia práctica con las diferentes opciones de monetización que se proporcionan para las aplicaciones para la Plataforma universal de Windows (UWP).
 
 ## Paso 1: Realizar la solicitud de compra
 
@@ -73,7 +75,7 @@ private void GrantFeatureLocally(string productId, Guid transactionId)
 
 En el siguiente ejemplo, se muestra cómo usar la matriz del ejemplo anterior para acceder a los pares id. del producto/ id. de transacción que se usan más tarde cuando se informa del suministro a la Tienda.
 
-**Importante**  Independientemente de la metodología que use tu aplicación para seguir y confirmar el suministro, debe demostrar la diligencia debida para garantizar que no se cobre a los clientes por artículos que no hayan recibido.
+**Importante**  Independientemente de la metodología que use la aplicación para hacer el seguimiento del suministro y confirmarlo, debe demostrar la diligencia debida para garantizar que no se cobre a los clientes artículos que no hayan recibido.
 
 ```CSharp
 private Boolean IsLocallyFulfilled(string productId, Guid transactionId)
@@ -115,7 +117,7 @@ private async void GetUnfulfilledConsumables()
 ## Temas relacionados
 
 * [Habilitar compras de productos desde la aplicación](enable-in-app-product-purchases.md)
-* [Muestra de la Tienda (muestra pruebas y compras desde la aplicación)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
+* [Muestra de la Tienda (muestra pruebas y compras desde la aplicación)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [**Windows.ApplicationModel.Store**](https://msdn.microsoft.com/library/windows/apps/br225197)
  
 
@@ -123,10 +125,6 @@ private async void GetUnfulfilledConsumables()
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

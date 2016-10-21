@@ -5,29 +5,28 @@ title: Activos de mosaico y de icono
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 98eebc4fbf18aa2fbe4586958f666b41580cf6d9
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 4aa22b9eae8ff7f7da2c73f3fdf3a63ed12ff87b
 
 ---
-
 # Directrices sobre los activos de icono y de mosaicos
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Los activos de icono de la aplicación, que aparecen en una amplia variedad de formas en todo el sistema operativo Windows 10, son las tarjetas de llamada de la aplicación para la Plataforma universal de Windows (UWP). Estas directrices detallan el lugar donde aparecen los recursos de icono de la aplicación en el sistema y proporcionan sugerencias de diseño detalladas sobre cómo crear los iconos más sofisticados.
 
 ![windows 10 start and tiles](images/assetguidance01.jpg)
 
-## <span id="Adaptive_scaling"></span><span id="adaptive_scaling"></span><span id="ADAPTIVE_SCALING"></span>Ajuste de escala adaptable
+## Ajuste de escala adaptable
 
 
 En primer lugar, una breve introducción sobre el ajuste de escala adaptable para comprender mejor su funcionamiento con los recursos. Windows 10 presenta una evolución del modelo de ajuste de escala existente. Además del contenido del vector de escala, hay un conjunto unificado de factores de escala que proporciona un tamaño coherente para los elementos de interfaz de usuario en diversos tamaños y resoluciones de pantalla. Los factores de escala también son compatibles con los factores de escala de otros sistemas operativos como iOS y Android, lo que facilita el uso compartido de recursos entre estas plataformas.
 
 La Tienda elige los recursos para descargar en parte según los valores de PPP del dispositivo. Solo se descargan los recursos que se ajusten mejor al dispositivo.
 
-## <span id="Tile_elements"></span><span id="tile_elements"></span><span id="TILE_ELEMENTS"></span>Elementos de ventana
+## Elementos de ventana
 
 
 Los componentes básicos de una ventana de Inicio constan de una placa trasera, un icono, una barra de personalización de marca, márgenes y un título de la aplicación:
@@ -66,7 +65,7 @@ El ancho de los márgenes se basa en el factor de escala del dispositivo en el q
 
  
 
-## <span id="Tile_assets"></span><span id="tile_assets"></span><span id="TILE_ASSETS"></span>Recursos de ventana
+## Recursos de ventana
 
 
 Cada recurso de ventana es del mismo tamaño que la ventana en la que se coloca. Puedes personalizar la marca de los iconos de la aplicación con dos representaciones de un activo diferentes:
@@ -135,7 +134,7 @@ En este ejemplo los márgenes son demasiado estrechos:
 
 ![icono sin bordes con márgenes que son demasiado pequeños](images/assetguidance15.png)
 
-## <span id="Tile_assets_in_list_views"></span><span id="tile_assets_in_list_views"></span><span id="TILE_ASSETS_IN_LIST_VIEWS"></span>Activos de icono en las vistas de lista
+## Activos de icono en las vistas de lista
 
 
 Los iconos también pueden aparecer en una vista de lista. Las directrices de tamaño de los activos de icono que se muestran listas de vistas difieren un poco de los activos de icono descritos anteriormente. Esta sección describe esas especificaciones de tamaño.
@@ -162,7 +161,7 @@ En este ejemplo, el icono es demasiado pequeño dentro del mosaico:
 
 ![icono que es demasiado pequeño para la ventana](images/assetguidance20b.png)
 
-## <span id="Target-based_assets"></span><span id="target-based_assets"></span><span id="TARGET-BASED_ASSETS"></span>Recursos basados en el destino
+## Recursos basados en el destino
 
 
 Los recursos basados en el destino se usan para los iconos y las ventanas que se muestran en la barra de tareas de Windows, la vista de tareas, ALT+TAB, el asistente para el espacio restante y la esquina inferior derecha de las ventanas de Inicio. No tienes que agregar espaciado interno a estos recursos porque Windows lo hará si es necesario. Estos recursos deberían contar con una superficie mínima de 16 píxeles. Te mostramos un ejemplo de dichos recursos tal como se muestran en los iconos de la barra de tareas de Windows:
@@ -195,7 +194,7 @@ Para activos no cuadrados, se produce el centrado horizontal o vertical automát
 
 ![tamaño del recurso no cuadrado, con y sin distintivo](images/assetguidance26b.png)
 
-## <span id="Splash_screen_assets"></span><span id="splash_screen_assets"></span><span id="SPLASH_SCREEN_ASSETS"></span>Activos de pantalla de presentación
+## Activos de pantalla de presentación
 
 
 La imagen de pantalla de presentación puede proporcionarse como una ruta de acceso directa a un archivo de imagen o como un recurso. Si usas una referencia a recursos, puedes proporcionar imágenes de diferentes escalas para que Windows pueda elegir el tamaño óptimo según la resolución de pantalla y el dispositivo. También puedes proporcionar imágenes de contraste alto para accesibilidad e imágenes localizadas para que coincidan con diferentes idiomas de interfaz de usuario.
@@ -213,7 +212,7 @@ El recurso de pantalla de presentación se centra sea cual sea el dispositivo en
 
 ![tamaño del recurso de pantalla de presentación](images/assetguidance27.png)
 
-## <span id="High-contrast_assets"></span><span id="high-contrast_assets"></span><span id="HIGH-CONTRAST_ASSETS"></span>Activos de contraste alto
+## Activos de contraste alto
 
 
 El modo de contraste alto usa conjuntos de activos independientes de blanco en contraste alto (fondo blanco con texto negro) y negro en contraste alto (fondo negro con texto blanco). Si no proporcionas activos de contraste alto para la aplicación, se usarán activos estándar.
@@ -224,7 +223,7 @@ Si los activos estándar de la aplicación proporcionan una experiencia de visua
 
 Si decides proporcionar activos de contraste alto, debes incluir ambos conjuntos: blanco sobre negro y negro sobre blanco. Cuando incluyas estos activos en el paquete, podrías crear una carpeta de "contraste negro" para los activos de blanco sobre negro y una carpeta de "contraste blanco" para los activos de negro sobre blanco.
 
-## <span id="Asset_size_tables"></span><span id="asset_size_tables"></span><span id="ASSET_SIZE_TABLES"></span>Tablas de tamaño del activo
+## Tablas de tamaño del activo
 
 
 Como mínimo, te recomendamos que proporciones activos para los factores de escala 100, 200 y 400. Proporcionar activos para todos los factores de escala ofrecerá una experiencia de usuario óptima.
@@ -292,7 +291,7 @@ La siguiente tabla enumera todos los tamaños de activos basados en el destino y
 
 \* Enviar estos tamaños de activos como línea base
 
-## <span id="Asset_types"></span><span id="asset_types"></span><span id="ASSET_TYPES"></span>Tipos de activo
+## Tipos de activo
 
 
 A continuación se enumeran todos los tipos de activos, sus usos y nombres de archivo recomendados.
@@ -373,7 +372,7 @@ A continuación se enumeran todos los tipos de activos, sus usos y nombres de ar
 
 
 
-## <span id="related_topics"></span>Temas relacionados
+## Temas relacionados
 
 
 
@@ -388,6 +387,6 @@ A continuación se enumeran todos los tipos de activos, sus usos y nombres de ar
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,23 +1,22 @@
 ---
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
-description: "Esta guía básica proporciona una visión general de las características fundamentales de empresa para la Plataforma universal de Windows (UWP) de Windows 10."
+description: "Esta guía básica proporciona una visión general de las características fundamentales de empresa para las aplicaciones de Windows 10 y las aplicaciones para la Plataforma universal de Windows (UWP)."
 title: Empresa
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 58f7c9739a000b6cac1c000570807587233018ce
+ms.sourcegitcommit: 8f4b9e7b1b30beb8974a17af77e4d7138bd8f829
+ms.openlocfilehash: 75a7723fb8934a59d44da2f075184dd6bbd85d45
 
 ---
 
 # Empresa
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta guía básica proporciona una visión general de las características fundamentales de empresa para la Plataforma universal de Windows (UWP) Windows 10. Windows 10 te permite escribir una vez e implementa en todos los dispositivos, porque crea una aplicación que se adapta a cualquier dispositivo. Esto te permite crear las fantásticas experiencias que los usuarios esperan y ofrecer control sobre la seguridad, la administración y la configuración requerida por tu organización.
 
-
-              **Nota** Este artículo está dirigido a los desarrolladores que escriben aplicaciones de empresa para UWP. Para el desarrollo general de UWP, consulta las [Guías de procedimientos para aplicaciones Windows 10](https://msdn.microsoft.com/library/windows/apps/mt244352). Para el desarrollo de WPF, Windows Forms o Win32, ve al [Centro de desarrollo de escritorio](https://dev.windows.com/desktop). Para los recursos de profesionales de TI como la implementación de Windows 10 o la administración de características de seguridad de la empresa, consulta [Windows 10 en TechNet](https://msdn.microsoft.com/library/dn986868).
+**Nota** Este artículo está dirigido a los desarrolladores que escriben aplicaciones de empresa para UWP. Para el desarrollo general de UWP, consulta las [Guías de procedimientos para aplicaciones Windows 10](https://msdn.microsoft.com/library/windows/apps/mt244352). Para el desarrollo de WPF, Windows Forms o Win32, ve al [Centro de desarrollo de escritorio](https://dev.windows.com/desktop). Para los recursos de profesionales de TI como la implementación de Windows 10 o la administración de características de seguridad de la empresa, consulta [Windows 10 en TechNet](https://msdn.microsoft.com/library/dn986868).
 
  
 
@@ -31,7 +30,7 @@ Windows 10 proporciona un conjunto de características de seguridad para desarro
 | [Introducción al desarrollo seguro de aplicaciones Windows](https://msdn.microsoft.com/library/windows/apps/mt622741) | En este artículo de introducción se explican varias características de seguridad de Windows a través de las fases de autenticación, los datos en desarrollo y los datos en reposo. También se describe cómo integrar esas fases en tus aplicaciones. Trata una amplia variedad de temas y su objetivo principal es que los arquitectos de aplicaciones comprendan mejor las características de Windows que permiten crear aplicaciones de la Plataforma universal de Windows de manera rápida y sencilla. |
 | [Autenticación e identidad de usuario](https://msdn.microsoft.com/library/windows/apps/mt270184) | Las aplicaciones para UWP ofrecen varias opciones para la autenticación de usuario, que describimos en este artículo. Para empresas, recomendamos la nueva característica Microsoft Passport. Microsoft Passport reemplaza las contraseñas con autenticación sólida en dos fases (2FA) mediante la comprobación de las credenciales existentes y la creación de una credencial específica protegida por un gesto de usuario basado en datos biométricos o en un PIN; de este modo, ofrece una experiencia cómoda y extremadamente segura. |
 | [Criptografía](https://msdn.microsoft.com/library/windows/apps/mt270191) | La sección de criptografía proporciona una visión general de las características de criptografía disponibles para las aplicaciones para UWP. Los artículos incluyen desde tutoriales de introducción sobre cómo cifrar datos empresariales confidenciales de manera sencilla hasta temas avanzados como la manipulación de claves criptográficas y el trabajo con MAC, hash y firmas. |
-| [Protección de datos de empresa (EDP)](edp-hub.md) | En este tema del centro se describe un panorama completo de desarrollador sobre cómo Protección de datos de empresa (EDP) se relaciona con los archivos, los búferes, el Portapapeles, las redes, las tareas en segundo plano y la protección de datos con la pantalla bloqueada. |
+| [Windows Information Protection (WIP)](wip-hub.md) | En este tema del centro se describe un panorama completo de desarrollador sobre cómo Windows Information Protection (WIP) se relaciona con los archivos, los búferes, el Portapapeles, las redes, las tareas en segundo plano y la protección de datos con la pantalla bloqueada. |
 
  
 
@@ -114,9 +113,6 @@ Para obtener más información acerca de Prism, consulta el [repositorio de GitH
 
 
 
-
-
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

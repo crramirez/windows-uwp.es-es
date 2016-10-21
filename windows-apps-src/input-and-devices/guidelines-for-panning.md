@@ -5,8 +5,9 @@ title: "Movimiento panorámico"
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 45a2d3cb8cd1db1b138d62b7d6525ed7077207b0
+ms.openlocfilehash: 5d82af288d389c6eeb5373d1b1f4230fc992a441
 
 ---
 
@@ -30,7 +31,7 @@ El movimiento panorámico o el desplazamiento permiten a los usuarios navegar de
 
 -   Haz que queden visibles los indicadores de movimiento panorámico y las barras de desplazamiento para ofrecer indicaciones de ubicación y tamaño. Ocúltalos si ofreces una función de navegación personalizada.
 
-    **Nota**  A diferencia de las barras de desplazamiento estándares, los indicadores de movimiento panorámico son meramente informativos. No se exponen a dispositivos de entrada y no es posible manipularlos de ninguna forma.
+    **Nota** A diferencia de las barras de desplazamiento estándares, los indicadores de desplazamiento lateral son meramente informativos. No se exponen a dispositivos de entrada y no es posible manipularlos de ninguna forma.
 
      
 
@@ -92,7 +93,7 @@ El deslizamiento implica mover los dedos lentamente en la dirección del movimie
 
 **Tipos de movimiento panorámico**
 
-Windows 8 admite tres tipos de movimiento panorámico:
+Windows8 admite tres tipos de movimiento panorámico:
 
 -   Eje único: el movimiento panorámico es posible solo en una dirección (horizontal o vertical).
 -   Guías: el movimiento panorámico es posible en todas las direcciones. Sin embargo, una vez que el usuario cruza un umbral de distancia en una dirección específica, el movimiento panorámico queda restringido a ese eje.
@@ -102,27 +103,25 @@ Windows 8 admite tres tipos de movimiento panorámico:
 
 La experiencia de interacción para el movimiento panorámico es exclusiva del dispositivo de entrada, aunque sigue proporcionando funciones similares.
 
-**Regiones desplazables** Los comportamientos de las regiones desplazables se exponen a los desarrolladores de aplicaciones de la Tienda Windows con JavaScript en el momento del diseño a través de las Hojas de estilo CSS.
+**Regiones desplazables** Los comportamientos de las regiones desplazables se exponen a los desarrolladores de aplicaciones de la Tienda Windows que usan JavaScript en el momento del diseño a través de las hojas de estilo CSS.
 
 Hay dos modos de visualización de movimiento panorámico en función del dispositivo de entrada detectado:
 
 -   Indicadores de movimiento panorámico para la entrada táctil.
 -   Barras de desplazamiento para otros dispositivos de entrada, como el mouse, el panel táctil, el teclado y el lápiz.
 
-**Nota**  Los indicadores de movimiento panorámico solo se ven cuando el contacto táctil se encuentra dentro de la región desplazable. Del mismo modo, la barra de desplazamiento solo se ve cuando el cursor del mouse, el cursor del lápiz o la pluma, o el foco del teclado se encuentran dentro de la región desplazable.
+**Nota** Los indicadores de desplazamiento lateral panorámico solo se ven cuando el contacto táctil se encuentra dentro de la región desplazable. Del mismo modo, la barra de desplazamiento solo se ve cuando el cursor del mouse, el cursor del lápiz o la pluma, o el foco del teclado se encuentran dentro de la región desplazable.
 
  
 
-**Indicadores de movimiento panorámico** Los indicadores de movimiento panorámico son similares al cuadro de desplazamiento de una barra de desplazamiento. Indican la proporción del contenido visualizado respecto al área total que puede moverse panorámicamente, así como la posición relativa del contenido mostrado en el área desplazable.
+**Indicadores de desplazamiento** Los indicadores de desplazamiento son similares al cuadro de desplazamiento de una barra de desplazamiento. Indican la proporción del contenido visualizado respecto al área total que puede moverse panorámicamente, así como la posición relativa del contenido mostrado en el área desplazable.
 
 En el diagrama siguiente se muestran dos áreas que pueden moverse panorámicamente con diferentes longitudes y sus correspondientes indicadores de movimiento panorámico.
 
 ![imagen en la que se muestran dos áreas que pueden moverse panorámicamente con diferentes longitudes y sus correspondientes indicadores de movimiento panorámico.](images/scrolling-indicators.png)
 
-**Comportamientos de movimiento panorámico**
-            
-          
-            **Puntos de acoplamiento** El movimiento panorámico con el gesto de deslizar rápidamente agrega un comportamiento de inercia a la interacción cuando se levanta el contacto táctil. Con la inercia, el contenido se sigue desplazando hasta alcanzar algún umbral de distancia sin la entrada directa del usuario. Usa puntos de acoplamiento para modificar el comportamiento de inercia.
+**Comportamientos de desplazamiento**
+**Puntos de acoplamiento** El desplazamiento con el gesto de deslizar agrega un comportamiento de inercia a la interacción cuando se levanta el contacto táctil. Con la inercia, el contenido se sigue desplazando hasta alcanzar algún umbral de distancia sin la entrada directa del usuario. Usa puntos de acoplamiento para modificar el comportamiento de inercia.
 
 Los puntos de acoplamiento especifican paradas lógicas en el contenido de tu aplicación. Desde el punto de vista cognitivo, los puntos de acoplamiento actúan como un mecanismo de paginación para el usuario y minimizan la fatiga que producen los gestos excesivos de deslizar y deslizar rápidamente en grandes regiones desplazables. Con ellos, puedes controlar las entradas del usuario imprecisas y asegurarte de que se muestre en la ventanilla un subconjunto específico de contenido o información clave.
 
@@ -196,6 +195,6 @@ Esta guía también es útil para aplicaciones, como álbumes de fotografías o 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: jwmsft
 description: "Vincula el valor de una propiedad en una plantilla de control al valor de otra propiedad expuesta en el control con plantilla. TemplateBinding solo se puede usar dentro de una definición de ControlTemplate en XAML."
 title: "Extensión de marcado TemplateBinding"
 ms.assetid: FDE71086-9D42-4287-89ED-8FBFCDF169DC
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1a8006e58391c41568731810d9b1901474e8d18f
+ms.openlocfilehash: 4242bb606f29a6b70213dc8cde818ed86c3dda8d
 
 ---
 
@@ -12,8 +13,7 @@ ms.openlocfilehash: 1a8006e58391c41568731810d9b1901474e8d18f
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Vincula el valor de una propiedad en una plantilla de control al valor de otra propiedad expuesta en el control con plantilla. 
-            **TemplateBinding** solo se puede usar dentro de una definición de [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) en XAML.
+Vincula el valor de una propiedad en una plantilla de control al valor de otra propiedad expuesta en el control con plantilla. **TemplateBinding** solo se puede usar dentro de una definición de [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) en XAML.
 
 ## Uso del atributo XAML
 
@@ -48,12 +48,9 @@ Puedes usar **TemplateBinding** en casos en los que el valor principal de la pla
 
 Un **TemplateBinding** siempre es un enlace unidireccional. Ambas propiedades implicadas deben ser propiedades de dependencia.
 
+**TemplateBinding** es una extensión de marcado. Las extensiones de marcado generalmente se implementan cuando es necesario que los valores de atributo de escape no sean valores literales o nombres de controlador y el requisito sea más global que simplemente colocar convertidores de tipos en ciertos tipos o propiedades. Todas las extensiones de marcado en XAML usan los caracteres "{" y "}" en su sintaxis de atributo, que es la convención mediante la cual un procesador XAML reconoce que una extensión de marcado debe procesar el atributo.
 
-            **TemplateBinding** es una extensión de marcado. Las extensiones de marcado generalmente se implementan cuando es necesario que los valores de atributo de escape no sean valores literales o nombres de controlador y el requisito sea más global que simplemente colocar convertidores de tipos en ciertos tipos o propiedades. Todas las extensiones de marcado en XAML usan los caracteres "{" y "}" en su sintaxis de atributo, que es la convención mediante la cual un procesador XAML reconoce que una extensión de marcado debe procesar el atributo.
-
-
-            **Nota** En la implementación del procesador XAML de Windows Runtime no hay una representación de clase de respaldo para **TemplateBinding**. 
-            **TemplateBinding** se usa exclusivamente en marcado XAML. No hay una forma directa de reproducir el comportamiento en el código.
+**Nota** En la implementación del procesador XAML de Windows Runtime no hay una representación de clase de respaldo para **TemplateBinding**. **TemplateBinding** se usa exclusivamente en marcado XAML. No hay una forma directa de reproducir el comportamiento en el código.
 
 ## Temas relacionados
 
@@ -67,6 +64,6 @@ Un **TemplateBinding** siempre es un enlace unidireccional. Ambas propiedades im
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

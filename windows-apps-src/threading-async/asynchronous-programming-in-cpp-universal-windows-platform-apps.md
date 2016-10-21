@@ -5,7 +5,7 @@ description: "Este artículo describe la manera recomendada de consumir métodos
 title: "Programación asincrónica en C++"
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: b0a3faa56249ccfe693438c1077b7500736f3ec5
+ms.openlocfilehash: 12fdf79cbf3a79e4789131d0da8eee978b82cdf8
 
 ---
 
@@ -112,8 +112,7 @@ El ejemplo anterior ilustra cuatro puntos importantes:
 
 -   Dado que la segunda continuación se basa en valores, si la operación que la llamada a [**DeleteAsync**][deleteAsync] comenzó inicia una excepción, la segunda continuación no se ejecuta.
 
-
-              **Nota** La creación de una cadena de tareas constituye tan solo una de las maneras de usar la clase **task** para componer operaciones asincrónicas. También puedes componer operaciones usando los operadores de unión y elección **&&** y **||**. Para obtener más información, consulta [Paralelismo de tareas (Runtime de simultaneidad)][taskParallelism].
+**Nota** La creación de una cadena de tareas constituye tan solo una de las maneras de usar la clase **task** para componer operaciones asincrónicas. También puedes componer operaciones usando los operadores de unión y elección **&&** y **||**. Para obtener más información, consulta [Paralelismo de tareas (Runtime de simultaneidad)][taskParallelism].
 
 ## Tipos devueltos de tareas y tipos devueltos de función lambda
 
@@ -295,50 +294,31 @@ Los métodos que admiten [**IAsyncOperationWithProgress**](https://msdn.microsof
 
 ## Temas relacionados
 
-* 
-              [Creación de operaciones asincrónicas en C++ para aplicaciones de la Tienda Windows][createAsyncCpp]
+* [Creación de operaciones asincrónicas en C++ para aplicaciones de la Tienda Windows][createAsyncCpp]
 * [Referencia del lenguaje Visual C++](http://msdn.microsoft.com/library/windows/apps/hh699871.aspx)
-* 
-              [Programación asincrónica][AsyncProgramming]
-* 
-              [Paralelismo de tareas (Runtime de simultaneidad)][taskParallelism]
-* 
-              [clase de tarea][task-class]
+* [Programación asincrónica][AsyncProgramming]
+* [Paralelismo de tareas (Runtime de simultaneidad)][taskParallelism]
+* [clase de tarea][task-class]
  
 <!-- LINKS -->
-
-              [AsyncProgramming]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh464924.aspx> "AsyncProgramming"
-
-              [concurrencyNamespace]: <https://msdn.microsoft.com/library/windows/apps/xaml/dd492819.aspx> "Espacio de nombres Concurrency"
-
-              [createTask]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh913025.aspx> "CreateTask"
-
-              [createAsyncCpp]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750082.aspx> "CreateAsync"
-
-              [deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199> "DeleteAsync"
-
-              [IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx> "IAsyncAction"
-
-              [IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598> "IAsyncOperation"
-
-              [IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587> "IAsyncInfo"
-
-              [IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel> "IAsyncInfoCancel"
-
-              [taskCanceled]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750106.aspx> "TaskCancelled"
-
-              [task-class]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750113.aspx> "Clase de tarea"
-
-              [taskGet]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750017.aspx> "TaskGet"
-
-              [taskParallelism]: <https://msdn.microsoft.com/library/windows/apps/xaml/dd492427.aspx> "Paralelismo de tareas"
-
-              [taskThen]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750044.aspx> "TaskThen"
-
-              [useArbitrary]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750036.aspx> "UseArbitrary"
+[AsyncProgramming]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh464924.aspx> "AsyncProgramming"
+[concurrencyNamespace]: <https://msdn.microsoft.com/library/windows/apps/xaml/dd492819.aspx> "Espacio de nombres Concurrency"
+[createTask]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh913025.aspx> "CreateTask"
+[createAsyncCpp]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750082.aspx> "CreateAsync"
+[deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199> "DeleteAsync"
+[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx> "IAsyncAction"
+[IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598> "IAsyncOperation"
+[IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587> "IAsyncInfo"
+[IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel> "IAsyncInfoCancel"
+[taskCanceled]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750106.aspx> "TaskCancelled"
+[task-class]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750113.aspx> "Clase de tarea"
+[taskGet]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750017.aspx> "TaskGet"
+[taskParallelism]: <https://msdn.microsoft.com/library/windows/apps/xaml/dd492427.aspx> "Paralelismo de tareas"
+[taskThen]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750044.aspx> "TaskThen"
+[useArbitrary]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750036.aspx> "UseArbitrary"
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

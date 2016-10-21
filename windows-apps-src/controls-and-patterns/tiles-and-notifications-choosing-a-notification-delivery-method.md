@@ -5,20 +5,19 @@ title: "Elegir un método de entrega de notificaciones"
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: b79a6f771afe63c9a42567875db5ef8107611afc
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: a61c9ce609856ff3addba557558c6bffec504ed7
 
 ---
-
 # Elegir un método de entrega de notificaciones
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 En este artículo se abordan las cuatro opciones de notificación (local, programada, periódica y de inserción) que proporcionan actualizaciones de iconos y distintivos, así como contenido de notificaciones del sistema. Un icono o una notificación del sistema pueden proporcionar información a tu usuario, incluso mientras el usuario no esté interactuando de forma directa con la aplicación. La naturaleza y el contenido de la aplicación y la información que quieras transmitir pueden ayudar a determinar qué métodos de notificación resultan más adecuados para tu escenario.
 
-## <span id="Notification_delivery_methods__overview"></span><span id="notification_delivery_methods__overview"></span><span id="NOTIFICATION_DELIVERY_METHODS__OVERVIEW"></span>Introducción a los métodos de entrega de notificaciones
+## Introducción a los métodos de entrega de notificaciones
 
 
 Existen cuatro mecanismos que puede usar una aplicación para entregar una notificación:
@@ -90,7 +89,7 @@ Esta tabla resume los tipos de entrega de notificaciones.
 
  
 
-## <span id="Local_notifications"></span><span id="local_notifications"></span><span id="LOCAL_NOTIFICATIONS"></span>Notificaciones locales
+## Notificaciones locales
 
 
 La actualización del distintivo o del icono de la aplicación o la generación de una notificación del sistema mientras se está ejecutando la aplicación es el mecanismo más simple de entrega de notificaciones; solo requiere llamadas a API locales. Todas las aplicaciones pueden tener información útil o interesante para mostrar en el icono, incluso si el contenido cambia únicamente después de que el usuario inicie la aplicación e interactúe con esta. Las notificaciones locales también son un buen modo de mantener actualizado el icono de una aplicación, aunque también uses uno de los otros mecanismos de notificación. Por ejemplo, un icono de una aplicación de fotos puede mostrar las fotos de un álbum agregado recientemente.
@@ -109,7 +108,7 @@ Para obtener más información, consulta estos temas:
 -   [Enviar una notificación de icono local](tiles-and-notifications-sending-a-local-tile-notification.md)
 -   [Muestras de código de notificaciones de la Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## <span id="Scheduled_notifications"></span><span id="scheduled_notifications"></span><span id="SCHEDULED_NOTIFICATIONS"></span>Notificaciones programadas
+## Notificaciones programadas
 
 
 Las notificaciones programadas son el subconjunto de las notificaciones locales que pueden especificar el momento preciso en que se debe actualizar un icono o en que se debe mostrar una notificación del sistema. Las notificaciones programadas son ideales para las situaciones en las que el contenido que se debe actualizar se conoce con anticipación; por ejemplo, una invitación a una reunión. Si no conoces con anticipación el contenido de la notificación, debes usar una notificación periódica o de inserción.
@@ -121,7 +120,7 @@ Para obtener más información, consulta estos temas:
 -   [Directrices para notificaciones programadas](https://msdn.microsoft.com/library/windows/apps/hh761464)
 -   [Muestras de código de notificaciones de la Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## <span id="Periodic_notifications"></span><span id="periodic_notifications"></span><span id="PERIODIC_NOTIFICATIONS"></span>Notificaciones periódicas
+## Notificaciones periódicas
 
 
 Las notificaciones periódicas te proporcionan actualizaciones activas de icono con niveles mínimos de inversión de clientes y servicio de nube. También son un excelente método para distribuir el mismo contenido a una audiencia amplia. Tu código de cliente especifica la dirección URL de una ubicación de nube que Windows sondea en busca de actualizaciones de icono o de distintivo y, del mismo modo, especifica la frecuencia con la que se debe sondear la ubicación. En cada intervalo de sondeo, Windows se pone en contacto con la dirección URL para descargar el contenido XML especificado y mostrarlo en el icono.
@@ -135,7 +134,7 @@ Para obtener más información, consulta estos temas:
 -   [Introducción a las notificaciones periódicas](tiles-and-notifications-periodic-notification-overview.md)
 -   [Muestras de código de notificaciones de la Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## <span id="Push_notifications"></span><span id="push_notifications"></span><span id="PUSH_NOTIFICATIONS"></span>Notificaciones de inserción
+## Notificaciones de inserción
 
 
 Las notificaciones de inserción son ideales para comunicar datos en tiempo real o datos personalizados para tu usuario. Las notificaciones de inserción se usan para el contenido que se genera en momentos impredecibles, como las noticias de último momento, las actualizaciones de redes sociales o los mensajes instantáneos. Las notificaciones de inserción también son útiles para las situaciones en las que los datos están sujetos a limitación temporal de un modo inadecuado para notificaciones periódicas, como los resultados deportivos durante un partido.
@@ -151,7 +150,7 @@ Para obtener más información, consulta lo siguiente:
 -   [Muestras de código de notificaciones de la Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 
-## <span id="related_topics"></span>Temas relacionados
+## Temas relacionados
 
 
 * [Enviar una notificación de icono local](tiles-and-notifications-sending-a-local-tile-notification.md)
@@ -171,6 +170,6 @@ Para obtener más información, consulta lo siguiente:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

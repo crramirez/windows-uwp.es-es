@@ -3,8 +3,9 @@ ms.assetid: E0728EB0-DFC3-4203-A367-8997B16E2328
 description: "En esta sección se explica cómo compartir datos entre aplicaciones para la Plataforma universal de Windows (UWP), como por ejemplo, cómo usar el contrato para contenido compartido, cómo copiar y pegar y cómo arrastrar y colocar."
 title: "Comunicación entre aplicaciones"
 author: awkoren
-ms.sourcegitcommit: dcd542257761083f3ec04eb0da2b13d5d68a19e2
-ms.openlocfilehash: 63550064b6f31b85cd3b6fa2a09bac4b7cfcf895
+translationtype: Human Translation
+ms.sourcegitcommit: 94e1586a73743e8918ef160897b1b22c8c545ea0
+ms.openlocfilehash: 05ac668e0e3c33f6dd9da9f578335bab96c6429c
 
 ---
 
@@ -28,10 +29,12 @@ Además del contrato para compartir contenido, las aplicaciones también pueden 
 | [Recibir datos](receive-data.md) | En este artículo se explica cómo recibir contenido compartido en la aplicación para UWP desde otra aplicación mediante el contrato para contenido compartido. Este contrato para contenido compartido permite que la aplicación se presente como una opción cuando el usuario invoca el recurso compartido. |
 | [Copiar y pegar](copy-and-paste.md) | En este artículo se explica cómo admitir las funciones copiar y pegar en aplicaciones para UWP usando el portapapeles. Copiar y pegar es la forma clásica de intercambiar datos entre aplicaciones o dentro de una aplicación y casi todas las aplicaciones admiten operaciones del portapapeles hasta cierto punto. |
 | [Arrastrar y colocar](drag-and-drop.md) | En este artículo se explica cómo agregar la funcionalidad de arrastrar y colocar elementos en la aplicación para UWP. Arrastrar y soltar es una forma clásica y natural de interactuar con contenido, como imágenes y archivos. Una vez implementada, la opción para arrastrar y colocar elementos funciona perfectamente en todos los sentidos; por ejemplo, de una aplicación a otra, de una aplicación al escritorio y del escritorio a una aplicación. |
-| [Usar EDP para proteger los datos empresariales que se transfieren entre aplicaciones](use-edp-to-protect-enterprise-data-transferred-between-apps.md) | En este tema se muestran ejemplos de las tareas de codificación necesarias para lograr algunos de los escenarios más habituales de Enterprise Data Protection (EDP) relacionados con la transferencia de datos. |
+
+## Consulta también
+- [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/en-us/windows/develop)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

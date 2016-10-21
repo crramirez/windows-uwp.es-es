@@ -5,8 +5,9 @@ title: "Introducción al diseño de aplicaciones para la Plataforma universal de
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 label: Intro to UWP app design
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: ec154ec64ba18badb5f81b59e76fc04e539de1a8
+ms.openlocfilehash: 06925bc42aab6d2ca7bf97c48161cca5e1cf840b
 
 ---
 
@@ -46,8 +47,7 @@ En la ilustración siguiente se muestran los elementos de diseño que no se asig
 
 ![elementos de diseño que no se alinean a la cuadrícula de píxeles de 4 x 4](images/rsp-design/offthegridillustration.png)
 
-
-            **Sugerencia**   Al crear bocetos de pantalla en los programas de edición de imágenes, establece el valor de PPP en 72 y las dimensiones de imagen en la resolución eficaz de la clase de tamaño que quieres obtener. (Para obtener una lista de clases de tamaño y resoluciones eficaces, consulta la sección [recomendaciones para las clases de tamaño específico](#sizeclasses) de este artículo).
+**Sugerencia**   Al crear bocetos de pantalla en los programas de edición de imágenes, establece el valor de PPP en 72 y las dimensiones de imagen en la resolución que resulte eficaz para la clase de tamaño que quieres obtener. (Para obtener una lista de clases de tamaño y resoluciones eficaces, consulta la sección [recomendaciones para las clases de tamaño específico](#sizeclasses) de este artículo).
 
 
 ### Entrada universal e interacciones inteligentes
@@ -175,7 +175,7 @@ En este ejemplo se muestra cómo se puede adaptar a una única columna de conten
 
 ![redistribuir los elementos de diseño](images/rsp-design/rspd-reflow.png)
 
-### <span id="_____________Reveal___________"></span><span id="_____________reveal___________"></span><span id="_____________REVEAL___________"></span>  Mostrar
+### <span id="_____________Reveal___________"></span><span id="_____________reveal___________"></span><span id="_____________REVEAL___________"></span> Mostrar
 
 Puedes mostrar la interfaz de usuario según la superficie de la pantalla o cuando el dispositivo admite funcionalidades adicionales, situaciones específicas u orientaciones de pantalla preferidas.
 
@@ -220,6 +220,6 @@ A continuación se muestra un ejemplo de esta técnica aplicado al diseño de un
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

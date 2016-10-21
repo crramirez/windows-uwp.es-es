@@ -3,8 +3,9 @@ author: jnHs
 Description: Puedes crear un anuncio para promocionar una de tus aplicaciones en otras aplicaciones tuyas de forma gratuita. Estos anuncios se denominan anuncios internos.
 title: Acerca de los anuncios internos
 ms.assetid: C6507C8B-351B-49E7-A194-35AB05BC3358
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c9b73bb1963839640243fce4caaa7f3701b1eb45
+ms.openlocfilehash: 6d0c9aa276a624966b6294db2be8e08a716d42c2
 
 ---
 
@@ -20,8 +21,7 @@ Para configurar uno, selecciona **Campaña interna gratuita** como el **Tipo de 
 
 Cuando un anuncio interno de la aplicación A aparezca en la aplicación B, no se te cobrará por la impresión ni recibirás ingresos por mostrar el anuncio en la unidad de anuncio de la aplicación B. Los anuncios de pago tienen prioridad sobre los anuncios internos para aparecer en tus unidades de anuncio.
 
-> 
-            **Nota**: El usuario final verá cualquier anuncio interno determinado un máximo de cinco veces al día.
+> **Nota**: Un usuario final concreto verá cualquier anuncio interno determinado un máximo de cinco veces al día.
 
  
 
@@ -37,6 +37,6 @@ Cuando un anuncio interno de la aplicación A aparezca en la aplicación B, no s
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

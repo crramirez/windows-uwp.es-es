@@ -6,8 +6,8 @@ ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c65bb525e953228e95286d5c6a5bffdb11475e53
-ms.openlocfilehash: 6084a49a8d8d9884c3bd777160ca219059d1654b
+ms.sourcegitcommit: fe012189566a20203b2bf8cae72f80655eeadfd1
+ms.openlocfilehash: 29a33550c3b8c80c1ae2c8349fc0b771717325f1
 
 ---
 
@@ -102,8 +102,7 @@ La función de dictado normalmente se usa cuando una aplicación no necesita com
 
 Un lápiz (o pluma) puede servir como un dispositivo señalador de precisión de píxeles (por ejemplo, un mouse) y es el dispositivo de entrada ideal para la entrada de lápiz digital.
 
-
-            **Nota**  Hay dos tipos de dispositivos de lápiz: activo y pasivo.
+**Nota**  Hay dos tipos de dispositivos de lápiz: activo y pasivo.
   -   Los lápices pasivos no contienen electrónica y emulan la entrada táctil de un dedo de forma eficaz. Requieren una pantalla de dispositivo básico que reconozca la entrada basada en la presión por contacto. Dado que los usuarios a menudo sitúan la mano a medida que escriben en la superficie de entrada, los datos de entrada pueden contaminarse debido a un rechazo de palma incorrecto.
   -   Los lápices activos contienen electrónica y pueden funcionar con pantallas de dispositivos complejos para proporcionar datos de entrada mucho más amplios (lo que incluye mantener el puntero sobre un elemento o los datos de proximidad) al sistema y a la aplicación. El rechazo de la palma es mucho más eficaz.
 
@@ -217,8 +216,7 @@ El teclado en pantalla es un teclado de software visual que puedes usar en lugar
 
 El teclado táctil es un teclado de software visual que se usa para escribir texto con entrada táctil. El teclado táctil no reemplaza al teclado en pantalla, ya que se usa únicamente para escribir texto (no simula el teclado de hardware) y solo aparece cuando se hace foco en un campo editable o en otro control de texto editable. El teclado táctil no admite comandos de aplicación ni del sistema.
 
-
-            **Nota**  El teclado en pantalla tiene prioridad sobre el teclado táctil, que no se mostrará si el teclado en pantalla está presente.
+**Nota**  El teclado en pantalla tiene prioridad sobre el teclado táctil, que no se mostrará si el teclado en pantalla está presente.
 
 En general, un teclado:
 
@@ -334,6 +332,6 @@ Al igual que las personas usan una combinación de voz y gestos para comunicarse
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -2,10 +2,9 @@
 author: WilliamsJason
 title: "Cómo usar Fiddler con Xbox One al desarrollar para la UWP"
 description: "Describe cómo usar la herramienta Fiddler de software gratuito para ver el tráfico de red en un kit de desarrollo para UWP de Xbox One."
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: 0f0840992afe5eeae8ec5ac6897e728ec183a2f4
-ms.openlocfilehash: 6d02d7c4fe9c1804e3b63a1d1156fbb3981d0536
+ms.sourcegitcommit: 11c6cffab7934937b6d89c30e4d03ae752f6b3b7
+ms.openlocfilehash: 241fa495c7277fe2bf4feafeb4062842f97e59b1
 
 ---
 
@@ -13,7 +12,7 @@ ms.openlocfilehash: 6d02d7c4fe9c1804e3b63a1d1156fbb3981d0536
 
 Fiddler es un proxy de depuración web que registra todo el tráfico HTTP y HTTPS entre el kit de desarrollo de Xbox One e Internet. Se usa para registrar e inspeccionar el tráfico a los servicios de Xbox y los servicios web de terceros de confianza, así como desde estos, para comprender y depurar llamadas al servicio web. 
 
-En una operación normal, una consola que se comunica a través de un proxy corre el riesgo de que dicho proxy modifique sus comunicaciones, lo que podría permitir a los jugadores hacer trampas. Por lo tanto, las consolas se diseñan para no permitir la comunicación a través de un proxy. El uso de Fiddler con el kit de desarrollo de Xbox One requiere que realices algunos pasos de configuración especial en el kit de desarrollo para que esta pueda usar el proxy de Fiddler. 
+En una operación normal, una consola que se comunica a través de un proxy corre el riesgo de que dicho proxy modifique sus comunicaciones, lo que podría permitir a los jugadores hacer trampas. Por lo tanto, las consolas se diseñan para evitar la comunicación a través de un proxy. El uso de Fiddler con el kit de desarrollo de Xbox One requiere que realices algunos pasos de configuración especial en el kit de desarrollo, para poder usar el proxy de Fiddler. 
 
 Fiddler es un software gratuito y puede descargarse desde el [sitio web de Fiddler](http://www.fiddler2.com/fiddler2/). 
 
@@ -23,7 +22,7 @@ Fiddler puede afectar al estado de red notificado por la consola. Si una conexi�
 Sigue estos pasos para instalar y habilitar Fiddler para supervisar el tráfico desde el kit de desarrollo:
 
 1. Instala Fiddler en el equipo de desarrollo; para ello, sigue las instrucciones que se proporcionan en el [sitio web de Fiddler](http://www.fiddler2.com/fiddler2/). 
-2. Inicia Fiddler y selecciona **Fiddler Options** (Opciones de Fiddler) desde el menú **Tools** (Herramientas). 
+2. Inicia Fiddler y selecciona **Opciones de Fiddler** desde el menú **Herramientas**. 
 3. Selecciona la pestaña **Connections** (Conexiones) y asegúrate de que **Allow remote computers to connect** (Permitir que se conecten equipos remotos) está seleccionado. 
 4. Haz clic en **OK** (Aceptar) para aceptar el cambio en la configuración. Verás un cuadro de diálogo que indicará que Fiddler debe reiniciarse para que el cambio surta efecto y que es posible que debas configurar el firewall manualmente. Haz clic en **OK** (Aceptar) en este cuadro de diálogo, pero *no reinicies Fiddler aún*.
 5. Configura la regla de firewall necesaria para permitir a los equipos remotos conectarse. Iniciar el applet del Panel de Control del Firewall de Windows. Haz clic en **Configuración avanzada** y después en **Regla de entrada**. Busca la regla denominada "FiddlerProxy" y desplázate hacia la derecha, para comprobar que todas de las configuraciones de la siguiente tabla aparecen para esa regla.
@@ -45,10 +44,11 @@ Sigue estos pasos para instalar y habilitar Fiddler para supervisar el tráfico 
   | AllowedUsers      | Cualquiera                            |
   | AllowedComputers  | Cualquiera                            |
 
+
 6. Configura Fiddler para capturar y descifrar el tráfico HTTPS mediante lo siguiente:
-  1. Para lograr el mejor rendimiento óptimo, establezca Fiddler para que use el modo de transmisión haciendo clic en botón **Stream** de la barra de botones.
-  2. En el menú **Tools** (Herramientas) de la Fiddler, selecciona **Fiddler Options** (Opciones de Fiddler) y, a continuación, haz clic en **HTTPS**.
-  3. Selecciona la casilla **Descrypt HTTP traffic** (Descifrar tráfico HTTPS). Si un cuadro de diálogo pregunta si deseas configurar Windows para que confíe en el certificado de la entidad de certificación, haz clic en **n**.
+  1. Para lograr un rendimiento óptimo, establece Fiddler para que use el modo de transmisión haciendo clic en botón **Emisión** de la barra de botones.
+  2. En el menú **Herramientas** de Fiddler, selecciona **Opciones de Fiddler** y, a continuación, haz clic en **HTTPS**.
+  3. Selecciona la casilla **Descifrar tráfico HTTPS**. Si un cuadro de diálogo pregunta si deseas configurar Windows para que confíe en el certificado de la entidad de certificación, haz clic en **n**.
   4. Haz clic en **Export Root Certificate to Desktop** (Exportar certificado raíz al escritorio).
 7. Sal y reinicia Fiddler.
 
@@ -60,15 +60,14 @@ Sigue estos pasos para instalar y habilitar Fiddler para supervisar el tráfico 
 4. Escribe el número de puerto en el que está escuchando Fiddler (de forma predeterminada, Fiddler usa el puerto 8888). 
 5. Haz clic en **Habilitar**. Esto reiniciará el kit de desarrollo.
 
-### Para dejar de usar Fiddler
-Para dejar de usar Fiddler como proxy de Internet (y hacer que Fiddler deje de seguir de todo el tráfico de red del kit de desarrollo), haz lo siguiente:
+### Dejar de usar Fiddler
+Para dejar de usar Fiddler como proxy de Internet (y hacer que Fiddler deje de seguir todo el tráfico de red del kit de desarrollo), haz lo siguiente:
 
-1. Dirígete a la herramienta **Red** en la interfaz de usuario de Device Portal para Xbox.
+1. Dirígete a la herramienta **Red** en la interfaz de usuario de Xbox Device Portal.
 2. Haz clic en **Deshabilitar**.
 
-###Nota
-
-Cada equipo con Fiddler instalado usa un certificado raíz de Fiddler diferente. Si tienes más de un equipo que pueda usarse para proporcionar un proxy de Fiddler para el kit de desarrollo, tendrás seleccionar el nuevo certificado raíz al cambiar entre ellos. Si usas un único equipo, tendrás que seleccionar el certificado raíz solo la primera vez que habilites Fiddler. Debes especificar la dirección IP y el puerto.
+> [!NOTE]
+> Cada equipo con Fiddler instalado usa un certificado raíz de Fiddler diferente. Si tienes más de un equipo que pueda usarse para proporcionar un proxy de Fiddler para el kit de desarrollo, tendrás seleccionar el nuevo certificado raíz al cambiar entre ellos. Si usas un único equipo, tendrás que seleccionar el certificado raíz solo la primera vez que habilites Fiddler. Debes especificar la dirección IP y el puerto.
 
 ## Consulta también
 - [Referencia de API de configuración de Fiddler](wdp-fiddler-api.md)
@@ -80,6 +79,6 @@ Cada equipo con Fiddler instalado usa un certificado raíz de Fiddler diferente.
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

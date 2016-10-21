@@ -4,15 +4,15 @@ ms.assetid: 15d8cc6c-80f9-49b7-8036-0abf80ffebba
 description: "Obtén información sobre otros recursos para desarrollar aplicaciones con anuncios."
 title: Ayuda adicional
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: bacda14bc48d6707a8f717c554fe7aaa22b202e0
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: a45a09efabf7014658029b0302a56cefac8b0141
 
 ---
 
 # Ayuda adicional
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Los siguientes recursos proporcionan más información sobre cómo desarrollar aplicaciones con anuncios.
 
@@ -34,6 +34,6 @@ Los siguientes recursos proporcionan más información sobre cómo desarrollar a
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

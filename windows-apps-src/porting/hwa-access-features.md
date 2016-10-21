@@ -1,30 +1,34 @@
 ---
 author: seksenov
-title: Hosted Web Apps - Accessing Universal Windows Platform (UWP) features and Runtime APIs
-description: Access Universal Windows Platform (UWP) native features and Windows 10 Runtime APIs, including Cortona voice commands, Live Tiles, ACURs for security, OpenID and OAuth, all from remote JavaScript. 
+title: "Aplicaciones web hospedadas: Acceso a las características de la Plataforma universal de Windows (UWP) y a las API de tiempo de ejecución"
+description: "Acceso a las características nativas de la Plataforma universal de Windows y a las API de tiempo de ejecución de Windows10, incluidos los comandos de voz de Cortana, los iconos dinámicos las ACUR para seguridad, OpenID y OAuth, todo ello desde JavaScript remoto."
 kw: Hosted Web Apps, Accessing Windows 10 features from remote JavaScript, Building a Win10 Web Application, Windows JavaScript Apps, Microsoft Web Apps, HTML5 app for PC, ACUR URI Rules for Windows App, Call Live Tiles with web app, Use Cortana with web app, Access Cortana from website, msapplication-cortanavcd
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: fb74bfc40750941860dae0a8f811fde4a614e403
+
 ---
 
-# Accessing Universal Windows Platform (UWP) features
+# Acceso a las características de la Plataforma universal de Windows (UWP)
 
-Your web application can have full access to the Universal Windows Platform (UWP), activating native features on Windows devices, [benefiting from Windows security](#keep-your-app-secure-setting-application-content-uri-rules-acurs), [calling Windows Runtime APIs](#call-windows-runtime-apis) directly from script hosted on a server, leveraging [Cortana integration](#integrate-cortana-voice-commands), and using an [online authentication provider](#web-authentication-broker). [Hybrid apps](#create-hybrid-apps-packaged-web-apps-vs-hosted-web-apps) are also supported as you can include local code to be called from the hosted script and manage app navigation between remote and local pages.
+La aplicación web puede tener acceso completo a la Plataforma universal de Windows (UWP), activar las características nativas en dispositivos Windows [que se benefician de la seguridad de Windows](#keep-your-app-secure-setting-application-content-uri-rules-acurs), [llamar a API de Windows Runtime](#call-windows-runtime-apis) directamente desde script hospedado en un servidor, aprovechar [la integración de Cortana](#integrate-cortana-voice-commands)y usar un [proveedor de autenticación en línea](#web-authentication-broker). También se admiten [aplicaciones híbridas](#create-hybrid-apps-packaged-web-apps-vs-hosted-web-apps), ya que puedes incluir código local para llamarlo desde el script hospedado y administrar la navegación en aplicaciones entre páginas locales y remotas.
 
-## Keep your app secure – Setting Application Content URI Rules (ACURs)
+## Mantener tu aplicación segura: Configuración de las reglas de URI de contenido de la aplicación (ACUR)
 
-Through ACURs, otherwise known as a URL allow list, you are able to give remote URLs direct access to Universal Windows APIs from remote HTML, CSS, and JavaScript. At the Windows OS level, the right policy bounds have been set to allow code hosted on your web server to directly call platform APIs. You define these bounds in the app package manifest when you place the set of URLs that make up your Hosted Web App in the Application Content URI Rules (ACURs). Your rules should include your app’s start page and any other pages you want included as app pages. Optionally, you can exclude specific URLs, too.
+A través de las ACUR, también conocidas como una lista de URL permitidas, es posible proporcionar acceso directo remoto de direcciones URL a las API de Windows Universal desde HTML, CSS y JavaScript remotos. En el nivel del sistema operativo Windows, los límites de la directiva de derechos se han establecido para permitir que el código hospedado en el servidor web llame directamente a las API de la plataforma. Estos límites se definen en el manifiesto del paquete de la aplicación al colocar el conjunto de direcciones URL que componen la aplicación web hospedada en las reglas de URI de contenido de aplicación (ACUR). Las reglas deben incluir la página de inicio de la aplicación y cualquier otra página que desees incluir como páginas de la aplicación. Opcionalmente, también puedes excluir determinadas direcciones URL.
 
-There are several ways to specify a URL match in your rules:
+Hay varias formas de especificar una coincidencia de URL en tus reglas:
 
-- An exact hostname
-- A hostname for which a URI with any subdomain of that hostname is included or excluded
-- An exact URI
-- An exact URI that can contain a query property
-- A partial path and a wildcard to indicate a particular file extension for an include rule
-- Relative paths for exclude rules
+- Un nombre de host exacto
+- Se incluye un nombre de host para el que se incluya o excluya un URI con un subdominio cualquiera de ese nombre de host
+- Un URI exacto
+- Un URI exacto que pueda contener una propiedad de consulta
+- Una ruta de acceso parcial y un comodín para indicar una extensión de archivo concreta para una regla de inclusión.
+- Rutas de acceso relativas para reglas de exclusión
 
-If your user navigates to a URL that is not included in your rules, then Windows opens the target URL in a browser.
+Si el usuario navega a una dirección URL que no se incluya en las reglas, Windows abrirá dicha dirección URL de destino en un explorador.
 
-Here are a few examples of ACURs.
+Estos son algunos ejemplos de ACUR:
 
 ```HTML
 <Application
@@ -37,17 +41,17 @@ StartPage="http://contoso.com/home">
 </uap:ApplicationContentUriRules>
 ```
 
-## Call Windows Runtime APIs
+## Llamar a API de Windows Runtime
 
-If a URL is defined within the app’s bounds (ACURs), it can call Windows Runtime APIs with JavaScript using the “WindowsRuntimeAccess” attribute. The Windows namespace will be injected and present in the script engine when a URL with appropriate access is loaded in the App Host. This makes Universal Windows APIs available for the app’s scripts to call directly. As a developer, you just need to feature detect for the Windows API you would like to call and, if available, proceed to light-up platform features.
+Si se ha definido una dirección URL dentro de los límites de la aplicación (ACUR), esta puede llamar a las API de Windows Runtime con JavaScript mediante el atributo "WindowsRuntimeAccess". El espacio de nombres de Windows se insertará y estará presente en el motor de scripts cuando en el host de la aplicación se cargue una dirección URL con el acceso adecuado. Gracias a esto, las API universales de Windows están disponibles para que los scripts de la aplicación las llamen directamente. Como desarrollador, solo necesitas detectar la API de Windows que te gustaría llamar y, si está disponible, pasar a destacar las características de la plataforma.
 
-To enable this, you need to specify the `(WindowsRuntimeAccess="<<level>>")` attribute in the ACURs with the one of these values:
+Para habilitar esto, debes especificar el atributo `(WindowsRuntimeAccess="<<level>>")` en las ACUR con uno de estos valores:
 
-- **all**: Remote JavaScript code has access to all UWP APIs and any local packaged components.
-- **allowForWeb**: Remote JavaScript code has access to custom in package code only. Local access to custom C++/C# components.
-- **none**: Default. The specified URL has no platform access.
+- **all**: el código de JavaScript remoto tiene acceso a todas las API de la UWP y a cualquier componente local empaquetado.
+- **allowForWeb**: el código de JavaScript remoto tiene acceso únicamente al código personalizado en el paquete. Acceso local a componentes C++/C# personalizados.
+- **none**: valor predeterminado. La dirección URL especificada no tiene acceso a la plataforma.
 
-Here is an example rule type:
+A continuación se facilita un tipo de regla de ejemplo:
 
 ```HTML
 <uap:ApplicationContentUriRules>
@@ -55,9 +59,9 @@ Here is an example rule type:
 </uap:ApplicationContentUriRules>
 ```
 
-This gives script running on http://contoso.com/ access to Windows Runtime namespaces and custom packaged components in the package. See the [Windows.UI.Notifications.js](https://gist.github.com/Gr8Gatsby/3d471150e5b317eb1813#file-windows-ui-notifications-js) example on GitHub for toast notifications.
+Esto proporciona al script que se ejecuta en http://contoso.com/ acceso a espacios de nombres de Windows Runtime y a componentes empaquetados personalizados del paquete. Consulta el ejemplo [Windows.UI.Notifications.js](https://gist.github.com/Gr8Gatsby/3d471150e5b317eb1813#file-windows-ui-notifications-js) en GitHub para obtener notificaciones del sistema.
 
-Here is an example of how to implement a Live Tile and update it from remote JavaScript:
+Este es un ejemplo de cómo implementar un icono dinámico y actualizarlo desde JavaScript remoto:
 
 ```Javascript
 function updateTile(message, imgUrl, imgAlt) {
@@ -65,15 +69,15 @@ function updateTile(message, imgUrl, imgAlt) {
 
     if (typeof Windows !== 'undefined'&&
             typeof Windows.UI !== 'undefined' &&
-            typeof Windows.UI.Notifications !== 'undefined') {	
+            typeof Windows.UI.Notifications !== 'undefined') {  
         var notifications = Windows.UI.Notifications,
         tile = notifications.TileTemplateType.tileSquare150x150PeekImageAndText01,
         tileContent = notifications.TileUpdateManager.getTemplateContent(tile),
         tileText = tileContent.getElementsByTagName('text'),
-        tileImage = tileContent.getElementsByTagName('image');	
+        tileImage = tileContent.getElementsByTagName('image');  
         tileText[0].appendChild(tileContent.createTextNode(message || 'Demo Message'));
         tileImage[0].setAttribute('src', imgUrl || 'https://unsplash.it/150/150/?random');
-        tileImage[0].setAttribute('alt', imgAlt || 'Random demo image');	
+        tileImage[0].setAttribute('alt', imgAlt || 'Random demo image');    
         var tileNotification = new notifications.TileNotification(tileContent);
         var currentTime = new Date();
         tileNotification.expirationTime = new Date(currentTime.getTime() + 600 * 1000);
@@ -85,65 +89,70 @@ function updateTile(message, imgUrl, imgAlt) {
 }
 ```
 
-This code will produce a tile that looks something like this:
+Este código producirá un icono que se parecerá al siguiente:
 
-![Windows 10 calling a live tile](images/hwa-to-uwp/hwa_livetile.png)
+![Windows10 llama a un icono dinámico](images/hwa-to-uwp/hwa_livetile.png)
 
-Call Windows Runtime APIs with whatever environment or technique is most familiar to you by keeping your resources on a server feature detecting for Windows capabilities prior to calling them. If platform capabilities are not available, and the web app is running in another host, you can provide the user with a standard default experience that works in the browser.
+Llama a API de Windows Runtime con el entorno o la técnica que te resulte más familiar manteniendo los recursos en una característica de servidor que detecte las funcionalidades de Windows antes de llamarlas. Si las funcionalidades de la plataforma no están disponibles y la aplicación web se ejecuta en otro host, puedes proporcionar al usuario una experiencia predeterminada estándar que funcione en el explorador.
 
-## Integrate Cortana voice commands
+## Integrar comandos de voz de Cortana
 
-You can take advantage of Cortana integration by specifying a Voice Command Definition (VCD) file in your html page. The VCD file is an xml file that maps commands to specific phrases. For example, a user could tap the Start button and say “Contoso Books, show best sellers” to both launch the Contoso Books app and to navigate to a “best sellers” page.
+Puedes aprovechar la integración de Cortana si especificas un archivo de definición de comandos de voz (VCD) en la página html. El archivo VCD es un archivo xml que asigna comandos a frases concretas. Por ejemplo, un usuario podría tocar el botón Inicio y decir “Contoso Books, mostrar más vendidos” para iniciar la aplicación llamada Contoso Books e ir a una página de “más vendidos”.
 
-When you add a `<meta>` element tag that lists the location of your VCD file, Windows automatically downloads and registers the Voice Command Definition file.
+Cuando agregas una etiqueta de elemento `<meta>` que muestra la ubicación del archivo VCD, Windows automáticamente descarga y registra el archivo de definición de comandos de voz.
 
-Here is an example of the use of the tag in an html page in a hosted web app:
+A continuación se muestra un ejemplo del uso de la etiqueta en una página html de una aplicación web hospedada:
 
 ```HTML
 <meta name="msapplication-cortanavcd" content="http:// contoso.com/vcd.xml"/>
 ```
 
-For more info on Cortana integration and VCDs, see Cortana interactions and Voice Command Defintion (VCD) elements and attributes v1.2.
+Para obtener más información sobre la integración de Cortana y los archivos VCD, consulta Interacciones de Cortana y elementos y atributos de definición de comandos de voz (VCD) v1.2.
 
-## Create Hybrid apps – Packaged web apps vs. Hosted web apps
+## Creación de aplicaciones híbridas: Aplicaciones web empaquetadas frente a aplicaciones web hospedados
 
-You have options for creating your UWP app. The app might be designed to be downloaded from the Windows Store and fully hosted on the local client; often referred to as a **Packaged Web App**. This lets you run your app offline on any compatible platform. Or the app might be a fully hosted web app that runs on a remote web server; typically known as a **Hosted Web App**. But there is also a third option: the app can be hosted partially on the local client and partially on a remote web server. We call this third option a **Hybrid app** and it typically uses the **WebView** component to make remote content look like local content. Hybrid apps can include your HTML5, CSS, and Javascript code running as a package inside the local app client and retain the ability to interact with remote content.
+Tienes opciones para crear la aplicación para UWP. La aplicación puede diseñarse para que se descargue desde la Tienda Windows y se hospede en su totalidad en el cliente local. Esto normalmente se denomina **aplicación web empaquetada**. Esto te permite ejecutar la aplicación sin conexión en cualquier plataforma compatible. La aplicación también puede ser una aplicación web completamente hospedada que se ejecute en un servidor web remoto. Esto normalmente se conoce como una **aplicación web hospedada**. Pero también hay una tercera opción: la aplicación puede hospedarse parcialmente en el cliente local y parcialmente en un servidor web remoto. A esta tercera opción la denominamos una **aplicación híbrida** y normalmente se usa el componente **WebView** para hacer que el contenido remoto parezca contenido local. Las aplicaciones híbridas pueden incluir el código de HTML5, CSS y Javascript que se ejecute como un paquete dentro del cliente de la aplicación local y conservar la posibilidad de interactuar con el contenido remoto.
 
-## Web authentication broker
+## Agente de autenticación web
 
-You can use the web authentication broker to handle the login flow for your users if you have an online identity provider that uses internet authentication and authorization protocols like OpenID or OAuth. You specify the start and end URIs in a `<meta>` tag on an html page in your app. Windows detects these URIs and passes them to the web authentication broker to complete the login flow. The start URI consists of the address where you send the authentication request to your online provider appended with other required information, such as an app ID, a redirect URI where the user is sent after completing authentication, and the expected response type. You can find out from your provider what parameters are required. Here is an example use of the `<meta>` tag:
+Puedes usar al agente de autenticación web para controlar el flujo de inicio de sesión para los usuarios si tienes un proveedor de identidad en línea que use protocolos de autorización y autenticación de Internet como OpenID o OAuth. Los URI de inicio y final se especifican en una etiqueta `<meta>` en una página html de la aplicación. Windows detecta estos URI y los pasa al agente de autenticación web para completar el flujo de inicio de sesión. El URI de inicio consta de la dirección desde la que envías la solicitud de autenticación a tu proveedor en línea anexada con otra información obligatoria, como un identificador de la aplicación, un URI de redirección donde se envía al usuario después de completar la autenticación, y el tipo de respuesta esperado. Puedes preguntarle al proveedor qué parámetros se requieren. A continuación se muestra un ejemplo del uso de la etiqueta `<meta>`:
 
 ```HTML
 <meta name="ms-webauth-uris" content="https://<providerstartpoint>?client_id=<clientid>&response_type=token, https://<appendpoint>"/>
 ```
 
-For more guidance, see [Web authentication broker considerations for online providers](https://msdn.microsoft.com/library/windows/apps/dn448956.aspx).
+Para obtener más instrucciones, consulta [Consideraciones sobre el agente de autenticación web para proveedores en línea](https://msdn.microsoft.com/library/windows/apps/dn448956.aspx).
 
-## App capability declarations
+## Declaraciones de funcionalidades de las aplicaciones
 
-If your app needs programmatic access to user resources like pictures or music, or to devices like a camera or a microphone, you must declare the appropriate capability. There are three app capability declaration categories: 
+Si tu aplicación necesita acceso mediante programación a recursos del usuario, como imágenes o música, o a dispositivos como una cámara o un micrófono, debes declarar la funcionalidad apropiada. Existen 3 categorías de declaración de funcionalidad de aplicación: 
 
-- [General-use capabilities](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#General-use_capabilities) that apply to most common app scenarios. 
-- [Device capabilities](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Device_capabilities) that allow your app to access peripheral and internal devices. 
-- [Special-use capabilities](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Special_and_restricted_capabilities) that require a special company account for submission to the Store to use them. 
+- [Funcionalidades de uso general](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#General-use_capabilities) que se aplican a la los escenarios de aplicaciones más habituales. 
+- [Funcionalidades de dispositivo](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Device_capabilities) que permiten a tu aplicación acceder a periféricos y dispositivos internos. 
+- [Funcionalidades de uso especial](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Special_and_restricted_capabilities) que requieren una cuenta de empresa especial para su envío a la Tienda para usarlas. 
 
-For more info about company accounts, see [Account types, locations, and fees](https://msdn.microsoft.com/library/windows/apps/jj863494.aspx).
+Para obtener más información sobre las cuentas de empresa, consulta [Tipos de cuenta, ubicaciones y precios](https://msdn.microsoft.com/library/windows/apps/jj863494.aspx).
 
 > [!NOTE]
-> It is important to know that when customers get your app from the Windows Store, they are notified of all the capabilities that the app declares. So do not use capabilities that your app does not need.
+> Es importante saber que cuando los clientes compren tu aplicación en la Tienda Windows, se les notificarán todas las funcionalidades que la aplicación declara. Por lo tanto, no uses funcionalidades que la aplicación no necesite.
 
-You request access by declaring capabilities in your app’s [package manifest](https://msdn.microsoft.com/library/windows/apps/br211474.aspx). You can declare general capabilities by using the [Manifest Designer](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx#Configure) in Microsoft Visual Studio, or you can add them manually—-see [How to specify capabilities in a package manifest](https://msdn.microsoft.com/library/windows/apps/br211477.aspx).
+El acceso se solicita mediante la declaración de funcionalidades en el [manifiesto del paquete](https://msdn.microsoft.com/library/windows/apps/br211474.aspx) de la aplicación. Puedes declarar las funcionalidades generales usando el [Diseñador de manifiestos](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx#Configure) en Microsoft Visual Studio o puedes agregarlas manualmente; consulta [Cómo especificar funcionalidades en un manifiesto del paquete](https://msdn.microsoft.com/library/windows/apps/br211477.aspx).
 
-Some capabilities provide apps access to a sensitive resource. These resources are considered sensitive because they can access the user’s personal data or cost the user money. Privacy settings, managed by the Settings app, let the user dynamically control access to sensitive resources. Thus, it’s important that your app doesn’t assume a sensitive resource is always available. For more info about accessing sensitive resources, see [Guidelines for privacy-aware apps](https://msdn.microsoft.com/library/windows/apps/hh768223.aspx).
+Algunas funcionalidades proporcionan acceso a las aplicaciones a un recurso con información confidencial. Estos recursos se consideran confidenciales porque pueden acceder a datos personales del usuario o costarle dinero. La configuración de privacidad, administrada por la aplicación Configuración, permite al usuario controlar dinámicamente el acceso a recursos con información confidencial. Por lo tanto, es importante que la aplicación no suponga que un recurso con información confidencial está siempre disponible. Para obtener más información sobre cómo acceder a recursos confidenciales, consulta las [Directrices para aplicaciones compatibles con la privacidad](https://msdn.microsoft.com/library/windows/apps/hh768223.aspx).
 
-## manifoldjs and the app manifest
+## manifoldjs y el manifiesto de la aplicación
 
-An easy way to turn your website into a UWP app is to use an **app manifest** and **manifoldjs**. The app manifest is an xml file that contains metadata about the app. It specifies such things as the app’s name, links to resources, display mode, URLs, and other data that describes how the app should be deployed and run. manifoldjs makes this process very easy, even on systems that do not support web apps. Please go to [manifoldjs.com](http://www.manifoldjs.com/) for more information on how it works. You can also view a manifoldjs demonstration as part of this [Windows 10 Web Apps presentation](http://channel9.msdn.com/Events/WebPlatformSummit/2015/Hosted-web-apps-and-web-platform-innovations?wt.mc_id=relatedsession).
+Una manera sencilla de convertir tu sitio web en una aplicación para UWP es usar un **manifiesto de la aplicación** y **manifoldjs**. El manifiesto de la aplicación es un archivo xml que contiene metadatos sobre la aplicación. Especifica puntos como el nombre de la aplicación, vínculos a recursos, el modo de visualización, las direcciones URL y otros datos que describen cómo se debería implementar y ejecutar la aplicación. manifoldjs hace que este proceso sea muy sencillo, incluso en los sistemas que no admitan las aplicaciones web. Para obtener más información sobre su funcionamiento, visita [manifoldjs.com](http://www.manifoldjs.com/). También puedes ver una demostración de manifoldjs como parte de esta [presentación de aplicaciones web para Windows10](http://channel9.msdn.com/Events/WebPlatformSummit/2015/Hosted-web-apps-and-web-platform-innovations?wt.mc_id=relatedsession).
 
-## Related topics
-- [Windows Runtime API: JavaScript Code Samples](http://rjs.azurewebsites.net/)
-- [Codepen: sandbox to use for calling Windows Runtime APIs](http://codepen.io/seksenov/pen/wBbVyb/)
-- [Cortana interactions](https://msdn.microsoft.com/library/windows/apps/dn974231.aspx)
-- [Voice Command Definition (VCD) elements and attributes v1.2](https://msdn.microsoft.com/library/windows/apps/dn954977.aspx)
-- [Web authentication broker considerations for online providers](https://msdn.microsoft.com/library/windows/apps/dn448956.aspx)
-- [App capability declarations](https://msdn.microsoft.com/ibrary/windows/apps/hh464936.aspx)
+## Temas relacionados
+- [API de Windows Runtime: Muestras de código JavaScript](http://rjs.azurewebsites.net/)
+- [Codepen: Espacio aislado que usar para llamar a las API de Windows Runtime](http://codepen.io/seksenov/pen/wBbVyb/)
+- [Interacciones de Cortana](https://msdn.microsoft.com/library/windows/apps/dn974231.aspx)
+- [Elementos y atributos de definición de comandos de voz (VCD) v1.2](https://msdn.microsoft.com/library/windows/apps/dn954977.aspx)
+- [Consideraciones sobre el agente de autenticación web para proveedores en línea](https://msdn.microsoft.com/library/windows/apps/dn448956.aspx)
+- [Declaraciones de funcionalidades de las aplicaciones](https://msdn.microsoft.com/ibrary/windows/apps/hh464936.aspx)
+
+
+<!--HONumber=Aug16_HO3-->
+
+

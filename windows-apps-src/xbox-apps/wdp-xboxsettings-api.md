@@ -3,8 +3,8 @@ author: payzer
 title: "Referencia de API de configuración de desarrollador de Xbox de Device Portal"
 description: "Obtén información sobre cómo tener acceso a la configuración de desarrollador de Xbox."
 translationtype: Human Translation
-ms.sourcegitcommit: a9a2b6e58dfa0d1e77164a59f204deabf8f5c3e0
-ms.openlocfilehash: e3637f5a8481c0800af42c011fb811b908b946b1
+ms.sourcegitcommit: c51eff41e63d815f6298b4fc46a9b11314bc8bc9
+ms.openlocfilehash: 5a983714cda9b5a5f45e555e2cb6f980f082a003
 
 ---
 
@@ -60,9 +60,9 @@ Puedes usar la siguiente solicitud para obtener información acerca de una opci�
 
 Método      | URI de la solicitud
 :------     | :-----
-GET | /ext/settings/<setting name>
+GET | /ext/settings/\<setting name\>
 <br />
-**Parámetros del URI**
+**Parámetros de URI**
 
 - Ninguno
 
@@ -101,9 +101,9 @@ Puedes usar la siguiente solicitud para configurar el valor para una opción de 
 
 Método      | URI de la solicitud
 :------     | :-----
-PUT | /ext/settings/<setting name>
+PUT | /ext/settings/\<setting name\>
 <br />
-**Parámetros del URI**
+**Parámetros de URI**
 
 - Ninguno
 
@@ -137,6 +137,6 @@ Código de estado HTTP      | Descripción
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

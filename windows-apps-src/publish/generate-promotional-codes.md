@@ -1,20 +1,20 @@
 ---
 author: jnHs
-Description: "Puedes generar códigos promocionales para una aplicación o un producto desde la aplicación (IAP) que hayas publicado en la Tienda Windows."
-title: "Genera códigos promocionales"
+Description: "Puedes generar códigos promocionales para una aplicación o complemento que hayas publicado en la Tienda Windows."
+title: "Generar códigos promocionales"
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 translationtype: Human Translation
-ms.sourcegitcommit: df994a3bbda9f6d4df0ee2dd6c2cb646d91a0bfc
-ms.openlocfilehash: bfea802fb4a6efcfe34121802ce49f20a9b0305e
+ms.sourcegitcommit: a92f642b2d28eb801106388648455752c10e013a
+ms.openlocfilehash: cf1f6cf680d4ae57513dde2c6a356e8ba4b1cb56
 
 ---
 
-# Genera códigos promocionales
+# Generar códigos promocionales
 
 
-Puedes generar códigos promocionales para una aplicación o un producto desde la aplicación (IAP) que hayas publicado en la Tienda Windows. Los códigos promocionales son una forma sencilla de ofrecer a usuarios influyentes acceso gratuito a tu aplicación o IAP. También puedes usarlos en situaciones de atención al cliente y ofrecer a los usuarios acceso gratuito a tu aplicación o IAP, o para [realizar pruebas beta](beta-testing-and-targeted-distribution.md) con Windows 10.
+Puedes generar códigos promocionales para una aplicación o un complemento que hayas publicado en la Tienda Windows. Los códigos promocionales son una forma sencilla de ofrecer a usuarios influyentes acceso gratuito a tu aplicación o complemento. También puedes usarlos en situaciones de atención al cliente y ofrecer a los usuarios acceso gratuito a tu aplicación o complemento, o para [realizar pruebas beta](beta-testing-and-targeted-distribution.md) con Windows 10.
 
-Cada código promocional contiene una dirección URL única y canjeable que puedes distribuir a un usuario. El usuario solo tiene que hacer clic en la dirección URL para canjear el código e instalar la aplicación o IAP desde la Tienda Windows.
+Cada código promocional contiene una dirección URL única y canjeable que puedes distribuir a un usuario o a un grupo de usuarios. El usuario solo tiene que hacer clic en la dirección URL para canjear el código e instalar la aplicación o complemento desde la Tienda Windows.
 
 En el panel del Centro de desarrollo de Windows, puedes:
 
@@ -24,31 +24,31 @@ En el panel del Centro de desarrollo de Windows, puedes:
     -   Resúmenes de pedidos de códigos promocionales de todas las aplicaciones en general (en la página **Información general del panel**) y de cada aplicación en particular (en la página **Información general de la aplicación** de cada aplicación).
     -   Un resumen detallado de los pedidos de códigos promocionales de cada aplicación (en la página **Códigos promocionales** de cada aplicación).
 
-> 
-            **Nota**  Puedes generar códigos de promoción incluso si seleccionaste la opción **Ocultar esta aplicación en la tienda e impedir la compra. Los clientes con un código promocional aún pueden descargarla en dispositivos con Windows 10** en la página del panel [Precios y disponibilidad](set-app-pricing-and-availability.md) de tu aplicación. La aplicación debe pasar a la fase final de publicación del [proceso de certificación de aplicaciones](the-app-certification-process.md) antes de que los usuarios puedan canjear un código promocional para instalarla.
+> **Nota** Puedes generar códigos de promoción incluso si seleccionaste la opción **Ocultar esta aplicación en la tienda e impedir la compra. Los clientes con un código promocional aún pueden descargarla en dispositivos con Windows 10** en la página del panel [Precios y disponibilidad](set-app-pricing-and-availability.md) de tu aplicación. La aplicación debe pasar a la fase final de publicación del [proceso de certificación de aplicaciones](the-app-certification-process.md) antes de que los usuarios puedan canjear un código promocional para instalarla.
 
 ## Directivas de códigos promocionales
 
 
 Ten en cuenta las siguientes directivas para los códigos promocionales:
 
--   Puedes generar códigos promocionales para cualquier aplicación o IAP que hayas publicado en la Tienda Windows. Los usuarios pueden canjear los códigos en cualquier versión de Windows compatible con la aplicación o con la IAP.
--   Los códigos promocionales expiran seis meses después de la fecha en que los pediste.
--   Cada 6 meses puedes generar hasta 500 códigos promocionales para cada una de tus aplicaciones o IAP. El período de 6 meses comienza en la fecha en que se envía el primer pedido de códigos promocionales.
+-   Puedes generar códigos promocionales para cualquier aplicación o complemento que hayas publicado en la Tienda Windows. Los usuarios pueden canjear los códigos en cualquier versión de Windows compatible con la aplicación o complemento.
+-   Los códigos promocionales expiran seis meses después de la fecha de su pedido (a menos que elijas una fecha de expiración anterior).
+-   Cada 6 meses, puedes generar hasta 500 códigos promocionales para cada una de tus aplicaciones o complementos. El período de 6 meses comienza en la fecha en que se envía el primer pedido de códigos promocionales.
 -   Debes seguir los requisitos definidos en el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058), incluida la sección **3k. Códigos promocionales**.
 
-## Pedido de códigos promocionales
+## Pedir códigos promocionales
 
 
-Para pedir códigos promocionales para una aplicación o IAP que has publicado en la Tienda Windows:
+Para pedir códigos promocionales para una aplicación o complemento que has publicado en la Tienda Windows:
 
 1.  En el panel del Centro de desarrollo de Windows, realiza una de las siguientes acciones:
-    -   En la página de tu aplicación **Introducción general de la aplicación**, busca la sección **Códigos promocionales** y haz clic en **Pedir códigos**.
-    -   En cualquier página del panel de la aplicación, en el menú de navegación izquierdo, expande **Rentabilidad** y haz clic en **Códigos promocionales**. En la página **Códigos promocionales**, haz clic en **Pedir códigos**.
+    -   En la página de tu aplicación **Introducción general de la aplicación**, busca la sección **Códigos promocionales** y haz clic en **Manage codes**.
+    -   En cualquier página del panel de la aplicación, en el menú de navegación izquierdo, expande **Monetización** y haz clic en **Códigos promocionales**. En la página **Códigos promocionales**, haz clic en **Pedir códigos**.
 
 2.  En la página **Nuevo pedido de códigos promocionales**, escribe lo siguiente:
-    -   Selecciona la aplicación o IAP para la que quieres generar códigos.
-    -   Especifica un nombre para el pedido. Este nombre te servirá para diferenciar los diferentes pedidos de códigos cuando revises los datos de uso de los códigos promocionales.
+    -   Selecciona la aplicación o complemento para el que quieras generar códigos.
+    -   Especifica un nombre para el pedido. Este nombre te servirá para diferenciar distintos pedidos de códigos cuando revises los datos de uso de los códigos promocionales.
+    -   Selecciona el tipo de pedido. Puedes elegir generar un conjunto de códigos de promoción que pueden utilizarse una vez o generar un código de promoción que puede usarse varias veces.
     -   Especifica cuántos códigos quieres pedir.
     -   Especifica cuándo deben activarse los códigos promocionales. Para elegir una determinada fecha y hora de inicio, desactiva la casilla **Los códigos están activos inmediatamente**.
     -   Especifica cuándo deben expirar los códigos promocionales. Para elegir una fecha y hora de expiración específicas, desactiva la casilla **Los códigos expiran después de seis meses**.
@@ -68,37 +68,26 @@ Para descargar un pedido completado y distribuir los códigos promocionales a lo
 
     El archivo contiene las siguientes columnas de datos para cada código:
 
-    -   
-            **Nombre del producto**: es el nombre de la aplicación o la IAP con el que está asociado el código.
-    -   
-            **Nombre del pedido**: es el nombre del pedido con el que se suministró este código.
-    -   
-            **Código promocional**: es el propio código. Se trata de una cadena de 5 x 5 caracteres alfanuméricos separados por guiones. Por ejemplo:
+    -   **Nombre del producto**: es el nombre de la aplicación o complemento con el que está asociado el código.
+    -   **Nombre del pedido**: es el nombre del pedido con el que se suministró este código.
+    -   **Código promocional**: es el propio código. Se trata de una cadena de 5 x 5 caracteres alfanuméricos separados por guiones. Por ejemplo:
 
         DM3GY M2GYM 6YMW6 4QHHT 23W2Z
 
-    -   
-            **Dirección URL canjeable**: es la dirección URL en la que el usuario puede canjear el código e instalar la aplicación o la IAP. La dirección URL tiene el siguiente formato:
+    -   **Dirección URL canjeable**: es la dirección URL en la que el usuario puede canjear el código e instalar la aplicación o complemento. La dirección URL tiene el siguiente formato:
 
         https://account.microsoft.com/billing/redeem?mstoken=&lt;promotional_code>
 
-    -   
-            **Fecha de inicio**: la fecha en la que se inicia este código.
-    -   
-            **Fecha de expiración**: es la fecha de expiración de este código.
-    -   
-            **Id. de código**: es un identificador único de este código.
-    -   
-            **Id. de pedido**: es un identificador único del pedido en el que se suministró este código.
-    -   
-            **Entregado a**: es un campo vacío que puedes rellenar con un valor que identifique al usuario al que se le dio el código.
-    -   
-            **Disponible**: el número de códigos que siguen estando disponibles para su canjeo.
-    -   
-            **Canjeado**: el número de códigos que se han canjeado.
+    -   **Fecha de inicio**: la fecha en la que se inicia este código.
+    -   **Fecha de expiración**: es la fecha de expiración de este código.
+    -   **Id. de código**: es un identificador único de este código.
+    -   **Id. de pedido**: es un identificador único del pedido en el que se suministró este código.
+    -   **Entregado a**: es un campo vacío que puedes rellenar con un valor que identifique al usuario al que se le dio el código.
+    -   **Disponible**: el número de códigos que siguen estando disponibles para canjearlos.
+    -   **Canjeado**: el número de códigos que se han canjeado.
 
 4.  Distribuye las direcciones URL canjeables a los usuarios mediante el formato de comunicación que prefieras (por ejemplo, correo electrónico, mensaje SMS o tarjetas impresas). Te recomendamos que incluyas lo siguiente en la comunicación:
-    -   Una explicación de para qué aplicación o IAP es el código promocional y, de forma opcional, una descripción de por qué el usuario recibe el código.
+    -   Una explicación de para qué aplicación o complemento es el código promocional y, de forma opcional, una descripción de por qué el usuario recibe el código.
     -   La dirección URL canjeable para el código.
     -   Instrucciones que guíen al usuario para que visite la dirección URL canjeable, inicie sesión con su cuenta Microsoft y siga las instrucciones para descargar e instalar la aplicación.
 
@@ -113,19 +102,17 @@ Ya has distribuido a un usuario una dirección URL canjeable; los siguientes pas
 
 2.  El usuario hace clic en **Canjear.**
 
-    El explorador abre una página de **agradecimiento** con un vínculo denominado **Obtén*****&lt;nombre de la aplicación&gt;***.
+    El explorador abre una página de **agradecimiento** con un vínculo denominado **Obtener** ***&lt;nombre de la aplicación&gt;***.
 
-    > 
-            **Nota**  Los usuarios recibirán un error en este paso si la aplicación no está publicada aún.
+    > **Nota** Los usuarios recibirán un error en este paso si la aplicación no está publicada aún.
 
-3.  El usuario debe hacer clic en **Obtén*****&lt;nombre de la aplicación&gt;***.
+3.  El usuario debe hacer clic en **Obtener** ***&lt;nombre de la aplicación&gt;***.
 
 4.  Si el usuario está usando un equipo que tiene instalada la Tienda Windows para Windows 10 o para Windows 8.1, se abrirá la Tienda Windows en la página de información general de la aplicación. El usuario puede hacer clic en **Instalar** para instalar la aplicación de forma gratuita.
 
     Si, por el contrario, el usuario está usando un equipo o dispositivo que no tiene la Tienda de Windows instalada, el explorador se abre en la página web de la Tienda Windows de la aplicación. El usuario puede hacer clic en **Instalar** para instalar la aplicación de forma gratuita.
 
-    > 
-            **Nota**  En algunos casos la página de la aplicación podría mostrar un botón **Comprar** en lugar de **Instalar**, incluso si la aplicación se canjeó correctamente mediante el código promocional. El usuario puede hacer clic en **Comprar** para instalar la aplicación de forma gratuita.
+    > **Nota**  En algunos casos, la página de la aplicación podría mostrar un botón **Comprar** en lugar de **Instalar**, incluso si la aplicación se canjeó correctamente mediante el código promocional. El usuario puede hacer clic en **Comprar** para instalar la aplicación de forma gratuita.
 
 ## Revisar los códigos promocionales
 
@@ -136,7 +123,7 @@ Hay varias formas de revisar el uso de los códigos promocionales.
 -   Para ver un resumen de los pedidos de códigos promocionales de una aplicación específica, ve a la página **Información general de la aplicación** y localiza la sección **Códigos promocionales**. Esta sección muestra los códigos promocionales activos restantes para la aplicación, el número total de códigos promocionales canjeados para la aplicación y el número total de pedidos de códigos promocionales que has realizado para la aplicación.
 -   Para ver un resumen detallado de los pedidos de códigos promocionales de una aplicación específica, ve a la página **Códigos promocionales** de la aplicación (para ello, expande **Monetización** y haz clic en **Códigos promocionales**). Puedes revisar la siguiente información sobre todos los códigos promocionales actuales e inactivos de la aplicación:
     -   Nombre del pedido
-    -   Nombre de la aplicación o IAP
+    -   Nombre de la aplicación o complemento
     -   Fecha del pedido
     -   Fecha de expiración
     -   Estado
@@ -153,6 +140,6 @@ También puedes descargar un pedido activo desde esta tabla.
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

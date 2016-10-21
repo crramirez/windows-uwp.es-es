@@ -3,15 +3,16 @@ author: mtoepke
 title: "Optimización de la latencia de entrada en juegos DirectX de la Plataforma universal de Windows (UWP)"
 description: "La latencia de entrada puede influir tremendamente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida en el juego."
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 19bcf043f3fc8c729f5f9fbbeee237bd1749443d
+ms.openlocfilehash: ae99f88126192866ed18df55497af6390bc38c26
 
 ---
 
 #  Optimización de la latencia de entrada en juegos DirectX de la Plataforma universal de Windows (UWP)
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 La latencia de entrada puede influir tremendamente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida. Además, una correcta optimización de los eventos de entrada contribuye a mejorar la vida de la batería. Aprende a elegir las opciones adecuadas de procesamiento de eventos de entrada de CoreDispatcher, para garantizar que el juego controle las entradas de la forma más fluida posible.
 
@@ -260,6 +261,6 @@ Lo que deducimos de estos diagramas es que existe la posibilidad de reducir la l
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

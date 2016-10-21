@@ -3,8 +3,9 @@ author: TylerMSFT
 title: "Iniciar una aplicación para obtener resultados"
 description: "Aprende a iniciar una aplicación desde otra aplicación e intercambiar datos entre las dos. Esto se denomina iniciar una aplicación para obtener resultados."
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
+translationtype: Human Translation
 ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
-ms.openlocfilehash: 5826b370df3dccd1590e3f67c15126b4e78c2c32
+ms.openlocfilehash: d8d7f73e06d627eaa53deaf26f778c122113a9d6
 
 ---
 
@@ -32,12 +33,9 @@ En el archivo Package.appxmanifest de la aplicación iniciada, agrega una extens
 
 El atributo **ReturnResults** de la extensión de protocolo acepta uno de estos valores:
 
--   
-            **optional**: es posible iniciar la aplicación para obtener resultados mediante el método [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686), o para no obtenerlos, si se usa [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476). Cuando se usa **optional**, la aplicación iniciada debe determinar si se inició para obtener resultados. Puede hacerlo si comprueba el argumento del evento [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330). Si la propiedad [**IActivatedEventArgs.Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) del argumento devuelve [**ActivationKind.ProtocolForResults**](https://msdn.microsoft.com/library/windows/apps/br224693)o si el tipo del argumento del evento es [**ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742), la aplicación se inició mediante **LaunchUriForResultsAsync**.
--   
-            **always**: la aplicación solo se puede iniciar para obtener resultados, es decir, solo puede responder a [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686).
--   
-            **none**: la aplicación no se puede iniciar para obtener resultados; solo puede responder a [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476).
+-   **optional**: es posible iniciar la aplicación para obtener resultados mediante el método [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) o para no obtenerlos, con [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476). Cuando se usa **optional**, la aplicación iniciada debe determinar si se inició para obtener resultados. Puede hacerlo si comprueba el argumento del evento [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330). Si la propiedad [**IActivatedEventArgs.Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) del argumento devuelve [**ActivationKind.ProtocolForResults**](https://msdn.microsoft.com/library/windows/apps/br224693)o si el tipo del argumento del evento es [**ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742), la aplicación se inició mediante **LaunchUriForResultsAsync**.
+-   **always**: la aplicación solo se puede iniciar para obtener resultados, es decir, solo puede responder a [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686).
+-   **none**: la aplicación no se puede iniciar para obtener resultados; solo puede responder a [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476).
 
 En este ejemplo de extensión de protocolo, la aplicación solo puede iniciarse para obtener resultados. Esto simplifica la lógica dentro del método **OnActivated**, que se explica a continuación, ya que solo hay que controlar el caso "iniciado para obtener resultados" y no el resto de maneras mediante las que se pudo activar la aplicación.
 
@@ -206,6 +204,6 @@ Después, pásalo a la aplicación iniciada mediante **LaunchUriForResultsAsync*
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

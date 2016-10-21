@@ -4,8 +4,8 @@ ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
 description: "En este artículo se enumera la compatibilidad con formatos y códecs de vídeo para aplicaciones para UWP."
 title: "Códecs admitidos"
 translationtype: Human Translation
-ms.sourcegitcommit: b4d6a9f7cc8b343ee1cbd31bcfd8f19e329c82dc
-ms.openlocfilehash: 00fbbdde8d805ce7ae07df1d52dd8171de7d58ab
+ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
+ms.openlocfilehash: 0f6da61ba167328968694d240e250dbc454d5e7b
 
 ---
 
@@ -22,8 +22,8 @@ En las tablas siguientes, "D" indica compatibilidad con el descodificador y "E" 
 
 Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio para cada familia de dispositivos.
 
-**Nota**  
--   Cuando se indique compatibilidad con AMR NB, este códec no es compatible con los SKU de servidor.
+> [!NOTE] 
+> Cuando se indique compatibilidad con AMR NB, este códec no es compatible con los SKU de servidor.
 
  
 
@@ -1586,9 +1586,9 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 
 Las siguientes tablas muestran la compatibilidad con los formatos y los códecs de vídeo para cada familia de dispositivos.
 
-**Nota**  
--   Cuando se indique compatibilidad con H.265, no indica necesariamente compatibilidad con toda la familia de dispositivos.
--   Si se indica la compatibilidad con MPEG-2/MPEG-1, solo se admite con la instalación de la aplicación opcional de Windows Microsoft DVD Universal.
+> [!NOTE] 
+> Cuando se indique compatibilidad con H.265, no indica necesariamente compatibilidad con toda la familia de dispositivos.
+> Si se indica la compatibilidad con MPEG-2/MPEG-1, solo se admite con la instalación de la aplicación opcional de Windows Microsoft DVD Universal.
 
  
 
@@ -2697,6 +2697,6 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

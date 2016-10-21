@@ -4,8 +4,8 @@ title: "Guía de desarrollo de juegos para Windows 10"
 description: "Una guía completa sobre los recursos y la información que necesitas para el desarrollo de juegos para la Plataforma universal de Windows (UWP)."
 ms.assetid: 6061F498-96A8-44EF-9711-68AE5A1218C9
 translationtype: Human Translation
-ms.sourcegitcommit: a9beb420ac13eb74c0109b30508e49d5305bc67c
-ms.openlocfilehash: 30f8408e6d125423e69615a3f9341e8f7d886fc8
+ms.sourcegitcommit: 1c3f222b4b3ddb14a48cef138984b07ac58cc66b
+ms.openlocfilehash: 7bc6694f94eeeb6188470fee00d432b2d71e52e6
 
 ---
 
@@ -33,8 +33,7 @@ Esta guía se actualizará a medida que recursos de desarrollo de juegos para Wi
 
 Desde la documentación hasta los programas, foros, blogs y muestras para desarrolladores, hay muchos recursos disponibles que te ayudarán en tu camino de desarrollo de juegos. Este es un resumen de los recursos que deberías conocer antes de comenzar a desarrollar tu juego para Windows 10.
 
-> 
-              **Nota** El desarrollo de Xbox One y ciertas funciones de juegos para Windows 10 (por ejemplo, Servicios de Xbox Live) se administran a través de programas como ID@Xbox y Microsoft Studios. En esta guía se cubre una amplia gama de recursos, por lo que es posible que algunos recursos no sean accesibles según el programa en el que participas o tu rol de desarrollo concreto. Las muestras son vínculos que te dirigen a developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com o el portal Game Developer Network (GDN). Para información sobre cómo asociarte con Microsoft, consulta [Programas de desarrolladores](#programs).
+> **Nota** El desarrollo para Xbox One y ciertas funciones de juego para Windows 10 (por ejemplo, Servicios de Xbox Live) se administran a través de programas como ID@Xbox y Microsoft Studios. En esta guía se cubre una amplia gama de recursos, por lo que es posible que algunos recursos no sean accesibles según el programa en el que participas o tu rol de desarrollo concreto. Las muestras son vínculos que te dirigen a developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com o el portal Game Developer Network (GDN). Para información sobre cómo asociarte con Microsoft, consulta [Programas de desarrolladores](#programs).
 
 ### Documentación sobre el desarrollo de juegos
 
@@ -62,8 +61,12 @@ A lo largo de esta guía, encontrarás vínculos profundos a documentación impo
         <td>[Juegos y DirectX](index.md) </td>
     </tr>
     <tr>
-        <td>Información general y referencia sobre DirectX</td>
-        <td>[Juegos y gráficos de DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274)</td>
+        <td>Información general y referencias sobre DirectX</td>
+        <td>[Juegos y elementos gráficos de DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274)</td>
+    </tr>
+    <tr>
+        <td>UWP en Xbox One</td>
+        <td>[Compilación de aplicaciones para UWP en Xbox One](https://msdn.microsoft.com/windows/uwp/xbox-apps/index)</td>
     </tr>
     <tr>
         <td>Documentación de Xbox Live</td>
@@ -71,11 +74,11 @@ A lo largo de esta guía, encontrarás vínculos profundos a documentación impo
     </tr>
     <tr>
         <td>Documentación para desarrolladores de Xbox One (GDN)</td>
-        <td>[Documentación sobre Xbox One XDK](https://developer.xboxlive.com/platform/development/documentation/Pages/home.aspx)</td>
+        <td>[Documentación sobre Xbox One XDK](https://developer.xboxlive.com/en-us/platform/development/documentation/Pages/home.aspx)</td>
     </tr>
     <tr>
         <td>Notas del producto para desarrolladores de Xbox One (GDN)</td>
-        <td>[Notas del producto](https://developer.xboxlive.com/platform/development/education/Pages/WhitePapers.aspx)</td>
+        <td>[Notas del producto](https://developer.xboxlive.com/en-us/platform/development/education/Pages/WhitePapers.aspx)</td>
     </tr>     
 </table>
 
@@ -83,7 +86,7 @@ A lo largo de esta guía, encontrarás vínculos profundos a documentación impo
 
 Microsoft ofrece varios programas para desarrollador que te ayudarán a desarrollar y publicar juegos para Windows. Para publicar un juego en la Tienda Windows, tendrás que crear una cuenta de desarrollador en el Centro de desarrollo de Windows. Otros programas pueden ser de interés según las necesidades de tu juego y estudio, pueden crear oportunidades, como el desarrollo para Xbox One y la integración de Xbox Live.
 
-### Centro de desarrollo de Windows
+#### Centro de desarrollo de Windows
 
 Registrar una cuenta de desarrollador en el Centro de desarrollo de Windows es el primer paso para publicar tu juego para Windows. Una cuenta de desarrollador te permite reservar el nombre de tu juego y enviar juegos gratuitos o de pago a la TiendaWindows para todos los dispositivos Windows. Usa tu cuenta de desarrollador para administrar tu juego y productos desde el juego, obtener análisis detallados y habilitar servicios que crean fantásticas experiencias para tus jugadores en todo el mundo.
 
@@ -96,10 +99,9 @@ Registrar una cuenta de desarrollador en el Centro de desarrollo de Windows es e
         <td>Registrar una cuenta de desarrollador</td>
         <td>[¿Estás listo para registrarte?](https://msdn.microsoft.com/library/windows/apps/bg124287)</td>
     </tr> 
-</table>  
+</table>
 
-
-### ID@Xbox
+#### ID@Xbox
 
 El programa ID@Xbox ayuda a los desarrolladores de juegos calificados a publicar en Windows y Xbox One. Si quieres desarrollar para Xbox One o agregar funciones de Xbox Live, como puntuaciones de jugador, logros y marcadores, a tu juego para Windows 10, regístrate ahora en ID@Xbox. Conviértete en un desarrollador de ID@Xbox para obtener las herramientas y el soporte técnico necesarios para desarrollar tu creatividad y maximizar tu éxito. Antes presentarte para unirte a ID@Xbox, registra una cuenta de desarrollador en el Centro de desarrollo de Windows.
 
@@ -113,31 +115,14 @@ El programa ID@Xbox ayuda a los desarrolladores de juegos calificados a publicar
         <td>[Programa para desarrolladores independientes para Xbox One](http://go.microsoft.com/fwlink/p/?LinkID=526271)</td>
     </tr>
     <tr>
-        <td>Sitio para el consumidor ID@Xbox</td>
+        <td>Sitio para el consumidor de ID@Xbox</td>
         <td>[ID@Xbox](http://www.idatxbox.com/)</td>
     </tr>
 </table>
 
+#### Herramientas y software intermedio para Xbox
 
-### Programa de acceso anticipado a DirectX
-
-Los desarrolladores de juegos profesionales que quieran versiones preliminares tempranas de los cambios en la API de Direct3D 12 y ofrecen comentarios en los foros de pueden unirse al programa de acceso anticipado a DirectX.
-
-<table>
-    <colgroup>
-    <col width="50%" />
-    <col width="50%" />
-    </colgroup>
-    <tr>
-        <td>Registrarse en el programa de acceso anticipado a DirectX 12</td>
-        <td>[Programa de acceso anticipado a DirectX](http://1drv.ms/1dgelm6)</td>
-    </tr>
-</table>
-
-
-### Herramientas y de software intermedio para Xbox
-
-El programa Herramientas y software intermedio para Xbox ofrece licencias de kits de desarrollo para Xbox a los desarrolladores profesionales de herramientas y software intermedio de juegos. Los desarrolladores que se aceptan en el programa pueden compartir y distribuir sus tecnologías Xbox XDK a otros desarrolladores de Xbox con licencia.
+El programa Herramientas y software intermedio para Xbox ofrece licencias de kits de desarrollo para Xbox a los desarrolladores profesionales de herramientas y software intermedio de juego. Los desarrolladores que se aceptan en el programa pueden compartir y distribuir sus tecnologías Xbox XDK a otros desarrolladores de Xbox con licencia.
 
 <table>
     <colgroup>
@@ -161,15 +146,23 @@ Hay muchas muestras de juegos y aplicaciones para Windows 10 disponibles que te 
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Muestras de aplicaciones de la Plataforma universal de Windows</td>
-        <td>[Muestras universales de Windows](https://github.com/Microsoft/Windows-universal-samples)</td>
+        <td>Muestras de aplicaciones para la Plataforma universal de Windows</td>
+        <td>[Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples)</td>
+    </tr>
+    <tr>
+        <td>Muestras públicas de Xbox Advanced Technology Group</td>
+        <td>[Xbox-ATG-Samples](https://github.com/Microsoft/Xbox-ATG-Samples)</td>
     </tr>
     <tr>
         <td>Muestras de elementos gráficos de Direct3D 12</td>
-        <td>[Muestras gráficos de DirectX](https://github.com/Microsoft/DirectX-Graphics-Samples)</td>
+        <td>[DirectX-Graphics-Samples](https://github.com/Microsoft/DirectX-Graphics-Samples)</td>
     </tr>
     <tr>
-        <td>Muestra de juego de primera persona en Direct3D 11</td>
+        <td>Muestras de elementos gráficos de Direct3D 11</td>
+        <td>[directx-sdk-samples](https://github.com/walbourn/directx-sdk-samples)</td>
+    </tr>
+    <tr>
+        <td>Muestra de juego en primera persona en Direct3D 11</td>
         <td>[Crear un juego para UWP sencillo con DirectX](tutorial--create-your-first-metro-style-directx-game.md)</td>
     </tr>
     <tr>
@@ -186,7 +179,7 @@ Hay muchas muestras de juegos y aplicaciones para Windows 10 disponibles que te 
     </tr>
     <tr>
         <td>Muestras de juego para Xbox One (GDN)</td>
-        <td>[Muestras](https://developer.xboxlive.com/platform/development/education/Pages/Samples.aspx)</td>
+        <td>[Muestras](https://developer.xboxlive.com/en-us/platform/development/education/Pages/Samples.aspx)</td>
     </tr>
     <tr>
         <td>Muestras de juegos para Windows 8 (galería de códigos de MSDN)</td>
@@ -586,18 +579,18 @@ Los puentes de plataforma universal de Windows son tecnologías que llevan tu ap
     </tr>
     <tr>
         <td>Puente de Windows para iOS</td>
-        <td>[Lleva tus aplicaciones de iOS a Windows](https://dev.windows.com/bridges/ios)</td>
+        <td>[Migrar aplicaciones para iOS a Windows](https://dev.windows.com/bridges/ios)</td>
     </tr>
     <tr>
-        <td>Versión preliminar del Puente de Windows para .NET y Win32 ("Project Centennial")</td>
-        <td>[Programas Windows Developer Preview](http://go.microsoft.com/fwlink/p/?LinkID=624543)</td>
+        <td>Puente de Windows para aplicaciones de escritorio (.NET y Win32)</td>
+        <td>[Convertir una aplicación de escritorio en una aplicación para UWP](https://developer.microsoft.com/windows/bridges/desktop)</td>
     </tr>
 </table>
  
 
 #### Unity
 
-Unity 5 es la nueva generación de la galardonada plataforma de desarrollo para la creación de experiencias interactivas y de juegos 2D y 3D. Unity 5 te ofrece una nueva potencia artística, funcionalidades de gráficos mejoradas y mayor eficiencia.
+Unity 5 es la última generación de la plataforma de desarrollo galardonada para la creación de experiencias interactivas y juegos en 2D y 3D. Unity 5 te ofrece una nueva potencia artística, funcionalidades de gráficos mejoradas y mayor eficiencia.
 
 En la [guía básica de Unity](https://unity3d.com/unity/roadmap), próximamente se ofrecerá compatibilidad con DirectX 12 en una versión futura de Unity.
 
@@ -620,7 +613,7 @@ En la [guía básica de Unity](https://unity3d.com/unity/roadmap), próximamente
     </tr>
     <tr>
         <td>Documentación de Unity para Windows</td>
-        <td>[Manual de Unity/Windows](http://docs.unity3d.com/Manual/Windows.mdl)</td>
+        <td>[Manual de Unity/Windows](http://docs.unity3d.com/Manual/Windows.html)</td>
     </tr>
     <tr>
         <td>Publicar tu juego Unity como aplicación de la Plataforma universal de Windows (vídeo)</td>
@@ -691,8 +684,7 @@ Cocos2d-X es un motor y conjunto de herramientas de desarrollo de juegos de cód
 
 #### Unreal Engine
 
-Unreal Engine 4 es un conjunto completo de herramientas de desarrollo de juegos para todos los tipos de juegos y desarrolladores. Con Unreal Engine, desarrolladores de juegos de todo el mundo crean los juegos más exigentes para consola y PC. 
-              [Los miembros del programa de acceso anticipado a DirectX 12](#dxeap) que se suscriban a Unreal Engine 4 pueden obtener acceso a un proyecto de desarrollo de Unreal Engine 4.4 que admite DirectX 12.
+Unreal Engine 4 es un conjunto completo de herramientas de desarrollo de juegos para todos los tipos de juegos y desarrolladores. Con Unreal Engine, los desarrolladores de juegos de todo el mundo crean los juegos más exigentes para consola y PC.
 
 <table>
     <colgroup>
@@ -701,14 +693,13 @@ Unreal Engine 4 es un conjunto completo de herramientas de desarrollo de juegos 
     </colgroup>
     <tr>
         <td>Información general sobre Unreal Engine</td>
-        <td>[¿Qué es Unreal Engine 4?](https://www.unrealengine.com/what-is-unreal-engine-4)</td>
+        <td>[Unreal Engine 4](https://www.unrealengine.com/what-is-unreal-engine-4)</td>
     </tr>
 </table>
- 
 
-### Software intermedio y partners
+#### BabylonJS
 
-Hay muchos otros partners de software intermedio y motor que pueden proporcionar soluciones según tus necesidades de desarrollo de juegos.
+BabylonJS es un marco de JavaScript completo para compilar juegos en 3D con HTML5, WebGL y Web Audio.
 
 <table>
     <colgroup>
@@ -716,12 +707,31 @@ Hay muchos otros partners de software intermedio y motor que pueden proporcionar
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Partners de juegos del Centro de desarrollo de Windows</td>
-        <td>[Partners del Centro de desarrollo (juegos)](https://devcenterpartners.windows.com/directory#filter=gaming)</td>
+        <td>BabylonJS</td>
+        <td>[BabylonJS](http://www.babylonjs.com/)</td>
     </tr>
     <tr>
+        <td>WebGL 3D con HTML5 y BabylonJS (serie de vídeos)</td>
+        <td>[Aprender WebGL 3D y BabylonJS](https://channel9.msdn.com/Series/Introduction-to-WebGL-3D-with-HTML5-and-Babylonjs/01)</td>
+    </tr>
+    <tr>
+        <td>Compilar un juego WebGL multiplataforma con BabylonJS</td>
+        <td>[Usar BabylonJS para desarrollar un juego multiplataforma](https://www.smashingmagazine.com/2016/07/babylon-js-building-sponza-a-cross-platform-webgl-game/)</td>
+    </tr>    
+</table>
+
+### Software intermedio y partners
+
+Hay muchos otros partners de software intermedio y motores que pueden proporcionar soluciones según tus necesidades de desarrollo de juegos.
+
+<table>
+    <colgroup>
+    <col width="50%" />
+    <col width="50%" />
+    </colgroup>
+    <tr>
         <td>Partners del Centro de desarrollo de Windows</td>
-        <td>[Partners del Centro de desarrollo](https://devcenterpartners.windows.com/directory)</td>
+        <td>[Partners del Centro de desarrollo](https://developer.microsoft.com/windows/app-middleware-partners)</td>
     </tr>
 </table>
  
@@ -757,7 +767,7 @@ Si tienes un juego existente, hay muchos recursos y guías disponibles que te ay
     </tr>
     <tr>
         <td>Portar un juego de Xbox a una aplicación de la Plataforma universal de Windows</td>
-        <td>[Migrar de Xbox One a UWP de Windows 10](https://developer.xboxlive.com/platform/development/education/Documents/Porting%20from%20Xbox%20One%20to%20Windows%2010.aspx)</td>
+        <td>[Migrar de Xbox One a UWP de Windows 10](https://developer.xboxlive.com/en-us/platform/development/education/Documents/Porting%20from%20Xbox%20One%20to%20Windows%2010.aspx)</td>
     </tr>
     <tr>
         <td>Migrar de DirectX 9 a DirectX 11</td>
@@ -1269,9 +1279,7 @@ Desarrolla juegos internacionales para la plataforma de Windows y obtén informa
     </tr>
 </table>
 
-
 ## Enviar y publicar juegos
-
 
 Las siguientes guías e información ayudan a agilizar lo más posible el proceso de publicación y envío.
 
@@ -1429,8 +1437,7 @@ Para actualizar tu juego publicado, envía un nuevo paquete de la aplicación co
 ## Agregar Xbox Live a tu juego
 
 
-> 
-              **Nota** El desarrollo de Xbox Live se administra a través de programas como ID@Xbox y Microsoft Studios. En esta guía se cubre una amplia gama de recursos y es posible que algunos recursos no sean accesibles según el programa en el que participas o tu rol de desarrollo concreto. Las muestras son vínculos que te dirigen a developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com o el portal Game Developer Network (GDN). Para información sobre cómo asociarte con Microsoft, consulta [Programas de desarrolladores](#programs).
+> **Nota** El desarrollo para Xbox Live se administra a través de programas como ID@Xbox y Microsoft Studios. En esta guía se cubre una amplia gama de recursos y es posible que algunos recursos no sean accesibles según el programa en el que participas o tu rol de desarrollo concreto. Las muestras son vínculos que te dirigen a developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com o el portal Game Developer Network (GDN). Para información sobre cómo asociarte con Microsoft, consulta [Programas de desarrolladores](#programs).
 
 <table>
     <colgroup>
@@ -1499,6 +1506,6 @@ Para actualizar tu juego publicado, envía un nuevo paquete de la aplicación co
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO2-->
 
 

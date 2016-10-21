@@ -1,77 +1,81 @@
 ---
 author: mcleanbyron
 ms.assetid: B0AD0B8E-867E-4403-9CF6-43C81F3C30CA
-description: Use this method in the Windows Store submission API to retrieve package flight information for an app that is registered to your Windows Dev Center account.
-title: Get package flights for an app using the Windows Store submission API
+description: "Usa este método en la API de envío de la Tienda Windows para recuperar la información del paquete piloto de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows."
+title: "Obtener paquetes piloto de una aplicación mediante la API de envío de la Tienda Windows"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: a49e4f2cf7110e12dd33a5baa37e328a39bae348
+
 ---
 
-# Get package flights for an app using the Windows Store submission API
+# Obtener paquetes piloto de una aplicación mediante la API de envío de la Tienda Windows
 
 
 
 
-Use this method in the Windows Store submission API to list the package flights for an app that is registered to your Windows Dev Center account. For more information about package flights, see [Package flights](https://msdn.microsoft.com/windows/uwp/publish/package-flights).
+Usa este método en la API de envío de la Tienda Windows para enumerar los paquetes piloto de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows. Para obtener más información acerca de los paquetes piloto, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).
 
-## Prerequisites
+## Requisitos previos
 
-To use this method, you need to first do the following:
+Para usar este método, primero debes hacer lo siguiente:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
-## Request
+## Solicitud
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Method | Request URI                                                      |
+| Método | URI de la solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights``` |
 
 <span/>
- 
-### Request header
+ 
+### Encabezado de la solicitud
 
-| Header        | Type   | Description                                                                 |
+| Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Request parameters
+### Parámetros de solicitud
 
-| Name        | Type   | Description  |  Required  |    
+| Nombre        | Tipo   | Descripción  |  Obligatorio  |    
 |---------------|--------|----------------------------------|
-| applicationId | string | Required. The Store ID of the app for which you want to retrieve the package flights. For more information about the Store ID, see [View app identity details](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Yes  |
-|  top  |  int  |  The number of items to return in the request (that is, the number of package flights to return). If the app has more package flights than the value you specify in the query, the response body includes a relative URI path that you can append to the method URI to request the next page of data.  |  No  |
-|  skip  |  int  |  The number of items to bypass in the query before returning the remaining items. Use this parameter to page through data sets. For example, top=10 and skip=0 retrieves items 1 through 10, top=10 and skip=10 retrieves items 11 through 20, and so on.  |  No  |
+| applicationId | cadena | Obligatorio. El Id. de la Tienda de la aplicación para la que quieres recuperar los paquetes piloto. Para obtener más información sobre el Id. de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Sí  |
+|  top  |  entero  |  El número de elementos que se devolverán en la solicitud (es decir, el número de paquetes piloto que se devolverán). Si los paquetes piloto de la aplicación superan el valor especificado en la consulta, el cuerpo de la respuesta incluye una ruta de acceso al URI relativa que puedes anexar al URI del método para solicitar la siguiente página de datos.  |  No  |
+|  skip  |  entero  |  El número de elementos que se omitirán en la consulta antes de devolver los elementos restantes. Usa este parámetro para consultar conjuntos de datos. Por ejemplo, top = 10 y skip = 0 recuperan los elementos del 1 al 10, mientras que top = 10 y skip = 10 recuperan los elementos del 11 al 20, y así sucesivamente.  |  No  |
 
 <span/>
 
-### Request body
+### Cuerpo de la solicitud
 
-Do not provide a request body for this method.
+No incluyas un cuerpo de la solicitud para este método.
 
-### Request examples
+### Ejemplos de solicitud
 
-The following example demonstrates how to list all the package flights for an app.
+En el siguiente ejemplo se muestra cómo enumerar todos los paquetes piloto de una aplicación.
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listflights HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-The following example demonstrates how to list the first package flight for an app.
+En el siguiente ejemplo se muestra cómo enumerar el primer paquete piloto de una aplicación.
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listflights?top=1 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## Respuesta
 
-The following example demonstrates the JSON response body returned by a successful request for the first package flight for an app with three total package flights. For more details about the values in the response body, see the following section.
+En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una solicitud correcta para el primer paquete piloto de una aplicación con un total de tres paquetes piloto. Para obtener más información acerca de los valores del cuerpo de respuesta, consulta la siguiente sección.
 
 ```json
 {
@@ -97,30 +101,36 @@ The following example demonstrates the JSON response body returned by a successf
 }
 ```
 
-### Response body
+### Cuerpo de la respuesta
 
-| Value      | Type   | Description                                                                                                                                                                                                                                                                         |
+| Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | string | If there are additional pages of data, this string contains a relative path that you can append to the base ```https://manage.devcenter.microsoft.com/v1.0/my/``` request URI to request the next page of data. For example, if the *top* parameter of the initial request body is set to 2 but there are 4 package flights for the app, the response body will include a @nextLink value of ```applications/{applicationid}/listflights/?skip=2&top=2```, which indicates that you can call ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2``` to request the next 2 package flights. |
-| value      | array  | An array of objects that provide information about package flights for the specified app. For more information about the data in each object, see [Flight resource](get-app-data.md#flight-object).                                                                                                                           |
-| totalCount | int    | The total number of rows in the data result for the query (that is, the total number of package flights for the specified app).                                                                                                                                                                                                                             |
+| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene una ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para solicitar la siguiente página de datos. Por ejemplo, si el parámetro *top* del cuerpo de solicitud inicial se establece en 2, pero hay 4 paquetes piloto de aplicación, el cuerpo de la respuesta incluirá un valor de @nextLink de ```applications/{applicationid}/listflights/?skip=2&top=2```, lo que indica que puedes llamar a ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2``` para solicitar los 2 paquetes piloto siguientes. |
+| value      | matriz  | Una matriz de objetos que proporcionan información acerca de los paquetes piloto de la aplicación especificada. Para obtener más información sobre los datos de cada objeto, consulta [Recurso de piloto](get-app-data.md#flight-object).                                                                                                                           |
+| totalCount | entero    | El número total de filas del resultado de datos de la consulta (es decir, el número total de paquetes piloto de la aplicación especificada).                                                                                                                                                                                                                             |
 
 <span/>
 
-## Error codes
+## Códigos de error
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Si la solicitud no se puede completar correctamente, la respuesta contendrá uno de los siguientes códigos de error HTTP.
 
-| Error code |  Description   |
+| Código de error |  Descripción   |
 |--------|------------------|
-| 404  | No package flights were found. |
-| 409  | The app uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 404  | No se encontró ningún paquete piloto. |
+| 409  | La aplicación usa una característica del panel del Centro de desarrollo que [la API de envío de la Tienda Windows no admite actualmente](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 <span/>
 
-## Related topics
+## Temas relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Get all apps](get-all-apps.md)
-* [Get an app](get-an-app.md)
-* [Get add-ons for an app](get-add-ons-for-an-app.md)
+* [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
+* [Obtener todas las aplicaciones](get-all-apps.md)
+* [Obtener una aplicación](get-an-app.md)
+* [Obtener complementos para una aplicación](get-add-ons-for-an-app.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

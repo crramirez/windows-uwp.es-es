@@ -3,8 +3,9 @@ author: mtoepke
 title: Portar un representador simple de OpenGL ES 2.0 a Direct3D 11
 description: "Para el primer ejercicio de migración, empezaremos con lo más básico - traer un representador simple de OpenGL ES 2.0 a Direct3D para un cubo giratorio con vértices sombreados, de modo tal que coincida con la plantilla DirectX 11 App (Universal Windows) de Visual Studio 2015."
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
+translationtype: Human Translation
 ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
-ms.openlocfilehash: f70d4ec46743d930f8cb45084e55cce2e60e2460
+ms.openlocfilehash: 307b611eece3de6288d67e1e340368763f26fa2e
 
 ---
 
@@ -76,8 +77,7 @@ typedef struct
 
 Esta estructura tiene una sola instancia y contiene todos los componentes necesarios para representar una malla muy simple de vértices sombreados.
 
-> 
-            **Nota** Todo el código de OpenGL ES 2.0 en este tema se basa en la implementación de la API de Windows proporcionada por Khronos Group y usa la sintaxis de programación C de Windows.
+> **Nota**  Todo el código de OpenGL ES 2.0 de este tema se basa en la implementación de la API de Windows proporcionada por Khronos Group y usa la sintaxis de programación C de Windows.
 
  
 
@@ -146,6 +146,6 @@ Esta estructura tiene una sola instancia y contiene todos los componentes necesa
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

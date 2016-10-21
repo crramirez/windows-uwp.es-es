@@ -1,54 +1,64 @@
 ---
-title: Llevar el juego de Unity a Xbox One
 author: JordanEllis6809
-ms.sourcegitcommit: 008ff2566b17a05b52dee0a8cd6c070d841b1f62
-ms.openlocfilehash: cc854bc707a9c08687d3c6d92a704f5099d52d5b
+title: Llevar los juegos Unity a UWP en Xbox
+description: Desarrollo para UWP con Unity en Xbox.
+translationtype: Human Translation
+ms.sourcegitcommit: ea3bea2e5d6de0e55615de701a69e90d81f0f553
+ms.openlocfilehash: 73f701a2608c6ce8d10cab817683ada4e9eecc08
 
 ---
 
-# Llevar el juego de Unity a Xbox One
+# Llevar los juegos Unity a UWP en Xbox
 
-En este tutorial paso a paso, damos por hecho que ya tienes un juego en Unity listo para compilar e implementar.
 
-[Versión en vídeo de este tutorial.](https://www.youtube.com/watch?v=f0Ptvw7k-CE)
+En este tutorial paso a paso, suponemos que ya tienes un juego en Unity listo para compilar e implementar.
 
-## Paso 0: Asegurarse de que Unity esté correctamente instalado
+Consulta también una [versión en vídeo de este tutorial](https://www.youtube.com/watch?v=f0Ptvw7k-CE).
 
-Al instalar Unity, deben seleccionarse estos componentes:
+¿Quieres versionar el proyecto para UWP de Unity? Consulta [Control de versiones del proyecto para UWP](development-lanes-unity-versioning.md).
+
+## Paso 0: Asegurarte de que Unity esté instalado correctamente
+
+Al instalar Unity, deben seleccionarse los siguientes componentes:
 
 ![Componentes de instalación de Unity](images/unity-install-components.png)
 
 ## Paso 1: Compilar la solución para UWP
 
-En el proyecto de juego de Unity, abre las ventanas Configuración de compilación ubicadas en `File -> Build Settings...` y ve al menú de opciones de la Tienda Windows que se muestra a continuación.
+En el proyecto de juego de Unity, abre la ventana **Build Settings** (Configuración de compilación) que se encuentra en **File -> Build Settings** (Archivo -> Configuración de compilación) y ve al menú de opciones de la Tienda Windows.
 
-![Ventana Configuración de compilación](images/build-settings.png)
+![Ventana de configuración de compilación](images/build-settings.png)
 
-Asegúrate de que la opción `SDK` esté establecida en `Universal 10`. A continuación pulsa el botón Compilar de la parte inferior del menú y se abrirá una ventana del explorador que te pedirá que especifiques una carpeta de destino. Crea una carpeta denominada `UWP` en el directorio `Assets` del proyecto y elige esta carpeta como carpeta de destino de la compilación.
+Asegúrate de que la opción **SDK** esté establecida en **Universal 10** y luego selecciona el botón **Build** (Compilar), que iniciará una ventana de Explorador de archivos y solicitará una carpeta de destino. Crea una carpeta denominada **UWP** junto al directorio **Assets** (Activos) del proyecto y elige esta carpeta como carpeta de destino de la compilación.
 
 ![Carpeta de destino de la compilación](images/build-destination.png)
 
-Unity ha creado una nueva solución de Visual Studio que se usará para implementar el juego para UWP a partir del próximo paso.
+Unity ha creado una nueva solución de Visual Studio que usaremos para implementar el juego para UWP.
 
 ![Solución de VS para UWP](images/uwp-vs-solution.png)
 
 ## Paso 2: Implementar el juego
 
-Abre la solución que se acaba de generar en la carpeta `Assets/UWP`.  Una vez abierta, cambia la plataforma de destino a x64.
+Abre la solución recién generada en la carpeta **UWP** y cambia la plataforma de destino a **x64**.
 
 ![Plataforma de compilación x64](images/x64-build-platform.png)
 
-Ahora que tienes una solución de Visual Studio para UWP para tu juego, [si sigues estos pasos](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/getting-started) podrás implementar correctamente el juego en tu Xbox One comercial.
+Ahora que tienes una solución de Visual Studio para UWP para tu juego, [si sigues estos pasos](getting-started.md), podrás implementar correctamente el juego en tu Xbox One comercial.
 
-## Notas del desarrollador
+## Paso 3: Modificar y recompilar
 
-- Se recomienda ignorar la carpeta UWP en el control de versiones. Si quieres incluir elementos XAML adicionales en el proyecto y necesitas crear versiones de algunos activos dentro de la carpeta UWP, consulta [estas muestras para hacerlo](https://bitbucket.org/Unity-Technologies/windowsstoreappssamples/overview).
+Si se realizan cambios en cualquier elemento que no sea un script, es necesario recompilar el proyecto en el Editor (como se describe en el __Paso 1__) para que dichos cambios se muestren en la compilación para UWP del juego.
 
-- Si realizas cambios en Unity en cualquier contenido (excepto los scripts) incluido en la compilación del juego, tendrás que volver a compilar la solución para UWP para ver los cambios la próxima vez que la implementes. Esto ocurre porque, durante el paso de compilación de Unity, todos los activos del proyecto se compilan en un archivo de recursos. La solución para UWP hace referencia a ese archivo de recursos generado cuando implementa el juego.
+## Control de versiones del proyecto para UWP
+
+Existen unas pocas situaciones comunes en las que es necesario agregar partes de este directorio de UWP recién generado al control de versiones. Por ejemplo, si agregas una nueva dependencia al proyecto de UWP (como el SDK de Xbox Live).  Examinaremos este ejemplo en detalle en [Control de versiones del proyecto para UWP](development-lanes-unity-versioning.md).
+
+## Consulta también
+- [Llevar los juegos existentes a Xbox](development-lanes-landing.md)
+- [UWP en Xbox One](index.md)
 
 
 
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO4-->
 
 

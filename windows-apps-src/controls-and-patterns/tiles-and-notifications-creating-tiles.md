@@ -5,20 +5,18 @@ title: Iconos
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
-ms.sourcegitcommit: d3fe62d4de00c42079d62d105acdbb21e296ba5f
-ms.openlocfilehash: a9f5d25dfd359364fa8e16666b03c7c105a867dd
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 37de1a413ac9b5e74c905c140899ec7577a6fae5
 
 ---
-
 # Iconos de aplicaciones para UWP
 
-
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Un *icono* es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación de Plataforma universal de Windows (UWP) en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación. Windows muestra este icono cuando se instala la aplicación por primera vez. Cuando se instala la aplicación, puedes cambiar el contenido del icono a través de notificaciones; por ejemplo, puedes cambiar el icono para comunicar nueva información al usuario, como titulares de noticias o el asunto del mensaje sin leer más reciente.
 
-## <span id="Configure_the_default_tile"></span><span id="configure_the_default_tile"></span><span id="CONFIGURE_THE_DEFAULT_TILE"></span>Configurar el icono predeterminado
+## Configurar el icono predeterminado
 
 
 Cuando creas un nuevo proyecto en Visual Studio, se crea un icono predeterminado sencillo que muestra el nombre y el logotipo de la aplicación.
@@ -46,13 +44,12 @@ Hay algunos elementos que deberías actualizar:
 -   ShortName: dado que no hay espacio limitado para que el nombre para mostrar quepa en los iconos, recomendamos que especifiques un ShortName también, para asegurarte de que el nombre de la aplicación no se trunca.
 -   Imágenes de logotipo:
 
-    Debes cambiar estas imágenes por las tuyas, Tienes la opción de proporcionar imágenes para diferentes escalas visuales, pero no tienes que proporcionarlas todas. Para garantizar que tu aplicación se ve bien en una variedad de dispositivos, te recomendamos que ofrezcas versiones de escala de 100 %, 200 % y 400 % de cada imagen.
+    Debes cambiar estas imágenes por las tuyas, Tienes la opción de proporcionar imágenes para diferentes escalas visuales, pero no tienes que proporcionarlas todas. Para garantizar que tu aplicación se ve bien en una gran variedad de dispositivos, te recomendamos que ofrezcas versiones de escala de 100 %, 200 % y 400 % de cada imagen.
 
-    Las imágenes a escala siguen esta convención de nomenclatura: 
+    Las imágenes a escala siguen esta convención de nomenclatura: prueba
     
-    *
-              &lt;nombre de imagen&gt;*.scale-*&lt;factor de escala&gt;*.*&lt;extensión de archivo de imagen&gt;*  
-    
+    *&lt;nombre de imagen&gt;*.scale-*&lt;factor de escala&gt;*.*&lt;extensión de archivo de imagen&gt;* 
+
     Por ejemplo: SmallLogo.scale-100.png
 
     Cuando hace referencia a la imagen, se refiere a ella como *&lt;nombre de imagen&gt;*.*&lt;extensión de archivo de imagen&gt;* ("SmallLogo.png" en este ejemplo). El sistema seleccionará automáticamente la imagen a escala adecuada para el dispositivo desde las imágenes que hayas proporcionado.
@@ -79,7 +76,7 @@ Hay algunos elementos que deberías actualizar:
       </Applications>
 ```
 
-## <span id="Use_notifications_to_customize_your_tile"></span><span id="use_notifications_to_customize_your_tile"></span><span id="USE_NOTIFICATIONS_TO_CUSTOMIZE_YOUR_TILE"></span>Usar notificaciones para personalizar el icono
+## Usar notificaciones para personalizar el icono
 
 
 Cuando se instale la aplicación, puedes usar las notificaciones para personalizar tu icono. Puedes hacerlo la primera vez que se inicia la aplicación o en respuesta a algún evento, como una notificación de inserción.
@@ -107,6 +104,6 @@ Cuando se instale la aplicación, puedes usar las notificaciones para personaliz
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

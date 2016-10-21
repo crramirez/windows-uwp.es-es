@@ -3,8 +3,9 @@ author: jnHs
 Description: El nuevo panel del Centro de desarrollo de Windows te permite administrar y enviar todas las aplicaciones para dispositivos Windows en un solo lugar.
 title: Usar el panel del Centro de desarrollo de Windows
 ms.assetid: FB63F773-71AC-464E-BDE1-21C429FB2B0B
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7478a832cea6114c7a6e7f6be5cc3e908981a64c
+translationtype: Human Translation
+ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
+ms.openlocfilehash: 2ccec6e85666ef328f4aa0baa8ba6a705986a4c4
 
 ---
 
@@ -13,14 +14,13 @@ ms.openlocfilehash: 7478a832cea6114c7a6e7f6be5cc3e908981a64c
 
 El nuevo panel del Centro de desarrollo de Windows te permite administrar y enviar todas las aplicaciones para dispositivos Windows en un solo lugar.
 
-> 
-            **Nota** Debes disponer de una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) para acceder al panel del Centro de desarrollo de Windows.
+> **Nota** Debes tener una [cuenta de desarrollador](http://go.microsoft.com/fwlink/p/?LinkId=615100) para obtener acceso al panel del Centro de desarrollo de Windows.
 
-Cuando creas un [proceso de envío de tu aplicación](app-submissions.md) (por primera vez o como una actualización), puedes [cargar paquetes de la aplicación](upload-app-packages.md) para cualquier sistema operativo compatible y la Tienda ofrecerá automáticamente a los clientes el paquete que mejor se adapte a sus necesidades. Puedes usar las mismas [descripciones](create-app-descriptions.md) e [imágenes](app-screenshots-and-images.md) para todos los sistemas operativos que la aplicación admite, o bien puedes [personalizar la descripción para plataformas determinadas](create-platform-specific-descriptions.md).
+Cuando creas un [proceso de envío de la aplicación](app-submissions.md) (por primera vez o como una actualización), puedes [cargar paquetes de la aplicación](upload-app-packages.md) para cualquier sistema operativo compatible y la Tienda ofrecerá automáticamente a los clientes el paquete que mejor se adapte a sus necesidades. Puedes usar las mismas [descripciones de la Tienda](create-app-store-listings.md) e [ilustraciones](app-screenshots-and-images.md) para todos los sistemas operativos que la aplicación admita, o bien puedes [personalizar la descripción de la Tienda para sistemas operativos determinados](create-platform-specific-Store-listings.md).
 
-Los productos desde la aplicación (IAP) se administran de forma independiente del envío de la aplicación. Esto ofrece más flexibilidad y la capacidad de realizar cambios de forma independiente. Para obtener más información, consulta [Envíos de IAP](iap-submissions.md).
+Los complementos (productos desde la aplicación) se administran de forma independiente al envío de la aplicación. Esto te ofrece más flexibilidad y la capacidad de realizar cambios de forma independiente. Para obtener más información, consulta [Add-on submissions (Envíos de complementos)](add-on-submissions.md).
 
-El panel del Centro de desarrollo también ofrece funcionalidades de [administración de aplicaciones y configuración de servicios](app-management-and-services.md), [revisión de datos analíticos](analytics.md), [informes de pago](payout-summary.md), [promoción y atracción de clientes](app-promotion-and-customer-engagement.md), [pruebas beta](beta-testing-and-targeted-distribution.md), [distribución de aplicaciones de LOB para empresas](distribute-lob-apps-to-enterprises.md) y mucho más.
+El panel del Centro de desarrollo también ofrece funcionalidades de [administración de aplicaciones y configuración de servicios](app-management-and-services.md), [revisión de datos analíticos](analytics.md), [informes de pagos](payout-summary.md), [promoción y atracción de clientes](app-promotion-and-customer-engagement.md), [pruebas beta](beta-testing-and-targeted-distribution.md), [distribución de aplicaciones de LOB para empresas](distribute-lob-apps-to-enterprises.md) y mucho más.
 
 ## Consejos para usar el panel unificado
 
@@ -38,6 +38,6 @@ Las aplicaciones que estaban vinculadas para compartir identidad en el anterior 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

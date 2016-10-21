@@ -7,7 +7,7 @@ label: Prepare your app for localization
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 4f9bc1d14db7c348e2b4dc9db2440f94d44ab4a5
+ms.openlocfilehash: d3f389830fd4f21eae93aae661db86f9df479383
 
 ---
 
@@ -31,8 +31,7 @@ Especifica imágenes y otros recursos de archivo con la etiqueta de idioma aprop
 
 Agrega comentarios de localización a los archivos de recursos de tu aplicación. Los comentarios están visibles para el localizador y deben proporcionar información contextual que lo ayude a traducir correctamente los recursos. Los comentarios deben proporcionar también información de restricción suficiente en el recurso para que la traducción no interrumpa el software. Los comentarios se pueden registrar de manera opcional mediante la herramienta Makepri.exe.
 
-
-              **XAML:** Los archivos .resw (recursos creados en Visual Studio para aplicaciones que usan XAML) tienen un elemento de comentario. Por ejemplo:
+**XAML:** los archivos .resw (recursos creados en Visual Studio para aplicaciones que usan XAML) tienen un elemento de comentario. Por ejemplo:
 
 ```XML
 <data name="String1">
@@ -41,8 +40,7 @@ Agrega comentarios de localización a los archivos de recursos de tu aplicación
 </data>
 ```
 
-
-              **HTML:** Los archivos .resjson (recursos creados en Visual Studio para aplicaciones que usan HTML) permiten metadatos en los campos que comienzan con un guion bajo. Por ejemplo, comentarios:
+**HTML:** los archivos .resjson (recursos creados en Visual Studio para aplicaciones que usan HTML) permiten metadatos en los campos que comienzan con un guion bajo. Por ejemplo, comentarios:
 
 ```json
 {
@@ -136,7 +134,7 @@ Además, considera las siguientes sugerencias:
 ## <span id="keep_access_keys_and_labels_consistent."></span><span id="KEEP_ACCESS_KEYS_AND_LABELS_CONSISTENT."></span>Mantener la coherencia de las claves de acceso y las etiquetas.
 
 
-Es todo un desafío sincronizar las claves de acceso que se usan en los métodos de accesibilidad con el modo de visualizar las claves de acceso localizadas, ya que los dos recursos de cadena se clasifican en dos secciones separadas. Asegúrate de proporcionar comentarios para la cadena de etiquetas, como:  `Make sure that the emphasized shortcut key  is synchronized with the access key.`
+Es todo un desafío sincronizar las claves de acceso que se usan en los métodos de accesibilidad con el modo de visualizar las claves de acceso localizadas, ya que los dos recursos de cadena se clasifican en dos secciones separadas. Asegúrate de proporcionar comentarios para la cadena de etiquetas, como: `Make sure that the emphasized shortcut key  is synchronized with the access key.`
 
 **HTML:**
 
@@ -194,6 +192,6 @@ El método de ordenación sigue el formato del **panel de control regional**:
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

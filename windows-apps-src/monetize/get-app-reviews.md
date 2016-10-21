@@ -1,31 +1,28 @@
 ---
 author: mcleanbyron
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de revisión de un intervalo de fechas proporcionado y otros filtros opcionales."
+description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de opiniones de un intervalo de fechas proporcionado y otros filtros opcionales."
 title: "Obtener opiniones de la aplicación"
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: 6e7e8c6a1b870031fb7055bf09c8ebbaa7dc13a5
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: 4190012c08e22f4efb086c711183332b23ccee38
 
 ---
 
 # Obtener opiniones de la aplicación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos de revisión agregados de un intervalo de fechas y otros filtros opcionales. Este método devuelve los datos en formato JSON.
+
+Usa este método en la API de análisis de la Tienda Windows para obtener los datos de opiniones de un intervalo de fechas proporcionado y otros filtros opcionales. Este método devuelve los datos en formato JSON.
 
 ## Requisitos previos
 
 
-Para usar este método, necesitas lo siguiente:
+Para usar este método, primero debes hacer lo siguiente:
 
--   Asociar la aplicación de Azure AD que usarás para llamar a este método con la cuenta del Centro de desarrollo.
-
--   Obtener un token de acceso de Azure AD para la aplicación.
-
-Para obtener más información, consulta [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md).
+* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de la Tienda Windows.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 ## Solicitud
 
@@ -42,11 +39,11 @@ Para obtener más información, consulta [Acceder a los datos de análisis media
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. El token de acceso de Azure AD con la forma **Portador**&lt;*token*&gt;. |
+| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
-### Parámetros de la solicitud
+### Parámetros de solicitud
 
 <table>
 <colgroup>
@@ -137,7 +134,7 @@ Para obtener más información, consulta [Acceder a los datos de análisis media
  
 ### Campos de filtro
 
-El parámetro *filter* de la solicitud contiene una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un campo y un elemento que se asocian a los operadores **eq** o **ne**; asimismo, algunos campos también son compatibles con los operadores **contains**, **gt**, **lt**, **ge**, y **le**. Las instrucciones se pueden combinar mediante **and** u **or**.
+El parámetro *filter* de la solicitud contiene una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un campo y un elemento que se asocian a los operadores **eq** o **ne**; asimismo, algunos campos también son compatibles con los operadores **contains**, **gt**, **lt**, **ge**, y **le**. Las instrucciones se pueden combinar mediante **and** u **or**.
 
 Este es un ejemplo de una cadena *filter*: *filter=contains(reviewText,'great') and contains(reviewText,'ads') and deviceRAM lt 2048 and market eq 'US'*
 
@@ -382,13 +379,13 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 ## Temas relacionados
 
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
-* [Get app acquisitions (Obtener los datos de compra de la aplicación)](get-app-acquisitions.md)
-* [Get IAP acquisitions (Obtener los datos de compra del IAP)](get-in-app-acquisitions.md)
-* [Get error reporting data (Obtener los datos del informe de errores)](get-error-reporting-data.md)
-* [Get app ratings (Obtener la clasificación de la aplicación)](get-app-ratings.md)
+* [Obtener los datos de compra de la aplicación](get-app-acquisitions.md)
+* [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
+* [Obtener los datos del informe de errores](get-error-reporting-data.md)
+* [Obtener la clasificación de la aplicación](get-app-ratings.md)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

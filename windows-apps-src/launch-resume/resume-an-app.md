@@ -3,28 +3,21 @@ author: TylerMSFT
 title: "Administrar la reanudación de la aplicación"
 description: "Aprende a actualizar el contenido mostrado cuando el sistema reanuda la aplicación."
 ms.assetid: DACCC556-B814-4600-A10A-90B82664EA15
-ms.sourcegitcommit: e6957dd44cdf6d474ae247ee0e9ba62bf17251da
-ms.openlocfilehash: dd3d75c7f3dfe325324e1fe31c039cd207b68d0b
+translationtype: Human Translation
+ms.sourcegitcommit: 231161ba576a140859952a7e9a4e8d3bd0ba4596
+ms.openlocfilehash: 2813a112f9d60c5b133284903c98a152bd027bee
 
 ---
 
 # Administrar la reanudación de la aplicación
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
 -   [**Reanudar**](https://msdn.microsoft.com/library/windows/apps/br242339)
 
-Aprende a actualizar el contenido mostrado cuando el sistema reanuda la aplicación. El ejemplo de este tema registra un controlador de eventos para el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339).
-
-
-            **Guía básica:** Relación de este tema con los demás. Consulta:
-
--   [Guía básica para crear aplicaciones de Windows Runtime con C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/br229583)
--   [Guía básica para crear aplicaciones de Windows en tiempo de ejecución con C++](https://msdn.microsoft.com/library/windows/apps/hh700360)
+Aprende dónde actualizar la interfaz de usuario cuando el sistema reanuda la aplicación. El ejemplo de este tema registra un controlador de eventos para el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339).
 
 ## Registrar el controlador de eventos de reanudación
 
@@ -60,9 +53,13 @@ Haz el registro para controlar el evento [**Resuming**](https://msdn.microsoft.c
 > }
 > ```
 
-## [!div class="tabbedCodeSnippets"]
+## Actualizar el contenido mostrado y volver adquirir recursos
 
-Actualizar el contenido mostrado tras la suspensión
+El sistema suspende la aplicación unos segundos después de que el usuario cambie a otra aplicación o al escritorio. El sistema reanuda la aplicación cuando el usuario vuelve a cambiar a ella. Cuando el sistema reanuda la aplicación, el contenido de las variables y las estructuras de datos es el mismo que antes de que el sistema la suspendiera. El sistema restaura la aplicación en el punto en el que estaba. Para el usuario, parece como si la aplicación se haya estado ejecutando en segundo plano.
+
+Cuando la aplicación controla el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) la aplicación se puede suspender durante horas o días. Se debe actualizar todo el contenido que pueda haber quedado obsoleto mientras la aplicación estaba suspendida, por ejemplo, fuentes de noticias o la ubicación del usuario.
+
+También es un buen momento para restaurar todos los recursos exclusivos que liberaste cuando se suspendió la aplicación, como los identificadores de archivos, cámaras, dispositivos de E/S, dispositivos externos y recursos de red.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -70,7 +67,7 @@ Actualizar el contenido mostrado tras la suspensión
 > {
 >     private void App_Resuming(Object sender, Object e)
 >     {
->         // TODO: Refresh network data
+>         // TODO: Refresh network data, perform UI updates, and reacquire resources like cameras, I/O devices, etc.
 >     }
 > }
 > ```
@@ -79,7 +76,7 @@ Actualizar el contenido mostrado tras la suspensión
 >
 >     Private Sub App_Resuming(sender As Object, e As Object)
 >  
->         ' TODO: Refresh network data
+>         ' TODO: Refresh network data, perform UI updates, and reacquire resources like cameras, I/O devices, etc.
 >
 >     End Sub
 >
@@ -88,35 +85,26 @@ Actualizar el contenido mostrado tras la suspensión
 > ```cpp
 > void MainPage::App_Resuming(Object^ sender, Object^ e)
 > {
->     // TODO: Refresh network data
+>     // TODO: Refresh network data, perform UI updates, and reacquire resources like cameras, I/O devices, etc.
 > }
 > ```
 
-> Cuando la aplicación controla el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339), tiene la oportunidad de actualizar el contenido que muestra.
+> **Nota** Ya que el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) no se genera a partir del subproceso de interfaz de usuario, es necesario usar un distribuidor del controlador para distribuir todas las llamadas a la interfaz de usuario.
 
-## [!div class="tabbedCodeSnippets"]
+## Observaciones
 
+Cuando la aplicación está conectada al depurador de Visual Studio, no se suspenderá. Sin embargo, se puede suspender desde el depurador y luego volver a enviarle un evento **Resume**, para que puedas depurar el código. Asegúrate de que la **barra de herramientas Ubicación de depuración** es visible y haz clic en el menú desplegable junto al icono **Suspender**. A continuación, elige **Reanudar**.
 
+En las aplicaciones de la Tienda de WindowsPhone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del evento [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida en el momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
 
-            **Nota** Dado que el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) no se genera desde el subproceso de la interfaz de usuario, deberá usarse un distribuidor para acceder al subproceso de la interfaz de usuario e inyectar una actualización en ella, si eso es lo que se quiere hacer en el controlador. Comentarios El sistema suspende la aplicación cuando el usuario cambia a otra aplicación o al escritorio. El sistema reanuda la aplicación cuando el usuario vuelve a cambiar a ella. Cuando el sistema reanuda la aplicación, el contenido de las variables y las estructuras de datos es el mismo que antes de que el sistema la suspendiera.
+## Temas relacionados
 
-El sistema restaura la aplicación en el punto exacto en el que estaba, para que parezca al usuario que se ejecutaba en segundo plano
-
-> No obstante, es posible que la aplicación haya estado suspendida durante un período de tiempo largo. Por ello, debe actualizar el contenido mostrado que puede haber cambiado mientras la aplicación estaba suspendida, como fuentes de noticias o la ubicación del usuario. Si la aplicación no tiene contenido mostrado que se deba actualizar, no es necesario que controle el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339). 
-            **Nota** Si la aplicación está conectada al depurador de Visual Studio, puedes enviarle un evento **Resume**.
-
-> Asegúrate de que la **barra de herramientas Ubicación de depuración** es visible y haz clic en el menú desplegable junto al icono **Suspender**. A continuación, elige **Reanudar**. 
-            **Nota** En las aplicaciones de la Tienda de WindowsPhone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida por el momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones.
-
-## Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual.
-
-* [Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.](activate-an-app.md)
-* [Temas relacionados](suspend-an-app.md)
-* [Controlar la activación de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [Controlar la suspensión de la aplicación](app-lifecycle.md)
+* [Ciclo de vida de la aplicación](app-lifecycle.md)
+* [Controlar la activación de aplicaciones](activate-an-app.md)
+* [Administrar la suspensión de aplicaciones](suspend-an-app.md)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

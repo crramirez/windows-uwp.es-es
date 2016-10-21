@@ -3,22 +3,19 @@ author: TylerMSFT
 title: "Controlar la activación de aplicaciones"
 description: "Obtén información sobre cómo controlar la activación de aplicaciones mediante la invalidación del método OnLaunched."
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
-ms.sourcegitcommit: fb83213a4ce58285dae94da97fa20d397468bdc9
-ms.openlocfilehash: f47a3b7fcb4bec4138e11a079c3d10e918c1eb95
+translationtype: Human Translation
+ms.sourcegitcommit: a1bb0d5d24291fad1acab41c149dd9d763610907
+ms.openlocfilehash: e41a683026a4543545556e98f6b4e9194099b362
 
 ---
 
 # Controlar la activación de aplicaciones
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-**API importantes**
-
--   [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)
-
-Obtén información sobre cómo controlar la activación de aplicaciones al invalidar el método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
+Obtén información sobre cómo controlar la activación de aplicaciones mediante la invalidación del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
 
 ## Invalidar el controlador de inicio
 
@@ -36,8 +33,7 @@ Define la clase de la aplicación.
 
 Invalida el método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335). Este método se llama cada vez que el usuario inicia la aplicación. El parámetro [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) contiene el estado anterior de la aplicación y los argumentos de activación.
 
-
-            **Nota**: En las aplicaciones de la Tienda de Windows Phone, se invoca este método cada vez que el usuario inicia la aplicación desde el icono Inicio o la lista de aplicaciones, incluso si la aplicación está suspendida en la memoria en ese momento. En Windows, al iniciar una aplicación suspendida desde el icono Inicio o la lista de aplicaciones, no se llama a este método.
+**Nota**: En las aplicaciones de la Tienda de Windows Phone, se llama a este método cada vez que el usuario inicia la aplicación desde el icono Inicio o la lista de aplicaciones, incluso si la aplicación está suspendida en la memoria en ese momento. En Windows, al iniciar una aplicación suspendida desde el icono Inicio o la lista de aplicaciones no se llama a este método.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -101,10 +97,10 @@ Invalida el método [**OnLaunched**](https://msdn.microsoft.com/library/windows/
 > }
 > ```
 
-## [!div class="tabbedCodeSnippets"]
+## restaurar los datos de la aplicación si se suspendió y después finalizó
 
 
-Restaurar los datos de la aplicación si se suspendió y después finalizó Cuando el usuario cambia a la aplicación finalizada, el sistema envía el evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018), con el objeto [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) establecido en **Launch** y el objeto [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) establecido en **Terminated** o **ClosedByUser**.
+Cuando el usuario cambia a la aplicación finalizada, el sistema envía el evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018), con el objeto [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) establecido en **Launch** y el objeto [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) establecido en **Terminated** o **ClosedByUser**. La aplicación debe cargar sus datos de aplicación guardados y actualizar el contenido que muestra.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -159,31 +155,30 @@ Restaurar los datos de la aplicación si se suspendió y después finalizó Cuan
 > }
 > ```
 
-La aplicación debe cargar sus datos de aplicación guardados y actualizar el contenido que muestra.
+Si el valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) es **NotRunning**, la aplicación no pudo guardar sus datos de aplicación correctamente y debe iniciarse desde cero, como si se estuviera iniciando por primera vez.
 
-## [!div class="tabbedCodeSnippets"]
+## Comentarios
 
-> Si el valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) es **NotRunning**, la aplicación no pudo guardar sus datos de aplicación correctamente y debe iniciarse desde cero, como si se estuviera iniciando por primera vez. Comentarios 
-            **Nota**  En las aplicaciones de la Tienda de WindowsPhone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida en ese momento y el usuario la reinicie desde un icono principal o una lista de aplicaciones.
+> **Nota** En las aplicaciones de la Tienda de WindowsPhone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida en ese momento y el usuario la reinicie desde un icono principal o la lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
 
-## Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual.
+## Temas relacionados
 
-* [Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.](suspend-an-app.md)
-* [Temas relacionados](resume-an-app.md)
-* [Controlar la suspensión de la aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [Controlar la reanudación de la aplicación](app-lifecycle.md)
+* [Controlar la suspensión de la aplicación](suspend-an-app.md)
+* [Controlar la reanudación de la aplicación](resume-an-app.md)
+* [Directrices para suspender y reanudar una aplicación](https://msdn.microsoft.com/library/windows/apps/hh465088)
+* [Ciclo de vida de la aplicación](app-lifecycle.md)
 
-**Directrices para suspender y reanudar una aplicación**
+**Referencia**
 
-* [**Ciclo de vida de la aplicación**](https://msdn.microsoft.com/library/windows/apps/br224766)
-* [**Referencia**](https://msdn.microsoft.com/library/windows/apps/br242324)
-
- 
+* [**Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766)
+* [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324)
 
  
 
+ 
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

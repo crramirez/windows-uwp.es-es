@@ -1,20 +1,20 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "Convertir trazos de lápiz en texto mediante el reconocimiento de escritura a mano, o en formas mediante el reconocimiento personalizado."
-title: Reconocer trazos de Windows Ink como texto
+title: Reconocimiento de trazos de Windows Ink como texto
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, handwriting recognition
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 4351901984f9b1f134cfc42acbbc7f756dc6c11f
+ms.sourcegitcommit: dfb790980a8016da0ed9a080d7cf56b5a8a784ff
+ms.openlocfilehash: 26dc8910c779dc46d19be75abd49c20b750a9843
 
 ---
 
-# Reconocer trazos de Windows Ink como texto
+# Reconocimiento de trazos de Windows Ink como texto
 
-Convertir trazos de lápiz en texto mediante el reconocimiento de escritura a mano, o en formas mediante el reconocimiento personalizado.
+Conversión de trazos de tinta en texto mediante el soporte de reconocimiento de escritura a mano en Windows Ink.
 
 **API importantes**
 
@@ -22,7 +22,7 @@ Convertir trazos de lápiz en texto mediante el reconocimiento de escritura a ma
 -   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
-El reconocimiento de escritura a mano está integrado en la plataforma de entrada de lápiz de Windows, y admite un amplio conjunto de configuraciones regionales e idiomas.
+El reconocimiento de escritura a mano está integrado en la plataforma de Windows Ink y admite un amplio conjunto de configuraciones regionales e idiomas.
 
 Para todos los ejemplos que aquí se ofrecen, agrega las referencias de espacio de nombres necesarias para la funcionalidad de entrada de lápiz. Se incluye "Windows.UI.Input.Inking".
 
@@ -674,6 +674,6 @@ string str = "Recognition result\n";
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -1,17 +1,26 @@
 ---
 author: Jwmsft
-Description: "Creas la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a la aplicación."
-title: Agregar controles y controlar eventos
+Description: "Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a la aplicación."
+title: "Introducción a los controles y patrones"
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
-label: Intro to controls and events
+label: Intro to controls and patterns
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 709771424daba7c034dc6f19d6998469705a24da
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: c597b2e5a1da23247a2100aeae88beaf1bfdaa64
 
 ---
-# Introducción a los controles y eventos
+# Introducción a los controles y patrones
 
-Creas la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a tu aplicación. Hay 3 pasos clave para agregar controles a la aplicación: 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+En el desarrollo de aplicaciones para UWP, un *control* es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario.
+
+Un *patrón* es una receta para modificar un control o combinar varios controles con el fin de hacer algo nuevo. Por ejemplo, el patrón del [Panel de navegación](nav-pane.md) es una forma de usar un control [SplitView](split-view.md) para la navegación de la aplicación. Del mismo modo, puedes personalizar la plantilla de un control de [Pivote](tabs-pivot.md) para implementar el patrón de la pestaña.
+
+En muchos casos, puedes usar el control tal cual. Sin embargo, los controles de XAML separan la función de la estructura y la apariencia, por lo que puedes realizar varios niveles de modificaciones que se adapten a tus necesidades. En la sección [Estilo](../style/index.md), aprenderás cómo usar [Estilos XAML](xaml-styles.md) y [plantillas de control](control-templates.md) para modificar un control.
+
+En esta sección, se proporcionan instrucciones para cada uno de los controles XAML que puedes usar para crear la interfaz de usuario de la aplicación. Para empezar, en este artículo se muestra cómo agregar controles a tu aplicación. Hay 3 pasos clave para usar controles en la aplicación: 
 
 - Agrega un control a la interfaz de usuario de la aplicación. 
 - Establece las propiedades para el control, como el ancho, el alto o el color de primer plano. 
@@ -131,12 +140,14 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 
 ## Temas relacionados
 
--   [**Barras de comandos**](app-bars.md)
--   [Buscar](search.md)
--   [Controles flotantes](dialogs-popups-menus.md)
+-   [Índice de controles por función](controls-by-function.md)
+-   [Espacio de nombre de Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+-   [Diseño](../layout/index.md)
+-   [Estilo](../style/index.md)
+-   [Facilidad de uso](../usability/index.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,19 +5,30 @@ title: Directrices para controles de modificadores para alternar
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: e90760c6894ee5d32ba1063993a703023d23c152
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: a4fe19dcd6f555273e74236192c5c61e8c6579ab
 
 ---
 # Modificadores para alternar
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 
 El modificador para alternar representa un conmutador físico que permite a los usuarios activar o desactivar opciones. Usa los controles **ToggleSwitch** para presentar a los usuarios exactamente dos opciones que se excluyan mutuamente (como activar/desactivar). Cuando elijan una opción, se desencadenará una acción inmediata.
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx"><strong>Clase ToggleSwitch</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx"><strong>Propiedad IsOn</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx"><strong>Evento Toggled</strong></a></li>
+</ul>
 
--   [**Clase ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx)
--   [**Propiedad IsOn**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx)
--   [**Evento Toggled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)
+</div>
+</div>
+
+
+
 
 ## ¿Es este el control adecuado?
 
@@ -161,6 +172,6 @@ También puedes usar contenido más complejo si configuras las propiedades [**On
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

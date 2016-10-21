@@ -5,8 +5,9 @@ description: .
 ms.assetid: BF42E810-CDC8-47D2-9C30-BAA19DCBE2DA
 label: Screen sizes and break points
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 153652c9fcc9745bdee087033d65eec2bc860e53
+ms.openlocfilehash: 5977b6253e2ee10fa0153d79053f89b705c2e1a3
 
 ---
 
@@ -14,8 +15,7 @@ ms.openlocfilehash: 153652c9fcc9745bdee087033d65eec2bc860e53
 
 El número de destinos de dispositivo y tamaños de pantalla en el ecosistema de Windows 10 es demasiado grande como para preocuparse de optimizar la interfaz de usuario para cada uno de ellos. En su lugar, se recomienda el diseño de unos anchos claves (también denominados "puntos de interrupción"): 360, 640, 1024 y 1366 epx.
 
-
-            **Sugerencia** Al diseñar para puntos de interrupción específicos, diseña la cantidad de espacio en pantalla disponible para la aplicación (ventana de la aplicación). Cuando la aplicación se ejecuta en pantalla completa, la ventana de la aplicación tiene el mismo tamaño que la pantalla, pero, en otros casos, es más pequeña.
+**Sugerencia** Al diseñar para puntos de interrupción específicos, diseña la cantidad de espacio en pantalla disponible para la aplicación (ventana de la aplicación). Cuando la aplicación se ejecuta en pantalla completa, la ventana de la aplicación tiene el mismo tamaño que la pantalla, pero, en otros casos, es más pequeña.
  
 
 En esta tabla se describen las diferentes clases de tamaño y se proporcionan recomendaciones generales para personalizar esas clases de tamaño.
@@ -99,6 +99,6 @@ Con [**Continuum para teléfonos**](http://go.microsoft.com/fwlink/p/?LinkID=699
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

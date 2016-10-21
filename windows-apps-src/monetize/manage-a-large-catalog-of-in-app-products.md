@@ -3,15 +3,18 @@ author: mcleanbyron
 ms.assetid: 5E722AFF-539D-456E-8C4A-ADE90CF7674A
 description: "Si tu aplicación ofrece un catálogo de productos de gran tamaño en la aplicación, también puedes seguir el proceso descrito en este tema para ayudar a administrar el catálogo."
 title: "Administrar un catálogo extenso de productos desde la aplicación"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0927df3cd696e5a6fbd3a235d2b87074f1d63929
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 529735319848fc0b8fac12e51b8536b178db0646
 
 ---
 
 # Administrar un catálogo extenso de productos desde la aplicación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
+
+>**Nota**&nbsp;&nbsp;En este artículo se muestra cómo usar miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Si la aplicación está orientada a Windows 10, versión 1607 o posterior, te recomendamos que uses miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para administrar los complementos (también conocidos como productos dentro de la aplicación o IAP), en lugar del espacio de nombres **Windows.ApplicationModel.Store**. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
 
 Si tu aplicación ofrece un catálogo de productos de gran tamaño en la aplicación, también puedes seguir el proceso descrito en este tema para ayudar a administrar el catálogo. Podrás crear infinidad de entradas de productos para determinadas franjas de precios, cada una de ellas capaz de representar cientos de productos en un catálogo.
 
@@ -19,14 +22,13 @@ Para hacer posible esta funcionalidad, usa la sobrecarga del método [**RequestP
 
 La Tienda usará únicamente el *offerId* de la solicitud de compra en el [**PurchaseResults**](https://msdn.microsoft.com/library/windows/apps/dn263392) resultante. Este proceso no modifica directamente la información suministrada inicialmente al elaborar la [lista de productos desde la aplicación de la Tienda](https://msdn.microsoft.com/library/windows/apps/mt148551).
 
-
-            **Nota**  A partir de Windows 10, la Tienda no tiene ningún límite en el número de listas de productos por cuenta de desarrollador. En versiones anteriores, la Tienda tiene un límite de 200 listas de productos por cuenta de desarrollador y el proceso descrito en este tema puede usarse para evitar esa limitación.
+**Nota** A partir de Windows 10, la Tienda no tiene ningún límite en el número de listas de productos por cuenta de desarrollador. En versiones anteriores, la Tienda tiene un límite de 200 listas de productos por cuenta de desarrollador y el proceso descrito en este tema puede usarse para evitar esa limitación.
 
 ## Requisitos previos
 
 -   En este tema se aborda el soporte técnico de la Tiendapara la representación de varias ofertas desde la aplicación usando un solo producto desde la aplicación incluido en la Tienda. Si no estás familiarizado con las compras desde la aplicación, consulta [Habilitar compras de productos desde la aplicación](enable-in-app-product-purchases.md) para ver información sobre la licencia y cómo incluir de la forma adecuada tu compra desde la aplicación en la Tienda.
 -   Cuando codificas y pruebas nuevas ofertas desde la aplicación por primera vez, debes usar el objeto [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) en lugar del objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765). De esta manera, puedes comprobar la lógica de la licencia con llamadas simuladas al servidor de licencias, en lugar de llamar al servidor activo. Para ello, debes personalizar el archivo llamado "WindowsStoreProxy.xml" in %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. El simulador de Microsoft Visual Studio crea este archivo la primera vez que ejecutas la aplicación, aunque también puedes cargar un archivo personalizado en tiempo de ejecución. Para obtener más información, consulta **CurrentAppSimulator**.
--   Este tema también hace referencia a los ejemplos de código que se proporcionan en la [muestra de la Tienda](http://go.microsoft.com/fwlink/p/?LinkID=627610). Esta muestra es ideal para conseguir experiencia práctica con las diferentes opciones de monetización que se proporcionan para las aplicaciones para la Plataforma universal de Windows (UWP).
+-   Este tema también hace referencia a los ejemplos de código que se proporcionan en la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store). Esta muestra es ideal para conseguir experiencia práctica con las diferentes opciones de monetización que se proporcionan para las aplicaciones para la Plataforma universal de Windows (UWP).
 
 ## Realizar la solicitud de compra del producto desde la aplicación
 
@@ -112,12 +114,12 @@ switch (result)
 
 * [Habilitar compras de productos desde la aplicación](enable-in-app-product-purchases.md)
 * [Habilitar compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md)
-* [Muestra de la Tienda (muestra pruebas y compras desde la aplicación)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
+* [Muestra de la Tienda (muestra pruebas y compras desde la aplicación)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [**RequestProductPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/dn263382)
 * [**ProductPurchaseDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/dn263384)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

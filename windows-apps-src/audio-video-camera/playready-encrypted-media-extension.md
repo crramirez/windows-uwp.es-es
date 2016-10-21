@@ -1,25 +1,26 @@
 ---
 author: eliotcowley
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: "En esta sección se describe cómo modificar una aplicación web de PlayReady para admitir los cambios realizados de la versión anterior de Windows 8.1 a la versión de Windows 10."
+description: "En esta sección se describe cómo modificar una aplicación web de PlayReady para que admita los cambios realizados de la versión anterior de Windows8.1 a la versión de Windows10."
 title: Encrypted Media Extension (EME) de PlayReady
-ms.sourcegitcommit: 965443672e52938d39069f14fe23b0c5dbd0ffa8
-ms.openlocfilehash: c575125f1d35f44b873fd3db46d62f89bb726b0b
+translationtype: Human Translation
+ms.sourcegitcommit: 15b8c2cac08e59cfd9bd2c97c3a146cbc2be5548
+ms.openlocfilehash: eb85d9ea29917788612e0aa755465dbd6d1b9ba9
 
 ---
 
 # Encrypted Media Extension (EME) de PlayReady
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En esta sección se describe cómo modificar una aplicación web de PlayReady para que admita los cambios realizados de la versión anterior de Windows 8.1 a la versión de Windows 10.
+En esta sección se describe cómo modificar una aplicación web de PlayReady para que admita los cambios realizados de la versión anterior de Windows8.1 a la versión de Windows10.
 
-El uso de elementos multimedia de PlayReady en Internet Explorer permite a los desarrolladores crear aplicaciones Web preparadas para proporcionar contenido de PlayReady al usuario mientras se aplican las reglas de acceso definidas por el proveedor de contenido. Esta sección describe cómo agregar elementos multimedia de PlayReady a tus aplicaciones web existentes usando solo HTML5 y JavaScript.
+El uso de elementos multimedia de PlayReady en Internet Explorer permite a los desarrolladores crear aplicaciones web capaces de proporcionar contenido de PlayReady al usuario a la vez que aplica las reglas de acceso definidas por el proveedor de contenido. En esta sección se describe cómo agregar elementos multimedia de PlayReady a tus aplicaciones web existentes usando solo HTML5 y JavaScript.
 
 ## Novedades de Encrypted Media Extension de PlayReady
 
-En esta sección se proporciona una lista con los cambios realizados en Encrypted Media Extension de PlayReady para activar la protección de contenido de PlayReady en Windows 10.
+En esta sección se proporciona una lista con los cambios realizados en Encrypted Media Extension (EME) de PlayReady para habilitar la protección de contenido de PlayReady en Windows10.
 
 En la siguiente lista se describen las nuevas características y los cambios realizados en Encrypted Media Extension de PlayReady para Windows 10:
 
@@ -30,12 +31,10 @@ En la siguiente lista se describen las nuevas características y los cambios rea
 -   Proporciona la adquisición proactiva de licencias no persistentes.
 -   Proporciona la adquisición de varias licencias en un mensaje.
 
-    Puedes usar un objeto PlayReady con varios identificadores de clave (Id. de clave) como en Windows 8.1, o bien usar los [datos del modelo de descifrado de contenido (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) con varios Id. de clave.
+    Puedes usar un objeto PlayReady con varios identificadores de clave (id. de clave) como en Windows 8.1, o bien usar los [datos del modelo de descifrado de contenido (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) con varios id. de clave.
 
-    
-            **Nota** En Windows 10, se admiten varios identificadores de clave en &lt;Id. de clave&gt; en CDMData.
-
-     
+    > [!NOTE]
+    > En Windows 10, se admiten varios identificadores de clave en &lt;Id. de clave&gt; en CDMData.
 
 -   Se ha agregado soporte para la caducidad en tiempo real o una licencia de duración limitada (LDL).
 
@@ -55,7 +54,7 @@ En la siguiente lista se describen las nuevas características y los cambios rea
 
     Esta función se agregó para limitar la reproducción de contenido a una resolución máxima incluso cuando se posee una clave más capaz (pero no una licencia). Admite casos en los que se codifican varios tamaños de flujo con una única clave.
 
-## Compatibilidad de Encrypted Media Extension en PlayReady
+## Compatibilidad con Encrypted Media Extension en PlayReady
 
 En esta sección se describe la versión de Encrypted Media Extension de W3C compatible con PlayReady.
 
@@ -67,12 +66,10 @@ En esta sección se describe cómo la aplicación web puede usar DRM de hardware
 
 Para usar la tecnología DRM de hardware de PlayReady, la aplicación web de JavaScript debe usar el método EME **isTypeSupported** con un identificador de clave del sistema de `com.microsoft.playready.hardware` para poder consultar la compatibilidad del explorador con la tecnología DRM de hardware de PlayReady.
 
-En ocasiones algunos contenidos no son compatibles con DRM de hardware. El contenido Cocktail nunca se admite en DRM de hardware; si quieres reproducir este tipo de contenido debes desactivar DRM de hardware. Algunas tecnologías DRM de hardware admitirán HEVC y otras no lo harán. Si quieres reproducir contenido HEVC y la tecnología DRM de hardware no lo admite, también tendrás que desactivarla.
+En ocasiones algunos contenidos no son compatibles con DRM de hardware. El contenido Cocktail nunca se admite en DRM de hardware; si quieres reproducir este tipo de contenido debes desactivar DRM de hardware. Cierto DRM de hardware admitirá HEVC y otro no lo hará. Si quieres reproducir contenido HEVC y DRM de hardware no lo admite, también tendrás que desactivarlo.
 
-
-            **Nota** Para determinar si se admite el contenido HEVC, después de crear una instancia de `com.microsoft.playready`, usa el método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441).
-
- 
+> [!NOTE]
+> Para determinar si se admite el contenido HEVC, después de crear una instancia de `com.microsoft.playready`, usa el método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441).
 
 ## Agregar la detención segura a aplicaciones web
 
@@ -101,7 +98,7 @@ Configurar la detención segura para los controles de página personalizados o l
 
 -   Cuando se produce una acción de usuario personalizada, la aplicación debe establecer el origen en **NULL**, lo cual desencadenará que Media Foundation interrumpa la topología, destruya los descifradores y establezca el estado de parada.
 
-En el siguiente ejemplo se muestra cómo usar la detención segura en la aplicación web:
+El siguiente ejemplo muestra cómo usar la detención segura en la aplicación web:
 
 ```JavaScript
 // JavaScript source code
@@ -261,14 +258,14 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 }
 ```
 
-
-            **Nota** El elemento `<SessionID>B64 encoded session ID</SessionID>` de los datos de detención segura de la muestra anterior puede ser un asterisco (\*), que es un carácter comodín para todas las sesiones de detención segura registradas. Es decir, la etiqueta **SessionID** puede ser una sesión específica o un carácter comodín (\*) para seleccionar todas las sesiones de detención segura.
+> [!NOTE]
+> El `<SessionID>B64 encoded session ID</SessionID>` de los datos de detención segura del ejemplo descrito anteriormente puede ser un asterisco (*), que es un carácter comodín para todas las sesiones de detención segura registradas. Es decir, la etiqueta **SessionID** puede ser una sesión específica o un carácter comodín (\*) para seleccionar todas las sesiones de detención segura.
 
 ## Consideraciones de programación para Encrypted Media Extension
 
 En esta sección se enumeran las consideraciones de programación que debes tener en cuenta al crear aplicaciones para Windows 10 habilitadas para PlayReady.
 
-Los objetos **MSMediaKeys** y **MSMediaKeySession** creados por la aplicación deben mantenerse activos hasta que se cierre la aplicación. Una manera de garantizar que estos objetos se mantengan activos, consiste en asignarlos como variables globales (las variables estarían fuera del ámbito y sujetas a la recolección de elementos no usados si se declaran como una variable local dentro de una función). Por ejemplo, en la siguiente muestra se asignan las variables *g\_msMediaKeys* y *g\_mediaKeySession* como variables globales que, a continuación, se asignan a los objetos **MSMediaKeys** y **MSMediaKeySession** de la función.
+Los objetos **MSMediaKeys** y **MSMediaKeySession** creados por la aplicación deben mantenerse activos hasta que se cierre la aplicación. Una manera de garantizar que estos objetos se mantengan activos, consiste en asignarlos como variables globales (las variables estarían fuera del ámbito y sujetas a la recolección de elementos no usados si se declaran como una variable local dentro de una función). Por ejemplo, en el siguiente ejemplo se asignan las variables *g\_msMediaKeys* y *g\_mediaKeySession* como variables globales que, a su vez, se asignan a los objetos **MSMediaKeys** y **MSMediaKeySession** de la función.
 
 ``` syntax
 var g_msMediaKeys;
@@ -296,18 +293,17 @@ function foo() {
 }
 ```
 
-Consulta las [aplicaciones de muestra](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738) para obtener más información.
+Para obtener más información, consulta las [aplicaciones de muestra](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738).
 
- 
-
- 
-
+## Consulta también
+- [DRM de PlayReady](playready-client-sdk.md)
 
 
 
 
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

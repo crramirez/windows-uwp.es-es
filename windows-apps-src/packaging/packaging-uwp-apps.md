@@ -3,26 +3,23 @@ author: msatranjr
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Empaquetado de aplicaciones para UWP
 description: "Para vender tu aplicación para la Plataforma universal de Windows (UWP) o distribuirla a otros usuarios, necesitas crear un paquete .appxupload para esta."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a77e441cbd1b6826e06064dbd4be449813754b25
+translationtype: Human Translation
+ms.sourcegitcommit: 68081887e16801cd28726a2a33fb7993edf71e89
+ms.openlocfilehash: e274557883071c65313893ce725cc2307856174b
 
 ---
 # Empaquetado de aplicaciones para UWP
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Para vender tu aplicación para la Plataforma universal de Windows (UWP) o distribuirla a otros usuarios, necesitas crear un paquete .appxupload para esta. Al crear el paquete .appxupload, se generará otro paquete .appx destinado a pruebas y a la instalación de prueba. Puedes distribuir la aplicación directamente mediante la instalación de prueba del paquete .appx a un dispositivo. Este artículo describe el proceso de configuración, creación y prueba de un paquete de la aplicación para UWP. Para más información sobre la instalación de prueba, consulta [Realizar la instalación de prueba de aplicaciones con DISM](http://go.microsoft.com/fwlink/?LinkID=231020).
+Para vender tu aplicación para la Plataforma universal de Windows (UWP) o distribuirla a otros usuarios, necesitas crear un paquete .appxupload para esta. Al crear el paquete .appxupload, se generará otro paquete .appx destinado a pruebas y a la instalación de prueba. Puedes distribuir la aplicación directamente mediante la instalación de prueba del paquete .appx a un dispositivo. Este artículo describe el proceso de configuración, creación y prueba de un paquete de la aplicación para UWP. Para obtener más información sobre la instalación de prueba, consulta [Sideload Apps in Windows 10 (Transferir localmente aplicaciones en Windows 10)](https://technet.microsoft.com/library/mt269549.aspx).
 
 Para Windows 10, se genera un paquete (.appxupload) que se puede cargar en la Tienda Windows. La aplicación estará disponible para instalarse y ejecutarse en cualquier dispositivo de Windows10. Estos son los pasos para crear un paquete de la aplicación.
 
-1.  
-            [Antes de empaquetar la aplicación](#before-packaging-your-app). Sigue estos pasos para asegurarte de que la aplicación está lista para empaquetarse para el envío a la tienda.
-2.  
-            [Configura un paquete de la aplicación](#configure-an-app-package). Usa el diseñador de manifiestos para configurar el paquete. Por ejemplo, agrega imágenes de icono y elige las orientaciones que admitirá la aplicación.
-3.  
-            [Crea un paquete de la aplicación](#create-an-app-package). Usa el asistente de Microsoft Visual Studio para crear un paquete de la aplicación y, después, certifica el paquete con el Kit para la certificación de aplicaciones en Windows.
-4.  
-            [Realiza la instalación de prueba del paquete de la aplicación](#sideload-your-app-package) Después de realizar la instalación de prueba de la aplicación en un dispositivo, puedes probar si funciona correctamente.
+1.  [Antes de empaquetar la aplicación](#before-packaging-your-app). Sigue estos pasos para asegurarte de que la aplicación está lista para empaquetarse para el envío a la tienda.
+2.  [Configura un paquete de la aplicación](#configure-an-app-package). Usa el diseñador de manifiestos para configurar el paquete. Por ejemplo, agrega imágenes de icono y elige las orientaciones que admitirá la aplicación.
+3.  [Crea un paquete de la aplicación](#create-an-app-package). Usa el asistente de Microsoft Visual Studio para crear un paquete de la aplicación y, después, certifica el paquete con el Kit para la certificación de aplicaciones en Windows.
+4.  [Transfiere localmente el paquete de la aplicación](#sideload-your-app-package). Después de realizar la instalación de prueba de la aplicación en un dispositivo, puedes probar si funciona correctamente.
 
 Después de completar los pasos anteriores, estás listo para vender tu aplicación en la tienda. Si tienes una aplicación de línea de negocio (LOB), que no tienes previsto vender porque es solo para los usuarios internos, puedes realizar una instalación de prueba de dicha aplicación para instalarla en cualquier dispositivo de Windows 10.
 
@@ -94,13 +91,11 @@ Para distribuir una aplicación a través de la Tienda, debes crear un paquete .
 **Validar el paquete de la aplicación en un dispositivo remoto de Windows 10**
 
 1.  Para habilitar un dispositivo de Windows 10 para el desarrollo, sigue las instrucciones de [Habilitar el dispositivo para el desarrollo](https://msdn.microsoft.com/library/windows/apps/Dn706236) .
-    
-            **Importante**  No puedes validar el paquete de la aplicación en un dispositivo remoto de ARM para Windows 10.
+    **Importante**  No puedes validar el paquete de la aplicación en un dispositivo remoto de ARM para Windows10.
 2.  Descarga e instala las herramientas remotas para Visual Studio. Estas herramientas se usan para ejecutar el Kit para la certificación de aplicaciones en Windows de forma remota. Para obtener más información acerca de estas herramientas, incluida la ubicación para descargarlas, visita [Ejecutar aplicaciones de la Tienda Windows en un equipo remoto](https://msdn.microsoft.com/library/hh441469.aspx#BKMK_Starting_the_Remote_Debugger_Monitor).
 3.  Descarga el [Kit para la certificación de aplicaciones en Windows](http://go.microsoft.com/fwlink/p/?LinkID=309666) necesario e instálalo en el dispositivo remoto de Windows 10.
 4.  En la página **Creación del paquete completada** del asistente, elige el botón de opción **Máquina remota** y, a continuación, el botón de puntos suspensivos que se encuentra junto al botón **Probar conexión**.
-    
-            **Nota**  El botón de opción **Máquina remota** está disponible únicamente si seleccionaste al menos una configuración de solución que admita la validación. Para obtener más información sobre la prueba de la aplicación con el WACK, consulta [Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/Mt186449).
+    **Nota**  El botón de opción **Máquina remota** está disponible únicamente si seleccionaste al menos una configuración de solución que admita la validación. Para obtener más información sobre la prueba de la aplicación con el WACK, consulta [Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/Mt186449).
 5.  Especifica un tipo de dispositivo de la subred, o proporciona el nombre del servidor de nombres de dominio (DNS) o la dirección IP de un dispositivo que esté fuera de la subred.
 6.  En la lista **Modo de autenticación**, elige **Ninguno** si el dispositivo no requiere que inicies sesión con las credenciales de Windows.
 7.  Elige el botón **Seleccionar** y el botón **Iniciar el Kit para la certificación de aplicaciones en Windows**. Si se ejecutan herramientas remotas en este dispositivo, Visual Studio se conecta a este y realiza las pruebas de validación. Consulta [Pruebas del Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/mt186450).
@@ -133,8 +128,7 @@ La siguiente lista proporciona los requisitos para la instalación de prueba de 
 
     Después de instalar el paquete de la aplicación, verás un mensaje en la ventana de PowerShell que indica que la aplicación se instaló correctamente.
 
-    
-            **Nota**  Para abrir el menú contextual en una tableta, toca la pantalla donde quieras hacer clic con el botón derecho, sostén hasta que se muestre un círculo completo y después levanta el dedo. El menú contextual aparece después de levantar el dedo.
+    **Nota**  Para abrir el menú contextual en una tableta, toca la pantalla donde quieras hacer clic con el botón derecho, sostén hasta que se muestre un círculo completo y después levanta el dedo. El menú contextual aparece después de levantar el dedo.
 4.  Haz clic en el botón Inicio y después escribe el nombre de la aplicación para iniciarla.
 
  
@@ -147,6 +141,6 @@ La siguiente lista proporciona los requisitos para la instalación de prueba de 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

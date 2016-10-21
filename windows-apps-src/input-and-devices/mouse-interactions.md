@@ -5,8 +5,9 @@ title: Interacciones de mouse
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 10deda7b44d4cfb5c65b425bf82ceaf6654aab95
+ms.openlocfilehash: 5a26ff6380383965d51a6938db68ad8406941229
 
 ---
 
@@ -91,7 +92,7 @@ Responde a las entradas de mouse de tus aplicaciones controlando los mismos even
 
 Usa los eventos de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) para implementar la funcionalidad básica de entrada sin tener que escribir un código para cada dispositivo de entrada. Sin embargo, todavía puedes sacar provecho de las funcionalidades especiales de cada dispositivo (por ejemplo, los eventos de rueda del mouse) con el puntero, con gestos y con los eventos de manipulación de este objeto.
 
-**Muestras:  **Verás esta funcionalidad en acción en nuestras [muestras de aplicaciones](http://go.microsoft.com/fwlink/p/?LinkID=264996).
+**Muestras:  **Mira esta característica en acción en nuestras [muestras de aplicaciones](http://go.microsoft.com/fwlink/p/?LinkID=264996).
 
 
 - [Entrada: muestra de funcionalidades del dispositivo](http://go.microsoft.com/fwlink/p/?linkid=231530)
@@ -155,6 +156,6 @@ Si necesitas personalizar el cursor del mouse:
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

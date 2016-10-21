@@ -1,8 +1,12 @@
 ---
-author: martinekuan
-title: Planear tu aplicación de Plataforma universal de Windows (UWP)
-description: En los equipos de diseño de Microsoft, nuestro proceso para crear aplicaciones consta de cinco etapas diferentes: concepto, estructura, dinámica, elementos visuales y prototipo. Te animamos a que adoptes un método similar y te diviertas creando experiencias nuevas de las que todo el mundo pueda disfrutar.
+author: GrantMeStrength
+title: "Planear tu aplicación de Plataforma universal de Windows (UWP)"
+description: "En los equipos de diseño de Microsoft, nuestro proceso para crear aplicaciones consta de cinco etapas diferentes: concepto, estructura, dinámica, elementos visuales y prototipo. Te animamos a que adoptes un método similar y te diviertas creando experiencias nuevas de las que todo el mundo pueda disfrutar."
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
+translationtype: Human Translation
+ms.sourcegitcommit: 43214b9e2c786a007b8d9cdef7700e275101aba5
+ms.openlocfilehash: 4d17f7da6969910d2738377174cec9f1c1517dde
+
 ---
 
 #  Planear la aplicación para la Plataforma universal de Windows (UWP)
@@ -114,41 +118,41 @@ Técnicas comunes:
 -   Diagramas de asociación: conecta los flujos con las funciones.
 -   Prototipo: prueba las funciones para asegurarte de que hacen lo que necesitas.
 
-**Contratos entre aplicaciones** La aplicación puede participar en contratos entre aplicaciones que permiten tener flujos variados de usuarios entre aplicaciones y características.
+**Contratos entre aplicaciones**  La aplicación puede participar en contratos entre aplicaciones que permiten tener flujos amplios de usuarios entre aplicaciones y características.
 
--   **Compartir** Permite a los usuarios compartir contenido desde la aplicación con otras personas a través de otras aplicaciones. También permite recibir contenido de otras personas y aplicaciones.
--   **Reproducir en** Permite que los usuarios disfruten la transmisión de audio, vídeo o imágenes de tu aplicación a otros dispositivos de la red doméstica.
--   **Selector de archivos y extensiones de selector de archivos** Permite que los usuarios carguen y guarden sus archivos desde el sistema de archivos local, los dispositivos de almacenamiento conectados, el Grupo Hogar o incluso desde otras aplicaciones. También puedes proporcionar una extensión de selector de archivos para que otras aplicaciones puedan cargar el contenido de la aplicación.
+-   **Compartir**  Permite que los usuarios compartan contenido desde la aplicación con otras personas a través de otras aplicaciones. También permite recibir contenido de otras personas y aplicaciones.
+-   **Reproducir en**  Permite que los usuarios disfruten la transmisión de audio, vídeo o imágenes de tu aplicación a otros dispositivos de la red doméstica.
+-   **Selector de archivos y extensiones de selector de archivos**  Permite que los usuarios carguen y guarden sus archivos desde el sistema de archivos local, los dispositivos de almacenamiento conectados, el Grupo Hogar o incluso desde otras aplicaciones. También puedes proporcionar una extensión de selector de archivos para que otras aplicaciones puedan cargar el contenido de la aplicación.
 
 Para más información, consulta el tema sobre las [extensiones y los contratos entre aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh464906).
 <!-- Win 8 page. Should have replacement. -->
 
-**Diferentes vistas, factores de forma y configuraciones de hardware** Windows pone a los usuarios al mando y coloca tu aplicación en primer plano. Seguramente quieres que la interfaz de usuario de la aplicación se destaque en cualquier dispositivo, modo de entrada, orientación, configuración de hardware y en cualquier circunstancia en la que el usuario decida usarla.
+**Diferentes vistas, factores de forma y configuraciones de hardware**  Windows pone a los usuarios al mando y coloca tu aplicación en primer plano. Seguramente quieres que la interfaz de usuario de la aplicación se destaque en cualquier dispositivo, modo de entrada, orientación, configuración de hardware y en cualquier circunstancia en la que el usuario decida usarla.
 
-**Experiencia táctil** Windows ofrece una experiencia táctil única e incomparable, que hace mucho más que simplemente emular la funcionalidad del mouse.
+**Experiencia táctil**  Windows ofrece una experiencia táctil única e incomparable, que hace mucho más que simplemente emular la funcionalidad del mouse.
 
 Por ejemplo, un zoom semántico es un modo optimizado para funcionalidad táctil que permite navegar por un conjunto extenso de contenido. Los usuarios pueden desplazarse de lado a lado o de arriba a abajo por las categorías del contenido y acercar la vista de las categorías para ver más información y con más detalle. Puedes usarlo para presentar el contenido de una manera más táctil, visual e informativa que con los modelos tradicionales de navegación y diseño, como las pestañas.
 
 Por supuesto, puedes usar diferentes interacciones táctiles, como girar, pasar el dedo, etc. Obtén más información sobre [Función táctil y otras interacciones de usuario](../input-and-devices/input-primer.md).
 
-**Atractiva y original** Asegúrate de que tu aplicación sea original y atraiga a los usuarios con estas experiencias estándar:
+**Atractiva y original**  Asegúrate de que tu aplicación sea original y atraiga a los usuarios con estas experiencias estándar:
 
--   **Animaciones** Usa nuestra biblioteca de animaciones para que la aplicación resulte rápida y fluida para los usuarios. Ayuda a los usuarios a comprender cambios contextuales y relaciona las experiencias entre sí con transiciones visuales. Obtén más información sobre [cómo animar la interfaz de usuario](../graphics/animations-overview.md).
--   **Notificaciones del sistema** Informa a los usuarios sobre contenido pertinente personalmente o que esté sujeto a una limitación temporal a través de notificaciones del sistema, para atraerlos a la aplicación aunque esta esté cerrada. Obtén más información sobre los [iconos, las notificaciones y las notificaciones del sistema](../controls-and-patterns/tiles-badges-notifications.md).
--   **Iconos de la aplicación** Ofrece actualizaciones nuevas y oportunas para que los usuarios quieran volver a la aplicación. Hay más información en la siguiente sección. Obtén más información sobre los [iconos de la aplicación](../controls-and-patterns/tiles-and-notifications-creating-tiles.md).
+-   **Animaciones**  Usa nuestra biblioteca de animaciones para que la aplicación resulte rápida y fluida para los usuarios. Ayuda a los usuarios a comprender cambios contextuales y relaciona las experiencias entre sí con transiciones visuales. Obtén más información sobre [cómo animar la interfaz de usuario](../graphics/animations-overview.md).
+-   **Notificaciones del sistema**  Informa a los usuarios sobre contenido personalmente importante o que esté sujeto a una limitación temporal a través de notificaciones del sistema, para atraerlos a la aplicación incluso cuando esté cerrada. Obtén más información sobre los [iconos, las notificaciones y las notificaciones del sistema](../controls-and-patterns/tiles-badges-notifications.md).
+-   **Iconos de la aplicación**  Ofrece actualizaciones nuevas y oportunas para que los usuarios quieran volver a la aplicación. Hay más información en la siguiente sección. Obtén más información sobre los [iconos de la aplicación](../controls-and-patterns/tiles-and-notifications-creating-tiles.md).
 
 **Personalización**
 
--   **Configuración** Permite guardar la configuración de la aplicación para que los usuarios puedan crear la experiencia que quieran. Consolida toda la configuración en una pantalla y a continuación los usuarios podrán configurar la aplicación con un mecanismo común con el que ya están familiarizados. Obtén más información sobre cómo [agregar la configuración de la aplicación](../app-settings/app-settings-and-data.md).
--   **Movilidad** Crea una experiencia continua entre dispositivos mediante la itinerancia de datos; esto permite al usuario retomar una tarea exactamente donde la dejó y preserva la experiencia que más interesa al usuario, independientemente del dispositivo que esté usando. Mantén la movilidad de la configuración y los estados, para que los usuarios puedan usar la aplicación en todas partes, ya sea en el equipo familiar de la cocina, en el del trabajo o en una tableta personal. Obtén más información acerca de cómo [Administrar datos de la aplicación](../app-settings/store-and-retrieve-app-data.md) y consulta las [Directrices de datos móviles de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465094).
--   **Iconos de usuario** Haz que la aplicación sea más personal para los usuarios: carga su imagen como icono de usuario o permite que establezcan contenido de la aplicación como su icono personal en Windows.
+-   **Configuración**  Permite guardar la configuración de la aplicación para que los usuarios puedan crear la experiencia que quieran. Consolida toda la configuración en una pantalla y a continuación los usuarios podrán configurar la aplicación con un mecanismo común con el que ya están familiarizados. Obtén más información sobre cómo [agregar la configuración de la aplicación](../app-settings/app-settings-and-data.md).
+-   **Itinerancia**  Crea una experiencia continua entre dispositivos mediante la itinerancia de datos. Esto permite al usuario retomar una tarea exactamente donde la dejó y preserva la experiencia que más interesa al usuario, independientemente del dispositivo que esté usando. Mantén la movilidad de la configuración y los estados, para que los usuarios puedan usar la aplicación en todas partes, ya sea en el equipo familiar de la cocina, en el del trabajo o en una tableta personal. Obtén más información acerca de cómo [Administrar datos de la aplicación](../app-settings/store-and-retrieve-app-data.md) y consulta las [Directrices de datos móviles de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh465094).
+-   **Iconos de usuario**  Haz que la aplicación sea más personal para los usuarios: carga su imagen como icono de usuario o permite que establezcan contenido de la aplicación como su icono personal en Windows.
 
-**Funcionalidades del dispositivo** Asegúrate de que la aplicación aproveche al máximo las funcionalidades de los dispositivos actuales.
+**Funcionalidades del dispositivo**  Asegúrate de que la aplicación aproveche al máximo las funcionalidades de los dispositivos actuales.
 
--   **Gestos de Proximidad** Permite que los usuarios conecten sus dispositivos a otros dispositivos cercanos tocándolos físicamente al mismo tiempo (juegos multijugador). Obtén más información sobre [proximidad y pulsación](https://msdn.microsoft.com/library/windows/apps/hh465229).
--   **Cámaras y dispositivos de almacenamiento externos** Conecta a los usuarios con sus cámaras integradas o conectadas para permitirles conversar, realizar conferencias, grabar videoblogs, tomar fotografías del perfil, documentar hechos del mundo que les rodea o para cualquier otra actividad en la que destaque tu aplicación. Obtén más información sobre el [acceso a contenido en almacenamiento extraíble](https://msdn.microsoft.com/library/windows/apps/hh465189).
--   **Acelerómetros y otros sensores** Hoy en día, los dispositivos vienen con diversos sensores. La aplicación puede atenuar o iluminar la pantalla según la luz ambiental, redistribuir la interfaz de usuario si el usuario gira la pantalla o reaccionar ante un movimiento físico. Obtén más información sobre los [sensores](../devices-sensors/sensors.md).
--   **Geolocalización** Usa la información sobre geolocalización que te proporcionan los datos web estándar o los sensores de ubicación geográfica, para que los usuarios puedan desplazarse, encontrar su posición en un mapa u obtener avisos sobre personas, actividades y destinos cercanos. Obtén más información sobre la [ubicación geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
+-   **Gestos de Proximidad**  Permite que los usuarios conecten sus dispositivos a otros dispositivos cercanos tocándolos físicamente al mismo tiempo (juegos multijugador). Obtén más información sobre [proximidad y pulsación](https://msdn.microsoft.com/library/windows/apps/hh465229).
+-   **Cámaras y dispositivos de almacenamiento externos**  Conecta a los usuarios con sus cámaras integradas o conectadas para permitirles conversar, realizar conferencias, grabar videoblogs, tomar fotografías del perfil, documentar hechos del mundo que les rodea o para cualquier otra actividad en la que destaque tu aplicación. Obtén más información sobre el [acceso a contenido en almacenamiento extraíble](https://msdn.microsoft.com/library/windows/apps/hh465189).
+-   **Acelerómetros y otros sensores**  Hoy en día, los dispositivos vienen con diversos sensores. La aplicación puede atenuar o iluminar la pantalla según la luz ambiental, redistribuir la interfaz de usuario si el usuario gira la pantalla o reaccionar ante un movimiento físico. Obtén más información sobre los [sensores](../devices-sensors/sensors.md).
+-   **Geolocalización**  Usa la información sobre geolocalización que te proporcionan los datos web estándar o los sensores de ubicación geográfica, para que los usuarios puedan desplazarse, encontrar su posición en un mapa u obtener avisos sobre personas, actividades y destinos cercanos. Obtén más información sobre la [ubicación geográfica](https://msdn.microsoft.com/library/windows/apps/hh465139).
 
 Volvamos a tomar el ejemplo de la aplicación para viajes. Para ofrecer una excelente ayuda a un grupo de amigos que quieren crear de forma conjunta los itinerarios de viajes en grupo, podrías usar algunas de estas funciones, por mencionar algunas:
 
@@ -212,19 +216,19 @@ Para obtener información detallada sobre cómo usar superficies distintas, cons
 
 ![Diseños de una aplicación para PC y móvil](images/ux-budgettracker1-md-notablet.png)
 
-Para obtener más información sobre cómo diseñar diferentes tamaños de pantalla, consulta <!--[Responsive design 101](designing-in-effective-pixels.md)-->.
+Para obtener más información sobre cómo diseñar para diferentes tamaños de pantalla, consulta <!--[Responsive design 101](designing-in-effective-pixels.md)-->.
 
 ## Causa una buena primera impresión
 
 Piensa en lo que quieres que sientan, piensen o hagan los usuarios cuando inicien por primera vez la aplicación. Vuelve a consultar el enunciado de puntos fuertes. Aunque no tengas la oportunidad de decir a los usuarios en persona para qué es excelente la aplicación, puedes transmitirles el mensaje con tu primera impresión. Aprovecha lo siguiente:
 
-**Icono y notificaciones** El icono es la cara de tu aplicación. Entre todas las aplicaciones que el usuario pueda tener en su pantalla Inicio, ¿qué es lo que hará que quiera iniciar la tuya? Asegúrate de que el icono resalte la marca de tu aplicación y muestre sus puntos fuertes. Usa las notificaciones de icono para que la aplicación siempre tenga una apariencia renovada y relevante, lo que hará que el usuario vuelva a ella una y otra vez.
+**Icono y notificaciones**  El icono es la cara de tu aplicación. Entre todas las aplicaciones que el usuario pueda tener en su pantalla Inicio, ¿qué es lo que hará que quiera iniciar la tuya? Asegúrate de que el icono resalte la marca de tu aplicación y muestre sus puntos fuertes. Usa las notificaciones de icono para que la aplicación siempre tenga una apariencia renovada y relevante, lo que hará que el usuario vuelva a ella una y otra vez.
 
-**Pantalla de presentación** La pantalla de presentación debe cargarse lo más rápido posible y permanecer en la pantalla solo el tiempo necesario para inicializar el estado de la aplicación. Lo que muestres en la pantalla de presentación debe expresar la personalidad de la aplicación.
+**Pantalla de presentación**  La pantalla de presentación debe cargarse lo más rápido posible y permanecer en la pantalla solo el tiempo necesario para inicializar el estado de la aplicación. Lo que muestres en la pantalla de presentación debe expresar la personalidad de la aplicación.
 
-**Primer inicio** ¿Qué verán los usuarios antes de suscribirse al servicio, iniciar sesión en su cuenta o agregar su propio contenido? Intenta demostrar el valor de la aplicación antes de solicitar información a los usuarios. Considera la posibilidad de ofrecer una muestra del contenido que el usuario pueda manipular para que comprenda lo que hace tu aplicación antes de pedirle que se comprometa.
+**Primer inicio**  ¿Qué verán los usuarios antes de suscribirse al servicio, iniciar sesión en su cuenta o agregar su propio contenido? Intenta demostrar el valor de la aplicación antes de solicitar información a los usuarios. Considera la posibilidad de ofrecer una muestra del contenido que el usuario pueda manipular para que comprenda lo que hace tu aplicación antes de pedirle que se comprometa.
 
-**Página principal** La página principal es la página que verán los usuarios cada vez que inicien tu aplicación. El contenido debe tener un propósito claro y mostrar de inmediato para qué sirve la aplicación. Haz que esta página sea excelente en algo en particular y confía en que las personas explorarán el resto de la aplicación. Céntrate en eliminar las distracciones de la página de destino y no en su detectabilidad.
+**Página principal**  La página principal es la página que verán los usuarios cada vez que inicien tu aplicación. El contenido debe tener un propósito claro y mostrar de inmediato para qué sirve la aplicación. Haz que esta página sea excelente en algo en particular y confía en que las personas explorarán el resto de la aplicación. Céntrate en eliminar las distracciones de la página de destino y no en su detectabilidad.
 
 ## Valida tu diseño
 
@@ -233,6 +237,7 @@ Antes de ir demasiado lejos con el desarrollo de tu aplicación, debes validar e
 Usa las [directrices detalladas de la experiencia de usuario para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/hh465424) para mantenerte centrado en las características importantes. Usa las herramientas que encontrarás en [Visual Studio performance tools (Herramientas de rendimiento de Visual Studio)](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx) para analizar el rendimiento de cada uno de los escenarios de la aplicación.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

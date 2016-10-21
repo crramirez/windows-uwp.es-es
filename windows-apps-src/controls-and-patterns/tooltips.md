@@ -5,13 +5,15 @@ title: "Información sobre herramientas"
 ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
 label: Tooltips
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 0529f212e9fac290bb58925e992518ab0e803bfa
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 4110f902adf01e5e25ac674faf9be8faf61f4ea0
 
 
 ---
-
 # Información sobre herramientas
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 
 
 
@@ -19,10 +21,18 @@ La información sobre herramientas es una breve descripción que está vinculada
 
 ![Una información sobre herramientas](images/controls/tool-tip.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br227608"><strong>Clase ToolTip</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice"><strong>Clase ToolTipService</strong></a></li>
+</ul>
 
--   [**Clase ToolTip**](https://msdn.microsoft.com/library/windows/apps/br227608)
--   [**Clase ToolTipService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)
+</div>
+</div>
+
+
+
 
 ## ¿Es este el control adecuado?
 
@@ -67,13 +77,13 @@ Una información sobre herramientas de la aplicación Mapas de Bing.
 -   No pongas controles interactivos dentro de la información sobre herramientas.
 -   No pongas imágenes que parezcan interactivas dentro de la información sobre herramientas.
 
-<span id="related_topics"></span>Temas relacionados
+Temas relacionados
 -----------------------------------------------
 
 * [**Clase ToolTip**](https://msdn.microsoft.com/library/windows/apps/br227608)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

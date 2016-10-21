@@ -6,8 +6,9 @@ ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: cdef00304e1835532eceb8e51fecc8045f2ff300
+translationtype: Human Translation
+ms.sourcegitcommit: 75e93920422b5ad8ad0e9399bccc403ea69e7feb
+ms.openlocfilehash: 8ba48ed9aa7589ddee6009c5a8cb8ec1091d51ef
 
 ---
 
@@ -24,8 +25,8 @@ Las aplicaciones para UWP que admiten Windows Ink pueden serializar y deserializ
 
 
 
-**Nota**  
-El formato ISF es la representación más compacta y persistente de la entrada de lápiz. Puede incrustarse en un formato de documento binario, como un archivo GIF, o colocarse directamente en el Portapapeles.
+> [!NOTE]
+> El formato ISF es la representación más compacta y persistente de la entrada de lápiz. Puede incrustarse en un formato de documento binario, como un archivo GIF, o colocarse directamente en el Portapapeles.
 
  
 
@@ -92,7 +93,7 @@ public MainPage()
 
     Una vez que se selecciona un archivo, se abre una secuencia [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) establecida en [**ReadWrite**](https://msdn.microsoft.com/library/windows/apps/br241635).
 
-    A continuación, llamamos a [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/br242114) para serializar los trazos de lápiz administrados por el objeto [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) en el flujo.
+    Después, llamamos al método [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/br242114) para serializar los trazos de lápiz administrados por el objeto [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) en la secuencia.
 ```    CSharp
 // Save ink data to a file.
     private async void btnSave_Click(object sender, RoutedEventArgs e)
@@ -156,13 +157,10 @@ public MainPage()
     }
 ```
 
-[!NOTE]  
-El formato GIF es el único admitido para guardar datos de entrada de lápiz. Sin embargo, el método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) (que se muestra en la sección siguiente) admite otros formatos por motivos de compatibilidad con versiones anteriores.
-
- 
+> [!NOTE]  
+> El formato GIF es el único formato de archivo admitido para guardar datos de entrada de lápiz. Sin embargo, el método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) (que se muestra en la sección siguiente) admite otros formatos por motivos de compatibilidad con versiones anteriores.
 
 ## Cargar trazos de lápiz de un archivo
-
 
 Aquí se muestra cómo cargar trazos de lápiz de un archivo y representarlos en un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
@@ -225,6 +223,10 @@ public MainPage()
     Una vez que se selecciona un archivo, se abre una secuencia [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) establecida en [**Read**](https://msdn.microsoft.com/library/windows/apps/br241635).
 
     A continuación, llamamos a [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) para leer, deserializar y cargar los trazos de lápiz guardados en el [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492). Cuando los trazos se cargan en el **InkStrokeContainer**, el [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) los representa inmediatamente en el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+
+    > [!NOTE]
+    > Se borran todos los trazos existentes en el objeto InkStrokeContainer antes de cargarse los trazos nuevos.
+
 ``` csharp
 // Load ink data from a file.
 private async void btnLoad_Click(object sender, RoutedEventArgs e)
@@ -246,7 +248,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
         // Read from file.
         using (var inputStream = stream.GetInputStreamAt(0))
         {
-            await inkCanvas.InkPresenter.StrokeContainer.LoadAsync(stream);
+            await inkCanvas.InkPresenter.StrokeContainer.LoadAsync(inputStream);
         }
         stream.Dispose();
     }
@@ -258,8 +260,8 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**Nota**  
-El formato GIF es el único admitido para guardar datos de entrada de lápiz. Sin embargo, el método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) es compatible con los siguientes formatos por motivos de compatibilidad con versiones anteriores.
+> [!NOTE]
+> El formato GIF es el único formato de archivo admitido para guardar datos de entrada de lápiz. Sin embargo, el método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) es compatible con los siguientes formatos por motivos de compatibilidad con versiones anteriores.
 
 | Formato                    | Descripción |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -444,6 +446,6 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,8 @@ title: Programa Insider del Centro de desarrollo
 description: "Prueba las nuevas características del Centro de desarrollo antes de que estén disponibles para todos los desarrolladores y cuéntanos qué te parecen."
 author: JnHs
 translationtype: Human Translation
-ms.sourcegitcommit: ee75eb3ee3bff61666513dcf57384675a07c56ee
-ms.openlocfilehash: b889769f6a23c2830274a72bc392a4409377c142
+ms.sourcegitcommit: c3a8b083272fc421763eb153372f660ef357f044
+ms.openlocfilehash: 67aacbbcdf066ec22bcf18bc6bad1e0f0e17c7d0
 
 ---
 
@@ -14,21 +14,18 @@ Como [desarrollador registrado](http://go.microsoft.com/fwlink/?LinkID=615100), 
 
 Para participar en el programa, inscríbete en la página **Configuración de la cuenta** en el panel del Centro de desarrollo. Puedes dejar de participar en cualquier momento.
 
-> 
-              **Importante** Los términos del [Contrato para desarrolladores de aplicaciones](https://msdn.microsoft.com/windows/apps/hh694058.aspx) se aplican a tu participación en el programa. Léelos antes de unirte al programa, especialmente el Anexo I. Ten en cuenta que las características que se ponen a disposición exclusivamente para personas del Programa Insider del Centro de desarrollo pueden incluir servicios de versión preliminar experimentales y anticipados. Esto significa que estas características no suelen tener documentación disponible aún y puedes experimentar resultados inesperados al usarlas. 
+> **Importante** Los términos del [Contrato para desarrolladores de aplicaciones](https://msdn.microsoft.com/windows/apps/hh694058.aspx) se aplican a tu participación en el programa. Léelos antes de unirte al programa, especialmente el Anexo I. Ten en cuenta que las características que se ponen a disposición exclusivamente para personas del Programa Insider del Centro de desarrollo pueden incluir servicios de versión preliminar experimentales y anticipados. Esto significa que estas características no suelen tener documentación disponible aún y puedes experimentar resultados inesperados al usarlas. 
 
 Estas son algunas de las características que hemos puesto a disposición exclusiva de los miembros del Programa Insider del Centro de desarrollo. Esta lista cambiará con el tiempo a medida que se agreguen nuevas características (y a medida que las características introducidas para el Programa Insider estén disponibles para todos los usuarios).
 
 | Característica del Programa Insider del Centro de desarrollo   | Cómo pueden probarla los usuarios de Insider del Centro de desarrollo | Fecha de adición |
 |--------------------------------------|------------------------------------|------------|
-|
-              **Administrar IAP en masa**: Realiza cambios en varios IAP a la vez en lugar de enviar cada actualización individualmente. | Haz clic en **Administrar IAP en masa** en la página Introducción o IAP de una aplicación. |Junio de 2016|
-|
-              **Disponibilidad de familias de dispositivos**: Administra la disponibilidad de familias de dispositivos para la aplicación y descubre los paquetes que se ofrecerán para familias de dispositivos específicas de Windows 10 (y versiones anteriores del sistema operativo, si procede) en el orden de clasificación.|Mira esta información y realiza tus selecciones en la página **Paquetes** del envío de la aplicación.|Mayo de 2016|
-|
-              **Historial de páginas de cuentas de multiusuario**: Los propietarios de las cuentas pueden obtener acceso al historial de exploración detallado de los usuarios que han agregado a la cuenta.|En la página **Administrar usuarios**, haz clic en el vínculo que se muestra debajo de "Última actividad" del usuario cuyo historial de navegación quieres revisar.|Abril de 2016|
-|
-              **Nuevo diseño de panel**: Obtén una vista actualizada de las aplicaciones y las métricas clave, todo en un mismo lugar.|El nuevo diseño aparecerá en la página de información general del panel.|Marzo de 2016|
+|**Página de información general de análisis**: una página integral que permite ver las métricas sobre tus aplicaciones. Puedes seleccionar cualquiera de las aplicaciones o un máximo de cinco para obtener una vista combinada. En breve te mostraremos las cinco principales aplicaciones de manera predeterminada. | Haz clic en la lista desplegable **Analizar** situada cerca de la parte superior de la página y selecciona **Información general**. Cuéntanos qué información adicional te gustaría ver aquí y lo que piensas de este diseño.  |Septiembre de 2016|
+|**Análisis en tiempo real**: consulta información detallada sobre las adquisiciones y los complementos más recientes de tu aplicación. El nuevo informe usa la recopilación de eventos en tiempo real de tus clientes de Windows10. | Elige Generación de informes en tiempo real en el menú izquierdo en Análisis. Selecciona el intervalo de tiempo para revisar los datos sobre los últimos siete días o hasta la última hora, minuto a minuto. Ten en cuenta que el informe incluye solo los datos de clientes en Windows10.  |Agosto de 2016|
+|**Notificaciones push dirigidas**: crea notificaciones personalizadas para enviar a los clientes de la aplicación (todos o solo un segmento seleccionado, según los criterios específicos que definas). | Ve a la página Notificaciones de inserción (debajo de Servicios) de una aplicación. Haz clic en **Nueva notificación** para crear y programar la notificación. Puedes enviarla a todos los usuarios de la aplicación o hacer clic en **Crear nuevo grupo de clientes** para definir un segmento específico de clientes de la aplicación. [Más información](http://go.microsoft.com/fwlink/p/?LinkId=718017).  |Agosto de 2016|
+|**Segmentos**: crea un segmento de clientes de la aplicación al seleccionar criterios específicos y obtén un desglose de las estadísticas sobre dicho segmento. | Cerca de la parte superior de la página de información general del panel, haz clic en **Clientes** y luego en **Crear nuevo grupo**. |Julio de 2016|
+|**Administrar complementos en masa**: realiza cambios en varios complementos a la vez en lugar de enviar cada actualización individualmente. | Haz clic en **Administrar complementos en masa** en la página Información general o Complementos de una aplicación. |Junio de 2016|
+|**Historial de páginas de cuentas de multiusuario**: los propietarios de las cuentas pueden obtener acceso al historial de exploración detallado de los usuarios que han agregado a la cuenta.|En la página **Administrar usuarios**, haz clic en el vínculo que se muestra debajo de "Última actividad" del usuario cuyo historial de exploración quieres revisar.|Abril de 2016|
 
 
 
@@ -37,6 +34,6 @@ Estas son algunas de las características que hemos puesto a disposición exclus
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO2-->
 
 

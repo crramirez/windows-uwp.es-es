@@ -3,16 +3,15 @@ author: TylerMSFT
 title: Usar un desencadenador de mantenimiento
 description: "Aprende a usar la clase MaintenanceTrigger para ejecutar código ligero en segundo plano mientras el dispositivo está enchufado."
 ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 0da08ba5431f4d5c56d06657d3d6123a67ba5079
+translationtype: Human Translation
+ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
+ms.openlocfilehash: 1181605c097f876af49e8055e245a2c445fc30d3
 
 ---
 
 # Usar un desencadenador de mantenimiento
 
-
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 **API importantes**
 
@@ -24,15 +23,13 @@ Aprende a usar la clase [**MaintenanceTrigger**](https://msdn.microsoft.com/libr
 
 ## Crear un objeto de desencadenador de mantenimiento
 
+En este ejemplo se da por hecho que tienes un código ligero que puedes ejecutar en segundo plano para mejorar la aplicación mientras el dispositivo está enchufado. Este tema se centra en la clase [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517), que es similar a [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-Este ejemplo da por hecho que tienes un código ligero que puedes ejecutar en segundo plano para mejorar tu aplicación mientras el dispositivo está enchufado. Este tema se centra en la clase [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517), que es similar a [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839). Para obtener más información sobre cómo escribir una clase de tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano](create-and-register-a-background-task.md).
+Para obtener más información sobre cómo escribir una clase de tarea en segundo plano, consulta [Create and register a single-process background task (Crear y registrar una tarea en segundo plano de proceso único)](create-and-register-a-singleprocess-background-task.md) o [Create and register a background task that runs in a separate process (Crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente)](create-and-register-a-background-task.md).
 
-Crea un nuevo objeto [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). El segundo parámetro, *OneShot*, especifica si la tarea de mantenimiento se ejecutará una vez o seguirá ejecutándose periódicamente. Si *OneShot* se establece en true, el primer parámetro (*FreshnessTime*) especifica el número de minutos que deben esperarse antes de programar la tarea en segundo plano. Si *OneShot* se establece en false, *FreshnessTime* especifica la frecuencia con la que se ejecutará la tarea en segundo plano.
+Crea un nuevo objeto [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). El segundo parámetro, *OneShot*, especifica si la tarea de mantenimiento se ejecutará solo una vez o si seguirá ejecutándose periódicamente. Si *OneShot* se establece en "true", el primer parámetro (*FreshnessTime*) especifica el número de minutos que se debe esperar antes de programar la tarea en segundo plano. Si *OneShot* se establece en "false", *FreshnessTime* especifica la frecuencia con la que se ejecutará la tarea en segundo plano.
 
-> 
-            **Nota** Si *FreshnessTime* se establece en menos de 15 minutos, se iniciará una excepción cuando se intente registrar la tarea en segundo plano.
-
- 
+> **Nota** Si *FreshnessTime* se establece en menos de 15 minutos, se iniciará una excepción cuando se intente registrar la tarea en segundo plano.
 
 Este código de ejemplo crea un desencadenador que se ejecuta una vez cada hora:
 
@@ -48,28 +45,27 @@ Este código de ejemplo crea un desencadenador que se ejecuta una vez cada hora:
 > MaintenanceTrigger ^ taskTrigger = ref new MaintenanceTrigger(waitIntervalMinutes, false);
 > ```
 
-## [!div class="tabbedCodeSnippets"]
+## (Opcional) Agregar una condición
 
--   (Opcional) Agregar una condición Si es necesario, crea una condición a la tarea en segundo plano para controlar cuándo debe ejecutarse la tarea.
+-   Si es necesario, crea una condición a la tarea en segundo plano para controlar cuándo debe ejecutarse la tarea. Una condición evita que tu tarea en segundo plano se ejecute hasta que no se cumpla la condición. Para obtener más información, consulta [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md).
 
-    Una condición evita que tu tarea en segundo plano se ejecute hasta que no se cumpla la condición. Para obtener más información, consulta [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md). En este ejemplo, la condición se establece en **InternetAvailable** de forma que el mantenimiento se ejecuta cuando Internet está disponible (o cuando vuelva a estarlo).
+En este ejemplo, la condición se establece en **InternetAvailable** de forma que el mantenimiento se ejecuta cuando Internet está disponible (o cuando vuelva a estarlo). Para obtener una lista de posibles condiciones de tareas en segundo plano, consulta [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
 
-    Para obtener una lista de posibles condiciones de tareas en segundo plano, consulta [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
+El siguiente código agrega una condición al generador de tareas de mantenimiento:
 
-    > [!div class="tabbedCodeSnippets"]
-    > ```cs
-    > SystemCondition exampleCondition = new SystemCondition(SystemConditionType.InternetAvailable);
-    > ```
-    > ```cpp
-    > SystemCondition ^ exampleCondition = ref new SystemCondition(SystemConditionType::InternetAvailable);
-    > ```
+> [!div class="tabbedCodeSnippets"]
+> ```cs
+> SystemCondition exampleCondition = new SystemCondition(SystemConditionType.InternetAvailable);
+> ```
+> ```cpp
+> SystemCondition ^ exampleCondition = ref new SystemCondition(SystemConditionType::InternetAvailable);
+> ```
 
-## El siguiente código agrega una condición al generador de tareas de mantenimiento:
+## Registrar la tarea en segundo plano
 
+-   Registra la tarea en segundo plano llamando a tu función de registro de tareas en segundo plano. Para obtener más información sobre el registro de tareas en segundo plano, consulta [Registrar una tarea en segundo plano](register-a-background-task.md).
 
--   [!div class="tabbedCodeSnippets"] Registrar la tarea en segundo plano
-
-    Registra la tarea en segundo plano llamando a tu función de registro de tareas en segundo plano.
+    El siguiente código registra la tarea de mantenimiento. Ten en cuenta que se supone que la tarea en segundo plano se ejecuta en un proceso independiente de la aplicación, ya que especifica el elemento `entryPoint`. Si la tarea en segundo plano se ejecuta en el mismo proceso que la aplicación, no se especifica `entryPoint`.
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -85,48 +81,40 @@ Este código de ejemplo crea un desencadenador que se ejecuta una vez cada hora:
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, taskTrigger, exampleCondition);
     > ```
 
-    > Para más información sobre el registro de tareas en segundo plano, consulta [Registrar una tarea en segundo plano](register-a-background-task.md). El siguiente código registra la tarea de mantenimiento: [!div class="tabbedCodeSnippets"] 
-            **Nota** Para todas las familias de dispositivos, excepto la de equipos de escritorio, si el dispositivo dispone de poca memoria, las tareas en segundo plano pueden finalizarse.
+    > **Nota** Para todas las familias de dispositivos (excepto la de equipos de escritorio), si el dispositivo dispone de poca memoria, las tareas en segundo plano pueden finalizarse. Si no se expone una excepción de falta de memoria o la aplicación no la controla, la tarea en segundo plano finalizará sin que se muestre ninguna advertencia y sin que se genere el evento OnCanceled. Esto contribuye a garantizar la experiencia del usuario de la aplicación en primer plano. La tarea en segundo plano debe estar diseñada para controlar este escenario.
 
-    > Si no se expone una excepción de falta de memoria o la aplicación no la controla, la tarea en segundo plano finalizará sin que se muestre ninguna advertencia y sin que se genere el evento OnCanceled.
+    > **Nota** Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquier tipo de desencadenador en segundo plano.
 
-    Esto contribuye a garantizar la experiencia del usuario de la aplicación en primer plano. La tarea en segundo plano debe estar diseñada para controlar este escenario.
+    Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización de la aplicación, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y a continuación a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) una vez iniciada la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
 
-    > 
-            **Nota** Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquier tipo de desencadenador en segundo plano. Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
+    > **Nota** Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
 
 
-> 
-            **Nota** Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido.
+> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
-
+## Temas relacionados
 
 ****
 
-* [
-            **Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP).](create-and-register-a-background-task.md)
-* [Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).](declare-background-tasks-in-the-application-manifest.md)
-* [Temas relacionados](handle-a-cancelled-background-task.md)
-* [Crear y registrar una tarea en segundo plano](monitor-background-task-progress-and-completion.md)
-* [Declarar tareas en segundo plano en el manifiesto de la aplicación](register-a-background-task.md)
-* [Controlar una tarea en segundo plano cancelada](respond-to-system-events-with-background-tasks.md)
-* [Supervisar el progreso y la finalización de tareas en segundo plano](set-conditions-for-running-a-background-task.md)
-* [Registrar una tarea en segundo plano](update-a-live-tile-from-a-background-task.md)
-* [Responder a eventos del sistema con tareas en segundo plano](run-a-background-task-on-a-timer-.md)
-* [Establecer condiciones para ejecutar una tarea en segundo plano](guidelines-for-background-tasks.md)
+* [Create and register a single-process background task (Crear y registrar una tarea en segundo plano de proceso único)](create-and-register-a-singleprocess-background-task.md).
+* [Create and register a background task that runs in a separate process (Crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente)](create-and-register-a-background-task.md)
+* [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
+* [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
+* [Registrar una tarea en segundo plano](register-a-background-task.md)
+* [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md)
+* [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md)
+* [Actualizar un icono dinámico desde una tarea en segundo plano](update-a-live-tile-from-a-background-task.md)
+* [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
+* [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 
 ****
 
-* [Actualizar un icono dinámico desde una tarea en segundo plano](debug-a-background-task.md)
-* [Ejecutar una tarea en segundo plano en un temporizador](http://go.microsoft.com/fwlink/p/?linkid=254345)
-
- 
-
- 
+* [Depurar una tarea en segundo plano](debug-a-background-task.md)
+* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

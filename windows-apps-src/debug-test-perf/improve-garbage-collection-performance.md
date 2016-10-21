@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
 title: "Mejorar el rendimiento de la recolección de elementos no usados"
 description: "La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática con el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no utilizados de .NET para las aplicaciones para UWP."
+translationtype: Human Translation
 ms.sourcegitcommit: 5f9626c644315884ea8605a4e69e7e580a44010b
-ms.openlocfilehash: 3fb6a0469a0e7488c40fc03bce8c90780b524656
+ms.openlocfilehash: 32290820d4732f1a8b28fd18682514e3948e0356
 
 ---
 # Mejorar el rendimiento de la recolección de elementos no utilizados
@@ -13,8 +14,7 @@ ms.openlocfilehash: 3fb6a0469a0e7488c40fc03bce8c90780b524656
 
 La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática con el recolector de elementos no utilizados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no usados de .NET para las aplicaciones para UWP. Para más información sobre el funcionamiento del recolector de elementos no utilizados de .NET y las herramientas para depurar y analizar su rendimiento, consulta [Recolección de elementos no utilizados](https://msdn.microsoft.com/library/windows/apps/xaml/0xy59wtx.aspx).
 
-
-            **Nota**  La necesidad de intervenir en el comportamiento predeterminado del recolector de elementos no usados es una clara señal de problemas de memoria generales en la aplicación. Para más información, consulta [Herramienta de uso de memoria durante la depuración en Visual Studio2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Este tema solo se aplica a C# y Visual Basic.
+**Nota** La necesidad de intervenir en el comportamiento predeterminado del recolector de elementos no usados es una clara señal de problemas de memoria generales en la aplicación. Para más información, consulta [Herramienta de uso de memoria durante la depuración en Visual Studio2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Este tema solo se aplica a C# y Visual Basic.
 
  
 
@@ -38,8 +38,7 @@ Induce una recolección de elementos no utilizados solamente si has medido el re
 
 Para inducir una recolección de elementos no usados de una generación, llama a [**GC.Collect(n)**](https://msdn.microsoft.com/library/windows/apps/xaml/y46kxc5e.aspx), donde n es la generación que quieres recolectar (0, 1 o 2).
 
-
-            **Nota**  Se recomienda no forzar una recolección de elementos no usados en la aplicación, ya que el recolector de elementos no usados usa muchas medidas heurísticas para determinar el mejor momento de realizar una recolección y, si la fuerzas, en muchos casos provocarás un uso innecesario de la CPU. Pero si sabes que tienes una gran cantidad de objetos en la aplicación que ya no se usan y quieres devolver esta memoria al sistema, puede resultar conveniente forzar una recolección de elementos no utilizados. Por ejemplo, puedes inducir una recolección al final de una secuencia de carga en un juego para liberar memoria antes de comenzar la partida.
+**Nota** Se recomienda no forzar una recolección de elementos no usados en la aplicación, ya que el recolector de elementos no usados usa muchas medidas heurísticas para determinar el mejor momento de realizar una recolección y, si la fuerzas, en muchos casos provocarás un uso innecesario de la CPU. Pero si sabes que tienes una gran cantidad de objetos en la aplicación que ya no se usan y quieres devolver esta memoria al sistema, puede resultar conveniente forzar una recolección de elementos no utilizados. Por ejemplo, puedes inducir una recolección al final de una secuencia de carga en un juego para liberar memoria antes de comenzar la partida.
  
 Para evitar inducir accidentalmente demasiadas recolecciones de elementos no utilizados, puedes establecer el valor de [**GCCollectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/bb495757.aspx) en **Optimized**. Esto indica al recolector de elementos no utilizados que debe iniciar una recolección solo si determina que será lo suficientemente productiva como para justificar su ejecución.
 
@@ -85,6 +84,6 @@ El reemplazo de referencias de objeto por índices puede implicar una modificaci
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

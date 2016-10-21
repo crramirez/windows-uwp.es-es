@@ -1,31 +1,28 @@
 ---
 author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de un producto desde la aplicación (IAP), durante un intervalo de fechas especificado y otros filtros opcionales."
-title: Obtener adquisiciones de IAP
+description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de un complemento de un intervalo de fechas especificado y otros filtros opcionales."
+title: Obtener los datos de las adquisiciones de complementos
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: bff5eb8ecf5a11067a590393d443343dc6ed94bc
+ms.sourcegitcommit: ecb0f5263b7f7f470484e9bd579b7bdb6efcdfa4
+ms.openlocfilehash: 9d895200e6d1bc823ebcb52e0b034883f5a059e0
 
 ---
 
-# Obtener adquisiciones de IAP
+# Obtener los datos de las adquisiciones de complementos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de un producto desde la aplicación (IAP), durante un intervalo de fechas especificado y otros filtros opcionales. Este método devuelve los datos en formato JSON.
+
+Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de un complemento (también conocido como producto desde la aplicación o IAP) de un intervalo de fechas especificado y otros filtros opcionales. Este método devuelve los datos en formato JSON.
 
 ## Requisitos previos
 
 
-Para usar este método, necesitas lo siguiente:
+Para usar este método, primero debes hacer lo siguiente:
 
--   Asociar la aplicación de Azure AD que usarás para llamar a este método con la cuenta del Centro de desarrollo.
-
--   Obtener un token de acceso de Azure AD para la aplicación.
-
-Para obtener más información, consulta [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md).
+* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de la Tienda Windows.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 ## Solicitud
 
@@ -42,13 +39,13 @@ Para obtener más información, consulta [Acceder a los datos de análisis media
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. El token de acceso de Azure AD con la forma **Portador**&lt;*token*&gt;. |
+| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
 ### Parámetros de la solicitud
 
-El parámetro *applicationId* o *inAppProductId* es obligatorio. Para recuperar los datos de compra de todos los IAP registrados en la aplicación, especifica el parámetro *applicationId*. Para recuperar los datos de compra de un solo IAP, especifica el parámetro *inAppProductId*. Si especificas ambos, el parámetro *inAppProductId* se pasará por alto.
+El parámetro *applicationId* o *inAppProductId* es obligatorio. Para recuperar los datos de compra de todos los complementos registrados en la aplicación, especifica el parámetro *applicationId*. Para recuperar los datos de compra de un solo complemento, especifica el parámetro *inAppProductId*. Si especificas ambos, el parámetro *applicationId* se ignorará.
 
 <table>
 <colgroup>
@@ -69,25 +66,25 @@ El parámetro *applicationId* o *inAppProductId* es obligatorio. Para recuperar 
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">cadena</td>
-<td align="left">El Id. de la Tienda de la aplicación sobre la que quieres recuperar los datos de compra de IAP. El Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8.</td>
+<td align="left">El Id. de la Tienda de la aplicación para la que quieres recuperar los datos de compra de complementos. El Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8.</td>
 <td align="left">Sí</td>
 </tr>
 <tr class="even">
 <td align="left">inAppProductId</td>
 <td align="left">cadena</td>
-<td align="left">El id. del producto del IAP sobre el que quieres recuperar los datos de compra.</td>
+<td align="left">El Id. de la Tienda del complemento para el que quieres recuperar los datos de compra. El Id. de la Tienda está disponible en la dirección URL de la página de introducción del complemento del panel del Centro de desarrollo de Windows. Por ejemplo, si la dirección URL de la página del panel de un complemento es ```https://developer.microsoft.com/en-us/dashboard/iaps/9NBLGGH4SCZS?appId=9NBLGGH29DM8```, el Id. de la Tienda del complemento es la cadena 9NBLGGH4SCZS.</td>
 <td align="left">Sí</td>
 </tr>
 <tr class="odd">
 <td align="left">startDate</td>
 <td align="left">fecha</td>
-<td align="left">Fecha de inicio del intervalo de fechas de los datos de compra del IAP que se han de recuperar. El valor predeterminado es la fecha actual.</td>
+<td align="left">La fecha de inicio del intervalo de fechas de los datos de compra del complemento que se recuperarán. El valor predeterminado es la fecha actual.</td>
 <td align="left">No</td>
 </tr>
 <tr class="even">
 <td align="left">endDate</td>
 <td align="left">fecha</td>
-<td align="left">Fecha de finalización del intervalo de fechas de los datos de compra que se han de recuperar del IAP. El valor predeterminado es la fecha actual.</td>
+<td align="left">La fecha de finalización del intervalo de fechas de los datos de compra del complemento que recuperarán. El valor predeterminado es la fecha actual.</td>
 <td align="left">No</td>
 </tr>
 <tr class="odd">
@@ -117,7 +114,7 @@ El parámetro *applicationId* o *inAppProductId* es obligatorio. Para recuperar 
 <tr class="odd">
 <td align="left">orderby</td>
 <td align="left">cadena</td>
-<td align="left">Instrucción que ordena los valores de datos resultantes de cada compra de IAP. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:
+<td align="left">Instrucción que ordena los valores de datos resultantes de cada compra de complemento. La sintaxis es <em>orderby=campo [orden],campo [orden],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:
 <ul>
 <li><strong>fecha</strong></li>
 <li><strong>acquisitionType</strong></li>
@@ -247,7 +244,7 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 
 ### Ejemplo de solicitud
 
-En los siguientes ejemplos se muestran varias solicitudes para obtener los datos de compra del IAP. Reemplaza los valores *inAppProductId* y *applicationId* por los correspondientes id. de producto del IAP e Id. de la Tienda de la aplicación.
+En los ejemplos siguientes se muestran varias solicitudes para obtener datos de compra de complementos. Reemplaza los valores de *inAppProductId* y *applicationId* con los Id. de la Tienda correspondientes al complemento o aplicación.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions?inAppProductId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -267,22 +264,23 @@ Authorization: Bearer <your access token>
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                                |
 |------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Valor      | matriz  | Matriz de objetos que contienen los datos de compra agregados del IAP. Para obtener más información sobre los datos de cada objeto, consulta la sección [valores de compra del IAP](#iap-acquisition-values) que encontrarás a continuación.                                                                                                              |
-| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de datos de compra del IAP de la solicitud. |
-| TotalCount | entero    | Número total de filas en el resultado de datos de la consulta.                                                                                                                                                                                                                                 |
+| Value      | matriz  | Matriz de objetos que contienen los datos de compra agregados del complemento. Para obtener más información sobre los datos de cada objeto, consulta la sección [valores de compra del complemento](#add-on-acquisition-values) que encontrarás a continuación.                                                                                                              |
+| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero hay más de 10000 filas de datos de compra de complementos para la solicitud. |
+| TotalCount | entero    | Número total de filas del resultado de datos de la consulta.                                                                                                                                                                                                                                 |
 
 <span/>
 
-### Valores de compra del IAP
+<span id="add-on-acquisition-values" />
+### Valores de compra del complemento
 
-Los elementos en la matriz *Value* contienen los siguientes valores.
+Los elementos de la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo    | Descripción                                                                                                                                                                                                                              |
 |---------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| date                | cadena  | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
-| inAppProductId      | cadena  | Identificador de producto del IAP de la cual recuperas los datos de compra.                                                                                                                                                                 |
-| inAppProductName    | cadena  | El nombre para mostrar del IAP.                                                                                                                                                                                                             |
-| applicationId       | cadena  | El Id. de la Tienda de la aplicación sobre la que quieres recuperar los datos de compra de IAP.                                                                                                                                                           |
+| date                | cadena  | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
+| inAppProductId      | cadena  | El Id. de la Tienda del complemento para el que estás recuperando los datos de compra.                                                                                                                                                                 |
+| inAppProductName    | cadena  | Nombre para mostrar del complemento.                                                                                                                                                                                                             |
+| applicationId       | cadena  | El Id. de la Tienda de la aplicación para la que quieres recuperar los datos de compra de complementos.                                                                                                                                                           |
 | applicationName     | cadena  | Nombre para mostrar de la aplicación.                                                                                                                                                                                                             |
 | deviceType          | cadena  | Tipo de dispositivo que completó la compra. Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).                                                                                                  |
 | orderName           | cadena  | Nombre del pedido.                                                                                                                                                                                                                   |
@@ -306,7 +304,7 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
     {
       "date": "2015-01-02",
       "inAppProductId": "9NBLGGH3LHKL",
-      "inAppProductName": "Contoso IAP 7",
+      "inAppProductName": "Contoso add-on 7",
       "applicationId": "9NBLGGGZ5QDR",
       "applicationName": "Contoso Demo",
       "deviceType": "Phone",
@@ -316,7 +314,7 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
       "market": "GB",
       "gender": "m",
       "ageGroup": "50orover",
-      "acquisitionType": "Iap",
+      "acquisitionType": "iap",
       "acquisitionQuantity": 1
     }
   ],
@@ -339,6 +337,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

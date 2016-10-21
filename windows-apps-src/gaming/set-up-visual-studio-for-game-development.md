@@ -3,8 +3,9 @@ author: mtoepke
 title: "Herramientas de Visual Studio para programación de juegos"
 description: "Aquí encontrarás información general acerca de las herramientas específicas de DirectX disponibles en Visual Studio."
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2202474f24e93aab32ec9f4e85e765616cbae056
+ms.openlocfilehash: 59fe007601d16f6586ec52c0026e161ad6350a1e
 
 ---
 
@@ -41,8 +42,7 @@ Crea [archivos de personalizaciones de compilación](#custom) para convertir est
 
 Para obtener más información, consulta [Trabajar con texturas e imágenes](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
-> 
-            **Nota** El Editor de imágenes no está pensado para reemplazar una aplicación completa de edición de imágenes, pero es apropiado para varios escenarios simples de edición y visualización.
+> **Nota** El Editor de imágenes no está pensado para reemplazar una aplicación completa de edición de imágenes, pero es apropiado para varios escenarios simples de edición y visualización.
 
  
 
@@ -61,8 +61,7 @@ Esta es la captura de pantalla de un modelo en el editor con iluminación aplica
 
 Para obtener más información, consulta [Trabajar con modelos 3D](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx).
 
-> 
-            **Nota** El Editor de modelos no está pensado para reemplazar una aplicación completa de edición de modelos, pero es apropiado para varios escenarios simples de edición y visualización.
+> **Nota** El Editor de modelos no está pensado para reemplazar una aplicación completa de edición de modelos, pero es apropiado para varios escenarios simples de edición y visualización.
 
  
 
@@ -139,8 +138,7 @@ Visual Studio proporciona herramientas de depuración específicas para gráfico
 
 Para obtener más información, consulta [Depurar gráficos DirectX](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx).
 
-> 
-            **Nota** Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -154,6 +152,6 @@ Para obtener más información, consulta [Depurar gráficos DirectX](https://msd
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

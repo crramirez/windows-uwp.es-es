@@ -3,8 +3,9 @@ author: jnHs
 Description: "Si la aplicación usa los elementos AdMediatorControl o AdControl para mostrar anuncios en banner, puedes aumentar la velocidad de relleno de los anuncios y tus ingresos mostrando anuncios de filiales de Microsoft en la aplicación."
 title: Paquetes piloto
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
-ms.sourcegitcommit: 9e62a7aa18950f7e1cc26b42762e3bb937c389ac
-ms.openlocfilehash: c538da2a58f38925938b9e28ec7ca65cdb9858a3
+translationtype: Human Translation
+ms.sourcegitcommit: baa8212b7ec26be1f50e051fa06bff4bf8095227
+ms.openlocfilehash: 34321a5fd3db10833b958049597ebf830599cfb4
 
 ---
 
@@ -16,7 +17,15 @@ Los paquetes piloto te permiten proporcionar paquetes diferentes para un conjunt
 
 Ten en cuenta que los paquetes piloto deben pasar el [proceso de certificación](the-app-certification-process.md), al igual que un envío de versión final normal. Si más tarde decides que quieres que los paquetes de un paquete piloto estén disponibles para todos tus clientes, puedes extraer estos paquetes en tu envío de versión final, tal como se describe a continuación.
 
-Cuando configuras paquetes piloto, puedes elegir qué personas deben obtener paquetes específicos. Para ello, agrégalas a un grupo piloto. Cualquier persona de un grupo piloto que use un dispositivo que ejecute una versión de Windows 10 compatible con los paquetes piloto (la compilación 10586 o posterior de Windows.Desktop, o la compilación 10586.63 o posterior de Windows.Mobile), obtendrá paquetes de los paquetes piloto que designes para ese grupo en concreto. Cualquier persona que no esté agregada a uno de tus grupos piloto o que use un dispositivo incompatible con los paquetes piloto, obtendrá paquetes del envío de versión final.
+Cuando configuras paquetes piloto, puedes elegir qué personas deben obtener paquetes específicos. Para ello, agrégalas a un grupo de piloto. Cualquier persona de un grupo de piloto que use un dispositivo con una versión de Windows 10 compatible con paquetes piloto (la compilación 10586 o posterior de Windows.Desktop, la compilación 10586.63 o posterior de Windows.Mobile, o Xbox One), obtendrá paquetes de los paquetes piloto que designes para ese grupo en concreto. Cualquier persona que no esté agregada a uno de tus grupos de piloto o que use un dispositivo no compatible con los paquetes piloto, obtendrá paquetes del envío de versión final.
+
+> **Importante** En los dispositivo móviles y de escritorio, las personas incluidas en tus grupos de piloto obtendrán automáticamente los paquetes de tu piloto cada vez que proporciones actualizaciones. Sin embargo, los **integrantes de tus grupos piloto que usan dispositivos de Xbox, tendrán que consultar manualmente si hay actualizaciones** para obtener los paquetes más recientes y asegurarse de iniciar sesión en el dispositivo con su cuenta de Microsoft (aquella que tenga la dirección de correo asociada que incluiste en el grupo de piloto).
+
+Ten en cuenta que los paquetes piloto no se distribuirán a través de la [Tienda Windows para empresas](https://www.microsoft.com/business-store). Esto se debe a que las personas de tus grupos de piloto deben iniciar sesión con sus cuentas de Microsoft para poder recibir un paquete piloto. Todas aquellas adquisiciones realizadas a través de la Tienda Windows para empresas recibirán los paquetes de la versión final.
+
+> **Sugerencia** Los paquetes piloto ofrecen paquetes solo a los clientes seleccionados que especificas. Para distribuir paquetes a una selección aleatoria de los clientes en un porcentaje especificado, puedes usar el [lanzamiento de paquete gradual](gradual-package-rollout.md). También puedes combinar el lanzamiento con tus paquetes piloto si quieres distribuir una actualización de forma gradual a uno de tus grupos de piloto.
+
+> A diferencia de los paquetes piloto, las selecciones de lanzamiento de paquete gradual son aplicables a los clientes que adquieran la aplicación a través de la Tienda Windows para empresas. 
 
 Después de publicar en envío para tu aplicación, verás una sección **Paquetes piloto** en la página Información general de la aplicación. Haz clic en **Nuevo paquete piloto** para empezar. Si no has configurado ningún grupo piloto aún, se te pedirá que crees uno antes de continuar.
 
@@ -28,9 +37,8 @@ Al crear un grupo piloto, debes asignarle un nombre. Cada grupo piloto debe cont
 
 Haz clic en **Crear grupo** para guardar el grupo y continuar configurando el paquete piloto.
 
-> 
->             **Importante** Asegúrate de obtener el permiso necesario de las personas que agregas a tu grupo piloto, y de que comprenden que obtendrán paquetes diferentes al envío de versión final. 
-Es posible que también quieras tener en cuenta el modo en que pueden enviarte comentarios sobre la aplicación aquellas personas que incluyas en el paquete piloto. Te sugerimos que [agregues un control en la aplicación para iniciar el Centro de opiniones](../monetize/launch-feedback-hub-from-your-app.md), para que así tus clientes puedan enviarte sus comentarios directamente; además, podrás leer sus comentarios en el [informe de comentarios](feedback-report.md) de la aplicación.
+> **Importante** Asegúrate de obtener el permiso necesario de las personas que agregas a tu grupo de piloto y de que estas comprendan que obtendrán paquetes diferentes al envío de versión final. 
+> Es posible que también quieras tener en cuenta el modo en que pueden enviarte comentarios sobre la aplicación aquellas personas que incluyas en el paquete piloto. Te sugerimos que [agregues un control en la aplicación para iniciar el Centro de opiniones](../monetize/launch-feedback-hub-from-your-app.md), para que así tus clientes puedan enviarte sus comentarios directamente; además, podrás leer sus comentarios en el [informe de comentarios](feedback-report.md) de la aplicación.
 
 Para editar el grupo piloto más adelante, puedes hacer clic en **Exportar .csv** para guardar la información de tu grupo en un archivo .csv. Realiza los cambios que quieras en este archivo y haz clic en **Importar .csv** para usar la nueva versión para actualizar la pertenencia al grupo. Ten en cuenta que los cambios de pertenencia al grupo piloto pueden tardar hasta 30minutos en implementarse. Si agregas personas a un grupo piloto después de haber publicado un paquete piloto asociado, los paquetes se entregarán a esas nuevas personas de forma automática; no será necesario que crees y publiques un nuevo envío para ese paquete piloto. 
 
@@ -50,11 +58,19 @@ Tienes la opción de seleccionar paquetes que estaban asociados con un envío pu
 
 Si la aplicación admite varias familias de dispositivos, asegúrate de que incluir paquetes para admitir el mismo conjunto de familias de dispositivos en tu piloto. Las personas en los grupos piloto **solo** podrán obtener paquetes de ese piloto. No podrán acceder a los paquetes de otros pilotos ni del envío de versión final. 
 
-Además, recuerda que la información de la descripción de la Tienda procede de tu envío de versión final, incluidas las familias de dispositivos son compatibles con la aplicación. Los clientes de los grupos piloto solo podrán descargar la aplicación en una familia de dispositivos que sea compatible con el envío de versión final. Para obtener más información, consulta [Compatibilidad con familias de dispositivos](#device-family-support). 
+Además, recuerda que la información de la descripción de la Tienda procede de tu envío de versión final, incluidas las familias de dispositivos son compatibles con la aplicación. Los clientes de los grupos de piloto solo podrán descargar la aplicación en una familia de dispositivos que sea compatible con el envío de versión final. Para obtener más información, consulta [Compatibilidad con familias de dispositivos](#device-family-support). 
+
+## Lanzamiento de paquete gradual
+
+De manera predeterminada, los paquetes de tu envío estarán disponibles para todos los integrantes del grupo de piloto al mismo tiempo. Para cambiar esto, puedes activar la casilla que indica **Los lanzamientos se actualizan gradualmente una vez publicado el envío (solo a clientes de Windows 10). **. Puedes elegir un porcentaje de personas del grupo de piloto para que reciban los paquetes del nuevo envío, de modo que puedas supervisar los comentarios y los datos analíticos para asegurarte de estar convencido sobre la actualización antes de lanzarla más ampliamente al resto del grupo de piloto. Puede aumentar el porcentaje (o detener la actualización) en cualquier tiempo sin necesidad de crear un nuevo envío de tu paquete piloto. 
+
+> **Importante** Cuando lances paquetes de forma gradual en un paquete piloto, quienes no formen parte del porcentaje de usuarios que reciben los nuevos paquetes recibirán los paquetes correspondientes al envío de paquete piloto anterior (a menos que haya un paquete con mayor clasificación disponible para ellos).
+
+Para obtener más información, consulta [Gradual package rollout (Lanzamiento de paquete gradual)](gradual-package-rollout.md).
 
 ## Configurar las opciones de paquete piloto adicionales
 
-De manera predeterminada, tu paquete piloto se publicará y estará disponible para tu grupo piloto tan pronto como se complete el proceso de certificación. Si quieres cambiar la [fecha de publicación](set-app-pricing-and-availability.md#publish-date), o agregar [Notas para la certificación](notes-for-certification.md), puedes hacerlo en la sección **Opciones**. Haz clic en **Guardar** para volver a la página de información general del paquete piloto. 
+De manera predeterminada, tu paquete piloto se publicará y estará disponible para tu grupo de piloto tan pronto como se complete el proceso de certificación. Si quieres cambiar la [fecha de publicación](set-app-pricing-and-availability.md#publish-date), o agregar [Notas para la certificación](notes-for-certification.md), puedes hacerlo en la sección **Opciones**. Haz clic en **Guardar** para volver a la página de información general del paquete piloto. 
 
 ## Enviar el paquete piloto a la Tienda
 
@@ -68,14 +84,11 @@ Las personas de los grupos piloto asociados con ese paquete piloto que ya tengan
 
 En la mayoría de los casos, querrás incluir paquetes que admitan el mismo conjunto de familias de dispositivos compatibles con tu envío de versión final. La disponibilidad de familias de dispositivos para una aplicación siempre se basará en el envío de versión final, así un cliente esté en un grupo piloto o no.
 
+**Si el envío de versión final admite una familia de dispositivos que no es compatible con tu paquete piloto**, las personas del grupo de piloto no podrán descargar la aplicación en esa familia de dispositivos. Por ejemplo, si tu envío de versión final incluye paquetes Mobile y Desktop y luego creas un paquete piloto que solo incluye un paquete Mobile, las personas del grupo piloto solo podrán descargar la aplicación en dispositivos móviles, aunque tengas un paquete de escritorio disponible para los clientes que no están en el piloto. Incluso si solo usas el paquete piloto para probar los cambios en el paquete Mobile, debes incluir el paquete Desktop de tu envío de versión final en el paquete piloto para que los clientes en el grupo piloto puedan descargar la aplicación en dispositivos de escritorio.
 
-            **Si el envío de versión final admite una familia de dispositivos que no es compatible con tu paquete piloto**, las personas del grupo piloto no podrán descargar la aplicación en esa familia de dispositivos. Por ejemplo, si tu envío de versión final incluye paquetes Mobile y Desktop y luego creas un paquete piloto que solo incluye un paquete Mobile, las personas del grupo piloto solo podrán descargar la aplicación en dispositivos móviles, aunque tengas un paquete de escritorio disponible para los clientes que no están en el piloto. Incluso si solo usas el paquete piloto para probar los cambios en el paquete Mobile, debes incluir el paquete Desktop de tu envío de versión final en el paquete piloto para que los clientes en el grupo piloto puedan descargar la aplicación en dispositivos de escritorio.
+**Si el paquete piloto es compatible con una familia de dispositivos que el envío de versión final no admite**, nadie podrá descargar la aplicación en esa familia de dispositivos, así estén o no en el grupo de piloto. Por ejemplo, si tu envío de versión final solo incluye un paquete Mobile y luego creas un paquete piloto que incluye paquetes Mobile y Desktop, las personas del grupo piloto aún solo podrán descargar la aplicación en dispositivos móviles. El paquete de escritorio no puede ofrecerse a nadie, incluso a personas del grupo piloto. Si quieres que un paquete de escritorio esté a disposición de las personas del grupo piloto, primero debes actualizar el envío de versión final para que incluya un paquete de escritorio. Para una mejor experiencia para todos los clientes de la aplicación, tu envío de versión final debe admitir las mismas familias de dispositivos que el paquete piloto. 
 
-
-            **Si el paquete piloto es compatible con una familia de dispositivos que el envío de versión final no admite**, nadie podrá descargar la aplicación en esa familia de dispositivos, así estén en el grupo piloto o no. Por ejemplo, si tu envío de versión final solo incluye un paquete Mobile y luego creas un paquete piloto que incluye paquetes Mobile y Desktop, las personas del grupo piloto aún solo podrán descargar la aplicación en dispositivos móviles. El paquete de escritorio no puede ofrecerse a nadie, incluso a personas del grupo piloto. Si quieres que un paquete de escritorio esté a disposición de las personas del grupo piloto, primero debes actualizar el envío de versión final para que incluya un paquete de escritorio. Para una mejor experiencia para todos los clientes de la aplicación, tu envío de versión final debe admitir las mismas familias de dispositivos que el paquete piloto. 
-
-
-            **Nota**  Los paquetes agregados a los paquetes piloto pueden admitir cualquier versión de sistema operativo (o cualquier compilación de Windows 10), pero, como se indicó anteriormente, las personas en los grupos piloto debe usar un dispositivo con una versión de Windows 10 que admita los paquete piloto (Windows.Desktop compilación 10586 o posterior; Windows.Mobile compilación 10586.63 o posterior) con el fin de obtener paquetes del paquete piloto.
+**Nota**  Los paquetes agregados a los paquetes piloto pueden admitir cualquier versión de sistema operativo (o cualquier compilación de Windows 10), pero, como se indicó anteriormente, las personas incluidas en los grupos de piloto deben usar un dispositivo con una versión de Windows 10 que admita paquetes piloto (compilación 10586 o posterior de Windows.Desktop; compilación 10586.63 o posterior de Windows.Mobile) con el fin de obtener paquetes del paquete piloto.
 
 ## Actualizar o modificar el paquete piloto
 
@@ -111,6 +124,6 @@ Cuando eliminas un paquete piloto, los clientes que tenían paquetes que distrib
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO5-->
 
 

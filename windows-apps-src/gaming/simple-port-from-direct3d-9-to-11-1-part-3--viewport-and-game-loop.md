@@ -3,8 +3,9 @@ author: mtoepke
 title: Migrar el bucle del juego
 description: "Aprende a implementar una ventana para un juego de la Plataforma universal de Windows (UWP) y a traer el bucle de la repetición, incluso cómo crear una interfaz IFrameworkView para controlar una clase CoreWindow de pantalla completa."
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3c2369a2fdc48aed14f7ad363df8792e0ed5d795
+ms.openlocfilehash: 8d843d8b22623dfbba3a76eb7ef19a82cc07f04f
 
 ---
 
@@ -29,8 +30,7 @@ Para configurar una ventana de escritorio con una ventanilla de Direct3D 9, tuvi
 
 El entorno de UWP ofrece un sistema mucho más simple. En lugar de configurar una ventana tradicional, un juego de la Tienda Windows que usa DirectX implementa [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478). Esta interfaz existe para que los juegos y las aplicaciones de DirectX se ejecuten directamente en una clase [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) en el interior del contenedor de la aplicación.
 
-> 
-            **Nota** Windows suministra punteros administrados a recursos, como el objeto de la aplicación de origen y la clase [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Consulta [**Identificador de objeto operador (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **Nota** Windows suministra punteros administrados a recursos, como el objeto de la aplicación de origen y la clase [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Consulta [**Identificador de objeto operador (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
  
 
@@ -144,6 +144,6 @@ Para obtener información detallada sobre el desarrollo de juegos de la Tienda W
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

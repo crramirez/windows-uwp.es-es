@@ -5,8 +5,9 @@ title: "Conceptos básicos del diseño de navegación para aplicaciones para la 
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 6926d70c7140b1545a8b5492981d6d0b61af3784
+translationtype: Human Translation
+ms.sourcegitcommit: a55e7d0945902ce44ebad481475e8324c9859054
+ms.openlocfilehash: 2a4005aa12a123c0f9e98486fa1c69839a14276c
 
 ---
 
@@ -22,8 +23,7 @@ Para que la experiencia de navegación con varias páginas de las aplicaciones p
 
     Compilar una estructura de navegación que tenga sentido para el usuario es fundamental para crear una experiencia de navegación intuitiva.
 
--   
-            **Elementos de navegación compatibles** que admitan la estructura elegida.
+-   **Elementos de navegación compatibles** que admitan la estructura elegida.
 
     Los elementos de navegación pueden ayudar a los usuarios a obtener el contenido que desean y también pueden permitir a los usuarios saber dónde se encuentran dentro de la aplicación. Sin embargo, también ocupan espacio que se podría usar para elementos de contenido o comandos, por lo que es importante usar los elementos de navegación adecuados para la estructura de la aplicación.
 
@@ -99,13 +99,13 @@ Por lo tanto, ¿cuándo se deberían organizar las páginas en jerarquías y cu�
 
 Los elementos de navegación pueden proporcionar dos servicios: ayudan a los usuarios a obtener el contenido que desean, y algunos elementos también permiten a los usuarios saber dónde se encuentran dentro de la aplicación. Sin embargo, también ocupan espacio que la aplicación puede usar para elementos de contenido o comandos, por lo que es importante usar los elementos de navegación adecuados para la estructura de la aplicación.
 
-### <span id="Peer-to-peer_navigation_elements"></span><span id="peer-to-peer_navigation_elements"></span><span id="PEER-TO-PEER_NAVIGATION_ELEMENTS"></span>Elementos de navegación de punto a punto
+### <span id="Peer_navigation_elements"></span><span id="peer_navigation_elements"></span><span id="PEER_NAVIGATION_ELEMENTS"></span>Elementos de navegación del mismo nivel
 
-Los elementos de navegación de punto a punto habilitan la navegación entre páginas que se encuentren en el mismo nivel del mismo subárbol.
+Los elementos de navegación del mismo nivel habilitan la navegación entre páginas que se encuentren en el mismo nivel del mismo subárbol.
 
-![navegación punto a punto](images/nav/nav-lateralmovement.png)
+![navegación de sistemas del mismo nivel](images/nav/nav-lateralmovement.png)
 
-Para la navegación punto a punto, te recomendamos usar las pestañas o un panel de navegación.
+Para la navegación de sistemas del mismo nivel, te recomendamos usar las pestañas o un panel de navegación.
 
 <table>
 <colgroup>
@@ -151,11 +151,11 @@ Para la navegación punto a punto, te recomendamos usar las pestañas o un panel
 
  
 
-Si la estructura de navegación tiene varios niveles, te recomendamos que los elementos de navegación punto a punto solo se vinculen con los elementos del mismo nivel dentro de su subárbol. Ten en cuenta la siguiente ilustración, que muestra una estructura de navegación con tres niveles:
+Si la estructura de navegación tiene varios niveles, te recomendamos que los elementos de navegación del mismo nivel solo se vinculen con los elementos del mismo nivel dentro de su subárbol actual. Ten en cuenta la siguiente ilustración, que muestra una estructura de navegación con tres niveles:
 
 ![una aplicación con dos subárboles](images/nav/nav-subtrees.png)
--   En el nivel 1, el elemento de navegación punto a punto debe proporcionar acceso a las páginas A, B, C y D.
--   En el nivel 2, los elementos de navegación punto a punto de las páginas A2 solo deben vincularse a otras páginas A2. No se deben vincular a páginas de nivel 2 del subárbol C.
+-   En el nivel 1, el elemento de navegación del mismo nivel debe proporcionar acceso a las páginas A, B, C y D.
+-   En el nivel 2, los elementos de navegación del mismo nivel de las páginas A2 solo deben vincularse con otras páginas A2. No se deben vincular a páginas de nivel 2 del subárbol C.
 
 ![una aplicación con dos subárboles](images/nav/nav-subtrees2.png)
 
@@ -265,10 +265,6 @@ Puedes combinar los elementos de navegación para crear una experiencia de naveg
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

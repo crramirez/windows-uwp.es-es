@@ -3,17 +3,17 @@ author: jwmsft
 description: "Puedes usar la clase PropertyPath y la sintaxis de cadena para crear una instancia de un valor PropertyPath en XAML o en código."
 title: Sintaxis de Property-path
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0b1851bc9d19de5b678f8c6c3a255c0ba3057a85
+translationtype: Human Translation
+ms.sourcegitcommit: 3144758352b99f8c145a3c7be8a6c43d6a002104
+ms.openlocfilehash: 867fd859823c23cec9666095793871a4b78e7e52
 
 ---
 
 # Sintaxis de Property-path
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Puedes usar la clase [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) y la sintaxis de cadena para crear una instancia de un valor **PropertyPath** en XAML o en código. 
-            El enlace de datos usa los valores de **PropertyPath**. Una sintaxis similar se usa para seleccionar el destino de las animaciones de guión gráfico. Pero la selección de destino de las animaciones no crea valores de Property-path syntax subyacentes, sino que mantiene la información como una cadena. Para los dos escenarios, una ruta de acceso de propiedades describe un cruce seguro de una o más relaciones de propiedades de objeto que finalmente se resuelven en una sola propiedad.
+Puedes usar la clase [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) y la sintaxis de cadena para crear una instancia de un valor **PropertyPath** en XAML o en código. El enlace de datos usa los valores de **PropertyPath**. Una sintaxis similar se usa para seleccionar el destino de las animaciones de guión gráfico. Para los dos escenarios, una ruta de acceso de propiedades describe un cruce seguro de una o más relaciones de propiedades de objeto que finalmente se resuelven en una sola propiedad.
 
 Puedes establecer una cadena de ruta de acceso de propiedades directamente en un atributo en XAML. Es más, puedes usar la misma sintaxis de cadena para construir una clase [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) que establezca una clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) en el código, o establecer un destino de animación en el código mediante [**SetTargetProperty**](https://msdn.microsoft.com/library/windows/apps/br210503). Existen dos áreas de características distintas en Windows Runtime que usan una ruta de acceso de propiedades: el enlace de datos y el destino de animaciones. La selección del destino de animaciones no crea valores de Property-path syntax subyacentes en la implementación de Windows en tiempo de ejecución, sino que mantiene la información como una cadena, pero los conceptos de cruce seguro de propiedades de objetos son muy similares. El enlace de datos y la selección del destino de animaciones evalúan una ruta de acceso de propiedades de un modo ligeramente diferente, de forma que describiremos la sintaxis de la ruta de acceso de propiedad por separado para cada uno.
 
@@ -28,7 +28,7 @@ Puedes crear un enlace con un valor de propiedad individual, o con una propiedad
 El elemento de la sintaxis que denota el cruce seguro de una relación entre propiedades y objetos en el gráfico de objetos es el carácter de punto (**.**). Cada punto en una cadena de ruta de acceso de propiedades indica una división entre un objeto (lado izquierdo del punto) y una propiedad de ese objeto (lado derecho del punto). La cadena se evalúa de izquierda a derecha, lo que habilita el paso a través de varias relaciones de propiedades de objetos. Veamos un ejemplo:
 
 ``` syntax
-<Binding Path="Customer.Address.StreetAddress1"
+"{Binding Path=Customer.Address.StreetAddress1}"
 ```
 
 Esta ruta de acceso se evalúa del modo siguiente:
@@ -51,8 +51,7 @@ Una ruta de acceso de propiedades para el enlace de datos puede incluir referenc
 
 Por ejemplo, imagina que tienes un objeto empresarial en el que hay una lista denominada "Teams" (lista ordenada) en la cual, cada equipo consta de un diccionario denominado "Players" donde se puede encontrar a cada integrante según su apellido. Un ejemplo de ruta de acceso de propiedades a un integrante específico del segundo equipo sería: "Teams\[1\].Players\[Smith\]". (Debes usar 1 para indicar el segundo elemento en "Teams" porque la lista tiene un índice de cero).
 
-
-            **Nota** La compatibilidad con la indexación de los orígenes de datos de C++ es limitada; consulta [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Nota**  La compatibilidad con la indexación de los orígenes de datos de C++ es limitada; consulta [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 ### Propiedades adjuntas
 
@@ -90,8 +89,7 @@ Por ejemplo, para especificar que quieres animar el primer punto de parada de co
 
 No suele ser habitual, pero es posible animar una propiedad adjunta siempre que esta tenga un valor que coincida con un tipo de animación. Como el nombre identificador de una propiedad adjunta ya incluye un punto, deberás encerrar el nombre de la propiedad adjunta entre paréntesis para que el punto no se considere un paso de propiedad de objeto. Por ejemplo, la cadena para especificar que quieres animar la propiedad adjunta [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) en un objeto, usa la ruta de acceso de propiedad "(Grid.Row)".
 
-
-            **Nota** En este ejemplo, el valor de [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) es un tipo de propiedad **Int32**. Debido a ello, no podrás animarlo con una animación **Double**. En cambio, sí que puedes definir una clase [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) que tenga componentes [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) en los cuales la propiedad [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) esté establecida como un entero "0" o "1".
+**Nota**  En este ejemplo, el valor de [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) es un tipo de propiedad **Int32**. Debido a ello, no podrás animarlo con una animación **Double**. En cambio, sí que puedes definir una clase [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) que tenga componentes [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) en los cuales la propiedad [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) esté establecida como un entero "0" o "1".
 
 ## Reglas de las propiedades en una ruta de acceso de propiedades de selección de destino de animaciones
 
@@ -106,10 +104,7 @@ La clase [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br24
 
 La mayor parte de las veces, puedes aplicar una clase [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) en XAML sin tener usar ningún código en absoluto. Pero en algunos casos, deberás definir un objeto **PropertyPath** mediante código y asignarlo a una propiedad en tiempo de ejecución.
 
-
-            [
-              **PropertyPath**
-            ](https://msdn.microsoft.com/library/windows/apps/br244259) tiene un constructor [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261), pero no tiene un constructor predeterminado. La cadena que pases a ese constructor deberá ser una cadena definida mediante la sintaxis de ruta de acceso de propiedades, tal como ya hemos explicado. Además, es también la misma cadena que usarías para asignar [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) como atributo XAML. Ten en cuenta que la única API de la clase **PropertyPath** es la propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260), la cual es de solo lectura. Puedes usar esta propiedad como la cadena de construcción de otra instancia **PropertyPath**.
+[**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) tiene un constructor [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261), pero no tiene un constructor predeterminado. La cadena que pases a ese constructor deberá ser una cadena definida mediante la sintaxis de ruta de acceso de propiedades, tal como ya hemos explicado. Además, es también la misma cadena que usarías para asignar [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) como atributo XAML. Ten en cuenta que la única API de la clase **PropertyPath** es la propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260), la cual es de solo lectura. Puedes usar esta propiedad como la cadena de construcción de otra instancia **PropertyPath**.
 
 ## Temas relacionados
 
@@ -124,6 +119,6 @@ La mayor parte de las veces, puedes aplicar una clase [**PropertyPath**](https:/
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: c0450f7b-5c81-4d8c-92ef-2b1190d18af7
 description: "Aprende a usar la clase AdControl para mostrar anuncios de banner en una aplicación Silverlight para Windows Phone 8.1 o Windows Phone 8.0."
 title: AdControl en Windows Phone Silverlight
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 5a12badfb11cfd43c0833522d996da7df73b3d55
+translationtype: Human Translation
+ms.sourcegitcommit: 3a09b37a5cae0acaaf97a543cae66e4de3eb3f60
+ms.openlocfilehash: 40e68625ed666a9242ed83729b2f8113da363735
 
 
 ---
@@ -12,30 +13,36 @@ ms.openlocfilehash: 5a12badfb11cfd43c0833522d996da7df73b3d55
 # AdControl en Windows Phone Silverlight
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-En este tutorial se muestra cómo usar la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx) para mostrar anuncios de banner en una aplicación Silverlight para Windows Phone 8.1 o Windows Phone 8.0.
-
-## Requisitos previos.
-
-*  Instala el [SDK de Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk) con Visual Studio 2015 o Visual Studio 2013.
 
 
-## Agregar las referencias de ensamblado de publicidad
+En este tutorial se muestra cómo usar la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx) para mostrar anuncios de banner en una aplicación Silverlight para Windows Phone8.1 o Windows Phone8.0.
 
-Los ensamblados de Microsoft Advertising para proyectos de Windows Phone Silverlight no se instalan localmente con el SDK de Microsoft Store Engagement and Monetization. Para poder empezar a actualizar el código, debes usar **Servicios conectados** con compatibilidad con la mediación de anuncios en el SDK de Microsoft Store Engagement and Monetization para descargar los ensamblados y hacer referencia a ellos en el proyecto.
+> **Nota para Windows Phone Silverlight8.0**&nbsp;&nbsp;Los anuncios en banner aún se admiten para las aplicaciones de Silverlight de Windows Phone8.0 que usan **AdControl** de una versión anterior del Universal Ad Client SDK o Microsoft Advertising SDK y que ya están disponibles en la Tienda. Sin embargo, los anuncios en banner ya no se admiten en los nuevos proyectos de Silverlight para Windows Phone8.0. Además, algunos escenarios de depuración y pruebas están limitados en los proyectos de Silverlight de Windows Phone8.x. Para obtener más información, consulta [Mostrar anuncios en tu aplicación](display-ads-in-your-app.md#silverlight_support).
 
-1.  En Visual Studio, haz clic en **Proyecto** y en **Agregar servicio conectado**.
 
-2.  En el cuadro de diálogo **Agregar servicio conectado**, haz clic en **Ad Mediator** y, a continuación, en **Configurar**.
+## Agregar los ensamblados publicitarios a tu proyecto
 
-3.  Haz clic en **Seleccionar redes de anuncios** y selecciona solo **Microsoft Advertising**.
+Para comenzar, descarga e instala el paquete de NuGet que contiene los ensamblados de Microsoft Advertising para Windows Phone Silverlight en tu proyecto.
 
-    En este momento, se descargan todos los ensamblados de Microsoft Advertising para Silverlight en el proyecto local a través de paquetes NuGet y se agregan al proyecto referencias a estos ensamblados automáticamente. También se agrega al proyecto una referencia al ensamblado de mediación de anuncios. En un paso posterior, se quitará la referencia de ensamblado de mediación de anuncios, ya que no es necesaria para este escenario.
+1.  Abre el proyecto en Visual Studio.
 
-4.  En el cuadro de diálogo **Seleccionar redes de anuncios**, haz clic en **Aceptar**. Haz clic en **Aceptar** de nuevo en la siguiente página de confirmación **Obteniendo estado** y, por último, en **Agregar** para cerrar el cuadro de diálogo **Ad Mediator**.
+2.  Haz clic en **Herramientas**, señala **Administrador de paquetes de NuGet**y haz clic en **Consola del Administrador de paquetes**.
 
-5.  En el **Explorador de soluciones**, expande el nodo **Referencias**. Haz clic con el botón secundario en **Microsoft.AdMediator.WindowsPhone81SL.MicrosoftAdvertising** y haz clic en **Quitar**. Esta referencia de ensamblado no es necesaria para este escenario.
+3.  En la ventana de la **Consola del Administrador de paquetes**, escriba uno de estos comandos.
+
+  * Si el proyecto está destinado a Windows Phone8.0, escribe este comando.
+
+      ```
+      Install-Package Microsoft.Advertising.WindowsPhone.SL80 -Version 6.2.40501.1
+      ```
+
+  * Si el proyecto está destinado a Windows Phone8.1, escribe este comando.
+
+      ```
+      Install-Package Microsoft.Advertising.WindowsPhone.SL81 -Version 8.1.50112
+      ```
+
+    Tras escribir el comando, todos los ensamblados de Microsoft Advertising para Silverlight se descargan en el proyecto local a través de paquetes NuGet y se agregan automáticamente al proyecto referencias a estos ensamblados.
 
 ## Programar la aplicación
 
@@ -89,8 +96,7 @@ Los ensamblados de Microsoft Advertising para proyectos de Windows Phone Silverl
 
 6.  En la **Cuadrícula**, agrega el siguiente código para **AdControl**. Asigna las propiedades **ApplicationId** y **AdUnitId** a los valores de prueba proporcionados en los [Valores del modo de prueba](test-mode-values.md) y ajusta las propiedades **Height** y **Width** para que se correspondan con uno de los [Tamaños de anuncios admitidos para anuncios de banner](supported-ad-sizes-for-banner-ads.md).
 
-    > **Nota**  
-    Deberás reemplazar los valores de **ApplicationId** y **AdUnitId** de prueba con valores dinámicos antes de enviar la aplicación.
+    > **Nota**&nbsp;&nbsp;Deberás reemplazar los valores de **ApplicationId** y **AdUnitId** de prueba por valores dinámicos antes de enviar la aplicación.
 
     ``` syntax
     <Grid x:Name="ContentPanel" Grid.Row="1">
@@ -113,12 +119,11 @@ Los ensamblados de Microsoft Advertising para proyectos de Windows Phone Silverl
 ## Publica la aplicación con anuncios dinámicos desde el Centro de desarrollo de Windows
 
 
-1.  En el panel del Centro de desarrollo, ve a la página **Monetización**&gt;**Monetizar con anuncios** de la aplicación y [crea una unidad de Microsoft Advertising independiente](../publish/monetize-with-ads.md). Especifica el tipo de unidad de anuncio **Banner**. Anota el identificador de unidad de anuncio y el identificador de la aplicación.
+1.  En el panel del Centro de desarrollo, ve a la página **Monetización** &gt; **Monetizar con anuncios** correspondiente a la aplicación y [crea una unidad de Microsoft Advertising independiente](../publish/monetize-with-ads.md). Especifica el tipo de unidad de anuncio **Banner**. Anota el identificador de unidad de anuncio y el identificador de la aplicación.
 
 2.  En el código, reemplaza los valores de unidades de anuncio de prueba (**applicationId** y **adUnitId**) con los valores dinámicos generados en el Centro de desarrollo.
 
-3.  
-            [Envía la aplicación](../publish/app-submissions.md) a la Tienda desde el panel del Centro de desarrollo.
+3.  [Envía la aplicación](../publish/app-submissions.md) a la Tienda desde el panel del Centro de desarrollo.
 
 4.  Revisa los [informes de rendimiento de publicidad](../publish/advertising-performance-report.md) en el panel del Centro de desarrollo.
 
@@ -127,6 +132,6 @@ Los ensamblados de Microsoft Advertising para proyectos de Windows Phone Silverl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

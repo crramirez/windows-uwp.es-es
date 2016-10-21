@@ -3,20 +3,20 @@ author: mtoepke
 title: Migrar de OpenGL ES2.0 a Direct3D11
 description: "Incluye artículos, información general y tutoriales para portar una canalización de gráficos de OpenGL ES 2.0 a Direct3D 11 y Windows Runtime."
 ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
+translationtype: Human Translation
 ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
-ms.openlocfilehash: 40380582a9210cb705a5e7e591d4a8f37c42f8dd
+ms.openlocfilehash: aab0c3e9f3816e0657dfb6fec4917d62f2be5280
 
 ---
 
 # Portar de OpenGL ES 2.0 a Direct3D 11
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Incluye artículos, información general y tutoriales para portar una canalización de gráficos de OpenGL ES 2.0 a Direct3D 11 y Windows Runtime.
 
-> 
-            **Nota** Un paso intermedio para portar el proyecto de OpenGL ES 2.0 es usar ANGLE de la Tienda Windows. ANGLE te permite ejecutar contenido de OpenGL ES en Windows mediante la conversión de llamadas a la API de OpenGL ES a llamadas a la API de DirectX 11. Para obtener más información acerca de ANGLE, ve a la [wiki de ANGLE de la Tienda Windows](http://go.microsoft.com/fwlink/p/?linkid=618387).
+> **Nota**  Un paso intermedio para portar el proyecto de OpenGL ES 2.0 es usar ANGLE de la Tienda Windows. ANGLE te permite ejecutar contenido de OpenGL ES en Windows mediante la conversión de llamadas a la API de OpenGL ES a llamadas a la API de DirectX 11. Para obtener más información acerca de ANGLE, ve a la [wiki de ANGLE de la Tienda Windows](http://go.microsoft.com/fwlink/p/?linkid=618387).
 
  
 
@@ -64,6 +64,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

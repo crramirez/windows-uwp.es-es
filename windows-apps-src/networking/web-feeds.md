@@ -3,8 +3,9 @@ author: DelfCo
 description: "Recupera o crea el contenido web más reciente y popular usando fuentes sindicadas generadas a partir de los estándares de RSS y Atom mediante características del espacio de nombres Windows.Web.Syndication."
 title: Fuentes RSS y Atom
 ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
+translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 625a18203bd2d60acc97a6243d4f3e1e0cf2b297
+ms.openlocfilehash: b20eb8a241d3cb7800904c26331ac39da93f4d44
 
 ---
 
@@ -94,13 +95,13 @@ try {
 }
 ```
 
-[!div class="tabbedCodeSnippets"] Después, para configurar la solicitud definimos las credenciales del servidor (la propiedad [**ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243461)), las credenciales de proxy (la propiedad [**ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243459)) y los encabezados HTTP (el método [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br243462)) necesarios. Con los parámetros de solicitud básicos configurados, creamos un objeto [**URI**](https://msdn.microsoft.com/library/windows/apps/br226017) válido mediante una cadena de URI de fuente proporcionada por la aplicación.
+Después, para configurar la solicitud definimos las credenciales del servidor (la propiedad [**ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243461)), las credenciales de proxy (la propiedad [**ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243459)) y los encabezados HTTP (el método [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br243462)) necesarios. Con los parámetros de solicitud básicos configurados, creamos un objeto [**URI**](https://msdn.microsoft.com/library/windows/apps/br226017) válido mediante una cadena de URI de fuente proporcionada por la aplicación. Después, se pasa el objeto **URI** a la función [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) para solicitar la fuente.
 
-Después, se pasa el objeto **URI** a la función [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) para solicitar la fuente.
+Suponiendo que se devolvió el contenido deseado de la fuente, el código de ejemplo itera en cada elemento llamando a **displayCurrentItem** (definido a continuación) para mostrar elementos y su contenido en una lista a través de la interfaz de usuario.
 
-Suponiendo que se devolvió el contenido deseado de la fuente, el código de ejemplo itera en cada elemento llamando a **displayCurrentItem** (definido a continuación) para mostrar elementos y su contenido en una lista a través de la interfaz de usuario. Debes escribir código para controlar las excepciones cuando llamas a la mayoría de los métodos de red asincrónicos.
+Debes escribir código para controlar las excepciones cuando llamas a la mayoría de los métodos de red asincrónicos. Tu controlador de excepciones puede recuperar información más detallada sobre la causa de la excepción para comprender mejor el error y tomar las decisiones adecuadas.
 
-Tu controlador de excepciones puede recuperar información más detallada sobre la causa de la excepción para comprender mejor el error y tomar las decisiones adecuadas. El método [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) inicia una excepción si no se puede establecer una conexión con el servidor HTTP o si el objeto [**URI**](https://msdn.microsoft.com/library/windows/apps/br226017) no señala a una fuente AtomPub o RSS válida.
+El método [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) inicia una excepción si no se puede establecer una conexión con el servidor HTTP o si el objeto [**URI**](https://msdn.microsoft.com/library/windows/apps/br226017) no señala a una fuente AtomPub o RSS válida. En el código de muestra en Javascript se usa una función **onError** para captar las excepciones e imprimir información más detallada sobre la excepción si se produce un error.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -169,7 +170,7 @@ function retreiveFeed(uri) {
 }
 ```
 
-En el código de muestra en Javascript se usa una función **onError** para captar las excepciones e imprimir información más detallada sobre la excepción si se produce un error. [!div class="tabbedCodeSnippets"] En el paso anterior, [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) devolvió el contenido de la fuente solicitada y el código de ejemplo tuvo que procesar iteraciones en los elementos disponibles de la fuente.
+En el paso anterior, [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) devolvió el contenido de la fuente solicitada y el código de ejemplo tuvo que procesar iteraciones en los elementos disponibles de la fuente. Cada uno de estos elementos se representa con un objeto [**SyndicationItem**](https://msdn.microsoft.com/library/windows/apps/br243533) que contiene todo el contenido y las propiedades de los elementos contemplados en el estándar de redifusión web correspondiente (RSS o Atom). En el siguiente ejemplo, vemos la función **displayCurrentItem** trabajando en cada elemento y mostrando su contenido mediante distintos elementos denominados de la interfaz de usuario.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -217,7 +218,7 @@ function displayCurrentItem() {
                 //displayCurrentItem is continued below.
 ```
 
-Cada uno de estos elementos se representa con un objeto [**SyndicationItem**](https://msdn.microsoft.com/library/windows/apps/br243533) que contiene todo el contenido y las propiedades de los elementos contemplados en el estándar de redifusión web correspondiente (RSS o Atom). En el siguiente ejemplo, vemos la función **displayCurrentItem** trabajando en cada elemento y mostrando su contenido mediante distintos elementos denominados de la interfaz de usuario. [!div class="tabbedCodeSnippets"]
+Como se sugirió anteriormente, el tipo de contenido representado por un objeto [**SyndicationItem**](https://msdn.microsoft.com/library/windows/apps/br243533) diferirá según el estándar de fuente (RSS o Atom) empleado para publicar la fuente. Por ejemplo, una fuente Atom puede proporcionar una lista de [**Contributors**](https://msdn.microsoft.com/library/windows/apps/br243540), mientras que la fuente RSS no puede hacerlo. Sin embargo, se puede obtener acceso a los elementos de extensión de la fuente que no sean compatibles con ninguno de los estándares (por ejemplo, elementos de extensión Dublin Core), por medio de la propiedad [**SyndicationItem.ElementExtensions**](https://msdn.microsoft.com/library/windows/apps/br243543). Después se pueden mostrar como en el siguiente código de ejemplo.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -260,6 +261,6 @@ Cada uno de estos elementos se representa con un objeto [**SyndicationItem**](ht
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ title: Usar pinceles
 description: "Los objetos Brush se usan para pintar los interiores o los contornos de formas, texto y partes de los controles, de forma que el objeto pintado esté visible en una interfaz de usuario."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 38999529dda7f5e21ef7aee4a99b2420cb37bfa6
+ms.openlocfilehash: cc16b07931cf3f7740957c222e8c8821ddbab08a
 
 ---
 # Usar pinceles
@@ -17,9 +17,7 @@ ms.openlocfilehash: 38999529dda7f5e21ef7aee4a99b2420cb37bfa6
 
 -   [**Pincel**](https://msdn.microsoft.com/library/windows/apps/BR228076)
 
-
-              Los objetos [
-              **Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) se usan para pintar los interiores o los contornos de formas, texto y partes de los controles, de forma que el objeto pintado sea visible en una interfaz de usuario. Veamos los pinceles disponibles y cómo usarlos.
+Los objetos [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) se usan para pintar el interior o el contorno de formas, texto y partes de controles, de forma que el objeto pintado sea visible en una interfaz de usuario. Veamos los pinceles disponibles y cómo usarlos.
 
 ## Introducción a los pinceles
 
@@ -131,9 +129,7 @@ Este es el aspecto del [**ImageBrush**](https://msdn.microsoft.com/library/windo
 
 ![Un ImageBrush representado.](images/brushes-imagebrush.jpg)
 
-
-              [
-              **ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) e [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) hacen referencia a un archivo de origen de imagen (en varios formatos de imagen posibles) mediante su Identificador uniforme de recursos (URI). Estos archivos de origen de imagen se especifican como URI. Para más información sobre la especificación de orígenes de imagen, sobre los formatos de imagen que puedes usar y su empaquetado en una aplicación, consulta [Image e ImageBrush](https://msdn.microsoft.com/library/windows/apps/Mt280382).
+[**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) e [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) hacen referencia a un archivo de origen de imagen (en varios formatos de imagen posibles) mediante el Identificador uniforme de recursos (URI). Estos archivos de origen de imagen se especifican como URI. Para más información sobre la especificación de orígenes de imagen, sobre los formatos de imagen que puedes usar y su empaquetado en una aplicación, consulta [Image e ImageBrush](https://msdn.microsoft.com/library/windows/apps/Mt280382).
 
 ## Pinceles y texto
 
@@ -143,8 +139,7 @@ Incluso cuando utilices un color sólido, asegúrate de que el color de texto qu
 
 ## WebViewBrush
 
-Un [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) es un tipo especial de pincel que puede obtener acceso al contenido que se ve normalmente en un control [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702). En lugar de representar el contenido en el área rectangular del control **WebView**, **WebViewBrush** pinta ese contenido en otro elemento que tiene una propiedad de tipo [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) para una superficie de representación. 
-              **WebViewBrush** no es apropiado para todos los escenarios de uso de pincel, pero es útil para las transiciones de un control **WebView**. Para obtener más información, consulta **WebViewBrush**.
+Un [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) es un tipo especial de pincel que puede obtener acceso al contenido que se ve normalmente en un control [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702). En lugar de representar el contenido en el área rectangular del control **WebView**, **WebViewBrush** pinta ese contenido en otro elemento que tiene una propiedad de tipo [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) para una superficie de representación. **WebViewBrush** no es apropiado para todos los escenarios de uso del pincel, pero es útil para las transiciones de un control **WebView**. Para obtener más información, consulta **WebViewBrush**.
 
 ## Pinceles como recursos de XAML
 
@@ -170,9 +165,7 @@ blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
 
 Para [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) y [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101), usa el constructor predeterminado y después llama a otras API antes de tratar de usar ese pincel para una propiedad de interfaz de usuario.
 
--   
-              [
-              **ImageSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imagebrush.imagesourceproperty.aspx) requiere una clase [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235) (no un URI) cuando se define una clase [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) mediante código. Si el origen es un flujo, usa el método [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522) para inicializar el valor. Si el origen es un URI, que incluye contenido en la aplicación que usa los esquemas **ms-appx** o **ms-resource**, utiliza el constructor [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/br243238.aspx) que toma un URI. También podrías considerar la posibilidad de controlar el evento [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imageopened.aspx) si hay problemas de temporización con la recuperación o la descodificación del origen de la imagen, ya que puede que necesites contenido alternativo que se mostrará hasta que el origen de la imagen esté disponible.
+-   [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imagebrush.imagesourceproperty.aspx) requiere una clase [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235) (no un URI) cuando se define una clase [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) mediante código. Si el origen es un flujo, usa el método [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522) para inicializar el valor. Si el origen es un URI, que incluye contenido en la aplicación que usa los esquemas **ms-appx** o **ms-resource**, utiliza el constructor [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/br243238.aspx) que toma un URI. También podrías considerar la posibilidad de controlar el evento [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imageopened.aspx) si hay problemas de temporización con la recuperación o la descodificación del origen de la imagen, ya que puede que necesites contenido alternativo que se mostrará hasta que el origen de la imagen esté disponible.
 -   Para [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703), quizá tengas que llamar a [**Redraw**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.redraw.aspx) si restableciste la propiedad [**SourceName**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.sourcename.aspx) recientemente o si el contenido de [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702) cambiará también con el código.
 
 Para ver ejemplos de código, consulta las páginas de referencia de [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) e [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101).
@@ -186,6 +179,6 @@ Para ver ejemplos de código, consulta las páginas de referencia de [**WebViewB
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

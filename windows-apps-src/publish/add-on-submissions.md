@@ -1,76 +1,86 @@
 ---
 author: jnHs
-Description: Add-ons are published through the Windows Dev Center dashboard.
-title: Add-on submissions
+Description: "Los complementos se publican a través del panel del Centro de desarrollo de Windows."
+title: "Envíos de complementos"
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
+translationtype: Human Translation
+ms.sourcegitcommit: d67931b4ab23d2b6aef945e839d193e140240cf9
+ms.openlocfilehash: 400c2e2ee65e408c996193230b05c68264830f0d
+
 ---
 
-# Add-on submissions
+# Envíos de complementos
 
-Add-ons (also sometimes referred to as in-app products) are supplementary items for your app that can be purchased by customers. An add-on can be a fun new add-on feature, a new game level, or anything else you think will keep users engaged. Not only are add-ons a great way to make money, but they help to drive customer interaction and engagement.
+Los complementos (a los que a veces se denominan productos desde la aplicación) son elementos complementarios para la aplicación que los clientes pueden adquirir. Un complemento puede ser una nueva función complementaria divertida, un nuevo nivel de juego o cualquier cosa que creas que puede mantener la relación de los usuarios con la aplicación. Los complementos no solo son una manera fantástica de ganar dinero, sino que promueven la participación y la interacción del cliente.
 
-Add-ons are published through the Windows Dev Center dashboard. You'll also need to [enable the add-ons](../monetize/in-app-purchases-and-trials.md) in your app's code.
+Los complementos se publican a través del panel del Centro de desarrollo de Windows. También tendrás que [habilitar los complementos](../monetize/in-app-purchases-and-trials.md) en el código de la aplicación.
 
-The first step in the add-on submission process is to create the add-on in the dashboard by [defining its product type and product ID](set-your-add-on-product-id.md). After that, you can create a submission so that your add-on can be purchased via the Windows Store. You can submit an add-on at the same time you [submit your app](app-submissions.md), or you can work on it independently. And you can make [updates](#updating-an-add-on-after-submission) to add-ons after the app is in the Store without having to resubmit the app again.
+El primer paso en el proceso de envío de un complemento es crear dicho complemento en el panel mediante la [definición de su tipo de producto y su id. del producto](set-your-add-on-product-id.md). Después, es posible crear un envío para que el Tienda Windows se pueda adquirir a través de la Tienda Windows. Puedes enviar un app al mismo tiempo que [envías la aplicación](app-submissions.md) o puedes trabajar en él de forma independiente. Y puedes realizar [actualizaciones](#updating-an-add-on-after-submission) de los complementos una vez que la aplicación esté en la Tienda sin tener que volver a enviar la aplicación.
 
-> **Note**&nbsp;&nbsp;This section of the documentation describes how to create an add-on submission on the Dev Center dashboard. Alternatively, you can use the [Windows Store submission API](../monetize/create-and-manage-submissions-using-windows-store-services.md) to automate add-on submissions.
+> **Nota**&nbsp;&nbsp;En esta sección de la documentación se describe cómo crear el envío de un complemento en el panel del Centro de desarrollo. Como alternativa, puedes usar la [API de envío de la Tienda Windows](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de complementos.
 
-## Checklist for submitting an add-on
+## Lista de comprobación para el envío de un complemento
 
-Here's a list of the info that you provide when creating your add-on submission. The items that you are required to provide are noted below. Some of these are optional, or have default values already provided that you can change as desired.
+A continuación verás una lista de la información que se proporciona al crear el envío de un complemento. A continuación se indican los elementos que debes proporcionar. Algunos de ellos son opcionales o tienen valores predeterminados ya proporcionados que puedes cambiar según lo desees.
 
-### Create a new add-on page
-| Field name                    | Notes                            |
+### Crear la página de un nuevo complemento
+| Nombre del campo                    | Notas                            |
 |-------------------------------|----------------------------------|
-| [**Product type**](set-your-add-on-product-id.md#product-type)      | Required. If **Durable**, a **Product lifetime** is required. |  
-| [**Product ID**](set-your-add-on-product-id.md#product-id)          | Required |        
+| [**Tipo de producto**](set-your-add-on-product-id.md#product-type)      | Obligatorio. Si es **Duradero**, se necesita una **Duración del producto**. |  
+| [**Id. del producto**](set-your-add-on-product-id.md#product-id)          | Obligatorio |        
 
 <span/>
 
-### Properties page
-| Field name                    | Notes                              |   
+### Página Propiedades
+| Nombre del campo                    | Notas                              |   
 |-------------------------------|------------------------------------|
-| [**Product lifetime**](enter-add-on-properties.md#product-lifetime)  | Required if the product type is **Durable**. Not applicable to other product types. |
-| [**Quantity**](enter-add-on-properties.md#quantity)  | Required if the product type is **Store-managed consumable**. Not applicable to other product types.
-| [**Content type**](enter-add-on-properties.md#content-type)          | Required       |               
-| [**Keywords**](enter-add-on-properties.md#keywords)                  | Optional (up to 10 keywords, 30 character limit each) |
-| [**Custom developer data**](enter-add-on-properties.md#custom-developer-data)                               | Optional (3000 character limit)             |
+| [**Duración del producto**](enter-add-on-properties.md#product-lifetime)  | Es obligatorio si es el tipo de producto **Duradero**. No se aplica a otros tipos de producto. |
+| [**Cantidad**](enter-add-on-properties.md#quantity)  | Es obligatorio si el tipo de producto es **Consumible administrado por la Tienda**. No se aplica a otros tipos de producto.
+| [**Tipo de contenido**](enter-add-on-properties.md#content-type)          | Obligatorio       |               
+| [**Palabras clave**](enter-add-on-properties.md#keywords)                  | Opcional (hasta 10 palabras clave, con un límite de 30 caracteres cada una) |
+| [**Datos del desarrollador personalizados**](enter-add-on-properties.md#custom-developer-data)                               | Opcional (límite de 3000 caracteres)             |
 
 <span/>
 
-### Pricing and availability page
-| Field name                    | Notes                                       |
+### Página Precios y disponibilidad
+| Nombre del campo                    | Notas                                       |
 |-------------------------------|---------------------------------------------|
-| [**Base price**](set-add-on-pricing-and-availability.md#base-price)                | Required                                    |
-| [**Markets and custom pricing**](set-add-on-pricing-and-availability.md#markets-and-custom-prices)  | Default: available in all possible markets |
-| [**Sale pricing**](put-apps-and-add-ons-on-sale.md)               | Optional                             |
-| [**Distribution and visibility**](set-add-on-pricing-and-availability.md#distribution-and-visibility)   | Default: add-on can be found by customers browsing or searching the Store |
-| [**Publish date**](set-add-on-pricing-and-availability.md#publish-date)                | Default: Publish as soon as the add-on passes certification |
+| [**Precio base**](set-add-on-pricing-and-availability.md#base-price)                | Obligatorio                                    |
+| [**Mercados y precios personalizados**](set-add-on-pricing-and-availability.md#markets-and-custom-prices)  | Valor predeterminado: Disponible en todos los mercados posibles |
+| [**Precio de oferta**](put-apps-and-add-ons-on-sale.md)               | Opcional                             |
+| [**Distribución y visibilidad**](set-add-on-pricing-and-availability.md#distribution-and-visibility)   | Valor predeterminado: Los clientes pueden encontrar el complemento si exploran o buscan en la Tienda. |
+| [**Fecha de publicación**](set-add-on-pricing-and-availability.md#publish-date)                | Valor predeterminado: Publicar tan pronto como el complemento supere la certificación. |
 
 <span/>
 
-### Store listings
-One Store listing required. We recommend providing Store listings for every [language](create-add-on-descriptions.md#languages) your app supports.
+### Descripciones de la Tienda
+Es obligatoria una descripción de la Tienda. Se recomienda proporcionar descripciones de la Tienda para cada [idioma](create-add-on-descriptions.md#languages) que admita la aplicación.
 
-| Field name                    | Notes                                       |
+| Nombre del campo                    | Notas                                       |
 |-------------------------------|---------------------------------------------|
-| [**Title**](create-add-on-store-listings.md#title)                    | Required (100 character limit)              |
-| [**Description**](create-add-on-store-listings.md#description)       | Optional (200 character limit)              |
-| [**Icon**](create-add-on-store-listings.md#icon)                    | Optional (.png, 300x300 pixels)             |
+| [**Título**](create-add-on-store-listings.md#title)                    | Obligatorio (límite de 100 caracteres)              |
+| [**Descripción**](create-add-on-store-listings.md#description)       | Opcional (límite de 200 caracteres)              |
+| [**Icono**](create-add-on-store-listings.md#icon)                    | Opcional (.png, 300 x 300 píxeles)             |
 
 <span/>
 
-When you've finished entering this info, click **Submit to the Store**. In most cases, the certification process takes about an hour. After that, your add-on will be published to the Store and ready for customers to purchase.
+Cuando hayas terminado de introducir esta información, haz clic en **Enviar a la Tienda**. En la mayoría de los casos, el proceso de certificación tarda aproximadamente una hora. Después, el complemento se publicará en la Tienda y estará listo para que los clientes puedan adquirirlo.
 
-**Note**  The add-on must also be implemented in your app's code. For more info, see [Enable in-app product purchases](../monetize/enable-in-app-product-purchases.md).
+**Nota** El complemento también debe implementarse en el código de la aplicación. Para obtener más información, consulta [Habilitar compras de productos desde la aplicación](../monetize/enable-in-app-product-purchases.md).
 
 
-## Updating an add-on after publication
+## Actualizar un complemento después de su publicación
 
-You can make changes to a published add-on at any time. add-on changes are submitted and published independently of your app, so you generally don't need to update the entire app in order to make changes to an add-on such as updating its price or description.
+Puedes realizar cambios en un complemento publicado en cualquier momento. Los cambios de los complementos se envían y se publican independientemente de la aplicación, de modo que, por lo general, no es necesario actualizar toda la aplicación para realizar cambios en un complemento, como actualizar su precio o su descripción.
 
-> **Important**  If your app is available to customers on Windows 8.x, you will need to create and publish a new app submission in order to make the add-on updates visible to those customers. Similarly, if you add new add-ons to an app targeting Windows 8.x after the app has been published, you'll need to update your app's code to reference those add-ons, then resubmit the app. Otherwise, the new add-ons won't be visible to customers on Windows 8.x.
+> **Importante** Si la aplicación está disponible para los clientes de Windows8.x, tendrás que crear y publicar un nuevo envío de aplicación para que las actualizaciones de los complementos sean visibles para dichos clientes. De forma parecida, si agregas nuevos complementos a una aplicación destinada a Windows8.x después que dicha aplicación se haya publicado, tendrás que actualizar el código de la aplicación para hacer referencia a esos complementos y, a continuación, volver a enviar la aplicación. De lo contrario, los nuevos complementos no serán visibles para los clientes de Windows8.x.
 
-To submit updates, go to the add-on's page in your dashboard and click **Update**. This will create a new submission for the add-on using the info from your previous submission as a starting point. Change the info you'd like, and then click **Submit to the Store**.
+Para enviar actualizaciones, ve a la página del complemento en el panel y haz clic en **Actualizar**. Esto creará un nuevo envío para el complemento, con la información de tu envío anterior como punto de partida. Cambia la información que desees y, a continuación, haz clic en **Enviar a la Tienda**.
 
-If you'd like to remove an add-on you've previously offered, you can do this by creating a new submission and changing the [Distribution and visibility](set-add-on-pricing-and-availability.md) option to **No longer available for purchase. Not displayed in your app's listing**. Be sure to update your app's code as needed to also remove references to the add-on.
+Para quitar un complemento que has estado ofreciendo anteriormente, crea un nuevo envío y cambia la opción [Distribución y visibilidad](set-add-on-pricing-and-availability.md) a **Ya no está disponible para comprar. No se muestra en la descripción de la aplicación**. Asegúrate de actualizar el código de la aplicación según sea necesario para quitar también las referencias al complemento.
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

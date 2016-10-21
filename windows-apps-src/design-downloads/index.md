@@ -1,11 +1,11 @@
 ---
 description: "Obtén las herramientas y las descargas más recientes para los diseños de la distribución y los controles de la interfaz de usuario de las aplicaciones para UWP."
-keywords: uwp app layout, UI, user interface designs, downloads, uwp tools
-title: "Descargas de diseño para aplicaciones para UWP - desarrollo de aplicaciones de Windows"
+keywords: "diseño de aplicaciones para UWP, IU, interfaz de usuario, diseños de interfaz de usuario, descargas, herramientas de UWP"
+title: "Descargas de diseño para aplicaciones para UWP: desarrollo de aplicaciones de Windows"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 1370af75dcd45d52d0d31f57acb958d366f9bee5
-ms.openlocfilehash: 4ac5db9da4cd9ba0edff5b08dfff6ed6473ab4e3
+ms.sourcegitcommit: f1ea979f5179cce0bb059534b064c2ecf805ce89
+ms.openlocfilehash: da21817eea3a26ffd162bd19c8eb69345ac1d726
 
 ---
 
@@ -73,7 +73,7 @@ Este conjunto de acciones para Adobe Photoshop genera los 68 activos de ventanas
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
             <p><b>Herramienta de contorno rojo de Adobe Illustrator</b><br/>
-Crea sin esfuerzo contornos rojos de los prototipos de Illustrator. <br/>[Descargar la herramienta de contorno rojo de Adobe Illustrator](https://go.microsoft.com/fwlink/p/?LinkId=534641)</p>    
+Crea sin esfuerzo contornos rojos de los prototipos de Illustrator. (Requiere Adobe Illustrator CC o versiones posteriores).<br/>[Descargar la herramienta de contorno rojo de Adobe Illustrator](https://go.microsoft.com/fwlink/p/?LinkId=534641)</p>  
   </div>
   <div class="side-by-side-content-right">
 <a href="https://go.microsoft.com/fwlink/p/?LinkId=534641"><img src="images/redliner-tool.png" alt="Download the Redliner tool for Adobe Illustrator" /></a>
@@ -109,6 +109,6 @@ En este ejemplo se integran las características de Windows con la automatizaci�
 <b>¿Quieres ver más código?</b> Consulta la página de ejemplo de Windows para obtener una lista completa de todas las aplicaciones de muestra para UWP. [Ir al portal de muestras](https://developer.microsoft.com/samples)
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

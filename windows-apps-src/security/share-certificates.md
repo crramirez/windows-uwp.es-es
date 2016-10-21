@@ -3,8 +3,9 @@ title: Compartir certificados entre aplicaciones
 description: "Las aplicaciones para la Plataforma universal de Windows (UWP) que necesitan una autenticación segura que vaya más allá de una combinación de id. de usuario y contraseña pueden usar certificados para la autenticación."
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 2bb1b601e1ab35115c88692f6c36dccc70836541
+ms.openlocfilehash: 189e95695be3621754414708f1a394fe4cea4ecf
 
 ---
 
@@ -31,7 +32,7 @@ En este artículo se usa Microsoft Internet Information Services (IIS) como ejem
 ## Crear y publicar un servicio web protegido
 
 
-1.  Inicia Microsoft Visual Studio como administrador y selecciona **Nuevo proyecto** en la página de inicio. Se necesita acceso de administrador para publicar un servicio web en un servidor IIS. En el cuadro de diálogo Nuevo proyecto, cambia el marco de trabajo a **.NET Framework 3.5**. Selecciona **Visual C#** -&gt;**Web** -&gt;**Visual Studio** -&gt;**Aplicación de servicio web de ASP.NET**. Asigna a la aplicación el nombre "FirstContosoBank". Haz clic en **Aceptar** para crear el proyecto.
+1.  Inicia Microsoft Visual Studio como administrador y selecciona **Nuevo proyecto** en la página de inicio. Se necesita acceso de administrador para publicar un servicio web en un servidor IIS. En el cuadro de diálogo Nuevo proyecto, cambia el marco de trabajo a **.NET Framework 3.5**. Selecciona **Visual C#** -&gt; **Web** -&gt; **Visual Studio** -&gt; **Aplicación de servicio web de ASP.NET**. Asigna a la aplicación el nombre "FirstContosoBank". Haz clic en **Aceptar** para crear el proyecto.
 2.  En el archivo **Service1.asmx.cs**, cambia el método web predeterminado **HelloWorld** por el siguiente método "Login".
     ```cs
             [WebMethod]
@@ -70,8 +71,7 @@ Ahora que tienes uno o varios servicios web protegidos, tus aplicaciones pueden 
 
 Si no hay certificados de cliente disponibles, el usuario tendrá que agregar un certificado al almacén de certificados. En tu aplicación puedes incluir código que permita al usuario seleccionar un archivo PFX que contenga un certificado de cliente y, después, importar ese certificado al almacén de certificados de cliente.
 
-
-            **Sugerencia** Puedes usar makecert.exe para crear un archivo PFX para usarlo con este inicio rápido. Para obtener información sobre cómo usar makecert.exe, consulta [MakeCert.](https://msdn.microsoft.com/library/windows/desktop/aa386968)
+**Sugerencia** Puedes usar makecert.exe para crear un archivo PFX para usarlo con este inicio rápido. Para obtener información sobre cómo usar makecert.exe, consulta [MakeCert.](https://msdn.microsoft.com/library/windows/desktop/aa386968)
 
  
 
@@ -205,6 +205,6 @@ Si no hay certificados de cliente disponibles, el usuario tendrá que agregar un
 Puedes usar estos pasos para crear varias aplicaciones que usen el mismo certificado de usuario para obtener acceso a servicios web protegidos iguales o diferentes.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

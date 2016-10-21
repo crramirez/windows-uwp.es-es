@@ -1,21 +1,21 @@
 ---
 author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
-description: "Usa este método en la API de compras de la Tienda Windows para conceder de forma gratuita una aplicación o un producto desde la aplicación (IAP) a un usuario determinado."
+description: "Usa este método en la API de compras de la Tienda Windows para conceder de forma gratuita una aplicación o complemento a un usuario determinado."
 title: Conceder productos gratuitos
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: 64c600460c1cbcbd6bb486649e2bc98298ca9dbe
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: a04918a562d132f6a721b96c7f4ad78218eb8819
 
 ---
 
 # Conceder productos gratuitos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Usa este método en la API de compras de la Tienda Windows para conceder de forma gratuita una aplicación o un producto desde la aplicación (IAP) a un usuario determinado.
 
-Actualmente, solo puede conceder productos gratuitos. Si el servicio intenta usar este método para conceder un producto que no es gratuito, este método devolverá un error.
+Usa este método en la API de compras de la Tienda Windows para conceder de forma gratuita una aplicación o complemento (también conocido como producto desde la aplicación o IAP) a un usuario determinado.
+
+Actualmente, solo puedes conceder productos gratuitos. Si el servicio intenta usar este método para conceder un producto que no es gratuito, este método devolverá un error.
 
 ## Requisitos previos
 
@@ -41,7 +41,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 | Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorización  | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;.                           |
+| Autorización  | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;.                           |
 | Host           | cadena | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | cadena | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
@@ -58,7 +58,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 | language       | cadena | Idioma del usuario.                                                                                                                                                                                                                                                                                              | Sí      |
 | market         | cadena | Mercado del usuario.                                                                                                                                                                                                                                                                                                | Sí      |
 | orderId        | guid   | GUID que se genera para el pedido. Este valor debe ser exclusivo del usuario, pero no es obligatorio que lo sea en todos los pedidos.                                                                                                                                                                                              | Sí      |
-| productId      | cadena | El Id. de la Tienda del catálogo de la Tienda Windows. El Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8. | Sí      |
+| productId      | cadena | El Id. de la Tienda del catálogo de la Tienda Windows. Para una aplicación, el Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Para un complemento, el Id. de la Tienda está disponible en la dirección URL de la página de introducción del complemento del panel del Centro de desarrollo de Windows. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8. | Sí      |
 | cantidad       | entero    | La cantidad que se va a comprar. Actualmente, el único valor admitido es 1. Si no se especifica, el valor predeterminado es 1.                                                                                                                                                                                                                | No       |
 | skuId          | cadena | Identificador de SKU del catálogo de la Tienda Windows. Un ejemplo de identificador de SKU es "0010".                                                                                                                                                                                                                                                | Sí      |
 
@@ -128,7 +128,7 @@ El objeto OrderLineItemV6 contiene los parámetros siguientes.
 | billingState            | cadena         | Estado de facturación del pedido. Se establece en **Charged** cuando se completa.                                   | No       |
 | campaignId              | cadena         | Identificador de campaña de este pedido.                                                                              | No       |
 | currencyCode            | cadena         | El código de moneda que se usa para los detalles del precio.                                                                    | Sí      |
-| Description             | cadena         | Descripción localizada del artículo de línea.                                                                    | Sí      |
+| description             | cadena         | Descripción localizada del artículo de línea.                                                                    | Sí      |
 | devofferId              | cadena         | Identificador de la oferta del pedido concreto, si está presente.                                                           | No       |
 | fulfillmentDate         | datetimeoffset | Fecha de cumplimentación.                                                                           | No       |
 | fulfillmentState        | cadena         | Estado de cumplimentación de este artículo. Se establece en **Fulfilled** cuando se completa.                      | No       |
@@ -137,9 +137,9 @@ El objeto OrderLineItemV6 contiene los parámetros siguientes.
 | legacyBillingOrderId    | cadena         | Identificador de facturación heredado.                                                                                       | No       |
 | lineItemId              | cadena         | Identificador de artículo de línea para el artículo de este pedido.                                                                 | Sí      |
 | listPrice               | decimal        | Precio de lista del artículo de este pedido.                                                                    | Sí      |
-| productId               | cadena         | Identificador del producto de la Tienda Windows del artículo de línea.                                                               | Sí      |
+| productId               | cadena         | El Id. de la Tienda del artículo de línea.                                                               | Sí      |
 | productType             | cadena         | Tipo de producto. Los valores admitidos son **Durable**, **Application** y **UnmanagedConsumable**. | Sí      |
-| Quantity                | entero            | Cantidad del artículo pedido.                                                                            | Sí      |
+| quantity                | entero            | Cantidad del artículo pedido.                                                                            | Sí      |
 | retailPrice             | decimal        | Precio de venta del artículo pedido.                                                                        | Sí      |
 | revenueRecognitionState | cadena         | Estado de reconocimiento de ingresos.                                                                               | Sí      |
 | skuId                   | cadena         | Identificador de SKU de la Tienda Windows del artículo de línea.                                                                   | Sí      |
@@ -245,6 +245,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

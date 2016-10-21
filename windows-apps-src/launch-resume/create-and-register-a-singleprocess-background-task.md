@@ -1,33 +1,36 @@
 ---
 author: TylerMSFT
-title: Create and register a single-process background task
-description: Create and register a single-process task that runs in the same process as your foreground app.
+title: "Creación y registro de una tarea en segundo plano de proceso único"
+description: "Crea y registra una tarea de proceso único que se ejecuta en el mismo proceso que la aplicación en primer plano."
+translationtype: Human Translation
+ms.sourcegitcommit: 9e959a8ae6bf9496b658ddfae3abccf4716957a3
+ms.openlocfilehash: 5a2461d00114ba71ced7cca64c197f253f33690d
+
 ---
 
-# Create and register a single-process background task
+# Creación y registro de una tarea en segundo plano de proceso único
 
-**Important APIs**
+**API importantes**
 
 -   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
 -   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
 -   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
 
-This topic demonstrates how to create and register a background task that runs in the same process as your app.
+Este tema muestra cómo crear y registrar una tarea en segundo plano que se ejecuta en el mismo proceso que la aplicación.
 
-Single-process background tasks have the advantage of greater simplicity when compared with running your background work in a separate process. However, they are less resilient. If the code running in the background crashes, it will take down your app. Also note that [DeviceUseTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) and **IoTStartupTask** cannot be used with the single process model. Activating a VoIP background task within your application is also not possible. These triggers and tasks are still supported using the multiple-process background task model.
+Las tareas en segundo plano de proceso único son más fáciles de implementar que las tareas en segundo plano que se ejecutan en un proceso independiente. No obstante, son menos resistentes. Si se bloquea el código que se ejecuta en segundo plano, la aplicación también se bloqueará. Ten en cuenta también que [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) y **IoTStartupTask** no pueden usarse con el modelo de proceso único. Activar una tarea en segundo plano de VoIP dentro de la aplicación tampoco es posible. Estas tareas y los desencadenadores aún son compatibles con el modelo de tarea en segundo plano de varios procesos.
 
-Be aware that background activity can be terminated even when running inside the app's foreground process if it runs past execution time limits. For some purposes the resiliency of separating work into a background task that runs in a separate process is still useful. Keeping background work as a task separate from the foreground application may be the best option for work that does not require communication with the foreground application.
+Ten en cuenta que la actividad en segundo plano puede finalizarse incluso cuando se ejecuta dentro del proceso en primer plano de la aplicación si se ejecuta más allá de los límites de tiempo de ejecución. Para algunos fines sigue siendo útil la resistencia de separar el trabajo en una tarea en segundo plano que se ejecuta en un proceso independiente. Mantener el trabajo en segundo plano como una tarea independiente de la aplicación en primer plano puede ser la mejor opción para el trabajo que no requiere la comunicación con la aplicación en primer plano.
 
-## Fundamentals
+## Conceptos básicos
 
-The single process model enhances the application lifecycle with improved notifications for when your app is in the foreground or in the background. Two new events are available from the Application object for these transitions: [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) and [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). These events fit into the application lifecycle based on the visibility state of your application
-Read more about these events and how they affect the application lifecycle at [App lifecycle](app-lifecycle.md).
+El modelo de proceso único mejora el ciclo de vida de la aplicación con mejores notificaciones para cuando la aplicación está en primer plano o en segundo plano. Dos nuevos eventos están disponibles en el objeto de aplicación de estas transiciones: [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) y [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). Estos eventos encajan en el ciclo de vida de la aplicación en función del estado de visibilidad de la aplicación. Obtén más información sobre estos eventos y cómo afectan al ciclo de vida de la aplicación en [Ciclo de vida de la aplicación](app-lifecycle.md).
 
-At a high level, you will handle the **EnteredBackground** event to run your code that will execute while your app is running in the background, and handle **LeavingBackground** to know when your app has moved to the foreground.
+En un nivel alto, controlarás el evento **EnteredBackground** para ejecutar el código que se ejecutará mientras la aplicación se ejecuta en segundo plano y controlarás **LeavingBackground** para saber cuándo tu aplicación se ha desplazado a un primer plano.
 
-## Register your background task trigger
+## Registro de tu desencadenador de tareas en segundo plano
 
-Single-process background activity is registered much the same as multiple-process background activity. All background triggers start with registration using the [BackgroundTaskBuilder](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.aspx?f=255&MSPPError=-2147217396). The builder makes it easy to register a background task by setting all required values in one place:
+La actividad de proceso único en segundo plano se registra de forma similar a la actividad en segundo plano de varios procesos. Todos los desencadenadores en segundo plano empiezan con el registro con el uso de [BackgroundTaskBuilder](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.aspx?f=255&MSPPError=-2147217396). El ensamblador facilita el registro de una tarea en segundo plano mediante la configuración de todos los valores necesarios en un solo lugar:
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -40,16 +43,16 @@ Single-process background activity is registered much the same as multiple-proce
 > ```
 
 > [!NOTE]
-> Universal Windows apps must call [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) before registering any of the background trigger types.
-> To ensure that your Universal Windows app continues to run properly after you release an update, you must call [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) and then call [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) when your app launches after being updated. For more information, see [Guidelines for background tasks](guidelines-for-background-tasks.md).
+> Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquier tipo de desencadenador en segundo plano.
+> Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
 
-For single-process background activities you do not set `TaskEntryPoint.` Leaving it blank enables the default entry point, a new protected method on the Application object called `OnBackgroundActivated()`.
+Para actividades en segundo plano de proceso único no se configura `TaskEntryPoint.` Dejarlo en blanco permite el punto de entrada predeterminado, un nuevo método protegido en el objeto de la aplicación denominado [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).
 
-Once a trigger is registered, it will fire based on the type of trigger set in the `SetTrigger` method. In the example above a `TimeTrigger` is used, which will fire fifteen minutes from the time it was registered.
+Una vez que se registra un desencadenador, se activará en función del tipo de desencadenador establecido en el método [SetTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.settrigger.aspx). En el ejemplo anterior se utiliza un [TimeTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.timetrigger.aspx), que se activará quince minutos desde el momento en que se registró.
 
-## Add a condition to control when your task will run (optional)
+## Adición de una condición para controlar cuándo se ejecutará la tarea (opcional)
 
-You can add a condition to control when your task will run after the trigger event occurs. For example, if you don't want the task to run until the user is present, use the condition **UserPresent**. For a list of possible conditions, see [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
+Puedes agregar una condición para controlar cuándo se ejecutará la tarea después de que se produzca el evento del desencadenador. Por ejemplo, si no quieres que la tarea se ejecute hasta que el usuario esté presente, usa la condición **UserPresent**. Para obtener una lista de posibles condiciones, consulta [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
 
     The following sample code assigns a condition requiring the user to be present:
 
@@ -58,50 +61,56 @@ You can add a condition to control when your task will run after the trigger eve
     >     builder.AddCondition(new SystemCondition(SystemConditionType.UserPresent));
     > ```
 
-## Place your background activity code in OnBackgroundActivated()
+## Colocación del código de la actividad en segundo plano en OnBackgroundActivated()
 
-Put your background activity code in `OnBackgroundActivated` to respond to your background trigger when it fires. `OnBackgroundActivated` can be treated just like [IBackgroundTask.Run](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396). The method has a  BackgroundActivatedEventArgs parameter, which contains everything that the Run method delivers.
+Introduce el código de la actividad en segundo plano en [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx)** para responder al desencadenador en segundo plano cuando se activa. **OnBackgroundActivated ** puede tratarse solo como [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396). El método tiene un parámetro [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx), que contiene todo lo que ofrece el método Run.
 
-## Handle background task progress and completion
+## Administración del progreso y la finalización de tareas en segundo plano
 
-Task progress and completion can be monitored the same way as for multi-process background tasks (See [Monitor background task progress and completion](monitor-background-task-progress-and-completion.md)) but you will likely find that you can more easily track them by using variables to track progress or completion status in your app. This is one of the advantages of having your background activity code running in the same process as your app.
+La finalización y el progreso de la tarea puede supervisarse del mismo modo que para las tareas en segundo plano en múltiples procesos (consulta [Supervisión del progreso y la finalización de las tareas en segundo plano](monitor-background-task-progress-and-completion.md)), pero probablemente verás que puedes rastrearlas más fácilmente mediante el uso de variables para realizar un seguimiento del estado de progreso o finalización en tu aplicación. Esta es una de las ventajas de ejecutar el código de actividad en segundo plano en el mismo proceso que la aplicación.
 
-## Handle background task cancellation
+## Administración de la cancelación de tareas en segundo plano
 
-Single-process background tasks are cancelled the same way as multi-process background tasks are (see [Handle a cancelled background task](handle-a-cancelled-background-task.md)).  But be aware that your **BackgroundActivated** event handler must exit before the cancellation occurs, or the whole process will be terminated. If your foreground app closes unexpectedly when you cancel the background task, verify that your handler exited before the cancellation occured.
+Las tareas en segundo plano de proceso único se cancelarán de la misma manera que las tareas en segundo plano en múltiples procesos (consulta [Administración de una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)). Ten en cuenta que el controlador de eventos **BackgroundActivated** debe salir antes de que se produzca la cancelación o finalice todo el proceso. Si tu aplicación en primer plano se cierra inesperadamente al cancelar la tarea en segundo plano, comprueba que el controlador saliera antes de que se produjera la cancelación.
 
-## The manifest
+## El manifiesto
 
-Unlike multiple-process background tasks, you are not required to add background task information to the package manifest in order to run single-process background tasks.
+A diferencia de las tareas en segundo plano de varios procesos, no es necesario agregar información de la tarea en segundo plano al manifiesto del paquete para ejecutar tareas en segundo plano de proceso único.
 
-## Summary and next steps
+## Resumen y pasos siguientes
 
-You should now understand the basics of how to write a single-process background task.
+Ahora debes comprender los conceptos básicos de cómo escribir una tarea en segundo plano de proceso único.
 
-See the following related topics for API reference, background task conceptual guidance, and more detailed instructions for writing apps that use background tasks.
+Consulta los siguientes temas relacionados para obtener referencia de las API, una guía conceptual sobre tareas en segundo plano e instrucciones más detalladas para escribir aplicaciones que usan tareas en segundo plano.
 
-## Related topics
+## Temas relacionados
 
-**Detailed background task instructional topics**
+**Temas con instrucciones detalladas sobre las tareas en segundo plano**
 
-* [Convert a multi-process background task to a single-process background task](convert-multiple-process-background-task.md)
-* [Create and register a background task that runs in a separate process](create-and-register-a-background-task.md)
-* [Play media in the background](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
-* [Respond to system events with background tasks](respond-to-system-events-with-background-tasks.md)
-* [Register a background task](register-a-background-task.md)
-* [Set conditions for running a background task](set-conditions-for-running-a-background-task.md)
-* [Use a maintenance trigger](use-a-maintenance-trigger.md)
-* [Handle a cancelled background task](handle-a-cancelled-background-task.md)
-* [Monitor background task progress and completion](monitor-background-task-progress-and-completion.md)
-* [Run a background task on a timer](run-a-background-task-on-a-timer-.md)
-* [Create and register a single process background task](create-and-register-a-singleprocess-background-task.md).  
+* [Conversión de una tarea en segundo plano multiproceso en una tarea en segundo plano de proceso único](convert-multiple-process-background-task.md)
+* [Creación y registro de una tarea en segundo plano que se ejecuta en un proceso independiente](create-and-register-a-background-task.md)
+* [Reproducción de contenidos multimedia en segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
+* [Respuesta ante eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md)
+* [Registro de una tarea en segundo plano](register-a-background-task.md)
+* [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md)
+* [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
+* [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
+* [Supervisión del progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
+* [Ejecución de una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
+* [Creación y registro de una tarea en segundo plano de proceso único](create-and-register-a-singleprocess-background-task.md).  
 
-**Background task guidance**
+**Guía de tareas en segundo plano**
 
-* [Guidelines for background tasks](guidelines-for-background-tasks.md)
-* [Debug a background task](debug-a-background-task.md)
-* [How to trigger suspend, resume, and background events in Windows Store apps (when debugging)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
+* [Depurar una tarea en segundo plano](debug-a-background-task.md)
+* [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
-**Background Task API Reference**
+**Referencia de API de tareas en segundo plano**
 
 * [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847)
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

@@ -1,10 +1,11 @@
 ---
 author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
-description: "Este tema describe los efectos diseñados para usarse en escenarios de captura de vídeo. Esto incluye el efecto de estabilización de vídeo."
-title: "Efectos para captura de vídeos"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
+description: "En este tema se muestra cómo usar el efecto de estabilización de vídeo."
+title: "Efectos para la captura de vídeo"
+translationtype: Human Translation
+ms.sourcegitcommit: 367ab34663d66d8c454ff305c829be66834e4ebe
+ms.openlocfilehash: 3fe7abcc417db76b4375243d66b1c0ecb9092147
 
 ---
 
@@ -12,10 +13,10 @@ ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este tema describe los efectos diseñados para su uso en escenarios de captura de vídeo. Esto incluye el efecto de estabilización de vídeo.
+En este tema se muestra cómo usar el efecto de estabilización de vídeo.
 
-**Nota**  
-Este artículo se basa en los conceptos y el código analizados en [Capturar fotografías y vídeos con MediaCapture](capture-photos-and-video-with-mediacapture.md), donde se describen los pasos para implementar capturas básicas de fotografías y vídeos. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios más avanzados de captura. El código que encontrarás en este artículo se ha agregado suponiendo que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
+> [!NOTE] 
+> Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para la implementación de la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios de captura más avanzados. El código que encontrarás en este artículo se ha agregado suponiendo que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
 
 ## Efecto de estabilización de vídeo
 
@@ -33,7 +34,7 @@ Declara una variable de miembro para almacenar el objeto [**VideoStabilizationEf
 
 [!code-cs[DeclareVideoStabilizationEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareVideoStabilizationEffect)]
 
-En la implementación básica de capturas de vídeo que se describe en el artículo [Capturar fotos y vídeos con MediaCapture](capture-photos-and-video-with-mediacapture.md), el objeto del perfil de codificación de medios se asigna a una variable local porque no se usa en otro lugar del código. Para este escenario, debes asignar el objeto a una variable de miembro de modo que puedas acceder a él más adelante.
+Para este escenario, debes asignar el objeto de perfil de codificación multimedia a una variable de miembro para poder acceder a él más adelante.
 
 [!code-cs[EncodingProfileMember](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetEncodingProfileMember)]
 
@@ -55,7 +56,7 @@ Una propiedad de codificación de entrada recomendada es, en caso de ser compati
 
 Llama a [**VideoDeviceController.SetMediaStreamPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh700895) para establecer las nuevas propiedades de codificación. Antes de establecer las propiedades nuevas, usa la variable de miembro para almacenar las propiedades iniciales de codificación y que así puedas cambiar la configuración cuando se desactive el efecto.
 
-Si el efecto de estabilización de vídeo debe recortar el vídeo de salida, la codificación de propiedades de salida recomendada será del tamaño del vídeo recortado. Esto significa que la resolución de salida coincidirá con el tamaño del vídeo recortado. Si no usas las propiedades de salida recomendadas, el vídeo se escalará verticalmente para hacerlo coincidir con el tamaño de salida inicial, lo que dará como resultado una pérdida de fidelidad visual.
+Si el efecto de estabilización de vídeo debe recortar el vídeo de salida, la codificación de propiedades de salida recomendada será del tamaño del vídeo recortado. Esto significa que la resolución de salida coincidirá con el tamaño del vídeo recortado. Si no usas las propiedades de salida recomendadas, el vídeo se escalará verticalmente para que coincida con el tamaño de salida inicial, lo que provocará una pérdida de fidelidad visual.
 
 Establece la propiedad [**Video**](https://msdn.microsoft.com/library/windows/apps/hh701124) del objeto **MediaEncodingProfile**. Antes de establecer las propiedades nuevas, usa la variable de miembro para almacenar las propiedades iniciales de codificación y que así puedas cambiar la configuración cuando se desactive el efecto.
 
@@ -71,13 +72,14 @@ Por lo general, deberías usar este evento para ajustar la interfaz de usuario d
 
 ### Limpiar el efecto de estabilización de vídeo
 
-Para limpiar el efecto de estabilización de vídeo, llama al método [**ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592) para borrar todos los efectos de la canalización de vídeo. Si las variables de miembro que contienen las propiedades de codificación iniciales no son nulas, úsalas para restaurar las propiedades de codificación. Por último, quita el controlador de eventos **EnabledChanged** y establece el efecto en "null".
+Para limpiar el efecto de estabilización de vídeo, llama al método [**ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592) para borrar todos los efectos de la canalización de vídeo. Si las variables de miembro que contienen las propiedades de codificación iniciales no son nulas, úsalas para restaurar las propiedades de codificación. Por último, quita el controlador de eventos **EnabledChanged** y define el efecto como "null".
 
 [!code-cs[CleanUpVisualStabilizationEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpVisualStabilizationEffect)]
 
 ## Temas relacionados
 
-* [Capturar fotografías y vídeos con MediaCapture](capture-photos-and-video-with-mediacapture.md)
+* [Cámara](camera.md)
+* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -88,6 +90,6 @@ Para limpiar el efecto de estabilización de vídeo, llama al método [**ClearEf
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

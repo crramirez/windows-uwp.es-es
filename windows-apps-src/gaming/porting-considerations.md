@@ -3,15 +3,16 @@ author: mtoepke
 title: Migrar de DirectX9 a DirectX11 y la Plataforma universal de Windows (UWP)
 description: "En esta sección encontrarás instrucciones para portar tu juego de escritorio de DirectX 9 a DirectX 11 y a la Plataforma universal de Windows (UWP)."
 ms.assetid: 7a3f8ddf-d5b2-1c05-b532-70459befda4e
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0f27f9e9219fca10798a09e6f934b72ad7b1b5a8
+ms.openlocfilehash: 875d638a6104cf91b707a2998c9d74e905c945da
 
 ---
 
 # Migrar de DirectX 9 a DirectX 11 y a la Plataforma universal de Windows (UWP)
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En esta sección encontrarás instrucciones para portar tu juego de escritorio de DirectX 9 a DirectX 11 y a la Plataforma universal de Windows (UWP).
 
@@ -54,6 +55,6 @@ En esta sección encontrarás instrucciones para portar tu juego de escritorio d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

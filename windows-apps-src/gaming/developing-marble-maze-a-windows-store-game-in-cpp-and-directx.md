@@ -3,26 +3,25 @@ author: mtoepke
 title: Desarrollo de Marble Maze, un juego para UWP en C++ y DirectX
 description: "En esta sección de la documentación se describe cómo usar DirectX y Visual C++ para crear un juego 3-D de la Plataforma universal de Windows (UWP)."
 ms.assetid: 43f1977a-7e1d-614c-696e-7669dd8a9cc7
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c74a455f84618cb57147c8f0c9baf343b41b02be
+ms.openlocfilehash: d660e05ab43f1c45f21b028a78c6cfa3e0897164
 
 ---
 
 # Desarrollo de Marble Maze, un juego para UWP en C++ y DirectX
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En esta sección de la documentación se describe cómo usar DirectX y Visual C++ para crear un juego 3-D de la Plataforma universal de Windows (UWP). En esta documentación se muestra cómo crear un juego en 3-D llamado Marble Maze, que funciona tanto en los nuevos factores de forma, por ejemplo tabletas, como en equipos de escritorio y portátiles tradicionales.
 
-> 
-            **Nota**   Para descargar el código fuente de Marble Maze, consulta la [muestra del juego DirectX Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Nota**   Para descargar el código fuente de Marble Maze, consulta la [muestra del juego DirectX Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 
-> 
-            **Importante**  Los patrones de diseño de Marble Maze son un ejemplo de lo que consideramos procedimientos recomendados para crear juegos para UWP. Puedes modificar muchos de los detalles de implementación para que se adapten a tus procedimientos y a los requisitos únicos del juego que desarrolles. No dudes en usar diferentes técnicas o bibliotecas si se adaptan mejor a lo que necesitas. (Sin embargo, asegúrate siempre de que el código pase el Kit para la certificación de aplicaciones en Windows). Cuando consideramos que una implementación de Marble Maze es esencial para desarrollar un juego correctamente, hacemos hincapié en esta documentación.
+> **Importante**  Los patrones de diseño de Marble Maze son un ejemplo de lo que consideramos procedimientos recomendados para crear juegos para UWP. Puedes modificar muchos de los detalles de implementación para que se adapten a tus procedimientos y a los requisitos únicos del juego que desarrolles. No dudes en usar diferentes técnicas o bibliotecas si se adaptan mejor a lo que necesitas. (Sin embargo, asegúrate siempre de que el código pase el Kit para la certificación de aplicaciones en Windows). Cuando consideramos que una implementación de Marble Maze es esencial para desarrollar un juego correctamente, hacemos hincapié en esta documentación.
 
  
 
@@ -107,6 +106,6 @@ Te recomendamos que empieces con los aspectos básicos de la muestra de Marble M
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

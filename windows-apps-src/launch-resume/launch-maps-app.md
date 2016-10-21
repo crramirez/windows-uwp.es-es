@@ -3,8 +3,9 @@ author: TylerMSFT
 title: "Iniciar la aplicación Mapas de Windows"
 description: "Aprende a iniciar la aplicación Mapas de Windows desde la aplicación."
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 0dcd15c7d04ed452f69208ad1e68a8949baf40dd
+ms.openlocfilehash: a2f09aa510c9c3db6b8eca25f4c8cee98fa0eb46
 
 ---
 
@@ -16,8 +17,7 @@ ms.openlocfilehash: 0dcd15c7d04ed452f69208ad1e68a8949baf40dd
 
 Aprende a iniciar la aplicación Mapas de Windows desde la aplicación. En este tema se describen los esquemas de identificador uniforme de recursos (URI) **bingmaps:**, **ms-drive-to:**, **ms-walk-to:** y *ms-settings:*. Usa estos esquemas de URI para iniciar la aplicación Mapas de Windows para especificar mapas, indicaciones y resultados de búsqueda o para descargar mapas sin conexión de Mapas de Windows desde la aplicación Configuración.
 
-
-            **Sugerencia** Para obtener más información sobre cómo iniciar la aplicación Mapas de Windows desde tu aplicación, descarga la [muestra de mapas de la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) de [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) (Repositorio de muestras universales de Windows) en GitHub.
+**Sugerencia** Para obtener más información sobre cómo iniciar la aplicación Mapas de Windows desde tu aplicación, descarga la [muestra de mapas de la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) del [repositorio de muestras universales de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub.
 
 ## Introducción a los URI
 
@@ -67,8 +67,7 @@ En este ejemplo, la clase [**LauncherOptions**](https://msdn.microsoft.com/libra
 
 Hay varias maneras de controlar el punto central de mapa y el nivel de zoom. Los parámetros *cp* (punto central) y *lvl* (nivel de zoom) son los métodos más sencillos que generan resultados predecibles. El parámetro *bb* (especifica un área limitada por los valores de latitud y longitud) es menos predecible porque tiene en cuenta la resolución de pantalla y determina el punto central del mapa y el nivel de zoom en función de las coordenadas proporcionadas. El parámetro *bb* se omite cuando los tres parámetros (*bb*, *cp* y *lvl*) están presentes.
 
-Para controlar el tipo de vista, usa los parámetros *ss* (Streetside) y *sty* (estilo). El parámetro *ss* coloca el mapa en una vista de Streetside. El parámetro *sty* te permite cambiar entre las vistas de carretera, aérea y en 3D. Cuando se usa el estilo 3D, los parámetros *hdg*, *pit* y *rad* pueden usarse para especificar la vista 3D. 
-            *hdg* especifica el encabezado de la vista, *pit* especifica la rotación alrededor del eje x (pitch) de la vista y *rad* indica la distancia desde el punto central para mostrar en la vista. Para obtener más información sobre estos y otros parámetros, consulta la [referencia del parámetro bingmaps:](#bingmaps).
+Para controlar el tipo de vista, usa los parámetros *ss* (Streetside) y *sty* (estilo). El parámetro *ss* coloca el mapa en una vista de Streetside. El parámetro *sty* te permite cambiar entre las vistas de carretera, aérea y en 3D. Cuando se usa el estilo 3D, los parámetros *hdg*, *pit* y *rad* pueden usarse para especificar la vista 3D. *hdg* especifica el encabezado de la vista, *pit* especifica la rotación alrededor del eje x (pitch) de la vista y *rad* indica la distancia desde el punto central para mostrar en la vista. Para obtener más información sobre estos y otros parámetros, consulta la [referencia del parámetro bingmaps:](#bingmaps).
 
 | Ejemplo de URI                                                                 | Resultados                                                                                                                                                                                                   |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -142,8 +141,7 @@ Puedes mostrar indicaciones entre dos puntos con el parámetro *rtp*; estos punt
 
 Los esquemas de URI **ms-drive-to:** y **ms-walk-to:** te permiten iniciar directamente en una vista paso a paso de una ruta. Estos esquemas URI solo pueden proporcionar indicaciones desde la ubicación actual del usuario. Si debes proporcionar indicaciones entre los puntos que no incluyen la ubicación actual del usuario, usa el esquema de URI **bingmaps:** como se describe en la sección anterior. Para obtener más información sobre estos esquemas de URI, consulta la referencia de los parámetros [ms-drive-to:](#msdriveto) y [ms-walk-to:](#mswalkto) .
 
-> 
-            **Importante**  Cuando los esquemas de URI **ms-drive-to:** o **ms-walk-to:** se inicien, la aplicación Mapas comprobará si el dispositivo tuvo alguna vez una corrección de la ubicación GPS. Si es así, la aplicación Mapas procederá a realizar indicaciones paso a paso. En caso contrario, la aplicación mostrará la información general de la ruta, tal como se describe en [Mostrar indicaciones y tráfico](#directions).
+> **Importante** Cuando los esquemas de URI **ms-drive-to:** o **ms-walk-to:** se inicien, la aplicación Mapas comprobará si el dispositivo tuvo alguna vez una corrección de la ubicación GPS. Si es así, la aplicación Mapas procederá a realizar indicaciones paso a paso. En caso contrario, la aplicación mostrará la información general de la ruta, tal como se describe en [Mostrar indicaciones y tráfico](#directions).
 
  
 
@@ -249,17 +247,13 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <p>sty=a</p></td>
 <td align="left"><p>Define el estilo de mapa. Los valores válidos para este parámetro son:</p>
 <ul>
-<li>
-            **a**: mostrar una vista aérea del mapa.</li>
-<li>
-            **r**: mostrar una vista de carreteras del mapa.</li>
-<li>
-            **3d**: mostrar una vista 3D del mapa. Usar conjuntamente con el parámetro **cp** y, opcionalmente, con el parámetro **rad**.</li>
+<li>**a**: mostrar una vista aérea del mapa.</li>
+<li>**r**: mostrar una vista de carreteras del mapa.</li>
+<li>**3d**: mostrar una vista 3D del mapa. Usar conjuntamente con el parámetro **cp** y, opcionalmente, con el parámetro **rad**.</li>
 </ul>
 <p>En Windows 10, los estilos de la vista aérea y la vista 3D son los mismos.</p>
 <div class="alert">
-            
-**Nota**  Si se omite el parámetro **sty**, se obtienen los mismos resultados que sty=r.
+**Nota** Si se omite el parámetro **sty**, se obtienen los mismos resultados que con sty=r.
 </div>
 <div>
  
@@ -297,8 +291,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <p>ss=1</p></td>
 <td align="left"><p>Indica que se muestran las imágenes de nivel de calle cuando <code>ss=1</code>. Si se omite el parámetro **ss**, se obtiene el mismo resultado que <code>ss=0</code>. Se usa conjuntamente con el parámetro **cp** para especificar la ubicación de la vista de nivel de calle.</p>
 <div class="alert">
-            
-> **Nota**  Las imágenes en el nivel de calle no están disponibles en todas las regiones.
+> **Nota** Las imágenes en el nivel de calle no están disponibles en todas las regiones.
 </div>
 <div>
  
@@ -312,8 +305,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <p>trfc=1</p></td>
 <td align="left"><p>Especifica si se incluye información sobre el tráfico en el mapa. Si se omite el parámetro trfc, se obtienen los mismos resultados que <code>trfc=0</code>.</p>
 <div class="alert">
-            
-> **Nota**  Ten en cuenta que los datos de tráfico no están disponibles en todas las regiones.
+> **Nota** Ten en cuenta que los datos de tráfico no están disponibles en todas las regiones.
 </div>
 <div>
  
@@ -342,8 +334,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <p>Cuando se proporciona una ruta incompleta, no se dibuja ninguna línea de ruta.</p>
 <p>Usar conjuntamente con el parámetro **mode** para especificar el modo de transporte (ir en coche, en transporte público o a pie). Si **mode** no se especificó, se proporcionarán indicaciones con el modo de preferencia de transporte del usuario.</p>
 <div class="alert">
-            
-**Nota**  Se puede usar un título para una ubicación si se especifica la ubicación mediante el valor del parámetro **pos**. En lugar de mostrar la latitud y la longitud, se mostrará el título.
+**Nota** Se puede usar un título para una ubicación si se especifica la ubicación mediante el valor del parámetro **pos**. En lugar de mostrar la latitud y la longitud, se mostrará el título.
 </div>
 <div>
  
@@ -357,12 +348,9 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <p>mode=d</p></td>
 <td align="left"><p>Define el modo de transporte. Los valores válidos para este parámetro son:</p>
 <ul>
-<li>
-            **d**: muestra información general sobre la ruta para obtener indicaciones de conducción</li>
-<li>
-            **t**: muestra información general sobre la ruta para obtener indicaciones de transporte público</li>
-<li>
-            **w**: muestra información general sobre la ruta para obtener indicaciones para ir a pie</li>
+<li>**d**: muestra información general sobre la ruta para obtener indicaciones de conducción</li>
+<li>**t**: muestra información general sobre la ruta para obtener indicaciones de transporte público</li>
+<li>**w**: muestra información general sobre la ruta para obtener indicaciones para ir a pie</li>
 </ul>
 <p>Usar conjuntamente con el parámetro **rtp** para obtener indicaciones de transporte. Si **mode** no se especificó, se proporcionarán indicaciones con el modo de preferencia de transporte del usuario. Un **modo** se puede proporcionar sin ningún parámetro de ruta para especificar la entrada de indicaciones para ese modo desde la ubicación actual.</p></td>
 </tr>
@@ -386,8 +374,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 <p>Separa el nombre y los diferentes puntos con tildes (**~**).</p>
 <p>Si el elemento especificado contiene una tilde de la ñ, asegúrate de que esta se codifica como <code>%7E</code>. Si no va acompañada de los parámetros de punto central y de nivel de Zoom, la colección proporcionará la mejor vista de mapa.</p>
 
-<p>
-            **Importante** Si el elemento especificado contiene un carácter de subrayado, asegúrate de que el carácter de subrayado presente una codificación doble como %255F.</p>
+<p>**Importante** Si el elemento especificado contiene un carácter de subrayado, asegúrate de que el carácter de subrayado presente una codificación doble como %255F.</p>
 
 <p>Si el elemento especificado contiene un carácter de subrayado, asegúrate de que dicho carácter de subrayado presente una codificación doble, como %255F.</p></td>
 </tr>
@@ -401,8 +388,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 
 El URI para iniciar una solicitud de indicaciones paso a paso de conducción no necesita codificación y tiene el siguiente formato.
 
-> 
-            **Nota**  En este esquema de URI no se especifica el punto inicial. Siempre se supone que el punto inicial es la ubicación actual. Si necesitas especificar un punto inicial que no sea la ubicación actual, consulta [Mostrar indicaciones y tráfico](#directions).
+> **Nota** En este esquema de URI no se especifica el punto inicial. Siempre se supone que el punto inicial es la ubicación actual. Si necesitas especificar un punto inicial que no sea la ubicación actual, consulta [Mostrar indicaciones y tráfico](#directions).
 
  
 
@@ -419,8 +405,7 @@ El URI para iniciar una solicitud de indicaciones paso a paso de conducción no 
 
 El URI para iniciar una solicitud de indicaciones paso a paso para ir a pie no necesita codificación y tiene el siguiente formato.
 
-> 
-            **Nota**  En este esquema de URI no se especifica el punto inicial. Siempre se supone que el punto inicial es la ubicación actual. Si necesitas especificar un punto inicial que no sea la ubicación actual, consulta [Mostrar indicaciones y tráfico](#directions).
+> **Nota** En este esquema de URI no se especifica el punto inicial. Siempre se supone que el punto inicial es la ubicación actual. Si necesitas especificar un punto inicial que no sea la ubicación actual, consulta [Mostrar indicaciones y tráfico](#directions).
 
  
 
@@ -434,8 +419,7 @@ El URI para iniciar una solicitud de indicaciones paso a paso para ir a pie no n
 ## ms-settings: referencia del parámetro
 
 
-La sintaxis de los parámetros específicos de la aplicación Mapas para el esquema de URI **ms-settings:** se define a continuación. 
-            **maps-downloadmaps** se especifica junto con el URI **ms-settings:** en forma de **ms-settings:maps-downloadmaps?** para indicar la página de configuración de mapas sin conexión.
+La sintaxis de los parámetros específicos de la aplicación Mapas para el esquema de URI **ms-settings:** se define a continuación. **maps-downloadmaps** se especifica junto con el URI **ms-settings:** en forma de **ms-settings:maps-downloadmaps?** para indicar la página de configuración de mapas sin conexión.
 
  
 
@@ -448,6 +432,6 @@ La sintaxis de los parámetros específicos de la aplicación Mapas para el esqu
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

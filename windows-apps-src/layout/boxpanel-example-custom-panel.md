@@ -8,8 +8,9 @@ title: BoxPanel, un ejemplo de panel personalizado
 ms.assetid: 981999DB-81B1-4B9C-A786-3025B62B74D6
 label: BoxPanel, an example custom panel
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: e03a4c9d2116d779545cb1fb8e87fa86a632bca8
+ms.openlocfilehash: 4427219987f0524858233cf382cd13121cf77b07
 
 ---
 
@@ -119,8 +120,7 @@ protected override Size MeasureOverride(Size availableSize)
 }
 ```
 
-El patrón necesario de una implementación de [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) es el bucle que pasa por cada elemento de [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514). Llama siempre al método [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) en cada uno de estos elementos. 
-            **Measure** tiene un parámetro de tipo [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995). Lo que se estás pasando aquí es el tamaño que el panel va a tener disponible para el elemento secundario en cuestión. Por lo tanto, antes de poder efectuar el bucle y empezar a llamar a **Measure**, necesitaremos saber la cantidad de espacio que cada celda puede dedicar. En el propio método **MeasureOverride** tenemos el valor *availableSize*. Se trata del tamaño que el elemento principal del panel usó cuando llamó a **Measure**, que era causante de que este **MeasureOverride** se llamara en primer lugar. Así, una lógica típica consistiría en concebir un esquema en el que cada elemento secundario divida el espacio de todo el *availableSize* del panel. Luego, cada división de tamaño se pasaría a **Measure** en cada elemento secundario.
+El patrón necesario de una implementación de [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) es el bucle que pasa por cada elemento de [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514). Llama siempre al método [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) en cada uno de estos elementos. **Measure** tiene un parámetro de tipo [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995). Lo que se estás pasando aquí es el tamaño que el panel va a tener disponible para el elemento secundario en cuestión. Por lo tanto, antes de poder efectuar el bucle y empezar a llamar a **Measure**, necesitaremos saber la cantidad de espacio que cada celda puede dedicar. En el propio método **MeasureOverride** tenemos el valor *availableSize*. Se trata del tamaño que el elemento principal del panel usó cuando llamó a **Measure**, que era causante de que este **MeasureOverride** se llamara en primer lugar. Así, una lógica típica consistiría en concebir un esquema en el que cada elemento secundario divida el espacio de todo el *availableSize* del panel. Luego, cada división de tamaño se pasaría a **Measure** en cada elemento secundario.
 
 La forma en la que `BoxPanel` divide el tamaño es bastante sencilla: divide su espacio en una serie de cuadros que se controla en gran medida mediante el número de elementos. El tamaño de los cuadros se establece a partir del recuento de filas y columnas y del tamaño disponible. Hay veces en las que una fila o una columna de un cuadrado no es necesaria y se desecha, de modo que el panel pasa a ser más un rectángulo que un cuadrado en cuanto a su relación fila:columna. Para más información sobre cómo se ha llegado hasta esta lógica, ve a ["El escenario para BoxPanel"](#scenario).
 
@@ -128,10 +128,7 @@ La forma en la que `BoxPanel` divide el tamaño es bastante sencilla: divide su 
 
 Este panel se puede usar cuando el componente de altura de *availableSize* no esté enlazado. Si esto es así, el panel no tiene una altura conocida que dividir. En este caso, la lógica del paso de medición informa a cada elemento secundario de que todavía carece de una altura enlazada, y lo hace pasando un elemento [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) a la llamada de [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) de los elementos secundarios en los que [**Size.Height**](https://msdn.microsoft.com/library/windows/apps/hh763910) es infinito. Esto puede hacerse. Cuando se llama a **Measure**, la lógica consiste en que [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) se establece en el mínimo de lo siguiente: lo que se pasó a **Measure**, o bien el tamaño natural de dicho elemento de factores como [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) y [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) expresamente definidos.
 
-
-            **Nota**
-            &nbsp;&nbsp;La lógica interna de [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) presenta el mismo comportamiento: **StackPanel** pasa un valor de dimensión infinito a [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) en los elementos secundarios, lo que pone de manifiesto que no hay ninguna limitación en ellos en cuanto a dimensión de orientación. 
-            Normalmente, **StackPanel** establece su tamaño dinámicamente para dar cabida a todos los elementos secundarios de una pila que crece en esa dimensión.
+**Nota**&nbsp;&nbsp;La lógica interna de [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) presenta el mismo comportamiento: **StackPanel** pasa un valor de dimensión infinito a [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) en los elementos secundarios, lo que pone de manifiesto que no hay ninguna limitación en ellos en cuanto a dimensión de orientación. Normalmente, **StackPanel** establece su tamaño dinámicamente para dar cabida a todos los elementos secundarios de una pila que crece en esa dimensión.
 
 Sin embargo, el panel en sí no puede devolver un objeto [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) con un valor infinito de [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730); esto generaría una excepción durante el diseño. Por lo tanto, parte de la lógica irá dirigida a averiguar la altura máxima que cada elemento secundario necesita para, luego, usar esa altura como altura de celda en caso de que esta no se haya obtenido ya de las propias limitaciones de tamaño del panel. Aquí te mostramos la función auxiliar `LimitUnboundedSize` a la que se hizo referencia en el código anterior, que toma la altura de celda máxima y la usa para dar al panel una altura finita que devolver, al tiempo que garantiza que `cellheight` sea un número finito antes de que se inicie el paso de organización:
 
@@ -175,8 +172,7 @@ El patrón necesario de una implementación de [**ArrangeOverride**](https://msd
 
 Fíjate en que no hay tantos cálculos como en [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730). Es lo normal. El tamaño de los elementos secundarios ya se conoce por la propia lógica de **MeasureOverride** del panel, o bien por el valor de [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) de cada elemento secundario que se estableció durante el paso de medición. No obstante, todavía nos queda decidir la ubicación en la que cada elemento secundario va a aparecer en el panel. En un panel normal, los elementos secundarios deben representarse en una posición diferente. Un panel que crea elementos superpuestos no es lo más conveniente en un escenario normal (si bien no es descartable que puedan crearse paneles que se solapen a propósito, si es realmente lo que se pretende en el escenario).
 
-Este panel se organiza siguiendo el concepto de filas y columnas. El número de filas y columnas ya está calculado (era necesario para la medición), así que ahora la forma de las filas y columnas, además de los tamaños conocidos de cada celda, contribuyen a la lógica para definir una posición de representación (`anchorPoint`) para cada elemento del panel. Ese [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), junto con el valor de [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) que ya conocemos de la medición, se usan como los dos componentes que construyen un [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994). 
-            **Rect** es el tipo de entrada de [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914).
+Este panel se organiza siguiendo el concepto de filas y columnas. El número de filas y columnas ya está calculado (era necesario para la medición), así que ahora la forma de las filas y columnas, además de los tamaños conocidos de cada celda, contribuyen a la lógica para definir una posición de representación (`anchorPoint`) para cada elemento del panel. Ese [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), junto con el valor de [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) que ya conocemos de la medición, se usan como los dos componentes que construyen un [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994). **Rect** es el tipo de entrada de [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914).
 
 A veces, los paneles necesitan recortar su contenido. De hacerlo, el tamaño recortado es aquel que está presente en [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921), dado que la lógica de [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) lo establece como el mínimo de lo que se ha pasado a **Measure**, o cualquier otro factor de tamaño natural. Lo normal, pues, es que no sea necesario comprobar expresamente los recortes de tamaño durante el método [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914); el recorte sencillamente se producirá en función del pase de **DesiredSize** a cada llamada de **Arrange**.
 
@@ -217,9 +213,7 @@ Un escenario avanzado para extender más aún `BoxPanel` (no se muestra aquí) s
 
 Te estarás preguntando por qué el panel no elige 5x2 para diez elementos, ya que así el número de elementos encajaría a la perfección. Pero, en la práctica, los paneles tienen forma de rectángulos que rara vez presentan una relación de aspecto con una orientación muy marcada. La técnica de los mínimos cuadrados es una forma de influir en la lógica de tamaño para que funcione correctamente con las formas de diseño típicas y no fomentar los cambios de tamaño cuando las formas de celda presentan relaciones de aspecto inusuales.
 
-
-            **Nota**
-            &nbsp;&nbsp;Este artículo está orientado a desarrolladores de Windows 10 que crean aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+**Nota**&nbsp;&nbsp;Este artículo está orientado a desarrolladores de Windows10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 ## Temas relacionados
 
@@ -237,6 +231,6 @@ Te estarás preguntando por qué el panel no elige 5x2 para diez elementos, ya q
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,16 +1,16 @@
 ---
-description: "Personaliza tu aplicación para UWP para tipos específicos de entrada y de dispositivos."
-title: "Diseño para entradas y dispositivos - desarrollo de aplicaciones de Windows"
+description: "Personaliza tu aplicación para UWP para tipos específicos de entrada y de dispositivos. Aprovecha los comandos táctiles y de voz. Ejecuta las aplicaciones en Xbox, el teléfono e incluso el televisor."
+title: "Diseño para entradas y dispositivos de la aplicación para UWP: desarrollo de aplicaciones de Windows"
 author: mijacobs
+keywords: "información básica de dispositivos, entradas de la aplicación, personalizar la aplicación para UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: fa1567d3ff80dc9c9376736c7d25c2bb06e79cc9
-ms.openlocfilehash: f2055318fe67a0af2bcc009c6f9782029f9032f1
+ms.sourcegitcommit: 5a6666d4e706d4d49d646b5bb2e43b82394eb215
+ms.openlocfilehash: 85bcd15d4b9262188f0821642faf0d3d0cb7dbad
 
 ---
+# Entradas y dispositivos
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-# Entradas y dispositivos
 
 Las aplicaciones para UWP admiten una amplia variedad de entradas y se ejecutan en multitud de dispositivos automáticamente; no es necesario que hagas nada para habilitar la entrada táctil o ejecutar la aplicación en un teléfono, por ejemplo. 
 
@@ -168,6 +168,6 @@ El hecho de conocer los dispositivos que admiten aplicaciones para UWP te ayudar
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

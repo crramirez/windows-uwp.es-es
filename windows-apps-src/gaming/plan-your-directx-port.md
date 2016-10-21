@@ -1,14 +1,18 @@
 ---
 author: mtoepke
-title: Planear la migración de DirectX
-description: Planea un proyecto para migrar un juego de DirectX 9 a DirectX 11 y a la Plataforma universal de Windows (UWP): actualiza el código de gráficos y coloca el juego en el entorno de Windows Runtime.
+title: "Planear la migración de DirectX"
+description: "Planea un proyecto para migrar un juego de DirectX 9 a DirectX 11 y a la Plataforma universal de Windows (UWP): actualiza el código de gráficos y coloca el juego en el entorno de Windows Runtime."
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: fbd582b2cc90ee763cb167c65dac88cee4e7a025
+
 ---
 
 # Planear la migración de DirectX
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumen**
 
@@ -34,7 +38,7 @@ Debes reemplazar las bibliotecas auxiliares de D3DX y DXUT con tus propias bibli
 
 Los sombreadores escritos en lenguaje de ensamblado deben actualizarse a HLSL mediante la funcionalidad del modelo de sombreador 4 nivel 9\_1 o 9\_3. En cambio, los sombreadores escritos para la biblioteca de efectos necesitarán actualizarse a una versión más reciente de la sintaxis de HLSL. Consulta la sección [Asignación de características](feature-mapping.md) para obtener más información.
 
-Conoce los distintos [Niveles de característica de Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876). Los niveles de característica clasifican una amplia gama de hardware de vídeo al definir conjuntos de funciones conocidas. Cada conjunto corresponde, a grandes rasgos, a versiones de Direct3D, de 9.1 a 11.2. Todas los niveles de característica usan la API de DirectX 11.
+Conoce los distintos [Niveles de característica de Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876). Los niveles de característica clasifican una amplia gama de hardware de vídeo al definir conjuntos de funciones conocidas. Cada conjunto corresponde, a grandes rasgos, a versiones de Direct3D, de 9.1 a 11.2. Todas los niveles de característica usan la API de DirectX11.
 
 ## Planear para migrar código de interfaz de usuario de Win32 a CoreWindow
 
@@ -63,6 +67,7 @@ Hay dos conceptos que usarás con frecuencia:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,22 +5,34 @@ title: "Búsqueda y buscar en la página"
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: cd746f81e8cca27c5111f3d15342d1def0f874dc
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: f245db6c37b7c8257e4fe937417d981e49101b8c
 
 ---
-
 # Búsqueda y buscar en la página
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Buscar es una de las formas principales en que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto.
 
-**API importantes**
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn633874"><strong>Clase AutoSuggestBox (XAML)</strong></a></li>
+</ul>
 
--   [**Clase AutoSuggestBox (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn633874)
+</div>
+</div>
 
 
 
-## <span id="Elements_of_the_search_experience"></span><span id="elements_of_the_search_experience"></span><span id="ELEMENTS_OF_THE_SEARCH_EXPERIENCE"></span>Elementos de la experiencia de búsqueda
+
+
+
+
+
+## Elementos de la experiencia de búsqueda
 
 
 **Entrada.**  Texto es el modo más común de la entrada de búsqueda y es el objetivo de estas instrucciones. Entre otros modos de entrada comunes se incluyen la voz y la cámara, pero estos por lo general requieren la capacidad de interactuar con el hardware del dispositivo y es posible que necesiten controles adicionales o una interfaz de usuario personalizada en la aplicación.
@@ -43,15 +55,14 @@ Un método para habilitar el acceso eficaz tanto a la edición de consultas prev
 
 El conjunto de resultados puede aparecer en la manera que mejor comunique el contenido. Una [vista de lista](lists.md) proporciona una gran cantidad de flexibilidad y es adecuada para la mayoría de las búsquedas. Una vista de cuadrícula funciona bien para imágenes u otros medios y un mapa puede usarse para comunicar la distribución espacial.
 
-## <span id="Search_scopes"></span><span id="search_scopes"></span><span id="SEARCH_SCOPES"></span>Ámbitos de búsqueda
+## Ámbitos de búsqueda
 
 
 La búsqueda es una función común y los usuarios encontrarán la interfaz de usuario de búsqueda en el shell y en muchas aplicaciones. Aunque los puntos de entrada de búsqueda tienden a visualizarse de modo similar, pueden proporcionar acceso a los resultados que van desde amplios (búsquedas web o de dispositivo) a restringidos (lista de contactos de un usuario). El punto de entrada de búsqueda debe yuxtaponerse al contenido que se está buscando.
 
 Entre algunos ámbitos comunes de la búsqueda se incluyen:
 
-
-            **Global** y **contextual o refinar.**  Búsqueda en varias fuentes de contenido en la nube y local. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
+**Global** y **contextual o refinado.**  Búsqueda en varias fuentes de contenido en la nube y local. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
 
 **Web.**  Buscar en un índice web. Los resultados incluyen páginas, entidades y respuestas.
 
@@ -75,7 +86,7 @@ Usa el texto de la sugerencia para comunicar el ámbito de búsqueda. Algunos ej
 
 Mediante una comunicación eficaz del ámbito de un punto de entrada de búsqueda, puedes ayudar a garantizar que se cumplirán las expectativas del usuario mediante las funcionalidades de la búsqueda que estás realizando y reducir la posibilidad de frustración a la hora de cumplir las expectativas del usuario.
 
-## <span id="Implementation"></span><span id="implementation"></span><span id="IMPLEMENTATION"></span>Implementación
+## Implementación
 
 
 Para la mayoría de las aplicaciones, es mejor tener un campo de entrada de texto como punto de entrada de búsqueda, que proporciona una superficie visual destacada. Además, el texto de la sugerencia ayuda a detectar y comunicar el ámbito de búsqueda. Cuando la búsqueda es una acción más secundaria o cuando el espacio está limitado, el icono de búsqueda puede servir como punto de entrada sin el campo de entrada correspondiente. Cuando se visualiza como un icono, asegúrate de que hay espacio para un cuadro de búsqueda modal, como se muestra en los ejemplos a continuación.
@@ -102,7 +113,7 @@ En el caso de las listas de desplazamiento, es útil tener siempre la entrada de
 
 La funcionalidad de entrada cero y de formulación de consulta es opcional para búsquedas contextuales o refinadas en las que se filtrará la lista en tiempo real mediante la entrada del usuario. Entre las excepciones se incluyen casos en los que puede haber sugerencias de formatos de consultas disponibles, como las opciones de filtrado de la bandeja de entrada (para: &lt;cadena de entrada&gt;, de: &lt;cadena de entrada&gt;, asunto: &lt;cadena de entrada&gt;, etc.).
 
-## <span id="examples"></span><span id="EXAMPLES"></span>Ejemplo
+## Ejemplo
 
 
 En los ejemplos de esta sección se muestran búsquedas en contexto.
@@ -135,7 +146,7 @@ Búsqueda en línea se reserva para casos en los que se accede con poca frecuenc
 
 Buscar en la página permite que los usuarios encuentren coincidencias de texto en el cuerpo de texto actual. Los lectores, visores y exploradores de documentos son las aplicaciones que ofrecen con mayor frecuencia Buscar en la página.
 
-## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>Recomendaciones
+## Recomendaciones
 
 
 -   Coloca una barra de comandos en la aplicación con la funcionalidad de buscar en la página para permitir que los usuarios puedan buscar texto en la página. Para obtener más detalles de colocación, consulta la sección Ejemplos.
@@ -152,63 +163,61 @@ Buscar en la página permite que los usuarios encuentren coincidencias de texto 
 
         -   Cuadro de entrada
         -   Botones Anterior y Siguiente
-        -   Un contador de coincidencias - Cerrar (solo escritorio) - La vista debe resaltar coincidencias y desplazarse para mostrar la siguiente coincidencia en pantalla.
-        -   Los usuarios pueden moverse rápidamente por el documento mediante el uso de los botones **Anterior** y **Siguiente**, y mediante el uso de las barras de desplazamiento o la manipulación directa con la funcionalidad táctil.
+        -   Un contador de coincidencias
+        -   Cerrar (solo escritorio)
+    -   La vista debe resaltar coincidencias y desplazarse para mostrar la siguiente coincidencia en pantalla. Los usuarios pueden moverse rápidamente por el documento mediante el uso de los botones **Anterior** y **Siguiente**, y mediante el uso de las barras de desplazamiento o la manipulación directa con la funcionalidad táctil.
+
     -   La funcionalidad de buscar y reemplazar debe funcionar conjuntamente con la funcionalidad básica de buscar en la página. Para las aplicaciones que tienen buscar y reemplazar, asegúrate de que buscar en la página no interfiera con dicha funcionalidad.
 
-    -   Incluye un contador de coincidencias para indicar al usuario cuántas coincidencias de texto hay en la página. Habilita los métodos abreviados de teclado (CTRL+F).
+-   Incluye un contador de coincidencias para indicar al usuario cuántas coincidencias de texto hay en la página.
+-   Habilita los métodos abreviados de teclado (CTRL+F).
 
--   Ejemplos
--   Proporciona una manera sencilla de acceder a la función de búsqueda en la página.
-
-## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>En este ejemplo de una interfaz de usuario móvil, "Buscar en la página" aparece después de dos comandos "Agregar a", en un menú desplegable:
+## Ejemplos
 
 
-Ejemplo de Buscar en la página 1 Después de seleccionar Buscar en la página, el usuario escribe un término de búsqueda.
+Proporciona una manera sencilla de acceder a la función de búsqueda en la página. En este ejemplo de una interfaz de usuario móvil, "Buscar en la página" aparece después de dos comandos "Agregar a", en un menú desplegable:
 
-![Pueden aparecer sugerencias de texto mientras se escribe el término de búsqueda:](images/findinpage-01.png)
+![Ejemplo de Buscar en la página 1](images/findinpage-01.png)
 
  
 
-Ejemplo de Buscar en la página 2 Si no hay una coincidencia de texto en la búsqueda, debería aparecer en el cuadro de texto una cadena del tipo "No hay resultados":
+Después de seleccionar Buscar en la página, el usuario escribe un término de búsqueda. Pueden aparecer sugerencias de texto mientras se escribe el término de búsqueda:
 
-![Ejemplo de Buscar en la página 3](images/findinpage-02.png)
+![Ejemplo de Buscar en la página 2](images/findinpage-02.png)
+
+ 
+
+Si no hay una coincidencia de texto en la búsqueda, debería aparecer en el cuadro de texto una cadena del tipo "No hay resultados":
+
+![Ejemplo de Buscar en la página 3](images/findinpage-03.png)
 
  
 
 Si hay coincidencia de texto en la búsqueda, el primer término debería resaltarse en un color distinto y las coincidencias posteriores en un tono más sutil de la misma paleta de colores, como se muestra en este ejemplo:
 
-![Ejemplo de Buscar en la página 4](images/findinpage-03.png)
+![Ejemplo de Buscar en la página 4](images/findinpage-04.png)
 
  
 
 Buscar en la página tiene un contador de coincidencias:
 
-![Ejemplo de contador de coincidencias de Buscar en la página](images/findinpage-04.png)
-
- 
-
-Implementar la búsqueda en la página
-
-![Los lectores, visores y exploradores de documentos son las aplicaciones que ofrecen con mayor frecuencia Buscar en la página y permiten al usuario disfrutar de una experiencia de lectura o visualización a pantalla completa.](images/findinpage-counter.png)
+![Ejemplo de contador de coincidencias de Buscar en la página](images/findinpage-counter.png)
 
 
 
 
-## <span id="implementing_find_in_page"></span><span id="IMPLEMENTING_FIND_IN_PAGE"></span>
+## **Implementar la búsqueda en la página**
 
-**La funcionalidad Buscar en la página es secundaria y debe ubicarse en una barra de comandos.**
+-   Los lectores, visores y exploradores de documentos son las aplicaciones que ofrecen con mayor frecuencia Buscar en la página y permiten al usuario disfrutar de una experiencia de lectura o visualización a pantalla completa.
+-   La funcionalidad Buscar en la página es secundaria y debe ubicarse en una barra de comandos.
 
--   Para obtener más información sobre cómo agregar comandos a la barra de comandos, consulta [Barra de comandos](app-bars.md).
--   Artículos relacionados
-
-Cuadro de sugerencias automáticas
+Para obtener más información sobre cómo agregar comandos a la barra de comandos, consulta [Barra de comandos](app-bars.md).
 
 
 
-## <span id="related_topics"></span>Related articles
+## Artículos relacionados
 
-* [**Auto-suggest box**](auto-suggest-box.md)
+* [**Cuadro de sugerencias automáticas**](auto-suggest-box.md)
 
 
  
@@ -217,10 +226,6 @@ Cuadro de sugerencias automáticas
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

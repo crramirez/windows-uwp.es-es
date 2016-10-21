@@ -1,16 +1,20 @@
 ---
-author: martinekuan
+author: GrantMeStrength
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: "Preparación"
 description: "Estar preparado es más fácil de lo que puedas imaginar. Sigue estas instrucciones y empieza a crear aplicaciones para la Plataforma universal de Windows (UWP) para Windows 10."
 translationtype: Human Translation
-ms.sourcegitcommit: a47dc36129daaed02cb181dde625d440fa4cf6e4
-ms.openlocfilehash: f20707cab08998d86142f7d657b51faa78d9a777
+ms.sourcegitcommit: 75c036fc934a8071f17a8690a22a03e10c4fe1d4
+ms.openlocfilehash: 729c71fbe0db202bd4f5ce15bea87caa973adf80
 
 ---
-# Preparación
+# Prepárate
 
-Estar preparado es más fácil de lo que puedas imaginar. Sigue estas instrucciones y empieza a crear aplicaciones para la Plataforma universal de Windows (UWP) para Windows 10.
+Empezar es más fácil de lo que puedas imaginar. Sigue estas instrucciones y empieza a crear aplicaciones para la Plataforma universal de Windows (UWP) para Windows 10.
+
+> [!NOTE]
+> ¿Eres usuario de Mac? ¿O quizás aún no quieres instalar nada en tu PC? Prueba las [máquinas virtuales basadas en web configuradas para los retos de codificación de Build2016](https://developer.microsoft.com/windows/projects/events/build2016/all/codingchallenges).
+
 
 ## 1. Obtener Windows 10
 
@@ -21,6 +25,8 @@ Para desarrollar aplicaciones para UWP, necesitas la versión más reciente de W
 ¿Eres suscriptor de MSDN? Puedes obtener las descargas de la imagen ISO aquí:
 
 -   Obtener Windows 10 de [MSDN Subscriber Downloads (Área de descarga para suscriptores de MSDN)](http://go.microsoft.com/fwlink/p/?LinkId=266384)
+
+
 
 ## 2. Descargar o actualizar Visual Studio
 
@@ -50,8 +56,7 @@ Puedes empezar a desarrollar aplicaciones ahora, pero para poder enviarlas a la 
 
 Cuando hayas instalado las herramientas y hayas obtenido una licencia de desarrollador o una cuenta de desarrollador, utiliza nuestros tutoriales para crear tu primera aplicación:
 
--   
-            Tutoriales para [Crear tu primera aplicación](your-first-app.md)
+-   Tutoriales para [Crear tu primera aplicación](your-first-app.md)
 
 ## ¿Qué otras herramientas y descargas necesitas?
 
@@ -60,7 +65,6 @@ Para obtener la lista completa de herramientas y descargas, consulta la página 
 
 
 
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

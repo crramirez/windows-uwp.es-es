@@ -3,8 +3,9 @@ author: jwmsft
 description: "Clases de configuración de plantillas"
 title: "Clases de configuración de plantillas"
 ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
+translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 1ae6ca45808eae8943f471cceaf78fc5e8d81410
+ms.openlocfilehash: 8a52535e54a321bab6b34b6a73c53222e88d2151
 
 ---
 
@@ -18,47 +19,20 @@ Damos por hecho que sabes agregar controles a la interfaz de usuario, establecer
 
 ## Escenario para las clases **TemplateSettings**
 
-
-            Las clases **TemplateSettings** proporcionan un conjunto de propiedades que se usan al definir una nueva plantilla de control para un control. Las propiedades tienen valores como medidas de píxel para el tamaño de determinadas partes de los elementos de la interfaz de usuario. A veces, los valores son valores calculados que provienen de la lógica de control que normalmente no es de fácil reemplazo ni acceso. Algunas de las propiedades están pensadas como valores **De origen** y **De destino** que controlan las transiciones y animaciones de los elementos y, por ende, las propiedades **TemplateSettings** correspondientes vienen en pares.
+Las clases **TemplateSettings** proporcionan un conjunto de propiedades que se usan al definir una nueva plantilla de control para un control. Las propiedades tienen valores como medidas de píxel para el tamaño de determinadas partes de los elementos de la interfaz de usuario. A veces, los valores son valores calculados que provienen de la lógica de control que normalmente no es de fácil reemplazo ni acceso. Algunas de las propiedades están pensadas como valores **De origen** y **De destino** que controlan las transiciones y animaciones de los elementos y, por ende, las propiedades **TemplateSettings** correspondientes vienen en pares.
 
 Existen varias clases **TemplateSettings**. Todas ellas están en el espacio de nombres [**Windows.UI.Xaml.Controls.Primitives**](https://msdn.microsoft.com/library/windows/apps/br209818). A continuación, se ofrece una lista de las clases y un vínculo a la propiedad **TemplateSettings** del control correspondiente. Esta propiedad **TemplateSettings** define el modo de acceso a los valores **TemplateSettings** para el control y puede establecer enlaces de plantilla a sus propiedades:
 
--   
-            [
-              **ComboBoxTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/br227752): valor de [**ComboBox.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209364)
--   
-            [
-              **GridViewItemTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/hh738499): valor de [**GridViewItem.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh738503)
--   
-            [
-              **ListViewItemTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701948): valor de [**ListViewItem.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br242923)
--   
-            [
-              **ProgressBarTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/br227856): valor de [**ProgressBar.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227537)
--   
-            [
-              **ProgressRingTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/hh702248): valor de [**ProgressRing.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh702581)
--   
-            [
-              **SettingsFlyoutTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298721): valor de [**SettingsFlyout.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/dn252826)
--   
-            [
-              **ToggleSwitchTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/br209804): valor de [**ToggleSwitch.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209731)
--   
-            [
-              **ToolTipTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/br209813): valor de [**ToolTip.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227629)
+-   [**ComboBoxTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227752): valor de [**ComboBox.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209364)
+-   [**GridViewItemTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh738499): valor de [**GridViewItem.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh738503)
+-   [**ListViewItemTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh701948): valor de [**ListViewItem.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br242923)
+-   [**ProgressBarTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227856): valor de [**ProgressBar.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227537)
+-   [**ProgressRingTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh702248): valor de [**ProgressRing.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh702581)
+-   [**SettingsFlyoutTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/dn298721): valor de [**SettingsFlyout.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/dn252826)
+-   [**ToggleSwitchTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209804): valor de [**ToggleSwitch.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209731)
+-   [**ToolTipTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209813): valor de [**ToolTip.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227629)
 
-
-            Las propiedades **TemplateSettings** siempre están pensadas para usarse en XAML, no para código. Se trata de subpropiedades de solo lectura de una propiedad **TemplateSettings** de solo lectura de un control principal. Para un escenario avanzado de control personalizado, en el que creas una nueva clase basada en [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) que, por consiguiente, puede influir en la lógica de control, considera la posibilidad de definir una propiedad **TemplateSettings** personalizada en el control para comunicar información que podría resultar útil a cualquier persona que esté volviendo a generar plantillas del control. Dado que esa propiedad es un valor de solo lectura, define una nueva clase **TemplateSettings** relacionada con tu control que tiene propiedades de solo lectura para cada uno de los elementos de información que son relevantes para las medidas de plantilla, posicionamiento de animación, etc. y asigna a los llamadores la instancia en tiempo de ejecución de la clase que se inicializa con la lógica de control. 
-            Las clases **TemplateSettings** se derivan de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356), de modo que las propiedades pueden usar el sistema de propiedades de dependencia de devoluciones de llamada de cambio de propiedad. Pero los identificadores de propiedades de dependencia para las propiedades no se exponen como API pública, porque las propiedades **TemplateSettings** deben ser de solo lectura para los llamadores.
+Las propiedades **TemplateSettings** están pensadas para usarlas siempre en XAML, no para el código. Se trata de subpropiedades de solo lectura de una propiedad **TemplateSettings** de solo lectura de un control principal. Para un escenario avanzado de control personalizado, en el que creas una nueva clase basada en [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) que, por consiguiente, puede influir en la lógica de control, considera la posibilidad de definir una propiedad **TemplateSettings** personalizada en el control para comunicar información que podría resultar útil a cualquier persona que esté volviendo a generar plantillas del control. Dado que esa propiedad es un valor de solo lectura, define una nueva clase **TemplateSettings** relacionada con tu control que tiene propiedades de solo lectura para cada uno de los elementos de información que son relevantes para las medidas de plantilla, posicionamiento de animación, etc. y asigna a los llamadores la instancia en tiempo de ejecución de la clase que se inicializa con la lógica de control. Las clases **TemplateSettings** se derivan de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356), de modo que las propiedades pueden usar el sistema de propiedades de dependencia de devoluciones de llamada de cambio de propiedad. Pero los identificadores de propiedades de dependencia para las propiedades no se exponen como API pública, porque las propiedades **TemplateSettings** deben ser de solo lectura para los llamadores.
 
 ## Cómo usar **TemplateSettings** en una plantilla de control
 
@@ -128,6 +102,6 @@ Cuando uses valores **TemplateSettings** como parte de la plantilla de control, 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

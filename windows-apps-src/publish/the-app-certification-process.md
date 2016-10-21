@@ -3,15 +3,16 @@ author: jnHs
 Description: "Cuando termines de crear el envío de la aplicación y hagas clic en Enviar a la Tienda, entra en el paso de certificación."
 title: "Proceso de certificación de la aplicación"
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
-ms.sourcegitcommit: 4ea19e85d1e151dd1e03d5acf085c186613be35f
-ms.openlocfilehash: 579d1ef306123f765e19fc9ab3b02c064b690aee
+translationtype: Human Translation
+ms.sourcegitcommit: 865d71374cf7d678804ce16548edd819faafed33
+ms.openlocfilehash: 07b3631ccc875222b8d2ea30a2b69e2995a09e23
 
 ---
 
 # Proceso de certificación de la aplicación
 
 
-Cuando termines de crear el envío de la aplicación y hagas clic en **Enviar a la Tienda**, entra en el paso de certificación. Normalmente, este proceso se completa en unas horas, aunque en algunos casos puede tardar hasta un día laborable. Una vez que el envío haya superado la certificación, puede costar hasta 16horas que los clientes vean la aplicación (o las actualizaciones a una aplicación publicada anteriormente) listada en la tienda. Verás una notificación cuando el envío esté publicado y disponible para los clientes, y el estado de la aplicación en el panel será **En la Tienda**.
+Cuando termines de crear el envío de la aplicación y hagas clic en **Enviar a la Tienda**, entra en el paso de certificación. Normalmente este proceso se completa en unas horas, aunque en algunos casos puede tardar hasta tres días laborables. Una vez que se haya realizado la certificación del envío, pueden pasar hasta 16 horas antes de que los clientes vean la descripción de la aplicación (o las actualizaciones de una aplicación publicada anteriormente) en la tienda. Verás una notificación cuando el envío esté publicado y disponible para los clientes, y el estado de la aplicación en el panel será **En la Tienda**.
 
 ## Preprocesamiento
 
@@ -21,12 +22,9 @@ Después de cargar los paquetes de la aplicación correctamente y enviar la apli
 
 Durante esta fase, se llevan a cabo varias pruebas:
 
--   
-            **Pruebas de seguridad:** la primera prueba comprueba si hay virus y malware en los paquetes de la aplicación. Si la aplicación no pasa esta prueba, necesitarás comprobar el sistema de desarrollo ejecutando el software antivirus más reciente y luego recompilar el paquete de la aplicación en un sistema limpio.
--   
-            **Pruebas de cumplimiento técnico:** el cumplimiento de los requisitos técnicos se prueba con el Kit para la certificación de aplicaciones en Windows. (Debes asegurarte siempre de [probar tu aplicación con el Kit para la certificación de aplicaciones en Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviarla a la Tienda).
--   
-            **Cumplimiento de requisitos de contenido:** el tiempo que tarda depende de la complejidad de la aplicación, la cantidad de contenido visual que tenga y la cantidad de aplicaciones que se hayan enviado recientemente. Asegúrate de proporcionar toda la información que los evaluadores deben conocer en la página [Notas para la certificación](notes-for-certification.md).
+-   **Pruebas de seguridad:** la primera prueba comprueba si hay virus y malware en los paquetes de la aplicación. Si la aplicación no pasa esta prueba, necesitarás comprobar el sistema de desarrollo ejecutando el software antivirus más reciente y luego recompilar el paquete de la aplicación en un sistema limpio.
+-   **Pruebas de cumplimiento técnico:** el cumplimiento de los requisitos técnicos se prueba con el Kit para la certificación de aplicaciones en Windows. (Debes asegurarte siempre de [probar tu aplicación con el Kit para la certificación de aplicaciones en Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviarla a la Tienda).
+-   **Cumplimiento de requisitos de contenido:** el tiempo que tarda depende de la complejidad de la aplicación, la cantidad de contenido visual que tenga y la cantidad de aplicaciones que se hayan enviado recientemente. Asegúrate de proporcionar toda la información que los evaluadores deben conocer en la página [Notas para la certificación](notes-for-certification.md).
 
 Una vez completado el proceso de certificación, obtendrás un informe donde se indicará si la aplicación pasó o no la certificación. Si no la pasó, el informe indicará en qué prueba produjo errores o qué [directiva](https://msdn.microsoft.com/library/windows/apps/dn764944) no se cumplió. Después de solucionar el problema, puedes crear un nuevo envío de la aplicación para volver a iniciar el proceso de certificación.
 
@@ -44,21 +42,20 @@ Mientras la aplicación se encuentra en la fase de publicación, el vínculo **M
 
 Tras completar los pasos anteriores, el estado del envío cambiará de **Publicación** a **En la Tienda**. A continuación, tu envío estará disponible en la Tienda Windows para que lo descarguen los clientes (a menos que hayas elegido otra opción de [Distribución y visibilidad](set-app-pricing-and-availability.md#distribution-and-visibility)). 
 
-
-            **Nota** También se realizan comprobaciones puntuales de aplicaciones después de que se hayan publicado para poder identificar posibles problemas y garantizar que la aplicación cumple con todas las [directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944) Si encontramos algún problema, se te notificará al respecto y sobre cómo solucionarlo, si corresponde, o bien sobre si la aplicación se ha quitado de la Tienda.
-
- 
+**Nota** También se realizan comprobaciones puntuales de aplicaciones después de que se hayan publicado, para poder identificar posibles problemas y garantizar que la aplicación cumple con todas las [directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944). Si encontramos algún problema, se te notificará al respecto y sobre cómo solucionarlo, si corresponde, o bien sobre si la aplicación se ha quitado de la Tienda.
 
  
 
  
 
+ 
 
 
 
 
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

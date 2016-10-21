@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
 description: Tareas iniciales con controles habituales
 title: Tareas iniciales con controles habituales
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9d67cf02f80b5aa9d49fe3a0c5eb47a89419991a
+ms.openlocfilehash: 2cd4b7344074c795f14a56cddbe7807c9ffefafe
 
 ---
 
@@ -47,8 +48,7 @@ Los controles de UWP son inteligentes en el sentido de que pueden detectar el ti
 
 Para ver aún más controles, consulta [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406).
 
-
-            **Nota:**  Para ver la lista de controles para aplicaciones de la Tienda Windows con JavaScript y HTML, consulta [Lista de controles](https://msdn.microsoft.com/library/windows/apps/hh465453).
+**Nota:** Para ver la lista de controles para aplicaciones de la Tienda Windows con JavaScript y HTML, consulta [Lista de controles](https://msdn.microsoft.com/library/windows/apps/hh465453).
 
 ### Paso siguiente
 
@@ -62,6 +62,6 @@ Para ver aún más controles, consulta [Lista de controles](https://msdn.microso
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

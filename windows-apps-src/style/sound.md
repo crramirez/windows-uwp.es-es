@@ -6,11 +6,10 @@ title: Sonido
 template: detail.hbs
 ms.assetid: 9fa77494-2525-4491-8f26-dc733b6a18f6
 translationtype: Human Translation
-ms.sourcegitcommit: 7bb23094d569bb29c7227ccd628abd0989b575a4
-ms.openlocfilehash: e6dab48935cd5345ee734e6fda7e6fd4d333bb90
+ms.sourcegitcommit: e240197b4cc233b9fc1ecaa4a1835c4a4dcd3bf8
+ms.openlocfilehash: 91021d76b180e2bc26c0d502098e0a0b21f0219f
 
 ---
-[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa ni implícita, con respecto a la información provista aquí]. *En este artículo se proporciona una vista previa de las características que aún no están disponibles.*
 
 # Sonido
 
@@ -24,7 +23,7 @@ La **ElementSoundPlayer** es un sistema de sonido integrado dentro de XAML y, cu
 ```C#
 ElementSoundPlayer.State = ElementSoundPlayerState.On;
 ```
-**ElementSoundPlayer** tiene tres estados distintos: **Activado** **Desactivado** y **Automático**.
+La **ElementSoundPlayer** tiene tres estados distintos: **Activado** **Desactivado** y **Automático**.
 
 Si se establece en **Desactivado**, independientemente de dónde se ejecute la aplicación, el sonido no se reproducirá nunca. Si se establece en **Activado**, los sonidos de tu aplicación se reproducirán en todas las plataformas.
 
@@ -148,6 +147,6 @@ La finalidad de esta característica de recorrido consiste en evitar que los son
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

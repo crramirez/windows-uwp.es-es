@@ -5,8 +5,9 @@ ms.assetid: 2091883C-5D0C-44ED-936A-709022926A42
 title: Interfaces y patrones de control
 label: Control patterns and interfaces
 template: detail.hbs
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 9f38c3bd26ef7b409d4c743abf25a5b0a6455f20
+translationtype: Human Translation
+ms.sourcegitcommit: 74e5af4c3eb5a2e17c95afce156474b613e966c5
+ms.openlocfilehash: d2ae98f95538c014ef256f5d4a400aabb36c3118
 
 ---
 
@@ -31,7 +32,7 @@ Al implementar un patrón de control, debes consultar también la documentación
 | **ExpandCollapse** | [**IExpandCollapseProvider**](https://msdn.microsoft.com/library/windows/apps/BR242568) | Se usa para admitir controles que se expanden visualmente para mostrar más contenido y se reducen para ocultar el contenido. |
 | **Grid** | [**IGridProvider**](https://msdn.microsoft.com/library/windows/apps/BR242578) | Se usa para los controles que admiten funcionalidad de cuadrícula, como la variación de tamaño y el desplazamiento a una celda especificada. Ten en cuenta que la cuadrícula en sí no implementa este patrón, porque proporciona diseño pero no es un control |
 | **GridItem** | [**IGridItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242572) | Se usa para controles que tienen celdas dentro de cuadrículas. |
-| **Invoke** | [**IInvokeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242582) | Se usa para los controles que se pueden invocar, como [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265). |
+| **Invoke** | [**IInvokeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242582) | Se usa para los controles que se pueden invocar, como  [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265). |
 | **ItemContainer** | [**IItemContainerProvider**](https://msdn.microsoft.com/library/windows/apps/BR242583) | Permite que las aplicaciones encuentren un elemento en un contenedor, como una lista virtualizada. |
 | **MultipleView** | [**IMultipleViewProvider**](https://msdn.microsoft.com/library/windows/apps/BR242585) | Se usa para los controles que pueden cambiar entre múltiples representaciones del mismo conjunto de información, datos o elementos secundarios. |
 | **ObjectModel** | [**IObjectModelProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251815) | Se usa para exponer un puntero al modelo de objetos subyacente de un documento. |
@@ -65,10 +66,10 @@ Al implementar un patrón de control, debes consultar también la documentación
 <span id="related_topics"/>
 ## Temas relacionados  
 * [Personalizar sistemas de automatización del mismo nivel](custom-automation-peers.md)
-* [Accesibilidad](accessibility.md)
+* [Accesibilidad](accessibility.md) 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

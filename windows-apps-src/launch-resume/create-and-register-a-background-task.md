@@ -1,19 +1,17 @@
 ---
 author: TylerMSFT
-title: Crear y registrar una tarea en segundo plano
+title: "Creación y registro de una tarea en segundo plano que se ejecuta en un proceso independiente"
 description: "Crea una tarea en segundo plano y regístrala para ejecutarla cuando tu aplicación no esté en primer plano."
 ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
 translationtype: Human Translation
-ms.sourcegitcommit: 579547b7bd2ee76390b8cac66855be4a9dce008e
-ms.openlocfilehash: e8da193f96709bdd87bd6a008eb5885cc5c819fd
+ms.sourcegitcommit: 95c34f70e9610907897cfe9a2bf82aaac408e486
+ms.openlocfilehash: 4eb67f8f63134ab33df79b0b98b252b2b27b2dda
 
 ---
 
-# Crear y registrar una tarea en segundo plano
+# Creación y registro de una tarea en segundo plano que se ejecuta en un proceso independiente
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -21,10 +19,12 @@ ms.openlocfilehash: e8da193f96709bdd87bd6a008eb5885cc5c819fd
 -   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
 -   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
 
-Crea una tarea en segundo plano y regístrala para ejecutarla cuando tu aplicación no esté en primer plano.
+Crea una tarea en segundo plano y regístrala para ejecutarla cuando tu aplicación no esté en primer plano. Este tema muestra cómo crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente al proceso en primer plano. Para efectuar un trabajo de fondo directamente en la aplicación en primer plano, consulta [Creación y registro de una tarea en segundo plano de un solo proceso](create-and-register-a-singleprocess-background-task.md).
 
-## Crear la clase de tareas en segundo plano
+> [!Note]
+> Si usas una tarea en segundo plano para reproducir contenido multimedia en segundo plano, consulta [Reproducción de elementos multimedia en segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio) para obtener información sobre las mejoras en Windows 10, versión 1607, que lo hacen mucho más fácil.
 
+## Creación de la clase de tareas en segundo plano
 
 Puedes ejecutar código en segundo plano escribiendo clases que implementen la interfaz [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794). Este código se ejecutará cuando se desencadene un evento específico usando, por ejemplo, [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) o [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517).
 
@@ -110,9 +110,10 @@ En estos pasos te mostramos cómo escribir una nueva clase que implemente la int
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
-    >     BackgroundTaskDeferral _deferral = taskInstance.GetDeferral(); // Note: define at class scope
+    >     BackgroundTaskDeferral _deferral; // Note: defined at class scope so we can mark it complete inside the OnCancel() callback if we choose to support cancellation
     >     public async void Run(IBackgroundTaskInstance taskInstance)
     >     {
+    >         _deferral = taskInstance.GetDeferral()
     >         //
     >         // TODO: Insert code to start one or more asynchronous methods using the
     >         //       await keyword, for example:
@@ -124,7 +125,7 @@ En estos pasos te mostramos cómo escribir una nueva clase que implemente la int
     >     }
     > ```
     > ```cpp
-    >     BackgroundTaskDeferral^ deferral = taskInstance->GetDeferral(); // Note: define at class scope
+    >     BackgroundTaskDeferral^ deferral = taskInstance->GetDeferral(); // Note: defined at class scope so we can mark it complete inside the OnCancel() callback if we choose to support cancellation
     >     void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
     >     {
     >         //
@@ -150,7 +151,6 @@ Los siguientes pasos se completan en una de tus clases de aplicaciones (por ejem
 
 > [!NOTE]
 > También puedes crear una función dedicada al registro de tareas en segundo plano. Consulta [Registrar una tarea en segundo plano](register-a-background-task.md). En ese caso, en lugar de usar los siguientes 3 pasos, simplemente puedes construir el desencadenador y proporcionar la función de registro junto con el nombre de la tarea, el punto de entrada de la tarea y (de forma opcional) una condición.
-
 
 ## Registrar la tarea en segundo plano por ejecutar
 
@@ -242,10 +242,11 @@ Los siguientes pasos se completan en una de tus clases de aplicaciones (por ejem
 > [!NOTE]
 > Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquier tipo de desencadenador en segundo plano.
 
-Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
+Para garantizar que tu aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, usa el desencadenador **ServicingComplete** (consulta [SystemTriggerType](https://msdn.microsoft.com/library/windows/apps/br224839)) para realizar los cambios de configuración posteriores a la actualización como la migración de la base de datos de la aplicación y el registro de tareas en segundo plano. Es recomendable anular el registro de tareas en segundo plano asociadas con la versión anterior de la aplicación (consulta [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471)) y registrar las tareas en segundo plano para la nueva versión de la aplicación (consulta [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)) en este momento.
+
+Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
 
 ## Controlar la finalización de tareas en segundo plano mediante controladores de eventos
-
 
 Debes registrar un método con [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781), de manera que tu aplicación pueda obtener resultados de la tarea en segundo plano. Cuando se inicie o reanude la aplicación, se llamará al método mark si la tarea en segundo plano se ha completado desde la última vez que la aplicación estuvo en primer plano. (Se llamará de forma inmediata al método OnCompleted si la tarea en segundo plano se completa mientras tu aplicación se encuentra actualmente en primer plano).
 
@@ -275,7 +276,6 @@ Debes registrar un método con [**BackgroundTaskCompletedEventHandler**](https:/
 
     > [!NOTE]
     > Las actualizaciones de la interfaz de usuario se deberían realizar de forma asincrónica, para evitar retener el subproceso de interfaz de usuario. Para ver un ejemplo, consulta el método UpdateUI en la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
-
 
 
 2.  Vuelve al punto en el que registraste la tarea en segundo plano. Después de la línea de código, agrega un nuevo objeto [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781). Proporciona tu método OnCompleted como parámetro para el constructor **BackgroundTaskCompletedEventHandler**.
@@ -315,7 +315,6 @@ Antes de que tu aplicación pueda ejecutar tareas en segundo plano, debes declar
 
 ## Resumen y pasos siguientes
 
-
 Ahora deberías conocer los conceptos básicos de cómo escribir una clase de tareas en segundo plano, cómo registrar la tarea en segundo plano desde dentro de tu aplicación y cómo hacer que tu aplicación reconozca cuándo se ha completado la tarea en segundo plano. También deberías comprender cómo actualizar el manifiesto de la aplicación para que la aplicación pueda registrar correctamente la tarea en segundo plano.
 
 > [!NOTE]
@@ -330,13 +329,15 @@ Consulta los siguientes temas relacionados para obtener referencia de las API, u
 
 **Temas con instrucciones detalladas sobre las tareas en segundo plano**
 
-* [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md)
-* [Registrar una tarea en segundo plano](register-a-background-task.md)
+* [Respuesta ante eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md)
+* [Registro de una tarea en segundo plano](register-a-background-task.md)
 * [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md)
 * [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
-* [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
-* [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
+* [Supervisión del progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
+* [Ejecución de una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
+* [Creación y registro de una tarea en segundo plano de proceso único](create-and-register-a-singleprocess-background-task.md).
+[Conversión de una tarea en segundo plano multiproceso en una tarea en segundo plano de proceso único](convert-multiple-process-background-task.md)  
 
 **Guía de tareas en segundo plano**
 
@@ -350,6 +351,6 @@ Consulta los siguientes temas relacionados para obtener referencia de las API, u
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

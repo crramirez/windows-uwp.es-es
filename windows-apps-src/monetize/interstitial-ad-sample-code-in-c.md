@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 7a16b0ca-6b8e-4ade-9853-85690e06bda6
 description: Aprende a iniciar un anuncio intersticial con C#.
 title: "Código de ejemplo de anuncios intersticiales en C#"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: e83730c60eada273aee4f3bca4ff28cf6feccbf8
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 5969bfacd34bcfab5f1bebd2cfbade4fd16c5a39
 
 
 ---
@@ -12,7 +13,7 @@ ms.openlocfilehash: e83730c60eada273aee4f3bca4ff28cf6feccbf8
 # Código de ejemplo de anuncios intersticiales en C\# #  
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 En este tema se muestra cómo iniciar un anuncio intersticial con C#. Para obtener instrucciones paso a paso que ilustran cómo configurar el proyecto para usar este código, consulta [Anuncios intersticiales](interstitial-ads.md). Para obtener un proyecto de ejemplo completo que demuestra cómo agregar anuncios intersticiales en vídeo a una aplicación XAML con C#, consulta las [muestras de publicidad en GitHub](http://aka.ms/githubads).
 
@@ -105,6 +106,6 @@ namespace BasicCSharpInterstitialUWP
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

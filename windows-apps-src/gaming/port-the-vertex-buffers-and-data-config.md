@@ -3,15 +3,16 @@ author: mtoepke
 title: "Migrar datos y búferes de vértices"
 description: "En este paso, definirás los búferes de vértices, que contendrán las mallas, y los búferes de índices, que permitirán a los sombreadores recorrer los vértices en un orden especificado."
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9692b33303099f9d1193b93ab458a19a5d95abe3
+ms.openlocfilehash: ee8b3f693e40d9c0fba679a44ebcd4986d06d7ac
 
 ---
 
 # Portar datos y búferes de vértices
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -151,8 +152,7 @@ Esta descripción de entrada define un vértice como un par de vectores de 3 coo
 
 Para obtener una lista de todos los tipos de formato posibles, consulta [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059).
 
-Mediante el diseño de entrada por vértice definido, crearás el objeto de diseño. En el siguiente código, escribes en **m\_inputLayout** una variable de tipo **ComPtr** (que apunta a un objeto de tipo [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575)). 
-            **fileData** contiene el objeto de sombreador de vértices compilado del paso anterior, [Portar los sombreadores](port-the-shader-config.md).
+Mediante el diseño de entrada por vértice definido, crearás el objeto de diseño. En el siguiente código, escribes en **m\_inputLayout** una variable de tipo **ComPtr** (que apunta a un objeto de tipo [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575)). **fileData** contiene el objeto de sombreador de vértices compilado del paso anterior, [Portar los sombreadores](port-the-shader-config.md).
 
 Direct3D: crear el diseño de entrada utilizado por el búfer de vértices
 
@@ -318,6 +318,6 @@ Cuando estructures tu contenido de Direct3D, separa el código que llama a los m
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

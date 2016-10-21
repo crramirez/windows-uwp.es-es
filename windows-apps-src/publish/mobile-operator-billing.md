@@ -4,8 +4,8 @@ Description: "En la TiendaWindows se ofrece la facturación de operador de telef
 title: "Facturación de operadores de telefonía móvil"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 translationtype: Human Translation
-ms.sourcegitcommit: 80a20f4f87ce2ef40ce4ff7c6551d74ac375da1c
-ms.openlocfilehash: bd70a3c5990909351f04ca4200f4ea522989d1e9
+ms.sourcegitcommit: 3afac16fb79262dd6a75cd44804747d173e60edf
+ms.openlocfilehash: 114783cb93d1d49eb1b2cd0d5218a35318a02df0
 
 ---
 
@@ -14,8 +14,7 @@ ms.openlocfilehash: bd70a3c5990909351f04ca4200f4ea522989d1e9
 
 En la TiendaWindows se ofrece la facturación de operador de telefonía móvil como método de pago para operadores de telefonía móviles que admiten esta funcionalidad. Si el operador de telefonía móvil de un usuario admite esta capacidad, el cliente puede hacer compras en la Tienda con su cuenta móvil.
 
-> 
-            **Nota**  Si el operador de telefonía móvil de un cliente ofrece facturación de operadores de telefonía móvil, pero el cliente no tiene esta opción en su dispositivo, consulta estos [pasos para solucionar problemas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
+> **Nota**  Si el operador de telefonía móvil de un cliente ofrece facturación de operadores de telefonía móvil, pero el cliente no tiene esta opción en su dispositivo, consulta estos [pasos de solución de problemas](http://go.microsoft.com/fwlink/p/?LinkId=523993).
 
  
 
@@ -28,14 +27,16 @@ Windows10 presenta una nueva implementación de facturación de operador de tele
 
 Actualmente, los siguientes operadores de telefonía móvil admiten la implementación de la facturación de operador de telefonía móvil de Windows10.
 
-| País o región | Operadores de telefonía móvil |
-|----------------|------------------|
-| Finlandia        | DNA, Elisa       |
-| Alemania        | O2               |
-| Italia          | Wind             |
-| Noruega         | Telenor          |
-| Suiza    | Swisscom         |
-| Estados Unidos  | Sprint           |
+| País o región  | Operadores de telefonía móvil |
+|-----------------|------------------|
+| Finlandia         | DNA, Elisa       |
+| Alemania         | O2               |
+| Hungría         | Telenor          |
+| Italia           | Wind             |
+| Noruega          | Telenor          |
+| Suiza     | Swisscom         |
+| Estados Unidos   | Sprint           |
+| Reino Unido  | O2               |
 
  
 
@@ -51,10 +52,10 @@ Los siguientes operadores de telefonía móvil admiten la implementación hereda
 | Australia            | Telstra                                                            |
 | Austria              | A1 Telekom, T-Mobile                                               |
 | Baréin              | Zain, VIVA                                                         |
-| Bélgica              | BASE, Mobistar, Proximus                                                     |
+| Bélgica              | BASE, Mobistar, Proximus                                           |
 | Brasil               | Claro                                                              |
 | Bulgaria             | Telenor                                                            |
-| Canadá               | Fido, Rogers, Telus                                                |
+| Canadá               | Fido, Rogers                                                       |
 | Chile                | Claro                                                              |
 | China                | China Mobile                                                       |
 | Colombia             | Claro, Movistar                                                    |
@@ -71,26 +72,25 @@ Los siguientes operadores de telefonía móvil admiten la implementación hereda
 | Guatemala            | Claro                                                              |
 | Hungría              | Telenor, T-Mobile                                                  |
 | India                | Idea                                                               |
-| Indonesia            | Indosat, Telkomsel, XL Axiata, AXIS                                |
-| Irlanda              | O2, Vodafone, Three                                                      |
+| Indonesia            | Indosat, Telkomsel, XL Axiata, Hutchinson CP Telecommunications (HCPT)     |
+| Irlanda              | O2, Vodafone, Three                                                |
 | Italia                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
 | Jordania               | Zain, Umniah                                                       |
 | Kenia                | Safaricom                                                          |
-| Kuwait               | Zain, Viva                                                         |
+| Kuwait               | Zain, Viva, Ooredoo                                                |
 | Letonia               | Tele2                                                              |
 | Lituania            | Tele2                                                              |
 | Malasia             | DiGi                                                               |
-| México               | Iusacell, Telcel, Unefon, Movistar                                 |
+| México               | Iusacell, Telcel, Movistar                                         |
 | Países Bajos          | T-Mobile, Vodafone                                                 |
 | Noruega               | Telenor                                                            |
 | Omán                 | Ooredoo                                                            |
 | Pakistán             | Telenor                                                            |
 | Perú                 | Claro                                                              |
-| Filipinas          | Globe, Sun                                                         |
-| Polonia               | T-Mobile, Orange, Polkomtel (Plus)                                 |
-| Puerto Rico          | Claro                                                              |
+| Filipinas          | Globe, Sun, Smart Communications                                   |
+| Polonia               | T-Mobile, Orange, Polkomtel (Plus), Play                           |
 | Rumania              | Orange, Vodafone                                                   |
-| Rusia               | Beeline, MTS                                                          |
+| Rusia               | Beeline, MTS                                                       |
 | Arabia Saudí         | Zain                                                               |
 | Singapur            | M1, SingTel, StarHub                                               |
 | Eslovaquia             | T-Mobile                                                           |
@@ -99,9 +99,8 @@ Los siguientes operadores de telefonía móvil admiten la implementación hereda
 | España                | Movistar, Vodafone, Orange                                         |
 | Suecia               | Telenor, Tele2                                                     |
 | Suiza          | Swisscom                                                           |
-| Tailandia             | DTAC                                                               |
 | Emiratos Árabes Unidos | Etisalat, Du                                                       |
-| Reino Unido       | Everything Everywhere (T-Mobile), Telefonica (O2), Three, Vodafone |
+| Reino Unido       | Everything Everywhere (T-Mobile), Telefónica (O2), Three, Vodafone |
 | Estados Unidos        | AT&T, Sprint, T-Mobile, Verizon                                    |
 | Vietnam              | Viettel, Vietnamobile, Vinaphone, Mobifone                         |
 
@@ -119,6 +118,6 @@ Esta lista se actualizará periódicamente a medida que ampliemos nuestro soport
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

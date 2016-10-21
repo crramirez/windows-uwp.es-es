@@ -3,8 +3,9 @@ author: mtoepke
 title: "Tutorial - implementar volúmenes de sombra con búferes de profundidad en Direct3D 11"
 description: "En este tutorial se muestra cómo representar volúmenes de sombra mediante mapas de profundidad en Direct3D 11 en dispositivos de todos los niveles de característica de Direct3D."
 ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4bb1f5c71d83b2dc3271b5b2ceaa9a1156b00004
+ms.openlocfilehash: a323c299d588cdcff7b83d538a705d64207c96b2
 
 ---
 
@@ -89,6 +90,6 @@ Debes [preparar el entorno de desarrollo para el desarrollo de juegos de DirectX
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

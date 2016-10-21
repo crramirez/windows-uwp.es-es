@@ -7,7 +7,7 @@ label: TBD
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: ef71196ba0aefd4428daae70c54bcc9cbeaa56a2
-ms.openlocfilehash: ddb977999f4bdb24cef36c80659c78aba1ee5e98
+ms.openlocfilehash: 2c4bb601e1657bad8d1acad49f0591658b5b1d77
 
 ---
 # Patrón de diseño de lienzo activo
@@ -41,6 +41,6 @@ El patrón de lienzo activo consta de un área de contenido y un área de comand
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

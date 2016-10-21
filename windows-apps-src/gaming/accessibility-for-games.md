@@ -4,8 +4,8 @@ title: Hacer que los juegos sean accesibles
 description: "Aprende a hacer que los juegos sean accesibles. Usa el principio de diseño de juego inclusivo para lograr accesibilidad al juego."
 ms.assetid: f5ba1e60-0d7c-11e6-91ec-0002a5d5c51b
 translationtype: Human Translation
-ms.sourcegitcommit: 2492ff5c8b3ba0331e831234943a1db124f8fa4f
-ms.openlocfilehash: 2b78d767a7ac75e27f759c0eb06953e6158fb88b
+ms.sourcegitcommit: d61b834adb50e71ba67ea32662069f257c33a676
+ms.openlocfilehash: 185e79b96cdc64f3ead6c85d067659b9087ec082
 
 ---
 #  Hacer que los juegos sean accesibles
@@ -20,7 +20,7 @@ En su nivel más básico, la justificación comercial de la accesibilidad es sen
 
 Número de usuarios que pueden jugar al juego x Genialidad del juego = Ventas de juegos
 
-Si hicieras un juego increíble que es muy complicado o complejo y al que solo un puñado de personas pudiera jugar, limitarías tus ventas. Del mismo modo, si hiciste un juego al que no pueden jugar los usuarios con impedimentos cognitivos, sensoriales o físicos, pierdes ventas potenciales. Teniendo en cuenta que [el 19% de la población solo de los Estados Unidos tiene algún tipo de discapacidad](http://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), esto puede tener un gran impacto en los ingresos de tu título. 
+Si hicieras un juego increíble que es muy complicado o complejo y al que solo un puñado de personas pudiera jugar, limitarías tus ventas. De forma parecida, si crearas un juego al que no pudieran jugar los usuarios con impedimentos cognitivos, sensoriales o físicos, perderías ventas potenciales. Teniendo en cuenta que, por ejemplo, [el 19% de la gente en Estados Unidos tiene algún tipo de discapacidad](http://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), esto puede tener un gran impacto en los ingresos de tu título. 
 
 Para más justificaciones empresariales, consulta [Hacer que los videojuegos sean accesibles](https://msdn.microsoft.com/library/windows/desktop/ee415219).
 
@@ -89,7 +89,7 @@ El diseño inclusivo se centra en la creación de productos y servicios más acc
 
 Para tener éxito, los diseñadores de juegos de hoy necesitan pensar más allá de crear juegos divertidos para un público pequeño y dirigido. Los diseñadores de juegos tienen que tener en cuenta cómo sus decisiones de diseño afectan a la accesibilidad general del juego y a la jugabilidad de su público potencial general, incluidas las personas con discapacidades.
 
-Por tanto, los paradigmas tradicionales de diseño de juegos deben cambiar para aprovechar el concepto de diseño de juego inclusivo. El diseño de juego inclusivo significa algo más que el diseño de juego básico de crear diversión para un público de destino, es crear personajes adicionales o modificados para incluir una mayor variedad de personas. 
+Por tanto, los paradigmas tradicionales de diseño de juegos deben cambiar para aprovechar el concepto de diseño de juego inclusivo. El diseño de juego inclusivo significa que se intenta ir más allá del diseño de juego básico de crear diversión para un público de destino para crear personajes adicionales o modificados que incluyan una mayor variedad de jugadores. 
 
 Este paso adicional ayuda a identificar diferencias en el diseño original. Al identificar las diferencias, se puede iterar en el concepto de diseño original y mejorarlo. Cuando, durante el proceso de diseño del juego, te tomas tu tiempo para ser más inclusivo, el +juego final se vuelve más accesible.
 
@@ -136,10 +136,10 @@ La retina del ojo tiene dos tipos de células sensible a la luz: los conos para 
  
   + Usa combinaciones de colores que puedan diferenciar las personas con daltonismo al rojo o al verde:
   
-    * Colores que parecen similares: todos los tonos de rojo y verde incluidos marrón y naranja
-    * Colores que destacan: azul y amarillo
+    * Colores que parecen similares: Todos los tonos de rojo y verde, incluidos el marrón y el naranja
+    * Colores que destacan: Azul y amarillo
     
-  + No confíes únicamente en los colores para distinguir los objetos del juego: usa también formas y patrones
+  + No confíes únicamente en el color para distinguir los objetos del juego: usa también formas y patrones
   
 ### Subtítulos
 
@@ -217,6 +217,6 @@ Estos son algunos sitios externos que proporcionan información adicional sobre 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

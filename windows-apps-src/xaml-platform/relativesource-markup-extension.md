@@ -3,14 +3,15 @@ author: jwmsft
 description: "Proporciona un medio para especificar el origen de un enlace en términos de una relación relativa en el gráfico de objetos en tiempo de ejecución."
 title: "Extensión de marcado RelativeSource"
 ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
+translationtype: Human Translation
 ms.sourcegitcommit: ec4c9b87655425e82a1cb792d0acc6bee265e9d2
-ms.openlocfilehash: 9f0bb49e701806f8635d93fa495cdab6486a4ea3
+ms.openlocfilehash: b6af0ce865713ed0da39a87aa63799d3f89b7e89
 
 ---
 
 # Extensión de marcado {RelativeSource}
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Proporciona un medio para especificar el origen de un enlace en términos de una relación relativa en el gráfico de objetos en tiempo de ejecución.
 
@@ -41,8 +42,7 @@ Proporciona un medio para especificar el origen de un enlace en términos de una
 
 Un [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) puede establecer [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) como un atributo en un elemento de objeto **Binding** o como un componente en una [extensión de marcado {Binding}](binding-markup-extension.md). Por eso se muestran dos sintaxis de XAML diferentes.
 
-
-            **RelativeSource** es similar a [Extensión de marcado {Binding}](binding-markup-extension.md).  Se trata de una extensión de marcado capaz de devolver instancias de sí misma y que admite una construcción basada en cadenas que fundamentalmente pasa un argumento al constructor. En este caso, el argumento que se pasa es el valor [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209915).
+**RelativeSource** es similar a [Extensión de marcado {Binding}](binding-markup-extension.md).  Se trata de una extensión de marcado capaz de devolver instancias de sí misma y que admite una construcción basada en cadenas que fundamentalmente pasa un argumento al constructor. En este caso, el argumento que se pasa es el valor [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209915).
 
 El modo **Self** es útil para enlazar una propiedad de un elemento con otra propiedad del mismo elemento y es una variación en el enlace de [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828), pero no requiere la definición de nombres y que luego el elemento haga referencia a sí mismo. Si vinculas una propiedad de un elemento a otra propiedad del mismo elemento, las propiedades deben usar el mismo tipo de propiedad, o debes usar también un [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826) en el enlace para convertir los valores. Por ejemplo, podrías usar [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) como origen de [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) sin conversión, pero necesitarías un convertidor para usar [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) como un origen de [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br209006).
 
@@ -57,8 +57,7 @@ A continuación te mostramos un ejemplo. Este [**Rectangle**](https://msdn.micro
 
 Otro uso de `RelativeSource={RelativeSource Self}` es como una forma de establecer el [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) de un objeto en sí mismo.  Por ejemplo, esta técnica puede verse en algunos ejemplos del SDK, en los que la clase [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) se ha extendido con una propiedad personalizada que ya proporciona un modelo de vista listo para el enlace de sus propios datos, como, por ejemplo: `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
 
-
-            **Nota** El uso de XAML para **RelativeSource** solo muestra el uso para el cual fue creado: establecer un valor para [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) en XAML como parte de una expresión de enlace. Teóricamente, otros usos son posibles si se configura una propiedad donde el valor sea [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913).
+**Nota**  El uso de XAML para **RelativeSource** solo muestra el uso para el que fue creado: establecer un valor para [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) en XAML como parte de una expresión de enlace. Teóricamente, otros usos son posibles si se configura una propiedad donde el valor sea [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913).
 
 ## Temas relacionados
 
@@ -71,6 +70,6 @@ Otro uso de `RelativeSource={RelativeSource Self}` es como una forma de establec
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

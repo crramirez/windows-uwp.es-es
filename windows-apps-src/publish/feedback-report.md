@@ -1,37 +1,33 @@
 ---
 author: jnHs
-Description: "El informe Comentarios del panel del Centro de desarrollo de Windows te permite ver los problemas, las sugerencias y los votos a favor que los clientes de Windows 10 han enviado a través del Centro de opiniones."
+Description: "El informe de comentarios del panel del Centro de desarrollo de Windows te permite ver los problemas, sugerencias y votos a favor que los clientes de Windows 10 han enviado a través del Centro de opiniones."
 title: Informe de comentarios
 ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
-ms.sourcegitcommit: 4e857ec7ee98459afdd0d8ec85b5ec3a761049f3
-ms.openlocfilehash: 9ad3025f7890de3677801b309b6714b1b46a0607
+translationtype: Human Translation
+ms.sourcegitcommit: 70020d3c6e0fb0fea321ce1951720803fd25f9c0
+ms.openlocfilehash: e6266ff7c45a49b3eece8ffaf3d0603d55a04761
 
 ---
 
 # Informe de comentarios
 
-Animar a los clientes a que te envíen comentarios sobre la aplicación es una excelente manera de obtener información sobre los problemas y las características que son más importantes para ellos. Cuando los clientes saben que pueden enviar comentarios directamente, es menos probable que dejen comentarios con una revisión negativa. 
+El informe **Comentarios** del panel del Centro de desarrollo de Windows te permite ver los problemas, sugerencias y votos a favor que los clientes de Windows 10 han enviado a través del Centro de opiniones. Puedes visualizar estos datos en tu panel o exportarlos para consultarlos sin conexión.
 
-> 
-            **Nota** El informe Comentarios que se describe en este artículo no está disponible todavía para todas las cuentas de desarrollador.
+Animar a los clientes a que envíen comentarios sobre la aplicación es una excelente manera de obtener información sobre los problemas y las características que más les importan. Cuando los clientes saben que pueden enviar comentarios directamente, es menos probable que dejen comentarios con una revisión negativa.
 
-Puedes usar la API de comentarios en el [SDK de Microsoft Store Engagement and Monetization](http://aka.ms/store-em-sdk) para permitir que los clientes [inicien directamente el Centro de opiniones de tu aplicación](../monetize/launch-feedback-hub-from-your-app.md). Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella mediante la aplicación Centro de opiniones. Por este motivo, es posible que veas comentarios de los clientes en este informe, aunque no hayas solicitado específicamente que te envíen comentarios desde dentro de tu aplicación.
+> **Nota** También puedes [responder a los comentarios](respond-to-customer-feedback.md)  directamente desde el informe para que los clientes sepan que lees sus comentarios.
 
-> 
-            **Sugerencia** Los comentarios son especialmente útiles si usas un [paquete piloto](package-flights.md), ya que el informe Comentarios te mostrará el paquete específico que cada cliente tenía instalado en su dispositivo en el momento de enviar los comentarios.
+Puedes usar la API de comentarios de [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) para permitir que los clientes [inicien directamente el Centro de opiniones desde la aplicación](../monetize/launch-feedback-hub-from-your-app.md). Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella mediante la aplicación Centro de opiniones. Por este motivo, es posible que veas comentarios de los clientes en este informe, aunque no hayas solicitado específicamente que te envíen comentarios desde dentro de tu aplicación.
 
-El informe **Comentarios** del panel del Centro de desarrollo de Windows te permite ver los problemas, las sugerencias y los votos a favor que los clientes de Windows 10 han enviado a través del Centro de opiniones. Puedes visualizar estos datos en tu panel o exportarlos para consultarlos sin conexión. 
+> **Sugerencia** Los comentarios son especialmente útiles si usas un [paquete piloto](package-flights.md), ya que el informe de comentarios te mostrará el paquete específico que cada cliente tenía instalado en su dispositivo en el momento de enviar los comentarios.
 
 ## Ver los detalles de informes
 
-En la sección **Detalles** de este informe, encontrarás los comentarios individuales que dejaron tus clientes. En la parte izquierda del texto de comentarios, verás el número de veces que otros clientes han votado a favor de los comentarios en el Centro de opiniones. Puedes ordenar los comentarios de tres formas:
+En la sección **Detalles** de este informe, encontrarás los comentarios individuales que dejaron los clientes. En la parte izquierda del texto de comentarios, verás el número de veces que otros clientes han votado a favor de los comentarios en el Centro de opiniones. Puedes ordenar los comentarios de tres formas:
 
-- 
-            **Votos a favor** (predeterminado): muestra los comentarios que otros clientes han votado a favor, empezando por los comentarios que han recibido más votos a favor.
-- 
-            **Tendencias**: muestra los comentarios que otros clientes han votado a favor en los últimos siete días, empezando por los comentarios con actividad más reciente.
-- 
-            **Más recientes**: muestra todos los comentarios, empezando por los comentarios que se han enviado más recientemente. 
+- **Votos a favor** (predeterminado): muestra los comentarios a favor de los cuales han votado otros clientes, empezando por los comentarios que han recibido más votos a favor.
+- **Tendencias**: muestra los comentarios a favor de los cuales han votado otros clientes en los últimos siete días, empezando por los comentarios con actividad más reciente.
+- **Más recientes**: muestra todos los comentarios, empezando por los comentarios que se han enviado más recientemente.
 
 Junto a cada comentario, verás la fecha en que se envió el comentario y el tipo de comentario. También verás ver el mercado del cliente, el paquete específico de la aplicación instalado en el dispositivo en el momento de enviar los comentarios, el tipo de dispositivo y **Windows Insider**, si el cliente que envía los comentarios es miembro del Programa Windows Insider.
 
@@ -40,21 +36,14 @@ Junto a cada comentario, verás la fecha en que se envió el comentario y el tip
 
 Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** para filtrar todos los datos de esta página.
 
-> 
-            **Sugerencia** Si no ves los comentarios en la página, comprueba que los filtros no hayan excluido todos tus comentarios. Por ejemplo, si filtras por un **Tipo de dispositivo** que no es compatible con la aplicación, no verás ningún comentario.
+> **Sugerencia** Si no ves los comentarios en la página, comprueba que los filtros no hayan excluido todos los comentarios. Por ejemplo, si filtras por un **Tipo de dispositivo** que no es compatible con la aplicación, no verás ningún comentario.
 
-- 
-            **Fecha**: el filtro predeterminado es **Siempre**. Puedes seleccionar períodos de tiempo más cortos desde **Últimos 30 días** hasta **Último 12 meses**.
-- 
-            **Tipo de comentarios**: la opción predeterminada es **Todos**. Puedes seleccionar **Problema** o **Sugerencia** para mostrar solo este tipo de comentarios.
-- 
-            **Tipo de dispositivo**: la opción predeterminada es **Todos los dispositivos**. Puedes seleccionar **Teléfono**, **Equipo** o **Tableta** para mostrar solo los comentarios enviados desde ese tipo de dispositivo.
-- 
-            **Versión del paquete**: el valor predeterminado es **Todos los paquetes**. Puedes seleccionar uno de los paquetes para que solo se muestren los comentarios enviados por clientes que usaban este paquete concreto en el momento de enviar los comentarios.
-- 
-            **Mercado**: el valor predeterminado es **Todos los mercados**. Puedes elegir uno determinado para mostrar solo los comentarios de los clientes de ese mercado.
-- 
-            **Grupo**: el valor predeterminado es **Todos**. Puedes optar por ver solo los comentarios enviados por [usuarios de Windows Insider](http://insider.windows.com).
+- **Fecha**: el filtro predeterminado es **Siempre**. Puedes seleccionar períodos de tiempo más cortos desde **Últimos 30 días** hasta **Último 12 meses**.
+- **Tipo de comentarios**: la opción predeterminada es **Todos**. Puedes seleccionar **Problema** o **Sugerencia** para mostrar solo este tipo de comentarios.
+- **Tipo de dispositivo**: la opción predeterminada es **Todos los dispositivos**. Puedes seleccionar **Teléfono**, **Equipo** o **Tableta** para mostrar solo los comentarios enviados desde ese tipo de dispositivo.
+- **Versión del paquete**: el valor predeterminado es **Todos los paquetes**. Puedes seleccionar uno de los paquetes para que solo se muestren los comentarios enviados por clientes que usaban este paquete concreto en el momento de enviar los comentarios.
+- **Mercado**: el valor predeterminado es **Todos los mercados**. Puedes elegir uno determinado para mostrar solo los comentarios de los clientes de ese mercado.
+- **Grupo**: el valor predeterminado es **Todos**. Puedes optar por ver solo los comentarios enviados por [usuarios de Windows Insider](http://insider.windows.com).
 
 ## Comentarios sobre traducciones
 
@@ -68,6 +57,6 @@ Como se mencionó anteriormente, te recomendamos que incorpores un vínculo al C
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

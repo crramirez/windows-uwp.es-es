@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
 description: "Aprende a agregar valores de identificador de aplicación y de identificador de unidad de anuncios a la aplicación desde el panel del Centro de desarrollo de Windows antes de enviar la aplicación a la Tienda."
 title: "Configurar unidades de anuncios en la aplicación"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 96c09de9321f67dc26cc3538f2655bd598f134f9
+translationtype: Human Translation
+ms.sourcegitcommit: c6e0cf98c6eb2cdc656d5b4555d794ff6a94d2bc
+ms.openlocfilehash: 705955faf7ddd67f80098f8c3ac7b2844553de95
 
 
 ---
@@ -12,7 +13,7 @@ ms.openlocfilehash: 96c09de9321f67dc26cc3538f2655bd598f134f9
 # Configurar unidades de anuncios en la aplicación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Si usas un objeto [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) o [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) para mostrar anuncios en tu aplicación, debes especificar un identificador de aplicación y un identificador de unidad de anuncios. Mientras desarrolles la aplicación, usa los [valores de identificador de aplicación y de identificador de anuncios de prueba](test-mode-values.md) para ver cómo la aplicación representa los anuncios durante las pruebas.
 
@@ -29,9 +30,6 @@ Para configurar el identificador de aplicación y las unidades de anuncios de la
 
     * Si la aplicación muestra anuncios intersticiales en vídeos, pasa estos valores para el método **RequestAd** del objeto **InterstitialAd**.
 
-> 
-            **Importante** Si la aplicación usa la mediación de anuncios para mostrar anuncios de banner de Microsoft Advertising (es decir, usa un objeto **AdMediatorControl**), no tienes que solicitar unidades de anuncios. En este escenario, las unidades de anuncios se generan automáticamente. Para obtener más información, consulta [Cuál es la diferencia: AdMediator o AdControl](what-is-the-difference-admediatorcontrol-or-adcontrol.md).
-
  
 
 ## Temas relacionados
@@ -45,6 +43,6 @@ Para configurar el identificador de aplicación y las unidades de anuncios de la
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -8,8 +8,9 @@ title: Controles de estilo
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
 label: Styling controls
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 02cd8f7777f169ad9fc4e5bfe854a8b6e0fe5060
+ms.openlocfilehash: 2386ccbc89cad5514c0b1a4879af6d0df328263e
 
 ---
 
@@ -17,7 +18,7 @@ ms.openlocfilehash: 02cd8f7777f169ad9fc4e5bfe854a8b6e0fe5060
 
 
 
-Puedes personalizar la apariencia de tus aplicaciones de varias maneras con el marco XAML. Los estilos te permiten establecer propiedades de control y reusar esta configuración para mantener un aspecto uniforme en varios controles.
+Puedes personalizar la apariencia de tus aplicaciones de varias maneras con el marco XAML. Los estilos te permiten establecer propiedades de control y reusar esa configuración para mantener un aspecto uniforme en varios controles.
 
 ## Conceptos básicos de estilos
 
@@ -153,6 +154,6 @@ Se puede usar un establecedor de estilo para la propiedad [**Plantilla**](https:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

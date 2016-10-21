@@ -3,8 +3,9 @@ author: msatranjr
 title: Diagnosticar condiciones de error del componente de Windows Runtime
 description: "En este artículo se proporciona información adicional acerca de las restricciones en componentes de Windows Runtime escritos con código administrado."
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
+translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 29199b7c94c4fecd173fb96f0d8fb43692d72464
+ms.openlocfilehash: 02cb16d88add782321ca86a27fcb8b5c6d1bab34
 
 ---
 
@@ -29,8 +30,7 @@ Los componentes administrados de Windows Runtime no pueden implementar las inter
 
  
 
-> 
-            **Nota** Los mensajes de error que hacen referencia a Windows Runtime usan una terminología antigua. Esta se denomina ahora Plataforma universal de Windows (UWP). Por ejemplo, los tipos de Windows Runtime ahora se denominan tipos UWP.
+> **Nota** Los mensajes de error que hacen referencia a Windows Runtime usan una terminología antigua. Esta se denomina ahora Plataforma universal de Windows (UWP). Por ejemplo, los tipos de Windows Runtime ahora se denominan tipos UWP.
 
  
 
@@ -51,8 +51,7 @@ Este problema se produce únicamente cuando se utiliza Winmdexp.exe desde la lí
 
 En un componente de Windows Runtime escrito en código administrado, no se pueden exponer operadores sobrecargados en tipos públicos.
 
-> 
-            **Nota** En el mensaje de error, el operador se identifica por su nombre de metadatos, como op\_Addition, op\_Multiply, op\_ExclusiveOr, op\_Implicit (conversión implícita), etc.
+> **Nota** En el mensaje de error, el operador se identifica por su nombre de metadatos, como op\_Addition, op\_Multiply, op\_ExclusiveOr, op\_Implicit (conversión implícita), etc.
 
  
 
@@ -90,8 +89,7 @@ En la UWP los métodos sobrecargados pueden tener el mismo número de parámetro
 
 En la Plataforma universal de Windows, todos los tipos públicos en un archivo de metadatos (.winmd) de Windows deben estar en un espacio de nombres que comparta el nombre del archivo .winmd o en subespacios de nombres del nombre de archivo. Por ejemplo, si el proyecto de Visual Studio se denomina A.B (es decir, el componente de Windows Runtime es A.B.winmd), puede contener las clases públicas A.B.Class1 y A.B.C.Class2, pero no la A.Class3 (WME0006) o D.Class4 (WME1044).
 
-> 
-            **Nota**  Estas restricciones se aplican solo a los tipos públicos, no a los tipos privados usados en tu implementación.
+> **Nota**  Estas restricciones se aplican solo a los tipos públicos, no a los tipos privados usados en tu implementación.
 
  
 
@@ -105,8 +103,7 @@ El componente debe contener al menos un tipo **public sealed** (**Public NotInhe
 
 Un tipo en un componente de Windows Runtime no puede tener un nombre idéntico al de un espacio de nombres (WME1068).
 
-> 
-            **Precaución**  Si llamas directamente a Winmdexp.exe y no usas la opción /out para especificar un nombre para el componente de Windows Runtime, Winmdexp.exe intenta generar un nombre que incluya todos los espacios de nombres en el componente. Cambiar el nombre de los espacios de nombres puede alterar el nombre de tu componente.
+> **Precaución**  Si llamas directamente a Winmdexp.exe y no usas la opción /out para especificar un nombre para el componente de Windows Runtime, Winmdexp.exe intenta generar un nombre que incluya todos los espacios de nombres en el componente. Cambiar el nombre de los espacios de nombres puede alterar el nombre de tu componente.
 
  
 
@@ -115,7 +112,7 @@ Un tipo en un componente de Windows Runtime no puede tener un nombre idéntico a
 | WME0006      | '{0}' no es un nombre de archivo winmd válido para este ensamblado. Todos los tipos dentro de un archivo de metadatos de Windows deben existir en un subespacio de nombres del espacio de nombres que se determina según el nombre de archivo. Los tipos que no existen en dicho subespacio de nombres no pueden localizarse en el tiempo de ejecución. En este ensamblado, el espacio de nombres comunes más pequeño que puede actuar como un nombre de archivo es '{1}'. |
 | WME1042      | El módulo de entrada debe contener al menos un tipo público que se encuentre dentro de un espacio de nombres.                                                                                                                                                                                                                                                                   |
 | WME1043      | El módulo de entrada debe contener al menos un tipo público que se encuentre dentro de un espacio de nombres. Los únicos tipos que se encuentran dentro de espacios de nombres son privados.                                                                                                                                                                                                               |
-| WME1044      | Un tipo público tiene un espacio de nombres ('{1}") que no comparte un prefijo común con otros espacios de nombres ('{0}'). Todos los tipos dentro de un archivo de metadatos de Windows deben existir en un subespacio de nombres del espacio de nombres que se determina según el nombre de archivo.                                                                                                                              |
+| WME1044      | Un tipo público tiene un espacio de nombres ('{1}') que no comparte un prefijo común con otros espacios de nombres ('{0}'). Todos los tipos dentro de un archivo de metadatos de Windows deben existir en un subespacio de nombres del espacio de nombres que se determina según el nombre de archivo.                                                                                                                              |
 | WME1067      | Los nombres de espacio de nombres no pueden diferir sólo en las mayúsculas o minúsculas: '{0}', '{1}'.                                                                                                                                                                                                                                                                                                |
 | WME1068      | El tipo '{0}' no puede tener el mismo nombre que el espacio de nombres '{1}'.                                                                                                                                                                                                                                                                                                 |
 
@@ -130,11 +127,9 @@ Muchas de estas asignaciones son interfaces. Por ejemplo, [IList&lt;T&gt;](https
 
 En general, la mejor opción es la interfaz que más se asemeje al tipo. Por ejemplo, para Dictionary&lt;int, string&gt;, la mejor opción es probablemente IDictionary&lt;int, string&gt;.
 
-> 
-            **Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt; independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye a un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
+> **Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt; independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye a un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
 
-> 
-            **Precaución**  Evita el uso de las interfaces no genéricas [IList](https://msdn.microsoft.com/library/system.collections.ilist.aspx) y [IEnumerable](https://msdn.microsoft.com/library/system.collections.ienumerable.aspx) si JavaScript usará tu componente. Estas interfaces se asignan a [IBindableVector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindablevector.aspx) y [IBindableIterator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindableiterator.aspx), respectivamente. Se admiten los enlaces para los controles de XAML y no son visibles para JavaScript. JavaScript emite el error de tiempo de ejecución "La función 'X' tiene una firma no válida y no se puede llamar".
+> **Precaución**  Evita el uso de las interfaces no genéricas [IList](https://msdn.microsoft.com/library/system.collections.ilist.aspx) o [IEnumerable](https://msdn.microsoft.com/library/system.collections.ienumerable.aspx) si JavaScript usará tu componente. Estas interfaces se asignan a [IBindableVector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindablevector.aspx) y [IBindableIterator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindableiterator.aspx), respectivamente. Se admiten los enlaces para los controles de XAML y no son visibles para JavaScript. JavaScript emite el error de tiempo de ejecución "La función 'X' tiene una firma no válida y no se puede llamar".
 
  
 
@@ -161,8 +156,7 @@ En general, la mejor opción es la interfaz que más se asemeje al tipo. Por eje
 <tr class="odd">
 <td align="left">WME1039</td>
 <td align="left"><p>El método '{0}' tiene un parámetro de tipo '{1}' en su firma. Aunque este tipo genérico no es un tipo válido de Windows Runtime, el tipo o sus parámetros genéricos implementan interfaces que son tipos válidos de Windows Runtime. {2}</p>
-            
-> **Nota**  Para {2}, Winmdexp.exe anexa una lista de alternativas, como "Considere cambiar el tipo 'System.Collections.Generic.List&lt;T&gt;' en la firma de método a uno de los siguientes tipos: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'."
+> **Nota**  Para {2}, Winmdexp.exe anexa una lista de alternativas, como "Considere cambiar el tipo 'System.Collections.Generic.List&lt;T&gt;' en la firma de método a uno de los siguientes tipos: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'".
 </td>
 </tr>
 <tr class="even">
@@ -190,8 +184,7 @@ En la UWP una estructura puede contener solo campos, y solo las estructuras pued
 
 En la UWP, las matrices en las signaturas de miembros deben ser unidimensionales con un límite inferior de 0 (cero). Los tipos de matrices anidadas como `myArray[][]` (`myArray()()` en Visual Basic) no están permitidos.
 
-> 
-            **Nota** Esta restricción no se aplica a las matrices que usas internamente en tu implementación.
+> **Nota** Esta restricción no se aplica a las matrices que usas internamente en tu implementación.
 
  
 
@@ -242,25 +235,23 @@ En el UWP, los valores devueltos se considera que son parámetros de salida y lo
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> [!div class="tabbedCodeSnippets"]
+> **Nota**  Si cambias el nombre del valor devuelto y el nuevo nombre entra en conflicto con el nombre de otro parámetro, obtendrás el error WME1091.
 
+El código de JavaScript puede acceder a los parámetros de salida de un método por nombre, incluido el valor devuelto. Por ejemplo, consulta el atributo [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx).
 
-            **Nota**  Si cambias el nombre del valor devuelto y el nuevo nombre entra en conflicto con el nombre de otro parámetro, obtendrás el error WME1091. El código de JavaScript puede acceder a los parámetros de salida de un método por nombre, incluido el valor devuelto.
-
-| Por ejemplo, consulta el atributo [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx). | Número de error |
+| Número de error | Texto de mensaje |
 |---------------|------------|
-| Texto de mensaje | WME1091 El método '\{0}' tiene el valor devuelto denominado '\{1}', que es el mismo que el nombre de un parámetro. |
-| Los parámetros de método de Windows Runtime y el valor devuelto deben tener nombres únicos. | WME1092 El método '\{0}' tiene un parámetro denominado '\{1}', que es el mismo que el nombre de un valor de retorno predeterminado.<br/>Considera la posibilidad de usar otro nombre para el parámetro o usa System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explícitamente el nombre del valor devuelto. |
+| WME1091 | El método '\{0}' tiene el valor devuelto denominado '\{1}', que es el mismo que el nombre de un parámetro. Los parámetros de método de Windows Runtime y el valor devuelto deben tener nombres únicos. |
+| WME1092 | El método '\{0}' tiene un parámetro denominado '\{1}', que es el mismo que el nombre de un valor de retorno predeterminado. Considera la posibilidad de usar otro nombre para el parámetro o usa System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explícitamente el nombre del valor devuelto.<br/>**Nota**  El nombre predeterminado es "returnValue" para los descriptores de acceso de propiedad y "value" para todos los otros métodos. |
  
 
-## 
-            **Nota**  El nombre predeterminado es "returnValue" para los descriptores de acceso de propiedad y "value" para todos los otros métodos.
+## Temas relacionados
 
-* [Temas relacionados](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
-* [Crear componentes de Windows Runtime en C# y Visual Basic](https://msdn.microsoft.com/library/hh925576.aspx)
-
+* [Crear componentes de Windows Runtime en C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Winmdexp.exe (herramienta de exportación de metadatos de Windows Runtime)](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

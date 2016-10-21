@@ -3,8 +3,9 @@ author: mtoepke
 title: Cargar recursos en tu juego DirectX
 description: "La mayoría de los juegos, en algún momento, cargan recursos y activos (como sombreadores, texturas, mallas predefinidas y otros datos de gráficos) del almacenamiento local u otro flujo de datos."
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: fd4d2162e9a0007df34b465f570820843b326d72
+ms.openlocfilehash: 09221cb853b3d327b5cb60cacec109032135eabc
 
 ---
 
@@ -235,8 +236,7 @@ task<void> BasicLoader::LoadMeshAsync(
 }
 ```
 
-
-            **CreateMesh** interpreta los datos de bytes cargados del archivo, y crea un búfer de vértices y un búfer de índices para la malla, pasando las listas de vértices e índices, respectivamente, a [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) y especificando ya sea D3D11\_BIND\_VERTEX\_BUFFER o D3D11\_BIND\_INDEX\_BUFFER. Este código se usa en **BasicLoader**:
+**CreateMesh** interpreta los datos de bytes cargados del archivo, y crea un búfer de vértices y un búfer de índices para la malla. Para hacerlo, pasa las listas de vértices e índices, respectivamente, a [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) y especifica ya sea D3D11\_BIND\_VERTEX\_BUFFER o D3D11\_BIND\_INDEX\_BUFFER. Este código se usa en **BasicLoader**:
 
 ```cpp
 void BasicLoader::CreateMesh(
@@ -317,9 +317,7 @@ Un archivo DDS es un archivo binario que contiene la siguiente información:
 
 -   Una descripción de los datos del archivo.
 
-    Los datos se describen con una descripción de encabezado mediante [**DDS\_HEADER**](https://msdn.microsoft.com/library/windows/desktop/bb943982); el formato de píxeles se define mediante [**DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984). Observa que las estructuras **DDS\_HEADER** y **DDS\_PIXELFORMAT** reemplazan las estructuras desusadas DDSURFACEDESC2, DDSCAPS2 y DDPIXELFORMAT DirectDraw 7. 
-            **DDS\_HEADER** es el binario equivalente de DDSURFACEDESC2 y DDSCAPS2. 
-            **DDS\_PIXELFORMAT** es el binario equivalente de DDPIXELFORMAT.
+    Los datos se describen con una descripción de encabezado mediante [**DDS\_HEADER**](https://msdn.microsoft.com/library/windows/desktop/bb943982); el formato de píxeles se define mediante [**DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984). Observa que las estructuras **DDS\_HEADER** y **DDS\_PIXELFORMAT** reemplazan las estructuras desusadas DDSURFACEDESC2, DDSCAPS2 y DDPIXELFORMAT DirectDraw 7. **DDS\_HEADER** es el binario equivalente de DDSURFACEDESC2 y DDSCAPS2. **DDS\_PIXELFORMAT** es el binario equivalente de DDPIXELFORMAT.
 
     ```cpp
     DWORD               dwMagic;
@@ -712,6 +710,6 @@ Llegados a este punto, deberías comprender y poder crear o modificar métodos p
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

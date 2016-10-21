@@ -5,12 +5,12 @@ title: "Optimizar las animaciones, multimedia e imágenes."
 description: Crea aplicaciones para la Plataforma universal de Windows (UWP) con animaciones suaves, alta velocidad de fotogramas y capturas multimedia y reproducciones de alto rendimiento.
 translationtype: Human Translation
 ms.sourcegitcommit: 622df404dbf85740aa0029f53a0b4e0d541608f9
-ms.openlocfilehash: 8fd9ce5f43159ae00414d05ddb757c507aaa370d
+ms.openlocfilehash: 62e35ef31a5c2c4c3ca1ce6f6749057d59c22af3
 
 ---
 # Optimizar las animaciones, los recursos multimedia y las imágenes
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Crea aplicaciones para la Plataforma universal de Windows (UWP) con animaciones suaves, alta velocidad de fotogramas y capturas multimedia y reproducciones de alto rendimiento.
 
@@ -49,9 +49,7 @@ El marco XAML no representa directamente el contenido web de un control [**WebVi
 
 Tampoco es buena idea animar una clase [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx). Además de la disminución del rendimiento, puede causar la desactivación u otras anomalías en las imágenes del vídeo que se reproduzca.
 
-> 
-            **Nota** Las recomendaciones de este artículo respecto a **MediaPlayerElement** también se aplican a [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). 
-            **MediaPlayerElement** solo está disponible en Windows10, versión 1607, por lo que si vas a crear una aplicación para una versión anterior de Windows, debes usar **MediaElement**.
+> **Nota**  Las recomendaciones de este artículo respecto a **MediaPlayerElement** también se aplican a [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). **MediaPlayerElement** solo está disponible en Windows10, versión 1607, por lo que si vas a crear una aplicación para una versión anterior de Windows, debes usar **MediaElement**.
 
 ### Usar las aplicaciones infinitas moderadamente
 
@@ -63,8 +61,7 @@ La adición de un controlador de [**CompositionTarget.Rendering**](https://msdn.
 
 El espacio de nombres [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/BR243232) incluye una biblioteca de alto rendimiento y animaciones suaves que tienen una apariencia coherente con otras animaciones de Windows. Las clases relevantes tienen "Tema" en el nombre, y se describen en [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/Mt187350) Esta biblioteca admite muchos escenarios habituales de animación, como la animación de la primera vista de la aplicación y la creación de transiciones de estado y de contenido. Te recomendamos que uses esta biblioteca de animaciones siempre que te sea posible, para mejorar el rendimiento y la coherencia de la interfaz de usuario de las aplicaciones para UWP.
 
-> 
-            **Nota** La biblioteca de animaciones no puede animar todas las propiedades posibles. Para escenarios XAML en los que no se aplica la biblioteca de animaciones, consulta [Animaciones con guion gráfico](https://msdn.microsoft.com/library/windows/apps/Mt187354).
+> **Nota**  La biblioteca de animaciones no puede animar todas las propiedades posibles. Para escenarios XAML en los que no se aplica la biblioteca de animaciones, consulta [Animaciones con guion gráfico](https://msdn.microsoft.com/library/windows/apps/Mt187354).
 
 
 ### Animar propiedades CompositeTransform3D de forma independiente
@@ -259,10 +256,7 @@ La aplicación debería usar [**SoftwareBitmap**](https://msdn.microsoft.com/lib
 
 ### Usar GetThumbnailAsync para las miniaturas
 
-Un caso de uso de escalado de imágenes es la creación de miniaturas. Si bien puedes usar [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) y [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) para proporcionar versiones pequeñas de las imágenes, la plataforma universal de Windows (UWP) ofrece API aún más eficaces para la recuperación de miniaturas. 
-            [
-              **GetThumbnailAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/BR227210) proporciona las miniaturas de las imágenes que ya tienen el sistema de archivos almacenado en caché. Esto proporciona un rendimiento incluso mejor que las API de XAML porque no es necesario abrir o descodificar la imagen.
+Un caso de uso de escalado de imágenes es la creación de miniaturas. Si bien puedes usar [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) y [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) para proporcionar versiones pequeñas de las imágenes, la plataforma universal de Windows (UWP) ofrece API aún más eficaces para la recuperación de miniaturas. [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210) proporciona las miniaturas de las imágenes que ya tienen el sistema de archivos almacenado en caché. Esto proporciona un rendimiento incluso mejor que las API de XAML porque no es necesario abrir o descodificar la imagen.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -309,6 +303,6 @@ Para evitar que las imágenes se descodifiquen más de una vez, asigna la propie
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

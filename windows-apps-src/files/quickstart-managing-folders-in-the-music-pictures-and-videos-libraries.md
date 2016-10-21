@@ -1,17 +1,18 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: "Archivos y carpetas de las bibliotecas de música, imágenes y vídeos"
 description: "Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 332f89f53a55d5783f7497ca5c6cd601dcee5217
+translationtype: Human Translation
+ms.sourcegitcommit: affe6002e22bd10e714dc4782a60ef528c31a407
+ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
 
 ---
 
 # Archivos y carpetas de las bibliotecas de música, imágenes y vídeos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados.
@@ -38,8 +39,7 @@ Una biblioteca es una colección virtual de carpetas que incluye una carpeta con
 ## Obtener una referencia a una biblioteca
 
 
-
-            **Nota** Recuerda que debes declarar la funcionalidad apropiada.
+**Nota**  Recuerda que debes declarar la funcionalidad apropiada.
  
 
 Para obtener una referencia a la biblioteca de música, imágenes o vídeos del usuario, llama al método [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725). Proporciona el valor correspondiente de la enumeración [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399).
@@ -62,7 +62,7 @@ Para obtener la lista de carpetas de una biblioteca, obtén el valor de la propi
     using Windows.Foundation.Collections;
 
     // ...
-            
+
     IObservableVector<Windows.Storage.StorageFolder> myPictureFolders = myPictures.Folders;
 ```
 
@@ -122,25 +122,47 @@ El dispositivo proporciona cinco ubicaciones predefinidas para que los usuarios 
 
 Las ubicaciones son las siguientes:
 
--   
-            Carpeta **Imágenes**. Contiene imágenes.
+-   Carpeta **Imágenes**. Contiene imágenes.
 
-    -   
-            Carpeta **Álbum de cámara**. Contiene fotos y vídeo de la cámara integrada.
+    -   Carpeta **Álbum de cámara**. Contiene fotos y vídeo de la cámara integrada.
 
-    -   
-            Carpeta **Imágenes guardadas**. Contiene imágenes que el usuario ha guardado de otras aplicaciones.
+    -   Carpeta **Imágenes guardadas**. Contiene imágenes que el usuario ha guardado de otras aplicaciones.
 
--   
-            Carpeta **Música**. Contiene canciones, podcasts y audiolibros.
+-   Carpeta **Música**. Contiene canciones, podcasts y audiolibros.
 
--   
-            Carpeta **Vídeo**. Contiene vídeos.
+-   Carpeta **Vídeo**. Contiene vídeos.
 
-Además, los usuarios y las aplicaciones pueden almacenar archivos multimedia en la tarjeta SD, fuera de las carpetas de la bibliotecas multimedia. Para buscar de forma segura un archivo multimedia en la tarjeta SD, examina el contenido de la tarjeta SD o pide al usuario que localice el archivo con un selector de archivos. Para obtener más información, consulta [Acceso a la tarjeta SD](access-the-sd-card.md).
+Además, los usuarios y las aplicaciones pueden almacenar archivos multimedia en la tarjeta SD, fuera de las carpetas de la bibliotecas multimedia. Para buscar de forma segura un archivo multimedia en la tarjeta SD, examina el contenido de la tarjeta SD o pide al usuario que localice el archivo con un selector de archivos. Para obtener más información, consulta [Acceder a la tarjeta SD](access-the-sd-card.md).
 
-## Consulta de las bibliotecas multimedia
+## Consultar las bibliotecas multimedia
 
+Para obtener una colección de archivos, especifica la biblioteca y el tipo de archivos que quieras.
+
+```cs
+...
+using Windows.Storage;
+using Windows.Storage.Search;
+...
+
+private async void getSongs()
+{
+    QueryOptions queryOption = new QueryOptions
+        (CommonFileQuery.OrderByTitle, new string[] { ".mp3", ".mp4", ".wma" });
+
+    queryOption.FolderDepth = FolderDepth.Deep
+
+    Queue<IStorageFolder> folders = new Queue<IStorageFolder>();
+
+    var files = await KnownFolders.MusicLibrary.CreateFileQueryWithOptions
+      (queryOption).GetFilesAsync();
+
+    foreach (var file in files)
+    {
+        // do something with the music files.
+    }
+
+}
+```
 
 ### Los resultados de la consulta incluyen el almacenamiento interno y el extraíble
 
@@ -154,138 +176,33 @@ Ten en cuenta el estado del almacenamiento del dispositivo mostrado en la imagen
 
 Si consultas el contenido de la biblioteca de imágenes llamando a `await KnownFolders.PicturesLibrary.GetFilesAsync()`, los resultados incluirán internalPic.jpg y SDPic.jpg.
 
-### Consultas profundas
 
-Usa consultas profundas para enumerar rápidamente todo el contenido de una biblioteca multimedia.
+## Trabajar con fotos
 
-Las consultas profundas solo devuelven archivos del tipo multimedia especificado. Por ejemplo, si haces una consulta profunda en la Biblioteca de música, los resultados de la consulta no incluirán los archivos de imagen que se encuentren en la carpeta Música.
 
-En dispositivos en los que la cámara guarda dos imágenes para cada foto, una en baja resolución y otra en alta resolución, las consultas profundas solo devuelven las imágenes de baja resolución.
+En dispositivos en los que la cámara guarda dos imágenes por cada foto, una en baja resolución y otra en alta resolución, las consultas profundas solo devuelven las imágenes de baja resolución.
 
 El Álbum de cámara y la carpeta Imágenes guardadas no admiten consultas profundas.
 
-Las consultas profundas siguientes están disponibles:
+**Abrir una foto en la aplicación que la capturó**
 
-**Biblioteca de imágenes**
-
--   `GetFilesAsync(CommonFileQuery.OrderByDate)`
-
-**Biblioteca de música**
-
--   `GetFilesAsync(CommonFileQuery.OrderByName)`
--   `GetFoldersAsync(CommonFolderQuery.GroupByArtist)`
--   `GetFoldersAysnc(CommonFolderQuery.GroupByAlbum)`
--   `GetFoldersAysnc(CommonFolderQuery.GroupByAlbumArtist)`
--   `GetFoldersAsync(CommonFolderQuery.GroupByGenre)`
-
-**Biblioteca de vídeos**
-
--   `GetFilesAsync(CommonFileQuery.OrderByDate)`
-
-### Consultas planas
-
-Para ver una lista completa de todos los archivos y carpetas de una biblioteca, llama a `GetFilesAsync(CommonFileQuery.DefaultQuery)`. Este método devuelve todos los archivos de la biblioteca, independientemente de su tipo. Esta consulta es superficial y, por tanto, tienes que enumerar repetidamente los contenidos de las subcarpetas si el usuario ha creado subcarpetas en la biblioteca.
-
-Usa consultas planas para devolver archivos multimedia de tipos no reconocidos por consultas integradas, o para devolver todos los archivos de una biblioteca, incluidos los que no son del tipo especificado. Por ejemplo, si haces una consulta plana en la Biblioteca de música, los resultados de la consulta incluirán los archivos de imagen que se encuentren en la carpeta Música.
-
-### Consultas de muestra
-
-Supongamos que el dispositivo y la tarjeta SD opcional contienen las carpetas y archivos que aparecen en la imagen siguiente:
-
-![archivos en ](images/phone-media-queries.png)
-
-Estos son algunos ejemplos de consultas con los resultados que devuelven.
-
-| Consulta | Resultados |
-|--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| KnownFolders.PicturesLibrary.GetItemsAsync();  | - Carpeta Álbum de cámara del almacenamiento interno <br>- Carpeta Álbum de cámara de la tarjeta SD <br>- Carpeta Imágenes guardadas del almacenamiento interno <br>- Carpeta Imágenes guardadas de la tarjeta SD <br><br>Esta consulta es plana y, por tanto, solo se devuelven los elementos guardados directamente en la carpeta Imágenes, no en sus subcarpetas. |
-| KnownFolders.PicturesLibrary.GetFilesAsync();  | Sin resultados. <br><br>Esta consulta es plana y la carpeta Imágenes no contiene ningún archivo en el primer nivel. |
-| KnownFolders.PicturesLibrary.GetFilesAsync(CommonFileQuery.OrderByDate); | - Archivo 4-3-2012.jpg de la tarjeta SD <br>- Archivo 1-1-2014.jpg del almacenamiento interno <br>- Archivo 1-2-2014.jpg del almacenamiento interno <br>- Archivo 1-6-2014.jpg de la tarjeta SD <br><br>Esta es una consulta profunda y, por tanto, se devuelve el contenido de la carpeta Imágenes y el de las carpetas secundarias. |
-| KnownFolders.CameraRoll.GetFilesAsync(); | - Archivo 1-1-2014.jpg del almacenamiento interno <br>- Archivo 4-3-2012.jpg de la tarjeta SD <br><br>Esta es una consulta plana. El orden de los resultados no está garantizado. |
-
- 
-## Funciones de la biblioteca multimedia y tipos de archivos
-
-
-A continuación, indicamos las funcionalidades que puedes especificar en el archivo de manifiesto de la aplicación para tener acceso a los archivos multimedia de esta.
-
--   
-            **Música**. Especifica la capacidad **Music Library** en el archivo de manifiesto de la aplicación, para dejar que dicha aplicación vea archivos de los tipos siguientes y tenga acceso a ellos:
-
-    -   .qcp
-    -   .wav
-    -   .mp3
-    -   .m4r
-    -   .m4a
-    -   .aac
-    -   .amr
-    -   .wma
-    -   .3g2 -   .3gp -   .mp4 -   .wm -   .asf -   .3gpp -   .3gp2 -   .mpa -   .adt -   .adts -   .pya -   **Fotos**.
-    -   Especifica la capacidad **Pictures Library** en el archivo de manifiesto de la aplicación, para dejar que esta vea archivos de los tipos siguientes y tenga acceso a ellos:
-    -   -   .jpeg -   .jpe -   .jpg -   .gif -   .tiff -   .tif -   .png -   .bmp -   .wdp -   .jxr -   .hdp -   **Vídeos**.
-    -   Especifica la capacidad **Video Library** en el archivo de manifiesto de la aplicación, para dejar que esta vea archivos de los tipos siguientes y tenga acceso a ellos:
-    -   -   .wm -   .m4v -   .wmv -   .asf -   .mov -   .mp4 -   .3g2 -   .3gp -   .mp4v -   .avi -   .pyv -   .3gpp -   .3gp2
-    -   Trabajo con fotos
-    -   En dispositivos en los que la cámara guarda dos imágenes por cada foto, una en baja resolución y otra en alta resolución, las consultas profundas solo devuelven las imágenes de baja resolución.
-    -   El Álbum de cámara y la carpeta Imágenes guardadas no admiten consultas profundas.
-    -   Abrir una foto en la aplicación que la capturó
-    -   Si quieres que el usuario pueda volver a abrir una foto en la aplicación que la capturó, puedes guardar el **CreatorAppId** con los metadatos de la foto; usa para ello un código similar al del ejemplo siguiente.
-    -   En este ejemplo, **testPhoto** es un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
--   Usar métodos de secuencias para agregar un archivo a una biblioteca multimedia Si accedes a una biblioteca a través de una carpeta conocida —por ejemplo, **KnownFolders.PictureLibrary**— y usas métodos de secuencias para agregar un archivo a la biblioteca, tienes que asegurarte de que cierras todas las secuencias que abre el código.
-
-    -   De lo contrario, estos métodos no podrán agregar el archivo a la biblioteca multimedia, ya que habrá al menos una secuencia que controla el archivo.
-    -   Por ejemplo, si ejecutas el código siguiente, el archivo no se agrega a la biblioteca multimedia.
-    -   En la línea de código, `using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))`, tanto el método **OpenAsync** como el método **GetOutputStreamAt** abren una secuencia.
-    -   No obstante, tan solo se desecha la secuencia que abre el método **GetOutputStreamAt** como resultado de la instrucción **using**.
-    -   La otra secuencia permanece abierta y evita que se guarde el archivo.
-    -   Para agregar correctamente un archivo a la biblioteca de contenido multimedia con métodos de secuencias, asegúrate de cerrar todas las secuencias que abre el código, tal como se muestra en el ejemplo siguiente.
-    -   .png
-    -   .bmp
-    -   .wdp
-    -   .jxr
-    -   .hdp
--   <bpt id="p1">**</bpt>Videos<ept id="p1">**</ept>. Specify the <bpt id="p1">**</bpt>Video Library<ept id="p1">**</ept> capability in the app manifest file to let your app see and access files of the following file types:
-
-    -   .wm
-    -   .m4v
-    -   .wmv
-    -   .asf
-    -   .mov
-    -   .mp4
-    -   .3g2
-    -   .3gp
-    -   .mp4v
-    -   .avi
-    -   .pyv
-    -   .3gpp
-    -   .3gp2
-
-## Working with photos
-
-
-On devices where the camera saves both a low-resolution image and a high-resolution image of every picture, the deep queries return only the low-resolution image.
-
-The Camera Roll and the Saved Pictures folder do not support the deep queries.
-
-**Opening a photo in the app that captured it**
-
-If you want to let the user open a photo again later in the app that captured it, you can save the <bpt id="p1">**</bpt>CreatorAppId<ept id="p1">**</ept> with the photo's metadata by using code similar to the following example. In this example, <bpt id="p1">**</bpt>testPhoto<ept id="p1">**</ept> is a <bpt id="p2">[</bpt><bpt id="p3">**</bpt>StorageFile<ept id="p3">**</ept><ept id="p2">](https://msdn.microsoft.com/library/windows/apps/br227171)</ept>.
+Si quieres que el usuario pueda volver a abrir una foto en la aplicación que la capturó, puedes guardar el **CreatorAppId** con los metadatos de la foto; usa para ello un código similar al del ejemplo siguiente. En este ejemplo, **testPhoto** es un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
 ```CSharp
   IDictionary<string, object> propertiesToSave = new Dictionary<string, object>();
 
   propertiesToSave.Add("System.CreatorOpenWithUIOptions", 1);
   propertiesToSave.Add("System.CreatorAppId", appId);
- 
+
   testPhoto.Properties.SavePropertiesAsync(propertiesToSave).AsyncWait();   
 ```
 
-## Using stream methods to add a file to a media library
+## Usar métodos de secuencias para agregar un archivo a una biblioteca multimedia
 
 
-When you access a media library by using a known folder such as <bpt id="p1">**</bpt>KnownFolders.PictureLibrary<ept id="p1">**</ept>, and you use stream methods to add a file to the media library, you have to make sure to close all the streams that your code opens. Otherwise these methods fail to add the file to the media library as expected because at least one stream still has a handle to the file.
+Si accedes a una biblioteca a través de una carpeta conocida —por ejemplo, **KnownFolders.PictureLibrary**— y usas métodos de secuencias para agregar un archivo a la biblioteca, tienes que asegurarte de que cierras todas las secuencias que abre el código. De lo contrario, estos métodos no podrán agregar el archivo a la biblioteca multimedia, ya que habrá al menos una secuencia que controla el archivo.
 
-For example, when you run the following code, the file is not added to the media library. In the line of code, <ph id="ph1">`using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))`</ph>, both the <bpt id="p1">**</bpt>OpenAsync<ept id="p1">**</ept> method and the <bpt id="p2">**</bpt>GetOutputStreamAt<ept id="p2">**</ept> method open a stream. However only the stream opened by the <bpt id="p1">**</bpt>GetOutputStreamAt<ept id="p1">**</ept> method is disposed as a result of the <bpt id="p2">**</bpt>using<ept id="p2">**</ept> statement. The other stream remains open and prevents saving the file.
+Por ejemplo, si ejecutas el código siguiente, el archivo no se agrega a la biblioteca multimedia. En la línea de código, `using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))`, tanto el método **OpenAsync** como el método **GetOutputStreamAt** abren una secuencia. No obstante, tan solo se desecha la secuencia que abre el método **GetOutputStreamAt** como resultado de la instrucción **using**. La otra secuencia permanece abierta y evita que se guarde el archivo.
 
 ```CSharp
 StorageFolder testFolder = await StorageFolder.GetFolderFromPathAsync(@"C:\test");
@@ -301,7 +218,7 @@ using (var sourceStream = (await sourceFile.OpenReadAsync()).GetInputStreamAt(0)
 
 ```
 
-To use stream methods successfully to add a file to the media library, make sure to close all the streams that your code opens, as shown in the following example.
+Para agregar correctamente un archivo a la biblioteca de contenido multimedia con métodos de secuencias, asegúrate de cerrar todas las secuencias que abre el código, tal como se muestra en el ejemplo siguiente.
 
 ```CSharp
 StorageFolder testFolder = await StorageFolder.GetFolderFromPathAsync(@"C:\test");
@@ -329,10 +246,6 @@ using (var sourceStream = await sourceFile.OpenReadAsync())
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

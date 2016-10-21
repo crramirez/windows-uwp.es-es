@@ -6,82 +6,94 @@ ms.assetid: 9AABB5DE-1D81-4791-AB47-7F058F64C491
 dev.assetid: AF2F2008-9B53-430C-BBC3-8888F631B0B0
 label: Media player
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 2dbc4e7fa227de3f37b8a337eded0004496dbe36
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 6945708f0d81cd9f2edd363ed193c76601ec5652
 
 ---
 # Reproductor multimedia
 
-El reproductor multimedia se usa para ver y escuchar vídeo, audio e imágenes. La reproducción multimedia puede efectuarse incorporada (incrustada en una página o con un grupo de otros controles) o en una vista de pantalla completa específica. Puedes modificar el conjunto de botones del reproductor, cambiar el fondo de la barra de control y organizar los diseños como consideres más oportuno. Ten en cuenta que los usuarios esperan un conjunto de controles básicos (Reproducir/pausar, Saltar atrás, Saltar adelante).
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-![Elemento multimedia con controles de transporte](images/controls/media-transport-controls.png)
+El reproductor multimedia se usa para ver y escuchar vídeo y audio. La reproducción de contenido multimedia puede efectuarse incorporada (incrustada en una página o con un grupo de otros controles) o en una vista de pantalla completa específica. Puedes modificar el conjunto de botones del reproductor, cambiar el fondo de la barra de control y organizar los diseños como consideres más oportuno. Ten en cuenta que los usuarios esperan un conjunto de controles básicos (Reproducir/pausar, Saltar atrás, Saltar adelante).
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
+![Elemento del reproductor multimedia con controles de transporte](images/controls/mtc_double_video_inprod.png)
 
--   [**Clase MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)
--   [**Clase MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediatransportcontrols)
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx"><strong>Clase MediaPlayerElement</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediatransportcontrols"><strong>Clase MediaTransportControls</strong></a></li>
+</ul>
+
+</div>
+</div>
+
+
+
+> **Nota**&nbsp;&nbsp; **MediaPlayerElement** solo está disponible en Windows 10, versión 1607 y posteriores. Si vas a desarrollar una aplicación para una versión anterior de Windows 10, tendrás que usar [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) en su lugar. Todas las recomendaciones que se ofrecen en esta página también se aplican a MediaElement.
 
 ## ¿Es este el control adecuado?
 
-Usa un reproductor multimedia cuando desees reproducir audio o vídeo en tu aplicación. Para mostrar una colección de imágenes, usa [Invertir vista](flipview.md).
+Usa un reproductor multimedia cuando quieras reproducir audio o vídeo en tu aplicación. Para mostrar una colección de imágenes, usa una [Vista invertida](flipview.md).
 
 ## Ejemplos
 
-Un elemento multimedia en la aplicación Introducción de Windows 10.
+Un reproductor multimedia en la aplicación Introducción de Windows 10.
 
-![Un elemento multimedia en la aplicación Introducción de Windows 10](images/control-examples/media-element-getstarted.png)
+![Un elemento multimedia en la aplicación Introducción de Windows 10](images/control-examples/mtc_getstarted_example.png)
 
 ## Crear un reproductor multimedia
-Agrega elementos multimedia a tu aplicación creando un objeto [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) en XAML y establece el [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) en un identificador uniforme de recursos (URI) que apunte a un archivo de audio o de vídeo.
+Agrega elementos multimedia a tu aplicación al crear un objeto [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) en XAML y establece el valor de [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) en una clase [**MediaSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.aspx) que apunte a un archivo de audio o vídeo.
 
-Este lenguaje XAML crea un [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) y establece la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) como el URI de un archivo de vídeo local para la aplicación. El **MediaElement** comienza a reproducirse cuando se carga la página. Para evitar que los recursos multimedia comiencen a reproducirse inmediatamente, puedes establecer la propiedad [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/br227360) como **false**.
+Este lenguaje XAML crea un objeto [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) y establece su propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) como el URI de un archivo de vídeo que es local para la aplicación. El objeto **MediaPlayerElement** comienza a reproducirse cuando se carga la página. Para evitar que el contenido multimedia comience a reproducirse inmediatamente, puedes establecer la propiedad [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.autoplay.aspx) en **false**.
 
 ```xaml
-<MediaElement x:Name="mediaSimple" 
-              Source="Videos/video1.mp4" 
-              Width="400" AutoPlay="False"/>
+<MediaPlayerElement x:Name="mediaSimple"
+                    Source="Videos/video1.mp4"
+                    Width="400" AutoPlay="True"/>
 ```
 
-Este lenguaje XAML crea un [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) con los controles de transporte integrados habilitados y la propiedad [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/br227360) establecida como **false**.
+Este lenguaje XAML crea un objeto [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) con los controles de transporte integrados habilitados y la propiedad [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.autoplay.aspx) establecida en **false**.
 
 
-```csharp
-<MediaElement x:Name="mediaPlayer" 
-              Source="Videos/video1.mp4" 
-              Width="400" 
-              AutoPlay="False"
-              AreTransportControlsEnabled="True"/>
+```xaml
+<MediaPlayerElement x:Name="mediaPlayer"
+                    Source="Videos/video1.mp4"
+                    Width="400"
+                    AutoPlay="False"
+                    AreTransportControlsEnabled="True"/>
 ```
 
-### Controles de transporte multimedia
-MediaElement tiene controles de transporte integrados para reproducir, detener, pausar, cambiar el volumen, silenciar, realizar búsquedas o comprobar el progreso y elegir una pista de audio. Para habilitar estos controles, establece [**AreTransportControlsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn298977) en **true**. Para deshabilitarlos, establece **AreTransportControlsEnabled** en **false**. Los controles de transporte se representan mediante la clase [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn831962). Puedes usar los controles de transporte tal como están o personalizarlos de diversas maneras. Para obtener más información, consulta la referencia de clase [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn831962) y [Crear controles de transporte personalizados](custom-transport-controls.md).
+### Controles de transporte de contenido multimedia
+[**MediaPlayerElement**]((https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) tiene controles de transporte integrados para reproducir, detener, pausar, cambiar el volumen, silenciar, realizar búsquedas o comprobar el progreso, habilitar los subtítulos y elegir una pista de audio. Para habilitar estos controles, establece [**AreTransportControlsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.AreTransportControlsEnabled.aspx) en **true**. Para deshabilitarlos, establece **AreTransportControlsEnabled** en **false**. Los controles de transporte se representan mediante la clase [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn831962). Puedes usar los controles de transporte tal como están o personalizarlos de diversas maneras. Para obtener más información, consulta la referencia de la clase [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn831962) y el artículo [Crear controles de transporte personalizados](custom-transport-controls.md).
 
-Los controles de transporte permiten al usuario controlar la mayoría de los aspectos del [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926), pero el **MediaElement** también proporciona varias propiedades y métodos que puedes usar para controlar la reproducción de vídeo y audio. Para obtener más información, consulta la sección [Controlar MediaElement mediante programación](#control_mediaelement_programmatically) más adelante en este artículo.
+Los controles de transporte admiten diseños de fila única y doble. El primer ejemplo mostrado aquí es un diseño de fila única, con el botón de reproducir/pausar situado a la izquierda de la escala de tiempo multimedia. Este diseño se reserva para pantallas de reproducción de contenido multimedia compactas e incorporadas.
 
-Los controles de transporte admiten diseños de fila única y doble. El primer ejemplo mostrado aquí es un diseño de fila única, con el botón de reproducir/pausa situado a la izquierda de la escala de tiempo multimedia. Este diseño es recomendable para pantallas compactas. 
-
-![Ejemplo de controles MTC en el teléfono, de una sola fila](images/controls_mtc_singlerow_phone.png)
+![Ejemplo de controles MTC, fila única](images/controls/mtc_single_inprod_02.png)
 
 Se recomienda el diseño de controles de fila doble (a continuación) en la mayoría de los escenarios de uso, especialmente en las pantallas grandes. Este diseño proporciona más espacio para los controles y facilita el uso de la escala de tiempo para el usuario.
 
-![Ejemplo de controles MTC en el teléfono, de doble fila](images/controls_mtc_doublerow_phone.png)
+![Ejemplo de controles MTC en el teléfono, fila doble](images/controls/mtc_double_inprod.png)
 
-**Controles de transporte multimedia del sistema**
+**Controles de transporte de contenido multimedia del sistema**
 
-También puedes integrar [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) con los controles de transporte multimedia del sistema. Los controles de transporte del sistema son los controles que aparecen cuando se presionan teclas multimedia de hardware, como los botones multimedia de los teclados. Si el usuario presiona la tecla de pausa en un teclado y tu aplicación admite [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677), tu aplicación recibe una notificación y realiza la acción apropiada. Para obtener más información, consulta [controles de transporte multimedia del sistema](https://msdn.microsoft.com/library/windows/apps/mt228338).
+[**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) se integra automáticamente con los controles de transporte de contenido multimedia del sistema. Los controles de transporte de contenido multimedia del sistema son los controles que aparecen cuando se presionan teclas multimedia de hardware, como los botones multimedia de los teclados. Para obtener más información, consulta [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677).
+
+> **Nota**&nbsp;&nbsp; [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) no se integra automáticamente con los controles de transporte de contenido multimedia del sistema, por lo que debes conectarlos de forma manual. Para obtener más información, consulta [Controles de transporte de contenido multimedia del sistema](https://msdn.microsoft.com/library/windows/apps/mt228338).
+
 
 ### Establecer el origen del contenido multimedia
-Para reproducir archivos de la red o archivos insertados en la aplicación, debes establecer la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) en la ruta de acceso del archivo.
+Para reproducir archivos de la red o archivos insertados en la aplicación, establece la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) en [**MediaSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.aspx) con la ruta de acceso del archivo.
 
-
-            **Sugerencia**  Para abrir archivos desde Internet, tienes que declarar la capacidad **Internet (Client)** en el manifiesto de la aplicación (Package.appxmanifest). Para obtener más información sobre las funcionalidades de declaración, consulta [Declaraciones de funcionalidad de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270968).
+**Sugerencia**  Para abrir archivos desde Internet, tienes que declarar la función **Internet (Client)** en el manifiesto de la aplicación (Package.appxmanifest). Para obtener más información sobre las funciones de declaración, consulta [Declaraciones de funcionalidades de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
  
 
-En este código se intenta establecer la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) del objeto [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) definido en XAML en la ruta de acceso de un archivo especificado en un objeto [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683).
+En este código se intenta establecer la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) de la clase [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) definida en XAML en la ruta de acceso de un archivo especificado en una clase [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683).
 
 ```xaml
-<TextBox x:Name="txtFilePath" Width="400" 
+<TextBox x:Name="txtFilePath" Width="400"
          FontSize="20"
          KeyUp="TxtFilePath_KeyUp"
          Header="File path"
@@ -107,22 +119,22 @@ private void LoadMediaFromString(string path)
     try
     {
         Uri pathUri = new Uri(path);
-        mediaPlayer.Source = pathUri;
+        mediaPlayer.Source = MediaSource.CreateFromUri(pathUri);
     }
     catch (Exception ex)
     {
         if (ex is FormatException)
         {
-            // handle exception. 
+            // handle exception.
             // For example: Log error or notify user problem with file
         }
     }
 }
 ```
 
-Para establecer el origen multimedia en un archivo multimedia insertado en la aplicación, crea un [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017) con la ruta de acceso con el prefijo **ms-appx:///** y establece el [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) en él. Por ejemplo, para un archivo llamado **video1.mp4** que se encuentra en una subcarpeta **Vídeos**, la ruta de acceso tendría este aspecto: **ms-appx:///Videos/video1.mp4**
+Para establecer el origen del contenido multimedia en un archivo multimedia insertado en la aplicación, inicializa un constructor [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017) con la ruta de acceso con el prefijo **ms-appx:///**, crea una clase [**MediaSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.aspx) con el Uri y luego establece la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) en dicho Uri. Por ejemplo, para un archivo llamado **video1.mp4** que se encuentra en una subcarpeta **Vídeos**, la ruta de acceso tendría este aspecto: **ms-appx:///Videos/video1.mp4**
 
-Este código establece la propiedad [**origen**](https://msdn.microsoft.com/library/windows/apps/br227419) de la clase [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) previamente definida en XAML como **ms-appx:///Videos/video1.mp4**.
+Este código establece la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) de la clase [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) previamente definida en XAML como **ms-appx:///Videos/video1.mp4**.
 
 ```csharp
 private void LoadEmbeddedAppFile()
@@ -130,13 +142,13 @@ private void LoadEmbeddedAppFile()
     try
     {
         Uri pathUri = new Uri("ms-appx:///Videos/video1.mp4");
-        mediaPlayer.Source = pathUri;
+        mediaPlayer.Source = MediaSource.CreateFromUri(pathUri);
     }
     catch (Exception ex)
     {
         if (ex is FormatException)
         {
-            // handle exception. 
+            // handle exception.
             // For example: Log error or notify user problem with file
         }
     }
@@ -144,7 +156,7 @@ private void LoadEmbeddedAppFile()
 ```
 
 ### Abrir archivos multimedia locales
-Para abrir archivos del sistema local o de Microsoft OneDrive, puedes usar el control [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para obtener el archivo y [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) para establecer el origen del contenido multimedia o bien puedes acceder a las carpetas de contenido multimedia del usuario mediante programación.
+Para abrir archivos del sistema local o de OneDrive, puedes usar [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para obtener el archivo y [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) para establecer el origen del contenido multimedia, o bien puedes acceder a las carpetas de contenido multimedia del usuario mediante programación.
 
 Si la aplicación necesita acceso a las carpetas **Música** o **Vídeo** sin interacción con el usuario, por ejemplo al enumerar todos los archivos de música o vídeo en la colección del usuario y mostrarlos en la aplicación, entonces debes declarar las funcionalidades **Biblioteca de música** y **Biblioteca de vídeos** . Para obtener más información, consulta [Archivos y carpetas en las bibliotecas de música, imágenes y vídeos](https://msdn.microsoft.com/library/windows/apps/mt188703).
 
@@ -156,14 +168,15 @@ El control [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/
 
     Usa la clase [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para seleccionar un archivo multimedia. Establece el [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850) para especificar qué tipos de archivos muestra el **FileOpenPicker**. Llama a [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275) para iniciar el selector de archivos y obtener el archivo.
 
-2.  Llama a [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) para establecer el archivo multimedia seleccionado en el [**MediaElement.Source**](https://msdn.microsoft.com/library/windows/apps/br227419).
+2.  Usa una clase [**MediaSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.aspx) para establecer el archivo multimedia elegido como la propiedad [**MediaPlayerElement.Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx).
 
-    Para establecer el [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) del [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) en el [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) devuelto de [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847), necesitas abrir una secuencia. Llama al método [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/dn889851) de **StorageFile**, que devuelve una secuencia que puedes pasar al método [**MediaElement.SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338). Después, debes llamar a [**Play**](https://msdn.microsoft.com/library/windows/apps/br227402) en **MediaElement** para iniciar el archivo multimedia.
+    Para usar la clase [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) devuelta desde la clase [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847), tienes que llamar al método [**CreateFromStorageFile**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.createfromstoragefile.aspx) en [**MediaSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.aspx) y establecerlo como la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) de [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx). Después, llama a [**Play**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.play.aspx) en [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx) para iniciar el archivo multimedia.
 
-En este ejemplo se muestra cómo usar el [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para elegir un archivo y establecerlo como el [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) de un [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926).
+
+En este ejemplo se muestra cómo usar la clase [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para elegir un archivo y establecerlo como la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) de una clase [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx).
 
 ```xaml
-<MediaElement x:Name="mediaPlayer"/>
+<MediaPlayerElement x:Name="mediaPlayer"/>
 ...
 <Button Content="Choose file" Click="Button_Click"/>
 ```
@@ -184,34 +197,33 @@ async private System.Threading.Tasks.Task SetLocalMedia()
     openPicker.FileTypeFilter.Add(".mp3");
 
     var file = await openPicker.PickSingleFileAsync();
-    
-    // mediaPlayer is a MediaElement defined in XAML
+
+    // mediaPlayer is a MediaPlayerElement defined in XAML
     if (file != null)
     {
-        var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
-        mediaPlayer.SetSource(stream, file.ContentType);
+        mediaPlayer.Source = MediaSource.CreateFromStorageFile(file);
 
-        mediaPlayer.Play();
+        mediaPlayer.MediaPlayer.Play();
     }
 }
 ```
 
 ### Establecer el origen de póster
-Puedes usar la propiedad [**PosterSource**](https://msdn.microsoft.com/library/windows/apps/br227409) para proporcionar el [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) con una representación visual antes de cargar el contenido multimedia. Un **PosterSource** es una imagen, como una captura de pantalla o el póster de una película que se muestra en lugar del contenido multimedia. El **PosterSource** se muestra en las siguientes situaciones:
+Puedes usar la propiedad [**PosterSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.PosterSource.aspx) para proporcionar a la clase [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) una representación visual antes de cargar el contenido multimedia. Un **PosterSource** es una imagen, como una captura de pantalla o el póster de una película que se muestra en lugar del contenido multimedia. El **PosterSource** se muestra en las siguientes situaciones:
 
--   Cuando no hay un origen válido establecido. Por ejemplo, [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) no está establecido, **Source** se estableció en **Null** o el origen no es válido (como en el caso en el que se desencadena un evento [**MediaFailed**](https://msdn.microsoft.com/library/windows/apps/br227393)).
--   Mientras se carga el contenido multimedia. Por ejemplo, se estableció un origen válido, pero aún no se desencadenó el evento [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/br227394).
+-   Cuando no hay un origen válido establecido. Por ejemplo, [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) no está establecido, **Source** se estableció en **Null** o el origen no es válido (como en el caso en el que se desencadena un evento [**MediaFailed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.mediafailed.aspx)).
+-   Mientras se carga el contenido multimedia. Por ejemplo, se estableció un origen válido, pero aún no se desencadenó el evento [**MediaOpened**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.mediaopened.aspx).
 -   Cuando se hace streaming del contenido multimedia a otro dispositivo.
 -   Cuando el contenido multimedia es solo audio.
 
-Este es un [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) con su [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) establecido en una pista de álbum y su [**PosterSource**](https://msdn.microsoft.com/library/windows/apps/br227409) establecido en una imagen de portada de álbum.
+Esta es una clase [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) con su propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) establecida en una pista de álbum y su propiedad [**PosterSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.PosterSource.aspx) establecida en una imagen de portada de álbum.
 
 ```xaml
-<MediaElement Source="Media/Track1.mp4" PosterSource="Media/AlbumCover.png"/> 
+<MediaPlayerElement Source="Media/Track1.mp4" PosterSource="Media/AlbumCover.png"/>
 ```
 
 ### Mantener activa la pantalla del dispositivo
-Por lo general, los dispositivos oscurecen la pantalla (y terminan apagándola) para ahorrar batería cuando el usuario se ausenta, pero las aplicaciones de vídeo necesitan mantenerla activada para que el usuario pueda ver el vídeo. Para evitar que la pantalla se desactive cuando no se detecta ninguna acción del usuario (por ejemplo, cuando una aplicación reproduce un vídeo a pantalla completa), puedes llamar a [**DisplayRequest.RequestActive**](https://msdn.microsoft.com/library/windows/apps/br241818). La clase [**DisplayRequest**](https://msdn.microsoft.com/library/windows/apps/br241816) te permite indicarle a Windows que mantenga activada la pantalla para que el usuario pueda ver el vídeo.
+Por lo general, los dispositivos oscurecen la pantalla (y terminan apagándola) para ahorrar batería cuando el usuario se ausenta, pero las aplicaciones de vídeo necesitan mantenerla activada para que el usuario pueda ver el vídeo. Para evitar que se desactive la pantalla cuando no se detecte ninguna acción del usuario (por ejemplo, cuando una aplicación reproduce un vídeo), puedes llamar al método [**DisplayRequest.RequestActive**](https://msdn.microsoft.com/library/windows/apps/br241818). La clase [**DisplayRequest**](https://msdn.microsoft.com/library/windows/apps/br241816) te permite indicarle a Windows que mantenga activada la pantalla para que el usuario pueda ver el vídeo.
 
 Para ahorrar energía y duración de la batería, debes llamar a [**DisplayRequest.RequestRelease**](https://msdn.microsoft.com/library/windows/apps/br241819) para liberar la solicitud de pantalla cuando ya no sea necesaria. Windows desactiva automáticamente la pantalla activa de la aplicación cuando la aplicación se quita de la pantalla y vuelve a activarla cuando la aplicación vuelve a estar en primer plano.
 
@@ -221,7 +233,9 @@ Estas son algunas situaciones en las que debes liberar la solicitud de pantalla:
 -   La reproducción se detiene. Por ejemplo, se terminó de reproducir el vídeo o finalizó la presentación.
 -   Error de reproducción. Por ejemplo, problemas de conectividad de red o un archivo dañado.
 
-**Mantener la pantalla activa**
+> **Nota**&nbsp;&nbsp; Si [**MediaPlayerElement.IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.IsFullWindow.aspx) se establece en true y el contenido multimedia está en reproducción, automáticamente se impedirá que la pantalla se desactive.
+
+**Para mantener la pantalla activa**
 
 1.  Crea una variable [**DisplayRequest**](https://msdn.microsoft.com/library/windows/apps/br241816) global. Inicialízala como nula.
 ```csharp
@@ -233,99 +247,60 @@ private DisplayRequest appDisplayRequest = null;
 
 3.  Llama a [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/br241819) para liberar la solicitud de pantalla siempre que la reproducción de vídeo se detenga, ponga en pausa o se interrumpa por un error de reproducción. Cuando la aplicación ya no tiene ninguna solicitud de pantalla activa, Windows ahorra batería oscureciendo la pantalla (y terminará apagándola) cuando el dispositivo no esté en uso.
 
-    Aquí, se usa el evento [**CurrentStateChanged**](https://msdn.microsoft.com/library/windows/apps/br227375) para detectar estas situaciones. Luego, usa la propiedad [**IsAudioOnly**](https://msdn.microsoft.com/library/windows/apps/hh965334) para determinar si se reproduce un archivo de audio o vídeo y mantener la pantalla activa solo si el vídeo se está reproduciendo.
+    Cada propiedad [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx) tiene una propiedad [**PlaybackSession**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.playbacksession.aspx) de tipo [**MediaPlaybackSession**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacksession.aspx) que controla diversos aspectos de la reproducción de contenido multimedia como [**PlaybackRate**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackrate.aspx), [**PlaybackState**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackstate.aspx) y [**Position**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx). En este ejemplo se usa el evento [**PlaybackStateChanged**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackstatechanged.aspx) en [**MediaPlayer.PlaybackSession**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.playbacksession.aspx) para detectar situaciones en las que debes liberar la solicitud de pantalla. Por lo tanto, usa la propiedad [**NaturalVideoHeight**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacksession.naturalvideoheight.aspx) para determinar si hay un archivo de audio o vídeo en reproducción y mantener la pantalla activa solo si el vídeo se está reproduciendo.
     ```xaml
-<MediaElement Source="Media/video1.mp4"
-              CurrentStateChanged="MediaElement_CurrentStateChanged"/>
+<MediaPlayerElement x:Name="mpe" Source="Media/video1.mp4"/>
     ```
- 
+
     ```csharp
-private void MediaElement_CurrentStateChanged(object sender, RoutedEventArgs e)
-{
-    MediaElement mediaElement = sender as MediaElement;
-    if (mediaElement != null && mediaElement.IsAudioOnly == false)
+    protected override void OnNavigatedTo(NavigationEventArgs e)
     {
-        if (mediaElement.CurrentState == Windows.UI.Xaml.Media.MediaElementState.Playing)
-        {                
-            if (appDisplayRequest == null)
+        mpe.MediaPlayer.PlaybackSession.PlaybackStateChanged += MediaPlayerElement_CurrentStateChanged;
+        base.OnNavigatedTo(e);
+    }
+
+    private void MediaPlayerElement_CurrentStateChanged(object sender, RoutedEventArgs e)
+    {
+        MediaPlaybackSession playbackSession = sender as MediaPlaybackSession;
+        if (playbackSession != null && playbackSession.NaturalVideoHeight != 0)
+        {
+            if(playbackSession.PlaybackState == MediaPlaybackState.Playing)
             {
-                // This call creates an instance of the DisplayRequest object. 
-                appDisplayRequest = new DisplayRequest();
-                appDisplayRequest.RequestActive();
+                if(appDisplayRequest == null)
+                {
+                    // This call creates an instance of the DisplayRequest object
+                    appDisplayRequest = new DisplayRequest();
+                    appDisplayRequest.RequestActive();
+                }
+            }
+            else // PlaybackState is Buffering, None, Opening or Paused
+            {
+                if(appDisplayRequest != null)
+                {
+                      // Deactivate the displayr request and set the var to null
+                      appDisplayRequest.RequestRelease();
+                      appDisplayRequest = null;
+                }
             }
         }
-        else // CurrentState is Buffering, Closed, Opening, Paused, or Stopped. 
-        {
-            if (appDisplayRequest != null)
-            {
-                // Deactivate the display request and set the var to null.
-                appDisplayRequest.RequestRelease();
-                appDisplayRequest = null;
-            }
-        }            
+
     }
-} 
     ```
 
 ### Controlar el reproductor multimedia mediante programación
+[**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) proporciona varias propiedades, métodos y eventos para controlar la reproducción de audio y vídeo a través de la propiedad [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx). Para obtener una lista completa de propiedades, métodos y eventos, consulta la página de referencia de [**MediaPlayer**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.aspx).
 
-            [
-              **MediaElement**
-            ](https://msdn.microsoft.com/library/windows/apps/br242926) proporciona varias propiedades, métodos y eventos para controlar la reproducción de audio y vídeo. Para obtener una lista completa de las propiedades, los métodos y los eventos, consulta la página de referencia de [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926).
-    
-
-### Seleccionar pistas de audio en diferentes idiomas
-
-Usa la propiedad [**AudioStreamIndex**](https://msdn.microsoft.com/library/windows/apps/br227358) y el método [**GetAudioStreamLanguage**](https://msdn.microsoft.com/library/windows/apps/br227384) para cambiar el audio a una pista de idioma distinto en un vídeo. Los vídeos también pueden contener varias pistas de audio en el mismo idioma, como los comentarios del director en las películas. En este ejemplo se muestra específicamente cómo cambiar entre idiomas distintos, pero puedes modificar este código para cambiar entre las pistas de audio.
-
-**Seleccionar pistas de audio en diferentes idiomas**
-
-1.  Obtén las pistas de audio.
-
-    Para buscar una pista en un idioma específico, empieza recorriendo todas las pistas de audio del vídeo. Usa [**AudioStreamCount**](https://msdn.microsoft.com/library/windows/apps/br227356) como el valor máximo de un bucle **for**.
-
-2.  Obtén el idioma de la pista de audio.
-
-    Usa el método [**GetAudioStreamLanguage**](https://msdn.microsoft.com/library/windows/apps/br227384) para obtener el idioma de la pista. El idioma de la pista se identifica con un [código de idioma](http://msdn.microsoft.com/library/ms533052(vs.85).aspx), como **"en"** para inglés o **"ja"** para japonés.
-
-3.  Establece la pista de audio activa.
-
-    Cuando encuentres la pista con el idioma deseado, establece [**AudioStreamIndex**](https://msdn.microsoft.com/library/windows/apps/br227358) en el índice de la pista. Al establecer **AudioStreamIndex** en **null** se selecciona la pista de audio predeterminada que se define mediante el contenido.
-
-Con el siguiente código se intenta establecer la pista de audio en el idioma especificado. Recorre las distintas pistas de audio en un objeto [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) y usa [**GetAudioStreamLanguage**](https://msdn.microsoft.com/library/windows/apps/br227384) para obtener el idioma de cada pista. Si existe la pista de idioma deseado, el [**AudioStreamIndex**](https://msdn.microsoft.com/library/windows/apps/br227358) se establece en el índice de esa pista.
-
-```csharp
-/// <summary>
-/// Attemps to set the audio track of a video to a specific language
-/// </summary>
-/// <param name="lcid">The id of the language. For example, "en" or "ja"</param>
-/// <returns>true if the track was set; otherwise, false.</returns>
-private bool SetAudioLanguage(string lcid, MediaElement media)
-{
-    bool wasLanguageSet = false;
-
-    for (int index = 0; index < media.AudioStreamCount; index++)
-    {
-        if (media.GetAudioStreamLanguage(index) == lcid)
-        {
-            media.AudioStreamIndex = index;
-            wasLanguageSet = true;
-        }
-    }
-
-    return wasLanguageSet;
-}
-```
+### Escenarios de reproducción avanzada de contenido multimedia
+Para los escenarios más complejos de reproducción de contenido multimedia, como reproducir una lista de reproducción, cambiar entre idiomas de audio o crear pistas de metadatos personalizadas, establece la propiedad [**MediaPlayerElement.Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) en una clase [**MediaPlaybackItem**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) o [**MediaPlaybackList**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx). Consulta la página de [**reproducción de contenido multimedia**](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/media-playback-with-mediasource) del Centro de desarrollo para obtener más información sobre cómo habilitar diversas funciones multimedia avanzadas.
 
 ### Habilitar la representación de vídeo a pantalla completa
 
-Establece la propiedad [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/dn298980) para habilitar y deshabilitar la representación a pantalla completa. Al establecer la representación a pantalla completa mediante programación en la aplicación, debes usar siempre **IsFullWindow** en lugar de hacerlo manualmente. 
-            **IsFullWindow** garantiza que se llevarán a cabo las optimizaciones en el nivel del sistema que mejoran el rendimiento y la duración de la batería. Si la representación a pantalla completa no se configura correctamente, es posible que estas optimizaciones no se habiliten.
+Establece la propiedad [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.isfullwindow.aspx) para habilitar y deshabilitar la representación a pantalla completa. Al establecer la representación a pantalla completa mediante programación en la aplicación, debes usar siempre **IsFullWindow** en lugar de hacerlo manualmente. **IsFullWindow** garantiza que se realizarán las optimizaciones en el nivel del sistema que mejoran el rendimiento y la duración de la batería. Si la representación a pantalla completa no se configura correctamente, es posible que estas optimizaciones no se habiliten.
 
 Con el siguiente código se crea un [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244) que alterna la representación a pantalla completa.
 
 ```xaml
-<AppBarButton Icon="FullScreen" 
+<AppBarButton Icon="FullScreen"
               Label="Full Window"
               Click="FullWindow_Click"/>>
 ```
@@ -339,29 +314,19 @@ private void FullWindow_Click(object sender, object e)
 
 ### Cambiar el tamaño del vídeo y ampliarlo
 
-Usa la propiedad [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) para cambiar la forma en que el contenido de vídeo rellena el contenedor en el que se encuentra. Esto amplía el vídeo y cambia su tamaño según el valor de [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968). Los estados de **Stretch** son similares a la configuración de tamaño de imagen en muchos televisores. Puedes enlazarlo con un botón y dejar que el usuario elija qué configuración prefiere.
+Usa la propiedad [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.stretch.aspx) para cambiar la forma en que el contenido de vídeo o [**PosterSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.postersource.aspx) rellenan el contenedor en el que se encuentran. Esto amplía el vídeo y cambia su tamaño según el valor de [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968). Los estados de **Stretch** son similares a la configuración de tamaño de imagen en muchos televisores. Puedes enlazarlo con un botón y dejar que el usuario elija qué configuración prefiere.
 
--   
-            [
-              **None**
-            ](https://msdn.microsoft.com/library/windows/apps/br242968) muestra la resolución nativa del contenido en su tamaño original.
--   
-            [
-              **Uniform**
-            ](https://msdn.microsoft.com/library/windows/apps/br242968) rellena la mayor cantidad de espacio posible, a la vez que conserva la relación de aspecto y el contenido de la imagen. Esto puede hacer que aparezcan barras negras horizontales o verticales en los bordes del vídeo. Esto es similar a los modos de pantalla panorámica.
--   
-            [
-              **UniformToFill**
-            ](https://msdn.microsoft.com/library/windows/apps/br242968) rellena todo el espacio, pero conserva la relación de aspecto. Esto puede hacer que se recorte parte de la imagen. Esto es similar a los modos de pantalla completa.
--   
-            [
-              **Fill**
-            ](https://msdn.microsoft.com/library/windows/apps/br242968) rellena todo el espacio, pero no conserva la relación de aspecto. La imagen no se recorta, pero se podría estirar. Esto es similar a los modos con ajuste.
+-   [**None**](https://msdn.microsoft.com/library/windows/apps/br242968) muestra la resolución nativa del contenido en su tamaño original.
+-   [**Uniform**](https://msdn.microsoft.com/library/windows/apps/br242968) rellena la mayor cantidad de espacio posible, a la vez que conserva la relación de aspecto y el contenido de la imagen. Esto puede hacer que aparezcan barras negras horizontales o verticales en los bordes del vídeo. Esto es similar a los modos de pantalla panorámica.
+-   [**UniformToFill**](https://msdn.microsoft.com/library/windows/apps/br242968) rellena todo el espacio, pero conserva la relación de aspecto. Esto puede hacer que se recorte parte de la imagen. Esto es similar a los modos de pantalla completa.
+-   [**Fill**](https://msdn.microsoft.com/library/windows/apps/br242968) rellena todo el espacio, pero no conserva la relación de aspecto. La imagen no se recorta, pero se podría estirar. Esto es similar a los modos con ajuste.
 
-![Ampliar los valores de enumeración](images/Image_Stretch.jpg) Aquí, un [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244) se usa para recorrer las opciones [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968). Una instrucción **switch** comprueba el estado actual de la propiedad [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) y la establece en el siguiente valor en la enumeración **Stretch**. Esto permite que el usuario recorra los distintos estados de imagen ampliada.
+![Ampliar los valores de las enumeraciones](images/Image_Stretch.jpg)
+
+Aquí, un [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244) se usa para recorrer las opciones [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968). Una instrucción **switch** comprueba el estado actual de la propiedad [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) y la establece en el siguiente valor en la enumeración **Stretch**. Esto permite que el usuario recorra los distintos estados de imagen ampliada.
 
 ```xaml
-<AppBarButton Icon="Switch" 
+<AppBarButton Icon="Switch"
               Label="Resize Video"
               Click="PictureSize_Click" />
 ```
@@ -391,33 +356,27 @@ private void PictureSize_Click(object sender, RoutedEventArgs e)
 
 ### Habilitar la reproducción de latencia baja
 
-Establece la propiedad [**RealTimePlayback**](https://msdn.microsoft.com/library/windows/apps/br227414) en **true** en un [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) para permitir que el elemento multimedia reduzca la latencia inicial de la reproducción. Esto es fundamental para las aplicaciones de comunicaciones bidireccionales y se puede aplicar a algunos escenarios de juegos. Ten en cuenta que este modo consume más recursos y es menos eficiente desde el punto de vista de energía.
+Establece la propiedad [**RealTimePlayback**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.realtimeplayback.aspx) en **true** en una propiedad [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx) para permitir que el elemento de reproductor multimedia reduzca la latencia inicial de la reproducción. Esto es fundamental para las aplicaciones de comunicaciones bidireccionales y se puede aplicar a algunos escenarios de juegos. Ten en cuenta que este modo consume más recursos y es menos eficiente desde el punto de vista energético.
 
-En este ejemplo se crea un [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) y [**RealTimePlayback**](https://msdn.microsoft.com/library/windows/apps/br227414) se establece en **true**.
+En este ejemplo se crea una clase [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) y se establece [**RealTimePlayback**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.realtimeplayback.aspx) en **true**.
 
-```xaml
-<MediaElement x:Name="mediaPlayer" RealTimePlayback="True"/>
-```
 
 ```csharp
-MediaElement mediaPlayer = new MediaElement();
-mediaPlayer.RealTimePlayback = true;
+MediaPlayerElement mp = new MediaPlayerElement();
+mp.MediaPlayer.RealTimePlayback = true;
 ```
-    
-## Recomendaciones 
 
-El reproductor multimedia se suministra con un tema oscuro y uno claro, pero opta por el tema oscuro en la mayoría de situaciones. El fondo oscuro proporciona un mejor contraste, en particular para condiciones de poca luz y limita la interferencia de la barra de control en la experiencia de visualización.
+## Recomendaciones
 
-Fomenta una experiencia de visualización dedicada promocionando el modo de pantalla completa sobre el modo insertado. La experiencia de visualización en pantalla completa es óptima, y las opciones están restringidas en el modo insertado.
+El reproductor multimedia admite temas claros y oscuros, pero el tema oscuro proporciona una mejor experiencia para la mayoría de los escenarios de entretenimiento. El fondo oscuro proporciona un mejor contraste, en particular para condiciones de poca luz, y limita la interferencia de la barra de control en la experiencia de visualización.
 
-Si dispones de espacio en la pantalla, usa el diseño de dos filas. Proporciona más espacio para los controles que el diseño de una fila compacto.
+Durante la reproducción de contenido de vídeo, fomenta una experiencia de visualización dedicada promocionando el modo de pantalla completa sobre el modo incorporado. La experiencia de visualización en pantalla completa es óptima, y las opciones están restringidas en el modo incorporado.
 
-Agrega las opciones personalizadas que necesites al reproductor multimedia para proporcionar la mejor experiencia para tu aplicación, pero ten en cuenta lo siguiente:
+Si tienes espacio en la pantalla o diseñas para la experiencia de 10 pies, opta por el diseño de doble fila. Proporciona más espacio para los controles que el diseño compacto de una sola fila y resulta más fácil navegar con el controlador para juegos en la experiencia de 10pies.
 
--   Limita la personalización de los controles predeterminados, que se han optimizado para la experiencia de reproducción de multimedia.
--   En los teléfonos y en otros dispositivos móviles, el cromo del dispositivo permanece en negro, pero en los equipos portátiles y en los equipos de escritorio, el cromo del dispositivo hereda el color del tema del usuario.
--   No intentes sobrecargar la barra de control con demasiadas opciones.
--   No reduzcas la escala de tiempo multimedia por debajo de su tamaño mínimo predeterminado, lo cual limita gravemente su efectividad.
+> **Nota**&nbsp;&nbsp; Consulta el artículo [Diseño para Xbox y televisión](../input-and-devices/designing-for-tv.md) para obtener más información sobre cómo optimizar la aplicación para la experiencia de 10pies.
+
+Los controles predeterminados se han optimizado para la reproducción de contenido multimedia; sin embargo, tienes la posibilidad de las agregar opciones personalizadas que necesites en el reproductor multimedia con el fin de proporcionar experiencia óptima para tu aplicación. Consulta el artículo [Crear controles de transporte personalizados](custom-transport-controls.md) para obtener más información sobre cómo agregar controles personalizados.
 
 ## Artículos relacionados
 
@@ -426,6 +385,6 @@ Agrega las opciones personalizadas que necesites al reproductor multimedia para 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

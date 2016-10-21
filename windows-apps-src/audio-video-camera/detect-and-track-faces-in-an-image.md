@@ -3,17 +3,18 @@ author: drewbatgit
 ms.assetid: 84729E44-10E9-4D7D-8575-6A9D97467ECD
 description: "Este tema muestra cómo usar el FaceDetector para detectar los rostros de una imagen El FaceTracker está optimizado para realizar el seguimiento facial durante una secuencia de fotogramas de vídeo."
 title: "Detectar rostros en imágenes o vídeos"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
+translationtype: Human Translation
+ms.sourcegitcommit: 7526d5ddfbaa6f5128ef5775bc75cc48768f647d
+ms.openlocfilehash: 4f0fa85639711302a2f6eb187cde8f7a94de70df
 
 ---
 
 # Detectar rostros en imágenes o vídeos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-\[Parte de la información hace referencia a la versión preliminar del producto, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
+\[Parte de la información hace referencia a la versión preliminar del producto, que puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
 
 Este tema muestra cómo usar el [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) para detectar los rostros de una imagen El [**FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974150) está optimizado para realizar el seguimiento facial durante una secuencia de fotogramas de vídeo.
 
@@ -45,8 +46,7 @@ En la versión actual, la clase **FaceDetector** solo admite imágenes en Gray8 
 
 [!code-cs[Formato](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetFormat)]
 
-Crea una instancia del objeto **FaceDetector** mediante una llamada a [**CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn974132) y, luego, llama a [**DetectFacesAsync**](https://msdn.microsoft.com/library/windows/apps/dn974134) y pasa el mapa de bits que se ha escalado a un tamaño razonable y convertido a un formato de píxel admitido. Este método devuelve una lista de objetos [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123). 
-            A continuación se muestra el método auxiliar **ShowDetectedFaces**, que dibuja cuadrados alrededor de los rostros de la imagen.
+Crea una instancia del objeto **FaceDetector** mediante una llamada a [**CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn974132) y luego llama a [**DetectFacesAsync**](https://msdn.microsoft.com/library/windows/apps/dn974134) y pasa el mapa de bits que se ha escalado a un tamaño razonable y se ha convertido a un formato de píxel admitido. Este método devuelve una lista de objetos [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123). A continuación se muestra el método auxiliar **ShowDetectedFaces**, que dibuja cuadrados alrededor de los rostros de la imagen.
 
 [!code-cs[Detectar](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDetect)]
 
@@ -64,7 +64,7 @@ Define algunas variables de miembro para aplicar estilo a los cuadrados que se d
 
 En el método auxiliar **ShowDetectedFaces**, se crea un nuevo [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101) y se establece el origen en un [**SoftwareBitmapSource**](https://msdn.microsoft.com/library/windows/apps/dn997854) creado a partir del **SoftwareBitmap** que representa la imagen de origen. El fondo del control **Canvas** XAML se establece en el pincel de imagen.
 
-Si la lista de rostros pasada al método auxiliar no está vacía, recorre cada rostro de la lista y usa la propiedad [**FaceBox**](https://msdn.microsoft.com/library/windows/apps/dn974126) de la clase [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123) para determinar la posición y el tamaño del rectángulo dentro de la imagen que contiene el rostro. Dada la alta probabilidad de que el control **Canvas** tenga un tamaño diferente al de la imagen de origen, debes multiplicar las coordenadas X e Y, así como el ancho y el alto, del **FaceBox** por un valor de escala que sea la proporción entre el tamaño de la imagen de origen y el tamaño real del control **Canvas**.
+Si la lista de rostros pasada al método auxiliar no está vacía, recorre cada rostro de la lista y usa la propiedad [**FaceBox**](https://msdn.microsoft.com/library/windows/apps/dn974126) de la clase [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123) para determinar la posición y el tamaño del rectángulo dentro de la imagen que contiene el rostro. Dada la alta probabilidad de que el control **Canvas** tenga un tamaño diferente al de la imagen de origen, debes multiplicar las coordenadas X e Y, así como el ancho y el alto, de la propiedad **FaceBox** por un valor de escalado que sea la proporción entre el tamaño de la imagen de origen y el tamaño real del control **Canvas**.
 
 [!code-cs[ShowDetectedFaces](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetShowDetectedFaces)]
 
@@ -88,7 +88,7 @@ La clase [**FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974
 
 Al igual que con **FaceDetector**, el **FaceTracker** admite un conjunto limitado de formatos de píxel. En este ejemplo se abandona la detección de rostro si el fotograma suministrado no está en el formato Nv12.
 
-Llama a [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn974157) para recuperar una lista de objetos [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123) que representen los rostros del fotograma. Cuando tengas la lista de rostros, puedes mostrarlos del mismo modo descrito anteriormente para la detección de rostro. Ten en cuenta que, dado que el método auxiliar de seguimiento facial no se llama en el subproceso de la interfaz de usuario, debes realizar las actualizaciones de la interfaz de usuario en un [**CoredDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) de llamada.
+Llama a [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn974157) para recuperar una lista de objetos [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123) que representen los rostros del fotograma. Cuando tengas la lista de rostros, puedes mostrarlos del mismo modo descrito anteriormente para la detección de rostros. Ten en cuenta que, dado que el método auxiliar de seguimiento facial no se llama en el subproceso de la interfaz de usuario, debes realizar las actualizaciones de la interfaz de usuario en un [**CoredDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) de llamada.
 
 [!code-cs[ProcessCurrentVideoFrame](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetProcessCurrentVideoFrame)]
 
@@ -97,10 +97,12 @@ Llama a [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/a
 * [Análisis de la escena para la captura multimedia](scene-analysis-for-media-capture.md)
 * [Ejemplo de detección de rostro básica](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
 * [Ejemplo de seguimiento facial básico](http://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
-* [Capturar fotografías y vídeos con MediaCapture](capture-photos-and-video-with-mediacapture.md)
+* [Cámara](camera.md)
+* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Reproducción de contenido multimedia](media-playback.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

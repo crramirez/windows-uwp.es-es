@@ -5,8 +5,9 @@ title: "Selección de texto e imágenes"
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 6533e76981d815c2d62008c17e2320fc770dfcc9
+ms.openlocfilehash: 45184c6ce84b9db215c576c5521e8ec1e834b162
 
 ---
 
@@ -77,7 +78,7 @@ En las imágenes siguientes se muestra cómo invocar el menú contextual pulsand
 
 ![pulsa (o pulsa y sostén) dentro de la selección o en una barra de redimensionamiento para invocar el menú contextual.](images/textselection-show-context.png)
 
-**Nota**  Estas interacciones tienen cierta variación en el caso de una palabra con errores ortográficos. Si pulsas una palabra marcada por tener errores ortográficos, la palabra se resalta y se invoca el menú contextual con la ortografía sugerida.
+**Nota** Estas interacciones presentan cierta variación en el caso de una palabra con errores ortográficos. Si pulsas una palabra marcada por tener errores ortográficos, la palabra se resalta y se invoca el menú contextual con la ortografía sugerida.
 
  
 
@@ -135,6 +136,6 @@ Por ejemplo, las barras de redimensionamiento también se pueden usar en aplicac
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 41ac0142-4d86-4bb3-b580-36d0d6956091
 title: Referencia de API de Device Portal para HoloLens
 description: "Obtén información sobre las API de REST de Windows Device Portal para HoloLens que puedes usar para acceder a los datos y controlar el dispositivo mediante programación."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5ed8ffe0a409569777fbf4e56a90ab3b80cd395c
+ms.openlocfilehash: 638ebca167b2ca56f00a83aab13b15c57b2dca2a
 
 ---
 # Referencia de API de Device Portal para HoloLens
@@ -154,7 +155,7 @@ POST | /api/holographic/management/settings/https
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -190,7 +191,7 @@ POST | /api/holographic/os/settings/ipd
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -228,7 +229,7 @@ GET/WebSocket | /api/holographic/perception/client
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -305,7 +306,7 @@ POST | /api/holographic/simulation/control/stream
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -438,7 +439,7 @@ POST | /api/holographic/simluation/control/mode
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -476,7 +477,7 @@ DELETE | /api/holographic/simulation/playback/file
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -544,7 +545,7 @@ GET | /api/holographic/simulation/playback/session/types
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -612,7 +613,7 @@ GET | /api/holographic/simulation/playback/session
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -648,7 +649,7 @@ POST | /api/holographic/simulation/playback/session/file
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -684,7 +685,7 @@ POST | /api/holographic/simulation/playback/session/pause
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -720,7 +721,7 @@ POST | /api/holographic/simulation/playback/session/play
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -756,7 +757,7 @@ POST | /api/holographic/simulation/playback/session/stop
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -792,7 +793,7 @@ DELETE | /api/holographic/simulation/playback/session/file
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -894,7 +895,7 @@ POST | /api/holographic/simulation/recording/start
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -971,7 +972,7 @@ DELETE | /api/holographic/mrc/file
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -1007,7 +1008,7 @@ GET | /api/holographic/mrc/file
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -1270,7 +1271,7 @@ GET | /api/holographic/stream/live.mp4
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -1309,7 +1310,7 @@ GET | /api/holographic/stream/live_high.mp4
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -1348,7 +1349,7 @@ GET | /api/holographic/stream/live_low.mp4
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -1387,7 +1388,7 @@ GET | /api/holographic/stream/live_med.mp4
 
 **Parámetros de URI**
 
-Puedes especificar los siguientes parámetros adicionales en el URI de solicitud:
+Puedes especificar los siguientes parámetros adicionales en el URI de la solicitud:
 
 Parámetro de URI | Descripción
 :---          | :---
@@ -1414,6 +1415,6 @@ loopback   | (**opcional**) Indica si se debe capturar el audio de la aplicació
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

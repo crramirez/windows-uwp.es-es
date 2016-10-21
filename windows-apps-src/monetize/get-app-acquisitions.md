@@ -1,31 +1,26 @@
 ---
 author: mcleanbyron
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de una aplicación, durante un intervalo de fechas especificado y otros filtros opcionales."
-title: "Obtener adquisiciones de la aplicación"
+description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de una aplicación durante un intervalo de fechas especificado y según otros filtros opcionales."
+title: "Obtener los datos de compra de la aplicación"
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: e28c309a51d28e14e57b8bd027dc8c353311d89a
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: c3efa347d11c2694d8814eb31f7e5f6825c7173a
 
 ---
 
-# Obtener adquisiciones de la aplicación
+# Obtener los datos de compra de la aplicación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de una aplicación, durante un intervalo de fechas especificado y otros filtros opcionales. Este método devuelve los datos en formato JSON.
+Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de una aplicación durante un intervalo de fechas especificado y según otros filtros opcionales. Este método devuelve los datos en formato JSON.
 
 ## Requisitos previos
 
 
-Para usar este método, necesitas lo siguiente:
+Para usar este método, primero debes hacer lo siguiente:
 
--   Asociar la aplicación de Azure AD que usarás para llamar a este método con la cuenta del Centro de desarrollo.
-
--   Obtener un token de acceso de Azure AD para la aplicación.
-
-Para más información, consulta [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md).
+* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de la Tienda Windows.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 ## Solicitud
 
@@ -42,7 +37,7 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | cadena | Obligatorio. El token de acceso de Azure AD del formulario **Bearer**&lt;*token*&gt;. |
+| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
@@ -132,7 +127,7 @@ Para más información, consulta [Acceder a los datos de análisis mediante los 
  
 ### Campos de filtro
 
-El parámetro *filter* de la solicitud contiene una o más instrucciones que filtran las filas en la respuesta. Cada instrucción contiene un campo y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Estos son algunos ejemplos de parámetros *filter*:
+El parámetro *filter* de la solicitud contiene una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un campo y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Estos son algunos ejemplos de parámetros *filter*:
 
 -   *filter=market eq 'US' and gender eq 'm'*
 -   *filter=(market ne 'US') and (gender ne 'Desconocido') and (gender ne 'm') and (market ne 'NO') and (ageGroup ne 'mayor que 55' or ageGroup ne ‘menor que 13’)*
@@ -313,13 +308,13 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 ## Temas relacionados
 
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
-* [Get IAP acquisitions (Obtener los datos de compra del IAP)](get-in-app-acquisitions.md)
-* [Get error reporting data (Obtener los datos del informe de errores)](get-error-reporting-data.md)
-* [Get app ratings (Obtener la clasificación de la aplicación)](get-app-ratings.md)
-* [Get app reviews (Obtener opiniones de la aplicación)](get-app-reviews.md)
+* [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
+* [Obtener los datos del informe de errores](get-error-reporting-data.md)
+* [Obtener la clasificación de la aplicación](get-app-ratings.md)
+* [Obtener las opiniones de la aplicación](get-app-reviews.md)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

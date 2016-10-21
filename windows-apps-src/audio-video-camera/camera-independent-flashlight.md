@@ -3,8 +3,9 @@ author: drewbatgit
 ms.assetid: D20C8E01-4E78-4115-A2E8-07BB3E67DDDC
 description: "En este artículo se muestra cómo acceder a la luz de un dispositivo y cómo usarla, si la hay. La funcionalidad de luz se administra por separado de la cámara del dispositivo y la funcionalidad de flash de la cámara."
 title: "Linterna independiente de la cámara"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 022ca2848c575f545402b13e19c0854a9e3ec74a
+translationtype: Human Translation
+ms.sourcegitcommit: 1b32633abc9365bf88137dff7c36ba0f2ad05d72
+ms.openlocfilehash: 8c256d8aba08d42fa00b46a01c8b7e773a0ab40c
 
 ---
 
@@ -13,7 +14,7 @@ ms.openlocfilehash: 022ca2848c575f545402b13e19c0854a9e3ec74a
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Este artículo muestra cómo acceder y usar la luz de un dispositivo, si está presente. La funcionalidad de luz se administra por separado de la funcionalidad de cámara y flash de cámara del dispositivo. Además de adquirir una referencia a la luz y ajustar su configuración, este artículo también muestra cómo liberar correctamente el recurso de luz cuando no está en uso y cómo detectar cuando cambia la disponibilidad de la luz en caso de que la está usando otra aplicación.
+Este artículo muestra cómo acceder y usar la luz de un dispositivo, si está presente. La funcionalidad de luz se administra por separado de la funcionalidad de cámara y flash de cámara del dispositivo. Además de adquirir una referencia a la luz y ajustar su configuración, este artículo también muestra cómo liberar correctamente el recurso de luz cuando no está en uso y cómo detectar cuándo cambia la disponibilidad de la luz en caso de que la esté usando otra aplicación.
 
 ## Obtener la luz predeterminada del dispositivo
 
@@ -39,9 +40,9 @@ Ten en cuenta que las API [**DeviceInformation**](https://msdn.microsoft.com/lib
 
 [!code-cs[GetLampWithSelectionString](./code/Lamp/cs/MainPage.xaml.cs#SnippetGetLampWithSelectionString)]
 
-## Ajustar configuración de luz
+## Ajustar la configuración de la luz
 
-Una vez que tengas una instancia de la clase [**Lamp**](https://msdn.microsoft.com/library/windows/apps/dn894310), activa la luz estableciendo la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn894330) en **true**.
+Una vez que tengas una instancia de la clase [**Lamp**](https://msdn.microsoft.com/library/windows/apps/dn894310), establece la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn894330) en **true** para activar la luz.
 
 [!code-cs[LampSettingsOn](./code/Lamp/cs/MainPage.xaml.cs#SnippetLampSettingsOn)]
 
@@ -65,11 +66,12 @@ En el controlador para el evento, comprueba la propiedad [**LampAvailabilityChan
 
 ## Desechar correctamente el recurso de luz cuando no esté en uso
 
-Cuando ya no uses la luz, debes deshabilitarla y llamar a [**Lamp.Close**](https://msdn.microsoft.com/library/windows/apps/dn894320) para liberar el recurso y permitir que otras aplicaciones puedan acceder a la luz. Esta propiedad se asigna al método **Dispose** si estás usando C#. Si registraste la aplicación para [**AvailabilityChanged**](https://msdn.microsoft.com/library/windows/apps/dn894317), debes anular el registro del controlador cuando deseches el recurso de luz. El lugar adecuado en el código para desechar el recurso de luz depende de la aplicación. Para definir el ámbito de acceso a la luz en una sola página, libera el recurso en el evento [**OnNavigatingFrom**](https://msdn.microsoft.com/library/windows/apps/br227509).
+Cuando ya no uses la luz, debes deshabilitarla y llamar a [**Lamp.Close**](https://msdn.microsoft.com/library/windows/apps/dn894320) para liberar el recurso y permitir que otras aplicaciones puedan acceder a la luz. Esta propiedad se asigna al método **Dispose** si estás usando C#. Si registraste la aplicación para [**AvailabilityChanged**](https://msdn.microsoft.com/library/windows/apps/dn894317), debes anular el registro del controlador cuando deseches el recurso de luz. El lugar adecuado en el código para desechar el recurso de luz depende de la aplicación. Para limitar el ámbito de acceso a la luz a una sola página, libera el recurso en el evento [**OnNavigatingFrom**](https://msdn.microsoft.com/library/windows/apps/br227509).
 
 [!code-cs[DisposeLamp](./code/Lamp/cs/MainPage.xaml.cs#SnippetDisposeLamp)]
 
- 
+## Temas relacionados
+- [Reproducción de contenido multimedia](media-playback.md)
 
  
 
@@ -79,6 +81,6 @@ Cuando ya no uses la luz, debes deshabilitarla y llamar a [**Lamp.Close**](https
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

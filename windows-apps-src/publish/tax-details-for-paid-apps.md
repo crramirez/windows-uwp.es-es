@@ -3,8 +3,9 @@ author: jnHs
 Description: "Para conocer tus consideraciones fiscales para la selección de precios, la implicación en el pago y la responsabilidad fiscal, consulta tus países/regiones de distribución en las tablas siguientes."
 title: Detalles de impuestos para aplicaciones de pago
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
+translationtype: Human Translation
 ms.sourcegitcommit: a59d999ac36e04fbfa53d5b8992b235bff2d3818
-ms.openlocfilehash: 364608e1452ddff7aae261bb0f29ec14ee4fb0a3
+ms.openlocfilehash: 3efc5a575a7ed81b4dfb8e2349e252e61355cfc2
 
 ---
 
@@ -13,11 +14,9 @@ ms.openlocfilehash: 364608e1452ddff7aae261bb0f29ec14ee4fb0a3
 
 Para conocer tus consideraciones fiscales para la selección de precios, la implicación en el pago y la responsabilidad fiscal, consulta tus países/regiones de distribución en las tablas siguientes.
 
-> 
-            **Nota** Puede que el ajuste de expansión comercial tenga implicaciones en el pago en un conjunto limitado de países/regiones. Para obtener más información sobre el ajuste de expansión comercial y los mercados en los que se aplica, consulta el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) y la lista de [países/regiones afectados](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
+> **Nota** Puede que el ajuste de expansión comercial tenga consecuencias en el pago en un conjunto limitado de países/regiones. Para obtener más información sobre el ajuste de expansión comercial y los mercados en los que se aplica, consulta el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058) y la lista de [países/regiones afectados](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
-> 
-            **Nota** El tipo impositivo está sujeto a cambios en cualquier momento. Microsoft no puede garantizar que los tipos indicados en las tablas siguientes sean precisos en todo momento.
+> **Note** El tipo impositivo puede cambiar en cualquier momento. Microsoft no puede garantizar que los tipos indicados en las tablas siguientes sean precisos en todo momento.
 
  
 
@@ -284,6 +283,6 @@ Cada fila del informe contiene la fecha y la hora de la transacción y, si está
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

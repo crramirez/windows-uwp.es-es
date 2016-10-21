@@ -3,8 +3,9 @@ title: "Autenticación e identidad de usuario"
 description: "Las aplicaciones para la Plataforma universal de Windows (UWP) presentan varias opciones de autenticación de usuario, que van desde el inicio de sesión único (SSO) simple mediante el agente de autenticación web hasta la autenticación en dos fases de alta seguridad."
 ms.assetid: 53E36DDC-200A-4850-AAF0-07ECA3662BB9
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: 3c890ac8d8363982d9f014c36b6cba59bee39f20
-ms.openlocfilehash: e748b319cdeda82aadaf8516e41883a3e32dc10c
+ms.openlocfilehash: 5ed154b3d31e8741972edc8c8a0fd343f41d4167
 
 ---
 
@@ -37,6 +38,6 @@ Recomendamos encarecidamente que empresas que usan Windows 10 consideren el uso 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

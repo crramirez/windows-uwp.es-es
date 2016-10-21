@@ -1,23 +1,34 @@
 ---
 author: Jwmsft
+Description: "Un botón ofrece al usuario una forma de desencadenar una acción inmediata."
 label: Buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: de5af77435b34b8f28005351a7de125f211ca522
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 845aa9935908aa68b64c856ee5e263490a3340c4
 
 ---
 # Botones
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 Un botón ofrece al usuario una forma de desencadenar una acción inmediata.
 
 ![Ejemplo de botones](images/controls/button.png)
 
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx"><strong>Clase Button</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx"><strong>Clase RepeatButton</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx"><strong>Evento Click</strong></a></li>
+</ul>
 
-<span class="sidebar_heading" style="font-weight: bold;">API importantes</span>
+</div>
+</div>
 
--   [**Clase Button**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
--   [**Clase RepeatButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)
--   [**Evento Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)
+
+
+
 
 ## ¿Es este el control adecuado?
 
@@ -71,7 +82,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 
 Cuando se pulsa un botón con un dedo o lápiz o se presiona el botón izquierdo del mouse mientras el puntero está sobre él, botón genera el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx). Si un botón tiene el foco del teclado, al presionar la tecla ENTRAR o la barra espaciadora también se genera el evento Click.
 
-Por lo general, no se pueden manipular eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) de bajo nivel en un Button porque tiene el comportamiento Click en su lugar. Para obtener más información, consulta el tema de [introducción a los eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/mt185584.aspx).
+Por lo general, no se pueden manipular eventos [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) de bajo nivel en un Button porque tiene el comportamiento Click en su lugar. Para obtener más información, consulta el tema de [introducción a los eventos y eventos enrutados](https://msdn.microsoft.com/en-us/library/windows/apps/mt185584.aspx).
 
 Puedes cambiar la forma en que un botón genera el evento Click cambiando la propiedad [**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx). El valor de ClickMode predeterminado es **Release**. Si ClickMode es **Hover**, no se genera el evento Click con el teclado o de forma táctil. 
 
@@ -147,89 +158,27 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 -   No use un botón de comando para establecer el estado.
 -   No cambies el texto del botón mientras se ejecuta la aplicación. Por ejemplo, no cambies el texto de un botón que dice "Siguiente" a "Continuar".
 -   No intercambies los estilos predeterminados de enviar, restablecer y botón.
--   No pongas demasiado contenido en un botón. Haz que el contenido sea escueto y fácil de entender (apenas una imagen y algo de texto).
+-   No pongas demasiado contenido en un botón. Haz que el contenido sea conciso y fácil de entender (solo una imagen y algo de texto).
 
 ## Botones Atrás
-El botón Atrás es una prestación de interfaz de usuario proporcionada por el sistema que permite la navegación hacia atrás a través de la pila de retroceso o el historial de navegación del usuario.
+El botón Atrás es un elemento de la interfaz de usuario proporcionado por el sistema que permite la navegación hacia atrás a través de la pila de retroceso o el historial de navegación del usuario. No es necesario que crees tu propio botón Atrás, pero es posible que debas realizar algunas acciones para permitir que la experiencia de navegación hacia atrás resulte adecuada. Para obtener más información, consulta [Historial y navegación hacia atrás](../layout/navigation-history-and-backwards-navigation.md)
 
-El ámbito del historial de navegación (en la aplicación o global) depende del dispositivo y el modo de dispositivo.
+## Obtener las muestras
+*   [Muestra de conceptos básicos de una interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
+    Aquí podrás ver todos los controles XAML en un formato interactivo.
 
-## <span id="examples"></span><span id="EXAMPLES"></span>Ejemplo
-
-
-La interfaz de usuario del botón Atrás del sistema está optimizada para cada dispositivo y tipo de entrada, pero la experiencia de navegación es global y coherente en los diferentes dispositivos y aplicaciones para la Plataforma universal de Windows (UWP). Estas experiencias diferentes incluyen lo siguiente:
-
-Sistema de teléfono de dispositivo ![en un teléfono](images/nav-back-phone.png)
--   Siempre está presente.
--   Un botón de hardware o de software situado en la parte inferior del dispositivo.
--   Navegación hacia atrás global dentro de la aplicación y entre aplicaciones.
-
-<span id="Tablet"></span><span id="tablet"></span><span id="TABLET"></span>Sistema de tableta ![en una tableta (en modo tableta)](images/nav-back-tablet.png)
--   Siempre está presente en el modo tableta.
-
-    No está disponible en modo de escritorio. En su lugar, se puede habilitar botón Atrás de la barra de título. Consulta [PC, Portátil, Tableta](#PC).
-
-    Los usuarios pueden cambiar entre ejecutar en modo tableta y modo de escritorio desde **Configuración &gt; Sistema &gt; Modo tableta** con la opción **Hacer que Windows se adapte mejor a los gestos táctiles al usar el dispositivo como tableta**.
-
--   Un botón de software de la barra de navegación situado en la parte inferior del dispositivo.
--   Navegación hacia atrás global dentro de la aplicación y entre aplicaciones.
-
-<span id="PC"></span><span id="pc"></span>Sistema de PC, equipo portátil y tableta ![en un equipo de escritorio o portátil](images/nav-back-pc.png)
--   Opcional en el modo de escritorio.
-
-    No está disponible en modo tableta. Consulta [Tableta](#Tablet).
-
-    Deshabilitado de manera predeterminada. Deben participar para habilitarlo.
-
-    Los usuarios pueden cambiar entre ejecutar en modo tableta y modo de escritorio desde **Configuración &gt; Sistema &gt; Modo tableta** con la opción **Hacer que Windows se adapte mejor a los gestos táctiles al usar el dispositivo como tableta**.
-
--   Un botón de software situado en la barra de título de la aplicación.
--   Navegación hacia atrás solo dentro de la aplicación. No es compatible con la navegación entre aplicaciones.
-
-Sistema de Surface Hub ![en Surface Hub](images/nav-back-surfacehub.png)
--   Siempre está presente.
--   Un botón de software situado en la parte inferior del dispositivo.
--   La navegación hacia atrás dentro de la aplicación y entre aplicaciones.
-
- 
-
-## Lo que se debe y no se debe hacer
-
-
--   Habilitar la navegación hacia atrás.
-
-    Si no se habilita la navegación hacia atrás, la aplicación se incluye en la pila de retroceso global pero no se mantiene el historial de navegación de página en la aplicación.
-
--   Habilitar el botón Atrás de la barra de título en modo de escritorio.
-
-    Se mantiene el historial de navegación de página en la aplicación; no se admite la navegación hacia atrás entre aplicaciones.
-
-    
-              **Nota** En el modo tableta, la barra de título se muestra cuando un usuario desliza rápidamente hacia abajo desde la parte superior del dispositivo o mueve el puntero del mouse cerca de la parte superior del dispositivo. Para evitar confusiones y duplicaciones, el botón Atrás de la barra de título no se muestra en modo tableta.
-
-     
-
--   Ocultar o deshabilitar el botón Atrás de la barra de título en modo de escritorio cuando el historial de navegación en la aplicación está agotado o no disponible.
-
-    Proporciona una indicación clara al usuario de que ha navegado lo más atrás posible.
-
--   Cada comando atrás debe retroceder una página en la pila de retroceso o, si no está en modo de escritorio, a la aplicación inmediatamente anterior.
-
-    Los usuarios podrían confundirse si la navegación hacia atrás no es intuitiva, coherente y predecible.
 
 ## Artículos relacionados
 
 - [Botones de radio](radio-button.md)
 - [Modificadores para alternar](toggles.md)
 - [Casillas](checkbox.md)
-
-**Para desarrolladores (XAML)**
 - [**Clase Button**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
 
 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,8 +5,9 @@ title: "Instrucciones de zoom óptico y cambio de tamaño"
 ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
 label: Optical zoom and resizing
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 38feedfe857f8ce2fc638cf55465f1e719108583
+ms.openlocfilehash: 54c0dc3ffa9fd8716a8f147f408c1c8de5775783
 
 ---
 
@@ -26,11 +27,11 @@ Tanto la interacción de zoom óptico como la de cambio de tamaño se ejecutan c
 
 Los siguientes diagramas muestran las diferencias entre cambio de tamaño y zoom óptico.
 
-**Zoom óptico**: el usuario selecciona un área y después acerca o aleja el área completa.
+**Zoom óptico**: el usuario selecciona un área y, después, la amplía.
 
 ![juntar los dedos acerca el área de contenido, y separarlos la aleja.](images/areazoom.png)
 
-**Cambio de tamaño**: el usuario selecciona un objeto dentro de un área y cambia el tamaño del objeto.
+**Cambio de tamaño**: el usuario selecciona un objeto dentro de un área y cambia su tamaño.
 
 ![juntar los dedos reduce el objeto, y alejarlos lo amplía.](images/objectresize.png)
 
@@ -96,6 +97,6 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

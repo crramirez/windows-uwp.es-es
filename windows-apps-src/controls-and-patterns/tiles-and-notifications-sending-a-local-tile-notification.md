@@ -5,11 +5,12 @@ title: "Enviar una notificación de icono local"
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: cc2f86f2a56aae5ee9e3019dafa3417a25e7d610
+translationtype: Human Translation
+ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
+ms.openlocfilehash: a4f654b286db44d4054be296e76114024616f632
 
 ---
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # Enviar una notificación de icono local
 
 
@@ -20,19 +21,18 @@ Los iconos de la aplicación principal de Windows 10 se definen en el manifiesto
 
 ![icono predeterminado e icono con notificación](images/sending-local-tile-01.png)
 
-
-            **Nota** Obtén información sobre cómo [crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md) y sobre el [esquema de plantillas de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
+**Nota** Obtén información sobre cómo [crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md) y sobre el [esquema de plantillas de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
 
  
 
-## <span id="Install_the_NuGet_package"></span><span id="install_the_nuget_package"></span><span id="INSTALL_THE_NUGET_PACKAGE"></span>Instalación del paquete NuGet
+## Instalación del paquete NuGet
 
 
 Recomendamos instalar el [paquete NotificationsExtensions NuGet](https://www.nuget.org/packages/NotificationsExtensions.Win10/), que simplifica las cosas al generar cargas de iconos con objetos en lugar de XML sin formato.
 
 Los ejemplos de código en línea en este artículo son para C# con el paquete NuGet [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) instalado. (Si prefieres crear tu propio XML, puedes encontrar ejemplos de código sin [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) al final del artículo.)
 
-## <span id="Add_namespace_declarations"></span><span id="add_namespace_declarations"></span><span id="ADD_NAMESPACE_DECLARATIONS"></span>Agregar declaraciones de espacios de nombres
+## Agregar declaraciones de espacios de nombres
 
 
 Para acceder a las API del icono, incluye el espacio de nombres [**Windows.UI.Notifications**](https://msdn.microsoft.com/library/windows/apps/br208661). También recomendamos incluir el espacio de nombres **NotificationsExtensions.Tiles** para que puedas aprovechar nuestras API auxiliares de iconos (debes instalar el paquete NuGet [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) para acceder a estas API).
@@ -42,7 +42,7 @@ using Windows.UI.Notifications;
 using NotificationsExtensions.Tiles; // NotificationsExtensions.Win10
 ```
 
-## <span id="Create_the_notification_content"></span><span id="create_the_notification_content"></span><span id="CREATE_THE_NOTIFICATION_CONTENT"></span>Crear el contenido de la notificación
+## Crear el contenido de la notificación
 
 
 En Windows 10, las cargas de iconos se definen mediante plantillas de iconos adaptables, que te permiten crear diseños visuales personalizados para tus notificaciones. (Para obtener información sobre las posibilidades de los iconos adaptables, consulta los artículos [Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md) y [Plantillas de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).)
@@ -121,7 +121,7 @@ El contenido de las notificaciones es similar al siguiente cuando se muestra en 
 
 ![contenido de las notificaciones en un icono mediano](images/sending-local-tile-02.png)
 
-## <span id="Create_the_notification"></span><span id="create_the_notification"></span><span id="CREATE_THE_NOTIFICATION"></span>Crear la notificación
+## Crear la notificación
 
 
 Una vez que dispongas del contenido de la notificación, debes crear un nuevo [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616). El constructor **TileNotification** toma un objeto [**XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br208620) de Windows Runtime, que puedes obtener del método **TileContent.GetXml** si estás usando [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki).
@@ -133,7 +133,7 @@ Este ejemplo de código crea una notificación para un icono nuevo.
 var notification = new TileNotification(content.GetXml());
 ```
 
-## <span id="Set_an_expiration_time_for_the_notification__optional_"></span><span id="set_an_expiration_time_for_the_notification__optional_"></span><span id="SET_AN_EXPIRATION_TIME_FOR_THE_NOTIFICATION__OPTIONAL_"></span>Establecer una fecha de expiración para la notificación (opcional)
+## Establecer una fecha de expiración para la notificación (opcional)
 
 
 De manera predeterminada, las notificaciones de iconos y distintivos locales no expiran, mientras que las notificaciones programadas, periódicas y de inserción expiran al cabo de de tres días. El contenido de los iconos no debe persistir más de lo necesario, por lo que se considera una buena práctica establecer una fecha de caducidad apropiada para la aplicación, especialmente en las notificaciones de iconos y distintivos locales.
@@ -147,7 +147,7 @@ tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddMinutes(10);</code></
 </table>
 ```
 
-## <span id="Send_the_notification"></span><span id="send_the_notification"></span><span id="SEND_THE_NOTIFICATION"></span>Enviar la notificación
+## Enviar la notificación
 
 
 Aunque el envío local de una notificación de iconos es sencillo, enviar la notificación a un icono principal o secundario es un poco diferente.
@@ -158,7 +158,7 @@ Para enviar una notificación a un icono principal, usa [**TileUpdateManager**](
 
 Este ejemplo de código envía una notificación a un icono principal.
 
-<span codelanguage=""></span>
+
 ```
 <colgroup>
 <col width="100%" />
@@ -189,7 +189,7 @@ if (SecondaryTile.Exists("MySecondaryTile"))
 
 ![icono predeterminado e icono con notificación](images/sending-local-tile-01.png)
 
-## <span id="Clear_notifications_on_the_tile__optional_"></span><span id="clear_notifications_on_the_tile__optional_"></span><span id="CLEAR_NOTIFICATIONS_ON_THE_TILE__OPTIONAL_"></span>Borrar las notificaciones en el icono (opcional)
+## Borrar las notificaciones en el icono (opcional)
 
 
 En la mayoría de los casos, debes borrar una notificación cuando el usuario haya interactuado con ese contenido. Por ejemplo, cuando el usuario inicia tu aplicación, es posible que quieras borrar todas las notificaciones del icono. Si tus notificaciones están controladas por tiempo, te recomendamos que establezcas una fecha de caducidad en la notificación en lugar de borrarla explícitamente.
@@ -209,7 +209,7 @@ Las notificaciones de inserción o periódicas solo pueden agregar nuevas notifi
 
 ![icono con notificación e icono después de ser borrado](images/sending-local-tile-03.png)
 
-## <span id="Next_steps"></span><span id="next_steps"></span><span id="NEXT_STEPS"></span>Pasos siguientes
+## Pasos siguientes
 
 
 **Uso de la cola de notificaciones**
@@ -224,7 +224,7 @@ Este artículo te muestra cómo enviar la actualización de iconos como una noti
 
 Si no estás usando [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki), este método de entrega de notificaciones es otra alternativa.
 
-<span codelanguage=""></span>
+
 ```
 <colgroup>
 <col width="100%" />
@@ -243,7 +243,7 @@ public string XmlEncode(string text)
 }
 ```
 
-## <span id="Code_examples_without_NotificationsExtensions"></span><span id="code_examples_without_notificationsextensions"></span><span id="CODE_EXAMPLES_WITHOUT_NOTIFICATIONSEXTENSIONS"></span>Ejemplos de código sin NotificationsExtensions
+## Ejemplos de código sin NotificationsExtensions
 
 
 Si prefieres trabajar con XML sin formato en lugar del paquete NuGet [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki), usa estos ejemplos de código alternativos para los tres primeros ejemplos proporcionados en este artículo. El resto de los ejemplos de código se puede usar o bien con [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) o bien con XML sin formato.
@@ -299,7 +299,7 @@ doc.LoadXml(content);
 var notification = new TileNotification(doc);
 ```
 
-## <span id="related_topics"></span>Temas relacionados
+## Temas relacionados
 
 
 * [Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md)
@@ -320,6 +320,6 @@ var notification = new TileNotification(doc);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

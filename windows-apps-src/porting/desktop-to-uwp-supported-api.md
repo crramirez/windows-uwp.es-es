@@ -1,4 +1,4 @@
-# Admite las API de UWP para aplicaciones de escritorio convertidas
+# API de UWP admitidas para aplicaciones de escritorio convertidas
 
 Las aplicaciones de escritorio convertidas pueden usar una amplia gama de API de la Plataforma universal de Windows (UWP), incluso si no se realizó la transición a una aplicación para UWP. Este artículo enumera las clases disponibles que puede usar tu aplicación convertida. 
 
@@ -30,10 +30,12 @@ Algunas API para UWP disponibles para aplicaciones de escritorio completas no se
 
 ## Lista de API
 
-La siguiente es una lista completa de las API para UWP que se admiten en aplicaciones convertidas. Puedes ver las [API recién admitidas en aplicaciones convertidas](#new) o las [API admitidas en aplicaciones convertidas y aplicaciones de escritorio](#both). 
+La siguiente es una lista completa de las API para UWP que se admiten en aplicaciones convertidas. Puedes ver las [API recientemente admitidas en aplicaciones convertidas](#new) o las [API admitidas en aplicaciones convertidas y aplicaciones de escritorio](#both). 
+
+Para obtener ejemplos sobre cómo llamar a las API de UWP desde una aplicación convertida, consulta los [ejemplos de código de puente de escritorio en GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples).
 
 <span id="new" />
-### API admitidas en las aplicaciones recién convertidas
+### API admitidas en las aplicaciones recientemente convertidas
 
 * [Windows.ApplicationModel.DataTransfer.DataProviderHandler](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataProviderHandler)
 * [Windows.ApplicationModel.DataTransfer.DataRequest](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest)
@@ -1028,6 +1030,6 @@ La siguiente es una lista completa de las API para UWP que se admiten en aplicac
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO5-->
 
 

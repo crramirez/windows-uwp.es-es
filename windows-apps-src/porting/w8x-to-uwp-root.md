@@ -3,8 +3,9 @@ author: mcleblanc
 description: "Si tienes una aplicación Universal 8.1 (tanto si tiene como destino Windows8.1, Windows Phone8.1 o ambos), comprobarás que el código fuente y las habilidades se portarán sin dificultad a Windows10."
 title: Portar de Windows Runtime 8.x a UWP
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3aa24e61482054dadd9b798063d46abf36623e9b
+ms.openlocfilehash: e1f0e9727a36536fe292902fa7313dcc851932f6
 
 ---
 
@@ -49,12 +50,9 @@ La opción que elijas de las secciones anteriores determinará la gama de dispos
 
 Al migrar una aplicación Universal 8.1 al modelo de las aplicaciones para UWP, prácticamente todos tus conocimientos y experiencia se transferirán, así como la mayoría del código fuente, el marcado y los patrones de software que usas.
 
--   
-            **Vista**. La vista (junto con el modelo de vista) conforma la interfaz de usuario de la aplicación. Lo ideal es que la vista conste de marcado enlazado a propiedades observables de un modelo de vista. Otro patrón (común y conveniente, pero solo a corto plazo) es para el código imperativo en un archivo de código subyacente para manipular directamente elementos de la interfaz de usuario. En cualquier caso, el marcado y diseño de la interfaz de usuario (incluso el código imperativo que manipula los elementos de la interfaz de usuario) se podrán portar fácilmente.
--   
-            **Modelos de vistas y modelos de datos**. Aunque no adoptes formalmente patrones de separación de cuestiones (por ejemplo, MVVM), inevitablemente hay código presente en la aplicación que realiza la función de modelo de vista y modelo de datos. El código del modelo de vista usa tipos en los espacios de nombres del marco de trabajo de la interfaz de usuario. Tanto el modelo de vista como el modelo de datos usan además un sistema operativo no visual y las API de .NET Framework (incluidas las API para el acceso a datos). Y estas API también están [disponibles para aplicaciones para UWP, también](https://msdn.microsoft.com/library/windows/apps/br211369), de modo que la mayoría del código, si no todo, se migrará sin cambios.
--   
-            **Servicios en la nube**. Es probable que parte de la aplicación (quizás una gran parte) se ejecute en la nube en forma de servicios. La parte de la aplicación que se ejecuta en el dispositivo cliente se conecta a ellos. Esta es la parte de una aplicación distribuida que probablemente no se modificará al migrar la parte del cliente. Si aún no tienes uno, una buena opción de servicios en la nube para tu aplicación para UWP es [Servicios móviles de Microsoft Azure](http://azure.microsoft.com/services/mobile-services/), que proporciona componentes back-end eficaces a los que puede llamar tu aplicación para servicios que van desde sencillas notificaciones de actualizaciones de iconos dinámicos hasta la clase de escalabilidad de tareas difíciles que puede proporcionar una granja de servidores.
+-   **Vista**. La vista (junto con el modelo de vista) conforma la interfaz de usuario de la aplicación. Lo ideal es que la vista conste de marcado enlazado a propiedades observables de un modelo de vista. Otro patrón (común y conveniente, pero solo a corto plazo) es para el código imperativo en un archivo de código subyacente para manipular directamente elementos de la interfaz de usuario. En cualquier caso, el marcado y diseño de la interfaz de usuario (incluso el código imperativo que manipula los elementos de la interfaz de usuario) se podrán portar fácilmente.
+-   **Modelos de vista y de datos**. Aunque no adoptes formalmente patrones de separación de cuestiones (por ejemplo, MVVM), inevitablemente hay código presente en la aplicación que realiza la función de modelo de vista y modelo de datos. El código del modelo de vista usa tipos en los espacios de nombres del marco de trabajo de la interfaz de usuario. Tanto el modelo de vista como el modelo de datos usan además un sistema operativo no visual y las API de .NET Framework (incluidas las API para el acceso a datos). Y estas API también están [disponibles para aplicaciones para UWP, también](https://msdn.microsoft.com/library/windows/apps/br211369), de modo que la mayoría del código, si no todo, se migrará sin cambios.
+-   **Servicios en la nube**. Es probable que parte de la aplicación (quizás una gran parte) se ejecute en la nube en forma de servicios. La parte de la aplicación que se ejecuta en el dispositivo cliente se conecta a ellos. Esta es la parte de una aplicación distribuida que probablemente no se modificará al migrar la parte del cliente. Si aún no tienes uno, una buena opción de servicios en la nube para tu aplicación para UWP es [Servicios móviles de Microsoft Azure](http://azure.microsoft.com/services/mobile-services/), que proporciona componentes back-end eficaces a los que puede llamar tu aplicación para servicios que van desde sencillas notificaciones de actualizaciones de iconos dinámicos hasta la clase de escalabilidad de tareas difíciles que puede proporcionar una granja de servidores.
 
 Antes o durante la migración, considera la posibilidad de si la aplicación podría mejorarse mediante la refactorización de modo que el código con un propósito similar se agrupe en capas y no se disperse arbitrariamente. La factorización de la aplicación en capas, como las descritas anteriormente, facilita corregir la aplicación, probarla y posteriormente leerla y mantenerla. Puedes hacer que la funcionalidad sea más reutilizable siguiendo el patrón Model-View-ViewModel ([MVVM](http://msdn.microsoft.com/magazine/dd419663.aspx)). Este patrón mantiene separadas entre sí las partes de la aplicación correspondientes a los datos, al negocio y a la interfaz de usuario. Incluso dentro de la interfaz de usuario, puede mantener separados el estado y el comportamiento, además de poderse probar por separado, desde los elementos visuales. Con MVVM, puedes escribir una vez la lógica de datos y de negocio, y usarla en todos los dispositivos, independientemente de la interfaz de usuario. Es probable que también puedas volver a usar la mayor parte del modelo de vista y los elementos de vista entre dispositivos.
 
@@ -82,6 +80,6 @@ Si tienes un proyecto de Windows 10 que has creado con Microsoft Visual Studio 2
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

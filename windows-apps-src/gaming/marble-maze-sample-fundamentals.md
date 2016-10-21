@@ -3,21 +3,21 @@ author: mtoepke
 title: "Conceptos básicos sobre la muestra de Marble Maze"
 description: "En este documento se describen las características fundamentales del proyecto Marble Maze, como la forma en que usa Visual C++ en el entorno de Windows Runtime, cómo se crea y se estructura, y cómo se compila."
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5a9df995078763df73542a4101e73e147517b1eb
+ms.openlocfilehash: c9aafbf7d8061893180a1a823c2c1cafd9ef7a7f
 
 ---
 
 # Conceptos básicos sobre la muestra de Marble Maze
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este documento se describen las características fundamentales del proyecto Marble Maze, como la forma en que usa Visual C++ en el entorno de Windows Runtime, cómo se crea y se estructura, y cómo se compila. El documento también describe varias convenciones que se usan en el código.
 
-> 
-            **Nota**  El código de ejemplo correspondiente a este documento se encuentra en la [muestra de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Nota**   El código de ejemplo correspondiente a este documento se encuentra en la [muestra de Marble Maze con DirectX](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 ## 
@@ -38,8 +38,7 @@ Cuando creamos el proyecto de Visual Studio para Marble Maze, empezamos con un p
 
 Un valor importante del proyecto en la plantilla **DirectX 11 App (Windows universal)** es la opción **/ZW**, que permite que el programa pueda usar las extensiones del lenguaje de Windows Runtime. Esta opción está habilitada de manera predeterminada al usar la plantilla de Visual Studio.
 
-> 
-            **Precaución**  La opción **/ZW** no es compatible con opciones como **/clr**. En el caso de **/clr**, esto significa que no puedes tener .NET Framework y Windows Runtime como destino desde el mismo proyecto de Visual C++.
+> **Precaución**  La opción **/ZW** no es compatible con opciones como **/clr**. En el caso de **/clr**, esto significa que no puedes tener .NET Framework y Windows Runtime como destino desde el mismo proyecto de Visual C++.
 
  
 
@@ -148,6 +147,6 @@ Lee [Estructura de la aplicación Marble Maze](marble-maze-application-structure
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

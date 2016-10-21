@@ -1,48 +1,67 @@
 ---
 author: mcleanbyron
 ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
-description: "El SDK de Microsoft Store Engagement and Monetization proporciona varias maneras de rentabilizar tu aplicación con anuncios."
+description: "Microsoft Store Services SDK proporciona varios métodos para rentabilizar la aplicación con anuncios."
 title: "Mostrar anuncios en tu aplicación"
-ms.sourcegitcommit: 8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707
-ms.openlocfilehash: c79ba96908cc7b52afefbe44c3f56ce009c87f16
+translationtype: Human Translation
+ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
+ms.openlocfilehash: 35dfe2864958a15cf01133d6017b7dd03f382e4a
 
 ---
 
 # Mostrar anuncios en tu aplicación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+La Plataforma universal de Windows (UWP) y la Tienda Windows proporcionan varios métodos para rentabilizar la aplicación con anuncios.
 
-El [SDK de Microsoft Store Engagement and Monetization](monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md) proporciona varias maneras de rentabilizar la aplicación con anuncios.
+## Mostrar anuncios intersticiales en vídeo y en banner con las bibliotecas de Microsoft Advertising.
 
-## Muestra anuncios intersticiales en vídeo y banners con las bibliotecas de Microsoft Advertising.
+Gana más dinero con las aplicaciones para UWP y las aplicaciones para Windows 8.1 y Windows Phone 8.x agregando anuncios intersticiales en vídeo y en banner. Los anuncios se muestran en las aplicaciones de Windows para PC, tabletas y teléfonos. Puedes supervisar el rendimiento de los anuncios en tiempo real mediante el [informe de rendimiento de la publicidad](../publish/advertising-performance-report.md) en el panel del Centro de desarrollo de Windows.
 
-Gana más dinero con tus aplicaciones de Windows agregando anuncios intersticiales en vídeo y banners. Los anuncios se muestran en las aplicaciones de Windows para equipos, tabletas y teléfonos. Puedes supervisar el rendimiento de los anuncios en tiempo real mediante el panel del Centro de desarrollo de Windows.
+Para incluir estos tipos de anuncios en tus aplicaciones, usa los controles **AdControl** e **InterstitialAd** en las bibliotecas de publicidad que se distribuyen en [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) (para aplicaciones para UWP) y [Microsoft Advertising SDK para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk) (para aplicaciones de Windows 8.1 y Windows Phone 8.x).
 
-Para incluir anuncios en tus aplicaciones, usa los controles **AdControl** e **InterstitialAd** en las bibliotecas de publicidad que se distribuyen en el SDK de Microsoft Store Engagement and Monetization. Puedes usar estos controles para mostrar anuncios intersticiales en vídeo y banners de Microsoft en tus aplicaciones XAML o HTML/JavaScript para Windows 10, Windows 8.1, Windows Phone 8.1 y Windows Phone 8.
 
-Para obtener más información, consulta [Mostrar anuncios mediante las bibliotecas de Microsoft Advertising](display-ads-using-the-microsoft-advertising-libraries.md). Después de publicar una aplicación con anuncios, usa el [informe de rendimiento de publicidad](../publish/advertising-performance-report.md) para realizar un seguimiento del rendimiento de los anuncios.                                           
+En los siguientes temas se proporciona información sobre tareas comunes relacionadas con las bibliotecas de Windows Advertising.
 
-## Usar la mediación de anuncios para anuncios en banners de varias redes de anuncios
+|  Tarea    | Tema |               
+|----------|-------|
+| Instalar y comenzar a usar las bibliotecas de Microsoft Advertising.     | Consulta [Introducción a las bibliotecas de Microsoft Advertising](get-started-with-microsoft-advertising-libraries.md).        |
+| Mostrar anuncios en banners en la aplicación XAML o C#.     | Consulta [AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md).        |
+| Mostrar anuncios en banner en la aplicación HTML o JavaScript.     | Consulta [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md).        |
+| Mostrar un anuncios en banner en la aplicación de Windows Phone 8.x Silverlight.     | Consulta [AdControl en Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md).        |
+| Mostrar un anuncio intersticial en vídeo en la aplicación.     | Consulta [Anuncios intersticiales](interstitial-ads.md).       |
+| Agregar anuncios a contenido de vídeo en una aplicación para Plataforma universal de Windows (UWP) que se ha escrito mediante JavaScript con HTML.   |  Consulta [Agregar anuncios a contenido de vídeo en HTML 5 y JavaScript](add-advertisements-to-video-content.md).  |
+| Descargar proyectos de ejemplo que muestran cómo agregar anuncios intersticiales en vídeo y en banner a las aplicaciones.     |Consulta las [Muestras de publicidad en GitHub](http://aka.ms/githubads).       |
+| Controla errores de [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) en la aplicación.     | Consulta [Control de errores](error-handling-with-advertising-libraries.md) y los tutoriales de [control de errores de AdControl](adcontrol-error-handling.md).       |
+| Notificar un error en las bibliotecas de Microsoft Advertising.     | Visita la [página de soporte técnico](https://go.microsoft.com/fwlink/p/?LinkId=331508).        |
+| Obtener soporte técnico de la comunidad.     | Visita el [foro](http://go.microsoft.com/fwlink/p/?LinkId=401266).       |
 
-Puedes usar la clase **AdMediatorControl** en las aplicaciones XAML para optimizar los ingresos publicitarios mostrando banners desde varias redes de anuncios. Después de agregar este control a la aplicación, establece la configuración de mediación de anuncios en el panel del Centro de desarrollo de Windows y nosotros nos encargamos de arbitrar solicitudes de anuncios de banner de las redes de anuncios que elijas. Para obtener más información, consulta [Uso de mediación de anuncios para maximizar los ingresos de los anuncios](use-ad-mediation-to-maximize-revenue.md).
+                            
 
-## Diferencias entre las bibliotecas de Microsoft Advertising y la mediación de anuncios
+## Usar la mediación de anuncios para anuncios en banner (Windows 8.1 y Windows Phone 8.x)
 
-El SDK de Microsoft Store Engagement and Monetization incluye las bibliotecas de Microsoft Advertising y mediación de anuncios. Sin embargo, estas bibliotecas proporcionan clases distintas y se usan con otros fines.
+Para las aplicaciones de Windows 8.1 y Windows Phone 8.x, puedes usar la clase **AdMediatorControl** para optimizar los ingresos por anuncios al mostrar anuncios en banner provenientes de varias redes de anuncios. Después de agregar este control a la aplicación, establece la configuración de mediación de anuncios en el panel del Centro de desarrollo de Windows y nosotros nos encargamos de arbitrar solicitudes de anuncios de banner de las redes de anuncios que elijas. Para obtener más información, consulta [Usar la mediación de anuncios para maximizar los ingresos por anuncios](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359.aspx).
 
-* Usa las clases **AdControl** e **InterstitialAd** en las bibliotecas de Microsoft Advertising si quieres mostrar banners o anuncios intersticiales en vídeo en una aplicación XAML o JavaScript.
-* Usa la clase **AdMediatorControl** en las bibliotecas de mediación de anuncios si quieres mostrar anuncios en banners desde varias redes de anuncios en una aplicación XAML.
+>**Nota**&nbsp;&nbsp;La mediación de anuncios que usa la clase **AdMediatorControl** actualmente no se admite para aplicaciones para UWP en Windows10. La mediación del lado del servidor próximamente estará disponible para aplicaciones para UWP mediante las mismas API de anuncios en banner (**AdControl**) y de anuncios intersticiales en vídeo (**InterstitialAd**). Para obtener instrucciones sobre la migración de **AdMediatorControl** a **AdControl** en tu aplicación para UWP, consulta [Migrar de AdMediatorControl a AdControl para las aplicaciones para UWP](migrate-from-admediatorcontrol-to-adcontrol.md).
 
-Para obtener más información, consulta [What is the difference: AdMediator or AdControl (Diferencias entre AdMediator y AdControl)](what-is-the-difference-admediatorcontrol-or-adcontrol.md).
+<span id="silverlight_support"/>
+## Compatibilidad de publicidad para proyectos de Windows Phone 8.x Silverlight
+
+Algunos escenarios de desarrollado ya no se admiten en proyectos de Windows Phone 8.x Silverlight. Para obtener más información, consulta la tabla siguiente.
+
+|  Versión de plataforma  |  Proyectos existentes    |   Proyectos nuevos  |
+|-----------------|----------------|--------------|
+| Windows Phone 8.0 Silverlight     |  Si tienes un proyecto existente de Windows Phone 8.0 Silverlight que ya usa clase **AdControl** o **AdMediatorControl** de una versión anterior de Microsoft Universal Ad Client o Microsoft Advertising SDK y esta aplicación ya está publicada en la Tienda Windows, puedes modificar y volver a compilar el proyecto y puedes depurar o probar los cambios en un dispositivo. No se admite la depuración o la prueba del proyecto en el emulador.  |  No se admite.  |
+| Windows Phone 8.1 Silverlight    |  Si tienes un proyecto existente de Windows Phone 8.1 Silverlight que usa una clase **AdControl** o **AdMediatorControl** de una versión anterior del SDK, puedes modificar y volver a compilar el proyecto. Sin embargo, para depurar o probar la aplicación, debes ejecutarla en el emulador y usar [valores del modo de prueba](test-mode-values.md) para el identificador de aplicación y el identificador de unidad de anuncio. No se admite la depuración o la prueba de la aplicación en un dispositivo.  |   Puedes agregar una clase **AdControl** o **AdMediatorControl** a un nuevo proyecto nuevo de Windows Phone 8.1 Silverlight. Sin embargo, para depurar o probar la aplicación, debes ejecutarla en el emulador y usar [valores del modo de prueba](test-mode-values.md) para el identificador de aplicación y el identificador de unidad de anuncio. No se admite la depuración o la prueba de la aplicación en un dispositivo. |
 
 ## Temas relacionados
 
-* [SDK de Microsoft Store Engagement and Monetization](monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md)
-* [Monetiza tu aplicación con anuncios]( http://go.microsoft.com/fwlink/p/?LinkId=699559)
+* [Microsoft Store Services SDK](microsoft-store-services-sdk.md)
+* [Monetiza tu aplicación con anuncios](http://go.microsoft.com/fwlink/p/?LinkId=699559)
+* [Informe de rendimiento de la publicidad](../publish/advertising-performance-report.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

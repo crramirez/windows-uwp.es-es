@@ -5,7 +5,7 @@ ms.assetid: 41E2EEFB-E8A9-4592-814C-72B703CD952C
 author: awkoren
 translationtype: Human Translation
 ms.sourcegitcommit: a178f992ddd39b5609ce6d15b7e3560e157b9afb
-ms.openlocfilehash: 23897e7e78f3391fbee60a5f7cdf93615401247d
+ms.openlocfilehash: 19f024bd3ad99b4ef9355cc3c9229b1b3ffc51e2
 
 ---
 
@@ -18,7 +18,7 @@ Esta sección contiene artículos sobre la compilación de aplicaciones para la 
 
 ## Introducción 
 
-Si no estás familiarizado con el desarrollo de Windows o UWP, empieza por la [Introducción al desarrollo seguro de aplicaciones de Windows](web-authentication-broker.md). En este artículo de introducción se proporciona una descripción general de las consideraciones de seguridad de las aplicaciones y las distintas funciones disponibles en Windows 10.
+Si no estás familiarizado con el desarrollo de Windows o UWP, empieza por la [Introducción al desarrollo seguro de aplicaciones de Windows](web-authentication-broker.md). En este artículo de introducción se proporciona una descripción general de las consideraciones de seguridad de las aplicaciones y las distintas funciones disponibles en Windows10.
 
 ## Autenticación e identidad de usuario
 
@@ -29,7 +29,7 @@ La [sección autenticación e identidad de usuario](authentication-and-user-iden
 <tr><td>[Caja de seguridad de credenciales](credential-locker.md)</td><td>En este artículo se describe cómo las aplicaciones pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo transferirlas entre dispositivos con la cuenta de Microsoft del usuario.</td></tr>
 
 <tr><td>[Biometría de huellas digitales](fingerprint-biometrics.md) </td><td>En este artículo se explica cómo agregar biometría de huellas digitales a la aplicación. La inclusión de una solicitud de autenticación con huella digital cuando el usuario deba dar su consentimiento a una acción concreta aumenta la seguridad de la aplicación. Por ejemplo, puedes solicitar la autenticación con huella digital antes de autorizar una compra desde la aplicación o de permitir el acceso a recursos restringidos. La autenticación con huella digital se administra mediante la clase [UserConsentVerifier](https://msdn.microsoft.com/library/windows/apps/dn279134) en el espacio de nombres [Windows.Security.Credentials.UI](https://msdn.microsoft.com/library/windows/apps/hh701356).</td></tr>
-<tr><td>[Microsoft Passport y Windows Hello](microsoft-passport.md)</td><td>En este artículo se describe la nueva tecnología Microsoft Passport de Windows 10 y se explica cómo pueden implementarla los desarrolladores para proteger sus servicios backend y aplicaciones. En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas de credenciales convencionales y se proporcionan instrucciones sobre cómo diseñar e implementar estas tecnologías como parte de la implementación de Windows 10. </td></tr>
+<tr><td>[Microsoft Passport y Windows Hello](microsoft-passport.md)</td><td>En este artículo se describe la nueva tecnología Microsoft Passport de Windows 10 y se explica cómo pueden implementarla los desarrolladores para proteger sus servicios backend y aplicaciones. En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas de credenciales convencionales y se proporcionan instrucciones sobre cómo diseñar e implementar estas tecnologías como parte de la implementación de Windows10. </td></tr>
 <tr><td>[Crear una aplicación de inicio de sesión de Microsoft Passport](microsoft-passport-login.md)</td><td>Primera parte de un tutorial completo acerca de cómo crear una aplicación para UWP (Plataforma universal de Windows) de Windows 10 que use Microsoft Passport como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña.</td></tr>
 <tr><td>[Crear un servicio de inicio de sesión de Microsoft Passport](microsoft-passport-login-auth-service.md)</td><td>Parte 2 de un tutorial completo acerca de cómo usar Microsoft Passport como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña en aplicaciones para UWP (Plataforma universal de Windows) de Windows 10.</td></tr>
 <tr><td>[Tarjetas inteligentes](smart-cards.md)</td><td>En este tema se explica la manera en que las aplicaciones pueden usar tarjetas inteligentes para conectar a los usuarios a servicios de red seguros, incluido cómo obtener acceso a los lectores de tarjetas inteligentes físicas, crear tarjetas inteligentes virtuales, comunicarse con tarjetas inteligentes, autenticar usuarios, restablecer códigos PIN de usuario y quitar o desconectar tarjetas inteligentes.</td></tr>
@@ -54,6 +54,6 @@ La sección de criptografía contiene información sobre temas más complejos re
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

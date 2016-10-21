@@ -1,10 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 05b10814-4548-4dd4-bf71-72157a50986c
-description: "Obtén información sobre las soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising."
+description: "Obtén información sobre cómo solucionar los problemas más comunes de desarrollo con las bibliotecas de Microsoft Advertising."
 title: "Guías de solución de problemas"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 4a006cbd1a1f38e2410098d074a35df4a2468963
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 4a8b43ac0b6752b78e998ac16776b84e9ddda09f
 
 
 ---
@@ -12,9 +13,9 @@ ms.openlocfilehash: 4a006cbd1a1f38e2410098d074a35df4a2468963
 # Guías de solución de problemas
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-En esta sección se describen soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising.
+
+En esta sección se describe cómo solucionar los problemas de desarrollo más comunes con las bibliotecas de Microsoft Advertising.
 
 | Tema                                                                                                       | Descripción                 |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
@@ -28,6 +29,6 @@ En esta sección se describen soluciones a problemas comunes de desarrollo con l
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

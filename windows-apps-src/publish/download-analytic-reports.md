@@ -3,8 +3,9 @@ author: jnHs
 Description: "Puedes descargar archivos que contengan los datos de análisis para que puedas revisar las estadísticas y la información sin conexión."
 title: "Descargar informes de análisis"
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 959007d6d7c4e4c768f196fe04c2fa4a8ac6fc2e
+ms.openlocfilehash: 99b751146adc2394e10c6deae58bd0fdb124888d
 
 ---
 
@@ -17,8 +18,7 @@ Puedes descargar archivos que contengan los datos de análisis para que puedas r
 
 1.  En primer lugar, selecciona la aplicación cuya información quieres descargar.
 
-    > 
-            **Sugerencia**  Puedes descargar información de todas las aplicaciones o de una aplicación específica. Ten en cuenta que no estás limitado a descargar un informe de la aplicación en la que estabas trabajando al obtener acceso a la página **Descargar informes** en su sección **Análisis**.
+    > **Sugerencia**  Puedes descargar información de todas las aplicaciones o de una aplicación específica. Ten en cuenta que no estás limitado a descargar un informe de la aplicación en la que estabas trabajando al obtener acceso a la página **Descargar informes** en su sección **Análisis**.
 
 2.  Selecciona uno de los informes disponibles.
 
@@ -28,6 +28,6 @@ Puedes descargar archivos que contengan los datos de análisis para que puedas r
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

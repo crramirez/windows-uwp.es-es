@@ -1,10 +1,11 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Obtener las propiedades de archivos
 description: "Obtén las propiedades &\\#8212;de nivel superior, básicas y extendidas&\\#8212; de un archivo representado mediante un objeto StorageFile."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 56b83d2f05189b4cbb5bbc015987a4ffce8d86fd
+translationtype: Human Translation
+ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
+ms.openlocfilehash: 78fdc200b134525fc0445af64e73b184b49ef2a3
 
 ---
 # Obtener las propiedades de archivos
@@ -20,8 +21,7 @@ ms.openlocfilehash: 56b83d2f05189b4cbb5bbc015987a4ffce8d86fd
 
 Obtiene las propiedades —de nivel superior, básicas y extendidas— de un archivo representado mediante un objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
-
-            **Nota** Consulta también [File access sample (Muestra de acceso de archivos)](http://go.microsoft.com/fwlink/p/?linkid=619995).
+**Nota**  Consulta también la [muestra de acceso a archivos](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
  
 
@@ -40,8 +40,7 @@ Obtiene las propiedades —de nivel superior, básicas y extendidas— de un arc
 
 Muchas de las propiedades de archivo de nivel superior son accesibles como miembros de la clase [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171). Estas propiedades incluyen los atributos del archivo, el tipo de contenido, la fecha de creación, el nombre para mostrar, el tipo de archivo, etc.
 
-
-            **Nota** Recuerda declarar la funcionalidad **picturesLibrary**.
+**Nota**  Recuerda declarar la funcionalidad **picturesLibrary**.
 
  
 
@@ -80,14 +79,14 @@ foreach (Windows.Storage.StorageFile file in files)
     StringBuilder fileProperties = new StringBuilder();
 
     // Get file's basic properties.
-    Windows.Storage.FileProperties.BasicProperties basicProperties = 
+    Windows.Storage.FileProperties.BasicProperties basicProperties =
         await file.GetBasicPropertiesAsync();
     string fileSize = string.Format("{0:n0}", basicProperties.Size);
     fileProperties.AppendLine("File size: " + fileSize + " bytes");
     fileProperties.AppendLine("Date modified: " + basicProperties.DateModified);
 }
  ```
- 
+
 ## Obtener las propiedades extendidas de un archivo
 
 Además de las propiedades de archivo de nivel superior y básicas, hay muchas propiedades asociadas al contenido del archivo. Para acceder a estas propiedades extendidas hay que llamar al método [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124). (Un objeto [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113) se obtiene mediante una llamada a la propiedad [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225)). Si bien se puede acceder a las propiedades de archivo de nivel superior y básico como propiedades de una clase, [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) y **BasicProperties**, respectivamente, las propiedades extendidas se obtienen al pasar una colección [IEnumerable](http://go.microsoft.com/fwlink/p/?LinkID=313091) de objetos [String](http://go.microsoft.com/fwlink/p/?LinkID=325032) que representan los nombres de las propiedades que deben recuperarse en el método **BasicProperties.RetrievePropertiesAsync**. A continuación, este método devuelve una colección [IDictionary](http://go.microsoft.com/fwlink/p/?LinkId=325238). Cada propiedad extendida se recupera entonces de la colección por el nombre o índice.
@@ -113,7 +112,7 @@ foreach (Windows.Storage.StorageFile file in files)
     propertyNames.Add(fileOwnerProperty);
 
     // Get extended properties.
-    IDictionary<string, object> extraProperties = 
+    IDictionary<string, object> extraProperties =
         await file.Properties.RetrievePropertiesAsync(propertyNames);
 
     // Get date-accessed property.
@@ -138,10 +137,6 @@ foreach (Windows.Storage.StorageFile file in files)
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

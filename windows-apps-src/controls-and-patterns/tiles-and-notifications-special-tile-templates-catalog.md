@@ -5,11 +5,12 @@ title: Plantillas de iconos especiales
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: ab7366b8b3cbf75f1f7e9fe35ca83077ac21d081
+translationtype: Human Translation
+ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
+ms.openlocfilehash: b03ea68ea2a0f66edac81a4c7e2671b2f756aa45
 
 ---
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # Plantillas de iconos especiales
 
 
@@ -18,14 +19,14 @@ ms.openlocfilehash: ab7366b8b3cbf75f1f7e9fe35ca83077ac21d081
 
 Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables. Cada plantilla de iconos especial fue compilada específicamente para Windows 10, excepto la plantilla de iconos icónica, una plantilla especial clásica que ha sido actualizada para Windows 10. En este artículo se abordan tres plantillas de iconos especiales: icónicas, de fotos y de contactos.
 
-## <span id="Iconic_tile_template"></span><span id="iconic_tile_template"></span><span id="ICONIC_TILE_TEMPLATE"></span>Plantillas de iconos icónicas
+## Plantillas de iconos icónicas
 
 
 La plantilla icónica (también conocida como plantilla "IconWithBadge") te permite mostrar una imagen pequeña en el centro del icono. Windows 10 admite la plantilla tanto en el teléfono como en la tableta o el equipo de escritorio.
 
 ![iconos de correo pequeños y medianos](images/iconic-template-mail-2sizes.png)
 
-### <span id="How_to_create_an_iconic_tile"></span><span id="how_to_create_an_iconic_tile"></span><span id="HOW_TO_CREATE_AN_ICONIC_TILE"></span>Cómo crear un icono de iconos
+### Cómo crear un icono de iconos
 
 Los siguientes pasos incluyen todo lo que necesitas saber para crear un icono de iconos para Windows 10. En un nivel alto, necesitas el activo de imagen icónico, a continuación envías una notificación al icono con la plantilla icónica y, finalmente, envías una notificación de distintivos que proporcione el número que debe mostrarse en el icono.
 
@@ -90,14 +91,14 @@ La siguiente imagen ilustra cómo se asocian las distintas API y cargas con cada
 
 ![API y cargas asociadas con la plantilla de iconos icónica](images/iconic-template-properties-info.png)
 
-## <span id="Photos_tile_template"></span><span id="photos_tile_template"></span><span id="PHOTOS_TILE_TEMPLATE"></span>Plantilla de iconos de fotos
+## Plantilla de iconos de fotos
 
 
 La plantilla de iconos de Fotos te permite mostrar una presentación de fotos en tu icono dinámico. La plantilla es compatible con todos los tamaños de icono, incluido el pequeño, y se comporta del mismo modo en cada tamaño de icono. En el ejemplo siguiente se muestran cinco fotogramas de un icono mediano que usa la plantilla de fotos. La plantilla tiene un zoom y una animación de fundido que recorre las fotos seleccionadas y se repite indefinidamente.
 
 ![presentación de la imagen con la plantilla de iconos de Fotos](images/photo-tile-template-image01.jpg)
 
-### <span id="How_to_use_the_photos_template"></span><span id="how_to_use_the_photos_template"></span><span id="HOW_TO_USE_THE_PHOTOS_TEMPLATE"></span>Cómo usar la plantilla de fotos
+### Cómo usar la plantilla de fotos
 
 Con la plantilla de fotos es fácil si has instalado la [versión de Windows 10 de NotificationExtensions](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/08/20/introducing-notificationsextensions-for-windows-10.aspx). Aunque puedes usar XML sin formato, se recomienda encarecidamente usar NotificationExtensions para que no tengas que preocuparte de generar contenido XML o XML de escape válido.
 
@@ -105,7 +106,7 @@ Windows Phone muestra hasta 9 fotos en una presentación; en tabletas, portátil
 
 Para obtener información sobre cómo enviar la notificación de iconos, consulta el [artículo Enviar notificaciones](tiles-badges-notifications.md).
 
-<span codelanguage="XML"></span>
+
 ```XML
 <colgroup>
 <col width="100%" />
@@ -181,29 +182,26 @@ TileContent content = new TileContent()
 };
 ```
 
-## <span id="People_tile_template"></span><span id="people_tile_template"></span><span id="PEOPLE_TILE_TEMPLATE"></span>Plantilla de iconos de contactos
+## Plantilla de iconos de contactos
 
 
 La aplicación de contactos en Windows 10 usa una plantilla de iconos especial que muestra una colección de imágenes en círculos que se deslizan vertical u horizontalmente en el icono. Esta plantilla de iconos está disponible desde Windows 10 Compilación 10572 y cualquier persona es bienvenida a usarla en su aplicación.
 
 Las plantilla de iconos de Contactos funciona en los iconos de estos tamaños:
 
-
-            **Icono mediano** (TileMedium)
+**Icono mediano** (TileMedium)
 
 ![icono de contactos mediano](images/people-tile-medium.png)
 
  
 
-
-            **Icono ancho** (TileWide)
+**Icono ancho** (TileWide)
 
 ![icono de contactos ancho](images/people-tile-wide.png)
 
  
 
-
-            **Icono grande (solo escritorio)** (TileLarge)
+**Icono grande (solo escritorio)** (TileLarge)
 
 ![icono de contactos grande](images/people-tile-large.png)
 
@@ -272,7 +270,7 @@ Este número de fotos permite que haya algunos círculos vacíos, lo que signifi
 
 Para enviar la notificación, consulta [Elegir un método de entrega de notificaciones](tiles-and-notifications-choosing-a-notification-delivery-method.md).
 
-## <span id="related_topics"></span>Temas relacionados
+## Temas relacionados
 
 
 * [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-people-tile-template)
@@ -290,6 +288,6 @@ Para enviar la notificación, consulta [Elegir un método de entrega de notifica
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

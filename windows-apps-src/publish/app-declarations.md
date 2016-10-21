@@ -3,8 +3,9 @@ author: jnHs
 Description: "Puedes proporcionar información adicional sobre la aplicación en la sección Declaraciones de la aplicación de la página Propiedades de la aplicación durante el proceso de envío."
 title: "Declaraciones de la aplicación"
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ee2e54494a868fbec8c4a8bd7bbb9bdcd6cbf9ae
+translationtype: Human Translation
+ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
+ms.openlocfilehash: 419d41de3ba26f6470ad99b44826f2935aea4eff
 
 ---
 
@@ -16,7 +17,7 @@ En las siguientes secciones se describe cada declaración y lo que debes tener e
 
 ## Esta aplicación permite a los usuarios realizar compras, pero no usa el sistema de comercio de la Tienda Windows.
 
-En la mayoría de las aplicaciones, esta casilla debe dejarse desmarcada, ya que las aplicaciones que ofrecen la oportunidad de realizar compras desde la aplicación suelen usar la API de compra desde la aplicación de Microsoft para crear y [enviar los IAP](iap-submissions.md). Conforme al [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058), las aplicaciones que se crearon y enviaron antes del 29 de junio de 2015 pueden seguir ofreciendo funcionalidad de compra desde la aplicación sin usar el motor de comercio de Microsoft, siempre que dicha funcionalidad cumpla las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_8). Si esto se aplica a tu aplicación, debes marcar esta casilla. Si no, déjala desactivada.
+En la mayoría de las aplicaciones, esta casilla debe dejarse desmarcada, ya que las aplicaciones que ofrecen la oportunidad de realizar compras desde la aplicación suelen usar la API de compra desde la aplicación de Microsoft para crear y [enviar los complementos](add-on-submissions.md). Conforme al [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058), las aplicaciones que se crearan y enviaran antes del 29 de junio de 2015 pueden seguir ofreciendo la funcionalidad de compra desde la aplicación sin usar el motor de comercio de Microsoft, siempre que dicha funcionalidad cumpla las [Directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_8). Si esto se aplica a tu aplicación, debes marcar esta casilla. Si no, déjala desactivada.
 
 ## Esta aplicación se ha probado y cumple las directrices de accesibilidad.
 
@@ -34,8 +35,7 @@ Cuando declaras que tu aplicación es accesible, aceptas que será accesible par
 
 Para obtener más información, consulta [Accesibilidad en aplicaciones de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/dn263101), [Pruebas de accesibilidad](https://msdn.microsoft.com/library/windows/apps/mt297664) y [Accesibilidad en la Tienda](https://msdn.microsoft.com/library/windows/apps/mt297663).
 
-> 
-            **Importante**  No describas tu aplicación como accesible, a menos que hayas realizado en ella ingeniería específica y la hayas probado para dicho fin. Si la aplicación se declara como accesible, pero en realidad no admite la accesibilidad, probablemente recibas comentarios negativos de la comunidad.
+> **Importante** No describas tu aplicación como accesible a menos que la hayas diseñado y probado específicamente para dicho fin. Si la aplicación se declara como accesible, pero en realidad no admite la accesibilidad, probablemente recibas comentarios negativos de la comunidad.
 
 ## Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble.
 
@@ -45,8 +45,7 @@ Si quieres impedir que la aplicación se instale en unidades alternativas o alma
 
 Ten en cuenta que no hay ninguna opción para restringir la instalación de modo que una aplicación solo pueda instalarse en un medio de almacenamiento extraíble.
 
-> 
-            **Nota**  En Windows Phone 8.1, esta condición se indicó previamente a través de StoreManifest.xml.
+> **Nota** En Windows Phone8.1, esta condición se indicaba previamente a través de StoreManifest.xml.
 
 ## Windows puede incluir los datos de la aplicación en copias de seguridad automáticas en OneDrive.
 
@@ -54,8 +53,7 @@ Esta casilla está activada de forma predeterminada para permitir que los datos 
 
 Si quieres impedir que los datos de la aplicación se incluyan en copias de seguridad automáticas, desactiva la casilla.
 
-> 
-            **Nota**  En Windows Phone 8.1, esta condición se indicó previamente a través de StoreManifest.xml.
+> **Nota** En Windows Phone8.1, esta condición se indicaba previamente a través de StoreManifest.xml.
 
  
 
@@ -69,6 +67,6 @@ Si quieres impedir que los datos de la aplicación se incluyan en copias de segu
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,38 +1,42 @@
 ---
 author: mcleanbyron
 ms.assetid: 4F9657E5-1AF8-45E0-9617-45AF64E144FC
-description: Use these methods in the Windows Store submission API to manage add-ons for apps that are registered to your Windows Dev Center account.
-title: Manage add-ons using the Windows Store submission API
+description: "Usa estos métodos en la API de envío de la Tienda Windows para administrar complementos para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows."
+title: "Administrar complementos mediante la API de envío de la Tienda Windows"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 75548ee4689fd31d734c570f8e3eca5d33a6181f
+
 ---
 
-# Manage add-ons using the Windows Store submission API
+# Administrar complementos mediante la API de envío de la Tienda Windows
 
 
 
 
-Use the following methods in the Windows Store submission API to manage add-ons (also known as in-app products or IAPs) for apps that are registered to your Windows Dev Center account. For an introduction to the Windows Store submission API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+Usa los métodos siguientes en la API de envío de la Tienda Windows para administrar complementos (también conocidos como productos desde la aplicación o IAP) para aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows. Para obtener una introducción a la API de envío de la Tienda Windows, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
->**Note**&nbsp;&nbsp;These methods can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled. These methods can only be used to get, create, or delete add-ons. To create submissions for add-ons, see the methods in [Manage add-on submissions](manage-add-on-submissions.md).
+>**Nota**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado. Estos métodos solo pueden usarse para obtener, crear o eliminar complementos. Para crear envíos de complementos, consulta los métodos de [Administrar envíos de complemento](manage-add-on-submissions.md).
 
-| Method        | URI    | Description                                                                 |
+| Método        | URI    | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` | Gets data for all add-ons for all the apps that are registered to your Windows Dev Center account. For more information, see [Get all add-ons](get-all-add-ons.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId} ``` | Gets data for a specific add-on. For more information, see [Get an add-on](get-an-add-on.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` | Creates a new add-on. For more information, see [Create an add-on](create-an-add-on.md).  |
-| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}``` | Deletes an add-on. For more information, see [Delete an add-on](delete-an-add-on.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` | Obtiene los datos de todos los complementos de todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows. Para obtener más información, consulta [Obtener todos los complementos](get-all-add-ons.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId} ``` | Obtiene los datos de un complemento específico. Para obtener más información, consulta [Obtener un complemento](get-an-add-on.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` | Crea un complemento nuevo. Para obtener más información, consulta [Crear un complemento](create-an-add-on.md).  |
+| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}``` | Elimina un complemento. Para obtener más información, consulta [Eliminar un complemento](delete-an-add-on.md). |
 
-## Prerequisites
+## Requisitos previos
 
-If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API before trying to use any of these methods.
+Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de la Tienda Windows antes de intentar usar cualquiera de estos métodos.
 
-## Resources
+## Recursos
 
-These methods use the following resources to format data.
+Estos métodos usan los siguientes recursos para dar formato a los datos.
 
 <span id="add-on-object" />
-### Add-on
+### Complemento
 
-This resource represents an add-on. The following example demonstrates the format of this resource.
+Este recurso representa un complemento. En el siguiente ejemplo se muestra el formato de este recurso.
 
 ```json
 {
@@ -59,21 +63,21 @@ This resource represents an add-on. The following example demonstrates the forma
 }
 ```
 
-This resource has the following values.
+Este recurso tiene los siguientes valores.
 
-| Value      | Type   | Description                                                                                                                                                                                                                                                                         |
+| Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| applications      | array  | An array that contains an object that represents the app that this add-on is associated with. For more information about the data in this object, see the [Application object](#application-object) section below. Only one item is supported in this array.  |
-| id | string  | The Store ID of the add-on. This value is supplied by the Store. An example Store ID is 9NBLGGH4TNMP.  |
-| productId | string  | The product ID of the add-on. This is the ID that was provided by the developer when the add-on was created. For more information, see [Set your product type and product ID](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id). |
-| productType | string  | The product type of the add-on. The following values are supported: **Durable** and **Consumable**.  |
-| lastPublishedInAppProductSubmission       | object | An object that provides information about the last published submission for the add-on. For more information, see the [Submission](#submission-object) section below.                                                                                                                                                          |
-| pendingInAppProductSubmission        | object  |  An object that provides information about the current pending submission for the add-on. For more information, see the [Submission](#submission-object) section below.  |   |
+| applications      | array  | Matriz que contiene un objeto que representa la aplicación a la que está asociado este complemento. Para obtener más información sobre los datos de este objeto, consulta la sección del [objeto Aplicación](#application-object) a continuación. Solo se admite un elemento en esta matriz.  |
+| id | string  | Id. de la Tienda del complemento. Este valor lo proporciona la Tienda. Un ejemplo de un Id. de la Tienda sería 9NBLGGH4TNMP.  |
+| productId | string  | Id. del producto del complemento. Identificador que proporcionó el desarrollador cuando se creó el complemento. Para obtener más información, consulta [Establecer el tipo de producto y el id. del producto](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id). |
+| productType | string  | Tipo de producto del complemento. Se admiten los siguientes valores: **Duradero** y **Consumible**.  |
+| lastPublishedInAppProductSubmission       | object | Objeto que proporciona información sobre el último envío publicado para el complemento. Si quieres obtener más información, consulta la sección [Envío](#submission-object) a continuación.                                                                                                                                                          |
+| pendingInAppProductSubmission        | object  |  Objeto que proporciona información sobre el envío pendiente actualmente para el complemento. Si quieres obtener más información, consulta la sección [Envío](#submission-object) a continuación.  |   |
 
 <span id="application-object" />
-### Application
+### Aplicación
 
-This resource represents an app that an add-on is associated with. The following example demonstrates the format of this resource.
+Este recurso representa una aplicación a la que está asociado un complemento. En el siguiente ejemplo se muestra el formato de este recurso.
 
 ```json
 {
@@ -89,17 +93,17 @@ This resource represents an app that an add-on is associated with. The following
 }
 ```
 
-This resource has the following values.
+Este recurso tiene los siguientes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
 |-----------------|---------|-----------|
-| value            | object  |  An object that contains the following values: <br/><br/> <ul><li>*id*. The Store ID of the app. For more information about the Store ID, see [View app identity details](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).</li><li>*resourceLocation*. A relative path that you can append to the base ```https://manage.devcenter.microsoft.com/v1.0/my/``` request URI to retrieve the complete data for the app.</li></ul>   |
-| totalCount   | int  | The number of app objects in the *applications* array of the response body.                                                                                                                                                 |
+| value            | object  |  Objeto que contiene los siguientes valores: <br/><br/> <ul><li>*id*. Id. de la Tienda de la aplicación. Para obtener más información sobre el Id. de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).</li><li>*resourceLocation*. Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para la aplicación.</li></ul>   |
+| totalCount   | entero  | Número de objetos de la aplicación en la matriz *applications* del cuerpo de la respuesta.                                                                                                                                                 |
 
 <span id="submission-object" />
-### Submission
+### Envío
 
-This resource provides information about a submission for an add-on. The following example demonstrates the format of this resource.
+Este recurso proporciona información sobre un envío de un complemento. En el siguiente ejemplo se muestra el formato de este recurso.
 
 ```json
 {
@@ -110,20 +114,26 @@ This resource provides information about a submission for an add-on. The followi
 }
 ```
 
-This resource has the following values.
+Este recurso tiene los siguientes valores.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
 |-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id            | string  | The ID of the submission.    |
-| resourceLocation   | string  | A relative path that you can append to the base ```https://manage.devcenter.microsoft.com/v1.0/my/``` request URI to retrieve the complete data for the submission.                                                                                                                                               |
- 
+| id            | string  | Identificador del envío.    |
+| resourceLocation   | string  | Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para el envío.                                                                                                                                               |
+ 
 <span/>
 
-## Related topics
+## Temas relacionados
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage add-on submissions using the Windows Store submission API](manage-add-on-submissions.md)
-* [Get all add-ons](get-all-add-ons.md)
-* [Get an add-on](get-an-add-on.md)
-* [Create an add-on](create-an-add-on.md)
-* [Delete an add-on](delete-an-add-on.md)
+* [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
+* [Administrar envíos de complemento con la API de envío de la Tienda Windows](manage-add-on-submissions.md)
+* [Obtener todos los complementos](get-all-add-ons.md)
+* [Obtener un complemento](get-an-add-on.md)
+* [Crear un complemento](create-an-add-on.md)
+* [Eliminar un complemento](delete-an-add-on.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

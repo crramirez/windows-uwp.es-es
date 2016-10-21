@@ -1,18 +1,19 @@
 ---
 author: mcleanbyron
 ms.assetid: 5fa16a27-fdc0-43b2-84cd-8547fd4915de
-description: "Aprenda cómo asignar propiedades de ** AdControl ** en HTML."
-title: Ejemplo de las propiedades HTML
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 53b9afdcdc697e3ed508ef6e5ed5d684bdf5aa69
+description: "Aprende cómo asignar propiedades de ** AdControl ** en HTML."
+title: Ejemplo de propiedades HTML
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 1898ed2ccad74ac33c5130c627363e0a9daebceb
 
 
 ---
 
-# Ejemplo de las propiedades HTML
+# Ejemplo de propiedades HTML
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 En el siguiente ejemplo se muestra cómo asignar propiedades de [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) en HTML. Las propiedades **applicationId** y **adUnitId** son obligatorias. Las otras propiedades y eventos son opcionales. Si no proporcionas valores para las propiedades opcionales, el control usará los valores predeterminados que creen un anuncio coherente con la experiencia de usuario de la aplicación.
 
@@ -40,6 +41,6 @@ data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1',
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ title: Emparejar dispositivos
 description: Algunos dispositivos deben estar emparejados para que puedan usarse. El espacio de nombres Windows.Devices.Enumeration admite tres modos de emparejar dispositivos.
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: e719e0ff5f97822f3d0dc937182131bf7f4224eb
+ms.openlocfilehash: 502a1a650d327e914ffef049278581851ad4ec3b
 
 ---
 # Emparejar dispositivos
@@ -23,8 +23,7 @@ Algunos dispositivos deben estar emparejados para que puedan usarse. El espacio 
 -   Emparejamiento básico
 -   Emparejamiento personalizado
 
-
-              **Sugerencia** No es necesario emparejar ciertos dispositivos para poder usarlos. Esto se explica en la sección de emparejamiento automático.
+**Sugerencia**  No es necesario emparejar ciertos dispositivos para poder usarlos. Esto se explica en la sección de emparejamiento automático.
 
  
 
@@ -77,6 +76,6 @@ Para descargar una muestra que te indique cómo usar las API [**Windows.Devices.
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,21 +1,18 @@
 ---
 author: mijacobs
-Description: "Como representación visual del lenguaje, la tarea principal de la tipografía es ser clara. Su estilo nunca debe obstaculizar ese objetivo. No obstante, la tipografía también tiene un rol importante como componente de diseño, con un gran efecto en la densidad y la complejidad del diseño, y en la experiencia de usuario de ese diseño."
+description: "Como representación visual del lenguaje, la tarea principal de la tipografía es ser clara. Su estilo nunca debe obstaculizar ese objetivo. No obstante, la tipografía también tiene un rol importante como componente del diseño, ya que aporta un gran efecto en la densidad y la complejidad del diseño y en la experiencia del usuario de ese diseño."
 title: "Tipografía"
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
-label: Typography
 template: detail.hbs
-extraBodyClass: style-typography
-brief: "As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 7ec2c80fd571de98060282d2b321d1895e2b3dc8
+ms.sourcegitcommit: 8338b4ebcdd73f1b7ebf1dedafe68d861cd9d93b
+ms.openlocfilehash: 481c66e3edd42722cfd59bf420fe5b6286706245
 
 ---
 
-# Tipografía para aplicaciones UWP
+# Tipografía
 
-Del mismo modo que la representación visual del lenguaje, la tarea principal de la tipografía es ser clara. Su estilo nunca debe obstaculizar ese objetivo. No obstante, la tipografía también tiene un rol importante como componente de diseño, con un gran efecto en la densidad y la complejidad del diseño, y en la experiencia de usuario de ese diseño.
+Como representación visual del lenguaje, la tarea principal de la tipografía es ser clara. Su estilo nunca debe obstaculizar ese objetivo. No obstante, la tipografía también tiene un rol importante como componente de diseño, con un gran efecto en la densidad y la complejidad del diseño, y en la experiencia de usuario de ese diseño.
 
 ## Tipo de letra
 
@@ -39,9 +36,9 @@ Cuando se apila un tipo de mayor tamaño encima de otro de menor tamaño, la dis
 
 ![Muestra cómo se apila un tipo de mayor tamaño encima de otro de menor tamaño](images/line-height-stacking.png)
 
-En XAML, esto se logra apilando dos [TextBlocks](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) y estableciendo el margen adecuado.
+En XAML, esto se logra apilando dos [TextBlocks](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) y estableciendo el margen adecuado.
 
-```xaml
+```xml
 <StackPanel Width="200">
     <!-- Setting a bottom margin of 3px on the header
          puts the baseline of the body text exactly 24px
@@ -61,45 +58,48 @@ En XAML, esto se logra apilando dos [TextBlocks](https://msdn.microsoft.com/libr
 </StackPanel>
 ```
 
-<!-- OP version -->
+
 
 ## Interletraje y tracking
 
 Segoe es un tipo de letra humanist con un aspecto nítido y legible, con formas orgánicas y abiertas inspiradas en el texto escrito a mano. Para garantizar la legibilidad óptima y mantener la integridad humanist, la configuración del interletraje y del tracking debe tener valores específicos.
 
-Interletraje se debe establecer en "métrica" y tracking debe establecerse en "0".
+El interletraje se debe establecer en "métrica" y el tracking debe establecerse en "0".
 
-<img src="images/kerning-tracking.png" alt="Shows the difference between kerning and tracking" />
+
+![Muestra la diferencia entre el interletraje y el tracking](images/kerning-tracking.png)
+
+
 
 ## Espacio entre palabras y entre letras
 
-De forma parecida al interletraje y al tracking, en el espacio entre palabras y entre letras se usa una configuración específica para garantizar la legibilidad óptima y la integridad humanist.
+De forma parecida al interletraje y al tracking, en el espacio entre palabras y letras se usa una configuración específica para garantizar la legibilidad óptima y la integridad humanista.
 
-El espacio entre palabras predeterminado siempre es 100 % y el espaciado de las letras debe establecerse en "0".
-
-<img src="images/word-letter.png" alt="Shows the difference between word and letter spacing" />
-
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-Usa la propiedad [Typogrphy.Kerning](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) en un control de texto XAML para controlar el interletraje, y [FontStretch](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar el seguimiento. De forma predeterminada, Typography.Kerning se ha establecido en “true”, y FontStretch se ha establecido en “Normal”; ambos son valores recomendados.
-    </div>
-</aside>
+El espacio entre palabras predeterminado siempre es del 100 % y el espaciado entre letras debe establecerse en "0".
 
 
-<!-- OP version -->
+![Muestra las diferencias del espaciado entre palabras y letras](images/word-letter.png)
+
+**Nota**&nbsp;&nbsp;En un control de texto XAML se usa [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) para controlar el interletraje [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) para controlar el tracking. De forma predeterminada, Typography.Kerning se ha establecido en “true”, y FontStretch se ha establecido en “Normal”; ambos son valores recomendados.
+
+
+
+
 ## Alineación
 
 Por lo general, recomendamos que los elementos visuales y las columnas de tipo se alineen a la izquierda. En la mayoría de los casos, la alineación del texto a la izquierda con un margen irregular a la derecha proporciona un anclaje coherente del contenido y un diseño uniforme.
 
-<img src="images/alignment.png" alt="Shows flush-left text" />
+
+![Muestra el texto alineado a la izquierda](images/alignment.png)
+
+
 
 ## Finales de línea
 
-Cuando la tipografía no deba estar alineada a la izquierda con un margen irregular a la derecha, intenta que los finales de línea queden alineados y evita la división de palabras.
+Cuando la tipografía no esté alineada a la izquierda con un margen irregular a la derecha, intenta que los finales de línea queden alineados y evita la división de palabras.
 
-<img src="images/line-endings.png" alt="Shows even line endings" />
+
+![Muestra finales de línea igualados](images/line-endings.png)
 
 ## Párrafos
 
@@ -121,42 +121,27 @@ Las líneas demasiado largas provocan un mayor esfuerzo fisual y pueden desorien
 
 La alineación horizontal de los iconos con texto se puede controlar de distintas formas según el tamaño del icono y la cantidad de texto. Cuando el texto tiene una o varias líneas y cabe en la alto del icono, el texto se debe centrar verticalmente.
 
-Cuando el texto se extiende más allá de la alto del icono, la primera línea del texto debe alinearse verticalmente y el texto adicional debe fluir debajo de forma natural. Al usar caracteres cuyas mayúsculas son mayores (el alto ascendente y descendente), se debe tener cuidado para seguir la misma guía de alineación.
+Cuando el texto se extiende más allá de la alto del icono, la primera línea del texto debe alinearse verticalmente y el texto adicional debe fluir debajo de forma natural. Al usar caracteres cuyas mayúsculas son mayores (según el alto ascendente y descendente), debes tener cuidado y seguir la misma guía de alineación.
 
 ![Muestra varios pares de iconos y texto](images/hanging-text-alignment.png)
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-La propiedad [TextBlock.TextLineBounds](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) de XAML proporciona acceso a la altura de las mayúsculas y a la métrica de los tipos de letra de línea de base. Puedes usar esta opción para visualizar de forma vertical, centrar o alinear en la parte superior el contenido.
-    </div>
-</aside>
+**Nota**&nbsp;&nbsp;La propiedad de XAML [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) proporciona acceso al alto de las mayúsculas y a la métrica de los tipos de letra de la base de referencia. Puedes usar esta opción para visualizar de forma vertical, centrar o alinear en la parte superior el contenido.
 
 ## Recortes y puntos suspensivos
 
 Recorta de manera predeterminada; el texto pasará a la siguiente línea a menos que la revisión especifique lo contrario. Cuando el texto no pasa a la siguiente línea, recomendamos recortar en lugar de usar puntos suspensivos. El recorte puede producirse en el borde del contenedor, en el borde del dispositivo, en el borde de una barra de desplazamiento, etc.
 
-Excepciones: en contenedores que no están bien definido (por ejemplo, no hay ningún color de fondo diferenciador), el texto que no se ajusta puede marcarse con puntos suspensivos "...".
+Excepciones: en contenedores que no están bien definidos (por ejemplo, no hay ningún color diferenciador de fondo), el texto que no se ajuste puede marcarse con puntos suspensivos "...".
 
 ![Muestra el marco de un dispositivo con texto recortado](images/clipping.png)
 
-# Rampa de tipografías
+## Rampa de tipografías
+La rampa de tipos establece una relación de diseño crucial entre los títulos y el texto del cuerpo, y garantiza una jerarquía comprensible y clara entre los diferentes niveles. Esta jerarquía crea una estructura que permite a los usuarios navegar fácilmente a través de la comunicación escrita.
 
-Para crear la jerarquía de una rampa de tipografías se deben usar fuentes Segoe UI de distintos tamaños. Esta jerarquía crea una estructura que permite a los usuarios navegar fácilmente en la comunicación escrita.
+![Muestra la rampa de tipos](images/type-ramp.png) Todos los tamaños se muestran en píxeles efectivos. 
 
-<figure class="figure-img" >
-    <img src="images/type-ramp.png" alt="Shows the type ramp"  />
-        <figcaption>Todos los tamaños están en píxeles efectivos. Para más información, consulta el vínculo TODO:</figcaption>
-</figure>
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-La mayoría de los niveles de la rampa están disponibles como [recursos estáticos](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) de XAML que siguen la convención de nomenclatura `*TextBlockStyle` (ej.: `HeaderTextBlockStyle`). 
-    </div>
-</aside>
+**Nota**&nbsp;&nbsp;La mayoría de los niveles de rampa están disponibles como [recursos estáticos](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) de XAML que siguen la convención de nomenclatura `*TextBlockStyle` (por ejemplo, `HeaderTextBlockStyle`).
 
 
 ## Texto principal y secundario
@@ -168,16 +153,28 @@ Para crear otras jerarquías no incluidas en la rampa de tipos, establece el tex
 
 Determinados títulos de página deben estar totalmente en mayúsculas para agregar otra dimensión de jerarquía. Estos títulos deben usar BaseAlt con el espaciado establecido en 75 milésimas de un espacio largo. Este tratamiento también puede usarse para facilitar la navegación por la aplicación.
 
-Sin embargo, en algunos idiomas los nombres propios pueden cambiar su significado cuando se escriben en mayúsculas y, por lo tanto, los títulos de páginas creados con nombres propios o con información procedente del usuario *no* deben escribirse solo con totalmente en mayúsculas.
+Sin embargo, en algunos idiomas los nombres propios pueden cambiar su significado cuando se escriben en mayúsculas y, por lo tanto, los títulos de páginas creados con nombres propios o con información procedente del usuario *no* deben escribirse totalmente en mayúsculas.
 
 
-## Qué hacer y qué no hacer
-* Usa Cuerpo para la mayor parte del texto
-* Usa Base para los títulos cuando el espacio es limitado
+**Cosas que hacer**
+
+
+
+* Usa el área Cuerpo para la mayor parte del texto
+* Usa el área Base para los títulos cuando el espacio es limitado
 * Incluye SubtítuloAlt para crear contraste y jerarquía al enfatizar el contenido de nivel superior
+
+
+
+**Cosas que evitar**
+
+
+
 * No uses Título para cadenas largas o cualquier acción principal
-* No uses Encabezado o Subencabezado si hay que ajustar texto
+* No uses Encabezado o Subencabezado si hay que ajustar el texto
 * No combines Subtítulo y SubtítuloAlt en la misma página
+
+
 
 ## Artículos relacionados
 
@@ -185,6 +182,6 @@ Sin embargo, en algunos idiomas los nombres propios pueden cambiar su significad
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

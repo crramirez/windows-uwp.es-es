@@ -4,8 +4,8 @@ ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: "Introducción a Windows Device Portal"
 description: "Obtén información sobre cómo Windows Device Portal te permite configurar y administrar de forma remota el dispositivo mediante una red o una conexión USB."
 translationtype: Human Translation
-ms.sourcegitcommit: 01e83c14304891ff5eaa895e98bbebac33ee7614
-ms.openlocfilehash: 55cbdc077f839166f32605bbada8e0cc707cf5b3
+ms.sourcegitcommit: 7f6aba331ba27d2c0c2ca7925c452da58e155cb8
+ms.openlocfilehash: b316eab1f269dadbe65b7e93b5a33a8e4c4924d7
 
 ---
 # Introducción a Windows Device Portal
@@ -35,7 +35,7 @@ Teléfono | Habilitar dentro del modo de desarrollador | 80| 443 | Host local:10
 
 Para obtener instrucciones específicas sobre la configuración del dispositivo, consulta:
 - [Device Portal para HoloLens](https://dev.windows.com/holographic/using_the_windows_device_portal)
-- [Device Portal para IoT](http://ms-iot.github.io/content/win10/tools/DevicePortal.htm)
+- [Device Portal para IoT](https://go.microsoft.com/fwlink/?LinkID=616499)
 - [Device Portal para dispositivos móviles](device-portal-mobile.md#set-up-device-portal-on-window-phone)
 - [Device Portal para Xbox](device-portal-xbox.md)
 - [Device Portal para escritorio](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
@@ -45,12 +45,9 @@ Para obtener instrucciones específicas sobre la configuración del dispositivo,
 ### Barra de herramientas y navegación
 
 La barra de herramientas de la parte superior de la página proporciona acceso al estado usado frecuentemente y a las características.
-- 
-              **Apagar**: Apaga el dispositivo.
-- 
-              **Reiniciar**: Vuelve a iniciar el dispositivo.
-- 
-              **Ayuda**: Abre la página de ayuda.
+- **Apagar**: apaga el dispositivo.
+- **Reiniciar**: vuelve a iniciar el dispositivo.
+- **Ayuda**: abre la página de ayuda.
 
 Usa los vínculos del panel de navegación en el lado izquierdo de la página para navegar a las herramientas de administración y supervisión disponibles del dispositivo.
 
@@ -66,16 +63,11 @@ Proporciona la funcionalidad de administración y de instalación o desinstalaci
 
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-apps.png)
 
-- 
-              **Aplicaciones instaladas**: Quita e inicia aplicaciones.
-- 
-              **Aplicaciones en ejecución**: Enumera las aplicaciones que se ejecutan actualmente.
-- 
-              **Instalar aplicación**: Selecciona paquetes de la aplicación para la instalación desde una carpeta en el equipo o red.
-- 
-              **Dependencia**: Agrega las dependencias de la aplicación que pretendes instalar.
-- 
-              **Implementar**: Implementa la aplicación seleccionada y las dependencias en el dispositivo.
+- **Aplicaciones instaladas**: quita e inicia aplicaciones.
+- **Aplicaciones en ejecución**: enumera las aplicaciones que se ejecutan actualmente.
+- **Instalar aplicación**: selecciona paquetes de la aplicación para la instalación desde una carpeta en el equipo o red.
+- **Dependencia**: agrega las dependencias de la aplicación que se va a instalar.
+- **Implementar**: implementa la aplicación seleccionada y las dependencias en el dispositivo.
 
 **Para instalar una aplicación**
 
@@ -108,16 +100,11 @@ De forma muy parecida al Administrador de tareas del equipo, esta página te per
 Muestra gráficos en tiempo real de la información de diagnóstico del sistema, como el uso de energía, la velocidad de fotogramas y la carga de la CPU.
 
 Estas son las métricas disponibles:
-- 
-              **CPU**: Porcentaje del total disponible
-- 
-              **Memoria**: Total, en uso, disponible, confirmada, paginada y no paginada
-- 
-              **GPU**: Uso del motor de la GPU, porcentaje del total disponible
-- 
-              **E/S**: Lecturas y escrituras
-- 
-              **Red**: Envíos y recepciones
+- **CPU**: porcentaje del total disponible
+- **Memoria**: total, en uso, disponible, confirmada, paginada y no paginada
+- **GPU**: uso del motor de la GPU, porcentaje del total disponible
+- **E/S**: lecturas y escrituras
+- **Red**: envíos y recepciones
 
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-perf.png)
 
@@ -128,8 +115,7 @@ Administra el seguimiento de eventos para Windows (ETW) en tiempo real en el dis
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-etw.png)
 
 Activa **Ocultar proveedores** para mostrar solamente la lista de eventos.
-- 
-              **Registered providers**: Selecciona el proveedor ETW y el nivel de seguimiento. El nivel de seguimiento es uno de estos valores:
+- **Registered providers**: selecciona el proveedor ETW y el nivel de seguimiento. El nivel de seguimiento es uno de estos valores:
     1. Terminación o salida anómala
     2. Errores graves
     3. Advertencias
@@ -137,14 +123,10 @@ Activa **Ocultar proveedores** para mostrar solamente la lista de eventos.
     5. Seguimiento detallado (*)
 
 Haz clic o pulsa en **Activar** para iniciar el seguimiento. El proveedor se agrega a la lista desplegable de **Proveedores habilitados**.
-- 
-              **Proveedores personalizados**: Selecciona un proveedor ETW personalizado y el nivel de seguimiento. Identifica el proveedor por su GUID. No incluyas corchetes en el GUID.
-- 
-              **Enabled providers**: Enumera los proveedores habilitados. Selecciona un proveedor de la lista desplegable y haz clic o pulsa en **Desactivar** para detener el seguimiento. Haz clic o pulsa en **Detener todo** para suspender todos los seguimientos.
-- 
-              **Providers history**: Muestra los proveedores ETW que estaban habilitados durante la sesión actual. Haz clic o pulsa en **Activar** para activar un proveedor deshabilitado. Haz clic o pulsa en **Borrar** para borrar el historial.
-- 
-              **Eventos**: Enumera los eventos ETW de los proveedores seleccionados en formato de tabla. Esta tabla se actualiza en tiempo real. Debajo de la tabla, haz clic en el botón **Borrar** para eliminar todos los eventos ETW de la tabla. Esta acción no deshabilita ningún proveedor. Puedes hacer clic en **Guardar en archivo** para exportar los eventos ETW recopilados actualmente en un archivo CSV de forma local.
+- **Proveedores personalizados**: selecciona un proveedor ETW personalizado y el nivel de seguimiento. Identifica el proveedor por su GUID. No incluyas corchetes en el GUID.
+- **Proveedores habilitados**: enumera los proveedores habilitados. Selecciona un proveedor de la lista desplegable y haz clic o pulsa en **Desactivar** para detener el seguimiento. Haz clic o pulsa en **Detener todo** para suspender todos los seguimientos.
+- **Providers history**: muestra los proveedores ETW que estaban habilitados durante la sesión actual. Haz clic o pulsa en **Activar** para activar un proveedor deshabilitado. Haz clic o pulsa en **Borrar** para borrar el historial.
+- **Eventos**: enumera los eventos ETW de los proveedores seleccionados en formato de tabla. Esta tabla se actualiza en tiempo real. Debajo de la tabla, haz clic en el botón **Borrar** para eliminar todos los eventos ETW de la tabla. Esta acción no deshabilita ningún proveedor. Puedes hacer clic en **Guardar en archivo** para exportar los eventos ETW recopilados actualmente en un archivo CSV de forma local.
 
 Para obtener más información sobre el uso del seguimiento de ETW, consulta la [entrada de blog](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) sobre cómo usarlo para recopilar registros en tiempo real de la aplicación. 
 
@@ -154,10 +136,8 @@ Captura los seguimientos de [Windows Performance Recorder](https://msdn.microsof
 
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-perf-tracing.png)
 
-- 
-              **Available profiles**: Selecciona el perfil de WPR en la lista desplegable y pulsa o haz clic en **Inicio** para iniciar el seguimiento.
-- 
-              **Custom profiles**: Haz clic o pulsa en **Examinar** para elegir un perfil de WPR desde tu equipo. Haz clic o pulsa en **Cargar e iniciar** para iniciar el seguimiento.
+- **Available profiles**: selecciona el perfil de WPR en la lista desplegable y pulsa o haz clic en **Inicio** para iniciar el seguimiento.
+- **Custom profiles**: haz clic o pulsa en **Examinar** para elegir un perfil de WPR desde tu equipo. Haz clic o pulsa en **Cargar e iniciar** para iniciar el seguimiento.
 
 Para detener el seguimiento, haz clic en **Detener**. Permanece en esta página hasta que el archivo de seguimiento (. ETL) se haya terminado de descargar.
 
@@ -172,10 +152,8 @@ Enumera todos los periféricos conectados al dispositivo.
 ### Redes
 
 Administra las conexiones de red en el dispositivo.  A menos que estés conectado a Device Portal a través de USB, al cambiar esta configuración, es probable que te desconectes de Device Portal.
-- 
-              **Perfiles**: Selecciona un perfil de Wi-Fi diferente para usar.  
-- 
-              **Redes disponibles**: Redes Wi-Fi disponibles para el dispositivo. Al pulsar o hacer clic en una red, podrás conectarte a ella y proporcionar una clave de paso si es necesario. Nota: Device Portal aún no admite la autenticación empresarial. 
+- **Perfiles**: selecciona un perfil de Wi-Fi diferente para usar.  
+- **Redes disponibles**: redes Wi-Fi disponibles para el dispositivo. Al pulsar o hacer clic en una red, podrás conectarte a ella y proporcionar una clave de paso si es necesario. Nota: Device Portal aún no admite la autenticación empresarial. 
 
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-network.png)
 
@@ -204,8 +182,7 @@ Se sugiere la conexión en el puerto HTTPS, ya que no todos los dispositivos esc
 
 A fin de ofrecer protección frente a [ataques CSRF](https://wikipedia.org/wiki/Cross-site_request_forgery), se requiere un token único en todas las solicitudes no GET. Este token, el encabezado de la solicitud X-CSRF-Token, se deriva de una cookie de sesión, CSRF-Token. En la interfaz de usuario web de Device Portal, la cookie CSRF-Token se copia en el encabezado X-CSRF-Token en cada solicitud.
 
-
-              **Importante** Esta protección impide usar las API de REST desde un cliente independiente (por ejemplo, las utilidades de línea de comandos). Esto puede resolverse de 3 maneras: 
+**Importante** Esta protección impide usar las API de REST desde un cliente independiente (por ejemplo, las utilidades de línea de comandos). Esto puede resolverse de 3 maneras: 
 
 1. Uso del nombre de usuario "auto-". Los clientes que antepongan "auto-" a su nombre de usuario omitirán la protección CSRF. Es importante que este nombre de usuario no se use para iniciar sesión en Device Portal a través del explorador, ya que abrirá el servicio a los ataques CSRF. Ejemplo: Si el nombre de usuario de Device Portal es "admin", debe usarse ```curl -u auto-admin:password <args>``` para omitir la protección CSRF. 
 
@@ -213,8 +190,7 @@ A fin de ofrecer protección frente a [ataques CSRF](https://wikipedia.org/wiki/
  
 3. Deshabilita la autenticación y usa HTTP. La protección CSRF solo se aplica a los extremos HTTPS, para que las conexiones en extremos HTTP no tengan que realizar las acciones anteriores. 
 
-
-              **Nota**: Un nombre de usuario que comience por "auto-" no podrá iniciar sesión en Device Portal a través del explorador.  
+**Nota**: Un nombre de usuario que comience por "auto-" no podrá iniciar sesión en Device Portal a través del explorador.  
 
 #### Protección contra Cross-Site WebSocket Hijacking (CSWSH)
 
@@ -222,6 +198,6 @@ Para protegerse de los [ataques de CSWSH](https://www.christian-schneider.net/Cr
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

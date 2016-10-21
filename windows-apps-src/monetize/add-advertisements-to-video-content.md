@@ -1,28 +1,32 @@
 ---
 author: mcleanbyron
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
-description: Learn how to use the AdScheduler class to add advertisements to video content.
-title: Add advertisements to video content in HTML 5 and JavaScript
+description: "Aprende a usar la clase AdScheduler para agregar anuncios a contenido de vídeo."
+title: "Agregar anuncios a contenido de vídeo en HTML 5 y JavaScript"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 5fd097d978b1960ed957a7e12ab7eece012c5b41
+
 ---
 
-# Add advertisements to video content in HTML 5 and JavaScript
+# Agregar anuncios a contenido de vídeo en HTML 5 y JavaScript
 
 
-This walkthrough shows how to use the [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) class to add advertisements to video content in a Universal Windows Platform (UWP) app that was written using JavaScript with HTML.
+Este tutorial muestra cómo usar la clase [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) para agregar anuncios a contenido de vídeo en una aplicación para la plataforma Universal de Windows (UWP) que se haya escrito mediante JavaScript con HTML.
 
->**Note**&nbsp;&nbsp;This feature is currently supported only for UWP apps that was written using JavaScript with HTML.
+>**Nota**&nbsp;&nbsp;Actualmente, esta característica solo se admite para aplicaciones para UWP que se hayan escrito mediante JavaScript con HTML.
 
-[AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) works with both progressive and streaming media, and uses IAB standard Video Ad Serving Template (VAST) 2.0/3.0 and VMAP payload formats. By using standards, [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) is agnostic to the ad service with which it interacts.
+[AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) funciona tanto con contenido multimedia progresivo como de streaming y utiliza los formatos de carga Video Ad Serving Template (VAST) 2.0/3.0 y VMAP estándar de IAB. Al usar estándares, [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) es independiente del servicio de anuncios con el que interactúa.
 
-Advertising for video content differs based upon whether the program is under ten minutes (short form), or over ten minutes (long form). Although the latter is more complicated to set up on the service, there is actually no difference in how one writes the client side code. If the [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) receives a VAST payload with a single ad instead of a manifest, it is treated as if the manifest called for a single pre-roll ad (one break at time 00:00).
+La publicidad para el contenido de vídeo es diferente en función de si el programa es inferior a 10minutos (formato corto) o superior a 10minutos (formato largo). Aunque la segunda opción es más complicada de configurar en el servicio, realmente no existe ninguna diferencia en cómo se escribe el código del lado cliente. Si la clase [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) recibe una carga de VAST con un solo anuncio en lugar de un manifiesto, esto se trata como si el manifiesto llamara a un solo anuncio ya preparado (un salto en el minuto 00:00).
 
-## Prerequisites
+## Requisitos previos
 
-* Install the [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) with Visual Studio 2015.
+* Instala el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) con Visual Studio 2015.
 
-* Your project must use the [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) control to serve the video content in which the ads will be scheduled. This control is available in the [TVHelpers](https://github.com/Microsoft/TVHelpers) collection of libraries available from Microsoft on GitHub.
+* El proyecto debe usar el control [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) para proporcionar el contenido de vídeo en el que se programarán los anuncios. Este control está disponible en la colección de bibliotecas [TVHelpers](https://github.com/Microsoft/TVHelpers) disponible a través de Microsoft en GitHub.
 
-  The following example shows how to declare a [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) in HTML markup. Typically, this markup belongs in the `<body>` section in the default.html file (or another html file as appropriate for your project).
+  El siguiente ejemplo muestra cómo declarar un control [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) en formato HTML. Por lo general, este formato se incluye en la sección `<body>` en el archivo default.html (u otro archivo html, según corresponda al proyecto).
   ``` html
   <div id="MediaPlayerDiv" data-win-control="TVJS.MediaPlayer">
     <video src="URL to your content">
@@ -30,7 +34,7 @@ Advertising for video content differs based upon whether the program is under te
   </div>
   ```
 
-  The following example shows how to establish a [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) in JavaScript code.
+  El siguiente ejemplo muestra cómo establecer un control [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) en código JavaScript.
   ``` javascript
   var mediaPlayerDiv = document.createElement("div");
   document.body.appendChild(mediaPlayerDiv);
@@ -42,45 +46,45 @@ Advertising for video content differs based upon whether the program is under te
   var mediaPlayer = new TVJS.MediaPlayer(mediaPlayerDiv);
   ```
 
-## How to use the AdScheduler class in your code
+## Cómo usar la clase AdScheduler en el código
 
-1. In Visual Studio, open your project or create a new project.
+1. En Visual Studio, abre el proyecto o crea uno nuevo.
 
-2. If your project targets **Any CPU**, update your project to use an architecture-specific build output (for example, **x86**). If your project targets **Any CPU**, you will not be able to successfully add a reference to the Microsoft advertising library in the following steps. For more information, see [Reference errors caused by targeting Any CPU in your project](known-issues-for-the-advertising-libraries.md#reference_errors).
+2. Si el destino del proyecto es **Cualquier CPU**, actualiza el proyecto para que use una salida de compilación específica por arquitectura (por ejemplo, **x86**). Si el destino del proyecto es **Cualquier CPU**, no podrás agregar una referencia a la biblioteca de publicidad de Microsoft correctamente a través de los siguientes pasos. Para obtener más información, consulta [Errores de referencia derivados de orientar el proyecto a Cualquier CPU](known-issues-for-the-advertising-libraries.md#reference_errors).
 
-3. Add a reference to the **Microsoft Advertising SDK for JavaScript** library to your project.
+3. Agrega a tu proyecto una referencia a la biblioteca **Microsoft Advertising SDK for JavaScript**.
 
-  a. From the **Solution Explorer** window, right click **References**, and select **Add Reference…**
+  a. Desde la ventana del **Explorador de soluciones**, haz clic con el botón secundario en **Referencias** y, a continuación, selecciona **Agregar referencia...**
 
-  b. In **Reference Manager**, expand **Universal Windows**, click **Extensions**, and then select the check box next to **Microsoft Advertising SDK for JavaScript** (Version 10.0).
+  b. En el **Administrador de referencias**, expande **Universal Windows**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **Microsoft Advertising SDK for JavaScript** (versión 10.0).
 
-  c. In **Reference Manager**, click OK.
+  c. En el **Administrador de referencias**, haz clic en Aceptar.
 
-4.  Add the AdScheduler.js file to your project:
+4.  Agrega el archivo AdScheduler.js al proyecto:
 
-  a.  In Visual Studio, click **Project** and **Manage NuGet Packages**.
+  a.  En VisualStudio, haz clic en **Proyecto** y luego en **Administrar paquetes de NuGet**.
 
-  b.  In the search box, type **Microsoft.StoreServices.VideoAdScheduler** and install the Microsoft.StoreServices.VideoAdScheduler package. The AdScheduler.js file is added to the ../js subdirectory in your project.
+  b.  En el cuadro de búsqueda, escribe **Microsoft.StoreServices.VideoAdScheduler** e instala el paquete Microsoft.StoreServices.VideoAdScheduler. El archivo AdScheduler.js se agrega al subdirectorio .. /js en el proyecto.
 
-5.  Open the default.html file (or other html file as appropriate for your project). In the `<head>` section, after the project’s JavaScript references of default.css and default.js, add the reference to ad.js and adscheduler.js.
+5.  Abre el archivo default.html (u otro archivo html adecuado para el proyecto). En la sección `<head>`, después de las referencias de JavaScript del proyecto de default.css y default.js, agrega la referencia a ad.js y adscheduler.js.
 
     ``` html
     <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
     <script src="/js/adscheduler.js"></script>
     ```
 
-    > **Note**   This line must be placed in the `<head>` section after the include of default.js; otherwise, you will encounter an error when you build your project.
+    > **Nota** Esta línea debe colocarse en la sección `<head>` después de incluir default.js. De lo contrario, se producirá un error al compilar el proyecto.
 
-6.  In the default.js file in your project, add code that creates a new [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) object. Pass in the **MediaPlayer** that hosts your video content. The code must be placed so that it runs after [WinJS.UI.processAll](https://msdn.microsoft.com/library/windows/apps/hh440975.aspx).
+6.  En el archivo default.js del proyecto, agrega código que cree un nuevo objeto [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx). Pasa el objeto **MediaPlayer** que hospeda el contenido de vídeo. El código debe colocarse de forma que se ejecute después de [WinJS.UI.processAll](https://msdn.microsoft.com/library/windows/apps/hh440975.aspx).
 
     ``` javascript
     var myMediaPlayer = document.getElementById("MediaPlayerDiv");
     var myAdScheduler = new MicrosoftNSJS.Advertising.AdScheduler(myMediaPlayer);
     ```
 
-7.  Use the [requestSchedule](https://msdn.microsoft.com/library/windows/apps/mt732208.aspx) or [requestScheduleByUrl](https://msdn.microsoft.com/library/windows/apps/mt732210.aspx) methods to request an ad schedule from the server and insert it into the **MediaPlayer** timeline, and then play the video media.
+7.  Usa los métodos [requestSchedule](https://msdn.microsoft.com/library/windows/apps/mt732208.aspx) o [requestScheduleByUrl](https://msdn.microsoft.com/library/windows/apps/mt732210.aspx) para solicitar una programación de anuncios del servidor e insertarla en la línea de tiempo de **MediaPlayer** y, a continuación, reproducir el contenido multimedia de vídeo.
 
-  * If you are a Microsoft partner who has received permission to request an ad schedule from the Microsoft ad server, use [requestSchedule](https://msdn.microsoft.com/library/windows/apps/mt732208.aspx) and specify the application ID and ad unit ID that were provided to you by your Microsoft representative. This method takes the form of a **Promise**, which is an asynchronous construct where two function pointers are passed to handle the success and failure cases, respectively. For more information, see [Asynchronous patterns in UWP using JavaScript](https://msdn.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps#asynchronous-patterns-in-uwp-using-javascript).
+  * Si eres un asociado de Microsoft que ha recibido permiso para solicitar una programación de anuncios del servidor de anuncios de Microsoft, usa [requestSchedule](https://msdn.microsoft.com/library/windows/apps/mt732208.aspx) y especifica el identificador de aplicación y el identificador de unidad de anuncios que te haya proporcionado tu representante de Microsoft. Este método toma la forma de una **promesa**, que es una construcción asincrónica en la que se pasan dos punteros de función para controlar los casos de éxito y de error, respectivamente. Para obtener más información, consulta [Socios asíncronos en la UWP mediante JavaScript](https://msdn.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps#asynchronous-patterns-in-uwp-using-javascript).
 
       ``` javascript
   myAdScheduler.requestSchedule("your application ID", "your ad unit ID").then(
@@ -94,7 +98,7 @@ Advertising for video content differs based upon whether the program is under te
         });
   ```
 
-  * To request an ad schedule from a non-Microsoft ad server, use [requestScheduleByUrl](https://msdn.microsoft.com/library/windows/apps/mt732210.aspx), and pass in the server URL. This method also takes the form of a **Promise**.
+  * Para solicitar una programación de anuncios de un servidor de anuncios que no sea de Microsoft, usa [requestScheduleByUrl](https://msdn.microsoft.com/library/windows/apps/mt732210.aspx)y pasa la dirección URL del servidor. Este método también adopta la forma de una **promesa**.
 
       ``` javascript
   myAdScheduler.requestScheduleByUrl("your URL").then(
@@ -108,9 +112,9 @@ Advertising for video content differs based upon whether the program is under te
         });
   ```
 
-  >**Note**&nbsp;&nbsp;You must call **play** even if the function fails, because the [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) will tell the **MediaPlayer** to skip the ad(s) and move straight to the content. You may have a different business requirement, such as inserting a built-in ad if an ad can't be successfully fetched remotely.
+  >**Nota**&nbsp;&nbsp;Debes llamar a **play** incluso si la función no se ejecuta, ya que el objeto [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) indicará al objeto **MediaPlayer** que omita los anuncios y pase directamente al contenido. Puede que tengas un requisito de negocio distinto, como insertar un anuncio integrado si no es posible obtener un anuncio de forma remota.
 
-8.  During playback, additional events exist that let your app track progress and/or errors which may occur after the initial ad matching process. The following code shows some of these events.
+8.  Durante la reproducción, existen eventos adicionales que permiten a tu aplicación realizar el seguimiento del progreso o los errores que pueden producirse tras el proceso de coincidencia de anuncios inicial. El siguiente código muestra algunos de estos eventos.
   * [onPodStart](https://msdn.microsoft.com/library/windows/apps/mt732206.aspx):
 
       ```javascript
@@ -162,3 +166,9 @@ Advertising for video content differs based upon whether the program is under te
       myAdScheduler.onErrorOccurred = function (sender, data) {
       }
       ```
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

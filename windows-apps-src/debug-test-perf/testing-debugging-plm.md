@@ -4,7 +4,7 @@ description: "Herramientas y técnicas para depurar y probar cómo funciona tu a
 title: "Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)"
 translationtype: Human Translation
 ms.sourcegitcommit: cbf3d2bb1466ca06e397561ad90d95db28e7136d
-ms.openlocfilehash: 0fde4fa22dc6876807e7f7e1c10e7606eee3786d
+ms.openlocfilehash: 1ea7b969ce0b8992306bb8a2d2b569905cc0cc67
 
 ---
 
@@ -84,6 +84,6 @@ Ten en cuenta que cada llamada a **/enableDebug** debe ser posterior a otra llam
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

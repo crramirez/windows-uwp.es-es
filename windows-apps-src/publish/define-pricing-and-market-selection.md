@@ -3,8 +3,9 @@ author: jnHs
 Description: "La Tienda Windows llega a clientes de más de 200 países y regiones de todo el mundo."
 title: "Definir los precios y la selección del mercado"
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9a1d8b8fb57989091fe7b82ad34066240f62cb8b
+translationtype: Human Translation
+ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
+ms.openlocfilehash: 3fb8594748d303216a4437983604b5d78c993934
 
 ---
 
@@ -13,8 +14,7 @@ ms.openlocfilehash: 9a1d8b8fb57989091fe7b82ad34066240f62cb8b
 
 La Tienda Windows llega a clientes de más de 200 países y regiones de todo el mundo. Puedes elegir los mercados en los que te gustaría ofrecer la aplicación y puedes determinar el precio que cobrarás a los clientes, con la opción de personalizar los precios según el mercado.
 
-
-            **Nota**  Asegúrate de tener en cuenta nuestras [directrices, que te ayudarán a globalizar tu aplicación](https://msdn.microsoft.com/library/windows/apps/hh969150).
+**Nota**  Asegúrate de tener en cuenta nuestras [directrices, que te ayudarán a globalizar tu aplicación](https://msdn.microsoft.com/library/windows/apps/hh969150).
 
  
 
@@ -25,8 +25,7 @@ Cuando selecciones el **Precio base** de la aplicación, este se usará en cada 
 
 Puedes establecer el **Precio base** en **Libre** o puedes elegir una franja de precios, lo que establece el precio de venta en todos los países donde eliges distribuir la aplicación. Las franjas de precios empiezan por 0,99USD, con incrementos adicionales (1,29USD, 1,49USD, 1,99USD, etc.). Estos incrementos aumentan a medida que el precio sube.
 
-> 
-            **Nota**  Estas franjas de precios se aplican también a [productos desde la aplicación (IAP)](iap-submissions.md).
+> **Nota**  Estas franjas de precios se aplican también a [complementos](add-on-submissions.md).
 
 Cada franja de precios tiene un valor correspondiente en cada una de las más de 60 monedas ofrecidas por la Tienda. Usamos estos valores para ayudarte a vender tus aplicaciones a un punto de precio comparable mundial. No obstante, debido a cambios en las tasas de cambio extranjeras, el importe de ventas exacto puede variar levemente de una moneda a otra.
 
@@ -39,25 +38,22 @@ De manera predeterminada, tu aplicación figurará en todos los mercados posible
 
 Para cambiar esta configuración, expande la sección **Mercados y precios personalizados** de la página **Precios y disponibilidad** de envío de la aplicación. Puedes anular la selección de mercados individuales para excluirlos o hacer clic en **Anular toda la selección** y agregar los mercados individuales que quieras.
 
-> 
-            **Importante**   Es tu responsabilidad cumplir con todos los requisitos legales locales, incluso si estos no se mencionan aquí ni en el panel del Centro de desarrollo de Windows.
+> **Importante**   Es tu responsabilidad cumplir con todos los requisitos legales locales, incluso si estos no se mencionan aquí ni en el panel del Centro de desarrollo de Windows.
 
 Si quieres establecer precios personalizados para la aplicación en mercados específicos, también puedes hacerlo aquí; si no, de manera predeterminada, la aplicación se ofrecerá al precio base (en la moneda local del mercado en cuestión).
 
-> 
-            **Nota**  También puedes establecer precios personalizados para mercados específicos para [envíos de IAP](iap-submissions.md).
+> **Nota**  También puedes establecer precios personalizados para mercados específicos para [envíos de complemento](add-on-submissions.md).
 
 Ten en cuenta que incluso si seleccionas todos los mercados, las leyes y restricciones locales u otros factores pueden impedir que ciertas aplicaciones se muestren en algunos países y regiones. Además, algunos mercados pueden tener requisitos específicos en relación con las clasificaciones por edades. Si la aplicación no cumple estos requisitos, no podremos ofrecer tu aplicación en ese mercado. Consulta [Clasificaciones por edades](age-ratings.md) Para obtener más información.
 
-> 
-            **Nota**  Para las aplicaciones destinadas a Windows 8 o Windows 8.1, algunos mercados individuales se tratan como un solo mercado "Resto del mundo". Para obtener más información, consulta [Mercados "Resto del mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8-x). Ten en cuenta que los clientes en Windows 8 o Windows 8.1 solo verán la aplicación a su precio base, incluso si cambias el precio en el mercado.
+> **Nota**  Para las aplicaciones destinadas a Windows 8 o Windows 8.1, algunos mercados individuales se tratan como un solo mercado "Resto del mundo". Para obtener más información, consulta [Mercados "Resto del mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8-x). Ten en cuenta que los clientes en Windows 8 o Windows 8.1 solo verán la aplicación a su precio base, incluso si cambias el precio en el mercado.
 
  
 
-## Mercados consumidores de la Tienda Windows
+## Mercados de consumidores de la Tienda Windows
 
 
-Puedes elegir que la aplicación (o IAP) aparezca en uno o más de los mercados siguientes.
+Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los mercados siguientes:
 
 -   Afganistán
 -   Islas Åland
@@ -150,10 +146,10 @@ Puedes elegir que la aplicación (o IAP) aparezca en uno o más de los mercados 
 -   Guadalupe
 -   Guam
 -   Guatemala
--   Guernsey
+-   Guernesey
 -   Guinea
--   Guinea-Bissau
--   Guayana
+-   Guinea-Bisáu
+-   Guyana
 -   Haití
 -   Islas Heard y McDonald
 -   Santa Sede (Ciudad del Vaticano)
@@ -209,7 +205,7 @@ Puedes elegir que la aplicación (o IAP) aparezca en uno o más de los mercados 
 -   Montserrat
 -   Marruecos
 -   Mozambique
--   Birmano
+-   Myanmar
 -   Namibia
 -   Nauru
 -   Nepal
@@ -238,7 +234,7 @@ Puedes elegir que la aplicación (o IAP) aparezca en uno o más de los mercados 
 -   Puerto Rico
 -   Qatar
 -   Reunión
--   Rumanía
+-   Rumania
 -   Rusia
 -   Ruanda
 -   San Bartolomé
@@ -456,10 +452,10 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
 -   Guadalupe
 -   Guam
 -   Guatemala
--   Guernsey
+-   Guernesey
 -   Guinea
--   Guinea-Bissau
--   Guayana
+-   Guinea-Bisáu
+-   Guyana
 -   Haití
 -   Islas Heard y McDonald
 -   Santa Sede (Ciudad del Vaticano)
@@ -494,7 +490,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
 -   Montserrat
 -   Marruecos
 -   Mozambique
--   Birmano
+-   Myanmar
 -   Namibia
 -   Nauru
 -   Nepal
@@ -555,11 +551,10 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
 -   Zambia
 -   Zimbabue
 
-> 
-            **Nota**  Para una lista de países y regiones en los que puedas registrarte para una cuenta de desarrollador, consulta [Tipos de cuentas, ubicaciones y precios](https://msdn.microsoft.com/library/windows/apps/jj863494).
+> **Nota**  Para ver una lista de países y regiones en los que puedes registrarte para obtener una cuenta de desarrollador, consulta [Tipos de cuentas, ubicaciones y precios](https://msdn.microsoft.com/library/windows/apps/jj863494).
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

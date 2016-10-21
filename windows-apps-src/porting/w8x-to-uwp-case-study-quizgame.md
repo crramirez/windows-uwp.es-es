@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
 description: "En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows10."
 title: "Caso práctico de Windows Runtime 8.x a UWP, aplicación de muestra punto a punto de QuizGame"
+translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: cd05c3edbc254cceb00c55caba698d21998f5594
+ms.openlocfilehash: 353ee8511be38ad437a64e153d43523f355e080f
 
 ---
 
@@ -22,26 +23,21 @@ La adaptación de las dos partes al equipo y al teléfono, respectivamente, tien
 
 La aplicación usa patrones que usan vistas y modelos de vista. Como resultado de esta clara separación, el proceso de migración de esta aplicación es, como se verá, muy sencillo.
 
-
-            **Nota** En esta muestra se da por hecho que la red está configurada para enviar y recibir paquetes UDP de multidifusión de grupos personalizados (la mayoría de las redes domésticas lo están, aunque puede que su red del trabajo no lo esté). La muestra también envía y recibe paquetes TCP.
+**Nota** En esta muestra se da por supuesto que la red está configurada para enviar y recibir paquetes de multidifusión de grupos UDP personalizados (la mayoría de las redes domésticas están así configuradas, aunque puede que la red del trabajo no lo esté). La muestra también envía y recibe paquetes TCP.
 
  
 
-
-            **Nota** Cuando abras QuizGame10 en Visual Studio, si aparece el mensaje "Se requiere una actualización de Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+**Nota** Cuando abras QuizGame10 en Visual Studio, si aparece el mensaje "Es necesario actualizar Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
 
  
 
 ## Descargas
 
+[Descarga la aplicación QuizGame Universal 8.1](http://go.microsoft.com/fwlink/?linkid=532953). Este es el estado inicial de la aplicación antes de portar. 
 
-            [Descarga la aplicación QuizGame Universal 8.1](http://go.microsoft.com/fwlink/?linkid=532953). Este es el estado inicial de la aplicación antes de portar. 
+[Descarga la aplicación QuizGame10 para Windows 10](http://go.microsoft.com/fwlink/?linkid=532954). Este es el estado de la aplicación justo después de la migración. 
 
-
-            [Descarga la aplicación de Windows 10 QuizGame10](http://go.microsoft.com/fwlink/?linkid=532954). Este es el estado de la aplicación justo después de la migración. 
-
-
-            [Consulta la versión más reciente de esta muestra en GitHub](https://github.com/Microsoft/Windows-appsample-quizgame).
+[Consulta la versión más reciente de esta muestra en GitHub](https://github.com/Microsoft/Windows-appsample-quizgame).
 
 ## La solución de WinRT8.1
 
@@ -91,11 +87,11 @@ En función de estas opciones, podrás portar QuizGame.Windows a un nuevo proyec
 
 **La solución QuizGame10**
 
--   Crea una nueva solución (**Nuevo proyecto**&gt;**Otros tipos de proyectos**&gt;**Soluciones de Visual Studio**) y asígnale el nombre QuizGame10.
+-   Crea una nueva solución (**Nuevo proyecto** &gt; **Otros tipos de proyectos** &gt; **Soluciones de Visual Studio**) y asígnale el nombre QuizGame10.
 
 **P2PHelper**
 
--   En la solución, crea un nuevo proyecto de biblioteca de clases de Windows10 (**Nuevo proyecto**&gt;**Windows Universal**&gt;**Biblioteca de clases (Windows Universal)**) y asígnale el nombre P2PHelper.
+-   En la solución, crea un nuevo proyecto de biblioteca de clases de Windows 10 (**Nuevo proyecto** &gt; **Windows Universal** &gt; **Biblioteca de clases [Windows Universal]**) y asígnale el nombre P2PHelper.
 -   Elimina Class1.cs del nuevo proyecto.
 -   Copia P2PSession.cs, P2PSessionClient.cs y P2PSessionHost.cs en la carpeta del nuevo proyecto e incluye los archivos copiados en el nuevo proyecto.
 -   El proyecto se compila sin necesidad de realizar más cambios.
@@ -107,9 +103,9 @@ En función de estas opciones, podrás portar QuizGame.Windows a un nuevo proyec
 
 **QuizGameHost**
 
--   Crea un nuevo proyecto de aplicación de Windows10 (**Agregar**&gt;**Nuevo proyecto**&gt;**Windows Universal**&gt;**Aplicación vacía (Windows Universal)**) y asígnale el nombre QuizGameHost.
--   Agrega una referencia a P2PHelper (**Agregar referencia**&gt;**Proyectos**&gt;**Solución**&gt;**P2PHelper**).
--   En el **Explorador de soluciones**, crea una nueva carpeta para cada una de las carpetas compartidas en el disco. A su vez, haz clic con el botón derecho en cada carpeta recién creada, luego haz clic en **Agregar**&gt;**Elemento existente** y navega a una carpeta. Abre la carpeta compartida correspondiente, selecciona todos los archivos y haz clic en **Agregar como vínculo**.
+-   Crea un nuevo proyecto de aplicación de Windows 10 (**Agregar** &gt; **Nuevo proyecto** &gt; **Windows Universal** &gt; **Aplicación vacía [Windows Universal]**) y asígnale el nombre QuizGameHost.
+-   Agrega una referencia a P2PHelper (**Agregar referencia** &gt; **Proyectos** &gt; **Solución** &gt; **P2PHelper**).
+-   En el **Explorador de soluciones**, crea una nueva carpeta para cada una de las carpetas compartidas en el disco. A continuación, haz clic con el botón derecho en cada carpeta creada y pulsa **Agregar** &gt; **Elemento existente** para obtener acceso a una de esas carpetas. Abre la carpeta compartida correspondiente, selecciona todos los archivos y haz clic en **Agregar como vínculo**.
 -   Copia MainPage.xaml de \\QuizGame.Windows\\ a \\QuizGameHost\\ y cambia el espacio de nombres a QuizGameHost.
 -   Copia App.xaml de \\QuizGame.Shared\\ a \\QuizGameHost\\ y cambia el espacio de nombres a QuizGameHost.
 -   En lugar de sobrescribir app.xaml.cs, se conservará la versión en el nuevo proyecto y simplemente se hará un cambio de destino para poder admitir el modo de prueba local. En app.xaml.cs, reemplaza esta línea de código:
@@ -128,15 +124,15 @@ por esta:
 #endif
 ```
 
--   En **Propiedades**&gt;**Compilar**&gt;**Símbolos de compilación condicional**, agrega LOCALTESTMODEON.
+-   En **Propiedades** &gt; **Compilar** &gt; **Símbolos de compilación condicional**, agrega LOCALTESTMODEON.
 -   Ahora podrás volver al código que agregaste en app.xaml.cs y resolver el tipo de TestView.
 -   En package.appxmanifest, cambia el nombre de la funcionalidad de internetClient a internetClientServer.
 
 **QuizGameClient**
 
--   Crea un nuevo proyecto de aplicación de Windows10 (**Agregar**&gt;**Nuevo proyecto**&gt;**Windows Universal**&gt;**Aplicación vacía (Windows Universal)**) y asígnale el nombre QuizGameClient.
--   Agrega una referencia a P2PHelper (**Agregar referencia**&gt;**Proyectos**&gt;**Solución**&gt;**P2PHelper**).
--   En el **Explorador de soluciones**, crea una nueva carpeta para cada una de las carpetas compartidas en el disco. A su vez, haz clic con el botón derecho en cada carpeta recién creada, luego haz clic en **Agregar**&gt;**Elemento existente** y navega a una carpeta. Abre la carpeta compartida correspondiente, selecciona todos los archivos y haz clic en **Agregar como vínculo**.
+-   Crea un nuevo proyecto de aplicación de Windows 10 (**Agregar** &gt; **Nuevo proyecto** &gt; **Windows Universal** &gt; **Aplicación vacía [Windows Universal]**) y asígnale el nombre QuizGameClient.
+-   Agrega una referencia a P2PHelper (**Agregar referencia** &gt; **Proyectos** &gt; **Solución** &gt; **P2PHelper**).
+-   En el **Explorador de soluciones**, crea una nueva carpeta para cada una de las carpetas compartidas en el disco. A continuación, haz clic con el botón derecho en cada carpeta creada y pulsa **Agregar** &gt; **Elemento existente** para obtener acceso a una de esas carpetas. Abre la carpeta compartida correspondiente, selecciona todos los archivos y haz clic en **Agregar como vínculo**.
 -   Copia MainPage.xaml de \\QuizGame.WindowsPhone\\ a \\QuizGameClient\\ y cambia el espacio de nombres a QuizGameClient.
 -   Copia App.xaml de \\QuizGame.Shared\\ a \\QuizGameClient\\ y cambia el espacio de nombres a QuizGameClient.
 -   En package.appxmanifest, cambia el nombre de la funcionalidad de internetClient a internetClientServer.
@@ -200,6 +196,6 @@ La aplicación que migramos en este caso práctico era relativamente compleja e 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

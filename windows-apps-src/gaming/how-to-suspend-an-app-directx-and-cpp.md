@@ -3,8 +3,9 @@ author: mtoepke
 title: "Cómo suspender una aplicación (DirectX y C++)"
 description: "En este tema verás cómo guardar datos importantes de la aplicación y del estado del sistema cuando el sistema suspende la aplicación DirectX para la Plataforma universal de Windows (UWP)."
 ms.assetid: 5dd435e5-ec7e-9445-fed4-9c0d872a239e
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 38e03a4a6312c5a0521c7263944897260624aa38
+ms.openlocfilehash: dd7319b254dcaaa5da7a7055bbde299f5e7e62a3
 
 ---
 
@@ -154,6 +155,6 @@ El sistema no notifica a una aplicación cuando se cierra, con lo cual la aplica
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

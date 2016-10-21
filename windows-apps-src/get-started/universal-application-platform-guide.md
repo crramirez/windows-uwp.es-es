@@ -1,20 +1,17 @@
 ---
 author: TylerMSFT
-title: "Guía de aplicaciones para la Plataforma universal de Windows (UWP)"
-description: "Obtén más información sobre las aplicaciones para la Plataforma universal de Windows (UWP) que se pueden ejecutar en una amplia variedad de dispositivos."
+title: "Introducción a la Plataforma universal de Windows"
+description: "Obtén más información sobre las aplicaciones para la Plataforma universal de Windows (UWP) que se pueden ejecutar en una amplia variedad de dispositivos que ejecuten Windows 10."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 translationtype: Human Translation
-ms.sourcegitcommit: 2df873ad451e2bb1196a1ce42e3fcd40f8c3ac8e
-ms.openlocfilehash: 925db2c5242eb49229f41298f1db4e2653f3499d
+ms.sourcegitcommit: 0f2ed552898f7cbb476055a6d6b7aa76545113b1
+ms.openlocfilehash: c433bd2eba2a5be114680f52a8da0b5c7b563186
 
 ---
 
-# Guía de aplicaciones para la Plataforma universal de Windows (UWP)
+# Introducción a la Plataforma universal de Windows
 
-
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-En esta guía, descubrirás:
+En esta guía descubrirás lo siguiente:
 
 -   Qué es una *familia de dispositivos* y cómo se decide a qué dispositivo destinar la aplicación.
 -   Nuevos controles y paneles de la interfaz de usuario que te permiten adaptarla a diferentes factores de forma del dispositivo.
@@ -185,9 +182,9 @@ Puedes crear una aplicación universal de Windows con controles universales que 
 
 Las siguientes API ofrecen acceso a la entrada:
 
--   [**CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) es una nueva API que te permite consumir entrada sin procesar en el subproceso principal o en un subproceso en segundo plano.
+-   [**CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) es una nueva API que te permite consumir entradas sin procesar en el subproceso principal o en un subproceso en segundo plano.
 -   [**PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) unifica los datos sin procesar de la entrada táctil, de mouse y de lápiz en un conjunto único y coherente de interfaces y eventos que se pueden consumir en el subproceso principal o en un subproceso en segundo plano mediante **CoreInput.**
--   [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) es una API de dispositivo que permite consultar las capacidades del dispositivo para determinar qué modalidades de entrada están disponibles en el dispositivo.
+-   [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) es una API de dispositivo que permite consultar las capacidades del dispositivo para determinar qué modalidades de entrada están disponibles en ese dispositivo.
 -   El nuevo control XAML [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) y [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) y las API de Windows Runtime te permiten tener acceso a los datos de trazo de lápiz.
 
 ## Escribir código
@@ -284,6 +281,6 @@ Consulta [Usar el panel unificado del Centro de desarrollo de Windows](../publis
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 

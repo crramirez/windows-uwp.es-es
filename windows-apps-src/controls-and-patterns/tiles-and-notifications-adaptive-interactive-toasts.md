@@ -5,16 +5,14 @@ title: Notificaciones del sistema interactivas y adaptables
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 17faf0ccb0207b318963e00655d7ac91b97e066b
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 55f5cd9e647e74d7861a7472872373d8949b79ba
 
 ---
-
 # Notificaciones del sistema interactivas y adaptables
 
-
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Las notificaciones del sistema adaptables e interactivas permiten crear notificaciones emergentes flexibles con más contenido, imágenes en línea opcionales e interacción del usuario opcional.
 
@@ -24,12 +22,11 @@ El modelo de notificaciones del sistema adaptables e interactivas tiene estas ac
 -   Tres tipos de activación diferentes para la notificación del sistema principal y para cada acción.
 -   La opción de crear una notificación para determinados escenarios, como las llamadas entrantes, avisos y alarmas.
 
-
-            **Nota** Para ver las plantillas heredadas de Windows 8.1 y Windows Phone 8.1, consulta el [catálogo de plantillas de notificaciones del sistema heredado](https://msdn.microsoft.com/library/windows/apps/hh761494).
+**Nota** Para ver las plantillas heredadas de Windows 8.1 y Windows Phone 8.1, consulta el [catálogo de plantillas de notificaciones del sistema heredado](https://msdn.microsoft.com/library/windows/apps/hh761494).
 
  
 
-## <span id="toast_structure"></span><span id="TOAST_STRUCTURE"></span>Estructura de notificación del sistema
+## Estructura de notificación del sistema
 
 
 Las notificaciones del sistema se construyen mediante XML, que normalmente contendría los siguientes elementos clave:
@@ -61,7 +58,7 @@ Y una representación visual de la estructura:
 
 ![estructura de notificación del sistema](images/adaptivetoasts-structure.jpg)
 
-### <span id="Visual"></span><span id="visual"></span><span id="VISUAL"></span>Elementos visuales
+### Elementos visuales
 
 Dentro del elemento visual, debes tener exactamente un elemento de enlace que contenga el contenido visual de la notificación del sistema.
 
@@ -72,7 +69,7 @@ Las notificaciones de icono en las aplicaciones de la plataforma universal de Wi
 
 Para todos los atributos que se admiten en la sección visual y sus elementos secundarios, consulta la sección Esquema a continuación. Para ver más ejemplos, consulta la sección Ejemplos de XML a continuación
 
-### <span id="Actions"></span><span id="actions"></span><span id="ACTIONS"></span>Acciones
+### Acciones
 
 En las aplicaciones para UWP, puedes agregar botones y otros métodos de entrada para las notificaciones del sistema, lo que permite a los usuarios hacer más cosas fuera de la aplicación. Estas acciones se especifican en el elemento &lt;actions&gt;, del que hay dos tipos que se pueden especificar:
 
@@ -90,7 +87,7 @@ Cuando el usuario realiza una acción, puedes realizar una de las siguientes ope
 
 Para todos los atributos que se admiten en la sección visual y sus elementos secundarios, consulta la sección Esquema a continuación. Para ver más ejemplos, consulta la sección Ejemplos de XML a continuación
 
-### <span id="Audio"></span><span id="audio"></span><span id="AUDIO"></span>Audio
+### Audio
 
 Los sonidos personalizados no se admiten actualmente en las aplicaciones para UWP orientadas a la plataforma de escritorio; en su lugar, puedes elegirlos a partir de la lista de ms-winsoundevents para la aplicación en el escritorio. Las aplicaciones para UWP en las plataformas móviles admiten tanto ms-winsoundevents como sonidos personalizados en estos formatos:
 
@@ -99,7 +96,7 @@ Los sonidos personalizados no se admiten actualmente en las aplicaciones para UW
 
 Consulta la [Página de esquema audio](https://msdn.microsoft.com/library/windows/apps/br230842) para obtener información sobre el audio de las notificaciones del sistema, que incluye una lista completa de ms-winsoundevents.
 
-## <span id="Alarms__reminders__and_incoming_calls"></span><span id="alarms__reminders__and_incoming_calls"></span><span id="ALARMS__REMINDERS__AND_INCOMING_CALLS"></span>Alarmas, recordatorios y llamadas entrantes
+## Alarmas, recordatorios y llamadas entrantes
 
 
 Puedes usar las notificaciones del sistema para las alarmas, los recordatorios y las llamadas entrantes. Estas notificaciones del sistema especiales tienen un aspecto coherente con las notificaciones del sistema estándar, aunque las notificaciones del sistema especiales presentan algunas interfaces de usuario personalizadas, basadas en escenarios y patrones:
@@ -108,11 +105,10 @@ Puedes usar las notificaciones del sistema para las alarmas, los recordatorios y
 -   Además de compartir los comportamientos anteriores con las notificaciones de recordatorio, las notificaciones de alarma también reproducirán audio en bucle automáticamente.
 -   Las notificaciones de llamadas entrantes se muestran en pantalla completa en los dispositivos Windows Mobile. Para hacerlo especifica el atributo de escenario dentro del elemento raíz de una notificación del sistema (&lt;toast&gt;: &lt;toast scenario=" { default | alarm | reminder | incomingCall } ") &gt;
 
-## <span id="xml_examples"></span><span id="XML_EXAMPLES"></span>Ejemplos de XML
+## Ejemplos de XML
 
 
-
-            **Nota** Las capturas de pantalla de notificación del sistema de estos ejemplos se tomaron desde una aplicación de escritorio. En los dispositivos móviles, es posible que las notificaciones del sistema aparezcan de forma contraída, con un capturador en la parte inferior de la notificación del sistema para expandirlas.
+**Nota** Las capturas de pantalla de las notificaciones del sistema de estos ejemplos se tomaron desde una aplicación de escritorio. En los dispositivos móviles, es posible que las notificaciones del sistema aparezcan de forma contraída, con un capturador en la parte inferior de la notificación del sistema para expandirlas.
 
  
 
@@ -291,7 +287,7 @@ Este ejemplo muestra...
 
  
 
-## <span id="Activation_samples"></span><span id="activation_samples"></span><span id="ACTIVATION_SAMPLES"></span>Muestras de activación
+## Muestras de activación
 
 
 Como se mencionó anteriormente, el cuerpo y las acciones en la notificación del sistema son capaces de activación de aplicaciones de diferentes formas. La muestra a continuación te enseñará cómo administrar diferentes tipos de activaciones desde el cuerpo de la notificación del sistema y/o las acciones de notificación del sistema.
@@ -353,7 +349,7 @@ namespace ToastNotificationTask
 }
 ```
 
-## <span id="Schemas___visual__and__audio_"></span><span id="schemas___visual__and__audio_"></span><span id="SCHEMAS___VISUAL__AND__AUDIO_"></span>Esquemas: &lt;visual&gt; y &lt;audio&gt;
+## Esquemas: &lt;visual&gt; y &lt;audio&gt;
 
 
 En los siguientes esquemas, el sufijo "?" significa que el atributo es opcional.
@@ -493,7 +489,7 @@ silent?
 
 -   Consulta [este artículo de esquema de elemento](https://msdn.microsoft.com/library/windows/apps/br230842) para obtener detalles sobre este atributo opcional.
 
-## <span id="Schemas___action_"></span><span id="schemas___action_"></span><span id="SCHEMAS___ACTION_"></span>Esquemas: &lt;action&gt;
+## Esquemas: &lt;action&gt;
 
 
 En los siguientes esquemas, el sufijo "?" significa que el atributo es opcional.
@@ -585,7 +581,7 @@ hint-inputId
 -   El valor debe ser el identificador del elemento de entrada con el que se quiere asociar.
 -   En dispositivos móviles y de escritorio, colocará el botón justo al lado del cuadro de entrada.
 
-## <span id="Attributes_for_system-handled_actions"></span><span id="attributes_for_system-handled_actions"></span><span id="ATTRIBUTES_FOR_SYSTEM-HANDLED_ACTIONS"></span>Atributos para acciones controladas por el sistema
+## Atributos para acciones controladas por el sistema
 
 
 El sistema puede controlar las acciones para posponer y descartar notificaciones si no quieres que la aplicación controle el aplazamiento o la reprogramación de notificaciones como una tarea en segundo plano. Las acciones controladas por el sistema se pueden combinar (o especificarse individualmente), pero no se recomienda implementar una acción para posponer sin una acción para descartar.
@@ -648,6 +644,6 @@ Para crear acciones individuales para posponer y descartar, haz lo siguiente:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -6,20 +6,19 @@ title: Desarrollo de aplicaciones inclusivas de Windows 10
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 826c6984962ecbe3b49ba3753e9cc795344f5057
+ms.sourcegitcommit: 9f68c2bdc92bfbdbc8328e4df161f7ecdfccf8e5
+ms.openlocfilehash: 19c90991ab86383fa259b05460cbd656d408e977
 
 ---
 
 # Desarrollo de aplicaciones inclusivas de Windows  
 
-Aprende a desarrollar aplicaciones para UWP de Windows 10 accesibles que incluyan navegación por teclado, configuración de color y contraste y compatibilidad con tecnologías de asistencia.
-
-En este artículo se describe cómo desarrollar aplicaciones accesibles para la Plataforma universal de Windows (UWP). En concreto, supone que conoces cómo diseñar la jerarquía lógica de la aplicación para tu aplicación.  
+En este artículo se describe cómo desarrollar aplicaciones accesibles para la Plataforma universal de Windows (UWP). En concreto, se supone que conoces cómo diseñar la jerarquía lógica de la aplicación para tu aplicación. Aprende a desarrollar aplicaciones para UWP de Windows 10 accesibles que incluyan navegación por teclado, configuración de color y contraste y compatibilidad con tecnologías de asistencia.
 
 Si no lo has hecho aún, empieza por leer [Diseño de software inclusivo](designing-inclusive-software.md).
 
 Hay tres cosas que debes hacer para asegurarte de que tu aplicación sea accesible:
+
 1. Exponer tus elementos de interfaz de usuario al [acceso mediante programación](#programmatic-access).
 2. Asegurarte de que tu aplicación admita [navegación por teclado](#keyboard-navigation) para personas que no pueden usar un mouse o una pantalla táctil.
 3. Asegurarte de que tu aplicación admita configuraciones de [color y contraste](#color-and-contrast) accesibles.
@@ -44,7 +43,7 @@ El objetivo es ayudar al usuario a entender cómo se dispone la interfaz de usua
 
 Para obtener más información sobre la navegación por teclado entre elementos de la interfaz de usuario, consulta [Accesibilidad del teclado](keyboard-accessibility.md).  
 
-Además, el libro electrónico [Software de ingeniería de accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262) tiene un excelente capítulo en este tema titulado _Diseño de la jerarquía lógica_.
+Además, el libro electrónico sobre [diseño de software para accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262) tiene un excelente capítulo sobre este tema titulado _Designing the Logical Hierarchy_ (Diseño de la jerarquía lógica).
 
 ## Color y contraste  
 Una de las características de accesibilidad integradas en Windows es el modo de contraste alto, lo que aumenta el contraste de color del texto y las imágenes en la pantalla del equipo. Para algunas personas, aumentar el contraste de los colores reduce la fatiga ocular y facilita la lectura. Cuando compruebas tu interfaz de usuario en contraste alto, es buena idea comprobar que los controles se hayan codificado de forma coherente y con los colores del sistema (no con colores codificados de forma rígida) para garantizar que podrán ver todos los controles de la pantalla que vería un usuario que no está usando contraste alto.  
@@ -53,7 +52,7 @@ XAML
 ```xml
 <Button Background="{ThemeResource ButtonBackgroundThemeBrush}">OK</Button>
 ```
-Para obtener más información sobre el uso de recursos y colores del sistema, consulte [Recursos de temas de XAML](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources).
+Para obtener más información sobre el uso de recursos y colores del sistema, consulte [Recursos de temas de XAML](../controls-and-patterns/xaml-theme-resources.md).
 
 Hasta que no hayas invalidado los colores del sistema, una aplicación para UWP admite temas de contraste alto de manera predeterminada. Si un usuario elige que el sistema use un tema de contraste alto en la configuración del sistema o en las herramientas de accesibilidad, el marco usa automáticamente la configuración de colores y estilos que producen un diseño y una representación de contraste alto para los controles y los componentes de la interfaz de usuario.   
 
@@ -61,14 +60,13 @@ Para obtener más información, consulta [Temas de contraste alto](high-contrast
 
 Si decides usar tu propio tema de color en lugar de los colores del sistema, ten en cuenta estas directrices:  
 
+**Relación de contraste de color:** La sección 508 actualizada de la Ley sobre Estadounidenses con Discapacidades (ADA), al igual que otras legislaciones, requieren que el contraste de color predeterminado entre el texto y su fondo sea de 5:1. Para el texto grande (tamaños de 18 puntos o de 14 puntos y en negrita), el contraste necesario predeterminado es de 3:1.  
 
-              **Relación de contraste de color:** La sección 508 actualizada de la Ley estadounidense sobre la discapacidad, al igual que otras legislaciones, requieren que el contraste de color predeterminado entre el texto y su fondo sea de 5:1. Para el texto grande (tamaños de 18 puntos o de 14 puntos y en negrita), el contraste necesario predeterminado es de 3:1.  
-
-
-              **Combinaciones de colores:** Aproximadamente el 7 por ciento de los hombres (y menos del 1 por ciento de las mujeres) padece alguna forma de daltonismo. Los usuarios con daltonismo tienen problemas para distinguir entre algunos colores, así que es importante que nunca se use el color por sí solo para transmitir el estado o el significado en una aplicación. Para obtener imágenes decorativas (tales como iconos o fondos), las combinaciones de colores se deberían elegirse de manera que se maximice la percepción de la imagen por parte de los usuarios daltónicos.  
+**Combinaciones de colores:** Aproximadamente el 7% de los hombres (y menos del 1% de las mujeres) padecen alguna forma de daltonismo. Los usuarios con daltonismo tienen problemas para distinguir entre algunos colores, así que es importante que nunca se use el color por sí solo para transmitir el estado o el significado en una aplicación. Para obtener imágenes decorativas (tales como iconos o fondos), las combinaciones de colores se deberían elegirse de manera que se maximice la percepción de la imagen por parte de los usuarios daltónicos.  
 
 ## Lista de comprobación de accesibilidad  
-La siguiente es una versión abreviada de la lista de comprobación de accesibilidad:  
+La siguiente es una versión abreviada de la lista de comprobación de accesibilidad:
+
 1. Establece el nombre accesible (obligatorio) y la descripción accesible (opcional) para los elementos de la interfaz de usuario interactivos y de contenido de la aplicación.
 2. Implementa la accesibilidad de teclado.
 3. Comprueba visualmente tu interfaz de usuario para asegurarte de que el contraste de texto sea suficiente, que los elementos se presenten correctamente en los temas de contraste alto y que los colores se usen correctamente.
@@ -82,11 +80,12 @@ Para obtener más información, consulta el tema completo [Lista de comprobació
 * [Diseño de software inclusivo](designing-inclusive-software.md)  
 * [Diseño inclusivo](http://design.microsoft.com/inclusive)
 * [Procedimientos de accesibilidad que deben evitarse](practices-to-avoid.md)
-* [Software de ingeniería de accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
-* [Concentrador del desarrollador de accesibilidad de Microsoft](https://msdn.microsoft.com/enable)
+* [Diseño de software para accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
+* [Centro de Microsoft para desarrolladores de accesibilidad](https://msdn.microsoft.com/enable)
+* [Accesibilidad](accessibility.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

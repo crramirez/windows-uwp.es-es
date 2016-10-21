@@ -4,8 +4,9 @@ Description: "Diseña una interfaz de usuario informativa que enseñe a los usua
 title: "Directrices para diseñar una interfaz de usuario informativa"
 label: Instructional UI
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 08b0b88e8ef17c2a8f264df5db4f971c8c49ab2e
-ms.openlocfilehash: f9f1f34bb02cda89d31caa9453b6e3eb056e7bc9
+ms.openlocfilehash: 6fc4840ce37d05bbaf0e423049d79b4e0c4febfc
 
 ---
 
@@ -27,30 +28,21 @@ A menos que la aplicación dependa de los gestos táctiles, la interfaz de usuar
 
 Una buena interfaz de usuario informativa es pertinente y educativa para el usuario y mejora su experiencia. Debe ser:
 
--   
-            **Simple:** Los usuarios no quieren que su experiencia se vea interrumpida con información complicada.
--   
-            **Memorable:** Los usuarios no desean ver las mismas instrucciones cada vez que intenten realizar una tarea, por lo que estas deben ser fáciles de recordar.
--   
-            **Pertinente de manera inmediata:** si la interfaz de usuario informativa no informa a los usuarios sobre algo que quieren hacer inmediatamente, estos no tendrán ningún motivo para prestarle atención.
+-   **Simple:** los usuarios no quieren que su experiencia se vea interrumpida con información complicada.
+-   **Memorable:** los usuarios no quieren ver las mismas instrucciones cada vez que intentan realizar una tarea, por lo que estas deben ser fáciles de recordar.
+-   **Pertinente de manera inmediata:** si la interfaz de usuario informativa no informa a los usuarios sobre algo que quieren hacer inmediatamente, estos no tendrán ningún motivo para prestarle atención.
 
 Evita el uso excesivo de la interfaz de usuario informativa y asegúrate de elegir los temas correctos. No incluyas la siguiente información:
 
--   
-            **Características fundamentales:** si los usuarios necesitan instrucciones para usar la aplicación, considera la posibilidad de crear un diseño de aplicación más intuitivo.
--   
-            **Características obvias:** La interfaz de usuario informativa no debe interferir en los casos en que los usuarios puedan descubrir el funcionamiento de una característica por sí solos.
--   
-            **Características complejas:** La interfaz de usuario informativa debe ser concisa. Los usuarios interesados en características complejas normalmente están dispuestos a buscar instrucciones.
+-   **Características fundamentales:** si los usuarios necesitan instrucciones para usar la aplicación, considera la posibilidad de crear un diseño de aplicación más intuitivo.
+-   **Características obvias:** la interfaz de usuario informativa no debe interferir en los casos en que los usuarios puedan descubrir el funcionamiento de una característica por sí solos.
+-   **Características complejas:** la interfaz de usuario informativa debe ser concisa. Los usuarios interesados en características complejas normalmente están dispuestos a buscar instrucciones.
 
 Evita que la interfaz de usuario informativa suponga una molestia para los usuarios. No hagas lo siguiente:
 
--   
-            **Ocultar información importante:** la interfaz de usuario informativa nunca debería obstaculizar otras características de la aplicación.
--   
-            **Obligar a los usuarios a participar:** los usuarios deben tener la posibilidad de omitir la interfaz de usuario informativa y avanzar en la aplicación.
--   
-            **Mostrar información repetida:** No agobies al usuario con la interfaz de usuario informativa, incluso si la pasa por alto la primera vez. La mejor solución es agregar una opción de configuración para volver a mostrar la interfaz de usuario informativa.
+-   **Ocultar información importante:** la interfaz de usuario informativa nunca debería obstaculizar otras características de la aplicación.
+-   **Obligar a los usuarios a participar:** los usuarios deben tener la posibilidad de omitir la interfaz de usuario informativa y avanzar en la aplicación.
+-   **Mostrar información repetida:** no agobies al usuario con la interfaz de usuario informativa, aunque la pase por alto la primera vez. La mejor solución es agregar una opción de configuración para volver a mostrar la interfaz de usuario informativa.
 
 ## <span id="examples_of_instructional_ui"></span><span id="EXAMPLES_OF_INSTRUCTIONAL_UI"></span>Ejemplos de interfaz de usuario informativa
 
@@ -80,6 +72,6 @@ Aquí te mostramos algunos ejemplos de cómo la interfaz de usuario informativa 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

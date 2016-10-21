@@ -3,8 +3,9 @@ author: mtoepke
 title: "Crea recursos de dispositivo de búfer de profundidad"
 description: "Aprende cómo crear los recursos de dispositivo Direct3D necesarios para admitir la realización de pruebas de profundidad para volúmenes de sombra."
 ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f0aedb99832ecd10da547cf73a074070008a4344
+ms.openlocfilehash: 85fb020e7d476d3b2095875376903c5e28f08d94
 
 ---
 
@@ -264,6 +265,6 @@ En la parte siguiente de este tutorial, aprenderás a crear la asignación de in
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
