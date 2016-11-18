@@ -1,29 +1,47 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\gaming\handling-device-lost-scenarios.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/5ed3815397b076ab3ee14fd3c22b235b46da5f09?path=windows-apps-src%2Fgaming%2Fhandling-device-lost-scenarios.md&_a=contents) | HandedOffSuccess | [Details](#b88d85c78ba5d08718b7e2c844f94beb71e5134a3506)
+ [windows-apps-src\graphics\composition-animation.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/9ea05f7ba76c7813b200a4c8cd021613f980355d?path=windows-apps-src%2Fgraphics%2Fcomposition-animation.md&_a=contents) | HandedOffSuccess | [Details](#72b70dd2ae4de385f2a4711477aebb6d7023158c4296)
+ [windows-apps-src\graphics\visual-layer.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/9ea05f7ba76c7813b200a4c8cd021613f980355d?path=windows-apps-src%2Fgraphics%2Fvisual-layer.md&_a=contents) | HandedOffSuccess | [Details](#de6fe0688bec196fc90433ab9274f2e4c4fd9b904335)
 
 ## Item Details
-##### <a name='b88d85c78ba5d08718b7e2c844f94beb71e5134a3506'></a> Source: [windows-apps-src\gaming\handling-device-lost-scenarios.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/5ed3815397b076ab3ee14fd3c22b235b46da5f09?path=windows-apps-src%2Fgaming%2Fhandling-device-lost-scenarios.md&_a=contents)
+##### <a name='72b70dd2ae4de385f2a4711477aebb6d7023158c4296'></a> Source: [windows-apps-src\graphics\composition-animation.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/9ea05f7ba76c7813b200a4c8cd021613f980355d?path=windows-apps-src%2Fgraphics%2Fcomposition-animation.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [handling-device-lost-scenarios.8f9af80df9b93fbbe49916bd6b2c3092e16d01b5.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/912b013b749b5a43e997930f8922f30fd1acb905?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fhandling-device-lost-scenarios.8f9af80df9b93fbbe49916bd6b2c3092e16d01b5.es-es.xlf&_a=contents)
-* Handoff Datetime: 2016-11-18 00:47:24
+* Handoff File: [composition-animation.64277e041816f40676f859bbeb8895857bec9110.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/96bbaeaa881e70ea3b6a8399e555245cbc2af19f?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fcomposition-animation.64277e041816f40676f859bbeb8895857bec9110.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-11-18 02:48:58
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\gaming\handling-device-lost-scenarios.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/7aabe073629b28c3b34f9fba562efe812fefe30a?path=windows-apps-src%2Fgaming%2Fhandling-device-lost-scenarios.md&_a=contents)
-* Current Handback File: [handling-device-lost-scenarios.8f9af80df9b93fbbe49916bd6b2c3092e16d01b5.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fhandling-device-lost-scenarios.8f9af80df9b93fbbe49916bd6b2c3092e16d01b5.es-es.xlf&_a=contents)
+* Current Target File: [windows-apps-src\graphics\composition-animation.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/7aabe073629b28c3b34f9fba562efe812fefe30a?path=windows-apps-src%2Fgraphics%2Fcomposition-animation.md&_a=contents)
+* Current Handback File: [composition-animation.64277e041816f40676f859bbeb8895857bec9110.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fcomposition-animation.64277e041816f40676f859bbeb8895857bec9110.es-es.xlf&_a=contents)
 * Current Handback Datetime: 2016-10-21 15:33:32
-* Bilingual File: [handling-device-lost-scenarios.8f9af80df9b93fbbe49916bd6b2c3092e16d01b5.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fhandling-device-lost-scenarios.8f9af80df9b93fbbe49916bd6b2c3092e16d01b5.es-es.xlf&_a=contents)
+* Bilingual File: [composition-animation.64277e041816f40676f859bbeb8895857bec9110.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fcomposition-animation.64277e041816f40676f859bbeb8895857bec9110.es-es.xlf&_a=contents)
 * Bilingual Datetime: 2016-10-24 15:47:13
+* [Back to Top](#report-top)
+
+##### <a name='de6fe0688bec196fc90433ab9274f2e4c4fd9b904335'></a> Source: [windows-apps-src\graphics\visual-layer.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/9ea05f7ba76c7813b200a4c8cd021613f980355d?path=windows-apps-src%2Fgraphics%2Fvisual-layer.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [visual-layer.a2f2c9e67ecfb717da6cd6d4151969c5de739247.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/96bbaeaa881e70ea3b6a8399e555245cbc2af19f?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fvisual-layer.a2f2c9e67ecfb717da6cd6d4151969c5de739247.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-11-18 02:48:58
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\graphics\visual-layer.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/b81726c307dcf4449e41c5f20b99107b8f5f0674?path=windows-apps-src%2Fgraphics%2Fvisual-layer.md&_a=contents)
+* Current Handback File: [visual-layer.a2f2c9e67ecfb717da6cd6d4151969c5de739247.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9d843656481f4607d37743442872c1044ab3d48e?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fvisual-layer.a2f2c9e67ecfb717da6cd6d4151969c5de739247.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-09-26 12:56:55
+* Bilingual File: [visual-layer.a2f2c9e67ecfb717da6cd6d4151969c5de739247.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9d843656481f4607d37743442872c1044ab3d48e?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fvisual-layer.a2f2c9e67ecfb717da6cd6d4151969c5de739247.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-18 13:33:20
 * [Back to Top](#report-top)
 
 
