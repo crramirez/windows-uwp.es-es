@@ -1,6 +1,16 @@
-# API de UWP admitidas para aplicaciones de escritorio convertidas
+---
+author: awkoren
+Description: "En este artículo se explica cómo firmar una aplicación de escritorio que se ha convertido a la Plataforma universal de Windows (UWP)."
+Search.Product: eADQiWindows 10XVcnh
+title: API de UWP admitidas para aplicaciones de escritorio convertidas
+translationtype: Human Translation
+ms.sourcegitcommit: 3751b16837a1e12f68954b2dec7dfaf0fb8554b6
+ms.openlocfilehash: c99d103fe5d613c5b654ba2b0bb83987a7fcb944
 
-Las aplicaciones de escritorio convertidas pueden usar una amplia gama de API de la Plataforma universal de Windows (UWP), incluso si no se realizó la transición a una aplicación para UWP. Este artículo enumera las clases disponibles que puede usar tu aplicación convertida. 
+---
+# API de UWP admitidas para aplicaciones convertidas con el puente de escritorio
+
+Las aplicaciones de escritorio convertidas pueden usar una amplia gama de API de Plataforma universal de Windows (UWP), incluso si no se realizó la transición a una aplicación para UWP. Este artículo enumera las clases disponibles que puede usar tu aplicación convertida. 
 
 La mayoría de las API de UWP funcionan bien en aplicaciones de escritorio convertidas. Sin embargo, algunas áreas de características aún no están totalmente probadas o no funcionan actualmente según lo previsto. 
 
@@ -24,15 +34,15 @@ La mayoría de las API de UWP funcionan bien en aplicaciones de escritorio conve
 </table>
 
 
-En ocasiones, puede parecer que las API en estas áreas funcionen correctamente. Sin embargo, si una API no se muestra explícitamente como compatible, debes evitar usarla, ya que puede tener efectos secundarios o comportamientos no deseados. Es posible que el soporte técnico para estas API esté disponible en futuras versiones. Mientras tanto, la aplicación debe usar las API de Win32 o .NET pertinentes en su lugar. 
+En ocasiones, puede parecer que las API en estas áreas funcionen correctamente. Sin embargo, si una API no se muestra explícitamente como compatible, debes evitar usarla, ya que puede tener efectos secundarios o comportamientos no deseados. Es posible que la compatibilidad para estas API esté disponible en futuras versiones. Mientras tanto, la aplicación debe usar las API de Win32 o .NET pertinentes en su lugar. 
 
-Algunas API para UWP disponibles para aplicaciones de escritorio completas no se admiten para aplicaciones convertidas. Si la aplicación de escritorio usa las API de UWP antes de la conversión, deberías comprobar que aún se admiten estas API. Para obtener más información, consulta [API de Windows Runtime para aplicaciones de escritorio](https://msdn.microsoft.com/library/windows/desktop/dn554295(v=vs.85).aspx).
+Algunas API de UWP disponibles para aplicaciones de escritorio completas no se admiten para aplicaciones convertidas. Si la aplicación de escritorio usa las API de UWP antes de la conversión, deberías comprobar que aún se admiten estas API. Para obtener más información, consulta [API de Windows Runtime para aplicaciones de escritorio](https://msdn.microsoft.com/library/windows/desktop/dn554295(v=vs.85).aspx).
 
 ## Lista de API
 
-La siguiente es una lista completa de las API para UWP que se admiten en aplicaciones convertidas. Puedes ver las [API recientemente admitidas en aplicaciones convertidas](#new) o las [API admitidas en aplicaciones convertidas y aplicaciones de escritorio](#both). 
+La siguiente es una lista completa de las API para UWP que se admiten en aplicaciones convertidas. Puedes ver las [API admitidas en las aplicaciones recientemente convertidas](#new) o las [API admitidas tanto en aplicaciones convertidas como en aplicaciones de escritorio](#both). 
 
-Para obtener ejemplos sobre cómo llamar a las API de UWP desde una aplicación convertida, consulta los [ejemplos de código de puente de escritorio en GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples).
+Para obtener ejemplos sobre cómo usar las API de WinRT, consulta las [muestras de puente de aplicación de escritorio a UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) y las [muestras de aplicaciones para Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) disponibles en GitHub.
 
 <span id="new" />
 ### API admitidas en las aplicaciones recientemente convertidas
@@ -1030,6 +1040,6 @@ Para obtener ejemplos sobre cómo llamar a las API de UWP desde una aplicación 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

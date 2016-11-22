@@ -7,8 +7,8 @@ label: Designing for Xbox and TV
 template: detail.hbs
 isNew: true
 translationtype: Human Translation
-ms.sourcegitcommit: 96a35ded526b09dd1ce1cb8528bb4a99e3511b32
-ms.openlocfilehash: 734a0f0574ac7698dd6bd963bf3e20225b26d401
+ms.sourcegitcommit: 8bf3a4384d97d59d2844614b981a2e837ccb493d
+ms.openlocfilehash: d168c358a3dd68f05b5d0962edb1fb62dfe0570e
 
 ---
 
@@ -164,7 +164,8 @@ La siguiente tabla enumera la compatibilidad con aceleradores integrada en la UW
 | Retroceder/avanzar página  | Retroceder/avanzar página | Desencadenadores izquierdo/derecho | [CalendarView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.calendarview.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [ComboBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | Vistas que admiten el desplazamiento vertical
 | Página a la izquierda/derecha | Ninguna | Reboteadores izquierdo/derecho | [Pivot](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.pivot.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | Vistas que admiten el desplazamiento horizontal
 | Acercar/alejar        | Ctrl +/- | Desencadenadores izquierdo/derecho | Ninguna | `ScrollViewer`, vistas que admiten acercamiento y alejamiento |
-| Abrir o cerrar el panel de navegación | Ninguna | Vista | Ninguna | Paneles de navegación
+| Abrir o cerrar el panel de navegación | Ninguna | Vista | Ninguna | Paneles de navegación |
+| [Buscar](#search-experience) | Ninguna | Botón Y | Ninguna | Combinación de teclas para la función de búsqueda principal de la aplicación |
 
 ## Interacción y navegación con foco XY
 
@@ -1028,11 +1029,21 @@ El elemento [MediaTransportControls](https://msdn.microsoft.com/library/windows/
 
 Visita [Reproducción de multimedia](../controls-and-patterns/media-playback.md) para obtener más información sobre cómo agregar contenido multimedia a tu aplicación.
 
-> ![NOTA] `MediaPlayerElement` solo está disponible en Windows 10, versión 1607 y posteriores. Si vas a desarrollar una aplicación para una versión anterior de Windows 10, deberás usar [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926) en su lugar. Las recomendaciones anteriores se aplican a `MediaElement` y podrás acceder a la propiedad `TransportControls` de la misma manera.
+> ![NOTA] `MediaPlayerElement` solo está disponible en Windows 10, versión 1607 y posteriores. Si vas a desarrollar una aplicación para una versión anterior de Windows 10, deberás usar [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926) en su lugar. Las recomendaciones anteriores se aplican a `MediaElement` y podrás obtener acceso a la propiedad `TransportControls` de la misma manera.
+
+### Experiencia de búsqueda
+
+Buscar contenido es una de las funciones más habituales en la experiencia de 3 metros. Si tu aplicación proporciona una experiencia de búsqueda, es conveniente que el usuario pueda obtener acceso a ella rápidamente mediante el botón **Y** del controlador para juegos, a modo de acelerador.
+
+La mayoría de los clientes ya estarán familiarizados con este acelerador, pero si lo deseas, puedes agregar un glifo visual **Y** en la interfaz de usuario para indicar que el cliente puede obtener acceso a la funcionalidad de búsqueda mediante ese botón. Si agregas esta indicación, asegúrate de usar el símbolo de la fuente **Segoe Xbox Symbol MDL2** (E426) para que sea coherente con el Shell de Xbox y otras aplicaciones.
+
+Dado que el botón **Y** solo está disponible en el controlador para juegos, asegúrate de proporcionar otros métodos de acceso a la búsqueda, como los botones de la interfaz de usuario. De lo contrario, es posible que algunos clientes no puedan obtener acceso a la funcionalidad.
+
+En la experiencia de 3 metros, suele ser más fácil para los clientes usar una experiencia de búsqueda de pantalla completa porque el espacio en pantalla es limitado. Si tienes una funcionalidad de búsqueda "local" a pantalla completa o parcial, te recomendamos que, cuando el usuario abra la experiencia de búsqueda, el teclado en pantalla aparezca ya abierto, listo para que el cliente escriba los términos de búsqueda.
 
 ## Desencadenador de estado visual personalizado para Xbox
 
-A fin de adaptar tu aplicación para UWP a la experiencia de 3 metros, te recomendamos realizar cambios en el diseño cuando la aplicación detecte que se ha iniciado en una consola Xbox. Una manera de hacerlo es mediante un *desencadenador de estado visual* personalizado. Los desencadenadores de estado visual son especialmente útiles para la edición en **Blend para Visual Studio**. El siguiente fragmento de código muestra cómo crear un desencadenador de estado visual para Xbox:
+Para adaptar tu aplicación para UWP a la experiencia de 3 metros, te recomendamos realizar cambios en el diseño cuando la aplicación detecte que se ha iniciado en una consola Xbox. Una manera de hacerlo es mediante un *desencadenador de estado visual* personalizado. Los desencadenadores de estado visual son especialmente útiles para la edición en **Blend para Visual Studio**. El siguiente fragmento de código muestra cómo crear un desencadenador de estado visual para Xbox:
 
 ```xml
 <VisualStateManager.VisualStateGroups>
@@ -1105,6 +1116,6 @@ El diseño para la experiencia de 10 pies presenta consideraciones especiales qu
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

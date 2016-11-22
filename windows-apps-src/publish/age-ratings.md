@@ -1,17 +1,17 @@
 ---
 author: jnHs
-Description: "La página Clasificaciones por edades del proceso de envío de la aplicación permite proporcionar información acerca de la aplicación para recibir las clasificaciones por edades apropiadas de la International Age Rating Coalition (IARC)."
+Description: "La página Clasificaciones por edades del proceso de envío de la aplicación permite proporcionar información acerca de tu aplicación para recibir las clasificaciones por edades apropiadas de la International Age Rating Coalition (IARC)."
 title: Clasificaciones por edades
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
 translationtype: Human Translation
-ms.sourcegitcommit: 8781eb0e5ea352216a1f4e1c6deedbd04d4b588c
-ms.openlocfilehash: d190a32f16d1e7c1d98e33d1757bc9047277b62b
+ms.sourcegitcommit: eaba2fa0af727df29843dad38e277f5b22192b51
+ms.openlocfilehash: 6269cff868f7a4357c3006d65fcc0ad5b7f7932b
 
 ---
 
 # Clasificaciones por edades
 
-La página **Clasificaciones por edades** del [Proceso de envío de la aplicación](app-submissions.md) permite proporcionar información acerca de la aplicación para recibir las clasificaciones por edades y contenido apropiadas administradas por la [International Age Rating Coalition (IARC)](http://go.microsoft.com/fwlink/p/?LinkId=716854). Estas clasificaciones tienen que ver con la idoneidad del contenido de la aplicación, más que con la edad del público objetivo de tu aplicación.
+La página **Clasificaciones por edades** del [proceso de envío de la aplicación](app-submissions.md) permite proporcionar información acerca de la aplicación para recibir las clasificaciones por edades y contenido apropiadas administradas por la [International Age Rating Coalition (IARC)](http://go.microsoft.com/fwlink/p/?LinkId=716854). Estas clasificaciones tienen que ver con la idoneidad del contenido de la aplicación, más que con la edad del público objetivo de tu aplicación.
 
 ## Responder al cuestionario de clasificaciones por edades
 
@@ -50,6 +50,6 @@ Anteriormente, los propios desarrolladores especificaban la clasificación por e
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

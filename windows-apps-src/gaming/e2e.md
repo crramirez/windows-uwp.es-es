@@ -4,8 +4,8 @@ title: "Guía de desarrollo de juegos para Windows 10"
 description: "Una guía completa sobre los recursos y la información que necesitas para el desarrollo de juegos para la Plataforma universal de Windows (UWP)."
 ms.assetid: 6061F498-96A8-44EF-9711-68AE5A1218C9
 translationtype: Human Translation
-ms.sourcegitcommit: 1c3f222b4b3ddb14a48cef138984b07ac58cc66b
-ms.openlocfilehash: 7bc6694f94eeeb6188470fee00d432b2d71e52e6
+ms.sourcegitcommit: 2584a08e0a869ab3c5f11c192f0a5a6eeb223d61
+ms.openlocfilehash: af9252d172bab96ce50eb7ff12d8f0503f010d15
 
 ---
 
@@ -62,7 +62,11 @@ A lo largo de esta guía, encontrarás vínculos profundos a documentación impo
     </tr>
     <tr>
         <td>Información general y referencias sobre DirectX</td>
-        <td>[Juegos y elementos gráficos de DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274)</td>
+        <td>[Juegos y gráficos de DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274)</td>
+    </tr>
+    <tr>
+        <td>Azure para juegos</td>
+        <td>[Compilar y escalar tus juegos con Azure](https://azure.microsoft.com/solutions/gaming/)</td>
     </tr>
     <tr>
         <td>UWP en Xbox One</td>
@@ -653,6 +657,30 @@ El conjunto modular de herramientas y tecnologías de Havok ayuda a los creadore
     </tr>
 </table>
  
+
+#### MonoGame
+
+MonoGame es un marco de trabajo de código abierto para el desarrollo de juegos multiplataforma originalmente basado en XNA Framework 4.0 de Microsoft. MonoGame es compatible actualmente con Windows, Windows Phone y Xbox, así como con Linux, macOS, iOS, Android y otras plataformas.
+
+<table>
+    <colgroup>
+    <col width="50%" />
+    <col width="50%" />
+    </colgroup>
+    <tr>
+        <td>MonoGame</td>
+        <td>[Sitio web de MonoGame](http://www.monogame.net)</td>
+    </tr>
+    <tr>
+        <td>Documentación de MonoGame</td>
+        <td>[Documentación de MonoGame (más reciente)](http://www.monogame.net/documentation/)</td>
+    </tr>
+    <tr>
+        <td>Descargas de MonoGame</td>
+        <td>[Descarga versiones, compilaciones de desarrollo y el código fuente](http://www.monogame.net/downloads/) desde el sitio web de MonoGame u [obtén la versión más reciente a través de NuGet](https://www.nuget.org/profiles/MonoGame).
+    </tr>
+</table>
+
 
 #### Cocos2d
 
@@ -1506,6 +1534,6 @@ Para actualizar tu juego publicado, envía un nuevo paquete de la aplicación co
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

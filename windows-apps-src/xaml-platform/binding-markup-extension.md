@@ -4,8 +4,8 @@ description: "La extensión de marcado Binding se convierte en tiempo de carga X
 title: "Extensión de marcado Binding"
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 translationtype: Human Translation
-ms.sourcegitcommit: 0f9955b897c626e7f6abb5557658e1b1e5937ffd
-ms.openlocfilehash: 95b48b55f11c4de0b4a51106b6cf5439bfa784b9
+ms.sourcegitcommit: 3ad7dd8261ceb549de6bd9a5ae513e6f6fdb8d49
+ms.openlocfilehash: a6431aed9941079bd05c623229f4ae3236a1b327
 
 ---
 
@@ -20,11 +20,6 @@ ms.openlocfilehash: 95b48b55f11c4de0b4a51106b6cf5439bfa784b9
 La extensión de marcado **{Binding}** se usa para el enlace de datos de propiedades en controles con valores procedentes de un origen de datos, como el código. En el tiempo de carga de XAML, la extensión de marcado **{Binding}** se convierte en una instancia de la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Este objeto de enlace obtiene un valor de propiedad en un origen de datos y lo inserta en la propiedad que está en el control. Opcionalmente, el objeto de enlace puede configurarse para observar cambios en el valor de la propiedad de origen de datos y se actualiza en función de dichos cambios. Opcionalmente, también puede configurarse para insertar los cambios en el valor del control de nuevo en la propiedad de origen. La propiedad que es el destino de un enlace de datos debe ser una propiedad de dependencia. Para obtener más información, consulta [Introducción a las propiedades de dependencia](dependency-properties-overview.md).
 
 **{Binding}** tiene la misma prioridad de propiedad de dependencia que un valor local, y definir un valor local en código imperativo quita el efecto de cualquier **{Binding}** definido en el marcado.
-
-**Aplicaciones de ejemplo que muestran {Binding}**
-
--   Descarga la aplicación [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950).
--   Descarga la aplicación [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952).
 
 ## Uso del atributo XAML
 
@@ -48,7 +43,7 @@ La extensión de marcado **{Binding}** se usa para el enlace de datos de propied
 
 ## Ruta de acceso de propiedades
 
-*PropertyPath* define el valor de [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830), que describe la propiedad a la que estás enlazando (la propiedad de origen). PropertyPath es un parámetro de posición, por lo que puede especificarse como el primer parámetro sin nombre: `{Binding Path=...}`. O puedes usar el nombre del parámetro explícitamente: `{Binding Path=...}`.
+[**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) describe la propiedad que estás enlazando (la propiedad de origen). Path es un parámetro de posición, lo que significa que puedes usar el nombre del parámetro explícitamente (`{Binding Path=EmployeeID}`), o bien, puede especificarlo como el primer parámetro sin nombre (`{Binding EmployeeID}`).
 
 El tipo de [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) es una ruta de acceso de propiedad, que es una cadena que se evalúa como una propiedad o una subpropiedad de su tipo personalizado o de un tipo de marco. El tipo puede ser (pero no tiene por qué serlo) un [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). Los pasos de las rutas de acceso de propiedad están delimitados por puntos (.) y puedes incluir varios delimitadores para desviar subpropiedades sucesivas. Usa puntos como delimitadores independientemente del lenguaje de programación que uses para implementar el objeto al que se está enlazando.
 
@@ -86,7 +81,7 @@ Para obtener más información sobre la sintaxis de cadenas de una ruta de acces
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) y **ConverterLanguage** tienen relación con la conversión de un valor o un tipo desde el origen del enlace a un valor o un tipo que sea compatible con la propiedad del destino del enlace. Para obtener más información y ejemplos, consulta la sección “Conversiones de datos” de [Enlaces de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 > [!NOTE]
-> A partir de la versión 1607 de Windows10, el marco XAML proporciona un valor booleano integrado para el convertidor Visibility. El convertidor asigna **true** al valor de la enumeración **Visible** y **false** a **Collapsed**, para que puedas enlazar una propiedad Visibility a un valor booleano sin necesidad de crear un convertidor. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows10. Para obtener más información sobre las versiones de destino, consulta [Código adaptativo para versiones](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> A partir de la versión 1607 de Windows10, el marco XAML proporciona un valor booleano integrado para el convertidor Visibility. El convertidor asigna **true** al valor de la enumeración **Visible** y **false** a **Collapsed**, para que puedas enlazar una propiedad Visibility a un valor booleano sin necesidad de crear un convertidor. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información sobre las versiones de destino, consulta [Código adaptativo para versiones](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) y [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) especifican un origen de enlace, por lo que son mutuamente excluyentes.
 
@@ -131,6 +126,6 @@ Microsoft IntelliSense en Microsoft Visual Studio muestra las propiedades del co
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ Description: "Una vez que la aplicación esté en la TiendaWindows, es el moment
 title: "Promoción de aplicaciones y atracción de clientes"
 ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
 translationtype: Human Translation
-ms.sourcegitcommit: 4dec7ebaaeb0bc0dba24002f8cd8a805285de3d6
-ms.openlocfilehash: 1f43cb9fdf633cecf6848a4ef0dd49a0f07f79c3
+ms.sourcegitcommit: cb816efb9bac6b401a8be93e3fded217a031769e
+ms.openlocfilehash: 1d1f66fad9f4b0c1ef01e1a797526029d54ce33a
 
 ---
 
@@ -14,10 +14,11 @@ ms.openlocfilehash: 1f43cb9fdf633cecf6848a4ef0dd49a0f07f79c3
 
 Una vez que la aplicación esté en la TiendaWindows, es el momento de mostrarla al máximo número de clientes posible. Te brindamos opciones para que promuevas tus productos y mantengas a los clientes implicados.
 
--   [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md)
+-   [Crear una campaña publicitaria para la aplicación](create-an-ad-campaign-for-your-app.md)
 -   [Crear una campaña de promoción de la aplicación personalizada](create-a-custom-app-promotion-campaign.md)
+-   [Enviar notificaciones push dirigidas a los clientes de la aplicación](/send-push-notifications-to-your-apps-customers.md)
 -   [Generar códigos promocionales](generate-promotional-codes.md)
--   [Poner aplicaciones y complementos a la venta](put-apps-and-add-ons-on-sale.md)
+-   [Poner aplicaciones y complementos en oferta](put-apps-and-add-ons-on-sale.md)
 -   [Responder a los comentarios de los clientes](respond-to-customer-feedback.md)
 -   [Responder a las opiniones de los clientes](respond-to-customer-reviews.md)
 -   [Directrices de marketing para aplicaciones de la Tienda Windows](app-marketing-guidelines.md)
@@ -30,6 +31,6 @@ Una vez que la aplicación esté en la TiendaWindows, es el momento de mostrarla
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

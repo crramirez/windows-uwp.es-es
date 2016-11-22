@@ -3,8 +3,8 @@ title: Desarrollo de aplicaciones para Windows como servicio (Windows10)
 description: "Separa el lanzamiento de la aplicación y el soporte técnico de las compilaciones específicas de Windows."
 author: jdeckerMS
 translationtype: Human Translation
-ms.sourcegitcommit: a86002c944841536d37735bb8c4b657905582144
-ms.openlocfilehash: 72ac67b17fc519d374798e5121b309f664ff6b1b
+ms.sourcegitcommit: a98d35162c81f720e4d45990befa289abd2f2c5c
+ms.openlocfilehash: c61800c32e8ab98c13a356e7a61b11ff5b364ffe
 
 ---
 
@@ -151,14 +151,14 @@ Cuando hayas actualizado a una compilación piloto, a continuación hay algunos 
 
 Infórmanos del rendimiento de tu aplicación en las compilaciones piloto. A medida que descubras problemas en la aplicación durante las pruebas, registra los errores a través del portal para partners, si tienes acceso a él, o a través de tu representante de Microsoft. Te animamos a que nos traslades esta información para poder crear juntos una experiencia de calidad para nuestros usuarios.
 
-### Paso 4: Registra la aplicación en Windows10
-El sitio web [Preparado para Windows10](http://go.microsoft.com/fwlink/?LinkID=780580) es un directorio del software compatible con Windows10. Está destinado a los administradores de TI de empresas y organizaciones de todo el mundo que están pensando en la implementación de Windows10. Los administradores de TI pueden consultar el sitio para ver si el software implementado en su empresa es compatible con Windows10.
+### Paso 4: Regístrate en Ready For Windows
+El sitio web [Ready For Windows](http://go.microsoft.com/fwlink/?LinkID=780580) es un directorio del software compatible con Windows 10. Está destinado a los administradores de TI de empresas y organizaciones de todo el mundo que están pensando en la implementación de Windows10. Los administradores de TI pueden consultar el sitio para ver si el software implementado en su empresa es compatible con Windows10.
 
 ## Temas relacionados
 [Opciones de mantenimiento de Windows10 para actualizaciones](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

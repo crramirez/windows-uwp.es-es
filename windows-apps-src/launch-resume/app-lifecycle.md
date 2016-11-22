@@ -5,8 +5,8 @@ description: "En este tema se describe el ciclo de vida de una aplicación para 
 keywords: "ciclo de vida de una aplicación, suspendida, reanudar, iniciar, activar"
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 translationtype: Human Translation
-ms.sourcegitcommit: 79d0b4c7208d2fa79ceb7f5e212255ff94d6fe3a
-ms.openlocfilehash: 86e0f10e45445df82585bd58b0f2583c07a19cb7
+ms.sourcegitcommit: df297d442a4c636fac886b113ada8a01aa37a015
+ms.openlocfilehash: 6e7b92e81aa0a00e579e0ca89234a90e68c253f1
 
 ---
 
@@ -85,7 +85,7 @@ Los datos de evento de estos métodos incluyen la misma propiedad [**PreviousExe
 
 ## Ejecución en segundo plano ##
 
-Una novedad de Windows10, versión 1607, es la capacidad de ejecutar código en segundo plano en un proceso único. Puedes leer más sobre este tema en [Actividad en segundo plano con el modelo de proceso único](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99). En este artículo no analizaremos el procesamiento en segundo plano de proceso único, pero este influye en el ciclo de vida de la aplicación porque se han agregado dos nuevos eventos con los que tiene relación cuando la aplicación está en segundo plano. Se trata de: [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) y [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground).
+A partir de Windows 10, versión 1607, las aplicaciones pueden ejecutar tareas en segundo plano en el mismo proceso que la propia aplicación. Puedes leer más sobre este tema en [Actividad en segundo plano con el modelo de proceso único](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99). En este artículo no analizaremos el procesamiento en segundo plano dentro del proceso, pero este influye en el ciclo de vida de la aplicación porque se han agregado dos nuevos eventos relacionados con cuando la aplicación está en segundo plano. Se trata de: [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) y [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground).
 
 Estos eventos también reflejan si el usuario puede ver la interfaz de usuario de la aplicación.
 
@@ -220,8 +220,7 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 * [Controlar la activación de aplicaciones](activate-an-app.md)
 * [Controlar la suspensión de aplicaciones](suspend-an-app.md)
 * [Controlar la reanudación de aplicaciones](resume-an-app.md)
-* [Controlar el inicio previo de las aplicaciones](handle-app-prelaunch.md)
-* [Actividad en segundo plano con el modelo de proceso único.](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)
+* [Actividad en segundo plano con el modelo de proceso único](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)
 * [Reproducir elementos multimedia en segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
 
  
@@ -230,6 +229,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

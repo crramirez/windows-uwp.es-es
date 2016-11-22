@@ -4,8 +4,8 @@ Description: "Puedes ver análisis detallados de las aplicaciones en el panel de
 title: "Análisis"
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
 translationtype: Human Translation
-ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
-ms.openlocfilehash: fd03b13d4169f265575de921ef9c42303babe972
+ms.sourcegitcommit: fa6e5945855defc99e9f5636543ec072eb777a5a
+ms.openlocfilehash: c628b1fb29601ff1d4ff3629da45409586274f6b
 
 ---
 
@@ -18,9 +18,7 @@ Puedes ver análisis detallados de las aplicaciones en el panel del Centro de de
 
 ## Análisis para todas las aplicaciones
 
-En la página de introducción del panel también se incluye una vista de resumen que recopila información sobre todas las aplicaciones. Las estadísticas que se muestran en la página de introducción varían en función de las aplicaciones.
-
-Cuando [descargas informes analíticos](download-analytic-reports.md), también tienes la opción de descargar informes sobre todas tus aplicaciones. Ten en cuenta que tendrás que acceder a la página **Descargar informes** de la sección **Análisis** de una de las aplicaciones, pero también podrás descargar los datos de todas las demás.
+Para ver un análisis clave acerca de tus aplicaciones más descargadas, en el menú de navegación superior, selecciona **Análisis** > **Información general**. De manera predeterminada, la página **Información general de análisis** muestra información acerca de las cinco aplicaciones que tienen más adquisiciones de ciclo de vida. Para elegir diferentes aplicaciones que mostrar, selecciona **Cambiar filtros**.
 
 ## Informes disponibles para cada aplicación
 
@@ -34,7 +32,8 @@ En esta sección encontrarás detalles sobre la información presentada en cada 
 -   [Informe de uso](usage-report.md)
 -   [Informe de adquisiciones de complementos](add-on-acquisitions-report.md)
 -   [Informe de mediación de anuncios](ad-mediation-report.md)
--   [Informe de rendimiento de la publicidad](advertising-performance-report.md)
+-   [Informe de rendimiento de publicidad](advertising-performance-report.md)
+-   [Informe de rendimiento de filial](affiliates-performance-report.md)
 -   [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md)
 -   [Informe de canales y conversiones](channels-and-conversions-report.md)
 
@@ -73,13 +72,13 @@ Usa los siguientes recursos para empezar a usar Power BI para acceder a los dato
 
 ### Aplicación del Centro de desarrollo
 
-Instala la aplicación del [Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para ver rápidamente los detalles sobre el estado y el rendimiento de las aplicaciones en cualquier dispositivo Windows10. 
+Instala la aplicación del [Centro de desarrollo](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) para ver rápidamente los detalles sobre el estado y el rendimiento de las aplicaciones en cualquier dispositivo Windows10.
 
 ## Temas relacionados
 - [Publicar aplicaciones de Windows](index.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -1,19 +1,19 @@
 ---
 author: jnHs
-Description: "Puedes administrar y ver los detalles relacionados con cada una de tus aplicaciones en el panel del Centro de desarrollo de Windows y configurar servicios como notificaciones de inserción y Mapas."
+Description: "Administra y visualiza los detalles relacionados con cada una de tus aplicaciones en el panel del Centro de desarrollo de Windows y configurar servicios como notificaciones de inserción, pruebas A/B y mapas."
 title: "Administración y servicios de aplicaciones"
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
 translationtype: Human Translation
-ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
-ms.openlocfilehash: 9787ef724622a95d291b4631196b3e13bcb1298a
+ms.sourcegitcommit: 9611b3cc87c29e29a19b87a5b5f37bef1a71dfbb
+ms.openlocfilehash: d5244bda2cefa146e3c481270fe72fdb8f2d35cf
 
 ---
 
 # Administración y servicios de aplicaciones
 
-Puedes administrar y ver los detalles relacionados con cada una de tus aplicaciones en el panel del Centro de desarrollo de Windows y configurar servicios como notificaciones de inserción y Mapas.
+Puedes administrar y ver los detalles relacionados con cada una de las aplicaciones en el panel del Centro de desarrollo de Windows y configurar servicios como notificaciones de inserción, pruebas A/B y mapas.
 
-Al trabajar con una aplicación en el panel, verás secciones en el menú de navegación izquierdo para administrar servicios y aplicaciones. Puedes expandir estas secciones para tener acceso a la funcionalidad que se describe a continuación.
+Al trabajar con una aplicación en el panel, verás secciones en el menú de navegación izquierdo para administrar **servicios** y **aplicaciones**. Puedes expandir estas secciones para tener acceso a la funcionalidad que se describe a continuación.
 
 ## Servicios
 
@@ -21,7 +21,9 @@ La sección **Servicios** te permite administrar varios servicios diferentes par
 
 ### Notificaciones de inserción
 
-Según el tipo de paquete de la aplicación y sus requisitos específicos, puedes usar una de las siguientes opciones para las notificaciones de inserción:
+La sección **Notificaciones de inserción** te permite crear y enviar notificaciones push dirigidas a los clientes de la aplicación. Puedes enviarlas a todos los clientes de la aplicación o a un subconjunto de los clientes de Windows 10 que cumplan los criterios que has definido en un [segmento de clientes](create-customer-segments.md). Para obtener más información, consulta [Enviar notificaciones push dirigidas a los clientes de la aplicación](send-push-notifications-to-your-apps-customers.md).
+
+Según el tipo de paquete de la aplicación y sus requisitos específicos, también puedes usar una de las siguientes opciones para notificaciones de inserción haciendo clic en la página **WNS/MPNS** en el menú de navegación izquierdo: 
 
 -   **Servicios de notificaciones de inserción de Windows (WNS)** te permite enviar notificaciones del sistema, iconos, distintivos y actualizaciones sin procesar desde tu propio servicio en la nube. Para obtener más información, consulta [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/mt187203).
 
@@ -39,7 +41,7 @@ Para obtener más información, consulta [Ejecutar experimentos en la aplicació
 
 Para usar servicios de mapa en aplicaciones para Windows Phone 8.1 y versiones anteriores, necesitas un id. de aplicación del servicio de mapas y un token para incluirlo en el código de la aplicación. Puedes obtener este token en la página **Mapas** de la sección **Servicios**.
 
-> **Nota** Para usar los servicios de mapa en aplicaciones destinadas a otros sistemas operativos, visita el [Centro de desarrollo de Mapas de Bing](http://go.microsoft.com/fwlink/p/?LinkId=614880). Consulta [Solicitar una clave de autenticación de mapas](https://msdn.microsoft.com/library/windows/apps/mt219694) para obtener más información.
+> **Nota** Para usar los servicios de mapa en aplicaciones destinadas a Windows 10 o Windows 8, visita el [Centro de desarrollo de Mapas de Bing](http://go.microsoft.com/fwlink/p/?LinkId=614880). Consulta [Solicitar una clave de autenticación de mapas](https://msdn.microsoft.com/library/windows/apps/mt219694) para obtener más información.
 
 Para más información, consulta [Usar servicios de mapa](use-map-services.md).
 
@@ -71,9 +73,7 @@ Esta página permite ver los detalles relacionados con todos los paquetes public
 
 > **Nota** Aquí no verás ninguna información hasta que se haya publicado la aplicación.
 
-Se muestra el nombre, la versión y la arquitectura de cada paquete. Haz clic en **Detalles** para mostrar información adicional como el idioma admitido, las capacidades de la aplicación y los tamaños de archivo.
-
-La información exacta que ves para cada paquete puede variar en función de su sistema operativo de destino y otros factores. Por ejemplo, si has agregado [mediación de anuncios de Windows](https://msdn.microsoft.com/library/windows/apps/mt219691) al paquete, encontrarás un vínculo para configurar la mediación para ese paquete aquí.
+Se muestra el nombre, la versión y la arquitectura de cada paquete. Haz clic en **Detalles** para mostrar información adicional como el idioma admitido, las capacidades de la aplicación y los tamaños de archivo. La información que ves para cada paquete puede variar en función de su sistema operativo de destino y otros factores. 
 
 Los desarrolladores con permisos de OEM también pueden [generar paquetes de preinstalación](generate-preinstall-packages-for-oems.md) desde la página **Paquetes actuales**.
 
@@ -83,6 +83,6 @@ Los desarrolladores con permisos de OEM también pueden [generar paquetes de pre
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ title: Acceder a sensores y dispositivos desde una tarea en segundo plano
 description: "DeviceUseTrigger permite que aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, incluso cuando la aplicación en primer plano esté suspendida."
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
 translationtype: Human Translation
-ms.sourcegitcommit: 42697a185eb941d44714a682931b3e418a123ad1
-ms.openlocfilehash: dcaae6cace6a95cbd03af1571395656a8ee3a4fa
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: 060cec50933860407679edbad5d2cd8a6d3e0396
 
 ---
 
@@ -20,7 +20,7 @@ ms.openlocfilehash: dcaae6cace6a95cbd03af1571395656a8ee3a4fa
 Para acceder a dispositivos periféricos o sensores en segundo plano, crea una tarea en segundo plano que use [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Para ver un ejemplo de esto en un equipo, consulta la [muestra de dispositivo USB personalizado](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Para ver un ejemplo en un teléfono, consulta la [muestra de sensores en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=393307).
 
 > [!Important]
-> **DeviceUseTrigger** no se puede usar con tareas en segundo plano de proceso único. La información de este tema solo se aplica a las tareas en segundo plano que se ejecutan en un proceso independiente.
+> **DeviceUseTrigger** no se puede usar con tareas en segundo plano dentro del proceso. La información de este tema solo se aplica a las tareas en segundo plano que se ejecutan fuera del proceso.
 
 ## Introducción a las tareas en segundo plano del dispositivo
 
@@ -178,6 +178,6 @@ Además del método [**Unregister**](https://msdn.microsoft.com/library/windows/
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

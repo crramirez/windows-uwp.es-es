@@ -4,8 +4,8 @@ Description: "Los complementos se publican a través del panel del Centro de des
 title: "Envíos de complementos"
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 translationtype: Human Translation
-ms.sourcegitcommit: d67931b4ab23d2b6aef945e839d193e140240cf9
-ms.openlocfilehash: 400c2e2ee65e408c996193230b05c68264830f0d
+ms.sourcegitcommit: b0d877e46ba6958bfc61dd87687c30e91b6cd937
+ms.openlocfilehash: 7b44dabfd4badcad795e38a97590d98e1601092d
 
 ---
 
@@ -17,7 +17,7 @@ Los complementos se publican a través del panel del Centro de desarrollo de Win
 
 El primer paso en el proceso de envío de un complemento es crear dicho complemento en el panel mediante la [definición de su tipo de producto y su id. del producto](set-your-add-on-product-id.md). Después, es posible crear un envío para que el Tienda Windows se pueda adquirir a través de la Tienda Windows. Puedes enviar un app al mismo tiempo que [envías la aplicación](app-submissions.md) o puedes trabajar en él de forma independiente. Y puedes realizar [actualizaciones](#updating-an-add-on-after-submission) de los complementos una vez que la aplicación esté en la Tienda sin tener que volver a enviar la aplicación.
 
-> **Nota**&nbsp;&nbsp;En esta sección de la documentación se describe cómo crear el envío de un complemento en el panel del Centro de desarrollo. Como alternativa, puedes usar la [API de envío de la Tienda Windows](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de complementos.
+> **Nota** En esta sección de la documentación se describe cómo enviar complementos en el panel del Centro de desarrollo. Como alternativa, puedes usar la [API de envío de la Tienda Windows](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de complementos.
 
 ## Lista de comprobación para el envío de un complemento
 
@@ -81,6 +81,6 @@ Para quitar un complemento que has estado ofreciendo anteriormente, crea un nuev
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

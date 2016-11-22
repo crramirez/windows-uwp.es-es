@@ -4,8 +4,8 @@ ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
 description: "Aprende a usar la clase AdControl para mostrar anuncios en banner en una aplicación XAML para Windows10 (UWP), Windows8.1 o Windows Phone8.1."
 title: AdControl en XAML y .NET
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: e3cc04e2c039223729a1e24224ddd19d6485d434
+ms.sourcegitcommit: 35f07c73a72e5242d59c6b45e6d5b4ac62f40741
+ms.openlocfilehash: 0652bd1c3e52c9026b26e14b2475a4b34997ac91
 
 ---
 
@@ -145,13 +145,13 @@ Para obtener un ejemplo de proyecto completo que enseña cómo agregar anuncios 
 
 ## Notas
 
-C#: consulta el [Ejemplo de propiedades XAML](xaml-properties-example.md) para ver un ejemplo de cómo asignar controladores de eventos a eventos **AdControl**. A continuación, consulta el tema [Eventos de AdControl en C#](adcontrol-events-in-c.md) para obtener un código de ejemplo que muestre los controladores de eventos escritos en C#.
+* C#: consulta el [Ejemplo de propiedades XAML](xaml-properties-example.md) para ver un ejemplo de cómo asignar controladores de eventos a eventos **AdControl**. A continuación, consulta el tema [Eventos de AdControl en C#](adcontrol-events-in-c.md) para obtener un código de ejemplo que muestre los controladores de eventos escritos en C#.
 
-Visual Basic: consulta el [Ejemplo de propiedades XAML](xaml-properties-example.md) para ver un ejemplo de cómo asignar controladores de eventos a eventos **AdControl**.
+* C++: la versión actual de las bibliotecas de Microsoft Advertising admite C++. La clase **AdControl** está implementada en C++ nativo y no carga .NET CLR. Para ver ejemplos de código que muestran cómo usar **AdControl** en C++, consulta las [muestras de publicidad en GitHub](http://aka.ms/githubads).
 
-C++: la versión actual de las bibliotecas de Microsoft Advertising admite C++. **AdControl** carga CLR y usa C++ administrado.
+* Visual Basic: consulta el [Ejemplo de propiedades XAML](xaml-properties-example.md) para ver un ejemplo de cómo asignar controladores de eventos a eventos **AdControl**.
 
-Control de errores: para obtener información sobre cómo controlar errores, consulta [control de errores de AdControl](adcontrol-error-handling.md).
+* Control de errores: para obtener información sobre cómo controlar errores, consulta [control de errores de AdControl](adcontrol-error-handling.md).
 
 ## Temas relacionados
 
@@ -161,6 +161,6 @@ Control de errores: para obtener información sobre cómo controlar errores, con
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

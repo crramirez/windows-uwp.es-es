@@ -2,13 +2,16 @@
 title: Desarrollo de aplicaciones para Windows como servicio (Windows10)
 description: "Separa el lanzamiento de la aplicación y el soporte técnico de las compilaciones específicas de Windows."
 author: jdeckerMS
+redirect_url: ../updates-and-versions/application-development-for-windows-as-a-service/
 translationtype: Human Translation
 ms.sourcegitcommit: a86002c944841536d37735bb8c4b657905582144
-ms.openlocfilehash: 72ac67b17fc519d374798e5121b309f664ff6b1b
+ms.openlocfilehash: 561f5ea0ab4ba5b456456cedf786479ef168e7c0
 
 ---
 
 # Desarrollo de aplicaciones para Windows como servicio
+
+**La ubicación de esta página se ha cambiado a ../Updates-and-Versions/Application-Development-for-Windows-as-a-Service/**
 
 **Se aplica a**
 -   Windows10
@@ -159,6 +162,6 @@ El sitio web [Preparado para Windows10](http://go.microsoft.com/fwlink/?LinkID=7
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 
