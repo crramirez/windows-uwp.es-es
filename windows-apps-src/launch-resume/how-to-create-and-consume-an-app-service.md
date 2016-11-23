@@ -3,10 +3,10 @@ author: TylerMSFT
 title: "Crear y usar un servicio de aplicación"
 description: "Obtén información sobre cómo escribir una aplicación para la Plataforma universal de Windows (UWP) que pueda proporcionar servicios a otras aplicaciones para UWP y cómo consumir esos servicios."
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: app to app
+keyword: app to app communication, interprocess communication, IPC, Background messaging, background communication, app to app
 translationtype: Human Translation
-ms.sourcegitcommit: d7d7edf8d1ed6ae1c4be504cd4827bb941f14380
-ms.openlocfilehash: 13b9456d1f6ee2b592db0e5e38b9f9e7fe41764c
+ms.sourcegitcommit: 8b3ad18a3a0561d344b0d88a529cd929dafd9e4b
+ms.openlocfilehash: c925015e9f74edcb1859ca10279beefc31286b1e
 
 ---
 
@@ -18,15 +18,15 @@ ms.openlocfilehash: 13b9456d1f6ee2b592db0e5e38b9f9e7fe41764c
 
 Obtén información sobre cómo escribir una aplicación para la Plataforma universal de Windows (UWP) que pueda proporcionar servicios a otras aplicaciones para UWP y cómo consumir esos servicios.
 
+A partir de Windows 10, versión 1607, puedes crear servicios de aplicación que se ejecutan en el mismo proceso que la aplicación host. Este artículo se centra en la creación de servicios de aplicación que se ejecutan en un proceso en segundo plano independiente. Consulta [Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host](convert-app-service-in-process.md) para obtener más información acerca de los servicios de aplicación que se ejecutan en el mismo proceso que el proveedor.
+
 ## Crear un proyecto nuevo de proveedor de servicios de aplicaciones
 
-
-En este procedimiento lo crearemos todo en una solución para hacerlo más sencillo.
+En este procedimiento, lo crearemos todo en una solución para hacerlo más sencillo.
 
 -   En Microsoft Visual Studio2015, crea un nuevo proyecto de aplicación para UWP y asígnale el nombre AppServiceProvider. (En el cuadro de diálogo **Nuevo proyecto**, selecciona **Plantillas &gt; Otros idiomas &gt; Visual C# &gt; Windows &gt; Windows universal &gt; Aplicación vacía (Windows Universal)**). Esta será la aplicación que proporciona el servicio de aplicaciones.
 
 ## Agregar una extensión de servicio de aplicaciones a package.appxmanifest
-
 
 En el archivo Package.appxmanifest del proyecto AppServiceProvider, agrega la siguiente extensión de AppService al elemento **&lt;Application&gt;**. Este ejemplo anuncia el servicio `com.Microsoft.Inventory` y es lo que identifica a esta aplicación como un proveedor de servicios de aplicaciones. El servicio real se implementará como una tarea en segundo plano. La aplicación de servicio de aplicaciones expone el servicio a otras aplicaciones. Se recomienda usar un estilo inverso de nombre de dominio para el nombre del servicio.
 
@@ -51,7 +51,6 @@ El atributo **Category** identifica esta aplicación como un proveedor de servic
 El atributo **EntryPoint** identifica la clase que implementa el servicio, que se implementará a continuación.
 
 ## Crear el servicio de aplicaciones
-
 
 1.  El servicio de aplicaciones se implementa como una tarea en segundo plano. Esto permite que una aplicación en primer plano invoque el servicio de aplicaciones en otra aplicación para realizar tareas en segundo plano. Agrega un nuevo proyecto de componente de Windows Runtime a la solución (**Archivo &gt; Agregar &gt; Nuevo proyecto**) denominado MyAppService. (En el cuadro de diálogo **Agregar nuevo proyecto** elige **Instalado &gt; Otros idiomas &gt; Visual C# &gt; Windows &gt; Windows universal &gt; Componente de Windows Runtime (Windows universal)**
 2.  En el proyecto AppServiceProvider, agrega una referencia al proyecto MyAppService.
@@ -100,17 +99,13 @@ El atributo **EntryPoint** identifica la clase que implementa el servicio, que s
 
     Esta clase es el lugar donde el servicio de aplicaciones hará su trabajo.
 
-    
-            Se llama a **Run()** cuando se crea la tarea en segundo plano. Como las tareas en segundo plano finalizan cuando se completa la función **Run**, el código toma un aplazamiento para que la tarea en segundo plano se mantenga hasta que atienda las solicitudes.
+    Se llama a **Run()** cuando se crea la tarea en segundo plano. Como las tareas en segundo plano finalizan cuando se completa la función **Run**, el código toma un aplazamiento para que la tarea en segundo plano se mantenga hasta que atienda las solicitudes.
 
-    
-            Se llama a **OnTaskCanceled()** cuando se cancela la tarea. La tarea se cancela cuando la aplicación cliente desecha el elemento [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704), cuando se suspende la aplicación cliente, cuando el sistema operativo se apaga o se suspende o cuando el sistema operativo se queda sin recursos para ejecutar la tarea.
+    Se llama a **OnTaskCanceled()** cuando se cancela la tarea. La tarea se cancela cuando la aplicación cliente desecha el elemento [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704), cuando se suspende la aplicación cliente, cuando el sistema operativo se apaga o se suspende o cuando el sistema operativo se queda sin recursos para ejecutar la tarea.
 
 ## Escribir el código para el servicio de aplicaciones
 
-
-
-            El código para el servicio de aplicaciones se encuentra en **OnRequestedReceived()**. Reemplaza el código auxiliar **OnRequestedReceived()** en el archivo Class1.cs de MyAppService por el código de este ejemplo. Este código obtiene un índice para un elemento de inventario y, junto con una cadena de comandos, lo pasa al servicio para recuperar el nombre y el precio del elemento de inventario especificado. Se ha quitado el código de control de errores por motivos de brevedad.
+El código para el servicio de aplicaciones se encuentra en **OnRequestedReceived()**. Reemplaza el código auxiliar **OnRequestedReceived()** en el archivo Class1.cs de MyAppService por el código de este ejemplo. Este código obtiene un índice para un elemento de inventario y, junto con una cadena de comandos, lo pasa al servicio para recuperar el nombre y el precio del elemento de inventario especificado. Se ha quitado el código de control de errores por motivos de brevedad.
 
 ```cs
 private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
@@ -164,11 +159,7 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
 Ten en cuenta que **OnRequestedReceived()** es de tipo **async** porque en este ejemplo se realiza una llamada de método que admite await a [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722).
 
-Se toma un aplazamiento para que el servicio pueda usar métodos **async** en el controlador OnRequestReceived. Esto asegura que la llamada a OnRequestReceived no se completará hasta que termine de procesar el mensaje. 
-            [
-              **SendResponseAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/dn921722) se usa para enviar una respuesta junto con la finalización. 
-            **SendResponseAsync** no indica la finalización de la llamada. Es la finalización del aplazamiento lo que indica a [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712) que se ha completado el procesamiento de OnRequestReceived.
+Se toma un aplazamiento para que el servicio pueda usar métodos **async** en el controlador OnRequestReceived. Esto asegura que la llamada a OnRequestReceived no se completará hasta que termine de procesar el mensaje. [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722) se usa para enviar una respuesta junto con la finalización. **SendResponseAsync** no indica la finalización de la llamada. Es la finalización del aplazamiento lo que indica a [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712) que se ha completado el procesamiento de OnRequestReceived.
 
 Los servicios de aplicaciones usan un elemento [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) para intercambiar información. El tamaño de los datos que se pueden pasar solo está limitado por los recursos del sistema. No hay claves predefinidas para su uso en el elemento **ValueSet**. Debes determinar qué valores clave usarás para definir el protocolo del servicio de aplicaciones. Debes escribir el llamador teniendo ese protocolo presente. En este ejemplo, hemos elegido una clave denominada "Command" que tiene un valor que indica si queremos que el servicio de aplicaciones proporcione el nombre del elemento de inventario o su precio. El índice del nombre de inventario se almacena en la clave "ID". El valor devuelto se almacena en la clave "Result".
 
@@ -178,14 +169,12 @@ La llamada a [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/
 
 ## Implementar el servicio de aplicaciones y obtener el nombre de familia de paquete
 
-
 Es necesario implementar la aplicación del proveedor del servicio de aplicaciones antes de llamarla desde un cliente. También se necesitará el nombre de familia de paquete de la aplicación de servicio de aplicaciones para poder llamarlo.
 
 -   Una forma de obtener el nombre de familia de paquete de la aplicación de servicio de aplicaciones consiste en llamar a [**Windows.ApplicationModel.Package.Current.Id.FamilyName**](https://msdn.microsoft.com/library/windows/apps/br224670) desde el proyecto **AppServiceProvider** (por ejemplo, desde `public App()` en App.xaml.cs) y tomar nota del resultado. Para ejecutar AppServiceProvider en Microsoft Visual Studio, establécelo como proyecto de inicio en la ventana Explorador de soluciones y ejecuta el proyecto.
 -   Otra forma de obtener el nombre de familia de paquete consiste en implementar la solución (**Compilar &gt; Implementar solución**) y anotar el nombre completo del paquete de la ventana de salida (**Vista &gt; Salida**). Debes quitar la información de plataforma de la cadena en la ventana de salida para derivar el nombre del paquete. Por ejemplo, si el nombre completo del paquete indicado en la ventana de salida era "9fe3058b-3de0-4e05-bea7-84a06f0ee4f0\_1.0.0.0\_x86\_\_yd7nk54bq29ra", se quitaría "1.0.0.0\_x86\_\_", lo que dejaría "9fe3058b-3de0-4e05-bea7-84a06f0ee4f0\_yd7nk54bq29ra" como el nombre de familia de paquete.
 
 ## Escribir un cliente para llamar al servicio de aplicaciones
-
 
 1.  Agrega un nuevo proyecto vacío de aplicación universal de Windows a la solución (**Archivo &gt; Agregar &gt; Nuevo proyecto**) denominado ClientApp. (En el cuadro de diálogo **Agregar nuevo proyecto** elige **Instalado &gt; Otros idiomas &gt; Visual C# &gt; Windows &gt; Windows universal &gt; Aplicación vacía (Windows universal)**).
 2.  En el proyecto ClientApp, agrega las siguientes instrucciones **using** a la parte superior de MainPage.xaml.cs:
@@ -285,7 +274,6 @@ Si se produce un error en la llamada al servicio de aplicaciones, comprueba lo s
 
 ## Depurar el cliente
 
-
 1.  Sigue las instrucciones del paso anterior para depurar el servicio de aplicaciones.
 2.  Inicia ClientApp desde el menú Inicio.
 3.  Asocia al depurador al proceso ClientApp.exe (no al proceso ApplicationFrameHost.exe). (En Visual Studio, elige **Depurar &gt; Asociar al proceso…**)
@@ -294,11 +282,9 @@ Si se produce un error en la llamada al servicio de aplicaciones, comprueba lo s
 
 ## Observaciones
 
-
-Este ejemplo proporciona una introducción sencilla para crear un servicio de aplicaciones y llamarlo desde otra aplicación. Los puntos clave que hay que tener en cuenta son la creación de una tarea en segundo plano para hospedar el servicio de aplicaciones, la adición de la extensión de windows.appservice al archivo Package.appxmanifest de la aplicación del proveedor de servicio de aplicaciones, la obtención del nombre de familia de paquete de la aplicación del proveedor de servicio de aplicaciones para poder conectarse a este desde la aplicación cliente y el uso de [**Windows.ApplicationModel.AppService.AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704) para llamar al servicio.
+Este ejemplo proporciona una introducción sencilla para crear un servicio de aplicaciones y llamarlo desde otra aplicación. Los puntos clave que hay que tener en cuenta son la creación de una tarea en segundo plano para hospedar el servicio de aplicaciones, la adición de la extensión windows.appservice al archivo Package.appxmanifest de la aplicación del proveedor de servicio de aplicaciones, la obtención del nombre de familia de paquete de la aplicación del proveedor de servicio de aplicaciones para poder conectarse a este desde la aplicación cliente y el uso de [**Windows.ApplicationModel.AppService.AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704) para llamar al servicio.
 
 ## Código completo para MyAppService
-
 
 ```cs
 using System;
@@ -389,15 +375,11 @@ namespace MyAppService
 
 ## Temas relacionados
 
-
-* [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md)
-
- 
-
- 
+* [Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host](convert-app-service-in-process.md)
+* [Hacer que tu aplicación sea compatible con las tareas en segundo plano](support-your-app-with-background-tasks.md)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Nov16_HO4-->
 
 
