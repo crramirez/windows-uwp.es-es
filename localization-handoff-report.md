@@ -1,11 +1,44 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\publish\mobile-operator-billing.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e829808a8e521f2308454e05e8911579b22be807?path=windows-apps-src%2Fpublish%2Fmobile-operator-billing.md&_a=contents) | HandedOffSuccess | [Details](#fe11b56430a07e1326f78b59579ffd9e733ed1b05507)
+ [windows-apps-src\publish\payment-thresholds-methods-and-timeframes.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/53c5cc4d74beb7482b2f3ec335d7a6e0f93d03f9?path=windows-apps-src%2Fpublish%2Fpayment-thresholds-methods-and-timeframes.md&_a=contents) | HandedOffSuccess | [Details](#6e94ae84b6e553e2d481b71a8a09f3f0fffdab5b5514)
 
 ## Item Details
+##### <a name='fe11b56430a07e1326f78b59579ffd9e733ed1b05507'></a> Source: [windows-apps-src\publish\mobile-operator-billing.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e829808a8e521f2308454e05e8911579b22be807?path=windows-apps-src%2Fpublish%2Fmobile-operator-billing.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/784a1903f22b6ed7d76e6f804e0f967703932424?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fmobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-11-29 18:39:43
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\publish\mobile-operator-billing.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/7aabe073629b28c3b34f9fba562efe812fefe30a?path=windows-apps-src%2Fpublish%2Fmobile-operator-billing.md&_a=contents)
+* Current Handback File: [mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fmobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-21 15:33:32
+* Bilingual File: [mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fmobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-24 15:47:13
+* [Back to Top](#report-top)
+
+##### <a name='6e94ae84b6e553e2d481b71a8a09f3f0fffdab5b5514'></a> Source: [windows-apps-src\publish\payment-thresholds-methods-and-timeframes.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/53c5cc4d74beb7482b2f3ec335d7a6e0f93d03f9?path=windows-apps-src%2Fpublish%2Fpayment-thresholds-methods-and-timeframes.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [payment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/784a1903f22b6ed7d76e6f804e0f967703932424?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fpayment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-11-29 18:39:43
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
