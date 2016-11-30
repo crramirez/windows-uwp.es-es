@@ -4,8 +4,8 @@ ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: "Usa este método en la API de compras de la Tienda Windows para conceder de forma gratuita una aplicación o complemento a un usuario determinado."
 title: Conceder productos gratuitos
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: a04918a562d132f6a721b96c7f4ad78218eb8819
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: 2eca8712075ce1f9d876f3ae441381734bd52370
 
 ---
 
@@ -21,8 +21,8 @@ Actualmente, solo puedes conceder productos gratuitos. Si el servicio intenta us
 
 Para usar este método, necesitarás:
 
--   Un token de acceso de Azure AD que se haya creado con el URI de público `https://onestore.microsoft.com`.
--   Una clave de Id. de la Tienda Windows que se haya generado mediante una llamada al método [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) desde el código del cliente en la aplicación.
+* Un token de acceso de Azure AD creado con el URI de público `https://onestore.microsoft.com`.
+* Una clave de identificador de la Tienda Windows que se haya [generado a partir del código de cliente en la aplicación](view-and-grant-products-from-a-service.md#step-4).
 
 Para obtener más información, consulta [Ver y conceder productos desde un servicio](view-and-grant-products-from-a-service.md).
 
@@ -41,10 +41,10 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 | Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorización  | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;.                           |
-| Host           | cadena | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
+| Autorización  | string | Obligatorio. Token de acceso de Azure AD con formato **Portador** &lt;*token*&gt;.                           |
+| Host           | string | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
-| Content-Type   | cadena | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
+| Content-Type   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
 <span/>
 
@@ -52,9 +52,9 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 | Parámetro      | Tipo   | Descripción                                                                                                                                                                                                                                                                                                            | Obligatorio |
 |----------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| availabilityId | cadena | Identificador de disponibilidad del producto que debe adquirirse a través del catálogo de la Tienda Windows.                                                                                                                                                                                                                                     | Sí      |
-| b2bKey         | cadena | Clave de id. de la Tienda Windows que representa la identidad del cliente.                                                                                                                                                                                                                                                        | Sí      |
-| devOfferId     | cadena | Identificador de la oferta especificado por el desarrollador que aparecerá en el elemento Colección después de la compra.                                                                                                                                                                                                                                 | No       |
+| availabilityId | cadena | El identificador de disponibilidad del producto que debe adquirirse a través del catálogo de la Tienda Windows.                                                                                                                                                                                                                                     | Sí      |
+| b2bKey         | cadena | La clave de identificador de la Tienda Windows que se haya [generado a partir del código de cliente en la aplicación](view-and-grant-products-from-a-service.md#step-4).                                                                                                                                                                                                                                                        | Sí      |
+| devOfferId     | cadena | Un identificador de la oferta especificado por el desarrollador que aparecerá en el elemento de colección después de la adquisición.                                                                                                                                                                                                                                 | No       |
 | language       | cadena | Idioma del usuario.                                                                                                                                                                                                                                                                                              | Sí      |
 | market         | cadena | Mercado del usuario.                                                                                                                                                                                                                                                                                                | Sí      |
 | orderId        | guid   | GUID que se genera para el pedido. Este valor debe ser exclusivo del usuario, pero no es obligatorio que lo sea en todos los pedidos.                                                                                                                                                                                              | Sí      |
@@ -154,8 +154,8 @@ El objeto IdentityV6 contiene los parámetros siguientes.
 
 | Parámetro     | Tipo   | Descripción                                                                        | Obligatorio |
 |---------------|--------|------------------------------------------------------------------------------------|----------|
-| identityType  | cadena | Contiene el valor **"pub"**.                                                      | Sí      |
-| identityValue | cadena | El valor de cadena del elemento *publisherUserId* de la clave de id. de la Tienda Windows especificada. | Sí      |
+| identityType  | string | Contiene el valor **"pub"**.                                                      | Sí      |
+| identityValue | string | El valor de cadena del elemento *publisherUserId* de la clave de id. de la Tienda Windows especificada. | Sí      |
 
 <span/> 
 
@@ -245,6 +245,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

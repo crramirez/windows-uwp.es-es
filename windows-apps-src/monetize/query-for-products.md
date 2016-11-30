@@ -4,8 +4,8 @@ ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: "Usa este método en la API de colecciones de la Tienda Windows para obtener todos los productos que posee un cliente para las aplicaciones asociadas a tu identificador de cliente de Azure AD. Puedes definir el ámbito de la consulta para un producto concreto, o bien usar otros filtros."
 title: Consultar productos
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: ea517d66dbb6f373b191937de8c1cbe42c74846f
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: d614919debd979a475e93909199851390d242deb
 
 ---
 
@@ -23,8 +23,8 @@ Este método está diseñado para que el servicio lo llame en respuesta a un men
 
 Para usar este método, necesitarás:
 
--   Un token de acceso de Azure AD que se haya creado con el URI de público `https://onestore.microsoft.com`.
--   Una clave de id. de la Tienda Windows que se haya generado mediante la llamada al método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) desde el código del cliente de la aplicación.
+* Un token de acceso de Azure AD que se creó con el URI de audiencia `https://onestore.microsoft.com`.
+* Una clave de id. de la Tienda Windows que se haya [generado a partir del código de cliente en la aplicación](view-and-grant-products-from-a-service.md#step-4).
 
 Para obtener más información, consulta [Ver y conceder productos desde un servicio](view-and-grant-products-from-a-service.md).
 
@@ -42,9 +42,9 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 | Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorización  | string | Obligatorio. Token de acceso de Azure AD con formato **Portador** &lt;*token*&gt;.                           |
+| Authorization  | string | Obligatorio. Token de acceso de Azure AD con formato **Portador** &lt;*token*&gt;.                           |
 | Host           | string | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
-| Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
+| Content-Length | number | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
 <span/>
@@ -55,7 +55,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 |-------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | beneficiaries     | UserIdentity | Objeto UserIdentity que representa al usuario al que se están consultando productos.                                                                                                                                                                                           | Sí      |
 | continuationToken | string       | Si hay varios conjuntos de productos, el cuerpo de la respuesta devuelve un token de continuación cuando se alcanza el límite de la página. Proporciona ese token de continuación aquí en llamadas posteriores para recuperar los productos restantes.                                                      | No       |
-| maxPageSize       | Número       | Número máximo de productos que puede devolver una respuesta. El valor predeterminado y máximo es de 100.                                                                                                                                                                      | No       |
+| maxPageSize       | number       | Número máximo de productos que puede devolver una respuesta. El valor predeterminado y máximo es de 100.                                                                                                                                                                      | No       |
 | modifiedAfter     | datetime     | Si se especifica, el servicio devuelve solo los productos modificados después de esta fecha.                                                                                                                                                                             | No       |
 | parentProductId   | string       | Si se especifica, el servicio devuelve solo los complementos que corresponden a la aplicación especificada.                                                                                                                                                                                    | No       |
 | productSkuIds     | ProductSkuId | Si se especifica, el servicio devuelve solo los productos aplicables a los pares de producto o SKU proporcionados.                                                                                                                                                                        | No       |
@@ -68,9 +68,9 @@ El objeto UserIdentity contiene los parámetros siguientes.
 
 | Parámetro            | Tipo   | Descripción                                                                                                                                                                                                                  | Obligatorio |
 |----------------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| identityType         | string | Especifique el valor de cadena **b2b**.                                                                                                                                                                                            | Sí      |
-| identityValue        | string | Valor de cadena de la clave de id. de la Tienda Windows.                                                                                                                                                                                    | Sí      |
-| localTicketReference | Cadena | Identificador solicitado para los productos devueltos. Los artículos devueltos en el cuerpo de la respuesta tendrán una *localTicketReference* coincidente. Se recomienda usar el mismo valor que la notificación *userId* de la clave de id. de la Tienda Windows. | Sí      |
+| identityType         | cadena | Especifica el valor de cadena **b2b**.                                                                                                                                                                                            | Sí      |
+| identityValue        | cadena | La clave de id. de la Tienda Windows que se haya [generado a partir del código de cliente en la aplicación](view-and-grant-products-from-a-service.md#step-4).                                                                                                                                                                                     | Sí      |
+| localTicketReference | cadena | El identificador solicitado para los productos devueltos. Los artículos devueltos en el cuerpo de la respuesta tendrán un parámetro *localTicketReference* coincidente. Se recomienda usar el mismo valor que la notificación *userId* de la clave de id. de la Tienda Windows. | Sí      |
 
 <span/> 
 
@@ -122,8 +122,8 @@ Content-Type: application/json
 
 | Parámetro         | Tipo                     | Descripción                                                                                                                                                                                | Obligatorio |
 |-------------------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| continuationToken | Cadena                   | Si hay varios conjuntos de productos, este token se devuelve cuando se alcanza el límite de la página. Puedes especificar este token de continuación en llamadas posteriores para recuperar los productos restantes. | No       |
-| Elementos             | CollectionItemContractV6 | Matriz de productos para el usuario especificado.                                                                                                                                               | No       |
+| continuationToken | string                   | Si hay varios conjuntos de productos, este token se devuelve cuando se alcanza el límite de la página. Puedes especificar este token de continuación en llamadas posteriores para recuperar los productos restantes. | No       |
+| Items             | CollectionItemContractV6 | Matriz de productos para el usuario especificado.                                                                                                                                               | No       |
 
 <span/> 
 
@@ -132,22 +132,22 @@ El objeto CollectionItemContractV6 contiene los parámetros siguientes.
 | Parámetro            | Tipo               | Descripción                                                                                                                                        | Obligatorio |
 |----------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | acquiredDate         | datetime           | Fecha en que el usuario compró el artículo.                                                                                                      | Sí      |
-| campaignId           | Cadena             | Identificador de campaña que se proporcionó al realizar la compra del artículo.                                                                                  | No       |
+| campaignId           | string             | Identificador de campaña que se proporcionó al realizar la compra del artículo.                                                                                  | No       |
 | devOfferId           | string             | El identificador de la oferta de una compra desde la aplicación.                                                                                                              | No       |
 | endDate              | datetime           | La fecha de finalización del artículo.                                                                                                                          | Sí      |
 | fulfillmentData      | string             | N/D                                                                                                                                                | No       |
-| inAppOfferToken      | Cadena             | Identificador del producto especificado por el desarrollador que se asignó al artículo en el panel del Centro de desarrollo de Windows. Un ejemplo de identificador del producto es "product123". | No       |
-| itemId               | Cadena             | Id. que identifica este artículo de colección de otros artículos que posee el usuario. Este identificador es único para cada producto.                                          | Sí      |
-| localTicketReference | Cadena             | Identificador de la `localTicketReference` suministrada anteriormente en el cuerpo de la solicitud.                                                                      | Sí      |
+| inAppOfferToken      | string             | Identificador del producto especificado por el desarrollador que se asignó al artículo en el panel del Centro de desarrollo de Windows. Un ejemplo de identificador del producto es "product123". | No       |
+| itemId               | string             | Id. que identifica este artículo de colección de otros artículos que posee el usuario. Este identificador es único para cada producto.                                          | Sí      |
+| localTicketReference | string             | Identificador de la `localTicketReference` suministrada anteriormente en el cuerpo de la solicitud.                                                                      | Sí      |
 | modifiedDate         | datetime           | Fecha de la última modificación de este artículo.                                                                                                              | Sí      |
-| orderId              | Cadena             | Si está presente, el identificador del objeto del que se obtuvo este artículo.                                                                                          | No       |
-| orderLineItemId      | Cadena             | Si está presente, el artículo de línea de un pedido concreto para el que se obtuvo el artículo.                                                                | No       |
-| ownershipType        | Cadena             | La cadena "OwnedByBeneficiary".                                                                                                                   | Sí      |
+| orderId              | string             | Si está presente, el identificador del objeto del que se obtuvo este artículo.                                                                                          | No       |
+| orderLineItemId      | string             | Si está presente, el artículo de línea de un pedido concreto para el que se obtuvo el artículo.                                                                | No       |
+| ownershipType        | string             | La cadena "OwnedByBeneficiary".                                                                                                                   | Sí      |
 | productId            | string             | El Id. de la Tienda de la aplicación procedente del catálogo de la tienda Windows. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8.                                                            | Sí      |
 | productType          | string             | Uno de los siguientes tipos de producto: **Application**, **Durable** y **UnmanagedConsumable**.                                                     | Sí      |
 | purchasedCountry     | string             | N/D.                                                                                                                                               | No       |
 | purchaser            | IdentityContractV6 | Si está presente, representa la identidad del comprador del artículo. Consulta los detalles de este objeto a continuación.                                      | No       |
-| quantity             | número             | Cantidad del artículo. Actualmente, el valor siempre será 1.                                                                                        | No       |
+| quantity             | number             | Cantidad del artículo. Actualmente, el valor siempre será 1.                                                                                        | No       |
 | skuId                | string             | Identificador de SKU del catálogo de la Tienda Windows. Un ejemplo de identificador de SKU es "0010".                                                                            | Sí      |
 | skuType              | string             | Tipo de la SKU. Entre los valores posibles se incluyen **Trial**, **Full** y **Rental**.                                                                      | Sí      |
 | startDate            | datetime           | Fecha en que el artículo comienza a ser válido.                                                                                                         | Sí      |
@@ -217,6 +217,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ title: Juegos y DirectX
 description: "La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Descubre cómo comenzar un nuevo juego o migrar uno existente."
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
 translationtype: Human Translation
-ms.sourcegitcommit: adaff9abeb0ae8f9c9deb964b18e673c4d4c5f73
-ms.openlocfilehash: fccc85584e84bf3364130fe80c61b75c6377c0c8
+ms.sourcegitcommit: 708e998e414f01bc6544d7f2435e7145ac84902b
+ms.openlocfilehash: 6437f3620afadd0b421bf11f1aa4f86558d50de1
 
 ---
 
@@ -42,6 +42,7 @@ La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear,
 | [Conexión en red de juegos](work-with-networking-in-your-directx-game.md) | Aprende a desarrollar e incorporar características de red en un juego DirectX. |
 | [Accesibilidad para juegos](accessibility-for-games.md) | Aprende a hacer que los juegos sean más accesibles. |
 | [Nube para juegos](cloud-for-games.md) | Aprende a hacer uso de las tecnologías de nube para desarrollar juegos. |
+| [Monetización para juegos](monetization-for-games.md) | Aprende a monetizar tu juego. |
 | [Interoperabilidad de DirectX y XAML](directx-and-xaml-interop.md) | Puedes usar el lenguaje XAML y Microsoft DirectX juntos en un juego para UWP. |
 | [Empaquetar un juego](package-your-windows-store-directx-game.md) | Los juegos para UWP grandes, especialmente aquellos que admiten varios idiomas con activos específicos de una región o activos de alta definición como característica opcional, pueden crecer hasta alcanzar tamaños considerables. En este tema, aprende cómo usar los paquetes de la aplicación y los lotes de aplicaciones para personalizar tu aplicación de modo que los clientes solamente reciban los recursos que de verdad necesitan. |
 | [Aprobación de concepto](concept-approval.md) | Descubre cómo enviar el producto para la aprobación del concepto, lo que será necesario si tu producto se ejecuta en Xbox o usa Xbox Live. |
@@ -72,6 +73,6 @@ Para aprovechar al máximo las explicaciones y los tutoriales sobre desarrollo d
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

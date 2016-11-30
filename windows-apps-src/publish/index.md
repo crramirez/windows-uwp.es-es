@@ -2,8 +2,8 @@
 author: jnHs
 Description: "Consulta cómo publicar tus aplicaciones de Windows en la Tienda Windows."
 translationtype: Human Translation
-ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
-ms.openlocfilehash: 3cc56e61be85e0938c5b923ae402ca1da881888d
+ms.sourcegitcommit: f894decad6a88ad3923e0bd5c54a6f4906555081
+ms.openlocfilehash: 6e2b6158a586fa82780664cd2ef2de0b425a1f1d
 
 
 ---
@@ -22,8 +22,8 @@ Esta sección contiene información sobre cómo publicar y administrar tus aplic
 | [Crear la aplicación reservando un nombre](create-your-app-by-reserving-a-name.md) | Aprende a reservar nombres y busca sugerencias para elegir un buen nombre de aplicación. |
 | [Envíos de aplicaciones](app-submissions.md) | Un envío de una aplicación incluye [detalles de precios y disponibilidad](set-app-pricing-and-availability.md), [propiedades](enter-app-properties.md), [clasificación por edades](age-ratings.md), [paquetes](upload-app-packages.md) y [detalles de la descripción de la Tienda](create-app-store-listings.md). Tu envío pasará por el [proceso de certificación](the-app-certification-process.md) antes de que se publique en la Tienda. Algunas características opcionales que puedes usar son la [distribución de paquetes piloto](package-flights.md), las [pruebas beta](beta-testing-and-targeted-distribution.md) y [la distribución de LOB directamente en las empresas](distribute-lob-apps-to-enterprises.md). |
 | [Envíos de complementos](add-on-submissions.md) | Aprende a publicar complementos (productos desde la aplicación) a través del panel del Centro de desarrollo de Windows. |
-| [Rentabilizar con anuncios](monetize-with-ads.md) | Administrar el uso de los anuncios, incluidas las configuraciones de mediación de anuncios personalizados y anuncios de filiales. |
-| [Administración y servicios de aplicaciones](app-management-and-services.md) | Usar servicios como las notificaciones de inserción, la experimentación y los mapas, y aprender cómo [ver los detalles de la identidad de aplicación](view-app-identity-details.md) y [reservar nombres de aplicación adicionales](manage-app-names.md) |
+| [Rentabilizar con anuncios](monetize-with-ads.md) | Administra el uso de los anuncios, incluidas las configuraciones de mediación de anuncios personalizados y anuncios de filiales. |
+| [Administración y servicios de aplicaciones](app-management-and-services.md) | Usa servicios como pruebas A/B (experimentación) y los mapas, y aprende a [ver los detalles de la identidad de aplicación](view-app-identity-details.md) y [reservar nombres de aplicación adicionales](manage-app-names.md). |
 | [Análisis](analytics.md) | Obtén datos analíticos de tus aplicaciones para ver cómo están funcionando las aplicaciones: p. ej., puedes saber a cuántos clientes has llegado o cómo usan estos la aplicación y qué opinan de ella. También encontrarás información sobre el estado de la aplicación, el uso de los anuncios y mucho más. |
 | [Promoción de aplicaciones y atracción de clientes](app-promotion-and-customer-engagement.md) | Promociona tu aplicación con [campañas publicitarias](create-an-ad-campaign-for-your-app.md), [código promocional](generate-promotional-codes.md), [precio de venta](put-apps-and-add-ons-on-sale.md) y mucho más. 
 | [Proceso de pago](getting-paid-apps.md) | Obtén información detallada sobre cómo recibir ganancias a partir de las aplicaciones, los complementos y Microsoft Advertising. |
@@ -32,6 +32,6 @@ Esta sección contiene información sobre cómo publicar y administrar tus aplic
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

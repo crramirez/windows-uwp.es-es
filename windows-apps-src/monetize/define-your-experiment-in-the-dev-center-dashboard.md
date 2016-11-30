@@ -4,14 +4,16 @@ Description: "Antes de poder ejecutar un experimento en tu aplicación de la Pla
 title: Definir el experimento en el panel del Centro de desarrollo
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
 translationtype: Human Translation
-ms.sourcegitcommit: ce0431243866125eff83569e3b9b1c75e0703358
-ms.openlocfilehash: df6744cb9f4dd60c9eef07dc89f2265ac4244aab
+ms.sourcegitcommit: b33e003af6e12df5eedfe150155db6777c5c62f6
+ms.openlocfilehash: fa209464e247e7073da2197ddd0b9a5344f3763b
 
 ---
 
 # Definir el experimento en el panel del Centro de desarrollo
 
 Después de [crear un proyecto y definir variables remotas en el panel del Centro de desarrollo](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) y [escribir el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md), estás listo para crear un experimento en el proyecto. Al crear el experimento, defines los objetivos y otras variaciones que los usuarios recibirán.
+
+Para ver un tutorial que muestre de principio a fin el proceso de crear y ejecutar un experimento, consulta [Crear y ejecutar el primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
 <span id="get-an-api-key" />
 <span id="create-an-experiment" />
@@ -81,10 +83,10 @@ Después de definir el experimento en el panel del Centro de desarrollo y escrib
 * [Programar tu aplicación para los experimentos](code-your-experiment-in-your-app.md)
 * [Administrar el experimento en el panel del Centro de desarrollo](manage-your-experiment.md)
 * [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
-* [Ejecutar experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
+* [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

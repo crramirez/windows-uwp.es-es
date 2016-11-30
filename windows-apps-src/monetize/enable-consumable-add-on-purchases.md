@@ -5,8 +5,8 @@ description: Aprende a usar el espacio de nombres Windows.Services.Store para tr
 title: Habilitar compras de complementos consumibles
 keywords: "muestra de código de oferta desde la aplicación"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 1e9ecad5abb9addbe41b38d0b56b84404716f2a8
+ms.sourcegitcommit: 962bee0cae8c50407fe1509b8000dc9cf9e847f8
+ms.openlocfilehash: eb188ed8e69f90727c5b57af1c407fac07eaf87d
 
 ---
 
@@ -24,7 +24,7 @@ Las aplicaciones destinadas a Windows 10, versión 1607 o posterior pueden ofrec
 
   Por ejemplo, si el complemento representa 100 monedas en un juego y el usuario consume 10 monedas, la aplicación o el servicio debe mantener el nuevo saldo restante de 90 monedas para el usuario. Cuando el usuario haya consumido las 100 monedas, la aplicación debe notificar el complemento como completado y, a continuación, el usuario puede volver a comprar el complemento de 100 monedas.
 
-* **Consumible administrado por la Tienda**. Para este tipo de consumible, la Tienda realiza un seguimiento del saldo del usuario de los elementos que representa el complemento. Cuando el usuario consume algún elemento, debes notificar dichos elementos como completados en la Tienda. A continuación, la Tienda actualiza el saldo del usuario. La aplicación puede consultar el saldo actual del usuario en cualquier momento. Cuando el usuario haya consumido todos los elementos, el usuario puede volver a comprar el complemento.
+* **Consumible administrado por la Tienda**. Para este tipo de consumible, la Tienda realiza un seguimiento del saldo del usuario de los elementos que representa el complemento. Cuando el usuario consume algún elemento, debes notificar dichos elementos como completados en la Tienda, tras lo cual la Tienda actualiza el saldo del usuario. La aplicación puede consultar el saldo actual del usuario en cualquier momento. Cuando el usuario haya consumido todos los elementos, el usuario puede volver a comprar el complemento.
 
   Por ejemplo, si el complemento representa una cantidad inicial de 100 monedas en un juego y el usuario consume 10 monedas, la aplicación notifica a la Tienda que se han completado 10 unidades del complemento, y la Tienda actualiza el saldo restante. Cuando el usuario ha consumido las 100 monedas, puede volver a comprar el complemento de 100 monedas.
 
@@ -46,9 +46,11 @@ Estos ejemplos cumplen los siguientes requisitos:
 El código de estos ejemplos supone que:
 * El código se ejecuta en el contexto de una [página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contiene un elemento [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` y un elemento [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Estos objetos se usan para indicar que se está produciendo una operación asincrónica y para mostrar mensajes de salida, respectivamente.
 * El archivo de código tiene una instrucción **using** para el espacio de nombres **Windows.Services.Store**.
-* La aplicación es una aplicación de usuario único que se ejecuta solamente en el contexto del usuario que inició la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro) (Habilitar las compras de productos desde la aplicación y las pruebas).
+* La aplicación es una aplicación de usuario único que se ejecuta solamente en el contexto del usuario que inició la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro).
 
-Para una aplicación de muestra completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Para obtener una aplicación de muestra completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+
+>**Nota** Si tienes una aplicación de escritorio que usa el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), tienes que agregar código adicional que no se muestra en estos ejemplos para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
 
 <span id="report_fulfilled" />
 ## Notificar un complemento consumible como completado
@@ -71,6 +73,9 @@ public async void ConsumeAddOn(string storeId)
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     // This is an example for a Store-managed consumable, where you specify the actual number
@@ -133,6 +138,9 @@ public async void GetRemainingBalance(string storeId)
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     string addOnStoreId = "9NBLGGH4TNNR";
@@ -180,6 +188,6 @@ public async void GetRemainingBalance(string storeId)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

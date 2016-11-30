@@ -4,8 +4,8 @@ ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Abrir una cuenta de desarrollador
 description: "Esta introducción al procedimiento de registro para establecer una cuenta de desarrollador de la Tienda Windows y otros programas de Microsoft, te ayudará a comprender el proceso de configuración de la cuenta."
 translationtype: Human Translation
-ms.sourcegitcommit: c4a753b7642354c4fe42cff721fb21337b14528f
-ms.openlocfilehash: b9ccd8e4756dd35fd775d91747710dd13b9ca7ed
+ms.sourcegitcommit: 10446e136d324cd8490f7547f853e75b534368b0
+ms.openlocfilehash: 1f847b9c3302b092dce6eb73dd01f761ec17c0a5
 
 ---
 # Abrir una cuenta de desarrollador
@@ -27,9 +27,13 @@ Esta introducción al procedimiento de registro para establecer una cuenta de de
 
    Si te registras como empresa, también necesitas escribir el nombre, el correo electrónico y el número de teléfono de la persona que aprobará la cuenta de la empresa.
 
-5.  Escribe el **Nombre para mostrar del publicador** que quieres usar (50 caracteres o menos). Ten en cuenta que, si escribes un nombre que ya esté seleccionado o si resulta que algún usuario más tiene derecho a usar ese nombre, no podrás seleccionarlo. En cuanto a las cuentas de empresa, el nombre para mostrar del publicador debe ser el nombre de empresa o el nombre comercial registrado de tu organización. Elígelo con cuidado, ya que los clientes verán este nombre cuando exploren. Además conocerán tus aplicaciones por este nombre.
+5.  Para cuentas individuales, escribe el **Nombre para mostrar del publicador** que quieres usar (50 caracteres o menos). Elígelo con cuidado, ya que los clientes verán este nombre cuando exploren. Además conocerán tus aplicaciones por este nombre.
 
-  >  **Nota**  Asegúrate de tener derecho a usar este nombre. Si el nombre que eliges está registrado o tiene el copyright de otra persona, tu cuenta podría cerrarse. Consulta tu [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/Hh694058) para obtener más información. Si alguien más está usando un nombre para mostrar del publicador respecto al cual tienes los derechos de marca comercial u otro derecho legal, [ponte en contacto con Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
+    Para las cuentas de empresa, escribe el **Nombre registrado** de tu empresa (el nombre de empresa o el nombre comercial registrado de tu organización); este se usará como el nombre para mostrar del publicador.
+    
+    Ten en cuenta que, si escribes un nombre que ya esté seleccionado o si resulta que algún usuario más tiene derecho a usar ese nombre, no podrás usarlo. 
+
+  >  **Nota** Asegúrate de tener los derechos de usar el nombre que escribas aquí. Si el nombre que eliges está registrado o tiene el copyright de otra persona, tu cuenta podría cerrarse. Consulta tu [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/Hh694058) para obtener más información. Si alguien más está usando un nombre para mostrar del publicador respecto al cual tienes los derechos de marca comercial u otro derecho legal, [ponte en contacto con Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
 
 6.  Escribe la información de contacto de la cuenta. Para una cuenta de empresa, también tendrás que incluir la información de contacto de la persona que puede confirmar que estás autorizado para crear la cuenta en nombre de la organización. Cuando hayas terminado, haz clic en **Siguiente** para pasar a la sección **Pago**.
 
@@ -39,11 +43,13 @@ Esta introducción al procedimiento de registro para establecer una cuenta de de
 
 9.  Haz clic en **Finalizar** para confirmar la compra. Enviaremos un mensaje de confirmación a la dirección de correo electrónico del desarrollador.
 
+Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. Para las cuentas de empresa, el proceso tarda un poco más, ya que también debemos confirmar que tienes autorización para configurar la cuenta de tu empresa. Esta comprobación puede tardar entre unos días y un par de semanas y suele incluir una llamada de teléfono a tu empresa. Puedes comprobar tu estado de verificación en la página **Configuración de la cuenta**. 
+
 ## Directrices adicionales para cuentas de empresa
 
-Al crear una cuenta de empresa, sigue estas directrices, especialmente si más de una persona tendrá acceso a la cuenta mediante el inicio de sesión con la cuenta de Microsoft que abrió dicha cuenta originalmente. 
+Al crear una cuenta de empresa, sigue estas directrices, especialmente si más de una persona tendrá acceso a la cuenta mediante el inicio de sesión con la cuenta de Microsoft que abrió dicha cuenta. 
 
-> **Importante** Para permitir que varios usuarios accedan a tu cuenta del Centro de desarrollo, te recomendamos que uses Azure Active Directory para asignar roles a los usuarios individuales, quienes podrán tener acceso a la cuenta si inician sesión con sus credenciales individuales de AzureAD. Para obtener más información, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
+> **Importante** Para permitir que varios usuarios accedan a tu cuenta del Centro de desarrollo, te recomendamos que uses Azure Active Directory para asignar roles a los usuarios individuales, quienes podrán tener acceso a la cuenta si inician sesión con sus credenciales individuales de Azure AD. Para obtener más información, consulta [Administrar usuarios de la cuenta](manage-account-users.md).
 
 -   Crea tu cuenta Microsoft con una dirección de correo electrónico que pertenezca al dominio de tu empresa pero no a una persona concreta; por ejemplo, windowsapps@fabrikam.com.
 -   Limita el acceso a esta cuenta Microsoft al menor número posible de desarrolladores.
@@ -82,6 +88,6 @@ Cuando cierres la cuenta, es importante que comprendas lo que sucede con las apl
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

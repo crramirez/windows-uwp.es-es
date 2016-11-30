@@ -4,8 +4,8 @@ ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de opiniones de un intervalo de fechas proporcionado y otros filtros opcionales."
 title: "Obtener opiniones de la aplicación"
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: 4190012c08e22f4efb086c711183332b23ccee38
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 581532b56851d486f7804364d1d555b81829c1d1
 
 ---
 
@@ -14,7 +14,7 @@ ms.openlocfilehash: 4190012c08e22f4efb086c711183332b23ccee38
 
 
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos de opiniones de un intervalo de fechas proporcionado y otros filtros opcionales. Este método devuelve los datos en formato JSON.
+Usa este método en la API de análisis de la Tienda Windows para obtener los datos de opiniones en formato JSON de un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de críticas](../publish/reviews-report.md) del panel del Centro de desarrollo de Windows.
 
 ## Requisitos previos
 
@@ -341,7 +341,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 
 ### Ejemplo de respuesta
 
-En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, realizada para esta solicitud.
+En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo realizada para esta solicitud.
 
 ```json
 {
@@ -378,6 +378,7 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 
 ## Temas relacionados
 
+* [Informe Críticas](../publish/reviews-report.md)
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
 * [Obtener los datos de compra de la aplicación](get-app-acquisitions.md)
 * [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
@@ -386,6 +387,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

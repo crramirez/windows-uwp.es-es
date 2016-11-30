@@ -4,14 +4,18 @@ Description: "Antes de poder ejecutar un experimento en tu aplicación para la P
 title: Crear un proyecto y definir variables remotas en el panel del Centro de desarrollo
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: ea455892717546f7f789054609664ca1c0017699
+ms.sourcegitcommit: 32c1b379ee3913e267664e6d125fbc3daf480bb3
+ms.openlocfilehash: 88a55c9ed64d5f52f959a1c68618dc5296dc24d6
 
 ---
 
 # Crear un proyecto y definir variables remotas en el panel del Centro de desarrollo
 
-Para comenzar con la experimentación, crea un [proyecto](run-app-experiments-with-a-b-testing.md#terms) de experimentación para tu aplicación en el panel del Centro de desarrollo y define las variables remotas a las que puede acceder la aplicación.
+Para comenzar con la experimentación, crea un [proyecto](run-app-experiments-with-a-b-testing.md#terms) de experimentación para tu aplicación en el panel del Centro de desarrollo y define las variables remotas a las que puede obtener acceso la aplicación.
+
+Las siguientes instrucciones describen los pasos básicos para crear un proyecto. Para ver un tutorial detallado que muestre de principio a fin el proceso de crear un proyecto y luego ejecutar un experimento, consulta [Crear y ejecutar el primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
+
+## Instrucciones
 
 1. Inicia sesión en el [panel del Centro de desarrollo](https://dev.windows.com/overview).
 2. En **Tus aplicaciones**, selecciona la aplicación para la que deseas crear un experimento.
@@ -41,6 +45,6 @@ Después de crear un proyecto, puedes [codificar la aplicación para la experime
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

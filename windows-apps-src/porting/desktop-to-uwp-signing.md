@@ -1,4 +1,15 @@
-# Firmar la aplicación de escritorio convertida
+---
+author: awkoren
+Description: "En este artículo se explica cómo firmar una aplicación de escritorio que se ha convertido a la Plataforma universal de Windows (UWP)."
+Search.Product: eADQiWindows 10XVcnh
+title: "Firmar una aplicación convertida con el puente de escritorio a UWP"
+translationtype: Human Translation
+ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
+ms.openlocfilehash: 2db978089a6334214c3b4c85dbde8d4a4e846092
+
+---
+
+# Firmar una aplicación convertida con el puente de escritorio
 
 En este artículo se explica cómo firmar una aplicación de escritorio que se ha convertido a la Plataforma universal de Windows (UWP). Debes firmar el paquete .appx con un certificado para poder implementarla.
 
@@ -66,7 +77,7 @@ Para que la firma Authenticode sea correcta, debe cumplirse lo siguiente en la f
 - El inicio de la entrada **WIN_CERTIFICATE** en el archivo PE no se puede extenderse más allá del final del archivo ejecutable.
 - La entrada **WIN_CERTIFCATE** debe estar situada al final de la imagen.
 - El tamaño de la entrada **WIN_CERTIFICATE** debe ser positivo.
-- La entrada **WIN_CERTIFICATE** debe comenzar después de la estructura **IMAGE_NT_HEADERS32** en los archivos ejecutables de 32 bits y la estructura IMAGE_NT_HEADERS64 en los archivos ejecutables de 64 bits.
+- La entrada **WIN_CERTIFICATE** debe comenzar después de la estructura **IMAGE_NT_HEADERS32** en los archivos ejecutables de 32bits y la estructura IMAGE_NT_HEADERS64 en los archivos ejecutables de 64bits.
 
 Para obtener más información, consulta la [especificación del ejecutable del portal Authenticode](http://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx) y la [especificación del formato de archivo PE](https://msdn.microsoft.com/windows/hardware/gg463119.aspx) (en inglés). 
 
@@ -80,6 +91,7 @@ Para corregir estos archivos binarios con formato incorrecto, asegúrate de que 
 - [SignTool.exe (Sign Tool)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
 - [Cómo firmar un paquete de la aplicación con SignTool](https://msdn.microsoft.com/library/windows/desktop/jj835835.aspx)
 
-<!--HONumber=Sep16_HO2-->
+
+<!--HONumber=Nov16_HO1-->
 
 

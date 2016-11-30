@@ -4,8 +4,8 @@ ms.assetid:
 description: "En este artículo se muestra cómo reproducir elementos multimedia en la aplicación universal de Windows con MediaPlayer."
 title: "Reproducir audio y vídeo con MediaPlayer"
 translationtype: Human Translation
-ms.sourcegitcommit: 3d6f79ea55718d988415557bc4ac9a1f746f9053
-ms.openlocfilehash: 32df2810710e78eeb8c257548c39c0d5d978e888
+ms.sourcegitcommit: 34cb2fec3071add8617fe2bee2eaf50356611ac6
+ms.openlocfilehash: 66240809d47247312d9d4c49c7bf36ff70295559
 
 ---
 
@@ -36,9 +36,12 @@ Para establecer la instancia **MediaPlayer** con la que está enlazado el elemen
 
 [!code-cs[SetMediaPlayer](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetMediaPlayer)]
 
-También puedes establecer el origen de reproducción en el elemento **MediaPlayerElement** y creará automáticamente una nueva instancia **MediaPlayer** a la que podrás acceder con la propiedad [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.MediaPlayer).
+También puedes establecer el origen de reproducción en el elemento **MediaPlayerElement** y este creará automáticamente una nueva instancia de **MediaPlayer** a la que podrás acceder con la propiedad [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.MediaPlayer).
 
 [!code-cs[GetPlayerFromElement](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetGetPlayerFromElement)]
+
+> [!NOTE] 
+> Si deshabilitas la clase [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) de [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) al establecer la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) en "false", se interrumpirá el vínculo entre **MediaPlayer** y [**TransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.TransportControls) que proporciona el elemento **MediaPlayerElement**, de modo que los controles de transporte integrados ya no controlarán automáticamente la reproducción del reproductor. En su lugar, debes implementar tus propios controles para controlar la clase **MediaPlayer**.
 
 ##Tareas comunes de MediaPlayer
 En esta sección se muestra cómo usar algunas de las características de la clase **MediaPlayer**.
@@ -174,6 +177,6 @@ Ten en cuenta que si el valor de desplazamiento de un reproductor se asigna a un
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

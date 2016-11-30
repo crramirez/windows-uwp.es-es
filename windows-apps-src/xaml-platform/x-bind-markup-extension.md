@@ -4,8 +4,8 @@ description: "La extensión de marcado xBind es una alternativa a Binding. xBind
 title: "Extensión de marcado xBind"
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 translationtype: Human Translation
-ms.sourcegitcommit: 0f9955b897c626e7f6abb5557658e1b1e5937ffd
-ms.openlocfilehash: 7380386a77338c1fce7a7184b558a06605ffdf33
+ms.sourcegitcommit: 2dc706412684ded7fe4e98c6d01fb75ae65abd5f
+ms.openlocfilehash: b7d1dd183ba35e4b694a80d3e43628c928b218e5
 
 ---
 
@@ -191,7 +191,7 @@ Los enlaces compilados dependen de la generación de código. Por tanto, si usas
 
 Las páginas y los controles de usuario que incluyen enlaces de tipo Compiled, tendrán una propiedad "Bindings" en el código generado. Esto incluye los siguientes métodos:
 - **Update()**: este método actualizará los valores de todos los enlaces compilados. Cualquier enlace unidireccional o bidireccional tendrá agentes de escucha conectados para detectar cualquier cambio.
-- **Initiatlize()**: si los enlaces no se han inicializado, se llamará al método Update() para inicializar esos enlaces.
+- **Initialize()**: si los enlaces no se han inicializado, se llamará al método Update() para inicializar esos enlaces.
 - **StopTracking()**: este método desconectará todos los agentes de escucha creados para los enlaces tanto unidireccionales como bidireccionales. Recuerda que puedes volver a inicializarlos mediante el método Update().
 
 > [!NOTE]
@@ -224,6 +224,6 @@ En este XAML de ejemplo se usa **{x:Bind}** con una propiedad **ListView.ItemTem
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

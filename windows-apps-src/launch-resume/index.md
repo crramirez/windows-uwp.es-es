@@ -4,8 +4,8 @@ title: "Inicio, reanudación y tareas en segundo plano"
 description: "Esta sección describe lo que sucede cuando se inicia, suspende, reanuda y finaliza una aplicación de la Plataforma universal de Windows (UWP)."
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 translationtype: Human Translation
-ms.sourcegitcommit: 5d0fffc46b1fc4ca2fba1422f2094bd411a65058
-ms.openlocfilehash: 6950f2f4eeee947eb2f7e8b37f72de7c03f53b01
+ms.sourcegitcommit: 7ed2596c33338c3954b6cfe1e779284283ae7769
+ms.openlocfilehash: 3b1be5b6951b72d5699e7b31e95702b827b741b5
 
 ---
 
@@ -59,9 +59,9 @@ En esta sección se describe lo siguiente:
 | [Admitir la aplicación con tareas en segundo plano](support-your-app-with-background-tasks.md)                             | Los temas de esta sección muestran cómo ejecutar tu propio código ligero en segundo plano al responder a los desencadenadores con tareas en segundo plano.                                                       |
 | [Acceder a sensores y dispositivos desde una tarea en segundo plano](access-sensors-and-devices-from-a-background-task.md)       | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) permite que la aplicación universal de Windows acceda a dispositivos periféricos y sensores en segundo plano, aunque la aplicación en primer plano esté suspendida. |
 | [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)                                           | Asegúrate de que tu aplicación cumple los requisitos para ejecutar tareas en segundo plano.                                                                                                                          |
-| [Crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente](create-and-register-a-background-task.md)                               | Crea una clase de tarea en segundo plano y regístrala para que se ejecute en un proceso independiente cuando tu aplicación no esté en primer plano.                                                                                                 |
-| [Crear y registrar una tarea en segundo plano que se ejecuta en un proceso único](create-and-register-a-singleprocess-background-task.md)                               | Crea una clase de tarea en segundo plano que se ejecute en el mismo proceso que la aplicación en primer plano.                                                                                                 |
-| [Convertir una tarea en segundo plano multiproceso en una tarea en segundo plano de proceso único](convert-multiple-process-background-task.md)                               | Aprende cómo convertir tu tarea en segundo plano (diseñada para ejecutarse en un proceso independiente cuando tu aplicación esté en segundo plano) en una tarea en segundo plano de proceso único que se ejecute en el mismo proceso que la aplicación en primer plano.
+| [Crear y registrar una tarea en segundo plano fuera del proceso](create-and-register-an-outofproc-background-task.md)                               | Crea y registra una tarea en segundo plano que se ejecute en un proceso independiente de la aplicación y regístralo para que se ejecute cuando tu aplicación no esté en primer plano.                                                                                                 |
+| [Crear y registrar una tarea en segundo plano dentro del proceso](create-and-register-an-inproc-background-task.md)                               | Crea y registra una tarea en segundo plano que se ejecute en el mismo proceso que la aplicación en primer plano.                                                                                                 |
+| [Convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso](convert-out-of-process-background-task.md)                               | Aprende a convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso que se ejecute en el mismo proceso que la aplicación en primer plano.
 | [Depurar una tarea en segundo plano](debug-a-background-task.md)                                                           | Aprende a depurar una tarea en segundo plano, incluida la activación y el seguimiento de depuración de la tarea en segundo plano en el registro de eventos de Windows.                                                                        |
 | [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md) | Habilita el uso de tareas en segundo plano declarándolas como extensiones en el manifiesto de la aplicación.                                                                                                       |
 | [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)                                     | Aprende a crear una tarea en segundo plano que reconozca solicitudes de cancelación y detenga el trabajo, y que informe de la cancelación a la aplicación a través del almacenamiento persistente.                                     |
@@ -80,7 +80,7 @@ En esta sección se describe lo siguiente:
 |------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Crear y usar un servicio de aplicaciones](how-to-create-and-consume-an-app-service.md)                                | Aprende a escribir una aplicación para UWP que pueda proporcionar servicios a otras aplicaciones para UWP y a usar esos servicios.                                                                                  |
 | [Comunicarse con un servicio de aplicaciones remoto](communicate-with-a-remote-app-service.md) | Aprende a intercambiar mensajes con un servicio de aplicaciones que se ejecute en un dispositivo remoto. |
-| [Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host](convert-app-service-single-process.md)                                | Aprende a convertir el código del servicio de aplicaciones que se ejecuta en un proceso en segundo plano independiente en código que se ejecute en el mismo proceso que la aplicación host del servicio de aplicaciones.                                                                                  |
+| [Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host](convert-app-service-in-process.md)                                | Aprende a convertir el código del servicio de aplicaciones que se ejecuta en un proceso en segundo plano independiente en código que se ejecute en el mismo proceso que la aplicación que alberga App Service.                                                                                  |
 
 ## Agregar una pantalla de presentación
 
@@ -111,6 +111,6 @@ Además, puedes usar la clase [**SplashScreen**](https://msdn.microsoft.com/libr
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

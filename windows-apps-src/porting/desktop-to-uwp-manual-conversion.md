@@ -1,18 +1,17 @@
 ---
+author: awkoren
 Description: "Muestra cómo convertir manualmente una aplicación de escritorio de Windows (por ejemplo, Win32, WPF y Windows Forms) en una aplicación para la Plataforma universal de Windows (UWP)."
 Search.Product: eADQiWindows 10XVcnh
 title: "Convertir manualmente una aplicación de escritorio de Windows en una aplicación para la Plataforma universal de Windows (UWP)"
 translationtype: Human Translation
-ms.sourcegitcommit: 2c1a8ea38081c947f90ea835447a617c388aec08
-ms.openlocfilehash: 646a5b88cb7ca97f18bf4552950979a2ceead398
+ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
+ms.openlocfilehash: 6ca48fd829b7437fe2db8aa1251f6ed8976919ab
 
 ---
 
-# Convertir manualmente la aplicación de escritorio de Windows en una aplicación para la Plataforma universal de Windows (UWP)
+# Convertir manualmente la aplicación a UWP mediante el puente de escritorio
 
-\[Parte de la información hace referencia a la versión preliminar del producto, que puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.\]
-
-El uso del convertidor es práctico y automático, y resulta útil si existe alguna duda sobre lo que hace el instalador. No obstante, si la aplicación se instala mediante xcopy, o si estás familiarizado con los cambios que realiza el instalador de la aplicación en el sistema, puedes optar por crear un paquete de la aplicación y un manifiesto manualmente.
+El uso de Desktop App Converter (DAC) es práctico y automático, y resulta útil si existe alguna duda sobre lo que hace el instalador. No obstante, si la aplicación se instala mediante xcopy, o si estás familiarizado con los cambios que realiza el instalador de la aplicación en el sistema, puedes optar por crear un paquete de la aplicación y un manifiesto manualmente.
 
 Pasos para crear un paquete de forma manual:
 
@@ -103,6 +102,6 @@ Cuando ejecutes MakeCert.exe y se te pida que escribas una contraseña, seleccio
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

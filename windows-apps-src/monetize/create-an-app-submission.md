@@ -4,8 +4,8 @@ ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
 description: "Usa este método en la API de envío de la Tienda Windows para crear un nuevo envío para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows."
 title: "Creación de un envío de aplicaciones mediante la API de envío de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 178b70db1583790c174d65e060c8bce6e4f69243
-ms.openlocfilehash: 4857e0a9d7eec1d4f862ba61d39d2c0dcb138bd8
+ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
+ms.openlocfilehash: dc5fcdd7a3181e07874b761c7183c6c539591704
 
 ---
 
@@ -24,7 +24,7 @@ Para obtener más información sobre cómo se ajusta este método en el proceso 
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 * Asegúrate de que la aplicación ya tiene al menos un envío con la información de [clasificación por edades](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) completada.
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
@@ -44,13 +44,13 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Type   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | string | Obligatorio. Token de acceso de Azure AD con formato **Token del** &lt;*portador*&gt;. |
+| Autorización | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
 ### Parámetros de solicitud
 
-| Nombre        | Type   | Descripción                                                                 |
+| Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | Cadena | Obligatorio. Id. de la Tienda de la aplicación para la cual deseas crear un envío. Para obtener más información sobre el Id. de la Tienda, consulta [Visualización de los detalles de identidad de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 
@@ -150,6 +150,16 @@ El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisf
       ]
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "enterpriseLicensing": "Online",
   "allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies": true,
   "allowTargetFutureDeviceFamilies": {
@@ -181,11 +191,11 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Obtención de un envío de aplicación](get-an-app-submission.md)
 * [Confirmación de un envío de aplicación](commit-an-app-submission.md)
 * [Actualización de un envío de aplicación](update-an-app-submission.md)
-* [Eliminación de un envío de aplicación](delete-an-app-submission.md)
-* [Obtención del estado de un envío de aplicación](get-status-for-an-app-submission.md)
+* [Eliminar un envío de aplicación](delete-an-app-submission.md)
+* [Obtener el estado de un envío de aplicación](get-status-for-an-app-submission.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

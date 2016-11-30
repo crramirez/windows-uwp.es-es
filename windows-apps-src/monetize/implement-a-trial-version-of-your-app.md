@@ -3,16 +3,16 @@ author: mcleanbyron
 ms.assetid: 571697B7-6064-4C50-9A68-1374F2C3F931
 description: "Aprende a usar el espacio de nombres Windows.Services.Store para implementar una versión de prueba de tu aplicación."
 title: "Implementar una versión de prueba de la aplicación"
-keywords: "muestra de código de prueba gratuita"
+keywords: "ejemplo de código de prueba gratuita"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 22f355c23f4cc87932563e9885f390e9a5ac4130
+ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
+ms.openlocfilehash: 8858c9f7f9b40e2bca30054b99ab47c7388aef57
 
 ---
 
 # Implementar una versión de prueba de la aplicación
 
-Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando algunas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
+Si configuras la aplicación como una [prueba gratuita en el panel del Centro de desarrollo de Windows](../publish/set-app-pricing-and-availability.md#free-trial) para que los clientes pueden usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando ciertas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
 
 Las aplicaciones destinadas a Windows 10, versión 1607 o posterior, pueden usar miembros de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para determinar si el usuario tiene una licencia de prueba para tu aplicación y recibir una notificación si cambia el estado de la licencia mientras se ejecuta la aplicación.
 
@@ -62,7 +62,9 @@ Este ejemplo tiene los siguientes requisitos previos:
 El código de este ejemplo supone que:
 * El código se ejecuta en el contexto de una [página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contiene un elemento [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` y un elemento [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Estos objetos se usan para indicar que se está produciendo una operación asincrónica y para mostrar mensajes de salida, respectivamente.
 * El archivo de código tiene una instrucción **using** para el espacio de nombres **Windows.Services.Store**.
-* La aplicación es una aplicación de usuario único que se ejecuta solamente en el contexto del usuario que inició la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro).
+* La aplicación es una de usuario único que se ejecuta solamente en el contexto del usuario que la inició. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro).
+
+>**Nota**&nbsp;&nbsp;Si tienes una aplicación de escritorio que usa el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), tienes que agregar código adicional que no se muestra en este ejemplo para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
 
 ## Ejemplo de código
 
@@ -81,6 +83,9 @@ private async void InitializeLicense()
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     workingProgressRing.IsActive = true;
@@ -127,6 +132,6 @@ Para una aplicación de muestra completa, consulta la [muestra de la Tienda](htt
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

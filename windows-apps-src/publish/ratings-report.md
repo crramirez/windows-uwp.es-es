@@ -4,15 +4,15 @@ Description: "El informe Clasificaciones del panel del Centro de desarrollo de W
 title: Informe Clasificaciones
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1613c8a5e5a28ba431fcfb186a0fcd5fe9bd7582
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 45d22b46a750655cc723658b476ba40d18b4f745
 
 ---
 
 # Informe Clasificaciones
 
 
-El informe **Clasificaciones** del panel del Centro de desarrollo de Windows te permite ver la distribución de cómo los clientes clasifican la aplicación en la Tienda Windows. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+El informe **Clasificaciones** del panel del Centro de desarrollo de Windows te permite ver la distribución de cómo los clientes clasifican la aplicación en la Tienda Windows. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con el método [obtener la clasificación de la aplicación](../monetize/get-app-ratings.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
 En este informe, una clasificación significa el número de estrellas (de 1 a 5) que un cliente proporcionó a la aplicación al clasificarla en la Tienda. En el informe **Clasificaciones** no se incluye información sobre los comentarios individuales que se dejan como opiniones; estos están disponibles en el [informe de opiniones](reviews-report.md).
 
@@ -73,6 +73,6 @@ De manera predeterminada, mostramos el mercado que tenía más críticas y se si
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

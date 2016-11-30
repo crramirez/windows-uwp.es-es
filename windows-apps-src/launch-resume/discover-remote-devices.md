@@ -1,15 +1,15 @@
 ---
 author: PatrickFarley
 title: Detectar dispositivos remotos
-description: "Obtén información sobre cómo detectar dispositivos remotos desde tu aplicación con el proyecto &quot;Roma&quot;."
+description: Learn how to discover remote devices from your app using Project "Rome".
 translationtype: Human Translation
-ms.sourcegitcommit: ff8e16d0e376d502157ae42b9cdae11875008554
-ms.openlocfilehash: cb1f9cf6915378203919fdf63bcebc935af74a30
+ms.sourcegitcommit: dc5030fea8e149b3926b926b09bfec3eeb5092ee
+ms.openlocfilehash: b4b4eb28ea56ab3d84e2fe0bc0c281cb53149d5d
 
 ---
 
 # Detectar dispositivos remotos
-Tu aplicación puede usar la red inalámbrica, Bluetooth y una conexión de nube para detectar dispositivos basados en Windows en los que se inicie sesión con la misma cuenta de Microsoft que en el dispositivo detectado. Los dispositivos comunes que pueden aceptar conexiones anónimas, como Surface Hub y Xbox One, también son reconocibles. Los dispositivos remotos no necesitan tener instalado ningún software especial para que se puedan reconocer.
+Tu aplicación puede usar la red inalámbrica, Bluetooth y una conexión de nube para detectar dispositivos de Windows en los que se inicie sesión con la misma cuenta de Microsoft que en el dispositivo detectado. Los dispositivos comunes que pueden aceptar conexiones anónimas, como Surface Hub y Xbox One, también son reconocibles. Los dispositivos remotos no necesitan tener instalado ningún software especial para que se puedan reconocer.
 
 > [!NOTE]
 > Esta guía da por hecho que ya has concedido acceso a la característica de sistemas remotos siguiendo los pasos de [Iniciar una aplicación remota](launch-a-remote-app.md).
@@ -50,6 +50,6 @@ Un objeto **RemoteSystem** se recupera si se proporciona un objeto **HostName** 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

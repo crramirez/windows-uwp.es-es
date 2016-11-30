@@ -4,15 +4,15 @@ Description: "El informe Críticas del panel del Centro de desarrollo de Windows
 title: "Informe Críticas"
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
 translationtype: Human Translation
-ms.sourcegitcommit: ccadaad34ac0854ab95646eda4e3451d1b178b7e
-ms.openlocfilehash: d08eb446977ebab2eeee346f8f17ff79ae57c19b
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: b4667c5a3b2af76bc2ceea3013ffcf951909907a
 
 ---
 
 # Informe Críticas
 
 
-El informe **Críticas** del panel del Centro de desarrollo de Windows te permite ver los comentarios que los clientes proporcionaron al clasificar tu aplicación en la Tienda. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos con la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+El informe **Críticas** del panel del Centro de desarrollo de Windows te permite ver los comentarios que los clientes proporcionaron al clasificar tu aplicación en la Tienda. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos siguiendo el método de [obtención de las opiniones de la aplicación](../monetize/get-app-reviews.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
 > **Nota** También puedes [responder a las críticas de los clientes](respond-to-customer-reviews.md) desde esta página.
 
@@ -42,7 +42,7 @@ Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** pa
 
 -   **Clasificación**: de manera predeterminada se comprueban todas las clasificaciones por estrellas, pero puedes activar o desactivar clasificaciones específicas (de 1 a 5 estrellas) si quieres ver solo las críticas asociadas a una clasificación por estrellas particular.
 -   **Desde**: el valor predeterminado (en blanco) mostrará las opiniones a partir del momento en el que se publicó la aplicación. Puedes elegir una fecha distinta si solo quieres ver las opiniones que se dejaron en la fecha que elijas o después de esta.
--   **Hasta**: el valor predeterminado (en blanco) mostrará las opiniones hasta la fecha actual. Puedes elegir una fecha distinta si solo quieres ver las opiniones que se dejaron en la fecha que elijas o antes de esta. 
+-   **Hasta**: el valor predeterminado (en blanco) mostrará las opiniones hasta la fecha actual. Puedes elegir una fecha distinta si solo quieres ver las opiniones que se dejaron en la fecha que elijas o antes de esta.
 -   **Contenido de la crítica**: el valor predeterminado es **Todos**, que incluye clasificaciones sin texto de crítica agregado. Puedes seleccionar **Clasificaciones con contenido de crítica** para mostrar solo las clasificaciones que incluyen contenido de crítica escrita.
 -   **SO de destino**: el valor predeterminado es **Todos**. Puedes elegir un determinado sistema operativo de destino si quieres que esta página muestre solo clasificaciones de clientes con paquetes cuyo destino es el SO en cuestión.
 -   **Respuestas**: el valor predeterminado es **Todas**. Puedes optar por filtrar las críticas para mostrar solamente aquellas donde has [respondido a los clientes](respond-to-customer-reviews.md), o solo aquellas donde aún ha no ha respondido.
@@ -85,6 +85,6 @@ Estas son algunas acciones adicionales que puedes considerar según las crítica
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

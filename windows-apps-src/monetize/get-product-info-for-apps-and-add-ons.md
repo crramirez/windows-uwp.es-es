@@ -4,8 +4,8 @@ ms.assetid: 89178FD9-850B-462F-9016-1AD86D1F6F7F
 description: "Aprende a usar el espacio de nombres Windows.Services.Store para obtener información del producto relacionada con la Tienda para la aplicación actual o uno de sus complementos."
 title: "Obtener información de producto para aplicaciones y complementos"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: c453dc74730fc451bbe9babdffb2ce4d72712082
+ms.sourcegitcommit: 962bee0cae8c50407fe1509b8000dc9cf9e847f8
+ms.openlocfilehash: 8471dfd24b189ff6ca4f50c4461b72ac5d81659d
 
 ---
 
@@ -24,9 +24,11 @@ Estos ejemplos cumplen los siguientes requisitos:
 El código de estos ejemplos supone que:
 * El código se ejecuta en el contexto de una [página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contiene un elemento [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` y un elemento [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Estos objetos se usan para indicar que se está produciendo una operación asincrónica y para mostrar mensajes de salida, respectivamente.
 * El archivo de código tiene una instrucción **using** para el espacio de nombres **Windows.Services.Store**.
-* La aplicación es una aplicación de usuario único que se ejecuta solamente en el contexto del usuario que inició la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro) (Habilitar las compras de productos desde la aplicación y las pruebas).
+* La aplicación es una aplicación de usuario único que se ejecuta solamente en el contexto del usuario que inició la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro).
 
-Para una aplicación de muestra completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Para obtener una aplicación de ejemplo completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+
+>**Nota**&nbsp;&nbsp;Si tienes una aplicación de escritorio que usa el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), tienes que agregar código adicional que no se muestra en estos ejemplos para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
 
 ## Obtener información de la aplicación actual
 
@@ -40,6 +42,9 @@ public async void GetAppInfo()
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     // Get app store product details. Because this might take several moments,   
@@ -81,6 +86,9 @@ public async void GetProductInfo()
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     // Specify the kinds of add-ons to retrieve.
@@ -126,6 +134,9 @@ public async void GetAddOnInfo()
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     // Specify the kinds of add-ons to retrieve.
@@ -170,6 +181,9 @@ public async void GetUserCollection()
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     // Specify the kinds of add-ons to retrieve.
@@ -209,6 +223,6 @@ public async void GetUserCollection()
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: E59FB6FE-5318-46DF-B050-73F599C3972A
 description: "Usa este método en la API de envío de la Tienda Windows para recuperar información sobre las compras desde la aplicación para una aplicación registrada en tu cuenta del Centro de desarrollo de Windows."
 title: "Obtener complementos para una aplicación con la API de envío de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 1edf52b45578078f7abb7e499723b072832d6628
+ms.sourcegitcommit: ef90390fcf7d4aa2e040eae65119ac7959f3423f
+ms.openlocfilehash: 5a2dc318509b99c4d58632d5eedaeb3e465c524d
 
 ---
 
@@ -20,8 +20,8 @@ Usa este método en la API de envío de la Tienda Windows para enumerar los comp
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
@@ -45,11 +45,12 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 ### Parámetros de solicitud
 
-| Nombre        | Tipo   | Descripción  |  Obligatorio  |    
-|---------------|--------|----------------------------------|
-| applicationId | cadena | Obligatorio. El Id. de la Tienda de la aplicación para la que quieres recuperar los complementos. Para obtener más información sobre el Id. de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Sí  |
+
+|  Nombre  |  Tipo  |  Descripción  |  Obligatorio  |
+|------|------|------|------|
+|  applicationId  |  cadena  |  El identificador de la Tienda de la aplicación para la que quieres recuperar los complementos. Para obtener más información sobre el Id. de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Sí  |
 |  top  |  entero  |  El número de elementos que se devolverán en la solicitud (es decir, el número de complementos que se devolverán). Si los complementos de la aplicación superan el valor especificado en la consulta, el cuerpo de la respuesta incluye una ruta de acceso al URI relativa que puedes anexar al URI del método para solicitar la siguiente página de datos.  |  No  |
-|  skip  |  entero  |  El número de elementos que se omitirán en la consulta antes de devolver los elementos restantes. Usa este parámetro para consultar conjuntos de datos. Por ejemplo, top = 10 y skip = 0 recuperan los elementos del 1 al 10, mientras que top = 10 y skip = 10 recuperan los elementos del 11 al 20, y así sucesivamente.  |  No  |
+|  skip |  entero  | El número de elementos que se omitirán en la consulta antes de devolver los elementos restantes. Usa este parámetro para consultar conjuntos de datos. Por ejemplo, top = 10 y skip = 0 recuperan los elementos del 1 al 10, mientras que top = 10 y skip = 10 recuperan los elementos del 11 al 20, y así sucesivamente.   |  No  |
 
 <span/>
 
@@ -126,6 +127,6 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

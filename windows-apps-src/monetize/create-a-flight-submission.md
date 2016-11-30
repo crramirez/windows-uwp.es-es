@@ -4,8 +4,8 @@ ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
 description: "Usa este método en la API de envío de la Tienda Windows para crear un nuevo envío de paquetes piloto para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows."
 title: "Creación de un envío de paquete piloto mediante la API de envío de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 33f008c7b2bd32aacaf5a31d0b3201a00d145276
+ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
+ms.openlocfilehash: 8689fa9d314d2ba1d31a16c47aa4c7168e44c69f
 
 ---
 
@@ -25,7 +25,7 @@ Para obtener más información sobre cómo se ajusta este método en el proceso 
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 * Crea un paquete piloto para una aplicación de tu cuenta del Centro de desarrollo. Para hacer esto, puedes usar el panel del Centro de desarrollo o el método de [Creación de un paquete piloto](create-a-flight.md).
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
@@ -45,15 +45,15 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Type   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con formato **Token del** &lt;*portador*&gt;. |
+| Autorización | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
 ### Parámetros de solicitud
 
-| Nombre        | Type   | Descripción                                                                 |
+| Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. Id. de la Tienda de la aplicación para la cual quieres crear un envío de paquete piloto. Para obtener más información sobre el Id. de la Tienda, consulta [Visualización de los detalles de identidad de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | Cadena | Obligatorio. Id. de la Tienda de la aplicación para la cual quieres crear un envío de paquete piloto. Para obtener más información sobre el Id. de la Tienda, consulta [Visualización de los detalles de identidad de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 | flightId | string | Obligatorio. La Id. del paquete piloto para el cual quieres añadir el envío. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta para las solicitudes de [creación de un paquete piloto](create-a-flight.md) y [obtención de paquetes piloto para una aplicación](get-flights-for-an-app.md).  |
 
 <span/>
@@ -97,6 +97,16 @@ El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisf
       "minimumSystemRam": "None"
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "fileUploadUrl": "https://productingestionbin1.blob.core.windows.net/ingestion/8b389577-5d5e-4cbe-a744-1ff2e97a9eb8?sv=2014-02-14&sr=b&sig=wgMCQPjPDkuuxNLkeG35rfHaMToebCxBNMPw7WABdXU%3D&se=2016-06-17T21:29:44Z&sp=rwl",
   "targetPublishMode": "Immediate",
   "targetPublishDate": "",
@@ -117,16 +127,16 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 ## Temas relacionados
 
-* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
+* [Create and manage submissions using Windows Store services (Crear y administrar envíos mediante el uso de servicios de la Tienda Windows)](create-and-manage-submissions-using-windows-store-services.md)
 * [Administración de envíos de paquetes piloto](manage-flight-submissions.md)
 * [Obtención de un envío de paquete piloto](get-a-flight-submission.md)
 * [Confirmación de un envío de paquete piloto](commit-a-flight-submission.md)
 * [Actualización de un envío de paquete piloto](update-a-flight-submission.md)
 * [Eliminación de un envío de paquete piloto](delete-a-flight-submission.md)
-* [Obtención del estado de un envío de paquete piloto](get-status-for-a-flight-submission.md)
+* [Get the status of a package flight submission (Obtener el estado de un envío de paquete piloto)](get-status-for-a-flight-submission.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

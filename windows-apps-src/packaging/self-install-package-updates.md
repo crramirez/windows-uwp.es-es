@@ -4,8 +4,8 @@ ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: "Descargar e instalar actualizaciones de paquete para tu aplicación."
 description: "Obtén información sobre cómo marcar paquetes como obligatorios en el panel del Centro de desarrollo y escribir código en tu aplicación para descargar e instalar las actualizaciones del paquete."
 translationtype: Human Translation
-ms.sourcegitcommit: 7df130e13685b519d5cc1353c8d64878ecc3d213
-ms.openlocfilehash: adb9b999c88649fc2c8ade838dfa0dabc407c075
+ms.sourcegitcommit: b96d4074a8960db314313c612955900c6a05dc48
+ms.openlocfilehash: 4da8ffe72435501876a1e859d10a16cf19eb11fd
 
 ---
 # Descargar e instalar actualizaciones de paquete para tu aplicación.
@@ -14,24 +14,30 @@ ms.openlocfilehash: adb9b999c88649fc2c8ade838dfa0dabc407c075
 
 A partir de la versión 1607 de Windows 10, puedes usar una API en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para comprobar actualizaciones de paquete de la aplicación actual y descargar e instalar los paquetes actualizados mediante programación. También puedes consultar los paquetes que se [marcaron como obligatorios en el panel del Centro de desarrollo de Windows](#mandatory-dashboard) y deshabilitar la funcionalidad en tu aplicación hasta que se instale la actualización obligatoria.
 
-Estas características te ayudan a mantener tu base de usuarios actualizada con la versión más reciente de la aplicación y los servicios relacionados de manera automática.
+Estas características te ayudan a mantener tu base de usuarios actualizada con la última versión de la aplicación y los servicios relacionados de manera automática.
 
-## Descargar e instalar actualizaciones de paquete en tu aplicación.
+## Introducción a API
 
-Las aplicaciones destinadas a la versión 1607 de Windows 10 o posterior pueden usar los siguientes métodos de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para descargar e instalar actualizaciones de paquete:
+Las aplicaciones destinadas a la versión 1607 de Windows 10 u otras posteriores pueden usar los siguientes métodos de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para descargar e instalar actualizaciones de paquete.
 
-* Usa el elemento [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx) para determinar qué actualizaciones del paquete están disponibles.
-* Usa el elemento [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx) para descargar las actualizaciones de paquete (pero sin instalar).
-* Usa el elemento [RequestDownloadAndInstallStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706585.aspx) para descargar e instalar las actualizaciones de paquete. Si ya has descargado las actualizaciones de paquete mediante una llamada a [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx), este método omite el proceso de descarga y solo instala las actualizaciones.
+|  Método  |  Descripción  |
+|----------|---------------|
+| [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx) | Llama a este método para obtener la lista de actualizaciones de paquete que hay disponibles.<br/><br/>**Importante**&nbsp;&nbsp;Existe una latencia de hasta un día entre el momento en el que un paquete supera el proceso de certificación y cuando el método [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx) reconoce que la actualización de paquete está disponible para la aplicación. |
+| [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx) | Llama a este método para descargar (pero no instalar) las actualizaciones de paquete disponibles. Este sistema operativo muestra un cuadro de diálogo que pide permiso al usuario para descargar las actualizaciones. |
+| [RequestDownloadAndInstallStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706585.aspx) | Llama a este método para descargar e instalar las actualizaciones de paquete disponibles. El sistema operativo muestra cuadros de diálogo que piden permiso al usuario para descargar e instalar las actualizaciones. Si ya has descargado las actualizaciones de paquete mediante una llamada a [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx), este método omite el proceso de descarga y solo instala las actualizaciones.  |
 
-La clase [StorePackageUpdate](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.aspx) representa un paquete de actualización disponible:
-* Usa la propiedad [Mandatory](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.mandatory.aspx) para determinar si el paquete está marcado como obligatorio en el panel del Centro de desarrollo.
-* Usa la propiedad [Package](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.package.aspx) para obtener acceso a otros datos relacionados con el paquete.
+<span/>
 
->**Nota** Hay una latencia de hasta un día entre el momento en el que un paquete pasa el proceso de certificación y cuando el método [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx) reconoce que la actualización de paquete está disponible para la aplicación.
+Estos métodos usan objetos [StorePackageUpdate](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.aspx) para manifestar los paquetes de actualización disponibles. Usa las siguientes propiedades [StorePackageUpdate](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.aspx) para obtener información sobre un paquete de actualización.
 
+|  Propiedad  |  Descripción  |
+|----------|---------------|
+| [Mandatory](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.mandatory.aspx) | Usa esta propiedad para determinar si el paquete está marcado como obligatorio en el panel del Centro de desarrollo. |
+| [Package](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.package.aspx) | Usa esta propiedad para acceder a los datos subyacentes relacionados con el paquete. |
 
-### Ejemplos de código
+<span/>
+
+## Ejemplos de código
 
 Los ejemplos de código siguientes muestran cómo descargar e instalar las actualizaciones de paquete en tu aplicación. Estos ejemplos suponen que:
 * El código se ejecuta en el contexto de un elemento [Page](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx).
@@ -39,7 +45,9 @@ Los ejemplos de código siguientes muestran cómo descargar e instalar las actua
 * El archivo de código tiene una instrucción **using** para el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx).
 * La aplicación es una aplicación de usuario único que se ejecuta solamente en el contexto del usuario que inició la aplicación. Para una [aplicación multiusuario](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications), usa el método [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx) para obtener un objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en lugar del método [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx).
 
-#### Descargar e instalar todas las actualizaciones de paquete
+<span/>
+
+### Descargar e instalar todas las actualizaciones de paquete
 
 El siguiente ejemplo de código muestra cómo descargar e instalar todas las actualizaciones de paquete disponibles.  
 
@@ -90,7 +98,7 @@ public async Task DownloadAndInstallAllUpdatesAsync()
 }
 ```
 
-#### Controlar las actualizaciones de paquete obligatorias
+### Controlar las actualizaciones de paquete obligatorias
 
 El siguiente ejemplo de código se basa en el ejemplo anterior y muestra cómo determinar si los paquetes de actualización se han [marcado como obligatorios en el panel del Centro de desarrollo de Windows](#mandatory-dashboard). Por lo general, debes degradar la experiencia de tu aplicación correctamente para el usuario en caso de que una actualización de paquete obligatoria no se descargue o instale correctamente.
 
@@ -209,7 +217,7 @@ private void HandleMandatoryPackageError()
 
 Cuando creas un envío de paquete para una aplicación destinada a la versión de Windows 10 o posterior, puedes marcar el paquete como obligatorio y la fecha y hora a partir de la cual es obligatorio. Cuando se establece esta propiedad y la aplicación detecta que la actualización de paquete está disponible mediante la API que se describió anteriormente en este artículo, la aplicación puede determinar si el paquete de actualización es obligatorio y modificar su comportamiento hasta que se instale la actualización (por ejemplo, la aplicación puede deshabilitar características).
 
->**Nota** Microsoft no aplica el estado obligatorio de un paquete. Se pretende que los desarrolladores usen la opción "obligatorio" para aplicar las actualizaciones obligatorias en el propio código.
+>**Nota**&nbsp;&nbsp;El estado obligatorio de una actualización de paquete no lo exige Microsoft, y el sistema operativo no proporciona ninguna interfaz de usuario para indicar a los usuarios que deben instalar una actualización de la aplicación obligatoria. Se pretende que los desarrolladores usen la opción "mandatory" para aplicar las actualizaciones de la aplicación obligatorias en su propio código.  
 
 Para marcar un envío de paquete como obligatorio:
 
@@ -219,10 +227,10 @@ Para marcar un envío de paquete como obligatorio:
 
 Para obtener más información acerca de cómo configurar paquetes en el panel del Centro de desarrollo, consulta [Cargar paquetes de aplicación](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages).
 
-  >**Nota** Si creas un [paquete piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights), puedes marcar los paquetes como obligatorios con una interfaz de usuario similar en la página **Paquetes** del piloto. En este caso, la actualización del paquete obligatoria se aplica solo a los clientes que forman parte del grupo piloto.
+  >**Nota**&nbsp;&nbsp;Si creas un [paquete piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights), puedes marcar los paquetes como obligatorios con una interfaz de usuario similar en la página **Paquetes** para el piloto. En este caso, la actualización del paquete obligatoria se aplica solo a los clientes que forman parte del grupo piloto.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

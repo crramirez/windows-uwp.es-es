@@ -6,8 +6,8 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Windows Information Protection (WIP)
 translationtype: Human Translation
-ms.sourcegitcommit: 1070561ea95cd1d884303fdd476b40a9ec88e390
-ms.openlocfilehash: 2beec354ed7dbb3cc2d4cb502977ce028b4eaf1d
+ms.sourcegitcommit: 724d9edf67d0f73ceb3eb2ac323e0a0f42f2dd0d
+ms.openlocfilehash: f9cfa8d1d7ea4e78208a4fb3fc853884a13a676c
 
 ---
 
@@ -66,9 +66,6 @@ Las aplicaciones habilitadas para empresas comparten, entre otras, estas cualida
 
   Por ejemplo, no permite que el contenido vaya a un punto de conexión de red no empresarial, encapsula los datos en un formulario cifrado portátil antes de permitir que utilicen un perfil móvil y, posiblemente (según la configuración de directiva), pide confirmación al usuario antes de pegar datos de empresa en una aplicación que no está en la lista de aplicaciones permitidas.
 
-> **Nota** La protección de archivos WIP aprovecha las claves de Rights Management Service (RMS), si se aprovisionan, ya que estas claves pueden utilizar un perfil móvil entre dispositivos y, por lo tanto, permitir que los datos protegidos utilicen un perfil móvil. Ante la ausencia de las claves RMS, estas API recurrirán a las claves de eliminación selectiva locales y limitarán la funcionalidad de la itinerancia. Los datos que utilizan un perfil móvil con cifrado serán accesibles en Windows de nivel inferior y en dispositivos de terceros a través de aplicaciones de RMS específicas de la plataforma que proporcione Microsoft, así como con aplicaciones de terceros habilitadas para RMS.
-
-
 
 
 
@@ -79,6 +76,6 @@ Las aplicaciones habilitadas para empresas comparten, entre otras, estas cualida
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

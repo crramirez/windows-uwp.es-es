@@ -4,19 +4,19 @@ ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: "Usa este método en la API de envío de la Tienda Windows para actualizar un envío de complemento ya existente."
 title: "Actualizar un envío de complemento mediante la API de envío de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: b7a8e1d39d5ee0a0858382b84ab00cc2c481da5d
+ms.sourcegitcommit: 7307ca70467a751d5adb53f3718c7e9cf0b70dbb
+ms.openlocfilehash: f42f2dba155aa0a29e0769fd96cce6d3a0de870b
 
 ---
 
 # Actualizar un envío de complemento mediante la API de envío de la Tienda Windows
 
 
-
-
 Usa este método en la API de envío de la Tienda Windows para actualizar un envío de complemento (también conocido como producto desde la aplicación o IAP) ya existente. Después de actualizar correctamente un envío mediante este método, debes [confirmar el envío](commit-an-add-on-submission.md) para su ingesta y publicación.
 
-Para obtener más información sobre cómo se ajusta este método en el proceso de creación del envío de un complemento mediante la API de envío de la Tienda Windows, consulta [Manage add-on submissions (Administrar envíos de complementos)](manage-add-on-submissions.md).
+Para obtener más información sobre cómo se ajusta este método al proceso de creación de un envío de complemento mediante la API de envío de la Tienda Windows, consulta [Manage add-on submissions (Administrar envíos de complemento)](manage-add-on-submissions.md).
+
+>**Importante**&nbsp;&nbsp;Muy pronto, Microsoft cambiará el modelo de datos de precios para envíos de complementos al Centro de desarrollo de Windows. Después de implementar este cambio, se omitirá el recurso **Precios** del cuerpo de la solicitud de este método y, temporalmente, no podrás cambiar el precio ni los datos de venta de un envío de complemento con este método. Actualizaremos la API de envío de la Tienda Windows en el futuro para incorporar una nueva forma de acceder mediante programación a la información de precios de los envíos de complemento. Para obtener más información, consulta el [recurso Precios](manage-add-on-submissions.md#pricing-object).
 
 ## Requisitos previos
 
@@ -62,15 +62,15 @@ El cuerpo de la solicitud tiene los siguientes parámetros.
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| contentType           | string  |  [Tipo de contenido](../publish/enter-iap-properties.md#content-type) que se proporciona en el complemento. Este puede ser uno de los valores siguientes: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
-| keywords           | array  | Matriz de cadenas que contienen hasta 10 [palabras clave](../publish/enter-iap-properties.md#keywords) para el complemento. Gracias a estas palabras clave, la aplicación puede consultar complementos.   |
-| lifetime           | string  |  Duración del complemento. Esta puede ser uno de los valores siguientes: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
+| contentType           | string  |  [Tipo de contenido](../publish/enter-add-on-properties.md#content-type) que se proporciona en el complemento. Puede ser uno de los valores siguientes: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
+| keywords           | array  | Matriz de cadenas que contienen hasta 10 [palabras clave](../publish/enter-add-on-properties.md#keywords) para el complemento. Gracias a estas palabras clave, la aplicación puede consultar complementos.   |
+| lifetime           | string  |  Duración del complemento. Puede ser uno de los valores siguientes: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
 | listings           | object  | Objeto que contiene la información de la descripción del complemento. Para obtener más información, consulta [Listing resource (Recurso de descripción)](manage-add-on-submissions.md#listing-object).  |
 | pricing           | object  | Objeto que contiene la información del precio del complemento. Para obtener más información, consulta [Pricing resource (Recurso de precio)](manage-add-on-submissions.md#pricing-object).  |
-| targetPublishMode           | string  | Modo de publicación del envío. Este puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |
-| tag           | string  |  [Etiqueta](../publish/enter-iap-properties.md#tag) del complemento.   |
-| visibility  | string  |  Visibilidad del complemento. Esta puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
+| tag           | cadena  |  Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) para el complemento (esta información se denominaba anteriormente *tag*).   |
+| visibility  | cadena  |  Visibilidad del complemento. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
 
 <span/>
 
@@ -221,7 +221,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 ## Temas relacionados
 
-* [Create and manage submissions using Windows Store services (Crear y administrar envíos mediante el uso de servicios de la Tienda Windows)](create-and-manage-submissions-using-windows-store-services.md)
+* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Manage add-on submissions (Administrar envíos de complemento)](manage-add-on-submissions.md)
 * [Get an add-on submission (Obtener un envío de complemento)](get-an-add-on-submission.md)
 * [Create an add-on submission (Crear un envío de complemento)](create-an-add-on-submission.md)
@@ -231,6 +231,6 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

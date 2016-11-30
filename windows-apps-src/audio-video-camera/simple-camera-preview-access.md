@@ -4,8 +4,8 @@ ms.assetid: 9BA3F85A-970F-411C-ACB1-B65768B8548A
 description: "En este artículo se describe cómo mostrar rápidamente la secuencia de vista previa de la cámara en una página XAML en una aplicación para la Plataforma universal de Windows (UWP)."
 title: "Mostrar la vista previa de la cámara"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: 8330ee43089207faab5f6f72e2ac7b32aada72ce
+ms.sourcegitcommit: 6aacd5ef8043c9c89116a1d287174210f02f7d62
+ms.openlocfilehash: 5eb53d1527f2cd002dfb66110f1f1f3618458b3a
 
 ---
 
@@ -65,8 +65,8 @@ Para conectar el control **MediaCapture** a la clase **CaptureElement**, estable
 Cuando termines de usar la secuencia de vista previa, debes apagar siempre esa secuencia y deshacerte correctamente de los recursos asociados para garantizar la disponibilidad de la cámara para otras aplicaciones del dispositivo. Los pasos necesarios para cerrar la secuencia de vista previa son:
 
 -   Si la cámara está en vista previa, llama al método [**StopPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226622) para detener la secuencia de vista previa. Se generará una excepción si llamas al método **StopPreviewAsync** mientras no se está ejecutando la vista previa.
--   Establece la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) del objeto **CaptureElement** en nulo. Usa el método [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Core.CoreDispatcher.RunAsync (Windows.UI.Core.CoreDispatcherPriority,Windows.UI.Core.DispatchedHandler) para asegurarte de que la llamada se ejecuta en el subproceso de la interfaz de usuario.
--   Llama al método [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858) del objeto **MediaCapture** para liberar el objeto. Vuelve a usar el método [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Core.CoreDispatcher.RunAsync (Windows.UI.Core.CoreDispatcherPriority,Windows.UI.Core.DispatchedHandler) para asegurarte de que la llamada se ejecuta en el subproceso de la interfaz de usuario.
+-   Establece la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) del objeto **CaptureElement** en nulo. Usa [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para asegurarte de que esta llamada se ejecuta en el subproceso de interfaz de usuario.
+-   Llama al método [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858) del objeto **MediaCapture** para liberar el objeto. Vuelve a usar [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) para asegurarte de que esta llamada se ejecuta en el subproceso de interfaz de usuario.
 -   Establece la variable de miembro **MediaCapture** en nulo.
 -   Llama al método [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest.RequestRelease) para permitir que la pantalla se apague cuando esté inactiva.
 
@@ -93,6 +93,6 @@ En el controlador de eventos **Suspending**, comprueba primero que la página es
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

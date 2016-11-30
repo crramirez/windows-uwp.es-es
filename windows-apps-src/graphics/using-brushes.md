@@ -4,8 +4,8 @@ ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: Usar pinceles
 description: "Los objetos Brush se usan para pintar los interiores o los contornos de formas, texto y partes de los controles, de forma que el objeto pintado esté visible en una interfaz de usuario."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: cc16b07931cf3f7740957c222e8c8821ddbab08a
+ms.sourcegitcommit: f5934600cc185c952acc57ae38e0b190466e0dfa
+ms.openlocfilehash: dc415135a05a63226a6b2d0b828245fe2f713788
 
 ---
 # Usar pinceles
@@ -13,7 +13,7 @@ ms.openlocfilehash: cc16b07931cf3f7740957c222e8c8821ddbab08a
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** API importantes **
+**API importantes**
 
 -   [**Pincel**](https://msdn.microsoft.com/library/windows/apps/BR228076)
 
@@ -179,6 +179,6 @@ Para ver ejemplos de código, consulta las páginas de referencia de [**WebViewB
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

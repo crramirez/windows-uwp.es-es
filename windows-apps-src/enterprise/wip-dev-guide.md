@@ -5,8 +5,8 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "Crear una aplicación habilitada que consume datos de empresa y personales"
 translationtype: Human Translation
-ms.sourcegitcommit: 0da731e1211544ce6b07e783ddc2407da57781c2
-ms.openlocfilehash: 8ead30471371b9b6aca32088f115da9f68784922
+ms.sourcegitcommit: bf1c47e9cca45b626a45ca664bf2bb4be9c529e0
+ms.openlocfilehash: 82b674c72126c66aff34b0396a2c32f88023dd25
 
 ---
 
@@ -28,25 +28,17 @@ Si estás listo para realizar cada una de las tareas, empecemos.
 
 Necesitarás lo siguiente:
 
-* Acceso a una cuenta de Microsoft Intune.
+* Una máquina Virtual (VM) de prueba que ejecute Windows 10, versión 1607. Vas a depurar la aplicación usando esta VM de prueba.
 
-* Un equipo de desarrollo que ejecute Windows 10, versión 1607.
-
-* Un dispositivo de pruebas que ejecute Windows 10, versión 1607. Vas a depurar la aplicación usando este dispositivo de prueba.
-
-  Para la depuración, no podrás usar el mismo dispositivo que esté inscrito en MDM. Por eso necesitarás un dispositivo de prueba independiente.
-
-  Para hacerlo más sencillo, vamos a suponer que el dispositivo de prueba es un equipo o máquina virtual.
+* Un equipo de desarrollo que ejecute Windows 10, versión 1607. Este podría ser la VM de prueba si tienes Visual Studio instalado.
 
 ## Configuración de tu entorno de desarrollo
 
 Para ello deberás hacer lo siguiente:
 
-* Inscribe el equipo de prueba.
+* Instala WIP Setup Developer Assistant en la VM de prueba.
 
-* Crea una directiva de protección.
-
-* Descarga la directiva en el equipo de prueba.
+* Crea una directiva de protección mediante WIP Setup Developer Assistant.
 
 * Configura un proyecto de Visual Studio.
 
@@ -54,23 +46,17 @@ Para ello deberás hacer lo siguiente:
 
 * Agregar espacios de nombres a los archivos de código
 
-**Inscribir el equipo de prueba**
+**Instalar WIP Setup Developer Assistant en la VM de prueba**
 
- Para inscribir tu equipo de prueba, agrega tu cuenta de Intune en la página **Configuración**->**Acceder a la red del trabajo o colegio** del equipo del prueba.
+ Usa esta herramienta para configurar una directiva de Windows Information Protection en la VM de prueba.
 
- ![Conectarse a MDM](images/connect-v2.png)
-
- El nombre del equipo aparecerá en la consola de administración de Intune.
+ Descarga la herramienta aquí: [WIP Setup Developer Assistant](https://www.microsoft.com/store/p/wip-setup-developer-assistant/9nblggh526jf).
 
 **Crear una directiva de protección**
 
-Crea una directiva e impleméntala en el equipo de prueba. Consulta [Crear una directiva de Windows Information Protection (WIP) con Microsoft Intune](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-intune).
+Para definir la directiva, agrega información a cada sección del asistente del desarrollador para la configuración de WIP. Elige el icono de ayuda junto a cualquier configuración para obtener más información sobre cómo usarla.
 
-**Descargar la directiva en tu dispositivo**
-
-En el equipo de prueba, ve a la página **Configuración** y, a continuación, selecciona **Acceder a la red del trabajo o colegio**-> **Información**->**Sincronización**.
-
-![Configuración de sincronización con MDM](images/sync.png)
+Para obtener instrucciones más generales sobre cómo usar esta herramienta, consulta la sección de notas de la versión en la página de descarga de la aplicación.
 
 **Configuración de un proyecto de Visual Studio**
 
@@ -103,7 +89,7 @@ En el equipo de prueba, ve a la página **Configuración** y, a continuación, s
 
 **Configurar la depuración remota**
 
-Instala las Herramientas remotas para Visual Studio en el equipo de prueba. A continuación, inicia el depurador remoto en el equipo de desarrollo y comprueba si tu aplicación se ejecuta en el equipo de destino.
+Instala Herramientas remotas para Visual Studio en la VM de prueba solo si vas a desarrollar tu aplicación en un equipo que no sea la VM. A continuación, inicia el depurador remoto en el equipo de desarrollo y comprueba si tu aplicación se ejecuta en la VM de prueba.
 
 Consulta [Instrucciones del equipo remoto](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#remote-pc-instructions).
 
@@ -1104,6 +1090,6 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

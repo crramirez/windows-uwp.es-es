@@ -4,8 +4,8 @@ ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
 description: "En esta sección se ofrece información sobre la creación de aplicaciones para la Plataforma universal de Windows (UWP) para capturar, reproducir o editar fotos, vídeos o audio."
 title: "Audio, vídeo y cámara"
 translationtype: Human Translation
-ms.sourcegitcommit: 18e97dd5e607960c1c1fd640fe6fe6ae5e9f9085
-ms.openlocfilehash: 1914690b6417a5ae382e74ec76b54d9db411c213
+ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
+ms.openlocfilehash: 6e67f57fbc00e596bb07cc37f2c9f762a5c9f557
 
 ---
 
@@ -30,11 +30,11 @@ En esta sección se ofrece información sobre la creación de aplicaciones para 
 | [MIDI](midi.md) | Muestra cómo enumerar dispositivos MIDI (interfaz digital de instrumentos musicales), y enviar y recibir mensajes MIDI desde una aplicación para UWP. |
 | [Importar contenido multimedia desde un dispositivo](import-media-from-a-device.md) | Describe cómo importar contenido multimedia de un dispositivo, incluida la búsqueda de orígenes multimedia disponibles, la importación de archivos como vídeos, fotos y archivos sidecar, y la eliminación de los archivos importados del dispositivo de origen. |
 | [Linterna independiente de la cámara](camera-independent-flashlight.md) | Muestra cómo acceder a la luz de un dispositivo y cómo usarla, si la hay. La funcionalidad de luz se administra por separado de la cámara del dispositivo y la funcionalidad de flash de la cámara. |
-| [Códecs admitidos](supported-codecs.md) | Enumera la compatibilidad con formatos y códecs de audio y vídeo para aplicaciones para UWP. |
+| [Códecs admitidos](supported-codecs.md) | Enumera la compatibilidad con formatos y códecs de audio, vídeo e imagen para aplicaciones para UWP. |
 
 
 ## Consulta también
-- [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/en-us/windows/develop)
+- [Desarrollar aplicaciones para UWP](https://developer.microsoft.com/en-us/windows/develop)
 
  
 
@@ -48,6 +48,6 @@ En esta sección se ofrece información sobre la creación de aplicaciones para 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

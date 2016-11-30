@@ -4,8 +4,8 @@ title: Ejecutar una tarea en segundo plano en un temporizador
 description: "Aprende a programar una tarea en segundo plano única o a ejecutar una tarea en segundo plano periódica."
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
 translationtype: Human Translation
-ms.sourcegitcommit: 16202eeb37421acf75a9032dfc1eec397d23ce4f
-ms.openlocfilehash: dd0d0fe0081eac112ce22e8a035b4bb70be3bef0
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: 1ad44208b3442e80212656db943ff088514cc954
 
 ---
 
@@ -22,7 +22,7 @@ ms.openlocfilehash: dd0d0fe0081eac112ce22e8a035b4bb70be3bef0
 Aprende a programar una tarea en segundo plano única o ejecutar una tarea en segundo plano periódica.
 
 -   En este ejemplo se da por hecho que tienes una tarea en segundo plano que necesita ejecutarse periódicamente o en un momento específico para admitir tu aplicación. Una tarea en segundo plano solo se ejecutará mediante un [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) si has llamado a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485).
--   En este tema, se supone que ya has creado una clase de tarea en segundo plano. Para comenzar rápidamente a crear una tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano de proceso único](create-and-register-a-singleprocess-background-task.md) o [Crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente](create-and-register-a-background-task.md). Para obtener información más detallada acerca de condiciones y desencadenadores, consulta [Hacer que tu aplicación sea compatible con las tareas en segundo plano](support-your-app-with-background-tasks.md).
+-   En este tema, se supone que ya has creado una clase de tarea en segundo plano. Para comenzar rápidamente a crear una tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md) o [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md). Para obtener información más detallada acerca de las condiciones y los desencadenadores, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
 
 ## Crear un desencadenador de hora
 
@@ -80,7 +80,7 @@ Aprende a programar una tarea en segundo plano única o ejecutar una tarea en se
 > [!Important]
 > Para las tareas en segundo plano que se ejecutan en el mismo proceso que la aplicación, no establezcas `entryPoint` Para tareas en segundo plano que se ejecutan en un proceso independiente de la aplicación, establece `entryPoint` para que sea el espacio de nombres, '.', y el nombre de la clase que contiene la implementación de la tarea en segundo plano.
 
-    The following code registers a background task that runs in a separate process:
+    The following code registers a background task that runs out-of-process:
 
     > > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -107,8 +107,8 @@ Aprende a programar una tarea en segundo plano única o ejecutar una tarea en se
 
 ## Temas relacionados
 
-* [Crear y registrar una tarea en segundo plano de proceso único](create-and-register-a-singleprocess-background-task.md).
-* [Create and register a background task that runs in a separate process (Crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente)](create-and-register-a-background-task.md)
+* [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md).
+* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
@@ -123,6 +123,6 @@ Aprende a programar una tarea en segundo plano única o ejecutar una tarea en se
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

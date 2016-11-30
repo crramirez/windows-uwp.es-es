@@ -3,8 +3,8 @@ title: Conectarse a proveedores de identidades con el Administrador de cuentas w
 description: "En este artículo se describe cómo usar AccountsSettingsPane para conectar la aplicación para la Plataforma universal de Windows (UWP) a proveedores de identidades externos, como Microsoft o Facebook, con las nuevas API de Administrador de cuentas web de Windows 10."
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: f3cdb187ec4056d4c7db6acde471b0bc91c78390
-ms.openlocfilehash: 093ca8906853121bbf33a729c523717d26cb7b0d
+ms.sourcegitcommit: e16977a9a11b292ea9624ff421aa964c11d615be
+ms.openlocfilehash: d234811b395790a35ad50dea9ef4cc56d60458e8
 
 ---
 # Conectarse a proveedores de identidades con el Administrador de cuentas web
@@ -121,9 +121,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-Ten en cuenta que también pasamos la cadena "consumers" al parámetro *authority* opcional. Esto es porque Microsoft proporciona dos tipos diferentes de autenticación: cuentas Microsoft (MSA) para "consumidores" y Azure Active Directory (AAD) para "organizaciones". La autoridad "consumers" permite que el proveedor sepa que estamos interesados en la opción anterior.
-
-Si estás desarrollando una aplicación empresarial, querrás usar el extremo de gráficos de AAD en su lugar. Consulta [Web account management sample en GitHub (Muestra de administración de cuentas web)](http://go.microsoft.com/fwlink/p/?LinkId=620621) y la documentación de Azure para obtener más información sobre cómo hacerlo. 
+Ten en cuenta que también pasamos la cadena "consumers" al parámetro *authority* opcional. Esto es porque Microsoft proporciona dos tipos diferentes de autenticación: cuentas Microsoft (MSA) para "consumers" y Azure Active Directory (AAD) para "organizations". La autoridad "consumers" indica que queremos la opción de MSA. Si estás desarrollando una aplicación de empresa, usa en su lugar la cadena "organizations".
 
 Por último, agrega el proveedor a la interfaz AccountsSettingsPane mediante la creación de un método WebAccountProviderCommand como este: 
 
@@ -168,9 +166,22 @@ En este ejemplo, pasamos la cadena "wl.basic" al parámetro de ámbito. El ámbi
 
 Los proveedores de servicios proporcionarán documentación sobre los ámbitos que deben especificarse para obtener tokens para usar con su servicio. 
 
-Para los ámbitos de Office 365 y Outlook.com, consulta Authenticate Office 365 and Outlook.com APIs using the v2.0 authentication endpoint preview (Autenticar las API de Office 365 y Outlook.com mediante la vista previa del extremo de autenticación v2.0)[https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2]. 
+* Para los ámbitos de Office 365 y Outlook.com, consulta Authenticate Office 365 and Outlook.com APIs using the v2.0 authentication endpoint preview (Autenticar las API de Office 365 y Outlook.com mediante la vista previa del extremo de autenticación v2.0)[https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2]. 
+* Para OneDrive, consulta OneDrive authentication and sign-in (Autenticación e inicio de sesión de OneDrive)[https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes]. 
 
-Para OneDrive, consulta OneDrive authentication and sign-in (Autenticación e inicio de sesión de OneDrive)[https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes]. 
+Si estás desarrollando una aplicación de empresa, probablemente querrás conectarte a una instancia de Azure Active Directory (AAD) y usar la API de Microsoft Graph en lugar de los servicios de MSA habituales. En este escenario, usa el siguiente código en su lugar: 
+
+```C#
+private async void GetAadTokenAsync(WebAccountProviderCommand command)
+{
+    string clientId = "your_guid_here"; // Obtain your clientId from the Azure Portal
+    WebTokenRequest request = new WebTokenRequest(provider, "User.Read", clientId);
+    request.Properties.Add("resource", "https://graph.microsoft.com");
+    WebTokenRequestResult = await WebAuthenticationCoreManager.RequestTokenAsync(request);
+}
+```
+
+El resto de este artículo sigue describiendo el escenario de MSA, pero el código de AAD es muy similar. Para obtener más información sobre AAD o Graph, incluida una muestra completa en GitHub, consulta la [documentación de Microsoft Graph](https://graph.microsoft.io/docs/platform/get-started).
 
 ## Usar el token
 
@@ -390,6 +401,6 @@ En teoría, puedes usar comandos de configuración para cualquier cosa. Sin emba
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

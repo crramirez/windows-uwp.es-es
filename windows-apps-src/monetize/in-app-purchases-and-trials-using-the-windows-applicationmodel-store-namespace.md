@@ -4,8 +4,8 @@ ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
 description: "Obtén información sobre cómo habilitar las pruebas y compras desde la aplicación en aplicaciones para UWP orientadas a versiones anteriores a Windows 10, versión 1607."
 title: "Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 649d082cddcf301fe602a5ab99637ad7bea67d49
+ms.sourcegitcommit: 812fa1789c5c86657b8e73e45a851c7a58a1c84e
+ms.openlocfilehash: 5a4f943357660a22217351f04d735c14cab828ff
 
 ---
 
@@ -13,11 +13,15 @@ ms.openlocfilehash: 649d082cddcf301fe602a5ab99637ad7bea67d49
 
 Windows SDK proporciona miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) que puedes usar para agregar la funcionalidad de pruebas y compras desde la aplicación a tu aplicación para la Plataforma universal de Windows (UWP) para ayudar a rentabilizar tu aplicación y agregar nuevas funciones. Estas API también proporcionan acceso a la información de licencia de la aplicación.
 
->**Nota**&nbsp;&nbsp;Si la aplicación está destinada a Windows 10, versión 1607 (o posteriores), se recomienda usar los miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en lugar del espacio de nombres **Windows.ApplicationModel.Store**. El espacio de nombres **Windows.Services.Store** admite los tipos de complemento más recientes, como los complementos de consumibles administrados por la Tienda, y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el Centro de desarrollo de Windows y la Tienda. El espacio de nombres **Windows.Services.Store** también está diseñado para ofrecer un mejor rendimiento. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
-
 En los artículos de esta sección se ofrecen instrucciones detalladas y ejemplos de código para usar los miembros del espacio de nombres **Windows.ApplicationModel.Store** para varios escenarios comunes. Para obtener una introducción a los conceptos relacionados con las compras desde la aplicación en las aplicaciones para UWP, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
 
 Para obtener una muestra completa que demuestre cómo implementar pruebas y compras desde la aplicación con el espacio de nombres **Windows.ApplicationModel.Store**, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
+
+>**Notas**&nbsp;&nbsp;
+>
+> * Si la aplicación está destinada a Windows 10, versión 1607 o una versión posterior, se recomienda usar los miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en lugar de los de **Windows.ApplicationModel.Store**. El espacio de nombres **Windows.Services.Store** admite los tipos de complemento más recientes, como los complementos de consumibles administrados por la Tienda, y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el Centro de desarrollo de Windows y la Tienda. El espacio de nombres **Windows.Services.Store** también está diseñado para ofrecer un mejor rendimiento. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
+<br/><br/>
+> * El espacio de nombres **Windows.ApplicationModel.Store** no se admite en aplicaciones de escritorio de Windows que usan el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop). Estas aplicaciones deben usar el espacio de nombres **Windows.Services.Store** para implementar compras desde la aplicación y periodos de prueba.
 
 ## En esta sección
 
@@ -32,6 +36,6 @@ Para obtener una muestra completa que demuestre cómo implementar pruebas y comp
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

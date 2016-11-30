@@ -4,17 +4,14 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados del informe de errores de un intervalo de fechas y otros filtros opcionales."
 title: Obtener los datos del informe de errores
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: 64bd3491bc8ff37f5eb7ca852ad6dc738f6e2711
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 89b1c9b44aaabb49f78953877ae11d2d7a0a2a2f
 
 ---
 
 # Obtener los datos del informe de errores
 
-
-
-
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados del informe de errores de un intervalo de fechas y otros filtros opcionales. Este método devuelve los datos en formato JSON.
+Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de informes de errores en formato JSON de un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe Mantenimiento](../publish/health-report.md) del panel del Centro de desarrollo de Windows.
 
 ## Requisitos previos
 
@@ -292,7 +289,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
 
 ### Ejemplo de respuesta
 
-En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, realizada para esta solicitud.
+En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo realizada para esta solicitud.
 
 ```json
 {
@@ -322,6 +319,7 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 
 ## Temas relacionados
 
+* [Informe Mantenimiento](../publish/health-report.md)
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
 * [Obtener los datos de compra de la aplicación](get-app-acquisitions.md)
 * [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
@@ -330,6 +328,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

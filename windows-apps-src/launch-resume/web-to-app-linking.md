@@ -4,8 +4,8 @@ title: "Admitir la vinculación de un sitio web con la aplicación mediante los 
 description: "Controlar la relación de los usuarios con tu aplicación mediante los controladores de URI de la aplicación."
 keywords: "Vinculación en profundidad de Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 9ef86dcd4ae3d922b713d585543f1def48fcb645
-ms.openlocfilehash: c9833f29d6080509c849e9d624f2bfcd0b0af04c
+ms.sourcegitcommit: cb3dbf7fd55c92339c77124bd22b3484fa389285
+ms.openlocfilehash: d7ce1dbfdf8ce0069b4d882323de8fd6f1b242f7
 
 ---
 
@@ -53,7 +53,7 @@ Crea un archivo JSON (sin la extensión de archivo .json) denominado **windows-a
 [{
   "packageFamilyName": "YourAppsPFN",
   "paths": [ "*" ],
-  "excludePaths" : [ "/news/*, /blog/*" ]
+  "excludePaths" : [ "/news/*", "/blog/*" ]
  }]
 ```
 
@@ -68,7 +68,7 @@ El ejemplo de archivo JSON anterior muestra el uso de caracteres comodín. Los c
 | *****       | Representa cualquier subcadena      |
 | **?**        | Representa un carácter único |
 
-Por ejemplo, si tomamos `"excludePaths" : [ "/news/*, /blog/*" ]` en el ejemplo anterior, la aplicación admitirá todas las rutas de acceso que empiecen por la dirección de tu sitio web (por ejemplo, msn.com) **excepto** las que estén bajo `/news/` y `/blog/`. Se admitirá **msn.com/weather.html**, pero no ****msn.com/news/topnews.html****.
+Por ejemplo, si tomamos `"excludePaths" : [ "/news/*", "/blog/*" ]` en el ejemplo anterior, la aplicación admitirá todas las rutas de acceso que empiecen por la dirección de tu sitio web (por ejemplo, msn.com) **excepto** las que estén bajo `/news/` y `/blog/`. Se admitirá **msn.com/weather.html**, pero no ****msn.com/news/topnews.html****.
 
 
 ### Varias aplicaciones
@@ -79,17 +79,17 @@ Si tienes dos aplicaciones que quieres vincular a tu sitio web, lista ambos nomb
 [{
   "packageFamilyName": "YourAppsPFN",
   "paths": [ "*" ],
-  "excludedPaths" : [ "/news/*, /blog/*" ]
+  "excludePaths" : [ "/news/*", "/blog/*" ]
  },
  {
   "packageFamilyName": "Your2ndAppsPFN",
-  "paths": [ "/example/*, /links/*" ]
+  "paths": [ "/example/*", "/links/*" ]
  }]
 ```
 
-Para proporcionar la mejor experiencia para los usuarios, usa rutas de acceso excluidas para asegurarte de que el contenido solo en línea se excluye de las rutas de acceso admitidas en el archivo JSON.
+Para proporcionar la mejor experiencia para los usuarios, usa excluir rutas para asegurarte de que el contenido solo en línea se excluye de las rutas de acceso admitidas en el archivo JSON.
 
-Las rutas de acceso excluidas se comprueban en primer lugar y, si hay una coincidencia, se abrirá la página correspondiente con el navegador en lugar de con la aplicación designada. En el ejemplo anterior, ' /news/ \ *' incluye todas las páginas bajo esa ruta de acceso, mientras que '/news\*' (sin barra diagonal tras 'news') incluye todas las rutas de acceso bajo 'news\*', como 'newslocal/', 'newsinternational/', etc.
+Las rutas excluidas se comprueban en primer lugar y, si hay una coincidencia, se abrirá la página correspondiente con el navegador en lugar de con la aplicación designada. En el ejemplo anterior, ' /news/ \ *' incluye todas las páginas bajo esa ruta de acceso, mientras que '/news\*' (sin barra diagonal tras 'news') incluye todas las rutas de acceso bajo 'news\*', como 'newslocal/', 'newsinternational/', etc.
 
 ## Administrar vínculos en la activación para vincular con contenido
 
@@ -195,6 +195,6 @@ Si quieres seguir la lógica de activación de protocolo, establece un punto de 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

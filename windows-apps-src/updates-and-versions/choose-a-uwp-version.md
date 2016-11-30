@@ -3,8 +3,8 @@ author: QuinnRadich
 title: "Elegir una versión de UWP"
 description: "Al escribir una aplicación para UWP en Microsoft Visual Studio, puedes elegir la versión de destino. Obtén información sobre la diferencia entre las diferentes versiones de UWP y sobre cómo configurar las opciones en proyectos nuevos y existentes."
 translationtype: Human Translation
-ms.sourcegitcommit: 46852d305b2c19b46a904cabf928978c6c9f1606
-ms.openlocfilehash: 249bba67b844585b590294a456e3d0e74c392c95
+ms.sourcegitcommit: 04e96e38887116fe71504e7b6cb9a275e4dd30f0
+ms.openlocfilehash: fb03ae3b4f234dc61ec6918df06c15bc3c00df09
 
 ---
 
@@ -14,7 +14,7 @@ Al escribir una aplicación para UWP en Microsoft Visual Studio, puedes elegir l
 
 | Versión | Descripción |
 | --- | --- |
-| Compilación 14393 (edición de Aniversario) | Esta es la versión más reciente de Windows10, publicada en julio de 2016. Algunas características destacadas de esta versión incluyen: </br> \* **Windows Ink:** Nuevos controles InkCanvas e InkToolbar. </br> \* **API de Cortana:** Usa nuevas acciones de Cortana para integrar la compatibilidad de Cortana con funciones específicas de tu aplicación. </br> \* **Windows Hello:** Mirosoft Edge ahora admite Windows Hello, lo que proporciona a los desarrolladores web acceso a la autenticación biométrica. </br> Para obtener información sobre estas y muchas otras funciones agregadas en esta versión de Windows, visita [el Centro de desarrollo](https://developer.microsoft.com/en-us/windows/windows-10-for-developers) o la página de información detallada en [Novedades para desarrolladores en Windows 10](../whats-new/windows-10-version-1607.md).  |
+| Compilación 14393 (edición de Aniversario) | Esta es la versión más reciente de Windows10, publicada en julio de 2016. Algunas características destacadas de esta versión incluyen: </br> \* **Windows Ink:** Nuevos controles InkCanvas e InkToolbar. </br> \* **API de Cortana:** Usa nuevas acciones de Cortana para integrar la compatibilidad de Cortana con funciones específicas de tu aplicación. </br> \* **Windows Hello:** Microsoft Edge ahora admite Windows Hello, lo que proporciona a los desarrolladores web acceso a la autenticación biométrica. </br> Para obtener información sobre estas y muchas otras funciones agregadas en esta versión de Windows, visita [el Centro de desarrollo](https://developer.microsoft.com/en-us/windows/windows-10-for-developers) o la página de información detallada en [Novedades para desarrolladores en Windows 10](../whats-new/windows-10-version-1607.md).  |
 | Compilación 10586 | Esta versión de Windows10 se publicó en noviembre de 2015. Las características destacadas incluyen la introducción de las API ORTC (Comunicaciones en tiempo real mediante objetos) para la comunicación de vídeo en Microsoft Edge y las API de proveedores para permitir a las aplicaciones usar la autenticación de rostro de Windows Hello. [Más información sobre las características introducidas en esta compilación.](../whats-new/windows-10-version-1511.md) |
 | Compilación 10240 | Esta es la versión inicial de Windows 10, publicada en julio de 2015. [Más información sobre las características introducidas en esta compilación.](../whats-new/windows-10-version-1507.md) |
 
@@ -41,6 +41,6 @@ Ten en cuenta que vas a declarar que tu aplicación funciona en cualquier versi�
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

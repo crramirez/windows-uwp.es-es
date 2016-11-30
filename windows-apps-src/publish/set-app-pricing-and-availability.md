@@ -4,8 +4,8 @@ Description: "La página Precios y disponibilidad del proceso de envío de la ap
 title: Establecer los precios y la disponibilidad de las aplicaciones
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 translationtype: Human Translation
-ms.sourcegitcommit: fc5265cf7d455e34225fd74f9792cdb46b0029d7
-ms.openlocfilehash: 91a65020c29e990d96ab26f5abbd777da7810658
+ms.sourcegitcommit: 2ce776b69eed7d5803db7a37b54c4b00f58dc6c0
+ms.openlocfilehash: e5b956f819af3cbbd7e00d77de77a15678a2ab4c
 
 ---
 
@@ -26,7 +26,7 @@ Para más información, consulta [Definir la selección de precios y mercados](d
 
 Muchos desarrolladores eligen permitir que los clientes prueben su aplicación de forma gratuita con la funcionalidad de prueba proporcionada por la Tienda. De manera predeterminada, una aplicación no estará disponible como prueba gratuita, pero si quieres ofrecer una, seleccione un valor de la lista desplegable **Prueba gratuita**.
 
-Elige **La versión de prueba no expira nunca** para permitir a los clientes el acceso a la aplicación de forma gratuita indefinidamente. Querrás animarlos para que adquieran la versión completa, así que asegúrate de agregar código para [excluir o limitar funciones en la versión de prueba](https://msdn.microsoft.com/library/windows/apps/mt219685).
+Elige **La versión de prueba no expira nunca** para permitir a los clientes el acceso a la aplicación de forma gratuita indefinidamente. Querrás animarlos para que adquieran la versión completa, así que asegúrate de agregar código para [excluir o limitar funciones en la versión de prueba](../monetize/in-app-purchases-and-trials.md).
 
 También tienes la opción de seleccionar una versión de prueba con límite de tiempo de **1 día**, **7 días**, **15 días** o **30 días**. Puedes seguir limitando funciones durante el período de prueba o puedes permitir a los clientes acceder a toda la funcionalidad durante ese período de tiempo.
 
@@ -86,10 +86,6 @@ También puedes cambiar la fecha de lanzamiento después de enviar la aplicació
 
 
 
-
-
-
-
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

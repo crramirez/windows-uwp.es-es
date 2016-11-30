@@ -4,8 +4,8 @@ title: Registrar una tarea en segundo plano
 description: "Aprende a crear una función que pueda reutilizarse para registrar de forma segura la mayoría de las tareas en segundo plano."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
+ms.sourcegitcommit: 0f1bf88b1470cc5205f2e98ef15300da705203b1
+ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
 
 Aprende a crear una función que pueda reutilizarse para registrar de forma segura la mayoría de las tareas en segundo plano.
 
-Este tema se aplica a las tareas en segundo plano de proceso único y a las tareas en segundo plano que se ejecutan en un proceso independiente. En este tema suponemos que ya tienes una tarea en segundo plano que debe registrarse. (Consulta [Crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente](create-and-register-a-background-task.md) o [Crear y registrar una tarea en segundo plano de proceso único](create-and-register-a-singleprocess-background-task.md) para obtener información sobre cómo escribir una tarea en segundo plano).
+Este tema se aplica a las tareas en segundo plano dentro de proceso y a las tareas en segundo plano fuera de proceso. En este tema suponemos que ya tienes una tarea en segundo plano que debe registrarse. (Consulta [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md) o [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md) para obtener información sobre cómo escribir una tarea en segundo plano).
 
 En este tema se recorre una función de utilidad que registra tareas en segundo plano. Antes de registrar una tarea varias veces, esta función de utilidad primero comprueba registros existentes para evitar los problemas que pueden surgir por registros repetidos. Además puede aplicar una condición del sistema a la tarea en segundo en plano. El tutorial incluye un ejemplo completo de funcionamiento de esta función de utilidad.
 
@@ -36,8 +36,8 @@ Para garantizar que la aplicación universal de Windows continúe funcionando co
 Este método toma el punto de entrada de la tarea, el nombre de la tarea y un desencadenador de tarea en segundo plano preconstruido y, de forma opcional, un objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) para la tarea en segundo plano. Este método devuelve un objeto [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).
 
 > [!Important]
-> `taskEntryPoint` - para tareas en segundo plano que se ejecutan en un proceso independiente, esto se debe construir como el nombre del espacio de nombres ('.') y el nombre de la clase que contiene la clase de segundo plano. La cadena distingue mayúsculas de minúsculas.  Por ejemplo, si tuvieses un espacio de nombres "MyBackgroundTasks" y una clase "BackgroundTask1" que contenga el código de la clase de segundo plano, la cadena para `taskEntryPoint` sería "MyBackgroundTasks.BackgruondTask1".
-> Si la tarea en segundo plano se ejecuta en el mismo proceso que la aplicación (es decir, una tarea en segundo plano de proceso único), no se debe establecer `taskEntryPoint`.
+> `taskEntryPoint` - para las tareas en segundo plano que se ejecutan fuera de proceso, esto se debe construir como el nombre del espacio de nombres ('.') y el nombre de la clase que contiene la clase de segundo plano. La cadena distingue mayúsculas de minúsculas.  Por ejemplo, si tuvieses un espacio de nombres "MyBackgroundTasks" y una clase "BackgroundTask1" que contenga el código de la clase de segundo plano, la cadena para `taskEntryPoint` sería "MyBackgroundTasks.BackgruondTask1".
+> Si la tarea en segundo plano se ejecuta en el mismo proceso que la aplicación (es decir, una tarea en segundo plano en proceso), no se debe establecer `taskEntryPoint`.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -182,7 +182,7 @@ El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código 
 >
 >     builder.Name = name;
 >
->     // single-process background tasks don't set TaskEntryPoint
+>     // in-process background tasks don't set TaskEntryPoint
 >     if ( taskEntryPoint != null && taskEntryPoint != String.Empty)
 >     {
 >         builder.TaskEntryPoint = taskEntryPoint;
@@ -377,8 +377,8 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 
 ****
 
-* [Crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente](create-and-register-a-background-task.md)
-* [Crear y registrar una tarea en segundo plano de proceso único](create-and-register-a-singleprocess-background-task.md)
+* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md)
+* [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
@@ -388,9 +388,6 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 * [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
-
-****
-
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
 * [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
@@ -400,6 +397,6 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

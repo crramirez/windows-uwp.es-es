@@ -4,8 +4,8 @@ ms.assetid: ae45490f-3eb1-4b7f-8e18-bf82f0ca5d6d
 description: "Obtén la información que necesitas para comenzar a usar las bibliotecas de Microsoft Advertising para agregar anuncios intersticiales en vídeo y banners a tus aplicaciones."
 title: "Introducción a las bibliotecas de Microsoft Advertising"
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: f57b9a2c7b36fc53b892a6316d1cd17d70ae99b5
+ms.sourcegitcommit: 65f8c2b8be053565a903cec4b8d9ccc277cfd41e
+ms.openlocfilehash: b5fe116ea850e93b5208b829e4ed6cec2bc42de0
 
 
 ---
@@ -27,7 +27,8 @@ Para obtener proyectos de muestra completos que muestren cómo agregar anuncios 
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
 | [Instalar las bibliotecas de Microsoft Advertising](install-the-microsoft-advertising-libraries.md) |  Proporciona detalles de instalación y enumera los nombres de las bibliotecas de Microsoft Advertising y las bibliotecas de mediación de anuncios que aparecen en el cuadro de diálogo **Administrador de referencias** de Visual Studio.  |
 | [Flujos de trabajo para crear aplicaciones con anuncios](workflows-for-creating-apps-with-ads.md)     |  Proporciona pasos de alto nivel que describen el proceso de desarrollo y publicación de una aplicación con anuncios.   |
-| [Migrar de AdMediatorControl a AdControl para las aplicaciones para UWP](migrate-from-admediatorcontrol-to-adcontrol.md)  | Proporciona instrucciones sobre la migración de **AdMediatorControl** a **AdControl** en aplicaciones para UWP. Actualmente, no se admite la mediación de anuncios mediante la clase **AdMediatorControl** para aplicaciones para UWP con [Microsoft Store Services SDK](http://aka.ms/store-em-sdk).   |
+| [Actualizar la aplicación a las bibliotecas más recientes de Microsoft Advertising](update-your-app-to-the-latest-advertising-libraries.md)  | Si tienes una aplicación existente que muestra anuncios de banner con **AdControl** o **AdMediatorControl**, sigue las instrucciones de este artículo para determinar si necesitas actualizar la aplicación para usar el SDK de publicidad más reciente para tu aplicación con el fin de seguir mostrando los anuncios de banner.  |
+| [Migrar de AdMediatorControl a AdControl para las aplicaciones para UWP](migrate-from-admediatorcontrol-to-adcontrol.md)  | Proporciona instrucciones sobre la migración de **AdMediatorControl** a **AdControl** en aplicaciones para UWP. Ya no se admite la mediación de anuncios mediante la clase **AdMediatorControl** para aplicaciones para UWP con [Microsoft Store Services SDK](http://aka.ms/store-em-sdk).   |
 | [Notas de la versión](release-notes-for-the-advertising-libraries.md)         |  Proporciona notas de la versión actual de las bibliotecas de Microsoft Advertising incluidas en Microsoft Store Services SDK (para aplicaciones para UWP) y el SDK de Microsoft Advertising para Windows y Windows Phone 8.x (para aplicaciones de Windows 8.1 y Windows Phone 8.x).   |
 | [Problemas conocidos](known-issues-for-the-advertising-libraries.md)      |  Enumera los problemas conocidos de la versión actual de las bibliotecas de Microsoft Advertising en Microsoft Store Services SDK (para aplicaciones para UWP) y el SDK de Microsoft Advertising para Windows y Windows Phone 8.x (para aplicaciones de Windows 8.1 y Windows Phone 8.x).   |
 | [Ayuda adicional](additional-help.md)                                    |   Proporciona vínculos a más recursos sobre el desarrollo de aplicaciones con anuncios.  |
@@ -40,6 +41,6 @@ Para obtener proyectos de muestra completos que muestren cómo agregar anuncios 
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

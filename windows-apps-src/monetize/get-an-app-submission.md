@@ -4,8 +4,8 @@ ms.assetid: BF296C25-A2E6-48E4-9D08-0CCDB5FAE0C8
 description: "Usa este método en la API de envío de la Tienda Windows para obtener datos para un envío de aplicación existente."
 title: "Obtener un envío de aplicación con la API de envío de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 178b70db1583790c174d65e060c8bce6e4f69243
-ms.openlocfilehash: c845b59919a3a487949bc8926f7261992dac60ae
+ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
+ms.openlocfilehash: d7e4e0f355828b3d9b7bbcdd5ceee43dad9fe37c
 
 ---
 
@@ -14,15 +14,17 @@ ms.openlocfilehash: c845b59919a3a487949bc8926f7261992dac60ae
 
 
 
-Usa este método en la API de envío de la Tienda Windows para obtener datos para un envío de aplicación existente. Para obtener más información sobre el proceso de creación un envío de aplicación mediante la API de envío de la Tienda Windows, consulta [Administrar envíos de aplicación](manage-app-submissions.md).
+Usa este método en la API de envío de la Tienda Windows para obtener datos para un envío de aplicación existente. Para obtener más información sobre el proceso de creación de un envío de aplicación mediante la API de envío de la Tienda Windows, consulta [Administrar envíos de aplicación](manage-app-submissions.md).
+
+>**Importante**&nbsp;&nbsp;Muy pronto, Microsoft cambiará el modelo de datos de precios para envíos de aplicaciones en el Centro de desarrollo de Windows. Cuando se implemente este cambio, el recurso **Precios** de los datos de respuesta de este método aparecerá vacío y durante un tiempo no podrás conocer el período de prueba, el precio ni los datos de venta de un envío de aplicación con este método. Actualizaremos la API de envío de la Tienda Windows en el futuro para incorporar una nueva forma de acceder mediante programación a la información de precios de los envíos de aplicación. Para obtener más información, consulta el [recurso Precios](manage-app-submissions.md#pricing-object).
 
 ## Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
-* Crea un envío para una aplicación de tu cuenta del Centro de desarrollo. Puedes hacerlo desde el panel del Centro de desarrollo o mediante el método para [Crear un envío de aplicación](create-an-app-submission.md).
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
+* Crea un envío para una aplicación de tu cuenta del Centro de desarrollo. Puedes hacer esto en el panel del Centro de desarrollo o puedes hacerlo mediante el método [Create an app submission (Crear un envío de aplicación)](create-an-app-submission.md).
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse en cuentas del Centro de desarrollo de Windows que estén autorizadas para usar la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
@@ -41,7 +43,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
+| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -49,7 +51,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | cadena | Obligatorio. Id. de la Tienda de la aplicación para la que quieres actualizar un envío. Para obtener más información sobre el Id. de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | cadena | Obligatorio. El identificador de la Tienda de la aplicación que contiene el envío al que deseas acceder. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 | submissionId | cadena | Obligatorio. El identificador del envío que se va a obtener. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta de las solicitudes para [crear un envío de aplicación](create-an-app-submission.md).  |
 
 <span/>
@@ -148,6 +150,16 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON de una llamada co
       ]
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "enterpriseLicensing": "Online",
   "allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies": true,
   "allowTargetFutureDeviceFamilies": {
@@ -184,6 +196,6 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

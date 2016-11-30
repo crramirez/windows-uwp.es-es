@@ -4,8 +4,8 @@ ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
 description: "Usa este método en la API de colecciones de la Tienda Windows para notificar un producto consumible como completado para un cliente determinado. Para que un usuario pueda volver a comprar un producto consumible, la aplicación o el servicio debe notificar el producto consumible como completado para dicho usuario."
 title: Notificar productos consumibles como completados
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: dd3e687d49e538187c123b7123c184f9182905de
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: 54095c7fd3c29fe7596be4c4b5a7148d078a7091
 
 ---
 
@@ -18,16 +18,16 @@ Usa este método en la API de colecciones de la Tienda Windows para notificar un
 
 Existen dos formas de usar este método para notificar un producto consumible como completado:
 
--   Proporcionar el identificador de elemento del consumible (tal como se devuelve en el parámetro **itemId** de una [consulta de productos](query-for-products.md)) y un identificador de seguimiento único que debe indicar el usuario. Si se usa el mismo identificador de seguimiento para varios intentos, se devolverá el mismo resultado, aunque ya se haya consumido el artículo. Si no estás seguro sobre si una solicitud de consumo se llevó a cabo correctamente, el servicio debería volver a enviar las solicitudes de consumo con el mismo identificador de seguimiento. El id. de seguimiento siempre estará vinculado a esa solicitud de consumo y se podrá volver a enviar indefinidamente.
--   Proporcionar el id. del producto (tal y como se devuelve en el parámetro **productId** de una [consulta de productos](query-for-products.md)) y un id. de transacción, que se obtiene de uno de los orígenes enumerados en la descripción del parámetro **transactionId** en la sección del cuerpo de la solicitud a continuación.
+* Proporcionar el identificador de elemento del consumible (tal como se devuelve en el parámetro **itemId** de una [consulta de productos](query-for-products.md)) y un identificador de seguimiento único que debe indicar el usuario. Si se usa el mismo identificador de seguimiento para varios intentos, se devolverá el mismo resultado, aunque ya se haya consumido el artículo. Si no estás seguro sobre si una solicitud de consumo se llevó a cabo correctamente, el servicio debería volver a enviar las solicitudes de consumo con el mismo identificador de seguimiento. El id. de seguimiento siempre estará vinculado a esa solicitud de consumo y se podrá volver a enviar indefinidamente.
+* Proporcionar el id. del producto (tal y como se devuelve en el parámetro **productId** de una [consulta de productos](query-for-products.md)) y un id. de transacción, que se obtiene de uno de los orígenes enumerados en la descripción del parámetro **transactionId** en la sección del cuerpo de la solicitud a continuación.
 
 ## Requisitos previos
 
 
 Para usar este método, necesitarás:
 
--   Un token de acceso de Azure AD que se haya creado con el URI de público `https://onestore.microsoft.com`.
--   Una clave de id. de la Tienda Windows que se haya generado mediante la llamada al método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) desde el código del cliente de la aplicación.
+* Un token de acceso de Azure AD que se creó con el URI de audiencia `https://onestore.microsoft.com`.
+* Una clave de id. de la Tienda Windows que se haya [generado a partir del código de cliente en la aplicación](view-and-grant-products-from-a-service.md#step-4).
 
 Para obtener más información, consulta [Ver y conceder productos desde un servicio](view-and-grant-products-from-a-service.md).
 
@@ -48,7 +48,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
 | Autorización  | string | Obligatorio. Token de acceso de Azure AD con formato **Portador** &lt;*token*&gt;.                           |
 | Host           | string | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
-| Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
+| Content-Length | number | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
 <span/>
@@ -58,9 +58,9 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 | Parámetro     | Tipo         | Descripción         | Obligatorio |
 |---------------|--------------|---------------------|----------|
 | beneficiary   | UserIdentity | El usuario para el que se está consumiendo este artículo.                                                                                                                                                                                                                                                                 | Sí      |
-| itemId        | Cadena       | Valor itemId devuelto por una [consulta de productos](query-for-products.md). Usa este parámetro con trackingId                                                                                                                                                                                                  | No       |
+| itemId        | String       | Valor itemId devuelto por una [consulta de productos](query-for-products.md). Usa este parámetro con trackingId                                                                                                                                                                                                  | No       |
 | trackingId    | Guid         | Identificador de seguimiento único proporcionado por el desarrollador. Usa este parámetro con itemId.                                                                                                                                                                                                                                     | No       |
-| productId     | Cadena       | Valor productId devuelto por una [consulta de productos](query-for-products.md). Usa este parámetro con transactionId                                                                                                                                                                                            | No       |
+| productId     | String       | Valor productId devuelto por una [consulta de productos](query-for-products.md). Usa este parámetro con transactionId                                                                                                                                                                                            | No       |
 | transactionId | Guid         | El valor de identificador de transacción que se obtiene de uno de los siguientes orígenes. Usa este parámetro con productId.  <br/><br/><ul><li>La propiedad [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396) de la clase [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).</li><li>El recibo de la aplicación o del producto devuelto por [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) o [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811).</li><li>El parámetro transactionId devuelto por una [consulta de productos](query-for-products.md).</li></ul>                                                                                                                                                                                                                                   | No       |
 
  
@@ -70,9 +70,9 @@ El objeto UserIdentity contiene los parámetros siguientes.
 
 | Parámetro            | Tipo   | Descripción                                                                                                                                 | Obligatorio |
 |----------------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| identityType         | string | Especifique el valor de cadena **b2b**.                                                                                                           | Sí      |
-| identityValue        | string | Valor de cadena de la clave de id. de la Tienda Windows.                                                                                                   | Sí      |
-| localTicketReference | Cadena | Identificador solicitado para la respuesta devuelta. Se recomienda usar el mismo valor que la notificación *userId* de la clave de id. de la Tienda Windows. | Sí      |
+| identityType         | cadena | Especifica el valor de cadena **b2b**.                                                                                                           | Sí      |
+| identityValue        | cadena | La clave de id. de la Tienda Windows que se haya [generado a partir del código de cliente en la aplicación](view-and-grant-products-from-a-service.md#step-4).                                                                                                   | Sí      |
+| localTicketReference | cadena | El identificador solicitado para la respuesta devuelta. Se recomienda usar el mismo valor que la notificación *userId* de la clave de id. de la Tienda Windows. | Sí      |
 
 <span/> 
 
@@ -158,6 +158,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

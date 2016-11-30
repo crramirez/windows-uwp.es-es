@@ -5,8 +5,8 @@ title: Controles de entrada manuscrita
 label: Inking Controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 7198f4084df8ce484cdc5f6b3231a4bdb02f18b5
+ms.sourcegitcommit: 2fe53747da7995b5442eda0a6c20b120b3b615e5
+ms.openlocfilehash: aacf45c90458d3ca1bd295f904e8f2393d27542d
 
 ---
 # Controles de entrada manuscrita
@@ -142,8 +142,9 @@ El borrador también tiene un control flotante que proporciona el comando **Borr
 - El control InkCanvas, y la entrada manuscrita en general, funcionan mejor con un lápiz activo. Sin embargo, se recomienda admitir la entrada manuscrita con la entrada del mouse y táctil (incluido el lápiz pasivo) si tu aplicación lo requiere.
 - Usa un control InkToolbar con el control InkCanvas para proporcionar la configuración y las características de entrada manuscrita básicas. Ambos controles InkCanvas e InkToolbar pueden personalizarse mediante programación.
 - El control InkToolbar, y la entrada manuscrita en general, funcionan mejor con un lápiz activo. Sin embargo, la entrada manuscrita con el mouse y táctil puede admitirse si tu aplicación lo requiere.
-- Si admites la entrada manuscrita con la entrada táctil, se recomienda usar el icono de ED5F de la fuente Segoe MDL2 Assets para el botón de alternancia, con una información sobre herramientas "Escritura táctil".
-- Si usas más de un control InkCanvas, se recomienda usar un solo control InkToolbar para controlar la entrada manuscrita en lienzos.
+- Si se admite la entrada manuscrita con la entrada táctil, se recomienda usar el icono de ED5F de la fuente Segoe MLD2 Assets para el botón de alternancia, con una información sobre herramientas "Escritura táctil".
+- Si se proporciona selección de trazo, se recomienda usar el icono de EF20 de la fuente Segoe MLD2 Assets para el botón de herramienta, con una información sobre herramientas "Herramienta de selección".
+- Si se usa más de un control InkCanvas, se recomienda usar un solo control InkToolbar para controlar la entrada manuscrita en lienzos.
 - Para obtener un rendimiento óptimo, se recomienda modificar el control flotante predeterminado, en lugar de crear uno personalizado para las herramientas predeterminadas y personalizadas.
 
 ## Obtener las muestras
@@ -160,6 +161,6 @@ Para ver una muestra de entrada manuscrita más avanzada, consulta la [muestra d
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

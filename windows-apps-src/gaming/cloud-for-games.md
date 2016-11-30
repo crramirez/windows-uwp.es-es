@@ -4,8 +4,8 @@ title: Uso de servicios en la nube con juegos para UWP
 description: "Obtén más información acerca de cómo implementar la nube como un back-end para tus juegos para UWP."
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
 translationtype: Human Translation
-ms.sourcegitcommit: 0b2d81daa8bd0fd5694b81fa14fcd064e1600d35
-ms.openlocfilehash: b23c33fac9ac8fe5e2d5563a0af6824c82a3969b
+ms.sourcegitcommit: 2584a08e0a869ab3c5f11c192f0a5a6eeb223d61
+ms.openlocfilehash: 598384993e0e2931773cdb30e0909af6b771590e
 
 ---
 #  Uso de servicios en la nube con juegos para UWP
@@ -111,7 +111,7 @@ Descubre cómo otros desarrolladores han implementado soluciones en la nube en s
 
 ## Cómo diseñar el back-end en la nube
 
-Mientras que los productores y diseñadores juegos discuten qué características y funcionalidades del juego son necesarias, es recomendable que comiences a considerar cómo quieres diseñar tu infraestructura de juego. La nube de Azure puede usarse como el back-end de juego si quieres desarrollar juegos para varios dispositivos y en las distintas plataformas principales.
+Mientras que los productores y diseñadores juegos discuten qué características y funcionalidades del juego son necesarias, es recomendable que comiences a considerar cómo quieres diseñar la infraestructura de tu juego. Azure puede usarse como el back-end de juego si quieres desarrollar juegos para varios dispositivos y en las distintas plataformas principales.
 
 ### Guías de aprendizaje paso a paso
 
@@ -138,7 +138,7 @@ En primer lugar, debes pensar en el nivel de servicio más idóneo para tu juego
 
 ### Diseñar la infraestructura de juego con Azure
 
-A continuación se indican algunas maneras de usar las ofertas de la nube de Azure para un juego. Azure funciona con Windows y Linux, así como con las tecnologías de código abierto conocidas, como Ruby, Python, Java y PHP. Para obtener más información, consulta el sitio web de la [nube de Azure](https://azure.microsoft.com).
+A continuación se indican algunas maneras de usar las ofertas de la nube de Azure para un juego. Azure funciona con Windows y Linux, así como con las tecnologías de código abierto conocidas, como Ruby, Python, Java y PHP. Para obtener más información, consulta el sitio web [Azure para juegos](https://azure.microsoft.com/solutions/gaming/).
 
 | Requisitos                 | Escenarios de actividad                            | Oferta de productos                      | Funcionalidades de productos                               |
 |-----------------------------------|-----------------------------------------------|---------------------------------------|----------------------------------------------------|
@@ -191,7 +191,7 @@ Estas son algunas de las empresas que ofrecen back-end de nube para los juegos b
 ## Vínculos relacionados
 
 * [Guía de desarrollo de juegos para Windows 10](https://msdn.microsoft.com/windows/uwp/gaming/e2e)
-* [Microsoft Azure](https://azure.microsoft.com/)
+* [Azure para juegos](https://azure.microsoft.com/solutions/gaming/)
 * [Microsoft BizSpark](https://www.microsoft.com/bizspark/)
 * [ID@Xbox](http://www.xbox.com/Developers/id)
 
@@ -202,6 +202,6 @@ Estas son algunas de las empresas que ofrecen back-end de nube para los juegos b
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

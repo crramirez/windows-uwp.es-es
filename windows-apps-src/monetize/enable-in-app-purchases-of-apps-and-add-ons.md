@@ -5,8 +5,8 @@ description: "Aprende a usar el espacio de nombres Windows.Services.Store para c
 title: "Habilitar compras desde la aplicación de aplicaciones y complementos"
 keywords: "muestra de código de oferta desde la aplicación"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 0347c3a72ccdf26ddd885a5bad944ae36e09a190
+ms.sourcegitcommit: 962bee0cae8c50407fe1509b8000dc9cf9e847f8
+ms.openlocfilehash: a28982e05e88b542a0b20bf481e3121d6ac8a247
 
 ---
 
@@ -33,6 +33,8 @@ El código de este ejemplo supone que:
 * El archivo de código tiene una instrucción **using** para el espacio de nombres **Windows.Services.Store**.
 * La aplicación es una aplicación de usuario único que se ejecuta solamente en el contexto del usuario que inició la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro).
 
+>**Nota**&nbsp;&nbsp;Si tienes una aplicación de escritorio que usa el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), tienes que agregar código adicional que no se muestra en este ejemplo para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
+
 ## Ejemplo de código
 
 En este ejemplo se muestra cómo usar el método [RequestPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.requestpurchaseasync.aspx) de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para comprar una aplicación o complemento con un [Id. de la Tienda](in-app-purchases-and-trials.md#store_ids) conocido.
@@ -45,6 +47,9 @@ public async void PurchaseAddOn(string storeId)
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     workingProgressRing.IsActive = true;
@@ -101,6 +106,6 @@ Para obtener una aplicación de muestra completa, consulta la [muestra de la Tie
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

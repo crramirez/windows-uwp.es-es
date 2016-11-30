@@ -4,8 +4,8 @@ title: "Animaciones de fotograma clave y animaciones de función de aceleración
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
 description: "Las animaciones de fotograma clave lineales, las animaciones de fotograma clave con un valor KeySpline o las funciones de aceleración son tres técnicas distintas para prácticamente el mismo escenario."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 00abdacf8d1f8376a3d1a0c472ff7cf2c15afb01
+ms.sourcegitcommit: 7b4676e5c5a66450b321ab6f5f8670f9491b7a9d
+ms.openlocfilehash: 163109a8e87c0d270eeeed825958af7ec51ee336
 
 ---
 # Animaciones de fotograma clave y animaciones de función de aceleración
@@ -78,66 +78,63 @@ El ejemplo que sigue muestra tres fotogramas clave diferentes aplicados a una an
 
 ```xml
 <Storyboard x:Name="myStoryboard">
+    <!-- Animate the TranslateTransform's X property
+        from 0 to 350, then 50,
+        then 200 over 10 seconds. -->
+    <DoubleAnimationUsingKeyFrames
+        Storyboard.TargetName="MyAnimatedTranslateTransform"
+        Storyboard.TargetProperty="X"
+        Duration="0:0:10" EnableDependentAnimation="True">
 
-            <!-- Animate the TranslateTransform's X property
-             from 0 to 350, then 50,
-             then 200 over 10 seconds. -->
-            <DoubleAnimationUsingKeyFrames
-          Storyboard.TargetName="MyAnimatedTranslateTransform"
-          Storyboard.TargetProperty="X"
-          Duration="0:0:10" EnableDependentAnimation="True">
+        <!-- Using a LinearDoubleKeyFrame, the rectangle moves 
+            steadily from its starting position to 500 over 
+            the first 3 seconds.  -->
+        <LinearDoubleKeyFrame Value="500" KeyTime="0:0:3"/>
 
-                <!-- Using a LinearDoubleKeyFrame, the rectangle moves 
-                 steadily from its starting position to 500 over 
-                 the first 3 seconds.  -->
-                <LinearDoubleKeyFrame Value="500" KeyTime="0:0:3"/>
+        <!-- Using a DiscreteDoubleKeyFrame, the rectangle suddenly 
+            appears at 400 after the fourth second of the animation. -->
+        <DiscreteDoubleKeyFrame Value="400" KeyTime="0:0:4"/>
 
-                <!-- Using a DiscreteDoubleKeyFrame, the rectangle suddenly 
-                 appears at 400 after the fourth second of the animation. -->
-                <DiscreteDoubleKeyFrame Value="400" KeyTime="0:0:4"/>
+        <!-- Using a SplineDoubleKeyFrame, the rectangle moves 
+            back to its starting point. The
+            animation starts out slowly at first and then speeds up. 
+            This KeyFrame ends after the 6th second. -->
+        <SplineDoubleKeyFrame KeySpline="0.6,0.0 0.9,0.00" Value="0" KeyTime="0:0:6"/>
+    </DoubleAnimationUsingKeyFrames>
+</Storyboard>
+```
 
-                <!-- Using a SplineDoubleKeyFrame, the rectangle moves 
-                 back to its starting point. The
-                 animation starts out slowly at first and then speeds up. 
-                 This KeyFrame ends after the 6th
-                 second. -->
-                <SplineDoubleKeyFrame KeySpline="0.6,0.0 0.9,0.00" Value="0" KeyTime="0:0:6"/>
+### Fotogramas clave de aceleración
 
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        ```
+Un fotograma clave de aceleración es un fotograma clave en el que se aplica interpolación, y la función a lo largo del tiempo de la interpolación está controlada por varias fórmulas matemáticas predefinidas. En realidad, puedes producir el mismo resultado con un fotograma clave spline que el que puedes obtener con algunos de los tipos de funciones de aceleración, pero hay algunas funciones de aceleración, tales como [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049), que no puedes reproducir con un spline.
 
-### Easing key frames
+Para aplicar una función de aceleración a un fotograma clave de aceleración, debes establecer la propiedad **EasingFunction** como un elemento de propiedad en XAML para dicho fotograma clave. Para el valor, especifica un elemento de objeto para uno de los tipos de funciones de aceleración.
 
-An easing key frame is a key frame where interpolation being applied, and the function over time of the interpolation is controlled by several pre-defined mathematical formulas. You can actually produce much the same result with a spline key frame as you can with some of the easing function types, but there are also some easing functions such as [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049) that you can't reproduce with a spline.
-
-To apply an easing function to an easing key frame, you set the **EasingFunction** property as a property element in XAML for that key frame. For the value, specify an object element for one of the easing function types.
-
-This example applies a [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126) and then a [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057) as successive key frames to a [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) to create a bouncing effect.
+En este ejemplo se aplica [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126) y, luego, [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057) como fotogramas clave sucesivos a [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) para crear un efecto de rebote.
 
 ```xml
 <Storyboard x:Name="myStoryboard">
-            <DoubleAnimationUsingKeyFrames Duration="0:0:10"
-             Storyboard.TargetProperty="Height"
-             Storyboard.TargetName="myEllipse">
+    <DoubleAnimationUsingKeyFrames Duration="0:0:10"
+        Storyboard.TargetProperty="Height"
+        Storyboard.TargetName="myEllipse">
 
-                <!-- This keyframe animates the ellipse up to the crest 
-                     where it slows down and stops. -->
-                <EasingDoubleKeyFrame Value="-300" KeyTime="00:00:02">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CubicEase/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
+        <!-- This keyframe animates the ellipse up to the crest 
+            where it slows down and stops. -->
+        <EasingDoubleKeyFrame Value="-300" KeyTime="00:00:02">
+            <EasingDoubleKeyFrame.EasingFunction>
+                <CubicEase/>
+            </EasingDoubleKeyFrame.EasingFunction>
+        </EasingDoubleKeyFrame>
 
-                <!-- This keyframe animates the ellipse back down and makes
-                     it bounce. -->
-                <EasingDoubleKeyFrame Value="0" KeyTime="00:00:06">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BounceEase Bounces="5"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
+        !-- This keyframe animates the ellipse back down and makes
+            it bounce. -->
+        <EasingDoubleKeyFrame Value="0" KeyTime="00:00:06">
+            <EasingDoubleKeyFrame.EasingFunction>
+                <BounceEase Bounces="5"/>
+            </EasingDoubleKeyFrame.EasingFunction>
+        </EasingDoubleKeyFrame>
+    </DoubleAnimationUsingKeyFrames>
+</Storyboard>
 ```
 
 Este es solo un ejemplo de una función de aceleración. Podrás encontrar más información en la siguiente sección.
@@ -204,40 +201,40 @@ Verás que se usa [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com
 
 ```xml
 <Style x:Key="TextButtonStyle" TargetType="Button">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Grid Background="Transparent">
-                        <TextBlock x:Name="Text"
-                            Text="{TemplateBinding Content}"/>
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal"/>
-                                <VisualState x:Name="PointerOver">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Foreground">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ApplicationPointerOverForegroundThemeBrush}"/>
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="Pressed">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Foreground">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ApplicationPressedForegroundThemeBrush}"/>
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="Button">
+                <Grid Background="Transparent">
+                    <TextBlock x:Name="Text"
+                        Text="{TemplateBinding Content}"/>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal"/>
+                            <VisualState x:Name="PointerOver">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Foreground">
+                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ApplicationPointerOverForegroundThemeBrush}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Foreground">
+                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ApplicationPressedForegroundThemeBrush}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
 ...
-                           </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    ```
+                       </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </Grid>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+```
 
-You also might use [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) to animate properties that use an enumeration value. Here's another example from a named style that comes from the Windows Runtime default templates. Note how it sets the [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) property that takes a [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR209006) enumeration constant. In this case you can set the value using attribute syntax. You only need the unqualified constant name from an enumeration for setting a property with an enumeration value, for example "Collapsed".
+También puedes usar [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) para animar propiedades que usan un valor de enumeración. Aquí tienes otro ejemplo de un estilo con nombre procedente de las plantillas predeterminadas de Windows Runtime. Observa que se establece la propiedad [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) que toma una constante de enumeración de [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR209006). En este caso, puedes establecer el valor con la sintaxis de atributos. Solo necesitas el nombre de constante no completo de una enumeración para establecer una propiedad con un valor de enumeración, por ejemplo, "Collapsed".
 
 ```xml
 <Style x:Key="BackButtonStyle" TargetType="Button">
@@ -273,16 +270,8 @@ Puedes usar más de un [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/l
 * [Introducción a las propiedades de dependencia](https://msdn.microsoft.com/library/windows/apps/Mt185583)
 * [**Guion gráfico**](https://msdn.microsoft.com/library/windows/apps/BR210490)
 * [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.targetpropertyproperty)
- 
-
- 
 
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

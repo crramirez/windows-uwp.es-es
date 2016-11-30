@@ -4,8 +4,8 @@ ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "Obtén las directrices de la interfaz de usuario y de la experiencia del usuario para los anuncios en aplicaciones."
 title: Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios en aplicaciones
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: d464a2de442e6f1833f429c8460c27bf85e577d1
+ms.sourcegitcommit: 8574695fe12042e44831227f81e1f6ea45e9c0da
+ms.openlocfilehash: 3019834a314e552654d74358f4b1eed8451d5119
 
 
 ---
@@ -40,10 +40,10 @@ Puedes encontrar información sobre cómo diseñar la apariencia de las aplicaci
 
 * Incluir publicidad excesiva y saturar la aplicación. Demasiados anuncios en la aplicación desmerecerán su apariencia y facilidad de uso. El objetivo de la publicidad es ganar dinero, pero no a costa de la propia aplicación.
 
-* Distraer al usuario de sus tareas principales. La aplicación siempre debe ser el enfoque principal. El espacio de anuncios debe incluirse de modo que sea un enfoque secundario.
+* Distraer al usuario de sus tareas principales. La aplicación siempre debe ser el enfoque principal. El espacio de anuncios debe incluirse de modo que sea un foco secundario.
 
 <span id="interstitialbestpractices10"/>
-## Procedimientos recomendados para anuncios intersticiales
+## Directivas y procedimientos recomendados para anuncios intersticiales
 
 * [Procedimientos recomendados para anuncios intersticiales: QUÉ HACER](#interstitialbestpracticesdo10)
 * [Procedimientos recomendados para anuncios intersticiales: QUÉ EVITAR](#interstitialbestpracticesavoid10)
@@ -124,18 +124,23 @@ Nuestro objetivo es ayudarte a lograr esta distinción. Dado que conoces tu apli
 <span id="interstitialbestpracticesnever10"/>
 ### Procedimientos recomendados para anuncios intersticiales: LO QUE NUNCA SE DEBE HACER (con aplicación de directiva)
 
-* Colocar elementos de la interfaz de usuario sobre el contenedor de anuncios.
+* No colocar nunca elementos de la interfaz de usuario sobre el contenedor de anuncios.
 
     * Los anunciantes han pagado por la pantalla completa.
 
+<span/>
 
-* Llamar a **Show** mientras el usuario está ocupado con la aplicación.
+* No llamar nunca a **Show** mientras el usuario está ocupado con la aplicación.
 
     * Dado que **InterstitialAd** creará una superposición de pantalla completa, que al usuario le parecerá desproporcionada.
 
     * También se pueden producir tasas de clics exageradas.
 
-* Usar anuncios para obtener todo lo que se pueda usar como moneda o negociarse con otros usuarios.
+* No usar nunca anuncios para obtener todo lo que se pueda usar como moneda o negociarse con otros usuarios.
+
+* No solicitar nunca un anuncio nuevo en el contexto del controlador de eventos para el evento [ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.erroroccurred.aspx). Esto puede ocasionar un bucle infinito y causar problemas de funcionamiento del servicio de publicidad.
+
+* No solicitar nunca un anuncio intersticial y luego no mostrar el anuncio que se proporciona para la aplicación. Si solicitas un anuncio y luego recibes el evento [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx) en respuesta a tu solicitud, debes mostrar el anuncio. Si implementas tu propia solución de mediación de anuncios con otras redes de publicidad, solicita un anuncio para el control **InterstitialAd** únicamente después de que las solicitudes realizadas a otras redes de publicidad no hayan resultado fructuosas.
 
  
 
@@ -143,6 +148,6 @@ Nuestro objetivo es ayudarte a lograr esta distinción. Dado que conoces tu apli
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

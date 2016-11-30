@@ -4,17 +4,15 @@ ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
 description: "Cada transacción de la Tienda Windows que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción."
 title: Usar recibos para comprobar la compra de productos
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 01b75d25c385d8dd856af79581fb4a346064c400
+ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
+ms.openlocfilehash: ea79a33a52bc45a9c8609e12bfac953c3f92db09
 
 ---
 
 # Usar recibos para comprobar la compra de productos
 
 
-
-
->**Nota**&nbsp;&nbsp;Los ejemplos de este artículo usan miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Si la aplicación está destinada a la versión 1607 (o posteriores) de Windows 10, te recomendamos que uses los miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) en lugar del espacio de nombres Windows.ApplicationModel.Store, para administrar las compras desde la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
+>**Nota**&nbsp;&nbsp;Los ejemplos de este artículo usan miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Si la aplicación está destinada a la versión 1607 o posterior de Windows 10, te recomendamos que uses los miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx), en lugar del espacio de nombres **Windows.ApplicationModel.Store**, para administrar las compras desde la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
 
 **API importantes**
 
@@ -242,6 +240,6 @@ namespace ReceiptVerificationSample
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

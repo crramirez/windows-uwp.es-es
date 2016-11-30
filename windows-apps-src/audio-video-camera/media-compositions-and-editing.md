@@ -4,8 +4,8 @@ ms.assetid: C4DB495D-1F91-40EF-A55C-5CABBF3269A2
 description: "Las API en el espacio de nombres Windows.Media.Editing, te permiten desarrollar rápidamente aplicaciones que permitan a los usuarios crear composiciones multimedia desde archivos de origen de audio y vídeo."
 title: "Composiciones y edición multimedia"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ee46b6d4ad116034cd84f062e7bf710ff8600479
+ms.sourcegitcommit: 018d7c85aae007a1fd887de0daf6625ccce37a64
+ms.openlocfilehash: a317c0e1714cc782c951733cf65a4c02c4a0ad9c
 
 ---
 
@@ -21,6 +21,7 @@ En este artículo te mostramos cómo usar las API en el espacio de nombres [**Wi
 La clase [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) es el contenedor de todos los clips multimedia que conforman la composición y es responsable de representar la composición final, cargar y guardar composiciones al disco y proporcionar una secuencia de vista previa de la composición para que el usuario pueda ver en la interfaz de usuario. Para usar la clase **MediaComposition** en tu aplicación, debes incluir el espacio de nombres [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565), así como el espacio de nombres [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962) que proporciona las API relacionadas que necesitas.
 
 [!code-cs[Namespace1](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetNamespace1)]
+
 
 Puedes acceder al objeto **MediaComposition** desde varios puntos en el código, así que normalmente tendrás que declarar una variable de miembro en la que almacenar el objeto.
 
@@ -54,7 +55,7 @@ Las composiciones multimedia normalmente contienen uno o varios clips de vídeo.
 
 ## Vista previa de la composición de un MediaElement
 
-Para permitir al usuario ver la composición de multimedia, agrega una clase [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) en el archivo XAML que defina tu interfaz de usuario.
+Para permitir al usuario ver la composición de multimedia, agrega una clase [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement) al archivo XAML que defina tu interfaz de usuario.
 
 [!code-xml[MediaElement](./code/MediaEditing/cs/MainPage.xaml#SnippetMediaElement)]
 
@@ -63,16 +64,16 @@ Declara una variable de miembro de tipo [**MediaStreamSource**](https://msdn.mic
 
 [!code-cs[DeclareMediaStreamSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetDeclareMediaStreamSource)]
 
-Llama al método [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) del objeto **MediaComposition** para crear un método **MediaStreamSource** para la composición y, a continuación, llama al método [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029) de la clase **MediaElement**. Una vez hecho esto, podrás ver la composición en la interfaz de usuario.
+Llama el método [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) del objeto **MediaComposition** para crear un **MediaStreamSource** para la composición. Crea un objeto [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource) llamando al método de fábrica [**CreateFromMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn930907) y asígnalo a la propiedad [**origen**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.Source) de **MediaPlayerElement**. La composición se puede ver en la interfaz de usuario.
 
 
 [!code-cs[UpdateMediaElementSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetUpdateMediaElementSource)]
 
 -   El objeto **MediaComposition** debe contener al menos un clip multimedia antes de llamar al método [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674), o el valor del objeto devuelto será "null".
 
--   La escala de tiempo **MediaElement** no se actualiza automáticamente para reflejar los cambios en la composición. Se recomienda que llames a **GeneratePreviewMediaStreamSource** y a **SetMediaStreamSource** cada vez que realices un conjunto de cambios en la composición y si deseas actualizar la interfaz de usuario.
+-   La escala de tiempo **MediaElement** no se actualiza automáticamente para reflejar los cambios en la composición. Se recomienda que llames a **GeneratePreviewMediaStreamSource** y que definas la propiedad **MediaPlayerElement** **Source** cada vez que realices un conjunto de cambios en la composición y si deseas actualizar la interfaz de usuario.
 
-Te recomendamos que establezcas el objeto **MediaStreamSource** y la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) de la clase **MediaElement** en null, cuando el usuario abandone la página para liberar los recursos asociados.
+Te recomendamos que establezcas el objeto **MediaStreamSource** y la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) de la clase **MediaPlayerElement** en null cuando el usuario abandone la página para liberar los recursos asociados.
 
 [!code-cs[OnNavigatedFrom](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetOnNavigatedFrom)]
 
@@ -94,7 +95,7 @@ Recorta la duración de un clip de vídeo en una composición estableciendo los 
 
 [!code-cs[TrimClipBeforeCurrentPosition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetTrimClipBeforeCurrentPosition)]
 
--   Puedes usar cualquier interfaz de usuario que quieras, para que el usuario pueda especificar el inicio y fin del recorte de valores. El ejemplo anterior usa la propiedad [**Position**](https://msdn.microsoft.com/library/windows/apps/br227407) de la clase **MediaElement** para primero determinar qué clip multimedia se reproduce en la posición actual en la composición comprobando la [**StartTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652629) y [**EndTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652618). Entonces, las propiedades **Position** y **StartTimeInComposition** se usan de nuevo para calcular la cantidad de tiempo para recortar desde el principio el clip. El método **FirstOrDefault** es un método de extensión del espacio de nombres **System.Linq** que simplifica el código para seleccionar elementos en una lista.
+-   Puedes usar cualquier interfaz de usuario que quieras para que el usuario pueda especificar el inicio y fin del recorte de valores. El ejemplo anterior usa la propiedad [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.Position) de la clase [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) asociada con **MediaPlayerElement** para determinar primero qué **MediaClip** se reproduce en la posición actual en la composición comprobando la [**StartTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652629) y [**EndTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652618). Entonces, las propiedades **Position** y **StartTimeInComposition** se usan de nuevo para calcular la cantidad de tiempo para recortar desde el principio el clip. El método **FirstOrDefault** es un método de extensión del espacio de nombres **System.Linq** que simplifica el código para seleccionar elementos en una lista.
 -   La propiedad [**OriginalDuration**](https://msdn.microsoft.com/library/windows/apps/dn652625) del objeto **MediaClip** permite conocer la duración del clip multimedia sin ningún recorte aplicado.
 -   La propiedad [**TrimmedDuration**](https://msdn.microsoft.com/library/windows/apps/dn652631) permite conocer la duración de los clip multimedia después de que se aplique el recorte.
 -   Especificar un valor de recorte que sea mayor que la duración de la imagen original no produce un error. Sin embargo, si una composición contiene un único clip y tal clip se recorta a longitud cero, especificando un valor de recorte grande, una llamada posterior a [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) devolverá un valor null, como si la composición no tuviera clips.
@@ -127,7 +128,7 @@ Las superposiciones permiten varias capas de vídeo entre sí de una composició
 
 ## Agregar efectos a un clip multimedia
 
-Cada **MediaClip** en una composición tiene una lista de los efectos de audio y vídeo a la que se pueden agregar varios efectos. Debes implementar los efectos [**IAudioEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608044) y [**IVideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608047) respectivamente. En el siguiente ejemplo se usa la posición actual del elemento multimedia para elegir la vista actual de **MediaClip** y, a continuación, se crea una nueva instancia de la clase [**VideoStabilizationEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn926762) y la anexa a la lista del clip multimedia [**VideoEffectDefinitions**](https://msdn.microsoft.com/library/windows/apps/dn652643).
+Cada **MediaClip** en una composición tiene una lista de los efectos de audio y vídeo a la que se pueden agregar varios efectos. Debes implementar los efectos [**IAudioEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608044) y [**IVideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608047) respectivamente. En el siguiente ejemplo se usa la posición actual del **MediaPlayerElement** para elegir la vista actual de **MediaClip** y, a continuación, se crea una nueva instancia de la clase [**VideoStabilizationEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn926762) y la anexa a la lista [**VideoEffectDefinitions**](https://msdn.microsoft.com/library/windows/apps/dn652643) del clip multimedia.
 
 [!code-cs[AddVideoEffect](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetAddVideoEffect)]
 
@@ -155,6 +156,6 @@ Se pueden deserializar composiciones multimedia desde un archivo para que el usu
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

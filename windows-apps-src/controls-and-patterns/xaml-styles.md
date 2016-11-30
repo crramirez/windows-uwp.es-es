@@ -9,13 +9,13 @@ ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
 label: XAML styles
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 3aad0049bdd43935fa61b6146b81030494ff5bdb
+ms.sourcegitcommit: 86f28a0509ead0632c942c6746fea19acac54931
+ms.openlocfilehash: d12358e6fcab2afa039426532d47616d74b22ef4
 
 ---
 # Estilos XAML
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 
 
@@ -143,6 +143,63 @@ El estilo base apunta a [**ContentControl**](https://msdn.microsoft.com/library/
 
 Una manera rápida de aplicar estilos a los controles es hacer clic con el botón secundario en un control de la superficie de diseño XAML de Microsoft Visual Studio y seleccionar **Editar estilo** o **Editar plantilla** (según el control en el que estás haciendo clic con el botón secundario). Después, puedes aplicar un estilo existente si seleccionas **Aplicar recurso** o definir un estilo nuevo si seleccionas **Crear vacío**. Si creas un estilo vacío, tienes la opción de definirlo en la página, en el archivo App.xaml o en un diccionario de recursos independiente.
 
+## Estilos ligeros
+
+Por norma general, los pinceles del sistema se reemplazan en el nivel de página o aplicación y, en cualquier caso, la sustitución afectará a todos los controles que hacen referencia a ese pincel; además, en XAML, muchos controles pueden hacer referencia el mismo pincel del sistema.
+
+![botones con estilo](images/LightweightStyling_ButtonStatesExample.png)
+
+```XAML
+<Page.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.ThemeDictionaries>
+            <ResourceDictionary x:Key="Light">
+                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                 <SolidColorBrush x:Key="ButtonForeground" Color="MediumSlateBlue"/>
+                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="MediumSlateBlue"/>
+            </ResourceDictionary>
+        </ResourceDictionary.ThemeDictionaries>
+    </ResourceDictionary>
+</Page.Resources>
+```
+
+Para estados como PointerOver (se sitúa el mouse sobre el botón), **PointerPressed** (se ha invocado el botón), o Disabled (el botón no es interactivos). Estos finales se anexan a los nombres de estilo ligero originales: **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled**, etc.. Al modificar esos pinceles, tus controles tendrán colores homogéneos en el tema de la aplicación.
+
+Al colocar estos reemplazos de pincel en el nivel de **recursos de la aplicación**, se modificarán todos los botones de toda la aplicación, en lugar de en una sola página.
+
+### Estilos según el control
+
+En otros casos se desea modificar un solo control de una página para que tenga un aspecto determinado, sin alterar ninguna otra versión de ese control:
+
+![botones con estilo](images/LightweightStyling_CheckboxExample.png)
+
+```XAML
+<CheckBox Content="Normal CheckBox" Margin="5"/>
+    <CheckBox Content="Special CheckBox" Margin="5">
+        <CheckBox.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.ThemeDictionaries>
+                    <ResourceDictionary x:Key="Light">
+                        <SolidColorBrush x:Key="CheckBoxForegroundUnchecked"
+                            Color="Purple"/>
+                        <SolidColorBrush x:Key="CheckBoxForegroundChecked"
+                            Color="Purple"/>
+                        <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundChecked"
+                            Color="White"/>
+                        <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeChecked"  
+                            Color="Purple"/>
+                        <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillChecked"
+                            Color="Purple"/>
+                    </ResourceDictionary>
+                </ResourceDictionary.ThemeDictionaries>
+            </ResourceDictionary>
+        </CheckBox.Resources>
+    </CheckBox>
+<CheckBox Content="Normal CheckBox" Margin="5"/>
+```
+
+Esto solo afectaría a esa "casilla especial" en la página donde estuviera el control.
+
 ## Modificar los estilos predeterminados del sistema
 
 Debes usar los estilos que vienen con los recursos XAML predeterminados de Windows Runtime cada vez que puedas. Cuando tengas que definir tus propios estilos, intenta basarte en los predeterminados siempre que sea posible (para ello, usa estilos heredados como se explicó antes o empieza a editar una copia del estilo predeterminado original).
@@ -153,6 +210,6 @@ Se puede usar un establecedor de estilo para la propiedad [**Template**](https:/
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

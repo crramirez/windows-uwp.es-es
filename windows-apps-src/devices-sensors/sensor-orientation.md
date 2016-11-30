@@ -4,8 +4,8 @@ ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
 title: "Orientación del sensor"
 description: "Los datos de sensor procedentes de las clases Accelerometer, Gyrometer, Compass, Inclinometer y OrientationSensor se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante la orientación horizontal del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: f0f9c7184c81edf8136849bf8a7bd9d04c340f62
+ms.sourcegitcommit: 62b4042cf1c6296c908a12feb5b2fcbd2b9b8734
+ms.openlocfilehash: 9deb0327f67350af49ba19224a75e766ff9805d7
 
 ---
 # Orientación del sensor
@@ -21,30 +21,30 @@ Los datos de sensor procedentes de las clases [**Accelerometer**](https://msdn.m
 
 ## Orientación de la pantalla y orientación del dispositivo
 
-Para poder comprender los ejes de referencia de los sensores, debes distinguir entre la orientación de la pantalla y la orientación del dispositivo. La orientación de la pantalla es la dirección en la que se muestran las imágenes y el texto en la pantalla, mientras que la orientación del dispositivo es el posicionamiento físico del dispositivo. En la imagen siguiente, tanto la orientación de la pantalla como la del dispositivo es **Landscape**.
+Para poder comprender los ejes de referencia de los sensores, debes distinguir entre la orientación de la pantalla y la orientación del dispositivo. La orientación de la pantalla es la dirección en la que se muestran las imágenes y el texto en la pantalla, mientras que la orientación del dispositivo es el posicionamiento físico del dispositivo. En la siguiente imagen, la orientación del dispositivo y de la pantalla está en **horizontal** (ten en cuenta que los ejes de sensor que se muestran solo se aplican a dispositivos con orientación horizontal predeterminada).
 
-![Orientación de la pantalla y del dispositivo en Landscape](images/accelerometer-axis-orientation-landscape-with-text.png)
+![Orientación de la pantalla y del dispositivo en horizontal](images/sensor-orientation-a.PNG)
 
-En la siguiente imagen se muestran ambas orientaciones, de la pantalla y del dispositivo, en **LandscapeFlipped**.
+En la siguiente imagen se muestran ambas orientaciones (de la pantalla y del dispositivo) en **LandscapeFlipped**.
 
-![Orientación de la pantalla y del dispositivo en LandscapeFlipped](images/accelerometer-axis-orientation-landscape-180-with-text.png)
+![Orientación de la pantalla y del dispositivo en LandscapeFlipped](images/sensor-orientation-b.PNG)
 
 En la siguiente imagen se muestra la orientación de pantalla en Landscape y la orientación del dispositivo en LandscapeFlipped.
 
-![Orientación de pantalla en Landscape con la orientación del dispositivo en LandscapeFlipped](images/accelerometer-axis-orientation-landscape-180-with-text-inverted.png)
+![Orientación de pantalla en Landscape con la orientación del dispositivo en LandscapeFlipped](images/sensor-orientation-c.PNG)
 
 Los valores de orientación se consultan a través de la clase [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/Dn264258), usando para ello el método [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.getforcurrentview.aspx) con la propiedad [**CurrentOrientation**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.currentorientation.aspx). Luego, se puede crear lógica contrastándolos con la enumeración [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/BR226142). No olvides que, por cada orientación que admitas, deberás admitir también una conversión de los ejes de referencia a dicha orientación.
 
 ## Dispositivos con orientación horizontal predeterminada y dispositivos con orientación vertical predeterminada
 
-Los fabricantes producen dispositivos tanto con orientación horizontal predeterminada como con orientación vertical predeterminada Cuando integran los componentes en los dispositivos, lo hacen de una forma unificada y coherente para que todos los dispositivos funcionen dentro del mismo marco de referencia. En la siguiente tabla se muestran los ejes de sensor para ambos dispositivos, con orientación horizontal predeterminada y con orientación vertical predeterminada.
+Los fabricantes producen dispositivos tanto con orientación horizontal predeterminada como con orientación vertical predeterminada. El marco de referencia varía entre dispositivos con orientación horizontal predeterminada (por ejemplo, equipos de escritorio y portátiles) y dispositivos con orientación vertical predeterminada (por ejemplo, teléfonos y algunas tabletas). En la siguiente tabla se muestran los ejes de sensor para ambos tipos de dispositivo, con orientación horizontal predeterminada y con orientación vertical predeterminada.
 
 | Orientación | Con orientación horizontal predeterminada | Con orientación vertical predeterminada |
 |-------------|-----------------|----------------|
-| **Landscape** | ![Dispositivo con orientación horizontal predeterminada en orientación Landscape](images/accelerometer-axis-orientation-landscape.png) | ![Dispositivo con orientación vertical predeterminada en orientación Landscape](images/accelerometer-axis-orientation-portrait-270.png) |
-| **Portrait** | ![Dispositivo con orientación horizontal predeterminada en orientación Portrait](images/accelerometer-axis-orientation-landscape-90.png) | ![Dispositivo con orientación vertical predeterminada en orientación Portrait](images/accelerometer-axis-orientation-portrait.png) |
-| **LandscapeFlipped ** | ![Dispositivo con orientación horizontal predeterminada en orientación LandscapeFlipped](images/accelerometer-axis-orientation-landscape-180.png) | ![Dispositivo con orientación vertical predeterminada en orientación LandscapeFlipped](images/accelerometer-axis-orientation-portrait-90.png) | 
-| **PortraitFlipped** | ![Dispositivo con orientación horizontal predeterminada en orientación PortraitFlipped](images/accelerometer-axis-orientation-landscape-270.png)| ![Dispositivo con orientación vertical predeterminada en orientación PortraitFlipped](images/accelerometer-axis-orientation-portrait-180.png) |
+| **Landscape** | ![Dispositivo con orientación horizontal predeterminada en orientación Landscape](images/sensor-orientation-0.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación Landscape](images/sensor-orientation-1.PNG) |
+| **Portrait** | ![Dispositivo con orientación horizontal predeterminada en orientación Portrait](images/sensor-orientation-2.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación Portrait](images/sensor-orientation-3.PNG) |
+| **LandscapeFlipped ** | ![Dispositivo con orientación horizontal predeterminada en orientación LandscapeFlipped](images/sensor-orientation-4.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación LandscapeFlipped](images/sensor-orientation-5.PNG) | 
+| **PortraitFlipped** | ![Dispositivo con orientación horizontal predeterminada en orientación PortraitFlipped](images/sensor-orientation-6.PNG)| ![Dispositivo con orientación vertical predeterminada en orientación PortraitFlipped](images/sensor-orientation-7.PNG) |
 
 ## Difusión de presentaciones con dispositivos y dispositivos sin periféricos
 
@@ -171,6 +171,6 @@ Los datos de [**OrientationSensor**](https://msdn.microsoft.com/library/windows/
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,12 +4,12 @@ Description: "Además de las API normales disponibles para todas las aplicacione
 Search.Product: eADQiWindows 10XVcnh
 title: Extensiones para aplicaciones de escritorio convertidas
 translationtype: Human Translation
-ms.sourcegitcommit: 09ddc8cad403a568a43e08f32abeaf0bbd40d59a
-ms.openlocfilehash: 2aa55797ed3a6588b3a27158282a02827fbd2109
+ms.sourcegitcommit: 8429e6e21319a03fc2a0260c68223437b9aed02e
+ms.openlocfilehash: 405b9b100be93f7098eb384d6b48b8690f5e6309
 
 ---
 
-# Extensiones para aplicaciones de escritorio convertidas
+# Extensiones para aplicaciones de puente de escritorio
 
 Una aplicación de escritorio convertida puede mejorarse con una amplia gama de API para la Plataforma universal de Windows (UWP). Sin embargo, además de las API normales disponibles para todas las aplicaciones para UWP, hay algunas extensiones y API disponibles únicamente para las aplicaciones de escritorio convertidas. Estas características se centran en escenarios como el inicio de un proceso cuando el usuario inicia sesión y la integración del Explorador de archivos y se han diseñado para suavizar la transición entre la aplicación de escritorio original y el paquete de la aplicación convertida.
 
@@ -93,7 +93,7 @@ A continuación, agrega elementos secundarios adicionales a esta entrada en func
 
 ### Tipos de archivo admitidos
 
-La aplicación puede especificar que admite la apertura de determinados tipos de archivos. Si un usuario hacer clic con el botón secundario en un archivo y selecciona "Abrir con", la aplicación aparecerá en la lista de sugerencias.
+La aplicación puede especificar que admite la apertura de determinados tipos de archivos. Si un usuario hace clic con el botón secundario en un archivo y selecciona "Abrir con", la aplicación aparecerá en la lista de sugerencias.
 
 Ejemplo:
 
@@ -106,9 +106,9 @@ Ejemplo:
 
 - *FileType* es la extensión que la aplicación admite.
 
-### Verbos de menú contextual 
+### Verbos de menú contextual de archivo 
 
-Normalmente, para abrir archivos los usuarios simplemente hacen doble clic en ellos. Sin embargo, si un usuario hacer clic con el botón secundario en un archivo, el menú contextual le presenta diversas opciones (conocidas como "Verbos") que proporcionan detalles adicionales sobre cómo desea interactuar con dicho archivo, como "Abrir", "Editar", "Vista previa" o "Imprimir". 
+Normalmente, para abrir archivos, los usuarios simplemente hacen doble clic en ellos. Sin embargo, si un usuario hacer clic con el botón secundario en un archivo, el menú contextual le presenta diversas opciones (conocidas como "Verbos") que proporcionan detalles adicionales sobre cómo desea interactuar con dicho archivo, como "Abrir", "Editar", "Vista previa" o "Imprimir". 
 
 Especificar un tipo de archivo admitido agrega automáticamente el verbo "Abrir". Sin embargo, las aplicaciones también pueden agregar verbos personalizados adicionales en el menú contextual del Explorador de archivos. Estos permiten a la aplicación iniciarse de una determinada manera en función de la elección del usuario al abrir un archivo.
 
@@ -125,6 +125,10 @@ Ejemplo:
 - *Verb Parameters* es la lista de parámetros de argumento y valores asociados con el verbo. Si la aplicación es una aplicación de plena confianza convertida, estos se pasan a él como argumentos del evento cuando se activa, para que puedas personalizar su comportamiento para verbos de activación distintos. Si una variable puede contener una ruta de archivo, debes encapsular dicho valor entre comillas para que no se interrumpa si se pasa una ruta de acceso que incluya espacios. Ten en cuenta que si la aplicación es una aplicación para UWP, no se pueden pasar parámetros; en su lugar, la aplicación recibe el identificador (consulta el punto anterior). 
 - *Verb extended* especifica que el verbo solo debe aparecer si el usuario mantiene presionada la tecla **Mayús** antes de hacer clic con el botón derecho en el archivo para mostrar el menú contextual. Este atributo es opcional y su valor predeterminado es *False* (por ejemplo, mostrar siempre el verbo) si no se incluye. Este comportamiento se especifica de forma individual para cada verbo (excepto "Abrir", que siempre es *False*). 
 - *Verb* es el nombre para mostrar en el menú contextual del Explorador de archivos. Esta cadena se puede traducir mediante ```ms-resource```.
+
+### Verbos de menú contextual de shell
+
+Por el momento, no se admite agregar elementos al menú contextual de carpetas de shell. 
 
 ### Modelo de selección múltiple
 
@@ -179,6 +183,6 @@ A continuación mostramos un ejemplo completo que integra muchos de los elemento
 - [Manifiesto del paquete de la aplicación](https://msdn.microsoft.com/library/windows/apps/br211474.aspx)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

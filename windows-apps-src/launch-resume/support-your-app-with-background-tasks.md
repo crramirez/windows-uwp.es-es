@@ -4,8 +4,8 @@ title: "Dar soporte a tu aplicación mediante tareas en segundo plano"
 description: "Los temas de esta sección muestran cómo ejecutar tu propio código ligero en segundo plano al responder a los desencadenadores con tareas en segundo plano."
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
 translationtype: Human Translation
-ms.sourcegitcommit: 30b3b8b3b40a96c4cd063ebab2794617568fa7a3
-ms.openlocfilehash: a583cd3e40bda9ab6c5c00d528183a9d8b3bd0e0
+ms.sourcegitcommit: 0f1bf88b1470cc5205f2e98ef15300da705203b1
+ms.openlocfilehash: 35b64637904e35413217d4cf500658999db07088
 
 ---
 
@@ -19,9 +19,9 @@ Los temas de esta sección muestran cómo ejecutar tu propio código ligero en s
 
 A partir de la versión 1607 de Windows 10, la reproducción de audio en segundo plano es mucho más fácil. Consulta [Reproducir elementos multimedia en segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio).
 
-## Varios procesos y tareas de un solo proceso en segundo plano
+## Tareas en segundo plano dentro y fuera de proceso
 
-Existen dos enfoques para la implementación de las tareas en segundo plano: en proceso y fuera de proceso. Con la versión 1607 de Windows 10, se introdujo la admisión del segundo plano en proceso para simplificar la escritura de las tareas en segundo plano. Pero todavía se pueden escribir tareas fuera del proceso en segundo plano. Consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md) para ver recomendaciones sobre cuándo escribir una tarea en segundo plano en proceso o fuera de proceso.
+Existen dos enfoques para implementar tareas en segundo plano: dentro de proceso, en el que la aplicación y su proceso en segundo plano se ejecutan en el mismo proceso, y fuera de proceso, donde la aplicación y el proceso en segundo plano se ejecutan en procesos aparte. Con la versión 1607 de Windows 10, se introdujo la admisión del segundo plano en proceso para simplificar la escritura de las tareas en segundo plano. Pero todavía se pueden escribir tareas fuera del proceso en segundo plano. Consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md) para ver recomendaciones sobre cuándo escribir una tarea en segundo plano en proceso o fuera de proceso.
 
 Las tareas en segundo plano fuera de proceso son más resistentes porque el proceso en segundo plano no se puede reducir el proceso de la aplicación si algo va mal. Pero la resistencia se consigue a costa de una complejidad mayor para poder administrar la comunicación entre procesos.
 
@@ -29,9 +29,9 @@ Las tareas fuera de proceso en segundo plano se implementan como clases ligeras 
 
 Con la versión 1607 de Windows 10, puedes habilitar la actividad en segundo plano sin tener que crear una tarea en segundo plano. En su lugar, puedes ejecutar el código en segundo plano directamente dentro de la aplicación en primer plano.
 
-Para comenzar rápidamente con las tareas en segundo plano de proceso único, consulta [Crear y registrar una tarea en segundo plano de proceso único](create-and-register-a-singleprocess-background-task.md).
+Para comenzar rápidamente con las tareas en segundo plano dentro de proceso, consulta [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md).
 
-Para comenzar rápidamente con las tareas en segundo plano multiproceso, consulta [Crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente](create-and-register-a-background-task.md).
+Para comenzar rápidamente con las tareas en segundo plano fuera de proceso, consulta [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md).
 
 > [!TIP]
 > A partir de Windows 10, ya no necesitarás colocar una aplicación en la pantalla de bloqueo como requisito previo para registrarle una tarea en segundo plano.
@@ -68,7 +68,7 @@ Para obtener más información, consulta [Establecer condiciones para ejecutar u
 
 ## Requisitos del manifiesto de la aplicación
 
-Antes de que la aplicación pueda registrar correctamente una tarea en segundo plano que se ejecuta en un proceso independiente, debe estar declarada en el manifiesto de la aplicación. Las tareas en segundo plano que se ejecutan en el mismo proceso que su aplicación de host no necesitan declararse en el manifiesto de la aplicación. Para obtener más información, consulta [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md).
+Antes de que la aplicación pueda registrar correctamente una tarea en segundo plano que se ejecuta fuera de proceso, debe estar declarada en el manifiesto de la aplicación. Las tareas en segundo plano que se ejecutan en el mismo proceso que su aplicación de host no necesitan declararse en el manifiesto de la aplicación. Para obtener más información, consulta [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md).
 
 ## Tareas en segundo plano
 
@@ -140,7 +140,7 @@ Las tareas de mantenimiento solo se ejecutan cuando el dispositivo está conecta
 La aplicación puede acceder a sensores y dispositivos periféricos desde una tarea en segundo plano mediante la clase [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Puedes usar este desencadenador para operaciones de larga duración como, por ejemplo, la sincronización o supervisión de datos. A diferencia de las tareas para eventos del sistema, una tarea **DeviceUseTrigger** solo se puede desencadenar mientras tu aplicación se está ejecutando en primer plano y no se puede establecer en ella ninguna condición.
 
 > [!IMPORTANT]
-> Las clases **DeviceUseTrigger** y **DeviceServicingTrigger** no pueden usarse con tareas en segundo plano de proceso único.
+> Las clases **DeviceUseTrigger** y **DeviceServicingTrigger** no pueden usarse con tareas en segundo plano dentro de proceso.
 
 Algunas operaciones críticas del dispositivo, como las actualizaciones del firmware que se ejecutan durante mucho tiempo, no se pueden realizar con [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Esas operaciones solo se pueden realizar en el equipo y solo las puede realizar una aplicación privilegiada que use [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Una *aplicación privilegiada* es una aplicación que ha recibido la autorización del fabricante del dispositivo para realizar esas operaciones. Los metadatos del dispositivo se usan para especificar qué aplicación, si es el caso, se ha designado como aplicación privilegiada para un dispositivo. Para más información, consulta [Sincronización y actualización de dispositivos para aplicaciones para dispositivos de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkId=306619).
 
@@ -165,8 +165,8 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 * [Reproducir elementos multimedia en segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
 * [Acceder a sensores y dispositivos desde una tarea en segundo plano](access-sensors-and-devices-from-a-background-task.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
-* [Crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente](create-and-register-a-background-task.md)
-* [Crear y registrar una tarea en segundo plano de proceso único](create-and-register-a-singleprocess-background-task.md)
+* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md)
+* [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
@@ -182,6 +182,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

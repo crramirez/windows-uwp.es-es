@@ -4,8 +4,8 @@ ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
 description: "Aprende a incluir anuncios intersticiales en una aplicación de Windows 10, Windows 8.1 o Windows Phone 8.1 con las bibliotecas de Microsoft Advertising en el Microsoft Store Services SDK."
 title: Anuncios intersticiales
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: 4082fdd17ba42fd2b6a7659095b019c1ad4875a0
+ms.sourcegitcommit: 8574695fe12042e44831227f81e1f6ea45e9c0da
+ms.openlocfilehash: fdc9bddafc7b80f66bb160183a6c416a8573883a
 
 ---
 
@@ -360,10 +360,10 @@ En este ejemplo se supone que has creado un proyecto de aplicación universal pa
 4.  Revisa los [informes de rendimiento de publicidad](../publish/advertising-performance-report.md) en el panel del Centro de desarrollo.
 
 <span id="interstitialbestpractices10"/>
-## Procedimientos recomendados para anuncios intersticiales
+## Directivas y procedimientos recomendados para anuncios intersticiales
 
 
-Para obtener más información sobre cómo usar anuncios intersticiales de forma eficaz, consulta el tema [UI and user experience guidelines](ui-and-user-experience-guidelines.md) (Directrices para la experiencia de UI y de usuario).
+Para obtener más información sobre cómo usar anuncios intersticiales de forma eficaz y las directivas que se deben seguir, consulta [Directivas y procedimientos recomendados para anuncios intersticiales](ui-and-user-experience-guidelines.md#interstitialbestpractices10).
 
 <span id="targetplatform10"/>
 ## Quitar los errores de referencia: dirigirse a una plataforma de CPU específica (XAML y HTML)
@@ -384,6 +384,6 @@ Al usar las bibliotecas de Microsoft Advertising, no puedes dirigirte a **Cualqu
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

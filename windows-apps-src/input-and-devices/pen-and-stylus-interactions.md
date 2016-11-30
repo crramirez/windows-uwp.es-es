@@ -7,8 +7,8 @@ label: Pen interactions and Windows Ink in UWP apps
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
 translationtype: Human Translation
-ms.sourcegitcommit: 8bc5612c0fc9273d32ccbfcd5b4334566d24b017
-ms.openlocfilehash: 67149f51cc16fee6f5ba818915432b18d2c1a549
+ms.sourcegitcommit: f7bc2ccbdd34bec671864323df53ab7bdda25a87
+ms.openlocfilehash: 4c87dea0387b2da055d07df5bab14c4ad61638d7
 
 ---
 
@@ -304,7 +304,7 @@ En este ejemplo usaremos los archivos MainPage.xaml y MainPage.xaml.cs para hosp
     ![lazo de selección](images/ink-unprocessed-3-small.png)
 
       ```csharp
-        // Handle unprocessed pointer events from modifed input.
+        // Handle unprocessed pointer events from modified input.
         // The input is used to provide selection functionality.
         // Selection UI is drawn on a canvas under the InkCanvas.
         private void UnprocessedInput_PointerPressed(
@@ -435,8 +435,11 @@ El secado personalizado requiere un objeto [**IInkD2DRenderer**](https://msdn.mi
 
 Al llamar a [**ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/apps/dn922012) (antes de cargar [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)), una aplicación crea un objeto [**InkSynchronizer**](https://msdn.microsoft.com/library/windows/apps/dn903979) para personalizar la representación de un trazo de lápiz seco en la clase [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) o [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). Por ejemplo, un trazo de lápiz se puede rasterizar e integrar en el contenido de la aplicación, en lugar de hacerlo como una capa de **InkCanvas** diferente.
 
-Para obtener un ejemplo completo de esta funcionalidad, consulta [Complex ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620314) (Muestra de entrada de lápiz compleja).
+Para obtener un ejemplo completo de esta funcionalidad, consulta la [muestra de entrada de lápiz compleja](http://go.microsoft.com/fwlink/p/?LinkID=620314).
 
+> [!NOTE]
+> El secado personalizado y la clase [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)  
+> Si tu aplicación invalida el comportamiento predeterminado de representación de entrada de lápiz de la clase [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) con una implementación de secado personalizado, los trazos de lápiz representados ya no están disponibles para InkToolbar y los comandos de borrado integrados de InkToolbar no funcionan según lo previsto. Para proporcionar la funcionalidad de borrado, debes controlar todos los eventos de puntero, realizar la prueba de posicionamiento en cada trazo e invalidar el comando "Borrar todas las entradas de lápiz" integrado.
 
 ## Otros artículos de esta sección
 
@@ -471,6 +474,6 @@ Para obtener un ejemplo completo de esta funcionalidad, consulta [Complex ink sa
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

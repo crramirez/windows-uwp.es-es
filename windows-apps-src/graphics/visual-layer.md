@@ -4,8 +4,8 @@ ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Capa visual
 description: "La API de Windows.UI.Composition proporciona acceso a la capa de composición entre la capa de marco (XAML) y la capa de elementos gráficos (DirectX)."
 translationtype: Human Translation
-ms.sourcegitcommit: 4a00847f0559d93eea199d7ddca0844b5ccaa5aa
-ms.openlocfilehash: 3a3dbf7b529d5d2848b161869d2f77fef3651488
+ms.sourcegitcommit: ad262cc6dcfd53156f3f3a3e850f9cfe99e87dc6
+ms.openlocfilehash: 066e5aea48340f96878a41aa28f0fef0c3bda9f5
 
 ---
 # Capa visual
@@ -30,6 +30,7 @@ Los elementos visuales pueden ser contenedores de otros elementos visuales o pue
 -   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858): El objeto base. La mayoría de las propiedades están aquí y las heredan los otros elementos visuales.
 -   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810): Se deriva del objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) y agrega la capacidad de insertar elementos visuales secundarios.
 -   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433): Se deriva del objeto [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) e incluye contenido en forma de imágenes, efectos y cadenas de intercambio.
+-   [**LayerVisual**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.layervisual.aspx): Un ContainerVisual cuyos elementos secundarios aparecen planos en una única capa.  
 -   [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789): Es la fábrica de objetos que administra la relación entre una aplicación y el proceso del compositor del sistema.
 
 El compositor también es una fábrica de varios otros objetos de composición que se usan para recortar o transformar elementos visuales en el árbol, así como un amplio conjunto de animaciones y efectos de transformación.
@@ -65,7 +66,7 @@ Este artículo está orientado a desarrolladores de Windows10 que programen apli
 -   Artículo de MSDN de Kenny Kerr sobre esta API: [Gráficos y animación: La nueva composición para Windows10](https://msdn.microsoft.com/magazine/mt590968)
 -   Muestras avanzadas de la interfaz de usuario y la composición en [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs).
 -   [**Documentación de referencia completa de la API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
--   Problemas conocidos: [Problemas conocidos](http://go.microsoft.com/fwlink/?LinkId=823237).
+-   [Problemas conocidos](http://go.microsoft.com/fwlink/?LinkId=823237).
 
  
 
@@ -77,6 +78,6 @@ Este artículo está orientado a desarrolladores de Windows10 que programen apli
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

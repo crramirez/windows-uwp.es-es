@@ -4,8 +4,8 @@ ms.assetid: B0AD0B8E-867E-4403-9CF6-43C81F3C30CA
 description: "Usa este método en la API de envío de la Tienda Windows para recuperar la información del paquete piloto de una aplicación registrada en tu cuenta del Centro de desarrollo de Windows."
 title: "Obtener paquetes piloto de una aplicación mediante la API de envío de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: a49e4f2cf7110e12dd33a5baa37e328a39bae348
+ms.sourcegitcommit: ef90390fcf7d4aa2e040eae65119ac7959f3423f
+ms.openlocfilehash: eddac4b37f6f00bad33f543f0e55415a5dcea887
 
 ---
 
@@ -45,10 +45,10 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 ### Parámetros de solicitud
 
-| Nombre        | Tipo   | Descripción  |  Obligatorio  |    
-|---------------|--------|----------------------------------|
-| applicationId | cadena | Obligatorio. El Id. de la Tienda de la aplicación para la que quieres recuperar los paquetes piloto. Para obtener más información sobre el Id. de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Sí  |
-|  top  |  entero  |  El número de elementos que se devolverán en la solicitud (es decir, el número de paquetes piloto que se devolverán). Si los paquetes piloto de la aplicación superan el valor especificado en la consulta, el cuerpo de la respuesta incluye una ruta de acceso al URI relativa que puedes anexar al URI del método para solicitar la siguiente página de datos.  |  No  |
+|  Nombre  |  Tipo  |  Descripción  |  Obligatorio  |
+|------|------|------|------|
+|  applicationId  |  cadena  |  El identificador de la Tienda de la aplicación para la que quieres recuperar paquetes piloto. Para obtener más información sobre el Id. de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Sí  |
+|  top  |  entero  |  Número de elementos que se devolverán en la solicitud (es decir, el número de paquetes piloto que se devolverán). Si los paquetes piloto de tu cuenta superan el valor especificado en la consulta, el cuerpo de la respuesta incluirá una ruta de acceso al URI relativa que puedes anexar al URI del método para solicitar la siguiente página de datos.  |  No  |
 |  skip  |  entero  |  El número de elementos que se omitirán en la consulta antes de devolver los elementos restantes. Usa este parámetro para consultar conjuntos de datos. Por ejemplo, top = 10 y skip = 0 recuperan los elementos del 1 al 10, mientras que top = 10 y skip = 10 recuperan los elementos del 11 al 20, y así sucesivamente.  |  No  |
 
 <span/>
@@ -131,6 +131,6 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

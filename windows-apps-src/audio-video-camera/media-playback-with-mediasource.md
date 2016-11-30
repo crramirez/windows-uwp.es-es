@@ -4,8 +4,8 @@ ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
 description: "En este artículo se muestra cómo usar la clase MediaSource, que proporciona una forma común de hacer referencia a contenido multimedia y reproducirlo desde diferentes orígenes (como archivos locales o remotos) y se expone un modelo común para acceder a datos multimedia, independientemente del formato multimedia subyacente."
 title: "Elementos multimedia, listas de reproducción y pistas"
 translationtype: Human Translation
-ms.sourcegitcommit: c2e337e88f9dda3380dd62c32ca6e5d942366636
-ms.openlocfilehash: bb49af7a386356647000e268bcc6983351eaf4b8
+ms.sourcegitcommit: 9999805c8a3bf946aa323b921cea6d63f9a48789
+ms.openlocfilehash: 4c4c6fdb1ea2d42d5bda1034df082bf836d8b803
 
 ---
 
@@ -128,7 +128,7 @@ En el controlador del evento [**OpenFailed**](https://msdn.microsoft.com/library
 [!code-cs[OpenFailed](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetOpenFailed)]
 
 ## Establecer las propiedades de visualización que se usan en los controles de transporte de contenido multimedia del sistema
-A partir de Windows 10, versión 1607, el contenido multimedia que se reproduce en una clase [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) se integra automáticamente en los controles de transporte de contenido multimedia del sistema (SMTC) de manera predeterminada. Puedes especificar los metadatos que se mostrarán en SMTC actualizando las propiedades de visualización de **MediaPlaybackItem**. Obtén un objeto que representa las propiedades de visualización de un elemento mediante una llamada a [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties). Establece si el elemento de reproducción es música o vídeo al establecer el valor de la propiedad [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type). A continuación, establece las propiedades [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties) o [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) del objeto. Llama a [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923) para establecer la actualización de las propiedades del elemento en los valores que hayas especificado. Por lo general, una aplicación recuperará los valores de visualización dinámicamente desde un servicio web, pero en el siguiente ejemplo se muestra este proceso con los valores codificados de forma rígida.
+A partir de Windows 10, versión 1607, el contenido multimedia que se reproduce en una clase [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) se integra automáticamente en los controles de transporte de contenido multimedia del sistema (SMTC) de manera predeterminada. Puedes especificar los metadatos que se mostrarán en SMTC actualizando las propiedades de visualización de **MediaPlaybackItem**. Obtén un objeto que representa las propiedades de visualización de un elemento mediante una llamada a [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties). Establece si el elemento de reproducción es música o vídeo al establecer el valor de la propiedad [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type). A continuación, establece las propiedades [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties) o [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) del objeto. Llama a [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923) para actualizar las propiedades del elemento en los valores que hayas especificado. Por lo general, una aplicación recuperará los valores de visualización dinámicamente desde un servicio web, pero en el siguiente ejemplo se muestra este proceso con los valores codificados de forma rígida.
 
 [!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
 
@@ -226,6 +226,6 @@ El evento [**ItemFailed**](https://msdn.microsoft.com/library/windows/apps/Windo
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

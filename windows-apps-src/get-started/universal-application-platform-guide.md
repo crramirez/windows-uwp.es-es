@@ -4,8 +4,8 @@ title: "Introducción a la Plataforma universal de Windows"
 description: "Obtén más información sobre las aplicaciones para la Plataforma universal de Windows (UWP) que se pueden ejecutar en una amplia variedad de dispositivos que ejecuten Windows 10."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 translationtype: Human Translation
-ms.sourcegitcommit: 0f2ed552898f7cbb476055a6d6b7aa76545113b1
-ms.openlocfilehash: c433bd2eba2a5be114680f52a8da0b5c7b563186
+ms.sourcegitcommit: 98dd2da8e16552fcde9790bd77f17a2100b63d4f
+ms.openlocfilehash: 170bbb4e22b3ac642b0dfd0c9136d3dd39d519d0
 
 ---
 
@@ -189,7 +189,6 @@ Las siguientes API ofrecen acceso a la entrada:
 
 ## Escribir código
 
-
 Entre las opciones de lenguaje de programación para tu [proyecto de Windows 10 en Visual Studio](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx#target_win10) se incluyen Visual C++, C#, Visual Basic y JavaScript. Con Visual C++, C# y Visual Basic, puedes usar XAML para obtener una experiencia de interfaz de usuario nativa con fidelidad total. Con Visual C++, puedes dibujar con DirectX en lugar de XAML, o usar ambos. Con JavaScript, la capa de presentación será HTML, y HTML es, por supuesto, un estándar web multiplataforma. Gran parte del código y de la interfaz de usuario será universal y se ejecutará del mismo modo en cualquier dispositivo. Pero para adaptar el código a familias de dispositivos determinadas y la interfaz de usuario a factores de forma concretos, tendrás la opción de usar código adaptable y una interfaz de usuario adaptable. Veamos los distintos casos.
 
 **Llamar a una API que implementa la familia de dispositivos de destino**
@@ -279,8 +278,11 @@ El nuevo panel unificado del Centro de desarrollo de Windows te permite administ
 
 Consulta [Usar el panel unificado del Centro de desarrollo de Windows](../publish/using-the-windows-dev-center-dashboard.md) para aprender a enviar tus aplicaciones para publicarlas en la Tienda Windows.
 
+## Consulta también ##
+Para obtener más material de introducción, consulta [Windows 10 - An Introduction to Building Windows Apps for Windows 10 Devices (Windows 10: Introducción a la compilación de aplicaciones para dispositivos para Windows 10)](https://msdn.microsoft.com/en-us/magazine/dn973012.aspx).
 
 
-<!--HONumber=Sep16_HO3-->
+
+<!--HONumber=Nov16_HO1-->
 
 

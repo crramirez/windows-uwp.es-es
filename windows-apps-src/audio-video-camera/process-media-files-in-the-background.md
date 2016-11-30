@@ -4,8 +4,8 @@ ms.assetid: B5E3A66D-0453-4D95-A3DB-8E650540A300
 description: "En este artículo se muestra cómo usar la clase MediaProcessingTrigger y una tarea en segundo plano para procesar los archivos multimedia en segundo plano."
 title: Procesar archivos multimedia en segundo plano
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 704fa52a9e98382940b7863d6196ca0af5d33460
+ms.sourcegitcommit: fb0e8a535ff4e27530fa45aca80b21f17a523c7b
+ms.openlocfilehash: 8a65ce9ed9de050bbcee2612bf53c5bfd44ffc72
 
 ---
 
@@ -78,6 +78,10 @@ El método auxiliar **SendToastNotification** crea una nueva notificación del s
 
 [!code-cs[SendToastNotification](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetSendToastNotification)]
 
+En el controlador para el evento [**Canceled**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.IBackgroundTaskInstance.Canceled), que se llama cuando el sistema cancela la tarea en segundo plano, puedes registrar el error con fines de telemetría.
+
+[!code-cs[OnCanceled](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetOnCanceled)]
+
 ## Registrar y cargar la tarea en segundo plano
 
 Para poder iniciar la tarea en segundo plano desde la aplicación en primer plano, debes actualizar el archivo Package.appmanifest de la aplicación en primer plano para que el sistema sepa que esta aplicación usa una tarea en segundo plano.
@@ -140,6 +144,6 @@ Se llama al controlador de eventos **OnCompleted** cuando la tarea en segundo pl
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

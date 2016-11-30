@@ -4,8 +4,8 @@ title: "Supervisar el progreso y la finalización de tareas en segundo plano"
 description: "Aprende el modo en que la aplicación puede reconocer el progreso y finalización notificados por una tarea en segundo plano."
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 0488e47c35b2f7c8a8db2b2aca4527c4c3b67d28
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: c12c3184cf6f4dce3d3ee2a4cf49843c8b9828d3
 
 ---
 
@@ -21,11 +21,11 @@ ms.openlocfilehash: 0488e47c35b2f7c8a8db2b2aca4527c4c3b67d28
 -   [**BackgroundTaskProgressEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224785)
 -   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
 
-Aprende cómo la aplicación puede reconocer el progreso y la finalización notificados por una tarea en segundo plano que se ejecuta en un proceso independiente. (Para tareas en segundo plano de un solo proceso, puedes establecer variables compartidas para indicar el progreso y finalización).
+Aprende cómo la aplicación puede reconocer el progreso y la finalización notificados por una tarea en segundo plano que se ejecuta fuera del proceso. (Para tareas en segundo plano dentro del proceso, puedes establecer variables compartidas para indicar el progreso y finalización).
 
- Las tareas en segundo plano están desacopladas de la aplicación y se ejecutan de forma independiente, pero el código de la aplicación puede supervisar el progreso y la finalización de una tarea en segundo plano. Para ello, la aplicación se suscribe a eventos de las tareas en segundo plano que ha registrado con el sistema.
+ El código de la aplicación puede supervisar el progreso y la finalización de la tarea en segundo plano. Para ello, la aplicación se suscribe a eventos de las tareas en segundo plano que ha registrado con el sistema.
 
--   En este tema se supone que tienes una aplicación que registra tareas en segundo plano. Para comenzar rápidamente a crear una tarea en segundo plano, consulta [Creación y registro de una tarea en segundo plano](create-and-register-a-background-task.md). Para obtener información más detallada acerca de condiciones y desencadenadores, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
+-   En este tema se supone que tienes una aplicación que registra tareas en segundo plano. Para comenzar rápidamente a crear una tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano dentro del proceso](create-and-register-an-inproc-background-task.md) o [Crear y registrar una tarea en segundo plano que se ejecuta fuera del proceso](create-and-register-an-outofproc-background-task.md). Para obtener información más detallada acerca de condiciones y desencadenadores, consulta [Hacer que tu aplicación sea compatible con las tareas en segundo plano](support-your-app-with-background-tasks.md).
 
 ## Crear un controlador de eventos para controlar las tareas en segundo plano finalizadas
 
@@ -197,7 +197,8 @@ Aprende cómo la aplicación puede reconocer el progreso y la finalización noti
 
 ## Temas relacionados
 
-* [Crear y registrar una tarea en segundo plano](create-and-register-a-background-task.md)
+* [Crear y registrar una tarea en segundo plano dentro del proceso](create-and-register-an-inproc-background-task.md).
+* [Crear y registrar una tarea en segundo plano fuera del proceso.](create-and-register-an-outofproc-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Registrar una tarea en segundo plano](register-a-background-task.md)
@@ -212,6 +213,6 @@ Aprende cómo la aplicación puede reconocer el progreso y la finalización noti
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

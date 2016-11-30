@@ -6,8 +6,8 @@ ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: fe012189566a20203b2bf8cae72f80655eeadfd1
-ms.openlocfilehash: 29a33550c3b8c80c1ae2c8349fc0b771717325f1
+ms.sourcegitcommit: 19e033455caf677c4e65ffb7bd7ce11a5a93b7a9
+ms.openlocfilehash: 5f6aee51984f86c67db9dc77eace614e385df088
 
 ---
 
@@ -21,6 +21,24 @@ Las interacciones del usuario en la Plataforma universal de Windows (UWP) son un
 UWP usa un sistema "inteligente" de interacción contextual que, en la mayoría de los casos, elimina la necesidad de controlar individualmente los tipos únicos de entradas que recibe la aplicación. Esto incluye el control de la función táctil, el panel táctil, el mouse y la entrada manuscrita como un tipo de puntero genérico para admitir gestos estáticos (como presionar o mantener presionado), gestos de manipulación (como deslizar para movimiento panorámico) o la representación de la entrada de lápiz digital.
 
 Familiarízate con cada tipo de dispositivo de entrada y sus comportamientos, capacidades y limitaciones con determinados factores de forma. Esto puede ayudarte a decidir si los controles de plataforma y las prestaciones son suficientes para tu aplicación o requieren que proporciones experiencias de interacción personalizadas.
+
+## Surface Dial
+
+Para la Actualización de aniversario de Windows 10, presentamos una nueva categoría de dispositivo de entrada llamado rueda de Windows. Surface Dial es el primer dispositivo de esta clase. 
+
+### Compatibilidad con dispositivos
+
+-   Tableta
+-   PC y portátiles
+
+### Uso típico
+
+Con un factor de forma que se basa en una acción (o gesto) de giro, Surface Dial se ha diseñado como un dispositivo de entrada secundario multimodal que complementa o modifica la entrada de un dispositivo principal. En la mayoría de los casos, el dispositivo se manipula con la mano no dominante del usuario mientras realiza una tarea con la mano dominante (por ejemplo, una entrada manuscrita con un lápiz).
+
+### Más información
+
+[Directrices de diseño de Surface Dial](windows-wheel-interactions.md)
+
 
 ## Cortana
 
@@ -332,6 +350,6 @@ Al igual que las personas usan una combinación de voz y gestos para comunicarse
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

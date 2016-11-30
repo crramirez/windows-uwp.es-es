@@ -4,8 +4,8 @@ ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
 description: "Usa este método en la API de envío de la Tienda Windows para obtener datos para un envío de complemento existente."
 title: "Obtener un envío de complemento con el uso de la API de envío de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 699f26e8a73e1777f5966faf346945807d460315
+ms.sourcegitcommit: 03942eb9015487cfd5690e4b1933e4febd705971
+ms.openlocfilehash: ecdd4292c7980a647075c55abf7d14edd39d23d6
 
 ---
 
@@ -16,13 +16,15 @@ ms.openlocfilehash: 699f26e8a73e1777f5966faf346945807d460315
 
 Usa este método en la API de envío de la Tienda Windows para obtener datos de un envío de complemento (también conocido como producto desde la aplicación o IAP) existente. Para obtener más información sobre el proceso de creación del envío de un complemento mediante la API de envío de la Tienda Windows, consulta [Administrar envíos de complemento](manage-add-on-submissions.md).
 
+>**Importante**&nbsp;&nbsp;Muy pronto, Microsoft cambiará el modelo de datos de precios para envíos de complementos en el Centro de desarrollo de Windows. Cuando se implemente este cambio, el recurso **Precios** de los datos de respuesta de este método aparecerá vacío y durante un tiempo no podrás conocer el precio ni los datos de venta de un envío de complemento con este método. Actualizaremos la API de envío de la Tienda Windows en el futuro para incorporar una nueva forma de acceder mediante programación a la información de precios de los envíos de complemento. Para obtener más información, consulta el [recurso Precios](manage-add-on-submissions.md#pricing-object).
+
 ## Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
-* Crea un envío de complemento para una aplicación de tu cuenta del Centro de desarrollo. Puedes hacerlo desde el panel del Centro de desarrollo o mediante el método para [Crear un envío de complemento](create-an-add-on-submission.md).
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
+* Crea un envío de complemento para una aplicación de tu cuenta del Centro de desarrollo. Puedes hacer esto en el panel del Centro de desarrollo o puedes hacerlo mediante el método [Create an add-on submission (Crear un envío de complemento)](create-an-add-on-submission.md).
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse en cuentas del Centro de desarrollo de Windows que estén autorizadas para usar la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
@@ -41,7 +43,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con el formato **Bearer** &lt;*token*&gt;. |
+| Autorización | cadena | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -167,6 +169,6 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

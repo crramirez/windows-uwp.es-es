@@ -4,17 +4,17 @@ ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
 description: "En este artículo se enumera la compatibilidad con formatos y códecs de vídeo para aplicaciones para UWP."
 title: "Códecs admitidos"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: 0f6da61ba167328968694d240e250dbc454d5e7b
+ms.sourcegitcommit: 7bd0002d62519757cf582d6070a22890a0e1837e
+ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
 ---
 
 # Códecs admitidos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este artículo se enumera la compatibilidad con formatos y códecs de vídeo para aplicaciones para UWP.
+En este artículo se enumera la compatibilidad con formatos y códecs de audio, vídeo e imagen para aplicaciones para UWP.
 
 En las tablas siguientes, "D" indica compatibilidad con el descodificador y "E" con el codificador.
 
@@ -2685,18 +2685,80 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 </tbody>
 </table>
 
- 
+## Compatibilidad con formato y códec de imagen 
 
- 
+<table>
+<colgroup>
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Códec</th>
+<th align="left">Escritorio</th>
+<th align="left">Otras familias de dispositivos</th>
+</tr>
+</thead>
+<tr class="odd">
+<td align="left">BMP</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="even">
+<td align="left">DDS</td>
+<td align="left">D/E<sup>1</sup></td>
+<td align="left">D/E<sup>1</sup></td>
+</tr>
+<tr class="odd">
+<td align="left">DNG</td>
+<td align="left">D<sup>2</sup></td>
+<td align="left">D<sup>2</sup></td>
+</tr>
+<tr class="even">
+<td align="left">GIF</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="odd">
+<td align="left">ICO</td>
+<td align="left">D</td>
+<td align="left">D</td>
+</tr>
+<tr class="even">
+<td align="left">JPEG</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="odd">
+<td align="left">JPEG-XR</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="even">
+<td align="left">PNG</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="odd">
+<td align="left">TIFF</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="even">
+<td align="left">Cámara RAW</td>
+<td align="left">D<sup>3</sup></td>
+<td align="left">No</td>
+</tr>
+</table>
 
- 
+<sup>1</sup> Se admiten imágenes DDS que usan compresión desde BC1 hasta BC5.  
+<sup>2</sup> Se admiten imágenes DNG con una vista previa incrustada que no sea RAW.  
+<sup>3</sup> Solo se admiten determinados formatos de cámara RAW.  
+
+Para obtener más información acerca de los códecs de imágenes, consulta [Native WIC Codecs (Códecs WIC nativos)](https://msdn.microsoft.com/library/windows/desktop/gg430027.aspx).
 
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

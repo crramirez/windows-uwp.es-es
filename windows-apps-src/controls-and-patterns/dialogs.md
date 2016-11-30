@@ -5,8 +5,8 @@ title: "Cuadros de diálogo y controles flotantes"
 label: Dialogs
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: ff9940c06276165dc139e120c4e9cdeb005ff125
+ms.sourcegitcommit: 86f28a0509ead0632c942c6746fea19acac54931
+ms.openlocfilehash: 6b0b680cd85d6f57c3ca06758ab7dcaef3f7ffe5
 
 ---
 # Cuadros de diálogo y controles flotantes
@@ -48,7 +48,7 @@ Los cuadros de diálogo y los controles flotantes son elementos transitorios de 
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
    <p><b>Cuadros de diálogo</b> <br/><br/>
-   ![Ejemplo de un cuadro de diálogo con todos los botones](images/controls_dialog_twobutton.png)</p>
+    ![Ejemplo de un cuadro de diálogo](images/dialogs/dialog-delete-file-example.png)</p>
 <p>Los cuadros de diálogo son superposiciones modales en la interfaz de usuario que proporcionan información contextual sobre la aplicación. Los cuadros de diálogo bloquean las interacciones con la ventana de la aplicación hasta que se descarten de forma explícita. A menudo solicitan algún tipo de acción por parte del usuario.   
 </p><br/>
 
@@ -130,7 +130,8 @@ Dado que los cuadros de diálogo bloquean las interacciones y los controles flot
 
 
 
-## Instrucciones de uso de cuadros de diálogo
+## Cuadros de diálogo
+### Directrices generales
 
 -   Identifica claramente el problema o el objetivo del usuario en la primera línea del texto del cuadro de diálogo.
 -   El título del cuadro de diálogo es la instrucción principal y es opcional.
@@ -146,7 +147,23 @@ Dado que los cuadros de diálogo bloquean las interacciones y los controles flot
 -   Los cuadros de diálogo de error muestran el mensaje de error en el cuadro de diálogo, junto con la información pertinente. El único botón que se usa en un cuadro de diálogo de error debe ser "Cerrar" o una acción similar.
 -   No uses cuadros de diálogo en el caso de los errores que son contextuales para un lugar específico de la página, como los errores de validación (en los campos de contraseña, por ejemplo); usa el lienzo de la aplicación para mostrar errores en línea.
 
-## Crear un cuadro de diálogo
+### Cuadros de diálogo de confirmación (Aceptar/Cancelar)
+Un cuadro de diálogo de confirmación ofrece a los usuarios la posibilidad de confirmar que desean realizar una acción. Pueden confirman la acción o cancelarla.  
+Un cuadro de diálogo de confirmación típico tiene dos botones: un botón de afirmación ("Aceptar") y un botón de cancelación.  
+
+<ul>
+    <li>
+        <p>En general, el botón afirmación debe estar a la izquierda (el botón primario) y el botón de cancelación (el botón secundario) debe estar en la derecha.</p>
+         ![Un cuadro de diálogo de Aceptar/Cancelar](images/dialogs/dialog-delete-file-example.png)
+        
+    </li>
+    <li>Como se explicó en la sección de recomendaciones generales, usa botones con texto que identifique respuestas específicas a la instrucción principal o al contenido.
+    </li>
+</ul>
+
+> Algunas plataformas colocan el botón de afirmación a la derecha en lugar de a la izquierda. Entonces, ¿por qué recomendamos colocarlo a la izquierda?  Si supones que la mayoría de los usuarios son diestros y sujetan su teléfono con esa mano, realmente resulta más cómodo presionar el botón de afirmación cuando está a la izquierda, porque es más probable que el botón esté dentro del arco del pulgar del usuario. Los botones situados en el lado derecho de la pantalla requerirán que el usuario cambie la posición de su pulgar hacia dentro a una posición menos cómoda.
+
+### Crear un cuadro de diálogo
 Para crear un cuadro de diálogo, usa la [clase ContentDialog](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx). Puedes crear un cuadro de diálogo en el código o el marcado. Aunque suele ser más fácil definir los elementos de la interfaz de usuario en XAML, en el caso de un cuadro de diálogo simple, es más sencillo usar código solamente. En este ejemplo se crea un cuadro de diálogo para notificar al usuario que no hay conexión Wi-Fi y luego se usa el método [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) para mostrarlo.
 
 ```csharp
@@ -174,25 +191,25 @@ private async void displayDeleteFileDialog()
     {
         Title = "Delete file permanently?",
         Content = "If you delete this file, you won't be able to recover it. Do you want to delete it?",
-        PrimaryButtonText = "Cancel",
-        SecondaryButtonText = "Delete file permanently"
+        PrimaryButtonText = "Delete",
+        SecondaryButtonText = "Cancel"
     };
 
     ContentDialogResult result = await deleteFileDialog.ShowAsync();
     
-    // Delete the file if the user clicked the second button. 
+    // Delete the file if the user clicked the primary button. 
     /// Otherwise, do nothing. 
-    if (result == ContentDialogResult.Secondary)
+    if (result == ContentDialogResult.Primary)
     {
         // Delete the file. 
     }
 }
 ```
 
+## Controles flotantes
+###  Crear un control flotante
 
-##  Crear un control flotante
-
-Un control flotante es un contenedor abierto que puede mostrar interfaz de usuario arbitraria como su contenido.  
+Un control flotante es un contenedor abierto que puede mostrar una interfaz de usuario arbitraria como su contenido.  
 
 Los controles flotantes se asocian a controles específicos. Puedes usar la propiedad [Placement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.placement.aspx) para especificar dónde aparece el control flotante: superior, inferior, izquierda, derecha o completo. Si seleccionas el [modo de colocación completa](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutplacementmode.aspx), la aplicación amplía el control flotante y lo centra dentro de la ventana de la aplicación. Cuando son visibles, deben anclarse al objeto de invocación y se debe especificar su posición relativa preferida con relación al objeto: arriba, izquierda, abajo o derecha. El control flotante también tiene un modo de colocación completa que intenta ampliar el control flotante y centrarlo dentro de la ventana de la aplicación. Algunos controles, como [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx), proporcionan una propiedad [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) que puedes usar para asociar un control flotante. 
 
@@ -278,7 +295,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 }
 ````
 
-## Diseñar un control flotante
+### Diseñar un control flotante
 Para diseñar un control flotante, modifica su propiedad [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx). En el siguiente ejemplo se muestra un párrafo de texto ajustado y se permite que el bloque de texto sea accesible para un lector de pantalla.
 
 ````xaml
@@ -308,6 +325,6 @@ Para diseñar un control flotante, modifica su propiedad [FlyoutPresenterStyle](
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ title: Establecer condiciones para ejecutar una tarea en segundo plano
 description: "Aprende a establecer condiciones que controlen cuándo se ejecutará tu tarea en segundo plano."
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 0d90511c9fcfd722dfcc51a8ff8e5163e31e9fdf
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: c22fed27b77f3287dd11a05c32405fe18521af65
 
 ---
 
@@ -29,9 +29,9 @@ También es posible combinar varias condiciones llamando a AddCondition varias v
 
 ## Crear un objeto SystemCondition
 
-En este tema se supone que ya tienes una tarea en segundo plano asociada con tu aplicación y que tu aplicación ya incluye código que crea un objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) denominado **taskBuilder**.  Consulta [Crear y registrar una tarea en segundo plano de proceso único](create-and-register-a-singleprocess-background-task.md) o [Crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente](create-and-register-a-background-task.md) si necesitas crear primero una tarea en segundo plano.
+En este tema se supone que ya tienes una tarea en segundo plano asociada a tu aplicación y que esta ya incluye código que crea un objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) denominado **taskBuilder**.  Consulta [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md) o [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md) si necesitas crear primero una tarea en segundo plano.
 
-Este tema se aplica a las tareas en segundo plano que se ejecutan en un proceso independiente, así como las que se ejecutan en el mismo proceso que la aplicación en primer plano.
+Este tema se aplica a las tareas en segundo plano que se ejecutan fuera de proceso, así como las que se ejecutan en el mismo proceso que la aplicación en primer plano.
 
 Antes de agregar la condición, crea un objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) que representa la condición que debe estar vigente para que una tarea en segundo plano se ejecute. En el constructor, especifica la condición que debe cumplirse proporcionando un valor de enumeración [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
 
@@ -161,8 +161,8 @@ En el siguiente fragmento se muestran varias condiciones en el contexto de creac
 
 ****
 
-* [Crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente](create-and-register-a-background-task.md)
-* [Crear y registrar una tarea en segundo plano de proceso único](create-and-register-a-singleprocess-background-task.md)
+* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md)
+* [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
@@ -172,9 +172,6 @@ En el siguiente fragmento se muestran varias condiciones en el contexto de creac
 * [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
-
-****
-
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
 * [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
@@ -184,6 +181,6 @@ En el siguiente fragmento se muestran varias condiciones en el contexto de creac
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

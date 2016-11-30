@@ -4,8 +4,8 @@ title: "Declarar tareas en segundo plano en el manifiesto de la aplicación"
 description: "Habilita el uso de tareas en segundo plano declarándolas como extensiones en el manifiesto de la aplicación."
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 6ec298a956673c114d34d64b026394ece2c33506
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: b3518780600b9fe8f9be5af48eb5ee6022ec350f
 
 ---
 
@@ -23,9 +23,9 @@ ms.openlocfilehash: 6ec298a956673c114d34d64b026394ece2c33506
 Habilita el uso de tareas en segundo plano declarándolas como extensiones en el manifiesto de la aplicación.
 
 > [!Important]
->  Este artículo es específico para tareas en segundo plano que se ejecutan en un proceso independiente. Las tareas en segundo plano de procesos únicos no se declaran en el manifiesto.
+>  Este artículo es específico de tareas fuera del proceso en segundo plano. Las tareas en segundo plano dentro del proceso no se declaran en el manifiesto.
 
-Las tareas en segundo plano que se ejecutan en un proceso independiente deben declararse en el manifiesto de la aplicación. De lo contrario, tu aplicación no podrá registrarlas (se generará una excepción). Además, las tareas en segundo plano deben declararse en el manifiesto de la aplicación para pasar la certificación.
+Las tareas en segundo plano fuera del proceso deben declararse en el manifiesto de la aplicación. De lo contrario, tu aplicación no podrá registrarlas (se generará una excepción). Además, las tareas en segundo plano fuera del proceso deben declararse en el manifiesto de la aplicación para pasar la certificación.
 
 Este tema supone que has creado una o más clases de tareas en segundo plano y que tu aplicación registra cada tarea en segundo plano para ejecutar en respuesta a, al menos, un desencadenador.
 
@@ -212,6 +212,6 @@ En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en u
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,30 +4,27 @@ ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: "Usa este método para renovar una clave de la Tienda Windows."
 title: Renovar una clave de id. de la Tienda Windows
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 1a2cb625f95a5ad8e94911ead2402cb2589e209a
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: 4e0ca6fe88218faef1f7c9192a5e19569e9c00b4
 
 ---
 
 # Renovar una clave de id. de la Tienda Windows
 
 
-
-
-Usa este método para renovar una clave de la Tienda Windows. Cuando se genera una clave de id. de la Tienda Windows mediante una llamada al método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) o [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675), la clave es válida durante 90 días. Cuando la clave expira, puedes usarla para renegociar una nueva clave mediante este método.
+Usa este método para renovar una clave de la Tienda Windows. Al [generar una clave de id. de la Tienda Windows](view-and-grant-products-from-a-service.md#step-4), la clave es válida durante 90 días. Cuando la clave expira, puedes usarla para renegociar una nueva clave mediante este método.
 
 ## Requisitos previos
 
 
 Para usar este método, necesitarás:
 
--   Un token de acceso de Azure AD que se creó con el URI de público `https://onestore.microsoft.com`.
--   Una clave de Id. de la Tienda Windows expirada que se haya generado mediante una llamada al método [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) o [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) desde el código del cliente de la aplicación.
+* Un token de acceso de Azure AD que se creó con el URI de audiencia `https://onestore.microsoft.com`.
+* La clave de id. de la Tienda Windows expirada que se haya [generado a partir del código de cliente en la aplicación](view-and-grant-products-from-a-service.md#step-4).
 
 Para obtener más información, consulta [Ver y conceder productos desde un servicio](view-and-grant-products-from-a-service.md).
 
 ## Solicitud
-
 
 ### Sintaxis de la solicitud
 
@@ -43,7 +40,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 | Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
 | Host           | string | Debe establecerse en el valor **collections.mp.microsoft.com** o **purchase.mp.microsoft.com**.           |
-| Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
+| Content-Length | number | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
 <span/>
@@ -78,7 +75,7 @@ Host: collections.mp.microsoft.com
 
 | Parámetro | Tipo   | Descripción                                                                                                            | Obligatorio |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
-| clave       | string | Clave de la Tienda Windows actualizada que se puede usar en futuras llamadas a la API de colecciones o la API de compras de la Tienda Windows. | No       |
+| key       | string | Clave de la Tienda Windows actualizada que se puede usar en futuras llamadas a la API de colecciones o la API de compras de la Tienda Windows. | No       |
 
 <span/>
 
@@ -119,6 +116,6 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

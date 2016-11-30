@@ -4,8 +4,8 @@ title: Responder a eventos del sistema con tareas en segundo plano
 description: Aprende a crear una tarea en segundo plano que responda a eventos SystemTrigger.
 ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 37a11b573267726707ee3743309083b774727886
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: a3d7ac01724b1e8dcabe3219855eabe172924764
 
 ---
 
@@ -21,8 +21,7 @@ ms.openlocfilehash: 37a11b573267726707ee3743309083b774727886
 
 Aprende a crear una tarea en segundo plano que responda a eventos [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-En este tema se supone que tienes una clase de tareas en segundo plano escrita para tu aplicación y que esta tarea necesita ejecutarse en respuesta a un evento desencadenado por el sistema, como cuando la disponibilidad de Internet cambia o el usuario inicia sesión. Este tema se centra en la clase [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839). Para obtener más información sobre cómo escribir una clase de tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano de proceso único](create-and-register-a-singleprocess-background-task.md) o
-* [Crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente](create-and-register-a-background-task.md).
+En este tema se supone que tienes una clase de tareas en segundo plano escrita para tu aplicación y que esta tarea necesita ejecutarse en respuesta a un evento desencadenado por el sistema, como cuando la disponibilidad de Internet cambia o el usuario inicia sesión. Este tema se centra en la clase [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839). Para obtener más información sobre cómo escribir una clase de tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md) o [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md).
 
 ## Crear un objeto SystemTrigger
 
@@ -44,7 +43,7 @@ En este tema se supone que tienes una clase de tareas en segundo plano escrita p
 
 -   Registra la tarea en segundo plano llamando a tu función de registro de tareas en segundo plano. Para obtener más información sobre el registro de tareas en segundo plano, consulta [Registrar una tarea en segundo plano](register-a-background-task.md).
 
-    El siguiente código registra la tarea en segundo plano para un proceso en segundo plano que se ejecuta en un proceso independiente. Si estuvieras llamando a una tarea en segundo plano que se ejecuta en el mismo proceso que la aplicación host, no establecerías `entrypoint`:
+    El siguiente código registra la tarea en segundo plano para un proceso en segundo plano que se ejecuta fuera de proceso. Si estuvieras llamando a una tarea en segundo plano que se ejecuta en el mismo proceso que la aplicación host, no establecerías `entrypoint`:
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -54,7 +53,7 @@ En este tema se supone que tienes una clase de tareas en segundo plano escrita p
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
     > ```
     > ```cpp
-    > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass"; // don't set for single-process background tasks
+    > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass"; // don't set for in-process background tasks
     > String ^ taskName   = "Internet-based background task";
     >
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
@@ -80,8 +79,8 @@ Las aplicaciones pueden registrar tareas en segundo plano que respondan a los ev
 
 ****
 
-* [Crear y registrar una tarea en segundo plano que se ejecuta en un proceso independiente](create-and-register-a-background-task.md)
-* [Crear y registrar una tarea en segundo plano de proceso único](create-and-register-a-singleprocess-background-task.md)
+* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md)
+* [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
@@ -91,14 +90,11 @@ Las aplicaciones pueden registrar tareas en segundo plano que respondan a los ev
 * [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
-
-****
-
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
 * [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

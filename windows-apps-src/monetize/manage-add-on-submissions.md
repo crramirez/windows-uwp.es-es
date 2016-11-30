@@ -4,8 +4,8 @@ ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
 description: "Usa estos métodos en la API de envío de la Tienda Windows para administrar envíos de complemento para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows."
 title: "Administrar envíos de complemento con la API de envío de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 52e589c90a8d78905a9617dc2802d76a2f0f0360
+ms.sourcegitcommit: 4a1ea50d72e0f754658d8ee99755b873619e1969
+ms.openlocfilehash: 9d19ecae9d5c43c28e887627372aabb58bf0aab2
 
 ---
 
@@ -16,6 +16,8 @@ ms.openlocfilehash: 52e589c90a8d78905a9617dc2802d76a2f0f0360
 Usa los métodos siguientes en la API de envío de la Tienda Windows para administrar envíos de complemento (también conocidos como productos desde la aplicación o IAP) para aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
 >**Nota**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado. Para poder usar estos métodos para crear o administrar envíos para un complemento, el complemento ya debe existir en tu cuenta del Centro de desarrollo. Para crear un complemento, puedes [usar el panel del Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions) o los métodos de la API de envío de la Tienda Windows que se describen en [Administrar complementos](manage-add-ons.md).
+
+>**Importante:**&nbsp;&nbsp;muy pronto, Microsoft cambiará el modelo de datos de precios para envíos de complemento al Centro de desarrollo de Windows. Después de implementar este cambio, el recurso de **precios** ya no se admitirá y no podrás obtener ni modificar datos de ventas y precios temporalmente para los envíos de complemento con la API de envío de la Tienda Windows. Actualizaremos la API en el futuro para introducir una nueva forma de acceso mediante programación a información sobre precios para envíos de complemento. Para obtener más información, consulta la sección [Recurso de precios](#pricing-object).
 
 | Método        | URI    | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -168,15 +170,15 @@ Este recurso tiene los siguientes valores.
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | id            | string  | Identificador del envío.  |
-| contentType           | string  |  [Tipo de contenido](https://msdn.microsoft.com/windows/uwp/publish/enter-iap-properties#content-type) que se proporciona en el complemento. Puede ser uno de los valores siguientes: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
-| keywords           | array  | Matriz de cadenas que contienen hasta 10 [palabras clave](../publish/enter-iap-properties.md#keywords) para el complemento. Gracias a estas palabras clave, la aplicación puede consultar complementos.   |
-| lifetime           | string  |  Duración del complemento. Puede ser uno de los valores siguientes: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
+| contentType           | string  |  [Tipo de contenido](../publish/enter-add-on-properties.md#content-type) que se proporciona en el complemento. Este puede ser uno de los valores siguientes: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
+| keywords           | array  | Matriz de cadenas que contienen hasta 10 [palabras clave](../publish/enter-add-on-properties.md#keywords) para el complemento. Gracias a estas palabras clave, la aplicación puede consultar complementos.   |
+| lifetime           | string  |  Duración del complemento. Esta puede ser uno de los valores siguientes: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
 | listings           | object  |  Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es un objeto de [recurso Descripción](#listing-object) que contiene la información de descripción del complemento.  |
 | pricing           | object  | Objeto que contiene la información del precio del complemento. Para obtener más información, consulta la sección [Recurso Precios](#pricing-object) a continuación.  |
-| targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | string  | Modo de publicación del envío. Este puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |
-| tag           | string  |  [Etiqueta](../publish/enter-iap-properties.md#tag) del complemento.   |
-| visibility  | string  |  Visibilidad del complemento. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
+| tag           | cadena  |  Los [datos personalizados desarrollador](../publish/enter-add-on-properties.md#custom-developer-data) para el complemento (esta información se denominaba anteriormente *tag*).   |
+| visibility  | cadena  |  Visibilidad del complemento. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
 | status  | string  |  Estado del envío. Puede ser uno de los valores siguientes: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  Contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores. Para obtener más información, consulta la sección [Detalles de estado](#status-details-object) a continuación. |
 | fileUploadUrl           | string  | URI de firma de acceso compartido (SAS) para cargar los paquetes para el envío. Si estás agregando nuevos paquetes para el envío, carga el archivo ZIP que contiene los paquetes en este URI. Para obtener más información, consulta [Crear un envío de complemento](#create-an-add-on-submission).  |
@@ -206,19 +208,32 @@ Este recurso contiene los datos de iconos de una lista de complementos. Este rec
 <span id="pricing-object" />
 ### Precios
 
-Este recurso contiene información sobre precios del complemento. Este recurso tiene los siguientes valores.
+Este recurso contiene información sobre precios del complemento.
+
+>**Importante:**&nbsp;&nbsp;muy pronto, Microsoft cambiará el modelo de datos de precios para envíos de complemento al Centro de desarrollo de Windows. Después de implementar este cambio, el recurso de **precios** ya no se admitirá y no podrás obtener ni modificar datos de ventas y precios temporalmente para los envíos de complemento con la API de envío de la Tienda Windows. Observarás los siguientes cambios de comportamiento:
+
+   > * Después de llamar al [método GET para obtener un envío de complemento](get-an-add-on-submission.md), el recurso de **precios** estará vacío. Puedes seguir utilizando el panel del Centro de desarrollo para obtener los datos de precios para el envío de complemento.
+   > * Cuando se llama al [método PUT para actualizar un envío de complemento](update-an-add-on-submission.md), la información del recurso de **precios** se omitirá. Puedes seguir utilizando el panel del Centro de desarrollo para modificar los datos de precios para el envío de complemento.
+
+> Próximamente, actualizaremos la API de envío de la Tienda Windows para introducir una nueva forma de obtener y actualizar información de precios para envíos de complemento mediante programación.
+
+Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
 |-----------------|---------|------|
 |  marketSpecificPricings               |    object     |  Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados del complemento en mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-prices). Los elementos de este diccionario reemplazan el precio base especificado por el valor *priceId* para el mercado especificado.     |     
 |  sales               |   array      |  Matriz de objetos que contienen información de ventas del complemento. Para obtener más información, consulta la sección [Venta](#sale-object) a continuación.    |     
-|  priceId               |   string      |  [Franja de precios](#price-tier) que especifica el [precio base](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) del complemento.    |
+|  priceId               |   string      |  [Franja de precios](#price-tiers) que especifica el [precio base](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) del complemento.    |
 
 
 <span id="sale-object" />
 ### Venta
 
-Este recurso contiene información de venta de un complemento. Este recurso tiene los siguientes valores.
+Este recurso contiene información de venta de un complemento.
+
+>**Importante:**&nbsp;&nbsp;muy pronto, Microsoft cambiará el modelo de datos de precios para envíos de complemento al Centro de desarrollo de Windows. Después de implementar este cambio, el recurso de **venta** ya no se admitirá y no podrás obtener ni modificar datos de ventas y precios temporalmente para los envíos de complemento con la API de envío de la Tienda Windows. Actualizaremos la API en el futuro para introducir una nueva forma de acceso mediante programación a información sobre ventas para envíos de complemento. Para obtener más información, consulta la sección [Recurso de precios](#pricing-object).
+
+Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
 |-----------------|---------|------|
@@ -315,6 +330,6 @@ Los valores siguientes representan el código de estado de un envío.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

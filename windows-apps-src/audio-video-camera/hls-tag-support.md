@@ -4,8 +4,8 @@ ms.assetid:
 description: "En este artículo se enumeran las etiquetas del protocolo HTTP Live Streaming (HLS) que se admiten en las aplicaciones para UWP."
 title: Compatibilidad con etiquetas HTTP Live Streaming (HLS)
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: 779e5d0da7186a6f94251b89cf27636170923d5c
+ms.sourcegitcommit: 3d61f5272e4d11acfb7e0a85436ca60ba458dcae
+ms.openlocfilehash: a561f11a1638d5fea21d1d3b3f8bc47f71271f3f
 
 ---
 
@@ -16,7 +16,7 @@ En la tabla siguiente se enumeran las etiquetas HLS que se admiten en las aplica
 > Se puede acceder a las etiquetas personalizadas que comienzan por "X-" como metadatos temporizados, como se describe en el artículo [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md).
 
 |Etiqueta |Introducida en la versión del protocolo HLS|Versión de borrador del documento del protocolo HLS|Obligatoria en el cliente|Versión de julio de Windows 10|Windows 10, versión 1511|Windows 10, versión 1606 |
-|---------------------|-----------|--------------|---------|--------------|
+|---------------------|-----------|--------------|---------|--------------|-----|-----|
 |4.3.1.  Etiquetas básicas                 |             |                   |         |             |     |    |
 | 4.3.1.1.  EXTM3U |1|0|OBLIGATORIA|Se admite|Se admite|Se admite|
 | 4.3.1.2.  EXT-X-VERSION |2|3|OBLIGATORIA|Se admite|Se admite|Se admite
@@ -86,6 +86,6 @@ En la tabla siguiente se enumeran las etiquetas HLS que se admiten en las aplica
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -5,8 +5,8 @@ title: "Vista de lista y vista de cuadrícula"
 label: List view and grid view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: aeb339e54a1363dbfe5ee5a764ad762a42a40ed9
+ms.sourcegitcommit: 8f9d85f0cb15c9fe4ceec9c397e23a134a442d3f
+ms.openlocfilehash: 8a14fa69089f6d796a803c1c1ff9bb678af3c913
 
 ---
 # ListView y GridView
@@ -314,8 +314,8 @@ En esta tabla se describen las interacciones del teclado, el mouse y de las func
 
 Tecla modificadora | Interacción
 -------------|------------
-Ninguna | <li>Un usuario puede seleccionar un solo elemento con la barra espaciadora, un clic del mouse o una entrada táctil.</li>
-Ctrl | <li>Un usuario puede anular la selección un solo elemento con la barra espaciadora, un clic del mouse o una entrada táctil.</li><li>Con las teclas de dirección, un usuario puede mover el foco independientemente de la selección.</li>
+Ninguna | <ul><li>Un usuario puede seleccionar un solo elemento con la barra espaciadora, un clic del mouse o una entrada táctil.</li></ul>
+Ctrl | <ul><li>Un usuario puede anular la selección un solo elemento con la barra espaciadora, un clic del mouse o una entrada táctil.</li><li>Con las teclas de dirección, un usuario puede mover el foco independientemente de la selección.</li></ul>
 
 Cuando SelectionMode es **Single**, puedes obtener el elemento de datos seleccionado desde la propiedad [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selecteditem.aspx). Puedes obtener el índice de la colección del elemento seleccionado con la propiedad [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectedindex.aspx). Si no se selecciona ningún elemento, SelectedItem es **null** y SelectedIndex es -1. 
  
@@ -327,8 +327,8 @@ En esta tabla se describen las interacciones del teclado, el mouse y de las func
 
 Tecla modificadora | Interacción
 -------------|------------
-Ninguna | <li>Un usuario puede seleccionar varios elementos con la barra espaciadora, un clic del mouse o una entrada táctil para alternar la selección del elemento especificado.</li><li>Con las teclas de dirección, un usuario puede mover el foco independientemente de la selección.</li>
-Mayús | <li>Un usuario puede seleccionar varios elementos contiguos haciendo clic o pulsando el primer elemento de la selección y luego el último elemento de la selección.</li><li>Con las teclas de dirección, un usuario puede crear una selección contigua empezando por el elemento seleccionado mientras se mantiene presionada la tecla Mayús.</li>
+Ninguna | <ul><li>Un usuario puede seleccionar varios elementos con la barra espaciadora, un clic del mouse o una entrada táctil para alternar la selección del elemento especificado.</li><li>Con las teclas de dirección, un usuario puede mover el foco independientemente de la selección.</li></ul>
+Mayús | <ul><li>Un usuario puede seleccionar varios elementos contiguos haciendo clic o pulsando el primer elemento de la selección y luego el último elemento de la selección.</li><li>Con las teclas de dirección, un usuario puede crear una selección contigua empezando por el elemento seleccionado mientras se mantiene presionada la tecla Mayús.</li></ul>
 
 ### Selección extendida
 
@@ -336,9 +336,9 @@ En esta tabla se describen las interacciones del teclado, el mouse y de las func
 
 Tecla modificadora | Interacción
 -------------|------------
-Ninguna | <li>El comportamiento es el mismo que la selección **Single**.</li>
-Ctrl | <li>Un usuario puede seleccionar varios elementos con la barra espaciadora, un clic del mouse o una entrada táctil para alternar la selección del elemento especificado.</li><li>Con las teclas de dirección, un usuario puede mover el foco independientemente de la selección.</li>
-Mayús | <li>Un usuario puede seleccionar varios elementos contiguos haciendo clic o pulsando el primer elemento de la selección y luego el último elemento de la selección.</li><li>Con las teclas de dirección, un usuario puede crear una selección contigua empezando por el elemento seleccionado mientras se mantiene presionada la tecla Mayús.</li>
+Ninguna | <ul><li>El comportamiento es el mismo que la selección **Single**.</li></ul>
+Ctrl | <ul><li>Un usuario puede seleccionar varios elementos con la barra espaciadora, un clic del mouse o una entrada táctil para alternar la selección del elemento especificado.</li><li>Con las teclas de dirección, un usuario puede mover el foco independientemente de la selección.</li></ul>
+Mayús | <ul><li>Un usuario puede seleccionar varios elementos contiguos haciendo clic o pulsando el primer elemento de la selección y luego el último elemento de la selección.</li><li>Con las teclas de dirección, un usuario puede crear una selección contigua empezando por el elemento seleccionado mientras se mantiene presionada la tecla Mayús.</li></ul>
 
 Cuando SelectionMode es **Multiple** o **Extended**, puedes obtener los elementos de datos seleccionados desde la propiedad [**SelectedItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selecteditems.aspx). 
 
@@ -522,6 +522,6 @@ Los controles ListView y GridView permiten arrastrar y colocar elementos en sí 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

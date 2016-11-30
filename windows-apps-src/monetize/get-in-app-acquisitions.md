@@ -4,8 +4,8 @@ ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
 description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de un complemento de un intervalo de fechas especificado y otros filtros opcionales."
 title: Obtener los datos de las adquisiciones de complementos
 translationtype: Human Translation
-ms.sourcegitcommit: ecb0f5263b7f7f470484e9bd579b7bdb6efcdfa4
-ms.openlocfilehash: 9d895200e6d1bc823ebcb52e0b034883f5a059e0
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 642bcab934a18631477e3709dcdeab0a9289844e
 
 ---
 
@@ -14,7 +14,7 @@ ms.openlocfilehash: 9d895200e6d1bc823ebcb52e0b034883f5a059e0
 
 
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de un complemento (también conocido como producto desde la aplicación o IAP) de un intervalo de fechas especificado y otros filtros opcionales. Este método devuelve los datos en formato JSON.
+Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de un complemento (también conocidos como productos desde la aplicación o IAP) de tu aplicación en formato JSON de un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de adquisiciones de complementos](../publish/add-on-acquisitions-report.md) del panel del Centro de desarrollo de Windows.
 
 ## Requisitos previos
 
@@ -129,6 +129,33 @@ El parámetro *applicationId* o *inAppProductId* es obligatorio. Para recuperar 
 <p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p>
 <p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p></td>
 <td align="left">No</td>
+</tr>
+<tr class="even">
+<td align="left">groupby</td>
+<td align="left">cadena</td>
+<td align="left"><p>Instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationName</strong></li>
+<li><strong>inAppProductName</strong></li>
+<li><strong>acquisitionType</strong></li>
+<li><strong>ageGroup</strong></li>
+<li><strong>storeClient</strong></li>
+<li><strong>gender</strong></li>
+<li><strong>market</strong></li>
+<li><strong>osVersion</strong></li>
+<li><strong>deviceType</strong></li>
+<li><strong>orderName</strong></li>
+</ul>
+<p>Las filas de datos que se devuelvan contendrán los campos especificados en el parámetro <em>groupby</em> y en los siguientes:</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationId</strong></li>
+<li><strong>inAppProductId</strong></li>
+<li><strong>acquisitionQuantity</strong></li>
+</ul>
+<p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</em></p></td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -278,9 +305,9 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 | Valor               | Tipo    | Descripción                                                                                                                                                                                                                              |
 |---------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date                | cadena  | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
-| inAppProductId      | cadena  | El Id. de la Tienda del complemento para el que estás recuperando los datos de compra.                                                                                                                                                                 |
-| inAppProductName    | cadena  | Nombre para mostrar del complemento.                                                                                                                                                                                                             |
-| applicationId       | cadena  | El Id. de la Tienda de la aplicación para la que quieres recuperar los datos de compra de complementos.                                                                                                                                                           |
+| inAppProductId      | cadena  | El identificador de la Tienda del complemento para el que quieres recuperar datos de compra.                                                                                                                                                                 |
+| inAppProductName    | cadena  | Nombre del complemento que quieres que se muestre. Este valor solo aparece en los datos de respuesta si el parámetro *aggregationLevel* se establece en **day**, a menos que especifiques el campo **inAppProductName** en el parámetro *groupby*.                                                                                                                                                                                                            |
+| applicationId       | cadena  | El identificador de la Tienda de la aplicación para la que quieres recuperar los datos de compra de complementos.                                                                                                                                                           |
 | applicationName     | cadena  | Nombre para mostrar de la aplicación.                                                                                                                                                                                                             |
 | deviceType          | cadena  | Tipo de dispositivo que completó la compra. Para obtener una lista de las cadenas admitidas, consulta la sección previa [filtrar campos](#filter-fields).                                                                                                  |
 | orderName           | cadena  | Nombre del pedido.                                                                                                                                                                                                                   |
@@ -296,7 +323,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 
 ### Ejemplo de respuesta
 
-En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, realizada para esta solicitud.
+En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo realizada para esta solicitud.
 
 ```json
 {
@@ -325,8 +352,9 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 
 ## Temas relacionados
 
+* [Informe de adquisiciones de complementos](../publish/add-on-acquisitions-report.md)
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
-* [Get app acquisitions (Obtener los datos de compra de la aplicación)](get-app-acquisitions.md)
+* [Obtener los datos de compra de la aplicación](get-app-acquisitions.md)
 * [Get error reporting data (Obtener los datos del informe de errores)](get-error-reporting-data.md)
 * [Get app ratings (Obtener la clasificación de la aplicación)](get-app-ratings.md)
 * [Get app reviews (Obtener opiniones de la aplicación)](get-app-reviews.md)
@@ -337,6 +365,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo, r
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

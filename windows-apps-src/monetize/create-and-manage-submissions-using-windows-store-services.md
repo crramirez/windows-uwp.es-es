@@ -4,8 +4,8 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Usa la API de envío de la tienda Windows para crear y administrar mediante programación los envíos para las aplicaciones que estén registradas en tu cuenta del Centro de desarrollo de Windows mediante programación."
 title: "Creación y administración de envíos mediante el uso de servicios de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 47e0ac11178af98589e75cc562631c6904b40da4
-ms.openlocfilehash: 0a566dfee8f7fe08c06ce4963435a70c30b1650d
+ms.sourcegitcommit: 03942eb9015487cfd5690e4b1933e4febd705971
+ms.openlocfilehash: 40855465fa2f9b1c32602b1b636761b608d88fc0
 
 ---
 
@@ -26,8 +26,11 @@ Los siguientes pasos describen el proceso de principio a fin del uso de la API d
 >**Importante**
 
 > * Esta API puede usarse solo para las cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API. Este permiso se habilita para cuentas de desarrollador en fases, y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilita este permiso para tu cuenta.
-
+<br/><br/>
 > * Esta API no puede usarse con aplicaciones o complementos que utilizan determinadas funciones que se introdujeron en el panel del Centro de desarrollo en agosto de 2016, incluidos (entre otros) actualizaciones obligatorias de aplicaciones y complementos consumibles administrados por la Tienda. Si usas la API de envío de la Tienda Windows con una aplicación o complemento que usa una de estas funciones, la API devolverá un código de error 409. En este caso, debes usar el panel para administrar los envíos para la aplicación o el complemento.
+<br/><br/>
+> * Muy pronto, Microsoft cambiará el modelo de datos de precios para envíos de aplicación al Centro de desarrollo de Windows. Después de implementar este cambio, los recursos de **Precios** para los envíos de aplicación y de complemento ya no se admitirán, y no podrás obtener temporalmente el período de prueba, los precios y los datos de ventas de esos envíos con la API de envío de la Tienda Windows. Actualizaremos la API en el futuro para introducir una nueva forma de acceso mediante programación a información sobre precios para envíos de aplicación y de complemento. Para obtener más información, consulta el [Recurso de precio para envíos de aplicación](manage-app-submissions.md#pricing-object) y [Recurso de precio para envíos de complemento](manage-add-on-submissions.md#pricing-object).
+
 
 <span id="prerequisites" />
 ## Paso 1: Completar requisitos previos para usar la API de envío de la Tienda Windows
@@ -135,6 +138,6 @@ Si tienes preguntas sobre la API de envío de la Tienda Windows o necesitas ayud
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

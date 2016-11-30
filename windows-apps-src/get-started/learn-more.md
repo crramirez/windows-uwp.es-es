@@ -5,8 +5,8 @@ title: "A continuación"
 description: "Ahora que ya creaste tu primera aplicación, visita el resto del Centro de desarrollo. Esta es una introducción a las diferentes secciones que contiene."
 keywords: "Centro de desarrollo, introducción"
 translationtype: Human Translation
-ms.sourcegitcommit: 743a3649613d39083520f8d79f4c0daf97336568
-ms.openlocfilehash: 5a1b5dbb3b9d841ca0c3f14f591acd716c153c54
+ms.sourcegitcommit: 1c059edde92a48af610af1033c3b18ca729410aa
+ms.openlocfilehash: 6b7985137e02a348fafabf0aaf298c5d20095bd7
 
 ---
 
@@ -18,10 +18,9 @@ Así que quieres escribir una aplicación. ¿Por dónde debes empezar? Estos son
 
 Nuestra recomendación es que consultes los temas sobre UWP para captar la esencia de la plataforma y, a continuación, investigues para crear tu interfaz de usuario mediante el uso y la posterior personalización de los controles XAML. La ventaja principal de XAML es el uso del *enlace de datos*, que conecta los controles con la información que tu aplicación quiere mostrar: si eres un nuevo usuario de la plataforma Windows, es importante que comprendas este concepto.
 
-Es posible que también encuentres útil el sitio del [kit de herramientas de desarrollo](https://developer.microsoft.com/windows/projects/campaigns/welcome-toolbox), que incluye una gran cantidad de información introductoria en un mismo lugar.
+Si quieres examinar las técnicas de programación más recientes de Windows 10, como agregar animaciones y efectos a tus aplicaciones, echa un vistazo al [Blog para desarrolladores de Windows](https://blogs.windows.com/buildingapps).
 
 <table class="wdg-noborder">
-
 <tr>
  <td width=60><img src="images/icon3.png" width=64></td>
     <td><h2>Ciclo de vida de UWP y la aplicación para UWP</h2><p>¿Cómo se inicia una aplicación y qué sucede cuándo inicias otra? A continuación se muestra el argumento.</p> <ul>
@@ -40,6 +39,7 @@ Es posible que también encuentres útil el sitio del [kit de herramientas de de
       <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/controls-and-events-intro">Introducción a los controles y patrones</a></li>
      <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/styling-controls">Estilo de los controles</a></li>
       <li><a href="https://msdn.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design">Tamaños de pantalla y puntos de interrupción de diseño adaptativo</a></li>
+      <li><a href="https://developer.microsoft.com/windows/projects/campaigns/welcome-toolbox">Usar el kit de herramientas de la comunidad de UWP para obtener una selección de los controles y patrones predefinidos</a></li>
     </ul></td>  
 </tr>
  
@@ -162,6 +162,6 @@ Esta es una lista de las secciones clave del contenido del Centro de desarrollo.
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

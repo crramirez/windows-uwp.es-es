@@ -4,8 +4,8 @@ ms.assetid: EFCF84D0-2F4C-454D-97DA-249E9EAA806C
 description: "La clase SystemMediaTransportControls permite que la aplicación use los controles de transporte de medios del sistema que están integrados en Windows y actualice los metadatos que los controles muestran sobre los elementos multimedia que está reproduciendo actualmente la aplicación."
 title: Control manual de los controles de transporte de contenido multimedia del sistema
 translationtype: Human Translation
-ms.sourcegitcommit: 2cf432bc9d6eb0e564b6d6aa7fdbfd78c7eef272
-ms.openlocfilehash: 6643f6bee55c1c9631ca20d2fe7eb6ac1c5ae3e2
+ms.sourcegitcommit: 34cb2fec3071add8617fe2bee2eaf50356611ac6
+ms.openlocfilehash: 471cf095109fc9bbfcb241dd6eb480603c3df655
 
 ---
 
@@ -19,6 +19,9 @@ Hay algunos escenarios donde es posible que tengas que implementar el control ma
 
 ## Configurar controles de transporte
 Si estás usando el control **MediaPlayer** para reproducir elementos multimedia, puedes obtener una instancia de la clase [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.SystemMediaTransportControls) si accedes a la propiedad [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.SystemMediaTransportControls). Si controlarás manualmente los SMTC, para deshabilitar la integración automática que proporciona el control **MediaPlayer**, establece la propiedad [**CommandManager.IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) en false.
+
+> [!NOTE] 
+> Si deshabilitas la clase [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) de [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) al establecer la propiedad [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) en "false", se interrumpirá el vínculo entre **MediaPlayer** y [**TransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.TransportControls) que proporciona el elemento **MediaPlayerElement**, de modo que los controles de transporte integrados ya no controlarán automáticamente la reproducción del reproductor. En su lugar, debes implementar tus propios controles para controlar la clase **MediaPlayer**.
 
 [!code-cs[InitSMTCMediaPlayer](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetInitSMTCMediaPlayer)]
 
@@ -116,6 +119,6 @@ Para obtener más información sobre la reproducción de audio en segundo plano,
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
