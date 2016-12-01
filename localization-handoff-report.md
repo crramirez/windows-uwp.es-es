@@ -1,78 +1,317 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 4
+ Total Files | 17
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\launch-resume\communicate-with-a-remote-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/4cc562ac78a32aea5a6e96e9ecbba7077e5fbde3?path=windows-apps-src%2Flaunch-resume%2Fcommunicate-with-a-remote-app-service.md&_a=contents) | HandedOffSuccess | [Details](#3d50330e6a6f81718a83439acda3ad0680e7311e4739)
- [windows-apps-src\packaging\create-app-package-with-makeappx-tool.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/28cd2b2a922a20e0b9ffc4d1ca65f6a55e92aa8f?path=windows-apps-src%2Fpackaging%2Fcreate-app-package-with-makeappx-tool.md&_a=contents) | HandedOffSuccess | [Details](#c99c76fac9303e174b5d804c2f1b99856be250065279)
- [windows-apps-src\packaging\index.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/28cd2b2a922a20e0b9ffc4d1ca65f6a55e92aa8f?path=windows-apps-src%2Fpackaging%2Findex.md&_a=contents) | HandedOffSuccess | [Details](#8aa4bfc8004b4d0739fe09e6e49e66de372569c45306)
- [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/28cd2b2a922a20e0b9ffc4d1ca65f6a55e92aa8f?path=windows-apps-src%2FTOC.md&_a=contents) | HandedOffSuccess | [Details](#ae1bb800a24ef9c7dca0f66d99671affa6c20bae8423)
+ [windows-apps-src\monetize\code-your-experiment-in-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fcode-your-experiment-in-your-app.md&_a=contents) | HandedOffSuccess | [Details](#cc32e2688bce636e1f4bda02aade4ed1d94f3e285113)
+ [windows-apps-src\monetize\configure-your-app-to-receive-dev-center-notifications.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fconfigure-your-app-to-receive-dev-center-notifications.md&_a=contents) | HandedOffSuccess | [Details](#d840fbe66e5ccb439148c7849e44b923a55867405203)
+ [windows-apps-src\monetize\create-and-run-your-first-experiment-with-a-b-testing.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fcreate-and-run-your-first-experiment-with-a-b-testing.md&_a=contents) | HandedOffSuccess | [Details](#65785e53b2e5ba788dbda533373737e193e1c7925212)
+ [windows-apps-src\monetize\enable-consumable-add-on-purchases.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fenable-consumable-add-on-purchases.md&_a=contents) | HandedOffSuccess | [Details](#12191a946ec080c8e386191363617a9c437671c55224)
+ [windows-apps-src\monetize\enable-consumable-in-app-product-purchases.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fenable-consumable-in-app-product-purchases.md&_a=contents) | HandedOffSuccess | [Details](#acb7218bed287f430950d4f8d3621831b269ae185225)
+ [windows-apps-src\monetize\enable-in-app-product-purchases.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fenable-in-app-product-purchases.md&_a=contents) | HandedOffSuccess | [Details](#1cd748cd1b6ca7e85cfb86daba367540af25db885226)
+ [windows-apps-src\monetize\enable-in-app-purchases-of-apps-and-add-ons.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fenable-in-app-purchases-of-apps-and-add-ons.md&_a=contents) | HandedOffSuccess | [Details](#05a93f3124324d7308f5494ad14a15bfd6a4e6985227)
+ [windows-apps-src\monetize\exclude-or-limit-features-in-a-trial-version-of-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fexclude-or-limit-features-in-a-trial-version-of-your-app.md&_a=contents) | HandedOffSuccess | [Details](#0d377677237264e2dad290c7d49c47800c2551385231)
+ [windows-apps-src\monetize\get-license-info-for-apps-and-add-ons.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fget-license-info-for-apps-and-add-ons.md&_a=contents) | HandedOffSuccess | [Details](#0482cc192eeff4d3633898b6fa677805c635c6e15254)
+ [windows-apps-src\monetize\get-product-info-for-apps-and-add-ons.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fget-product-info-for-apps-and-add-ons.md&_a=contents) | HandedOffSuccess | [Details](#dd58103d22314081985cd5ce0f98f2f25e1e72875257)
+ [windows-apps-src\monetize\implement-a-trial-version-of-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fimplement-a-trial-version-of-your-app.md&_a=contents) | HandedOffSuccess | [Details](#ea4c5637a970a63938da2b1bea9f11fd39de9cc85293)
+ [windows-apps-src\monetize\in-app-purchases-and-trials.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fin-app-purchases-and-trials.md&_a=contents) | HandedOffSuccess | [Details](#7783b6017a314ddb24509c55db8134a4c214430f5296)
+ [windows-apps-src\monetize\in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fin-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md&_a=contents) | HandedOffSuccess | [Details](#ee2a52a54be8510b962f1ef5c40570f3836d28c35295)
+ [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Flaunch-feedback-hub-from-your-app.md&_a=contents) | HandedOffSuccess | [Details](#4296bd4007ae5109c9a3736c977ba68f312b208c5305)
+ [windows-apps-src\monetize\log-custom-events-for-dev-center.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Flog-custom-events-for-dev-center.md&_a=contents) | HandedOffSuccess | [Details](#e0012d586d9b79db77bdeded6f0e1d2ce848bbea5306)
+ [windows-apps-src\monetize\manage-a-large-catalog-of-in-app-products.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fmanage-a-large-catalog-of-in-app-products.md&_a=contents) | HandedOffSuccess | [Details](#ccbf6f99820ebc9a9245066899b2bd3be69319e75307)
+ [windows-apps-src\monetize\use-receipts-to-verify-product-purchases.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fuse-receipts-to-verify-product-purchases.md&_a=contents) | HandedOffSuccess | [Details](#55631d364ca6f2d76d214eca6d00fbdd969c0e155342)
 
 ## Item Details
-##### <a name='3d50330e6a6f81718a83439acda3ad0680e7311e4739'></a> Source: [windows-apps-src\launch-resume\communicate-with-a-remote-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/4cc562ac78a32aea5a6e96e9ecbba7077e5fbde3?path=windows-apps-src%2Flaunch-resume%2Fcommunicate-with-a-remote-app-service.md&_a=contents)
+##### <a name='cc32e2688bce636e1f4bda02aade4ed1d94f3e285113'></a> Source: [windows-apps-src\monetize\code-your-experiment-in-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fcode-your-experiment-in-your-app.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [communicate-with-a-remote-app-service.69868a774210ff17c04a11fc7511d0ac1dca3d9d.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/61688acee9976b0a6c15c4dd4122e87c26f0a0e1?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fcommunicate-with-a-remote-app-service.69868a774210ff17c04a11fc7511d0ac1dca3d9d.es-es.xlf&_a=contents)
-* Handoff Datetime: 2016-11-30 23:18:33
+* Handoff File: [code-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fcode-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\launch-resume\communicate-with-a-remote-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/b81726c307dcf4449e41c5f20b99107b8f5f0674?path=windows-apps-src%2Flaunch-resume%2Fcommunicate-with-a-remote-app-service.md&_a=contents)
-* Current Handback File: [communicate-with-a-remote-app-service.69868a774210ff17c04a11fc7511d0ac1dca3d9d.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9d843656481f4607d37743442872c1044ab3d48e?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fcommunicate-with-a-remote-app-service.69868a774210ff17c04a11fc7511d0ac1dca3d9d.es-es.xlf&_a=contents)
-* Current Handback Datetime: 2016-09-26 12:56:55
-* Bilingual File: [communicate-with-a-remote-app-service.69868a774210ff17c04a11fc7511d0ac1dca3d9d.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9d843656481f4607d37743442872c1044ab3d48e?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fcommunicate-with-a-remote-app-service.69868a774210ff17c04a11fc7511d0ac1dca3d9d.es-es.xlf&_a=contents)
-* Bilingual Datetime: 2016-10-18 13:33:20
-* [Back to Top](#report-top)
-
-##### <a name='c99c76fac9303e174b5d804c2f1b99856be250065279'></a> Source: [windows-apps-src\packaging\create-app-package-with-makeappx-tool.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/28cd2b2a922a20e0b9ffc4d1ca65f6a55e92aa8f?path=windows-apps-src%2Fpackaging%2Fcreate-app-package-with-makeappx-tool.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [create-app-package-with-makeappx-tool.8a283ddd81f93b803caed2cc0d5a18e862337a2d.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/61688acee9976b0a6c15c4dd4122e87c26f0a0e1?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fcreate-app-package-with-makeappx-tool.8a283ddd81f93b803caed2cc0d5a18e862337a2d.es-es.xlf&_a=contents)
-* Handoff Datetime: 2016-11-30 23:18:33
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='8aa4bfc8004b4d0739fe09e6e49e66de372569c45306'></a> Source: [windows-apps-src\packaging\index.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/28cd2b2a922a20e0b9ffc4d1ca65f6a55e92aa8f?path=windows-apps-src%2Fpackaging%2Findex.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [index.4eb3a86427b760af0fe03321faacbb40d33523b8.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/61688acee9976b0a6c15c4dd4122e87c26f0a0e1?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Findex.4eb3a86427b760af0fe03321faacbb40d33523b8.es-es.xlf&_a=contents)
-* Handoff Datetime: 2016-11-30 23:18:33
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\packaging\index.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fpackaging%2Findex.md&_a=contents)
-* Current Handback File: [index.4eb3a86427b760af0fe03321faacbb40d33523b8.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Findex.4eb3a86427b760af0fe03321faacbb40d33523b8.es-es.xlf&_a=contents)
+* Current Target File: [windows-apps-src\monetize\code-your-experiment-in-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fmonetize%2Fcode-your-experiment-in-your-app.md&_a=contents)
+* Current Handback File: [code-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fcode-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.es-es.xlf&_a=contents)
 * Current Handback Datetime: 2016-11-30 15:18:37
-* Bilingual File: [index.4eb3a86427b760af0fe03321faacbb40d33523b8.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Findex.4eb3a86427b760af0fe03321faacbb40d33523b8.es-es.xlf&_a=contents)
+* Bilingual File: [code-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fcode-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.es-es.xlf&_a=contents)
 * Bilingual Datetime: 2016-11-30 15:24:45
 * [Back to Top](#report-top)
 
-##### <a name='ae1bb800a24ef9c7dca0f66d99671affa6c20bae8423'></a> Source: [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/28cd2b2a922a20e0b9ffc4d1ca65f6a55e92aa8f?path=windows-apps-src%2FTOC.md&_a=contents)
+##### <a name='d840fbe66e5ccb439148c7849e44b923a55867405203'></a> Source: [windows-apps-src\monetize\configure-your-app-to-receive-dev-center-notifications.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fconfigure-your-app-to-receive-dev-center-notifications.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/61688acee9976b0a6c15c4dd4122e87c26f0a0e1?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.es-es.xlf&_a=contents)
-* Handoff Datetime: 2016-11-30 23:18:33
+* Handoff File: [configure-your-app-to-receive-dev-center-notifications.a154f3c7d626b86591d02910d5b33a6838c76b67.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fconfigure-your-app-to-receive-dev-center-notifications.a154f3c7d626b86591d02910d5b33a6838c76b67.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/27dcfaa2fecac20e072cac4b2c1734787d944d1c?path=windows-apps-src%2FTOC.md&_a=contents)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/7ba9ac2eba8ee924ceffc56ce26f297a8c3617b6?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.es-es.xlf&_a=contents)
-* Current Handback Datetime: 2016-09-22 16:01:18
-* Bilingual File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/7ba9ac2eba8ee924ceffc56ce26f297a8c3617b6?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.es-es.xlf&_a=contents)
-* Bilingual Datetime: 2016-10-18 13:33:20
+* Current Target File: [windows-apps-src\monetize\configure-your-app-to-receive-dev-center-notifications.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fmonetize%2Fconfigure-your-app-to-receive-dev-center-notifications.md&_a=contents)
+* Current Handback File: [configure-your-app-to-receive-dev-center-notifications.a154f3c7d626b86591d02910d5b33a6838c76b67.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fconfigure-your-app-to-receive-dev-center-notifications.a154f3c7d626b86591d02910d5b33a6838c76b67.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:18:37
+* Bilingual File: [configure-your-app-to-receive-dev-center-notifications.a154f3c7d626b86591d02910d5b33a6838c76b67.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fconfigure-your-app-to-receive-dev-center-notifications.a154f3c7d626b86591d02910d5b33a6838c76b67.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:24:45
+* [Back to Top](#report-top)
+
+##### <a name='65785e53b2e5ba788dbda533373737e193e1c7925212'></a> Source: [windows-apps-src\monetize\create-and-run-your-first-experiment-with-a-b-testing.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fcreate-and-run-your-first-experiment-with-a-b-testing.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [create-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fcreate-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\create-and-run-your-first-experiment-with-a-b-testing.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/7aabe073629b28c3b34f9fba562efe812fefe30a?path=windows-apps-src%2Fmonetize%2Fcreate-and-run-your-first-experiment-with-a-b-testing.md&_a=contents)
+* Current Handback File: [create-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fcreate-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-21 15:33:32
+* Bilingual File: [create-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fcreate-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-24 15:47:13
+* [Back to Top](#report-top)
+
+##### <a name='12191a946ec080c8e386191363617a9c437671c55224'></a> Source: [windows-apps-src\monetize\enable-consumable-add-on-purchases.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fenable-consumable-add-on-purchases.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [enable-consumable-add-on-purchases.b945edf4df788aac5dba2cad753766477a87a4c2.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fenable-consumable-add-on-purchases.b945edf4df788aac5dba2cad753766477a87a4c2.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\enable-consumable-add-on-purchases.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fmonetize%2Fenable-consumable-add-on-purchases.md&_a=contents)
+* Current Handback File: [enable-consumable-add-on-purchases.b945edf4df788aac5dba2cad753766477a87a4c2.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fenable-consumable-add-on-purchases.b945edf4df788aac5dba2cad753766477a87a4c2.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:18:37
+* Bilingual File: [enable-consumable-add-on-purchases.b945edf4df788aac5dba2cad753766477a87a4c2.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fenable-consumable-add-on-purchases.b945edf4df788aac5dba2cad753766477a87a4c2.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:24:45
+* [Back to Top](#report-top)
+
+##### <a name='acb7218bed287f430950d4f8d3621831b269ae185225'></a> Source: [windows-apps-src\monetize\enable-consumable-in-app-product-purchases.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fenable-consumable-in-app-product-purchases.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [enable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fenable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\enable-consumable-in-app-product-purchases.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/73be46eeccf594bb4bdbe102b972b368073d38ab?path=windows-apps-src%2Fmonetize%2Fenable-consumable-in-app-product-purchases.md&_a=contents)
+* Current Handback File: [enable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/3768e1016daa75868af5e58128a1d96557d8d668?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fenable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-26 15:43:52
+* Bilingual File: [enable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/3768e1016daa75868af5e58128a1d96557d8d668?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fenable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-26 15:48:55
+* [Back to Top](#report-top)
+
+##### <a name='1cd748cd1b6ca7e85cfb86daba367540af25db885226'></a> Source: [windows-apps-src\monetize\enable-in-app-product-purchases.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fenable-in-app-product-purchases.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [enable-in-app-product-purchases.7bad7209343cc71c5d54d406fd12edf5d103ee01.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fenable-in-app-product-purchases.7bad7209343cc71c5d54d406fd12edf5d103ee01.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\enable-in-app-product-purchases.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/73be46eeccf594bb4bdbe102b972b368073d38ab?path=windows-apps-src%2Fmonetize%2Fenable-in-app-product-purchases.md&_a=contents)
+* Current Handback File: [enable-in-app-product-purchases.7bad7209343cc71c5d54d406fd12edf5d103ee01.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/3768e1016daa75868af5e58128a1d96557d8d668?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fenable-in-app-product-purchases.7bad7209343cc71c5d54d406fd12edf5d103ee01.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-26 15:43:52
+* Bilingual File: [enable-in-app-product-purchases.7bad7209343cc71c5d54d406fd12edf5d103ee01.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/3768e1016daa75868af5e58128a1d96557d8d668?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fenable-in-app-product-purchases.7bad7209343cc71c5d54d406fd12edf5d103ee01.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-26 15:48:55
+* [Back to Top](#report-top)
+
+##### <a name='05a93f3124324d7308f5494ad14a15bfd6a4e6985227'></a> Source: [windows-apps-src\monetize\enable-in-app-purchases-of-apps-and-add-ons.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fenable-in-app-purchases-of-apps-and-add-ons.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [enable-in-app-purchases-of-apps-and-add-ons.e52f90a53ded9438a1eaea72415074efd71db22e.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fenable-in-app-purchases-of-apps-and-add-ons.e52f90a53ded9438a1eaea72415074efd71db22e.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\enable-in-app-purchases-of-apps-and-add-ons.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fmonetize%2Fenable-in-app-purchases-of-apps-and-add-ons.md&_a=contents)
+* Current Handback File: [enable-in-app-purchases-of-apps-and-add-ons.e52f90a53ded9438a1eaea72415074efd71db22e.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fenable-in-app-purchases-of-apps-and-add-ons.e52f90a53ded9438a1eaea72415074efd71db22e.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:18:37
+* Bilingual File: [enable-in-app-purchases-of-apps-and-add-ons.e52f90a53ded9438a1eaea72415074efd71db22e.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fenable-in-app-purchases-of-apps-and-add-ons.e52f90a53ded9438a1eaea72415074efd71db22e.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:24:45
+* [Back to Top](#report-top)
+
+##### <a name='0d377677237264e2dad290c7d49c47800c2551385231'></a> Source: [windows-apps-src\monetize\exclude-or-limit-features-in-a-trial-version-of-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fexclude-or-limit-features-in-a-trial-version-of-your-app.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [exclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fexclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\exclude-or-limit-features-in-a-trial-version-of-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/73be46eeccf594bb4bdbe102b972b368073d38ab?path=windows-apps-src%2Fmonetize%2Fexclude-or-limit-features-in-a-trial-version-of-your-app.md&_a=contents)
+* Current Handback File: [exclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/3768e1016daa75868af5e58128a1d96557d8d668?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fexclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-26 15:43:52
+* Bilingual File: [exclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/3768e1016daa75868af5e58128a1d96557d8d668?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fexclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-26 15:48:55
+* [Back to Top](#report-top)
+
+##### <a name='0482cc192eeff4d3633898b6fa677805c635c6e15254'></a> Source: [windows-apps-src\monetize\get-license-info-for-apps-and-add-ons.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fget-license-info-for-apps-and-add-ons.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [get-license-info-for-apps-and-add-ons.f7f2b6fa4e5d39eb17a2015071b783967be46ae1.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fget-license-info-for-apps-and-add-ons.f7f2b6fa4e5d39eb17a2015071b783967be46ae1.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\get-license-info-for-apps-and-add-ons.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fmonetize%2Fget-license-info-for-apps-and-add-ons.md&_a=contents)
+* Current Handback File: [get-license-info-for-apps-and-add-ons.f7f2b6fa4e5d39eb17a2015071b783967be46ae1.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fget-license-info-for-apps-and-add-ons.f7f2b6fa4e5d39eb17a2015071b783967be46ae1.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:18:37
+* Bilingual File: [get-license-info-for-apps-and-add-ons.f7f2b6fa4e5d39eb17a2015071b783967be46ae1.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fget-license-info-for-apps-and-add-ons.f7f2b6fa4e5d39eb17a2015071b783967be46ae1.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:24:45
+* [Back to Top](#report-top)
+
+##### <a name='dd58103d22314081985cd5ce0f98f2f25e1e72875257'></a> Source: [windows-apps-src\monetize\get-product-info-for-apps-and-add-ons.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fget-product-info-for-apps-and-add-ons.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [get-product-info-for-apps-and-add-ons.770f033d1f96e5508b684af01329fa8f17d581b0.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fget-product-info-for-apps-and-add-ons.770f033d1f96e5508b684af01329fa8f17d581b0.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\get-product-info-for-apps-and-add-ons.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fmonetize%2Fget-product-info-for-apps-and-add-ons.md&_a=contents)
+* Current Handback File: [get-product-info-for-apps-and-add-ons.770f033d1f96e5508b684af01329fa8f17d581b0.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fget-product-info-for-apps-and-add-ons.770f033d1f96e5508b684af01329fa8f17d581b0.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:18:37
+* Bilingual File: [get-product-info-for-apps-and-add-ons.770f033d1f96e5508b684af01329fa8f17d581b0.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fget-product-info-for-apps-and-add-ons.770f033d1f96e5508b684af01329fa8f17d581b0.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:24:45
+* [Back to Top](#report-top)
+
+##### <a name='ea4c5637a970a63938da2b1bea9f11fd39de9cc85293'></a> Source: [windows-apps-src\monetize\implement-a-trial-version-of-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fimplement-a-trial-version-of-your-app.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [implement-a-trial-version-of-your-app.a6bf42c2c41fd342356b2a6edf81780ccf51351e.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fimplement-a-trial-version-of-your-app.a6bf42c2c41fd342356b2a6edf81780ccf51351e.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\implement-a-trial-version-of-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fmonetize%2Fimplement-a-trial-version-of-your-app.md&_a=contents)
+* Current Handback File: [implement-a-trial-version-of-your-app.a6bf42c2c41fd342356b2a6edf81780ccf51351e.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fimplement-a-trial-version-of-your-app.a6bf42c2c41fd342356b2a6edf81780ccf51351e.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:18:37
+* Bilingual File: [implement-a-trial-version-of-your-app.a6bf42c2c41fd342356b2a6edf81780ccf51351e.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fimplement-a-trial-version-of-your-app.a6bf42c2c41fd342356b2a6edf81780ccf51351e.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:24:45
+* [Back to Top](#report-top)
+
+##### <a name='7783b6017a314ddb24509c55db8134a4c214430f5296'></a> Source: [windows-apps-src\monetize\in-app-purchases-and-trials.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fin-app-purchases-and-trials.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [in-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fin-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\in-app-purchases-and-trials.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fmonetize%2Fin-app-purchases-and-trials.md&_a=contents)
+* Current Handback File: [in-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fin-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:18:37
+* Bilingual File: [in-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fin-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:24:45
+* [Back to Top](#report-top)
+
+##### <a name='ee2a52a54be8510b962f1ef5c40570f3836d28c35295'></a> Source: [windows-apps-src\monetize\in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fin-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.dbd3554cc089bbad2f8f8e1f7d834409792af80b.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fin-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.dbd3554cc089bbad2f8f8e1f7d834409792af80b.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fmonetize%2Fin-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md&_a=contents)
+* Current Handback File: [in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.dbd3554cc089bbad2f8f8e1f7d834409792af80b.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fin-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.dbd3554cc089bbad2f8f8e1f7d834409792af80b.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:18:37
+* Bilingual File: [in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.dbd3554cc089bbad2f8f8e1f7d834409792af80b.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fin-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.dbd3554cc089bbad2f8f8e1f7d834409792af80b.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:24:45
+* [Back to Top](#report-top)
+
+##### <a name='4296bd4007ae5109c9a3736c977ba68f312b208c5305'></a> Source: [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Flaunch-feedback-hub-from-your-app.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Flaunch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fmonetize%2Flaunch-feedback-hub-from-your-app.md&_a=contents)
+* Current Handback File: [launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Flaunch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:18:37
+* Bilingual File: [launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Flaunch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:24:45
+* [Back to Top](#report-top)
+
+##### <a name='e0012d586d9b79db77bdeded6f0e1d2ce848bbea5306'></a> Source: [windows-apps-src\monetize\log-custom-events-for-dev-center.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Flog-custom-events-for-dev-center.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [log-custom-events-for-dev-center.c4fa2ca80c1be59f9de4c411b4c105aedf1c22ef.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Flog-custom-events-for-dev-center.c4fa2ca80c1be59f9de4c411b4c105aedf1c22ef.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\log-custom-events-for-dev-center.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fmonetize%2Flog-custom-events-for-dev-center.md&_a=contents)
+* Current Handback File: [log-custom-events-for-dev-center.c4fa2ca80c1be59f9de4c411b4c105aedf1c22ef.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Flog-custom-events-for-dev-center.c4fa2ca80c1be59f9de4c411b4c105aedf1c22ef.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:18:37
+* Bilingual File: [log-custom-events-for-dev-center.c4fa2ca80c1be59f9de4c411b4c105aedf1c22ef.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Flog-custom-events-for-dev-center.c4fa2ca80c1be59f9de4c411b4c105aedf1c22ef.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:24:45
+* [Back to Top](#report-top)
+
+##### <a name='ccbf6f99820ebc9a9245066899b2bd3be69319e75307'></a> Source: [windows-apps-src\monetize\manage-a-large-catalog-of-in-app-products.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fmanage-a-large-catalog-of-in-app-products.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [manage-a-large-catalog-of-in-app-products.5dd541af4c58b62685bdfd4d1f1d545132e33e4d.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fmanage-a-large-catalog-of-in-app-products.5dd541af4c58b62685bdfd4d1f1d545132e33e4d.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\manage-a-large-catalog-of-in-app-products.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/7aabe073629b28c3b34f9fba562efe812fefe30a?path=windows-apps-src%2Fmonetize%2Fmanage-a-large-catalog-of-in-app-products.md&_a=contents)
+* Current Handback File: [manage-a-large-catalog-of-in-app-products.5dd541af4c58b62685bdfd4d1f1d545132e33e4d.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fmanage-a-large-catalog-of-in-app-products.5dd541af4c58b62685bdfd4d1f1d545132e33e4d.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-21 15:33:32
+* Bilingual File: [manage-a-large-catalog-of-in-app-products.5dd541af4c58b62685bdfd4d1f1d545132e33e4d.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fmanage-a-large-catalog-of-in-app-products.5dd541af4c58b62685bdfd4d1f1d545132e33e4d.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-24 15:47:13
+* [Back to Top](#report-top)
+
+##### <a name='55631d364ca6f2d76d214eca6d00fbdd969c0e155342'></a> Source: [windows-apps-src\monetize\use-receipts-to-verify-product-purchases.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ffda100344b1264c18b93f096d8061570dd8edee?path=windows-apps-src%2Fmonetize%2Fuse-receipts-to-verify-product-purchases.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [use-receipts-to-verify-product-purchases.cc6b7dd3bbb51b74e7c4d1f715e91e6bbc2c21d4.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/d2c67e9ef9a3d3d0442ca265c6b5a45788d96b30?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fuse-receipts-to-verify-product-purchases.cc6b7dd3bbb51b74e7c4d1f715e91e6bbc2c21d4.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-01 19:18:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\use-receipts-to-verify-product-purchases.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fmonetize%2Fuse-receipts-to-verify-product-purchases.md&_a=contents)
+* Current Handback File: [use-receipts-to-verify-product-purchases.cc6b7dd3bbb51b74e7c4d1f715e91e6bbc2c21d4.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fuse-receipts-to-verify-product-purchases.cc6b7dd3bbb51b74e7c4d1f715e91e6bbc2c21d4.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:18:37
+* Bilingual File: [use-receipts-to-verify-product-purchases.cc6b7dd3bbb51b74e7c4d1f715e91e6bbc2c21d4.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fuse-receipts-to-verify-product-purchases.cc6b7dd3bbb51b74e7c4d1f715e91e6bbc2c21d4.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:24:45
 * [Back to Top](#report-top)
 
 
