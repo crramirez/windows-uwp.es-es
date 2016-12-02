@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\publish\payment-thresholds-methods-and-timeframes.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/d5ec64bbd1e8b10c17ff5c43d89e6652eadb2367?path=windows-apps-src%2Fpublish%2Fpayment-thresholds-methods-and-timeframes.md&_a=contents) | HandedOffSuccess | [Details](#4fd7a23f6d6c880e490f93dba248b6c1e43c70535608)
 
 ## Item Details
-##### <a name='4fd7a23f6d6c880e490f93dba248b6c1e43c70535608'></a> Source: [windows-apps-src\publish\payment-thresholds-methods-and-timeframes.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/d5ec64bbd1e8b10c17ff5c43d89e6652eadb2367?path=windows-apps-src%2Fpublish%2Fpayment-thresholds-methods-and-timeframes.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [payment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/56810a60c7bdc0f59d6b6a1236509053e63cd77c?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fpayment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.es-es.xlf&_a=contents)
-* Handoff Datetime: 2016-12-02 01:22:34
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
