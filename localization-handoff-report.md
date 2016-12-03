@@ -1,28 +1,46 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\send-push-notifications-to-your-apps-customers.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e9cbfec938ebc71da6f41df69defcac1bb902245?path=windows-apps-src%2Fpublish%2Fsend-push-notifications-to-your-apps-customers.md&_a=contents) | HandedOffSuccess | [Details](#c4bdd398db570c4962325c2164651e9e8a1935ff5620)
+ [windows-apps-src\controls-and-patterns\tiles-and-notifications-adaptive-interactive-toasts.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ef50cdcc05ca0d3963d20d964dcb6a2cb1f856d1?path=windows-apps-src%2Fcontrols-and-patterns%2Ftiles-and-notifications-adaptive-interactive-toasts.md&_a=contents) | HandedOffSuccess | [Details](#e6a81273176bd2696217b3e7d62bea4b2124dff83198)
+ [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c5e42f812cc0ed128ebb5c533ef72539baeef93d?path=windows-apps-src%2Finput-and-devices%2Fpen-and-stylus-interactions.md&_a=contents) | HandedOffSuccess | [Details](#f2de946ca7210cf3f4c170c73902c1a727067e7c4667)
 
 ## Item Details
-##### <a name='c4bdd398db570c4962325c2164651e9e8a1935ff5620'></a> Source: [windows-apps-src\publish\send-push-notifications-to-your-apps-customers.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e9cbfec938ebc71da6f41df69defcac1bb902245?path=windows-apps-src%2Fpublish%2Fsend-push-notifications-to-your-apps-customers.md&_a=contents)
+##### <a name='e6a81273176bd2696217b3e7d62bea4b2124dff83198'></a> Source: [windows-apps-src\controls-and-patterns\tiles-and-notifications-adaptive-interactive-toasts.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ef50cdcc05ca0d3963d20d964dcb6a2cb1f856d1?path=windows-apps-src%2Fcontrols-and-patterns%2Ftiles-and-notifications-adaptive-interactive-toasts.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [send-push-notifications-to-your-apps-customers.64e46845492836f2978a6630ffedd93a5af45530.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/a01f4126c076e6ff54edbc97fc7b7885e6205a5f?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fsend-push-notifications-to-your-apps-customers.64e46845492836f2978a6630ffedd93a5af45530.es-es.xlf&_a=contents)
-* Handoff Datetime: 2016-12-02 22:27:15
+* Handoff File: [tiles-and-notifications-adaptive-interactive-toasts.754babe558bdbd1c80d4acd94c1873c54d9426c8.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/2c7f14d0e3b008f114369f8e8c100f214981a9c9?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Ftiles-and-notifications-adaptive-interactive-toasts.754babe558bdbd1c80d4acd94c1873c54d9426c8.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-03 00:22:35
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\send-push-notifications-to-your-apps-customers.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fpublish%2Fsend-push-notifications-to-your-apps-customers.md&_a=contents)
-* Current Handback File: [send-push-notifications-to-your-apps-customers.64e46845492836f2978a6630ffedd93a5af45530.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fsend-push-notifications-to-your-apps-customers.64e46845492836f2978a6630ffedd93a5af45530.es-es.xlf&_a=contents)
+* Current Target File: [windows-apps-src\controls-and-patterns\tiles-and-notifications-adaptive-interactive-toasts.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/7aabe073629b28c3b34f9fba562efe812fefe30a?path=windows-apps-src%2Fcontrols-and-patterns%2Ftiles-and-notifications-adaptive-interactive-toasts.md&_a=contents)
+* Current Handback File: [tiles-and-notifications-adaptive-interactive-toasts.754babe558bdbd1c80d4acd94c1873c54d9426c8.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Ftiles-and-notifications-adaptive-interactive-toasts.754babe558bdbd1c80d4acd94c1873c54d9426c8.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-21 15:33:32
+* Bilingual File: [tiles-and-notifications-adaptive-interactive-toasts.754babe558bdbd1c80d4acd94c1873c54d9426c8.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Ftiles-and-notifications-adaptive-interactive-toasts.754babe558bdbd1c80d4acd94c1873c54d9426c8.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-24 15:47:13
+* [Back to Top](#report-top)
+
+##### <a name='f2de946ca7210cf3f4c170c73902c1a727067e7c4667'></a> Source: [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c5e42f812cc0ed128ebb5c533ef72539baeef93d?path=windows-apps-src%2Finput-and-devices%2Fpen-and-stylus-interactions.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/2c7f14d0e3b008f114369f8e8c100f214981a9c9?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fpen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-03 00:22:35
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Finput-and-devices%2Fpen-and-stylus-interactions.md&_a=contents)
+* Current Handback File: [pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fpen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.es-es.xlf&_a=contents)
 * Current Handback Datetime: 2016-11-30 15:18:37
-* Bilingual File: [send-push-notifications-to-your-apps-customers.64e46845492836f2978a6630ffedd93a5af45530.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fsend-push-notifications-to-your-apps-customers.64e46845492836f2978a6630ffedd93a5af45530.es-es.xlf&_a=contents)
+* Bilingual File: [pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fpen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.es-es.xlf&_a=contents)
 * Bilingual Datetime: 2016-11-30 15:24:45
 * [Back to Top](#report-top)
 
