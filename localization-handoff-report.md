@@ -1,47 +1,65 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\gaming\marble-maze-application-structure.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/931d790ea54ff9ff27202f6c92d415b17e2215ed?path=windows-apps-src%2Fgaming%2Fmarble-maze-application-structure.md&_a=contents) | HandedOffSuccess | [Details](#696d4227bcd3ff4238d81e6f951a61e098fbc2f63544)
- [windows-apps-src\gaming\plan-your-directx-port.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/115377ed3e5a13668481d1122f354610b3077763?path=windows-apps-src%2Fgaming%2Fplan-your-directx-port.md&_a=contents) | HandedOffSuccess | [Details](#f5f66f5da79eb62e3a81f4fe0d7398fed689d3783553)
+ [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/a3c4ebc9bfda5ed41363de139d43a6a2c7934e0e?path=windows-apps-src%2Fmonetize%2Flaunch-feedback-hub-from-your-app.md&_a=contents) | HandedOffSuccess | [Details](#54c6503add19ead5226da5a862b199bc3f305b7e5311)
+ [windows-apps-src\monetize\python-code-examples-for-the-windows-store-submission-api.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/1d95fc64f7f57e46e0e84f87618df56ac6461016?path=windows-apps-src%2Fmonetize%2Fpython-code-examples-for-the-windows-store-submission-api.md&_a=contents) | HandedOffSuccess | [Details](#876b02ddc78391407cc59cdd123e96c2d06e5d605323)
+ [windows-apps-src\security\microsoft-passport-login.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/126811b615117c0204e3ac4326d810c986a51e55?path=windows-apps-src%2Fsecurity%2Fmicrosoft-passport-login.md&_a=contents) | HandedOffSuccess | [Details](#27f06fe3031d391a03bc5f5b08723983b34308f05715)
 
 ## Item Details
-##### <a name='696d4227bcd3ff4238d81e6f951a61e098fbc2f63544'></a> Source: [windows-apps-src\gaming\marble-maze-application-structure.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/931d790ea54ff9ff27202f6c92d415b17e2215ed?path=windows-apps-src%2Fgaming%2Fmarble-maze-application-structure.md&_a=contents)
+##### <a name='54c6503add19ead5226da5a862b199bc3f305b7e5311'></a> Source: [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/a3c4ebc9bfda5ed41363de139d43a6a2c7934e0e?path=windows-apps-src%2Fmonetize%2Flaunch-feedback-hub-from-your-app.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [marble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/af2a888c7360b5d8ff11a32288e470161c8c058e?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fmarble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.es-es.xlf&_a=contents)
-* Handoff Datetime: 2016-12-09 01:17:40
+* Handoff File: [launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/b83928ac20f658c696135944297ee2cfcc470341?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Flaunch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-09 19:15:00
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\gaming\marble-maze-application-structure.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/7aabe073629b28c3b34f9fba562efe812fefe30a?path=windows-apps-src%2Fgaming%2Fmarble-maze-application-structure.md&_a=contents)
-* Current Handback File: [marble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fmarble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.es-es.xlf&_a=contents)
+* Current Target File: [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fmonetize%2Flaunch-feedback-hub-from-your-app.md&_a=contents)
+* Current Handback File: [launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Flaunch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:18:37
+* Bilingual File: [launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Flaunch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:24:45
+* [Back to Top](#report-top)
+
+##### <a name='876b02ddc78391407cc59cdd123e96c2d06e5d605323'></a> Source: [windows-apps-src\monetize\python-code-examples-for-the-windows-store-submission-api.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/1d95fc64f7f57e46e0e84f87618df56ac6461016?path=windows-apps-src%2Fmonetize%2Fpython-code-examples-for-the-windows-store-submission-api.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [python-code-examples-for-the-windows-store-submission-api.fda54bc6ce021b8dfb05aadbfcdfc6a3dd2f3682.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/b83928ac20f658c696135944297ee2cfcc470341?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fpython-code-examples-for-the-windows-store-submission-api.fda54bc6ce021b8dfb05aadbfcdfc6a3dd2f3682.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-09 19:15:00
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\python-code-examples-for-the-windows-store-submission-api.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/7aabe073629b28c3b34f9fba562efe812fefe30a?path=windows-apps-src%2Fmonetize%2Fpython-code-examples-for-the-windows-store-submission-api.md&_a=contents)
+* Current Handback File: [python-code-examples-for-the-windows-store-submission-api.fda54bc6ce021b8dfb05aadbfcdfc6a3dd2f3682.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fpython-code-examples-for-the-windows-store-submission-api.fda54bc6ce021b8dfb05aadbfcdfc6a3dd2f3682.es-es.xlf&_a=contents)
 * Current Handback Datetime: 2016-10-21 15:33:32
-* Bilingual File: [marble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fmarble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.es-es.xlf&_a=contents)
+* Bilingual File: [python-code-examples-for-the-windows-store-submission-api.fda54bc6ce021b8dfb05aadbfcdfc6a3dd2f3682.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fpython-code-examples-for-the-windows-store-submission-api.fda54bc6ce021b8dfb05aadbfcdfc6a3dd2f3682.es-es.xlf&_a=contents)
 * Bilingual Datetime: 2016-10-24 15:47:13
 * [Back to Top](#report-top)
 
-##### <a name='f5f66f5da79eb62e3a81f4fe0d7398fed689d3783553'></a> Source: [windows-apps-src\gaming\plan-your-directx-port.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/115377ed3e5a13668481d1122f354610b3077763?path=windows-apps-src%2Fgaming%2Fplan-your-directx-port.md&_a=contents)
+##### <a name='27f06fe3031d391a03bc5f5b08723983b34308f05715'></a> Source: [windows-apps-src\security\microsoft-passport-login.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/126811b615117c0204e3ac4326d810c986a51e55?path=windows-apps-src%2Fsecurity%2Fmicrosoft-passport-login.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/af2a888c7360b5d8ff11a32288e470161c8c058e?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fplan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.es-es.xlf&_a=contents)
-* Handoff Datetime: 2016-12-09 01:17:40
+* Handoff File: [microsoft-passport-login.733abcc9ee42ef0128d2a993800f9c127a181017.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/b83928ac20f658c696135944297ee2cfcc470341?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fmicrosoft-passport-login.733abcc9ee42ef0128d2a993800f9c127a181017.es-es.xlf&_a=contents)
+* Handoff Datetime: 2016-12-09 19:15:00
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\gaming\plan-your-directx-port.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/73be46eeccf594bb4bdbe102b972b368073d38ab?path=windows-apps-src%2Fgaming%2Fplan-your-directx-port.md&_a=contents)
-* Current Handback File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/3768e1016daa75868af5e58128a1d96557d8d668?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fplan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.es-es.xlf&_a=contents)
-* Current Handback Datetime: 2016-10-26 15:43:52
-* Bilingual File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/3768e1016daa75868af5e58128a1d96557d8d668?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fplan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.es-es.xlf&_a=contents)
-* Bilingual Datetime: 2016-10-26 15:48:55
+* Current Target File: [windows-apps-src\security\microsoft-passport-login.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/7aabe073629b28c3b34f9fba562efe812fefe30a?path=windows-apps-src%2Fsecurity%2Fmicrosoft-passport-login.md&_a=contents)
+* Current Handback File: [microsoft-passport-login.733abcc9ee42ef0128d2a993800f9c127a181017.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fmicrosoft-passport-login.733abcc9ee42ef0128d2a993800f9c127a181017.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-21 15:33:32
+* Bilingual File: [microsoft-passport-login.733abcc9ee42ef0128d2a993800f9c127a181017.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fmicrosoft-passport-login.733abcc9ee42ef0128d2a993800f9c127a181017.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-24 15:47:13
 * [Back to Top](#report-top)
 
 
