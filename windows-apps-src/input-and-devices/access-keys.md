@@ -1,18 +1,18 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Habilita el acceso de teclado con la navegación mediante tabulación y las teclas de acceso para que los usuarios puedan navegar por los elementos de la interfaz de usuario con el teclado."
+Description: "Habilita el acceso de teclado con la navegación por tabulación y las teclas de acceso para que los usuarios puedan navegar por los elementos de la interfaz de usuario con el teclado."
 title: Teclas de acceso
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Access keys
 template: detail.hbs
-keyword: Access keys, keyboard, accessibility
+keywords: Teclas de acceso, teclado, accesibilidad
 translationtype: Human Translation
-ms.sourcegitcommit: ac86012b63646e53dbde492eef504cb8230f2afd
-ms.openlocfilehash: d96d507c6ce8537888619ce174e2ff0e5284dcce
+ms.sourcegitcommit: 2b6b1d7b1755aad4d75a29413d989c6e8112128a
+ms.openlocfilehash: dfe89e4d4fd089dde6b7b307325b8fe43de82c10
 
 ---
 
-# Teclas de acceso
+# <a name="access-keys"></a>Teclas de acceso
 
 Los usuarios que tienen dificultades para usar un mouse, como las personas con discapacidades motrices, a menudo dependen del teclado para navegar por una aplicación e interactuar con ella.  El marco XAML te permite proporcionar acceso de teclado a los elementos de la interfaz de usuario gracias a la navegación mediante tabulación y las teclas de acceso.
 
@@ -21,7 +21,7 @@ Los usuarios que tienen dificultades para usar un mouse, como las personas con d
 
 Para obtener más información sobre la navegación por teclado y la accesibilidad de teclado, consulta [Interacciones de teclado](https://msdn.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) y [Accesibilidad de teclado](https://msdn.microsoft.com/windows/uwp/accessibility/keyboard-accessibility). En este artículo se da por hecho que conoces los conceptos que se tratan en los artículos siguientes.
 
-## Información general sobre las teclas de acceso
+## <a name="access-key-overview"></a>Información general sobre las teclas de acceso
 
 Las teclas de acceso permiten a los usuarios invocar botones directamente o establecer el foco con el teclado sin tener que presionar repetidamente las teclas de dirección y el tabulador. Las teclas de acceso están concebidas para que resulte fácil descubrirlas, por lo que debes documentarlas directamente en la interfaz de usuario; por ejemplo, una notificación flotante sobre el control con la tecla de acceso.
 
@@ -49,7 +49,7 @@ Un usuario puede invocar varias teclas de acceso en una secuencia de teclas de a
 
 Algunos elementos finalizan una secuencia de teclas de acceso después su invocación (como el botón Copiar formato) y otros no (como la pestaña Inicio). Invocar una tecla de acceso puede producir que se ejecute un comando, se mueva el foco, se cambie el ámbito de las teclas de acceso o alguna otra acción asociada con ella.
 
-## Interacción del usuario con las teclas de acceso
+## <a name="access-key-user-interaction"></a>Interacción del usuario con las teclas de acceso
 
 Para comprender las API de las teclas de acceso, es necesario comprender antes el modelo de interacción del usuario. A continuación encontrarás un resumen del modelo de interacción del usuario con las teclas de acceso:
 
@@ -79,7 +79,7 @@ Para comprender las API de las teclas de acceso, es necesario comprender antes e
  - Teclas especiales para salir de la secuencia de teclas de acceso; es decir, Esc, Alt, las teclas de dirección, Entrar y la tecla de tabulador.
  - Caracteres alfanuméricos asignados a las teclas de acceso.
 
-## Las API de teclas de acceso
+## <a name="access-key-apis"></a>Las API de teclas de acceso
 
 Para admitir la interacción del usuario con las teclas de acceso, el marco XAML proporciona las API que se describen aquí.
 
@@ -125,12 +125,12 @@ De manera predeterminada, cuando se invoca una tecla de acceso y el elemento no 
 
 Las teclas de acceso pueden localizarse en varios idiomas y cargarse en el tiempo de ejecución mediante la API [ResourceLoader](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.resources.resourceloader.aspx).
 
-## Patrones de control usados cuando se invoca una tecla de acceso
+## <a name="control-patterns-used-when-an-access-key-is-invoked"></a>Patrones de control usados cuando se invoca una tecla de acceso
 
 Los patrones de control son implementaciones de la interfaz que exponen la funcionalidad de control común; por ejemplo, unos botones implementan el patrón de control **Invoke** y esto provoca el evento **Click**. Cuando se invoca una tecla de acceso, el marco XAML busca si el elemento invocado implementa un patrón de control y, si es así, lo ejecuta. Si el elemento tiene más de un patrón de control, se invoca solo uno de ellas y se omite el resto. Los patrones de control se buscan en el siguiente orden:
 
 1.  Invocar. Por ejemplo, un botón (Button).
-2.  Cambiar. Por ejemplo, una casilla (Checkbox).
+2.  Alternancia. Por ejemplo, una casilla (Checkbox).
 3.  Selección. Por ejemplo, un botón de selección (RadioButton).
 4.  Ampliar/contraer. Por ejemplo, un cuadro combinado (ComboBox).
 
@@ -150,11 +150,11 @@ private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args
 
 Para obtener más información sobre los patrones de control, consulta [UI Automation Control Patterns Overview](https://msdn.microsoft.com/library/windows/desktop/ee671194.aspx) (Introducción a los patrones de control de automatización de la interfaz de usuario).
 
-## Teclas de acceso y Narrador
+## <a name="access-keys-and-narrator"></a>Teclas de acceso y Narrador
 
 Windows Runtime posee proveedores de automatización de la interfaz de usuario que exponen las propiedades de los elementos de automatización de la interfaz de usuario de Microsoft. Estas propiedades permiten a las aplicaciones cliente de automatización de la interfaz de usuario obtener información sobre algunas partes de la interfaz de usuario. La propiedad [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763) permite a los clientes (por ejemplo, a Narrador) descubrir la tecla de acceso asociada con un elemento. Narrador leerá esta propiedad cada vez que un el foco se sitúe sobre un elemento. Si AutomationProperties.AccessKey no tiene ningún valor, el marco XAML devuelve el valor de la propiedad [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx) del UIElement o TextElement. No es necesario configurar AutomationProperties.AccessKey si la propiedad AccessKey ya posee un valor.
 
-## Ejemplo: Tecla de acceso de un botón
+## <a name="example-access-key-for-button"></a>Ejemplo: Tecla de acceso de un botón
 
 Este ejemplo muestra cómo crear una tecla de acceso de un botón. Usa la información sobre herramientas como una prestación visual para implementar una notificación flotante que contenga la tecla de acceso.
 
@@ -229,7 +229,7 @@ El marco XAML llama automáticamente al controlador del evento Click, por lo que
     }
 ```
 
-## Ejemplo: Teclas de acceso con ámbito
+## <a name="example-scoped-access-keys"></a>Ejemplo: Teclas de acceso con ámbito
 
 Este ejemplo muestra cómo crear teclas de acceso con ámbito. La propiedad IsAccessKeyScope de PivotItem impide que se muestren las teclas de acceso de los elementos secundarios de PivotItem cuando el usuario presiona Alt. Estas teclas de acceso se muestran solamente cuando el usuario invoca el PivotItem, porque el marco XAML cambia el ámbito automáticamente. El marco también oculta las teclas de acceso de los otros ámbitos.
 
@@ -385,6 +385,6 @@ public sealed partial class ScopedAccessKeys : Page
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

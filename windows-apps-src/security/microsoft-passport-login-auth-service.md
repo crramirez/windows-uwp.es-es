@@ -4,12 +4,12 @@ description: "Esta es la segunda parte de un tutorial completo acerca de cómo u
 ms.assetid: ECC9EF3D-E0A1-4BC4-94FA-3215E6CFF0E4
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 2250cc400828b2142bc5d152f54de554daa24aa9
+ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
+ms.openlocfilehash: d02c2029121927192430ce030684200de1656418
 
 ---
 
-# Crear un servicio de inicio de sesión de Microsoft Passport
+# <a name="create-a-microsoft-passport-login-service"></a>Crear un servicio de inicio de sesión de Microsoft Passport
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -21,7 +21,7 @@ Esta es la segunda parte de un tutorial completo acerca de cómo usar Microsoft 
 
 Para crear este proyecto, necesitarás algo de experiencia con C# y XAML. También tendrás que usar Visual Studio de 2015 (Community Edition o superior) en una máquina de Windows 10.
 
-## Ejercicio 1: Lógica del lado servidor
+## <a name="exercise-1-server-side-logic"></a>Ejercicio 1: Lógica del lado servidor
 
 
 En este ejercicio comenzará con la aplicación Passport integrada en la primera práctica y creará un servidor y una base de datos ficticios locales. Esta práctica de laboratorio está diseñada para enseñar cómo Microsoft Passport podría integrarse en un sistema existente. Al usar un servidor y una base de datos ficticios se elimina gran parte de la configuración no relacionada. En tus propias aplicaciones deberás reemplazar los objetos ficticios por servicios y bases de datos reales.
@@ -30,11 +30,11 @@ En este ejercicio comenzará con la aplicación Passport integrada en la primera
 -   Para comenzar deberás implementar el servidor y la base de datos ficticios. Crea una nueva carpeta denominada "AuthService". En el Explorador de soluciones, haz clic con el botón secundario en la solución "PassportLogin (Universal Windows)" y selecciona Agregar -> Nueva carpeta.
 -   Crea las clases UserAccount y PassportDevices que actuarán como modelos para los datos que se guardarán en la base de datos ficticia. La clase UserAccount será similar al modelo de usuario implementado en un servidor de autenticación tradicional. Haz clic con el botón secundario en la carpeta AuthService y agrega una nueva clase denominada "UserAccount.cs".
 
-    ![](images/passport-auth-1.png)
+    ![creación de carpeta con autorización de Passport](images/passport-auth-1.png)
 
-    ![](images/passport-auth-2.png)
+    ![creación de clase con autorización de Passport](images/passport-auth-2.png)
 
--   Cambia la definición de clase a pública y, después, agrega las siguientes propiedades públicas. Necesitarás la referencia siguiente.
+-   Cambia la definición de clase a pública y después agrega las siguientes propiedades públicas. Necesitarás la referencia siguiente.
 
     ```cs
     using System.ComponentModel.DataAnnotations;
@@ -538,7 +538,7 @@ En este ejercicio comenzará con la aplicación Passport integrada en la primera
     }
     ```
 
-## Ejercicio 2: Lógica del lado cliente
+## <a name="exercise-2-client-side-logic"></a>Ejercicio 2: Lógica del lado cliente
 
 
 En este ejercicio cambiarás las vistas del lado cliente y las clases auxiliares de la primera práctica para usar la clase AuthService. En el mundo real, la clase AuthService sería el servidor de autenticación y necesitaría usar la API web para enviar y recibir datos del servidor. En este caso, el cliente y el servidor son locales para simplificar la práctica de laboratorio. El objetivo es aprender a usar las API de Microsoft Passport.
@@ -988,13 +988,13 @@ En este ejercicio cambiarás las vistas del lado cliente y las clases auxiliares
     }
     ```
 
--   Compila y ejecuta la aplicación (F5). Inicia sesión en la cuenta de usuario de muestra, con las credenciales "sampleUsername" y "samplePassword". En la página de bienvenida, puedes observar que aparece el botón de olvidar dispositivo aunque no se muestra ningún dispositivo. Al crear o migrar un usuario para trabajar con Microsoft Passport la información de Passport no se inserta en la clase AuthService.
+-   Compila y ejecuta la aplicación (F5). Inicia sesión en la cuenta de usuario de muestra, con las credenciales "sampleUsername" y "samplePassword". En la página de bienvenida, puedes observar que aparece el botón de olvidar dispositivo aunque no se muestra ningún dispositivo. Al crear o migrar un usuario para trabajar con Microsoft Passport, la información de Passport no se inserta en la clase AuthService.
 
-    ![](images/passport-auth-3.png)
+    ![pantalla de inicio de sesión de Passport](images/passport-auth-3.png)
 
-    ![](images/passport-auth-4.png)
+    ![inicio de sesión en Passport correcto](images/passport-auth-4.png)
 
--   Para obtener la información de Passport en la clase AuthService, MicrosoftPassportHelper.cs deberá actualizarse. En el método CreatePassportKeyAsync, en lugar de devolver solo true en el caso de que sea correcto, deberás llamar a un nuevo método que intentará obtener la clave KeyAttestation. Aunque en esta práctica de laboratorio no se registra esta información en la clase AuthService, aprenderás cómo se puede obtener esta información en el lado cliente. Actualiza el método CreatePassportKeyAsync.
+-   Para obtener la información de Passport para la clase AuthService, MicrosoftPassportHelper.cs deberá actualizarse. En el método CreatePassportKeyAsync, en lugar de devolver solo true en el caso de que sea correcto, deberás llamar a un nuevo método que intentará obtener la clave KeyAttestation. Aunque en esta práctica de laboratorio no se registra esta información en la clase AuthService, aprenderás cómo se puede obtener esta información en el lado cliente. Actualiza el método CreatePassportKeyAsync.
 
     ```cs
     public static async Task<bool> CreatePassportKeyAsync(Guid userId, string username)
@@ -1084,9 +1084,9 @@ En este ejercicio cambiarás las vistas del lado cliente y las clases auxiliares
 -   Quita la marca de comentario de la última línea en el método GetKeyAttestationAsync para que la información de Microsoft Passport se envíe a la clase AuthService.
 -   Compila y ejecuta la aplicación e inicia sesión con las credenciales predeterminadas como antes. En la pantalla de bienvenida verás ahora que se muestra el identificador de dispositivo. Si iniciaste sesión en otro dispositivo, este también se mostraría aquí (si hubiera un servicio de autenticación hospedado en la nube). Para esta práctica de laboratorio, se muestra el identificador de dispositivo real. En una implementación real, seguramente quieras mostrar un nombre descriptivo que cualquiera pueda comprender y usarlo para determinar cada dispositivo.
 
-    ![](images/passport-auth-5.png)
+    ![id de dispositivo de inicio de sesión en Passport correcto](images/passport-auth-5.png)
 
--   21. Para completar esta práctica de laboratorio, necesitas una solicitud de comprobación, para cuando el usuario seleccione elementos en la página selección del usuario y vuelva a iniciar sesión. La clase AuthService tiene dos métodos que creaste para solicitar un desafío, uno de los cuales usa un desafío firmado. En MicrosoftPassportHelper.cs crea un nuevo método denominado "RequestSignAsync". Este solicitará un desafío desde la clase AuthService, lo firmará localmente mediante una API de Passport y lo enviará firmado a la clase AuthService. En esta práctica de laboratorio, la clase AuthService recibirá el desafío firmado y devolverá true. En una implementación real, deberías implementar un mecanismo de comprobación para determinar si esta comprobación la firmó el usuario correcto en el dispositivo correcto. Agrega el método siguiente a MicrosoftPassportHelper.cs
+-   21. Para completar esta práctica de laboratorio, necesitas una solicitud de comprobación, para cuando el usuario seleccione elementos en la página de selección del usuario y vuelva a iniciar sesión. La clase AuthService tiene dos métodos que creaste para solicitar un desafío, uno de los cuales usa un desafío firmado. En MicrosoftPassportHelper.cs crea un nuevo método denominado "RequestSignAsync". Este solicitará un desafío desde la clase AuthService, lo firmará localmente mediante una API de Passport y lo enviará firmado a la clase AuthService. En esta práctica de laboratorio, la clase AuthService recibirá el desafío firmado y devolverá true. En una implementación real, deberías implementar un mecanismo de comprobación para determinar si esta comprobación la firmó el usuario correcto en el dispositivo correcto. Agrega el método siguiente a MicrosoftPassportHelper.cs
 
     ```cs
     private static async Task<bool> RequestSignAsync(Guid userId, KeyCredentialRetrievalResult openKeyResult)
@@ -1175,12 +1175,12 @@ En esta práctica de laboratorio has aprendido a usar las API de Passport para r
 
 A modo de ejercicio, te dejamos los detalles sobre cómo implementar la autenticación en el servicio y el servidor. La mayoría de los usuarios deben tener sistemas que deberán migrarse para comenzar a trabajar con Microsoft Passport y los detalles de cada sistema serán diferentes.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Microsoft Passport y Windows Hello](microsoft-passport.md)
 * [Aplicación de inicio de sesión de Microsoft Passport](microsoft-passport-login.md)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

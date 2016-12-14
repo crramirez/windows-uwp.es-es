@@ -4,14 +4,14 @@ Description: "Agrega un valor predeterminado InkToolbar a una aplicación de ent
 title: "Agregar un control InkToolbar a una aplicación de entrada manuscrita para la Plataforma universal de Windows (UWP)"
 label: Add an InkToolbar to a Universal Windows Platform (UWP) inking app
 template: detail.hbs
-keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, InkToolbar, Universal Windows Platform, UWP
+keywords: Windows Ink, entrada manuscrita de Windows, DirectInk, InkPresenter, InkCanvas, InkToolbar, Plataforma universal de Windows, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 9e971104a7f7de9425787f32edcb7c376fb0c934
-ms.openlocfilehash: f5c8f7f8e60317a3ef30ff1900d99f9f6d63d391
+ms.sourcegitcommit: 2b6b1d7b1755aad4d75a29413d989c6e8112128a
+ms.openlocfilehash: 1b810a42166c48c1359dcf9adfba84184234b42c
 
 ---
 
-# Agregar un control InkToolbar a una aplicación de entrada manuscrita para la Plataforma universal de Windows (UWP)
+# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-inking-app"></a>Agregar un control InkToolbar a una aplicación de entrada manuscrita para la Plataforma universal de Windows (UWP)
 
 Hay dos controles diferentes que facilitan la entrada manuscrita en aplicaciones para la Plataforma universal de Windows (UWP): [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) e [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
 
@@ -29,7 +29,7 @@ Como una superposición completamente transparente, el control InkCanvas no prop
 
   El control InkToolbar se describe en este tema.
 
-## API importantes
+## <a name="important-apis"></a>API importantes
 
   -   [**Clase InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx)
   -   [**Clase InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)
@@ -37,7 +37,7 @@ Como una superposición completamente transparente, el control InkCanvas no prop
   -   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
-## Control InkToolbar predeterminado
+## <a name="default-inktoolbar"></a>Control InkToolbar predeterminado
 
 De manera predeterminada, el control InkToolbar incluye botones para dibujar, borrar, resaltar y mostrar una regla. Dependiendo de la característica, en un control flotante se proporcionan otros comandos y opciones de configuración, como los destinados a definir el color y el grosor del trazo o a borrar todas las entradas de lápiz.
 
@@ -72,11 +72,11 @@ Para agregar un control InkToolbar predeterminado básico:
 </Grid>
 ```
 
-## Personalización básica
+## <a name="basic-customization"></a>Personalización básica
 
 En esta sección, nos centraremos en algunos escenarios básicos de personalización de la barra de herramientas de Windows Ink.
 
-### Especificar el botón seleccionado  
+### <a name="specify-the-selected-button"></a>Especificar el botón seleccionado  
 ![Botón de lápiz seleccionado durante la inicialización](.\images\ink\ink-tools-default-toolbar.png)  
 *Barra de herramientas de Windows Ink con el botón de lápiz seleccionado durante la inicialización*
 
@@ -126,7 +126,7 @@ private void inkToolbar_Loaded(object sender, RoutedEventArgs e)
 }
 ```
 
-### Especificar los botones integrados
+### <a name="specify-the-built-in-buttons"></a>Especificar los botones integrados
 
 ![Botones específicos que se incluyen durante la inicialización](.\images\ink\ink-tools-specific.png)  
 *Botones específicos que se incluyen durante la inicialización*
@@ -262,7 +262,7 @@ Modifica la declaración de XAML para los controles InkCanvas e InkToolbar del p
 By default, the InkToolbar supports both pen and mouse input, you have to enable support for touch input.
 -->
 
-## Botones personalizados y características de entrada manuscrita
+## <a name="custom-buttons-and-inking-features"></a>Botones personalizados y características de entrada manuscrita
 
 Puedes personalizar y ampliar la colección de botones (y las características de entrada manuscrita asociadas) que se proporcionan a través del control InkToolbar.
 
@@ -282,7 +282,7 @@ Dependiendo de la aplicación y de la funcionalidad de entrada manuscrita necesa
 
 > **Nota**&nbsp;&nbsp;No puedes cambiar el orden de visualización de los botones integrados. El orden de visualización predeterminado es: bolígrafo, lápiz, marcador de resaltado, borrador y regla. Los lápices personalizados se agregan al último lápiz predeterminado, los botones de la herramienta personalizada se agregan entre el último botón del lápiz y el botón de borrador, y los botones de alternancia personalizada se agregan detrás del botón de regla. (Los botones personalizados se agregan en el orden en que se especifican).
 
-### Lápiz personalizado
+### <a name="custom-pen"></a>Lápiz personalizado
 
 Puedes crear un lápiz personalizado (que se activa mediante un botón de lápiz personalizado) con el que defines la paleta de colores de entrada de lápiz y las propiedades de punta de lápiz, como la forma, la rotación y el tamaño.
 
@@ -396,7 +396,7 @@ A continuación, agregamos las referencias necesarias para el lápiz personaliza
 </Grid>
 ```
 
-### Alternancia personalizada
+### <a name="custom-toggle"></a>Alternancia personalizada
 
 Puedes crear una alternancia personalizada (que se activa a través de un botón de alternancia personalizada) para activar o desactivar el estado de una característica definida por la aplicación. Cuando se activa, la característica funciona junto con la herramienta activa.
 
@@ -520,7 +520,7 @@ namespace Ink_Basic_InkToolbar
 }
 ```
 
-### Herramienta personalizada
+### <a name="custom-tool"></a>Herramienta personalizada
 
 Puedes crear un botón de herramienta personalizada para invocar una herramienta que no sea lápiz y que esté definida por la aplicación.
 
@@ -783,7 +783,7 @@ namespace Ink_Basic_InkToolbar
 
 
 
-### Representación de entrada de lápiz personalizada
+### <a name="custom-ink-rendering"></a>Representación de entrada de lápiz personalizada
 
 De manera predeterminada, la entrada de lápiz se procesa en un subproceso en segundo plano de baja latencia y se representa como "húmeda" mientras se dibuja. Cuando se completa el trazo (se levanta el lápiz o el dedo o se libera el botón del mouse), el trazo se procesa en el subproceso de la interfaz de usuario y se representa como "seco" en la capa de [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) (lo verás sobre el contenido de la aplicación y reemplazando la entrada de lápiz húmeda).
 
@@ -795,7 +795,7 @@ Para obtener más información sobre el secado personalizado, consulta [Interacc
 > El secado personalizado y la clase [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)  
 > Si tu aplicación invalida el comportamiento predeterminado de representación de entrada de lápiz de la clase [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) con una implementación de secado personalizado, los trazos de lápiz representados ya no están disponibles para InkToolbar y los comandos de borrado integrados de InkToolbar no funcionan según lo previsto. Para proporcionar la funcionalidad de borrado, debes controlar todos los eventos de puntero, realizar la prueba de posicionamiento en cada trazo e invalidar el comando "Borrar todas las entradas de lápiz" integrado.
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 * [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md)
 
@@ -806,6 +806,6 @@ Para obtener más información sobre el secado personalizado, consulta [Interacc
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

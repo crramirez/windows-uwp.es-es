@@ -4,19 +4,19 @@ ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referencia de API principal de Device Portal
 description: "Obtén información sobre las API de REST principales de Windows Device Portal que puedes usar para acceder a los datos y controlar el dispositivo mediante programación."
 translationtype: Human Translation
-ms.sourcegitcommit: fae2c6b31c9c6c07026abc4718959b02a36e6600
-ms.openlocfilehash: 226ecaecd93e4996e438f56f780926ca63c184fd
+ms.sourcegitcommit: b4222774dc4b0f9cdcac871311f5ead69c1e70a9
+ms.openlocfilehash: 3bacb9ac42e157afaed5e9e0e6438654db03ff28
 
 ---
 
-# Referencia de API principal de Device Portal
+# <a name="device-portal-core-api-reference"></a>Referencia de API principal de Device Portal
 
 Todo lo que contiene Windows Device Portal se basa en las API de REST que puedes usar para acceder a los datos y controlar el dispositivo mediante programación.
 
-## Implementación de la aplicación
+## <a name="app-deployment"></a>Implementación de la aplicación
 
 ---
-### Instalar una aplicación
+### <a name="install-an-app"></a>Instalar una aplicación
 
 **Solicitud**
 
@@ -64,7 +64,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtener el estado de instalación de la aplicación
+### <a name="get-app-installation-status"></a>Obtener el estado de instalación de la aplicación
 
 **Solicitud**
 
@@ -107,7 +107,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Desinstalar una aplicación
+### <a name="uninstall-an-app"></a>Desinstalar una aplicación
 
 **Solicitud**
 
@@ -153,7 +153,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtener aplicaciones instaladas
+### <a name="get-installed-apps"></a>Obtener aplicaciones instaladas
 
 **Solicitud**
 
@@ -222,9 +222,9 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## Administrador de dispositivos
+## <a name="device-manager"></a>Administrador de dispositivos
 ---
-### Obtener los dispositivos instalados en la máquina
+### <a name="get-the-installed-devices-on-the-machine"></a>Obtener los dispositivos instalados en la máquina
 
 **Solicitud**
 
@@ -281,9 +281,9 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## Colección de volcados de memoria
+## <a name="dump-collection"></a>Colección de volcados de memoria
 ---
-### Obtener la lista de todos los volcados de memoria de aplicaciones
+### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Obtener la lista de todos los volcados de memoria de aplicaciones
 
 **Solicitud**
 
@@ -322,12 +322,13 @@ Código de estado HTTP      | Descripción
 <br />
 **Familias de dispositivos disponibles**
 
+* Windows Mobile (en el Programa Windows Insider)
 * Escritorio de Windows
 * HoloLens
 * IoT
 
 ---
-### Obtener la configuración de la colección de volcado de memoria de una aplicación
+### <a name="get-the-crash-dump-collection-settings-for-an-app"></a>Obtener la configuración de la colección de volcado de memoria de una aplicación
 
 **Solicitud**
 
@@ -373,12 +374,13 @@ Código de estado HTTP      | Descripción
 <br />
 **Familias de dispositivos disponibles**
 
+* Windows Mobile (en el Programa Windows Insider)
 * Escritorio de Windows
 * HoloLens
 * IoT
 
 ---
-### Eliminar un volcado de memoria de una aplicación transferida localmente
+### <a name="delete-a-crash-dump-for-a-sideloaded-app"></a>Eliminar un volcado de memoria de una aplicación transferida localmente
 
 **Solicitud**
 
@@ -420,12 +422,13 @@ Código de estado HTTP      | Descripción
 <br />
 **Familias de dispositivos disponibles**
 
+* Windows Mobile (en el Programa Windows Insider)
 * Escritorio de Windows
 * HoloLens
 * IoT
 
 ---
-### Deshabilitar volcados de memoria de una aplicación transferida localmente
+### <a name="disable-crash-dumps-for-a-sideloaded-app"></a>Deshabilitar volcados de memoria de una aplicación transferida localmente
 
 **Solicitud**
 
@@ -466,12 +469,13 @@ Código de estado HTTP      | Descripción
 <br />
 **Familias de dispositivos disponibles**
 
+* Windows Mobile (en el Programa Windows Insider)
 * Escritorio de Windows
 * HoloLens
 * IoT
 
 ---
-### Descargar el volcado de memoria de una aplicación transferida localmente
+### <a name="download-the-crash-dump-for-a-sideloaded-app"></a>Descargar el volcado de memoria de una aplicación transferida localmente
 
 **Solicitud**
 
@@ -515,12 +519,13 @@ Código de estado HTTP      | Descripción
 <br />
 **Familias de dispositivos disponibles**
 
+* Windows Mobile (en el Programa Windows Insider)
 * Escritorio de Windows
 * HoloLens
 * IoT
 
 ---
-### Habilitar volcados de memoria de una aplicación transferida localmente
+### <a name="enable-crash-dumps-for-a-sideloaded-app"></a>Habilitar los volcados de memoria de una aplicación transferida localmente
 
 **Solicitud**
 
@@ -555,16 +560,17 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
-200 | Aceptar
+200 | Correcto
 <br />
 **Familias de dispositivos disponibles**
 
+* Windows Mobile (en el Programa Windows Insider)
 * Escritorio de Windows
 * HoloLens
 * IoT
 
 ---
-### Obtener la lista de archivos de comprobación de errores
+### <a name="get-the-list-of-bugcheck-files"></a>Obtener la lista de archivos de comprobación de errores
 
 **Solicitud**
 
@@ -589,19 +595,19 @@ GET | /api/debug/dump/kernel/dumplist
 
 **Respuesta**
 
-La respuesta incluye una lista de nombres de archivo de volcado de memoria y los tamaños de estos archivos. Esta lista estará en el siguiente formato. El segundo parámetro *FileName* es el tamaño del archivo. Este es un error conocido.
+La respuesta incluye una lista de nombres de archivo de volcado de memoria y los tamaños de estos archivos. Esta lista tendrá el siguiente formato. 
 ```
 {"DumpFiles": [
     {
         "FileName": string,
-        "FileName": string
+        "FileSize": int
     },...
 ]}
 ```
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -613,7 +619,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Descargar un archivo de volcado de memoria de comprobación de errores
+### <a name="download-a-bugcheck-dump-file"></a>Descargar un archivo de volcado de memoria de comprobación de errores
 
 **Solicitud**
 
@@ -660,7 +666,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtener la configuración de control de bloqueo de comprobación de errores
+### <a name="get-the-bugcheck-crash-control-settings"></a>Obtener la configuración de control de bloqueo de comprobación de errores
 
 **Solicitud**
 
@@ -688,16 +694,26 @@ GET | /api/debug/dump/kernel/crashcontrol
 La respuesta incluye la configuración de control de bloqueo. Para obtener más información sobre CrashControl, consulta el artículo [CrashControl](https://technet.microsoft.com/library/cc951703.aspx). La plantilla para la respuesta es la siguiente.
 ```
 {
-    "autoreboot": int,
-    "dumptype": int,
+    "autoreboot": bool (0 or 1),
+    "dumptype": int (0 to 4),
     "maxdumpcount": int,
-    "overwrite": int
+    "overwrite": bool (0 or 1)
 }
 ```
 
+**Tipos de volcado**
+
+0: Deshabilitado
+
+1: Volcado de memoria completo (recopila toda la memoria en uso)
+
+2: Volcado de memoria de kernel (omite la memoria del modo de usuario)
+
+3: Minivolcado de kernel limitado
+
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
@@ -711,7 +727,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtener un volcado de memoria de kernel dinámico
+### <a name="get-a-live-kernel-dump"></a>Obtener un volcado de memoria de kernel dinámico
 
 **Solicitud**
 
@@ -754,7 +770,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtener un volcado de memoria de un proceso de usuario dinámico
+### <a name="get-a-dump-from-a-live-user-process"></a>Obtener un volcado de memoria de un proceso de usuario dinámico
 
 **Solicitud**
 
@@ -801,7 +817,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Establecer la configuración de control de bloqueo de comprobación de errores
+### <a name="set-the-bugcheck-crash-control-settings"></a>Establecer la configuración de control de bloqueo de comprobación de errores
 
 **Solicitud**
 
@@ -849,9 +865,9 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## ETW
+## <a name="etw"></a>ETW
 ---
-### Crear una sesión ETW en tiempo real a través de un WebSocket
+### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Crear una sesión ETW en tiempo real a través de un WebSocket
 
 **Solicitud**
 
@@ -895,7 +911,7 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
-### Comandos de ETW WebSocket
+### <a name="etw-websocket-commands"></a>Comandos de ETW WebSocket
 Estos comandos se envían desde el cliente al servidor.
 
 Comando | Descripción
@@ -945,7 +961,7 @@ Ejemplo:
 ```
 
 ---
-### Enumerar los proveedores de ETW registrados
+### <a name="enumerate-the-registered-etw-providers"></a>Enumerar los proveedores de ETW registrados
 
 **Solicitud**
 
@@ -996,7 +1012,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Enumerar los proveedores de ETW personalizados expuestos por la plataforma.
+### <a name="enumerate-the-custom-etw-providers-exposed-by-the-platform"></a>Enumerar los proveedores de ETW personalizados expuestos por la plataforma.
 
 **Solicitud**
 
@@ -1044,9 +1060,9 @@ GET | /api/etw/customproviders
 * IoT
 
 ---
-## Información del SO
+## <a name="os-information"></a>Información del SO
 ---
-### Obtener el nombre de la máquina
+### <a name="get-the-machine-name"></a>Obtener el nombre de la máquina
 
 **Solicitud**
 
@@ -1096,7 +1112,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtener la información del sistema operativo
+### <a name="get-the-operating-system-information"></a>Obtener la información del sistema operativo
 
 **Solicitud**
 
@@ -1152,7 +1168,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtén la familia de dispositivos. 
+### <a name="get-the-device-family"></a>Obtén la familia de dispositivos. 
 
 **Solicitud**
 
@@ -1206,7 +1222,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Establecer el nombre de la máquina
+### <a name="set-the-machine-name"></a>Establecer el nombre de la máquina
 
 **Solicitud**
 
@@ -1252,9 +1268,9 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## Datos de rendimiento
+## <a name="performance-data"></a>Datos de rendimiento
 ---
-### Obtener la lista de procesos en ejecución
+### <a name="get-the-list-of-running-processes"></a>Obtener la lista de procesos en ejecución
 
 **Solicitud**
 
@@ -1315,7 +1331,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtener las estadísticas de rendimiento del sistema
+### <a name="get-the-system-performance-statistics"></a>Obtener las estadísticas de rendimiento del sistema
 
 **Solicitud**
 
@@ -1394,9 +1410,9 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## Energía
+## <a name="power"></a>Energía
 ---
-### Obtener el estado actual de la batería
+### <a name="get-the-current-battery-state"></a>Obtener el estado actual de la batería
 
 **Solicitud**
 
@@ -1447,13 +1463,13 @@ Código de estado HTTP      | Descripción
 <br />
 **Familias de dispositivos disponibles**
 
+* Windows Mobile
 * Escritorio de Windows
 * HoloLens
 * IoT
-* Móvil
 
 ---
-### Obtener el plan de energía activo
+### <a name="get-the-active-power-scheme"></a>Obtener el plan de energía activo
 
 **Solicitud**
 
@@ -1499,7 +1515,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtener el subvalor de un plan de energía
+### <a name="get-the-sub-value-for-a-power-scheme"></a>Obtener el subvalor de un plan de energía
 
 **Solicitud**
 
@@ -1542,7 +1558,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtener el estado de energía del sistema
+### <a name="get-the-power-state-of-the-system"></a>Obtener el estado de energía del sistema
 
 **Solicitud**
 
@@ -1589,7 +1605,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Establecer el plan de energía activo
+### <a name="set-the-active-power-scheme"></a>Establecer el plan de energía activo
 
 **Solicitud**
 
@@ -1634,7 +1650,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Establecer el subvalor de un plan de energía
+### <a name="set-the-sub-value-for-a-power-scheme"></a>Establecer el subvalor de un plan de energía
 
 **Solicitud**
 
@@ -1678,7 +1694,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtener un informe de estudio de suspensión
+### <a name="get-a-sleep-study-report"></a>Obtener un informe de estudio de suspensión
 
 **Solicitud**
 
@@ -1721,7 +1737,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Enumerar los informes de estudio de suspensión disponibles
+### <a name="enumerate-the-available-sleep-study-reports"></a>Enumerar los informes de estudio de suspensión disponibles
 
 **Solicitud**
 
@@ -1772,7 +1788,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtener la transformación de estudio de suspensión
+### <a name="get-the-sleep-study-transform"></a>Obtener la transformación de estudio de suspensión
 
 **Solicitud**
 
@@ -1815,9 +1831,9 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## Control remoto
+## <a name="remote-control"></a>Control remoto
 ---
-### Reiniciar el equipo de destino
+### <a name="restart-the-target-computer"></a>Reiniciar el equipo de destino
 
 **Solicitud**
 
@@ -1859,7 +1875,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Apagar el equipo de destino
+### <a name="shut-down-the-target-computer"></a>Apagar el equipo de destino
 
 **Solicitud**
 
@@ -1903,9 +1919,9 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## Administrador de tareas
+## <a name="task-manager"></a>Administrador de tareas
 ---
-### Iniciar una aplicación moderna
+### <a name="start-a-modern-app"></a>Iniciar una aplicación moderna
 
 **Solicitud**
 
@@ -1954,7 +1970,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Detener una aplicación moderna
+### <a name="stop-a-modern-app"></a>Detener una aplicación moderna
 
 **Solicitud**
 
@@ -2003,9 +2019,9 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## Redes
+## <a name="networking"></a>Redes
 ---
-### Obtener la configuración IP actual
+### <a name="get-the-current-ip-configuration"></a>Obtener la configuración IP actual
 
 **Solicitud**
 
@@ -2091,7 +2107,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 --
-### Enumerar las interfaces de red inalámbrica
+### <a name="enumerate-wireless-network-interfaces"></a>Enumerar las interfaces de red inalámbrica
 
 **Solicitud**
 
@@ -2153,7 +2169,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Enumerar redes inalámbricas
+### <a name="enumerate-wireless-networks"></a>Enumerar redes inalámbricas
 
 **Solicitud**
 
@@ -2223,7 +2239,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Conectar y desconectar en una red Wi-Fi.
+### <a name="connect-and-disconnect-to-a-wi-fi-network"></a>Conectar y desconectar en una red Wi-Fi.
 
 **Solicitud**
 
@@ -2273,7 +2289,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Eliminar un perfil de Wi-Fi
+### <a name="delete-a-wi-fi-profile"></a>Eliminar un perfil de Wi-Fi
 
 **Solicitud**
 
@@ -2320,9 +2336,9 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## Informe de errores de Windows (WER)
+## <a name="windows-error-reporting-wer"></a>Informe de errores de Windows (WER)
 ---
-### Descargar un archivo de Informe de errores de Windows (WER)
+### <a name="download-a-windows-error-reporting-wer-file"></a>Descargar un archivo de Informe de errores de Windows (WER)
 
 **Solicitud**
 
@@ -2373,7 +2389,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Enumerar archivos en un Informe de errores de Windows (WER)
+### <a name="enumerate-files-in-a-windows-error-reporting-wer-report"></a>Enumerar archivos en un Informe de errores de Windows (WER)
 
 **Solicitud**
 
@@ -2428,7 +2444,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Enumerar en una lista los Informes de errores de Windows (WER)
+### <a name="list-the-windows-error-reporting-wer-reports"></a>Enumerar en una lista los Informes de errores de Windows (WER)
 
 **Solicitud**
 
@@ -2486,9 +2502,9 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## Windows Performance Recorder (WPR) 
+## <a name="windows-performance-recorder-wpr"></a>Windows Performance Recorder (WPR) 
 ---
-### Iniciar el seguimiento con un perfil personalizado
+### <a name="start-tracing-with-a-custom-profile"></a>Iniciar el seguimiento con un perfil personalizado
 
 **Solicitud**
 
@@ -2540,7 +2556,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Iniciar una sesión de seguimiento del rendimiento de arranque
+### <a name="start-a-boot-performance-tracing-session"></a>Iniciar una sesión de seguimiento del rendimiento de arranque
 
 **Solicitud**
 
@@ -2596,7 +2612,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Detener una sesión de seguimiento del rendimiento de arranque
+### <a name="stop-a-boot-performance-tracing-session"></a>Detener una sesión de seguimiento del rendimiento de arranque
 
 **Solicitud**
 
@@ -2621,7 +2637,7 @@ GET | /api/wpr/boottrace
 
 **Respuesta**
 
-- Devuelve el archivo de seguimiento ETL.
+-  Ninguna.  **Nota:** Esta es una operación de larga duración.  Devolverá cuando el archivo ETL haya terminado de escribirse en disco.
 
 **Código de estado**
 
@@ -2641,7 +2657,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Iniciar una sesión de seguimiento del rendimiento
+### <a name="start-a-performance-tracing-session"></a>Iniciar una sesión de seguimiento del rendimiento
 
 **Solicitud**
 
@@ -2697,7 +2713,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Detener una sesión de seguimiento del rendimiento
+### <a name="stop-a-performance-tracing-session"></a>Detener una sesión de seguimiento del rendimiento
 
 **Solicitud**
 
@@ -2742,7 +2758,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Recuperar el estado de una sesión de seguimiento
+### <a name="retrieve-the-status-of-a-tracing-session"></a>Recuperar el estado de una sesión de seguimiento
 
 **Solicitud**
 
@@ -2794,7 +2810,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Lista de sesiones de seguimiento completadas (ETL)
+### <a name="list-completed-tracing-sessions-etls"></a>Lista de sesiones de seguimiento completadas (ETL)
 
 **Solicitud**
 
@@ -2851,7 +2867,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Descargar una sesión de seguimiento (ETL)
+### <a name="download-a-tracing-session-etl"></a>Descargar una sesión de seguimiento (ETL)
 
 **Solicitud**
 
@@ -2900,7 +2916,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Eliminar una sesión de seguimiento (ETL)
+### <a name="delete-a-tracing-session-etl"></a>Eliminar una sesión de seguimiento (ETL)
 
 **Solicitud**
 
@@ -2949,9 +2965,9 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-## Etiquetas de DNS-SD 
+## <a name="dns-sd-tags"></a>Etiquetas de DNS-SD 
 ---
-### Ver etiquetas
+### <a name="view-tags"></a>Ver etiquetas
 
 **Solicitud**
 
@@ -3004,7 +3020,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Eliminar etiquetas
+### <a name="delete-tags"></a>Eliminar etiquetas
 
 **Solicitud**
 
@@ -3049,7 +3065,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Eliminar etiqueta
+### <a name="delete-tag"></a>Eliminar etiqueta
 
 **Solicitud**
 
@@ -3095,7 +3111,7 @@ Código de estado HTTP      | Descripción
 * IoT
  
 ---
-### Agregar una etiqueta
+### <a name="add-a-tag"></a>Agregar una etiqueta
 
 **Solicitud**
 
@@ -3141,10 +3157,10 @@ Código de estado HTTP      | Descripción
 * HoloLens
 * IoT
 
-## Explorador de archivos de la aplicación
+## <a name="app-file-explorer"></a>Explorador de archivos de la aplicación
 
 ---
-### Obtener carpetas conocidas
+### <a name="get-known-folders"></a>Obtener carpetas conocidas
 
 **Solicitud**
 
@@ -3194,7 +3210,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Obtener archivos
+### <a name="get-files"></a>Obtener archivos
 
 **Solicitud**
 
@@ -3254,7 +3270,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Descargar un archivo
+### <a name="download-a-file"></a>Descargar un archivo
 
 **Solicitud**
 
@@ -3302,7 +3318,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Cambiar el nombre de un archivo
+### <a name="rename-a-file"></a>Cambiar el nombre de un archivo
 
 **Solicitud**
 
@@ -3354,7 +3370,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Eliminar un archivo
+### <a name="delete-a-file"></a>Eliminar un archivo
 
 **Solicitud**
 
@@ -3404,7 +3420,7 @@ Código de estado HTTP      | Descripción
 * IoT
 
 ---
-### Cargar un archivo
+### <a name="upload-a-file"></a>Cargar un archivo
 
 **Solicitud**
 
@@ -3451,7 +3467,6 @@ Código de estado HTTP      | Descripción
 * IoT
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

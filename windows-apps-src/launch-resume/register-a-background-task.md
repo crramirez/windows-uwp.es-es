@@ -4,12 +4,12 @@ title: Registrar una tarea en segundo plano
 description: "Aprende a crear una función que pueda reutilizarse para registrar de forma segura la mayoría de las tareas en segundo plano."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 translationtype: Human Translation
-ms.sourcegitcommit: 0f1bf88b1470cc5205f2e98ef15300da705203b1
-ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
+ms.sourcegitcommit: 2f46f5cd26656b2d6b7d14c0d85aa7a0a6950fb8
+ms.openlocfilehash: 809cd0ea85d4dfc6ecf633d0ca9f16bbefee78ca
 
 ---
 
-# Registrar una tarea en segundo plano
+# <a name="register-a-background-task"></a>Registrar una tarea en segundo plano
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -31,7 +31,7 @@ Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](
 
 Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
 
-## Definir el tipo de devolución y la firma del método
+## <a name="define-the-method-signature-and-return-type"></a>Definir el tipo de devolución y la firma del método
 
 Este método toma el punto de entrada de la tarea, el nombre de la tarea y un desencadenador de tarea en segundo plano preconstruido y, de forma opcional, un objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) para la tarea en segundo plano. Este método devuelve un objeto [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).
 
@@ -40,7 +40,7 @@ Este método toma el punto de entrada de la tarea, el nombre de la tarea y un de
 > Si la tarea en segundo plano se ejecuta en el mismo proceso que la aplicación (es decir, una tarea en segundo plano en proceso), no se debe establecer `taskEntryPoint`.
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -52,7 +52,7 @@ Este método toma el punto de entrada de la tarea, el nombre de la tarea y un de
 >
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -65,7 +65,7 @@ Este método toma el punto de entrada de la tarea, el nombre de la tarea y un de
 > }
 > ```
 
-## Comprobar registros existentes
+## <a name="check-for-existing-registrations"></a>Comprobar registros existentes
 
 Comprueba si la tarea ya está registrada. Es importante que compruebes esto porque si una tarea está registrada varias veces, se ejecutará más de una vez cada vez que sea desencadenada; esto hace un consumo excesivo de CPU y puede ocasionar un comportamiento inesperado.
 
@@ -76,7 +76,7 @@ Puedes comprobar registros existentes consultando la propiedad [**BackgroundTask
 El siguiente código registra una tarea en segundo plano usando [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838), que creamos en el último paso:
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -103,7 +103,7 @@ El siguiente código registra una tarea en segundo plano usando [**SystemTrigger
 >     // We'll register the task in the next step.
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -137,7 +137,7 @@ El siguiente código registra una tarea en segundo plano usando [**SystemTrigger
 > }
 > ```
 
-## Registrar la tarea en segundo plano (o devolver el registro existente)
+## <a name="register-the-background-task-or-return-the-existing-registration"></a>Registrar la tarea en segundo plano (o devolver el registro existente)
 
 
 Comprueba si se encontró la tarea en la lista de registros de tareas en segundo plano existentes. Si ya está en la lista, devuelve esa instancia de la tarea.
@@ -150,7 +150,7 @@ Después registra la tarea con un nuevo objeto [**BackgroundTaskBuilder**](https
 El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código que registra la tarea en segundo plano (incluida la condición del sistema opcional si la hubiera):
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -199,7 +199,7 @@ El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código 
 >     return task;
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -251,13 +251,13 @@ El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código 
 > }
 > ```
 
-## Completar la función de utilidad de registro de tareas en segundo plano
+## <a name="complete-background-task-registration-utility-function"></a>Completar la función de utilidad de registro de tareas en segundo plano
 
 
 Ese ejemplo muestra la función de registro de tareas en segundo plano completa. Esta función puede usarse para registrar la mayoría de las tareas en segundo plano, a excepción de las tareas en red.
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > //
 > // Register a background task with the specified taskEntryPoint, name, trigger,
 > // and condition (optional).
@@ -310,7 +310,7 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 >     return task;
 > }
 > ```
-> ```cpp
+> ``` cpp
 > //
 > // Register a background task with the specified taskEntryPoint, name, trigger,
 > // and condition (optional).
@@ -371,9 +371,9 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 > }
 > ```
 
-> **Nota**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Nota**  Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 ****
 
@@ -397,6 +397,6 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

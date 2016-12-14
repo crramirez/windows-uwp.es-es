@@ -4,12 +4,12 @@ description: "Esta es primera parte de un tutorial completo acerca de cómo crea
 ms.assetid: A9E11694-A7F5-4E27-95EC-889307E0C0EF
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: af8ae79f67d77195d5ed4801d040b2f1aafe8a97
-ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
+ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
+ms.openlocfilehash: 04311e9c3242bdaf6588c8102a06ae658e6637e2
 
 ---
 
-# Crear una aplicación de inicio de sesión de Microsoft Passport
+# <a name="create-a-microsoft-passport-login-app"></a>Crear una aplicación de inicio de sesión de Microsoft Passport
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -23,30 +23,30 @@ Este tutorial se divide en dos partes: creación de la aplicación y conexión a
 
 Antes de comenzar, debe leer la introducción a [Microsoft Passport y Windows Hello](microsoft-passport.md) para obtener una descripción general de cómo funciona Microsoft Passport.
 
-## Para empezar
+## <a name="get-started"></a>Para empezar
 
 
 Para crear este proyecto, necesitarás algo de experiencia con C# y XAML. También tendrás que usar Visual Studio de 2015 (Community Edition o superior) en una máquina de Windows 10.
 
--   Abre Visual Studio2015 y selecciona Archivo > Nuevo > Proyecto.
+-   Abre Visual Studio 2015 y selecciona Archivo > Nuevo > Proyecto.
 -   Se abrirá una ventana de "Nuevo proyecto". Navegación a Plantillas > Visual C#.
 -   Elige la aplicación vacía (Windows Universal) y el nombre de la aplicación "PassportLogin".
 -   Compila y ejecuta la nueva aplicación (F5); debería mostrarse una ventana vacía en la pantalla. Cierre la aplicación.
 
-![](images/passport-login-1.png)
+![nuevo proyecto de Passport](images/passport-login-1.png)
 
-## Ejercicio 1: Iniciar sesión con Microsoft Passport
+## <a name="exercise-1-login-with-microsoft-passport"></a>Ejercicio 1: Iniciar sesión con Microsoft Passport
 
 
-En este ejercicio aprenderás cómo comprobar si Microsoft Passport está configurado en la máquina y cómo iniciar sesión en una cuenta con Microsoft Passport.
+En este ejercicio aprenderás a comprobar si Microsoft Passport está configurado en la máquina y cómo iniciar sesión en una cuenta con Microsoft Passport.
 
 -   En el nuevo proyecto, crea una carpeta nueva en la solución denominada "Vistas". Esta carpeta contendrá las páginas a las que se navegará en esta muestra. Haz clic con el botón derecho en el proyecto en el Explorador de soluciones, selecciona Agregar > Nueva carpeta y, después, cambia el nombre de la carpeta a Vistas.
 
-    ![](images/passport-login-2.png)
+    ![agregar carpeta de Passport](images/passport-login-2.png)
 
 -   Haz clic con el botón secundario en la nueva carpeta Vistas, selecciona Agregar > Nuevo elemento y selecciona Página en blanco. Asigna a esta página el nombre "Login.xaml".
 
-    ![](images/passport-login-3.png)
+    ![agregar página en blanco de Passport](images/passport-login-3.png)
 
 -   Para definir la interfaz de usuario de la nueva página de inicio de sesión, agrega el siguiente XAML. Este XAML define un StackPanel para alinear los elementos secundarios siguientes:
 
@@ -162,7 +162,7 @@ En este ejercicio aprenderás cómo comprobar si Microsoft Passport está config
 
 -   Para crear la clase MicrosoftPassportHelper, haz clic con el botón secundario en la solución PassportLogin (Universal Windows) y haz clic en Agregar > Nueva carpeta. Asigna a esta carpeta el nombre Utils.
 
-    ![](images/passport-login-5.png)
+    ![creación de clase auxiliar de Passport](images/passport-login-5.png)
 
 -   Haz clic con el botón secundario en la carpeta Utils y haz clic en Agregar > Clase. Asigna a esta clase el nombre "MicrosoftPassportHelper.cs".
 -   Cambia la definición de clase de MicrosoftPassportHelper a estática pública y, después, agrega el siguiente método para informar al usuario si Microsoft Passport está listo para usarse o no. Deberás agregar los espacios de nombres necesarios.
@@ -209,11 +209,11 @@ En este ejercicio aprenderás cómo comprobar si Microsoft Passport está config
 
 -   Compila y ejecuta la aplicación (F5). El sistema te dirigirá a la página de inicio de sesión y el banner de Microsoft Passport te indicará si Passport está listo para usarse. Debería mostrarse el banner verde o azul que indica el estado de Microsoft Passport en la máquina.
 
-    ![](images/passport-login-6.png)
+    ![pantalla de inicio de sesión de Passport lista](images/passport-login-6.png)
 
-    ![](images/passport-login-7.png)
+    ![pantalla de inicio de sesión de Passport sin configurar](images/passport-login-7.png)
 
--   Lo siguiente que debes es compilar la lógica para iniciar sesión. Crea una nueva carpeta denominada "Models".
+-   Lo siguiente que debes hacer es compilar la lógica para iniciar sesión. Crea una nueva carpeta denominada "Models".
 -   En la carpeta Models crea una nueva clase denominada "Account.cs". Esta clase actuará como tu modelo de cuenta. Dado que se trata de una muestra, solo contendrá un nombre de usuario. Cambia la definición de clase a pública y agrega la propiedad Username.
     
     ```cs
@@ -484,11 +484,11 @@ En este ejercicio aprenderás cómo comprobar si Microsoft Passport está config
     }
     ```
 
--   Compila y ejecuta la aplicación. Se abrirá la página Login. Escribe "sampleUsername" y haz clic en Iniciar sesión. Se mostrará un mensaje de Microsoft Passport que te pedirá que escribas tu PIN. Cuando escribas el PIN correctamente, el método CreatePassportKeyAsync podrá crear una clave de Passport. Supervisa las ventanas de salida para ver si se muestran mensajes que indican que la acción se realizó correctamente.
+-   Compila y ejecuta la aplicación. Se abrirá la página Login. Escribe "sampleUsername" y haz clic en Iniciar sesión. Se mostrará un mensaje de Microsoft Passport que te pedirá que escribas tu PIN. Cuando escribas el PIN correctamente, el método CreatePassportKeyAsync podrá crear una clave de Passport. Supervisa las ventanas de salida para ver si se muestran mensajes que indican que la acción se ha realizado correctamente.
 
-    ![](images/passport-login-8.png)
+    ![petición de pin de inicio de sesión de Passport](images/passport-login-8.png)
 
-## Ejercicio 2: Páginas Welcome y UserSelection
+## <a name="exercise-2-welcome-and-user-selection-pages"></a>Ejercicio 2: Páginas Welcome y UserSelection
 
 
 En este ejercicio, partirás del ejercicio anterior. Cuando una persona inicia sesión correctamente, debería mostrarse una página de bienvenida donde se puede cerrar sesión o eliminar la cuenta. Dado que Passport crea una clave para cada máquina, se puede crear una pantalla de selección del usuario, que muestra todos los usuarios que tienen una sesión iniciada en esa máquina. Un usuario puede seleccionar una de estas cuentas e ir directamente a la pantalla de bienvenida sin tener que volver a escribir una contraseña, porque ya se autenticó para acceder a la máquina.
@@ -624,9 +624,9 @@ En este ejercicio, partirás del ejercicio anterior. Cuando una persona inicia s
 
 -   Compila y ejecuta la aplicación. Inicia sesión con "sampleUsername" y haz clic en Iniciar sesión. Escribe el PIN y, si es correcto, deberías dirigirte a la pantalla de bienvenida. Intenta hacer clic en la opción de olvidar usuario y supervisa la ventana de salida para ver si el usuario se ha eliminado. Ten en cuenta que una vez eliminado el usuario, permanecerás en la página principal. Deberás crear una página de selección del usuario a la que la aplicación pueda navegar.
 
-    ![](images/passport-login-9.png)
+    !pantalla de bienvenida de Passport](images/passport-login-9.png)
 
--   En la carpeta Views crea una nueva página en blanco denominada "UserSelection.xaml" y agrega el siguiente XAML para definir la interfaz de usuario. Esta página contendrá una [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) en la que se mostrarán todos los usuarios de la lista de cuentas locales, así como un botón que navegará a la página de inicio de sesión para permitir al usuario agregar otra cuenta.
+-   En la carpeta Vistas, crea una nueva página en blanco denominada "UserSelection.xaml" y agrega el siguiente XAML para definir la interfaz de usuario. Esta página contendrá una [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) en la que se mostrarán todos los usuarios de la lista de cuentas locales, así como un botón que navegará a la página de inicio de sesión para permitir al usuario agregar otra cuenta.
 
     ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -872,12 +872,12 @@ En este ejercicio, partirás del ejercicio anterior. Cuando una persona inicia s
 
 -   Compila y ejecuta la aplicación. Inicia sesión con "sampleUsername". Escribe el PIN y, si es correcto, se te dirigirá a la pantalla Welcome. Haz clic para volver a la lista de usuarios. Ahora deberías ver un usuario en la lista. Si haces clic en este, Passport te permitirá iniciar sesión posteriormente sin tener que volver a escribir contraseñas, etc.
 
-    ![](images/passport-login-10.png)
+    ![seleccionar de la lista de usuarios de Passport](images/passport-login-10.png)
 
-## Ejercicio 3: Registrar un nuevo usuario de Passport
+## <a name="exercise-3-registering-a-new-passport-user"></a>Ejercicio 3: Registrar un nuevo usuario de Passport
 
 
-En este ejercicio crearás una nueva página que creará una nueva cuenta con Passport. El funcionamiento es similar al de la página Login. La página Login se implementa para un usuario existente que está realizando la migración para usar Passport. Una página PassportRegister creará el registro de Passport para un usuario nuevo.
+En este ejercicio crearás una nueva página, que a su vez creará una nueva cuenta con Passport. El funcionamiento es similar al de la página Login. La página Login se implementa para un usuario existente que está realizando la migración para usar Passport. Una página PassportRegister creará el registro de Passport para un usuario nuevo.
 
 -   En la carpeta de vistas crea una nueva página en blanco denominada "PassportRegister.xaml". En el código XAML agrega lo siguiente para configurar la interfaz de usuario. Esta interfaz es similar a la página Login.
 
@@ -959,20 +959,20 @@ En este ejercicio crearás una nueva página que creará una nueva cuenta con Pa
     }
     ```
 
--   Compila y ejecuta la aplicación. Intenta registrar un usuario nuevo. Luego, vuelve a la lista de usuarios y comprueba que puedes seleccionar ese usuario e iniciar sesión.
+-   Compila y ejecuta la aplicación. Intenta registrar un usuario nuevo. Luego vuelve a la lista de usuarios y comprueba que puedes seleccionar ese usuario e iniciar sesión.
 
-    ![](images/passport-login-11.png)
+    ![registrar un nuevo usuario de Passport](images/passport-login-11.png)
 
 En esta práctica has aprendido las habilidades esenciales que necesitas para usar la nueva API de Microsoft Passport para autenticar usuarios existentes y crear cuentas para los nuevos usuarios. Con este nuevo conocimiento puedes eliminar la necesidad de que los usuarios tengan que recordar contraseñas para tu aplicación y, aún así, estar seguro de que tus aplicaciones permanecen protegidas con la autenticación de usuarios. Windows 10 usa la tecnología de Passport para admitir el inicio de sesión biométrico de Windows Hello. Si usas una máquina que admite Windows Hello habrás visto que este conjunto de ejercicios ya admite Windows Hello.
 
 No existe ningún trabajo adicional que, como desarrollador, debas hacer para admitir Windows Hello una vez implementada la compatibilidad con Microsoft Passport.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Microsoft Passport y Windows Hello](microsoft-passport.md)
 * [Servicio de inicio de sesión de Microsoft Passport](microsoft-passport-login-auth-service.md)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

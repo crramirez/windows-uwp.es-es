@@ -5,21 +5,20 @@ title: "A continuación"
 description: "Ahora que ya creaste tu primera aplicación, visita el resto del Centro de desarrollo. Esta es una introducción a las diferentes secciones que contiene."
 keywords: "Centro de desarrollo, introducción"
 translationtype: Human Translation
-ms.sourcegitcommit: 1c059edde92a48af610af1033c3b18ca729410aa
-ms.openlocfilehash: 6b7985137e02a348fafabf0aaf298c5d20095bd7
+ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
+ms.openlocfilehash: 087c298f59798010628aefc428eedf9933bb2686
 
 ---
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-# A continuación
+# <a name="whats-next"></a>A continuación
 
-Así que quieres escribir una aplicación. ¿Por dónde debes empezar? Estos son algunos temas del Centro de desarrollo que te ayudarán a empezar. Si eres principiante en la plataforma UWP, prueba con algunos de los vídeos de <a href="https://channel9.msdn.com/">Channel 9</a> y con los cursos de <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a>. Si ya estás familiarizado con XAML y C#, puedes empezar leyendo los temas siguientes.
+Quieres escribir una aplicación y publicarla en la tienda Windows: ¿por dónde empezar? Si eres principiante en la plataforma UWP, prueba con algunos de los vídeos de <a href="https://channel9.msdn.com/">Channel 9</a> y con los cursos de <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a>. Si ya estás familiarizado con XAML y C#, puedes empezar leyendo los temas siguientes o ir directamente a [algunos ejemplos de descarga](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
 
-Nuestra recomendación es que consultes los temas sobre UWP para captar la esencia de la plataforma y, a continuación, investigues para crear tu interfaz de usuario mediante el uso y la posterior personalización de los controles XAML. La ventaja principal de XAML es el uso del *enlace de datos*, que conecta los controles con la información que tu aplicación quiere mostrar: si eres un nuevo usuario de la plataforma Windows, es importante que comprendas este concepto.
+Existen muchos marcos y herramientas disponibles para ayudarte a escribir aplicaciones, y muchos son compatibles con el desarrollo multiplataforma. Por ejemplo, si quieres escribir juegos en 2D, es posible que te interese mirar <a href="http://www.monogame.net">Monogame</a>. En el caso de los juegos 3D, existe <a href="http://www.unity3d.com">Unity</a>, y no olvides <a href="http://www.xamarin.com">Xamarin</a> si lo que te interesan son los dispositivos móviles.
 
-Si quieres examinar las técnicas de programación más recientes de Windows 10, como agregar animaciones y efectos a tus aplicaciones, echa un vistazo al [Blog para desarrolladores de Windows](https://blogs.windows.com/buildingapps).
-
+Si estás empezando, nuestra recomendación es que consultes los temas sobre la UWP para captar la esencia de la plataforma y, a continuación, investigues para crear tu interfaz de usuario mediante el uso y la posterior personalización de los controles XAML. Usarás XAML para el diseño de la aplicación ([aquí tienes un tutorial](../layout/grid-tutorial.md) que te explicará cómo), pero la principal ventaja de XAML es el uso del *enlace de datos*, que une los controles con la información que la aplicación quiere mostrar: Si eres un principiante en la plataforma de Windows, se trata de un concepto importante de comprender. 
 <table class="wdg-noborder">
 <tr>
  <td width=60><img src="images/icon3.png" width=64></td>
@@ -28,8 +27,6 @@ Si quieres examinar las técnicas de programación más recientes de Windows 10,
     <li><a href="https://msdn.microsoft.com/windows/uwp/launch-resume/app-lifecycle">Ciclo de vida de la aplicación para UWP</a></li>
     <li><a href="https://developer.microsoft.com/windows/windows-10-for-developers">Lo bueno de Windows 10</a></ul></td>  
 </tr>
- 
- 
 <tr>
  <td width=60><img src="images/icon7.png" width=64></td>
     <td><h2>Experiencia del usuario e interfaz de usuario</h2><p>¿Qué controles tienes a tu disposición y cómo puedes usarlos? En estos temas se explica cómo funcionan los controles con el código y cómo puedes personalizarlos para adaptarlos a la apariencia de tu aplicación.</p> <ul>
@@ -42,8 +39,6 @@ Si quieres examinar las técnicas de programación más recientes de Windows 10,
       <li><a href="https://developer.microsoft.com/windows/projects/campaigns/welcome-toolbox">Usar el kit de herramientas de la comunidad de UWP para obtener una selección de los controles y patrones predefinidos</a></li>
     </ul></td>  
 </tr>
- 
- 
 <tr>
  <td width=60><img src="images/icon6.png" width=64></td>
     <td><h2>Datos y servicios</h2><p>Obtén información sobre el enlace de datos, que permite que el código rellene automáticamente listas y cuadrículas. Descubre cómo establecer vínculos a recursos externos para obtener datos en tus aplicaciones.</p> <ul>
@@ -52,8 +47,6 @@ Si quieres examinar las técnicas de programación más recientes de Windows 10,
      <li><a href="https://msdn.microsoft.com/windows/uwp/data-access/index">Acceso a datos</a></li>
     </ul></td>  
 </tr>
- 
-
 <tr>
  <td width=60><img src="images/icon4.png" width=64></td>
     <td><h2>Publicación</h2><p>Comparte tu trabajo con el mundo y gana dinero. Te guiaremos durante el proceso para incluir tu aplicación en la Tienda.</p> <ul>
@@ -61,7 +54,6 @@ Si quieres examinar las técnicas de programación más recientes de Windows 10,
     <li><a href="https://msdn.microsoft.com/windows/uwp/packaging/index">Empaquetado de aplicaciones</a></li>
     </ul></td>  
 </tr>
- 
 <tr>
  <td width=60><img src="images/icon2.png" width=64></td>
     <td><h2>Otros recursos</h2><p>Muestras, tutoriales, vídeos, otras herramientas y SDK. Pasa al siguiente nivel.</p>
@@ -78,16 +70,26 @@ Si quieres examinar las técnicas de programación más recientes de Windows 10,
     </ul>
     </td>  
 </tr>
- 
-
-
 </table>
 
 <hr>
 
-## Búsqueda de ayuda en el Centro de desarrollo
+## <a name="windows-developer-blog"></a>Blog de los desarrolladores de Windows
 
-El [Centro de desarrollo de Microsoft](http://devcenter.microsoft.com) contiene una gran cantidad de documentación de muchas herramientas, marcos y plataformas diferentes. Cuando busques temas y muestras, debes asegurarte de que estás leyendo contenido específico de UWP. ¿Cómo puedes asegurarte de que estás leyendo el contenido correcto?
+El [blog para desarrolladores de Windows](https://blogs.windows.com/buildingapps) incluye publicaciones habituales sobre las últimas novedades en técnicas de programación, ideas para proyecto y herramientas. Aquí te indicamos algunas que pueden resultarte útiles mientras exploras el desarrollo para Windows.
+
+* [Animaciones con la capa visual](https://blogs.windows.com/buildingapps/2016/09/16/animations-with-the-visual-layer/#JM2XkQcL7MRSXe3X.97)
+* [Interoperabilidad entre XAML y la capa visual](https://blogs.windows.com/buildingapps/2016/08/26/interop-between-xaml-and-the-visual-layer/#ue6O7MWpqrVFE81K.97)
+* [Crear efectos atractivos para la UWP](https://blogs.windows.com/buildingapps/2016/09/12/creating-beautiful-effects-for-uwp/#85jsfw6PFXX825rR.97)
+* [Aplicaciones bonitas que son posibles y fáciles gracias a Windows.UI](https://blogs.windows.com/buildingapps/2016/08/23/beautiful-apps-made-possible-and-easy-with-windows-ui/#GBREkRSBwsRvi2uL.97)
+* [Retoque de la aplicación con indicaciones mediante animaciones y sonidos](https://blogs.windows.com/buildingapps/2016/08/09/polishing-your-app-with-animations-and-audio-cues/#hziKxt2xPwUE1oqU.97) 
+* [Añadido de color a tu diseño](https://blogs.windows.com/buildingapps/2016/07/28/adding-color-to-your-design/#HcPqMlfPsuKETOIo.97)
+
+<hr>
+
+## <a name="finding-help-in-the-dev-center"></a>Búsqueda de ayuda en el Centro de desarrollo
+
+El [Centro de desarrollo de Microsoft](http://devcenter.microsoft.com) contiene una gran cantidad de documentación referente a muchas herramientas, marcos y plataformas diferentes. Cuando busques temas y muestras, debes asegurarte de que estás leyendo contenido específico de UWP. ¿Cómo puedes asegurarte de que estás leyendo el contenido correcto?
 El contenido conceptual, es decir, el contenido de referencia no relacionado con la API, incluirá UWP en la dirección URL del tema. El contenido de la API tendrá una ruta de acceso que incluirá las API de Windows Runtime. 
 
 ![Ejemplo de tema conceptual de UWP](images/devcenter-topic2.png)
@@ -100,7 +102,7 @@ Si se usa un motor de búsqueda y se anexa "Desarrollo de aplicaciones de Window
 <hr>
 
 
-## Temas importantes del Centro de desarrollo
+## <a name="important-dev-center-topics"></a>Temas importantes del Centro de desarrollo
 
 Esta es una lista de las secciones clave del contenido del Centro de desarrollo. 
 
@@ -162,6 +164,10 @@ Esta es una lista de las secciones clave del contenido del Centro de desarrollo.
 
 
 
-<!--HONumber=Nov16_HO1-->
+
+
+
+
+<!--HONumber=Dec16_HO1-->
 
 

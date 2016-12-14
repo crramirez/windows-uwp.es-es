@@ -4,12 +4,12 @@ ms.assetid:
 description: "En este artículo se muestra cómo usar MediaFrameReader con MediaCapture para obtener fotogramas multimedia de uno o más orígenes disponibles, lo que incluye cámaras a color, de profundidad y de infrarrojos, dispositivos de audio o incluso orígenes de fotogramas personalizados, como los que producen fotogramas de seguimiento estructurales."
 title: Procesar fotogramas multimedia con MediaFrameReader
 translationtype: Human Translation
-ms.sourcegitcommit: 21433f812915a2b4da6b4d68151bbc922a97a7a7
-ms.openlocfilehash: 5c4bb51ea3b1740cdbb5fa43746ce7b3edca6aa1
+ms.sourcegitcommit: 881f806a61d247c6c4f73aa770ba4c5dab91af00
+ms.openlocfilehash: 648874a50dbe333f1bb6291de646d9088eec1528
 
 ---
 
-# Procesar fotogramas multimedia con MediaFrameReader
+# <a name="process-media-frames-with-mediaframereader"></a>Procesar fotogramas multimedia con MediaFrameReader
 
 En este artículo se muestra cómo usar [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) con [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) para obtener fotogramas multimedia de uno o más orígenes disponibles, lo que incluye cámaras a color, de profundidad y de infrarrojos, dispositivos de audio o incluso orígenes de fotogramas personalizados, como los que producen fotogramas de seguimiento estructurales. Esta característica se diseñó para que la usen las aplicaciones que realizan procesamiento en tiempo real de fotogramas multimedia, como las aplicaciones de realidad aumentada y las de cámara con reconocimiento de profundidad.
 
@@ -21,7 +21,7 @@ Si, simplemente, estás interesado en capturar vídeo o fotos, como una aplicaci
 > [!NOTE] 
 > Hay una muestra de aplicación universal de Windows que muestra el uso de **MediaFrameReader** para mostrar fotogramas de distintos orígenes de fotogramas, lo que incluye cámaras a color, de profundidad y de infrarrojos. Para obtener más información, consulta [Camera frames sample (Muestra de fotogramas de cámara)](http://go.microsoft.com/fwlink/?LinkId=823230).
 
-## Configurar tu proyecto
+## <a name="setting-up-your-project"></a>Configurar tu proyecto
 Al igual que con cualquier aplicación que use **MediaCapture**, debes declarar que tu aplicación usa la funcionalidad *cámara web* antes de intentar acceder a cualquier dispositivo de cámara. Si la aplicación captura desde un dispositivo de audio, también debes declarar la funcionalidad *micrófono* del dispositivo. 
 
 **Agregar funcionalidades al manifiesto de la aplicación**
@@ -35,7 +35,7 @@ En el código de ejemplo de este artículo se usan las API de los siguientes esp
 
 [!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
 
-## Seleccionar orígenes de fotogramas y grupos de orígenes de fotogramas
+## <a name="select-frame-sources-and-frame-source-groups"></a>Seleccionar orígenes de fotogramas y grupos de orígenes de fotogramas
 Muchas aplicaciones que procesan los fotogramas multimedia necesitan obtener fotogramas de distintos orígenes al mismo tiempo, como cámaras de profundidad y de color de un dispositivo. El objeto [**MediaFrameSourceGroup**] (https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) representa un conjunto de orígenes de fotogramas multimedia que se pueden usar de manera simultánea. Llama al método estático [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) para obtener una lista de todos los grupos de orígenes de fotogramas que admite el dispositivo actual.
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
@@ -60,7 +60,7 @@ En el siguiente ejemplo se usa una técnica similar, como la que se describió a
 
 [!code-cs[ColorInfraredDepth](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetColorInfraredDepth)]
 
-## Inicializar el objeto MediaCapture para usar el grupo de orígenes de fotogramas seleccionado
+## <a name="initialize-the-mediacapture-object-to-use-the-selected-frame-source-group"></a>Inicializar el objeto MediaCapture para usar el grupo de orígenes de fotogramas seleccionado
 El siguiente paso es inicializar el objeto **MediaCapture** para usar el grupo de orígenes de fotogramas seleccionado en el paso anterior.
 
 El objeto **MediaCapture** se usa normalmente desde varias ubicaciones dentro de la aplicación, por lo que debes declarar una variable de miembro de clase para contenerlo.
@@ -78,14 +78,14 @@ Llama al método [**InitializeAsync**](https://msdn.microsoft.com/library/window
 
 [!code-cs[InitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitMediaCapture)]
 
-## Establecer el formato preferido en el origen de fotogramas
+## <a name="set-the-preferred-format-for-the-frame-source"></a>Establecer el formato preferido en el origen de fotogramas
 Para establecer el formato preferido en un origen de fotogramas, debes obtener un objeto [**MediaFrameSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSource) que represente el origen. Para obtener el objeto, accede al diccionario de la propiedad [**Frames**](https://msdn.microsoft.com/library/windows/apps/Windows.Phone.Media.Capture.CameraCaptureSequence.Frames) del objeto **MediaCapture** y especifica el identificador del origen de fotogramas que quieres usar. Por este motivo guardamos el objeto [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo) mientras seleccionábamos un grupo de orígenes de fotogramas.
 
 La propiedad [**MediaFrameSource.SupportedFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSource.SupportedFormats) contiene una lista de objetos [**MediaFrameFormat**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameFormat) que describen los formatos admitidos para el origen de fotogramas. Usa el método de extensión de Linq **Where** para seleccionar un formato basado en las propiedades que quieras. En este ejemplo, se selecciona un formato que tiene un ancho de 1080 píxeles y puede suministrar fotogramas en un formato RGB de 32 bits. El método de extensión **FirstOrDefault** selecciona la primera entrada de la lista. Si el formato seleccionado es nulo, el origen de fotogramas no admitirá el formato solicitado. Si se admite el formato, puedes solicitar que el origen use este formato llamando al objeto [**SetFormatAsync**](https://msdn.microsoft.com/library/windows/apps/).
 
 [!code-cs[GetPreferredFormat](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetGetPreferredFormat)]
 
-## Crear un lector de fotogramas para el origen de fotogramas
+## <a name="create-a-frame-reader-for-the-frame-source"></a>Crear un lector de fotogramas para el origen de fotogramas
 Para recibir fotogramas de un origen de fotogramas multimedia, usa una clase [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader).
 
 [!code-cs[DeclareMediaFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetDeclareMediaFrameReader)]
@@ -98,7 +98,7 @@ Indica al sistema que comience a leer fotogramas desde el origen con una llamada
 
 [!code-cs[CreateFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCreateFrameReader)]
 
-## Controlar el evento de llegada de fotogramas
+## <a name="handle-the-frame-arrived-event"></a>Controlar el evento de llegada de fotogramas
 El evento [**MediaFrameReader.FrameArrived**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader.FrameArrived) se genera siempre que un nuevo fotograma esté disponible. Puedes elegir procesar cada fotograma que llegue o usar solo fotogramas cuando los necesites. Ya que el lector de fotogramas genera el evento en su propio subproceso, es posible que tengas que implementar una lógica de sincronización para asegurarte de que no intentas acceder a los mismos datos desde varios subprocesos. En esta sección se muestra cómo sincronizar dibujando fotogramas de color en un control de imagen de una página XAML. Este escenario trata la restricción de sincronización adicional que necesita que todas las actualizaciones de los controles XAML se realicen en el subproceso de la interfaz de usuario.
 
 El primer paso para mostrar fotogramas en XAML es crear un control de imagen. 
@@ -125,16 +125,20 @@ Dentro de la tarea, se comprueba la variable *_taskRunning* para asegurarse de q
 
 Por último, la variable *_taskRunning* se vuelve a establecer en false para que la tarea se pueda ejecutar de nuevo la próxima vez que se llame al controlador.
 
+> [!NOTE] 
+> Si accedes a los objetos [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.VideoMediaFrame.SoftwareBitmap) o [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.VideoMediaFrame.Direct3DSurface) proporcionados por la propiedad [**VideoMediaFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference.VideoMediaFrame) de una clase [**MediaFrameReference**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference), el sistema crea una referencia fuerte a estos objetos, lo que significa que no se eliminarán cuando se llamae a [**Dispose**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference.Close) en la clase **MediaFrameReference** contenedora. Se debe llamar explícitamente al método **Dispose** de **SoftwareBitmap** o **Direct3DSurface** directamente para los objetos que deben eliminarse inmediatamente. De lo contrario, el recolector de elementos no usados al final liberará la memoria de estos objetos, pero no se puede saber cuando ocurrirá, y si el número de superficies o mapas de bits asignados supera la cantidad máxima permitida por el sistema, el nuevo flujo de fotogramas se detendrá.
+
+
 [!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFrameArrived)]
 
-## Limpiar los recursos
+## <a name="cleanup-resources"></a>Limpiar los recursos
 Cuando hayas terminado de leer fotogramas, asegúrate de detener el lector de fotogramas multimedia con una llamada al método [**StopAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader.StopAsync). Después, elimina el controlador **FrameArrived** y desecha el objeto **MediaCapture**.
 
 [!code-cs[Limpieza](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCleanup)]
 
 Para obtener más información sobre cómo limpiar los objetos de captura multimedia cuando se suspende la aplicación, consulta [**Acceso fácil a la vista previa de cámara**](simple-camera-preview-access.md).
 
-## La clase auxiliar FrameRenderer
+## <a name="the-framerenderer-helper-class"></a>La clase auxiliar FrameRenderer
 [Camera frames sample (Muestra de fotogramas de cámara)](http://go.microsoft.com/fwlink/?LinkId=823230) universal de Windows proporciona una clase auxiliar que facilita mostrar los fotogramas de orígenes a color, de infrarrojos y en profundidad en la aplicación. Normalmente, querrás hacer más cosas con los datos en profundidad y de infrarrojos que solo mostrarlos en la pantalla, pero esta clase auxiliar es una herramienta útil para demostrar la característica de lector de fotogramas y para depurar tu propia implementación del lector de fotogramas.
 
 La clase auxiliar **FrameRenderer** implementa los métodos siguientes.
@@ -148,7 +152,7 @@ La clase auxiliar **FrameRenderer** implementa los métodos siguientes.
 
 [!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/FrameRenderer.cs#SnippetFrameRenderer)]
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -163,6 +167,6 @@ La clase auxiliar **FrameRenderer** implementa los métodos siguientes.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

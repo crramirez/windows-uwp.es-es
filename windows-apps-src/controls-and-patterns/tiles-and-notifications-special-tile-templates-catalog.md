@@ -6,12 +6,12 @@ ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
-ms.openlocfilehash: b03ea68ea2a0f66edac81a4c7e2671b2f756aa45
+ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
+ms.openlocfilehash: fc01951adfb151f1c5952d9181492a1d1f88b0cc
 
 ---
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-# Plantillas de iconos especiales
+# <a name="special-tile-templates"></a>Plantillas de iconos especiales
 
 
 
@@ -19,14 +19,14 @@ ms.openlocfilehash: b03ea68ea2a0f66edac81a4c7e2671b2f756aa45
 
 Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables. Cada plantilla de iconos especial fue compilada específicamente para Windows 10, excepto la plantilla de iconos icónica, una plantilla especial clásica que ha sido actualizada para Windows 10. En este artículo se abordan tres plantillas de iconos especiales: icónicas, de fotos y de contactos.
 
-## Plantillas de iconos icónicas
+## <a name="iconic-tile-template"></a>Plantillas de iconos icónicas
 
 
 La plantilla icónica (también conocida como plantilla "IconWithBadge") te permite mostrar una imagen pequeña en el centro del icono. Windows 10 admite la plantilla tanto en el teléfono como en la tableta o el equipo de escritorio.
 
 ![iconos de correo pequeños y medianos](images/iconic-template-mail-2sizes.png)
 
-### Cómo crear un icono de iconos
+### <a name="how-to-create-an-iconic-tile"></a>Cómo crear un icono de iconos
 
 Los siguientes pasos incluyen todo lo que necesitas saber para crear un icono de iconos para Windows 10. En un nivel alto, necesitas el activo de imagen icónico, a continuación envías una notificación al icono con la plantilla icónica y, finalmente, envías una notificación de distintivos que proporcione el número que debe mostrarse en el icono.
 
@@ -77,10 +77,7 @@ Del mismo modo que en el paso 3, este paso puede variar en función de si la not
 Este es un código de muestra para la carga de XML:
 
 ```XML
-<badge value="2"/></code></pre></td>
-</tr>
-</tbody>
-</table>
+<badge value="2"/>
 ```
 
 El distintivo del icono se actualizará acordemente.
@@ -91,16 +88,16 @@ La siguiente imagen ilustra cómo se asocian las distintas API y cargas con cada
 
 ![API y cargas asociadas con la plantilla de iconos icónica](images/iconic-template-properties-info.png)
 
-## Plantilla de iconos de fotos
+## <a name="photos-tile-template"></a>Plantilla de iconos de fotos
 
 
 La plantilla de iconos de Fotos te permite mostrar una presentación de fotos en tu icono dinámico. La plantilla es compatible con todos los tamaños de icono, incluido el pequeño, y se comporta del mismo modo en cada tamaño de icono. En el ejemplo siguiente se muestran cinco fotogramas de un icono mediano que usa la plantilla de fotos. La plantilla tiene un zoom y una animación de fundido que recorre las fotos seleccionadas y se repite indefinidamente.
 
 ![presentación de la imagen con la plantilla de iconos de Fotos](images/photo-tile-template-image01.jpg)
 
-### Cómo usar la plantilla de fotos
+### <a name="how-to-use-the-photos-template"></a>Cómo usar la plantilla de fotos
 
-Con la plantilla de fotos es fácil si has instalado la [versión de Windows 10 de NotificationExtensions](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/08/20/introducing-notificationsextensions-for-windows-10.aspx). Aunque puedes usar XML sin formato, se recomienda encarecidamente usar NotificationExtensions para que no tengas que preocuparte de generar contenido XML o XML de escape válido.
+Usar la plantilla de fotos es fácil si has instalado la [biblioteca de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/). Aunque puedes usar XML sin formato, se recomienda encarecidamente usar la librería para que no tengas que preocuparte de generar contenido XML o XML de escape válido.
 
 Windows Phone muestra hasta 9 fotos en una presentación; en tabletas, portátiles o el escritorio se mostrarán hasta 12.
 
@@ -108,16 +105,6 @@ Para obtener información sobre cómo enviar la notificación de iconos, consult
 
 
 ```XML
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">XML</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
 <!--
  
 To use the Photos template...
@@ -168,9 +155,9 @@ TileContent content = new TileContent()
             {
                 Images =
                 {
-                    new TileImageSource("Assets/1.jpg"),
-                    new TileImageSource("ms-appdata:///local/Images/2.jpg"),
-                    new TileImageSource("http://msn.com/images/3.jpg")
+                    new TileBasicImage() { Source = "Assets/1.jpg" },
+                    new TileBasicImage() { Source = "ms-appdata:///local/Images/2.jpg" },
+                    new TileBasicImage() { Source = "http://msn.com/images/3.jpg" }
  
                     // TODO: Can have 12 images total
                 }
@@ -182,7 +169,7 @@ TileContent content = new TileContent()
 };
 ```
 
-## Plantilla de iconos de contactos
+## <a name="people-tile-template"></a>Plantilla de iconos de contactos
 
 
 La aplicación de contactos en Windows 10 usa una plantilla de iconos especial que muestra una colección de imágenes en círculos que se deslizan vertical u horizontalmente en el icono. Esta plantilla de iconos está disponible desde Windows 10 Compilación 10572 y cualquier persona es bienvenida a usarla en su aplicación.
@@ -207,11 +194,11 @@ Las plantilla de iconos de Contactos funciona en los iconos de estos tamaños:
 
  
 
-Si estás usando [NotificationExtensions](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/08/20/introducing-notificationsextensions-for-windows-10.aspx), todo lo que tienes que hacer para usar la plantilla de iconos de Contactos es un nuevo objeto *TileBindingContentPeople* para tu contenido *TileBinding*. La clase *TileBindingContentPeople* tiene una propiedad de Imágenes donde agregar tus imágenes.
+Si estás usando la [biblioteca Notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/), todo lo que tienes que hacer para usar la plantilla de iconos de Contactos es un nuevo objeto *TileBindingContentPeople* para tu contenido *TileBinding*. La clase *TileBindingContentPeople* tiene una propiedad de Imágenes donde agregar tus imágenes.
 
 Si usas XML sin formato, establece la *presentación de sugerencias* para "contactos" y agrega tus imágenes como elementos secundarios del elemento de enlace.
 
-En la siguiente muestra de código de C#, se da por hecho que estás usando [NotificationExtensions](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/08/20/introducing-notificationsextensions-for-windows-10.aspx).
+En la siguiente muestra de código de C#, se da por hecho que estás usando [biblioteca Notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/).
 
 ```CSharp
 TileContent content = new TileContent()
@@ -224,15 +211,15 @@ TileContent content = new TileContent()
             {
                 Images =
                 {
-                    new TileImageSource("Assets/ProfilePics/1.jpg"),
-                    new TileImageSource("Assets/ProfilePics/2.jpg"),
-                    new TileImageSource("Assets/ProfilePics/3.jpg"),
-                    new TileImageSource("Assets/ProfilePics/4.jpg"),
-                    new TileImageSource("Assets/ProfilePics/5.jpg"),
-                    new TileImageSource("Assets/ProfilePics/6.jpg"),
-                    new TileImageSource("Assets/ProfilePics/7.jpg"),
-                    new TileImageSource("Assets/ProfilePics/8.jpg"),
-                    new TileImageSource("Assets/ProfilePics/9.jpg")
+                    new TileBasicImage() { Source = "Assets/ProfilePics/1.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/2.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/3.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/4.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/5.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/6.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/7.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/8.jpg" },
+                    new TileBasicImage() { Source = "Assets/ProfilePics/9.jpg" }
                 }
             }
         }
@@ -244,16 +231,16 @@ TileContent content = new TileContent()
 <tile>
   <visual>
  
-    <binding template=&#39;TileMedium&#39; hint-presentation=&#39;people&#39;>
-      <image src=&#39;Assets/ProfilePics/1.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/2.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/3.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/4.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/5.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/6.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/7.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/8.jpg&#39;/>
-      <image src=&#39;Assets/ProfilePics/9.jpg&#39;/>
+    <binding template="TileMedium" hint-presentation="people">
+      <image src="Assets/ProfilePics/1.jpg"/>
+      <image src="Assets/ProfilePics/2.jpg"/>
+      <image src="Assets/ProfilePics/3.jpg"/>
+      <image src="Assets/ProfilePics/4.jpg"/>
+      <image src="Assets/ProfilePics/5.jpg"/>
+      <image src="Assets/ProfilePics/6.jpg"/>
+      <image src="Assets/ProfilePics/7.jpg"/>
+      <image src="Assets/ProfilePics/8.jpg"/>
+      <image src="Assets/ProfilePics/9.jpg"/>
     </binding>
  
   </visual>
@@ -270,11 +257,11 @@ Este número de fotos permite que haya algunos círculos vacíos, lo que signifi
 
 Para enviar la notificación, consulta [Elegir un método de entrega de notificaciones](tiles-and-notifications-choosing-a-notification-delivery-method.md).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-people-tile-template)
-* [NotificationsExtensions en GitHub](https://github.com/WindowsNotifications/NotificationsExtensions/wiki)
+* [Biblioteca Notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 * [Iconos, distintivos y notificaciones](tiles-badges-notifications.md)
 * [Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md)
 * [Plantillas de iconos adaptables: esquema y documentación](tiles-and-notifications-adaptive-tiles-schema.md)
@@ -288,6 +275,6 @@ Para enviar la notificación, consulta [Elegir un método de entrega de notifica
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

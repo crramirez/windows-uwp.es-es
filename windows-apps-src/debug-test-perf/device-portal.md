@@ -4,11 +4,11 @@ ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: "Introducción a Windows Device Portal"
 description: "Obtén información sobre cómo Windows Device Portal te permite configurar y administrar de forma remota el dispositivo mediante una red o una conexión USB."
 translationtype: Human Translation
-ms.sourcegitcommit: 7f6aba331ba27d2c0c2ca7925c452da58e155cb8
-ms.openlocfilehash: b316eab1f269dadbe65b7e93b5a33a8e4c4924d7
+ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
+ms.openlocfilehash: 6c697782683bca6671c01aa0941a78bc66fb052a
 
 ---
-# Introducción a Windows Device Portal
+# <a name="windows-device-portal-overview"></a>Introducción a Windows Device Portal
 
 Windows Device Portal te permite configurar y administrar de forma remota el dispositivo mediante una red o una conexión USB. También proporciona herramientas de diagnóstico para ayudarte a solucionar problemas y ver el rendimiento en tiempo real de tu dispositivo Windows.
 
@@ -18,7 +18,7 @@ Windows Device Portal está disponible en cada familia de dispositivos, pero las
 
 Todo lo que contiene Windows Device Portal se basa en las [API de REST](device-portal-api-core.md) que puedes usar para acceder a los datos y controlar el dispositivo mediante programación.
 
-## Programa de instalación
+## <a name="setup"></a>Programa de instalación
 
 Cada dispositivo tiene instrucciones específicas para la conexión a Device Portal, pero todos requieren estos pasos generales:
 1. Habilita el modo de desarrollador y Device Portal en el dispositivo.
@@ -27,22 +27,24 @@ Cada dispositivo tiene instrucciones específicas para la conexión a Device Por
 
 Familia de dispositivos | ¿De forma predeterminada? | HTTP | HTTPS | USB
 --------------|----------------|------|-------|----
-HoloLens | Sí, en el modo de desarrollador | 80 (predeterminado) | 443 (predeterminado) | Host local:10080
-IoT | Sí, en el modo de desarrollador | 8080 | Habilitar a través de la clave de registro | No disponible
-Xbox | Habilitar dentro del modo de desarrollador | Deshabilitado | 11443 | No disponible
-Escritorio| Habilitar dentro del modo de desarrollador | Aleatorio > 50000 (xx080) | Aleatorio > 50000 (xx443) | No disponible
-Teléfono | Habilitar dentro del modo de desarrollador | 80| 443 | Host local:10080
+HoloLens | Sí, en el modo de desarrollador | 80 (predeterminado) | 443 (predeterminado) | http://127.0.0.1:10080
+IoT | Sí, en el modo de desarrollador | 8080 | Habilitar a través de la clave del Registro | N/D
+Xbox | Habilitar dentro del modo de desarrollador | Deshabilitado | 11443 | N/D
+Escritorio| Habilitar dentro del modo de desarrollador | 50080\* | 50043\* | N/D
+Phone | Habilitar dentro del modo de desarrollador | 80| 443 | http://127.0.0.1:10080
+
+\ * No siempre es el caso, ya que Device Portal para escritorio reclama puertos del rango efímero (> 50 000) para evitar conflictos con reclamaciones de puertos existentes en el dispositivo.  Para obtener más información, consulta la sección de [Configuración de puertos](device-portal-desktop.md#setting-port-numbers) referente a los equipos de escritorio.  
 
 Para obtener instrucciones específicas sobre la configuración del dispositivo, consulta:
 - [Device Portal para HoloLens](https://dev.windows.com/holographic/using_the_windows_device_portal)
 - [Device Portal para IoT](https://go.microsoft.com/fwlink/?LinkID=616499)
-- [Device Portal para dispositivos móviles](device-portal-mobile.md#set-up-device-portal-on-window-phone)
+- [Device Portal para dispositivos móviles](device-portal-mobile.md)
 - [Device Portal para Xbox](device-portal-xbox.md)
 - [Device Portal para escritorio](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
 
-## Funciones
+## <a name="features"></a>Funciones
 
-### Barra de herramientas y navegación
+### <a name="toolbar-and-navigation"></a>Barra de herramientas y navegación
 
 La barra de herramientas de la parte superior de la página proporciona acceso al estado usado frecuentemente y a las características.
 - **Apagar**: apaga el dispositivo.
@@ -53,11 +55,11 @@ Usa los vínculos del panel de navegación en el lado izquierdo de la página pa
 
 Aquí se describen las herramientas que son comunes en todos los dispositivos. Puede que haya otras opciones disponibles en función del dispositivo. Para obtener más información, consulta la página específica del dispositivo.
 
-### Página principal
+### <a name="home"></a>Página principal
 
 La sesión de Device Portal se inicia en la página principal. La página principal generalmente tiene información acerca del dispositivo, como el nombre y la versión del sistema operativo y las preferencias que puedes establecer para el dispositivo.
 
-### Aplicaciones
+### <a name="apps"></a>Aplicaciones
 
 Proporciona la funcionalidad de administración y de instalación o desinstalación de paquetes AppX y agrupaciones de trabajos del dispositivo.
 
@@ -87,7 +89,7 @@ Proporciona la funcionalidad de administración y de instalación o desinstalaci
 2.  Si es así, ve a "aplicaciones en ejecución" y ciérrala. Si intentas desinstalar la aplicación mientras se ejecuta, tendrás problemas cuando la vuelvas a instalar. 
 3.  Cuando estés listo, haz clic en **Desinstalar**.
 
-### Procesos
+### <a name="processes"></a>Procesos
 
 Muestra detalles acerca de los procesos que se ejecutan actualmente. Esto incluye aplicaciones y procesos del sistema.
 
@@ -95,7 +97,7 @@ De forma muy parecida al Administrador de tareas del equipo, esta página te per
 
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-processes.png)
 
-### Rendimiento
+### <a name="performance"></a>Rendimiento
 
 Muestra gráficos en tiempo real de la información de diagnóstico del sistema, como el uso de energía, la velocidad de fotogramas y la carga de la CPU.
 
@@ -108,7 +110,7 @@ Estas son las métricas disponibles:
 
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-perf.png)
 
-### Seguimiento de eventos para Windows (ETW)
+### <a name="event-tracing-for-windows-etw"></a>Seguimiento de eventos para Windows (ETW)
 
 Administra el seguimiento de eventos para Windows (ETW) en tiempo real en el dispositivo.
 
@@ -130,7 +132,7 @@ Haz clic o pulsa en **Activar** para iniciar el seguimiento. El proveedor se agr
 
 Para obtener más información sobre el uso del seguimiento de ETW, consulta la [entrada de blog](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) sobre cómo usarlo para recopilar registros en tiempo real de la aplicación. 
 
-### Seguimiento del rendimiento
+### <a name="performance-tracing"></a>Seguimiento del rendimiento
 
 Captura los seguimientos de [Windows Performance Recorder](https://msdn.microsoft.com/library/windows/hardware/hh448205.aspx) (WPR) del dispositivo.
 
@@ -143,13 +145,13 @@ Para detener el seguimiento, haz clic en **Detener**. Permanece en esta página 
 
 Los archivos ETL se pueden abrir para realizar análisis en [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx).
 
-### Dispositivos
+### <a name="devices"></a>Dispositivos
 
 Enumera todos los periféricos conectados al dispositivo.
 
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-devices.png)
 
-### Redes
+### <a name="networking"></a>Redes
 
 Administra las conexiones de red en el dispositivo.  A menos que estés conectado a Device Portal a través de USB, al cambiar esta configuración, es probable que te desconectes de Device Portal.
 - **Perfiles**: selecciona un perfil de Wi-Fi diferente para usar.  
@@ -157,15 +159,15 @@ Administra las conexiones de red en el dispositivo.  A menos que estés conectad
 
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-network.png)
 
-### Explorador de archivos de la aplicación
+### <a name="app-file-explorer"></a>Explorador de archivos de la aplicación
 
 Te permite ver y manipular los archivos almacenados por las aplicaciones transferidas localmente.  Esta es una nueva versión multiplataforma de la [Isolated Storage Explorer](https://msdn.microsoft.com/library/windows/apps/hh286408(v=vs.105).aspx) desde Windows Phone 8.1. Consulta [esta entrada de blog](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) para obtener más información sobre el Explorador de archivos de la aplicación y cómo usarla. 
 
 ![Device Portal para dispositivos móviles](images/device-portal/mob-device-portal-AppFileExplorer.png)
 
-## Notas y características del servicio
+## <a name="service-features-and-notes"></a>Notas y características del servicio
 
-### DNS-SD
+### <a name="dns-sd"></a>DNS-SD
 
 Device Portal anuncia su presencia en la red local mediante DNS-SD.  Todas las instancias de Device Portal, independientemente del tipo de dispositivo, se anuncian en "WDP._wdp._tcp.local". Los registros TXT de la instancia del servicio proporcionan lo siguiente:
 
@@ -178,7 +180,7 @@ T | lista de cadenas delineada con carácter nulo | Etiquetas aplicadas por el u
 
 Se sugiere la conexión en el puerto HTTPS, ya que no todos los dispositivos escuchan en el puerto HTTP anunciado por el registro de DNS-SD. 
 
-### Protección CSRF y scripting
+### <a name="csrf-protection-and-scripting"></a>Protección CSRF y scripting
 
 A fin de ofrecer protección frente a [ataques CSRF](https://wikipedia.org/wiki/Cross-site_request_forgery), se requiere un token único en todas las solicitudes no GET. Este token, el encabezado de la solicitud X-CSRF-Token, se deriva de una cookie de sesión, CSRF-Token. En la interfaz de usuario web de Device Portal, la cookie CSRF-Token se copia en el encabezado X-CSRF-Token en cada solicitud.
 
@@ -192,12 +194,12 @@ A fin de ofrecer protección frente a [ataques CSRF](https://wikipedia.org/wiki/
 
 **Nota**: Un nombre de usuario que comience por "auto-" no podrá iniciar sesión en Device Portal a través del explorador.  
 
-#### Protección contra Cross-Site WebSocket Hijacking (CSWSH)
+#### <a name="cross-site-websocket-hijacking-cswsh-protection"></a>Protección contra Cross-Site WebSocket Hijacking (CSWSH)
 
 Para protegerse de los [ataques de CSWSH](https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html), todos los clientes que abran una conexión WebSocket al Device Portal también deben proporcionar un encabezado Origin que coincida con el encabezado Host.  Esto demuestra a Device Portal que la solicitud proviene de la interfaz de usuario de Device Portal o de una aplicación cliente válida.  Sin el encabezado Origin, la solicitud se rechazará. 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

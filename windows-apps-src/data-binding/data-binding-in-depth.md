@@ -4,11 +4,11 @@ ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: Enlace de datos en profundidad
 description: "El enlace de datos es una forma para que la interfaz de usuario de la aplicación muestre los datos y, opcionalmente, se mantenga sincronizada con dichos datos."
 translationtype: Human Translation
-ms.sourcegitcommit: ef5e2819a7fd18fb3ed3162fd8debe750f29c378
-ms.openlocfilehash: fa1616c88d475393311055561a7bd219c2373f76
+ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
+ms.openlocfilehash: 48db13fec4ce9c6a9a998c84ddaaba30f7a24d83
 
 ---
-# Enlace de datos en profundidad
+# <a name="data-binding-in-depth"></a>Enlace de datos en profundidad
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -43,7 +43,7 @@ Existen dos tipos de enlaces y generalmente ambos se declaran en el marcado de i
 -   Descarga la aplicación [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950).
 -   Descarga la aplicación [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952).
 
-## Cada enlace implica estas piezas
+## <a name="every-binding-involves-these-pieces"></a>Cada enlace implica estas piezas
 
 -   Un *origen de enlace*. Este es el origen de los datos para el enlace y puede ser una instancia de cualquier clase que tenga miembros cuyos valores que quieres mostrar en la interfaz de usuario.
 -   Un *destino de enlace*. Se trata de una [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362) del [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) en la interfaz de usuario que muestra los datos.
@@ -51,7 +51,7 @@ Existen dos tipos de enlaces y generalmente ambos se declaran en el marcado de i
 
 En las siguientes secciones, se echaremos un vistazo al origen de enlace, el destino de enlace y el objeto de enlace. Además, vincularemos las secciones junto con el ejemplo de enlace de contenido de un botón a una propiedad de cadena denominada **NextButtonText**, que pertenece a una clase denominada **HostViewModel**.
 
-### Origen de enlace
+### <a name="binding-source"></a>Origen de enlace
 
 Esta es una implementación muy rudimentaria de una clase que podríamos usar como origen de enlace.
 
@@ -145,7 +145,7 @@ Un objeto de enlace puede tratarse como un solo objeto cuyas propiedades contien
 
 Con la carga incremental, puedes enlazar controles de lista a orígenes de datos que son arbitrariamente de gran tamaño y aun así lograr un alto rendimiento. Por ejemplo, puedes enlazar controles de lista a resultados de consulta de imágenes de Bing sin tener que cargarlos a todos de una vez. Solo cargas algunos resultados inmediatamente y después cargas otros, según sea necesario. Para admitir la carga incremental, debes implementar [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916) en un origen de datos compatible con la notificación de cambios de colección. Cuando el motor de enlace de datos solicite más datos, tu origen de datos debe realizar las solicitudes apropiadas, integrar los resultados y después enviar las debidas notificaciones para actualizar la interfaz de usuario.
 
-### Destino de enlace
+### <a name="binding-target"></a>Destino de enlace
 
 En los dos ejemplos siguientes, la propiedad **Button.Content** es el destino de enlace y su valor se establece en una extensión de marcado que declara el objeto de enlace. Se muestra el primer [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) y luego [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). Declarar enlaces en el marcado es el caso común (es cómodo, legible y administrable). Sin embargo, puedes evitar el marcado y de manera imperativa (mediante programación) crear una instancia de la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820) en su lugar, si necesitas.
 
@@ -158,7 +158,7 @@ En los dos ejemplos siguientes, la propiedad **Button.Content** es el destino de
 <Button Content="{Binding ...}" ... />
 ```
 
-### Objeto de enlace que se declaran usando {x:Bind}
+### <a name="binding-object-declared-using-xbind"></a>Objeto de enlace que se declaran usando {x:Bind}
 
 Hay un solo paso que necesitamos ejecutar antes de crear nuestro marcado [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). Tenemos que exponer nuestra clase de origen de enlace desde la clase que representa nuestra página de marcado. Eso lo haremos agregando una propiedad (de tipo **HostViewModel** en este caso) a nuestra clase de página **HostView**.
 
@@ -217,7 +217,7 @@ El código para admitir **{x:Bind}** se genera en tiempo de compilación en las 
 
 **{x:Bind}** no es apropiado para escenarios enlazados en tiempo de ejecución, como navegar por la estructura de diccionario de un objeto JSON, ni para duck typing (escritura de pato) que es una forma poco segura de escribir basada en coincidencias léxicas en los nombres de propiedad ("si camina, nada y grazna como un pato, es un pato"). Con duck typing, un enlace a la propiedad Edad se cumpliría por igual con un objeto Persona o un objeto Vino. Para estos escenarios, usa **{Binding}**.
 
-### Objeto de enlace que se declara usando {Binding}
+### <a name="binding-object-declared-using-binding"></a>Objeto de enlace que se declara usando {Binding}
 
 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) supone que, de forma predeterminada, se está realizando un enlace a la propiedad [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) de la página de marcado. Por lo tanto, estableceremos el **DataContext** de nuestra página para que sea una instancia de la clase de origen de enlace (de tipo **HostViewModel** en este caso). El siguiente ejemplo muestra el marcado que declara el objeto de enlace. Usamos el mismo destino de enlace **Button.Content** que usamos en la sección "Destino de enlace" anterior, y enlazamos a la propiedad **HostViewModel.NextButtonText**.
 
@@ -252,14 +252,14 @@ Dentro de un [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/
 
 La propiedad [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) admite una variedad de opciones de sintaxis para enlazar a propiedades anidadas, propiedades adjuntas e indexadores de cadenas y de enteros. Para más información, consulta [Sintaxis de property-path](https://msdn.microsoft.com/library/windows/apps/Mt185586). El enlace a indexadores de cadenas te ofrece el mismo efecto que el enlace a propiedades dinámicas sin tener que implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878). La propiedad [**ElementName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.elementname) es útil para el enlace de elemento a elemento. La propiedad [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.relativesource) tiene varios usos, uno de los cuales es como una alternativa más eficaz para el enlace de plantilla dentro de un [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209391). Para otras opciones de configuración, consulta [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) y la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820).
 
-## ¿Qué ocurre si el origen y el destino no son del mismo tipo?
+## <a name="what-if-the-source-and-the-target-are-not-the-same-type"></a>¿Qué ocurre si el origen y el destino no son del mismo tipo?
 
 Si desea controlar la visibilidad de un elemento de interfaz de usuario en función del valor de una propiedad booleana o si quieres representar un elemento de interfaz de usuario con un color que es una función de un intervalo o tendencia de un valor numérico o si deseas mostrar un valor de fecha y/u hora en una propiedad del elemento de interfaz de usuario que espera una cadena , necesitarás convertir los valores de un tipo a otro. Habrá casos en los que la solución correcta es exponer otra propiedad del tipo correcto desde la clase de origen de enlace y mantener la lógica de conversión encapsulada y comprobable allí. Sin embargo, no es escalable ni flexible cuando tienes muchos números o combinaciones grandes de propiedades de origen y destino. En ese caso, tienes un par de opciones:
 
 * Si usas {x: Bind}, entonces puedes enlazar directamente a una función para hacer esa conversión.
 * O bien, puedes especificar un convertidor de valores, que es un objeto que se ha diseñado para realizar la conversión. 
 
-## Convertidores de valores
+## <a name="value-converters"></a>Convertidores de valores
 
 Este es un convertidor de valores adecuado para un enlace único o unidireccional, que convierte un valor [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx) en un valor de cadena que contiene el mes. La clase implementa [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903).
 
@@ -367,13 +367,14 @@ Para mostrar un valor predeterminado para usar cuando no se pueda resolver el or
 Si enlazas un control de texto con un valor que no es una cadena, el motor de enlace de datos lo convertirá en una. Si el valor es un tipo de referencia, dicho motor recuperará el valor de cadena llamando a [**ICustomPropertyProvider.GetStringRepresentation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.icustompropertyprovider.getstringrepresentation) o a [**IStringable.ToString**](https://msdn.microsoft.com/library/Dn302136), si están disponibles, o bien llamando a [**Object.ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx), si no lo están. Pero ten en cuenta que el motor de enlace de datos pasará por alto las implementaciones de **ToString** que oculten la implementación de la clase base. Las implementaciones de la subclase deben invalidar, en cambio, el método **ToString** de la clase base. De forma similar, en los lenguajes nativos, todos los objetos administrados parecen implementar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) e [**IStringable**](https://msdn.microsoft.com/library/Dn302135). Pero todas las llamadas a **GetStringRepresentation** y a **IStringable.ToString** se enrutan a **Object.ToString** o a una invalidación de ese método y nunca a una implementación de **ToString** que oculta la implementación de la clase base.
 
 > [!NOTE]
-> A partir de Windows 10, versión 1607, el marco XAML proporciona un valor booleano integrado para el convertidor de visibilidad. El convertidor asigna **true** al valor de la enumeración **Visible** y **false** a **Collapsed**, para que puedas enlazar una propiedad Visibility a un valor booleano sin necesidad de crear un convertidor. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows10. Para obtener más información sobre las versiones de destino, consulta [Código adaptativo para versiones](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> A partir de Windows 10, versión 1607, el marco XAML proporciona un valor booleano integrado para el convertidor de visibilidad. El convertidor asigna **true** al valor de la enumeración **Visible** y **false** a **Collapsed**, para que puedas enlazar una propiedad Visibility a un valor booleano sin necesidad de crear un convertidor. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información sobre las versiones de destino, consulta [Código adaptativo para versiones](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
-## Enlace de función en {x: Bind}
+## <a name="function-binding-in-xbind"></a>Enlace de función en {x: Bind}
 
 {x: Bind} permite que el paso final de una ruta de acceso de enlace sea una función. Esto puede usarse para realizar conversiones y para realizar enlaces que dependen de más de una propiedad. Consulta [**Extensión de marcado {x:Bind}**](https://msdn.microsoft.com/en-us/windows/uwp/xaml-platform/x-bind-markup-extension).
 
-## Diccionarios de recursos con {x:Bind}
+<span id="resource-dictionaries-with-x-bind"/>
+## <a name="resource-dictionaries-with-xbind"></a>Diccionarios de recursos con {x:Bind}
 
 La [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) depende de la generación de códigos; por lo tanto, necesita un archivo de código subyacente que contenga un constructor que llame a **InitializeComponent** (para inicializar el código generado). Vuelves a usar el diccionario de recursos creando una instancia de su tipo (por lo que se llama a **InitializeComponent**) en lugar de hacer referencia a su nombre de archivo. Aquí un ejemplo de qué hacer si dispones de un diccionario de recursos existente y quieres usar {xBind} en este.
 
@@ -428,7 +429,7 @@ MainPage.xaml
 </Page>
 ```
 
-## Enlace de eventos e ICommand
+## <a name="event-binding-and-icommand"></a>Enlace de eventos e ICommand
 
 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) admite una característica denominada enlace de eventos. Con esta característica, puede especificar el controlador para un evento con un enlace, que es una opción adicional sobre el control de eventos con un método en el archivo de código subyacente. Supongamos que tienes una propiedad **RootFrame** en tu clase **MainPage**.
 
@@ -453,7 +454,7 @@ Los métodos sobrecargados no puede usarse para controlar un evento con esta té
 La técnica de enlace de eventos es similar a implementar y consumir comandos (un comando es una propiedad que devuelve un objeto que implementa la interfaz [**ICommand**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.icommand.aspx)). Ambos [{x: enlace}](https://msdn.microsoft.com/library/windows/apps/Mt204783) y [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) funcionan con comandos. Debido a que no tienes que implementar el patrón de comando varias veces, puedes usar la clase **DelegateCommand** auxiliar que encontrarás en la muestra [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) (en la carpeta "Común").
 
 
-## Enlace a una colección de carpetas o archivos
+## <a name="binding-to-a-collection-of-folders-or-files"></a>Enlace a una colección de carpetas o archivos
 
 Para recuperar datos de archivos y carpetas, puedes usar las API en el espacio de nombres [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346). No obstante, los distintos métodos **GetFilesAsync**, **GetFoldersAsync** y **GetItemsAsync** no devuelven valores adecuados para enlaces a controles de lista. En cambio, debes enlazar a los valores devueltos de los métodos [**GetVirtualizedFilesVector**](https://msdn.microsoft.com/library/windows/apps/Hh701422), [**GetVirtualizedFoldersVector**](https://msdn.microsoft.com/library/windows/apps/Hh701428) y [**GetVirtualizedItemsVector**](https://msdn.microsoft.com/library/windows/apps/Hh701430) de la clase [**FileInformationFactory**](https://msdn.microsoft.com/library/windows/apps/BR207501). En el siguiente ejemplo de código de la [muestra de StorageDataSource y GetVirtualizedFilesVector](http://go.microsoft.com/fwlink/p/?linkid=228621) encontrarás el patrón de uso más común. No olvides que declarar el manifiesto **picturesLibrary** del paquete de funcionalidad de la aplicación y confirmar que hay imágenes en la carpeta de la biblioteca de imágenes.
 
@@ -486,9 +487,9 @@ Ten en cuenta que el enlace bidireccional con esta técnica solo funciona con ub
 
 Ten en cuenta también que un vector virtualizado puede devolver **null** para algunos elementos antes de que rellene su valor. Por ejemplo, debes comprobar **null** antes de usar el valor [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) de un control de lista enlazado a un vector virtualizado o, en su lugar, usar [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/BR209768).
 
-## Enlace de datos agrupados por una clave
+## <a name="binding-to-data-grouped-by-a-key"></a>Enlace de datos agrupados por una clave
 
-Si tomas una colección plana de elementos (libros, por ejemplo, representados por una clase **BookSku**) y agrupas los elementos mediante una propiedad común, como una clave (la propiedad **BookSku.AuthorName**, por ejemplo), a continuación, el resultado se denomina datos agrupados. Al agrupar los datos, ya no es una colección plana. Los datos agrupados son una colección de objetos de grupo, en la que cada objeto de grupo tiene (a) una clave y (b) una colección de elementos cuya propiedad coincide con dicha clave. Para realizar el ejemplo de libros de nuevo, el resultado de agrupar los libros por nombre del autor genera una colección de grupos de nombre del autor donde cada grupo tiene (a)una clave, que es un nombre de autor, y (b)una colección de clases **BookSku** cuya propiedad **AuthorName** coincide con la clave del grupo.
+Si tomas una colección plana de elementos (libros, por ejemplo, representados por una clase **BookSku**) y agrupas los elementos mediante una propiedad común, como una clave (la propiedad **BookSku.AuthorName**, por ejemplo), a continuación, el resultado se denomina datos agrupados. Al agrupar los datos, ya no es una colección plana. Los datos agrupados son una colección de objetos de grupo, en la que cada objeto de grupo tiene (a) una clave y (b) una colección de elementos cuya propiedad coincide con dicha clave. Para realizar el ejemplo de libros de nuevo, el resultado de agrupar los libros por nombre del autor genera una colección de grupos de nombre del autor donde cada grupo tiene (a) una clave, que es un nombre de autor, y (b) una colección de clases **BookSku** cuya propiedad **AuthorName** coincide con la clave del grupo.
 
 En general, para mostrar una colección, enlazas el [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/BR242828) de un control de elementos (como [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) o [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)) directamente a una propiedad que devuelve una colección. Si es una colección de elementos plana no necesitas hacer nada especial. Pero si es una colección de objetos de grupo (como al enlazar a datos agrupados), a continuación, necesitas los servicios de un objeto intermediario llamado [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833), que se encuentra entre el control de elementos y el origen del enlace. Enlaza el **CollectionViewSource** a la propiedad que devuelve datos agrupados y enlaza el control de elementos a **CollectionViewSource**. Un valor agregado adicional de un **CollectionViewSource** es que realiza el seguimiento del elemento actual, para poder mantener más de un control de elementos sincronizados al enlazarlos todos al mismo **CollectionViewSource**. Puedes acceder también al elemento actual mediante programación a través de la propiedad [**ICollectionView.CurrentItem**](https://msdn.microsoft.com/library/windows/apps/BR209857) del objeto devuelto por la propiedad [**CollectionViewSource.View**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.collectionviewsource.view).
 
@@ -575,7 +576,8 @@ Un control [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/Hh
 
 Cuando se enlaza a datos jerárquicos (como subcategorías dentro de las categorías), puedes mostrar los niveles jerárquicos en la interfaz de usuario con una serie de controles de elementos. Una selección en un control de elementos determina el contenido de los controles de elementos posteriores. Puedes mantener las listas sincronizadas, al enlazar cada una de ellas a su propio [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) y al enlazar las instancias de **CollectionViewSource** juntas en una cadena. Esto se denomina una vista maestro/detalles (o la lista y detalles). Para más información, consulta el tema [Cómo enlazar a datos jerárquicos y crear una vista maestro y detalles](how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md).
 
-## Diagnóstico y depuración de problemas de enlace de datos
+<span id="debugging"/>
+## <a name="diagnosing-and-debugging-data-binding-problems"></a>Diagnóstico y depuración de problemas de enlace de datos
 
 El marcado de enlace contiene los nombres de propiedades (y para C#, a veces campos y métodos). Por lo tanto, cuando cambias el nombre de una propiedad, también tendrás que cambiar cualquier enlace que haga referencia a él. Olvidar hacer que conduce a un ejemplo típico de un error de enlace de datos y la aplicación no compile o no ejecutarse correctamente.
 
@@ -583,7 +585,7 @@ Los objetos de enlace creados por [{x: enlace}](https://msdn.microsoft.com/libra
 
 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) no tiene información de tipo del origen de enlace. Cuando ejecutas la aplicación con el depurador adjunto, los errores de enlace aparecen en la ventana **Resultado** en Visual Studio.
 
-## Crear enlaces en el código
+## <a name="creating-bindings-in-code"></a>Crear enlaces en el código
 
 **Nota**  Esta sección solo se aplica a [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782), porque no puedes crear enlaces [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) en el código. Sin embargo, algunas de las ventajas de {x:Bind} pueden conseguirse con [**DependencyObject.RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx), que te permite registrar notificaciones de cambio en cualquier propiedad de dependencia.
 
@@ -627,7 +629,7 @@ Dim binding As New Binding() With {.Path = New PropertyPath("Brush1")}
 MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 ```
 
-## {x: enlace} y {Binding} comparación de características
+## <a name="xbind-and-binding-feature-comparison"></a>{x: enlace} y {Binding} comparación de características
 
 | Función | {x:Bind} | {Binding} | Notas |
 |---------|----------|-----------|-------|
@@ -651,6 +653,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

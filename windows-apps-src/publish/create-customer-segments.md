@@ -3,12 +3,12 @@ author: shawjohn
 Description: "Aprende a crear segmentos de clientes para poder dirigirte a un subgrupo de tu base de clientes para fines promocionales o de participación."
 title: Crear segmentos de clientes
 translationtype: Human Translation
-ms.sourcegitcommit: c1b97d7ca331bdea101f16d3d59879db30173a0a
-ms.openlocfilehash: 6448c366784344b649084a3aa746a2fc8f21d31d
+ms.sourcegitcommit: eed71b2fc06db71fd105df37a73bd0cd0832931f
+ms.openlocfilehash: 28906c98d2826f5312e01713e2621159c6b24923
 
 ---
 
-# Crear segmentos de clientes
+# <a name="create-customer-segments"></a>Crear segmentos de clientes
 
 En ocasiones, puede que quieras dirigirte a un subgrupo de tu base de clientes para fines promocionales y de participación. Puedes hacerlo en el Centro de desarrollo de Windows creando un tipo de [grupo de clientes](create-customer-groups.md) denominado *segmento* que incluya a los clientes de Windows 10 que cumplan con los criterios demográficos o de ingresos que elijas.
 
@@ -16,7 +16,7 @@ Por ejemplo, podrías crear un segmento que incluya solo a clientes de 50 años 
 
 > **Sugerencia:** se pueden usar segmentos para [enviar notificaciones push dirigidas](send-push-notifications-to-your-apps-customers.md) a un grupo de clientes dentro de una campaña de participación.
 
-## Para crear un segmento de clientes
+## <a name="to-create-a-customer-segment"></a>Para crear un segmento de clientes
 
 1.  En el [panel del Centro de desarrollo de Windows](https://developer.microsoft.com/dashboard/overview), selecciona **Clientes** en el menú superior.
 2.  En la página **Grupos de clientes**, sigue uno de estos procedimientos:
@@ -24,7 +24,9 @@ Por ejemplo, podrías crear un segmento que incluya solo a clientes de 50 años 
  - En la sección **Segment templates**, selecciona **Copy to use a predefined segment**, una copia que puedes usar tal cual o modificar según tus necesidades.
 3.  En la lista **Include customers from this app**, selecciona una de las aplicaciones de destino.
 4.  En la casilla **Nombre del segmento**, elige un nombre para el segmento.
-5.  En la sección **Define inclusion conditions**, selecciona los criterios de filtro para el segmento.
+5.  En la sección **Definir condiciones de inclusión**, selecciona los criterios de filtro para el segmento.
+
+    Puedes elegir entre diversos criterios de filtro, incluidos **Origen de adquisición**, **Adquisiciones**, **Datos demográficos**, **Clasificación**, **Adquisiciones de la Tienda**, **Compras de la tienda** y **Gasto de la Tienda**.
 
     Por ejemplo, si quieres crear un segmento que solo incluya a los clientes de la aplicación que tengan de 18 a 24 años, selecciona los criterios de filtro [**Datos demográficos**] [**Grupo de edad**] [**es**] [**18 a 24**] en las listas desplegables.
 
@@ -45,7 +47,7 @@ Cosas que tener en cuenta sobre segmentos de clientes:
 - Los segmentos excluirán automáticamente a todos los clientes menores de 17 años.
 
 
-## Estadísticas de la aplicación
+## <a name="app-statistics"></a>Estadísticas de la aplicación
 
 La sección **Estadísticas de la aplicación** del segmento proporciona información sobre la aplicación, así como el tamaño del segmento que acabas de crear.
 
@@ -58,6 +60,6 @@ Si ves los resultados y **Customers in this segment** dice **Pequeño**, el segm
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

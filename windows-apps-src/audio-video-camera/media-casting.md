@@ -4,19 +4,19 @@ ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
 description: "En este artículo se muestra cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows."
 title: Transmitir contenido multimedia
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: e225d5f5b7957ab21136de7294f086af62c2a5ec
+ms.sourcegitcommit: ebcd2f2b28a7cd2a8a9dad16c30239b06e147ec3
+ms.openlocfilehash: fc69e3b5bb814752480fa0151c36ae0a8c783c4e
 
 ---
 
-# Transmitir contenido multimedia
+# <a name="media-casting"></a>Transmitir contenido multimedia
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este artículo se muestra cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows.
+En este artículo te mostramos cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows.
 
-## Conversión de multimedia integrada con MediaElement
+## <a name="built-in-media-casting-with-mediaplayerelement"></a>Transmisión de contenido multimedia integrada con MediaPlayerElement
 
 La forma más sencilla de transmitir contenido multimedia desde una aplicación universal de Windows es usar la característica de transmisión integrada del control [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement).
 
@@ -43,9 +43,9 @@ Una vez cargado el vídeo en **MediaPlayerElement**, el usuario simplemente pued
 ![botón de transmisión de mediaelement](images/media-element-casting-button.png)
 
 > [!NOTE] 
-> A partir de Windows10, versión 1607, se recomienda usar la clase **MediaPlayer** para reproducir elementos multimedia. **MediaPlayerElement** es un control XAML ligero que se usa para representar el contenido de un objeto **MediaPlayer** en una página XAML. El control **MediaElement** se sigue admitiendo para la compatibilidad con versiones anteriores. Para obtener más información sobre el uso de **MediaPlayer** y **MediaPlayerElement** para reproducir contenido multimedia, consulta [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md). Para obtener información sobre el uso de **MediaSource** y las API relacionadas para trabajar con contenido multimedia, consulta [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md).
+> A partir de Windows 10, versión 1607, se recomienda usar la clase **MediaPlayer** para reproducir elementos multimedia. **MediaPlayerElement** es un control XAML ligero que se usa para representar el contenido de un objeto **MediaPlayer** en una página XAML. El control **MediaElement** se sigue admitiendo para la compatibilidad con versiones anteriores. Para obtener más información sobre el uso de **MediaPlayer** y **MediaPlayerElement** para reproducir contenido multimedia, consulta [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md). Para obtener información sobre el uso de **MediaSource** y las API relacionadas para trabajar con contenido multimedia, consulta [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md).
 
-## Transmisión de contenido multimedia con el CastingDevicePicker
+## <a name="media-casting-with-the-castingdevicepicker"></a>Transmisión de contenido multimedia con el CastingDevicePicker
 
 Una segunda forma de transmitir contenido multimedia a un dispositivo es usar la clase [**CastingDevicePicker**](https://msdn.microsoft.com/library/windows/apps/dn972525). Para usar esta clase, se incluye el espacio de nombres de [**Windows.Media.Casting**](https://msdn.microsoft.com/library/windows/apps/dn972568) en el proyecto.
 
@@ -78,7 +78,7 @@ En los controladores de eventos **ErrorOccurred** y **StateChanged**, debes actu
 
 [!code-cs[EmptyStateHandlers](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetEmptyStateHandlers)]
 
-## Conversión de multimedia con un selector de dispositivos personalizados
+## <a name="media-casting-with-a-custom-device-picker"></a>Conversión de multimedia con un selector de dispositivos personalizados
 
 La siguiente sección describe cómo crear tu propio selector de dispositivos de conversión interfaz de usuario enumerando los dispositivos de conversión e iniciando la conexión desde el código.
 
@@ -160,6 +160,6 @@ Por último, implementa el controlador para el botón Desconectar. Detén la con
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

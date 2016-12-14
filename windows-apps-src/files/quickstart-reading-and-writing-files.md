@@ -1,15 +1,15 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 27914C0A-2A02-473F-BDD5-C931E3943AA0
 title: Crear, escribir y leer archivos
 description: Lee y escribe un archivo mediante un objeto StorageFile.
 translationtype: Human Translation
-ms.sourcegitcommit: 24f50f2c4ac7fcfe931759d42ba73e758d77f6e8
-ms.openlocfilehash: 2a9f5de71712e657bc9a0a39b668085c399ce9fb
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 0709d9c9126dc4523eae58d5db8d9037a2fb618e
 
 ---
 
-# Crear, escribir y leer archivos
+# <a name="create-write-and-read-a-file"></a>Crear, escribir y leer archivos
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -25,7 +25,7 @@ Leer y escribir un archivo con un objeto [**StorageFile**](https://msdn.microsof
 
 > **Nota** Consulta también [File access sample (Muestra de acceso a archivos)](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 -   **Comprender la programación asincrónica de las aplicaciones para Plataforma universal de Windows (UWP)**
 
@@ -35,7 +35,7 @@ Leer y escribir un archivo con un objeto [**StorageFile**](https://msdn.microsof
 
     Puedes aprender a obtener un archivo al usar un selector de archivos en [Abrir archivos y carpetas con un selector](quickstart-using-file-and-folder-pickers.md).
 
-## Creación de un archivo
+## <a name="creating-a-file"></a>Creación de un archivo
 
 Aquí se muestra cómo se crea un archivo en la carpeta local de la aplicación. Si ya existe, se reemplaza.
 > [!div class="tabbedCodeSnippets"]
@@ -53,7 +53,7 @@ Dim storageFolder As StorageFolder = Windows.Storage.ApplicationData.Current.Loc
 Dim sampleFile As StorageFile = Await storageFolder.CreateFileAsync("sample.txt", CreationCollisionOption.ReplaceExisting)
 ```
 
-## Escritura en un archivo
+## <a name="writing-to-a-file"></a>Escritura en un archivo
 
 
 A continuación se describe cómo escribir en un archivo editable en el disco mediante la clase [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171). El primer paso común de cada una de las maneras de escribir en un archivo (a menos que vayas a escribir en el archivo inmediatamente después de crearlo) es obtener el archivo con [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272).
@@ -153,7 +153,7 @@ using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
         Await outputStream.FlushAsync()
 ```
 
-## Leer desde un archivo
+## <a name="reading-from-a-file"></a>Leer desde un archivo
 
 
 Aquí se muestra cómo puedes leer desde un archivo del disco mediante la clase [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171). El primer paso común para cada una de las maneras de leer archivos es obtener el archivo con [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272).
@@ -259,6 +259,6 @@ Dim dataReader As New DataReader(inputStream)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

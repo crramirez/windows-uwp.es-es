@@ -1,15 +1,15 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: Guardar un archivo con un selector
 description: "Usa FileSavePicker para permitir a los usuarios especificar el nombre y la ubicación donde desean que tu aplicación guarde un archivo."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: 8e65131a913f5ea69438ff986151da11d3126314
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: ae6a9806e982a866834371a60788f7a788b04e47
 
 ---
 
-# Guardar un archivo con un selector
+# <a name="save-a-file-with-a-picker"></a>Guardar un archivo con un selector
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -26,7 +26,7 @@ Usa [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br20787
 
  
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 
 -   **Comprender la programación asincrónica de las aplicaciones de la Plataforma universal de Windows (UWP)**
@@ -37,7 +37,7 @@ Usa [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br20787
 
     Consulta [Permisos de acceso de archivos](file-access-permissions.md).
 
-## FileSavePicker: paso a paso
+## <a name="filesavepicker-step-by-step"></a>FileSavePicker: paso a paso
 
 
 Usa [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para que los usuarios puedan especificar el nombre, el tipo de archivo y la ubicación de un archivo para guardarlo. Crea, personaliza y muestra un objeto del selector de archivos y luego guarda los datos mediante el objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) devuelto, que representa el archivo seleccionado.
@@ -63,7 +63,7 @@ Este ejemplo establece tres propiedades: [**SuggestedStartLocation**](https://ms
      
 - Dado que nuestro usuario está guardando un documento o archivo de texto, la muestra establece [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880) en la carpeta local de la aplicación mediante [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621). Establece [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) en una ubicación adecuada para el tipo de archivo que se está guardando, por ejemplo, música, imágenes, vídeos o documentos. Desde la ubicación de inicio, el usuario puede dirigirse a otras ubicaciones.
 
-- Como queremos asegurarnos de que nuestra aplicación puede abrir el archivo después de que este se haya guardado, usaremos [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) para especificar los tipos de archivo que admite la muestra (archivos de texto y documentos de MicrosoftWord). Procura que todos los tipos de archivo que indiques sean compatibles con tu aplicación. Los usuarios podrán guardar sus archivos como cualquier otro tipo de archivo que especifiques. También pueden cambiar el tipo de archivo seleccionando otro de los tipos de archivo especificados. La primera opción de tipo de archivo de la lista se seleccionará de manera predeterminada: para controlar esto, establece la propiedad [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873).
+- Como queremos asegurarnos de que nuestra aplicación puede abrir el archivo después de que este se haya guardado, usaremos [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) para especificar los tipos de archivo que admite la muestra (archivos de texto y documentos de Microsoft Word). Procura que todos los tipos de archivo que indiques sean compatibles con tu aplicación. Los usuarios podrán guardar sus archivos como cualquier otro tipo de archivo que especifiques. También pueden cambiar el tipo de archivo seleccionando otro de los tipos de archivo especificados. La primera opción de tipo de archivo de la lista se seleccionará de manera predeterminada: para controlar esto, establece la propiedad [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873).
 
 > **Nota**  El selector de archivos usa también el tipo de archivo seleccionado actualmente para filtrar los archivos que se van a mostrar, de modo que solo muestren al usuario los tipos de archivo que coincidan con los tipos de archivo seleccionados.
 
@@ -114,6 +114,6 @@ El ejemplo comprueba que el archivo es válido y escribe en él su propio nombre
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

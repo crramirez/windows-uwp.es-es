@@ -6,18 +6,18 @@ ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: a954404ccc2e986c1603402315c8497f802ad254
+ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
+ms.openlocfilehash: 20e73c2de82bcc76c94fff38163dddac7ef9d8a9
 
 ---
-# Notifications Visualizer
+# <a name="notifications-visualizer"></a>Notifications Visualizer
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Notifications Visualizer es una nueva aplicación para la Plataforma universal de Windows (UWP) en [la Tienda](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables para Windows 10.
 
-## Información general
+## <a name="overview"></a>Información general
 
 
 La aplicación Notifications Visualizer proporciona vistas previas instantáneas de tu icono a medida que lo editas, de forma similar a la vista de editor/diseño de XAML de Visual Studio. La aplicación también comprueba si hay errores, lo cual garantiza que crees una carga de icono válida.
@@ -34,7 +34,7 @@ Con Notifications Visualizer, puedes crear y probar cargas de iconos adaptables 
 
  
 
-## Funciones
+## <a name="features"></a>Funciones
 
 
 Notifications Visualizer viene con varias cargas de muestra para mostrar lo que es posible con los iconos dinámicos adaptables y para ayudarte a empezar. Puedes experimentar con todas las opciones de texto, grupos/subgrupos, imágenes de fondo diferentes y ver cómo el icono se adapta a distintas pantallas y dispositivos. Una vez que hayas realizado cambios, puedes guardar la carga actualizada en un archivo para el uso futuro.
@@ -49,24 +49,15 @@ Esta captura de pantalla de la aplicación muestra el editor de iconos:
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Obtener Notifications Visualizer en la Tienda](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1)
 * [Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md)
 * [Plantillas de iconos adaptables: esquema y documentación](tiles-and-notifications-adaptive-tiles-schema.md)
 * [Iconos y notificaciones del sistema (blog de MSDN)](http://blogs.msdn.com/b/tiles_and_toasts/)
-* [Biblioteca NotificationsExtensions (blog de MSDN)](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/08/20/introducing-notificationsextensions-for-windows-10.aspx)
- 
-
- 
 
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

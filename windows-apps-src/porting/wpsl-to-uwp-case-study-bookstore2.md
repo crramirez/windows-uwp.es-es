@@ -1,35 +1,35 @@
 ---
 author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: "Este caso práctico, que se basa en la información proporcionada en Bookstore, comienza con una aplicación WindowsPhone Silverlight que muestra datos agrupados en un LongListSelector."
+description: "Este caso práctico, que se basa en la información proporcionada en Bookstore, comienza con una aplicación Windows Phone Silverlight que muestra datos agrupados en un LongListSelector."
 title: "Caso práctico de Windows Phone Silverlight a UWP, Bookstore2"
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: f421b42798d9472cd97ec9ed51036bd312c3e79e
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: c85473d8c3267e4f0ccd6018fe5ee349fdf39284
 
 ---
 
-# Caso práctico de Windows Phone Silverlight a UWP: Bookstore2
+# <a name="windows-phone-silverlight-to-uwp-case-study-bookstore2"></a>Caso práctico de Windows Phone Silverlight a UWP: Bookstore2
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Este caso práctico, que se basa en la información proporcionada en [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), comienza con una aplicación WindowsPhone Silverlight que muestra datos agrupados en un **LongListSelector**. En el modelo de vista, cada instancia de la clase **Author** representa el grupo de los libros que ha escrito ese autor y, en **LongListSelector**, podemos ver la lista de libros agrupados por autor, o bien podemos alejar la vista para ver una lista de accesos directos a autores. La lista de accesos directos ofrece una navegación mucho más rápida que un desplazamiento por la lista de libros. Repasaremos los pasos de migración de la aplicación a la Plataforma universal de Windows (UWP) de Windows10.
+Este caso práctico, que se basa en la información proporcionada en [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), comienza con una aplicación Windows Phone Silverlight que muestra datos agrupados en un **LongListSelector**. En el modelo de vista, cada instancia de la clase **Author** representa el grupo de los libros que ha escrito ese autor y, en **LongListSelector**, podemos ver la lista de libros agrupados por autor, o bien podemos alejar la vista para ver una lista de accesos directos a autores. La lista de accesos directos ofrece una navegación mucho más rápida que un desplazamiento por la lista de libros. Repasaremos los pasos de migración de la aplicación a la Plataforma universal de Windows (UWP) de Windows 10.
 
-**Nota** Cuando abras Bookstore2Universal\_10 en Visual Studio, si aparece el mensaje "Es necesario actualizar Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+**Nota**   Cuando abras Bookstore2Universal\_10 en Visual Studio, si aparece el mensaje "Es necesario actualizar Visual Studio", sigue los pasos para configurar la versión de la plataforma de destino en [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
 
-## Descargas
+## <a name="downloads"></a>Descargas
 
-[Descargar la aplicación Bookstore2WPSL8 para Windows Phone Silverlight](http://go.microsoft.com/fwlink/p/?linkid=522601).
+[Descargar la aplicación Bookstore2WPSL8 para la aplicación Windows Phone Silverlight](http://go.microsoft.com/fwlink/p/?linkid=522601).
 
 [Descargar la aplicación Bookstore2Universal\_10 para Windows 10](http://go.microsoft.com/fwlink/?linkid=532952).
 
-##  La aplicación Windows Phone Silverlight
+##  <a name="the-windows-phone-silverlight-app"></a>La aplicación Windows Phone Silverlight
 
 En la siguiente ilustración se muestra el aspecto de Bookstore2WPSL8 (la aplicación que portaremos). Es un **LongListSelector** de desplazamiento vertical de libros agrupados por autor. Puedes alejar la lista de accesos directos y desde allí puedes navegar a cualquier grupo. Existen dos elementos principales en esta aplicación: el modelo de vista que proporciona el origen de datos agrupados y la interfaz de usuario que se enlaza a ese modelo de vista. Como veremos, ambas partes se pueden portar fácilmente de la tecnología de Windows Phone Silverlight a la Plataforma universal de Windows (UWP).
 
 ![aspecto de booksare2wpsl8](images/wpsl-to-uwp-case-studies/c02-01-wpsl-how-the-app-looks.png)
 
-##  Migración a un proyecto de Windows 10
+##  <a name="porting-to-a-windows-10-project"></a>Migración a un proyecto de Windows 10
 
 Es una tarea muy rápida crear un nuevo proyecto en Visual Studio, copiar archivos en él desde Bookstore2WPSL8 e incluir los archivos copiados en el nuevo proyecto. Empieza creando un proyecto nuevo de Aplicación vacía (Windows Universal). Asígnale el nombre Bookstore2Universal\_10. Estos son los archivos que hay que copiar de Bookstore2WPSL8 a Bookstore2Universal\_10.
 
@@ -46,7 +46,7 @@ Edita el código fuente y los archivos de marcado que acabas de copiar y cambia 
 -   Usa el comando **Resolve** en `BitmapImage`.
 -   Elimina `using System.Windows.Media;` y `using System.Windows.Media.Imaging;`.
 -   Cambia el valor devuelto por la propiedad **Bookstore2Universal\_10.BookstoreViewModel.AppName** de "BOOKSTORE2WPSL8" a "BOOKSTORE2UNIVERSAL".
--   Al igual que hicimos anteriormente en [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), actualiza la implementación de la propiedad **BookSku.CoverImage** (consulta [Enlazar una imagen a un modelo de vista](wpsl-to-uwp-case-study-bookstore1.md#binding-an-image)).
+-   Al igual que hicimos anteriormente en [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), actualiza la implementación de la propiedad **BookSku.CoverImage** (consulta [Enlazar una imagen a un modelo de vista](wpsl-to-uwp-case-study-bookstore1.md)).
 
 En MainPage.xaml, debes realizar los siguientes cambios iniciales de migración.
 
@@ -59,9 +59,9 @@ En MainPage.xaml, debes realizar los siguientes cambios iniciales de migración.
 -   Al igual que hicimos en [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), reemplaza todas las referencias al estilo `PhoneTextExtraLargeStyle` **TextBlock** con una referencia a `SubtitleTextBlockStyle`, reemplaza `PhoneTextSubtleStyle` con `SubtitleTextBlockStyle`, reemplaza `PhoneTextNormalStyle` con `CaptionTextBlockStyle` y reemplaza `PhoneTextTitle1Style` con `HeaderTextBlockStyle`.
 -   Existe una excepción en `BookTemplate`. El estilo del segundo **TextBlock** debe hacer referencia a `CaptionTextBlockStyle`.
 -   Quita el atributo FontFamily de **TextBlock** dentro de `AuthorGroupHeaderTemplate` y establece el Background de **Border** de modo que haga referencia a `SystemControlBackgroundAccentBrush` y no a `PhoneAccentBrush`.
--   Debido a los [cambios relacionados con los píxeles de visualización](wpsl-to-uwp-porting-xaml-and-ui.md#effective-pixels), pasa por el marcado y multiplica todas las dimensiones de tamaño fijo (márgenes, ancho, alto, etc.) por 0,8.
+-   Debido a los [cambios relacionados con los píxeles de visualización](wpsl-to-uwp-porting-xaml-and-ui.md), pasa por el marcado y multiplica todas las dimensiones de tamaño fijo (márgenes, ancho, alto, etc.) por 0,8.
 
-## Reemplazar LongListSelector
+## <a name="replacing-the-longlistselector"></a>Reemplazar LongListSelector
 
 
 El reemplazo de **LongListSelector** por un control [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) requiere varios pasos, así que vamos a empezar. Un **LongListSelector** se enlaza directamente al origen de datos agrupados, pero un **SemanticZoom** contiene controles [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) o [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705), que se enlazan indirectamente a los datos a través de un adaptador [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833). **CollectionViewSource** debe estar presente en el marcado como un recurso, así que vamos a comenzar agregando eso en el marcado de MainPage.xaml, dentro de `<Page.Resources>`.
@@ -119,7 +119,7 @@ Ahora puedes compilar y ejecutar la aplicación. Este es su aspecto en el emulad
 
 El modelo de vista y las vistas acercada y alejada funcionan juntos correctamente, aunque un problema es que debemos trabajar un poco más en estilos y plantillas. Por ejemplo, los estilos y pinceles correctos aún no se usan, por lo que el texto es invisible en los encabezados de grupo en los que puedes hacer clic para alejar. Si ejecutas la aplicación en un dispositivo de escritorio, verás un segundo problema, que es que la aplicación aún no adapta la interfaz de usuario para ofrecer la mejor experiencia y el mejor uso de espacio en dispositivos más grandes donde las ventanas pueden ser mucho mayores que la pantalla de un dispositivo móvil. En las siguientes secciones ([Aplicación inicial plantillas y estilos](#initial-styling-and-templating), [Interfaz de usuario adaptativa](#adaptive-ui) y [Aplicación de estilo final](#final-styling)) solucionaremos estos problemas.
 
-## Aplicación inicial de plantillas y estilos
+## <a name="initial-styling-and-templating"></a>Aplicación inicial de plantillas y estilos
 
 Para espaciar bien los encabezados de grupo, edita `AuthorGroupHeaderTemplate` y establece el valor **Margin** de **Border** en `"0,0,0,9.6"`.
 
@@ -129,11 +129,11 @@ Para diseñar el nombre de la aplicación y el título de página un poco mejor,
 
 Cambia el fondo de `LayoutRoot` a `"{ThemeResource ApplicationPageBackgroundThemeBrush}"`.
 
-## Interfaz de usuario adaptativa
+## <a name="adaptive-ui"></a>Interfaz de usuario adaptativa
 
 Dado que empezamos con una aplicación de teléfono, no es ninguna sorpresa que el diseño de interfaz de usuario de nuestra aplicación migrada realmente solo tenga sentido para dispositivos pequeños y ventanas estrechas en esta etapa del proceso. Pero realmente queremos que el diseño de la interfaz de usuario se adapte y use mejor el espacio cuando la aplicación se ejecute en una ventana ancha (que solo es posible en un dispositivo con una pantalla grande) y que solo use la interfaz de usuario que tenemos actualmente cuando la ventana de la aplicación sea estrecha (lo que sucede en un dispositivo pequeño y también puede ocurrir en un dispositivo grande).
 
-Se puede usar la función adaptativa de Visual State Manager para lograr esto. Estableceremos las propiedades en los elementos visuales para que, de manera predeterminada, la interfaz de usuario se disponga en el estado estrecho con las plantillas que estamos usando ahora. A continuación, detectaremos cuando la ventana de la aplicación es mayor o igual a un tamaño específico (que se mide en unidades de [píxeles funcionales](wpsl-to-uwp-porting-xaml-and-ui.md#effective-pixels)) y, como respuesta, cambiaremos las propiedades de los elementos visuales para obtener un diseño más grande y ancho. Colocaremos esos cambios de propiedades en un estado visual y usaremos un desencadenador adaptable para supervisar de forma continua y determinar si se aplica ese estado visual o no, según el ancho de la ventana en píxeles efectivos. Estamos activando el ancho de la ventana en este caso, pero también es posible activar el alto de la ventana.
+Se puede usar la función adaptativa de Visual State Manager para lograr esto. Estableceremos las propiedades en los elementos visuales para que, de manera predeterminada, la interfaz de usuario se disponga en el estado estrecho con las plantillas que estamos usando ahora. A continuación, detectaremos cuando la ventana de la aplicación es mayor o igual a un tamaño específico (que se mide en unidades de [píxeles funcionales](wpsl-to-uwp-porting-xaml-and-ui.md)) y, como respuesta, cambiaremos las propiedades de los elementos visuales para obtener un diseño más grande y ancho. Colocaremos esos cambios de propiedades en un estado visual y usaremos un desencadenador adaptable para supervisar de forma continua y determinar si se aplica ese estado visual o no, según el ancho de la ventana en píxeles efectivos. Estamos activando el ancho de la ventana en este caso, pero también es posible activar el alto de la ventana.
 
 Un ancho mínimo de 548 píxeles efectivos es apropiado para este caso práctico porque es el tamaño del dispositivo más pequeño en el que queremos mostrar el diseño. Los teléfonos tienen normalmente menos de 548 píxeles efectivos, por lo que en un dispositivo pequeño de este tipo, mantendríamos el diseño estrecho de forma predeterminada. En un equipo, la ventana se iniciará de forma predeterminada con un ancho suficiente para desencadenar el cambio al estado ancho, que muestra elementos de tamaño 250 x 250. Desde allí podrás arrastrar la ventana estrecha lo suficiente para mostrar un mínimo de dos columnas de elementos de tamaño 250 x 250. Si la ventana es más estrecha, el desencadenador se desactiva, se quita el estado visual ancho y se muestra el diseño estrecho predeterminado.
 
@@ -211,7 +211,7 @@ Antes de fijar el elemento Visual State Manager adaptativo, primero tenemos que 
     ...
 ```
 
-## Aplicación de estilo final
+## <a name="final-styling"></a>Aplicación de estilo final
 
 Solo quedan algunos retoques finales de estilo.
 
@@ -263,7 +263,7 @@ La aplicación de Windows 10 portada ejecutándose en un dispositivo móvil, con
 
 La aplicación de Windows 10 portada ejecutándose en un dispositivo móvil, con vista alejada
 
-## Hacer que el modelo de vista sea más flexible
+## <a name="making-the-view-model-more-flexible"></a>Hacer que el modelo de vista sea más flexible
 
 Esta sección contiene un ejemplo de las instalaciones que se nos abren después de haber movido nuestra aplicación para usar UWP. A continuación, describimos pasos opcionales que puedes seguir para que el modelo de vista sea más flexible cuando se tenga acceso a través de un **CollectionViewSource**. El modelo de vista (el archivo de origen se encuentra en ViewModel\BookstoreViewModel.cs) que hemos portado de la aplicación Windows Phone Silverlight Bookstore2WPSL8 contiene una clase denominada Author, que se deriva de **List&lt;T&gt;**, donde **T** es BookSku. Esto significa que la clase Author *es un* grupo de BookSku.
 
@@ -296,12 +296,12 @@ Esos cambios no alteran la aplicación desde el punto de vista funcional, pero a
 
 Ahora podemos optar por quitar `ItemsPath="BookSkus"` y la aplicación seguirá funcionando de la misma manera.
 
-## Conclusión
+## <a name="conclusion"></a>Conclusión
 
 En este caso práctico se ha observado una interfaz de usuario más ambiciosa que la anterior. Todas las funciones y conceptos del **LongListSelector** de Windows Phone Silverlight (y más) han resultado estar disponibles para una aplicación para UWP mediante **SemanticZoom**, **ListView**, **GridView** y **CollectionViewSource**. Hemos mostrado cómo volver a usar o copiar y editar marcado y código imperativos en una aplicación para UWP para lograr funcionalidad, una interfaz de usuario e interacciones adaptadas para que se ajusten a los factores de forma de dispositivos Windows más anchos y más estrechos, así como a todos los tamaños intermedios.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

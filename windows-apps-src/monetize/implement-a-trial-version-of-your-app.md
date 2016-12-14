@@ -5,12 +5,12 @@ description: "Aprende a usar el espacio de nombres Windows.Services.Store para i
 title: "Implementar una versión de prueba de la aplicación"
 keywords: "ejemplo de código de prueba gratuita"
 translationtype: Human Translation
-ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
-ms.openlocfilehash: 8858c9f7f9b40e2bca30054b99ab47c7388aef57
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: ea4c5637a970a63938da2b1bea9f11fd39de9cc8
 
 ---
 
-# Implementar una versión de prueba de la aplicación
+# <a name="implement-a-trial-version-of-your-app"></a>Implementar una versión de prueba de la aplicación
 
 Si configuras la aplicación como una [prueba gratuita en el panel del Centro de desarrollo de Windows](../publish/set-app-pricing-and-availability.md#free-trial) para que los clientes pueden usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando ciertas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
 
@@ -18,7 +18,7 @@ Las aplicaciones destinadas a Windows 10, versión 1607 o posterior, pueden usar
 
 >**Nota**&nbsp;&nbsp;Este artículo es aplicable a las aplicaciones diseñadas para Windows 10, versión 1607 o posterior. Si la aplicación está destinada a una versión anterior de Windows 10, debes usar el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) en lugar del espacio de nombres **Windows.Services.Store**. Para obtener más información, consulta [Compras desde la aplicación y pruebas con el espacio de nombres Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
-## Directrices para implementar una versión de prueba
+## <a name="guidelines-for-implementing-a-trial-version"></a>Directrices para implementar una versión de prueba
 
 El estado de licencia actual de la aplicación se almacena en forma de propiedades de la clase [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx). Por lo general, tendrás que incluir las funciones que dependen del estado de la licencia en un bloque condicional, tal y como describimos en el siguiente paso. Cuando uses estas características, asegúrate de implementarlas de manera que funcionen en todos los estados de la licencia.
 
@@ -53,7 +53,7 @@ Para la mayoría de las aplicaciones que no sean juegos, definir una fecha de ex
 
 Explica cómo se comportará la aplicación durante el período de prueba gratuito y después de él, para que el comportamiento de la aplicación no sorprenda a los clientes. Para obtener más información sobre cómo describir tu aplicación, consulta [Crear descripciones de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt148529).
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Este ejemplo tiene los siguientes requisitos previos:
 * Un proyecto de Visual Studio de una aplicación para la Plataforma universal de Windows (UWP) destinado a Windows 10, versión 1607 o posterior.
@@ -66,62 +66,18 @@ El código de este ejemplo supone que:
 
 >**Nota**&nbsp;&nbsp;Si tienes una aplicación de escritorio que usa el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), tienes que agregar código adicional que no se muestra en este ejemplo para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
 
-## Ejemplo de código
+## <a name="code-example"></a>Ejemplo de código
 
 Si tu aplicación se está inicializando, obtén el objeto [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx) para esta y controla el evento [OfflineLicensesChanged](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.offlinelicenseschanged.aspx) para recibir notificaciones si cambia la licencia mientras la aplicación se está ejecutando. Por ejemplo, la licencia de la aplicación puede cambiar si expira el período de prueba o si el cliente compra la aplicación a través de una Tienda. Si la licencia cambia, obtén la nueva licencia y habilita o deshabilita una característica de tu aplicación en consecuencia.
 
 En este punto, si el usuario compró la aplicación, se recomienda proporcionar información al usuario sobre los cambios de estado de licencia. Es posible que necesites pedirle al usuario que reinicie la aplicación, si así la has codificado. Esta transición debe ser lo más sencilla y fácil posible.
 
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[ImplementTrial](./code/InAppPurchasesAndLicenses_RS1/cs/ImplementTrialPage.xaml.cs#ImplementTrial)]
 
-```csharp
-private StoreContext context = null;
-private StoreAppLicense appLicense = null;
+Para obtener una aplicación de ejemplo completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
-// Call this while your app is initializing.
-private async void InitializeLicense()
-{
-    if (context == null)
-    {
-        context = StoreContext.GetDefault();
-        // If your app is a desktop app that uses the Desktop Bridge, you
-        // may need additional code to configure the StoreContext object.
-        // For more info, see https://aka.ms/storecontext-for-desktop.
-    }
-
-    workingProgressRing.IsActive = true;
-    appLicense = await context.GetAppLicenseAsync();
-    workingProgressRing.IsActive = false;
-
-    // Register for the licenced changed event.
-    context.OfflineLicensesChanged += context_OfflineLicensesChanged;
-}
-
-private async void context_OfflineLicensesChanged(StoreContext sender, object args)
-{
-    // Reload the license.
-    workingProgressRing.IsActive = true;
-    appLicense = await context.GetAppLicenseAsync();
-    workingProgressRing.IsActive = false;
-
-    if (appLicense.IsActive)
-    {
-        if (appLicense.IsTrial)
-        {
-            textBlock.Text = $"This is the trial version. Expiration date: {appLicense.ExpirationDate}";
-
-            // Show the features that are available during trial only.
-        }
-        else
-        {
-            // Show the features that are available only with a full license.
-        }
-    }
-}
-```
-
-Para una aplicación de muestra completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
-
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md)
 * [Obtener información de producto para aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
@@ -132,6 +88,6 @@ Para una aplicación de muestra completa, consulta la [muestra de la Tienda](htt
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

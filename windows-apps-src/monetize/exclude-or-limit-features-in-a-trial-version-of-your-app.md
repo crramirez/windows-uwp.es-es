@@ -5,14 +5,12 @@ title: "Excluir o limitar las características de una versión de prueba"
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
 keywords: "muestra de código de prueba gratuita"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: fdca95a6e925ca2238fdcd8791ade2ed4ea5a310
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: 0d377677237264e2dad290c7d49c47800c255138
 
 ---
 
-# Excluir o limitar las características de una versión de prueba
-
-
+# <a name="exclude-or-limit-features-in-a-trial-version"></a>Excluir o limitar las características de una versión de prueba
 
 
 >**Nota**&nbsp;&nbsp;En este artículo se muestra cómo usar miembros del espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx). Si la aplicación está orientada a Windows 10, versión 1607 o posterior, es recomendable que uses miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para implementar una versión de prueba, en lugar del espacio de nombres **Windows.ApplicationModel.Store**. Para obtener más información, consulta [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md).
@@ -21,13 +19,13 @@ Si permites que los clientes puedan usar la aplicación gratis durante un perío
 
 Veamos cómo puedes agregar esto a tu aplicación.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Una aplicación de Windows en la que se puedan agregar características que los clientes pueden comprar.
 
-## Paso 1: Elige las características que deseas habilitar o deshabilitar durante el período de prueba
+## <a name="step-1-pick-the-features-you-want-to-enable-or-disable-during-the-trial-period"></a>Paso 1: Elige las características que deseas habilitar o deshabilitar durante el período de prueba
 
-El estado de licencia de la aplicación se almacena como propiedad de la clase [**LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/br225157). Por lo general, tendrás que incluir las funciones que dependen del estado de la licencia en un bloque condicional, tal y como describimos en el siguiente paso. Cuando uses estas características, asegúrate de implementarlas de manera que funcionen en todos los estados de la licencia.
+El estado actual de la licencia de la aplicación se almacena como propiedades de la clase [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157). Por lo general, tendrás que incluir las funciones que dependen del estado de la licencia en un bloque condicional, tal y como describimos en el siguiente paso. Cuando uses estas características, asegúrate de implementarlas de manera que funcionen en todos los estados de la licencia.
 
 Además, debes decidir cómo quieres tratar los cambios en la licencia de la aplicación cuando se está ejecutando la aplicación. La aplicación de prueba puede tener todas las características, pero también puede incorporar anuncios publicitarios que la versión de pago no tiene. O bien, la aplicación de prueba puede tener determinadas características deshabilitadas o mostrar mensajes regulares que indiquen al usuario que compre la aplicación.
 
@@ -59,181 +57,72 @@ Para la mayoría de las aplicaciones que no sean juegos, definir una fecha de ex
     -   Habilitar de forma silenciosa las características que están disponibles con una licencia completa (o deshabilitar los avisos exclusivos de la prueba).
 
 Si quieres detectar el cambio de licencia y realizar alguna acción en la aplicación, debes agregar un controlador de eventos como se describe en el siguiente paso.
-## Paso 2: Inicializar la información de licencia
 
-Cuando se esté inicializando la aplicación, obtén el objeto [**LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/br225157) para la aplicación, tal y como se muestra en este ejemplo. Se supone que **licenseInformation** es una variable global o un campo de tipo **LicenseInformation**.
+## <a name="step-2-initialize-the-license-info"></a>Paso 2: Inicializar la información de licencia
 
-Inicializa la clase [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) o [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) para obtener acceso a la información de licencia de la aplicación.
+Cuando se esté inicializando la aplicación, obtén el objeto [LicenseInformation](https://msdn.microsoft.com/library/windows/apps/br225157) para la aplicación, tal y como se muestra en este ejemplo. Se supone que **licenseInformation** es una variable global o un campo del tipo **LicenseInformation**.
 
-```CSharp
-void initializeLicense()
-{
-    // Initialize the license info for use in the app that is uploaded to the Store.
-    // uncomment for release
-    //   licenseInformation = CurrentApp.LicenseInformation;
+Por ahora, obtendrás información de licencia simulada mediante [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) en lugar de [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765). Antes de enviar la versión de lanzamiento de la aplicación a la **Tienda**, debes reemplazar todas las referencias a **CurrentAppSimulator** que aparezcan en el código por **CurrentApp**.
 
-    // Initialize the license info for testing.
-    // comment the next line for release
-    licenseInformation = CurrentAppSimulator.LicenseInformation;
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTest)]
 
-}
-```
+A continuación, agrega un controlador de eventos para recibir notificaciones cuando cambie la licencia mientras se esté ejecutando la aplicación. La licencia de la aplicación puede cambiar si expira el período de prueba o si el cliente compra la aplicación a través de una Tienda, por ejemplo.
 
-Agrega un controlador de eventos para recibir notificaciones cuando cambie la licencia mientras se esté ejecutando la aplicación. La licencia de la aplicación puede cambiar si expira el período de prueba o si el cliente compra la aplicación a través de una Tienda, por ejemplo.
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTestWithEvent)]
 
-```CSharp
-void InitializeLicense()
-{
-    // Initialize the license info for use in the app that is uploaded to the Store.
-    // uncomment for release
-    //   licenseInformation = CurrentApp.LicenseInformation;
+## <a name="step-3-code-the-features-in-conditional-blocks"></a>Paso 3: Codificar las características en un bloque condicional
 
-    // Initialize the license info for testing.
-    // comment the next line for release
-    licenseInformation = CurrentAppSimulator.LicenseInformation;
+Cuando se genere el evento de cambio de la licencia, la aplicación debe llamar a la API de licencia para determinar si el estado de prueba se ha modificado. En el código de este paso se muestra cómo estructurar el controlador para este evento. En este punto, si el usuario compró la aplicación, se recomienda proporcionar información al usuario sobre los cambios de estado de licencia. Es posible que necesites pedirle al usuario que reinicie la aplicación, si así la has codificado. Esta transición debe ser lo más sencilla y fácil posible.
 
-    // Register for the license state change event.
-     licenseInformation.LicenseChanged += new LicenseChangedEventHandler(licenseChangedEventHandler);
+En este ejemplo se muestra cómo evaluar el estado de la licencia de una aplicación para que puedas habilitar o deshabilitar una característica de la aplicación adecuadamente.
 
-}
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#ReloadLicense)]
 
-// ...
+## <a name="step-4-get-an-apps-trial-expiration-date"></a>Paso 4: Obtener la fecha de caducidad de la prueba de una aplicación
 
-void licenseChangedEventHandler()
-{
-    ReloadLicense(); // code is in next steps
-}
-```
+Incluye el código para determinar la fecha de caducidad de la prueba de la aplicación.
 
-## Paso 3: Codificar las características en un bloque condicional
+El código de este ejemplo define una función para obtener la fecha de expiración de la licencia de prueba de la aplicación. Si la licencia sigue siendo válida, muestra la fecha de caducidad con el número de días que quedan para que caduque la prueba.
 
-Cuando se genere el evento de cambio de licencia, la aplicación debe llamar a la API de licencia para determinar si el estado de prueba se ha modificado. En el código de este paso se muestra cómo estructurar el controlador para este evento. En este punto, si el usuario compró la aplicación, se recomienda proporcionar información al usuario sobre los cambios de estado de licencia. Es posible que necesites pedirle al usuario que reinicie la aplicación, si así la has codificado. Esta transición debe ser lo más sencilla y fácil posible.
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#DisplayTrialVersionExpirationTime)]
 
-En este ejemplo se muestra cómo evaluar el estado de licencia de una aplicación para que puedas habilitar o deshabilitar una característica de la aplicación adecuadamente.
+## <a name="step-5-test-the-features-using-simulated-calls-to-the-license-api"></a>Paso 5: Probar las características con llamadas simuladas a la API de licencia
 
-```CSharp
-void ReloadLicense()
-{
-    if (licenseInformation.IsActive)
-    {
-         if (licenseInformation.IsTrial)
-         {
-             // Show the features that are available during trial only.
-         }
-         else
-         {
-             // Show the features that are available only with a full license.
-         }
-     }
-     else
-     {
-         // A license is inactive only when there' s an error.
-     }
-}
-```
+Ahora, prueba la aplicación con datos simulados. **CurrentAppSimulator** obtiene información de licencia específica de la versión de prueba de un archivo XML llamado WindowsStoreProxy.xml, que se encuentra en %perfilusuario%\\AppData\\local\\packages\\&lt;nombre_paquete&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. Puedes editar WindowsStoreProxy.xml para cambiar las fechas de caducidad simuladas para la aplicación y para sus características. Prueba todas las configuraciones de licencia y caducidad posibles para asegurarte de que todo funciona correctamente. Para obtener más información, consulta [Uso del archivo WindowsStoreProxy.xml con CurrentAppSimulator](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy).
 
-## Paso 4: Obtener la fecha de expiración de la prueba de una aplicación
+Si esta ruta de acceso y este archivo no existen, deberás crearlos durante la instalación o durante el tiempo de ejecución. Si intentas acceder a la propiedad [CurrentAppSimulator.LicenseInformation](https://msdn.microsoft.com/library/windows/apps/hh779768) sin el archivo WindowsStoreProxy.xml en esa ubicación específica, obtendrás un mensaje de error.
 
-Incluye el código para determinar la fecha de vencimiento de la prueba de la aplicación.
+## <a name="step-6-replace-the-simulated-license-api-methods-with-the-actual-api"></a>Paso 6: Reemplazar los métodos API de licencia simulados por las API reales.
 
-El código de este ejemplo define una función para obtener la fecha de expiración de la licencia de prueba de la aplicación. Si la licencia sigue siendo válida, muestra la fecha de expiración con el número de días que quedan para que expire la prueba.
+Después de probar tu aplicación con el servidor de licencias simuladas, y antes de enviar la aplicación a una Tienda para su certificación, sustituye **CurrentAppSimulator** por **CurrentApp**, tal y como se muestra en la siguiente muestra de código.
 
-```CSharp
-void DisplayTrialVersionExpirationTime()
-{
-    if (licenseInformation.IsActive)
-    {
-        if (licenseInformation.IsTrial)
-        {
-            var longDateFormat = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("longdate");
+>**Importante:**&nbsp;&nbsp;La aplicación debe usar el objeto **CurrentApp** cuando la envíes a una Tienda o no logrará la certificación.
 
-            // Display the expiration date using the DateTimeFormatter.
-            // For example, longDateFormat.Format(licenseInformation.ExpirationDate)
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseRetailWithEvent)]
 
-            var daysRemaining = (licenseInformation.ExpirationDate - DateTime.Now).Days;
+## <a name="step-7-describe-how-the-free-trial-works-to-your-customers"></a>Paso 7: Describir cómo funciona la prueba gratuita a tus clientes
 
-            // Let the user know the number of days remaining before the feature expires
-        }
-        else
-        {
-            // ...
-        }
-    }
-    else
-    {
-       // ...
-    }
-}
-```
-
-## Paso 5: Probar las características con llamadas simuladas a la API de licencia
-
-Ahora, prueba la aplicación con llamadas simuladas al servidor de licencias. En JavaScript, C#, Visual Basic o Visual C++, reemplaza las referencias de [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) por [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) en el código de inicialización de la aplicación.
-
-[**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) obtiene información de licencia específica de la versión de prueba de un archivo XML llamado "WindowsStoreProxy.xml", que se encuentra en %perfilusuario%\\AppData\\local\\packages\\&lt;nombre del paquete&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData. Si esta ruta de acceso y este archivo no existen, deberás crearlos durante la instalación o durante el tiempo de ejecución. Si intentas acceder a la propiedad [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768) sin el archivo WindowsStoreProxy.xml en esa ubicación específica, obtendrás un mensaje de error.
-
-En este ejemplo se muestra cómo agregar el código a la aplicación para probarla en diferentes estados de licencia.
-
-```CSharp
-void appInit()
-{
-    // some app initialization functions
-
-    // Initialize the license info for use in the app that is uploaded to the Store.
-    // uncomment for release
-    //   licenseInformation = CurrentApp.LicenseInformation;
-
-    // Initialize the license info for testing.
-    // comment the next line for release
-    licenseInformation = CurrentAppSimulator.LicenseInformation;
-
-    // other app initialization functions
-}
-```
-
-Puedes editar WindowsStoreProxy.xml para cambiar las fechas de expiración simuladas para la aplicación y para sus características. Prueba todas las configuraciones de licencia y expiración posibles para asegurarte de que todo funcione correctamente.
-
-## Paso 6: Reemplaza los métodos API de licencia simulados con los API reales.
-
-Después de probar tu aplicación con el servidor de licencias simulado, y antes de enviar la aplicación a una Tienda para su certificación, reemplaza [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) por [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765), tal y como se muestra en la siguiente muestra de código.
-
-**Importante** La aplicación debe usar el objeto [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) cuando la envíes a una Tienda. De lo contrario, no logrará la certificación.
-
-```CSharp
-void appInit()
-{
-    // some app initialization functions
-
-    // Initialize the license info for use in the app that is uploaded to the Store.
-    // uncomment for release
-    licenseInformation = CurrentApp.LicenseInformation;
-
-    // Initialize the license info for testing.
-    // comment the next line for release
-    //   licenseInformation = CurrentAppSimulator.LicenseInformation;
-
-    // other app initialization functions
-}
-```
-
-## Paso 7: Describir cómo funciona la prueba gratuita a tus clientes
-
-Explica cómo se comportará la aplicación durante el período de prueba gratuito y después de él, para que no les sorprenda el comportamiento de la aplicación.
+Explica cómo se comportará la aplicación durante el período de prueba gratuito y después de él, para que el comportamiento de la aplicación no sorprenda a los clientes.
 
 Para obtener más información sobre cómo describir tu aplicación, consulta [Crear descripciones de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt148529).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Muestra de la Tienda (muestra pruebas y compras desde la aplicación)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [Establecer los precios y la disponibilidad de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt148548)
-* [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)
-* [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)
+* [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765)
+* [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766)
  
 
  
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

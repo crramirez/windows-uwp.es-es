@@ -1,15 +1,15 @@
 ---
 author: TylerMSFT
 title: "Admitir la vinculación de un sitio web con la aplicación mediante los controladores de URI de la aplicación"
-description: "Controlar la relación de los usuarios con tu aplicación mediante los controladores de URI de la aplicación."
+description: "Controla la relación de los usuarios con tu aplicación mediante los controladores de URI de la aplicación."
 keywords: "Vinculación en profundidad de Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: cb3dbf7fd55c92339c77124bd22b3484fa389285
-ms.openlocfilehash: d7ce1dbfdf8ce0069b4d882323de8fd6f1b242f7
+ms.sourcegitcommit: 3e57ca2cf0e7c788f5a8be12ebaf3e6b05a4fe51
+ms.openlocfilehash: e5c815ef0c776954e5b0d7f1cb9bd5e32e10356c
 
 ---
 
-# Admitir la vinculación de un sitio web con la aplicación mediante los controladores de URI de la aplicación
+# <a name="support-web-to-app-linking-with-app-uri-handlers"></a>Admitir la vinculación de un sitio web con la aplicación mediante los controladores de URI de la aplicación
 
 Aprende a controlar la relación del usuario con tu aplicación incorporando la compatibilidad de la vinculación de web a aplicación. La vinculación de web a aplicación te permite asociar una aplicación con un sitio web. Cuando los usuarios abran un vínculo http o https a tu sitio web, en lugar de abrirse el navegador, se iniciará la aplicación. Si la aplicación no está instalada, se proporcionará un vínculo para abrir el sitio web en el navegador. Los usuarios pueden confiar en esta experiencia porque solo los propietarios con contenido comprobado pueden registrarse para obtener un vínculo.
 
@@ -18,7 +18,7 @@ Para poder habilitar la vinculación de web a aplicación, necesitarás:
 - Un archivo JSON con el nombre de familia de paquete de la aplicación en la misma raíz de host que la declaración de manifiesto de la aplicación.
 - Administrar la activación en la aplicación.
 
-## Registro para controlar los vínculos http y https en el manifiesto de la aplicación.
+## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>Registro para controlar los vínculos http y https en el manifiesto de la aplicación.
 
 La aplicación debe identificar los URI de los sitios web que controlará. Para ello, agrega el registro de extensiones **Windows.appUriHandler** al archivo de manifiesto de la aplicación **Package.appxmanifest**.
 
@@ -40,7 +40,7 @@ Por ejemplo, si la dirección del sitio web es "msn.com", realizarías la siguie
 
 La declaración anterior registra la aplicación para que controle los vínculos del host especificado. Si el sitio web tiene varias direcciones (por ejemplo: m.example.com, www.example.com y example.com), agrega una entrada `<uap3:Host Name=... />` distinta en el `<uap3:AppUriHandler>` para cada dirección.
 
-## Asociar la aplicación y el sitio web con un archivo JSON
+## <a name="associate-your-app-and-website-with-a-json-file"></a>Asociar la aplicación y el sitio web con un archivo JSON
 
 Para garantizar que solo la aplicación pueda abrir contenido de tu sitio web, incluye el nombre de familia de paquete de dicha aplicación en un archivo JSON ubicado en la raíz del servidor web o en el directorio conocido del dominio. Esto significa que tu sitio web da su consentimiento para que las aplicaciones listadas abran contenido del sitio. Puedes encontrar el nombre de familia de paquete en la sección Paquetes del diseñador de manifiestos de aplicaciones.
 
@@ -59,7 +59,7 @@ Crea un archivo JSON (sin la extensión de archivo .json) denominado **windows-a
 
 Windows realizará una conexión https a tu sitio web y buscará el archivo JSON correspondiente en tu servidor web.
 
-### Caracteres comodín
+### <a name="wildcards"></a>Caracteres comodín
 
 El ejemplo de archivo JSON anterior muestra el uso de caracteres comodín. Los caracteres comodín permiten admitir una gran variedad de vínculos con menos líneas de código. La vinculación de web a aplicación admite dos tipos de caracteres comodín en el archivo JSON:
 
@@ -71,7 +71,7 @@ El ejemplo de archivo JSON anterior muestra el uso de caracteres comodín. Los c
 Por ejemplo, si tomamos `"excludePaths" : [ "/news/*", "/blog/*" ]` en el ejemplo anterior, la aplicación admitirá todas las rutas de acceso que empiecen por la dirección de tu sitio web (por ejemplo, msn.com) **excepto** las que estén bajo `/news/` y `/blog/`. Se admitirá **msn.com/weather.html**, pero no ****msn.com/news/topnews.html****.
 
 
-### Varias aplicaciones
+### <a name="multiple-apps"></a>Varias aplicaciones
 
 Si tienes dos aplicaciones que quieres vincular a tu sitio web, lista ambos nombres de familia de paquete de las aplicaciones en tu archivo JSON **windows-app-web-link**. Pueden admitirse ambas aplicaciones. Al usuario se le dará a elegir cuál será el vínculo predeterminado si ambas están instaladas. Si desean cambiar el vínculo predeterminado más adelante, pueden hacerlo en **Configuración > Aplicaciones para sitios web**. Los desarrolladores también pueden cambiar el archivo JSON en cualquier momento y ver los cambios ya el mismo día, pero no más tarde de ocho días después de la actualización.
 
@@ -91,7 +91,7 @@ Para proporcionar la mejor experiencia para los usuarios, usa excluir rutas para
 
 Las rutas excluidas se comprueban en primer lugar y, si hay una coincidencia, se abrirá la página correspondiente con el navegador en lugar de con la aplicación designada. En el ejemplo anterior, ' /news/ \ *' incluye todas las páginas bajo esa ruta de acceso, mientras que '/news\*' (sin barra diagonal tras 'news') incluye todas las rutas de acceso bajo 'news\*', como 'newslocal/', 'newsinternational/', etc.
 
-## Administrar vínculos en la activación para vincular con contenido
+## <a name="handle-links-on-activation-to-link-to-content"></a>Administrar vínculos en la activación para vincular con contenido
 
 Dirígete a **App.xaml.cs** en la solución de Visual Studio de la aplicación y en **OnActivated()** agrega el control del contenido vinculado. En el siguiente ejemplo, la página que se abre en la aplicación depende de la ruta de acceso del URI:
 
@@ -143,7 +143,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 **Importante** Asegúrate de sustituir la lógica final `if (rootFrame.Content == null)` por `rootFrame.Navigate(deepLinkPageType, e);` como se muestra en el ejemplo anterior.
 
-## Prueba de la aplicación: Herramienta de validación local
+## <a name="test-it-out-local-validation-tool"></a>Prueba de la aplicación: Herramienta de validación local
 
 Puedes probar la configuración de la aplicación y el sitio web mediante la ejecución de la herramienta de comprobador de registro de host de la aplicación, que está disponible en:
 
@@ -157,7 +157,7 @@ Prueba la configuración de la aplicación y el sitio web mediante la ejecución
 -   Nombre de familia de paquete (PFN): El PFN de la aplicación
 -   Ruta de acceso del archivo: El archivo JSON para la validación local (por ejemplo, C:\\UnaCarpeta\\windows-app-web-link)
 
-## Prueba de la aplicación: Validación web
+## <a name="test-it-web-validation"></a>Prueba de la aplicación: Validación web
 
 Cierra la aplicación para comprobar que se activa al hacer clic en un vínculo. A continuación, copia la dirección de una de las rutas de acceso admitidas en tu sitio web. Por ejemplo, si la dirección de tu sitio web es "msn.com" y una de las rutas admitidas es "path1", usarías: `http://msn.com/path1`
 
@@ -169,7 +169,7 @@ Si quieres seguir la lógica de activación de protocolo, establece un punto de 
 
 **Nota:** Si haces clic en un vínculo del navegador Microsoft Edge, no iniciará la aplicación, sino que te llevará al sitio web.
 
-## Sugerencias sobre AppUriHandlers:
+## <a name="appurihandlers-tips"></a>Sugerencias sobre AppUriHandlers:
 
 - Asegúrate de especificar solo los vínculos que tu aplicación pueda controlar.
 
@@ -185,7 +185,7 @@ Si quieres seguir la lógica de activación de protocolo, establece un punto de 
 
 - Esta característica funciona siempre que la aplicación sea una aplicación para UWP iniciada con [LaunchUriAsync](https://msdn.microsoft.com/en-us/library/windows/apps/hh701480.aspx) o una aplicación de escritorio de Windows que se inicie con [ShellExecuteEx](https://msdn.microsoft.com/en-us/library/windows/desktop/bb762154(v=vs.85).aspx). Si la dirección URL se corresponde con un controlador de URI de aplicación registrado, se iniciará dicha aplicación en lugar del navegador.
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 
 [Registro de windows.protocol](https://msdn.microsoft.com/en-us/library/windows/apps/br211458.aspx)
 
@@ -195,6 +195,6 @@ Si quieres seguir la lógica de activación de protocolo, establece un punto de 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

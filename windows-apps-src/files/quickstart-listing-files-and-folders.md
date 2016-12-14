@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Enumerar y consultar archivos y carpetas
 description: "Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 80c9a2f37b7744d983f3f742895e9ac2408850df
 
 ---
-# Enumerar y consultar archivos y carpetas
+# <a name="enumerate-and-query-files-and-folders"></a>Enumerar y consultar archivos y carpetas
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -16,10 +16,12 @@ ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
 
 Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas.
 
-**Nota**  Consulta también la [muestra de enumeración de carpetas](http://go.microsoft.com/fwlink/p/?linkid=619993).
+Para obtener información detallada sobre cómo almacenar los datos de la aplicación para la plataforma universal de Windows, consulta la clase [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx).
+
+**Nota:** Consulta también la [muestra de enumeración de carpetas](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
  
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 -   **Comprender la programación asincrónica de las aplicaciones de la Plataforma universal de Windows (UWP)**
 
@@ -29,7 +31,7 @@ Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, 
 
     Por ejemplo, el código de estos ejemplos requiere la funcionalidad **picturesLibrary**, pero es posible que la ubicación requiera una funcionalidad distinta o ninguna. Para más información, consulta [Permisos de acceso de archivos](file-access-permissions.md).
 
-## Enumerar archivos y carpetas en una ubicación
+## <a name="enumerate-files-and-folders-in-a-location"></a>Enumerar archivos y carpetas en una ubicación
 
 > **Nota**  Recuerda declarar la funcionalidad **picturesLibrary**.
 
@@ -208,7 +210,7 @@ Como alternativa, puedes usar el método [**GetItemsAsync**](https://msdn.micros
 > Next item
 > ```
 
-## Consultar archivos en una ubicación y enumerar archivos coincidentes
+## <a name="query-files-in-a-location-and-enumerate-matching-files"></a>Consultar archivos en una ubicación y enumerar archivos coincidentes
 
 En este ejemplo, se consultan todos los archivos en [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) agrupados por mes y esta vez el ejemplo recorre las subcarpetas. En primer lugar, se llama a [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) y se pasa el valor [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957) al método. Esto nos da un objeto [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066).
 
@@ -324,6 +326,6 @@ July ‎2015 (2)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

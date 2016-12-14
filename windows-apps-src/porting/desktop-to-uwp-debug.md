@@ -4,22 +4,24 @@ Description: "Implementa y depura una aplicación para Plataforma universal de W
 Search.Product: eADQiWindows 10XVcnh
 title: Depurar aplicaciones convertidas con el puente de escritorio
 translationtype: Human Translation
-ms.sourcegitcommit: 8429e6e21319a03fc2a0260c68223437b9aed02e
-ms.openlocfilehash: 9dcc39c51e61b24c25bcbfa216c6e51b49bbfd3a
+ms.sourcegitcommit: dba00371b29b3179a6dc3bdd96a092437331e61a
+ms.openlocfilehash: 537ac8e83d5f54bf83ec0e05b71be354651000f2
 
 ---
 
-# Depurar aplicaciones convertidas con el puente de escritorio
+# <a name="debug-apps-converted-with-the-desktop-bridge"></a>Depurar aplicaciones convertidas con el puente de escritorio
 
 En este tema se proporciona información destinada a ayudarte a depurar correctamente tu aplicación y luego convertirla con el puente de escritorio a UWP. Tienes varias opciones para depurar la aplicación convertida.
 
-## Asociar al proceso
+## <a name="attach-to-process"></a>Asociar al proceso
 
 Cuando Microsoft Visual Studio se ejecuta "como administrador", los comandos *Iniciar depuración* e *Iniciar sin depurar* funcionarán para el proyecto de una aplicación convertida, pero la aplicación iniciada se ejecutará en un [nivel de integridad medio](https://msdn.microsoft.com/library/bb625963) (es decir, no tendrá privilegios elevados). Para otorgar privilegios de administrador a la aplicación iniciada, primero tienes que iniciar "como administrador" a través de un acceso directo o un icono. Una vez que la aplicación se ejecute desde una instancia de Microsoft Visual Studio "como administrador", invoca __Asociar al proceso__ y selecciona el proceso de la aplicación en el cuadro de diálogo.
 
-## Depuración con F5
+## <a name="f5-debug"></a>Depuración con F5
 
 Visual Studio admite ahora un nuevo proyecto de empaquetado. El nuevo proyecto permite copiar automáticamente las actualizaciones al compilar la aplicación en el paquete AppX creado desde el convertidor en el instalador de la aplicación. Tras configurar el proyecto de empaquetado, ahora también puedes usar F5 para depurar directamente en el paquete AppX. 
+
+>Nota: También puedes usar la opción de depurar un paquete Appx existente, con la opción Depurar -> Otros destinos de depuración -> Depurar paquete de aplicaciones instalado.
 
 Puedes empezar de este modo: 
 
@@ -29,7 +31,7 @@ Puedes empezar de este modo:
 
 ![alt](images/desktop-to-uwp/debug-1.png)
 
-3. Instalar e iniciar [Visual Studio "15" Preview 2](https://www.visualstudio.com/downloads/visual-studio-next-downloads-vs.aspx). 
+3. Instalar e iniciar [Visual Studio 2017 RC](https://www.visualstudio.com/downloads/#visual-studio-community-2017-rc). 
 
 4. Instalar el proyecto VSIX de empaquetado de escritorio a UWP desde la [Galería de Visual Studio](http://go.microsoft.com/fwlink/?LinkId=797871). 
 
@@ -73,7 +75,7 @@ Puedes empezar de este modo:
     <?xml version="1.0" encoding=utf-8"?>
     <Project ToolsVersion=14.0" xmlns="http://scehmas.microsoft.com/developer/msbuild/2003">
         <PropertyGroup>
-            <MyProjectOutputPath>C:\{path}</MyProjectOutputPath>
+            <MyProjectOutputPath>{relativepath}</MyProjectOutputPath>
         </PropertyGroup>
         <ItemGroup>
             <LayoutFile Include="$(MyProjectOutputPath)\ProjectTracker.exe">
@@ -94,7 +96,7 @@ Puedes empezar de este modo:
     <?xml version="1.0" encoding="utf-8"?>
     <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
         <PropertyGroup>
-            <MyProjectOutputPath>C:\Users\peterfar\Desktop\ProjectTracker\ProjectTracker\bin\DesktopUWP</MyProjectOutputPath>
+            <MyProjectOutputPath>..\ProjectTracker\bin\DesktopUWP</MyProjectOutputPath>
         </PropertyGroup>
     ```
 
@@ -158,13 +160,13 @@ También puedes usar la compilación condicional para habilitar rutas de código
 
 4.  Ahora puedes alternar el destino de compilación a DesktopUWP si quieres que la compilación esté destinada a la API de UWP que agregaste.
 
-## PLMDebug 
+## <a name="plmdebug"></a>PLMDebug 
 
 La opción Asociar a proceso y F5 de Visual Studio son útiles para depurar la aplicación mientras se ejecuta. Sin embargo, en algunos casos quizás necesites un control más preciso del proceso de depuración, incluida la posibilidad de depurar la aplicación antes de que se inicie. En estos escenarios más avanzados, usa [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx). Esta herramienta te permite depurar la aplicación convertida mediante el depurador de Windows y ofrece control total sobre el ciclo de vida de aplicación, lo que incluye la suspensión, la reanudación y la terminación. 
 
 PLMDebug se incluye en Windows SDK. Para obtener más información, consulta [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx). 
 
-## Ejecutar otro proceso dentro del contenedor de plena confianza 
+## <a name="run-another-process-inside-the-full-trust-container"></a>Ejecutar otro proceso dentro del contenedor de plena confianza 
 
 Puedes invocar procesos personalizados dentro del contenedor de un paquete de la aplicación especificada. Esto puede ser útil para los escenarios de prueba (por ejemplo, si tienes una herramienta de ejecución de pruebas personalizada y quieres probar la salida de la aplicación). Para ello, usa el cmdlet ```Invoke-CommandInDesktopPackage``` de PowerShell: 
 
@@ -175,6 +177,6 @@ Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

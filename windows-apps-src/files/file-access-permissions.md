@@ -1,21 +1,21 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: Permisos de acceso de archivos
 description: "Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, las aplicaciones también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades."
 translationtype: Human Translation
-ms.sourcegitcommit: ef8d0e7ad9063fa57a9db7c3cbdcb6846d3b1133
-ms.openlocfilehash: e58cdce7f803cd15b66371e3b03c4405cbdeb3ff
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: d6cb8bd32766157b1edf886621bdc605ca160db5
 
 ---
-# Permisos de acceso a archivos
+# <a name="file-access-permissions"></a>Permisos de acceso a archivos
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, las aplicaciones también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades.
 
-## Ubicaciones a las que pueden tener acceso todas las aplicaciones
+## <a name="the-locations-that-all-apps-can-access"></a>Ubicaciones a las que pueden tener acceso todas las aplicaciones
 
 Al crear una aplicación nueva, puedes obtener acceso a las siguientes ubicaciones del sistema de archivos de manera predeterminada:
 
@@ -98,7 +98,7 @@ Al crear una aplicación nueva, puedes obtener acceso a las siguientes ubicacion
 
     No se puede usar el selector de archivos para acceder a las carpetas local, móvil o temporal.
 
--   **Dispositivos extraíbles.** Igualmente, la aplicación puede obtener acceso a algunos de los archivos en los dispositivos conectados de manera predeterminada. Esto es una alternativa en caso de que la aplicación use la [extensión de reproducción automática](https://msdn.microsoft.com/library/windows/apps/xaml/hh464906.aspx#autoplay) para iniciarse automáticamente cuando los usuarios conecten al sistema un dispositivo, como una cámara o una unidadUSB. Los archivos a los que la aplicación puede acceder se limitan a los tipos de archivo específicos que se definan a través de declaraciones de asociación de tipo de archivo en el manifiesto de la aplicación.
+-   **Dispositivos extraíbles.** Igualmente, la aplicación puede obtener acceso a algunos de los archivos en los dispositivos conectados de manera predeterminada. Esto es una alternativa en caso de que la aplicación use la [extensión de reproducción automática](https://msdn.microsoft.com/library/windows/apps/xaml/hh464906.aspx#autoplay) para iniciarse automáticamente cuando los usuarios conecten al sistema un dispositivo, como una cámara o una unidad USB. Los archivos a los que la aplicación puede acceder se limitan a los tipos de archivo específicos que se definan a través de declaraciones de asociación de tipo de archivo en el manifiesto de la aplicación.
 
     Sobra decir que también puedes tener acceso a los archivos y carpetas de un dispositivo extraíble llamando al selector de archivos (mediante [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) y [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881)), y permitiendo que el usuario escoja los archivos y carpetas a los que la aplicación puede tener acceso. En [Abrir archivos y carpetas con un selector](quickstart-using-file-and-folder-pickers.md) encontrarás más información sobre el uso del selector de archivos.
 
@@ -106,7 +106,7 @@ Al crear una aplicación nueva, puedes obtener acceso a las siguientes ubicacion
 
      
 
-## Ubicaciones a las que las aplicaciones de la Tienda Windows pueden tener acceso
+## <a name="locations-windows-store-apps-can-access"></a>Ubicaciones a las que las aplicaciones de la Tienda Windows pueden tener acceso
 
 -   **Carpeta de descargas del usuario.** Es la carpeta donde se guardan de forma predeterminada los archivos que se descargan.
 
@@ -146,7 +146,7 @@ Al crear una aplicación nueva, puedes obtener acceso a las siguientes ubicacion
 
     Si creas un archivo o carpeta en la carpeta Descargas, te recomendamos que agregues dicho elemento a la propiedad [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457), para que así la aplicación pueda acceder a él sin problemas.
 
-## Acceder a más ubicaciones
+## <a name="accessing-additional-locations"></a>Acceder a más ubicaciones
 
 Además de a las ubicaciones predeterminadas, las aplicaciones pueden obtener acceso a archivos y carpetas adicionales mediante la declaración de funcionalidades en el manifiesto de la aplicación (consulta [Declaraciones de funcionalidades de aplicación](https://msdn.microsoft.com/library/windows/apps/mt270968)), o bien mediante la llamada a un selector de archivos para permitir que el usuario elija los archivos y carpetas a los que puede tener acceso la aplicación (consulta [Apertura de archivos y carpetas con un selector](quickstart-using-file-and-folder-pickers.md)).
 
@@ -165,6 +165,6 @@ En la siguiente tabla se incluyen otras ubicaciones a las que puedes tener acces
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,12 +4,12 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Usa la API de envío de la tienda Windows para crear y administrar mediante programación los envíos para las aplicaciones que estén registradas en tu cuenta del Centro de desarrollo de Windows mediante programación."
 title: "Creación y administración de envíos mediante el uso de servicios de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 03942eb9015487cfd5690e4b1933e4febd705971
-ms.openlocfilehash: 40855465fa2f9b1c32602b1b636761b608d88fc0
+ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
+ms.openlocfilehash: 1172be1072f0c539828a08655236be467c6c9fba
 
 ---
 
-# Creación y administración de envíos mediante el uso de servicios de la Tienda Windows
+# <a name="create-and-manage-submissions-using-windows-store-services"></a>Creación y administración de envíos mediante el uso de servicios de la Tienda Windows
 
 
 Usa la *API de envío de la Tienda de Windows* para consultar mediante programación y crear envíos de aplicaciones, complementos (también conocidos como productos desde la aplicación o IAP) y los paquetes piloto para tu cuenta del Centro de desarrollo de Windows o de tu organización. Esta API es útil si tu cuenta administra muchas aplicaciones o complementos, y quieres automatizar y optimizar el proceso de envío para estos activos. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas provenientes de la aplicación o el servicio.
@@ -21,23 +21,20 @@ Los siguientes pasos describen el proceso de principio a fin del uso de la API d
 4.  [Llamada a API de envío de la Tienda Windows](#call-the-windows-store-submission-api).
 
 
-
 <span id="not_supported" />
 >**Importante**
 
 > * Esta API puede usarse solo para las cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API. Este permiso se habilita para cuentas de desarrollador en fases, y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilita este permiso para tu cuenta.
 <br/><br/>
 > * Esta API no puede usarse con aplicaciones o complementos que utilizan determinadas funciones que se introdujeron en el panel del Centro de desarrollo en agosto de 2016, incluidos (entre otros) actualizaciones obligatorias de aplicaciones y complementos consumibles administrados por la Tienda. Si usas la API de envío de la Tienda Windows con una aplicación o complemento que usa una de estas funciones, la API devolverá un código de error 409. En este caso, debes usar el panel para administrar los envíos para la aplicación o el complemento.
-<br/><br/>
-> * Muy pronto, Microsoft cambiará el modelo de datos de precios para envíos de aplicación al Centro de desarrollo de Windows. Después de implementar este cambio, los recursos de **Precios** para los envíos de aplicación y de complemento ya no se admitirán, y no podrás obtener temporalmente el período de prueba, los precios y los datos de ventas de esos envíos con la API de envío de la Tienda Windows. Actualizaremos la API en el futuro para introducir una nueva forma de acceso mediante programación a información sobre precios para envíos de aplicación y de complemento. Para obtener más información, consulta el [Recurso de precio para envíos de aplicación](manage-app-submissions.md#pricing-object) y [Recurso de precio para envíos de complemento](manage-add-on-submissions.md#pricing-object).
 
 
 <span id="prerequisites" />
-## Paso 1: Completar requisitos previos para usar la API de envío de la Tienda Windows
+## <a name="step-1-complete-prerequisites-for-using-the-windows-store-submission-api"></a>Paso 1: Completar requisitos previos para usar la API de envío de la Tienda Windows
 
 Antes de empezar a escribir código para llamar a la API de envío de Tienda Windows, asegúrate de que has completado los siguientes requisitos previos.
 
-* Tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para el directorio. Si ya usas Office365 u otros servicios empresariales de Microsoft, ya tienes un directorio de AzureAD. De lo contrario, puedes [crear un nuevo Azure AD desde el Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) sin ningún coste adicional.
+* Tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](http://go.microsoft.com/fwlink/?LinkId=746654) para el directorio. Si ya usas Office 365 u otros servicios empresariales de Microsoft, ya tienes un directorio de Azure AD. De lo contrario, puedes [crear un nuevo Azure AD desde el Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) sin ningún coste adicional.
 
 * Debes [asociar una aplicación de Azure AD con tu cuenta del Centro de desarrollo de Windows](#associate-an-azure-ad-application-with-your-windows-dev-center-account) y obtener tu identificador de inquilino, identificador de cliente y la clave. Necesitas estos valores para obtener un token de acceso de Azure AD que usarás en llamadas a la API de envío de Tienda Windows.
 
@@ -54,13 +51,13 @@ Antes de empezar a escribir código para llamar a la API de envío de Tienda Win
   * Si vas a crear o actualizar un envío de complementos y debes incluir un icono, [prepara el icono](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon).
 
 <span id="associate-an-azure-ad-application-with-your-windows-dev-center-account" />
-### Asociación de una aplicación de Azure AD a tu cuenta del Centro de desarrollo de Windows
+### <a name="how-to-associate-an-azure-ad-application-with-your-windows-dev-center-account"></a>Asociación de una aplicación de Azure AD a tu cuenta del Centro de desarrollo de Windows
 
 Antes de poder usar la API de envío de la Tienda Windows, debes asociar una aplicación de Azure AD con tu cuenta del Centro de desarrollo, recuperar el identificador de inquilino y de cliente para la aplicación y generar una clave. La aplicación de Azure AD representa la aplicación o el servicio desde donde quieres originar la llamada a la API de envío de la Tienda Windows. Necesitas el identificador de inquilino, de cliente y la clave para obtener un token de acceso de Azure AD que se pasa a la API.
 
 >**Nota**&nbsp;&nbsp;Solo debes realizar esta tarea una vez. Una vez que tengas el identificador de inquilino, de cliente y la clave, puedes volver a usarlos cuando necesites crear un nuevo token de acceso de Azure AD.
 
-1.  En el Centro de desarrollo, ve a **Configuración de la cuenta**, haz clic en **Administrar usuarios** y asocia la cuenta del Centro de desarrollo de tu organización al directorio de AzureAD de tu organización. Para obtener instrucciones detalladas, consulta [Administración de usuarios de la cuenta](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
+1.  En el Centro de desarrollo, ve a **Configuración de la cuenta**, haz clic en **Administrar usuarios** y asocia la cuenta del Centro de desarrollo de tu organización al directorio de Azure AD de tu organización. Para obtener instrucciones detalladas, consulta [Administración de usuarios de la cuenta](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
 
 2.  En la página **Administración de usuarios**, haz clic en **Agregar aplicaciones de Azure AD**, agrega la aplicación de Azure AD que representa la aplicación o el servicio que usarás para acceder a los envíos de tu cuenta del Centro de desarrollo y asígnale el rol **Administrador**. Si esta aplicación ya existe en el directorio de Azure AD, puedes seleccionarla en la página **Agregar aplicaciones de Azure AD** para agregarla a tu cuenta del Centro de desarrollo. De lo contrario, puedes crear una nueva aplicación de Azure AD en la página **Adición de aplicaciones de Azure AD**. Para obtener más información, consulta [Adición y administración de aplicaciones de Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
@@ -69,7 +66,7 @@ Antes de poder usar la API de envío de la Tienda Windows, debes asociar una apl
 4. Haz clic en **Agregar nueva clave**. En la siguiente pantalla, copia el valor **Clave**. No podrás acceder a esta información de nuevo después de salir de la página. Para obtener más información, consulta la información sobre la administración de claves en [Adición y administración de aplicaciones de Azure AD](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
 <span id="obtain-an-azure-ad-access-token" />
-## Paso 2: Obtención de un token de acceso de Azure AD
+## <a name="step-2-obtain-an-azure-ad-access-token"></a>Paso 2: Obtención de un token de acceso de Azure AD
 
 Antes de llamar a cualquiera de los métodos en la API de envío de la Tienda Windows, primero debes obtener un token de acceso de Azure AD para pasarlo al encabezado **Autorización** de cada método en la API. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizar el token para que puedas continuar usándolo en llamadas adicionales a la API.
 
@@ -91,7 +88,7 @@ Para los parámetros *tenant\_id*, *client\_id* y *client\_secret*, especifica e
 Después de que el token de acceso expire, puedes actualizarlo siguiendo las instrucciones [aquí](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
 
 <span id="call-the-windows-store-submission-api">
-## Paso 3: Uso de la API de envío de la Tienda Windows
+## <a name="step-3-use-the-windows-store-submission-api"></a>Paso 3: Uso de la API de envío de la Tienda Windows
 
 Una vez que tengas un token de acceso de Azure AD, podrás llamar a métodos en la API de envío de la Tienda Windows. La API incluye muchos métodos que se agrupan en escenarios de aplicaciones, complementos y paquetes piloto. Para crear o actualizar los envíos, normalmente llamas a varios métodos en la API de envío de la Tienda Windows en un orden específico. Para obtener información sobre cada escenario y la sintaxis de cada método, consulta los artículos en la siguiente tabla.
 
@@ -105,7 +102,7 @@ Una vez que tengas un token de acceso de Azure AD, podrás llamar a métodos en 
 
 <span />
 
-## Ejemplos de código
+## <a name="code-examples"></a>Ejemplos de código
 
 Los siguientes artículos proporcionan ejemplos de código detallados que muestran cómo usar la API de envío de la Tienda Windows en varios lenguajes diferentes:
 
@@ -113,20 +110,20 @@ Los siguientes artículos proporcionan ejemplos de código detallados que muestr
 * [Ejemplos de código de Java](java-code-examples-for-the-windows-store-submission-api.md)
 * [Ejemplos de código de Python](python-code-examples-for-the-windows-store-submission-api.md)
 
-## Solución de problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 | Problema      | Resolución                                          |
 |---------------|---------------------------------------------|
 | Después de llamar a la API de envío de la Tienda Windows de PowerShell, los datos de respuesta para la API está dañados si se convierte en formato JSON en un objeto de PowerShell mediante la cmdlet [ConvertFrom Json](https://technet.microsoft.com/en-us/library/hh849898.aspx) y, a continuación, volver al formato JSON mediante la cmdlet [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx). |  De manera predeterminada, el parámetro de *-Profundidad* para la cmdlet [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx) se establece en 2 niveles de objetos, lo cual es demasiado superficial para la mayoría de los objetos JSON devueltos por la API de envío de la Tienda Windows. Cuando llames a la cmdlet [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx), establece el parámetro de *-Profundidad* en un número mayor, como 20. |
 
-## Ayuda adicional
+## <a name="additional-help"></a>Ayuda adicional
 
 Si tienes preguntas sobre la API de envío de la Tienda Windows o necesitas ayuda para administrar tus envíos con esta API, usa los siguientes recursos:
 
 * Pregunta en nuestros [foros](https://social.msdn.microsoft.com/Forums/windowsapps/en-us/home?forum=wpsubmit).
 * Visita nuestra [página de soporte técnico](https://developer.microsoft.com/windows/support) y solicita una de las opciones de soporte técnico asistido para el panel del Centro de desarrollo. Si se le pide que elija un tipo y categoría de problema, elige **Envío y certificación de aplicaciones** y **Enviar una aplicación**, respectivamente.  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Obtención de datos de la aplicación](get-app-data.md)
 * [Administración de envíos de aplicaciones](manage-app-submissions.md)
@@ -138,6 +135,6 @@ Si tienes preguntas sobre la API de envío de la Tienda Windows o necesitas ayud
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 
