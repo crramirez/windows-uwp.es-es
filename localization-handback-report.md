@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\input-and-devices\designing-for-tv.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ee0a2f5a34cbbef198a9012d0425bb84e65f3b33?path=windows-apps-src%2Finput-and-devices%2Fdesigning-for-tv.md&_a=contents) | InSyncHandedBackSuccess | [Details](#de76a3c6d4949b9203df79855e1748a81d76ca644356)
 
 ## Item Details
-##### <a name='de76a3c6d4949b9203df79855e1748a81d76ca644356'></a> Source: [windows-apps-src\input-and-devices\designing-for-tv.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ee0a2f5a34cbbef198a9012d0425bb84e65f3b33?path=windows-apps-src%2Finput-and-devices%2Fdesigning-for-tv.md&_a=contents)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\input-and-devices\designing-for-tv.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/d3cf19ec5c35b8739666cbd204720770c8674a3f?path=windows-apps-src%2Finput-and-devices%2Fdesigning-for-tv.md&_a=contents)
-* Handoff File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/56810a60c7bdc0f59d6b6a1236509053e63cd77c?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fdesigning-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.es-es.xlf&_a=contents)
-* Handoff Datetime: 2016-12-02 01:22:34
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/d5e5392cc77c639e60bcbc2f66d84a6c5be3104f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fdesigning-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.es-es.xlf&_a=contents)
-* Handback Datetime: 2016-12-14 16:14:30
-* Bilingual File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/d9239e7d5ec321a83784521c43de5713a1b029bb?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fdesigning-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.es-es.xlf&_a=contents)
-* Bilingual Datetime: 2016-12-14 14:22:57
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
