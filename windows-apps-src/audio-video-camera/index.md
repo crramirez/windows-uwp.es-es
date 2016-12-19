@@ -4,14 +4,14 @@ ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
 description: "En esta sección se ofrece información sobre la creación de aplicaciones para la Plataforma universal de Windows (UWP) para capturar, reproducir o editar fotos, vídeos o audio."
 title: "Audio, vídeo y cámara"
 translationtype: Human Translation
-ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
-ms.openlocfilehash: 6e67f57fbc00e596bb07cc37f2c9f762a5c9f557
+ms.sourcegitcommit: 77f47bce2a4be3f7c5ee3d320ff6c68e8c7ce6b0
+ms.openlocfilehash: d1aad0800bfe4982a316aa5da719db005b687fa1
 
 ---
 
-# Audio, vídeo y cámara
+# <a name="audio-video-and-camera"></a>Audio, vídeo y cámara
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En esta sección se ofrece información sobre la creación de aplicaciones para la Plataforma universal de Windows (UWP) para capturar, reproducir o editar fotos, vídeos o audio.
  
@@ -22,6 +22,7 @@ En esta sección se ofrece información sobre la creación de aplicaciones para 
 | [Detectar rostros en imágenes o vídeos](detect-and-track-faces-in-an-image.md) | Muestra cómo usar la clase [FaceTracker](https://msdn.microsoft.com/library/windows/apps/dn974150) para realizar el seguimiento de caras en el tiempo en una secuencia de fotogramas de vídeo. |
 | [Composiciones y edición multimedia](media-compositions-and-editing.md) | Muestra cómo usar las API en el espacio de nombres [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) para desarrollar rápidamente aplicaciones que permitan a los usuarios crear composiciones multimedia a partir de archivos de origen de audio y vídeo. |
 | [Efectos de vídeo personalizados](custom-video-effects.md) | Describe cómo crear un componente de Windows Runtime que implemente la interfaz **IBasicVideoEffect** para permitir crear efectos personalizados para las secuencias de vídeo. |
+| [Efectos de audio personalizados](custom-audio-effects.md) | Describe cómo crear un componente de Windows Runtime que implemente la interfaz **IBasicAudiooEffect** para permitir crear efectos personalizados para las secuencias de audio. |
 | [Crear, editar y guardar imágenes de mapa de bits](imaging.md) | Explica cómo cargar y guardar archivos de imagen mediante el objeto [SoftwareBitmap](https://msdn.microsoft.com/library/windows/apps/dn887358) para representar imágenes de mapa de bits.  |
 | [Propiedades de información de dispositivo de audio](audio-device-information-properties.md)  | Enumera las propiedades de información de dispositivos relacionadas con dispositivos de audio. |
 | [Transcodificar archivos multimedia](transcode-media-files.md) | Muestra cómo usar las API [Windows.Media.Transcoding](https://msdn.microsoft.com/library/windows/apps/br207105) para transcodificar archivos de vídeo de un formato a otro. |
@@ -33,7 +34,7 @@ En esta sección se ofrece información sobre la creación de aplicaciones para 
 | [Códecs admitidos](supported-codecs.md) | Enumera la compatibilidad con formatos y códecs de audio, vídeo e imagen para aplicaciones para UWP. |
 
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 - [Desarrollar aplicaciones para UWP](https://developer.microsoft.com/en-us/windows/develop)
 
  
@@ -48,6 +49,6 @@ En esta sección se ofrece información sobre la creación de aplicaciones para 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

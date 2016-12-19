@@ -1,20 +1,20 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Convertir trazos de lápiz en texto mediante el reconocimiento de escritura a mano, o en formas mediante el reconocimiento personalizado."
+Description: "Conversión de trazos de lápiz en texto mediante el reconocimiento de escritura a mano o en formas mediante el reconocimiento personalizado"
 title: Reconocimiento de trazos de Windows Ink como texto
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
-keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, handwriting recognition
+keywords: "Windows Ink, entrada de lápiz de Windows, DirectInk, InkPresenter, InkCanvas, reconocimiento de escritura a mano"
 translationtype: Human Translation
-ms.sourcegitcommit: dfb790980a8016da0ed9a080d7cf56b5a8a784ff
-ms.openlocfilehash: 26dc8910c779dc46d19be75abd49c20b750a9843
+ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
+ms.openlocfilehash: c402843cce752a54d8ff7301d892ef8014350a07
 
 ---
 
-# Reconocimiento de trazos de Windows Ink como texto
+# <a name="recognize-windows-ink-strokes-as-text"></a>Reconocimiento de trazos de Windows Ink como texto
 
-Conversión de trazos de tinta en texto mediante el soporte de reconocimiento de escritura a mano en Windows Ink.
+Conversión de trazos de lápiz en texto mediante el soporte de reconocimiento de escritura a mano en Windows Ink.
 
 **API importantes**
 
@@ -26,7 +26,7 @@ El reconocimiento de escritura a mano está integrado en la plataforma de Window
 
 Para todos los ejemplos que aquí se ofrecen, agrega las referencias de espacio de nombres necesarias para la funcionalidad de entrada de lápiz. Se incluye "Windows.UI.Input.Inking".
 
-## Reconocimiento de escritura a mano básico
+## <a name="basic-handwriting-recognition"></a>Reconocimiento de escritura a mano básico
 
 
 Aquí se muestra cómo usar el motor de reconocimiento de escritura a mano, asociado con el paquete de idioma instalado de manera predeterminada, para interpretar un conjunto de trazos en un [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
@@ -203,7 +203,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## Reconocimiento internacional
+## <a name="international-recognition"></a>Reconocimiento internacional
 
 
 Se puede usar un completo subconjunto de idiomas admitidos por Windows para el reconocimiento de escritura a mano.
@@ -448,7 +448,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## Reconocimiento de escritura a mano dinámico
+## <a name="dynamic-handwriting-recognition"></a>Reconocimiento de escritura a mano dinámico
 
 
 Los dos ejemplos anteriores requieren que el usuario presione un botón para iniciar el reconocimiento. La aplicación también puede realizar el reconocimiento dinámico mediante la entrada de trazos combinada con una función de temporización básica.
@@ -660,7 +660,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 * [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md)
 
@@ -668,12 +668,14 @@ string str = "Recognition result\n";
 * [Muestra de entrada de lápiz](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Muestra de entrada de lápiz simple](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [Muestra de entrada de lápiz compleja](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Muestra de libro para colorear](https://aka.ms/cpubsample-coloringbook)
+* [Muestra de notas familiares](https://aka.ms/cpubsample-familynotessample)
+
+
  
 
- 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

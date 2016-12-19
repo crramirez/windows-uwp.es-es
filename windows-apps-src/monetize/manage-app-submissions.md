@@ -4,19 +4,17 @@ ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: "Usa estos métodos en la API de envío de la Tienda Windows para administrar envíos para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows."
 title: "Administrar envíos de aplicaciones con la API de envío de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 9b76a11adfab838b21713cb384cdf31eada3286e
-ms.openlocfilehash: 49d60048a0dd5dae3e80abb9fd4e21b8cf7b417e
+ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
+ms.openlocfilehash: 5c19a05f51a14d9df38e64aac3b741e916fc0524
 
 ---
 
-# Administrar envíos de aplicaciones con la API de envío de la Tienda Windows
+# <a name="manage-app-submissions-using-the-windows-store-submission-api"></a>Administrar envíos de aplicaciones con la API de envío de la Tienda Windows
 
 
 Usa los métodos siguientes en la API de envío de la Tienda Windows para administrar envíos para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
->**Nota:**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
-
->**Importante:**&nbsp;&nbsp;muy pronto, Microsoft cambiará el modelo de datos de precios para envíos de aplicación al Centro de desarrollo de Windows. Después de implementar este cambio, el recurso de **precios** ya no se admitirá y no podrás obtener ni modificar temporalmente el periodo de prueba, los precios y los datos de ventas para los envíos de aplicación con la API de envío de la Tienda Windows. Actualizaremos la API en el futuro para introducir una nueva forma de acceso mediante programación a información sobre precios para envíos de aplicación. Para obtener más información, consulta la sección [Recurso de precios](#pricing-object).
+>**Nota**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
 
 | Método        | URI    | Descripción                                                                 |
@@ -33,7 +31,7 @@ Usa los métodos siguientes en la API de envío de la Tienda Windows para admini
 | POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout``` | Finaliza el lanzamiento gradual de un envío de aplicación. Para obtener más información, consulta [este artículo](finalize-the-package-rollout-for-an-app-submission.md). |
 
 <span id="create-an-app-submission">
-## Crear un envío de aplicación
+## <a name="create-an-app-submission"></a>Crear un envío de aplicación
 
 Para crear un envío de aplicación, sigue este proceso.
 
@@ -90,7 +88,7 @@ Para crear un envío de aplicación, sigue este proceso.
 7. Después de completarse correctamente la confirmación, el envío se remite a la Tienda para su ingesta. Para continuar con la supervisión del progreso del envío, puedes usar el método anterior o visitar el panel del Centro de desarrollo.
 
 <span id="manage-gradual-package-rollout">
-## Administrar un lanzamiento de paquete gradual para un envío de aplicación
+## <a name="manage-a-gradual-package-rollout-for-an-app-submission"></a>Administrar un lanzamiento de paquete gradual para un envío de aplicación
 
 Puedes lanzar gradualmente los paquetes actualizados de un envío de aplicación para un porcentaje de los clientes de tu aplicación en Windows 10. Esto te permite supervisar los comentarios y los datos analíticos de los paquetes específicos para asegurarte de que estás seguro sobre la actualización antes de hacer un lanzamiento más amplio. Puedes cambiar el porcentaje de lanzamiento (o detener la actualización) para un envío publicado sin tener que crear un nuevo envío. Para obtener más detalles, incluidas instrucciones sobre cómo habilitar y administrar un lanzamiento de paquete gradual en el panel del Centro de desarrollo, consulta [este artículo](../publish/gradual-package-rollout.md).
 
@@ -134,12 +132,12 @@ También puedes habilitar y administrar un lanzamiento de paquete gradual median
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout
   ```
 
-## Recursos
+## <a name="resources"></a>Recursos
 
 Estos métodos usan los siguientes recursos para dar formato a los datos.
 
 <span id="app-submission-object" />
-### Envío de aplicación
+### <a name="app-submission"></a>Envío de aplicación
 
 Este recurso representa un envío de una aplicación. En el siguiente ejemplo se muestra el formato de este recurso.
 
@@ -251,10 +249,10 @@ Este recurso tiene los siguientes valores.
 | applicationCategory           | string  |   Cadena que especifica la [categoría o subcategoría](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) de la aplicación. Las categorías y subcategorías se combinan en una cadena simple mediante el guion bajo "_" como, por ejemplo, **BooksAndReference_EReader**.      |  
 | pricing           |  object  | Objeto que contiene la información del precio de la aplicación. Para obtener más información, consulta la sección [Recurso Precios](#pricing-object) a continuación.       |   
 | visibility           |  string  |  Visibilidad de la app. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
-| targetPublishMode           | string  | Modo de publicación del envío. Este puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |  
 | listings           |   object  |  Diccionario de pares de claves y valores en el cual cada clave hace referencia al código de un país y cada valor hace referencia a un objeto de [recurso Descripción](#listing-object) que contiene la descripción de la aplicación.       |   
-| hardwarePreferences           |  array  |   Matriz de cadenas que definen la [las preferencias de hardware](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) de la aplicación. Estas preferencias pueden ser uno de los valores siguientes: <ul><li>Función táctil</li><li>Teclado</li><li>Mouse</li><li>Cámara</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonía</li></ul>     |   
+| hardwarePreferences           |  array  |   Matriz de cadenas que definen las [preferencias de hardware](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) de la aplicación. Puede ser uno de los valores siguientes: <ul><li>Función táctil</li><li>Teclado</li><li>Mouse</li><li>Cámara</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonía</li></ul>     |   
 | automaticBackupEnabled           |  booleano  |   Indica si Windows puede incluir datos de la aplicación en copias de seguridad automáticas de OneDrive. Para obtener más información, consulta [App declarations (Declaraciones de las aplicaciones)](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
 | canInstallOnRemovableMedia           |  booleano  |   Indica si los clientes pueden instalar la aplicación en el almacenamiento extraíble. Para obtener más información, consulta [App declarations (Declaraciones de las aplicaciones)](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | isGameDvrEnabled           |  booleano |   Indica si se habilita game DVR en la aplicación.    |   
@@ -273,7 +271,7 @@ Este recurso tiene los siguientes valores.
 
 
 <span id="listing-object" />
-### Descripción
+### <a name="listing"></a>Descripción
 
 Este recurso contiene la información de descripción de una aplicación. Este recurso tiene los siguientes valores.
 
@@ -283,7 +281,7 @@ Este recurso contiene la información de descripción de una aplicación. Este r
 |  platformOverrides               | object |   Un diccionario de pares de clave y valor, donde cada clave es una cadena que identifica una plataforma para la cual se va a reemplazar la información de descripción y cada valor es un objeto de [descripción de base](#base-listing-object) (que contiene solo los valores de la descripción del título) que especifica la información de descripción que se va reemplazar de la plataforma especificada. Las claves pueden tener los siguientes valores: <ul><li>Unknown</li><li>Windows80</li><li>Windows81</li><li>WindowsPhone71</li><li>WindowsPhone80</li><li>WindowsPhone81</li></ul>     |      |     
 
 <span id="base-listing-object" />
-### Descripción de base
+### <a name="base-listing"></a>Descripción de base
 
 Este recurso contiene la información de descripción de base de una aplicación. Este recurso tiene los siguientes valores.
 
@@ -304,7 +302,7 @@ Este recurso contiene la información de descripción de base de una aplicación
 
 
 <span id="image-object" />
-### Image
+### <a name="image"></a>Image
 
 Este recurso contiene datos de imagen e icono para una descripción de la aplicación. Para obtener más información acerca de las imágenes y los iconos para la descripción, consulta [Imágenes y capturas de pantalla de aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Este recurso tiene los siguientes valores.
 
@@ -318,33 +316,29 @@ Este recurso contiene datos de imagen e icono para una descripción de la aplica
 
 
 <span id="pricing-object" />
-### Precios
+### <a name="pricing"></a>Precios
 
-Este recurso contiene información sobre precios de la aplicación.
-
->**Importante:**&nbsp;&nbsp;muy pronto, Microsoft cambiará el modelo de datos de precios para envíos de aplicación al Centro de desarrollo de Windows. Después de implementar este cambio, el recurso de **precios** ya no se admitirá y no podrás obtener ni modificar temporalmente el periodo de prueba, los precios y los datos de ventas para los envíos de aplicación con la API de envío de la Tienda Windows. Observarás los siguientes cambios de comportamiento:
-
-   > * Después de llamar al [método GET para obtener un envío de aplicación](get-an-app-submission.md), el recurso de **precios** estará vacío. Puedes seguir utilizando el panel del Centro de desarrollo para obtener los datos de precios para el envío de aplicación.
-   > * Cuando se llama al [método PUT para actualizar un envío de aplicación](update-an-app-submission.md), la información del recurso de **precios** se omitirá. Puedes seguir utilizando el panel del Centro de desarrollo para modificar los datos de precios para el envío de aplicación.
-
-> Próximamente, actualizaremos la API de envío de la Tienda Windows para introducir una nueva forma de obtener y actualizar información de precios para envíos de aplicación mediante programación.
-
-Este recurso tiene los siguientes valores.
+Este recurso contiene información sobre precios de la aplicación. Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
 |-----------------|---------|------|
 |  trialPeriod               |    string     |  Cadena que especifica el período de prueba de la aplicación. Puede ser uno de los valores siguientes: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
-|  marketSpecificPricings               |    object     |  Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados de la aplicación en mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Los elementos de este diccionario reemplazan el precio base especificado por el valor *priceId* para el mercado especificado.      |     
-|  sales               |   array      |  Matriz de objetos que contienen información de ventas de la aplicación. Para obtener más información, consulta la sección [Venta](#sale-object) a continuación.    |     
+|  marketSpecificPricings               |    object     |  Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados de la aplicación en mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Los elementos de este diccionario reemplazan el precio base especificado por el valor de *priceId* para el mercado especificado.      |     
+|  sales               |   matriz      |  **En desuso**. Una matriz de objetos que contienen información de ventas de la aplicación. Para obtener más información, consulta la sección [Venta](#sale-object) a continuación.    |     
 |  priceId               |   string      |  [Franja de precios](#price-tiers) que especifica el [precio base](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) de la aplicación.   |
 
 
 <span id="sale-object" />
-### Venta
+### <a name="sale"></a>Sale
 
 Este recurso contiene información de venta de una aplicación.
 
->**Importante:**&nbsp;&nbsp;muy pronto, Microsoft cambiará el modelo de datos de precios para envíos de aplicación al Centro de desarrollo de Windows. Después de implementar este cambio, el recurso de **venta** ya no se admitirá y temporalmente no podrás obtener ni modificar datos de ventas y precios para los envíos de aplicación con la API de envío de la Tienda Windows. Actualizaremos la API en el futuro para introducir una nueva forma de acceso mediante programación a información sobre ventas para envíos de aplicación. Para obtener más información, consulta la sección [Recurso de precios](#pricing-object).
+>**Importante:**&nbsp;&nbsp;El recurso **Sale** ya no se admite, y actualmente no se puede obtener ni modificar los datos de ventas del envío de una aplicación mediante la API de envío de la Tienda Windows:
+
+   > * Después de llamar al [método GET para obtener un envío de aplicación](get-an-app-submission.md), el valor de *sales* estará vacío. Puedes seguir utilizando el panel del Centro de desarrollo para obtener los datos de ventas referentes al envío de la aplicación.
+   > * Cuando se llama al [método PUT para actualizar un envío de aplicación](update-an-app-submission.md), la información del valor de *sales* se omite. Puedes seguir utilizando el panel del Centro de desarrollo para modificar los datos de ventas referentes al envío de la aplicación.
+
+> En el futuro, actualizaremos la API de envío de la Tienda Windows para incorporar una nueva forma de acceder mediante programación a la información de ventas de los envíos de aplicaciones.
 
 Este recurso tiene los siguientes valores.
 
@@ -358,7 +352,7 @@ Este recurso tiene los siguientes valores.
 
 
 <span id="status-details-object" />
-### Detalles de estado
+### <a name="status-details"></a>Detalles de estado
 
 Este recurso contiene detalles adicionales sobre el estado de un envío. Este recurso tiene los siguientes valores.
 
@@ -370,7 +364,7 @@ Este recurso contiene detalles adicionales sobre el estado de un envío. Este re
 
 
 <span id="status-detail-object" />
-### Detalle de estado
+### <a name="status-detail"></a>Detalle de estado
 
 Este recurso contiene información adicional acerca de las advertencias o los errores relacionados de un envío. Este recurso tiene los siguientes valores.
 
@@ -381,7 +375,7 @@ Este recurso contiene información adicional acerca de las advertencias o los er
 
 
 <span id="application-package-object" />
-### Paquetes de la aplicación
+### <a name="application-package"></a>Paquetes de la aplicación
 
 Este recurso contiene detalles sobre un paquete de aplicación para el envío. En el siguiente ejemplo se muestra el formato de este recurso.
 
@@ -432,7 +426,7 @@ Este recurso tiene los siguientes valores.
 <span/>
 
 <span id="certification-report-object" />
-### Informe de certificación
+### <a name="certification-report"></a>Informe de certificación
 
 Este recurso proporciona acceso a los datos del informe de certificación de un envío. Este recurso tiene los siguientes valores.
 
@@ -443,7 +437,7 @@ Este recurso proporciona acceso a los datos del informe de certificación de un 
 
 
 <span id="package-delivery-options-object" />
-### Objeto de opciones de entrega de paquete
+### <a name="package-delivery-options-object"></a>Objeto de opciones de entrega de paquete
 
 Este recurso contiene ajustes de lanzamiento de paquete gradual y de actualización obligatoria para el envío. En el siguiente ejemplo se muestra el formato de este recurso.
 
@@ -471,7 +465,7 @@ Este recurso tiene los siguientes valores.
 | mandatoryUpdateEffectiveDate    |  fecha   |  La fecha y la hora en que los paquetes de este envío se convierten en obligatorios, en formato ISO 8601 y zona horaria UTC.   |        
 
 <span id="package-rollout-object" />
-### Objeto de lanzamiento de paquete
+### <a name="package-rollout-object"></a>Objeto de lanzamiento de paquete
 
 Este recurso contiene la [configuración de lanzamiento de paquete](#manage-gradual-package-rollout) gradual para el envío. Este recurso tiene los siguientes valores.
 
@@ -484,13 +478,13 @@ Este recurso contiene la [configuración de lanzamiento de paquete](#manage-grad
 
 <span/>
 
-## Enumeraciones
+## <a name="enums"></a>Enumeraciones
 
 Estos métodos usan las enumeraciones siguientes.
 
 
 <span id="price-tiers" />
-### Franjas de precios
+### <a name="price-tiers"></a>Franjas de precios
 
 Los valores siguientes representan las franjas de precios disponibles para un envío de aplicación.
 
@@ -503,7 +497,7 @@ Los valores siguientes representan las franjas de precios disponibles para un en
 
 
 <span id="enterprise-licensing" />
-### Valores de licencia de empresa
+### <a name="enterprise-licensing-values"></a>Valores de licencia de empresa
 
 Los valores siguientes representan el comportamiento de las licencias de empresa para la aplicación. Para obtener más información acerca de estas opciones, consulta [Opciones de licencia organizativas](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing).
 
@@ -515,7 +509,7 @@ Los valores siguientes representan el comportamiento de las licencias de empresa
 
 
 <span id="submission-status-code" />
-### Código de estado del envío
+### <a name="submission-status-code"></a>Código de estado del envío
 
 Los valores siguientes representan el código de estado de un envío.
 
@@ -538,7 +532,7 @@ Los valores siguientes representan el código de estado de un envío.
 
 <span/>
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtener datos de aplicación mediante la API de envío de la Tienda Windows](get-app-data.md)
@@ -546,6 +540,6 @@ Los valores siguientes representan el código de estado de un envío.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

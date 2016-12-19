@@ -1,26 +1,26 @@
 ---
-author: msatranjr
+author: laurenhughes
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: Instalar aplicaciones con la herramienta WinAppDeployCmd.exe
-description: "Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para la Plataforma universal de Windows (UWP) desde un equipo con Windows10 a cualquier dispositivo con Windows10."
+description: "Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para la Plataforma universal de Windows (UWP) desde un equipo con Windows 10 a cualquier dispositivo con Windows 10."
 translationtype: Human Translation
-ms.sourcegitcommit: 7b04e2e9980da4bbdd6d9d10fc493eb05e21afc4
-ms.openlocfilehash: 87af49dc04a94bac8896b33a1d7e8b4993b0f2c3
+ms.sourcegitcommit: f467bd83c2f700d94a232c99a06f86f1f1b1a0ac
+ms.openlocfilehash: 37028e1e119f27a8c82bc024e52f939a89243244
 
 ---
-# Instalar aplicaciones con la herramienta WinAppDeployCmd.exe
+# <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Instalar aplicaciones con la herramienta WinAppDeployCmd.exe
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para la Plataforma universal de Windows (UWP) desde un equipo con Windows10 a cualquier dispositivo con Windows10. Puedes usar esta herramienta para implementar un paquete .appx si el dispositivo con Windows10 está conectado mediante USB o disponible en la misma subred sin necesidad de Microsoft Visual Studio ni de la solución para dicha aplicación. También puedes implementar la aplicación sin empaquetarla primero en un equipo remoto o en Xbox One. Este artículo describe cómo instalar aplicaciones para UWP con esta herramienta.
+Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para la Plataforma universal de Windows (UWP) desde un equipo con Windows 10 a cualquier dispositivo con Windows 10. Puedes usar esta herramienta para implementar un paquete .appx si el dispositivo con Windows 10 está conectado mediante USB o disponible en la misma subred sin necesidad de Microsoft Visual Studio ni de la solución para dicha aplicación. También puedes implementar la aplicación sin empaquetarla primero en un equipo remoto o en Xbox One. Este artículo describe cómo instalar aplicaciones para UWP con esta herramienta.
 
-Solo necesitas el SDK de Windows 10 instalado para ejecutar la herramienta WinAppDeployCmd desde un símbolo del sistema o un archivo de script. Cuando se instala una aplicación con WinAppDeployCmd.exe, esta usa el archivo .appx o AppxManifest (para los archivos sueltos) para transferir localmente la aplicación a un dispositivo con Windows10. Este comando no instala el certificado necesario para la aplicación. Para ejecutar la aplicación, el dispositivo con Windows10 debe estar en modo de desarrollador o tener el certificado instalado.
+Solo necesitas el SDK de Windows 10 instalado para ejecutar la herramienta WinAppDeployCmd desde un símbolo del sistema o un archivo de script. Cuando se instala una aplicación con WinAppDeployCmd.exe, esta usa el archivo .appx o AppxManifest (para los archivos sueltos) para transferir localmente la aplicación a un dispositivo con Windows 10. Este comando no instala el certificado necesario para la aplicación. Para ejecutar la aplicación, el dispositivo con Windows 10 debe estar en modo de desarrollador o tener el certificado instalado.
 
 Para implementar en dispositivos móviles, primero debes crear un paquete. Puedes obtener más información [aquí](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-La herramienta **WinAppDeployCmd.exe** se encuentra aquí en tu equipo con Windows10: **C:\\Archivos de programa (x86)\\Windows Kits\\10\\bin\\x86\\WinAppDeployCmd.exe** (en función de la ruta de acceso de instalación del SDK). En primer lugar, conecta el dispositivo con Windows10 a la misma subred o directamente al equipo con Windows10 mediante una conexión USB. A continuación, usa la siguiente sintaxis y los ejemplos de este comando que se incluyen más adelante en este artículo para implementar la aplicación para UWP:
+La herramienta **WinAppDeployCmd.exe** se encuentra aquí en tu equipo con Windows 10: **C:\\Archivos de programa (x86)\\Windows Kits\\10\\bin\\x86\\WinAppDeployCmd.exe** (en función de la ruta de acceso de instalación del SDK). En primer lugar, conecta el dispositivo con Windows 10 a la misma subred o directamente al equipo con Windows 10 mediante una conexión USB. A continuación, usa la siguiente sintaxis y los ejemplos de este comando que se incluyen más adelante en este artículo para implementar la aplicación para UWP:
 
-## Opciones y sintaxis de WinAppDeployCmd
+## <a name="winappdeploycmd-syntax-and-options"></a>Opciones y sintaxis de WinAppDeployCmd
 
 Esta es la sintaxis posible que puedes usar para **WinAppDeployCmd.exe**
 
@@ -99,7 +99,7 @@ La siguiente tabla describe las opciones de **WinAppDeployCmd.exe**.
 | &lt;remotedeploydir&gt;| El directorio del dispositivo relativo a la ubicación de implementación                      |
 
  
-## Ejemplos de WinAppDeployCmd.exe
+## <a name="winappdeploycmdexe-examples"></a>Ejemplos de WinAppDeployCmd.exe
 
 Estos son algunos ejemplos de implementación desde la línea de comandos mediante la sintaxis de **WinAppDeployCmd.exe**.
 
@@ -109,19 +109,19 @@ Muestra los dispositivos que están disponibles para la implementación. El coma
 WinAppDeployCmd devices 3
 ```
 
-Instala la aplicación desde el paquete MyApp.appx que se encuentra en el directorio Descargas de tu PC en un dispositivo con Windows10 con la dirección IP 192.168.0.1 y el PIN A1B2C3 para establecer una conexión con el dispositivo
+Instala la aplicación desde el paquete MyApp.appx que se encuentra en el directorio Descargas de tu PC en un dispositivo con Windows 10 con la dirección IP 192.168.0.1 y el PIN A1B2C3 para establecer una conexión con el dispositivo
 
 ``` syntax
 WinAppDeployCmd install -file "Downloads\MyApp.appx" -ip 192.168.0.1 -pin A1B2C3
 ```
 
-Desinstala el paquete especificado (basado en su nombre completo) de un dispositivo con Windows10 y la dirección IP 192.168.0.1. Puedes usar el comando list para ver los nombres completos de todos los paquetes que están instalados en un dispositivo.
+Desinstala el paquete especificado (basado en su nombre completo) de un dispositivo con Windows 10 y la dirección IP 192.168.0.1. Puedes usar el comando list para ver los nombres completos de todos los paquetes que están instalados en un dispositivo.
 
 ``` syntax
 WinAppDeployCmd uninstall -package Company.MyApp_1.0.0.1_x64__qwertyuiop -ip 192.168.0.1
 ```
 
-Actualiza la aplicación que ya está instalada en el dispositivo con Windows10 y la dirección IP 192.168.0.1 con el paquete .appx especificado.
+Actualiza la aplicación que ya está instalada en el dispositivo con Windows 10 y la dirección IP 192.168.0.1 con el paquete .appx especificado.
 
 ``` syntax
 WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1
@@ -139,7 +139,7 @@ Registra la aplicación que está en el directorio app1_F5 en la ruta de acceso 
 WinAppDeployCmd registerfiles -file app1_F5 -ip 192.168.0.1
 ```
 
-## Uso de WinAppDeployCmd para configurar la implementación de Run from PC en Xbox One
+## <a name="using-winappdeploycmd-to-set-up-run-from-pc-deployment-on-xbox-one"></a>Uso de WinAppDeployCmd para configurar la implementación de Run from PC en Xbox One
 
 Run from PC permite implementar una aplicación para UWP en una consola Xbox One sin copiar los archivos binarios; en su lugar, los archivos binarios se hospedan en un recurso compartido de red en la misma red que la consola Xbox.  Para hacerlo, necesitas una consola Xbox One desbloqueada por el desarrollador y una aplicación para UWP de archivos sueltos en una unidad de red a la que pueda acceder la consola Xbox.
 
@@ -152,6 +152,6 @@ ex. WinAppDeployCmd register files -ip 192.168.0.1 -remotedeploydir \\driveA\myA
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

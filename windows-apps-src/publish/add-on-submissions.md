@@ -4,12 +4,12 @@ Description: "Los complementos se publican a través del panel del Centro de des
 title: "Envíos de complementos"
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 translationtype: Human Translation
-ms.sourcegitcommit: b0d877e46ba6958bfc61dd87687c30e91b6cd937
-ms.openlocfilehash: 7b44dabfd4badcad795e38a97590d98e1601092d
+ms.sourcegitcommit: 0f2b48f646423f299999a61d78dd956a78a09a8e
+ms.openlocfilehash: 1e7c02621da528c4635ab47bd7c2a898f2441da1
 
 ---
 
-# Envíos de complementos
+# <a name="add-on-submissions"></a>Envíos de complementos
 
 Los complementos (a los que a veces se denominan productos desde la aplicación) son elementos complementarios para la aplicación que los clientes pueden adquirir. Un complemento puede ser una nueva función complementaria divertida, un nuevo nivel de juego o cualquier cosa que creas que puede mantener la relación de los usuarios con la aplicación. Los complementos no solo son una manera fantástica de ganar dinero, sino que promueven la participación y la interacción del cliente.
 
@@ -19,11 +19,11 @@ El primer paso en el proceso de envío de un complemento es crear dicho compleme
 
 > **Nota** En esta sección de la documentación se describe cómo enviar complementos en el panel del Centro de desarrollo. Como alternativa, puedes usar la [API de envío de la Tienda Windows](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de complementos.
 
-## Lista de comprobación para el envío de un complemento
+## <a name="checklist-for-submitting-an-add-on"></a>Lista de comprobación para el envío de un complemento
 
 A continuación verás una lista de la información que se proporciona al crear el envío de un complemento. A continuación se indican los elementos que debes proporcionar. Algunos de ellos son opcionales o tienen valores predeterminados ya proporcionados que puedes cambiar según lo desees.
 
-### Crear la página de un nuevo complemento
+### <a name="create-a-new-add-on-page"></a>Crear la página de un nuevo complemento
 | Nombre del campo                    | Notas                            |
 |-------------------------------|----------------------------------|
 | [**Tipo de producto**](set-your-add-on-product-id.md#product-type)      | Obligatorio. Si es **Duradero**, se necesita una **Duración del producto**. |  
@@ -31,7 +31,7 @@ A continuación verás una lista de la información que se proporciona al crear 
 
 <span/>
 
-### Página Propiedades
+### <a name="properties-page"></a>Página Propiedades
 | Nombre del campo                    | Notas                              |   
 |-------------------------------|------------------------------------|
 | [**Duración del producto**](enter-add-on-properties.md#product-lifetime)  | Es obligatorio si es el tipo de producto **Duradero**. No se aplica a otros tipos de producto. |
@@ -42,7 +42,7 @@ A continuación verás una lista de la información que se proporciona al crear 
 
 <span/>
 
-### Página Precios y disponibilidad
+### <a name="pricing-and-availability-page"></a>Página Precios y disponibilidad
 | Nombre del campo                    | Notas                                       |
 |-------------------------------|---------------------------------------------|
 | [**Precio base**](set-add-on-pricing-and-availability.md#base-price)                | Obligatorio                                    |
@@ -53,8 +53,8 @@ A continuación verás una lista de la información que se proporciona al crear 
 
 <span/>
 
-### Descripciones de la Tienda
-Es obligatoria una descripción de la Tienda. Se recomienda proporcionar descripciones de la Tienda para cada [idioma](create-add-on-descriptions.md#languages) que admita la aplicación.
+### <a name="store-listings"></a>Descripciones de la Tienda
+Es obligatoria una descripción de la Tienda. Se recomienda proporcionar descripciones de la Tienda para cada [idioma](create-add-on-store-listings.md#languages) que admita la aplicación.
 
 | Nombre del campo                    | Notas                                       |
 |-------------------------------|---------------------------------------------|
@@ -69,11 +69,11 @@ Cuando hayas terminado de introducir esta información, haz clic en **Enviar a l
 **Nota** El complemento también debe implementarse en el código de la aplicación. Para obtener más información, consulta [Habilitar compras de productos desde la aplicación](../monetize/enable-in-app-product-purchases.md).
 
 
-## Actualizar un complemento después de su publicación
+## <a name="updating-an-add-on-after-publication"></a>Actualizar un complemento después de su publicación
 
 Puedes realizar cambios en un complemento publicado en cualquier momento. Los cambios de los complementos se envían y se publican independientemente de la aplicación, de modo que, por lo general, no es necesario actualizar toda la aplicación para realizar cambios en un complemento, como actualizar su precio o su descripción.
 
-> **Importante** Si la aplicación está disponible para los clientes de Windows8.x, tendrás que crear y publicar un nuevo envío de aplicación para que las actualizaciones de los complementos sean visibles para dichos clientes. De forma parecida, si agregas nuevos complementos a una aplicación destinada a Windows8.x después que dicha aplicación se haya publicado, tendrás que actualizar el código de la aplicación para hacer referencia a esos complementos y, a continuación, volver a enviar la aplicación. De lo contrario, los nuevos complementos no serán visibles para los clientes de Windows8.x.
+> **Importante** Si la aplicación está disponible para los clientes de Windows 8.x, tendrás que crear y publicar un nuevo envío de aplicación para que las actualizaciones de los complementos sean visibles para dichos clientes. De forma parecida, si agregas nuevos complementos a una aplicación destinada a Windows 8.x después que dicha aplicación se haya publicado, tendrás que actualizar el código de la aplicación para hacer referencia a esos complementos y, a continuación, volver a enviar la aplicación. De lo contrario, los nuevos complementos no serán visibles para los clientes de Windows 8.x.
 
 Para enviar actualizaciones, ve a la página del complemento en el panel y haz clic en **Actualizar**. Esto creará un nuevo envío para el complemento, con la información de tu envío anterior como punto de partida. Cambia la información que desees y, a continuación, haz clic en **Enviar a la Tienda**.
 
@@ -81,6 +81,6 @@ Para quitar un complemento que has estado ofreciendo anteriormente, crea un nuev
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

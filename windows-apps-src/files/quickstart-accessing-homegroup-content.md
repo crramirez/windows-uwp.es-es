@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: Acceso a contenido de Grupo Hogar
 description: "Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye imágenes, música y vídeos."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: d55908186e5e0687c7dbd22fee9d2f7b70ba1707
 
 ---
-# Acceso a contenido de Grupo Hogar
+# <a name="accessing-homegroup-content"></a>Acceso a contenido de Grupo Hogar
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -19,7 +19,7 @@ ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
 
 Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye imágenes, música y vídeos.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 -   **Comprender la programación asincrónica de las aplicaciones de la Plataforma universal de Windows (UWP)**
 
@@ -41,7 +41,7 @@ Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye im�
 
     Puedes usar las consultas para enumerar los archivos y carpetas del Grupo Hogar. Para más información sobre consultas de archivos y carpetas, consulta [Enumeración y consulta de archivos y carpetas](quickstart-listing-files-and-folders.md).
 
-## Abrir el selector de archivos en el Grupo Hogar
+## <a name="open-the-file-picker-at-the-homegroup"></a>Abrir el selector de archivos en el Grupo Hogar
 
 Sigue estos pasos para abrir una instancia del selector de archivos que permite al usuario seleccionar los archivos y carpetas del Grupo Hogar:
 
@@ -76,7 +76,7 @@ Sigue estos pasos para abrir una instancia del selector de archivos que permite 
     }   
     ```
 
-## Buscar archivos en el Grupo Hogar
+## <a name="search-the-homegroup-for-files"></a>Buscar archivos en el Grupo Hogar
 
 En esta sección se muestra cómo buscar elementos del Grupo Hogar que coinciden con un término de consulta proporcionado por el usuario.
 
@@ -119,7 +119,7 @@ En esta sección se muestra cómo buscar elementos del Grupo Hogar que coinciden
     ```
 
 
-## Buscar archivos compartidos de un usuario en particular en el Grupo Hogar
+## <a name="search-the-homegroup-for-a-particular-users-shared-files"></a>Buscar archivos compartidos de un usuario en particular en el Grupo Hogar
 
 En esta sección se muestra cómo buscar archivos del Grupo Hogar que comparte un usuario en particular.
 
@@ -164,7 +164,7 @@ En esta sección se muestra cómo buscar archivos del Grupo Hogar que comparte u
     }    
     ```
 
-## Transmitir vídeo del Grupo Hogar
+## <a name="stream-video-from-the-homegroup"></a>Transmitir vídeo del Grupo Hogar
 
 Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
 
@@ -211,6 +211,6 @@ Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

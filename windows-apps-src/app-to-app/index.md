@@ -4,12 +4,12 @@ description: "En esta sección se explica cómo compartir datos entre aplicacion
 title: "Comunicación entre aplicaciones"
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 94e1586a73743e8918ef160897b1b22c8c545ea0
-ms.openlocfilehash: 05ac668e0e3c33f6dd9da9f578335bab96c6429c
+ms.sourcegitcommit: ea67ae5b568d1c51af3bb951fe3a68a8def8a556
+ms.openlocfilehash: 951e2ea29a47e362d9fdee0f597d2e7c808212b6
 
 ---
 
-# Comunicación entre aplicaciones
+# <a name="app-to-app-communication"></a>Comunicación entre aplicaciones
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -21,7 +21,7 @@ Una aplicación puede admitir la función Compartir de dos modos. En primer luga
 
 Además del contrato para compartir contenido, las aplicaciones también pueden integrar técnicas clásicas para transferir datos, tal como arrastrar y colocar o copiar y pegar. Además de la comunicación entre aplicaciones para UWP, estos métodos también admiten el uso compartido entre aplicaciones de escritorio.
 
-## En esta sección:
+## <a name="in-this-section"></a>En esta sección:
 
 | Tema | Descripción |
 |-------|-------------|
@@ -30,11 +30,11 @@ Además del contrato para compartir contenido, las aplicaciones también pueden 
 | [Copiar y pegar](copy-and-paste.md) | En este artículo se explica cómo admitir las funciones copiar y pegar en aplicaciones para UWP usando el portapapeles. Copiar y pegar es la forma clásica de intercambiar datos entre aplicaciones o dentro de una aplicación y casi todas las aplicaciones admiten operaciones del portapapeles hasta cierto punto. |
 | [Arrastrar y colocar](drag-and-drop.md) | En este artículo se explica cómo agregar la funcionalidad de arrastrar y colocar elementos en la aplicación para UWP. Arrastrar y soltar es una forma clásica y natural de interactuar con contenido, como imágenes y archivos. Una vez implementada, la opción para arrastrar y colocar elementos funciona perfectamente en todos los sentidos; por ejemplo, de una aplicación a otra, de una aplicación al escritorio y del escritorio a una aplicación. |
 
-## Consulta también
-- [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/en-us/windows/develop)
+## <a name="see-also"></a>Consulta también
+- [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/develop)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

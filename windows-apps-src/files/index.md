@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: Archivos, carpetas y bibliotecas
 description: "Obtén información sobre la lectura y escritura de la configuración de la aplicación, los selectores de archivos y carpetas y las ubicaciones de espacios aislados como, por ejemplo, la biblioteca de vídeos y música."
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: 32c6e33f9506abc1876075f6ca11656241921005
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: e248a0898772f1fde38e312b1cbd24da5b2946a7
 
 ---
- # Archivos, carpetas y bibliotecas
+ # <a name="files-folders-and-libraries"></a>Archivos, carpetas y bibliotecas
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -28,7 +28,7 @@ Usa las API de los espacios de nombres [Windows.Storage](https://msdn.microsoft.
 | [Acceder a la tarjeta SD](access-the-sd-card.md) | Puedes almacenar y tener acceso a datos no esenciales en una tarjeta microSD, especialmente en los dispositivos móviles de bajo costo que tienen un almacenamiento interno limitado. |
 | [Permisos de acceso a archivos](file-access-permissions.md) | Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades. |
 
-## Muestras relacionadas
+## <a name="related-samples"></a>Muestras relacionadas
 [Muestra de enumeración de carpetas](http://go.microsoft.com/fwlink/p/?linkid=619993)
 
 [Muestra de acceso a archivos](http://go.microsoft.com/fwlink/p/?linkid=619995)
@@ -40,6 +40,6 @@ Usa las API de los espacios de nombres [Windows.Storage](https://msdn.microsoft.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,12 +4,12 @@ title: Agregar contenido visual a la muestra de Marble Maze
 description: "En este documento se describe cómo el juego Marble Maze usa Direct3D y Direct2D en el entorno de aplicaciones de la Plataforma universal de Windows (UWP) para que puedas conocer los patrones y adaptarlos cuando trabajes con el contenido de tu propio juego."
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 70f35fe423b8ceb3e3e3e0c1c3c2563dc0d8cd61
+ms.sourcegitcommit: eb0115bf83627a9ba8209cce6bdd9edecc165ddf
+ms.openlocfilehash: 6b7880703d40d6ef5ed5f42f3e09bc5573170e1f
 
 ---
 
-# Agregar contenido visual al ejemplo de Marble Maze
+# <a name="adding-visual-content-to-the-marble-maze-sample"></a>Agregar contenido visual al ejemplo de Marble Maze
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -43,7 +43,7 @@ A continuación ofrecemos algunos de los puntos clave tratados en este documento
 -   Normalmente, se dibujan los objetos de la escena 3D y luego todos los objetos 2D que aparecen delante de la escena.
 -   Sincroniza el dibujo con el espacio en blanco vertical para garantizar que tu juego no pierde tiempo dibujando fotogramas que nunca se mostrarán realmente en la pantalla.
 
-## Introducción a los elementos gráficos de DirectX
+## <a name="getting-started-with-directx-graphics"></a>Introducción a los elementos gráficos de DirectX
 
 
 Cuando planeamos el juego de la Plataforma universal de Windows (UWP) Marble Maze, elegimos C++ y Direct3D 11.1 porque son las mejores opciones para crear juegos 3D que requieren el máximo control sobre la representación y un alto rendimiento. DirectX 11.1 admite hardware de DirectX 9 a DirectX 11 y, por lo tanto, puede ayudarte a llegar a más clientes de forma más eficaz porque no necesitas reescribir el código para cada una de las versiones anteriores de DirectX.
@@ -57,11 +57,11 @@ El desarrollo de un juego exige una buena planificación. Si no tienes experienc
 -   [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) Se describe DirectWrite, que admite la representación de texto de alta calidad.
 -   [Windows Imaging Component](https://msdn.microsoft.com/library/windows/desktop/ee719902) Describe WIC, una plataforma extensible que proporciona API de bajo nivel para imágenes digitales.
 
-### Niveles de características
+### <a name="feature-levels"></a>Niveles de características
 
 Direct3D 11 introduce un paradigma llamado niveles de características. Un nivel de características es un conjunto bien definido de funcionalidades GPU. Usa los niveles de características para hacer que tu juego se ejecute en versiones anteriores de hardware Direct3D. Marble Maze admite el nivel de características 9.1 porque no precisa funciones avanzadas de los niveles más altos. Te recomendamos que admitas el mayor abanico de hardware posible y que escales el contenido del juego de modo que todos tus clientes disfruten de una gran experiencia, con independencia de que sus equipos sean de gama alta o baja. Para más información sobre los niveles de características, consulta [Direct3D 11 en hardware de versión anterior](https://msdn.microsoft.com/library/windows/desktop/ff476872).
 
-## Inicializar Direct3D y Direct2D
+## <a name="initializing-direct3d-and-direct2d"></a>Inicializar Direct3D y Direct2D
 
 
 Un dispositivo representa el adaptador de pantalla. Crea los dispositivos de Direct3D y Direct2D en una aplicación para UWP de forma similar a como lo harías en una aplicación de escritorio de Windows clásica. La principal diferencia es cómo conectas la cadena de intercambio de Direct3D al sistema basado en ventanas.
@@ -85,7 +85,7 @@ void DeviceResources::DeviceResources(CoreWindow^ window, float dpi)
 
 La clase **DeviceResources** separa esta característica para poder responder con mayor facilidad cuando el entorno cambia. Por ejemplo, llama al método **CreateWindowSizeDependentResources** cuando cambia el tamaño de la ventana.
 
-###  Inicializar las fábricas de Direct2D, DirectWrite y WIC
+###  <a name="initializing-the-direct2d-directwrite-and-wic-factories"></a>Inicializar las fábricas de Direct2D, DirectWrite y WIC
 
 El método **DeviceResources::CreateDeviceIndependentResources** crea las fábricas para Direct2D, DirectWrite y WIC. En los elementos gráficos de DirectX, las fábricas son los puntos de partida para crear recursos gráficos. Marble Maze especifica **D2D1\_FACTORY\_TYPE\_SINGLE\_THREADED** porque realiza todos los dibujos en el subproceso principal.
 
@@ -129,7 +129,7 @@ void DeviceResources::CreateDeviceIndependentResources()
 }
 ```
 
-###  Crear los dispositivos Direct3D y Direct2D
+###  <a name="creating-the-direct3d-and-direct2d-devices"></a>Crear los dispositivos Direct3D y Direct2D
 
 El método **DeviceResources::CreateDeviceResources** llama a [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) para crear el objeto de dispositivo que representa el adaptador de pantalla de Direct3D. Dado que Marble Maze admite el nivel de características 9.1 y posterior, el método **DeviceResources::CreateDeviceResources** especifica los niveles de 9.1 a 11.1 en la matriz de valores **\\**. Direct3D recorre la lista en orden y asigna a la aplicación el primer nivel de características disponible. Por lo tanto, las entradas de la matriz **D3D\_FEATURE\_LEVEL** se enumeran de mayor a menor para que la aplicación obtenga el nivel de características más alto disponible. El método **DeviceResources::CreateDeviceResources** obtiene el dispositivo de Direct3D 11.1 al consultar al dispositivo de Direct3D 11 devuelto por **D3D11CreateDevice**.
 
@@ -217,7 +217,7 @@ DX::ThrowIfFailed(
 
 Para obtener más información sobre DXGI y la interoperabilidad entre Direct2D y Direct3D, consulta los temas [DXGI Overview](https://msdn.microsoft.com/library/windows/desktop/bb205075) (Introducción a DXGI) y [Direct2D and Direct3D Interoperability Overview](https://msdn.microsoft.com/library/windows/desktop/dd370966) (Introducción a la interoperabilidad entre Direct2D y Direct3D).
 
-### Asociar Direct3D con la vista
+### <a name="associating-direct3d-with-the-view"></a>Asociar Direct3D con la vista
 
 El método **DeviceResources::CreateWindowSizeDependentResources** crea los recursos de elementos gráficos que dependen de un tamaño de ventana determinado, como la cadena de intercambio y los destinos de presentación de Direct3D y Direct2D. Una diferencia importante entre una aplicación DirectX para UWP y una aplicación de escritorio es la forma en que se asocia la cadena de intercambio a la ventana de salida. Una cadena de intercambio es responsable de mostrar el búfer donde realiza la representación el dispositivo en el monitor. En el documento sobre la estructura de la aplicación Marble Maze se describen las diferencias entre el sistema de ventanas de una aplicación para UWP y el de una aplicación de escritorio. Dado que una aplicación de la Tienda Windows no funciona con objetos **HWND**, Marble Maze debe usar el método [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559) para asociar la salida del dispositivo a la vista. El siguiente ejemplo muestra la parte del método **DeviceResources::CreateWindowSizeDependentResources** que crea la cadena de intercambio.
 
@@ -251,14 +251,14 @@ El método **DeviceResources::CreateWindowSizeDependentResources** inicializa lo
 
  
 
-## Cargar recursos de escena
+## <a name="loading-scene-resources"></a>Cargar recursos de escena
 
 
 Marble Maze usa la clase **BasicLoader**, que se declara en BasicLoader.h, para cargar texturas y sombreadores. Marble Maze usa la clase **SDKMesh** para cargar las mallas 3D del laberinto y la canica.
 
-Para garantizar que la aplicación responda adecuadamente, Marble Maze carga los recursos de escena de forma asincrónica o en segundo plano. Mientras los activos se cargan en segundo plano, el juego puede responder a los eventos de la ventana. Este proceso se explica con mayor detalle en la sección [Cargar activos del juego en segundo plano](marble-maze-application-structure.md#loading_game_assets) en esta guía.
+Para garantizar que la aplicación responda adecuadamente, Marble Maze carga los recursos de escena de forma asincrónica o en segundo plano. Mientras los activos se cargan en segundo plano, el juego puede responder a los eventos de la ventana. Este proceso se explica con mayor detalle en la sección [Cargar activos del juego en segundo plano](marble-maze-application-structure.md#loading-game-assets-in-the-background) en esta guía.
 
-###  Cargar la superposición 2D y la interfaz de usuario
+###  <a name="loading-the-2-d-overlay-and-user-interface"></a>Cargar la superposición 2D y la interfaz de usuario
 
 En Marble Maze, la superposición es la imagen que aparece en la parte superior de la pantalla. La superposición siempre aparece delante de la escena. En Marble Maze, la superposición contiene el logotipo de Windows y la cadena de texto "DirectX Marble Maze game sample" (Muestra del juego Marble Maze con DirectX). La clase **SampleOverlay**, que se define en SampleOverlay.h, se ocupa de la administración de la superposición. Aunque usamos la superposición como parte de las muestras Direct3D, puedes adaptar este código para que muestre cualquier imagen que aparezca delante de tu escena.
 
@@ -308,7 +308,7 @@ Al proporcionar una clase base común para los elementos de la interfaz de usuar
 
  
 
-###  Cargar sombreadores
+###  <a name="loading-shaders"></a>Cargar sombreadores
 
 Marble Maze usa el método **BasicLoader::LoadShader** para cargar un sombreador a partir de un archivo.
 
@@ -448,7 +448,7 @@ Para obtener más información sobre el estado de la fase de ensamblado de entra
 
 El proceso según el cual se usan los sombreadores de vértices y de píxeles para representar la escena se describe en la sección [Representar la escena](#rendering_the_scene) más adelante en este documento.
 
-### Crear el búfer de constates
+### <a name="creating-the-constant-buffer"></a>Crear el búfer de constates
 
 El búfer de Direct3D agrupa una colección de datos. Un búfer de constantes es un tipo de búfer que puedes usar para pasarles datos a los sombreadores. Marble Maze usa un búfer de constantes para conservar la vista de modelo (o global) y las matrices de proyección para el objeto activo de la escena.
 
@@ -508,7 +508,7 @@ El diseño de la estructura **ConstantBuffer** coincide con el objeto **cbuffer*
 
 Para obtener más información sobre los búferes de constantes, consulta [Introduction to Buffers in Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898) (Introducción a los búferes en Direct3D 11). Para obtener más información sobre la palabra clave register, consulta [**register**](https://msdn.microsoft.com/library/windows/desktop/dd607359).
 
-###  Cargar mallas
+###  <a name="loading-meshes"></a>Cargar mallas
 
 Marble Maze usa SDK-Mesh como formato en tiempo de ejecución porque dicho formato proporciona un modo básico de cargar datos de malla para aplicaciones de ejemplo. Para uso de producción, deberías usar un formato de malla que cumpla los requisitos específicos de tu juego.
 
@@ -541,7 +541,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-###  Cargar datos de colisión
+###  <a name="loading-collision-data"></a>Cargar datos de colisión
 
 Aunque esta sección no se centra en cómo implementa Marble Maze la simulación física entre la canica y el laberinto, observa que la geometría de malla del sistema físico se lee cuando se cargan las mallas.
 
@@ -578,14 +578,14 @@ m_physics.SetRadius(radius);
 
 El modo en que se cargan los datos de colisión depende en gran medida del formato en tiempo de ejecución que se use. Para obtener más información sobre cómo Marble Maze carga la geometría de colisión de un archivo SDK-Mesh, consulta el método **MarbleMaze::ExtractTrianglesFromMesh** en el código fuente.
 
-## Actualizar el estado del juego
+## <a name="updating-game-state"></a>Actualizar el estado del juego
 
 
 Marble Maze separa la lógica de juego de la lógica de presentación actualizando primero todos los objetos de escena antes de presentarlos.
 
 El documento Estructura de la aplicación Marble Maze describe el bucle principal del juego. La actualización de la escena, que forma parte del bucle del juego, tiene lugar después de que se procesen los eventos y la entrada de Windows y antes de que se presente la escena. El método **MarbleMaze::Update** controla la actualización de la interfaz de usuario y del juego.
 
-### Actualizar la interfaz de usuario
+### <a name="updating-the-user-interface"></a>Actualizar la interfaz de usuario
 
 El método **MarbleMaze::Update** llamada al método **UserInterface::Update** para actualizar el estado de la interfaz de usuario.
 
@@ -623,7 +623,7 @@ void StopwatchTimer::Update(float timeTotal, float timeDelta)
 }
 ```
 
-###  Actualizar la escena
+###  <a name="updating-the-scene"></a>Actualizar la escena
 
 El método **MarbleMaze::Update** actualiza el juego según el estado actual de la máquina de estados. Cuando el juego está en modo activo, Marble Maze actualiza la cámara para seguir a la canica, actualiza la parte de la matriz de vistas de los búferes de constantes y actualiza la simulación física.
 
@@ -677,7 +677,7 @@ m_marbleConstantBufferData.view = view;
 
 Para obtener información sobre cómo el método **MarbleMaze::Update** lee la entrada del usuario y simula el movimiento de la canica, consulta el tema [Agregar métodos de entrada e interactividad en la muestra de Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md).
 
-## Presentar la escena
+## <a name="rendering-the-scene"></a>Presentar la escena
 
 
 Cuando se presenta una escena, normalmente se incluyen estos pasos.
@@ -691,7 +691,7 @@ Cuando se presenta una escena, normalmente se incluyen estos pasos.
 
 El método **MarbleMaze::Render** vincula las vistas de destino de presentación y las vistas de galería de símbolos de profundidad, borra esas vistas, dibuja la escena y luego dibuja la superposición.
 
-###  Preparar los destinos de presentación
+###  <a name="preparing-the-render-targets"></a>Preparar los destinos de presentación
 
 Antes de representar la escena, debes establecer el búfer actual de la galería de símbolos de profundidad de destino de representación. Si no está garantizado que tu escena dibuje encima de todos los píxeles de la pantalla, borra también las vistas de representación y de galería de símbolos. Marble Maze borra las vistas de presentación y de galería de símbolos en cada fotograma para garantizar que no haya artefactos visibles del fotograma anterior.
 
@@ -723,7 +723,7 @@ m_d3dContext->ClearDepthStencilView(
 
 La interfaz [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) y la interfaz [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) admiten el mecanismo de vista de textura proporcionado por Direct3D 10 y versiones posteriores. Para obtener más información sobre las vistas de textura, consulta el tema [Texture Views (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb205128) (Vistas de textura [Direct3D 10]). El método [**OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) prepara la fase de fusión de salida para la canalización de Direct3D. Para más información, consulta el tema sobre la [fase de fusión de salida](https://msdn.microsoft.com/library/windows/desktop/bb205120).
 
-### Preparar los sombreadores de vértices y de píxeles
+### <a name="preparing-the-vertex-and-pixel-shaders"></a>Preparar los sombreadores de vértices y de píxeles
 
 Antes de presentar los objetos de la escena, sigue estos pasos para preparar los sombreadores de vértices y de píxeles para dibujar:
 
@@ -793,7 +793,7 @@ m_d3dContext->PSSetConstantBuffers(
 
 El método **MarbleMaze::Render** realiza pasos similares para preparar la presentación de la canica.
 
-### Representar el laberinto y la canica
+### <a name="rendering-the-maze-and-the-marble"></a>Representar el laberinto y la canica
 
 Una vez activados los sombreadores actuales, puedes dibujar los objetos de la escena. El método **MarbleMaze::Render** llamada al método **SDKMesh::Render** para presentar la malla del laberinto.
 
@@ -805,7 +805,7 @@ El método **MarbleMaze::Render** realiza pasos similares para presentar la cani
 
 Como se mencionó anteriormente en este documento, la clase **SDKMesh** se proporciona con fines de demostración, pero no recomendamos su uso en un juego con calidad de producción. Sin embargo, observa que el método **SDKMesh::RenderMesh**, que es llamado por **SDKMesh::Render**, usa el método [**ID3D11DeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) y el método [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453) para establecer los búferes actuales de vértices e índices que definen la malla. También usa el método [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476410) para dibujar los búferes. Para obtener más información sobre cómo trabajar con búferes de vértices y de índices, consulta el tema [Introduction to Buffers in Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898) (Introducción a los búferes en Direct3D 11).
 
-### Dibujar la interfaz de usuario y la superposición
+### <a name="drawing-the-user-interface-and-overlay"></a>Dibujar la interfaz de usuario y la superposición
 
 Una vez dibujados los objetos 3D de la escena, Marble Maze dibuja los elementos 2D de la interfaz de usuario que aparecen delante de la escena.
 
@@ -841,7 +841,7 @@ void UserInterface::Render()
 
 El método **SampleOverlay::Render** usa una técnica similar para dibujar el mapa de bits de la superposición.
 
-###  Presentar la escena
+###  <a name="presenting-the-scene"></a>Presentar la escena
 
 Una vez dibujados todos los objetos 2D y 3D de la escena, Marble Maze presenta la imagen representada en el monitor. Sincroniza el dibujo con el espacio en blanco vertical para garantizar que no se pierde tiempo dibujando fotogramas que nunca se mostrarán realmente en la pantalla. Marble Maze también controla los cambios de dispositivo cuando presenta la escena.
 
@@ -883,12 +883,12 @@ else
 }
 ```
 
-## Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 
 Consulta [Agregar métodos de entrada e interactividad en la muestra de Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md) para obtener información sobre algunos de los procedimientos clave a tener en cuenta cuando trabajes con dispositivos de entrada. En este documento se describe cómo Marble Maze admite la entrada mediante función táctil, acelerómetro, controlador de Xbox 360 o mouse.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Agregar métodos de entrada e interactividad en la muestra de Marble Maze](adding-input-and-interactivity-to-the-marble-maze-sample.md)
@@ -905,6 +905,6 @@ Consulta [Agregar métodos de entrada e interactividad en la muestra de Marble M
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

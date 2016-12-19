@@ -4,23 +4,23 @@ ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: "Device Portal para dispositivos móviles"
 description: "Obtén información sobre cómo Windows Device Portal te permite configurar y administrar el dispositivo móvil de forma remota."
 translationtype: Human Translation
-ms.sourcegitcommit: df6d42d6a91b8721e905fe9bc3a339dc33408459
-ms.openlocfilehash: 802030f12f2ca3e29eec053d89ab806298974dc7
+ms.sourcegitcommit: ea4f755afbf16d4ba5043ebb6be586f19dcc4370
+ms.openlocfilehash: c39c1a843c4f466e1999b4e80bf87f5842ad1996
 
 ---
-# Device Portal para dispositivos móviles
+# <a name="device-portal-for-mobile"></a>Device Portal para dispositivos móviles
 
 A partir de Windows 10, versión 1511, hay funciones para desarrollador adicionales disponibles para la familia de dispositivos móviles. Estas funciones están disponibles únicamente si el modo de desarrollador está habilitado en el dispositivo.
 
-Para obtener información sobre cómo habilitar el modo de desarrollador, consulta [Enable your device for development (Habilitar el dispositivo para el desarrollo)](../get-started/enable-your-device-for-development.md).
+Para obtener información sobre cómo habilitar el modo de desarrollador, consulta [Habilitar el dispositivo para el desarrollo](../get-started/enable-your-device-for-development.md).
 
 ![Configuración de Device Portal](images/device-portal/mob-dev-mode-options.png)
 
-## Configurar Device Portal en Windows Phone
+## <a name="set-up-device-portal-on-windows-phone"></a>Configurar Device Portal en Windows Phone
 
-### Activar la detección de dispositivos y el emparejamiento
+### <a name="turn-on-device-discovery-and-pairing"></a>Activar la detección de dispositivos y el emparejamiento
 
-Para conectarte a Device Portal, tienes que habilitar la detección de dispositivos. Esto te permite emparejar el teléfono con un equipo u otro dispositivo Windows 10. Ambos dispositivos deben estar conectados a la misma subred de la red mediante una conexión con cable o inalámbrica, o bien deben estar conectados mediante USB.
+Para conectarte a Device Portal, tienes que habilitar la detección de dispositivos y Device Portal. Esto te permite emparejar el teléfono con un equipo u otro dispositivo Windows 10. Ambos dispositivos deben estar conectados a la misma subred de la red mediante una conexión con cable o inalámbrica, o bien deben estar conectados mediante USB.
 
 La primera vez que te conectes al Portal de dispositivos, se te solicitará un código de seguridad de seis caracteres (distingue mayúsculas de minúsculas). Esto garantiza el acceso al teléfono y te mantiene a salvo de los atacantes. Presiona el botón Emparejar del teléfono para generar y mostrar el código y luego escribe los seis caracteres en el cuadro de texto del navegador.
 
@@ -40,7 +40,7 @@ Puedes elegir entre tres formas de conectarte a Device Portal: USB, host local y
 
     Usa esta dirección para ver Device Portal localmente en el teléfono, mediante Microsoft Edge para Windows 10 Mobile.
     
-    - Red local:  `https://<The IP address of the phone>`
+    - Red local:  `https://<The IP address or hostname of the phone>`
 
     Usa esta dirección para conectarte a través de una red local.
 
@@ -52,31 +52,31 @@ Puedes elegir entre tres formas de conectarte a Device Portal: USB, host local y
 
 4. (Opcional) Activa la casilla Recordar mi equipo en el navegador para recordar este emparejamiento en el futuro.
 
-A continuación se muestra la sección de Portal de dispositivos de la página de configuración para desarrollador en WindowsPhone.
+A continuación se muestra la sección de Portal de dispositivos de la página de configuración para desarrollador en Windows Phone.
 
 ![Configuración de Portal de dispositivos](images/device-portal/mob-dev-mode-portal.png)
 
 Si usas el Portal de dispositivos en un entorno protegido, como un laboratorio de pruebas, en el que confías en todos los usuarios de la red local, no tienes información personal en el dispositivo y existen requisitos únicos, puedes deshabilitar la autenticación. Esto permite la comunicación sin cifrar y que cualquier persona que tenga la dirección IP del teléfono lo controle.
 
-## Notas de la herramienta
+## <a name="tool-notes"></a>Notas de la herramienta
 
-## Páginas de Device Portal
-### Procesos
+## <a name="device-portal-pages"></a>Páginas de Device Portal
+### <a name="processes"></a>Procesos
 
 La capacidad de terminar procesos arbitrarios no está incluida en Windows Mobile Device Portal. 
 
-Device Portal en dispositivos móviles proporciona el conjunto estándar de páginas. Para obtener descripciones detalladas, consulta [Windows Device Portal overview (Introducción a Windows Device Portal)](device-portal.md).
+Device Portal en dispositivos móviles proporciona el conjunto estándar de páginas. Para obtener descripciones detalladas, consulta [Introducción a Windows Device Portal](device-portal.md).
 
-- Aplicaciones
+- Administrador de aplicaciones
+- Explorador de archivos de la aplicación (explorador de almacenamiento aislado)
 - Procesos
-- Rendimiento
+- Gráficos de rendimiento
 - Seguimiento de eventos para Windows (ETW)
-- Seguimiento del rendimiento
+- Seguimiento del rendimiento (WPR) 
 - Dispositivos
 - Redes
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

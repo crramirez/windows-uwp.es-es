@@ -4,11 +4,11 @@ ms.assetid: 64F7FC51-E8AC-4098-9C5F-0172E4724B5C
 title: Rendimiento
 description: "Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f4589b187d05ae122839fab74d8086779847b120
+ms.sourcegitcommit: 73b19e54b863693aece045e5b653bc0583a676bb
+ms.openlocfilehash: b9395e80bca7a46076e20e42fa7ceee5df7cc0d5
 
 ---
-# Rendimiento
+# <a name="performance"></a>Rendimiento
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -18,7 +18,8 @@ Si aún no lo has hecho, un paso que ya hemos visto y que permite realizar mejor
 
 | Tema | Descripción |
 |-------|-------------|
-| [Planificación del rendimiento](planning-and-measuring-performance.md) | Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, puedes realizar mediciones al principio y con la suficiente frecuencia durante el ciclo de vida del proyecto, para estar seguro de que cumples los objetivos. |
+| [Planificación del rendimiento](planning-and-measuring-performance.md) | Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, realiza mediciones al principio y con la suficiente frecuencia durante el ciclo de vida del proyecto, para estar seguro de que cumples los objetivos. |
+| [Optimización de la actividad en segundo plano](optimize-background-activity.md) | Crea aplicaciones para UWP que colaboren con el sistema para usar tareas en segundo plano de una manera que produzca un consumo eficiente de la batería. |
 | [Optimización de la interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md) | Mejora el rendimiento y el tiempo de inicio de [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de esos elementos. |
 | [Virtualización de datos de ListView y GridView](listview-and-gridview-data-optimization.md) | Mejora el rendimiento y el tiempo de inicio de [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) mediante la virtualización de datos. |
 | [Mejorar el rendimiento de la recolección de elementos no usados](improve-garbage-collection-performance.md) | La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática mediante el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no usados de .NET para las aplicaciones para UWP. |
@@ -36,6 +37,6 @@ Si aún no lo has hecho, un paso que ya hemos visto y que permite realizar mejor
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

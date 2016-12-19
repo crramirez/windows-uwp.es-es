@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: Seguimiento de los archivos y carpetas usados recientemente
 description: "Realiza un seguimiento de los archivos a los que el usuario accede con mayor frecuencia; para ello, agrégalos a la lista de elementos usados recientemente (MRU) de la aplicación."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: 84b78cc4af9490f142c0f74fec127e1d003ce6df
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: fc873da2d0b48cdc614fa319a294e67642440cdf
 
 ---
-# Realizar un seguimiento de los archivos y carpetas usados recientemente
+# <a name="track-recently-used-files-and-folders"></a>Realizar un seguimiento de los archivos y carpetas usados recientemente
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -26,7 +26,7 @@ La lista de MRU de una aplicación se representa mediante la clase [**StorageIte
 
  
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 -   **Comprender la programación asincrónica de las aplicaciones de la Plataforma universal de Windows (UWP)**
 
@@ -40,7 +40,7 @@ La lista de MRU de una aplicación se representa mediante la clase [**StorageIte
 
     Los archivos seleccionados, por lo general, son los archivos que los usuarios usan una y otra vez.
 
- ## Agregar archivos seleccionados a la lista de MRU
+ ## <a name="add-a-picked-file-to-the-mru"></a>Agregar archivos seleccionados a la lista de MRU
 
 -   Los archivos que el usuario selecciona son a menudo archivos que se usan repetidas veces. Por lo tanto, considera la posibilidad de agregar los archivos seleccionados a la lista de MRU de la aplicación conforme se seleccionan. A continuación se muestran cómo hacerlo.
 
@@ -59,7 +59,7 @@ La lista de MRU de una aplicación se representa mediante la clase [**StorageIte
 
      
 
-## Usar un token para recuperar elementos de la lista de MRU
+## <a name="use-a-token-to-retrieve-an-item-from-the-mru"></a>Usar un token para recuperar elementos de la lista de MRU
 
 Usa el método de recuperación más apropiado para el elemento que quieres recuperar.
 
@@ -87,11 +87,11 @@ foreach (Windows.Storage.AccessCache.AccessListEntry entry in mru.Entries)
 
 [**AccessListEntryView**](https://msdn.microsoft.com/library/windows/apps/br227349) permite iterar entradas de la lista de MRU. Estas entradas son estructuras [**AccessListEntry**](https://msdn.microsoft.com/library/windows/apps/br227348) que contienen el token y los metadatos de un elemento.
 
-## Quitar elementos de la lista de MRU cuando está llena
+## <a name="removing-items-from-the-mru-when-its-full"></a>Quitar elementos de la lista de MRU cuando está llena
 
 Cuando se alcanza el límite de 25 elementos en la lista de MRU y quieres agregar uno nuevo, el elemento más antiguo se eliminará automáticamente. Por lo tanto, nunca es necesario quitar un elemento antes de agregar uno nuevo.
 
-## Lista de acceso futuro
+## <a name="future-access-list"></a>Lista de acceso futuro
 
 Además de una lista de MRU, tu aplicación también tiene una lista de acceso futuro. Mediante la selección de archivos y carpetas, el usuario concede permiso a la aplicación para acceder a elementos que es posible que no estén disponibles de otro modo. Si agregas estos elementos a la lista de acceso futuro, podrás conservar este permiso cuando la aplicación desee tener acceso a ellos más tarde. La lista de acceso futuro de la aplicación se representa mediante la clase [**StorageItemAccessList**](https://msdn.microsoft.com/library/windows/apps/br207459), que se obtiene a partir de la propiedad estática [**StorageApplicationPermissions.FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457).
 
@@ -106,6 +106,6 @@ Cuando un usuario selecciona un elemento, considera la posibilidad de agregarlo 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

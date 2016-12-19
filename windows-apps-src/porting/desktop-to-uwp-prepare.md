@@ -4,12 +4,12 @@ Description: "En este artículo se enumeran los aspectos que debes tener en cuen
 Search.Product: eADQiWindows 10XVcnh
 title: "Preparar la aplicación para el puente de escritorio a UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 8429e6e21319a03fc2a0260c68223437b9aed02e
-ms.openlocfilehash: 4cf9c509be52a8b2c03cdaa9ac68b98ba49b7094
+ms.sourcegitcommit: f7a8b8d586983f42fe108cd8935ef084eb108e35
+ms.openlocfilehash: 81a2485d5be22dd392c21aaff281c1c9263883a9
 
 ---
 
-# Preparar una aplicación para convertirla con el puente de escritorio
+# <a name="prepare-an-app-for-conversion-with-the-desktop-bridge"></a>Preparar una aplicación para convertirla con el puente de escritorio
 
 En este artículo se enumeran los aspectos que debes tener en cuenta antes de convertir la aplicación con el puente de escritorio a UWP. Es posible que no tengas que hacer mucho para preparar la aplicación para el proceso de conversión, pero si alguno de los siguientes elementos se aplica a tu aplicación, tendrás que abordarlo antes de la conversión. Recuerda que la Tienda Windows administra licencias y actualizaciones automáticas; por lo tanto, puedes quitar dichas características de tu código base.
 
@@ -59,9 +59,16 @@ En este artículo se enumeran los aspectos que debes tener en cuenta antes de co
     
     Nota: En todos los casos, debes realizar la vinculación a la última versión de CRT disponible públicamente.
 
-+ __La aplicación se instala y carga los ensamblados desde la carpeta de Windows en paralelo__. Por ejemplo, la aplicación usa las bibliotecas en tiempo de ejecución de C VC8 o VC9 y las vincula de forma dinámica desde la carpeta de Windows en paralelo, lo que significa que el código usa los archivos DLL comunes de una carpeta compartida. Esto no se admite. Debes vincularlas de forma estática mediante la vinculación a los archivos de biblioteca redistribuibles directamente en el código.
++ __La aplicación se instala y carga los ensamblados desde la carpeta de Windows en paralelo__. Por ejemplo, la aplicación usa las bibliotecas en tiempo de ejecución de C VC8 o VC9 y las vincula de forma dinámica desde la carpeta de Windows en paralelo, lo que significa que el código usa los archivos DLL comunes de una carpeta compartida. Esto no se admite. Deberás vincularlas de forma estática mediante la vinculación a los archivos de biblioteca redistribuibles directamente en el código.
+
++ __La aplicación usa una dependencia en la carpeta System32/SysWOW64__. Para que las DLL funcionen, debes incluirlas en la parte del sistema de archivos virtual del paquete AppX. Esto garantiza que la aplicación se comporta como si las DLL se hubieran instalado en la carpeta **System32**/**SysWOW64**. En la raíz del paquete, crea una carpeta denominada **VFS**. Dentro de esa carpeta, crear una carpeta **SystemX64** y otra **SystemX86**. A continuación, pon la versión de 32 bits de la DLL en la carpeta **SystemX86** y coloca la versión de 64 bits en la carpeta **SystemX64**.
+
++ __La aplicación usa el paquete de marcos de Dev11 VCLibs__. Las bibliotecas de VCLibs 11 se pueden instalar directamente desde la Tienda Windows si se definen como una dependencia en el paquete AppX. Para ello, realizar el siguiente cambio en el manifiesto del paquete de la aplicación. En el nodo `<Dependencies>`, agrega:  
+`<PackageDependency Name="Microsoft.VCLibs.110.00.UWPDesktop" MinVersion="11.0.24217.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />`  
+Durante la instalación desde la Tienda Windows, se instalará la versión adecuada (x86 o x64) del marco de VCLibs 11 antes de la instalación de la aplicación.  
+Las dependencias no se instalarán si la aplicación se instala mediante el método de instalación de prueba. Para instalar las dependencias en el equipo de forma manual, debe descargar e instalar los [paquetes de marcos de VC 11.0 para puente de escritorio](https://www.microsoft.com/download/details.aspx?id=53340&WT.mc_id=DX_MVP4025064). Para obtener más información sobre estos escenarios, consulta [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/) (Uso de Visual C++ Runtime en el proyecto Centennial.
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

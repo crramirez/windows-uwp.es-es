@@ -4,18 +4,18 @@ description: "En este tema se explican las asignaciones de espacios de nombres X
 title: "Espacios de nombres XAML y asignación de espacios de nombres"
 ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
 translationtype: Human Translation
-ms.sourcegitcommit: 3ca9492b334bf4b3d4f0fcab8fca5625f4e23fa5
-ms.openlocfilehash: cca962e4d99599206b8a559c2595ea2b0d8a52c7
+ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
+ms.openlocfilehash: 626af2ba6e1b8616f8d23419d94e621f3ce7d043
 
 ---
 
-# Espacios de nombres XAML y asignación de espacios de nombres
+# <a name="xaml-namespaces-and-namespace-mapping"></a>Espacios de nombres XAML y asignación de espacios de nombres
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se explican las asignaciones de espacios de nombres XML/XAML (**xmlns**) tal y como se encuentran en el elemento raíz de la mayoría de los archivos XAML. También describe cómo producir asignaciones similares para tipos y ensamblados personalizados.
 
-## Cómo se relacionan los espacios de nombres XAML con la definición del código y las bibliotecas de tipos
+## <a name="how-xaml-namespaces-relate-to-code-definition-and-type-libraries"></a>Cómo se relacionan los espacios de nombres XAML con la definición del código y las bibliotecas de tipos
 
 Tanto en su propósito general como en su aplicación a la programación de aplicaciones de Windows en tiempo de ejecución, el lenguaje XAML sirve para declarar objetos, las propiedades de dichos objetos y las relaciones entre objetos y propiedades expresadas como jerarquías. Los objetos que declares en XAML están respaldados por bibliotecas de tipos u otras representaciones que se definen con otras técnicas y lenguajes de programación. Estas bibliotecas pueden ser:
 
@@ -26,13 +26,13 @@ Tanto en su propósito general como en su aplicación a la programación de apli
 
 La información del tipo de respaldo se asocia a definiciones de espacios de nombres XAML determinadas. Los marcos de XAML, como Windows Runtime, pueden agregar varios ensamblados y espacios de nombres de código para asignarse a un único espacio de nombres XAML. Esto nos da el concepto de vocabulario XAML, que abarca un marco o tecnología de programación mayor. Un vocabulario XAML puede ser bastante amplio; por ejemplo, la mayoría del código XAML documentado para aplicaciones de Windows Runtime de esta referencia constituye un solo vocabulario XAML. Un vocabulario XAML también se puede ampliar; para ello, agrega tipos a las definiciones de código de respaldo asegurándote de incluir los tipos en espacios de nombres de código que ya se usan como orígenes de espacio de nombres asignados del vocabulario XAML.
 
-Un procesador XAML puede consultar los tipos y los miembros en los ensamblados de respaldo asociados a ese espacio de nombres XAML cuando cree una representación de objetos en tiempo de ejecución. Por este motivo, XAML resulta útil como medio para formalizar e intercambiar definiciones de comportamiento de construcción de objetos, y se usa como técnica de definición de interfaz de usuario para una aplicación de la TiendaWindows.
+Un procesador XAML puede consultar los tipos y los miembros en los ensamblados de respaldo asociados a ese espacio de nombres XAML cuando cree una representación de objetos en tiempo de ejecución. Por este motivo, XAML resulta útil como medio para formalizar e intercambiar definiciones de comportamiento de construcción de objetos, y se usa como técnica de definición de interfaz de usuario para una aplicación de la Tienda Windows.
 
-## Espacios de nombres XAML en un uso de marcado XAML típico
+## <a name="xaml-namespaces-in-typical-xaml-markup-usage"></a>Espacios de nombres XAML en un uso de marcado XAML típico
 
 Un archivo XAML casi siempre declara un espacio de nombres XAML predeterminado en su elemento raíz. El espacio de nombres XAML predeterminado define qué elementos se pueden declarar sin cualificarlos con un prefijo. Por ejemplo, si declaras un elemento `<Balloon />`, un analizador XAML esperará que exista un elemento **Balloon** y que sea válido en el espacio de nombres XAML predeterminado. Por el contrario, si **Balloon** no es el espacio de nombres XAML predeterminado definido, debes cualificar ese nombre de elemento con un prefijo como, por ejemplo, `<party:Balloon />`. El prefijo indica que el elemento existe en un espacio de nombres XAML que no es el predeterminado, y debes asignar un espacio de nombres XAML al prefijo **party** antes de poder usar este elemento. Los espacios de nombres XAML se aplican al elemento específico en el que se declaran, así como a cualquier elemento que esté contenido en ese elemento en la estructura XAML. Por este motivo, los espacios de nombres XAML casi siempre se declaran en elementos raíz de un archivo XAML para aprovechar las ventajas de la herencia.
 
-## Declaraciones de espacio de nombres predeterminado y del lenguaje XAML
+## <a name="the-default-and-xaml-language-xaml-namespace-declarations"></a>Declaraciones de espacio de nombres predeterminado y del lenguaje XAML
 
 En el elemento raíz de la mayoría de archivos XAML, hay dos declaraciones **xmlns**. La primera asigna un espacio de nombres XAML como predeterminado:  `xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"`
 
@@ -46,11 +46,12 @@ La relación entre estas declaraciones es que XAML es una definición de lenguaj
 
 El lenguaje XAML especifica determinados elementos de lenguaje, cada uno de los cuales debe ser accesible mediante implementaciones del procesador XAML que trabajan con el espacio de nombres XAML. Las plantillas de proyecto, el código de muestra y la documentación de las características del lenguaje siguen la convención por la que se asigna "x:" al espacio de nombres XAML del lenguaje XAML. El espacio de nombres del lenguaje XAML define varias características de uso común, incluso para aplicaciones básicas de Windows en tiempo de ejecución con C++, C# o Visual Basic. Por ejemplo, para unir un código subyacente con un archivo XAML mediante una clase parcial, debes asignar un nombre a esa clase como el [atributo x:Class](x-class-attribute.md) en el elemento raíz del archivo XAML correspondiente. O bien, cualquier elemento que se defina en una página XAML como un recurso con clave de un [ResourceDictionary y referencias a recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273) debe tener establecido el [atributo x:Key](x-key-attribute.md) en el elemento de objeto en cuestión.
 
-## Otros espacios de nombres XAML
+<span id="other-XAML-namespaces"/>
+## <a name="other-xaml-namespaces"></a>Otros espacios de nombres XAML
 
 Además del espacio de nombres predeterminado y del espacio de nombres XAML del lenguaje XAML "x:", puedes ver otros espacios de nombres XAML asignados en el código XAML predeterminado inicial para aplicaciones generadas por Microsoft Visual Studio.
 
-### **d: (`http://schemas.microsoft.com/expression/blend/2008`)**
+### **<a name="d-httpschemasmicrosoftcomexpressionblend2008"></a>d: (`http://schemas.microsoft.com/expression/blend/2008`)**
 
 El espacio de nombres XAML "d:" se usa para la compatibilidad con diseñadores, concretamente para la compatibilidad con diseñadores en las superficies de diseño de XAML de Microsoft Visual Studio. El espacio de nombres XAML "d:" permite el uso de atributos de diseñador o en tiempo de diseño en elementos XAML. Estos atributos de diseñador solo afectan a los aspectos de diseño relativos al comportamiento de XAML. Los atributos de diseñador se ignoran cuando el analizador XAML de Windows en tiempo de ejecución carga el mismo código XAML al ejecutarse una aplicación. Por lo general, los atributos de diseñador son válidos en cualquier elemento XAML pero, en la práctica, hay determinados escenarios en los que resulta apropiado aplicar uno mismo un atributo de diseñador. En particular, muchos de los atributos de diseñador están destinados a proporcionar una mejor experiencia de interacción con contextos de datos y orígenes de datos mientras desarrollas código XAML y otro código que use enlace de datos.
 
@@ -62,19 +63,19 @@ El espacio de nombres XAML "d:" se usa para la compatibilidad con diseñadores, 
 -   **Atributo d:DesignSource:** especifica un origen de datos en tiempo de diseño para un elemento [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833), lo que invalida la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835).
 -   **Extensiones de marcado d:DesignInstance y d:DesignData:** estas extensiones de marcado se usan para proporcionar recursos de datos en tiempo de diseño para **d:DataContext** o **d:DesignSource**. En este tema no explicaremos en detalle cómo usar los recursos de datos en tiempo de diseño. Para obtener más información, consulta [Atributos en tiempo de diseño](http://go.microsoft.com/fwlink/p/?LinkId=272504). Para obtener algunos ejemplos de uso, consulta [Datos de muestra sobre la superficie de diseño y para la creación de prototipos](https://msdn.microsoft.com/library/windows/apps/mt517866).
 
-### **mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
+### **<a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 
 " mc:" indica y admite un modo de compatibilidad de marcado para leer XAML. Normalmente, el prefijo "d:" se asocia al atributo **mc:Ignorable**. Esta técnica permite a los analizadores XAML en tiempo de ejecución omitir los atributos de diseño en "d:".
 
-### **local:** y **common:**
+### <a name="local-and-common"></a>**local:** y **common:**
 
-"local:" es un prefijo que se suele asignar automáticamente en las páginas XAML a un proyecto de aplicación de la TiendaWindows con plantilla. Se asigna para que haga referencia al mismo espacio de nombres que se ha creado para contener el [atributo x:Class](x-class-attribute.md) y el código de todos los archivos XAML, incluido app.xaml. Mientras definas cualquier clase personalizada que quieras usar en XAML en este mismo espacio de nombres, puedes usar el prefijo **local:** para referirte a tus tipos personalizados en XAML. Un prefijo relacionado que procede de un proyecto de aplicación de la TiendaWindows con plantilla es **common:**. Este prefijo hace referencia a un espacio de nombres "Common" anidado que contiene clases de utilidad como conversores y comandos; encontrarás las definiciones en la carpeta Common de la vista **Explorador de soluciones**.
+"local:" es un prefijo que se suele asignar automáticamente en las páginas XAML a un proyecto de aplicación de la Tienda Windows con plantilla. Se asigna para que haga referencia al mismo espacio de nombres que se ha creado para contener el [atributo x:Class](x-class-attribute.md) y el código de todos los archivos XAML, incluido app.xaml. Mientras definas cualquier clase personalizada que quieras usar en XAML en este mismo espacio de nombres, puedes usar el prefijo **local:** para referirte a tus tipos personalizados en XAML. Un prefijo relacionado que procede de un proyecto de aplicación de la Tienda Windows con plantilla es **common:**. Este prefijo hace referencia a un espacio de nombres "Common" anidado que contiene clases de utilidad como conversores y comandos; encontrarás las definiciones en la carpeta Common de la vista **Explorador de soluciones**.
 
-### **vsm:**
+### **<a name="vsm"></a>vsm:**
 
 No los uses. "vsm:" es un prefijo que a veces se ve en plantillas XAML más antiguas importadas de otras tecnologías de Microsoft. El espacio de nombres en principio solucionaba un problema de utillaje de los espacios de nombres heredados. Deberías eliminar las definiciones de espacios de nombres XAML de "vsm:" en el código XAML que uses para Windows Runtime, y cambiar el uso de prefijos de [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014) y otros objetos relacionados para usar en su lugar el espacio de nombres XAML predeterminado. Para obtener más información sobre la migración de XAML, consulta [Migrar código XAML de WPF o Silverlight a una aplicación de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/br229571).
 
-## Asignación de tipos personalizados a espacios de nombres XAML y prefijos
+## <a name="mapping-custom-types-to-xaml-namespaces-and-prefixes"></a>Asignación de tipos personalizados a espacios de nombres XAML y prefijos
 
 Puedes asignar un espacio de nombres XAML con el fin de usar XAML para acceder a tus propios tipos personalizados. En otras palabras, asignas un espacio de nombres de código tal y como existe en una representación de código que define el tipo personalizado, y le asignas un espacio de nombres XAML con un prefijo de uso. Los tipos personalizados para XAML pueden definirse con un lenguaje de Microsoft .NET (C# o Microsoft Visual Basic) o en C++. La asignación se realiza mediante la definición de un prefijo **xmlns**. Por ejemplo, `xmlns:myTypes` define un nuevo espacio de nombres XAML al que se accede incluyendo prefijos en todos los usos con el token `myTypes:`.
 
@@ -84,7 +85,7 @@ Por ejemplo, para asignar un prefijo "custom1" que permita hacer referencia a un
 
 No es necesario asignar las clases parciales del mismo ámbito de página. Por ejemplo, no necesitas prefijos para hacer referencia a los controladores de eventos que has definido para controlar los eventos de la definición de la interfaz de usuario XAML de tu página. Además, muchas de las páginas XAML iniciales precedentes de proyectos generados en Visual Studio para una aplicación de Windows Runtime con C++, C# o Visual Basic ya asignan un prefijo "local:" que hace referencia al espacio de nombres predeterminado especificado por el proyecto y el espacio de nombres usado por las definiciones de clases parciales.
 
-### Reglas del lenguaje CLR
+### <a name="clr-language-rules"></a>Reglas del lenguaje CLR
 
 Si escribes tu código de respaldo en un lenguaje de .NET (C# o Microsoft Visual Basic), es posible que estés usando convenciones que incluyen un punto (".") como parte del nombre de los espacios de nombres para crear una jerarquía conceptual de espacios de nombres de código. Si tu definición de espacio de nombres contiene un punto, este debe formar parte del valor que especifiques después del token "using:".
 
@@ -92,17 +93,17 @@ Si el archivo de código subyacente o el archivo de definiciones de código es u
 
 No uses tipos anidados (como es el caso de anidar una enumeración en una clase) cuando definas el código para usarlo con XAML. Los tipos anidados no se pueden evaluar. El analizador de XAML no tiene forma de distinguir que un punto forma parte del nombre de un tipo anidado, y no del nombre del espacio de nombres.
 
-## Tipos y ensamblados personalizados
+## <a name="custom-types-and-assemblies"></a>Tipos y ensamblados personalizados
 
 En la asignación no se especifica el nombre del ensamblado que define los tipos de respaldo de un espacio de nombres XAML. La lógica por la que los ensamblados están disponibles se controla en el nivel de definición de la aplicación y forma parte de los principios básicos de implementación y seguridad de una aplicación. Declara los ensamblados que quieras incluir como origen de definiciones de código para XAML como ensamblados dependientes en la configuración del proyecto. Para obtener más información, consulta [Creación de componentes de Windows en tiempo de ejecución en C# y Visual Basic](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx).
 
 Si haces referencia a tipos personalizados en la definición de aplicación o en las definiciones de página de la aplicación principal, esos tipos están disponibles sin necesidad de otra configuración de ensamblado dependiente, aunque aún debes asignar el espacio de nombres de código que contiene esos tipos. Una convención habitual es asignar el prefijo "local" al espacio de nombres de código predeterminado de cualquier página XAML dada. Esta convención se suele incluir en las plantillas de proyecto de inicio para proyectos de XAML.
 
-## Propiedades adjuntas
+## <a name="attached-properties"></a>Propiedades adjuntas
 
 Si haces referencia a propiedades adjuntas, el fragmento del tipo de propietario del nombre de la propiedad adjunta debe estar en el espacio de nombres XAML predeterminado, o bien incluir un prefijo. Incluir prefijos en atributos con independencia de sus elementos no es muy habitual, pero en este caso a veces es necesario, sobre todo si se trata de una propiedad adjunta personalizada. Para obtener más información, consulta [Propiedades adjuntas personalizadas](custom-attached-properties.md).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Introducción a XAML](xaml-overview.md)
 * [Guía de sintaxis XAML](xaml-syntax-guide.md)
@@ -114,6 +115,6 @@ Si haces referencia a propiedades adjuntas, el fragmento del tipo de propietario
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

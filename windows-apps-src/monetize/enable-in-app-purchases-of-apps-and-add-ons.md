@@ -5,12 +5,12 @@ description: "Aprende a usar el espacio de nombres Windows.Services.Store para c
 title: "Habilitar compras desde la aplicación de aplicaciones y complementos"
 keywords: "muestra de código de oferta desde la aplicación"
 translationtype: Human Translation
-ms.sourcegitcommit: 962bee0cae8c50407fe1509b8000dc9cf9e847f8
-ms.openlocfilehash: a28982e05e88b542a0b20bf481e3121d6ac8a247
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: 05a93f3124324d7308f5494ad14a15bfd6a4e698
 
 ---
 
-# Habilitar compras desde la aplicación de aplicaciones y complementos
+# <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>Habilitar compras desde la aplicación de aplicaciones y complementos
 
 Las aplicaciones orientadas a Windows 10, versión 1607 o posterior, pueden usar miembros del espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para solicitar la compra de la aplicación actual o uno de sus complementos (también conocidos como productos desde la aplicación o IAP) para el usuario. Por ejemplo, si el usuario tiene actualmente una versión de prueba de la aplicación, puedes usar este proceso para adquirir una licencia completa para el usuario. Como alternativa, puedes usar este proceso para comprar un complemento, como un nuevo nivel de juego para el usuario.
 
@@ -22,7 +22,7 @@ Cada método presenta una interfaz de usuario de compra estándar para el usuari
 
 >**Nota**&nbsp;&nbsp;Este artículo es aplicable a las aplicaciones orientadas a Windows 10, versión 1607 o posterior. Si la aplicación está destinada a una versión anterior de Windows 10, debes usar el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) en lugar del espacio de nombres **Windows.Services.Store**. Para obtener más información, consulta [Compras desde la aplicación y pruebas con el espacio de nombres Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Este ejemplo tiene los siguientes requisitos previos:
 * Un proyecto de Visual Studio para una aplicación de la Plataforma universal de Windows (UWP) destinado a Windows 10, versión 1607 o posterior.
@@ -31,71 +31,20 @@ Este ejemplo tiene los siguientes requisitos previos:
 El código de este ejemplo supone que:
 * El código se ejecuta en el contexto de una [página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contiene un elemento [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` y un elemento [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Estos objetos se usan para indicar que se está produciendo una operación asincrónica y para mostrar mensajes de salida, respectivamente.
 * El archivo de código tiene una instrucción **using** para el espacio de nombres **Windows.Services.Store**.
-* La aplicación es una aplicación de usuario único que se ejecuta solamente en el contexto del usuario que inició la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro).
+* La aplicación es una de usuario único que se ejecuta solamente en el contexto del usuario que la inició. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro).
 
 >**Nota**&nbsp;&nbsp;Si tienes una aplicación de escritorio que usa el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), tienes que agregar código adicional que no se muestra en este ejemplo para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
 
-## Ejemplo de código
+## <a name="code-example"></a>Ejemplo de código
 
 En este ejemplo se muestra cómo usar el método [RequestPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.requestpurchaseasync.aspx) de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para comprar una aplicación o complemento con un [Id. de la Tienda](in-app-purchases-and-trials.md#store_ids) conocido.
 
-```csharp
-private StoreContext context = null;
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[EnablePurchases](./code/InAppPurchasesAndLicenses_RS1/cs/PurchaseAddOnPage.xaml.cs#PurchaseAddOn)]
 
-public async void PurchaseAddOn(string storeId)
-{
-    if (context == null)
-    {
-        context = StoreContext.GetDefault();
-        // If your app is a desktop app that uses the Desktop Bridge, you
-        // may need additional code to configure the StoreContext object.
-        // For more info, see https://aka.ms/storecontext-for-desktop.
-    }
+Para obtener una aplicación de ejemplo completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
-    workingProgressRing.IsActive = true;
-    StorePurchaseResult result = await context.RequestPurchaseAsync(storeId);
-    workingProgressRing.IsActive = false;
-
-    if (result.ExtendedError != null)
-    {
-        // The user may be offline or there might be some other server failure.
-        textBlock.Text = $"ExtendedError: {result.ExtendedError.Message}";
-        return;
-    }
-
-    switch (result.Status)
-    {
-        case StorePurchaseStatus.AlreadyPurchased:
-            textBlock.Text = "The user has already purchased the product.";
-            break;
-
-        case StorePurchaseStatus.Succeeded:
-            textBlock.Text = "The purchase was successful.";
-            break;
-
-        case StorePurchaseStatus.NotPurchased:
-            textBlock.Text = "The purchase did not complete. " +
-                "The user may have cancelled the purchase.";
-            break;
-
-        case StorePurchaseStatus.NetworkError:
-            textBlock.Text = "The purchase was unsuccessful due to a network error.";
-            break;
-
-        case StorePurchaseStatus.ServerError:
-            textBlock.Text = "The purchase was unsuccessful due to a server error.";
-            break;
-
-        default:
-            textBlock.Text = "The purchase was unsuccessful due to an unknown error.";
-            break;
-    }
-}
-```
-
-Para obtener una aplicación de muestra completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
-
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md)
 * [Obtener información de producto para aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
@@ -106,6 +55,6 @@ Para obtener una aplicación de muestra completa, consulta la [muestra de la Tie
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

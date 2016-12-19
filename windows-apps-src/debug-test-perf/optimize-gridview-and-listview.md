@@ -4,11 +4,11 @@ ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
 title: "Optimización de la interfaz de usuario de ListView y GridView"
 description: "Mejora el rendimiento y el tiempo de inicio de ListView y GridView mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de elementos."
 translationtype: Human Translation
-ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 1aba484afcb704b0b28ceee6027f5ae05d8e420d
+ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
+ms.openlocfilehash: dca6c9c2cde4240da4b2eff4f4786ec5b81051c6
 
 ---
-# Optimización de la interfaz de usuario de ListView y GridView
+# <a name="listview-and-gridview-ui-optimization"></a>Optimización de la interfaz de usuario de ListView y GridView
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -17,7 +17,7 @@ Para más información, consulta la sesión de //build/ [Dramatically Increase P
 
 Mejorar el rendimiento y el tiempo de inicio de [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de elementos. Para más información sobre técnicas de virtualización de datos, consulta [la virtualización de datos de ListView y GridView](listview-and-gridview-data-optimization.md).
 
-## Dos factores clave en el rendimiento de las colecciones
+## <a name="two-key-factors-in-collection-performance"></a>Dos factores clave en el rendimiento de las colecciones
 
 La manipulación de colecciones es un escenario común. Un visualizador de fotos tiene colecciones de fotos, un lector tiene colecciones de artículos, libros e historias, y una aplicación de compras tiene colecciones de productos. Este tema muestra lo que puedes hacer para que la aplicación sea eficaz en la manipulación de colecciones.
 
@@ -25,7 +25,7 @@ Existen dos factores clave en el rendimiento cuando se trata de colecciones: el 
 
 Para obtener unos movimientos panorámicos/desplazamientos suaves, es fundamental que el subproceso de la interfaz de usuario realice un trabajo eficaz e inteligente de crear una instancia, enlazar los datos y diseñar los elementos.
 
-## Virtualización de interfaz de usuario
+## <a name="ui-virtualization"></a>Virtualización de interfaz de usuario
 
 La virtualización de la interfaz de usuario es la mejora más importante que puedes hacer. Esto significa que los elementos de la interfaz de usuario representen los elementos se crean a petición. Para controlar los elementos enlazados a una colección de 1 000 elementos, sería un desperdicio de recursos crear la interfaz de usuario de todos los elementos al mismo tiempo, porque no todos pueden mostrarse al mismo tiempo. [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) (y otros controles derivados estándar de [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803)) realizan la virtualización de la interfaz de usuario por ti. Cuando los elementos están a punto de desplazarse hacia la vista (a una páginas de distancia), el marco de trabajo genera la interfaz de usuario de los elementos y los almacena. Asimismo, cuando sea improbable que los elementos se muestren de nuevo, el marco de trabajo recupera la memoria.
 
@@ -33,7 +33,7 @@ Si proporcionas una plantilla del panel de elementos personalizada (consulta [**
 
 El concepto de una ventanilla es fundamental para la virtualización de la interfaz de usuario, porque el marco debe crear los elementos que es probable que se muestren. En general, la ventanilla de una clase [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) es del tamaño del control lógico. Por ejemplo, la ventanilla de un control [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) tiene el ancho y el alto del elemento **ListView**. Algunos paneles permiten que los elementos secundarios tengan espacio ilimitado, como [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/BR209527) y [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704), los cuales cuentan con columnas o filas de tamaño automático. Cuando una clase **ItemsControl** virtualizada se coloca en un panel como ese, necesita bastante espacio para mostrar todos sus elementos, lo que inhabilita la virtualización. Restaura la virtualización estableciendo un ancho y alto en **ItemsControl**.
 
-## Reducción del elemento por elemento
+## <a name="element-reduction-per-item"></a>Reducción del elemento por elemento
 
 Reduce el número de elementos de la interfaz de usuario usada para representar los elementos, a un mínimo razonable.
 
@@ -64,7 +64,8 @@ Las plantillas de control predeterminadas para [**ListViewItem**](https://msdn.m
 
 Existen aproximadamente 25 propiedades con nombres descriptivos similares a [**SelectionCheckMarkVisualEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled.aspx) y [**SelectedBackground**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectedbackground.aspx). En el caso de que los tipos de presentador resultaran no ser lo suficientemente personalizables para tu caso de uso, puedes editar una copia de la plantilla de control `ListViewItemExpanded` o `GridViewItemExpanded`. Estas se encuentran en `\Program Files (x86)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\<version>\Generic\generic.xaml`. Ten en cuenta que el uso de estas plantillas significa conceder algo de rendimiento para el aumento de la personalización.
 
-## Actualizar los elementos ListView and GridView de forma progresiva
+<span id="update-items-incrementally"/>
+## <a name="update-listview-and-gridview-items-progressively"></a>Actualizar los elementos ListView and GridView de forma progresiva
 
 Si estás usando la virtualización de datos, puedes conseguir que la capacidad de respuesta de [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) siga siendo alta, configurando el control para representar elementos de la interfaz de usuario temporales de los elementos que aún se estén descargando o cargando. Los elementos temporales se reemplazan progresivamente con la interfaz de usuario real a medida que se cargan los datos.
 
@@ -72,7 +73,7 @@ Igualmente, e independientemente de dónde estés cargando los datos (desde el d
 
 Un ejemplo de estas técnicas suele verse en las aplicaciones de visualización de fotos: aunque no todas las imágenes se haya cargado visualizado, el usuario puede seguir realizando el movimiento panorámico/desplazamiento e interactuando con la colección. O bien, para un elemento de "película", puedes mostrar el título en la primera fase, la clasificación en la segunda fase y una imagen del póster en la tercera fase. El usuario ve los datos más importantes sobre cada elemento tan pronto como sea posible, lo que significa que podrá realizar una acción al mismo tiempo. A continuación, la información menos importante se rellena según lo permita el tiempo. Estas son las características de plataforma que puedes usar para implementar estas técnicas.
 
-### Marcadores de posición
+### <a name="placeholders"></a>Marcadores de posición
 
 La característica temporal de elementos visuales de marcador de posición está activada de forma predeterminada y se controla con la propiedad [**ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders). Durante el movimiento panorámico o de desplazamiento rápido, esta característica proporciona al usuario una indicación visual de que quedan elementos por mostrarse completamente y, al mismo tiempo, se conserva la suavidad de movimientos. Si usas una de las técnicas siguientes, puedes establecer **ShowsScrollingPlaceholders** en "false" si prefieres que el sistema no represente marcadores de posición.
 
@@ -239,7 +240,7 @@ La estrategia general del evento [**ContainerContentChanging**](https://msdn.mic
 
 4.  Si ejecutas la aplicación ahora y realizas rápidamente un movimiento panorámico o de desplazamiento a través de la vista de cuadrícula, verás el mismo comportamiento que para **x:Phase**.
 
-## Reciclaje de contenedores con colecciones heterogéneas
+## <a name="container-recycling-with-heterogeneous-collections"></a>Reciclaje de contenedores con colecciones heterogéneas
 
 En algunas aplicaciones, debes tener una interfaz de usuario distinta para los diferentes tipos de elementos de una colección. Esto puede crear una situación en la que los paneles de virtualización no puedan reutilizar o reciclar los elementos visuales usados para mostrar los elementos. Recrear los elementos visuales de un elemento durante el movimiento panorámico elimina muchas de las ganancias de rendimiento que proporciona la virtualización. Sin embargo, con un poco de planeación se puede hacer que los paneles de virtualización puedan reutilizar los elementos. Los desarrolladores tienen dos opciones en función de su escenario: el evento [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) o un selector de plantilla de elementos. El enfoque de **ChoosingItemContainer** tiene un mejor rendimiento.
 
@@ -320,6 +321,6 @@ Cuando hay una distribución desigual de los elementos que usan plantillas de el
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,28 +4,26 @@ ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "Obtén las directrices de la interfaz de usuario y de la experiencia del usuario para los anuncios en aplicaciones."
 title: Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios en aplicaciones
 translationtype: Human Translation
-ms.sourcegitcommit: 8574695fe12042e44831227f81e1f6ea45e9c0da
-ms.openlocfilehash: 3019834a314e552654d74358f4b1eed8451d5119
+ms.sourcegitcommit: 148aca16104f599f3048f5965c4131a3f37799f8
+ms.openlocfilehash: 97feb4f79e0592a7b54a8263b15cd2b85dd3243d
 
 
 ---
 
-# Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios en aplicaciones
+# <a name="ui-and-user-experience-guidelines-for-ads-in-apps"></a>Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios en aplicaciones
 
 
-
-
-## Recursos de interfaz de usuario generales para las aplicaciones de Windows
+## <a name="general-ui-resources-for-windows-apps"></a>Recursos de interfaz de usuario generales para las aplicaciones de Windows
 
 Puedes encontrar información sobre cómo diseñar la apariencia de las aplicaciones en [Diseño e interfaz de usuario](https://developer.microsoft.com/windows/design).
 
-## Procedimientos recomendados de AdControl
+## <a name="adcontrol-best-practices"></a>Procedimientos recomendados de AdControl
 
 * [Procedimientos recomendados de AdControl: QUÉ HACER](#adcontrolbestpracticesdo10)
 * [Procedimientos recomendados de AdControl: QUÉ NO HACER](#adcontrolbestpracticesdont10)
 
 <span id="adcontrolbestpracticesdo10"/>
-### Procedimientos recomendados de AdControl: QUÉ HACER
+### <a name="adcontrol-best-practices-do"></a>Procedimientos recomendados de AdControl: QUÉ HACER
 
 * Diseñar la publicidad en la experiencia. Ofrece a tus diseñadores un anuncio de muestra para planear el aspecto que tendrá la publicidad. Dos ejemplos de anuncios bien planeados en las aplicaciones son el diseño de anuncios como contenido y el diseño de división.
 
@@ -34,7 +32,7 @@ Puedes encontrar información sobre cómo diseñar la apariencia de las aplicaci
 * Realizar un planeamiento para las ocasiones en que no haya anuncios disponibles. Puede que haya ocasiones en que no se envíen anuncios a la aplicación. Diseña las páginas de manera que tengan un magnífico aspecto tanto si muestran un anuncio como si no. Para obtener más información, consulta [Control de errores](error-handling-with-advertising-libraries.md).
 
 <span id="adcontrolbestpracticesdont10"/>
-### Procedimientos recomendados de AdControl: QUÉ NO HACER
+### <a name="adcontrol-best-practices-dont"></a>Procedimientos recomendados de AdControl: QUÉ NO HACER
 
 * Colocar publicidad en la superficie abierta. El espacio de anuncios no debe colocarse en el primer pedazo abierto de superficie que encuentres. En su lugar, debe incluirse en el diseño general de la aplicación.
 
@@ -43,7 +41,7 @@ Puedes encontrar información sobre cómo diseñar la apariencia de las aplicaci
 * Distraer al usuario de sus tareas principales. La aplicación siempre debe ser el enfoque principal. El espacio de anuncios debe incluirse de modo que sea un foco secundario.
 
 <span id="interstitialbestpractices10"/>
-## Directivas y procedimientos recomendados para anuncios intersticiales
+## <a name="interstitial-best-practices-and-policies"></a>Directivas y procedimientos recomendados para anuncios intersticiales
 
 * [Procedimientos recomendados para anuncios intersticiales: QUÉ HACER](#interstitialbestpracticesdo10)
 * [Procedimientos recomendados para anuncios intersticiales: QUÉ EVITAR](#interstitialbestpracticesavoid10)
@@ -54,7 +52,7 @@ Si se usan con distinción, los anuncios intersticiales en vídeo pueden aumenta
 Nuestro objetivo es ayudarte a lograr esta distinción. Dado que conoces tu aplicación mejor que nadie, excepto en lo que a directivas se refiere, la decisión final está en tus manos. Lo más importante a tener en cuenta es que las clasificaciones de la aplicación y los ingresos están estrechamente relacionados.
 
 <span id="interstitialbestpracticesdo10"/>
-### Procedimientos recomendados para anuncios intersticiales: QUÉ HACER
+### <a name="interstitial-best-practices-do"></a>Procedimientos recomendados para anuncios intersticiales: QUÉ HACER
 
 * Encaja anuncios intersticiales en el flujo natural de la aplicación, como, por ejemplo, entre los niveles del juego.
 
@@ -80,17 +78,18 @@ Nuestro objetivo es ayudarte a lograr esta distinción. Dado que conoces tu apli
 
     * Si optas por ahorrar ancho de banda del usuario en función de [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx), existen algunas API en la clase **ConnectionProfile** que pueden resultarte útiles.
 
-* Usa el tiempo de espera predeterminado (30s), a menos que haya una razón válida para cambiarlo, pero no uses menos de 10s.
+* Usa el tiempo de espera predeterminado (30 s), a menos que haya una razón válida para cambiarlo, pero no uses menos de 10 s.
 
     * Los anuncios en vídeo tardan mucho más tiempo en descargarse que los banners, especialmente en los mercados que no tienen conexiones de alta velocidad.
 
+<span/>
 
 * Ten en cuenta el plan de datos del usuario. Por ejemplo, no lo muestres o advierte al usuario, antes de presentar un anuncio en vídeo en un dispositivo móvil que supere o se acerque al límite de datos. Existen algunas API en la clase [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) que pueden resultarte útiles.
 
 * Mejora continuamente tu aplicación después del envío inicial. Consulta los informes de anuncios y realiza cambios de diseño para mejorar las velocidades de relleno y finalización de vídeo.
 
 <span id="interstitialbestpracticesavoid10"/>
-### Procedimientos recomendados para anuncios intersticiales: QUÉ EVITAR
+### <a name="interstitial-best-practices-avoid"></a>Procedimientos recomendados para anuncios intersticiales: QUÉ EVITAR
 
 * Excederse. No fuerces anuncios con una frecuencia superior a cada 5 minutos, a menos que el usuario use explícitamente una ventaja tangible opcional, además del juego.
 
@@ -106,8 +105,9 @@ Nuestro objetivo es ayudarte a lograr esta distinción. Dado que conoces tu apli
 
 * Capturar un anuncio en vídeo más de 5 minutos antes de llamar a [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx).
 
-    * Un buen inventario maximizará la conversión de anuncios capturados previamente en impresiones facturables.
+  * Un buen inventario maximizará la conversión de anuncios capturados previamente en impresiones facturables.
 
+<span/>
 
 * Penalizar a un usuario por errores en la presentación de anuncios, como la ausencia de anuncios disponibles. Por ejemplo, si muestras una opción de la interfaz de usuario destinada a "Ver un anuncio para obtener *xxx*", debes proporcionar *xxx* si el usuario hizo su parte. Existen dos opciones a tener en cuenta:
 
@@ -122,7 +122,7 @@ Nuestro objetivo es ayudarte a lograr esta distinción. Dado que conoces tu apli
     * Una camisa personalizada para el avatar del jugador está bien, siempre y cuando no proporcione camuflaje.
 
 <span id="interstitialbestpracticesnever10"/>
-### Procedimientos recomendados para anuncios intersticiales: LO QUE NUNCA SE DEBE HACER (con aplicación de directiva)
+### <a name="interstitial-best-practices-never-policy-enforced"></a>Procedimientos recomendados para anuncios intersticiales: LO QUE NUNCA SE DEBE HACER (con aplicación de directiva)
 
 * No colocar nunca elementos de la interfaz de usuario sobre el contenedor de anuncios.
 
@@ -130,9 +130,9 @@ Nuestro objetivo es ayudarte a lograr esta distinción. Dado que conoces tu apli
 
 <span/>
 
-* No llamar nunca a **Show** mientras el usuario está ocupado con la aplicación.
+* No llamar nunca a [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) mientras el usuario está ocupado con la aplicación.
 
-    * Dado que **InterstitialAd** creará una superposición de pantalla completa, que al usuario le parecerá desproporcionada.
+    * Dado que [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) creará una superposición de pantalla completa, que al usuario le parecerá desproporcionada.
 
     * También se pueden producir tasas de clics exageradas.
 
@@ -140,7 +140,7 @@ Nuestro objetivo es ayudarte a lograr esta distinción. Dado que conoces tu apli
 
 * No solicitar nunca un anuncio nuevo en el contexto del controlador de eventos para el evento [ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.erroroccurred.aspx). Esto puede ocasionar un bucle infinito y causar problemas de funcionamiento del servicio de publicidad.
 
-* No solicitar nunca un anuncio intersticial y luego no mostrar el anuncio que se proporciona para la aplicación. Si solicitas un anuncio y luego recibes el evento [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx) en respuesta a tu solicitud, debes mostrar el anuncio. Si implementas tu propia solución de mediación de anuncios con otras redes de publicidad, solicita un anuncio para el control **InterstitialAd** únicamente después de que las solicitudes realizadas a otras redes de publicidad no hayan resultado fructuosas.
+* Nunca solicites un anuncio intersticial solo para tener un anuncio de copia de seguridad para una secuencia en cascada de anuncios. Si solicitas un anuncio intersticial y, a continuación, recibes el evento [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx), el siguiente anuncio intersticial que se muestra en la aplicación debe ser el anuncio que está listo para mostrarse a través del método [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx).
 
  
 
@@ -148,6 +148,6 @@ Nuestro objetivo es ayudarte a lograr esta distinción. Dado que conoces tu apli
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

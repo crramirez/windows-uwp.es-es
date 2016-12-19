@@ -1,25 +1,25 @@
 ---
 author: TylerMSFT
-title: "Dar soporte a tu aplicación mediante tareas en segundo plano"
-description: "Los temas de esta sección muestran cómo ejecutar tu propio código ligero en segundo plano al responder a los desencadenadores con tareas en segundo plano."
+title: "Hacer que tu aplicación sea compatible con las tareas en segundo plano"
+description: "Los temas de esta sección muestran cómo hacer que un código ligero se ejecute en segundo plano en respuesta a desencadenadores."
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
 translationtype: Human Translation
-ms.sourcegitcommit: 0f1bf88b1470cc5205f2e98ef15300da705203b1
-ms.openlocfilehash: 35b64637904e35413217d4cf500658999db07088
+ms.sourcegitcommit: 7208ca16fe7eee2ec4039f3c4bc6305dceac96f3
+ms.openlocfilehash: b33fd118289ca575207be97bd8a1a33ddcc49a87
 
 ---
 
-# Dar soporte a tu aplicación mediante tareas en segundo plano
+# <a name="support-your-app-with-background-tasks"></a>Hacer que tu aplicación sea compatible con las tareas en segundo plano
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Los temas de esta sección muestran cómo ejecutar tu propio código ligero en segundo plano con tareas en segundo plano. Puedes usar tareas en segundo plano para proporcionar funcionalidad cuando la aplicación esté suspendida o no se esté ejecutando. También puedes usar tareas en segundo plano para aplicaciones de comunicación en tiempo real como VOIP, correo y mensajería instantánea.
+Los temas de esta sección muestran cómo hacer que un código ligero se ejecute en segundo plano en respuesta a desencadenadores. Puedes usar tareas en segundo plano para proporcionar funcionalidad cuando la aplicación esté suspendida o no se esté ejecutando. También puedes usar tareas en segundo plano para aplicaciones de comunicación en tiempo real como VOIP, correo y mensajería instantánea.
 
-## Reproducir elementos multimedia en segundo plano
+## <a name="playing-media-in-the-background"></a>Reproducir elementos multimedia en segundo plano
 
 A partir de la versión 1607 de Windows 10, la reproducción de audio en segundo plano es mucho más fácil. Consulta [Reproducir elementos multimedia en segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio).
 
-## Tareas en segundo plano dentro y fuera de proceso
+## <a name="in-process-and-out-of-process-background-tasks"></a>Tareas en segundo plano dentro y fuera de proceso
 
 Existen dos enfoques para implementar tareas en segundo plano: dentro de proceso, en el que la aplicación y su proceso en segundo plano se ejecutan en el mismo proceso, y fuera de proceso, donde la aplicación y el proceso en segundo plano se ejecutan en procesos aparte. Con la versión 1607 de Windows 10, se introdujo la admisión del segundo plano en proceso para simplificar la escritura de las tareas en segundo plano. Pero todavía se pueden escribir tareas fuera del proceso en segundo plano. Consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md) para ver recomendaciones sobre cuándo escribir una tarea en segundo plano en proceso o fuera de proceso.
 
@@ -36,7 +36,7 @@ Para comenzar rápidamente con las tareas en segundo plano fuera de proceso, con
 > [!TIP]
 > A partir de Windows 10, ya no necesitarás colocar una aplicación en la pantalla de bloqueo como requisito previo para registrarle una tarea en segundo plano.
 
-## Tareas en segundo plano para eventos del sistema
+## <a name="background-tasks-for-system-events"></a>Tareas en segundo plano para eventos del sistema
 
 Puedes hacer que tu aplicación responda a eventos generados por el sistema registrando una tarea en segundo plano con la clase [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838). Una aplicación puede usar cualquiera de los siguientes desencadenadores de eventos del sistema (definidos en [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839))
 
@@ -50,7 +50,7 @@ Puedes hacer que tu aplicación responda a eventos generados por el sistema regi
 
 Para obtener más información, consulta [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md).
 
-## Condiciones para tareas en segundo plano
+## <a name="conditions-for-background-tasks"></a>Condiciones para tareas en segundo plano
 
 Puedes controlar cuándo se ejecuta la tarea en segundo plano, incluso después de que se desencadene, agregando una condición. Una vez desencadenada, la tarea en segundo plano no se ejecutará hasta que se cumplan todas las condiciones. Se pueden usar las siguientes condiciones (representadas por la enumeración [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)).
 
@@ -66,11 +66,11 @@ Puedes controlar cuándo se ejecuta la tarea en segundo plano, incluso después 
  
 Para obtener más información, consulta [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md).
 
-## Requisitos del manifiesto de la aplicación
+## <a name="application-manifest-requirements"></a>Requisitos del manifiesto de la aplicación
 
 Antes de que la aplicación pueda registrar correctamente una tarea en segundo plano que se ejecuta fuera de proceso, debe estar declarada en el manifiesto de la aplicación. Las tareas en segundo plano que se ejecutan en el mismo proceso que su aplicación de host no necesitan declararse en el manifiesto de la aplicación. Para obtener más información, consulta [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md).
 
-## Tareas en segundo plano
+## <a name="background-tasks"></a>Tareas en segundo plano
 
 Los siguientes desencadenadores en tiempo real pueden usarse para ejecutar el código personalizado ligero en segundo plano:
 
@@ -86,7 +86,7 @@ Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](
 
 Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, llama a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
 
-## Desencadenadores de eventos del sistema
+## <a name="system-event-triggers"></a>Desencadenadores de eventos del sistema
 
 La enumeración [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839) representa los siguientes desencadenadores de eventos del sistema:
 
@@ -106,36 +106,36 @@ Los siguientes desencadenadores de eventos del sistema indican cuándo el usuari
 | **LockScreenApplicationRemoved** | Un icono dinámico de la aplicación se quita de la pantalla de bloqueo. |
 
  
-## Restricciones de recursos de las tareas en segundo plano
+## <a name="background-task-resource-constraints"></a>Restricciones de recursos de las tareas en segundo plano
 
 Las tareas en segundo plano son ligeras. Mantener la ejecución en segundo plano en unos mínimos garantiza la mejor experiencia del usuario con las aplicaciones en primer plano y una mayor vida de la batería. Esto se logra aplicando restricciones de recursos a las tareas en segundo plano.
 
 Las tareas en segundo plano se limitan a 30 segundos de uso.
 
-### Restricciones de memoria
+### <a name="memory-constraints"></a>Restricciones de memoria
 
 Debido a las restricciones de recursos para los dispositivos con poca memoria, las tareas en segundo plano pueden tener un límite de memoria que determina la cantidad máxima de memoria que puede usar la tarea en segundo plano. Si la tarea en segundo plano intenta realizar una operación que superaría este límite, no se podrá realizar la operación y puede que esta genere una excepción de falta de memoria que puede controlar la tarea. Si la tarea no controla la excepción de falta de memoria o la naturaleza de la operación intentada es tal que no se genera una excepción de falta de memoria, la tarea se finalizará inmediatamente.  
  Puedes usar las API [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831) para consultar el uso de memoria actual y limitarlo para descubrir tu límite (si existe) y para supervisar el uso de memoria en curso de la tarea en segundo plano.
 
-### Límite por dispositivo para aplicaciones con tareas en segundo plano para dispositivos de baja memoria
+### <a name="per-device-limit-for-apps-with-background-tasks-for-low-memory-devices"></a>Límite por dispositivo para aplicaciones con tareas en segundo plano para dispositivos de baja memoria
 
 En los dispositivos con restricciones de memoria, existe un límite en el número de aplicaciones que se pueden instalar en un dispositivo y en el uso de tareas en segundo plano en cualquier momento. Si se supera este número, no se podrá realizar la llamada a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485), que es necesaria para registrar todas las tareas en segundo plano.
 
-### Ahorro de batería
+### <a name="battery-saver"></a>Ahorro de batería
 
 A menos que permitas que tu aplicación siga ejecutando tareas en segundo plano y recibiendo notificaciones de inserción cuando el Ahorro de batería está activado, cuando se habilite la característica Ahorro de batería, esta evitará la ejecución de las tareas en segundo plano cuando el dispositivo no esté conectado a alimentación externa y la batería tenga un nivel de carga restante inferior al especificado. Esto no impide que puedas registrar tareas en segundo plano.
 
-## Los recursos de tareas en segundo plano garantizan la comunicación en tiempo real.
+## <a name="background-task-resource-guarantees-for-real-time-communication"></a>Los recursos de tareas en segundo plano garantizan la comunicación en tiempo real.
 
 Para evitar que las cuotas de recursos interfieran con la funcionalidad de comunicación en tiempo real, las tareas en segundo plano que usan el [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) y el [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) reciben cuotas de recursos de CPU garantizadas para todas las tareas en ejecución. Las cuotas de recursos son las mencionadas anteriormente y permanecen constantes para estas tareas en segundo plano.
 
 Tu aplicación no tiene que hacer nada de forma distinta para obtener las cuotas de recursos garantizadas para las tareas en segundo plano [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) y [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543). El sistema siempre trata estas tareas como tareas en segundo plano críticas.
 
-## Desencadenador de mantenimiento
+## <a name="maintenance-trigger"></a>Desencadenador de mantenimiento
 
 Las tareas de mantenimiento solo se ejecutan cuando el dispositivo está conectado a la corriente alterna. Para obtener más información, consulta [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md).
 
-## Tareas en segundo plano para sensores y dispositivos
+## <a name="background-tasks-for-sensors-and-devices"></a>Tareas en segundo plano para sensores y dispositivos
 
 La aplicación puede acceder a sensores y dispositivos periféricos desde una tarea en segundo plano mediante la clase [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Puedes usar este desencadenador para operaciones de larga duración como, por ejemplo, la sincronización o supervisión de datos. A diferencia de las tareas para eventos del sistema, una tarea **DeviceUseTrigger** solo se puede desencadenar mientras tu aplicación se está ejecutando en primer plano y no se puede establecer en ella ninguna condición.
 
@@ -144,7 +144,7 @@ La aplicación puede acceder a sensores y dispositivos periféricos desde una ta
 
 Algunas operaciones críticas del dispositivo, como las actualizaciones del firmware que se ejecutan durante mucho tiempo, no se pueden realizar con [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Esas operaciones solo se pueden realizar en el equipo y solo las puede realizar una aplicación privilegiada que use [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315). Una *aplicación privilegiada* es una aplicación que ha recibido la autorización del fabricante del dispositivo para realizar esas operaciones. Los metadatos del dispositivo se usan para especificar qué aplicación, si es el caso, se ha designado como aplicación privilegiada para un dispositivo. Para más información, consulta [Sincronización y actualización de dispositivos para aplicaciones para dispositivos de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkId=306619).
 
-## Administrar tareas en segundo plano
+## <a name="managing-background-tasks"></a>Administrar tareas en segundo plano
 
 Las tareas en segundo plano pueden notificar progreso, finalización o cancelación a tu aplicación usando eventos y almacenamiento local. La aplicación también puede capturar excepciones generadas por una tarea en segundo plano, y administrar el registro de tareas en segundo plano durante las actualizaciones de la aplicación. Si quieres obtener más información, consulta:
 
@@ -154,7 +154,7 @@ Las tareas en segundo plano pueden notificar progreso, finalización o cancelaci
 **Nota**  
 Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- ## Temas relacionados
+ ## <a name="related-topics"></a>Temas relacionados
 
 **Guía conceptual para multitarea en Windows 10**
 
@@ -182,6 +182,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

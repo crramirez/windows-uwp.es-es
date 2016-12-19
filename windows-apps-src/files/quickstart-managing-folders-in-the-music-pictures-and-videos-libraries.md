@@ -1,15 +1,15 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: "Archivos y carpetas de las bibliotecas de música, imágenes y vídeos"
 description: "Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas correspondientes. También puedes quitar carpetas de bibliotecas y obtener la lista de carpetas de una biblioteca para detectar archivos de vídeos, música y fotos almacenados."
 translationtype: Human Translation
-ms.sourcegitcommit: affe6002e22bd10e714dc4782a60ef528c31a407
-ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 4e2b7d10e1d24427aede21ccae176d7cd55f9de8
 
 ---
 
-# Archivos y carpetas de las bibliotecas de música, imágenes y vídeos
+# <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>Archivos y carpetas de las bibliotecas de música, imágenes y vídeos
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -19,7 +19,7 @@ Agrega carpetas existentes de música, imágenes o vídeos a las bibliotecas cor
 
 Una biblioteca es una colección virtual de carpetas que incluye una carpeta conocida de manera predeterminada, además de otras carpetas que el usuario ha agregado a la biblioteca mediante el uso de la aplicación o de una de las aplicaciones integradas. Por ejemplo, la biblioteca de imágenes incluye la carpeta Imágenes de forma predeterminada. El usuario puede agregar o quitar carpetas de la biblioteca de imágenes mediante el uso de la aplicación o de la aplicación de fotos integrada.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 
 -   **Comprender la programación asincrónica de las aplicaciones de la Plataforma universal de Windows (UWP)**
@@ -36,7 +36,7 @@ Una biblioteca es una colección virtual de carpetas que incluye una carpeta con
 
     Para más información, consulta [Permisos de acceso de archivos](file-access-permissions.md).
 
-## Obtener una referencia a una biblioteca
+## <a name="get-a-reference-to-a-library"></a>Obtener una referencia a una biblioteca
 
 
 **Nota**  Recuerda que debes declarar la funcionalidad apropiada.
@@ -53,7 +53,7 @@ Para obtener una referencia a la biblioteca de música, imágenes o vídeos del 
         (Windows.Storage.KnownLibraryId.Pictures);
 ```
 
-## Obtener la lista de carpetas de una biblioteca
+## <a name="get-the-list-of-folders-in-a-library"></a>Obtener la lista de carpetas de una biblioteca
 
 
 Para obtener la lista de carpetas de una biblioteca, obtén el valor de la propiedad [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724).
@@ -66,7 +66,7 @@ Para obtener la lista de carpetas de una biblioteca, obtén el valor de la propi
     IObservableVector<Windows.Storage.StorageFolder> myPictureFolders = myPictures.Folders;
 ```
 
-## Obtener la carpeta de una biblioteca donde se guardan los nuevos archivos de forma predeterminada
+## <a name="get-the-folder-in-a-library-where-new-files-are-saved-by-default"></a>Obtener la carpeta de una biblioteca donde se guardan los nuevos archivos de forma predeterminada
 
 
 Para obtener la carpeta de una biblioteca donde se guardan los nuevos archivos de forma predeterminada, obtén el valor de la propiedad [**StorageLibrary.SaveFolder**](https://msdn.microsoft.com/library/windows/apps/dn251728).
@@ -75,7 +75,7 @@ Para obtener la carpeta de una biblioteca donde se guardan los nuevos archivos d
     Windows.Storage.StorageFolder savePicturesFolder = myPictures.SaveFolder;
 ```
 
-## Agregar una carpeta existente a una biblioteca
+## <a name="add-an-existing-folder-to-a-library"></a>Agregar una carpeta existente a una biblioteca
 
 
 Para agregar una carpeta a una biblioteca, llama al método [**StorageLibrary.RequestAddFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251726). Si tomamos como ejemplo la biblioteca de imágenes, la llamada a este método hace que se muestre un selector de carpetas al usuario con un botón **Agregar esta carpeta a Imágenes**. Si el usuario elige una carpeta, la carpeta permanece en su ubicación original en el disco y se convierte en un elemento de la propiedad [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) (y en la aplicación Fotos integrada), aunque la carpeta no aparece como elemento secundario de la carpeta Imágenes en el Explorador de archivos.
@@ -85,7 +85,7 @@ Para agregar una carpeta a una biblioteca, llama al método [**StorageLibrary.Re
     Windows.Storage.StorageFolder newFolder = await myPictures.RequestAddFolderAsync();
 ```
 
-## Quitar una carpeta de una biblioteca
+## <a name="remove-a-folder-from-a-library"></a>Quitar una carpeta de una biblioteca
 
 
 Para quitar una carpeta de una biblioteca, llama al método [**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727) y especifica la carpeta que quieres quitar. Puedes usar [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) y un control [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) (o similar) para que el usuario seleccione una carpeta para quitar.
@@ -99,7 +99,7 @@ El siguiente ejemplo se da por hecho que el usuario ha seleccionado la carpeta q
     bool result = await myPictures.RequestRemoveFolderAsync(folder);
 ```
 
-## Recibir una notificación de cambios en la lista de carpetas de una biblioteca
+## <a name="get-notified-of-changes-to-the-list-of-folders-in-a-library"></a>Recibir una notificación de cambios en la lista de carpetas de una biblioteca
 
 
 Para obtener notificaciones sobre los cambios en la lista de carpetas de una biblioteca, registra un controlador para el evento [**StorageLibrary.DefinitionChanged**](https://msdn.microsoft.com/library/windows/apps/dn251723) de la biblioteca.
@@ -115,7 +115,7 @@ void HandleDefinitionChanged(Windows.Storage.StorageLibrary sender, object args)
 }
 ```
 
-## Carpetas de la biblioteca multimedia
+## <a name="media-library-folders"></a>Carpetas de la biblioteca multimedia
 
 
 El dispositivo proporciona cinco ubicaciones predefinidas para que los usuarios y las aplicaciones almacenen archivos multimedia. Las aplicaciones integradas almacenan en estas ubicaciones los elementos multimedia que los usuarios descargan y crean.
@@ -134,7 +134,7 @@ Las ubicaciones son las siguientes:
 
 Además, los usuarios y las aplicaciones pueden almacenar archivos multimedia en la tarjeta SD, fuera de las carpetas de la bibliotecas multimedia. Para buscar de forma segura un archivo multimedia en la tarjeta SD, examina el contenido de la tarjeta SD o pide al usuario que localice el archivo con un selector de archivos. Para obtener más información, consulta [Acceder a la tarjeta SD](access-the-sd-card.md).
 
-## Consultar las bibliotecas multimedia
+## <a name="querying-the-media-libraries"></a>Consultar las bibliotecas multimedia
 
 Para obtener una colección de archivos, especifica la biblioteca y el tipo de archivos que quieras.
 
@@ -164,7 +164,7 @@ private async void getSongs()
 }
 ```
 
-### Los resultados de la consulta incluyen el almacenamiento interno y el extraíble
+### <a name="query-results-include-both-internal-and-removable-storage"></a>Los resultados de la consulta incluyen el almacenamiento interno y el extraíble
 
 Los usuarios pueden elegir almacenar los archivos, de forma predeterminada, en la tarjeta SD opcional. Sin embargo, las aplicaciones pueden optar por no permitir que los archivos se almacenen en la tarjeta SD. Por esta razón, las bibliotecas multimedia pueden dividirse entre el almacenamiento interno del dispositivo y la tarjeta SD.
 
@@ -177,7 +177,7 @@ Ten en cuenta el estado del almacenamiento del dispositivo mostrado en la imagen
 Si consultas el contenido de la biblioteca de imágenes llamando a `await KnownFolders.PicturesLibrary.GetFilesAsync()`, los resultados incluirán internalPic.jpg y SDPic.jpg.
 
 
-## Trabajar con fotos
+## <a name="working-with-photos"></a>Trabajar con fotos
 
 
 En dispositivos en los que la cámara guarda dos imágenes por cada foto, una en baja resolución y otra en alta resolución, las consultas profundas solo devuelven las imágenes de baja resolución.
@@ -197,7 +197,7 @@ Si quieres que el usuario pueda volver a abrir una foto en la aplicación que la
   testPhoto.Properties.SavePropertiesAsync(propertiesToSave).AsyncWait();   
 ```
 
-## Usar métodos de secuencias para agregar un archivo a una biblioteca multimedia
+## <a name="using-stream-methods-to-add-a-file-to-a-media-library"></a>Usar métodos de secuencias para agregar un archivo a una biblioteca multimedia
 
 
 Si accedes a una biblioteca a través de una carpeta conocida —por ejemplo, **KnownFolders.PictureLibrary**— y usas métodos de secuencias para agregar un archivo a la biblioteca, tienes que asegurarte de que cierras todas las secuencias que abre el código. De lo contrario, estos métodos no podrán agregar el archivo a la biblioteca multimedia, ya que habrá al menos una secuencia que controla el archivo.
@@ -246,6 +246,6 @@ using (var sourceStream = await sourceFile.OpenReadAsync())
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

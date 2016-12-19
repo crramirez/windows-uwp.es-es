@@ -4,12 +4,12 @@ title: "Administrar la activación de archivos"
 description: "Una aplicación se puede registrar para convertirse en el controlador predeterminado de un tipo de archivo específico."
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
 translationtype: Human Translation
-ms.sourcegitcommit: 0e0fa6cf082034110e11b9bde910564de8f5048c
-ms.openlocfilehash: dffbccad62f48667a0495ceb205c751ccce0a3e0
+ms.sourcegitcommit: ed7aee6add80d31b48006d9dec9e207c449a1912
+ms.openlocfilehash: ffcfa8991e9eb73b8d6a47bb7dd1cd23220097e0
 
 ---
 
-# Controlar la activación de archivos
+# <a name="handle-file-activation"></a>Controlar la activación de archivos
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -28,7 +28,7 @@ En estos pasos se muestra cómo realizar el registro de un tipo de archivo perso
 
 > **Nota** En las aplicaciones para UWP, algunas extensiones de archivo y URI se reservan para que las usen aplicaciones integradas y el sistema operativo. Se ignorarán los intentos de registrar aplicaciones con una extensión de archivo o URI reservada. Para más información, consulta [Nombres de esquemas de URI y archivos reservados](reserved-uri-scheme-names.md).
 
-## Paso 1: Especificar el punto de extensión en el manifiesto del paquete
+## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>Paso 1: Especificar el punto de extensión en el manifiesto del paquete
 
 
 La aplicación recibe eventos de activación solo para las extensiones de archivo listadas en el manifiesto del paquete. Aquí se muestra cómo debes indicar que la aplicación controla los archivos con la extensión `.alsdk`.
@@ -43,8 +43,8 @@ La aplicación recibe eventos de activación solo para las extensiones de archiv
 | **Logotipo** | Especifica el logotipo que se usa para identificar el tipo de archivo en el escritorio y en [Establecer programas predeterminados](https://msdn.microsoft.com/library/windows/desktop/cc144154) en el **Panel de control**. Si no se especifica ningún logotipo, se usa el logotipo pequeño para la aplicación. |
 | **Información sobre herramientas** | Especifica la [Información sobre herramientas](https://msdn.microsoft.com/library/windows/desktop/cc144152) de un grupo de tipos de archivo. Este texto de información sobre herramientas aparece cuando el usuario mantiene el puntero sobre el icono de un archivo de este tipo. |
 | **Nombre** | Elige un nombre para un grupo de tipos de archivos que comparten el mismo nombre para mostrar, logotipo, información y marcas de edición. Elige un nombre de grupo que pueda continuar siendo el mismo a lo largo de las actualizaciones de la aplicación. **Nota** El nombre debe estar completamente en minúsculas. |
-| **Content Type** | Especifica el tipo de contenido MIME, como **image/jpeg**, de un tipo de archivo concreto. **Nota importante sobre los tipos de contenido permitidos: **Esta es una lista ordenada alfabéticamente de los tipos de contenido MIME que no se pueden especificar en el manifiesto del paquete porque están reservados o prohibidos: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
-| **File type** | Especifica el tipo de archivo que se va a registrar, precedido de un punto, por ejemplo, ".jpeg". **Tipos de archivos reservados y prohibidos** Consulta [Tipos de archivos y nombres de esquema de URI reservados](reserved-uri-scheme-names.md) para obtener una lista ordenada alfabéticamente de los tipos de archivo para aplicaciones integradas que no se pueden registrar para las aplicaciones para UWP porque están reservados o prohibidos. |
+| **Content Type** | Especifica el tipo de contenido MIME, como **image/jpeg**, de un tipo de archivo concreto. **Nota importante sobre los tipos de contenido permitidos:** Esta es una lista ordenada alfabéticamente de los tipos de contenido MIME que no se pueden especificar en el manifiesto del paquete porque están reservados o prohibidos: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
+| **File type** | Especifica el tipo de archivo para el que se va a registrar, precedido de un punto, por ejemplo, “.jpeg”. **Tipos de archivos reservados y prohibidos:** Consulta [Tipos de archivos y nombres de esquema de URI reservados](reserved-uri-scheme-names.md) para obtener una lista ordenada alfabéticamente de los tipos de archivo para aplicaciones integradas que no se pueden registrar para las aplicaciones para UWP porque están reservados o prohibidos. |
 
 2.  Escribe `alsdk` como el valor de **Name**.
 3.  Escribe `.alsdk` como el valor de **File Type**.
@@ -66,7 +66,7 @@ Los pasos anteriores permiten agregar un elemento [**Extension**](https://msdn.m
       </Extensions>
 ```
 
-## Paso 2: Agregar los iconos adecuados
+## <a name="step-2-add-the-proper-icons"></a>Paso 2: Agregar los iconos adecuados
 
 
 Las aplicaciones que se convierten en predeterminadas para un tipo de archivo muestran sus iconos en varios lugares del sistema. Por ejemplo, estos iconos se muestran en:
@@ -79,7 +79,7 @@ Las aplicaciones que se convierten en predeterminadas para un tipo de archivo mu
 Ajusta el aspecto del logotipo del icono de la aplicación y usa el color de fondo de la aplicación en lugar de usar un icono transparente. Extiende el logotipo hasta el borde sin que quede espacio. Prueba los iconos en fondos de color blanco. Para ver ejemplos de iconos, consulta el [ejemplo de inicio por asociación](http://go.microsoft.com/fwlink/p/?LinkID=620490).
 ![el explorador de soluciones con una vista de los archivos de la carpeta imágenes. hay versiones de 16, 32, 48 y 256 píxeles de ‘icon.targetsize’ y ‘smalltile-sdk’](images/seviewofimages.png)
 
-## Paso 3: Administrar el evento activado
+## <a name="step-3-handle-the-activated-event"></a>Paso 3: Administrar el evento activado
 
 
 El controlador de eventos [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331) recibe todos los eventos de activación de archivos.
@@ -115,16 +115,16 @@ Se recomienda que las aplicaciones creen un nuevo elemento Frame de XAML para ca
 
 Si se inician a través de la activación de archivo, las aplicaciones deberían plantearse incluir una interfaz de usuario que permita al usuario volver a la página superior de la aplicación.
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 
 Los archivos que recibes pueden provenir de un origen que no es de confianza. Se recomienda que valides el contenido de un archivo antes de realizar una acción en él. Para más información, consulta [Escribir código seguro](http://go.microsoft.com/fwlink/p/?LinkID=142053).
 
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 **Ejemplo completo**
 
@@ -154,6 +154,6 @@ Los archivos que recibes pueden provenir de un origen que no es de confianza. Se
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

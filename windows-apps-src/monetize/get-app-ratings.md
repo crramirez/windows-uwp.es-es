@@ -4,16 +4,16 @@ ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
 description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de clasificación agregados de un intervalo de fechas y otros filtros opcionales."
 title: "Obtener la clasificación de la aplicación"
 translationtype: Human Translation
-ms.sourcegitcommit: 67845c76448ed13fd458cb3ee9eb2b75430faade
-ms.openlocfilehash: 45df3a1296ba06551e08705e9d72a693ad3d33e5
+ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
+ms.openlocfilehash: 86685984256459e0bb125340daa1616b09982429
 
 ---
 
-# Obtener la clasificación de la aplicación
+# <a name="get-app-ratings"></a>Obtener la clasificación de la aplicación
 
 Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de clasificación en formato JSON pertenecientes a un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de clasificaciones](../publish/ratings-report.md) del panel del Centro de desarrollo de Windows.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 
 Para usar este método, primero debes hacer lo siguiente:
@@ -22,10 +22,10 @@ Para usar este método, primero debes hacer lo siguiente:
 * [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 
-## Solicitud
+## <a name="request"></a>Solicitud
 
 
-### Sintaxis de la solicitud
+### <a name="request-syntax"></a>Sintaxis de la solicitud
 
 | Método | URI de la solicitud                                                      |
 |--------|------------------------------------------------------------------|
@@ -33,7 +33,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
  
 
-### Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -41,112 +41,23 @@ Para usar este método, primero debes hacer lo siguiente:
 
 <span/> 
 
-### Parámetros de solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Parámetro</th>
-<th align="left">Tipo</th>
-<th align="left">Descripción</th>
-<th align="left">Obligatorio</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">applicationId</td>
-<td align="left">cadena</td>
-<td align="left">El Id. de la Tienda de la aplicación sobre la que quieres recuperar los datos de clasificación. El Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8.</td>
-<td align="left">Sí</td>
-</tr>
-<tr class="even">
-<td align="left">startDate</td>
-<td align="left">fecha</td>
-<td align="left">La fecha de inicio del intervalo de fechas de los datos de clasificación que se han de recuperar. El valor predeterminado es la fecha actual.</td>
-<td align="left">No</td>
-</tr>
-<tr class="odd">
-<td align="left">endDate</td>
-<td align="left">fecha</td>
-<td align="left">Fecha de finalización del intervalo de fechas de los datos de clasificación que se han de recuperar. El valor predeterminado es la fecha actual.</td>
-<td align="left">No</td>
-</tr>
-<tr class="even">
-<td align="left">top</td>
-<td align="left">entero</td>
-<td align="left">Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos.</td>
-<td align="left">No</td>
-</tr>
-<tr class="odd">
-<td align="left">skip</td>
-<td align="left">entero</td>
-<td align="left">Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente.</td>
-<td align="left">No</td>
-</tr>
-<tr class="even">
-<td align="left">filter</td>
-<td align="left">cadena</td>
-<td align="left">Una o más instrucciones que filtran las filas en la respuesta. Para obtener más información, consulta la sección [filtrar campos](#filter-fields) a continuación.</td>
-<td align="left">No</td>
-</tr>
-<tr class="odd">
-<td align="left">aggregationLevel</td>
-<td align="left">cadena</td>
-<td align="left">Especifica el intervalo de tiempo necesario para recuperar los datos agregados. Puede ser una de las siguientes cadenas: <strong>día</strong>, <strong>semana</strong> o <strong>mes</strong>. Si no se especifica, el valor predeterminado es <strong>día</strong>.</td>
-<td align="left">No</td>
-</tr>
-<tr class="even">
-<td align="left">orderby</td>
-<td align="left">cadena</td>
-<td align="left">Instrucción que ordena los valores de datos resultantes de cada clasificación. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:
-<ul>
-<li><strong>date</strong></li>
-<li><strong>osVersion</strong></li>
-<li><strong>market</strong></li>
-<li><strong>deviceType</strong></li>
-<li><strong>isRevised</strong></li>
-</ul>
-<p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p>
-<p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p></td>
-<td align="left">No</td>
-</tr>
-<tr class="odd">
-<td align="left">groupby</td>
-<td align="left">cadena</td>
-<td align="left"><p>Instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:</p>
-<ul>
-<li><strong>fecha</strong></li>
-<li><strong>applicationName</strong></li>
-<li><strong>market</strong></li>
-<li><strong>osVersion</strong></li>
-<li><strong>deviceType</strong></li>
-<li><strong>isRevised</strong></li>
-</ul>
-<p>Las filas de datos que se devuelvan contendrán los campos especificados en el parámetro <em>groupby</em> y en los siguientes:</p>
-<ul>
-<li><strong>fecha</strong></li>
-<li><strong>applicationId</strong></li>
-<li><strong>fiveStars</strong></li>
-<li><strong>fourStars</strong></li>
-<li><strong>threeStars</strong></li>
-<li><strong>twoStars</strong></li>
-<li><strong>oneStar</strong></li>
-</ul>
-<p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>&amp;groupby=osVersion,market&amp;aggregationLevel=week</em></p></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+| Parámetro        | Tipo   |  Descripción      |  Obligatorio  
+|---------------|--------|---------------|------|
+| applicationId | cadena | El Id. de la Tienda de la aplicación sobre la que quieres recuperar los datos de clasificación. El Id. de la Tienda está disponible en la [página Identidad de la aplicación](../publish/view-app-identity-details.md) del panel del Centro de desarrollo. Un ejemplo de un Id. de la Tienda sería 9WZDNCRFJ3Q8. |  Sí  |
+| startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de clasificación que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
+| endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de clasificación que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
+| top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
+| skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
+| filter | cadena  | Una o más instrucciones que filtran las filas en la respuesta. Para obtener más información, consulta la sección [filtrar campos](#filter-fields) a continuación. | No   |
+| aggregationLevel | cadena | Especifica el intervalo de tiempo necesario para recuperar los datos agregados. Puede ser una de las siguientes cadenas: <strong>día</strong>, <strong>semana</strong> o <strong>mes</strong>. Si no se especifica, el valor predeterminado es <strong>día</strong>. | No |
+| orderby | cadena | Instrucción que ordena los valores de datos resultantes de cada clasificación. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>date</strong></li><li><strong>osVersion</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>isRevised</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
+| groupby | cadena | Instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:<ul><li><strong>fecha</strong></li><li><strong>applicationName</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>deviceType</strong></li><li><strong>isRevised</strong></li></ul><p>Las filas de datos que se devuelvan contendrán los campos especificados en el parámetro <em>groupby</em> y en los siguientes:</p><ul><li><strong>fecha</strong></li><li><strong>applicationId</strong></li><li><strong>fiveStars</strong></li><li><strong>fourStars</strong></li><li><strong>threeStars</strong></li><li><strong>twoStars</strong></li><li><strong>oneStar</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>&amp;groupby=osVersion,market&amp;aggregationLevel=week</em></p> |  No  |
 
 <span/>
  
-### Campos de filtro
+### <a name="filter-fields"></a>Campos de filtro
 
 El parámetro *filter* de la solicitud contiene una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un campo y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**.
 
@@ -154,60 +65,16 @@ Este es un ejemplo de la cadena *filter*: *filter=market eq 'US' and deviceType 
 
 Para obtener una lista de los campos compatibles, consulta la tabla siguiente. Ten en cuenta que los valores de la cadena deben estar entre comillas simples en el parámetro *filter*.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Campos</th>
-<th align="left">Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">market</td>
-<td align="left">Cadena que contiene el código de país ISO 3166 del mercado del dispositivo.</td>
-</tr>
-<tr class="even">
-<td align="left">osVersion</td>
-<td align="left">Una de las cadenas siguientes:
-<ul>
-<li><strong>Windows Phone 7.5</strong></li>
-<li><strong>Windows Phone 8</strong></li>
-<li><strong>Windows Phone 8.1</strong></li>
-<li><strong>Windows Phone 10</strong></li>
-<li><strong>Windows 8</strong></li>
-<li><strong>Windows 8.1</strong></li>
-<li><strong>Windows 10</strong></li>
-<li><strong>Desconocido</strong></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td align="left">deviceType</td>
-<td align="left">Una de las cadenas siguientes:
-<ul>
-<li><strong>PC</strong></li>
-<li><strong>Tableta</strong></li>
-<li><strong>Teléfono</strong></li>
-<li><strong>IoT</strong></li>
-<li><strong>Dispositivo transportable</strong></li>
-<li><strong>Servidor</strong></li>
-<li><strong>De colaboración</strong></li>
-<li><strong>Otros</strong></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td align="left">isRevised</td>
-<td align="left">Especifica <strong>true</strong> para filtrar las clasificaciones que hayan sido revisadas; de lo contrario, especifica <strong>false</strong>.</td>
-</tr>
-</tbody>
-</table>
+| Campos        |  Descripción        |
+|---------------|-----------------|
+| market | Una cadena que contiene el código de país ISO 3166 del mercado donde se ha valorado la aplicación. |
+| osVersion | Una de las cadenas siguientes:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Desconocida</strong></li></ul> |
+| deviceType | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconocido</strong></li></ul> |
+| isRevised | Especifica <strong>true</strong> para filtrar las clasificaciones que hayan sido revisadas; de lo contrario, especifica <strong>false</strong>. |
 
 <span/> 
 
-### Ejemplo de solicitud
+### <a name="request-example"></a>Ejemplo de solicitud
 
 Los ejemplos siguientes muestran varias solicitudes para obtener datos de clasificación. Reemplaza el valor *applicationId* por el Id. de la Tienda de la aplicación.
 
@@ -219,20 +86,20 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/ratings?application
 Authorization: Bearer <your access token>
 ```
 
-## Respuesta
+## <a name="response"></a>Respuesta
 
 
-### Cuerpo de la respuesta
+### <a name="response-body"></a>Cuerpo de la respuesta
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                            |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Value      | matriz  | Matriz de objetos que contienen datos de clasificación agregados. Para obtener más información sobre los datos de cada objeto, consulta la sección [valores de clasificación](#rating-values) que encontrarás a continuación.                                                                                                                           |
-| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de datos de compra de la solicitud. |
-| TotalCount | entero    | Número total de filas en el resultado de datos de la consulta.                                                                                                                                                                                                                             |
+| @nextLink  | cadena | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10 000, pero resulta que hay más de 10 000 filas de datos de clasificación de la solicitud. |
+| TotalCount | entero    | El número total de filas del resultado de datos de la consulta.                                                                                                                                                                                                                             |
 
 <span/>
 
-### Valores de clasificación
+### <a name="rating-values"></a>Valores de clasificación
 
 Los elementos en la matriz *Value* contienen los siguientes valores.
 
@@ -253,7 +120,7 @@ Los elementos en la matriz *Value* contienen los siguientes valores.
  
 <span/>
 
-### Ejemplo de respuesta
+### <a name="response-example"></a>Ejemplo de respuesta
 
 En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo realizada para esta solicitud.
 
@@ -281,7 +148,7 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ```
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Informe Valoración](../publish/ratings-report.md)
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
@@ -292,6 +159,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

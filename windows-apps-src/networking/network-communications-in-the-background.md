@@ -4,12 +4,12 @@ description: "Las aplicaciones usan tareas en segundo plano y dos mecanismos pri
 title: Comunicaciones de red en segundo plano
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
 translationtype: Human Translation
-ms.sourcegitcommit: eea01135c60df0323b73bf3fda8b44e6d02cd04b
-ms.openlocfilehash: bea161a9eeac012aa7b09547212f021f1289afa6
+ms.sourcegitcommit: a6d297ca8510267d21656bd2e22bb3958a4a4b52
+ms.openlocfilehash: ea979eceb20c13d4025ec94ec8ed05b484a7eb27
 
 ---
 
-# Comunicaciones de red en segundo plano
+# <a name="network-communications-in-the-background"></a>Comunicaciones de red en segundo plano
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -20,13 +20,13 @@ ms.openlocfilehash: bea161a9eeac012aa7b09547212f021f1289afa6
 
 Las aplicaciones usan tareas en segundo plano y dos mecanismos principales para mantener las comunicaciones cuando no están en primer plano: el agente de sockets y los desencadenadores del canal de control. Las aplicaciones que usan sockets para conexiones a largo plazo pueden delegar la propiedad de un socket a un agente de sockets del sistema cuando abandonan el primer plano. A continuación, el agente activa la aplicación cuando llega el tráfico al socket, vuelve a transferir la propiedad a la aplicación y esta procesa el tráfico que llega.
 
-## Realizar operaciones de red de corta duración en tareas en segundo plano
+## <a name="performing-short-lived-network-operations-in-background-tasks"></a>Realizar operaciones de red de corta duración en tareas en segundo plano
 
 SocketActivityTrigger y ControlChannelTrigger (que se describirán más adelante en este tema) están diseñados para las aplicaciones que mantienen conexiones de red de larga duración que se conservan incluso cuando la aplicación se ejecuta en segundo plano. Las aplicaciones que necesitan interacciones de red de corta duración como parte de la lógica de la tarea en segundo plano (por ejemplo, enviar una solicitud HTTP) pueden llamar directamente a las principales API de red ([**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) o [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)). Sin embargo, estas tareas deben configurarse de una manera concreta para funcionar correctamente en todas las circunstancias. Las tareas en segundo plano deben usar la condición [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) con su tarea en segundo plano o usar la marca [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) en su registro de tareas en segundo plano. Esto indica a la infraestructura de tareas en segundo plano que debe mantener la red mientras se esté ejecutando la tarea, incluso si el dispositivo ha entrado en modo de espera conectado.
 
 Si la tarea en segundo plano no usa [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) o [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) tal como se describe aquí, la tarea en segundo plano no podrá acceder a la red cuando esté en modo de espera conectado (por ejemplo, cuando se apague la pantalla del teléfono).
 
-## El agente de sockets y SocketActivityTrigger
+## <a name="socket-broker-and-the-socketactivitytrigger"></a>El agente de sockets y SocketActivityTrigger
 
 Si la aplicación usa las conexiones [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) o [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906), debes usar [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) y el agente de sockets para recibir una notificación cuando llegue el tráfico de la aplicación mientras no esté en primer plano.
 
@@ -50,7 +50,7 @@ Los pasos de configuración única son crear un desencadenador, registrar una ta
            // so that tcpip keeps required state for the socket to enable connected 
            // standby action. Background task Id is taken as a parameter to tie wake pattern 
            // to a specific background task.  
-           _tcpListener. EnableTransferOwnership(_task,SocketActivityConnectedStandbyAction.Wake); 
+           _tcpListener. EnableTransferOwnership(_task.TaskId,SocketActivityConnectedStandbyAction.Wake); 
            _tcpListener.ConnectionReceived += OnConnectionReceived; 
            await _tcpListener.BindServiceNameAsync("my-service-name"); 
 ```
@@ -150,13 +150,13 @@ Para obtener un ejemplo completo que demuestre el uso de la clase [**SocketActiv
 
 Probablemente observes que la muestra llama a **TransferOwnership** en cuanto crea un nuevo socket o adquiere un socket existente, en lugar de usar el controlador de eventos **OnSuspending** para llevar a cabo esta opción tal y como se describe en este tema. Esto ocurre porque la muestra se centra en demostrar la clase [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) y no usa el socket para ninguna otra actividad mientras se está ejecutando. Es probable que la aplicación sea más compleja, por lo que debería usar **OnSuspending** para determinar cuándo llamar a **TransferOwnership**.
 
-## Desencadenadores del canal de control
+## <a name="control-channel-triggers"></a>Desencadenadores del canal de control
 
 Primero, asegúrate de que estás usando los desencadenadores del canal de control (CCTs) correctamente. Si estás usando las conexiones [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) o [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906), te recomendamos que uses [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009). Puedes usar CCT para el elemento **StreamSocket**, pero ten en cuenta que usan más recursos y podrían no funcionar en el modo de espera conectado.
 
 Si usas los WebSockets [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) o **Windows.Web.Http.HttpClient**, debes usar [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
 
-## WebSockets con ControlChannelTrigger
+## <a name="controlchanneltrigger-with-websockets"></a>WebSockets con ControlChannelTrigger
 
 Debes tener en cuenta algunos aspectos especiales cuando uses [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) o [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) con [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Existen algunos patrones de uso y procedimientos recomendados específicos de transporte que debes seguir al usar la clase **MessageWebSocket** o **StreamWebSocket** con **ControlChannelTrigger**. Asimismo, estos aspectos también afectan la manera en que se controlan las solicitudes para que reciban paquetes en la clase **StreamWebSocket**. Las solicitudes que reciban paquetes en la clase **MessageWebSocket** no se verán afectadas.
 
@@ -425,7 +425,7 @@ async Task<bool> RegisterWithCCTHelper(string serverUri)
 
 Para obtener más información sobre cómo usar [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) o [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) con [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), consulta [ControlChannelTrigger StreamWebSocket sample (Muestra de ControlChannelTrigger StreamWebSocket)](http://go.microsoft.com/fwlink/p/?linkid=251232).
 
-## ControlChannelTrigger con HttpClient
+## <a name="controlchanneltrigger-with-httpclient"></a>ControlChannelTrigger con HttpClient
 
 Debes tener en cuenta algunos aspectos especiales cuando uses [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) con [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Hay algunos patrones de uso y procedimientos recomendados específicos de transporte que debes seguir al usar [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) con **ControlChannelTrigger**. Estos aspectos también afectan la manera de controlar la forma en que las solicitudes reciben paquetes en [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637).
 
@@ -575,7 +575,7 @@ public string ReadResponse(Task<HttpResponseMessage> httpResponseTask)
 
 Para obtener más información sobre cómo usar [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) con [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), consulta [ControlChannelTrigger HttpClient sample (Muestra de ControlChannelTrigger HttpClient)](http://go.microsoft.com/fwlink/p/?linkid=258323).
 
-## ControlChannelTrigger con IXMLHttpRequest2
+## <a name="controlchanneltrigger-with-ixmlhttprequest2"></a>ControlChannelTrigger con IXMLHttpRequest2
 
 Debes tener en cuenta algunos aspectos especiales cuando uses [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) con [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Existen algunos patrones de uso y procedimientos recomendados específicos de transporte que debes seguir al usar **IXMLHTTPRequest2** con **ControlChannelTrigger**. El uso de **ControlChannelTrigger** no afecta la manera en que se controlan las solicitudes para enviar o recibir solicitudes HTTP en **IXMLHTTPRequest2**.
 
@@ -590,6 +590,6 @@ Para obtener más información sobre cómo usar [**IXMLHTTPRequest2**](https://m
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

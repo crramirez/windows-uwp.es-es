@@ -1,19 +1,19 @@
 ---
 author: mcleblanc
-description: "En este se tema se ofrece una asignación completa de las API de WindowsPhone Silverlight a sus equivalentes de la Plataforma universal de Windows (UWP)."
+description: "En este se tema se ofrece una asignación completa de las API de Windows Phone Silverlight a sus equivalentes de la Plataforma universal de Windows (UWP)."
 title: Asignaciones de espacios de nombres y clases de Windows Phone Silverlight a UWP
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: dcdf17263dadd71572c942bff5e795928e855c03
 
 ---
 
-# Asignaciones de espacios de nombres y clases de Windows Phone Silverlight a UWP
+# <a name="windows-phone-silverlight-to-uwp-namespace-and-class-mappings"></a>Asignaciones de espacios de nombres y clases de Windows Phone Silverlight a UWP
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-En este se tema se ofrece una asignación completa de las API de WindowsPhone Silverlight a sus equivalentes de la Plataforma universal de Windows (UWP). Por lo general, no existe una asignación exacta de funcionalidades, aunque: cualquier plataforma puede tener más o menos funcionalidades que su equivalente en un espacio de nombres o una clase.
+En este se tema se ofrece una asignación completa de las API de Windows Phone Silverlight a sus equivalentes de la Plataforma universal de Windows (UWP). Por lo general, no existe una asignación exacta de funcionalidades, aunque: cualquier plataforma puede tener más o menos funcionalidades que su equivalente en un espacio de nombres o una clase.
 
 La tabla de asignaciones te ayudará cuando trabajes en un proyecto de UWP y vuelvas a usar el código fuente de un proyecto de Windows Phone Silverlight. Existen diferencias en los nombres de los espacios de nombres y las clases (incluidos los controles de la interfaz de usuario) entre ambas plataformas. En muchos casos, basta con cambiar el nombre de un espacio de nombres y, después, el código se compilará. A veces, una clase o el nombre la API han cambiado, así como el nombre del espacio de nombres. En otros casos, la asignación requiere un poco más de trabajo y, en raras ocasiones, requiere un cambio de enfoque.
 
@@ -63,7 +63,7 @@ Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que 
 | (MPU = **Microsoft.Phone.UserData**) <br/> Clase **MPU.Appointments** | Clase [**AppointmentCalendar**](https://msdn.microsoft.com/library/windows/apps/dn596134) |
 | (MPU = **Microsoft.Phone.UserData**) <br/> Clase **MPU.Contacts** | Clase [**ContactStore**](https://msdn.microsoft.com/library/windows/apps/dn624859) |
 | Controles e infraestructura de la interfaz de usuario | |
-| Clase **ControlTiltEffect.TiltEffect** | Las animaciones de la biblioteca de animaciones de Windows Runtime están integradas en los estilos predeterminados de los controles comunes. Consulta [Animación](wpsl-to-uwp-porting-xaml-and-ui.md#animation). |
+| Clase **ControlTiltEffect.TiltEffect** | Las animaciones de la biblioteca de animaciones de Windows Runtime están integradas en los estilos predeterminados de los controles comunes. Consulta [Animación](wpsl-to-uwp-porting-xaml-and-ui.md). |
 | Espacio de nombres **Microsoft.Phone.Controls** | Espacio de nombres [**Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227716) |
 | (MPC = **Microsoft.Phone.Controls**) <br/> Clase **MPC.ContextMenu** | Clase [**PopupMenu**](https://msdn.microsoft.com/library/windows/apps/br208693) |
 | (MPC = **Microsoft.Phone.Controls**) <br/>Clase **MPC.DatePickerPage** | Clase [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) |
@@ -81,7 +81,7 @@ Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que 
 | (MPD = **Microsoft.Phone.Data**) <br/>Espacio de nombres **MPD.Linq** | No hay equivalente directo. | 
 | (MPD = **Microsoft.Phone.Data**) <br/>Espacio de nombres **MPD.Linq.Mapping** | No hay equivalente directo. |
 | Espacio de nombres **Microsoft.Phone.Globalization** | No hay equivalente directo. | 
-| (MPI = **Microsoft.Phone.Info**) <br/>Clases **MPI.DeviceExtendedProperties**, **DeviceStatus** | Clases [**EasClientDeviceInformation**](https://msdn.microsoft.com/library/windows/apps/hh701390), [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831). Para obtener más información, consulta [Estado del dispositivo](wpsl-to-uwp-input-and-sensors.md#device-status). | 
+| (MPI = **Microsoft.Phone.Info**) <br/>Clases **MPI.DeviceExtendedProperties**, **DeviceStatus** | Clases [**EasClientDeviceInformation**](https://msdn.microsoft.com/library/windows/apps/hh701390), [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831). Para obtener más información, consulta [Estado del dispositivo](wpsl-to-uwp-input-and-sensors.md). | 
 | (MPI = **Microsoft.Phone.Info**) <br/>Clase **MPI.MediaCapabilities** | No hay equivalente directo. | 
 | (MPI = **Microsoft.Phone.Info**) <br/>Clase **MPI.UserExtendedProperties** | Clase [**AdvertisingManager**](https://msdn.microsoft.com/library/windows/apps/dn363391) | 
 | Espacio de nombres **System.Windows** | Espacio de nombres [**Windows.UI.Xaml**](https://msdn.microsoft.com/library/windows/apps/br209045) | 
@@ -130,7 +130,7 @@ Además, en una aplicación de Windows 10, te beneficiarás de .NET Native, que 
 | Clase **Microsoft.Xna.Framework.Media.MediaQueue** | Clase [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) |
 | Clase **Microsoft.Xna.Framework.Media.Playlist** | Clase [**BackgroundMediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652527) |
 | Espacio de nombres **System.Windows.Media** | Espacio de nombres [**Windows.UI.Xaml.Media**](https://msdn.microsoft.com/library/windows/apps/br243045) |
-| Clase **System.Windows.Media.RadialGradientBrush** | No hay equivalente directo. Consulta [Multimedia y elementos gráficos](wpsl-to-uwp-porting-xaml-and-ui.md#media). |
+| Clase **System.Windows.Media.RadialGradientBrush** | No hay equivalente directo. Consulta [Multimedia y elementos gráficos](wpsl-to-uwp-porting-xaml-and-ui.md). |
 | Espacio de nombres **System.Windows.Media.Animation** | Espacio de nombres [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/br243232) |
 | Espacio de nombres **System.Windows.Media.Effects** | No hay equivalente directo. | 
 | Espacio de nombres **System.Windows.Media.Imaging** | Espacio de nombres [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) |
@@ -250,6 +250,6 @@ El siguiente tema es [Migración del proyecto](wpsl-to-uwp-porting-to-a-uwp-proj
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

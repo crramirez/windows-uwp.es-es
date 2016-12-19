@@ -1,23 +1,23 @@
 ---
 author: mcleblanc
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
-description: "En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows10."
+description: "En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT 8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10."
 title: "Caso práctico de Windows Runtime 8.x a UWP, aplicación de muestra punto a punto de QuizGame"
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 353ee8511be38ad437a64e153d43523f355e080f
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: 62d747a06f26bd2d069d2f23f36f48249fd11e95
 
 ---
 
-# Caso práctico de Windows Runtime 8.x a UWP, aplicación de muestra punto a punto de QuizGame
+# <a name="windows-runtime-8x-to-uwp-case-study-quizgame-peer-to-peer-sample-app"></a>Caso práctico de Windows Runtime 8.x a UWP, aplicación de muestra punto a punto de QuizGame
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows10.
+En este tema se presenta un caso práctico de migración de una aplicación de muestra de WinRT 8.1 de un juego de preguntas de punto a punto funcional a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10.
 
-Una aplicación Universal 8.1 es aquella que crea dos versiones de la misma aplicación: un paquete de la aplicación para Windows 8.1 y otro paquete de la aplicación distinto para Windows Phone 8.1. La versión para WinRT8.1 de QuizGame usa una organización de proyecto de aplicación universal de Windows, pero toma un enfoque distinto y crea una aplicación funcionalmente distinta para las dos plataformas. El paquete de la aplicación de Windows 8.1 actúa como el host de una sesión del juego de preguntas, mientras el paquete de la aplicación de Windows Phone 8.1 asume el rol del cliente al host. Las dos partes de la sesión del juego de preguntas se comunican a través de redes de punto a punto.
+Una aplicación Universal 8.1 es aquella que crea dos versiones de la misma aplicación: un paquete de la aplicación para Windows 8.1 y otro paquete de la aplicación distinto para Windows Phone 8.1. La versión para WinRT 8.1 de QuizGame usa una organización de proyecto de aplicación universal de Windows, pero toma un enfoque distinto y crea una aplicación funcionalmente distinta para las dos plataformas. El paquete de la aplicación de Windows 8.1 actúa como el host de una sesión del juego de preguntas, mientras el paquete de la aplicación de Windows Phone 8.1 asume el rol del cliente al host. Las dos partes de la sesión del juego de preguntas se comunican a través de redes de punto a punto.
 
 La adaptación de las dos partes al equipo y al teléfono, respectivamente, tiene sentido. Pero, ¿no sería aún mejor si se pudieran ejecutar el host y el cliente en prácticamente cualquier dispositivo que quisieras? En este caso práctico, se portarán las dos aplicaciones a Windows 10, donde se compilarán en un único paquete de la aplicación que los usuarios podrán instalar en una amplia gama de dispositivos.
 
@@ -27,11 +27,11 @@ La aplicación usa patrones que usan vistas y modelos de vista. Como resultado d
 
  
 
-**Nota** Cuando abras QuizGame10 en Visual Studio, si aparece el mensaje "Es necesario actualizar Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion).
+**Nota** Cuando abras QuizGame10 en Visual Studio, si aparece el mensaje "Es necesario actualizar Visual Studio", sigue los pasos de [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
 
  
 
-## Descargas
+## <a name="downloads"></a>Descargas
 
 [Descarga la aplicación QuizGame Universal 8.1](http://go.microsoft.com/fwlink/?linkid=532953). Este es el estado inicial de la aplicación antes de portar. 
 
@@ -39,7 +39,7 @@ La aplicación usa patrones que usan vistas y modelos de vista. Como resultado d
 
 [Consulta la versión más reciente de esta muestra en GitHub](https://github.com/Microsoft/Windows-appsample-quizgame).
 
-## La solución de WinRT8.1
+## <a name="the-winrt-81-solution"></a>La solución de WinRT 8.1
 
 
 Este es el aspecto de QuizGame (la aplicación que vamos a portar).
@@ -54,7 +54,7 @@ La aplicación host de QuizGame ejecutándose en Windows
 
 La aplicación cliente de QuizGame ejecutándose en Windows Phone
 
-## Un tutorial de uso de QuizGame
+## <a name="a-walkthrough-of-quizgame-in-use"></a>Un tutorial de uso de QuizGame
 
 Esta es una cuenta hipotética corta de la aplicación en uso, pero proporciona información útil si quieres probar la aplicación tú mismo en tu red inalámbrica.
 
@@ -66,22 +66,22 @@ El responsable de la partida hace clic en **Iniciar el juego** y la aplicación 
 
 Las preguntas siguen mostrándose y respondiéndose en este mismo ciclo. Cuando se muestra la última pregunta en la aplicación host, el contenido del botón será **Mostrar resultados** y no **Siguiente pregunta**. Cuando se hace clic en **Mostrar resultados**, se muestran los resultados. Al hacer clic en **Volver a la sala de espera**, se vuelve al principio del ciclo del juego, con la excepción de que los jugadores que se han unido permanecen unidos. No obstante, al volver a la sala de espera, se permite que nuevos jugadores se unan e incluso se proporciona un tiempo adecuado para que los jugadores que se han unido puedan dejar el juego (aunque también pueden dejarlo en cualquier momento si pulsan **Salir del juego**).
 
-## Modo de prueba local
+## <a name="local-test-mode"></a>Modo de prueba local
 
 Para probar la aplicación y sus interacciones en un solo equipo en lugar de distribuidas entre varios dispositivos, puedes crear la aplicación host en modo de prueba local. Este modo omite completamente el uso de la red. En su lugar, la interfaz de usuario de la aplicación host muestra la parte de host a la izquierda de la ventana y, a la derecha, dos copias de la interfaz de usuario de la aplicación cliente, apiladas de forma vertical (ten en cuenta que, en esta versión, la interfaz de usuario del modo de prueba local está fijada para una pantalla de equipo; no se adapta a dispositivos pequeños). Estos segmentos de interfaz de usuario, que se encuentran en la misma aplicación, se comunican entre sí mediante un communicator de cliente ficticio que simula las interacciones que en otros casos tendrían lugar en la red.
 
 Para activar el modo de prueba local, define **LOCALTESTMODEON** (en las propiedades del proyecto) como un símbolo de compilación condicional y vuelve a compilar.
 
-## Migración a un proyecto de Windows 10
+## <a name="porting-to-a-windows-10-project"></a>Migración a un proyecto de Windows 10
 
 QuizGame tiene las siguientes partes.
 
 -   P2PHelper. Se trata de una biblioteca de clases portable que contiene la lógica de red punto a punto.
 -   QuizGame.Windows. Este es el proyecto que crea el paquete de la aplicación para la aplicación host, que está destinado a Windows 8.1.
--   QuizGame.WindowsPhone. Este es el proyecto que crea el paquete de la aplicación para la aplicación cliente, que está destinado a Windows Phone8.1.
+-   QuizGame.WindowsPhone. Este es el proyecto que crea el paquete de la aplicación para la aplicación cliente, que está destinado a Windows Phone 8.1.
 -   QuizGame.Shared. Este es el proyecto que contiene código fuente, archivos de marcado y otros activos y recursos, que usan los otros dos proyectos.
 
-Para este caso práctico, tenemos las opciones habituales que se describen en [Si ya tienes una aplicación Universal 8.1](w8x-to-uwp-root.md#if-you-have-an-81-universal-windows-app) con respecto a los dispositivos que se admiten.
+Para este caso práctico, tenemos las opciones habituales que se describen en [Si ya tienes una aplicación Universal 8.1](w8x-to-uwp-root.md) con respecto a los dispositivos que se admiten.
 
 En función de estas opciones, podrás portar QuizGame.Windows a un nuevo proyecto de Windows 10 denominado QuizGameHost. Asimismo, QuizGame.WindowsPhone se portará a un nuevo proyecto de Windows 10 denominado QuizGameClient. Estos proyectos tendrán como destino la familia de dispositivos universales, para que funcionen en cualquier dispositivo. Además, se conservarán los archivos de origen de QuizGame.Shared, etc. en su propia carpeta y se vincularán esos archivos compartidos en los dos proyectos nuevos. Al igual que antes, se conservará todo en una solución que se llamará QuizGame10.
 
@@ -139,7 +139,7 @@ por esta:
 
 Ahora ya podrás compilar y ejecutar.
 
-## Interfaz de usuario adaptativa
+## <a name="adaptive-ui"></a>Interfaz de usuario adaptativa
 
 La aplicación QuizGameHost para Windows 10 se verá bien cuando la aplicación se ejecute en una ventana ancha (que solo es posible en un dispositivo con una pantalla grande). Sin embargo, cuando la ventana de la aplicación sea estrecha (algo que sucede en un dispositivo pequeño y también puede ocurrir en un dispositivo de gran tamaño), la interfaz de usuario está tan comprimida que es ilegible.
 
@@ -171,7 +171,7 @@ Es posible usar la función adaptativa de Visual State Manager para solucionarlo
 </VisualStateManager.VisualStateGroups>
 ```
 
-## Estilos universales
+## <a name="universal-styling"></a>Estilos universales
 
 
 Observarás que en Windows 10, los botones no tienen el mismo espaciado interno de selección táctil del destino en su plantilla. Dos pequeños cambios lo solucionarán. En primer lugar, agrega este marcado a app.xaml en QuizGameHost y QuizGameClient.
@@ -190,12 +190,12 @@ Y en segundo lugar, agrega este establecedor a `OptionButtonStyle` en \\View\\Cl
 
 Con ese último retoque, la aplicación se comportará y tendrá el mismo aspecto que antes de la migración, con el valor adicional de que ahora se ejecutará en todas partes.
 
-## Conclusión
+## <a name="conclusion"></a>Conclusión
 
-La aplicación que migramos en este caso práctico era relativamente compleja e incluía varios proyectos, una biblioteca de clases y una gran cantidad de código e interfaz de usuario. Aun así, la migración resultó sencilla. Parte de la facilidad de la migración corresponde directamente a la similitud entre la plataforma para desarrollador de Windows10 y las plataformas de Windows8.1 y Windows Phone8.1. En parte también se debe a la forma en que la aplicación original se diseñó para separar los modelos, los modelos de vista y las vistas.
+La aplicación que migramos en este caso práctico era relativamente compleja e incluía varios proyectos, una biblioteca de clases y una gran cantidad de código e interfaz de usuario. Aun así, la migración resultó sencilla. Parte de la facilidad de la migración corresponde directamente a la similitud entre la plataforma para desarrollador de Windows 10 y las plataformas de Windows 8.1 y Windows Phone 8.1. En parte también se debe a la forma en que la aplicación original se diseñó para separar los modelos, los modelos de vista y las vistas.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

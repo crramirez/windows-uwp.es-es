@@ -4,11 +4,11 @@ ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Capa visual
 description: "La API de Windows.UI.Composition proporciona acceso a la capa de composición entre la capa de marco (XAML) y la capa de elementos gráficos (DirectX)."
 translationtype: Human Translation
-ms.sourcegitcommit: ad262cc6dcfd53156f3f3a3e850f9cfe99e87dc6
-ms.openlocfilehash: 066e5aea48340f96878a41aa28f0fef0c3bda9f5
+ms.sourcegitcommit: 9ea05f7ba76c7813b200a4c8cd021613f980355d
+ms.openlocfilehash: de6fe0688bec196fc90433ab9274f2e4c4fd9b90
 
 ---
-# Capa visual
+# <a name="visual-layer"></a>Capa visual
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -18,8 +18,8 @@ Windows.UI.Composition es una API declarativa de [modo retenido](https://msdn.mi
 
 Un desarrollador de XAML puede "bajar" a la capa de composición en C# para realizar trabajos personalizados en la capa de composición con WinRT, en lugar de descender hasta el fondo, a la capa de elementos gráficos, y usar DirectX y C++ para el trabajo personalizado de la interfaz de usuario. Esta técnica puede usarse para animar un elemento existente con las API de composición o para aumentar una interfaz de usuario mediante la creación de una "isla visual" de contenido de Windows.UI.Composition dentro del árbol de elementos de XAML.
 
-![](images/layers-win-ui-composition.png)
-## <span id="Composition_Objects_and_The_Compositor"></span><span id="composition_objects_and_the_compositor"></span><span id="COMPOSITION_OBJECTS_AND_THE_COMPOSITOR"></span>Objetos de composición y el objeto Compositor
+![Disposición del marco de trabajo de la interfaz de usuario: la capa de marco (Windows.UI. XAML) está integrada en la capa visual (Windows.UI. Composición) que está integrada en la capa de gráficos (DirectX).](images/layers-win-ui-composition.png)
+## <a name="span-idcompositionobjectsandthecompositorspanspan-idcompositionobjectsandthecompositorspanspan-idcompositionobjectsandthecompositorspancomposition-objects-and-the-compositor"></a><span id="Composition_Objects_and_The_Compositor"></span><span id="composition_objects_and_the_compositor"></span><span id="COMPOSITION_OBJECTS_AND_THE_COMPOSITOR"></span>Objetos de composición y el objeto Compositor
 
 Los objetos de composición los crea el objeto [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789), que actúa como una fábrica de objetos de composición. El compositor puede crear objetos [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858), que permiten la creación de una estructura de árbol visual que todas las demás funciones y objetos de la API usan y en la que se basan.
 
@@ -35,19 +35,19 @@ Los elementos visuales pueden ser contenedores de otros elementos visuales o pue
 
 El compositor también es una fábrica de varios otros objetos de composición que se usan para recortar o transformar elementos visuales en el árbol, así como un amplio conjunto de animaciones y efectos de transformación.
 
-## <span id="Effects_System"></span><span id="effects_system"></span><span id="EFFECTS_SYSTEM"></span>Sistema de efectos
+## <a name="span-ideffectssystemspanspan-ideffectssystemspanspan-ideffectssystemspaneffects-system"></a><span id="Effects_System"></span><span id="effects_system"></span><span id="EFFECTS_SYSTEM"></span>Sistema de efectos
 
 Windows.UI.Composition admite efectos en tiempo real que se pueden animar, personalizar y encadenar. Entre los efectos se incluyen transformaciones afines 2D, composiciones aritméticas, combinaciones, origen del color, compuesto, contraste, exposición, escala de grises, transferencia gamma, girar matiz, invertir, saturar, sepia, temperatura y tono.
 
 Para más información, consulta la información general sobre los [efectos de composición](composition-effects.md).
 
-## <span id="Animation_System"></span><span id="animation_system"></span><span id="ANIMATION_SYSTEM"></span>Sistema de animación
+## <a name="span-idanimationsystemspanspan-idanimationsystemspanspan-idanimationsystemspananimation-system"></a><span id="Animation_System"></span><span id="animation_system"></span><span id="ANIMATION_SYSTEM"></span>Sistema de animación
 
 Windows.UI.Composition contiene un sistema de animación expresivo independiente de marcos que te permite configurar dos tipos de animaciones: animaciones de fotograma clave y animaciones de expresión. Estos se usan para mover objetos visuales, impulsar una transformación o recorte, o animar un efecto. Al ejecutarlo directamente en el proceso de compositor, esto garantiza un procesamiento suave y escalabilidad, lo que permite ejecutar grandes cantidades de animaciones simultáneas y únicas.
 
 Para más información, consulta la información general sobre las [animaciones de composición](composition-animation.md).
 
-## <span id="XAML_Interoperation"></span><span id="xaml_interoperation"></span><span id="XAML_INTEROPERATION"></span>Interoperación XAML
+## <a name="span-idxamlinteroperationspanspan-idxamlinteroperationspanspan-idxamlinteroperationspanxaml-interoperation"></a><span id="XAML_Interoperation"></span><span id="xaml_interoperation"></span><span id="XAML_INTEROPERATION"></span>Interoperación XAML
 
 Además de crear un árbol visual desde cero, la API de composición puede interactuar con una interfaz de usuario XAML existente mediante la clase [**ElementCompositionPreview**](https://msdn.microsoft.com/library/windows/apps/Mt608976) de [**Windows.UI.Xaml.Hosting**](https://msdn.microsoft.com/library/windows/apps/Hh701908).
 
@@ -57,13 +57,13 @@ Además de crear un árbol visual desde cero, la API de composición puede inter
 
 
 **Nota**  
-Este artículo está orientado a desarrolladores de Windows10 que programen aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programen aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## <span id="Additional_Resources_"></span><span id="additional_resources_"></span><span id="ADDITIONAL_RESOURCES_"></span>Recursos adicionales:
+## <a name="span-idadditionalresourcesspanspan-idadditionalresourcesspanspan-idadditionalresourcesspanadditional-resources"></a><span id="Additional_Resources_"></span><span id="additional_resources_"></span><span id="ADDITIONAL_RESOURCES_"></span>Recursos adicionales:
 
--   Artículo de MSDN de Kenny Kerr sobre esta API: [Gráficos y animación: La nueva composición para Windows10](https://msdn.microsoft.com/magazine/mt590968)
+-   Artículo de MSDN de Kenny Kerr sobre esta API: [Gráficos y animación: La nueva composición para Windows 10](https://msdn.microsoft.com/magazine/mt590968)
 -   Muestras avanzadas de la interfaz de usuario y la composición en [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs).
 -   [**Documentación de referencia completa de la API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
 -   [Problemas conocidos](http://go.microsoft.com/fwlink/?LinkId=823237).
@@ -78,6 +78,6 @@ Este artículo está orientado a desarrolladores de Windows10 que programen apli
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,23 +4,18 @@ ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: "Usa este método en la API de envío de la Tienda Windows para actualizar un envío de aplicación ya existente."
 title: "Actualizar un envío de aplicaciones mediante la API de envío de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 819843c8ba1e4a073f70f7de36fe98dd4087cdc6
-ms.openlocfilehash: 8b1a6da557b966e69345e90c48f90a6df0f27442
+ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
+ms.openlocfilehash: ec533c5a021d006787a7d217fa7f5eb98835fdd3
 
 ---
 
-# Actualizar un envío de aplicaciones mediante la API de envío de la Tienda Windows
-
-
-
+# <a name="update-an-app-submission-using-the-windows-store-submission-api"></a>Actualizar un envío de aplicaciones mediante la API de envío de la Tienda Windows
 
 Usa este método en la API de envío de la Tienda Windows para actualizar un envío de aplicación ya existente. Después de actualizar correctamente un envío mediante este método, debes [confirmar el envío](commit-an-app-submission.md) para su ingesta y publicación.
 
-Para obtener más información sobre cómo se ajusta este método al proceso de creación de un envío de aplicación mediante la API de envío de la Tienda Windows, consulta el artículo sobre [administración de envíos de aplicación](manage-app-submissions.md).
+Para obtener más información sobre cómo se ajusta este método en el proceso de creación de un envío de aplicación mediante la API de envío de la Tienda Windows, consulta [Manage app submissions (Administrar envíos de aplicación)](manage-app-submissions.md).
 
->**Importante**&nbsp;&nbsp;Muy pronto, Microsoft cambiará el modelo de datos de precios para envíos de aplicaciones al Centro de desarrollo de Windows. Después de implementar este cambio, se omitirá el recurso **Precios** del cuerpo de la solicitud de este método y, temporalmente, no podrás cambiar el período de prueba, el precio ni los datos de venta de un envío de aplicación con este método. Actualizaremos la API de envío de la Tienda Windows en el futuro para incorporar una nueva forma de acceder mediante programación a la información de precios de los envíos de aplicación. Para obtener más información, consulta el [recurso Precios](manage-app-submissions.md#pricing-object).
-
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
@@ -30,7 +25,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse en cuentas del Centro de desarrollo de Windows que estén autorizadas para usar la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
-## Solicitud
+## <a name="request"></a>Solicitud
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
@@ -41,7 +36,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 <span/>
  
 
-### Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -49,7 +44,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
 
-### Parámetros de solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -58,7 +53,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
 
-### Cuerpo de la solicitud
+### <a name="request-body"></a>Cuerpo de la solicitud
 
 El cuerpo de la solicitud tiene los siguientes parámetros.
 
@@ -85,7 +80,7 @@ El cuerpo de la solicitud tiene los siguientes parámetros.
 
 <span/>
 
-### Ejemplo de solicitud
+### <a name="request-example"></a>Ejemplo de solicitud
 
 En el siguiente ejemplo se muestra cómo actualizar un envío de aplicación.
 
@@ -169,7 +164,7 @@ Content-Type: application/json
 }
 ```
 
-## Respuesta
+## <a name="response"></a>Respuesta
 
 En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada satisfactoria a este método. El cuerpo de la respuesta contiene información sobre el envío actualizado. Para obtener más información acerca de los valores del cuerpo de la respuesta, consulta [App submission resource (Recurso de envío de aplicación)](manage-app-submissions.md#app-submission-object).
 
@@ -273,7 +268,7 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada
 }
 ```
 
-## Códigos de error
+## <a name="error-codes"></a>Códigos de error
 
 Si la solicitud no se puede completar correctamente, la respuesta contendrá uno de los siguientes códigos de error HTTP.
 
@@ -285,7 +280,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 <span/>
 
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Get an app submission (Obtener un envío de aplicación)](get-an-app-submission.md)
@@ -296,6 +291,6 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,12 +4,12 @@ description: "El proceso de migración se empieza creando un nuevo proyecto de W
 title: "Migración de un proyecto de Windows Phone Silverlight a un proyecto de UWP"
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ffcc7a76a8604deb4f7cb57ac32b9a29de7be46d
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: 273017f4607c25ee56d7400debe59e94acb36d4f
 
 ---
 
-# Migración de un proyecto de Windows Phone Silverlight a un proyecto de UWP
+# <a name="porting-a-windows-phone-silverlight-project-to-a-uwp-project"></a>Migración de un proyecto de Windows Phone Silverlight a un proyecto de UWP
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -17,7 +17,7 @@ El tema anterior era [Asignaciones de espacios de nombres y clases](wpsl-to-uwp-
 
 El proceso de migración se empieza creando un nuevo proyecto de Windows 10 en Visual Studio y copiando los archivos en él.
 
-## Crear el proyecto y copiar archivos en él
+## <a name="create-the-project-and-copy-files-to-it"></a>Crear el proyecto y copiar archivos en él
 
 1.  Inicia Microsoft Visual Studio 2015 y crea un nuevo proyecto de aplicación vacía (universal de Windows). Para obtener más información, consulta [Cómo empezar a desarrollar rápidamente aplicaciones de la Tienda Windows mediante plantillas (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Tu nuevo proyecto crea un paquete de la aplicación (un archivo appx) que se ejecutará en todas las familias de dispositivos.
 2.  En el proyecto de aplicación Windows Phone Silverlight, identifica todos los archivos de código fuente y los archivos de recursos visuales que quieres reutilizar. Con el Explorador de archivos, copia los modelos de datos, los modelos de vista, los recursos visuales, los diccionarios de recursos, la estructura de carpetas y cualquier otro elemento que quieras reutilizar en tu nuevo proyecto. Copia o crea subcarpetas en el disco según sea necesario.
@@ -25,7 +25,7 @@ El proceso de migración se empieza creando un nuevo proyecto de Windows 10 en V
 4.  En el **Explorador de soluciones**, asegúrate de que **Mostrar todos los archivos** esté activado. Selecciona los archivos que has copiado, haz clic con el botón secundario en ellos y haz clic en **Incluir en el proyecto**. Esto incluirá automáticamente sus carpetas contenedoras. Entonces puedes desactivar **Mostrar todos los archivos** si quieres. Un flujo de trabajo alternativo, si lo prefieres, es usar el comando **Agregar elemento existente**, después de crear las subcarpetas necesarias en el **Explorador de soluciones** de Visual Studio. Vuelve a comprobar que los recursos visuales tienen la opción **Acción de compilación** establecida en **Contenido** y la opción **Copiar en el directorio de resultados** establecida en **No copiar**.
 5.  Las diferencias en los nombres de clases y de espacios de nombres generarán un gran número de errores de compilación en esta etapa. Por ejemplo, si abres las vistas que Visual Studio ha generado, verás que son del tipo [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) y no **PhoneApplicationPage**. Hay un gran número de diferencias de marcado XAML y de código imperativo que se explican con detalle en los temas siguientes de esta guía de migración. Pero progresarás más rápidamente siguiendo estos pasos generales: cambia "clr-namespace" por "using" en las declaraciones de prefijo del espacio de nombres en el marcado XAML; usa el tema [Asignaciones de espacios de nombres y clases](wpsl-to-uwp-namespace-and-class-mappings.md) y el comando de Visual Studio **Buscar y reemplazar** para crear cambios masivos en el código fuente (por ejemplo, reemplaza "System.Windows" por "Windows.UI.Xaml"); y en el editor de código imperativo de Visual Studio usa los comandos **Resolver** y **Organizar instrucciones Using** del menú contextual para los cambios más específicos.
 
-## SDK de extensiones
+## <a name="extension-sdks"></a>SDK de extensiones
 
 La mayor parte de las API de la Plataforma universal de Windows (UWP) que tu aplicación migrada llamará están implementadas en el conjunto de API que se conoce como la familia de dispositivos universales. Pero algunas se implementan en los SDK de extensión y Visual Studio solo reconoce las API que están implementadas por la familia de dispositivos de destino de la aplicación o por los SDK de extensión a los que has hecho referencia.
 
@@ -51,20 +51,20 @@ A menos que la aplicación esté destinada a la familia de dispositivos que impl
 
 Consulta también [Manifiesto del paquete de la aplicación](#appxpackage).
 
-## Maximización de la reutilización de código y marcado
+## <a name="maximizing-markup-and-code-reuse"></a>Maximización de la reutilización de código y marcado
 
 Encontrarás que refactorizar un poco o agregar código adaptable (lo cual se explica a continuación), te permitirá maximizar el marcado y el código que funciona en todas las familias de dispositivo. A continuación se indican más detalles.
 
 -   Los archivos que son comunes a todas las familias de dispositivo no necesitan ninguna consideración especial. Esos archivos serán usados por la aplicación en todas las familias de dispositivos en las que se ejecuta. Esto incluye los archivos de marcado XAML, los archivos de código fuente imperativo y los archivos de recursos.
--   Es posible que tu aplicación detecte la familia de dispositivos en la que se está ejecutando y navegar a una vista que se ha diseñado específicamente para esa familia de dispositivos. Para obtener más información, consulta [Detección de la plataforma en la que se está ejecutando la aplicación](wpsl-to-uwp-input-and-sensors.md#detecting-the-platform).
--   Una técnica similar que puede resultar útil si no existe otra alternativa es proporcionar a un archivo de marcado o archivo **ResourceDictionary** (o la carpeta que contiene el archivo) un nombre especial que se carga automáticamente en tiempo de ejecución solo cuando la aplicación se ejecuta en una familia de dispositivos en particular. Esta técnica se ilustra en el caso práctico [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md#an-optional-adjustment).
+-   Es posible que tu aplicación detecte la familia de dispositivos en la que se está ejecutando y navegar a una vista que se ha diseñado específicamente para esa familia de dispositivos. Para obtener más información, consulta [Detección de la plataforma en la que se está ejecutando la aplicación](wpsl-to-uwp-input-and-sensors.md).
+-   Una técnica similar que puede resultar útil si no existe otra alternativa es proporcionar a un archivo de marcado o archivo **ResourceDictionary** (o la carpeta que contiene el archivo) un nombre especial que se carga automáticamente en tiempo de ejecución solo cuando la aplicación se ejecuta en una familia de dispositivos en particular. Esta técnica se ilustra en el caso práctico [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md).
 -   Para usar funciones que no están disponibles en todas las familias de dispositivos (por ejemplo, impresoras, escáneres o el botón de la cámara) puedes escribir código adaptable. Consulta el tercer ejemplo en [Compilación condicional y código adaptable](#conditional-compilation) en este tema.
 -   Si quieres admitir tanto Windows Phone Silverlight como Windows 10, es posible que puedas compartir archivos de código fuente entre proyectos. Pasos a seguir: en Visual Studio, haz clic con el botón derecho en el proyecto en **Explorador de soluciones**, selecciona **Agregar elemento existente**, selecciona los archivos para compartir y haz clic en **Agregar como vínculo**. Almacena tus archivos de código fuente en una carpeta común en el sistema de archivos donde puedan verlos los proyectos vinculados a ellos y no te olvides de agregarlos al control de código fuente. Si puedes factorizar el código fuente imperativo para que la mayor parte de un archivo, si no todo, funcione en ambas plataformas, no necesitas tener dos copias de este. Puedes encapsular la lógica específica de la plataforma del archivo dentro de directivas de compilación condicional siempre que sea posible, o condiciones de tiempo de ejecución cuando sea necesario. Consulta la sección siguiente y [Directivas de preprocesador de C#](http://msdn.microsoft.com/library/ed8yd1ha.aspx).
 -   Para su reutilización en el nivel binario, en lugar del nivel de código fuente, existen bibliotecas de clases portables que admiten el subconjunto de API de .NET que están disponibles en Windows Phone Silverlight, así como el subconjunto para aplicaciones de Windows 10 (núcleo .NET). Los conjuntos de bibliotecas de clases portables tienen compatibilidad binaria con estas plataformas .NET y más. Usa Visual Studio para crear un proyecto destinado a una biblioteca de clases portable. Consulta [Desarrollo multiplataforma con la biblioteca de clases portable](http://msdn.microsoft.com/library/gg597391.aspx).
 
-## Compilación condicional y código adaptable
+## <a name="conditional-compilation-and-adaptive-code"></a>Compilación condicional y código adaptable
 
-Si quieres compatibilidad con Windows Phone Silverlight y Windows 10 en un solo archivo de código, también puedes hacerlo. Si buscas en el proyecto de Windows10 en las páginas de propiedades del proyecto, verás que el proyecto define WINDOWS\_UAP como un símbolo de compilación condicional. En general, puedes usar la siguiente lógica para realizar la compilación condicional.
+Si quieres compatibilidad con Windows Phone Silverlight y Windows 10 en un solo archivo de código, también puedes hacerlo. Si buscas en el proyecto de Windows 10 en las páginas de propiedades del proyecto, verás que el proyecto define WINDOWS\_UAP como un símbolo de compilación condicional. En general, puedes usar la siguiente lógica para realizar la compilación condicional.
 
 ```csharp
 #if WINDOWS_UAP
@@ -98,7 +98,7 @@ Si es así y ahora quieres además compatibilidad con Windows 10, también puede
 #endif // WINDOWS_UAP
 ```
 
-Quizá hayas usado la compilación condicional para limitar el control del botón Atrás del hardware para Windows Phone. En Windows10, el evento de botón Atrás es un concepto universal. Los botones Atrás implementados en hardware o en software generarán el evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596), por lo que ese es el que hay que controlar.
+Quizá hayas usado la compilación condicional para limitar el control del botón Atrás del hardware para Windows Phone. En Windows 10, el evento de botón Atrás es un concepto universal. Los botones Atrás implementados en hardware o en software generarán el evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596), por lo que ese es el que hay que controlar.
 
 ```csharp
        Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested +=
@@ -113,7 +113,7 @@ Quizá hayas usado la compilación condicional para limitar el control del botó
 
 ```
 
-Quizá hayas usado la compilación condicional para limitar el control del botón de la cámara del hardware para Windows Phone. En Windows10, el botón de la cámara de hardware es un concepto específico de la familia de dispositivos móviles. Debido a que se ejecutará un paquete de la aplicación en todos los dispositivos, cambiamos nuestra condición de tiempo de compilación a una condición de tiempo de ejecución mediante el uso de código adaptable. Para ello, usamos la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar en tiempo de ejecución la presencia de la clase [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). **HardwareButtons** se define en el SDK de la extensión móvil, por lo que deberemos agregar una referencia a ese SDK al proyecto para poder compilar este código. No obstante, ten en cuenta que el controlador solo se ejecutará en un dispositivo que implementa los tipos definidos en el SDK de extensión móvil y que esa es la familia de dispositivos móviles. Por lo tanto, el siguiente código solo cuida el uso de las características que están presentes, aunque lo consigue de una forma distinta de la compilación condicional.
+Quizá hayas usado la compilación condicional para limitar el control del botón de la cámara del hardware para Windows Phone. En Windows 10, el botón de la cámara de hardware es un concepto específico de la familia de dispositivos móviles. Debido a que se ejecutará un paquete de la aplicación en todos los dispositivos, cambiamos nuestra condición de tiempo de compilación a una condición de tiempo de ejecución mediante el uso de código adaptable. Para ello, usamos la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para consultar en tiempo de ejecución la presencia de la clase [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557). **HardwareButtons** se define en el SDK de la extensión móvil, por lo que deberemos agregar una referencia a ese SDK al proyecto para poder compilar este código. No obstante, ten en cuenta que el controlador solo se ejecutará en un dispositivo que implementa los tipos definidos en el SDK de extensión móvil y que esa es la familia de dispositivos móviles. Por lo tanto, el siguiente código solo cuida el uso de las características que están presentes, aunque lo consigue de una forma distinta de la compilación condicional.
 
 ```csharp
        // Note: Cache the value instead of querying it more than once.
@@ -134,9 +134,9 @@ Quizá hayas usado la compilación condicional para limitar el control del botó
     }
 ```
 
-Consulta también [Detección de la plataforma en la que se está ejecutando la aplicación](wpsl-to-uwp-input-and-sensors.md#detecting-the-platform).
+Consulta también [Detección de la plataforma en la que se está ejecutando la aplicación](wpsl-to-uwp-input-and-sensors.md).
 
-## Manifiesto del paquete de la aplicación
+## <a name="the-app-package-manifest"></a>Manifiesto del paquete de la aplicación
 
 La configuración del proyecto (incluidas las referencias de SDK de extensión) determina el área de superficie de API que tu aplicación puede llamar. Pero el manifiesto del paquete de la aplicación es lo que determina el conjunto real de dispositivos en los que los clientes pueden instalar la aplicación desde la Tienda. Para obtener información, consulta los ejemplos de [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903).
 
@@ -149,6 +149,6 @@ El siguiente tema es [Solución de problemas](wpsl-to-uwp-troubleshooting.md).
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 
