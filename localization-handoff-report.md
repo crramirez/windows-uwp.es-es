@@ -1,20 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\gaming\e2e.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/b1c958d4b08e006ac263de3f92bc97c0041bdade?path=windows-apps-src%2Fgaming%2Fe2e.md&_a=contents) | HandedOffSuccess | [Details](#de2e253bbd864349c4bdfbe2bd20e0517e48bbba3517)
- [windows-apps-src\porting\wpsl-to-uwp-root.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/1cd0f7847d8f4066f4c19f0b31ba3f5aa8d5b271?path=windows-apps-src%2Fporting%2Fwpsl-to-uwp-root.md&_a=contents) | HandedOffSuccess | [Details](#a25ffbaf55943ab0b20b0025ec55065edcd0de6c5692)
+ [windows-apps-src\gaming\e2e.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e7ac52c3c66855ed8e4eef5300bb07bdbc624ba3?path=windows-apps-src%2Fgaming%2Fe2e.md&_a=contents) | HandedOffSuccess | [Details](#53818d16232fbe31b467b12fbb66496f85fbeb943517)
 
 ## Item Details
-##### <a name='de2e253bbd864349c4bdfbe2bd20e0517e48bbba3517'></a> Source: [windows-apps-src\gaming\e2e.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/b1c958d4b08e006ac263de3f92bc97c0041bdade?path=windows-apps-src%2Fgaming%2Fe2e.md&_a=contents)
+##### <a name='53818d16232fbe31b467b12fbb66496f85fbeb943517'></a> Source: [windows-apps-src\gaming\e2e.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e7ac52c3c66855ed8e4eef5300bb07bdbc624ba3?path=windows-apps-src%2Fgaming%2Fe2e.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/bc93a697cfb9fc56523ec139f78b9e7b8542dae5?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fe2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf&_a=contents)
-* Handoff Datetime: 2017-01-12 00:10:14
+* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/487ec76567fba0826751ca425cec54b8536c4861?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fe2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf&_a=contents)
+* Handoff Datetime: 2017-01-12 20:09:11
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -27,25 +26,6 @@
 * Current Handback Datetime: 2016-11-30 15:18:37
 * Bilingual File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fe2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf&_a=contents)
 * Bilingual Datetime: 2016-11-30 15:24:45
-* [Back to Top](#report-top)
-
-##### <a name='a25ffbaf55943ab0b20b0025ec55065edcd0de6c5692'></a> Source: [windows-apps-src\porting\wpsl-to-uwp-root.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/1cd0f7847d8f4066f4c19f0b31ba3f5aa8d5b271?path=windows-apps-src%2Fporting%2Fwpsl-to-uwp-root.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [wpsl-to-uwp-root.0ebfc5b22ad738fd39a19638fdcf6cdefce13819.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/bc93a697cfb9fc56523ec139f78b9e7b8542dae5?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fwpsl-to-uwp-root.0ebfc5b22ad738fd39a19638fdcf6cdefce13819.es-es.xlf&_a=contents)
-* Handoff Datetime: 2017-01-12 00:10:14
-* Handoff Reason: Include
-* Handoff Name: 
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Handback Name: 
-* Current Target File: [windows-apps-src\porting\wpsl-to-uwp-root.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/332d099ee8bda8e6b8d630b5915fe829c49a102a?path=windows-apps-src%2Fporting%2Fwpsl-to-uwp-root.md&_a=contents)
-* Current Handback File: [wpsl-to-uwp-root.0ebfc5b22ad738fd39a19638fdcf6cdefce13819.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/d9239e7d5ec321a83784521c43de5713a1b029bb?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fwpsl-to-uwp-root.0ebfc5b22ad738fd39a19638fdcf6cdefce13819.es-es.xlf&_a=contents)
-* Current Handback Datetime: 2016-12-14 14:17:20
-* Bilingual File: [wpsl-to-uwp-root.0ebfc5b22ad738fd39a19638fdcf6cdefce13819.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/d9239e7d5ec321a83784521c43de5713a1b029bb?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fwpsl-to-uwp-root.0ebfc5b22ad738fd39a19638fdcf6cdefce13819.es-es.xlf&_a=contents)
-* Bilingual Datetime: 2016-12-14 14:22:57
 * [Back to Top](#report-top)
 
 
