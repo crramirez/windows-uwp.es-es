@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\gaming\e2e.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/52afb5ac7b03a14e0d57eef5d8de29c5b57174d3?path=windows-apps-src%2Fgaming%2Fe2e.md&_a=contents) | HandedOffSuccess | [Details](#45e10b76fd3c510d5f93affc87598a7f109982193517)
+ [windows-apps-src\porting\desktop-to-uwp-packaging-dot-net.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ac33dad2fd2ca6bb3f3dbebc4b85eeeac38d9360?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-packaging-dot-net.md&_a=contents) | HandedOffSuccess | [Details](#71f633c724c95b46dc48c8ab3573ac0cc6c904795576)
 
 ## Item Details
-##### <a name='45e10b76fd3c510d5f93affc87598a7f109982193517'></a> Source: [windows-apps-src\gaming\e2e.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/52afb5ac7b03a14e0d57eef5d8de29c5b57174d3?path=windows-apps-src%2Fgaming%2Fe2e.md&_a=contents)
+##### <a name='71f633c724c95b46dc48c8ab3573ac0cc6c904795576'></a> Source: [windows-apps-src\porting\desktop-to-uwp-packaging-dot-net.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ac33dad2fd2ca6bb3f3dbebc4b85eeeac38d9360?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-packaging-dot-net.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/0c6010e6c485d7a49e5664d346b632c97a4ad49f?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fe2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf&_a=contents)
-* Handoff Datetime: 2017-01-19 20:22:38
+* Handoff File: [desktop-to-uwp-packaging-dot-net.8592395f4270a6ff7682f412d70e18ac235d5e32.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/2377a4cd054d8b141c89bc20cb29584a0b2907f5?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fdesktop-to-uwp-packaging-dot-net.8592395f4270a6ff7682f412d70e18ac235d5e32.es-es.xlf&_a=contents)
+* Handoff Datetime: 2017-01-19 22:39:49
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,11 +21,6 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\gaming\e2e.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fgaming%2Fe2e.md&_a=contents)
-* Current Handback File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fe2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf&_a=contents)
-* Current Handback Datetime: 2016-11-30 15:18:37
-* Bilingual File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fe2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.es-es.xlf&_a=contents)
-* Bilingual Datetime: 2016-11-30 15:24:45
 * [Back to Top](#report-top)
 
 
