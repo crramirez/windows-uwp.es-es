@@ -5,20 +5,22 @@ title: "Alineación, margen y espaciado interno de aplicaciones para la Platafor
 ms.assetid: 9412ABD4-3674-4865-B07D-64C7C26E4842
 label: Alignment, margin, and padding
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: ec16fa013e177529c517f91610b77ea22402a958
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: f6c8665c935380078efd2e8ea9d225967cf45eba
 
 ---
-# Alineación, margen y espaciado
+# <a name="alignment-margin-and-padding"></a>Alineación, margen y espaciado
 
 Además de las propiedades de dimensiones (ancho, alto y restricciones), los elementos también pueden tener propiedades de alineación, margen y espaciado interno que influyan en el comportamiento del diseño cuando un elemento pasa por un cálculo de diseño y se representa en una interfaz de usuario. Hay relaciones entre las propiedades de alineación, margen, espaciado interno y dimensiones que tienen un flujo lógico típico al colocar un objeto [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), de manera que en algunas ocasiones los valores se usan y en otras ocasiones se hace caso omiso de ellos en función de las circunstancias.
 
-## Propiedades de alineación
+## <a name="alignment-properties"></a>Propiedades de alineación
 
 Las propiedades [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720) y [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749) describen cómo se debe colocar un elemento secundario dentro del espacio de diseño asignado a un elemento primario. Si estas propiedades se usan juntas, la lógica de diseño de un contenedor puede colocar elementos secundarios dentro del contenedor (un panel o un control). El propósito de las propiedades de alineación es sugerir el diseño deseado a un contenedor de diseño adaptativo, por lo que se establecen en elementos secundarios [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) y otro elemento primario del contenedor **FrameworkElement** las interpreta. Los valores de alineación pueden especificar si los elementos se alinean a uno de los dos bordes de una orientación o al centro. No obstante, el valor predeterminado para ambas propiedades de alineación es **Stretch**. Con la alineación **Stretch**, los elementos llenan el espacio que se les proporciona en un diseño. **Stretch** es el valor predeterminado, de modo que resulte más fácil usar técnicas de diseño adaptativo en los casos en que no haya medidas explícitas ni valores de [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) procedentes del cálculo de medición del diseño. Con este valor predeterminado, no hay riesgo de que un alto o ancho explícito no quepa en el contenedor y se recorte hasta que cambie el tamaño de cada contenedor.
 
-> **Nota**&nbsp;&nbsp;Como principio general del diseño, es mejor aplicar las medidas únicamente a ciertos elementos clave y usar el comportamiento de diseño adaptativo para los demás. Con ello, el comportamiento del diseño es flexible cuando el usuario cambia el tamaño de la ventana de la aplicación superior, lo que normalmente se puede hacer en cualquier momento.
+> [!NOTE]
+> Como principio general de diseño, es mejor aplicar las medidas solo a ciertos elementos clave y usar el comportamiento de diseño adaptativo para los demás. Con ello, el comportamiento del diseño es flexible cuando el usuario cambia el tamaño de la ventana de la aplicación superior, lo que normalmente se puede hacer en cualquier momento.
 
  
 Si hay valores de [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) y [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) o recortes en un contenedor adaptativo, aunque **Stretch** esté establecido como valor de alineación, el diseño se controla mediante el comportamiento de su contenedor. En los paneles, un valor de **Stretch** ignorado por **Height** y **Width** actúa como si fuera **Center**.
@@ -33,7 +35,7 @@ A veces, los controles de elemento muestran elementos cuyos tipos base son datos
 
 Las propiedades de alineación solo son pertinentes en los casos en los que hay espacio adicional disponible en una dimensión del contenedor de diseño primario. Si un contenedor de diseño ya recorta contenido, la alineación puede afectar al área del elemento en la que se aplicará el recorte. Por ejemplo, si estableces `HorizontalAlignment="Left"`, el tamaño correcto del elemento se recorta.
 
-## Margen
+## <a name="margin"></a>Margen
 
 La propiedad [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724) describe la distancia entre un elemento y otros elementos del mismo nivel en una situación de diseño, además de la distancia entre un elemento y el área de contenido de un contenedor que contiene el elemento. Si piensas en los elementos como rectángulos de selección en los que las dimensiones son [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) y [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709), el diseño **Margin** se aplica a la parte exterior del rectángulo y no agrega píxeles a **ActualHeight** ni a **ActualWidth**. El margen tampoco se considera parte del elemento para las pruebas de acceso y el uso de eventos de entrada.
 
@@ -49,7 +51,7 @@ El uso adecuado de la propiedad [**Margin**](https://msdn.microsoft.com/library/
 
 La clase [**Block**](https://msdn.microsoft.com/library/windows/apps/br244379), que es una clase base para [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/br244503), también tiene una propiedad [**Margin**](https://msdn.microsoft.com/library/windows/apps/jj191725). Tiene un efecto análogo en la colocación de **Paragraph** en su contenedor primario, que suele ser un objeto [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565) o [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548), y también en cómo más de un párrafo se coloca en relación con otros **Block** del mismo nivel de la colección [**RichTextBlock.Blocks**](https://msdn.microsoft.com/library/windows/apps/br244347).
 
-## Espaciado interno
+## <a name="padding"></a>Espaciado interno
 
 Una propiedad **Padding** describe la distancia entre un elemento y los elementos secundarios o el contenido que incluye. El contenido se trata como un único rectángulo de selección que incluye todo el contenido, si es un elemento que permite más de un elemento secundario. Por ejemplo, si hay un objeto [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/br242803) que contiene dos elementos, el objeto [**Padding**](https://msdn.microsoft.com/library/windows/apps/br209459) se aplica alrededor del rectángulo de selección que contiene los elementos. **Padding** se resta del tamaño disponible en los cálculos de medición y de organización del contenido de ese contenedor y forma parte de los valores de tamaño deseados cuando el propio contenedor pasa por el cálculo de diseño del elemento que lo contiene. A diferencia de [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724), **Padding** no es una propiedad de [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) y, de hecho, hay varias clases que definen su propia propiedad **Padding**:
 
@@ -60,28 +62,23 @@ Una propiedad **Padding** describe la distancia entre un elemento y los elemento
 
 En cada uno de estos casos, el mismo elemento también tiene una propiedad **Margin**. Si se aplican tanto el margen como el espaciado interno, se suman; es decir, la distancia aparente entre un contenedor externo y el contenido interno será el margen más el espaciado interno. Si se aplican distintos valores de fondo al contenido, al elemento o al contenedor, el punto en el que termina el margen y empieza el espaciado interno se puede ver en la representación.
 
-## Dimensiones (alto y ancho)
+## <a name="dimensions-height-width"></a>Dimensiones (alto y ancho)
 
 A menudo, las propiedades [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) y [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) del objeto [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) influyen en el comportamiento de las propiedades de alineación, margen y espaciado interno cuando se realiza un cálculo de diseño. En concreto, un valor de **Height** y **Width** con un número real cancela las alineaciones **Stretch** y también se promueve como posibles componentes del valor de [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) que se establece durante el cálculo de medida del diseño. Los objetos **Height** y **Width** tienen propiedades de restricción; el valor de **Height** se puede restringir con los objetos [**MinHeight**](https://msdn.microsoft.com/library/windows/apps/br208731) y [**MaxHeight**](https://msdn.microsoft.com/library/windows/apps/br208726), y el valor de **Width** se puede restringir con los objetos [**MinWidth**](https://msdn.microsoft.com/library/windows/apps/br208733) y [**MaxWidth**](https://msdn.microsoft.com/library/windows/apps/br208728). Además, los objetos [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) y [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) son propiedades calculadas de solo lectura que solamente contienen valores válidos tras completarse un cálculo de diseño. Para más información sobre las relaciones entre las dimensiones y las restricciones o las propiedades calculadas, consulta las notas de [**FrameworkElement.Height**](https://msdn.microsoft.com/library/windows/apps/br208718) y [**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 **Referencia**
 
-[**FrameworkElement.Height**](https://msdn.microsoft.com/library/windows/apps/br208718)
-
-[**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751)
-
-[**FrameworkElement.HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720)
-
-[**FrameworkElement.VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
-
-[**FrameworkElement.Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)
-
-[**Control.Padding**](https://msdn.microsoft.com/library/windows/apps/br209459)
+* [**FrameworkElement.Height**](https://msdn.microsoft.com/library/windows/apps/br208718)
+* [**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751)
+* [**FrameworkElement.HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720)
+* [**FrameworkElement.VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
+* [**FrameworkElement.Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)
+* [**Control.Padding**](https://msdn.microsoft.com/library/windows/apps/br209459)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

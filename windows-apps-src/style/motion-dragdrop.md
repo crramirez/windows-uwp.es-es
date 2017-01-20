@@ -6,24 +6,27 @@ ms.assetid: 6064755F-6E24-4901-A4FF-263F05F0DFD6
 label: Motion--Drag and drop
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 58934982554aa3caf0060c84df113d483e62e1d2
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e71b936be1649f8ede394b019369176c7e3ca631
 
 ---
 
-# Animaciones de arrastre
+# <a name="drag-animations"></a>Animaciones de arrastre
 
 
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Usa animaciones de arrastrar y colocar cuando los usuarios muevan objetos, por ejemplo, cuando muevan un elemento dentro de una lista o coloquen un elemento encima de otro.
 
-**API importantes**
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Clase DragItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br243174)</li>
+</ul>
+</div>
 
--   [**Clase DragItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br243174)
 
-
-## Cosas que hacer y cosas que evitar
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 
 **Animación de inicio de arrastre**
@@ -52,10 +55,10 @@ Usa animaciones de arrastrar y colocar cuando los usuarios muevan objetos, por e
 -   No uses la animación de salida de arrastre entre si no has usado antes la animación de entrada de arrastre entre.
 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
-**Para desarrolladores (XAML)**
-* [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
+**Para desarrolladores**
+* [Introducción a las animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [Animación de secuencias de arrastrar y colocar](https://msdn.microsoft.com/library/windows/apps/xaml/jj649427)
 * [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**Clase DragItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br243174)
@@ -71,6 +74,6 @@ Usa animaciones de arrastrar y colocar cuando los usuarios muevan objetos, por e
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

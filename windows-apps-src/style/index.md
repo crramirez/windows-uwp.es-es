@@ -3,12 +3,19 @@ description: "Aprende a usar el color, la tipografía y el movimiento para defin
 keywords: "guía de estilo de UWP, guía de diseño, tipografía, movimiento, sonido, movimiento, desarrollo de aplicaciones"
 title: "Guía de estilo de UWP: desarrollo de aplicaciones de Windows"
 author: mijacobs
+label: Style
+template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
-ms.openlocfilehash: 4a96db626f6f3682248e7e720c956fa343186b4a
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 488eac85e7ab724dd3dbc6d5972cd330d972134b
 
 ---
-# Guía de estilo de UWP
+# <a name="uwp-style-guide"></a>Guía de estilo de UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -74,6 +81,6 @@ El marco XAML te permite personalizar la apariencia de tus aplicaciones de varia
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

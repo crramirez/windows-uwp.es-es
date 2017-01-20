@@ -4,12 +4,12 @@ title: Usar un desencadenador de mantenimiento
 description: "Aprende a usar la clase MaintenanceTrigger para ejecutar código ligero en segundo plano mientras el dispositivo está enchufado."
 ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: 2f459156ac8bc52c79b9b6d3b902882693120028
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: 8ca0255be671d0a2900bb7be3a66d4df4e793725
 
 ---
 
-# Usar un desencadenador de mantenimiento
+# <a name="use-a-maintenance-trigger"></a>Usar un desencadenador de mantenimiento
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -21,11 +21,11 @@ ms.openlocfilehash: 2f459156ac8bc52c79b9b6d3b902882693120028
 
 Aprende a usar la clase [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) para ejecutar código ligero en segundo plano mientras el dispositivo está enchufado.
 
-## Crear un objeto de desencadenador de mantenimiento
+## <a name="create-a-maintenance-trigger-object"></a>Crear un objeto de desencadenador de mantenimiento
 
 En este ejemplo se da por hecho que tienes un código ligero que puedes ejecutar en segundo plano para mejorar la aplicación mientras el dispositivo está enchufado. Este tema se centra en la clase [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517), que es similar a [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-Para obtener más información sobre cómo escribir una clase de tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md) o [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md).
+Para obtener más información sobre cómo escribir una clase de tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md) o [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md).
 
 Crea un nuevo objeto [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843). El segundo parámetro, *OneShot*, especifica si la tarea de mantenimiento se ejecutará solo una vez o si seguirá ejecutándose periódicamente. Si *OneShot* se establece en "true", el primer parámetro (*FreshnessTime*) especifica el número de minutos que se debe esperar antes de programar la tarea en segundo plano. Si *OneShot* se establece en "false", *FreshnessTime* especifica la frecuencia con la que se ejecutará la tarea en segundo plano.
 
@@ -45,7 +45,7 @@ Este código de ejemplo crea un desencadenador que se ejecuta una vez cada hora:
 > MaintenanceTrigger ^ taskTrigger = ref new MaintenanceTrigger(waitIntervalMinutes, false);
 > ```
 
-## (Opcional) Agregar una condición
+## <a name="optional-add-a-condition"></a>(Opcional) Agregar una condición
 
 -   Si es necesario, crea una condición a la tarea en segundo plano para controlar cuándo debe ejecutarse la tarea. Una condición evita que tu tarea en segundo plano se ejecute hasta que no se cumpla la condición. Para obtener más información, consulta [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md).
 
@@ -61,7 +61,7 @@ El siguiente código agrega una condición al generador de tareas de mantenimien
 > SystemCondition ^ exampleCondition = ref new SystemCondition(SystemConditionType::InternetAvailable);
 > ```
 
-## Registrar la tarea en segundo plano
+## <a name="register-the-background-task"></a>Registrar la tarea en segundo plano
 
 -   Registra la tarea en segundo plano llamando a tu función de registro de tareas en segundo plano. Para obtener más información sobre el registro de tareas en segundo plano, consulta [Registrar una tarea en segundo plano](register-a-background-task.md).
 
@@ -90,14 +90,14 @@ El siguiente código agrega una condición al generador de tareas de mantenimien
     > **Nota** Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
 
 
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 ****
 
 * [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md).
-* [Crear y registrar una tarea en segundo plano fuera del proceso.](create-and-register-an-outofproc-background-task.md)
+* [Crear y registrar una tarea en segundo plano fuera del proceso.](create-and-register-a-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
@@ -112,6 +112,6 @@ El siguiente código agrega una condición al generador de tareas de mantenimien
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,38 +1,48 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Usa la información visual para mostrar a los usuarios cuándo se detectan, se interpretan y se tratan sus interacciones con una aplicación de la Tienda Windows."
+Description: "Usa la información visual para mostrar a los usuarios cuándo se detectan, se interpretan y se controlan sus interacciones con una aplicación de la Tienda Windows."
 title: "Información visual"
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
 template: detail.hbs
+keywords: "información visual,información de foco,información táctil,información de función táctil,visualización de contacto,entrada,interacción"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 388bdc42610d05a4decb5c8aecadcaf2f78b26f8
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: ab7a6cfabb98eaf841849f5045e7ebce1ec86d65
 
 ---
 
-# Instrucciones para la información visual
+# <a name="guidelines-for-visual-feedback"></a>Directrices para información visual
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Usa la información visual para mostrar a los usuarios cuándo se detectan, se interpretan y se controlan sus interacciones. La información visual puede ayudar a los usuarios al promover la interacción. Indica si una interacción se ha realizado correctamente, lo que mejora la sensación de control del usuario. También transmite los estados del sistema y reduce los errores.
 
-**API importantes**
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+</ul>
+</div>
 
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
-
-## Recomendaciones
+## <a name="recommendations"></a>Recomendaciones
 
 -   Intenta permanecer lo más cerca posible de la plantilla de control original, para obtener un control óptimo y rendimiento de la aplicación.
 -   No uses visualizaciones táctiles en situaciones en que podrían interferir con el uso de la aplicación. Para más información, consulta [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969).
 -   No muestres información a menos que sea absolutamente necesario. No muestres información visual a menos que esta sirva para añadir valor que no se encuentra disponible en ningún otro sitio. De este modo, mantendrás la interfaz de usuario ordenada y organizada.
 -   Intenta no personalizar drásticamente los comportamientos de la información visual de los gestos integrados de Windows, ya que esto podría generar una experiencia del usuario confusa e incoherente.
 
-## Instrucciones de uso adicionales
+## <a name="additional-usage-guidance"></a>Instrucciones de uso adicionales
 
 Las visualizaciones de contacto son especialmente importantes para las interacciones táctiles que requieren exactitud y precisión. Por ejemplo, tu aplicación debe indicar de manera clara la ubicación de una pulsación para que el usuario sepa si se equivocó al pulsar el objetivo, por cuánto se equivocó y qué ajustes debe realizar.
 
-Al usar los controles de plataforma XAML predeterminados disponibles te asegurarás de que tu aplicación funciona correctamente en todos los dispositivos y en todas las situaciones de entrada. Si tu aplicación presenta interacciones personalizadas que necesitan de información personalizada, debes asegurarte de que esta información sea adecuada, abarque los dispositivos de entrada y no distraiga al usuario de su tarea. Esto es especialmente importante en las aplicaciones de dibujo o de juegos, donde la información visual podría entrar en conflicto con áreas críticas de la interfaz de usuario u ocultarlas.
+Al usar los controles de plataforma XAML disponibles, te aseguras de que la aplicación funcione correctamente en todos los dispositivos y en todas las situaciones de entrada. Si tu aplicación presenta interacciones personalizadas que necesitan de información personalizada, debes asegurarte de que esta información sea adecuada, abarque los dispositivos de entrada y no distraiga al usuario de su tarea. Esto es especialmente importante en las aplicaciones de dibujo o de juegos, donde la información visual podría entrar en conflicto con áreas críticas de la interfaz de usuario u ocultarlas.
 
 [!IMPORTANT] Te recomendamos que no cambies el comportamiento de interacción de los gestos integrados. 
 
@@ -50,11 +60,11 @@ Estos son algunos ejemplos de visualizaciones de contacto integradas en Windows.
 | --- | --- | --- | --- |
 | Visualización táctil | Visualización de mouse y panel táctil | Visualización de pluma | Visualización de teclado |
 
-## Elementos visuales de foco de alta visibilidad
+## <a name="high-visibility-focus-visuals"></a>Elementos visuales de foco de alta visibilidad
 
 Todas las aplicaciones de Windows admiten elementos visuales de foco alrededor de controles interactivos más definidos en la aplicación. Estos nuevos elementos visuales de foco son totalmente personalizables y se pueden deshabilitar cuando sea necesario.
 
-## Personalización de marca de color y personalización
+## <a name="color-branding--customizing"></a>Personalización de marca de color y personalización
 
 **Propiedades de borde**
 
@@ -100,7 +110,7 @@ Para cambiar los colores según el control, modifica las propiedades de los elem
 <Slider Width="200" FocusVisualPrimaryBrush="DarkRed" FocusVisualSecondaryBrush="Pink"/>
 ```
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 **Para diseñadores**
 * [Directrices sobre el movimiento panorámico](guidelines-for-panning.md)
@@ -129,6 +139,6 @@ Para cambiar los colores según el control, modifica las propiedades de los elem
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

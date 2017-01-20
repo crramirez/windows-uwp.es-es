@@ -4,8 +4,8 @@ Description: "Puedes animar a los clientes a dejar comentarios iniciando el Cent
 title: "Iniciar el Centro de opiniones desde la aplicación"
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 4296bd4007ae5109c9a3736c977ba68f312b208c
+ms.sourcegitcommit: a3c4ebc9bfda5ed41363de139d43a6a2c7934e0e
+ms.openlocfilehash: 54c6503add19ead5226da5a862b199bc3f305b7e
 
 ---
 
@@ -59,16 +59,16 @@ Para iniciar el Centro de opiniones desde la aplicación:
 
 Para iniciar el Centro de opiniones, te recomendamos que agregues un elemento de interfaz de usuario en la aplicación (por ejemplo, un botón) que muestre el siguiente icono de comentarios estándar de la fuente Segoe MDL2 Assets y el código de carácter E939.
 
-![]Feedback icon](images/feedback_icon.PNG)
+![Icono de comentarios](images/feedback_icon.PNG)
 
 También te recomendamos que uses una o varias de las siguientes opciones de ubicación para vincular al Centro de opiniones en la aplicación.
 * **Directamente en la barra de la aplicación**. Según la implementación, se recomendará que uses solo el icono o que agregues texto (como se muestra a continuación).
 
-  ![]Feedback icon](images/feedback_appbar_placement.png)
+  ![Icono de comentarios](images/feedback_appbar_placement.png)
 
 * **En la configuración de la aplicación**. Esta es una manera más sutil de proporcionar acceso al Centro de opiniones. En el siguiente ejemplo, el vínculo Comentarios aparece como uno de los vínculos de la aplicación.
 
-  ![]Feedback icon](images/feedback_settings_placement.png)
+  ![Icono de comentarios](images/feedback_settings_placement.png)
 
 * **En un control flotante controlado por eventos**. Esto es útil cuando quieres consultar a los clientes sobre una pregunta específica antes de iniciar el Centro de opiniones sobre Windows. Por ejemplo, después de que la aplicación use una característica determinada, es posible que le hagas al cliente una pregunta específica sobre su satisfacción con esa característica. Si el cliente elige responder, la aplicación inicia el Centro de opiniones.
 
@@ -79,6 +79,6 @@ También te recomendamos que uses una o varias de las siguientes opciones de ubi
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

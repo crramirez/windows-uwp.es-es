@@ -4,8 +4,8 @@ description: "Esta es primera parte de un tutorial completo acerca de cómo crea
 ms.assetid: A9E11694-A7F5-4E27-95EC-889307E0C0EF
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
-ms.openlocfilehash: 04311e9c3242bdaf6588c8102a06ae658e6637e2
+ms.sourcegitcommit: 126811b615117c0204e3ac4326d810c986a51e55
+ms.openlocfilehash: 27f06fe3031d391a03bc5f5b08723983b34308f0
 
 ---
 
@@ -624,7 +624,7 @@ En este ejercicio, partirás del ejercicio anterior. Cuando una persona inicia s
 
 -   Compila y ejecuta la aplicación. Inicia sesión con "sampleUsername" y haz clic en Iniciar sesión. Escribe el PIN y, si es correcto, deberías dirigirte a la pantalla de bienvenida. Intenta hacer clic en la opción de olvidar usuario y supervisa la ventana de salida para ver si el usuario se ha eliminado. Ten en cuenta que una vez eliminado el usuario, permanecerás en la página principal. Deberás crear una página de selección del usuario a la que la aplicación pueda navegar.
 
-    !pantalla de bienvenida de Passport](images/passport-login-9.png)
+    ![pantalla de bienvenida de Passport](images/passport-login-9.png)
 
 -   En la carpeta Vistas, crea una nueva página en blanco denominada "UserSelection.xaml" y agrega el siguiente XAML para definir la interfaz de usuario. Esta página contendrá una [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) en la que se mostrarán todos los usuarios de la lista de cuentas locales, así como un botón que navegará a la página de inicio de sesión para permitir al usuario agregar otra cuenta.
 
@@ -973,6 +973,6 @@ No existe ningún trabajo adicional que, como desarrollador, debas hacer para ad
 * [Servicio de inicio de sesión de Microsoft Passport](microsoft-passport-login-auth-service.md)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

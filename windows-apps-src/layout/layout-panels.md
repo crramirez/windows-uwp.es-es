@@ -5,12 +5,15 @@ title: "Paneles de diseño para aplicaciones para la Plataforma universal de Win
 ms.assetid: 07A7E022-EEE9-4C81-AF07-F80868665994
 label: Layout panels
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 58187f34de283b407278a75f1b7b6de61908387f
+ms.sourcegitcommit: 98b3a9739b1906b7abb529cea1e7d433118cbcdd
+ms.openlocfilehash: b1c3d5ca03a99e2fff1c37cfddfb7a00db45d251
 
 ---
-# Paneles de diseño
+# <a name="layout-panels"></a>Paneles de diseño
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Puedes usar paneles de diseño para organizar y agrupar elementos de interfaz de usuario en la aplicación. En los paneles de diseño XAML integrados se incluyen [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx), [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) y [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx). Aquí describimos cada panel y mostramos cómo usarlos para el diseño de los elementos de interfaz de usuario XAML.
 
@@ -51,9 +54,9 @@ Este es un ejemplo de cómo establecer las propiedades de borde de una Grid.
 
 ![Cuadrícula con bordes](images/layout-panel-grid-border.png)
 
-El uso de las propiedades de borde integradas permite reducir el recuento de elementos XAML, lo que puede mejorar el rendimiento de la interfaz de usuario de la aplicación. Para obtener más información sobre los paneles de diseño y el rendimiento de la interfaz de usuario, consulta [Optimiza tu diseño XAML](https://msdn.microsoft.com/library/windows/apps/mt404609.aspx).
+El uso de las propiedades de borde integradas permite reducir el recuento de elementos XAML, lo que puede mejorar el rendimiento de la interfaz de usuario de la aplicación. Para obtener más información sobre los paneles de diseño y el rendimiento de la interfaz de usuario, consulta [Optimiza tu diseño XAML](https://msdn.microsoft.com/en-us/library/windows/apps/mt404609.aspx).
 
-## RelativePanel
+## <a name="relativepanel"></a>RelativePanel
 
 [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) permite diseñar los elementos de la interfaz de usuario al especificar su posición en relación con otros elementos y en relación con el panel. De manera predeterminada, un elemento se coloca en la esquina superior izquierda del panel. Puedes usar RelativePanel con un elemento [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) y elementos [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) para reorganizar la interfaz de usuario en distintos tamaños de ventana.
 
@@ -100,7 +103,7 @@ Estas son algunas cosas que tienes que tener en cuenta sobre la variación de ta
 - Al rectángulo verde se le asigna una altura explícita de 44. Se alinea a la izquierda con el rectángulo rojo y su lado derecho se alinea al rectángulo azul, que determina su ancho.
 - Al rectángulo amarillo no se le asigna un tamaño explícito. Se alinea a la izquierda al rectángulo azul. Sus bordes derecho e inferior se alinean al borde del panel. Su tamaño lo determinan estas alineaciones y cambiará cuando cambie el tamaño del panel.
 
-## StackPanel
+## <a name="stackpanel"></a>StackPanel
 
 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) es un sencillo panel de diseño que organiza los elementos secundarios en una única línea que se puede orientar horizontal o verticalmente. El uso de controles de StackPanel es típico en escenarios donde quieres organizar una pequeña subsección de la interfaz de usuario en la página.
 
@@ -124,7 +127,7 @@ El resultado tiene el siguiente aspecto.
 
 En un objeto StackPanel, si el tamaño de un elemento secundario no se establece explícitamente, se amplía para rellenar el ancho disponible (o el alto si el objeto Orientation es **Horizontal**). En este ejemplo, el ancho de los rectángulos no está establecido. Los rectángulos se expanden para ocupar todo el ancho del StackPanel.
 
-## Grid
+## <a name="grid"></a>Grid
 
 El panel [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) permite organizar los controles en diseños de varias filas y varias columnas. Puedes especificar las filas y columnas de un panel Grid mediante las propiedades [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.rowdefinitions.aspx) y [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.columndefinitions.aspx). En XAML, usa la sintaxis de elemento de propiedad para declarar las filas y columnas en el elemento Grid. Puedes distribuir el espacio dentro de una columna o una fila usando variación de tamaño **Auto** o proporcional.
 
@@ -132,7 +135,7 @@ Los objetos se colocan en celdas específicas de la Grid a través de las propie
 
 Puedes hacer que el contenido se expanda entre varias filas y columnas mediante las propiedades adjuntas [**Grid.RowSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.rowspan.aspx) y [**Grid.ColumnSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.columnspan.aspx).
 
-En este ejemplo de código XAML se muestra cómo crear una Grid con tres filas y dos columnas. El alto de las filas primera y tercera es lo suficientemente grande como para contener el texto. La altura de la segunda fila rellena el resto de altura que queda disponible. El ancho de las columnas se divide por igual dentro del ancho disponible del contenedor.
+En este ejemplo de código XAML se muestra cómo crear una cuadrícula con dos filas y dos columnas.
 
 ```xaml
 <Grid>
@@ -154,14 +157,14 @@ En este ejemplo de código XAML se muestra cómo crear una Grid con tres filas y
 
 El resultado tiene el siguiente aspecto.
 
-![Grid](images/layout-panel-grid.png)
+![Cuadrícula](images/layout-panel-grid.png)
 
 En este ejemplo, la variación del tamaño funciona del siguiente modo: 
 - La segunda fila tiene un alto explícito de 44 píxeles efectivos. De manera predeterminada, el alto de la primera fila rellena el espacio restante.
 - El ancho de la primera columna se establece en **Auto**, por lo su ancho es el necesario para sus elementos secundarios. En este caso, tiene un ancho de 44 píxeles efectivos para que se ajuste al ancho del rectángulo rojo.
 - Los rectángulos no tienen ninguna otra limitación de tamaño, por lo que cada uno de ellos se amplía para rellenar la celda de cuadrícula en la que se encuentra.
 
-## VariableSizedWrapGrid
+## <a name="variablesizedwrapgrid"></a>VariableSizedWrapGrid
 
 [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) proporciona un panel de diseño con estilo de cuadrícula en el que los elementos se organizan en filas o en columnas que se ajustan automáticamente a una nueva fila o columna cuando se alcanza el valor [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx). 
 
@@ -193,7 +196,7 @@ El resultado tiene el siguiente aspecto.
 
 En este ejemplo, el número máximo de filas de cada columna es 3. En la primera columna se incluyen solo dos elementos (los rectángulos rojos y azules) porque el rectángulo azul se extiende entre dos filas. El rectángulo verde luego se ajusta a la parte superior de la siguiente columna.
 
-## Lienzo
+## <a name="canvas"></a>Lienzo
 
 El panel [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx) posiciona sus elementos secundarios con puntos de coordenadas fijos. Para especificar los puntos en los elementos secundarios se establecen las propiedades adjuntas [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.left.aspx) y [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.top.aspx) de cada elemento. Durante el diseño, el objeto Canvas primario lee estas propiedades adjuntas en sus elementos secundarios y usa los valores durante el pase de diseño [Arrange](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.arrange.aspx).
 
@@ -219,12 +222,12 @@ El resultado tiene el siguiente aspecto.
 
 Usa el panel Canvas con moderación. Aunque resulta conveniente poder controlar con precisión la posición de los elementos de la interfaz de usuario en algunos escenarios, un panel de diseño con una posición fija puede hacer que el área de la interfaz de usuario sea menos adaptativa a los cambios generales de tamaño de la ventana de la aplicación. El cambio de tamaño de la ventana de la aplicación podría ser el resultado de un cambio de orientación del dispositivo, de la división de las ventanas de la aplicación o de un cambio de monitor, entre otros escenarios.
 
-## Paneles para ItemsControl
+## <a name="panels-for-itemscontrol"></a>Paneles para ItemsControl
 
 Hay varios paneles especiales que se pueden usar solo como [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) para mostrar los elementos en un [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx). Estos son [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemsstackpanel.aspx), [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemswrapgrid.aspx), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.virtualizingstackpanel.aspx) y [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.wrapgrid.aspx). No puedes usar estos paneles para el diseño general de la interfaz de usuario.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -3,18 +3,25 @@ description: "Aprende a diseñar y codificar una aplicación para UWP en la que 
 title: "Diseño de la distribución de una aplicación para UWP: desarrollo de aplicaciones de Windows"
 author: mijacobs
 keywords: "diseño de aplicaciones para UWP, Plataforma universal de Windows, diseño de aplicaciones, interfaz"
+label: Layout
+template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
-ms.openlocfilehash: 72c4b957c98956965c773b4c2182796880f59a1d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e643b7029d5bc417437f7a1b8586424ac4345c3b
 
 ---
-# Diseño de aplicaciones para UWP
+# <a name="layout-for-uwp-apps"></a>Diseño de aplicaciones para UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 La estructura de la aplicación, el diseño de la página y la navegación son la base de la experiencia del usuario de tu aplicación. Los artículos de esta sección te ayudarán a crear una aplicación en la que resulte fácil navegar y que quede bien en varios dispositivos y tamaños de pantalla.
 
-## Introducción
+## <a name="intro"></a>Introducción
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -28,7 +35,7 @@ Al diseñar una aplicación de UWP, se crea una interfaz de usuario que se adapt
 </div>
 </div>
 
-## Estructura y distribución de la aplicación
+## <a name="app-layout-and-structure"></a>Estructura y distribución de la aplicación
 Echa un vistazo a estas recomendaciones para estructurar la aplicación y usar los tres tipos de elementos de interfaz de usuario: navegación, comandos y contenido.
 
 <div class="side-by-side">
@@ -50,7 +57,7 @@ Los elementos de comandos son los elementos interactivos de la interfaz de usuar
 </div>
 </div>
 
-## Diseño de página 
+## <a name="page-layout"></a>Diseño de página 
 Estos artículos te ayudan a crear una interfaz de usuario flexible que quede bien en distintos tamaños de pantalla, tamaños de ventana, resoluciones y orientaciones. 
 
 
@@ -83,6 +90,6 @@ Además de las propiedades de dimensiones (ancho, alto y restricciones), los ele
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -6,19 +6,17 @@ ms.assetid: 340F55C1-0DDF-4233-A8E4-C15EF9030785
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
-ms.openlocfilehash: e61c887cc474504cc283de1d433180eb3cfe72a0
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 5329c72034b1be540f7b0fdd7f7d1ddfb2fa6a0d
 
 ---
+
+# <a name="code-generated-by-the-push-notification-wizard"></a>Código generado por el Asistente para notificaciones de inserción
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-# Código generado por el Asistente para notificaciones de inserción
-
-
-
 
 Usar un asistente en Visual Studio te permite generar notificaciones de inserción desde un servicio móvil creado con los Servicios móviles de Azure. El Asistente de Visual Studio genera código para ayudarte a empezar. En este tema se explica cómo el asistente modifica el proyecto, qué hace el código generado, cómo se usa este código y qué puedes hacer después para sacarle todo el partido a las notificaciones de inserción. Consulta la [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md).
 
-## Cómo el asistente modifica tu proyecto
+## <a name="how-the-wizard-modifies-your-project"></a>Cómo el asistente modifica tu proyecto
 
 
 El Asistente para notificaciones de inserción modifica tu proyecto de estos modos:
@@ -38,7 +36,7 @@ var <mobile-service-name>Client = new Microsoft.WindowsAzure.MobileServices.Mobi
                 "<your client secret>");
 ```
 
-## Registro para notificaciones de inserción
+## <a name="registration-for-push-notifications"></a>Registro para notificaciones de inserción
 
 
 En push.register.\*, el método UploadChannel registra el dispositivo para recibir notificaciones de inserción. La Tienda realiza un seguimiento de las copias de tu aplicación que hay instaladas y ofrece el canal de notificaciones de inserción. Consulta [**PushNotificationChannelManager**](https://msdn.microsoft.com/library/windows/apps/br241284).
@@ -170,7 +168,7 @@ void mymobileservice1234Push::HandleExceptionsComingFromTheServer()
 
 Las etiquetas de notificación de inserción proporcionan una forma de restringir las notificaciones para un subconjunto de clientes. Puedes usar el método registerNative (o RegisterNativeAsync) para registrarte para recibir todas las notificaciones de inserción sin especificar etiquetas, o bien puedes registrarte con etiquetas proporcionando el segundo argumento, una matriz de etiquetas. Si te registras con una o más etiquetas, solo recibirás notificaciones que coinciden con esas etiquetas.
 
-## Scripts del lado servidor (solo backend de JavaScript)
+## <a name="server-side-scripts-javascript-backend-only"></a>Scripts del lado servidor (solo backend de JavaScript)
 
 
 Para los servicios móviles que usan el backend de JavaScript, los scripts del lado servidor se ejecutan cuando se producen operaciones de eliminación, inserción, lectura o actualización. Los scripts no implementan estas operaciones, sino que se ejecutan cuando el cliente realiza una llamada a la API REST de los Servicios móviles de Windows que desencadena estos eventos. Después, los scripts pasan el control a las propias operaciones mediante una llamada a request.execute o request.respond para emitir una respuesta al contexto de llamada. Consulta [Referencia de la API de REST de los Servicios móviles de Azure](http://go.microsoft.com/fwlink/p/?linkid=511139).
@@ -210,7 +208,7 @@ La función sendNotifications envía una sola notificación en forma de notifica
 
  
 
-## Tipos de notificaciones de inserción
+## <a name="push-notification-types"></a>Tipos de notificaciones de inserción
 
 
 Windows admite notificaciones de otro tipo además de notificaciones de inserción. Para obtener información general sobre las notificaciones, consulta [Entrega de notificaciones programadas, periódicas y de inserción](https://msdn.microsoft.com/library/windows/apps/hh761484).
@@ -223,10 +221,10 @@ Debes usar las notificaciones de inserción siguiendo las directrices para aplic
 
 Si vas a actualizar iconos dinámicos con notificaciones de inserción, también deberías seguir las directrices de [Directrices y lista de comprobación para iconos y notificaciones](https://msdn.microsoft.com/library/windows/apps/hh465403).
 
-## Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 
-### Uso de los Servicios de notificaciones de inserción de Windows (WNS)
+### <a name="using-the-windows-push-notification-services-wns"></a>Uso de los Servicios de notificaciones de inserción de Windows (WNS)
 
 Puedes llamar a Servicios de notificaciones de inserción de Windows (WNS) directamente si los Servicios móviles no ofrecen la suficiente flexibilidad, si quieres escribir tu código de servidor en C# o Visual Basic, o si ya tienes un servicio en la nube y quieres usarlo para enviar notificaciones de inserción desde él. Al llamar directamente a WNS, puedes enviar notificaciones de inserción desde tu propio servicio en la nube, como un rol de trabajador que supervisa los datos desde una base de datos u otro servicio web. El servicio en la nube debe autenticarse en WNS para enviar notificaciones de inserción a tus aplicaciones. Consulta [Cómo autenticar con los Servicios de notificaciones de inserción de Windows (JavaScript)](https://msdn.microsoft.com/library/windows/apps/hh465407) o [(C#/C++/VB)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868206).
 
@@ -236,7 +234,7 @@ También puedes enviar notificaciones de inserción si ejecutas una tarea progra
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md)
@@ -254,6 +252,6 @@ También puedes enviar notificaciones de inserción si ejecutas una tarea progra
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -4,15 +4,12 @@ ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
 description: "Usa este método en la API de envío de la Tienda Windows para crear un nuevo envío de paquetes piloto para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows."
 title: "Creación de un envío de paquete piloto mediante la API de envío de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
-ms.openlocfilehash: 8689fa9d314d2ba1d31a16c47aa4c7168e44c69f
+ms.sourcegitcommit: 020c8b3f4d9785842bbe127dd391d92af0962117
+ms.openlocfilehash: 2ca6824039077d5d3ceba2c643d52a62c77104e4
 
 ---
 
-# Creación de un envío de paquete piloto mediante la API de envío de la Tienda Windows
-
-
-
+# <a name="create-a-package-flight-submission-using-the-windows-store-submission-api"></a>Creación de un envío de paquete piloto mediante la API de envío de la Tienda Windows
 
 Usa este método en la API de envío de la Tienda Windows para crear un nuevo envío de un paquete piloto para una aplicación. Después de crear correctamente un nuevo envío mediante este método, [actualiza el envío](update-a-flight-submission.md) para realizar los cambios necesarios a los datos de envío y luego [confirma el envío](commit-a-flight-submission.md) para la recopilación y la publicación.
 
@@ -20,7 +17,7 @@ Para obtener más información sobre cómo se ajusta este método en el proceso 
 
 >**Nota**&nbsp;&nbsp;Este método crea un envío para un paquete piloto existente. Para crear un paquete piloto, usa el método de [creación de un paquete piloto](create-a-flight.md).
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
@@ -30,7 +27,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
-## Solicitud
+## <a name="request"></a>Solicitud
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones del cuerpo del encabezado y la solicitud.
 
@@ -41,15 +38,15 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 <span/>
  
 
-### Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado        | Type   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
+| Authorization | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Parámetros de solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -58,11 +55,11 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
 
-### Cuerpo de la solicitud
+### <a name="request-body"></a>Cuerpo de la solicitud
 
 No incluyas un cuerpo de la solicitud para este método.
 
-### Ejemplo de solicitud
+### <a name="request-example"></a>Ejemplo de solicitud
 
 El siguiente ejemplo muestra cómo crear un nuevo envío de paquete piloto para una aplicación que tiene la Id. de la Tienda 9WZDNCRD91MD.
 
@@ -71,7 +68,7 @@ POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/fl
 Authorization: Bearer <your access token>
 ```
 
-## Respuesta
+## <a name="response"></a>Respuesta
 
 El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisfactoria a este método. El cuerpo de la respuesta contiene información sobre el nuevo envío. Para obtener más información acerca de los valores que se encuentran en el cuerpo de la respuesta, consulta [Recurso de envío del paquete piloto](manage-flight-submissions.md#flight-submission-object).
 
@@ -114,7 +111,7 @@ El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisf
 }
 ```
 
-## Códigos de error
+## <a name="error-codes"></a>Códigos de error
 
 Si la solicitud no se puede completar correctamente, la respuesta contendrá uno de los siguientes códigos de error HTTP.
 
@@ -125,9 +122,9 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 <span/>
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-* [Create and manage submissions using Windows Store services (Crear y administrar envíos mediante el uso de servicios de la Tienda Windows)](create-and-manage-submissions-using-windows-store-services.md)
+* [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Administración de envíos de paquetes piloto](manage-flight-submissions.md)
 * [Obtención de un envío de paquete piloto](get-a-flight-submission.md)
 * [Confirmación de un envío de paquete piloto](commit-a-flight-submission.md)
@@ -137,6 +134,6 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

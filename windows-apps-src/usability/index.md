@@ -3,12 +3,19 @@ description: "Aprende a lograr que tu aplicación sea inclusiva y accesible para
 keywords: "accesibilidad de las aplicaciones para UWP, globalización, diseñar aplicaciones inclusivas, requisitos de aplicaciones de accesibilidad"
 title: 'Facilidad de uso para aplicaciones para UWP: desarrollo de aplicaciones de Windows'
 author: mijacobs
+label: Usability
+template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 589e3290a47a9245ddb5e43f64d13bae1244ac8b
-ms.openlocfilehash: d7246bc898e36155996941875b6c00da7891809d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 011d4e7dcebc20e0568fd5bdc4a207a66597f073
 
 ---
-# Facilidad de uso para aplicaciones para UWP
+# <a name="usability-for-uwp-apps"></a>Facilidad de uso para aplicaciones para UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -17,7 +24,7 @@ Los pequeños toques, una especial atención a los detalles, pueden transformar 
 Las instrucciones de diseño y codificación de esta sección pueden hacer que tu aplicación para UWP resulte más inclusiva al agregar características de accesibilidad, habilitar la globalización y la localización, permitir a los usuarios personalizar su experiencia y proporcionarles ayuda cuando lo necesiten.
 
 
-## Accesibilidad
+## <a name="accessiblity"></a>Accesibilidad
 
 La accesibilidad consiste en hacer que el uso de una aplicación resulte más fácil para personas que presentan limitaciones que les impiden el uso de interfaces de usuario convencionales. En algunos casos, los requisitos de accesibilidad están impuestos por ley. Sin embargo, resulta buena idea abordar los problemas de accesibilidad independientemente de los requisitos legales, de modo que tus aplicaciones lleguen al mayor público posible.
 
@@ -101,7 +108,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
 
 
 
-## Globalización y localización
+## <a name="globalization-and-localization"></a>Globalización y localización
 
 Windows se usa en todo el mundo, lo que incluye a personas con diferentes culturas, regiones e idiomas. Un usuario puede hablar cualquier idioma, o incluso varios idiomas. Un usuario puede estar en cualquier lugar del mundo y puede hablar cualquier idioma en cualquier ubicación. Puedes aumentar el mercado potencial de tu aplicación diseñándola para que sea fácilmente adaptable con la globalización y la localización.
 
@@ -151,7 +158,7 @@ Windows se usa en todo el mundo, lo que incluye a personas con diferentes cultur
 </div>
 
 
-## Configuración de aplicaciones
+## <a name="app-settings"></a>Configuración de aplicaciones
 
 Configuración de aplicaciones permite al usuario personalizar la aplicación con el fin de optimizarla para necesidades y preferencias individuales. El hecho de proporcionar la configuración adecuada y almacenarla correctamente puede mejorar una experiencia del usuario ya excelente de por sí.
 
@@ -166,7 +173,7 @@ Configuración de aplicaciones permite al usuario personalizar la aplicación co
 </div>
 </div>
 
-## Ayuda desde la aplicación
+## <a name="in-app-help"></a>Ayuda desde la aplicación
 Por muy bien que hayas diseñado una aplicación, algunos usuarios necesitarán un poco más de ayuda.
 
 <div class="side-by-side">
@@ -194,6 +201,6 @@ Por muy bien que hayas diseñado una aplicación, algunos usuarios necesitarán 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

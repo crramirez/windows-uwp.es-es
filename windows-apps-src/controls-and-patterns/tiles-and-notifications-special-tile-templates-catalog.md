@@ -6,16 +6,12 @@ ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
-ms.openlocfilehash: fc01951adfb151f1c5952d9181492a1d1f88b0cc
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 813a9a5fe27f3c0874eab80223afd6b3ac7be07a
 
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # <a name="special-tile-templates"></a>Plantillas de iconos especiales
-
-
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables. Cada plantilla de iconos especial fue compilada específicamente para Windows 10, excepto la plantilla de iconos icónica, una plantilla especial clásica que ha sido actualizada para Windows 10. En este artículo se abordan tres plantillas de iconos especiales: icónicas, de fotos y de contactos.
 
@@ -275,6 +271,6 @@ Para enviar la notificación, consulta [Elegir un método de entrega de notifica
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

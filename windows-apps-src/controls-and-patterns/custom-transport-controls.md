@@ -6,11 +6,11 @@ ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
 label: Create custom media transport controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: d1f1b0575f9f1a968d21629a73df6146db156cf5
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 28528b77fdd2e01a9e2feaa33a3a38f2f9b86661
 
 ---
-# Crear controles de transporte personalizados
+# <a name="create-custom-transport-controls"></a>Crear controles de transporte personalizados
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -18,24 +18,22 @@ La clase MediaPlayerElement tiene controles de transporte de XAML personalizable
 
 Antes de empezar, debes estar familiarizado con las clases MediaPlayerElement y MediaTransportControls. Para obtener más información, consulta la guía de control de MediaPlayerElement.
 
-> **Sugerencia**&nbsp;&nbsp;Los ejemplos de este tema se basan en la [muestra de controles de transporte de contenido multimedia](http://go.microsoft.com/fwlink/p/?LinkId=620023). Puedes descargar la muestra para ver y ejecutar el código completo.
+> [!TIP]
+> Los ejemplos de este tema se basan en la [muestra de controles de transporte de contenido multimedia](http://go.microsoft.com/fwlink/p/?LinkId=620023). Puedes descargar la muestra para ver y ejecutar el código completo.
 
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx"><strong>MediaPlayerElement</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aretransportcontrolsenabled.aspx"><strong>MediaPlayerElement.AreTransportControlsEnabled</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn278677"><strong>MediaTransportControls</strong></a></li>
+<li>[**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)</li>
+<li>[**MediaPlayerElement.AreTransportControlsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aretransportcontrolsenabled.aspx) </li>
+<li>[**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677)</li>
 </ul>
-
-</div>
 </div>
 
+> [!NOTE]
+> **MediaPlayerElement** solo está disponible en Windows 10, versión 1607 y posteriores. Si vas a desarrollar una aplicación para una versión anterior de Windows 10, tendrás que usar [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) en su lugar. Todos los ejemplos de esta página también funcionan con **MediaElement**.
 
-
-> **Nota**&nbsp;&nbsp;**MediaPlayerElement** solo está disponible en Windows 10, versión 1607 y posteriores. Si vas a desarrollar una aplicación para una versión anterior de Windows 10, tendrás que usar [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) en su lugar. Todos los ejemplos de esta página también funcionan con **MediaElement**.
-
-## ¿Cuándo deberías personalizar la plantilla?
+## <a name="when-should-you-customize-the-template"></a>¿Cuándo deberías personalizar la plantilla?
 
 **MediaPlayerElement** tiene controles de transporte integrados que se han diseñado para funcionar adecuadamente sin modificaciones con la mayoría de las aplicaciones de reproducción de audio y vídeo. La clase [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) proporciona estos controles e incluyen botones para reproducir y detener contenido multimedia, así como navegar por él, ajustar el volumen, alternar entre pantalla completa, difundir a un segundo dispositivo, habilitar los subtítulos, cambiar las pistas de audio y ajustar la velocidad de reproducción. MediaTransportControls cuenta con propiedades que permiten controlar si cada botón se muestra y se habilita. También puedes establecer la propiedad [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.iscompact.aspx) para especificar si los controles se muestran en una o dos filas.
 
@@ -45,20 +43,23 @@ Sin embargo, puede haber escenarios donde tendrás que personalizar aún más pe
 - Cambiar el orden en que los comandos desaparecen cuando el control cambia de tamaño.
 - Proporcionar un botón de comando que no forma parte del conjunto predeterminado.
 
->**Nota**&nbsp;&nbsp;Los botones que se muestran en la pantalla desaparecerán de los controles de transporte integrados en un orden predefinido si no hay suficiente espacio en la pantalla. Para cambiar este orden o colocar los comandos que no caben en un menú de desbordamiento, tienes que personalizar los controles.
+> [!NOTE]
+> Los botones que se muestran en la pantalla desaparecerán de los controles de transporte integrados en un orden predefinido si no hay suficiente espacio en la pantalla. Para cambiar este orden o colocar los comandos que no caben en un menú de desbordamiento, tienes que personalizar los controles.
 
 Puedes personalizar el aspecto del control al modificar la plantilla predeterminada. Para modificar el comportamiento del control o agregar comandos nuevos, puedes crear un control personalizado derivado de MediaTransportControls.
 
->**Sugerencia**&nbsp;&nbsp;Las plantillas de control personalizables son una característica eficaz de la plataforma XAML, pero también hay consecuencias que deberías tener en cuenta. Al personalizar una plantilla, esta se convierte en un elemento estático de la aplicación y, por tanto, no recibirá ninguna actualización de plataforma que Microsoft realice en la plantilla. Si Microsoft realiza alguna actualización de la plantilla, se debería tomar la nueva plantilla y volver a modificarla para obtener las ventajas de la plantilla actualizada.
+> [!TIP]
+> Las plantillas de control personalizables son una característica eficaz de la plataforma XAML, pero también hay consecuencias que deberías tener en cuenta. Al personalizar una plantilla, esta se convierte en un elemento estático de la aplicación y, por tanto, no recibirá ninguna actualización de plataforma que Microsoft realice en la plantilla. Si Microsoft realiza alguna actualización de la plantilla, se debería tomar la nueva plantilla y volver a modificarla para obtener las ventajas de la plantilla actualizada.
 
-## Estructura de la plantilla
+## <a name="template-structure"></a>Estructura de la plantilla
 
 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.controltemplate.aspx) forma parte del estilo predeterminado. El estilo predeterminado del control de transporte se muestra en la página de referencia de clase de [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx). Puedes copiar este estilo predeterminado en el proyecto para modificarlo. ControlTemplate se divide en secciones similares a otras plantillas de control XAML.
 - La primera sección de la plantilla contiene las definiciones de [**Style**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx) para los distintos componentes de MediaTransportControls.
 - La segunda define los diversos estados visuales que usa MediaTransportControls.
 - En la tercera sección se incluye [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), que contiene los distintos elementos MediaTransportControls juntos y define la distribución de los componentes.
 
-> **Nota**&nbsp;&nbsp;Para más información sobre cómo modificar las plantillas, consulta [Plantillas de control](). Puedes usar un editor de texto o un editor similar en el IDE para abrir los archivos XAML en \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic. El estilo predeterminado y la plantilla para cada control se definen en el archivo **generic.xaml**. Puedes encontrar la plantilla MediaTransportControls en generic.xaml si buscas "MediaTransportControls".
+> [!NOTE]
+> Para más información sobre cómo modificar las plantillas de control, consulta [Plantillas de control](). Puedes usar un editor de texto o un editor similar en el IDE para abrir los archivos XAML en \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic. El estilo predeterminado y la plantilla para cada control se definen en el archivo **generic.xaml**. Puedes encontrar la plantilla MediaTransportControls en generic.xaml si buscas "MediaTransportControls".
 
 En las siguientes secciones se muestra cómo personalizar muchos de los elementos principales de los controles de transporte:
 - [
@@ -67,11 +68,11 @@ En las siguientes secciones se muestra cómo personalizar muchos de los elemento
               Clase **CommandBar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx): contiene todos los botones.
 Para obtener más información, consulta la sección de anatomía del tema de referencia MediaTransportControls.
 
-## Personalizar los controles de transporte
+## <a name="customize-the-transport-controls"></a>Personalizar los controles de transporte
 
 Si solo quieres modificar la apariencia de MediaTransportControls, también puedes crear una copia del estilo de control predeterminado y la plantilla, y modificarlas. Sin embargo, si también quieres agregar o modificar la funcionalidad del control, debes crear una nueva clase que derive de MediaTransportControls.
 
-### Crear una nueva plantilla del control
+### <a name="re-template-the-control"></a>Crear una nueva plantilla del control
 
 **Personalizar la plantilla y el estilo predeterminado de MediaTransportControls**
 1. Copia el estilo predeterminado de los estilos y plantillas de MediaTransportControls en un ResourceDictionary del proyecto.
@@ -93,7 +94,7 @@ Si solo quieres modificar la apariencia de MediaTransportControls, también pued
 
 Para obtener más información sobre cómo modificar estilos y plantillas, consulta [Controles de estilos]() y [Plantillas de control]().
 
-### Crear un control derivado
+### <a name="create-a-derived-control"></a>Crear un control derivado
 
 Para agregar o modificar la funcionalidad de los controles de transporte, debes crear una nueva clase derivada de MediaTransportControls. Una clase derivada llamada `CustomMediaTransportControls` se muestra en la [muestra de controles de transporte multimedia](http://go.microsoft.com/fwlink/p/?LinkId=620023) y los ejemplos restantes en esta página.
 
@@ -143,7 +144,7 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
 ```
 Ahora puedes modificar el estilo y la plantilla de control para actualizar el aspecto del control personalizado y el código de control para actualizar su comportamiento.
 
-### Trabajar con el menú de desbordamiento
+### <a name="working-with-the-overflow-menu"></a>Trabajar con el menú de desbordamiento
 
 Puedes mover los botones de comando de MediaTransportControls en un menú de desbordamiento para que los comandos menos usados queden ocultos hasta que el usuario los necesite.
 
@@ -186,9 +187,10 @@ Dado que el menú de desbordamiento se compone de botones de texto, tienes que a
 </CommandBar.SecondaryCommands>
 ```
 
-> **Importante**&nbsp;&nbsp;Aun así, debes hacer que el botón sea visible y habilitarlo para poder usarlo en el menú de desbordamiento. En este ejemplo, el elemento PlaybackRateButton no está visible en el menú de desbordamiento, a menos que la propiedad IsPlaybackRateButtonVisible sea true. No se habilita, a menos que la propiedad IsPlaybackRateEnabled sea true. El establecimiento de estas propiedades se muestra en la sección anterior.
+> [!IMPORTANT]
+> Aún puedes hacer que el botón sea visible y se pueda habilitar para poder usarlo en el menú de desbordamiento. En este ejemplo, el elemento PlaybackRateButton no está visible en el menú de desbordamiento, a menos que la propiedad IsPlaybackRateButtonVisible sea true. No se habilita, a menos que la propiedad IsPlaybackRateEnabled sea true. El establecimiento de estas propiedades se muestra en la sección anterior.
 
-### Agregar un botón personalizado
+### <a name="adding-a-custom-button"></a>Agregar un botón personalizado
 
 Una razón por la que quizás quieras personalizar MediaTransportControls es para agregar un comando personalizado al control. Ya sea para agregarlo como un comando principal o secundario, el procedimiento para crear el botón de comando y modificar su comportamiento es el mismo. En la [muestra de controles de transporte multimedia](http://go.microsoft.com/fwlink/p/?LinkId=620023), se agrega un botón "rating" a los comandos principales.
 
@@ -258,11 +260,11 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
 **Controles de transporte de contenido multimedia personalizados con un botín "Me gusta" agregado**
 ![Control de transporte de contenido multimedia personalizado con un botón Me gusta adicional](images/controls/mtc_double_custom_inprod.png)
 
-### Modificar el control deslizante
+### <a name="modifying-the-slider"></a>Modificar el control deslizante
 
 Un elemento [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx) proporciona el control "seek" de MediaTransportControls. Una manera de personalizarlo es cambiando la granularidad del comportamiento de búsqueda.
 
-El control deslizante de búsqueda predeterminado se divide en 100 partes, por lo que el comportamiento de búsqueda se limita a ese número de secciones. Puedes cambiar la granularidad del control deslizante de búsqueda al obtener el elemento Slider del árbol visual de XAML de tu controlador de eventos [**MediaOpened**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.mediaopened.aspx) en [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx). En este ejemplo se muestra cómo usar [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.visualtreehelper.aspx) para obtener una referencia a Slider y luego cambiar la frecuencia de paso predeterminado del control deslizante del 1% al 0,1% (1000 pasos) si el contenido multimedia tiene más de 120minutos. MediaPlayerElement se denomina `MediaPlayerElement1`.
+El control deslizante de búsqueda predeterminado se divide en 100 partes, por lo que el comportamiento de búsqueda se limita a ese número de secciones. Puedes cambiar la granularidad del control deslizante de búsqueda al obtener el elemento Slider del árbol visual de XAML de tu controlador de eventos [**MediaOpened**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.mediaopened.aspx) en [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx). En este ejemplo se muestra cómo usar [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.visualtreehelper.aspx) para obtener una referencia a Slider y luego cambiar la frecuencia de paso predeterminado del control deslizante del 1 % al 0,1 % (1000 pasos) si el contenido multimedia tiene más de 120 minutos. MediaPlayerElement se denomina `MediaPlayerElement1`.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -282,15 +284,12 @@ private void MediaPlayerElement_MediaPlayer_MediaOpened(object sender, RoutedEve
   }
 }
 ```
-
-
-
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 - [Reproducción de contenido multimedia](media-playback.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

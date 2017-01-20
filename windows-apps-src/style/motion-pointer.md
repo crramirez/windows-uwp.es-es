@@ -6,34 +6,34 @@ ms.assetid: EEB10A2C-629A-4705-8468-4D019D74DDFF
 label: Motion--Pointer animations
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 24f79997c1fd105bf6156cd1df13aa95a62056c0
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: c208b67829e2053302ec0cc7c6da013b89cee8b3
 
 ---
 
-# Animaciones para clic de puntero
+# <a name="pointer-click-animations"></a>Animaciones para clic de puntero
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Usa las animaciones de puntero para proporcionar comentarios visuales a los usuarios cuando presionen un elemento. La animación de puntero abajo reduce e inclina ligeramente el elemento presionado y se reproduce cuando se pulsa un elemento por primera vez. La animación de puntero arriba, que restablece el elemento a su posición original, se reproduce cuando el usuario suelta el puntero.
 
 
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Clase PointerUpThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/hh969168)</li>
+<li>[**Clase PointerDownThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/hh969164)</li>
+</ul>
+</div>
 
 
-**API importantes**
-
--   [**Clase PointerUpThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/hh969168)
--   [**Clase PointerDownThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/hh969164)
-
-
-
-## Cosas que hacer y cosas que evitar
-
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 -   Cuando usas una animación de puntero arriba, se desencadena inmediatamente la animación cuando el usuario suelta el puntero. De esta manera, se informa inmediatamente al usuario de que la acción se reconoció, aunque la acción desencadenada al presionar (como, por ejemplo, la navegación a una página nueva) tarde más en responder.
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
-**Para desarrolladores (XAML)**
-* [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
+* [Introducción a las animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [Animación de los clics del puntero](https://msdn.microsoft.com/library/windows/apps/xaml/jj649432)
 * [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**Clase PointerUpThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/hh969168)
@@ -49,6 +49,6 @@ Usa las animaciones de puntero para proporcionar comentarios visuales a los usua
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

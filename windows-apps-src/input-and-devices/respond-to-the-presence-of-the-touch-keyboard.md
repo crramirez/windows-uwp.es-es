@@ -6,20 +6,23 @@ ms.assetid: 70C6130E-23A2-4F9D-88E7-7060062DA988
 label: Respond to the presence of the touch keyboard
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 97a626aedff1b0915c845f151b16b3678e1cf977
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 7db7c360c1e6e3cadf6423d888240bb2f0f4651a
 
 ---
 
-# Responder a la presencia del teclado táctil
+# <a name="respond-to-the-presence-of-the-touch-keyboard"></a>Responder a la presencia del teclado táctil
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Aprende a adaptar la interfaz de usuario de la aplicación al mostrar u ocultar el teclado táctil.
 
-
-**API importantes**
-
--   [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/br209185)
--   [**InputPane**](https://msdn.microsoft.com/library/windows/apps/br242255)
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/br209185)</li>
+<li>[**InputPane**](https://msdn.microsoft.com/library/windows/apps/br242255)</li>
+</ul>
+</div> 
 
 
 
@@ -48,7 +51,7 @@ Si acabas de empezar a desarrollar aplicaciones de la Plataforma Universal Windo
 
 Para obtener sugerencias prácticas sobre el diseño de una aplicación optimizada para entrada de teclado que sea útil y atractiva, consulta las [directrices para el diseño de teclado](https://msdn.microsoft.com/library/windows/apps/hh972345).
 
-## Teclado táctil y una interfaz de usuario personalizada
+## <a name="touch-keyboard-and-a-custom-ui"></a>Teclado táctil y una interfaz de usuario personalizada
 
 
 Estas son algunas recomendaciones básicas para los controles de entrada de texto personalizado.
@@ -71,7 +74,7 @@ Estas son algunas recomendaciones básicas para los controles de entrada de text
 
     ![Un formulario que contiene áreas que deben permanecer siempre visibles](images/touch-keyboard-pan2.png)
 
-## Control de eventos Showing y Hiding
+## <a name="handling-the-showing-and-hiding-events"></a>Control de eventos Showing y Hiding
 
 
 Este es un ejemplo de cómo incluir controladores de eventos para los eventos [**showing**](https://msdn.microsoft.com/library/windows/apps/br242262) y [**hiding**](https://msdn.microsoft.com/library/windows/apps/br242260) del teclado táctil.
@@ -124,7 +127,7 @@ public class MyApplication
 }
 ```
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 * [Interacciones de teclado](keyboard-interactions.md)
 * [Accesibilidad de teclado](https://msdn.microsoft.com/library/windows/apps/mt244347)
@@ -146,6 +149,6 @@ public class MyApplication
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

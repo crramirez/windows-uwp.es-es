@@ -3,21 +3,23 @@ description: "Obtén las herramientas y las descargas más recientes para los di
 keywords: "diseño de aplicaciones para UWP, IU, interfaz de usuario, diseños de interfaz de usuario, descargas, herramientas de UWP"
 title: "Descargas de diseño para aplicaciones para UWP: desarrollo de aplicaciones de Windows"
 author: mijacobs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: f1ea979f5179cce0bb059534b064c2ecf805ce89
-ms.openlocfilehash: da21817eea3a26ffd162bd19c8eb69345ac1d726
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: d18696de51451552aef14c55d2a1b62c6037fb59
 
 ---
-
+# <a name="design-downloads-for-uwp-apps"></a>Descargas de diseño para aplicaciones para UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-# Descargas de diseño para aplicaciones para UWP
-
 
 Esta sección contiene descargas relacionadas con el diseño y la interfaz de usuario para aplicaciones para UWP. Si necesitas más herramientas como, por ejemplo, Visual Studio, consulta [nuestra página de descargas principales](https://developer.microsoft.com/downloads). 
 
 
-## Plantillas de diseño
+## <a name="design-templates"></a>Plantillas de diseño
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -55,13 +57,13 @@ Controles y diseños para diseñar aplicaciones para UWP en Adobe Photoshop.<br/
 </div>
 </div>
 
-## Herramientas
+## <a name="tools"></a>Herramientas
 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
             <p><b>Generador de ventanas e iconos de Adobe Photoshop</b><br/>
-Este conjunto de acciones para Adobe Photoshop genera los 68 activos de ventanas e iconos recomendados de solo 7 archivos. <br/>[Descargar el generador de ventanas iconos](http://go.microsoft.com/fwlink/p/?LinkId=760394)</p>    
+Este conjunto de acciones para Adobe Photoshop genera los 68 activos de ventanas e iconos recomendados de solo 7 archivos. <br/>[Descargar el generador de ventanas e iconos](http://go.microsoft.com/fwlink/p/?LinkId=760394)</p>    
   </div>
   <div class="side-by-side-content-right">
 <a href="http://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator" /></a>
@@ -69,19 +71,8 @@ Este conjunto de acciones para Adobe Photoshop genera los 68 activos de ventanas
 </div>
 </div>
 
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-            <p><b>Herramienta de contorno rojo de Adobe Illustrator</b><br/>
-Crea sin esfuerzo contornos rojos de los prototipos de Illustrator. (Requiere Adobe Illustrator CC o versiones posteriores).<br/>[Descargar la herramienta de contorno rojo de Adobe Illustrator](https://go.microsoft.com/fwlink/p/?LinkId=534641)</p>  
-  </div>
-  <div class="side-by-side-content-right">
-<a href="https://go.microsoft.com/fwlink/p/?LinkId=534641"><img src="images/redliner-tool.png" alt="Download the Redliner tool for Adobe Illustrator" /></a>
-  </div>
-</div>
-</div>
 
-## Muestras
+## <a name="samples"></a>Muestras
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -109,6 +100,6 @@ En este ejemplo se integran las características de Windows con la automatizaci�
 <b>¿Quieres ver más código?</b> Consulta la página de ejemplo de Windows para obtener una lista completa de todas las aplicaciones de muestra para UWP. [Ir al portal de muestras](https://developer.microsoft.com/samples)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

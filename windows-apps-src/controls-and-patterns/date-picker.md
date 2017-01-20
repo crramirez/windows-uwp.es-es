@@ -7,11 +7,11 @@ isNew: true
 label: Date picker
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 2253172ff20ae46b0ada556551adfeac62136398
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 76d5cd756f462ebaad5a200cf4bcf7f4076e4652
 
 ---
-# Selector de fecha
+# <a name="date-picker"></a>Selector de fecha
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -20,30 +20,25 @@ El selector de fecha te ofrece una forma estandarizada de permitir a los usuario
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx"><strong>Clase DatePicker</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.date.aspx"><strong>Propiedad Date</strong></a></li>
+<li>[**Clase DatePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx)</li>
+<li>[**Propiedad Date**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.date.aspx) </li>
+
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 Usa un selector de fecha para permitir que el usuario seleccione una fecha conocida, como una fecha de nacimiento, donde el contexto del calendario no es importante.
 
 Para obtener más información acerca de cómo elegir el control de fecha adecuada, consulta el artículo [Controles de fecha y hora](date-and-time.md).
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 El punto de entrada muestra la fecha elegida y, cuando el usuario lo selecciona, se expande una superficie del selector en sentido vertical desde el medio para que el usuario realice una selección. El selector de fecha se superpone a otra interfaz de usuario; no la hace desaparecer.
 
 ![Ejemplo de expansión del selector de fecha](images/controls_datepicker_expand.png)
 
-## Crear un selector de fecha
+## <a name="create-a-date-picker"></a>Crear un selector de fecha
 
 En este ejemplo, se muestra cómo crear un sencillo selector de fecha con un encabezado.
 
@@ -64,7 +59,7 @@ El selector de fecha resultante tiene este aspecto:
 
 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 - [Controles de fecha y hora](date-and-time.md)
 - [Selector de fecha del calendario](calendar-date-picker.md)
@@ -73,6 +68,6 @@ El selector de fecha resultante tiene este aspecto:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

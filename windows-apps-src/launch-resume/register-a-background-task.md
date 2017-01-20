@@ -4,8 +4,8 @@ title: Registrar una tarea en segundo plano
 description: "Aprende a crear una función que pueda reutilizarse para registrar de forma segura la mayoría de las tareas en segundo plano."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 translationtype: Human Translation
-ms.sourcegitcommit: 2f46f5cd26656b2d6b7d14c0d85aa7a0a6950fb8
-ms.openlocfilehash: 809cd0ea85d4dfc6ecf633d0ca9f16bbefee78ca
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: d65b8d3312e49469bd99d458b45bf5a46f345e6a
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 809cd0ea85d4dfc6ecf633d0ca9f16bbefee78ca
 
 Aprende a crear una función que pueda reutilizarse para registrar de forma segura la mayoría de las tareas en segundo plano.
 
-Este tema se aplica a las tareas en segundo plano dentro de proceso y a las tareas en segundo plano fuera de proceso. En este tema suponemos que ya tienes una tarea en segundo plano que debe registrarse. (Consulta [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md) o [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md) para obtener información sobre cómo escribir una tarea en segundo plano).
+Este tema se aplica a las tareas en segundo plano dentro de proceso y a las tareas en segundo plano fuera de proceso. En este tema suponemos que ya tienes una tarea en segundo plano que debe registrarse. (Consulta [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md) o [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md) para obtener información sobre cómo escribir una tarea en segundo plano).
 
 En este tema se recorre una función de utilidad que registra tareas en segundo plano. Antes de registrar una tarea varias veces, esta función de utilidad primero comprueba registros existentes para evitar los problemas que pueden surgir por registros repetidos. Además puede aplicar una condición del sistema a la tarea en segundo en plano. El tutorial incluye un ejemplo completo de funcionamiento de esta función de utilidad.
 
@@ -377,7 +377,7 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 
 ****
 
-* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md)
+* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md)
 * [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
@@ -397,6 +397,6 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -4,12 +4,12 @@ title: "Mostrar puntos de interés en un mapa"
 description: "Agrega puntos de interés a un mapa con marcadores, imágenes, formas y elementos de la interfaz de usuario de XAML."
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: aec420d6591546e63c6343d7151afe9e95d1afd8
+ms.sourcegitcommit: d00ba80ac7d0f033a69ad070dc8ee681cbd0ed18
+ms.openlocfilehash: 8afdb41d6790bb9647a6b89086c4b86872940c51
 
 ---
 
-# Mostrar puntos de interés en un mapa
+# <a name="display-points-of-interest-poi-on-a-map"></a>Mostrar puntos de interés en un mapa
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -34,7 +34,7 @@ En resumen:
 
 Si quieres colocar en el mapa un elevado número de elementos, considera la posibilidad de [superponer imágenes en mosaico en el mapa](overlay-tiled-images.md). Para mostrar carreteras en el mapa, consulta [Mostrar rutas e indicaciones](routes-and-directions.md).
 
-## Agregar un MapIcon
+## <a name="add-a-mapicon"></a>Agregar un MapIcon
 
 
 Para mostrar una imagen (como, por ejemplo, un marcador) con texto opcional en el mapa, usa la clase [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077). Igualmente, para aceptar la imagen predeterminada o proporcionar una imagen personalizada, puedes usar la propiedad [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078). En la siguiente imagen se muestra la imagen predeterminada de un elemento **MapIcon** que consta de la propiedad [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088), la cual muestra ningún valor especificado, un título corto, un título largo y un título muy largo.
@@ -86,7 +86,7 @@ Ten en cuenta lo siguiente si quieres trabajar con la clase [**MapIcon**](https:
 -   Asimismo, tampoco se garantiza que se muestre el elemento [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088) de la clase [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077). Si no ves el texto, disminuye su tamaño; para ello tienes que reducir el valor de la propiedad [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 -   Si muestras la imagen de un elemento [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) que señala a una ubicación específica del mapa (por ejemplo, un marcador o una flecha), puedes establecer el valor de la propiedad [**NormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637082) en la ubicación aproximada del puntero de la imagen. Si dejas el valor de **NormalizedAnchorPoint** como el valor predeterminado (0, 0), que representa la esquina superior izquierda de la imagen, puede que los cambios realizados en la propiedad [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) del mapa hagan que la imagen apunte a otra ubicación.
 
-## Agregar un elemento MapPolygon
+## <a name="add-a-mappolygon"></a>Agregar un elemento MapPolygon
 
 
 Usa la clase [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) para mostrar una forma multipunto en el mapa. En el siguiente ejemplo, obtenido de una [muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977), se muestra en el mapa un cuadro rojo con el borde azul.
@@ -114,7 +114,7 @@ private void mapPolygonAddButton_Click(object sender, Windows.UI.Xaml.RoutedEven
 }
 ```
 
-## Agregar un elemento MapPolyline
+## <a name="add-a-mappolyline"></a>Agregar un elemento MapPolyline
 
 
 Usa la clase [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) para mostrar una línea en el mapa. En el siguiente ejemplo, obtenido de una [muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977), se muestra una línea discontinua en el mapa.
@@ -137,7 +137,7 @@ private void mapPolylineAddButton_Click(object sender, Windows.UI.Xaml.RoutedEve
 }
 ```
 
-## Agregar XAML
+## <a name="add-xaml"></a>Agregar XAML
 
 
 Visualiza elementos de la interfaz de usuario personalizados en el mapa mediante XAML. Coloca XAML en el mapa especificando la ubicación y el punto de anclaje normalizado del XAML.
@@ -176,7 +176,7 @@ private void displayXAMLButton_Click(object sender, RoutedEventArgs e)
 
 Este ejemplo muestra un borde azul en el mapa.
 
-![](images/displaypoixaml.png)
+![Captura de pantalla de xaml mostrada en el punto de intersección del mapa](images/displaypoixaml.png)
 
 Los siguientes ejemplos muestran cómo agregar elementos de interfaz de usuario de XAML directamente en el marcado XAML de la página mediante el enlace de datos. Igual que sucede con otros elementos XAML que muestran contenido, [**Children**](https://msdn.microsoft.com/library/windows/apps/dn637008) es la propiedad de contenido predeterminada de la clase [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004), y no es necesario especificarla expresamente en el marcado XAML.
 
@@ -216,7 +216,7 @@ En este ejemplo se muestra una colección de elementos XAML enlazados a la clase
 </maps:MapControl>
 ```
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
 * [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
@@ -231,6 +231,6 @@ En este ejemplo se muestra una colección de elementos XAML enlazados a la clase
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

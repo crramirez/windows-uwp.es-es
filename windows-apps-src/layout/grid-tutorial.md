@@ -1,20 +1,30 @@
+---
+author: mukin
+Description: "En este artículo de estilo tutorial se describen los pasos para crear una interfaz de usuario de una aplicación básica. Aquí se explica y se muestra el uso de Grid y StackPanel, dos de los elementos XAML más comunes."
+title: "Creación de una aplicación meteorológica sencilla con Grid y StackPanel"
+translationtype: Human Translation
+ms.sourcegitcommit: c30aed9681d7c091e9831df3f53d8779dfacce38
+ms.openlocfilehash: 1990a3ad4e56fa039d024c53a04b021e60bed145
+
+---
+
 # <a name="create-a-simple-weather-app-by-using-grid-and-stackpanel"></a>Creación de una aplicación meteorológica sencilla con Grid y StackPanel
 
-Usa XAML para crear el diseño de una aplicación meteorológica sencilla con los elementos **Grid** y **StackPanel**. Con estas herramientas es sencillo crear aplicaciones que tengan un gran aspecto en cualquier dispositivo Windows 10. Este tutorial dura entre 10 y 20 minutos.
+Usa XAML para crear el diseño de una aplicación meteorológica sencilla con los elementos **Grid** y **StackPanel**. Con estas herramientas, puedes crear aplicaciones con un aspecto fantástico que funcionen en cualquier dispositivo que ejecute Windows 10. Este tutorial dura entre 10 y 20 minutos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 - Windows 10 y Microsoft Visual Studio 2015. [Haz clic aquí para obtener información sobre cómo iniciar la configuración con Visual Studio](../get-started/get-set-up.md).
 - Conocimientos acerca de cómo crear una aplicación de "Hello World" básica mediante XAML y C#. Si aún no los tienes, [haz clic aquí para aprender a crear una aplicación "Hello World"](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
-## <a name="step-1-create-a-blank-app"></a>Paso 1: Crea una aplicación en blanco
+## <a name="step-1-create-a-blank-app"></a>Paso 1: Crear una aplicación en blanco
 1. En el menú de Visual Studio, selecciona **Archivo** > **Nuevo proyecto**.
 2. En el panel izquierdo del cuadro de diálogo **Nuevo proyecto**, selecciona **Visual C#** > **Windows** > **Universal** o **Visual C++** > **Windows** > **Universal**.
 3. En el panel central, selecciona **Aplicación vacía**.
 4. En el cuadro **Nombre**, escribe **WeatherPanel** y selecciona **Aceptar**.
 5. Para ejecutar el programa, selecciona **Depurar** > **Iniciar depuración** en el menú o presiona F5.
 
-## <a name="step-2-define-a-grid"></a>Paso 2: Define una cuadrícula
-En XAML, un elemento **Grid** (una cuadrícula) se compone de una serie de filas y columnas. Al especificar la fila y la columna de un elemento dentro de un elemento **Grid**, puedes colocar y separar fácilmente otros elementos dentro de una interfaz de usuario. Las filas y las columnas se definen con los elementos **RowDefinition** y **ColumnDefinition**.
+## <a name="step-2-define-a-grid"></a>Paso 2: Definir una cuadrícula
+En XAML, un elemento **Grid** (una cuadrícula) se compone de una serie de filas y columnas. Al especificar la fila y la columna de un elemento incluido en un elemento **Grid**, puedes colocar y separar otros elementos dentro de una interfaz de usuario. Las filas y las columnas se definen con los elementos **RowDefinition** y **ColumnDefinition**.
 
 Para empezar a crear un diseño, abre **MainPage.xaml** mediante el uso del **Explorador de soluciones**y sustituye el elemento **Grid** generado automáticamente por este código.
 
@@ -33,11 +43,11 @@ Para empezar a crear un diseño, abre **MainPage.xaml** mediante el uso del **Ex
 
 El nuevo elemento **Grid** crea un conjunto de 2 filas y columnas que define el diseño de la interfaz de la aplicación. La primera columna tiene un **Width** (ancho) de "3\*", mientras que el segundo tiene "5\*", lo que divide el espacio horizontal entre las 2 columnas en una proporción de 3:5. Del mismo modo, las 2 filas tienen un **Height** (alto) de "3\*" y "\*" respectivamente, por lo tanto, el elemento **Grid** asigna el triple de espacio a la primera fila que a la segunda ("\*" equivale a "1\*"). Estas relaciones se mantienen incluso si se cambia el tamaño de la ventana o se cambia el dispositivo.
 
-Para obtener información sobre otros métodos de definir el tamaño de las filas y columnas, consulta [Definir diseños de página con XAML](https://msdn.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#layout-properties).
+Para obtener información sobre otros métodos de definir el tamaño de las filas y columnas, consulta [Definir diseños de página con XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml#layout-properties).
 
 Si ejecutas la aplicación ahora, no verás nada,excepto una página en blanco, porque ninguna de las áreas de **Grid** tienen ningún contenido. Para mostrar el elemento **Grid**, vamos a asignarle el color.
 
-## <a name="step-3-color-the-grid"></a>Paso 3: Da color a la cuadrícula
+## <a name="step-3-color-the-grid"></a>Paso 3: Dar color a la cuadrícula
 Para dar color al elemento **Grid**, agregamos tres elementos **Border**, cada uno con un color de fondo diferente. Cada uno de ellos también se asigna a una fila y columna en el elemento primario **Grid** mediante el uso de los atributos **Grid.Row** y **Grid.Column**. De forma predeterminada, los valores de estos atributos son 0, por lo que no tienes que asignarlos al primer elemento **Border**. Agrega el siguiente código al elemento **Grid** después de las definiciones de fila y columna.
 
 ```xml
@@ -52,10 +62,10 @@ Si ejecutas la aplicación, el resultado será similar al siguiente.
 
 ![Colorear la cuadrícula](images/grid-weather-1.png)
 
-## <a name="step-4-organize-content-by-using-stackpanel-elements"></a>Paso 4: Organiza el contenido mediante elementos StackPanel
-**StackPanel** es el segundo elemento de la interfaz de usuario que usaremos para crear nuestra aplicación meteorológica. El elemento **StackPanel** es una parte fundamental de muchos diseños de aplicación básicos, que permite apilar fácilmente los elementos vertical u horizontalmente.
+## <a name="step-4-organize-content-by-using-stackpanel-elements"></a>Paso 4: Organizar el contenido mediante elementos StackPanel
+**StackPanel** es el segundo elemento de la interfaz de usuario que usaremos para crear nuestra aplicación meteorológica. El elemento **StackPanel** es una parte fundamental de muchos diseños de aplicación básicos, que permite apilar los elementos vertical u horizontalmente.
 
-En el siguiente código, crearemos dos elementos **StackPanel** y rellenaremos cada uno con tres **TextBlocks**. Agrega estos elementos **StackPanel** al elemento **Grid** debajo de los elementos **Border** del paso 3. Esto hace que los elementos **TextBlock** se representen en la parte superior de elemento **Grid** coloreado que hemos creado anteriormente.
+En el siguiente código, crearemos dos elementos **StackPanel** y los rellenaremos con tres **TextBlocks**. Agrega estos elementos **StackPanel** al elemento **Grid** debajo de los elementos **Border** del paso 3. Esto hace que los elementos **TextBlock** se representen en la parte superior de elemento **Grid** coloreado que hemos creado anteriormente.
 
 ```xml
 <StackPanel Grid.Column="1" Margin="40,0,0,0" VerticalAlignment="Center">
@@ -77,7 +87,7 @@ Si ejecutas la aplicación ahora, verás algo parecido a esto.
 
 ![Agregar elementos StackPanel](images/grid-weather-2.png)
 
-## <a name="step-5-add-an-image-icon"></a>Paso 5: Agrega un icono de imagen
+## <a name="step-5-add-an-image-icon"></a>Paso 5: Agregar un icono de imagen
 
 Por último, vamos a rellenar la sección vacía de nuestro elemento **Grid** con una imagen que represente el tiempo de hoy, algo que dice "parcialmente nuboso".
 
@@ -102,11 +112,12 @@ Y eso es todo. Has creado correctamente el diseño de una aplicación meteoroló
 Si lo deseas, experimenta con el diseño anterior y explora diferentes maneras en las que podrías representar los datos meteorológicos.
 
 ## <a name="related-articles"></a>Artículos relacionados
-Para obtener una introducción al diseño de diseños para aplicaciones para UWP, consulta [Introducción al diseño de aplicaciones para UWP](https://msdn.microsoft.com/en-us/windows/uwp/layout/design-and-ui-intro).
+Para obtener una introducción al diseño de diseños para aplicaciones para UWP, consulta [Introducción al diseño de aplicaciones para UWP](https://msdn.microsoft.com/windows/uwp/layout/design-and-ui-intro).
 
-Para obtener información sobre cómo crear diseños dinámicos que se adapten a diferentes tamaños de pantalla, consulta [Definir diseños de página con XAML](https://msdn.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml)
+Para obtener información sobre cómo crear diseños dinámicos que se adapten a diferentes tamaños de pantalla, consulta [Definir diseños de página con XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml)
 
 
-<!--HONumber=Dec16_HO1-->
+
+<!--HONumber=Jan17_HO1-->
 
 

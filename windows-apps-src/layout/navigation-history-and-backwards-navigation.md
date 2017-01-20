@@ -1,18 +1,21 @@
 ---
 author: mijacobs
 Description: "La navegación en las aplicaciones para la Plataforma universal de Windows (UWP) se basa en un modelo flexible de estructuras de navegación, elementos de navegación y características de nivel del sistema."
-title: "Conceptos básicos del diseño de navegación para aplicaciones para la Plataforma universal de Windows (UWP)"
+title: "Historial de navegación y navegación hacia atrás (aplicaciones de Windows)"
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
 label: History and backwards navigation
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: 75e8c342775f7d6c564cb1014519f8e4707a0632
-ms.openlocfilehash: f18fc0806313cc1656860b0fd8b5ae692fa3d4c6
+ms.sourcegitcommit: 5f7f40d754ec9408fe5b4ba18d6d64bd49cb449f
+ms.openlocfilehash: bfff3a4787a37156ef3232372a125db60678ebac
 
 ---
 
-#  Historial de navegación y navegación hacia atrás
+#  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Historial de navegación y navegación hacia atrás para las aplicaciones para UWP
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 En Internet, hay sitios web individuales que proporcionan sus propios sistemas de navegación, como tablas de contenido, botones, menús, listas sencillas de vínculos, etc. La experiencia de navegación puede variar considerablemente de un sitio web a otro. Sin embargo, existe una experiencia de navegación coherente: el botón Atrás. La mayoría de los exploradores proporcionan un botón Atrás que tiene el mismo comportamiento, independientemente del sitio web.
 
@@ -26,12 +29,12 @@ Estos son los factores de forma principales que constan de una interfaz de usuar
 <table>
     <tr>
         <td colspan="2">Dispositivos</td>
-        <td>Comportamiento del botón Atrás</td>
+        <td style="vertical-align:top;">Comportamiento del botón Atrás</td>
      </tr>
     <tr>
-        <td>Teléfono</td>
-        <td>![botón Atrás del sistema en un teléfono](images/back-systemback-phone.png)</td>
-        <td>
+        <td style="vertical-align:top;">Teléfono</td>
+        <td style="vertical-align:top;">![botón Atrás del sistema en un teléfono](images/back-systemback-phone.png)</td>
+        <td style="vertical-align:top;">
         <ul>
 <li>Siempre está presente.</li>
 <li>Un botón de hardware o de software situado en la parte inferior del dispositivo.</li>
@@ -40,41 +43,31 @@ Estos son los factores de forma principales que constan de una interfaz de usuar
 </td>
      </tr>
      <tr>
-        <td>Tableta</td>
-        <td>![botón Atrás del sistema en una tableta (en modo tableta)](images/back-systemback-tablet.png)</td>
-        <td>
+        <td style="vertical-align:top;">Tableta</td>
+        <td style="vertical-align:top;">![botón Atrás del sistema en una tableta (en modo tableta)](images/back-systemback-tablet.png)</td>
+        <td style="vertical-align:top;">
 <ul>
-<li>Siempre está presente en el modo tableta.
-
-    Not available in Desktop mode. Title bar back button can be enabled, instead. See [PC, Laptop, Tablet](#PC).
-
-    Users can switch between running in Tablet mode and Desktop mode by going to **Settings &gt; System &gt; Tablet mode** and setting **Make Windows more touch-friendly when using your device as a tablet**.</li>
-
+<li>Siempre está presente en el modo tableta. No está disponible en modo de escritorio. En su lugar, se puede habilitar botón Atrás de la barra de título. Consulta [PC, Portátil, Tableta](#PC).
+Los usuarios pueden cambiar entre ejecutar en modo tableta y modo de escritorio desde **Configuración &gt; Sistema &gt; Modo tableta** con la opción **Hacer que Windows se adapte mejor a los gestos táctiles al usar el dispositivo como tableta**.</li>
 <li> Un botón de software de la barra de navegación situado en la parte inferior del dispositivo.</li>
 <li>Navegación hacia atrás global dentro de la aplicación y entre aplicaciones.</li></ul>        
         </td>
      </tr>
     <tr>
-        <td>PC, Portátil, Tableta</td>
-        <td>![botón Atrás del sistema en un equipo o un portátil](images/back-systemback-pc.png)</td>
-        <td>
+        <td style="vertical-align:top;">PC, Portátil, Tableta</td>
+        <td style="vertical-align:top;">![botón Atrás del sistema en un equipo o un portátil](images/back-systemback-pc.png)</td>
+        <td style="vertical-align:top;">
 <ul>
-<li>Opcional en el modo de escritorio.
-
-    Not available in Tablet mode. See [Tablet](#Tablet).
-
-    Disabled by default. Must opt in to enable it.
-
-    Users can switch between running in Tablet mode and Desktop mode by going to **Settings &gt; System &gt; Tablet mode** and setting **Make Windows more touch-friendly when using your device as a tablet**.</li>
-
+<li>Opcional en el modo de escritorio. No está disponible en modo tableta. Consulta [Tableta](#Tablet). Deshabilitado de manera predeterminada. Deben participar para habilitarlo.
+Los usuarios pueden cambiar entre ejecutar en modo tableta y modo de escritorio desde **Configuración &gt; Sistema &gt; Modo tableta** con la opción **Hacer que Windows se adapte mejor a los gestos táctiles al usar el dispositivo como tableta**.</li>
 <li>Un botón de software situado en la barra de título de la aplicación.</li>
 <li>Navegación hacia atrás solo dentro de la aplicación. No es compatible con la navegación entre aplicaciones.</li></ul>        
         </td>
      </tr>
     <tr>
-        <td>Surface Hub</td>
-        <td>![botón Atrás del sistema en Surface Hub](images/nav/nav-back-surfacehub.png)</td>
-        <td>
+        <td style="vertical-align:top;">Surface Hub</td>
+        <td style="vertical-align:top;">![botón Atrás del sistema en Surface Hub](images/nav/nav-back-surfacehub.png)</td>
+        <td style="vertical-align:top;">
 <ul>
 <li>Opcional.</li>
 <li>Deshabilitado de manera predeterminada. Los usuarios deben participar para habilitarlo.</li>
@@ -90,15 +83,15 @@ Estos son algunos tipos de entrada alternativos que no dependen de la interfaz d
 
 <table>
 <tr><td colspan="3">Dispositivos de entrada</td></tr>
-<tr><td>Teclado</td><td>![teclado](images/keyboard-wireframe.png)</td><td>Tecla Windows + Retroceso</td></tr>
-<tr><td>Cortana</td><td>![voz](images/speech-wireframe.png)</td><td>Di: "Hola Cortana, retrocede"</td></tr>
+<tr><td style="vertical-align:top;">Teclado</td><td style="vertical-align:top;">![teclado](images/keyboard-wireframe.png)</td><td style="vertical-align:top;">Tecla Windows + Retroceso</td></tr>
+<tr><td style="vertical-align:top;">Cortana</td><td style="vertical-align:top;">![voz](images/speech-wireframe.png)</td><td style="vertical-align:top;">Di: "Hola Cortana, retrocede"</td></tr>
 </table>
  
 
 Cuando la aplicación se ejecute en un teléfono, una tableta, un equipo o un portátil que tenga habilitado el botón Atrás del sistema, el sistema avisará a la aplicación cuando se presione el botón Atrás. El usuario espera que el botón Atrás vaya a la ubicación anterior en el historial de navegación de la aplicación. Tú decides qué acciones de navegación agregar al historial de navegación y cómo responderán al presionar el botón Atrás.
 
 
-## Cómo habilitar la compatibilidad con la navegación del botón Atrás del sistema
+## <a name="how-to-enable-system-back-navigation-support"></a>Cómo habilitar la compatibilidad con la navegación del botón Atrás del sistema
 
 
 Las aplicaciones deben habilitar la navegación del botón Atrás en todos los botones Atrás (tanto de hardware como de software) del sistema. Para ello, registra un agente de escucha para el evento [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) y define el controlador correspondiente.
@@ -158,7 +151,7 @@ Este controlador se invoca en un evento global del botón Atrás. Si la pila de 
 >}
 ```
 
-## Cómo habilitar el botón Atrás de la barra de título
+## <a name="how-to-enable-the-title-bar-back-button"></a>Cómo habilitar el botón Atrás de la barra de título
 
 
 Los dispositivos que admiten el modo de escritorio (normalmente PC y portátiles, pero también algunas tabletas) y tienen habilitada la opción (**Configuración &gt; Sistema &gt; Modo de tableta**), no incluyen una barra de navegación global con el botón Atrás del sistema.
@@ -241,15 +234,11 @@ Para este ejemplo, enumeraremos cada página en la pila de retroceso y habilitar
 >```
 
 
-### Guía para el comportamiento personalizado de la navegación hacia atrás
+### <a name="guidelines-for-custom-back-navigation-behavior"></a>Guía para el comportamiento personalizado de la navegación hacia atrás
 
 Si decides proporcionar tu propia navegación de pila de retroceso, la experiencia debe ser coherente con otras aplicaciones. Te recomendamos que sigas los siguientes patrones de acciones de navegación:
 
 <table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Acción de navegación</th>
@@ -258,38 +247,38 @@ Si decides proporcionar tu propia navegación de pila de retroceso, la experienc
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>Página a página, grupos diferentes del mismo nivel</strong></p></td>
-<td align="left"><strong>Sí</strong>
+<td style="vertical-align:top;"><strong>Página a página, grupos diferentes del mismo nivel</strong></td>
+<td style="vertical-align:top;"><strong>Sí</strong>
 <p>En esta ilustración, el usuario va del nivel 1 de la aplicación al nivel 2, cruzando grupos del mismo nivel, de forma que la navegación se agrega al historial de navegación.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly1.png" alt="Navigation across peer groups" /></p>
 <p>En la siguiente ilustración, el usuario navega entre dos grupos del mismo nivel, cruzando nuevamente grupos del mismo nivel, de modo que la navegación se agrega al historial de navegación.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly2.png" alt="Navigation across peer groups" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>Página a página; mismo grupo del mismo nivel; sin elemento de navegación en pantalla</strong></p>
+<td style="vertical-align:top;"><strong>Página a página; mismo grupo del mismo nivel; sin elemento de navegación en pantalla</strong>
 <p>El usuario navega de una página a otra con el mismo grupo del mismo nivel. No hay ningún elemento de navegación que siempre esté presente (como pestañas o controles dinámicos o un panel de navegación acoplado) y que proporcione navegación directa a las dos páginas.</p></td>
-<td align="left"><strong>Sí</strong>
+<td style="vertical-align:top;"><strong>Sí</strong>
 <p>En la siguiente ilustración, el usuario navega entre dos páginas en el mismo grupo del mismo nivel. Las páginas no usan pestañas o un panel de navegación acoplado, por lo que la navegación se agrega al historial de navegación.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>Página a página; mismo grupo del mismo nivel; con un elemento de navegación en pantalla</strong></p>
+<td style="vertical-align:top;"><strong>Página a página; mismo grupo del mismo nivel; con un elemento de navegación en pantalla</strong>
 <p>El usuario navega de una página a otra en el mismo grupo del mismo nivel. Ambas páginas se muestran en el mismo elemento de navegación. Por ejemplo, ambas páginas usan el mismo elemento de pestañas o controles dinámicos, o ambas páginas aparecen en un panel de navegación acoplado.</p></td>
-<td align="left"><strong>No</strong>
+<td style="vertical-align:top;"><strong>No</strong>
 <p>Cuando el usuario presiona o pulsa Atrás, volverá a la página previa antes de navegar al grupo actual del mismo nivel.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>Mostrar una interfaz de usuario transitoria</strong>
+<td style="vertical-align:top;"><strong>Mostrar una interfaz de usuario transitoria</strong>
 <p>La aplicación muestra una ventana emergente o secundaria (como un cuadro de diálogo, pantalla de presentación o teclado en pantalla), o bien la aplicación entra en un modo especial, como el modo de selección múltiple.</p></td>
-<td align="left"><strong>No</strong>
+<td style="vertical-align:top;"><strong>No</strong>
 <p>Cuando el usuario presiona el botón Atrás, se descarta la interfaz de usuario transitoria (oculta el teclado en pantalla, cancela el cuadro de diálogo, etc.) y vuelve a la página que genera la interfaz de usuario transitoria.</p>
 <p><img src="images/back-transui.png" alt="Showing a transient UI" /></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><strong>Enumerar elementos</strong>
+<td style="vertical-align:top;"><strong>Enumerar elementos</strong>
 <p>La aplicación muestra el contenido de un elemento en pantalla, como los detalles del elemento seleccionado en la lista maestro y detalles.</p></td>
-<td align="left"><strong>No</strong>
+<td style="vertical-align:top;"><strong>No</strong>
 <p>Enumerar elementos es similar a navegar dentro de un grupo del mismo nivel. Cuando el usuario presiona o pulsa Atrás, va a la página que precede a la página actual que contiene la enumeración de elementos.</p>
 <img src="images/nav/nav-enumerate.png" alt="Iterm enumeration" /></td>
 </tr>
@@ -297,16 +286,16 @@ Si decides proporcionar tu propia navegación de pila de retroceso, la experienc
 </table>
 
 
-### Reanudar
+### <a name="resuming"></a>Reanudar
 
 Cuando el usuario cambia a otra aplicación y vuelve a tu aplicación, te recomendamos que este vuelva a la última página del historial de navegación.
 
 
-## Obtener las muestras
+## <a name="get-the-samples"></a>Obtener las muestras
 *   [Muestra del botón Atrás](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackButton)<br/>
     Muestra cómo configurar un controlador de eventos para el evento de botón Atrás y cómo habilitar el botón Atrás de la barra de título para los casos en que la aplicación está en modo de escritorio de ventana.
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 * [Conceptos básicos de navegación](navigation-basics.md)
 
  
@@ -317,6 +306,6 @@ Cuando el usuario cambia a otra aplicación y vuelve a tu aplicación, te recome
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO4-->
 
 

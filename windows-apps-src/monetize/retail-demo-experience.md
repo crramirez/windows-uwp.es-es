@@ -4,11 +4,11 @@ title: "Crear una aplicación de experiencia de demostración comercial"
 description: "Crea una aplicación de experiencia de demostración comercial (RDX); es decir, una única aplicación que puede iniciarse en modo de prueba comercial y en modo normal."
 ms.assetid: f83f950f-7fdd-4f18-8127-b92a8f400061
 translationtype: Human Translation
-ms.sourcegitcommit: 0110cec1857aac519f8e7c1490e5b3a0d8be9ea2
-ms.openlocfilehash: 7a5367ae13be60be6e5b0ee4f62190f8b3330c59
+ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
+ms.openlocfilehash: ca9e27944cc4504400191ef1620949b1e8b64ff2
 
 ---
-#  Crear una aplicación de experiencia de demostración comercial (RDX)
+#  <a name="create-a-retail-demo-experience-rdx-app"></a>Crear una aplicación de experiencia de demostración comercial (RDX)
 
 Cuando los clientes entran en una tienda o un establecimiento comercial, esperan encontrar los equipos y los teléfonos móviles más recientes en exposición y estos dispositivos que se exhiben se conocen como dispositivos de demostración comercial. Los dispositivos de demostración comercial y el contenido que se instala en ellos son, en gran medida, responsables de la experiencia del cliente en las tiendas porque los clientes suelen dedicar una parte importante de su tiempo a divertirse con estos dispositivos.
 
@@ -18,30 +18,30 @@ Una aplicación de experiencia de demostración comercial viene en una única co
 
 Además de los requisitos de la Tienda para las aplicaciones, las aplicaciones de RDX también deben ser totalmente compatibles con el sistema de configuración, limpieza y actualización de los dispositivos de demostración comercial para garantizar que los clientes tengan una experiencia positiva coherente en la tienda minorista.
 
-## Principios de diseño
+## <a name="design-principles"></a>Principios de diseño
 
-### Mostrar lo mejor que se tiene
+### <a name="show-your-best"></a>Mostrar lo mejor que se tiene
 
 Usa la experiencia de demostración comercial para exhibir por qué tu aplicación es genial.  Es probable que esta sea la primera vez que el cliente vea la aplicación y, por lo tanto, debes lucirte.
     
-### Mostrarlo rápido
+### <a name="show-it-fast"></a>Mostrarlo rápido
 
 Los clientes pueden impacientarse. Por eso, cuanto más rápido puedan experimentar el valor real de la aplicación, mejor. 
     
-### Simplificar
+### <a name="keep-the-story-simple"></a>Simplificar
     
 Recuerda que la experiencia de demostración comercial es un argumento de venta para el valor de la aplicación.
     
-### Centrarse en la experiencia
+### <a name="focus-on-the-experience"></a>Centrarse en la experiencia
 
 Permite que el usuario tenga tiempo para asimilar el contenido.  Si bien es importante llevarlo a la mejor parte rápido, diseñar pausas adecuadas puede ayudarlo a disfrutar completamente de la experiencia.
 
-## Requisitos técnicos
+## <a name="technical-requirements"></a>Requisitos técnicos
 
 Dado que las aplicaciones de experiencia de demostración comercial están diseñadas para mostrar lo mejor de la aplicación a los clientes minoristas, es fundamental cumplir los siguientes requisitos técnicos y ajustarse a las normativas de privacidad que la Tienda tiene para todas las aplicaciones de experiencia de demostración comercial.
 Esto también puede usarse como una lista de comprobación que te ayudará a prepararte para el proceso de validación y para proporcionar mayor claridad en el proceso de pruebas. Ten en cuenta que estos requisitos deben mantenerse no solo para el proceso de validación, sino para toda la duración de la aplicación de experiencia de demostración comercial, siempre que la aplicación se siga ejecutando en los dispositivos de demostración comercial.
 
-### Requisitos de nivel crítico
+### <a name="critical-level-requirements"></a>Requisitos de nivel crítico
    
 Las aplicaciones de RDX que no cumplan con estos requisitos críticos se quitarán de todos los dispositivos de demostración comercial tan pronto como sea posible.
 
@@ -58,13 +58,13 @@ Las aplicaciones de RDX que no cumplan con estos requisitos críticos se quitar�
 
     Para que las aplicaciones se instalen en dispositivos de demostración comercial, la aplicación debe ser gratuita o tener un modo de prueba establecido.  Los clientes no esperan tener que pagar por una experiencia en una tienda comercial. Para obtener más información, consulta [Excluir o limitar las características de una versión de prueba](https://msdn.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app)
 
-### Requisitos de prioridad alta
+### <a name="high-priority-requirements"></a>Requisitos de prioridad alta
     
 Las aplicaciones de RDX que no cumplan con estos requisitos de prioridad alta se deben investigar para encontrar una corrección inmediata. Si no se encuentra ninguna corrección inmediata, es posible que la aplicación se quite de todos los dispositivos de demostración comercial.
 
 * Experiencia sin conexión memorable
 
-    La aplicación de experiencia de demostración comercial debe mostrar una estupenda experiencia sin conexión, ya que aproximadamente el 50% de los dispositivos están sin conexión en los establecimientos minoristas. Esto sirve para garantizar que los clientes que interactúen con la aplicación sin conexión también puedan tener una experiencia positiva y significativa.
+    La aplicación de experiencia de demostración comercial debe mostrar una estupenda experiencia sin conexión, ya que aproximadamente el 50 % de los dispositivos están sin conexión en los establecimientos minoristas. Esto sirve para garantizar que los clientes que interactúen con la aplicación sin conexión también puedan tener una experiencia positiva y significativa.
     
 * Experiencia de contenido actualizado
 
@@ -82,7 +82,7 @@ Las aplicaciones de RDX que no cumplan con estos requisitos de prioridad alta se
 
     Todo el contenido de una aplicación de demostración comercial debe ser apto para adolescentes o una clasificación inferior. Para obtener más información, consulta cómo [obtener la clasificación de IARC para tu aplicación](https://www.globalratings.com/for-developers.aspx) y las [clasificaciones de ESRB](https://www.esrb.org/ratings/ratings_guide.aspx).
     
-### Requisitos de prioridad media
+### <a name="medium-priority-requirements"></a>Requisitos de prioridad media
 
 Es posible que el equipo de la tienda comercial de Windows se ponga en contacto directamente con los desarrolladores para analizar cómo solucionar estos problemas.
 
@@ -92,48 +92,48 @@ Es posible que el equipo de la tienda comercial de Windows se ponga en contacto 
      
 * Cumplir los requisitos de tamaño de aplicación de la tienda comercial
     
-    El tamaño de la aplicación debe ser inferior a 800MB. Si tu aplicación de experiencia de demostración comercial no cumple con los requisitos de tamaño, ponte en contacto directamente con el equipo de la tienda comercial de Windows para comentarlo con ellos.
+    El tamaño de la aplicación debe ser inferior a 800 MB. Si tu aplicación de experiencia de demostración comercial no cumple con los requisitos de tamaño, ponte en contacto directamente con el equipo de la tienda comercial de Windows para comentarlo con ellos.
 
-## Preparar el código base para el desarrollo del modo de demostración comercial
+## <a name="preparing-codebase-for-retail-demo-mode-development"></a>Preparar el código base para el desarrollo del modo de demostración comercial
 
 La propiedad [**IsDemoModeEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.isdemomodeenabled.aspx) de la clase de utilidad [**RetailInfo**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.aspx), que forma parte del espacio de nombres [Windows.System.Profile](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.aspx) en el SDK de Windows 10, se usa como un indicador booleano para especificar en qué ruta de acceso de código se ejecuta la aplicación: el modo _normal_ o el modo _comercial_. 
 
 Cuando [**RetailInfo.IsDemoModeEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.isdemomodeenabled.aspx) devuelve "true", puedes consultar un conjunto de propiedades sobre el dispositivo mediante el uso de [**RetailInfo.Properties**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.properties.aspx) para crear una experiencia de demostración comercial más personalizada. Estas propiedades incluyen [**ManufacturerName**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.knownretailinfoproperties.manufacturername.aspx), [**Screensize**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.knownretailinfoproperties.screensize.aspx), [**Memory**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.knownretailinfoproperties.memory.aspx), etcétera. 
 
 
-## Proceso de limpieza
+## <a name="clean-up-process"></a>Proceso de limpieza
 
 El proceso de limpieza se usa para restablecer automáticamente los dispositivos de demostración comercial a la configuración predeterminada original cuando no hay interacción con el dispositivo durante un tiempo fijo. Esto sirve para garantizar que todos los usuarios de la tienda minorista puedan usar un dispositivo y tengan exactamente la misma experiencia predeterminada prevista cuando interactúen con el dispositivo. Al desarrollar una aplicación de experiencia de demostración comercial, es importante comprender cuándo y cómo se desencadena el proceso de limpieza, así como qué sucede durante el proceso de limpieza predeterminado y cómo personalizar este proceso en función de los requisitos de la experiencia de demostración comercial prevista.
 
-### ¿Cuándo se inicia la limpieza?
+### <a name="when-does-clean-up-begin"></a>¿Cuándo se inicia la limpieza?
 
 La secuencia de limpieza comienza después de una determinada cantidad de tiempo de inactividad del dispositivo. El tiempo de inactividad inicia el recuento cuando no hay ninguna entrada de la función táctil, el mouse y el teclado en el dispositivo.
 
-#### Escritorio o PC
+#### <a name="desktoppc"></a>Escritorio o PC
 
 Después de 120 segundos de tiempo de inactividad, el vídeo de la aplicación de exposición del tiempo de inactividad empezará a reproducirse en el dispositivo. Cinco segundos después, se iniciará el proceso de limpieza.
 
-#### Teléfono
+#### <a name="phone"></a>Teléfono
 
 Después de 60 segundos de tiempo de inactividad, el vídeo de la aplicación de exposición del tiempo de inactividad empezará a reproducirse en el dispositivo y se iniciará el proceso de limpieza de inmediato.
 
-### ¿Qué sucede durante un proceso de limpieza predeterminado?
+### <a name="what-happens-during-a-default-clean-up-process"></a>¿Qué sucede durante un proceso de limpieza predeterminado?
 
-#### Paso 1: Limpiar
+#### <a name="step-1-clean-up"></a>Paso 1: Limpiar
 * Se cierran todas las aplicaciones de Win32 y de la Tienda.
 * Se eliminan todos los archivos que se encuentran en carpetas conocidas como __Imágenes__, __Vídeos__, __Música__, __Documentos__, __Imágenes guardadas__, __Álbum de cámara__, __Escritorio__ y __Descargas__.
 * Se eliminan los estados de itinerancia estructurados y no estructurados.
 * Se eliminan los estados locales estructurados.
 
-#### Paso 2: Configurar 
+#### <a name="step-2-set-up"></a>Paso 2: Configurar 
 * Para dispositivos sin conexión: las carpetas permanecen vacías
-* Para dispositivos en línea: los activos de demostración comercial pueden insertarse en el dispositivo de la TiendaWindows
+* Para dispositivos en línea: los activos de demostración comercial pueden insertarse en el dispositivo de la Tienda Windows
 
-### ¿Cómo se almacenan los datos de las sesiones de usuario?
+### <a name="how-to-store-data-across-user-sessions"></a>¿Cómo se almacenan los datos de las sesiones de usuario?
 
 Si quieres almacenar datos de las sesiones de usuario, puedes almacenar información en __ApplicationData.Current.TemporaryFolder__, ya que el proceso de limpieza predeterminado no elimina automáticamente los datos de esta carpeta. Ten en cuenta que la información almacenada mediante *LocalState* se elimina durante el proceso de limpieza. 
 
-### ¿Cómo se personaliza el proceso de limpieza?
+### <a name="how-to-customize-the-clean-up-process"></a>¿Cómo se personaliza el proceso de limpieza?
 
 Si quieres personalizar el proceso de limpieza, tienes que implementar el servicio de aplicaciones `Microsoft-RetailDemo-Cleanup` en la aplicación. 
 
@@ -245,7 +245,7 @@ namespace MyCompany.MyApp
 }
 ```
 
-## Vínculos relacionados
+## <a name="related-links"></a>Vínculos relacionados
 
 * [Almacenar y recuperar datos de la aplicación](https://msdn.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
 * [Cómo crear y consumir un servicio de aplicaciones](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
@@ -258,6 +258,6 @@ namespace MyCompany.MyApp
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

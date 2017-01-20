@@ -4,21 +4,25 @@ ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: "En este artículo se describe cómo usar la clase CameraCaptureUI para capturar fotos o vídeos con la interfaz de usuario de la cámara integrada en Windows."
 title: "Capturar fotografías y vídeos con la interfaz de usuario de la cámara integrada de Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: b4bf4d74ae291186100a553a90fd93f890b8ece4
-ms.openlocfilehash: fea1c2f8f52ec9ac485d9a4846cc0661243a7ccc
+ms.sourcegitcommit: 65508d32995f57672f94dffa4866a86d57903d00
+ms.openlocfilehash: 10ac3f53f0f8128985c39154f74a9348a40641b5
 
 ---
 
-# Capturar fotografías y vídeos con la interfaz de usuario de la cámara integrada de Windows
+# <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Capturar fotografías y vídeos con la interfaz de usuario de la cámara integrada de Windows
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se describe cómo usar la clase CameraCaptureUI para capturar fotos o vídeos con la interfaz de usuario de la cámara integrada en Windows. Esta característica es fácil de usar y permite a la aplicación obtener una foto o un vídeo capturado por el usuario con tan solo unas pocas líneas de código.
 
 Si deseas proporcionar tu propia interfaz de usuario de la cámara o si tu escenario requiere un control de bajo nivel más sólido de la operación de captura, debes usar el objeto [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) e implementar tu propia experiencia de captura. Para obtener más información, consulta [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md).
 
-## Capturar una foto con CameraCaptureUI
+> [!NOTE]
+> No debes especificar las funcionalidades de **cámara web** o **micrófono** en el archivo de manifiesto de la aplicación si estás usando CameraCaptureUI. Si lo haces, la aplicación se mostrará en la configuración de privacidad de la cámara del dispositivo, pero aunque el usuario deniegue el acceso de la cámara a tu aplicación, no impedirá que CameraCaptureUI capture multimedia. Esto es porque la aplicación de cámara integrada de Windows es una aplicación de origen de confianza que requiere que el usuario inicie la captura de fotos, audio y vídeo con la presión de un botón. Puede que la aplicación no pase la certificación WACK (Kit para la certificación de aplicación Windows) cuando se envíe a la Tienda si especificas las funcionalidades de cámara web o micrófono al usar CameraCaptureUI.
+> Debes especificar las funcionalidades de cámara web o micrófono en el archivo de manifiesto de la aplicación si usas MediaCapture para capturar audio, fotos o vídeo mediante programación.
+
+## <a name="capture-a-photo-with-cameracaptureui"></a>Capturar una foto con CameraCaptureUI
 
 Para usar la interfaz de usuario de captura de cámara, incluye el espacio de nombres [**Windows.Media.Capture**](https://msdn.microsoft.com/library/windows/apps/br226738) en el proyecto. Para realizar operaciones de archivo con el archivo de imagen devuelto, incluye [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346).
 
@@ -59,7 +63,7 @@ El control de **Image** requiere que el origen de imagen tenga el formato BGRA8 
 
 [!code-cs[SetImageSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetSetImageSource)]
 
-## Capturar un vídeo con CameraCaptureUI
+## <a name="capture-a-video-with-cameracaptureui"></a>Capturar un vídeo con CameraCaptureUI
 
 Para capturar un vídeo, crea un objeto [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) nuevo. El uso de la propiedad [**VideoSettings**](https://msdn.microsoft.com/library/windows/apps/br241059) del objeto puede especificar las propiedades del vídeo devuelto, como el formato de imagen del vídeo.
 
@@ -99,11 +103,11 @@ Finalmente, define el origen de la secuencia para usar el método [**SetMediaStr
 Puedes continuar capturando clips de vídeo y agregarlos a la composición. Para más información sobre las composiciones multimedia, consulta [Composiciones multimedia y edición](media-compositions-and-editing.md).
 
 > [!NOTE] 
-> Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -118,6 +122,6 @@ Puedes continuar capturando clips de vídeo y agregarlos a la composición. Para
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

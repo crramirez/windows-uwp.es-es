@@ -4,12 +4,12 @@ title: Controlar una tarea en segundo plano cancelada
 description: "Aprende a crear una tarea en segundo plano que reconozca solicitudes de cancelación y detenga el trabajo, y que informe de la cancelación a la aplicación a través del almacenamiento persistente."
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: ba40aefe83a02d29150dd25e1303ec15bb032b8c
 
 ---
 
-# Controlar una tarea en segundo plano cancelada
+# <a name="handle-a-cancelled-background-task"></a>Controlar una tarea en segundo plano cancelada
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -21,11 +21,11 @@ ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
 
 Aprende a crear una tarea en segundo plano que reconozca una solicitud de cancelación, detenga el trabajo e informe de la cancelación a la aplicación a través del almacenamiento persistente.
 
-En este tema se da por hecho que ya has creado una clase de tarea en segundo plano, incluido el método Run que se usa como punto de entrada de la tarea en segundo plano. Para comenzar rápidamente a crear una tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md) o [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md). Para obtener información más detallada acerca de las condiciones y los desencadenadores, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
+En este tema se da por hecho que ya has creado una clase de tarea en segundo plano, incluido el método Run que se usa como punto de entrada de la tarea en segundo plano. Para comenzar rápidamente a crear una tarea en segundo plano, consulta [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md) o [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md). Para obtener información más detallada acerca de las condiciones y los desencadenadores, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md).
 
 Este tema también se aplica a las tareas en segundo plano dentro de proceso. Pero, en lugar del método Run(), sustituye OnBackgroundActivated(). Las tareas en segundo plano dentro de proceso no requieren que uses almacenamiento persistente para señalar la cancelación porque puedes comunicarla con el estado de la aplicación dado que la tarea en segundo plano se ejecuta en el mismo proceso que la aplicación en primer plano.
 
-## Usar el método OnCanceled para reconocer solicitudes de cancelación
+## <a name="use-the-oncanceled-method-to-recognize-cancellation-requests"></a>Usar el método OnCanceled para reconocer solicitudes de cancelación
 
 Escribe un método para controlar el evento de cancelación.
 
@@ -96,7 +96,7 @@ En el método Run de la tarea en segundo plano, registra el método del controla
 >     taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &SampleBackgroundTask::OnCanceled);
 > ```
 
-## Controlar la cancelación al salir de la tarea en segundo plano
+## <a name="handle-cancellation-by-exiting-your-background-task"></a>Controlar la cancelación al salir de la tarea en segundo plano
 
 Cuando se recibe una solicitud de cancelación, el método que realiza el trabajo en segundo plano necesita detener el trabajo y finalizarse cuando **\_cancelRequested** se establezca en **true**. Para tareas en segundo plano dentro de proceso, esto significa volver del método `OnBackgroundActivated()`. Para tareas en segundo plano fuera de proceso, esto significa volver del método `Run()`.
 
@@ -200,13 +200,13 @@ El [ejemplo de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=
 >     }
 > ```
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 Puedes descargar la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) para ver estas muestras de código en contexto dentro de los métodos.
 
 Por propósitos de ilustración, la muestra de código anterior solo muestra algunas partes del método Run (y temporizador de devolución de llamadas) de la [muestra de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666).
 
-## Ejemplo de método Run
+## <a name="run-method-example"></a>Ejemplo de método Run
 
 El método Run completo y el código de la devolución de llamada del temporizador del [ejemplo de tarea en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=618666) se muestran a continuación para ilustrar el contexto:
 
@@ -327,12 +327,12 @@ El método Run completo y el código de la devolución de llamada del temporizad
 > }
 > ```
 
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md).
-* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md)
+* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
@@ -347,6 +347,6 @@ El método Run completo y el código de la devolución de llamada del temporizad
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

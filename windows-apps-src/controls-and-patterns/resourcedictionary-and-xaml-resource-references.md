@@ -9,11 +9,11 @@ ms.assetid: E3CBFA3D-6AF5-44E1-B9F9-C3D3EA8A25CE
 label: ResourceDictionary and XAML resource references
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 352514139f6c9d096dc0b04de46231c8a5ed8034
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 7af5c6635ae659ce033f377a9eed4b819287b384
 
 ---
-# Referencias a ResourceDictionary y a los recursos XAML
+# <a name="resourcedictionary-and-xaml-resource-references"></a>Referencias a ResourceDictionary y a los recursos XAML
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -25,7 +25,7 @@ Los elementos XAML que quizás quieras declarar con más frecuencia como recurso
 
 Damos por hecho que conoces el marcado XAML y que has leído la [introducción a XAML](https://msdn.microsoft.com/library/windows/apps/mt185595).
 
-## Definir y usar recursos de XAML
+## <a name="define-and-use-xaml-resources"></a>Definir y usar recursos de XAML
 
 Los recursos XAML son objetos a los que se hace referencia desde el marcado más de una vez. Los recursos se definen en un objeto [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), normalmente en un archivo independiente o en la parte superior de la página de marcado, como esta.
 
@@ -100,7 +100,7 @@ Aquí, el objeto [**Style**](https://msdn.microsoft.com/library/windows/apps/br2
 
 Para obtener más información sobre los estilos implícitos y cómo funcionan, consulta [Controles de aplicación de estilos](styling-controls.md) y [Plantillas de control](control-templates.md).
 
-## Buscar recursos en el código
+## <a name="look-up-resources-in-code"></a>Buscar recursos en el código
 
 El acceso a los miembros del diccionario de recursos es igual que el acceso a cualquier otro diccionario.
 
@@ -190,7 +190,7 @@ sealed partial class App : Application
 }
 ```
 
-## Cada FrameworkElement puede tener un ResourceDictionary
+## <a name="every-frameworkelement-can-have-a-resourcedictionary"></a>Cada FrameworkElement puede tener un ResourceDictionary
 
 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) es una clase base de la que heredan los controles y tiene una propiedad [**Resources**](https://msdn.microsoft.com/library/windows/apps/br208740). Por lo tanto, puedes agregar un diccionario de recursos locales a cualquier objeto **FrameworkElement**.
 
@@ -250,7 +250,7 @@ Para acceder a los recursos de ese elemento desde el código, usa la propiedad [
     }
 ```
 
-## Diccionarios de recursos combinados
+## <a name="merged-resource-dictionaries"></a>Diccionarios de recursos combinados
 
 Un *diccionario de recursos combinado* combina un diccionario de recursos en otro, que está normalmente en otro archivo.
 
@@ -323,7 +323,7 @@ En el ámbito de cualquier [**ResourceDictionary**](https://msdn.microsoft.com/l
 
 Puedes usar la combinación de la secuencia de búsqueda y la falta de obligatoriedad de una clave única en los ámbitos de diccionarios combinados para crear una secuencia de valores de reserva de los recursos de [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794). Por ejemplo, podrías almacenar las preferencias de usuario para un determinado color de pincel en el último diccionario de recursos combinado en la secuencia, mediante un diccionario de recursos que se sincronice con el estado de tu aplicación y los datos de preferencia del usuario. Sin embargo, si aún no existen preferencias del usuario, puedes definir esa misma cadena de clave para un recurso de **ResourceDictionary** en el archivo [**MergedDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208801) inicial, y puede servir como valor de reserva. Recuerda que siempre se comprueban todos los valores que proporcionas en un diccionario de recursos principal antes de comprobar los diccionarios combinados; por lo tanto, si quieres usar la técnica de reserva, no definas ese recurso en un diccionario de recursos principal.
 
-## Recursos de temas y diccionarios de temas
+## <a name="theme-resources-and-theme-dictionaries"></a>Recursos de temas y diccionarios de temas
 
 Un [ThemeResource](../xaml-platform/themeresource-markup-extension.md) es similar a un [StaticResource](../xaml-platform/staticresource-markup-extension.md), pero la búsqueda de recursos se reevalúa cuando cambia el tema.
 
@@ -388,7 +388,7 @@ Cuando usas herramientas de diseño XAML para editar copias de estilos y plantil
 
 Para más información y una lista de los recursos del sistema y específicos de temas que hay a disposición de tus aplicaciones, consulta [Recursos de temas XAML](xaml-theme-resources.md).
 
-## Comportamiento de la búsqueda de referencias a recursos XAML
+## <a name="lookup-behavior-for-xaml-resource-references"></a>Comportamiento de la búsqueda de referencias a recursos XAML
 
 *Comportamiento de búsqueda* es el término que describe la manera en la que el sistema de recursos XAML intenta buscar un recurso XAML. La búsqueda se realiza cuando se hace referencia a una clave como una referencia de recursos XAML desde algún lugar del XAML de la aplicación. En primer lugar, el sistema de recursos tiene un comportamiento predecible en cuanto al lugar en el que buscará si existe un recurso según el ámbito. Si un recurso no se encuentra en el ámbito inicial, este último se expande. El comportamiento de búsqueda continúa a través de las ubicaciones y los ámbitos donde podría encontrarse un recurso XAML según la definición de una aplicación o del sistema. Si no se encuentra el recurso en todos los intentos de búsqueda posibles, se suele producir un error. Por lo general, se pueden eliminar estos errores durante el proceso de desarrollo.
 
@@ -412,14 +412,14 @@ Si tampoco se encuentra la clave solicitada en ninguna de estas ubicaciones, se 
 
 Debido al comportamiento de búsqueda por niveles de los diccionarios de recursos, puedes definir deliberadamente varios elementos de recurso, cada uno de ellos con el mismo valor de cadena que la clave, siempre que cada recurso se defina en un nivel diferente. En otras palabras, aunque las claves deben ser únicas en cualquier [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) dado, este requisito no se aplica a toda la secuencia de comportamiento de búsqueda. Durante la búsqueda, solo el primer objeto que se recupere correctamente se usará para la referencia del recurso XAML y, a continuación, se detendrá la búsqueda. Puedes usar este comportamiento para solicitar el mismo recurso XAML por clave en varias posiciones del código XAML de la aplicación y obtener resultados distintos, en función del ámbito desde el que se hizo referencia al recurso XAML y el comportamiento de esa búsqueda específica.
 
-##  Referencias adelantadas en un ResourceDictionary
+##  <a name="forward-references-within-a-resourcedictionary"></a>Referencias adelantadas en un ResourceDictionary
 
 
 Las referencias a recursos XAML en un diccionario de recursos determinado deben hacer referencia a un recurso que se ya haya definido con una clave, y ese recurso debe aparecer léxicamente antes que la referencia al recurso. Las referencias adelantadas no se pueden resolver mediante una referencia a recurso XAML. Por este motivo, si usas referencias a recursos XAML desde otro recurso, debes diseñar la estructura del diccionario de recursos de manera que en el diccionario de recursos se definan primero aquellos recursos que son usados por otros recursos.
 
 Los recursos definidos en el nivel de la aplicación no pueden hacer referencia a recursos inmediatos. Esto equivale a intentar una referencia adelantada, porque los recursos de la aplicación se procesan en primer lugar (cuando la aplicación se inicia por primera vez y antes de que se cargue cualquier contenido de página de navegación). Sin embargo, los recursos inmediatos pueden hacer referencia a un recurso de la aplicación, lo que puede resultar una técnica útil para evitar situaciones de referencias adelantadas.
 
-## Los recursos XAML deben ser compartibles
+## <a name="xaml-resources-must-be-shareable"></a>Los recursos XAML deben ser compartibles
 
 
 Para que un objeto exista en un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), dicho objeto debe ser *compartible*.
@@ -441,16 +441,16 @@ También puedes usar tipos personalizados como un recurso compartible si sigues 
 
 Los tipos personalizados deben tener un constructor predeterminado, porque eso es lo que usa un analizador XAML para crear una instancia de una clase. Los tipos personalizados que se usan como recursos no pueden tener la clase [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) en su herencia, porque un **UIElement** nunca se puede compartir (siempre está destinado a representar exactamente un elemento de la interfaz de usuario que existe en una posición en el gráfico de objetos de la aplicación en tiempo de ejecución).
 
-## Ámbito de uso de UserControl
+## <a name="usercontrol-usage-scope"></a>Ámbito de uso de UserControl
 
 
 Un elemento [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) es un caso especial del comportamiento de la búsqueda de recursos porque tiene los conceptos inherentes de un ámbito de definición y un ámbito de uso. Un **UserControl** que hace referencia a un recurso XAML desde su ámbito de definición debe poder admitir la búsqueda de dicho recurso en su propia secuencia de búsqueda del ámbito de definición; es decir, no puede acceder a los recursos de la aplicación. Desde el ámbito de uso de un **UserControl**, la referencia a un recurso se trata como si se realizara desde dentro de la secuencia de búsqueda hacia la raíz de la página de uso (igual que cualquier otra referencia a recursos que se realiza desde un objeto en un árbol de objetos cargados) y puede acceder a los recursos de la aplicación.
 
-## ResourceDictionary y XamlReader.Load
+## <a name="resourcedictionary-and-xamlreaderload"></a>ResourceDictionary y XamlReader.Load
 
 Un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) se puede usar como raíz o como parte de la entrada XAML para el método [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048). También puedes incluir referencias a recursos XAML en ese código XAML si todas estas referencias están completamente autocontenidas en el código XAML para su carga. **XamlReader.Load** analiza el código XAML en un contexto que no tiene constancia de otros objetos **ResourceDictionary**, ni siquiera de la propiedad [**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338). Además, no uses `{ThemeResource}` desde el código XAML enviado a **XamlReader.Load**.
 
-## Uso de ResourceDictionary desde el código
+## <a name="using-a-resourcedictionary-from-code"></a>Uso de ResourceDictionary desde el código
 
 La mayoría de los escenarios para un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) se controla exclusivamente en XAML. Declaras el contenedor **ResourceDictionary** y los recursos que incluye como un archivo XAML o un conjunto de nodos XAML en un archivo de definición de interfaz de usuario. Y, a continuación, usas referencias a recursos XAML para solicitar esos recursos de otras partes del código XAML. Aun así, hay ciertos casos en que tu aplicación podría querer ajustar el contenido de un **ResourceDictionary** con código que se ejecute mientras se ejecute la aplicación, o, al menos, consultar el contenido de un **ResourceDictionary** para ver si ya se definió un recurso. Las llamadas a este código se realizan en una instancia de **ResourceDictionary**, por lo que primero tienes que recuperar una, bien un **ResourceDictionary** inmediato en algún lugar del árbol de objetos mediante la obtención de [**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740), o bien, `Application.Current.Resources`.
 
@@ -466,31 +466,25 @@ Está permitido agregar elementos a un objeto [**ResourceDictionary**](https://m
 
 También puedes quitar elementos de un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) en tiempo de ejecución, crear copias de algunos o de todos los elementos, y otras operaciones. La lista de miembros de **ResourceDictionary** indica qué API están disponibles. Ten en cuenta que como **ResourceDictionary** tiene una API proyectada para admitir las interfaces de la colección subyacentes, las opciones de tu API diferirán según si usas C\# o Visual Basic respecto a C++/CX.
 
-## ResourceDictionary y localización
+## <a name="resourcedictionary-and-localization"></a>ResourceDictionary y localización
 
 
 Inicialmente, un [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) de XAML podría contener cadenas localizables. En este caso, guarda estas cadenas como recursos del proyecto en lugar de en un **ResourceDictionary**. Extrae las cadenas del código XAML y, en su lugar, asigna al elemento propietario un valor de [directiva x:Uid](https://msdn.microsoft.com/library/windows/apps/mt204791). Luego, define un recurso en un archivo de recursos. Proporciona un nombre de recurso con el formato *XUIDValue*.*PropertyName* y un valor de recurso de la cadena que debe localizarse.
 
-## Búsqueda de recursos personalizada
+## <a name="custom-resource-lookup"></a>Búsqueda de recursos personalizada
 
 Para los escenarios avanzados, puedes implementar una clase que pueda tener un comportamiento distinto que el comportamiento de búsqueda de referencias a recursos XAML descrito en este tema. Para ello, implementa la clase [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) y, a continuación, podrás acceder a ese comportamiento mediante el uso de la [extensión de marcado CustomResource](https://msdn.microsoft.com/library/windows/apps/mt185580) para referencias de recursos en vez de usar [StaticResource](../xaml-platform/staticresource-markup-extension.md) o [ThemeResource](../xaml-platform/themeresource-markup-extension.md). La mayoría de las aplicaciones no tendrán escenarios que requieran esto. Para obtener más información, consulta [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327).
 
  
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
-[**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
-
-[Introducción a XAML](https://msdn.microsoft.com/library/windows/apps/mt185595)
-
-[Extensión de marcado StaticResource](../xaml-platform/staticresource-markup-extension.md)
-
-[Extensión de marcado ThemeResource](../xaml-platform/themeresource-markup-extension.md)
-
-[Recursos de temas XAML](xaml-theme-resources.md)
-
-[Controles de estilo](styling-controls.md)
-
-[Atributo x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787)
+* [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
+* [Introducción a XAML](https://msdn.microsoft.com/library/windows/apps/mt185595)
+* [Extensión de marcado StaticResource](../xaml-platform/staticresource-markup-extension.md)
+* [Extensión de marcado ThemeResource](../xaml-platform/themeresource-markup-extension.md)
+* [Recursos de temas XAML](xaml-theme-resources.md)
+* [Controles de estilo](styling-controls.md)
+* [Atributo x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787)
 
  
 
@@ -501,6 +495,6 @@ Para los escenarios avanzados, puedes implementar una clase que pueda tener un c
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

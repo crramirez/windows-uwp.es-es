@@ -7,15 +7,13 @@ ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: a34b682cc903555b9d6f64636c3d1cf7bee75b5d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 3149eb8275cc74c61ff0e35963f3fd1dbdc4e833
 
 ---
 
-# Globalización y localización
-
-
-
+# <a name="globalization-and-localization"></a>Globalización y localización
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Windows se usa en todo el mundo, lo que incluye a personas con diferentes culturas, regiones e idiomas. Un usuario puede hablar cualquier idioma, o incluso varios idiomas. Un usuario puede estar en cualquier lugar del mundo y puede hablar cualquier idioma en cualquier ubicación. Puedes aumentar el mercado potencial de la aplicación diseñándola para que sea fácilmente adaptable mediante la *globalización* y la *localización*.
 
@@ -36,7 +34,7 @@ Por ejemplo:
 
 Mira este vídeo a modo de introducción breve sobre cómo preparar la aplicación para todo el mundo: [Introduction to globalization and localization](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization) (Introducción a la globalización y la localización).
 
-## Artículos
+## <a name="articles"></a>Artículos
 <table>
 <colgroup>
 <col width="50%" />
@@ -99,6 +97,6 @@ Consulta también la documentación originalmente creada para Windows 8.x, que a
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

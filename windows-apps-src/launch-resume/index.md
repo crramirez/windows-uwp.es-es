@@ -4,8 +4,8 @@ title: "Inicio, reanudación y tareas en segundo plano"
 description: "Esta sección describe lo que sucede cuando se inicia, suspende, reanuda y finaliza una aplicación de la Plataforma universal de Windows (UWP)."
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 translationtype: Human Translation
-ms.sourcegitcommit: a21b2e9bb41e951660916bbbdb09b0bd3e5ecf2d
-ms.openlocfilehash: 7667cfb9671a7517a394f6f691aef4c305c02087
+ms.sourcegitcommit: 32737991b31eaceb33fc2ecb5152def167c36fdd
+ms.openlocfilehash: 6b350ef65f381d18585c8b080c6259f7607c7bf9
 
 ---
 
@@ -33,7 +33,8 @@ En esta sección se detalla el ciclo de vida de una aplicación para la Platafor
 | [Administrar la activación de aplicaciones](activate-an-app.md)     | Aprende a administrar la activación de aplicaciones.                                                                             |
 | [Administrar la suspensión de la aplicación](suspend-an-app.md)         | Aprende a guardar datos importantes de la aplicación cuando el sistema la suspende.                                 |
 | [Administrar la reanudación de la aplicación](resume-an-app.md)           | Aprende a actualizar el contenido mostrado cuando el sistema reanuda la aplicación.                                        |
-| [Liberar memoria cuando la aplicación pase a segundo plano](reduce-memory-usage.md)           | Aprende a reducir la cantidad de memoria que usa la aplicación cuando está en el estado en segundo plano para que no se finalice.                                        |
+| [Liberar memoria cuando la aplicación pase a segundo plano](reduce-memory-usage.md) | Aprende a reducir la cantidad de memoria que usa la aplicación cuando está en el estado en segundo plano para que no se finalice.|
+| [Ejecutar mientras está minimizada con ejecución extendida](run-minimized-with-extended-execution.md) | Aprender a usar la ejecución extendida para mantener la aplicación en ejecución cuando está minimizada |
 
 ## <a name="launch-apps"></a>Iniciar aplicaciones
 
@@ -118,6 +119,6 @@ La sección [Pantallas de presentación](splash-screens.md) describe cómo estab
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

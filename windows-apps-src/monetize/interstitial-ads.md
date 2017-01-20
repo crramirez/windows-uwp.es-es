@@ -4,22 +4,19 @@ ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
 description: "Aprende a incluir anuncios intersticiales en una aplicación de Windows 10, Windows 8.1 o Windows Phone 8.1 con las bibliotecas de Microsoft Advertising en el Microsoft Store Services SDK."
 title: Anuncios intersticiales
 translationtype: Human Translation
-ms.sourcegitcommit: 8574695fe12042e44831227f81e1f6ea45e9c0da
-ms.openlocfilehash: fdc9bddafc7b80f66bb160183a6c416a8573883a
+ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
+ms.openlocfilehash: fae0fc57eca3477bf46a6f3ac43ec35781241a6e
 
 ---
 
-# Anuncios intersticiales
-
-
-
+# <a name="interstitial-ads"></a>Anuncios intersticiales
 
 Este tutorial te muestra cómo incluir anuncios intersticiales en una aplicación de Windows 10, Windows 8.1 o Windows Phone 8.1 con las bibliotecas de Microsoft Advertising en el Microsoft Store Services SDK.
 
 Para obtener proyectos de muestra completos que muestran cómo agregar anuncios intersticiales a aplicaciones de JavaScript y HTML y aplicaciones XAML con C# y C++, consulta las [muestras de publicidad en GitHub](http://aka.ms/githubads).
 
 <span id="whatareinterstitialads10"/>
-## ¿Qué son los anuncios intersticiales?
+## <a name="what-are-interstitial-ads"></a>¿Qué son los anuncios intersticiales?
 
 A diferencia de los banners, los anuncios intersticiales **se muestran en toda la pantalla de la aplicación. Con frecuencia se usan dos formas básicas en los juegos.
 
@@ -31,327 +28,179 @@ A diferencia de los banners, los anuncios intersticiales **se muestran en toda l
 
     Es importante tener en cuenta que este SDK no controla nada de la interfaz de usuario, excepto durante la reproducción del vídeo. Consulta las [prácticas recomendadas para anuncios intersticiales](ui-and-user-experience-guidelines.md#interstitialbestpractices10) para obtener instrucciones sobre qué hacer y qué evitar cuando pienses en cómo integrar anuncios intersticiales en la aplicación.
 
-## Crear una aplicación con anuncios intersticiales
+## <a name="build-an-app-with-interstitial-ads"></a>Crear una aplicación con anuncios intersticiales
 
+Para mostrar anuncios intersticiales en tu aplicación, sigue las instrucciones para el tipo de proyecto:
 
-### Requisitos previos
+* [XAML/.NET](#interstitialadsxaml10)
+* [HTML/JavaScript](#interstitialadshtml10)
+* [C++ (DirectX Interop)](#interstitialadsdirectx10)
+
+<span/>
+### <a name="prerequisites"></a>Requisitos previos
 
 * En el caso de las aplicaciones para UWP, instala el [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) con Visual Studio 2015.
-* En el caso de las aplicaciones de Windows8.1 o Windows Phone 8.1, instala [el SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk) con Visual Studio 2015 o Visual Studio 2013.
-
-### Programación de código
-
-* [Pasos para una aplicación XAML/.NET](#interstitialadsxaml10)
-* [Pasos para HTML/JavaScript](#interstitialadshtml10)
-* [Pasos para C++ (interoperabilidad de DirectX)](#interstitialadsdirectx10)
+* En el caso de las aplicaciones de Windows 8.1 o Windows Phone 8.1, instala [el SDK de Microsoft Advertising para Windows y Windows Phone 8.x](http://aka.ms/store-8-sdk) con Visual Studio 2015 o Visual Studio 2013.
 
 <span id="interstitialadsxaml10"/>
-### Anuncios intersticiales (XAML/.NET)
+###<a name="xamlnet"></a>XAML/.NET
 
-> **Nota** Esta sección proporciona ejemplos de C#, pero Visual Basic y C++ también son compatibles.
- 
+En esta sección se proporcionan ejemplos en C#, pero Visual Basic y C++ también son compatibles con proyectos XAML/.NET. Para obtener un ejemplo de código C# completo, consulta [Código de ejemplo de anuncios intersticiales en C#](interstitial-ad-sample-code-in-c.md).
+
 1. Abre el proyecto en Visual Studio.
+
 2. En **Administrador de referencias**, selecciona una de las siguientes referencias según el tipo de proyecto:
 
-    -   Para un proyecto de la Plataforma universal de Windows (UWP): expande **Windows Universal**, haz clic en **Extensiones**y luego selecciona la casilla junto a **SDK de Microsoft Advertising para XAML** (versión 10.0).
+  * Para un proyecto de la Plataforma universal de Windows (UWP): expande **Windows Universal**, haz clic en **Extensiones**y luego selecciona la casilla junto a **SDK de Microsoft Advertising para XAML** (versión 10.0).
 
-    -   Para un proyecto de Windows 8.1: expande **Windows 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Ad Mediator para Windows 8.1 XAML**. Esta opción agregará las bibliotecas de Microsoft Advertising y de Ad Mediator al proyecto, pero puede ignorar las bibliotecas de Ad Mediator.
+  * Para un proyecto de Windows 8.1: expande **Windows 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Ad Mediator para Windows 8.1 XAML**. Esta opción agregará las bibliotecas de Microsoft Advertising y de Ad Mediator al proyecto, pero puede ignorar las bibliotecas de Ad Mediator.
 
-    -   Para un proyecto de Windows Phone 8.1: expande **Windows Phone 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Ad Mediator para Windows Phone 8.1 XAML**. Esta opción agregará las bibliotecas de Microsoft Advertising y de Ad Mediator al proyecto, pero puede ignorar las bibliotecas de Ad Mediator.
+  * Para un proyecto de Windows Phone 8.1: expande **Windows Phone 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Ad Mediator para Windows Phone 8.1 XAML**. Esta opción agregará las bibliotecas de Microsoft Advertising y de Ad Mediator al proyecto, pero puedes ignorar las bibliotecas de Ad Mediator.
 
-3.  En el código de la aplicación, incluye la siguiente referencia al espacio de nombres.
+3.  En el archivo de código adecuado de la aplicación (por ejemplo, en MainPage.xaml.cs o un archivo de código para otra página), agrega la siguiente referencia de espacio de nombres.
 
-    ``` syntax
-    using Microsoft.Advertising.WinRT.UI;
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet1)]
 
-4.  Declara las propiedades `MyAppId` y `MyAdUnitId`.
+4.  En una ubicación adecuada de tu aplicación (por ejemplo, en ```MainPage``` o en otra página), declara un objeto [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) y varios campos de cadenas que representen el id. de aplicación y el id. de unidad del anuncio intersticial. En el siguiente ejemplo de código, se asignan los campos `myAppId` y `myAdUnitId` a los valores de prueba proporcionados en [Valores del modo de prueba](test-mode-values.md). Estos valores solo se usan para realizar pruebas; debes reemplazarlos por valores dinámicos del Centro de desarrollo de Windows antes de publicar la aplicación.
 
-    ``` syntax
-    var MyAppId = "<your app id for windows>";
-    var MyAdUnitId = "<your adunit for windows";
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet2)]
 
-    // if your code is in a universal solution and resides in the shared project
-    // you can opt to use #if WINDOWS_APP or WINDOWS_PHONE_APP to override with different
-    // identifiers for each
-#if WINDOWS_PHONE_APP
-    MyAppId = "<your app id for phone>";
-    MyAdUnitId = "<your adunit for phone>";
-#endif
-    ```
+5.  En el código que se ejecuta en el inicio (por ejemplo, en el constructor de la página), crea una instancia del objeto **InterstitialAd** y conecta controladores de eventos para los eventos del objeto.
 
-    > **Nota** Sustituirás los valores de prueba por valores dinámicos antes de enviar la aplicación para su envío.
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet3)]
 
-5.  Crea una instancia de un [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx), conecta todos los controladores de eventos y solicita un anuncio.
+6.  Entre aproximadamente 30 y 60 segundos antes de que necesites el anuncio intersticial, usa el método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) para la captura previa del anuncio. Esto deja tiempo suficiente para solicitar y preparar el anuncio antes de que deba mostrarse.
 
-    ``` syntax
-    // instantiate an InterstitialAd
-    InterstitialAd MyVideoAd = new InterstitialAd();
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet4)]
 
-    // wire up all 4 events, see below for function templates
-    MyVideoAd.AdReady += MyVideoAd_AdReady;
-    MyVideoAd.ErrorOccurred += MyVideoAd_ErrorOccurred;
-    MyVideoAd.Completed += MyVideoAd_Completed;
-    MyVideoAd.Cancelled += MyVideoAd_Cancelled;
+6.  En el punto del código donde quieras mostrar el anuncio, confirma que **InterstitialAd** está listo para mostrarse y, después, muéstralo con el método [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx).
 
-    // pre-fetch an ad 30-60 seconds before you need it
-    MyVideoAd.RequestAd(AdType.Video, MyAppId, MyAdUnitId);
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet5)]
 
-6.  En el punto del código donde debe aparecer el anuncio, asegúrate de que el anuncio esté listo y muéstralo.
+7.  Define los controladores de eventos para el objeto **InterstitialAd**.
 
-    ``` syntax
-    if ((InterstitialAdState.Ready) == (MyVideoAd.State))
-    {
-      MyVideoAd.Show();
-    }
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet6)]
 
-7.  Define e incluye el código de los eventos.
-
-    ``` syntax
-    void MyVideoAd_AdReady(object sender, object e)
-    {
-      // code
-    }
-
-    void MyVideoAd_ErrorOccurred(object sender, AdErrorEventArgs e)
-    {
-      // code
-    }
-
-    void MyVideoAd_Completed(object sender, object e)
-    {  
-      // code
-    }
-
-    void MyVideoAd_Cancelled(object sender, object e)
-    {
-      // code
-    }
-    ```
-
-8.  Asigna la propiedad `MyAppId` para el valor de prueba proporcionado en [Test mode values](test-mode-values.md) (Valores de modo de prueba). Este valor se usa solo para realizar pruebas; lo reemplazarás con un valor dinámico antes de publicar la aplicación.
-
-    ``` syntax
-    var MyAppId = "d25517cb-12d4-4699-8bdc-52040c712cab";
-    ```
-
-9.  Asigna la propiedad `MyAdUnitId` para el valor de prueba proporcionado en [Test mode values](test-mode-values.md) (Valores de modo de prueba). Este valor se usa solo para realizar pruebas; lo reemplazarás con un valor dinámico antes de publicar la aplicación.
-
-    ``` syntax
-    var MyAdUnitId = "11389925";
-    ```
-
-10.  Compila y prueba la aplicación para confirmar que muestra los anuncios de prueba.
+8.  Compila y prueba la aplicación para confirmar que muestra los anuncios de prueba.
 
 <span id="interstitialadshtml10"/>
-### Anuncios intersticiales (HTML/JavaScript)
+###<a name="htmljavascript"></a>HTML/JavaScript
 
-En este ejemplo se supone que has creado un proyecto de aplicación universal para JavaScript en Visual Studio de 2015 y te diriges a una CPU específica.
+En las siguientes instrucciones se supone que has creado un proyecto de Windows universal para JavaScript en Visual Studio 2015 y te diriges a una CPU específica. Para obtener un ejemplo de código completo, consulta [Código de ejemplo de anuncios intersticiales en JavaScript](interstitial-ad-sample-code-in-javascript.md).
 
 1. Abre el proyecto en Visual Studio.
+
 2.  En **Administrador de referencias**, selecciona una de las siguientes referencias según el tipo de proyecto:
 
-    -   Para un proyecto de la Plataforma universal de Windows (UWP): expande **Windows Universal**, haz clic en **Extensiones**y luego selecciona la casilla junto a **SDK de Microsoft Advertising para JavaScript** (versión 10.0).
+  * Para un proyecto de la Plataforma universal de Windows (UWP): expande **Windows Universal**, haz clic en **Extensiones**y luego selecciona la casilla junto a **SDK de Microsoft Advertising para JavaScript** (versión 10.0).
 
-    -   Para un proyecto de Windows 8.1: expande **Windows 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Microsoft Advertising para Windows 8.1 (JS) nativo**.
+  * Para un proyecto de Windows 8.1: expande **Windows 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Microsoft Advertising para Windows 8.1 (JS) nativo**.
 
-    -   Para un proyecto de Windows 8.1: expande **Windows Phone 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Microsoft Advertising para Windows Phone 8.1 (JS) nativo**.
+  * Para un proyecto de Windows 8.1: expande **Windows Phone 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Microsoft Advertising para Windows Phone 8.1 (JS) nativo**.
 
-3.  En el código HTML, incluye la siguiente referencia de script.
+3.  En la sección **&lt;head&gt;** del archivo HTML del proyecto, después de las referencias JavaScript del proyecto de default.css y default.js, agrega la referencia a ad.js. En un proyecto de UWP, agrega la referencia siguiente.
 
-    ``` syntax
-    <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` html
+  <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
+  ```
 
-4.  Declara las propiedades `myAppId` y `myAdUnitId`.
+  En un proyecto de Windows 8.1 o Windows Phone 8.1, agrega la referencia siguiente.
 
-    ``` syntax
-    <script>
-      var myAppId = "<your app id>";
-      var myAdUnitId = "<your adunit id>";
-    </script>
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` html
+  <script src="/MSAdvertisingJS/ads/ad.js"></script>
+  ```
 
-5.  Crea una instancia de un **InterstitialAd**, conecta todos los controladores de eventos y solicita un anuncio.
+4.  En un archivo .js del proyecto, declara un objeto [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) y varios campos que contengan el id. de aplicación y el id. de unidad para tu anuncio intersticial. En el siguiente ejemplo de código, se asignan los campos `applicationId` y `adUnitId` a los valores de prueba proporcionados en [Valores del modo de prueba](test-mode-values.md). Estos valores solo se usan para realizar pruebas; debes reemplazarlos por valores dinámicos del Centro de desarrollo de Windows antes de publicar la aplicación.
 
-    ``` syntax
-    // instantiate an InterstitialAd
-    window.interstitialAd = new MicrosoftNSJS.Advertising.InterstitialAd();
+  > [!div class="tabbedCodeSnippets"]
+  [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet1)]
 
-    // wire up all 4 events, see below for function templates
-    window.interstitialAd.onAdReady = readyHandler;
-    window.interstitialAd.onErrorOccurred = errorHandler;
-    window.interstitialAd.onCompleted = completeHandler;
-    window.interstitialAd.onCancelled = cancelHandler;
+5.  En el código que se ejecuta en el inicio (por ejemplo, en el constructor de la página), crea una instancia del objeto **InterstitialAd** y conecta controladores de eventos para el objeto.
 
-    // pre-fetch an ad 30-60 seconds before you need it
-    var myAdType = MicrosoftNSJS.Advertising.InterstitialAdType.video;
-    window.interstitialAd.requestAd(myAdType, myAppId, myAdUnitId);
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet2)]
 
-6.  En el punto del código donde debe aparecer el anuncio, asegúrate de que el anuncio esté listo y muéstralo.
+5. Entre aproximadamente 30 y 60 segundos antes de que necesites el anuncio intersticial, usa el método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) para la captura previa del anuncio. Esto deja tiempo suficiente para solicitar y preparar el anuncio antes de que deba mostrarse.
 
-    ``` syntax
-    if ((MicrosoftNSJS.Advertising.InterstitialAdState.ready) == (window.interstitialAd.state)) {
-             window.interstitialAd.show();
-    }
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet3)]
 
-7.  Define e incluye el código de los eventos.
+6.  En el punto del código donde quieras mostrar el anuncio, confirma que **InterstitialAd** está listo para mostrarse y, después, muéstralo con el método [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx).
 
-    ``` syntax
-    function readyHandler(sender) {
-      // code
-    }
+  > [!div class="tabbedCodeSnippets"]
+  [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/samples.js#Snippet4)]
 
-    function errorHandler(sender, args) {
-      // code
-    }
+7.  Define los controladores de eventos para el objeto **InterstitialAd**.
 
-    function completeHandler(sender) {
-      // code
-    }
-
-    function cancelHandler(sender) {
-      // code
-    }
-    ```
-
-7.  Asigna la propiedad `MyAppId` para el valor de prueba proporcionado en [Test mode values](test-mode-values.md) (Valores de modo de prueba). Este valor se usa solo para realizar pruebas; lo reemplazarás con un valor dinámico antes de publicar la aplicación.
-
-    ``` syntax
-    var MyAppId = "d25517cb-12d4-4699-8bdc-52040c712cab";
-    ```
-
-8.  Asigna la propiedad `MyAdUnitId` para el valor de prueba proporcionado en [Test mode values](test-mode-values.md) (Valores de modo de prueba). Este valor se usa solo para realizar pruebas; lo reemplazarás con un valor dinámico antes de publicar la aplicación.
-
-    ``` syntax
-    var MyAdUnitId = "11389925";
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/samples.js#Snippet5)]
 
 9.  Compila y prueba la aplicación para confirmar que muestra los anuncios de prueba.
 
 <span id="interstitialadsdirectx10"/>
-### Anuncios intersticiales (C++ e interoperabilidad de DirectX con XAML)
+###<a name="c-directx-interop"></a>C++ (DirectX Interop)
 
-En este ejemplo se supone que has creado un proyecto de aplicación universal para XAML en Visual Studio de 2015 y te diriges a una arquitectura de CPU concreta.
-
-> **Importante** Este código está escrito en C++ como se requiere para DirectX.
-
+En este ejemplo se supone que has creado un proyecto de **Aplicación XAML y DirectX (Windows universal)** en C++ de Visual Studio de 2015 y te diriges a una arquitectura de CPU concreta.
  
 1. Abre el proyecto en Visual Studio.
+
 1.  En **Administrador de referencias**, selecciona una de las siguientes referencias según el tipo de proyecto:
 
-    -   Para un proyecto de la Plataforma universal de Windows (UWP): expande **Windows Universal**, haz clic en **Extensiones**y luego selecciona la casilla junto a **SDK de Microsoft Advertising para XAML** (versión 10.0).
+  * Para un proyecto de la Plataforma universal de Windows (UWP): expande **Windows Universal**, haz clic en **Extensiones**y luego selecciona la casilla junto a **SDK de Microsoft Advertising para XAML** (versión 10.0).
 
-    -   Para un proyecto de Windows 8.1: expande **Windows 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Ad Mediator para Windows 8.1 XAML**. Esta opción agregará las bibliotecas de Microsoft Advertising y de Ad Mediator al proyecto, pero puede ignorar las bibliotecas de Ad Mediator.
+  * Para un proyecto de Windows 8.1: expande **Windows 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Ad Mediator para Windows 8.1 XAML**. Esta opción agregará las bibliotecas de Microsoft Advertising y de Ad Mediator al proyecto, pero puede ignorar las bibliotecas de Ad Mediator.
 
-    -   Para un proyecto de Windows Phone 8.1: expande **Windows Phone 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Ad Mediator para Windows Phone 8.1 XAML**. Esta opción agregará las bibliotecas de Microsoft Advertising y de Ad Mediator al proyecto, pero puede ignorar las bibliotecas de Ad Mediator.
+  * Para un proyecto de Windows Phone 8.1: expande **Windows Phone 8.1**, haz clic en **Extensiones** y luego selecciona la casilla junto a **SDK de Ad Mediator para Windows Phone 8.1 XAML**. Esta opción agregará las bibliotecas de Microsoft Advertising y de Ad Mediator al proyecto, pero puedes ignorar las bibliotecas de Ad Mediator.
 
-2.  En el archivo de encabezados apropiado para tu aplicación, declara el objeto de anuncio intersticial y las propiedades o métodos relacionados.
+2.  En un archivo de encabezado apropiado para tu aplicación (por ejemplo, DirectXPage.xaml.h), declara un objeto [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) y los métodos de controlador de eventos relacionados.  
 
-    ``` syntax
-    Microsoft::Advertising::WinRT::UI::InterstitialAd^ m_ia;
-    void OnAdReady(Object^ sender, Object^ args);
-    void OnAdCompleted(Object^ sender, Object^ args);
-    void OnAdCancelled(Object^ sender, Object^ args);
-    void OnAdError (Object^ sender,  Microsoft::Advertising::WinRT::UI::AdErrorEventArgs^ args);
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h#Snippet1)]
 
-3.  Declara las propiedades `AppId` y `AdUnitId`.
+3.  En el mismo archivo de encabezado, declara varios campos de cadena que representen el id. de aplicación y el id. de unidad para tu anuncio intersticial. En el siguiente ejemplo de código, se asignan los campos `myAppId` y `myAdUnitId` a los valores de prueba proporcionados en [Valores del modo de prueba](test-mode-values.md). Estos valores solo se usan para realizar pruebas; debes reemplazarlos por valores dinámicos del Centro de desarrollo de Windows antes de publicar la aplicación.
 
-    ``` syntax
-    #if WINDOWS_PHONE_APP
-    static Platform::String^ IA_APPID = L"<your app id for phone>";
-    static Platform::String^ IA_ADUNITID = L"<your ad unit for phone>";
-    #endif
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h#Snippet2)]
 
-    #if WINDOWS_APP
-    static Platform::String^ IA_APPID = L"<your app id for windows>";
-    static Platform::String^ IA_ADUNITID = L"<your ad unit for windows>";
-    #endif
-    ```
+4.  En el archivo .cpp donde quieras agregar código para mostrar un anuncio intersticial, agrega la siguiente referencia de espacio de nombres. En los siguientes ejemplos se supone que agregas el código al archivo DirectXPage.xaml.cpp de tu aplicación.
 
-4.  En el archivo .cpp, agrega una referencia al espacio de nombres.
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet3)]
 
-    ``` syntax
-    using namespace Microsoft::Advertising::WinRT::UI;
-    ```
+6.  En el código que se ejecuta en el inicio (por ejemplo, en el constructor de la página), crea una instancia del objeto **InterstitialAd** y conecta controladores de eventos para los eventos del objeto. En el siguiente ejemplo, ```InterstitialAdSamplesCpp``` es el espacio de nombres para el proyecto; cambia este nombre si es necesario en tu código.
 
-5.  Crea una instancia de un **InterstitialAd**, conecta todos los controladores de eventos y solicita un anuncio.
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet4)]
 
-    ``` syntax
-    // Instantiate an InterstitialAd.
-    m_ia = ref new InterstitialAd();
+7. Entre aproximadamente 30 y 60 segundos antes de que necesites el anuncio intersticial, usa el método [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) para la captura previa del anuncio. Esto deja tiempo suficiente para solicitar y preparar el anuncio antes de que deba mostrarse.
 
-    // Wire up all 4 events, see below for function templates.            
-    m_ia->AdReady += ref new Windows::Foundation::EventHandler<Platform::Object ^>
-        (this, &Simple3DGameXaml::DirectXPage::OnAdReady);
-    m_ia->Completed += ref new Windows::Foundation::EventHandler<Platform::Object ^>
-        (this, &Simple3DGameXaml::DirectXPage::OnAdCompleted);
-    m_ia->Cancelled += ref new Windows::Foundation::EventHandler<Platform::Object ^>
-        (this, &Simple3DGameXaml::DirectXPage::OnAdCancelled);
-    m_ia->ErrorOccurred += ref new
-        Windows::Foundation::EventHandler<Microsoft::Advertising::WinRT::UI::AdErrorEventArgs ^>
-            (this, &Simple3DGameXaml::DirectXPage::OnAdError);
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet5)]
 
-    // Pre-fetch an ad 30-60 seconds before you need it.
-    m_ia->RequestAd(AdType::Video, IA_APPID, IA_ADUNITID);
-    ```
+7.  En el punto del código donde quieras mostrar el anuncio, confirma que **InterstitialAd** está listo para mostrarse y, después, muéstralo con el método [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx).
 
-6.  En el punto del código donde debe aparecer el anuncio, asegúrate de que el anuncio esté listo y muéstralo.
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet6)]
 
-    ``` syntax
-    if ((InterstitialAdState::Ready == m_ia->State))
-    {
-        m_ia->Show();
-    }
-    ```
+8.  Define los controladores de eventos para el objeto **InterstitialAd**.
 
-7.  Define e incluye el código de los eventos.
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet7)]
 
-    ``` syntax
-    void DirectXPage::OnAdReady(Object^ sender, Object^ args)
-    {
-      // code
-    }
+9. Compila y prueba la aplicación para confirmar que muestra los anuncios de prueba.
 
-    void DirectXPage::OnAdCompleted(Object^ sender, Object^ args)
-    {
-      // code
-    }
+<span/>
+### <a name="release-your-app-with-live-ads-using-windows-dev-center"></a>Publicar la aplicación con anuncios dinámicos mediante el Centro de desarrollo de Windows
 
-    void DirectXPage::OnAdCancelled(Object^ sender, Object^ args)
-    {
-      // code
-    }
-
-    void DirectXPage::OnAdError
-      (Object^ sender, Microsoft::Advertising::WinRT::UI::AdErrorEventArgs^ args)
-    {
-      // code
-    }
-    ```
-
-8.  Asigna la propiedad `AppId` para el valor de prueba proporcionado en [Test mode values](test-mode-values.md) (Valores de modo de prueba). Este valor se usa solo para realizar pruebas; lo reemplazarás con un valor dinámico antes de publicar la aplicación.
-
-    ``` syntax
-    static Platform::String^ IA_APPID = L"d25517cb-12d4-4699-8bdc-52040c712cab";
-    ```
-
-9.  Asigna la propiedad `AdUnitId` para el valor de prueba proporcionado en [Test mode values](test-mode-values.md) (Valores de modo de prueba). Este valor se usa solo para realizar pruebas; lo reemplazarás con un valor dinámico antes de publicar la aplicación.
-
-    ``` syntax
-    static Platform::String^ IA_ADUNITID = L"11389925";
-    ```
-
-10. Compila y prueba la aplicación para confirmar que muestra los anuncios de prueba.
-
-### Publicar la aplicación con anuncios dinámicos mediante el Centro de desarrollo de Windows
-
-1.  En el panel del Centro de desarrollo, ve a la página **Monetización** &gt; **Monetizar con anuncios** correspondiente a la aplicación y [crea una unidad de Microsoft Advertising independiente](../publish/monetize-with-ads.md). Especifica **Vídeo intersticial** para el tipo de unidad de anuncio. Anota el identificador de unidad de anuncio y el identificador de la aplicación.
+1.  En el panel del Centro de desarrollo, ve a la página **Monetización** &gt; **Monetizar con anuncios** correspondiente a la aplicación y [crea una unidad de anuncio](../publish/monetize-with-ads.md). Especifica **Vídeo intersticial** para el tipo de unidad de anuncio. Anota el identificador de unidad de anuncio y el identificador de la aplicación.
 
 2.  En el código, reemplaza los valores de unidades de anuncios de prueba con los valores dinámicos generados en el Centro de desarrollo.
 
@@ -360,18 +209,18 @@ En este ejemplo se supone que has creado un proyecto de aplicación universal pa
 4.  Revisa los [informes de rendimiento de publicidad](../publish/advertising-performance-report.md) en el panel del Centro de desarrollo.
 
 <span id="interstitialbestpractices10"/>
-## Directivas y procedimientos recomendados para anuncios intersticiales
+## <a name="interstitial-best-practices-and-policies"></a>Directivas y procedimientos recomendados para anuncios intersticiales
 
 
 Para obtener más información sobre cómo usar anuncios intersticiales de forma eficaz y las directivas que se deben seguir, consulta [Directivas y procedimientos recomendados para anuncios intersticiales](ui-and-user-experience-guidelines.md#interstitialbestpractices10).
 
 <span id="targetplatform10"/>
-## Quitar los errores de referencia: dirigirse a una plataforma de CPU específica (XAML y HTML)
+## <a name="remove-reference-errors-target-a-specific-cpu-platform-xaml-and-html"></a>Quitar los errores de referencia: dirigirse a una plataforma de CPU específica (XAML y HTML)
 
 
 Al usar las bibliotecas de Microsoft Advertising, no puedes dirigirte a **Cualquier CPU** en tu proyecto. Si el proyecto se dirige a la plataforma **Cualquier CPU**, es posible que veas una advertencia en el proyecto después de agregar una referencia a las bibliotecas de Microsoft Advertising. Para quitar esta advertencia, actualiza el proyecto para usar una salida de compilación específica de la arquitectura (por ejemplo, **x86**). Para obtener más información, consulta [Problemas conocidos](known-issues-for-the-advertising-libraries.md).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Código de ejemplo de anuncios intersticiales en C#](interstitial-ad-sample-code-in-c.md)
@@ -384,6 +233,6 @@ Al usar las bibliotecas de Microsoft Advertising, no puedes dirigirte a **Cualqu
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

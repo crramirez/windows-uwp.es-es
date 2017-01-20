@@ -1,27 +1,132 @@
 ---
 author: mijacobs
 Description: "Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma."
-title: "Dispositivo básico para aplicaciones de la Plataforma universal de Windows (UWP)"
+title: "Dispositivo básico para aplicaciones para la Plataforma universal de Windows (UWP)"
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
+keywords: "dispositivo, entrada, interacción"
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0501d59108c5f01b3cefd3d038f3c7d320c862eb
-ms.openlocfilehash: 8821af9bc160dc2636871c3a3b2a558987707766
+ms.sourcegitcommit: bc2601bcd04f410ae4c3609c078a8684e0fbdbeb
+ms.openlocfilehash: ea19592ea98eb7d9a1b47c1a8cf8f1990ca33797
 
 ---
 
-#  Dispositivo básico para aplicaciones de la Plataforma universal de Windows (UWP)
+#  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>Dispositivo básico para aplicaciones para la Plataforma universal de Windows (UWP)
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
+![dispositivos de Windows](images/device-primer/device-primer-ramp.png)
+
+Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma. Al diseñar para un dispositivo en particular, hay que tener en cuenta principalmente cómo aparecerá la aplicación en el dispositivo, dónde, cuándo y cómo se usará en el dispositivo y cómo interactuará el usuario con dicho dispositivo.
+
+## <a name="pcs-and-laptops"></a>PC y portátiles
 
 
+Los portátiles y los PC Windows incluyen una amplia gama de dispositivos y tamaños de pantalla. En general, los PC y los portátiles pueden mostrar más de información que los teléfonos o tabletas.
+
+Tamaños de pantalla
+-   13 pulgadas y tamaños superiores
+
+![un PC](images/device-primer/device-primer-desktop.png)
+
+Uso típico
+-   En las aplicaciones de los equipos de escritorio y de los portátiles, se puede ver el uso compartido, pero no por más de un usuario a la vez, normalmente por períodos más largos.
+
+Consideraciones sobre la interfaz de usuario
+-   Las aplicaciones pueden tener una vista de ventana, cuyo tamaño viene determinado por el usuario. Según el tamaño de ventana, puede haber entre uno y tres marcos. En los monitores más grandes, la aplicación puede tener más de tres marcos.
+
+-   Al usar una aplicación en un equipo de escritorio o un portátil, el usuario tiene control sobre los archivos de la aplicación. Como diseñador de la aplicación, asegúrate de proporcionar los mecanismos para administrar su contenido. Piensa en incluir comandos y funciones como, por ejemplo, "Guardar como", "Archivos recientes", etc.
+
+-   La función Atrás del sistema es opcional. Cuando un desarrollador de aplicaciones elige mostrarla, aparece en la barra de título de la aplicación.
+
+Entradas
+-   Mouse
+-   Teclado
+-   Entrada táctil en equipos portátiles y equipos de escritorio todo en uno.
+-   A veces se usan mandos, como el controlador de Xbox.
+
+Funcionalidades típicas del dispositivo
+-   Cámara
+-   Micrófono
+
+## <a name="tablets-and-2-in-1s"></a>Tabletas y 2 en 1
 
 
+Los Tablet PC ultraportátiles están equipados con pantallas táctiles, cámaras, micrófonos y acelerómetros. El tamaño de la pantalla de las tabletas varía de 7" a 13,3". Los dispositivos 2 en 1 pueden actuar como tableta o como portátil con teclado y mouse, en función de la configuración (por lo general implica doblar la pantalla hacia atrás o inclinarla en posición vertical).
 
-![dispositivos de Windows](images/device-primer/1894834-hig-device-primer-01-500.png)
+Tamaños de pantalla
+- De 7" a 13,3" para tableta
+- 13,3" y superior para 2 en 1
 
-Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma. Al diseñar un dispositivo en particular, hay que tener en cuenta principalmente cómo aparecerá la aplicación en el dispositivo dónde, cuándo y cómo se usará la aplicación en el dispositivo y cómo interactuará el usuario con el dispositivo.
+![un dispositivo de tableta](images/device-primer/device-primer-tablet.png)
 
-## Teléfonos y tabléfonos
+Uso típico
+-   Aproximadamente el 80 % del uso de la tableta es por parte del propietario, mientras que el 20 % restante del uso es compartido.
+-   Normalmente se usa en casa como un dispositivo complementario mientras se ve el televisor.
+-   Se usa durante períodos más prolongados que los teléfonos y tabléfonos.
+-   Se escribe texto en ráfagas cortas.
+
+Consideraciones sobre la interfaz de usuario
+-   En las orientaciones horizontal y vertical, las tabletas permiten dos marcos a la vez.
+-   El botón Atrás del sistema se encuentra en la barra de navegación.
+
+Entradas
+-   Función táctil
+-   Lápiz
+-   Teclado externo (en ocasiones)
+-   Mouse (en ocasiones)
+-   Voz (en ocasiones)
+
+Funcionalidades típicas del dispositivo
+-   Cámara
+-   Micrófono
+-   Sensores de movimiento
+-   Sensores de ubicación
+
+> [!NOTE]
+> La mayoría de las consideraciones para los PC y portátiles también se aplican a los dispositivos 2 en 1.
+
+## <a name="xbox-and-tv"></a>Xbox y televisión
+
+La experiencia de estar sentado en tu sofá al otro lado de la sala, con un controlador para juegos o control remoto para interactuar con tu televisor, se llama la **experiencia de 10 pies**. Se denomina así porque el usuario generalmente está sentado aproximadamente a 10 pies de distancia de la pantalla. Esto proporciona desafíos que no están presentes, por ejemplo, en la experiencia de *2 pies* o interactuando con un PC. Si estás desarrollando una aplicación para Xbox One o cualquier otro dispositivo conectado a una pantalla de TV y que puede usar un controlador para juegos o un control remoto para la entrada, siempre debes tener esto en cuenta.
+
+Diseñar tu aplicación para UWP para la experiencia de 10 pies es muy diferente que diseñarla para cualquiera de las otras categorías de dispositivos mencionadas aquí. Para obtener más información, consulta [Diseño para Xbox y televisión](designing-for-tv.md).
+
+Tamaños de pantalla
+- 24" y superior
+
+![Xbox y televisión](images/device-primer/device-primer-tv-and-xbox.png)
+
+Uso típico
+- A menudo se comparte entre varias personas, aunque también suele usarse por parte de una.
+- Se usa normalmente durante períodos más largos.
+- Se usa normalmente en casa, por lo que permanece en un solo lugar.
+- Rara vez pide entrada de texto porque se tarda más con un controlador para juegos o control remoto.
+- Se corrige la orientación de la pantalla.
+- Normalmente solo se ejecuta una aplicación cada vez, pero puede que sea posible acoplar aplicaciones a un lado (como en Xbox).
+
+Consideraciones sobre la interfaz de usuario
+- Por lo general, las aplicaciones conservan el mismo tamaño, a menos que se ajuste otra aplicación al lado.
+- La funcionalidad Atrás del sistema es útil y se ofrece en la mayoría de aplicaciones de Xbox, accesible mediante el botón B del controlador para juegos.
+- Dado que el cliente está sentado a aproximadamente 10 pies de la pantalla, asegúrate de que la interfaz de usuario es lo suficientemente grande y clara para que se vea.
+
+Entradas
+- Controlador para juegos (por ejemplo, un controlador de Xbox)
+- Control remoto
+- Voz (en ocasiones, si el cliente tiene un sensor Kinect o unos auriculares)
+
+Funcionalidades típicas del dispositivo
+- Cámara (en ocasiones, si el cliente tiene un sensor Kinect)
+- Micrófono (en ocasiones, si el cliente tiene un sensor Kinect o unos auriculares)
+- Sensores de movimiento (en ocasiones, si el cliente tiene un sensor Kinect)
+
+## <a name="phones-and-phablets"></a>Teléfonos y tabléfonos
 
 
 Los más usados de todos los dispositivos informáticos, los teléfonos pueden hacer muchas cosas con la superficie de pantalla limitada y las entradas básicas. Los teléfonos están disponibles en una amplia variedad de tamaños; los teléfonos más grandes se denominan tabléfonos. Las experiencias de la aplicación en tabléfonos son similares a las de los teléfonos, pero debido a que la superficie de pantalla de los tabléfonos es mayor, se pueden producir algunos cambios clave en el consumo de contenido.
@@ -32,7 +137,7 @@ Tamaños de pantalla
 -   Entre 4 y 5 pulgadas para teléfono
 -   Entre 5,5 y 7 pulgadas para tabléfono
 
-![windows phone](images/device-primer/1894834-hig-device-primer-03.png)
+![windows phone](images/device-primer/device-primer-phablet.png)
 
 Uso típico
 -   Se usan principalmente en orientación vertical, principalmente debido a la facilidad para sostener el teléfono con una mano y poder interactuar completamente interactuar con él de esta forma, pero hay algunas experiencias que funcionan bien en horizontal, como ver fotos y vídeo, leer un libro y escribir texto.
@@ -61,74 +166,7 @@ Funcionalidades típicas del dispositivo
 
  
 
-## Tabletas
-
-
-Los Tablet PC ultraportátiles están equipados con pantallas táctiles, cámaras, micrófonos y acelerómetros. El tamaño de la pantalla de las tabletas varía de 7" a 13,3".
-
-Tamaños de pantalla
--   Entre 7 y 13,3 pulgadas
-
-![un dispositivo de tableta](images/device-primer/1894834-hig-device-primer-05.png)
-
-Uso típico
--   Aproximadamente el 80% del uso de la tableta es por parte del propietario, mientras que el 20% restante del uso es compartido.
--   Normalmente se usa en casa como un dispositivo complementario mientras se ve el televisor.
--   Se usa durante períodos más prolongados que los teléfonos y tabléfonos.
--   Se escribe texto en ráfagas cortas.
-
-Consideraciones sobre la interfaz de usuario
--   En las orientaciones horizontal y vertical, las tabletas permiten dos marcos a la vez.
--   El botón Atrás del sistema se encuentra en la barra de navegación.
-
-Entradas
--   Función táctil
--   Lápiz
--   Teclado externo (en ocasiones)
--   Mouse (en ocasiones)
--   Voz (en ocasiones)
-
-Funcionalidades típicas del dispositivo
--   Cámara
--   Micrófono
--   Sensores de movimiento
--   Sensores de ubicación
-
- 
-
-## PC y portátiles
-
-
-Los portátiles y los PC Windows incluyen una amplia gama de dispositivos y tamaños de pantalla. En general, los PC y los portátiles pueden mostrar más de información que los teléfonos o tabletas.
-
-Tamaños de pantalla
--   13 pulgadas y tamaños superiores
-
-![un PC](images/device-primer/1894834-hig-device-primer-06-349.png)
-
-Uso típico
--   En las aplicaciones de los equipos de escritorio y de los portátiles, se puede ver el uso compartido, pero no por más de un usuario a la vez, normalmente por períodos más largos.
-
-Consideraciones sobre la interfaz de usuario
--   Las aplicaciones pueden tener una vista de ventana, cuyo tamaño viene determinado por el usuario. Según el tamaño de ventana, puede haber entre uno y tres marcos. En los monitores más grandes, la aplicación puede tener más de tres marcos.
-
--   Al usar una aplicación en un equipo de escritorio o un portátil, el usuario tiene control sobre los archivos de la aplicación. Como diseñador de la aplicación, asegúrate de proporcionar los mecanismos para administrar su contenido. Piensa en incluir comandos y funciones como, por ejemplo, "Guardar como", "Archivos recientes", etc.
-
--   La función Atrás del sistema es opcional. Cuando un desarrollador de aplicaciones elige mostrarla, aparece en la barra de título de la aplicación.
-
-Entradas
--   Mouse
--   Teclado
--   Entrada táctil en equipos portátiles y equipos de escritorio todo en uno.
--   A veces se usan mandos, como el controlador de Xbox.
-
-Funcionalidades típicas del dispositivo
--   Cámara
--   Micrófono
-
- 
-
-## Dispositivos de Surface Hub
+## <a name="surface-hub-devices"></a>Dispositivos de Surface Hub
 
 
 Microsoft Surface Hub es un dispositivo de colaboración en equipo de pantalla grande diseñado para el uso simultáneo por parte de varios usuarios.
@@ -136,7 +174,7 @@ Microsoft Surface Hub es un dispositivo de colaboración en equipo de pantalla g
 Tamaños de pantalla
 -   55 y 84 pulgadas
 
-![un Surface Hub](images/device-primer/1894834-hig-device-primer-07-349.png)
+![un Surface Hub](images/device-primer/device-primer-surfacehub3.png)
 
 Uso típico
 -   Las aplicaciones de Surface Hub ven el uso compartido durante períodos cortos de tiempo, como en las reuniones.
@@ -161,7 +199,7 @@ Funcionalidades típicas del dispositivo
 
  
 
-## Dispositivos de Windows IoT
+## <a name="windows-iot-devices"></a>Dispositivos de Windows IoT
 
 
 Los dispositivos Windows IoT son una nueva clase de dispositivos que se centran en la incrustación de dispositivos electrónicos pequeños, sensores y conectividad dentro de los objetos físicos. Por lo general, estos dispositivos están conectados a través de una red o Internet para informar sobre los datos reales que detectan y, en algunos casos, actúan sobre ellos. Es posible que los dispositivos no tengan ninguna pantalla (también conocidos como dispositivos "sin periféricos") o que estén conectados a una pantalla pequeña (conocidos como dispositivos "con periféricos") con un tamaño de pantalla generalmente de 3,5 pulgadas o inferior.
@@ -170,7 +208,7 @@ Tamaños de pantalla
 -   3,5 pulgadas o inferior
 -   Algunos dispositivos no tienen ninguna pantalla
 
-![dispositivo IoT](images/device-primer/1894834-hig-device-primer-02.png)
+![dispositivo IoT](images/device-primer/device-primer-iot-device.png)
 
 Uso típico
 -   Por lo general, estos dispositivos están conectados a través de una red o Internet para informar sobre los datos reales que detectan y, en algunos casos, actúan sobre ellos.
@@ -189,16 +227,7 @@ Entradas
 Funcionalidades típicas del dispositivo
 -   Variable, en función del dispositivo
 
- 
 
-
-
- 
-
- 
-
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO4-->
 
 

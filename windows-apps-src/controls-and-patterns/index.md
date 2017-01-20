@@ -3,19 +3,26 @@ description: "Obtén instrucciones de diseño y de codificación para agregar co
 title: 'Controles y patrones para UWP: desarrollo de aplicaciones de Windows'
 author: mijacobs
 keywords: "controles de UWP, interfaz de usuario, controles de la aplicación"
+label: Controls & patterns
+template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
-ms.openlocfilehash: ef383e46f2c610b57eec1c7767d5100e42075f6c
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e530c8fab64c160737ccc06faf676d1d113896c4
 
 ---
-# Controles y patrones para aplicaciones para UWP
+# <a name="controls-and-patterns-for-uwp-apps"></a>Controles y patrones para aplicaciones para UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 En el desarrollo de aplicaciones para UWP, un <i>control</i> es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Los controles son los elementos esenciales de la interfaz de usuario. Ponemos a tu disposición más de 45 controles, que van desde botones simples hasta controles de datos de enorme eficacia, como la vista de cuadrícula. Un <i>patrón</i> es una receta para combinar varios controles con el fin de hacer algo nuevo.
 
 Los artículos de esta sección proporcionan instrucciones de diseño y de codificación para agregar controles y patrones a aplicaciones para UWP. 
 
-## Introducción
+## <a name="intro"></a>Introducción
 
 Instrucciones generales y ejemplos de código para agregar y aplicar estilos a controles en XAML y C#.
 
@@ -34,7 +41,7 @@ Puedes personalizar la apariencia de tus aplicaciones de varias maneras con el m
 </div>
 </div>
 
-## Índice alfabético 
+## <a name="alphabetical-index"></a>Índice alfabético 
 
 Obtener información detallada sobre los patrones y controles específicos.
 
@@ -169,6 +176,6 @@ Obtener información detallada sobre los patrones y controles específicos.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -3,17 +3,17 @@ title: Conectarse a proveedores de identidades con el Administrador de cuentas w
 description: "En este artículo se describe cómo usar AccountsSettingsPane para conectar la aplicación para la Plataforma universal de Windows (UWP) a proveedores de identidades externos, como Microsoft o Facebook, con las nuevas API de Administrador de cuentas web de Windows 10."
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: e16977a9a11b292ea9624ff421aa964c11d615be
-ms.openlocfilehash: d234811b395790a35ad50dea9ef4cc56d60458e8
+ms.sourcegitcommit: 0aef3cc9a3312a647197d8b2a7b815ed42d54fa3
+ms.openlocfilehash: 10851432b6e28934ab60041d23a5cf319671f704
 
 ---
-# Conectarse a proveedores de identidades con el Administrador de cuentas web
+# <a name="connect-to-identity-providers-with-web-account-manager"></a>Conectarse a proveedores de identidades con el Administrador de cuentas web
 
 En este artículo se describe cómo mostrar AccountsSettingsPane y conectar la aplicación para la Plataforma universal de Windows (UWP) a proveedores de identidades externos, como Microsoft o Facebook, con las nuevas API de Administrador de cuentas web de Windows 10. Aprenderás a solicitar permiso al usuario para usar su cuenta de Microsoft, obtener un token de acceso y usarlo para realizar operaciones básicas (como obtener datos de perfil o cargar archivos en su OneDrive). Los pasos son similares para obtener permiso del usuario y acceso con cualquier proveedor de identidades que admita el Administrador de cuentas web.
 
 > Nota: Para obtener un ejemplo de código completo, consulta [Web account management sample en GitHub (Muestra de administración de cuentas web en GitHub)](http://go.microsoft.com/fwlink/p/?LinkId=620621).
 
-## Preparación
+## <a name="get-set-up"></a>Preparación
 
 En primer lugar, crea una aplicación vacía en Visual Studio. 
 
@@ -51,7 +51,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Web.Http;
 ```
 
-## Mostrar la interfaz AccountSettingsPane
+## <a name="show-the-accountsettingspane"></a>Mostrar la interfaz AccountSettingsPane
 
 El sistema proporciona una interfaz de usuario integrada para administrar proveedores de identidades y cuentas web denominada AccountSettingsPane. Se puede mostrar de la siguiente manera:
 
@@ -68,7 +68,7 @@ Si ejecutas la aplicación y haces clic en el botón "Iniciar sesión", debería
 
 El panel está vacío porque el sistema solo proporciona un shell de interfaz de usuario. El desarrollador es quien rellena mediante programación el panel con los proveedores de identidades. 
 
-## Registrarse para AccountCommandsRequested
+## <a name="register-for-accountcommandsrequested"></a>Registrarse para AccountCommandsRequested
 
 Para agregar comandos al panel, empezamos por el registro para el controlador de eventos AccountCommandsRequested. Este indica al sistema que ejecute nuestra lógica de compilación cuando el usuario solicite ver el panel (por ejemplo, hace clic en nuestro botón XAML). 
 
@@ -90,7 +90,7 @@ protected override void OnNavigatedFrom(NavigationEventArgs e)
 
 Los usuarios no interactúan con las cuentas muy a menudo, por lo que registrar y cancelar el registro del controlador de eventos de esta manera ayuda a evitar pérdidas de memoria. De esta forma, el panel personalizado solo está en la memoria cuando existe una alta probabilidad de que un usuario lo solicite (porque está en una página de "configuración" o "inicio de sesión", por ejemplo). 
 
-## Crear el panel de configuración de la cuenta
+## <a name="build-the-account-settings-pane"></a>Crear el panel de configuración de la cuenta
 
 El método BuildPaneAsync se llama siempre que se muestra la interfaz AccountSettingsPane. Aquí es donde colocamos el código para personalizar los comandos que se muestran en el panel. 
 
@@ -148,7 +148,7 @@ Ejecuta el código anterior y obtendrás un panel con un aspecto similar al sigu
 
 ![Panel de configuración de la cuenta](images/tb-2.png)
 
-### Solicitar un token
+### <a name="request-a-token"></a>Solicitar un token
 
 Una vez que la opción Cuenta de Microsoft se muestra en la interfaz AccountsSettingsPane, necesitamos controlar qué sucede cuando el usuario la selecciona. Registramos nuestro método GetMsaToken para que se activara cuando el usuario eligiera iniciar sesión con su cuenta de Microsoft, por lo que obtendremos el token allí. 
 
@@ -164,10 +164,10 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 
 En este ejemplo, pasamos la cadena "wl.basic" al parámetro de ámbito. El ámbito representa el tipo de información que estás solicitando desde el servicio proveedor en un usuario específico. Ciertos ámbitos proporcionan acceso solo a la información básica de un usuario, como el nombre y la dirección de correo electrónico. Otros ámbitos pueden conceder acceso a información confidencial, como fotos o la bandeja de entrada de correo electrónico del usuario. Por lo general, la aplicación debe usar el ámbito menos permisivo a menos que nuestra aplicación necesite explícitamente permiso adicional: por ejemplo, no solicites acceso a información confidencial si la aplicación no la necesita en absoluto. 
 
-Los proveedores de servicios proporcionarán documentación sobre los ámbitos que deben especificarse para obtener tokens para usar con su servicio. 
+Los proveedores de servicios proporcionarán documentación sobre los ámbitos que deben especificarse para obtener tokens para usarlos con su servicio. 
 
-* Para los ámbitos de Office 365 y Outlook.com, consulta Authenticate Office 365 and Outlook.com APIs using the v2.0 authentication endpoint preview (Autenticar las API de Office 365 y Outlook.com mediante la vista previa del extremo de autenticación v2.0)[https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2]. 
-* Para OneDrive, consulta OneDrive authentication and sign-in (Autenticación e inicio de sesión de OneDrive)[https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes]. 
+* Para ámbitos de Office 365 y Outlook.com, consulta [Authenticate Office 365 and Outlook.com APIs using the v2.0 authentication endpoint](https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2) (Autenticar las API de Office 365 y Outlook.com mediante el punto de conexión de autenticación v2.0). 
+* Para OneDrive, consulta [OneDrive authentication and sign-in](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes) (Autenticación e inicio de sesión de OneDrive). 
 
 Si estás desarrollando una aplicación de empresa, probablemente querrás conectarte a una instancia de Azure Active Directory (AAD) y usar la API de Microsoft Graph en lugar de los servicios de MSA habituales. En este escenario, usa el siguiente código en su lugar: 
 
@@ -183,7 +183,7 @@ private async void GetAadTokenAsync(WebAccountProviderCommand command)
 
 El resto de este artículo sigue describiendo el escenario de MSA, pero el código de AAD es muy similar. Para obtener más información sobre AAD o Graph, incluida una muestra completa en GitHub, consulta la [documentación de Microsoft Graph](https://graph.microsoft.io/docs/platform/get-started).
 
-## Usar el token
+## <a name="use-the-token"></a>Usar el token
 
 El método RequestTokenAsync devuelve un objeto WebTokenRequestResult, que contiene los resultados de la solicitud. Si la solicitud se realizó correctamente, contendrá un token.  
 
@@ -234,7 +234,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 
 El método para llamar a las distintas API de REST varía según el proveedor; consulta la documentación de la API del proveedor para obtener información sobre cómo usar el token. 
 
-## Guardar el estado de la cuenta
+## <a name="save-account-state"></a>Guardar el estado de la cuenta
 
 Los tokens son útiles para obtener información acerca de un usuario de inmediato, pero suelen tener distintas duraciones; los tokens de MSA, por ejemplo, solo son válidos para unas pocas horas. Afortunadamente, no es necesario volver a mostrar la interfaz AccountsSettingsPane cada vez que un token expira. Una vez que un usuario ha autorizado la aplicación una vez, puedes almacenar la información de la cuenta del usuario para usarla posteriormente. 
 
@@ -304,7 +304,7 @@ Dado que es muy sencillo obtener un token de forma silenciosa, debes usar este p
 
 Ten en cuenta que el ejemplo anterior solo cubre los casos correctos e incorrectos básicos. La aplicación también debe tener en cuenta los escenarios inusuales (por ejemplo, que un usuario revoque el permiso de la aplicación o quite su cuenta de Windows) y controlarlos correctamente.  
 
-## Cerrar la sesión de una cuenta 
+## <a name="log-out-an-account"></a>Cerrar la sesión de una cuenta 
 
 Si conservas un objeto WebAccount, querrás proporcionar la funcionalidad de "cerrar sesión" a los usuarios, para que puedan cambiar de cuenta o simplemente desasociar su cuenta de la aplicación. Para ello, quita primero cualquier cuenta guardada, así como la información del proveedor. A continuación, llama a WebAccount.SignOutAsync() para borrar la memoria caché e invalidar los tokens existentes que la aplicación pueda tener. 
 
@@ -317,7 +317,7 @@ private async Task SignOutAccountAsync(WebAccount account)
 }
 ```
 
-## Agregar proveedores que no admitan WebAccountManager
+## <a name="add-providers-that-dont-support-webaccountmanager"></a>Agregar proveedores que no admitan WebAccountManager
 
 Si quieres integrar la autenticación de un servicio en la aplicación, pero que el servicio no admite WebAccountManager (Google+ o Twitter, por ejemplo), puedes agregar manualmente ese proveedor a la interfaz AccountsSettingsPane. Para ello, crea un nuevo objeto WebAccountProvider y proporciona tu propio nombre e icono .png. Luego, agrégalo a la colección WebAccountProviderCommands. Este es un ejemplo de código auxiliar: 
 
@@ -342,7 +342,7 @@ private async void GetTwitterTokenAsync(WebAccountProviderCommand command)
 
 Ten en cuenta que solo agrega un icono a la interfaz AccountsSettingsPane y ejecuta el método que especificas al hacer clic en el icono (en este caso, GetTwitterTokenAsync). Debes proporcionar el código que controla la autenticación real. Para obtener más información, consulta (Agente de autenticación web)[web-authentication-broker], que proporciona métodos auxiliares de autenticación con los servicios REST. 
 
-## Agregar un encabezado personalizado
+## <a name="add-a-custom-header"></a>Agregar un encabezado personalizado
 
 Puedes personalizar el panel de configuración de la cuenta mediante la propiedad HeaderText, de esta manera: 
 
@@ -361,7 +361,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 No te excedas con el texto del encabezado; mantenlo breve y simple. Si el proceso de inicio de sesión es complicado y necesitas mostrar más información, vincula el usuario a otra página con un vínculo personalizado. 
 
-## Agregar vínculos personalizados
+## <a name="add-custom-links"></a>Agregar vínculos personalizados
 
 Puedes agregar comandos personalizados a la interfaz AccountsSettingsPane, que aparecerán como vínculos debajo de la colección de WebAccountProviders admitidos. Los comandos personalizados son geniales para tareas simples relacionadas con las cuentas de usuario, como mostrar una directiva de privacidad o iniciar una página de soporte técnico para los usuarios que tienen problemas. 
 
@@ -387,7 +387,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 En teoría, puedes usar comandos de configuración para cualquier cosa. Sin embargo, se recomienda limitar su uso a escenarios intuitivos relacionados con las cuentas como las descritas anteriormente. 
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 
 [Windows.Security.Authentication.Web.Core namespace (Espacio de nombres Windows.Security.Authentication.Web.Core)](https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.web.core.aspx)
 
@@ -401,6 +401,6 @@ En teoría, puedes usar comandos de configuración para cualquier cosa. Sin emba
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO5-->
 
 

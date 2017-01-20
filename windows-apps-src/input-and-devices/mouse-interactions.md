@@ -6,13 +6,13 @@ ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 5a26ff6380383965d51a6938db68ad8406941229
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: ed0c8e86d38865fad8bb784550b9b4fc61a8b40a
 
 ---
 
-# Interacciones de mouse
-
+# <a name="mouse-interactions"></a>Interacciones de mouse
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Optimiza el diseño de tu aplicación de la Plataforma universal de Windows (UWP) para la entrada táctil y obtén compatibilidad básica con mouse de manera predeterminada.
 
@@ -28,7 +28,7 @@ Donde el mouse y la entrada táctil difieren es en la posibilidad de esta últim
 
 En este tema se describen las consideraciones de diseño para interacciones de mouse.
 
-## Lenguaje del mouse de la aplicación para UWP
+## <a name="the-uwp-app-mouse-language"></a>Lenguaje del mouse de la aplicación para UWP
 
 
 Un escueto conjunto de interacciones del mouse se usan de forma coherente en todo el sistema.
@@ -86,7 +86,7 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 </tbody>
 </table>
 
-## Eventos de mouse
+## <a name="mouse-events"></a>Eventos de mouse
 
 Responde a las entradas de mouse de tus aplicaciones controlando los mismos eventos de puntero básicos que usas para las entradas táctiles y de pluma.
 
@@ -101,7 +101,7 @@ Usa los eventos de [**UIElement**](https://msdn.microsoft.com/library/windows/ap
 
 - [Entrada: gestos y manipulaciones con GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
 
-## Instrucciones para la información visual
+## <a name="guidelines-for-visual-feedback"></a>Instrucciones para la información visual
 
 
 -   Cuando se detecta un mouse (a través de eventos de movimiento o mantenimiento del mouse), muestra la interfaz de usuario específica del mouse para indicar las funciones expuestas por el elemento. Si el mouse no se mueve por un determinado período o el usuario inicia una interacción táctil, haz que la interfaz de usuario del mouse vaya desapareciendo gradualmente. Esto mantiene la interfaz de usuario ordenada y organizada.
@@ -114,7 +114,7 @@ Usa los eventos de [**UIElement**](https://msdn.microsoft.com/library/windows/ap
 Para obtener instrucciones más generales sobre la información visual, consulta el tema sobre las [directrices para información visual](guidelines-for-visualfeedback.md).
 
 
-## Cursores
+## <a name="cursors"></a>Cursores
 
 
 Dispones de un conjunto de cursores estándar para un puntero del mouse. Estos se usan para indicar la acción principal de un elemento.
@@ -129,7 +129,7 @@ Si necesitas personalizar el cursor del mouse:
 -   Usa los cursores de ajuste horizontal, vertical y diagonal (![cursor de ajuste vertical](images/cursor-vertical.png), ![cursor de ajuste horizontal](images/cursor-horizontal.png), ![cursor de ajuste diagonal (inferior izquierda, superior derecha)](images/cursor-diagonal2.png), ![cursor de ajuste diagonal (superior izquierda, inferior derecha)](images/cursor-diagonal1.png)cuando se puede ajustar el tamaño de un objeto.
 -   Usa los cursores de mano que sujeta (![cursor de mano que sujeta (abierta)](images/cursor-pan1.png), ![cursor de mano que sujeta (cerrada)](images/cursor-pan2.png)) al desplazar contenido lateralmente dentro de un lienzo fijo (como un mapa).
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 * [Controlar la entrada de puntero](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
@@ -156,6 +156,6 @@ Si necesitas personalizar el cursor del mouse:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

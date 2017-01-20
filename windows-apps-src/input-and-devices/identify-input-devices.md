@@ -5,24 +5,33 @@ title: Identificar dispositivos de entrada
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
 template: detail.hbs
+keywords: "dispositivo, digitalizador, entrada, interacción"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: df416821ad67a8eaf8a8a31879b6a1d39526df14
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: 20230362a38d4541fbed25ac822c96032f7b6d8f
 
 ---
 
-# Identificar dispositivos de entrada
+# <a name="identify-input-devices"></a>Identificar dispositivos de entrada
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Identifica los dispositivos de entrada que se conectan a un dispositivo de la Plataforma universal de Windows (UWP) e identifica sus capacidades y atributos.
 
-**API importantes**
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+</ul>
+</div>
 
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
-
-
-## Recuperar las propiedades del mouse
+## <a name="retrieve-mouse-properties"></a>Recuperar las propiedades del mouse
 
 
 El espacio de nombres [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contiene la clase [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626) que se usa para recuperar las propiedades expuestas por uno o varios dispositivos mouse conectados. Solo es necesario crear un nuevo objeto **MouseCapabilities** y obtener las propiedades que te interesan.
@@ -45,7 +54,7 @@ private void GetMouseProperties()
 }
 ```
 
-## Recuperar las propiedades del teclado
+## <a name="retrieve-keyboard-properties"></a>Recuperar las propiedades del teclado
 
 
 El espacio de nombres [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contiene la clase [**KeyboardCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225623) que se usa para recuperar si hay algún teclado conectado. Solo es necesario crear un nuevo objeto **KeyboardCapabilities** y obtener la propiedad [**KeyboardPresent**](https://msdn.microsoft.com/library/windows/apps/br225625).
@@ -60,7 +69,7 @@ private void GetKeyboardProperties()
 }
 ```
 
-## Recuperar las propiedades táctiles
+## <a name="retrieve-touch-properties"></a>Recuperar las propiedades táctiles
 
 
 El espacio de nombres [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contiene la clase [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644) que se usa para recuperar si hay algún digitalizador táctil conectado. Solo es necesario crear un nuevo objeto **TouchCapabilities** y obtener las propiedades que te interesan.
@@ -80,7 +89,7 @@ private void GetTouchProperties()
 }
 ```
 
-## Recuperar las propiedades del puntero
+## <a name="retrieve-pointer-properties"></a>Recuperar las propiedades del puntero
 
 
 El espacio de nombres [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) contiene la clase [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) que se usa para recuperar si hay dispositivos detectados compatibles con la entrada de puntero (táctil, teclado táctil, mouse o pluma). Solo tienes que crear un nuevo objeto **PointerDevice** y obtener las propiedades que te interesan.
@@ -176,7 +185,7 @@ private void GetPointerDevices()
     }
 ```
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 
 **Ejemplos**
@@ -196,6 +205,6 @@ private void GetPointerDevices()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

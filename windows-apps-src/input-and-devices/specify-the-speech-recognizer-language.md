@@ -5,25 +5,34 @@ title: Especificar el idioma del reconocedor de voz
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
+keywords: "voz, reconocimiento de voz, lenguaje natural, dictado, entrada, interacción del usuario"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 526493614666424089199063013b5fc72d9bc5d8
-ms.openlocfilehash: 9abde4aa5489780f3ee2e9b5e7ecbdfa4dd53b93
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: 42ddaea1de6dc4354e776b7d6db79486a6b3057e
 
 ---
 
-# Especificar el idioma del reconocedor de voz
-
+# <a name="specify-the-speech-recognizer-language"></a>Especificar el idioma del reconocedor de voz
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Obtén información sobre cómo seleccionar un idioma instalado para usarlo en el reconocimiento de voz.
 
-
-
-
-**API importantes**
-
--   [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251)
--   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250)
--   [**Idioma**](https://msdn.microsoft.com/library/windows/apps/br206804)
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li> [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251)</li>
+<li>[**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250)</li>
+<li>[**Idioma**](https://msdn.microsoft.com/library/windows/apps/br206804)</li>
+<li> </li>
+<li> </li>
+<li> </li>
+</ul>
+</div>
 
 
 Aquí se enumeran los idiomas instalados en un sistema, se identifica cuál es el idioma predeterminado y se selecciona otro idioma de reconocimiento.
@@ -43,7 +52,7 @@ Si acabas de empezar a desarrollar aplicaciones para la Plataforma universal de 
 
 Para obtener sugerencias útiles sobre el diseño de una aplicación habilitada para voz que sea útil y atractiva, consulta [Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121).
 
-## Identificar el idioma predeterminado
+## <a name="identify-the-default-language"></a>Identificar el idioma predeterminado
 
 
 Un reconocedor de voz usa el idioma de voz del sistema como idioma de reconocimiento predeterminado. El usuario establece este idioma en la pantalla del dispositivo Configuración &gt; Sistema &gt; Voz &gt; Idioma de voz.
@@ -57,7 +66,7 @@ var language = SpeechRecognizer.SystemSpeechLanguage; </code></pre></td>
 </table>
 ```
 
-## Confirmar un idioma instalado
+## <a name="confirm-an-installed-language"></a>Confirmar un idioma instalado
 
 
 Los idiomas instalados pueden variar entre dispositivos. Debes comprobar la existencia de un idioma si dependes de él para una restricción concreta.
@@ -72,7 +81,7 @@ Determina los idiomas admitidos en un dispositivo al comprobar una de las dos pr
 
 -   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250): es la colección de objetos [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) que se usa con una restricción de lista o un archivo de Especificación de gramática de reconocimiento de voz (SRGS).
 
-## Especificar un idioma
+## <a name="specify-a-language"></a>Especificar un idioma
 
 
 Para especificar un idioma, pasa un objeto [**Idioma**](https://msdn.microsoft.com/library/windows/apps/br206804) en el constructor [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226).
@@ -95,7 +104,7 @@ var language = new Windows.Globalization.Language(“en-US”);
 var recognizer = new SpeechRecognizer(language); 
 ```
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 
 Una restricción de tema puede configurarse mediante la adición de [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446) a la colección [**Restricciones**](https://msdn.microsoft.com/library/windows/apps/dn653241) de [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) y, luego, llamando a [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240). Un [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433) de **TopicLanguageNotSupported** se devuelve si el reconocedor no se inicializa con un idioma de tema admitido.
@@ -104,7 +113,7 @@ Una restricción de lista se configura mediante la adición de [**SpeechRecognit
 
 Una gramática SRGS es un formato XML estándar abierto representado por la clase [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412). A diferencia de las listas personalizadas, puedes especificar el idioma de la gramática en el marcado SRGS. Se produce un error en [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) con un objeto [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433) de **TopicLanguageNotSupported** si no se inicializa el reconocedor en el mismo idioma que el marcado SRGS.
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 **Desarrolladores**
 
@@ -112,7 +121,7 @@ Una gramática SRGS es un formato XML estándar abierto representado por la clas
 
 **Diseñadores**
 
-* [Directrices para el diseño de voz] (https://msdn.microsoft.com/library/windows/apps/dn596121)
+* [Directrices para el diseño de Voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
 
 **Muestras**
 
@@ -127,6 +136,6 @@ Una gramática SRGS es un formato XML estándar abierto representado por la clas
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -5,24 +5,31 @@ title: Habilitar el dictado continuo
 ms.assetid: 383B3E23-1678-4FBB-B36E-6DE2DA9CA9DC
 label: Continuous dictation
 template: detail.hbs
+keywords: "voz, reconocimiento de voz, lenguaje natural, dictado, entrada, interacción del usuario"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 1f074b210d42b1c40817e88b5d73921652fa7d05
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: f4353807c83cbf91c385b31acfd481abb6ea5aed
 
 ---
 
-# Dictado continuo
+# <a name="continuous-dictation"></a>Dictado continuo
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Obtén información sobre cómo capturar y reconocer la entrada de voz de dictado continuo de larga duración.
 
-**API importantes**
-
--   [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896)
--   [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)
-
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896)</li>
+<li>[**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)</li>
+</ul>
+</div>
 
 En el [Reconocimiento de voz](speech-recognition.md) aprendiste a capturar y reconocer entradas de voz relativamente cortas usando los métodos [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) o [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245) de un objeto [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226); por ejemplo, al redactar un mensaje SMS o al realizar una pregunta.
 
@@ -30,7 +37,7 @@ Para las sesiones de reconocimiento de voz más largas y continuas, como el dict
 
 
 
-## Configuración
+## <a name="set-up"></a>Configuración
 
 
 La aplicación necesita unos pocos objetos para administrar una sesión de dictado continuo:
@@ -64,7 +71,7 @@ En este apartado, usaremos un objeto [**StringBuilder**](https://msdn.microsoft.
 private StringBuilder dictatedTextBuilder;
 ```
 
-## Inicialización
+## <a name="initialization"></a>Inicialización
 
 
 Durante la inicialización del reconocimiento de voz continuo, debes:
@@ -99,7 +106,7 @@ SpeechRecognitionCompilationResult result =
       await speechRecognizer.CompileConstraintsAsync();
 ```
 
-## Controlar eventos de reconocimiento
+## <a name="handle-recognition-events"></a>Controlar eventos de reconocimiento
 
 
 Puedes capturar una sola expresión o frase breve si llamas al método [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) o al método [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245). 
@@ -204,7 +211,7 @@ private async void ContinuousRecognitionSession_Completed(
       }
 ```
 
-## Proporcionar comentarios sobre reconocimiento continuos
+## <a name="provide-ongoing-recognition-feedback"></a>Proporcionar comentarios sobre reconocimiento continuos
 
 
 Cuando la gente habla, a menudo se basan en el contexto para comprender lo que se dice. Del mismo modo, el reconocedor de voz a menudo necesita contexto para proporcionar resultados de reconocimiento de alta confianza. Por ejemplo, por sí mismas, las palabras "rebelar" y "revelar" no se distinguen si no se obtiene más contexto de las palabras de alrededor. Hasta que el reconocedor tenga la certeza de que una palabra o palabras se han reconocido correctamente, no generará el evento [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900).
@@ -232,7 +239,7 @@ private async void SpeechRecognizer_HypothesisGenerated(
   }
 ```
 
-## Iniciar y detener el reconocimiento
+## <a name="start-and-stop-recognition"></a>Iniciar y detener el reconocimiento
 
 
 Antes de iniciar una sesión de reconocimiento, comprueba el valor de la propiedad [**State**](https://msdn.microsoft.com/library/windows/apps/dn913915) del reconocedor de voz. El reconocedor de voz debe estar en estado [**Idle**](https://msdn.microsoft.com/library/windows/apps/dn653227).
@@ -267,7 +274,7 @@ Si estableces campos privados al cancelar la sesión de reconocimiento, confirma
 
  
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 
 * [Interacciones de voz](speech-interactions.md)
@@ -284,6 +291,6 @@ Si estableces campos privados al cancelar la sesión de reconocimiento, confirma
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

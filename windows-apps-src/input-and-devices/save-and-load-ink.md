@@ -6,23 +6,29 @@ ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
 keywords: "Windows Ink, entrada de lápiz de Windows, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
-ms.openlocfilehash: d4458b66f4f1917e99495353a088680b19cb94c9
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 11bd4c1d8c4f675fb1dad38e249d64324fa29ecf
 
 ---
 
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Almacenar y recuperar datos de trazos de lápiz de Windows Ink
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Las aplicaciones para UWP que admiten Windows Ink pueden serializar y deserializar los trazos de lápiz en un archivo de formato Ink Serialized Format (ISF). El archivo ISF es una imagen GIF con metadatos adicionales para todos los comportamientos y propiedades de trazo de lápiz. Las aplicaciones que no están habilitadas para la entrada de lápiz puede ver la imagen GIF estática, incluida la transparencia del fondo del canal alfa.
 
-
-**API importantes**
-
--   [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)
--   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
-
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)</li>
+<li>[**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)</li>
+</ul>
+</div>
 
 
 > [!NOTE]
@@ -448,6 +454,6 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

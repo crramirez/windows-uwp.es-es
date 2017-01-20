@@ -4,8 +4,8 @@ title: "Hacer que tu aplicación sea compatible con las tareas en segundo plano"
 description: "Los temas de esta sección muestran cómo hacer que un código ligero se ejecute en segundo plano en respuesta a desencadenadores."
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
 translationtype: Human Translation
-ms.sourcegitcommit: 7208ca16fe7eee2ec4039f3c4bc6305dceac96f3
-ms.openlocfilehash: b33fd118289ca575207be97bd8a1a33ddcc49a87
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: 9f83717657fddf2df51589aae75a3aa21c6ef5da
 
 ---
 
@@ -31,7 +31,7 @@ Con la versión 1607 de Windows 10, puedes habilitar la actividad en segundo pla
 
 Para comenzar rápidamente con las tareas en segundo plano dentro de proceso, consulta [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md).
 
-Para comenzar rápidamente con las tareas en segundo plano fuera de proceso, consulta [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md).
+Para comenzar rápidamente con las tareas en segundo plano fuera de proceso, consulta [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md).
 
 > [!TIP]
 > A partir de Windows 10, ya no necesitarás colocar una aplicación en la pantalla de bloqueo como requisito previo para registrarle una tarea en segundo plano.
@@ -165,7 +165,7 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 * [Reproducir elementos multimedia en segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
 * [Acceder a sensores y dispositivos desde una tarea en segundo plano](access-sensors-and-devices-from-a-background-task.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
-* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md)
+* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md)
 * [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
@@ -182,6 +182,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -5,13 +5,19 @@ title: "Interacciones del panel táctil"
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
+keywords: "panel táctil,PTP,táctil,función táctil,puntero,entrada,interacción de usuario"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 30607a9db9f5a7d5ea1085fa1105e6a2bd8ebd1b
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: dd91c8a6c58c25799a0c43b8632fade5309850cc
 
 ---
 
-# Directrices para el diseño de panel táctil
+# <a name="touchpad-design-guidelines"></a>Directrices para el diseño de panel táctil
 
 
 Diseña tu aplicación de modo que los usuarios puedan interactuar con ella a través de un panel táctil. Un panel táctil combina la entrada multitáctil indirecta con la entrada precisa de un dispositivo señalador, como un mouse. Esta combinación hace que el panel táctil sea ideal tanto para una interfaz de usuario optimizada para entrada táctil como para los destinos menores de las aplicaciones de productividad.
@@ -42,7 +48,7 @@ Los paneles táctiles integran diversas experiencias de interacción, por lo que
 
 Los gestos y las directrices que se explican en este tema te pueden ayudar a asegurarte de que tu aplicación admite la entrada del panel táctil sin problemas y con muy poco código.
 
-## El idioma del panel táctil
+## <a name="the-touchpad-language"></a>El idioma del panel táctil
 
 
 Un escueto conjunto de interacciones del panel táctil se usan de forma coherente en todo el sistema. Optimiza tu aplicación para la entrada táctil y del mouse, y este idioma hará que los usuarios se sientan cómodos al instante, lo que aumentará su confianza y les permitirá aprender a usar tu aplicación con mayor facilidad.
@@ -112,14 +118,14 @@ Estos son algunos ejemplos de gestos optimizados para panel táctil para realiza
 
  
 
-## Hardware
+## <a name="hardware"></a>Hardware
 
 
 Consulta las funciones del dispositivo de mouse ([**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626)) para identificar cuáles son los aspectos de la interfaz de usuario de tu aplicación a los que el hardware del panel táctil puede acceder directamente. Te recomendamos que proporciones interfaces de usuario tanto para entrada táctil como para entrada del mouse.
 
 Para obtener más información sobre cómo consultar las funciones de dispositivos, consulta [Identificar los dispositivos de entrada](identify-input-devices.md).
 
-## Información visual
+## <a name="visual-feedback"></a>Información visual
 
 
 -   Cuando se detecte un cursor del panel táctil (a través de eventos de movimiento o mantenimiento del mouse), muestra la interfaz de usuario específica del mouse para indicar las funciones expuestas por el elemento. Si el cursor del panel táctil no se mueve por un determinado período o el usuario inicia una interacción táctil, haz que la interfaz de usuario del panel táctil vaya desapareciendo gradualmente. Esto mantiene la interfaz de usuario ordenada y organizada.
@@ -130,7 +136,7 @@ Para obtener más información sobre cómo consultar las funciones de dispositiv
 
 Para obtener instrucciones más generales sobre la información visual, consulta el tema sobre las [directrices para información visual](https://msdn.microsoft.com/library/windows/apps/hh465342).
 
-## Cursores
+## <a name="cursors"></a>Cursores
 
 
 Hay disponible un conjunto de cursores estándar para un puntero del panel táctil. Estos se usan para indicar la acción principal de un elemento.
@@ -145,7 +151,7 @@ Si necesitas personalizar el cursor del mouse:
 -   Usa los cursores de ajuste horizontal, vertical y diagonal (![cursor de ajuste vertical](images/cursor-vertical.png), ![cursor de ajuste horizontal](images/cursor-horizontal.png), ![cursor de ajuste diagonal (inferior izquierda, superior derecha)](images/cursor-diagonal2.png), ![cursor de ajuste diagonal (superior izquierda, inferior derecha)](images/cursor-diagonal1.png)cuando se puede ajustar el tamaño de un objeto.
 -   Usa los cursores de mano que sujeta (![cursor de mano que sujeta (abierta)](images/cursor-pan1.png), ![cursor de mano que sujeta (cerrada)](images/cursor-pan2.png)) al desplazar contenido lateralmente dentro de un lienzo fijo (como un mapa).
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 
 * [Controlar la entrada de puntero](handle-pointer-input.md)
@@ -167,6 +173,6 @@ Si necesitas personalizar el cursor del mouse:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

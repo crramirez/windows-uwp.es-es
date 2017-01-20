@@ -6,11 +6,11 @@ ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 125cb6e45defe3213af3f5cd20f524a5311241af
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: b3ca48b678fb4e1ddb4b26ad7add723474527591
 
 ---
-# Zoom semántico
+# <a name="semantic-zoom"></a>Zoom semántico
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -24,18 +24,11 @@ Por ejemplo, al ver una libreta de direcciones, el usuario puede alejarse para p
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/hh702601"><strong>Clase SemanticZoom</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx"><strong>Clase ListView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx"><strong>Clase GridView</strong></a></li>
+<li>[**Clase SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)</li>
+<li>[**Clase ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx)</li>
+<li>[**Clase GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)</li>
 </ul>
-
 </div>
-</div>
-
-
-
-
-
 
 **Características**:
 
@@ -43,13 +36,13 @@ Por ejemplo, al ver una libreta de direcciones, el usuario puede alejarse para p
 -   Al pulsar en un encabezado de grupo, se alterna entre las vistas. Se puede habilitar el gesto de reducir como una forma de alternar entre las vistas.
 -   Los encabezados activos cambian entre vistas.
 
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa un control **SemanticZoom** si es necesario para mostrar un conjunto de datos agrupado lo suficientemente grande como para que no se pueda mostrar en una o dos páginas.
 
 No confundas el zoom semántico con el zoom óptico. Aunque comparten la misma interacción y el comportamiento básico (muestran más o menos detalle en función de un factor de zoom), el zoom óptico hace referencia al ajuste de ampliación de un área de contenido o un objeto, como una fotografía. Para obtener información sobre un control que aplique el zoom óptico, consulta el control [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx).
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 **Aplicación Fotos**
 
@@ -63,7 +56,7 @@ Una libreta de direcciones es otro ejemplo de un conjunto de datos por el que pu
 
 ![Ejemplo de zoom semántico en una lista de contactos](images/semanticzoom-win10.png)
 
-## Creación de un zoom semántico
+## <a name="create-a-semantic-zoom"></a>Creación de un zoom semántico
 
 El control **SemanticZoom** no tiene una representación visual de sí mismo. Es un control de host que administra la transición entre otros 2 controles que proporcionan las vistas de tu contenido, normalmente los controles **ListView** o **GridView**.  Puedes establecer los controles de vista en las propiedades de [**ZoomedInView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedinview.aspx) y [**ZoomedOutView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedoutview.aspx) del elemento SemanticZoom.
 
@@ -182,7 +175,7 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 }
 ```
 
-## Recomendaciones
+## <a name="recommendations"></a>Recomendaciones
 
 -   Al usar el zoom semántico en la aplicación, asegúrate de que el diseño de los elementos y la dirección del movimiento panorámico no cambian en función del nivel de zoom. Las interacciones de movimiento panorámico y de diseño deben ser predecibles y coherentes en todos los niveles de zoom.
 -   El zoom semántico permite al usuario saltar rápidamente al contenido, de forma que se limita el número de páginas y pantallas a tres en el modo alejado. Demasiado movimiento panorámico disminuye la utilidad del zoom semántico.
@@ -191,17 +184,18 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 -   Usa los nombres de los grupos para elementos en una colección agrupada.
 -   Usa criterios de ordenación de una colección que esté sin agrupar, pero ordenada, como orden cronológico de fechas u orden alfabético de una lista de nombres.
 
-## Artículos relacionados
+
+## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+
+- [Muestra de conceptos básicos de interfaz de usuario de XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992)
+
+
+## <a name="related-articles"></a>Artículos relacionados
 
 - [Conceptos básicos de diseño de la navegación](../layout/navigation-basics.md)
 - [Vista de lista y vista de cuadrícula](listview-and-gridview.md)
 - [Plantillas de elemento de la vista de lista](listview-item-templates.md)
 
-**Ejemplos**
-
-- [Muestra de conceptos básicos de interfaz de usuario de XAML](http://go.microsoft.com/fwlink/p/?LinkId=619992)
-
- 
 
 
 
@@ -209,6 +203,6 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

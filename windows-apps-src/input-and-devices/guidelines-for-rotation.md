@@ -6,27 +6,29 @@ ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 2fe8814d98dd5ce4471530c7367b8ad266cc6b05
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 3217dd6bda6d9692ff450133af23002a7040347b
 
 ---
 
-# Rotación
+# <a name="rotation"></a>Rotación
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 En este artículo se describe la nueva interfaz de usuario de Windows para realizar una rotación. También se ofrecen directrices sobre la experiencia del usuario que debes tener presente cuando uses este nuevo mecanismo de interacción en una aplicación para UWP.
 
-**API importantes**
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+</ul>
+</div>
 
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
-
-
-## Qué hacer y qué no hacer
-
+## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
 
 -   Usa la rotación para ayudar a los usuarios a girar directamente elementos de la interfaz de usuario.
 
-## Instrucciones de uso adicionales
+## <a name="additional-usage-guidance"></a>Instrucciones de uso adicionales
 
 
 **Introducción a la rotación**
@@ -62,7 +64,7 @@ En esta última imagen, la aplicación (o el usuario) ha definido que el centro 
 
  
 
-Windows8 admite tres tipos de rotación: libre, restringida y combinada.
+Windows 8 admite tres tipos de rotación: libre, restringida y combinada.
 
 <table>
 <colgroup>
@@ -100,7 +102,7 @@ Windows8 admite tres tipos de rotación: libre, restringida y combinada.
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 **Ejemplos**
@@ -128,6 +130,6 @@ Windows8 admite tres tipos de rotación: libre, restringida y combinada.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

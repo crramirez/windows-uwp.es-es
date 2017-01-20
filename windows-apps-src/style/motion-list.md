@@ -6,24 +6,26 @@ ms.assetid: A85006AE-4992-457a-B514-500B8BEF5DC8
 label: Motion--add and delete animations
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: b6c57d1ceadd0785a51c518bc51f93892aa472d5
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e1fc86e5110da8926194e20947552337216d4a72
 
 ---
 
-# Agregar y eliminar animaciones
+# <a name="add-and-delete-animations"></a>Agregar y eliminar animaciones
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Las animaciones de listas te permiten insertar o quitar uno o varios elementos de una colección, como un álbum de fotos o una lista de resultados de búsqueda.
 
-**API importantes**
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Clase AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br243048)</li>
+</ul>
+</div>
 
--   [**Clase AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br243048)
 
-
-## Cosas que hacer y cosas que evitar
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 
 -   Usa animaciones de listas para agregar un solo elemento nuevo a un conjunto de elementos existente. Por ejemplo, úsalas cuando llega un nuevo correo electrónico o cuando se importa una fotografía nueva a un conjunto existente.
@@ -35,11 +37,9 @@ Las animaciones de listas te permiten insertar o quitar uno o varios elementos d
 
 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
-
-**Para desarrolladores (XAML)**
-* [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
+* [Introducción a las animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [Animación de incorporaciones y eliminaciones de listas](https://msdn.microsoft.com/library/windows/apps/xaml/jj649430)
 * [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**Clase AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br243048)
@@ -54,6 +54,6 @@ Las animaciones de listas te permiten insertar o quitar uno o varios elementos d
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

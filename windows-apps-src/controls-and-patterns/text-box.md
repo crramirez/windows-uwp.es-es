@@ -4,11 +4,11 @@ ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
 label: Text box
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f9750e87516d38b16a589e5271de25d9f241e97b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 3cbfa4a2896e5e7453d9fe1793f422d2f7b60c79
 
 ---
-# Cuadro de texto
+# <a name="text-box"></a>Cuadro de texto
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,17 +19,13 @@ TextBox tiene varias características que pueden simplificar la entrada de texto
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx"><strong>Clase TextBox</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx"><strong>Propiedad Text</strong></a></li>
+<li>[**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)</li>
+<li>[**Propiedad Text**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa un control **TextBox** para permitir al usuario escribir y editar texto sin formato, como en un formulario. Puedes usar la propiedad [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) para obtener el texto y establecerlo en un TextBox.
 
@@ -43,11 +39,11 @@ Usa un [**RichEditBox**](rich-edit-box.md) para mostrar y editar archivos de tex
 
 Para obtener más información sobre cómo elegir el control de texto correcto, consulta el artículo [Controles de texto](text-controls.md).
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 ![Cuadro de texto](images/text-box.png)
 
-## Crear un cuadro de texto
+## <a name="create-a-text-box"></a>Crear un cuadro de texto
 
 Este es el XAML para un cuadro de texto sencillo con un texto de encabezado y marcador de posición.
 
@@ -68,7 +64,7 @@ Este es el cuadro de texto que se obtiene de este XAML.
 
 ![Cuadro de texto sencillo](images/text-box-ex1.png)
 
-### Usa un cuadro de texto para la entrada de datos en un formulario
+### <a name="use-a-text-box-for-data-input-in-a-form"></a>Usa un cuadro de texto para la entrada de datos en un formulario
 
 Es habitual usar un cuadro de texto para aceptar la entrada de datos en un formulario y usar la propiedad [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) para obtener la cadena de texto completa del cuadro de texto. Normalmente usas un evento como un clic del botón Enviar para tener acceso a la propiedad Text, pero puedes controlar el evento [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanged.aspx) o [TextChanging](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanging.aspx) eventos si necesitas hacer algo cuando cambia el texto.
 
@@ -87,7 +83,7 @@ El botón Borrar todo no se muestra en ninguno de estos casos:
 - **AcceptsReturn** es **true**
 - **TextWrap** tiene un valor distinto de **NoWrap**
 
-### Hacer un cuadro de texto de solo lectura
+### <a name="make-a-text-box-read-only"></a>Hacer un cuadro de texto de solo lectura
 
 Puedes hacer que un cuadro de texto sea de solo lectura si estableces la propiedad [IsReadOnly](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.isreadonly.aspx) en **true**. Normalmente se cambia esta propiedad en el código de aplicación según las condiciones de la aplicación. Si necesitas texto que sea siempre de solo lectura, piensa en usar un control TextBlock en su lugar.
 
@@ -98,7 +94,7 @@ Un usuario puede seleccionar y copiar texto.
 IsEnabled
 
 
-### Habilitar la entrada de varias líneas
+### <a name="enable-multi-line-input"></a>Habilitar la entrada de varias líneas
 
 Hay dos propiedades que puedes usar para controlar si el cuadro de texto muestra texto en más de una línea. Normalmente, se establecen ambas propiedades para crear un cuadro de texto multilínea.
 - Para indicar que el cuadro de texto puede permitir y mostrar los caracteres de nueva línea o retorno, establece la propiedad [**AcceptsReturn**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.acceptsreturn.aspx) en **true**.
@@ -130,7 +126,7 @@ Este es el aspecto del cuadro de texto después de agregarse texto.
 
 ![Cuadro de texto multilínea](images/text-box-multi-line.png)
 
-### Dar formato a la visualización del texto
+### <a name="format-the-text-display"></a>Dar formato a la visualización del texto
 
 Usa la propiedad [TextAlignment]() para alinear el texto dentro de un cuadro de texto. Para alinear el cuadro de texto en el diseño de la página, usa las propiedades [HorizontalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) y [VerticalAlignment](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx).
 
@@ -166,7 +162,7 @@ El cuadro de texto resultante tiene este aspecto.
 
 ![Cuadro de texto con formato](images/text-box-formatted.png)
 
-### Modificar el menú contextual
+### <a name="modify-the-context-menu"></a>Modificar el menú contextual
 
 De manera predeterminada, los comandos que se muestran en el menú contextual del cuadro de texto dependen del estado del cuadro de texto. Por ejemplo, los siguientes comandos pueden mostrarse cuando el cuadro de texto es editable.
 
@@ -180,7 +176,7 @@ Deshacer | se ha cambiado el texto.
 
 Para modificar los comandos mostrados en el menú contextual, controle el evento [ContextMenuOpening](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.contextmenuopening.aspx). Para obtener un ejemplo de esto, consulta el escenario 2 de la [muestra de ContextMenu](http://go.microsoft.com/fwlink/p/?linkid=234891). Para obtener la información de diseño, consulta las directrices para menús contextuales.
 
-### Seleccionar, copiar y pegar
+### <a name="select-copy-and-paste"></a>Seleccionar, copiar y pegar
 
 Puedes obtener o establecer el texto seleccionado en un cuadro de texto mediante la propiedad [SelectedText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectedtext.aspx). Usa las propiedades [SelectionStart](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionstart.aspx) y [SelectionLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionlength.aspx) y los métodos [Select](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.select.aspx) y [SelectAll](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectall.aspx) para manipular la selección de texto. Controla el evento [SelectionChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionchanged.aspx) para hacer algo cuando el usuario seleccione el texto o anule la selección. Puedes cambiar el color usado para resaltar el texto seleccionado estableciendo la propiedad [SelectionHighlightColor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionhighlightcolor.aspx).
 
@@ -214,9 +210,9 @@ Este es el resultado del código.
 
 ![Texto seleccionado en un cuadro de texto](images/text-box-selection.png)
 
-## Elegir el teclado adecuado para el control de texto
+## <a name="choose-the-right-keyboard-for-your-text-control"></a>Elegir el teclado adecuado para el control de texto
 
-Para que los usuarios escriban datos con facilidad mediante el teclado táctil o con el panel de entrada suave (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que el usuario escriba.
+Para ayudar a que los usuarios escriban datos con el teclado táctil o con el panel de entrada por software (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que escriba el usuario.
 
 El teclado táctil se puede usar para escribir texto cuando la aplicación se ejecuta en un dispositivo con pantalla táctil. El teclado táctil se invoca cuando el usuario pulsa en un campo de entrada editable, como un TextBox o RichEditBox. Es posible conseguir que los usuarios escriban datos en la aplicación de forma mucho más rápida y sencilla, si estableces el ámbito de entrada del control de texto para que coincida con el tipo de datos que esperas que el usuario escriba. El ámbito de entrada proporciona una sugerencia al sistema sobre el tipo de entrada de texto que espera el control para que el sistema pueda proporcionar una distribución del teclado táctil especializada para el tipo de entrada.
 
@@ -228,7 +224,7 @@ Otras propiedades que afectan el teclado táctil son [IsSpellCheckEnabled](https
 
 Para obtener más información y ejemplos, consulta [Usar el ámbito de entrada para cambiar el teclado táctil](https://msdn.microsoft.com/library/windows/apps/mt280229) y la documentación de la propiedad.
 
-## Recomendaciones
+## <a name="recommendations"></a>Recomendaciones
 
 -   Usa una etiqueta o un texto de marcador de posición si el propósito del cuadro de texto no está claro. Una etiqueta es visible, tenga o no un valor el cuadro de entrada de texto. El texto de marcador de posición se muestra dentro del cuadro de entrada y desaparece una vez que se ha escrito un valor.
 -   Dota al cuadro de texto de un ancho apropiado para los valores que se pueden escribir. La longitud de las palabras varía según el lenguaje, así que tenlo en cuenta si quieres que tu aplicación sea internacional.
@@ -273,25 +269,18 @@ Para obtener más información y ejemplos, consulta [Usar el ámbito de entrada 
 
 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
-[Controles de texto](text-controls.md)
-
-**Para diseñadores**
+- [Controles de texto](text-controls.md)
 - [Directrices sobre revisión ortográfica](spell-checking-and-prediction.md)
-- [Adición de búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
-- [Directrices para la entrada de texto](text-controls.md)
-
-**Para desarrolladores (XAML)**
+- [Agregar búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
+- [Directrices sobre la entrada de texto](text-controls.md)
 - [**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Clase Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
-
-
-**Para desarrolladores (otros)**
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

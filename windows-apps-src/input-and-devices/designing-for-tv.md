@@ -1,20 +1,26 @@
 ---
 author: eliotcowley
-Description: "Diseñar tu aplicación para que se vea y funcione bien en un televisor."
+Description: "Diseña tu aplicación para que se vea y funcione bien en un televisor."
 title: "Diseño para Xbox y televisión"
 ms.assetid: 780209cb-3e8a-4cf7-8f80-8b8f449580bf
 label: Designing for Xbox and TV
 template: detail.hbs
 isNew: true
+keywords: "Xbox, TV, experiencia de 10 pies, controlador para juegos, control remoto, entrada, interacción"
+ms.author: elcowle
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ee0a2f5a34cbbef198a9012d0425bb84e65f3b33
-ms.openlocfilehash: de76a3c6d4949b9203df79855e1748a81d76ca64
+ms.sourcegitcommit: 8a040033f99d6e8cac04b44dcec58c6b306eda54
+ms.openlocfilehash: a138e0ba73da792a63f1c22ee4342a8157f2a136
 
 ---
 
 # <a name="designing-for-xbox-and-tv"></a>Diseño para Xbox y televisión
 
-Aprende a diseñar tu aplicación para Plataforma universal de Windows (UWP) de manera que se vea y funcione bien en la Xbox One y las pantallas de televisión.
+Diseña tu aplicación para la Plataforma universal de Windows (UWP) de manera que se vea y funcione bien en la Xbox One y las pantallas de televisión.
 
 ## <a name="overview"></a>Información general
 
@@ -499,7 +505,7 @@ También puedes descartar los focos visuales proporcionados por el sistema. Para
 
 ### <a name="light-dismiss-overlay"></a>Superposición de cierre del elemento por cambio de foco
 
-Para llamar la atención del usuario a los elementos de la interfaz de usuario que el usuario está manipulando actualmente con el controlador para juegos o el control remoto, la UWP agrega automáticamente una capa de "humo" que abarca áreas fuera de la interfaz de usuario emergente cuando la aplicación se ejecuta en Xbox One. Esto no requiere ningún trabajo adicional, pero es algo a tener en cuenta al diseñar la interfaz de usuario. Puedes establecer la propiedad `LightDismissOverlayMode` en cualquier `FlyoutBase` para habilitar o deshabilitar la capa de humo; el valor predeterminado es `Auto`, lo que significa que está habilitada en Xbox y deshabilitada en otros lugares. Para obtener más información, consulta [Cierre del elemento modal frente a cierre del elemento por cambio de foco](../controls-and-patterns/dialogs-popups-menus.md#modal-vs-light-dismiss).
+Para llamar la atención del usuario a los elementos de la interfaz de usuario que el usuario está manipulando actualmente con el controlador para juegos o el control remoto, la UWP agrega automáticamente una capa de "humo" que abarca áreas fuera de la interfaz de usuario emergente cuando la aplicación se ejecuta en Xbox One. Esto no requiere ningún trabajo adicional, pero es algo a tener en cuenta al diseñar la interfaz de usuario. Puedes establecer la propiedad `LightDismissOverlayMode` en cualquier `FlyoutBase` para habilitar o deshabilitar la capa de humo; el valor predeterminado es `Auto`, lo que significa que está habilitada en Xbox y deshabilitada en otros lugares. Para obtener más información, consulta [Cierre del elemento modal frente a cierre del elemento por cambio de foco](../controls-and-patterns/menus.md).
 
 ## <a name="focus-engagement"></a>Participación del foco
 
@@ -1121,6 +1127,6 @@ El diseño para la experiencia de 10 pies presenta consideraciones especiales qu
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

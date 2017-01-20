@@ -6,24 +6,28 @@ ms.assetid: 5A8F73B1-F4F6-424b-9EDF-A9766C5DEAE8
 label: Motion--edge-based UI
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: a835e57c3ae778149cda933d57cf74408b74b416
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 925826f2702474a0003f2ca2dee6ff10992f5f25
 
 ---
 
-# Animaciones de UI en el borde
+# <a name="edge-based-ui-animations"></a>Animaciones de UI en el borde
 
 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 
 Las animaciones en el borde muestran u ocultan una interfaz de usuario que se origina en el borde de la pantalla. Tanto el usuario como la aplicación pueden comenzar las acciones de mostrar u ocultar. La interfaz de usuario puede superponerse a la aplicación o formar parte de la superficie de la aplicación principal. Si la interfaz de usuario forma parte de la superficie de la aplicación, puede que sea necesario cambiar el tamaño del resto de la aplicación para que quepa.
 
-**API importantes**
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Clase EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh702324)</li>
+</ul>
+</div>
 
--   [**Clase EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh702324)
 
-
-## Cosas que hacer y cosas que evitar
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 
 -   Usa animaciones de interfaz de usuario de borde para mostrar u ocultar un mensaje personalizado o barra de error que no se extiende por toda la pantalla.
@@ -38,11 +42,11 @@ Las animaciones en el borde muestran u ocultan una interfaz de usuario que se or
 
     ![ilustra cuándo usar interfaz de usuario de borde o animaciones de panel y cuándo usar reposición.](images/edgevsreposition.png)
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 
-**Para desarrolladores (XAML)**
-* [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
+**Para desarrolladores**
+* [Introducción a las animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [Animación de interfaz de usuario en el borde](https://msdn.microsoft.com/library/windows/apps/xaml/jj649428)
 * [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**Clase EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh702324)
@@ -60,6 +64,6 @@ Las animaciones en el borde muestran u ocultan una interfaz de usuario que se or
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -5,30 +5,37 @@ title: Controlar la entrada de puntero
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
+keywords: "lápiz, mouse, panel táctil, función táctil, puntero, entrada, interacción del usuario"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 2053062f6a5f850da8983bce2465cd10cdc01d56
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: ba4288d93924d3a32a0a659dea67af28fb607987
 
 ---
 
-# Controlar la entrada de puntero
+# <a name="handle-pointer-input"></a>Controlar la entrada de puntero
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Recibe, procesa y administra los datos de entrada de dispositivos señaladores, como la función táctil, el mouse, la pluma o el lápiz y el panel táctil, en aplicaciones para la Plataforma universal de Windows (UWP).
 
-**API importantes**
-
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
-
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+</ul>
+</div>
 
 **Importante**  
 Si implementas tu propia compatibilidad con la interacción, ten presente que los usuarios esperan una experiencia intuitiva que implica la interacción directa con los elementos de la interfaz de usuario de la aplicación. Es recomendable que modeles las interacciones personalizadas sobre la [lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406) para que todo sea coherente y pueda detectarse. Los controles de plataforma proporcionan una experiencia de interacción de usuario de la Plataforma universal de Windows (UWP) completa, incluidas interacciones estándar, efectos físicos animados, comentarios visuales y accesibilidad. Crea interacciones personalizadas solamente si existe un requisito claro y bien definido, y las interacciones básicas no admiten el escenario.
 
 
-## Punteros
-
-
+## <a name="pointers"></a>Punteros
 Muchas experiencias de interacción implican que el usuario identifique el objeto con el que quiere interactuar apuntando a él con dispositivos de entrada como la función táctil, mouse, pluma o lápiz y panel táctil. Dado que los datos de dispositivos de interfaz de usuario (HID) sin procesar proporcionados por estos dispositivos de entrada incluyen muchas propiedades comunes, se promueve la información en una pila de entrada unificada y expuesta como datos de puntero independiente del dispositivo consolidados. Las aplicaciones para UWP pueden entonces consumir estos datos sin que tengas que preocuparte por el dispositivo de entrada que se use.
 
 **Nota** Si la aplicación lo requiere, también se promueve la información específica del dispositivo desde los datos sin procesar de HID.
@@ -37,7 +44,7 @@ Muchas experiencias de interacción implican que el usuario identifique el objet
 
 Cada punto de entrada (o contacto) de la pila de entrada se representa mediante un objeto [**Pointer**](https://msdn.microsoft.com/library/windows/apps/br227968) que se expone mediante el parámetro [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) proporcionado por diversos eventos de puntero. En el caso de lápices múltiples o entrada multitáctil, cada contacto se trata como un punto de entrada único.
 
-## Eventos de puntero
+## <a name="pointer-events"></a>Eventos de puntero
 
 
 Los eventos de puntero exponen información básica, como el estado de detección (en un intervalo o un contacto) y el tipo de dispositivo, e información extendida, como la ubicación, la presión y la geometría de contacto. Además, también están disponibles las propiedades del dispositivo específico, como qué botón del mouse presionó un usuario o si un usuario está usando el extremo borrador del lápiz. Si la aplicación necesita diferenciar entre distintos dispositivos de entrada y sus funcionalidades, consulta el tema de [identificar dispositivos de entrada](identify-input-devices.md).
@@ -65,7 +72,7 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 <td align="left"><p>Se produce cuando la plataforma cancela un puntero.</p>
 <ul>
 <li>Los punteros táctiles se cancelan cuando se detecta un lápiz dentro del alcance de la superficie de entrada.</li>
-<li>No se detectan contactos activos de más de 100ms.</li>
+<li>No se detectan contactos activos de más de 100 ms.</li>
 <li>Se modifica el monitor o la pantalla (resolución, configuración, configuración de multimonitor).</li>
 <li>El escritorio está bloqueado o el usuario ha cerrado la sesión.</li>
 <li>El número de contactos simultáneos superó el número admitido por el dispositivo.</li>
@@ -127,12 +134,12 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 
  
 
-## Ejemplo
+## <a name="example"></a>Ejemplo
 
 
 A continuación se muestran algunos ejemplos de código de una aplicación básica de seguimiento del puntero que muestra cómo escuchar y controlar eventos de puntero y obtener diversas propiedades de punteros activos.
 
-### Crear la interfaz de usuario
+### <a name="create-the-ui"></a>Crear la interfaz de usuario
 
 Para este ejemplo, usamos un rectángulo (`targetContainer`) como el objeto de destino de la entrada de puntero. El color del destino cambia cuando cambia el estado del puntero.
 
@@ -195,7 +202,7 @@ Este es el lenguaje de marcado de aplicaciones extensible (XAML) para este ejemp
 </Page>
 ```
 
-### Escuchar eventos de puntero
+### <a name="listen-for-pointer-events"></a>Escuchar eventos de puntero
 
 En la mayoría de los casos, es recomendable que obtengas la información del puntero mediante el elemento [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) del controlador de eventos.
 
@@ -244,7 +251,7 @@ El siguiente código configura el objeto de destino, declara variables globales 
 
 ```
 
-### Controlar eventos de puntero
+### <a name="handle-pointer-events"></a>Controlar eventos de puntero
 
 Después, se usan comentarios de interfaz de usuario para mostrar controladores de eventos de puntero básicos.
 
@@ -556,7 +563,7 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
     }
 ```
 
-### Obtener las propiedades del puntero
+### <a name="get-pointer-properties"></a>Obtener las propiedades del puntero
 
 Como se indicó anteriormente, debes obtener la información más extendida del puntero desde un objeto [**Windows.UI.Input.PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) obtenido a través de los métodos [**GetCurrentPoint**](https://msdn.microsoft.com/library/windows/apps/hh943077) y [**GetIntermediatePoints**](https://msdn.microsoft.com/library/windows/apps/hh943078) de [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076).
 
@@ -652,7 +659,7 @@ Como se indicó anteriormente, debes obtener la información más extendida del 
              }
 ```
 
-### Ejemplo completo
+### <a name="complete-example"></a>Ejemplo completo
 
 A continuación se muestra el código de C\# de este ejemplo. Para obtener vínculos a ejemplos más complejos, consulta los artículos relacionados en la parte inferior de esta página.
 
@@ -1080,7 +1087,7 @@ namespace PointerInput
 }
 ```
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 
 **Ejemplos**
@@ -1106,6 +1113,6 @@ namespace PointerInput
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

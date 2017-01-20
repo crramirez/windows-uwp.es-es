@@ -5,11 +5,11 @@ title: Listas invertidas
 label: Inverted lists
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: c70cafe4d1dd3db46d48e9844ba9086dbba9acaa
+ms.sourcegitcommit: 5f50e490caa5d1d88c2f8315dc47e15b0ae22a05
+ms.openlocfilehash: de90c49dfc961241c1da028c8f7278e370a810bd
 
 ---
-# Listas invertidas
+# <a name="inverted-lists"></a>Listas invertidas
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -22,29 +22,24 @@ Por lo general, deberás presentar la lista de manera que parezca que crece de a
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx"><strong>Clase ListView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx"><strong>Clase ItemsStackPanel</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode.aspx"><strong>Propiedad ItemsUpdatingScrollMode</strong></a></li>
+<li>[**Clase ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)</li>
+<li>[**Clase ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx)</li>
+<li>[**Propiedad ItemsUpdatingScrollMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## Crear una lista invertida
+## <a name="create-an-inverted-list"></a>Crear una lista invertida
 
 Para crear una lista invertida, usa una vista de lista con una clase [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx) como panel de elementos. En la clase ItemsStackPanel, establece [**ItemsUpdatingScrollMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode.aspx) en [**KeepLastItemInView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsupdatingscrollmode.aspx).
 
-> **Importante**&nbsp;&nbsp;El valor de enumeración **KeepLastItemInView** está disponible a partir de Windows 10, versión 1607. Si la aplicación se ejecuta en versiones anteriores de Windows 10, no puedes usar este valor.
+> [!IMPORTANT]
+> El valor de enumeración **KeepLastItemInView** está disponible a partir de Windows 10, versión 1607. Si la aplicación se ejecuta en versiones anteriores de Windows 10, no puedes usar este valor.
 
 En este ejemplo se muestra cómo alinear los elementos de la vista de lista en la parte inferior y se indica que, al producirse un cambio en los elementos, el último elemento debe permanecer en la vista.
  
  **XAML**
- ```xaml
+```xaml
 <ListView>
     <ListView.ItemsPanel>
         <ItemsPanelTemplate>
@@ -55,7 +50,7 @@ En este ejemplo se muestra cómo alinear los elementos de la vista de lista en l
 </ListView>
 ```
 
-## Recomendaciones
+## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
 
 - Alinea los mensajes del remitente o el receptor en lados opuestos para mostrar claramente el flujo de la conversación a los usuarios.
 - Haz que los mensajes existentes desaparezcan de la vista para mostrar el último mensaje si el usuario ya está al final de la conversación en espera del siguiente mensaje.
@@ -63,6 +58,6 @@ En este ejemplo se muestra cómo alinear los elementos de la vista de lista en l
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

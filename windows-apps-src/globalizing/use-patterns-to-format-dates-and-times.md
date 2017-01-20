@@ -6,26 +6,28 @@ ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
 label: Use patterns to format dates and times
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: f49af17ada36ceb2e5898d80047c2d616b1d0c6e
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 564062173544ab368d8dd7fc8fe2c35e9d518444
 
 ---
 
-# Usar patrones para dar formato a fechas y horas
+# <a name="use-patterns-to-format-dates-and-times"></a>Usar patrones para dar formato a fechas y horas
 
-
-
-
-
-**API importantes**
-
--   [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)
--   [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)
--   [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576)
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Usa la API [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859) con patrones personalizados para mostrar fechas y horas en el formato exacto que quieras.
 
-## <span id="Introduction"></span><span id="introduction"></span><span id="INTRODUCTION"></span>Introducción
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)</li>
+<li>[**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)</li>
+<li>[**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576)</li>
+</ul>
+</div>
+
+
+## <a name="introduction"></a>Introducción
 
 
 [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859) proporciona varias maneras de dar el formato adecuado a fechas y horas para los idiomas y las regiones de todo el mundo. Puedes usar los formatos estándar para el año, el mes, día etc., o puedes usar plantillas de cadena estándar, como "longdate" o "month day".
@@ -36,7 +38,7 @@ Sin embargo, cuando quieras tener más control sobre el orden y el formato de lo
 
  
 
-## <span id="What_you_need_to_know"></span><span id="what_you_need_to_know"></span><span id="WHAT_YOU_NEED_TO_KNOW"></span>Lo que debes saber
+## <a name="what-you-need-to-know"></a>Lo que debes saber
 
 
 Es importante tener en cuenta que, al usar patrones, lo que haces es compilar un formato personalizado que tal vez no sea válido en otras referencias culturales. Por ejemplo, considera la plantilla "día del mes":
@@ -111,7 +113,7 @@ Este es un resumen de las diferencias entre las plantillas de cadena estándar y
 -   No garantiza que sea culturalmente apropiado.
 -   Se puede especificar cualquier combinación de elementos, en cualquier orden.
 
-## <span id="Tasks"></span><span id="tasks"></span><span id="TASKS"></span>Tareas
+## <a name="tasks"></a>Tareas
 
 
 Supongamos que quieres mostrar el mes y el día actuales junto con la hora actual en un formato específico. Por ejemplo, quieres que los usuarios que hablan inglés de Estados Unidos vean algo así:
@@ -177,7 +179,7 @@ var mydateplustimefmt = new Windows.Globalization.DateTimeFormatting.DateTimeFor
 var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 ```
 
-## <span id="related_topics"></span>Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Ejemplo de formato de fecha y hora](http://go.microsoft.com/fwlink/p/?LinkId=231618)
@@ -192,6 +194,6 @@ var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

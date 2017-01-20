@@ -6,23 +6,26 @@ ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 5d82af288d389c6eeb5373d1b1f4230fc992a441
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: d043555d0b467c6b27bc4f0a3b86ccb1404e16a3
 
 ---
 
-# Directrices sobre el movimiento panorámico
+# <a name="guidelines-for-panning"></a>Directrices sobre el movimiento panorámico
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 El movimiento panorámico o el desplazamiento permiten a los usuarios navegar dentro de una única vista para mostrar el contenido de la vista que no cabe en la ventanilla. Algunos ejemplos de vistas son la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos.
 
-**API importantes**
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+</ul>
+</div>
 
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
-
-
-## Qué hacer y qué no hacer
+## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
 
 
 **Indicadores de movimiento panorámico y barras de desplazamiento**
@@ -73,7 +76,7 @@ El movimiento panorámico o el desplazamiento permiten a los usuarios navegar de
 
     ![imagen que muestra un área desplazable incrustada que se desplaza en la misma dirección que su contenedor.](images/scrolling-embedded3.png)
 
-## Instrucciones de uso adicionales
+## <a name="additional-usage-guidance"></a>Instrucciones de uso adicionales
 
 
 El movimiento panorámico de forma táctil, mediante un gesto de deslizar o deslizar rápidamente con uno o varios dedos, es como desplazarse con el mouse. La interacción de movimiento panorámico es más parecida a la acción de girar la rueda del mouse o deslizar el cuadro de desplazamiento que a la de hacer clic en la barra de desplazamiento. A menos que se establezca una distinción en una API o que lo requiera la interfaz de usuario de Windows específica de algún dispositivo, simplemente se hace referencia a las dos interacciones como movimiento panorámico.
@@ -93,7 +96,7 @@ El deslizamiento implica mover los dedos lentamente en la dirección del movimie
 
 **Tipos de movimiento panorámico**
 
-Windows8 admite tres tipos de movimiento panorámico:
+Windows 8 admite tres tipos de movimiento panorámico:
 
 -   Eje único: el movimiento panorámico es posible solo en una dirección (horizontal o vertical).
 -   Guías: el movimiento panorámico es posible en todas las direcciones. Sin embargo, una vez que el usuario cruza un umbral de distancia en una dirección específica, el movimiento panorámico queda restringido a ese eje.
@@ -163,7 +166,7 @@ Como se muestra en el diagrama siguiente, si no hay suficiente espacio, la regi�
 
 Esta guía también es útil para aplicaciones, como álbumes de fotografías o aplicaciones de mapas, que admiten el movimiento panorámico sin restricciones en un mapa o una imagen individual y, al mismo tiempo, el movimiento panorámico en un solo eje dentro del álbum (para desplazarse a las imágenes anteriores o siguientes) o del área de detalles. En las aplicaciones que proporcionan un área de detalles u opciones correspondiente a un mapa o una imagen de movimiento panorámico de forma libre, es recomendable que el diseño de página comience por el área de detalles y opciones, ya que el área de movimiento panorámico sin restricciones de la imagen o el mapa podrían interferir con el movimiento panorámico en el área de detalles.
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 
 * [Interacciones del usuario personalizadas](https://msdn.microsoft.com/library/windows/apps/mt185599)
@@ -195,6 +198,6 @@ Esta guía también es útil para aplicaciones, como álbumes de fotografías o 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -6,35 +6,27 @@ ms.assetid: D3CFD438-F9D6-4B72-AF1D-16EF2DFC1BB1
 label: Web view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 5752e1a7f7ac358043ec99c8db07cbfda9c4cd37
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 9fa226beed09e79ef3e5a294e36f615fa179c470
 
 ---
-# Vista web
+# <a name="web-view"></a>Vista web
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-
-
 
 Un control de vista web inserta una vista en la aplicación que representa al contenido web, mediante el motor de representación de Microsoft Edge. En un control de vista web también pueden aparecer y funcionar hipervínculos.
 
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br227702"><strong>Clase WebView</strong></a></li>
+<li>[**Clase WebView**](https://msdn.microsoft.com/library/windows/apps/br227702)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa un control de vista web para mostrar contenido HTML de formato enriquecido desde un servidor web remoto, código generado dinámicamente o archivos de contenido de tu paquete de la aplicación. El contenido enriquecido también puede contener código de script y comunicarse entre el script y el código de tu aplicación.
 
-## Crear una vista web
+## <a name="create-a-web-view"></a>Crear una vista web
 
 **Modificar la apariencia de una vista web**
 
@@ -54,7 +46,7 @@ Aunque WebView no es una subclase de Control, recibe el foco de entrada de tecla
 
 Como se indica en la tabla Events de la página de la clase [**WebView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx), la vista web no admite la mayoría de los eventos de entrada de usuario heredados de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx), como [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.keydown.aspx), [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.keyup.aspx) y [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.pointerpressed.aspx). En vez de eso, puedes usar [**InvokeScriptAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.invokescriptasync.aspx) con la función JavaScript **eval** para usar los controladores de eventos HTML y usar **window.external.notify** desde el controlador de eventos HTML para notificar a la aplicación mediante [**WebView.ScriptNotify**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.scriptnotify.aspx).
 
-### Navegar hasta el contenido
+### <a name="navigating-to-content"></a>Navegar hasta el contenido
 
 La vista web proporciona varias API para navegación básica: [**GoBack**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.goback.aspx), [**GoForward**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.goforward.aspx), [**Stop**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.stop.aspx), [**Refresh**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.refresh.aspx), [**CanGoBack**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cangoback.aspx) y [**CanGoForward**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cangoforward.aspx). Puedes usarlos para agregar a tu aplicación la funcionalidad típica de exploración web. 
 
@@ -97,7 +89,7 @@ webView1.Navigate("ms-appx-web:///help/about.html");
 
 Puedes cargar contenido local a través de un solucionador personalizado mediante el método [**NavigateToLocalStreamUri**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetolocalstreamuri.aspx). Esto posibilita escenarios avanzados como la descarga y almacenamiento en caché de contenido web para usarlo sin conexión, o la extracción de contenido de un archivo comprimido.
 
-### Responder a eventos de navegación
+### <a name="responding-to-navigation-events"></a>Responder a eventos de navegación
 
 El control de vista web proporciona varios eventos que puedes usar para responder a estados de carga de contenido y navegación. Los eventos se producen en el siguiente orden para el contenido de vista web raíz: [**NavigationStarting**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationstarting.aspx), [**ContentLoading**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.contentloading.aspx), [**DOMContentLoaded**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.domcontentloaded.aspx), [**NavigationCompleted**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigationcompleted.aspx)
 
@@ -170,7 +162,7 @@ Los eventos similares se producen en el mismo orden para cada **iframe** en el c
 - [**FrameDOMContentLoaded**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framedomcontentloaded.aspx): se produce cuando un fotograma en la vista web ha terminado de analizar el contenido HTML actual. 
 - [**FrameNavigationCompleted**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framenavigationcompleted.aspx): se produce cuando un fotograma en la vista web ha terminado de cargar el contenido. 
 
-### Responder a posibles problemas
+### <a name="responding-to-potential-problems"></a>Responder a posibles problemas
 
 Puedes responder a posibles problemas con el contenido, como scripts de larga duración, elementos que la vista web no puede cargar y advertencias de contenido no seguro. 
 
@@ -182,7 +174,7 @@ Del mismo modo, el evento [**UnsupportedUriSchemeIdentified**](https://msdn.micr
 
 El evento [**UnsafeContentWarningDisplaying**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.unsafecontentwarningdisplaying.aspx) se produce cuando el filtro SmartScreen indica que un contenido no es seguro y se muestra una página de aviso en la vista web. Si el usuario elige continuar con la navegación, cualquier navegación posterior en esa página no desencadena ni el evento ni el aviso.
 
-### Administrar casos especiales del contenido de la vista web
+### <a name="handling-special-cases-for-web-view-content"></a>Administrar casos especiales del contenido de la vista web
 
 Puedes usar la propiedad [**ContainsFullScreenElement**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.containsfullscreenelement.aspx) y el evento [**ContainsFullScreenElementChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.containsfullscreenelementchanged.aspx) para detectar el estado de pantalla completa, responder al mismo y habilitar esta experiencia para el contenido web, por ejemplo, para reproducir vídeo en pantalla completa. Por ejemplo, puedes usar el evento ContainsFullScreenElementChanged para cambiar el tamaño de la vista web de modo que ocupe la totalidad de la vista de la aplicación o, como se muestra en el siguiente ejemplo, para poner una aplicación en ventana en modo de pantalla completa cuando se desea esta experiencia web.
 
@@ -238,7 +230,7 @@ Si la aplicación requiere la entrada del usuario u otras operaciones asincróni
 
 Si los usuarios deben cerrar sesión de forma segura en un sitio web hospedado en una vista web, o en otros casos en los que la seguridad sea importante, llama al método estático [**ClearTemporaryWebDataAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cleartemporarywebdataasync.aspx) para borrar todo el contenido de una sesión de vista web almacenado localmente en caché. Esto impide que usuarios malintencionados obtengan acceso a información confidencial. 
 
-### Interactuar con el contenido de la vista web
+### <a name="interacting-with-web-view-content"></a>Interactuar con el contenido de la vista web
 
 Puede interactuar con el contenido de la vista web usando el método [**InvokeScriptAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.invokescriptasync.aspx) para invocar o insertar script en dicho contenido, y el evento [**ScriptNotify**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.scriptnotify.aspx) para obtener información de este.
 
@@ -268,7 +260,7 @@ Los scripts en el contenido de la vista web pueden usar **window.external.notify
 
 Para permitir que una página web externa active el evento **ScriptNotify** al llamar a window.external.notify, debes incluir el URI de la página en la sección **ApplicationContentUriRules** del manifiesto de la aplicación. (Puedes hacerlo en Microsoft Visual Studio en la pestaña URI de contenido del diseñador Package.appxmanifest). Los URI en esta lista deben usar HTTPS y pueden contener caracteres comodín en el subdominio (por ejemplo, `https://*.microsoft.com`), pero no en el dominio (por ejemplo, `https://*.com` y `https://*.*`). El requisito del manifiesto no se aplica al contenido que se origina en el paquete de la aplicación, que usa un URI ms-local-stream:// o se carga mediante [**NavigateToString**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetostring.aspx). 
 
-### Obtener acceso a Windows Runtime en una vista web
+### <a name="accessing-the-windows-runtime-in-a-web-view"></a>Obtener acceso a Windows Runtime en una vista web
 
 Puedes usar el método [**AddWebAllowedObject**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.addweballowedobject.aspx) para insertar una instancia de una clase nativa de un componente de Windows Runtime en el contexto JavaScript de la vista web. Esto ofrece acceso completo a los métodos, propiedades y eventos nativos del objeto en el contenido de JavaScript de la vista web. La clase se debe representar con el atributo [**AllowForWeb**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.allowforwebattribute.aspx). 
 
@@ -302,17 +294,17 @@ Este ejemplo muestra una sección del manifiesto de la aplicación. Aquí, un UR
   </Applications>
 ```
 
-### Opciones para alojamiento de contenido web
+### <a name="options-for-web-content-hosting"></a>Opciones para alojamiento de contenido web
 
 Puedes usar la propiedad [**WebView.Settings**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.settings.aspx) (del tipo [**WebViewSettings**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewsettings.aspx)) para controlar si JavaScript e IndexedDB están habilitados. Por ejemplo, si usas una vista web para mostrar contenido estrictamente estático, tal vez quieras deshabilitar JavaScript para obtener el mejor rendimiento.
 
-### Capturar contenido de una vista web
+### <a name="capturing-web-view-content"></a>Capturar contenido de una vista web
 
 Para habilitar el uso compartido del contenido de una vista web con otras aplicaciones, usa el método [**CaptureSelectedContentToDataPackageAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.captureselectedcontenttodatapackageasync.aspx), que devuelve el contenido seleccionado en forma de [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.datatransfer.datapackage.aspx). Este método es asincrónico, por lo que debes usar un aplazamiento para evitar que tu controlador de evento [**DataRequested**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.datatransfer.datatransfermanager.datarequested.aspx) actúe antes de que finalice la llamada asincrónica. 
 
 Para obtener una imagen previa del contenido actual de la vista web, usa el método [**CapturePreviewToStreamAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.capturepreviewtostreamasync.aspx). Este método crea una imagen del contenido actual y la escribe en la secuencia especificada. 
 
-### Comportamiento de subprocesos
+### <a name="threading-behavior"></a>Comportamiento de subprocesos
 
 De manera predeterminada, el contenido de una vista web está hospedado en el subproceso de interfaz de usuario en la familia de dispositivos de escritorio, y fuera de dicho subproceso en todos los demás dispositivos. Puedes usar la propiedad estática [**WebView.DefaultExecutionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.defaultexecutionmode.aspx) para consultar el comportamiento  subproceso predeterminado para el cliente actual. Si es necesario, puedes usar el constructor [**WebView(WebViewExecutionMode)**](https://msdn.microsoft.com/library/windows/apps/xaml/dn932036.aspx) para invalidar este comportamiento. 
 
@@ -320,7 +312,7 @@ De manera predeterminada, el contenido de una vista web está hospedado en el su
 
 Una vista web que hospeda contenido en el subproceso de la interfaz de usuario no es compatible con los controles primarios que requieren gestos para propagar desde el control de vista web al elemento primario, como [**FlipView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flipview.aspx), [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx) y otros controles relacionados. Estos controles no podrán recibir los gestos que se inicien en la vista web hospedada en el subproceso. Además, no se admite directamente la impresión de contenido web desde subprocesos. Deberás imprimir los elementos con un relleno [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.aspx).
 
-## Recomendaciones
+## <a name="recommendations"></a>Recomendaciones
 
 
 -   Asegúrate de que el sitio web cargado tiene un formato correcto para el dispositivo y usa colores, tipografía y navegación coherentes con el resto de tu aplicación.
@@ -329,7 +321,7 @@ Una vista web que hospeda contenido en el subproceso de la interfaz de usuario n
 
 
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [**Clase WebView**](https://msdn.microsoft.com/library/windows/apps/br227702)
  
@@ -342,6 +334,6 @@ Una vista web que hospeda contenido en el subproceso de la interfaz de usuario n
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

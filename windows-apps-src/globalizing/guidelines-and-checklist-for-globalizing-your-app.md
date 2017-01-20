@@ -7,32 +7,32 @@ ms.assetid: 0342DC3F-DDD1-4DD4-872E-A4EC340CAE79
 label: Do's and don'ts
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 9d16e553eb38526b4ae1f5aa827132e130cd05c7
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 72849c304d2150fd7fe6768181a504f94ef98d5f
 
 ---
 
-# Directrices para globalización y localización: qué hacer y qué no hacer
-
-
-
-
-
-**API importantes**
-
--   [**Globalización**](https://msdn.microsoft.com/library/windows/apps/br206813)
--   [**Globalization.NumberFormatting**](https://msdn.microsoft.com/library/windows/apps/br226136)
--   [**Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)
--   [**Resources**](https://msdn.microsoft.com/library/windows/apps/br206022)
--   [**Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)
+# <a name="globalization-and-localization-dos-and-donts"></a>Globalización y localización: qué hacer y qué no hacer
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Sigue estos procedimientos recomendados cuando globalices las aplicaciones para un público más amplio o cuando localices las aplicaciones para un mercado específico.
 
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Globalización**](https://msdn.microsoft.com/library/windows/apps/br206813)</li>
+<li>[**Globalization.NumberFormatting**](https://msdn.microsoft.com/library/windows/apps/br226136)</li>
+<li>[**Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)</li>
+<li>[**Recursos**](https://msdn.microsoft.com/library/windows/apps/br206022)</li>
+<li>[**Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)</li>
+</ul>
+</div>
 
 
-## <span id="guidelines_for_internationalization"></span><span id="GUIDELINES_FOR_INTERNATIONALIZATION"></span>Globalización
 
-Prepara la aplicación para que se adapte fácilmente a los diversos mercados eligiendo términos e imágenes adecuados de forma global para la interfaz de usuario, mediante las API de [**Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) para dar formato a los datos de la aplicación y evitar presunciones basadas en la ubicación o el idioma.
+## <a name="globalization"></a>Globalización
+
+Prepara la aplicación para que se adapte fácilmente a los diversos mercados eligiendo términos e imágenes adecuados de forma global para la interfaz de usuario, mediante las API de [**globalización**](https://msdn.microsoft.com/library/windows/apps/br206813) para dar formato a los datos de la aplicación y evitar presunciones basadas en la ubicación o el idioma.
 
 <table>
 <colgroup>
@@ -106,7 +106,7 @@ Prepara la aplicación para que se adapte fácilmente a los diversos mercados el
 
  
 
-## <span id="guidelines_for_localization"></span><span id="GUIDELINES_FOR_LOCALIZATION"></span>Localización
+## <a name="localization"></a>Localización
 
 <table>
 <colgroup>
@@ -124,7 +124,7 @@ Prepara la aplicación para que se adapte fácilmente a los diversos mercados el
 <td align="left"><p>Separa los recursos como imágenes y cadenas de UI del código.</p></td>
 <td align="left"><p>Diseña tus aplicaciones para que los recursos, como las cadenas y las imágenes, estén separados del código. Esto permite que se mantengan y localicen de forma independiente, como también se personalicen para diferentes factores de ajuste de escala, opciones de accesibilidad y un gran número de otros contextos de máquina y usuario.</p>
 <p>Separa los recursos de cadena del código de tu aplicación para crear un único código base independiente del idioma. Separa siempre las cadenas del código de aplicación y de marcado, y colócalas en un archivo de recursos, como un archivo ResW o ResJSON.</p>
-<p>Usa la infraestructura de recursos de Windowspara controlar la selección de los recursos más apropiados que mejor se adapten al entorno en tiempo de ejecución del usuario.</p></td>
+<p>Usa la infraestructura de recursos de Windows para controlar la selección de los recursos más apropiados que mejor se adapten al entorno en tiempo de ejecución del usuario.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Aísla otros archivos de recursos localizables.</p></td>
@@ -178,7 +178,7 @@ Prepara la aplicación para que se adapte fácilmente a los diversos mercados el
 
  
 
-## <span id="related_topics"></span>Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 
 **Ejemplos**
@@ -193,6 +193,6 @@ Prepara la aplicación para que se adapte fácilmente a los diversos mercados el
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

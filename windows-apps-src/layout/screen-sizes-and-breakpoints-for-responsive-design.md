@@ -5,17 +5,21 @@ description: .
 ms.assetid: BF42E810-CDC8-47D2-9C30-BAA19DCBE2DA
 label: Screen sizes and break points
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 5977b6253e2ee10fa0153d79053f89b705c2e1a3
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 7189987209e894d81b2574aff576c64fb5f7a97a
 
 ---
 
-#  Tamaños de pantalla y puntos de interrupción de diseño adaptativo
+#  <a name="screen-sizes-and-break-points-for-responsive-design"></a>Tamaños de pantalla y puntos de interrupción de diseño adaptativo
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 El número de destinos de dispositivo y tamaños de pantalla en el ecosistema de Windows 10 es demasiado grande como para preocuparse de optimizar la interfaz de usuario para cada uno de ellos. En su lugar, se recomienda el diseño de unos anchos claves (también denominados "puntos de interrupción"): 360, 640, 1024 y 1366 epx.
 
-**Sugerencia** Al diseñar para puntos de interrupción específicos, diseña la cantidad de espacio en pantalla disponible para la aplicación (ventana de la aplicación). Cuando la aplicación se ejecuta en pantalla completa, la ventana de la aplicación tiene el mismo tamaño que la pantalla, pero, en otros casos, es más pequeña.
+> [!TIP]
+> Al diseñar para puntos de interrupción específicos, diseña la cantidad de espacio en pantalla disponible para la aplicación (ventana de la aplicación). Cuando la aplicación se ejecuta en pantalla completa, la ventana de la aplicación tiene el mismo tamaño que la pantalla, pero, en otros casos, es más pequeña.
  
 
 En esta tabla se describen las diferentes clases de tamaño y se proporcionan recomendaciones generales para personalizar esas clases de tamaño.
@@ -39,32 +43,32 @@ En esta tabla se describen las diferentes clases de tamaño y se proporcionan re
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Tamaño de pantalla habitual (diagonal)</td>
-<td align="left">De 4 a 6 pulgadas&quot;</td>
-<td align="left">De 7 a 12 pulgadas o televisores</td>
-<td align="left">13 pulgadas o más</td>
+<td style="vertical-align:top;">Tamaño de pantalla habitual (diagonal)</td>
+<td style="vertical-align:top;">De 4 a 6 pulgadas&quot;</td>
+<td style="vertical-align:top;">De 7 a 12 pulgadas o televisores</td>
+<td style="vertical-align:top;">13 pulgadas o más</td>
 </tr>
 <tr class="even">
-<td align="left">Dispositivos habituales</td>
-<td align="left">Teléfonos</td>
-<td align="left">Tabléfono, tabletas, televisores</td>
-<td align="left">PC, portátiles, Surface Hub</td>
+<td style="vertical-align:top;">Dispositivos habituales</td>
+<td style="vertical-align:top;">Teléfonos</td>
+<td style="vertical-align:top;">Tabléfono, tabletas, televisores</td>
+<td style="vertical-align:top;">PC, portátiles, Surface Hub</td>
 </tr>
 <tr class="odd">
-<td align="left">Tamaños de ventana comunes en píxeles efectivos</td>
-<td align="left">320x569, 360x640, 480x854</td>
-<td align="left">960x540, 1024x640</td>
-<td align="left">1366x768, 1920x1080</td>
+<td style="vertical-align:top;">Tamaños de ventana comunes en píxeles efectivos</td>
+<td style="vertical-align:top;">320x569, 360x640, 480x854</td>
+<td style="vertical-align:top;">960x540, 1024x640</td>
+<td style="vertical-align:top;">1366x768, 1920x1080</td>
 </tr>
 <tr class="even">
-<td align="left">Puntos de interrupción de ancho de ventana en píxeles efectivos</td>
-<td align="left">640 píxeles o menos</td>
-<td align="left">De 641 a 1007 píxeles</td>
-<td align="left">1008 píxeles o más</td>
+<td style="vertical-align:top;">Puntos de interrupción de ancho de ventana en píxeles efectivos</td>
+<td style="vertical-align:top;">640 píxeles o menos</td>
+<td style="vertical-align:top;">De 641 a 1007 píxeles</td>
+<td style="vertical-align:top;">1008 píxeles o más</td>
 </tr>
 <tr class="odd">
-<td align="left" valign="top">Recomendaciones generales</td>
-<td align="left" valign="top"><ul>
+<td style="vertical-align:top;">Recomendaciones generales</td>
+<td style="vertical-align:top;"><ul>
 <li>Centra los elementos de la pestaña.</li>
 <li>Establece los márgenes de la ventana de la izquierda y derecha en 12 píxeles para crear una separación visual entre los bordes izquierdo y derecho de la ventana de la aplicación.</li>
 <li>Acopla las [barras de la aplicación](../controls-and-patterns/app-bars.md) a la parte inferior de la ventana para una mejor accesibilidad.</li>
@@ -73,7 +77,7 @@ En esta tabla se describen las diferentes clases de tamaño y se proporcionan re
 <li>Coloca el [panel de navegación](../controls-and-patterns/nav-pane.md) en modo de superposición para ahorrar espacio en pantalla.</li>
 <li>Si usas el [patrón de maestro y detalles](../controls-and-patterns/master-details.md), elige el modo de presentación apilada para ahorrar espacio en pantalla.</li>
 </ul></td>
-<td align="left" valign="top"><ul>
+<td style="vertical-align:top;"><ul>
 <li>Crea elementos de pestaña alineados a la izquierda.</li>
 <li>Establece los márgenes izquierdo y derecho de la ventana en 24 píxeles para crear una separación visual entre los bordes izquierdo y derecho de la ventana de la aplicación.</li>
 <li>Sitúa los elementos de comando, como las [barras de la aplicación](../controls-and-patterns/app-bars.md) en la parte superior de la ventana de la aplicación.</li>
@@ -82,7 +86,7 @@ En esta tabla se describen las diferentes clases de tamaño y se proporcionan re
 <li>Coloca el [panel de navegación](../controls-and-patterns/nav-pane.md) en modo de franja para que siempre se muestre en una tira estrecha de iconos.</li>
 <li>Considera la posibilidad de realizar más adaptaciones para las [experiencias con televisores](http://go.microsoft.com/fwlink/?LinkId=760736).</li>
 </ul></td>
-<td align="left" valign="top"><ul>
+<td style="vertical-align:top;"><ul>
 <li>Crea elementos de pestaña alineados a la izquierda.</li>
 <li>Establece los márgenes izquierdo y derecho de la ventana en 24 píxeles para crear una separación visual entre los bordes izquierdo y derecho de la ventana de la aplicación.</li>
 <li>Sitúa los elementos de comando, como las [barras de la aplicación](../controls-and-patterns/app-bars.md) en la parte superior de la ventana de la aplicación.</li>
@@ -99,6 +103,6 @@ Con [**Continuum para teléfonos**](http://go.microsoft.com/fwlink/p/?LinkID=699
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

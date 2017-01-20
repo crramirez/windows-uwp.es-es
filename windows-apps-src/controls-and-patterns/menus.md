@@ -5,11 +5,11 @@ title: "Menús y menús contextuales"
 label: Menus and context menus
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f6ce4bc08e3647cd26dc1537bba5499ddb646a49
+ms.sourcegitcommit: 5f50e490caa5d1d88c2f8315dc47e15b0ae22a05
+ms.openlocfilehash: badb03c97ae0f2350e5d7592f10168bb7d6e7d1a
 
 ---
-# Menús y menús contextuales
+# <a name="menus-and-context-menus"></a>Menús y menús contextuales
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -20,24 +20,20 @@ Los menús y los menús contextuales muestran una lista de opciones o comandos c
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn299030">Clase MenuFlyout</a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx">Propiedad ContextFlyout</a></li>
-<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx">Propiedad FlyoutBase.AttachedFlyout</a></li>
+<li>[Clase MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030)</li>
+<li>[Propiedad ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx)</li>
+<li>[Propiedad FlyoutBase.AttachedFlyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 Los menús y los menús contextuales ahorran espacio al organizar los comandos y ocultarlos hasta que el usuario los necesite. Si un comando se va a usar con frecuencia y tienes el espacio disponible, considera la posibilidad de colocarlo directamente en su propio elemento, en lugar de en un menú, para que los usuarios no tengan que pasar por un menú para acceder a él. 
 
 Los menús y los menús contextuales sirven para organizar los comandos; para mostrar contenido arbitrario, como una notificación, o para solicitar confirmación, usa un [cuadro de diálogo o un control flotante](dialogs.md).  
 
 
-## Menús frente a menús contextuales
+## <a name="menus-vs-context-menus"></a>Menús frente a menús contextuales
 
 Los menús y los menús contextuales son idénticos en su apariencia y en lo que pueden contener. De hecho, debes usar el mismo control, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), para crearlos. La única diferencia es cómo se permite al usuario acceder a ellos. 
 
@@ -76,7 +72,7 @@ Si quieres agregar comandos (como cortar, copiar y pegar) a un elemento de texto
 </div>
 </div>
 
-## Crear un menú o un menú contextual
+## <a name="create-a-menu-or-a-context-menu"></a>Crear un menú o un menú contextual
 
 Para crear un menú o un menú contextual, usa la [clase MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030). Debes definir el contenido del menú mediante la adición de los objetos [MenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) y [MenuFlyoutSeparator](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx) a la clase MenuFlyout. Estos objetos permiten:
 * [MenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx): realizar una acción inmediata.
@@ -153,22 +149,23 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 }
 ````
 
-> **Nota**&nbsp;&nbsp;Los controles de cierre del elemento por cambio de foco, tales como menús, menús contextuales y otros controles flotantes, capturan el foco del teclado y del controlador para juegos dentro de la interfaz de usuario transitoria hasta que se descartan. Para proporcionar una indicación visual para este comportamiento, los controles de cierre del elemento por cambio de foco de Xbox dibujarán una superposición que atenuará la visibilidad de la interfaz de usuario que está fuera del ámbito. Este comportamiento se puede modificar con la nueva propiedad [LightDismissOverlayMode](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx). De manera predeterminada, las interfaces de usuario transitorias dibujarán la superposición de cierre del elemento por cambio de foco en Xbox pero no de otras familias de dispositivos, aunque las aplicaciones pueden optar por forzar la superposición siempre en **Activado** o siempre en **Desactivado**.
-> 
+
+> Los controles de cierre del elemento por cambio de foco, tales como menús, menús contextuales y otros controles flotantes, capturan el foco del teclado y del controlador para juegos dentro de la interfaz de usuario transitoria hasta que se descartan. Para proporcionar una indicación visual para este comportamiento, los controles de cierre del elemento por cambio de foco de Xbox dibujarán una superposición que atenuará la visibilidad de la interfaz de usuario que está fuera del ámbito. Este comportamiento se puede modificar con la nueva propiedad [LightDismissOverlayMode](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx). De manera predeterminada, las interfaces de usuario transitorias dibujarán la superposición de cierre del elemento por cambio de foco en Xbox pero no de otras familias de dispositivos, aunque las aplicaciones pueden optar por forzar la superposición siempre en **Activado** o siempre en **Desactivado**.
+
 > ```xaml
 > <MenuFlyout LightDismissOverlayMode="Off">
-```
+> ```
 
-## Get the samples
-*   [XAML UI basics](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
-    See all of the XAML controls in an interactive format.
+## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+*   [Muestra de conceptos básicos de una interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
+    Consulta todos los controles XAML en un formato interactivo.
 
-## Related articles
+## <a name="related-articles"></a>Artículos relacionados
 
-- [**MenuFlyout class**](https://msdn.microsoft.com/library/windows/apps/dn299030)
+- [**Clase MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/dn299030)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

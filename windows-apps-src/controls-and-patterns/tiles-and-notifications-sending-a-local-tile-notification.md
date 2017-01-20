@@ -6,22 +6,19 @@ ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
-ms.openlocfilehash: 8fc2fc007d14bd9c5d08ca4eb7e61a2dfdf04d3b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: bbc09a6638fd7c0798e49600bd74388d5bb4629d
 
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # <a name="send-a-local-tile-notification"></a>Enviar una notificación de icono local
-
-
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Los iconos de la aplicación principal de Windows 10 se definen en el manifiesto de la aplicación, mientras que los iconos secundarios se crean mediante programación y se definen mediante el código de la aplicación. En este artículo se describe cómo enviar una notificación de icono local a un icono principal y un icono secundario con el uso de plantillas de iconos adaptables. (Una notificación local es aquella que se envía desde el código de la aplicación frente a la que se envía o extrae de un servidor web).
 
 ![icono predeterminado e icono con notificación](images/sending-local-tile-01.png)
 
-**Nota** Obtén información sobre cómo [crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md) y sobre el [esquema de plantillas de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
+> [!NOTE] 
+>Obtén información sobre cómo [crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md) y el [esquema de plantillas de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
 
  
 
@@ -285,7 +282,6 @@ var notification = new TileNotification(doc);
 
 ## <a name="related-topics"></a>Temas relacionados
 
-
 * [Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md)
 * [Plantillas de iconos adaptables: esquema y documentación](tiles-and-notifications-adaptive-tiles-schema.md)
 * [Biblioteca Notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
@@ -303,6 +299,6 @@ var notification = new TileNotification(doc);
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

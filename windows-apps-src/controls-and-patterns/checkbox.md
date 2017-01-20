@@ -6,11 +6,11 @@ ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f565acbebbee8b8fb88a72970c9dbe3202ba24df
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 874d1a7200359ecc46b26b306b208946c7a6f273
 
 ---
-# Casillas
+# <a name="check-boxes"></a>Casillas
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,20 +21,14 @@ Una casilla se usa para seleccionar o anular la selección de elementos de acci�
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209316"><strong>Clase CheckBox</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx"><strong>Evento Checked</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx"><strong>Propiedad IsChecked</strong></a> </li>
+<li>[**Clase CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316)</li>
+<li>[**Evento Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)</li>
+<li>[**Propiedad IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) </li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa una **casilla** para elegir entre las opciones de tipo sí y no, como en el escenario de inicio de sesión "Recordar mi cuenta" o con los términos del acuerdo de servicio.
 
@@ -54,7 +48,7 @@ Cuando se pueden agrupar las opciones, puedes usar una casilla indeterminada par
 
 Ambos controles **Casilla** y **Botón de radio** permiten que el usuario pueda seleccionar de una lista de opciones. Las casillas permiten que el usuario seleccione una combinación de opciones. En cambio, los botones de radio permiten al usuario seleccionar una única opción de varias opciones que son mutuamente excluyentes. Cuando haya más de una opción pero solo se pueda seleccionar una, usa un botón de radio en vez de una casilla.
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 Casilla de un cuadro de diálogo en el explorador de Microsoft Edge.
 
@@ -64,7 +58,7 @@ Casillas de Alarmas y reloj de la aplicación de Windows.
 
 ![Casillas de Alarmas y reloj de la aplicación de Windows](images/control-examples/check-box-alarm.png)
 
-## Crear una casilla
+## <a name="create-a-checkbox"></a>Crear una casilla
 
 Para asignar una etiqueta a la casilla, configura la propiedad [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content.aspx). La etiqueta se muestra junto a la casilla.
 
@@ -82,7 +76,7 @@ CheckBox checkBox1 = new CheckBox();
 checkBox1.Content = "I agree to the terms of service.";
 ```
 
-### Enlazar a IsChecked
+### <a name="bind-to-ischecked"></a>Enlazar a IsChecked
 
 Usa la propiedad [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) para determinar si la casilla está activada o desactivada. Puedes enlazar el valor de la propiedad IsChecked en otro valor binario. Sin embargo, dado que IsChecked es un valor booleano [que acepta valores NULL](https://msdn.microsoft.com/library/windows/apps/b3h38hb0.aspx), debes usar un convertidor de valores para enlazarlo a un valor booleano.
 
@@ -127,7 +121,7 @@ public class NullableBooleanToBooleanConverter : IValueConverter
 }
 ```
 
-### Controlar eventos Click y Checked
+### <a name="handle-click-and-checked-events"></a>Controlar eventos Click y Checked
 
 Para realizar una acción cuando cambia el estado de la casilla, puedes controlar el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx), o bien los eventos [**Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx) y [**Unchecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.unchecked.aspx). 
 
@@ -180,7 +174,7 @@ private void toppingsCheckbox_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-### Usar el estado indeterminado
+### <a name="use-the-indeterminate-state"></a>Usar el estado indeterminado
 
 El control CheckBox hereda del elemento [ToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.aspx) y puede tener tres estados: 
 
@@ -276,7 +270,7 @@ private void SetCheckedState()
 }
 ```
 
-## Lo que se debe y no se debe hacer
+## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
 
 -   Asegúrate de que esté claro el objetivo y el estado actual de la casilla.
 -   Limita el contenido textual de la casilla a dos líneas como máximo.
@@ -298,7 +292,7 @@ private void SetCheckedState()
     ![Grupo de botones de radio con tres opciones: Sin picante, Picante y Muy picante.](images/spicyoptions.png)
 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 -   [**Clase CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) 
 -   [Botones de radio](radio-button.md)
@@ -308,6 +302,6 @@ private void SetCheckedState()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

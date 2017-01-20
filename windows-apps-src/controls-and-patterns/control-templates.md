@@ -9,31 +9,25 @@ ms.assetid: 6E642626-A1D6-482F-9F7E-DBBA7A071DAD
 label: Control templates
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 2aa257fa422ed954206dffb5ac68461e4e3a544f
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 4c6ee696dff8d8e0ddc3a9b62d0309e999762dc6
 
 ---
-# Plantillas de control
+# <a name="control-templates"></a>Plantillas de control
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+Puedes personalizar la estructura y el comportamiento visual de un control al crear una plantilla de control en el marco XAML. Los controles tienen muchas propiedades, como [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) y [**FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209404), que puedes establecer para especificar diferentes aspectos de la apariencia del control. Sin embargo, los cambios que puedes realizar estableciendo estas propiedades son limitados. Puedes especificar personalizaciones adicionales al crear una plantilla con la clase [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). A continuación te mostramos cómo crear una clase **ControlTemplate** para personalizar la apariencia de un control de [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316).
 
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209391"><strong>Clase ControlTemplate</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx"><strong>Propiedad Control.Template</strong></a></li>
+<li>[**Clase ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)</li>
+<li>[**Propiedad Control.Template**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-Puedes personalizar la estructura y el comportamiento visual de un control al crear una plantilla de control en el marco XAML. Los controles tienen muchas propiedades, como [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) y [**FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209404), que puedes establecer para especificar diferentes aspectos de la apariencia del control. Sin embargo, los cambios que puedes realizar estableciendo estas propiedades son limitados. Puedes especificar personalizaciones adicionales al crear una plantilla con la clase [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391). A continuación te mostramos cómo crear una clase **ControlTemplate** para personalizar la apariencia de un control de [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316).
-
-## Ejemplo de plantilla de control personalizada
+## <a name="custom-control-template-example"></a>Ejemplo de plantilla de control personalizada
 
 
 De manera predeterminada, un control de [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) coloca su contenido (la cadena u objeto junto a la clase **CheckBox**) a la derecha del cuadro de selección y una marca de verificación indica que el usuario seleccionó la clase **CheckBox**. Estas características representan la estructura visual y el comportamiento visual de la clase **CheckBox**.
@@ -54,7 +48,7 @@ Este es el aspecto de la clase [**CheckBox**](https://msdn.microsoft.com/library
 
 ![plantilla checkbox personalizada](images/templates-checkbox-states.png)
 
-## Especificar la estructura visual de un control
+## <a name="specify-the-visual-structure-of-a-control"></a>Especificar la estructura visual de un control
 
 
 Al crear una clase [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391), combinas objetos [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) para crear un único control. Una clase **ControlTemplate** debe tener solo una clase **FrameworkElement** como elemento raíz. Normalmente, el elemento raíz contiene otros objetos **FrameworkElement**. La combinación de objetos conforma la estructura visual del control.
@@ -95,7 +89,7 @@ Este código XAML crea una clase [**ControlTemplate**](https://msdn.microsoft.co
 </ControlTemplate>
 ```
 
-## Especificar el comportamiento visual de un control
+## <a name="specify-the-visual-behavior-of-a-control"></a>Especificar el comportamiento visual de un control
 
 
 Un comportamiento visual especifica la apariencia de un control cuando tiene un estado determinado. El control de [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) tiene tres estados de selección: `Checked`, `Unchecked` e `Indeterminate`. El valor de la propiedad [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/br209798) determina el estado de **CheckBox**, y su estado determina lo que aparece en el cuadro.
@@ -188,11 +182,11 @@ Para comprender mejor cómo funcionan los objetos [**VisualState**](https://msdn
  
 Para obtener más información sobre cómo crear estados visuales para los controles (y, más en concreto, sobre cómo usar la clase [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490) y los tipos de animación), consulta [Animaciones de guion gráfico para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808).
 
-## Usar herramientas para facilitar el trabajo con temas
+## <a name="use-tools-to-work-with-themes-easily"></a>Usar herramientas para facilitar el trabajo con temas
 
 Una manera rápida de aplicar temas a los controles es hacer clic con el botón secundario en un control de **Esquema del documento** de Microsoft Visual Studio y seleccionar **Editar tema** o **Editar estilo** (según el control en el que estás haciendo clic con el botón secundario). Después, para aplicar un tema existente, selecciona **Aplicar recurso** o selecciona **Crear vacío** para crear uno nuevo.
 
-## Controles y accesibilidad
+## <a name="controls-and-accessibility"></a>Controles y accesibilidad
 
 Cuando creas una plantilla para un control, aparte de estar cambiando el comportamiento y la apariencia visual del control en cierta medida, es probable que estés modificando también el modo en que dicho control se muestra en los marcos de accesibilidad. La Plataforma universal de Windows (UWP) admite el marco de automatización de la interfaz de usuario de Microsoft para la accesibilidad. Todos los controles predeterminados y sus plantillas correspondientes admiten los patrones y tipos de controles comunes de la automatización de la interfaz de usuario que sean apropiados para el propósito y la función del control en cuestión. Los clientes de automatización de la interfaz de usuario interpretan estos patrones y tipos de controles como tecnologías de ayuda, lo que permite que un control esté accesible dentro de una interfaz de usuario de aplicación accesible más grande.
 
@@ -200,28 +194,25 @@ Para separar la lógica de control básica y, asimismo, cumplir algunos de los r
 
 Cuando crees un control personalizado completamente nuevo, habrá veces en las que también quieras crear un sistema de automatización del mismo nivel que lo complemente. Para más información, consulta [Personalizar sistemas de automatización del mismo nivel](../accessibility/custom-automation-peers.md).
 
-## Obtener más información sobre la plantilla predeterminada de un control
+## <a name="learn-more-about-a-controls-default-template"></a>Obtener más información sobre la plantilla predeterminada de un control
 
 En los artículos que documentan los estilos y plantillas de los controles XAML se muestran fragmentos del mismo código XAML de inicio que verías si usaras las técnicas **Editar tema** o **Editar estilo** explicadas anteriormente. Cada artículo enumera los nombres de los estados visuales, los recursos de tema utilizados y el código XAML completo del estilo que contiene la plantilla. Estos artículos pueden resultar útiles si ya has comenzado a modificar una plantilla y quieres ver el aspecto de la plantilla original o comprobar que tu nueva plantilla tenga todos los estados visuales con nombre necesarios.
 
-## Recursos de temas en plantillas de control
+## <a name="theme-resources-in-control-templates"></a>Recursos de temas en plantillas de control
 
 Para algunos de los atributos de los ejemplos de XAML, quizás hayas observado referencias a recursos que usan la [extensión de marcado {ThemeResource}](../xaml-platform/themeresource-markup-extension.md). Esta es una técnica que permite a una única plantilla de control usar recursos que pueden ser diferentes valores en función del tema que esté activo en cada momento. Esto resulta especialmente importante para pinceles y colores, porque el principal propósito de los temas es permitir a los usuarios elegir si quieren aplicar un tema oscuro, claro o de alto contraste a todo el sistema. Las aplicaciones que usan el sistema de recursos de XAML pueden usar un conjunto de recursos que sea apropiado para ese tema, de manera que las opciones de temas en la interfaz de usuario de una aplicación reflejen el tema elegido por el usuario para todo el sistema.
 
-**Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para UWP. Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+ ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+* [Muestra de conceptos básicos de una interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [Muestra de control de edición de texto personalizado](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)
 
  
 
- 
-
- 
 
 
 
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

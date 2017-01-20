@@ -6,17 +6,17 @@ ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
 label: Adaptive tile schema and templates
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 08bdb46dba6fc93ada20b3fc585d3e24e29023a0
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 70c06949ee9ac8f9a3f914fc4e020de0460124fa
 
 ---
-# Plantillas de iconos adaptables: esquema e instrucciones
+# <a name="adaptive-tile-templates-schema-and-guidance"></a>Plantillas de iconos adaptables: esquema e instrucciones
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Estos son los elementos y atributos que usas para crear iconos adaptables. Para obtener instrucciones y ejemplos, consulta [Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md).
 
-## icono de ventana
+## <a name="tile-element"></a>icono de ventana
 
 
 ``` xml
@@ -28,7 +28,7 @@ Estos son los elementos y atributos que usas para crear iconos adaptables. Para 
 </tile>
 ```
 
-## elemento visual
+## <a name="visual-element"></a>elemento visual
 
 
 ``` xml
@@ -47,7 +47,7 @@ Estos son los elementos y atributos que usas para crear iconos adaptables. Para 
 </visual>
 ```
 
-## elemento de enlace
+## <a name="binding-element"></a>elemento de enlace
 
 
 ``` xml
@@ -72,7 +72,7 @@ Estos son los elementos y atributos que usas para crear iconos adaptables. Para 
 </binding>
 ```
 
-## elemento de imagen
+## <a name="image-element"></a>elemento de imagen
 
 
 ``` xml
@@ -86,7 +86,7 @@ Estos son los elementos y atributos que usas para crear iconos adaptables. Para 
   hint-align? = "stretch" | "left" | "center" | "right" />
 ```
 
-## elemento de texto
+## <a name="text-element"></a>elemento de texto
 
 
 ``` xml
@@ -103,9 +103,9 @@ Estos son los elementos y atributos que usas para crear iconos adaptables. Para 
 </text>
 ```
 
-Valores de textStyle: caption captionSubtle body bodySubtle base baseSubtle subtitle subtitleSubtle title titleSubtle titleNumeral subheader subheaderSubtle subheaderNumeral header headerSubtle headerNumber
+Valores de textStyle: caption captionSubtle body bodySubtle base baseSubtle subtitle subtitleSubtle title titleSubtle titleNumeral subheader subheaderSubtle subheaderNumeral header headerSubtle headerNumeral
 
-## elemento de grupo
+## <a name="group-element"></a>elemento de grupo
 
 
 ``` xml
@@ -117,7 +117,7 @@ Valores de textStyle: caption captionSubtle body bodySubtle base baseSubtle subt
 </group>
 ```
 
-## elemento de subgrupo
+## <a name="subgroup-element"></a>elemento de subgrupo
 
 
 ``` xml
@@ -133,7 +133,7 @@ Valores de textStyle: caption captionSubtle body bodySubtle base baseSubtle subt
 </subgroup>
 ```
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md)
@@ -147,6 +147,6 @@ Valores de textStyle: caption captionSubtle body bodySubtle base baseSubtle subt
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

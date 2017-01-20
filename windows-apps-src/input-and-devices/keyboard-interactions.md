@@ -6,23 +6,27 @@ ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 667228e10456ffbc64b7d0782d5a8bdc02f2f203
-ms.openlocfilehash: 5ab84def6e73329f59d8ae6ef8be335d66ef4334
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 1226d097e911e79c800a16c33fcbb9bd524bd17a
 
 ---
 
-# Interacciones de teclado
-
+# <a name="keyboard-interactions"></a>Interacciones de teclado
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 La entrada de teclado es una parte importante de la experiencia de interacción del usuario global en las aplicaciones. El teclado es indispensable para personas con ciertas discapacidades o para los usuarios que, simplemente, lo consideran una manera más eficaz de interactuar con una aplicación. Por ejemplo, los usuarios deben poder navegar por la aplicación con las teclas TAB y las flechas de dirección, activar los elementos de la interfaz de usuario con la barra espaciadora y la tecla ENTRAR y, asimismo, acceder a los comandos con los métodos abreviados del teclado.  
 
 ![Imagen principal de teclado](images/input-patterns/input-keyboard-small.jpg)
 
-**API importantes**
-
--   [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)
--   [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)
--   [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)</li>
+<li>[**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)</li>
+<li>[**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)</li>
+</ul>
+</div>
+ 
 
 
 Una interfaz de usuario de teclado bien diseñada es un aspecto importante de la accesibilidad del software. Permite a usuarios con dificultades visuales o con ciertas discapacidades motrices navegar por una aplicación e interactuar con sus funciones. Es posible que estos usuarios no puedan controlar un mouse y empleen varias tecnologías de ayuda, como herramientas para la mejora del teclado, teclados en pantalla, ampliadores de pantallas, lectores de pantalla y utilidades de entrada de voz.
@@ -99,7 +103,7 @@ La correcta interacción con el teclado permite a los usuarios emplear escenario
 
 **Nota** El teclado táctil no admite la alternancia ni la mayoría de los comandos del sistema (consulta [Patrones](#keyboard_command_patterns)).
 
-## Navegación
+## <a name="navigation"></a>Navegación
 
 
 Para usar un control (incluidos los elementos de navegación) con el teclado, el control debe tener el foco. Un modo de hacer que un control reciba el foco del teclado es hacerlo accesible a través de la navegación mediante tabulación. Un modelo de navegación de teclado bien diseñado ofrece un orden de tabulación predecible y lógico que permite que el usuario explore y use la aplicación de forma rápida y eficaz.
@@ -129,7 +133,7 @@ Dado que el teclado táctil tapa una gran parte de la pantalla, la Plataforma un
 En algunos casos, algunos elementos de interfaz de usuario deben permanecer en la pantalla todo el tiempo. Diseña la interfaz de usuario de modo que los controles del formulario estén incluidos en una región de movimiento panorámico y los elementos de interfaz de usuario importantes permanezcan estáticos. Por ejemplo:
 
 ![Un formulario que contiene áreas que deben permanecer siempre visibles](images/input-patterns/touch-keyboard-pan2.png)
-## Activación
+## <a name="activation"></a>Activación
 
 
 Un control puede activarse de varias maneras, tenga o no el foco.
@@ -165,7 +169,7 @@ Aquí se resalta el valor del campo de texto Sangría izquierda después de escr
 
 ![El valor del campo de texto Sangría izquierda se resalta después de escribir la clave de acceso identificada en la etiqueta asociada.](images/input-patterns/accesskeys-entered.png)
 
-## Facilidad de uso y accesibilidad
+## <a name="usability-and-accessibility"></a>Facilidad de uso y accesibilidad
 
 
 Una experiencia de interacción de teclado bien diseñada es un aspecto importante de la accesibilidad del software. Permite a usuarios con dificultades visuales o con ciertas discapacidades motrices navegar por una aplicación e interactuar con sus funciones. Es posible que estos usuarios no puedan controlar un mouse y deban emplear diversas tecnologías de ayuda, como herramientas para la mejora del teclado y teclados en pantalla (además de ampliadores y lectores de pantalla y utilidades de entrada de voz). Para estos usuarios, la exhaustividad es más importante que la coherencia.
@@ -214,7 +218,7 @@ No deshabilite un control que tiene el foco de entrada. Esto puede interferir co
 
 Para garantizar una correcta experiencia de interacción con el teclado, es fundamental probar la aplicación cuidadosamente, empleando únicamente el teclado.
 
-## Entrada de texto
+## <a name="text-input"></a>Entrada de texto
 
 
 Consulta siempre las capacidades del dispositivo al usar una entrada de teclado. En algunos dispositivos (como un teléfono), el teclado táctil solo puede usarse para escribir texto y no proporciona muchas de las teclas aceleradoras o de comando que se encuentran en un teclado hardware (como la tecla Alt, las teclas de función o la tecla con el logotipo de Windows).
@@ -246,7 +250,7 @@ Aquí se muestra la aplicación Bloc de notas, con el menú archivo expandido pa
 
 ![La aplicación Bloc de notas, con el menú archivo expandido para poder ver las teclas de acceso y de aceleración.](images/input-patterns/notepad.png)
 
-## Comandos de teclado
+## <a name="keyboard-commands"></a>Comandos de teclado
 
 
 La siguiente es una lista completa de las interacciones de teclado que se proporcionan en los diversos dispositivos que admiten la entrada de teclado. Algunos dispositivos y plataformas requieren interacciones y pulsaciones de teclas propias, y en estos casos así se indica.
@@ -308,7 +312,7 @@ Las siguientes tablas enumeran los comandos de teclado usados con frecuencia. Pa
  
 
 Nota: los comandos de tecla de navegación multimedia para Reproducir o Pausar y Elemento siguiente son los mismos que los comandos de tecla para Imprimir y Buscar, respectivamente. Los comandos comunes deben tener prioridad sobre los comando de navegación multimedia. Por ejemplo, si una aplicación admite tanto la reproducción como la impresión de medios, el comando Ctrl+P debe destinarse a impresión.
-## Información visual
+## <a name="visual-feedback"></a>Información visual
 
 
 Usa rectángulos de foco solamente con las interacciones del teclado. Si el usuario inicia una interacción táctil, haz que la interfaz de usuario del teclado vaya desapareciendo de forma gradual. Esto mantiene la interfaz de usuario ordenada y organizada.
@@ -322,7 +326,7 @@ Intenta proporcionar botones en pantalla (como + y -) como sugerencias para simu
 Para obtener instrucciones más generales sobre la información visual, consulta [Directrices para la información visual](guidelines-for-visualfeedback.md).
 
 
-## Eventos de teclado y foco
+## <a name="keyboard-events-and-focus"></a>Eventos de teclado y foco
 
 
 Los siguientes eventos de teclado se pueden producir en teclados tanto de hardware como táctiles.
@@ -347,7 +351,7 @@ Para que un control reciba el foco de entrada, debe estar habilitado y sus propi
 
 De manera predeterminada, la secuencia de tabulación de los controles es el orden con que aparecen en el lenguaje XAML. Sin embargo, puedes modificar este orden con la propiedad [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/br209461). Para obtener más información, consulta [Implementación de la accesibilidad de teclado](https://msdn.microsoft.com/library/windows/apps/hh868161).
 
-## Controladores de eventos de teclado
+## <a name="keyboard-event-handlers"></a>Controladores de eventos de teclado
 
 
 Un controlador de eventos de entrada implementa un delegado que proporciona la siguiente información:
@@ -356,7 +360,7 @@ Un controlador de eventos de entrada implementa un delegado que proporciona la s
 -   Datos del evento. Para los eventos de teclado, esos datos serán una instancia de [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072). El delegado de los controladores es [**KeyEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227904). Las propiedades más importantes de **KeyRoutedEventArgs** para la mayoría de los escenarios de controladores son [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) y posiblemente [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075).
 -   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810). Dado que los eventos de teclado están enrutados, los datos del evento proporcionan el objeto **OriginalSource**. Si estás permitiendo deliberadamente que los eventos se propaguen por un árbol de objetos, a veces **OriginalSource** es el objeto de interés en lugar del remitente. Sin embargo, eso depende de tu diseño. Si deseas obtener más información sobre cómo podrías usar **OriginalSource** en lugar del remitente, consulta la sección "Eventos de teclado enrutados" de este tema o bien el tema [Introducción a eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
-### Adjuntar un controlador de eventos de teclado
+### <a name="attaching-a-keyboard-event-handler"></a>Adjuntar un controlador de eventos de teclado
 
 Puedes adjuntar funciones de controlador de eventos de teclado a cualquier objeto que incluya el evento como miembro. Esto engloba cualquier clase derivada de [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). El siguiente ejemplo en XAML muestra cómo adjuntar controladores para el evento [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) de una clase [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704).
 
@@ -368,7 +372,7 @@ Puedes adjuntar funciones de controlador de eventos de teclado a cualquier objet
 
 También puedes adjuntar un controlador de eventos mediante código. Para obtener más información, consulta el tema [Introducción a los eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
-### Definición de un controlador de eventos de teclado
+### <a name="defining-a-keyboard-event-handler"></a>Definición de un controlador de eventos de teclado
 
 El siguiente ejemplo muestra la definición incompleta de un controlador de eventos para el controlador de eventos [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) que se adjuntó en el ejemplo anterior.
 
@@ -394,7 +398,7 @@ void MyProject::MainPage::Grid_KeyUp(
   }
 ```
 
-### Uso de KeyRoutedEventArgs
+### <a name="using-keyroutedeventargs"></a>Uso de KeyRoutedEventArgs
 
 Todos los eventos de teclado usan [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072) para datos de eventos. **KeyRoutedEventArgs** contiene las siguientes propiedades:
 
@@ -403,11 +407,11 @@ Todos los eventos de teclado usan [**KeyRoutedEventArgs**](https://msdn.microsof
 -   [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)
 -   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) (heredada de [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809))
 
-### Tecla
+### <a name="key"></a>Tecla
 
 El evento [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) se genera si se presiona una tecla. De igual modo, [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) se genera si se libera una tecla. Por lo general, los eventos se escuchan para procesar un valor de tecla específico. Para determinar qué tecla se presiona o se libera, comprueba el valor [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) en los datos del evento. La propiedad **Key** devuelve un valor [**VirtualKey**](https://msdn.microsoft.com/library/windows/apps/br241812). La enumeración **VirtualKey** incluye todas las teclas compatibles.
 
-### Teclas modificadoras
+### <a name="modifier-keys"></a>Teclas modificadoras
 
 Las teclas modificadoras son teclas como Ctrl o Mayús que los usuarios suelen presionar en combinación con otras teclas. Tu aplicación puede usar estas combinaciones como métodos abreviados de teclado para invocar comandos de la aplicación.
 
@@ -418,7 +422,7 @@ Las combinaciones de teclas de método abreviado se detectan usando código en l
 
  
 
-### Ejemplo de teclas de método abreviado
+### <a name="shortcut-keys-example"></a>Ejemplo de teclas de método abreviado
 
 
 En el siguiente ejemplo se muestra cómo implementar teclas de método abreviado. En este ejemplo, los usuarios pueden controlar la reproducción multimedia con los botones Reproducir, Pausa y Detener, o bien con las teclas de método abreviado Ctrl+P, Ctrl+A y Ctrl+S. El XAML de los botones muestra los métodos abreviados mediante las propiedades [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081) e información sobre herramientas en las etiquetas de los botones. Esta información automática es importante para mejorar la facilidad de uso y de acceso de tu aplicación. Para más información, consulta [Accesibilidad de teclado](https://msdn.microsoft.com/library/windows/apps/mt244347).
@@ -584,7 +588,7 @@ End Sub
 
  
 
-## Eventos de teclado enrutados
+## <a name="keyboard-routed-events"></a>Eventos de teclado enrutados
 
 
 Ciertos eventos son eventos enrutados, entre ellos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) y [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Los eventos enrutados usan la estrategia de enrutamiento por propagación. La estrategia de enrutamiento por propagación significa que un evento se origina en un objeto secundario y después se enruta hacia los objetos primarios sucesivos del árbol de objetos. Esto da otra oportunidad para controlar el mismo evento e interactuar con los mismos datos de evento.
@@ -612,19 +616,19 @@ void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
 
 Observa el uso de la propiedad [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) en el controlador precedente. Aquí **OriginalSource** notifica el objeto que generó el evento. El objeto no pudo ser [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) porque **StackPanel** no es un control y no puede tener el foco. Solo uno de los dos botones dentro de **StackPanel** podría haber generado el evento, pero ¿cuál? Usa **OriginalSource** para distinguir el objeto origen real del evento, si estás controlando el evento en un objeto primario.
 
-### La propiedad Handled en los datos de evento
+### <a name="the-handled-property-in-event-data"></a>La propiedad Handled en los datos de evento
 
 En función de la estrategia de control de eventos que implementes, puede ser que desees que solo un controlador de eventos reaccione ante un evento de propagación. Por ejemplo, si tienes un controlador [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) específico adjunto a uno de los controles [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265), tendría la primera oportunidad de controlar dicho evento. En este caso, quizás no quieras que el panel primario controle también el evento. Para este escenario, puedes usar la propiedad [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) en los datos del evento.
 
 El propósito de la propiedad [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) en una clase de datos de evento enrutado es notificar que otro controlador que registraste antes en la ruta del evento ya ha actuado. Esto influye en el comportamiento del sistema de eventos enrutados. Cuando estableces **Handled** en **true** en un controlador de eventos, ese evento deja de enrutarse y no se envía a los elementos primarios sucesivos.
 
-### AddHandler y eventos de teclado ya controlados
+### <a name="addhandler-and-already-handled-keyboard-events"></a>AddHandler y eventos de teclado ya controlados
 
 Puedes usar una técnica especial para adjuntar controladores que pueden actuar sobre eventos que ya están marcados como controlados. Esta técnica usa el método [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399) para registrar un controlador en lugar de usar atributos XAML o una sintaxis específica de lenguaje para agregar controladores, como += en C\#. 
 
 Una limitación general de esta técnica es que la API **AddHandler** toma un parámetro de tipo [**RoutedEvent**](https://msdn.microsoft.com/library/windows/apps/br208808) que identifica el evento enrutado en cuestión. No todos los eventos enrutados proporcionan un identificador **RoutedEvent**. Por lo tanto, esta consideración, influye en qué eventos enrutados es posible controlar en el caso [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073). Los eventos [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) y [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) tienen identificadores de evento enrutado ([**KeyDownEvent**](https://msdn.microsoft.com/library/windows/apps/hh702416) y [**KeyUpEvent**](https://msdn.microsoft.com/library/windows/apps/hh702418)) en [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). Sin embargo, otros eventos como [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) no tienen identificadores de evento enrutado y, por lo tanto, no pueden usarse con la técnica **AddHandler**.
 
-### Invalidar comportamientos y eventos de teclado
+### <a name="overriding-keyboard-events-and-behavior"></a>Invalidar comportamientos y eventos de teclado
 
 Puedes invalidar eventos de tecla para controles específicos (como [**GridView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridView)) para proporcionar navegación con foco homogéneo para diversos dispositivos de entrada, como el teclado y el controlador para juegos.
 
@@ -650,7 +654,7 @@ public class CustomGridView : GridView
 > [!NOTE]
 > Si utilizas GridView solo para diseño, considera la posibilidad de usar otros controles, como [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ItemsControl) con [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ItemsWrapGrid).
 
-## Comandos
+## <a name="commanding"></a>Comandos
 
 Algunos elementos de la interfaz de usuario admiten comandos. Los comandos usan eventos enrutados relacionados con la entrada en su implementación subyacente. Permiten procesar la entrada de la interfaz de usuario relacionada (como una acción de puntero determinada o una tecla aceleradora específica) mediante la invocación de un único controlador de comandos.
 
@@ -658,7 +662,7 @@ Si hay comandos disponibles para un elemento de interfaz de usuario, te recomend
 
 También puedes implementar [**ICommand**](https://msdn.microsoft.com/library/windows/apps/br227885) para encapsular la funcionalidad de los comandos que invocas desde controladores de eventos comunes. Esto permite usar los comandos aunque no haya ninguna propiedad **Command** disponible.
 
-## Controles y entrada de texto
+## <a name="text-input-and-controls"></a>Controles y entrada de texto
 
 Ciertos controles reaccionan ante los eventos de teclado con su propio control. Por ejemplo, [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) es un control diseñado para capturar y representar visualmente el texto que se especificó con el teclado. Usa [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) y [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) en su propia lógica para capturar las pulsaciones y después también genera su propio evento [**TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) si el texto ha cambiado.
 
@@ -670,7 +674,7 @@ Otro ejemplo es [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br
 
 Los controles personalizados pueden implementar su propio comportamiento de invalidación similar para eventos de tecla, mediante la invalidación de [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982) / [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983). Si tu control personalizado procesa teclas aceleradoras específicas o tiene un comportamiento de control o foco similar al escenario que describimos en el caso de la clase [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683), puedes incluir esta lógica en tus propias invalidaciones de **OnKeyDown** / **OnKeyUp**.
 
-## Teclado táctil
+## <a name="the-touch-keyboard"></a>Teclado táctil
 
 Los controles de entrada de texto proporcionan compatibilidad automática para el teclado táctil. Cuando el usuario establece el enfoque de entrada en un control de texto mediante entrada táctil, el teclado táctil aparece automáticamente. Cuando el enfoque de entrada no está en un control de texto, el teclado táctil se oculta.
 
@@ -683,7 +687,7 @@ Al presionar las teclas en el teclado táctil se generan los eventos [**KeyDown*
 Es posible conseguir que los usuarios escriban datos en la aplicación de forma mucho más rápida y sencilla, si estableces el ámbito de entrada del control de texto para que coincida con el tipo de datos que esperas que el usuario escriba. El ámbito de entrada proporciona una sugerencia sobre el tipo de entrada de texto que espera el control para que el sistema pueda proporcionar una distribución del teclado táctil especializada para el tipo de entrada. Por ejemplo, si un cuadro de texto se usa únicamente para escribir un PIN de 4 dígitos, establece la propiedad [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) en [**Number**](https://msdn.microsoft.com/library/windows/apps/hh702028). Esto indica al sistema que debe mostrar el diseño de teclado numérico, lo cual facilita al usuario la inserción del PIN. Para obtener más información, consulta [Usar el ámbito de entrada para cambiar el teclado táctil](https://msdn.microsoft.com/library/windows/apps/mt280229).
 
 
-## Otros artículos de esta sección
+## <a name="additional-articles-in-this-section"></a>Otros artículos de esta sección
 
 <table>
 <colgroup>
@@ -704,7 +708,7 @@ Es posible conseguir que los usuarios escriban datos en la aplicación de forma 
 </tbody>
 </table>
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 **Desarrolladores**
 * [Identificar dispositivos de entrada](identify-input-devices.md)
@@ -730,6 +734,6 @@ Es posible conseguir que los usuarios escriban datos en la aplicación de forma 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 
