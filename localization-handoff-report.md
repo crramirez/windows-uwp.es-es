@@ -1,11 +1,53 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\gaming\relative-mouse-movement.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ff3cf7691d7f031e1772f43259461d6aaafb3674?path=windows-apps-src%2Fgaming%2Frelative-mouse-movement.md&_a=contents) | HandedOffSuccess | [Details](#d60af56da1e203039f925cfc482ec26405df75292637)
+ [windows-apps-src\graphics\composition-brushes.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/546792083ec49dba9ab8d2093a918b013b46e7c3?path=windows-apps-src%2Fgraphics%2Fcomposition-brushes.md&_a=contents) | HandedOffSuccess | [Details](#71ffd720dac0be29f003da965054db16ae8e39c03372)
 
 ## Item Details
+##### <a name='d60af56da1e203039f925cfc482ec26405df75292637'></a> Source: [windows-apps-src\gaming\relative-mouse-movement.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ff3cf7691d7f031e1772f43259461d6aaafb3674?path=windows-apps-src%2Fgaming%2Frelative-mouse-movement.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [relative-mouse-movement.1ac1e0aa375d7774c3f8418d1e45ac58055ad1f6.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/0a70b8a544daf2d2d73f839bdd431e769515070a?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Frelative-mouse-movement.1ac1e0aa375d7774c3f8418d1e45ac58055ad1f6.es-es.xlf&_a=contents)
+* Handoff Datetime: 2017-01-23 20:22:21
+* Handoff Reason: Include
+* Handoff Name: 
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Name: 
+* Current Target File: [windows-apps-src\gaming\relative-mouse-movement.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/7aabe073629b28c3b34f9fba562efe812fefe30a?path=windows-apps-src%2Fgaming%2Frelative-mouse-movement.md&_a=contents)
+* Current Handback File: [relative-mouse-movement.1ac1e0aa375d7774c3f8418d1e45ac58055ad1f6.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Frelative-mouse-movement.1ac1e0aa375d7774c3f8418d1e45ac58055ad1f6.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-21 15:33:32
+* Bilingual File: [relative-mouse-movement.1ac1e0aa375d7774c3f8418d1e45ac58055ad1f6.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fdd3ac9c0d6e72ba49d3e603822887e211b6dad5?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Frelative-mouse-movement.1ac1e0aa375d7774c3f8418d1e45ac58055ad1f6.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-24 15:47:13
+* [Back to Top](#report-top)
+
+##### <a name='71ffd720dac0be29f003da965054db16ae8e39c03372'></a> Source: [windows-apps-src\graphics\composition-brushes.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/546792083ec49dba9ab8d2093a918b013b46e7c3?path=windows-apps-src%2Fgraphics%2Fcomposition-brushes.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [composition-brushes.745658206c0e73b3f9e610729c06b50a01ddfce4.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/0a70b8a544daf2d2d73f839bdd431e769515070a?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fcomposition-brushes.745658206c0e73b3f9e610729c06b50a01ddfce4.es-es.xlf&_a=contents)
+* Handoff Datetime: 2017-01-23 20:22:21
+* Handoff Reason: Include
+* Handoff Name: 
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Name: 
+* Current Target File: [windows-apps-src\graphics\composition-brushes.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/b81726c307dcf4449e41c5f20b99107b8f5f0674?path=windows-apps-src%2Fgraphics%2Fcomposition-brushes.md&_a=contents)
+* Current Handback File: [composition-brushes.745658206c0e73b3f9e610729c06b50a01ddfce4.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9d843656481f4607d37743442872c1044ab3d48e?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fcomposition-brushes.745658206c0e73b3f9e610729c06b50a01ddfce4.es-es.xlf&_a=contents)
+* Current Handback Datetime: 2016-09-26 12:56:55
+* Bilingual File: [composition-brushes.745658206c0e73b3f9e610729c06b50a01ddfce4.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9d843656481f4607d37743442872c1044ab3d48e?path=ol-handback%2FMicrosoft%2Fwindows-apps.es-es%2Fmaster%2Fcomposition-brushes.745658206c0e73b3f9e610729c06b50a01ddfce4.es-es.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-18 13:33:20
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
