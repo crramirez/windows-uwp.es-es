@@ -4,8 +4,8 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Usa la API de envío de la tienda Windows para crear y administrar mediante programación los envíos para las aplicaciones que estén registradas en tu cuenta del Centro de desarrollo de Windows mediante programación."
 title: "Creación y administración de envíos mediante el uso de servicios de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: 1172be1072f0c539828a08655236be467c6c9fba
+ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
+ms.openlocfilehash: 8467cddd5eec2348cd35f4f5dc1564b47813a6ca
 
 ---
 
@@ -73,7 +73,7 @@ Antes de llamar a cualquiera de los métodos en la API de envío de la Tienda Wi
 Para obtener el token de acceso, sigue las instrucciones en [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
 
 ```
-POST https://login.microsoftonline.com/<your_tenant_id>/oauth2/token HTTP/1.1
+POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
 Host: login.microsoftonline.com
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 
@@ -83,9 +83,11 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-Para los parámetros *tenant\_id*, *client\_id* y *client\_secret*, especifica el identificador de inquilino, de cliente y la clave para la aplicación que recuperó del Centro de desarrollo en la sección anterior. Para el parámetro *Recurso*, debes especificar la URI ```https://manage.devcenter.microsoft.com```.
+Para el valor de *tenant\_id* de POST URI y los parámetros *client\_id* y *client\_secret*, especifica el identificador de inquilino, de cliente y la clave para la aplicación que recuperaste del Centro de desarrollo en la sección anterior. Para el parámetro *resource*, debes especificar ```https://manage.devcenter.microsoft.com```.
 
-Después de que el token de acceso expire, puedes actualizarlo siguiendo las instrucciones [aquí](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
+Una vez expire el token de acceso, puedes actualizarlo siguiendo las instrucciones que se muestran [aquí](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
+
+Para ver ejemplos que muestran cómo obtener un token de acceso con código C#, Java o Python, consulta los [ejemplos de código](#code-examples) de la API de envío de la Tienda Windows.
 
 <span id="call-the-windows-store-submission-api">
 ## <a name="step-3-use-the-windows-store-submission-api"></a>Paso 3: Uso de la API de envío de la Tienda Windows
@@ -100,8 +102,7 @@ Una vez que tengas un token de acceso de Azure AD, podrás llamar a métodos en 
 | Complementos | Obtén, crea, elimina complementos para las aplicaciones y, a continuación, obtén, crea o elimina envíos para los complementos. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Administración de complementos](manage-add-ons.md)</li><li>[Administración de envíos de complementos](manage-add-on-submissions.md)</li></ul> |
 | Paquetes piloto | Obtén, crea, elimina paquetes piloto para las aplicaciones y, a continuación, obtén, crea o elimina envíos para los paquetes piloto. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Administración de paquetes piloto](manage-flights.md)</li><li>[Administración de envíos de paquetes piloto](manage-flight-submissions.md)</li></ul> |
 
-<span />
-
+<span id="code-samples"/>
 ## <a name="code-examples"></a>Ejemplos de código
 
 Los siguientes artículos proporcionan ejemplos de código detallados que muestran cómo usar la API de envío de la Tienda Windows en varios lenguajes diferentes:
@@ -135,6 +136,6 @@ Si tienes preguntas sobre la API de envío de la Tienda Windows o necesitas ayud
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

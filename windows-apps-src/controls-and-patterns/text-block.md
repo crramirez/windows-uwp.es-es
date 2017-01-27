@@ -4,11 +4,11 @@ ms.assetid: DA562509-D893-425A-AAE6-B2AE9E9F8A19
 label: Text block
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 94f858912473f2a0d20f4041155b1e1ee93032a2
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 9f52252d1d6efb5f0b8b8bc39c1e048f767bc805
 
 ---
-# Bloque de texto
+# <a name="text-block"></a>Bloque de texto
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -17,17 +17,14 @@ ms.openlocfilehash: 94f858912473f2a0d20f4041155b1e1ee93032a2
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx"><strong>Clase TextBlock</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx"><strong>Propiedad Text</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.inlines.aspx"><strong>Propiedad Inlines</strong></a></li>
+<li>[**Clase TextBlock**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)</li>
+<li>[**Propiedad Text**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx)</li>
+<li>[**Propiedad Inlines**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.inlines.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Un bloque de texto suele ser más fácil de usar y proporciona mejor rendimiento de representación de texto que un bloque de texto enriquecido, por lo que es preferible para gran parte del texto de la interfaz de usuario de la aplicación. Puedes acceder fácilmente y usar texto de un bloque de texto en tu aplicación obteniendo el valor de la propiedad [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx). También proporciona muchas de las mismas opciones de formato para personalizar la representación del texto.
 
@@ -35,10 +32,7 @@ Aunque puedes incluir saltos de línea en el texto, el bloque de texto está dis
 
 Para obtener más información sobre cómo elegir el control de texto correcto, consulta el artículo [Controles de texto](text-controls.md).
 
-## Ejemplos
-
-
-## Crear un bloque de texto
+## <a name="create-a-text-block"></a>Crear un bloque de texto
 
 Aquí te mostramos cómo definir un control TextBlock sencillo y establecer su propiedad Text en una cadena.
 
@@ -56,7 +50,7 @@ textBlock1.Text = "Hello, world!";
     TextBlock textBlock1 = new TextBlock();
     textBlock1.Text = "Hello, world!";
 
-### Modelo de contenido
+### <a name="content-model"></a>Modelo de contenido
 
 Existen dos propiedades que puedes usar para agregar contenido a un TextBlock: [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx) e [Inlines](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.inlines.aspx).
 
@@ -70,7 +64,7 @@ También puedes agregar contenido mediante la colocación de elementos de conten
 Los elementos que se derivan de la clase Inline, como Bold, Italic, Run, Span y LineBreak, habilitan un formato diferente para las distintas partes del texto. Para obtener más información, consulta la sección [Formato de texto](). El elemento Hyperlink en línea te permite agregar un hipervínculo al texto. Sin embargo, al usar Inlines también se deshabilita la representación de texto de la ruta de acceso rápido, lo que se describe en la siguiente sección.
 
 
-## Consideraciones de rendimiento
+## <a name="performance-considerations"></a>Consideraciones de rendimiento
 
 Siempre que sea posible, XAML usa una ruta de acceso de código más eficiente para el diseño del texto. Esta ruta de acceso rápido tanto disminuye el uso de memoria general como reduce en gran medida el tiempo de CPU para realizar una medición de texto y organización. Esta ruta de acceso rápido se aplica solo a TextBlock, por lo que es preferible cuando sea posible sobre RichTextBlock.
 
@@ -120,14 +114,14 @@ Al ejecutar este XAML en modo de depuración con la propiedad IsTextPerformanceV
 
 >**Atención**&nbsp;&nbsp;El color del texto que no está en la ruta de acceso rápido no cambia. Si hay texto en la aplicación con el color especificado como verde claro, se sigue mostrando en verde claro cuando se encuentra en la ruta de acceso de representación más lenta. Ten cuidado de no confundir el texto establecido en verde en la aplicación con el texto que se encuentra en la ruta de acceso rápido y está establecido en verde debido a la configuración de depuración.
 
-## Formato de texto
+## <a name="formatting-text"></a>Formato de texto
 
 Aunque la propiedad Text almacena texto sin formato, puedes aplicar diversas opciones de formato al control TextBlock para personalizar la representación del texto en la aplicación. Puedes establecer las propiedades de control estándar, como FontFamily, FontSize, FontStyle, Foreground y CharacterSpacing, para cambiar el aspecto del texto. También puedes usar elementos de texto en línea y propiedades adjuntas a Typography para dar formato al texto. Estas opciones solo afectan al modo en que el objeto TextBlock muestra el texto localmente, por lo que si copias y pegas el texto en un control de texto enriquecido, por ejemplo, no se aplica ningún formato.
 
 >**Nota**&nbsp;&nbsp;Recuerda que, tal y como hemos explicado en la sección anterior, los elementos de texto en línea y los valores de tipografía que no son predeterminados no se representan en la ruta de acceso rápido.
 
 
-### Elementos en línea
+### <a name="inline-elements"></a>Elementos en línea
 
 El espacio de nombres [Windows.UI.Xaml.Documents](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.aspx) proporciona una variedad de elementos de texto en línea que puedes usar para dar formato al texto, como Bold, Italic, Run, Span y LineBreak.
 
@@ -155,7 +149,7 @@ Este es el resultado.
 
 ![Texto con formato con elementos de ejecución](images/text-block-run-examples.png)
 
-### Tipografía
+### <a name="typography"></a>Tipografía
 
 Las propiedades adjuntas de la clase [Typography](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx) otorgan acceso a un conjunto de propiedades de tipografía de Microsoft OpenType. Puedes establecer estas propiedades adjuntas tanto en el objeto TextBlock como en los elementos de texto en línea individuales. En estos ejemplos se muestran ambas opciones.
 ```xaml
@@ -176,25 +170,18 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 ```
 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
-[Controles de texto](text-controls.md)
-
-**Para diseñadores**
+- [Controles de texto](text-controls.md)
 - [Directrices sobre revisión ortográfica](spell-checking-and-prediction.md)
-- [Adición de búsqueda](search.md)
-- [Directrices para la entrada de texto](text-controls.md)
-
-**Para desarrolladores (XAML)**
+- [Agregar búsqueda](search.md)
+- [Directrices sobre la entrada de texto](text-controls.md)
 - [**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Clase Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
-
-
-**Para desarrolladores (otros)**
 - [Propiedad String.Length](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

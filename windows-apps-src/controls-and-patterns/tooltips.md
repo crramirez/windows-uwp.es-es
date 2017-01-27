@@ -6,16 +6,13 @@ ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
 label: Tooltips
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 4110f902adf01e5e25ac674faf9be8faf61f4ea0
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 1ed8bc2339b0616ea5e34b640bb572693d397cce
 
 
 ---
-# Información sobre herramientas
+# <a name="tooltips"></a>Información sobre herramientas
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-
-
 
 La información sobre herramientas es una breve descripción que está vinculada con otro control u objeto. Dicha información sobre herramientas ayuda a los usuarios a comprender objetos que no les son familiares y que no están directamente descritos en la UI. Aparece de forma automática cuando el usuario mueve el foco al control, lo mantiene presionado o cuando pasa sobre él con el puntero del mouse. La información sobre herramientas desaparece tras unos segundos o cuando el usuario mueve el dedo, el puntero o el foco del teclado o del controlador para juegos.
 
@@ -24,17 +21,12 @@ La información sobre herramientas es una breve descripción que está vinculada
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br227608"><strong>Clase ToolTip</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice"><strong>Clase ToolTipService</strong></a></li>
+<li>[**Clase ToolTip**](https://msdn.microsoft.com/library/windows/apps/br227608)</li>
+<li>[**Clase ToolTipService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa información sobre herramientas para ofrecer más información sobre un control antes de pedirle al usuario que realice una acción. Los controles de información sobre herramientas deben usarse de vez en cuando y solamente cuando aporten un valor determinado para el usuario que intenta finalizar una tarea. Por regla general, si la información se encuentra disponible en todas partes en la misma experiencia, no es necesaria la información sobre herramientas. Esta información será valiosa cuando explique una acción poco clara.
 
@@ -61,13 +53,13 @@ Usa información sobre herramientas para ofrecer más información sobre un cont
 -   **¿Es posible que el texto de información estorbe o distraiga a los usuarios?**
     Si es así, plantéate la opción de usar otra solución, sin descartar la idea de no hacer nada. Si vas a usar sugerencias en lugares donde pueden resultar una distracción, permite que los usuarios puedan desactivarlas.
 
-## Ejemplo
+## <a name="example"></a>Ejemplo
 
 Una información sobre herramientas de la aplicación Mapas de Bing.
 
 ![Una información sobre herramientas de la aplicación Mapas de Bing](images/control-examples/tool-tip-maps.png)
 
-## Recomendaciones
+## <a name="recommendations"></a>Recomendaciones
 
 -   Usa información sobre herramientas con moderación (o no la uses en absoluto). La información sobre herramientas es una interrupción. La información sobre herramientas puede distraer tanto como un elemento emergente, así que no la uses a no ser que aporte un valor importante.
 -   El texto de la información sobre herramientas debe ser conciso. La información sobre herramientas son perfectas para frases cortas y fragmentos de frases. Los grandes bloques de texto pueden ser abrumadores y la información sobre herramientas puede agotar el tiempo antes de que el usuario haya terminado de leer.
@@ -78,12 +70,11 @@ Una información sobre herramientas de la aplicación Mapas de Bing.
 -   No pongas imágenes que parezcan interactivas dentro de la información sobre herramientas.
 
 Temas relacionados
------------------------------------------------
 
 * [**Clase ToolTip**](https://msdn.microsoft.com/library/windows/apps/br227608)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

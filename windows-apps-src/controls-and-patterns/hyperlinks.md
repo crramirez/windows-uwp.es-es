@@ -6,11 +6,11 @@ ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 71749f09eb11f779427bc450ae607f3fa99c2490
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 4d474af6930354482f9f8b6e7754ddaf6fe65dac
 
 ---
-# Hipervínculos
+# <a name="hyperlinks"></a>Hipervínculos
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,17 +21,13 @@ Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra apli
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279356"><strong>Elemento de texto Hyperlink</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br242739"><strong>Control HyperlinkButton</strong></a></li>
+<li>[**Elemento de texto Hyperlink**](https://msdn.microsoft.com/library/windows/apps/dn279356)</li>
+<li>[**Control HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa un hipervínculo cuando necesites texto que responda cuando se seleccione y dirija al usuario a más información sobre el texto que se ha seleccionado.
 
@@ -41,13 +37,13 @@ Elige el tipo correcto de hipervínculo según tus necesidades:
 -   Usa un elemento **HyperlinkButton** para los hipervínculos independientes. Un elemento HyperlinkButton es un control Button especializado que puedes usar en cualquier lugar en que usarías un elemento Button.
 -   Usa un elemento **HyperlinkButton** con una [imagen](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.aspx) como su contenido para crear una imagen interactiva.
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 Hipervínculos en la aplicación Calculadora.
 
 ![Ejemplo de un hipervínculo en la aplicación Calculadora](images/control-examples/hyperlinks-calculator.png)
 
-## Crea un elemento de texto Hyperlink
+## <a name="create-a-hyperlink-text-element"></a>Crea un elemento de texto Hyperlink
 
 En este ejemplo se muestra cómo usar un elemento de texto Hyperlink dentro de un bloque [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).
 
@@ -66,7 +62,7 @@ El hipervínculo aparece en línea y fluye con el texto que le rodea:
 
 > **Sugerencia**&nbsp;&nbsp;Cuando uses un elemento Hyperlink en un control de texto con otros elementos de texto en XAML, coloca el contenido en un contenedor [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) y aplica el atributo `xml:space="preserve"` al contenedor Span para mantener el espacio en blanco entre el elemento Hyperlink y otros elementos.
 
-## Crear un elemento HyperlinkButton
+## <a name="create-a-hyperlinkbutton"></a>Crear un elemento HyperlinkButton
 
 Aquí se muestra cómo usar un elemento HyperlinkButton, tanto con texto como con una imagen.
 
@@ -87,7 +83,7 @@ Los botones de hipervínculo con contenido de texto aparecen como texto marcado.
 
 ![Ejemplo de un hipervínculo como control de botón](images/controls_hyperlink-button-image.png)
 
-## Controlar la navegación
+## <a name="handle-navigation"></a>Controlar la navegación
 
 En los dos tipos de hipervínculos, puedes controlar la navegación del mismo modo; puedes establecer la propiedad **NavigateUri** o controlar el evento **Click**.
 
@@ -95,8 +91,8 @@ En los dos tipos de hipervínculos, puedes controlar la navegación del mismo mo
 
 Para usar el hipervínculo para navegar a un URI, establece la propiedad NavigateUri. Cuando un usuario hace clic en el hipervínculo o lo pulsa, el URI especificado se abre en el explorador predeterminado. El explorador predeterminado se ejecuta en un proceso independiente de la aplicación.
 
-> **Nota**
-            &nbsp;&nbsp;No es necesario usar esquemas http: o https:. Se pueden usar esquemas como ms-appx:, ms-appdata: o ms-resources:, si hay contenido de recursos en estas ubicaciones que sea adecuado para cargarlo en un explorador. Sin embargo, el esquema file: se bloquea específicamente. Para más información, consulta [Esquemas de URI](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
+> [!NOTE]
+> No es necesario usar esquemas http: o https:. Se pueden usar esquemas como ms-appx:, ms-appdata: o ms-resources:, si hay contenido de recursos en estas ubicaciones que sea adecuado para cargarlo en un explorador. Sin embargo, el esquema file: se bloquea específicamente. Para más información, consulta [Esquemas de URI](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
 
 > Cuando un usuario hace clic en el hipervínculo, el valor de la propiedad NavigateUri se pasa a un controlador de sistema para esquemas y tipos de URI. El sistema inicia entonces la aplicación que esté registrada para el esquema del URI proporcionado para NavigateUri.
 
@@ -111,7 +107,7 @@ Normalmente no se controla el evento Click a la vez que se especifica un valor d
 
 No hay nada que se pueda hacer en el controlador de eventos Click para impedir que el explorador predeterminado cargue cualquier destino válido especificado para NavigateUri; la acción se realiza automáticamente (de forma asincrónica) cuando el hipervínculo se activa y no se puede cancelar desde el controlador de eventos Click. 
 
-## Subrayados de los hipervínculos
+## <a name="hyperlink-underlines"></a>Subrayados de los hipervínculos
 De manera predeterminada, los hipervínculos aparecen subrayados. Este subrayado es importante porque ayuda a cumplir los requisitos de accesibilidad. Los usuarios daltónicos se ayudan del subrayado para distinguir entre hipervínculos y otros tipos de texto. Si deshabilita los subrayados, considera la posibilidad de agregar algún otro tipo de diferencia de formato para distinguir los hipervínculos de otros tipos de texto, como FontWeight o FontStyle.
 
 **Elementos de texto Hyperlink**
@@ -128,7 +124,7 @@ El texto no aparece subrayado en los siguientes casos:
 
 Si necesitas un botón que aparezca como texto sin subrayado, considera la posibilidad de usar un control Button estándar y aplicar el recurso de sistema `TextBlockButtonStyle` integrado a su propiedad Style.
 
-## Notas para el elemento de texto Hyperlink
+## <a name="notes-for-hyperlink-text-element"></a>Notas para el elemento de texto Hyperlink
 
 Esta sección se aplica únicamente al elemento de texto Hyperlink, no al control HyperlinkButton.
 
@@ -146,16 +142,14 @@ Hyperlink no hereda de [Control](https://msdn.microsoft.com/library/windows/apps
 
 El color predeterminado del hipervínculo es el color de énfasis del sistema. Puedes establecer la propiedad [Foreground](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.foreground.aspx) para reemplazar este comportamiento.
 
-## Recomendaciones
+## <a name="recommendations"></a>Recomendaciones
 
 -   Usa los hipervínculos solo para la navegación; no los uses para otras acciones.
 -   Usa el estilo Body de la tabla de tipos para los hipervínculos basados en texto. Obtén información sobre [**fuentes y la tabla de tipos de Windows 10**](fonts.md).
 -   Mantén los hipervínculos discretos y suficientemente separados para que el usuario pueda diferenciarlos y seleccionarlos con facilidad.
 -   Agrega información sobre herramientas a los hipervínculos que indican dónde se dirigirá al usuario. Si se dirige al usuario a un sitio externo, incluye el nombre de dominio de nivel superior dentro de la información sobre herramientas y un estilo de texto con un color de fuente secundario.
 
-
-
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 - [Controles de texto](text-controls.md)
 - [Directrices para información sobre herramientas](tooltips.md)
@@ -166,6 +160,6 @@ El color predeterminado del hipervínculo es el color de énfasis del sistema. P
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

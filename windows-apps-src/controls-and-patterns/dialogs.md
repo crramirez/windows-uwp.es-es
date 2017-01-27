@@ -5,11 +5,11 @@ title: "Cuadros de diálogo y controles flotantes"
 label: Dialogs
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 86f28a0509ead0632c942c6746fea19acac54931
-ms.openlocfilehash: 6b0b680cd85d6f57c3ca06758ab7dcaef3f7ffe5
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: bc428b42324cd584dfaee1db3c9eb834d30cd69d
 
 ---
-# Cuadros de diálogo y controles flotantes
+# <a name="dialogs-and-flyouts"></a>Cuadros de diálogo y controles flotantes
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -18,31 +18,11 @@ Los cuadros de diálogo y los controles flotantes son elementos transitorios de 
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx">Clase ContentDialog</a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279496">Clase Flyout</a></li>
+<li>[Clase ContentDialog](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)</li>
+<li>[Clase Flyout](https://msdn.microsoft.com/library/windows/apps/dn279496)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-<!--
-<table>
-<tr>
-<th>Dialogs</th><th>Flyouts</th>
-</tr>
-<tr>
-<td>![Example of a full-button dialog](images/controls_dialog_twobutton.png)</td>
-<td>![Example of a flyout](images/flyout-example.png)</td>
-</tr>
-<tr>
-<td>Dialogs are modal UI overlays that provide contextual app information. Dialogs block interactions with the app window until being explicitly dismissed. They often request some kind of action from the user.  </td>
-<td>A flyout is a lightweight contextual popup that displays UI related to what the user is doing. It includes placement and sizing logic, and can be used to reveal a hidden control, show more detail about an item, or ask the user to confirm an action. Flyouts can be quickly dismissed by tapping or clicking somewhere outside the flyout, pressing the Escape key or Back button, resizing the app window, or changing the device's orientation.
-</td>
-</tr>
-</table>
--->
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -64,7 +44,7 @@ Los cuadros de diálogo y los controles flotantes son elementos transitorios de 
 </div>
 </div>
 
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 * Usa los cuadros de diálogo y los controles flotantes para notificar a los usuarios información importante o para solicitar información adicional o confirmación para completar una acción. 
 * No uses un control flotante en lugar de una [información sobre herramientas](tooltips.md) o un [menú contextual](menus.md). Usa una información sobre herramientas para mostrar una descripción breve que se oculta tras un tiempo determinado. Usa un menú contextual para acciones contextuales relacionadas con un elemento de la interfaz de usuario, como copiar y pegar.  
@@ -78,22 +58,9 @@ Los controles flotantes y los cuadros de diálogo se usan con frecuencia para co
 
 
 
-## Cuadros de diálogo frente a controles flotantes
+## <a name="dialogs-vs-flyouts"></a>Cuadros de diálogo frente a controles flotantes
 
 Una vez que hayas determinado que quieres usar un cuadro de diálogo o un control flotante, debes elegir cuál quieres usar. 
-
-<!--
-Dialogs are modal, which means they block all interaction with the app until the user selects a dialog button. To visually reinforce their modal behavior, dialogs draw an overlay layer which partially obscures the temporarily unreachable app UI.
-
-A flyout is a light dismiss control, meaning that users can choose from a variety of actions to quickly dismiss it. These interactions are intended to be lightweight and non-blocking. Light dismiss actions include
-
-* Clicking or tap outside the transient UI
-* Pressing the Escape key
-* Pressing the Back button
-* Resizing the app window
-* Changing device orientation
-
--->
 
 Dado que los cuadros de diálogo bloquean las interacciones y los controles flotantes no, los cuadros de diálogo deben reservarse para situaciones en las que quieres que el usuario centre toda su atención en un dato específico o responda a una pregunta. Los controles flotantes, por el contrario, se pueden usar si quieres llamar la atención sobre algo, pero no hay problemas si el usuario quiere pasarlo por alto. 
 
@@ -128,10 +95,16 @@ Dado que los cuadros de diálogo bloquean las interacciones y los controles flot
 </div>
 </div>
 
+<div class="microsoft-internal-note">
+Los controles de cierre del elemento por cambio de foco capturan el foco del teclado y del controlador para juegos dentro de la interfaz de usuario transitoria hasta que se cierra. Para proporcionar una indicación visual para este comportamiento, los controles de cierre del elemento por cambio de foco de Xbox dibujarán una superposición que atenuará la visibilidad de la interfaz de usuario que está fuera del ámbito. Este comportamiento se puede modificar con la nueva propiedad `LightDismissOverlayMode`. De manera predeterminada, las interfaces de usuario transitorias dibujarán la superposición de cierre del elemento por cambio de foco en Xbox pero no de otras familias de dispositivos, aunque las aplicaciones pueden optar por forzar la superposición siempre en **Activado** o siempre en **Desactivado**.
 
+```xaml
+<MenuFlyout LightDismissOverlayMode=\"Off\">
+```
+</div>
 
-## Cuadros de diálogo
-### Directrices generales
+## <a name="dialogs"></a>Cuadros de diálogo
+### <a name="general-guidelines"></a>Directrices generales
 
 -   Identifica claramente el problema o el objetivo del usuario en la primera línea del texto del cuadro de diálogo.
 -   El título del cuadro de diálogo es la instrucción principal y es opcional.
@@ -144,10 +117,17 @@ Dado que los cuadros de diálogo bloquean las interacciones y los controles flot
 -   Al menos debe aparecer un botón de cuadro de diálogo.
     -   Los botones son el único mecanismo para que los usuarios descarten el cuadro de diálogo.
     -   Usa botones con texto que identifique respuestas específicas a la instrucción principal o el contenido. Un ejemplo sería: "¿Quieres permitir que nombreDeAplicación acceda a tu ubicación?", seguido de los botones "Permitir" y "Bloquear". Cuando las respuestas son específicas, se comprenden con mayor rapidez y la toma de decisiones resulta eficaz.
+    - Presenta los botones de confirmación en el siguiente orden: 
+        -   Aceptar/[Hacerlo]/Sí
+        -   [No hacerlo]/No
+        -   Cancelar
+        
+        (donde [Hacerlo] y [No hacerlo] son respuestas específicas a la instrucción principal).
+   
 -   Los cuadros de diálogo de error muestran el mensaje de error en el cuadro de diálogo, junto con la información pertinente. El único botón que se usa en un cuadro de diálogo de error debe ser "Cerrar" o una acción similar.
 -   No uses cuadros de diálogo en el caso de los errores que son contextuales para un lugar específico de la página, como los errores de validación (en los campos de contraseña, por ejemplo); usa el lienzo de la aplicación para mostrar errores en línea.
 
-### Cuadros de diálogo de confirmación (Aceptar/Cancelar)
+### <a name="confirmation-dialogs-okcancel"></a>Cuadros de diálogo de confirmación (Aceptar/Cancelar)
 Un cuadro de diálogo de confirmación ofrece a los usuarios la posibilidad de confirmar que desean realizar una acción. Pueden confirman la acción o cancelarla.  
 Un cuadro de diálogo de confirmación típico tiene dos botones: un botón de afirmación ("Aceptar") y un botón de cancelación.  
 
@@ -163,7 +143,7 @@ Un cuadro de diálogo de confirmación típico tiene dos botones: un botón de a
 
 > Algunas plataformas colocan el botón de afirmación a la derecha en lugar de a la izquierda. Entonces, ¿por qué recomendamos colocarlo a la izquierda?  Si supones que la mayoría de los usuarios son diestros y sujetan su teléfono con esa mano, realmente resulta más cómodo presionar el botón de afirmación cuando está a la izquierda, porque es más probable que el botón esté dentro del arco del pulgar del usuario. Los botones situados en el lado derecho de la pantalla requerirán que el usuario cambie la posición de su pulgar hacia dentro a una posición menos cómoda.
 
-### Crear un cuadro de diálogo
+### <a name="create-a-dialog"></a>Crear un cuadro de diálogo
 Para crear un cuadro de diálogo, usa la [clase ContentDialog](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx). Puedes crear un cuadro de diálogo en el código o el marcado. Aunque suele ser más fácil definir los elementos de la interfaz de usuario en XAML, en el caso de un cuadro de diálogo simple, es más sencillo usar código solamente. En este ejemplo se crea un cuadro de diálogo para notificar al usuario que no hay conexión Wi-Fi y luego se usa el método [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) para mostrarlo.
 
 ```csharp
@@ -206,10 +186,14 @@ private async void displayDeleteFileDialog()
 }
 ```
 
-## Controles flotantes
-###  Crear un control flotante
+## <a name="flyouts"></a>Controles flotantes
+###  <a name="create-a-flyout"></a>Crear un control flotante
 
-Un control flotante es un contenedor abierto que puede mostrar una interfaz de usuario arbitraria como su contenido.  
+Un control flotante es un contenedor abierto que puede mostrar una interfaz de usuario arbitraria como su contenido. 
+
+<div class="microsoft-internal-note">
+Esto incluye controles flotantes y menús contextuales, que se pueden anidar dentro de otros controles flotantes.
+</div>
 
 Los controles flotantes se asocian a controles específicos. Puedes usar la propiedad [Placement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.placement.aspx) para especificar dónde aparece el control flotante: superior, inferior, izquierda, derecha o completo. Si seleccionas el [modo de colocación completa](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutplacementmode.aspx), la aplicación amplía el control flotante y lo centra dentro de la ventana de la aplicación. Cuando son visibles, deben anclarse al objeto de invocación y se debe especificar su posición relativa preferida con relación al objeto: arriba, izquierda, abajo o derecha. El control flotante también tiene un modo de colocación completa que intenta ampliar el control flotante y centrarlo dentro de la ventana de la aplicación. Algunos controles, como [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx), proporcionan una propiedad [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) que puedes usar para asociar un control flotante. 
 
@@ -295,7 +279,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 }
 ````
 
-### Diseñar un control flotante
+### <a name="style-a-flyout"></a>Diseñar un control flotante
 Para diseñar un control flotante, modifica su propiedad [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx). En el siguiente ejemplo se muestra un párrafo de texto ajustado y se permite que el bloque de texto sea accesible para un lector de pantalla.
 
 ````xaml
@@ -313,11 +297,11 @@ Para diseñar un control flotante, modifica su propiedad [FlyoutPresenterStyle](
 </Flyout>
 ````
 
-## Obtener las muestras
+## <a name="get-the-samples"></a>Obtener las muestras
 *   [Conceptos básicos de la interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
     Consulta todos los controles XAML en un formato interactivo.
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 - [Información sobre herramientas](tooltips.md)
 - [Menús y menús contextuales](menus.md)
 - [**Clase Flyout**](https://msdn.microsoft.com/library/windows/apps/dn279496)
@@ -325,6 +309,6 @@ Para diseñar un control flotante, modifica su propiedad [FlyoutPresenterStyle](
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,27 +1,36 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Para que los usuarios escriban datos con facilidad mediante el teclado táctil o con el panel de entrada suave (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que el usuario escriba."
+Description: "Para ayudar a que los usuarios escriban datos con el teclado táctil o con el panel de entrada por software (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que escriba el usuario."
 MS-HAID: dev\_ctrl\_layout\_txt.use\_input\_scope\_to\_change\_the\_touch\_keyboard
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "Usar el ámbito de entrada para cambiar el teclado táctil"
 ms.assetid: 6E5F55D7-24D6-47CC-B457-B6231EDE2A71
 template: detail.hbs
+keywords: "teclado,accesibilidad,navegación,foco,texto,entrada,interacción del usuario"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 692905c1c6d9b3d706baeadc480041c77163c272
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: caaa6228f2d5b2bb6566ccb285d90a396a1caf01
 
 ---
 
-# Usar el ámbito de entrada para cambiar el teclado táctil
+# <a name="use-input-scope-to-change-the-touch-keyboard"></a>Usar el ámbito de entrada para cambiar el teclado táctil
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Para ayudar a los usuarios a escribir datos con el teclado táctil o con el panel de entrada suave (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que el usuario escriba.
+Para ayudar a que los usuarios escriban datos con el teclado táctil o con el panel de entrada por software (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que escriba el usuario.
 
-**API importantes**
-
--   [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632)
--   [**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028)
-
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632)</li>
+<li>[**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028)</li>
+</ul>
+</div>
 
 
 El teclado táctil se puede usar para escribir texto cuando la aplicación se ejecuta en un dispositivo con pantalla táctil. El teclado táctil se invoca cuando el usuario pulsa en un campo de entrada editable, como una [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) o [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548). Es posible conseguir que los usuarios escriban datos en la aplicación de forma mucho más rápida y sencilla, si estableces el *ámbito de entrada* del control de texto para que coincida con el tipo de datos que esperas que el usuario escriba. El ámbito de entrada proporciona una sugerencia al sistema sobre el tipo de entrada de texto que espera el control para que el sistema pueda proporcionar una distribución del teclado táctil especializada para el tipo de entrada.
@@ -32,7 +41,7 @@ Por ejemplo, si un cuadro de texto se usa únicamente para escribir un PIN de 4 
 - Esta información se aplica únicamente al SIP. No se aplica a teclados de hardware o al teclado en pantalla disponible en las opciones de accesibilidad de Windows.
 - El ámbito de entrada no implica que se realice ninguna validación de entrada y tampoco impide que el usuario proporcione cualquier entrada a través de un teclado de hardware u otro dispositivo de entrada. Sigues siendo responsable de la validación de la entrada en tu código, según sea necesario.
 
-## Cambio del ámbito de entrada de un control de texto
+## <a name="changing-the-input-scope-of-a-text-control"></a>Cambio del ámbito de entrada de un control de texto
 
 Los ámbitos de entrada que están disponibles para tu aplicación de Windows forman parte de la enumeración [**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028). Puedes establecer la propiedad **InputScope** de un [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) o de un [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548) en uno de estos valores.
 
@@ -113,7 +122,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 };
 ```
 
-## Predicción de texto, revisión ortográfica y autocorrección
+## <a name="text-prediction-spell-checking-and-auto-correction"></a>Predicción de texto, revisión ortográfica y autocorrección
 
 Los controles [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) y [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548) tienen varias propiedades que influyen en el comportamiento del SIP. Para proporcionar la mejor experiencia para los usuarios, es importante comprender cómo afectan estas propiedades a la introducción de texto con la entrada táctil.
 
@@ -129,7 +138,7 @@ Los controles [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br20
 
 -   [**PreventKeyboardDisplayOnProgrammaticFocus**](https://msdn.microsoft.com/library/windows/apps/dn299273): Cuando esta propiedad es **true**, impide que el sistema muestre el teclado táctil cuando el foco se establece mediante programación en un control de texto. En su lugar, el teclado se muestra únicamente cuando el usuario interactúa con el control.
 
-## Índice del teclado táctil para Windows y Windows Phone
+## <a name="touch-keyboard-index-for-windows-and-windows-phone"></a>Índice del teclado táctil para Windows y Windows Phone
 
 Estas tablas muestran los diseños de Panel entrada software (SIP) en dispositivos móviles y de escritorio para los valores de ámbito de entrada comunes. El efecto del ámbito de entrada en las funciones que habilitan las propiedades **IsSpellCheckEnabled** y **IsTextPredictionEnabled** se muestran para cada ámbito de entrada. Esta no es una lista completa de los ámbitos de entrada disponibles.
 
@@ -137,7 +146,7 @@ Estas tablas muestran los diseños de Panel entrada software (SIP) en dispositiv
 
 > **Sugerencia**&nbsp;&nbsp;Puedes alternar la mayoría de los teclados táctiles entre una distribución alfabética y una distribución de números y símbolos. En Windows, alterna la tecla **&123**. En Windows Phone, presiona la tecla **&123** para cambiar a la distribución de números y símbolos, y presiona la tecla **abcd** para cambiar a la distribución alfabética.
 
-### Predeterminado
+### <a name="default"></a>Predeterminado
 
 `<TextBox InputScope="Default"/>`
 
@@ -154,7 +163,7 @@ Disponibilidad de funciones:
 -   Uso de mayúsculas automático: habilitada si **IsSpellCheckEnabled** = **true**, deshabilitada si **IsSpellCheckEnabled** = **false**
 -   Predicción de texto: habilitada si **IsTextPredictionEnabled** = **true**, deshabilitada si **IsTextPredictionEnabled** = **false**
 
-### CurrencyAmountAndSymbol
+### <a name="currencyamountandsymbol"></a>CurrencyAmountAndSymbol
 
 `<TextBox InputScope="CurrencyAmountAndSymbol"/>`
 
@@ -165,7 +174,7 @@ La distribución de teclado de números y símbolos predeterminada.
 | ![Teclado táctil de Windows para divisas](images/input-scopes/kbdpccurrencyamountandsymbol.png)<br>También incluye teclas de página a la izquierda y a la derecha para mostrar más símbolos.| ![Teclado táctil de Windows Phone para divisas](images/input-scopes/kbdwpcurrencyamountandsymbol.png) |
 |Disponibilidad de funciones:<ul><li>Revisión ortográfica: habilitada de manera predeterminada, se puede deshabilitar</li><li>Autocorrección: siempre deshabilitada</li><li>Uso de mayúsculas automático: siempre deshabilitado</li><li>Predicción de texto: siempre deshabilitada</li></ul>Igual que **Number** y **TelephoneNumber**. | Disponibilidad de funciones:<ul><li>Revisión ortográfica: habilitada de manera predeterminada, se puede deshabilitar</li><li>Autocorrección: habilitada de forma predeterminada, se puede deshabilitar</li><li>Uso de mayúsculas automático: siempre deshabilitado</li><li>Predicción de texto: habilitada de manera predeterminada, se puede deshabilitar</li>| 
 
-### Url
+### <a name="url"></a>Url
 
 `<TextBox InputScope="Url"/>`
 
@@ -176,7 +185,7 @@ Incluye las teclas **.com** y ![go key](images/input-scopes/kbdgokey.png) (Ir). 
 | ![Teclado táctil de Windows para direcciones URL](images/input-scopes/kbdpcurl.png)<br>También incluye las teclas **:**, **-** y **/**.| ![Teclado táctil de Windows Phone para direcciones URL](images/input-scopes/kbdwpurl.png)<br>Mantén pulsada la tecla del punto para ver las opciones adicionales ( - + &quot; / &amp; : , ). |
 |Disponibilidad de funciones:<ul><li>Revisión ortográfica: habilitada de manera predeterminada, se puede deshabilitar</li><li>Autocorrección: habilitada de forma predeterminada, se puede deshabilitar</li><li>Uso de mayúsculas automático: siempre deshabilitado</li><li>Predicción de texto: siempre deshabilitada</li></ul> | Disponibilidad de funciones:<ul><li>Revisión ortográfica: deshabilitada de manera predeterminada, se puede habilitar</li><li>Autocorrección: deshabilitada de manera predeterminada, se puede habilitar</li><li>Uso de mayúsculas automático: deshabilitado de manera predeterminada, se puede habilitar</li><li>Predicción de texto: deshabilitada de manera predeterminada, se puede habilitar</li></ul> |
 
-### EmailSmtpAddress
+### <a name="emailsmtpaddress"></a>EmailSmtpAddress
 
 `<TextBox InputScope="EmailSmtpAddress"/>`
 
@@ -187,7 +196,7 @@ Incluye las teclas **@** y **.com**. Mantén pulsada la tecla **.com** para most
 | ![Teclado táctil de Windows para direcciones de correo electrónico](images/input-scopes/kbdpcemailsmtpaddress.png)<br>También incluye las teclas **_** y **-**.| ![Teclado táctil de Windows Phone para direcciones de correo electrónico](images/input-scopes/kbdwpemailsmtpaddress.png)<br>Mantén pulsada la tecla del punto para ver las opciones adicionales ( - _ , ; ). |
 |Disponibilidad de funciones:<ul><li>Revisión ortográfica: habilitada de manera predeterminada, se puede deshabilitar</li><li>Autocorrección: habilitada de forma predeterminada, se puede deshabilitar</li><li>Uso de mayúsculas automático: siempre deshabilitado</li><li>Predicción de texto: siempre deshabilitada</li></ul> | Disponibilidad de funciones:<ul><li>Revisión ortográfica: deshabilitada de manera predeterminada, se puede habilitar</li><li>Autocorrección: deshabilitada de manera predeterminada, se puede habilitar</li><li>Uso de mayúsculas automático: deshabilitado de manera predeterminada, se puede habilitar</li><li>Predicción de texto: deshabilitada de manera predeterminada, se puede habilitar</li></ul> |
 
-### Número
+### <a name="number"></a>Número
 
 `<TextBox InputScope="Number"/>`
 
@@ -196,7 +205,7 @@ Incluye las teclas **@** y **.com**. Mantén pulsada la tecla **.com** para most
 | ![Teclado táctil de Windows para números](images/input-scopes/kbdpccurrencyamountandsymbol.png)| ![Teclado táctil de Windows Phone para números](images/input-scopes/kbdwpnumber.png)<br>El teclado contiene números y un separador decimal. Mantén presionada la tecla de punto decimal para ver las opciones adicionales ( , - ). |
 |Igual que **CurrencyAmountAndSymbol** y **TelephoneNumber**. | Disponibilidad de funciones:<ul><li>Revisión ortográfica: siempre deshabilitada</li><li>Autocorrección: siempre deshabilitada</li><li>Uso de mayúsculas automático: siempre deshabilitado</li><li>Predicción de texto: siempre deshabilitada</li></ul> |
 
-### TelephoneNumber
+### <a name="telephonenumber"></a>TelephoneNumber
 
 `<TextBox InputScope="TelephoneNumber"/>`
 
@@ -205,7 +214,7 @@ Incluye las teclas **@** y **.com**. Mantén pulsada la tecla **.com** para most
 | ![Teclado táctil de Windows para números de teléfono](images/input-scopes/kbdpccurrencyamountandsymbol.png)| ![Teclado táctil de Windows Phone para números de teléfono](images/input-scopes/kbdwptelephonenumber.png)<br>El teclado imita el teclado del teléfono. Mantén pulsada la tecla del punto para ver las opciones adicionales ( , ( ) X . ). Mantén pulsada la tecla 0 para insertar +. |
 |Igual que **CurrencyAmountAndSymbol** y **TelephoneNumber**. | Disponibilidad de funciones:<ul><li>Revisión ortográfica: siempre deshabilitada</li><li>Autocorrección: siempre deshabilitada</li><li>Uso de mayúsculas automático: siempre deshabilitado</li><li>Predicción de texto: siempre deshabilitada</li></ul> |
 
-### Buscar
+### <a name="search"></a>Buscar
 
 `<TextBox InputScope="Search"/>`
 
@@ -216,7 +225,7 @@ Incluye la tecla **Buscar** en lugar de la tecla **ENTRAR**.
 | ![Teclado táctil de Windows para búsquedas](images/input-scopes/kbdpcsearch.png)| ![Teclado táctil de Windows Phone para búsquedas](images/input-scopes/kbdwpsearch.png)|
 |Disponibilidad de funciones:<ul><li>Revisión ortográfica: habilitada de manera predeterminada, se puede deshabilitar</li><li>Autocorrección: siempre deshabilitada</li><li>Uso de mayúsculas automático: siempre deshabilitado</li><li>Predicción de texto: habilitada de manera predeterminada, se puede deshabilitar</li></ul> | Disponibilidad de funciones:<ul><li>Revisión ortográfica: habilitada de manera predeterminada, se puede deshabilitar</li><li>Autocorrección: habilitada de forma predeterminada, se puede deshabilitar</li><li>Uso de mayúsculas automático: siempre deshabilitado</li><li>Predicción de texto: habilitada de manera predeterminada, se puede deshabilitar</li></ul> |
 
-### SearchIncremental
+### <a name="searchincremental"></a>SearchIncremental
 
 `<TextBox InputScope="SearchIncremental"/>`
 
@@ -225,7 +234,7 @@ Incluye la tecla **Buscar** en lugar de la tecla **ENTRAR**.
 | ![Teclado táctil de Windows predeterminado](images/input-scopes/kbdpcdefault.png)<br>Misma distribución que **Default**.| ![Teclado táctil de Windows Phone predeterminado](images/input-scopes/kbdwpdefault.png)|
 |Disponibilidad de funciones:<ul><li>Revisión ortográfica: deshabilitada de manera predeterminada, se puede habilitar</li><li>Autocorrección: siempre deshabilitada</li><li>Uso de mayúsculas automático: siempre deshabilitado</li><li>Predicción de texto: siempre deshabilitada</li></ul> | Igual que el valor **Predeterminado**. |
 
-### Fórmula
+### <a name="formula"></a>Fórmula
 
 `<TextBox InputScope="Formula"/>`
 
@@ -236,7 +245,7 @@ Incluye la tecla **=**.
 | ![Teclado táctil de Windows para números de teléfono](images/input-scopes/kbdpcformula.png)<br>También incluye las teclas **%**, **$** y **+**.| ![Teclado táctil de Windows Phone para fórmulas](images/input-scopes/kbdwpformula.png)<br>Mantén pulsada la tecla del punto para ver las opciones adicionales ( - ! ? , ). Mantén pulsada la tecla **=** para ver las opciones adicionales ( ( ) : &lt; &gt; ). |
 |Disponibilidad de funciones:<ul><li>Revisión ortográfica: deshabilitada de manera predeterminada, se puede habilitar</li><li>Autocorrección: siempre deshabilitada</li><li>Uso de mayúsculas automático: siempre deshabilitado</li><li>Predicción de texto: siempre deshabilitada</li></ul> | Disponibilidad de funciones:<ul><li>Revisión ortográfica: habilitada de manera predeterminada, se puede deshabilitar</li><li>Autocorrección: habilitada de forma predeterminada, se puede deshabilitar</li><li>Uso de mayúsculas automático: siempre deshabilitado</li><li>Predicción de texto: habilitada de manera predeterminada, se puede deshabilitar</li></ul> |
 
-### Chat
+### <a name="chat"></a>Chat
 
 `<TextBox InputScope="Chat"/>`
 
@@ -245,7 +254,7 @@ Incluye la tecla **=**.
 | ![Teclado táctil de Windows predeterminado](images/input-scopes/kbdpcdefault.png)<br>Misma distribución que **Default**.| ![Teclado táctil de Windows Phone predeterminado](images/input-scopes/kbdwpdefault.png)<br>Misma distribución que **Default**.|
 |Disponibilidad de funciones:<ul><li>Revisión ortográfica: deshabilitada de manera predeterminada, se puede habilitar</li><li>Autocorrección: siempre deshabilitada</li><li>Uso de mayúsculas automático: siempre deshabilitado</li><li>Predicción de texto: siempre deshabilitada</li></ul> | Disponibilidad de funciones:<ul><li>Revisión ortográfica: habilitada de manera predeterminada, se puede deshabilitar</li><li>Autocorrección: habilitada de forma predeterminada, se puede deshabilitar</li><li>Uso de mayúsculas automático: habilitado de manera predeterminada, se puede deshabilitar</li><li>Predicción de texto: habilitada de manera predeterminada, se puede deshabilitar</li></ul> |
 
-### NameOrPhoneNumber
+### <a name="nameorphonenumber"></a>NameOrPhoneNumber
 
 `<TextBox InputScope="NameOrPhoneNumber"/>`
 
@@ -256,6 +265,6 @@ Incluye la tecla **=**.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

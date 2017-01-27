@@ -4,8 +4,8 @@ ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
 title: Abrir archivos y carpetas con un selector
 description: Para obtener acceso a archivos y carpetas, permite al usuario interactuar con un selector. Puedes usar las clases FileOpenPicker y FileSavePicker para obtener acceso a archivos, y la clase FolderPicker para obtener acceso a una carpeta.
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: e7884f140915d66b4a9f95a4197e717d63b0f25f
+ms.sourcegitcommit: 99a21818fc3b8552de18792f408da860bf6dea22
+ms.openlocfilehash: 08782286228fa25dc492b0e7ccc90958bdec5a7f
 
 ---
 
@@ -24,8 +24,6 @@ ms.openlocfilehash: e7884f140915d66b4a9f95a4197e717d63b0f25f
 Para obtener acceso a archivos y carpetas, permite al usuario interactuar con un selector. Puedes usar las clases [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) y [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) para acceder a archivos y la clase [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881) para acceder a una carpeta.
 
 **Nota**  Para obtener una muestra completa, consulta la [muestra de selector de archivos](http://go.microsoft.com/fwlink/p/?linkid=619994).
-
- 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -95,63 +93,63 @@ El uso del selector de archivos requiere la creación y la personalización de u
 
 1.  **Crear y personalizar un FileOpenPicker**
 
-```CSharp
-var picker = new Windows.Storage.Pickers.FileOpenPicker();
-    picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
-    picker.SuggestedStartLocation =
-        Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
-    picker.FileTypeFilter.Add(".jpg");
-    picker.FileTypeFilter.Add(".jpeg");
-    picker.FileTypeFilter.Add(".png");
-```
+    ```CSharp
+    var picker = new Windows.Storage.Pickers.FileOpenPicker();
+        picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
+        picker.SuggestedStartLocation =
+            Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
+        picker.FileTypeFilter.Add(".jpg");
+        picker.FileTypeFilter.Add(".jpeg");
+        picker.FileTypeFilter.Add(".png");
+    ```
 
-Establece las propiedades en el objeto de selector de archivos que sean relevantes para los usuarios y la aplicación. Para obtener directrices que te ayuden a decidir cómo personalizar el selector de archivos, consulta [Directrices y lista de comprobación para selectores de archivos](https://msdn.microsoft.com/library/windows/apps/hh465182).
+    Establece las propiedades en el objeto de selector de archivos que sean relevantes para los usuarios y la aplicación. Para obtener directrices que te ayuden a decidir cómo personalizar el selector de archivos, consulta [Directrices y lista de comprobación para selectores de archivos](https://msdn.microsoft.com/library/windows/apps/hh465182).
 
-En este ejemplo, se crea una representación visual enriquecida en una práctica ubicación que el usuario puede seleccionar estableciendo tres propiedades: [**ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855), [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) y [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850).
+    En este ejemplo, se crea una representación visual enriquecida en una práctica ubicación que el usuario puede seleccionar estableciendo tres propiedades: [**ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855), [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) y [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850).
 
--   Al establecer la propiedad [**ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855) en el valor de enumeración **Thumbnail** de [**PickerViewMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#thumbnail), se crea una representación visual enriquecida con miniaturas de imágenes para representar archivos en el selector de archivos. Haz esto para seleccionar archivos visuales, como imágenes o vídeos. De lo contrario, usa [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#list). Una aplicación hipotética de correo electrónico con las características **Adjuntar imagen o vídeo** y **Adjuntar documento** establecería el **ViewMode** adecuado para la característica antes de mostrar el selector de archivos.
+    -   Al establecer la propiedad [**ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855) en el valor de enumeración **Thumbnail** de [**PickerViewMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#thumbnail), se crea una representación visual enriquecida con miniaturas de imágenes para representar archivos en el selector de archivos. Haz esto para seleccionar archivos visuales, como imágenes o vídeos. De lo contrario, usa [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#list). Una aplicación hipotética de correo electrónico con las características **Adjuntar imagen o vídeo** y **Adjuntar documento** establecería el **ViewMode** adecuado para la característica antes de mostrar el selector de archivos.
 
--   Establecer [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) en Imágenes mediante [**PickerLocationId.PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br207890) permite al usuario iniciar en una ubicación donde probablemente pueda encontrar imágenes. Establece **SuggestedStartLocation** en una ubicación adecuada para el tipo de archivo que se está seleccionando, por ejemplo, música, imágenes, vídeos o documentos. Desde la ubicación de inicio, el usuario puede dirigirse a otras ubicaciones.
+    -   Establecer [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) en Imágenes mediante [**PickerLocationId.PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br207890) permite al usuario iniciar en una ubicación donde probablemente pueda encontrar imágenes. Establece **SuggestedStartLocation** en una ubicación adecuada para el tipo de archivo que se está seleccionando, por ejemplo, música, imágenes, vídeos o documentos. Desde la ubicación de inicio, el usuario puede dirigirse a otras ubicaciones.
 
--   El uso de [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850) para especificar los tipos de archivo mantiene al usuario concentrado en la selección de los archivos relevantes. Para reemplazar los tipos de archivo anteriores de la propiedad **FileTypeFilter** con entradas nuevas, usa [**ReplaceAll**](https://msdn.microsoft.com/library/windows/apps/br207844) en lugar de [**Add**](https://msdn.microsoft.com/library/windows/apps/br207834).
+    -   El uso de [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850) para especificar los tipos de archivo mantiene al usuario concentrado en la selección de los archivos relevantes. Para reemplazar los tipos de archivo anteriores de la propiedad **FileTypeFilter** con entradas nuevas, usa [**ReplaceAll**](https://msdn.microsoft.com/library/windows/apps/br207844) en lugar de [**Add**](https://msdn.microsoft.com/library/windows/apps/br207834).
 
 2.  **Mostrar FileOpenPicker**
 
-    -   **Para seleccionar un único archivo**
+    - **Para seleccionar un único archivo**
 
-```CSharp
-Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
-        if (file != null)
-        {
-            // Application now has read/write access to the picked file
-            this.textBlock.Text = "Picked photo: " + file.Name;
-        }
-        else
-        {
-            this.textBlock.Text = "Operation cancelled.";
-        }
-```
-
-    -   **Para seleccionar varios archivos**
-
-```CSharp
-var files = await picker.PickMultipleFilesAsync();
-        if (files.Count > 0)
-        {
-            StringBuilder output = new StringBuilder("Picked files:\n");
-
-            // Application now has read/write access to the picked file(s)
-            foreach (Windows.Storage.StorageFile file in files)
+    ```CSharp
+    Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
+            if (file != null)
             {
-                output.Append(file.Name + "\n");
+                // Application now has read/write access to the picked file
+                this.textBlock.Text = "Picked photo: " + file.Name;
             }
-            this.textBlock.Text = output.ToString();
-        }
-        else
-        {
-            this.textBlock.Text = "Operation cancelled.";
-        }
-```
+            else
+            {
+                this.textBlock.Text = "Operation cancelled.";
+            }
+    ```
+
+    - **Para seleccionar varios archivos**  
+
+    ```CSharp
+    var files = await picker.PickMultipleFilesAsync();
+            if (files.Count > 0)
+            {
+                StringBuilder output = new StringBuilder("Picked files:\n");
+
+                // Application now has read/write access to the picked file(s)
+                foreach (Windows.Storage.StorageFile file in files)
+                {
+                    output.Append(file.Name + "\n");
+                }
+                this.textBlock.Text = output.ToString();
+            }
+            else
+            {
+                this.textBlock.Text = "Operation cancelled.";
+            }
+    ```
 
 ## <a name="pick-a-folder-complete-code-listing"></a>Seleccionar una carpeta: lista completa de códigos
 
@@ -159,6 +157,7 @@ var files = await picker.PickMultipleFilesAsync();
 ```CSharp
 var folderPicker = new Windows.Storage.Pickers.FolderPicker();
 folderPicker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.Desktop;
+folderPicker.FileTypeFilter.Add("*");
 
 Windows.Storage.StorageFolder folder = await folderPicker.PickSingleFolderAsync();
 if (folder != null)
@@ -177,14 +176,7 @@ else
 
 **Sugerencia**  Cuando la aplicación obtenga acceso a un archivo o a una carpeta a través del selector de archivos, agrégalo a la propiedad [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) o a la propiedad [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458) para tenerlo controlado en el futuro. Obtendrás más información sobre cómo usar estas listas en el tema [Cómo hacer un seguimiento de los archivos y carpetas usados recientemente](how-to-track-recently-used-files-and-folders.md).
 
- 
 
- 
-
- 
-
-
-
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

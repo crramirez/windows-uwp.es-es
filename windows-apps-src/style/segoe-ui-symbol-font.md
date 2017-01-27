@@ -7,38 +7,28 @@ ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
 label: Segoe MDL2 icons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: a779d4ff5d404c2eca658cee836c5d45c42f14d8
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 1e7914c0641d2897efbcbe5c9479a2ecc1a8dd2d
 
 ---
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+# <a name="segoe-mdl2-icons"></a>Iconos de Segoe MDL2
 
-# Iconos de Segoe MDL2
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Este artículo enumera los iconos que proporciona la fuente Segoe MDL2 Assets. 
 
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn252842"><strong>Enumeración Symbol (XAML)</strong></a></li>
+<li>[**Enumeración Symbol (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn252842)</li>
 </ul>
-
-</div>
 </div>
 
 
+## <a name="about-segoe-mdl2-assets"></a>Acerca de Segoe MDL2 Assets
 
-## ¿Cómo se puede obtener esta fuente?
-Para obtener la fuente Segoe MDL2 Assets, debes instalar Windows 10. 
-
-## Acerca de Segoe MDL2 Assets
-
-La fuente Segoe MDL2 Assets La fuente de iconos Segoe UI Symbol de Windows 8/8.1 se ha reemplazado por la fuente Segoe MDL2 Assets a partir del lanzamiento de Windows 10. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> **Segoe UI Symbol** seguirá estando disponible como recurso "heredado", pero recomendamos que actualices la aplicación para usar la nueva **Segoe MDL2 Assets**.
-
-> **Nota**
->
-> Un **em** es una unidad de medida de la fuente. En la fuente, 1 em es igual al 100 % del valor de punto especificado a 72 ppp. Por ejemplo 16 puntos es igual a 16 píxeles a 72 ppp (lo que también se conoce como meseta 100 %). Las nuevas fuentes MDL2 están diseñadas para que la superficie del icono sea un cuadrado em. Por lo tanto, si pones 16 píxeles de ancho y alto en el código, obtienes una superficie de icono de 16x16 píxeles. Eso no significa que el icono ocupe siempre esta superficie completa.
+Con el lanzamiento de Windows 10, la fuente Segoe MDL2 Assets reemplaza la fuente de iconos Segoe UI Symbol de Windows 8/8.1. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> (**Segoe UI Symbol** seguirá estando disponible como recurso "heredado", pero se recomienda actualizar la aplicación para usar la nueva **Segoe MDL2 Assets**).
 
 La mayor parte de los iconos y controles de interfaz de usuario incluidos en la fuente **Segoe MDL2 Assets** están asignados a un área de uso privado (PUA) de Unicode. El PUA permite que los desarrolladores de fuentes asignen valores de Unicode privados a glifos que no se asignan a puntos de código existentes. Esto es útil al crear una fuente de símbolos, pero genera un problema de interoperabilidad. Si la fuente no está disponible, no se mostrarán los glifos. Usa estos glifos solamente cuando puedas especificar la fuente **Segoe MDL2 Assets** .
 
@@ -46,7 +36,7 @@ Usa estos glifos solamente cuando puedas especificar de forma explícita la fuen
 
 A diferencia de **Segoe UI Symbol**, los iconos de la fuente **Segoe MDL2 activos** no están diseñados para el uso en línea con texto. Esto significa que ya no sirven algunos "trucos" anteriores, como las flechas de muestra progresiva de opciones. De igual modo, como todos los nuevos iconos tienen el mismo tamaño y posición, no es necesario hacerlos con ancho cero. Ahora funcionan como un conjunto. En principio, es posible superponer directamente dos iconos diseñados como un conjunto, ya que encajarán perfectamente. Esto puede hacerse para permitir la coloración en el código. Por ejemplo, U+EA3A y U+EA3B se crearon para el estado de notificación del icono Inicio. Como ya están centrados, el relleno del círculo puede colorearse según el estado.
 
-## Disposición en capas y creación de reflejos
+## <a name="layering-and-mirroring"></a>Disposición en capas y creación de reflejos
 
 Todos los glifos de **Segoe MDL2 Assets** tienen el mismo ancho fijo y un alto y un punto de origen izquierdo coherentes, de modo que es posible lograr efectos de superposición y coloreado simplemente superponiendo glifos. En este ejemplo se muestra un contorno grueso dibujado en la parte superior del corazón rojo de ancho cero.
 
@@ -54,14 +44,17 @@ Todos los glifos de **Segoe MDL2 Assets** tienen el mismo ancho fijo y un alto y
 
 Muchos de los iconos también disponen de formas reflejas para su uso en idiomas que se leen de derecha a izquierda, como el árabe, el dari, el persa y el hebreo.
 
-## Enumeración Symbol
+## <a name="symbol-enumeration"></a>Enumeración Symbol
 Si estás desarrollando una aplicación en C# o VB o C++ y XAML, puedes usar la [**enumeración Symbol**](https://msdn.microsoft.com/library/windows/apps/dn252842) para usar los iconos de la fuente Segoe MDL2 Assets. 
+
+## <a name="how-do-i-get-this-font"></a>¿Cómo se puede obtener esta fuente?
+Para obtener la fuente Segoe MDL2 Assets, debes instalar Windows 10. 
 
 <!--
 Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons than we can show here. Many of these are intended for specialized purposed and are not typically used anywhere else.
 -->
 
-## Lista de iconos
+## <a name="icon-list"></a>Lista de iconos
 
 <table>
 
@@ -5143,10 +5136,7 @@ Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons 
 
 
 
-
-
-
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 * [Directrices sobre fuentes](fonts.md)
 * [**Enumeración Symbol**](https://msdn.microsoft.com/library/windows/apps/dn252842)
@@ -5160,6 +5150,6 @@ Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

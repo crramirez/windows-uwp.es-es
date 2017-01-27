@@ -6,11 +6,11 @@ ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scroll bars
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 3dd5912bdd210751257bb9e495c5a95ce0be20a5
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 8ead56e84e21aaf5005530ed0509efa9440bce59
 
 ---
-# Barras de desplazamiento
+# <a name="scroll-bars"></a>Barras de desplazamiento
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -22,29 +22,26 @@ Un control de visor de desplazamiento está compuesto por tanto contenido como q
 
 ![Muestra del aspecto de los controles de barra de desplazamiento e indicador de movimiento panorámico estándar](images/SCROLLBAR.png)
 
+<div class="microsoft-internal-note">
+Consulta las revisiones completas en [Design Depot](http://designdepot/DesignDepot.FrontEnd/#/ML/Dashboard/1805)
+</div>
 
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209527"><strong>Clase ScrollViewer</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx"><strong>Clase ScrollBar</strong></a></li>
+<li>[**Clase ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)</li>
+<li>[**Clase ScrollBar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 Un [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx) permite mostrar el contenido en un área más pequeña que su tamaño real. Cuando el contenido del visor de desplazamiento no está visible por completo, el visor de desplazamiento muestra barras de desplazamiento que el usuario puede usar para mover el área de contenido que está visible. El área que incluye todo el contenido del visor de desplazamiento es el *tamaño*. El área visible del contenido es la *ventanilla*.
 
 ![Captura de pantalla que ilustra el control de barra de desplazamiento estándar](images/ScrollBar_Standard.jpg)
 
-## Crear un visor de desplazamiento
+## <a name="create-a-scroll-viewer"></a>Crear un visor de desplazamiento
 Para agregar el desplazamiento vertical a la página, ajusta el contenido de la página en un visor de desplazamiento.
 
 ```xaml
@@ -72,7 +69,7 @@ Este XAML muestra cómo colocar una imagen en un visor de desplazamiento y habil
 </ScrollViewer>
 ```
 
-## ScrollViewer en una plantilla de control
+## <a name="scrollviewer-in-a-control-template"></a>ScrollViewer en una plantilla de control
 
 Es habitual que exista un control ScrollViewer como elemento compuesto de otros controles. Un elemento ScrollViewer, junto con la clase [**ScrollContentPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx) para compatibilidad, mostrará una ventanilla junto con las barras de desplazamiento solo cuando el espacio de diseño del control de host tenga una limitación menor que el tamaño del contenido expandido. Esto suele ser así en el caso de las listas, por lo que las plantillas [**ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx) y [**GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx) siempre incluyen un ScrollViewer. [**TextBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) y [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx) también incluyen un ScrollViewer en sus plantillas.
 
@@ -108,7 +105,7 @@ Por ejemplo, aquí te mostramos cómo hacer que las barras de desplazamiento ver
 En los casos donde un ScrollViewer es explícito en el XAML, como se muestra en el código de ejemplo, no necesitas usar una sintaxis de propiedad adjunta. Solo tienes que usar la sintaxis de atributo, por ejemplo `<ScrollViewer VerticalScrollBarVisibility="Visible"/>`.
 
 
-## Recomendaciones
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 -   Siempre que sea posible, diseña para el desplazamiento vertical en lugar del horizontal.
 -   Usa movimiento panorámico en un eje para las áreas de contenido que se extienden más allá de un límite de la ventanilla (vertical u horizontal). Usa movimiento panorámico en dos ejes para las áreas de contenido que se extienden más allá de ambos límites de la ventanilla (vertical y horizontal).
@@ -118,13 +115,13 @@ En los casos donde un ScrollViewer es explícito en el XAML, como se muestra en 
 -   El visor de desplazamiento que uses debe contener un solo objeto. Ten en cuenta que ese objeto puede ser un panel de diseño que contenga a su vez cualquier número de objetos.
 -   No coloques un control [dinámico](tabs-pivot.md) dentro de un visor de desplazamiento para evitar conflictos con la lógica de desplazamiento del control dinámico.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 **Para desarrolladores (XAML)**
 * [**Clase ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -4,29 +4,37 @@ Description: "Aprende a escribir código para una clase Panel personalizada, con
 MS-HAID: dev\_ctrl\_layout\_txt.boxpanel\_example\_custom\_panel
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: BoxPanel, un ejemplo de panel personalizado
+title: BoxPanel, un ejemplo de panel personalizado (aplicaciones de Windows)
 ms.assetid: 981999DB-81B1-4B9C-A786-3025B62B74D6
 label: BoxPanel, an example custom panel
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 4427219987f0524858233cf382cd13121cf77b07
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 9f711fbd6f3562fb05fee70f42304204e602bc0b
 
 ---
 
-# BoxPanel, un ejemplo de panel personalizado
+# <a name="boxpanel-an-example-custom-panel"></a>BoxPanel, un ejemplo de panel personalizado
 
-**API importantes**
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
--   [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)
--   [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
--   [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
+Aprende a escribir código para una clase [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) personalizada, con la implementación de métodos [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) y [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730), y el uso de la propiedad [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514). 
 
-Aprende a escribir código para una clase [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) personalizada, con la implementación de métodos [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) y [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730), y el uso de la propiedad [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514). En el código de ejemplo se muestra un panel personalizado, pero no nos detenemos demasiado en explicar los conceptos de diseño que influyen en la forma en que un panel se puede personalizar para distintos escenarios de diseño. Si quieres más información sobre estos conceptos de diseño y su aplicación a escenarios concretos, consulta [Introducción a los paneles personalizados de XAML](custom-panels-overview.md).
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)</li>
+<li>[**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)</li>
+<li>[**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) </li>
+</ul>
+</div>
+
+En el código de ejemplo se muestra la implementación de un panel personalizado, pero no nos detenemos demasiado en explicar los conceptos de diseño que influyen en la forma en que un panel se puede personalizar para distintos escenarios de diseño. Si quieres más información sobre estos conceptos de diseño y su aplicación a escenarios concretos, consulta [Introducción a los paneles personalizados de XAML](custom-panels-overview.md).
 
 Un *panel* es un objeto que ofrece un comportamiento de diseño para los elementos secundarios que contiene. Este comportamiento tiene lugar cuando se ejecuta el sistema de diseño XAML y se representa la interfaz de usuario de tu aplicación. Se pueden definir paneles personalizados para el diseño XAML derivando una clase personalizada de la clase [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511). De igual modo, el comportamiento del panel se proporciona reemplazando los métodos [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) y [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) y suministrando una lógica que mida y organice los elementos secundarios. Este ejemplo deriva de **Panel**. Cuando se parte de **Panel**, los métodos **ArrangeOverride** y **MeasureOverride** carecen de un comportamiento de inicio. Tu código es el que proporciona la puerta a través de la cual los elementos secundarios se dan a conocer al sistema de diseño XAML y se representan en la interfaz de usuario. Por eso, es sumamente importante que el código tenga en cuenta todos los elementos secundarios y siga los patrones que el sistema de diseño espera.
 
-## Escenario de diseño
+## <a name="your-layout-scenario"></a>Escenario de diseño
 
 Cuando defines un panel personalizado, estás definiendo un escenario de diseño.
 
@@ -38,7 +46,7 @@ Un escenario de diseño se expresa del modo siguiente:
 
 Teniendo esto en mente, el `BoxPanel` que mostramos aquí es para un escenario en particular. Como queremos dar prioridad al código en este ejemplo, todavía no vamos a explicar el escenario en detalle, sino que nos centraremos en los pasos necesarios y en los patrones de codificación. Si primero quieres más información sobre el escenario, ve directamente a ["El escenario para `BoxPanel`"](#scenario) y, luego, regresa al código.
 
-## Derivar de **Panel** para empezar
+## <a name="start-by-deriving-from-panel"></a>Derivar de **Panel** para empezar
 
 Empezaremos derivando una clase personalizada [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511). Probablemente, la forma más sencilla de hacerlo es definir un archivo de código independiente para esta clase. Para hacerlo, usamos las opciones del menú contextual **Agregar** | **Nuevo elemento** | **Clase** de un proyecto en el **Explorador de soluciones** de Microsoft Visual Studio. Asigna el nombre `BoxPanel` a la clase (y al archivo).
 
@@ -82,7 +90,7 @@ public class BoxPanel : Panel
 
 A partir de aquí, te enseñaremos una definición de miembro cada vez, ya sea una invalidación de método o algo auxiliar, como una propiedad de dependencia. Estos elementos se pueden agregar al esqueleto anterior en cualquier orden, y no volveremos a mostrar las instrucciones **using** o la definición del ámbito de la clase en los fragmentos de código hasta que mostremos el código final.
 
-## **MeasureOverride**
+## **<a name="measureoverride"></a>MeasureOverride**
 
 
 ```CSharp
@@ -128,7 +136,8 @@ La forma en la que `BoxPanel` divide el tamaño es bastante sencilla: divide su 
 
 Este panel se puede usar cuando el componente de altura de *availableSize* no esté enlazado. Si esto es así, el panel no tiene una altura conocida que dividir. En este caso, la lógica del paso de medición informa a cada elemento secundario de que todavía carece de una altura enlazada, y lo hace pasando un elemento [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) a la llamada de [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) de los elementos secundarios en los que [**Size.Height**](https://msdn.microsoft.com/library/windows/apps/hh763910) es infinito. Esto puede hacerse. Cuando se llama a **Measure**, la lógica consiste en que [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) se establece en el mínimo de lo siguiente: lo que se pasó a **Measure**, o bien el tamaño natural de dicho elemento de factores como [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) y [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) expresamente definidos.
 
-**Nota**&nbsp;&nbsp;La lógica interna de [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) presenta el mismo comportamiento: **StackPanel** pasa un valor de dimensión infinito a [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) en los elementos secundarios, lo que pone de manifiesto que no hay ninguna limitación en ellos en cuanto a dimensión de orientación. Normalmente, **StackPanel** establece su tamaño dinámicamente para dar cabida a todos los elementos secundarios de una pila que crece en esa dimensión.
+> [!NOTE]
+> La lógica interna de [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) presenta el mismo comportamiento: **StackPanel** pasa un valor de dimensión infinito a [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) en los elementos secundarios, lo que indica que no hay ninguna limitación en ellos en cuanto a dimensión de orientación. Normalmente, **StackPanel** establece su tamaño dinámicamente para dar cabida a todos los elementos secundarios de una pila que crece en esa dimensión.
 
 Sin embargo, el panel en sí no puede devolver un objeto [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) con un valor infinito de [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730); esto generaría una excepción durante el diseño. Por lo tanto, parte de la lógica irá dirigida a averiguar la altura máxima que cada elemento secundario necesita para, luego, usar esa altura como altura de celda en caso de que esta no se haya obtenido ya de las propias limitaciones de tamaño del panel. Aquí te mostramos la función auxiliar `LimitUnboundedSize` a la que se hizo referencia en el código anterior, que toma la altura de celda máxima y la usa para dar al panel una altura finita que devolver, al tiempo que garantiza que `cellheight` sea un número finito antes de que se inicie el paso de organización:
 
@@ -149,7 +158,7 @@ Size LimitUnboundedSize(Size input)
 }
 ```
 
-## **ArrangeOverride**
+## **<a name="arrangeoverride"></a>ArrangeOverride**
 
 ```CSharp
 protected override Size ArrangeOverride(Size finalSize)
@@ -180,7 +189,7 @@ No siempre hay que hacer un recuento mientras se avanza por el bucle, si toda la
 
 Es normal que el objeto *finalSize* de entrada y el objeto [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) que se devuelven de una implementación de [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) sean iguales. Para obtener más información sobre los motivos de esto, consulta la sección "**ArrangeOverride**" en [Introducción a los paneles personalizados de XAML](custom-panels-overview.md).
 
-## Un ajuste: controlar el recuento de filas y columnas
+## <a name="a-refinement-controlling-the-row-vs-column-count"></a>Un ajuste: controlar el recuento de filas y columnas
 
 Este panel se podría compilar y utilizar tal cual está ahora. Sin embargo, le vamos a agregar un ajuste más. En el código que acabas de ver, la lógica coloca la fila o columna extra en el lado más largo dentro de la relación de aspecto. Pero, si quieres que haya un mayor control de las formas de las celdas, probablemente lo más conveniente sea decantarse por un conjunto de celdas de 4x3 en lugar de 3x4, incluso cuando la relación de aspecto del panel sea “vertical”. Por lo tanto, agregaremos una propiedad de dependencia opcional que el usuario del panel puede definir para controlar este comportamiento. A continuación te mostramos la definición de la propiedad de dependencia, que es muy básica:
 
@@ -201,7 +210,7 @@ Y así es como el uso de `UseOppositeRCRatio` repercute en la lógica de medici�
 if (UseOppositeRCRatio) { aspectratio = 1 / aspectratio;}
 ```
 
-## El escenario para BoxPanel
+## <a name="the-scenario-for-boxpanel"></a>El escenario para BoxPanel
 
 El escenario particular para `BoxPanel` es un panel en el que uno de los principales factores determinantes de cómo se divide el espacio consiste en conocer el número de elementos secundarios y dividir el espacio disponible existente del panel. La forma de los paneles es rectangular por naturaleza. Muchos paneles funcionan dividiendo ese espacio rectangular en más rectángulos, que es lo que [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) hace para sus celdas. En el caso de **Grid**, el tamaño de las celdas se establece por medio de los valores de [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/br209324) y [**RowDefinition**](https://msdn.microsoft.com/library/windows/apps/br227606), mientras que los elementos declaran la celda exacta en la que se van a situar mediante las propiedades adjuntas [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) y [**Grid.Column**](https://msdn.microsoft.com/library/windows/apps/hh759774). Para lograr un buen diseño a partir de un elemento **Grid**, normalmente es necesario conocer el número de elementos secundarios de antemano, de modo que haya suficientes celdas y cada elemento secundario defina sus propiedades adjuntas para caber en su propia celda.
 
@@ -211,26 +220,25 @@ Sin embargo, no todos los escenarios de aplicaciones se prestan al enlace de dat
 
 Un escenario avanzado para extender más aún `BoxPanel` (no se muestra aquí) sería incluir los elementos secundarios dinámicos y usar un [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) de un elemento secundario como factor principal para asignar el tamaño de las celdas individuales. Este escenario podría usar tamaños de fila o columna variables o formas que no sean de cuadrícula para que el espacio "desperdiciado" sea menor. Esto requiere una estrategia que permita contener en un solo rectángulo varios rectángulos de diversos tamaños y relaciones de aspecto para lograr el tamaño mínimo y un resultado estético. `BoxPanel`  no hace eso, sino que usa una técnica más sencilla para dividir el espacio. `BoxPanel`La técnica consiste en averiguar el mínimo cuadrado que sea mayor que el recuento de elementos secundarios. Así, por ejemplo, nueve elementos encajarían en un cuadrado de 3x3, 10 elementos necesitan un cuadrado de 4x4. No obstante, con frecuencia se pueden ajustar elementos y, al mismo tiempo, quitar una fila o una columna del cuadrado inicial para ahorrar espacio. En el ejemplo del recuento=10, esto encaja en un rectángulo de 4x3 o de 3x4.
 
-Te estarás preguntando por qué el panel no elige 5x2 para diez elementos, ya que así el número de elementos encajaría a la perfección. Pero, en la práctica, los paneles tienen forma de rectángulos que rara vez presentan una relación de aspecto con una orientación muy marcada. La técnica de los mínimos cuadrados es una forma de influir en la lógica de tamaño para que funcione correctamente con las formas de diseño típicas y no fomentar los cambios de tamaño cuando las formas de celda presentan relaciones de aspecto inusuales.
+Te estarás preguntando por qué el panel no elige 5x2 para diez elementos, ya que así el número de elementos encajaría a la perfección. Pero, en la práctica, los paneles tienen forma de rectángulos que rara vez presentan una relación de aspecto con una orientación muy marcada. La técnica de los mínimos cuadrados es una forma de influir en la lógica de tamaño para que funcione correctamente con las formas de diseño típicas y no fomentar los cambios de tamaño cuando las formas de celda presentan relaciones de aspecto extrañas.
 
-**Nota**&nbsp;&nbsp;Este artículo está orientado a desarrolladores de Windows10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> [!NOTE]
+> Este artículo está orientado a desarrolladores de Windows 10 que escriben aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 **Referencia**
 
-[**FrameworkElement.ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
-
-[**FrameworkElement.MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
-
-[**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)
+* [**FrameworkElement.ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
+* [**FrameworkElement.MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
+* [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)
 
 **Conceptos**
 
-[Alineación, margen y espaciado](alignment-margin-padding.md)
+* [Alineación, margen y espaciado](alignment-margin-padding.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -6,11 +6,11 @@ ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f0083e3c50e7e899e6caf62595a7ecbf0af22b3d
+ms.sourcegitcommit: 98b3a9739b1906b7abb529cea1e7d433118cbcdd
+ms.openlocfilehash: ef57c6d1a00797e2a68291475b6a38778e5d73ad
 
 ---
-# Patrón de maestro y detalles
+# <a name="masterdetails-pattern"></a>Patrón de maestro y detalles
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -18,7 +18,7 @@ El patrón de maestro y detalles tiene un panel maestro (normalmente con una [vi
 
 ![Ejemplo del patrón de maestro y detalles](images/HIGSecOne_MasterDetail.png)
 
-## ¿Es este el patrón adecuado?
+## <a name="is-this-the-right-pattern"></a>¿Es este el patrón adecuado?
 
 El patrón de maestro y detalles funciona bien si quieres:
 
@@ -26,17 +26,17 @@ El patrón de maestro y detalles funciona bien si quieres:
 -   Buscar y dar prioridad a una gran colección de contenido.
 -   Permitir la rápida adición y eliminación de elementos de una lista mientras se trabaja cambiando entre contextos continuamente.
 
-## Elegir el estilo adecuado
+## <a name="choose-the-right-style"></a>Elegir el estilo adecuado
 
 Al implementar el patrón de maestro y detalles, te recomendamos que uses el estilo apilado o el estilo en paralelo, según la cantidad de espacio disponible en pantalla.
 
 | Ancho de ventana disponible | Estilo recomendado |
 |------------------------|-------------------|
-| 320epx - 719epx        | Apilado           |
-| 720epx o más ancho       | En paralelo      |
+| 320 epx - 719 epx        | Apilado           |
+| 720 epx o más ancho       | En paralelo      |
 
  
-## Estilo apilado
+## <a name="stacked-style"></a>Estilo apilado
 
 En el estilo apilado, solo hay un panel visible a la vez: el maestro o los detalles.
 
@@ -44,7 +44,7 @@ En el estilo apilado, solo hay un panel visible a la vez: el maestro o los detal
 
 El usuario comienza en el patrón de panel y "explora en profundidad" hasta el panel de detalles, seleccionando un elemento en la lista maestra. Para el usuario, parece que las vistas de maestro y detalles existen en dos páginas independientes.
 
-### Crear un patrón de maestro y detalles apilado
+### <a name="create-a-stacked-masterdetails-pattern"></a>Crear un patrón de maestro y detalles apilado
 
 Una forma de crear el patrón de maestro y detalles apilado es usar páginas independientes para la vista maestra y de detalles. Coloca la vista de lista que proporciona la lista maestra en una página y el elemento de contenido del panel de detalles en una página separada.
 
@@ -54,7 +54,7 @@ En el panel maestro, un control de [vista de lista](lists.md) funciona bien para
 
 En el panel de detalles, usa el elemento de contenido que sea más apropiado. Si tienes muchos campos independientes, considera la posibilidad de usar un diseño de cuadrícula para organizar los elementos en un formulario.
 
-## Estilo en paralelo
+## <a name="side-by-side-style"></a>Estilo en paralelo
 
 En el estilo en paralelo, los paneles de maestro y de detalles están visibles al mismo tiempo.
 
@@ -62,13 +62,13 @@ En el estilo en paralelo, los paneles de maestro y de detalles están visibles a
 
 La lista del panel de maestro usa una selección visual para indicar el elemento seleccionado actual. Al seleccionar un elemento nuevo en la lista de maestro, se actualiza el panel de detalles.
 
-### Crear un patrón de maestro y detalles en paralelo
+### <a name="create-a-side-by-side-masterdetails-pattern"></a>Crear un patrón de maestro y detalles en paralelo
 
 En el panel maestro, un control de [vista de lista](lists.md) funciona bien para presentar listas que pueden contener imágenes y texto.
 
 En el panel de detalles, usa el elemento de contenido que sea más apropiado. Si tienes muchos campos independientes, considera la posibilidad de usar un diseño de cuadrícula para organizar los elementos en un formulario.
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 Este diseño de una aplicación que realiza un seguimiento de la bolsa usa un patrón de maestro y detalles. En este ejemplo de la aplicación tal como aparecería en el teléfono, la lista o el panel de maestro está a la izquierda, con el panel de detalles a la derecha.
 
@@ -78,9 +78,11 @@ Este diseño de una aplicación que realiza un seguimiento de la bolsa usa un pa
 
 ![Ejemplo de una aplicación con el patrón de maestro y detalles, en el escritorio](images/uap-finance-desktop700.png)
 
+Para obtener un código de ejemplo que muestre el patrón de maestro y detalles, consulta
+- [Muestra de ListView y GridView](http://go.microsoft.com/fwlink/p/?LinkId=619900)
+- [Muestra de lector RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
 
-
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 - [Listas](lists.md)
 - [Buscar](search.md)
@@ -89,6 +91,6 @@ Este diseño de una aplicación que realiza un seguimiento de la bolsa usa un pa
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

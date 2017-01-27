@@ -2,14 +2,14 @@
 author: mcleanbyron
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de una aplicación durante un intervalo de fechas especificado y según otros filtros opcionales."
-title: "Obtener los datos de compra de la aplicación"
+title: "Obtener los datos de las adquisiciones de la aplicación"
 translationtype: Human Translation
-ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
-ms.openlocfilehash: b82136348936d436a374cfef42d5e349ed0d0f36
+ms.sourcegitcommit: ce6535508136f8f7bfc8e0da599eea10a936908d
+ms.openlocfilehash: 2e35da3b3033ecbad8c48184d831ca9465142322
 
 ---
 
-# <a name="get-app-acquisitions"></a>Obtener los datos de compra de la aplicación
+# <a name="get-app-acquisitions"></a>Obtener los datos de las adquisiciones de la aplicación
 
 
 Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados en formato JSON de una aplicación pertenecientes a un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de adquisiciones](../publish/acquisitions-report.md) del panel del Centro de desarrollo de Windows.
@@ -73,8 +73,8 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 | storeClient | Una de las cadenas siguientes:<ul><li><strong>Tienda de Windows Phone (cliente)</strong></li><li><strong>Tienda Windows (cliente)</strong></li><li><strong>Tienda Windows (web)</strong></li><li><strong>Compras por volumen de empresas</strong></li><li><strong>Otros</strong></li></ul> |
 | gender | Una de las cadenas siguientes:<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>Desconocido</strong></li></ul> |
 | market | Es una cadena que contiene el código de país ISO 3166 del mercado donde se realizó la compra. |
-| osVersion | Una de las cadenas siguientes:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Desconocido</strong></li></ul> |
-| deviceType | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconocido</strong></li></ul> |
+| osVersion | Una de las cadenas siguientes:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul> |
+| deviceType | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul> |
 | orderName | Es una cadena que especifica el nombre del pedido del código promocional que se usó para comprar la aplicación (esto solo es aplicable si el usuario adquirió la aplicación canjeando un código promocional). |
 
 <span/> 
@@ -163,6 +163,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

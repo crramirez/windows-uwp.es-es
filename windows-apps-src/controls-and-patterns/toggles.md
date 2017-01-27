@@ -6,11 +6,11 @@ ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: a4fe19dcd6f555273e74236192c5c61e8c6579ab
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 685ef17e17fb17fa620eea84335ce6688a5cfb3e
 
 ---
-# Modificadores para alternar
+# <a name="toggle-switches"></a>Modificadores para alternar
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
@@ -19,18 +19,13 @@ El modificador para alternar representa un conmutador físico que permite a los 
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx"><strong>Clase ToggleSwitch</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx"><strong>Propiedad IsOn</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx"><strong>Evento Toggled</strong></a></li>
+<li>[**Clase ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx)</li>
+<li>[**Propiedad IsOn**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx)</li>
+<li>[**Evento Toggled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa un modificador para alternar operaciones binarias que surten efecto inmediatamente después de que el usuario gira el modificador para alternar. Por ejemplo, usa un modificador para alternar para activar o desactivar servicios o componentes de hardware como, por ejemplo, Wi-Fi.
 
@@ -40,7 +35,7 @@ Si un modificador físico funcionaría para la acción, un modificador para alte
 
 Apenas el usuario activa o desactiva el modificador, recomendamos que la acción correspondiente se realice de inmediato.
 
-### Elegir entre un modificador para alternar y una casilla
+### <a name="choosing-between-toggle-switch-and-check-box"></a>Elegir entre un modificador para alternar y una casilla
 
 Para algunas acciones, tanto un modificador para alternar como una casilla podrían ser adecuados. Para decidir qué control funcionará mejor, sigue estas sugerencias:
 
@@ -58,7 +53,7 @@ Para algunas acciones, tanto un modificador para alternar como una casilla podr�
 
     ![Una casilla que tiene varios elementos seleccionados](images/guidelines_and_checklist_for_toggle_switches_checkbox_multi_select.png)
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 Modificadores para alternar en la configuración general de la aplicación Noticias.
 
@@ -68,7 +63,7 @@ Modificadores para alternar en la configuración del menú Inicio de Windows.
 
 ![Modificadores para alternar en la configuración del menú Inicio de Windows](images/control-examples/toggle-switch-start-settings.png)
 
-## Crear un modificador para alternar
+## <a name="create-a-toggle-switch"></a>Crear un modificador para alternar
 
 Aquí te mostramos cómo crear un modificador para alternar sencillo. Este código XAML crea el modificador para alternar Wi-Fi que se mostró anteriormente.
 
@@ -85,7 +80,7 @@ wiFiToggle.Header = "WiFi";
 stackPanel1.Children.Add(wiFiToggle);
 ```
 
-### IsOn
+### <a name="ison"></a>IsOn
 
 El modificador puede estar activado o desactivado. Usa la propiedad [**IsOn**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx) para determinar el estado del modificador. Cuando se usa el modificador para controlar el estado de otra propiedad binaria, puedes usar un enlace como se muestra aquí.
 
@@ -96,7 +91,7 @@ El modificador puede estar activado o desactivado. Usa la propiedad [**IsOn**](h
 </StackPanel>
 ```
 
-### Toggled
+### <a name="toggled"></a>Toggled
 
 En otros casos, puedes controlar el evento [**Toggled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx) para responder a cambios en el estado.
 
@@ -140,7 +135,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 }
 ```
 
-### Etiquetas On y Off
+### <a name="onoff-labels"></a>Etiquetas On y Off
 
 De forma predeterminada, el modificador para alternar incluye las etiquetas literales On y Off, que se localizan automáticamente. Puedes reemplazar estas etiquetas si configuras las propiedades [**OnContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontent.aspx) y [**OffContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontent.aspx).
 
@@ -154,24 +149,20 @@ En este ejemplo, se reemplazan las etiquetas On/Off con etiquetas Show/Hide.
 
 También puedes usar contenido más complejo si configuras las propiedades [**OnContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontenttemplate.aspx) y [**OffContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontenttemplate.aspx).
 
-## Recomendaciones
+## <a name="recommendations"></a>Recomendaciones
 
--   Sustituye las etiquetas On y Off cuando haya etiquetas más específicas para la opción. Si hay etiquetas cortas (3o4 caracteres) que representan opuestos binarios que son más adecuadas para una determinada opción, úsalas. Por ejemplo, podrías usar "Show/Hide" si la opción es "Mostrar imágenes". Usar etiquetas más específicas puede ayudar a localizarlas en la IU.
+-   Sustituye las etiquetas On y Off cuando haya etiquetas más específicas para la opción. Si hay etiquetas cortas (3 o 4 caracteres) que representan opuestos binarios que son más adecuadas para una determinada opción, úsalas. Por ejemplo, podrías usar "Show/Hide" si la opción es "Mostrar imágenes". Usar etiquetas más específicas puede ayudar a localizarlas en la IU.
 -   Evita reemplazar las etiquetas On y Off a menos que debas hacerlo; usa las etiquetas predeterminadas a menos que la situación requiera que las personalices.
 -   Las etiquetas no deben tener más de 4 caracteres.
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
-[**ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/hh701411)
+- [**Clase ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/hh701411)
 - [Botones de radio](radio-button.md)
 - [Modificadores para alternar](toggles.md)
 - [Casillas](checkbox.md)
 
-**Para desarrolladores (XAML)**
-- [**Clase ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/br209712)
 
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

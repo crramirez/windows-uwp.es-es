@@ -6,12 +6,13 @@ ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
 label: Multiple inputs
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: d4238e0d1becee719148b38acf5a91d74230601d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: a433660665eeaa0caad3f380a587de89b8c74441
 
 ---
 
-# Varias entradas
+# <a name="multiple-inputs"></a>Varias entradas
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Al igual que las personas usan una combinación de voz y gestos para comunicarse entre sí, cuando interactúes con una aplicación pueden resultarte útiles varios tipos y modos de entrada.
 
@@ -24,12 +25,12 @@ Para comenzar, ten en cuenta los distintos escenarios en que la aplicación cont
 -   ¿Se admiten todos los métodos de entrada en todo momento? ¿Con algunos controles? ¿En determinados momentos o circunstancias?
 -   ¿Tiene prioridad un método de entrada?
 
-## Interacciones de modo único (o exclusivo)
+## <a name="single-or-exclusive-mode-interactions"></a>Interacciones de modo único (o exclusivo)
 
 
 Con las interacciones de modo único se admiten varios tipos de entrada, pero solo se puede usar una por acción. Por ejemplo, reconocimiento de voz para los comandos y gestos para la navegación; o bien, escribir texto con entrada táctil o con gestos, según la proximidad.
 
-## Interacciones multimodales
+## <a name="multimodal-interactions"></a>Interacciones multimodales
 
 
 Con las interacciones multimodales, se usan varios métodos de entrada en una secuencia para completar una sola acción.
@@ -45,6 +46,6 @@ El usuario selecciona una foto manteniéndola presionada y, a continuación, dic
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

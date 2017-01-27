@@ -6,20 +6,24 @@ ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
 label: Optical zoom and resizing
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 54c0dc3ffa9fd8716a8f147f408c1c8de5775783
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 2776fe18d20286a3beaf8ba280976316e40119dd
 
 ---
 
-# Zoom óptico y cambio de tamaño
+# <a name="optical-zoom-and-resizing"></a>Zoom óptico y cambio de tamaño
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 En este artículo se describen los elementos de zoom y cambio de tamaño de Windows. También se ofrecen instrucciones de experiencia de usuario para que uses estos nuevos mecanismos de interacción en las aplicaciones.
 
-**API importantes**
-
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Input (XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)
-
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Input (XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+</ul>
+</div>
 
 El zoom óptico permite a los usuarios ampliar la vista del contenido dentro de un área de contenido (se ejecuta sobre la propia área de contenido), mientras que el cambio de tamaño permite cambiar el tamaño relativo de uno o varios objetos sin cambiar la vista del área de contenido (se ejecuta sobre los objetos que están dentro del área de contenido).
 
@@ -40,7 +44,7 @@ El zoom óptico no debe confundirse con el [zoom semántico](../controls-and-pat
 
  
 
-## Qué hacer y qué no hacer
+## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
 
 
 Sigue las directrices que se indican a continuación para las aplicaciones que admitan el cambio de tamaño o zoom óptico:
@@ -69,7 +73,7 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
 
      
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 
 **Ejemplos**
@@ -97,6 +101,6 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

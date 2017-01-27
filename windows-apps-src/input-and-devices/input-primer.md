@@ -6,13 +6,13 @@ ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 19e033455caf677c4e65ffb7bd7ce11a5a93b7a9
-ms.openlocfilehash: 5f6aee51984f86c67db9dc77eace614e385df088
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: b754e3f039e4dca0949bb31fe1da52f6a404dfb4
 
 ---
 
-# Información básica sobre interacción
-
+# <a name="interaction-primer"></a>Información básica sobre interacción
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 ![Tipos de entrada de Windows](images/input-interactions/icons-inputdevices03.png)
 
@@ -22,29 +22,29 @@ UWP usa un sistema "inteligente" de interacción contextual que, en la mayoría 
 
 Familiarízate con cada tipo de dispositivo de entrada y sus comportamientos, capacidades y limitaciones con determinados factores de forma. Esto puede ayudarte a decidir si los controles de plataforma y las prestaciones son suficientes para tu aplicación o requieren que proporciones experiencias de interacción personalizadas.
 
-## Surface Dial
+## <a name="surface-dial"></a>Surface Dial
 
 Para la Actualización de aniversario de Windows 10, presentamos una nueva categoría de dispositivo de entrada llamado rueda de Windows. Surface Dial es el primer dispositivo de esta clase. 
 
-### Compatibilidad con dispositivos
+### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Tableta
 -   PC y portátiles
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Con un factor de forma que se basa en una acción (o gesto) de giro, Surface Dial se ha diseñado como un dispositivo de entrada secundario multimodal que complementa o modifica la entrada de un dispositivo principal. En la mayoría de los casos, el dispositivo se manipula con la mano no dominante del usuario mientras realiza una tarea con la mano dominante (por ejemplo, una entrada manuscrita con un lápiz).
 
-### Más información
+### <a name="more-info"></a>Más información
 
 [Directrices de diseño de Surface Dial](windows-wheel-interactions.md)
 
 
-## Cortana
+## <a name="cortana"></a>Cortana
 
 En Windows 10, la extensibilidad **Cortana** te permite controlar los comandos de voz desde un usuario e iniciar tu aplicación para llevar a cabo una única acción.
 
-### Compatibilidad con dispositivos
+### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
 -   Tableta
@@ -56,18 +56,18 @@ En Windows 10, la extensibilidad **Cortana** te permite controlar los comandos d
 
 ![Cortana](images/input-interactions/icons-cortana01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Un comando de voz es una expresión única, definida en un archivo de definición de comando de voz (VCD), dirigida a una aplicación instalada a través de **Cortana**. Se puede iniciar la aplicación en primer o en segundo plano, según el nivel y la complejidad de la interacción. Por ejemplo, los comandos de voz que requieren más contexto o la entrada del usuario se administran mejor en primer plano, mientras que los comandos básicos se pueden controlar en segundo plano.
 
 Al integrar la funcionalidad básica de tu aplicación y ofrecer un punto de entrada central para que el usuario realice la mayoría de las tareas sin tener que abrir la aplicación directamente, se permite que **Cortana** se convierta en un enlace entre tu aplicación y el usuario. En muchos casos, esto puede ahorrarle al usuario mucho tiempo y esfuerzo. Para obtener más información, consulta las [Directrices para el diseño de Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233).
 
-### Más información
+### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233)
  
 
-## Voz
+## <a name="speech"></a>Voz
 
 Voz es un método eficaz y natural para que los usuarios interactúen con las aplicaciones. Es una forma fácil y precisa de comunicarse con aplicaciones y permite que los usuarios sean productivos y se mantengan informados en diversas situaciones.
 
@@ -75,7 +75,7 @@ La función Voz puede complementar o, en muchos casos, ser el tipo de entrada pr
 
 Texto a voz (también conocido como TTS o síntesis de voz) se usa para informar o dirigir al usuario.
 
-### Compatibilidad con dispositivos
+### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
 -   Tableta
@@ -87,7 +87,7 @@ Texto a voz (también conocido como TTS o síntesis de voz) se usa para informar
 
 ![Voz](images/input-interactions/icons-speech01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Existen tres modos de interacción de Voz:
 
@@ -111,12 +111,12 @@ El método de entrada de voz más básico. Cada expresión se convierte en texto
 
 La función de dictado normalmente se usa cuando una aplicación no necesita comprender el significado o la intención.
 
-### Más información
+### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de Voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
  
 
-## Lápiz
+## <a name="pen"></a>Lápiz
 
 Un lápiz (o pluma) puede servir como un dispositivo señalador de precisión de píxeles (por ejemplo, un mouse) y es el dispositivo de entrada ideal para la entrada de lápiz digital.
 
@@ -126,7 +126,7 @@ Un lápiz (o pluma) puede servir como un dispositivo señalador de precisión de
 
 Cuando hacemos referencia a dispositivos de lápiz, nos referimos a lápices activos que proporcionan datos de entrada enriquecidos y se usan principalmente para la escritura con lápiz precisa y para interacciones de señalización.
 
-### Compatibilidad con dispositivos
+### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
 -   Tableta
@@ -136,7 +136,7 @@ Cuando hacemos referencia a dispositivos de lápiz, nos referimos a lápices act
 
 ![Lápiz](images/input-interactions/icons-pen01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 La plataforma de entrada de lápiz de Windows, junto con un lápiz, ofrece una forma natural de crear notas, dibujos y anotaciones manuscritas. La plataforma admite la captura de datos de entrada de lápiz desde la entrada del digitalizador, la generación de datos de entrada de lápiz, la representación de los datos como trazos de lápiz en el dispositivo de salida, la administración de los datos de entrada de lápiz y la ejecución del reconocimiento de escritura a mano. Además de capturar movimientos espaciales del lápiz a medida que el usuario escribe o dibuja, la aplicación también puede recopilar información como la presión, la forma, el color y la opacidad para ofrecer experiencias de usuario que se asemejan mucho a dibujar sobre papel con un lápiz o un pincel.
 
@@ -144,16 +144,16 @@ La entrada de lápiz y la entrada táctil difieren en la posibilidad de esta úl
 
 Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de lápiz. Por ejemplo, usa los botones anterior y siguiente (o + y -) para permitir a los usuarios pasar páginas de contenido o girar, cambiar de tamaño y aplicar zoom sobre objetos.
 
-### Más información
+### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de lápiz](https://msdn.microsoft.com/library/windows/apps/dn456352)
  
 
-## Función táctil
+## <a name="touch"></a>Función táctil
 
 Con la función táctil, es posible usar gestos físicos mediante uno o más dedos bien para emular la manipulación directa de los elementos de interfaz de usuario (como el movimiento panorámico, girar, cambiar el tamaño o mover), como un método de entrada alternativo (parecido al mouse o al lápiz), o bien como un método de entrada complementario (para modificar los aspectos de otra entrada, como difuminar un trazo de lápiz dibujado con un lápiz). Las experiencias táctiles como esta pueden proporcionar sensaciones más naturales y realistas para los usuarios que interactúan con los elementos en una pantalla.
 
-### Compatibilidad con dispositivos
+### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
 -   Tableta
@@ -163,7 +163,7 @@ Con la función táctil, es posible usar gestos físicos mediante uno o más ded
 
 ![Función táctil](images/input-interactions/icons-touch01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 La compatibilidad con la entrada táctil puede variar considerablemente en función del dispositivo.
 
@@ -179,23 +179,23 @@ En general, la función táctil:
 -   No se limita a la orientación del dispositivo.
 -   Se usa en todas las interacciones, incluida la entrada de texto (teclado táctil) y la entrada manuscrita (configurada por la aplicación).
 
-### Más información
+### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de la función táctil](https://msdn.microsoft.com/library/windows/apps/hh465370)
  
 
-## Panel táctil
+## <a name="touchpad"></a>Panel táctil
 
 Un panel táctil combina la entrada multitáctil indirecta con la entrada precisa de un dispositivo señalador, como un mouse. Esta combinación hace que el panel táctil sea ideal tanto para una interfaz de usuario optimizada para entrada táctil como para los destinos de menor tamaño de las aplicaciones de productividad.
 
-### Compatibilidad con dispositivos
+### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   PC y portátiles
 -   IoT
 
 ![Panel táctil](images/input-interactions/icons-touchpad01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Normalmente, los paneles táctiles admiten un conjunto de gestos táctiles que proporcionan soporte similar a la entrada táctil para la manipulación directa de objetos y la interfaz de usuario.
 
@@ -203,18 +203,18 @@ Debido a esta convergencia de experiencias de interacción admitidas por paneles
 
 Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de mouse. Por ejemplo, usa los botones anterior y siguiente (o + y -) para permitir a los usuarios pasar páginas de contenido o girar, cambiar de tamaño y aplicar zoom sobre objetos.
 
-### Más información
+### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de panel táctil](https://msdn.microsoft.com/library/windows/apps/dn456353)
  
 
-## Teclado
+## <a name="keyboard"></a>Teclado
 
 Un teclado es el principal dispositivo de entrada de texto y, a menudo, resulta indispensable para personas con ciertas discapacidades o para los usuarios que lo consideran una manera más rápida y eficaz de interactuar con una aplicación.
 
 Con [Continuum para teléfonos](http://go.microsoft.com/fwlink/p/?LinkID=699431), una nueva experiencia para dispositivos móviles compatibles con Windows 10, los usuarios pueden conectar sus teléfonos a un mouse y un teclado para que los teléfonos funcionen como un portátil.
 
-### Compatibilidad con dispositivos
+### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
 -   Tableta
@@ -226,7 +226,7 @@ Con [Continuum para teléfonos](http://go.microsoft.com/fwlink/p/?LinkID=699431)
 
 ![Teclado](images/input-interactions/icons-keyboard01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Los usuarios pueden interactuar con aplicaciones universales de Windows a través de un teclado de hardware y dos teclados de software: el teclado en pantalla y el teclado táctil.
 
@@ -243,16 +243,16 @@ En general, un teclado:
 -   Se usa para entrada de texto, navegación, juegos y accesibilidad.
 -   Siempre está disponible, ya sea de forma proactiva o reactiva.
 
-### Más información
+### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de teclado](https://msdn.microsoft.com/library/windows/apps/hh972345)
  
 
-## Mouse
+## <a name="mouse"></a>Mouse
 
 Un mouse es ideal para aplicaciones de productividad e interfaz de usuario de alta densidad en las que las interacciones del usuario requieren precisión a nivel de píxel para la selección de destinos y comandos.
 
-### Compatibilidad con dispositivos
+### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
 -   Tableta
@@ -262,7 +262,7 @@ Un mouse es ideal para aplicaciones de productividad e interfaz de usuario de al
 
 ![Mouse](images/input-interactions/icons-mouse01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Se puede modificar la entrada de mouse con la adición de diversas teclas del teclado (Ctrl, Mayús, Alt, etc.). Estas teclas pueden combinarse con el botón primario del mouse, el botón secundario del mouse, el botón de rueda y los botones X para obtener un conjunto de comandos optimizado para el mouse ampliado. (Algunos dispositivos de mouse de Microsoft tienen dos botones adicionales, denominados botones X, que normalmente se usan para navegar hacia atrás y hacia adelante en exploradores web).
 
@@ -270,16 +270,16 @@ De modo similar al lápiz, la entrada de mouse y la entrada táctil difieren en 
 
 Para admitir estas interacciones, es necesario proporcionar comandos de interfaz de usuario, o prestaciones, específicos de mouse. Por ejemplo, usa los botones anterior y siguiente (o + y -) para permitir a los usuarios pasar páginas de contenido o girar, cambiar de tamaño y aplicar zoom sobre objetos.
 
-### Más información
+### <a name="more-info"></a>Más información
 
 [Directrices para el diseño de mouse](https://msdn.microsoft.com/library/windows/apps/dn456351)
  
 
-## Gesto
+## <a name="gesture"></a>Gesto
 
 Un gesto es cualquier forma de movimiento del usuario que se reconoce como entrada para controlar o interactuar con una aplicación. Los gestos adoptan muchas formas, desde simplemente el uso de una mano para seleccionar como destino algo de la pantalla, pasando por patrones de movimiento específicos y aprendidos, hasta ampliaciones largas de movimiento continuo mediante todo el cuerpo. Ten cuidado al diseñar gestos personalizados, debido a que su significado puede variar en función de la configuración regional y la referencia cultural.
 
-### Compatibilidad con dispositivos
+### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   PC y portátiles
 -   IoT
@@ -288,7 +288,7 @@ Un gesto es cualquier forma de movimiento del usuario que se reconoce como entra
 
 ![Gesto](images/input-interactions/icons-gesture01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Los eventos de gestos estáticos se desencadenan una vez completada una interacción.
 
@@ -303,11 +303,11 @@ Los eventos de gestos de manipulación indican una interacción continua. Estos 
 Debido a la convergencia de las experiencias de interacción admitidas por Windows, también es recomendable que proporciones comandos o prestaciones de interfaz de usuario de estilo mouse en lugar de confiar únicamente en la compatibilidad con la entrada táctil. Por ejemplo, usa los botones anterior y siguiente (o + y -) para permitir a los usuarios pasar páginas de contenido o girar, cambiar de tamaño y aplicar zoom a los objetos.
 
 
-## Controlador para juegos y controlador
+## <a name="gamepadcontroller"></a>Controlador para juegos y controlador
 
 El controlador para juegos y controlador es un dispositivo muy especializado normalmente diseñado para jugar. Sin embargo, también se usa para emular la entrada de teclado básica y proporciona una experiencia de navegación en la interfaz de usuario muy similar al teclado.
 
-### Compatibilidad con dispositivos
+### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   PC y portátiles
 -   IoT
@@ -315,16 +315,16 @@ El controlador para juegos y controlador es un dispositivo muy especializado nor
 
 ![Controlador](images/input-interactions/icons-controller01.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Jugar a juegos e interactuar con una consola especializada.
 
 
-## Varias entradas
+## <a name="multiple-inputs"></a>Varias entradas
 
 Acoger al máximo de usuarios y dispositivos posibles y diseñar tus aplicaciones para que funcionen con el mayor número posible de tipos de entrada (gestos, voz, función táctil, panel táctil, mouse y teclado) maximiza la flexibilidad, la facilidad de uso y la accesibilidad.
 
-### Compatibilidad con dispositivos
+### <a name="device-support"></a>Compatibilidad con dispositivos
 
 -   Teléfonos y tabléfonos
 -   Tableta
@@ -336,7 +336,7 @@ Acoger al máximo de usuarios y dispositivos posibles y diseñar tus aplicacione
 
 ![Varias entradas](images/input-interactions/icons-inputdevices03-vertical.png)
 
-### Uso típico
+### <a name="typical-usage"></a>Uso típico
 
 Al igual que las personas usan una combinación de voz y gestos para comunicarse entre sí, cuando interactúes con una aplicación pueden resultarte útiles varios tipos y modos de entrada. Sin embargo, estas interacciones combinadas deben ser lo más intuitivas y naturales posible, ya que también pueden crear una experiencia muy confusa.
 
@@ -350,6 +350,6 @@ Al igual que las personas usan una combinación de voz y gestos para comunicarse
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

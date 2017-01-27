@@ -1,17 +1,17 @@
 ---
 author: drewbatgit
 ms.assetid: 09BA9250-A476-4803-910E-52F0A51704B1
-description: "En este artículo se muestra cómo usar la interfaz IMediaEncodingProperties para establecer la resolución y la velocidad de fotogramas de la captura de vista previa de la cámara, así como de las fotos y los vídeos capturados."
-title: "Establecer las propiedades de codificación de MediaCapture"
+description: "En este artículo se muestra cómo usar la interfaz IMediaEncodingProperties para establecer la resolución y la velocidad de fotogramas de la secuencia de vista previa de la cámara, así como de las fotos y los vídeos capturados."
+title: "Establecer el formato, la resolución y la velocidad de fotogramas para MediaCapture"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: 1b20578fe52c004a55c5099ccb89e8c180571009
+ms.sourcegitcommit: 6c3ed4ab773fe821acaee7d5b8c70fdc8770de81
+ms.openlocfilehash: 828cbddd9568bd4e9d0a571880a867afff293e34
 
 ---
 
-# Establecer las propiedades de codificación de MediaCapture
+# <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>Establecer el formato, la resolución y la velocidad de fotogramas para MediaCapture
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se muestra cómo usar la interfaz [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) para establecer la resolución y la velocidad de fotogramas de la secuencia de vista previa de la cámara, así como de las fotos y los vídeos capturados. También se muestra cómo asegurarse de que la relación de aspecto de la secuencia de vista previa coincida con la de la secuencia multimedia capturada.
@@ -23,7 +23,7 @@ El código de este artículo es una adaptación de la [muestra de CameraResoluti
 > [!NOTE] 
 > Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para la implementación de la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios más avanzados de captura. El código que encontrarás en este artículo se ha agregado suponiendo que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
 
-## Clase auxiliar de propiedades de codificación multimedia
+## <a name="a-media-encoding-properties-helper-class"></a>Clase auxiliar de propiedades de codificación multimedia
 
 Crear una clase auxiliar simple para encapsular la funcionalidad de la interfaz [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) facilita la selección de un conjunto de propiedades de codificación que cumplan criterios particulares. Esta clase auxiliar resulta especialmente útil debido al comportamiento de la característica de propiedades de codificación siguiente:
 
@@ -38,13 +38,13 @@ Debes incluir el espacio de nombres [**Windows.Media.MediaProperties**](https://
 
 [!code-cs[StreamPropertiesHelper](./code/BasicMediaCaptureWin10/cs/StreamPropertiesHelper.cs#SnippetStreamPropertiesHelper)]
 
-## Determinar si las secuencias de vista previa y captura son independientes
+## <a name="determine-if-the-preview-and-capture-streams-are-independent"></a>Determinar si las secuencias de vista previa y captura son independientes
 
 En algunos dispositivos, se usa el mismo pin de hardware para las secuencias de vista previa y captura. En estos dispositivos, al establecer las propiedades de codificación de uno también se establecen las del otro. En los dispositivos que usan pines de hardware diferentes para la vista previa y la captura, las propiedades pueden establecerse por separado para cada secuencia. Usa el siguiente código para determinar si las capturas de vista previa y captura son independientes. Debes ajustar la interfaz de usuario para habilitar o deshabilitar la configuración de las secuencias de forma independiente en función del resultado de esta prueba.
 
 [!code-cs[CheckIfStreamsAreIdentical](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCheckIfStreamsAreIdentical)]
 
-## Obtener una lista de propiedades de secuencia disponibles
+## <a name="get-a-list-of-available-stream-properties"></a>Obtener una lista de propiedades de secuencia disponibles
 
 Obtén una lista de las propiedades de secuencia disponibles para un dispositivo de captura obteniendo el [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) del objeto [MediaCapture](capture-photos-and-video-with-mediacapture.md) de tu aplicación y, después, llama a [**GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) y pasa uno de los valores de [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640), **VideoPreview**, **VideoRecord** o **Photo**. En este ejemplo, se usa la sintaxis de Linq para crear una lista de objetos **StreamPropertiesHelper**, que se definió anteriormente en este artículo, para cada uno de los valores de [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) devueltos de **GetAvailableMediaStreamProperties**. En primer lugar, en este ejemplo se usan los métodos de extensión Linq para ordenar las propiedades devueltas primero según la resolución y, luego, según la velocidad de fotogramas.
 
@@ -52,7 +52,7 @@ Si la aplicación tiene requisitos de velocidad de fotogramas o de resolución e
 
 [!code-cs[PopulateStreamPropertiesUI](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPopulateStreamPropertiesUI)]
 
-## Establecer las propiedades de secuencia deseadas
+## <a name="set-the-desired-stream-properties"></a>Establecer las propiedades de secuencia deseadas
 
 Indica al controlador de dispositivo de vídeo que use tus propiedades de codificación deseadas, para lo cual debe llamar a [**SetMediaStreamPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh700895) y pasar el valor **MediaStreamType** que indica si se deben establecer las propiedades de foto, vídeo o vista previa. En este ejemplo se establecen las propiedades de codificación solicitadas cuando el usuario selecciona un elemento en uno de los objetos **ComboBox** que se rellenan con el método auxiliar **PopulateStreamPropertiesUI**.
 
@@ -62,7 +62,7 @@ Indica al controlador de dispositivo de vídeo que use tus propiedades de codifi
 
 [!code-cs[VideoSettingsChanged](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoSettingsChanged)]
 
-## Coincidir con la relación de aspecto de las secuencias de vista previa y captura
+## <a name="match-the-aspect-ratio-of-the-preview-and-capture-streams"></a>Coincidir con la relación de aspecto de las secuencias de vista previa y captura
 
 Una aplicación de cámara típica proporcionará la interfaz de usuario para el usuario de modo que pueda seleccionar la resolución de captura de vídeo o foto, pero establecerá mediante programación la resolución de vista previa. Hay algunas estrategias diferentes para seleccionar la mejor resolución de secuencia de vista previa de la aplicación:
 
@@ -90,6 +90,6 @@ Para garantizar que las secuencias de captura de foto o vídeo coincidan con la 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

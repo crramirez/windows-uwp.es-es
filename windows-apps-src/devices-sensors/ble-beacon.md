@@ -3,8 +3,8 @@ author: msatranjr
 title: Anuncios de Bluetooth
 description: "En esta sección se incluyen artículos acerca de cómo integrar anuncios de Bluetooth de bajo consumo (LE) en aplicaciones para la Plataforma universal de Windows (UWP) a través de las API AdvertisementWatcher y AdvertisementPublisher."
 translationtype: Human Translation
-ms.sourcegitcommit: b1493d3d0d61a5fc45ab563b56bffa43650bbed9
-ms.openlocfilehash: feda9b20b4cbc265832bdb51f90546d9e1f668e8
+ms.sourcegitcommit: b454e08015ea9bd6240c836563b1fec78e38dc2c
+ms.openlocfilehash: e21567bf2ffa5b05861cf96099290e1bb66dbf03
 
 ---
 
@@ -39,7 +39,7 @@ Para usar la funcionalidad básica de Bluetooth LE en una aplicación para la Pl
 
 Los anuncios de Bluetooth LE permiten que tu dispositivo señalice constantemente una carga específica, denominada anuncio. Este anuncio puede verse en cualquier otro dispositivo cercano compatible con Bluetooth LE, si está configurado para escuchar este anuncio específico.
 
-**Nota** Para proteger la privacidad del usuario, la vida útil de tu anuncio está vinculada a la de tu aplicación. Puedes crear un BluetoothLEAdvertisementPublisher y llamar a Inicio en una tarea en segundo plano para un anuncio en segundo plano. Para obtener más información sobre las tareas en segundo plano, consulta [Inicio, reanudación y tareas en segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/index).
+**Nota** Para proteger la privacidad del usuario, la vida útil de tu anuncio está vinculada a la de tu aplicación. Puedes crear un BluetoothLEAdvertisementPublisher y llamar a Inicio en una tarea en segundo plano para un anuncio en segundo plano. Para obtener más información sobre las tareas en segundo plano, consulta [Inicio, reanudación y tareas en segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
 
 ### <a name="basic-publishing"></a>Publicación básica
 
@@ -155,6 +155,6 @@ Esto puede traducirse aproximadamente a distancia, pero no se debe usar para med
 Una alternativa a juzgar la distancia pura es definir "depósitos". Las radios tienden a informar de 0 a-50 DBm cuando están muy cerca, de -50 a -90 cuando están a una distancia media y menos de -90 cuando están lejos. El método de ensayo y error es la mejor forma de determinar cómo quieres que sean estos depósitos para tu aplicación.
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -6,16 +6,18 @@ ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 9d19107a29c471a811e87fc548656ff2d970754d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: f8cb9c36b42936b8dfd24bbd5f88e2cf500e930f
 
 ---
 
-# Iconos de aplicaciones para UWP
+# <a name="icons-for-uwp-apps"></a>Iconos de aplicaciones para UWP
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Los iconos adecuados armonizan con la tipografía y con el resto del lenguaje de diseño. No mezclan metáforas y comunican solo lo necesario de la manera más rápida y simple posible. 
 
-## Tablas de tamaño de escalado lineal 
+## <a name="linear-scaling-size-ramps"></a>Tablas de tamaño de escalado lineal 
 
 <table>
     <tr> 
@@ -32,7 +34,7 @@ Los iconos adecuados armonizan con la tipografía y con el resto del lenguaje de
     </tr>
 </table>
 
-## Formas comunes
+## <a name="common-shapes"></a>Formas comunes
 
 Por lo general, los iconos deben maximizar el espacio disponible dejando poco libre. Estas formas proporcionan puntos de partida para cambiar el tamaño de formas básicas. 
 
@@ -40,7 +42,7 @@ Por lo general, los iconos deben maximizar el espacio disponible dejando poco li
 
 Usa la forma que corresponda con la orientación del icono y compón alrededor de estos parámetros básicos. No es necesario que los iconos rellenen o se ajusten completamente a la forma y pueden modificarse según sea necesario para garantizar un equilibrio óptimo. 
 
-<table>
+<table class="uwpd-noborder">
     <tr>
         <td>Círculo<td>
         <td>Cuadrado</td>
@@ -63,7 +65,7 @@ Usa la forma que corresponda con la orientación del icono y compón alrededor d
 
 </table>
 
-## Ángulos
+## <a name="angles"></a>Ángulos
 
 Además de usar la misma cuadrícula y el mismo grosor de línea, los iconos se construyen con elementos comunes. 
 
@@ -98,7 +100,7 @@ Estas líneas pueden combinarse, unirse, girarse y reflejarse en la creación de
     </tr>
 </table>
 
-## Curvas
+## <a name="curves"></a>Curvas
 
 Las líneas curvas se crean a partir de las secciones de un círculo completo y no se deben sesgar a menos que sea necesario para ajustarlas a la cuadrícula de píxeles. 
 
@@ -117,19 +119,19 @@ Las líneas curvas se crean a partir de las secciones de un círculo completo y 
     </tr>    
 </table>
 
-## Construcción geométrica
+## <a name="geometric-construction"></a>Construcción geométrica
 
 Recomendamos el uso de formas geométricas puras para construir iconos.
 
 ![Icono de guitarra con superposición de formas geométricas ](images/icons-geometric-construction.png)
 
-## Formas rellenas 
+## <a name="filled-shapes"></a>Formas rellenas 
 
 Los iconos pueden contener formas rellenas cuando sea necesario, pero no deben superar los 4 píxeles en 32 × 32 píxeles. Los círculos rellenos no deben ser mayores de 6 × 6 píxeles. 
 
 ![Relleno de 5 x 8 píxeles ](images/icons-filled-shapes.png)
 
-## Distintivos
+## <a name="badges"></a>Distintivos
 
 Una "distintivo" es un término genérico que se usa para describir un elemento agregado a un icono que no se ha diseñado para integrarse con el elemento base del icono. Por lo general, estos transmiten más información sobre el icono, como el estado o la acción. Otros términos comunes son: superposición, anotación o modificador. 
 
@@ -151,7 +153,7 @@ Los distintivos de estado se representan con un objeto relleno de color encima d
 </table>
 <p></p>
 
-### Color de los distintivos 
+### <a name="badge-color"></a>Color de los distintivos 
 
 El color de un distintivo solo debe usarse para transmitir el estado de un icono. Los colores usados en los distintivos de estado transmiten mensajes emocionales específicos para el usuario. 
 
@@ -163,20 +165,20 @@ El color de un distintivo solo debe usarse para transmitir el estado de un icono
 </table>
 <p></p>
 
-### Posición de los distintivos
+### <a name="badge-position"></a>Posición de los distintivos
 
 La posición predeterminada de cualquier distintivo de estado o acción es la esquina inferior derecha. Usa las demás posiciones solo si el diseño no permite la predeterminada. 
 
-### Cambio de tamaño de los distintivos
+### <a name="badge-sizing"></a>Cambio de tamaño de los distintivos
 
 Los distintivos deben tener un tamaño de entre 10 y 18 píxeles en una cuadrícula de 32 x 32 píxeles. 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 * [Directrices sobre los activos de icono y de ventanas](../controls-and-patterns/tiles-and-notifications-app-assets.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

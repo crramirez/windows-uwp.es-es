@@ -4,8 +4,8 @@ Description: "Muestra cómo convertir manualmente una aplicación de escritorio 
 Search.Product: eADQiWindows 10XVcnh
 title: "Convertir manualmente una aplicación de escritorio de Windows en una aplicación para la Plataforma universal de Windows (UWP)"
 translationtype: Human Translation
-ms.sourcegitcommit: ee697323af75f13c0d36914f65ba70f544d046ff
-ms.openlocfilehash: f55f3bd6479cdf076c51cf574b07bfb5ce3a805c
+ms.sourcegitcommit: b612b2c94de79f48a375ae3469c35dee6ce3939d
+ms.openlocfilehash: 73f30d564fcec1b748b4d59ff545e25b62b1c719
 
 ---
 
@@ -57,21 +57,7 @@ El archivo _appxmanifest.xml_ debe tener el siguiente contenido (como mínimo). 
     </Package>
 ```
 
-## <a name="add-unplated-assets"></a>Agregar los activos sin placa
-
-Aquí te mostramos cómo configurar los activos de 44 x 44 para la aplicación que se muestran en la barra de tareas.
-
-1. Obtén las imágenes de 44 x 44 correctas y cópialas en la carpeta que contiene las imágenes (es decir, los activos).
-
-2. Para cada imagen de 44 x 44, crea una copia en la misma carpeta y anexa *.targetsize-44_altform-unplated* al nombre del archivo. Debe tener 2 copias de cada icono, cada una llamada de forma específica. Por ejemplo, después de completar el proceso, la carpeta de activos podría contener *MYAPP_44x44.png* y *MYAPP_44x44.targetsize-44_altform-unplated.png* (nota: el primero es el icono al que se hace referencia en el appxmanifest, en el atributo de VisualElements *Square44x44Logo*). 
-
-3.  En el AppXManifest, establece el atributo BackgroundColor para cada icono que estás corrigiendo en transparent. Este atributo se puede encontrar en VisualElements para cada aplicación.
-
-4.  Abre CMD, cambia el directorio a la carpeta raíz del paquete y crea un archivo priconfig.xml ejecutando el comando ```makepri createconfig /cf priconfig.xml /dq en-US```.
-
-5.  Mediante CMD, quédate en la carpeta raíz del paquete y crea los archivos resources.pri mediante el comando ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml```. Por ejemplo, el comando de la aplicación podría tener el siguiente aspecto ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```. 
-
-6.  Empaqueta tu AppX mediante las instrucciones del paso siguiente para ver los resultados.
+¿Tienes activos sin placa que querrías agregar? Consulta la sección sobre [activos sin placa](#unplated-assets) más adelante en este artículo para obtener más información sobre cómo hacerlo.
 
 ## <a name="run-the-makeappx-tool"></a>Ejecutar la herramienta MakeAppX
 
@@ -106,14 +92,28 @@ C:\> MakeCert.exe -r -h 0 -n "CN=<publisher_name>" -eku 1.3.6.1.5.5.7.3.3 -pe -s
 C:\> pvk2pfx.exe -pvk <my.pvk> -spc <my.cer> -pfx <my.pfx>
 C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
 ```
-
 Cuando ejecutes MakeCert.exe y se te pida que escribas una contraseña, selecciona **ninguna**. Para obtener más información sobre los certificados y las firmas, consulta: 
 
 - [Cómo crear certificados temporales para su uso durante el desarrollo](https://msdn.microsoft.com/library/ms733813.aspx)
-
 - [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)
-
 - [SignTool.exe (Sign Tool)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
+
+<span id="unplated-assets" />
+## <a name="add-unplated-assets"></a>Agregar los activos sin placa
+
+Aquí te mostramos cómo configurar opcionalmente los activos de 44 x 44 para la aplicación que se muestran en la barra de tareas. 
+
+1. Obtén las imágenes de 44 x 44 correctas y cópialas en la carpeta que contiene las imágenes (es decir, los activos).
+
+2. Para cada imagen de 44 x 44, crea una copia en la misma carpeta y anexa *.targetsize-44_altform-unplated* al nombre del archivo. Debe tener 2 copias de cada icono, cada una llamada de forma específica. Por ejemplo, después de completar el proceso, la carpeta de activos podría contener *MYAPP_44x44.png* y *MYAPP_44x44.targetsize-44_altform-unplated.png* (nota: el primero es el icono al que se hace referencia en el appxmanifest, en el atributo de VisualElements *Square44x44Logo*). 
+
+3.  En el AppXManifest, establece el atributo BackgroundColor para cada icono que estás corrigiendo en transparent. Este atributo se puede encontrar en VisualElements para cada aplicación.
+
+4.  Abre CMD, cambia el directorio a la carpeta raíz del paquete y crea un archivo priconfig.xml ejecutando el comando ```makepri createconfig /cf priconfig.xml /dq en-US```.
+
+5.  Mediante CMD, quédate en la carpeta raíz del paquete y crea los archivos resources.pri mediante el comando ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml```. Por ejemplo, el comando de la aplicación podría tener el siguiente aspecto ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```. 
+
+6.  Empaqueta tu AppX mediante las instrucciones del paso siguiente para ver los resultados.
 
 
 

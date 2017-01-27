@@ -6,11 +6,11 @@ ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 7e52f9d379b909c4dd35bc535cbca2d7b8cca6ac
+ms.sourcegitcommit: 92c523c100a021808e01dffe4cd9b5c47c21b58a
+ms.openlocfilehash: 3ad89682248462efa5022467ceb330da03843de4
 
 ---
-# Vista invertida
+# <a name="flip-view"></a>Vista invertida
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,25 +19,18 @@ Usa la vista invertida para explorar una a una las imágenes u otros elementos d
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx"><strong>Clase FlipView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx"><strong>Propiedad ItemsSource</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx"><strong>Propiedad ItemTemplate</strong></a></li>
+<li>[**Clase FlipView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx)</li>
+<li> [**Propiedad ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)</li>
+<li>[**Propiedad ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)</li>
+
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 La vista invertida es ideal para examinar imágenes de colecciones pequeñas o medianas (de hasta 25 elementos, más o menos). Algunos ejemplos de estas colecciones son elementos de la página de detalles de un producto o las fotos de un álbum de fotos. Aunque no recomendamos la vista para alternar para colecciones más grandes, es un control habitual para ver imágenes individuales en un álbum de fotos.
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 Un diseño típico de la vista para alternar es la navegación horizontal, comenzando por el extremo izquierdo y desplazándose hacia la derecha. Este diseño funciona bien tanto en la orientación vertical como horizontal en todos los dispositivos:
 
@@ -47,13 +40,13 @@ Asimismo, también puedes examinar verticalmente una vista invertida:
 
 ![Ejemplo de vista invertida vertical](images/controls_flipview_vertical.jpg)
 
-## Crear una vista invertida nueva
+## <a name="create-a-flip-view"></a>Crear una vista invertida nueva
 
 La clase FlipView forma parte de [ItemsControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.aspx), de modo que puede contener una colección de elementos de cualquier tipo. Para rellenar la vista, agrega elementos a la colección [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) o establece la propiedad [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) en un origen de datos.
 
 De manera predeterminada, un elemento de datos se muestra en la vista invertida como una representación de cadena del objeto de datos al que está enlazado. Para especificar exactamente cómo se muestran los elementos en la vista invertida, puedes crear una clase [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.datatemplate.aspx) para definir el diseño de los controles que se usan para mostrar un elemento individual. Los controles del diseño se pueden enlazar a las propiedades de un objeto de datos o tener contenido definido en línea. A continuación, asigna la clase DataTemplate a la propiedad [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) de la clase FlipView.
 
-### Agregar elementos a la colección "Items"
+### <a name="add-items-to-the-items-collection"></a>Agregar elementos a la colección "Items"
 
 Puedes agregar elementos a la colección [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) mediante lenguaje XAML o código. Normalmente, los elementos se agregan de esta forma si tienes un pequeño número de elementos que no cambian y que se definen fácilmente en XAML, o si generas los elementos en el código en tiempo de ejecución. Esta es una vista invertida con elementos definidos en línea.
 
@@ -80,7 +73,7 @@ Cuando agregas elementos a una vista invertida, se colocan automáticamente en u
 
 Cuando defines los elementos en XAML, se agregan automáticamente a la colección Items.
 
-### Establecer el origen de los elementos
+### <a name="set-the-items-source"></a>Establecer el origen de los elementos
 
 Por lo general, se usa una vista invertida para mostrar los datos de un origen como una base de datos o Internet. Para rellenar una vista invertida desde un origen de datos, debes establecer la propiedad [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) en una colección de elementos de datos.
 
@@ -120,7 +113,7 @@ En este ejemplo, ItemsSource está enlazado a una clase [**CollectionViewSource*
 
 >**Nota**&nbsp;&nbsp;Puedes llenar una vista invertida agregando elementos a su colección Items o definiendo su propiedad ItemsSource, pero no puedes usar ambos métodos al mismo tiempo. Si estableces la propiedad ItemsSource y agregas un elemento en XAML, el elemento agregado se omite. Si estableciste la propiedad ItemsSource y decides agregar un elemento a la colección Items en código, se inicia una excepción.
 
-### Especificar el aspecto de los elementos
+### <a name="specify-the-look-of-the-items"></a>Especificar el aspecto de los elementos
 
 De manera predeterminada, un elemento de datos se muestra en la vista invertida como una representación de cadena del objeto de datos al que está enlazado. Seguramente quieras mostrar una presentación más enriquecida de los datos. Para especificar con exactitud cómo se mostrarán los elementos en la vista invertida, debes crear una clase [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx). El lenguaje XAML de la clase DataTemplate define el diseño y la apariencia de los controles usados para mostrar un elemento individual. Los controles del diseño se pueden enlazar a las propiedades de un objeto de datos o tener contenido definido en línea. La clase DataTemplate se asigna a la propiedad [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) del control FlipView.
 
@@ -149,7 +142,7 @@ Esta es la apariencia del diseño definido por la plantilla de datos.
 
 Plantilla de datos de la vista invertida.
 
-### Establecer la orientación de la vista invertida
+### <a name="set-the-orientation-of-the-flip-view"></a>Establecer la orientación de la vista invertida
 
 De manera predeterminada, la vista invertida se voltea de forma horizontal. Para voltearla de forma vertical, usa un panel StackPanel que tenga orientación vertical, al igual que la propiedad [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) de la vista invertida.
 
@@ -186,7 +179,7 @@ Esta es la apariencia de la vista invertida con orientación vertical.
 
 ![Ejemplo de vista invertida vertical](images/controls_flipview_vertical.jpg)
 
-## Agregar un indicador de contexto
+## <a name="adding-a-context-indicator"></a>Agregar un indicador de contexto
 
 Un indicador de contexto en una vista invertida proporciona un punto de referencia útil. Los puntos de un indicador de contexto estándar no son interactivos. Tal como se muestra en este ejemplo, la mejor ubicación es, por lo general, centrada y debajo de la galería:
 
@@ -196,7 +189,9 @@ En el caso de colecciones más grandes (de 10 a 25 elementos), considera la posi
 
 ![Ejemplo de indicador de contexto](images/controls_contextindicator.jpg)
 
-## Cosas que hacer y cosas que evitar
+Para obtener un ejemplo de código que muestre cómo agregar un indicador de contexto a FlipView, consulta [Muestra de FlipView XAML](http://go.microsoft.com/fwlink/p/?LinkID=311760).
+
+## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
 
 -   Las vistas invertidas funcionan mejor en colecciones de hasta 25 elementos aproximadamente.
 -   Evita el uso de un control de vista para alternar para colecciones más grandes, ya que el movimiento repetitivo de desplazamiento entre los elementos puede ser tedioso. Una excepción serían los álbumes de fotos, que a menudo tienen cientos o miles de imágenes. Los álbumes de fotos casi siempre cambian a una vista para alternar una vez que se ha seleccionado una foto en el diseño de la vista de cuadrícula. Para otras colecciones grandes, considera la posibilidad de usar una [vista de lista o de cuadrícula](lists.md).
@@ -206,7 +201,7 @@ En el caso de colecciones más grandes (de 10 a 25 elementos), considera la posi
     -   El punto resaltado indica el elemento actual. Normalmente el punto resaltado es blanco y los otros puntos son grises.
     -   El número de puntos puede variar, pero no coloques demasiados porque el usuario tendría dificultades para encontrar lo que necesita. Con un máximo de 10 puntos suele ser suficiente.
 
-## Lista de comprobación Globalización y localización
+## <a name="globalization-and-localization-checklist"></a>Lista de comprobación Globalización y localización
 
 <table>
 <tr>
@@ -215,14 +210,17 @@ En el caso de colecciones más grandes (de 10 a 25 elementos), considera la posi
 
 </table>
 
+## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+* [Muestra de conceptos básicos de una interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
-## Artículos relacionados
+
+## <a name="related-articles"></a>Artículos relacionados
 
 - [Directrices sobre listas](lists.md)
 - [**Clase FlipView**](https://msdn.microsoft.com/library/windows/apps/br242678)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

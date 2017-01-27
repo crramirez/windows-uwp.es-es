@@ -5,21 +5,30 @@ title: Reconocimiento de trazos de Windows Ink como texto
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
-keywords: "Windows Ink, entrada de lápiz de Windows, DirectInk, InkPresenter, InkCanvas, reconocimiento de escritura a mano"
+keywords: "Windows Ink, entrada manuscrita de Windows, DirectInk, InkPresenter, InkCanvas, reconocimiento de escritura a mano, interacción del usuario, entrada"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
-ms.openlocfilehash: c402843cce752a54d8ff7301d892ef8014350a07
+ms.sourcegitcommit: 76b012ab4cf737f00fc986c81c88fd48339867fc
+ms.openlocfilehash: c832c3c3626ac5f75eaac4317b6779c410693742
 
 ---
 
 # <a name="recognize-windows-ink-strokes-as-text"></a>Reconocimiento de trazos de Windows Ink como texto
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Conversión de trazos de lápiz en texto mediante el soporte de reconocimiento de escritura a mano en Windows Ink.
+Convierte trazos de lápiz en texto mediante el soporte de reconocimiento de escritura a mano en Windows Ink.
 
-**API importantes**
-
--   [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)
--   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)</li>
+<li>[**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)</li>
+</ul>
+</div> 
 
 
 El reconocimiento de escritura a mano está integrado en la plataforma de Windows Ink y admite un amplio conjunto de configuraciones regionales e idiomas.
@@ -676,6 +685,6 @@ string str = "Recognition result\n";
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

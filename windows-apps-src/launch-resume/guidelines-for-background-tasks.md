@@ -4,18 +4,18 @@ title: Directrices para tareas en segundo plano
 description: "Asegúrate de que tu aplicación cumple los requisitos para ejecutar tareas en segundo plano."
 ms.assetid: 18FF1104-1F73-47E1-9C7B-E2AA036C18ED
 translationtype: Human Translation
-ms.sourcegitcommit: 04cb13ce355b3983a55b7f7f253e6b22a7cebece
-ms.openlocfilehash: 04e8776852a68d2e15c0a08732da48756f403d15
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: 2d03c7f47461422fef7a0905df7e68b3e65c33f0
 
 ---
 
-# Directrices para tareas en segundo plano
+# <a name="guidelines-for-background-tasks"></a>Directrices para tareas en segundo plano
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Asegúrate de que tu aplicación cumple los requisitos para ejecutar tareas en segundo plano.
 
-## Guía de tareas en segundo plano
+## <a name="background-task-guidance"></a>Guía de tareas en segundo plano
 
 Ten en cuenta las indicaciones siguientes a la hora de desarrollar la tarea en segundo plano y antes de publicar una aplicación.
 
@@ -34,7 +34,7 @@ Si usas una tarea en segundo plano para reproducir contenido multimedia en segun
 
 **Administración de tareas en segundo plano:** la aplicación debería obtener una lista de las tareas en segundo plano registradas, registrarse para controladores de progreso y finalización, y controlar dichos eventos de forma adecuada. Tus clases de tareas en segundo plano deben informar del progreso, la cancelación y la finalización. Para obtener más información, consulta [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md) y [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md).
 
-**Usa [BackgroundTaskDeferral](https://msdn.microsoft.com/library/windows/apps/hh700499):** si la clase de la tarea en segundo plano ejecuta código asincrónico, asegúrate de usar aplazamientos. De lo contrario, la tarea en segundo plano puede finalizar de forma prematura cuando lo haga el método [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) (o el método [OnBackgroundActivated](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) en el caso de las tareas en segundo plano dentro de proceso). Para obtener más información, consulta [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md).
+**Usa [BackgroundTaskDeferral](https://msdn.microsoft.com/library/windows/apps/hh700499):** si la clase de la tarea en segundo plano ejecuta código asincrónico, asegúrate de usar aplazamientos. De lo contrario, la tarea en segundo plano puede finalizar de forma prematura cuando lo haga el método [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) (o el método [OnBackgroundActivated](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) en el caso de las tareas en segundo plano dentro de proceso). Para obtener más información, consulta [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md).
 
 Como alternativa, solicita un solo aplazamiento y usa **async/await** para completar las llamadas a métodos asincrónicos. Cierra el aplazamiento después de las llamadas al método **await**.
 
@@ -49,7 +49,7 @@ Las tareas en segundo plano que se ejecutan en el mismo proceso que la aplicaci�
 > **Importante:**  a partir de Windows 10, ya no es necesario que las aplicaciones estén en la pantalla de bloqueo como un requisito previo para ejecutar tareas en segundo plano.
 
 Todas las aplicaciones para la Plataforma universal de Windows (UWP) pueden ejecutar tipos de tareas admitidos sin necesidad de que se anclen en la pantalla de bloqueo. Sin embargo, las aplicaciones deben llamar al método [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar ningún tipo de tarea en segundo plano. Este método devolverá el objeto [**BackgroundAccessStatus.Denied**](https://msdn.microsoft.com/library/windows/apps/hh700439) si el usuario denegó explícitamente los permisos de tareas en segundo plano de la aplicación en la configuración del dispositivo.
-## Lista de comprobación de tareas en segundo plano
+## <a name="background-task-checklist"></a>Lista de comprobación de tareas en segundo plano
 
 *Se aplica tanto a las tareas en segundo plano tanto dentro como fuera de proceso.*
 
@@ -75,7 +75,7 @@ Todas las aplicaciones para la Plataforma universal de Windows (UWP) pueden ejec
 -   Escribe tareas en segundo plano de corta duración. Las tareas en segundo plano se limitan a 30 segundos de uso.
 -   No confíes en la interacción con el usuario en las tareas en segundo plano.
 
-## Windows: lista de comprobación de tareas en segundo plano para aplicaciones compatibles con la pantalla de bloqueo
+## <a name="windows-background-task-checklist-for-lock-screen-capable-apps"></a>Windows: lista de comprobación de tareas en segundo plano para aplicaciones compatibles con la pantalla de bloqueo
 
 Sigue esta directriz cuando desarrolles tareas en segundo plano para aplicaciones aptas para estar en la pantalla de bloqueo. Sigue la directriz en [Directrices y lista de comprobación de iconos de pantalla de bloqueo](https://msdn.microsoft.com/library/windows/apps/hh465403).
 
@@ -86,12 +86,12 @@ Sigue esta directriz cuando desarrolles tareas en segundo plano para aplicacione
 -   Incluye una tarea en segundo plano registrada con [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) o [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), y declárala en el manifiesto de la aplicación. Asegúrate de que el punto de entrada y los tipos de desencadenadores son correctos. Esto es necesario para la certificación y permite al usuario colocar la aplicación en la pantalla de bloqueo.
 
 **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md).
-* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-an-outofproc-background-task.md)
+* [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Reproducir elementos multimedia en segundo plano](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
@@ -111,6 +111,6 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

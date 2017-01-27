@@ -6,11 +6,11 @@ ms.assetid: 4AFC0DFA-3B89-434D-9F86-4309CCFF7839
 label: Rich edit box
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f26bcc596417f607ee348e93009905ec4a3e27c8
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: a8e8e42c87809eb08685fb137a242b1177b824b4
 
 ---
-# Cuadro de texto enriquecido
+# <a name="rich-edit-box"></a>Cuadro de texto enriquecido
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,21 +19,14 @@ Puedes usar un control RichEditBox para escribir y editar documentos de texto en
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx"><strong>Clase RichEditBox</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx"><strong>Propiedad Document</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isreadonly.aspx"><strong>Propiedad IsReadOnly</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx"><strong>Propiedad IsSpellCheckEnabled</strong></a></li>
+<li>[**Clase RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)</li>
+<li>[**Propiedad Document**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx)</li>
+<li>[**Propiedad IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isreadonly.aspx)</li>
+<li>[**Propiedad IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa un **RichEditBox** para mostrar y editar los archivos de texto. No uses un RichEditBox para que el usuario haga entradas en la aplicación de la manera que usas otros cuadros de entrada de texto estándar. En su lugar, úsalo para trabajar con archivos de texto que sean independientes de la aplicación. En general, el texto que se escribe en un RichEditBox se guarda en un archivo .rtf.
 -   Si el principal propósito del cuadro de texto multilínea es la creación de documentos (como entradas de blog o el contenido de un mensaje de correo electrónico), y dichos documentos necesitan texto enriquecido, usa un cuadro de texto enriquecido.
@@ -43,13 +36,13 @@ Usa un **RichEditBox** para mostrar y editar los archivos de texto. No uses un R
 
 Para obtener más información sobre cómo elegir el control de texto correcto, consulta el artículo [Controles de texto](text-controls.md).
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 Este cuadro de edición con formato tiene un documento de texto enriquecido abierto en él. Los botones de formato y archivo no forman parte del cuadro de edición con formato, pero debes proporcionar al menos un conjunto mínimo de botones de estilo e implementar sus acciones.
 
 ![Un cuadro de texto enriquecido con un documento abierto](images/rich-edit-box.png)
 
-## Crear un cuadro de edición con formato
+## <a name="create-a-rich-edit-box"></a>Crear un cuadro de edición con formato
 
 De manera predeterminada, RichEditBox admite la revisión ortográfica. Para deshabilitar el corrector ortográfico, establece la propiedad [IsSpellCheckEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx) en **false**. Si quieres obtener más información, consulta el artículo [Directrices para la revisión ortográfica](spell-checking-and-prediction.md).
 
@@ -194,13 +187,13 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Elegir el teclado adecuado para el control de texto
+## <a name="choose-the-right-keyboard-for-your-text-control"></a>Elegir el teclado adecuado para el control de texto
 
 Para ayudar a que los usuarios escriban datos con el teclado táctil con el panel de entrada suave (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que el usuario escriba. La distribución del teclado predeterminada es normalmente adecuada para trabajar con documentos de texto enriquecido.
 
-Para más información sobre cómo usar los ámbitos de entrada, consulta [Usar el ámbito de entrada para cambiar el teclado táctil](https://msdn.microsoft.com/library/windows/apps/mt280229).
+Para obtener más información sobre cómo usar los ámbitos de entrada, consulta [Usar el ámbito de entrada para cambiar el teclado táctil](https://msdn.microsoft.com/library/windows/apps/mt280229).
 
-## Recomendaciones
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 -   Cuando crees un cuadro de texto enriquecido, proporciona botones de estilo e implementa sus acciones.
 -   Usa una fuente coherente con el estilo de la aplicación.
@@ -210,24 +203,17 @@ Para más información sobre cómo usar los ámbitos de entrada, consulta [Usar 
 -   No uses un control de texto enriquecido si un control de texto sin formato es suficiente.
 
 
+## <a name="related-articles"></a>Artículos relacionados
 
-
-
-## Artículos relacionados
-
-[Controles de texto](text-controls.md)
-
-**Para diseñadores**
+* [Controles de texto](text-controls.md)
 - [Directrices sobre revisión ortográfica](spell-checking-and-prediction.md)
 - [Adición de búsqueda](search.md)
 - [Directrices para la entrada de texto](text-controls.md)
-
-**Para desarrolladores (XAML)**
 - [**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Clase Windows.UI.Xaml.Controls PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

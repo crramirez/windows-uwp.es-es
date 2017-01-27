@@ -5,19 +5,22 @@ title: "Conceptos básicos del diseño de contenido para aplicaciones para la Pl
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 4ac800f9d2dd51ac074ec50cd1046e5a78c80710
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 7433fcabe455c0a0198cd23f883ed72b0b4558fc
 
 ---
 
-#  Conceptos básicos del diseño de contenido para las aplicaciones para UWP
+#  <a name="content-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de contenido para las aplicaciones para UWP
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 El propósito principal de cualquier aplicación es proporcionar acceso a contenido: en una aplicación de edición de fotos, la fotografía es el contenido; en una aplicación de viajes, los mapas y la información acerca de los destinos de viaje son el contenido; y así sucesivamente. Los elementos de navegación proporcionan acceso a contenido; los elementos de comando permiten al usuario interactuar con el contenido; los elementos de contenido muestran el contenido real.
 
 Este artículo proporciona recomendaciones de diseño del contenido para los tres escenarios de contenido.
 
-## <span id="Design_for_the_right_content_scenario"></span><span id="design_for_the_right_content_scenario"></span><span id="DESIGN_FOR_THE_RIGHT_CONTENT_SCENARIO"></span>Diseño para el escenario de contenido correcto
+## <a name="design-for-the-right-content-scenario"></a>Diseño para el escenario de contenido correcto
 
 
 Hay tres escenarios principales de contenido:
@@ -26,7 +29,7 @@ Hay tres escenarios principales de contenido:
 -   **Creación**: una experiencia principalmente unidireccional en que el foco está en la creación de nuevo contenido. Puede dividirse en hacer las cosas desde cero, como tomar una foto o un vídeo, crear una nueva imagen en una aplicación de dibujo o abrir un documento nuevo.
 -   **Interactivo**: una experiencia de contenido bidireccional que incluye consumir, crear y revisar el contenido.
 
-## <span id="Consumption-focused_apps"></span><span id="consumption-focused_apps"></span><span id="CONSUMPTION-FOCUSED_APPS"></span>Aplicaciones centradas en el consumo
+## <a name="consumption-focused-apps"></a>Aplicaciones centradas en el consumo
 
 
 Los elementos de contenido reciben la prioridad más alta en una aplicación centrada en el consumo, seguida por los [elementos de navegación](navigation-basics.md) necesarios para ayudar a los usuarios a encontrar el contenido que quieren. Entre las aplicaciones centradas en el consumo se incluyen reproductores de películas, aplicaciones de lectura, aplicaciones de música y visores de fotos.
@@ -38,7 +41,7 @@ Recomendaciones generales para las aplicaciones centradas en el consumo:
 -   Considera la posibilidad de crear páginas de [navegación](navigation-basics.md) específicas y de visualización de contenidos para que cuando los usuarios encuentran el contenido que buscan puedan verlo en una página dedicada libres de distracciones.
 -   Considera la posibilidad de crear una opción de vista de pantalla completa que expanda el contenido hasta llenar toda la pantalla y oculte todos los demás elementos de la interfaz de usuario.
 
-## <span id="Creation-focused_apps"></span><span id="creation-focused_apps"></span><span id="CREATION-FOCUSED_APPS"></span>Aplicaciones centradas en la creación
+## <a name="creation-focused-apps"></a>Aplicaciones centradas en la creación
 
 
 Los elementos de contenido y [comando](commanding-basics.md) son los elementos de la interfaz de usuario más importantes de una aplicación centrada en la creación: los elementos de comandos permiten al usuario crear contenido nuevo. Algunos ejemplos son las aplicaciones de pintura, las aplicaciones de edición de fotos, las aplicaciones de edición de vídeos y las aplicaciones de procesamiento de texto.
@@ -52,7 +55,7 @@ Recomendaciones generales para las aplicaciones centradas en la creación:
 -   Minimizar el uso de elementos de [navegación](navigation-basics.md).
 -   Los elementos de [Comando](commanding-basics.md) son especialmente importantes en las aplicaciones centradas en la creación de elementos. Dado que los usuarios van a ejecutar una gran cantidad de comandos, te recomendamos que proporciones una funcionalidad de historial y de deshacer comandos.
 
-## <span id="Apps_with_interactive_content"></span><span id="apps_with_interactive_content"></span><span id="APPS_WITH_INTERACTIVE_CONTENT"></span>Aplicaciones con contenido interactivo
+## <a name="apps-with-interactive-content"></a>Aplicaciones con contenido interactivo
 
 
 En una aplicación con contenido interactivo, los usuarios crean, muestran y editan contenido; muchas aplicaciones pertenecen a esta categoría. Algunos ejemplos de estos tipos de aplicaciones son aplicaciones de línea de negocio, aplicaciones de administración de inventario y aplicaciones de cocina que permiten al usuario crear o modificar las recetas de cocina.
@@ -68,7 +71,7 @@ Recomendaciones generales para las aplicaciones con contenido interactivo:
 
 -   Puede resultar difícil equilibrar los elementos de navegación, contenido y de comando cuando los tres son importantes. Si es posible, considera la posibilidad de crear pantallas diferentes para explorar, crear y editar el contenido o proporcionar interruptores de modo.
 
-## <span id="Commonly_used_content_elements"></span><span id="commonly_used_content_elements"></span><span id="COMMONLY_USED_CONTENT_ELEMENTS"></span>Elementos de contenido usados frecuentemente
+## <a name="commonly-used-content-elements"></a>Elementos de contenido usados frecuentemente
 
 
 A continuación se facilitan algunos elementos de interfaz de usuario usados frecuentemente para mostrar contenido. (Para obtener una lista completa de los elementos de la interfaz de usuario, consulta [Elementos de los controles y la interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/dn611856)).
@@ -123,6 +126,6 @@ A continuación se facilitan algunos elementos de interfaz de usuario usados fre
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -4,8 +4,8 @@ ms.assetid:
 description: "En este artículo se muestra cómo usar MediaFrameReader con MediaCapture para obtener fotogramas multimedia de uno o más orígenes disponibles, lo que incluye cámaras a color, de profundidad y de infrarrojos, dispositivos de audio o incluso orígenes de fotogramas personalizados, como los que producen fotogramas de seguimiento estructurales."
 title: Procesar fotogramas multimedia con MediaFrameReader
 translationtype: Human Translation
-ms.sourcegitcommit: 881f806a61d247c6c4f73aa770ba4c5dab91af00
-ms.openlocfilehash: 648874a50dbe333f1bb6291de646d9088eec1528
+ms.sourcegitcommit: e6ab1fc16f150de2fed3797d89375a52b3965182
+ms.openlocfilehash: 11e09d9b447e9daa0498377a67ef235bdab168dd
 
 ---
 
@@ -117,7 +117,7 @@ Ahora es el momento de implementar el controlador de eventos **FrameArrived**. C
 
 El control **Image** solo puede mostrar imágenes en formato BRGA8 con valores alfa premultiplicados o sin valores alfa. Si el fotograma de llegada no está en ese formato, el método estático [**Convert**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.SoftwareBitmap.Covert) se usa para convertir el mapa de bits de software al formato correcto.
 
-A continuación, se usa el método [**Interlocked.Exchange**](https://msdn.microsoft.com/en-us/library/bb337971) para intercambiar la referencia del mapa de bits de llegada con el mapa de bits del búfer de reserva. Este método intercambia estas referencias en una operación atómica segura para subprocesos. Después del intercambio, se desecha la imagen anterior del búfer de reserva, ubicada ahora en la variable *softwareBitmap*, para limpiar los recursos.
+A continuación, se usa el método [**Interlocked.Exchange**](https://msdn.microsoft.com/library/bb337971) para intercambiar la referencia del mapa de bits de llegada con el mapa de bits del búfer de reserva. Este método intercambia estas referencias en una operación atómica segura para subprocesos. Después del intercambio, se desecha la imagen anterior del búfer de reserva, ubicada ahora en la variable *softwareBitmap*, para limpiar los recursos.
 
 A continuación, se usa la clase [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Core.CoreDispatcher) asociada al elemento **Image** para crear una tarea que se ejecutará en el subproceso de la interfaz de usuario mediante una llamada al método [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317). Ya que las tareas asincrónicas se realizarán dentro de la tarea, la expresión lambda que se pasa al método **RunAsync** se declara con la palabra clave *async*.
 
@@ -167,6 +167,6 @@ La clase auxiliar **FrameRenderer** implementa los métodos siguientes.
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

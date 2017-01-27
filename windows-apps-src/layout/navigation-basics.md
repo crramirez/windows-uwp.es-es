@@ -1,17 +1,20 @@
 ---
 author: mijacobs
 Description: "La navegación en las aplicaciones para la Plataforma universal de Windows (UWP) se basa en un modelo flexible de estructuras de navegación, elementos de navegación y características de nivel del sistema."
-title: "Conceptos básicos del diseño de navegación para aplicaciones para la Plataforma universal de Windows (UWP)"
+title: "Conceptos básicos de navegación para las aplicaciones para UWP (aplicaciones de Windows)"
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a55e7d0945902ce44ebad481475e8324c9859054
-ms.openlocfilehash: 2a4005aa12a123c0f9e98486fa1c69839a14276c
+ms.sourcegitcommit: d0c1858727d4a19e699d2ec9cf5d869460873524
+ms.openlocfilehash: 25a84e7a72fb87faea47845d7d32a5c3071a78a7
 
 ---
 
-#  Conceptos básicos del diseño de navegación para las aplicaciones para UWP
+#  <a name="navigation-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de navegación para las aplicaciones para UWP
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 La navegación en las aplicaciones para la Plataforma universal de Windows (UWP) se basa en un modelo flexible de estructuras de navegación, elementos de navegación y características de nivel del sistema. Juntas, te permiten habilitar diversas experiencias de usuario intuitivas para desplazarse entre las aplicaciones, las páginas y el contenido.
 
@@ -31,12 +34,12 @@ Para que la experiencia de navegación con varias páginas de las aplicaciones p
 
     Para proporcionar una experiencia coherente que te resulte más intuitiva, responde a las funciones de navegación de nivel del sistema de manera previsible.
 
-## <span id="Build_the_right_navigation_structure"></span><span id="build_the_right_navigation_structure"></span><span id="BUILD_THE_RIGHT_NAVIGATION_STRUCTURE"></span>Crea la estructura de navegación adecuada
+## <a name="build-the-right-navigation-structure"></a>Crea la estructura de navegación adecuada
 
 
 Echemos un vistazo a una aplicación que resulta ser una colección de grupos de páginas, en la que cada página contiene un conjunto único de contenidos o funcionalidades. Por ejemplo, una aplicación de fotos podría tener una página para tomar fotos, una página de edición de imágenes y otra página de administración de la biblioteca de imágenes. La manera de organizar estas páginas en grupos define la estructura de navegación de la aplicación. Hay dos formas habituales de organizar un grupo de páginas:
 
-<table>
+<table class="uwpd-noborder uwpd-top-aligned-table">
 <colgroup>
 <col width="50%" />
 <col width="50%" />
@@ -49,12 +52,12 @@ Echemos un vistazo a una aplicación que resulta ser una colección de grupos de
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><img src="images/nav/nav-pages-hiearchy.png" alt="Pages arranged in a hierarchy" /></p></td>
-<td align="left"><p><img src="images/nav/nav-pages-peer.png" alt="Pages arranged as peers" /></p></td>
+<td style="text-align: center;"><p><img src="images/nav/nav-pages-hiearchy.png" alt="Pages arranged in a hierarchy" /></p></td>
+<td style="text-align: center;"><p><img src="images/nav/nav-pages-peer.png" alt="Pages arranged as peers" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Las páginas se organizan en una estructura de árbol. Cada página secundaria tiene un único elemento primario, pero un elemento primario puede tener una o más páginas secundarias. Para llegar a una página secundaria, hay que moverse a través del elemento primario.</p></td>
-<td align="left"><p>Existen páginas en paralelo. Puedes ir de una página a otra en cualquier orden.</p></td>
+<td style="vertical-align: top">Las páginas se organizan en una estructura de árbol. Cada página secundaria tiene un único elemento primario, pero un elemento primario puede tener una o más páginas secundarias. Para llegar a una página secundaria, hay que moverse a través del elemento primario. </td>
+<td style="vertical-align: top"> Existen páginas en paralelo. Puedes ir de una página a otra en cualquier orden. </td>
 </tr>
 </tbody>
 </table>
@@ -67,51 +70,44 @@ Una aplicación típica usará ambas distribuciones y contendrá algunas partes 
 
 Por lo tanto, ¿cuándo se deberían organizar las páginas en jerarquías y cuándo en elementos del mismo nivel? Para responder a esta pregunta, debemos tener en cuenta el número de páginas del grupo, si las páginas deben recorrerse en un determinado orden y la relación entre las páginas. En general, las estructuras más planas son más fáciles de entender y más rápidas para navegar, pero a veces es apropiado tener una jerarquía profunda.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Se recomienda usar una relación jerárquica cuando</p>
+
+
+<div class="side-by-side">
+<div class="side-by-side-content">
+  <div class="side-by-side-content-left">Se recomienda usar una relación jerárquica cuando
 <ul>
-<li><p>se espera que el usuario recorra las páginas en un orden específico; organices la jerarquía para aplicar ese orden.</p></li>
-<li><p>Hay una relación primaria-secundaria clara entre una de las páginas y las otras páginas en el grupo.</p></li>
-<li><p>Si hay más de 7 páginas en el grupo.</p>
+<li>se espera que el usuario recorra las páginas en un orden específico; organices la jerarquía para aplicar ese orden.</li>
+<li>Hay una relación primaria-secundaria clara entre una de las páginas y las otras páginas en el grupo.</li>
+<li>Hay más de 7 páginas en el grupo.
 <p>Cuando hay más de 7 páginas en el grupo, puede resultar difícil para los usuarios comprender cómo las páginas son únicas o comprender su ubicación actual dentro del grupo. Si no crees que eso es un problema para tu aplicación, organiza las páginas como elementos del mismo nivel. Por otro lado, puedes tener en cuenta la posibilidad de usar una estructura jerárquica para separar las páginas en dos o más grupos pequeños. Un control de navegación centralizada te puede ayudar a agrupar páginas en categorías.</p></li>
-</ul></td>
-<td align="left"><p>Se recomienda usar una relación al mismo nivel cuando</p>
+</ul>
+  </div>
+  <div class="side-by-side-content-right">Se recomienda usar una relación al mismo nivel cuando
 <ul>
 <li>las páginas se pueden ver en cualquier orden;</li>
 <li>las páginas son claramente distintas entre sí y no tienen una relación primaria-secundaria obvia.</li>
 <li><p>hay menos de 8 páginas en el grupo.</p>
 <p>Cuando hay más de 7 páginas en el grupo, puede resultar difícil para los usuarios comprender cómo las páginas son únicas o comprender su ubicación actual dentro del grupo. Si no crees que eso es un problema para tu aplicación, organiza las páginas como elementos del mismo nivel. Por otro lado, puedes tener en cuenta la posibilidad de usar una estructura jerárquica para separar las páginas en dos o más grupos pequeños. Un control de navegación centralizada te puede ayudar a agrupar páginas en categorías.</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
-
+</ul>
+  </div>
+</div>
+</div>
  
 
-## <span id="Use_the_right_navigation_elements"></span><span id="use_the_right_navigation_elements"></span><span id="USE_THE_RIGHT_NAVIGATION_ELEMENTS"></span>Usar los elementos de navegación correctos
+## <a name="use-the-right-navigation-elements"></a>Usar los elementos de navegación correctos
 
 
 Los elementos de navegación pueden proporcionar dos servicios: ayudan a los usuarios a obtener el contenido que desean, y algunos elementos también permiten a los usuarios saber dónde se encuentran dentro de la aplicación. Sin embargo, también ocupan espacio que la aplicación puede usar para elementos de contenido o comandos, por lo que es importante usar los elementos de navegación adecuados para la estructura de la aplicación.
 
-### <span id="Peer_navigation_elements"></span><span id="peer_navigation_elements"></span><span id="PEER_NAVIGATION_ELEMENTS"></span>Elementos de navegación del mismo nivel
+### <a name="peer-to-peer-navigation-elements"></a>Elementos de navegación de punto a punto
 
-Los elementos de navegación del mismo nivel habilitan la navegación entre páginas que se encuentren en el mismo nivel del mismo subárbol.
+Los elementos de navegación de punto a punto habilitan la navegación entre páginas que se encuentren en el mismo nivel del mismo subárbol.
 
-![navegación de sistemas del mismo nivel](images/nav/nav-lateralmovement.png)
+![navegación punto a punto](images/nav/nav-lateralmovement.png)
 
-Para la navegación de sistemas del mismo nivel, te recomendamos usar las pestañas o un panel de navegación.
+Para la navegación punto a punto, te recomendamos usar las pestañas o un panel de navegación.
 
 <table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Elemento de navegación</th>
@@ -120,9 +116,9 @@ Para la navegación de sistemas del mismo nivel, te recomendamos usar las pesta�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Pestañas y controles dinámicos](../controls-and-patterns/tabs-pivot.md)</p>
+<td style="vertical-align:top;">[Pestañas y controles dinámicos](../controls-and-patterns/tabs-pivot.md)
 <p><img src="images/nav/nav-tabs-sm-300.png" alt="Tab-based navigation" /></p></td>
-<td align="left">Muestra una lista persistente de vínculos a páginas del mismo nivel.
+<td style="vertical-align:top;">Muestra una lista persistente de vínculos a páginas del mismo nivel.
 <p>Usa las pestañas o controles dinámicos cuando:</p>
 <ul>
 <li><p>Hay entre 2 y 5 páginas.</p>
@@ -133,9 +129,9 @@ Para la navegación de sistemas del mismo nivel, te recomendamos usar las pesta�
 <p><img src="images/food-truck-finder/uap-foodtruck-tabletphone-sbs-sm-400.png" alt="Example of an app using tabs/pivots pattern" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Panel de navegación](../controls-and-patterns/nav-pane.md)</p>
+<td style="vertical-align:top;">[Panel de navegación](../controls-and-patterns/nav-pane.md)
 <p><img src="images/nav/nav-navpane-4page-thumb.png" alt="A navigation pane" /></p></td>
-<td align="left">Muestra una lista de vínculos a páginas de nivel superior.
+<td style="vertical-align:top;">Muestra una lista de vínculos a páginas de nivel superior.
 <p>Usa un panel de navegación cuando:</p>
 <ul>
 <li>No se espera que los usuarios cambien entre las páginas con frecuencia.</li>
@@ -151,25 +147,21 @@ Para la navegación de sistemas del mismo nivel, te recomendamos usar las pesta�
 
  
 
-Si la estructura de navegación tiene varios niveles, te recomendamos que los elementos de navegación del mismo nivel solo se vinculen con los elementos del mismo nivel dentro de su subárbol actual. Ten en cuenta la siguiente ilustración, que muestra una estructura de navegación con tres niveles:
+Si la estructura de navegación tiene varios niveles, te recomendamos que los elementos de navegación punto a punto solo se vinculen con los elementos del mismo nivel dentro de su subárbol. Ten en cuenta la siguiente ilustración, que muestra una estructura de navegación con tres niveles:
 
 ![una aplicación con dos subárboles](images/nav/nav-subtrees.png)
--   En el nivel 1, el elemento de navegación del mismo nivel debe proporcionar acceso a las páginas A, B, C y D.
--   En el nivel 2, los elementos de navegación del mismo nivel de las páginas A2 solo deben vincularse con otras páginas A2. No se deben vincular a páginas de nivel 2 del subárbol C.
+-   En el nivel 1, el elemento de navegación punto a punto debe proporcionar acceso a las páginas A, B, C y D.
+-   En el nivel 2, los elementos de navegación punto a punto de las páginas A2 solo deben vincularse a otras páginas A2. No se deben vincular a páginas de nivel 2 del subárbol C.
 
 ![una aplicación con dos subárboles](images/nav/nav-subtrees2.png)
 
-### <span id="Hierarchical_navigation_elements"></span><span id="hierarchical_navigation_elements"></span><span id="HIERARCHICAL_NAVIGATION_ELEMENTS"></span>Elementos de navegación jerárquica
+### <a name="hierarchical-navigation-elements"></a>Elementos de navegación jerárquica
 
 Los elementos de navegación jerárquica proporcionan navegación entre una página principal y sus páginas secundarias.
 
 ![navegación jerárquica](images/nav/nav-verticalmovement.png)
 
 <table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Elemento de navegación</th>
@@ -178,7 +170,7 @@ Los elementos de navegación jerárquica proporcionan navegación entre una pág
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Concentrador](../controls-and-patterns/hub.md)</p>
+<td style="vertical-align:top;">[Concentrador](../controls-and-patterns/hub.md)
 <p><img src="images/higsecone-hub-thumb.png" alt="Hub" /></p></td>
 <td align="left">Un concentrador es un tipo especial de control de navegación que proporciona vistas previas y resúmenes de sus páginas secundarias. A diferencia del panel de navegación o las pestañas, proporciona navegación a estas páginas secundarias a través de vínculos y encabezados de sección incrustados en la propia página.
 <p>Usa un concentrador cuando:</p>
@@ -188,8 +180,9 @@ Los elementos de navegación jerárquica proporcionan navegación entre una pág
 <p>Los concentradores promueven la detección y la exploración, por lo que son adecuados para elementos multimedia, lectores de noticias y aplicaciones de compras.</p>
 <p></p></td>
 </tr>
+
 <tr class="even">
-<td align="left"><p>[Patrón de maestro y detalles](../controls-and-patterns/master-details.md)</p>
+<td style="vertical-align:top;">[Patrón de maestro y detalles](../controls-and-patterns/master-details.md)
 <p><img src="images/higsecone-masterdetail-thumb.png" alt="Master/details" /></p></td>
 <td align="left">Muestra una lista (vista maestro) de resúmenes de elementos. Al seleccionar un elemento se muestra su página de elementos correspondiente en la sección de detalles.
 <p>Usa el elemento de maestro y detalles cuando:</p>
@@ -206,13 +199,9 @@ Los elementos de navegación jerárquica proporcionan navegación entre una pág
 
  
 
-### <span id="Historical_navigation_elements"></span><span id="historical_navigation_elements"></span><span id="HISTORICAL_NAVIGATION_ELEMENTS"></span>Elementos de navegación histórica
+### <a name="historical-navigation-elements"></a>Elementos de navegación histórica
 
 <table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Elemento de navegación</th>
@@ -221,21 +210,17 @@ Los elementos de navegación jerárquica proporcionan navegación entre una pág
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Atrás</td>
-<td align="left"><p>Permite al usuario recorrer el historial de navegación dentro de una aplicación y, según el dispositivo, ir de una aplicación a otra. Para obtener más información, consulta la sección [Haz que tu aplicación funcione bien con las funciones de navegación de nivel del sistema](#backnavigation) que aparece más adelante en este artículo.</p></td>
+<td style="vertical-align:top;">[Atrás](navigation-history-and-backwards-navigation.md)</td>
+<td style="vertical-align:top;">Permite al usuario recorrer el historial de navegación dentro de una aplicación y, según el dispositivo, ir de una aplicación a otra. Para obtener más información, consulta el [artículo Historial de navegación y navegación hacia atrás](navigation-history-and-backwards-navigation.md).</td>
 </tr>
 </tbody>
 </table>
 
  
 
-### <span id="Content-embedded_navigation_elements"></span><span id="content-embedded_navigation_elements"></span><span id="CONTENT-EMBEDDED_NAVIGATION_ELEMENTS"></span>Elementos de navegación de contenido incrustado
+### <a name="content-level-navigation-elements"></a>Elementos de navegación de nivel de contenido
 
 <table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Elemento de navegación</th>
@@ -244,15 +229,15 @@ Los elementos de navegación jerárquica proporcionan navegación entre una pág
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Hipervínculos y botones</td>
-<td align="left"><p>Los elementos de navegación de contenido incrustado aparecen en el contenido de una página. A diferencia de otros elementos de navegación, que deben ser coherentes en el grupo o subárbol de la página, los elementos de navegación de contenido incrustado son únicos de una página a otra.</p></td>
+<td style="vertical-align:top;">Hipervínculos y botones</td>
+<td style="vertical-align:top;">Los elementos de navegación de contenido incrustado aparecen en el contenido de una página. A diferencia de otros elementos de navegación, que deben ser coherentes en el grupo o subárbol de la página, los elementos de navegación de contenido incrustado son únicos de una página a otra.</td>
 </tr>
 </tbody>
 </table>
 
  
 
-### <span id="Combining_navigation_elements"></span><span id="combining_navigation_elements"></span><span id="COMBINING_NAVIGATION_ELEMENTS"></span>Combinación de elementos de navegación
+### <a name="combining-navigation-elements"></a>Combinación de elementos de navegación
 
 Puedes combinar los elementos de navegación para crear una experiencia de navegación adecuada para tu aplicación. Por ejemplo, la aplicación puede usar un panel de navegación para proporcionar acceso a las páginas de nivel superior, y pestañas para proporcionar acceso a las páginas de segundo nivel.
 
@@ -265,6 +250,10 @@ Puedes combinar los elementos de navegación para crear una experiencia de naveg
 
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+
+<!--HONumber=Dec16_HO3-->
 
 

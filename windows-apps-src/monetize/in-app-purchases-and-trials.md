@@ -4,8 +4,8 @@ ms.assetid: F45E6F35-BC18-45C8-A8A5-193D528E2A4E
 description: "Obtén información sobre cómo habilitar las pruebas y compras desde la aplicación en las aplicaciones para UWP."
 title: "Pruebas y compras desde la aplicación"
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 7783b6017a314ddb24509c55db8134a4c214430f
+ms.sourcegitcommit: ebac7d8edf9787ad810b84f3855fe23ae3007dcf
+ms.openlocfilehash: 33004b5229167bedd4cbafe5279709f1225ed02c
 
 ---
 
@@ -24,7 +24,7 @@ Este artículo proporciona una introducción de cómo funcionan las compras desd
 
 Existen dos espacios de nombres diferentes que puedes usar para agregar compras desde la aplicación y la funcionalidad de prueba a las aplicaciones para UWP, según la versión de Windows 10 a la que se destinen tus aplicaciones. Aunque las API de estos espacios de nombres tienen los mismos objetivos, se han diseñado de forma bastante diferente y el código no es compatible entre las dos API.
 
-* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;A partir de la versión 1607 de Windows 10, las aplicaciones pueden usar la API de este espacio de nombres para implementar compras desde la aplicación y pruebas. Si la aplicación se destina a Windows 10, versión 1607 o posterior, te recomendamos que uses los miembros de este espacio de nombres. Este espacio de nombres admite los tipos de complemento más recientes, como los complementos de consumibles administrados por la Tienda, y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el Centro de desarrollo de Windows y la Tienda. Para obtener más información acerca de este espacio de nombres, consulta la sección [Uso del espacio de nombres Windows.Services.Store](#api_intro) de este artículo.
+* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;A partir de la versión 1607 de Windows 10, las aplicaciones pueden usar la API de este espacio de nombres para implementar compras desde la aplicación y pruebas. Si la aplicación se destina a Windows 10, versión 1607 o posterior, te recomendamos que uses los miembros de este espacio de nombres. Este espacio de nombres admite los tipos de complemento más recientes, como los complementos de consumibles administrados por la Tienda, y está diseñado para ser compatible con futuros tipos de productos y características compatibles con el Centro de desarrollo de Windows y la Tienda. Para obtener más información acerca de este espacio de nombres, consulta la sección [Pruebas y compras desde la aplicación con el espacio de nombres Windows.Services.Store](#api_intro) de este artículo.
 
 * **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**&nbsp;&nbsp;Todas las versiones de Windows 10 también admiten una API anterior para las compras desde la aplicación y las pruebas en este espacio de nombres. Si bien cualquier aplicación para UWP para Windows 10 puede usar este espacio de nombres, puede que este no se encuentre actualizado para admitir más adelante nuevos tipos de productos y características en el Centro de desarrollo y la Tienda. Para obtener más información acerca de este espacio de nombres, consulta [Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
@@ -35,7 +35,7 @@ Esta sección presenta los conceptos básicos para las compras desde la aplicaci
 
 Por lo general, todos los elementos que se ofrecen en la Tienda se denominan *producto*. La mayoría de los desarrolladores trabajan con los siguientes tipos de productos: *aplicaciones* y *complementos* (también conocidos como productos desde la aplicación o IAP).
 
-Un complemento hace referencia a un producto o una característica que se pone a disposición de los clientes en el contexto de la aplicación. Un complemento puede representar cualquier funcionalidad que la aplicación ofrezca a los clientes: por ejemplo, la moneda que se usará en una aplicación o un juego, los nuevos mapas o armas para un juego, la posibilidad de usar la aplicación sin anuncios o el contenido digital, como música o vídeos, para las aplicaciones capaces de ofrecer ese tipo de contenido. Cada aplicación y complemento tiene una licencia asociada que indica si el usuario tiene derecho a usar la aplicación o el complemento. Si el usuario tiene derecho a usar la aplicación o el complemento como una versión de prueba, la licencia también proporciona información adicional sobre la versión de prueba.
+Un complemento hace referencia a un producto o característica que pones a disposición de tus clientes en el contexto de tu aplicación: por ejemplo, la moneda que se usará en una aplicación o un juego, los nuevos mapas o armas para un juego, la posibilidad de usar la aplicación sin anuncios o el contenido digital, como música o vídeos, para las aplicaciones capaces de ofrecer ese tipo de contenido. Cada aplicación y complemento tiene una licencia asociada que indica si el usuario tiene derecho a usar la aplicación o el complemento. Si el usuario tiene derecho a usar la aplicación o el complemento como una versión de prueba, la licencia también proporciona información adicional sobre la versión de prueba.
 
 Para ofrecer un complemento a los clientes en la aplicación, debes [definir el complemento de la aplicación en el panel del Centro de desarrollo](../publish/iap-submissions.md) para comunicarlo a la Tienda. A continuación, la aplicación puede usar las API en los espacios de nombres **Windows.Services.Store** o **Windows.ApplicationModel.Store** para vender el complemento al usuario como una compra desde la aplicación.
 
@@ -52,24 +52,24 @@ Las aplicaciones para UWP pueden ofrecer los siguientes tipos de complementos.
 >**Nota**&nbsp;&nbsp;Otros tipos de complementos, como los complementos durables con paquetes (también conocidos como contenido descargable o DLC) solo están disponibles para un conjunto de desarrolladores restringido y no se tratan en esta documentación.
 
 <span id="api_intro" />
-## <a name="using-the-windowsservicesstore-namespace"></a>Uso del espacio de nombres Windows.Services.Store
+## <a name="in-app-purchases-and-trials-using-the-windowsservicesstore-namespace"></a>Pruebas y compras desde la aplicación con el espacio de nombres Windows.Services.Store
 
 En el resto de este artículo se describe cómo implementar las compras desde la aplicación y las pruebas con el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx). Este espacio de nombres solo está disponible para las aplicaciones destinadas a Windows 10, versión 1607 o posterior, y te recomendamos que las aplicaciones usen este espacio de nombres en lugar de [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) siempre que sea posible.
 
-Si buscas información sobre el espacio de nombres **Windows.ApplicationModel.Store**, consulta [Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+Si buscas información sobre el espacio de nombres **Windows.ApplicationModel.Store**, consulta [este artículo](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
 ### <a name="get-started-with-the-storecontext-class"></a>Introducción a la clase StoreContext
 
 El punto de entrada principal al espacio de nombres **Windows.Services.Store** es la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Esta clase proporciona métodos que puedes usar para obtener información acerca de la aplicación actual y sus complementos disponibles, obtener información de licencia de la aplicación actual o sus complementos, comprar una aplicación o un complemento para el usuario actual y realizar otras tareas. Para obtener un objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx), realiza una de las siguientes acciones:
 
-* En una aplicación de usuario único (es decir, una aplicación que se ejecuta solamente en el contexto del usuario que la inició), usa el método [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx) para obtener un objeto **StoreContext** que puedas usar para acceder a los datos relacionados con la Tienda Windows del usuario, así como administrarlos. La mayoría de las aplicaciones para la Plataforma universal de Windows (UWP) son aplicaciones de usuario único.
+* En una aplicación de usuario único (es decir, una aplicación que se ejecuta solamente en el contexto del usuario que la inició), usa el método estático [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx) para obtener un objeto **StoreContext** que puedes usar para acceder a los datos relacionados con la Tienda Windows del usuario. La mayoría de las aplicaciones para la Plataforma universal de Windows (UWP) son aplicaciones de usuario único.
 
   > [!div class="tabbedCodeSnippets"]
   ```csharp
   Windows.Services.Store.StoreContext context = StoreContext.GetDefault();
   ```
 
-* En una [aplicación multiusuario](../xbox-apps/multi-user-applications.md), usa el método [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx) para obtener un objeto **StoreContext** que puedas usar para acceder a los datos relacionados con la Tienda Windows de un usuario específico conectado con su cuenta Microsoft al usar la aplicación, así como administrar dichos datos. En el siguiente ejemplo se obtiene un objeto **StoreContext** para el primer usuario disponible.
+* En una [aplicación multiusuario](../xbox-apps/multi-user-applications.md), usa el método estático [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx) para obtener un objeto **StoreContext** que puedes usar para acceder a los datos relacionados con la Tienda Windows de un usuario específico que ha iniciado sesión con su cuenta Microsoft al usar la aplicación. En el siguiente ejemplo se obtiene un objeto **StoreContext** para el primer usuario disponible.
 
   > [!div class="tabbedCodeSnippets"]
   ```csharp
@@ -77,9 +77,9 @@ El punto de entrada principal al espacio de nombres **Windows.Services.Store** e
   Windows.Services.Store.StoreContext context = StoreContext.GetForUser(users[0]);
   ```
 
->**Nota**&nbsp;&nbsp;Las aplicaciones de escritorio de Windows que usan el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop) debe dar pasos adicionales para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) antes de poder usar dicho objeto. Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](#desktop).
+>**Nota**&nbsp;&nbsp;Las aplicaciones de escritorio de Windows que usan el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop) debe dar pasos adicionales para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) antes de poder usar dicho objeto. Para obtener más información, consulta [esta sección](#desktop).
 
-Cuanto tengas un objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx), puedes empezar a llamar a métodos para obtener información de productos de la Tienda para la aplicación actual y sus complementos, recuperar información de licencias relativa a la aplicación actual y sus complementos, comprar una aplicación o un complemento para el usuario actual y realizar otras tareas. Para obtener más información sobre las tareas comunes que puedes realizar con este espacio de nombres, consulta los siguientes artículos:
+Cuando tengas un objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx), puedes empezar a llamar a métodos de este objeto para obtener información de productos de la Tienda para la aplicación actual y sus complementos, recuperar información de licencias relativa a la aplicación actual y sus complementos, comprar una aplicación o un complemento para el usuario actual y realizar otras tareas. Para obtener más información sobre las tareas comunes que puedes realizar con este objeto, consulta los siguientes artículos:
 
 * [Obtener información de producto para aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
 * [Obtener información de licencia para aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
@@ -87,7 +87,7 @@ Cuanto tengas un objeto [StoreContext](https://msdn.microsoft.com/library/window
 * [Habilitar compras de complementos consumibles](enable-consumable-add-on-purchases.md)
 * [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md)
 
-Para obtener una aplicación de muestra que indica cómo usar el espacio de nombres **Windows.Services.Store**, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Para obtener una aplicación de muestra que indica cómo usar **StoreContext** y otros tipos del espacio de nombres **Windows.Services.Store**, consulta la [muestra de Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 <span id="implement-iap" />
 ### <a name="implement-in-app-purchases"></a>Implementar compras desde la aplicación
@@ -98,7 +98,11 @@ Para ofrecer una compra desde la aplicación a los clientes mediante el espacio 
 
 2. Escribe código en tu aplicación para [recuperar información de producto para la aplicación o un complemento que ofrece tu aplicación](get-product-info-for-apps-and-add-ons.md) y, después, [determina si la licencia está activa](get-license-info-for-apps-and-add-ons.md) (es decir, si el usuario tiene licencia para usar la aplicación o complemento). Si la licencia no está activa, muestra al usuario una interfaz que ofrezca la aplicación o el complemento a la venta como una compra desde la aplicación.
 
-3. Si el usuario decide comprar la aplicación o el complemento, usa el método adecuado para comprar el producto. Si el usuario compra la aplicación o un complemento durable, sigue el proceso que se indica en [Habilitar compras desde la aplicación de aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md). Si el usuario compra un complemento consumible, sigue las instrucciones que se indican en [Habilitar compras de complementos consumibles](enable-consumable-add-on-purchases.md).
+3. Si el usuario decide comprar la aplicación o el complemento, usa el método adecuado para comprar el producto:
+
+  * Si el usuario compra la aplicación o un complemento durable, sigue las instrucciones de [Habilitar compras desde la aplicación de aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md).
+
+  * Si el usuario compra un complemento consumible, sigue las instrucciones que se indican en [Habilitar compras de complementos consumibles](enable-consumable-add-on-purchases.md).
 
 4. Prueba la implementación siguiendo la [guía de prueba](#testing) de este artículo.
 
@@ -111,24 +115,24 @@ Para excluir o limitar características en una versión de prueba de la aplicaci
 
 2. Escribe código en tu aplicación para [recuperar información de producto para la aplicación o un complemento que ofrece tu aplicación](get-product-info-for-apps-and-add-ons.md) y, después, [determina si la licencia asociada a la aplicación es de prueba](get-license-info-for-apps-and-add-ons.md).
 
-3. Excluye o limita ciertas funciones de la aplicación si es una versión de prueba y, a continuación, habilita las características cuando el usuario adquiera una licencia completa. Para obtener más información, consulta [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md).
+3. Excluye o limita ciertas funciones de la aplicación si es una versión de prueba y, después, habilita las características cuando el usuario adquiera una licencia completa. Para obtener más información y un ejemplo de código, consulta [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md).
 
 4. Prueba la implementación siguiendo la [guía de prueba](#testing) de este artículo.
 
 <span id="testing" />
-### <a name="test-your-implementation"></a>Probar la implementación
+### <a name="test-your-in-app-purchase-or-trial-implementation"></a>Probar la implementación de pruebas o compras desde la aplicación
 
 El espacio de nombres **Windows.Services.Store** no proporciona ninguna clase que puedas usar para simular la información de licencia durante las pruebas. En su lugar, debes publicar una aplicación en la Tienda y descargar la aplicación en el dispositivo de desarrollo para usar su licencia para las pruebas. Se trata de una experiencia diferente de las aplicaciones que usan el espacio de nombres **Windows.ApplicationModel.Store**, que pueden usar la clase [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) para simular la información de licencia durante las pruebas.
 
 Si la aplicación usa las API en el espacio de nombres **Windows.Services.Store** para acceder a la información de tu aplicación y sus complementos, sigue este proceso para probar el código:
 
-1. Si la aplicación aún no está publicada ni disponible en la Tienda, asegúrate de que tu aplicación cumpla con los requisitos mínimos del [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit), [envía la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) al panel del Centro de desarrollo de Windows y asegúrate de que la aplicación supera el proceso de certificación con el fin de que figure en la Tienda. Opcionalmente, puedes [ocultar la aplicación en la Tienda](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) para que los clientes no puedan disponer de ella mientras la pruebas.
+1. Si la aplicación aún no está publicada ni disponible en la Tienda, asegúrate de que tu aplicación cumpla con los requisitos mínimos del [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit), [envía la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) al panel del Centro de desarrollo de Windows y asegúrate de que la aplicación supera el proceso de certificación con el fin de que esté disponible en la Tienda. Puedes [ocultar la aplicación en la Tienda](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) para que los clientes no puedan disponer de ella mientras la pruebas.
 
 2. Después, asegúrate de haber seguido estos pasos:
 
   * Escribe código en la aplicación que usa la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) y otros tipos relacionados en el espacio de nombres **Windows.Services.Store** para implementar [compras desde la aplicación](#implement-iap) o una [funcionalidad de prueba](#implement-trial).
 
-  * Si tu aplicación ofrece complementos que los clientes pueden comprar, [crea envíos de complementos de la aplicación en el panel del Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
+  * Si tu aplicación ofrece un complemento que los clientes pueden comprar, [crea un envío de complemento para la aplicación en el panel del Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
 
   * Si quieres excluir o limitar ciertas funciones en una versión de prueba de la aplicación, [configura tu aplicación como una prueba gratuita en el panel del Centro de desarrollo de Windows](../publish/set-app-pricing-and-availability.md#free-trial).
 
@@ -140,6 +144,8 @@ Si la aplicación usa las API en el espacio de nombres **Windows.Services.Store*
 
 5. En Visual Studio, empieza a ejecutar o depurar el proyecto. El código debe recuperar datos de aplicación y del complemento de la aplicación de la Tienda que asociaste al proyecto local. Si un mensaje te pide que reinstales la aplicación, sigue las instrucciones y, después, ejecuta o depura el proyecto.
 
+>**Nota**&nbsp;&nbsp;Después de completar los pasos de 1 a 5, puedes seguir con la actualización del código de la aplicación y, después, depurar el proyecto actualizado en el equipo de desarrollo sin enviar nuevos paquetes de aplicación a la Tienda. Solo debes descargar la versión de la aplicación de la Tienda en el equipo de desarrollo una vez para obtener la licencia local que se usará para las pruebas. Solo necesitas enviar nuevos paquetes de la aplicación a la Tienda si después de completar las pruebas quieres que las características de compras o pruebas desde la aplicación de tu aplicación estén disponibles para tus clientes.
+
 <span id="receipts" />
 ### <a name="receipts-for-in-app-purchases"></a>Recibos de las compras desde la aplicación
 
@@ -148,7 +154,7 @@ El espacio de nombres **Windows.Services.Store** no proporciona ninguna API que 
 Si implementas compras desde la aplicación con el espacio de nombres **Windows.Services.Store** y quieres comprobar si un cliente en particular ha comprado una aplicación o un complemento, puedes usar el [método de consulta de productos](query-for-products.md) en la [API de REST de colecciones de la Tienda Windows](view-and-grant-products-from-a-service.md). Los datos que este método devuelve confirman si el cliente en cuestión tiene derecho a un producto determinado y proporciona datos de la transacción en la que el usuario compró el producto. La API de colecciones de Tienda Windows usa la autenticación de Azure AD para recuperar esta información.
 
 <span id="desktop" />
-### <a name="using-the-storecontext-class-in-an-app-that-uses-the-desktop-bridge"></a>Uso de la clase StoreContext en una aplicación que usa el Puente de escritorio
+### <a name="using-the-storecontext-class-with-the-desktop-bridge"></a>Uso de la clase StoreContext con el puente de escritorio
 
 Las aplicaciones de escritorio que usan el [Puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop) pueden utilizar la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para implementar compras desde la aplicación y periodos de pruebas. Sin embargo, si tienes una aplicación de escritorio Win32 o una con un identificador de ventana (HWND) asociado al marco de representación (por ejemplo, una aplicación WPF), la aplicación debe configurar el objeto **StoreContext** para especificar qué ventana de aplicación es la ventana propietaria en los cuadros de diálogo modales que el objeto muestra.
 
@@ -156,22 +162,24 @@ Muchos miembros de **StoreContext** (y los miembros de otros tipos relacionados 
 
 Para configurar un objeto **StoreContext** en una aplicación de escritorio que usa el Puente de escritorio, sigue estos pasos.
 
-  1. Si tu aplicación está escrita en un lenguaje administrado, como C# o Visual Basic, declara la interfaz [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx) del código de la aplicación con el atributo [ComImport](https://msdn.microsoft.com/library/system.runtime.interopservices.comimportattribute.aspx) como se muestra en el siguiente ejemplo. En este ejemplo se da por hecho que el archivo de código tiene una instrucción **using** para el espacio de nombres **System.Runtime.InteropServices**.
+  1. Realiza una de las siguientes acciones para permitir que la aplicación acceda a la interfaz [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx):
 
-    > [!div class="tabbedCodeSnippets"]
-    ```csharp
-    [ComImport]
-    [Guid("3E68D4BD-7135-4D10-8018-9FB6D9F33FA1")]
-    [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    public interface IInitializeWithWindow
-    {
-        void Initialize(IntPtr hwnd);
-    }
-    ```
+    * Si tu aplicación está escrita en un lenguaje administrado, como C# o Visual Basic, declara la interfaz **IInitializeWithWindow** en el código de la aplicación con el atributo [ComImport](https://msdn.microsoft.com/library/system.runtime.interopservices.comimportattribute.aspx) como se muestra en el siguiente ejemplo de C#. En este ejemplo se da por hecho que el archivo de código tiene una instrucción **using** para el espacio de nombres **System.Runtime.InteropServices**.
 
-    Si tu aplicación está escrita en código nativo, como C++, no tienes que importar la interfaz **IInitializeWithWindow**. Simplemente agrega una referencia al archivo de encabezado shobjidl.h en el código.
+      > [!div class="tabbedCodeSnippets"]
+      ```csharp
+      [ComImport]
+      [Guid("3E68D4BD-7135-4D10-8018-9FB6D9F33FA1")]
+      [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+      public interface IInitializeWithWindow
+      {
+          void Initialize(IntPtr hwnd);
+      }
+      ```
 
-  2. Usa el método [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx) (o [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx)) para obtener un objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) tal como se describe anteriormente en este artículo y conviértelo en un objeto [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx). A continuación, llama al método [Initialize](https://msdn.microsoft.com/library/windows/desktop/hh706982.aspx) y pasa el identificador de la ventana que quieras hacer propietaria de todos los cuadros de diálogo modales que se muestran mediante los métodos **StoreContext**. Este ejemplo muestra cómo pasar el identificador de la ventana principal de la aplicación al método.
+    * Si la aplicación está escrita en C++, agrega una referencia al archivo de encabezado shobjidl.h en el código. Este archivo de encabezado contiene la declaración de la interfaz **IInitializeWithWindow**.
+
+  2. Obtén un objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) con el método [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx) (o [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx) si tu aplicación es [multiusuario](../xbox-apps/multi-user-applications.md)) tal como se describe anteriormente en este artículo y conviértelo en un objeto [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx). Después, llama al método [IInitializeWithWindow.Initialize](https://msdn.microsoft.com/library/windows/desktop/hh706982.aspx) y pasa el identificador de la ventana que quieras que sea la propietaria de los cuadros de diálogo modales que muestren los métodos **StoreContext**. El siguiente ejemplo de C# muestra cómo pasar el identificador de la ventana principal de la aplicación al método.
 
     > [!div class="tabbedCodeSnippets"]
     ```csharp
@@ -213,6 +221,6 @@ Cada aplicación y cada complemento de la Tienda tienen un **Id. de la Tienda** 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO4-->
 
 

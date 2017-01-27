@@ -6,11 +6,11 @@ ms.assetid: 8FB52F5E-8E72-4604-9222-0B0EC6A97541
 label: Nav pane
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 4adf3cc8425bba467a8a379a9680360c4e0e3037
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 3aed1658f0a9fa81677f5089d343969840ab33f1
 
 ---
-# Paneles de navegación
+# <a name="nav-panes"></a>Paneles de navegación
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,18 +21,17 @@ Un panel de navegación (o "nav pane" abreviado en inglés), es un patrón que a
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn864360"><strong>Clase SplitView</strong></a></li>
+<li>[**Clase SplitView**](https://msdn.microsoft.com/library/windows/apps/dn864360)</li>
+<li> </li>
+<li> </li>
+<li> </li>
+<li> </li>
+<li> </li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## ¿Es este el patrón adecuado?
+## <a name="is-this-the-right-pattern"></a>¿Es este el patrón adecuado?
 
 El panel de navegación es adecuado para:
 
@@ -42,24 +41,27 @@ El panel de navegación es adecuado para:
 -   Conservar el espacio en pantalla (como una superposición).
 -   Elementos de navegación a los que se accede con poca frecuencia. (como una superposición).
 
-## Creación de un panel de navegación
+## <a name="building-a-nav-pane"></a>Creación de un panel de navegación
 
 El patrón del panel de navegación está formado por un panel de categorías de navegación, un área de contenido y un botón opcional para abrir o cerrar el panel. La forma más sencilla de crear un panel de navegación es con un [control de vista dividida](split-view.md), que viene con un panel vacío y un área de contenido que siempre está visible.
 
 Para probar código que implementa este patrón, descarga la [solución de navegación XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlNavigation) de GitHub.
 
+<div class="microsoft-internal-note">
+Las revisiones del panel de navegación y el menú hamburguesa están disponibles en [UNI](http://uni/DesignDepot.FrontEnd/#/Search?c=t&t=Windows%2BRS1%2BControls&f=NavPane_Hamburger).
+</div>
 
-### Panel
+### <a name="pane"></a>Panel
 
 Los encabezados de las categorías de navegación van en el panel. Los puntos de entrada a la configuración de la aplicación y la administración de cuentas, si procede, también se incluyen en el panel. Los encabezados de navegación suelen ser una lista de elementos entre los que el usuario puede elegir.
 
 ![Ejemplo del panel de un panel de navegación](images/nav_pane_expanded.png)
 
-### Área de contenido
+### <a name="content-area"></a>Área de contenido
 
 El área de contenido es donde se muestra información de la ubicación de navegación seleccionada. Puede contener elementos individuales o navegación de niveles inferiores.
 
-### Botón
+### <a name="button"></a>Botón
 
 Cuando se incluye, el botón permite a los usuarios abrir y cerrar el panel. El botón permanece visible en una posición fija y no se mueve con el panel. Se recomienda colocar el botón en la esquina superior izquierda de la aplicación. El botón del panel de navegación se visualiza como tres líneas horizontales apiladas y normalmente se conoce como el botón "hamburguesa".
 
@@ -67,11 +69,11 @@ Cuando se incluye, el botón permite a los usuarios abrir y cerrar el panel. El 
 
 El botón suele estar asociado a una cadena de texto. En el nivel superior de la aplicación, se puede mostrar el título de la aplicación junto al botón. En los niveles inferiores de la aplicación, la cadena de texto puede ser el título de la página en la que se encuentra el usuario.
 
-## Variaciones del panel de navegación
+## <a name="nav-pane-variations"></a>Variaciones del panel de navegación
 
 El panel de navegación tiene tres modos: superposición, compacto y en línea. La superposición se contrae y se expande según sea necesario. Cuando está compacto, el panel siempre se muestra como una franja estrecha que se puede expandir. El panel en línea permanece abierto de forma predeterminada.
 
-### Superposición
+### <a name="overlay"></a>Superposición
 
 -   La superposición puede usarse en cualquier tamaño de pantalla y en orientación vertical u horizontal. En su estado predeterminado (contraído), la superposición no ocupa ningún estado real, solo se muestra el botón.
 -   Ofrece una navegación a petición que ahorra superficie en pantalla. Ideal para aplicaciones en teléfonos y tabléfonos.
@@ -80,7 +82,7 @@ El panel de navegación tiene tres modos: superposición, compacto y en línea. 
 -   El estado expandido es transitorio y se descarta cuando se realiza una selección, cuando se usa el botón Atrás, o cuando el usuario pulsa fuera del panel.
 -   La superposición se dibuja encima del contenido y no redistribuye el contenido.
 
-### Compacto
+### <a name="compact"></a>Compacto
 
 -   El modo compacto puede especificarse como `CompactOverlay`, que superpone contenido cuando está abierto, o `CompactInline`, que quita el contenido fuera de su espacio. Recomendamos usar CompactOverlay.
 -   Los paneles compactos proporcionan una indicación de la ubicación seleccionada, mientras usan una pequeña cantidad de espacio de pantalla.
@@ -89,14 +91,14 @@ El panel de navegación tiene tres modos: superposición, compacto y en línea. 
 -   Al pulsar el botón del panel de navegación, se abre y se cierra el panel, que se comporta como superposición o en línea según el modo de pantalla especificado.
 -   La selección debe mostrarse en los iconos de lista para resaltar en qué lugar del árbol de navegación se encuentra el usuario.
 
-### En línea
+### <a name="inline"></a>En línea
 
 -   El panel de navegación permanece abierto. Este modo es más adecuado para pantallas más grandes.
 -   Admite los escenarios de arrastrar y colocar hacia y desde el panel.
 -   El botón del panel de navegación no es necesario para este estado. Si se usa el botón, el área de contenido se mueve fuera y se redistribuye el contenido dentro de esa área.
 -   La selección debe mostrarse en los elementos de lista para resaltar en qué lugar del árbol de navegación se encuentra el usuario.
 
-## Capacidad de adaptación
+## <a name="adaptability"></a>Capacidad de adaptación
 
 Para maximizar la facilidad de uso en una variedad de dispositivos, te recomendamos usar [puntos de interrupción](../layout/screen-sizes-and-breakpoints-for-responsive-design.md) y ajustar el modo del panel de navegación según el ancho de la ventana de la aplicación.
 -   Ventana pequeña
@@ -109,13 +111,13 @@ Para maximizar la facilidad de uso en una variedad de dispositivos, te recomenda
    -   Mayor que 1007 píxeles de ancho.
    -   El panel de navegación debe estar en modo acoplado, abierto de manera predeterminada.
 
-## Adaptación
+## <a name="tailoring"></a>Adaptación
 
 Para optimizar la [experiencia de 10 pies](http://go.microsoft.com/fwlink/?LinkId=760736) de tu aplicación, considera la posibilidad de modificar la apariencia visual de los elementos de navegación para personalizar el panel de navegación. Según el contexto de la interacción, puede ser más importante llamar la atención del usuario hacia el elemento de navegación seleccionado o hacia el elemento de navegación enfocado. Para una experiencia de 10 pies, donde el controlador para juegos es el dispositivo de entrada más común, es particularmente importante asegurar que el usuario puede realizar de manera sencilla un seguimiento de la ubicación del elemento enfocado actualmente en pantalla.
 
 ![Ejemplo de elementos del panel de navegación personalizados](images/nav_item_states.png)
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Control de vista en dos paneles](split-view.md)
 * [Panel de maestro y detalles](master-details.md)
@@ -126,6 +128,6 @@ Para optimizar la [experiencia de 10 pies](http://go.microsoft.com/fwlink/?LinkI
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

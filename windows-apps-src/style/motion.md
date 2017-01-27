@@ -6,16 +6,18 @@ ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: 1cdbb81c783d17af16743a4ff5f82dc1c92df6b4
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 53b6108a472e021caa0d11327c1457b3f6ca8aac
 
 ---
 
-# Movimiento para las aplicaciones para UWP
+# <a name="motion-for-uwp-apps"></a>Movimiento para las aplicaciones para UWP
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Unas animaciones intencionadas y bien diseñadas dan vida a las aplicaciones y ofrecen una experiencia que se percibe elaborada y elegante. Ayuda a los usuarios a comprender los cambios contextuales y relaciona las experiencias con transiciones visuales.
 
-## Ventajas de la animación
+## <a name="benefits-of-animation"></a>Ventajas de la animación
 
 
 La animación es algo más que hacer que las cosas se muevan. La animación es una herramienta que permite crear un ecosistema físico donde el usuario vive y manipula mediante el tacto. La calidad de la experiencia depende de cómo responda la aplicación al usuario y de qué tipo de personalidad transmita la interfaz de usuario.
@@ -48,15 +50,13 @@ A medida que el usuario pasa más tiempo en tu aplicación o las tareas se hacen
 
     Se pueden usar animaciones para que el usuario sepa que el teléfono está procesando y no congelado, y también pueden mostrar de forma pasiva información nueva que puede interesar al usuario.
 
-## En esta sección:
+<h2>En esta sección:</h2>
+
 <table>
-<thead>
-<tr class="header">
+<tr>
 <th align="left">Tipo de animación</th>
 <th align="left">Descripción</th>
 </tr>
-</thead>
-<tbody>
     <tr>
         <td>[Agregar y eliminar](motion-list.md)
         </td>
@@ -99,8 +99,6 @@ A medida que el usuario pasa más tiempo en tu aplicación o las tareas se hacen
         <td>Mueve elementos a una nueva posición.
         </td>
     </tr>
-
-</tbody>
 </table>
 
  
@@ -111,6 +109,6 @@ A medida que el usuario pasa más tiempo en tu aplicación o las tareas se hacen
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

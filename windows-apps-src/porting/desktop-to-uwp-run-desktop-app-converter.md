@@ -4,8 +4,8 @@ Description: "Ejecuta Desktop Converter App para convertir una aplicación de es
 Search.Product: eADQiWindows 10XVcnh
 title: Desktop App Converter
 translationtype: Human Translation
-ms.sourcegitcommit: a5ac8acdbb7480bb776cef6d1dffa303dab5a9e1
-ms.openlocfilehash: 4095cfbe96f239afb5f3173e0a7f84e01d63452c
+ms.sourcegitcommit: bf6da2f4d780774819fe7a4abf6367345304767c
+ms.openlocfilehash: 3ffd664892fe5ee589d3bf5704e2eeed178bf5f3
 
 ---
 
@@ -22,6 +22,12 @@ El convertidor ejecuta el instalador de escritorio en un entorno de Windows aisl
 ## <a name="whats-new"></a>Novedades
 
 En esta sección se describen los cambios entre las versiones de Desktop App Converter. 
+
+### <a name="12142016-v104"></a>14/12/2016 (v1.0.4)
+
+* Mejora de la validación de la imagen base para buscar archivos .wim no válidos. 
+* Corrección de errores de caracteres especiales en el parámetro ```-Publisher```. 
+* Recursos actualizados.
 
 ### <a name="1122016-v101"></a>02/11/2016 (v1.0.1)
 
@@ -102,28 +108,15 @@ En esta sección se describen los cambios entre las versiones de Desktop App Con
 
 Desktop App Converter se basa en las características más recientes de Windows 10. Asegúrate de ejecutar la Actualización de aniversario de Windows 10 (14393.0) o compilaciones posteriores.
 
-### <a name="store-download"></a>Descarga de la Tienda
-
 1.  Descarga [DesktopAppConverter de la Tienda Windows](https://aka.ms/converter) y el [archivo de imagen base .wim que coincide con tu compilación](https://aka.ms/converterimages).  
 2.  Ejecuta DesktopAppConverter como administrador. Puedes hacerlo desde el menú Inicio si haces clic con el botón derecho en el icono y seleccionas *Ejecutar como administrador* en *Más*, o bien desde la barra de tareas si haces clic con el botón derecho en el icono, haces clic otra vez con el botón derecho en el nombre de la aplicación que aparece y, por último, seleccionas *Ejecutar como administrador.*
-3.  En la ventana de consola de la aplicación, ejecuta ```CMD PS C:\> Set-ExecutionPolicy bypass```.
-4.  Configura el convertidor al ejecutar ```CMD PS C:\> DesktopAppConverter.exe -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose``` desde la ventana de consola de la aplicación.
+3.  En la ventana de consola de la aplicación, ejecuta ```Set-ExecutionPolicy bypass```.
+4.  Configura el convertidor al ejecutar ```DesktopAppConverter.exe -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose``` desde la ventana de consola de la aplicación.
 5.  Si al ejecutar los comandos anteriores se te pide reiniciar, reinicia el equipo.
-
-### <a name="zip-file"></a>Archivo ZIP 
-
-DAC sigue estando disponible como un archivo ZIP en el [centro de descargas](https://aka.ms/converterimages) para facilitar escenarios sin conexión. Sin embargo, todas las versiones futuras se publicarán únicamente en la versión de la tienda.
-
-1.  Descarga el archivo ZIP de DAC y el [archivo de imagen base .wim que coincide con tu compilación](https://aka.ms/converterimages).  
-2. Extrae DesktopAppConverter.zip en una carpeta local.
-3. En una ventana de administración de PowerShell, ejecuta ```CMD PS C:\> Set-ExecutionPolicy bypass```.
-4. Configura el convertidor al ejecutar ```CMD PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose``` en una ventana de administración de PowerShell.
-5. Si al ejecutar los comandos anteriores se te pide reiniciar, reinicia el equipo.
 
 ## <a name="run-the-desktop-app-converter"></a>Ejecutar Desktop App Converter
 
 + **Descarga de la Tienda**: usa ```DesktopAppConverter.exe``` para ejecutar el convertidor.
-+ **Archivo ZIP**: usa ```DesktopAppConverter.ps1``` para ejecutar el convertidor. 
 
 ### <a name="usage"></a>Uso
 
@@ -173,6 +166,17 @@ El cmdlet Add-AppxPackage requiere que el paquete de la aplicación (.appx) que 
 
 Para obtener detalles adicionales sobre cómo firmar el paquete .appx, consulta [Firmar la aplicación de escritorio convertida](desktop-to-uwp-signing.md). 
 
+Nota: Si intentas firmar un paquete con el certificado generado automáticamente, tendrás que usar la contraseña predeterminada "123456".
+
+## <a name="modify-vfs-folder-and-registry-hive-optional"></a>Modificar carpeta VFS y subárbol del Registro (opcional)
+
+Desktop App Converter adopta un enfoque muy conservador para filtrar el ruido del sistema y archivos del contenedor.  Esto no es necesario, pero después de la conversión, puedes:
+
+1. Revisar la carpeta VFS y eliminar los archivos que el instalador no necesite.
+2. Revisar el contenido de Reg.dat y eliminar las claves que no estén instaladas o que la aplicación no necesite.
+
+Si realizas cambios en la aplicación convertida (incluidos los anteriores), no necesitas volver a ejecutar el convertidor; puedes volver a empaquetar manualmente tu aplicación con la herramienta MakeAppx y el archivo appxmanifest.xml que DAC genera para tu aplicación. Para obtener ayuda, consulta [Convertir manualmente la aplicación a UWP mediante el puente de escritorio](desktop-to-uwp-manual-conversion.md).
+
 ## <a name="caveats"></a>Advertencias
 
 1. La compilación de Windows 10 de la máquina host debe coincidir con la imagen base que obtuviste como parte de la descarga de Desktop App Converter.  
@@ -185,14 +189,24 @@ Para obtener detalles adicionales sobre cómo firmar el paquete .appx, consulta 
 
 ## <a name="known-issues"></a>Problemas conocidos
 
-+ Si recibes un paquete piloto de Windows Insider en una máquina de desarrollo que anteriormente tenía Desktop App Converter instalado, puede que se muestre el error `New-ContainerNetwork: The object already exists` al instalar la nueva imagen base. Como solución, ejecuta el comando `Netsh int ipv4 reset` desde un símbolo del sistema con privilegios elevados y, después, reinicia el equipo. 
-+ No se podrá instalar una aplicación .NET compilada con la opción de compilación "AnyCPU" si el archivo ejecutable principal o cualquiera de las dependencias están colocados en "Archivos de programa" o "Windows\System32". Como solución, usa el instalador de escritorio específico de la arquitectura (32 o 64 bits) para generar correctamente un paquete AppX.
+* Estamos investigando los siguientes errores que se producen en algunas compilaciones de SO:
+    
+    * ```E_CREATTING_ISOLATED_ENV_FAILED```
+    * ```E_STARTING_ISOLATED_ENV_FAILED```
+    
+    Si se produce cualquiera de estos errores, asegúrate de que estás usando una imagen base válida del [centro de descarga](https://aka.ms/converterimages). Si estás usando un archivo .wim válido, envíanos los registros a converter@microsoft.com para ayudarnos a investigar. 
 
-## <a name="telemetry-from-desktop-app-converter"></a>Telemetría de Desktop App Converter  
+* Si recibes un paquete piloto de Windows Insider en una máquina de desarrollo que anteriormente tenía Desktop App Converter instalado, puede que se muestre el error `New-ContainerNetwork: The object already exists` al instalar la nueva imagen base. Como solución, ejecuta el comando `Netsh int ipv4 reset` desde un símbolo del sistema con privilegios elevados y, después, reinicia el equipo. 
+
+* No se podrá instalar una aplicación .NET compilada con la opción de compilación "AnyCPU" si el archivo ejecutable principal o cualquiera de las dependencias están colocados en "Archivos de programa" o "Windows\System32". Como solución, usa el instalador de escritorio específico de la arquitectura (32 o 64 bits) para generar correctamente un paquete AppX.
+
+## <a name="telemetry-from-desktop-app-converter"></a>Telemetría de Desktop App Converter
+
 Desktop App Converter puede recopilar información sobre ti y sobre el uso del software, y enviarla a Microsoft. Puedes obtener más información sobre la recopilación de datos de Microsoft y usarla en la documentación del producto y en la [Declaración de privacidad de Microsoft](http://go.microsoft.com/fwlink/?LinkId=521839). Te comprometes a cumplir con todas las disposiciones aplicables de la Declaración de privacidad de Microsoft.
 
 De manera predeterminada, la telemetría se habilitará en Desktop App Converter. Agrega la siguiente clave del registro para establecer la telemetría en una configuración deseada:  
-```CMD
+
+```cmd
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DesktopAppConverter
 ```
 + Agrega o edita el valor *DisableTelemetry* mediante un DWORD establecido en 1.
@@ -275,9 +289,7 @@ Desktop App Converter ahora admite la creación de paquetes de la aplicación x8
 
 ### <a name="running-the-peheadercertfixtool"></a>Ejecutar PEHeaderCertFixTool
 
-Durante el proceso de conversión, DesktopAppConverter ejecuta automáticamente PEHeaderCertFixTool para corregir cualquier encabezado PE dañado. Sin embargo, también puedes ejecutar PEHeaderCertFixTool en un appx de UWP, en archivos sueltos o un binario concreto. 
-
-PEHeaderCertFixTool se incluye como parte de DesktopAppConverter.zip. Ejemplo de uso: 
+Durante el proceso de conversión, DesktopAppConverter ejecuta automáticamente PEHeaderCertFixTool para corregir cualquier encabezado PE dañado. Sin embargo, también puedes ejecutar PEHeaderCertFixTool en un appx de UWP, en archivos sueltos o un binario concreto. Ejemplo de uso: 
 
 ```CMD
 PEHeaderCertFixTool.exe <binary file>|<.appx package>|<folder> [/c] [/v]
@@ -298,6 +310,6 @@ Desktop App Converter no admite Unicode; por lo tanto, no es posible usar caract
 + [Project Centennial: Bringing Existing Desktop Applications to the Universal Windows Platform (Proyecto Centennial: convertir las aplicaciones de escritorio existentes a la Plataforma universal de Windows)](https://channel9.msdn.com/events/Build/2016/B829)  
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -4,19 +4,19 @@ ms.assetid: 26834A51-512B-485B-84C8-ABF713787588
 title: "Crear una aplicación de tarjeta NFC inteligente"
 description: "Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC con un elemento seguro basado en SIM, pero ese modelo requería que las aplicaciones de pago seguro estuvieran estrechamente unidas a los operadores de redes móviles (MNO)."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 52a8be1df522c6b5512a7fe560d01e8d840194af
+ms.sourcegitcommit: d00ba80ac7d0f033a69ad070dc8ee681cbd0ed18
+ms.openlocfilehash: c5a7293874bd71b50aa31d6af9a687d289d07ce5
 
 ---
-# Crear una aplicación de tarjeta NFC inteligente
+# <a name="create-an-nfc-smart-card-app"></a>Crear una aplicación de tarjeta NFC inteligente
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Importante** Este tema solo se aplica a Windows10 Mobile.
+**Importante** Este tema solo se aplica a Windows 10 Mobile.
 
 Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC con un elemento seguro basado en SIM, pero ese modelo requería que las aplicaciones de pago seguro estuvieran estrechamente unidas a los operadores de redes móviles (MNO). Esto limitaba la variedad de soluciones de pago posibles por otros comerciantes o desarrolladores que no estaban unidos a MNO. En Windows 10 Mobile, se ha incluido una nueva tecnología de emulación de tarjetas denominada Emulación de tarjeta de host (HCE). La tecnología HCE permite a tu aplicación comunicarse directamente con un lector de tarjetas NFC. En este tema se muestra cómo funciona la emulación de tarjeta de host (HCE) en dispositivos de Windows 10 Mobile y cómo se desarrolla una aplicación HCE para que los clientes puedan acceder a los servicios a través de su teléfono en lugar de con una tarjeta física sin colaboración con un MNO.
 
-## Qué necesitas para desarrollar una aplicación HCE
+## <a name="what-you-need-to-develop-an-hce-app"></a>Qué necesitas para desarrollar una aplicación HCE
 
 
 Para desarrollar una aplicación de emulación de tarjeta HCE para Windows 10 Mobile, debes obtener la configuración del entorno de desarrollo. Puedes realizar la configuración instalando Microsoft Visual Studio 2015, que incluye las herramientas de desarrollo de Windows y el emulador de Windows 10 Mobile con compatibilidad con la emulación de NFC. Para más información sobre cómo obtener la configuración, consulta [Preparación](https://msdn.microsoft.com/library/windows/apps/Dn726766)
@@ -38,17 +38,17 @@ Solo los dispositivos de Windows 10 Mobile están habilitados con la caracterís
 
 La arquitectura para la compatibilidad con la emulación de tarjetas basadas en HCE y SIM se muestra en el siguiente diagrama. 
 
-![](./images/nfc-architecture.png)
+![Arquitectura para HCE y emulación de tarjeta SIM](./images/nfc-architecture.png)
 
-## Selección de la aplicación y enrutamiento de AID
+## <a name="app-selection-and-aid-routing"></a>Selección de la aplicación y enrutamiento de AID
 
-Para desarrollar una aplicación HCE, debes saber cómo enrutan AID a una aplicación específica los dispositivos de Windows 10 Mobile, ya que los usuarios pueden instalar varias aplicaciones HCE diferentes. Cada aplicación puede registrar varias tarjetas HCE y SIM. Las aplicaciones de Windows Phone 8.1 heredadas que se basan en SIM seguirán funcionando en Windows 10 Mobile si el usuario elige la opción de "Tarjeta SIM" como su tarjeta de pago predeterminada en el menú de configuración de NFC. Esto se establece de forma predeterminada al activar el dispositivo por primera vez.
+Para desarrollar una aplicación HCE, debes saber cómo los dispositivos de Windows 10 Mobile enrutan AID a una aplicación específica, ya que los usuarios pueden instalar varias aplicaciones HCE diferentes. Cada aplicación puede registrar varias tarjetas HCE y SIM. Las aplicaciones de Windows Phone 8.1 heredadas que se basan en SIM seguirán funcionando en Windows 10 Mobile si el usuario elige la opción de "Tarjeta SIM" como su tarjeta de pago predeterminada en el menú de configuración de NFC. Esto se establece de forma predeterminada al activar el dispositivo por primera vez.
 
 Cuando el usuario pulsa en su dispositivo de Windows 10 Mobile en un terminal, los datos se enrutan automáticamente a la aplicación correcta instalada en el dispositivo. Este enrutamiento se basa en los identificadores de applet (AID), que son identificadores de 5-16 bytes. Durante la pulsación, el terminal externo transmitirá un comando APDU SELECT para especificar al AID que desea que los se enruten los siguientes comandos de APDU. Los comandos SELECT siguientes cambiarán de nuevo el enrutamiento. En función de los AID registrados por aplicaciones y configuración de usuario, el tráfico APDU se enruta a una aplicación específica, que enviará una respuesta APDU. Ten en cuenta que un terminal puede querer comunicarse con varias aplicaciones diferentes durante la misma pulsación. Por tanto, debes asegurarte de que la tarea en segundo plano de la aplicación salga lo antes posible cuando se desactiva para dejar espacio para que otra tarea en segundo plano responda a APDU. Trataremos las tareas en segundo plano más adelante en este tema.
 
 Las aplicaciones HCE deben registrarse con AID particulares que pueden controlar, así que recibirás APDU para un AID. Las aplicaciones declaran AID usando grupos de AID. Un grupo de AID es conceptualmente equivalente a una tarjeta física individual. Por ejemplo, una tarjeta de crédito se declara con un grupo de AID y una segunda tarjeta de crédito de un banco diferente se declara con un segundo grupo de AID diferente, incluso aunque ambos puedan tener el mismo AID.
 
-## Resolución de conflictos para grupos de AID de pago
+## <a name="conflict-resolution-for-payment-aid-groups"></a>Resolución de conflictos para grupos de AID de pago
 
 Cuando una aplicación registra tarjetas físicas (grupos de AID), puede declarar la categoría de grupo de AID como "Payment" u "Other". Aunque puede haber varios grupos de AID de pago registrados en cualquier momento, solo uno de estos grupos de AID de pago puede estar habilitado para tocar y pagar cada vez, el cual selecciona el usuario. Este comportamiento existe porque el usuario espera tener el control de elegir conscientemente usar una tarjeta de pago único, crédito o débito para no pagar con una tarjeta diferente no intencionada al pulsar en un terminal desde su dispositivo.
 
@@ -56,11 +56,11 @@ Sin embargo, se pueden habilitar varios grupos de AID registrados como "Otros" a
 
 Todos los grupos de AID que estén registrados como "Payment" aparecen en la lista de tarjetas de la página de configuración de NFC, donde el usuario puede seleccionar sus tarjetas de pago predeterminadas. Cuando se selecciona una tarjeta de pago predeterminada, la aplicación que registra este grupo de AID de pago se convierte en la aplicación de pago predeterminada. Las aplicaciones de pago predeterminadas pueden habilitar o deshabilitar cualquiera de los grupos de Ayuda sin interacción del usuario. Si el usuario rechaza la petición de aplicación de pago predeterminada, la aplicación de pago predeterminada actual (si existe) permanece como predeterminada. En la siguiente captura de pantalla, se muestra la página de Configuración de NFC.
 
-![](./images/nfc-settings.png)
+![Captura de pantalla de la página de configuración de NFC](./images/nfc-settings.png)
 
 Con la captura de pantalla de ejemplo anterior, si el usuario cambia su tarjeta de pago predeterminada a otra tarjeta que no esté registrada por "HCE Application 1", el sistema crea un mensaje de confirmación para solicitar el consentimiento del usuario. Sin embargo, si el usuario cambia su tarjeta de pago predeterminada a otra tarjeta registrada por "HCE Application 1", el sistema no crea una solicitud de confirmación para el usuario, puesto que "HCE Application 1" ya es la aplicación de pago predeterminada.
 
-## Resolución de conflictos para grupos de AID no de pago
+## <a name="conflict-resolution-for-non-payment-aid-groups"></a>Resolución de conflictos para grupos de AID no de pago
 
 Las tarjetas no de pago clasificadas como "Other" no aparecen en la página de Configuración de NFC.
 
@@ -76,11 +76,11 @@ En Windows 10 Mobile, el sistema configura la tabla de enrutamiento del controla
 
 Cuando un lector externo envía un comando "SELECT AID", el controlador de NFC comprueba primero las rutas de AID en la tabla de enrutamiento en busca de una coincidencia. Si no hay ninguna coincidencia, usará la ruta basada en protocolos como la ruta predeterminada para el tráfico ISO-DEP (14443-4-A). Para cualquier otro tráfico no ISO-DEP, usará el enrutamiento basado en la tecnología.
 
-Windows10 Mobile proporciona una opción de menú "Tarjeta SIM" en la página de Configuración de NFC para seguir usando aplicaciones basadas en SIM de Windows Phone 8.1 heredadas, que no registran sus AID en el sistema. Si el usuario selecciona "Tarjeta SIM" como su tarjeta de pago predeterminada, la ruta de ISO-DEP se establece en UICC; para todas las demás opciones del menú desplegable, la ruta de ISO-DEP es al host.
+Windows 10 Mobile proporciona una opción de menú "Tarjeta SIM" en la página de Configuración de NFC para seguir usando aplicaciones basadas en SIM de Windows Phone 8.1 heredadas, que no registran sus AID en el sistema. Si el usuario selecciona "Tarjeta SIM" como su tarjeta de pago predeterminada, la ruta de ISO-DEP se establece en UICC; para todas las demás opciones del menú desplegable, la ruta de ISO-DEP es al host.
 
 La ruta de ISO-DEP se establece en "Tarjeta SIM" para los dispositivos que tengan una tarjeta SIM habilitada para SE cuando el dispositivo se arranca por primera vez con Windows 10 Mobile. Cuando el usuario instala una aplicación habilitada para HCE y esa aplicación permite registros de grupo AID de HCE, la ruta de ISO-DEP apuntará al host. Las nuevas aplicaciones basadas en SIM necesitan registrar los AID en la tarjeta SIM para que las rutas AID específicas se rellenen en la tabla de enrutamiento del controlador.
 
-## Crear una aplicación basada en HCE
+## <a name="creating-an-hce-based-app"></a>Crear una aplicación basada en HCE
 
 La aplicación HCE tiene dos partes.
 
@@ -88,7 +88,7 @@ La aplicación HCE tiene dos partes.
 -   Una tarea en segundo plano que activa el sistema para procesar APDU para un AID determinado.
 
 Debido a los requisitos de rendimiento extremadamente ajustados para cargar la tarea en segundo plano en respuesta a una pulsación de NFC, te recomendamos que todas tus tareas en segundo plano se implementen en código nativo C++/CX (incluidas las dependencias, las referencias o las bibliotecas de las que depende) en lugar de código C# o código administrado. Aunque el código C# y el código administrado normalmente funcionan correctamente, hay sobrecargas, como la carga de .NET CLR, que pueden evitarse escribiendo en C++/CX.
-## Crear y registrar una tarea en segundo plano
+## <a name="create-and-register-your-background-task"></a>Crear y registrar una tarea en segundo plano
 
 Debes crear una tarea en segundo plano en la aplicación HCE para procesar y responder a APDU enrutados por el sistema. La primera vez que se inicia la aplicación, el primer plano registra una tarea en segundo plano de HCE que implementa la interfaz [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/BR224803) como se muestra en el código siguiente.
 
@@ -102,7 +102,7 @@ bgTask = taskBuilder.Register();
 
 Ten en cuenta que el desencadenador de tareas se establece en [**SmartCardTriggerType**](https://msdn.microsoft.com/library/windows/apps/Dn608017). **EmulatorHostApplicationActivated**. Esto significa que cada vez que el sistema operativo que resuelve la aplicación recibe una APDU del comando SELECT AID, se iniciará la tarea en segundo plano.
 
-## Recibir y responder a APDU
+## <a name="receive-and-respond-to-apdus"></a>Recibir y responder a APDU
 
 Cuando hay una APDU destinada a la aplicación, el sistema iniciará la tarea en segundo plano. La tarea en segundo plano recibe la APDU pasada a través de la propiedad [**CommandApdu**](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.smartcardemulatorapdureceivedeventargs.commandapdu.aspx) del objeto [**SmartCardEmulatorApduReceivedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Dn894640) y responde a la APDU mediante el método [**TryRespondAsync**](https://msdn.microsoft.com/library/windows/apps/mt634299.aspx) del mismo objeto. Considera la posibilidad de mantener la tarea en segundo plano para operaciones ligeras por motivos de rendimiento. Por ejemplo, responde a las APDU inmediatamente y sal de la tarea en segundo plano cuando se complete todo el procesamiento. Debido a la naturaleza de las transacciones NFC, los usuarios tienden a mantener su dispositivo con el lector solo un período muy breve de tiempo. La tarea en segundo plano seguirá recibiendo tráfico del lector hasta que se desactive la conexión, en cuyo caso se recibirá un objeto [**SmartCardEmulatorConnectionDeactivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Dn894644). Se puede desactivar la conexión por los siguientes motivos, como se indica en la propiedad [**SmartCardEmulatorConnectionDeactivatedEventArgs.Reason**](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.smartcardemulatorconnectiondeactivatedeventargs.reason).
 
@@ -202,7 +202,7 @@ void BgTask::HandleHceActivation()
  }
 }
 ```
-## Crear y registrar grupos AID
+## <a name="create-and-register-aid-groups"></a>Crear y registrar grupos AID
 
 Durante el primer inicio de la aplicación, una vez aprovisionada la tarjeta, crearás y registrarás grupos de AID con el sistema. El sistema determina la aplicación con la que le gustaría comunicar un lector externo y a la que le gustaría enrutar ADPU según corresponda en función de la configuración de usuario y de AID registrados.
 
@@ -281,7 +281,7 @@ taskBuilder.SetTrigger(new SmartCardTrigger(SmartCardTriggerType.EmulatorAppletI
 bgTask = taskBuilder.Register();
 ```
 
-## Comportamiento de reemplazo de primer plano
+## <a name="foreground-override-behavior"></a>Comportamiento de reemplazo de primer plano
 
 Puedes cambiar el elemento [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy) de cualquiera de los registros de grupos de AID a **ForegroundOverride** mientras la aplicación está en primer plano sin pedir confirmación al usuario. Cuando el usuario pulsa en un terminal desde su dispositivo mientras la aplicación está en primer plano, el tráfico se enruta a la aplicación incluso si el usuario no ha elegido ninguna de las tarjetas de pago como su tarjeta de pago predeterminada. Cuando se cambia la directiva de activación de la tarjeta a **ForegroundOverride**, este cambio es solo temporal hasta que la aplicación deje de estar en primer plano y no afectará a la tarjeta de pago predeterminada establecida por el usuario. Puedes cambiar el elemento **ActivationPolicy** de tus tarjetas de pago o no de pago desde la aplicación en primer plano de la siguiente manera. Ten en cuenta que solo es posible llamar al método [**RequestActivationPolicyChangeAsync**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_requestactivationpolicychangeasync) desde una aplicación en primer plano y no se puede llamar desde una tarea en segundo plano.
 
@@ -304,7 +304,7 @@ reg = await SmartCardEmulator.RegisterAppletIdGroupAsync(appletIdGroup);
 reg.RequestActivationPolicyChangeAsync(AppletIdGroupActivationPolicy.ForegroundOverride);
 ```
 
-## Comprobar la compatibilidad de NFC y HCE
+## <a name="check-for-nfc-and-hce-support"></a>Comprobar la compatibilidad de NFC y HCE
 
 La aplicación debe comprobar si un dispositivo tiene hardware NFC, admite la característica de emulación de la tarjeta y admite la emulación de tarjeta de host antes de ofrecer estas características al usuario.
 
@@ -326,9 +326,9 @@ El soporte para enrutamiento UICC basado en HCE y AID solo está disponible en d
 Smartcardemulator.IsHostCardEmulationSupported();
 ```
 
-## Comportamiento de la pantalla de bloqueo y de la pantalla apagada
+## <a name="lock-screen-and-screen-off-behavior"></a>Comportamiento de la pantalla de bloqueo y de la pantalla apagada
 
-Windows10 Mobile tiene la configuración de emulación de tarjeta de nivel de dispositivo, que puede establecer el operador de telefonía móvil o el fabricante del dispositivo. De manera predeterminada, la alternancia de "pulsar para pagar "está deshabilitada, y la "directiva de habilitación del nivel del dispositivo" está definida en "Siempre", a menos que el OEM o el operador móvil omitan estos valores.
+Windows 10 Mobile tiene la configuración de emulación de tarjeta de nivel de dispositivo, que puede establecer el operador de telefonía móvil o el fabricante del dispositivo. De manera predeterminada, la alternancia de "pulsar para pagar "está deshabilitada, y la "directiva de habilitación del nivel del dispositivo" está definida en "Siempre", a menos que el OEM o el operador móvil omitan estos valores.
 
 La aplicación puede consultar el valor de [**EnablementPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn608006) en el nivel del dispositivo y realizar una acción para cada caso según el comportamiento deseado de la aplicación en cada estado.
 
@@ -366,7 +366,7 @@ La tarea en segundo plano de su aplicación se iniciará incluso si el teléfono
         } 
 ```
 
-## Registro de AID y otras actualizaciones para las aplicaciones en basadas en SIM
+## <a name="aid-registration-and-other-updates-for-sim-based-apps"></a>Registro de AID y otras actualizaciones para las aplicaciones en basadas en SIM
 
 Las aplicaciones de emulación de tarjeta que usan la SIM como el elemento seguro pueden registrarse con el servicio de Windows para declarar los AID compatibles con la tarjeta SIM. Este registro es muy similar a un registro de aplicación basado en HCE. La única diferencia es el valor [**SmartCardEmulationType**](https://msdn.microsoft.com/library/windows/apps/Dn894639), que se debe establecer como Uicc para aplicaciones basadas en SIM. Como resultado del registro de tarjetas de pago, también se rellena el nombre para mostrar de la tarjeta en el menú de configuración de NFC.
 
@@ -379,13 +379,13 @@ var appletIdGroup = new SmartCardAppletIdGroup(
 ```
 
 ** Importante **  
-La compatibilidad para interceptar SMS binarios heredados de Windows Phone8.1 se ha quitado y se ha reemplazado con una nueva compatibilidad más amplia de SMS en Windows10 Mobile, pero las aplicaciones de Windows Phone8.1 heredadas basadas en esto deben actualizarse para usar las nuevas API para SMS de Windows10 Mobile.
+La compatibilidad para interceptar SMS binarios heredados de Windows Phone 8.1 se ha quitado y se ha reemplazado con una nueva compatibilidad más amplia de SMS en Windows 10 Mobile, pero las aplicaciones de Windows Phone 8.1 heredadas basadas en esto deben actualizarse para usar las nuevas API para SMS de Windows 10 Mobile.
 
 
 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -5,27 +5,34 @@ title: Reconocimiento de voz
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
 template: detail.hbs
+keywords: "voz, reconocimiento de voz, lenguaje natural, dictado, entrada, interacción del usuario"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 59cebc2235b8ae4214156a4140b0b003c717375d
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: a4de0955eb6bd01ef5279b5b8d553fe1d1dd50f2
 
 ---
 
-# Reconocimiento de voz
-
+# <a name="speech-recognition"></a>Reconocimiento de voz
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Usa el reconocimiento de voz para proporcionar datos de entrada, especificar una acción o un comando y realizar tareas.
 
-**API importantes**
-
--   [**Windows.Media.SpeechRecognition**](https://msdn.microsoft.com/library/windows/apps/dn653262)
-
-
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Windows.Media.SpeechRecognition**](https://msdn.microsoft.com/library/windows/apps/dn653262)</li>
+</ul>
+</div>
 
 El reconocimiento de voz incluye un tiempo de ejecución de voz, varias API de reconocimiento para programar el tiempo de ejecución, gramáticas listas para usar para el dictado y la búsqueda en Internet, y una interfaz de usuario predeterminada del sistema que ayuda a los usuarios a descubrir y usar las funciones de reconocimiento de voz.
 
 
-## Configurar la fuente de audio
+## <a name="set-up-the-audio-feed"></a>Configurar la fuente de audio
 
 
 Comprueba que el dispositivo tenga un micrófono o un equivalente.
@@ -34,7 +41,7 @@ Configura la función **Micrófono** del dispositivo ([**DeviceCapability**](htt
 
 Consulta el tema sobre [declaraciones de funcionalidades de aplicación](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
-## Reconocer la entrada de voz
+## <a name="recognize-speech-input"></a>Reconocer la entrada de voz
 
 
 Una *restricción* define las palabras y las frases (vocabulario) que una aplicación reconoce en una entrada de voz. Las restricciones son fundamentales para el reconocimiento de voz y mejoran la precisión del reconocimiento de voz de tu aplicación.
@@ -110,7 +117,7 @@ catch (Exception exception)
 
 3.  **Gramáticas SRGS** ([**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)).
 
-    Una gramáticaSRGS (Especificación de gramática de reconocimiento de voz) es un documento estático que, a diferencia de una restricción de lista mediante programación, usa el formatoXML definido por [SRGS versión 1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302). Una gramática SRGS proporciona el máximo control sobre la funcionalidad de reconocimiento de voz al permitir capturar varios significados semánticos en un solo reconocimiento.
+    Una gramática SRGS (Especificación de gramática de reconocimiento de voz) es un documento estático que, a diferencia de una restricción de lista mediante programación, usa el formato XML definido por [SRGS versión 1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302). Una gramática SRGS proporciona el máximo control sobre la funcionalidad de reconocimiento de voz al permitir capturar varios significados semánticos en un solo reconocimiento.
 
 4.  **Restricciones de los comandos de voz** ([**SpeechRecognitionVoiceCommandDefinitionConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653220))
 
@@ -147,7 +154,7 @@ private async void StartRecognizing_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Personalizar la interfaz de usuario de reconocimiento de voz
+## <a name="customize-the-recognition-ui"></a>Personalizar la interfaz de usuario de reconocimiento de voz
 
 
 Cuando la aplicación intenta el reconocimiento de voz llamando a [**SpeechRecognizer.RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245), aparecen varias pantallas en el siguiente orden.
@@ -164,7 +171,7 @@ Si usas una restricción basada en una lista de palabras o frases, o bien una re
 -   La pantalla **Has dicho**, si lo que el usuario ha dicho pudiera interpretarse como más de un posible resultado.
 -   La pantalla **Te he oído** o la pantalla de error.
 
-La siguiente imagen muestra un ejemplo del flujo entre pantallas de un reconocedor de voz que usa una restricción basada en un archivo de gramáticaSRGS. En este ejemplo, el reconocimiento de voz fue correcto.
+La siguiente imagen muestra un ejemplo del flujo entre pantallas de un reconocedor de voz que usa una restricción basada en un archivo de gramática SRGS. En este ejemplo, el reconocimiento de voz fue correcto.
 
 ![initial reconocimiento screen for a constraint based on a sgrs grammar file](images/speech-listening-initial.png)
 
@@ -204,7 +211,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 
 **Desarrolladores**
@@ -223,6 +230,6 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

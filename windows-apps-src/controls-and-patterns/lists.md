@@ -6,11 +6,11 @@ ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 508a09e0c12006c00dbdf7675516b41119eab8a6
-ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 93f5d7fe5ec14a0d5ccb69e84e9419488192a5c4
 
 ---
-# Listas
+# <a name="lists"></a>Listas
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -26,22 +26,17 @@ Se proporcionan directrices de diseño, características y ejemplos para cada pa
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br242878"><strong>Clase ListView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br242705"><strong>Clase GridView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209348"><strong>Clase ComboBox</strong></a></li>
+<li>[**Clase ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)</li>
+<li>[**Clase GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)</li>
+<li>[**Clase ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## Vistas de lista
+## <a name="list-views"></a>Vistas de lista
 
 Las vistas de lista te permiten clasificar elementos y asignar encabezados de grupo, arrastrar y colocar elementos, mantener el contenido y reordenar los elementos.
 
-### ¿Es este el control adecuado?
+### <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa una vista de lista para:
 
@@ -49,18 +44,18 @@ Usa una vista de lista para:
 -   Navegar por una colección única o por categorías de contenido.
 -   Crear el panel maestro en la [vista maestro y detalles](master-details.md). Maestro y detalles es el patrón que se suele usar en aplicaciones de correo electrónico, en las que un panel (el maestro) tiene una lista de elementos seleccionables, mientras que el otro panel tiene una vista detallada del elemento seleccionado.
 
-### Ejemplos
+### <a name="examples"></a>Ejemplos
 
 Esta es una vista de lista simple que muestra los datos agrupados en un teléfono.
 
 ![Vista de lista con datos agrupados](images/simple-list-view-phone.png)
 
-### Recomendaciones
+### <a name="recommendations"></a>Recomendaciones
 
 -   Los elementos de una lista deben tener el mismo comportamiento.
 -   Si tu lista está dividida en grupos, puedes usar el [zoom semántico](semantic-zoom.md), que facilita a los usuarios la navegación por los contenidos agrupados.
 
-### Artículos de vista de lista
+### <a name="list-view-articles"></a>Artículos de vista de lista
 <table>
 <colgroup>
 <col width="50%" />
@@ -96,11 +91,11 @@ Esta es una vista de lista simple que muestra los datos agrupados en un teléfon
 </tbody>
 </table>
 
-## Vistas de cuadrícula
+## <a name="grid-views"></a>Vistas de cuadrícula
 
 Las vistas de cuadrícula son adecuadas para organizar y explorar las colecciones de contenido basado en imágenes. Un diseño de la vista de cuadrícula se desplaza verticalmente y se extiende en panorámica horizontal. Los elementos se disponen en un orden de lectura de izquierda a derecha y de arriba abajo.
 
-### ¿Es este el control adecuado?
+### <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa una vista de lista para:
 
@@ -108,7 +103,7 @@ Usa una vista de lista para:
 -   Mostrar las bibliotecas de contenido.
 -   Dar formato a las dos vistas de contenido asociadas con el [zoom semántico](semantic-zoom.md).
 
-### Ejemplos
+### <a name="examples"></a>Ejemplos
 
 Este ejemplo muestra un diseño de la vista de cuadrícula típico, en este caso para la exploración de aplicaciones. Los metadatos para los elementos de la vista de cuadrícula están normalmente restringidos a unas pocas líneas de texto y una clasificación de elemento.
 
@@ -118,12 +113,12 @@ Una vista de cuadrícula es una solución ideal para una biblioteca de contenido
 
 ![Ejemplo de una biblioteca de contenido](images/controls_list_contentlibrary.png)
 
-### Recomendaciones
+### <a name="recommendations"></a>Recomendaciones
 
 -   Los elementos dentro de una lista deben tener el mismo comportamiento.
 -   Si tu lista está dividida en grupos, puedes usar el [zoom semántico](semantic-zoom.md), que facilita a los usuarios la navegación por los contenidos agrupados.
 
-### Artículos de la vista de cuadrícula
+### <a name="grid-view-articles"></a>Artículos de la vista de cuadrícula
 <table>
 <colgroup>
 <col width="50%" />
@@ -151,18 +146,18 @@ Una vista de cuadrícula es una solución ideal para una biblioteca de contenido
 </tbody>
 </table>
 
-## Listas desplegables
+## <a name="drop-down-lists"></a>Listas desplegables
 
 Las listas desplegables, también conocidas como cuadros combinados, se inician en un estado compacto y se expanden para mostrar una lista de elementos seleccionables. Los elementos seleccionados siempre son visibles y los elementos no visibles pueden aparecer en la vista cuando el usuario presione el cuadro combinado para expandirlo.
 
-### ¿Es este el control adecuado?
+### <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 -   Usa una lista desplegable para que los usuarios puedan seleccionar un único valor en un conjunto de elementos que pueden representarse correctamente con una línea de texto.
 -   Usa una vista de lista o cuadrícula en lugar de un cuadro combinado para mostrar elementos que contengan varias líneas de texto o imágenes.
 -   Cuando haya menos de cinco elementos, considera el uso de [botones de radio](radio-button.md) (si solo se puede seleccionar un elemento) o [casillas](checkbox.md) (si se pueden seleccionar varios elementos).
 -   Usa un cuadro combinado cuando los elementos de selección sean de importancia secundaria en el flujo de tu aplicación. Si la opción predeterminada es la recomendada para la mayoría de los usuarios en la mayoría de situaciones, mostrar todos los elementos usando una vista de lista podría atraer más atención de la necesaria sobre las opciones. Usar un cuadro combinado te permite ahorrar espacio y minimizar la distracción.
 
-### Ejemplos
+### <a name="examples"></a>Ejemplos
 
 Un cuadro combinado en su estado compacto puede mostrar un encabezado.
 
@@ -176,20 +171,20 @@ Si la colección en un cuadro combinado es lo suficientemente larga, aparecerá 
 
 ![Ejemplo de una barra de desplazamiento en una lista desplegable](images/combo_box_scroll.png)
 
-### Recomendaciones
+### <a name="recommendations"></a>Recomendaciones
 
 -   El texto de los elementos del cuadro combinado no debe ocupar más de una línea.
 -   Ordena los elementos de un cuadro combinado en el orden más lógico. Agrupa opciones relacionadas y coloca las opciones más comunes en la parte superior. Ubica los nombres en orden alfabético, los números en orden numérico y las fechas en orden cronológico.
 
-### Búsqueda de texto
+### <a name="text-search"></a>Búsqueda de texto
 
 Los cuadros combinados admiten automáticamente la búsqueda dentro de sus colecciones. A medida que los usuarios escriben caracteres en un teclado físico mientras se centran en un cuadro combinado abierto o cerrado, los candidatos que coincidan con la cadena del usuario se incluyen en la vista. Esta funcionalidad es especialmente útil cuando se navega en una lista larga. Por ejemplo, cuando se interactúa con una lista desplegable que contiene una lista de estados, los usuarios pueden presionar la tecla "w" para mostrar "Washington" para la selección rápida. 
 
-## Cuadros de lista
+## <a name="list-boxes"></a>Cuadros de lista
 
 Un cuadro de lista permite al usuario seleccionar uno o varios elementos de una colección. Son similares a las listas desplegables, salvo por que los cuadros de lista estén siempre abiertos y no dispongan de estado compacto (no expandido). Si no hay espacio para mostrar todos los elementos de un cuadro de lista, es posible desplazarse por ellos.
 
-### ¿Es este el control adecuado?
+### <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 -   Un cuadro de lista puede ser útil cuando los elementos de la lista son lo suficientemente importantes como para mostrarse en un lugar destacado y cuando hay suficiente espacio en la pantalla para mostrar la lista completa.
 -   Un cuadro de lista debe atraer la atención del usuario hacia el conjunto de alternativas de una elección importante. Por el contrario, una lista desplegable inicialmente capta la atención del usuario hacia el elemento seleccionado.
@@ -200,7 +195,7 @@ Un cuadro de lista permite al usuario seleccionar uno o varios elementos de una 
     -   Los elementos son valores numéricos contiguos. Si ese es el caso, considera la posibilidad de usar un [control deslizante](slider.md).
     -   Los elementos de la selección tienen una importancia secundaria en el flujo de la aplicación o la opción predeterminada es la recomendada para la mayoría de usuarios y situaciones. Usa una lista desplegable.
 
-### Recomendaciones
+### <a name="recommendations"></a>Recomendaciones
 
 -   El intervalo ideal de elementos en un cuadro de lista es de 3 a 9.
 -   El cuadro de lista funciona mejor si sus elementos pueden variar dinámicamente.
@@ -211,7 +206,7 @@ Un cuadro de lista permite al usuario seleccionar uno o varios elementos de una 
 -   Utiliza la fuente predeterminada, salvo que se indique lo contrario en las directrices de tu marca.
 -   No uses un cuadro de lista para los comandos ni para mostrar u ocultar dinámicamente otros controles.
 
-## Modo de selección
+## <a name="selection-mode"></a>Modo de selección
 
 El modo de selección permite a los usuarios seleccionar uno o varios elementos y actuar sobre ellos. Se puede invocar a través de un menú contextual, mediante el uso de CTRL+clic o MAYÚS+clic en un elemento, o pasando sobre un elemento en una vista de galería. Cuando el modo de selección está activado, aparecen casillas junto a cada elemento de lista y pueden aparecer acciones en la parte superior o inferior de la pantalla.
 
@@ -233,7 +228,7 @@ El punto de entrada para el modo de selección debe estar yuxtapuesto en relaci�
 
 Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices para barras de comandos](app-bars.md).
 
-## Lista de comprobación Globalización y localización
+## <a name="globalization-and-localization-checklist"></a>Lista de comprobación Globalización y localización
 
 <table>
 <tr>
@@ -248,7 +243,7 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 </table>
 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 - [Hub](hub.md)
 - [Panel de maestro y detalles](master-details.md)
@@ -264,6 +259,6 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,30 +1,38 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "En este tema se describe la nueva interfaz de usuario de Windows para seleccionar y manipular texto, imágenes y controles. También se ofrecen directrices sobre la experiencia del usuario que debes tener en cuenta al usar estos nuevos mecanismos de selección y manipulación en tu aplicación de la Tienda Windows."
-title: "Selección de texto e imágenes"
+title: "Seleccionar texto e imágenes"
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
 template: detail.hbs
+keywords: teclado,texto,entrada,interacciones del usuario
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 45184c6ce84b9db215c576c5521e8ec1e834b162
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: bb3a231a842698c18fc496c87705d269dfbeaa58
 
 ---
 
-# Selección de texto e imágenes
+# <a name="selecting-text-and-images"></a>Seleccionar texto e imágenes
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-En este artículo se describe la selección y manipulación de texto, imágenes y controles, y se ofrecen instrucciones de experiencia del usuario que se deben tener en cuenta al usar estos mecanismos en las aplicaciones.
+En este artículo se describen la selección y la manipulación de texto, imágenes y controles, y se ofrecen directrices sobre la experiencia del usuario que debes tener en cuenta al usar estos mecanismos en las aplicaciones.
+
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+</ul>
+</div>
+ 
 
 
-
-
-**API importantes**
-
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
-
-
-## Qué hacer y qué no hacer
+## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
 
 
 -   Usa glifos de fuentes al implementar una interfaz de usuario de barra de redimensionamiento propia. La barra de redimensionamiento es una combinación de dos fuentes Segoe UI que se encuentran disponibles en todo el sistema. El uso de recursos de fuente simplifica los problemas de representación a diferentes ppp y da resultado con las diversas mesetas de escalado de la interfaz de usuario. Cuando implementes tus propias barras de redimensionamiento, estas deben compartir los siguientes rasgos de interfaz de usuario:
@@ -40,7 +48,7 @@ En este artículo se describe la selección y manipulación de texto, imágenes 
 
 -   No permitas la selección de elementos de interfaz de usuario, como controles, etiquetas, imágenes, contenido registrado, etc. Por lo general, las aplicaciones de Windows solo permiten seleccionar dentro de controles específicos. Los controles como los botones, las etiquetas y los logotipos no son seleccionables. Evalúa si la selección puede ser un problema para la aplicación y, si es así, identifica las áreas de la interfaz de usuario donde debes prohibir la selección. 
 
-## Instrucciones de uso adicionales
+## <a name="additional-usage-guidance"></a>Instrucciones de uso adicionales
 
 
 La selección y la manipulación de texto son particularmente sensibles frente a los retos que pueden presentar las interacciones táctiles en la experiencia del usuario. Las entradas mediante mouse, pluma o lápiz y teclado tienen un alto grado de detalle: el clic de un mouse o el contacto de una pluma o lápiz por lo general se asignan a un solo píxel, y una tecla se considera presionada o no presionada. La entrada táctil no es precisa: es difícil asignar toda la superficie de la punta de un dedo a una ubicación x-y específica en la pantalla para situar un símbolo de intercalación de texto de manera precisa.
@@ -104,7 +112,7 @@ Por ejemplo, las barras de redimensionamiento también se pueden usar en aplicac
 
 *Editor de imágenes con barras de redimensionamiento de recorte.*
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 
 
@@ -136,6 +144,6 @@ Por ejemplo, las barras de redimensionamiento también se pueden usar en aplicac
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

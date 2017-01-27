@@ -3,12 +3,12 @@ author: shawjohn
 Description: "Aprende a enviar notificaciones push dirigidas desde el Centro de desarrollo de Windows a tu aplicación para animar a los clientes a realizar una acción, como calificar una aplicación o comprar un complemento."
 title: "Enviar notificaciones push dirigidas a los clientes de la aplicación"
 translationtype: Human Translation
-ms.sourcegitcommit: 3e3c9737784c81f5eb882296a82a4dcd879363e1
-ms.openlocfilehash: 817043579cfd068267c54f2eab9210ef303ca364
+ms.sourcegitcommit: e9cbfec938ebc71da6f41df69defcac1bb902245
+ms.openlocfilehash: c4bdd398db570c4962325c2164651e9e8a1935ff
 
 ---
 
-# Enviar notificaciones push dirigidas a los clientes de la aplicación
+# <a name="send-targeted-push-notifications-to-your-apps-customers"></a>Enviar notificaciones push dirigidas a los clientes de la aplicación
 
 Interactuar con los clientes en el momento justo y con el mensaje adecuado es clave para lograr tener éxito como desarrollador de aplicaciones. El Centro de desarrollo de Windows ofrece una plataforma de participación basada en datos para los clientes que puedes usar para enviar notificaciones push a todos los clientes o solo a un subconjunto de los clientes de Windows 10 que cumplan los criterios que hayas definido en un [segmento de clientes](create-customer-segments.md).
 
@@ -16,14 +16,14 @@ Puedes usar las notificaciones push dirigidas para animar a los clientes a reali
 
 > **Importante** Las notificaciones push dirigidas solo pueden usarse con aplicaciones para UWP.
 
-## Introducción a las notificaciones push
+## <a name="getting-started-with-push-notifications"></a>Introducción a las notificaciones push
 
 En un nivel elevado, deberás seguir tres pasos para usar las notificaciones push con el propósito de interactuar con los clientes:
-1. **Registra la aplicación para recibir notificaciones push.** Para ello, agrega una referencia a Microsoft Store Services SDK en tu aplicación y, a continuación, agrega unas líneas de código que registre un canal de notificación entre el Centro de desarrollo y la aplicación. Usaremos ese canal para entregar las notificaciones push a tus clientes. Para obtener más información, consulta cómo [registrar un canal de notificación](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.engagementclient.registernotificationchannelasync.aspx).
+1. **Registra la aplicación para recibir notificaciones push.** Para ello, agrega una referencia a Microsoft Store Services SDK en tu aplicación y, a continuación, agrega unas líneas de código que registre un canal de notificación entre el Centro de desarrollo y la aplicación. Usaremos ese canal para entregar las notificaciones push a tus clientes. Para obtener más información, consulta [Configurar la aplicación para recibir notificaciones de inserción del Centro de desarrollo](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 2. **Crear uno o varios segmentos de clientes a los que quieras dirigirte.** Puedes agrupar a los clientes en segmentos según los datos demográficos o el nivel de ingresos. Para obtener más información, consulta [Crear segmentos de clientes](create-customer-segments.md).
 3. **Crea una notificación push y envíala a un segmento de clientes en concreto.** Por ejemplo, envía una notificación para animar a los nuevos clientes a calificar la aplicación o con una oferta especial para comprar un complemento.
 
-## Crear y enviar una notificación push dirigida
+## <a name="to-create-and-send-a-targeted-push-notification"></a>Crear y enviar una notificación push dirigida
 
 1. Si aún no lo has hecho, instala [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) y llama al método [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) en el código de inicio de tu aplicación para registrarla de modo que reciba notificaciones. Para obtener más información acerca de cómo llamar a este método, consulta [Configure your app to receive Dev Center notifications (Configurar la aplicación para recibir notificaciones push del Centro de desarrollo)](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 2.  Selecciona tu aplicación en el [panel del Centro de desarrollo de Windows](https://developer.microsoft.com/dashboard/overview).
@@ -55,7 +55,7 @@ Si aún no has creado ningún segmento, selecciona **Create new customer group (
 
 > **Nota** El contenido de tus notificaciones debe cumplir con las [Directivas de contenido](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#content_policies) de la Tienda.
 
-## Tipos de plantilla de notificación
+## <a name="notification-template-types"></a>Tipos de plantilla de notificación
 
 Puedes elegir entre una variedad de plantillas de notificación.
 
@@ -73,16 +73,16 @@ Puedes elegir entre una variedad de plantillas de notificación.
 -   **Promote a sale (Promocionar una oferta) (notificación del sistema).** Una notificación del sistema que puedes usar para anunciar una oferta de tu aplicación. Cuando el cliente selecciona la notificación, se muestra la descripción de la Tienda de tu aplicación.
 - **Prompt for update (Solicitar actualización) (notificación del sistema).** Una notificación del sistema que recomienda a los clientes con una versión anterior de la aplicación que instalen la última versión. Cuando el cliente selecciona la notificación, se muestra la lista **Descargas y actualizaciones** de la aplicación de la Tienda. No hace falta que crees un segmento de clientes para usar esta plantilla. Programaremos esta notificación en menos de 24 horas y haremos todo lo posible para dirigirnos a todos los usuarios que aún no utilicen la última versión de tu aplicación.
 
-## Medir el rendimiento de las notificaciones
+## <a name="measure-notification-performance"></a>Medir el rendimiento de las notificaciones
 
 Puedes medir cuál es el rendimiento de tu interacción con los clientes mediante cada notificación.
 
-###Medir el rendimiento de las notificaciones
+###<a name="to-measure-notification-performance"></a>Medir el rendimiento de las notificaciones
 
 1.  Cuando crees una notificación, en la sección **Notification content (Contenido de la notificación)**, selecciona la casilla **Track app launch rate (Seguir tasa de inicio de la aplicación)**.
 2.  En la aplicación, llama al método [ParseArgumentsAndTrackAppLaunch](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch.aspx) para notificar al Centro de desarrollo de que tu aplicación se ha iniciado como respuesta a una notificación dirigida. Este método lo proporciona el SDK de Microsoft Store. Para obtener más información acerca de cómo llamar a este método, consulta [Configure your app to receive Dev Center notifications (Configurar la aplicación para recibir notificaciones push del Centro de desarrollo)](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
-###Ver el rendimiento de una notificación
+###<a name="to-view-notification-performance"></a>Ver el rendimiento de una notificación
 
 Cuando hayas configurado la notificación y la aplicación para [medir el rendimiento de las notificaciones](#to-measure-notification-performance) como se ha indicado anteriormente, puedes usar el panel para ver cuál es el rendimiento de tus notificaciones.
 
@@ -97,7 +97,7 @@ Cuando hayas configurado la notificación y la aplicación para [medir el rendim
  - **Launched (Iniciada)**: se ha enviado la notificación, el cliente ha hecho clic en ella y, como resultado, se ha abierto la aplicación. Ten en cuenta solo se realiza el seguimiento de los inicios de las aplicaciones. Las notificaciones que invitan al cliente a realizar otras acciones, como iniciar la Tienda para dejar una calificación, no se incluyen en este estado.
  - **Unknown (Desconocido)**: no se ha podido determinar el estado de esta notificación.
 
-## Traducir las notificaciones
+## <a name="translate-your-notifications"></a>Traducir las notificaciones
 
 Para maximizar el efecto de las notificaciones, plantéate la posibilidad de traducirlas a los idiomas que tus clientes prefieren. El Centro de desarrollo facilita el proceso de traducción automática de las notificaciones aprovechando la potencia del servicio [Microsoft Translator](https://msdn.microsoft.com/library/dd576287.aspx).
 
@@ -111,7 +111,7 @@ Debes tener lo siguiente en cuenta sobre las traducciones:
  - Si agregas otro cuadro de texto a la versión en inglés de la notificación después de modificar una traducción automática, el nuevo cuadro de texto no se agregará a la notificación traducida. En ese caso, deberás agregar manualmente los nuevos cuadros de texto a cada una de las notificaciones traducidas.
  - Si cambias el texto en inglés después de que la notificación se haya traducido, actualizaremos automáticamente las notificaciones traducidas para que reflejen el cambio. Sin embargo, esto no sucede si previamente has decidido modificar la traducción original.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 - [Iconos, distintivos y notificaciones para las aplicaciones para UWP](../controls-and-patterns/tiles-badges-notifications.md)
 - [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](../controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview.md)
 - [Introducción a los Servicios de notificaciones de inserción de Windows (WNS) (aplicaciones de Windows en tiempo de ejecución)](https://msdn.microsoft.com/en-us/library/windows/apps/hh913756.aspx)
@@ -121,6 +121,6 @@ Debes tener lo siguiente en cuenta sobre las traducciones:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

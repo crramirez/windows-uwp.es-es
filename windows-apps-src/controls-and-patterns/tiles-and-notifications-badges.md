@@ -6,11 +6,11 @@ ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: a02793e45f190b9401f18e845af3dc73d235c3fc
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 465c75ccb2af9b162202a79025aa292fbd626a58
 
 ---
-# Notificaciones para aplicaciones para UWP
+# <a name="badge-notifications-for-uwp-apps"></a>Notificaciones para aplicaciones para UWP
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,11 +19,13 @@ ms.openlocfilehash: a02793e45f190b9401f18e845af3dc73d235c3fc
 
 Las notificaciones transmiten información de estado o resumen de la aplicación y son específicos de la aplicación. Las notificaciones ser numéricas (1-99) o pueden formar parte de un conjunto de glifos proporcionados por el sistema. Algunos ejemplos de la información que se transmite mejor mediante una notificación son el estado de conexión de red de un juego en línea, el estado de un usuario de una aplicación de mensajería, la cantidad de correos electrónicos sin leer en una aplicación de correo electrónico y la cantidad de entradas nuevas en una aplicación de medios sociales. 
 
-Las notificaciones aparecen en la barra de tareas de la aplicación y en la esquina inferior derecha de su icono de inicio, independientemente de si se está ejecutando la aplicación. Las notificaciones se pueden mostrar en iconos de todos los tamaños.  
+Las notificaciones aparecen en el icono de barra de tareas de la aplicación y en la esquina inferior derecha de su ventana de Inicio, independientemente de si la aplicación está en ejecución. Las notificaciones se pueden mostrar en ventanas de todos los tamaños.  
 
-**Nota**&nbsp;&nbsp;No puedes proporcionar tu propia imagen de notificación (solo se pueden usar las imágenes de notificación que proporciona el sistema).
+> [!NOTE]
+> No puedes proporcionar tu propia imagen de notificación (solo se pueden usar las imágenes de notificación proporcionadas por el sistema).
 
-## Notificaciones numéricas
+
+## <a name="numeric-badges"></a>Notificaciones numéricas
 
 <table>
     <tr>
@@ -43,7 +45,7 @@ Las notificaciones aparecen en la barra de tareas de la aplicación y en la esqu
     </tr>    
 </table>
 
-## Notificaciones de glifo
+## <a name="glyph-badges"></a>Notificaciones de glifo
 En lugar de un número, una notificación puede mostrar un elemento de un conjunto no extensible de glifos de estado. 
 
 <table>
@@ -119,11 +121,11 @@ En lugar de un número, una notificación puede mostrar un elemento de un conjun
 </tr>
 </table>
 
-## Crear una notificación
+## <a name="create-a-badge"></a>Crear una notificación
 
 Estos ejemplos muestran cómo crear una actualización de notificación.
 
-### Crear una notificación numérica
+### <a name="create-a-numeric-badge"></a>Crear una notificación numérica
 
 ````csharp
 private void setBadgeNumber(int num)
@@ -150,7 +152,7 @@ private void setBadgeNumber(int num)
 }
 ````
 
-### Crear una notificación de glifo
+### <a name="create-a-glyph-badge"></a>Crear una notificación de glifo
 ````csharp
 private void updateBadgeGlyph()
 {
@@ -178,7 +180,7 @@ private void updateBadgeGlyph()
 }
 ````
 
-### Borrar una notificación
+### <a name="clear-a-badge"></a>Borrar una notificación
 
 ````csharp
 private void clearBadge()
@@ -187,17 +189,17 @@ private void clearBadge()
 }
 ````
 
-## Obtener las muestras
+## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
 * [Muestra de notificaciones](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> Muestra cómo crear iconos dinámicos, enviar actualizaciones de notificación y mostrar notificaciones del sistema. 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 * [Notificaciones del sistema interactivas y adaptables](tiles-and-notifications-adaptive-interactive-toasts.md)
 * [Crear iconos](tiles-and-notifications-creating-tiles.md)
 * [Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

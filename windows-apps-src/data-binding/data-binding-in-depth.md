@@ -4,8 +4,8 @@ ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: Enlace de datos en profundidad
 description: "El enlace de datos es una forma para que la interfaz de usuario de la aplicación muestre los datos y, opcionalmente, se mantenga sincronizada con dichos datos."
 translationtype: Human Translation
-ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
-ms.openlocfilehash: 48db13fec4ce9c6a9a998c84ddaaba30f7a24d83
+ms.sourcegitcommit: fa3a3cf6194f04a05301ae4dfb75a7a21ff22e73
+ms.openlocfilehash: fca2c9a795e38983f439d6df5c5a7394c29c1217
 
 ---
 # <a name="data-binding-in-depth"></a>Enlace de datos en profundidad
@@ -371,7 +371,7 @@ Si enlazas un control de texto con un valor que no es una cadena, el motor de en
 
 ## <a name="function-binding-in-xbind"></a>Enlace de función en {x: Bind}
 
-{x: Bind} permite que el paso final de una ruta de acceso de enlace sea una función. Esto puede usarse para realizar conversiones y para realizar enlaces que dependen de más de una propiedad. Consulta [**Extensión de marcado {x:Bind}**](https://msdn.microsoft.com/en-us/windows/uwp/xaml-platform/x-bind-markup-extension).
+{x: Bind} permite que el paso final de una ruta de acceso de enlace sea una función. Esto puede usarse para realizar conversiones y para realizar enlaces que dependen de más de una propiedad. Consulta [**Extensión de marcado {x:Bind}**](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension).
 
 <span id="resource-dictionaries-with-x-bind"/>
 ## <a name="resource-dictionaries-with-xbind"></a>Diccionarios de recursos con {x:Bind}
@@ -653,6 +653,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

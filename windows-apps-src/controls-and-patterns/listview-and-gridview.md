@@ -5,11 +5,11 @@ title: "Vista de lista y vista de cuadrícula"
 label: List view and grid view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 8f9d85f0cb15c9fe4ceec9c397e23a134a442d3f
-ms.openlocfilehash: 8a14fa69089f6d796a803c1c1ff9bb678af3c913
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 2887e2aed2c3b638343f2bd211c32f99b3c7da1a
 
 ---
-# ListView y GridView
+# <a name="listview-and-gridview"></a>ListView y GridView
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -20,19 +20,14 @@ ListView y GridView derivan ambos de la clase ListViewBase, por lo que tienen la
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx"><strong>Clase ListView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx"><strong>Clase GridView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx"><strong>Propiedad ItemsSource</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx"><strong>Propiedad Items</strong></a></li>
+<li>[**Clase ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)</li>
+<li>[**Clase GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)</li>
+<li>[**Propiedad ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)</li>
+<li>[**Propiedad Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 ListView muestra los datos apilados verticalmente en una sola columna. Se suele usar para mostrar una lista ordenada de elementos, como una lista de mensajes de correo electrónico o resultados de búsqueda. 
 
@@ -44,7 +39,7 @@ GridView presenta una colección de elementos en filas y columnas por las que po
 
 Para ver una comparación y orientación más detalladas sobre qué control usar, consulta [Listas](lists.md).
 
-## Crear una vista de lista
+## <a name="create-a-list-view"></a>Crear una vista de lista
 
 La vista de lista forma parte de [ItemsControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.aspx), de modo que puede contener una colección de elementos de cualquier tipo. Debe tener elementos su colección [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) antes de poder mostrar algo en la pantalla. Para rellenar la vista, puedes agregar elementos directamente a la colección [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) o establecer la propiedad [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) en un origen de datos. 
 
@@ -52,7 +47,7 @@ La vista de lista forma parte de [ItemsControl](https://msdn.microsoft.com/libra
 
 > **Nota**&nbsp;&nbsp;Para que resulte más sencillo, en muchos de los ejemplos de este artículo la colección **Items** se rellena directamente. Sin embargo, es más habitual que los elementos en una lista provengan de un origen dinámico, como una lista de libros de una base de datos en línea. Usa la propiedad **ItemsSource** para tales fines. 
 
-### Agregar elementos a la colección Items
+### <a name="add-items-to-the-items-collection"></a>Agregar elementos a la colección Items
 
 Puedes agregar elementos a la colección [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) mediante lenguaje XAML o código. Normalmente, los elementos se agregan de esta forma si tienes un pequeño número de elementos que no cambian y que se definen fácilmente en XAML, o si generas los elementos en el código en tiempo de ejecución. 
 
@@ -89,7 +84,7 @@ ListView será similar a lo siguiente.
 
 ![Una vista de lista simple](images/listview-simple.png)
 
-### Establecer el origen de los elementos
+### <a name="set-the-items-source"></a>Establecer el origen de los elementos
 
 Por lo general, se usa una vista de lista para mostrar los datos de un origen, como una base de datos o Internet. Para rellenar una vista de lista desde un origen de datos, debes establecer la propiedad [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) en una colección de elementos de datos.
 
@@ -148,7 +143,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 Si necesitas mostrar datos agrupados en la vista de lista, debes enlazar a una clase [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx). CollectionViewSource actúa como proxy para la clase de colección en XAML y habilitar la compatibilidad con la agrupación. Para obtener más información, consulta [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx).
 
-## Plantilla de datos
+## <a name="data-template"></a>Plantilla de datos
 
 La plantilla de datos de un elemento define cómo se visualizan los datos. De manera predeterminada, un elemento de datos se muestra en la vista de lista como una representación de cadena del objeto de datos al que está enlazado. Para mostrar la representación de cadena de una propiedad determinada del elemento de datos, establece [**DisplayMemberPath**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.displaymemberpath.aspx) en dicha propiedad.
 
@@ -189,7 +184,7 @@ Este es el aspecto de los elementos de datos cuando se muestran con esta plantil
 
 Las plantillas de datos son la forma principal de definir la apariencia de la vista de lista. También pueden tener un impacto significativo en el rendimiento si la lista muestra una gran cantidad de elementos. En este artículo, usamos datos de cadena simple para la mayoría de los ejemplos y no se especifica una plantilla de datos. Para obtener más información y ejemplos de cómo usar las plantillas de datos y contenedores de elementos para definir la apariencia de los elementos en la lista o cuadrícula, consulta [Plantillas de elemento de la vista de lista](listview-item-templates.md). 
 
-## Cambiar el diseño de elementos
+## <a name="change-the-layout-of-items"></a>Cambiar el diseño de elementos
 
 Al agregar elementos a una vista de lista o vista de cuadrícula, el control ajusta automáticamente cada elemento en un contenedor de elementos y luego dispone todos los contenedores de elementos. Cómo se disponen estos contenedores de elementos depende de la propiedad [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) del control.  
 - De manera predeterminada, **ListView** usa una clase [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx), lo cual genera una lista vertical, como esta.
@@ -269,7 +264,7 @@ Si muestras datos agrupados en la vista de lista, la propiedad ItemsPanel determ
 
 ![Una vista de lista horizontal agrupada](images/listview-horizontal-groups.png)
 
-## Selección e interacción de elementos
+## <a name="item-selection-and-interaction"></a>Selección e interacción de elementos
 
 Puedes elegir entre varias maneras para permitir que el usuario interactúe con una vista de lista. De manera predeterminada, un usuario puede seleccionar un único elemento. Puedes cambiar la propiedad [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx) para habilitar la selección múltiple o para deshabilitar la selección. Puedes establecer la propiedad [**IsItemClickEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) para que un usuario haga clic en un elemento para invocar una acción (por ejemplo, un botón) en lugar de seleccionar el elemento.
 
@@ -304,41 +299,41 @@ myGridView.SelectionMode = ListViewSelectionMode.None;
 myGridView.IsItemClickEnabled = true;
 ```
 
-### Solo lectura
+### <a name="read-only"></a>Solo lectura
 
 Puedes establecer la propiedad SelectionMode en **ListViewSelectionMode.None** para deshabilitar la selección de elementos. Esto coloca el control en modo de solo lectura, para que se use para mostrar los datos, pero no para interactuar con ellos. El control en sí no está deshabilitado, solo está deshabilitada la selección de elementos.
 
-### Selección única
+### <a name="single-selection"></a>Selección única
 
 En esta tabla se describen las interacciones del teclado, el mouse y de las funciones táctiles cuando SelectionMode es **Single**.
 
 Tecla modificadora | Interacción
 -------------|------------
-Ninguna | <ul><li>Un usuario puede seleccionar un solo elemento con la barra espaciadora, un clic del mouse o una entrada táctil.</li></ul>
-Ctrl | <ul><li>Un usuario puede anular la selección un solo elemento con la barra espaciadora, un clic del mouse o una entrada táctil.</li><li>Con las teclas de dirección, un usuario puede mover el foco independientemente de la selección.</li></ul>
+Ninguna | <li>Un usuario puede seleccionar un solo elemento con la barra espaciadora, un clic del mouse o una entrada táctil.</li>
+Ctrl | <li>Un usuario puede anular la selección un solo elemento con la barra espaciadora, un clic del mouse o una entrada táctil.</li><li>Con las teclas de dirección, un usuario puede mover el foco independientemente de la selección.</li>
 
 Cuando SelectionMode es **Single**, puedes obtener el elemento de datos seleccionado desde la propiedad [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selecteditem.aspx). Puedes obtener el índice de la colección del elemento seleccionado con la propiedad [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectedindex.aspx). Si no se selecciona ningún elemento, SelectedItem es **null** y SelectedIndex es -1. 
  
 Si intentas establecer un elemento que no está en la colección **Items** como la propiedad **SelectedItem**, la operación se ignora y SelectedItem es**null**. Sin embargo, si intentas establecer la propiedad **SelectedIndex** en un índice que está fuera del intervalo de **Items** en la lista, se produce una excepción **System.ArgumentException**. 
 
-### Selección múltiple
+### <a name="multiple-selection"></a>Selección múltiple
 
 En esta tabla se describen las interacciones del teclado, el mouse y de las funciones táctiles cuando SelectionMode es **Multiple**.
 
 Tecla modificadora | Interacción
 -------------|------------
-Ninguna | <ul><li>Un usuario puede seleccionar varios elementos con la barra espaciadora, un clic del mouse o una entrada táctil para alternar la selección del elemento especificado.</li><li>Con las teclas de dirección, un usuario puede mover el foco independientemente de la selección.</li></ul>
-Mayús | <ul><li>Un usuario puede seleccionar varios elementos contiguos haciendo clic o pulsando el primer elemento de la selección y luego el último elemento de la selección.</li><li>Con las teclas de dirección, un usuario puede crear una selección contigua empezando por el elemento seleccionado mientras se mantiene presionada la tecla Mayús.</li></ul>
+Ninguna | <li>Un usuario puede seleccionar varios elementos con la barra espaciadora, un clic del mouse o una entrada táctil para alternar la selección del elemento especificado.</li><li>Con las teclas de dirección, un usuario puede mover el foco independientemente de la selección.</li>
+Mayús | <li>Un usuario puede seleccionar varios elementos contiguos haciendo clic o pulsando el primer elemento de la selección y luego el último elemento de la selección.</li><li>Con las teclas de dirección, un usuario puede crear una selección contigua empezando por el elemento seleccionado mientras se mantiene presionada la tecla Mayús.</li>
 
-### Selección extendida
+### <a name="extended-selection"></a>Selección extendida
 
 En esta tabla se describen las interacciones del teclado, el mouse y de las funciones táctiles cuando SelectionMode es **Extended**.
 
 Tecla modificadora | Interacción
 -------------|------------
-Ninguna | <ul><li>El comportamiento es el mismo que la selección **Single**.</li></ul>
-Ctrl | <ul><li>Un usuario puede seleccionar varios elementos con la barra espaciadora, un clic del mouse o una entrada táctil para alternar la selección del elemento especificado.</li><li>Con las teclas de dirección, un usuario puede mover el foco independientemente de la selección.</li></ul>
-Mayús | <ul><li>Un usuario puede seleccionar varios elementos contiguos haciendo clic o pulsando el primer elemento de la selección y luego el último elemento de la selección.</li><li>Con las teclas de dirección, un usuario puede crear una selección contigua empezando por el elemento seleccionado mientras se mantiene presionada la tecla Mayús.</li></ul>
+Ninguna | <li>El comportamiento es el mismo que la selección **Single**.</li>
+Ctrl | <li>Un usuario puede seleccionar varios elementos con la barra espaciadora, un clic del mouse o una entrada táctil para alternar la selección del elemento especificado.</li><li>Con las teclas de dirección, un usuario puede mover el foco independientemente de la selección.</li>
+Mayús | <li>Un usuario puede seleccionar varios elementos contiguos haciendo clic o pulsando el primer elemento de la selección y luego el último elemento de la selección.</li><li>Con las teclas de dirección, un usuario puede crear una selección contigua empezando por el elemento seleccionado mientras se mantiene presionada la tecla Mayús.</li>
 
 Cuando SelectionMode es **Multiple** o **Extended**, puedes obtener los elementos de datos seleccionados desde la propiedad [**SelectedItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selecteditems.aspx). 
 
@@ -346,7 +341,7 @@ Las propiedades **SelectedIndex**, **SelectedItem** y **SelectedItems** están s
 
 En el modo de selección múltiple, **SelectedItem** contiene el elemento que se selecciona en primer lugar, y **SelectedIndex** contiene el índice del elemento que se seleccionó primero. 
 
-### Responder a los cambios de selección
+### <a name="respond-to-selection-changes"></a>Responder a los cambios de selección
 
 Para responder a cambios de selección en una vista de lista, controla el evento [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectionchanged.aspx). En el código del controlador de eventos, puedes obtener la lista de elementos seleccionados a partir de la propiedad [**SelectionChangedEventArgs.AddedItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.selectionchangedeventargs.addeditems.aspx). Puedes obtener los elementos cuya selección se anuló a partir de la propiedad [**SelectionChangedEventArgs.RemovedItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.selectionchangedeventargs.removeditems.aspx). Las colecciones AddedItems y RemovedItems contienen al menos 1 artículo, a menos que el usuario mantenga presionada la tecla Mayús para seleccionar un intervalo de elementos.
 
@@ -396,7 +391,7 @@ private void ListView1_SelectionChanged(object sender, SelectionChangedEventArgs
 }
 ```
 
-### Modo de clic
+### <a name="click-mode"></a>Modo de clic
 
 Puedes cambiar una vista de lista para que un usuario haga clic en elementos, como botones, en lugar de seleccionarlos. Por ejemplo, resulta útil si tu aplicación navega a una página nueva cuando el usuario hace clic en un elemento de una lista o cuadrícula. Para habilitar este comportamiento:
 - Establece **SelectionMode** en **None**.
@@ -450,7 +445,7 @@ private void ListView1_ItemClick(object sender, ItemClickEventArgs e)
 }
 ```
 
-### Seleccionar un intervalo de elementos mediante programación
+### <a name="select-a-range-of-items-programmatically"></a>Seleccionar un intervalo de elementos mediante programación
 
 A veces, es necesario manipular la selección de un elemento de la vista de lista mediante programación. Por ejemplo, es posible que tengas un botón **Seleccionar todo** para permitir al usuario seleccionar todos los elementos en una lista. En este caso, normalmente no resulta muy eficaz agregar y quitar elementos de la colección SelectedItems uno por uno. Cada cambio en un elemento produce un evento SelectionChanged, y cuando trabajas con los elementos directamente en lugar de trabajar con los valores de índice, el elemento se desvirtualiza.
 
@@ -502,11 +497,11 @@ private void DeselectAllButton_Click(object sender, RoutedEventArgs e)
 
 Para obtener información sobre cómo cambiar la apariencia de los elementos seleccionados, consulta [Plantillas de elemento de la vista de lista](listview-item-templates.md).
 
-### Arrastrar y colocar
+### <a name="drag-and-drop"></a>Arrastrar y colocar
 
 Los controles ListView y GridView permiten arrastrar y colocar elementos en sí mismos, entre sí y en otros controles ListView y GridView. Para obtener más información acerca de cómo implementar el patrón de arrastrar y colocar, consulta [Arrastrar y colocar](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop). 
 
-## Obtener las muestras
+## <a name="get-the-sample-code"></a>Obtener el código de ejemplo 
 
 *   [Muestra de ListView y GridView en XAML](http://go.microsoft.com/fwlink/p/?LinkId=619900)<br/>
     En este ejemplo se muestra el uso de los controles ListView y GridView.
@@ -514,7 +509,7 @@ Los controles ListView y GridView permiten arrastrar y colocar elementos en sí 
 *   [Muestra de conceptos básicos de una interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
     Aquí podrás ver todos los controles XAML en un formato interactivo.
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 - [Listas](lists.md)
 - [Plantillas de elemento de la vista de lista](listview-item-templates.md)
@@ -522,6 +517,6 @@ Los controles ListView y GridView permiten arrastrar y colocar elementos en sí 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

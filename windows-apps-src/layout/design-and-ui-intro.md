@@ -1,17 +1,20 @@
 ---
 author: mijacobs
 Description: "En este artículo se describen las funciones, las ventajas y los requisitos de la Plataforma universal de Windows (UWP) desde una perspectiva de diseño. Averigua lo que te ofrece la plataforma de forma gratuita y las herramientas que pone a tu disposición."
-title: "Introducción al diseño de aplicaciones para la Plataforma universal de Windows (UWP)"
+title: "Introducción al diseño de aplicaciones para la Plataforma universal de Windows (aplicaciones de Windows)"
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 label: Intro to UWP app design
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 06925bc42aab6d2ca7bf97c48161cca5e1cf840b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e6169f033a224c6ad9c3ba47ef1fd0a80e137dff
 
 ---
 
-#  Introducción al diseño de aplicaciones para UWP 
+#  <a name="introduction-to-uwp-app-design"></a>Introducción al diseño de aplicaciones para UWP 
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Una aplicación de la Plataforma universal de Windows (UWP) puede ejecutarse en cualquier dispositivo de Windows, desde el teléfono o la tableta hasta el equipo.
 
@@ -23,19 +26,19 @@ Diseñar una aplicación que tenga una buena apariencia en una tan amplia varied
 
 En este artículo se describen las características de la interfaz de usuario y las ventajas de aplicaciones para UWP, y proporciona instrucciones generales de diseño para crear tu primera aplicación para UWP. Empecemos echando un vistazo a algunas de las funciones que se obtienen al crear una aplicación para UWP. 
 
-## Características de las aplicaciones para UWP
+## <a name="uwp-app-features"></a>Características de las aplicaciones para UWP
 
-### Escalado y píxeles efectivos
+### <a name="effective-pixels-and-scaling"></a>Escalado y píxeles efectivos
 
 Las aplicaciones para UWP ajustan automáticamente el tamaño de los controles, las fuentes y otros elementos de la interfaz de usuario para que sean legibles en todos los dispositivos.
 
-Cuando la aplicación se ejecuta en un dispositivo, el sistema usa un algoritmo para normalizar la manera en que los elementos de la interfaz de usuario se muestran en la pantalla. Este algoritmo de escalado tiene en cuenta la distancia de visualización y la densidad de la pantalla (píxeles por pulgada) para optimizar el tamaño percibido (en lugar del tamaño físico). El algoritmo de escalado garantiza que una fuente de 24px en un Surface Hub a 3 metros de distancia sea tan legible para el usuario como una fuente de 24px en un teléfono de 5 pulgadas a unos centímetros de distancia.
+Cuando la aplicación se ejecuta en un dispositivo, el sistema usa un algoritmo para normalizar la manera en que los elementos de la interfaz de usuario se muestran en la pantalla. Este algoritmo de escalado tiene en cuenta la distancia de visualización y la densidad de la pantalla (píxeles por pulgada) para optimizar el tamaño percibido (en lugar del tamaño físico). El algoritmo de escalado garantiza que una fuente de 24 px en un Surface Hub a 3 metros de distancia sea tan legible para el usuario como una fuente de 24 px en un teléfono de 5 pulgadas a unos centímetros de distancia.
 
 ![distancias de visualización para diferentes dispositivos](images/1910808-hig-uap-toolkit-03.png)
 
 Debido al funcionamiento del sistema de escalado, al diseñar la aplicación para UWP, estás diseñando en *píxeles efectivos*, no en píxeles físicos reales. Por lo tanto, ¿cómo afecta esto a la manera de diseñar la aplicación?
 
--   Al diseñar, puedes ignorar la densidad de píxeles y la resolución de pantalla real. En su lugar, diseña la resolución efectiva (la resolución en píxeles efectivos) para una clase de tamaño (definimos las clases de tamaño [más adelante en este artículo](#sizeclasses)).
+-   Al diseñar, puedes ignorar la densidad de píxeles y la resolución de pantalla real. En su lugar, diseña la resolución efectiva (la resolución en píxeles efectivos) de una clase de tamaño (para obtener más información, consulta el [artículo Tamaños de pantalla y puntos de interrupción](screen-sizes-and-breakpoints-for-responsive-design.md)).
 
 -   Cuando el sistema escala la interfaz de usuario, lo hace en múltiplos de 4. Para garantizar un aspecto limpio, ajusta los diseños de la cuadrícula de píxeles de 4 x 4: crea márgenes, tamaños y posiciones de los elementos de la interfaz de usuario, así como la posición (pero no el tamaño, ya que el texto puede ser de cualquier tamaño) del texto de un múltiplo de 4 píxeles efectivos.
 
@@ -47,14 +50,15 @@ En la ilustración siguiente se muestran los elementos de diseño que no se asig
 
 ![elementos de diseño que no se alinean a la cuadrícula de píxeles de 4 x 4](images/rsp-design/offthegridillustration.png)
 
-**Sugerencia**   Al crear bocetos de pantalla en los programas de edición de imágenes, establece el valor de PPP en 72 y las dimensiones de imagen en la resolución que resulte eficaz para la clase de tamaño que quieres obtener. (Para obtener una lista de clases de tamaño y resoluciones eficaces, consulta la sección [recomendaciones para las clases de tamaño específico](#sizeclasses) de este artículo).
+> [!TIP]
+> Al crear bocetos de pantalla en los programas de edición de imágenes, establece el valor de PPP en 72 y las dimensiones de imagen en la resolución eficaz de la clase de tamaño que quieres obtener. (Para obtener una lista de clases de tamaño y resoluciones eficaces, consulta la sección [recomendaciones para las clases de tamaño específico](#sizeclasses) de este artículo).
 
 
-### Entrada universal e interacciones inteligentes
+### <a name="universal-input-and-smart-interactions"></a>Entrada universal e interacciones inteligentes
 
 Otra funcionalidad integrada de la UWP es la entrada universal habilitada a través de interacciones inteligentes. Aunque puedes diseñar tus aplicaciones para dispositivos y modos de entrada específicos, no es necesario. Esto es porque las aplicaciones Windows universales se basan de forma predeterminada en interacciones inteligentes. Esto significa que puedes diseñar con la interacción mediante clic sin tener que saber o definir si el clic procede de un clic del mouse real o de la presión de un dedo.
 
-### Controles y estilos universales
+### <a name="universal-controls-and-styles"></a>Controles y estilos universales
 
 
 La UWP también proporciona algunos bloques de creación útiles que facilitan el diseño de aplicaciones para varias familias de dispositivos.
@@ -85,7 +89,7 @@ La UWP también proporciona algunos bloques de creación útiles que facilitan e
 
 Ahora que hemos descrito los bloques de creación de aplicaciones para UWP, echemos un vistazo a cómo reunirlos para crear una interfaz de usuario. 
     
-## Anatomía de una aplicación típica para UWP
+## <a name="the-anatomy-of-a-typical-uwp-app"></a>Anatomía de una aplicación típica para UWP
 
 
 Una interfaz de usuario moderna es algo complejo que se compone de texto, formas, colores y animaciones formadas en última instancia por píxeles individuales de la pantalla del dispositivo que estás usando. Al empezar a diseñar una interfaz de usuario, la gran cantidad de opciones puede ser abrumadora.
@@ -94,7 +98,7 @@ Para que las cosas sean más sencillas, vamos a definir la anatomía de una apli
 
 
 
-<table>
+<table class="uwpd-noborder" >
 <colgroup>
 <col width="50%" />
 <col width="50%" />
@@ -122,7 +126,7 @@ Como mínimo, una aplicación tiene una pantalla de presentación y una página 
 
 Al decidir los elementos de la interfaz de usuario adecuados para la aplicación, también puedes considerar los dispositivos y los tamaños de pantalla en los que se ejecutará la aplicación.
 
-## <span id="Why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="WHY_TAILOR_YOUR_APP_FOR_SPECIFIC_DEVICE_FAMILIES_AND_SCREEN_SIZES_"></span>Adaptación de la aplicación a dispositivos y tamaños de pantalla específicos.
+## <a name="tailoring-your-app-for-specific-devices-and-screen-sizes"></a>Adaptación de la aplicación a dispositivos y tamaños de pantalla específicos.
 
 
 Las aplicaciones para UWP usan píxeles efectivos para garantizar que los elementos de diseño sean legibles y se puedan usar en todos los dispositivos con sistema operativo Windows. Por lo tanto, ¿por qué querría personalizar la interfaz de usuario de la aplicación para una familia de dispositivos específicos?
@@ -146,12 +150,12 @@ Antes de continuar, Windows no proporciona un método para que la aplicación de
 
     La biblioteca de controles universales funciona con todos los tipos de entrada (táctil, lápiz, teclado, mouse), pero además se pueden optimizar ciertos tipos de entrada reorganizando los elementos de la interfaz de usuario. Por ejemplo, si se colocan elementos de navegación en la parte inferior de la pantalla, acceder a ellos será más fácil para los usuarios de teléfonos, pero la mayoría de los usuarios de equipos esperan ver los elementos de navegación en la parte superior de la pantalla.
 
-## <span id="Responsive_design_techniques"></span><span id="responsive_design_techniques"></span><span id="RESPONSIVE_DESIGN_TECHNIQUES"></span>Técnicas de diseño con capacidad de respuesta
+## <a name="responsive-design-techniques"></a>Técnicas de diseño con capacidad de respuesta
 
 
 Cuando se optimiza la interfaz de usuario de la aplicación para anchos de pantalla específicos, decimos que se está creando un diseño con capacidad de respuesta. Hay seis técnicas de diseño con capacidad de respuesta que puedes usar para personalizar la interfaz de usuario de la aplicación.
 
-### <span id="Reposition"></span><span id="reposition"></span><span id="REPOSITION"></span>Cambiar la posición
+### <a name="reposition"></a>Cambiar la posición
 
 Puedes modificar la ubicación y la posición de los elementos de interfaz de usuario de la aplicación para aprovechar al máximo cada dispositivo. En este ejemplo, la vista vertical en el teléfono o el tabléfono necesita una interfaz de usuario de desplazamiento porque solo está visible un fotograma completo a la vez. Cuando la aplicación se traslada a un dispositivo que permite dos fotogramas completos en pantalla, ya se en orientación vertical u horizontal, el fotograma B puede ocupar un espacio dedicado. Si estás usando una cuadrícula para el posicionamiento, puedes usar la misma cuadrícula al cambiar la posición de los elementos de la interfaz de usuario.
 
@@ -161,13 +165,13 @@ En este diseño de ejemplo para una aplicación de fotos, la aplicación de foto
 
 ![un diseño de una aplicación que cambia la posición del contenido en las pantallas más grandes](images/rsp-design/rspd-reposition-type1.png)
 
-### <span id="Resize"></span><span id="resize"></span><span id="RESIZE"></span>Cambiar el tamaño
+### <a name="resize"></a>Cambiar el tamaño
 
 Puedes optimizar el tamaño del marco ajustando los márgenes y el tamaño de los elementos de la interfaz de usuario. Esto te permitiría, como se muestra en el ejemplo, mejorar la experiencia de lectura en una pantalla más grande, aumentando simplemente el marco de contenido.
 
 ![cambiar el tamaño de los elementos de diseño](images/rsp-design/rspd-resize.png)
 
-### <span id="Reflow"></span><span id="reflow"></span><span id="REFLOW"></span>Redistribuir
+### <a name="reflow"></a>Redistribuir
 
 Al cambiar el flujo de elementos de la interfaz de usuario en función del dispositivo y la orientación, la aplicación puede ofrecer una visualización óptima del contenido. Por ejemplo, al pasar a una pantalla más grande, tendría sentido cambiar a contenedores más grandes, agregar columnas y generar elementos de lista de forma distinta.
 
@@ -175,7 +179,7 @@ En este ejemplo se muestra cómo se puede adaptar a una única columna de conten
 
 ![redistribuir los elementos de diseño](images/rsp-design/rspd-reflow.png)
 
-### <span id="_____________Reveal___________"></span><span id="_____________reveal___________"></span><span id="_____________REVEAL___________"></span> Mostrar
+###  <a name="reveal"></a>Mostrar
 
 Puedes mostrar la interfaz de usuario según la superficie de la pantalla o cuando el dispositivo admite funcionalidades adicionales, situaciones específicas u orientaciones de pantalla preferidas.
 
@@ -191,13 +195,13 @@ Parte de la técnica de mostrar u ocultar incluye elegir cuándo se deben mostra
 -   En cualquier aplicación puedes desglosar columnas y mostrar más detalles.
 -   En cualquier aplicación puedes tomar elementos apilados verticalmente y distribuirlos horizontalmente. Al pasar desde un teléfono o tabléfono a dispositivos más grandes, los elementos de lista apilados pueden cambiar para mostrar filas de elementos de lista y columnas de metadatos.
 
-### <span id="Replace"></span><span id="replace"></span><span id="REPLACE"></span>Reemplazar
+### <a name="replace"></a>Reemplazar
 
 Esta técnica te permite cambiar la interfaz de usuario por una clase de tamaño de dispositivo u orientación específicos. En este ejemplo, el panel de navegación y su interfaz de usuario compacta y transitoria funciona bien para un dispositivo más pequeño, pero en un dispositivo más grande, las pestañas pueden ser una elección mejor.
 
 ![reemplazar elementos de diseño](images/rsp-design/rspd-replace.png)
 
-### <span id="_____________Re-architect___________"></span><span id="_____________re-architect___________"></span><span id="_____________RE-ARCHITECT___________"></span> Rediseño
+###  <a name="re-architect"></a>Rediseño
 
 Puedes contraer o bifurcar la arquitectura de la aplicación para adaptarla mejor a dispositivos específicos. En este ejemplo, ir desde el dispositivo izquierdo al dispositivo de derecho muestra la unión de las páginas.
 
@@ -208,7 +212,7 @@ A continuación se muestra un ejemplo de esta técnica aplicado al diseño de un
 ![ejemplo de un diseño que usa la técnica de diseño con capacidad de respuesta](images/rsp-design/rspd-rearchitect-type1.png)
 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 - [¿Qué es una aplicación para UWP?](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx)
 
@@ -220,6 +224,6 @@ A continuación se muestra un ejemplo de esta técnica aplicado al diseño de un
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

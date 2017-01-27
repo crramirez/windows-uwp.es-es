@@ -6,29 +6,35 @@ ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 label: Use global-ready formats
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 5255da14ccdd0aed3852c41fa662de63a7160fba
-ms.openlocfilehash: 3615d1301a9d163390a2d709690c1e583c9b4f7e
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: eb524ae7369874e8a2f81cd4a8cbb112829387c8
 
 ---
 
-# Usar formatos globales
+# <a name="use-global-ready-formats"></a>Usar formatos globales
 
-**API importantes**
-
--   [**Windows.Globalization.Calendar**](https://msdn.microsoft.com/library/windows/apps/br206724)
--   [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)
--   [**Windows.Globalization.NumberFormatting**](https://msdn.microsoft.com/library/windows/apps/br226136)
--   [**Windows.Globalization.PhoneNumberFormatting**](https://msdn.microsoft.com/library/windows/apps/Windows.Globalization.PhoneNumberFormatting)
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Desarrolla una aplicación que todo el mundo pueda usar empleando el formato adecuado en fechas, horas, números de teléfono y divisas. De esta forma, podrás adaptar la aplicación más adelante a otras culturas, regiones e idiomas del mercado global.
 
-## Introducción
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Windows.Globalization.Calendar**](https://msdn.microsoft.com/library/windows/apps/br206724)</li>
+<li>[**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)</li>
+<li>[**Windows.Globalization.NumberFormatting**](https://msdn.microsoft.com/library/windows/apps/br226136)</li>
+<li>[**Windows.Globalization.PhoneNumberFormatting**](https://msdn.microsoft.com/library/windows/apps/Windows.Globalization.PhoneNumberFormatting)</li>
+</ul>
+</div>
+
+
+## <a name="introduction"></a>Introducción
 
 Muchos desarrolladores de aplicaciones crean de forma natural sus aplicaciones teniendo en cuenta únicamente su propio idioma y cultura. Pero cuando la aplicación empieza a crecer en otras regiones de comercialización, su adaptación a nuevos idiomas y regiones puede resultar difícil de formas inesperadas. Por ejemplo, elementos como las fechas, horarios, números, calendarios, monedas, números telefónicos, unidades de medida y tamaños de papel se pueden mostrar de diferente forma según la cultura o el idioma.
 
 Este proceso de adaptación a nuevos mercados se puede simplificar teniendo en cuenta ciertas cuestiones a la hora de desarrollar la aplicación.
 
-## Da un formato adecuado a las fechas y a las horas
+## <a name="format-dates-and-times-appropriately"></a>Da un formato adecuado a las fechas y a las horas
 
 Existen muchas formas diferentes de mostrar correctamente las fechas y las horas. Diferentes regiones y culturas usan convenciones distintas para el orden del mes y el día en la fecha, para la separación de horas y minutos en la hora e, incluso, para el separador usado. Además, las fechas se pueden mostrar en varios formatos largos ("Miércoles, 28 de marzo, 2012") o cortos ("28/3/12"), lo que puede variar de una cultura a otra. Y, por supuesto, los nombres y las abreviaturas de los días de la semana y los meses del año varían según cada idioma.
 
@@ -56,7 +62,7 @@ Si tienes que mostrar fechas u horas, usa los formateadores [**Date/Time**](http
                   "Short Time: " + stime;
 ```
 
-## Da un formato adecuado a los números y a las monedas
+## <a name="format-numbers-and-currencies-appropriately"></a>Da un formato adecuado a los números y a las monedas
 
 Las diferentes culturas dan un formato distinto a los números. Entre esas diferencias de formato podemos encontrar la cantidad de decimales para mostrar, los caracteres usados como separadores decimales y el símbolo de moneda que se va a usar. Usa [**NumberFormatting**](https://msdn.microsoft.com/library/windows/apps/br226136) para mostrar decimales, porcentajes o tantos por mil, y monedas. En la mayoría de los casos, simplemente muestras números o monedas según las preferencias actuales del usuario. Pero también puedes usar los formateadores para mostrar una moneda para una región o un formato particular.
 
@@ -94,13 +100,13 @@ El siguiente código te muestra un ejemplo de cómo mostrar monedas según la re
                   "Formatted Euro (fr-FR defaults): " + currencyEuroFR;
 ```
 
-## Usa un calendario apropiado culturalmente
+## <a name="use-a-culturally-appropriate-calendar"></a>Usa un calendario apropiado culturalmente
 
 El calendario difiere según las regiones y los idiomas. Ten en cuenta que el calendario gregoriano no es el predeterminado de todas las regiones. Los usuarios de algunas regiones pueden elegir calendarios alternativos, como el calendario de la era japonesa o el calendario lunar árabe. Las fechas y horas en el calendario se basan en diferentes zonas horarias y el horario de verano.
 
 Usa los controles de [selector de fecha y hora](https://msdn.microsoft.com/library/windows/apps/hh465466) estándar para que los usuarios puedan elegir una fecha y asegurarte de que se usa el formato de calendario preferido. Si quieres ver escenarios más complejos en los que puede ser necesario trabajar directamente con operaciones en fechas del calendario, Windows.Globalization proporciona una clase [**Calendar**](https://msdn.microsoft.com/library/windows/apps/br206724) que ofrece una representación de calendario adecuada para la cultura, la región y el tipo de calendario indicados.
 
-## Da un formato adecuado a los números de teléfono
+## <a name="format-phone-numbers-appropriately"></a>Da un formato adecuado a los números de teléfono
 Los números de teléfono tienen un formato diferente según la región. El número de dígitos, cómo se agrupan esos dígitos y el significado de determinadas partes del número de teléfono varían de un país a otro. A partir de la versión 1607 de Windows 10, puedes usar [**PhoneNumberFormatting**](https://msdn.microsoft.com/library/windows/apps/Windows.Globalization.PhoneNumberFormatting) para dar el formato adecuado a los números de teléfono de la región actual.
 
 [**PhoneNumberInfo**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.phonenumberformatting.phonenumberinfo.aspx) analiza una cadena de dígitos y te permite determinar si esos dígitos pertenecen a un número de teléfono válido de la región, comparar dos números de teléfonos para ver si son iguales y extraer las diferentes partes funcionales del número de teléfono (por ejemplo, el código del país o el código del área geográfica).
@@ -140,11 +146,11 @@ El siguiente código muestra cómo usar PhoneNumberFormatter para dar formato a 
     }
 ```    
 
-## Respeta las preferencias de idioma y culturales del usuario
+## <a name="respect-the-users-language-and-cultural-preferences"></a>Respeta las preferencias de idioma y culturales del usuario
 
 Si quieres ver escenarios en los que puedes ofrecer funcionalidades diferentes según las preferencias culturales, la región o el idioma del usuario, Windows te ofrece una forma de obtener acceso a estas preferencias, mediante [**Windows.System.UserProfile.GlobalizationPreferences**](https://msdn.microsoft.com/library/windows/apps/br241825). Cuando sea necesario, usa la clase **GlobalizationPreferences** para conseguir el valor de la región geográfica actual del usuario, sus idiomas preferidos, monedas preferidas, etc.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Planeación para un mercado global](https://msdn.microsoft.com/library/windows/apps/hh465405)
 * [Directrices para los controles de fecha y hora](https://msdn.microsoft.com/library/windows/apps/hh465466)
@@ -163,6 +169,6 @@ Si quieres ver escenarios en los que puedes ofrecer funcionalidades diferentes s
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

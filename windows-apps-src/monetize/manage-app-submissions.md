@@ -4,34 +4,71 @@ ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: "Usa estos métodos en la API de envío de la Tienda Windows para administrar envíos para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows."
 title: "Administrar envíos de aplicaciones con la API de envío de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: 5c19a05f51a14d9df38e64aac3b741e916fc0524
+ms.sourcegitcommit: 020c8b3f4d9785842bbe127dd391d92af0962117
+ms.openlocfilehash: ef7727befa20606800fb9747f9402be9be5cc9e4
 
 ---
 
 # <a name="manage-app-submissions-using-the-windows-store-submission-api"></a>Administrar envíos de aplicaciones con la API de envío de la Tienda Windows
 
-
-Usa los métodos siguientes en la API de envío de la Tienda Windows para administrar envíos para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
+La API de envío de la Tienda Windows proporciona métodos que puedes usar para administrar envíos para tus aplicaciones, incluidos los lanzamientos de paquetes graduales. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
 >**Nota**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
+<span id="methods-for-app-submissions" />
+## <a name="methods-for-managing-app-submissions"></a>Métodos para administrar envíos de aplicaciones
 
-| Método        | URI    | Descripción                                                                 |
-|---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Obtiene los datos de un envío de aplicación existente. Para obtener más información, consulta [este artículo](get-an-app-submission.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status``` | Obtiene el estado de un envío de aplicación existente. Para obtener más información, consulta [este artículo](get-status-for-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions``` | Crea un nuevo envío para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows. Para obtener más información, consulta [este artículo](create-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit``` | Confirma un envío de aplicación nuevo o actualizado en el Centro de desarrollo de Windows. Para obtener más información, consulta [este artículo](commit-an-app-submission.md). |
-| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Actualiza un envío de aplicación existente. Para obtener más información, consulta [este artículo](update-an-app-submission.md). |
-| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Elimina un envío de aplicación. Para obtener más información, consulta [este artículo](delete-an-app-submission.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/packagerollout``` | Obtiene información de lanzamiento gradual para un envío de aplicación. Para obtener más información, consulta [este artículo](get-package-rollout-info-for-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage``` | Actualiza el porcentaje de lanzamiento gradual de un envío de aplicación. Para obtener más información, consulta [este artículo](update-the-package-rollout-percentage-for-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout``` | Detiene el lanzamiento gradual de un envío de aplicación. Para obtener más información, consulta [este artículo](halt-the-package-rollout-for-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout``` | Finaliza el lanzamiento gradual de un envío de aplicación. Para obtener más información, consulta [este artículo](finalize-the-package-rollout-for-an-app-submission.md). |
+Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de aplicación.
+
+<table>
+<colgroup>
+<col width="10%" />
+<col width="30%" />
+<col width="60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Método</th>
+<th align="left">URI</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">GET</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}```</td>
+<td align="left">[Obtener un envío de aplicación existente](get-an-app-submission.md)</td>
+</tr>
+<tr>
+<td align="left">GET</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status```</td>
+<td align="left">[Obtener el estado de un envío de aplicación existente](get-status-for-an-app-submission.md)</td>
+</tr>
+<tr>
+<td align="left">POST</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions```</td>
+<td align="left">[Crear un nuevo envío de aplicación](create-an-app-submission.md)</td>
+</tr>
+<tr>
+<td align="left">PUT</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}```</td>
+<td align="left">[Actualizar un envío de aplicación existente](update-an-app-submission.md)</td>
+</tr>
+<tr>
+<td align="left">POST</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit```</td>
+<td align="left">[Confirmar un envío de aplicación nuevo o actualizado](commit-an-app-submission.md)</td>
+</tr>
+<tr>
+<td align="left">DELETE</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}```</td>
+<td align="left">[Eliminar un envío de aplicación](delete-an-app-submission.md)</td>
+</tr>
+</tbody>
+</table>
 
 <span id="create-an-app-submission">
-## <a name="create-an-app-submission"></a>Crear un envío de aplicación
+### Crear un envío de aplicación
 
 Para crear un envío de aplicación, sigue este proceso.
 
@@ -43,29 +80,40 @@ Para crear un envío de aplicación, sigue este proceso.
 
 3. [Crea un envío de aplicación](create-an-app-submission.md) ejecutando el siguiente método en la API de envío de la Tienda Windows. Este método crea un nuevo envío en curso, que es una copia de tu último envío publicado.
 
-  ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` syntax
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions
   ```
 
-  El cuerpo de la respuesta contiene tres elementos: el identificador del nuevo envío, los datos del nuevo envío (incluidas todas las listas y la información sobre precios) y el URI de firma de acceso compartido (SAS) para cargar los paquetes de aplicación y enumerar las imágenes del envío. Para obtener más información sobre SAS, consulta [Firmas de acceso compartido, Parte 1: Descripción del modelo de firmas de acceso compartido](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).
+  El cuerpo de la respuesta contiene tres elementos: el identificador del nuevo envío, los datos del nuevo envío (incluidas todas las listas y la información sobre precios) y el URI de firma de acceso compartido (SAS) para cargar los paquetes de aplicación y enumerar las imágenes del envío a Azure Blob Storage.
+
+  >**Nota**&nbsp;&nbsp;Un URI de SAS proporciona acceso a un recurso seguro en el almacenamiento de Azure sin necesidad de claves de cuenta. Para obtener información general sobre los URI de SAS y su uso con Azure Blob Storage, consulta [Shared Access Signatures, Part 1: Understanding the SAS model (Firmas de acceso compartido, parte 1: información sobre el modelo SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) y [Firmas de acceso compartido, Parte 2: Creación y uso de una SAS con Almacenamiento de blobs](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
 4. Si estás agregando nuevos paquetes o imágenes para el envío, [prepara los paquetes de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) y [las imágenes y capturas de pantalla de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Agrega todos estos archivos a un archivo ZIP.
 
 5. Revisa los datos de envío con todos los cambios necesarios para el nuevo envío y ejecuta el siguiente método para [actualizar el envío de aplicación](update-an-app-submission.md).
 
-  ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` syntax
   PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}
   ```
 
+  <span/>
   >**Nota:**&nbsp;&nbsp;Si estás agregando nuevos paquetes o imágenes para el envío, asegúrate de actualizar los datos de envío para que hagan referencia al nombre y a la ruta de acceso relativa de estos archivos en el archivo ZIP.
 
-4. Si estás agregando nuevos paquetes o imágenes para el envío, carga el archivo ZIP en el URI de SAS que se proporcionó en el cuerpo de la respuesta del método POST que llamaste en el paso 2. Para obtener más información, consulta [Firmas de acceso compartido, Parte 2: Creación y uso de una SAS con Almacenamiento de blobs](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
+4. Si estás agregando nuevos paquetes o imágenes para el envío, carga el archivo ZIP en [Azure Blob Storage](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage) usando el URI de SAS que se proporcionó en el cuerpo de la respuesta del método POST que llamaste antes. Hay varias bibliotecas de Azure, que puedes usar para hacer esto en una variedad de plataformas, como:
 
-  El siguiente fragmento de código muestra cómo cargar el archivo usando la clase [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) en la biblioteca de cliente de Azure Storage para. NET.
+  * [Biblioteca de cliente de Azure Storage para .NET](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
+  * [Azure Storage SDK para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
+  * [Azure Storage SDK para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
+  <span/>
+
+  En el siguiente ejemplo de código C# se muestra cómo cargar el archivo ZIP en Azure Blob Storage usando la clase [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) en la biblioteca de cliente de Azure Storage para. NET. En este ejemplo se supone que el archivo ZIP ya se ha escrito en un objeto de secuencia.
+
+  > [!div class="tabbedCodeSnippets"]
   ```csharp
   string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
-
   Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob blockBob =
       new Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob(new System.Uri(sasUrl));
   await blockBob.UploadFromStreamAsync(stream);
@@ -73,73 +121,88 @@ Para crear un envío de aplicación, sigue este proceso.
 
 5. Ejecuta el siguiente método para [confirmar el envío de aplicación](commit-an-app-submission.md). Esta acción avisará al Centro de desarrollo que completaste el envío y que las actualizaciones deberían haberse aplicado a tu cuenta.
 
-  ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` syntax
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
   ```
 
 6. Comprueba el estado de confirmación ejecutando el siguiente método para [obtener el estado del envío de aplicación](get-status-for-an-app-submission.md).
 
-    ```
-    GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` syntax
+  GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status
+  ```
 
-    Para confirmar el estado del envío, revisa el valor de *status* en el cuerpo de la respuesta. Este valor debe cambiar de **CommitStarted** a **PreProcessing** si la solicitud se realiza correctamente o a **CommitFailed** si hay errores en la solicitud. Si hay errores, el campo *statusDetails* contendrá más detalles sobre el error.
+  Para confirmar el estado del envío, revisa el valor de *status* en el cuerpo de la respuesta. Este valor debe cambiar de **CommitStarted** a **PreProcessing** si la solicitud se realiza correctamente o a **CommitFailed** si hay errores en la solicitud. Si hay errores, el campo *statusDetails* contendrá más detalles sobre el error.
 
 7. Después de completarse correctamente la confirmación, el envío se remite a la Tienda para su ingesta. Para continuar con la supervisión del progreso del envío, puedes usar el método anterior o visitar el panel del Centro de desarrollo.
 
+<span/>
+### <a name="code-examples-for-managing-app-submissions"></a>Ejemplos de código para administrar envíos de aplicaciones
+
+En los siguientes artículos se proporcionan ejemplos de código detallados que muestran cómo crear un envío de aplicación en varios lenguajes de programación:
+
+* [Ejemplos de código de C#](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [Ejemplos de código de Java](java-code-examples-for-the-windows-store-submission-api.md)
+* [Ejemplos de código de Python](python-code-examples-for-the-windows-store-submission-api.md)
+
 <span id="manage-gradual-package-rollout">
-## <a name="manage-a-gradual-package-rollout-for-an-app-submission"></a>Administrar un lanzamiento de paquete gradual para un envío de aplicación
+## <a name="methods-for-managing-a-gradual-package-rollout"></a>Métodos para administrar un lanzamiento de paquete gradual
 
 Puedes lanzar gradualmente los paquetes actualizados de un envío de aplicación para un porcentaje de los clientes de tu aplicación en Windows 10. Esto te permite supervisar los comentarios y los datos analíticos de los paquetes específicos para asegurarte de que estás seguro sobre la actualización antes de hacer un lanzamiento más amplio. Puedes cambiar el porcentaje de lanzamiento (o detener la actualización) para un envío publicado sin tener que crear un nuevo envío. Para obtener más detalles, incluidas instrucciones sobre cómo habilitar y administrar un lanzamiento de paquete gradual en el panel del Centro de desarrollo, consulta [este artículo](../publish/gradual-package-rollout.md).
 
-También puedes habilitar y administrar un lanzamiento de paquete gradual mediante programación para un envío de aplicación mediante los siguientes métodos en la API de envío de la Tienda Windows.
+Para habilitar un lanzamiento de paquete gradual mediante programación para un envío de aplicación, sigue este proceso usando los siguientes métodos en la API de envío de la Tienda Windows:
 
-* Para activar un lanzamiento de paquete gradual para un envío de aplicación:
-
-  1. [Crea un envío de aplicación](create-an-app-submission.md) u [obtén un envío de aplicación](get-an-app-submission.md).
-  2. En los datos de respuesta, busca el recurso [packageRollout](#package-rollout-object), establece el campo *isPackageRollout* en true y establece el campo *packageRolloutPercentage* en el porcentaje de los clientes de tu aplicación que podrán obtener acceso a los paquetes actualizados.
+  1. [Crear un envío de aplicación](create-an-app-submission.md) u [obtener un envío de aplicación existente](get-an-app-submission.md).
+  2. En los datos de respuesta, busca el recurso [packageRollout](#package-rollout-object), establece el campo *isPackageRollout* en **true** y establece el campo *packageRolloutPercentage* en el porcentaje de los clientes de tu aplicación que deben obtener los paquetes actualizados.
   3. Pasa los datos de envío de aplicación actualizados al método para [actualizar un envío de aplicación](update-an-app-submission.md).
 
+Después de habilitar un lanzamiento de paquete gradual para un envío de aplicación, puedes usar los siguientes métodos para obtener, actualizar, detener o finalizar mediante programación el lanzamiento gradual.
+
+<table>
+<colgroup>
+<col width="10%" />
+<col width="30%" />
+<col width="60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Método</th>
+<th align="left">URI</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">GET</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/packagerollout```</td>
+<td align="left">[Obtener la información de lanzamiento gradual para un envío de aplicación](get-package-rollout-info-for-an-app-submission.md)</td>
+</tr>
+<tr>
+<td align="left">POST</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage```</td>
+<td align="left">[Actualizar el porcentaje de lanzamiento gradual de un envío de aplicación](update-the-package-rollout-percentage-for-an-app-submission.md)</td>
+</tr>
+<tr>
+<td align="left">POST</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout```</td>
+<td align="left">[Detener el lanzamiento gradual de un envío de aplicación](halt-the-package-rollout-for-an-app-submission.md)</td>
+</tr>
+<tr>
+<td align="left">POST</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout```</td>
+<td align="left">[Finalizar el lanzamiento gradual de un envío de aplicación](finalize-the-package-rollout-for-an-app-submission.md)</td>
+</tr>
+</tbody>
+</table>
+
 <span/>
-
-* Para [obtener la información de lanzamiento de paquete de un envío de aplicación](get-package-rollout-info-for-an-app-submission.md), ejecuta el siguiente método.
-
-  ```
-  GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/packagerollout
-  ```
-
-<span/>
-
-* Para [actualizar el porcentaje de lanzamiento de paquete de un envío de aplicación](update-the-package-rollout-percentage-for-an-app-submission.md), ejecuta el siguiente método.
-
-  ```
-  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage  
-  ```
-
-<span/>
-
-* Para [detener el lanzamiento de paquete de un envío de aplicación](halt-the-package-rollout-for-an-app-submission.md), ejecuta el siguiente método.
-
-  ```
-  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout   
-  ```  
-
-<span/>
-
-* Para [finalizar el lanzamiento de paquete de un envío de aplicación](finalize-the-package-rollout-for-an-app-submission.md), ejecuta el siguiente método.
-
-  ```
-  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout
-  ```
-
-## <a name="resources"></a>Recursos
-
-Estos métodos usan los siguientes recursos para dar formato a los datos.
+## Recursos de datos Los métodos de las API de envío de la Tienda Windows para administrar los envíos de aplicación usan los siguientes recursos de datos JSON.
 
 <span id="app-submission-object" />
-### <a name="app-submission"></a>Envío de aplicación
+### Recurso de envío de aplicación
 
-Este recurso representa un envío de una aplicación. En el siguiente ejemplo se muestra el formato de este recurso.
+Este recurso describe un envío de aplicación.
 
 ```json
 {
@@ -247,11 +310,11 @@ Este recurso tiene los siguientes valores.
 |------------|--------|-------------------|
 | id            | string  | Identificador del envío.  |
 | applicationCategory           | string  |   Cadena que especifica la [categoría o subcategoría](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) de la aplicación. Las categorías y subcategorías se combinan en una cadena simple mediante el guion bajo "_" como, por ejemplo, **BooksAndReference_EReader**.      |  
-| pricing           |  object  | Objeto que contiene la información del precio de la aplicación. Para obtener más información, consulta la sección [Recurso Precios](#pricing-object) a continuación.       |   
-| visibility           |  string  |  Visibilidad de la app. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
+| pricing           |  object  | Un [recurso de precios](#pricing-object) que contiene información sobre precios para la aplicación.        |   
+| visibility           |  string  |  Visibilidad de la aplicación. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
 | targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |  
-| listings           |   object  |  Diccionario de pares de claves y valores en el cual cada clave hace referencia al código de un país y cada valor hace referencia a un objeto de [recurso Descripción](#listing-object) que contiene la descripción de la aplicación.       |   
+| listings           |   object  |  Diccionario de pares de clave-valor en el cual cada clave hace referencia al código de un país y cada valor hace referencia a un [recurso de lista](#listing-object) que contiene la descripción de la aplicación.       |   
 | hardwarePreferences           |  array  |   Matriz de cadenas que definen las [preferencias de hardware](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) de la aplicación. Puede ser uno de los valores siguientes: <ul><li>Función táctil</li><li>Teclado</li><li>Mouse</li><li>Cámara</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telefonía</li></ul>     |   
 | automaticBackupEnabled           |  booleano  |   Indica si Windows puede incluir datos de la aplicación en copias de seguridad automáticas de OneDrive. Para obtener más información, consulta [App declarations (Declaraciones de las aplicaciones)](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
 | canInstallOnRemovableMedia           |  booleano  |   Indica si los clientes pueden instalar la aplicación en el almacenamiento extraíble. Para obtener más información, consulta [App declarations (Declaraciones de las aplicaciones)](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
@@ -260,28 +323,28 @@ Este recurso tiene los siguientes valores.
 | meetAccessibilityGuidelines           |    booleano           |  Indica si la aplicación se ha probado para garantizar que cumple las directrices de accesibilidad. Para obtener más información, consulta [App declarations (Declaraciones de las aplicaciones)](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
 | notesForCertification           |  string  |   Contiene [notas para la certificación](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) de la aplicación.    |    
 | status           |   string  |  Estado del envío. Puede ser uno de los valores siguientes: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>      |    
-| statusDetails           |   object  |  Contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores. Para obtener más información, consulta la sección [Detalles de estado](#status-details-object) a continuación.       |    
+| statusDetails           |   object  | Un [recurso de detalles de estado](#status-details-object) que contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores.       |    
 | fileUploadUrl           |   string  | URI de firma de acceso compartido (SAS) para cargar los paquetes para el envío. Si estás agregando nuevos paquetes o imágenes para el envío, carga el archivo ZIP que contiene los paquetes y las imágenes en este URI. Para obtener más información, consulta [Crear un envío de aplicación](#create-an-app-submission).       |    
-| applicationPackages           |   array  | Contiene los objetos que proporcionan detalles acerca de cada paquete del envío. Para obtener más información, consulta la sección [Paquetes de la aplicación](#application-package-object) a continuación. |    
-| packageDeliveryOptions    | objeto  | Contiene el lanzamiento de paquete gradual y la configuración de actualización obligatoria del envío. Para obtener más información, consulta la sección [Objeto de opciones de entrega de paquete](#package-delivery-options-object), a continuación.  |
-| enterpriseLicensing           |  cadena  |  Uno de los [valores de licencia de empresa](#enterprise-licensing) indica el comportamiento de la licencia de empresa de la aplicación.  |    
+| applicationPackages           |   array  | Una matriz de [recursos de paquete de aplicación](#application-package-object) que proporcionan detalles acerca de cada paquete del envío. |    
+| packageDeliveryOptions    | object  | Un [recurso de opciones de entrega de paquete](#package-delivery-options-object) que contiene el lanzamiento de paquete gradual y la configuración de actualización obligatoria para el envío.  |
+| enterpriseLicensing           |  string  |  Uno de los [valores de licencia de empresa](#enterprise-licensing) indica el comportamiento de la licencia de empresa de la aplicación.  |    
 | allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  booleano   |  Indica si se permite que Microsoft [tenga la aplicación disponible para futuras familias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
 | allowTargetFutureDeviceFamilies           | object   |  Un diccionario de pares clave y valor, donde cada clave es una [familia de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) y cada valor es un booleano que indica si la aplicación puede seleccionar como destino la familia de dispositivos especificada.     |    
 | friendlyName           |   string  |  Nombre descriptivo de la aplicación, que se usa con fines de visualización.       |  
 
 
 <span id="listing-object" />
-### <a name="listing"></a>Descripción
+### <a name="listing-resource"></a>Recurso de lista
 
 Este recurso contiene la información de descripción de una aplicación. Este recurso tiene los siguientes valores.
 
-| Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descripción                  |
 |-----------------|---------|------|
 |  baseListing               |   object      |  Información de [descripción de base](#base-listing-object) de la aplicación, que define la información de descripción predeterminada para todas las plataformas.   |     
-|  platformOverrides               | object |   Un diccionario de pares de clave y valor, donde cada clave es una cadena que identifica una plataforma para la cual se va a reemplazar la información de descripción y cada valor es un objeto de [descripción de base](#base-listing-object) (que contiene solo los valores de la descripción del título) que especifica la información de descripción que se va reemplazar de la plataforma especificada. Las claves pueden tener los siguientes valores: <ul><li>Unknown</li><li>Windows80</li><li>Windows81</li><li>WindowsPhone71</li><li>WindowsPhone80</li><li>WindowsPhone81</li></ul>     |      |     
+|  platformOverrides               | object |   Un diccionario de pares clave-valor, donde cada clave es una cadena que identifica una plataforma para la cual se va a reemplazar la información de descripción y cada valor es un recurso de [descripción de base](#base-listing-object) (que contiene solo los valores de la descripción del título) que especifica la información de descripción que se va reemplazar de la plataforma especificada. Las claves pueden tener los siguientes valores: <ul><li>Unknown</li><li>Windows80</li><li>Windows81</li><li>WindowsPhone71</li><li>WindowsPhone80</li><li>WindowsPhone81</li></ul>     |      |     
 
 <span id="base-listing-object" />
-### <a name="base-listing"></a>Descripción de base
+### <a name="base-listing-resource"></a>Recursos de descripción base
 
 Este recurso contiene la información de descripción de base de una aplicación. Este recurso tiene los siguientes valores.
 
@@ -296,13 +359,12 @@ Este recurso contiene la información de descripción de base de una aplicación
 |  description               |    string     |   [Descripción](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) de la aplicación.   |     
 |  features               |    array     |  Matriz de hasta 20 cadenas que enumera las [características](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) de tu aplicación.     |
 |  releaseNotes               |  string       |  [Notas de la versión](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) de tu aplicación.    |
-|  images               |   array      |  Matriz de datos de [imagen e icono](#image-object) para la descripción de la aplicación.  |
+|  images               |   array      |  Matriz de datos de recursos de [imagen e icono](#image-object) para la descripción de la aplicación.  |
 |  recommendedHardware               |   array      |  Matriz de hasta 11 cadenas que enumera las [configuraciones de hardware recomendadas](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#recommended-hardware) para tu aplicación.     |
 |  title               |     string    |   Título de la descripción de la aplicación.   |  
 
-
 <span id="image-object" />
-### <a name="image"></a>Image
+### <a name="image-resource"></a>Recurso de imagen
 
 Este recurso contiene datos de imagen e icono para una descripción de la aplicación. Para obtener más información acerca de las imágenes y los iconos para la descripción, consulta [Imágenes y capturas de pantalla de aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Este recurso tiene los siguientes valores.
 
@@ -316,20 +378,20 @@ Este recurso contiene datos de imagen e icono para una descripción de la aplica
 
 
 <span id="pricing-object" />
-### <a name="pricing"></a>Precios
+### <a name="pricing-resource"></a>Recurso de precios
 
 Este recurso contiene información sobre precios de la aplicación. Este recurso tiene los siguientes valores.
 
-| Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descripción        |
 |-----------------|---------|------|
 |  trialPeriod               |    string     |  Cadena que especifica el período de prueba de la aplicación. Puede ser uno de los valores siguientes: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
 |  marketSpecificPricings               |    object     |  Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados de la aplicación en mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Los elementos de este diccionario reemplazan el precio base especificado por el valor de *priceId* para el mercado especificado.      |     
-|  sales               |   matriz      |  **En desuso**. Una matriz de objetos que contienen información de ventas de la aplicación. Para obtener más información, consulta la sección [Venta](#sale-object) a continuación.    |     
+|  sales               |   array      |  **En desuso**. Una matriz de [recursos de venta](#sale-object) que contienen información de ventas de la aplicación.   |     
 |  priceId               |   string      |  [Franja de precios](#price-tiers) que especifica el [precio base](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) de la aplicación.   |
 
 
 <span id="sale-object" />
-### <a name="sale"></a>Sale
+### <a name="sale-resource"></a>Recurso de venta
 
 Este recurso contiene información de venta de una aplicación.
 
@@ -342,7 +404,7 @@ Este recurso contiene información de venta de una aplicación.
 
 Este recurso tiene los siguientes valores.
 
-| Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descripción    |
 |-----------------|---------|------|
 |  name               |    string     |   Nombre de la venta.    |     
 |  basePriceId               |   string      |  [Franja de precios](#price-tiers) que se usará para el precio base de la venta.    |     
@@ -352,32 +414,32 @@ Este recurso tiene los siguientes valores.
 
 
 <span id="status-details-object" />
-### <a name="status-details"></a>Detalles de estado
+### <a name="status-details-resource"></a>Recurso de detalles de estado
 
 Este recurso contiene detalles adicionales sobre el estado de un envío. Este recurso tiene los siguientes valores.
 
-| Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descripción         |
 |-----------------|---------|------|
-|  errors               |    object     |   Matriz de objetos que contienen detalles de error del envío. Para obtener más información, consulta la sección [Detalle de estado](#status-detail-object) a continuación.   |     
-|  warnings               |   object      | Matriz de objetos que contienen detalles de advertencia del envío. Para obtener más información, consulta la sección [Detalle de estado](#status-detail-object) a continuación.     |
-|  certificationReports               |     object    |   Matriz de objetos que proporcionan acceso a los datos del informe de certificación del envío. Si se produce un error en la certificación, puedes examinar estos informes para obtener más información. Para obtener más información, consulta la sección [Informe de certificación](#certification-report-object) a continuación.   |  
+|  errors               |    object     |   Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de errores del envío.    |     
+|  warnings               |   object      | Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de advertencias del envío.      |
+|  certificationReports               |     object    |   Una matriz de [recursos de informe de certificación](#certification-report-object) que proporcionan acceso a los datos del informe de certificación del envío. Si se produce un error en la certificación, puedes examinar estos informes para obtener más información.   |  
 
 
 <span id="status-detail-object" />
-### <a name="status-detail"></a>Detalle de estado
+### <a name="status-detail-resource"></a>Recurso de detalle de estado
 
 Este recurso contiene información adicional acerca de las advertencias o los errores relacionados de un envío. Este recurso tiene los siguientes valores.
 
-| Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descripción        |
 |-----------------|---------|------|
-|  code               |    string     |   Cadena que describe el tipo de error o advertencia. Para obtener más información, consulta la sección [Código de estado del envío](#submission-status-code) a continuación.   |     
+|  code               |    string     |   Un [código de estado de envío](#submission-status-code) que describe el tipo de error o advertencia.   |     
 |  details               |     string    |  Mensaje con más detalles sobre el problema.     |
 
 
 <span id="application-package-object" />
-### <a name="application-package"></a>Paquetes de la aplicación
+### <a name="application-package-resource"></a>Recurso de paquete de aplicación
 
-Este recurso contiene detalles sobre un paquete de aplicación para el envío. En el siguiente ejemplo se muestra el formato de este recurso.
+Este recurso contiene detalles sobre un paquete de aplicación para el envío.
 
 ```json
 {
@@ -426,20 +488,20 @@ Este recurso tiene los siguientes valores.
 <span/>
 
 <span id="certification-report-object" />
-### <a name="certification-report"></a>Informe de certificación
+### <a name="certification-report-resource"></a>Recurso de informe de certificación
 
 Este recurso proporciona acceso a los datos del informe de certificación de un envío. Este recurso tiene los siguientes valores.
 
-| Valor           | Tipo    | Descripción                                                                                                                                                                                                                          |
+| Valor           | Tipo    | Descripción             |
 |-----------------|---------|------|
 |     date            |    string     |  Fecha y hora en que se generó el informe, en formato ISO 8601.    |
 |     reportUrl            |    cadena     |  Dirección URL en la que puedes obtener acceso al informe.    |
 
 
 <span id="package-delivery-options-object" />
-### <a name="package-delivery-options-object"></a>Objeto de opciones de entrega de paquete
+### <a name="package-delivery-options-resource"></a>Recurso de opciones de entrega de paquete
 
-Este recurso contiene ajustes de lanzamiento de paquete gradual y de actualización obligatoria para el envío. En el siguiente ejemplo se muestra el formato de este recurso.
+Este recurso contiene ajustes de lanzamiento de paquete gradual y de actualización obligatoria para el envío.
 
 ```json
 {
@@ -460,12 +522,12 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|------|
-| packageRollout   |   objeto      |  Contiene los ajustes de lanzamiento de paquete gradual para el envío. Para obtener más información, consulta la sección [Objeto de lanzamiento de paquete](#package-rollout-object) a continuación.    |  
-| isMandatoryUpdate    | booleano    |  Indica si vas a tratar los paquetes de este envío como obligatorios para la instalación automática de actualizaciones de la aplicación. Para obtener más información sobre los paquetes obligatorios para la instalación automática de actualizaciones de la aplicación, consulta [Descargar e instalar actualizaciones de paquete para tu aplicación](../packaging/self-install-package-updates.md).    |  
+| packageRollout   |   object      |  Un [recurso de lanzamiento de paquete](#package-rollout-object) que contiene la configuración del lanzamiento de paquete gradual para el envío.   |  
+| isMandatoryUpdate    | boolean    |  Indica si vas a tratar los paquetes de este envío como obligatorios para la instalación automática de actualizaciones de la aplicación. Para obtener más información sobre los paquetes obligatorios para la instalación automática de actualizaciones de la aplicación, consulta [Descargar e instalar actualizaciones de paquete para tu aplicación](../packaging/self-install-package-updates.md).    |  
 | mandatoryUpdateEffectiveDate    |  fecha   |  La fecha y la hora en que los paquetes de este envío se convierten en obligatorios, en formato ISO 8601 y zona horaria UTC.   |        
 
 <span id="package-rollout-object" />
-### <a name="package-rollout-object"></a>Objeto de lanzamiento de paquete
+### <a name="package-rollout-resource"></a>Recurso de lanzamiento de paquete
 
 Este recurso contiene la [configuración de lanzamiento de paquete](#manage-gradual-package-rollout) gradual para el envío. Este recurso tiene los siguientes valores.
 
@@ -482,13 +544,12 @@ Este recurso contiene la [configuración de lanzamiento de paquete](#manage-grad
 
 Estos métodos usan las enumeraciones siguientes.
 
-
 <span id="price-tiers" />
 ### <a name="price-tiers"></a>Franjas de precios
 
 Los valores siguientes representan las franjas de precios disponibles para un envío de aplicación.
 
-| Valor           | Descripción                                                                                                                                                                                                                          |
+| Valor           | Descripción        |
 |-----------------|------|
 |  Base               |   No se establece la franja de precios; usa el precio base para la aplicación.      |     
 |  NotAvailable              |   La aplicación no está disponible en la región especificada.    |     
@@ -540,6 +601,6 @@ Los valores siguientes representan el código de estado de un envío.
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

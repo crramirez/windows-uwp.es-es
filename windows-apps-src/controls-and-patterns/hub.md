@@ -6,11 +6,11 @@ ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 6c27d9b968dfca6d0c1db37eb7779d9ff3744f41
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: ad5a8dfab77c78b1c53762f5de868819e0b37d6f
 
 ---
-# Patrón o control de navegación centralizada
+# <a name="hub-controlpattern"></a>Patrón o control de navegación centralizada
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,21 +21,17 @@ Un control de navegación centralizada permite organizar el contenido de la apli
 
 El contenido en un control de navegación centralizada se puede mostrar en una vista panorámica que permite a los usuarios obtener una vista rápida de lo que es nuevo, lo que está disponible y lo que es relevante. Los hubs suelen tener un encabezado de página y cada sección de contenido, un encabezado de sección.
 
+
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251843"><strong>Clase Hub</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251845"><strong>Clase HubSection</strong></a></li>
+<li>[**Clase Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)</li>
+<li>[**Clase HubSection**](https://msdn.microsoft.com/library/windows/apps/dn251845)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 El control de hub funciona bien para mostrar grandes cantidades de contenido organizado en una jerarquía. Los concentradores dan prioridad a la exploración y detección de contenido nuevo, lo que los hace útiles para mostrar elementos en una tienda o una colección de elementos multimedia.
 
@@ -63,13 +59,13 @@ El control de navegación centralizada tiene varias funciones que hacen que func
 
 La navegación centralizada es solo uno de varios elementos de navegación que puedes usar. Para más información sobre patrones de navegación y otros elementos de navegación, consulta el artículo [Conceptos básicos del diseño de navegación para aplicaciones para la Plataforma universal de Windows (UWP)](../layout/navigation-basics.md).
 
-## Arquitectura de navegación centralizada
+## <a name="hub-architecture"></a>Arquitectura de navegación centralizada
 
 El control de navegación centralizada tiene un patrón de navegación jerárquico que admite aplicaciones con una arquitectura de información relacional. Un control de navegación centralizada consta de distintas categorías de contenido, cada una de las cuales se asigna a las páginas de sección de la aplicación. Las páginas de sección se pueden mostrar de la manera que mejor represente el escenario y el contenido que incluye la sección.
 
 ![estructura reticular de la aplicación jerárquica Comida con amigos](images/navigation_diagram_food_with_friends_app_new.png)
 
-## Diseños y desplazamiento y movimiento panorámico
+## <a name="layouts-and-panningscrolling"></a>Diseños y desplazamiento y movimiento panorámico
 
 Hay varias maneras de diseñar y navegar por el contenido en un control de navegación centralizada; simplemente asegúrate de que las listas de contenido de un control de navegación centralizada siempre se desplazan de forma lateral en una dirección perpendicular a la dirección en la que se desplaza el control.
 
@@ -86,7 +82,7 @@ Hay varias maneras de diseñar y navegar por el contenido en un control de naveg
 
 ![Ejemplo de navegación centralizada con movimiento panorámico horizontal](images/controls_hub_vertical_horizontal_scroll.png)
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 El control de navegación centralizada proporciona flexibilidad de diseño. Esto te permite diseñar aplicaciones que ofrecen una amplia variedad de experiencias atractivas y visualmente enriquecidas. Puedes usar una imagen o sección de contenido principal para el primer grupo; una imagen grande de la imagen principal se puede recortar vertical y horizontalmente sin perder el centro de interés. El siguiente ejemplo muestra de qué manera se puede recortar una imagen principal usada como prototipo, para obtener un ancho horizontal, vertical o estrecho.
 
@@ -96,7 +92,7 @@ En los dispositivos móviles, las secciones de navegación centralizada están v
 
 ![Ejemplo de un patrón de navegación centralizada en una pantalla pequeña](images/phone_hub_example.png)
 
-## Recomendaciones
+## <a name="recommendations"></a>Recomendaciones
 
 -   Para que los usuarios sepan que hay más contenido en una sección del control de navegación centralizada, te recomendamos que recortes el contenido para que se vea parte de él.
 -   En función de las necesidades de la aplicación, puedes añadir varias secciones de navegación centralizada al control de navegación centralizada, donde cada una de ellas ofrecerá su propio propósito funcional. Por ejemplo, una sección podría contener una serie de vínculos y controles, mientras que otra sección podría ser un repositorio de imágenes en miniatura. Un usuario puede desplazarse entre estas secciones usando la compatibilidad con gestos integrada en el control de navegación centralizada.
@@ -114,16 +110,19 @@ En los dispositivos móviles, las secciones de navegación centralizada están v
     -   Color de fondo, secciones, encabezados de secciones y contenido de secciones
 
 
+## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+* [Muestra de conceptos básicos de una interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
-## Artículos relacionados
+
+## <a name="related-articles"></a>Artículos relacionados
 
 - [Clase Hub](https://msdn.microsoft.com/library/windows/apps/dn251843)
 - [Conceptos básicos de navegación](../layout/navigation-basics.md)
 - [Usar un control de navegación centralizada](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
-- [Ejemplo del control de navegación centralizada XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
+- [Ejemplo de control de navegación centralizada XAML](http://go.microsoft.com/fwlink/p/?LinkID=310072)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

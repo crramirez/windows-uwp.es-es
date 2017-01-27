@@ -6,11 +6,11 @@ ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 9b21a15edcead96fdc1a335a1c6e58cc0a279858
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 8be3dfed1e6fda1777905a73db4b0eae1e3368dd
 
 ---
-# Controles deslizantes
+# <a name="sliders"></a>Controles deslizantes
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,20 +21,14 @@ Un control deslizante es un control que permite que el usuario seleccione entre 
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx"><strong>Clase de control deslizante</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx"><strong>Valor de propiedad</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx"><strong>Evento ValueChanged</strong></a></li>
+<li>[**Clase de control deslizante**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx)</li>
+<li>[**Valor de propiedad**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx)</li>
+<li>[**Evento ValueChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa un control deslizante cuando quieras que tus usuarios puedan establecer valores contiguos definidos (como el volumen o el brillo) o un intervalo de valores discretos (como la configuración de resolución de pantalla).
 
@@ -59,7 +53,7 @@ Usa el control deslizante si:
 
 -   Los usuarios van a sacar provecho de una respuesta instantánea.
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 Un control deslizante para controlar el volumen en Windows Phone.
 
@@ -69,7 +63,7 @@ Un control deslizante para cambiar el tamaño del texto en la configuración de 
 
 ![Un control deslizante para cambiar el tamaño del texto en la configuración de pantalla de Windows](images/control-examples/slider-display-settings.png)
 
-## Crear un control deslizante
+## <a name="create-a-slider"></a>Crear un control deslizante
 
 Aquí te mostramos cómo crear un control deslizante en el código XAML.
 
@@ -103,7 +97,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 }
 ```
 
-## Recomendaciones
+## <a name="recommendations"></a>Recomendaciones
 
 -   Da al control el tamaño que facilite a los usuarios el establecimiento del valor que quieran. En el caso de opciones con valores discretos, asegúrate de que al usuario le resulte fácil seleccionar cualquier valor mediante el mouse. Asegúrate de que los extremos del control deslizante caben siempre en los límites de una vista.
 -   Proporciona una respuesta inmediata mientras el usuario hace una selección, o a continuación (siempre que resulte práctico). Por ejemplo, el control de volumen de Windows emite un sonido para indicar el volumen de audio seleccionado.
@@ -114,9 +108,9 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 -   No cambies el tamaño predeterminado del control de posición del control deslizante.
 -   No crees un control deslizante continuo si el intervalo de valores es muy grande y es probable que los usuarios seleccionen uno de los valores representativos del intervalo. En lugar de ello, usa esos valores como únicos pasos permitidos. Por ejemplo, si el valor de tiempo puede durar hasta 1 mes pero los usuarios solo tienen que elegir entre 1 minuto, 1 hora, 1 día o 1 mes, crea un control deslizante con estos 4 puntos como pasos.
 
-## Instrucciones de uso adicionales
+## <a name="additional-usage-guidance"></a>Instrucciones de uso adicionales
 
-### Elegir el diseño adecuado: horizontal o vertical
+### <a name="choosing-the-right-layout-horizontal-or-vertical"></a>Elegir el diseño adecuado: horizontal o vertical
 
 Puedes orientar el control deslizante de forma horizontal o vertical. Usa estas directrices para determinar qué diseño usar.
 
@@ -125,7 +119,7 @@ Puedes orientar el control deslizante de forma horizontal o vertical. Usa estas 
 -   Cuando uses un control deslizante en una página que permita movimiento panorámico en una dirección (horizontal o verticalmente), usa una orientación para el control deslizante que sea diferente a la dirección del movimiento panorámico. En otro caso, es posible que los usuarios muevan el control deslizante y cambien su valor de forma accidental al intentar desplazar la página.
 -   Si aún no estás seguro de qué orientación usar, usa aquella que mejor se ajuste a tu diseño de página.
 
-### Dirección del intervalo
+### <a name="range-direction"></a>Dirección del intervalo
 
 La dirección del intervalo es la dirección hacia la que mueves el control deslizante cuando lo deslizas desde su valor actual a su valor máximo.
 
@@ -133,7 +127,7 @@ La dirección del intervalo es la dirección hacia la que mueves el control desl
 -   Para estilos horizontales, pon el valor inferior en el lado izquierdo del control deslizante en caso de un diseño de página de izquierda a derecha, y en el lado derecho en caso de un diseño de página de derecha a izquierda.
 -   La única excepción a la directriz anterior es para las barras de búsqueda en archivos multimedia: siempre debes poner el valor inferior en el lado izquierdo del control deslizante.
 
-### Pasos y marcas de graduación
+### <a name="steps-and-tick-marks"></a>Pasos y marcas de graduación
 
 -   Usa puntos de paso si no quieres que el control deslizante admita valores arbitrarios entre el mínimo y el máximo. Por ejemplo, si usas un control deslizante para especificar el número de entradas de cine que comprar, no permitas valores de punto flotante. Dale un valor de paso de 1.
 -   Si especificas pasos (también denominados puntos de acoplamiento), asegúrate de que el paso final esté alineado con el valor máximo del control deslizante.
@@ -142,7 +136,7 @@ La dirección del intervalo es la dirección hacia la que mueves el control desl
 -   Muestra marcas de graduación y una etiqueta de valor cuando los usuarios necesiten saber el valor exacto de la configuración que eligen, sin interactuar con el control. En otro caso, pueden usar la información sobre herramientas del valor para ver el valor exacto.
 -   Siempre muestra marcas de graduación cuando los puntos de paso no sean obvios. Por ejemplo, si el control deslizante tiene 200 píxeles de anchura y 200 puntos de acoplamiento, puedes ocultar las marcas de graduación porque los usuarios no van a notar el comportamiento de acoplamiento. Pero si solo hay 10 puntos de acoplamiento, muestra las marcas de graduación.
 
-### Etiquetas
+### <a name="labels"></a>Etiquetas
 
 -   **Etiquetas de control deslizante**
 
@@ -168,7 +162,7 @@ La dirección del intervalo es la dirección hacia la que mueves el control desl
     -   Centra el texto en relación con el control e incluye las unidades (como pueden ser píxeles).
     -   Como el control de posición del control deslizante queda oculto al deslizarlo, considera la posibilidad de mostrar el valor actual de alguna otra forma, con una etiqueta u otro elemento visual. Un control deslizante que establezca el tamaño del texto podría presentar un texto de muestra del tamaño correcto al lado del control deslizante.
 
-### Aspecto e interacción
+### <a name="appearance-and-interaction"></a>Aspecto e interacción
 
 Un control deslizante está formado por un recorrido y un control de posición. El recorrido es una barra (que, opcionalmente, puede mostrar diversos estilos de marcas de graduación) que representa el intervalo de valores que se pueden especificar. El control de posición es un selector, que el usuario puede mover pulsando en el recorrido o arrastrándolo hacia atrás y hacia adelante.
 
@@ -176,15 +170,12 @@ Un control deslizante tiene un destino táctil grande. Para que la accesibilidad
 
 Al diseñar un control deslizante personalizado, piensa en la manera de presentar toda la información necesaria al usuario de la forma más clara posible. Usa una etiqueta de valor si el usuario tiene que saber cuáles son las unidades para entender la opción. Busca formas creativas de representar valores gráficamente. Por ejemplo, un control deslizante que controle el volumen podría mostrar el gráfico de un altavoz sin ondas de sonido en el extremo inferior del control y el gráfico de un altavoz con ondas de sonido en el extremo superior.
 
-## Temas relacionados
-
-**Para diseñadores**
-- [Directrices sobre modificadores para alternar](toggles.md)
-**Para desarrolladores (XAML)**
+## <a name="related-topics"></a>Temas relacionados
+- [Modificadores para alternar](toggles.md)
 - [**Clase de control deslizante**](https://msdn.microsoft.com/library/windows/apps/br209614)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

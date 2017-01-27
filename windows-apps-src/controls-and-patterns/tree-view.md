@@ -5,15 +5,18 @@ title: "Vista de árbol"
 label: Tree view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: b81ef40954860cb026038447158ba1a9edb07002
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 88e3e79b7ebdf06c200f3525095d7685f7e3e6dc
 
 ---
-# Diseño jerárquico con TreeView
+# <a name="hierarchical-layout-with-treeview"></a>Diseño jerárquico con TreeView
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
+<div class="microsoft-internal-note">
+Las líneas rojas de TreeView están en el almacén de diseño: http://designdepotweb1/DesignDepot.FrontEnd/#/Dashboard/856
+</div>
 
-Una vista de árbol es un patrón de lista jerárquica con nodos que se expanden y se contraen y que contienen elementos anidados. Los elementos anidados pueden ser nodos adicionales o elementos normales de una lista. Puedes usar una clase [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) para crear una vista de árbol con el fin de ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
+TreeView es un patrón de lista jerárquica con nodos que se expanden y se contraen, y que contienen elementos anidados. Los elementos anidados pueden ser nodos adicionales o elementos normales de una lista. Puedes usar una clase [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) para crear una vista de árbol con el fin de ilustrar una estructura de carpetas o relaciones anidadas en la interfaz de usuario.
 
 La [muestra de TreeView](http://go.microsoft.com/fwlink/?LinkId=785018) es una implementación de referencia creada con **ListView**. No es un control independiente. La vista de árbol que se muestra en el panel de favoritos del navegador Microsoft Edge usa esta implementación de referencia.
 
@@ -27,45 +30,45 @@ La muestra admite:
 -- | --
 Muestra de referencia de TreeView | TreeView en el navegador Edge
 
-## ¿Es este el patrón adecuado?
+## <a name="is-this-the-right-pattern"></a>¿Es este el patrón adecuado?
 
 - Usa una vista de árbol cuando los elementos cuenten con elementos de lista anidados y si es importante ilustrar la relación jerárquica de los elementos respecto a los elementos del mismo nivel y los nodos.
 
 - Evita usar una vista de árbol si resaltar la relación anidada de un elemento no es una prioridad. En la mayoría de los escenarios de desglose, una vista de lista normal es adecuada
 
-## Estructura de la interfaz de usuario de una vista de árbol
+## <a name="treeview-ui-structure"></a>Estructura de la interfaz de usuario de una vista de árbol
 
 Puedes usar iconos para representar los nodos en una vista de árbol. Puede usarse una combinación de sangría e iconos para representar la relación anidada entre los nodos de carpeta/primarios y los nodos que no son de carpeta/secundarios. Aquí te ofrecemos indicaciones sobre cómo hacerlo.
 
-### Iconos
+### <a name="icons"></a>Iconos
 
 Usa iconos para indicar que un elemento es un nodo, así como el estado en el que está dicho nodo (expandido o contraído).
 
-#### Comillas angulares
+#### <a name="chevron"></a>Comillas angulares
 
 Por motivos de coherencia, los nodos contraídos deben usar comillas angulares que señalen hacia la derecha y los nodos expandidos deben usar comillas angulares que señalen hacia abajo.
 
 ![Uso del icono de las comillas angulares en la vista de árbol](images/treeview_chevron.png)
 
-#### Carpeta
+#### <a name="folder"></a>Carpeta
 
 Usa un icono de carpeta únicamente para representaciones literales de carpetas.
 
 ![Uso del icono de la carpeta en la vista de árbol](images/treeview_folder.png)
 
-#### Comillas angulares y carpetas
+#### <a name="chevron-and-folder"></a>Comillas angulares y carpetas
 
 Solo debe usarse una combinación de comillas angulares y una carpeta si los elementos de lista que no son nodo en la vista de árbol también tienen iconos.
 
 ![Uso de los iconos de comillas angulares y carpeta juntos en una vista de árbol](images/treeview_chevron_folder.png)
 
-#### Líneas rojas para la sangría de los nodos de carpeta y que no son carpetas
+#### <a name="redlines-for-indentation-of-folders-and-non-folder-nodes"></a>Líneas rojas para la sangría de los nodos de carpeta y que no son carpetas
 
 Usa las líneas rojas de la captura de pantalla de debajo para la sangría de los nodos de carpeta y que no son de carpeta.
 
 ![Líneas rojas para la sangría de los nodos de carpeta y que no son carpetas](images/treeview_chevron_folder_indent_rl.png)
 
-## Crear una vista de árbol
+## <a name="building-a-treeview"></a>Crear una vista de árbol
 
 TreeView tiene las siguientes clases principales. Todas se definen y se incluyen en la implementación de referencia.
 
@@ -76,7 +79,7 @@ TreeView tiene las siguientes clases principales. Todas se definen y se incluyen
 - La clase `TreeViewItem` implementa los eventos de la operación de colocación.
 - La clase `ViewModel` aplana la lista TreeViewItems para que ciertas operaciones, como la navegación por teclado y arrastrar y colocar, se puedan heredar de ListView.
 
-## Crear una plantilla de datos para TreeViewItem
+## <a name="create-a-data-template-for-your-treeviewitem"></a>Crear una plantilla de datos para TreeViewItem
 
 Esta es la sección de XAML que configura la plantilla de datos para los elementos de carpeta y que no son de carpeta.
 - Para especificar un ListViewItem como una carpeta, deberás establecer explícitamente la propiedad [AllowDrop](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.allowdrop.aspx) como **true** en dicho ListViewItem. Este XAML muestra una manera de hacerlo.
@@ -133,7 +136,7 @@ Esta es la sección de XAML que configura la plantilla de datos para los element
 </DataTemplate>
 ```
 
-## Configurar los datos en TreeView
+## <a name="set-up-the-data-in-your-treeview"></a>Configurar los datos en TreeView
 
 Este es el código que configura los datos en la muestra de TreeView.
 
@@ -179,7 +182,7 @@ Cuando hayas terminado los pasos anteriores, tendrá un diseño de vista de árb
 Para proporcionar al usuario la posibilidad de agregar o quitar elementos de la vista de árbol, te recomendamos que agregues un menú contextual para exponer las opciones para el usuario.
 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 - [Muestra de TreeView](http://go.microsoft.com/fwlink/?LinkId=785018)
 - [**ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)
@@ -187,6 +190,6 @@ Para proporcionar al usuario la posibilidad de agregar o quitar elementos de la 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

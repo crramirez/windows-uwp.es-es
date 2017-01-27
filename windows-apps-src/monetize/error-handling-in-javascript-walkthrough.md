@@ -4,13 +4,13 @@ ms.assetid: 08b4ae43-69e8-4424-b3c0-a07c93d275c3
 description: "Aprende a detectar errores de AdControl en la aplicación."
 title: Tutorial de control de errores en JavaScript
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: e7ce3cd96286454aaa987483ed4df1cefbee5b57
+ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
+ms.openlocfilehash: ad177c964f2a01640d33fc09f1789fc857801792
 
 
 ---
 
-# Tutorial de control de errores en JavaScript
+# <a name="error-handling-in-javascript-walkthrough"></a>Tutorial de control de errores en JavaScript
 
 
 
@@ -21,65 +21,61 @@ En estos ejemplos se da por hecho que tienes una aplicación JavaScript o HTML q
 
 1.  En el archivo default.html, agrega un valor para el evento **onErrorOccurred** en el que definas la propiedad **data-win-options** en el elemento **div** para el objeto **AdControl**. Encuentra el siguiente código en el archivo default.html.
 
-    ``` syntax
-    <div id="myAd" style="position: absolute; top: 53px; left: 0px; width: 300px; height: 250px; z-index: 1"
-         data-win-control="MicrosoftNSJS.Advertising.AdControl"
-         data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1', adUnitId: '10865270'}">
-    </div>
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` html
+  <div id="myAd" style="position: absolute; top: 53px; left: 0px; width: 300px; height: 250px; z-index: 1"
+      data-win-control="MicrosoftNSJS.Advertising.AdControl"
+      data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1', adUnitId: '10865270'}">
+  </div>
+  ```
 
-    Después de la propiedad **adUnitId**, agrega el valor para el evento **onErrorOccurred**.
+  Después del atributo **adUnitId**, agrega el valor para el evento **onErrorOccurred**.
 
-    ``` syntax
-    onErrorOccurred: errorLogger
-    ```
-
-    Este es el código completo para el elemento **div**.
-
-    ``` syntax
-    <div id="myAd" style="position: absolute; top: 53px; left: 0px; width: 300px; height: 250px; z-index: 1"
-         data-win-control="MicrosoftNSJS.Advertising.AdControl"
-         data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1', adUnitId: '10865270', onErrorOccurred: errorLogger}">
-    </div>
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` html
+  <div id="myAd" style="position: absolute; top: 53px; left: 0px; width: 300px; height: 250px; z-index: 1"
+      data-win-control="MicrosoftNSJS.Advertising.AdControl"
+      data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1', adUnitId: '10865270', onErrorOccurred: errorLogger}">
+  </div>
+  ```
 
 2.  Crea un elemento **div** que mostrará el texto para que puedas ver los mensajes que se generen. Para ello, agrega el siguiente código después del elemento **div** para **MiAnuncio**.
 
-    ``` syntax
-    <div style="position:absolute; width:100%; height:130px; top:300px; left:0px">
-        <b>Ad Events</b><br />
-        <div id="adEvents" style="width:100%; height:110px; overflow:auto"></div>
-    </div>
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` html
+  <div style="position:absolute; width:100%; height:130px; top:300px; left:0px">
+      <b>Ad Events</b><br />
+      <div id="adEvents" style="width:100%; height:110px; overflow:auto"></div>
+  </div>
+  ```
 
 3.  Crea un objeto **AdControl** que desencadene un evento de error. Solo puede haber un id. de la aplicación para todos los objetos **AdControl** de una aplicación. Por lo tanto, al crear uno adicional con un id. de la aplicación diferente, se desencadenará un error en tiempo de ejecución. Para ello, después de las secciones **div** anteriores que hayas agregado, agrega el siguiente código al cuerpo de la página default.html.
 
-    ``` syntax
-    <!-- since only one applicationId can be used, the following ad control will fire an error event -->
-    <div id="liveAd" style="position: absolute; top:500px; left:0px; width:480px; height:80px"
-        data-win-control="MicrosoftNSJS.Advertising.AdControl"
-        data-win-options="{applicationId: '00000000-0000-0000-0000-000000000000',
-        adUnitId: '10865270', onErrorOccurred: errorLogger }" >
-    </div>
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ``` html
+  <!-- Because only one applicationId can be used, the following ad control will fire an error event. -->
+  <div id="liveAd" style="position: absolute; top:500px; left:0px; width:480px; height:80px"
+      data-win-control="MicrosoftNSJS.Advertising.AdControl"
+      data-win-options="{applicationId: '00000000-0000-0000-0000-000000000000', adUnitId: '10865270', onErrorOccurred: errorLogger }" >
+  </div>
+  ```
 
 4.  En el archivo default.js del proyecto, después de la función de inicialización predeterminada, agregarás el controlador de eventos para **errorLogger**. Desplázate hasta el final del archivo y, después del último punto y coma, colocarás el siguiente código.
 
-    ``` syntax
-    WinJS.Utilities.markSupportedForProcessing(
-    window.errorLogger = function (sender, evt) {
+  > [!div class="tabbedCodeSnippets"]
+  ``` javascript
+  WinJS.Utilities.markSupportedForProcessing(
+  window.errorLogger = function (sender, evt) {
         adEvents.innerHTML = (new Date()).toLocaleTimeString() + ": " +
         sender.element.id + " error: " + evt.errorMessage + " error code: " +
         evt.errorCode + "<br>" + adEvents.innerHTML;
         console.log("errorhandler hit. \n");
-    });
-    ```
+  });
+  ```
 
-5.  Compila y ejecuta el archivo.
+5.  Compila y ejecuta el archivo. Verás el anuncio original desde la aplicación de muestra que compilaste anteriormente y el texto que describe el error bajo el anuncio. No verás el anuncio con el identificador de **liveAd**.
 
-Verás el anuncio original desde la aplicación de muestra que compilaste anteriormente y el texto que describe el error bajo el anuncio. No verás el anuncio con el identificador de **liveAd**.
-
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Muestras de publicidad en GitHub](http://aka.ms/githubads)
 
@@ -87,6 +83,6 @@ Verás el anuncio original desde la aplicación de muestra que compilaste anteri
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

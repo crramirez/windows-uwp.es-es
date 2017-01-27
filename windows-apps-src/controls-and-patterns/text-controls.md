@@ -6,11 +6,11 @@ ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 201244521f8110181e268af47d52c1ac1315e9d3
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 04f8e82f05c46d41657dae0b30e04f49341bb5db
 
 ---
-# Controles de texto
+# <a name="text-controls"></a>Controles de texto
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,29 +19,23 @@ Los controles de texto constan de cuadros de entrada de texto, cuadros de contra
 - Los controles para mostrar texto de solo lectura son [TextBlock](text-block.md) y [RichTextBlock](rich-text-block.md).
 - Los controles de edición y entrada de texto son: [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) y [RichEditBox](rich-edit-box.md).
 
-
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx"><strong>Clase AutoSuggestBox</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx"><strong>Clase PasswordBox</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx"><strong>Clase RichEditBox</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx"><strong>Clase RichTextBlock</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx"><strong>Clase TextBlock</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx"><strong>Clase TextBox</strong></a></li>
+<li>[**Clase AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)</li>
+<li>[**Clase PasswordBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)</li>
+<li>[**Clase RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)</li>
+<li>[**Clase RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)</li>
+<li> [**Clase TextBlock**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)</li>
+<li>[**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 El control de texto que uses dependerá del escenario. Usa esta información para seleccionar el control de texto adecuado para usarlo en tu aplicación.
 
-### Presentar texto de solo lectura
+### <a name="render-read-only-text"></a>Presentar texto de solo lectura
 
 Usa un **TextBlock** para mostrar la mayor parte del texto de solo lectura en la aplicación. Puedes usarlo para mostrar texto de una o varias líneas, hipervínculos en línea y texto con formato como, por ejemplo, negrita, cursiva o subrayado.
 
@@ -53,7 +47,7 @@ Usa un **RichTextBlock** si necesitas admitir varios párrafos, texto de varias 
 
 La propiedad de contenido de RichTextBlock es la propiedad [Blocks](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.blocks.aspx), que admite el texto basado en párrafos a través del elemento [Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx). No tiene una propiedad **Text** que puedas usar para obtener acceso con facilidad a contenido de texto del control en la aplicación.  
 
-### Entrada de texto
+### <a name="text-input"></a>Entrada de texto
 
 Usa un control **TextBox** para permitir al usuario escribir y editar texto sin formato, como en un formulario. Puedes usar la propiedad [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) para obtener el texto y establecerlo en un TextBox.
 
@@ -80,7 +74,7 @@ Hay muchas maneras de obtener la entrada del usuario en la aplicación. Estas pr
     -   **¿Sería bueno que el usuario recibiera una respuesta instantánea del efecto de los cambios en la configuración?** De ser así, usa un [control deslizante](slider.md), posiblemente con un control adjunto.
     -   **¿Es probable que el valor introducido se ajuste tras observar el resultado (como, por ejemplo, el volumen o el brillo de pantalla)?** De ser así, usa un [control deslizante](slider.md).
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 Cuadro de texto
 
@@ -94,7 +88,7 @@ Cuadro de contraseña
 
 ![Cuadro de contraseña con el foco y texto escribiéndose](images/passwordbox-focus-typing.png)
 
-## Crear un control de texto
+## <a name="create-a-text-control"></a>Crear un control de texto
 
 Consulte los siguientes artículos para obtener información y ejemplos específicos de cada control de texto.
 
@@ -105,18 +99,18 @@ Consulte los siguientes artículos para obtener información y ejemplos específ
 -   [**TextBlock**](text-block.md)
 -   [**TextBox**](text-box.md)
 
-## Directrices de fuente y estilo
+## <a name="font-and-style-guidelines"></a>Directrices de fuente y estilo
 Consulta estos artículos para obtener directrices de fuentes:
 
 - [**Directrices de fuentes**](fonts.md)
 - [**Directrices y lista de iconos de Segoe MDL2**](segoe-ui-symbol-font.md)
 
 
-## Elegir el teclado adecuado para el control de texto
+## <a name="choose-the-right-keyboard-for-your-text-control"></a>Elegir el teclado adecuado para el control de texto
 
 **Se aplica a:** TextBox, PasswordBox RichEditBox
 
-Para que los usuarios escriban datos con facilidad mediante el teclado táctil o con el panel de entrada suave (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que el usuario escriba.
+Para ayudar a que los usuarios escriban datos con el teclado táctil o con el panel de entrada por software (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que escriba el usuario.
 
 >Sugerencia Esta información se aplica únicamente al SIP. No se aplica a teclados de hardware o al teclado en pantalla disponible en las opciones de accesibilidad de Windows.
 
@@ -129,7 +123,7 @@ Por ejemplo, si un cuadro de texto se usa únicamente para escribir un PIN de 4 
 
 Para obtener más información, consulta [Usar el ámbito de entrada para cambiar el teclado táctil](https://msdn.microsoft.com/library/windows/apps/mt280229).
 
-## Colores de fuentes
+## <a name="color-fonts"></a>Colores de fuentes
 
 **Se aplica a:** TextBlock, RichTextBlock, TextBox, RichEditBox
 
@@ -147,7 +141,7 @@ El texto representado tiene este aspecto:
 
 Para obtener más información, consulta la propiedad [**IsColorFontEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.iscolorfontenabled.aspx).
 
-## Directrices para los separadores de línea y de párrafo
+## <a name="guidelines-for-line-and-paragraph-separators"></a>Directrices para los separadores de línea y de párrafo
 
 **Se aplica a:** TextBlock, RichTextBlock, TextBox multilínea, RichEditBox
 
@@ -159,7 +153,7 @@ Tu aplicación puede usar el separador de línea para indicar un final de línea
 
 La aplicación puede insertar un separador de párrafo entre párrafos de texto. El uso de este separador permite la creación de archivos de texto sin formato que se pueden formatear con anchos de línea diferentes en diferentes sistemas operativos. El sistema de destino puede hacer caso omiso de los separadores de línea y realizar saltos entre párrafos solo en los separadores de párrafo.
 
-## Directrices sobre revisión ortográfica
+## <a name="guidelines-for-spell-checking"></a>Directrices sobre revisión ortográfica
 
 **Se aplica a:** TextBox, RichEditBox
 
@@ -185,12 +179,12 @@ Usa la revisión ortográfica con controles de entrada de texto para estos dos p
 
 Para los controles TextBox y RichEditBox, la revisión ortográfica está activada de manera predeterminada. Para desactivarla, establece la propiedad **IsSpellCheckEnabled** en **false**.
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 **Para diseñadores**
 - [**Directrices de fuentes**](fonts.md)
 - [**Directrices y lista de iconos de Segoe MDL2**](segoe-ui-symbol-font.md)
-- [Adición de búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
+- [Agregar búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
 
 **Para desarrolladores (XAML)**
 - [**Clase TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)
@@ -199,6 +193,6 @@ Para los controles TextBox y RichEditBox, la revisión ortográfica está activa
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

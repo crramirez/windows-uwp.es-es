@@ -3,10 +3,15 @@ author: GrantMeStrength
 ms.assetid: 4288E511-581C-49DC-A2F2-1CB832C4A676
 title: "A continuación"
 description: "Ahora que ya creaste tu primera aplicación, visita el resto del Centro de desarrollo. Esta es una introducción a las diferentes secciones que contiene."
-keywords: "Centro de desarrollo, introducción"
+keywords: "Centro de desarrollo, visita al Centro de desarrollo, Introducción"
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
-ms.openlocfilehash: 087c298f59798010628aefc428eedf9933bb2686
+ms.sourcegitcommit: 7a6f0be15105bc70e580eaaf581152338c56bed7
+ms.openlocfilehash: 7b1d2c1dc83bf0b6d24c1de134102f14542c907d
 
 ---
 
@@ -14,7 +19,7 @@ ms.openlocfilehash: 087c298f59798010628aefc428eedf9933bb2686
 
 # <a name="whats-next"></a>A continuación
 
-Quieres escribir una aplicación y publicarla en la tienda Windows: ¿por dónde empezar? Si eres principiante en la plataforma UWP, prueba con algunos de los vídeos de <a href="https://channel9.msdn.com/">Channel 9</a> y con los cursos de <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a>. Si ya estás familiarizado con XAML y C#, puedes empezar leyendo los temas siguientes o ir directamente a [algunos ejemplos de descarga](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
+Quieres escribir una aplicación y publicarla en la Tienda Windows: ¿por dónde empezar? Si eres principiante en la plataforma UWP, prueba con algunos de los vídeos de <a href="https://channel9.msdn.com/">Channel 9</a> y con los cursos de <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a>. Si ya estás familiarizado con XAML y C#, puedes empezar leyendo los temas siguientes o ir directamente a [algunos ejemplos de descarga](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
 
 Existen muchos marcos y herramientas disponibles para ayudarte a escribir aplicaciones, y muchos son compatibles con el desarrollo multiplataforma. Por ejemplo, si quieres escribir juegos en 2D, es posible que te interese mirar <a href="http://www.monogame.net">Monogame</a>. En el caso de los juegos 3D, existe <a href="http://www.unity3d.com">Unity</a>, y no olvides <a href="http://www.xamarin.com">Xamarin</a> si lo que te interesan son los dispositivos móviles.
 
@@ -168,6 +173,6 @@ Esta es una lista de las secciones clave del contenido del Centro de desarrollo.
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -4,15 +4,21 @@ Description: "Incorpora la voz en las aplicaciones con síntesis de voz, reconoc
 title: Interacciones de Surface Dial
 label: Surface Dial interactions
 template: detail.hbs
+keywords: "Surface Dial,rueda de Windows,RadialController,controlador radial,selector radial,interacción del usuario,entrada"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
-ms.openlocfilehash: 08ac5d58f2650306b162e4dec7f4e606543ca80f
+ms.sourcegitcommit: eb86863d6ce2e545b3e534ef6cafb220904e3dc8
+ms.openlocfilehash: 96b9a2e213c36b8f92664185e9cdcaea6d457368
 
 ---
 
 # <a name="surface-dial-interactions"></a>Interacciones de Surface Dial
 
-![Imagen de Surface Dial con Studio Surface](images/windows-wheel/dial-pen-studio-600px.png)  
+![Imagen de Surface Dial con Surface Studio](images/windows-wheel/dial-pen-studio-600px.png)  
 *Surface Dial con Surface Studio y Lápiz para Surface* (disponible para su compra en [Microsoft Store](https://aka.ms/purchasesurfacedial)).
 
 ## <a name="overview"></a>Introducción
@@ -24,7 +30,7 @@ Los dispositivos de rueda de Windows, como Surface Dial, son una nueva categorí
 
 | Vídeos |   |
 | --- | --- |
-| <iframe width="300" height="200" src="https://www.youtube.com/embed/WMklcdzcNcU" frameborder="0" allowfullscreen></iframe> | <iframe width="300" height="200" src="https://www.youtube.com/embed/2tajuOfs9p0" frameborder="0" allowfullscreen></iframe> |
+| <iframe width="300" height="200" src="https://www.youtube.com/embed/WMklcdzcNcU" frameborder="0" allowfullscreen></iframe> | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
 | *Asociados de aplicaciones de Surface Dial* | *Surface Dial para desarrolladores* |
 
 Con un factor de forma que se basa en una acción (o gesto) de *giro*, Surface Dial se ha diseñado como un dispositivo de entrada secundario multimodal que complementa la entrada de un dispositivo principal. En la mayoría de los casos, el dispositivo se manipula con la mano no dominante del usuario mientras realiza una tarea con la mano dominante (por ejemplo, una entrada manuscrita con un lápiz). No está diseñado como una entrada de puntero de precisión (por ejemplo, entrada táctil, lápiz o mouse). 
@@ -662,6 +668,6 @@ Envía tu preguntas, sugerencias y comentarios a [radialcontroller@microsoft.com
 [Muestra de escritorio clásico de Windows](https://aka.ms/radialcontrollerclassicsample)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

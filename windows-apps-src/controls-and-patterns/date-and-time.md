@@ -6,11 +6,11 @@ ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
 label: Calendar, date, and time controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 417f1294b1d8e5034fd7c8b346461fbe334f4b03
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: bb881fb0120401047c77a2d1e64a1e1555a9ced0
 
 ---
-# Calendario, controles de fecha y hora
+# <a name="calendar-date-and-time-controls"></a>Calendario, controles de fecha y hora
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,21 +19,15 @@ Los controles de fecha y hora ofrecen maneras estándar y localizadas para que e
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx"><strong>Clase CalendarView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx"><strong>Clase CalendarDatePicker</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx"><strong>Clase DatePicker</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx"><strong>Clase TimePicker</strong></a></li>
+<li>[**Clase CalendarView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx)</li>
+<li>[**Clase CalendarDatePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx)</li>
+<li>[**Clase DatePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx)</li>
+<li>[**Clase TimePicker**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## ¿Qué control fecha u hora debería usar?
+## <a name="which-date-or-time-control-should-you-use"></a>¿Qué control fecha u hora debería usar?
 
 Hay cuatro controles de fecha y hora para elegir; el control que uses dependerá de la situación. Usa esta información para seleccionar el control adecuado para tu aplicación.
 
@@ -46,7 +40,7 @@ Selector de hora         |![Ejemplo de selector de hora](images/time-picker-clos
 
 <!-- This table seems redundant, not sure it's needed.-->
 
-### Vista de calendario
+### <a name="calendar-view"></a>Vista de calendario
 
 **CalendarView** permite al usuario ver e interactuar con un calendario por el que se puede navegar por mes, año o década. Un usuario puede seleccionar una fecha determinada o un intervalo de fechas. No tiene una superficie de selector y el calendario está siempre visible.
 
@@ -57,7 +51,7 @@ La vista del calendario se compone de 3 vistas separadas: la vista de mes, la vi
 - Si es necesario que un usuario pueda seleccionar varias fechas, debes usar una **CalendarView**.
 - Si es necesario permitir que un usuario elija solo una fecha determinada y no necesita que haya un calendario siempre visible, considera usar un control **CalendarDatePicker** o **DatePicker**.
 
-### Selector de fecha del calendario
+### <a name="calendar-date-picker"></a>Selector de fecha del calendario
 
 **CalendarDatePicker** es un control desplegable que está optimizado para seleccionar una fecha determinada de una vista de calendario en la que la información contextual es importante, por ejemplo, el día de la semana o lo que se ha completado del calendario. Puedes modificar el calendario para que proporcione contexto adicional o limite las fechas disponibles.
 
@@ -67,7 +61,7 @@ El punto de entrada muestra texto del marcador de posición si no se ha establec
 
 - Usa un selector de fecha del calendario para cosas como la elección de una cita o la fecha de salida. 
 
-### Selector de fecha
+### <a name="date-picker"></a>Selector de fecha
 
 El control **DatePicker** ofrece una forma estandarizada de elegir una fecha específica. 
 
@@ -77,7 +71,7 @@ El punto de entrada muestra la fecha elegida y, cuando el usuario lo selecciona,
 
 - Usa un selector de fecha para permitir que el usuario seleccione una fecha conocida, como una fecha de nacimiento, donde el contexto del calendario no es importante.
 
-### Selector de hora
+### <a name="time-picker"></a>Selector de hora
 
 El **TimePicker** se usa para seleccionar un único valor para cosas como citas o una hora de salida. Es una visualización estática que establece el usuario o se establece en el código, pero no se actualiza para mostrar la hora actual. 
 
@@ -87,7 +81,7 @@ El punto de entrada muestra la hora elegida y, cuando el usuario lo selecciona, 
 
 - Usa un selector de hora para permitir que el usuario seleccione un único valor de hora.
 
-## Crea un control de fecha u hora
+## <a name="create-a-date-or-time-control"></a>Crea un control de fecha u hora
 
 Consulte los siguientes artículos para obtener información y ejemplos específicos de cada control de fecha y hora.
 
@@ -96,14 +90,14 @@ Consulte los siguientes artículos para obtener información y ejemplos específ
 - [**Selector de fecha**](date-picker.md)
 - [**Selector de hora**](time-picker.md)
 
-### Globalización
+### <a name="globalization"></a>Globalización
 
 Los controles de fecha XAML admiten todos los sistemas de calendario compatibles con Windows. Estos calendarios se especifican en la clase [**Windows.Globalization.CalendarIdentifiers**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendaridentifiers.aspx). Cada control usa el calendario correcto para el idioma predeterminado de tu aplicación o puedes establecer la propiedad **CalendarIdentifier** para usar un sistema de calendario específico.
 
 El control de selector de hora admite cada uno de los sistemas de reloj especificados en la clase [**Windows.Globalization.ClockIdentifiers**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.clockidentifiers.aspx). Puedes establecer la propiedad [**ClockIdentifier**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.clockidentifier.aspx) para usar un reloj de 12 horas o un reloj de 24 horas. El tipo de la propiedad es String, pero debes usar valores que correspondan a las propiedades de cadena estática de la clase ClockIdentifiers. Estos son: TwelveHour (la cadena "12HourClock") y TwentyFourHour (la cadena "24HourClock"). El valor predeterminado es "12HourClock".
 
 
-### Valores de DateTime y Calendar
+### <a name="datetime-and-calendar-values"></a>Valores de DateTime y Calendar
 
 Los objetos de fecha usados en los controles de fecha y hora XAML tienen una representación diferente según el lenguaje de programación. 
 - C# y Visual Basic usan la estructura [**System.DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx) que es parte de .NET. 
@@ -115,8 +109,11 @@ Un concepto relacionado es la clase Calendar, que influye en la interpretación 
 
 > **Nota**&nbsp;&nbsp;No se pueden establecer propiedades que toman objetos de fecha como una cadena de atributos XAML, porque el analizador de XAML de Windows Runtime no tiene una lógica de conversión para convertir cadenas en fechas como objetos DateTime o DateTimeOffset. En general, estableces estos valores en el código. Otra técnica posible es definir una fecha que está disponible como un objeto de datos o en el contexto de datos, luego establece la propiedad como un atributo XAML que haga referencia a una expresión [\Extensión de marcado {Binding}](../xaml-platform/binding-markup-extension.md) que pueda obtener acceso a la fecha como datos.
 
+## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+* [Muestra de conceptos básicos de una interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
-## Temas relacionados
+
+## <a name="related-topics"></a>Temas relacionados
 
 **Para desarrolladores (XAML)**
 - [**Clase CalendarView**](https://msdn.microsoft.com/library/windows/apps/dn890052)
@@ -126,6 +123,6 @@ Un concepto relacionado es la clase Calendar, que influye en la interpretación 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

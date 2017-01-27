@@ -6,11 +6,11 @@ ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: f26b042bb7efb6599993b8fd7cee6ee35e1765fd
-ms.openlocfilehash: 0e9cd8db21577bdbfe4c53fc9a17fbcbf5c81f76
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 95ddb1ddd1dfd318a5c491504c95f7833f98115e
 
 ---
-# Botones de radio
+# <a name="radio-buttons"></a>Botones de radio
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -23,20 +23,14 @@ Los botones de radio permiten a los usuarios seleccionar una opción entre dos o
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br227544"><strong>Clase RadioButton</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx"><strong>Evento Checked</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx"><strong>Propiedad IsChecked</strong></a></li>
+<li>[**Clase RadioButton**](https://msdn.microsoft.com/library/windows/apps/br227544)</li>
+<li>[**Evento Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)</li>
+<li>[**Propiedad IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa botones de radio para presentar a los usuarios dos o más opciones mutuamente exclusivas, como aquí.
 
@@ -60,12 +54,12 @@ Si hay más de ocho opciones, usa una [lista desplegable](lists.md), un [cuadro 
 
 Si las opciones disponibles se basan en el contexto actual de la aplicación o pueden variar de forma dinámica, usa en su lugar un [cuadro de lista](lists.md) de selección única.
 
-## Ejemplo
+## <a name="example"></a>Ejemplo
 Botones de radio en la configuración del navegador Microsoft Edge.
 
 ![Botones de radio en la configuración del navegador Microsoft Edge](images/control-examples/radio-buttons-edge.png)
 
-## Crear un botón de radio
+## <a name="create-a-radio-button"></a>Crear un botón de radio
 
 Los botones de radio funcionan en grupos. Hay dos formas de agrupar los controles de botón de radio:
 - Colocarlos dentro del mismo contenedor principal.
@@ -155,13 +149,13 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 }
 ```
 
-Los grupos de botones de radio tienen el siguiente aspecto después de que el usuario haya seleccionado un fondo azul y un borde verde.
+Los grupos de botones de radio tienen este aspecto.
 
 ![Botones de radio en dos grupos](images/radio-button-groups.png)
 
 Un botón de radio tiene dos estados: *seleccionado* o *borrado*. Cuando se selecciona un botón de radio, su propiedad [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) es **true**. Cuando un botón de radio está desactivado, su propiedad **IsChecked** es **false**. Un botón de radio se puede desactivar haciendo clic en otro botón de radio del mismo grupo, pero no se puede borrar haciendo clic de nuevo en él. Sin embargo, puedes borrar un botón de radio mediante programación estableciendo su propiedad IsChecked en **false**.
 
-## Recomendaciones
+## <a name="recommendations"></a>Recomendaciones
 
 -   Asegúrate de que esté claro tanto el objetivo como el estado actual de un conjunto de botones de radio.
 -   Proporciona siempre información visual al usuario cuando este pulse un botón de radio.
@@ -176,12 +170,12 @@ Un botón de radio tiene dos estados: *seleccionado* o *borrado*. Cuando se sele
 -   No coloques más de ocho opciones en un grupo de botones de radio. Si necesitas ofrecer más opciones, usa en su lugar una [lista desplegable](lists.md), un [cuadro de lista](lists.md)o una [vista de lista](lists.md).
 -   No coloques juntos dos grupos de botones de radio. Cuando se colocan dos grupos de botones de radio juntos, es difícil determinar qué botones pertenecen a uno u otro grupo. Usa etiquetas de grupo para separar los grupos.
 
-## Instrucciones de uso adicionales
+## <a name="additional-usage-guidance"></a>Instrucciones de uso adicionales
 
 En esta ilustración, se muestra el modo correcto de colocar y espaciar botones de radio.
 
 ![Un grupo de botones de radio.](images/radiobutton_layout1.png)
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 **Para diseñadores**
 - [Directrices sobre botones](buttons.md)
@@ -198,6 +192,6 @@ En esta ilustración, se muestra el modo correcto de colocar y espaciar botones 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

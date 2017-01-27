@@ -1,31 +1,37 @@
 ---
 author: Jwmsft
-Description: "Aprende a navegar en una aplicación básica para Plataforma universal de Windows (UWP) entre dos páginas."
-title: "Navegar entre dos páginas"
+Description: "Obtén información sobre cómo navegar en una aplicación básica para la Plataforma universal de Windows (UWP) de punto a punto entre dos páginas."
+title: "Navegación de punto a punto entre dos páginas"
 ms.assetid: 0A364C8B-715F-4407-9426-92267E8FB525
-label: Navigate between two pages
+label: Peer-to-peer navigation between two pages
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: 0cf689ae9d74735f33baa85b3a8791a68a4467d4
-ms.openlocfilehash: d5ff0dfcb10c6977bb93f28cbf8631b9b5dfb83f
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 324bdcd8ae61826a2be765f6a6a93441036d6984
 
 ---
 
-# Navegar entre dos páginas
+# <a name="peer-to-peer-navigation-between-two-pages"></a>Navegación de punto a punto entre dos páginas
 
-Aprende a navegar en una aplicación básica para Plataforma universal de Windows (UWP) entre dos páginas.
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-![ejemplo de navegación entre dos páginas](images/nav-peertopeer-2page.png)
+Obtén información sobre cómo navegar en una aplicación básica para la Plataforma universal de Windows (UWP) de punto a punto entre dos páginas.
+
+![ejemplo de navegación de punto a punto entre dos páginas](images/nav-peertopeer-2page.png)
+
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Windows.UI.Xaml.Controls.Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)</li>
+<li>[**Windows.UI.Xaml.Controls.Page**](https://msdn.microsoft.com/library/windows/apps/br227503)</li>
+<li>[**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300)</li>
+</ul>
+</div>
 
 
-**API importantes**
 
--   [**Windows.UI.Xaml.Controls.Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)
--   [**Windows.UI.Xaml.Controls.Page**](https://msdn.microsoft.com/library/windows/apps/br227503)
--   [**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300)
-
-
-## Crear una aplicación vacía
+## <a name="create-the-blank-app"></a>Crear una aplicación vacía
 
 
 1.  En el menú de Microsoft Visual Studio, elige **Archivo &gt; Nuevo proyecto**.
@@ -41,7 +47,7 @@ Aprende a navegar en una aplicación básica para Plataforma universal de Window
 
 6.  Presiona Mayus + F5 para detener la depuración y volver a Visual Studio.
 
-## Agregar páginas básicas
+## <a name="add-basic-pages"></a>Agregar páginas básicas
 
 A continuación, agrega dos páginas de contenido al proyecto.
 
@@ -55,10 +61,6 @@ Realiza los siguientes pasos dos veces para agregar dos páginas y navegar entre
 Estos archivos deben aparecer ahora como parte del proyecto NavApp1.
 
 <table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">C#</th>
@@ -67,26 +69,21 @@ Estos archivos deben aparecer ahora como parte del proyecto NavApp1.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><ul>
+<td style="vertical-align:top;"><ul>
 <li>Page1.xaml</li>
 <li>Page1.xaml.cs</li>
 <li>Page2.xaml</li>
 <li>Page2.xaml.cs</li>
 </ul></td>
-<td align="left"><ul>
+<td style="vertical-align:top;"><ul>
 <li>Page1.xaml</li>
 <li>Page1.xaml.cpp</li>
 <li>Page1.xaml.h</li>
 <li>Page2.xaml</li>
 <li>Page2.xaml.cpp</li>
 <li>Page2.xaml.h
-<div class="alert">
-<strong>Nota</strong>  
-<p>Las funciones se declaran en el archivo de encabezado (.h) y se implementan en el archivo de código subyacente (.cpp).</p>
-</div>
-<div>
- 
-</div></li>
+
+</li>
 </ul></td>
 </tr>
 </tbody>
@@ -104,7 +101,7 @@ Agrega el siguiente contenido a la interfaz de usuario de Page1.xaml.
 
 -   Agrega el siguiente elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la raíz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) y después el elemento `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
 
-
+    
 ```xaml
 <HyperlinkButton Content="Click to go to page 2"
                  Click="HyperlinkButton_Click"
@@ -138,15 +135,15 @@ Realiza los siguientes cambios a la interfaz de usuario de Page2.xaml.
 -   Agrega el siguiente elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) como elemento secundario de la raíz [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) y después el elemento `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652).
 
 ```xaml
-<HyperlinkButton Content="Click to go to page 1"
+<HyperlinkButton Content="Click to go to page 1" 
                  Click="HyperlinkButton_Click"
                  HorizontalAlignment="Center"/>
 ```
 
 Agrega el siguiente código a la clase `Page2` del archivo de código subyacente Page2.xaml para controlar el evento `Click` del objeto [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) que agregaste anteriormente. Desde aquí, navegaremos a Page1.xaml.
 
-**Nota**  
-En cuanto a los proyectos de C++, debes agregar una directiva `#include` en el archivo de encabezado de cada página que haga referencia a otra página. Para el ejemplo de navegación entre páginas que se presenta aquí, el archivo page1.xaml.h contiene `#include "Page2.xaml.h"` y, a su vez, el archivo page2.xaml.h contiene `#include "Page1.xaml.h"`.
+> [!NOTE]
+> En cuanto a los proyectos de C++, debes agregar una directiva `#include` en el archivo de encabezado de cada página que haga referencia a otra página. Para el ejemplo de navegación entre páginas que se presenta aquí, el archivo page1.xaml.h contiene `#include "Page2.xaml.h"` y, a su vez, el archivo page2.xaml.h contiene `#include "Page1.xaml.h"`.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -173,25 +170,25 @@ En este apartado, especificaremos `Page1` en la llamada a [**Frame.Navigate**](h
 > protected override void OnLaunched(LaunchActivatedEventArgs e)
 > {
 >     Frame rootFrame = Window.Current.Content as Frame;
->
+> 
 >     // Do not repeat app initialization when the Window already has content,
 >     // just ensure that the window is active
 >     if (rootFrame == null)
 >     {
 >         // Create a Frame to act as the navigation context and navigate to the first page
 >         rootFrame = new Frame();
->
+> 
 >         rootFrame.NavigationFailed += OnNavigationFailed;
->
+> 
 >         if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
 >         {
 >             //TODO: Load state from previously suspended application
 >         }
->
+> 
 >         // Place the frame in the current Window
 >         Window.Current.Content = rootFrame;
 >     }
->
+> 
 >     if (rootFrame.Content == null)
 >     {
 >         // When the navigation stack isn&#39;t restored navigate to the first page,
@@ -207,7 +204,7 @@ En este apartado, especificaremos `Page1` en la llamada a [**Frame.Navigate**](h
 > void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ e)
 > {
 >     auto rootFrame = dynamic_cast<Frame^>(Window::Current->Content);
->
+> 
 >     // Do not repeat app initialization when the Window already has content,
 >     // just ensure that the window is active
 >     if (rootFrame == nullptr)
@@ -215,11 +212,11 @@ En este apartado, especificaremos `Page1` en la llamada a [**Frame.Navigate**](h
 >         // Create a Frame to act as the navigation context and associate it with
 >         // a SuspensionManager key
 >         rootFrame = ref new Frame();
->
->         rootFrame->NavigationFailed +=
+> 
+>         rootFrame->NavigationFailed += 
 >             ref new Windows::UI::Xaml::Navigation::NavigationFailedEventHandler(
 >                 this, &amp;App::OnNavigationFailed);
->
+> 
 >         if (e->PreviousExecutionState == ApplicationExecutionState::Terminated)
 >         {
 >             // TODO: Load state from previously suspended application
@@ -228,7 +225,7 @@ En este apartado, especificaremos `Page1` en la llamada a [**Frame.Navigate**](h
 >         // Place the frame in the current Window
 >         Window::Current->Content = rootFrame;
 >     }
->
+> 
 >     if (rootFrame->Content == nullptr)
 >     {
 >         // When the navigation stack isn&#39;t restored navigate to the first page,
@@ -236,7 +233,7 @@ En este apartado, especificaremos `Page1` en la llamada a [**Frame.Navigate**](h
 >         // parameter
 >         rootFrame->Navigate(Windows::UI::Xaml::Interop::TypeName(Page1::typeid), e->Arguments);
 >     }
->
+> 
 >     // Ensure the current window is active
 >     Window::Current->Activate();
 > }
@@ -246,11 +243,15 @@ En este apartado, especificaremos `Page1` en la llamada a [**Frame.Navigate**](h
 
 Ahora, compila y ejecuta la aplicación. Haz clic en el vínculo que dice "Haz clic para ir a la página 2". La segunda página que muestra "Página 2" en la parte superior, se debería cargar y mostrar en el marco.
 
-## Clases Frame y Page
+## <a name="frame-and-page-classes"></a>Clases Frame y Page
 
 Antes de agregar más funciones a la aplicación, veamos de qué manera las páginas que incluimos ofrecen compatibilidad de navegación para la aplicación.
 
-Primero, se crea una clase [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) (`rootFrame`) para la aplicación en el método `App.OnLaunched` del archivo de código subyacente App.xaml. La clase [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) admite diversos métodos de navegación, tales como [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694), [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568) y [**GoForward**](https://msdn.microsoft.com/library/windows/apps/br242693), y propiedades como, por ejemplo, [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543), [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547) y [**BackStackDepth**](https://msdn.microsoft.com/library/windows/apps/hh967995). El método [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) se usa para mostrar contenido en la clase **Frame**.
+Primero, se crea una clase [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) (`rootFrame`) para la aplicación en el método `App.OnLaunched` del archivo de código subyacente App.xaml. El método [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) se usa para mostrar contenido en la clase **Frame**.
+
+**Nota**  
+La clase [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) admite diversos métodos de navegación, tales como [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694), [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568) y [**GoForward**](https://msdn.microsoft.com/library/windows/apps/br242693), y propiedades como, por ejemplo, [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543), [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547) y [**BackStackDepth**](https://msdn.microsoft.com/library/windows/apps/hh967995).
+
  
 En nuestro ejemplo, `Page1` se pasa al método [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694). Este método establece el contenido de la ventana actual de la aplicación en la clase [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) y carga el contenido de la página especificada en **Frame** (que es Page1.xaml en nuestro ejemplo o MainPage.xaml de forma predeterminada).
 
@@ -258,7 +259,7 @@ En nuestro ejemplo, `Page1` se pasa al método [**Navigate**](https://msdn.micro
 
 Siempre que se cargue una página en el marco, esa página se agregará como una clase [**PageStackEntry**](https://msdn.microsoft.com/library/windows/apps/dn298572) a la propiedad [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543) o [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547) de [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504).
 
-## Pasar información entre páginas
+## <a name="pass-information-between-pages"></a>Pasar información entre páginas
 
 Nuestra aplicación ya navega entre dos páginas, pero aún no hace nada interesante. A menudo, cuando una aplicación tiene varias páginas, las páginas necesitan compartir información. Pasemos parte de la información de la primera página a la segunda.
 
@@ -270,13 +271,13 @@ Una vez hecho esto, agregamos una etiqueta [**TextBlock**](https://msdn.microsof
 <StackPanel>
     <TextBlock HorizontalAlignment="Center" Text="Enter your name"/>
     <TextBox HorizontalAlignment="Center" Width="200" Name="name"/>
-    <HyperlinkButton Content="Click to go to page 2"
+    <HyperlinkButton Content="Click to go to page 2" 
                      Click="HyperlinkButton_Click"
                      HorizontalAlignment="Center"/>
 </StackPanel>
 ```
 
-En el controlador de eventos `HyperlinkButton_Click` del archivo de código subyacente Page1.xaml, agrega un parámetro que haga referencia a la propiedad `Text` del elemento `name` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) y al método `Navigate`.
+En el controlador de eventos `HyperlinkButton_Click` del archivo de código subyacente Page1.xaml, code-behind file, agrega un parámetro que haga referencia a la propiedad `Text` del elemento `name` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) y al método `Navigate`.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -290,17 +291,6 @@ void Page1::HyperlinkButton_Click(Platform::Object^ sender, RoutedEventArgs^ e)
 {
     this->Frame->Navigate(Windows::UI::Xaml::Interop::TypeName(Page2::typeid), name->Text);
 }
-```
-
-En Page2.xaml, reemplaza la clase [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) que agregaste antes por [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
-
-Aquí, agregamos un elemento [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) que mostrará el texto proporcionado por la entrada desde el elemento [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) de Page1.
-
-```XAML
-<StackPanel>
-    <TextBlock HorizontalAlignment="Center" Name="greeting"/>
-    <HyperlinkButton HorizontalAlignment="Center" Content="Click to go to page 1" Click="HyperlinkButton_Click"/>
-</StackPanel>
 ```
 
 En el archivo de código subyacente Page2.xaml invalida el método `OnNavigatedTo` mediante las siguientes acciones:
@@ -337,17 +327,18 @@ void Page2::OnNavigatedTo(NavigationEventArgs^ e)
 
 Ejecuta la aplicación, escribe tu nombre en el cuadro de texto y haz clic en el vínculo que dice **Haz clic para ir a la página 2**. Cuando llamaste a `this.Frame.Navigate(typeof(Page2), tb1.Text)` en el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) del elemento [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739), la propiedad `name.Text` se pasó a `Page2` y se usa el valor de los datos del evento para el mensaje que se muestra en la página.
 
-## Almacenar una página en caché
+## <a name="cache-a-page"></a>Almacenar una página en caché
 
 El contenido y el estado de la página no se almacenan en caché de forma predeterminada, debes habilitar esta opción en cada página de la aplicación.
 
-En este ejemplo básico, no hay ningún botón Atrás (demostraremos la navegación hacia atrás en [Navegación con el botón Atrás](navigation-history-and-backwards-navigation.md)), pero si hiciste clic en un botón Atrás en `Page2`, el elemento [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) (y cualquier otro campo) en `Page1` se establecería en su estado predeterminado. Una manera de solucionar este problema es usar la propiedad [**NavigationCacheMode**](https://msdn.microsoft.com/library/windows/apps/br227506) para especificar que una página se agregue a la memoria caché de la página del marco.
+En nuestro ejemplo básico de punto a punto, no hay ningún botón Atrás (demostraremos la navegación hacia atrás en [Navegación con el botón Atrás](navigation-history-and-backwards-navigation.md)), pero si hiciste clic en un botón Atrás en `Page2`, el elemento [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) (y cualquier otro campo) en `Page1` se establecerá en su estado predeterminado. Una manera de solucionar este problema es usar la propiedad [**NavigationCacheMode**](https://msdn.microsoft.com/library/windows/apps/br227506) para especificar que una página se agregue a la memoria caché de la página del marco.
 
 En el constructor de `Page1`, establece [**NavigationCacheMode**](https://msdn.microsoft.com/library/windows/apps/br227506) en [**Enabled**](https://msdn.microsoft.com/library/windows/apps/br243284). Esta acción conservará todos los valores de estado y de contenido de la página hasta que se supere la memoria caché de la página del marco.
 
 Establece [**NavigationCacheMode**](https://msdn.microsoft.com/library/windows/apps/br227506) en [**Required**](https://msdn.microsoft.com/library/windows/apps/br243284) si quieres hacer caso omiso de los límites de tamaño de la memoria caché del marco. Sin embargo, ten en cuenta que los límites de tamaño de caché pueden ser esenciales según los límites de memoria de un dispositivo.
 
-**Nota**  La propiedad [**CacheSize**](https://msdn.microsoft.com/library/windows/apps/br242683) especifica el número de páginas del historial de navegación que se pueden almacenar en caché para el marco.
+> [!NOTE]
+> La propiedad [**CacheSize**](https://msdn.microsoft.com/library/windows/apps/br242683) especifica el número de páginas del historial de navegación que se pueden almacenar en caché para el marco.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -365,7 +356,7 @@ Page1::Page1()
 }
 ```
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 * [Conceptos básicos del diseño de navegación para las aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn958438)
 * [Directrices para pestañas y tablas dinámicas](https://msdn.microsoft.com/library/windows/apps/dn997788)
@@ -376,6 +367,10 @@ Page1::Page1()
 
 
 
-<!--HONumber=Sep16_HO2-->
+
+
+
+
+<!--HONumber=Dec16_HO2-->
 
 

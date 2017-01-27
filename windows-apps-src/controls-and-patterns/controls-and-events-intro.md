@@ -6,11 +6,11 @@ ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and patterns
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: c597b2e5a1da23247a2100aeae88beaf1bfdaa64
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 8a9a9009574b46ff3ae5b05569fb871a49e2f1ea
 
 ---
-# Introducción a los controles y patrones
+# <a name="intro-to-controls-and-patterns"></a>Introducción a los controles y patrones
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -26,7 +26,7 @@ En esta sección, se proporcionan instrucciones para cada uno de los controles X
 - Establece las propiedades para el control, como el ancho, el alto o el color de primer plano. 
 - Agrega código a los controladores de eventos del control para que realice una acción. 
 
-## Agregar controles
+## <a name="add-a-control"></a>Agregar controles
 Puedes agregar un control a una aplicación de varias formas:
  
 - Usa una herramienta de diseño como Blend para Visual Studio o el diseñador de lenguaje XAML de Microsoft Visual Studio. 
@@ -43,9 +43,9 @@ El Cuadro de herramientas de Visual Studio muestra muchos de los controles que p
 
 También puedes arrastrar el control desde el Cuadro de herramientas hasta el diseñador XAML.
 
-## Establecer el nombre de un control 
+## <a name="set-the-name-of-a-control"></a>Establecer el nombre de un control 
 
-Para trabajar con un control en el código, hay que establecer su atributo [x:Name](../xaml-platform/x-name-attribute.md) y hacer referencia a este por su nombre en el código. Puedes definir el nombre en la ventana Propiedades de VisualStudio o en XAML. Esta es la forma de establecer el nombre del control seleccionado actualmente usando el cuadro de texto Nombre de la parte superior de la ventana Propiedades. 
+Para trabajar con un control en el código, hay que establecer su atributo [x:Name](../xaml-platform/x-name-attribute.md) y hacer referencia a este por su nombre en el código. Puedes definir el nombre en la ventana Propiedades de Visual Studio o en XAML. Esta es la forma de establecer el nombre del control seleccionado actualmente usando el cuadro de texto Nombre de la parte superior de la ventana Propiedades. 
 
 Para definir el nombre de un control
 1. Selecciona el elemento que quieras denominar.
@@ -60,7 +60,7 @@ Esta es la forma de establecer el nombre de un control en el editor XAML agregan
 <Button x:Name="Button1" Content="Button"/>
 ```
 
-## Establecer las propiedades el control 
+## <a name="set-the-control-properties"></a>Establecer las propiedades el control 
 
 Usas las propiedades para especificar la apariencia, el contenido y otros atributos de los controles. Cuando agregas un control con una herramienta de diseño, es posible que Visual Studio establezca automáticamente algunas propiedades que controlan el tamaño, la posición y el contenido. Puedes cambiar algunas propiedades, como Width, Height o Margin, si seleccionas y manipulas el control en la ventana Diseño. Esta ilustración muestra algunas de las herramientas de cambio de tamaño disponibles en la vista Diseño. 
 
@@ -78,7 +78,7 @@ Puedes establecer las propiedades del control en la ventana Propiedades, en XAML
 
 ![Selector de colores en el diseñador de Visual Studio](images/add-controls-foreground-designer.png)
 
-Así se establece la propiedad Foreground en el editor XAML. Observa la ventana IntelliSense de VisualStudio que se abre para ayudarte con la sintaxis. 
+Así se establece la propiedad Foreground en el editor XAML. Observa la ventana IntelliSense de Visual Studio que se abre para ayudarte con la sintaxis. 
 
 ![IntelliSense en la parte 1 de XAML](images/add-controls-foreground-xaml.png)
 
@@ -98,7 +98,7 @@ Así se establece la propiedad Foreground en el código.
 Button1.Foreground = new SolidColorBrush(Windows.UI.Colors.Beige);
 ```
 
-## Crear un controlador de eventos 
+## <a name="create-an-event-handler"></a>Crear un controlador de eventos 
 
 Cada control tiene eventos que te permiten responder a acciones del usuario u otros cambios en la aplicación. Por ejemplo, un control Button contiene un evento Click que se genera cuando un usuario hace clic en Button. Creas un método, llamado controlador de eventos, para controlar el evento. Puedes asociar el evento de un control con un método del controlador de eventos en la ventana Propiedades, en XAML o en el código. Para más información acerca de los eventos, consulta el tema de [introducción a los eventos y eventos enrutados](../xaml-platform/events-and-routed-events-overview.md).
 
@@ -136,9 +136,7 @@ También puedes asociar un evento con su controlador de eventos en el código su
 Button1.Click += new RoutedEventHandler(Button_Click);
 ```
 
-
-
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 -   [Índice de controles por función](controls-by-function.md)
 -   [Espacio de nombre de Windows.UI.Xaml.Controls](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
@@ -148,6 +146,6 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

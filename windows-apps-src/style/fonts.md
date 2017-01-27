@@ -6,34 +6,28 @@ ms.assetid: 1B8B90AD-CDC4-4997-ACDE-871C1E94A929
 label: Fonts
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: b79a6f3ee32494f04fa472c0531c06aa0a60098b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 0b25dc91a5ec82a83ae24a41854e9eeab8990128
 
 ---
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Fuentes para aplicaciones para UWP
+# <a name="fonts-for-uwp-apps"></a>Fuentes para aplicaciones para UWP
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 En este artículo se enumeran las fuentes recomendadas para aplicaciones para UWP. Se garantiza que estas fuentes estarán disponibles en todas las ediciones de Windows 10 que admitan aplicaciones para UWP.
 
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209655"><strong>Propiedad FontFamily</strong></a></li>
+<li>[**Propiedad FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209655)</li>
 </ul>
-
 </div>
-</div>
-
-
 
 La [guía de tipografía para UWP](typography.md) recomienda que las aplicaciones usen la fuente Segoe UI, pero, aunque Segoe UI es una buena opción para la mayoría de las aplicaciones, no tienes que usarla para todo. Puedes usar otras fuentes para determinados escenarios, como la lectura o al mostrar texto en algunos idiomas distintos del inglés. 
-
-
-
  
-## Fuentes sin serifa
+## <a name="sans-serif-fonts"></a>Fuentes sin serifa
 
 Las fuentes sin serifa son una buena opción para encabezados y elementos de interfaz de usuario. 
 
@@ -94,7 +88,7 @@ Las fuentes sin serifa son una buena opción para encabezados y elementos de int
 </table>
 
 
-## Fuentes con serifa
+## <a name="serif-fonts"></a>Fuentes con serifa
 
 Las fuentes con serifa son útiles para presentar grandes cantidades de texto. 
 
@@ -133,7 +127,7 @@ Las fuentes con serifa son útiles para presentar grandes cantidades de texto.
 </tbody>
 </table>
 
-## Iconos y símbolos
+## <a name="symbols-and-icons"></a>Iconos y símbolos
 
 
 <table>
@@ -165,7 +159,7 @@ Las fuentes con serifa son útiles para presentar grandes cantidades de texto.
 
 
 
-## Fuentes para idiomas no latinos
+## <a name="fonts-for-non-latin-languages"></a>Fuentes para idiomas no latinos
 
 Muchas de estas fuentes también proporcionan caracteres latinos.
 
@@ -294,21 +288,17 @@ Muchas de estas fuentes también proporcionan caracteres latinos.
 </table>
 
 
-## Globalizar y localizar fuentes
+## <a name="globalizinglocalizing-fonts"></a>Globalizar y localizar fuentes
 Usa las [API de asignación de fuentes LanguageFont](https://msdn.microsoft.com/library/windows/apps/br206864) para acceder mediante programación al estilo, el espesor, el tamaño y la familia de fuentes recomendados para un idioma en particular. El objeto LanguageFont proporciona acceso a la información de fuente correcta para diversas categorías de contenido, como encabezados de interfaz de usuario, notificaciones, texto del cuerpo y fuentes de cuerpo de documento que los usuarios pueden editar. Para obtener más información, consulta [Ajustar el diseño y las fuentes, y admitir la escritura RTL](https://msdn.microsoft.com/windows/uwp/globalizing/adjust-layout-and-fonts--and-support-rtl).
 
-<!--
-## Triggering a font download
-If you use a font that's not listed in this article, your app might trigger an automatic download of the font data from a Microsoft service. This can have performance and other impacts that may be a concern, particularly for mobile devices. In particular, note that this might consume some of a user's mobile data plan or result in mobile data usage costs. UWP apps that will available on mobile devices should never use fonts for UI content other than fonts in this list.
--->
 
-## Obtener muestras
+## <a name="get-the-samples"></a>Obtener muestras
 
 * [Muestra de fuentes descargable](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlCloudFontIntegration)
 * [Muestra de conceptos básicos de interfaz de usuario](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 * [Espaciado entre líneas con la muestra de DirectWrite](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/DWriteLineSpacingModes) 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 * [Ajustar el diseño y las fuentes para admitir la globalización](https://msdn.microsoft.com/windows/uwp/globalizing/adjust-layout-and-fonts--and-support-rtl)
 * [Segoe MDL2](segoe-ui-symbol-font.md)
@@ -325,6 +315,6 @@ If you use a font that's not listed in this article, your app might trigger an a
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

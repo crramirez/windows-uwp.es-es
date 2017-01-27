@@ -4,15 +4,15 @@ Description: "En este artículo de describen los problemas conocidos de puente d
 Search.Product: eADQiWindows 10XVcnh
 title: Problemas conocidos de puente de escritorio
 translationtype: Human Translation
-ms.sourcegitcommit: 537c6a3d4559da4673b68c3ab5bdddb612760849
-ms.openlocfilehash: d02921247bd77d59bbb09037a4ced8d3967c33b2
+ms.sourcegitcommit: ec4c5f937e4fd133bfc4f7aa96d00cee03a13c26
+ms.openlocfilehash: d3ed0af32c9a44078d0f772d7fc130121f5d4970
 
 ---
-# Problemas conocidos de puente de escritorio
+# <a name="known-issues-with-the-desktop-bridge"></a>Problemas conocidos de puente de escritorio
 
 En este artículo de describen los problemas conocidos de puente de escritorio a UWP.
 
-## Pantalla azul con el código de error 0x139 (KERNEL_SECURITY_CHECK_FAILURE)
+## <a name="blue-screen-with-error-code-0x139-kernelsecuritycheckfailure"></a>Pantalla azul con el código de error 0x139 (KERNEL_SECURITY_CHECK_FAILURE)
 
 Después de instalar o iniciar determinadas aplicaciones desde la Tienda Windows, la máquina se reinicia inesperadamente con el error: **0x139 (KERNEL\_SECURITY\_CHECK\_FAILURE)**.
 
@@ -27,10 +27,10 @@ Si eres un desarrollador, quizá quieras impedir la instalación de tus aplicaci
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
 Para conocer más detalles sobre Windows Update, consulta: 
-* https://support.microsoft.com/3197954
+* https://support.microsoft.com/kb/3197954
 * https://support.microsoft.com/help/12387/windows-10-update-history
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

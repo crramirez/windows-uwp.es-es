@@ -6,11 +6,11 @@ ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: bcb23963bfe59006efff2df01bb5ea3d98525497
+ms.sourcegitcommit: 98b3a9739b1906b7abb529cea1e7d433118cbcdd
+ms.openlocfilehash: 6adb5c106ccbe7d5dccda405b301daf8ce4e69f4
 
 ---
-# Imágenes y pinceles de imagen
+# <a name="images-and-image-brushes"></a>Imágenes y pinceles de imagen
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,29 +19,23 @@ Para mostrar una imagen, puedes usar los objetos **Image** o **ImageBrush**. Un 
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx"><strong>Clase Image</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx"><strong>Propiedad Source</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx"><strong>Clase ImageBrush</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx"><strong>Propiedad ImageSource</strong></a></li>
+<li>[**Clase Image**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)</li>
+<li>[**Propiedad Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)</li>
+<li>[**Clase ImageBrush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx)</li>
+<li>[**Propiedad ImageSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## ¿Son estos los elementos adecuados?
+## <a name="are-these-the-right-elements"></a>¿Son estos los elementos adecuados?
 Usa un elemento **Image** para mostrar una imagen independiente en la aplicación.
 
-Usa un elemento **ImageBrush** para aplicar una imagen a otro objeto. Entre los usos de ImageBrush, se incluyen efectos decorativos para el texto o fondos en mosaico para los controles o los contenedores de diseño. Puede controlar la forma en que la imagen se ajusta, se alinea y se aplica en mosaico, lo que permite crear patrones y otros efectos. 
+Usa un elemento **ImageBrush** para aplicar una imagen a otro objeto. Entre los usos de ImageBrush, se incluyen efectos decorativos para el texto o fondos para los controles o los contenedores de diseño.
 
 
-## Crear una imagen
+## <a name="create-an-image"></a>Crear una imagen
 
-### Imagen
+### <a name="image"></a>Image
 En este ejemplo se muestra cómo crear una imagen con el objeto [**Image**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx).
 
 
@@ -55,7 +49,7 @@ Este es el objeto Image representado.
 
 En este ejemplo, la propiedad [**Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) especifica la ubicación de la imagen que quieres mostrar. Para establecer el Source, especifica una dirección URL absoluta (por ejemplo, http://contoso.com/miImagen.jpg) o una dirección URL relativa a la estructura del empaquetado de la aplicación. En nuestro ejemplo, el archivo de imagen "licorice.jpg" se ubica en la carpeta raíz del proyecto y se declara la configuración del proyecto que incluye el archivo de imagen como contenido.
 
-### ImageBrush
+### <a name="imagebrush"></a>ImageBrush
 
 Con el objeto [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx) puedes utilizar una imagen para pintar un área que admita un objeto [**Brush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx). Por ejemplo, puedes usar un objeto ImageBrush para el valor de la propiedad [**Fill**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx) de un elemento [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.ellipse.aspx) o la propiedad [**Background**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.background.aspx) de un elemento [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx).
 
@@ -73,7 +67,7 @@ Este es el elemento Ellipse que ha pintado ImageBrush.
 
 ![Un elemento Ellipse que ha pintado ImageBrush.](images/Image_ImageBrush_Ellipse.jpg)
 
-### Ajustar una imagen
+### <a name="stretch-an-image"></a>Ajustar una imagen
 
 Si no se establecen los valores [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx) o [**Height**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) de un elemento **Image**, se representa con las dimensiones que especifique la propiedad **Source**. Cuando se establecen los valores **Width** y **Height**, se crea un área rectangular contenedora donde se muestra la imagen. Es posible especificar la forma en que la imagen rellena esta área contenedora mediante el uso de la propiedad [**Stretch**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.stretch.aspx). La propiedad Stretch acepta estos valores, que define la enumeración [**Stretch**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.stretch.aspx):
 
@@ -84,7 +78,7 @@ Si no se establecen los valores [**Width**](https://msdn.microsoft.com/library/w
 
 ![Ejemplo de las configuraciones de Stretch.](images/Image_Stretch.jpg)
 
-### Recortar una imagen
+### <a name="crop-an-image"></a>Recortar una imagen
 
 Puedes usar la propiedad [**Clip**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.clip.aspx) para recortar un área de la imagen de salida. Para ello, establece la propiedad Clip en un valor [**Geometry**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.geometry.aspx). Actualmente, no se admiten los recortes no rectangulares.
 
@@ -102,7 +96,7 @@ Esta es la imagen recortada sobre un fondo negro.
 
 ![Un objeto Image recortado por RectangleGeometry.](images/Image_Cropped.jpg)
 
-### Aplicar una opacidad
+### <a name="apply-an-opacity"></a>Aplicar una opacidad
 
 Puedes aplicar una propiedad [**Opacity**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.opacity.aspx) a una imagen para que se represente semitranslúcida. Los valores de opacidad van de 0,0 a 1,0; donde 1,0 es totalmente opaco y 0,0 es totalmente transparente. En este ejemplo se muestra cómo aplicar una opacidad de 0,5 a un elemento Image.
 
@@ -114,7 +108,7 @@ Esta es la imagen representada con una opacidad de 0,5 y un fondo negro que se v
 
 ![Un objeto Image con una opacidad de 0,5.](images/Image_Opacity.jpg)
 
-### Formatos de archivos de imagen
+### <a name="image-file-formats"></a>Formatos de archivos de imagen
 
 **Image** e **ImageBrush** pueden mostrar los siguientes formatos de archivo de imagen:
 
@@ -134,35 +128,36 @@ A partir de Windows 10, versión 1607, el elemento **Image** admite imágenes GI
 
 Para obtener más información sobre los recursos de la aplicación y sobre cómo empaquetar orígenes de imagen en una aplicación, consulta [Definición de recursos de una aplicación](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321).
 
-### WriteableBitmap
+### <a name="writeablebitmap"></a>WriteableBitmap
 
 Un elemento [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.aspx) proporciona una clase [**BitmapSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.aspx) que se puede modificar y que no usa la descodificación basada en archivos básica de WIC. Puedes modificar imágenes de forma dinámica y volver a representar la imagen actualizada. Para definir el contenido del búfer de un elemento **WriteableBitmap**, usa la propiedad [**PixelBuffer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) para acceder al búfer y utiliza un tipo de búfer de secuencia o específico del lenguaje para rellenarlo. Para obtener código de ejemplo, consulta [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.aspx).
 
-### RenderTargetBitmap
+### <a name="rendertargetbitmap"></a>RenderTargetBitmap
 
 La clase [**RenderTargetBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.rendertargetbitmap.aspx) captura el árbol de la interfaz de usuario de XAML de una aplicación en funcionamiento y después muestra un origen de imagen de mapa de bits. Tras la captura, dicho origen de imagen se puede aplicar a otras partes de la aplicación, guardar como un recurso o dato de la aplicación o emplear en otros escenarios. Un escenario especialmente útil es crear una miniatura en tiempo de ejecución de una página XAML para un esquema de navegación, como al proporcionar un vínculo de imagen desde un control [**Hub**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.hub.aspx). **RenderTargetBitmap** presenta algunas limitaciones en cuanto al contenido que va a aparecer en la imagen capturada. Para más información, consulta el tema de referencia de API para [**RenderTargetBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.rendertargetbitmap.aspx).
 
-### Orígenes y escala de las imágenes
+### <a name="image-sources-and-scaling"></a>Orígenes y escala de las imágenes
 
 Deberías crear los orígenes de imágenes con varios tamaños recomendados para garantizar que la aplicación tenga una apariencia excelente cuando Windows cambie su escala. Cuando se especifica una propiedad **Source** para un elemento **Image**, puedes usar una convención de nomenclatura que haga referencia automáticamente al recurso correcto para la escala actual. Para ver información más específica sobre la convención de nomenclatura y otros temas, consulta [Inicio rápido: usar recursos de archivo o imagen](https://msdn.microsoft.com/library/windows/apps/xaml/hh965325).
 
 Para más información sobre cómo diseñar teniendo en cuenta la escala, consulta [Directrices sobre la experiencia del usuario para diseño y escalado](https://msdn.microsoft.com/library/windows/apps/dn611863).
 
-### Image e ImageBrush en código
+### <a name="image-and-imagebrush-in-code"></a>Image e ImageBrush en código
 
 Es habitual especificar elementos Image e ImageBrush con XAML en lugar de código. Esto es así porque estos elementos suelen ser el resultado de herramientas de diseño como parte de una definición de interfaz de usuario de XAML.
 
-Si defines un elemento Image o ImageBrush mediante código, usa los constructores predeterminados, establece la propiedad Source relevante ([**Image.Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) o [**ImageBrush.ImageSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)). Las propiedades Source requieren un elemento [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx) (no un URI) cuando se establecen con código. Si el origen es una secuencia, usa el método [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx) para inicializar el valor. Si el origen es un URI, que incluye contenido en la aplicación que usa los esquemas **ms-appx** o **ms-resource**, utiliza el constructor [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx) que toma un URI. También podrías considerar la posibilidad de controlar el evento [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx) si hay problemas de temporización con la recuperación o la descodificación del origen de la imagen, ya que puede que tengas que alternar contenido que se mostrará hasta que el origen de la imagen esté disponible. Para obtener código de ejemplo, consulta [Ejemplo de imágenes XAML](http://go.microsoft.com/fwlink/p/?linkid=238575).
+Si defines un elemento Image o ImageBrush mediante código, usa los constructores predeterminados, establece la propiedad Source relevante ([**Image.Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) o [**ImageBrush.ImageSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)). Las propiedades Source requieren un elemento [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx) (no un URI) cuando se establecen con código. Si el origen es una secuencia, usa el método [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx) para inicializar el valor. Si el origen es un URI, que incluye contenido en la aplicación que usa los esquemas **ms-appx** o **ms-resource**, utiliza el constructor [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx) que toma un URI. También podrías considerar la posibilidad de controlar el evento [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx) si hay problemas de temporización con la recuperación o la descodificación del origen de la imagen, ya que puede que necesites mostrar contenido alternativo hasta que el origen de la imagen esté disponible. Para obtener código de ejemplo, consulta [Muestra de imágenes XAML](http://go.microsoft.com/fwlink/p/?linkid=238575).
 
-> **Nota**&nbsp;&nbsp;Si estableces imágenes mediante código, puedes usar el control automático para acceder a recursos sin calificar con calificadores de referencia cultural y de escala actuales, o bien puedes usar [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) y [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) con calificadores de escala y referencia cultural para obtener los recursos directamente. Para obtener más información, consulta [Sistema de administración de recursos](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).
+> [!NOTE]
+> Si estableces imágenes mediante código, puedes usar el control automático para obtener acceso a recursos sin calificar con calificadores de referencia cultural y de escala actuales, o bien puedes usar [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) y [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) con calificadores de escala y referencia cultural para obtener los recursos directamente. Para obtener más información, consulta [Sistema de administración de recursos](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 -   [Audio, vídeo y cámara](https://msdn.microsoft.com/windows/uwp/audio-video-camera/index)
 -   [**Clase Image**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)
 -   [**Clase ImageBrush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

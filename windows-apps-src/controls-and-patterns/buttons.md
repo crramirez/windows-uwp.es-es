@@ -4,11 +4,11 @@ Description: "Un botón ofrece al usuario una forma de desencadenar una acción 
 label: Buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 845aa9935908aa68b64c856ee5e263490a3340c4
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: bb670533769d8bae9cdea0f18e9cbb5717eb3877
 
 ---
-# Botones
+# <a name="buttons"></a>Botones
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Un botón ofrece al usuario una forma de desencadenar una acción inmediata.
@@ -18,19 +18,16 @@ Un botón ofrece al usuario una forma de desencadenar una acción inmediata.
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx"><strong>Clase Button</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx"><strong>Clase RepeatButton</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx"><strong>Evento Click</strong></a></li>
+<li>[**Clase Button**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)</li>
+<li>[**Clase RepeatButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)</li>
+<li>[**Evento Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)</li>
+<li> </li>
+<li> </li>
+<li> </li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Un botón permite al usuario iniciar una acción inmediata, como enviar un formulario.
 
@@ -38,13 +35,13 @@ No uses un botón cuando la acción sea navegar a otra página. Para eso, es mej
     
 > Excepción: para la navegación por asistentes, usa los botones llamados "Atrás" y "Siguiente". Para otros tipos de exploración hacia atrás o a un nivel superior, usa un botón Atrás.
 
-## Ejemplo
+## <a name="example"></a>Ejemplo
 
 Este ejemplo usa dos botones, Cerrar todo y Cancelar, en un cuadro de diálogo en el navegador Microsoft Edge. 
 
 ![Ejemplo de botones que se usan en un cuadro de diálogo](images/control-examples/buttons-edge.png)
 
-## Crear un botón
+## <a name="create-a-button"></a>Crear un botón
 
 Este ejemplo muestra un botón que responde a un clic. 
 
@@ -78,7 +75,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-### Interacción del botón
+### <a name="button-interaction"></a>Interacción del botón
 
 Cuando se pulsa un botón con un dedo o lápiz o se presiona el botón izquierdo del mouse mientras el puntero está sobre él, botón genera el evento [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx). Si un botón tiene el foco del teclado, al presionar la tecla ENTRAR o la barra espaciadora también se genera el evento Click.
 
@@ -87,7 +84,7 @@ Por lo general, no se pueden manipular eventos [**PointerPressed**](https://msdn
 Puedes cambiar la forma en que un botón genera el evento Click cambiando la propiedad [**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx). El valor de ClickMode predeterminado es **Release**. Si ClickMode es **Hover**, no se genera el evento Click con el teclado o de forma táctil. 
 
 
-### Contenido de Button
+### <a name="button-content"></a>Contenido de Button
 
 Button es una clase [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.aspx). Su propiedad de contenido XAML es [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx), que habilita una sintaxis así para XAML: `<Button>A button's content</Button>`. Puedes establecer cualquier objeto como contenido del botón. Si el contenido es una clase [UIElement](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx), se representa en el botón. Si el contenido es otro tipo de objeto, su representación de cadena se muestra en el botón.
 
@@ -109,7 +106,7 @@ El botón tendrá el siguiente aspecto:
 
 ![Botón con contenido de texto e imagen](images/button-orange.png)
 
-## Crear un botón Repetir
+## <a name="create-a-repeat-button"></a>Crear un botón Repetir
 
 Un [**RepeatButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx) es un botón que genera eventos [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) repetidamente desde que se presiona hasta que se suelta. Establece la propiedad [**Delay**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.delay.aspx) para especificar el tiempo que RepeatButton espera después de presionarse antes de que empiece a repetir la acción de clic. Establece la propiedad [**Interval**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.interval.aspx) para especificar el tiempo entre las repeticiones de la acción de clic. Los tiempos de ambas propiedades se especifican en milisegundos.
 
@@ -141,10 +138,17 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Recomendaciones
+## <a name="recommendations"></a>Recomendaciones
 
 -   Asegúrate de que el objetivo y el estado del botón sean claros para el usuario.
 -   Usa un texto conciso, específico y descriptivo que explique claramente la acción que realiza el botón. Por lo general, el contenido del texto del botón es una única palabra, un verbo.
+-   Cuando hay varios botones para la misma decisión (como en un cuadro de diálogo de confirmación), presenta los botones de confirmación en el siguiente orden: 
+    -   Aceptar/[Hacerlo]/Sí
+    -   [No hacerlo]/No
+    -   Cancelar
+
+    (donde [Hacerlo] y [No hacerlo] son respuestas específicas a la instrucción principal).
+
 -   Si el contenido del texto del botón es dinámico, por ejemplo, está localizado, decide cómo cambiará de tamaño el botón y qué ocurrirá con los controles que lo rodean.
 -   En el caso de los botones de comando con contenido de texto, usa un ancho de botón mínimo.
 -   Evita los botones de comando con contenido de texto estrechos, cortos o altos.
@@ -160,15 +164,15 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 -   No intercambies los estilos predeterminados de enviar, restablecer y botón.
 -   No pongas demasiado contenido en un botón. Haz que el contenido sea conciso y fácil de entender (solo una imagen y algo de texto).
 
-## Botones Atrás
+## <a name="back-buttons"></a>Botones Atrás
 El botón Atrás es un elemento de la interfaz de usuario proporcionado por el sistema que permite la navegación hacia atrás a través de la pila de retroceso o el historial de navegación del usuario. No es necesario que crees tu propio botón Atrás, pero es posible que debas realizar algunas acciones para permitir que la experiencia de navegación hacia atrás resulte adecuada. Para obtener más información, consulta [Historial y navegación hacia atrás](../layout/navigation-history-and-backwards-navigation.md)
 
-## Obtener las muestras
+## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 *   [Muestra de conceptos básicos de una interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
-    Aquí podrás ver todos los controles XAML en un formato interactivo.
+    Consulta todos los controles XAML en un formato interactivo.
 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 - [Botones de radio](radio-button.md)
 - [Modificadores para alternar](toggles.md)
@@ -179,6 +183,6 @@ El botón Atrás es un elemento de la interfaz de usuario proporcionado por el s
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

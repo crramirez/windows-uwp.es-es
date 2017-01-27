@@ -4,8 +4,8 @@ Description: "En la Tienda Windows se ofrece la facturación de operador de tel
 title: "Facturación de operadores de telefonía móvil"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 translationtype: Human Translation
-ms.sourcegitcommit: e829808a8e521f2308454e05e8911579b22be807
-ms.openlocfilehash: fe11b56430a07e1326f78b59579ffd9e733ed1b0
+ms.sourcegitcommit: 694c3223278c8666bfb47bf9898ac7c02ac981f4
+ms.openlocfilehash: 831e3fbd1524ce452a4346b6c52f3f1c76385d68
 
 ---
 
@@ -27,6 +27,7 @@ Actualmente, los siguientes operadores de telefonía móvil admiten la implement
 | País o región  | Operadores de telefonía móvil |
 |-----------------|------------------|
 | Finlandia         | DNA, Elisa       |
+| Francia          | Orange           |
 | Alemania         | O2               |
 | Hungría         | Telenor          |
 | Italia           | Wind             |
@@ -77,7 +78,7 @@ Los siguientes operadores de telefonía móvil admiten la implementación hereda
 | Sudáfrica         | Vodacom                                                            |
 | España                | Movistar, Vodafone, Orange                                         |
 | Reino Unido       | Everything Everywhere (T-Mobile), Telefónica (O2), Three, Vodafone |
-| Estados Unidos        | AT&T, Sprint, T-Mobile, Verizon                                    |
+| Estados Unidos        | AT&T, T-Mobile, Verizon                                    |
 | Vietnam              | Viettel, Vietnamobile, Vinaphone, Mobifone                         |
 
  
@@ -94,6 +95,6 @@ Esta lista se actualizará periódicamente a medida que ampliemos nuestro soport
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

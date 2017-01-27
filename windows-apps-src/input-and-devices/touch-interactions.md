@@ -5,25 +5,33 @@ title: "Interacciones táctiles"
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
+keywords: "táctil, función táctil,puntero,entrada,interacción del usuario"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 526493614666424089199063013b5fc72d9bc5d8
-ms.openlocfilehash: db38bfecadb7568e602646222358e0a111c638bc
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: 26f80e2619ea7b80a49d54278507c83461fe2336
 
 ---
 
-# Interacciones táctiles
-
+# <a name="touch-interactions"></a>Interacciones táctiles
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Diseña tu aplicación teniendo en mente que el principal método de entrada de los usuarios será táctil. Si usas los controles de UWP, la compatibilidad con el mouse, el panel táctil y el lápiz o la pluma no requiere programación adicional, ya que las aplicaciones para UWP la ofrecen de forma gratuita.
 
 Pero ten presente que una interfaz de usuario optimizada para entrada táctil no es siempre mejor que una interfaz de usuario tradicional. Ambas ofrecen ventajas y desventajas exclusivas de la tecnología y la aplicación en cuestión. A la hora de diseñar una interfaz de usuario básicamente táctil, es importante entender las diferencias fundamentales entre entrada táctil (incluido el panel táctil), con pluma o lápiz, con mouse y con el teclado.
 
-**API importantes**
-
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
--   [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
-
+<div class="important-apis" >
+<b>API importantes</b><br/>
+<ul>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+<li>[**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+<li>[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)</li>
+</ul>
+</div>
 
 
 Muchos dispositivos tienen pantallas multitoque que admiten el uso de uno o más dedos (o contactos táctiles) como entrada. Los contactos táctiles y su movimiento, se interpretan como gestos táctiles y manipulaciones para admitir distintas interacciones del usuario.
@@ -52,7 +60,7 @@ Recuerda que los dispositivos de entrada tradicionales (como el mouse y el tecla
 
 Al proporcionar experiencias de interacción únicas y distintivas para todos los dispositivos de entrada, darás cabida a la más amplia variedad de capacidades y preferencias, llegarás hasta un público más amplio y tu aplicación atraerá a más clientes.
 
-## Compara los requisitos de la interacción táctil
+## <a name="compare-touch-interaction-requirements"></a>Compara los requisitos de la interacción táctil
 
 En la tabla siguiente, se muestran algunas de las diferencias entre los dispositivos de entrada que debes tener en cuenta al diseñar aplicaciones para UWP optimizadas para entrada táctil.
 
@@ -80,14 +88,14 @@ La entrada indirecta tiene la ventaja de más de 25 años de perfeccionamiento. 
 
  
 
-## Usar la información táctil
+## <a name="use-touch-feedback"></a>Usar la información táctil
 
 La información visual adecuada durante las interacciones con la aplicación ayuda al usuario a reconocer y aprender cómo interpreta la aplicación y Windows 8 sus interacciones, y a adaptarse a esa interpretación. La información visual puede indicar interacciones satisfactorias y el estado del sistema relé, mejorar la sensación de control, reducir errores, ayudar a los usuarios a entender el sistema y el dispositivo de entrada, y alentar la interacción.
 
 La información visual es esencial cuando el usuario usa la entrada táctil para llevar a cabo actividades que requieren exactitud y precisión en lo que respecta a ubicación. Muestra información siempre que se detecte entrada táctil para ayudar al usuario a entender cualquier regla personalizada de selección de destinos que defina la aplicación y los controles correspondientes.
 
 
-## Selección de destino
+## <a name="targeting"></a>Selección de destino
 
 La selección de destinos se optimiza mediante:
 
@@ -107,14 +115,14 @@ La selección de destinos se optimiza mediante:
 
     Los elementos que se encuentra muy cerca unos de otros (por ejemplo, hipervínculos) se pueden seleccionar de nuevo presionando el dedo e inclinándolo de un lado a otro sobre los elementos, sin deslizarlo. Debido a la oclusión, el elemento actual se identifica mediante la información sobre herramientas o la barra de estado y se activa al liberar el contacto táctil.
 
-## Precisión
+## <a name="accuracy"></a>Precisión
 
 Diseña teniendo en cuenta las interacciones descuidadas mediante:
 
 -   Puntos de acoplamiento que permitan detenerse en las ubicaciones deseadas con mayor facilidad cuando los usuarios interactúan con el contenido.
 -   "Guías" direccionales que ayuden con el movimiento panorámico vertical y horizontal, incluso cuando la mano se mueve ligeramente en arco. Si deseas obtener más información, consulta las [directrices para movimiento panorámico](guidelines-for-panning.md).
 
-## Oclusión
+## <a name="occlusion"></a>Oclusión
 
 La oclusión de dedos y manos se evita mediante:
 
@@ -134,7 +142,7 @@ La oclusión de dedos y manos se evita mediante:
 
     Cuando necesites una mayor precisión (por ejemplo, para la selección de texto), ofrece controladores de selección que se desplacen para mejorar la precisión. Para obtener más información, consulta las [directrices para seleccionar texto e imágenes (aplicaciones de Windows Runtime)](guidelines-for-textselection.md).
 
-## Intervalos
+## <a name="timing"></a>Intervalos
 
 Evita los cambios de modo cronometrado en favor de la manipulación directa. Esta simula el control físico, directo y en tiempo real de un objeto. El objeto responde a medida que se mueven los dedos.
 
@@ -160,7 +168,7 @@ Además, te recomendamos lo siguiente:
 -   Las descripciones y las indicaciones visuales adecuadas tienen un gran efecto sobre el uso de las interacciones avanzadas.
 
 
-## Vistas de aplicación
+## <a name="app-views"></a>Vistas de aplicación
 
 
 Retoca la experiencia de interacción del usuario mediante la configuración de zoom y movimiento panorámico/desplazamiento de las vistas de tu aplicación. Una vista de aplicación determina cómo un usuario accede a tu aplicación y su contenido, y los manipula. Las vistas también proporcionan comportamientos, tales como inercia, puntos de acoplamiento y "devolución" de límite de contenido.
@@ -173,7 +181,7 @@ Usa las vistas de aplicación y los eventos para modificar los comportamientos d
 
 Para más información sobre las vistas de aplicación, consulta [Controles, diseños y texto](https://msdn.microsoft.com/library/windows/apps/mt228348).
 
-## Interacciones táctiles personalizadas
+## <a name="custom-touch-interactions"></a>Interacciones táctiles personalizadas
 
 
 Si implementas tu propia compatibilidad con la interacción, ten presente que los usuarios esperan una experiencia intuitiva que implica la interacción directa con los elementos de la interfaz de usuario de tu aplicación. Te recomendamos que modeles tus interacciones personalizadas en las bibliotecas de control de plataforma para que todo sea coherente y reconocible. Los controles de estas bibliotecas proporcionan una experiencia de interacción de usuario completa, con interacciones estándar, efectos físicos animados, comentarios visuales y accesibilidad. Crea interacciones personalizadas solamente si existe un requisito claro y bien definido, y si no hay ninguna interacción básica que admita tu escenario.
@@ -210,12 +218,12 @@ Este es el conjunto básico de gestos táctiles que admite la UWP.
 For more info about gestures, manipulations, and interactions, see [Custom user interactions](custom-user-input-portal.md).
 -->
 
-## Eventos de gestos
+## <a name="gesture-events"></a>Eventos de gestos
 
 
 Para obtener detalles sobre los controles individuales, consulta [Lista de controles](https://msdn.microsoft.com/library/windows/apps/mt185406).
 
-## Eventos de puntero
+## <a name="pointer-events"></a>Eventos de puntero
 
 
 Los eventos de puntero los genera una gran variedad de orígenes de entrada activos, como por ejemplo, la entrada táctil, el panel táctil, el lápiz y el mouse (reemplazan los eventos tradicionales del mouse).
@@ -424,7 +432,7 @@ Private Sub touchRectangle_PointerPressed(sender As Object, e As PointerRoutedEv
 End Sub
 ```
 
-## Eventos de manipulación
+## <a name="manipulation-events"></a>Eventos de manipulación
 
 
 Usa eventos de manipulación si necesitas incluir en tu aplicación compatibilidad para interacciones con varios dedos o interacciones que requieren datos de velocidad.
@@ -600,12 +608,12 @@ Private Sub testRectangle_ManipulationDelta(
 End Sub
 ```
 
-## Eventos enrutados
+## <a name="routed-events"></a>Eventos enrutados
 
 
 Todos los eventos de puntero, los eventos de gestos y los eventos de manipulación mencionados aquí se implementan como *eventos enrutados*. Esto significa que el evento podría estar controlado por objetos distintos que el que generó el evento. Los elementos principales sucesivos de un árbol de objetos, como los contenedores principales de un objeto [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) o la raíz [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) de tu aplicación, pueden elegir controlar estos eventos aunque el elemento original no lo haga. Por el contrario, cualquier objeto que no controle el evento puede marcar el evento controlado para que nunca llegue a un elemento principal. Para obtener más información sobre el concepto de evento enrutado y cómo afecta a la forma de escribir controladores para eventos enrutados, consulta [Introducción a eventos y eventos enrutados](https://msdn.microsoft.com/library/windows/apps/hh758286).
 
-## Qué hacer y qué no hacer
+## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
 
 
 -   Diseña aplicaciones en las que la interacción táctil sea el principal método de entrada que se espera.
@@ -617,7 +625,7 @@ Todos los eventos de puntero, los eventos de gestos y los eventos de manipulaci�
 -   No uses la cantidad de dedos para distinguir la manipulación en la medida de lo posible.
 
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 * [Controlar la entrada de puntero](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
@@ -645,6 +653,6 @@ Todos los eventos de puntero, los eventos de gestos y los eventos de manipulaci�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -6,39 +6,34 @@ ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
 label: Calendar view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 4d67cf41bf44904e094476d6350ad68cc46ab52f
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 86062f744efa487cc70adb9648ff3f3584226000
 
 ---
-# Vista de calendario
+# <a name="calendar-view"></a>Vista de calendario
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Una vista de calendario permite al usuario ver e interactuar con un calendario por el que se puede navegar por mes, año o década. Un usuario puede seleccionar una fecha determinada o un intervalo de fechas. No tiene una superficie de selector y el calendario es siempre visible. 
 
+
 <div class="important-apis" >
 <b>API importantes</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx"><strong>Clase CalendarView</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx"><strong>Evento SelectedDatesChanged</strong></a></li>
+<li>[**Clase CalendarView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx)</li>
+<li>[**Evento SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## ¿Es este el control adecuado?
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 Usa una vista de calendario para permitir al usuario seleccionar una fecha determinada o un intervalo de fechas a partir de un calendario siempre visible.
 
 Si necesitas permitir al usuario seleccionar varias fechas al mismo tiempo, debes usar una vista de calendario. Si es necesario permitir que un usuario elija solo una fecha determinada y no necesita que haya un calendario siempre visible, considera usar un control [selector de fecha del calendario](calendar-date-picker.md) o [selector de fecha](date-picker.md).
 
 Para obtener más información sobre cómo elegir el control adecuado, consulta el artículo [Controles de fecha y hora](date-and-time.md).
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 La vista del calendario se compone de 3 vistas separadas: la vista de mes, la vista de año y la vista de década. De manera predeterminada, se inicia con la vista de mes abierta. Puedes especificar una vista de inicio estableciendo la propiedad [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.displaymode.aspx).
 
@@ -46,7 +41,7 @@ La vista del calendario se compone de 3 vistas separadas: la vista de mes, la vi
 
 Los usuarios hacen clic en el encabezado de la vista de mes para abrir la vista de año, y hacen clic en el encabezado de la vista de año para abrir la vista de década. Los usuarios seleccionan un año en la vista de década para volver a la vista de año y seleccionan un mes en la vista de año para volver a la vista de mes. Las dos flechas al lado del encabezado navegan hacia delante o hacia atrás por mes, año o década. 
 
-## Crear una vista de calendario
+## <a name="create-a-calendar-view"></a>Crear una vista de calendario
 
 En este ejemplo se muestra cómo crear una vista de calendario sencilla.
 
@@ -58,7 +53,7 @@ La vista de calendario resultante tiene este aspecto:
 
 ![Ejemplo de vista de calendario](images/controls_calendar_monthview.png)
 
-### Seleccionar fechas
+### <a name="selecting-dates"></a>Seleccionar fechas
 
 De manera predeterminada, la propiedad [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selectionmode.aspx) se establece en **Single**. Esto permite al usuario seleccionar una fecha determinada en el calendario. Establece SelectionMode en **None** para deshabilitar la selección de fecha. 
 
@@ -73,9 +68,10 @@ Un usuario puede anular la selección de una determinada fecha haciendo clic o p
 
 Puedes controlar el evento [**SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx) para que se notifique cuando la colección [**SelectedDates**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx) haya cambiado.
 
-> **Nota**&nbsp;&nbsp;Para obtener información importante sobre los valores de fecha, consulta [Valores de DateTime y Calendar](date-and-time.md#datetime-and-calendar-values) en el artículo Controles de fecha y hora.
+> [!NOTE]
+> Para obtener información importante sobre los valores de fecha, consulta [Valores de DateTime y Calendar](date-and-time.md#datetime-and-calendar-values) en el artículo Controles de fecha y hora.
 
-### Personalizar la apariencia de la vista de calendario
+### <a name="customizing-the-calendar-views-appearance"></a>Personalizar la apariencia de la vista de calendario
 
 La vista del calendario se compone de elementos XAML definidos en ControlTemplate y de elementos visuales representados directamente por el control. 
 - Los elementos XAML que se definen en la plantilla de control incluyen el borde dentro del que se encuentran el control, el encabezado, los botones Anterior y Siguiente y los elementos DayOfWeek. Puedes aplicar un estilo y crear una nueva plantilla para estos elementos como cualquier control de XAML. 
@@ -116,7 +112,7 @@ calendarView1.MinDate = new DateTime(2000, 1, 1);
 calendarView1.MaxDate = new DateTime(2099, 12, 31);
 ```
 
-### Actualizar elementos de calendario por día
+### <a name="updating-calendar-day-items"></a>Actualizar elementos de calendario por día
 
 Cada día en el calendario se representa mediante un objeto [**CalendarViewDayItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarviewdayitem.aspx). Para obtener acceso a un elemento de día individual y usar sus propiedades y métodos, administra el evento [**CalendarViewDayItemChanging**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.calendarviewdayitemchanging.aspx) y usa la propiedad del elemento de los argumentos del evento para acceder a CalendarViewDayItem.
 
@@ -128,7 +124,7 @@ Estos son algunos elementos de día en un calendario. Los días 1 y 2 están sup
 
 ![Días del calendario con barras de densidad](images/calendar-view-density-bars.png)
 
-### Representación por fases
+### <a name="phased-rendering"></a>Representación por fases
 
 Una vista de calendario puede contener un gran número de objetos CalendarViewDayItem. Para mantener la interfaz de usuario con capacidad de respuesta y habilitar la navegación fluida mediante el calendario, la vista de calendario admite la representación por fases. Esto permite dividir el procesamiento de un elemento de día en fases. Si un día se mueve fuera de la vista antes de que se completen todas las fases, no se dedica más tiempo a intentar procesar y representar ese elemento.
 
@@ -198,7 +194,7 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 }
 ```
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 - [Controles de fecha y hora](date-and-time.md)
 - [Selector de fecha del calendario](calendar-date-picker.md)
@@ -207,6 +203,6 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 
