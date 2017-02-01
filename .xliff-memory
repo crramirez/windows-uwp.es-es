@@ -2888,7 +2888,7 @@
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.es-es\\master\\5d64c463b572dfc6da5ed453308c56a05d0a4410.329ecd0921d569f7b5ee2e3581e7d388066d66e6.xml",
       "LocXliff": "ol-handback\\cpubwin\\windows-uwp.es-es\\master\\gamepad-and-vibration.6a6269dedaedce25fd795ce66da6ac84fa346a39.es-es.xlf",
-      "LocXliffCommit": "b49282ae603e7dc981e55d137f0421ff0e2a36d6"
+      "LocXliffCommit": "fc425c20c53df0c4ea975aa871db77de6fd0465d"
     },
     "windows-apps-src\\monetize\\in-app-purchases-and-trials.md.3aa53a54f3c075217ff1e5ae0e6d2db5ccd27f8b.HT": {
       "SourceFilename": "windows-apps-src\\monetize\\in-app-purchases-and-trials.md",
