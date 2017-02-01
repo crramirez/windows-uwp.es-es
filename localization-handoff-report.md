@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\enable-your-device-for-development.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/f4c2f982128b82996ff82f425eacc5b244d7a66b?path=windows-apps-src%2Fget-started%2Fenable-your-device-for-development.md&_a=contents) | HandedOffSuccess | [Details](#c9ecb411926c76b73c4d444df1c4a814f3eea4972679)
+ [hub\index.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/31efc04ed2d79ee51932a9d9eb10dd760533bdd3?path=hub%2Findex.md&_a=contents) | HandedOffSuccess | [Details](#f09fbaab65a71e849755eaac8cc866309801f1927)
 
 ## Item Details
-##### <a name='c9ecb411926c76b73c4d444df1c4a814f3eea4972679'></a> Source: [windows-apps-src\get-started\enable-your-device-for-development.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/f4c2f982128b82996ff82f425eacc5b244d7a66b?path=windows-apps-src%2Fget-started%2Fenable-your-device-for-development.md&_a=contents)
+##### <a name='f09fbaab65a71e849755eaac8cc866309801f1927'></a> Source: [hub\index.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/31efc04ed2d79ee51932a9d9eb10dd760533bdd3?path=hub%2Findex.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/e7065d1304c21f42f4383a32e065c0148ffb5692?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fenable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.es-es.xlf&_a=contents)
-* Handoff Datetime: 2017-02-01 20:38:54
+* Handoff File: [index.4766fa26638f9b0551308e465fe8b8cfeda3c32c.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/ce7e3e99c05d8a67bb682178cbb9b2b387f9e917?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Findex.4766fa26638f9b0551308e465fe8b8cfeda3c32c.es-es.xlf&_a=contents)
+* Handoff Datetime: 2017-02-01 22:36:34
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,11 +21,6 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\get-started\enable-your-device-for-development.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/12ceb7cb1e92586d6081d6d4cf440e8d4a6fc617?path=windows-apps-src%2Fget-started%2Fenable-your-device-for-development.md&_a=contents)
-* Current Handback File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/b49282ae603e7dc981e55d137f0421ff0e2a36d6?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fenable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.es-es.xlf&_a=contents)
-* Current Handback Datetime: 2017-01-20 14:46:23
-* Bilingual File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/b49282ae603e7dc981e55d137f0421ff0e2a36d6?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fenable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.es-es.xlf&_a=contents)
-* Bilingual Datetime: 2017-01-20 14:57:31
 * [Back to Top](#report-top)
 
 
