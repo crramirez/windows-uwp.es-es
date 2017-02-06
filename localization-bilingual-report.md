@@ -1,33 +1,11 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\gaming\gamepad-and-vibration.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/12f1c02e89f8feb24f9fb8994bdf8633e85965b1?path=windows-apps-src%2Fgaming%2Fgamepad-and-vibration.md&_a=contents) | HandedOffSuccess | [Details](#2537b9668ce81ec0a8e2bc91e2c9ac43fafde1132581)
 
 ## Item Details
-##### <a name='2537b9668ce81ec0a8e2bc91e2c9ac43fafde1132581'></a> Source: [windows-apps-src\gaming\gamepad-and-vibration.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/12f1c02e89f8feb24f9fb8994bdf8633e85965b1?path=windows-apps-src%2Fgaming%2Fgamepad-and-vibration.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [gamepad-and-vibration.6a6269dedaedce25fd795ce66da6ac84fa346a39.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/f7b45b511c74bfd6a9d221d55bfa3cb3c75af523?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fgamepad-and-vibration.6a6269dedaedce25fd795ce66da6ac84fa346a39.es-es.xlf&_a=contents)
-* Handoff Datetime: 2017-01-27 22:41:59
-* Handoff Reason: Include
-* Handoff Name: 
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Handback Name: 
-* Current Target File: [windows-apps-src\gaming\gamepad-and-vibration.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/5b5647e21f155e3f1c7c4cd6f46ea0c2350ed958?path=windows-apps-src%2Fgaming%2Fgamepad-and-vibration.md&_a=contents)
-* Current Handback File: [gamepad-and-vibration.6a6269dedaedce25fd795ce66da6ac84fa346a39.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fc425c20c53df0c4ea975aa871db77de6fd0465d?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fgamepad-and-vibration.6a6269dedaedce25fd795ce66da6ac84fa346a39.es-es.xlf&_a=contents)
-* Current Handback Datetime: 2017-02-01 18:39:47
-* Bilingual File: [gamepad-and-vibration.6a6269dedaedce25fd795ce66da6ac84fa346a39.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fc425c20c53df0c4ea975aa871db77de6fd0465d?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fgamepad-and-vibration.6a6269dedaedce25fd795ce66da6ac84fa346a39.es-es.xlf&_a=contents)
-* Bilingual Datetime: 2017-02-01 18:46:00
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
