@@ -1,53 +1,11 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\enterprise\wip-dev-guide.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c4c00a8bf5c3dc6d3992cef81d7eb37266f3d8bb?path=windows-apps-src%2Fenterprise%2Fwip-dev-guide.md&_a=contents) | HandedOffSuccess | [Details](#7d555d4c8b9f749f1a924166176090efc291d4c22527)
- [windows-apps-src\enterprise\wip-hub.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c4c00a8bf5c3dc6d3992cef81d7eb37266f3d8bb?path=windows-apps-src%2Fenterprise%2Fwip-hub.md&_a=contents) | HandedOffSuccess | [Details](#f624d20d33f560f151b40bd1a405711d697fd4cb2528)
 
 ## Item Details
-##### <a name='7d555d4c8b9f749f1a924166176090efc291d4c22527'></a> Source: [windows-apps-src\enterprise\wip-dev-guide.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c4c00a8bf5c3dc6d3992cef81d7eb37266f3d8bb?path=windows-apps-src%2Fenterprise%2Fwip-dev-guide.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [wip-dev-guide.c2e2fe40c6255bd8f5df75ee81adcc2c3bdffc9b.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/cb47ce4c1f267ee03186a3f1874ec04fadc2eca6?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fwip-dev-guide.c2e2fe40c6255bd8f5df75ee81adcc2c3bdffc9b.es-es.xlf&_a=contents)
-* Handoff Datetime: 2017-02-16 21:31:58
-* Handoff Reason: Include
-* Handoff Name: 
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Handback Name: 
-* Current Target File: [windows-apps-src\enterprise\wip-dev-guide.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/c41e9515229f635e477f671fa0768b1eecc83c3e?path=windows-apps-src%2Fenterprise%2Fwip-dev-guide.md&_a=contents)
-* Current Handback File: [wip-dev-guide.c2e2fe40c6255bd8f5df75ee81adcc2c3bdffc9b.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fwip-dev-guide.c2e2fe40c6255bd8f5df75ee81adcc2c3bdffc9b.es-es.xlf&_a=contents)
-* Current Handback Datetime: 2016-11-30 15:18:37
-* Bilingual File: [wip-dev-guide.c2e2fe40c6255bd8f5df75ee81adcc2c3bdffc9b.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c3e37cdff3e0f43d466e81008e70b9760239ddc2?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fwip-dev-guide.c2e2fe40c6255bd8f5df75ee81adcc2c3bdffc9b.es-es.xlf&_a=contents)
-* Bilingual Datetime: 2016-11-30 15:24:45
-* [Back to Top](#report-top)
-
-##### <a name='f624d20d33f560f151b40bd1a405711d697fd4cb2528'></a> Source: [windows-apps-src\enterprise\wip-hub.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c4c00a8bf5c3dc6d3992cef81d7eb37266f3d8bb?path=windows-apps-src%2Fenterprise%2Fwip-hub.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [wip-hub.57e44e5c2209070d40ded980039a8622cea641ca.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/cb47ce4c1f267ee03186a3f1874ec04fadc2eca6?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fwip-hub.57e44e5c2209070d40ded980039a8622cea641ca.es-es.xlf&_a=contents)
-* Handoff Datetime: 2017-02-16 21:31:58
-* Handoff Reason: Include
-* Handoff Name: 
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Handback Name: 
-* Current Target File: [windows-apps-src\enterprise\wip-hub.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.es-es/commit/12ceb7cb1e92586d6081d6d4cf440e8d4a6fc617?path=windows-apps-src%2Fenterprise%2Fwip-hub.md&_a=contents)
-* Current Handback File: [wip-hub.57e44e5c2209070d40ded980039a8622cea641ca.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/b49282ae603e7dc981e55d137f0421ff0e2a36d6?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fwip-hub.57e44e5c2209070d40ded980039a8622cea641ca.es-es.xlf&_a=contents)
-* Current Handback Datetime: 2017-01-20 14:46:23
-* Bilingual File: [wip-hub.57e44e5c2209070d40ded980039a8622cea641ca.es-es.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/b49282ae603e7dc981e55d137f0421ff0e2a36d6?path=ol-handback%2Fcpubwin%2Fwindows-uwp.es-es%2Fmaster%2Fwip-hub.57e44e5c2209070d40ded980039a8622cea641ca.es-es.xlf&_a=contents)
-* Bilingual Datetime: 2017-01-20 14:57:31
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
