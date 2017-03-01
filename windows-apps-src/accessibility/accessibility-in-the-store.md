@@ -5,13 +5,20 @@ ms.assetid: 59FA3B87-75A6-4B30-BA7C-A0E769D68050
 title: Accesibilidad en la Tienda
 label: Accessibility in the Store
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 137e8671655c0d20b0343ee7f87086d271fdc531
-ms.openlocfilehash: 8d987e9c1c9476625b8544ee95abc62e2b2c09f5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1d3a2ce095b4250f5bdc1fdac8b1646184bc3e1e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Accesibilidad en la Tienda  
+# <a name="accessibility-in-the-store"></a>Accesibilidad en la Tienda  
 
 
 
@@ -42,11 +49,6 @@ Debes declarar tu aplicación como accesible si la has compilado para ello y has
 Consulta el tema [Lista de comprobación para accesibilidad](accessibility-checklist.md) para obtener un revisión de estos procedimientos y vínculos a recursos que te ayudarán a llevarlos a cabo.
 
 <span id="related_topics"/>
-## Temas relacionados    
+## <a name="related-topics"></a>Temas relacionados    
 * [Accesibilidad](accessibility.md) 
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

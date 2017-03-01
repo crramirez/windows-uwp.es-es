@@ -1,18 +1,25 @@
 ---
 author: jnHs
 Description: "Puedes generar códigos promocionales para una aplicación o complemento que hayas publicado en la Tienda Windows."
-title: "Generar códigos promocionales"
+title: "Genera códigos promocionales"
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a92f642b2d28eb801106388648455752c10e013a
-ms.openlocfilehash: cf1f6cf680d4ae57513dde2c6a356e8ba4b1cb56
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fb97ccb1555e214871603861a3e5edeaaf3a55d7
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Generar códigos promocionales
+# <a name="generate-promotional-codes"></a>Genera códigos promocionales
 
 
-Puedes generar códigos promocionales para una aplicación o un complemento que hayas publicado en la Tienda Windows. Los códigos promocionales son una forma sencilla de ofrecer a usuarios influyentes acceso gratuito a tu aplicación o complemento. También puedes usarlos en situaciones de atención al cliente y ofrecer a los usuarios acceso gratuito a tu aplicación o complemento, o para [realizar pruebas beta](beta-testing-and-targeted-distribution.md) con Windows 10.
+Puedes generar códigos promocionales para una aplicación o complemento que hayas publicado en la Tienda Windows. Los códigos promocionales son una forma sencilla de ofrecer a usuarios influyentes acceso gratuito a tu aplicación o complemento. También puedes usarlos en situaciones de atención al cliente y ofrecer a los usuarios acceso gratuito a tu aplicación o complemento, o para [realizar pruebas beta](beta-testing-and-targeted-distribution.md) con Windows 10.
 
 Cada código promocional contiene una dirección URL única y canjeable que puedes distribuir a un usuario o a un grupo de usuarios. El usuario solo tiene que hacer clic en la dirección URL para canjear el código e instalar la aplicación o complemento desde la Tienda Windows.
 
@@ -26,7 +33,7 @@ En el panel del Centro de desarrollo de Windows, puedes:
 
 > **Nota** Puedes generar códigos de promoción incluso si seleccionaste la opción **Ocultar esta aplicación en la tienda e impedir la compra. Los clientes con un código promocional aún pueden descargarla en dispositivos con Windows 10** en la página del panel [Precios y disponibilidad](set-app-pricing-and-availability.md) de tu aplicación. La aplicación debe pasar a la fase final de publicación del [proceso de certificación de aplicaciones](the-app-certification-process.md) antes de que los usuarios puedan canjear un código promocional para instalarla.
 
-## Directivas de códigos promocionales
+## <a name="promotional-code-policies"></a>Directivas de códigos promocionales
 
 
 Ten en cuenta las siguientes directivas para los códigos promocionales:
@@ -36,7 +43,7 @@ Ten en cuenta las siguientes directivas para los códigos promocionales:
 -   Cada 6 meses, puedes generar hasta 500 códigos promocionales para cada una de tus aplicaciones o complementos. El período de 6 meses comienza en la fecha en que se envía el primer pedido de códigos promocionales.
 -   Debes seguir los requisitos definidos en el [Acuerdo para desarrolladores de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694058), incluida la sección **3k. Códigos promocionales**.
 
-## Pedir códigos promocionales
+## <a name="order-promotional-codes"></a>Pedir códigos promocionales
 
 
 Para pedir códigos promocionales para una aplicación o complemento que has publicado en la Tienda Windows:
@@ -57,7 +64,7 @@ Para pedir códigos promocionales para una aplicación o complemento que has pub
 
 Los códigos promocionales suelen estar listos para su descarga menos de una hora después de realizar el pedido, aunque algunos pedidos tardan más en procesarse. Cuando los códigos están listos para su descarga, el estado del pedido cambia a **Disponible**.
 
-## Descargar y distribuir códigos promocionales
+## <a name="download-and-distribute-promotional-codes"></a>Descargar y distribuir códigos promocionales
 
 
 Para descargar un pedido completado y distribuir los códigos promocionales a los usuarios de la aplicación:
@@ -91,7 +98,7 @@ Para descargar un pedido completado y distribuir los códigos promocionales a lo
     -   La dirección URL canjeable para el código.
     -   Instrucciones que guíen al usuario para que visite la dirección URL canjeable, inicie sesión con su cuenta Microsoft y siga las instrucciones para descargar e instalar la aplicación.
 
-## Experiencia de usuario del canje de códigos
+## <a name="code-redemption-user-experience"></a>Experiencia de usuario del canje de códigos
 
 
 Ya has distribuido a un usuario una dirección URL canjeable; los siguientes pasos describen la experiencia de canjear el código por la aplicación.
@@ -114,7 +121,7 @@ Ya has distribuido a un usuario una dirección URL canjeable; los siguientes pas
 
     > **Nota**  En algunos casos, la página de la aplicación podría mostrar un botón **Comprar** en lugar de **Instalar**, incluso si la aplicación se canjeó correctamente mediante el código promocional. El usuario puede hacer clic en **Comprar** para instalar la aplicación de forma gratuita.
 
-## Revisar los códigos promocionales
+## <a name="review-your-promotional-codes"></a>Revisar los códigos promocionales
 
 
 Hay varias formas de revisar el uso de los códigos promocionales.
@@ -136,10 +143,5 @@ También puedes descargar un pedido activo desde esta tabla.
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO4-->
 
 

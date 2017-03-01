@@ -3,15 +3,22 @@ author: GrantMeStrength
 ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
 title: "Crear una aplicación Hello World en C++ (Windows 10)"
 description: "Con Microsoft Visual Studio 2015, puedes usar C++ para desarrollar una aplicación que se ejecute en Windows 10, incluidos los teléfonos con Windows 10. Estas aplicaciones tienen una interfaz de usuario que se define en lenguaje XAML."
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 351feda6d9b12b44b0711fe7f4665e08e320580d
-ms.openlocfilehash: d6f90d8bcff80ef8fae5f85a572e1b1ab11f153d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 34a1d665bc98a5224ef7707994138ba40d70763b
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="create-a-hello-world-app-in-c-windows-10"></a>Crear una aplicación "hello world" en C++ (Windows 10)
 
-Con Microsoft Visual Studio 2015, puedes usar C++ para desarrollar una aplicación que se ejecute en Windows 10, incluidos los teléfonos con Windows 10. Estas aplicaciones tienen una interfaz de usuario que se define en lenguaje XAML.
+Con Microsoft Visual Studio 2015, puedes usar C++ para desarrollar una aplicación que se ejecute en Windows 10, incluidos los teléfonos con Windows 10. Estas aplicaciones tienen una interfaz de usuario que se define en lenguaje XAML.
 
 Consulta los siguientes temas para acceder a tutoriales en otros lenguajes de programación:
 
@@ -21,8 +28,7 @@ Consulta los siguientes temas para acceder a tutoriales en otros lenguajes de pr
 
 ## <a name="before-you-start"></a>Antes de comenzar...
 
--   Para completar este tutorial, debes usar Visual Studio 2015 Community o una versión posterior, o una de las versiones de Visual Studio 2015 que no sea Community, en un equipo que ejecute Windows 10 o Windows 8.1. Para su descarga, consulta [Obtener las herramientas](http://go.microsoft.com/fwlink/p/?LinkId=532666)
--   Instala el [SDK](http://go.microsoft.com/fwlink/?LinkId=533049) adecuado para el desarrollo de la Plataforma universal de Windows.
+-   Para completar este tutorial, debes usar Visual Studio 2015 Community o una versión posterior, o una de las versiones de Visual Studio 2015 que no sea Community, en un equipo que ejecute Windows 10 o Windows 8.1. Para su descarga, consulta [Obtener las herramientas](http://go.microsoft.com/fwlink/p/?LinkId=532666)
 -   Damos por hecho que tienes conocimientos básicos de C++ y XAML estándar y que estás familiarizado con los conceptos de [Introducción a XAML](https://msdn.microsoft.com/library/windows/apps/Mt185595).
 -   Se supone que estás usando el diseño de ventana predeterminado en Visual Studio. Para restablecer el diseño predeterminado, en la barra de menús, elige **Ventana** > **Restablecer diseño de la ventana**.
 
@@ -434,13 +440,8 @@ Felicidades, has completado el primer tutorial. En él aprendiste cómo se agreg
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Si tienes un proyecto de aplicación universal de Windows destinado a Windows 8.1 o Windows Phone 8.1, puedes portarlo a Windows 10. No hay ningún proceso automático para ello, pero puedes hacerlo manualmente con un esfuerzo mínimo. Empieza con un nuevo proyecto de Windows Universal para obtener la estructura del sistema de proyecto más reciente y los archivos de manifiesto, copia los archivos de código en la estructura de directorios del proyecto, agrega los elementos al proyecto y reescribe el XAML con [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021), como se indica en este tema. Para obtener más información, consulta [Migración de un proyecto de Windows Runtime 8 a un proyecto de la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/Mt188203) y [Migrar a la Plataforma universal de Windows (C++)](http://go.microsoft.com/fwlink/p/?LinkId=619525).
+Si tienes un proyecto de aplicación universal de Windows destinado a Windows 8.1 o Windows Phone 8.1, puedes portarlo a Windows 10. No hay ningún proceso automático para ello, pero puedes hacerlo manualmente. Empieza con un nuevo proyecto de Windows Universal para obtener la estructura del sistema de proyecto más reciente y los archivos de manifiesto, copia los archivos de código en la estructura de directorios del proyecto, agrega los elementos al proyecto y reescribe el XAML con [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021), como se indica en este tema. Para obtener más información, consulta [Migración de un proyecto de Windows Runtime 8 a un proyecto de la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/Mt188203) y [Migrar a la Plataforma universal de Windows (C++)](http://go.microsoft.com/fwlink/p/?LinkId=619525).
 
 Si tienes código C++ que desees integrar con una aplicación para UWP, por ejemplo, para crear una nueva interfaz de usuario de UWP para una aplicación existente, consulta [Cómo: usar código C++ existente en una aplicación universal de la plataforma Windows](http://go.microsoft.com/fwlink/p/?LinkId=619623).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

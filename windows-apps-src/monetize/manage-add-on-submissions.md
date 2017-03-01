@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
 description: "Usa estos métodos en la API de envío de la Tienda Windows para administrar envíos de complemento para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows."
 title: "Administrar envíos de complemento con la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, API de envío de la Tienda Windows, envío de complementos, producto desde la aplicación, Windows Store submission API, add-on submissions, in-app product, IAP"
 translationtype: Human Translation
-ms.sourcegitcommit: 020c8b3f4d9785842bbe127dd391d92af0962117
-ms.openlocfilehash: 1a1ace9d456089d4bed2dd4ac4f39479dc8faa52
+ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
+ms.openlocfilehash: 589946e159202c3ed5d13057642c808d5df4f738
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -13,9 +20,14 @@ ms.openlocfilehash: 1a1ace9d456089d4bed2dd4ac4f39479dc8faa52
 
 La API de envío de la Tienda Windows proporciona métodos que puedes usar para administrar envíos de complementos (también llamados productos en aplicación o IAP) para tus aplicaciones. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
->**Nota**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado. Para poder usar estos métodos para crear o administrar envíos para un complemento, el complemento ya debe existir en tu cuenta del Centro de desarrollo. Para crear un complemento, puedes [usar el panel del Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions) o los métodos de la API de envío de la Tienda Windows que se describen en [Administrar complementos](manage-add-ons.md).
+>**Nota:**&nbsp;&nbsp;estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. Este permiso se habilita para cuentas de desarrollador en fases y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilite este permiso para tu cuenta.
 
-Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de complemento.
+>**Importante**&nbsp;&nbsp;si usas la API de envío de la Tienda Windows para crear un envío de un complemento, asegúrate de realizar más cambios en el envío solo mediante la API, en lugar de en el panel del Centro de desarrollo. Si usas el panel para cambiar un envío que creaste originalmente mediante la API, ya no podrás cambiar o confirmar el envío con la API. En algunos casos, el envío podría quedar en un estado de error en el que no se puede continuar con el proceso de envío. Si esto ocurre, debes eliminar el envío y crear uno nuevo.
+
+<span id="methods-for-add-on-submissions" />
+## <a name="methods-for-managing-add-on-submissions"></a>Métodos para administrar envíos de complementos
+
+Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de complemento. Antes de poder usar estos métodos, el complemento debe existir en tu cuenta del Centro de desarrollo. Puedes crear un complemento en el panel mediante la [definición de su tipo de producto y su id. de producto](../publish/set-your-add-on-product-id.md) o los métodos de la API de envío de la Tienda Windows que se describen en [Administrar complementos](manage-add-ons.md).
 
 <table>
 <colgroup>
@@ -141,6 +153,8 @@ En los siguientes artículos se proporcionan ejemplos de código detallados que 
 * [Ejemplos de código de Java](java-code-examples-for-the-windows-store-submission-api.md)
 * [Ejemplos de código de Python](python-code-examples-for-the-windows-store-submission-api.md)
 
+>**Nota**&nbsp;&nbsp;además de ejemplos de código mencionados anteriormente, también proporcionamos un módulo de PowerShell de código abierto que implementa una interfaz de línea de comandos en la parte superior de la API de envío de la Tienda Windows. Este módulo se denomina [StoreBroker](https://aka.ms/storebroker). Puedes usar este módulo para administrar tus envíos de aplicaciones, paquetes piloto y complementos desde la línea de comandos en lugar de llamar directamente a la API de envío de la Tienda Windows o, simplemente, puedes examinar el origen para ver más ejemplos de cómo llamar a esta API. El módulo StoreBroker se usa activamente dentro de Microsoft como método principal para enviar muchas aplicaciones propias a la Tiendas. Para obtener más información, consulta nuestra [página de StoreBroker en GitHub](https://aka.ms/storebroker).
+
 <span/>
 ## <a name="data-resources"></a>Recursos de datos
 
@@ -183,7 +197,8 @@ Este recurso describe un envío de complemento.
       "US": "Tier4",
     },
     "sales": [],
-    "priceId": "Free"
+    "priceId": "Free",
+    "isAdvancedPricingModel": "true"
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
   "targetPublishMode": "Immediate",
@@ -230,7 +245,7 @@ Este recurso tiene los siguientes valores.
 | status  | string  |  Estado del envío. Puede ser uno de los valores siguientes: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  Un [recurso de detalles de estado](#status-details-object) que contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores. |
 | fileUploadUrl           | string  | URI de firma de acceso compartido (SAS) para cargar los paquetes para el envío. Si estás agregando nuevos paquetes para el envío, carga el archivo ZIP que contiene los paquetes en este URI. Para obtener más información, consulta [Crear un envío de complemento](#create-an-add-on-submission).  |
-| friendlyName  | string  |  Nombre descriptivo del complemento, que se usa con fines de visualización.  |
+| friendlyName  | cadena  |  El nombre descriptivo del envío, como se muestra en el panel del Centro de desarrollo. Generas este valor cuando creas el envío.  |
 
 <span id="listing-object" />
 ### <a name="listing-resource"></a>Recurso de lista
@@ -262,7 +277,8 @@ Este recurso contiene información sobre precios del complemento. Este recurso t
 |-----------------|---------|------|
 |  marketSpecificPricings               |    object     |  Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados del complemento en mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-prices). Los elementos de este diccionario reemplazan el precio base especificado por el valor de *priceId* para el mercado especificado.     |     
 |  sales               |   array      |  **En desuso**. Una matriz de [recursos de venta](#sale-object) que contienen información de ventas del complemento.     |     
-|  priceId               |   string      |  [Franja de precios](#price-tiers) que especifica el [precio base](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) del complemento.    |
+|  priceId               |   cadena      |  Una [franja de precios](#price-tiers) que especifica el [precio base](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) del complemento.    |    
+|  isAdvancedPricingModel               |   booleano      |  Si está en **true**, tu cuenta de desarrollador tiene acceso al conjunto expandido de franjas de precios de 0,99 USD a 1999,99 USD. Si está en **false**, tu cuenta de desarrollador tiene acceso al conjunto original de franjas de precios de 0,99 USD a 999,99 USD. Para obtener más información sobre las diferentes franjas de precios, consulta [franjas de precios](#price-tiers).<br/><br/>**Nota**&nbsp;&nbsp;este campo es de solo lectura.   |
 
 
 <span id="sale-object" />
@@ -325,15 +341,14 @@ Estos métodos usan las enumeraciones siguientes.
 <span id="price-tiers" />
 ### <a name="price-tiers"></a>Franjas de precios
 
-Los valores siguientes representan las franjas de precios disponibles para un envío de complemento.
+Los siguientes valores representan las franjas de precios disponibles en el [recurso de precios](#pricing-object) de un envío de complemento.
 
 | Valor           | Descripción       |
 |-----------------|------|
 |  Base               |   No se establece la franja de precios; usa el precio base para el complemento.      |     
 |  NotAvailable              |   El complemento no está disponible en la región especificada.    |     
 |  Free              |   El complemento es gratuito.    |    
-|  Tier2 a Tier194               |   Tier2 representa la franja de precios de 0,99 USD. Cada franja adicional representa incrementos adicionales (1,29 USD, 1,49 USD, 1,99 USD, etc.).    |
-
+|  Tier*xxxx*               |   Una cadena que especifica la franja de precios del complemento, con formato **Tier<em>xxxx</em>**. Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de franjas de precios que están disponibles para tu cuenta de desarrollador, incluidos los precios específicos del mercado asociados a cada franja, ve a la página **Precios y disponibilidad** para ver cualquiera de los envíos de aplicaciones del panel del Centro de desarrollo y haz clic en el vínculo **Ver tabla** en la sección **Mercados y precios personalizados** (en algunas cuentas de desarrollador, este vínculo está en la sección **Precios**).     |
 
 <span id="submission-status-code" />
 ### <a name="submission-status-code"></a>Código de estado del envío
@@ -364,9 +379,4 @@ Los valores siguientes representan el código de estado de un envío.
 * [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar complementos mediante la API de envío de la Tienda Windows](manage-add-ons.md)
 * [Envíos de complementos en el panel del Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

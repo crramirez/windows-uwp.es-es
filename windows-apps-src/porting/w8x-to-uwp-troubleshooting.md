@@ -3,15 +3,22 @@ author: mcleblanc
 description: "Se recomienda leer hasta el final esta guía de migración, aunque somos conscientes de que estás deseando seguir avanzando y llegar a la fase de compilación y ejecución de tu proyecto."
 title: "Solución de problemas de migración de Windows Runtime 8.x a UWP"
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 6bb6035757c2629c5cbcc3e773703b4f659c5237
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6c10376854656abe276c53a9b6778665c1d47a4b
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="troubleshooting-porting-windows-runtime-8x-to-uwp"></a>Solución de problemas de migración de Windows Runtime 8.x a UWP
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 El tema anterior era [Migración del proyecto](w8x-to-uwp-porting-to-a-uwp-project.md).
 
@@ -50,10 +57,5 @@ La información de las soluciones de la tabla está destinada a ofrecerte inform
 | El compilador de C# muestra el error "*No se puede encontrar el tipo o el nombre de espacio de nombres '<name>' \[...\]*" o "*El tipo o el nombre del espacio de nombres '<name>' no existe en el espacio de nombres \[...\]*" o "*El tipo o el nombre del espacio de nombres '<name>' no existe en el contexto actual*". | Es posible que esto signifique que el tipo se implemente en un SDK de extensión (aunque puede haber casos en los que la solución no sea tan fácil). Usa el contenido de referencia de las [API de Windows](https://msdn.microsoft.com/library/windows/apps/bg124285) para determinar con qué extensión implementa el SDK la API y, a continuación, usa el comando **Agregar** > **Referencia** de Visual Studio para agregar una referencia a ese SDK al proyecto. Si la aplicación está dirigida al conjunto de API que se conoce como la familia de dispositivos universales, es fundamental que uses la clase [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) para probar en tiempo de ejecución la presencia del SDK de extensión antes de llamarlas (esto se denomina código adaptable). Si existe una API universal, siempre es preferible a una API de un SDK de extensión. Para obtener más información, consulta [SDK de extensión](w8x-to-uwp-porting-to-a-uwp-project.md). |
 
 El siguiente tema es [Migración de XAML y la interfaz de usuario](w8x-to-uwp-porting-xaml-and-ui.md).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

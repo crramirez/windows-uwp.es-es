@@ -5,9 +5,16 @@ ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
 title: Desarrollo de aplicaciones inclusivas de Windows 10
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 91f6a9d50b66064da7023599adbb058656fb1007
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 47c28e0629150ccbdf532afc645fe973c3dc8804
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -37,7 +44,7 @@ Al diseñar la navegación por teclado, examina tu interfaz de usuario y piensa 
 * ¿Cómo están dispuestos o agrupados los controles en la interfaz de usuario?
 * ¿Hay algunos grupos de controles significativos?
     * En caso afirmativo, ¿contienen esos grupos otro nivel de grupos?
-*   Entre los controles del mismo nivel, ¿se debe navegar mediante tabulación, a través de una navegación especial (tales como las teclas de dirección) o ambas?
+*     Entre los controles del mismo nivel, ¿se debe navegar mediante tabulación, a través de una navegación especial (tales como las teclas de dirección) o ambas?
 
 El objetivo es ayudar al usuario a entender cómo se dispone la interfaz de usuario e identificar los controles que se puedan accionar. Si encuentra que hay que hacer demasiadas tabulaciones antes de que el usuario complete el bucle de navegación, considere la posibilidad de agrupar controles relacionados. Algunos de los controles que están relacionados, tales como un control híbrido, pueden tener que abordarse en esta fase temprana de exploración. Después de comenzar a desarrollar tu producto, es difícil de rediseñar la navegación por teclado, por lo tanto, ¡planea cuidadosamente y durante una fase temprana!  
 
@@ -83,9 +90,4 @@ Para obtener más información, consulta el tema completo [Lista de comprobació
 * [Diseño de software para accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Centro de Microsoft para desarrolladores de accesibilidad](https://msdn.microsoft.com/enable)
 * [Accesibilidad](accessibility.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

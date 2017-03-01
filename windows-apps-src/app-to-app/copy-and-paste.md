@@ -1,25 +1,32 @@
 ---
-description: "Este artículo explica cómo admitir las funciones copiar y pegar en aplicaciones para la Plataforma universal de Windows (UWP) usando el portapapeles."
+description: "En este artículo se explica cómo admitir las funciones copiar y pegar en aplicaciones para la Plataforma universal de Windows (UWP) usando el portapapeles."
 title: Copiar y pegar
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 0dceeb53737cc790e1c3810b0487e0a839968bef
-ms.openlocfilehash: 2655dc67b14ba665deabc879f13340202d97c494
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c9cef41c5c4671d85854f3daf79cb7d6fd51a6f8
+ms.lasthandoff: 02/07/2017
 
 ---
-#Copiar y pegar
+#<a name="copy-and-paste"></a>Copiar y pegar
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artículo explica cómo admitir las funciones copiar y pegar en aplicaciones para la Plataforma universal de Windows (UWP) usando el portapapeles. Copiar y pegar es la forma clásica de intercambiar datos entre aplicaciones o dentro de una aplicación, y casi todas las aplicaciones admiten operaciones del portapapeles hasta cierto punto.
 
-## Comprobar la compatibilidad integrada del portapapeles
+## <a name="check-for-built-in-clipboard-support"></a>Comprobar la compatibilidad integrada del portapapeles
 
 En muchos casos, es posible que no necesites escribir código para admitir las operaciones del Portapapeles. Muchos de los controles XAML predeterminados que puedes usar para crear aplicaciones ya admiten las operaciones del portapapeles. 
 
-## Prepárate
+## <a name="get-set-up"></a>Prepárate
 
 En primer lugar, incluye el espacio de nombres [**Windows.ApplicationModel.DataTransfer**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer) en la aplicación. A continuación, agrega una instancia del objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage). Este objeto contiene los datos que el usuario quiere copiar y también las propiedades (como la descripción) que quieres incluir.
 
@@ -30,7 +37,7 @@ DataPackage dataPackage = new DataPackage();
 
 <!-- AuthenticateAsync-->
 
-## Copiar y cortar
+## <a name="copy-and-cut"></a>Copiar y cortar
 
 Copiar y cortar (también denominado *mover*) funcionan prácticamente de la misma manera. Elige qué operación quieres realizar con el uso de la propiedad [**RequestedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage.RequestedOperation).
 
@@ -40,7 +47,7 @@ dataPackage.RequestedOperation = DataPackageOperation.Copy;
 // or cut
 dataPackage.RequestedOperation = DataPackageOperation.Move;
 ```
-## Arrastrar y colocar
+## <a name="drag-and-drop"></a>Arrastrar y colocar
 
 A continuación, puedes agregar los datos que un usuario ha seleccionado para el objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage). Si la clase **DataPackage** admite estos datos, puedes usar uno de los métodos correspondientes en el objeto **DataPackage**. Aquí vemos cómo agregar texto:
 
@@ -53,7 +60,7 @@ El último paso es agregar [**DataPackage**](https://msdn.microsoft.com/library/
 ```cs
 Clipboard.SetContent(dataPackage);
 ```
-## Pegar
+## <a name="paste"></a>Pegar
 
 Para obtener el contenido del portapapeles, llama al método estático [**GetContent**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.GetContent). Este método devuelve un objeto [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView) que incluye el contenido. Este objeto es casi idéntico a un objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage), con la excepción de que su contenido es de solo lectura. Con ese objeto, puedes usar los métodos [**AvailableFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.AvailableFormats) o [**Contains**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.Contains(System.String)) para identificar los formatos disponibles. Después, puedes llamar al método [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView) correspondiente para obtener los datos.
 
@@ -67,7 +74,7 @@ if (dataPackageView.Contains(StandardDataFormats.Text))
 }
 ```
 
-## Seguimiento de cambios en el portapapeles
+## <a name="track-changes-to-the-clipboard"></a>Seguimiento de cambios en el portapapeles
 
 Además de los comandos copiar y pegar, también puedes realizar un seguimiento de cambios en el portapapeles. Para hacerlo, debes controlar el evento [**ContentChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.ContentChanged) del portapapeles.
 
@@ -84,7 +91,7 @@ Clipboard.ContentChanged += (s, e) =>
 }
 ```
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 
 * [Comunicación entre aplicaciones](index.md)
 * [DataTransfer](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.aspx)
@@ -102,10 +109,5 @@ Clipboard.ContentChanged += (s, e) =>
 * [AvailableFormats](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.availableformats.aspx)
 * [Contains](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.contains.aspx)
 * [ContentChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.datatransfer.clipboard.contentchanged.aspx)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

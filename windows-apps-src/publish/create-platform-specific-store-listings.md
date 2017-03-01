@@ -1,15 +1,22 @@
 ---
 author: jnHs
 Description: "Si has proporcionado paquetes destinados a diferentes sistemas operativos, tienes la opción de personalizar partes de la descripción de la Tienda para cada sistema operativo de destino."
-title: "Creación de descripciones de la Tienda específicas de la plataforma"
+title: "Crear descripciones de la Tienda específicas de la plataforma"
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
-ms.openlocfilehash: 8d9b026cf09d076cd7f7dc8a72d611e68ddd61c7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: aaeedd655e5ae84dc4ee71683a9831412c8ef5ac
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Creación de descripciones de la Tienda específicas de la plataforma
+# <a name="create-platform-specific-store-listings"></a>Creación de descripciones de la Tienda específicas de la plataforma
 
 
 Si has proporcionado paquetes destinados a diferentes sistemas operativos, tienes la opción de personalizar partes de la descripción de la Tienda para cada sistema operativo de destino. No verás esta opción a menos que ya hayas cargado paquetes e incluido paquetes para versiones anteriores del sistema operativo (Windows 8.x o versiones anteriores o para Windows Phone 8.x o versiones anteriores).
@@ -20,7 +27,7 @@ Las descripciones de la Tienda específicas de la plataforma son útiles si quie
 
 > **Nota**  Al crear una descripción de la Tienda específica de la plataforma en un idioma, no se crea una descripción de la Tienda específica de la plataforma en otros idiomas que admita la aplicación, aunque hayas [especificado información de descripción de la Tienda](create-app-store-listings.md) para esos idiomas. Deberás crear la descripción de la Tienda específica de la plataforma por separado para cada idioma.
 
-## Creación de una descripción de la Tienda específica de la plataforma
+## <a name="creating-a-platform-specific-store-listing"></a>Creación de una descripción de la Tienda específica de la plataforma
 
 En la parte superior de tu página de **descripción de la Tienda**, verás un enlace a **Creación de una descripción de la Tienda de aplicaciones específicas de la plataforma** si has cargado paquetes que admitan versiones anteriores del sistema operativo (Windows 8.x o versiones anteriores o Windows Phone 8.x o versiones anteriores).
 
@@ -36,7 +43,7 @@ Después de hacer clic en **Continuar**, la página **Descripción de la Tienda*
 
 > **Nota**  No todos los campos de la descripción de la Tienda de la aplicación se pueden personalizar para un SO de destino específico. Para obtener más información, consulta [Campos compartidos](create-app-store-listings.md#shared-fields).
 
-## Supresión de una descripción de la Tienda específica de la plataforma
+## <a name="removing-a-platform-specific-store-listing"></a>Supresión de una descripción de la Tienda específica de la plataforma
 
 Si creas una descripción de la Tienda específica de la plataforma y más adelante decides mostrar la descripción de la Tienda predeterminada a los clientes que usan ese sistema operativo, haz clic en el enlace **Eliminar**. Después de confirmar que quieres mostrar a esos clientes la descripción de la Tienda predeterminada, haz clic en **Aceptar**. Se quitará la descripción de la Tienda específica de la plataforma. Si más adelante quieres recuperarla, puedes seguir los pasos anteriores y crear una nueva descripción de la Tienda específica para ese sistema operativo.
 
@@ -46,10 +53,5 @@ Si creas una descripción de la Tienda específica de la plataforma y más adela
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

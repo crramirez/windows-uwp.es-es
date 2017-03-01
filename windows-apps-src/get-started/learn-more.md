@@ -10,8 +10,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7a6f0be15105bc70e580eaaf581152338c56bed7
-ms.openlocfilehash: 7b1d2c1dc83bf0b6d24c1de134102f14542c907d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0bf7959be6278577cc8fe93011591e4523bee623
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -19,9 +20,9 @@ ms.openlocfilehash: 7b1d2c1dc83bf0b6d24c1de134102f14542c907d
 
 # <a name="whats-next"></a>A continuación
 
-Quieres escribir una aplicación y publicarla en la Tienda Windows: ¿por dónde empezar? Si eres principiante en la plataforma UWP, prueba con algunos de los vídeos de <a href="https://channel9.msdn.com/">Channel 9</a> y con los cursos de <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a>. Si ya estás familiarizado con XAML y C#, puedes empezar leyendo los temas siguientes o ir directamente a [algunos ejemplos de descarga](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
+Quieres escribir una aplicación y publicarla en la Tienda Windows: ¿por dónde empezar? Si eres principiante en la plataforma UWP, prueba con algunos de los vídeos de <a href="https://channel9.msdn.com/">Channel 9</a> y con los cursos de <a href="https://mva.microsoft.com">Microsoft Virtual Academy</a>. Si ya estás familiarizado con XAML y C#, puedes empezar leyendo los temas siguientes o ir directamente a [algunos ejemplos de descarga](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
 
-Existen muchos marcos y herramientas disponibles para ayudarte a escribir aplicaciones, y muchos son compatibles con el desarrollo multiplataforma. Por ejemplo, si quieres escribir juegos en 2D, es posible que te interese mirar <a href="http://www.monogame.net">Monogame</a>. En el caso de los juegos 3D, existe <a href="http://www.unity3d.com">Unity</a>, y no olvides <a href="http://www.xamarin.com">Xamarin</a> si lo que te interesan son los dispositivos móviles.
+Existen muchos marcos y herramientas disponibles para ayudarte a escribir aplicaciones, y muchos son compatibles con el desarrollo multiplataforma. Por ejemplo, si quieres escribir juegos en 2D, es posible que quieras mirar <a href="http://www.monogame.net">Monogame</a> o algunos de los muchos [marcos de JavaScript o HTML](https://html5gameengine.com/). En el caso de los juegos 3D, existe <a href="http://www.unity3d.com">Unity</a>, y no olvides <a href="http://www.xamarin.com">Xamarin</a> si lo que te interesan son los dispositivos móviles.
 
 Si estás empezando, nuestra recomendación es que consultes los temas sobre la UWP para captar la esencia de la plataforma y, a continuación, investigues para crear tu interfaz de usuario mediante el uso y la posterior personalización de los controles XAML. Usarás XAML para el diseño de la aplicación ([aquí tienes un tutorial](../layout/grid-tutorial.md) que te explicará cómo), pero la principal ventaja de XAML es el uso del *enlace de datos*, que une los controles con la información que la aplicación quiere mostrar: Si eres un principiante en la plataforma de Windows, se trata de un concepto importante de comprender. 
 <table class="wdg-noborder">
@@ -94,7 +95,7 @@ El [blog para desarrolladores de Windows](https://blogs.windows.com/buildingapps
 
 ## <a name="finding-help-in-the-dev-center"></a>Búsqueda de ayuda en el Centro de desarrollo
 
-El [Centro de desarrollo de Microsoft](http://devcenter.microsoft.com) contiene una gran cantidad de documentación referente a muchas herramientas, marcos y plataformas diferentes. Cuando busques temas y muestras, debes asegurarte de que estás leyendo contenido específico de UWP. ¿Cómo puedes asegurarte de que estás leyendo el contenido correcto?
+El [Centro de desarrollo de Microsoft](http://developer.microsoft.com) contiene una gran cantidad de documentación referente a muchas herramientas, marcos y plataformas diferentes. Cuando busques temas y muestras, debes asegurarte de que estás leyendo contenido específico de UWP. ¿Cómo puedes asegurarte de que estás leyendo el contenido correcto?
 El contenido conceptual, es decir, el contenido de referencia no relacionado con la API, incluirá UWP en la dirección URL del tema. El contenido de la API tendrá una ruta de acceso que incluirá las API de Windows Runtime. 
 
 ![Ejemplo de tema conceptual de UWP](images/devcenter-topic2.png)
@@ -147,7 +148,7 @@ Esta es una lista de las secciones clave del contenido del Centro de desarrollo.
 <td align="left"><strong>Migración</strong></td>
 <td align="left"><a href="https://msdn.microsoft.com/library/windows/apps/Mt238321">Aprovecha tus conocimientos de Android e iOS para crear rápidamente aplicaciones para UWP.</a></td>
 </tr>
-<tr class="odd" style="background-color: #f2f2f2">
+<tr class="even" style="background-color: #f2f2f2">
 <td align="left"><strong>Puentes de Windows</strong></td>
 <td align="left"><a href="https://developer.microsoft.com/windows/bridges">Herramientas para actualizar aplicaciones más antiguas y aplicaciones de iOS a UWP.</a></td>
 </tr>
@@ -155,13 +156,17 @@ Esta es una lista de las secciones clave del contenido del Centro de desarrollo.
 <td align="left"><strong>Xamarin</strong></td>
 <td align="left"><a href="https://www.xamarin.com">Usa C# para escribir aplicaciones para iOS, Android y Windows 10.</a></td>
 </tr>
-<tr class="odd" style="background-color: #ffffff">
+<tr class="even" style="background-color: #f2f2f2">
 <td align="left"><strong>Fragmentos de código de tareas</strong></td>
 <td align="left"><a href="https://github.com/Microsoft/Windows-task-snippets">Código listo para usar que realiza tareas pequeñas, pero útiles.</a></td>
 </tr>
-<tr class="odd" style="background-color: #f2f2f2">
+<tr class="odd" style="background-color: #ffffff">
 <td align="left"><strong>Temas sobre procedimientos</strong></td>
 <td align="left"><a href="https://developer.microsoft.com/windows/develop">Código de ejemplo sobre características específicas de UWP.</a></td>
+</tr>
+<tr class="even" style="background-color: #f2f2f2">
+<td align="left"><strong>Hardware</strong></td>
+<td align="left"><a href="https://www.microsoftstore.com/store/msusa/en_US/cat/Developer/categoryID.69418300?icid=en_US_Store_UH_BusEd_Dev">Hardware para desarrolladores de Microsoft Store.</a></td>
 </tr>
 </table>
 
@@ -169,10 +174,5 @@ Esta es una lista de las secciones clave del contenido del Centro de desarrollo.
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

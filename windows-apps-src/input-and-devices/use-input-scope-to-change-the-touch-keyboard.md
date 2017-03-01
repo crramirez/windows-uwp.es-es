@@ -14,8 +14,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
-ms.openlocfilehash: caaa6228f2d5b2bb6566ccb285d90a396a1caf01
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 43cbc8999d21d0534c4b6e557822345a69f66007
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -262,9 +263,4 @@ Incluye la tecla **=**.
 |------------------------------------------------------------|------------------------------------------------------------------|
 | ![Teclado táctil de Windows predeterminado](images/input-scopes/kbdpcdefault.png)<br>Misma distribución que **Default**.| ![Teclado táctil de Windows Phone para nombres o números de teléfono](images/input-scopes/kbdwpnameorphonenumber.png)<br>Incluye las teclas **;** y **@**. La tecla **&amp;123** se sustituye por la tecla **123**, que abre el teclado del teléfono (consulta **TelephoneNumber**).|
 |Disponibilidad de funciones:<ul><li>Revisión ortográfica: habilitada de manera predeterminada, se puede deshabilitar</li><li>Autocorrección: siempre deshabilitada</li><li>Uso de mayúsculas automático: siempre habilitado</li><li>Predicción de texto: siempre deshabilitada</li></ul> | Disponibilidad de funciones:<ul><li>Revisión ortográfica: deshabilitada de manera predeterminada, se puede habilitar</li><li>Autocorrección: deshabilitada de manera predeterminada, se puede habilitar</li><li>Uso de mayúsculas automático: deshabilitado de manera predeterminada, se puede habilitar. La primera letra de cada palabra se escribe en mayúscula.</li><li>Predicción de texto: deshabilitada de manera predeterminada, se puede habilitar</li></ul> |
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

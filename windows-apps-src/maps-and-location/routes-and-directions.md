@@ -3,16 +3,23 @@ author: msatranjr
 title: Mostrar rutas e indicaciones en un mapa
 description: "Solicita rutas e indicaciones y muéstralas en tu aplicación."
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, ruta, mapa, ubicación, indicaciones"
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: eb3596236e7de29473635b26f48f0c7e4fa1d49f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 11519df0c6655d663b31759e9064337a706bbc53
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Mostrar rutas e indicaciones en un mapa
+# <a name="display-routes-and-directions-on-a-map"></a>Mostrar rutas e indicaciones en un mapa
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Solicita rutas e indicaciones y muéstralas en tu aplicación.
@@ -25,7 +32,7 @@ Solicita rutas e indicaciones y muéstralas en tu aplicación.
 
  
 
-## Una introducción a los resultados de MapRouteFinder
+## <a name="an-intro-to-maproutefinder-results"></a>Una introducción a los resultados de MapRouteFinder
 
 
 Así es como están relacionadas las clases de rutas e indicaciones:
@@ -36,7 +43,7 @@ Así es como están relacionadas las clases de rutas e indicaciones:
 -   [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) contiene una colección de objetos [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955). Obtén acceso a esta colección a través de la propiedad [**Legs**](https://msdn.microsoft.com/library/windows/apps/dn636973) de **MapRoute**.
 -   Cada [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) contiene una colección de objetos [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961). Accede a esta colección a través de la propiedad [**Maneuvers**](https://msdn.microsoft.com/library/windows/apps/dn636959) de **MapRouteLeg**.
 
-## Mostrar indicaciones
+## <a name="display-directions"></a>Mostrar indicaciones
 
 
 Obtén una ruta e indicaciones para ir a pie o en coche mediante una llamada a los métodos de la clase [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938); por ejemplo, [**GetDrivingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636943) o [**GetWalkingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636953). El objeto [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) contiene un objeto [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) al que puedes tener acceso mediante su propiedad [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940).
@@ -126,7 +133,7 @@ Turn right onto James St.
 You have reached your destination.
 ```
 
-## Mostrar rutas
+## <a name="display-routes"></a>Mostrar rutas
 
 
 Para mostrar un objeto [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) en un [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004), construye una [**MapRouteView**](https://msdn.microsoft.com/library/windows/apps/dn637122) con el objeto **MapRoute**. A continuación, agrega la **MapRouteView** a la colección [**Routes**](https://msdn.microsoft.com/library/windows/apps/dn637047) del **MapControl**.
@@ -184,17 +191,11 @@ En este ejemplo se muestra lo siguiente en un [**MapControl**](https://msdn.micr
 
 ![Control de mapa con ruta visualizada.](images/routeonmap.png)
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/)
 * [Muestra de mapa de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Vídeo de compilación de 2015: Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en tus aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Ejemplo de aplicación de tráfico de UWP](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

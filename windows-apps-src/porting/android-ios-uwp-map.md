@@ -3,19 +3,27 @@ author: GrantMeStrength
 Description: "Compara las características de plataforma entre iOS, Android y Windows 10."
 Search.Product: eADQiWindows 10XVcnh
 title: "Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS"
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 translationtype: Human Translation
-ms.sourcegitcommit: a55e7d0945902ce44ebad481475e8324c9859054
-ms.openlocfilehash: 8acd22c44cf6423aba01083d1e32d282c87f44cb
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e5cf0a75515458a558e94a9f8bb54913e7df4a14
+ms.lasthandoff: 02/08/2017
 
 ---
 
-#Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS
+#<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Asignación de conceptos de aplicaciones de Windows para desarrolladores de Android e iOS
 
 Si eres un desarrollador con conocimientos o código de Android o iOS, y quieres hacer el cambio a Windows 10 y la Plataforma universal de Windows (UWP), este recurso tiene todo lo que necesitas para asignar características de la plataforma, y tus conocimientos, entre las tres plataformas.
 
 Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp-root.md). Este documento también está disponible como [descarga](https://www.microsoft.com/download/details.aspx?id=52041).
 
-## Interfaz de usuario (UI)
+## <a name="user-interface-ui"></a>Interfaz de usuario (UI)
 
 
 <table style="width:100%">
@@ -662,9 +670,4 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 </tr>
 </tbody>
 </table>
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

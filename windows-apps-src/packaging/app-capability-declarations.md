@@ -2,15 +2,22 @@
 author: msatranjr
 ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: Declaraciones de funcionalidades de las aplicaciones
-description: "Las funcionalidades deben declararse en el manifiesto del paquete de la aplicación de la Plataforma universal de Windows (UWP) para acceder a determinadas API o ciertos recursos como imágenes, música o dispositivos, como la cámara o el micrófono."
+description: "Las funcionalidades deben declararse en el manifiesto del paquete de tu aplicación para la Plataforma universal de Windows (UWP) para acceder a determinadas API o ciertos recursos, como imágenes, música o dispositivos, como la cámara o el micrófono."
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: ece16df809e7f030c3cbb7a6ab5e727ae77614e3
-ms.openlocfilehash: 5b1052c8b20908cef431a4d1d144d5e8fe1a0eac
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 29aa2aefda5eebfade2da6b3e2b1e8b71361889f
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="app-capability-declarations"></a>Declaraciones de funcionalidades de las aplicaciones
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Las funcionalidades deben declararse en el [manifiesto del paquete](https://msdn.microsoft.com/library/windows/apps/BR211474) de la aplicación de la Plataforma universal de Windows (UWP) para acceder a determinadas API o ciertos recursos como imágenes, música o dispositivos, como la cámara o el micrófono.
 
@@ -175,9 +182,4 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan ap
 * [Cómo especificar funcionalidades en un manifiesto del paquete](https://msdn.microsoft.com/library/windows/apps/BR211477)
 * [Cómo especificar funcionalidades de dispositivo en un manifiesto del paquete](https://msdn.microsoft.com/library/windows/apps/Dn263092)
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

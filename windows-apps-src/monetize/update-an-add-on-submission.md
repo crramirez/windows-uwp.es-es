@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: "Usa este método en la API de envío de la Tienda Windows para actualizar un envío de complemento ya existente."
 title: "Actualizar un envío de complemento mediante la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP, API de envío de la Tienda Windows, envío de complemento, producto desde la aplicación, IAP"
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: ac126d8e8cf8301399a3248a1d65e19805e70255
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8b06973c7c6949851bf786b1fb37026eee4b5fad
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -206,9 +213,4 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Commit an add-on submission (Confirmar un envío de complemento)](commit-an-add-on-submission.md)
 * [Delete an add-on submission (Eliminar un envío de complemento)](delete-an-add-on-submission.md)
 * [Get the status of an add-on submission (Obtener el estado de un envío de complemento)](get-status-for-an-add-on-submission.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

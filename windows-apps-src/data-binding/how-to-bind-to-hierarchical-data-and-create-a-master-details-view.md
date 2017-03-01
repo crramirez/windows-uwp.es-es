@@ -2,15 +2,22 @@
 author: mcleblanc
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
 title: "Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles"
-description: "Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de CollectionViewSource que están enlazadas juntas en una cadena."
+description: "Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos si enlazas controles de elementos a instancias de CollectionViewSource que están enlazadas juntas en una cadena."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 91786a785eece1448a36ebf48b8c8ef5c131e609
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 107d4a9778b377370632b6e8d37ad3216858d251
+ms.lasthandoff: 02/07/2017
 
 ---
-# Enlazar datos jerárquicos y crear una vista de tipo maestro-detalles
+# <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 > **Nota** Consulta también [Master/detail sample](http://go.microsoft.com/fwlink/p/?linkid=619991).
@@ -23,15 +30,15 @@ Crearemos una vista de una jerarquía de un equipo deportivo organizada en lista
 
 ![vista maestro/detalles de una jerarquía deportiva](images/xaml-masterdetails.png)
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 En este tema suponemos que sabes cómo crear una aplicación básica UWP. Si quieres obtener instrucciones para crear tu primera aplicación UWP, consulta el tema sobre cómo [crear tu primera aplicación UWP con C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/Hh974581).
 
-## Crear el proyecto
+## <a name="create-the-project"></a>Crear el proyecto
 
 Crea un nuevo proyecto de **Aplicación vacía (Windows Universal)**. Asígnale el nombre "MasterDetailsBinding".
 
-## Crear el modelo de datos
+## <a name="create-the-data-model"></a>Crear el modelo de datos
 
 Agrega una nueva clase al proyecto, asígnale el nombre de ViewModel.cs y agrégale este código. Se trata de la clase de origen de enlace.
 
@@ -104,7 +111,7 @@ namespace MasterDetailsBinding
 }
 ```
 
-## Crear la vista
+## <a name="create-the-view"></a>Crear la vista
 
 Después, expón la clase del origen de enlace desde la clase que representa la página de marcado. Para ello, agrega una propiedad de tipo **LeagueList** a **MainPage**.
 
@@ -221,10 +228,5 @@ Ten en cuenta que mediante un enlace directo al elemento [**CollectionViewSource
  
 
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

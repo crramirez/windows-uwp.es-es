@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 141900dd-f1d3-4432-ac8b-b98eaa0b0da2
 description: "Obtén información sobre las soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones XAML."
 title: "Guía de solución de problemas de XAML y C#"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anuncios, publicidad, AdControl, solución de problemas, XAML, c#"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: 63db8e9899c3337f558fc0e60b1b81cbcf9b0d8d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0d5ba07f3a77f360dcb45c7139a7301cdb623dbb
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -270,9 +277,4 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

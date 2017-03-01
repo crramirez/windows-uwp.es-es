@@ -3,17 +3,26 @@ author: mcleanbyron
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
 description: "Usa estos métodos en la API de envío de la Tienda Windows para recuperar los datos de las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows."
 title: "Obtener datos de aplicación mediante la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP, API de envío de la Tienda Windows, Windows Store submission API, datos de la aplicación, app data"
 translationtype: Human Translation
-ms.sourcegitcommit: 020c8b3f4d9785842bbe127dd391d92af0962117
-ms.openlocfilehash: 23839faca120976a07e666b9d6861aa8750898ad
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 756f11cdc440a891658c2311cc61199dec3d6d1f
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="get-app-data-using-the-windows-store-submission-api"></a>Obtener datos de aplicación mediante la API de envío de la Tienda Windows
 
-Usa los siguientes métodos de la API de envío de la Tienda Windows para obtener datos de tus aplicaciones. Para obtener una introducción a la API de envío de la Tienda Windows, consulta [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
+Usa los métodos siguientes de la API de envío de la Tienda Windows para obtener datos de aplicaciones existentes en tu cuenta del Centro de desarrollo. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
->**Nota**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado. Estos métodos solo se pueden usar para obtener datos de aplicaciones. Para crear o administrar envíos de aplicaciones, consulta los métodos de [Administrar envíos de aplicaciones](manage-app-submissions.md).
+>**Nota:**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. Este permiso se habilita para cuentas de desarrollador en fases y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilite este permiso para tu cuenta.
+
+Antes de poder usar estos métodos, la aplicación ya debe existir en tu cuenta del Centro de desarrollo. Para crear o administrar envíos de aplicaciones, consulta los métodos de [Administrar envíos de aplicaciones](manage-app-submissions.md).
 
 <table>
 <colgroup>
@@ -185,9 +194,4 @@ Este recurso tiene los siguientes valores.
 * [Obtener una aplicación](get-an-app.md)
 * [Obtener complementos para una aplicación](get-add-ons-for-an-app.md)
 * [Obtener paquetes piloto para una aplicación](get-flights-for-an-app.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

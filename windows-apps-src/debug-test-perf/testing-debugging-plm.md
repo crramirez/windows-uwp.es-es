@@ -2,23 +2,31 @@
 author: DelfCo
 description: "Herramientas y técnicas para depurar y probar cómo funciona tu aplicación con Administración del ciclo de vida de los procesos."
 title: "Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)"
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 translationtype: Human Translation
-ms.sourcegitcommit: cbf3d2bb1466ca06e397561ad90d95db28e7136d
-ms.openlocfilehash: 1ea7b969ce0b8992306bb8a2d2b569905cc0cc67
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: a5315534fc305c85dcf410b4808d2f8ebd844b3e
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)
+# <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>Herramientas de pruebas y depuración de Administración del ciclo de vida de los procesos (PLM)
 
 Una de las diferencias clave entre las aplicaciones para UWP y las aplicaciones de escritorio tradicionales es que los títulos UWP residen en un contenedor de aplicación sujeto a Administración de ciclo de vida de los procesos (PLM). Las aplicaciones para UWP pueden suspenderse, reanudarse o finalizarse en todas las plataformas con el servicio Agente de tiempo de ejecución. También hay herramientas dedicadas que puedes usar para forzar dichas transiciones al depurar o probar el código que las controla.
 
-## Características de Visual Studio 2015
+## <a name="features-in-visual-studio-2015"></a>Características de Visual Studio 2015
 
 El depurador integrado de Visual Studio 2015 puede ayudarte a investigar posibles problemas al usar características exclusivas de UWP. Puedes forzar la aplicación en diferentes estados PLM mediante la barra de herramientas **Eventos de ciclo de vida**, que se vuelve visible cuando se ejecuta y depura el título.
 
 ![Barra de herramientas de eventos de ciclo de vida](images/gs-debug-uwp-apps-001.png)
 
-## La herramienta PLMDebug
+## <a name="the-plmdebug-tool"></a>La herramienta PLMDebug
 
 PLMDebug.exe es una herramienta de línea de comandos que te permite controlar el estado PLM de un paquete de aplicación y se incluye como parte de Windows SDK. Después de instalarlo, la herramienta reside en *C:\Program archivos (x86) \Windows Kits\10\Debuggers\x64* de manera predeterminada. 
 
@@ -78,12 +86,7 @@ donde `Game` es el nombre de proceso y `279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0
 
 Ten en cuenta que cada llamada a **/enableDebug** debe ser posterior a otra llamada PLMDebug con el conmutador **/disableDebug**. Además, la ruta de acceso a un depurador debe ser absoluta (no se admiten las rutas de acceso relativas).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 - [Implementación y depuración de aplicaciones para UWP](deploying-and-debugging-uwp-apps.md)
 - [Depuración, pruebas y rendimiento](index.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

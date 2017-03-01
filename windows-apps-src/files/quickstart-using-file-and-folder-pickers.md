@@ -3,16 +3,23 @@ author: laurenhughes
 ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
 title: Abrir archivos y carpetas con un selector
 description: Para obtener acceso a archivos y carpetas, permite al usuario interactuar con un selector. Puedes usar las clases FileOpenPicker y FileSavePicker para obtener acceso a archivos, y la clase FolderPicker para obtener acceso a una carpeta.
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 99a21818fc3b8552de18792f408da860bf6dea22
-ms.openlocfilehash: 08782286228fa25dc492b0e7ccc90958bdec5a7f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 96a1cdbf5420978ae8889c86eeafd7825d568261
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="open-files-and-folders-with-a-picker"></a>Abrir archivos y carpetas con un selector
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -175,8 +182,3 @@ else
 ```
 
 **Sugerencia**  Cuando la aplicación obtenga acceso a un archivo o a una carpeta a través del selector de archivos, agrégalo a la propiedad [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) o a la propiedad [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458) para tenerlo controlado en el futuro. Obtendrás más información sobre cómo usar estas listas en el tema [Cómo hacer un seguimiento de los archivos y carpetas usados recientemente](how-to-track-recently-used-files-and-folders.md).
-
-
-<!--HONumber=Jan17_HO1-->
-
-

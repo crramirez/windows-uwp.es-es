@@ -1,23 +1,30 @@
 ---
 author: TylerMSFT
 title: "Controlar la activación de aplicaciones"
-description: "Obtén información sobre cómo controlar la activación de aplicaciones mediante la invalidación del método OnLaunched."
+description: "Descubre cómo controlar la activación de aplicaciones mediante la invalidación del método OnLaunched."
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: a1bb0d5d24291fad1acab41c149dd9d763610907
-ms.openlocfilehash: e41a683026a4543545556e98f6b4e9194099b362
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b6d41cc48ccf43e343aba9c844c2d74b49b1496e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Controlar la activación de aplicaciones
+# <a name="handle-app-activation"></a>Controlar la activación de aplicaciones
 
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Obtén información sobre cómo controlar la activación de aplicaciones mediante la invalidación del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335).
 
-## Invalidar el controlador de inicio
+## <a name="override-the-launch-handler"></a>Invalidar el controlador de inicio
 
 Cuando se activa una aplicación, por cualquier motivo, el sistema envía el evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018). Para ver una lista de los tipos de activación, consulta la enumeración [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693).
 
@@ -97,7 +104,7 @@ Invalida el método [**OnLaunched**](https://msdn.microsoft.com/library/windows/
 > }
 > ```
 
-## restaurar los datos de la aplicación si se suspendió y después finalizó
+## <a name="restore-application-data-if-app-was-suspended-then-terminated"></a>restaurar los datos de la aplicación si se suspendió y después finalizó
 
 
 Cuando el usuario cambia a la aplicación finalizada, el sistema envía el evento [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018), con el objeto [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) establecido en **Launch** y el objeto [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) establecido en **Terminated** o **ClosedByUser**. La aplicación debe cargar sus datos de aplicación guardados y actualizar el contenido que muestra.
@@ -157,11 +164,11 @@ Cuando el usuario cambia a la aplicación finalizada, el sistema envía el event
 
 Si el valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) es **NotRunning**, la aplicación no pudo guardar sus datos de aplicación correctamente y debe iniciarse desde cero, como si se estuviera iniciando por primera vez.
 
-## Comentarios
+## <a name="remarks"></a>Comentarios
 
-> **Nota** En las aplicaciones de la Tienda de WindowsPhone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida en ese momento y el usuario la reinicie desde un icono principal o la lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
+> **Nota** En las aplicaciones de la Tienda de Windows Phone, el evento [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) siempre va seguido del método [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), aunque la aplicación esté suspendida en ese momento y el usuario la reinicie desde un icono principal o la lista de aplicaciones. Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puedes comprobar la propiedad [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) para determinar si la aplicación se ha iniciado desde un icono principal o secundario y, según esta información, decidir si quieres presentar una experiencia de aplicación nueva o reanudar la existente.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Controlar la suspensión de la aplicación](suspend-an-app.md)
 * [Controlar la reanudación de la aplicación](resume-an-app.md)
@@ -176,9 +183,4 @@ Si el valor de [**PreviousExecutionState**](https://msdn.microsoft.com/library/w
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

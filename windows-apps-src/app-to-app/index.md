@@ -3,15 +3,22 @@ ms.assetid: E0728EB0-DFC3-4203-A367-8997B16E2328
 description: "En esta sección se explica cómo compartir datos entre aplicaciones para la Plataforma universal de Windows (UWP), como por ejemplo, cómo usar el contrato para contenido compartido, cómo copiar y pegar y cómo arrastrar y colocar."
 title: "Comunicación entre aplicaciones"
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: ea67ae5b568d1c51af3bb951fe3a68a8def8a556
-ms.openlocfilehash: 951e2ea29a47e362d9fdee0f597d2e7c808212b6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4e8c90996324e7481a7a4dab5a1ff3f30b139276
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="app-to-app-communication"></a>Comunicación entre aplicaciones
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En esta sección se explica cómo compartir datos entre aplicaciones para la Plataforma universal de Windows (UWP), como por ejemplo, cómo usar el contrato para contenido compartido, cómo copiar y pegar y cómo arrastrar y colocar.
 
@@ -20,6 +27,8 @@ El contrato para contenido compartido es una forma mediante la cual los usuarios
 Una aplicación puede admitir la función Compartir de dos modos. En primer lugar, puede tratarse de una aplicación de origen que proporciona contenido que el usuario desea compartir. En segundo lugar, puede tratarse de una aplicación de destino que el usuario selecciona como el destino del contenido compartido. Una aplicación puede ser de origen y de destino. Si quieres que tu aplicación comparta contenido como aplicación de origen, debes decidir qué formatos de datos puede proporcionar.
 
 Además del contrato para compartir contenido, las aplicaciones también pueden integrar técnicas clásicas para transferir datos, tal como arrastrar y colocar o copiar y pegar. Además de la comunicación entre aplicaciones para UWP, estos métodos también admiten el uso compartido entre aplicaciones de escritorio.
+
+
 
 ## <a name="in-this-section"></a>En esta sección:
 
@@ -32,9 +41,4 @@ Además del contrato para compartir contenido, las aplicaciones también pueden 
 
 ## <a name="see-also"></a>Consulta también
 - [Desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/develop)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

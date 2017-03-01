@@ -2,15 +2,23 @@
 author: PatrickFarley
 title: "Iniciar una aplicación con un URI"
 description: "En esta sección se describe cómo usar un identificador uniforme de recursos (URI) para iniciar una aplicación desde otra aplicación."
+ms.assetid: a40c4ce2-4f41-4a55-aeb3-1beb3e84e839
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: dfbfe75d19c08e549263b97350dfca1dbfb96447
-ms.openlocfilehash: e4b070db5180538732e08b10ace1aaa196ae5eaa
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6dceda60b60b29f772ec4fab8b142b45cc387e75
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="launch-an-app-with-a-uri"></a>Iniciar una aplicación con un URI
 
-En esta sección describe cómo usar un identificador uniforme de recursos (URI) para iniciar una aplicación desde otra aplicación, lo que permite escenarios útiles de aplicación a aplicación.
+En esta sección se describe cómo usar un identificador uniforme de recursos (URI) para iniciar una aplicación desde otra aplicación, lo que permite escenarios útiles de aplicación a aplicación.
 
 | Tema | Descripción |
 |-------|-------------|
@@ -26,8 +34,3 @@ En esta sección describe cómo usar un identificador uniforme de recursos (URI)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Iniciar una aplicación en un dispositivo remoto](launch-a-remote-app.md)
-
-
-<!--HONumber=Dec16_HO1-->
-
-

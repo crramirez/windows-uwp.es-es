@@ -1,11 +1,18 @@
 ---
 author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de un complemento de un intervalo de fechas especificado y otros filtros opcionales."
+description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de adquisición agregados de un complemento de un intervalo de fechas especificado y otros filtros opcionales."
 title: Obtener los datos de las adquisiciones de complementos
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, servicios de la Tienda, Store services, API de análisis de la Tienda Windows, Windows Store analytics API, adquisiciones de complementos, add-on acquisitions"
 translationtype: Human Translation
-ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
-ms.openlocfilehash: a79cd324d57151318445df0dedd35a98d9c9f915
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: be69a45586f4b7d66740d141dcc350eafd16bb53
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -14,7 +21,7 @@ ms.openlocfilehash: a79cd324d57151318445df0dedd35a98d9c9f915
 
 
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos de compra agregados de un complemento (también conocidos como productos desde la aplicación o IAP) de tu aplicación en formato JSON de un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de adquisiciones de complementos](../publish/add-on-acquisitions-report.md) del panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de la Tienda Windows para obtener los datos de adquisición agregados de complementos (también conocidos como productos desde la aplicación o IAP) de tu aplicación en formato JSON de un intervalo de fechas especificado y según otros filtros opcionales. Esta información también está disponible en el [informe de adquisiciones de complementos](../publish/add-on-acquisitions-report.md) del panel del Centro de desarrollo de Windows.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -177,9 +184,4 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

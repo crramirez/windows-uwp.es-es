@@ -3,16 +3,23 @@ author: TylerMSFT
 title: "Declarar tareas en segundo plano en el manifiesto de la aplicación"
 description: "Habilita el uso de tareas en segundo plano declarándolas como extensiones en el manifiesto de la aplicación."
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: b3518780600b9fe8f9be5af48eb5ee6022ec350f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 364edc93c52d3c7c8cbe5f1a85c8ca751eb44b35
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Declarar tareas en segundo plano en el manifiesto de la aplicación
+# <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tareas en segundo plano en el manifiesto de la aplicación
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -29,7 +36,7 @@ Las tareas en segundo plano fuera del proceso deben declararse en el manifiesto 
 
 Este tema supone que has creado una o más clases de tareas en segundo plano y que tu aplicación registra cada tarea en segundo plano para ejecutar en respuesta a, al menos, un desencadenador.
 
-## Agregar extensiones manualmente
+## <a name="add-extensions-manually"></a>Agregar extensiones manualmente
 
 
 Abre el manifiesto de la aplicación (Package.appxmanifest) y ve al elemento Application. Crea un elemento Extensions (si no existe uno ya).
@@ -55,7 +62,7 @@ El siguiente fragmento de código está tomado de la [muestra de tarea en segund
  </Application>
 ```
 
-## Agregar extensión de tarea en segundo plano
+## <a name="add-a-background-task-extension"></a>Agregar extensión de tarea en segundo plano
 
 
 Declara tu primera tarea en segundo plano.
@@ -102,7 +109,7 @@ Copia este código al elemento Extensions (agregarás atributos en los siguiente
 ```
 
 
-## Agregar extensiones adicionales de tareas en segundo plano
+## <a name="add-additional-background-task-extensions"></a>Agregar extensiones adicionales de tareas en segundo plano
 
 Repite el paso 2 para todas las clases de tareas en segundo plano que haya registrado tu aplicación.
 
@@ -147,11 +154,11 @@ El siguiente ejemplo es el elemento Application completo de la [muestra de tarea
 </Applications>
 ```
 
-## Declarar la tarea en segundo plano para que se ejecute en un proceso diferente
+## <a name="declare-your-background-task-to-run-in-a-different-process"></a>Declarar la tarea en segundo plano para que se ejecute en un proceso diferente
 
 La nueva característica de Windows 10, versión 1507, permite ejecutar la tarea en segundo plano en un proceso diferente de BackgroundTaskHost.exe (el proceso en el que las tareas en segundo plano se ejecutan de manera predeterminada).  Existen dos opciones: ejecutar en el mismo proceso que la aplicación en primer plano o ejecutar en una instancia de BackgroundTaskHost.exe independiente de otras instancias de tareas en segundo plano de la misma aplicación.  
 
-### Ejecutar en la aplicación en primer plano
+### <a name="run-in-the-foreground-application"></a>Ejecutar en la aplicación en primer plano
 
 En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en el mismo proceso que la aplicación en primer plano. Observa el atributo `Executable`:
 
@@ -168,7 +175,7 @@ En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en e
 > [!Note]
 > Usa el elemento Executable únicamente con tareas en segundo plano que lo requieran, por ejemplo, [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).  
 
-### Ejecutar en un proceso de host en segundo plano diferente
+### <a name="run-in-a-different-background-host-process"></a>Ejecutar en un proceso de host en segundo plano diferente
 
 En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en un proceso de BackgroundTaskHost.exe, pero en uno independiente de otras instancias de tareas en segundo plano de la misma aplicación. Observa el atributo `ResourceGroup`, que identifica las tareas en segundo plano que se ejecutan juntas.
 
@@ -203,15 +210,10 @@ En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en u
 ```
 
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
 * [Registrar una tarea en segundo plano](register-a-background-task.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

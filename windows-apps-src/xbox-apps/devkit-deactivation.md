@@ -2,9 +2,17 @@
 author: Mtoepke
 title: "Desactivación del modo de desarrollador de Xbox One"
 description: "Cómo desactivar el modo de desarrollador."
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
 translationtype: Human Translation
-ms.sourcegitcommit: 0eee645f068614d2368623859dec4e16f3190169
-ms.openlocfilehash: cccc263dcd0ed9ae843cf845438b30605e9b9d9d
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 857b1529a933f416a1c61f3afd844f6cb820f3f3
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -85,9 +93,4 @@ Si anteriormente no has vuelto a definir el modo comercial a la consola Xbox One
 ## <a name="see-also"></a>Consulta también
 - [Activación del modo de desarrollador de Xbox One](devkit-activation.md)
 - [UWP en Xbox One](index.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -1,13 +1,20 @@
 ---
 author: mijacobs
-Description: "Notifications Visualizer es una nueva aplicación para la Plataforma universal de Windows (UWP) en la Tienda que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables para Windows 10."
+Description: "Notifications Visualizer es una nueva aplicación para la Plataforma universal de Windows (UWP) en la Tienda que ayuda a los desarrolladores a diseñar iconos dinámicos y adaptables para Windows 10."
 title: Notifications Visualizer
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
-ms.openlocfilehash: 20e73c2de82bcc76c94fff38163dddac7ef9d8a9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f7269e3fde1f5dbca278b2b9047b392049ee452c
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="notifications-visualizer"></a>Notifications Visualizer
@@ -15,7 +22,7 @@ ms.openlocfilehash: 20e73c2de82bcc76c94fff38163dddac7ef9d8a9
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-Notifications Visualizer es una nueva aplicación para la Plataforma universal de Windows (UWP) en [la Tienda](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables para Windows 10.
+Notifications Visualizer es una nueva aplicación para la Plataforma universal de Windows (UWP) en [la Tienda](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores a diseñar iconos dinámicos y adaptables para Windows 10.
 
 ## <a name="overview"></a>Información general
 
@@ -56,8 +63,3 @@ Esta captura de pantalla de la aplicación muestra el editor de iconos:
 * [Crear iconos adaptables](tiles-and-notifications-create-adaptive-tiles.md)
 * [Plantillas de iconos adaptables: esquema y documentación](tiles-and-notifications-adaptive-tiles-schema.md)
 * [Iconos y notificaciones del sistema (blog de MSDN)](http://blogs.msdn.com/b/tiles_and_toasts/)
-
-
-<!--HONumber=Dec16_HO1-->
-
-

@@ -3,14 +3,21 @@ author: laurenhughes
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Empaquetado de aplicaciones para UWP
 description: "Para vender tu aplicación para la Plataforma universal de Windows (UWP) o distribuirla a otros usuarios, necesitas crear un paquete .appxupload para esta."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6decb122b56bb8835b4d0fc5178af61b59455876
-ms.openlocfilehash: 312c8fb0bbbb6231da91e7d477b800a797160e96
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ca57f50f4827ba5de7a140f1353ba864c5e2fb6c
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="packaging-uwp-apps"></a>Empaquetado de aplicaciones para UWP
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Para vender tu aplicación para la Plataforma universal de Windows (UWP) o distribuirla a otros usuarios, necesitas crear un paquete .appxupload para esta. Al crear el paquete .appxupload, se generará otro paquete .appx destinado a pruebas y a la instalación de prueba. Puedes distribuir la aplicación directamente mediante la instalación de prueba del paquete .appx a un dispositivo. Este artículo describe el proceso de configuración, creación y prueba de un paquete de la aplicación para UWP. Para obtener más información sobre la instalación de prueba, consulta [Sideload Apps in Windows 10 (Transferir localmente aplicaciones en Windows 10)](https://technet.microsoft.com/library/mt269549.aspx).
 
@@ -130,8 +137,3 @@ La siguiente lista proporciona los requisitos para la instalación de prueba de 
 
     **Nota**  Para abrir el menú contextual en una tableta, toca la pantalla donde quieras hacer clic con el botón derecho, sostén hasta que se muestre un círculo completo y después levanta el dedo. El menú contextual aparece después de levantar el dedo.
 4.  Haz clic en el botón Inicio y después escribe el nombre de la aplicación para iniciarla.
-
-
-<!--HONumber=Dec16_HO1-->
-
-

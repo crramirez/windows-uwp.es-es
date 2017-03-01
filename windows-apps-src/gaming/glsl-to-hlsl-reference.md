@@ -1,32 +1,39 @@
 ---
 author: mtoepke
 title: Referencia de GLSL a HLSL
-description: "El código de lenguaje de sombreador de OpenGL (GLSL) se migra a código de lenguaje de sombreado de alto nivel de Microsoft (HLSL) cuando se migra la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D11 para crear un juego para la Plataforma universal de Windows (UWP)."
+description: "El código OpenGL Shader Language (GLSL) se migra a código de High Level Shader Language (HLSL) de Microsoft cuando se migra la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D 11 para crear un juego para la Plataforma universal de Windows (UWP)."
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, glsl, hlsl, opengl, directx, sombreados, shaders
 translationtype: Human Translation
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 1be2c49dc88dcaecfa1d349f9dda7a9cc0619b92
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f2d5f5a363abf026e865ed07221ba9075a6a67e7
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Referencia de GLSL a HLSL
+# <a name="glsl-to-hlsl-reference"></a>Referencia de GLSL a HLSL
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-El código de lenguaje de sombreador de OpenGL (GLSL) se migra a código de lenguaje de sombreado de alto nivel de Microsoft (HLSL) cuando [se migra la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D11](port-from-opengl-es-2-0-to-directx-11-1.md) para crear un juego para la Plataforma universal de Windows (UWP). El GLSL al que se hace referencia aquí es compatible con OpenGL ES 2.0. El HLSL es compatible con Direct3D11. Para obtener información acerca de las diferencias entre Direct3D 11 y las versiones anteriores de Direct3D, consulta el tema sobre la [asignación de características](feature-mapping.md).
+El código de lenguaje de sombreador de OpenGL (GLSL) se migra a código de lenguaje de sombreado de alto nivel de Microsoft (HLSL) cuando [se migra la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md) para crear un juego para la Plataforma universal de Windows (UWP). El GLSL al que se hace referencia aquí es compatible con OpenGL ES 2.0. El HLSL es compatible con Direct3D 11. Para obtener información acerca de las diferencias entre Direct3D 11 y las versiones anteriores de Direct3D, consulta el tema sobre la [asignación de características](feature-mapping.md).
 
--   [Comparación entre OpenGL ES 2.0 y Direct3D 11](#compare)
--   [Migrar variables de GLSL a HLSL](#variables)
--   [Migrar tipos de GLSL a HLSL](#types)
--   [Migración de variables globales predefinidas de GLSL a HLSL](#porting_glsl_pre-defined_global_variables_to_hlsl)
--   [Ejemplos de cómo migrar variables de GLSL a HLSL](#example1)
-    -   [Elementos uniform, attribute y varying en GLSL](#uniform___attribute__and_varying_in_glsl)
-    -   [Búferes de constantes y transferencias de datos en HLSL](#constant_buffers_and_data_transfers_in_hlsl)
--   [Ejemplos de cómo migrar código de representación de OpenGL a Direct3D](#example2)
--   [Temas relacionados](#related_topics)
+-   [Comparación entre OpenGL ES 2.0 y Direct3D 11](#comparing-opengl-es-20-with-direct3d-11)
+-   [Migrar variables de GLSL a HLSL](#porting-glsl-variables-to-hlsl)
+-   [Migrar tipos de GLSL a HLSL](#porting-glsl-types-to-hlsl)
+-   [Migración de variables globales predefinidas de GLSL a HLSL](#porting-glsl-pre-defined-global-variables-to-hlsl)
+-   [Ejemplos de cómo migrar variables de GLSL a HLSL](#examples-of-porting-glsl-variables-to-hlsl)
+    -   [Elementos uniform, attribute y varying en GLSL](#uniform-attribute-and-varying-in-glsl)
+    -   [Búferes de constantes y transferencias de datos en HLSL](#constant-buffers-and-data-transfers-in-hlsl)
+-   [Ejemplos de cómo migrar código de representación de OpenGL a Direct3D](#examples-of-porting-opengl-rendering-code-to-direct3d)
+-   [Temas relacionados](#related-topics)
 
-## Comparación entre OpenGL ES 2.0 y Direct3D 11
+## <a name="comparing-opengl-es-20-with-direct3d-11"></a>Comparación entre OpenGL ES 2.0 y Direct3D 11
 
 
 OpenGL ES 2.0 y Direct3D 11 tienen muchas similitudes. Ambos tienen características de gráficos y canalización de representación similares. No obstante, Direct3D 11 es una implementación de representación y API, no es una especificación. OpenGL ES 2.0 es una especificación de representación y API, no es una implementación. Direct3D 11 y OpenGL ES 2.0 generalmente difiere de estas maneras:
@@ -69,11 +76,11 @@ GLSL y HLSL generalmente difieren de estas maneras:
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left">Modificadores de almacenamiento de [variable](#variables)</td>
+<td align="left">Modificadores de almacenamiento de [variable](#porting-glsl-variables-to-hlsl)</td>
 <td align="left">Búfer de constantes y transferencias de datos a través de declaraciones de diseño de entrada</td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Tipos](#types)</p>
+<td align="left"><p>[Tipos](#porting-glsl-types-to-hlsl)</p>
 <p>Tipo de vector típico: vec2/3/4</p>
 <p>lowp, mediump, highp</p></td>
 <td align="left"><p>Tipo de vector típico: float2/3/4</p>
@@ -112,7 +119,7 @@ GLSL y HLSL generalmente difieren de estas maneras:
 
 En GLSL, se presenta la mayoría del estado de OpenGL como variables globales predefinidas. Por ejemplo, con GLSL, se usa la variable **gl\_Position** para especificar la posición del vértice y la variable **gl\_FragColor** para especificar el color del fragmento. En HLSL, se pasa el estado de Direct3D explícitamente desde el código de la aplicación al sombreador. Por ejemplo, con Direct3D y HLSL, la entrada al sombreador de vértices debe coincidir con el formato de datos en el búfer de vértices, y la estructura de un búfer de constantes en el código de la aplicación debe coincidir con la estructura de un búfer de constantes ([cbuffer](https://msdn.microsoft.com/library/windows/desktop/bb509581)) en el código del sombreador.
 
-## Migrar variables de GLSL a HLSL
+## <a name="porting-glsl-variables-to-hlsl"></a>Migrar variables de GLSL a HLSL
 
 
 En GLSL, aplicas modificadores (calificadores) a una declaración de variable de sombreador global para darle a esa variable un comportamiento específico en tus sombreadores. En HLSL, estos modificadores no son necesarios porque el flujo del sombreador se define con los argumentos que se pasan al sombreador y que se devuelven de él.
@@ -161,7 +168,7 @@ En GLSL, las variables sin modificadores son tan solo variables globales ordinar
 
 Cuando pasas datos a las texturas ([Texture2D](https://msdn.microsoft.com/library/windows/desktop/ff471525) en HLSL) y sus muestras asociadas ([SamplerState](https://msdn.microsoft.com/library/windows/desktop/bb509644) en HLSL), generalmente los declaras como variables globales en el sombreador de píxeles.
 
-## Migrar tipos de GLSL a HLSL
+## <a name="porting-glsl-types-to-hlsl"></a>Migrar tipos de GLSL a HLSL
 
 
 Usa esta tabla para migrar tus tipos de GLSL a HLSL.
@@ -269,7 +276,7 @@ Usa esta tabla para migrar tus tipos de GLSL a HLSL.
 
  
 
-## Migrar variables globales predefinidas de GLSL a HLSL
+## <a name="porting-glsl-pre-defined-global-variables-to-hlsl"></a>Migrar variables globales predefinidas de GLSL a HLSL
 
 
 Usa esta tabla para migrar variables globales predefinidas de GLSL a HLSL.
@@ -377,14 +384,14 @@ Usa esta tabla para migrar variables globales predefinidas de GLSL a HLSL.
 
  
 
-Se usa la semántica para especificar la posición, el color, etc. de la entrada del sombreador de vértices y la entrada del sombreador de píxeles. Debes hacer coincidir los valores de la semántica en el diseño de entrada con la entrada del sombreador de vértices. Para ver ejemplos, consulta [Ejemplos de cómo migrar variables de GLSL a HLS](#example1). Para obtener más información acerca de la semántica de HLSL, consulta el tema sobre [semántica](https://msdn.microsoft.com/library/windows/desktop/bb509647).
+Se usa la semántica para especificar la posición, el color, etc. de la entrada del sombreador de vértices y la entrada del sombreador de píxeles. Debes hacer coincidir los valores de la semántica en el diseño de entrada con la entrada del sombreador de vértices. Para ver ejemplos, consulta [Ejemplos de cómo migrar variables de GLSL a HLS](#examples-of-porting-glsl-variables-to-hlsl). Para obtener más información acerca de la semántica de HLSL, consulta el tema sobre [semántica](https://msdn.microsoft.com/library/windows/desktop/bb509647).
 
-## Ejemplos de cómo migrar variables de GLSL a HLSL
+## <a name="examples-of-porting-glsl-variables-to-hlsl"></a>Ejemplos de cómo migrar variables de GLSL a HLSL
 
 
 Aquí te mostramos ejemplos del uso de variables de GLSL en código de OpenGL/GLSL y luego el ejemplo equivalente en código de Direct3D/HLSL.
 
-### Elementos uniform, attribute y varying en GLSL
+### <a name="uniform-attribute-and-varying-in-glsl"></a>Elementos uniform, attribute y varying en GLSL
 
 Código de aplicación de OpenGL
 
@@ -428,7 +435,7 @@ gl_FragColor = vec4(colorVarying, 1.0);
 }
 ```
 
-### Búferes de constantes y transferencias de datos en HLSL
+### <a name="constant-buffers-and-data-transfers-in-hlsl"></a>Búferes de constantes y transferencias de datos en HLSL
 
 He aquí un ejemplo de cómo pasas datos al sombreador de vértices de HLSL que después fluyen a través del sombreador de píxeles. En tu código de aplicación, define un vértice y un búfer de constantes. Después, en el código del sombreador de vértices, define el búfer de constantes como un elemento [cbuffer](https://msdn.microsoft.com/library/windows/desktop/bb509581) y almacena los datos por vértice y los datos de entrada del sombreador de píxeles. Aquí se usan estructuras denominadas **VertexShaderInput** y **PixelShaderInput**.
 
@@ -507,7 +514,7 @@ float4 main(PixelShaderInput input) : SV_Target
 }
 ```
 
-## Ejemplos de cómo migrar código de representación de OpenGL a Direct3D
+## <a name="examples-of-porting-opengl-rendering-code-to-direct3d"></a>Ejemplos de cómo migrar código de representación de OpenGL a Direct3D
 
 
 Aquí se muestra un ejemplo de representación en código de OpenGL ES 2.0 y después el ejemplo equivalente en código de Direct3D 11.
@@ -556,7 +563,7 @@ m_d3dDeviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST
 m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 ```
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Migrar de OpenGL ES 2.0 a Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md)
@@ -567,10 +574,5 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

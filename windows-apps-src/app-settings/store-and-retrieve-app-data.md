@@ -1,23 +1,30 @@
 ---
 author: mijacobs
-Description: "Obtén información sobre cómo almacenar y recuperar datos locales, de itinerancia y temporales de la aplicación."
-title: "Almacenar y recuperar la configuración y otros datos de aplicación"
+Description: "Obtén información sobre cómo almacenar y recuperar datos de la aplicación locales, de itinerancia y temporales."
+title: "Almacenar y recuperar la configuración y otros datos de la aplicación"
 ms.assetid: 41676A02-325A-455E-8565-C9EC0BC3A8FE
 label: App settings and data
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 5f50e490caa5d1d88c2f8315dc47e15b0ae22a05
-ms.openlocfilehash: 08ad1fbddc3db2c8329594419fefdc1aa0659092
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1e615e989a25520cff86c53e383d0cc5e87956d1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="store-and-retrieve-settings-and-other-app-data"></a>Almacenar y recuperar la configuración y otros datos de aplicación
+# <a name="store-and-retrieve-settings-and-other-app-data"></a>Almacenar y recuperar la configuración y otros datos de la aplicación
 
 
 
 
 
-Los *datos de aplicación* son datos mutables específicos de una aplicación concreta. Incluyen el estado de tiempo de ejecución, las preferencias del usuario y otras opciones de configuración. Los datos de la aplicación son diferentes de los *datos de usuario*, los datos que el usuario crea y administra al usar una aplicación. Entre los datos de usuario se incluyen archivos multimedia o documentos, correos electrónicos o transcripciones de comunicaciones, o registros de bases de datos que contienen contenido creado por el usuario. Los datos de usuario pueden ser útiles o significativos a más de una aplicación. Con frecuencia, se trata de datos que el usuario quiere manipular o transmitir como entidad independiente de la propia aplicación (como, por ejemplo, un documento).
+Los *datos de la aplicación* son datos mutables específicos de una aplicación concreta. Incluyen el estado de tiempo de ejecución, las preferencias del usuario y otras opciones de configuración. Los datos de la aplicación son diferentes de los *datos de usuario*, los datos que el usuario crea y administra al usar una aplicación. Entre los datos de usuario se incluyen archivos multimedia o documentos, correos electrónicos o transcripciones de comunicaciones, o registros de bases de datos que contienen contenido creado por el usuario. Los datos de usuario pueden ser útiles o significativos a más de una aplicación. Con frecuencia, se trata de datos que el usuario quiere manipular o transmitir como entidad independiente de la propia aplicación (como, por ejemplo, un documento).
 
 **Nota importante sobre los datos de la aplicación: **La duración de los datos de la aplicación está vinculada a la duración de la aplicación. Si una aplicación se quita, todos sus datos se perderán en consecuencia. No uses datos de la aplicación para almacenar datos del usuario o cualquier elemento que se considere valioso o irreemplazable. Recomendamos almacenar este tipo de información en las bibliotecas del usuario o en Microsoft OneDrive. Los datos de la aplicación son perfectos para almacenar la configuración, las preferencias de usuario específicas de la aplicación y los favoritos.
 
@@ -44,11 +51,13 @@ Hay dos tipos de datos de aplicación: configuración y archivos.
 
 ## <a name="storing-app-data-in-the-app-data-stores"></a>Almacenar datos de aplicación en los almacenes de datos de la aplicación
 
+
 Cuando se instala una aplicación, el sistema le ofrece sus propios almacenes de datos por usuario para configuración y archivos. No tiene que saber dónde y cómo existen estos datos, porque el sistema es responsable de administrar el almacenamiento físico, garantizando que los datos se mantienen aislados de otras aplicaciones y otros usuarios. También conserva el contenido de estos almacenes de datos cuando el usuario instala una actualización de la aplicación y quita el contenido de estos almacenes de datos de forma total y limpia al desinstalar la aplicación.
 
 En su almacén de datos de aplicación, cada aplicación tiene directorios raíz definidos por el sistema: uno para archivos locales, uno para archivos móviles y otro para archivos temporales. La aplicación puede agregar nuevos archivos y contenedores a cada uno de estos directorios raíz.
 
 ## <a name="local-app-data"></a>Datos de aplicaciones locales
+
 
 Los datos de aplicaciones locales deben usarse para la información que deba conservarse de una sesión de la aplicación a otra y que no sea apropiada, para datos de la aplicación móviles. Aquí también deben almacenarse los datos que no sean aplicables a otros dispositivos. No hay restricciones generales en cuanto al tamaño de los datos locales almacenados. Usa el almacén de datos de aplicación locales para los datos que no tenga sentido mover y para grandes conjuntos de datos.
 
@@ -451,10 +460,5 @@ Opcionalmente, puedes crear versiones de los datos de aplicación para la aplica
 * [**Windows.Storage.ApplicationData.RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625)
 * [**Windows.Storage.ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588)
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

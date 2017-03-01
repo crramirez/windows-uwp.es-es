@@ -3,17 +3,24 @@ author: DBirtolo
 ms.assetid: 9A0F1852-A76B-4F43-ACFC-2CC56AAD1C03
 title: "Imprimir desde tu aplicación"
 description: "Aprende a imprimir documentos desde aplicaciones universales de Windows. En este tema también se muestra cómo imprimir páginas específicas."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: 334b6d5faad641bbce67f7267be43700cd540569
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 041a591cc3e53ee6f5e4b5d51e41a0e1032c6cac
+ms.lasthandoff: 02/07/2017
 
 ---
-# Imprimir desde la aplicación
+# <a name="print-from-your-app"></a>Imprimir desde tu aplicación
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** API importantes **
+**API importantes**
 
 -   [**Windows.Graphics.Printing**](https://msdn.microsoft.com/library/windows/apps/BR226489)
 -   [**Windows.UI.Xaml.Printing**](https://msdn.microsoft.com/library/windows/apps/BR243325)
@@ -23,7 +30,7 @@ Aprende a imprimir documentos desde aplicaciones universales de Windows. En este
 
 **Sugerencia**  La mayoría de los ejemplos de este tema se basan en la muestra de impresión. Para ver el código completo, descarga la [muestra de impresión de la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619984) desde [Windows-universal-samples repo (Repositorio de muestras universales de Windows)](http://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub.
 
-## Registro para la impresión
+## <a name="register-for-printing"></a>Registro para la impresión
 
 El primer paso para agregar impresión a tu aplicación es registrarte en el contrato de Imprimir. Tu aplicación debe realizar esta acción en cada pantalla desde la que desees que el cliente pueda imprimir. Solo puedes registrar para impresión la pantalla que se muestra al usuario. Si una pantalla de la aplicación se registró para realizar la impresión, debes anular su registro cuando termine la operación de impresión. Si se reemplaza con otra pantalla, la siguiente pantalla debe registrarse en un nuevo contrato de Imprimir al abrirse.
 
@@ -82,7 +89,7 @@ protected override void OnNavigatedFrom(NavigationEventArgs e)
    }
 }
 ```
-## Crear un botón de impresión
+## <a name="create-a-print-button"></a>Crear un botón de impresión
 
 Agrega un botón de impresión a la pantalla de tu aplicación en el lugar deseado. Asegúrate de que no interfiera con el contenido que deseas imprimir.
 
@@ -129,7 +136,7 @@ async private void OnPrintButtonClick(object sender, RoutedEventArgs e)
 
 En este ejemplo, se muestra una ventana de impresión en el controlador de eventos para un clic de botón. Si el método genera una excepción (porque no se puede realizar la impresión en ese momento), el control [**ContentDialog**](https://msdn.microsoft.com/library/windows/apps/Dn633972) informa al usuario de la situación.
 
-## Aplicar formato al contenido de la aplicación
+## <a name="format-your-apps-content"></a>Aplicar formato al contenido de la aplicación
 
 Cuando llamas a **ShowPrintUIAsync**, se genera el evento [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597). El controlador de eventos **PrintTaskRequested** que se muestra en este paso, crea una clase [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436) llamando al método [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtaskrequest.createprinttask.aspx); a continuación, pasa el título de la página de impresión y el nombre de un delegado [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source). Ten en cuenta que en este ejemplo, el delegado **PrintTaskSourceRequestedHandler** se define en línea. Igualmente, el delegado **PrintTaskSourceRequestedHandler** te proporciona el contenido formateado para imprimir; más adelante lo describiremos con más detalle.
 
@@ -239,16 +246,16 @@ protected virtual void AddPrintPages(object sender, AddPagesEventArgs e)
 }
 ```
 
-## Preparar las opciones de impresión
+## <a name="prepare-print-options"></a>Preparar las opciones de impresión
 
 A continuación, hay que preparar las opciones de impresión. Por ejemplo, esta sección describe cómo establecer la opción de intervalo de página para permitir la impresión de páginas específicas. Para opciones más avanzadas, consulta [Personalizar la interfaz de usuario de vista previa de impresión](customize-the-print-preview-ui.md).
 
 En este paso se crea una nueva opción de impresión, se define una lista de los valores compatibles con la opción y después se agrega la opción a la interfaz de usuario de vista previa de impresión. La opción de intervalo de páginas tiene tres opciones de configuración:
 
-| Nombre de la opción          | Acción | 
+| Nombre de la opción          | Acción |
 |----------------------|--------|
 | **Imprimir todo**        | Imprimir todas las páginas del documento. |
-| **Imprimir selección**  | Imprimir solo el contenido seleccionado por el usuario. | 
+| **Imprimir selección**  | Imprimir solo el contenido seleccionado por el usuario. |
 | **Intervalo de impresión**      | Mostrar un control de edición en que el usuario pueda especificar las páginas que va a imprimir. |
  
 En primer lugar, modifica el controlador de eventos [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) para agregar el código que te permitirá obtener un objeto [**PrintTaskOptionDetails**](https://msdn.microsoft.com/library/windows/apps/Hh701256).
@@ -295,7 +302,7 @@ printDetailedOptions.OptionChanged += printDetailedOptions_OptionChanged;
 
 El método [**CreateTextOption**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.optiondetails.printtaskoptiondetails.createtextoption) crea el cuadro de texto **Intervalo**. En ese cuadro, el usuario indica las páginas específicas que quiere imprimir cuando selecciona la opción **Intervalo de impresión**.
 
-## Controlar los cambios de opciones de impresión
+## <a name="handle-print-option-changes"></a>Controlar los cambios de opciones de impresión
 
 El controlador de eventos **OptionChanged** realiza dos tareas. En primer lugar, muestra y oculta el campo de edición de texto del intervalo de páginas en función de la opción de intervalo de páginas que seleccione el usuario. En segundo lugar, prueba el texto especificado en el cuadro de texto del intervalo de páginas para asegurarse de que el intervalo de páginas del documento sea válido.
 
@@ -377,7 +384,7 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 
 **Sugerencia**  Consulta el método `GetPagesInRange` de la [muestra de impresión para UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984) para obtener detalles sobre cómo analizar el intervalo de páginas que especifica el usuario en el cuadro de texto Intervalo.
 
-## Obtener una vista previa de las páginas seleccionadas
+## <a name="preview-selected-pages"></a>Obtener una vista previa de las páginas seleccionadas
 
 El modo en que se aplica formato al contenido de tu aplicación para impresión depende de la naturaleza de la aplicación y su contenido. La [muestra de impresión para UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984) usa la clase auxiliar de impresión para aplicar formato al contenido que se va a imprimir.
 
@@ -387,15 +394,9 @@ Al imprimir un subconjunto de las páginas, existen varias formas de mostrar el 
 -   Mostrar solo las páginas seleccionadas por el intervalo de páginas del usuario en la vista previa de impresión, actualizando la pantalla cuando el usuario cambie el intervalo de páginas.
 -   Mostrar todas las páginas de la vista previa de impresión, pero desactivar las páginas que no estén en el intervalo de páginas seleccionado por el usuario.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Directrices de diseño de impresión](https://msdn.microsoft.com/library/windows/apps/Hh868178)
 * [//Vídeo de compilación 2015: Developing apps that print in Windows 10 (Desarrollar aplicaciones que imprimen en Windows 10)](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [Muestra de impresión para UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

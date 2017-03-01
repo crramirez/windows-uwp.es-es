@@ -1,20 +1,27 @@
 ---
 author: jnHs
 Description: "Puedes ayudar a los clientes a descubrir tu aplicación mediante un vínculo a su descripción en la Tienda."
-title: "Vincular a tu aplicación"
+title: "Vincular a la aplicación"
 ms.assetid: 5420B65C-7ECE-4364-8959-D1683684E146
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: d36f14604bd8c2ce0d5778a67f5b5b9460d9fbf3
-ms.openlocfilehash: 8e4756fa7cb7b808e543453e69b5bb3f09ffd5ce
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 59f19dbf0cd66679805a9fcf3054427a22fb0e8f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Vincular a tu aplicación
+# <a name="link-to-your-app"></a>Vincular a la aplicación
 
 
 Puedes ayudar a los clientes a descubrir tu aplicación mediante un vínculo a su descripción en la Tienda.
 
-## Obtener el vínculo a la descripción de la aplicación en la Tienda
+## <a name="getting-the-link-to-your-apps-store-listing"></a>Obtener el vínculo a la descripción de la aplicación en la Tienda
 
 
 Puedes encontrar el vínculo a la descripción en la Tienda en la página [Identidad de la aplicación](view-app-identity-details.md), en la sección **Administración de aplicaciones** de cada aplicación de tu panel.
@@ -27,7 +34,7 @@ Cuando un cliente hace clic en este vínculo, se abrirá la página de descripci
 
  
 
-## Crear un vínculo a la descripción de la aplicación en la Tienda con el distintivo de la Tienda Windows
+## <a name="linking-to-your-apps-store-listing-with-the-windows-store-badge"></a>Crear un vínculo a la descripción de la aplicación en la Tienda con el distintivo de la Tienda Windows
 
 
 Puedes crear un vínculo directo a la sinopsis de tu aplicación mediante un distintivo personalizado que permita a los clientes saber que la aplicación se encuentra en la Tienda Windows.
@@ -38,7 +45,7 @@ Para crear el distintivo, visita la página [Distintivos de la Tienda Windows](h
 
  
 
-## Vincular directamente a tu aplicación en la Tienda Windows
+## <a name="linking-directly-to-your-app-in-the-windows-store"></a>Vincular directamente a tu aplicación en la Tienda Windows
 
 
 Puedes crear un vínculo que inicie la Tienda Windows y lleve directamente a la página de descripción de la aplicación sin tener que abrir un explorador mediante el uso del esquema de URI **ms-windows-store:**.
@@ -57,10 +64,5 @@ Para obtener más información sobre cómo usar el protocolo de la Tienda Window
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

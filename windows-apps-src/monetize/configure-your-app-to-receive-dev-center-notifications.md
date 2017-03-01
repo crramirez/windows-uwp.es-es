@@ -2,9 +2,17 @@
 author: mcleanbyron
 Description: "Aprende a registrar tu aplicación para UWP para que reciba notificaciones de inserción que envíes desde el Centro de desarrollo de Windows."
 title: "Configurar la aplicación para recibir notificaciones de inserción del Centro de desarrollo"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Microsoft Store Services SDK, notificaciones push dirigidas, Centro de desarrollo
+ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: d840fbe66e5ccb439148c7849e44b923a5586740
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: a7a4c9800d5053e4b20cea578ff03a970179c7bf
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -44,7 +52,7 @@ Para registrar tu aplicación para que reciba notificaciones push dirigidas del 
     <span/>
     >**Importante:**&nbsp;&nbsp;Si tu aplicación también llama a [CreatePushNotificationChannelForApplicationAsync](https://msdn.microsoft.com/library/windows/apps/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync.aspx) para crear un canal de notificación de WNS, asegúrate de que el código no llama a [CreatePushNotificationChannelForApplicationAsync](https://msdn.microsoft.com/library/windows/apps/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync.aspx) y a la sobrecarga [RegisterNotificationChannelAsync()](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) al mismo tiempo. Si necesitas llamar a estos dos métodos, llámalos secuencialmente y espera la devolución de un método antes de llamar al otro.
 
-  * Si quieres especificar el URI de canal que se usará para las notificaciones push dirigidas del Centro de desarrollo, llama a la sobrecarga [RegisterNotificationChannelAsync(StoreServicesNotificationChannelParameters)](https://msdn.microsoft.com/library/windows/apps/mt771191.aspx). Por ejemplo, es posible que quieras hacer esto si tu aplicación ya usa Servicios de notificaciones de inserción de Windows (WNS) y quieres usar el mismo URI de canal. Primero debes crear un objeto [StoreServicesNotificationChannelParameters](https://msdns.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.aspx) y asignar la propiedad [CustomNotificationChannelUri](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.customnotificationchanneluri.aspx) al URI de tu canal.
+  * Si quieres especificar el URI de canal que se usará para las notificaciones push dirigidas del Centro de desarrollo, llama a la sobrecarga [RegisterNotificationChannelAsync(StoreServicesNotificationChannelParameters)](https://msdn.microsoft.com/library/windows/apps/mt771191.aspx). Por ejemplo, es posible que quieras hacer esto si tu aplicación ya usa Servicios de notificaciones de inserción de Windows (WNS) y quieres usar el mismo URI de canal. Primero debes crear un objeto [StoreServicesNotificationChannelParameters](https://msdn.microsoft.com/en-us/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.aspx) y asignar la propiedad [CustomNotificationChannelUri](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.customnotificationchanneluri.aspx) al URI de tu canal.
 
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#RegisterNotificationChannelAsync2)]
@@ -90,11 +98,6 @@ Ten en cuenta que este método invalida el canal que se esté utilizando para la
 
 * [Enviar notificaciones de inserción a los clientes de la aplicación](../publish/send-push-notifications-to-your-apps-customers.md)
 * [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
-* [Cómo solicitar, crear y guardar un canal de notificación](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh868221)
+* [Cómo solicitar, crear y guardar un canal de notificación](https://msdn.microsoft.com/library/windows/apps/xaml/hh868221)
 * [Microsoft Store Services SDK](https://msdn.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,9 +3,16 @@ author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Abrir una cuenta de desarrollador
 description: "Esta introducción al procedimiento de registro para establecer una cuenta de desarrollador de la Tienda Windows y otros programas de Microsoft, te ayudará a comprender el proceso de configuración de la cuenta."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 323577311d328da6ad1e7bf0a976d3cea099816a
-ms.openlocfilehash: 19096e3f1f94fb4eb98646163c6542a94f8612d4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 26329304df64689ea7938d4fc838bd730696e4a2
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="opening-a-developer-account"></a>Abrir una cuenta de desarrollador
@@ -84,10 +91,5 @@ Cuando cierres la cuenta, es importante que comprendas lo que sucede con las apl
 -   El nombre de la aplicación quedará libre para que pueda utilizarlo otro desarrollador.
 -   Si tienes saldo adeudado de ventas de aplicación anteriores, puedes solicitar el pago de ese saldo incluso si el importe adeudado no alcanza el umbral de pago habitual.
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

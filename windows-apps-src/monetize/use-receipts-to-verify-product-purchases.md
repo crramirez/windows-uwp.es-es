@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
 description: "Cada transacción de la Tienda Windows que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción."
 title: Usar recibos para comprobar la compra de productos
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, compras desde la aplicación, IAP, recibos, Windows.ApplicationModel.Store"
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 55631d364ca6f2d76d214eca6d00fbdd969c0e15
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2ada9038f9bd355bb4ab9f81967ebb2d47701cd8
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -141,9 +148,4 @@ Este elemento contiene información sobre una compra desde la aplicación de la 
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

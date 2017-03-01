@@ -3,9 +3,16 @@ author: jnHs
 Description: "En la Tienda Windows se ofrece la facturación de operador de telefonía móvil como método de pago para operadores de telefonía móviles que admiten esta funcionalidad."
 title: "Facturación de operadores de telefonía móvil"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 694c3223278c8666bfb47bf9898ac7c02ac981f4
-ms.openlocfilehash: 831e3fbd1524ce452a4346b6c52f3f1c76385d68
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cbf519d5755adb13f6a41845b4771ac459d880cc
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -26,6 +33,7 @@ Actualmente, los siguientes operadores de telefonía móvil admiten la implement
 
 | País o región  | Operadores de telefonía móvil |
 |-----------------|------------------|
+| Austria         | Hutchison 3G Austria |
 | Finlandia         | DNA, Elisa       |
 | Francia          | Orange           |
 | Alemania         | O2               |
@@ -37,7 +45,7 @@ Actualmente, los siguientes operadores de telefonía móvil admiten la implement
 | Suecia          | Telenor          |
 | Suiza     | Swisscom         |
 | Estados Unidos   | Sprint           |
-| Reino Unido  | O2               |
+| Reino Unido  | O2, 3 UK         |
 
  
 
@@ -55,11 +63,8 @@ Los siguientes operadores de telefonía móvil admiten la implementación hereda
 | Bélgica              | BASE, Mobistar, Proximus                                           |
 | Brasil               | Claro                                                              |
 | Canadá               | Fido, Rogers                                                       |
-| China                | China Mobile                                                       |
-| Colombia             | Movistar                                                           |
 | República Checa       | T-Mobile, Vodafone, O2                                             |
-| Ecuador              | Claro                                                              |
-| Finlandia              | Elisa, TeliaSonera, DNA                                            |
+| Finlandia              | TeliaSonera, DNA                                            |
 | Francia               | Orange, SFR, Bouygues                                              |
 | Alemania              | Telefónica, Telekom Deutschland, Vodafone                          |
 | Grecia               | Vodafone                                                           |
@@ -68,7 +73,6 @@ Los siguientes operadores de telefonía móvil admiten la implementación hereda
 | Indonesia            | Indosat, Telkomsel, Hutchinson CP Telecommunications (HCPT)        |
 | Irlanda              | O2, Vodafone, Three                                                |
 | Italia                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
-| Jordania               | Umniah                                                             |
 | México               | Iusacell, Telcel, Movistar                                         |
 | Países Bajos          | T-Mobile, Vodafone                                                 |
 | Polonia               | T-Mobile, Orange, Polkomtel (Plus), Play                           |
@@ -91,10 +95,5 @@ Esta lista se actualizará periódicamente a medida que ampliemos nuestro soport
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

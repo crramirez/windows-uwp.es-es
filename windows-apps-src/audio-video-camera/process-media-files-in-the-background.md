@@ -3,15 +3,22 @@ author: drewbatgit
 ms.assetid: B5E3A66D-0453-4D95-A3DB-8E650540A300
 description: "En este artículo se muestra cómo usar la clase MediaProcessingTrigger y una tarea en segundo plano para procesar los archivos multimedia en segundo plano."
 title: Procesar archivos multimedia en segundo plano
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: fb0e8a535ff4e27530fa45aca80b21f17a523c7b
-ms.openlocfilehash: 8a65ce9ed9de050bbcee2612bf53c5bfd44ffc72
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c7f3262c30797c8ce447b3e97a5cb7dd6d2ea025
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Procesar archivos multimedia en segundo plano
+# <a name="process-media-files-in-the-background"></a>Procesar archivos multimedia en segundo plano
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se muestra cómo usar la clase [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) y una tarea en segundo plano para procesar los archivos multimedia en segundo plano.
@@ -24,7 +31,7 @@ Para obtener información más detallada sobre las diferentes características d
 -   [Inicio, reanudación y tareas en segundo plano](https://msdn.microsoft.com/library/windows/apps/mt227652)
 -   [Distintivos de mosaico y notificaciones](https://msdn.microsoft.com/library/windows/apps/mt185606)
 
-## Crear una tarea en segundo plano de procesamiento de multimedia
+## <a name="create-a-media-processing-background-task"></a>Crear una tarea en segundo plano de procesamiento de multimedia
 
 Para agregar una tarea en segundo plano a la solución existente en Microsoft Visual Studio, escribe un nombre para la composición.
 
@@ -82,7 +89,7 @@ En el controlador para el evento [**Canceled**](https://msdn.microsoft.com/libra
 
 [!code-cs[OnCanceled](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetOnCanceled)]
 
-## Registrar y cargar la tarea en segundo plano
+## <a name="register-and-launch-the-background-task"></a>Registrar y cargar la tarea en segundo plano
 
 Para poder iniciar la tarea en segundo plano desde la aplicación en primer plano, debes actualizar el archivo Package.appmanifest de la aplicación en primer plano para que el sistema sepa que esta aplicación usa una tarea en segundo plano.
 
@@ -140,10 +147,5 @@ Se llama al controlador de eventos **OnCompleted** cuando la tarea en segundo pl
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

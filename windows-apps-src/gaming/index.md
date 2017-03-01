@@ -3,16 +3,23 @@ author: mtoepke
 title: Juegos y DirectX
 description: "La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Descubre cómo comenzar un nuevo juego o migrar uno existente."
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, juegos, games, DirectX
 translationtype: Human Translation
-ms.sourcegitcommit: 708e998e414f01bc6544d7f2435e7145ac84902b
-ms.openlocfilehash: 6437f3620afadd0b421bf11f1aa4f86558d50de1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c3a24c15f61204f3ecbc0587cf54e1da69ee712c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Juegos y DirectX
+# <a name="games-and-directx"></a>Juegos y DirectX
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Descubre cómo comenzar un nuevo juego o migrar uno existente.
 
@@ -35,9 +42,9 @@ La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear,
 | [Movimiento de mouse relativo](relative-mouse-movement.md) | Aprende a agregar controles de mouse relativos, que no usan el cursor del sistema y no devuelven coordenadas de pantalla absolutas. En su lugar, siguen el delta de píxeles entre los diferentes movimientos del mouse. |
 | [Optimizar el bucle de representación y de entrada](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) | La latencia de entrada puede influir considerablemente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida. Además, una correcta optimización de los eventos de entrada contribuye a mejorar la vida de la batería. Aprende a elegir las opciones adecuadas de procesamiento de eventos de entrada de [CoreDispatcher](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) para garantizar que el juego controle las entradas de la forma más fluida posible. |
 | [Escalado de cadena de intercambio y superposiciones](multisampling--scaling--and-overlay-swap-chains.md) | Aprende a crear cadenas de intercambio con escala para que las representaciones en los dispositivos móviles sean más rápidas, y usa también cadenas de intercambio (si las hay) para mejorar la calidad visual. |
-| [Reducir la latencia con cadenas de intercambio de DXGI 1.3](reduce-latency-with-dxgi-1-3-swap-chains.md) | Usa DXGI1.3 para reducir la latencia de fotogramas eficaz esperando a que la cadena de intercambio señale el momento adecuado para empezar a representar un nuevo fotograma. |
+| [Reducir la latencia con cadenas de intercambio de DXGI 1.3](reduce-latency-with-dxgi-1-3-swap-chains.md) | Usa DXGI 1.3 para reducir la latencia de fotogramas eficaz esperando a que la cadena de intercambio señale el momento adecuado para empezar a representar un nuevo fotograma. |
 | [Muestreo múltiple en aplicaciones para UWP](multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md) | Aprende a usar el muestreo múltiple en aplicaciones para UWP compiladas con Direct3D. |
-| [Controlar escenarios cuando se quitan dispositivos en Direct3D11](handling-device-lost-scenarios.md) | En este tema se explica cómo recrear la cadena de la interfaz de dispositivo de Direct3D y DXGI cuando se quita o reinicializa la tarjeta gráfica. |
+| [Controlar escenarios cuando se quitan dispositivos en Direct3D 11](handling-device-lost-scenarios.md) | En este tema se explica cómo recrear la cadena de la interfaz de dispositivo de Direct3D y DXGI cuando se quita o reinicializa la tarjeta gráfica. |
 | [Programación asincrónica para juegos](asynchronous-programming-directx-and-cpp.md) | En este tema se tratan diversos aspectos que deben considerarse cuando se usa la programación asincrónica y los subprocesos con DirectX. |
 | [Conexión en red de juegos](work-with-networking-in-your-directx-game.md) | Aprende a desarrollar e incorporar características de red en un juego DirectX. |
 | [Accesibilidad para juegos](accessibility-for-games.md) | Aprende a hacer que los juegos sean más accesibles. |
@@ -46,22 +53,22 @@ La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear,
 | [Interoperabilidad de DirectX y XAML](directx-and-xaml-interop.md) | Puedes usar el lenguaje XAML y Microsoft DirectX juntos en un juego para UWP. |
 | [Empaquetar un juego](package-your-windows-store-directx-game.md) | Los juegos para UWP grandes, especialmente aquellos que admiten varios idiomas con activos específicos de una región o activos de alta definición como característica opcional, pueden crecer hasta alcanzar tamaños considerables. En este tema, aprende cómo usar los paquetes de la aplicación y los lotes de aplicaciones para personalizar tu aplicación de modo que los clientes solamente reciban los recursos que de verdad necesitan. |
 | [Aprobación de concepto](concept-approval.md) | Descubre cómo enviar el producto para la aprobación del concepto, lo que será necesario si tu producto se ejecuta en Xbox o usa Xbox Live. |
-| [Guías para portar juegos](porting-guides.md) | Ofrece guías para portar los juegos existentes a Direct3D11, UWP y Windows10. |
+| [Guías para portar juegos](porting-guides.md) | Ofrece guías para portar los juegos existentes a Direct3D 11, UWP y Windows 10. |
 | [Recursos de programación de juegos](additional-directx-game-programming-resources.md) | Para más información sobre la programación de juegos en Windows, consulta los siguientes recursos. |
 
  
 
 > **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
 Para aprovechar al máximo las explicaciones y los tutoriales sobre desarrollo de juegos, debes estar familiarizado con los siguientes temas:
 
--   Microsoft C++ con Component Extensions (C++/CX). Se trata de una actualización de Microsoft C++ que incorpora el recuento automático de referencias, y es el lenguaje de desarrollo para juegos de UWP con DirectX11.1 o versiones posteriores.
+-   Microsoft C++ con Component Extensions (C++/CX). Se trata de una actualización de Microsoft C++ que incorpora el recuento automático de referencias, y es el lenguaje de desarrollo para juegos de UWP con DirectX 11.1 o versiones posteriores.
 -   Terminología básica de programación de gráficos.
 -   Conceptos básicos de programación en Windows.
--   Conocimiento básico de las API de Direct3D9 u11.
+-   Conocimiento básico de las API de Direct3D 9 u 11.
 
  
 
@@ -69,10 +76,5 @@ Para aprovechar al máximo las explicaciones y los tutoriales sobre desarrollo d
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

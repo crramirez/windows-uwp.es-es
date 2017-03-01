@@ -3,25 +3,32 @@ author: mtoepke
 title: Definir el objeto principal del juego
 description: "Vamos a ver los detalles del objeto principal de la muestra de juego y cómo las reglas que implementa se traducen en interacciones con el mundo del juego."
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, juegos, objeto principal
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8af939fee50540e5213e624703400d99cbb6785f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f81b3eaa9b896295386232f99b789dc3857b3bad
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Definir el objeto principal del juego
+# <a name="define-the-main-game-object"></a>Definir el objeto principal del juego
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Hasta ahora, hemos diseñado la estructura básica del juego de muestra y hemos implementado una máquina de estado que controla los comportamientos generales del usuario y del sistema, pero aún no hemos examinado la parte que convierte la muestra en un juego real: las reglas y las mecánicas y cómo se implementan. Vamos a ver los detalles del objeto principal de la muestra de juego y cómo las reglas que implementa se traducen en interacciones con el mundo del juego.
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Aplicar las técnicas de desarrollo básicas a la hora de implementar las reglas y las mecánicas de un juego de la Plataforma universal de Windows (UWP) sencillo con DirectX.
 
-## Consideraciones sobre el flujo del juego
+## <a name="considering-the-games-flow"></a>Consideraciones sobre el flujo del juego
 
 
 La mayor parte de la estructura básica del juego se define en estos archivos:
@@ -33,11 +40,11 @@ En el tema sobre la [definición del marco de la aplicación para UWP del juego]
 
 **Simple3DGame.cpp** proporciona el código de la clase **Simple3DGame**, que especifica la implementación del propio juego. Anteriormente, consideramos el tratamiento del juego de muestra como una aplicación para UWP. Ahora, vamos a ver el código que lo convierte en un juego.
 
-El código completo de **Simple3DGame.h/.cpp** se proporciona en el [código de muestra completo para esta sección](#code_sample).
+El código completo de **Simple3DGame.h/.cpp** se proporciona en el [código de muestra completo para esta sección](#complete-code-sample-for-this-section).
 
 Echemos un vistazo a la definición de la clase **Simple3DGame**.
 
-## Definición del objeto principal del juego
+## <a name="defining-the-core-game-object"></a>Definición del objeto principal del juego
 
 
 Cuando el singleton de la aplicación se inicia, el método **Initialize** del proveedor de la vista crea una instancia de la clase principal del juego: el objeto **Simple3DGame**. Este objeto contiene los métodos que comunican los cambios en el estado del juego a la máquina de estado definida en el marco de la aplicación, o de la aplicación al propio objeto del juego. También contiene métodos que devuelven información para actualizar el mapa de bits de representación y la pantalla de visualización frontal del juego, o para actualizar las animaciones y la física (la dinámica) del juego. El código para obtener los recursos de dispositivo gráfico que el juego usa está en GameRenderer.cpp, que detallaremos en el [Ensamblar el marco de representación](tutorial--assembling-the-rendering-pipeline.md).
@@ -89,7 +96,7 @@ Primero, revisemos los métodos internos definidos en **Simple3DGame**.
 -   **Initialize**. Establece los valores iniciales de las variables globales e inicializa los objetos del juego.
 -   **LoadGame**. Inicializa un nuevo nivel y comienza a cargarlo.
 -   **LoadLevelAsync**. Inicia una tarea asincrónica (consulta la [biblioteca de modelos paralelos](https://msdn.microsoft.com/library/windows/apps/dd492418.aspx) para obtener información más detallada) con objeto de inicializar el nivel y después invocar una tarea asincrónica en el representador para cargar los recursos de nivel específicos del dispositivo. Este método se ejecuta en otro subproceso; como consecuencia, solo se puede llamar a los métodos [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) (en contraposición a los métodos [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) desde este subproceso. Los métodos de contexto de dispositivo se llaman en el método **FinalizeLoadLevel**.
--   **FinalizeLoadLevel**. Finaliza cualquier tarea de carga de nivel que sea necesario realizar en el subproceso principal. Esto incluye cualquier llamada a métodos de contexto de dispositivo de Direct3D11 ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)).
+-   **FinalizeLoadLevel**. Finaliza cualquier tarea de carga de nivel que sea necesario realizar en el subproceso principal. Esto incluye cualquier llamada a métodos de contexto de dispositivo de Direct3D 11 ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)).
 -   **StartLevel**. Inicia el juego para un nuevo nivel.
 -   **PauseGame**. Pausa el juego.
 -   **RunGame**. Ejecuta una iteración del bucle del juego. Si el estado del juego es is **Active**, recibe una llamada de **App::Update** una vez cada iteración del bucle del juego.
@@ -100,11 +107,11 @@ Y los métodos privados:
 -   **LoadSavedState** y **SaveState**. Carga y guarda el estado actual del juego, respectivamente.
 -   **SaveHighScore** y **LoadHighScore**. Guarda y carga la puntuación más alta entre partidas, respectivamente.
 -   **InitializeAmmo**. Restablece el estado de cada objeto de esfera usado como munición a su estado original al inicio de cada ronda.
--   **UpdateDynamics**. Se trata de un método importante, ya que actualiza todos los objetos del juego basándose en entrada de controles, física y rutinas de animación preestablecidas. Es el corazón de la interactividad que define el juego. Lo analizamos con más detalle en la sección sobre cómo [actualizar el juego](#update_game).
+-   **UpdateDynamics**. Se trata de un método importante, ya que actualiza todos los objetos del juego basándose en entrada de controles, física y rutinas de animación preestablecidas. Es el corazón de la interactividad que define el juego. Lo analizamos con más detalle en la sección sobre cómo [actualizar el juego](#updating-the-game-world).
 
 Los otros métodos públicos son captadores de propiedades que devuelven información específica de juego y de superposición al marco de la aplicación para que la muestre.
 
-## Definir las variables de estado del juego
+## <a name="defining-the-game-state-variables"></a>Definir las variables de estado del juego
 
 
 Una de las funciones del objeto de juego es servir de contenedor de los datos que definen una sesión, nivel o tiempo de vida del juego, dependiendo de cómo definas el juego de forma general. En este caso, los datos de estado del juego corresponden al tiempo de vida de la partida, iniciada cuando un usuario ejecuta el juego.
@@ -149,13 +156,13 @@ private:
 Al principio del ejemplo de código hay cuatro objetos cuyas instancias se actualizan mientras se ejecuta el bucle del juego.
 
 -   El objeto **de la instancia** . Este objeto representa la entrada del jugador. (Para más información sobre el objeto **MoveLookController**, consulta el tema sobre [cómo agregar controles](tutorial--adding-controls.md).
--   Objeto **GameRenderer**. Este objeto representa al representador de Direct3D11 derivado de la clase **DirectXBase** que controla todos los objetos específicos del dispositivo y su representación. (Para más información, consulta el tema sobre cómo [ensamblar la canalización de representación](tutorial--assembling-the-rendering-pipeline.md).)
+-   Objeto **GameRenderer**. Este objeto representa al representador de Direct3D 11 derivado de la clase **DirectXBase** que controla todos los objetos específicos del dispositivo y su representación. (Para más información, consulta el tema sobre cómo [ensamblar la canalización de representación](tutorial--assembling-the-rendering-pipeline.md).)
 -   Objeto **Camera**. Este objeto representa la vista en primera persona que tiene el jugador del mundo de juego. (Para más información sobre el objeto **Camera** consulta el tema sobre cómo [ensamblar la canalización de representación](tutorial--assembling-the-rendering-pipeline.md).)
 -   Objeto **Audio**. Este objeto controla la reproducción de audio del juego. (Para más información sobre el objeto **Audio**, consulta el tema sobre cómo [agregar sonido](tutorial--adding-sound.md).)
 
 El resto de variables del juego contienen las listas de primitivos y sus cantidades en cada partida, así como datos y limitaciones específicas de las partidas. Veamos cómo la muestra configura estas variables cuando el juego se inicializa.
 
-## Inicialización e inicio del juego
+## <a name="initializing-and-starting-the-game"></a>Inicialización e inicio del juego
 
 
 Cuando un jugador inicia el juego, el objeto del juego debe inicializar su estado, crear y agregar la superposición, establecer las variables que realizan un seguimiento del rendimiento del jugador y crear una instancia de los objetos que usará para generar los niveles.
@@ -378,14 +385,14 @@ El juego de muestra configura los componentes del objeto del juego en este orden
 
 Ahora, el juego tiene instancias de todos los componentes clave: el mundo, los obstáculos, los objetivos y las esferas de munición. También tiene instancias de los niveles, que representan configuraciones de todos los componentes anteriores y sus comportamientos en cada nivel específico. Veamos cómo genera el juego los niveles.
 
-## Generación y carga de los niveles del juego
+## <a name="building-and-loading-the-games-levels"></a>Generación y carga de los niveles del juego
 
 
 La mayor parte del trabajo necesario para construir los niveles se realiza en el archivo **Level.h/.cpp**, en el que no nos detendremos porque se centra en una implementación muy específica. Lo importante es que el código de cada nivel se ejecuta como un objeto **LevelN** independiente. En caso de que quieras extender el juego, puedes crear un objeto **Level** que haya tomado un número asignado como parámetro y colocado obstáculos y objetivos al azar. También puedes hacer que cargue datos de configuración de nivel de un archivo de recursos o incluso de Internet.
 
-El código completo de **Level.h/.cpp** se proporciona en el [código de muestra completo para esta sección](#code_sample).
+El código completo de **Level.h/.cpp** se proporciona en el [código de muestra completo para esta sección](#complete-code-sample-for-this-section).
 
-## Definición del juego
+## <a name="defining-the-game-play"></a>Definición del juego
 
 
 En este punto, tenemos todos los componentes que necesitamos para ensamblar el juego. Los niveles se han generado en la memoria a partir de los primitivos, y están listos para que el jugador empiece a interactuar con ellos de alguna manera.
@@ -649,7 +656,7 @@ GameState Simple3DGame::RunGame()
 
 Esta es la llamada clave: `UpdateDynamics()`. Es lo que da vida al mundo de juego. Vamos a revisarlo.
 
-## Actualización del mundo de juego
+## <a name="updating-the-game-world"></a>Actualización del mundo de juego
 
 
 Una experiencia de juego rápida y fluida se produce cuando el mundo parece *vivo*, cuando el propio juego está en movimiento con independencia de la entrada del jugador. Los árboles se mueven con el viento, las olas rompen contra la línea de la costa, la maquinaria brilla y echa humo y los monstruos alienígenas se estiran y babean. Imagina qué tipo de juego sería si todo estuviera inmóvil, donde los gráficos solo se movieran cuando el jugador proporcionara una entrada. Sería extraño y muy poco envolvente, ¿verdad? Desde el punto de vista del jugador, la inmersión consiste en sentirse un elemento más dentro de un mundo vivo y latente.
@@ -844,7 +851,7 @@ Ahora que hemos actualizado todos los objetos de la escena y calculado todas las
 
 Veamos ahora el método de representación.
 
-## Representación de los gráficos del mundo de juego
+## <a name="rendering-the-game-worlds-graphics"></a>Representación de los gráficos del mundo de juego
 
 
 Te recomendamos que los gráficos de un juego se actualicen siempre que sea posible, lo que, como máximo, sería cada vez que haya una iteración del bucle principal del juego. A medida que se producen iteraciones del bucle, el juego se actualiza, con o sin entrada del jugador, lo que permite que las animaciones y los comportamientos calculados se muestren sin saltos. Imagina si tuviéramos una sencilla escena de agua que solo se moviera cuando el jugador pulsa un botón. Tendríamos unos efectos visuales terriblemente aburridos. El aspecto de un buen juego es fluido y sin saltos.
@@ -1041,12 +1048,12 @@ Este método dibuja la proyección del mundo en 3D y, a continuación, dibuja la
 
 Ten en cuenta que hay dos estados para la superposición Direct2D del juego de muestra: uno en el que el juego muestra la superposición de información del juego que contiene el mapa de bits para el menú de pausa, y otro donde el juego muestra el punto de mira con los rectángulos para el mando de movimiento y visión de la pantalla táctil. El texto de puntuación aparece dibujado en ambos estados.
 
-## Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 
 Llegados a este punto, probablemente sientas curiosidad por el motor de representación: cómo esas llamadas al método **Render** en los primitivos actualizados se convierten en píxeles en la pantalla. Tratamos esta cuestión en detalle en el tema sobre cómo [ensamblar el marco de representación](tutorial--assembling-the-rendering-pipeline.md). Si estás más interesado en saber cómo actualizan el estado del juego los controles del jugador, puedes consultar el tema sobre cómo [agregar controles](tutorial--adding-controls.md).
 
-## Código de muestra completo de esta sección
+## <a name="complete-code-sample-for-this-section"></a>Código de muestra completo de esta sección
 
 
 Simple3DGame.h
@@ -3606,11 +3613,11 @@ XMFLOAT3 AnimateCirclePosition::Evaluate(_In_ float t)
 ```
 
 > **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 [Crear un juego para UWP sencillo con DirectX](tutorial--create-your-first-metro-style-directx-game.md)
@@ -3621,10 +3628,5 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

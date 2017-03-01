@@ -3,23 +3,30 @@ author: mcleblanc
 description: "¿Cuáles son las opciones al desarrollar aplicaciones multiplataforma?"
 title: "Selección de un enfoque para iOS y desarrollo de aplicaciones para UWP"
 ms.assetid: 5CDAB313-07B7-4A32-A49B-026361DCC853
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 53e6c50b7a1b4262f738cd798aa2bd02291512fe
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9317ea8690d5696d4a9e55b3a88f1a2ff83d8bfd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Selección de un enfoque para iOS y desarrollo de aplicaciones para UWP
+# <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>Selección de un enfoque para iOS y desarrollo de aplicaciones para UWP
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ¿Cuáles son las opciones al desarrollar aplicaciones multiplataforma?
 
-## ¿Cuál es la mejor forma de compatibilidad de iOS y Windows?
+## <a name="whats-the-best-way-to-support-both-ios-and-windows"></a>¿Cuál es la mejor forma de compatibilidad de iOS y Windows?
 
 Windows e iOS pueden parecer muy diferentes, pero un creciente número de herramientas y técnicas pueden ayudarte enormemente si tienes que escribir aplicaciones que admitan ambas plataformas (y Android también). La mejor solución depende del tipo de aplicación que escribas, además de si empiezas desde cero o migras un proyecto existente.
 
-## Escribir una nueva aplicación
+## <a name="writing-a-new-app"></a>Escribir una nueva aplicación
 
 Con una tableta táctil vacía, tienes muchas opciones a tu disposición, incluidos:
 
@@ -39,7 +46,7 @@ Con una tableta táctil vacía, tienes muchas opciones a tu disposición, inclui
 
     El sucesor espiritual de XNA. Ahora es un marco multiplataforma de código abierto, lo que significa que puedes escribir aplicaciones en C# para muchas plataformas con compatibilidad para motores físicos, así como para gráficos 2D y 3D.
 
-## Adaptación de una aplicación existente
+## <a name="adapting-an-existing-app"></a>Adaptación de una aplicación existente
 
 Con una aplicación de iOS existente, las opciones son un poco más limitadas. Sin embargo, no todo está perdido.
 
@@ -55,7 +62,7 @@ Con una aplicación de iOS existente, las opciones son un poco más limitadas. S
 
     Un paso intermedio para migrar el proyecto de OpenGL ES 2.0 es usar ANGLE. ANGLE te permite ejecutar contenido de OpenGL ES en Windows mediante la conversión de llamadas a la API de OpenGL ES en llamadas a la API de DirectX 11.
 
-## Otras herramientas de creación multiplataforma
+## <a name="other-cross-platform-authoring-tools"></a>Otras herramientas de creación multiplataforma
 
 -   [GameSalad](http://go.microsoft.com/fwlink/p/?LinkID=320480)
 
@@ -92,10 +99,5 @@ Con una aplicación de iOS existente, las opciones son un poco más limitadas. S
 -   [PlayCanvas](http://go.microsoft.com/fwlink/p/?LinkID=394061)
 
     Una herramienta para desarrollo de juegos basados en HTML.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

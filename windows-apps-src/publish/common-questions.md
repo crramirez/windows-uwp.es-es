@@ -1,11 +1,18 @@
 ---
-author: jnHs
+author: shawjohn
 Description: "Preguntas comunes sobre las campañas publicitarias"
 title: "Preguntas comunes sobre las campañas publicitarias"
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
+ms.author: johnshaw
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 584407ea0e0fee4ec74dac0b656db59b7f694391
-ms.openlocfilehash: ac18d3b036c1ec9290212097a0f9a0feb962d915
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 20a05337052392446d733af7da180f9466fef05f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -33,7 +40,7 @@ Si usas una de las plantillas de anuncio predeterminadas, puedes elegir el tama�
 
 ## <a name="where-will-my-ad-appear"></a>¿Dónde aparecerá el anuncio?
 
-El anuncio aparecerá en las aplicaciones que comparten la clasificación por edades y la versión del SO de tu aplicación. Estas propiedades se establecen al publicar la aplicación en la Tienda Windows.
+El anuncio aparecerá en las aplicaciones que comparten la clasificación por edades y la versión del SO de tu aplicación. Estas propiedades se establecen al publicar la aplicación en la Tienda Windows. Para campañas "Universal", tus anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft.
 
 Actualmente, se admiten campañas publicitarias en estos países y regiones:
 
@@ -64,9 +71,4 @@ Ve a <http://commerce.microsoft.com>, inicia sesión con las credenciales de la 
 * [Acerca de los anuncios internos](about-house-ads.md)
 * [Acerca de los anuncios de la comunidad](about-community-ads.md)
 * [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -2,9 +2,17 @@
 author: msatranjr
 title: Anuncios de Bluetooth
 description: "En esta sección se incluyen artículos acerca de cómo integrar anuncios de Bluetooth de bajo consumo (LE) en aplicaciones para la Plataforma universal de Windows (UWP) a través de las API AdvertisementWatcher y AdvertisementPublisher."
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 translationtype: Human Translation
-ms.sourcegitcommit: b454e08015ea9bd6240c836563b1fec78e38dc2c
-ms.openlocfilehash: e21567bf2ffa5b05861cf96099290e1bb66dbf03
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: bfdb1b218676503699674c97fc962ad8161769dd
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -85,7 +93,7 @@ El siguiente código enseña cómo crear un monitor de anuncios de Bluetooth LE,
 BluetoothLEAdvertisementWatcher watcher = new BluetoothLEAdvertisementWatcher();
 watcher.Received += OnAdvertisementReceived;
 watcher.Start();
-``` 
+```    
 
 ```csharp
 private async void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher watcher, BluetoothLEAdvertisementReceivedEventArgs eventArgs)
@@ -153,8 +161,3 @@ private async void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher watch
 Esto puede traducirse aproximadamente a distancia, pero no se debe usar para medir distancias reales, ya que cada radio individual es diferente. Diferentes factores ambientales pueden dificultar la calibración de la distancia (por ejemplo, las paredes, carcasas alrededor de la radio o incluso la humedad del aire).
 
 Una alternativa a juzgar la distancia pura es definir "depósitos". Las radios tienden a informar de 0 a-50 DBm cuando están muy cerca, de -50 a -90 cuando están a una distancia media y menos de -90 cuando están lejos. El método de ensayo y error es la mejor forma de determinar cómo quieres que sean estos depósitos para tu aplicación.
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -3,21 +3,28 @@ author: jwmsft
 description: "Clases de configuración de plantillas"
 title: "Clases de configuración de plantillas"
 ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 8a52535e54a321bab6b34b6a73c53222e88d2151
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 983158dfa258eeac6305a7aa000afba7311500d3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Clases de configuración de plantillas
+# <a name="template-settings-classes"></a>Clases de configuración de plantillas
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Damos por hecho que sabes agregar controles a la interfaz de usuario, establecer sus propiedades y adjuntar controladores de eventos. Para obtener instrucciones para agregar controles a la aplicación, consulta [Agregar controles y administrar eventos](https://msdn.microsoft.com/library/windows/apps/mt228345). También damos por hecho que conoces los conceptos básicos de cómo definir una plantilla personalizada para un control al realizar una copia de la plantilla predeterminada y modificarla. Para obtener más información al respecto, consulta [Inicio rápido: plantillas de control](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374).
 
-## Escenario para las clases **TemplateSettings**
+## <a name="the-scenario-for-templatesettings-classes"></a>Escenario para las clases **TemplateSettings**
 
 Las clases **TemplateSettings** proporcionan un conjunto de propiedades que se usan al definir una nueva plantilla de control para un control. Las propiedades tienen valores como medidas de píxel para el tamaño de determinadas partes de los elementos de la interfaz de usuario. A veces, los valores son valores calculados que provienen de la lógica de control que normalmente no es de fácil reemplazo ni acceso. Algunas de las propiedades están pensadas como valores **De origen** y **De destino** que controlan las transiciones y animaciones de los elementos y, por ende, las propiedades **TemplateSettings** correspondientes vienen en pares.
 
@@ -34,7 +41,7 @@ Existen varias clases **TemplateSettings**. Todas ellas están en el espacio de 
 
 Las propiedades **TemplateSettings** están pensadas para usarlas siempre en XAML, no para el código. Se trata de subpropiedades de solo lectura de una propiedad **TemplateSettings** de solo lectura de un control principal. Para un escenario avanzado de control personalizado, en el que creas una nueva clase basada en [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) que, por consiguiente, puede influir en la lógica de control, considera la posibilidad de definir una propiedad **TemplateSettings** personalizada en el control para comunicar información que podría resultar útil a cualquier persona que esté volviendo a generar plantillas del control. Dado que esa propiedad es un valor de solo lectura, define una nueva clase **TemplateSettings** relacionada con tu control que tiene propiedades de solo lectura para cada uno de los elementos de información que son relevantes para las medidas de plantilla, posicionamiento de animación, etc. y asigna a los llamadores la instancia en tiempo de ejecución de la clase que se inicializa con la lógica de control. Las clases **TemplateSettings** se derivan de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356), de modo que las propiedades pueden usar el sistema de propiedades de dependencia de devoluciones de llamada de cambio de propiedad. Pero los identificadores de propiedades de dependencia para las propiedades no se exponen como API pública, porque las propiedades **TemplateSettings** deben ser de solo lectura para los llamadores.
 
-## Cómo usar **TemplateSettings** en una plantilla de control
+## <a name="how-to-use-templatesettings-in-a-control-template"></a>Cómo usar **TemplateSettings** en una plantilla de control
 
 Este es un ejemplo proveniente de las plantillas predeterminadas iniciales de control XAML. Este ejemplo en particular proviene de la plantilla predeterminada de [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538):
 
@@ -95,13 +102,8 @@ Una vez más, hay gran cantidad de XAML en la plantilla, por lo que solo mostram
 **Nota**  
 Cuando uses valores **TemplateSettings** como parte de la plantilla de control, asegúrate de que establecer propiedades que coincidan con el tipo del valor. De lo contrario, tendrías que crear un convertidor de valores para el enlace para poder convertir el tipo de destino del enlace a partir de un tipo de origen diferente del valor **TemplateSettings**. Para obtener más información, consulta [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Inicio rápido: Plantillas de control](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

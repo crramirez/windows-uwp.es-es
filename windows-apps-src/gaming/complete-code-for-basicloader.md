@@ -1,18 +1,25 @@
 ---
 author: mtoepke
 title: "Código completo para BasicLoader"
-description: "Código completo de una clase y sus métodos para convertir y cargar recursos gráficos comunes; como mallas, texturas y varios objetos de sombreador."
+description: "Código completo de una clase y sus métodos para convertir y cargar recursos gráficos comunes; como mallas, texturas y varios objetos del sombreador."
 ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, juegos, BasicLoader
 translationtype: Human Translation
-ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
-ms.openlocfilehash: ab16033c05273a0cd483fdc7a5302a3ff461e4b1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d6714030031a4986c8a5495fc02a5c68fb0aa4d8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Código completo para BasicLoader
+# <a name="complete-code-for-basicloader"></a>Código completo para BasicLoader
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Código completo de una clase y sus métodos para convertir y cargar recursos gráficos comunes; como mallas, texturas y varios objetos de sombreador.
 
@@ -20,28 +27,28 @@ Este tema contiene estas secciones:
 
 -   [Tecnologías](#technologies)
 -   [Requisitos](#requirements)
--   [Ver el código (C++)](#view-the-code-c-)
+-   [Ver el código (C++)](#view-the-code-c)
 
 <span id="download_locations"></span>
-## Ubicación de descarga
+## <a name="download-location"></a>Ubicación de descarga
 
 
 Este ejemplo no se puede descargar.
 
-## Tecnologías
+## <a name="technologies"></a>Tecnologías
 
 **Lenguajes de programación**: C++  
 **Modelos de programación**: Windows Runtime
 
-## Requisitos
+## <a name="requirements"></a>Requisitos
 
 **Cliente mínimo compatible**: Windows 10                              
 **Servidor mínimo compatible**: Windows Server 2016 Technical Preview 
 
 
-## Ver el código (C++)
+## <a name="view-the-code-c"></a>Ver el código (C++)
 
-## BasicLoader.h
+## <a name="basicloaderh"></a>BasicLoader.h
 
 ```cpp
 //// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
@@ -222,7 +229,7 @@ private:
 };
 ```
 
-## BasicLoader.cpp
+## <a name="basicloadercpp"></a>BasicLoader.cpp
 
 
 ```cpp
@@ -1107,10 +1114,5 @@ task<void> BasicLoader::LoadMeshAsync(
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

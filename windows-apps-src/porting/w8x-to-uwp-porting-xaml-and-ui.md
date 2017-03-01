@@ -3,15 +3,22 @@ author: mcleblanc
 description: "La práctica para definir la interfaz de usuario en forma de marcado XAML declarativo se traduce muy bien tanto para aplicaciones de tipo Universal 8.1 como para aplicaciones para la Plataforma universal de Windows (UWP)."
 title: "Migración de XAML y la interfaz de usuario de Windows Runtime 8.x a UWP"
 ms.assetid: 78b86762-7359-474f-b1e3-c2d7cf9aa907
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: ea8844925cc227d9f082595b039dd68164ad1228
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 19a6ef29265c22d1bb02464a76ab20e487c67ce4
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Migración de XAML y la interfaz de usuario de Windows Runtime 8.x a UWP
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 El tema anterior era [Solución de problemas](w8x-to-uwp-troubleshooting.md).
 
@@ -81,9 +88,9 @@ También es un método único para todas las familias de dispositivos para salir
 
 No es necesario cambiar el código que se integra con los accesos, pero es necesario agregar algo de interfaz de usuario a la aplicación para que ocupe el lugar de la barra de accesos, que no forma parte del shell de Windows 10. Una aplicación Universal 8.1 que se ejecuta en Windows 10 tiene su propia interfaz de usuario de sustitución proporcionada por el contenedor visual representado por el sistema en la barra de título de la aplicación.
 
-## <a name="controls-and-control-stylestemplates"></a>Controles y estilos y plantillas de control
+## <a name="controls-and-control-styles-and-templates"></a>Controles y estilos y plantillas de control
 
-Una aplicación Universal 8.1 que se ejecuta en Windows 10 conservará la apariencia y comportamiento de 8.1 con respecto a los controles. No obstante, al portar la aplicación a una aplicación de Windows 10, es necesario tener en cuenta algunas diferencias en la apariencia y el comportamiento. La arquitectura y el diseño de controles permanece básicamente sin modificaciones en el caso de las aplicaciones de Windows 10, por lo que los cambios se realizan principalmente en torno al [lenguaje de diseño](#design-language), la simplificación y las mejoras de facilidad de uso.
+Una aplicación Universal 8.1 que se ejecuta en Windows 10 conservará la apariencia y comportamiento de 8.1 con respecto a los controles. No obstante, al portar la aplicación a una aplicación de Windows 10, es necesario tener en cuenta algunas diferencias en la apariencia y el comportamiento. La arquitectura y el diseño de controles permanece básicamente sin modificaciones en el caso de las aplicaciones de Windows 10, por lo que los cambios se realizan principalmente en torno al [lenguaje de diseño](#design-language-in-windows-10), la simplificación y las mejoras de facilidad de uso.
 
 **Nota**   El estado visual PointerOver es relevante en cuanto a estilos o plantillas personalizados en las aplicaciones de Windows 10 y en las aplicaciones de la Tienda Windows, pero no en aplicaciones de la Tienda de Windows Phone. Por este motivo (y por las claves de recurso del sistema compatibles con las aplicaciones de Windows 10), se recomienda volver a usar las plantillas o los estilos personalizados de las aplicaciones de la Tienda Windows cuando se migre la aplicación a Windows 10.
 Si quieres estar seguro de que tus estilos o plantillas personalizados usan el conjunto de estados visuales más reciente y disfrutan de las mejoras de rendimiento realizadas en los estilos y plantillas predeterminados, edita una copia de la nueva plantilla predeterminada de Windows 10 y vuelve a aplicar la personalización. Un ejemplo de mejora del rendimiento es que se han quitado los **Border** que anteriormente encerraban un **ContentPresenter** o un panel. Ahora, un elemento secundario representa el borde.
@@ -99,7 +106,7 @@ Estos son algunos ejemplos más específicos de los cambios en los controles.
 | [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | En una aplicación de Windows 10, [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) no controla los eventos [**EdgeGesture.Completed**](https://msdn.microsoft.com/library/windows/apps/hh701622) o [**UIElement.RightTapped**](https://msdn.microsoft.com/library/windows/apps/br208984). Tampoco responde a una pulsación ni a deslizar rápidamente el dedo hacia arriba. Sigues teniendo la opción de controlar estos eventos y establecer [**IsOpen**](https://msdn.microsoft.com/library/windows/apps/hh701939). |
 | [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | Revisa el aspecto de la aplicación con los cambios visuales de [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) y [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280). Para una aplicación de Windows 10 que se ejecuta en un dispositivo móvil, estos controles ya no navegan a una página de selección, pero usan una ventana emergente por cambio de foco. |
 | [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | En una aplicación de Windows 10, no puedes poner [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) o [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) dentro de un elemento emergente. Si quieres que estos controles se muestren en un control de tipo emergente, puedes usar [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) y [**TimePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn608313). |
-| **GridView**, **ListView** | Para **GridView**/**ListView**, consulta [Cambios de GridView/ListView](#gridview). |
+| **GridView**, **ListView** | Para **GridView**/**ListView**, consulta [Cambios de GridView y ListView](#gridview-and-listview-changes). |
 | [**Concentrador**](https://msdn.microsoft.com/library/windows/apps/dn251843) | En una aplicación de la Tienda de Windows Phone, un control [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) encapsula automáticamente desde la última sección a la primera. En una aplicación de la Tienda Windows y en una aplicación de Windows 10, las secciones de concentrador no se encapsulan automáticamente. |
 | [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) | En una aplicación de la Tienda de Windows Phone, la imagen de fondo de un control [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) se mueve en paralaje respecto a las secciones del hub. En una aplicación de la Tienda Windows y en una aplicación de Windows 10, no se usa paralaje. |
 | [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)  | En una aplicación Universal 8.1, la propiedad [**HubSection.IsHeaderInteractive**](https://msdn.microsoft.com/library/windows/apps/dn251917) hace que el encabezado de sección (y un glifo de botón de contenido adicional representado junto a él) sea interactivo. En una aplicación de Windows 10, hay una prestación interactiva "Ver más" al lado del encabezado, pero el propio encabezado no es interactivo. **IsHeaderInteractive** sigue determinando si la interacción genera el evento [**Hub.SectionHeaderClick**](https://msdn.microsoft.com/library/windows/apps/dn251953). |
@@ -107,8 +114,8 @@ Estos son algunos ejemplos más específicos de los cambios en los controles.
 | **ListPickerFlyout**, **PickerFlyout**  | **ListPickerFlyout** y **PickerFlyout** están en desuso en una aplicación de Windows 10. Para una única selección emergente, usa [**MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/dn299030); para experiencias más complejas, usa [**Flyout**](https://msdn.microsoft.com/library/windows/apps/dn279496). |
 | [**PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519) | La propiedad [**PasswordBox.IsPasswordRevealButtonEnabled**](https://msdn.microsoft.com/library/windows/apps/hh702579) está en desuso en una aplicación de Windows 10 y establecerla no produce ningún efecto. Usa [**PasswordBox.PasswordRevealMode**](https://msdn.microsoft.com/library/windows/apps/dn890867) en su lugar, cuyo valor predeterminado es **Peek** (con el que aparece un glifo de ojo, como en una aplicación de la Tienda Windows). Consulta también [Directrices para cuadros de contraseña](https://msdn.microsoft.com/library/windows/apps/dn596103). |
 | [**Pivot**](https://msdn.microsoft.com/library/windows/apps/dn608241) | El control [**Pivot**](https://msdn.microsoft.com/library/windows/apps/dn608241) es ahora universal, ya no está limitado a su uso en dispositivos móviles. |
-| [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252771) | Aunque [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803) se implementa en la familia de dispositivos universales, no es totalmente funcional en dispositivos móviles. Consulta [SearchBox en desuso en favor de AutoSuggestBox](#searchbox). |
-| **SemanticZoom** | Para **SemanticZoom**, consulta [Cambios en SemanticZoom](#semantic-zoom). |
+| [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252771) | Aunque [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803) se implementa en la familia de dispositivos universales, no es totalmente funcional en dispositivos móviles. Consulta [SearchBox en desuso en favor de AutoSuggestBox](#searchbox-deprecated-in-favor-of-autosuggestbox). |
+| **SemanticZoom** | Para **SemanticZoom**, consulta [Cambios en SemanticZoom](#semanticzoom-changes). |
 | [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)  | Algunas propiedades predeterminadas de [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527) han cambiado. [**HorizontalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209549) está establecida en **Auto**, [**VerticalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209589) está establecida en **Auto** y [**ZoomMode**](https://msdn.microsoft.com/library/windows/apps/br209601) está establecida en **Disabled**. Si los nuevos valores predeterminados no son adecuados para la aplicación, puedes convertirlos en un estilo o en valores locales en el propio control.  |
 | [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | En una aplicación de la Tienda Windows, la revisión ortográfica está desactivada de forma predeterminada para [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683). En una aplicación de la Tienda de Windows Phone y en una aplicación de Windows 10, está activada siempre. |
 | [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | El tamaño de fuente predeterminado para [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) ha cambiado de 11 a 15. |
@@ -139,7 +146,7 @@ No te recomendamos que intentes admitir todos los factores de escala, pero la li
 
 Se puede reutilizar el marcado XAML de una aplicación de la Tienda Windows en cuyo marcado se empleen valores de dimensiones literales (tal vez para el tamaño de las formas u otros elementos, tal vez para la tipografía). No obstante, en algunos casos se usa un factor de escala mayor en un dispositivo para una aplicación de Windows 10 que para una aplicación Universal 8.1 (por ejemplo, se usa un 150 % en vez del 140 % anterior y un 200 % donde se usaba el 180 %). Por tanto, si encuentras que estos valores literales son demasiado altos en Windows 10, prueba a multiplicarlos por 0,8. Para obtener más información, consulta [Diseño con capacidad de respuesta 101 para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn958435).
 
-## <a name="gridviewlistview-changes"></a>Cambios de GridView/ListView
+## <a name="gridview-and-listview-changes"></a>Cambios de GridView y ListView
 
 Se han realizado varios cambios en los establecedores de estilo predeterminado de [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) para que el control de desplazamiento sea vertical (en lugar de horizontal, como era antes de forma predeterminada). Si editaste una copia del estilo predeterminado en el proyecto, la copia no tendrá estos cambios, por lo que tendrás que realizarlos manualmente. A continuación te indicamos una lista de cambios:
 
@@ -457,7 +464,7 @@ En aplicaciones de la Tienda Windows y aplicaciones de la Tienda de Windows Phon
 
 En aplicaciones de la Tienda Windows y las aplicaciones de la Tienda de Windows Phone, se establece el idioma predeterminado para el texto en el idioma de la compilación, o en en-us. En una aplicación de Windows 10, se establece el idioma predeterminado en el idioma de la aplicación superior (reserva de fuente). Puedes establecer [**FrameworkElement.Language**](https://msdn.microsoft.com/library/windows/apps/hh702066) explícitamente, pero disfrutarás de un mejor comportamiento de la reserva de fuente si no estableces un valor para esa propiedad.
 
-Si quieres obtener más información, consulta [Directrices para fuentes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) y [Diseñar aplicaciones para UWP](http://go.microsoft.com/fwlink/p/?LinkID=533896). Consulta también la sección [Controles](#controls) más arriba para obtener información sobre los cambios realizados en los controles de texto.
+Si quieres obtener más información, consulta [Directrices para fuentes](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) y [Diseñar aplicaciones para UWP](http://go.microsoft.com/fwlink/p/?LinkID=533896). Consulta también la sección [Controles](#controls-and-control-styles-and-templates) más arriba para obtener información sobre los cambios realizados en los controles de texto.
 
 ## <a name="theme-changes"></a>Cambios de tema
 
@@ -481,10 +488,5 @@ Para una aplicación Universal 8.1, el manifiesto de la aplicación [**Applicati
 ```
 
 El siguiente tema es [Migración de modelo de E/S, dispositivos y aplicaciones](w8x-to-uwp-input-and-sensors.md).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

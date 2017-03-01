@@ -1,28 +1,35 @@
 ---
 author: scottmill
 ms.assetid: 16ad97eb-23f1-0264-23a9-a1791b4a5b95
-title: "Interoperación DirectX y Direct2D nativa de composición con BeginDraw y EndDraw"
+title: "Interoperación nativa de composición con DirectX y Direct2D"
 description: "La API de Windows.UI.Composition proporciona interfaces nativas de interoperación que permiten mover contenido directamente al compositor."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 4d1bf75fee06c8f4c31ce23c89bf6267ab9e6394
+ms.sourcegitcommit: 3a929e044a6edaa4a6e2393c80d6de6d54875a9e
+ms.openlocfilehash: 8be1827350e8489106ff29bd2a1f310fd06dea38
+ms.lasthandoff: 02/06/2017
 
 ---
-# Interoperación DirectX y Direct2D nativa de composición con BeginDraw y EndDraw
+# <a name="composition-native-interoperation-with-directx-and-direct2d"></a>Interoperación nativa de composición con DirectX y Direct2D
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 La API de Windows.UI.Composition proporciona las interfaces nativas de interoperación [**ICompositorInterop**](https://msdn.microsoft.com/library/windows/apps/Mt620068), [**ICompositionDrawingSurfaceInterop**](https://msdn.microsoft.com/library/windows/apps/Mt620058) e [**ICompositionGraphicsDeviceInterop**](https://msdn.microsoft.com/library/windows/apps/Mt620065) que permiten mover contenido directamente al compositor.
 
 La interoperación nativa se estructura alrededor de objetos de superficies respaldados por texturas DirectX. Las superficies se crean a partir de un objeto de fábrica denominado [**CompositionGraphicsDevice**](https://msdn.microsoft.com/library/windows/apps/Dn706749). Este objeto se respalda con un objeto de dispositivo Direct2D o Direct3D subyacente, que usa para asignar memoria de vídeo para las superficies. La API de composición nunca crea el dispositivo DirectX subyacente. Es la responsabilidad de la aplicación crear uno y pasarlo al objeto **CompositionGraphicsDevice**. Una aplicación puede crear más de un objeto **CompositionGraphicsDevice** a la vez y puede usar el mismo dispositivo DirectX como el dispositivo de representación de varios objetos **CompositionGraphicsDevice**.
 
-## Crear una superficie
+## <a name="creating-a-surface"></a>Crear una superficie
 
 Cada objeto [**CompositionGraphicsDevice**](https://msdn.microsoft.com/library/windows/apps/Dn706749) actúa como una fábrica de superficies. Cada superficie se crea con un tamaño inicial (que puede ser 0,0), pero sin píxeles válidos. En su estado inicial, una superficie se puede consumir inmediatamente en un árbol visual, por ejemplo, a través de [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) y [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433), pero en su estado inicial la superficie no tiene ningún efecto en la salida de la pantalla. Para todos los propósitos, es totalmente transparente, incluso si el modo alfa especificado es "opaco".
 
 En ocasiones, los dispositivos DirectX se pueden considerar como inutilizables. Esto puede suceder, entre otras razones, si la aplicación pasa argumentos no válidos a determinadas API de DirectX, si el sistema restablece el adaptador de gráficos o si se actualiza el controlador. Direct3D tiene una API que una aplicación puede usar para detectar, de manera asincrónica, si el dispositivo se pierde por cualquier motivo. Cuando se pierde un dispositivo DirectX, la aplicación debe descartarlo, crear uno nuevo y pasarlo a los objetos [**CompositionGraphicsDevice**](https://msdn.microsoft.com/library/windows/apps/Dn706749) asociados anteriormente con el dispositivo DirectX incorrecto.
 
-## Cargar píxeles en una superficie
+## <a name="loading-pixels-into-a-surface"></a>Cargar píxeles en una superficie
 
 Para cargar píxeles en la superficie, la aplicación debe llamar al método [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) que devuelve una interfaz DirectX que representa una textura o contexto Direct2D, en función de lo que solicita la aplicación. A continuación, la aplicación debe representar o cargar píxeles en esa textura. Cuando termine la aplicación, debe llamar al método [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060). Solo en ese punto los píxeles estarán disponibles para la composición. Sin embargo, aún no se mostrarán en pantalla hasta la próxima vez que se confirmen todos los cambios en el árbol visual. Si el árbol visual se confirma antes de que se llame al método **EndDraw**, la actualización que está en curso no estará visible en pantalla y la superficie seguirá mostrando el contenido que tenía antes de **BeginDraw**. Cuando se llama a **EndDraw**, se invalida la textura o el puntero de contexto Direct2D que devuelve BeginDraw. Una aplicación nunca debe almacenar ese puntero en caché más allá de la llamada a **EndDraw**.
 
@@ -30,11 +37,11 @@ La aplicación solo puede llamar a BeginDraw en una superficie a la vez, para cu
 
 Los métodos [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx), [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx), [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062) y [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) devuelven errores si la aplicación realiza una operación incorrecta (por ejemplo, pasar argumentos no válidos o llamar a **BeginDraw** en una superficie antes de llamar a **EndDraw** en otra). Estos tipos de errores representan errores de aplicación y, por lo tanto, la expectativa es que se controlan con un error inmediato. **BeginDraw** también puede devolver un error si se pierde el dispositivo DirectX subyacente. Este error no es grave, ya que la aplicación puede volver a crear su dispositivo DirectX e intentarlo de nuevo. Por consiguiente, se espera que la aplicación procese la pérdida del dispositivo simplemente omitiendo la representación. Si se produce un error en **BeginDraw** por cualquier motivo, la aplicación tampoco debe llamar a **EndDraw**, ya que el inicio no se realizó correctamente en primer lugar.
 
-## Desplazamiento
+## <a name="scrolling"></a>Desplazamiento
 
 Por motivos de rendimiento, cuando una aplicación llama a [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx), no se garantiza que el contenido de la textura devuelta sea el contenido anterior de la superficie. La aplicación debe suponer que el contenido es aleatorio y, por lo tanto, debe asegurar que se toquen todos los píxeles, ya sea borrando la superficie antes de la representación o dibujando suficiente contenido opaco para cubrir todo el rectángulo actualizado. Esto, junto con el hecho de que el puntero de textura solo es válido entre las llamadas a **BeginDraw** y [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060), impide que la aplicación copie el contenido anterior de la superficie. Por este motivo, ofrecemos un método [**Scroll**](https://msdn.microsoft.com/library/windows/apps/mt620063), que permite que la aplicación realice una copia de los píxeles de la misma superficie.
 
-## Ejemplo de uso
+## <a name="usage-example"></a>Ejemplo de uso
 
 En el siguiente ejemplo se muestra un escenario muy sencillo, donde una aplicación crea superficies de dibujo y usa [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) y [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) para rellenar las superficies con texto. La aplicación usa DirectWrite para el diseño del texto (los detalles no se muestran) y luego usa Direct2D para procesarlo. El dispositivo de gráficos de composición acepta el dispositivo Direct2D directamente en el momento de inicialización. Esto permite a **BeginDraw** devolver un puntero de interfaz ID2D1DeviceContext, que es bastante más eficaz que cuando la aplicación crea un contexto de Direct2D para ajustar una interfaz ID3D11Texture2D devuelta en cada operación de dibujo.
 
@@ -266,10 +273,5 @@ private:
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

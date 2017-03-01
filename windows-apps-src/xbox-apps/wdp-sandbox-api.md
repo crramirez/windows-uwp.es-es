@@ -2,16 +2,24 @@
 author: payzer
 title: Referencia de API de espacio aislado de Xbox Live de Device Portal
 description: "Obtén información sobre cómo tener acceso al espacio aislado de Xbox Live mediante programación."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 72c7459c-420a-4da9-8afa-191a846185a5
 translationtype: Human Translation
-ms.sourcegitcommit: a857ba338a971e651653193ff2149f08b1665a36
-ms.openlocfilehash: 2a0bfa2eecffb2b0f5ed0bc691cb90bcd7191321
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 629e8c3d35c9b9730c07e9f810909298558ae700
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Referencia de API de espacio aislado de Xbox Live   
+# <a name="xbox-live-sandbox-api-reference"></a>Referencia de API de espacio aislado de Xbox Live   
 Puedes obtener y configurar el espacio aislado de Xbox Live con esta API de REST.
 
-## Obtener el espacio aislado de Xbox Live
+## <a name="get-the-xbox-live-sandbox"></a>Obtener el espacio aislado de Xbox Live
 
 **Solicitud**
 
@@ -46,7 +54,7 @@ Código de estado HTTP      | Descripción
 4XX | Códigos de error
 5XX | Códigos de error
 
-## Configurar el espacio aislado de Xbox Live
+## <a name="set-the-xbox-live-sandbox"></a>Configurar el espacio aislado de Xbox Live
 Puedes cambiar el espacio aislado de Xbox Live del dispositivo con la siguiente solicitud. Ten en cuenta que en Xbox One, el dispositivo debe reiniciarse para que la configuración surta efecto.
 
 **Solicitud**
@@ -86,10 +94,5 @@ Código de estado HTTP      | Descripción
 **Familias de dispositivos disponibles**
 
 * Windows Xbox
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

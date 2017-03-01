@@ -3,16 +3,23 @@ author: mtoepke
 title: "Código completo para BasicReaderWriter"
 description: "Código completo de una clase y sus métodos para leer y escribir archivos de datos binarios en general."
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, juegos, BasicReaderWriter
 translationtype: Human Translation
-ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
-ms.openlocfilehash: de6ab2687cfbe7b485e51bc90811b1988e29fb7e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1dc7ba0b25ceeb5b27bc718bed1db0e2db39b6c0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Código completo para BasicReaderWriter
+# <a name="complete-code-for-basicreaderwriter"></a>Código completo para BasicReaderWriter
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Código completo de una clase y sus métodos para leer y escribir archivos de datos binarios en general. Usado por la clase [BasicLoader](complete-code-for-basicloader.md).
 
@@ -20,29 +27,29 @@ Este tema contiene estas secciones:
 
 -   [Tecnologías](#technologies)
 -   [Requisitos](#requirements)
--   [Ver el código (C++)](#view-the-code-c-)
+-   [Ver el código (C++)](#view-the-code-c)
 
 
-## Ubicación de descarga
+## <a name="download-location"></a>Ubicación de descarga
 
 Este ejemplo no se puede descargar.
 
 
-## Tecnologías
+## <a name="technologies"></a>Tecnologías
 
 **Lenguajes de programación**: C++  
 **Modelos de programación**: Windows Runtime
 
 
-## Requisitos
+## <a name="requirements"></a>Requisitos
 
  **Cliente mínimo compatible**: Windows 10       
  **Servidor mínimo compatible**: Windows Server 2016 Technical Preview 
 
-## Ver el código (C++)
+## <a name="view-the-code-c"></a>Ver el código (C++)
 
 
-## BasicReaderWriter.h
+## <a name="basicreaderwriterh"></a>BasicReaderWriter.h
 
 
 ```cpp
@@ -91,7 +98,7 @@ internal:
 };
 ```
 
-## BasicReaderWriter.cpp
+## <a name="basicreaderwritercpp"></a>BasicReaderWriter.cpp
 
 
 ```cpp
@@ -262,10 +269,5 @@ task<void> BasicReaderWriter::WriteDataAsync(
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

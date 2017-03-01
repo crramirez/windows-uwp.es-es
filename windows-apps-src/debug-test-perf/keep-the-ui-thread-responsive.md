@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
 title: Mantener la capacidad de respuesta del subproceso de la interfaz de usuario
 description: "Los usuarios esperan que las aplicaciones sigan respondiendo mientras realizan cálculos, independientemente del tipo de equipo."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
-ms.openlocfilehash: 2a215264db018dfecff897b13b24ba535e7483ec
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: eae6c26979f3aa6b1c9fabf217f6a49ed89dd38b
+ms.lasthandoff: 02/07/2017
 
 ---
-# Mantener la capacidad de respuesta del subproceso de la interfaz de usuario
+# <a name="keep-the-ui-thread-responsive"></a>Mantener la capacidad de respuesta de los subprocesos de la interfaz de usuario
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Los usuarios esperan que las aplicaciones sigan respondiendo mientras realizan cálculos, independientemente del tipo de equipo. Esto significa cosas distintas en función de la aplicación. En el caso de algunas aplicaciones, esto se traduce en la necesidad de proporcionar una física más realista, cargar los datos desde el disco o desde la Web con mayor rapidez, presentar escenas complejas y navegar entre páginas velozmente, encontrar direcciones al instante o procesar datos con rapidez. Independientemente del tipo de cálculo, los usuarios quieren que las aplicaciones respondan a sus entrada y que no haya casos en que estas parezcan que dejen de responder mientras “están pensando”.
 
@@ -20,7 +27,7 @@ Deberás usar el subproceso de la interfaz de usuario para que realice casi todo
 
 > **Nota** La única excepción es que existe un subproceso de representación separado que puede aplicar cambios a la interfaz de usuario que no afectarán el modo en que se controla la entrada o el diseño básico. Por ejemplo, muchas animaciones y transiciones que no afectan al diseño pueden ejecutarse en este subproceso de representación.
 
-## Retrasar la creación de instancias de elementos
+## <a name="delay-element-instantiation"></a>Retrasar la creación de instancias de elementos
 
 Entre las fases más lentas de una aplicación se incluyen el inicio y el cambio de vistas. No hagas más de lo necesario para que se muestre la interfaz de usuario que el usuario verá inicialmente. Por ejemplo, no crees la interfaz de usuario para que se muestre de manera progresiva y para mostrar el contenido de elementos emergentes.
 
@@ -29,11 +36,11 @@ Entre las fases más lentas de una aplicación se incluyen el inicio y el cambio
 
 [**CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918) pone el trabajo en cola para que el subproceso de la interfaz de usuario lo procese cuando no esté ocupado.
 
-## Usar API asincrónicas
+## <a name="use-asynchronous-apis"></a>Usar API asincrónicas
 
 Para ayudar a mantener la capacidad de respuesta de la aplicación, la plataforma proporciona versiones asincrónicas de muchas de las API que usa. Una API asincrónica asegura que el subproceso de ejecución activa nunca se bloquee durante un período de tiempo largo. Cuando llames a una API desde el subproceso de interfaz de usuario, usa la versión asincrónica si está disponible. Para obtener más información sobre cómo programar con patrones **async**, consulta [Programación asincrónica](https://msdn.microsoft.com/library/windows/apps/Mt187335) o el tema [Llamada a API asincrónicas en C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/Mt187337).
 
-## Descargar el trabajo a subprocesos en segundo plano
+## <a name="offload-work-to-background-threads"></a>Descargar el trabajo a subprocesos en segundo plano
 
 Programa los controladores de eventos para volver rápidamente. En los casos en los que se deba realizar una cantidad de trabajo no trivial, prográmalo en un subproceso en segundo plano que vuelva.
 
@@ -99,13 +106,8 @@ En este ejemplo, el controlador `NextMove-Click` vuelve a **await** para mantene
 
 > **Nota** También existe una API de [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) y [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) para UWP que puede usarse para escenarios similares. Para obtener más información, consulta [Subprocesamiento y programación asincrónica](https://msdn.microsoft.com/library/windows/apps/Mt187340).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Interacciones del usuario personalizadas](https://msdn.microsoft.com/library/windows/apps/Mt185599)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,20 +3,27 @@ author: mcleanbyron
 ms.assetid: 235EBA39-8F64-4499-9833-4CCA9C737477
 description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de rendimiento de los anuncios de una aplicación durante un intervalo de fechas concreto y según otros filtros opcionales."
 title: Obtener los datos de rendimiento de los anuncios
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, servicios de la Tienda, Store services, API de análisis de la Tienda Windows, Windows Store analytics API, anuncios, ads, rendimiento, performance"
 translationtype: Human Translation
-ms.sourcegitcommit: 67845c76448ed13fd458cb3ee9eb2b75430faade
-ms.openlocfilehash: 551416caf19e16b6d6ab95fcd98aa8fbbb1587f1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a9d6226ebb06c1a9322ab44c3001a8b86aab1e5d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Obtener los datos de rendimiento de los anuncios
+# <a name="get-ad-performance-data"></a>Obtener los datos de rendimiento de los anuncios
 
 
 Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de rendimiento de los anuncios de tus aplicaciones durante un intervalo de fechas concreto y según otros filtros opcionales. Este método devuelve los datos en formato JSON.
 
 Este método devuelve los mismos datos que proporciona el [Informe de rendimiento de la publicidad](../publish/advertising-performance-report.md) en el panel del Centro de desarrollo de Windows.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 
 Para usar este método, primero debes hacer lo siguiente:
@@ -26,10 +33,10 @@ Para usar este método, primero debes hacer lo siguiente:
 
 Para obtener más información, consulta [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md).
 
-## Solicitud
+## <a name="request"></a>Solicitud
 
 
-### Sintaxis de la solicitud
+### <a name="request-syntax"></a>Sintaxis de la solicitud
 
 | Método | URI de la solicitud                                                              |
 |--------|--------------------------------------------------------------------------|
@@ -37,7 +44,7 @@ Para obtener más información, consulta [Acceder a los datos de análisis media
 
 <span />
 
-### Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado        | Tipo   | Descripción           |
 |---------------|--------|--------------------------------|
@@ -45,7 +52,7 @@ Para obtener más información, consulta [Acceder a los datos de análisis media
 
 <span />
 
-### Parámetros de solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 Para recuperar los datos de rendimiento de anuncios de una aplicación en concreto, usa el parámetro *applicationId*. Para recuperar los datos de rendimiento de anuncios de todas las aplicaciones que hay asociadas a tu cuenta de desarrollador, omite el parámetro *applicationId*.
 
@@ -63,7 +70,7 @@ Para recuperar los datos de rendimiento de anuncios de una aplicación en concre
 
 <span />
  
-### Campos de filtro
+### <a name="filter-fields"></a>Campos de filtro
 
 El parámetro *filter* del cuerpo de la solicitud contiene una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un campo y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Este es un ejemplo del parámetro *filter*:
 
@@ -82,7 +89,7 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 
 <span /> 
 
-### Ejemplo de solicitud
+### <a name="request-example"></a>Ejemplo de solicitud
 
 El siguiente ejemplo muestra varias solicitudes mediante las que obtener los datos de rendimiento de anuncios. Reemplaza el valor *applicationId* por el identificador de la Tienda de la aplicación.
 
@@ -94,10 +101,10 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/adsperformance?appl
 Authorization: Bearer <your access token>
 ```
 
-## Respuesta
+## <a name="response"></a>Respuesta
 
 
-### Cuerpo de la respuesta
+### <a name="response-body"></a>Cuerpo de la respuesta
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                            |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -106,7 +113,7 @@ Authorization: Bearer <your access token>
 | TotalCount | entero    | Número total de filas del resultado de datos de la consulta.                                                                                                                                                                                                                             |
 
 <span id="ad-performance-values" />
-### Valores de rendimiento de anuncios
+### <a name="ad-performance-values"></a>Valores de rendimiento de anuncios
 
 Los elementos de la matriz *Value* contienen los siguientes valores.
 
@@ -130,7 +137,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 
 <span />
 
-### Ejemplo de respuesta
+### <a name="response-example"></a>Ejemplo de respuesta
 
 En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo realizada para esta solicitud.
 
@@ -172,13 +179,8 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ```
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Informe de rendimiento de la publicidad](../publish/advertising-performance-report.md)
 * [Acceder a los datos de análisis mediante los servicios de la Tienda Windows](access-analytics-data-using-windows-store-services.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

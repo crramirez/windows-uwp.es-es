@@ -3,13 +3,20 @@ author: jnHs
 Description: "Todos los pagos correspondientes a las ganancias de Microsoft Advertising ahora se realizan a través de tu cuenta de pago del Centro de desarrollo."
 title: "Consolidación del perfil fiscal y la cuenta de pago del Centro de desarrollo y pubCenter"
 ms.assetid: 1EC55E2F-2BC5-4982-A569-A59082A808EC
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: baf488ac70ea2937a8bfda8a47d679a23053578d
-ms.openlocfilehash: e71c038575f1779c0a8d14306b0e4b8fd8eaf959
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5b93669adff4acfe791a2f607e9d8475e6213a31
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Consolidación del perfil fiscal y la cuenta de pago del Centro de desarrollo y pubCenter
+# <a name="pubcenter-devcenter-payout-account-and-tax-profile-consolidation"></a>Consolidación del perfil fiscal y la cuenta de pago del Centro de desarrollo y pubCenter
 
 A partir del 1 de abril de 2016, todos los pagos correspondientes a las ganancias de Microsoft Advertising se realizan a través de tu cuenta de pago del Centro de desarrollo. Visita el [panel del Centro de desarrollo de Windows](https://developer.microsoft.com/dashboard/apps/overview) para la administración de todos los anuncios y la generación de informes de pago. 
 
@@ -27,9 +34,4 @@ Para obtener más información sobre los pagos del Centro de desarrollo, consult
 Si necesitas más ayuda, abre una [incidencia de soporte técnico](http://go.microsoft.com/fwlink/p/?LinkId=733342).
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

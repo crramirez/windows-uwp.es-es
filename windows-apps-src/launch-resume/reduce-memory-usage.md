@@ -1,34 +1,41 @@
 ---
 author: TylerMSFT
-ms.assetid: 
+ms.assetid: 3a3ea86e-fa47-46ee-9e2e-f59644c0d1db
 description: "En este artículo se muestra cómo reducir el uso de memoria cuando la aplicación pasa al estado de segundo plano."
 title: "Reducir el uso de memoria cuando la aplicación pasa al estado de segundo plano"
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: bf0cb8f072a2a6974ab582329d8b482add37f1d9
-ms.openlocfilehash: 80e89e24236903ab90f7c4fe326782a0a7e5272f
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: ef4527f72898c8c5a6ad9c56d975966402894b2c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Liberar memoria cuando la aplicación pasa a segundo plano
+# <a name="free-memory-when-your-app-moves-to-the-background"></a>Liberar memoria cuando la aplicación pasa a segundo plano
 
 En este artículo se muestra cómo reducir la cantidad de memoria que usa la aplicación cuando pasa al estado de segundo plano para evitar su suspensión o, posiblemente, su finalización.
 
-## Nuevos eventos de segundo plano
+## <a name="new-background-events"></a>Nuevos eventos de segundo plano
 
 Windows 10, versión 1607, incorpora dos nuevos eventos de ciclo de vida de aplicación: [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) y [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). Estos eventos permiten que la aplicación sepa cuándo entra y sale del estado de segundo plano.
 
 Cuando la aplicación pasa al estado de segundo plano, pueden cambiar las restricciones de memoria que aplica el sistema. Usa estos eventos para comprobar el consumo de memoria actual y liberar recursos para permanecer por debajo del límite, de modo que no se suspenda o, tal vez, se finalice la aplicación mientras está en segundo plano.
 
-### Eventos para controlar el uso de memoria de la aplicación
+### <a name="events-for-controlling-your-apps-memory-usage"></a>Eventos para controlar el uso de memoria de la aplicación
 
-El evento [MemoryManager.AppMemoryUsageLimitChanging](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusagelimitchanging.aspx) se genera justo antes de que cambie el límite del total de memoria que puede usar la aplicación. Por ejemplo, si la aplicación pasa a segundo plano y en la consola Xbox el límite de memoria cambia de 1024MB a 128MB.  
+El evento [MemoryManager.AppMemoryUsageLimitChanging](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusagelimitchanging.aspx) se genera justo antes de que cambie el límite del total de memoria que puede usar la aplicación. Por ejemplo, si la aplicación pasa a segundo plano y en la consola Xbox el límite de memoria cambia de 1024 MB a 128 MB.  
 Este es el evento más importante que se debe controlar para evitar que la plataforma suspenda o finalice la aplicación.
 
-El evento [MemoryManager.AppMemoryUsageIncreased](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusageincreased.aspx) se genera cuando el consumo de memoria de la aplicación ha aumentado a un valor superior en la enumeración [AppMemoryUsageLevel](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.appmemoryusagelevel.aspx). Por ejemplo, de **Low** a **Medium**. Si bien controlar este evento es opcional, se recomienda hacerlo porque la aplicación sigue siendo responsable de mantenerse por debajo del límite.
+El evento [MemoryManager.AppMemoryUsageIncreased](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusageincreased.aspx) se genera cuando el consumo de memoria de la aplicación ha aumentado a un valor superior en la enumeración [AppMemoryUsageLevel](https://msdn.microsoft.com/library/windows/apps/windows.system.appmemoryusagelevel.aspx). Por ejemplo, de **Low** a **Medium**. Si bien controlar este evento es opcional, se recomienda hacerlo porque la aplicación sigue siendo responsable de mantenerse por debajo del límite.
 
-El evento [MemoryManager.AppMemoryUsageDecreased](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusagedecreased.aspx) se genera cuando el consumo de memoria de la aplicación ha disminuido a un valor inferior en la enumeración **AppMemoryUsageLevel**. Por ejemplo, de **High** a **Low**. Controlar este evento es opcional, pero indica que la aplicación puede asignar memoria adicional si es necesario.
+El evento [MemoryManager.AppMemoryUsageDecreased](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusagedecreased.aspx) se genera cuando el consumo de memoria de la aplicación ha disminuido a un valor inferior en la enumeración **AppMemoryUsageLevel**. Por ejemplo, de **High** a **Low**. Controlar este evento es opcional, pero indica que la aplicación puede asignar memoria adicional si es necesario.
 
-## Controlar la transición entre el primer plano y el segundo plano
+## <a name="handle-the-transition-between-foreground-and-background"></a>Controlar la transición entre el primer plano y el segundo plano
 
 Cuando la aplicación pasa de primer plano a segundo plano, se genera el evento [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground). Cuando la aplicación vuelve al primer plano, se genera el evento [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). Puedes registrar controladores para estos eventos cuando creas la aplicación. En la plantilla de proyecto predeterminada, esto se realiza en el constructor de clase **App** en App.xaml.cs.
 
@@ -76,9 +83,9 @@ El método auxiliar **CreateRootFrame** vuelve a crear el contenido de la vista 
 
 [!code-cs[CreateRootFrame](./code/ReduceMemory/cs/App.xaml.cs#SnippetCreateRootFrame)]
 
-## Instrucciones
+## <a name="guidelines"></a>Instrucciones
 
-### Pasar de primer plano a segundo plano
+### <a name="moving-from-the-foreground-to-the-background"></a>Pasar de primer plano a segundo plano
 
 Cuando una aplicación pasa de primer plano a segundo plano, el sistema funciona en nombre de la aplicación para liberar los recursos que no son necesarios en segundo plano. Por ejemplo, los marcos de interfaz de usuario vacían las texturas almacenadas en caché y el subsistema de vídeo libera la memoria asignada en nombre de la aplicación. Aun así, una aplicación debe supervisar cuidadosamente su uso de memoria para evitar que el sistema la suspenda o la finalice.
 
@@ -91,19 +98,14 @@ Cuando una aplicación pasa de primer plano a segundo plano, primero obtiene un 
 - **Considera** liberar recursos de interfaz de usuario en el controlador del evento **AppMemoryUsageLimitChanging** en lugar de hacerlo en el controlador de **EnteredBackground** como una optimización del rendimiento. Usa un valor booleano que se establece los controladores de los eventos **EnteredBackground/LeavingBackground** para saber si la aplicación está en segundo plano o en primer plano. A continuación, en el controlador del evento **AppMemoryUsageLimitChanging**, si el valor de **AppMemoryUsage** supera el límite y la aplicación está en segundo plano (según el valor booleano), puedes liberar recursos de interfaz de usuario.
 - **No** realices operaciones prolongadas en el evento **EnteredBackground** porque puedes provocar que al usuario la transición entre aplicaciones le parezca lenta.
 
-### Pasar de segundo plano a primer plano
+### <a name="moving-from-the-background-to-the-foreground"></a>Pasar de segundo plano a primer plano
 
 Cuando una aplicación pasa de segundo plano a primer plano, primero obtiene un evento **AppMemoryUsageLimitChanging** y después un evento **LeavingBackground**.
 
 - **No** uses el evento **LeavingBackground** para volver a crear los recursos de interfaz de usuario que la aplicación desechó cuando pasó a segundo plano.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Muestra de reproducción de contenido multimedia en segundo plano](http://go.microsoft.com/fwlink/p/?LinkId=800141): enseña cómo liberar memoria cuando la aplicación pasa al estado de segundo plano.
 * [Herramientas de diagnóstico](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015/): usa las herramientas de diagnóstico para observar los eventos de recolección de elementos no utilizados y validar que la aplicación esté liberando memoria según lo previsto.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

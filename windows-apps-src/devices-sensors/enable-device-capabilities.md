@@ -3,19 +3,26 @@ author: DBirtolo
 ms.assetid: 949D1CE0-DD7D-420E-904D-758FADEBE85A
 title: Habilitar funcionalidades de dispositivos
 description: "Este tutorial describe cómo declarar funcionalidades del dispositivo en Microsoft Visual Studio. Esta opción permite que la aplicación use cámaras, micrófonos, sensores de ubicación y otros dispositivos."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: b36dd4d77821a65b1f435d755f7bb415b2e386ee
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 15b12bfafea71705a9c18464461a73e3e2f05563
+ms.lasthandoff: 02/07/2017
 
 ---
-# Habilitar funcionalidades de dispositivos
+# <a name="enable-device-capabilities"></a>Habilitar funcionalidades de dispositivos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este tutorial describe cómo declarar funcionalidades del dispositivo en Microsoft Visual Studio. Esto permite que la aplicación use cámaras, micrófonos, sensores de ubicación y otros dispositivos.
 
-## Especificar la funcionalidad de los dispositivos que usará la aplicación
+## <a name="specify-the-device-capabilities-your-app-will-use"></a>Especificar la funcionalidad de los dispositivos que usará la aplicación
 
 
 Las aplicaciones de Windows requieren que especifiques en el manifiesto del paquete de la aplicación cuándo se usan determinados tipos de dispositivos. En Visual Studio puedes declarar la mayoría de las funcionalidades mediante el [Diseñador de manifiestos](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx), o puedes agregarlas manualmente tal como se describe en [Cómo especificar funcionalidades de dispositivos en un manifiesto del paquete (manualmente)](https://msdn.microsoft.com/library/windows/apps/Dn263092). En este tutorial se supone que vas a usar el Diseñador de manifiestos.
@@ -56,7 +63,7 @@ Algunos tipos de dispositivos como, por ejemplo, las impresoras, los escáneres 
 | Bluetooth RFCOMM |  | Proporciona acceso a API que admiten el transporte BR/EDR (Basic Rate/Extended Data Rate) y también permite que tu aplicación de la Tienda Windows pueda acceder a un dispositivo que implemente SPP (Serial Port Profile). Esta capacidad requiere elementos secundarios. Para más información, consulta [Cómo especificar funcionalidades de dispositivos para Bluetooth](https://msdn.microsoft.com/library/windows/apps/Dn263090). |
 | pointOfService |  | Proporciona acceso a escáneres de códigos de barra de punto de servicio (POS) y lectores de bandas magnéticas. Esta característica no se admite en Windows Phone. | 
 
-## Usa la API de Windows Runtime para comunicarte con tu dispositivo
+## <a name="use-the-windows-runtime-api-for-communicating-with-your-device"></a>Usa la API de Windows Runtime para comunicarte con tu dispositivo
 
 La siguiente tabla conecta algunas de las funcionalidades a las API de Windows Runtime.
 
@@ -73,10 +80,5 @@ La siguiente tabla conecta algunas de las funcionalidades a las API de Windows R
 | Perfil GATT de Bluetooth           | [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) | 
 | Bluetooth RFCOMM         | [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) | 
 | Punto de servicio (POS)   | [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) |
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

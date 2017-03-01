@@ -3,16 +3,23 @@ author: jnHs
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
 title: "Administrar la configuración de la cuenta y la información del perfil"
 description: "Puedes ver y actualizar la configuración de tu cuenta de desarrollador y la información del perfil en la sección Configuración de la cuenta del panel del Centro de desarrollo de Windows unificado."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
-ms.openlocfilehash: 3859918d94ad7ffcf1c331ca5a0ca6540387886f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5ca55f04d919e273017530ab4c14d09c7a2ec20a
+ms.lasthandoff: 02/07/2017
 
 ---
-# Administrar la configuración de la cuenta y la información del perfil
+# <a name="managing-your-account-settings-and-profile-info"></a>Administrar la configuración de la cuenta y la información del perfil
 
 Puedes ver y actualizar la configuración de tu cuenta de desarrollador y la información del perfil en la sección **Configuración de la cuenta** del [panel del Centro de desarrollo de Windows](using-the-windows-dev-center-dashboard.md).
 
-## Configuración de la cuenta
+## <a name="account-settings"></a>Configuración de la cuenta
 
 La página **Configuración de la cuenta** muestra los detalles de tu cuenta e incluye vínculos a otras páginas donde puedes ver o actualizar información.
 
@@ -20,7 +27,7 @@ En la sección **Detalles de la cuenta**, puedes ver el estado y el tipo de tu c
 
 **Nota** Los detalles de identidad de las aplicaciones individuales pueden encontrarse en la página [Identidad de la aplicación](view-app-identity-details.md) de cada aplicación.
 
-## Información de contacto
+## <a name="contact-info"></a>Información de contacto
 
 La sección **Información de contacto** muestra la información suministrada al configurar la cuenta. Usaremos esta información para ponernos en contacto contigo en relación con tu cuenta.
 
@@ -28,15 +35,10 @@ Puedes editar esta sección si alguno de tus datos de contacto cambia. Ten en cu
 
 Si cambias el nombre para mostrar del publicador, tendremos que volver a comprobar tu cuenta. Si decides hacerlo después de publicar una aplicación, deberás modificar el nombre para mostrar del publicador en los paquetes de la aplicación y luego enviar la aplicación nuevamente mediante los paquetes actualizados después de que volvamos a comprobar tu cuenta.
 
-## Información y opciones de configuración adicionales
+## <a name="additional-settings-and-info"></a>Información y opciones de configuración adicionales
 
 Esta sección también incluye vínculos a [configurar formularios fiscales y cuenta de pago](setting-up-your-payout-account-and-tax-forms.md). Deberás hacer esto para poder cobrar dinero por las aplicaciones o los complementos.
 
-Algunos programas pueden proporcionar un código que te permita ampliar las capacidades de tu cuenta; estas se pueden especificar en **Configuración de la cuenta**. Esta página también permite ver los detalles de cualquier [dispositivos Windows Phone8 o Windows Phone8.1 que hayas desbloqueado para realizar pruebas](http://go.microsoft.com/fwlink/p/?LinkId=533897) y participar o no en el [Programa Insider del Centro de desarrollo](dev-center-insider-program.md).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+Algunos programas pueden proporcionar un código que te permita ampliar las capacidades de tu cuenta; estas se pueden especificar en **Configuración de la cuenta**. Esta página también permite ver los detalles de cualquier [dispositivos Windows Phone 8 o Windows Phone 8.1 que hayas desbloqueado para realizar pruebas](http://go.microsoft.com/fwlink/p/?LinkId=533897) y participar o no en el [Programa Insider del Centro de desarrollo](dev-center-insider-program.md).
 
 

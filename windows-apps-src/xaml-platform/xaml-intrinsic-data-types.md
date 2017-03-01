@@ -3,15 +3,22 @@ author: jwmsft
 description: "Describe la compatibilidad en el nivel de lenguaje de XAML para Windows Runtime para determinados tipos de datos de Common Language Runtime (CLR) y otros lenguajes de programación como C++."
 title: "Tipos de datos intrínsecos de XAML"
 ms.assetid: D50E6127-395D-4E27-BAA2-2FE627F4B711
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 60e328ca8652baeb226e78f5a9d99fbf8c4f5208
-ms.openlocfilehash: a204f1d000dd28a9159b4ca795107046ca4ef92e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f6a1ca4850ffbc19afc8defa6d2d373dbfbf2b2b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Tipos de datos intrínsecos de XAML
+# <a name="xaml-intrinsic-data-types"></a>Tipos de datos intrínsecos de XAML
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 El lenguaje XAML para Windows Runtime proporciona compatibilidad en el nivel de lenguaje para varios tipos de datos que son tipos primitivos de uso frecuente en Common Language Runtime (CLR) y otros lenguajes de programación como C++.
 
@@ -30,22 +37,17 @@ Estos tipos primitivos de lenguaje XAML generalmente son los únicos casos en lo
 
 **Nota** Como práctica general, los tipos primitivos del lenguaje XAML y todos los demás elementos del mismo se muestran con el prefijo "x:". Así es como suelen usarse los elementos del lenguaje XAML en el marcado en el mundo real. Esta convención se sigue en la documentación de XAML y también en la especificación XAML.
 
-## Otros tipos primitivos de XAML
+## <a name="other-xaml-primitives"></a>Otros tipos primitivos de XAML
 
 La especificación XAML 2009 indica otros tipos primitivos en el nivel de lenguaje XAML, como **x:Uri** y **x:Single**. A menos que se indique en la tabla de este tema, los otros tipos primitivos de lenguaje XAML, tal y como los definen otros vocabularios XAML o la especificación XAML 2009, no se admiten actualmente en el XAML para Windows Runtime.
 
 **Nota** Las fechas y horas (esto es, propiedades que usan [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576) o [**DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx), [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/br225996) o [**System.TimeSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/system.timespan.aspx)) no se pueden establecer con un tipo primitivo de XAML. Por lo general, estas propiedades son imposibles de establecer en XAML porque en el analizador de XAML de Windows Runtime no hay ningún comportamiento predeterminado de conversión desde cadenas para fechas y horas. Para los valores de inicialización de cualquier propiedad de fecha y hora, tendrás que usar código subyacente que se ejecute al cargarse una página o un elemento.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Introducción a XAML](xaml-overview.md)
 * [Guía de sintaxis XAML](xaml-syntax-guide.md)
 * [Animaciones con guion gráfico](https://msdn.microsoft.com/library/windows/apps/mt187354)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

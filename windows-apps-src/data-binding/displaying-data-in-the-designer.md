@@ -3,22 +3,29 @@ author: mcleblanc
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
 title: "Datos de muestra sobre la superficie de diseño y para la creación de prototipos"
 description: "Quizás no sea posible o no desees (puede que por motivos de privacidad o rendimiento) que la aplicación muestre datos dinámicos sobre la superficie de diseño en Microsoft Visual Studio o Blend para Visual Studio."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 53e807c0d9de8faf2d0b5dc0e1c8e9c380e42d86
-ms.openlocfilehash: 6f157688cba014ffc1f8d09c2a291d62c564c8c9
+ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
+ms.openlocfilehash: 35df3de9b56b9539a559e161e80658c23a9d0480
+ms.lasthandoff: 01/19/2017
 
 ---
-Datos de muestra sobre la superficie de diseño y para la creación de prototipos
+<a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Datos de muestra sobre la superficie de diseño y para la creación de prototipos
 =============================================================================================
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Nota**  La cantidad de datos de muestra que necesites (y que te serán de ayuda) depende de si tus enlaces usan la [extensión de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) o la [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783). Las técnicas que se describen en este tema se basan en el uso de la propiedad [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713), por lo que solo son apropiadas para la extensión **{Binding}**. Sin embargo, si usas **{x:Bind}** tus enlaces mostrarán, como mínimo, valores de marcador de posición sobre la superficie de diseño (incluso para controles de elementos); así no necesitarás recopilar tantos datos de muestra.
 
 Quizás no sea posible o no desees (puede que por motivos de privacidad o rendimiento) que la aplicación muestre datos dinámicos sobre la superficie de diseño en Microsoft Visual Studio o Blend para Visual Studio. Para hacer que los controles se rellenen con datos (de modo que puedas trabajar en el diseño de la aplicación, las plantillas y otras propiedades visuales), puedes usar los datos de ejemplo en tiempo de diseño de distintas maneras. Los datos de ejemplo también pueden ser muy útiles y ahorrarte tiempo si creas una aplicación de diseño de bocetos (o prototipos). Puedes usar los datos de ejemplo del boceto o el prototipo en tiempo de ejecución para ilustrar tus ideas sin tener que conectarte a los datos dinámicos reales.
 
-Configuración de DataContext en el marcado
+<a name="setting-datacontext-in-markup"></a>Configuración de DataContext en el marcado
 -----------------------------
 
 Es una práctica bastante común entre los desarrolladores usar código imperativo (en el código subyacente) para establecer la propiedad [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) de un control de usuario o página, en una instancia del modelo de vista.
@@ -67,7 +74,7 @@ else
 
 Puedes usar un localizador de modelo de vista si necesitas pasar parámetros al código de inicialización. Un localizador de modelo de vista es una clase que se puede colocar en los recursos de la aplicación. Tiene una propiedad que expone el modelo de vista y los enlaces **DataContext** de la página a esa propiedad. Otro patrón que el localizador o el modelo de vista pueden usar es la inserción de dependencias, la cual puede crear un proveedor de datos en tiempo de diseño o tiempo de ejecución (cada uno de los cuales implementará una interfaz común), según corresponda.
 
-"Datos de ejemplo desde clase" y atributos en tiempo de diseño
+<a name="sample-data-from-class-and-design-time-attributes"></a>"Datos de ejemplo desde clase" y atributos en tiempo de diseño
 ---------------------------------------------------------------------------------------
 
 Si, por cualquier motivo, ninguna de las opciones de la sección anterior funciona, sigues teniendo muchas opciones de datos en tiempo de diseño disponibles a través de los atributos en tiempo de diseño y las características de las herramientas XAML. Una buena opción es la característica **Crear datos de ejemplo desde clase** de Blend para Visual Studio. Este comando se puede encontrar en uno de los botones de la parte superior del panel **Datos**.
@@ -132,7 +139,7 @@ Hasta ahora, hemos usado **d:DesignData** para cargar datos de muestra en tiempo
 
 La propiedad **IsDesignTimeCreatable** indica que la herramienta de diseño debe crear una instancia de la clase, lo que implica que la clase tiene un constructor predeterminado público y que se rellena automáticamente con datos (de ejemplo o reales). Si no estableces **IsDesignTimeCreatable** (o si lo estableces en **False**), no se mostrarán datos de ejemplo en la superficie de diseño. Todo lo que hace la herramienta de diseño en este caso es analizar la clase para detectar las propiedades enlazables y mostrarlas en el panel **Datos** y en el cuadro de diálogo **Crear enlace de datos**.
 
-Datos de ejemplo para la creación de prototipos
+<a name="sample-data-for-prototyping"></a>Datos de ejemplo para la creación de prototipos
 --------------------------------------------------------
 
 Para crear prototipos, se desean datos de ejemplo en tiempo de diseño y en tiempo de ejecución. Para este caso práctico, Blend para Visual Studio presenta la característica **Nuevos datos de ejemplo**. Este comando se puede encontrar en uno de los botones de la parte superior del panel **Datos**.
@@ -142,9 +149,4 @@ En lugar de especificar una clase, se puede diseñar el esquema del origen de da
 La característica **Nuevos datos de ejemplo** usa [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713), y no **d:DataContext**, de modo que los datos de ejemplo están disponibles cuando se ejecuta el boceto o el prototipo, así como mientras se diseña. Además, el panel **Datos** acelera realmente las tareas de diseño y enlace. Por ejemplo, con solo arrastrar una propiedad de colección del panel **Datos** a la superficie de diseño, se genera un control de elementos enlazados a datos y las plantillas necesarias, todo listo para compilar y ejecutar.
 
 ![Datos de ejemplo para la creación de prototipos.](images/displaying-data-in-the-designer-04.png)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

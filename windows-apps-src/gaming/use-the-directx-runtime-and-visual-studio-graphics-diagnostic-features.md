@@ -3,16 +3,23 @@ author: mtoepke
 title: "Herramientas de diagnóstico de gráficos"
 description: "Obtén información sobre cómo obtener y usar las características de diagnóstico de elementos gráficos como, por ejemplo, el uso de la GPU, los análisis de fotogramas de gráficos y la depuración de elementos gráficos en Visual Studio."
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, juegos, gráficos, diagnósticos, herramientas, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 765cde8afe32cef6515ee6ca9750365aa35984a2
-ms.openlocfilehash: 5d8f7a8dbba2da76c6093d034c2ca8c2b4592c7e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 076020d88889a9cc8b417befa2dd54b41d688e5e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Herramientas de diagnóstico de gráficos
+# <a name="graphics-diagnostics-tools"></a>Herramientas de diagnóstico de elementos gráficos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Con Windows 10, las herramientas de diagnóstico de elementos gráficos ya están disponibles en Windows como una característica opcional. Para usar las características de diagnóstico de elementos gráficos proporcionadas en tiempo de ejecución y Visual Studio para desarrollar juegos o aplicaciones de DirectX, instala la característica opcional de herramientas de elementos gráficos:
 
@@ -26,7 +33,7 @@ Entre las características de diagnóstico de elementos gráficos se incluye la 
 -   Análisis de fotogramas de gráficos de Visual Studio se ejecuta en un registro de depuración de elementos gráficos y recopila los intervalos de línea base de las llamadas de dibujos de Direct3D. A continuación, realiza una serie de experimentos al modificar distintas opciones de configuración de elementos gráficos y producir una tabla de resultados de intervalos. Puedes usar estos elementos gráficos para comprender los problemas de rendimiento de los gráficos de la aplicación y puedes revisar los resultados de los experimentos para identificar oportunidades de mejora del rendimiento.
 -   El uso de la GPU en Visual Studio permite supervisar el uso de la GPU en tiempo real. Recopila y analiza los datos de intervalos de las cargas de trabajo que controlan la CPU y la GPU, por lo que puedes determinar dónde están los cuellos de botella.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 [Información general de diagnósticos de elementos gráficos en Visual Studio](http://go.microsoft.com/fwlink/p/?LinkID=526382)
@@ -37,10 +44,5 @@ Entre las características de diagnóstico de elementos gráficos se incluye la 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

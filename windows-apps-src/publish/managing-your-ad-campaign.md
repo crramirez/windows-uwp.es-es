@@ -3,13 +3,20 @@ author: jnHs
 Description: "Para administrar las campañas publicitarias de la aplicación, haz clic en Monetización &gt; Promocionar la aplicación desde la página de la aplicación en el panel del Centro de desarrollo de Windows."
 title: "Administrar campañas publicitarias"
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 71fb1e13c3db45043b312d24ea739ae68751dfb0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b73b8c1ac467bce3d1edcec3582d247e7a90bd29
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Administrar campañas publicitarias
+# <a name="managing-your-ad-campaign"></a>Administrar campañas publicitarias
 
 
 Para administrar las campañas publicitarias de la aplicación, haz clic en **Monetización** &gt; **Promocionar la aplicación** desde la página de la aplicación en el panel del Centro de desarrollo de Windows. En la página **Promocionar la aplicación** se muestran todas las campañas publicitarias asociadas a la aplicación, así como las impresiones, los clics y las instalaciones de cada una de ellas. Para obtener más información acerca de las impresiones, los clics y las instalaciones, consulta las definiciones de estos términos en [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md).
@@ -24,17 +31,17 @@ Para filtrar la lista de campañas publicitarias, haz clic en el menú desplegab
     -   **Requiere atención** indica que la campaña publicitaria tiene problemas que requieren tu atención, como un error de facturación o un diseño de anuncio personalizado que no se pudo validar. Para solucionar los problemas, haz clic en el texto de la columna **Acción** de la tabla de campañas publicitarias.
 -   **Tipo de campaña**: especifica si se van a mostrar campañas publicitarias de pago o [internas](about-house-ads.md).
 
-## Informe
+## <a name="report"></a>Informe
 
 
 Para ver el rendimiento de tus campañas publicitarias, haz clic en **Análisis** &gt; **Anuncios de instalación de aplicaciones** en el panel de navegación del panel. Para obtener más información sobre este informe, consulta [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md).
 
-## Editar una campaña publicitaria
+## <a name="edit-an-ad-campaign"></a>Editar una campaña publicitaria
 
 
 Para realizar cambios en una campaña publicitaria, haz clic en su nombre para ir a la página de detalles correspondiente. Después de realizar cambios, haz clic en **Revisar**, revisa los detalles y, luego, haz clic en **Confirmar**.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md)
@@ -47,10 +54,5 @@ Para realizar cambios en una campaña publicitaria, haz clic en su nombre para i
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

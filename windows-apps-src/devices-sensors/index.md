@@ -3,14 +3,21 @@ author: DBirtolo
 ms.assetid: 0b891f63-02fa-4c30-b307-9fbcccac5caa
 title: "Dispositivos, sensores y energía"
 description: "Para proporcionar a los usuarios una experiencia enriquecida, puede que sea necesario integrar sensores o dispositivos externos en la aplicación."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: d6757aba4be1a9e326e9e0dade16663286d24f72
-ms.openlocfilehash: 25eb40c8e6e1c840d2943b4dca3e42e1c164478d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 87e52894a0746ecd716487a0e91d7d5974199ab8
+ms.lasthandoff: 02/07/2017
 
 ---
-# Dispositivos, sensores y energía
+# <a name="devices-sensors-and-power"></a>Dispositivos, sensores y energía
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Para proporcionar a los usuarios una experiencia enriquecida, puede que sea necesario integrar sensores o dispositivos externos en la aplicación. Estos son algunos ejemplos de características que se pueden agregar a tu aplicación con la tecnología descrita en esta sección.
 
@@ -28,13 +35,8 @@ Para proporcionar a los usuarios una experiencia enriquecida, puede que sea nece
 | [Sensores](sensors.md) | Los sensores permiten que las aplicaciones conozcan cuál es la relación entre un dispositivo y el entorno físico. Pueden indicar a la aplicación la dirección, la orientación y el movimiento del dispositivo. |
 | [Bluetooth](bluetooth.md) | Esta sección contiene artículos acerca de cómo integrar Bluetooth en aplicaciones de la Plataforma universal de Windows (UWP) y cómo usar anuncios de bajo consumo (LE), RFCOMM y GATT. | 
 | [Impresión y digitalización](printing-and-scanning.md) | En esta sección se describe cómo imprimir y digitalizar desde la aplicación universal de Windows. | 
-| [Impresión en3D](3d-printing.md) | En esta sección se describe cómo usar la funcionalidad de impresión 3D en tu aplicación Universal de Windows. |
+| [Impresión en 3D](3d-printing.md) | En esta sección se describe cómo usar la funcionalidad de impresión 3D en tu aplicación Universal de Windows. |
 | [Crear una aplicación de tarjeta NFC inteligente](host-card-emulation.md) | Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC con un elemento seguro basado en SIM, pero ese modelo requería que las aplicaciones de pago seguro estuvieran estrechamente unidas a los operadores de redes móviles (MNO). Esto limitaba la variedad de soluciones de pago posibles por otros comerciantes o desarrolladores que no estaban unidos a MNO. En Windows 10 Mobile, se ha incluido una nueva tecnología de emulación de tarjetas denominada Emulación de tarjeta de host (HCE). La tecnología HCE permite a tu aplicación comunicarse directamente con un lector de tarjetas NFC. En este tema se muestra cómo funciona la emulación de tarjeta de host (HCE) en dispositivos Windows 10 Mobile y cómo se desarrolla una aplicación HCE para que los clientes puedan acceder a los servicios a través de su teléfono en lugar de con una tarjeta física sin colaboración con un MNO. |
 | [Obtener información sobre la batería](get-battery-info.md) | Aprende a obtener información detallada sobre la batería mediante las API del espacio de nombres [<strong>Windows.Devices.Power</strong>](https://msdn.microsoft.com/library/windows/apps/Dn895017). |
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

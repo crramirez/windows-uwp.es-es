@@ -3,23 +3,30 @@ author: mtoepke
 title: Plantillas de proyectos y herramientas para juegos
 description: Muestra lo que necesitas hacer para empezar a programar juegos de DirectX para la Plataforma universal de Windows (UWP).
 ms.assetid: d5afd5d3-ad01-0f16-3ddf-2c4eb86b68a7
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, games, juegos, templates, plantillas, tools, herramientas, DirectX
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 360ffe86a6b2033510cb7d4b790477c80d5d1205
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2991efd40862eb1cd8842432b3eed3bbe49c8eb2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Plantillas de proyectos y herramientas para juegos
+# <a name="project-templates-and-tools-for-games"></a>Plantillas de proyectos y herramientas para juegos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este tema te mostramos todo lo que necesitas hacer para empezar a programar juegos de DirectX para la Plataforma universal de Windows (UWP).
 
 En primer lugar, necesitarás Visual Studio.
 
-## Obtener Visual Studio
+## <a name="get-visual-studio"></a>Obtener Visual Studio
 
 
 [Descarga e instala Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions).
@@ -53,12 +60,12 @@ En primer lugar, necesitarás Visual Studio.
 
  
 
-## Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 
 Si estás vas a portar un juego existente, consulta los siguientes temas.
 
--   [Migrar desde OpenGL ES2.0 a DirectX11](port-from-opengl-es-2-0-to-directx-11-1.md)
+-   [Migrar desde OpenGL ES 2.0 a DirectX 11](port-from-opengl-es-2-0-to-directx-11-1.md)
 -   [Migrar desde DirectX 9 a UWP](porting-your-directx-9-game-to-windows-store.md)
 
 Si estás creando un nuevo juego DirectX, consulta los siguientes temas.
@@ -77,10 +84,5 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

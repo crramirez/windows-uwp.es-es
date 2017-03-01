@@ -2,17 +2,24 @@
 author: DBirtolo
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
 title: "Digitalizar desde tu aplicación"
-description: "Aprende aquí a digitalizar contenido de tu aplicación con ayuda de un escáner plano, un alimentador o un origen de digitalización configurado automáticamente."
+description: "Aprende a digitalizar contenido desde tu aplicación con ayuda de un escáner plano, un alimentador o un origen de digitalización configurado automáticamente."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 9f06f774fd1ed3a13386a4403f98336babeb1506
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2dc8ef975c58ba5eb1d8b59bee773c7b6219a03c
+ms.lasthandoff: 02/07/2017
 
 ---
-# Digitalizar desde tu aplicación
+# <a name="scan-from-your-app"></a>Digitalizar desde tu aplicación
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** API importantes **
+**API importantes**
 
 -   [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250)
 -   [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)
@@ -26,7 +33,7 @@ Para digitalizar contenido desde tu aplicación, antes deberás enumerar los esc
 
 Tras enumerar los escáneres disponibles, la aplicación puede usar los parámetros de digitalización configurados automáticamente según el tipo de escáner o, simplemente, digitalizar con el escáner plano o el dispositivo multifunción. Para usar los parámetros configurados automáticamente, el escáner debe estar habilitado para dicha opción y no estar dotado de un escáner plano o alimentador. Para más información, consulta [Digitalización configurada automáticamente](https://msdn.microsoft.com/library/windows/hardware/Ff539393).
 
-## Enumerar los escáneres disponibles
+## <a name="enumerate-available-scanners"></a>Enumerar los escáneres disponibles
 
 Windows no detecta los escáneres automáticamente. Debes llevar a cabo este paso para que tu aplicación se comunique con el escáner. En este ejemplo, la enumeración de dispositivos de digitalización se realiza usando el espacio de nombres [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459).
 
@@ -80,7 +87,7 @@ Windows no detecta los escáneres automáticamente. Debes llevar a cabo este pas
     }
 ```
 
-## Digitalizar
+## <a name="scan"></a>Digitalizar
 
 1.  **Obtener un objeto ImageScanner**
 
@@ -97,7 +104,7 @@ Para digitalizar con la configuración predeterminada, tu aplicación se basa en
 **Nota** Si el usuario coloca el documento que quiere digitalizar en el alimentador, en su lugar, la digitalización se realizará desde el escáner plano. Si el usuario intenta digitalizar desde un alimentador vacío, el proceso no generará ningún archivo digitalizado.
  
 ```csharp
-    var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default, 
+    var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default,
         folder).AsTask(cancellationToken.Token, progress);
 ```
 
@@ -113,14 +120,14 @@ En este ejemplo, la aplicación comprueba primero si el escáner es capaz de aut
     if (myScanner.IsScanSourceSupported(ImageScannerScanSource.AutoConfigured))
     {
         ...
-        // Scan API call to start scanning with Auto-Configured settings. 
+        // Scan API call to start scanning with Auto-Configured settings.
         var result = await myScanner.ScanFilesToFolderAsync(
             ImageScannerScanSource.AutoConfigured, folder).AsTask(cancellationToken.Token, progress);
         ...
     }
 ```
 
-## Previsualizar la digitalización
+## <a name="preview-the-scan"></a>Previsualizar la digitalización
 
 Puedes agregar código para previsualizar la digitalización antes de iniciar el proceso de digitalización en una carpeta. En el siguiente ejemplo, la aplicación comprueba si el escáner **Flatbed** es compatible con la previsualización y luego previsualiza la digitalización.
 
@@ -133,7 +140,7 @@ if (myScanner.IsPreviewSupported(ImageScannerScanSource.Flatbed))
                     ImageScannerScanSource.Flatbed, stream);
 ```
 
-## Cancelar la digitalización
+## <a name="cancel-the-scan"></a>Cancelar la digitalización
 
 Puedes permitirles a los usuarios cancelar la digitalización mientras se está llevando a cabo el proceso, como aquí.
 
@@ -153,7 +160,7 @@ void CancelScanning()
 }
 ```
 
-## Digitalización con progreso
+## <a name="scan-with-progress"></a>Digitalización con progreso
 
 1.  Crea un objeto **System.Threading.CancellationTokenSource**.
 
@@ -168,13 +175,7 @@ cancellationToken = new CancellationTokenSource();
     var progress = new Progress<UInt32>(ScanProgress);
 ```
 
-## Digitalización en la biblioteca de imágenes
+## <a name="scanning-to-the-pictures-library"></a>Digitalización en la biblioteca de imágenes
 
 Los usuarios pueden digitalizar en cualquier carpeta de forma dinámica usando la clase [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/BR207881), pero debes declarar la funcionalidad *Biblioteca de imágenes* en el manifiesto para permitirles digitalizar en la carpeta. Para obtener más información sobre las funcionalidades de la aplicación, consulta [Declaraciones de funcionalidades de las aplicaciones](https://msdn.microsoft.com/library/windows/apps/Mt270968).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

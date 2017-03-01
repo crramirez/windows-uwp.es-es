@@ -1,16 +1,23 @@
 ---
 author: mijacobs
-Description: "Aprende a usar los iconos, los distintivos, las notificaciones del sistema y las notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios."
+Description: "Aprende a usar iconos, distintivos, notificaciones del sistema y notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios."
 title: Iconos, distintivos y notificaciones
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: dbc178f5df541e482f4a2e86c6662ead1992a1ce
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f8b063f45afadda50fa9ea091bf6cba71a25e8c1
+ms.lasthandoff: 02/07/2017
 
 ---
-# Iconos, distintivos y notificaciones para las aplicaciones para UWP
+# <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Iconos, distintivos y notificaciones para las aplicaciones para UWP
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
@@ -27,7 +34,7 @@ Un icono es una representación de la aplicación en el menú Inicio. Todas las 
 <p>Una <em>notificación de inserción</em> o <em>notificación sin procesar</em> es una notificación enviada a tu aplicación desde Servicios de notificaciones de inserción de Windows (WNS) o desde una tarea en segundo plano. Tu aplicación puede responder a estas notificaciones notificándole al usuario de que ha sucedido algo interesante (mediante una actualización de distintivo, una actualización de icono o una notificación del sistema) o puede responder de la manera que elijas.</p>
 
  
-## Iconos 
+## <a name="tiles"></a>Iconos 
 <table>
 <colgroup>
 <col width="50%" />
@@ -63,7 +70,7 @@ Un icono es una representación de la aplicación en el menú Inicio. Todas las 
 </tbody>
 </table>
 
-## Notificaciones
+## <a name="notifications"></a>Notificaciones
 
 
 <table>
@@ -121,10 +128,5 @@ Un icono es una representación de la aplicación en el menú Inicio. Todas las 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

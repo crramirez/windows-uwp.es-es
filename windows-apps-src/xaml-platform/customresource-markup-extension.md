@@ -3,31 +3,38 @@ author: jwmsft
 description: "Proporciona un valor para cualquier atributo XAML evaluando una referencia a un recurso que proceda de una implementación de búsqueda de recursos personalizada. La búsqueda de recursos la realiza una implementación de clase CustomXamlResourceLoader."
 title: "Extensión de marcado CustomResource"
 ms.assetid: 3A59A8DE-E805-4F04-B9D9-A91E053F3642
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a0a4edc8d59219aea3a47a18ea991e4267782026
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1203987a3003c9f78bbed52b00a81cc3832a1abe
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Extensión de marcado {CustomResource}
+# <a name="customresource-markup-extension"></a>Extensión de marcado {CustomResource}
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Proporciona un valor para cualquier atributo XAML evaluando una referencia a un recurso que proceda de una implementación de búsqueda de recursos personalizada. La búsqueda de recursos la realiza una implementación de clase [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327).
 
-## Uso del atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso del atributo XAML
 
 ``` syntax
 <object property="{CustomResource key}" .../>
 ```
 
-## Valores de XAML
+## <a name="xaml-values"></a>Valores de XAML
 
 | Término | Descripción |
 |------|-------------|
 | key | La clave del recurso solicitado. La forma en que se asigna inicialmente la clave es propio de la implementación de la clase [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) actualmente registrada para su uso. |
 
-## Comentarios
+## <a name="remarks"></a>Comentarios
 
 **CustomResource** es una técnica para obtener valores definidos en otras partes de un repositorio de recursos. Esta técnica es relativamente avanzada y no se usa en la mayoría de escenarios de aplicaciones de Windows Runtime.
 
@@ -43,15 +50,10 @@ Un uso de `{CustomResource}` no funciona de forma predeterminada (la implementac
 
 **CustomResource** es una extensión de marcado. Las extensiones de marcado generalmente se implementan cuando es necesario que los valores de atributo de escape no sean valores literales o nombres de controlador y el requisito sea más global que simplemente colocar convertidores de tipos en ciertos tipos o propiedades. Todas las extensiones de marcado en XAML usan los caracteres "\{" y "\}" en su sintaxis de atributo, que es la convención mediante la cual un procesador XAML reconoce que una extensión de marcado debe procesar el atributo.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Referencias a ResourceDictionary a recursos XAML](https://msdn.microsoft.com/library/windows/apps/mt187273)
 * [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327)
 * [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

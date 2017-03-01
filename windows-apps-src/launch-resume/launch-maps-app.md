@@ -1,25 +1,32 @@
 ---
 author: TylerMSFT
 title: "Iniciar la aplicación Mapas de Windows"
-description: "Aprende a iniciar la aplicación Mapas de Windows desde la aplicación."
+description: "Obtén información sobre cómo iniciar la aplicación Mapas de Windows desde la aplicación."
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: a2f09aa510c9c3db6b8eca25f4c8cee98fa0eb46
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c9c359fd424b4c9526ebfc610adc7097bb83cbda
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Iniciar la aplicación Mapas de Windows
+# <a name="launch-the-windows-maps-app"></a>Iniciar la aplicación Mapas de Windows
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Aprende a iniciar la aplicación Mapas de Windows desde la aplicación. En este tema se describen los esquemas de identificador uniforme de recursos (URI) **bingmaps:**, **ms-drive-to:**, **ms-walk-to:** y *ms-settings:*. Usa estos esquemas de URI para iniciar la aplicación Mapas de Windows para especificar mapas, indicaciones y resultados de búsqueda o para descargar mapas sin conexión de Mapas de Windows desde la aplicación Configuración.
+Aprende a iniciar la aplicación Mapas de Windows desde la aplicación. En este tema se describen los esquemas de identificador uniforme de recursos (URI) **bingmaps:, ms-drive-to:, ms-walk-to:** y **ms-settings:**. Usa estos esquemas de URI para iniciar la aplicación Mapas de Windows para especificar mapas, indicaciones y resultados de búsqueda o para descargar mapas sin conexión de Mapas de Windows desde la aplicación Configuración.
 
 **Sugerencia** Para obtener más información sobre cómo iniciar la aplicación Mapas de Windows desde tu aplicación, descarga la [muestra de mapas de la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) del [repositorio de muestras universales de Windows](http://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub.
 
-## Introducción a los URI
+## <a name="introducing-uris"></a>Introducción a los URI
 
 Los esquemas de URI te permiten abrir aplicaciones haciendo clic en los hipervínculos (o mediante programación, en la aplicación). Al igual que puedes iniciar un nuevo correo electrónico con **mailto:** o abrir un navegador web con **http:**, puedes abrir la aplicación Mapas de Windows mediante **¿bingmaps:**, **ms-drive-to:** y **ms-walk-to:**.
 
@@ -43,9 +50,9 @@ En este esquema de URI, *query* es una serie de pares nombre-valor de parámetro
 
 **&param1=value1&param2=value2 …**
 
-Para obtener una lista completa de los parámetros disponibles, consulta la referencia de los parámetros [bingmaps:](#bingmaps), [ms-drive-to:](#msdriveto)y [ms-walk-to:](#mswalkto) . Más adelante en este tema puedes encontrar más ejemplos.
+Para obtener una lista completa de los parámetros disponibles, consulta la referencia de los parámetros [bingmaps:](#bingmaps-param-reference), [ms-drive-to:](#ms-drive-to-param-reference)y [ms-walk-to:](#ms-walk-to-param-reference) . Más adelante en este tema puedes encontrar más ejemplos.
 
-## Iniciar un URI de la aplicación
+## <a name="launch-a-uri-from-your-app"></a>Iniciar un URI de la aplicación
 
 
 Para iniciar la aplicación Mapas de Windows desde la aplicación, llama al método [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) con un URI **bingmaps:**, **ms-drive-to:** o **ms-walk-to:**. El siguiente ejemplo inicia el mismo URI del ejemplo anterior. Para obtener más información sobre cómo iniciar aplicaciones mediante URI, consulta [Iniciar la aplicación predeterminada de un URI](launch-default-app.md).
@@ -62,12 +69,11 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 
 En este ejemplo, la clase [**LauncherOptions**](https://msdn.microsoft.com/library/windows/apps/hh701435) se usa para ayudar a garantizar que se inicia la aplicación Mapas de Windows.
 
-## Mostrar ubicaciones conocidas
-
+## <a name="display-known-locations"></a>Mostrar ubicaciones conocidas
 
 Hay varias maneras de controlar el punto central de mapa y el nivel de zoom. Los parámetros *cp* (punto central) y *lvl* (nivel de zoom) son los métodos más sencillos que generan resultados predecibles. El parámetro *bb* (especifica un área limitada por los valores de latitud y longitud) es menos predecible porque tiene en cuenta la resolución de pantalla y determina el punto central del mapa y el nivel de zoom en función de las coordenadas proporcionadas. El parámetro *bb* se omite cuando los tres parámetros (*bb*, *cp* y *lvl*) están presentes.
 
-Para controlar el tipo de vista, usa los parámetros *ss* (Streetside) y *sty* (estilo). El parámetro *ss* coloca el mapa en una vista de Streetside. El parámetro *sty* te permite cambiar entre las vistas de carretera, aérea y en 3D. Cuando se usa el estilo 3D, los parámetros *hdg*, *pit* y *rad* pueden usarse para especificar la vista 3D. *hdg* especifica el encabezado de la vista, *pit* especifica la rotación alrededor del eje x (pitch) de la vista y *rad* indica la distancia desde el punto central para mostrar en la vista. Para obtener más información sobre estos y otros parámetros, consulta la [referencia del parámetro bingmaps:](#bingmaps).
+Para controlar el tipo de vista, usa los parámetros *ss* (Streetside) y *sty* (estilo). El parámetro *ss* coloca el mapa en una vista de Streetside. El parámetro *sty* te permite cambiar entre las vistas de carretera, aérea y en 3D. Cuando se usa el estilo 3D, los parámetros *hdg*, *pit* y *rad* pueden usarse para especificar la vista 3D. *hdg* especifica el encabezado de la vista, *pit* especifica la rotación alrededor del eje x (pitch) de la vista y *rad* indica la distancia desde el punto central para mostrar en la vista. Para obtener más información sobre estos y otros parámetros, consulta la [referencia del parámetro bingmaps:](#bingmaps-param-reference).
 
 | Ejemplo de URI                                                                 | Resultados                                                                                                                                                                                                   |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -81,15 +87,13 @@ Para controlar el tipo de vista, usa los parámetros *ss* (Streetside) y *sty* (
 | bingmaps:?collection=point.40.726966\_-74.006076\_Some%255FBusiness        | Muestra un mapa con un punto denominado Some\_Business (en Las Vegas).                                                                                                                                          |
 | bingmaps:?cp=40.726966~-74.006076&trfc=1&sty=a                             | Muestra un mapa de Nueva York con el tráfico activado y el estilo de mapa aéreo.                                                                                                                                               |
 | bingmaps:?cp=47.6204~-122.3491&sty=3d                                      | Muestra una vista 3D de la Space Needle.                                                                                                                                                                   |
-| bingmaps:?cp=47.6204~-122.3491&sty=3d&rad=200&pit=75&hdg=165               | Muestra una vista 3D de la Space Needle con un radio de 200m, una rotación alrededor del eje x (pitch) o 75 grados, y un encabezado de 165 grados.                                                                                        |
+| bingmaps:?cp=47.6204~-122.3491&sty=3d&rad=200&pit=75&hdg=165               | Muestra una vista 3D de la Space Needle con un radio de 200 m, una rotación alrededor del eje x (pitch) o 75 grados, y un encabezado de 165 grados.                                                                                        |
 | bingmaps:?cp=47.6204~-122.3491&ss=1                                        | Muestra una vista de Streetside de Space Needle.                                                                                                                                                           |
 
  
+## <a name="display-search-results"></a>Mostrar resultados de la búsqueda
 
-## Mostrar resultados de la búsqueda
-
-
-Te recomendamos que cuando realices una búsqueda de empresa con el parámetro *q*, escribas los términos más específicos posibles y lo uses junto con cualquiera de los parámetros *cp* o *where* para especificar una ubicación. Si el usuario no ha concedido permiso a la aplicación Mapas para que use su ubicación y no especificas una ubicación para una búsqueda de empresa, es posible que la búsqueda se realice en el nivel de país y que no devuelva ningún resultado significativo. Los resultados de búsqueda se muestran en la vista de mapa más adecuada, por lo que, salvo que exista una necesidad para establecer *lvl* (nivel de zoom), te recomendamos que permitas que la aplicación Mapas tome la decisión. Para obtener más información sobre estos y otros parámetros, consulta la [referencia del parámetro bingmaps:](#bingmaps).
+Te recomendamos que cuando realices una búsqueda de empresa con el parámetro *q*, escribas los términos más específicos posibles y lo uses junto con cualquiera de los parámetros *cp* o *where* para especificar una ubicación. Si el usuario no ha concedido permiso a la aplicación Mapas para que use su ubicación y no especificas una ubicación para una búsqueda de empresa, es posible que la búsqueda se realice en el nivel de país y que no devuelva ningún resultado significativo. Los resultados de búsqueda se muestran en la vista de mapa más adecuada, por lo que, salvo que exista una necesidad para establecer *lvl* (nivel de zoom), te recomendamos que permitas que la aplicación Mapas tome la decisión. Para obtener más información sobre estos y otros parámetros, consulta la [referencia del parámetro bingmaps:](#bingmaps-param-reference).
 
 | Ejemplo de URI                                                    | Resultados                                                                                                                                         |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -100,13 +104,12 @@ Te recomendamos que cuando realices una búsqueda de empresa con el parámetro *
 | bingmaps:?q=coffee&where=Seattle                              | Busca cafeterías en Seattle.                                                                                                                 |
 
  
+## <a name="display-multiple-points"></a>Mostrar varios puntos
 
-## Mostrar varios puntos
 
+Usa el parámetro *collection* para mostrar un conjunto de puntos personalizado en el mapa. Si hay más de un punto, se muestra una lista de puntos. Puede haber hasta 25 puntos en una colección, los cuales se enumeran en el orden indicado. La colección tiene prioridad sobre las solicitudes de búsqueda e indicaciones. Para obtener más información sobre este y otros parámetros, consulta la [referencia del parámetro bingmaps:](#bingmaps-param-reference).
 
-Usa el parámetro *collection* para mostrar un conjunto de puntos personalizado en el mapa. Si hay más de un punto, se muestra una lista de puntos. Puede haber hasta 25 puntos en una colección, los cuales se enumeran en el orden indicado. La colección tiene prioridad sobre las solicitudes de búsqueda e indicaciones. Para obtener más información sobre este y otros parámetros, consulta la [referencia del parámetro bingmaps:](#bingmaps).
-
-| Ejemplo de URI                                                                                                                                                         | Resultados                                                                                                                   |
+| Ejemplo de URI | Resultados                                                                                                                   |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace                                                                                                | Busca Caesar's Palace en Las Vegas y muestra los resultados en un mapa en la vista de mapa óptima.                         |
 | bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16                                                                                         | Muestra un marcador denominado Caesars Palace en Las Vegas y establece el nivel de zoom en 16.                                               |
@@ -116,10 +119,10 @@ Usa el parámetro *collection* para mostrar un conjunto de puntos personalizado 
 
  
 
-## Mostrar indicaciones y tráfico
+## <a name="display-directions-and-traffic"></a>Mostrar indicaciones y tráfico
 
 
-Puedes mostrar indicaciones entre dos puntos con el parámetro *rtp*; estos puntos pueden ser coordenadas de una dirección o de latitud y longitud. Usa el parámetro *trfc* para mostrar información sobre el tráfico. Para especificar el tipo de indicaciones (en coche, a pie o en transporte público), usa el parámetro *mode*. Si *mode* no se especificó, se proporcionarán indicaciones con el modo de preferencia de transporte del usuario. Para obtener más información sobre estos y otros parámetros, consulta la [referencia del parámetro bingmaps:](#bingmaps).
+Puedes mostrar indicaciones entre dos puntos con el parámetro *rtp*; estos puntos pueden ser coordenadas de una dirección o de latitud y longitud. Usa el parámetro *trfc* para mostrar información sobre el tráfico. Para especificar el tipo de indicaciones (en coche, a pie o en transporte público), usa el parámetro *mode*. Si *mode* no se especificó, se proporcionarán indicaciones con el modo de preferencia de transporte del usuario. Para obtener más información sobre estos y otros parámetros, consulta la [referencia del parámetro bingmaps:](#bingmaps-param-reference).
 
 ![Un ejemplo de indicaciones](images/windowsmapgcdirections.png)
 
@@ -136,12 +139,12 @@ Puedes mostrar indicaciones entre dos puntos con el parámetro *rtp*; estos punt
 
  
 
-## Mostrar indicaciones paso a paso
+## <a name="display-turn-by-turn-directions"></a>Mostrar indicaciones paso a paso
 
 
-Los esquemas de URI **ms-drive-to:** y **ms-walk-to:** te permiten iniciar directamente en una vista paso a paso de una ruta. Estos esquemas URI solo pueden proporcionar indicaciones desde la ubicación actual del usuario. Si debes proporcionar indicaciones entre los puntos que no incluyen la ubicación actual del usuario, usa el esquema de URI **bingmaps:** como se describe en la sección anterior. Para obtener más información sobre estos esquemas de URI, consulta la referencia de los parámetros [ms-drive-to:](#msdriveto) y [ms-walk-to:](#mswalkto) .
+Los esquemas de URI **ms-drive-to:** y **ms-walk-to:** te permiten iniciar directamente en una vista paso a paso de una ruta. Estos esquemas URI solo pueden proporcionar indicaciones desde la ubicación actual del usuario. Si debes proporcionar indicaciones entre los puntos que no incluyen la ubicación actual del usuario, usa el esquema de URI **bingmaps:** como se describe en la sección anterior. Para obtener más información sobre estos esquemas de URI, consulta la referencia de los parámetros [ms-drive-to:](#ms-drive-to-param-reference) y [ms-walk-to:](#ms-walk-to-param-reference) .
 
-> **Importante** Cuando los esquemas de URI **ms-drive-to:** o **ms-walk-to:** se inicien, la aplicación Mapas comprobará si el dispositivo tuvo alguna vez una corrección de la ubicación GPS. Si es así, la aplicación Mapas procederá a realizar indicaciones paso a paso. En caso contrario, la aplicación mostrará la información general de la ruta, tal como se describe en [Mostrar indicaciones y tráfico](#directions).
+> **Importante** Cuando los esquemas de URI **ms-drive-to:** o **ms-walk-to:** se inicien, la aplicación Mapas comprobará si el dispositivo tuvo alguna vez una corrección de la ubicación GPS. Si es así, la aplicación Mapas procederá a realizar indicaciones paso a paso. En caso contrario, la aplicación mostrará la información general de la ruta, tal como se describe en [Mostrar indicaciones y tráfico](#display-directions-and-traffic).
 
  
 
@@ -153,7 +156,7 @@ Los esquemas de URI **ms-drive-to:** y **ms-walk-to:** te permiten iniciar direc
 | ms-walk-to:?destination.latitude=47.680504&destination.longitude=-122.328262&destination.name=Green Lake  | Muestra un mapa con indicaciones paso a paso para ir a pie a Green Lake de tu ubicación actual. |
 
 
-## Descargar mapas sin conexión
+## <a name="download-offline-maps"></a>Descargar mapas sin conexión
 
 
 El esquema de URI **ms-settings:** te permite ir directamente a una página determinada de la aplicación Configuración. Aunque el esquema de URI **ms-settings:** no se inicie en la aplicación Mapas, te permite iniciar directamente la página Mapas sin conexión en la aplicación Configuración y muestra un cuadro de diálogo de confirmación para descargar los mapas sin conexión que usa la aplicación Mapas. El esquema de URI acepta un punto especificado por una latitud y longitud y determina automáticamente si hay mapas sin conexión disponibles para una región que contenga ese punto.  Si la latitud y longitud pasadas se incluyen en varias regiones de descarga, el cuadro de diálogo de confirmación permite al usuario elegir cuál de las regiones descargar. Si los mapas sin conexión no están disponibles para una región que contenga ese punto, se muestra la página Mapas sin conexión en la aplicación Configuración con un cuadro de diálogo de error.
@@ -163,7 +166,8 @@ El esquema de URI **ms-settings:** te permite ir directamente a una página dete
 | ms-settings:maps-downloadmaps?latlong=47.6,-122.3 | Abre la aplicación Configuración en la página Mapas sin conexión con un cuadro de diálogo de confirmación que se muestra para descargar mapas para la región que contiene el punto especificado de latitud y longitud. |
  
 
-## Referencia de parámetro bingmaps:
+<span id="bingmaps-param-reference"/>
+## <a name="bingmaps-parameter-reference"></a>Referencia de parámetro bingmaps:
 
 
 La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de Backus-Naur aumentada (ABNF).
@@ -382,13 +386,13 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 </table>
 
  
-
+<span id="ms-drive-to-param-reference"/>
 ## Referencia del parámetro ms-drive-to:
 
 
 El URI para iniciar una solicitud de indicaciones paso a paso de conducción no necesita codificación y tiene el siguiente formato.
 
-> **Nota** En este esquema de URI no se especifica el punto inicial. Siempre se supone que el punto inicial es la ubicación actual. Si necesitas especificar un punto inicial que no sea la ubicación actual, consulta [Mostrar indicaciones y tráfico](#directions).
+> **Nota** En este esquema de URI no se especifica el punto inicial. Siempre se supone que el punto inicial es la ubicación actual. Si necesitas especificar un punto inicial que no sea la ubicación actual, consulta [Mostrar indicaciones y tráfico](#display-directions-and-traffic).
 
  
 
@@ -399,13 +403,13 @@ El URI para iniciar una solicitud de indicaciones paso a paso de conducción no 
 | **destination.name** | Nombre del destino | Ejemplo: destination.name=Redmond, WA | El nombre del destino. No es necesario codificar el valor de **destination.name**. |
 
  
-
-## Referencia del parámetro ms-walk-to:
+<span id="ms-walk-to-param-reference"/>
+## <a name="ms-walk-to-parameter-reference"></a>Referencia del parámetro ms-walk-to:
 
 
 El URI para iniciar una solicitud de indicaciones paso a paso para ir a pie no necesita codificación y tiene el siguiente formato.
 
-> **Nota** En este esquema de URI no se especifica el punto inicial. Siempre se supone que el punto inicial es la ubicación actual. Si necesitas especificar un punto inicial que no sea la ubicación actual, consulta [Mostrar indicaciones y tráfico](#directions).
+> **Nota** En este esquema de URI no se especifica el punto inicial. Siempre se supone que el punto inicial es la ubicación actual. Si necesitas especificar un punto inicial que no sea la ubicación actual, consulta [Mostrar indicaciones y tráfico](#display-directions-and-traffic).
 
  
 
@@ -416,7 +420,7 @@ El URI para iniciar una solicitud de indicaciones paso a paso para ir a pie no n
 | **destination.name** | Nombre del destino | Ejemplo: destination.name=Redmond, WA | El nombre del destino. No tienes que codificar el URI ni el valor de **destination.name**. |
 
  
-## ms-settings: referencia del parámetro
+## <a name="ms-settings-parameter-reference"></a>ms-settings: referencia del parámetro
 
 
 La sintaxis de los parámetros específicos de la aplicación Mapas para el esquema de URI **ms-settings:** se define a continuación. **maps-downloadmaps** se especifica junto con el URI **ms-settings:** en forma de **ms-settings:maps-downloadmaps?** para indicar la página de configuración de mapas sin conexión.
@@ -429,9 +433,4 @@ La sintaxis de los parámetros específicos de la aplicación Mapas para el esqu
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

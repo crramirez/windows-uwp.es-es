@@ -2,15 +2,22 @@
 author: TylerMSFT
 ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: Enviar un elemento de trabajo al grupo de subprocesos
-description: "Obtén información acerca de cómo realizar trabajo en un subproceso separado mediante el envío de un elemento de trabajo al grupo de subprocesos."
+description: "Obtén información acerca de cómo trabajar en un subproceso distinto mediante el envío de un elemento de trabajo al grupo de subprocesos."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, subprocesos, grupo de subprocesos
 translationtype: Human Translation
-ms.sourcegitcommit: 41f0847dd7aa52465186cb8415cbe41342ff93f0
-ms.openlocfilehash: 2d73b44933ed71dc388b3d37793b7c99b8d0a3dd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d5141467e474f26a8aa681b4478cf60c979ae83b
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar un elemento de trabajo al grupo de subprocesos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** API importantes **
 
@@ -113,12 +120,12 @@ En el siguiente ejemplo se crea un elemento de trabajo y se envía un lambda par
 > ``` csharp
 > // The nth prime number to find.
 > const uint n = 9999;
-> 
+>
 > // A shared pointer to the result.
 > // We use a shared pointer to keep the result alive until the
 > // thread is done.
 > ulong nthPrime = 0;
-> 
+>
 > // Simulates work by searching for the nth prime number. Uses a
 > // naive algorithm and counts 2 as the first prime number.
 > IAsyncAction asyncAction = Windows.System.Threading.ThreadPool.RunAsync(
@@ -127,23 +134,23 @@ En el siguiente ejemplo se crea un elemento de trabajo y se envía un lambda par
 >     uint  progress = 0; // For progress reporting.
 >     uint  primes = 0;   // Number of primes found so far.
 >     ulong i = 2;        // Number iterator.
-> 
+>
 >     if ((n >= 0) && (n <= 2))
 >     {
 >         nthPrime = n;
 >         return;
 >     }
-> 
+>
 >     while (primes < (n - 1))
 >     {
 >         if (workItem.Status == AsyncStatus.Canceled)
 >         {
 >             break;
 >         }
-> 
+>
 >         // Go to the next number.
 >         i++;
-> 
+>
 >         // Check for prime.
 >         bool prime = true;
 >         for (uint j = 2; j < i; ++j)
@@ -154,22 +161,22 @@ En el siguiente ejemplo se crea un elemento de trabajo y se envía un lambda par
 >                 break;
 >             }
 >         };
-> 
+>
 >         if (prime)
 >         {
 >             // Found another prime number.
 >             primes++;
-> 
+>
 >             // Report progress at every 10 percent.
 >             uint temp = progress;
 >             progress = (uint)(10.0*primes/n);
-> 
+>
 >             if (progress != temp)
 >             {
 >                 String updateString;
 >                 updateString = "Progress to " + n + "th prime: "
 >                     + (10 * progress) + "%\n";
-> 
+>
 >                 // Update the UI thread with the CoreDispatcher.
 >                 CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
 >                     CoreDispatcherPriority.High,
@@ -180,11 +187,11 @@ En el siguiente ejemplo se crea un elemento de trabajo y se envía un lambda par
 >             }
 >         }
 >     }
-> 
+>
 >     // Return the nth prime number.
 >     nthPrime = i;
 > });
-> 
+>
 > // A reference to the work item is cached so that we can trigger a
 > // cancellation when the user presses the Cancel button.
 > m_workItem = asyncAction;
@@ -209,11 +216,11 @@ En el siguiente ejemplo se actualiza la interfaz de usuario con el resultado del
 >     {
 >         return;
 >     }
-> 
+>
 >     String^ updateString;
 >     updateString = "\n" + "The " + n + "th prime number is "
 >         + (*nthPrime).ToString() + ".\n";
-> 
+>
 >     // Update the UI thread with the CoreDispatcher.
 >     CoreApplication::MainView->CoreWindow->Dispatcher->RunAsync(
 >         CoreDispatcherPriority::High,
@@ -231,11 +238,11 @@ En el siguiente ejemplo se actualiza la interfaz de usuario con el resultado del
 >     {
 >         return;
 >     }
-> 
+>
 >     String updateString;
 >     updateString = "\n" + "The " + n + "th prime number is "
 >         + nthPrime + ".\n";
-> 
+>
 >     // Update the UI thread with the CoreDispatcher.
 >     CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
 >         CoreDispatcherPriority.High,
@@ -258,9 +265,4 @@ Puedes obtener más información si descargas el código de este inicio rápido 
 * [Procedimientos recomendados para usar el grupo de subprocesos](best-practices-for-using-the-thread-pool.md)
 * [Enviar un elemento de trabajo con un temporizador](use-a-timer-to-submit-a-work-item.md)
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

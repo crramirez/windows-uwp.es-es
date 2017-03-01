@@ -3,15 +3,22 @@ author: laurenhughes
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Enumerar y consultar archivos y carpetas
 description: "Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: 80c9a2f37b7744d983f3f742895e9ac2408850df
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: def5e4e75f4208eb91f129160807728e57322064
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>Enumerar y consultar archivos y carpetas
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Permite tener acceso a los archivos que se encuentran en carpetas, bibliotecas, dispositivos o ubicaciones de red. También puedes consultar los archivos y las carpetas que hay en una ubicación si creas consultas de archivos y carpetas.
@@ -323,9 +330,4 @@ July ‎2015 (2)
    MyImage1.png
    MyImage2.png
 ```
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

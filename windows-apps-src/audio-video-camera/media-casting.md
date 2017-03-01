@@ -1,17 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
-description: "En este artículo se muestra cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows."
+description: "En este artículo te mostramos cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows."
 title: Transmitir contenido multimedia
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: ebcd2f2b28a7cd2a8a9dad16c30239b06e147ec3
-ms.openlocfilehash: fc69e3b5bb814752480fa0151c36ae0a8c783c4e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f399007426f5a973a06d473ef98a9eb7e24184dd
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="media-casting"></a>Transmitir contenido multimedia
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo te mostramos cómo transmitir contenido multimedia a dispositivos remotos desde una aplicación universal de Windows.
@@ -156,10 +163,5 @@ Por último, implementa el controlador para el botón Desconectar. Detén la con
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

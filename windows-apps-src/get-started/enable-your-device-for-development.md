@@ -10,13 +10,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7a6f0be15105bc70e580eaaf581152338c56bed7
-ms.openlocfilehash: 3641fdd1f7eb74a11233115d9dfb809ea959926e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dc1bf476c93ef9843c20244f24a199c7888eb4a5
+ms.lasthandoff: 02/07/2017
 
 ---
+
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
-Para poder crear aplicaciones, necesitas habilitar el modo de desarrollador tanto en el equipo de desarrollo como en los dispositivos en los que probarás el código.
+Para poder crear aplicaciones, necesitas habilitar el modo de desarrollador tanto en el equipo de desarrollo como en los dispositivos en los que probarás el código. 
+
+![Habilitar los dispositivo para el desarrollo](images/developer-poster.png)
 
 ## <a name="use-developer-features"></a>Usar las funciones para desarrolladores
 
@@ -77,7 +81,7 @@ Para obtener más información sobre la detección de dispositivos y Device Port
 
 Para obtener instrucciones específicas sobre la configuración del dispositivo, consulta:
 - [Device Portal para equipos de escritorio](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [Device Portal para HoloLens](https://dev.windows.com/holographic/using_the_windows_device_portal)
+- [Device Portal para HoloLens](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
 - [Device Portal para IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
 - [Device Portal para dispositivos móviles](../debug-test-perf/device-portal-mobile.md)
 - [Device Portal para Xbox](../debug-test-perf/device-portal-xbox.md)
@@ -215,9 +219,4 @@ Si creas o transfieres localmente aplicaciones en un dispositivo con Windows 8.1
 Después debes habilitar el dispositivo para el desarrollo, tal como se describe en este tema, para que puedas seguir desarrollando en este dispositivo. Si no lo haces, es posible que obtengas un error al depurar la aplicación o intentar crear un paquete para ella. Este es un ejemplo de este error:
 
 Error : DEP0700 : Error en el registro de la operación.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

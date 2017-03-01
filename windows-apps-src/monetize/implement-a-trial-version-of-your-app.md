@@ -3,16 +3,22 @@ author: mcleanbyron
 ms.assetid: 571697B7-6064-4C50-9A68-1374F2C3F931
 description: "Aprende a usar el espacio de nombres Windows.Services.Store para implementar una versión de prueba de tu aplicación."
 title: "Implementar una versión de prueba de la aplicación"
-keywords: "ejemplo de código de prueba gratuita"
+keywords: "Windows 10, uwp, prueba, trial, compras desde la aplicación, in-app purchases, IAP, Windows.Services.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: ea4c5637a970a63938da2b1bea9f11fd39de9cc8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dc5e67823521db455e12fa4b16d8204c20bff621
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="implement-a-trial-version-of-your-app"></a>Implementar una versión de prueba de la aplicación
 
-Si configuras la aplicación como una [prueba gratuita en el panel del Centro de desarrollo de Windows](../publish/set-app-pricing-and-availability.md#free-trial) para que los clientes pueden usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando ciertas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
+Si configuras la aplicación como una [prueba gratuita en el panel del Centro de desarrollo de Windows](../publish/set-app-pricing-and-availability.md#free-trial) para que los clientes pueden usarla gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de tu aplicación excluyendo o limitando ciertas características durante el período de prueba. Determina las funciones que quieres restringir antes de empezar a codificar y luego asegúrate de que tu aplicación solo permita que funcionen una vez comprada la licencia completa. Asimismo, puedes habilitar características tales como banners o marcas de agua, para que solo se muestren durante la prueba, antes de que el cliente compre la aplicación.
 
 Las aplicaciones destinadas a Windows 10, versión 1607 o posterior, pueden usar miembros de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para determinar si el usuario tiene una licencia de prueba para tu aplicación y recibir una notificación si cambia el estado de la licencia mientras se ejecuta la aplicación.
 
@@ -85,9 +91,4 @@ Para obtener una aplicación de ejemplo completa, consulta la [muestra de la Tie
 * [Habilitar compras desde la aplicación para aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Habilitar compras de complementos consumibles](enable-consumable-add-on-purchases.md)
 * [Muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

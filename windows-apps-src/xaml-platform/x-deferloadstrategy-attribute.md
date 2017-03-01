@@ -3,27 +3,34 @@ author: jwmsft
 title: Atributo xDeferLoadStrategy
 description: "El atributo xDeferLoadStrategy retrasa la creación de un elemento y sus elementos secundarios, lo que disminuye el tiempo de inicio aunque incrementa ligeramente el uso de memoria. Cada elemento afectado agrega alrededor de 600 bytes de uso de memoria."
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: c1a0515ea4298b6eb870bdf69e452f774962cdd8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4ccc18920a98b3c2258b4965e96fa063124d0546
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Atributo x:DeferLoadStrategy
+# <a name="xdeferloadstrategy-attribute"></a>Atributo x:DeferLoadStrategy
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **x:DeferLoadStrategy="Lazy"** es una característica que puedes usar para optimizar el rendimiento del inicio o de los escenarios para crear árboles de una aplicación XAML. Al usar **x:DeferLoadStrategy="Lazy"**, se retrasa la creación de un elemento y sus elementos secundarios consiguiendo así reducir el tiempo de inicio y el coste de la memoria, ya que no es necesario crear los elementos. Esto es útil para reducir los costes de los elementos que no se usan a menudo. El elemento se ejecutará en el momento en que se le haga referencia desde el código o desde VisualStateManager.
 
 Sin embargo, la mantener los registros de aplazamiento agrega unos 600 bytes al uso de la memoria, por cada elemento afectado. Cuanto mayor sea del árbol de elementos aplazado, mayor será el ahorro de tiempo de inicio, aunque a cambio de un mayor superficie de memoria. Por lo tanto, es posible usar en exceso este atributo en la medida en que disminuye el rendimiento.
 
-## Uso del atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso del atributo XAML
 
 ``` syntax
 <object x:DeferLoadStrategy="Lazy" .../>
 ```
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 Las restricciones de el de uso **x: DeferLoadStrategy** son:
 
@@ -59,7 +66,7 @@ Si el [atributo x:Phase](x-phase-attribute.md) se usa en combinación con **x:De
 
 Como regla general, se recomienda evaluar la aplicación antes y después para asegurarte de que vas a obtener el rendimiento deseado.
 
-## Ejemplo
+## <a name="example"></a>Ejemplo
 
 ```xml
 <Grid x:Name="DeferredGrid" x:DeferLoadStrategy="Lazy">
@@ -86,10 +93,5 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
     this.FindName("DeferredGrid"); // This will realize the deferred grid
 }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

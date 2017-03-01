@@ -3,15 +3,22 @@ author: jwmsft
 description: "En este tema se explican las asignaciones de espacios de nombres XML/XAML (xmlns) tal y como se encuentran en el elemento raíz de la mayoría de los archivos XAML. También describe cómo producir asignaciones similares para tipos y ensamblados personalizados."
 title: "Espacios de nombres XAML y asignación de espacios de nombres"
 ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
-ms.openlocfilehash: 626af2ba6e1b8616f8d23419d94e621f3ce7d043
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 11a99a1a68a37b8c60974193c8cab51247a25711
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="xaml-namespaces-and-namespace-mapping"></a>Espacios de nombres XAML y asignación de espacios de nombres
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se explican las asignaciones de espacios de nombres XML/XAML (**xmlns**) tal y como se encuentran en el elemento raíz de la mayoría de los archivos XAML. También describe cómo producir asignaciones similares para tipos y ensamblados personalizados.
 
@@ -111,10 +118,5 @@ Si haces referencia a propiedades adjuntas, el fragmento del tipo de propietario
 * [Plantillas de proyecto C#, VB y C++ para aplicaciones de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Migrar de Silverlight o código XAML en WPF a una aplicación de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/br229571)
  
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

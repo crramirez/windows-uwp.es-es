@@ -1,18 +1,25 @@
 ---
 author: mtoepke
 title: "Crear y mostrar una malla básica"
-description: "En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies."
+description: "En los juegos 3D para la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies."
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, juegos, malla, DirectX
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b8795438053adebfbd36cada86a8ef13afb3eef2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f7dc55c0a7653616a86f1cca41521c7b25c070f9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Crear y mostrar una malla básica
+# <a name="create-and-display-a-basic-mesh"></a>Crear y mostrar una malla básica
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usan polígonos para representar objetos y superficies. Las listas de vértices que comprimen la estructura de estos objetos poligonales y superficies se denominan mallas. A continuación crearemos una malla básica para un objeto de cubo y haremos que se represente y muestre a través de la canalización de sombreador.
 
@@ -20,21 +27,21 @@ En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usa
 
  
 
-## Lo que debes saber
+## <a name="what-you-need-to-know"></a>Lo que debes saber
 
 
-### Tecnologías
+### <a name="technologies"></a>Tecnologías
 
 -   [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh769064)
 
-### Requisitos previos
+### <a name="prerequisites"></a>Requisitos previos
 
 -   Conocimiento básico sobre álgebra lineal y sistemas de coordenadas 3D
 -   Plantilla Direct3D de Visual Studio 2015
 
-## Instrucciones
+## <a name="instructions"></a>Instrucciones
 
-### Paso 1: Construir la malla para el modelo
+### <a name="step-1-construct-the-mesh-for-the-model"></a>Paso 1: Construir la malla para el modelo
 
 En la mayoría de los juegos, la malla para un objeto del juego se carga desde un archivo que contiene los datos de vértices específicos. El orden de estos vértices depende de la aplicación, pero, por lo general, están serializados en franjas o ventiladores. Los datos de vértices pueden proceder de cualquier origen de software o pueden crearse manualmente. Depende de tu juego interpretar los datos de una forma que el sombreador de vértices pueda procesarlos de manera efectiva.
 
@@ -63,7 +70,7 @@ En cada emparejamiento entre corchetes, el segundo grupo de valores DirectX::XMF
 
 Entonces tienes 8 vértices, cada uno con un color específico. Cada emparejamiento de vértice y color son los datos completos de un vértice en nuestro ejemplo. Cuando especificas nuestro búfer de vértices, debes tener en mente este diseño específico. Proporcionamos este diseño de entrada al sombreador de vértices para que pueda comprender los datos de vértices.
 
-### Paso 2: Configurar el diseño de entrada
+### <a name="step-2-set-up-the-input-layout"></a>Paso 2: Configurar el diseño de entrada
 
 Ahora tienes los vértices en la memoria. Pero el dispositivo de gráficos tiene su propia memoria a la que accedes con Direct3D. Cuando introduces los datos de vértices en el dispositivo de gráficos para que se procesen, necesitas facilitar las cosas: debes declarar cómo aparecen estos datos para el que dispositivo los interprete cuando los obtenga desde el juego. Para ello, usas [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575).
 
@@ -102,7 +109,7 @@ Si quieres obtener la lista completa de formatos, consulta [**DXGI\_FORMAT**](ht
 
 Llama a [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) y crea el diseño de entrada en el dispositivo Direct3D. Ahora necesitas crear un búfer que pueda realmente mantener los datos.
 
-### Paso 3: Rellenar los búferes de vértices
+### <a name="step-3-populate-the-vertex-buffers"></a>Paso 3: Rellenar los búferes de vértices
 
 Los búferes de vértices contienen la lista de vértices para cada triángulo de la malla. Cada vértice debe ser único en esta lista. En nuestro ejemplo, tienes 8 vértices para el cubo. El sombreador de vértices se ejecuta en el dispositivo de gráficos y lee el búfer de vértices. Interpreta los datos según el diseño de entrada que especificaste en el paso anterior.
 
@@ -135,7 +142,7 @@ m_d3dDevice->CreateBuffer(
 
 Vértices cargados. ¿Pero cuál es el orden de procesamiento de estos vértices? Esto se controla cuando proporcionas una lista de índices a los vértices (el orden de estos índices es el orden en que el sombreador de vértices los procesa).
 
-### Paso 4: Rellenar los búferes de índices
+### <a name="step-4-populate-the-index-buffers"></a>Paso 4: Rellenar los búferes de índices
 
 Ahora proporciona una lista de índices para cada uno de los vértices. Estos índices corresponden a la posición del vértice en el búfer de vértices, empezando por 0. Para ayudarte a visualizar esto, considera que cada vértice de la malla tiene asignado un número único, como un Id. Este Id. es la posición de entero del vértice en el búfer de vértices.
 
@@ -179,7 +186,7 @@ Treinta y seis elementos de índice en el búfer es un número muy redundante pa
 
 Para obtener más información sobre las distintas técnicas de listas de índices, consulta [Topologías primitivas](https://msdn.microsoft.com/library/windows/desktop/bb205124).
 
-### Paso 5: Crear un búfer de constantes para las matrices de transformación
+### <a name="step-5-create-a-constant-buffer-for-your-transformation-matrices"></a>Paso 5: Crear un búfer de constantes para las matrices de transformación
 
 Antes de empezar a procesar los vértices, necesitas proporcionar las matrices de transformación que se aplicarán (multiplicarán) para cada vértice durante su ejecución. Hay tres matrices que se usan en la mayoría de los juegos 3D:
 
@@ -300,7 +307,7 @@ m_d3dDeviceContext->IASetIndexBuffer(
 
 ¡Listo! Ensamblado de entrada completo. Todo está en su lugar para la representación. Pongamos en funcionamiento el sombreador de vértices.
 
-### Paso 6: Procesar la malla con el sombreador de vértices
+### <a name="step-6-process-the-mesh-with-the-vertex-shader"></a>Paso 6: Procesar la malla con el sombreador de vértices
 
 Ahora que tienes un búfer de vértices, con los vértices que definen la malla, y el búfer de índices, que define el orden en que se procesarán los vértices, los envías al sombreador de vértices. El código del sombreador de vértices, expresado en lenguaje de sombreado de alto nivel compilado, se ejecuta una vez para cada vértice en el búfer de vértices. Esto te permite realizar transformaciones por vértice. El resultado final normalmente es una proyección 2D.
 
@@ -369,7 +376,7 @@ PixelShaderInput SimpleVertexShader(VertexShaderInput input)
 
 **PixelShaderInput** especifica el diseño de los datos que devuelve la función principal del sombreador de vértices. Cuando terminas de procesar un vértice, devolverás una posición de vértices en el espacio de proyección 2D y un color para la iluminación por vértice. La tarjeta gráfica usa la salida de datos del sombreador para calcular los "fragmentos" (posibles píxeles) que deben colorearse cuando el sombreador de píxeles se ejecute en la siguiente etapa de la canalización.
 
-### Paso 7: Pasar la malla por el sombreador de píxeles
+### <a name="step-7-passing-the-mesh-through-the-pixel-shader"></a>Paso 7: Pasar la malla por el sombreador de píxeles
 
 Normalmente, en esta etapa de la canalización de gráficos, haces operaciones por píxel en las superficies visibles proyectadas de los objetos. (A la gente le gusta las texturas). Pero, para la muestra, simplemente pasas por esta etapa.
 
@@ -398,7 +405,7 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 
 Coloca este código en un archivo HLSL independiente del HLSL del sombreador de vértices (como SimplePixelShader.hlsl). Este código se ejecuta una vez para cada píxel visible en la ventanilla (una representación en memoria de la parte de la pantalla en que dibujas) que, en este caso, corresponde a toda la pantalla. Ahora la canalización de gráficos está completamente definida.
 
-### Paso 8: Rasterizar y mostrar la malla
+### <a name="step-8-rasterizing-and-displaying-the-mesh"></a>Paso 8: Rasterizar y mostrar la malla
 
 Ejecutemos la canalización. Esto es fácil: llama a [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/bb173565).
 
@@ -426,16 +433,16 @@ m_swapChain->Present(1, 0);
 
 ¡Y listo! Para una escena repleta de modelos, usa varios búferes de índices y vértices. Incluso podrías tener distintos sombreadores para distintos tipos de modelos. Recuerda que cada modelo tiene su propio sistema de coordenadas y necesitas transformarlos al sistema compartido de coordenadas globales, usando las matrices definidas en el búfer de constantes.
 
-## Comentarios
+## <a name="remarks"></a>Comentarios
 
 En este tema se explica cómo crear y mostrar la geometría simple que tú mismo has elaborado. Para obtener más información sobre cómo cargar geometría compleja de un archivo y convertirla al formato del objeto de búfer de vértices (.vbo) específico de la muestra, consulta [Cómo cargar recursos en tu juego DirectX](load-a-game-asset.md).
 
 > **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Cómo cargar recursos en tu juego DirectX](load-a-game-asset.md)
@@ -446,10 +453,5 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

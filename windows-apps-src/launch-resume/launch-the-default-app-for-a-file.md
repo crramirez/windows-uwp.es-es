@@ -1,18 +1,25 @@
 ---
 author: TylerMSFT
-title: "Iniciar la aplicación predeterminada de un archivo"
-description: "Aprende cómo iniciar la aplicación predeterminada de un archivo."
+title: "Iniciar la aplicación predeterminada para un archivo"
+description: "Obtén información sobre cómo iniciar la aplicación predeterminada de un archivo."
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: c87f66a39e6ae7733ecc75006510b6aede699d4f
-ms.openlocfilehash: 20cbd0ef20cc81c81f686100579059321e3c56fa
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1ab65f210c5fd01460cbe9f63f8b94f6935a630e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Iniciar la aplicación predeterminada de un archivo
+# <a name="launch-the-default-app-for-a-file"></a>Iniciar la aplicación predeterminada para un archivo
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -21,7 +28,7 @@ ms.openlocfilehash: 20cbd0ef20cc81c81f686100579059321e3c56fa
 
 Aprende cómo iniciar la aplicación predeterminada de un archivo. Muchas aplicaciones necesitan funcionar con archivos que no pueden controlar. Por ejemplo, las aplicaciones de correo electrónico reciben una gran variedad de tipos de archivo y necesitan una forma de iniciar estos archivos en sus controladores predeterminados. Los siguientes pasos te mostrarán cómo usar la API [**Windows.System.Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801) para iniciar el controlador predeterminado para un archivo que no puede controlar la aplicación.
 
-## Obtener un objeto de archivo
+## <a name="get-the-file-object"></a>Obtener un objeto de archivo
 
 
 Primero, obtén un objeto [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) para el archivo.
@@ -30,7 +37,7 @@ Si el archivo está incluido en el paquete de la aplicación, puedes usar la pro
 
 Si el archivo está en una carpeta conocida, puedes usar las propiedades de la clase [**Windows.Storage.KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151) para obtener una clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) y el método [**GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para obtener el objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
-## Inicia el archivo
+## <a name="launch-the-file"></a>Inicia el archivo
 
 
 Windows proporciona varias opciones distintas para iniciar el controlador predeterminado de un archivo. Estas opciones se explican en este gráfico y en las secciones que siguen.
@@ -42,7 +49,7 @@ Windows proporciona varias opciones distintas para iniciar el controlador predet
 | Iniciar con una reserva de aplicación recomendada | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicia el archivo especificado con el controlador predeterminado. Si el sistema no tiene ningún controlador instalado, recomienda al usuario una aplicación de la tienda. |
 | Inicio con una vista deseada permanente | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) (solo para Windows) | Inicia el archivo especificado con el controlador predeterminado. Especifica una preferencia para que permanezca en la pantalla después de iniciar y solicitar un tamaño de ventana específico. [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) no se admite en la familia de dispositivos móviles.   |
  
-### Inicio predeterminado
+### <a name="default-launch"></a>Inicio predeterminado
 
 Llama al método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) para iniciar la aplicación predeterminada. En este ejemplo, se usa el método [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para iniciar un archivo de imagen, test.png, incluido en el paquete de la aplicación.
 
@@ -128,7 +135,7 @@ Llama al método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](htt
 > }
 > ```
 
-### Abrir con inicio
+### <a name="open-with-launch"></a>Abrir con inicio
 
 Llama al método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) con [**LauncherOptions.DisplayApplicationPicker**](https://msdn.microsoft.com/library/windows/apps/hh701438) establecido en **true** para iniciar la aplicación que el usuario seleccione en el cuadro de diálogo **Abrir con**.
 
@@ -342,7 +349,7 @@ En algunos casos, el usuario podría no tener instalada una aplicación para adm
 > }
 > ```
 
-### Inicio con una vista deseada permanente (solo Windows)
+### <a name="launch-with-a-desired-remaining-view-windows-only"></a>Inicio con una vista deseada permanente (solo Windows)
 
 Las aplicaciones de origen que llaman a [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461) pueden solicitar que permanezcan en pantalla después de iniciarse un archivo. Windows intenta compartir de manera predeterminada todo el espacio disponible entre la aplicación de origen y la aplicación de destino que controla el archivo. Las aplicaciones de origen pueden usar la propiedad [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) para indicar al sistema operativo que prefieren que la ventana de la aplicación ocupe más o menos espacio del que hay disponible. También puedes usar el elemento **DesiredRemainingView** para indicar que la aplicación de origen no necesita permanecer en pantalla después de iniciar un archivo y que la aplicación de destino puede sustituirla por completo. Esta propiedad especifica únicamente el tamaño de ventana preferido de la aplicación que llama; no especifica el comportamiento de ninguna otra aplicación que también esté en pantalla al mismo tiempo.
 
@@ -418,7 +425,7 @@ Las aplicaciones de origen que llaman a [**LaunchFileAsync**](https://msdn.micro
 > }
 > ```
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 La aplicación no puede seleccionar qué aplicación se inicia, sino que es el usuario quien la determina. El usuario puede seleccionar una aplicación para la Plataforma universal de Windows (UWP) o una aplicación de escritorio de Windows.
 
@@ -428,10 +435,10 @@ No puedes iniciar tipos de archivo que contengan código o script, como archivos
 
 Si intentas iniciar un tipo de archivo restringido, se producirá un error en el inicio y se invocará a la devolución de llamada de error. Si tu aplicación controla una gran cantidad de tipos de archivo y esperas que este error pueda detectarse, conviene que proveas al usuario de una experiencia de reserva. Por ejemplo, puedes ofrecerle la posibilidad de guardar el archivo en el escritorio para poder abrirlo desde allí.
 
-> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Nota** Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 **Tareas**
@@ -451,9 +458,4 @@ Si intentas iniciar un tipo de archivo restringido, se producirá un error en el
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

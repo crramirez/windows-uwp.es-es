@@ -1,15 +1,22 @@
 ---
 author: mcleanbyron
 Description: En este tutorial, puedes crear, ejecutar y administrar el primer experimento con pruebas A/B.
-title: "Creación y ejecución de tu primer experimento con pruebas A/B"
+title: Crear y ejecutar tu primer experimento con pruebas A/B
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Microsoft Store Services SDK, pruebas A/B, experimentos
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 65785e53b2e5ba788dbda533373737e193e1c792
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fb9e93747fa77031fe906d9ab7463fc41b73cdeb
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="create-and-run-your-first-experiment-with-ab-testing"></a>Creación y ejecución de tu primer experimento con pruebas A/B
+# <a name="create-and-run-your-first-experiment-with-ab-testing"></a>Crear y ejecutar tu primer experimento con pruebas A/B
 
 En este tutorial, podrás:
 * Crear un [proyecto](run-app-experiments-with-a-b-testing.md#terms) de experimentación en el panel del Centro de desarrollo que defina varias variables remotas que representen el texto y el color de un botón de la aplicación.
@@ -103,9 +110,4 @@ Espera al menos varias horas después de completar la sección anterior y, a con
 * [Definición de tu experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Administración de tu experimento en el panel del Centro de desarrollo](manage-your-experiment.md)
 * [Ejecución de experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

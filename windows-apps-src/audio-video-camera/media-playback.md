@@ -1,21 +1,28 @@
 ---
 author: drewbatgit
-ms.assetid: 
+ms.assetid: 25553c4d-fa4f-4130-af9b-97f993fefd43
 description: "En esta sección se ofrece información sobre la creación de aplicaciones universales de Windows para reproducir audio y vídeo."
 title: "Reproducción de contenido multimedia"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 4349113e3503e0be4afede9bed70c71262435d09
-ms.openlocfilehash: 4dd961d508ccbdfa13dd99946ed03bb2d6e8705a
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 58b41c9d0d8bd7cd07b5a1f4aecf5936422a4ee8
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Reproducción de contenido multimedia
+# <a name="media-playback"></a>Reproducción de contenido multimedia
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En esta sección se ofrece información sobre la creación de aplicaciones universales de Windows para reproducir audio y vídeo. 
 
-## Características de desarrollo para la reproducción de contenido multimedia
+## <a name="media-playback-developer-features"></a>Características de desarrollo para la reproducción de contenido multimedia
 
 En la tabla siguiente se enumeran los artículos de procedimientos que proporcionan instrucciones detalladas para agregar características de reproducción de contenido multimedia a la aplicación.
  
@@ -31,7 +38,7 @@ En la tabla siguiente se enumeran los artículos de procedimientos que proporcio
 | [DRM de PlayReady](playready-client-sdk.md)                                                          | En este tema se describe cómo agregar contenido multimedia protegido con PlayReady a una aplicación para la Plataforma universal de Windows (UWP).                                                                                                                                                                                |
 | [Encrypted Media Extension (EME) de PlayReady](playready-encrypted-media-extension.md)                     | En esta sección se describe cómo modificar una aplicación web de PlayReady para admitir los cambios realizados de la versión anterior de Windows 8.1 en la versión de Windows 10.                                                                                                                                       |
 
-## Muestras de SDK de reproducción de contenido multimedia
+## <a name="media-playback-sdk-samples"></a>Muestras de SDK de reproducción de contenido multimedia
 
 Las siguientes muestras de SDK presentan las características de reproducción de contenido multimedia disponibles para las aplicaciones para UWP en Windows 10. Usa estas muestras para ver las API de reproducción de contenido multimedia que se usan en contexto o como punto de partida para tu propia aplicación.
 
@@ -42,10 +49,5 @@ Las siguientes muestras de SDK presentan las características de reproducción d
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

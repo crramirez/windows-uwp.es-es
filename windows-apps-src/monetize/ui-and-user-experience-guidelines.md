@@ -3,21 +3,28 @@ author: mcleanbyron
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "Obtén las directrices de la interfaz de usuario y de la experiencia del usuario para los anuncios en aplicaciones."
 title: Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios en aplicaciones
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, anuncios, publicidad, directrices, procedimientos recomendados
 translationtype: Human Translation
-ms.sourcegitcommit: e44392a1dc69a98655ba7e576d2af102a608acaa
-ms.openlocfilehash: ce39829cd6cd2dfb0c6a3aef930dd8fa82351b75
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e1c3fef6e8cc7cc483b72b6ba142d323055c960c
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="ui-and-user-experience-guidelines-for-ads-in-apps"></a>Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios en aplicaciones
 
-En este artículo se proporcionan directrices para ofrecer magníficas experiencias con anuncios de banner y anuncios intersticiales en las aplicaciones. Para obtener instrucciones generales sobre cómo diseñar la apariencia de las aplicaciones, consulta [Diseño e interfaz de usuario](https://developer.microsoft.com/windows/design).
+En este artículo se proporcionan directrices para ofrecer magníficas experiencias con anuncios de banner y anuncios intersticiales en las aplicaciones. Para obtener instrucciones generales sobre cómo diseñar la apariencia de las aplicaciones, consulta [Diseño e interfaz de usuario](https://developer.microsoft.com/windows/apps/design).
 
->**Importante**&nbsp;&nbsp;Todo uso de publicidad en tu aplicación debe regirse por las Directivas de la Tienda Windows, que incluyen, entre otras, la [directiva 10.10](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10) (Conducta y contenido de publicidad). En concreto, la implementación de anuncios de banner o anuncios intersticiales de la aplicación debe cumplir los requisitos de directiva de la Tienda Windows [directiva 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10). En este artículo se incluyen ejemplos de implementaciones que infringirían dicha directiva. Tales ejemplos se proporcionan para fines informativos solamente, como una forma de ayudarte a comprender mejor la directiva. Estos ejemplos no son integrales y es posible que haya muchas otras formas de infringir las Directivas de la Tienda Windows que no se muestran en este artículo.
+>**Importante**&nbsp;&nbsp;Todo uso de publicidad en tu aplicación debe regirse por las Directivas de la Tienda Windows, que incluyen, entre otras, la [directiva 10.10](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) (Conducta y contenido de publicidad). En concreto, la implementación de anuncios de banner o anuncios intersticiales de la aplicación debe cumplir los requisitos de directiva de la Tienda Windows [directiva 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10). En este artículo se incluyen ejemplos de implementaciones que infringirían dicha directiva. Tales ejemplos se proporcionan para fines informativos solamente, como una forma de ayudarte a comprender mejor la directiva. Estos ejemplos no son integrales y es posible que haya muchas otras formas de infringir las Directivas de la Tienda Windows que no se muestran en este artículo.
 
 ## <a name="guidelines-for-banner-ads"></a>Directrices para anuncios de banner
 
-En las siguientes secciones se proporcionan recomendaciones sobre cómo implementar anuncios de banner en tu aplicación mediante la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) y ejemplos de implementaciones que infringen la [directiva 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10) de las Directivas de la Tienda Windows.
+En las siguientes secciones se proporcionan recomendaciones sobre cómo implementar anuncios de banner en tu aplicación mediante la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) y ejemplos de implementaciones que infringen la [directiva 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) de las Directivas de la Tienda Windows.
 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
@@ -49,7 +56,7 @@ Te recomendamos que evites los siguientes procedimientos cuando implementes anun
 <span />
 ### <a name="examples-of-policy-violations"></a>Ejemplos de infracciones de directivas
 
-En esta sección se proporcionan ejemplos de escenarios de anuncios de banner que infringen la [directiva 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10) de las Directivas de la Tienda Windows. Tales ejemplos se proporcionan para fines informativos solamente, como una forma de ayudarte a comprender mejor la directiva. Estos ejemplos no son integrales y es posible que haya muchas otras formas de infringir la directiva 10.10.1 que no se muestran aquí.
+En esta sección se proporcionan ejemplos de escenarios de anuncios de banner que infringen la [directiva 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) de las Directivas de la Tienda Windows. Tales ejemplos se proporcionan para fines informativos solamente, como una forma de ayudarte a comprender mejor la directiva. Estos ejemplos no son integrales y es posible que haya muchas otras formas de infringir la directiva 10.10.1 que no se muestran aquí.
 
 * Interferir de algún modo con la capacidad del usuario para ver el anuncio de banner, por ejemplo, cambiando la opacidad de la clase [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) o colocar otro control por encima de **AdControl** (sin antes hacer una llamada a [AdControl.Suspend](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.suspend.aspx)).
 
@@ -68,7 +75,7 @@ En esta sección se proporcionan ejemplos de escenarios de anuncios de banner qu
 
 Si se usan con elegancia, los anuncios intersticiales pueden aumentar considerablemente los ingresos de la aplicación, sin incidir de forma negativa en la satisfacción del usuario. Si no se usan correctamente, estos anuncios pueden tener el efecto totalmente contrario.
 
-En las siguientes secciones se proporcionan recomendaciones sobre cómo implementar anuncios intersticiales en la aplicación mediante la clase [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) y ejemplos de implementaciones que infringen la [directiva 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10) de las Directivas de la Tienda Windows. Dado que conoces tu aplicación mejor que nadie, excepto en lo que a directivas se refiere, la decisión final está en tus manos. Lo más importante que debes tener en cuenta es que las clasificaciones de la aplicación y los ingresos están estrechamente relacionados.
+En las siguientes secciones se proporcionan recomendaciones sobre cómo implementar anuncios intersticiales en la aplicación mediante la clase [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) y ejemplos de implementaciones que infringen la [directiva 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) de las Directivas de la Tienda Windows. Dado que conoces tu aplicación mejor que nadie, excepto en lo que a directivas se refiere, la decisión final está en tus manos. Lo más importante que debes tener en cuenta es que las clasificaciones de la aplicación y los ingresos están estrechamente relacionados.
 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
@@ -132,7 +139,7 @@ Te recomendamos que evites los siguientes procedimientos cuando implementes anun
 <span />
 ### <a name="examples-of-policy-violations"></a>Ejemplos de infracciones de directivas
 
-En esta sección se proporcionan ejemplos de escenarios de anuncios intersticiales que infringen la [directiva 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10) de las Directivas de la Tienda Windows. Tales ejemplos se proporcionan para fines informativos solamente, como una forma de ayudarte a comprender mejor la directiva. Estos ejemplos no son integrales y es posible que haya muchas otras formas de infringir la directiva 10.10.1 que no se muestran aquí.
+En esta sección se proporcionan ejemplos de escenarios de anuncios intersticiales que infringen la [directiva 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) de las Directivas de la Tienda Windows. Tales ejemplos se proporcionan para fines informativos solamente, como una forma de ayudarte a comprender mejor la directiva. Estos ejemplos no son integrales y es posible que haya muchas otras formas de infringir la directiva 10.10.1 que no se muestran aquí.
 
 * Colocar un elemento de interfaz de usuario sobre el contenedor de anuncio intersticial.
 
@@ -153,9 +160,4 @@ En esta sección se proporcionan ejemplos de escenarios de anuncios intersticial
  
 
  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

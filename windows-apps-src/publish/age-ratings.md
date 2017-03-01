@@ -3,17 +3,24 @@ author: jnHs
 Description: "La página Clasificaciones por edades del proceso de envío de la aplicación permite proporcionar información acerca de tu aplicación para recibir las clasificaciones por edades apropiadas de la International Age Rating Coalition (IARC)."
 title: Clasificaciones por edades
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: eaba2fa0af727df29843dad38e277f5b22192b51
-ms.openlocfilehash: 6269cff868f7a4357c3006d65fcc0ad5b7f7932b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6841355976d74a21429df1c91dced9b702a3af4a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Clasificaciones por edades
+# <a name="age-ratings"></a>Clasificaciones por edades
 
 La página **Clasificaciones por edades** del [proceso de envío de la aplicación](app-submissions.md) permite proporcionar información acerca de la aplicación para recibir las clasificaciones por edades y contenido apropiadas administradas por la [International Age Rating Coalition (IARC)](http://go.microsoft.com/fwlink/p/?LinkId=716854). Estas clasificaciones tienen que ver con la idoneidad del contenido de la aplicación, más que con la edad del público objetivo de tu aplicación.
 
-## Responder al cuestionario de clasificaciones por edades
+## <a name="answering-the-age-ratings-questionnaire"></a>Responder al cuestionario de clasificaciones por edades
 
 La primera vez que envíes una aplicación (o la primera vez que actualices una aplicación publicada con el proceso anterior de clasificación por edades), se te solicitará que completes un cuestionario de elección múltiple para determinar la clasificación por edades de tu aplicación.
 
@@ -29,13 +36,13 @@ La próxima vez que actualices la aplicación, verás todas las clasificaciones 
 
 > **Nota** La legislación de Corea del Sur exige que los juegos disponibles en Corea del Sur se clasifiquen a través del [Game Rating Board](http://go.microsoft.com/fwlink/p/?LinkId=228256) (Consejo de clasificación de juegos) de Corea del Sur. Si la aplicación es un juego y quieres ofrecerlo en Corea del Sur, debes rellenar esta sección adicional y cargar el certificado de clasificación. Ten en cuenta que si la aplicación no es un juego o si no quieres ofrecerla en Corea del Sur, puedes dejar esta sección en blanco.
 
-## Apelar clasificaciones o clasificaciones rechazadas
+## <a name="appealing-ratings-or-refused-classifications"></a>Apelar clasificaciones o clasificaciones rechazadas
 
 Si tienes dudas sobre la clasificación por edades que ha recibido tu aplicación quieres apelarla, puedes ponerte en contacto con la IARC a través del vínculo que aparece en el correo electrónico de certificado de la clasificación que recibirás una vez publicada la aplicación.
 
 En algunos casos, es posible que la clasificación de tu aplicación haga que esta se clasifique como no adecuada para un país o región determinado. En este caso, verás un mensaje que indicará los mercados en los que no se puede ofrecer tu aplicación. Si no estás de acuerdo con esta clasificación (o con cualquier otra), puedes solicitar una apelación mediante el vínculo que aparece en el correo electrónico de certificado de la clasificación que recibirás de la IARC.
 
-## Clasificaciones por edades anteriores de la Tienda Windows
+## <a name="previous-windows-store-age-ratings"></a>Clasificaciones por edades anteriores de la Tienda Windows
 
 
 Anteriormente, los propios desarrolladores especificaban la clasificación por edades de su aplicación, en lugar de completar el cuestionario. A continuación tienes el desglose de clasificaciones por edades anteriores de la Tienda Windows:
@@ -43,13 +50,8 @@ Anteriormente, los propios desarrolladores especificaban la clasificación por e
 | Clasificación por edades                           | Descripción                            |
 |--------------------------------------|----------------------------------------|
 | 3+ (Apto para niños pequeños)     | Estas aplicaciones tienen contenido adecuado para niños. Pueden tener violencia cómica mínima en forma de dibujos animados irreales. Los personajes no debes asemejarse ni asociarse a personajes de la vida real. El contenido no puede causar miedo y no debe contener desnudez ni referencias a actividades sexuales o criminales. Además, las aplicaciones con esta clasificación por edades no pueden permitir funciones que podrían obtener acceso a contenido o funciones inadecuadas para niños, como el uso compartido de información en línea no controlado (por ejemplo, información descrita bajo la categoría de clasificación 12+).            |
-| 7+ (Apto para mayores de 7años)   | Las aplicaciones con esta clasificación por edades tienen los mismos criterios que las aplicaciones clasificadas como 3+, excepto que pueden incluir contenido que podría asustar a público más joven y pueden tener desnudez parcial, siempre y cuando esta no tenga connotaciones sexuales. Esta clasificación solo debe usarse para aplicaciones donde el contenido es adecuado para niños.                                                                                   |
-| 12+ (Apto para mayores de 12años) | Las aplicaciones con esta clasificación por edad pueden contener un mayor nivel de desnudez que no sea de carácter sexual, violencia gráfica leve hacia personajes irreales o violencia no gráfica hacia personajes realistas de humanos o animales. Esta clasificación por edad también puede incluir lenguaje soez, pero este no puede tener carácter sexual. Además, las aplicaciones a partir de esta clasificación por edad pueden permitir los siguientes usos no controlados: (i) acceso a redes sociales en línea o (ii) uso compartido de información personal con terceros, incluidos otros jugadores o personas conocidas en línea. (Para que esta actividad se considere controlada, la aplicación debe incluir funciones de control parental que requieran permiso paterno para usar dichas funciones de uso compartido, y deberás identificar y explicar su funcionalidad en las [notas para certificación](notes-for-certification.md)). |
-| 16+ (Apto para mayores de 16años) | Las aplicaciones con esta clasificación por edad pueden describir violencia realista con cantidades de sangre mínimas y pueden describir actividades sexuales. También pueden hacer referencia al consumo de drogas o tabaco y a actividades criminales, y pueden tener un lenguaje más soez que el permitido en las aplicaciones clasificadas como 12+, dentro de los límites estipulados en las directivas de la Tienda.                                                                                                                           |
+| 7+ (Apto para mayores de 7 años)   | Las aplicaciones con esta clasificación por edades tienen los mismos criterios que las aplicaciones clasificadas como 3+, excepto que pueden incluir contenido que podría asustar a público más joven y pueden tener desnudez parcial, siempre y cuando esta no tenga connotaciones sexuales. Esta clasificación solo debe usarse para aplicaciones donde el contenido es adecuado para niños.                                                                                   |
+| 12+ (Apto para mayores de 12 años) | Las aplicaciones con esta clasificación por edad pueden contener un mayor nivel de desnudez que no sea de carácter sexual, violencia gráfica leve hacia personajes irreales o violencia no gráfica hacia personajes realistas de humanos o animales. Esta clasificación por edad también puede incluir lenguaje soez, pero este no puede tener carácter sexual. Además, las aplicaciones a partir de esta clasificación por edad pueden permitir los siguientes usos no controlados: (i) acceso a redes sociales en línea o (ii) uso compartido de información personal con terceros, incluidos otros jugadores o personas conocidas en línea. (Para que esta actividad se considere controlada, la aplicación debe incluir funciones de control parental que requieran permiso paterno para usar dichas funciones de uso compartido, y deberás identificar y explicar su funcionalidad en las [notas para certificación](notes-for-certification.md)). |
+| 16+ (Apto para mayores de 16 años) | Las aplicaciones con esta clasificación por edad pueden describir violencia realista con cantidades de sangre mínimas y pueden describir actividades sexuales. También pueden hacer referencia al consumo de drogas o tabaco y a actividades criminales, y pueden tener un lenguaje más soez que el permitido en las aplicaciones clasificadas como 12+, dentro de los límites estipulados en las directivas de la Tienda.                                                                                                                           |
 | 18+ (Apto para adultos)            | Los juegos con esta clasificación por edades pueden contener escenas de sangre y violencia extrema, desagradable o explicita, solo adecuada para un público adulto. Todo el contenido debe cumplir con los criterios de las [directivas de contenido](https://msdn.microsoft.com/library/windows/apps/dn764944).                                                                                                                                                            |
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

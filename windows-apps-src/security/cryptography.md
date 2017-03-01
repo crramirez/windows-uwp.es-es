@@ -3,21 +3,28 @@ title: "Criptografía"
 description: "El artículo ofrece una descripción general de las características de criptografía disponibles para aplicaciones de la Plataforma universal de Windows (UWP). Para obtener información detallada sobre tareas determinadas, consulta la tabla al final de este artículo."
 ms.assetid: 9C213036-47FD-4AA4-99E0-84006BE63F47
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: c5feae97563277dc14a64d5c96cb6229b6cfb8b1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3329a873b0e86a606d6e8899dcaca62c2e127c29
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Criptografía
+# <a name="cryptography"></a>Criptografía
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 El artículo ofrece una descripción general de las características de criptografía disponibles para aplicaciones de la Plataforma universal de Windows (UWP). Para obtener información detallada sobre tareas determinadas, consulta la tabla al final de este artículo.
 
-## Terminología
+## <a name="terminology"></a>Terminología
 
 
 En criptografía e infraestructura de clave pública (PKI) se suele utilizar la siguiente terminología.
@@ -40,11 +47,11 @@ En criptografía e infraestructura de clave pública (PKI) se suele utilizar la 
 | Certificado X.509           | Un documento digital, normalmente emitido por una entidad de certificación, que permite a las partes interesadas comprobar la identidad de una persona, sistema o entidad.                                            |
 
  
-## Espacios de nombres
+## <a name="namespaces"></a>Espacios de nombres
 
 Los siguientes espacios de nombres están disponibles para  usarlos en aplicaciones.
 
-### Windows.Security.Cryptography
+### <a name="windowssecuritycryptography"></a>Windows.Security.Cryptography
 
 Contiene la clase CryptographicBuffer y métodos estáticos que te permiten hacer lo siguiente:
 
@@ -53,7 +60,7 @@ Contiene la clase CryptographicBuffer y métodos estáticos que te permiten hace
 -   Codificar mensajes para su transporte a través de una red
 -   Descodificar mensajes tras el transporte
 
-### Windows.Security.Cryptography.Certificates
+### <a name="windowssecuritycryptographycertificates"></a>Windows.Security.Cryptography.Certificates
 
 Contiene clases, interfaces y tipos de enumeración que te permiten hacer lo siguiente:
 
@@ -62,7 +69,7 @@ Contiene clases, interfaces y tipos de enumeración que te permiten hacer lo sig
 -   Importar un certificado en un archivo PFX
 -   Especificar y recuperar propiedades de solicitud de certificado
 
-### Windows.Security.Cryptography.Core
+### <a name="windowssecuritycryptographycore"></a>Windows.Security.Cryptography.Core
 
 Contiene clases y tipos de enumeración que te permiten hacer lo siguiente:
 
@@ -76,19 +83,19 @@ Contiene clases y tipos de enumeración que te permiten hacer lo siguiente:
 -   Trabajar con proveedores de algoritmos de códigos de autenticación de equipos (MAC)
 -   Trabajar con proveedores de algoritmos de derivación de claves
 
-### Windows.Security.Cryptography.DataProtection
+### <a name="windowssecuritycryptographydataprotection"></a>Windows.Security.Cryptography.DataProtection
 
 Contiene clases que te permiten hacer lo siguiente:
 
 -   Cifrar y descifrar datos estáticos de manera asincrónica
 -   Cifrar y descifrar secuencias de datos de manera asincrónica
 
-## Funcionalidades criptográficas y de infraestructura de clave pública para aplicaciones
+## <a name="crypto-and-pki-application-capabilities"></a>Funcionalidades criptográficas y de infraestructura de clave pública para aplicaciones
 
 
 La interfaz de programación de aplicaciones simplificada disponible para las aplicaciones habilita las siguientes funcionalidades criptográficas y de infraestructura de clave pública (PKI).
 
-### Compatibilidad con funciones criptográficas
+### <a name="cryptography-support"></a>Compatibilidad con funciones criptográficas
 
 Puedes realizar las siguientes tareas criptográficas. Para obtener más información, consulta el espacio de nombres [**Windows.Security.Cryptography.Core**](https://msdn.microsoft.com/library/windows/apps/br241547).
 
@@ -106,11 +113,11 @@ El SDK también ofrece una interfaz simplificada para la protección de datos ba
 -   Protección asincrónica de datos estáticos
 -   Protección asincrónica de un flujo de datos
 
-### Compatibilidad con la codificación
+### <a name="encoding-support"></a>Compatibilidad con la codificación
 
 Una aplicación puede codificar datos criptográficos para la transmisión a través de una red y descodificar datos recibidos de un origen de red. Para obtener más información, consulta los métodos estáticos disponibles en el espacio de nombres [**Windows.Security.Cryptography**](https://msdn.microsoft.com/library/windows/apps/br241404).
 
-### Compatibilidad con PKI
+### <a name="pki-support"></a>Compatibilidad con PKI
 
 Las aplicaciones pueden realizar las siguientes tareas de PKI. Para obtener más información, consulta el espacio de nombres [**Windows.Security.Cryptography.Certificates**](https://msdn.microsoft.com/library/windows/apps/br241476).
 
@@ -131,7 +138,7 @@ Además, puedes utilizar el manifiesto para realizar las siguientes acciones:
     -   Certificados que se encadenan mediante un conjunto especificado de emisores
     -   Seleccionar automáticamente un certificado del almacén de la aplicación
 
-## Artículos detallados
+## <a name="detailed-articles"></a>Artículos detallados
 
 
 En los siguientes artículos se ofrecen más detalles sobre los escenarios de seguridad:
@@ -146,8 +153,3 @@ En los siguientes artículos se ofrecen más detalles sobre los escenarios de se
 | [Tareas comunes de criptografía](common-cryptography-tasks.md)                     | En estos artículos se ofrece código de ejemplo para tareas comunes de criptografía de UWP, como crear números aleatorios, comparar búferes, convertir entre cadenas y datos binarios, copiar a matrices de bytes y desde ellas, y codificar y descodificar datos.                                                                                                                                                                                                                                                                                    |
 
  
-
-
-<!--HONumber=Aug16_HO3-->
-
-

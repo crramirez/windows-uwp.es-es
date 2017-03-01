@@ -3,16 +3,23 @@ ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
 description: "Esta guía básica proporciona una visión general de las características fundamentales de empresa para las aplicaciones de Windows 10 y las aplicaciones para la Plataforma universal de Windows (UWP)."
 title: Empresa
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 8f4b9e7b1b30beb8974a17af77e4d7138bd8f829
-ms.openlocfilehash: 75a7723fb8934a59d44da2f075184dd6bbd85d45
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ffbccf88cd00331b622c158a7e46773ae62197e2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Empresa
+# <a name="enterprise"></a>Empresa
 
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta guía básica proporciona una visión general de las características fundamentales de empresa para la Plataforma universal de Windows (UWP) Windows 10. Windows 10 te permite escribir una vez e implementa en todos los dispositivos, porque crea una aplicación que se adapta a cualquier dispositivo. Esto te permite crear las fantásticas experiencias que los usuarios esperan y ofrecer control sobre la seguridad, la administración y la configuración requerida por tu organización.
 
@@ -20,7 +27,7 @@ Esta guía básica proporciona una visión general de las características funda
 
  
 
-## Seguridad
+## <a name="security"></a>Seguridad
 
 
 Windows 10 proporciona un conjunto de características de seguridad para desarrolladores de aplicaciones con el fin de que protejan la identidad de los usuarios, la seguridad de las redes corporativas y todos los datos de la empresa almacenados en dispositivos. Microsoft Passport es una característica nueva en Windows 10, una alternativa de contraseña de dos factores fácil de implementar que se puede acceder mediante el uso de un PIN o Windows Hello. Proporciona una seguridad en el nivel de empresa y admite el reconocimiento de huella digital, rostro e iris.
@@ -34,7 +41,7 @@ Windows 10 proporciona un conjunto de características de seguridad para desarro
 
  
 
-## Enlace de datos y bases de datos
+## <a name="data-binding-and-databases"></a>Enlace de datos y bases de datos
 
 
 El enlace de datos es una manera de que la interfaz de usuario de la aplicación muestre datos de un origen externo, como una base de datos, y opcionalmente, se sincronice con dichos datos. El enlace de datos permite separar lo que concierne a los datos de lo que concierne a la interfaz de usuario y esto da como resultado un modelo conceptual más sencillo y una mejor legibilidad, comprobación y mantenimiento de la aplicación.
@@ -47,7 +54,7 @@ El enlace de datos es una manera de que la interfaz de usuario de la aplicación
 
  
 
-## Redes y serialización de datos
+## <a name="networking-and-data-serialization"></a>Redes y serialización de datos
 
 
 A menudo, las aplicaciones de línea de negocio necesitan comunicarse con otros sistemas o almacenar datos en ellos. Por lo general, esto se logra si se conecta a un servicio de red (usando protocolos como REST o SOAP) y, a continuación, se serializan o deserializan los datos en un formato común. Trabajar con redes y serialización de datos en aplicaciones para UWP similares a las aplicaciones WPF, WinForms y ASP.NET. Para obtener más información, consulta los siguientes artículos.
@@ -61,7 +68,7 @@ A menudo, las aplicaciones de línea de negocio necesitan comunicarse con otros 
 
  
 
-## Dispositivos
+## <a name="devices"></a>Dispositivos
 
 
 Para poder integrarse con herramientas de línea de negocio como impresoras, escáneres de códigos de barras o lectores de tarjetas inteligentes, es posible que sea necesario integrar sensores o dispositivos externos en la aplicación. Estos son algunos ejemplos de características que se pueden agregar a tu aplicación con la tecnología descrita en esta sección.
@@ -75,7 +82,7 @@ Para poder integrarse con herramientas de línea de negocio como impresoras, esc
 
  
 
-## Selección de destinos de dispositivo
+## <a name="device-targeting"></a>Selección de destinos de dispositivo
 
 
 Hoy en día, muchos usuarios llevan su teléfono o tableta personal al trabajo, que varían en factores de forma y tamaños de pantalla. Gracias a la Plataforma universal de Windows (UWP), puedes escribir una sola aplicación de línea de negocio que se ejecute sin problemas en todos los tipos de dispositivos, incluidos los equipos de escritorio y las pantallas de PPP, lo que permite maximizar el alcance de la aplicación y la eficacia del código.
@@ -87,7 +94,7 @@ Hoy en día, muchos usuarios llevan su teléfono o tableta personal al trabajo, 
 
  
 
-## Implementación
+## <a name="deployment"></a>Implementación
 
 
 Tienes varias opciones para distribuir aplicaciones a los usuarios de la organización. Puedes usar la Tienda Windows para empresas, la administración de dispositivos móviles existentes, o bien puedes transferir las aplicaciones a los dispositivos localmente. También puedes poner tus aplicaciones a disposición del público general publicándolas en la Tienda Windows.
@@ -100,7 +107,7 @@ Tienes varias opciones para distribuir aplicaciones a los usuarios de la organiz
 
  
 
-## Patrones y prácticas
+## <a name="patterns-and-practices"></a>Patrones y prácticas
 
 
 Las bases de código para aplicaciones en el nivel de empresa de gran escala, pueden llegar a ser difíciles de usar. Prism es un marco para compilar aplicaciones de XAML acopladas ligeramente que se pueden mantener y probar en WPF, Windows 10 UWP y Xamarin Forms. Prism proporciona la implementación de una colección de patrones de diseño útiles para escribir aplicaciones de XAML estructuradas y fáciles de mantener, incluidos MVVM, la inserción de dependencias, los comandos, EventAggregator y otros.
@@ -110,9 +117,4 @@ Para obtener más información acerca de Prism, consulta el [repositorio de GitH
  
 
  
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

@@ -3,23 +3,30 @@ author: DBirtolo
 ms.assetid: D06AA3F5-CED6-446E-94E8-713D98B13CAA
 title: Crear un selector de dispositivos
 description: "La creación de un selector de dispositivos permite limitar los dispositivos en los que se realizan búsquedas al enumerar los dispositivos."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 091767d6f223ce2b4538dafb1c81595015589013
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e4e3cecc0618d81554dbaae80c3bb4d907c79d31
+ms.lasthandoff: 02/07/2017
 
 ---
-# Crear un selector de dispositivos
+# <a name="build-a-device-selector"></a>Crear un selector de dispositivos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** API importantes **
+**API importantes**
 
--   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
+- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
 La creación de un selector de dispositivos permite limitar los dispositivos en los que se realizan búsquedas al enumerar los dispositivos. Esto te permitirá obtener solo los resultados relevantes y también mejorará el rendimiento del sistema. En la mayoría de los escenarios, obtienes un selector de dispositivos de una pila de dispositivos. Por ejemplo, puedes usar [**GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Dn264015) para los dispositivos detectados a través de USB. Estos selectores de dispositivos devuelven una cadena de sintaxis de consulta avanzada (AQS). Si no estás familiarizado con el formato AQS, puedes leer más información en [Uso de la sintaxis de consulta avanzada mediante programación](https://msdn.microsoft.com/library/windows/desktop/Bb266512).
 
-## Crear la cadena de filtro
+## <a name="building-the-filter-string"></a>Crear la cadena de filtro
 
 Existen algunos casos en los que necesitarás enumerar dispositivos y no habrá ningún selector de dispositivos disponible para tu escenario. Un selector de dispositivos es una cadena de filtro AQS que contiene la siguiente información. Antes de crear una cadena de filtro, debes conocer algunas partes clave de información sobre los dispositivos que quieres enumerar.
 
@@ -62,7 +69,7 @@ En la siguiente tabla se muestran los operadores AQS y los tipos de parámetros 
 
 Si no se puedes crear una única cadena de filtro AQS que defina el ámbito de los resultados de forma adecuada, puedes filtrar los resultados después de recibirlos. Sin embargo, si decides hacerlo, te recomendamos que limites los resultados de la cadena de filtro AQS inicial tanto como puedas cuando la proporciones a la API [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459). Esto ayudará a mejorar el rendimiento de la aplicación.
 
-## Ejemplos de cadena AQS
+## <a name="aqs-string-examples"></a>Ejemplos de cadena AQS
 
 En los siguientes ejemplos se muestra cómo se puede usar la sintaxis AQS para limitar los dispositivos que deseas enumerar. Todas estas cadenas de filtro se emparejan con [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) para crear un filtro completo. Si no se especifica ningún tipo, recuerda que el tipo predeterminado es **DeviceInterface**.
 
@@ -70,7 +77,7 @@ Cuando este filtro está emparejado con una enumeración [**DeviceInformationKin
               ** se traduce en **COP\_EQUALS**.
 
 ``` syntax
-System.Devices.InterfaceClassGuid:="{2eef81be-33fa-4800-9670-1cd474972c3f}" AND 
+System.Devices.InterfaceClassGuid:="{2eef81be-33fa-4800-9670-1cd474972c3f}" AND
 System.Devices.InterfaceEnabled:=System.StructuredQueryType.Boolean#True
 ```
 
@@ -110,13 +117,4 @@ System.Devices.IpAddress:=[]
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

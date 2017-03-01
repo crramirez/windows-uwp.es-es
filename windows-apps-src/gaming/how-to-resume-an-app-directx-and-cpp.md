@@ -3,20 +3,27 @@ author: mtoepke
 title: "Cómo reanudar una aplicación (DirectX y C++)"
 description: "En este tema se muestra cómo restaurar datos importantes de la aplicación cuando el sistema reanuda la aplicación DirectX para la Plataforma universal de Windows (UWP)."
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp, reanudar, resuming, directx
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 978f779eaeb732b549657751c11cd2192728999b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0ef4617417526cd2e39ce968e4d682b4015e22d3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Cómo reanudar una aplicación (DirectX y C++)
+# <a name="how-to-resume-an-app-directx-and-c"></a>Cómo reanudar una aplicación (DirectX y C++)
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se muestra cómo restaurar datos importantes de la aplicación cuando el sistema reanude la aplicación DirectX para la Plataforma universal de Windows (UWP).
 
-## Registrar el controlador de eventos de reanudación
+## <a name="register-the-resuming-event-handler"></a>Registrar el controlador de eventos de reanudación
 
 
 Haz un registro para controlar el evento [**CoreApplication::Resuming**](https://msdn.microsoft.com/library/windows/apps/br205859), que indica que el usuario abandonó la aplicación y después volvió.
@@ -37,7 +44,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 }
 ```
 
-## Actualizar el contenido mostrado tras la suspensión
+## <a name="refresh-displayed-content-after-suspension"></a>Actualizar el contenido mostrado tras la suspensión
 
 
 Cuando la aplicación controla el evento Resuming, tiene la oportunidad de actualizar el contenido mostrado. Restaura cualquier aplicación que hayas guardado con el controlador para [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860) y reinicia el procesamiento. Nota para desarrolladores de juegos: Si suspendiste el motor de audio, es el momento de reiniciarlo.
@@ -80,12 +87,12 @@ void App::Run()
 }
 ```
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 
 El sistema suspende la aplicación cuando el usuario cambia a otra aplicación o al escritorio. El sistema reanuda la aplicación cuando el usuario vuelve a cambiar a ella. Cuando el sistema reanuda la aplicación, el contenido de las variables y las estructuras de datos es el mismo que antes de que el sistema la suspendiera. El sistema restaura la aplicación en el punto exacto en el que estaba, para que parezca al usuario que se ejecutaba en segundo plano No obstante, es posible que la aplicación haya estado suspendida durante un período de tiempo largo. Por ello, debes actualizar el contenido mostrado que puede haber cambiado mientras la aplicación estaba suspendida, y reiniciar cualquier subproceso de representación o de procesamiento de audio. Si guardaste datos de estado del juego durante un evento de suspensión anterior, restáuralos ahora.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Cómo suspender una aplicación (DirectX y C++)](how-to-suspend-an-app-directx-and-cpp.md)
 * [Cómo activar una aplicación (DirectX y C++)](how-to-activate-an-app-directx-and-cpp.md)
@@ -96,10 +103,5 @@ El sistema suspende la aplicación cuando el usuario cambia a otra aplicación o
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,16 +3,23 @@ author: mtoepke
 title: "Código completo para DDSTextureLoader"
 description: "Código completo de una clase y método para cargar una textura DDS de la memoria."
 ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, juegos, DDSTextureLoader
 translationtype: Human Translation
-ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
-ms.openlocfilehash: edcddb162d58b5f05248c7cd94b6079207e4a318
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7daf10ad577b2b67c6ca5554f6555deb89f16229
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Código completo para DDSTextureLoader
+# <a name="complete-code-for-ddstextureloader"></a>Código completo para DDSTextureLoader
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Código completo de una clase y método para cargar una textura DDS de la memoria.
 
@@ -23,27 +30,27 @@ Este tema contiene estas secciones:
 -   [Ver el código (C++)](#view-the-code-c)
 
 
-## Ubicación de descarga
+## <a name="download-location"></a>Ubicación de descarga
 
 
 Este ejemplo no se puede descargar.
 
-## Tecnologías
+## <a name="technologies"></a>Tecnologías
 
 **Lenguajes de programación**: C++    
 **Modelos de programación**: Windows Runtime
 
-## Requisitos
+## <a name="requirements"></a>Requisitos
 
 **Cliente mínimo compatible**: Windows 10                               
 **Servidor mínimo compatible**: Windows Server 2016 Technical Preview
 
 
 
-## Ver el código (C++)
+## <a name="view-the-code-c"></a>Ver el código (C++)
 
 
-## DDSTextureLoader.h
+## <a name="ddstextureloaderh"></a>DDSTextureLoader.h
 
 
 ```cpp
@@ -76,7 +83,7 @@ void CreateDDSTextureFromMemory(
     );
 ```
 
-## DDSTextureLoader.cpp
+## <a name="ddstextureloadercpp"></a>DDSTextureLoader.cpp
 
 
 ```cpp
@@ -1222,10 +1229,5 @@ void CreateDDSTextureFromMemory(
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

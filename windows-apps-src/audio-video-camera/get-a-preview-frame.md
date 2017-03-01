@@ -3,15 +3,22 @@ author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
 description: "En este tema se muestra cómo obtener un solo fotograma de vista previa de la secuencia de vista previa de captura multimedia."
 title: Obtener un fotograma de vista previa
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e19fa2a574e6824941c89db1db1e7e69f9e38ae9
-ms.openlocfilehash: d8d5780672592b1888a9c894dcc3ed58ebc2be36
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 420f9b8c3bb6573fbc12bc974ef2382b9ba6ec03
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Obtener un marco de vista previa
+# <a name="get-a-preview-frame"></a>Obtener un fotograma de vista previa
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se muestra cómo obtener un solo fotograma de vista previa de la secuencia de vista previa de captura multimedia.
 
@@ -51,7 +58,7 @@ Cuando hayas terminado con el marco de vista previa, asegúrate de llamar a su m
 
 [!code-cs[CleanUpPreviewFrame](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpPreviewFrame)]
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -61,10 +68,5 @@ Cuando hayas terminado con el marco de vista previa, asegúrate de llamar a su m
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

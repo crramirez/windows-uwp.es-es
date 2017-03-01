@@ -3,15 +3,22 @@ author: DelfCo
 description: "Las aplicaciones usan tareas en segundo plano y dos mecanismos principales para conservar la comunicación cuando no se encuentran en primer plano."
 title: Comunicaciones de red en segundo plano
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: a6d297ca8510267d21656bd2e22bb3958a4a4b52
-ms.openlocfilehash: ea979eceb20c13d4025ec94ec8ed05b484a7eb27
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3f0e52780788eafe9e53bba491b8d54208dcc761
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="network-communications-in-the-background"></a>Comunicaciones de red en segundo plano
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -586,10 +593,5 @@ Patrones de uso y procedimientos recomendados para usar [**IXMLHTTPRequest2**](h
 -   Una aplicación puede necesitar una solicitud [**Send**](https://msdn.microsoft.com/library/windows/desktop/hh831164) inicial para probar y configurar el transporte de manera apropiada, antes de crear el transporte que se va a usar con [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032). Una vez que la aplicación determina que el transporte está configurado correctamente, el objeto [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) puede configurarse como el objeto de transporte que se usa con **ControlChannelTrigger**. Este proceso está diseñado para evitar que algunos escenarios interrumpan la conexión establecida en el transporte. Si se usa SSL con un certificado, una aplicación puede solicitar que se muestre un cuadro de diálogo con la entrada de PIN o si hay varios certificados entre los cuales elegir. Es posible que se requiera la autenticación de proxy y servidor. Si la autenticación de proxy o servidor expira, la conexión puede cerrarse. Una forma en que la aplicación puede abordar estos problemas de expiración de la autenticación es establecer un temporizador. Cuando se requiere una redirección HTTP, no se garantiza que pueda establecerse una segunda conexión fiable. Una solicitud de prueba inicial asegurará que la aplicación pueda usar la dirección URL redirigida más reciente antes de usar el objeto **IXMLHTTPRequest2** como transporte con el objeto **ControlChannelTrigger**.
 
 Para obtener más información sobre cómo usar [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) con [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), consulta [ControlChannelTrigger with IXMLHTTPRequest2 sample (Muestra de ControlChannelTrigger con IXMLHTTPRequest2)](http://go.microsoft.com/fwlink/p/?linkid=258538).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: "Usar el inclinómetro"
 description: "Aprende a usar el inclinómetro para determinar la rotación alrededor del eje X (pitch), la rotación alrededor del eje y la rotación alrededor del eje Y (yaw)."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
-ms.openlocfilehash: 17828018f2c8db8a5a60d839e7f73904de7a1a24
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b8ebfaf4c294fccf61534203bce0326f9dbec977
+ms.lasthandoff: 02/07/2017
 
 ---
-# Usar el inclinómetro
+# <a name="use-the-inclinometer"></a>Usar el inclinómetro
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** API importantes **
+**API importantes**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Inclinómetro**](https://msdn.microsoft.com/library/windows/apps/BR225766)
@@ -21,17 +28,17 @@ Aprende a usar el inclinómetro para determinar la rotación alrededor del eje X
 
 Algunos juegos en 3D necesitan un inclinómetro como dispositivo de entrada. Un ejemplo común es el simulador de vuelos, que asigna los tres ejes del inclinómetro (X, Y y Z) a los datos de entrada del timón de profundidad, el alerón y el timón de dirección del avión.
 
- ## Requisitos previos
+ ## <a name="prerequisites"></a>Requisitos previos
 
 Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
 
 El dispositivo o emulador que estés usando debe tener un inclinómetro.
 
- ## Crear una aplicación simple de inclinómetro
+ ## <a name="create-a-simple-inclinometer-app"></a>Crear una aplicación simple de inclinómetro
 
 Esta sección se divide en dos subsecciones: En la primera subsección, conocerás los pasos necesarios para crear una aplicación de inclinómetro simple desde cero. En la siguiente subsección se aplica la aplicación que acabas de crear.
 
-###  Instrucciones
+###  <a name="instructions"></a>Instrucciones
 
 -   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#**.
 
@@ -65,7 +72,7 @@ Esta sección se divide en dos subsecciones: En la primera subsección, conocer�
         {
             private Inclinometer _inclinometer;
 
-            // This event handler writes the current inclinometer reading to 
+            // This event handler writes the current inclinometer reading to
             // the three text blocks on the app' s main page.
 
             private async void ReadingChanged(object sender, InclinometerReadingChangedEventArgs e)
@@ -83,7 +90,7 @@ Esta sección se divide en dos subsecciones: En la primera subsección, conocer�
             {
                 this.InitializeComponent();
                 _inclinometer = Inclinometer.GetDefault();
-     
+
 
                 if (_inclinometer != null)
                 {
@@ -132,9 +139,9 @@ Deberás reemplazar la primera parte del nombre de la clase en el fragmento ante
 
 Con la aplicación en ejecución, puedes cambiar los valores de inclinómetro moviendo el dispositivo o usando herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús+F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
 
-###  Explicación
+###  <a name="explanation"></a>Explicación
 
 En el ejemplo anterior, se muestra el poco código que debes escribir para poder integrar los datos de entrada del inclinómetro en la aplicación.
 
@@ -155,7 +162,7 @@ _inclinometer.ReportInterval = reportInterval;
 Los nuevos datos del inclinómetro se capturan en el método **ReadingChanged**. Cada vez que el controlador del sensor recibe nuevos datos del sensor, pasa los valores a la aplicación mediante este controlador de eventos. La aplicación registra este controlador de eventos en la siguiente línea.
 
 ```csharp
-_inclinometer.ReadingChanged += new TypedEventHandler<Inclinometer, 
+_inclinometer.ReadingChanged += new TypedEventHandler<Inclinometer,
 InclinometerReadingChangedEventArgs>(ReadingChanged);
 ```
 
@@ -170,13 +177,7 @@ Estos nuevos valores se escriben en los bloques de texto que se encuentran en el
  <TextBlock x:Name="txtYaw" HorizontalAlignment="Left" Height="19" Margin="55,56,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="54" Foreground="#FFF6F2F2"/>
 ```
 
- ## Temas relacionados
+ ## <a name="related-topics"></a>Temas relacionados
 
 * [Muestra de inclinómetro](http://go.microsoft.com/fwlink/p/?linkid=241380)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

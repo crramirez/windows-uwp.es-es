@@ -3,15 +3,22 @@ author: mcleanbyron
 ms.assetid: 89178FD9-850B-462F-9016-1AD86D1F6F7F
 description: "Aprende a usar el espacio de nombres Windows.Services.Store para obtener información del producto relacionada con la Tienda para la aplicación actual o uno de sus complementos."
 title: "Obtener información de producto para aplicaciones y complementos"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, Windows.Services.Store"
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: dd58103d22314081985cd5ce0f98f2f25e1e7287
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7e486c451174cd24429dc35cda07d22fe2b28745
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="get-product-info-for-apps-and-add-ons"></a>Obtener información de producto para aplicaciones y complementos
 
-Las aplicaciones diseñadas para Windows 10, versión 1607 o posterior pueden usar métodos de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para acceder a información relacionada con la Tienda para la aplicación actual o uno de sus complementos (también conocidos como productos desde la aplicación o IAP). Los siguientes ejemplos de este artículo muestran cómo hacer esto para diferentes escenarios. Para una muestra completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Las aplicaciones diseñadas para Windows 10, versión 1607 o posterior, pueden usar métodos de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para acceder a información relacionada con la Tienda para la aplicación actual o uno de sus complementos (también conocidos como productos desde la aplicación o IAP). Los siguientes ejemplos de este artículo muestran cómo hacer esto para diferentes escenarios. Para una muestra completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 >**Nota**&nbsp;&nbsp;Este artículo es aplicable a las aplicaciones diseñadas para Windows 10, versión 1607 o posterior. Si la aplicación está destinada a una versión anterior de Windows 10, debes usar el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) en lugar del espacio de nombres **Windows.Services.Store**. Para obtener más información, consulta [Compras desde la aplicación y pruebas con el espacio de nombres Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
@@ -77,9 +84,4 @@ El siguiente ejemplo recupera información sobre complementos duraderos con los 
 * [Habilitar compras de complementos consumibles](enable-consumable-add-on-purchases.md)
 * [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md)
 * [Muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

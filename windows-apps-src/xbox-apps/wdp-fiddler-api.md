@@ -2,16 +2,24 @@
 author: WilliamsJason
 title: Referencia de API de Fiddler de Device Portal
 description: "Descubre cómo habilitar o deshabilitar el seguimiento de Fiddler mediante programación."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 translationtype: Human Translation
-ms.sourcegitcommit: 3cc2a4bd1859e46a73f3e806489eac7381fa6c17
-ms.openlocfilehash: bd215058c71118d8b3e5ce81e2302ce8b151c3f6
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 24e966f953928d238f9197359e0b539b8a3e5c3c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Referencia de API de configuración de Fiddler   
+# <a name="fiddler-settings-api-reference"></a>Referencia de API de configuración de Fiddler   
 Puedes habilitar y deshabilitar el seguimiento de red de Fiddler en tu kit de desarrollo con esta API de REST.
 
-## Habilitar el seguimiento de Fiddler
+## <a name="enable-fiddler-tracing"></a>Habilitar el seguimiento de Fiddler
 
 **Solicitud**
 
@@ -54,7 +62,7 @@ Código de estado HTTP      | Descripción
 4XX | Códigos de error
 5XX | Códigos de error
 
-## Deshabilitar el seguimiento de Fiddler en el kit de desarrollo
+## <a name="disable-fiddler-tracing-on-the-devkit"></a>Deshabilitar el seguimiento de Fiddler en el kit de desarrollo
 
 **Solicitud**
 
@@ -95,12 +103,7 @@ Código de estado HTTP      | Descripción
 
 * Windows Xbox
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 - [Configuración de Fiddler para la UWP en Xbox](uwp-fiddler.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

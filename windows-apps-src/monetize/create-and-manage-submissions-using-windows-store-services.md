@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Usa la API de envío de la tienda Windows para crear y administrar mediante programación los envíos para las aplicaciones que estén registradas en tu cuenta del Centro de desarrollo de Windows mediante programación."
-title: "Creación y administración de envíos mediante el uso de servicios de la Tienda Windows"
+title: "Crear y administrar envíos mediante los servicios de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, API de envío de la Tienda Windows"
 translationtype: Human Translation
-ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
-ms.openlocfilehash: 8467cddd5eec2348cd35f4f5dc1564b47813a6ca
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f73470c456bf59544bc702b137da64f57c6a6943
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="create-and-manage-submissions-using-windows-store-services"></a>Creación y administración de envíos mediante el uso de servicios de la Tienda Windows
+# <a name="create-and-manage-submissions-using-windows-store-services"></a>Crear y administrar envíos mediante los servicios de la Tienda Windows
 
 
 Usa la *API de envío de la Tienda de Windows* para consultar mediante programación y crear envíos de aplicaciones, complementos (también conocidos como productos desde la aplicación o IAP) y los paquetes piloto para tu cuenta del Centro de desarrollo de Windows o de tu organización. Esta API es útil si tu cuenta administra muchas aplicaciones o complementos, y quieres automatizar y optimizar el proceso de envío para estos activos. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas provenientes de la aplicación o el servicio.
@@ -18,15 +25,17 @@ Los siguientes pasos describen el proceso de principio a fin del uso de la API d
 
 1.  Asegúrate de que se hayan completado todos los [requisitos previos](#prerequisites).
 3.  Antes de llamar a un método en la API de envío de la tienda Windows, [consigue un token de acceso de Azure AD](#obtain-an-azure-ad-access-token). Después de obtener un token, tienes 60 minutos para utilizar este token en llamadas a la API de envío de Tienda Windows antes de que el token expire. Después de que el token expire, puedes generar uno nuevo.
-4.  [Llamada a API de envío de la Tienda Windows](#call-the-windows-store-submission-api).
+4.  [Llama a la API de envío de la Tienda Windows](#call-the-windows-store-submission-api).
 
 
 <span id="not_supported" />
->**Importante**
+>**Notas importantes**
 
-> * Esta API puede usarse solo para las cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API. Este permiso se habilita para cuentas de desarrollador en fases, y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilita este permiso para tu cuenta.
+> * Esta API puede usarse solo para las cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API. Este permiso se habilita para cuentas de desarrollador en fases, y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilite este permiso para tu cuenta.
 <br/><br/>
-> * Esta API no puede usarse con aplicaciones o complementos que utilizan determinadas funciones que se introdujeron en el panel del Centro de desarrollo en agosto de 2016, incluidos (entre otros) actualizaciones obligatorias de aplicaciones y complementos consumibles administrados por la Tienda. Si usas la API de envío de la Tienda Windows con una aplicación o complemento que usa una de estas funciones, la API devolverá un código de error 409. En este caso, debes usar el panel para administrar los envíos para la aplicación o el complemento.
+>* Si usas esta API para crear un envío para una aplicación, un paquete piloto o un complemento, asegúrate de realizar más cambios en el envío solo mediante la API, en lugar de en el panel del Centro de desarrollo. Si usas el panel para cambiar un envío que creaste originalmente mediante la API, ya no podrás cambiar o confirmar el envío con la API. En algunos casos, el envío podría quedar en un estado de error en el que no se puede continuar con el proceso de envío. Si esto ocurre, debes eliminar el envío y crear uno nuevo.
+<br/><br/>
+> * Esta API no puede usarse con aplicaciones o complementos que utilizan determinadas funciones que se introdujeron en el panel del Centro de desarrollo en agosto de 2016, incluidas (entre otras) actualizaciones obligatorias de aplicaciones y complementos consumibles administrados por la Tienda. Si usas la API de envío de la Tienda Windows con una aplicación o complemento que usa una de estas funciones, la API devolverá un código de error 409. En este caso, debes usar el panel para administrar los envíos para la aplicación o el complemento.
 
 
 <span id="prerequisites" />
@@ -111,17 +120,19 @@ Los siguientes artículos proporcionan ejemplos de código detallados que muestr
 * [Ejemplos de código de Java](java-code-examples-for-the-windows-store-submission-api.md)
 * [Ejemplos de código de Python](python-code-examples-for-the-windows-store-submission-api.md)
 
+>**Nota**&nbsp;&nbsp;Además de ejemplos de código mencionados anteriormente, también proporcionamos un módulo de PowerShell de código abierto que implementa una interfaz de línea de comandos en la parte superior de la API de envío de la Tienda Windows. Este módulo se denomina [StoreBroker](https://aka.ms/storebroker). Puedes usar este módulo para administrar tus envíos de aplicaciones, paquetes piloto y complementos desde la línea de comandos en lugar de llamar directamente a la API de envío de la Tienda Windows o, simplemente, puedes examinar el origen para ver más ejemplos de cómo llamar a esta API. El módulo StoreBroker se usa activamente dentro de Microsoft como método principal para enviar muchas aplicaciones propias a la Tienda. Para obtener más información, consulta nuestra [página de StoreBroker en GitHub](https://aka.ms/storebroker).
+
 ## <a name="troubleshooting"></a>Solución de problemas
 
-| Problema      | Resolución                                          |
+| Problema      | Solución                                          |
 |---------------|---------------------------------------------|
-| Después de llamar a la API de envío de la Tienda Windows de PowerShell, los datos de respuesta para la API está dañados si se convierte en formato JSON en un objeto de PowerShell mediante la cmdlet [ConvertFrom Json](https://technet.microsoft.com/en-us/library/hh849898.aspx) y, a continuación, volver al formato JSON mediante la cmdlet [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx). |  De manera predeterminada, el parámetro de *-Profundidad* para la cmdlet [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx) se establece en 2 niveles de objetos, lo cual es demasiado superficial para la mayoría de los objetos JSON devueltos por la API de envío de la Tienda Windows. Cuando llames a la cmdlet [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx), establece el parámetro de *-Profundidad* en un número mayor, como 20. |
+| Después de llamar a la API de envío de la Tienda Windows desde PowerShell, los datos de respuesta para la API se dañan si los conviertes del formato JSON a un objeto de PowerShell mediante el cmdlet [ConvertFrom-Json](https://technet.microsoft.com/library/hh849898.aspx) y luego nuevamente al formato JSON mediante el cmdlet [ConvertTo-Json](https://technet.microsoft.com/library/hh849922.aspx). |  De manera predeterminada, el parámetro de *-Profundidad* para la cmdlet [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) se establece en 2 niveles de objetos, lo cual es demasiado superficial para la mayoría de los objetos JSON devueltos por la API de envío de la Tienda Windows. Cuando llames a la cmdlet [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx), establece el parámetro de *-Profundidad* en un número mayor, como 20. |
 
 ## <a name="additional-help"></a>Ayuda adicional
 
 Si tienes preguntas sobre la API de envío de la Tienda Windows o necesitas ayuda para administrar tus envíos con esta API, usa los siguientes recursos:
 
-* Pregunta en nuestros [foros](https://social.msdn.microsoft.com/Forums/windowsapps/en-us/home?forum=wpsubmit).
+* Pregunta en nuestros [foros](https://social.msdn.microsoft.com/Forums/windowsapps/home?forum=wpsubmit).
 * Visita nuestra [página de soporte técnico](https://developer.microsoft.com/windows/support) y solicita una de las opciones de soporte técnico asistido para el panel del Centro de desarrollo. Si se le pide que elija un tipo y categoría de problema, elige **Envío y certificación de aplicaciones** y **Enviar una aplicación**, respectivamente.  
 
 ## <a name="related-topics"></a>Temas relacionados
@@ -133,9 +144,4 @@ Si tienes preguntas sobre la API de envío de la Tienda Windows o necesitas ayud
 * [Administración de paquetes piloto](manage-flights.md)
 * [Administración de envíos de paquetes piloto](manage-flight-submissions.md)
  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

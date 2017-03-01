@@ -12,8 +12,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 76b012ab4cf737f00fc986c81c88fd48339867fc
-ms.openlocfilehash: 34cce6acc786fe34b3d94faaec57011474e029ff
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e866c3afc551cf9604809cf7fec36efd7bfa439c
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -70,17 +71,17 @@ Para comprender las API de las teclas de acceso, es necesario comprender antes e
     - La tecla Esc descarta la secuencia de teclas de acceso si se está en el ámbito principal y sin filtrar.
         > [!NOTE]
         > La pulsación de la tecla Esc se pasa a la capa de la interfaz de usuario para controlarla también ahí.
-- La tecla de tabulador descarta la secuencia de teclas de acceso y vuelve a la navegación mediante tabulación.
-- La tecla Entrar descarta la secuencia de teclas de acceso y envía la pulsación de la tecla al elemento que tiene el foco.
-- Las teclas de dirección descartan la secuencia de teclas de acceso y envían la pulsación de la tecla al elemento que tiene el foco.
-- Un evento de puntero hacia abajo, como un clic del mouse o una función táctil, descarta la secuencia de teclas de acceso.
-- De manera predeterminada, cuando se invoca una tecla de acceso, se descarta la secuencia de teclas de acceso.  Sin embargo, este comportamiento puede invalidarse si se establece la propiedad [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) en **false**.
+    - La tecla de tabulador descarta la secuencia de teclas de acceso y vuelve a la navegación mediante tabulación.
+    - La tecla Entrar descarta la secuencia de teclas de acceso y envía la pulsación de la tecla al elemento que tiene el foco.
+    - Las teclas de dirección descartan la secuencia de teclas de acceso y envían la pulsación de la tecla al elemento que tiene el foco.
+    - Un evento de puntero hacia abajo, como un clic del mouse o una función táctil, descarta la secuencia de teclas de acceso.
+    - De manera predeterminada, cuando se invoca una tecla de acceso, se descarta la secuencia de teclas de acceso.  Sin embargo, este comportamiento puede invalidarse si se establece la propiedad [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) en **false**.
 - Se produce una colisión de teclas de acceso cuando no es posible un autómata limitado determinista. Es preferible que estas colisiones de teclas de acceso no existan, pero pueden producirse debido a un gran número de comandos, a problemas de localización o a la generación en tiempo de ejecución de las teclas de acceso.
 
  Hay dos casos donde se producen colisiones:
  - Cuando dos elementos de la interfaz de usuario tienen el mismo valor de tecla de acceso y pertenecen al mismo ámbito de teclas de acceso. Por ejemplo, una tecla de acceso _A1_ para un `button1` y una tecla de acceso _A1_ para un `button2` que pertenece al ámbito predeterminado. En este caso, el sistema resuelve la colisión mediante el procesamiento de la tecla de acceso del primer elemento agregado al árbol visual. El resto se omiten.
  - Cuando hay más de una opción de cálculo en el mismo ámbito de teclas de acceso. Por ejemplo, _A_ y _A1_. Cuando el usuario presiona _A_, el sistema tiene dos opciones: invocar la tecla de acceso _A_ o seguir y consumir el carácter A de la tecla de acceso _A1_. En este caso, el sistema procesará solo la invocación de la primera tecla de acceso que alcancen los autómatas. En el ejemplo de _A_ y _A1_, el sistema solo invocará la tecla de acceso _A_.
--   Cuando el usuario presiona un valor de tecla de acceso no válido en una secuencia de teclas de acceso, no sucede nada. Existen dos categorías de teclas que se consideran teclas de acceso válidas en una secuencia de teclas de acceso:
+-     Cuando el usuario presiona un valor de tecla de acceso no válido en una secuencia de teclas de acceso, no sucede nada. Existen dos categorías de teclas que se consideran teclas de acceso válidas en una secuencia de teclas de acceso:
  - Teclas especiales para salir de la secuencia de teclas de acceso; es decir, Esc, Alt, las teclas de dirección, Entrar y la tecla de tabulador.
  - Caracteres alfanuméricos asignados a las teclas de acceso.
 
@@ -134,10 +135,10 @@ Las teclas de acceso pueden localizarse en varios idiomas y cargarse en el tiemp
 
 Los patrones de control son implementaciones de la interfaz que exponen la funcionalidad de control común; por ejemplo, unos botones implementan el patrón de control **Invoke** y esto provoca el evento **Click**. Cuando se invoca una tecla de acceso, el marco XAML busca si el elemento invocado implementa un patrón de control y, si es así, lo ejecuta. Si el elemento tiene más de un patrón de control, se invoca solo uno de ellas y se omite el resto. Los patrones de control se buscan en el siguiente orden:
 
-1.  Invocar. Por ejemplo, un botón (Button).
-2.  Alternancia. Por ejemplo, una casilla (Checkbox).
-3.  Selección. Por ejemplo, un botón de selección (RadioButton).
-4.  Ampliar/contraer. Por ejemplo, un cuadro combinado (ComboBox).
+1.    Invocar. Por ejemplo, un botón (Button).
+2.    Alternancia. Por ejemplo, una casilla (Checkbox).
+3.    Selección. Por ejemplo, un botón de selección (RadioButton).
+4.    Ampliar/contraer. Por ejemplo, un cuadro combinado (ComboBox).
 
 Si no se encuentra ningún patrón de control, la invocación de la tecla de acceso aparecerá como sin opciones y se registrará un mensaje de depuración para ayudarte a depurar esta situación: "No automation patterns for this component found. (No se han encontrado patrones de automatización para este componente). Implement desired behavior in the event handler for AccessKeyInvoked. (Implementa el comportamiento deseado en el controlador de eventos de AccessKeyInvoked). Setting Handled to true in your event handler will suppress this message. (Si Handled se establece en true en el controlador de eventos, este mensaje se suprimirá)".
 
@@ -387,9 +388,4 @@ public sealed partial class ScopedAccessKeys : Page
         }
     }
 ```
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

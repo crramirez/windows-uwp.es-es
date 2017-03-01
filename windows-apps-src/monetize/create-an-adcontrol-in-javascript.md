@@ -1,16 +1,22 @@
 ---
 author: mcleanbyron
 ms.assetid: 48a1ef86-8514-4af8-9c93-81e869d36de7
-description: "Aprende a crear mediante programación un objeto ** AdControl ** con JavaScript."
-title: "Creación de un objeto AdControl en Javascript"
+description: "Aprende a crear mediante programación un objeto **AdControl** con JavaScript."
+title: Crear un objeto AdControl en Javascript
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, anuncios, publicidad, AdControl, JavaScript
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: d7ecb5205d9668f83d2619869baafd569b581078
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d2ceafb9781ca2b9cd640e65d9bb420f0bf37928
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="create-an-adcontrol-in-javascript"></a>Creación de un objeto AdControl en Javascript
+# <a name="create-an-adcontrol-in-javascript"></a>Crear un objeto AdControl en Javascript
 
 
 
@@ -50,9 +56,4 @@ Si usas este código y no ves anuncios, puedes intentar insertar un atributo **p
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

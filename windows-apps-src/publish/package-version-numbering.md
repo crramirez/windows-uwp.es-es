@@ -3,20 +3,27 @@ author: jnHs
 Description: "La Tienda Windows aplica ciertas reglas relacionadas con los números de versión, que dependen de la versión del sistema operativo."
 title: "Numeración de la versión del paquete"
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: ca273ab6d881b350c2f5a48eafee38c74ac0f36a
-ms.openlocfilehash: 2668152ba471986e00831bdcf46e5a2feba54dcd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dfa8191be375998021f233711ae433f8a5d4e44b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Numeración de la versión del paquete
+# <a name="package-version-numbering"></a>Numeración de la versión del paquete
 
 
 Cada paquete que proporciones debe tener un número de versión (proporcionado como un valor en el atributo **Version** del elemento **Package/Identity** en el manifiesto de la aplicación). La Tienda Windows aplica ciertas reglas relacionadas con los números de versión que dependen de la versión del sistema operativo.
 
 > **Nota**  En este tema se hace referencia a los "paquetes" pero, a menos que se indique lo contrario, las mismas reglas se aplican a los números de versión de los archivos .appx y .appxbundle.
 
-## Números de versión para paquetes de Windows 10
+## <a name="version-numbering-for-windows-10-packages"></a>Números de versión para paquetes de Windows 10
 
 
 El número de versión de los paquetes de Windows 10 siempre debe ser mayor que los números de versión de los paquetes de Windows 8, Windows 8.1 o Windows Phone 8.1 que publiques (o paquetes que hayas publicado) para la misma aplicación. (Para obtener más información, consulta [Agregar paquetes para Windows 10 a una aplicación publicada anteriormente](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app)).
@@ -33,7 +40,7 @@ Esto ofrece mucha flexibilidad al evolucionar la aplicación a lo largo del tiem
 
 El siguiente ejemplo muestra cómo se puede usar la numeración de versión a lo largo de varios envíos para ofrecer los paquetes previstos a los clientes.
 
-### Ejemplo: pasar a un único paquete a lo largo de varios envíos
+### <a name="example-moving-to-a-single-package-over-multiple-submissions"></a>Ejemplo: pasar a un único paquete a lo largo de varios envíos
 
 Windows 10 te permite escribir un único código base que se ejecuta en cualquier lugar. Esto hace mucho más fácil iniciar un nuevo proyecto en varias plataformas. Sin embargo, por diversas razones, es posible que no quieras combinar código base ya existente para crear un único proyecto inmediatamente.
 
@@ -48,7 +55,7 @@ Puedes usar las reglas de control de versiones de paquete para llevar gradualmen
 
 > **Nota**  En todos los casos, los dispositivos de los clientes recibirán el paquete con el mayor número de versión posible que admitan. Por ejemplo, en el tercer envío antes descrito, todos los dispositivos de escritorio obtendrán la versión v1.1.10.0, aunque tengan la versión 10.0.10250.0 o superior del sistema operativo y, por lo tanto, también pudieran aceptar la versión v1.1.5.0. Dado que 1.1.10.0 es el número de versión más alto disponible para ellos, ese es el paquete que obtienen.
 
-### Usar el número de versión para revertir a un paquete distribuido anteriormente para las nuevas adquisiciones
+### <a name="using-version-numbering-to-roll-back-to-a-previously-shipped-package-for-new-acquisitions"></a>Usar el número de versión para revertir a un paquete distribuido anteriormente para las nuevas adquisiciones
 
 Si guardas copias de los archivos de paquete anteriores de Windows 10, podrás revertir el paquete de la aplicación en la Tienda a uno de ellos si descubres problemas con alguna versión. Esta es una manera temporal de limitar la molestia para tus clientes mientras corriges el problema.
 
@@ -56,7 +63,7 @@ Para ello, crea un nuevo envío. Quita el paquete problemático y carga el paque
 
 Para solucionar los problemas de los clientes que ya hayan recibido el paquete problemático, puedes enviar cuanto antes un nuevo paquete de Windows 10 que tenga un número de versión superior al del paquete dañado. Cuando el envío supere el proceso de certificación, todos los clientes se actualizarán al nuevo paquete, ya que su número de versión es mayor.
 
-## Números de versión para Windows 8.1 (y versiones anteriores) y paquetes de Windows Phone 8.1
+## <a name="version-numbering-for-windows-81-and-earlier-and-windows-phone-81-packages"></a>Números de versión para Windows 8.1 (y versiones anteriores) y paquetes de Windows Phone 8.1
 
 Para los paquetes .appx destinados a Windows Phone 8.1, el número de versión del paquete en un nuevo envío siempre debe ser mayor que el del paquete incluido en el último envío (o cualquier envío anterior).
 
@@ -79,9 +86,4 @@ Estos son algunos ejemplos de lo que sucede en distintos escenarios de actualiza
 | x86, v1.0.0.1 <br> x64, v1.0.0.1 <br> ARM, v1.0.0.1 | x86, v1.0.0.2 <br> x64, v1.0.0.2 <br> ARM, v1.0.0.2 | v1.0.0.2 para la arquitectura del equipo del cliente  | v1.0.0.1 se actualizará a v1.0.0.2 para los clientes que ejecuten la versión v1.0.0.1 de la aplicación compilada para la arquitectura específica de su equipo. |
  
 > **Nota**  A diferencia de los paquetes .appx, no se tienen en cuenta los números de versión de ningún paquete .xap al especificar qué paquete proporcionar a un cliente determinado. Para proporcionar a un cliente un paquete .xap a uno más reciente, asegúrate de quitar el antiguo paquete .xap del nuevo envío.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

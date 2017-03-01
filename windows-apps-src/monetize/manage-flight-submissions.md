@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
 description: "Usa estos métodos en la API de envío de la Tienda Windows para administrar envíos de paquete piloto para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows."
 title: "Administrar envíos de paquete piloto mediante la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, API de envío de la Tienda Windows, envío de paquetes piloto, Windows Store submission API, flight submissions"
 translationtype: Human Translation
-ms.sourcegitcommit: 41203bffb65de3d4d6cc0fec2c7436e0b9d5821b
-ms.openlocfilehash: 9fc42f3abf1d876f271d18c1747ed7462dd20bd6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 71e759773beedef302a78a439b1a2a77a72dc85f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -13,12 +20,14 @@ ms.openlocfilehash: 9fc42f3abf1d876f271d18c1747ed7462dd20bd6
 
 La API de envío de la Tienda Windows proporciona métodos que puedes usar para administrar envíos de paquete piloto para tus aplicaciones, incluidos los lanzamientos de paquetes graduales. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
->**Nota**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado. Para poder usar estos métodos para crear o administrar envíos para un paquete piloto, el paquete piloto ya debe existir en tu cuenta del Centro de desarrollo. Puedes crear un paquete piloto [mediante el panel del Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/package-flights) o mediante los métodos de la API de envío de la Tienda Windows que se describen en [Administrar paquetes piloto](manage-flights.md).
+>**Nota:**&nbsp;&nbsp;estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. Este permiso se habilita para cuentas de desarrollador en fases y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilite este permiso para tu cuenta.
+
+>**Importante**&nbsp;&nbsp;si usas la API de envío de la Tienda Windows para crear un envío de un paquete piloto, asegúrate de realizar más cambios en el envío solo mediante la API, en lugar de en el panel del Centro de desarrollo. Si usas el panel para cambiar un envío que creaste originalmente mediante la API, ya no podrás cambiar o confirmar el envío con la API. En algunos casos, el envío podría quedar en un estado de error en el que no se puede continuar con el proceso de envío. Si esto ocurre, debes eliminar el envío y crear uno nuevo.
 
 <span id="methods-for-package-flight-submissions" />
 ## <a name="methods-for-managing-package-flight-submissions"></a>Métodos para administrar envíos de paquetes piloto
 
-Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de paquete piloto.
+Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de paquete piloto. Antes de poder usar estos métodos, el paquete piloto debe existir en tu cuenta del Centro de desarrollo. Puedes crear un paquete piloto [mediante el panel del Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/package-flights) o mediante los métodos de la API de envío de la Tienda Windows que se describen en [Administrar paquetes piloto](manage-flights.md).
 
 <table>
 <colgroup>
@@ -143,6 +152,8 @@ Los siguientes artículos proporcionan ejemplos de código detallados que muestr
 * [Ejemplos de código de C#](csharp-code-examples-for-the-windows-store-submission-api.md)
 * [Ejemplos de código de Java](java-code-examples-for-the-windows-store-submission-api.md)
 * [Ejemplos de código de Python](python-code-examples-for-the-windows-store-submission-api.md)
+
+>**Nota**&nbsp;&nbsp;además de ejemplos de código mencionados anteriormente, también proporcionamos un módulo de PowerShell de código abierto que implementa una interfaz de línea de comandos en la parte superior de la API de envío de la Tienda Windows. Este módulo se denomina [StoreBroker](https://aka.ms/storebroker). Puedes usar este módulo para administrar tus envíos de aplicaciones, paquetes piloto y complementos desde la línea de comandos en lugar de llamar directamente a la API de envío de la Tienda Windows o, simplemente, puedes examinar el origen para ver más ejemplos de cómo llamar a esta API. El módulo StoreBroker se usa activamente dentro de Microsoft como método principal para enviar muchas aplicaciones propias a la Tiendas. Para obtener más información, consulta nuestra [página de StoreBroker en GitHub](https://aka.ms/storebroker).
 
 <span id="manage-gradual-package-rollout">
 ## <a name="manage-a-gradual-package-rollout-for-a-package-flight-submission"></a>Administrar un lanzamiento de paquete gradual para un envío de paquete piloto
@@ -411,9 +422,4 @@ Los siguientes códigos de representan el estado de un envío.
 * [Confirmar un envío de paquete piloto](commit-a-flight-submission.md)
 * [Delete a package flight submission (Eliminar un envío de paquete piloto)](delete-a-flight-submission.md)
 * [Get the status of a package flight submission (Obtener el estado de un envío de paquete piloto)](get-status-for-a-flight-submission.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

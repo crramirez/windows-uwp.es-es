@@ -4,12 +4,20 @@ Description: "Usar el patrón extraer para actualizar con una vista de lista."
 title: Extraer para actualizar
 label: Pull-to-refresh
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: aaeb1e74-b795-4015-bf41-02cb1d6f467e
 translationtype: Human Translation
-ms.sourcegitcommit: 508a09e0c12006c00dbdf7675516b41119eab8a6
-ms.openlocfilehash: ef5773f9885a5286ac7ca7c256e6a83167316389
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e062ed2910e20ba187b8a0726a0061f0dd4b07f8
+ms.lasthandoff: 02/08/2017
 
 ---
-# Extraer para actualizar
+# <a name="pull-to-refresh"></a>Extraer para actualizar
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,11 +27,11 @@ La [muestra de extraer para actualizar](http://go.microsoft.com/fwlink/p/?LinkId
 
 ![muestra de extraer para actualizar](images/ptr-phone-1.png)
 
-## ¿Es este el patrón adecuado?
+## <a name="is-this-the-right-pattern"></a>¿Es este el patrón adecuado?
 
 Usa el patrón de extraer para actualizar cuando tengas una lista o cuadrícula de datos que sea posible que el usuario quiera actualizar con regularidad y una aplicación que se pueda ejecutar en dispositivos móviles y táctiles.
 
-## Implementar extraer para actualizar
+## <a name="implement-pull-to-refresh"></a>Implementar extraer para actualizar
 
 Para implementar extraer para actualizar, necesitas controlar eventos de manipulación para detectar cuándo un usuario despliega la lista, proporciona información visual y actualiza los datos. Aquí, vamos a ver cómo hacerlo en la [muestra de extraer para actualizar](http://go.microsoft.com/fwlink/p/?LinkId=620635). No mostramos todo el código aquí, por lo que debes descargar la muestra o ver el código en GitHub.
 
@@ -35,7 +43,7 @@ El control RefreshableListView proporciona un modo de 'actualización automátic
 
 > **Nota**&nbsp;&nbsp;El código de la muestra también se aplica a una clase [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx). Para modificar una clase GridView, deriva la clase personalizada de GridView en lugar de ListView y modifica la plantilla predeterminada de GridView.
 
-## Agregar un indicador de actualización
+## <a name="add-a-refresh-indicator"></a>Agregar un indicador de actualización
 
 Es importante proporcionar información visual al usuario para que sepa que tu aplicación admite extraer para actualizar. El control RefreshableListView tiene una propiedad `RefreshIndicatorContent` que te permite establecer el indicador visual en XAML. También incluye un indicador de texto predeterminado que retrocede si no estableces el control `RefreshIndicatorContent`.
 
@@ -134,7 +142,7 @@ Cuando se despliega la lista, se produce el evento `PullProgressChanged` del obj
 </Storyboard>
 ```
 
-## Controlar eventos de manipulación del visor de desplazamiento
+## <a name="handle-scroll-viewer-manipulation-events"></a>Controlar eventos de manipulación del visor de desplazamiento
 
 La plantilla de control de la vista de lista incluye una clase [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) integrada que permite al usuario desplazarse por los elementos de la lista. Para implementar extraer para actualizar, tendrás que controlar los eventos de manipulación del visor de desplazamiento integrado, así como varios eventos relacionados. Para obtener más información sobre los eventos de manipulación, consulta [Interacciones táctiles](../input-and-devices/touch-interactions.md).
 
@@ -192,7 +200,7 @@ En segundo lugar, si el contenido finalizó la animación al final de una actual
 
 Extraer para actualizar ocurre solo cuando la lista se despliega por manipulación táctil. En el controlador de eventos PointerPressed, el código comprueba qué tipo de puntero causó el evento y establece una variable (`m_pointerPressed`) para indicar si fue un puntero táctil. Esta variable se usa en el controlador DirectManipulationStarted. Si el puntero no es un puntero táctil, el controlador DirectManipulationStarted no hace nada.
 
-## Agregar eventos de extraer y actualizar
+## <a name="add-pull-and-refresh-events"></a>Agregar eventos de extraer y actualizar
 
 El método 'RefreshableListView' agrega 2 eventos que puedes controlar en tu aplicación para actualizar los datos y administrar el indicador de actualización.
 
@@ -224,21 +232,16 @@ private async void listView_RefreshRequested(object sender, RefreshableListView.
 
 En la muestra, la aplicación proporciona y controla el contenido del indicador de actualización. El evento 'PullProgressChanged' notifica a la aplicación cuando se extrae la lista para que puedas iniciar, detener y restablecer el indicador de actualización. 
 
-## Animaciones de composición
+## <a name="composition-animations"></a>Animaciones de composición
 
 De manera predeterminada, el contenido de un visor de desplazamiento se detiene cuando la barra de desplazamiento alcanza la parte superior. Para permitir al usuario continuar desplegando la lista, debes tener acceso a la capa visual y animar el contenido de la lista. La muestra usa [animaciones de composición](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation) para este fin; más específicamente, [animaciones de expresión](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations).
 
 En la muestra, el trabajo se realiza principalmente en el controlador de eventos `CompositionTarget_Rendering` y el método `UpdateCompositionAnimations`.
 
-## Artículos relacionados
+## <a name="related-articles"></a>Artículos relacionados
 
 - [Controles de estilo](styling-controls.md)
 - [Interacciones táctiles](../input-and-devices/touch-interactions.md)
 - [Vista de lista y vista de cuadrícula](listview-and-gridview.md)
 - [Plantillas de elemento de la vista de lista](listview-item-templates.md)
 - [Animaciones de expresión](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)
-
-
-<!--HONumber=Aug16_HO3-->
-
-

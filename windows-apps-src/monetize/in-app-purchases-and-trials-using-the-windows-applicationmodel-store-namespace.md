@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
 description: "Obtén información sobre cómo habilitar las pruebas y compras desde la aplicación en aplicaciones para UWP orientadas a versiones anteriores a Windows 10, versión 1607."
 title: "Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, pruebas, trials, Windows.ApplicationModel.Store"
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: ee2a52a54be8510b962f1ef5c40570f3836d28c3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 787007b870675749d96afa59a6e9cb5f3be68991
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -537,9 +544,4 @@ Este elemento describe un complemento consumible. **Product** es un elemento sec
 |  **TransactionId**  |     Sí       |   Contiene un GUID (en forma de cadena) usado por la aplicación para realizar un seguimiento de la transacción de compra de un consumible por el proceso de suministro. Consulta [Habilita compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md)            |
 |  **Status**  |      Sí      |  Contiene la cadena usada por la aplicación para indicar el estado de suministro de un consumible. Los valores pueden ser **Active**, **PurchaseReverted**, **PurchasePending** o **ServerError**.             |
 |  **OfferId**  |     No       |    Contiene la cadena que la aplicación usa para identificar la categoría a la que pertenece el consumible. Esto proporciona compatibilidad para catálogos de elementos de gran tamaño, como se describe en [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md).           |
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,16 +3,23 @@ author: mtoepke
 title: Inicializar Direct3D 11
 description: "Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a obtener identificadores para el dispositivo Direct3D y el contexto de dispositivo, y a usar DXGI para configurar una cadena de intercambio."
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, juegos, direct3d 11, inicialización, migrar, direct3d 9"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 723321983418a714ec375db99a0df7f8455c0464
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d4c4c905ad7d7452251ad13d95cbdc53b137c6c8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Inicializar Direct3D11
+# <a name="initialize-direct3d-11"></a>Inicializar Direct3D 11
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumen**
 
@@ -21,9 +28,9 @@ ms.openlocfilehash: 723321983418a714ec375db99a0df7f8455c0464
 -   [Parte 3: Migrar el bucle del juego](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
 
 
-Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a obtener identificadores para el dispositivo Direct3D y el contexto de dispositivo, y a usar DXGI para configurar una cadena de intercambio. Parte 1 del tutorial [Migrar una aplicación simple de Direct3D9 a DirectX11 y la Plataforma universal de Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
+Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a obtener identificadores para el dispositivo Direct3D y el contexto de dispositivo, y a usar DXGI para configurar una cadena de intercambio. Parte 1 del tutorial [Migrar una aplicación simple de Direct3D 9 a DirectX 11 y la Plataforma universal de Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
-## Inicializar el dispositivo Direct3D
+## <a name="initialize-the-direct3d-device"></a>Inicializar el dispositivo Direct3D
 
 
 En Direct3D 9, creamos un identificador para el dispositivo Direct3D llamando a [**IDirect3D9::CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174313). Empezamos obteniendo un puntero a [**IDirect3D9 interface**](https://msdn.microsoft.com/library/windows/desktop/bb174300) y especificamos un número de parámetros para controlar la configuración del dispositivo Direct3D y la cadena de intercambio. Antes de hacer esto, llamamos a [**GetDeviceCaps**](https://msdn.microsoft.com/library/windows/desktop/dd144877) para asegurarnos de que no estábamos pidiéndole al dispositivo que hiciera algo que no podía.
@@ -115,7 +122,7 @@ device.As(&m_d3dDevice);
 context.As(&m_d3dContext);
 ```
 
-## Crear una cadena de intercambio
+## <a name="create-a-swap-chain"></a>Crear una cadena de intercambio
 
 
 Direct3D 11 incluye una API de dispositivo denominada infraestructura de gráficos DirectX (DXGI). La interfaz DXGI nos permite, por ejemplo, controlar la configuración de la cadena de intercambio y establecer dispositivos compartidos. En este paso de la inicialización de Direct3D, vamos a usar DXGI para crear una cadena de intercambio. Dado que creamos el dispositivo, podemos seguir una cadena de interfaz de regreso al adaptador DXGI.
@@ -178,7 +185,7 @@ dxgiDevice->SetMaximumFrameLatency(1);
 
 Ahora podemos configurar el búfer de reserva para la representación.
 
-## Configurar el búfer de reserva como un destino de representación
+## <a name="configure-the-back-buffer-as-a-render-target"></a>Configurar el búfer de reserva como un destino de representación
 
 
 Primero tenemos que obtener un identificador para el búfer de reserva. (Ten en cuenta que el búfer de reserva es propiedad de la cadena de intercambio DXGI, mientras que en DirectX 9 era propiedad del dispositivo Direct3D). Después, le indicamos al dispositivo que usara Direct3D como el destino de representación mediante la creación de un destino de representación *vista* con el búfer de reserva.
@@ -227,10 +234,5 @@ Ahora que tenemos un identificador de dispositivo y un destino de representació
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

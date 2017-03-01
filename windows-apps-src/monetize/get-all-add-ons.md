@@ -3,29 +3,36 @@ author: mcleanbyron
 ms.assetid: 7B6A99C6-AC86-41A1-85D0-3EB39A7211B6
 description: "Usa este método en la API de envío de la Tienda Windows para recuperar los datos de todos los complementos de todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows."
 title: "Obtener todos los complementos mediante la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, API de envío de la Tienda Windows, Windows Store submission API, complementos, add-ons, productos desde la aplicación, in-app products, IAP"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 64d40badaa4664e4f516900e82d290f60a499149
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 568dfb5dd47414a6ca4bb0c52ab36437bd119b73
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Obtener todos los complementos mediante la API de envío de la Tienda Windows
+# <a name="get-all-add-ons-using-the-windows-store-submission-api"></a>Obtener todos los complementos mediante la API de envío de la Tienda Windows
 
 
 
 
 Usa este método en la API de envío de la Tienda Windows para recuperar datos de todos los complementos (también conocidos como productos desde la aplicación o IAP) de todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows.
 
-## Requisitos previos.
+## <a name="prerequisites"></a>Requisitos previos.
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
-## Solicitud
+## <a name="request"></a>Solicitud
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
@@ -36,7 +43,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 <span/>
  
 
-### Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -44,7 +51,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
 
-### Parámetros de solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 Todos los parámetros de solicitud son opcionales para este método. Si llamas a este método sin parámetros, la respuesta contiene datos de todos los complementos de todas las aplicaciones registradas en tu cuenta.
  
@@ -55,11 +62,11 @@ Todos los parámetros de solicitud son opcionales para este método. Si llamas a
 
 <span/>
 
-### Cuerpo de la solicitud
+### <a name="request-body"></a>Cuerpo de la solicitud
 
 No incluyas un cuerpo de la solicitud para este método.
 
-### Ejemplos de solicitud
+### <a name="request-examples"></a>Ejemplos de solicitud
 
 En el siguiente ejemplo se muestra cómo recuperar los datos de todos los complementos de todas las aplicaciones registradas en tu cuenta.
 
@@ -75,7 +82,7 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Respuesta
+## <a name="response"></a>Respuesta
 
 En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una solicitud correcta para los cinco primeros complementos registrados en una cuenta de desarrollador con un total de 1072 complementos. Para mayor brevedad, en este ejemplo se muestran solo los datos de los dos primeros complementos que devuelve la solicitud. Para obtener más información acerca de los valores del cuerpo de respuesta, consulta la siguiente sección.
 
@@ -134,7 +141,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una 
 }
 ```
 
-### Cuerpo de la respuesta
+### <a name="response-body"></a>Cuerpo de la respuesta
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -144,7 +151,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una 
 
 
 
-## Códigos de error
+## <a name="error-codes"></a>Códigos de error
 
 Si la solicitud no se puede completar correctamente, la respuesta contendrá uno de los siguientes códigos de error HTTP.
 
@@ -155,16 +162,11 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 <span/>
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar envíos de complemento](manage-add-on-submissions.md)
 * [Obtener un complemento](get-an-add-on.md)
 * [Crear un complemento](create-an-add-on.md)
 * [Eliminar un complemento](delete-an-add-on.md)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

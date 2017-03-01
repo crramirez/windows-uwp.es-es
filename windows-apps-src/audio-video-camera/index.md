@@ -3,15 +3,22 @@ author: drewbatgit
 ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
 description: "En esta sección se ofrece información sobre la creación de aplicaciones para la Plataforma universal de Windows (UWP) para capturar, reproducir o editar fotos, vídeos o audio."
 title: "Audio, vídeo y cámara"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 77f47bce2a4be3f7c5ee3d320ff6c68e8c7ce6b0
-ms.openlocfilehash: d1aad0800bfe4982a316aa5da719db005b687fa1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2d3b61b35307536bc54f19b5857acfe946a010ce
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="audio-video-and-camera"></a>Audio, vídeo y cámara
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En esta sección se ofrece información sobre la creación de aplicaciones para la Plataforma universal de Windows (UWP) para capturar, reproducir o editar fotos, vídeos o audio.
  
@@ -35,7 +42,7 @@ En esta sección se ofrece información sobre la creación de aplicaciones para 
 
 
 ## <a name="see-also"></a>Consulta también
-- [Desarrollar aplicaciones para UWP](https://developer.microsoft.com/en-us/windows/develop)
+- [Desarrollar aplicaciones para UWP](https://developer.microsoft.com/windows/develop)
 
  
 
@@ -45,10 +52,5 @@ En esta sección se ofrece información sobre la creación de aplicaciones para 
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

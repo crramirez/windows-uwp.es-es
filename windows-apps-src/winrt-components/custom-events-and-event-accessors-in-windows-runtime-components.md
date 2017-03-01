@@ -1,22 +1,29 @@
 ---
 author: msatranjr
 title: Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
-description: "La compatibilidad de .NET Framework con los componentes de Windows Runtime facilita la tarea de declarar componentes de eventos al ocultar las diferencias entre el patrón de eventos de la plataforma universal de Windows (UWP) y el patrón de eventos de .NET Framework."
+description: "La compatibilidad de .NET Framework con los componentes de Windows Runtime facilita la tarea de declarar componentes de eventos al ocultar las diferencias entre el patrón de eventos de la Plataforma universal de Windows (UWP) y el patrón de eventos de .NET Framework."
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: c1beff6cbfefdfd3c11c9b16e18519c02c201930
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6bac2575b3855357076d4272a423c9c689118b2b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
+# <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 La compatibilidad de .NET Framework con los componentes de Windows Runtime facilita la tarea de declarar componentes de eventos al ocultar las diferencias entre el patrón de eventos de la Plataforma universal de Windows (UWP) y el patrón de eventos de .NET Framework. Sin embargo, al declarar descriptores de acceso de eventos personalizados en un componente de Windows Runtime, debe seguir el patrón usado en la UWP.
 
-## Registrando eventos
+## <a name="registering-events"></a>Registrando eventos
 
 
 Al registrar para controlar un evento en la UWP, el descriptor de acceso "add" devuelve un token. Para anular el registro, debe pasar este token al descriptor de acceso "remove". Esto significa que los descriptores de acceso "add" y "remove" para eventos de la UWP no tienen las mismas firmas que los descriptores de acceso habituales.
@@ -117,16 +124,11 @@ Usuarios de C#: cuando escribes descriptores de acceso de eventos personalizados
 
 Usuarios de Visual Basic: en .NET Framework, un evento es simplemente un delegado de multidifusión que representa todos los controladores de eventos registrados. Generar el evento simplemente implica invocar el delegado. La sintaxis de Visual Basic, por lo general, oculta las interacciones con el delegado, y el compilador copia el delegado antes de invocarlo, tal como se describe en la nota sobre seguridad para subprocesos. Cuando creas un evento personalizado en un componente de Windows Runtime, tienes que tratar directamente con el delegado. Esto también significa que puedes, por ejemplo, usar el método [MulticastDelegate.GetInvocationList](https://msdn.microsoft.com/library/system.multicastdelegate.getinvocationlist.aspx) para obtener una matriz que contenga un delegado independiente para cada controlador de eventos, si quieres invocar los controladores por separado.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Eventos (Visual Basic)](https://msdn.microsoft.com/library/ms172877.aspx)
 * [Eventos (Guía de programación de C#)](https://msdn.microsoft.com/library/awbftdfh.aspx)
 * [Introducción a .NET para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Tutorial: Creación de un componente simple de Windows Runtime y llamada al mismo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

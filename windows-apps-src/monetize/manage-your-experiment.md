@@ -1,15 +1,22 @@
 ---
 author: mcleanbyron
 Description: "Después de definir el experimento en el panel del Centro de desarrollo y codificar el experimento en la aplicación, estás listo para activar el experimento y usar el panel del Centro de desarrollo para revisar los resultados del experimento."
-title: Administra tu experimento en el panel del Centro de desarrollo
+title: Administrar el experimento en el panel del Centro de desarrollo
 ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Microsoft Store Services SDK, pruebas A/B, experimentos, A/B tests, experiments
 translationtype: Human Translation
-ms.sourcegitcommit: bedaa31018d24f23e3e63c6b552b0d3116d7f415
-ms.openlocfilehash: 18e7956e627589dca694b46472fea631c1ebe6b7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: bc73d2b63b94f9700fc5013d3ea51a92cabd7ca3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="manage-your-experiment-in-the-dev-center-dashboard"></a>Administra tu experimento en el panel del Centro de desarrollo
+# <a name="manage-your-experiment-in-the-dev-center-dashboard"></a>Administrar el experimento en el panel del Centro de desarrollo
 
 Después de [definir el experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md) y [codificar la aplicación para el experimento](code-your-experiment-in-your-app.md), estás listo para activar el experimento y usar el panel del Centro de desarrollo para revisar los resultados del experimento. Después de haber obtenido todos los datos que necesitas, puedes terminar el experimento y elegir si quieres seguir usando los valores de variables del control de variación para todas tus aplicaciones o cambiar a los valores de variables de otra de tus variaciones.
 
@@ -58,9 +65,4 @@ Cuando estés satisfecho con los parámetros del experimento en el panel y hayas
 * [Definir el experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [Ejecuta experimentos para aplicaciones con pruebas A/B](run-app-experiments-with-a-b-testing.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

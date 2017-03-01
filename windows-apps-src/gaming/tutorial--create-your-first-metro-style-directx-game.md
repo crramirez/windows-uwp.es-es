@@ -7,13 +7,19 @@ keywords:
 - Muestra de juego DirectX
 - muestra de juego, Plataforma universal de Windows (UWP)
 - juego Direct3D 11
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 0e409f846c0f2e24c469c84610b22a0171e65018
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3ffce29c3ad7088dd24b848cb159b85a4db158e3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Crear un juego de Plataforma universal de Windows (UWP) simple con DirectX
+# <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>Crear un juego de Plataforma universal de Windows (UWP) simple con DirectX
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -22,23 +28,23 @@ En este conjunto de tutoriales, aprenderás a crear un juego de Plataforma unive
 
 Te enseñaremos las técnicas y consideraciones para desarrollar juegos de UWP. No proporcionamos un juego completo de principio a fin, sino que nos centramos en conceptos clave del desarrollo de juegos DirectX de UWP y tenemos en cuenta consideraciones específicas de Windows Runtime en relación con esos conceptos.
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Usar los conceptos y componentes básicos de un juego DirectX de UWP y familiarizarse con el diseño de juegos de UWP con DirectX.
 
-## Lo que debes saber antes de empezar
+## <a name="what-you-need-to-know-before-starting"></a>Lo que debes saber antes de empezar
 
 
 Antes de empezar este tutorial, necesitas estar familiarizado con estos temas.
 
--   Microsoft C++ con Component Extensions (C++/CX). Se trata de una actualización de Microsoft C++ que incorpora el recuento automático de referencias y es el lenguaje de desarrollo de juegos de UWP con DirectX11.1 o versiones posteriores.
+-   Microsoft C++ con Component Extensions (C++/CX). Se trata de una actualización de Microsoft C++ que incorpora el recuento automático de referencias y es el lenguaje de desarrollo de juegos de UWP con DirectX 11.1 o versiones posteriores.
 -   Álgebra lineal básica y conceptos de física newtoniana.
 -   Terminología básica de programación de gráficos.
 -   Conceptos básicos de programación en Windows.
--   Conocimiento básico de las API [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) y [Direct3D11](https://msdn.microsoft.com/library/windows/desktop/hh404569).
+-   Conocimiento básico de las API [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) y [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh404569).
 
-##  La muestra de juego de disparos Direct3D de la Tienda Windows
+##  <a name="the-windows-store-direct3d-shooting-game-sample"></a>La muestra de juego de disparos Direct3D de la Tienda Windows
 
 
 Esta muestra implementa una sencilla galería de disparos en primera persona en la que el jugador dispara bolas a objetivos en movimiento. Acertar a cada objetivo concede un determinado número de puntos, y el jugador puede avanzar a través de 6 niveles de dificultad creciente. Al final de los niveles, se cuentan los puntos y el jugador obtiene una puntuación final.
@@ -74,10 +80,5 @@ La muestra hace una demostración de los siguientes conceptos de juego:
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

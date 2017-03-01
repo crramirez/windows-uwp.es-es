@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
 description: "Usa este método en la API de envío de la Tienda Windows para obtener datos para un envío de complemento existente."
 title: "Obtener un envío de complemento con el uso de la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, API de envío de la Tienda Windows, Windows Store submission API, envío de complemento, add-on submission, producto desde la aplicación, in-app product, IAP"
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: 887615bfc07549d82a295bae99dd31f722546341
+ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
+ms.openlocfilehash: 2f6211c1ec399c5b6234ee4181dd319130c606b4
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -100,7 +107,8 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON de una llamada co
       "US": "Tier4",
     },
     "sales": [],
-    "priceId": "Free"
+    "priceId": "Free",
+    "isAdvancedPricingModel": "true"
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
   "targetPublishMode": "Immediate",
@@ -151,9 +159,4 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Actualizar un envío de complemento](update-an-add-on-submission.md)
 * [Eliminar un envío de complemento](delete-an-add-on-submission.md)
 * [Obtener el estado de un envío de complemento](get-status-for-an-add-on-submission.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

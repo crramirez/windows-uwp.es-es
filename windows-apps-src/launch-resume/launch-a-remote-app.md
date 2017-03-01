@@ -1,16 +1,24 @@
 ---
 author: TylerMSFT
 title: "Iniciar una aplicación en un dispositivo remoto"
-description: Learn how to launch an app on a remote device using Project "Rome".
+description: "Obtén más información sobre cómo iniciar una aplicación en un dispositivo remoto mediante el proyecto &quot;Roma&quot;."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 translationtype: Human Translation
-ms.sourcegitcommit: 4e94ee5b3c56f3ec20e3592b97348c291297a670
-ms.openlocfilehash: d429ea4a6f8d52445c99cb170bb41c3fc1515dde
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e3ef31ed9a90122ae0634274ac5794e67017bc2f
+ms.lasthandoff: 02/08/2017
 
 ---
 
 # <a name="launch-an-app-on-a-remote-device"></a>Iniciar una aplicación en un dispositivo remoto
 
-Este artículo explica cómo iniciar una aplicación de Windows en un dispositivo remoto.
+En este artículo se explica cómo iniciar una aplicación de Windows en un dispositivo remoto.
 
 A partir de Windows 10, versión 1607, una aplicación para UWP puede iniciar una aplicación para UWP o una aplicación de escritorio de Windows remotamente en otro dispositivo que también esté ejecutando Windows 10, versión 1607 o posterior, siempre que ambos dispositivos hayan iniciado sesión con la misma cuenta de Microsoft (MSA).
 
@@ -59,13 +67,8 @@ El objeto [**RemoteLaunchUriStatus**](https://msdn.microsoft.com/library/windows
 
 ## <a name="related-topics"></a>Temas relacionados
 
-[Referencia de API de sistemas remotos](https://msdn.microsoft.com/en-us/library/windows/apps/Windows.System.RemoteSystems)  
+[Referencia de API de sistemas remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
 [Introducción a las aplicaciones y dispositivos conectados (proyecto "Roma")](connected-apps-and-devices.md)  
 [Detectar dispositivos remotos](discover-remote-devices.md)  
 La [muestra de sistemas remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems) indica cómo detectar un sistema remoto, iniciar una aplicación en un sistema remoto y usar los servicios de aplicaciones para enviar mensajes entre aplicaciones que se ejecuten en dos sistemas.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,13 +3,20 @@ author: mcleanbyron
 ms.assetid: C09F4B7C-6324-4973-980A-A60035792EFC
 description: "Usa este método en la API de envío de la Tienda Windows para crear un nuevo complemento para una aplicación que esté registrada en tu cuenta del Centro de desarrollo de Windows."
 title: "Creación de un envío de complemento mediante la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, API de envío de la Tienda Windows, crear envío de complemento, producto desde la aplicación, IAP"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: b7de4b00fb4d48b9f4c542437c38e0282e155a29
+ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
+ms.openlocfilehash: f824fe7d37a4a2db4e336fd43c335047e09aa323
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Creación de un envío de complemento mediante la API de envío de la Tienda Windows
+# <a name="create-an-add-on-submission-using-the-windows-store-submission-api"></a>Creación de un envío de complemento mediante la API de envío de la Tienda Windows
 
 
 
@@ -20,17 +27,17 @@ Para obtener más información sobre cómo se ajusta este método en el proceso 
 
 >**Nota**&nbsp;&nbsp;Este método crea un envío para un complemento existente. Para crear un complemento, usa el método de [Creación de un complemento](create-an-add-on.md).
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
 * Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 * Crea un complemento para una aplicación de tu cuenta del Centro de desarrollo. Puedes hacer esto en el panel del Centro de desarrollo o puedes hacerlo mediante el método de [Creación de un envío de complemento](create-an-add-on.md).
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
-## Solicitud
+## <a name="request"></a>Solicitud
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones del cuerpo del encabezado y la solicitud.
 
@@ -41,27 +48,27 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 <span/>
  
 
-### Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado        | Type   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | string | Obligatorio. Token de acceso de Azure AD con formato **Token del** &lt;*portador*&gt;. |
+| Authorization | string | Obligatorio. Token de acceso de Azure AD con formato **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Parámetros de solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Nombre        | Type   | Descripción                                                                 |
+| Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | inAppProductId | string | Obligatorio. Id. de la Tienda del complemento para el cual deseas crear un envío. El Id. de la Tienda está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta de las solicitudes de [Creación de un complemento](create-an-add-on.md) u [Obtención de los detalles de los complementos](get-all-add-ons.md).  |
 
 <span/>
 
-### Cuerpo de la solicitud
+### <a name="request-body"></a>Cuerpo de la solicitud
 
 No incluyas un cuerpo de la solicitud para este método.
 
-### Ejemplo de solicitud
+### <a name="request-example"></a>Ejemplo de solicitud
 
 El siguiente ejemplo muestra cómo crear un nuevo envío para un complemento.
 
@@ -70,7 +77,7 @@ POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP/s
 Authorization: Bearer <your access token>
 ```
 
-## Respuesta
+## <a name="response"></a>Respuesta
 
 El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisfactoria a este método. El cuerpo de la respuesta contiene información sobre el nuevo envío. Para obtener más información acerca de los valores en el cuerpo de la respuesta, consulta [Recurso de envío de complemento](manage-add-on-submissions.md#add-on-submission-object).
 
@@ -116,7 +123,8 @@ El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisf
          }
       }
     ],
-    "priceId": "Free"
+    "priceId": "Free",
+    "isAdvancedPricingModel": "true"
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
   "targetPublishMode": "Immediate",
@@ -146,7 +154,7 @@ El siguiente ejemplo muestra el cuerpo de respuesta JSON para una llamada satisf
 }
 ```
 
-## Códigos de error
+## <a name="error-codes"></a>Códigos de error
 
 Si la solicitud no se puede completar correctamente, la respuesta contendrá uno de los siguientes códigos de error HTTP.
 
@@ -158,18 +166,13 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 <span/>
 
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Administración de envíos de complementos](manage-add-on-submissions.md)
 * [Obtención de un envío de complemento](get-an-add-on-submission.md)
 * [Confirmación de un envío de complemento](commit-an-add-on-submission.md)
 * [Actualización de un envío de complemento](update-an-add-on-submission.md)
-* [Eliminación de un envío de complemento](delete-an-add-on-submission.md)
-* [Obtención del estado de un envío de complemento](get-status-for-an-add-on-submission.md)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
+* [Eliminar un envío de complemento](delete-an-add-on-submission.md)
+* [Obtener el estado de un envío de complemento](get-status-for-an-add-on-submission.md)
 

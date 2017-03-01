@@ -2,47 +2,50 @@
 author: payzer
 title: Complemento del modo de desarrollo de Xbox
 description: "Proporciona información sobre la aplicación Complemento del modo de desarrollo de Xbox."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: ed84f232-ddb5-4ba1-bf1c-578e8df47602
 translationtype: Human Translation
-ms.sourcegitcommit: 87ebc9ec01b349af033984b17d150e56d7a8cb2f
-ms.openlocfilehash: 036a581481888373249857ee21fe339819779dd0
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1aea4f2da584124050665d159b1d83f34368b819
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Complemento del modo de desarrollo de Xbox
+# <a name="xbox-dev-mode-companion"></a>Complemento del modo de desarrollo de Xbox
 
 La aplicación Complemento del modo de desarrollo de Xbox te permite conectarte a una consola Xbox One y controlarla de forma remota. Esta herramienta se creó para desarrolladores que usan el modo de desarrollador de Xbox.
 
-## Cómo obtener la aplicación  
+## <a name="how-to-get-the-app"></a>Cómo obtener la aplicación  
 Descarga la aplicación [Xbox Dev Mode Companion (Preview) (Complemento del modo de desarrollo de Xbox [vista previa])](https://www.microsoft.com/store/p/xbox-dev-mode-companion/9nblggh519cp).
 
-## Cómo conectar   
+## <a name="how-to-connect"></a>Cómo conectar   
 Para conectarse a la consola:
 
 1. Iniciar la aplicación.   
 2. Si no ves la consola en la lista del cuadro de diálogo de conexión, escribe la dirección IP de la misma en el cuadro de texto de la parte inferior del cuadro de diálogo y, a continuación, selecciona **Conectar**.
 
-## Controles de streaming
+## <a name="streaming-controls"></a>Controles de streaming
 Una vez hayas conectado, podrás obtener acceso a los controles de streaming; para ello, solo tienes que mantener el puntero sobre el área de streaming. Estos controles te permiten:
 * Alternar entre pantalla completa y el modo de ventana.
 * Iniciar Windows Device Portal.
 * Encender y apagar la consola.
 * Desconectarte.
 
-## Entrada
+## <a name="input"></a>Entrada
 Para enviar elementos de entrada a la consola mediante la aplicación, puedes conectar un mando de Xbox One al equipo.   
     
 Asimismo, puedes usar las teclas de dirección, Entrar y Escape para ir a la interfaz de usuario de la consola y a las aplicaciones que admiten la navegación por teclado. En la página de ayuda encontrarás una asignación completa del teclado.   
    
 Por último, si usas los cuadros de texto, puedes enviar mensajes de texto a la consola mediante el teclado.   
 
-## Ayuda
+## <a name="help"></a>Ayuda
 Puedes ver la página de ayuda haciendo clic en el icono con el símbolo de interrogación (?) que encontrarás en el cuadro de diálogo de conexión o en la barra de comandos.
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 - [UWP en Xbox One](index.md)
-
-
-
-<!--HONumber=Sep16_HO1-->
-
 

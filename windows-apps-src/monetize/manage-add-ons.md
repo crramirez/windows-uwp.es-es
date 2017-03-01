@@ -3,17 +3,26 @@ author: mcleanbyron
 ms.assetid: 4F9657E5-1AF8-45E0-9617-45AF64E144FC
 description: "Usa estos métodos en la API de envío de la Tienda Windows para administrar complementos para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows."
 title: "Administrar complementos mediante la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, API de envío de la Tienda Windows, complementos, producto desde la aplicación, IAP, Windows Store submission API, add-ons, in-app product"
 translationtype: Human Translation
-ms.sourcegitcommit: 020c8b3f4d9785842bbe127dd391d92af0962117
-ms.openlocfilehash: 058d11938dd6efc961da58a9d937be76beac5978
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 55a6b548246e801c9fcc0392265263123f24de00
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="manage-add-ons-using-the-windows-store-submission-api"></a>Administrar complementos mediante la API de envío de la Tienda Windows
 
-Usa los métodos siguientes en la API de envío de la Tienda Windows para administrar complementos (también conocidos como productos desde la aplicación o IAP) para tus aplicaciones. Para obtener una introducción a la API de envío de la Tienda Windows, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
+Usa los métodos siguientes en la API de envío de la Tienda Windows para administrar complementos (también conocidos como productos desde la aplicación o IAP) para tus aplicaciones. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
->**Nota**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado. Estos métodos solo pueden usarse para obtener, crear o eliminar complementos. Para crear envíos de complementos, consulta los métodos de [Administrar envíos de complemento](manage-add-on-submissions.md).
+>**Nota:**&nbsp;&nbsp;estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. Este permiso se habilita para cuentas de desarrollador en fases y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilite este permiso para tu cuenta.
+
+Estos métodos solo pueden usarse para obtener, crear o eliminar complementos. Para crear envíos de complementos, consulta los métodos de [Administrar envíos de complemento](manage-add-on-submissions.md).
 
 <table>
 <colgroup>
@@ -157,9 +166,4 @@ Este recurso tiene los siguientes valores.
 * [Obtener un complemento](get-an-add-on.md)
 * [Crear un complemento](create-an-add-on.md)
 * [Eliminar un complemento](delete-an-add-on.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

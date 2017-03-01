@@ -3,20 +3,27 @@ author: laurenhughes
 ms.assetid: D5D98044-7221-4C2A-9724-56E59F341AB0
 description: "En este artículo se muestra cómo leer y escribir propiedades de metadatos de imagen y cómo incluir geoetiquetas en archivos mediante la clase de utilidad GeotagHelper."
 title: Metadatos de imagen
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
-ms.openlocfilehash: 958033bc054da292c85f8df0a57cf964696c82bd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: af9a4c243c939ddc04e5d0763b58df00e70d7017
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Metadatos de imagen
+# <a name="image-metadata"></a>Metadatos de imagen
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se muestra cómo leer y escribir propiedades de metadatos de imagen y cómo incluir geoetiquetas en archivos mediante la clase de utilidad [**GeotagHelper**](https://msdn.microsoft.com/library/windows/apps/dn903683) .
 
-## Propiedades de imagen
+## <a name="image-properties"></a>Propiedades de imagen
 
 La propiedad [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225) devuelve un objeto [**StorageItemContentProperties**](https://msdn.microsoft.com/library/windows/apps/hh770642) que proporciona acceso a información relacionada con el contenido del archivo. Obtén las propiedades específicas de la imagen mediante una llamada a [**GetImagePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh770646). El objeto [**ImageProperties**](https://msdn.microsoft.com/library/windows/apps/br207718) devuelto expone los miembros que contienen los campos básicos de metadatos de la imagen, como el título de la imagen y la fecha de captura.
 
@@ -32,7 +39,7 @@ Para acceder a un conjunto de metadatos de archivo más grande, usa el Sistema d
 
 -   Dado que las propiedades que no son compatibles pueden devolver un valor nulo cuando se recuperan, siempre debes verificar los valores nulos antes de usar un valor de metadatos devueltos.
 
-## Geolocalizar auxiliares
+## <a name="geotag-helper"></a>Geolocalizar auxiliares
 
 GeotagHelper es una clase de utilidad que facilita el etiquetado de imágenes con datos geográficos, directamente mediante las API [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603), sin tener que analizar o construir manualmente el formato de metadatos.
 
@@ -54,7 +61,7 @@ Para obtener un elemento GeoPoint que represente la ubicación geoetiquetada de 
 
 [!code-cs[GetGeoData](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetGeoData)]
 
-## Descodificar y codificar los metadatos de imagen
+## <a name="decode-and-encode-image-metadata"></a>Descodificar y codificar los metadatos de imagen
 
 La forma más avanzada de trabajar con datos de imagen es leer y escribir las propiedades en el nivel de secuencia mediante un elemento [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) o [BitmapEncoder](bitmapencoder-options-reference.md). Para estas operaciones puedes usar las propiedades de Windows para especificar los datos de lectura o escritura, pero también puedes usar el lenguaje de consulta de metadatos proporcionado por Windows Imaging Component (WIC) para especificar la ruta de acceso a una propiedad solicitada.
 
@@ -79,7 +86,7 @@ Crea un objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
 
 -   [**SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252) no se ejecutará correctamente y devolverá el código de error 0x88982F41 si la imagen asociada con el codificador no admite una de las propiedades solicitadas.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Creación de imágenes](imaging.md)
  
@@ -88,10 +95,5 @@ Crea un objeto [**BitmapPropertySet**](https://msdn.microsoft.com/library/window
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

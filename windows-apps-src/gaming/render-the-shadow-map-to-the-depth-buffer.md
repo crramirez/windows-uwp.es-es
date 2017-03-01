@@ -3,21 +3,28 @@ author: mtoepke
 title: "Representar el mapa de sombras en el búfer de profundidad"
 description: Representa desde el punto de vista de la luz para crear un mapa de profundidad de dos dimensiones representando el volumen de sombra.
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, games, juegos, rendering, representación, shadow map, mapa de sombras, depth buffer, búfer de profundidad, direct3d"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 337aa63ee30b05da51d5b224cb0013519e11504d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 27b7c9a5fb69a19eed5941bf06068d5237ec101e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Representar el mapa de sombras en el búfer de profundidad
+# <a name="render-the-shadow-map-to-the-depth-buffer"></a>Representar el mapa de sombras en el búfer de profundidad
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Representa desde el punto de vista de la luz para crear un mapa de profundidad de dos dimensiones representando el volumen de sombra. El mapa de profundidad enmascara el espacio que se va a representar en la sombra Parte 2 de [Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
-## Borra el búfer de profundidad
+## <a name="clear-the-depth-buffer"></a>Borra el búfer de profundidad
 
 
 Siempre borra el búfer de profundidad antes de representarlo.
@@ -27,7 +34,7 @@ context->ClearRenderTargetView(m_deviceResources->GetBackBufferRenderTargetView(
 context->ClearDepthStencilView(m_shadowDepthView.Get(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 ```
 
-## Representar el mapa de sombras en el búfer de profundidad
+## <a name="render-the-shadow-map-to-the-depth-buffer"></a>Representar el mapa de sombras en el búfer de profundidad
 
 
 Para el pase (o transferencia) de representación de sombras, especifica un búfer de profundidad pero no especifiques un destino de representación.
@@ -124,7 +131,7 @@ void ShadowSceneRenderer::RenderShadowMap()
 
 **Optimizar el frustum de vista:** asegúrate de que tu implementación calcule un frustum de vista ajustado para que obtengas la mayor precisión posible de tu búfer de profundidad. Consulta [Técnicas habituales para mejorar los mapas de profundidad de sombras](https://msdn.microsoft.com/library/windows/desktop/ee416324) para ver más sugerencias sobre la técnica de sombras.
 
-## Sombreador de vértices para el pase de sombras
+## <a name="vertex-shader-for-shadow-pass"></a>Sombreador de vértices para el pase de sombras
 
 
 Usa una versión simplificada de tu sombreador de vértices para representar solo la posición de vértice en el espacio de luz. No incluyas ninguna normal de iluminación ni transformaciones secundarias, etc.
@@ -153,10 +160,5 @@ En la siguiente parte de este tutorial, aprenderás a agregar sombras mediante l
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

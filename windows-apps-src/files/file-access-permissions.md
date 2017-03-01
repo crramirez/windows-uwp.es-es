@@ -2,15 +2,22 @@
 author: laurenhughes
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: Permisos de acceso de archivos
-description: "Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, las aplicaciones también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades."
+description: "Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: d6cb8bd32766157b1edf886621bdc605ca160db5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3a5069620fa665d4508af70df5543a2d42744210
+ms.lasthandoff: 02/07/2017
 
 ---
-# <a name="file-access-permissions"></a>Permisos de acceso a archivos
+# <a name="file-access-permissions"></a>Permisos de acceso de archivos
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, las aplicaciones también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades.
@@ -162,9 +169,4 @@ En la siguiente tabla se incluyen otras ubicaciones a las que puedes tener acces
 | Bibliotecas de Grupo Hogar  | Se necesita al menos una de las siguientes funcionalidades. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.HomeGroup](https://msdn.microsoft.com/library/windows/apps/br227153) |      
 | Dispositivos de servidores multimedia (DLNA) | Se necesita al menos una de las siguientes funcionalidades. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.MediaServerDevices](https://msdn.microsoft.com/library/windows/apps/br227154) |
 | Carpetas UNC (convención de nomenclatura universal) | Se necesita una combinación de las siguientes funcionalidades. <br><br>Funcionalidad de redes doméstica y de trabajo: <br>- PrivateNetworkClientServer <br><br>Y al menos una funcionalidad de Internet y redes públicas: <br>- InternetClient <br>- InternetClientServer <br><br>Además, si procede, la funcionalidad de credenciales de dominio:<br>- EnterpriseAuthentication <br><br>Nota: debes incluir en el manifiesto de la aplicación aquellas asociaciones de tipo de archivo que declaren los tipos de archivo concretos a los que la aplicación tiene acceso en esta ubicación. | Una carpeta se recupera mediante: <br>[StorageFolder.GetFolderFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227278) <br><br>Un archivo se recupera mediante: <br>[StorageFile.GetFileFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227206) |
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

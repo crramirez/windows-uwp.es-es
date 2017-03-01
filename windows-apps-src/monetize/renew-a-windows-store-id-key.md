@@ -3,18 +3,25 @@ author: mcleanbyron
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: "Usa este método para renovar una clave de la Tienda Windows."
 title: Renovar una clave de id. de la Tienda Windows
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, API de colecciones de la Tienda de Windows, API de compras de la Tienda Windows, clave de identificador de la Tienda Windows, renovar, Windows Store collection API, Windows Store purchase API, Windows Store ID key, renew
 translationtype: Human Translation
-ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
-ms.openlocfilehash: 4e0ca6fe88218faef1f7c9192a5e19569e9c00b4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b740cf431607f1748a8513a02746a70560d09da2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Renovar una clave de id. de la Tienda Windows
+# <a name="renew-a-windows-store-id-key"></a>Renovar una clave de id. de la Tienda Windows
 
 
 Usa este método para renovar una clave de la Tienda Windows. Al [generar una clave de id. de la Tienda Windows](view-and-grant-products-from-a-service.md#step-4), la clave es válida durante 90 días. Cuando la clave expira, puedes usarla para renegociar una nueva clave mediante este método.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 
 Para usar este método, necesitarás:
@@ -22,11 +29,11 @@ Para usar este método, necesitarás:
 * Un token de acceso de Azure AD que se creó con el URI de audiencia `https://onestore.microsoft.com`.
 * La clave de id. de la Tienda Windows expirada que se haya [generado a partir del código de cliente en la aplicación](view-and-grant-products-from-a-service.md#step-4).
 
-Para obtener más información, consulta [Ver y conceder productos desde un servicio](view-and-grant-products-from-a-service.md).
+Para obtener más información, consulta [Administrar los derechos de producto de un servicio](view-and-grant-products-from-a-service.md).
 
-## Solicitud
+## <a name="request"></a>Solicitud
 
-### Sintaxis de la solicitud
+### <a name="request-syntax"></a>Sintaxis de la solicitud
 
 | Tipo de clave    | Método | URI de la solicitud                                              |
 |-------------|--------|----------------------------------------------------------|
@@ -35,7 +42,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 <span/>
 
-### Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
@@ -45,7 +52,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 <span/>
 
-### Cuerpo de la solicitud
+### <a name="request-body"></a>Cuerpo de la solicitud
 
 | Parámetro     | Tipo   | Descripción                       | Obligatorio |
 |---------------|--------|-----------------------------------|----------|
@@ -54,7 +61,7 @@ Para obtener más información, consulta [Ver y conceder productos desde un serv
 
 <span/> 
 
-### Ejemplo de solicitud
+### <a name="request-example"></a>Ejemplo de solicitud
 
 ```syntax
 POST https://collections.mp.microsoft.com/v6.0/b2b/keys/renew HTTP/1.1
@@ -68,10 +75,10 @@ Host: collections.mp.microsoft.com
 }
 ```
 
-## Respuesta
+## <a name="response"></a>Respuesta
 
 
-### Cuerpo de la respuesta
+### <a name="response-body"></a>Cuerpo de la respuesta
 
 | Parámetro | Tipo   | Descripción                                                                                                            | Obligatorio |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
@@ -79,7 +86,7 @@ Host: collections.mp.microsoft.com
 
 <span/>
 
-### Ejemplo de respuesta
+### <a name="response-example"></a>Ejemplo de respuesta
 
 ```syntax
 HTTP/1.1 200 OK
@@ -96,7 +103,7 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 }
 ```
 
-## Códigos de error
+## <a name="error-codes"></a>Códigos de error
 
 
 | Código | Error        | Código de error interno           | Descripción                                                                                                                                                                           |
@@ -106,16 +113,11 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 <span/>
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
-* [Ver y conceder productos desde un servicio](view-and-grant-products-from-a-service.md)
+* [Administrar los derechos de producto de un servicio](view-and-grant-products-from-a-service.md)
 * [Consultar productos](query-for-products.md)
 * [Notificar productos consumibles como completados](report-consumable-products-as-fulfilled.md)
 * [Conceder productos gratuitos](grant-free-products.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

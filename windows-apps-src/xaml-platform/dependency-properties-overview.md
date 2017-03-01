@@ -1,21 +1,28 @@
 ---
 author: jwmsft
-description: "En este tema se explica el sistema de propiedades de dependencia de que dispones cuando escribes una aplicación de Windows Runtime con C++, C#, o Visual Basic junto con definiciones XAML para la interfaz de usuario."
+description: "En este tema se explica el sistema de propiedades de dependencia de que dispones cuando escribes una aplicación de Windows Runtime con C++, C# o Visual Basic junto con definiciones XAML para la interfaz de usuario."
 title: "Introducción a las propiedades de dependencia"
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: bd08d102aa5de2d9dec89136caf683755db72391
-ms.openlocfilehash: 7a8c39494b69d36553db3a2df7526ba61e57a228
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: eaf52a930b5419f0c2a53aa14c9dc0fba5b404f6
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introducción a las propiedades de dependencia
+# <a name="dependency-properties-overview"></a>Introducción a las propiedades de dependencia
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se explica el sistema de propiedades de dependencia de que dispones cuando escribes una aplicación de Windows Runtime con C++, C#, o Visual Basic junto con definiciones XAML para la interfaz de usuario.
 
-## ¿Qué es una propiedad de dependencia?
+## <a name="what-is-a-dependency-property"></a>¿Qué es una propiedad de dependencia?
 
 Una propiedad de dependencia es un tipo especializado de propiedad. Se trata de una propiedad para la cual un sistema de propiedades dedicado que forma parte de Windows Runtime hace un seguimiento de su valor e influye en él.
 
@@ -28,7 +35,7 @@ El propósito de las propiedades de dependencia es proporcionar un modo sistémi
 -   Plantillas de usos múltiples como recursos y estilos
 -   Valores que se conocen a través de relaciones de elementos principales y secundarios con otros elementos del árbol de objetos
 
-Una propiedad de dependencia representa o admite una característica específica del modelo de programación para definir una aplicación de Windows Runtime con XAML para la interfaz de usuario, y C#, MicrosoftVisual Basic o extensiones de componente Visual C++ (C++/CX) para el código. Entre estas funciones se incluyen:
+Una propiedad de dependencia representa o admite una característica específica del modelo de programación para definir una aplicación de Windows Runtime con XAML para la interfaz de usuario, y C#, Microsoft Visual Basic o extensiones de componente Visual C++ (C++/CX) para el código. Entre estas funciones se incluyen:
 
 -   Enlace de datos
 -   Estilos
@@ -37,7 +44,7 @@ Una propiedad de dependencia representa o admite una característica específica
 -   Uso de un valor predeterminado que proviene de los metadatos de la propiedad
 -   Utilidad del sistema de propiedades general como [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357) y búsqueda de metadatos
 
-## Propiedades de dependencia y propiedades de Windows Runtime
+## <a name="dependency-properties-and-windows-runtime-properties"></a>Propiedades de dependencia y propiedades de Windows Runtime
 
 Las propiedades de dependencia extienden la funcionalidad de propiedades básica de Windows Runtime. Para ello, ofrecen un almacén de propiedades global e interno que incluye todas las propiedades de dependencia de una aplicación en tiempo de ejecución. Es una alternativa al patrón estándar de respaldo de una propiedad con un campo privado que es privado en la clase de definición de la propiedad. Este almacén de propiedades interno es un conjunto de identificadores y valores de propiedades que existen para cualquier objeto en particular (siempre que sea un [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)). En lugar de identificarse por el nombre, cada propiedad del almacén se identifica mediante una instancia de [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362). Pero el sistema de propiedades oculta en su mayoría los detalles de esta implementación: las propiedades de dependencia suelen ser accesibles mediante el uso de un nombre simple: el nombre de la propiedad en el lenguaje de código que uses o el nombre de un atributo mientras escribes XAML.
 
@@ -73,13 +80,13 @@ public bool IsSpinning
 
 **Nota**  El ejemplo anterior no pretende ser un ejemplo completo de cómo crear una propiedad de dependencia personalizada. Pretende mostrar conceptos de propiedades de dependencia para cualquiera que prefiera aprender conceptos mediante código. Para obtener un ejemplo más completo, consulta [Propiedades de dependencia personalizadas](custom-dependency-properties.md).
 
-## Prioridad de valores de la propiedad de dependencia
+## <a name="dependency-property-value-precedence"></a>Prioridad de valores de la propiedad de dependencia
 
 Cuando obtienes el valor de una propiedad de dependencia, obtienes un valor que se determinó en esa propiedad a través de una de las entradas que participan en el sistema de propiedades de Windows Runtime. La prioridad de valores de la propiedad de dependencia existe para que el sistema de propiedades de Windows Runtime pueda calcular valores de un modo predecible, y es importante que estés familiarizado con el orden de prioridad básico. De lo contrario, podría ocurrir que intentaras establecer una propiedad en un nivel de prioridad, pero algo (el sistema, llamadores de terceros, tu propio código) la configurara en otro nivel, por lo que llegarías a frustrarte intentando averiguar qué valor de propiedad se usa y de dónde procede.
 
 Por ejemplo, el propósito de los estilos y las plantillas es ser un punto de inicio compartido para establecer los valores de las propiedades y, por consiguiente, las apariencias de un control. Pero es posible que en la instancia de un control en particular quieras cambiar su valor con respecto al valor en la plantilla común, por ejemplo, dando al control un color de fondo diferente o una cadena de texto diferente como contenido. El sistema de propiedades de Windows Runtime considera los valores locales con una prioridad mayor que los valores que proporcionan los estilos y las plantillas. Esto permite el escenario de hacer que los valores específicos de una aplicación sobrescriban las plantillas, para que los controles sean útiles para que los utilices personalmente en la interfaz de usuario de la aplicación.
 
-### Lista de prioridades de las propiedades de dependencia
+### <a name="dependency-property-precedence-list"></a>Lista de prioridades de las propiedades de dependencia
 
 El siguiente es el orden definitivo que el sistema de propiedades usa para asignar el valor de tiempo de ejecución de una propiedad de dependencia. La prioridad mayor es la primera de la lista. Al final de esta lista, encontrarás explicaciones más detalladas.
 
@@ -89,7 +96,7 @@ El siguiente es el orden definitivo que el sistema de propiedades usa para asign
 4.  **Establecedores de estilo:** valores de una clase [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) incluidos en los estilos de los recursos de la página o la aplicación.
 5.  **Valor predeterminado:** una propiedad de dependencia puede tener un valor predeterminado como parte de sus metadatos.
 
-### Propiedades con plantilla
+### <a name="templated-properties"></a>Propiedades con plantilla
 
 Las propiedades con plantilla como elemento de prioridad no se aplican a las propiedades de un elemento que declares directamente en el marcado de página XAML. El concepto de propiedad con plantilla existe solamente para los objetos que se crean cuando Windows Runtime aplica una plantilla XAML a un elemento de la interfaz para definir sus vistas.
 
@@ -98,13 +105,13 @@ Todas las propiedades configuradas desde una plantilla de control tienen valores
 **Nota**  
 En algunos casos, la plantilla podría reemplazar incluso valores locales si la plantilla no puede exponer referencias de la [extensión de marcado {TemplateBinding}](templatebinding-markup-extension.md) para propiedades que deberían haberse configurado en instancias. Esto se suele hacer solamente si la propiedad no está realmente pensada para su configuración en instancias, por ejemplo, si es solo relevante para el comportamiento de plantillas y vistas, y no para la función o la lógica en tiempo de ejecución pretendida del control que usa la plantilla.
 
-###  Enlaces y prioridad
+###  <a name="bindings-and-precedence"></a>Enlaces y prioridad
 
 Las operaciones de enlace tienen la prioridad apropiada para cualquier ámbito para el que se usen. Por ejemplo, una [extensión de marcado {Binding}](binding-markup-extension.md) aplicada a un valor local actúa como valor local, y una [extensión de marcado {TemplateBinding}](templatebinding-markup-extension.md) para un establecedor de propiedades se aplica igual que un establecedor de estilo. Como los enlaces deben esperar hasta el tiempo de ejecución para poder obtener valores de orígenes de datos, el proceso de determinación de la prioridad de los valores de cualquier propiedad se extiende también hasta el tiempo de ejecución.
 
 Los enlaces no solo operan con la misma prioridad que un valor local, realmente son un valor local, donde el enlace es un marcador de posición para un valor que está aplazado. Si tienes un enlace vigente para un valor de propiedad, y estableces un valor local en tiempo de ejecución, este reemplazará todo el enlace. De forma similar, si llamas a [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) para definir un enlace que solo existe en tiempo de ejecución, estás reemplazando cualquier valor local que hayas aplicado en XAML o con código ejecutado anteriormente.
 
-### Animaciones con guion gráfico y valor base
+### <a name="storyboarded-animations-and-base-value"></a>Animaciones con guion gráfico y valor base
 
 Las animaciones con guión gráfico actúan en un concepto de un *valor base*. El valor base es el valor que viene determinado por el sistema de propiedades mediante el uso de la prioridad, pero omite el último paso de buscar animaciones. Por ejemplo, un valor base puede venir de una plantilla de control, o puede venir de la configuración de un valor local en una instancia de un control. De cualquier forma, la aplicación de una animación sobrescribirá este valor base y aplicará el valor animado mientras la animación siga ejecutándose.
 
@@ -116,7 +123,7 @@ Se pueden aplicar varias animaciones a una sola propiedad. Cada una de estas ani
 
 Para obtener más información, consulta [Animaciones con guion gráfico](https://msdn.microsoft.com/library/windows/apps/mt187354).
 
-### Valores predeterminados
+### <a name="default-values"></a>Valores predeterminados
 
 El establecimiento del valor predeterminado para una propiedad de dependencia con un valor [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) se explica más detalladamente en el tema [Propiedades de dependencia personalizadas](custom-dependency-properties.md).
 
@@ -129,9 +136,9 @@ Las propiedades de dependencia siguen teniendo valores predeterminados, incluso 
 -   Una propiedad que use una cadena ([**System.String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx) para .NET, [**Platform::String**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx) para C++/CX) tiene un valor predeterminado de una cadena vacía (**""**).
 -   Las propiedades de colección normalmente se implementan como propiedades de dependencia, por razones que se tratan más a fondo en este tema. Pero si implementas una propiedad de colección personalizada y quieres que sea una propiedad de dependencia, asegúrate de que evitas que se produzca un *singleton no intencionado* como se describe hacia el final del tema [Propiedades de dependencia personalizadas](custom-dependency-properties.md).
 
-## Funcionalidad de la propiedad suministrada por una propiedad de dependencia
+## <a name="property-functionality-provided-by-a-dependency-property"></a>Funcionalidad de la propiedad suministrada por una propiedad de dependencia
 
-### Enlace de datos
+### <a name="data-binding"></a>Enlace de datos
 
 Se puede establecer el valor de una propiedad de dependencia mediante la aplicación de un enlace de datos. El enlace de datos usa la sintaxis de [extensión de marcado {Binding}](binding-markup-extension.md) en XAML, la [extensión de marcado {x:Bind}](x-bind-markup-extension.md) o la clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) en el código. Para una propiedad de enlace de datos, la determinación del valor de la propiedad final se aplaza hasta el tiempo de ejecución. En ese momento, el valor se obtiene de un origen de datos. El papel que el sistema de propiedades de dependencia juega aquí es habilitar un comportamiento de marcador de posición para operaciones como cargar XAML cuando el valor aún no es conocido y, luego, suministrar el valor en tiempo de ejecución mediante la interacción con el motor de enlace de datos de Windows Runtime.
 
@@ -147,7 +154,7 @@ También puedes establecer enlaces con códigos y no con XAML. Consulta [**SetBi
 
 **Nota**  Los enlaces como este se tratan como un valor local en lo que respecta a la prioridad de valores de la propiedad de dependencia. Si estableces otro valor local para una propiedad que originalmente tenía un valor [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820), sobrescribirás el enlace por completo, no solo el valor en tiempo de ejecución del enlace. Los enlaces {x: Bind} se implementan mediante código generado que establecerá un valor local para la propiedad. Si estableces un valor local para una propiedad que está usando {x: Bind}, ese valor se reemplazará la próxima vez que se evalúe el enlace, por ejemplo, cuando observe que una propiedad cambia en su objeto de origen.
 
-### Orígenes de enlace, destinos de enlace, el rol de FrameworkElement
+### <a name="binding-sources-binding-targets-the-role-of-frameworkelement"></a>Orígenes de enlace, destinos de enlace, el rol de FrameworkElement
 
 Para ser el origen de un enlace, no es necesario que una propiedad sea de dependencia; por lo general, puedes usar cualquier propiedad como origen de enlace, aunque esto depende del lenguaje de programación y cada uno tiene sus particularidades. Sin embargo, para ser el destino de una [extensión de marcado {Binding}](binding-markup-extension.md) o de una clase [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820), la propiedad debe ser de dependencia. {x: Bind} no tiene este requisito, ya que usa código generado para aplicar sus valores de enlace.
 
@@ -157,15 +164,15 @@ Tanto en código como en XAML, recuerda que [**DataContext**](https://msdn.micro
 
 Conectar el enlace no es lo único que se necesita en la mayoría de casos de enlace de datos. Para que el enlace unidireccional o bidireccional sea efectivo, la propiedad de origen debe admitir notificaciones de cambio que se propaguen al sistema de enlace y, por consiguiente, al destino. En el caso de orígenes de enlace personalizados, esto significa que la propiedad debe ser una propiedad de dependencia o el objeto debe admitir [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx). Las colecciones deben admitir [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx). Ciertas clases admiten estas interfaces en sus implementaciones para que sean útiles como clases base en escenarios de enlace de datos; un ejemplo de dicha clase es [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx). Para obtener más información sobre el enlace de datos y la forma en que se relaciona con el sistema de propiedades, consulta [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-**Nota**  Los tipos que se enumeran aquí admiten orígenes de datos de Microsoft.NET. Los orígenes de datos de C++/CX usan interfaces diferentes para las notificaciones de cambios o un comportamiento observable. Consulta la sección [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Nota**  Los tipos que se enumeran aquí admiten orígenes de datos de Microsoft .NET. Los orígenes de datos de C++/CX usan interfaces diferentes para las notificaciones de cambios o un comportamiento observable. Consulta la sección [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-### Estilos y plantillas
+### <a name="styles-and-templates"></a>Estilos y plantillas
 
 Los estilos y las plantillas son dos de los escenarios en los que las propiedades se definen como propiedades de dependencia. Los estilos son útiles para establecer propiedades que definen la interfaz de usuario de la aplicación. Los estilos se definen como recursos en XAML, ya sea como una entrada en una colección de [**Resources**](https://msdn.microsoft.com/library/windows/apps/br208740) o en archivos XAML independientes, como los diccionarios de recursos de tema. Los estilos interactúan con el sistema de propiedades porque contienen establecedores para propiedades. La propiedad más importante que se establece de esta manera es la propiedad [**Control.Template**](https://msdn.microsoft.com/library/windows/apps/br209465) de un [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390), que define la mayor parte de la apariencia visual y del estado visual de un **Control**. Para obtener más información sobre los estilos y algún ejemplo de XAML que define un [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) y usa establecedores, consulta [Inicio rápido: controles de estilo](https://msdn.microsoft.com/library/windows/apps/mt210950).
 
 Los valores que provienen de estilos o plantillas son valores aplazados, similares a los enlaces. Esto sirve para que los usuarios de controles puedan volver a crear plantillas de los controles o redefinir estilos. Y es por eso que los establecedores de propiedades en los estilos solo pueden actuar en propiedades de dependencia, no en propiedades normales.
 
-### Animaciones con guion gráfico
+### <a name="storyboarded-animations"></a>Animaciones con guion gráfico
 
 Puedes animar el valor de una propiedad de dependencia con una animación con guion gráfico. Las animaciones con guion gráfico de Windows Runtime no son simples decoraciones visuales. Es más útil pensar en las animaciones como una técnica de máquina de estado que puede establecer los valores de propiedades individuales o de todas las propiedades y vistas de un control, y cambiar estos valores con el tiempo.
 
@@ -175,25 +182,25 @@ Cuando se aplica una animación y está en funcionamiento, el valor animado oper
 
 El principio de máquina de estado se expresa mediante el uso de animaciones con guion gráfico como parte del modelo de estado [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/br209021) de los controles. Para obtener más información sobre animaciones con guion gráfico, consulta [Animaciones con guion gráfico](https://msdn.microsoft.com/library/windows/apps/mt187354). Para obtener más información sobre **VisualStateManager** y definir estados visuales para los controles, consulta [Animaciones con guion gráfico para estados visuales](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808) o [Plantillas de control](../controls-and-patterns/control-templates.md).
 
-### Comportamiento modificado por la propiedad
+### <a name="property-changed-behavior"></a>Comportamiento modificado por la propiedad
 
 El comportamiento modificado por la propiedad es uno de los principales motivos de la parte "de dependencia" del término propiedad de dependencia. Mantener valores válidos para una propiedad cuando otra propiedad puede influir en el valor de la primera es un problema de desarrollo difícil en muchas plataformas. En el sistema de propiedades de Windows Runtime, cada propiedad de dependencia puede especificar que se invoque una devolución de llamada siempre que cambie el valor de su propiedad. Esta devolución de llamada se puede usar para notificar o cambiar los valores relacionados con la propiedad de una manera generalmente sincrónica. Muchas propiedades de dependencia existentes tienen un comportamiento modificado por la propiedad. También puedes agregar un comportamiento de devolución de llamada similar a las propiedades de dependencia personalizadas e implementar tus propias devoluciones de llamadas modificadas por la propiedad. Consulta un ejemplo en [Propiedades de dependencia personalizadas](custom-dependency-properties.md).
 
 Windows 10 incorpora el método [**RegisterPropertyChangedCallback**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx). Esto permite que el código de la aplicación registre notificaciones de cambio cuando se cambia la propiedad de dependencia especificada en una instancia de [**DependencyObject**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.aspx).
 
-### Valor predeterminado y **ClearValue**
+### <a name="default-value-and-clearvalue"></a>Valor predeterminado y **ClearValue**
 
 Una propiedad de dependencia puede tener un valor predeterminado definido como parte de los metadatos de la propiedad. En el caso de una propiedad de dependencia, su valor predeterminado no se convierte en irrelevante después de establecer la propiedad por primera vez. El valor predeterminado se puede aplicar de nuevo en tiempo de ejecución siempre que desaparezca algún otro determinante en la prioridad de valores. (La prioridad de valores de la propiedad de dependencia se analiza en la siguiente sección). Por ejemplo, podrías quitar deliberadamente un valor de estilo o una animación que se aplique a una propiedad, pero desear que, después de hacerlo, el valor sea un valor predeterminado razonable. El valor predeterminado de la propiedad de dependencia puede proporcionar este valor, sin necesidad de establecer específicamente cada valor de la propiedad como paso adicional.
 
 Puedes establecer deliberadamente una propiedad en el valor predeterminado incluso después de establecerla con un valor local. Para restablecer el valor predeterminado y para que otros participantes anteriores puedan invalidar el valor predeterminado pero no un valor local, llama al método [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357) (referencia a la propiedad para borrar como parámetro de método). No siempre querrás que la propiedad use literalmente el valor predeterminado, pero borrar el valor local y revertir al valor predeterminado puede habilitar otro elemento anterior que quieras que actúe ahora, como usar el valor que venía de un establecedor de estilo en una plantilla de control.
 
-## **DependencyObject** y subprocesos
+## <a name="dependencyobject-and-threading"></a>**DependencyObject** y subprocesos
 
 Todas las instancias de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) deben crearse en el subproceso de interfaz de usuario asociado a [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) actual que muestra la aplicación de Windows Runtime. Aunque cada **DependencyObject** debe crearse en el subproceso de interfaz de usuario principal, se puede acceder a los objetos mediante una referencia de distribuidor desde otros subprocesos, accediendo a la propiedad [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br230616). Posteriormente se puede llamar a métodos como [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) en el objeto [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) y ejecutar el código dentro de las reglas de restricción de subprocesos en el subproceso de la interfaz de usuario.
 
 Los aspectos de subprocesos de [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) son relevantes porque, por lo general, significa que solo el código que se ejecuta en el subproceso de interfaz de usuario puede cambiar o incluso leer el valor de una propiedad de dependencias. Los problemas de subprocesos normalmente se pueden evitar en el código típico de la interfaz de usuario que haga un uso correcto de los patrones **async** y de los subprocesos de trabajo en segundo plano. Normalmente, solo te encontrarás con problemas de subprocesos relacionados con **DependencyObject** si vas a definir tipos de **DependencyObject** e intentas usarlos para los orígenes de datos u otros escenarios donde un **DependencyObject** no es necesariamente lo adecuado.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 **Material conceptual**
 * [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
@@ -205,10 +212,5 @@ Los aspectos de subprocesos de [**DependencyObject**](https://msdn.microsoft.com
 **API relacionadas con propiedades de dependencia**
 * [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
 * [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

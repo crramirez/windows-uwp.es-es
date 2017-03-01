@@ -3,16 +3,23 @@ author: mtoepke
 title: Agregar contenido visual a la muestra de Marble Maze
 description: "En este documento se describe cómo el juego Marble Maze usa Direct3D y Direct2D en el entorno de aplicaciones de la Plataforma universal de Windows (UWP) para que puedas conocer los patrones y adaptarlos cuando trabajes con el contenido de tu propio juego."
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, juegos, ejemplo, DirectX, gráficos"
 translationtype: Human Translation
-ms.sourcegitcommit: eb0115bf83627a9ba8209cce6bdd9edecc165ddf
-ms.openlocfilehash: 6b7880703d40d6ef5ed5f42f3e09bc5573170e1f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b8ee07dc45e53f2ea73f87111fa9eb155854f10a
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a>Agregar contenido visual al ejemplo de Marble Maze
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este documento se describe cómo el juego Marble Maze usa Direct3D y Direct2D en el entorno de aplicaciones de la Plataforma universal de Windows (UWP) de modo que puedas conocer los patrones y adaptarlos cuando trabajes con el contenido de tu propio juego. Para averiguar qué lugar ocupan los componentes visuales del juego en la estructura global de Marble Maze, consulta [Estructura de la aplicación Marble Maze](marble-maze-application-structure.md).
@@ -446,7 +453,7 @@ En el documento [Semántica](https://msdn.microsoft.com/library/windows/desktop/
 
 Para obtener más información sobre el estado de la fase de ensamblado de entrada, consulta los temas sobre la [fase de ensamblador de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205116) y [primeros pasos con la fase de ensamblador de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205117).
 
-El proceso según el cual se usan los sombreadores de vértices y de píxeles para representar la escena se describe en la sección [Representar la escena](#rendering_the_scene) más adelante en este documento.
+El proceso según el cual se usan los sombreadores de vértices y de píxeles para representar la escena se describe en la sección [Representar la escena](#rendering-the-scene) más adelante en este documento.
 
 ### <a name="creating-the-constant-buffer"></a>Crear el búfer de constates
 
@@ -735,7 +742,7 @@ Antes de presentar los objetos de la escena, sigue estos pasos para preparar los
 
  
 
-En la sección [Cargar sombreadores](#loading_shaders) de este documento se describe cómo crear el diseño de entrada cuando se crea el sombreador de vértices. En el siguiente ejemplo muestra cómo el método **MarbleMaze::Render** usa el método [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) para establecer este diseño como el diseño actual.
+En la sección [Cargar sombreadores](#loading-shaders) de este documento se describe cómo crear el diseño de entrada cuando se crea el sombreador de vértices. En el siguiente ejemplo muestra cómo el método **MarbleMaze::Render** usa el método [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) para establecer este diseño como el diseño actual.
 
 ```cpp
 m_d3dContext->IASetInputLayout(m_inputLayout.Get());
@@ -864,7 +871,7 @@ parameters.pScrollOffset = nullptr;
 HRESULT hr = m_swapChain->Present1(1, 0, &parameters);
 ```
 
-En este ejemplo, **m\_swapChain** es un objeto [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631). La inicialización de este objeto se describe en la sección [Inicializar Direct3D y Direct2D](#initializing) en este documento.
+En este ejemplo, **m\_swapChain** es un objeto [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631). La inicialización de este objeto se describe en la sección [Inicializar Direct3D y Direct2D](#initializing-direct3d-and-direct2d) en este documento.
 
 El primer parámetro para [**IDXGISwapChain1::Present**](https://msdn.microsoft.com/library/windows/desktop/hh446797), *SyncInterval*, especifica el número de espacios en blanco verticales que hay que esperar antes de presentar el fotograma. Marble Maze especifica 1 de modo que espera hasta el siguiente espacio en blanco vertical. Un espacio en blanco vertical es el tiempo que pasa entre que se termina de dibujar un fotograma en el monitor y comienza el siguiente fotograma.
 
@@ -901,10 +908,5 @@ Consulta [Agregar métodos de entrada e interactividad en la muestra de Marble M
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -3,15 +3,22 @@ author: jnHs
 Description: "Los complementos se publican a través del panel del Centro de desarrollo de Windows."
 title: "Envíos de complementos"
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 0f2b48f646423f299999a61d78dd956a78a09a8e
-ms.openlocfilehash: 1e7c02621da528c4635ab47bd7c2a898f2441da1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e7d13a55ba545758e01452103c3380ac67ad6610
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="add-on-submissions"></a>Envíos de complementos
 
-Los complementos (a los que a veces se denominan productos desde la aplicación) son elementos complementarios para la aplicación que los clientes pueden adquirir. Un complemento puede ser una nueva función complementaria divertida, un nuevo nivel de juego o cualquier cosa que creas que puede mantener la relación de los usuarios con la aplicación. Los complementos no solo son una manera fantástica de ganar dinero, sino que promueven la participación y la interacción del cliente.
+Los complementos (a los que a veces se denominan productos desde la aplicación) son elementos complementarios para la aplicación, que los clientes pueden adquirir. Un complemento puede ser una nueva función complementaria divertida, un nuevo nivel de juego o cualquier cosa que creas que puede mantener la relación de los usuarios con la aplicación. Los complementos no solo son una manera fantástica de ganar dinero, sino que promueven la participación y la interacción del cliente.
 
 Los complementos se publican a través del panel del Centro de desarrollo de Windows. También tendrás que [habilitar los complementos](../monetize/in-app-purchases-and-trials.md) en el código de la aplicación.
 
@@ -66,21 +73,16 @@ Es obligatoria una descripción de la Tienda. Se recomienda proporcionar descrip
 
 Cuando hayas terminado de introducir esta información, haz clic en **Enviar a la Tienda**. En la mayoría de los casos, el proceso de certificación tarda aproximadamente una hora. Después, el complemento se publicará en la Tienda y estará listo para que los clientes puedan adquirirlo.
 
-**Nota** El complemento también debe implementarse en el código de la aplicación. Para obtener más información, consulta [Habilitar compras de productos desde la aplicación](../monetize/enable-in-app-product-purchases.md).
+>**Nota**&nbsp;&nbsp;El complemento también debe implementarse en el código de la aplicación. Para obtener más información, consulta [Pruebas y compras desde la aplicación](../monetize/in-app-purchases-and-trials.md).
 
 
 ## <a name="updating-an-add-on-after-publication"></a>Actualizar un complemento después de su publicación
 
 Puedes realizar cambios en un complemento publicado en cualquier momento. Los cambios de los complementos se envían y se publican independientemente de la aplicación, de modo que, por lo general, no es necesario actualizar toda la aplicación para realizar cambios en un complemento, como actualizar su precio o su descripción.
 
-> **Importante** Si la aplicación está disponible para los clientes de Windows 8.x, tendrás que crear y publicar un nuevo envío de aplicación para que las actualizaciones de los complementos sean visibles para dichos clientes. De forma parecida, si agregas nuevos complementos a una aplicación destinada a Windows 8.x después que dicha aplicación se haya publicado, tendrás que actualizar el código de la aplicación para hacer referencia a esos complementos y, a continuación, volver a enviar la aplicación. De lo contrario, los nuevos complementos no serán visibles para los clientes de Windows 8.x.
+> **Importante**&nbsp;&nbsp;Si la aplicación está disponible para los clientes de Windows 8.x, tendrás que crear y publicar un nuevo envío de aplicación para que las actualizaciones de los complementos sean visibles para dichos clientes. De forma parecida, si agregas nuevos complementos a una aplicación destinada a Windows 8.x después que dicha aplicación se haya publicado, tendrás que actualizar el código de la aplicación para hacer referencia a esos complementos y, a continuación, volver a enviar la aplicación. De lo contrario, los nuevos complementos no serán visibles para los clientes de Windows 8.x.
 
 Para enviar actualizaciones, ve a la página del complemento en el panel y haz clic en **Actualizar**. Esto creará un nuevo envío para el complemento, con la información de tu envío anterior como punto de partida. Cambia la información que desees y, a continuación, haz clic en **Enviar a la Tienda**.
 
 Para quitar un complemento que has estado ofreciendo anteriormente, crea un nuevo envío y cambia la opción [Distribución y visibilidad](set-add-on-pricing-and-availability.md) a **Ya no está disponible para comprar. No se muestra en la descripción de la aplicación**. Asegúrate de actualizar el código de la aplicación según sea necesario para quitar también las referencias al complemento.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -1,13 +1,20 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Las interacciones del usuario en la Plataforma universal de Windows (UWP) son una combinación de orígenes de entrada y salida (tales como mouse, teclado, lápiz, función táctil, panel táctil, voz, Cortana, controlador, gestos, miradas, etc.), junto con diversos modos o modificadores, que permiten experiencias ampliadas (incluidos la rueda y los botones del mouse, los botones de borrador de lápiz y de menú contextual, el teclado táctil y los servicios de aplicaciones de segundo plano)."
+Description: "Las interacciones del usuario en la Plataforma universal de Windows (UWP) son una combinación de orígenes de entrada y salida (tales como ratón, teclado, lápiz, función táctil, panel táctil, voz, Cortana, controlador, gestos, miradas, etc.), junto con diversos modos o modificadores, que permiten experiencias ampliadas (incluidos la rueda y los botones del ratón, los botones de borrador de lápiz y de menú contextual, el teclado táctil y los servicios de aplicaciones de segundo plano)."
 title: "Información básica sobre interacción"
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: b754e3f039e4dca0949bb31fe1da52f6a404dfb4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d11efb262dfbdd604dc249f19ae35e4110369654
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -16,7 +23,7 @@ ms.openlocfilehash: b754e3f039e4dca0949bb31fe1da52f6a404dfb4
 
 ![Tipos de entrada de Windows](images/input-interactions/icons-inputdevices03.png)
 
-Las interacciones del usuario en la Plataforma universal de Windows (UWP) son una combinación de orígenes de entrada y salida (tales como mouse, teclado, lápiz, función táctil, panel táctil, voz, **Cortana**, controlador, gestos, miradas, etc.), junto con diversos modos o modificadores, que permiten experiencias ampliadas (incluidos la rueda y los botones del mouse, los botones de borrador de lápiz y de menú contextual, el teclado táctil y los servicios de aplicaciones de segundo plano).
+Las interacciones del usuario en la Plataforma universal de Windows (UWP) son una combinación de orígenes de entrada y salida (tales como ratón, teclado, lápiz, función táctil, panel táctil, voz, **Cortana**, controlador, gestos, miradas, etc.), junto con diversos modos o modificadores, que permiten experiencias ampliadas (incluidos la rueda y los botones del ratón, los botones de borrador de lápiz y de menú contextual, el teclado táctil y los servicios de aplicaciones de segundo plano).
 
 UWP usa un sistema "inteligente" de interacción contextual que, en la mayoría de los casos, elimina la necesidad de controlar individualmente los tipos únicos de entradas que recibe la aplicación. Esto incluye el control de la función táctil, el panel táctil, el mouse y la entrada manuscrita como un tipo de puntero genérico para admitir gestos estáticos (como presionar o mantener presionado), gestos de manipulación (como deslizar para movimiento panorámico) o la representación de la entrada de lápiz digital.
 
@@ -347,9 +354,4 @@ Al igual que las personas usan una combinación de voz y gestos para comunicarse
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

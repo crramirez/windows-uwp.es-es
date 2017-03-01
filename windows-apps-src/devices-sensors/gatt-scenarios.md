@@ -3,14 +3,21 @@ author: msatranjr
 ms.assetid: 28B30708-FE08-4BE9-AE11-5429F963C330
 title: Bluetooth GATT
 description: "Este artículo proporciona información general sobre el perfil de atributo genérico (GATT) de Bluetooth para las aplicaciones para la Plataforma universal de Windows (UWP), junto con código de muestra para tres escenarios habituales de GATT"
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
-ms.openlocfilehash: 508acd449c156fa0f5b14298e4a7700748fc65bb
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c6187f4bfe6f2940b8dbfea0e6441f2fa9ac2c66
+ms.lasthandoff: 02/07/2017
 
 ---
-# Perfil GATT de Bluetooth
+# <a name="bluetooth-gatt"></a>GATT de Bluetooth
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** API importantes **
 
@@ -19,16 +26,16 @@ ms.openlocfilehash: 508acd449c156fa0f5b14298e4a7700748fc65bb
 
 Este artículo proporciona información general sobre el perfil de atributo genérico (GATT) de Bluetooth para las aplicaciones para la Plataforma universal de Windows (UWP), junto con código de muestra para tres escenarios habituales de GATT: recuperar datos de Bluetooth, controlar un dispositivo de termómetro Bluetooth LE y controlar la presentación de datos de dispositivos Bluetooth LE.
 
-## Información general
+## <a name="overview"></a>Información general
 
-Los desarrolladores pueden usar las API del espacio de nombres [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) para tener acceso a los servicios, descriptores y características de Bluetooth LE. Los dispositivos BluetoothLE exponen su funcionalidad a través de una colección de:
+Los desarrolladores pueden usar las API del espacio de nombres [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) para tener acceso a los servicios, descriptores y características de Bluetooth LE. Los dispositivos Bluetooth LE exponen su funcionalidad a través de una colección de:
 
 -   Servicios principales
 -   Servicios incluidos
 -   Características
 -   Descriptores
 
-Los servicios principales definen el contrato funcional del dispositivoLE y contienen una colección de características que definen el servicio. Dichas características, a su vez, contienen descriptores que las describen.
+Los servicios principales definen el contrato funcional del dispositivo LE y contienen una colección de características que definen el servicio. Dichas características, a su vez, contienen descriptores que las describen.
 
 Las API de Bluetooth GATT exponen objetos y funciones, en lugar del acceso al transporte sin procesar. En el nivel del controlador, los servicios primarios se enumeran como nodos de dispositivo secundarios que forman parte del dispositivo Bluetooth LE y que usan las API [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459).
 
@@ -38,13 +45,13 @@ Las API del perfil GATT de Bluetooth también permiten a los desarrolladores tra
 -   Leer y escribir valores de características / descriptores
 -   Registrar una devolución de llamada para el evento de característica ValueChanged
 
-Las API de Bluetooth GATT simplifican el desarrollo al trabajar con propiedades comunes y al ofrecer valores predeterminados razonables para facilitar la administración y la configuración del dispositivo. Ofrecen a los desarrolladores un medio para tener acceso a la funcionalidad de un dispositivo BluetoothLE desde una aplicación.
+Las API de Bluetooth GATT simplifican el desarrollo al trabajar con propiedades comunes y al ofrecer valores predeterminados razonables para facilitar la administración y la configuración del dispositivo. Ofrecen a los desarrolladores un medio para tener acceso a la funcionalidad de un dispositivo Bluetooth LE desde una aplicación.
 
-Para crear una implementación útil, el desarrollador debe tener conocimientos previos sobre los servicios y las características GATT que la aplicación pretende consumir, y debe procesar los valores de características específicos para que los datos binarios proporcionados por la API se conviertan en datos útiles antes de presentárselos al usuario. Las API de Bluetooth GATT exponen solo los primitivos básicos requeridos para comunicarse con un dispositivo BluetoothLE. Para interpretar los datos, debe definirse un perfil de aplicación, ya sea mediante un perfil estándar de un SIG de Bluetooth o mediante un perfil personalizado implementado por un proveedor de dispositivos. Un perfil crea un contrato vinculante entre la aplicación y el dispositivo, que indica qué representan los datos intercambiados y cómo interpretarlos.
+Para crear una implementación útil, el desarrollador debe tener conocimientos previos sobre los servicios y las características GATT que la aplicación pretende consumir, y debe procesar los valores de características específicos para que los datos binarios proporcionados por la API se conviertan en datos útiles antes de presentárselos al usuario. Las API de Bluetooth GATT exponen solo los primitivos básicos requeridos para comunicarse con un dispositivo Bluetooth LE. Para interpretar los datos, debe definirse un perfil de aplicación, ya sea mediante un perfil estándar de un SIG de Bluetooth o mediante un perfil personalizado implementado por un proveedor de dispositivos. Un perfil crea un contrato vinculante entre la aplicación y el dispositivo, que indica qué representan los datos intercambiados y cómo interpretarlos.
 
 Para mayor comodidad, el SIG de Bluetooth ofrece una [lista de perfiles públicos](http://go.microsoft.com/fwlink/p/?LinkID=317977).
 
-## Recuperar datos de Bluetooth
+## <a name="retrieve-bluetooth-data"></a>Recuperar datos de Bluetooth
 
 En este ejemplo, la aplicación consume medidas de temperatura de un dispositivo Bluetooth LE que implementa el servicio de termómetro médico de Bluetooth LE. La aplicación especifica que desea que se le notifique cuando una nueva medida de temperatura esté disponible. Mediante el registro de un controlador de eventos para el evento "Thermometer Characteristic Value Changed", la aplicación recibirá notificaciones de evento que hacen referencia al cambio del valor de la característica, mientras esta se ejecuta en segundo plano.
 
@@ -165,7 +172,7 @@ void MainPage::TemperatureMeasurementChanged(
 }
 ```
 
-## Controlar un dispositivo de termómetro Bluetooth LE
+## <a name="control-a-bluetooth-le-thermometer-device"></a>Controlar un dispositivo de termómetro Bluetooth LE
 
 En este ejemplo, una aplicación para UWP actúa como controlador del dispositivo ficticio de termómetro Bluetooth LE. Asimismo, el dispositivo también declara una característica de formato que permite a los usuarios recuperar la lectura del valor en grados centígrados o Fahrenheit, además de las características estándar del perfil [**HealthThermometer**](https://msdn.microsoft.com/library/windows/apps/Dn297603). La aplicación usa transacciones de escritura de confianza para garantizar que los intervalos de medida y formato se establecen con un valor único.
 
@@ -285,7 +292,7 @@ void MainPage::Initialize()
 
 ```
 
-## Controlar la presentación de datos de dispositivos Bluetooth LE
+## <a name="control-the-presentation-of-bluetooth-le-device-data"></a>Controlar la presentación de datos de dispositivos Bluetooth LE
 
 Un dispositivo Bluetooth LE puede exponer un servicio de batería que indique el nivel de batería actual al usuario. El servicio de batería incluye un descriptor [**PresentationFormats**](https://msdn.microsoft.com/library/windows/apps/Dn263742) opcional, que permite cierta flexibilidad a la hora de interpretar los datos del nivel de batería. Este escenario proporciona un ejemplo de aplicación que funciona con este tipo de dispositivo y usa la propiedad **PresentationFormats** para dar formato a un valor de característica antes de presentarlo al usuario.
 
@@ -397,10 +404,5 @@ void MainPage::BatteryLevelChanged(
 ```
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

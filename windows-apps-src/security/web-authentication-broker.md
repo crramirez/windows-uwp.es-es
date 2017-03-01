@@ -3,16 +3,23 @@ title: "Agente de autenticación web"
 description: "En este artículo se explica cómo conectar tu aplicación de la Plataforma universal de Windows (UWP) a un proveedor de identidad en línea que usa protocolos de autenticación como OpenID u OAuth, como Facebook, Twitter, Flickr, Instagram, etc."
 ms.assetid: 05F06961-1768-44A7-B185-BCDB74488F85
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: ea3d3e1df07c8cf9701e7bd39af006cd681ef1fe
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d9e7fbb560b7dc3e608c22494a44fce70621173b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Agente de autenticación web
+# <a name="web-authentication-broker"></a>Agente de autenticación web
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 En este artículo se explica cómo conectar tu aplicación de la Plataforma universal de Windows (UWP) a un proveedor de identidad en línea que usa protocolos de autenticación como OpenID u OAuth, como Facebook, Twitter, Flickr, Instagram, etc. El método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) envía una solicitud al proveedor de identidad en línea y obtiene un token de acceso que describe los recursos del proveedor a los que tiene acceso la aplicación.
@@ -21,12 +28,12 @@ En este artículo se explica cómo conectar tu aplicación de la Plataforma univ
 
  
 
-## Registrar la aplicación con un proveedor en línea
+## <a name="register-your-app-with-your-online-provider"></a>Registrar la aplicación con un proveedor en línea
 
 
 Debes registrar tu aplicación con el proveedor de identidad en línea con el cual quieres conectarte. Puedes averiguar cómo registrar tu aplicación con el proveedor de identidad. Después de registrarte, el proveedor en línea generalmente te concede un id. o clave secreta para tu aplicación.
 
-## Crear el URI de solicitud de autenticación
+## <a name="build-the-authentication-request-uri"></a>Crear el URI de solicitud de autenticación
 
 
 El URI de solicitud consta de la dirección desde la que envías la solicitud de autenticación a tu proveedor en línea anexada con otra información obligatoria, como un secreto o identificador de la aplicación, un URI de redirección donde se envía al usuario después de completar la autenticación, y el tipo de respuesta esperado. Puedes preguntarle al proveedor qué parámetros se requieren.
@@ -43,7 +50,7 @@ System.Uri startURI = new System.Uri(startURL);
 System.Uri endURI = new System.Uri(endURL);
 ```
 
-## Conectarse al proveedor en línea
+## <a name="connect-to-the-online-provider"></a>Conectarse al proveedor en línea
 
 
 Llama al método [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) para conectarte al proveedor de identidad en línea y obtener un token de acceso. El método toma el URI creado en el paso anterior como el parámetro *requestUri* y un URI al que quieres que se redireccione el usuario como el parámetro *callbackUri*.
@@ -84,7 +91,7 @@ catch (Exception ex)
 
 Además de [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066), el espacio de nombres [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) contiene un método [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425). No llame a este método. Está diseñado solo para aplicaciones destinadas a Windows Phone 8.1 y está en desuso a partir de Windows 10.
 
-## Conéctate con inicio de sesión único (SSO).
+## <a name="connecting-with-single-sign-on-sso"></a>Conéctate con inicio de sesión único (SSO).
 
 
 De forma predeterminada, el agente de autenticación web no permite que haya cookies. Por esto, aunque el usuario de la aplicación indique que quiere mantener la sesión iniciada (por ejemplo, al activar una casilla en el cuadro de diálogo de inicio de sesión del proveedor), deberá iniciar sesión cada vez que quiera tener acceso a los recursos de dicho proveedor. Para iniciar sesión con inicio de sesión único (SSO), el proveedor de identidad en línea debe haber habilitado SSO para el agente de autenticación web y la aplicación debe llamar la sobrecarga de [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212068), que no toma un parámetro *callbackUri*.
@@ -124,12 +131,12 @@ catch (Exception ex)
 }
 ```
 
-## Depuración
+## <a name="debugging"></a>Depuración
 
 
 Hay varias maneras de solucionar los problemas de las API del agente de autenticación, entre ellas, revisar los registros operativos y revisar las solicitudes web y las respuestas usando Fiddler.
 
-### Registros operativos
+### <a name="operational-logs"></a>Registros operativos
 
 Con frecuencia, los registros operativos ayudan a determinar qué no está funcionando. Existe un canal de registro de eventos dedicado, Microsoft-Windows-WebAuth\\Operational, que permite a los desarrolladores de sitios web comprender cómo el agente de autenticación web procesa sus páginas web. Para habilitarlo, inicia eventvwr.exe y habilita el registro operativo en Application and Services\\Microsoft\\Windows\\WebAuth. Asimismo, el agente de autenticación web anexa una cadena única a la cadena de agente de usuario para identificarse en el servidor web. La cadena es "MSAuthHost/1.0". Ten en cuenta que el número de versión podría cambiar en el futuro, por lo que no debes depender de dicho número de versión en tu código. Este es un ejemplo de la cadena de agente de usuario completa, seguida de los pasos completos de depuración.
 
@@ -146,7 +153,7 @@ Con frecuencia, los registros operativos ayudan a determinar qué no está funci
     -   Navegación - error: AuthHost encuentra un error de navegación en una dirección URL e incluye HttpStatusCode.
     -   Navegación - fin: se ha encontrado la dirección URL de terminación.
 
-### Fiddler
+### <a name="fiddler"></a>Fiddler
 
 El depurador web Fiddler puede usarse con aplicaciones.
 
@@ -176,8 +183,3 @@ El depurador web Fiddler puede usarse con aplicaciones.
     ```
 
 3.  Agrega una regla de firewall para el tráfico entrante a Fiddler.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

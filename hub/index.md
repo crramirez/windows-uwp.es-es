@@ -3,6 +3,16 @@ layout: HubPage
 hide_bc: true
 title: "Documentación de Windows"
 description: "Obtén documentos para profesionales de TI, hardware y desarrollador que te ayudarán a crear y mantener tu solución de Windows."
+ms.assetid: 56bbc230-b855-426e-b849-4f65a747b944
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: hub-page
+ms.prod: windows
+translationtype: Human Translation
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: cb15f417c4254776af4548a5b962392431c9a75b
+ms.lasthandoff: 02/08/2017
+
 ---
 <div id="main" class="v2">
   <div class="container">
@@ -70,7 +80,7 @@ description: "Obtén documentos para profesionales de TI, hardware y desarrollad
             <a data-default="true" href="#developer">Desarrollador</a>
             <ul id="developer">
                 <li>
-                    <a href="#developer-all">Todas</a>
+                    <a href="#developer-all">todo</a>
                     <ul id="developer-all" class="cardsF">
                         <li>
                             <div class="cardSize">
@@ -87,7 +97,7 @@ description: "Obtén documentos para profesionales de TI, hardware y desarrollad
                                                 <a href="https://developer.microsoft.com/windows/apps/getstarted">Introducción</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/apps/design">Diseño</a>
+                                                <a href="https://developer.microsoft.com/windows/apps/design">Diseñar</a>
                                             </p>
                                             <p>
                                                 <a href="https://developer.microsoft.com/windows/develop">Desarrollar</a>
@@ -96,7 +106,7 @@ description: "Obtén documentos para profesionales de TI, hardware y desarrollad
                                                 <a href="https://msdn.microsoft.com/windows/uwp/publish/index">Publicar</a>
                                             </p>
                                             <p>
-                                                <a href="https://msdn.microsoft.com/windows/uwp/monetize/index">Rentabilidad</a>
+                                                <a href="https://msdn.microsoft.com/windows/uwp/monetize/index">Rentabilizar</a>
                                             </p>
                                         </div>
                                     </div>
@@ -118,7 +128,7 @@ description: "Obtén documentos para profesionales de TI, hardware y desarrollad
                                                 <a href="https://developer.microsoft.com/windows/desktop/getstarted">Introducción</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/desktop/design">Diseño</a>
+                                                <a href="https://developer.microsoft.com/windows/desktop/design">Diseñar</a>
                                             </p>
                                             <p>
                                                 <a href="https://developer.microsoft.com/windows/desktop/develop">Desarrollar</a>
@@ -529,7 +539,4 @@ description: "Obtén documentos para profesionales de TI, hardware y desarrollad
         </li>
     </ul>
 </div>
-
-
-<!--HONumber=Jan17_HO5-->
 

@@ -1,17 +1,24 @@
 ---
 author: mcleanbyron
 ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
-description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de clasificación agregados de un intervalo de fechas y otros filtros opcionales."
-title: "Obtener la clasificación de la aplicación"
+description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos de las valoraciones agregados de un intervalo de fechas y otros filtros opcionales."
+title: "Obtener las valoraciones de la aplicación"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP, servicios de la Tienda, Store services, API de análisis de la Tienda Windows, Windows Store analytics API, valoraciones, ratings"
 translationtype: Human Translation
-ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
-ms.openlocfilehash: 86685984256459e0bb125340daa1616b09982429
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 25f057eba5827be34b4fcf9d31a6e0ae71dc9893
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="get-app-ratings"></a>Obtener la clasificación de la aplicación
+# <a name="get-app-ratings"></a>Obtener las valoraciones de la aplicación
 
-Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de clasificación en formato JSON pertenecientes a un intervalo de fechas dado y según otros filtros opcionales. Esta información también está disponible en el [informe de clasificaciones](../publish/ratings-report.md) del panel del Centro de desarrollo de Windows.
+Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados de las valoraciones en formato JSON pertenecientes a un intervalo de fechas especificado y según otros filtros opcionales. Esta información también está disponible en el [informe de clasificaciones](../publish/ratings-report.md) del panel del Centro de desarrollo de Windows.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -68,7 +75,7 @@ Para obtener una lista de los campos compatibles, consulta la tabla siguiente. T
 | Campos        |  Descripción        |
 |---------------|-----------------|
 | market | Una cadena que contiene el código de país ISO 3166 del mercado donde se ha valorado la aplicación. |
-| osVersion | Una de las cadenas siguientes:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Desconocida</strong></li></ul> |
+| osVersion | Una de las cadenas siguientes:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul> |
 | deviceType | Una de las cadenas siguientes:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Desconocido</strong></li></ul> |
 | isRevised | Especifica <strong>true</strong> para filtrar las clasificaciones que hayan sido revisadas; de lo contrario, especifica <strong>false</strong>. |
 
@@ -156,9 +163,4 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 * [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
 * [Obtener los datos del informe de errores](get-error-reporting-data.md)
 * [Obtener opiniones de la aplicación](get-app-reviews.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

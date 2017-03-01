@@ -3,29 +3,36 @@ author: mcleanbyron
 ms.assetid: 2BCFF687-DC12-49CA-97E4-ACEC72BFCD9B
 description: "Usa este método en la API de envío de la Tienda Windows para recuperar información sobre todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows."
 title: "Obtener todas las aplicaciones mediante la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP, API de envío de la Tienda Windows, Windows Store submission API, aplicaciones, apps"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 6180cc4ef94df3e28af4843685e16f2d1fdfa7ac
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 12466a50c6cabe5ceca907cdd2f0d600ec95121f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Obtener todas las aplicaciones mediante la API de envío de la Tienda Windows
+# <a name="get-all-apps-using-the-windows-store-submission-api"></a>Obtener todas las aplicaciones mediante la API de envío de la Tienda Windows
 
 
 
 
 Usa este método en la API de envío de la Tienda Windows para recuperar los datos de todas las aplicaciones registradas en tu cuenta del Centro de desarrollo de Windows.
 
-## Requisitos previos.
+## <a name="prerequisites"></a>Requisitos previos.
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de la Tienda Windows.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud para este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
+* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de la Tienda Windows.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes obtener uno nuevo.
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
-## Solicitud
+## <a name="request"></a>Solicitud
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
@@ -36,7 +43,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 <span/>
  
 
-### Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -44,7 +51,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
 
-### Parámetros de solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 Todos los parámetros de solicitud son opcionales para este método. Si llamas a este método sin parámetros, la respuesta contiene datos de todas las aplicaciones registradas en tu cuenta.
  
@@ -55,11 +62,11 @@ Todos los parámetros de solicitud son opcionales para este método. Si llamas a
 
 <span/>
 
-### Cuerpo de la solicitud
+### <a name="request-body"></a>Cuerpo de la solicitud
 
 No incluyas un cuerpo de la solicitud para este método.
 
-### Ejemplos de solicitud
+### <a name="request-examples"></a>Ejemplos de solicitud
 
 En el siguiente ejemplo se muestra cómo recuperar información sobre todas las aplicaciones registradas en tu cuenta.
 
@@ -75,7 +82,7 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/applications?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Respuesta
+## <a name="response"></a>Respuesta
 
 En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una solicitud correcta para las 10 primeras aplicaciones registradas en una cuenta de desarrollador con un total de 21 aplicaciones. Para mayor brevedad, en este ejemplo se muestran solo los datos de las dos primeras aplicaciones que devuelve la solicitud. Para obtener más información acerca de los valores del cuerpo de respuesta, consulta la siguiente sección.
 
@@ -113,7 +120,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una 
 }
 ```
 
-### Cuerpo de la respuesta
+### <a name="response-body"></a>Cuerpo de la respuesta
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -123,7 +130,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON que devuelve una 
 
 <span/>
 
-## Códigos de error
+## <a name="error-codes"></a>Códigos de error
 
 Si la solicitud no se puede completar correctamente, la respuesta contendrá uno de los siguientes códigos de error HTTP.
 
@@ -134,15 +141,10 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 <span/>
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtener una aplicación](get-an-app.md)
 * [Obtener paquetes piloto para una aplicación](get-flights-for-an-app.md)
 * [Obtener complementos para una aplicación](get-add-ons-for-an-app.md)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

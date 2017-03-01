@@ -3,15 +3,22 @@ author: TylerMSFT
 title: "Inicio, reanudación y tareas en segundo plano"
 description: "Esta sección describe lo que sucede cuando se inicia, suspende, reanuda y finaliza una aplicación de la Plataforma universal de Windows (UWP)."
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 32737991b31eaceb33fc2ecb5152def167c36fdd
-ms.openlocfilehash: 6b350ef65f381d18585c8b080c6259f7607c7bf9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 40400b8b17da9b010c0f03e9976201a1def025f8
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="launching-resuming-and-background-tasks"></a>Inicio, reanudación y tareas en segundo plano
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Esta sección incluye información sobre los siguientes asuntos:
 
@@ -116,9 +123,4 @@ La sección [Pantallas de presentación](splash-screens.md) describe cómo estab
 |-------|-------------|
 | [Agregar una pantalla de presentación](add-a-splash-screen.md) | Establecer el color de imagen y de fondo de la pantalla de presentación de la aplicación. |
 | [Mostrar una pantalla de presentación durante más tiempo](create-a-customized-splash-screen.md) | Muestra una pantalla de presentación más tiempo creando una pantalla de presentación extendida para tu aplicación. Esta pantalla extendida imita la pantalla de presentación cuando la aplicación se inicia, y se puede personalizar. |
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

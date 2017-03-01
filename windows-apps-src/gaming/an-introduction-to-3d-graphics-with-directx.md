@@ -1,31 +1,38 @@
 ---
 author: mtoepke
 title: "Gráficos 3D básicos para juegos DirectX"
-description: "Se muestra cómo usar la programación DirectX para implementar los conceptos fundamentales de los gráficos 3D."
+description: "Se muestra cómo usar la programación en DirectX para implementar los conceptos fundamentales de los gráficos 3D."
 ms.assetid: 2989c91f-7b45-7377-4e83-9daa0325e92e
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, juegos, DirectX, gráficos"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d4b059bed3cb21403b742048d6f6df47780b8aab
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2ac11ce220bc1c62c81df12fbf9c2a41fda1d940
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Gráficos 3D básicos para juegos DirectX
+# <a name="basic-3d-graphics-for-directx-games"></a>Gráficos 3D básicos para juegos DirectX
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Te vamos a enseñar cómo usar la programación DirectX para implementar los conceptos fundamentales de los gráficos 3D.
 
 **Objetivo:** Aprender a programar una aplicación de gráficos 3D.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 
 Suponemos que estás familiarizado con C++. También necesitas tener experiencia básica en los conceptos de programación de gráficos.
 
-**Tiempo total para completarse:** 30minutos.
+**Tiempo total para completarse:** 30 minutos.
 
-## Dónde ir desde aquí
+## <a name="where-to-go-from-here"></a>Dónde ir desde aquí
 
 
 Vamos a explicar cómo desarrollar gráficos 3D con DirectX y C++\\Cx. En este tutorial compuesto por cinco partes se presenta la API de [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466), además de conceptos y códigos que también se usan en muchas otras muestras de DirectX. Estas partes se estructuran entre sí, desde la configuración de DirectX de una aplicación para UWP con C++ hasta las texturas de primitivos y adición de efectos.
@@ -43,7 +50,7 @@ Te vamos a enseñar lo siguiente:
 -   Eliminar las superficies ocultas
 
 > **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -51,7 +58,7 @@ A continuación, creamos un dispositivo Direct3D, una cadena de intercambio y un
 
 [Inicio rápido: configurar recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md)
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Gráficos de Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080)
@@ -64,10 +71,5 @@ A continuación, creamos un dispositivo Direct3D, una cadena de intercambio y un
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

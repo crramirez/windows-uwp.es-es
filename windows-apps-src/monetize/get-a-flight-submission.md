@@ -3,20 +3,27 @@ author: mcleanbyron
 ms.assetid: A0DFF26B-FE06-459B-ABDC-3EA4FEB7A21E
 description: "Usa este método en la API de envío de la Tienda Windows para obtener datos para un envío existente de paquete piloto."
 title: "Obtener un envío de paquete piloto con la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, API de envío de la Tienda Windows, Windows Store submission API, envío de paquete piloto, flight submission"
 translationtype: Human Translation
-ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
-ms.openlocfilehash: e2929ad3e2bb71ba3de5f74a82c4b0a43504dbd6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a989e9d081ec9cb709b59e1ff4ceff2d517ae48f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Obtener un envío de paquete piloto con la API de envío de la Tienda Windows
+# <a name="get-a-package-flight-submission-using-the-windows-store-submission-api"></a>Obtener un envío de paquete piloto con la API de envío de la Tienda Windows
 
 
 
 
 Usa este método en la API de envío de la Tienda Windows para obtener datos para un envío existente de paquete piloto. Para obtener más información sobre el proceso de creación de un envío de paquete piloto mediante la API de envío de la Tienda Windows, consulta [Administrar envíos de paquetes piloto](manage-flight-submissions.md).
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
@@ -26,7 +33,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse en cuentas del Centro de desarrollo de Windows que estén autorizadas para usar la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
-## Solicitud
+## <a name="request"></a>Solicitud
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
@@ -37,7 +44,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 <span/>
  
 
-### Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -45,21 +52,21 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
 
-### Parámetros de solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación que contiene el envío de paquete piloto que quieres obtener. Para obtener más información sobre el Id. de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | cadena | Obligatorio. El Id. del paquete piloto que contiene el envío que quieres obtener. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md).  |
+| flightId | string | Obligatorio. El Id. del paquete piloto que contiene el envío que quieres obtener. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md).  |
 | submissionId | cadena | Obligatorio. El identificador del envío que se va a obtener. Este identificador está disponible en el panel del Centro de desarrollo y se incluye en los datos de respuesta para las solicitudes de [creación de un envío de paquete piloto](create-a-flight-submission.md).  |
 
 <span/>
 
-### Cuerpo de la solicitud
+### <a name="request-body"></a>Cuerpo de la solicitud
 
 No incluyas un cuerpo de la solicitud para este método.
 
-### Ejemplo de solicitud
+### <a name="request-example"></a>Ejemplo de solicitud
 
 En el siguiente ejemplo se muestra cómo obtener un envío de paquete piloto para una aplicación que tiene el Id. de la Tienda 9WZDNCRD91MD.
 
@@ -68,7 +75,7 @@ POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/fl
 Authorization: Bearer <your access token>
 ```
 
-## Respuesta
+## <a name="response"></a>Respuesta
 
 En el siguiente ejemplo se muestra el cuerpo de respuesta JSON de una llamada correcta a este método. El cuerpo de la respuesta contiene información sobre el envío especificado. Para obtener más información acerca de los valores del cuerpo de la respuesta, consulta [Recurso de envío del paquete piloto](manage-flight-submissions.md#flight-submission-object).
 
@@ -111,7 +118,7 @@ En el siguiente ejemplo se muestra el cuerpo de respuesta JSON de una llamada co
 }
 ```
 
-## Códigos de error
+## <a name="error-codes"></a>Códigos de error
 
 Si la solicitud no se puede completar correctamente, la respuesta contendrá uno de los siguientes códigos de error HTTP.
 
@@ -123,7 +130,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 <span/>
 
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Administrar envíos de paquetes piloto](manage-flight-submissions.md)
@@ -131,9 +138,4 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Confirmar un envío de paquete piloto](commit-a-flight-submission.md)
 * [Actualizar un envío de paquete piloto](update-a-flight-submission.md)
 * [Eliminar un envío de paquete piloto](delete-a-flight-submission.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

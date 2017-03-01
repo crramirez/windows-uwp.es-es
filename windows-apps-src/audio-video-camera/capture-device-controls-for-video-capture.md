@@ -1,17 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
-description: "Este artículo muestra cómo usar los controles de dispositivo manuales para permitir escenarios de captura de vídeo mejorados, como vídeo HDR y prioridad de exposición."
-title: "Controles manuales de la cámara para la captura de vídeo."
+description: "En este artículo se muestra cómo usar los controles de dispositivo manuales para permitir escenarios de captura de vídeo mejorados, como vídeo HDR y prioridad de exposición."
+title: "Controles manuales de la cámara para la captura de vídeo"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: daeb92e51a005825f1e410da9c924afc723297f1
-ms.openlocfilehash: 5a51ee9c67eb421c2478ca46f415879afb609210
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cd6326ebad94c33fd03bf39f2dfd11f1c27e9b37
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Controles manuales de la cámara para la captura de vídeo.
+# <a name="manual-camera-controls-for-video-capture"></a>Controles manuales de la cámara para la captura de vídeo
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artículo muestra cómo usar los controles de dispositivo manuales para permitir escenarios de captura de vídeo mejorados, como vídeo HDR y prioridad de exposición.
@@ -25,7 +32,7 @@ Todas las API de control de dispositivos mencionadas en este artículo son miemb
 > [!NOTE] 
 > Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para la implementación de la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios de captura más avanzados. El código de este artículo supone que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
 
-## Vídeo HDR
+## <a name="hdr-video"></a>Vídeo HDR
 
 La característica de vídeo de alto rango dinámico (HDR) aplica el procesamiento HDR a la secuencia de vídeo del dispositivo de captura. Determina si se admite vídeo HDR seleccionando la propiedad [**HdrVideoControl.Supported**](https://msdn.microsoft.com/library/windows/apps/dn926682).
 
@@ -35,7 +42,7 @@ Habilitar o deshabilitar el procesamiento de vídeos HDR estableciendo [**HdrVid
 
 [!code-cs[SetHdrVideoMode](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSetHdrVideoMode)]
 
-## Prioridad de exposición
+## <a name="exposure-priority"></a>Prioridad de exposición
 
 [**ExposurePriorityVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926644), cuando se habilita, evalúa los fotogramas de vídeos desde el dispositivo de captura para determinar si el vídeo está capturando una escena de poca luz. Si es así, el control reduce la velocidad de fotogramas del vídeo capturado con el fin de aumentar el tiempo de exposición por cada fotograma y mejorar la calidad visual del vídeo capturado.
 
@@ -45,7 +52,7 @@ Habilita o deshabilita el control de la prioridad de exposición estableciendo [
 
 [!code-cs[EnableExposurePriority](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetEnableExposurePriority)]
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -55,10 +62,5 @@ Habilita o deshabilita el control de la prioridad de exposición estableciendo [
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

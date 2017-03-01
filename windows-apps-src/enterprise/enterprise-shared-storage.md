@@ -2,13 +2,20 @@
 author: mcleblanc
 ms.assetid: B48E21AB-0EA5-444B-8333-393DD8D1B76D
 title: Almacenamiento compartido de empresa
-description: "El almacenamiento compartido de empresa define las ubicaciones de los datos locales de la línea de aplicaciones empresariales para compartir datos."
+description: "El almacenamiento compartido de empresa define las ubicaciones de los datos locales de las aplicaciones de línea de negocio para compartir datos."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: bd4663b25c351551cd2f4e1e780a76431d1c3a19
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6a6ad55a134a45bf3feb7092cdad78d9f6ee196b
+ms.lasthandoff: 02/07/2017
 
 ---
-# Almacenamiento compartido de empresa
+# <a name="enterprise-shared-storage"></a>Almacenamiento compartido de empresa
 
 El almacenamiento compartido consta de dos ubicaciones en las que las aplicaciones con la funcionalidad restringida **enterpriseDeviceLockdown** y un certificado de empresa tienen acceso completo de lectura y escritura. Ten en cuenta que la funcionalidad **enterpriseDeviceLockdown** permite a las aplicaciones usar la API de bloqueo del dispositivo y acceder a las carpetas de almacenamiento compartido de empresa. Para obtener más información acerca de la API, consulta el espacio de nombres [**Windows.Embedded.DeviceLockdown**](http://go.microsoft.com/fwlink/?LinkId=699331).  
 
@@ -16,7 +23,7 @@ Estas ubicaciones se establecen en la unidad local:
 - \Data\SharedData\Enterprise\Persistent
 - \Data\SharedData\Enterprise\Non-Persistent
 
-## Escenarios
+## <a name="scenarios"></a>Escenarios
 
 El almacenamiento compartido de empresa proporciona compatibilidad con los siguientes escenarios.
 
@@ -24,7 +31,7 @@ El almacenamiento compartido de empresa proporciona compatibilidad con los sigui
 - Puedes almacenar datos en la unidad de disco duro local de la carpeta \Data\SharedData\Enterprise\Persistent y esta persistirá incluso después de restablecer el dispositivo.
 - Manipula, así como lee, escribe y elimina, archivos en un dispositivo a través del servicio de administración de dispositivos móviles (MDM). Para obtener más información sobre cómo usar el almacenamiento compartido de empresa a través del servicio MDM, consulta [EnterpriseExtFileSystem CSP (CSP de EnterpriseExtFileSystem)](http://go.microsoft.com/fwlink/?LinkId=699333).
 
-## Acceder al almacenamiento compartido de empresa
+## <a name="access-enterprise-shared-storage"></a>Acceder al almacenamiento compartido de empresa
 
 En el siguiente ejemplo se muestra cómo declarar la funcionalidad para acceder al almacenamiento compartido de empresa en el manifiesto del paquete, y cómo tener acceso a las carpetas de almacenamiento compartido mediante la clase Windows.Storage.StorageFolder.
 
@@ -70,10 +77,5 @@ IReadOnlyList<StorageFile> sortedItems =
 foreach (StorageFile file in sortedItems)
     Debug.WriteLine(file.Name + ", " + file.DateCreated);
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

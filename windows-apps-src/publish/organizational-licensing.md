@@ -1,15 +1,22 @@
 ---
 author: jnHs
 Description: "Puedes especificar si la aplicación puede comprarse por volumen, y en qué condiciones, a través de la Tienda Windows para empresas en la sección Licencias organizativas de la página Precios y disponibilidad de un envío de aplicación."
-title: Opciones de licencia organizativas
+title: Opciones de licencias organizativas
 ms.assetid: 1EB139B0-67E7-4F66-AAEF-491B1E52E96F
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 4a297b7a2a2383a825a848ed6939f9743733253f
-ms.openlocfilehash: f3c1ee23e53e3c31a577eb3be03e3fc3055f1ec2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0fb906dc84085d3006be7f5f25d895e1150f9265
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Opciones de licencia organizativas
+# <a name="organizational-licensing-options"></a>Opciones de licencias organizativas
 
 
 Puedes especificar si la aplicación puede comprarse por volumen, y en qué condiciones, a través de la Tienda Windows para empresas en la sección **Licencias organizativas** de la página [Precios y disponibilidad](set-app-pricing-and-availability.md#organizational-licensing) de un envío de aplicación.
@@ -18,7 +25,7 @@ Estas opciones de configuración te permiten ofrecer tu aplicación a empresas q
 
 > **Nota**  La selección de opciones se configura de manera independiente en cada aplicación. Puedes cambiar tus preferencias para una aplicación en cualquier momento creando un nuevo envío. Los cambios surtirán efecto cuando el envío complete el [proceso de certificación](the-app-certification-process.md).
 
-## Permitir que la aplicación se ofrezca a las organizaciones
+## <a name="allowing-your-app-to-be-offered-to-organizations"></a>Permitir que la aplicación se ofrezca a las organizaciones
 
 De manera predeterminada, la casilla denominada **Hacer que mi aplicación esté disponible para organizaciones mediante la concesión de licencias administradas por la Tienda (en línea) y distribución** está seleccionada. Esto significa que quieres que la aplicación se incluya en los catálogos de aplicaciones que se ofrecerán a las organizaciones que realicen adquisiciones por volumen, con las licencias de aplicaciones administradas a través del sistema de licencias en línea de la Tienda.
 
@@ -28,7 +35,7 @@ Si prefieres no permitir que ofrezcamos tu aplicación a las organizaciones para
 
 > **Sugerencia**  Para publicar aplicaciones de línea de negocio (LOB) exclusivamente para una determinada organización, puedes configurar una asociación de empresas y permitir que esta organización agregue las aplicaciones directamente a su tienda privada. Para obtener más información, consulta [Distribuir aplicaciones de LOB a empresas](distribute-lob-apps-to-enterprises.md).
 
-## Permitir las licencias desconectadas (sin conexión)
+## <a name="allowing-disconnected-offline-licensing"></a>Permitir las licencias desconectadas (sin conexión)
 
 
 Muchas organizaciones necesitan aplicaciones que permitan la licencia sin conexión. Por ejemplo, si tienen que implementar aplicaciones en dispositivos que rara vez o nunca se conectan a Internet. Si quieres permitir que tu aplicación esté a disposición de estos clientes, activa la casilla **Allow organization-managed (offline) licensing and distribution for organizations**.
@@ -40,7 +47,7 @@ Las licencias sin conexión permiten a las organizaciones adquirir la aplicació
 > **Importante** Las licencias sin conexión no se admiten para paquetes .xap.  
 
  
-## Compatibilidad con aplicaciones de pago
+## <a name="paid-app-support"></a>Compatibilidad con aplicaciones de pago
 
 Actualmente, las cuentas de desarrollador en determinados mercados pueden ofrecer aplicaciones de pago para adquirir licencias por volumen a través de la Tienda Windows para empresas. 
 
@@ -85,9 +92,4 @@ En este momento, los desarrolladores en los siguientes países y regiones pueden
 - Suiza
 - Reino Unido
 - Estados Unidos
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

@@ -3,15 +3,22 @@ author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: "Este caso práctico, que se basa en la información proporcionada en Bookstore1, comienza con una aplicación Universal 8.1 que muestra datos agrupados en un control SemanticZoom."
 title: "Caso práctico de Windows Runtime 8.x a UWP Bookstore2"
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 34762d74ba34ed3c5cee4da4809c2c509f3932e9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 401ab153ec737a0a82825dc3b2065156b50d4589
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore2"></a>Caso práctico de Windows Runtime 8.x a UWP: Bookstore2
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este caso práctico, que se basa en la información proporcionada en [Bookstore1](w8x-to-uwp-case-study-bookstore1.md), comienza con una aplicación Universal 8.1 que muestra datos agrupados en un control [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601). En el modelo de vista, cada instancia de la clase **Author** representa el grupo de los libros que ha escrito ese autor y en **SemanticZoom** podemos ver la lista de libros agrupados por autor, o bien podemos alejar la vista para ver una lista de accesos directos a autores. La lista de accesos directos ofrece una navegación mucho más rápida que un desplazamiento por la lista de libros. Repasaremos los pasos de migración de la aplicación a la Plataforma universal de Windows (UWP) de Windows 10.
 
@@ -171,9 +178,4 @@ La aplicación de Windows 10 portada ejecutándose en un dispositivo móvil, con
 En este caso práctico se ha observado una interfaz de usuario más ambiciosa que la anterior. Al igual que con el caso práctico anterior, este modelo de vista particular no requirió ningún trabajo y nuestros esfuerzos se centraron principalmente en la refactorización de la interfaz de usuario. Algunos de los cambios fueron el resultado necesario de combinar dos proyectos en uno, mientras se admitían muchos factores de forma (de hecho, muchos más de los que antes se podían). Algunos de los cambios estuvieron relacionados con los cambios realizados en la plataforma.
 
 El siguiente caso práctico es [QuizGame](w8x-to-uwp-case-study-quizgame.md), en el que vamos a ver cómo mostrar datos agrupados y obtener acceso a ellos.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

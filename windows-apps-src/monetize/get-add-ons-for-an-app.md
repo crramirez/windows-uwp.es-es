@@ -3,20 +3,27 @@ author: mcleanbyron
 ms.assetid: E59FB6FE-5318-46DF-B050-73F599C3972A
 description: "Usa este método en la API de envío de la Tienda Windows para recuperar información sobre las compras desde la aplicación para una aplicación registrada en tu cuenta del Centro de desarrollo de Windows."
 title: "Obtener complementos para una aplicación con la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, API de envío de la Tienda Windows, Windows Store submission API, complementos, add-ons, productos desde la aplicación, in-app products, IAP"
 translationtype: Human Translation
-ms.sourcegitcommit: ef90390fcf7d4aa2e040eae65119ac7959f3423f
-ms.openlocfilehash: 5a2dc318509b99c4d58632d5eedaeb3e465c524d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 73ce08bfa72a8508d71811267f8cd8e2377a3613
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Obtener complementos para una aplicación con la API de envío de la Tienda Windows
+# <a name="get-add-ons-for-an-app-using-the-windows-store-submission-api"></a>Obtener complementos para una aplicación con la API de envío de la Tienda Windows
 
 
 
 
 Usa este método en la API de envío de la Tienda Windows para enumerar los complementos (también conocidos como productos desde la aplicación o IAP) para una aplicación registrada en tu cuenta del Centro de desarrollo de Windows.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
@@ -25,7 +32,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
-## Solicitud
+## <a name="request"></a>Solicitud
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
@@ -35,7 +42,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
  
-### Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -43,7 +50,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
 
-### Parámetros de solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 
 |  Nombre  |  Tipo  |  Descripción  |  Obligatorio  |
@@ -54,11 +61,11 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
 
-### Cuerpo de la solicitud
+### <a name="request-body"></a>Cuerpo de la solicitud
 
 No incluyas un cuerpo de la solicitud para este método.
 
-### Ejemplos de solicitud
+### <a name="request-examples"></a>Ejemplos de solicitud
 
 En el siguiente ejemplo se muestra cómo enumerar todos los complementos de una aplicación.
 
@@ -74,7 +81,7 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/lis
 Authorization: Bearer <your access token>
 ```
 
-## Respuesta
+## <a name="response"></a>Respuesta
 
 En el ejemplo siguiente se muestra el cuerpo de respuesta de JSON que devuelve una solicitud correcta para los 10 primeros complementos para una aplicación con un total de 53 complementos. Para mayor brevedad, en este ejemplo se muestran solo los datos de los tres primeros complementos que devuelve la solicitud. Para obtener más información acerca de los valores del cuerpo de respuesta, consulta la siguiente sección.
 
@@ -97,7 +104,7 @@ En el ejemplo siguiente se muestra el cuerpo de respuesta de JSON que devuelve u
 }
 ```
 
-### Cuerpo de la respuesta
+### <a name="response-body"></a>Cuerpo de la respuesta
 
 | Valor      | Tipo   | Descripción                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -107,7 +114,7 @@ En el ejemplo siguiente se muestra el cuerpo de respuesta de JSON que devuelve u
 
 <span/>
 
-## Códigos de error
+## <a name="error-codes"></a>Códigos de error
 
 Si la solicitud no se puede completar correctamente, la respuesta contendrá uno de los siguientes códigos de error HTTP.
 
@@ -118,15 +125,10 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 
 <span/>
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtener todas las aplicaciones](get-all-apps.md)
 * [Obtener una aplicación](get-an-app.md)
 * [Obtener paquetes piloto para una aplicación](get-flights-for-an-app.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

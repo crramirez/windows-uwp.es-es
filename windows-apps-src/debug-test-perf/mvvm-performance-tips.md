@@ -3,18 +3,25 @@ author: mcleblanc
 ms.assetid: 159681E4-BF9E-4A57-9FEE-EC7ED0BEFFAD
 title: Sugerencias de rendimiento de MVVM y lenguaje
 description: "En este tema se describen algunos aspectos a tener en cuenta acerca del rendimiento y que están relacionados con la elección de patrones de diseño del software y del lenguaje de programación."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4be8fd69752dac70c316164fca79bb73c6666c43
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5833422a3074ddfa581011d91c8364bddb3c3088
+ms.lasthandoff: 02/07/2017
 
 ---
-# Sugerencias de rendimiento de MVVM y lenguaje
+# <a name="mvvm-and-language-performance-tips"></a>Sugerencias de rendimiento de MVVM y lenguaje
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se describen algunos aspectos a tener en cuenta acerca del rendimiento y que están relacionados con la elección de patrones de diseño del software y del lenguaje de programación.
 
-## Patrón Model-View-ViewModel (MVVM)
+## <a name="the-model-view-viewmodel-mvvm-pattern"></a>Patrón Model-View-ViewModel (MVVM)
 
 El patrón Model-View-ViewModel (MVVM) es común en muchas aplicaciones XAML. (MVVM es muy similar a la descripción del Fowler del patrón Model-View-Presenter, pero se ha adaptado para XAML). El problema con el patrón MVVM es que puede provocar inadvertidamente aplicaciones con demasiadas capas y demasiadas asignaciones. Estas son las motivaciones para el uso de MVVM.
 
@@ -28,7 +35,7 @@ Hay varias definiciones concretas del patrón MVVM y marcos de terceros que ayud
 -   Es común en MVVM conectar Button.Click al modelo de vista con un objeto ICommand, tales como las aplicaciones auxiliares comunes DelegateCommand o RelayCommand. Sin embargo, estos comandos son asignaciones adicionales, incluido el agente de escucha de eventos CanExecuteChanged, lo que agrega al conjunto de trabajo y al tiempo de inicio o navegación de la página. **Recomendación:** como alternativa al uso de la cómoda interfaz ICommand, puedes tener en cuenta la posibilidad de colocar los controladores de eventos en el código subyacente, adjuntarlos a los eventos de vista y llamar a un comando en el modelo de vista cuando se generen los eventos. También tendrás que agregar código adicional para deshabilitar el elemento Button cuando el comando no está disponible.
 -   Es común en MVVM crear una página con todas las configuraciones posibles de la interfaz de usuario y luego contraer partes del árbol enlazando la propiedad Visibility a las propiedades en la máquina virtual. Esto agrega tiempo de inicio innecesariamente y posiblemente al conjunto de trabajo (ya que algunas partes del árbol quizás nunca se hagan visibles). **Recomendaciones:** usa la función x:DeferLoadStrategy para aplazar del inicio las partes innecesarias del árbol. Además, crea controles de usuario separados para los diferentes modos de la página y usa el código subyacente para mantener cargados solo los controles necesarios.
 
-## Recomendaciones para C++/CX
+## <a name="ccx-recommendations"></a>Recomendaciones para C++/CX
 
 -   **Usa la versión más reciente**. Se presentan mejoras continuamente en el rendimiento del compilador de C++/CX. Asegúrate de que crear tu aplicación con el conjunto de herramientas más reciente.
 -   **Deshabilita RTTI (/GR-)**. RTTI está activado de manera predeterminada en el compilador, por lo tanto, a menos que tu entorno de compilación lo desactiva, probablemente lo estés usando. RTTI tiene una sobrecarga significativa y, a menos que el código dependa mucho de él, deberías desactivarlo. El marco de XAML no tiene ningún requisito que exige que tu código use RTTI.
@@ -41,10 +48,5 @@ Hay varias definiciones concretas del patrón MVVM y marcos de terceros que ayud
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

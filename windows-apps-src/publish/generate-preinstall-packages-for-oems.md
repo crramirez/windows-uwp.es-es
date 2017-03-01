@@ -3,25 +3,32 @@ author: jnHs
 Description: "Si tu cuenta de desarrollador tiene los permisos adecuados, puedes generar y descargar paquetes de preinstalación que un OEM puede usar para incluir tu aplicación en su imagen."
 title: Generar paquetes preinstalados para OEM
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1c08ab2e29e70e198ee72798f29e7667254272fd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 962b6b7361da8b88d13b37219fab538e1510c961
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Generar paquetes preinstalados para OEM
+# <a name="generate-preinstall-packages-for-oems"></a>Generar paquetes preinstalados para OEM
 
 
 Si tu cuenta de desarrollador tiene los permisos adecuados, puedes generar y descargar paquetes de preinstalación que un OEM puede usar para incluir tu aplicación en su imagen. Los permisos de preinstalación solo están habilitados en cuentas de desarrollador patrocinadas por OEM.
 
-## Directivas y limitaciones de preinstalación importantes
+## <a name="important-preinstall-policy--limitations"></a>Directivas y limitaciones de preinstalación importantes
 
 
 Las aplicaciones de preinstalación deben estar certificadas a través del Centro de desarrollo de Windows con la licencia más reciente de la Tienda para que puedan conectarse a la Tienda y recibir actualizaciones de aplicación.
 
 Las aplicaciones que ya estén preinstaladas deben ser y permanecer gratuitas en todos los mercados.
 
-## Generar paquetes de preinstalación
+## <a name="generating-preinstall-packages"></a>Generar paquetes de preinstalación
 
 
 Una vez que se habilite una cuenta con permisos de preinstalación, completa los siguientes pasos:
@@ -36,7 +43,7 @@ Una vez que se habilite una cuenta con permisos de preinstalación, completa los
 
 Después puedes proporcionar este archivo .zip al OEM para que lo incluya en su imagen de SO.
 
-## Soporte técnico
+## <a name="support"></a>Soporte técnico
 
 
 Si tienes más preguntas sobre la generación de paquetes de preinstalación, envía un correo electrónico a <partnerops@microsoft.com>.
@@ -47,10 +54,5 @@ Si tienes más preguntas sobre la generación de paquetes de preinstalación, en
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -5,13 +5,20 @@ ms.assetid: 2091883C-5D0C-44ED-936A-709022926A42
 title: Interfaces y patrones de control
 label: Control patterns and interfaces
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 74e5af4c3eb5a2e17c95afce156474b613e966c5
-ms.openlocfilehash: d2ae98f95538c014ef256f5d4a400aabb36c3118
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: bec52abfca19634948e3ad2a1959b51b1df3eced
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Interfaces y patrones de control  
+# <a name="control-patterns-and-interfaces"></a>Interfaces y patrones de control  
 
 
 
@@ -64,12 +71,7 @@ Al implementar un patrón de control, debes consultar también la documentación
 > Las aplicaciones de la Tienda de Windows Phone no admiten todos los patrones de control de Automatización de la interfaz de usuario que figuran en la lista. **Annotation**, **Dock**, **Drag**, **DropTarget** y **ObjectModel** son algunos de los patrones no admitidos.
 
 <span id="related_topics"/>
-## Temas relacionados  
+## <a name="related-topics"></a>Temas relacionados  
 * [Personalizar sistemas de automatización del mismo nivel](custom-automation-peers.md)
 * [Accesibilidad](accessibility.md) 
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

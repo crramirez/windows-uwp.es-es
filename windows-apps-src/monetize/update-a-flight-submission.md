@@ -3,20 +3,27 @@ author: mcleanbyron
 ms.assetid: 24C5F796-5FB8-4B5D-B428-C3154B3098BD
 description: "Usa este método en la API de envío de la Tienda Windows para actualizar un envío ya existente de un paquete piloto."
 title: "Actualizar un envío de paquete piloto mediante la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP, API de envío de la Tienda Windows, envío de paquetes piloto, actualización"
 translationtype: Human Translation
-ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
-ms.openlocfilehash: baf9f4a3b72ab439439be4f73ca7fc11d48a3c84
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dbd8447808c1446805f179fd1181ae88dd847083
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Actualizar un envío de paquete piloto mediante la API de envío de la Tienda Windows
+# <a name="update-a-package-flight-submission-using-the-windows-store-submission-api"></a>Actualizar un envío de paquete piloto mediante la API de envío de la Tienda Windows
 
 
 Usa este método en la API de envío de la Tienda Windows para actualizar un envío ya existente de un paquete piloto. Después de actualizar correctamente un envío mediante este método, debes [confirmar el envío](commit-a-flight-submission.md) para su ingesta y publicación.
 
 Para obtener más información sobre cómo se ajusta este método en el proceso de creación de un envío de paquete piloto mediante la API de envío de la Tienda Windows, consulta [Manage package flight submissions (Administrar envíos de paquetes piloto)](manage-flight-submissions.md).
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
@@ -26,7 +33,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 >**Nota**&nbsp;&nbsp;Este método solo puede usarse en cuentas del Centro de desarrollo de Windows que estén autorizadas para usar la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
 
-## Solicitud
+## <a name="request"></a>Solicitud
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
@@ -37,7 +44,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 <span/>
  
 
-### Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de la solicitud
 
 | Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -45,7 +52,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
 
-### Parámetros de solicitud
+### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -55,7 +62,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 <span/>
 
-### Cuerpo de la solicitud
+### <a name="request-body"></a>Cuerpo de la solicitud
 
 El cuerpo de la solicitud tiene los siguientes parámetros.
 
@@ -69,7 +76,7 @@ El cuerpo de la solicitud tiene los siguientes parámetros.
 
 <span/>
 
-### Ejemplo de solicitud
+### <a name="request-example"></a>Ejemplo de solicitud
 
 En el siguiente ejemplo se muestra cómo actualizar el envío de paquete piloto de una aplicación.
 
@@ -102,7 +109,7 @@ Content-Type: application/json
 }
 ```
 
-## Respuesta
+## <a name="response"></a>Respuesta
 
 En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada satisfactoria a este método. El cuerpo de la respuesta contiene información sobre el envío actualizado. Para obtener más información acerca de los valores que se encuentran en el cuerpo de la respuesta, consulta [Package flight submission resource (Recurso de envío del paquete piloto)](manage-flight-submissions.md#flight-submission-object).
 
@@ -145,7 +152,7 @@ En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada
 }
 ```
 
-## Códigos de error
+## <a name="error-codes"></a>Códigos de error
 
 Si la solicitud no se puede completar correctamente, la respuesta contendrá uno de los siguientes códigos de error HTTP.
 
@@ -157,7 +164,7 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 <span/>
 
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Manage package flight submissions (Administrar envíos de paquetes piloto)](manage-flight-submissions.md)
@@ -166,9 +173,4 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Commit a package flight submission (Confirmar un envío de paquete piloto)](commit-a-flight-submission.md)
 * [Delete a package flight submission (Eliminar un envío de paquete piloto)](delete-a-flight-submission.md)
 * [Get the status of a package flight submission (Obtener el estado de un envío de paquete piloto)](get-status-for-a-flight-submission.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

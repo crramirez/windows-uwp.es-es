@@ -1,13 +1,20 @@
 ---
 author: mijacobs
-Description: "Las plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla."
+Description: "Las plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla."
 title: Crear iconos adaptables
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
-ms.openlocfilehash: a00796da398d6e0246caac43b18fb688a9e03fce
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 53b130c3f97440bd381adda5c40532d46823ce02
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="create-adaptive-tiles"></a>Crear iconos adaptables
@@ -15,7 +22,7 @@ ms.openlocfilehash: a00796da398d6e0246caac43b18fb688a9e03fce
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-Las plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). Para obtener la lista completa de atributos y elementos adaptables, consulta el [Esquema de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
+Las plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). Para obtener la lista completa de atributos y elementos adaptables, consulta el [Esquema de iconos adaptables](tiles-and-notifications-adaptive-tiles-schema.md).
 
 (Si quieres, puedes seguir usando las plantillas preestablecidas del [catálogo de plantillas de iconos de Windows 8](https://msdn.microsoft.com/library/windows/apps/hh761491) al diseñar las notificaciones para Windows 10.)
 
@@ -1399,10 +1406,5 @@ TileWide = new TileBinding()
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

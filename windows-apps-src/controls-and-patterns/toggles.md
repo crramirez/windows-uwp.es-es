@@ -5,9 +5,16 @@ title: Directrices para controles de modificadores para alternar
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 685ef17e17fb17fa620eea84335ce6688a5cfb3e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3d98936788057d4bd16f1ef44841ef0d8fb0648b
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="toggle-switches"></a>Modificadores para alternar
@@ -161,8 +168,3 @@ También puedes usar contenido más complejo si configuras las propiedades [**On
 - [Botones de radio](radio-button.md)
 - [Modificadores para alternar](toggles.md)
 - [Casillas](checkbox.md)
-
-
-<!--HONumber=Dec16_HO2-->
-
-

@@ -3,21 +3,28 @@ author: joannaleecy
 title: Uso de servicios en la nube con juegos para UWP
 description: "Obtén más información acerca de cómo implementar la nube como un back-end para tus juegos para UWP."
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
+ms.author: joanlee
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, juegos, servicios en la nube
 translationtype: Human Translation
-ms.sourcegitcommit: 2584a08e0a869ab3c5f11c192f0a5a6eeb223d61
-ms.openlocfilehash: 598384993e0e2931773cdb30e0909af6b771590e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 72f357cbf8e370512f9230978de546aa3d54c660
+ms.lasthandoff: 02/07/2017
 
 ---
-#  Uso de servicios en la nube con juegos para UWP
+#  <a name="using-cloud-services-for-uwp-games"></a>Uso de servicios en la nube con juegos para UWP
 
-La Plataforma universal de Windows (UWP) de Windows 10 ofrece un conjunto de API que pueden usarse para desarrollar juegos en todos los dispositivos de Microsoft. Al desarrollar juegos en todos los dispositivos y plataformas, puede usar un back-end en la nube para ayudar a escalar el juego según la demanda.
+La Plataforma universal de Windows (UWP) de Windows 10 ofrece un conjunto de API que pueden usarse para desarrollar juegos en todos los dispositivos de Microsoft. Al desarrollar juegos en todos los dispositivos y plataformas, puede usar un back-end en la nube para ayudar a escalar el juego según la demanda.
 
-##  ¿Qué es la informática de nube?
+##  <a name="what-is-cloud-computing"></a>¿Qué es la informática de nube?
 
 La informática de nube usa recursos y aplicaciones de TI a petición a través de Internet para almacenar y procesar los datos de los dispositivos. El término _nube_ es una metáfora de la disponibilidad de la enorme cantidad de recursos disponibles (recursos no locales) a los que puedes acceder desde ubicaciones no específicas.
 El principio de la informática de nube ofrece una nueva manera de consumir los recursos y el software. Los usuarios ya no tienen que pagar por el producto o los recursos completos de antemano, pero en su lugar pueden consumir la plataforma, el software y los recursos como un servicio. A menudo, los proveedores de nube facturan a sus clientes según el uso o las ofertas del plan de servicio.
 
-##  Motivos para usar servicios en la nube
+##  <a name="why-use-cloud-services"></a>Motivos para usar servicios en la nube
 
 Una ventaja de usar los servicios en la nube para juegos es que es necesario invertir en servidores de hardware físicos de antemano, si no que solo se debe pagar según el uso o los planes de servicio posteriormente. Es una manera de ayudar a administrar los riesgos que implica el desarrollo de un nuevo título de juego. 
 
@@ -29,7 +36,7 @@ También puedes usar servidores de nube dedicados para crear un enorme mundo de 
 
 Además, los juegos que requieren funciones de administración de datos de juegos intensivos, como juegos sociales con mecanismos multijugador asincrónicos, pueden implementarse mediante servicios en la nube.
 
-##  ¿Cómo usan las empresas de juegos la tecnología de nube?
+##  <a name="how-game-companies-use-the-cloud-technology"></a>¿Cómo usan las empresas de juegos la tecnología de nube?
 
 Descubre cómo otros desarrolladores han implementado soluciones en la nube en sus juegos.
 
@@ -103,23 +110,23 @@ Descubre cómo otros desarrolladores han implementado soluciones en la nube en s
 </table>
 
     
-### Otros vínculos
+### <a name="other-links"></a>Otros vínculos
 
 * [Azure como la salsa secreta de Hitcents, Game Troopers e InnoSpark](http://news.microsoft.com/features/game-developers-use-microsoft-azure-as-secret-sauce-for-scale-and-growth-2/)
 * [Inicios de juegos en el programa Bizspark con Azure](https://blogs.technet.microsoft.com/bizspark_featured_startups/2015/09/25/azure-open-for-gaming-startups/)
 
 
-## Cómo diseñar el back-end en la nube
+## <a name="how-to-design-your-cloud-backend"></a>Cómo diseñar el back-end en la nube
 
 Mientras que los productores y diseñadores juegos discuten qué características y funcionalidades del juego son necesarias, es recomendable que comiences a considerar cómo quieres diseñar la infraestructura de tu juego. Azure puede usarse como el back-end de juego si quieres desarrollar juegos para varios dispositivos y en las distintas plataformas principales.
 
-### Guías de aprendizaje paso a paso
+### <a name="step-by-step-learning-guides"></a>Guías de aprendizaje paso a paso
 
 * [Build 2016 Codelabs: Use Microsoft Azure App Service and Microsoft SQL Azure backend to save game score (Build 2016 - Codelabs: Usar el Servicio de aplicaciones de Microsoft Azure y el back-end de Microsoft SQL Azure para guardar la puntuación del juego)](https://github.com/Microsoft-Build-2016/CodeLabs-GameDev-6-Azure)
 * [Diseñar la estrategia de interacción móvil del juego](https://azure.microsoft.com/documentation/articles/mobile-engagement-gaming-scenario/)
 * [Uso de Azure Mobile Engagement para la implementación de Unity iOS](https://azure.microsoft.com/documentation/articles/mobile-engagement-unity-ios-get-started/)
 
-### Descripción de IaaS, PaaS o SaaS
+### <a name="understanding-iaas-paas-or-saas"></a>Descripción de IaaS, PaaS o SaaS
 
 En primer lugar, debes pensar en el nivel de servicio más idóneo para tu juego. Conocer las diferencias de los siguientes tres servicios puede ayudarte a determinar el enfoque que quieres para crear el back-end.
 
@@ -136,7 +143,7 @@ En primer lugar, debes pensar en el nivel de servicio más idóneo para tu juego
     Software como servicio suele referirse a una aplicación ya creada para ti y hospedada en una plataforma en la nube existente. Se ha diseñado para que aún te resulte más fácil empezar a ejecutar el juego en sus servicios.
 
 
-### Diseñar la infraestructura de juego con Azure
+### <a name="design-your-game-infrastructure-using-azure"></a>Diseñar la infraestructura de juego con Azure
 
 A continuación se indican algunas maneras de usar las ofertas de la nube de Azure para un juego. Azure funciona con Windows y Linux, así como con las tecnologías de código abierto conocidas, como Ruby, Python, Java y PHP. Para obtener más información, consulta el sitio web [Azure para juegos](https://azure.microsoft.com/solutions/gaming/).
 
@@ -162,7 +169,7 @@ A continuación se indican algunas maneras de usar las ofertas de la nube de Azu
 | Creación de campañas de marketing para aumentar el uso y la retención  | Enviar notificaciones de inserción a los reproductores de destino para generar interés y fomentar acciones específicas del juego según el análisis de datos. | [Interacción móvil](https://azure.microsoft.com/services/mobile-engagement/) |  Aumentar el tiempo de juego y la retención del usuario en las principales plataformas (iOS, Android, Windows y Windows Phone). |
 
 
-##  Recursos para nuevas empresas y desarrolladores
+##  <a name="startup-and-developer-resources"></a>Recursos para nuevas empresas y desarrolladores
 
 * [Microsoft BizSpark](https://www.microsoft.com/bizspark/)
 
@@ -172,7 +179,7 @@ A continuación se indican algunas maneras de usar las ofertas de la nube de Azu
 
     Si quieres agregar características de Xbox Live, como un juego multijugador, matchmaking multiplataforma, puntuación de jugador, logros y marcadores a tu juego de Windows 10, suscríbete con ID@Xbox para obtener las herramientas y el soporte técnico que necesitas para dar rienda suelta a tu creatividad y maximizar tu éxito. Antes de realizar la solicitud a ID@Xbox, registra una cuenta de desarrollador en el [Centro de desarrollo de Windows](https://developer.microsoft.com/windows/programs/join).
 
-## Software como servicio para el back-end del juego
+## <a name="software-as-a-service-for-game-backend"></a>Software como servicio para el back-end del juego
 
 Estas son algunas de las empresas que ofrecen back-end de nube para los juegos basado en los principales proveedores de servicios en la nube para permitirte centrarte en el desarrollo de tu juego.
 
@@ -188,7 +195,7 @@ Estas son algunas de las empresas que ofrecen back-end de nube para los juegos b
 
     Playfab lleva tecnología excepcional de administración de juegos dinámicos y back-end a su móvil, PC o videoconsola de manera rápida y sencilla.
 
-## Vínculos relacionados
+## <a name="related-links"></a>Vínculos relacionados
 
 * [Guía de desarrollo de juegos para Windows 10](https://msdn.microsoft.com/windows/uwp/gaming/e2e)
 * [Azure para juegos](https://azure.microsoft.com/solutions/gaming/)
@@ -199,9 +206,4 @@ Estas son algunas de las empresas que ofrecen back-end de nube para los juegos b
  
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

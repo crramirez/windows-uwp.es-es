@@ -2,18 +2,25 @@
 author: DBirtolo
 ms.assetid: 88132B6F-FB50-4B03-BC21-233988746230
 title: "Personalizar la interfaz de usuario de vista previa de impresión"
-description: "En esta sección se describe cómo personalizar las opciones de impresión y la configuración de la interfaz de usuario de la vista previa de impresión."
+description: "En esta sección se describe cómo personalizar la configuración y las opciones de impresión en la interfaz de usuario de la vista previa de impresión."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: dd64266c2015e1bb640cf159b0836b9819cf7845
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fa1a8c487d3fef2b0caa322d81c0ebdbdfe3865f
+ms.lasthandoff: 02/07/2017
 
 ---
-# Personalizar la interfaz de usuario de vista previa de impresión
+# <a name="customize-the-print-preview-ui"></a>Personalizar la interfaz de usuario de la vista previa de impresión
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** API importantes **
+**API importantes**
 
 -   [**Windows.Graphics.Printing**](https://msdn.microsoft.com/library/windows/apps/BR226489)
 -   [**Windows.UI.Xaml.Printing**](https://msdn.microsoft.com/library/windows/apps/BR243325)
@@ -25,7 +32,7 @@ En esta sección se describe cómo personalizar las opciones de impresión y la 
 
  
 
-## Personalizar las opciones de impresión
+## <a name="customize-print-options"></a>Personalizar las opciones de impresión
 
 De forma predeterminada, la interfaz de usuario de vista previa de impresión muestra las opciones de impresión [**ColorMode**](https://msdn.microsoft.com/library/windows/apps/BR226478), [**Copies**](https://msdn.microsoft.com/library/windows/apps/BR226479) y [**Orientation**](https://msdn.microsoft.com/library/windows/apps/BR226486). Además de estas opciones, existen varias opciones de impresora comunes que podrás agregar a la interfaz de usuario de vista previa de impresión:
 
@@ -48,7 +55,7 @@ Pero los cambios que realices mediante este método afectan solo a la interfaz d
 
  
 
-### Definir las opciones que se van a mostrar
+### <a name="define-the-options-to-display"></a>Definir las opciones que se van a mostrar
 
 Una vez que se carga la pantalla de la aplicación, se registra para el contrato de Imprimir. El registro incluye la definición del controlador de eventos [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597). El código para personalizar las opciones que aparecen en la interfaz de usuario de vista previa de impresión se agrega al controlador de eventos **PrintTaskRequested**.
 
@@ -94,7 +101,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 
 **Importante**  Si llamas a [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)(), se quitarán todas las opciones de impresión de la interfaz de usuario de vista previa de impresión, incluido el vínculo **Más configuraciones**. Asegúrate de anexar las opciones que deseas mostrar en la interfaz de usuario de vista previa de impresión.
 
-### Especificar las opciones predeterminadas
+### <a name="specify-default-options"></a>Especificar las opciones predeterminadas
 
 También puedes establecer los valores predeterminados de las opciones de la interfaz de usuario de vista previa de impresión. La siguiente línea de código, tomada del ejemplo anterior, establece el valor predeterminado de la opción [**MediaSize**](https://msdn.microsoft.com/library/windows/apps/BR226483).
 
@@ -103,7 +110,7 @@ También puedes establecer los valores predeterminados de las opciones de la int
          printTask.Options.MediaSize = PrintMediaSize.NorthAmericaLegal;
 ```         
 
-## Agregar nuevas opciones de impresión
+## <a name="add-new-print-options"></a>Agregar nuevas opciones de impresión
 
 En esta sección se muestra cómo crear una nueva opción de impresión, cómo definir una lista de valores compatibles con la opción y, después, cómo agregar la opción a la interfaz de usuario de vista previa de impresión. Tal como se ha mostrado en la sección anterior, agrega la nueva opción de impresión en el controlador de eventos [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597).
 
@@ -179,15 +186,9 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 }
 ```
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Directrices de diseño de impresión](https://msdn.microsoft.com/library/windows/apps/Hh868178)
 * [//Vídeo de compilación 2015: desarrollo de aplicaciones que imprimen en Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [Muestra de impresión para UWP](http://go.microsoft.com/fwlink/p/?LinkId=619984)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

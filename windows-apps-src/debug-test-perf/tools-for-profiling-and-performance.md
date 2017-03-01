@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: EAC34672-5C12-402D-920B-6F2835EA5ACE
 title: "Herramientas de creación de perfiles y rendimiento"
 description: "Microsoft proporciona varias herramientas que te ayudarán a mejorar el rendimiento de tu aplicación para la Plataforma universal de Windows (UWP)."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 5bbd14fb53cae67bbb827f94e695b2703e07fc34
-ms.openlocfilehash: 3d0cf5f983efdee116bcf8b87398fe376efca3c6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 51304d873261466afc9014224b918b82603f00e8
+ms.lasthandoff: 02/07/2017
 
 ---
-# Herramientas de creación de perfiles y rendimiento
+# <a name="tools-for-profiling-and-performance"></a>Herramientas de creación de perfiles y rendimiento
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Microsoft proporciona varias herramientas que te ayudarán a mejorar el rendimiento de tu aplicación para la Plataforma universal de Windows (UWP). Sigue estos vínculos para obtener información sobre el uso de estas herramientas.
 
@@ -26,10 +33,5 @@ Consulta también:
 | [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/apps/xaml/hh448170.aspx) | Se incluye en Windows Assessment and Deployment Kit (Windows ADK), Windows Performance Analyzer (WPA) es una herramienta que permite crear gráficos y tablas de datos de Seguimiento de eventos para Windows (ETW) que registra el Windows Performance Recorder (WPR), Xperf o una evaluación que se ejecuta en la plataforma de evaluación. WPA puede abrir cualquier archivo de registro de seguimiento de eventos (ETL) para el análisis. |
 
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

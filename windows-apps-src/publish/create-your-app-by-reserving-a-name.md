@@ -1,16 +1,22 @@
 ---
 author: jnHs
-Description: "El primer paso para crear una nueva aplicación en el panel del Centro de desarrollo de Windows es reservar un nombre de aplicación. Aprende a reservar nombres de aplicación y busca sugerencias para elegir un buen nombre de aplicación."
+Description: "El primer paso para crear una nueva aplicación en el panel del Centro de desarrollo de Windows es reservar un nombre de aplicación. Aprende a reservar nombres de aplicación y buscar sugerencias para elegir un buen nombre de aplicación."
 title: "Crear la aplicación reservando un nombre"
-keywords: 
+keywords: Windows 10, UWP
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3b65bbaf2498dde7484c055ff86ed09e89bf3405
-ms.openlocfilehash: 1be7229086e1f2f932e0945334098d89a9978b70
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c36f8296f65efcc107ade545c20ab7e3db32c824
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Crear la aplicación reservando un nombre
+# <a name="create-your-app-by-reserving-a-name"></a>Crear la aplicación reservando un nombre
 
 
 El primer paso para crear una nueva aplicación en el panel del Centro de desarrollo de Windows es reservar un nombre de aplicación. Aprende a reservar nombres de aplicación y busca sugerencias para [elegir un buen nombre de aplicación](#choosing-your-app-s-name). Cada nombre reservado debe ser único en toda la Tienda.
@@ -19,7 +25,7 @@ El primer paso para crear una nueva aplicación en el panel del Centro de desarr
 
 Cuando [cargas los paquetes de la aplicación](upload-app-packages.md), el valor de [**Paquete/Propiedades/DisplayName**](https://msdn.microsoft.com/library/windows/apps/dn423240) debe coincidir con el nombre que reservaste para la aplicación en el **Panel**. Si usas Microsoft Visual Studio para crear el paquete de la aplicación, este atributo se rellenará automáticamente.
 
-## Crear la aplicación reservando un nuevo nombre
+## <a name="create-your-app-by-reserving-a-new-name"></a>Crear la aplicación reservando un nuevo nombre
 
 Reservar un nombre es el primer paso para crear una aplicación en el panel. Puedes hacerlo incluso si aún no has empezado a compilar la aplicación. Recomendamos hacerlo lo antes posible para que nadie más pueda usar el nombre.
 
@@ -33,7 +39,7 @@ Ahora el nombre se ha reservado para ti y puedes empezar a trabajar en el [enví
 
 Después de reservar un nombre, tendrás un año para enviar la aplicación. Si no la envías en el plazo del año, la reserva expirará y otro desarrollador podría usar ese nombre para una aplicación. Se puede producir un error si intentas enviar una aplicación con un nombre que has dejado expirar.
 
-## Elegir el nombre de la aplicación
+## <a name="choosing-your-apps-name"></a>Elegir el nombre de la aplicación
 
 Elegir el nombre correcto para la aplicación es una tarea importante. Elige un nombre que capte la atención de los clientes y los haga leer más sobre la aplicación. Estas son algunas sugerencias para que elijas un buen nombre de aplicación.
 
@@ -45,7 +51,7 @@ Elegir el nombre correcto para la aplicación es una tarea importante. Elige un 
 -   **Sé original.** Procura que el nombre de tu aplicación sea lo suficientemente distintivo como para que no se confunda fácilmente con una aplicación existente.
 -   **No uses nombres registrados por otros.** Asegúrate de tener los derechos de usar el nombre que reservas. Si alguien más tiene los derechos de marca comercial de ese nombre, puede denunciar una infracción y no podrás seguir usándolo. Si esto sucede después de publicada la aplicación, se quitará de la Tienda. Deberás cambiar el nombre de tu aplicación, incluyendo todas las instancias del nombre que aparecen en la aplicación y el contenido, antes de que puedas [enviar la aplicación](app-submissions.md) nuevamente para su certificación.
 
-## Administrar nombres de aplicación adicionales
+## <a name="manage-additional-app-names"></a>Administrar nombres de aplicación adicionales
 
 Puedes administrar los nombres de tus aplicaciones en la página **Administrar nombres de aplicaciones**, en la sección **Administración de la aplicación** de cada una de las aplicaciones que tienes en el panel del Centro de desarrollo de Windows.
 
@@ -61,10 +67,5 @@ Para obtener más información, consulta [Administrar nombres de aplicación](ma
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

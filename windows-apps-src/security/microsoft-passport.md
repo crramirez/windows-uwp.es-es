@@ -1,27 +1,34 @@
 ---
-title: Microsoft Passport y Windows Hello
-description: "En este artículo se describe la nueva tecnología Microsoft Passport que se incluirá como parte del sistema operativo Windows 10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios back-end y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows 10."
+title: Windows Hello
+description: "En este artículo se describe la nueva tecnología Windows Hello que se incluirá como parte del sistema operativo Windows 10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios back-end y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows 10."
 ms.assetid: 0B907160-B344-4237-AF82-F9D47BCEE646
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6dbc98867c3a1a14a04590c65ba54ca3c37cd426
-ms.openlocfilehash: cb24b1e75dbb8f37fcd4482e3e0d468855155f04
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f77de7b7a3c89a57855afba59028f55d8e8bb39c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="microsoft-passport-and-windows-hello"></a>Microsoft Passport y Windows Hello
+# <a name="windows-hello"></a>Windows Hello
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-En este artículo se describe la nueva tecnología Microsoft Passport que se incluirá como parte del sistema operativo Windows 10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios backend y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows 10.
+En este artículo se describe la nueva tecnología Windows Hello que se incluirá como parte del sistema operativo Windows 10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios back-end y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows 10.
 
-Ten en cuenta que este artículo se centra en el desarrollo de aplicaciones. Para información sobre los detalles de implementación y la arquitectura de Microsoft Passport y Windows Hello, consulta la [Guía de Microsoft Passport en TechNet](https://technet.microsoft.com/library/mt589441.aspx).
+Ten en cuenta que este artículo se centra en el desarrollo de aplicaciones. Para información sobre los detalles de implementación y la arquitectura de Windows Hello, consulta la [Guía de Windows Hello en TechNet](https://technet.microsoft.com/library/mt589441.aspx).
 
-Para obtener un ejemplo de código completo, consulta el [ejemplo de código de Microsoft Passport en GitHub](http://go.microsoft.com/fwlink/?LinkID=717812).
+Para obtener un ejemplo de código completo, consulta el [ejemplo de código de Windows Hello en GitHub](http://go.microsoft.com/fwlink/?LinkID=717812).
 
-Para ver un tutorial paso a paso sobre cómo crear una aplicación para UWP con Microsoft Passport y el servicio de autenticación de respaldo, consulta los artículos [Aplicación de inicio de sesión de Microsoft Passport](microsoft-passport-login.md) y [Servicio de inicio de sesión de Microsoft Passport](microsoft-passport-login-auth-service.md).
+Para ver un tutorial paso a paso sobre cómo crear una aplicación para UWP con Windows Hello y el servicio de autenticación de respaldo, consulta los artículos [Aplicación de inicio de sesión de Windows Hello](microsoft-passport-login.md) y [Servicio de inicio de sesión de Windows Hello](microsoft-passport-login-auth-service.md).
 
 ## <a name="1-introduction"></a>1 Introducción
 
@@ -54,70 +61,68 @@ Es difícil solucionar los problemas que presentan las contraseñas. Tan solo au
 
 Microsoft Passport reemplaza las contraseñas por autenticación sólida en dos fases (2FA) mediante la comprobación de las credenciales existentes y la creación de una credencial específica protegida por un gesto de usuario basado en PIN. 
 
-## <a name="2-what-is-microsoft-passport"></a>2 ¿Qué es Microsoft Passport?
+
+## <a name="2-what-is-windows-hello"></a>2 ¿Qué es Windows Hello?
 
 
-## <a name="21-what-is-windows-hello"></a>2.1 ¿Qué es Windows Hello?
+Windows Hello es el nombre que Microsoft dio al nuevo sistema de inicio de sesión biométrico integrado en Windows 10. Dado que está integrado directamente en el sistema operativo, Windows Hello permite la identificación por rostro o huella digital para desbloquear los dispositivos de los usuarios. La autenticación se produce cuando el usuario proporciona su identificador biométrico único para obtener acceso a las credenciales específicas del dispositivo, lo que significa que un atacante que robe el dispositivo no podrá iniciar sesión en él a menos que cuente con el PIN. El almacén de credenciales seguro de Windows protege los datos biométricos en el dispositivo. Si usas Windows Hello para desbloquear un dispositivo, el usuario autorizado obtiene acceso a todos sus servicios, sitios web, datos, aplicaciones y experiencia de Windows.
+
+El autenticador de Windows Hello se conoce como un saludo. Un saludo es único para la combinación de un dispositivo individual y un usuario específico. No se mueve entre dispositivos, no se comparte con un servidor o la aplicación que llama y no se pueden extraer fácilmente de un dispositivo. Si varios usuarios comparten un dispositivo, cada uno de ellos necesita configurar su propia cuenta. Cada cuenta obtiene un único saludo para ese dispositivo. Se puede considerar un saludo como un token que puedes usar para desbloquear (o liberar) una credencial almacenada. El saludo en sí no autentica el usuario en una aplicación o servicio, sino que libera las credenciales que sí pueden hacerlo. En otras palabras, Hello no es una credencial de usuario, pero es un segundo factor del proceso de autenticación.
+
+## <a name="21-windows-hello-authentication"></a>2.1 Autenticación de Windows Hello
 
 
-Windows Hello es el nombre que Microsoft dio al nuevo sistema de inicio de sesión biométrico integrado en Windows 10. Dado que está integrado directamente en el sistema operativo, Windows Hello permite la identificación por rostro o huella digital para desbloquear los dispositivos de los usuarios. La autenticación se produce cuando el usuario proporciona su identificador biométrico único para acceder a las credenciales de Microsoft Passport específicas del dispositivo, lo que significa que un atacante que robe el dispositivo no podrá iniciar sesión en él a menos que cuente con el PIN. El almacén de credenciales seguro de Windows protege los datos biométricos en el dispositivo. Si usas Windows Hello para desbloquear un dispositivo, el usuario autorizado obtiene acceso a todos sus servicios, sitios web, datos, aplicaciones y experiencia de Windows.
+Windows Hello ofrece una forma eficaz para que un dispositivo reconozca a un usuario individual y eso aborda la primera parte de la ruta entre un usuario y un elemento de datos o servicio solicitado. Después de que el dispositivo haya reconocido al usuario, aún tiene que autenticarlo antes de determinar si va a conceder acceso a un recurso solicitado. Windows Hello proporciona una autenticación 2FA altamente eficaz, totalmente integrada en Windows, y reemplaza las contraseñas reutilizables por la combinación de un dispositivo específico y gesto biométrico o PIN.
 
-El autenticador de Windows Hello se conoce como un saludo. Un saludo es único para la combinación de un dispositivo individual y un usuario específico. No se mueve entre dispositivos, no se comparte con un servidor o la aplicación que llama y no se pueden extraer fácilmente de un dispositivo. Si varios usuarios comparten un dispositivo, cada uno de ellos necesita configurar su propia cuenta. Cada cuenta obtiene un único saludo para ese dispositivo. Se puede considerar un saludo como un token que puedes usar para desbloquear (o liberar) una credencial almacenada. El saludo en sí no autentica el usuario en una aplicación o servicio, sino que libera las credenciales que sí pueden hacerlo. En otras palabras, el saludo no es una credencial de usuario, pero es un segundo factor de Microsoft Passport.
+No obstante, Windows Hello no es tan solo un sustituto de los sistemas 2FA tradicionales. Conceptualmente, es similar a una tarjeta inteligente: la autenticación se realiza mediante primitivas criptográficas en lugar de comparaciones de cadenas y el material de clave del usuario se protege en el interior de hardware resistente a manipulaciones. Windows Hello no necesita tampoco los componentes de infraestructura extra necesarios para la implementación de tarjetas inteligentes. En particular, no se necesita una infraestructura de claves públicas (PKI) para administrar los certificados, si no tienes ninguna. Windows Hello combina las principales ventajas que ofrecen las tarjetas inteligentes (flexibilidad de implementación de tarjetas inteligentes virtuales y una seguridad sólida para tarjetas inteligentes físicas) sin ninguna de sus desventajas.
 
-## <a name="22-what-is-microsoft-passport"></a>2.2 ¿Qué es Microsoft Passport?
-
-
-Windows Hello ofrece una forma eficaz para que un dispositivo reconozca a un usuario individual y eso aborda la primera parte de la ruta entre un usuario y un elemento de datos o servicio solicitado. Después de que el dispositivo haya reconocido al usuario, aún tiene que autenticarlo antes de determinar si va a conceder acceso a un recurso solicitado. Microsoft Passport proporciona una autenticación 2FA altamente eficaz, totalmente integrada en Windows, y reemplaza las contraseñas reutilizables por la combinación de un dispositivo específico y gesto biométrico o PIN.
-
-No obstante, Microsoft Passport no es tan solo un sustituto de los sistemas 2FA tradicionales. Conceptualmente, es similar a una tarjeta inteligente: la autenticación se realiza mediante primitivas criptográficas en lugar de comparaciones de cadenas y el material de clave del usuario se protege en el interior de hardware resistente a manipulaciones. Microsoft Passport tampoco requiere los componentes de infraestructura adicionales que se necesitan para la implementación de tarjetas inteligentes. En particular, no se necesita una infraestructura de claves públicas (PKI) para administrar los certificados, si no tienes ninguna. Microsoft Passport combina las principales ventajas que ofrecen las tarjetas inteligentes (flexibilidad de implementación de tarjetas inteligentes virtuales y una seguridad eficaz para tarjetas inteligentes físicas) sin ninguna de sus desventajas.
-
-## <a name="23-how-microsoft-passport-works"></a>2.3 Cómo funciona Microsoft Passport
+## <a name="22-how-windows-hello-works"></a>2.2 Cómo funciona Windows Hello
 
 
-Cuando el usuario configura Microsoft Passport en su equipo, Microsoft Passport genera un nuevo par de claves pública y privada en el dispositivo. El [módulo de plataforma segura](https://technet.microsoft.com/itpro/windows/keep-secure/trusted-platform-module-overview) (TPM) genera y protege esta clave privada. Si el dispositivo no tiene un chip de TPM, la clave privada se cifra y se protege mediante software. Además, los dispositivos con TPM generan un bloque de datos que se puede usar para certificar que una clave está enlazada al TPM. Esta información de atestación puede usarse en la solución para decidir si se concede al usuario un nivel diferente de autorización, por ejemplo.
+Cuando el usuario configura Windows Hello en su equipo, genera un nuevo par de claves pública y privada en el dispositivo. El [módulo de plataforma segura](https://technet.microsoft.com/itpro/windows/keep-secure/trusted-platform-module-overview) (TPM) genera y protege esta clave privada. Si el dispositivo no tiene un chip de TPM, la clave privada se cifra y se protege mediante software. Además, los dispositivos con TPM generan un bloque de datos que se puede usar para certificar que una clave está enlazada al TPM. Esta información de atestación puede usarse en la solución para decidir si se concede al usuario un nivel diferente de autorización, por ejemplo.
 
-Para habilitar Microsoft Passport en un dispositivo, el usuario debe tener su cuenta de Azure Active Directory o cuenta de Microsoft asociada en la configuración de Windows.
+Para habilitar Windows Hello en un dispositivo, el usuario debe tener su cuenta de Azure Active Directory o cuenta de Microsoft asociada en la configuración de Windows.
 
-## <a name="231-how-keys-are-protected"></a>2.3.1 Cómo se protegen claves
+## <a name="221-how-keys-are-protected"></a>2.2.1 Cómo se protegen claves
 
 
-Cada vez que se genere material de clave, este se debe proteger contra los ataques. La forma más eficaz de hacerlo es mediante hardware especializado. El uso de módulos de seguridad de hardware (HSM) para generar, almacenar y procesar claves para aplicaciones críticas para la seguridad tiene una larga trayectoria. Las tarjetas inteligentes son un tipo especial de HSM, como lo son también los dispositivos compatibles con el estándar Trusted Computing Group TPM. Siempre que es posible, la implementación de Microsoft Passport saca provecho de las ventajas del hardware TPM incorporado para generar, almacenar y procesar claves. Sin embargo, Microsoft Passport y Microsoft Passport para el trabajo no requieren un TPM incorporado.
+Cada vez que se genere material de clave, este se debe proteger contra los ataques. La forma más eficaz de hacerlo es mediante hardware especializado. El uso de módulos de seguridad de hardware (HSM) para generar, almacenar y procesar claves para aplicaciones críticas para la seguridad tiene una larga trayectoria. Las tarjetas inteligentes son un tipo especial de HSM, como lo son también los dispositivos compatibles con el estándar Trusted Computing Group TPM. Siempre que es posible, la implementación de Windows Hello saca provecho de las ventajas del hardware TPM incorporado para generar, almacenar y procesar claves. Sin embargo, Windows Hello y Windows Hello para el trabajo no necesitan ningún TPM incorporado.
 
 Siempre que sea factible, Microsoft recomienda el uso de hardware de TPM. El TPM protege contra una variedad de ataques conocidos y posibles, incluidos los ataques de fuerza bruta contra los PIN. Además, el TPM proporciona un nivel adicional de protección después de un bloqueo de la cuenta. Si el TPM bloquea el material de clave, el usuario tendrá que restablecer el PIN. Restablecer el PIN significa que se quitarán todas las claves y certificados cifrados con el material de clave anterior.
 
-## <a name="232-authentication"></a>2.3.2 Autenticación
+## <a name="222-authentication"></a>2.2.2 Autenticación
 
 
-Cuando un usuario quiere acceder a material de clave protegido, el proceso de autenticación: el usuario escribe un PIN o realiza un gesto biométrico para desbloquear el dispositivo, un proceso denominado a veces "liberar la clave".
+Cuando un usuario quiere obtener acceso a material de clave protegido, empieza el proceso de autenticación: el usuario escribe un PIN o realiza un gesto biométrico para desbloquear el dispositivo, un proceso denominado a veces "liberar la clave".
 
-Una aplicación nunca puede usar las claves de otra aplicación y un usuario nunca puede usar las claves de otro usuario. Estas claves se usan para firmar las solicitudes que se envían al proveedor de identidades o IDP, solicitando acceso a los recursos especificados. Las aplicaciones pueden usar API específicas para solicitar operaciones que requieren material de clave para determinadas acciones. El acceso a través de estas API requiere validación explícita mediante un gesto de usuario y el material de clave no se expone a la aplicación solicitante. En cambio, la aplicación solicita una acción específica, como la firma de un fragmento de datos, y el nivel de Microsoft Passport controla el trabajo real y devuelve los resultados.
+Una aplicación nunca puede usar las claves de otra aplicación y un usuario nunca puede usar las claves de otro usuario. Estas claves se usan para firmar las solicitudes que se envían al proveedor de identidades o IDP, solicitando acceso a los recursos especificados. Las aplicaciones pueden usar API específicas para solicitar operaciones que requieren material de clave para determinadas acciones. El acceso a través de estas API requiere validación explícita mediante un gesto de usuario y el material de clave no se expone a la aplicación solicitante. En cambio, la aplicación solicita una acción específica, como la firma de un fragmento de datos, y el nivel de Windows Hello controla el trabajo real y devuelve los resultados.
 
-## <a name="24-getting-ready-to-implement-passport"></a>2.4 Prepararse para implementar Passport
-
-
-Ahora que tenemos un conocimiento básico de cómo funcionan Microsoft Passport y Windows Hello, veamos cómo se implementan en nuestras propias aplicaciones. Para disipar cualquier duda: cuando hablamos de las API, nos referimos a las API de Microsoft Passport. Actualmente, no hay ninguna API para Windows Hello.
-
-Existen diferentes escenarios que se pueden implementar con Microsoft Passport. Por ejemplo, iniciar sesión en tu aplicación en un dispositivo. Otro escenario habitual sería autenticarse en un servicio. En lugar de usar un nombre de inicio de sesión y una contraseña, se usará Microsoft Passport. En los siguientes capítulos, analizaremos la implementación de un par de escenarios diferentes, como la autenticación en los servicios con Microsoft Passport y cómo pasar de un sistema existente que usa el nombre de usuario y contraseña a un sistema que usa Microsoft Passport.
-
-Por último, ten en cuenta que las API de Microsoft Passport requieren el uso del SDK de Windows 10 que coincida con el sistema operativo en el que se usará la aplicación. Es decir, se debe usar el SDK de Windows 10.0.10240 para las aplicaciones que se van a implementar en Windows 10 y el 10.0.10586 para las aplicaciones que se van a implementar en Windows 10, versión 1511.
-
-## <a name="3-implementing-microsoft-passport"></a>3 Implementación de Microsoft Passport
+## <a name="23-getting-ready-to-implement-windows-hello"></a>2.3 Prepararse para implementar Windows Hello
 
 
-En este capítulo, comenzamos con un escenario sin desarrollar que no tiene ningún sistema de autenticación existente y explicaremos cómo implementar Microsoft Passport.
+Ahora que tenemos un conocimiento básico de cómo funciona Windows Hello, veamos cómo se implementa en nuestras propias aplicaciones.
+
+Existen diferentes escenarios que se pueden implementar con Windows Hello. Por ejemplo, iniciar sesión en tu aplicación en un dispositivo. Otro escenario habitual sería autenticarse en un servicio. En lugar de usar un nombre de inicio de sesión y una contraseña, se usará Windows Hello. En los siguientes capítulos, analizaremos la implementación de un par de escenarios diferentes, como la autenticación en los servicios con Windows Hello y cómo pasar de un sistema existente que usa el nombre de usuario y contraseña a un sistema que usa Windows Hello.
+
+Por último, ten en cuenta que las API de Windows Hello necesitan el uso del SDK de Windows 10 que coincida con el sistema operativo en el que se usará la aplicación. Es decir, se debe usar Windows SDK 10.0.10240 para las aplicaciones que se van a implementar en Windows 10 y el 10.0.10586 para las aplicaciones que se van a implementar en Windows 10, versión 1511.
+
+## <a name="3-implementing-windows-hello"></a>3 Implementación de Windows Hello
+
+
+En este capítulo, comenzamos con un escenario sin desarrollar que no tiene ningún sistema de autenticación existente y explicaremos cómo implementar Windows Hello.
 
 En la sección siguiente se describe cómo migrar desde un sistema existente que usa nombre de usuario y contraseña. Sin embargo, aunque ese capítulo te interese más, es recomendable echar un vistazo a este capítulo para obtener un conocimiento básico sobre el proceso y el código necesario.
 
 ## <a name="31-enrolling-new-users"></a>3.1 Inscripción de nuevos usuarios
 
 
-Comenzamos con un servicio totalmente nuevo que usará Microsoft Passport y un nuevo usuario hipotético que está listo para iniciar sesión en un dispositivo nuevo.
+Comenzamos con un servicio totalmente nuevo que usará Windows Hello y un nuevo usuario hipotético que está listo para iniciar sesión en un dispositivo nuevo.
 
-El primer paso es comprobar que el usuario puede usar Passport. La aplicación comprueba la configuración de usuario y las capacidades de la máquina para asegurarse de que puede crear las claves del identificador de usuario. Si la aplicación determina que el usuario todavía no ha habilitado Microsoft Passport, le pide al usuario que lo configure antes usarla.
+El primer paso es comprobar que el usuario puede usar Windows Hello. La aplicación comprueba la configuración de usuario y las capacidades de la máquina para asegurarse de que puede crear las claves del identificador de usuario. Si la aplicación determina que el usuario todavía no ha habilitado Windows Hello, le pide al usuario que lo configure antes usarla.
 
-Para habilitar Microsoft Passport, el usuario solo tiene que configurar un PIN en la configuración de Windows, a menos que lo haya configurado durante la configuración rápida (OOBE).
+Para habilitar Windows Hello, el usuario solo tiene que configurar un PIN en la configuración de Windows, a menos que lo haya configurado durante la configuración rápida (OOBE).
 
-En las siguientes líneas de código se muestra una manera simple de comprobar si el usuario está preparado para usar Microsoft Passport.
+En las siguientes líneas de código se muestra una manera simple de comprobar si el usuario está preparado para usar Windows Hello.
 
 ```cs
 var keyCredentialAvailable = await KeyCredentialManager.IsSupportedAsync();
@@ -147,15 +152,15 @@ Después de crear la información de par de claves y atestación en el dispositi
 
 Para permitir al usuario acceder a la aplicación en varios dispositivos, el servicio back-end debe ser capaz de almacenar varias claves para el mismo usuario. Dado que cada clave es única para cada dispositivo, almacenaremos todas estas claves asociadas al mismo usuario. Un identificador de dispositivo se usa para ayudar a optimizar la parte del servidor al autenticar los usuarios. Hablaremos sobre esto con más detalle en el siguiente capítulo.
 
-Un esquema de base de datos de muestra para almacenar esta información en el backend podría tener este aspecto:
+Un esquema de base de datos de muestra para almacenar esta información en el back-end podría tener este aspecto:
 
-![esquema de base de datos de muestra de Passport](images/passport-db.png)
+![Esquema de base de datos de muestra de Windows Hello](images/passport-db.png)
 
 La lógica del registro podría tener el siguiente aspecto:
 
-![lógica de registro de Passport](images/passport-registration.png)
+![Lógica del registro de Windows Hello](images/passport-registration.png)
 
-Evidentemente, la información de registro que recopiles puede incluir mucha más información de identificación que lo hace en este escenario simple. Por ejemplo, si tu aplicación accede a un servicio protegido, como por ejemplo, para la banca, tendrías que solicitar comprobación de la identidad y otras cosas como parte del proceso de suscripción. Cuando se cumplan todas las condiciones, la clave pública de este usuario se almacenará en el back-end y se usará para la validación la próxima vez que el usuario utilice el servicio.
+Evidentemente, la información de registro que recopiles puede incluir mucha más información de identificación que la de este escenario simple. Por ejemplo, si tu aplicación accede a un servicio protegido, como por ejemplo, para la banca, tendrías que solicitar comprobación de la identidad y otras cosas como parte del proceso de suscripción. Cuando se cumplan todas las condiciones, la clave pública de este usuario se almacenará en el back-end y se usará para la validación la próxima vez que el usuario utilice el servicio.
 
 ```cs
 using System;
@@ -229,9 +234,9 @@ Cuando recibe la clave RSA generada, la declaración de atestación y el certifi
 -   La firma del blob [**KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) usa una clave pública de AIK.
 -   La clave pública incluida en el blob [**KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) coincide con la clave RSA pública que el cliente envió junto con la declaración de atestación.
 
-La aplicación podría asignar al usuario un nivel de autorización diferente, en función de estas condiciones. Por ejemplo, si se produce un error en una de estas comprobaciones, podría no inscribir al usuario o podría limitar lo que el usuario puede hacer.
+La aplicación podría asignar al usuario un nivel de autorización diferente, en función de estas condiciones. Por ejemplo, si se produce un error en una de estas comprobaciones, puede que no inscriba al usuario o que limite lo que el usuario puede hacer.
 
-## <a name="32-logging-on-with-microsoft-passport"></a>3.2 Inicio de sesión con Microsoft Passport
+## <a name="32-logging-on-with-windows-hello"></a>3.2 Inicio de sesión con Windows Hello
 
 
 Una vez que el usuario se inscribe en el sistema, puede usar la aplicación. Según el escenario, puedes pedir a los usuarios que se autentiquen para poder empezar a usar la aplicación o simplemente pedirles que se autentiquen cuando empiecen a usar los servicios back-end.
@@ -256,17 +261,17 @@ Por supuesto, también puedes usar el mecanismo de respuesta de desafío del ser
 ## <a name="34-authentication-at-the-backend"></a>3.4 Autenticación en el backend
 
 
-Cuando la aplicación intente acceder a un servicio back-end protegido, el servicio envía un desafío a la aplicación. La aplicación usa la clave privada del usuario para firmar el desafío y lo vuelve a enviar al servidor. Dado que el servidor almacenó la clave pública de ese usuario, usa las API criptográficas estándar para asegurarse de que el mensaje se firmó con la clave privada correcta. En el cliente, el inicio de sesión lo hacen las API de Microsoft Passport, el desarrollador nunca tendrá acceso a la clave privada de ningún usuario.
+Cuando la aplicación intente acceder a un servicio back-end protegido, el servicio envía un desafío a la aplicación. La aplicación usa la clave privada del usuario para firmar el desafío y lo vuelve a enviar al servidor. Dado que el servidor almacenó la clave pública de ese usuario, usa las API criptográficas estándar para asegurarse de que el mensaje se firmó con la clave privada correcta. En el cliente, el inicio de sesión lo hacen las API de Windows Hello, el desarrollador nunca tendrá acceso a la clave privada de ningún usuario.
 
 Además de comprobar las claves, el servicio también puede comprobar la atestación de clave y decidir si hay limitaciones invocadas sobre el almacenamiento de las claves en el dispositivo. Por ejemplo, si el dispositivo usa TPM para proteger las claves, la seguridad es mayor que cuando los dispositivos almacenan las claves sin TPM. La lógica de back-end podría decidir, por ejemplo, que el usuario solo pueda transferir cierta cantidad de dinero cuando no se usa ningún TPM para reducir los riesgos.
 
-La atestación solo está disponible para los dispositivos que tienen un chip TPM versión 2.0 o posterior. Por tanto, debes tener en cuenta que esta información podría no estar disponible en todos los dispositivos.
+La atestación solo está disponible para los dispositivos que tienen un chip TPM versión 2.0 o posterior. Por tanto, debes tener en cuenta que es posible que esta información no esté disponible en todos los dispositivos.
 
 El flujo de trabajo de cliente podría parecerse al del siguiente gráfico:
 
-![flujo de trabajo de cliente de Passport](images/passport-client-workflow.png)
+![Flujo de trabajo de cliente de Windows Hello](images/passport-client-workflow.png)
 
-Cuando la aplicación llama al servicio en el backend, el servidor envía un desafío. El desafío se firma con el siguiente código:
+Cuando la aplicación llama al servicio en el back-end, el servidor envía un desafío. El desafío se firma con el siguiente código:
 
 ```cs
 var openKeyResult = await KeyCredentialManager.OpenAsync(AccountId);
@@ -294,9 +299,9 @@ Las API solicitan al sistema operativo que firme el desafío con la clave privad
 
 Un flujo básico de desafío y respuesta se muestra en este diagrama de secuencia:
 
-![respuesta de desafío de Passport](images/passport-challenge-response.png)
+![Respuesta de desafío de Windows Hello](images/passport-challenge-response.png)
 
-A continuación, el servidor debe validar la firma. Al solicitar la clave pública y enviarla al servidor para su uso en futuras validaciones, esta se encuentra en un blob publicKeyInfo con codificación ASN.1. Si miras el [ejemplo de código de Microsoft Passport en GitHub](http://go.microsoft.com/fwlink/?LinkID=717812), verás que hay clases auxiliares para encapsular las funciones Crypt32 para trasladar el blob con codificación ASN.1 a un blob CNG, cuyo uso es más habitual. El blob contiene el algoritmo de clave pública, que es la RSA y la clave pública RSA.
+A continuación, el servidor debe validar la firma. Al solicitar la clave pública y enviarla al servidor para su uso en futuras validaciones, esta se encuentra en un blob publicKeyInfo con codificación ASN.1. Si miras el [ejemplo de código de Windows Hello en GitHub](http://go.microsoft.com/fwlink/?LinkID=717812), verás que hay clases auxiliares para encapsular las funciones Crypt32 para trasladar el blob con codificación ASN.1 a un blob CNG, cuyo uso es más habitual. El blob contiene el algoritmo de clave pública, que es la RSA y la clave pública RSA.
 
 Cuando tengas el blob CNG, debes validar el desafío firmado con la clave pública del usuario. Puesto que todo el mundo usa su propio sistema o tecnología back-end, no existe una forma genérica de implementar esta lógica. Usamos SHA256 como el algoritmo hash y Pkcs1 para el objeto SignaturePadding, por lo que debes asegurarte de que es lo que usas al validar la respuesta firmada del cliente. De nuevo, consulte la muestra para ver cómo hacerlo en su servidor en .NET 4.6, pero en general tendrá un aspecto similar al siguiente:
 
@@ -358,9 +363,9 @@ La implementación del mecanismo correcto de desafío y respuesta está fuera de
 ## <a name="35-enrolling-another-device"></a>3.5 Inscribir otro dispositivo
 
 
-Hoy en día, es común que los usuarios tengan varios dispositivos con las mismas aplicaciones instaladas. ¿Cómo funciona esto si se usa Microsoft Passport con varios dispositivos?
+Hoy en día, es común que los usuarios tengan varios dispositivos con las mismas aplicaciones instaladas. ¿Cómo funciona esto si se usa Windows Hello con varios dispositivos?
 
-Si se usa Microsoft Passport, cada dispositivo creará un único conjunto de claves pública y privada. Esto significa que si quieres que un usuario pueda usar varios dispositivos, el back-end debe ser capaz de almacenar varias claves públicas de este usuario. Consulta el diagrama de base de datos de la sección 2.1 para ver un ejemplo de la estructura de la tabla.
+Si se usa Windows Hello, cada dispositivo creará un único conjunto de claves pública y privada. Esto significa que si quieres que un usuario pueda usar varios dispositivos, el back-end debe ser capaz de almacenar varias claves públicas de este usuario. Consulta el diagrama de base de datos de la sección 2.1 para ver un ejemplo de la estructura de la tabla.
 
 El registro de otro dispositivo es prácticamente igual que el registro de un usuario por primera vez. Aún tienes que asegurarte de que el usuario que se registra en el nuevo dispositivo es realmente el usuario que dice ser. Puedes hacerlo con cualquier mecanismo de autenticación en dos fases que se use actualmente. Existen varias maneras de lograr esto de forma segura. Todo depende del escenario.
 
@@ -378,7 +383,7 @@ Para que sea más fácil para el usuario reconocer los dispositivos que están r
 ## <a name="36-using-multiple-accounts-in-your-app"></a>3.6 Usar varias cuentas en tu aplicación
 
 
-Además de admitir varios dispositivos en una sola cuenta, también es común admitir varias cuentas en una sola aplicación. Por ejemplo, quizás te conectas a varias cuentas de Twitter desde dentro de la aplicación. Con Microsoft Passport, puedes crear varios pares de claves y admitir varias cuentas en la aplicación.
+Además de admitir varios dispositivos en una sola cuenta, también es común admitir varias cuentas en una sola aplicación. Por ejemplo, quizás te conectas a varias cuentas de Twitter desde dentro de la aplicación. Con Windows Hello, puedes crear varios pares de claves y admitir varias cuentas en la aplicación.
 
 Una forma de hacerlo guardando en un almacenamiento aislado el nombre de usuario o el identificador único que se describió en el capítulo anterior. Por lo tanto, cada vez que crees una nueva cuenta, almacenas el identificador de cuenta en el almacenamiento aislado.
 
@@ -390,16 +395,16 @@ var openKeyResult = await KeyCredentialManager.OpenAsync(AccountId);
 
 El resto del flujo es el mismo que hemos descrito antes. Para ser más precisos, todas estas cuentas se protegen con el mismo código PIN o gesto biométrico, ya que en este escenario se usan en un único dispositivo con la misma cuenta de Windows.
 
-## <a name="4-migrating-an-existing-system-to-microsoft-passport"></a>4 Migración de un sistema existente a Microsoft Passport
+## <a name="4-migrating-an-existing-system-to-windows-hello"></a>4 Migración de un sistema existente a Windows Hello
 
 
 En esta sección breve, trataremos una aplicación existente para la Plataforma universal de Windows y un sistema back-end que usan una base de datos que almacena el nombre de usuario y contraseña con hash. Estas aplicaciones recopilan las credenciales del usuario cuando se inician y usan estos datos cuando el sistema back-end devuelve el desafío de autenticación.
 
-Aquí, describiremos los fragmentos que deben cambiarse o reemplazarse para que Microsoft Passport funcione.
+Aquí, describiremos los fragmentos que deben cambiarse o reemplazarse para que Windows Hello funcione.
 
-Ya hemos descrito la mayoría de las técnicas en los capítulos anteriores. Agregar Microsoft Passport al sistema existente implica agregar un par de flujos diferentes en la parte de registro y autenticación del código.
+Ya hemos descrito la mayoría de las técnicas en los capítulos anteriores. Agregar Windows Hello al sistema existente implica agregar un par de flujos diferentes en la parte de registro y autenticación del código.
 
-Un método es permitir al usuario elegir cuándo realizar una actualización. Una vez que el usuario haya iniciado sesión en la aplicación y después de detectar que la aplicación y el sistema operativo son capaces de admitir Microsoft Passport, puedes preguntar al usuario si quiere actualizar las credenciales para usar este sistema más moderno y seguro. Puedes usar el siguiente código para comprobar si el usuario es capaz de usar Microsoft Passport.
+Un método es permitir al usuario elegir cuándo realizar una actualización. Una vez que el usuario haya iniciado sesión en la aplicación y después de detectar que la aplicación y el sistema operativo son capaces de admitir Windows Hello, puedes preguntar al usuario si quiere actualizar las credenciales para usar este sistema más moderno y seguro. Puedes usar el siguiente código para comprobar si el usuario es capaz de usar Windows Hello.
 
 ```cs
 var keyCredentialAvailable = await KeyCredentialManager.IsSupportedAsync();
@@ -407,22 +412,22 @@ var keyCredentialAvailable = await KeyCredentialManager.IsSupportedAsync();
 
 La interfaz de usuario podría tener el siguiente aspecto:
 
-![interfaz de usuario de Passport](images/passport-ui.png)
+![Interfaz de usuario de Windows Hello](images/passport-ui.png)
 
-Si el usuario opta por empezar a usar Microsoft Passport, debes crear el objeto [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029), tal como se describe más arriba. El servidor de registro en el backend agrega la clave pública y la declaración de atestación opcional a la base de datos. Dado que el usuario ya se autenticó con el nombre de usuario y la contraseña, el servidor puede vincular las nuevas credenciales a la información de usuario actual en la base de datos. El modelo de base de datos podría ser el mismo que en el que se usa en el ejemplo descrito anteriormente.
+Si el usuario opta por empezar a usar Windows Hello, debes crear el objeto [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029), tal como se describe más arriba. El servidor de registro en el back-end agrega la clave pública y la declaración de atestación opcional a la base de datos. Dado que el usuario ya se autenticó con el nombre de usuario y la contraseña, el servidor puede vincular las nuevas credenciales a la información de usuario actual en la base de datos. El modelo de base de datos podría ser el mismo que en el que se usa en el ejemplo descrito anteriormente.
 
 Si la aplicación pudo crear el objeto [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029) de los usuarios, almacena el identificador de usuario en el almacenamiento aislado para que el usuario pueda seleccionar esta cuenta en la lista cuando la aplicación se inicie de nuevo. A partir de este punto, el flujo sigue exactamente los ejemplos que se describen en los capítulos anteriores.
 
-El paso final de la migración a un escenario de Microsoft Passport completo consiste en deshabilitar la opción de nombre de inicio de sesión y contraseña en la aplicación, y eliminar las contraseñas con hash almacenadas de la base de datos.
+El paso final de la migración a un escenario de Windows Hello completo consiste en deshabilitar la opción de nombre de inicio de sesión y contraseña en la aplicación, y eliminar las contraseñas con hash almacenadas de la base de datos.
 
 ## <a name="5-summary"></a>5 Resumen
 
 
-Windows 10 presenta un mayor nivel de seguridad que también es muy sencillo de poner en práctica. Windows Hello proporciona un nuevo sistema de inicio de sesión biométrico que reconoce al usuario e invalida activamente los esfuerzos para sortear la identificación correcta. Microsoft Passport funciona con Windows Hello para ofrecer varias capas de claves y certificados que nunca se podrán revelar o usar fuera del módulo de plataforma segura. Además, existe una capa de seguridad adicional disponible a través del uso opcional de claves y certificados de identidad de atestación.
+Windows 10 presenta un mayor nivel de seguridad que también es muy sencillo de poner en práctica. Windows Hello proporciona un nuevo sistema de inicio de sesión biométrico que reconoce al usuario e invalida activamente los esfuerzos para sortear la identificación correcta. Por eso, puede ofrecer varias capas de claves y certificados que nunca se podrán revelar o usar fuera del módulo de plataforma segura. Además, existe una capa de seguridad adicional disponible a través del uso opcional de claves y certificados de identidad de atestación.
 
 Como desarrollador, puedes usar esta guía de diseño e implementación de estas tecnologías con el fin de agregar fácilmente una autenticación segura a tus implementaciones de Windows 10 para proteger las aplicaciones y los servicios back-end. El código necesario es mínimo y fácil de entender. El trabajo pesado lo hace Windows 10.
 
-Las opciones de implementación flexibles permiten que Microsoft Passport y Windows Hello reemplacen el sistema de autenticación existente o funcionen con este. La experiencia de implementación es fácil y económica. No se requiere ninguna infraestructura adicional para implementar la seguridad de Windows 10. Con las aplicaciones Microsoft Passport y Microsoft Hello integradas en el sistema operativo, Windows 10 ofrece la solución más segura para los problemas de autenticación a los que se enfrenta el desarrollador moderno.
+Las opciones de implementación flexibles permiten que Windows Hello reemplace el sistema de autenticación existente o funcione con este. La experiencia de implementación es fácil y económica. No es necesaria ninguna infraestructura adicional para implementar la seguridad de Windows 10. Con Microsoft Hello integrado en el sistema operativo, Windows 10 ofrece la solución más segura para los problemas de autenticación a los que se enfrenta el desarrollador moderno.
 
 ¡Misión logra! Acabas de hacer que Internet sea un lugar seguro.
 
@@ -432,8 +437,8 @@ Las opciones de implementación flexibles permiten que Microsoft Passport y Wind
 ### <a name="61-articles-and-sample-code"></a>6.1 Artículos y código de ejemplo
 
 -   [Introducción a Windows Hello](http://windows.microsoft.com/windows-10/getstarted-what-is-hello)
--   [Detalles de implementación para Microsoft Passport y Windows Hello](https://msdn.microsoft.com/library/mt589441)
--   [Ejemplo de código de Microsoft Passport en GitHub](http://go.microsoft.com/fwlink/?LinkID=717812)
+-   [Detalles de implementación para Windows Hello](https://msdn.microsoft.com/library/mt589441)
+-   [Ejemplo de código de Windows Hello en GitHub](http://go.microsoft.com/fwlink/?LinkID=717812)
 
 ### <a name="62-terminology"></a>6.2 Terminología
 
@@ -450,10 +455,5 @@ Las opciones de implementación flexibles permiten que Microsoft Passport y Wind
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Aplicación de inicio de sesión de Microsoft Passport](microsoft-passport-login.md)
-* [Servicio de inicio de sesión de Microsoft Passport](microsoft-passport-login-auth-service.md)
-
-
-<!--HONumber=Dec16_HO1-->
-
-
+* [Aplicación de inicio de sesión de Windows Hello](microsoft-passport-login.md)
+* [Servicio de inicio de sesión de Windows Hello](microsoft-passport-login-auth-service.md)

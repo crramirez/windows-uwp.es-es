@@ -1,22 +1,29 @@
 ---
 author: jnHs
 Description: "Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que las empresas las compren por volumen a través de la Tienda Windows para empresas, sin necesidad de que las aplicaciones estén disponibles en la Tienda de forma general."
-title: Distribuir aplicaciones de LOB a empresas
+title: "Distribuir aplicaciones de línea de negocio a empresas"
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 44485b32a7c5580e1a7a0ca9ca7c642e0b9b29d2
-ms.openlocfilehash: 76fc4e5cfa70d06d6f378409ecd9f331f64c0803
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 94d12656a122f623240463886297c2378753924b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Distribuir aplicaciones de LOB a empresas
+# <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicaciones de línea de negocio a empresas
 
 
 Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que las empresas las compren por volumen a través de la Tienda Windows para empresas, sin necesidad de que las aplicaciones estén disponibles en la Tienda de forma general.
 
 > **Importante**  Por ahora, solo las aplicaciones gratuitas pueden distribuirse de forma exclusiva a las empresas a través de la Tienda Windows para empresas. Si envías una aplicación de pago como LOB, esta no estará disponible para la empresa en este momento. 
 
-## Configurar la asociación de empresa
+## <a name="setting-up-the-enterprise-association"></a>Configurar la asociación de empresa
 
 
 El primer paso para publicar aplicaciones LOB exclusivamente para una empresa es establecer la asociación entre tu cuenta y la tienda privada de la empresa.
@@ -27,12 +34,12 @@ Si una empresa decide invitarte para que publiques aplicaciones para su uso excl
 
 Para confirmar la asociación, haz clic en **Aceptar**. De este modo, podrás publicar aplicaciones desde tu cuenta para uso exclusivo de la empresa.
 
-## Enviar aplicaciones de LOB
+## <a name="submitting-an-lob-app"></a>Enviar aplicaciones de LOB
 
 
 Cuando estés listo para publicar una aplicación para uso exclusivo de la empresa, el proceso es similar al proceso de envío de aplicaciones. La aplicación pasa por el mismo proceso de certificación y debe cumplir con todas las [directivas de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/dn764944). Solo hay algunas etapas del proceso que son diferentes.
 
-### Distribución y visibilidad
+### <a name="distribution-and-visibility"></a>Distribución y visibilidad
 
 Una vez hayas configurado una asociación de empresa, cada vez que envíes una aplicación, verás un cuadro desplegable en la sección **Distribución y visibilidad** de la página **Precios y disponibilidad** del envío. Esta opción está establecida en **Retail distribution** de forma predeterminada. Para que la aplicación sea exclusiva de una empresa, tienes que elegir **Line-of-business (LOB) distribution**.
 
@@ -42,7 +49,7 @@ Selecciona las empresas que deben obtener la aplicación. Nadie más podrá acce
 
 > **Nota**  Tienes que seleccionar una empresa, como mínimo, para publicar una aplicación como línea de negocio.
 
-### Licencias organizativas
+### <a name="organizational-licensing"></a>Licencias organizativas
 
 De forma predeterminada, la casilla **licencias por volumen (en línea) administradas por la Tienda** se activa al enviar una aplicación. Al publicar aplicaciones de LOB, esta casilla debe estar activada para que la empresa pueda comprar tu aplicación por volumen. Esto no significa que la aplicación estará a disposición del público, sino para las empresas específicas que seleccionaste en la sección **Distribución y visibilidad**.
 
@@ -50,10 +57,10 @@ Si quieres que la aplicación esté disponible para la empresa a través de lice
 
 Para obtener más información, consulta [Opciones de licencias organizativas](organizational-licensing.md).
 
-### Clasificaciones por edades
+### <a name="age-ratings"></a>Clasificaciones por edades
 Para las aplicaciones de LOB, el paso [clasificación por edades](age-ratings.md) del proceso de envío funciona igual que para aplicaciones de comercios minoristas, pero también tiene una opción adicional que permite indicar la clasificación por edades de la Tienda de la aplicación manualmente, en lugar de completar el cuestionario o importando un id. de clasificación de IARC existente. Esta clasificación manual solo puede usarse con la distribución de LOB; por lo tanto, si cambia el valor **Distribución y visibilidad** de la aplicación a **Distribución al por menor**, tendrás que completar el cuestionario de clasificaciones por edades para poder publicar el envío.
 
-### Implementación de aplicaciones de LOB para empresas
+### <a name="enterprise-deployment-of-lob-apps"></a>Implementación de aplicaciones de LOB para empresas
 
 Después de hacer clic **Enviar a la Tienda**, la aplicación pasará por el proceso de certificación. Cuando esté lista, un administrador de la empresa debe agregarla a su tienda privada en el portal de la Tienda Windows para empresas. Luego la empresa puede implementar la aplicación para sus usuarios.
 
@@ -61,7 +68,7 @@ Después de hacer clic **Enviar a la Tienda**, la aplicación pasará por el pro
 
 Para obtener más información, consulta [Trabajar con aplicaciones de línea de negocio](http://go.microsoft.com/fwlink/p/?LinkId=698846) y [Distribuir aplicaciones a través de la tienda privada](http://go.microsoft.com/fwlink/p/?LinkId=698847).
 
-### Actualizar las aplicaciones de LOB
+### <a name="updating-lob-apps"></a>Actualizar las aplicaciones de LOB
 
 Para publicar actualizaciones de una aplicación que ya publicaste como LOB, simplemente crea un nuevo envío. Puedes cargar nuevos paquetes o hacer cambios y luego solo tienes que hacer clic en **Enviar a la Tienda** para que la versión actualizada esté disponible. Asegúrate de que las selecciones de empresas en **Distribución y visibilidad** sean las mismas (a menos que intencionadamente quietas cambiarlas; por ejemplo, seleccionar una empresa adicional para que compre la aplicación o eliminar de una de las empresas a la que habías distribuido la aplicación anteriormente).
 
@@ -69,13 +76,13 @@ Si quieres dejar de ofrecer una aplicación que ya publicaste como línea de neg
 
 > **Nota** Si cambias una aplicación a **Distribución al por menor**, tienes que completar el [cuestionario de clasificaciones por edades](age-ratings.md) si aún no lo has hecho (aunque la aplicación no estará disponible para nuevas adquisiciones).
 
-### Distribuir aplicaciones de LOB a través de la instalación de prueba
+### <a name="distributing-lob-apps-through-sideloading"></a>Distribuir aplicaciones de LOB a través de la instalación de prueba
 
 La creación de aplicaciones a través de la Tienda para empresas garantiza que la aplicación esté firmada por la Tienda y que cumpla con las directivas estándar de esta.
 
 En algunos casos, puede que las empresas no quieran que sus aplicaciones de LOB se envíen a través del Centro de desarrollo de Windows por diferentes razones (por ejemplo, por cuestiones de cumplimiento o debido a aplicaciones que necesitan funciones adicionales). En este caso, las empresas pueden implementar aplicaciones directamente en las máquinas a través de la instalación de prueba, sin necesidad de usar la Tienda Windows para empresas.
 
-Para obtener más información, consulta [Transferir localmente aplicaciones de LOB en Windows10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
+Para obtener más información, consulta [Transferir localmente aplicaciones de LOB en Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
 
  
 
@@ -83,10 +90,5 @@ Para obtener más información, consulta [Transferir localmente aplicaciones de 
 
 
 
-
-
-
-
-<!--HONumber=Sep16_HO1-->
 
 

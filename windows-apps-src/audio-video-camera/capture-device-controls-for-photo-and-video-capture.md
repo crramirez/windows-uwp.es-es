@@ -1,17 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: 831123A7-1F40-4B74-AE9F-69AC9883B4AD
-description: "Este artículo muestra cómo usar los controles de dispositivo manuales para permitir escenarios de captura de fotos y vídeo mejorados, como la estabilización de imagen óptica y el zoom suave."
+description: "En este artículo se muestra cómo usar los controles de dispositivo manuales para permitir escenarios de captura de fotos y vídeo mejorados, como la estabilización de imagen óptica y el zoom suave."
 title: "Controles manuales de la cámara para la captura de fotos y vídeos"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 4c6a7aabb39b3835e042481ccae7da60e899e7cf
-ms.openlocfilehash: 13a767d8e75a64dc0e65bbfbc85f6c6cd2491f38
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: be3c421c2b8d7b4bb71ddaa984ff925f0563f1f6
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Controles manuales de la cámara para la captura de fotos y vídeos
+# <a name="manual-camera-controls-for-photo-and-video-capture"></a>Controles manuales de la cámara para la captura de fotos y vídeos
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer más artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artículo muestra cómo usar los controles de dispositivo manuales para permitir escenarios de captura de fotos y vídeo mejorados, como la estabilización de imagen óptica y el zoom suave.
@@ -27,7 +34,7 @@ Todas las API de control de dispositivos mencionadas en este artículo son miemb
 
 [!code-cs[VideoControllersUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoControllersUsing)]
 
-## Exposure
+## <a name="exposure"></a>Exposure
 
 [**ExposureControl**](https://msdn.microsoft.com/library/windows/apps/dn278910) te permite definir la velocidad del obturador que se usa durante la captura de fotos o vídeo.
 
@@ -54,7 +61,7 @@ En el controlador de eventos **CheckedChanged** de la casilla de exposición aut
 > [!IMPORTANT]
 > El modo de exposición automática solo se admite mientras se ejecuta la secuencia de vista previa. Comprueba que la secuencia de vista previa se está ejecutando antes de activar la exposición automática.
 
-## Compensación de exposición
+## <a name="exposure-compensation"></a>Compensación de exposición
 
 El [**ExposureCompensationControl**](https://msdn.microsoft.com/library/windows/apps/dn278897) te permite establecer la compensación de exposición que se usa durante la captura de fotos o vídeo.
 
@@ -74,7 +81,7 @@ En el controlador de eventos **ValueChanged**, obtén el valor actual del contro
 
 [!code-cs[EvValueChanged](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetEvValueChanged)]
 
-## Flash
+## <a name="flash"></a>Flash
 
 [**FlashControl**](https://msdn.microsoft.com/library/windows/apps/dn297725) te permite activar o desactivar el flash o activar el flash automático, que permite al sistema determinar dinámicamente si se usa el flash. Este control también te permite habilitar la reducción de ojos rojos automática en los dispositivos que lo admiten. Todas estas opciones de configuración se aplican a la captura de fotos. El [**TorchControl**](https://msdn.microsoft.com/library/windows/apps/dn279077) es un control independiente para activar o desactivar la linterna para la captura de vídeo.
 
@@ -101,11 +108,11 @@ Por último, en el controlador de la casilla de la linterna de vídeo, define la
 > [!NOTE] 
 >  En algunos dispositivos, la linterna no emite luz, incluso si el objeto [**TorchControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078) se establece en true, a menos que el dispositivo tenga una secuencia de vista previa en ejecución y esté capturando vídeo activamente. El orden de operaciones recomendado es activar la vista previa de vídeo, activar la linterna estableciendo **Enabled** en true y, a continuación, iniciar la captura de vídeo. En algunos dispositivos la linterna se enciende después de iniciar la vista previa. En otros dispositivos, es posible que la linterna no se encienda hasta que se inicie la captura de vídeo.
 
-## Enfocar
+## <a name="focus"></a>Enfocar
 
 El objeto [**FocusControl**](https://msdn.microsoft.com/library/windows/apps/dn297788) admite tres métodos diferentes usados con frecuencia para ajustar el enfoque de la cámara: autoenfoque continuo, pulsar para enfocar y enfoque manual. Una aplicación de cámara puede admitir los tres métodos, pero para fines de simplificación, en este artículo se explican las tres técnicas por separado. En esta sección también se describe cómo habilitar la luz de la ayuda de foco.
 
-### Autofocus continuo
+### <a name="continuous-autofocus"></a>Autofocus continuo
 
 Si se habilita el autofocus, se indica a la cámara que debe ajustar el foco dinámicamente para intentar mantener enfocado al sujeto de la foto o vídeo. Este ejemplo usa un botón de radio para activar y desactivar el autoenfoque continuo.
 
@@ -124,7 +131,7 @@ Crea un nuevo objeto [**FocusSettings**](https://msdn.microsoft.com/library/wind
 > [!IMPORTANT]
 > El modo de autoenfoque solo se admite mientras la secuencia de vista previa está en ejecución. Comprueba que la secuencia de vista previa se está ejecutando antes de activar el autoenfoque automático.
 
-### Pulsar para enfocar
+### <a name="tap-to-focus"></a>Pulsar para enfocar
 
 La técnica de pulsar para enfocar usa el objeto [**FocusControl**](https://msdn.microsoft.com/library/windows/apps/dn297788) y el [**RegionsOfInterestControl**](https://msdn.microsoft.com/library/windows/apps/dn279064) para especificar una subregión del marco de captura donde debe centrarse el dispositivo de captura. La región de enfoque se determina por la pulsación del usuario en la pantalla que muestra la secuencia de vista previa.
 
@@ -187,7 +194,7 @@ El método auxiliar **ConvertUiTapToPreviewRect** toma como argumentos la ubicac
 
 [!code-cs[ConvertUiTapToPreviewRect](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetConvertUiTapToPreviewRect)]
 
-### Enfoque manual
+### <a name="manual-focus"></a>Enfoque manual
 
 La técnica de enfoque manual usa un control **Slider** para definir la profundidad de enfoque actual del dispositivo de captura. Se usa un botón de radio para activar y desactivar el enfoque manual.
 
@@ -209,7 +216,7 @@ En el controlador de eventos **ValueChanged** del control deslizante del enfoque
 
 [!code-cs[FocusSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocusSlider)]
 
-### Habilitar la luz de enfoque
+### <a name="enable-the-focus-light"></a>Habilitar la luz de enfoque
 
 En los dispositivos que lo admiten, puedes habilitar una luz de enfoque auxiliar para ayudar al dispositivo en el proceso de enfoque. En este ejemplo, se usa una casilla para habilitar o deshabilitar la luz de enfoque auxiliar.
 
@@ -223,7 +230,7 @@ En el controlador de eventos **CheckedChanged**, obtén el objeto [**FlashContro
 
 [!code-cs[FocusLightCheckBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocusLightCheckBox)]
 
-## Velocidad ISO
+## <a name="iso-speed"></a>Velocidad ISO
 
 [**IsoSpeedControl**](https://msdn.microsoft.com/library/windows/apps/dn297850) te permite definir la velocidad ISO que se usa durante la captura de fotos o vídeo.
 
@@ -247,7 +254,7 @@ En el controlador de eventos **CheckedChanged** de la casilla de velocidad ISO a
 
 [!code-cs[IsoCheckBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetIsoCheckBox)]
 
-## Estabilización de imagen óptica
+## <a name="optical-image-stabilization"></a>Estabilización de imagen óptica
 
 La estabilización de imagen óptica (OIS) estabiliza una secuencia de vídeo capturada manipulando mecánicamente el dispositivo de captura de hardware, lo que puede proporcionar un resultado superior a la estabilización digital. En los dispositivos que no admiten OIS, puedes usar el efecto VideoStabilizationEffect para realizar la estabilización digital de los vídeos capturados. Para más información, consulta [Efectos para captura de vídeo](effects-for-video-capture.md).
 
@@ -259,14 +266,14 @@ Para habilitar o deshabilitar OIS, define [**OpticalImageStabilizationControl.Mo
 
 [!code-cs[SetOpticalImageStabilizationMode](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSetOpticalImageStabilizationMode)]
 
-## Frecuencia de la línea de alimentación
+## <a name="powerline-frequency"></a>Frecuencia de la línea de alimentación
 Algunos dispositivos de cámara admiten el procesamiento de antiparpadeo que depende de conocer la frecuencia de la CA de las líneas de alimentación en el entorno actual. Algunos dispositivos admiten la determinación automática de la frecuencia de la línea de alimentación, mientras que otros requieren que la frecuencia se establezca de forma manual. El siguiente ejemplo de código muestra cómo determinar la compatibilidad de la frecuencia de la línea de alimentación en el dispositivo y, si es necesario, cómo establecer la frecuencia de forma manual. 
 
 En primer lugar, llama al método **VideoDeviceController** [**TryGetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206898), pasando un parámetro de salida de tipo [**PowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.PowerlineFrequency); si se produce un error en esta llamada, el control de frecuencia de la línea de alimentación no se admite en el dispositivo actual. Si se admite la característica, puedes determinar si el modo automático está disponible en el dispositivo intentando establecer el modo automático. Para hacerlo, llama a [**TrySetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206899) y pasa el valor **Auto**. Si la llamada se realiza correctamente, eso significa que se admite la frecuencia de la línea de alimentación automática. Si en el dispositivo se admite el controlador de frecuencia de la línea de alimentación, pero no se admite la detección automática de la frecuencia, puedes establecer la frecuencia manualmente mediante el uso de **TrySetPowerlineFrequency**. En este ejemplo, **MyCustomFrequencyLookup** es un método personalizado que se implementa para determinar la frecuencia correcta para la ubicación actual del dispositivo. 
 
 [!code-cs[PowerlineFrequency](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetPowerlineFrequency)]
 
-## Balance de blancos
+## <a name="white-balance"></a>Balance de blancos
 
 [**WhiteBalanceControl**](https://msdn.microsoft.com/library/windows/apps/dn279104) te permite definir el balance de blancos que se usa durante la captura de fotos o vídeo.
 
@@ -296,7 +303,7 @@ En el controlador de eventos **ValueChanged**, obtén el valor actual del contro
 > [!IMPORTANT]
 > El valor predeterminado de **ColorTemperaturePreset.Auto** indica al sistema que ajuste automáticamente el nivel del balance de blancos. En algunos escenarios, como capturar una secuencia fotográfica donde los niveles de balance de blancos deben iguales para cada fotograma, te recomendamos que bloquees el control en el valor automático actual. Para ello, llama a [**SetPresetAsync**](https://msdn.microsoft.com/library/windows/apps/dn279113) y especifica el valor predeterminado **Manual** y no establezcas un valor en el control mediante [**SetValueAsync**](https://msdn.microsoft.com/library/windows/apps/dn279114). Esto hará que el dispositivo bloquee el valor actual. No intentes leer el valor actual del control y después pasar el valor obtenido a **SetValueAsync** porque no se garantiza que este valor sea correcto.
 
-## Zoom
+## <a name="zoom"></a>Zoom
 
 El [**ZoomControl**](https://msdn.microsoft.com/library/windows/apps/dn608149) te permite establecer el nivel de zoom que se usa durante la captura de fotos o vídeo.
 
@@ -318,7 +325,7 @@ Por último, cambia la configuración de zoom actual al pasar el objeto **ZoomSe
 
 [!code-cs[ZoomSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetZoomSlider)]
 
-### Zoom suave con el gesto de reducir
+### <a name="smooth-zoom-using-pinch-gesture"></a>Zoom suave con el gesto de reducir
 
 Como se analizó en la sección anterior, en los dispositivos que lo admiten, el modo de zoom suave permite que el dispositivo de captura cambie sin inconvenientes entre niveles de zoom digital, lo que permite al usuario ajustar el nivel de zoom dinámicamente durante la operación de captura sin transiciones discretas y un poco molestas. En esta sección se describe cómo ajustar el nivel de zoom en respuesta a un gesto de reducir.
 
@@ -338,13 +345,8 @@ Para establecer el nivel de zoom en el dispositivo de captura, crea un nuevo obj
 
 [!code-cs[ManipulationDelta](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetManipulationDelta)]
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
 * [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

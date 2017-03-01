@@ -3,15 +3,22 @@ author: TylerMSFT
 title: Depurar una tarea en segundo plano
 description: "Aprende a depurar una tarea en segundo plano, incluida la activación y el seguimiento de depuración de la tarea en segundo plano en el registro de eventos de Windows."
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: 6e1184729af929b771f21112083593e321cacc38
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6200a8363c8a638f2ee44bdad6902748fb9adf45
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="debug-a-background-task"></a>Depurar una tarea en segundo plano
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 -   [Windows.ApplicationModel.Background](https://msdn.microsoft.com/library/windows/apps/br224847)
@@ -42,7 +49,7 @@ Las tareas en segundo plano se pueden desencadenar manualmente mediante Microsof
     Para que esto funcione, la tarea en segundo plano ya debe estar registrada y debe seguir esperando el desencadenador. Por ejemplo, si una tarea en segundo plano se registró con TimeTrigger y ese desencadenador ya está activado, iniciar la tarea a través de Visual Studio no tendrá efecto.
 
 > [!Note]
-> Las tareas en segundo plano que usen los siguientes desencadenadores no se pueden activar de esta manera: [**ApplicationTrigger**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.applicationtrigger.aspx), [**MediaProcessingTrigger**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.mediaprocessingtrigger.aspx), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) y las tareas en segundo plano que usen un [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) con el tipo de desencadenador [**SmsReceived**](https://msdn.microsoft.com/library/windows/apps/br224839).  
+> Las tareas en segundo plano que usen los siguientes desencadenadores no se pueden activar de esta manera: [**ApplicationTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.applicationtrigger.aspx), [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.mediaprocessingtrigger.aspx), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) y las tareas en segundo plano que usen un [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) con el tipo de desencadenador [**SmsReceived**](https://msdn.microsoft.com/library/windows/apps/br224839).  
 > **ApplicationTrigger** y **MediaProcessingTrigger** se pueden señalar manualmente en el código con `trigger.RequestAsync()`.     
 
     ![debugging background tasks](images/debugging-activation.png)
@@ -113,9 +120,4 @@ Para obtener más información acerca de cómo usar VS para depurar una tarea en
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

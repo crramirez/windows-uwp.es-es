@@ -3,14 +3,21 @@ author: Jwmsft
 ms.assetid: 0C8DEE75-FB7B-4E59-81E3-55F8D65CD982
 title: "Información general sobre animaciones"
 description: "Usa las animaciones de la Biblioteca de animaciones de Windows Runtime para integrar el aspecto de Windows en la aplicación."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 2a08d1def7c4d2fde0ae08eb26076526058e8aae
-ms.openlocfilehash: e3e21c55ea8ddeab0969e304080394b940da010d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8f7e56f1bca5ecea6078dd70840d083eab6e30dd
+ms.lasthandoff: 02/07/2017
 
 ---
-# <a name="animations-overview"></a>Información general sobre animaciones
+# <a name="animations-overview"></a>Introducción a las animaciones
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Las animaciones en Windows Runtime pueden mejorar tu aplicación al incorporar movimiento e interactividad. El uso de animaciones de la biblioteca de animaciones de Windows Runtime te permitirá integrar la apariencia de Windows en tu aplicación. En este tema, se ofrece un resumen de las animaciones y algunos ejemplos de escenarios comunes en los que se usa cada una.
@@ -380,10 +387,5 @@ El área más grande de la definición de la interfaz de usuario de la aplicaci�
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

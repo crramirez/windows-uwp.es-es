@@ -3,15 +3,22 @@ author: jnHs
 Description: "El informe de comentarios del panel del Centro de desarrollo de Windows te permite ver los problemas, sugerencias y votos a favor que los clientes de Windows 10 han enviado a través del Centro de opiniones."
 title: Informe de comentarios
 ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 70020d3c6e0fb0fea321ce1951720803fd25f9c0
-ms.openlocfilehash: e6266ff7c45a49b3eece8ffaf3d0603d55a04761
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 91ca9a29609cd52db24ddddecf60307e808cc064
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Informe de comentarios
+# <a name="feedback-report"></a>Informe de comentarios
 
-El informe **Comentarios** del panel del Centro de desarrollo de Windows te permite ver los problemas, sugerencias y votos a favor que los clientes de Windows 10 han enviado a través del Centro de opiniones. Puedes visualizar estos datos en tu panel o exportarlos para consultarlos sin conexión.
+El **informe de comentarios** del panel del Centro de desarrollo de Windows te permite ver los problemas, sugerencias y votos a favor que los clientes de Windows 10 han enviado a través del Centro de opiniones. Puedes visualizar estos datos en tu panel o exportarlos para consultarlos sin conexión.
 
 Animar a los clientes a que envíen comentarios sobre la aplicación es una excelente manera de obtener información sobre los problemas y las características que más les importan. Cuando los clientes saben que pueden enviar comentarios directamente, es menos probable que dejen comentarios con una revisión negativa.
 
@@ -21,7 +28,7 @@ Puedes usar la API de comentarios de [Microsoft Store Services SDK](http://aka.m
 
 > **Sugerencia** Los comentarios son especialmente útiles si usas un [paquete piloto](package-flights.md), ya que el informe de comentarios te mostrará el paquete específico que cada cliente tenía instalado en su dispositivo en el momento de enviar los comentarios.
 
-## Ver los detalles de informes
+## <a name="viewing-feedback-details"></a>Ver los detalles de informes
 
 En la sección **Detalles** de este informe, encontrarás los comentarios individuales que dejaron los clientes. En la parte izquierda del texto de comentarios, verás el número de veces que otros clientes han votado a favor de los comentarios en el Centro de opiniones. Puedes ordenar los comentarios de tres formas:
 
@@ -32,7 +39,7 @@ En la sección **Detalles** de este informe, encontrarás los comentarios indivi
 Junto a cada comentario, verás la fecha en que se envió el comentario y el tipo de comentario. También verás ver el mercado del cliente, el paquete específico de la aplicación instalado en el dispositivo en el momento de enviar los comentarios, el tipo de dispositivo y **Windows Insider**, si el cliente que envía los comentarios es miembro del Programa Windows Insider.
 
 
-## Aplicar filtros
+## <a name="apply-filters"></a>Aplicar filtros
 
 Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** para filtrar todos los datos de esta página.
 
@@ -45,18 +52,13 @@ Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** pa
 - **Mercado**: el valor predeterminado es **Todos los mercados**. Puedes elegir uno determinado para mostrar solo los comentarios de los clientes de ese mercado.
 - **Grupo**: el valor predeterminado es **Todos**. Puedes optar por ver solo los comentarios enviados por [usuarios de Windows Insider](http://insider.windows.com).
 
-## Comentarios sobre traducciones
+## <a name="translating-feedback"></a>Comentarios sobre traducciones
 
 De manera predeterminada, se traducen las críticas que no se escribieron en tu idioma preferido. Si lo prefieres, para deshabilitar la traducción de los comentarios, desactiva la casilla **Traducir críticas** situada en la esquina superior derecha, encima de la lista de comentarios.
 
 Ten en cuenta que los comentarios los traduce un sistema de traducción automática y que la traducción resultante no siempre será precisa. Se te proporciona el texto original por si quieres compararlo con la traducción o traducirlo por otros medios.
 
-## Iniciar Centro de opiniones directamente desde la aplicación
+## <a name="launching-feedback-hub-directly-from-your-app"></a>Iniciar Centro de opiniones directamente desde la aplicación
 
 Como se mencionó anteriormente, te recomendamos que incorpores un vínculo al Centro de opiniones directamente en tu aplicación para animar a los clientes a que envíen comentarios. Para obtener más información, consulta [Launch Feedback Hub from your app (Iniciar el Centro de opiniones desde la aplicación)](../monetize/launch-feedback-hub-from-your-app.md).
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

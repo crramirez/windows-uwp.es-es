@@ -1,16 +1,23 @@
 ---
 author: GrantMeStrength
 ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
-title: Create a "Hello, world" app (JS)
-description: "Este tutorial te enseña a usar JavaScript y HTML para crear una aplicación sencilla Hello, world para la Plataforma universal de Windows (UWP) en Windows 10."
+title: "Crear una aplicación Hello, world (JS)"
+description: "Este tutorial te enseña a usar JavaScript y HTML para crear una aplicación sencilla Hello, world para la Plataforma universal de Windows (UWP) en Windows 10."
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4aea3d31bad97fa0933e1274c037a4bb8d81bb
-ms.openlocfilehash: ad34b1bc62abf6c93f5124e774ad374f5b767f2c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 915f77e308d6384aa539f78cc307842dd51cd9f4
+ms.lasthandoff: 02/07/2017
 
 ---
-# <a name="create-a-hello-world-app-js"></a>Crear una aplicación "Hello, world" (JS)
+# <a name="create-a-hello-world-app-js"></a>Crear una aplicación Hello, world (JS)
 
-Este tutorial te enseña a usar JavaScript y HTML para crear una aplicación sencilla "Hello, world" para la Plataforma universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puedes compilar una aplicación que se ejecute en cualquier dispositivo de Windows 10.
+Este tutorial te enseña a usar JavaScript y HTML para crear una aplicación sencilla "Hello, world" para la Plataforma universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puedes compilar una aplicación que se ejecute en cualquier dispositivo de Windows 10.
 
 Aquí aprenderás a:
 
@@ -493,10 +500,5 @@ Si agregas el código a una función "completed" y la pasas al método **then** 
 
 Enhorabuena, has creado tu primera aplicación para Windows 10 y la UWP con JavaScript y HTML.
 
-A continuación Los documentos de [WinJS](https://developer.microsoft.com/en-us/windows/develop/winjs) te ayudarán a trabajar con la Biblioteca de Windows para JavaScript.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
+A continuación Los documentos de [WinJS](https://developer.microsoft.com/windows/develop/winjs) te ayudarán a trabajar con la Biblioteca de Windows para JavaScript o salta directamente a los [pasos siguientes](learn-more.md).
 

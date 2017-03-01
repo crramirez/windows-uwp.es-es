@@ -3,16 +3,23 @@ author: mtoepke
 title: Dibujar en la pantalla
 description: "Por fin hemos portado el código que dibuja un cubo giratorio en la pantalla."
 ms.assetid: cc681548-f694-f613-a19d-1525a184d4ab
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, juegos, games, directx, gráficos, graphics"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1e2039743ba45d577c08c0a6d9c17c7f923b2d86
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1fe28d17aa8c943de9a2bcf6c2230237e0c931d0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Dibujar en la pantalla
+# <a name="draw-to-the-screen"></a>Dibujar en la pantalla
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -66,9 +73,9 @@ La inicialización y la configuración del dispositivo Direct3D, el contexto del
 
 Para obtener más información sobre el contexto del dispositivo Direct3D en relación con EGL y el tipo EGLContext, puedes leer [Portar el código EGL a DXGI y Direct3D](moving-from-egl-to-dxgi.md).
 
-## Instrucciones
+## <a name="instructions"></a>Instrucciones
 
-### Paso 1: representar la escena y mostrarla
+### <a name="step-1-rendering-the-scene-and-displaying-it"></a>Paso 1: representar la escena y mostrarla
 
 Después de actualizar los datos del cubo (en este caso, al girarlo levemente alrededor del eje y), el método Render establece la ventanilla en las dimensiones del contexto de dibujo (un elemento EGLContext). Este contexto contiene el búfer de color que se mostrará en la superficie de la ventana (un EGLSurface), usando la pantalla configurada (EGLDisplay). Esta vez el ejemplo actualiza los atributos de datos de vértice, reenlaza el búfer de índices, dibuja el cubo y realiza el intercambio en el búfer de color dibujado por la canalización de sombreado en la superficie de pantalla.
 
@@ -195,16 +202,16 @@ void RenderObject::Render()
 
 Una vez realizada la llamada a [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797), el marco aparece en la pantalla configurada.
 
-## Paso anterior
+## <a name="previous-step"></a>Paso anterior
 
 
 [Portar GLSL](port-the-glsl.md)
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 Este ejemplo pasa por alto gran parte de la complejidad que implica configurar los recursos del dispositivo, en especial aplicaciones DirectX para la Plataforma universal de Windows (UWP). Sugerimos que revises el código completo de la plantilla, sobre todo las partes encargadas de la administración y configuración de recursos de dispositivo y ventana. Las aplicaciones para UWP tienen que admitir tanto eventos de rotación como eventos de suspensión y reanudación. Asimismo, la plantilla muestra los procedimientos recomendados para controlar la pérdida de una interfaz o un cambio en los parámetros de la pantalla.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Portar un representador simple de OpenGL ES 2.0 a Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
@@ -218,10 +225,5 @@ Este ejemplo pasa por alto gran parte de la complejidad que implica configurar l
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

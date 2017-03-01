@@ -3,16 +3,23 @@ author: mtoepke
 title: Interoperabilidad de DirectX y XAML
 description: Puedes usar el lenguaje XAML y Microsoft DirectX juntos en tu juego para la Plataforma universal de Windows (UWP).
 ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, juegos, games, directx, interoperabilidad de xaml, xaml interop
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 167709c7ba3470c144924801cb8cf18ffa544c5d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6934ac8bfbff487e57d0097cb129faf853a3eb9f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Interoperabilidad de DirectX y XAML
+# <a name="directx-and-xaml-interop"></a>Interoperabilidad de DirectX y XAML
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Puedes usar el lenguaje XAML y Microsoft DirectX juntos en tu juego para la Plataforma universal de Windows (UWP). La combinación de XAML y DirectX te permite crear marcos de interfaz de usuario flexibles que interoperan con el contenido representado en DirectX; además, es especialmente útil para aplicaciones que hacen un uso intensivo de los elementos gráficos. En este tema explicamos la estructura de una aplicación para UWP que usa DirectX y enumeramos los tipos importantes que se deben usar al generar una aplicación para UWP de modo que funcione con DirectX.
 
@@ -22,9 +29,9 @@ Si la aplicación se centra principalmente en la representación 2D, es aconseja
 
  
 
-## XAML y DirectX
+## <a name="xaml-and-directx"></a>XAML y DirectX
 
-DirectX proporciona dos bibliotecas muy eficaces para gráficos 2D y 3D: Direct2D y MicrosoftDirect3D. Aunque XAML proporciona compatibilidad con primitivas y efectos 2D, muchas aplicaciones (como las de modelado o los juegos) necesitan funcionalidades gráficas más complejas. En estas aplicaciones, puedes usar Direct2D y Direct3D para representar una parte, o la totalidad, de los elementos gráficos y emplear XAML para todo lo demás.
+DirectX proporciona dos bibliotecas muy eficaces para gráficos 2D y 3D: Direct2D y Microsoft Direct3D. Aunque XAML proporciona compatibilidad con primitivas y efectos 2D, muchas aplicaciones (como las de modelado o los juegos) necesitan funcionalidades gráficas más complejas. En estas aplicaciones, puedes usar Direct2D y Direct3D para representar una parte, o la totalidad, de los elementos gráficos y emplear XAML para todo lo demás.
 
 Si vas a implementar interoperabilidad entre XAML y DirectX personalizada, debes conocer estos dos conceptos:
 
@@ -39,9 +46,9 @@ Una vez que hayas determinado cómo quieres usar DirectX, usarás uno de estos t
 
 -   Si la imagen es más grande que el estado real de la pantalla proporcionada y el usuario puede realizar una panorámica o acercar o alejar la imagen, usa [**Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). Este tipo controla una superficie de dibujo de DirectX de un tamaño definido que es mayor que el de la pantalla. Tal como sucede con [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041), usarás este tipo dinámicamente al componer una imagen o control complejos. Asimismo, al igual que **SurfaceImageSource**, este tipo no funciona bien en juegos de alto rendimiento. Algunos ejemplos de elementos XAML que pueden usar un tipo **VirtualSurfaceImageSource**, son los controles de mapa o un visor de documentos con imágenes grandes o de alta densidad.
 
--   Si usas DirectX para presentar gráficos actualizados en tiempo real o en una situación en la que las actualizaciones deben llegar en intervalos regulares de baja latencia, usa la clase [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) para poder actualizar los elementos gráficos sin tener que sincronizar el temporizador de actualizaciones del marco XAML. Este tipo te permite acceder a la cadena de intercambio del dispositivo gráfico ([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)) directamente y disponer XAML como una capa sobre el destino de la representación. Funciona muy bien en juegos y aplicaciones DirectX de pantalla completa que requieren una interfaz de usuario basada en XAML. Para usar este método debes ser bastante ducho en DirectX, incluidas las tecnologías Infraestructura de gráficos de MicrosoftDirectX (DXGI), Direct2D y Direct3D. Para obtener más información, consulta [Programming Guide for Direct3D 11 (Guía de programación para Direct3 11)](https://msdn.microsoft.com/library/windows/desktop/ff476345).
+-   Si usas DirectX para presentar gráficos actualizados en tiempo real o en una situación en la que las actualizaciones deben llegar en intervalos regulares de baja latencia, usa la clase [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) para poder actualizar los elementos gráficos sin tener que sincronizar el temporizador de actualizaciones del marco XAML. Este tipo te permite acceder a la cadena de intercambio del dispositivo gráfico ([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)) directamente y disponer XAML como una capa sobre el destino de la representación. Funciona muy bien en juegos y aplicaciones DirectX de pantalla completa que requieren una interfaz de usuario basada en XAML. Para usar este método debes ser bastante ducho en DirectX, incluidas las tecnologías Infraestructura de gráficos de Microsoft DirectX (DXGI), Direct2D y Direct3D. Para obtener más información, consulta [Programming Guide for Direct3D 11 (Guía de programación para Direct3 11)](https://msdn.microsoft.com/library/windows/desktop/ff476345).
 
-## SurfaceImageSource
+## <a name="surfaceimagesource"></a>SurfaceImageSource
 
 
 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) proporciona superficies compartidas de DirectX para dibujar en ellas y luego compone los fragmentos para crear el contenido de la aplicación.
@@ -124,7 +131,7 @@ El procedimiento básico para crear y actualizar un objeto [**SurfaceImageSource
 
  
 
-## VirtualSurfaceImageSource
+## <a name="virtualsurfaceimagesource"></a>VirtualSurfaceImageSource
 
 
 [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) extiende el elemento [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) cuando el contenido es potencialmente superior al espacio en pantalla, por lo que hay que virtualizar el contenido para representarlo de forma óptima.
@@ -256,7 +263,7 @@ A continuación encontrarás el procedimiento básico para crear y actualizar un
 
     3.  Llama a [**IVirtualSurfaceImageSourceNative::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848324). El resultado es un mapa de bits.
 
-## SwapChainPanel y juegos
+## <a name="swapchainpanel-and-gaming"></a>SwapChainPanel y juegos
 
 
 [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) es el tipo de Windows Runtime diseñado para permitir elementos gráficos y juegos de alto rendimiento en los que puedes administrar la cadena de intercambio directamente. En este caso, puedes crear tu propia cadena de intercambio de DirectX y administrar la presentación del contenido representado.
@@ -353,7 +360,7 @@ El procedimiento básico para crear y actualizar un objeto [**SwapChainPanel**](
 
     Los elementos XAML se actualizan cuando el diseño o la lógica de representación de Windows Runtime envían una señal de actualización.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [**Win2D**](http://microsoft.github.io/Win2D/html/Introduction.htm)
 * [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)
@@ -368,10 +375,5 @@ El procedimiento básico para crear y actualizar un objeto [**SwapChainPanel**](
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

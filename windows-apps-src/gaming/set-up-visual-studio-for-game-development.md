@@ -3,16 +3,23 @@ author: mtoepke
 title: "Herramientas de Visual Studio para programación de juegos"
 description: "Aquí encontrarás información general acerca de las herramientas específicas de DirectX disponibles en Visual Studio."
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp, juegos, visual studio, herramientas, directx
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 59fe007601d16f6586ec52c0026e161ad6350a1e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5f5c1ef45dd476565d302ef10f8d47ab2b819993
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Herramientas de Visual Studio para la programación de juegos
+# <a name="visual-studio-tools-for-game-programming"></a>Herramientas de Visual Studio para la programación de juegos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumen**
 
@@ -24,7 +31,7 @@ Si usas Visual Studio Ultimate para desarrollar aplicaciones de DirectX, hay her
 
 En este tema encontrarás una introducción a estas herramientas de gráficos.
 
-## Editor de imágenes
+## <a name="image-editor"></a>Editor de imágenes
 
 
 Usa el Editor de imágenes para trabajar con los tipos de textura enriquecida y formatos de imagen que DirectX usa. El Editor de imágenes admite los siguientes formatos:
@@ -38,7 +45,7 @@ Usa el Editor de imágenes para trabajar con los tipos de textura enriquecida y 
 -   .tif, .tiff
 -   .tga
 
-Crea [archivos de personalizaciones de compilación](#custom) para convertir estos formatos en archivos .dds durante la compilación.
+Crea [archivos de personalizaciones de compilación](#build-customizations-for-3d-assets) para convertir estos formatos en archivos .dds durante la compilación.
 
 Para obtener más información, consulta [Trabajar con texturas e imágenes](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
@@ -46,10 +53,10 @@ Para obtener más información, consulta [Trabajar con texturas e imágenes](htt
 
  
 
-## Editor de modelos
+## <a name="model-editor"></a>Editor de modelos
 
 
-Puedes usar el Editor de modelos para crear modelos básicos 3D desde cero, o para ver y modificar modelos 3D más complejos en herramientas de modelos 3D completas. El Editor de modelos admite varios formatos de modelos 3D que se usan en el desarrollo de aplicaciones DirectX. Puedes crear [archivos de personalizaciones de compilación](#custom) para convertir estos formatos en archivos .cmo durante la compilación.
+Puedes usar el Editor de modelos para crear modelos básicos 3D desde cero, o para ver y modificar modelos 3D más complejos en herramientas de modelos 3D completas. El Editor de modelos admite varios formatos de modelos 3D que se usan en el desarrollo de aplicaciones DirectX. Puedes crear [archivos de personalizaciones de compilación](#build-customizations-for-3d-assets) para convertir estos formatos en archivos .cmo durante la compilación.
 
 -   .fbx
 -   .dae
@@ -65,7 +72,7 @@ Para obtener más información, consulta [Trabajar con modelos 3D](https://msdn.
 
  
 
-## Diseñador de sombras
+## <a name="shader-designer"></a>Diseñador de sombras
 
 
 Usa el Diseñador de sombras para crear efectos visuales personalizados para tu juego o aplicación, aun cuando no sepas programar en HLSL.
@@ -80,7 +87,7 @@ Usa el Editor de sombras para diseñar, editar y guardar sombreadores en el form
 -   .cso (código de bytes)
 -   .h (matriz de código de bytes HLSL)
 
-Crea [archivos de personalizaciones de compilación](#custom) para convertir estos formatos en archivos .cso durante la compilación.
+Crea [archivos de personalizaciones de compilación](#build-customizations-for-3d-assets) para convertir estos formatos en archivos .cso durante la compilación.
 
 Esta es una parte del código HLSL que el Editor de sombras exporta. Este solo es el código para el nodo de iluminación Lambert.
 
@@ -108,7 +115,7 @@ float3 LambertLighting(
 
 Para obtener más información, consulta [Trabajar con sombreadores](https://msdn.microsoft.com/library/windows/apps/hh873117.aspx).
 
-## Personalizaciones de compilación para activos 3D
+## <a name="build-customizations-for-3d-assets"></a>Personalizaciones de compilación para activos 3D
 
 
 Puedes agregar personalizaciones de compilación a tu proyecto para que Visual Studio convierta recursos en formatos utilizables. A continuación, puedes cargar los activos en tu aplicación y usarlos al crear y llenar recursos de DirectX tal como lo harías en cualquier otra aplicación de DirectX.
@@ -121,7 +128,7 @@ Para agregar una personalización de compilación, haz clic con el botón secund
 
 Para obtener más información, consulta [Usar activos 3D en el juego o aplicación](https://msdn.microsoft.com/library/windows/apps/hh972446.aspx).
 
-## Depurar gráficos DirectX 
+## <a name="debugging-directx-graphics"></a>Depurar gráficos DirectX 
 
 
 Visual Studio proporciona herramientas de depuración específicas para gráficos. Usa estas herramientas para depurar cosas como estas:
@@ -148,10 +155,5 @@ Para obtener más información, consulta [Depurar gráficos DirectX](https://msd
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

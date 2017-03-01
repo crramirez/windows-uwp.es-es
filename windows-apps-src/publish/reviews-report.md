@@ -3,13 +3,20 @@ author: jnHs
 Description: "El informe Críticas del panel del Centro de desarrollo de Windows te permite ver los comentarios que los clientes proporcionaron al clasificar tu aplicación en la Tienda."
 title: "Informe Críticas"
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
-ms.openlocfilehash: b4667c5a3b2af76bc2ceea3013ffcf951909907a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 54666642e67581bebbb35049f7779086d23939a0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Informe Críticas
+# <a name="reviews-report"></a>Informe Críticas
 
 
 El informe **Críticas** del panel del Centro de desarrollo de Windows te permite ver los comentarios que los clientes proporcionaron al clasificar tu aplicación en la Tienda. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos siguiendo el método de [obtención de las opiniones de la aplicación](../monetize/get-app-reviews.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
@@ -33,7 +40,7 @@ Cada crítica del cliente contiene lo siguiente:
 
 > **Nota** Puede que, ocasionalmente, veas desaparecer opiniones de este informe. Esto puede ocurrir porque Microsoft quita opiniones de la Tienda que estén escritas por clientes que ejecutan ciertas compilaciones de Insider y versiones preliminares de Windows 10. Lo hacemos para reducir la posibilidad de que una opinión negativa que se deba a un problema en una compilación de una versión preliminar de Windows. También podremos eliminar opiniones de la Tienda que se hayan identificado como spam, inadecuadas, ofensivas o que infringían las directivas de otra forma. Esperamos que esta acción dé como resultado una mejor experiencia del cliente.
 
-## Aplicar filtros
+## <a name="apply-filters"></a>Aplicar filtros
 
 
 Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** para filtrar todos los datos de esta página.
@@ -55,19 +62,19 @@ La información contenida en todos los gráficos enumerados a continuación refl
 
 > **Nota** La clasificación media que un cliente ve en la Tienda tiene en cuenta el mercado y el tipo de dispositivo del cliente y considera las clasificaciones durante el último año. Por lo tanto, puede ser diferente de lo que aparece en este informe. Para ver cómo la clasificación media aparecerá en la Tienda para un cliente determinado, tendrás que aplicar filtros para seleccionar un mercado y tipo de dispositivo específicos, así como para establecer la opción **Fecha** en **Últimos 12 meses**.
 
-## Traducción de críticas
+## <a name="translating-reviews"></a>Traducción de críticas
 
 
 De manera predeterminada, se traducen las críticas que no se escribieron en tu idioma preferido. Si lo prefieres, la traducción de las críticas se puede deshabilitar desactivando la casilla **Traducir críticas** situada en la esquina superior derecha, encima de la lista de críticas.
 
 Ten en cuenta que las críticas las traduce un sistema de traducción automática y que la traducción resultante no siempre será precisa. Se te proporciona el texto original por si quieres compararlo con la traducción o traducirlo por otros medios.
 
-## Ordenación de críticas
+## <a name="sorting-reviews"></a>Ordenación de críticas
 
 
 Puedes ordenar las críticas de la página por fecha o por clasificación en orden ascendente o descendente. Haz clic en el vínculo **Ordenar por** para ver las opciones para ordenar por fecha o clasificación. Al hacer clic en un botón de radio en la sección de Clasificación o Fecha, se aplicarán los criterios de ordenación y verás la etiqueta de ordenación junto al encabezado **Ordenar por**. Puedes quitar por completo el criterio de ordenación haciendo clic en la **X** que aparece en cada etiqueta.
 
-## Responder a las críticas de los clientes
+## <a name="responding-to-customer-reviews"></a>Responder a las críticas de los clientes
 
 Puedes usar el panel del Centro de desarrollo de la Tienda Windows para enviar respuestas a muchas de las críticas de los clientes. Para más información, consulta [Responder a las críticas de los clientes](respond-to-customer-reviews.md).
 
@@ -82,9 +89,4 @@ Estas son algunas acciones adicionales que puedes considerar según las crítica
  
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

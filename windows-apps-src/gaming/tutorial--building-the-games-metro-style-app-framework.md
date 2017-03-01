@@ -3,30 +3,37 @@ author: mtoepke
 title: "Definir el marco de la aplicación para la Plataforma universal de Windows (UWP) del juego"
 description: La primera parte de codificar un juego de Plataforma universal de Windows (UWP) con DirectX es crear el marco que permite al objeto de juego interactuar con Windows.
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, UWP, juegos, games, DirectX
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9dea19c87c4049c73a938b1cd5576644f7b0f8b9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 82a44a3499297b3988815ad10091cd351a194cbd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-#  Definir el marco de la aplicación para la Plataforma universal de Windows (UWP) del juego
+#  <a name="define-the-games-universal-windows-platform-uwp-app-framework"></a>Definir el marco de la aplicación para la Plataforma universal de Windows (UWP) del juego
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 La primera parte de codificar un juego de Plataforma universal de Windows (UWP) con DirectX es crear el marco que permite al objeto de juego interactuar con Windows. Esto incluye propiedades de Windows Runtime como la suspensión o reanudación del control de eventos, el foco de la ventana y el acoplamiento, además de los eventos, interacciones y transiciones para la interfaz de usuario. Examinaremos cómo está estructurado el juego de muestra y cómo define la máquina de estados general para la interacción entre el jugador y el sistema.
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Configurar el marco de un juego DirectX de UWP e implementar la máquina de estados que define la experiencia de juego general.
 
-## Inicialización e inicio del proveedor de vista
+## <a name="initializing-and-starting-the-view-provider"></a>Inicialización e inicio del proveedor de vista
 
 
 En cualquier juego DirectX de UWP, debes obtener un proveedor de vista que el singleton de la aplicación, el objeto de Windows Runtime que define una instancia de tu aplicación en ejecución, puede usar para acceder a los recursos gráficos que necesita. A través de Windows Runtime, tu aplicación tiene conexión directa con la interfaz gráfica, pero debes especificar los recursos que necesitas y cómo controlarlos.
 
-Tal y como hablamos en [Configuración del proyecto de juego](tutorial--setting-up-the-games-infrastructure.md), Microsoft Visual Studio2015 proporciona una implementación de un representador básico para DirectX en el archivo **Sample3DSceneRenderer.cpp**, que está disponible cuando seleccionas la plantilla **DirectX 11 App (Universal Windows)** .
+Tal y como hablamos en [Configuración del proyecto de juego](tutorial--setting-up-the-games-infrastructure.md), Microsoft Visual Studio 2015 proporciona una implementación de un representador básico para DirectX en el archivo **Sample3DSceneRenderer.cpp**, que está disponible cuando seleccionas la plantilla **DirectX 11 App (Universal Windows)** .
 
 Para obtener más detalles para comprender y crear un proveedor de vista y un representador, consulta el tema sobre cómo [configurar una aplicación para UWP con C++ y DirectX para mostrar una vista DirectX](https://msdn.microsoft.com/library/windows/apps/hh465077).
 
@@ -38,7 +45,7 @@ Basta con decir que debes proporcionar la implementación para cinco métodos a 
 -   [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505)
 -   [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523)
 
-En la plantilla DirectX11 App (Universal Windows), estos 5 métodos se definen en el objeto **App** en [App.h](#code_sample). Veamos la forma en que están implementados en este juego.
+En la plantilla DirectX11 App (Universal Windows), estos 5 métodos se definen en el objeto **App** en [App.h](#complete-sample-code-for-this-section). Veamos la forma en que están implementados en este juego.
 
 El método Initialize del proveedor de vista
 
@@ -160,7 +167,7 @@ void App::Load(
 
 Una vez establecida la ventana principal, el singleton de la aplicación llama a **Load**. En la muestra, este método usa un conjunto de tareas asincrónicas (cuya sintaxis se define en la [biblioteca de modelos paralelos](https://msdn.microsoft.com/library/windows/apps/dd492418.aspx)) para crear objetos del juego, cargar recursos gráficos e inicializar la máquina de estados del juego. Al usar el modelo de tarea asincrónica, el método Load finaliza rápidamente y permite que la aplicación empiece a procesar entradas. En este método, la aplicación también muestra una barra de progreso mientras los archivos de recursos se cargan.
 
-Distinguimos dos fases dentro de la carga de recursos porque el acceso al contexto de dispositivo de Direct3D11 está limitado al subproceso en el que el contexto de dispositivo se creó, mientras que el acceso al dispositivo de Direct3D11 para crear objetos no está sujeto a ningún subproceso. La tarea **CreateGameDeviceResourcesAsync** se ejecuta en un subproceso distinto del de la tarea de finalización (*FinalizeCreateGameDeviceResources*), que se ejecuta en el subproceso original. Empleamos un modelo parecido para cargar los recursos de nivel con **LoadLevelAsync** y **FinalizeLoadLevel**.
+Distinguimos dos fases dentro de la carga de recursos porque el acceso al contexto de dispositivo de Direct3D 11 está limitado al subproceso en el que el contexto de dispositivo se creó, mientras que el acceso al dispositivo de Direct3D 11 para crear objetos no está sujeto a ningún subproceso. La tarea **CreateGameDeviceResourcesAsync** se ejecuta en un subproceso distinto del de la tarea de finalización (*FinalizeCreateGameDeviceResources*), que se ejecuta en el subproceso original. Empleamos un modelo parecido para cargar los recursos de nivel con **LoadLevelAsync** y **FinalizeLoadLevel**.
 
 Tras crear los objetos del juego y cargar los recursos gráficos, inicializamos la máquina de estado del juego en las condiciones de inicio (por ejemplo, definir la cantidad de munición inicial, el número de nivel y las posiciones de los objetos). Si el estado del juego indica que el jugador está reanudando un juego, cargamos el nivel actual (aquel en el que el jugador estaba cuando el juego se suspendió).
 
@@ -233,11 +240,11 @@ void App::Uninitialize()
 }
 ```
 
-En la muestra de juego, dejamos que el singleton de la aplicación del juego limpie todo una vez que el juego termine. En Windows10, cerrar la ventana de la aplicación no acaba con el proceso de la aplicación, sino que en su lugar se escribe en la memoria el estado del singleton de la aplicación. Si hay algo especial que debe ocurrir cuando el sistema tiene que reclamar su memoria, cualquier limpieza de recursos, pon el código de esa limpieza en este método.
+En la muestra de juego, dejamos que el singleton de la aplicación del juego limpie todo una vez que el juego termine. En Windows 10, cerrar la ventana de la aplicación no acaba con el proceso de la aplicación, sino que en su lugar se escribe en la memoria el estado del singleton de la aplicación. Si hay algo especial que debe ocurrir cuando el sistema tiene que reclamar su memoria, cualquier limpieza de recursos, pon el código de esa limpieza en este método.
 
 Volveremos a hacer referencia a estos 5 métodos en el tutorial, así que tenlos en cuenta. Ahora vamos a echar un vistazo a la estructura general del motor de juego y las máquinas de estado que la definen.
 
-## Inicialización del estado del motor de juego
+## <a name="initializing-the-game-engine-state"></a>Inicialización del estado del motor de juego
 
 
 Puesto que un usuario puede reanudar una aplicación de juego de UWP desde el estado suspendido en cualquier momento, la aplicación puede tener cualquier número de estados posibles.
@@ -289,12 +296,12 @@ Dependiendo del estado, al jugador se le presentan distintas opciones. Si el jue
 
 La muestra del juego no distingue entre que el propio juego se inicie en frío, es decir, que el juego se inicia por primera vez sin un evento de suspensión, y que el juego se reanude desde un estado suspendido. Este diseño es el adecuado para cualquier aplicación para UWP.
 
-## Control de eventos
+## <a name="handling-events"></a>Control de eventos
 
 
 Nuestro código de muestra registró varios controladores para eventos específicos en **Initialize**, **SetWindow** y **Load**. Probablemente hayas adivinado que eran eventos importantes, porque la muestra de código realizó este trabajo antes de empezar con cualquier mecánica de juego o desarrollo de gráficos. Estabas en lo cierto. Estos eventos son fundamentales para lograr la experiencia adecuada con una aplicación para UWP. Dado que una aplicación para UWP se puede activar, desactivar, cambiar de tamaño, acoplar, desacoplar, suspender o reanudar en cualquier momento, el juego debe registrar esos mismos eventos tan pronto como pueda y controlarlos de modo que el jugador disfrute de una experiencia predecible y sin interrupciones.
 
-A continuación tienes una lista de los controladores de eventos de la muestra y los eventos que controlan. Puedes ver el código completo para estos controladores de eventos en el [código completo para esta sección](#code_sample).
+A continuación tienes una lista de los controladores de eventos de la muestra y los eventos que controlan. Puedes ver el código completo para estos controladores de eventos en el [código completo para esta sección](#complete-sample-code-for-this-section).
 
 <table>
 <colgroup>
@@ -353,7 +360,7 @@ A continuación tienes una lista de los controladores de eventos de la muestra y
 
 Tu propio juego debe controlar estos eventos, porque forman parte del diseño de una aplicación para UWP.
 
-## Actualización del motor de juego
+## <a name="updating-the-game-engine"></a>Actualización del motor de juego
 
 
 Dentro del bucle de juego en **Run**, la muestra ha implementado una máquina de estado básica para controlar las principales acciones que puede llevar a cabo un jugador. En el nivel más general, la máquina de estado se encarga de cargar un juego, jugar un nivel específico o continuar un nivel después de que el juego se haya pausado (por el sistema o el jugador).
@@ -364,7 +371,7 @@ En la muestra de juego, el juego puede encontrarse en 3 estados principales (Upd
 -   **Waiting for press**. El bucle del juego está ciclando, esperando a la entrada específica del usuario. Esta entrada es una acción del jugador para cargar un juego, iniciar un nivel o continuar un nivel. El código de muestra se refiere a estos subestados como valores de enumeración PressResultState.
 -   **Dynamics**. El bucle del juego se está ejecutando mientras el usuario juega. Cuando el usuario está jugando, el juego comprueba las 3 condiciones con las que puede realizar una transición: que se acabe el tiempo establecido para un nivel, que el jugador complete un nivel o que el jugador complete todos los niveles.
 
-Aquí podemos ver la estructura del código. El código completo se encuentra en el [código completo para esta sección](#code_sample).
+Aquí podemos ver la estructura del código. El código completo se encuentra en el [código completo para esta sección](#complete-sample-code-for-this-section).
 
 La estructura de la máquina de estado usada para actualizar el motor de juego
 
@@ -473,7 +480,7 @@ Hablamos con más detalle de la propia lógica del juego en el tema de [definici
 
 Por supuesto, como has visto, existen máquinas de estado dentro de otras máquinas de estado. Hay una para el controlador, que controla todas las entradas aceptables que puede generar el jugador. En el diagrama, una presión es alguna forma de entrada de usuario. A esta máquina de estado no le preocupa qué es, porque funciona a nivel general; da por sentando que la máquina de estado para el controlador se ocupará de cualquier transición que afecte al movimiento y al comportamiento de los disparos, así como de las actualizaciones de la representación asociadas. Hablamos de la administración de los estados de entrada en el tema sobre cómo [agregar controles](tutorial--adding-controls.md).
 
-## Actualización de la interfaz de usuario
+## <a name="updating-the-user-interface"></a>Actualización de la interfaz de usuario
 
 
 Asimismo, debemos mantener informado al usuario del estado del sistema y permitirle cambiar el estado general de acuerdo con las reglas del juego. En la mayoría de los juegos, incluida esta muestra de juego, esto se hace mediante una pantalla de visualización frontal que contiene representaciones del estado del juego y otra información específica del juego, como la puntuación, la munición o el número de oportunidades restantes. A esto lo llamamos superposición, porque se representa independientemente de la canalización de gráfica principal y se coloca encima de la proyección en 3D. En el juego de muestra, creamos esta superposición con las API de Direct2D. También podemos crearla usando XAML, como se explica en el tema sobre cómo [extender la muestra de juego](tutorial-resources.md).
@@ -525,14 +532,14 @@ Hay seis pantallas de estado que la superposición muestra en función del estad
 
 Separar la interfaz de usuario de la canalización gráfica del juego te permite trabajar en ella con independencia del motor de representación gráfica del juego y reduce significativamente la complejidad del código del juego.
 
-## Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 
 Hemos cubierto aquí la estructura básica de la muestra de juego y hemos presentado un buen modelo para el desarrollo de aplicaciones de juego para UWP con DirectX. Obviamente, esto es solo el principio, únicamente hemos visto el esqueleto del juego. Echemos ahora un vistazo en profundidad al juego y sus mecánicas, y cómo dichas mecánicas se implementan como el objeto de juego principal. Revisamos esa parte en el tema de la [definición del objeto de juego principal](tutorial--defining-the-main-game-loop.md).
 
 También es el momento de considerar el motor gráfico del juego de muestra con más detalle. Esa parte se analiza en el tema sobre cómo [ensamblar la canalización de representación](tutorial--assembling-the-rendering-pipeline.md).
 
-## Código de muestra completo para esta sección
+## <a name="complete-sample-code-for-this-section"></a>Código de muestra completo para esta sección
 
 
 App.h
@@ -1423,10 +1430,5 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

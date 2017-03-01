@@ -3,14 +3,21 @@ author: scottmill
 ms.assetid: 03dd256f-78c0-e1b1-3d9f-7b3afab29b2f
 title: "Pinceles de composición"
 description: "Un pincel pinta el área de un objeto Visual con su salida. Distintos pinceles tienen tipos de salida diferentes."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 11989aafb86d280b93eed7c2e3f016b5914b15ab
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9affb4fab1931c7584d86bfb07797345788c28f9
+ms.lasthandoff: 02/07/2017
 
 ---
-# Pinceles de composición
+# <a name="composition-brushes"></a>Pinceles de composición
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Un pincel pinta el área de un objeto [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) con su salida. Distintos pinceles tienen tipos de salida diferentes. La API de composición proporciona tres tipos de pincel:
 
@@ -27,19 +34,19 @@ Todos los pinceles heredan del objeto [**CompositionBrush**](https://msdn.micros
 -   [Usar el pincel de superficie](./composition-brushes.md#using-surface-brush)
 -   [Configurar los objetos Stretch y Alignment](./composition-brushes.md#configuring-stretch-and-alignment)
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 En esta introducción se supone que estás familiarizado con la estructura de una aplicación de composición básica, tal como se describe en [Interfaz de usuario de composición](visual-layer.md).
 
-## Conceptos básicos de color
+## <a name="color-basics"></a>Conceptos básicos de color
 
 Antes de dibujar con un objeto [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399), tienes que elegir los colores. La API de composición usa la estructura de Windows Runtime, Color, para representar un color. La estructura Color usa la codificación sRGB. La codificación sRGB divide los colores en cuatro canales: alfa, rojo, verde y azul. Cada componente se representa mediante un valor de punto flotante con un intervalo normal de 0,0 a 1,0. Un valor de 0,0 indica la ausencia completa de ese color, mientras que un valor de 1,0 indica que el color está completamente presente. Para el componente alfa, 0,0 representa un color completamente transparente y 1,0 representa un color totalmente opaco.
 
-### Modos alfa
+### <a name="alpha-modes"></a>Modos alfa
 
 Los valores de color de [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) siempre se interpretan como alfa convencional.
 
-## Usar un pincel de color
+## <a name="using-color-brush"></a>Usar un pincel de color
 
 Para crear un pincel de color, llama al método Compositor.[**CreateColorBrush**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositor.createcolorbrush.aspx), que devuelve un objeto [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399). El color predeterminado de **CompositionColorBrush** es \#00000000. En la siguiente ilustración y código se muestra un pequeño árbol visual para crear un rectángulo que se traza en un pincel de color negro y se dibuja con un pincel de color sólido con el valor de color 0x9ACD32.
 
@@ -68,7 +75,7 @@ Visual2.Offset = new Vector3(3, 3, 0);
 
 A diferencia de otros pinceles, crear un objeto [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) es una operación relativamente económica. Puedes crear objetos **CompositionColorBrush** cada vez que representes contenido, con poco o ningún impacto en el rendimiento.
 
-## Usar el pincel de superficie
+## <a name="using-surface-brush"></a>Usar el pincel de superficie
 
 Un objeto [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) pinta un elemento visual con una superficie de composición (representada por un objeto [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819)). En la siguiente ilustración se muestra un cuadrado visual pintado con un mapa de bits de color orozuz representado en un objeto **ICompositionSurface** con D2D.
 
@@ -92,7 +99,7 @@ LoadImage(_surfaceBrush, "ms-appx:///Assets/liqorice.png");
 visual.Brush = _surfaceBrush;
 ```
 
-## Configurar los objetos Stretch y Alignment
+## <a name="configuring-stretch-and-alignment"></a>Configurar los objetos Stretch y Alignment
 
 A veces, el contenido del objeto [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) de un objeto [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) no rellena completamente las áreas del elemento visual que se está dibujando. Cuando esto sucede, la API de composición usa el pincel la configuración de modo [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) y [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) para determinar cómo rellenar el área restante.
 
@@ -109,14 +116,10 @@ A veces, el contenido del objeto [**ICompositionSurface**](https://msdn.microsof
 
  
 
- 
+## <a name="related-topics"></a>Temas relacionados
+[Interoperación DirectX y Direct2D nativa de composición con BeginDraw y EndDraw](composition-native-interop.md)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

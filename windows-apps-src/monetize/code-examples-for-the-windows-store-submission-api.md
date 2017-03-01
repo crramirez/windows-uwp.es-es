@@ -3,19 +3,26 @@ author: mcleanbyron
 ms.assetid: 14C23FE6-3EAF-445E-85C1-DF188A7822CA
 description: "Usa los ejemplos de código de esta sección para obtener más información sobre cómo usar la API de envío de la Tienda Windows."
 title: "Ejemplos de código para la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, API de envío de la Tienda Windows, ejemplos de código"
 translationtype: Human Translation
-ms.sourcegitcommit: 841a6aeaf0a7ecfd49cda0f519ba2c297f91af92
-ms.openlocfilehash: df29d34b7e1b4b4e2ee715ecc013758df65fc9c3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 44dd7cbf39825c47783886d12b116bf99a6630e8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Ejemplos de código para la API de envío de la Tienda Windows
+# <a name="code-examples-for-the-windows-store-submission-api"></a>Ejemplos de código para la API de envío de la Tienda Windows
 
-En esta sección se proporcionan ejemplos de código para usar la *API de envío de la Tienda Windows* en varios lenguajes de programación diferentes. 
+En esta sección se proporcionan ejemplos de código para usar la *API de envío de la Tienda Windows* en varios lenguajes de programación diferentes.
 
-Usa la API de envío de la Tienda Windows para efectuar consultas mediante programación y crear envíos para aplicaciones, complementos y paquetes piloto para tu cuenta del Centro de desarrollo de Windows o la de tu organización. Esta API es útil si tu cuenta administra muchas aplicaciones o complementos, y quieres automatizar y optimizar el proceso de envío para estos activos. Para obtener más información sobre esta API, consulta [Creación y administración de envíos con el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
+>**Nota**&nbsp;&nbsp;Además de los ejemplos de código mencionados a continuación, también proporcionamos un módulo de PowerShell de código abierto que implementa una interfaz de línea de comandos en la parte superior de la API de envío de la Tienda Windows. Este módulo se denomina [StoreBroker](https://aka.ms/storebroker). Puedes usar este módulo para administrar tus envíos de aplicaciones, paquetes piloto y complementos desde la línea de comandos, en lugar de llamar directamente a la API de envío de la Tienda Windows o, simplemente, puedes examinar el origen para ver más ejemplos de cómo llamar a esta API. El módulo StoreBroker se usa activamente dentro de Microsoft como método principal para enviar muchas aplicaciones propias a la Tiendas. Para obtener más información, consulta nuestra [página de StoreBroker en GitHub](https://aka.ms/storebroker).
 
-## En esta sección
+## <a name="in-this-section"></a>En esta sección
 
 | Tema                                                                                                       | Descripción                 |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
@@ -23,12 +30,7 @@ Usa la API de envío de la Tienda Windows para efectuar consultas mediante progr
 | [Ejemplos de código de Java](java-code-examples-for-the-windows-store-submission-api.md) | Usa los ejemplos de código de Java de esta sección para obtener más información sobre cómo usar la API de envío de la Tienda Windows. |
 | [Ejemplos de código de Python](python-code-examples-for-the-windows-store-submission-api.md)  | Usa los ejemplos de código de Python de esta sección para obtener más información sobre cómo usar la API de envío de la Tienda Windows.  |
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Creación y administración de envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

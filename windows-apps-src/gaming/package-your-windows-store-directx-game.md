@@ -3,13 +3,20 @@ author: mtoepke
 title: Empaquetar los juegos DirectX para la Plataforma universal de Windows (UWP)
 description: "Los juegos para la Plataforma universal de Windows UWP de gran tamaño, especialmente aquellos que admiten varios idiomas con activos específicos de alguna región o activos de alta definición como característica opcional, pueden crecer hasta alcanzar tamaños considerables."
 ms.assetid: 68254203-c43c-684f-010a-9cfa13a32a77
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, games, juegos, DirectX, package, paquete
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: bc861d98563107b2c67e94281e79d97bed6dee9b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: db31338d908f4c18eaa6b5090b8cf35ac5305655
+ms.lasthandoff: 02/07/2017
 
 ---
 
-#  Empaquetar los juegos DirectX para la Plataforma universal de Windows (UWP)
+#  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Empaquetar los juegos DirectX para la Plataforma universal de Windows (UWP)
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -27,7 +34,7 @@ Si bien puedes colocar todo el contenido en tus paquetes de la aplicación, esto
 
 Para usar esta característica del instalador de aplicaciones para UWP, es importante que tengas en cuenta las convenciones de nomenclatura de archivos y el diseño del directorio, para empaquetar los recursos y las aplicaciones en una etapa temprana del desarrollo del juego, con el fin de que las herramientas y el origen puedan producirlos correctamente de forma que el empaquetado se realice con más facilidad. Sigue las reglas detalladas en este documento cuando desarrolles o configures la creación de activos y la administración de scripts y herramientas, y cuando crees código que se carga o recursos de referencia.
 
-## ¿Por qué crear paquetes de recursos?
+## <a name="why-create-resource-packs"></a>¿Por qué crear paquetes de recursos?
 
 
 Cuando creas una aplicación, en particular una aplicación de juegos que puede venderse en muchas configuraciones regionales o en una gran variedad de plataformas de hardware para UWP, a menudo necesitas incluir varias versiones de muchos archivos para que esas configuraciones regionales o plataformas sean compatibles. Por ejemplo, si estás lanzando tu juego tanto en los Estados Unidos como en Japón, probablemente necesites un conjunto de archivos de voz en Inglés para las configuraciones regionales de en-us y otro en japonés para la configuración regional jp-jp. O, si quieres usar una imagen en el juego para dispositivos de ARM, así como para plataformas de x86 y x64, debes cargar los mismos activos de imagen tres veces, una por cada arquitectura de CPU.
@@ -68,7 +75,7 @@ He aquí los siguientes nombres de directorio y prefijos de carácter de subraya
 
  
 
-## Definir paquetes de recursos de idiomas localizados
+## <a name="defining-localized-language-resource-packs"></a>Definir paquetes de recursos de idiomas localizados
 
 
 Los archivos específicos de la configuración regional se colocan en directorios de proyecto cuyo nombre es el idioma (por ejemplo, "en").
@@ -85,7 +92,7 @@ Cuando configures tu aplicación para admitir activos localizados para múltiple
 -   Usa las API en [**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022) y [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) para especificar y cargar los recursos específicos de la configuración regional de tu aplicación. De igual modo, usa referencias de activo que no incluyan una configuración regional específica, ya que estas API determinan la configuración regional adecuada según la configuración del usuario, para recuperar a continuación el recurso apropiado para dicho usuario.
 -   En Microsoft Visual Studio 2015, selecciona **PROYECTO->Tienda->Crear paquete de la aplicación...** y crea el paquete.
 
-## Definir paquetes de recursos de factor de escalado
+## <a name="defining-scaling-factor-resource-packs"></a>Definir paquetes de recursos de factor de escalado
 
 
 Windows 10 proporciona tres factores de escalado de la interfaz de usuario: 1.0x, 1.4x y 1.8x. Los valores de ajuste de escala de cada pantalla se establecen durante la instalación en función de una serie de factores combinados: el tamaño de la pantalla, la resolución de esta y el promedio de distancia asumida del usuario respecto de la pantalla. El usuario también puede ajustar los factores de escala para mejorar la legibilidad. El juego debe ser compatible con el reconocimiento de PPP y con el factor de escalado para que la experiencia sea la mejor posible. Parte de esta compatibilidad significa crear versiones de activos visuales críticos para cada uno de los tres factores de escalado. Esto también incluye interacción del puntero y prueba de acceso.
@@ -102,14 +109,14 @@ Cuando configures tu aplicación para que admita paquetes de recursos de diferen
 -   Usa las API en [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) para cargar los activos. Las referencias a activos deben ser generalizadas (sin sufijos) y dejar fuera la variación de escala específica. El sistema recuperará el activo de escala adecuado de acuerdo con la pantalla y la configuración de usuario.
 -   En Visual Studio 2015, selecciona **PROYECTO->Tienda->Crear paquete de la aplicación** y crea el paquete.
 
-## Definir paquetes de recursos de nivel de característica de DirectX
+## <a name="defining-directx-feature-level-resource-packs"></a>Definir paquetes de recursos de nivel de característica de DirectX
 
 
 Los niveles de características de DirectX corresponden a conjuntos de características de GPU para versiones anteriores o actuales de DirectX (específicamente, Direct3D). Estos incluyen funcionalidades y especificaciones de modelo de sombreador, compatibilidad con el idioma del sombreador, compatibilidad con la compresión de textura y características de canalización de gráficos generales.
 
 El paquete de la aplicación de línea base debe usar los formatos de compresión de textura de línea base: BC1, BC2 o BC3. Cualquier dispositivo para UWP puede usarlos: desde plataformas de ARM de gama baja hasta equipos multimedia y estaciones de trabajo de múltiples GPU exclusivas.
 
-La compatibilidad de formato de textura en el nivel de característica 10 o superior de DirectX debe agregarse a un paquete de recursos para conservar el ancho de banda de descarga y el espacio del disco local. Esto permite usar los esquemas de compresión más avanzados para11, como BC6H y BC7. (Para ver más detalles, consulta [Texture block compression in Direct3D 11 (Compresión de bloques de textura en Direct3D 11)](https://msdn.microsoft.com/library/windows/desktop/hh308955)). Estos formatos son más eficientes para los activos de textura de resolución alta admitidos por los GPU modernos y su uso mejora los requisitos de espacio, rendimiento y apariencia del juego en plataformas de gama alta.
+La compatibilidad de formato de textura en el nivel de característica 10 o superior de DirectX debe agregarse a un paquete de recursos para conservar el ancho de banda de descarga y el espacio del disco local. Esto permite usar los esquemas de compresión más avanzados para 11, como BC6H y BC7. (Para ver más detalles, consulta [Texture block compression in Direct3D 11 (Compresión de bloques de textura en Direct3D 11)](https://msdn.microsoft.com/library/windows/desktop/hh308955)). Estos formatos son más eficientes para los activos de textura de resolución alta admitidos por los GPU modernos y su uso mejora los requisitos de espacio, rendimiento y apariencia del juego en plataformas de gama alta.
 
 | Nivel de característica de DirectX | Compresión de textura admitida |
 |-----------------------|-------------------------------|
@@ -212,7 +219,7 @@ Cuando configures tu aplicación para que admita paquetes de recursos para difer
 -   En Visual Studio 2015, selecciona **PROYECTO->Tienda->Crear paquete de la aplicación** y crea el paquete.
 -   Asegúrate de habilitar los lotes de aplicaciones en la configuración del manifiesto package.appxmanifest.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 * [Definir los recursos de una aplicación](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321)
@@ -225,10 +232,5 @@ Cuando configures tu aplicación para que admita paquetes de recursos para difer
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

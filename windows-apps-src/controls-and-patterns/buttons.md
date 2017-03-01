@@ -1,11 +1,20 @@
 ---
 author: Jwmsft
 Description: "Un botón ofrece al usuario una forma de desencadenar una acción inmediata."
+title: Botones
 label: Buttons
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: f04d1a3c-7dcd-4bc8-9586-3396923b312e
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: bb670533769d8bae9cdea0f18e9cbb5717eb3877
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 41d86777b3e8aa0b7d32c408beec3f55a4a35d7b
+ms.lasthandoff: 02/08/2017
 
 ---
 # <a name="buttons"></a>Botones
@@ -179,10 +188,5 @@ El botón Atrás es un elemento de la interfaz de usuario proporcionado por el s
 - [Casillas](checkbox.md)
 - [**Clase Button**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

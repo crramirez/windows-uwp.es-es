@@ -3,17 +3,25 @@ author: awkoren
 Description: "Muestra cómo convertir manualmente una aplicación de escritorio de Windows (por ejemplo, Win32, WPF y Windows Forms) en una aplicación para la Plataforma universal de Windows (UWP)."
 Search.Product: eADQiWindows 10XVcnh
 title: "Convertir manualmente una aplicación de escritorio de Windows en una aplicación para la Plataforma universal de Windows (UWP)"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 translationtype: Human Translation
-ms.sourcegitcommit: b612b2c94de79f48a375ae3469c35dee6ce3939d
-ms.openlocfilehash: 73f30d564fcec1b748b4d59ff545e25b62b1c719
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 345296a3fa9faeb8daa8e03fbb633863380d2424
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="manually-convert-your-app-to-uwp-using-the-desktop-bridge"></a>Convertir manualmente la aplicación a UWP mediante el puente de escritorio
+# <a name="manually-convert-your-app-to-uwp-using-the-desktop-bridge"></a>Convertir manualmente la aplicación a UWP mediante el Puente de dispositivo de escritorio
 
 El uso de [Desktop App Converter (DAC)](desktop-to-uwp-run-desktop-app-converter.md) es práctico y automático, y resulta útil si existe alguna duda sobre lo que hace el instalador. No obstante, si la aplicación se instala mediante xcopy, o si estás familiarizado con los cambios que realiza el instalador de la aplicación en el sistema, tal vez desees crear un paquete de la aplicación y un manifiesto manualmente. Este artículo contiene los pasos para las tareas iniciales. También explica cómo agregar activos sin placa a tu aplicación, algo que no realiza el CAD. 
 
-Puedes empezar de este modo:
+Esta es la manera de empezar con la conversión manual. Como alternativa, si tienes una aplicación .NET y estás usando Visual Studio, consulta el artículo [Desktop Bridge Packaging Guide for .NET Desktop apps with Visual Studio (Guía de empaquetado del Puente de dispositivo de escritorio para aplicaciones de escritorio de .NET con Visual Studio)](desktop-to-uwp-packaging-dot-net.md).  
 
 ## <a name="create-a-manifest-by-hand"></a>Crear un manifiesto manualmente
 
@@ -107,17 +115,10 @@ Aquí te mostramos cómo configurar opcionalmente los activos de 44 x 44 para la
 
 2. Para cada imagen de 44 x 44, crea una copia en la misma carpeta y anexa *.targetsize-44_altform-unplated* al nombre del archivo. Debe tener 2 copias de cada icono, cada una llamada de forma específica. Por ejemplo, después de completar el proceso, la carpeta de activos podría contener *MYAPP_44x44.png* y *MYAPP_44x44.targetsize-44_altform-unplated.png* (nota: el primero es el icono al que se hace referencia en el appxmanifest, en el atributo de VisualElements *Square44x44Logo*). 
 
-3.  En el AppXManifest, establece el atributo BackgroundColor para cada icono que estás corrigiendo en transparent. Este atributo se puede encontrar en VisualElements para cada aplicación.
+3.    En el AppXManifest, establece el atributo BackgroundColor para cada icono que estás corrigiendo en transparent. Este atributo se puede encontrar en VisualElements para cada aplicación.
 
-4.  Abre CMD, cambia el directorio a la carpeta raíz del paquete y crea un archivo priconfig.xml ejecutando el comando ```makepri createconfig /cf priconfig.xml /dq en-US```.
+4.    Abre CMD, cambia el directorio a la carpeta raíz del paquete y crea un archivo priconfig.xml ejecutando el comando ```makepri createconfig /cf priconfig.xml /dq en-US```.
 
-5.  Mediante CMD, quédate en la carpeta raíz del paquete y crea los archivos resources.pri mediante el comando ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml```. Por ejemplo, el comando de la aplicación podría tener el siguiente aspecto ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```. 
+5.    Mediante CMD, quédate en la carpeta raíz del paquete y crea los archivos resources.pri mediante el comando ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml```. Por ejemplo, el comando de la aplicación podría tener el siguiente aspecto ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```. 
 
-6.  Empaqueta tu AppX mediante las instrucciones del paso siguiente para ver los resultados.
-
-
-
-
-<!--HONumber=Dec16_HO1-->
-
-
+6.    Empaqueta tu AppX mediante las instrucciones del paso siguiente para ver los resultados.

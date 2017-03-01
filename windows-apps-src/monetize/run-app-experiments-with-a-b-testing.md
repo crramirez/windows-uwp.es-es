@@ -1,21 +1,28 @@
 ---
 author: mcleanbyron
-Description: Puedes usar el panel del Centro de desarrollo de Windows para ejecutar los experimentos para las aplicaciones para la Plataforma universal de Windows (UWP) con pruebas A/B.
+Description: Puedes usar el panel del Centro de desarrollo de Windows para ejecutar experimentos respecto a las aplicaciones para la Plataforma universal de Windows (UWP) con pruebas A/B.
 title: Ejecuta experimentos para aplicaciones con pruebas A/B
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp, Microsoft Store Services SDK, pruebas A/B, experimentos
 translationtype: Human Translation
-ms.sourcegitcommit: 126fee708d82f64fd2a49b844306c53bb3d4cc86
-ms.openlocfilehash: f6c8e830a3ffcff8db9c280b6a9df5b515b1a356
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 02e6ebbe6d3c02d08ae21ea71e7daa38b7e77255
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Ejecuta experimentos para aplicaciones con pruebas A/B.
+# <a name="run-app-experiments-with-ab-testing"></a>Ejecuta experimentos para aplicaciones con pruebas A/B
 
 Puedes usar el panel del Centro de desarrollo de Windows para definir las variables remotas que se pueden recuperar en el tiempo de ejecución desde las aplicaciones para la Plataforma Universal de Windows (UWP) y puedes probar las variaciones de estos valores con los usuarios para identificar los valores más eficaces para manejar el comportamiento de usuario deseado. Tu aplicación puede usar variables remotas para configurar las experiencias de aplicación, como las compras desde la aplicación, el flujo de registros, subtítulos y colocación de anuncios.
 
 El objetivo de la prueba A/B debe ser identificar una variación de los valores de variables remotos que probablemente obtenga mejores tasas de conversión (por ejemplo, más compras desde la aplicación) al mismo tiempo que se te proporciona una experiencia de aplicación más atractiva. Después de haber identificado una variación correcta, puedes terminar el experimento de inmediato y habilitar esa variación para todos los usuarios desde el panel del Centro de desarrollo, sin tener que volver a publicar la aplicación.
 
-## Crear y ejecutar una prueba A/B
+## <a name="create-and-run-an-ab-test"></a>Crear y ejecutar una prueba A/B
 
 Para crear y ejecutar una prueba A/B, sigue estos pasos:
 
@@ -26,16 +33,16 @@ Para crear y ejecutar una prueba A/B, sigue estos pasos:
 
 Para ver un tutorial que muestra el proceso de principio a fin, consulta [Create and run your first experiment with A/B testing](create-and-run-your-first-experiment-with-a-b-testing.md) (Crear y ejecutar el primer experimento con pruebas A/B).
 
-## Requisitos
+## <a name="requirements"></a>Requisitos
 
 Las pruebas A/B en el Centro de desarrollo de Windows solo se admiten para aplicaciones para UWP.
 
 Para poder ejecutar experimentos con pruebas A/B, debes configurar el equipo de desarrollo:
 
 * Sigue [estas](../get-started/get-set-up.md) instrucciones para configurar el equipo para el desarrollo para UWP.
-* [Instala Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk). Además de la API para los experimentos, este SDK también proporciona API para otras características, como mostrar anuncios y dirigir a los clientes al Centro de opiniones para recopilar los comentarios sobre la aplicación. 
+* [Instala Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk). Además de la API para los experimentos, este SDK también proporciona API para otras características, como mostrar anuncios y dirigir a los clientes al Centro de opiniones para recopilar los comentarios sobre la aplicación.
 
-## Procedimientos recomendados
+## <a name="best-practices"></a>Procedimientos recomendados
 
 Para obtener los resultados más útiles, te recomendamos que sigas estas recomendaciones al ejecutar experimentos con pruebas A/B:
 
@@ -43,7 +50,7 @@ Para obtener los resultados más útiles, te recomendamos que sigas estas recome
 * Ejecuta experimentos durante un mínimo 2 a 4 semanas para recopilar datos suficientes que sean estadísticamente significativos y usables.
 
 <span id="terms" />
-## Términos relacionados
+## <a name="related-terms"></a>Términos relacionados
 
 |  Término  |  Definición  |
 |--------|--------------|
@@ -55,16 +62,11 @@ Para obtener los resultados más útiles, te recomendamos que sigas estas recome
 | Evento de vista    |  Cadena arbitraria que representa una actividad cuando el usuario comienza a visualizar una variación que forma parte de tu experimento. Por lo general, este es el nombre de un evento de tu código. El código de tu aplicación enviará esta cadena de evento de vista al Centro de desarrollo cuando el usuario comience a visualizar una variación. Para obtener más información, consulta [Escribe el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md).
 | Evento de conversión    |  Cadena arbitraria que representa una meta de un objetivo de un experimento. Por lo general, este es el nombre de un evento de tu código. El código de tu aplicación enviará esta cadena de evento de conversión al Centro de desarrollo cuando el usuario alcanza un objetivo. Para obtener más información, consulta [Escribe el código de tu aplicación para los experimentos](code-your-experiment-in-your-app.md).  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Crear un proyecto y definir variables remotas en el panel del Centro de desarrollo](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
 * [Programar tu aplicación para los experimentos.](code-your-experiment-in-your-app.md)
 * [Define tu experimento en el panel del Centro de desarrollo](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Administra el experimento en el panel del Centro de desarrollo.](manage-your-experiment.md)
 * [Crea y ejecuta tu primer experimento con pruebas A/B.](create-and-run-your-first-experiment-with-a-b-testing.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

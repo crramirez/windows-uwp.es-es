@@ -3,13 +3,20 @@ author: jnHs
 Description: "Para usar servicios de mapa en aplicaciones para Windows Phone 8.1 y versiones anteriores, necesitas un identificador de aplicación del servicio de mapas y un token para incluirlo en el código de la aplicación. Puedes obtener este token en el panel del Centro de desarrollo en la página Mapas de la sección Servicios."
 title: Usar servicios de mapa
 ms.assetid: E5EE6B56-B86F-4D62-B16A-F023FE98EFAB
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5ba722ae17fce33ff3a6860c17c1ed5f3e6790b8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1657c092d09761b7e1db82252295356384faf68a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Usar servicios de mapa
+# <a name="use-map-services"></a>Usar servicios de mapa
 
 
 Para usar servicios de mapa en aplicaciones para Windows Phone 8.1 y versiones anteriores, necesitas un identificador de aplicación del servicio de mapas y un token para incluirlo en el código de la aplicación. Puedes obtener este token en el panel del Centro de desarrollo en la página **Mapas** de la sección **Servicios**.
@@ -28,10 +35,5 @@ También tendrás que asegurarte de agregar **ApplicationID** y **Authentication
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

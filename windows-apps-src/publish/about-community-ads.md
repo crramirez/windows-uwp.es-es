@@ -1,15 +1,22 @@
 ---
 author: jnHs
-Description: "Puedes promocionar tu aplicación de manera cruzada con las aplicaciones publicadas por otros desarrolladores. Esta función se denomina anuncios de la comunidad."
+Description: "Puedes promocionar tu aplicación de manera cruzada con las aplicaciones publicadas por otros desarrolladores. Esta función se denomina &quot;anuncios de la comunidad&quot;."
 title: Acerca de los anuncios de la comunidad
 ms.assetid: F55CE478-99AF-4B70-90D1-D16419562136
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 90e63d53c68e25816fd1f7b532792d9ad6dc2cc6
-ms.openlocfilehash: db771fbd56db55b5767e4e335dcb10514f7a0bae
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 13963ddf9f745c6de2e6d7ef7d948f649b2f6f5e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Acerca de los anuncios de la comunidad
+# <a name="about-community-ads"></a>Acerca de los anuncios de la comunidad
 
 Si tu aplicación usa un objeto **AdMediatorControl** o **AdControl** para mostrar anuncios en banners, puedes promocionar tu aplicación de manera cruzada con otros desarrolladores de aplicaciones en la Tienda Windows de forma gratuita. Esta función se denomina *anuncios de la comunidad*.  
 
@@ -22,7 +29,7 @@ Así es cómo funciona este programa:
 * Los créditos se dividen de forma equitativa entre todas las campañas de anuncios de la comunidad activas y se convierten en impresiones de anuncios para tu aplicación en función de los valores de eCPM a la tasa del mercado actual de los países a los que están destinadas tus campañas de anuncios de la comunidad.
 * Para hacer un seguimiento del rendimiento de los anuncios de la comunidad en tu aplicación, consulta el [informe de rendimiento de publicidad en el nivel de cuenta](advertising-performance-report.md#account-level-advertising-performance-report).
 
-## Cómo participar en anuncios de la comunidad
+## <a name="how-to-opt-in-to-community-ads"></a>Cómo participar en anuncios de la comunidad
 
 Para participar en anuncios de la comunidad:
 
@@ -33,13 +40,8 @@ Para participar en anuncios de la comunidad:
 3. [Crear una campaña publicitaria](create-an-ad-campaign-for-your-app.md) para la aplicación. Para el tipo de campaña, selecciona **Free community ads**.
 
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Monetizar con anuncios](monetize-with-ads.md)
 * [Crear una campaña publicitaria para tu aplicación](create-an-ad-campaign-for-your-app.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

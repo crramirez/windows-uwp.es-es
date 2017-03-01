@@ -3,13 +3,20 @@ author: msatranjr
 title: Crear componentes de Windows Runtime en C# y Visual Basic
 description: "A partir de .NET Framework 4.5, puedes usar código administrado para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime."
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: e7793cd27d996ce2adbfebfbad91541bdccf0d82
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 31fddae1c163f46a56fb78f5ac29e11a84e2ddd9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Crear componentes de Windows Runtime en C# y Visual Basic
+# <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>Crear componentes de Windows Runtime en C# y Visual Basic
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -20,7 +27,7 @@ Si vas a crear un componente para el uso solo en aplicaciones UWP con C# o Visua
 
 Este artículo contiene los siguientes apartados:
 
-## Declarar tipos en componentes de Windows Runtime
+## <a name="declaring-types-in-windows-runtime-components"></a>Declarar tipos en componentes de Windows Runtime
 
 
 Internamente, los tipos de Windows Runtime en tu componente pueden usar cualquier funcionalidad de .NET Framework que esté autorizada en una aplicación universal de Windows. (Consulta la introducción de [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx) para obtener más información.) De manera externa, los miembros de los tipos pueden exponer solo los tipos de Windows Runtime para sus parámetros y valores devueltos. En la siguiente lista se describen las limitaciones de los tipos de .NET Framework expuestos de componentes de Windows Runtime.
@@ -41,14 +48,14 @@ Internamente, los tipos de Windows Runtime en tu componente pueden usar cualquie
 -   Las estructuras públicas no pueden tener miembros que no sean campos públicos y los campos deben ser tipos de valor o cadenas.
 -   Las clases públicas deben ser **sealed** (**NotInheritable** en Visual Basic). Si el modelo de programación requiere polimorfismo, puedes crear una interfaz pública e implementarla en las clases que deben ser polimórficas.
 
-## Depurar tu componente
+## <a name="debugging-your-component"></a>Depurar tu componente
 
 
 Si tu aplicación Universal de Windows y tu componente se compilan con código administrado, puedes depurarlos al mismo tiempo.
 
 Cuando pruebas tu componente como parte de una aplicación Universal de Windows con C++, puedes depurar código administrado y nativo al mismo tiempo. De forma predeterminada, es solo código nativo.
 
-## **Para depurar tanto código C++ nativo como código administrado**
+## **<a name="to-debug-both-native-c-code-and-managed-code"></a>Para depurar tanto código C++ nativo como código administrado**
 
 1.  Abre el menú contextual para tu proyecto de Visual C++ y elige **Propiedades**.
 2.  En las páginas de propiedades, en **Propiedades de configuración**, elige **Depuración**.
@@ -57,14 +64,14 @@ Cuando pruebas tu componente como parte de una aplicación Universal de Windows 
 
 Cuando pruebas tu componente como parte de una aplicación universal de Windows con JavaScript, de manera predeterminada la solución está en el modo de depuración de JavaScript. En Visual Studio, no puedes depurar código administrado y JavaScript al mismo tiempo.
 
-## **Para depurar código administrado en lugar de JavaScript**
+## **<a name="to-debug-managed-code-instead-of-javascript"></a>Para depurar código administrado en lugar de JavaScript**
 
 1.  Abre el menú contextual de tu proyecto de JavaScript y selecciona **Propiedades**.
 2.  En las páginas de propiedades, en **Propiedades de configuración**, elige **Depuración**.
 3.  Elige **Tipo de depurador**y en el cuadro de la lista desplegable cambia **Script solo** por **Sólo administrado**. Elige **Aceptar**.
 4.  Establecer puntos de interrupción en código administrado y depurar de la forma habitual.
 
-## Pasar los tipos de Windows Runtime a código administrado
+## <a name="passing-windows-runtime-types-to-managed-code"></a>Pasar los tipos de Windows Runtime a código administrado
 
 
 Como se mencionó anteriormente en el apartado "Declarar tipos en componentes de Windows Runtime", ciertos tipos de .NET Framework pueden aparecer en las firmas de miembros de las clases públicas. Esto forma parte de la compatibilidad que proporciona .NET Framework para habilitar el uso natural de Windows Runtime en código administrado. Incluye tipos primitivos y algunas clases e interfaces. Cuando se usa tu componente desde código JavaScript o C++, es importante saber cómo aparecen tus tipos de .NET Framework para el llamador. Consulta [Tutorial: crear un componente simple en C# o Visual Basic y llamarlo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md) para obtener ejemplos con JavaScript. En este apartado se describen los tipos usados habitualmente.
@@ -106,12 +113,12 @@ En Windows Runtime, se recorren en iteración IMap&lt;K, V&gt; e IMapView&lt;K, 
 
 La forma en la que las interfaces aparecen en código administrado afecta a la forma en que aparecen los tipos que implementan estas interfaces. Por ejemplo, la clase PropertySet implementa IMap&lt;K, V&gt;, que aparece en código administrado como IDictionary&lt;TKey, TValue&gt;. PropertySet aparece como si implementara IDictionary&lt;TKey, TValue&gt; en lugar de IMap&lt;K, V&gt;. Por lo tanto, en código administrado, parece tener un método Add, que se comporta como el método Add en los diccionarios de .NET Framework. No parece tener un método Insert. Puedes ver este ejemplo en el artículo [Tutorial: crear un componente simple en C# o Visual Basic y llamarlo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
 
-## Pasar los tipos administrados a Windows Runtime
+## <a name="passing-managed-types-to-the-windows-runtime"></a>Pasar los tipos administrados a Windows Runtime
 
 
 Como se explicó en el apartado anterior, algunos tipos de Windows Runtime pueden aparecer como tipos de .NET Framework en las signaturas de los miembros de tu componente o en las signaturas de miembros de Windows Runtime cuando las utilizas en el IDE. Al pasar los tipos de .NET Framework a estos miembros o al usarlos como valores devueltos de los miembros de tu componente, aparecen en el código en el otro lado, como el tipo de Windows Runtime correspondiente. Para ver ejemplos de los efectos que esto puede tener cuando el componente se llama desde JavaScript, consulta el apartado "Devolver tipos administrados desde tu componente" en [Tutorial: crear un componente simple en C# o Visual Basic y llamarlo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
 
-## Métodos sobrecargados
+## <a name="overloaded-methods"></a>Métodos sobrecargados
 
 
 En Windows Runtime, los métodos se pueden sobrecargar. Sin embargo, si se declaran varias sobrecargas con el mismo número de parámetros, debes aplicar el atributo [Windows.Foundation.Metadata.DefaultOverloadAttribute](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.defaultoverloadattribute.aspx) solo a una de estas sobrecargas. Esa sobrecarga es la única a la que puedes llamar desde JavaScript. Por ejemplo, en el siguiente código la sobrecarga que toma un valor **int** (**Integer** en Visual Basic) es la sobrecarga predeterminada.
@@ -142,7 +149,7 @@ En Windows Runtime, los métodos se pueden sobrecargar. Sin embargo, si se decla
 
 No se puede aplicar el atributo DefaultOverloadAttribute a los constructores. Todos los constructores en una clase deben tener números de parámetros diferentes.
 
-## Implementar IStringable
+## <a name="implementing-istringable"></a>Implementar IStringable
 
 
 A partir de Windows 8.1, Windows Runtime incluye una interfaz IStringable cuyo método único, IStringable.ToString, proporciona compatibilidad básica de formato en comparación con la que proporciona Object.ToString. Si decides implementar IStringable en un tipo administrado público que se exporta en un componente de Windows Runtime, se aplican las siguientes restricciones:
@@ -178,7 +185,7 @@ A partir de Windows 8.1, Windows Runtime incluye una interfaz IStringable cuyo m
 
 Ten en cuenta que en una gran variedad de condiciones, las llamadas de código nativo a un tipo administrado que implementa IStringable u oculta su implementación ToString pueden producir un comportamiento inesperado.
 
-## Operaciones asincrónicas
+## <a name="asynchronous-operations"></a>Operaciones asincrónicas
 
 
 Para implementar un método asincrónico en tu componente, agrega "Async" al final del nombre del método y devuelve una de las interfaces de Windows Runtime que representan operaciones o acciones asincrónicas: IAsyncAction, IAsyncActionWithProgress&lt;TProgress&gt;, IAsyncOperation&lt;TResult&gt; o IAsyncOperationWithProgress&lt;TResult, TProgress&gt;.
@@ -253,7 +260,7 @@ Ten en cuenta que puedes usar los métodos de la clase AsyncInfo incluso si tu m
 
 Si creas un método asincrónico que, opcionalmente, es compatible con la cancelación o los informes de progreso, considera la posibilidad de agregar sobrecargas que no tengan parámetros para un token de cancelación o la interfaz IProgress&lt;T&gt;.
 
-## Iniciar excepciones
+## <a name="throwing-exceptions"></a>Iniciar excepciones
 
 
 Se puede iniciar cualquier tipo de excepción que esté incluida en .NET para las aplicaciones de Windows. No puedes declarar tus propios tipos de excepción públicos en un componente de Windows Runtime, pero puedes declarar e iniciar tipos no públicos.
@@ -271,7 +278,7 @@ Cuando inicias una excepción desde tu componente, puedes facilitar a un llamado
 
 > **Nota**  Usa un valor negativo para tu HRESULT. Un valor positivo se interpreta como éxito y no se inicia ninguna excepción en el llamador de JavaScript o C++.
 
-## Declarar y generar eventos
+## <a name="declaring-and-raising-events"></a>Declarar y generar eventos
 
 Cuando se declara un tipo para retener los datos para tu evento, deriva de Object en lugar de EventArgs, ya que EventArgs no es un tipo de Windows Runtime. Usa [EventHandler&lt;TEventArgs&gt;](https://msdn.microsoft.com/library/db0etb8x.aspx) como el tipo de evento y usa tu tipo de argumento de evento como argumento de tipo genérico. Genera el evento del mismo modo que en una aplicación de .NET Framework.
 
@@ -279,21 +286,16 @@ Cuando se usa tu componente de Windows Runtime desde JavaScript o C++, el evento
 
 Si implementas descriptores de acceso de eventos personalizados (declaras un evento con la palabra clave **Custom** en Visual Basic), debes seguir el patrón de eventos de Windows Runtime en tu implementación. Consulta [Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime](custom-events-and-event-accessors-in-windows-runtime-components.md). Ten en cuenta que cuando controlas el evento desde el código de C# o Visual Basic, seguirá pareciendo un evento de .NET Framework ordinario.
 
-## Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 
 Una vez que hayas creado un componente de Windows Runtime para tu propio uso, es posible que observes que la funcionalidad que encapsula es útil para otros desarrolladores. Tienes dos opciones para empaquetar un componente para su distribución a otros desarrolladores. Consulta [Distribuir un componente de Windows Runtime administrado](https://msdn.microsoft.com/library/jj614475.aspx).
 
 Para obtener más información acerca de las características de los lenguajes C# y Visual Basic, así como de la compatibilidad de .NET Framework con Windows Runtime, consulta [Referencia de los lenguajes Visual Basic y C#](https://msdn.microsoft.com/library/windows/apps/xaml/br212458.aspx).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Introducción a .NET para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET para aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Tutorial: Creación de un componente simple de Windows Runtime y llamada al mismo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

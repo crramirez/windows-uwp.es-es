@@ -3,15 +3,22 @@ author: mcleblanc
 title: "Caso práctico de Windows Runtime 8.x a UWP, Bookstore1"
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
 description: "En este tema se presenta un caso práctico de migración de una aplicación Universal 8.1 a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 348012b4a23e60e24d2185baf71cbe147e30053a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7299138cb45e9eb5e0e1b7eb349a68034e66ee3b
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Caso práctico de Windows Runtime 8.x a UWP: Bookstore1
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este tema se presenta un caso práctico de migración de una aplicación Universal 8.1 a una aplicación para la Plataforma universal de Windows (UWP) de Windows 10. Una aplicación Universal 8.1 es aquella que crea un paquete de la aplicación para Windows 8.1 y otro paquete de la aplicación para Windows Phone 8.1. Con Windows 10, puedes crear un paquete de la aplicación único que los clientes pueden instalar en una amplia variedad de dispositivos, como se verá en este caso práctico. Consulta [Guía de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
@@ -126,9 +133,4 @@ En este caso práctico se mostró el proceso de migración de una aplicación mu
 También observamos que la migración de modelos de vista es, por lo general, un proceso uniforme de pruebas. La interfaz de usuario y la compatibilidad con factores de forma son los aspectos que probablemente requerirán nuestra atención para la migración.
 
 El siguiente caso práctico es [Bookstore2](w8x-to-uwp-case-study-bookstore2.md), en el que vamos a ver cómo mostrar datos agrupados y obtener acceso a ellos.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

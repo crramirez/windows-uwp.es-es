@@ -3,17 +3,24 @@ author: mcleblanc
 title: "Tareas iniciales con animación"
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: "En este proyecto, moveremos un rectángulo, le aplicaremos un efecto de atenuación y después lo volveremos a mostrar."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: ae08bb25d8ac56ca6e03a5c200e8a0d4e05fbfe3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9dcf81c0c0aee42d6278a3e1eeccc6dd4da61010
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Introducción: animación
+# <a name="getting-started-animation"></a>Introducción: animación
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Agregar animaciones
+## <a name="adding-animations"></a>Agregar animaciones
 
 En iOS, los efectos de animación se crean casi siempre mediante programación. Por ejemplo, puedes usar las animaciones que proporcionan los métodos **animateWithDuration** basados en bloques de la clase **UIView** o los métodos anteriores no basados en bloques. Asimismo, también puedes usar explícitamente la clase **CALayer** para animar capas. Las animaciones de las aplicaciones de Windows se pueden crear mediante programación, pero también pueden definirse mediante declaración con lenguaje XAML. Puedes usar Microsoft Visual Studio para editar el código XAML directamente, pero Visual Studio también incluye una herramienta llamada **Blend**, que crea el código XAML por ti a medida que trabajas con animaciones en un diseñador. De hecho, Blend te permite abrir, diseñar, generar y ejecutar proyectos completos de Visual Studio gráficamente. El tutorial siguiente te permitirá probarlo.
 
@@ -125,12 +132,7 @@ Puedes modificar este XAML manualmente o regresar a Blend y seguir trabajando de
 
 **Nota** Para obtener información acerca cómo realizar animaciones para aplicaciones de la Tienda Windows mediante JavaScript y HTML, consulta [Animación de la interfaz de usuario (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
 
-### Paso siguiente
+### <a name="next-step"></a>Paso siguiente
 
 [Introducción: A continuación](getting-started-what-next.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -4,9 +4,15 @@ title: "Crear y usar un servicio de aplicación"
 description: "Obtén información sobre cómo escribir una aplicación para la Plataforma universal de Windows (UWP) que pueda proporcionar servicios a otras aplicaciones para UWP y cómo usar esos servicios."
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
 keywords: "comunicación entre aplicaciones comunicación entre procesos, IPC, mensajería en segundo plano comunicación en segundo plano, entre aplicaciones"
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fadfab2f03d5cfda46d5c9f29c28ad561e6ab2db
-ms.openlocfilehash: 81786f6bf76d1d3840d5cd8c6191550b98a248b2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3dcf6a8191553deac5821346718a202bc362c7ff
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -377,9 +383,4 @@ namespace MyAppService
 
 * [Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host](convert-app-service-in-process.md)
 * [Hacer que tu aplicación sea compatible con las tareas en segundo plano](support-your-app-with-background-tasks.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

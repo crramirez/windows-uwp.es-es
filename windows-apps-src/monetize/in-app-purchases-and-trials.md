@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: F45E6F35-BC18-45C8-A8A5-193D528E2A4E
 description: "Obtén información sobre cómo habilitar las pruebas y compras desde la aplicación en las aplicaciones para UWP."
 title: "Pruebas y compras desde la aplicación"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, pruebas, trials, consumible, consumable, duradero, durable"
 translationtype: Human Translation
-ms.sourcegitcommit: ebac7d8edf9787ad810b84f3855fe23ae3007dcf
-ms.openlocfilehash: 33004b5229167bedd4cbafe5279709f1225ed02c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ade314f79edf73527f29e937f8eab987c902802f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -218,9 +225,4 @@ Cada aplicación y cada complemento de la Tienda tienen un **Id. de la Tienda** 
 * [Habilitar compras de complementos consumibles](enable-consumable-add-on-purchases.md)
 * [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md)
 * [Compras desde la aplicación y pruebas con el espacio de nombres Windows.ApplicationModel.Store](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)
-
-
-
-<!--HONumber=Dec16_HO4-->
-
 

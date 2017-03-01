@@ -3,16 +3,23 @@ title: "Introducción al desarrollo seguro de aplicaciones de Windows"
 description: "Este artículo de introducción ayuda a los arquitectos y desarrolladores de aplicaciones a comprender las distintas funcionalidades de la plataforma de Windows 10 que aceleran la creación de aplicaciones seguras para la Plataforma universal de Windows (UWP)."
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
-ms.openlocfilehash: 2ac9edf074ceb91d5cfea17228f0a39fef200b74
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1faf53dc2f1d919af072cd52593292fc552317e9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="intro-to-secure-windows-app-development"></a>Introducción al desarrollo seguro de aplicaciones Windows
+# <a name="intro-to-secure-windows-app-development"></a>Introducción al desarrollo seguro de aplicaciones de Windows
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Este artículo de introducción ayuda a los arquitectos y desarrolladores de aplicaciones a comprender las distintas funcionalidades de la plataforma de Windows 10 que aceleran la creación de aplicaciones seguras para la Plataforma universal de Windows (UWP). En él, se ofrecen detalles sobre cómo usar las funciones de seguridad de Windows disponibles en cada una de las siguientes fases: autenticación, datos en desarrollo y datos en reposo. Encontrarás información más detallada sobre cada tema revisando los recursos adicionales que se incluyen en cada capítulo.
@@ -28,7 +35,7 @@ Estas son algunas de las ventajas de usar las funciones de seguridad de Windows�
 -   Escribirás, probarás y mantendrás una menor cantidad de código que la que implica la implementación de código personalizado para cubrir estos escenarios de seguridad.
 -   Tus aplicaciones se hacen en más estables y seguras porque el sistema operativo se usa para controlar cómo la aplicación obtiene acceso a sus recursos y los recursos del sistema local o remoto.
 
-Durante la autenticación, se valida la identidad de un usuario que solicita acceso a un servicio concreto. Microsoft Passport y Windows Hello son los componentes de Windows 10 que ayudan a crear un mecanismo de autenticación más seguro en las aplicaciones de Windows. Con ellos, puedes usar un número de identificación personal (PIN) o datos biométricos, como el iris, el rostro o las huellas digitales del usuario, e implementar la autenticación multifactor para tus aplicaciones.
+Durante la autenticación, se valida la identidad de un usuario que solicita acceso a un servicio concreto. Windows Hello es el componente de Windows 10 que ayuda a crear un mecanismo de autenticación más seguro en las aplicaciones de Windows. Con él, puedes usar un número de identificación personal (PIN) o datos biométricos, como el iris, el rostro o las huellas digitales del usuario, e implementar la autenticación multifactor para tus aplicaciones.
 
 El término "datos en desarrollo" hace referencia a la conexión y los mensajes que se transfieren entre los datos. Un ejemplo de esto es la recuperación de datos de un servidor remoto a través de servicios web. El uso de la Capa de sockets seguros (SSL) y el Protocolo seguro de transferencia de hipertexto (HTTPS) garantiza la seguridad de la conexión. La clave a la hora de proteger los datos en desarrollo es impedir que partes intermediarias accedan a estos mensajes o que aplicaciones no autorizadas se comuniquen con los servicios web.
 
@@ -153,26 +160,26 @@ Azure Active Directory (Azure AD) es un servicio de identidades y administració
 
 Si bien Azure AD también puede implementar la autenticación de factor único, las empresas suelen exigir la mayor seguridad que ofrece la autenticación multifactor. En una configuración de autenticación multifactor, un usuario que realiza la autenticación con una cuenta de Azure AD tiene la opción de recibir un código de verificación en el teléfono móvil en forma de mensaje SMS o en la aplicación móvil Azure Authenticator.
 
-Además, Azure AD se puede usar como proveedor de OAuth, lo que proporciona al usuario estándar un mecanismo de autenticación y autorización para aplicaciones en distintas plataformas. Para más información, consulta [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) y [Autenticación multifactor de Azure](https://azure.microsoft.com/services/multi-factor-authentication/).
+Además, Azure AD se puede usar como proveedor de OAuth, lo que proporciona al usuario estándar un mecanismo de autenticación y autorización para aplicaciones en distintas plataformas. Para obtener más información, consulta [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) y [Autenticación multifactor de Azure](https://azure.microsoft.com/services/multi-factor-authentication/).
 
-## <a name="24-microsoft-passport-and-windows-hello"></a>2.4 Microsoft Passport y Windows Hello
+## <a name="24-windows-hello"></a>2.4 Windows Hello
 
 
-En Windows 10, un mecanismo conveniente de autenticación multifactor está integrado en el sistema operativo. Los dos componentes implicados se denominan Microsoft Passport y Windows Hello. Windows Hello es el nuevo sistema de inicio de sesión biométrico integrado en Windows 10. Dado que está integrado directamente en el sistema operativo, Windows Hello permite la identificación por rostro o huella digital para desbloquear los dispositivos de los usuarios. El almacén de credenciales seguro de Windows protege los datos biométricos en el dispositivo.
+En Windows 10, un mecanismo conveniente de autenticación multifactor está integrado en el sistema operativo. Windows Hello es el nuevo sistema de inicio de sesión biométrico integrado en Windows 10. Dado que está integrado directamente en el sistema operativo, Windows Hello permite la identificación por rostro o huella digital para desbloquear los dispositivos de los usuarios. El almacén de credenciales seguro de Windows protege los datos biométricos en el dispositivo.
 
-Windows Hello ofrece una forma eficaz para que un dispositivo reconozca a un usuario individual y eso aborda la primera parte de la ruta entre un usuario y un elemento de datos o servicio solicitado. Después de que el dispositivo haya reconocido al usuario, aún tiene que autenticarlo antes de determinar si va a conceder acceso a un recurso solicitado. Microsoft Passport proporciona una autenticación en dos fases (2FA) altamente eficaz, totalmente integrada en Windows, y reemplaza las contraseñas reutilizables por la combinación de un dispositivo específico y un gesto biométrico o PIN. El PIN lo especifica el usuario como parte de su inscripción a Microsoft Passport.
+Windows Hello ofrece una forma eficaz para que un dispositivo reconozca a un usuario individual y eso aborda la primera parte de la ruta entre un usuario y un elemento de datos o servicio solicitado. Después de que el dispositivo haya reconocido al usuario, aún tiene que autenticarlo antes de determinar si va a conceder acceso a un recurso solicitado. Windows Hello también proporciona una autenticación en dos fases (2FA) altamente eficaz, totalmente integrada en Windows, y reemplaza las contraseñas reutilizables por la combinación de un dispositivo específico y un gesto biométrico o PIN. El PIN lo especifica el usuario como parte de su inscripción a la cuenta de Microsoft.
 
-No obstante, Microsoft Passport no es tan solo un sustituto de los sistemas 2FA tradicionales. Conceptualmente, es similar a una tarjeta inteligente: la autenticación se realiza mediante primitivas criptográficas en lugar de comparaciones de cadenas y el material de clave del usuario se protege en el interior de hardware resistente a manipulaciones. Microsoft Passport tampoco requiere los componentes de infraestructura adicionales que se necesitan para la implementación de tarjetas inteligentes. En particular, no se necesita una infraestructura de claves públicas (PKI) para administrar los certificados, si no tienes ninguna. Microsoft Passport combina las principales ventajas que ofrecen las tarjetas inteligentes (flexibilidad de implementación de tarjetas inteligentes virtuales y una seguridad eficaz para tarjetas inteligentes físicas) sin ninguna de sus desventajas.
+No obstante, Windows Hello no es tan solo un sustituto de los sistemas 2FA tradicionales. Conceptualmente, es similar a una tarjeta inteligente: la autenticación se realiza mediante primitivas criptográficas en lugar de comparaciones de cadenas y el material de clave del usuario se protege en el interior de hardware resistente a manipulaciones. Microsoft Hello tampoco necesita los componentes de infraestructura adicionales que se necesitan para la implementación de tarjetas inteligentes. En particular, no se necesita una infraestructura de claves públicas (PKI) para administrar los certificados, si no tienes ninguna. Windows Hello combina las principales ventajas que ofrecen las tarjetas inteligentes (flexibilidad de implementación de tarjetas inteligentes virtuales y una seguridad sólida para tarjetas inteligentes físicas) sin ninguna de sus desventajas.
 
-Un dispositivo debe registrarse en Microsoft Passport para que los usuarios puedan autenticarse con él. Microsoft Passport usa el cifrado asimétrico (clave pública y privada) en el que una parte usa una clave pública para cifrar los datos que la otra parte puede descifrar mediante una clave privada. En el caso de Microsoft Passport, crea un conjunto de pares de claves pública y privada y escribe las claves privadas en el chip del Módulo de plataforma segura (TPM) del dispositivo. Después de que el dispositivo se haya registrado, las aplicaciones para UWP pueden llamar a las API del sistema para recuperar la clave pública del usuario, que se puede usar para registrar al usuario en el servidor.
+Un dispositivo debe registrarse en Windows Hello para que los usuarios puedan autenticarse con él. Windows Hello usa el cifrado asimétrico (clave pública y privada) en el que una parte usa una clave pública para cifrar los datos que la otra parte puede descifrar mediante una clave privada. En el caso de Windows Hello, crea un conjunto de pares de claves pública y privada y escribe las claves privadas en el chip del Módulo de plataforma segura (TPM) del dispositivo. Después de que el dispositivo se haya registrado, las aplicaciones para UWP pueden llamar a las API del sistema para recuperar la clave pública del usuario, que se puede usar para registrar al usuario en el servidor.
 
 El flujo de trabajo de registro de una aplicación puede ser parecido al siguiente:
 
-![Registro de Microsoft Passport](images/secure-passport.png)
+![Registro en Windows Hello](images/secure-passport.png)
 
-Puede que la información de registro que recopiles incluya mucha más información de identificación de lo que se ve este escenario simple. Por ejemplo, si tu aplicación accede a un servicio protegido, como por ejemplo, para la banca, tendrás que solicitar comprobación de la identidad y otras cosas como parte del proceso de suscripción. Cuando se cumplan todas las condiciones, la clave pública de este usuario se almacenará en el back-end y se usará para la validación la próxima vez que el usuario utilice el servicio.
+Puede que la información de registro que recopiles incluya mucha más información de identificación de lo que se ve en este escenario simple. Por ejemplo, si tu aplicación accede a un servicio protegido, como por ejemplo, para la banca, tendrás que solicitar comprobación de la identidad y otras cosas como parte del proceso de suscripción. Cuando se cumplan todas las condiciones, la clave pública de este usuario se almacenará en el back-end y se usará para la validación la próxima vez que el usuario use el servicio.
 
-Para información sobre Microsoft Passport y Windows Hello, consulta la [Guía de Microsoft Passport](https://msdn.microsoft.com/library/mt589441) y la [Guía de Microsoft Passport para desarrolladores](microsoft-passport.md).
+Para obtener más información sobre Windows Hello, consulta la [Guía de Windows Hello](https://msdn.microsoft.com/library/mt589441) y la [Guía para desarrolladores de Windows Hello](microsoft-passport.md).
 
 ## <a name="3-data-in-flight-security-methods"></a>3 Métodos de seguridad de datos en desarrollo
 
@@ -447,7 +454,7 @@ Para más información, echa un vistazo a los artículos [Firmas digitales](http
 ## <a name="5-summary"></a>5 Resumen
 
 
-La Plataforma universal de Windows en Windows 10 ofrece varias formas de sacar provecho de las funcionalidades del sistema operativo para crear aplicaciones más seguras. En escenarios de autenticación diferentes, como factor único, multifactor o autenticación negociada con un proveedor de identidades OAuth, existen API que para mitigar los desafíos más comunes a la autenticación. Windows Hello proporciona un nuevo sistema de inicio de sesión biométrico que reconoce al usuario e invalida activamente los esfuerzos para sortear la identificación correcta. Microsoft Passport funciona con Windows Hello para ofrecer varias capas de claves y certificados que nunca se podrán revelar o usar fuera del módulo de plataforma segura. Además, existe una capa de seguridad adicional disponible a través del uso opcional de claves y certificados de identidad de atestación.
+La Plataforma universal de Windows en Windows 10 ofrece varias formas de sacar provecho de las funcionalidades del sistema operativo para crear aplicaciones más seguras. En escenarios de autenticación diferentes, como factor único, multifactor o autenticación negociada con un proveedor de identidades OAuth, existen API que para mitigar los desafíos más comunes a la autenticación. Windows Hello proporciona un nuevo sistema de inicio de sesión biométrico que reconoce al usuario e invalida activamente los esfuerzos para sortear la identificación correcta. También ofrece varias capas de claves y certificados que nunca se podrán revelar o usar fuera del módulo de plataforma de confianza. Además, existe una capa de seguridad adicional disponible a través del uso opcional de claves y certificados de identidad de atestación.
 
 Para proteger datos en desarrollo, hay API que permiten comunicarse con sistemas remotos de manera segura a través de SSL, al tiempo que proporcionan la posibilidad de validar la autenticidad del servidor con el anclaje SSL. La publicación de API de forma segura y controlada es algo en que Administración de API de Azure ayuda al proporcionar eficaces opciones de configuración para exponer las API en la Web mediante un proxy que proporciona ofuscación adicional del punto de conexión de las API. El acceso a estas API se protege mediante claves de API y las llamadas a las API se pueden limitar para controlar el rendimiento.
 
@@ -459,7 +466,7 @@ Cuando los datos llegan al dispositivo, el modelo de aplicaciones de Windows ofr
 ### <a name="61-how-to-articles"></a>6.1 Artículos sobre procedimientos
 
 -   [Autenticación e identidad de usuario](authentication-and-user-identity.md)
--   [Microsoft Passport](microsoft-passport.md)
+-   [Windows Hello](microsoft-passport.md)
 -   [Caja de seguridad de credenciales](credential-locker.md)
 -   [Agente de autenticación web](web-authentication-broker.md)
 -   [Biometría de huellas digitales](fingerprint-biometrics.md)
@@ -499,8 +506,3 @@ Cuando los datos llegan al dispositivo, el modelo de aplicaciones de Windows ofr
 -   [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585)
 -   [**Windows.Security.ExchangeActiveSyncProvisioning**](https://msdn.microsoft.com/library/windows/apps/hh701506)
 -   [**Windows.Security.EnterpriseData**](https://msdn.microsoft.com/library/windows/apps/dn279153)
-
-
-<!--HONumber=Dec16_HO1-->
-
-

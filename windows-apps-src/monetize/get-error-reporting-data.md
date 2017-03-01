@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Usa este método en la API de análisis de la Tienda Windows para obtener los datos agregados del informe de errores de un intervalo de fechas y otros filtros opcionales."
 title: Obtener los datos del informe de errores
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP, servicios de la Tienda, Store services, API de análisis de la Tienda Windows, Windows Store analytics API, errores, errors"
 translationtype: Human Translation
-ms.sourcegitcommit: dcf4c263ff3fd8df846d1d5620ba31a9da7a5e6c
-ms.openlocfilehash: 800405bcac9b05af0e0295c88c27cbe3d2387947
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0d99318a2a8deba78503163c76a425c132e7de01
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -169,9 +176,4 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 * [Obtener los datos de las adquisiciones de complementos](get-in-app-acquisitions.md)
 * [Obtener la clasificación de la aplicación](get-app-ratings.md)
 * [Obtener opiniones de la aplicación](get-app-reviews.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

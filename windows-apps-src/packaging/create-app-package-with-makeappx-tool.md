@@ -2,15 +2,23 @@
 author: laurenhughes
 title: "Crear un paquete de la aplicación con la herramienta MakeAppx.exe"
 description: MakeAppx.exe crea, cifra, descifra y extrae los archivos de paquetes de aplicaciones y lotes.
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 translationtype: Human Translation
-ms.sourcegitcommit: 28cd2b2a922a20e0b9ffc4d1ca65f6a55e92aa8f
-ms.openlocfilehash: c99c76fac9303e174b5d804c2f1b99856be25006
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 616340bcc5159dce12d3b888697ac4f60d30f175
+ms.lasthandoff: 02/08/2017
 
 ---
 
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Crear un paquete de la aplicación con la herramienta MakeAppx.exe
 
-\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **MakeAppx.exe** crea tanto paquetes de aplicaciones como lotes de paquetes de aplicaciones. **MakeAppx.exe** también extrae los archivos de un paquete de aplicaciones o un lote y cifra o descifra los paquetes de aplicaciones y lotes. Esta herramienta se incluye en el SDK de Windows 10 y puede usarse desde un símbolo del sistema o un archivo de script.
 
@@ -269,8 +277,3 @@ Esta validación garantiza que:
 - Una aplicación no se registra para un protocolo prohibido de esta lista: SMB, FILE, MS-WWA-WEB, MS-WWA. 
 
 No es una validación semántica completa, ya que solo está diseñada para detectar errores comunes. No se garantiza que los paquetes creados por **MakeAppx.exe** puedan instalarse.
-
-
-<!--HONumber=Dec16_HO1-->
-
-

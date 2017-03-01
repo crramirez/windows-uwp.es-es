@@ -3,23 +3,30 @@ author: jnHs
 Description: "Cuando envías un complemento, las opciones de la página Precios y disponibilidad determinan lo que se cobrará por tu complemento y cómo se debe ofrecer a los clientes."
 title: Establecer los precios y la disponibilidad de los complementos
 ms.assetid: B3D4B753-716B-460B-A3B1-ED5712ECD694
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
-ms.openlocfilehash: 17fe4e836dc75e0dfd44389a503a6a94afe44f42
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e16cd437a1ee2b53a263ad29cd8e93b3d2e40bed
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Establecer los precios y la disponibilidad de los complementos
+# <a name="set-add-on-pricing-and-availability"></a>Establecer los precios y la disponibilidad de los complementos
 
 
 Cuando envías un complemento, las opciones de la página **Precios y disponibilidad** determinan lo que se cobrará por tu complemento y cómo se debe ofrecer a los clientes.
 
-## Precio base
+## <a name="base-price"></a>Precio base
 
 
 Debes seleccionar un precio base para tu complemento. Estas franjas de precios son las mismas que las franjas de precios para las aplicaciones, que comienzan a partir de 0,99 USD. También tienes la opción de ofrecer tu complemento de forma gratuita.
 
-## Mercados y precios personalizados
+## <a name="markets-and-custom-prices"></a>Mercados y precios personalizados
 
 
 De manera predeterminada, tu complemento figurará en todos los mercados posibles, incluidos los mercados futuros que podamos agregar posteriormente, al precio base.
@@ -28,12 +35,12 @@ Sin embargo, al igual que con una aplicación, tienes la opción de elegir los m
 
 Para obtener información y una lista completa de los mercados disponibles, consulta [Definir la selección de precios y mercados](define-pricing-and-market-selection.md).
 
-## Precio de oferta
+## <a name="sale-pricing"></a>Precio de oferta
 
 
 Si quieres ofrecer tu complemento a un precio reducido durante un período de tiempo limitado, puedes crear y programar una oferta. Para obtener más información, consulta [Poner aplicaciones y complementos en oferta](put-apps-and-add-ons-on-sale.md).
 
-## Distribución y visibilidad
+## <a name="distribution-and-visibility"></a>Distribución y visibilidad
 
 
 Puedes determinar si debes ofrecer el complemento para su compra a los clientes. Elija una de las siguientes opciones:
@@ -45,7 +52,7 @@ Puedes determinar si debes ofrecer el complemento para su compra a los clientes.
  > **Nota** Elegir esta configuración o enviar una actualización de aplicaciones que quite el complemento del código de la aplicación no afecta a los clientes que ya hayan comprado el complemento, independientemente de su sistema operativo.
 
 
-## Fecha de publicación
+## <a name="publish-date"></a>Fecha de publicación
 
 Puedes indicar cuándo debe publicarse el envío del complemento (o la actualización) seleccionando una opción en la sección **Fecha de publicación**.
 
@@ -60,10 +67,5 @@ Puedes indicar cuándo debe publicarse el envío del complemento (o la actualiza
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

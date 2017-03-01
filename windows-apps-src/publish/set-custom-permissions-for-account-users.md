@@ -2,14 +2,21 @@
 author: jnHs
 Description: Establecimiento de permisos personalizados para usuarios de cuentas.
 title: Establecimiento de permisos personalizados para usuarios de cuentas
-ms.assetid: 
+ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7dab1bf03bfc0920230d8cc57f48ad4a4f83e4d2
-ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 23d8c14bfdbfc05a1397fa67cb831d38ec092233
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Establecimiento de permisos personalizados para usuarios de cuentas
+# <a name="set-custom-permissions-for-account-users"></a>Establecimiento de permisos personalizados para usuarios de cuentas
 
 Al agregar usuarios a tu cuenta, puedes proporcionarles un [rol estándar](manage-account-users.md#roles-and-permissions) o puedes personalizar sus permisos para proporcionarle al usuario el nivel de acceso adecuado. Algunos de estos permisos se aplican a toda la cuenta, y algunos pueden haberse concedido a todos los productos o haberse limitado a determinados productos. 
 
@@ -30,7 +37,7 @@ En el caso de algunos permisos, como los relacionados con la visualización de d
 
 En las tablas siguientes se describen los datos concretos de cada permiso.
 
-## Permisos de nivel de cuenta
+## <a name="account-level-permissions"></a>Permisos de nivel de cuenta
 
 Los permisos de esta sección no se pueden limitar a productos específicos. La concesión de acceso a estos permisos otorga al usuario permiso para toda la cuenta.
 
@@ -78,7 +85,7 @@ Los permisos de esta sección no se pueden limitar a productos específicos. La 
 
 \* Los permisos marcados con un asterisco (*) conceden acceso a características que no están disponibles para todas las cuentas. Si tu cuenta no se ha habilitado para acceder a estas características, las selecciones de estos permisos no tendrán efecto alguno.   
 
-## Permisos de nivel de producto
+## <a name="product-level-permissions"></a>Permisos de nivel de producto
 
 Los permisos de esta sección se pueden conceder a todos los productos de la cuenta o se pueden personalizar para que se conceda el permiso solo a uno o varios productos específicos. Estos permisos se clasifican en cuatro categorías: **Análisis**, **Monetización**, **Publicación** y **Xbox Live**. Permite expandir cada una de estas categorías para ver los permisos individuales de cada categoría. 
 
@@ -92,7 +99,7 @@ Cada complemento aparece en una fila aparte debajo de su producto correspondient
 
 Ten en cuenta que algunos permisos no se pueden establecer para los complementos. Esto se debe a que no se pueden aplicar a los complementos (por ejemplo, el permiso **Comentarios del usuario**) o porque los permisos que se conceden en el nivel de producto primario se aplican a todos los complementos de dicho producto (por ejemplo, los **códigos promocionales**). Sin embargo, ten en cuenta que ningún permiso que esté disponible para los complementos se debe establecer por separado; los complementos no heredan las selecciones que se realizan para el producto principal. Por ejemplo, si quieres permitir a un usuario realizar selecciones de precios y disponibilidad para un complemento, deberías habilitar el permiso **Precios y disponibilidad** para el complemento (o para **todos los complementos**), con independencia de que hayas concedido el permiso **Precios y disponibilidad** para el producto principal. 
 
-### Análisis
+### <a name="analytics"></a>Análisis
 
 <table>
     <thead>
@@ -114,7 +121,7 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
     </tbody>
     </table>
 
-### Monetización
+### <a name="monetization"></a>Monetización
 
 <table>
     <thead>
@@ -133,7 +140,7 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
     </tbody>
     </table>
 
-### Publicación 
+### <a name="publishing"></a>Publicación 
 
 <table>
     <thead>
@@ -158,7 +165,7 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
     </tbody>
     </table>
 
-### Xbox Live \*
+### <a name="xbox-live-"></a>Xbox Live \*
 
 <table>
     <thead>
@@ -177,9 +184,4 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
 </table>
 
 \* Los permisos marcados con un asterisco (*) conceden acceso a características que no están disponibles para todas las cuentas. Si tu cuenta no se ha habilitado para acceder a estas características, las selecciones de estos permisos no tendrán efecto alguno.  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

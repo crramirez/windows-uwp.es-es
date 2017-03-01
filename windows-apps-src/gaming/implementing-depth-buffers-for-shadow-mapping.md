@@ -3,13 +3,20 @@ author: mtoepke
 title: "Tutorial - implementar volúmenes de sombra con búferes de profundidad en Direct3D 11"
 description: "En este tutorial se muestra cómo representar volúmenes de sombra mediante mapas de profundidad en Direct3D 11 en dispositivos de todos los niveles de característica de Direct3D."
 ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, juegos, games, directx, volúmenes de sombra, shadow volumes, búferes de profundidad, depth buffers, directx 11"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a323c299d588cdcff7b83d538a705d64207c96b2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 00e823b667a4622f6fa2dd213c3277bec9d616a2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Tutorial - implementar volúmenes de sombra con búferes de profundidad en Direct3D 11
+# <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11
 
 
 \[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -49,10 +56,10 @@ En este tutorial se muestra cómo representar volúmenes de sombra mediante mapa
 
  
 
-## Migración de la aplicación de asignación de sombras al escritorio de Direct3D 9
+## <a name="shadow-mapping-application-to-direct3d-9-desktop-porting"></a>Migración de la aplicación de asignación de sombras al escritorio de Direct3D 9
 
 
-Windows8 agregó funciones de comparación de profundidad a los niveles de característica 9\_1 y 9\_3. Ahora puedes migrar el código de representación con volúmenes de sombra a DirectX 11 y el representador de Direct3D 11 ofrecerá compatibilidad con nivel inferior para dispositivos que tengan el nivel de característica 9. En este tutorial se muestra de qué manera cualquier aplicación o juego de Direct3D 11 puede implementar volúmenes de sombra mediante la prueba de profundidad. El código abarca los siguientes procesos:
+Windows 8 agregó funciones de comparación de profundidad a los niveles de característica 9\_1 y 9\_3. Ahora puedes migrar el código de representación con volúmenes de sombra a DirectX 11 y el representador de Direct3D 11 ofrecerá compatibilidad con nivel inferior para dispositivos que tengan el nivel de característica 9. En este tutorial se muestra de qué manera cualquier aplicación o juego de Direct3D 11 puede implementar volúmenes de sombra mediante la prueba de profundidad. El código abarca los siguientes procesos:
 
 1.  Crear recursos de dispositivo Direct3D para asignación de sombras.
 2.  Agregar un pase de representación para crear el mapa de profundidad.
@@ -62,18 +69,18 @@ Windows8 agregó funciones de comparación de profundidad a los niveles de carac
 
 Cuando termines de leer este tutorial, sabrás cómo implementar una técnica básica de volúmenes de sombra en Direct3D 11 que sea compatible con el nivel de característica 9\_1 y los superiores.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 
-Debes [preparar el entorno de desarrollo para el desarrollo de juegos de DirectX para la Plataforma universal de Windows (UWP)](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Todavía no necesitas una plantilla, pero sí necesitarás MicrosoftVisual Studio2015 para compilar el ejemplo de código de este tutorial.
+Debes [preparar el entorno de desarrollo para el desarrollo de juegos de DirectX para la Plataforma universal de Windows (UWP)](prepare-your-dev-environment-for-windows-store-directx-game-development.md). Todavía no necesitas una plantilla, pero sí necesitarás Microsoft Visual Studio 2015 para compilar el ejemplo de código de este tutorial.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 **Direct3D**
 
-* [Escribir sombreadores HLSL en Direct3D9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
-* [Crear un nuevo proyecto de DirectX11 para UWP](user-interface.md)
+* [Escribir sombreadores HLSL en Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+* [Crear un nuevo proyecto de DirectX 11 para UWP](user-interface.md)
 
 **Artículos técnicos sobre la asignación de sombras**
 
@@ -86,10 +93,5 @@ Debes [preparar el entorno de desarrollo para el desarrollo de juegos de DirectX
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

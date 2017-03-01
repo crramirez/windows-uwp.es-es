@@ -3,15 +3,22 @@ author: jwmsft
 description: "La extensión de marcado xBind es una alternativa a Binding. xBind carece de algunas de las características de Binding, pero se ejecuta en menos tiempo y usa menos memoria que Binding, además de admitir una mejor depuración."
 title: "Extensión de marcado xBind"
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2dc706412684ded7fe4e98c6d01fb75ae65abd5f
-ms.openlocfilehash: b7d1dd183ba35e4b694a80d3e43628c928b218e5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a82cb66c66b593c0241a651e4df34e3998a106c6
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Extensión de marcado {x:Bind}
+# <a name="xbind-markup-extension"></a>Extensión de marcado {x:Bind}
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Nota** Para obtener información general sobre el uso del enlace de datos en la aplicación con **{x:Bind}** y para realizar una comparación total entre **{x:Bind}** y **{Binding}**, consulta el tema [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
@@ -25,7 +32,7 @@ Durante el tiempo de compilación de XAML, **{x:Bind}** se convierte en un códi
 -   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame)
 -   [Muestra de conceptos básicos de interfaz de usuario de XAML](http://go.microsoft.com/fwlink/p/?linkid=619992)
 
-## Uso del atributo XAML
+## <a name="xaml-attribute-usage"></a>Uso del atributo XAML
 
 ``` syntax
 <object property="{x:Bind}" .../>
@@ -45,11 +52,11 @@ Durante el tiempo de compilación de XAML, **{x:Bind}** se convierte en un códi
 | _propName_ | El nombre de cadena de la propiedad que se establecerá en el objeto Binding. Por ejemplo, "Converter". |
 | _value_ | El valor en el que se establecerá la propiedad. La sintaxis del argumento depende de la propiedad que se establece. A continuación, se muestra un ejemplo de uso de _propName_=_value_ en el que el valor es en sí mismo una extensión de marcado: `Converter={StaticResource myConverterClass}`. Para obtener más información, consulta la sección [Propiedades que se pueden establecer con {x: enlace}](#properties-you-can-set) que se incluye más adelante. | 
 
-## Ruta de acceso de propiedades
+## <a name="property-path"></a>Ruta de acceso de propiedades
 
 *PropertyPath* establece el elemento **Path** de una expresión **{x:Bind}**. **Path** es una ruta de acceso de propiedad que especifica el valor de la propiedad, la subpropiedad, el campo o el método al cual estas realizando el enlace (del origen). Puedes mencionar el nombre de la propiedad **Path** explícitamente: `{Binding Path=...}`. O puedes omitirlo: `{Binding ...}`.
 
-### Resolución de la ruta de acceso de propiedad
+### <a name="property-path-resolution"></a>Resolución de la ruta de acceso de propiedad
 
 **{x:Bind}** no usa **DataContext** como un origen predeterminado; en su lugar, usa el control de usuario o de la página. Por lo tanto, buscará las propiedades, campos y métodos en el código subyacente de la página o control de usuario. Para exponer el modelo de vista a **{x:Bind}**, normalmente se prefiere agregar nuevos campos o propiedades al código subyacente para el control de usuario o la página. Los pasos de las rutas de acceso de propiedad están delimitados por puntos (.) y puedes incluir varios delimitadores para desviar subpropiedades sucesivas. Usa puntos como delimitadores independientemente del lenguaje de programación que uses para implementar el objeto al que se está enlazando.
 
@@ -59,7 +66,7 @@ En el caso de C++/CX, **{x:Bind}** no se puede enlazar a propiedades y campos pr
 
 Con **x:Bind**, no necesitas usar **ElementName=xxx** como parte de la expresión de enlace. Asimismo, gracias a **x:Bind** puedes usar el nombre del elemento como la primera parte de la ruta de acceso del enlace, ya que los elementos con nombre se convierten en campos de la página o del control de usuario que representan el origen del enlace raíz.
 
-### Colecciones
+### <a name="collections"></a>Colecciones
 
 Si el origen de datos es una colección, una ruta de acceso de propiedad puede especificar los elementos de la colección por su posición o índice. Por ejemplo, "Teams\[0\].Players", donde se escribe el literal "\[\]" alrededor del "0" que solicita el primer elemento en una colección con índice cero.
 
@@ -69,18 +76,18 @@ Si el origen de datos es un diccionario o un mapa, una ruta de acceso de propied
 
 Para usar un indexador de cadenas, el modelo debe implementar**IDictionary&lt;string, T&gt;** o **IMap&lt;string, T&gt;** en el tipo de la propiedad que se va a indexar. Si el tipo de propiedad indexada admite **IObservableMap** y el enlace es OneWay o TwoWay, registrará y escuchará notificaciones de cambio en esas interfaces. La lógica de detección de cambios se actualizará en función de todos los cambios de colección, incluso aunque no afecten al valor indizado específico. Esto es porque la lógica de escucha es común en todas las instancias de la colección.
 
-### Propiedades adjuntas
+### <a name="attached-properties"></a>Propiedades adjuntas
 
 Para enlazar las propiedades adjuntas, debes escribir el nombre de clase y la propiedad entre paréntesis después del punto. Por ejemplo, **Text="{x:Bind Button22.(Grid.Row)}"**. Si la propiedad no está declarada en un espacio de nombres XAML, necesitarás agregar un prefijo al espacio de nombres XML, que debes asignar a un espacio de nombres de código al principio del documento.
 
-### Conversión
+### <a name="casting"></a>Conversión
 
 El establecimiento de tipos de los enlaces compilados es inflexible y resuelve el tipo de cada paso en una ruta de acceso. Si el tipo devuelto no incluye el miembro, se producirá un error durante la compilación. Puedes especificar una conversión para indicar el tipo real del objeto al enlace. En el siguiente caso, **obj** es una propiedad del objeto de tipo, pero contiene un cuadro de texto, por lo que podemos usar **Text="{x:Bind ((TextBox)obj).Text}"** o **Text="{x:Bind obj.(TextBox.Text)}"**.
 El campo **groups3** de **Text="{x:Bind ((data:SampleDataGroup)groups3\[0\]).Title}"** es un diccionario de objetos, por lo que debes convertirlo a **data:SampleDataGroup**. Recuerda que puedes usar el prefijo del espacio de nombres XML **data:** para asignar el tipo de objeto a un espacio de nombres de código que no forme parte del espacio de nombres XAML predeterminado.
 
 _Nota: la sintaxis de conversión de estilo C# es más flexible que la sintaxis de propiedad adjunta; en un futuro esta será la sintaxis recomendada._
 
-## Funciones en rutas de acceso de enlace
+## <a name="functions-in-binding-paths"></a>Funciones en rutas de acceso de enlace
 
 A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una función como el paso hoja de la ruta de acceso de enlace. Esto te permite lo siguiente:
 - Lograr la conversión de valores de una forma más sencilla
@@ -116,13 +123,13 @@ class ColorEntry
 }
 
 ```
-### Sintaxis de la función
+### <a name="function-syntax"></a>Sintaxis de la función
 ``` Syntax
 Text="{x:Bind MyModel.Order.CalculateShipping(MyModel.Order.Weight, MyModel.Order.ShipAddr.Zip, 'Contoso'), Mode=OneTime}"
              |      Path to function         |    Path argument   |       Path argument       | Const arg |  Bind Props
 ```
 
-### Ruta de acceso a la función
+### <a name="path-to-the-function"></a>Ruta de acceso a la función
 La ruta de acceso a la función se especifica como otras tantas rutas de acceso de propiedades y puede incluir puntos (.), indexadores o conversiones para localizar la función.
 
 Las funciones estáticas pueden especificarse mediante la sintaxis XMLNamespace:ClassName.MethodName. Por ejemplo, **&lt;CalendarDatePicker Date="\{x:Bind sys:DateTime.Parse(TextBlock1.Text)\}" /&gt;** se asignará a la función DateTime.Parse, suponiendo que **xmlns:sys="using:System"** se especificó en la parte superior de la página.
@@ -136,7 +143,7 @@ La función a enlazar debe tener en cuenta lo siguiente:
 - El tipo de devolución de la función debe coincidir con el tipo de propiedad que está usando el enlace.
 
 
-### Argumentos de función
+### <a name="function-arguments"></a>Argumentos de función
 Se pueden especificar varios argumentos de función separados por comas (,)
 - Ruta de acceso: debe tener la misma sintaxis que al enlazar directamente con el objeto.
   - Si el modo es OneWay/TwoWay, se realizará la detección de cambios y se volverá a evaluar el enlace en cuanto cambien los objetos.
@@ -144,10 +151,10 @@ Se pueden especificar varios argumentos de función separados por comas (,)
 - Número de constante: por ejemplo, -123.456.
 - Elemento booleano: especificado como "x:True" o "x:False".
 
-### Enlaces de funciones bidireccionales
+### <a name="two-way-function-bindings"></a>Enlaces de funciones bidireccionales
 En un escenario con un enlace bidireccional, es necesario especificar una segunda función para la dirección inversa del enlace. Esto se hace mediante la propiedad de enlace **BindBack**; por ejemplo, **Text="\{x:Bind a.MyFunc(b), BindBack=a.MyFunc2\}"**. La función debe tomar un argumento que se corresponda con el valor que debe volver al modelo.
 
-## Enlace de eventos
+## <a name="event-binding"></a>Enlace de eventos
 
 El enlace de eventos es una característica única del enlace compilado. Te permite especificar el controlador de un evento mediante un enlace, en lugar de tener que especificar un método en el código subyacente. Por ejemplo: **Click="{x:Bind rootFrame.GoForward}"**.
 
@@ -161,7 +168,7 @@ En el código subyacente generado, el enlace compilado controla el evento y lo e
 
 Para obtener más información sobre la sintaxis de cadena de una ruta de acceso de propiedades, consulta [Property-path syntax](property-path-syntax.md) y ten en cuenta las diferencias que se describen aquí para **{x:Bind}**.
 
-##   Propiedades que se pueden establecer con {x: enlace}
+##  <a name="properties-that-you-can-set-with-xbind"></a> Propiedades que se pueden establecer con {x: enlace}
 
 
 **{x:Bind}** se explica a través de la sintaxis de marcadores de posición *bindingProperties*, ya que hay muchas propiedades de lectura y escritura que se pueden establecer en la extensión de marcado. Las propiedades pueden establecerse en cualquier orden con pares separados por comas *propName*=*value*. Ten en cuenta que no puedes incluir saltos de línea en la expresión de enlace. Algunas de las propiedades requieren tipos que no tienen una conversión de tipos, por lo que requieren sus propias extensiones de marcado anidadas dentro de **{x:Bind}**.
@@ -181,7 +188,7 @@ Estas propiedades funcionan de forma muy parecida a como lo hacen las propiedade
 
 **Nota** Si quieres convertir el marcado de **{Binding}** a **{x:Bind}**, debes tener en cuenta las diferencias en los valores predeterminados de la propiedad **Mode**.
  
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 Dado que **{x:Bind}** usa código generado para lograr sus ventajas, necesita la información de tipo en el momento de compilación. Esto significa que no puedes enlazar a propiedades de las que no conoces el tipo antes de tiempo. Por este motivo, no puedes usar **{x:Bind}** con la propiedad **DataContext**, que es de tipo **Object** y también está sujeta a cambios en el tiempo de ejecución.
 
@@ -203,7 +210,7 @@ Las páginas y los controles de usuario que incluyen enlaces de tipo Compiled, t
 
 **{x:Bind}** es solo una extensión de marcado; no hay forma de crear o manipular estos enlaces mediante programación. Para obtener más información acerca de las extensiones de marcado, consulta [Introducción a XAML](xaml-overview.md).
 
-## Ejemplos
+## <a name="examples"></a>Ejemplos
 
 ```XML
 <Page x:Class="QuizGame.View.HostView" ... >
@@ -221,9 +228,4 @@ En este XAML de ejemplo se usa **{x:Bind}** con una propiedad **ListView.ItemTem
     </StackPanel>
   </DataTemplate>
 ```
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

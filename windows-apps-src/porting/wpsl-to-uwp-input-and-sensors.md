@@ -3,9 +3,16 @@ author: mcleblanc
 description: "El código que se integra con el dispositivo y sus sensores implica la entrada del usuario y la salida de este."
 title: "Migración de modelo de E/S, dispositivos y aplicaciones de Windows Phone Silverlight a UWP"
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: fedba87189e6ee5b6f8f81dfa06703b2011adf6a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 975f364fec4edfcf90ee65912f509741bd1f80dd
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -92,10 +99,5 @@ El equivalente de la aplicación para UWP de las propiedades **PhoneApplicationP
 Sin embargo, es conveniente diseñar la interfaz de usuario de la aplicación para UWP para que tenga un aspecto óptimo independientemente del tamaño de pantalla y la orientación del dispositivo. Encontrarás más información al respecto en el tema [Migración para factores de forma y experiencia de usuario](wpsl-to-uwp-form-factors-and-ux.md), que es el tema posterior al siguiente.
 
 El siguiente tema es [Migración de capas de negocio y de datos](wpsl-to-uwp-business-and-data.md).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

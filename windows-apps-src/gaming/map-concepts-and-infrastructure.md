@@ -1,18 +1,25 @@
 ---
 author: mtoepke
-title: Asignar OpenGL ES2.0 a Direct3D11
-description: "Cuando comiences el proceso de migrar tu arquitectura de gráficos desde OpenGL ES 2.0 a Direct3D por primera vez, familiarízate con las diferencias clave entre las API."
+title: "Asignar OpenGL ES 2.0 a Direct3D 11"
+description: "Cuando comiences el proceso para portar la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D por primera vez, familiarízate con las principales diferencias entre las API."
 ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, juegos, OpenGL, Direct3D, portar, games, porting
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d21bbf905797a7b0c14e666f1ec31a85203b30db
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1298f165444b31c75ca9d98f04eb82a58be46e5b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Asignar OpenGL ES2.0 a Direct3D11
+# <a name="map-opengl-es-20-to-direct3d-11"></a>Asignar OpenGL ES 2.0 a Direct3D 11
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Cuando comiences el proceso de migrar tu arquitectura de gráficos desde OpenGL ES 2.0 a Direct3D por primera vez, familiarízate con las diferencias clave entre las API. Los temas de esta sección te ayudarán a planear tu estrategia de migración y los cambios de API que debes realizar cuando traslades el procesamiento de gráficos a Direct3D.
 ## 
@@ -49,7 +56,7 @@ Cuando comiences el proceso de migrar tu arquitectura de gráficos desde OpenGL 
 
  
 
-## Notas sobre proveedores específicos de OpenGL ES 2.0
+## <a name="notes-on-specific-opengl-es-20-providers"></a>Notas sobre proveedores específicos de OpenGL ES 2.0
 
 
 Estos temas usan la especificación Khronos de OpenGL ES 2.0 con C válido para la plataforma. Tanto iOS como Android utilizan la misma especificación, y el código OpenGL ES 2.0 desarrollado para estas plataformas es muy similar a los fragmentos de código que analizaremos, aunque generalmente se las conoce como API orientadas a objetos. Además, debido a la dificultad y las diferencias de lenguaje de cada plataforma, puede haber unas pequeñas diferencias, especialmente en los tipos de parámetros de método o en la sintaxis de lenguaje general. iOS, por ejemplo, usa Objective-C. Android tiene la capacidad de usar C++. No obstante, algunos desarrolladores probablemente se hayan basado en una implementación de Java pura. A pesar de esto, estos temas todavía deben seguir siendo útiles dado que los conceptos, la estructura y el uso generales de las API de OpenGL ES no difieren.
@@ -60,10 +67,5 @@ Estos temas usan la especificación Khronos de OpenGL ES 2.0 con C válido para 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

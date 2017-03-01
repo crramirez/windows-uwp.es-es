@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
 description: "Usa los ejemplos de código de Java de esta sección para obtener más información sobre cómo usar la API de envío de la Tienda Windows."
 title: "Ejemplos de código de Java para la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, API de envío de la Tienda Windows, ejemplos de código, Windows Store submission API, code examples"
 translationtype: Human Translation
-ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
-ms.openlocfilehash: 7f7de7c7d9fa9131d38da48e13ce449f4440962d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9bf6885129176a75265d073c3f92b9f899bc265d
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -121,9 +128,4 @@ El listado de código siguiente contiene todos los ejemplos anteriores organizad
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

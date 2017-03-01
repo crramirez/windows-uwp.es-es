@@ -3,9 +3,17 @@ author: seksenov
 title: "Aplicaciones web hospedadas: Convertir tu aplicación web en una aplicación de Windows con Visual Studio"
 description: "Usa Visual Studio para convertir tu sitio web en una aplicación para la Plataforma universal de Windows (UWP) para Windows 10."
 kw: Hosted Web Apps tutorial, Porting to Windows 10 with Visual Studio, How to convert website to Windows, How to add website to Windows Store, Packaging web application for Microsoft Store, Test Windows 10 native features and runtime APIs with CodePen, How to use Windows Cortana Live Tiles Built-in Camera on my Website with remote JavaScript
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Aplicaciones web hospedadas, Hosted Web Apps, portar aplicaciones web a Windows 10, port web apps to Windows 10, convertir el sitio web en Windows, convert website to Windows, empaquetado de aplicaciones web para la Tienda Windows, packaging web apps for Windows Store
+ms.assetid: a58d2c67-77f8-4d01-bea3-a6ebce2d73b9
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 1cb4757896c9fecf05224a26949cd6e2ddffdb45
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: b6781883a3e48d35a558798f369e91c4a7ea3bec
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -14,7 +22,7 @@ ms.openlocfilehash: 1cb4757896c9fecf05224a26949cd6e2ddffdb45
 Aprende cómo crear rápidamente una aplicación para la Plataforma universal de Windows (UWP) para Windows 10 empezando con solo la dirección URL de un sitio web. 
 
 > [!NOTE]
-> Las siguientes instrucciones son para su uso con una plataforma de desarrollo Windows. Si eres usuario de Mac, visita [instrucciones sobre el uso de una plataforma de desarrollo de Mac](/hwa-create-mac.md).
+> Las siguientes instrucciones son para su uso con una plataforma de desarrollo Windows. Si eres usuario de Mac, visita [instrucciones sobre el uso de una plataforma de desarrollo de Mac](./hwa-create-mac.md).
 
 ## <a name="what-you-need-to-develop-on-windows"></a>Qué necesitas para desarrollar en Windows
 
@@ -96,9 +104,4 @@ function cameraCapture() {
 - [Mejorar la aplicación web mediante el acceso a características de la Plataforma universal de Windows (UWP)](hwa-access-features.md)
 - [Guía de aplicaciones para la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 - [Descarga de activos de diseño para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

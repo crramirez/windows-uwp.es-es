@@ -2,13 +2,21 @@
 author: Mtoepke
 title: Configurar el entorno de desarrollo de UWP en Xbox
 description: Pasos para configurar y probar el entorno de desarrollo de UWP en Xbox.
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 translationtype: Human Translation
-ms.sourcegitcommit: e273cc55935f961e0b5493c0648347cba399fa3d
-ms.openlocfilehash: 5ffe0ce35e4aabcfc74e9bfa9017248320925603
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 93319caaa16afe84a897dbc4bd6370a5cef3cdd1
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Configurar el entorno de desarrollo de UWP en Xbox
+# <a name="set-up-your-uwp-on-xbox-development-environment"></a>Configurar el entorno de desarrollo de UWP en Xbox
 
 El entorno de desarrollo de la Plataforma universal de Windows (UWP) en Xbox consta de un equipo de desarrollo conectado a una consola Xbox One a través de una red local.
 El equipo de desarrollo requiere Windows 10, Visual Studio 2015 Update 2, la compilación 14295 de la versión preliminar del SDK de Windows 10 y una amplia variedad de herramientas de soporte.
@@ -16,7 +24,7 @@ El equipo de desarrollo requiere Windows 10, Visual Studio 2015 Update 2, la com
 
 En este artículo se describen los pasos para configurar y probar el entorno de desarrollo.
 
-## Instalación de Visual Studio
+## <a name="visual-studio-setup"></a>Instalación de Visual Studio
 
 1. Instala Visual Studio 2015 Update 2 o una versión posterior. Para obtener más información, consulta [Descargas y herramientas para Windows 10](https://dev.windows.com/downloads).
 
@@ -24,22 +32,22 @@ En este artículo se describen los pasos para configurar y probar el entorno de 
 
   ![Instalar Visual Studio 2015 Update 2](images/vs_install_tools.png)
 
-## Configuración del SDK de Windows 10
+## <a name="windows-10-sdk-setup"></a>Configuración del SDK de Windows 10
 
-Instala la versión preliminar del SDK de Windows10 más reciente. Para obtener información sobre la instalación, consulta [Descarga las actualizaciones para desarrolladores de Insider Preview](http://go.microsoft.com/fwlink/p/?LinkId=780552).
+Instala la versión preliminar del SDK de Windows 10 más reciente. Para obtener información sobre la instalación, consulta [Descarga las actualizaciones para desarrolladores de Insider Preview](http://go.microsoft.com/fwlink/p/?LinkId=780552).
 
 > [!IMPORTANT]
 > Debes instalar el SDK más reciente, pero _no_ necesitas instalar la última versión de Windows Insider Preview del sistema operativo.
 
-## Habilitar el modo de desarrollador
+## <a name="enabling-developer-mode"></a>Habilitar el modo de desarrollador
 
 Para poder implementar aplicaciones desde el equipo de desarrollo, debes habilitar el modo de desarrollador a través del menú de Windows: Configuración / Actualización y seguridad / Para desarrolladores / Modo de desarrollador.
 
-## Configurar la consola Xbox One
+## <a name="setting-up-your-xbox-one"></a>Configurar la consola Xbox One
 
 Para poder implementar una aplicación en tu Xbox One, un usuario debe haber iniciado sesión en la consola. Puedes usar tu cuenta de Xbox Live existente o crear una cuenta nueva para la consola en el modo de desarrollador. 
 
-## Crear tu primera aplicación
+## <a name="create-your-first-application"></a>Crear tu primera aplicación
 
 1. Asegúrate de que el equipo de desarrollo esté en la misma red local que la consola Xbox One de destino. Por lo general, esto significa que deben usar el mismo enrutador y estar en la misma subred. Se recomienda una conexión de red con cable.
 
@@ -49,7 +57,7 @@ Para poder implementar una aplicación en tu Xbox One, un usuario debe haber ini
 
 1. En el equipo de desarrollo, selecciona **Nuevo proyecto** y luego selecciona **Windows / Universal / Aplicación vacía**.
 
-### Iniciar un proyecto C#
+### <a name="starting-a-c-project"></a>Iniciar un proyecto C#
 
   ![Cuadro de diálogo de nuevo proyecto](images/vs_universal_blank.jpg)
 
@@ -58,13 +66,14 @@ Para poder implementar una aplicación en tu Xbox One, un usuario debe haber ini
 1. Configura el entorno de desarrollo para la depuración remota:
 
   1. Haz clic con el botón derecho en el proyecto y luego selecciona **Propiedades**.
-  1. En la pestaña **Depurar** , cambia **Dispositivo de destino** por **Máquina remota**.
+  1. En la pestaña **Depurar**, cambia **Plataforma** por **Active (x64)**. (x86 ya no es una plataforma compatible con Xbox).   
+  1. Cambia **Dispositivo de destino** por **Máquina remota**.
   1. En **Máquina remota**, escribe la dirección IP del sistema o el nombre de host de la consola Xbox One. Para obtener información acerca de cómo obtener la dirección IP o el nombre de host, consulta [Introducción a las herramientas de Xbox One](introduction-to-xbox-tools.md).
   1. En la lista desplegable **Modo de autenticación**, selecciona **Universal (protocolo sin cifrar)**.
 
     ![Páginas de la propiedad BlankApp de C#](images/vs_remote.jpg)
 
-### Iniciar un proyecto C++
+### <a name="starting-a-c-project"></a>Iniciar un proyecto C++
 
   ![Proyecto C++](images/vs_universal_cpp_blank.jpg)
 
@@ -79,7 +88,7 @@ Para poder implementar una aplicación en tu Xbox One, un usuario debe haber ini
 
     ![Páginas de la propiedad BlankApp de C++](images/vs_remote_cpp.jpg)
 
-### Emparejar mediante PIN el dispositivo con Visual Studio
+### <a name="pin-pair-your-device-with-visual-studio"></a>Emparejar mediante PIN el dispositivo con Visual Studio
 
 1. Guarda la configuración y asegúrate de que la consola Xbox One esté en modo de desarrollador.
 
@@ -102,7 +111,7 @@ Enhorabuena, has creado e implementado tu primera aplicación para UWP en Xbox c
 
 
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 - [Enabling Developer Mode on Xbox One (Habilitar el modo de desarrollador en Xbox One)](devkit-activation.md)  
 - [Descargas y herramientas para Windows 10](https://dev.windows.com/downloads)  
 - [Descarga las actualizaciones para desarrolladores de Insider Preview](http://go.microsoft.com/fwlink/?LinkId=780552)  
@@ -110,9 +119,4 @@ Enhorabuena, has creado e implementado tu primera aplicación para UWP en Xbox c
 - [UWP en Xbox One](index.md)
 
 ----
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

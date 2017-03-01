@@ -1,18 +1,25 @@
 ---
 author: jnHs
-Description: "El informe de adquisiciones del panel del Centro de desarrollo de Windows te permite ver quién ha adquirido la aplicación, junto con datos demográficos y de plataforma."
-title: Informe de adquisiciones
+Description: "El informe Adquisiciones del panel del Centro de desarrollo de Windows te permite ver quién ha adquirido la aplicación, junto con datos demográficos y de plataforma."
+title: Informe Adquisiciones
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
-ms.openlocfilehash: afac76ac5b1e1ef2a0ffef3dddf10e8e0023a275
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a668c3d03c11ac4c6c27cddeefafeb3c42caf1e3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Informe de adquisiciones
+# <a name="acquisitions-report"></a>Informe Adquisiciones
 
 
-El informe de **adquisiciones** del panel del Centro de desarrollo de Windows te permite ver quién ha adquirido la aplicación, junto con datos demográficos y de plataforma. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de la aplicación](../monetize/get-app-acquisitions.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
+El informe **Adquisiciones** del panel del Centro de desarrollo de Windows te permite ver quién ha adquirido la aplicación, junto con datos demográficos y de plataforma. Puedes visualizar estos datos en tu panel o [descargar el informe](download-analytic-reports.md) para consultarlo sin conexión. Como alternativa, puedes recuperar mediante programación estos datos mediante el método [obtener los datos de las adquisiciones de la aplicación](../monetize/get-app-acquisitions.md) en la [API de REST de análisis de la Tienda Windows](../monetize/access-analytics-data-using-windows-store-services.md).
 
 En este informe, una adquisición significa que un cliente nuevo ha obtenido una licencia para tu aplicación (tanto si cobras dinero como si la ofreces gratis).
 
@@ -20,7 +27,7 @@ En este informe, una adquisición significa que un cliente nuevo ha obtenido una
 
 
 
-## Aplicar filtros
+## <a name="apply-filters"></a>Aplicar filtros
 
 
 Cerca de la parte superior de la página, puedes expandir **Aplicar filtros** para filtrar todos los datos de esta página por intervalo de fechas o por tipo de dispositivo.
@@ -32,7 +39,7 @@ La información de los gráficos que aparecen a continuación reflejará el per�
 
 La información de todos los gráficos que aparecen a continuación reflejará el período de tiempo seleccionado en la sección **Aplicar filtros**. De manera predeterminada, se incluyen los datos de todos los dispositivos a menos que hayas usado **Aplicar filtros** para elegir solo uno.
 
-## Adquisiciones
+## <a name="acquisitions"></a>Adquisiciones
 
 
 El gráfico **Adquisiciones** muestra el número de adquisiciones diarias o semanales de la aplicación durante el período de tiempo seleccionado. (Si usas **Aplicar filtros** para filtrar los datos durante más tiempo, los datos se agruparán por semana).
@@ -41,7 +48,7 @@ También puedes ver el número de adquisiciones del ciclo de vida de la aplicaci
 
 También puedes filtrar los resultados por mercado o por la versión del SO.
 
-## Grupo demográfico de clientes
+## <a name="customer-demographic"></a>Grupo demográfico de clientes
 
 
 El gráfico **Grupo demográfico de clientes** muestra información demográfica sobre las personas que adquirieron la aplicación. Puedes ver cuántas adquisiciones (durante el período de tiempo seleccionado) realizaron las personas de un determinado grupo de edad divididas por sexo.
@@ -50,12 +57,12 @@ El gráfico **Grupo demográfico de clientes** muestra información demográfica
 
  
 
-## Mercados
+## <a name="markets"></a>Mercados
 
 
 El gráfico **Mercados** muestra el número total de adquisiciones durante el período de tiempo seleccionado por mercado. De manera predeterminada, se muestra el mercado con más adquisiciones en la parte superior seguido del resto en orden descendente. Puedes invertir el orden alternando la flecha situada en la columna **Adquisiciones** del gráfico.
 
-## Versión de SO
+## <a name="os-version"></a>Versión de SO
 
 
 El gráfico **Versión de SO** muestra el número total de adquisiciones según el sistema operativo del cliente (o mediante la [adquisición por volumen por parte de organizaciones](organizational-licensing.md)). Es posible que en algunos casos no podamos determinar esta información. En ese caso, la versión del SO se muestra como **Desconocida**.
@@ -65,9 +72,4 @@ El gráfico **Versión de SO** muestra el número total de adquisiciones según 
  
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

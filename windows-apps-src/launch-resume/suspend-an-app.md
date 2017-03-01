@@ -1,17 +1,24 @@
 ---
 author: TylerMSFT
 title: "Administrar la suspensión de la aplicación"
-description: "Aprende a guardar datos importantes de la aplicación cuando el sistema la suspende."
+description: "Obtén información sobre cómo guardar datos importantes de la aplicación cuando el sistema la suspende."
 ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 231161ba576a140859952a7e9a4e8d3bd0ba4596
-ms.openlocfilehash: 9d78ee8aceb40cacdb464a65c940ad13baf7bb81
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f51e92c95676d924725d06e70f098965f3c9f5c7
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Administrar la suspensión de la aplicación
+# <a name="handle-app-suspend"></a>Administrar la suspensión de aplicaciones
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -19,11 +26,11 @@ ms.openlocfilehash: 9d78ee8aceb40cacdb464a65c940ad13baf7bb81
 
 Aprende a guardar datos importantes de la aplicación cuando el sistema la suspende. El ejemplo registra un controlador de eventos para el evento [**Suspensión**](https://msdn.microsoft.com/library/windows/apps/br242341) y guarda una cadena en un archivo.
 
-## Cambio importante introducido en la versión 1607 de Windows 10
+## <a name="important-change-introduced-in-windows-10-version-1607"></a>Cambio importante introducido en la versión 1607 de Windows 10
 
 Antes de la versión 1607 de Windows 10 pondrías el código para guardar el estado en el controlador de suspensión. Ahora te recomendamos que guardes tu estado cuando escribes el estado en segundo plano, tal como se describe en el [ciclo de vida de la aplicación para la plataforma universal de Windows 10 ](app-lifecycle.md).
 
-## Registrar el controlador de eventos de suspensión
+## <a name="register-the-suspending-event-handler"></a>Registrar el controlador de eventos de suspensión
 
 Haz el registro para controlar el evento [**Suspensión**](https://msdn.microsoft.com/library/windows/apps/br242341), que indica que la aplicación debe guardar sus datos de aplicación antes de que el sistema la suspenda.
 
@@ -68,7 +75,7 @@ Haz el registro para controlar el evento [**Suspensión**](https://msdn.microsof
 > }
 > ```
 
-## Guardar los datos de la aplicación antes de la suspensión
+## <a name="save-application-data-before-suspension"></a>Guardar los datos de la aplicación antes de la suspensión
 
 Cuando la aplicación controla el evento [**Suspensión**](https://msdn.microsoft.com/library/windows/apps/br242341), tiene la oportunidad de guardar sus datos de aplicación importantes en la función de controlador. La aplicación debe usar la API de almacenamiento [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) para guardar los datos de aplicación simples de manera sincrónica.
 
@@ -103,11 +110,11 @@ Cuando la aplicación controla el evento [**Suspensión**](https://msdn.microsof
 > }
 > ```
 
-## Liberar recursos
+## <a name="release-resources"></a>Liberar recursos
 
 Conviene que liberes los recursos exclusivos y los identificadores de archivos para que otras aplicaciones puedan tener acceso a ellos cuando la aplicación esté suspendida. Algunos ejemplos de recursos exclusivos son las cámaras, los dispositivos de E/S, los dispositivos externos y los recursos de red. Liberar de forma explícita recursos exclusivos e identificadores de archivos sirve para que otras aplicaciones puedan acceder a ellos cuando la aplicación esté suspendida. Cuando la aplicación se reanude, deberá volver a adquirir sus recursos exclusivos y sus identificadores de archivos.
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 El sistema suspende la aplicación cuando el usuario cambia a otra aplicación, al escritorio o a la pantalla Inicio. El sistema reanuda la aplicación cuando el usuario vuelve a cambiar a ella. Cuando el sistema reanuda la aplicación, el contenido de las variables y las estructuras de datos es el mismo que antes de que el sistema la suspendiera. El sistema restaura la aplicación en el punto exacto en el que estaba, para que parezca al usuario que se ejecutaba en segundo plano
 
@@ -115,7 +122,7 @@ El sistema intenta mantener la aplicación y sus datos en memoria mientras está
 
 El sistema no notifica a una aplicación cuando se cierra, con lo cual la aplicación deberá guardar sus datos de aplicación y liberar los recursos exclusivos y los identificadores de archivos cuando se suspenda y restaurarlos cuando vuelva a activarse.
 
-Si realizas una llamada asincrónica en el controlador, el control vuelve inmediatamente de esa llamada asincrónica. Eso significa que, a continuación, la ejecución puede volver del controlador de eventos y la aplicación se moverá al siguiente estado aunque aún no haya completado la llamada asincrónica. Usa el método [**GetDeferral**](http://aka.ms/Kt66iv) en el objeto [**EnteredBackgroundEventArgs**](http://aka.ms/Ag2yh4) que se pasa al controlador de eventos para retrasar la suspensión hasta después de llamar al método [**Complete**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.deferral.complete.aspx) en el objeto [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.deferral.aspx) devuelto.
+Si realizas una llamada asincrónica en el controlador, el control vuelve inmediatamente de esa llamada asincrónica. Eso significa que, a continuación, la ejecución puede volver del controlador de eventos y la aplicación se moverá al siguiente estado aunque aún no haya completado la llamada asincrónica. Usa el método [**GetDeferral**](http://aka.ms/Kt66iv) en el objeto [**EnteredBackgroundEventArgs**](http://aka.ms/Ag2yh4) que se pasa al controlador de eventos para retrasar la suspensión hasta después de llamar al método [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx) en el objeto [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) devuelto.
 
 Un aplazamiento no aumenta la cantidad que tienes que ejecutar el código antes de que finalice la aplicación. Solo retrasa su terminación hasta que se llama al método *Complete* del aplazamiento o hasta que pasa la fecha límite, *lo que ocurra primero*.
 
@@ -123,7 +130,7 @@ Un aplazamiento no aumenta la cantidad que tienes que ejecutar el código antes 
 
 > **Una nota sobre la depuración con Visual Studio:** Visual Studio impide que Windows suspenda una aplicación que está conectada al depurador. Esto permite que el usuario vea la interfaz de usuario de depuración de Visual Studio mientras se ejecuta la aplicación. Mientras depuras una aplicación, puedes enviarle un evento de suspensión mediante Visual Studio. Asegúrate de que se muestra la barra de herramientas **Ubicación de depuración** y luego haz clic en el botón **Suspender**.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Ciclo de vida de la aplicación](app-lifecycle.md)
 * [Controlar la activación de aplicaciones](activate-an-app.md)
@@ -134,9 +141,4 @@ Un aplazamiento no aumenta la cantidad que tienes que ejecutar el código antes 
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

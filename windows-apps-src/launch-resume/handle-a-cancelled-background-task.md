@@ -3,15 +3,22 @@ author: TylerMSFT
 title: Controlar una tarea en segundo plano cancelada
 description: "Aprende a crear una tarea en segundo plano que reconozca solicitudes de cancelación y detenga el trabajo, y que informe de la cancelación a la aplicación a través del almacenamiento persistente."
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: ba40aefe83a02d29150dd25e1303ec15bb032b8c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7211ba08f1b697fb79cfca767300c92e6e41fb68
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="handle-a-cancelled-background-task"></a>Controlar una tarea en segundo plano cancelada
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -344,9 +351,4 @@ El método Run completo y el código de la devolución de llamada del temporizad
 * [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
 * [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

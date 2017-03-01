@@ -1,20 +1,27 @@
 ---
 author: joannaleecy
 title: Hacer que los juegos sean accesibles
-description: "Aprende a hacer que los juegos sean accesibles. Usa el principio de diseño de juego inclusivo para lograr accesibilidad al juego."
+description: "Aprende a hacer que los juegos sean accesibles. Usa el principio de diseño de juego inclusivo para lograr la accesibilidad del juego."
 ms.assetid: f5ba1e60-0d7c-11e6-91ec-0002a5d5c51b
+ms.author: joanlee
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, accesibilidad, juegos
 translationtype: Human Translation
-ms.sourcegitcommit: d61b834adb50e71ba67ea32662069f257c33a676
-ms.openlocfilehash: 185e79b96cdc64f3ead6c85d067659b9087ec082
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 74a3e3bf3b4f614a112bedd8a2777f8d641237a9
+ms.lasthandoff: 02/07/2017
 
 ---
-#  Hacer que los juegos sean accesibles
+#  <a name="making-games-accessible"></a>Hacer que los juegos sean accesibles
 
 La accesibilidad puede permitir que cada persona y cada organización del planeta consiga más, y esto se aplica a hacer que los juegos también sean más accesibles. Este artículo está diseñado para los desarrolladores de juegos; específicamente diseñadores, productores y administradores de juegos. Proporciona una introducción a las directrices de accesibilidad a juegos derivadas de varias organizaciones (enumeradas en la sección Referencia más adelante) y presenta el principio de diseño de juego inclusivo para crear juegos más accesibles.
 
-##  ¿Por qué hacer que los juegos sean accesibles?
+##  <a name="why-make-games-accessible"></a>¿Por qué hacer que los juegos sean accesibles?
 
-### Mayor base de jugadores
+### <a name="increased-gamer-base"></a>Mayor base de jugadores
 
 En su nivel más básico, la justificación comercial de la accesibilidad es sencilla:
 
@@ -24,7 +31,7 @@ Si hicieras un juego increíble que es muy complicado o complejo y al que solo u
 
 Para más justificaciones empresariales, consulta [Hacer que los videojuegos sean accesibles](https://msdn.microsoft.com/library/windows/desktop/ee415219).
 
-### Mejores juegos
+### <a name="better-games"></a>Mejores juegos
 
 Crear un juego más accesible puede crear un juego mejor al final. 
 
@@ -34,11 +41,11 @@ La reasignación del mando es otra característica que lentamente se está convi
 
 Básicamente, el proceso de pensamiento usado para hacer que el juego fuera más accesible a menudo causará que el juego sea mejor porque habrás diseñado una experiencia más fácil de usar y personalizable para que los jugadores la disfruten.
 
-### Un espacio social
+### <a name="a-social-space"></a>Un espacio social
 
 Jugar es una forma de entretenimiento y puede proporcionar horas de diversión. Para algunos, jugar no es solo una forma de entretenimiento, sino un escape de la cama del hospital, del dolor crónico o de una ansiedad social grave. Los jugadores se transportan a un mundo donde se convierten en los protagonistas del videojuego. A través de los juegos, pueden crear y participar en un espacio social por sí mismos que proporciona una distracción de las dificultades diarias originadas que les causan sus limitaciones y eso les da una oportunidad de comunicarse con personas con las que, de lo contrario, es posible que no interactuaran.
 
-##  ¿El juego que estás haciendo hoy es accesible?
+##  <a name="is-the-game-you-are-making-today-accessible"></a>¿El juego que estás haciendo hoy es accesible?
 
 Si estás pensando por primera vez en hacer un juego accesible, estas son algunas preguntas que puedes hacerte:
 
@@ -51,39 +58,39 @@ Si estás pensando por primera vez en hacer un juego accesible, estas son alguna
 
 Si las respuestas son principalmente no, o no sabes responderlas, es el momento de dar el paso y aplicar la accesibilidad en el juego.
 
-## Definir discapacidad
+## <a name="defining-disability"></a>Definir discapacidad
 
 La discapacidad se define como "un desajuste entre las necesidades de la persona y las del servicio, producto o entorno que se ofrece". ([Vídeo inclusivo](https://www.microsoft.com/design/inclusive), Microsoft.com.) Esto significa que cualquier persona puede experimentar una discapacidad y que puede ser un problema breve o circunstancial. Imagina qué desafíos pueden encontrarse los jugadores con estos problemas cuando jueguen al juego y piensa en cómo se puede mejorar el juego pensando en ellos. A continuación se enumeran algunas discapacidades por considerar:
 
-### Visual
+### <a name="vision"></a>Visual
 
 *   Enfermedades médicas de larga duración como glaucoma, cataratas, daltonismo, miopía y retinopatía diabética.
 *   Situaciones de corta duración y circunstanciales como un monitor o pantalla de tamaño pequeño, una pantalla de baja resolución o un alto brillo de la pantalla debido a fuentes de luz muy brillantes de un monitor
         
-### Auditiva
+### <a name="hearing"></a>Auditiva
 
 * Enfermedades médicas de larga duración como sordera completa o pérdida parcial de la audición debido a enfermedades o a la genética
 * Situaciones de corta duración y circunstanciales como ruido de fondo excesivo o volumen restringido para evitar molestar a los demás
         
-### Motriz
+### <a name="motor"></a>Motriz
 
 * Enfermedades médicas de larga duración como la enfermedad de Parkinson, Esclerosis lateral amiotrófica (ELA), artritis y distrofia muscular
 * Situaciones de corta duración y circunstanciales como una mano lesionada, sujetar una bebida o llevar un niño en un brazo
   
-### Cognitiva
+### <a name="cognitive"></a>Cognitiva
 
 * Condiciones médicas de largo plazo como dislexia, epilepsia, trastorno por déficit de atención con hiperactividad (TDAH), demencia y amnesia
 * Situaciones de corta duración y circunstanciales como falta de sueño o distracciones temporales como oír una sirena de un vehículo de emergencias que conduce cerca de la vivienda
 
-### Comunicativas
+### <a name="speech"></a>Comunicativas
 
 * Enfermedades médicas de larga duración como daños en las cuerdas vocales, disartria y apraxia
 * Situaciones de corta duración y circunstanciales como trabajos dentales o comer y beber
 
 
-## ¿Cómo hacer que los juegos sean más accesibles?
+## <a name="how-to-make-games-more-accessible"></a>¿Cómo hacer que los juegos sean más accesibles?
 
-### Cambio de diseño: enfoque de diseño de juego inclusivo
+### <a name="design-shift-inclusive-game-design-approach"></a>Cambio de diseño: enfoque de diseño de juego inclusivo
 
 El diseño inclusivo se centra en la creación de productos y servicios más accesible para una gama más amplia de consumidores, incluidas las personas con discapacidades.
 
@@ -93,19 +100,19 @@ Por tanto, los paradigmas tradicionales de diseño de juegos deben cambiar para 
 
 Este paso adicional ayuda a identificar diferencias en el diseño original. Al identificar las diferencias, se puede iterar en el concepto de diseño original y mejorarlo. Cuando, durante el proceso de diseño del juego, te tomas tu tiempo para ser más inclusivo, el +juego final se vuelve más accesible.
 
-### Potencia a los jugadores: dales opciones
+### <a name="empower-gamers-give-gamers-options"></a>Potencia a los jugadores: dales opciones
 
 La accesibilidad consiste en opciones. Da a los jugadores las opciones para personalizar su experiencia de juego. Si ya tienes una gran base de aficionados, puede que una parte importante de tu público no quiera que la experiencia cambie en alguna manera. No hay problema. Ofrece a los jugadores la capacidad de activar y desactivar esas características y haz que se puedan configurar individualmente.
 
-### Innova: sé creativo
+### <a name="innovate-be-creative"></a>Innova: sé creativo
 
 Existen muchas maneras creativas de mejorar la accesibilidad de tu juego. Ponte tu traje de creatividad y aprende de otros juegos accesibles del mercado. Si ya tienes un juego existente, aprende a identificar las características actuales del juego que se podrían mejorar mientras mantienes la experiencia y la mecánica de juego principal como se diseñaron. Como se menciona anteriormente, la accesibilidad a juegos es proporcionar a los jugadores opciones para personalizar su experiencia de juego.
 
-### Evangeliza: haz que la accesibilidad sea una prioridad en tu estudio de juegos
+### <a name="evangelize-make-accessibility-a-priority-in-your-game-studio"></a>Evangeliza: haz que la accesibilidad sea una prioridad en tu estudio de juegos
 
 El desarrollo de juegos siempre se realiza en una línea de tiempo ajustada, así que dar prioridad a la accesibilidad ayudará a facilitar el proceso. Una forma de hacerlo es diseñar desde el principio teniendo en cuenta la accesibilidad. Comparte tus conocimientos sobre la accesibilidad con tu equipo y comparte la justificación empresarial.
 
-### Revisa: evalúa constantemente tu juego
+### <a name="review-constantly-evaluate-your-game"></a>Revisa: evalúa constantemente tu juego
 
 Durante el desarrollo, puedes realizar un proceso de revisión para asegurarte de que se esté pensando en la accesibilidad en cada paso del camino. Haz una lista de comprobación como la siguiente para ayudar a tu equipo a evaluar constantemente si lo que se está creando es accesible o no.
 
@@ -118,19 +125,19 @@ Durante el desarrollo, puedes realizar un proceso de revisión para asegurarte d
 | Pantalla HUD                                       | Posición de la pantalla ajustable, tamaño de fuente ajustable, opción fácil de usar para daltónicos                                                  |        
 | Entrada del mando                                     | Controles que se puedan reasignar para dispositivo de entrada, compatibilidad con mandos personalizados, entrada simplificada permitida para el juego                               |        
 
-### Probar e iterar: obtener comentarios de los jugadores
+### <a name="playtest-and-iterate-get-gamers-feedback"></a>Probar e iterar: obtener comentarios de los jugadores
 
 Al organizar sesiones de prueba de juegos, invita a probadores con discapacidades para las que tu juego está diseñado y haz que jueguen. Observa cómo juegan y obtén comentarios de ellos. Averigua qué cambios deben realizarse para mejorar el juego.
 
-### Anúncialo: haz saber al mundo que tu juego es accesible
+### <a name="shout-it-out-let-the-world-know-your-game-is-accessible"></a>Anúncialo: haz saber al mundo que tu juego es accesible
 
 Los usuarios querrán saber si los jugadores con discapacidades podrán jugar a tu juego. Expón claramente la accesibilidad al juego en el sitio web y el envase del juego para garantizar que los usuarios sepan qué esperar cuando compren tu juego. Recuerda hacer accesibles también tu sitio web y todos los canales de ventas del juego. Más importante aún, llega a la comunidad de juegos de accesibilidad e infórmales sobre tu juego.
 
-## Características de accesibilidad a juegos
+## <a name="game-accessibility-features"></a>Características de accesibilidad a juegos
 
 En esta sección se describen algunas características que pueden hacer que el juego sea más accesible. Estas características se derivan de instrucciones que se tomaron de las [Directrices de accesibilidad a juegos](http://gameaccessibilityguidelines.com/), que representan los resultados de un grupo de colaboración de estudios, especialistas y academias. Para obtener más información, consulta las [Directrices de accesibilidad a juegos](http://gameaccessibilityguidelines.com/). 
 
-### Gráficos e interfaz de usuario fáciles de usar para daltónicos
+### <a name="colorblind-friendly-graphics-and-user-interface"></a>Gráficos e interfaz de usuario fáciles de usar para daltónicos
 
 La retina del ojo tiene dos tipos de células sensible a la luz: los conos para ver donde está luz y los bastones para ver cuando hay poca luz. Hay tres tipos de conos (rojos, verdes y azules) que nos permiten ver colores correctamente. El daltonismo se produce cuando uno o varios de estos tres tipos de conos no funciona según lo esperado. El grado de daltonismo puede oscilar desde una percepción de color casi normal con una sensibilidad reducida hacia la luz roja, verde o azul a una completa incapacidad para percibir el color rojo, verde o azul. Dado que es menos común tener sensibilidad reducida a la luz azul, al diseñar para daltónicos, la selección de colores está dirigida a personas con daltonismo al rojo o al verde:
  
@@ -141,7 +148,7 @@ La retina del ojo tiene dos tipos de células sensible a la luz: los conos para 
     
   + No confíes únicamente en el color para distinguir los objetos del juego: usa también formas y patrones
   
-### Subtítulos
+### <a name="closed-captioning-and-subtitles"></a>Subtítulos
 
 Al diseñar los subtítulos de tu juego, el objetivo es proporcionar subtítulos legibles como una opción para que también se pueda disfrutar de tu juego sin sonido. Debería ser posible tener componentes del juego como diálogos, audio y efectos de sonido que se muestren como texto en pantalla.
 
@@ -154,7 +161,7 @@ Estas son algunas directrices básicas a tener en cuenta cuando se diseñan los 
 *   Distingue qué hace el sonido o quién habla. (Ejemplo: "Daniel: ¡Hola!")
 *   Proporciona la opción de activar y desactivar los subtítulos. (Característica adicional: capacidad de seleccionar cuánta información de sonido se muestra en función de la importancia.)
 
-### Información de sonido
+### <a name="sound-feedback"></a>Información de sonido
 
 El sonido proporciona información al jugador, aparte de la información visual. Un buen diseño del audio del juego puede mejorar la accesibilidad para los jugadores con dificultades visuales. A continuación se enumeran otras indicaciones por considerar:
 
@@ -163,7 +170,7 @@ El sonido proporciona información al jugador, aparte de la información visual.
 *   Diseña una voz que proporcione información significativa para los jugadores. (Ejemplo: "Los enemigos se acercan" frente a "Los enemigos entran por la puerta de atrás.")
 *   Asegúrate de que la voz se habla a una velocidad razonable y proporciona un control de velocidad para obtener una mejor accesibilidad.
 
-### Controles completamente asignables
+### <a name="fully-mappable-controls"></a>Controles completamente asignables
 
 Hay empresas y organizaciones, como [Special Effect](http://www.specialeffect.org.uk/), que diseña mandos de juego personalizados que pueden usarse con distintos sistemas de juego como Windows y Xbox One. Esta personalización permite a los usuarios con distintas formas de discapacidad jugar a juegos a los que, de lo contrario, no podrían jugar. Para obtener más información sobre personas que pueden jugar a juegos de forma independiente gracias a los mandos personalizados, consulta [a quién ayudaron](http://www.specialeffect.org.uk/who-we-helped).
 
@@ -171,13 +178,13 @@ Como desarrollador de juegos, puedes hacer que tu juego sea más accesible permi
 
 Los mandos estándar de Xbox One y Xbox Elite ofrecen la personalización de los mandos para jugar con precisión. Para obtener más información, consulta [Xbox One](http://support.xbox.com/xbox-one/accessories/customize-standard-controller-with-accessories-app) y [Xbox Elite](http://support.xbox.com/xbox-one/accessories/use-accessories-app-configure-elite-controller).
 
-### Selección más amplia de niveles de dificultad
+### <a name="wider-selection-of-difficulty-levels"></a>Selección más amplia de niveles de dificultad
 
 Los videojuegos ofrecen entretenimiento. El desafío para los desarrolladores de juegos es ajustar el nivel de dificultad para que el jugador experimente el nivel de desafío correcto. En primer lugar, no todos los jugadores tienen el mismo nivel y capacidad, así que diseñar una selección más amplia de opciones de dificultad aumenta la posibilidad de proporcionar a los jugadores la dificultad adecuada del desafío. Al mismo tiempo, esta selección más amplia también hace que tu videojuego sea más accesible porque podría hacer que más personas con discapacidades jueguen al juego. Recuerda, los jugadores quieren superar desafíos en un juego y recibir una recompensa por ello. No quieren un juego al que no puedan ganar.
 
 Retocar el nivel de dificultad del juego es un proceso delicado. Si está muy fácil, es posible que los jugadores se aburran. Si es demasiado difícil, es posible que los jugadores o lo dejen y no vuelvan a jugar a partir de un punto. El proceso de equilibrio es arte y ciencia. Existen muchas formas de realizar un nivel de juego que tiene la cantidad adecuada de desafío. Algunos juegos ofrecen entradas simplificadas, como una opción de juego de pulsar solo un botón, una opción rebobinar y reproducir para hacer que el juego sea más tolerable o menos enemigos y más débiles para que sea más fácil seguir adelante después de varios intentos.
 
-### Pruebas de epilepsia fotosensible
+### <a name="photosensitivity-epilepsy-testing"></a>Pruebas de epilepsia fotosensible
 
 La epilepsia fotosensible es una enfermedad en la que se producen ataques a causa de estímulos visuales como exposiciones a luces parpadeantes o a determinadas formas y patrones visuales en movimiento. Esto ocurre en aproximadamente el tres por ciento de la población y es más común en niños y adolescentes.
 
@@ -189,34 +196,29 @@ Como desarrollador, estas son algunas sugerencias para el diseño de juego para 
 *   Usa un sistema automatizado para buscar en el juego estímulos que pudieran causar epilepsia fotosensible. (Ejemplo: [Harding Flash and Pattern Analyzer (FPA) G2](http://www.hardingfpa.com/harding-fpa-for-games/) desarrollado por Cambridge Research System Ltd y el Profesor Graham Harding.) 
 *   Diseña pausas entre los niveles del juego y anima a los jugadores a tomar un descanso y a no jugar sin interrupciones.
 
-## Otros recursos de accesibilidad
+## <a name="other-accessibility-resources"></a>Otros recursos de accesibilidad
 
 Estos son algunos sitios externos que proporcionan información adicional sobre accesibilidad a juegos.
 
-### Directrices sobre accesibilidad a juegos
+### <a name="game-accessibility-guidelines"></a>Directrices sobre accesibilidad a juegos
 * [Directrices sobre accesibilidad a juegos](http://gameaccessibilityguidelines.com/)
 * [Directrices de la Fundación AbleGamers](http://www.includification.com/)
 * [Diseñar juegos universalmente accesibles (UA)](http://www.ics.forth.gr/hci/ua-games/index_main.php?l=e&c=555)
 
-### Mandos de entrada personalizados
+### <a name="custom-input-controllers"></a>Mandos de entrada personalizados
 * [Special effect](http://www.specialeffect.org.uk/)
 * [War fighter engaged](http://www.warfighterengaged.org/)
 
-## Referencias usadas
+## <a name="references-used"></a>Referencias usadas
 * [Directrices sobre accesibilidad a juegos](http://gameaccessibilityguidelines.com/)
 * [Directrices de la Fundación AbleGamers](http://www.includification.com/)
 * [Color Blind Awareness, una compañía de interés social](http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
 * [How to do subtitles well: un artículo en el blog Gamasutra, de Ian Hamilton](http://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
 * [Programa Innovation for All](http://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
 
-## Vínculos relacionados
+## <a name="related-links"></a>Vínculos relacionados
 * [Inclusive Design](https://www.microsoft.com/design/inclusive)
 * [Concentrador del desarrollador de accesibilidad de Microsoft](https://developer.microsoft.com/windows/accessible-apps)
 * [Desarrollar aplicaciones para UWP accesibles](https://msdn.microsoft.com/windows/uwp/accessibility/accessibility)
 * [Libro electrónico Creación de un software accesible](https://www.microsoft.com/download/details.aspx?id=19262)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -3,34 +3,41 @@ author: mtoepke
 title: Agregar controles
 description: "Echemos un vistazo ahora al modo en que la muestra de juego implementa los controles de movimiento y vista en un juego 3-D, y cómo va a desarrollar controles básicos para mandos, función táctil y mouse."
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, juegos, controles, entrada
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 49214f3bc14b6a475a77c5dbb7c0f08bb0818df6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d70e9ef8efffd2a78f6c49596e716770a9162b5c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Agregar controles
+# <a name="add-controls"></a>Agregar controles
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Echemos un vistazo ahora al modo en que la muestra de juego implementa los controles de movimiento y vista en un juego 3-D, y cómo va a desarrollar controles básicos para mandos, función táctil y mouse.
 
-## Objetivo
+## <a name="objective"></a>Objetivo
 
 
 -   Implementar controles de mouse/teclado, táctiles y de mandos de la Xbox en un juego de la Plataforma universal de Windows (UWP) con DirectX.
 
-## Aplicaciones y controles de juegos de UWP
+## <a name="uwp-game-apps-and-controls"></a>Aplicaciones y controles de juegos de UWP
 
 
-Un buen juego de la UWP admite una amplia variedad de interfaces. Un jugador potencial puede tener Windows10 en una tableta sin botones físicos o un PC multimedia con un mando de la Xbox conectado, o la última plataforma de juego de escritorio con un ratón y un teclado de juego de alto rendimiento. Tu juego debería ser compatible con todos esos dispositivos si su diseño lo permite.
+Un buen juego de la UWP admite una amplia variedad de interfaces. Un jugador potencial puede tener Windows 10 en una tableta sin botones físicos o un PC multimedia con un mando de la Xbox conectado, o la última plataforma de juego de escritorio con un ratón y un teclado de juego de alto rendimiento. Tu juego debería ser compatible con todos esos dispositivos si su diseño lo permite.
 
 Esta muestra admite los tres. Es un sencillo juego de disparos en primera persona, y los controles de movimiento y vista que son estándar en este género se pueden implementar fácilmente para todas esas tres formas de entrada.
 
 Consulta [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) y [Controles táctiles para juegos](tutorial--adding-touch-controls-to-your-directx-game.md) para obtener más información sobre los controles y, en concreto, sobre los controles de movimiento y vista.
 
-## Comportamientos de controles comunes
+## <a name="common-control-behaviors"></a>Comportamientos de controles comunes
 
 
 Los controles táctiles y los controles de ratón/teclado tienen una implementación principal muy parecida. En una aplicación para UWP, un puntero es simplemente un punto en la pantalla. Puedes moverlo desplazando el ratón o deslizando un dedo por la pantalla táctil. Como resultado, puedes registrar un único conjunto de eventos y despreocuparte de si el jugador usa un mouse o una pantalla táctil para mover y presionar el puntero.
@@ -197,11 +204,11 @@ bool MoveLookController::IsFiring()
 
 Si el jugador mueve el puntero fuera de la ventana principal del juego o presiona el botón de pausa (la tecla K o el botón de inicio del mando de la Xbox), el juego debe pausarse. **MoveLookController** registra dicha presión e informa al bucle de juego cuando llama al método **IsPauseRequested**. En ese punto, si **IsPauseRequested** devuelve **true**, el bucle de juego llama a **WaitForPress** en **MoveLookController** para mover el mando al estado **WaitForInput**. A continuación, el **MoveLookController** espera a que el jugador seleccione uno de los elementos de menú para cargar, continuar o salir del juego, y se detenga el procesamiento de eventos de entrada de juego hasta que regrese al estado **Active**.
 
-Consulta el [código de muestra completo de esta sección](#code_sample).
+Consulta el [código de muestra completo de esta sección](#complete-sample-code-for-this-section).
 
 Ahora, echemos un vistazo a la implementación de cada uno de los tres tipos de control con un poco más de detalle.
 
-## Implementar controles de mouse relativos
+## <a name="implementing-relative-mouse-controls"></a>Implementar controles de mouse relativos
 
 
 Si se detecta un movimiento de mouse, queremos usarlo para averiguar la nueva rotación alrededor del eje 'x' y del eje 'y' de la cámara. Esto se logra implementando controles de ratón relativos, con los que controlamos la distancia que el ratón ha recorrido (el delta entre el inicio del movimiento hasta que el ratón se detiene ) en contraposición a grabar las coordenadas de píxel x-y absolutas del movimiento.
@@ -250,7 +257,7 @@ void MoveLookController::OnMouseMoved(
 }
 ```
 
-## Implementación de controles táctiles
+## <a name="implementing-touch-controls"></a>Implementación de controles táctiles
 
 
 Los controles táctiles son los más complicados de desarrollar, porque son los más complejos y requieren el mayor grado de ajuste para ser eficaces. En la muestra de juego, se usa un rectángulo en el cuadrante inferior izquierdo como control de dirección: deslizar el pulgar a la izquierda o a la derecha en este espacio mueve la cámara hacia la izquierda o hacia la derecha, y deslizar el pulgar hacia arriba o hacia abajo mueve la cámara hacia delante o hacia atrás. Un rectángulo en el cuadrante inferior derecho de la pantalla se puede presionar para disparar las esferas. La puntería (rotación alrededor del eje 'x' y rotación alrededor del eje 'y') se controla deslizando el dedo en las partes de la pantalla que no están reservadas al movimiento y el disparo; a medida que el dedo se mueve, la cámara (con un punto de mira fijo) se mueve en consonancia.
@@ -471,7 +478,7 @@ De lo contrario, si el evento [**PointerReleased**](https://msdn.microsoft.com/l
 
 Estos son los conceptos básicos de cómo se implementan los controles de pantalla táctil en la muestra de juego. Pasemos a los controles de mouse y de teclado
 
-## Implementación de controles de mouse y de teclado
+## <a name="implementing-mouse-and-keyboard-controls"></a>Implementación de controles de mouse y de teclado
 
 
 La muestra de juego implementa estos controles de mouse y de teclado:
@@ -664,7 +671,7 @@ Cuando el jugador deja de presionar uno de los botones del mouse, la entrada est
 
 Veamos ahora el último de los tipos de control: el mando de la Xbox. Se controla de forma independiente a los controles táctiles y de ratón, porque no usa el objeto de puntero.
 
-## Implementación de controles del mando de la Xbox
+## <a name="implementing-xbox-controller-controls"></a>Implementación de controles del mando de la Xbox
 
 
 En la muestra de juego, la compatibilidad con el mando de la Xbox se agrega mediante llamadas a las API de [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053), que son un conjunto de API diseñadas para simplificar la programación para mandos de juego. En la muestra de juego, usamos el stick analógico izquierdo del mando de la Xbox para el movimiento del jugador, el stick analógico derecho para los controles de vista y el disparador derecho para disparar. Usamos el botón de inicio para pausar y reanudar el juego.
@@ -805,12 +812,12 @@ A continuación, el método **Update** realiza la misma comprobación con el sti
 
 Y así es como esta muestra implementa un conjunto completo de opciones de control. Una vez más, recuerda que una buena aplicación para UWP admite un amplio abanico de opciones de control, de modo que jugadores con diferentes factores de forma y dispositivos puedan jugar del modo que prefieran.
 
-## Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 
 Hemos revisado todos los componentes principales de un juego DirectX de UWP excepto uno: ¡el audio! La música y los efectos sonoros son importantes en cualquier juego. Hablemos, por tanto, de cómo [agregar sonido](tutorial--adding-sound.md).
 
-## Código de muestra completo para esta sección
+## <a name="complete-sample-code-for-this-section"></a>Código de muestra completo para esta sección
 
 
 MoveLookController.h
@@ -1901,11 +1908,11 @@ void MoveLookController::UpdateGameController()
 ```
 
 > **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 [Crear un juego para UWP sencillo con DirectX](tutorial--create-your-first-metro-style-directx-game.md)
@@ -1916,10 +1923,5 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

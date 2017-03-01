@@ -1,18 +1,25 @@
 ---
 author: mtoepke
 title: Migrar el bucle del juego
-description: "Aprende a implementar una ventana para un juego de la Plataforma universal de Windows (UWP) y a traer el bucle de la repetición, incluso cómo crear una interfaz IFrameworkView para controlar una clase CoreWindow de pantalla completa."
+description: "Aprende a implementar una ventana para un juego de la Plataforma universal de Windows (UWP) y a mostrar el bucle del juego, lo que incluye cómo crear una interfaz IFrameworkView para controlar una clase CoreWindow de pantalla completa."
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, juegos, migración, bucle del juego, direct3d 9, directx 11"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8d843d8b22623dfbba3a76eb7ef19a82cc07f04f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 23631bf464095e1d2f2aab97740d89c6a82f4a70
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Migrar el bucle del juego
+# <a name="port-the-game-loop"></a>Migrar el bucle del juego
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Resumen**
 
@@ -23,7 +30,7 @@ ms.openlocfilehash: 8d843d8b22623dfbba3a76eb7ef19a82cc07f04f
 
 Aprende a implementar una ventana para un juego de la Plataforma universal de Windows (UWP) y a traer el bucle de la repetición, incluso cómo crear una [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) para controlar una [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) de pantalla completa. Parte 3 del tutorial [Migrar una aplicación de Direct3D 9 sencilla a DirectX 11 y UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
-## Crear una ventana
+## <a name="create-a-window"></a>Crear una ventana
 
 
 Para configurar una ventana de escritorio con una ventanilla de Direct3D 9, tuvimos que implementar el marco tradicional basado en ventanas para aplicaciones de escritorio. Creamos un HWND, establecimos el tamaño de la ventana y proporcionamos la devolución de llamada para su procesamiento, la hicimos visible, etc.
@@ -69,12 +76,12 @@ public:
 };
 ```
 
-## Migrar el bucle del juego
+## <a name="port-the-game-loop"></a>Migrar el bucle del juego
 
 
-Veamos el bucle del juego en nuestra implementación de Direct3D9. Este código existe en la función main de la aplicación. Cada iteración de este bucle procesa un mensaje de ventana o representa un marco.
+Veamos el bucle del juego en nuestra implementación de Direct3D 9. Este código existe en la función main de la aplicación. Cada iteración de este bucle procesa un mensaje de ventana o representa un marco.
 
-Bucle de un juego de escritorio de Direct3D9
+Bucle de un juego de escritorio de Direct3D 9
 
 ```cpp
 while(WM_QUIT != msg.message)
@@ -121,10 +128,10 @@ while (true)
 
 Ahora tenemos una aplicación para UWP que configura la misma infraestructura básica de elementos gráficos y representa el mismo cubo de color, como nuestro ejemplo de DirectX 9.
 
-## Dónde ir desde aquí
+## <a name="where-do-i-go-from-here"></a>Dónde ir desde aquí
 
 
-Usa un marcador para las [preguntas más frecuentes sobre la migración a DirectX11](directx-porting-faq.md).
+Usa un marcador para las [preguntas más frecuentes sobre la migración a DirectX 11](directx-porting-faq.md).
 
 Las plantillas de DirectX de UWP incluyen una sólida infraestructura de dispositivo de Direct3D lista para usar en tu juego. Si quieres obtener directrices para elegir la plantilla correcta, consulta [Crear un proyecto de juego DirectX con una plantilla](user-interface.md).
 
@@ -140,10 +147,5 @@ Para obtener información detallada sobre el desarrollo de juegos de la Tienda W
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

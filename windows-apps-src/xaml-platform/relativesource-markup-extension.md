@@ -3,19 +3,26 @@ author: jwmsft
 description: "Proporciona un medio para especificar el origen de un enlace en términos de una relación relativa en el gráfico de objetos en tiempo de ejecución."
 title: "Extensión de marcado RelativeSource"
 ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: ec4c9b87655425e82a1cb792d0acc6bee265e9d2
-ms.openlocfilehash: b6af0ce865713ed0da39a87aa63799d3f89b7e89
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 46b48e8e1ef1efbff7248ddf54c22e5a8bc29deb
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Extensión de marcado {RelativeSource}
+# <a name="relativesource-markup-extension"></a>Extensión de marcado {RelativeSource}
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Proporciona un medio para especificar el origen de un enlace en términos de una relación relativa en el gráfico de objetos en tiempo de ejecución.
 
-## Uso del atributo XAML (modo Self)
+## <a name="xaml-attribute-usage-self-mode"></a>Uso del atributo XAML (modo Self)
 
 ``` syntax
 <Binding RelativeSource="{RelativeSource Self}" .../>
@@ -23,7 +30,7 @@ Proporciona un medio para especificar el origen de un enlace en términos de una
 <object property="{Binding RelativeSource={RelativeSource Self} ...}" .../>
 ```
 
-## Uso del atributo XAML (modo TemplatedParent)
+## <a name="xaml-attribute-usage-templatedparent-mode"></a>Uso del atributo XAML (modo TemplatedParent)
 
 ``` syntax
 <Binding RelativeSource="{RelativeSource TemplatedParent}" .../>
@@ -31,14 +38,14 @@ Proporciona un medio para especificar el origen de un enlace en términos de una
 <object property="{Binding RelativeSource={RelativeSource TemplatedParent} ...}" .../>
 ```
 
-## Valores de XAML
+## <a name="xaml-values"></a>Valores de XAML
 
 | Término | Descripción |
 |------|-------------|
 | {RelativeSource Self} | Produce un valor [<strong>Mode</strong>](https://msdn.microsoft.com/library/windows/apps/br209915) de <strong>Self</strong>. El elemento de destino debe usarse como origen para este enlace. Esto resulta útil para enlazar una propiedad de un elemento con otra propiedad del mismo elemento. |
 | {RelativeSource TemplatedParent} | Produce una [<strong>ControlTemplate</strong>](https://msdn.microsoft.com/library/windows/apps/br209391) que se aplica como el origen de este enlace. Esto resulta útil para aplicar la información en tiempo de ejecución a enlaces en el nivel de plantilla. | 
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 Un [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) puede establecer [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) como un atributo en un elemento de objeto **Binding** o como un componente en una [extensión de marcado {Binding}](binding-markup-extension.md). Por eso se muestran dos sintaxis de XAML diferentes.
 
@@ -59,17 +66,12 @@ Otro uso de `RelativeSource={RelativeSource Self}` es como una forma de establec
 
 **Nota**  El uso de XAML para **RelativeSource** solo muestra el uso para el que fue creado: establecer un valor para [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) en XAML como parte de una expresión de enlace. Teóricamente, otros usos son posibles si se configura una propiedad donde el valor sea [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913).
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Introducción a XAML](xaml-overview.md)
 * [Enlace de datos en profundidad](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [Extensión de marcado {Binding}](binding-markup-extension.md)
 * [**Enlace**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,14 +3,21 @@ author: TylerMSFT
 ms.assetid: 066711E0-D5C4-467E-8683-3CC64EDBCC83
 title: "Llamar a API asincrónicas en C# o Visual Basic"
 description: "La Plataforma universal de Windows (UWP) incluye muchas API asincrónicas para que la aplicación tenga capacidad de respuesta mientras realiza trabajos que puedan llevar algún tiempo."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, C#, Visual Basic, asincrónica"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: da2c6eddcc842e176e31b1a1628c91994efb1969
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0bafeaf66ec95732d2444debcfdca7b9406ddc4e
+ms.lasthandoff: 02/07/2017
 
 ---
-# Llamar a API asincrónicas en C# o Visual Basic
+# <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>Llamar a API asincrónicas en C# o Visual Basic
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 La Plataforma universal de Windows (UWP) incluye muchas API asincrónicas para que tu aplicación tenga capacidad de respuesta mientras realiza trabajos que pudieran llevar algún tiempo. En este tema se describe cómo usar métodos asincrónicos desde la UWP en C# o Microsoft Visual Basic.
@@ -19,7 +26,7 @@ Las API asincrónicas evitan que la aplicación tenga que esperar a que finalice
 
 La mayoría de las API asincrónicas en UWP no tiene su contrapartida sincrónica, por lo que debes asegurarte de comprender cómo se usan las API asincrónicas con C# o Visual Basic en tu aplicación de Plataforma universal de Windows (UWP). Aquí te mostraremos como llamar a las API asincrónicas de UWP.
 
-## Usar API asincrónicas
+## <a name="using-asynchronous-apis"></a>Usar API asincrónicas
 
 
 Convencionalmente, a los métodos asincrónicos se les asignan nombres terminados en "Async". Normalmente llamas a las API asincrónicas en respuesta a una acción del usuario, como cuando haces clic en un botón. Llamar un método asincrónico en un controlador de eventos es una de las formas más simples de usar API asincrónicas. Aquí usamos el operador **await** a modo de ejemplo.
@@ -40,7 +47,7 @@ Pero si llamas a `client.RetrieveFeedAsync`, el método inicia la recuperación 
 
 Lo bueno de usar el operador **await** es que el código no es muy distinto del código que se utiliza en el método `RetrieveFeed` imaginario. El código asincrónico de C# o Visual Basic se puede escribir de distintas maneras sin el operador **await**, pero el código resultante tiende a enfatizar la mecánica de ejecución asincrónica. Esto hace que el código asincrónico sea difícil escribir, comprender y mantener. Con el operador **await**, obtienes las ventajas de una aplicación asincrónica sin que el código sea complejo.
 
-## Tipo y resultados devueltos de las API asincrónicas
+## <a name="return-types-and-results-of-asynchronous-apis"></a>Tipo y resultados devueltos de las API asincrónicas
 
 
 Si seguiste el vínculo a [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460), posiblemente hayas notado que el tipo devuelto de **RetrieveFeedAsync** no es [**SyndicationFeed**](https://msdn.microsoft.com/library/windows/apps/BR243485). En cambio, el tipo devuelto es `IAsyncOperationWithProgress<SyndicationFeed, RetrievalProgress>`. Visto desde la sintaxis sin formato, las API asincrónicas devuelven un objeto que contiene el resultado. Si bien es frecuente, y a veces útil, considerar que se puede esperar al método asincrónico, el operador **await** realmente opera sobre el valor devuelto del método y no sobre el método. Al aplicar el operador **await**, lo que obtienes es el resultado de llamar a **GetResult** en el objeto devuelto por el método. En el ejemplo, el **SyndicationFeed** es el resultado de **RetrieveFeedAsync.GetResult()**.
@@ -68,7 +75,7 @@ En esta tabla se proporcionan ejemplos de métodos asincrónicos y se indican el
 
 Los métodos asincrónicos que se definen en [**.NET para aplicaciones para UWP**](https://msdn.microsoft.com/library/windows/apps/xaml/br230232.aspx) tienen un tipo devuelto [**Task**](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.task.aspx) o [**Task&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/dd321424.aspx). Los métodos que devuelven **Task** son similares a los métodos asincrónicos de UWP que devuelven [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx). En cada caso, el resultado del método asincrónico es **void**. El tipo devuelto **Task&lt;TResult&gt;** es similar a [**IAsyncOperation&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598) en que el resultado del método asincrónico al ejecutar la tarea es el mismo tipo que el parámetro de tipo `TResult`. Para obtener más información sobre el uso de **.NET para aplicaciones para UWP** y las tareas, consulta [Introducción a .NET para aplicaciones de Windows en tiempo de ejecución](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx).
 
-## Control de errores
+## <a name="handling-errors"></a>Control de errores
 
 
 Cuando uses el operador **await** para recuperar tus resultados de un método asincrónico, puedes usar un bloque **try/catch** para controlar los errores que se producen en los métodos asincrónicos, tal y como lo harías para los métodos sincrónicos. El ejemplo anterior encapsula el método **RetrieveFeedAsync** y la operación **await** en un bloque **try/catch** para controlar errores cuando se inicia una excepción.
@@ -77,7 +84,7 @@ Cuando los métodos asincrónicos llaman a otros métodos asincrónicos, cualqui
 
 **Sugerencia** A partir de C# en Microsoft Visual Studio 2005, puedes usar **await** en el bloque **catch**.
 
-## Resumen y pasos siguientes
+## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
 El patrón de llamada a un método asincrónico que mostramos aquí es el más sencillo de usar cuando se llama a API asincrónicas en un controlador de eventos. También puedes usar este patrón cuando llames a un método asincrónico en un método anulado que devuelve **void** o un **Sub** en Visual Basic.
 
@@ -109,9 +116,4 @@ Tech Tuesdays Live Twitter Chats: Photography Tips, Tricks and Essentials, 7/25/
 How to: Buy a Green PC, 7/22/2011 9:13:22 AM -07:00
 Windows 7 themes: the distinctive artwork of Cheng Ling, 7/20/2011 9:53:07 AM -07:00
 ```
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

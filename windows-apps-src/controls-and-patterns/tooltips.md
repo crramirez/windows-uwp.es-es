@@ -5,16 +5,22 @@ title: "Información sobre herramientas"
 ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
 label: Tooltips
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 1ed8bc2339b0616ea5e34b640bb572693d397cce
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d5ea37534ab88391954f72cbf80b21fd994dc1ee
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="tooltips"></a>Información sobre herramientas
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-La información sobre herramientas es una breve descripción que está vinculada con otro control u objeto. Dicha información sobre herramientas ayuda a los usuarios a comprender objetos que no les son familiares y que no están directamente descritos en la UI. Aparece de forma automática cuando el usuario mueve el foco al control, lo mantiene presionado o cuando pasa sobre él con el puntero del mouse. La información sobre herramientas desaparece tras unos segundos o cuando el usuario mueve el dedo, el puntero o el foco del teclado o del controlador para juegos.
+La información sobre herramientas es una breve descripción que está vinculada a otro control u objeto. Dicha información sobre herramientas ayuda a los usuarios a comprender objetos que no les son familiares y que no están directamente descritos en la UI. Aparece de forma automática cuando el usuario mueve el foco al control, lo mantiene presionado o cuando pasa sobre él con el puntero del mouse. La información sobre herramientas desaparece tras unos segundos o cuando el usuario mueve el dedo, el puntero o el foco del teclado o del controlador para juegos.
 
 ![Una información sobre herramientas](images/controls/tool-tip.png)
 
@@ -72,9 +78,4 @@ Una información sobre herramientas de la aplicación Mapas de Bing.
 Temas relacionados
 
 * [**Clase ToolTip**](https://msdn.microsoft.com/library/windows/apps/br227608)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

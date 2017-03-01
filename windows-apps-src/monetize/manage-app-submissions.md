@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: "Usa estos métodos en la API de envío de la Tienda Windows para administrar envíos para las aplicaciones que están registradas en tu cuenta del Centro de desarrollo de Windows."
 title: "Administrar envíos de aplicaciones con la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, API de envío de la Tienda Windows, envíos de aplicaciones, Windows Store submission API, app submissions"
 translationtype: Human Translation
-ms.sourcegitcommit: 020c8b3f4d9785842bbe127dd391d92af0962117
-ms.openlocfilehash: ef7727befa20606800fb9747f9402be9be5cc9e4
+ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
+ms.openlocfilehash: 21a421b057a55120865c01cc3dffb80318ab38ed
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -13,12 +20,14 @@ ms.openlocfilehash: ef7727befa20606800fb9747f9402be9be5cc9e4
 
 La API de envío de la Tienda Windows proporciona métodos que puedes usar para administrar envíos para tus aplicaciones, incluidos los lanzamientos de paquetes graduales. Para obtener una introducción a la API de envío de la Tienda Windows, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md).
 
->**Nota**&nbsp;&nbsp;Estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. No todas las cuentas tienen este permiso habilitado.
+>**Nota:**&nbsp;&nbsp;estos métodos solo pueden usarse para cuentas del Centro de desarrollo de Windows autorizadas para el uso de la API de envío de la Tienda Windows. Este permiso se habilita para cuentas de desarrollador en fases y no todas las cuentas tienen este permiso habilitado en este momento. Para solicitar acceso anterior, inicia sesión en el panel del Centro de desarrollo, haz clic en **Comentarios** en la parte inferior del panel, selecciona **API de envío** para el área de comentarios y envía la solicitud. Recibirás un correo electrónico cuando se habilite este permiso para tu cuenta.
+
+>**Importante**&nbsp;&nbsp;si usas la API de envío de la Tienda Windows para crear un envío de una aplicación, asegúrate de realizar más cambios en el envío solo mediante la API, en lugar de en el panel del Centro de desarrollo. Si usas el panel para cambiar un envío que creaste originalmente mediante la API, ya no podrás cambiar o confirmar el envío con la API. En algunos casos, el envío podría quedar en un estado de error en el que no se puede continuar con el proceso de envío. Si esto ocurre, debes eliminar el envío y crear uno nuevo.
 
 <span id="methods-for-app-submissions" />
 ## <a name="methods-for-managing-app-submissions"></a>Métodos para administrar envíos de aplicaciones
 
-Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de aplicación.
+Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de aplicación. Antes de poder usar estos métodos, la aplicación debe existir en tu cuenta del Centro de desarrollo y debes haber creado un envío para la aplicación del panel. Para obtener más información, consulta [Requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites).
 
 <table>
 <colgroup>
@@ -146,6 +155,8 @@ En los siguientes artículos se proporcionan ejemplos de código detallados que 
 * [Ejemplos de código de Java](java-code-examples-for-the-windows-store-submission-api.md)
 * [Ejemplos de código de Python](python-code-examples-for-the-windows-store-submission-api.md)
 
+>**Nota**&nbsp;&nbsp;además de ejemplos de código mencionados anteriormente, también proporcionamos un módulo de PowerShell de código abierto que implementa una interfaz de línea de comandos en la parte superior de la API de envío de la Tienda Windows. Este módulo se denomina [StoreBroker](https://aka.ms/storebroker). Puedes usar este módulo para administrar tus envíos de aplicaciones, paquetes piloto y complementos desde la línea de comandos en lugar de llamar directamente a la API de envío de la Tienda Windows o, simplemente, puedes examinar el origen para ver más ejemplos de cómo llamar a esta API. El módulo StoreBroker se usa activamente dentro de Microsoft como método principal para enviar muchas aplicaciones propias a la Tiendas. Para obtener más información, consulta nuestra [página de StoreBroker en GitHub](https://aka.ms/storebroker).
+
 <span id="manage-gradual-package-rollout">
 ## <a name="methods-for-managing-a-gradual-package-rollout"></a>Métodos para administrar un lanzamiento de paquete gradual
 
@@ -212,7 +223,8 @@ Este recurso describe un envío de aplicación.
     "trialPeriod": "FifteenDays",
     "marketSpecificPricings": {},
     "sales": [],
-    "priceId": "Tier2"
+    "priceId": "Tier2",
+    "isAdvancedPricingModel": "true"
   },
   "visibility": "Public",
   "targetPublishMode": "Manual",
@@ -330,7 +342,7 @@ Este recurso tiene los siguientes valores.
 | enterpriseLicensing           |  string  |  Uno de los [valores de licencia de empresa](#enterprise-licensing) indica el comportamiento de la licencia de empresa de la aplicación.  |    
 | allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  booleano   |  Indica si se permite que Microsoft [tenga la aplicación disponible para futuras familias de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
 | allowTargetFutureDeviceFamilies           | object   |  Un diccionario de pares clave y valor, donde cada clave es una [familia de dispositivos Windows 10](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) y cada valor es un booleano que indica si la aplicación puede seleccionar como destino la familia de dispositivos especificada.     |    
-| friendlyName           |   string  |  Nombre descriptivo de la aplicación, que se usa con fines de visualización.       |  
+| friendlyName           |   cadena  |  El nombre descriptivo del envío, como se muestra en el panel del Centro de desarrollo. Generas este valor cuando creas el envío.       |  
 
 
 <span id="listing-object" />
@@ -353,8 +365,8 @@ Este recurso contiene la información de descripción de base de una aplicación
 |  copyrightAndTrademarkInfo                |   string      |  [Información de copyright o marcas comerciales](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info) opcional.  |
 |  keywords                |  array       |  Matriz de [palabras clave](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords) para ayudar a tu aplicación a aparecer en los resultados de búsqueda.    |
 |  licenseTerms                |    string     | [Términos de licencia](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms) opcionales para tu aplicación.     |
-|  privacyPolicy                |   string      |   Dirección URL de la [directiva de privacidad](https://msdn.microsoft.com/windows/uwp/publish/privacy-policy) de tu aplicación.    |
-|  supportContact                |   string      |  Dirección de correo electrónico o URL de [información de contacto de soporte técnico](https://msdn.microsoft.com/windows/uwp/publish/support-contact-info) de tu aplicación.     |
+|  privacyPolicy                |   string      |   Dirección URL de la [directiva de privacidad](../publish/create-app-store-listings.md#privacy-policy) de tu aplicación.    |
+|  supportContact                |   string      |  Dirección de correo electrónico o URL de [información de contacto de soporte técnico](../publish/create-app-store-listings.md#support-contact-info) de tu aplicación.     |
 |  websiteUrl                |   string      |  Dirección URL de la [página web](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#website) de tu aplicación.    |    
 |  description               |    string     |   [Descripción](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) de la aplicación.   |     
 |  features               |    array     |  Matriz de hasta 20 cadenas que enumera las [características](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) de tu aplicación.     |
@@ -387,7 +399,8 @@ Este recurso contiene información sobre precios de la aplicación. Este recurso
 |  trialPeriod               |    string     |  Cadena que especifica el período de prueba de la aplicación. Puede ser uno de los valores siguientes: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
 |  marketSpecificPricings               |    object     |  Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados de la aplicación en mercados específicos](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Los elementos de este diccionario reemplazan el precio base especificado por el valor de *priceId* para el mercado especificado.      |     
 |  sales               |   array      |  **En desuso**. Una matriz de [recursos de venta](#sale-object) que contienen información de ventas de la aplicación.   |     
-|  priceId               |   string      |  [Franja de precios](#price-tiers) que especifica el [precio base](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) de la aplicación.   |
+|  priceId               |   cadena      |  Una [franja de precios](#price-tiers) que especifica el [precio base](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) de la aplicación.   |     
+|  isAdvancedPricingModel               |   booleano      |  Si está en **true**, tu cuenta de desarrollador tiene acceso al conjunto expandido de franjas de precios de 0,99 USD a 1999,99 USD. Si está en **false**, tu cuenta de desarrollador tiene acceso al conjunto original de franjas de precios de 0,99 USD a 999,99 USD. Para obtener más información sobre las diferentes franjas de precios, consulta [franjas de precios](#price-tiers).<br/><br/>**Nota**&nbsp;&nbsp;este campo es de solo lectura.   |
 
 
 <span id="sale-object" />
@@ -547,14 +560,14 @@ Estos métodos usan las enumeraciones siguientes.
 <span id="price-tiers" />
 ### <a name="price-tiers"></a>Franjas de precios
 
-Los valores siguientes representan las franjas de precios disponibles para un envío de aplicación.
+Los siguientes valores representan las franjas de precios disponibles en el [recurso de precios](#pricing-object) de un envío de aplicación.
 
 | Valor           | Descripción        |
 |-----------------|------|
-|  Base               |   No se establece la franja de precios; usa el precio base para la aplicación.      |     
+|  Base               |   No se establece la franja de precios, usa el precio base para la aplicación.      |     
 |  NotAvailable              |   La aplicación no está disponible en la región especificada.    |     
 |  Free              |   La aplicación es gratuita.    |    
-|  Tier2 a Tier194               |   Tier2 representa la franja de precios de 0,99 USD. Cada franja adicional representa incrementos adicionales (1,29 USD, 1,49 USD, 1,99 USD, etc.).    |
+|  Tier*xxx*               |   Una cadena que especifica la franja de precios de la aplicación, con formato **Tier<em>xxxx</em>**. Actualmente, se admiten los siguientes intervalos de franjas de precios:<br/><br/><ul><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **true**, los valores disponibles de la franja de precios para tu cuenta son **Tier1012** - **Tier1424**.</li><li>Si el valor *isAdvancedPricingModel* del [recurso de precios](#pricing-object) es **false**, los valores disponibles de la franja de precios para tu cuenta son **Tier2** - **Tier96**.</li></ul>Para ver la tabla completa de franjas de precios que están disponibles para tu cuenta de desarrollador, incluidos los precios específicos del mercado asociados a cada franja, ve a la página **Precios y disponibilidad** para ver cualquiera de los envíos de aplicaciones del panel del Centro de desarrollo y haz clic en el vínculo **Ver tabla** en la sección **Mercados y precios personalizados** (en algunas cuentas de desarrollador, este vínculo está en la sección **Precios**).    |
 
 
 <span id="enterprise-licensing" />
@@ -598,9 +611,4 @@ Los valores siguientes representan el código de estado de un envío.
 * [Crear y administrar envíos mediante el uso de servicios de la Tienda Windows](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtener datos de aplicación mediante la API de envío de la Tienda Windows](get-app-data.md)
 * [Envíos de aplicaciones en el panel del Centro de desarrollo](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -3,17 +3,24 @@ author: laurenhughes
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: Acceso a contenido de Grupo Hogar
 description: "Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye imágenes, música y vídeos."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: d55908186e5e0687c7dbd22fee9d2f7b70ba1707
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 04d34aa8f1cff2460462fff8100ab345a04d9000
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="accessing-homegroup-content"></a>Acceso a contenido de Grupo Hogar
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** API importantes **
+**API importantes**
 
 -   [**Clase Windows.Storage.KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151)
 
@@ -208,9 +215,4 @@ Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

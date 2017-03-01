@@ -3,16 +3,23 @@ author: TylerMSFT
 title: "Administración de la activación de URI"
 description: "Aprende a registrar una aplicación para convertirla en el controlador predeterminado de un nombre de esquema de identificador uniforme de recursos (URI)."
 ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0e0fa6cf082034110e11b9bde910564de8f5048c
-ms.openlocfilehash: 9577ac3dd2b89daaacab4792a4c09fc37c400365
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 233044095bc8e994ef1a425ec7069fc7fdc93b86
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Controlar la activación de URI
+# <a name="handle-uri-activation"></a>Administrar la activación de los identificadores URI
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **API importantes**
@@ -28,7 +35,7 @@ En estos pasos se muestra cómo registrar un nombre de esquema de URI personaliz
 
 > **Nota** En las aplicaciones para UWP, algunas extensiones de archivo y URI se reservan para que las usen aplicaciones integradas y el sistema operativo. Se ignorarán los intentos de registrar aplicaciones con una extensión de archivo o URI reservada. Consulta [Tipos de archivos y nombres de esquema de URI reservados](reserved-uri-scheme-names.md) para obtener una lista alfabética de esquemas de Uri que no se pueden registrar para las aplicaciones para UWP porque están reservados o prohibidos.
 
-## Paso 1: Especificar el punto de extensión en el manifiesto del paquete
+## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>Paso 1: Especificar el punto de extensión en el manifiesto del paquete
 
 
 La aplicación recibe eventos de activación solo para los nombres de esquema de URI indicados en el manifiesto del paquete. A continuación se muestra cómo debes indicar que la aplicación controle el nombre de esquema de URI `alsdk`.
@@ -67,7 +74,7 @@ La aplicación recibe eventos de activación solo para los nombres de esquema de
           </Extensions>
     ```
 
-## Paso 2: Agregar los iconos adecuados
+## <a name="step-2-add-the-proper-icons"></a>Paso 2: Agregar los iconos adecuados
 
 
 Las aplicaciones que se convierten en predeterminadas para un nombre de esquema de URI muestran sus iconos en varios lugares del sistema como, por ejemplo, en el Panel de control Programas predeterminados.
@@ -76,7 +83,7 @@ Te recomendamos que incluyas los iconos adecuados con tu proyecto para que el lo
 
 ![el explorador de soluciones con una vista de los archivos de la carpeta imágenes. hay versiones de 16, 32, 48 y 256 píxeles de 'icon.targetsize' y 'smalltile-sdk'](images/seviewofimages.png)
 
-## Paso 3: Administrar el evento activado
+## <a name="step-3-handle-the-activated-event"></a>Paso 3: Administrar el evento activado
 
 
 El controlador de eventos [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) recibe todos los eventos de activación. La propiedad **Kind** indica el tipo de evento de activación. Este ejemplo está configurado para controlar eventos de activación de [**Protocol**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.activation.activationkind.aspx#Protocol).
@@ -126,7 +133,7 @@ Se recomienda que las aplicaciones creen un nuevo elemento [**Frame**](https://m
 
 Si las aplicaciones se inician a través de la activación de protocolo, sería necesario plantearse que incluyeran una interfaz de usuario que permita al usuario volver a la parte superior de la aplicación.
 
-## Observaciones
+## <a name="remarks"></a>Observaciones
 
 
 Cualquier aplicación o sitio web puede usar tu nombre de esquema de URI, incluidos los malintencionados. Por este motivo, los datos que incluyes en el URI podrían provenir de un origen que no es de confianza. Te desaconsejamos que realices una acción permanente en función de los parámetros que recibes en el URI. Puedes usar parámetros de URI, por ejemplo, para que la aplicación se inicie en una página de la cuenta del usuario, pero no te recomendamos que los uses para modificar directamente la cuenta del usuario.
@@ -143,7 +150,7 @@ Si prefieres que las aplicaciones usen un único elemento [**Frame**](https://ms
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 **Ejemplo completo**
@@ -173,9 +180,4 @@ Si prefieres que las aplicaciones usen un único elemento [**Frame**](https://ms
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

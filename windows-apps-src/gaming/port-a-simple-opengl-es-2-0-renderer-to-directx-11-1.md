@@ -1,18 +1,25 @@
 ---
 author: mtoepke
 title: Portar un representador simple de OpenGL ES 2.0 a Direct3D 11
-description: "Para el primer ejercicio de migración, empezaremos con lo más básico - traer un representador simple de OpenGL ES 2.0 a Direct3D para un cubo giratorio con vértices sombreados, de modo tal que coincida con la plantilla DirectX 11 App (Universal Windows) de Visual Studio 2015."
+description: "Para el primer ejercicio de portabilidad, empezaremos con lo más básico: traer un representador simple de OpenGL ES 2.0 a Direct3D para un cubo giratorio con vértices sombreados, de modo tal que coincida con la plantilla Aplicación DirectX 11 (Windows universal) de Visual Studio 2015."
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, games, juegos, opengl, direct3d 11, port, portar
 translationtype: Human Translation
-ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
-ms.openlocfilehash: 307b611eece3de6288d67e1e340368763f26fa2e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 71b4b42d2665cbeb43cbdbe2dbab9119a8f68ce9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Portar un representador simple de OpenGL ES 2.0 a Direct3D 11
+# <a name="how-to-port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Portar un representador simple de OpenGL ES 2.0 a Direct3D 11
 
 
-\[ Actualizado para aplicaciones para UWP en Windows10. Para leer artículos sobre Windows8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Para este ejercicio de migración, empezaremos con algo básico: llevar un representador simple de un cubo giratorio con vértices sombreados de OpenGL ES 2.0 a Direct3D, de modo que coincida con la plantilla Aplicación DirectX 11 (Windows universal) de Visual Studio 2015. A medida que avancemos en este proceso de migración, aprenderás a hacer lo siguiente:
 
@@ -22,7 +29,7 @@ Para este ejercicio de migración, empezaremos con algo básico: llevar un repre
 -   Usar la semántica básica de HLSL en el desarrollo de sombreador de Direct3D
 -   Portar GLSL simple a HLSL
 
-Este tema empieza tras la creación de un nuevo proyecto en DirectX 11. Para aprender a crear un nuevo proyecto en DirectX 11, lee [Create a new DirectX 11 project for Universal Windows Platform (UWP) (Crear un nuevo proyecto de DirectX11 para la Plataforma universal de Windows [UWP])](user-interface.md).
+Este tema empieza tras la creación de un nuevo proyecto en DirectX 11. Para aprender a crear un nuevo proyecto en DirectX 11, lee [Create a new DirectX 11 project for Universal Windows Platform (UWP) (Crear un nuevo proyecto de DirectX 11 para la Plataforma universal de Windows [UWP])](user-interface.md).
 
 El proyecto creado a partir de alguno de estos vínculos tiene todo el código preparado para la infraestructura de [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476345). Puedes empezar a migrar el representador de Open GL ES 2.0 a Direct3D 11 inmediatamente.
 
@@ -81,19 +88,19 @@ Esta estructura tiene una sola instancia y contiene todos los componentes necesa
 
  
 
-## Lo que debes saber
+## <a name="what-you-need-to-know"></a>Lo que debes saber
 
 
-### Tecnologías
+### <a name="technologies"></a>Tecnologías
 
 -   [Microsoft Visual C++](http://msdn.microsoft.com/library/vstudio/60k1461a.aspx)
 -   OpenGL ES 2.0
 
-### Requisitos previos
+### <a name="prerequisites"></a>Requisitos previos
 
 -   Opcional. Revisa [Port EGL code to DXGI and Direct3D (Portar código EGL a DXGI y Direct3D)](moving-from-egl-to-dxgi.md). Lee este tema para comprender mejor la interfaz de elementos gráficos proporcionada por DirectX.
 
-## <span id="keylinks_steps_heading"></span>Pasos
+## <a name="span-idkeylinksstepsheadingspansteps"></a><span id="keylinks_steps_heading"></span>Pasos
 
 
 <table>
@@ -129,12 +136,12 @@ Esta estructura tiene una sola instancia y contiene todos los componentes necesa
 
  
 
-## <span id="additional_resources"></span>Recursos adicionales
+## <a name="span-idadditionalresourcesspanadditional-resources"></a><span id="additional_resources"></span>Recursos adicionales
 
 
 -   [Preparar el entorno para el desarrollo de un juego DirectX de UWP](prepare-your-dev-environment-for-windows-store-directx-game-development.md)
--   [Crear un nuevo proyecto de DirectX11 para UWP](user-interface.md)
--   [Asignar conceptos e infraestructura de OpenGL ES 2.0 a Direct3D11](map-concepts-and-infrastructure.md)
+-   [Crear un nuevo proyecto de DirectX 11 para UWP](user-interface.md)
+-   [Asignar conceptos e infraestructura de OpenGL ES 2.0 a Direct3D 11](map-concepts-and-infrastructure.md)
 
  
 
@@ -142,10 +149,5 @@ Esta estructura tiene una sola instancia y contiene todos los componentes necesa
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

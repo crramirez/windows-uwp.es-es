@@ -3,16 +3,23 @@ author: mtoepke
 title: Audio para juegos
 description: "Aprende a desarrollar e incorporar música y sonidos en un juego DirectX, y a procesar las señales de audio para crear sonidos dinámicos y posicionales."
 ms.assetid: ab29297a-9588-c79b-24c5-3b94b85e74a8
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, juegos, audio, directx
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 51e941becdaa55de3ec81757dddf01e6c04aed2d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2fd568b8424585106c83d128a55f85909f35f2b8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Audio para juegos
+# <a name="audio-for-games"></a>Audio para juegos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aprende a desarrollar e incorporar música y sonidos en un juego DirectX, y a procesar las señales de audio para crear sonidos dinámicos y posicionales.
 
@@ -20,7 +27,7 @@ Para la programación de audio recomendamos el uso de la biblioteca XAudio2 en D
 
 También puedes implementar una reproducción sencilla de sonidos y música con [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197). Microsoft Media Foundation está diseñado para reproducir archivos multimedia y secuencias, tanto de audio como de vídeo, pero también se puede usar en juegos, y es particularmente útil para escenas cinematográficas o componentes no interactivos de tu juego.
 
-## Breve explicación de conceptos
+## <a name="concepts-at-a-glance"></a>Breve explicación de conceptos
 
 
 Aquí presentamos unos pocos conceptos de programación de audio que usaremos en esta sección.
@@ -33,17 +40,17 @@ Aquí presentamos unos pocos conceptos de programación de audio que usaremos en
 -   Emisores de sonido (u orígenes). En XAudio2, los emisores de sonido son ubicaciones que emiten un sonido, bien sea el mero pitido de un ruido de fondo o una ruidosa pista de rock reproducida en una máquina de discos del juego. Los emisores se especifican por coordenadas globales.
 -   Escuchas de sonido. Una escucha de sonido suele ser el jugador, o quizás una entidad de IA en un juego más avanzado, que procesa los sonidos recibidos por una escucha. Puedes submezclar ese sonido en la secuencia de audio para reproducción para el jugador, o usarlo para llevar una acción específica dentro del juego, como despertar a un guardia de IA marcado como escucha.
 
-## Consideraciones de diseño
+## <a name="design-considerations"></a>Consideraciones de diseño
 
 
 El audio es una parte tremendamente importante del diseño y desarrollo de juegos. Muchos jugadores recuerdan un juego mediocre elevado a la categoría de leyenda debido simplemente a una banda sonora memorable, o un gran trabajo de voz y mezcla de sonido, o a una producción de audio estelar. La música y el sonido definen la personalidad de un juego y establecen el motivo principal que lo define y lo hace destacar frente a juegos similares. El esfuerzo que dediques a diseñar y desarrollar el perfil de audio de tu juego merecerá la pena.
 
 El audio 3D posicional puede agregar un nivel de envolvimiento que va más allá del que proporcionan los gráficos en 3D. Si estás desarrollando un juego complejo que simula un mundo, o que requiere un estilo cinematográfico, piensa en la posibilidad de usar técnicas de audio posicional 3D para atraer realmente al jugador.
 
-## Guía básica para el desarrollo de audio en DirectX
+## <a name="directx-audio-development-roadmap"></a>Guía básica para el desarrollo de audio en DirectX
 
 
-### Recursos generales de XAudio2
+### <a name="xaudio2-conceptual-resources"></a>Recursos generales de XAudio2
 
 XAudio2 es la biblioteca de mezcla de audio para DirectX y su objetivo principal es desarrollar motores de audio de alto rendimiento para juegos. Para los desarrolladores de juegos que quieren agregar efectos de sonido y música de fondo a sus juegos modernos, XAudio2 ofrece un motor de mezcla de gráfico de audio con baja latencia y compatibilidad con búferes dinámicos, reproducción sincrónica fiel a la muestra y conversión implícita de velocidad de origen.
 
@@ -104,7 +111,7 @@ XAudio2 es la biblioteca de mezcla de audio para DirectX y su objetivo principal
 
  
 
-### Recursos "cómo" de XAudio2
+### <a name="xaudio2-how-to-resources"></a>Recursos "cómo" de XAudio2
 
 <table>
 <colgroup>
@@ -191,7 +198,7 @@ XAudio2 es la biblioteca de mezcla de audio para DirectX y su objetivo principal
 
  
 
-### Recursos de Media Foundation
+### <a name="media-foundation-resources"></a>Recursos de Media Foundation
 
 Media Foundation (MF) en una plataforma de medios para transmitir reproducciones de audio y vídeo. Puedes usar las API de Media Foundation para transmitir audio y vídeo  codificados y comprimidos con una variedad de algoritmos. No está diseñado para juegos en tiempo real, pero proporciona eficaces herramientas y una amplia compatibilidad con códecs para una captura y presentación más lineales de componentes de audio y vídeo.
 
@@ -252,7 +259,7 @@ Media Foundation (MF) en una plataforma de medios para transmitir reproducciones
 
  
 
-### Tipos de medios XAML de Windows Runtime
+### <a name="windows-runtime-xaml-media-types"></a>Tipos de medios XAML de Windows Runtime
 
 Si usas [interoperabilidad de DirectX y XAML](https://msdn.microsoft.com/library/windows/apps/hh825871), puedes incorporar para los juegos más sencillos las API de medios XAML de Windows Runtime en tus aplicaciones de la Tienda Windows mediante DirectX con C++.
 
@@ -293,7 +300,7 @@ Si usas [interoperabilidad de DirectX y XAML](https://msdn.microsoft.com/library
 
  
 
-## Referencia
+## <a name="reference"></a>Referencia
 
 
 -   [Introducción a XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813)
@@ -301,11 +308,11 @@ Si usas [interoperabilidad de DirectX y XAML](https://msdn.microsoft.com/library
 -   [Introducción a Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 
 > **Nota**  
-Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows8.x o Windows Phone8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Este artículo está orientado a desarrolladores de Windows 10 que programan aplicaciones para la Plataforma universal de Windows (UWP). Si estás desarrollando para Windows 8.x o Windows Phone 8.x, consulta la [documentación archivada](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 
 -   [Guía de programación de XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415737)
@@ -316,10 +323,5 @@ Este artículo está orientado a desarrolladores de Windows 10 que programan apl
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

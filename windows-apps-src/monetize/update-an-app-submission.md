@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: "Usa este método en la API de envío de la Tienda Windows para actualizar un envío de aplicación ya existente."
 title: "Actualizar un envío de aplicaciones mediante la API de envío de la Tienda Windows"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP, API de envío de la Tienda Windows, envío de aplicaciones"
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: ec533c5a021d006787a7d217fa7f5eb98835fdd3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: df52b5de7751d8428a92bd3892f91159c5fdd518
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -288,9 +295,4 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 * [Commit an app submission (Confirmar el envío de aplicación)](commit-an-app-submission.md)
 * [Delete an app submission (Eliminar un envío de aplicación)](delete-an-app-submission.md)
 * [Get the status of an app submission (Obtener el estado de un envío de aplicación)](get-status-for-an-app-submission.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

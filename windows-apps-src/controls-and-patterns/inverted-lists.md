@@ -4,9 +4,17 @@ Description: Usa una lista invertida para agregar nuevos elementos al final.
 title: Listas invertidas
 label: Inverted lists
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 52c1d63d-69c1-48d6-a234-6f39296e4bfd
 translationtype: Human Translation
-ms.sourcegitcommit: 5f50e490caa5d1d88c2f8315dc47e15b0ae22a05
-ms.openlocfilehash: de90c49dfc961241c1da028c8f7278e370a810bd
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 0a33aaf71dbf23e991591f790f7327d812b060ef
+ms.lasthandoff: 02/08/2017
 
 ---
 # <a name="inverted-lists"></a>Listas invertidas
@@ -39,7 +47,7 @@ Para crear una lista invertida, usa una vista de lista con una clase [**ItemsSta
 En este ejemplo se muestra cómo alinear los elementos de la vista de lista en la parte inferior y se indica que, al producirse un cambio en los elementos, el último elemento debe permanecer en la vista.
  
  **XAML**
-```xaml
+ ```xaml
 <ListView>
     <ListView.ItemsPanel>
         <ItemsPanelTemplate>
@@ -55,9 +63,4 @@ En este ejemplo se muestra cómo alinear los elementos de la vista de lista en l
 - Alinea los mensajes del remitente o el receptor en lados opuestos para mostrar claramente el flujo de la conversación a los usuarios.
 - Haz que los mensajes existentes desaparezcan de la vista para mostrar el último mensaje si el usuario ya está al final de la conversación en espera del siguiente mensaje.
 - No muevas elementos de modo que perturbes la atención de los usuarios si no están leyendo el final de la conversación.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

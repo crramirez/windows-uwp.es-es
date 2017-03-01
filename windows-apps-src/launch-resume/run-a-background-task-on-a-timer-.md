@@ -3,15 +3,22 @@ author: TylerMSFT
 title: Ejecutar una tarea en segundo plano en un temporizador
 description: "Aprende a programar una tarea en segundo plano única o a ejecutar una tarea en segundo plano periódica."
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: 488bbbf1dbe99d653dded0af78a8fd22c7429cde
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3708a9b7768d4fb7fbb6af0e55836471a2ba29ed
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="run-a-background-task-on-a-timer"></a>Ejecutar una tarea en segundo plano en un temporizador
+# <a name="run-a-background-task-on-a-timer"></a>Ejecución de una tarea en segundo plano en un temporizador
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **API importantes**
 
@@ -120,9 +127,4 @@ Aprende a programar una tarea en segundo plano única o ejecutar una tarea en se
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
 * [Cómo desencadenar los eventos suspender, reanudar y en segundo plano en aplicaciones de la Tienda Windows (al depurar)](http://go.microsoft.com/fwlink/p/?linkid=254345)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -3,17 +3,24 @@ author: msatranjr
 title: Crear componentes de Windows Runtime en C++
 description: "En este artículo se muestra cómo usar C++ para crear un componente de Windows Runtime, es decir, un archivo DLL al que se puede llamar desde una aplicación universal de Windows compilada con JavaScript, o C#, Visual Basic o C++."
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 65114d476da1a7f9113987ebccc8bdbaca6381a7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 28d03486f6fb2f7a249af82d2c3be6006c9d80ed
+ms.lasthandoff: 02/07/2017
 
 ---
 
 
-# Crear componentes de Windows Runtime en C++
+# <a name="creating-windows-runtime-components-in-c"></a>Crear componentes de Windows Runtime en C++
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 En este artículo se muestra cómo usar C++ para crear un componente de Windows Runtime, es decir, un archivo DLL al que se puede llamar desde una aplicación universal de Windows compilada con JavaScript, o C#, Visual Basic o C++.
 
@@ -27,10 +34,10 @@ Al compilar una solución que contiene un proyecto de JavaScript o. NET y un pro
 
 En general, cuando codifiques tu componente C++, usa la biblioteca de C++ regular y los tipos integrados, excepto en los límites de la interfaz binaria abstracta (ABI), donde pasas los datos hacia y desde el código de otro paquete .winmd. Allí, usa los tipos de Windows Runtime y la sintaxis especial compatible con Visual C++ para crear y manipular esos tipos. Además, en tu código de Visual C++, usa tipos como delegate y event para implementar los eventos que se pueden desencadenar desde tu componente y controlar en JavaScript, Visual Basic o C#. Para obtener más información sobre la nueva sintaxis de Visual C++, consulta [ Referencia del lenguaje Visual C++ (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
-## Reglas de nomenclatura y del uso de mayúsculas y minúsculas
+## <a name="casing-and-naming-rules"></a>Reglas de nomenclatura y del uso de mayúsculas y minúsculas
 
 
-### JavaScript
+### <a name="javascript"></a>JavaScript
 
 JavaScript distingue mayúsculas de minúsculas. Por lo tanto, debes seguir estas convenciones sobre el uso de mayúsculas y minúsculas:
 
@@ -38,11 +45,11 @@ JavaScript distingue mayúsculas de minúsculas. Por lo tanto, debes seguir esta
 -   Al llamar a métodos, usa la convención Camel de mayúsculas y minúsculas incluso si el nombre del método está en mayúsculas en el lado de C++. Por ejemplo, "GetDate()" del método de C++ debe llamarse desde JavaScript como "getDate()".
 -   Un nombre de clase activable y un nombre de espacio de nombres no pueden contener caracteres UNICODE.
 
-### .NET
+### <a name="net"></a>.NET
 
 Los lenguajes .NET siguen las reglas normales del uso de mayúsculas y minúsculas.
 
-## Crear una instancia del objeto
+## <a name="instantiating-the-object"></a>Crear una instancia del objeto
 
 
 Solo los tipos de Windows Runtime pueden pasarse a través del límite de la ABI. El compilador generará un error si el componente tiene un tipo como std::wstring como un parámetro o tipo devuelto en un método público. Los tipos integrados de las extensiones del componente Visual C++ (C++/CX) incluyen los escalares habituales como int y double, así como sus equivalentes typedef int32, float64, etc. Para obtener más información, consulta [Sistema de tipos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
@@ -75,7 +82,7 @@ var num = nativeObject.LogCalc(21.5);
 ResultText.Text = num.ToString();
 ```
 
-## Tipos integrados de C++, tipos de biblioteca y tipos de Windows Runtime
+## <a name="c-built-in-types-library-types-and-windows-runtime-types"></a>Tipos integrados de C++, tipos de biblioteca y tipos de Windows Runtime
 
 
 Una clase activable (también conocida como "clase de referencia") es una clase en torno a la cual se pueden crear instancias desde otro lenguaje, como JavaScript, C# o Visual Basic. Para ser consumible en otro idioma, un componente debe contener al menos una clase activable.
@@ -90,7 +97,7 @@ Una clase activable debe declararse como **public ref class sealed**. La palabra
 
 En C++, se definen todos los primitivos numéricos en el espacio de nombres predeterminado. El espacio de nombres [Plataforma](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx) contiene las clases de C++ que son específicas para el sistema de tipos de Windows Runtime. Estos incluyen las clases [Platform::String](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx) y [Platform::Object](https://msdn.microsoft.com/library/windows/apps/xaml/hh748265.aspx). Los tipos de colección concreta, como las clases [Platform::Collections::Map](https://msdn.microsoft.com/library/windows/apps/xaml/hh441508.aspx) y [Platform::Collections::Vector](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx), se definen en el espacio de nombres [Platform::Collections](https://msdn.microsoft.com/library/windows/apps/xaml/hh710418.aspx). Las interfaces públicas que implementan estos tipos se definen en [Windows::Foundation::Collections Namespace (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh441496.aspx). Estos son los tipos de interfaz consumidos por JavaScript, C# y Visual Basic. Para obtener más información, consulta [Sistema de tipos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
 
-## Método que devuelve un valor de tipo integrado
+## <a name="method-that-returns-a-value-of-built-in-type"></a>Método que devuelve un valor de tipo integrado
 
 ```cpp
     // #include <valarray>
@@ -109,7 +116,7 @@ var num = nativeObject.logCalc(21.5);
 document.getElementById('P2').innerHTML = num;
 ```
 
-## Método que devuelve una estructura de valor personalizada
+## <a name="method-that-returns-a-custom-value-struct"></a>Método que devuelve una estructura de valor personalizada
 
 ```cpp
 namespace CppComponent
@@ -180,7 +187,7 @@ private void GetAndSetPlayerData()
 }
 ```
 
-## Métodos sobrecargados
+## <a name="overloaded-methods"></a>Métodos sobrecargados
 
 
 Una clase de referencia pública de C++ puede contener métodos sobrecargados, pero JavaScript tiene una capacidad limitada para diferenciar los métodos sobrecargados. Por ejemplo, puede distinguir entre estas firmas:
@@ -212,12 +219,12 @@ var num = nativeObject.getNumber(9);
 document.getElementById('P4').innerHTML = num;
 ```
 
-## .NET
+## <a name="net"></a>.NET
 
 
 Los lenguajes .NET reconocen sobrecargas en una clase de referencia de C++, del mismo modo que en cualquier clase de .NET Framework.
 
-## DateTime
+## <a name="datetime"></a>DateTime
 
 En Windows Runtime, un objeto [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx) es simplemente un entero firmado de 64 bits que representa el número de intervalos de 100 nanosegundos o bien antes o bien después del 1 de enero de 1601. No hay métodos en un objeto de Windows:Foundation::DateTime. En su lugar, cada lenguaje proyecta DateTime en la forma nativa para ese lenguaje: el objeto Date en JavaScript y los tipos System.DateTime y System.DateTimeOffset en .NET Framework.
 
@@ -272,12 +279,12 @@ private void DateTimeExample()
 }
 ```
 
-## Colecciones y matrices
+## <a name="collections-and-arrays"></a>Colecciones y matrices
 
 
 Las colecciones siempre se pasan a través del límite de la ABI como controladores para los tipos de Windows Runtime como Windows::Foundation::Collections::IVector^ y Windows::Foundation::Collections::IMap^. Por ejemplo, si devuelves un controlador a Platform::Collections::Map, este lo convierte implícitamente a Windows::Foundation::Collections::IMap^. Las interfaces de colección se definen en un espacio de nombres que es independiente de las clases de C++ que proporcionan las implementaciones concretas. Los lenguajes de JavaScript y .NET consumen las interfaces. Para obtener más información, consulta [Colecciones (C++/CX)](https://msdn.microsoft.com//library/windows/apps/hh700103.aspx) y [Matriz y WriteOnlyArray (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh700131.aspx).
 
-## Pasar el IVector
+## <a name="passing-ivector"></a>Pasar el IVector
 
 
 ```cpp
@@ -326,7 +333,7 @@ private void SortListItems()
 }
 ```
 
-## Pasar IMap
+## <a name="passing-imap"></a>Pasar IMap
 
 
 ```cpp
@@ -364,7 +371,7 @@ private void GetDictionary()
 }
 ```
 
-## Propiedades
+## <a name="properties"></a>Propiedades
 
 
 Una clase de referencia pública en extensiones de componentes de Visual C++ expone los miembros de datos públicos como propiedades, mediante la palabra clave de propiedad. El concepto es idéntico a las propiedades de .NET Framework. Una propiedad trivial es similar a un miembro de datos porque su funcionalidad es implícita. Una propiedad no trivial tiene descriptores de acceso get y set explícitos y una variable privada con nombre que es la "memoria auxiliar" para el valor. En este ejemplo, la variable de miembro privada \_propertyAValue es la copia de seguridad para PropertyA. Una propiedad puede generar un evento cuando cambia su valor, y una aplicación cliente puede registrarse para recibir ese evento.
@@ -434,12 +441,12 @@ private void GetAProperty()
 }
 ```
 
-## Delegados y eventos
+## <a name="delegates-and-events"></a>Delegados y eventos
 
 
 Un delegado es un tipo de Windows Runtime que representa un objeto de función. Puedes usar delegados en relación con eventos, devoluciones de llamada y llamadas a métodos asincrónicos para especificar una acción que debe realizarse más tarde. Del mismo modo que un objeto de función, el delegado proporciona seguridad de tipos mediante la habilitación del compilador para verificar el tipo devuelto y los tipos de parámetros de la función. La declaración de un delegado es similar a una firma de función, la implementación es similar a una definición de clase y la invocación es similar a una invocación de función.
 
-## Agregar una escucha de eventos
+## <a name="adding-an-event-listener"></a>Agregar una escucha de eventos
 
 
 Puedes usar la palabra clave de evento para declarar a un miembro público de un tipo de delegado especificado. El código de cliente se suscribe al evento mediante los mecanismos estándar que se proporcionan en el lenguaje en particular.
@@ -489,7 +496,7 @@ private void objWithEvent_PropertyChangedEvent(object __param0, int __param1)
 }
 ```
 
-## Agregar varias escuchas de eventos para un evento
+## <a name="adding-multiple-event-listeners-for-one-event"></a>Agregar varias escuchas de eventos para un evento
 
 
 JavaScript tiene un método de addEventListener que permite que varios controladores se suscriban a un solo evento.
@@ -534,7 +541,7 @@ nativeObject.fireEvent("The answer is ");
 
 En C#, cualquier número de controladores de eventos puede suscribirse al evento mediante el operador +=, como se muestra en el ejemplo anterior.
 
-## Enumeraciones
+## <a name="enums"></a>Enumeraciones
 
 
 Una numeración de Windows Runtime en C++ se declara mediante la enumeración de clase pública; es similar a una numeración de ámbito en C++ estándar.
@@ -569,19 +576,19 @@ Direction[curDirection];
 
 Tanto C# como Visual Basic tienen son compatibles con el lenguaje para las enumeraciones. Estos lenguajes ven una clase de enumeración pública de C++ del mismo modo que verían una enumeración de .NET Framework.
 
-## Métodos asincrónicos
+## <a name="asynchronous-methods"></a>Métodos asincrónicos
 
 
 Para consumir métodos asincrónicos expuestos por otros objetos de Windows Runtime, usa la [Clase de tarea (Runtime de simultaneidad)](https://msdn.microsoft.com/library/hh750113.aspx). Para obtener más información, consulta [Paralelismo de tareas (Runtime de simultaneidad)](https://msdn.microsoft.com/library/dd492427.aspx).
 
 Para implementar los métodos asincrónicos en C++, usa la función [create\_async](https://msdn.microsoft.com/library/hh750102.aspx) que se define en ppltasks.h. Para obtener más información, consulta [Crear operaciones asincrónicas en C++ para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/vstudio/hh750082.aspx). Para ver un ejemplo, consulta [Tutorial: crear un componente básico de Windows Runtime en C++ y llamarlo desde JavaScript o C#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md). Los lenguajes .NET consumen métodos asincrónicos de C++, del mismo modo que con cualquier método asincrónico definido en .NET Framework.
 
-## Excepciones
+## <a name="exceptions"></a>Excepciones
 
 
 Puedes iniciar cualquier tipo de excepción definido por Windows Runtime. No puedes derivar tipos personalizados de ningún tipo de excepción de Windows Runtime. Sin embargo, puedes iniciar COMException y proporcionar un HRESULT personalizado al que se pueda acceder mediante el código que captura la excepción. No hay ninguna manera de especificar un mensaje personalizado en una COMException.
 
-## Consejos de depuración
+## <a name="debugging-tips"></a>Consejos de depuración
 
 
 Cuando se depura una solución de JavaScript que tiene un archivo DLL del componente, puedes configurar el depurador para habilitar o bien la ejecución paso a paso a través del script, o bien del código nativo en el componente, pero no ambas opciones al mismo tiempo. Para cambiar la configuración, selecciona el nodo del proyecto de JavaScript en el Explorador de soluciones y, a continuación, elige Propiedades, Depuración, Tipo de depurador.
@@ -592,12 +599,7 @@ Si tu código JavaScript aparentemente no reconoce las propiedades o métodos p�
 
 Si quitas un proyecto de componente de Windows Runtime de C++ de una solución, también debes quitar manualmente la referencia del proyecto de JavaScript. De lo contrario, no se efectuará la depuración o las operaciones de compilación posteriores. Si es necesario, a continuación puedes agregar una referencia de ensamblado a la DLL.
 
-## Temas relacionados
+## <a name="related-topics"></a>Temas relacionados
 
 * [Tutorial: Crear en C++ un componente básico de Windows Runtime y llamarlo desde JavaScript o C#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

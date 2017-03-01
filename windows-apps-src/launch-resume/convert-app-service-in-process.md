@@ -1,14 +1,22 @@
 ---
 author: TylerMSFT
 title: "Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host"
-description: "Puedes convertir el código de servicio de aplicaciones que se ejecutaba en un proceso en segundo plano independiente en código que se ejecute en el mismo proceso que el proveedor de servicios de aplicaciones."
+description: "Puedes convertir el código de servicio de aplicaciones que se ejecutaba en un proceso en segundo plano independiente en un código que se ejecute en el mismo proceso que el proveedor de servicios de aplicaciones."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: 80402d12a51ea970f5927dc50cae587be8809b87
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1fea72237a9ac7d18fb415d5957f959542a833e8
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host
+# <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host
 
 Un [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx) permite que otra aplicación reactive la aplicación en segundo plano e inicie una línea directa de comunicación con él.
 
@@ -74,9 +82,4 @@ En el código anterior, el método `OnBackgroundActivated` controla la activaci�
 Cuando la aplicación recibe una solicitud y lee la clase [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx) proporcionada para ver si las cadenas `Key` y `Value` están presentes. Si están presentes, a continuación, el servicio de aplicaciones devuelve un par de valores de cadena `Response` y `True` de nuevo a la aplicación en el otro lado de **AppServiceConnection**.
 
 Obtén más información sobre la conexión y la comunicación con otras aplicaciones en [Crear y consumir un servicio de aplicación](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service?f=255&MSPPError=-2147217396).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

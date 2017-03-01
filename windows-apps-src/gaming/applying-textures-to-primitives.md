@@ -3,34 +3,41 @@ author: mtoepke
 title: Aplicar texturas en primitivos
 description: "Aquí te mostramos cómo cargar datos de texturas sin procesar y cómo aplicar esos datos a un primitivo 3D, mediante el cubo que creamos en Usar profundidad y efectos en primitivos."
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, juegos, texturas, DirectX
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5533b086557be44b27e4e371c0d71bc8bc6310b0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cc25d7bcc5809dd10b43418ccd42f78c10d1336e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Aplicar texturas en primitivos
+# <a name="apply-textures-to-primitives"></a>Aplicar texturas en primitivos
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Aquí te mostramos cómo cargar datos de texturas sin procesar y cómo aplicar esos datos a un primitivo 3D, mediante el cubo que creamos en [Usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md). También te mostramos cómo introducir un modelo de iluminación simple con producto escalar, donde las superficies del cubo son más claras o más oscuras a una distancia y ángulos relativos a una fuente de luz.
 
 **Objetivo:** Aplicar texturas en primitivos.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 
 Suponemos que estás familiarizado con C++. También necesitas tener experiencia básica en los conceptos de programación de gráficos.
 
 Suponemos además que consultaste [Inicio rápido: configurar recursos de DirectX y mostrar una imagen](setting-up-directx-resources.md), [Crear sombreadores y dibujar primitivos](creating-shaders-and-drawing-primitives.md) y [Usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md).
 
-**Tiempo para completarlo:** 20minutos.
+**Tiempo para completarlo:** 20 minutos.
 
-Instrucciones
+<a name="instructions"></a>Instrucciones
 ------------
 
-### 1. Definir variables para un cubo con textura
+### <a name="1-defining-variables-for-a-textured-cube"></a>1. Definir variables para un cubo con textura
 
 Primero necesitamos definir las estructuras **BasicVertex** y **ConstantBuffer** para el cubo con textura. Estas estructuras especifican las posiciones de los vértices, las orientaciones y texturas para el cubo y de qué manera se visualizará el cubo. De lo contrario, declaramos variables de forma similar a lo explicado en el tutorial anterior [Usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md).
 
@@ -63,7 +70,7 @@ private:
     ConstantBuffer m_constantBufferData;
 ```
 
-### 2. Crear sombreadores de vértices y píxeles con elementos de textura y superficie
+### <a name="2-creating-vertex-and-pixel-shaders-with-surface-and-texture-elements"></a>2. Crear sombreadores de vértices y píxeles con elementos de textura y superficie
 
 Aquí creamos sombreadores de vértices y píxeles más complejos con respecto al tutorial anterior, [Usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md). El sombreador de vértices de la aplicación transforma cada posición de vértice en un espacio de proyección y pasa la coordenada de textura del vértice por el sombreador de píxeles.
 
@@ -267,7 +274,7 @@ Creamos búferes de vértices, índices y constantes que definen un cubo con tex
        });
 ```
 
-### 3. Crear texturas y muestrarios
+### <a name="3-creating-textures-and-samplers"></a>3. Crear texturas y muestrarios
 
 Aquí aplicamos datos de texturas a un cubo, en lugar de aplicar colores como hicimos en el tutorial anterior, [Usar profundidad y efectos en primitivos](using-depth-and-effects-on-primitives.md).
 
@@ -391,7 +398,7 @@ Usamos datos de texturas sin procesar para crear texturas.
         float degree = 0.0f;
 ```
 
-### 4. Girar y dibujar el cubo con textura y mostrar la imagen representada
+### <a name="4-rotating-and-drawing-the-textured-cube-and-presenting-the-rendered-image"></a>4. Girar y dibujar el cubo con textura y mostrar la imagen representada
 
 Al igual que en los tutoriales anteriores, introducimos un bucle sin fin para representar y mostrar continuamente la escena. Llamamos a la función insertada **rotationY** (BasicMath.h) con una cantidad de rotación para establecer los valores que girarán la matriz de modelo del cubo en torno al eje Y. A continuación, llamamos a [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) para actualizar el búfer de constantes y girar el modelo del cubo. Llamamos a [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) para especificar el destino de representación y la vista de la galería de símbolos y profundidad. Llamamos a [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) para borrar el destino de representación de color azul y llamamos a [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387) para borrar el búfer de profundidad.
 
@@ -512,7 +519,7 @@ Al igual que en los tutoriales anteriores, llamamos a [**IDXGISwapChain::Present
                 );
 ```
 
-## Resumen
+## <a name="summary"></a>Resumen
 
 
 Cargamos datos de texturas sin procesar y aplicamos esos datos a un primitivo 3D.
@@ -523,10 +530,5 @@ Cargamos datos de texturas sin procesar y aplicamos esos datos a un primitivo 3D
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

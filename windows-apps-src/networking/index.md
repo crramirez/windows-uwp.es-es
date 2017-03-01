@@ -2,16 +2,23 @@
 author: DelfCo
 ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
 description: "Tecnologías para tener acceso a la red y servicios web."
-title: Redes y servicios web
+title: Servicios web y redes
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: 03a5ce2b8d5f501d4254cbe0ee3d47f575775f7a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1bb0e25e9368a6e2f7568ac51620c7a064a01ce3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Redes y servicios web
+# <a name="networking-and-web-services"></a>Servicios web y redes
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Las siguientes tecnologías de red y servicios web están disponibles para los desarrolladores de la Plataforma universal de Windows (UWP).
 
@@ -25,9 +32,4 @@ Las siguientes tecnologías de red y servicios web están disponibles para los d
 | [HttpClient](httpclient.md)                                                             | Usa la API del espacio de nombres [Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/dn279692) para enviar y recibir información mediante los protocolos HTTP 2.0 y HTTP 1.1.             |
 | [Fuentes RSS y Atom](web-feeds.md)                                                          | Recupera o crea el contenido web más reciente o popular usando fuentes sindicadas generadas a partir de los estándares de RSS y Atom mediante características del espacio de nombres [Windows.Web.Syndication](https://msdn.microsoft.com/library/windows/apps/br243632).                   |
 | [Transferencias en segundo plano](background-transfers.md)                                         | Usa la API de transferencia en segundo plano para copiar archivos de forma confiable en la red.           |
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

@@ -3,16 +3,23 @@ title: Copiar a la matriz de bytes o desde ella
 description: "Este código de ejemplo muestra cómo copiar a matrices de bytes y desde ellas en una aplicación para la Plataforma universal de Windows (UWP)."
 ms.assetid: C343B08C-1FA1-40FD-8CA5-7FC9B707C5E3
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: f700d3d9c09424ef8fffd73a08e12563acbbc497
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9183ca237709100e16afd9ce2f8387ff464021ce
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Copiar a la matriz de bytes o desde ella
+# <a name="copy-to-and-from-byte-arrays"></a>Copiar a la matriz de bytes o desde ella
 
 
-\[ Actualizado para aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Actualizado para las aplicaciones para UWP en Windows 10. Para leer más artículos sobre Windows 8.x, consulta el [archivo](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Este código de ejemplo muestra cómo copiar a matrices de bytes y desde ellas en una aplicación para la Plataforma universal de Windows (UWP).
 
@@ -33,8 +40,3 @@ public void ByteArrayCopy()
     CryptographicBuffer.CopyToByteArray(buffer, out newByteArray);
 }
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-
